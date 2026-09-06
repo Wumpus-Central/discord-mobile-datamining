@@ -43,16 +43,11 @@ if (null == prop) {
 }
 const obj3 = { UI_THREAD_PROPS_WHITELIST: null, NATIVE_THREAD_PROPS_WHITELIST: null };
 const merged1 = Object.assign(obj2);
-obj3[0] = obj1;
+obj3.UI_THREAD_PROPS_WHITELIST = obj1;
 if (null != prop) {
   obj = {};
 }
-const merged2 = Object.assign(obj);
-if (null != prop) {
-  obj = {};
-}
-const merged3 = Object.assign(obj);
-obj3[1] = {
+const size = {
   borderBottomWidth: true,
   borderEndWidth: true,
   borderLeftWidth: true,
@@ -129,4 +124,11 @@ obj3[1] = {
   justifyContent: true,
   position: true,
 };
-arg5.PropsAllowlists = obj3;
+const merged2 = Object.assign(obj);
+if (null != prop) {
+  obj = {};
+}
+const merged3 = Object.assign(obj);
+obj3.NATIVE_THREAD_PROPS_WHITELIST = size;
+
+export const PropsAllowlists = obj3;

@@ -1,14 +1,13 @@
 // _runtime/metro/00798__addTracingHeadersToFetchRequest.js
-import getClient from "../00713_getClient.js";
-import hasSpansEnabled from "../00720_hasSpansEnabled.js";
-import getTraceData from "../00769_getTraceData.js";
+import _mod713 from "00713__.js";
+import _mod720 from "00720__.js";
+import _mod769 from "00769__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTraceparent) {
   let tmp = propagateTraceparent;
-  let obj = getTraceData;
-  obj = { span, propagateTraceparent };
+  let obj = { span, propagateTraceparent };
   const traceData = obj.getTraceData(obj);
   ({ sentry-trace: tmp5, baggage, traceparent } = traceData);
   if (tmp5) {
@@ -48,9 +47,9 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
           const str10 = headers2.get("baggage");
           if (str10) {
             let parts = str10.split(",");
-            if (!parts.some((str) => {
-              const trimmed = str.trim();
-              return trimmed.startsWith(callback(table[8]).SENTRY_BAGGAGE_KEY_PREFIX);
+            if (!parts.some((item) => {
+              const trimmed = item.trim();
+              return trimmed.startsWith(closure_1_0(closure_1_1[8]).SENTRY_BAGGAGE_KEY_PREFIX);
             })) {
               const _HermesInternal = HermesInternal;
               const result2 = headers2.set("baggage", "" + str10 + "," + baggage);
@@ -65,44 +64,43 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
         if (Array.isArray(headers)) {
           const items = [];
           HermesBuiltin.arraySpread(headers, 0);
-          if (!headers.find((arg0) => "sentry-trace" === arg0[0])) {
+          if (!headers.find((item) => "sentry-trace" === item[0])) {
             const items1 = ["sentry-trace", tmp5];
             items.push(items1);
           }
-          let tmp34 = tmp;
+          let tmp35 = tmp;
           if (tmp) {
-            tmp34 = traceparent;
+            tmp35 = traceparent;
           }
-          if (tmp34) {
-            tmp34 = !headers.find((arg0) => "traceparent" === arg0[0]);
+          if (tmp35) {
+            tmp35 = !headers.find((item) => "traceparent" === item[0]);
           }
-          if (tmp34) {
+          if (tmp35) {
             const items2 = ["traceparent", traceparent];
             items.push(items2);
           }
-          let tmp36 = baggage;
+          let tmp37 = baggage;
           if (baggage) {
-            tmp36 = !headers.find((arg0) => {
-              let someResult = "baggage" === arg0[0];
+            tmp37 = !headers.find((item) => {
+              let someResult = "baggage" === item[0];
               if (someResult) {
-                const parts = arg0[1].split(",");
-                someResult = parts.some((str) => {
-                  const trimmed = str.trim();
-                  return trimmed.startsWith(callback(table[8]).SENTRY_BAGGAGE_KEY_PREFIX);
+                const parts = item[1].split(",");
+                someResult = parts.some((item) => {
+                  const trimmed = item.trim();
+                  return trimmed.startsWith(closure_1_0(closure_1_1[8]).SENTRY_BAGGAGE_KEY_PREFIX);
                 });
-                const str = arg0[1];
               }
               return someResult;
             });
           }
-          if (tmp36) {
+          if (tmp37) {
             const items3 = ["baggage", baggage];
             items.push(items3);
           }
           return items;
         } else {
           if ("sentry-trace" in headers) {
-            sentry_trace = headers["sentry-trace"];
+            let prop = headers["sentry-trace"];
           }
           if ("traceparent" in headers) {
             const traceparent2 = headers.traceparent;
@@ -123,50 +121,50 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
           } else {
             const items6 = [];
             if (!baggage) {
-              let tmp22 = baggage;
+              let tmp23 = baggage;
               if (baggage) {
-                tmp22 = !baggage;
+                tmp23 = !baggage;
               }
-              if (tmp22) {
+              if (tmp23) {
                 items6.push(baggage);
               }
               obj = {};
               const merged = Object.assign(headers);
-              if (sentry_trace == null) {
-                sentry_trace = tmp5;
+              if (prop == null) {
+                prop = tmp5;
               }
-              obj["sentry-trace"] = sentry_trace;
+              obj["sentry-trace"] = prop;
               let joined;
               if (items6.length > 0) {
                 joined = items6.join(",");
               }
               obj.baggage = joined;
-              let tmp29 = tmp;
+              let tmp30 = tmp;
               if (tmp) {
-                tmp29 = traceparent;
+                tmp30 = traceparent;
               }
-              if (tmp29) {
-                tmp29 = !traceparent2;
+              if (tmp30) {
+                tmp30 = !traceparent2;
               }
-              if (tmp29) {
+              if (tmp30) {
                 obj.traceparent = traceparent;
               }
               return obj;
             } else {
               const _Array3 = Array;
               if (Array.isArray(baggage)) {
-                let found = baggage.find((str) => {
-                  const parts = str.split(",");
-                  return parts.some((str) => {
-                    const trimmed = str.trim();
-                    return trimmed.startsWith(callback(table[8]).SENTRY_BAGGAGE_KEY_PREFIX);
+                let found = baggage.find((item) => {
+                  const parts = item.split(",");
+                  return parts.some((item) => {
+                    const trimmed = item.trim();
+                    return trimmed.startsWith(closure_1_0(closure_1_1[8]).SENTRY_BAGGAGE_KEY_PREFIX);
                   });
                 });
               } else {
                 const parts1 = baggage.split(",");
-                found = parts1.some((str) => {
-                  const trimmed = str.trim();
-                  return trimmed.startsWith(callback(table[8]).SENTRY_BAGGAGE_KEY_PREFIX);
+                found = parts1.some((item) => {
+                  const trimmed = item.trim();
+                  return trimmed.startsWith(closure_1_0(closure_1_1[8]).SENTRY_BAGGAGE_KEY_PREFIX);
                 });
               }
             }
@@ -174,19 +172,20 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
         }
       }
     } else {
-      obj1 = {};
+      const obj1 = {};
       const merged1 = Object.assign(traceData);
       return obj1;
     }
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5._addTracingHeadersToFetchRequest = _addTracingHeadersToFetchRequest;
-arg5._callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, response, obj) {
-  let onRequestSpanEnd;
-  if (typeof obj === "object") {
-    if (null !== obj) {
-      onRequestSpanEnd = obj.onRequestSpanEnd;
+
+export { _addTracingHeadersToFetchRequest };
+export const _callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, response, onRequestSpanEnd) {
+  onRequestSpanEnd = undefined;
+  if (typeof onRequestSpanEnd === "object") {
+    if (null !== onRequestSpanEnd) {
+      onRequestSpanEnd = onRequestSpanEnd.onRequestSpanEnd;
     }
   }
   if (onRequestSpanEnd != null) {
@@ -195,19 +194,17 @@ arg5._callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, response, obj)
     if (response != null) {
       headers = response.headers;
     }
-    obj = { headers: null, error: null };
-    obj[0] = headers;
-    obj[1] = response.error;
+    const obj = { headers, error: response.error };
     onRequestSpanEnd(arg0, obj);
   }
 };
-arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, arg2, arg3, obj) {
+export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, arg3, onRequestSpanEnd) {
   if (fetchData.fetchData) {
     ({ method, url } = fetchData.fetchData);
-    obj = hasSpansEnabled;
+    let obj = _mod720;
     let hasSpansEnabledResult = obj.hasSpansEnabled();
     if (hasSpansEnabledResult) {
-      hasSpansEnabledResult = arg1(url);
+      hasSpansEnabledResult = fn(url);
     }
     if (fetchData.endTimestamp) {
       if (hasSpansEnabledResult) {
@@ -218,7 +215,7 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
               let tmp3Result = tmp3(705);
               tmp3Result.setHttpStatus(obj20, fetchData.response.status);
               const response = fetchData.response;
-              let value;
+              value = undefined;
               if (response != null) {
                 let headers = response.headers;
                 if (headers != null) {
@@ -233,15 +230,14 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
                 }
               }
             } else if (fetchData.error) {
-              obj = { code: null, message: "internal_error" };
-              obj[0] = tmp3(705).SPAN_STATUS_ERROR;
+              obj = { code: tmp3(705).SPAN_STATUS_ERROR, message: "internal_error" };
               obj20.setStatus(obj);
             }
             obj20.end();
-            let onRequestSpanEnd;
-            if (typeof obj === "object") {
-              if (null !== obj) {
-                onRequestSpanEnd = obj.onRequestSpanEnd;
+            onRequestSpanEnd = undefined;
+            if (typeof onRequestSpanEnd === "object") {
+              if (null !== onRequestSpanEnd) {
+                onRequestSpanEnd = onRequestSpanEnd.onRequestSpanEnd;
               }
             }
             if (onRequestSpanEnd != null) {
@@ -250,9 +246,7 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
               if (response2 != null) {
                 headers = response2.headers;
               }
-              obj = { headers: null, error: null };
-              obj[0] = headers;
-              obj[1] = fetchData.error;
+              obj = { headers, error: fetchData.error };
               onRequestSpanEnd(obj20, obj);
             }
             delete tmp2[tmp];
@@ -260,10 +254,9 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
         }
       }
     }
-    let tmp9 = obj;
-    if (typeof obj !== "object") {
-      obj1 = { spanOrigin: null };
-      obj1[0] = obj;
+    let tmp9 = onRequestSpanEnd;
+    if (typeof onRequestSpanEnd !== "object") {
+      const obj1 = { spanOrigin: onRequestSpanEnd };
       tmp9 = obj1;
     }
     const spanOrigin = tmp9.spanOrigin;
@@ -281,16 +274,16 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
         if (startsWithResult) {
           const obj2 = { name: null, attributes: null };
           const _HermesInternal2 = HermesInternal;
-          obj2[0] = "" + method + " " + tmp3Result2.stripDataUrlContent(url);
+          obj2.name = "" + method + " " + tmp3Result2.stripDataUrlContent(url);
           const obj3 = { url: null, type: "fetch", "http.method": null };
           tmp3Result2 = tmp3(765).stripDataUrlContent(url);
-          obj3[0] = tmp3Result2;
-          obj3[2] = method;
+          obj3.url = tmp3Result2;
+          obj3["http.method"] = method;
           obj3[tmp3(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
           str = tmp3(704).SEMANTIC_ATTRIBUTE_SENTRY_OP;
           method = "http.client";
           obj3[str] = "http.client";
-          obj2[1] = obj3;
+          obj2.attributes = obj3;
           let obj4 = obj2;
           const tmp3Result3 = tmp3(765);
         } else {
@@ -302,10 +295,8 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
           }
           obj4 = { name: null, attributes: null };
           const _HermesInternal = HermesInternal;
-          obj4[0] = "" + method + " " + sanitizedUrlStringFromUrlObject;
-          const obj5 = { url: null, type: "fetch", "http.method": null };
-          obj5[0] = tmp3(765).stripDataUrlContent(url);
-          obj5[2] = method;
+          obj4.name = "" + method + " " + sanitizedUrlStringFromUrlObject;
+          const obj5 = { url: tmp3(765).stripDataUrlContent(url), type: "fetch", "http.method": method };
           obj5[tmp3(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
           obj5[tmp3(704).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
           if (result) {
@@ -322,7 +313,7 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
             }
             tmp3Result6 = tmp3(765);
           }
-          obj4[1] = obj5;
+          obj4.attributes = obj5;
           const tmp3Result5 = tmp3(765);
         }
         tmp3Result1.startInactiveSpan(obj4);
@@ -332,7 +323,7 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
     const sentryNonRecordingSpan = new tmp3(721).SentryNonRecordingSpan();
     fetchData.fetchData.__span = sentryNonRecordingSpan.spanContext().spanId;
     arg3[sentryNonRecordingSpan.spanContext().spanId] = sentryNonRecordingSpan;
-    if (arg2(fetchData.fetchData.url)) {
+    if (fn2(fetchData.fetchData.url)) {
       const first = fetchData.args[0];
       const tmp23 = fetchData.args[1] || {};
       const obj6 = {};
@@ -348,12 +339,11 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
         fetchData.args[1] = obj6;
         obj6.headers = tmp27Result;
       }
-      const tmp27 = _addTracingHeadersToFetchRequest;
       tmp3Result8 = tmp3(720);
     }
-    const client = getClient.getClient();
+    const client = _mod713.getClient();
     if (client) {
-      ({ args: obj19[0], response: obj19[1], startTimestamp: obj19[2], endTimestamp: obj19[3] } = fetchData);
+      ({ args: obj19.input, response: obj19.response, startTimestamp: obj19.startTimestamp, endTimestamp: obj19.endTimestamp } = fetchData);
       client.emit("beforeOutgoingRequestSpan", sentryNonRecordingSpan, { input: null, response: null, startTimestamp: null, endTimestamp: null });
       const obj7 = { input: null, response: null, startTimestamp: null, endTimestamp: null };
     }

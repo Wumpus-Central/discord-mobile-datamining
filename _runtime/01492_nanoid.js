@@ -1,5 +1,6 @@
 // _runtime/01492_nanoid.js
-arg5.nanoid = () => {
+
+export const nanoid = () => {
   let tmp3;
   let num = arg0;
   if (arg0 === undefined) {
@@ -11,7 +12,7 @@ arg5.nanoid = () => {
   if (num | 0) {
     do {
       let _Math = Math;
-      str = `${"useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict"[(64 * Math.random(Math)) | 0]}`;
+      str = `${"useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict"[64 * Math.random(Math) | 0]}`;
       tmp3 = diff;
       diff = diff - 1;
       str2 = str;
@@ -19,12 +20,7 @@ arg5.nanoid = () => {
   }
   return str2;
 };
-arg5.customAlphabet = (arg0) => {
-  closure_0 = arg0;
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 21;
-  }
+export (arg0) => {
   return () => {
     let tmp5;
     let tmp = arg0;
@@ -36,9 +32,8 @@ arg5.customAlphabet = (arg0) => {
     let str2 = "";
     if (tmp | 0) {
       do {
-        let tmp4 = length;
         let _Math = Math;
-        str = `${closure_0[(Math.random(Math) * closure_0.length) | 0]}`;
+        str = `${closure_0[Math.random(Math) * closure_0.length | 0]}`;
         tmp5 = diff;
         diff = diff - 1;
         str2 = str;
@@ -46,4 +41,4 @@ arg5.customAlphabet = (arg0) => {
     }
     return str2;
   };
-};
+}

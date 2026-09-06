@@ -1,14 +1,13 @@
 // _runtime/00424_Mixin.js
-import noopAll from "00019_noop.js";
 import measureDefault from "00068_measure.js";
-import _objectWithoutPropertiesDefault from "metro/00109__objectWithoutProperties.js";
 import get_VersionDefault from "00273_get_Version.js";
 import SoundManagerDefault from "00294_SoundManager.js";
 import PositionDefault from "00425_Position.js";
 import BoundingDimensionsDefault from "00427_BoundingDimensions.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import noop from "metro/00019__.js";
 
-noopAll;
+const jsx = fn(21).jsx;
 const f19430 = (arg0) => {};
 const NOT_RESPONDER = "NOT_RESPONDER";
 const RESPONDER_INACTIVE_PRESS_IN = "RESPONDER_INACTIVE_PRESS_IN";
@@ -44,7 +43,7 @@ const RESPONDER_TERMINATED = "RESPONDER_TERMINATED";
 const ENTER_PRESS_RECT = "ENTER_PRESS_RECT";
 const LEAVE_PRESS_RECT = "LEAVE_PRESS_RECT";
 const LONG_PRESS_DETECTED = "LONG_PRESS_DETECTED";
-let closure_18 = {
+const dependencyMap = {
   NOT_RESPONDER: {
     DELAY: "ERROR",
     RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN",
@@ -238,59 +237,60 @@ let obj2 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f19430 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      ({ touches, changedTouches } = nativeEvent);
-      let tmp12 = touches;
-      if (touches) {
-        tmp12 = touches.length > 0;
-      }
-      let tmp13 = changedTouches;
-      if (changedTouches) {
-        tmp13 = changedTouches.length > 0;
-      }
-      if (!tmp12) {
-        if (tmp13) {
-          let first = changedTouches[0];
+      if (typeof f19430 === "function") {
+        ({ touches, changedTouches } = nativeEvent);
+        let tmp12 = touches;
+        if (touches) {
+          tmp12 = touches.length > 0;
         }
-        let pageX = first;
-        if (first) {
-          pageX = first.pageX;
+        let tmp13 = changedTouches;
+        if (changedTouches) {
+          tmp13 = changedTouches.length > 0;
         }
-        let pageY = first;
-        if (first) {
-          pageY = first.pageY;
-        }
-        if (self.pressInLocation) {
-          if (
-            self._getDistanceBetweenPoints(pageX, pageY, self.pressInLocation.pageX, self.pressInLocation.pageY) > 10
-          ) {
-            const result1 = self._cancelLongPressDelayTimeout();
+        if (!tmp12) {
+          if (tmp13) {
+            let first = changedTouches[0];
           }
-        }
-        if (pageX > positionOnActivate.left - tmp5) {
-          if (pageY > positionOnActivate.top - tmp4) {
-            if (pageX < positionOnActivate.left + dimensionsOnActivate.width + tmp3) {
-              if (pageY < positionOnActivate.top + dimensionsOnActivate.height + sum3) {
-                self._receiveSignal(ENTER_PRESS_RECT, nativeEvent);
-                if (tmp24) {
-                  const result2 = self._cancelLongPressDelayTimeout();
+          let pageX = first;
+          if (first) {
+            pageX = first.pageX;
+          }
+          let pageY = first;
+          if (first) {
+            pageY = first.pageY;
+          }
+          if (self.pressInLocation) {
+            if (
+              self._getDistanceBetweenPoints(pageX, pageY, self.pressInLocation.pageX, self.pressInLocation.pageY) > 10
+            ) {
+              const result1 = self._cancelLongPressDelayTimeout();
+            }
+          }
+          if (pageX > positionOnActivate.left - tmp5) {
+            if (pageY > positionOnActivate.top - tmp4) {
+              if (pageX < positionOnActivate.left + dimensionsOnActivate.width + tmp3) {
+                if (pageY < positionOnActivate.top + dimensionsOnActivate.height + sum3) {
+                  self._receiveSignal(ENTER_PRESS_RECT, nativeEvent);
+                  if (tmp24) {
+                    const result2 = self._cancelLongPressDelayTimeout();
+                  }
+                  tmp24 =
+                    self.state.touchable.touchState === RESPONDER_INACTIVE_PRESS_IN &&
+                    self.state.touchable.touchState !== RESPONDER_INACTIVE_PRESS_IN;
                 }
-                tmp24 =
-                  self.state.touchable.touchState === RESPONDER_INACTIVE_PRESS_IN &&
-                  self.state.touchable.touchState !== RESPONDER_INACTIVE_PRESS_IN;
               }
             }
           }
+          const result3 = self._cancelLongPressDelayTimeout();
+          self._receiveSignal(LEAVE_PRESS_RECT, nativeEvent);
         }
-        const result3 = self._cancelLongPressDelayTimeout();
-        self._receiveSignal(LEAVE_PRESS_RECT, nativeEvent);
+        if (tmp12) {
+          nativeEvent = touches[0];
+        }
+        first = nativeEvent;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      if (tmp12) {
-        nativeEvent = touches[0];
-      }
-      first = nativeEvent;
     }
   },
   touchableHandleFocus(arg0) {
@@ -311,7 +311,6 @@ let obj2 = {
     if (null != responderID) {
       if (typeof responderID === "number") {
         measureDefault.measure(responderID, self._handleQueryLayout);
-        obj = measureDefault;
       } else {
         responderID.measure(self._handleQueryLayout);
       }
@@ -338,16 +337,12 @@ let obj2 = {
       const self = this;
       if (this.state.touchable.positionOnActivate) {
         PositionDefault.release(self.state.touchable.positionOnActivate);
-        obj = PositionDefault;
       }
       if (self.state.touchable.dimensionsOnActivate) {
         BoundingDimensionsDefault.release(self.state.touchable.dimensionsOnActivate);
-        const obj2 = BoundingDimensionsDefault;
       }
       self.state.touchable.positionOnActivate = PositionDefault.getPooled(arg4, arg5);
-      const obj3 = PositionDefault;
       self.state.touchable.dimensionsOnActivate = BoundingDimensionsDefault.getPooled(arg2, arg3);
-      const obj4 = BoundingDimensionsDefault;
     }
   },
   _handleDelay(persist) {
@@ -389,7 +384,7 @@ let obj2 = {
           ) {
             str9 = self.state.touchable.responderID;
           }
-          error = new Error(str9);
+          const error = new Error(str9);
           throw error;
         } else if (touchState !== tmp) {
           const result = self._performSideEffectsForTransition(touchState, tmp, arg0, nativeEvent);
@@ -431,50 +426,47 @@ let obj2 = {
   },
   _savePressInLocation(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f19430 !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    ({ touches, changedTouches } = nativeEvent);
-    let tmp = touches;
-    if (touches) {
-      tmp = touches.length > 0;
-    }
-    let tmp2 = changedTouches;
-    if (changedTouches) {
-      tmp2 = changedTouches.length > 0;
-    }
-    if (!tmp) {
-      if (tmp2) {
-        let first = changedTouches[0];
+    if (typeof f19430 === "function") {
+      ({ touches, changedTouches } = nativeEvent);
+      let tmp = touches;
+      if (touches) {
+        tmp = touches.length > 0;
       }
-      let pageX = first;
-      if (first) {
-        pageX = first.pageX;
+      let tmp2 = changedTouches;
+      if (changedTouches) {
+        tmp2 = changedTouches.length > 0;
       }
-      let pageY = first;
-      if (first) {
-        pageY = first.pageY;
+      if (!tmp) {
+        if (tmp2) {
+          let first = changedTouches[0];
+        }
+        let pageX = first;
+        if (first) {
+          pageX = first.pageX;
+        }
+        let pageY = first;
+        if (first) {
+          pageY = first.pageY;
+        }
+        let locationX = first;
+        if (first) {
+          locationX = first.locationX;
+        }
+        let locationY = first;
+        if (first) {
+          locationY = first.locationY;
+        }
+        const self = this;
+        obj = { pageX, pageY, locationX, locationY };
+        this.pressInLocation = obj;
       }
-      let locationX = first;
-      if (first) {
-        locationX = first.locationX;
+      if (tmp) {
+        nativeEvent = touches[0];
       }
-      let locationY = first;
-      if (first) {
-        locationY = first.locationY;
-      }
-      const self = this;
-      obj = { pageX: null, pageY: null, locationX: null, locationY: null };
-      obj[0] = pageX;
-      obj[1] = pageY;
-      obj[2] = locationX;
-      obj[3] = locationY;
-      this.pressInLocation = obj;
+      first = nativeEvent;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    if (tmp) {
-      nativeEvent = touches[0];
-    }
-    first = nativeEvent;
   },
   _getDistanceBetweenPoints(pageX, pageY, pageX2, pageY2) {
     const diff = pageX - pageX2;
@@ -552,7 +544,6 @@ let obj2 = {
             }
             self.touchableHandlePress(nativeEvent);
           }
-          const tmp31 = obj1;
         }
       }
       if (self.touchableDelayTimeout) {
@@ -576,9 +567,9 @@ let obj2 = {
       const result = self.touchableHandleActivePressIn(nativeEvent);
     }
   },
-  _endHighlight(closure_0) {
-    let self = this;
-    self = this;
+  _endHighlight(nativeEvent) {
+    const self = this;
+    closure_0 = nativeEvent;
     if (this.touchableHandleActivePressOut) {
       if (self.touchableGetPressOutDelayMS) {
         if (self.touchableGetPressOutDelayMS()) {
@@ -588,16 +579,13 @@ let obj2 = {
           }, self.touchableGetPressOutDelayMS());
         }
       }
-      let result = self.touchableHandleActivePressOut(closure_0);
+      let result = self.touchableHandleActivePressOut(nativeEvent);
     }
   },
   withoutDefaultFocusAndBlur: {},
 };
 ({ touchableHandleFocus, touchableHandleBlur } = obj2);
-obj2.withoutDefaultFocusAndBlur = _objectWithoutPropertiesDefault(obj2, [
-  "touchableHandleFocus",
-  "touchableHandleBlur",
-]);
+obj2.withoutDefaultFocusAndBlur = _objectWithoutProperties(obj2, ["touchableHandleFocus", "touchableHandleBlur"]);
 
 export default {
   Mixin: obj2,

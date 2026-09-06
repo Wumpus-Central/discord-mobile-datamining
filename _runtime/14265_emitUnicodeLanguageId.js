@@ -3,7 +3,8 @@ import e from "01162_e.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {
+
+export const emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {
   let str = "";
   if (arg0) {
     const items = [, ,];
@@ -11,7 +12,6 @@ arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {
     if (!variants) {
       variants = [];
     }
-    const obj = e;
     const _Boolean = Boolean;
     const found = e.__spreadArray(items, variants, true).filter(Boolean);
     str = found.join("-");
@@ -19,7 +19,7 @@ arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {
   }
   return str;
 };
-arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResult) {
+export const emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResult) {
   ({ lang, extensions } = parseUnicodeLocaleIdResult);
   let str = "";
   if (lang) {
@@ -28,7 +28,6 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
     if (!variants) {
       variants = [];
     }
-    const obj = e;
     const _Boolean = Boolean;
     const found = e.__spreadArray(items, variants, true).filter(Boolean);
     str = found.join("-");
@@ -39,11 +38,8 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
     let iter = extensions[num];
     let arr = items1.push(iter.type);
     let type = iter.type;
-    let tmp5 = num;
     if ("u" === type) {
       let push2 = items1.push;
-      let tmp10 = require;
-      let tmp11 = dependencyMap;
       let obj6 = e;
       let obj7 = e;
       let keywords = iter.keywords;
@@ -52,14 +48,13 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
         items1,
         obj6.__spreadArray(
           __spreadArrayResult1,
-          keywords.reduce((arr) => arr.concat(arg1), []),
+          keywords.reduce((arr, item) => arr.concat(item), []),
           false,
         ),
       );
     } else if ("t" === type) {
       let push = items1.push;
       let tmp7 = require;
-      let tmp8 = dependencyMap;
       let obj3 = e;
       let lang2 = iter.lang;
       let str3 = "";
@@ -81,7 +76,7 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
         items1,
         obj3.__spreadArray(
           items3,
-          fields.reduce((arr) => arr.concat(arg1), []),
+          fields.reduce((arr, item) => arr.concat(item), []),
           false,
         ),
       );

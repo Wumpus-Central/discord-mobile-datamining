@@ -1,5 +1,6 @@
 // _runtime/00964_browserProfilingIntegration.js
-import registerSpanErrorInstrumentation from "00682_registerSpanErrorInstrumentation.js";
+import _mod966 from "metro/00966__.js";
+import registerSpanErrorInstrumentation from "metro/00682__.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -87,75 +88,45 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
                 }
               }
               let tmp20 = profile_id;
-              let tmp21 = contexts;
               if (tmp18 != null) {
                 let profile2 = tmp18.profile;
                 if (profile2 != null) {
                   let start_timestamp = profile2.start_timestamp;
                 }
               }
-              let tmp23 = profile_id;
               if (typeof tmp20 === "string") {
-                let tmp27 = profile_id;
                 if (tmp20) {
-                  let tmp35 = contexts;
                   profile = undefined;
                   if (tmp18 != null) {
                     profile = tmp18.profile;
                   }
                   if (profile) {
-                    let tmp37 = contexts;
                     delete tmp2[tmp];
                   }
                   let tmp39 = uIProfiler;
-                  let tmp41 = dependencyMap;
-                  let tmp38 = uIProfiler;
-                  let tmp40 = dependencyMap;
                   let obj3 = uIProfiler(966);
-                  let tmp42 = profile_id;
                   let result1 = obj3.takeProfileFromGlobalCache(tmp20);
-                  let tmp45 = uIProfiler;
-                  let tmp46 = dependencyMap;
                   if (result1) {
                     let tmp39Result = tmp39(966);
-                    let tmp51 = profile_id;
-                    let tmp52 = start_timestamp;
-                    let tmp53 = result1;
-                    let tmp54 = nextResult;
-                    let tmp55 = tmp39Result;
                     let profilingEvent = tmp39Result.createProfilingEvent(tmp20, tmp22, tmp44, tmp16);
                     if (profilingEvent) {
-                      let tmp58 = profilingEvent;
                       let arr = items.push(tmp57);
                     }
                   } else if (tmp39(937).DEBUG_BUILD) {
-                    let tmp47 = tmp38;
-                    let tmp48 = tmp40;
                     let debug3 = tmp39(682).debug;
-                    let tmp49 = profile_id;
                     let _HermesInternal = HermesInternal;
                     let logResult = debug3.log("[Profiling] Could not retrieve profile for span: " + tmp20);
                   }
                 } else {
-                  let tmp28 = uIProfiler;
                   let tmp29 = uIProfiler;
-                  let tmp30 = dependencyMap;
-                  let tmp31 = dependencyMap;
                   if (uIProfiler(937).DEBUG_BUILD) {
-                    let tmp32 = tmp28;
-                    let tmp33 = tmp30;
                     let debug2 = tmp29(682).debug;
                     let logResult1 = debug2.log("[Profiling] cannot find profile for a span without a profile context");
                   }
                 }
               } else {
-                let tmp65 = uIProfiler;
                 let tmp66 = uIProfiler;
-                let tmp67 = dependencyMap;
-                let tmp68 = dependencyMap;
                 if (uIProfiler(937).DEBUG_BUILD) {
-                  let tmp24 = tmp65;
-                  let tmp25 = tmp67;
                   let debug = tmp66(682).debug;
                   let logResult2 = debug.log("[Profiling] cannot find profile for a span without a profile context");
                 }
@@ -182,11 +153,11 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
           }
           const WINDOW = tmp2(893).WINDOW;
           const timerId = WINDOW.setTimeout(() => {
-            const activeSpan = uIProfiler(closure_1_1[3]).getActiveSpan();
+            const activeSpan = registerSpanErrorInstrumentation.getActiveSpan();
             let rootSpan = activeSpan;
             if (activeSpan) {
-              rootSpan = uIProfiler(closure_1_1[3]).getRootSpan(activeSpan);
-              const tmpResult = uIProfiler(closure_1_1[3]);
+              rootSpan = registerSpanErrorInstrumentation.getRootSpan(activeSpan);
+              const tmpResult = registerSpanErrorInstrumentation;
             }
             if (rootSpan) {
               uIProfiler.notifyRootSpanActive(rootSpan);
@@ -203,6 +174,6 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
     }
   },
   processEvent(contexts) {
-    return callback(966).attachProfiledThreadToEvent(contexts);
+    return _mod966.attachProfiledThreadToEvent(contexts);
   },
 }));

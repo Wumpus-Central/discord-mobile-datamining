@@ -1,8 +1,9 @@
 // _runtime/04318_callDispose.js
-arg5.callDispose = function callDispose(closure_0) {
+
+export const callDispose = function callDispose(current) {
   for (const key10006 in arg0) {
-    let tmp7 = key10006;
     let _Object3 = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
     let call = hasOwnProperty.call;
     if (typeof call === "unknown") {
       let hasOwnPropertyResult = hasOwnProperty(key10006);
@@ -38,13 +39,16 @@ arg5.callDispose = function callDispose(closure_0) {
   }
   try {
     const _Object2 = Object;
-    const obj = { value: null, enumerable: false, configurable: true };
-    obj[0] = function value() {
-      return "[disposed HybridObject]";
+    const obj = {
+      value() {
+        return "[disposed HybridObject]";
+      },
+      enumerable: false,
+      configurable: true,
     };
-    Object.defineProperty(closure_0, "toString", obj);
+    Object.defineProperty(current, "toString", obj);
     try {
-      closure_0.dispose();
+      current.dispose();
     } catch (tmp5) {
       if (tmp5 instanceof obj.Error) {
         let message = tmp5.message;

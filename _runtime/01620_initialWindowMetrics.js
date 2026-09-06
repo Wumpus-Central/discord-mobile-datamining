@@ -1,9 +1,9 @@
 // _runtime/01620_initialWindowMetrics.js
-import importDefaultResult from "01621_RNCSafeAreaContext.js";
+import RNCSafeAreaContext from "01621_RNCSafeAreaContext.js";
 
 let initialWindowMetrics;
-if (importDefaultResult != null) {
-  const getConstants = importDefaultResult.getConstants;
+if (RNCSafeAreaContext != null) {
+  const getConstants = RNCSafeAreaContext.getConstants;
   if (getConstants != null) {
     const constants = getConstants();
     if (constants != null) {

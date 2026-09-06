@@ -1,10 +1,10 @@
 // _runtime/00164_warnNoNativePerformance.js
 import warnOnceDefault from "00165_warnOnce.js";
-import importDefaultResult from "00154_NativePerformanceCxx.js";
+import NativePerformanceCxx from "metro/00154__.js";
 
 let fn;
-if (importDefaultResult != null) {
-  fn = importDefaultResult.now;
+if (NativePerformanceCxx != null) {
+  fn = NativePerformanceCxx.now;
 }
 if (fn == null) {
   fn = global.nativePerformanceNow;

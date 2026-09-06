@@ -1,5 +1,5 @@
 // _runtime/01438_PseudoMap.js
-import PseudoMap from "01439_PseudoMap.js";
+import _mod1439 from "metro/01439__.js";
 
 let tmp = "pseudomap" === process.env.npm_package_name;
 if (tmp) {
@@ -18,4 +18,4 @@ if (typeof Map === "function") {
   }
 }
 
-export default PseudoMap;
+export default _mod1439;

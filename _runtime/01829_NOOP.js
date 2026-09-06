@@ -1,9 +1,9 @@
 // _runtime/01829_NOOP.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import noop from "00019_noop.js";
+import _mod17 from "metro/00017__.js";
+import noop from "metro/00019__.js";
 
-({ useContext: c0, createContext } = noop);
-const Animated = get_ActivityIndicator.Animated;
+({ useContext: closure_0, createContext } = noop);
+const Animated = _mod17.Animated;
 class NOOP {
   constructor() {
     return;
@@ -14,25 +14,25 @@ class NESTED_NOOP {
     return NOOP;
   }
 }
-c0 = 0;
+let closure_129_0 = 0;
 let obj = {
   value: 0,
   addListener: NOOP,
   removeListener: NOOP,
   modify: NOOP,
   get() {
-    return c0;
+    return React;
   },
   set: NOOP,
 };
-c0 = null;
+let closure_130_0 = null;
 obj = {
   value: null,
   addListener: NOOP,
   removeListener: NOOP,
   modify: NOOP,
   get() {
-    return c0;
+    return React;
   },
   set: NOOP,
 };
@@ -48,17 +48,17 @@ obj = {
 };
 const obj1 = { progress: null, height: null };
 let value = new Animated.Value(0);
-obj1[0] = value;
+obj1.progress = value;
 value = new Animated.Value(0);
-obj1[1] = value;
-obj[1] = obj1;
-obj[2] = { progress: obj, height: obj };
-obj[3] = obj;
-obj[4] = Promise.resolve;
-obj[5] = NESTED_NOOP;
-obj[6] = NESTED_NOOP;
-obj[7] = NOOP;
+obj1.height = value;
+obj.animated = obj1;
+obj.reanimated = { progress: obj, height: obj };
+obj.layout = obj;
+obj.update = Promise.resolve;
+obj.setKeyboardHandlers = NESTED_NOOP;
+obj.setInputHandlers = NESTED_NOOP;
+obj.setEnabled = NOOP;
 const context = createContext(obj);
 
 export const KeyboardContext = context;
-export const useKeyboardContext = () => _null(context);
+export const useKeyboardContext = () => React(context);

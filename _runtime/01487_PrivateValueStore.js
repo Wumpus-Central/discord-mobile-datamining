@@ -1,6 +1,6 @@
 // _runtime/01487_PrivateValueStore.js
-import _createClassDefault from "metro/00042__createClass.js";
-import closure_0 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class PrivateValueStore {
   constructor() {
@@ -9,4 +9,4 @@ class PrivateValueStore {
   }
 }
 
-export const PrivateValueStore = _createClassDefault(PrivateValueStore);
+export const PrivateValueStore = _createClass(PrivateValueStore);

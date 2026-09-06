@@ -1,15 +1,15 @@
 // _runtime/05666_HeaderButton.js
-import noopAll from "00019_noop.js";
-import Animated from "05649_Animated.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _mod5649 from "metro/05649__.js";
+import noop from "metro/00019__.js";
 
-require = arg1;
+require = fn;
+get_ActivityIndicator = fn(17);
 ({ StyleSheet, Platform } = get_ActivityIndicator);
-const forwardRefResult = noopAll.forwardRef(function HeaderButtonInternal(disabled, ref) {
+const jsx = fn(21).jsx;
+const forwardRefResult = noop.forwardRef(function HeaderButtonInternal(disabled, ref) {
   disabled = disabled.disabled;
   ({ onPress, pressColor, pressOpacity, accessibilityLabel, testID, style, href, children } = disabled);
-  obj = {
+  android_ripple = {
     ref,
     disabled,
     href,
@@ -18,7 +18,7 @@ const forwardRefResult = noopAll.forwardRef(function HeaderButtonInternal(disabl
     onPress,
     pressColor,
     pressOpacity,
-    android_ripple: obj,
+    android_ripple,
     style: null,
     hitSlop: null,
     children: null,
@@ -29,10 +29,10 @@ const forwardRefResult = noopAll.forwardRef(function HeaderButtonInternal(disabl
   }
   items[1] = disabled;
   items[2] = style;
-  obj[9] = items;
-  obj[10] = { top: 16, right: 16, bottom: 16, left: 16 };
-  obj[11] = children;
-  return jsx(Animated.PlatformPressable, {
+  android_ripple.style = items;
+  android_ripple.hitSlop = { top: 16, right: 16, bottom: 16, left: 16 };
+  android_ripple.children = children;
+  return jsx(_mod5649.PlatformPressable, {
     ref,
     disabled,
     href,
@@ -41,14 +41,14 @@ const forwardRefResult = noopAll.forwardRef(function HeaderButtonInternal(disabl
     onPress,
     pressColor,
     pressOpacity,
-    android_ripple: obj,
+    android_ripple,
     style: null,
     hitSlop: null,
     children: null,
   });
 });
 forwardRefResult.displayName = "HeaderButton";
-let obj = { borderless: true, foreground: Platform.Version >= 23, radius: 20 };
+let android_ripple = { borderless: true, foreground: Platform.Version >= 23, radius: 20 };
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",

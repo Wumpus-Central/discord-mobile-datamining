@@ -1,6 +1,9 @@
 // _runtime/06756_touchDataToPressEvent.js
-function touchDataToPressEvent(arg0, arg1, arg2) {}
-arg5.addInsets = (left, left2) => {
+function touchDataToPressEvent(arg0, arg1, arg2) {
+
+}
+
+export const addInsets = (left, left2) => {
   let num = left.left;
   if (num == null) {
     num = 0;
@@ -9,7 +12,7 @@ arg5.addInsets = (left, left2) => {
   if (num2 == null) {
     num2 = 0;
   }
-  const obj = { left: num + num2, right: null, top: null, bottom: null };
+  const rect = { left: num + num2, right: null, top: null, bottom: null };
   let num3 = left.right;
   if (num3 == null) {
     num3 = 0;
@@ -18,7 +21,7 @@ arg5.addInsets = (left, left2) => {
   if (num4 == null) {
     num4 = 0;
   }
-  obj[1] = num3 + num4;
+  rect.right = num3 + num4;
   let num5 = left.top;
   if (num5 == null) {
     num5 = 0;
@@ -27,7 +30,7 @@ arg5.addInsets = (left, left2) => {
   if (num6 == null) {
     num6 = 0;
   }
-  obj[2] = num5 + num6;
+  rect.top = num5 + num6;
   let num7 = left.bottom;
   if (num7 == null) {
     num7 = 0;
@@ -36,84 +39,52 @@ arg5.addInsets = (left, left2) => {
   if (num8 == null) {
     num8 = 0;
   }
-  obj[3] = num7 + num8;
+  rect.bottom = num7 + num8;
+  return rect;
+};
+export const gestureToPressableEvent = (handlerTag) => {
+  const timestamp = Date.now();
+  let obj = { identifier: handlerTag.handlerTag, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
+  obj = { nativeEvent: null };
+  obj = { touches: null, changedTouches: null, identifier: obj.identifier, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, force: "HermesInternal" };
+  const items = [obj];
+  obj.touches = items;
+  const items1 = [obj];
+  obj.changedTouches = items1;
+  obj.nativeEvent = obj;
   return obj;
 };
-arg5.gestureToPressableEvent = (handlerTag) => {
+export const gestureTouchToPressableEvent = (handlerTag) => {
   const timestamp = Date.now();
-  let nativeEvent = {
-    identifier: handlerTag.handlerTag,
-    locationX: handlerTag.x,
-    locationY: handlerTag.y,
-    pageX: handlerTag.absoluteX,
-    pageY: handlerTag.absoluteY,
-    target: 0,
-    timestamp,
-    touches: [],
-    changedTouches: [],
-  };
-  nativeEvent = {
-    touches: items,
-    changedTouches: items1,
-    identifier: nativeEvent.identifier,
-    locationX: handlerTag.x,
-    locationY: handlerTag.y,
-    pageX: handlerTag.absoluteX,
-    pageY: handlerTag.absoluteY,
-    target: 0,
-    timestamp,
-    force: "HermesInternal",
-  };
-  items = [nativeEvent];
-  items1 = [nativeEvent];
-  return { nativeEvent };
-};
-arg5.gestureTouchToPressableEvent = (handlerTag) => {
-  const timestamp = Date.now();
-  const nativeEvent = {
-    touches: allTouches.map((id) => {
-      if (typeof timestamp !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      return {
-        identifier: id.id,
-        locationX: id.x,
-        locationY: id.y,
-        pageX: id.absoluteX,
-        pageY: id.absoluteY,
-        target: 0,
-        timestamp,
-        touches: [],
-        changedTouches: [],
-      };
-    }),
-    changedTouches: changedTouches.map((id) => {
-      if (typeof timestamp !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      return {
-        identifier: id.id,
-        locationX: id.x,
-        locationY: id.y,
-        pageX: id.absoluteX,
-        pageY: id.absoluteY,
-        target: 0,
-        timestamp,
-        touches: [],
-        changedTouches: [],
-      };
-    }),
-    identifier: handlerTag.handlerTag,
-    locationX: null,
-    locationY: null,
-    pageX: null,
-    pageY: null,
-    target: 0,
-    timestamp: null,
-    force: "HermesInternal",
-  };
-  ({ allTouches, changedTouches, allTouches: allTouches2 } = handlerTag);
-  const atResult = allTouches2.at(0);
+  const nativeEvent = { touches: null, changedTouches: null, identifier: handlerTag.handlerTag, locationX: null, locationY: null, pageX: null, pageY: null, target: 0, timestamp: null, force: "HermesInternal" };
+  let allTouches = handlerTag.allTouches;
+  nativeEvent.touches = allTouches.map((item) => {
+    if (typeof touchDataToPressEvent === "function") {
+      const obj = { identifier: null, locationX: null, locationY: null, pageX: null, pageY: null, target: 0, timestamp: null, touches: null, changedTouches: null };
+      ({ id: obj.identifier, x: obj.locationX, y: obj.locationY, absoluteX: obj.pageX, absoluteY: obj.pageY } = item);
+      obj.timestamp = tmp;
+      obj.touches = [];
+      obj.changedTouches = [];
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  });
+  const changedTouches = handlerTag.changedTouches;
+  nativeEvent.changedTouches = changedTouches.map((item) => {
+    if (typeof touchDataToPressEvent === "function") {
+      const obj = { identifier: null, locationX: null, locationY: null, pageX: null, pageY: null, target: 0, timestamp: null, touches: null, changedTouches: null };
+      ({ id: obj.identifier, x: obj.locationX, y: obj.locationY, absoluteX: obj.pageX, absoluteY: obj.pageY } = item);
+      obj.timestamp = tmp;
+      obj.touches = [];
+      obj.changedTouches = [];
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  });
+  allTouches = handlerTag.allTouches;
+  const atResult = allTouches.at(0);
   let num;
   if (atResult != null) {
     num = atResult.x;
@@ -121,9 +92,9 @@ arg5.gestureTouchToPressableEvent = (handlerTag) => {
   if (num == null) {
     num = -1;
   }
-  nativeEvent[3] = num;
-  const allTouches3 = handlerTag.allTouches;
-  const atResult1 = allTouches3.at(0);
+  nativeEvent.locationX = num;
+  const allTouches2 = handlerTag.allTouches;
+  const atResult1 = allTouches2.at(0);
   let num2;
   if (atResult1 != null) {
     num2 = atResult1.y;
@@ -131,9 +102,9 @@ arg5.gestureTouchToPressableEvent = (handlerTag) => {
   if (num2 == null) {
     num2 = -1;
   }
-  nativeEvent[4] = num2;
-  const allTouches4 = handlerTag.allTouches;
-  const atResult2 = allTouches4.at(0);
+  nativeEvent.locationY = num2;
+  const allTouches3 = handlerTag.allTouches;
+  const atResult2 = allTouches3.at(0);
   let num3;
   if (atResult2 != null) {
     num3 = atResult2.absoluteX;
@@ -141,9 +112,9 @@ arg5.gestureTouchToPressableEvent = (handlerTag) => {
   if (num3 == null) {
     num3 = -1;
   }
-  nativeEvent[5] = num3;
-  const allTouches5 = handlerTag.allTouches;
-  const atResult3 = allTouches5.at(0);
+  nativeEvent.pageX = num3;
+  const allTouches4 = handlerTag.allTouches;
+  const atResult3 = allTouches4.at(0);
   let num4;
   if (atResult3 != null) {
     num4 = atResult3.absoluteY;
@@ -151,11 +122,11 @@ arg5.gestureTouchToPressableEvent = (handlerTag) => {
   if (num4 == null) {
     num4 = -1;
   }
-  nativeEvent[6] = num4;
-  nativeEvent[8] = timestamp;
+  nativeEvent.pageY = num4;
+  nativeEvent.timestamp = timestamp;
   return { nativeEvent };
 };
-arg5.isTouchWithinInset = (width, right, locationX) => {
+export const isTouchWithinInset = (width, right, locationX) => {
   let num;
   if (locationX != null) {
     num = locationX.locationX;
@@ -212,36 +183,21 @@ arg5.isTouchWithinInset = (width, right, locationX) => {
   }
   return tmp;
 };
-arg5.numberAsInset = (left) => ({ left, right: left, top: left, bottom: left });
-arg5.viewCenterToPressableEvent = (width) => {
+export (left) => {
+  const rect = { left, right: left, top: left, bottom: left };
+  return rect;
+}
+export const viewCenterToPressableEvent = (width) => {
   const timestamp = Date.now();
-  const locationX = width.width / 2;
-  const locationY = width.height / 2;
-  const obj = {
-    identifier: 0,
-    locationX,
-    locationY,
-    pageX: -1,
-    pageY: -1,
-    target: 0,
-    timestamp,
-    touches: [],
-    changedTouches: [],
-  };
-  const touches = [obj];
-  const changedTouches = [obj];
-  return {
-    nativeEvent: {
-      touches,
-      changedTouches,
-      identifier: 0,
-      locationX,
-      locationY,
-      pageX: -1,
-      pageY: -1,
-      target: 0,
-      timestamp,
-      force: "Boolean",
-    },
-  };
+  const result = width.width / 2;
+  const result1 = width.height / 2;
+  let obj = { identifier: 0, locationX: result, locationY: result1, pageX: -1, pageY: -1, target: 0, timestamp, touches: [], changedTouches: [] };
+  obj = { nativeEvent: null };
+  obj = { touches: null, changedTouches: null, identifier: 0, locationX: result, locationY: result1, pageX: -1, pageY: -1, target: 0, timestamp, force: "Boolean" };
+  const items = [obj];
+  obj.touches = items;
+  const items1 = [obj];
+  obj.changedTouches = items1;
+  obj.nativeEvent = obj;
+  return obj;
 };

@@ -1,5 +1,5 @@
 // _runtime/09724_colorToHex.js
-import closure_0 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__.js";
 
 export const colorToHex = function colorToHex(arr) {
   if (undefined === arr) {
@@ -40,7 +40,7 @@ export const colorToHex = function colorToHex(arr) {
       let str11 = "";
       let str5 = "";
       if (3 === items.length) {
-        [tmp30, tmp31, tmp32] = callback(items, 3);
+        [tmp30, tmp31, tmp32] = _slicedToArray(items, 3);
         if (0 === tmp31) {
           const _Math = Math;
           const items1 = [Math.round(255 * tmp34), ,];
@@ -133,7 +133,7 @@ export const colorToHex = function colorToHex(arr) {
             }
           }
         }
-        const tmp29 = callback(items, 3);
+        const tmp29 = _slicedToArray(items, 3);
       }
       return str5;
     }

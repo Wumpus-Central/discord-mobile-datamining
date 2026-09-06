@@ -1,10 +1,9 @@
 // _runtime/00213_Networking.js
-import NetworkingDefault from "00214_Networking.js";
+import _modDef214 from "metro/00214__.js";
 
-for (const key10016 in require("Networking")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("Networking")[key10016];
+for (const key10016 in require("metro/00214__.js")) {
+  arg5[key10016] = require("metro/00214__.js")[key10016];
   continue;
 }
 
-export default NetworkingDefault;
+export default _modDef214;

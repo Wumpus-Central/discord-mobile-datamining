@@ -1,5 +1,5 @@
 // _runtime/13661_InflateState.js
-import assign from "13651_assign.js";
+import _mod13651 from "metro/13651__.js";
 import _mod13658 from "metro/13658__.js";
 import inflate_table from "13662_inflate_table.js";
 import inflate_fast from "13663_inflate_fast.js";
@@ -37,9 +37,9 @@ function InflateState() {
     have: 0,
     next: null,
   };
-  const buf16 = new assign.Buf16(320);
+  const buf16 = new _mod13651.Buf16(320);
   obj.lens = buf16;
-  const buf161 = new assign.Buf16(288);
+  const buf161 = new _mod13651.Buf16(288);
   obj.work = buf161;
   obj.lendyn = null;
   obj.distdyn = null;
@@ -75,10 +75,10 @@ function inflateReset(state) {
           state2.head = null;
           state2.hold = 0;
           state2.bits = 0;
-          const buf32 = new assign.Buf32(852);
+          buf32 = new _mod13651.Buf32(852);
           state2.lendyn = buf32;
           state2.lencode = buf32;
-          const buf321 = new assign.Buf32(592);
+          buf321 = new _mod13651.Buf32(592);
           state2.distdyn = buf321;
           state2.distcode = buf321;
           state2.sane = 1;
@@ -146,11 +146,11 @@ function updatewindow(state, output3, length, length2) {
     state.wsize = 1 << state.wbits;
     state.wnext = 0;
     state.whave = 0;
-    const buf8 = new assign.Buf8(state.wsize);
+    const buf8 = new _mod13651.Buf8(state.wsize);
     state.window = buf8;
   }
   if (length2 >= state.wsize) {
-    const obj3 = assign;
+    const obj3 = _mod13651;
     obj3.arraySet(state.window, output3, length - state.wsize, state.wsize, 0);
     state.wnext = 0;
     state.whave = state.wsize;
@@ -159,7 +159,7 @@ function updatewindow(state, output3, length, length2) {
     if (diff > length2) {
       diff = length2;
     }
-    const obj = assign;
+    const obj = _mod13651;
     obj.arraySet(state.window, output3, length - length2, diff, state.wnext);
     const diff1 = length2 - diff;
     if (diff1) {
@@ -181,8 +181,9 @@ function updatewindow(state, output3, length, length2) {
   return 0;
 }
 let c7 = true;
-arg5.inflateReset = inflateReset;
-arg5.inflateReset2 = function inflateReset2(state) {
+
+export { inflateReset };
+export const inflateReset2 = function inflateReset2(state, arg1) {
   let num = -2;
   if (state) {
     num = -2;
@@ -219,7 +220,7 @@ arg5.inflateReset2 = function inflateReset2(state) {
   }
   return num;
 };
-arg5.inflateResetKeep = function inflateResetKeep(state) {
+export const inflateResetKeep = function inflateResetKeep(state) {
   let num = -2;
   if (state) {
     num = -2;
@@ -239,10 +240,10 @@ arg5.inflateResetKeep = function inflateResetKeep(state) {
       state.head = null;
       state.hold = 0;
       state.bits = 0;
-      const buf32 = new assign.Buf32(852);
+      buf32 = new _mod13651.Buf32(852);
       state.lendyn = buf32;
       state.lencode = buf32;
-      const buf321 = new assign.Buf32(592);
+      buf321 = new _mod13651.Buf32(592);
       state.distdyn = buf321;
       state.distcode = buf321;
       state.sane = 1;
@@ -252,20 +253,17 @@ arg5.inflateResetKeep = function inflateResetKeep(state) {
   }
   return num;
 };
-arg5.inflateInit = function inflateInit(strm) {
+export const inflateInit = function inflateInit(strm) {
   return inflateInit2(strm, 15);
 };
-arg5.inflateInit2 = inflateInit2;
-arg5.inflate = function inflate(state) {
+export { inflateInit2 };
+export const inflate = function inflate(state, arg1) {
   let mode;
-  let buf8 = new assign.Buf8(4);
+  const buf8 = new _mod13651.Buf8(4);
   const items = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
   if (state) {
     if (state.state) {
       if (state.output) {
-        if (!state.input) {
-          let num = 0;
-        }
         state = state.state;
         if (state.mode === 12) {
           state.mode = 13;
@@ -273,16 +271,15 @@ arg5.inflate = function inflate(state) {
         ({ next_out, output, avail_out, next_in, input, avail_in } = state);
         ({ hold, bits } = state);
         let num56 = 0;
-        let diff2 = avail_out;
-        let diff8 = avail_in;
+        let diff11 = avail_out;
+        let diff45 = avail_in;
         while (true) {
           mode = state.mode;
-          let tmp7 = num56;
           let tmp8 = avail_out;
           let tmp9 = bits;
           let tmp10 = hold;
-          let tmp11 = diff2;
-          let tmp12 = diff8;
+          let tmp11 = diff11;
+          let tmp12 = diff45;
           let tmp13 = next_out;
           let tmp14 = next_in;
           let tmp15 = output;
@@ -292,32 +289,27 @@ arg5.inflate = function inflate(state) {
               state.mode = 13;
               continue;
             } else {
-              buf8 = bits;
-              buf8 = hold;
-              buf8 = diff8;
-              buf8 = next_in;
-              buf8 = bits;
-              buf8 = hold;
-              buf8 = diff8;
-              buf8 = next_in;
+              let sum3 = bits;
+              let sum2 = hold;
+              let diff = diff45;
+              let sum1 = next_in;
+              let tmp682 = bits;
+              let tmp683 = hold;
+              let tmp684 = diff45;
+              let tmp685 = next_in;
               if (bits >= 16) {
                 if (2 & state.wrap) {
-                  if (35615 === buf8) {
+                  if (35615 === tmp683) {
                     state.check = 0;
-                    buf8[0] = 255 & buf8;
-                    buf8[1] = (buf8 >>> 8) & 255;
-                    buf8 = require;
-                    buf8 = dependencyMap;
+                    buf8[0] = 255 & tmp683;
+                    buf8[1] = (tmp683 >>> 8) & 255;
                     let check10 = state.check;
-                    buf8 = check10;
-                    num = 2;
-                    num = 0;
                     state.check = _mod13658(check10, tmp2, 2, 0);
                     state.mode = 2;
                     bits = 0;
                     hold = 0;
-                    diff8 = buf8;
-                    next_in = buf8;
+                    diff45 = tmp684;
+                    next_in = tmp685;
                     continue;
                   }
                 }
@@ -326,44 +318,44 @@ arg5.inflate = function inflate(state) {
                   state.head.done = false;
                 }
                 if (1 & state.wrap) {
-                  if (!((((255 & buf8) << 8) + (buf8 >> 8)) % 31)) {
-                    if (8 !== (15 & buf8)) {
+                  if (!((((255 & tmp683) << 8) + (tmp683 >> 8)) % 31)) {
+                    if (8 !== (15 & tmp683)) {
                       state.msg = "unknown compression method";
                       state.mode = 30;
-                      bits = buf8;
-                      hold = buf8;
-                      diff8 = buf8;
-                      next_in = buf8;
+                      bits = tmp682;
+                      hold = tmp683;
+                      diff45 = tmp684;
+                      next_in = tmp685;
                       continue;
                     } else {
-                      buf8 = buf8 >>> 4;
-                      buf8 = 8 + (15 & buf8);
+                      let tmp688 = tmp683 >>> 4;
+                      let sum = 8 + (15 & tmp688);
                       if (0 === state.wbits) {
-                        state.wbits = buf8;
+                        state.wbits = sum;
                       } else {
-                        if (buf8 > state.wbits) {
+                        if (sum > state.wbits) {
                           state.msg = "invalid window size";
                           state.mode = 30;
-                          bits = buf8;
-                          hold = buf8;
-                          diff8 = buf8;
-                          next_in = buf8;
+                          bits = tmp687;
+                          hold = tmp688;
+                          diff45 = tmp684;
+                          next_in = tmp685;
                           continue;
                         }
                         continue;
                       }
-                      state.dmax = 1 << buf8;
+                      state.dmax = 1 << sum;
                       state.check = 1;
                       state.adler = 1;
-                      num = 10;
-                      if (!(512 & buf8)) {
-                        num = 12;
+                      let num109 = 10;
+                      if (!(512 & tmp688)) {
+                        num109 = 12;
                       }
-                      state.mode = num;
+                      state.mode = num109;
                       bits = 0;
                       hold = 0;
-                      diff8 = buf8;
-                      next_in = buf8;
+                      diff45 = tmp684;
+                      next_in = tmp685;
                       continue;
                     }
                     continue;
@@ -372,183 +364,172 @@ arg5.inflate = function inflate(state) {
                 }
                 state.msg = "incorrect header check";
                 state.mode = 30;
-                bits = buf8;
-                hold = buf8;
-                diff8 = buf8;
-                next_in = buf8;
+                bits = tmp682;
+                hold = tmp683;
+                diff45 = tmp684;
+                next_in = tmp685;
                 continue;
               } else {
                 let num61 = num56;
                 let tmp37 = avail_out;
-                let num62 = buf8;
-                let num63 = buf8;
-                let tmp38 = buf8;
-                let tmp39 = buf8;
-                while (0 !== buf8) {
-                  buf8 = buf8 - 1;
-                  buf8 = +buf8;
-                  buf8 = buf8 + 1;
-                  buf8 = buf8 + (input[buf8] << buf8);
-                  buf8 = buf8 + 8;
+                let num62 = sum3;
+                let num63 = sum2;
+                let tmp38 = sum1;
+                let tmp39 = diff;
+                while (0 !== diff) {
+                  diff = diff - 1;
+                  let tmp686 = +sum1;
+                  sum1 = tmp686 + 1;
+                  sum2 = sum2 + (input[tmp686] << sum3);
+                  sum3 = sum3 + 8;
+                  tmp683 = sum2;
+                  tmp684 = diff;
+                  tmp685 = sum1;
+                  tmp682 = sum3;
                   continue;
                 }
               }
             }
           } else {
             if (2 === mode) {
-              buf8 = bits;
-              buf8 = hold;
-              buf8 = diff8;
-              buf8 = next_in;
-              buf8 = bits;
-              buf8 = hold;
-              buf8 = diff8;
-              buf8 = next_in;
+              let sum6 = bits;
+              let sum5 = hold;
+              let diff1 = diff45;
+              let sum4 = next_in;
+              let tmp427 = bits;
+              let tmp428 = hold;
+              let tmp429 = diff45;
+              let tmp430 = next_in;
               if (bits >= 16) {
-                state.flags = buf8;
+                state.flags = tmp428;
                 if (8 !== (255 & state.flags)) {
                   state.msg = "unknown compression method";
                   state.mode = 30;
-                  bits = buf8;
-                  hold = buf8;
-                  diff8 = buf8;
-                  next_in = buf8;
+                  bits = tmp427;
+                  hold = tmp428;
+                  diff45 = tmp429;
+                  next_in = tmp430;
                   continue;
                 } else if (57344 & state.flags) {
                   state.msg = "unknown header flags set";
                   state.mode = 30;
-                  bits = buf8;
-                  hold = buf8;
-                  diff8 = buf8;
-                  next_in = buf8;
+                  bits = tmp427;
+                  hold = tmp428;
+                  diff45 = tmp429;
+                  next_in = tmp430;
                   continue;
                 } else {
                   if (state.head) {
-                    state.head.text = (buf8 >> 8) & 1;
+                    state.head.text = (tmp428 >> 8) & 1;
                   }
                   if (512 & state.flags) {
-                    buf8[0] = 255 & buf8;
-                    buf8[1] = (buf8 >>> 8) & 255;
-                    buf8 = require;
-                    buf8 = dependencyMap;
+                    buf8[0] = 255 & tmp428;
+                    buf8[1] = (tmp428 >>> 8) & 255;
                     let check3 = state.check;
-                    buf8 = check3;
-                    let num89 = 2;
-                    let num90 = 0;
                     state.check = _mod13658(check3, tmp2, 2, 0);
                   }
                   state.mode = 3;
                   let num91 = 0;
                   let num92 = 0;
+                  let tmp439 = tmp429;
+                  let tmp440 = tmp430;
                 }
                 continue;
               } else {
                 num61 = num56;
                 tmp37 = avail_out;
-                num62 = buf8;
-                num63 = buf8;
-                tmp38 = buf8;
-                tmp39 = buf8;
-                while (0 !== buf8) {
-                  buf8 = buf8 - 1;
-                  buf8 = +buf8;
-                  buf8 = buf8 + 1;
-                  buf8 = buf8 + (input[buf8] << buf8);
-                  buf8 = buf8 + 8;
+                num62 = sum6;
+                num63 = sum5;
+                tmp38 = sum4;
+                tmp39 = diff1;
+                while (0 !== diff1) {
+                  diff1 = diff1 - 1;
+                  let tmp673 = +sum4;
+                  sum4 = tmp673 + 1;
+                  sum5 = sum5 + (input[tmp673] << sum6);
+                  sum6 = sum6 + 8;
+                  tmp428 = sum5;
+                  tmp429 = diff1;
+                  tmp430 = sum4;
+                  tmp427 = sum6;
                   continue;
                 }
               }
             } else {
               num91 = bits;
               num92 = hold;
-              buf8 = diff8;
-              buf8 = next_in;
+              tmp439 = diff45;
+              tmp440 = next_in;
               if (3 !== mode) {
                 let num95 = bits;
                 let num96 = hold;
-                buf8 = diff8;
-                buf8 = next_in;
+                let tmp455 = diff45;
+                let tmp456 = next_in;
                 if (4 !== mode) {
                   let num99 = bits;
-                  num = hold;
-                  buf8 = diff8;
-                  buf8 = next_in;
+                  let num100 = hold;
+                  let tmp471 = diff45;
+                  let tmp472 = next_in;
                   if (5 !== mode) {
-                    buf8 = bits;
-                    buf8 = hold;
-                    buf8 = diff8;
-                    buf8 = next_in;
+                    let tmp592 = next_in;
                     if (6 === mode) {
-                      buf8 = tmp12;
-                      buf8 = tmp14;
+                      let tmp490 = tmp12;
+                      let tmp491 = tmp14;
                       if (!(1024 & state.flags)) {
                         state.length = 0;
                         state.mode = 7;
-                        buf8 = tmp9;
-                        buf8 = tmp10;
+                        let tmp515 = tmp490;
+                        let tmp516 = tmp491;
+                        let tmp517 = tmp9;
+                        let tmp518 = tmp10;
                       } else {
                         let length4 = state.length;
                         if (length4 > tmp12) {
                           length4 = tmp12;
                         }
-                        buf8 = tmp12;
-                        buf8 = tmp14;
+                        let diff3 = tmp12;
+                        let sum7 = tmp14;
                         if (length4) {
                           if (state.head) {
-                            buf8 = state.head.extra_len - state.length;
+                            let diff2 = state.head.extra_len - state.length;
                             if (!state.head.extra) {
                               let _Array = Array;
                               let extra_len = state.head.extra_len;
-                              buf8 = extra_len;
-                              buf8 = new.target;
-                              buf8 = new.target;
-                              buf8 = new Array(extra_len);
-                              state.head.extra = buf8;
+                              let tmp496 = new.target;
+                              let tmp497 = new.target;
+                              let array = new Array(extra_len);
+                              state.head.extra = array;
                             }
-                            buf8 = require;
-                            buf8 = dependencyMap;
-                            let obj3 = assign;
+                            let obj3 = _mod13651;
                             let extra3 = state.head.extra;
-                            buf8 = extra3;
-                            buf8 = obj3;
-                            buf8 = input;
-                            buf8 = tmp14;
-                            buf8 = length4;
-                            buf8 = obj3.arraySet(extra3, tmp16, buf8, length4, buf8);
+                            let arraySetResult = obj3.arraySet(extra3, tmp16, tmp592, length4, diff2);
                           }
                           if (512 & state.flags) {
-                            buf8 = require;
-                            buf8 = dependencyMap;
                             let check7 = state.check;
-                            buf8 = check7;
-                            buf8 = input;
-                            buf8 = length4;
-                            buf8 = tmp14;
-                            state.check = _mod13658(check7, tmp16, length4, buf8);
+                            state.check = _mod13658(check7, tmp16, length4, tmp592);
                           }
-                          buf8 = tmp12 - length4;
-                          buf8 = tmp14 + length4;
+                          diff3 = tmp12 - length4;
+                          sum7 = tmp14 + length4;
                           state.length = state.length - length4;
                         }
+                        tmp490 = diff3;
+                        tmp491 = sum7;
                         num61 = num56;
                         tmp37 = avail_out;
                         num62 = tmp9;
                         num63 = tmp10;
-                        tmp39 = buf8;
-                        tmp38 = buf8;
+                        tmp39 = diff3;
+                        tmp38 = sum7;
                       }
                     } else {
-                      buf8 = bits;
-                      buf8 = hold;
-                      buf8 = diff8;
-                      buf8 = next_in;
+                      tmp517 = bits;
+                      tmp518 = hold;
+                      tmp515 = diff45;
+                      tmp516 = next_in;
                       if (7 !== mode) {
-                        buf8 = bits;
-                        buf8 = hold;
-                        buf8 = diff8;
                         if (8 === mode) {
                           if (4096 & state.flags) {
-                            num = 0;
+                            let num106 = 0;
                             num61 = num56;
                             tmp37 = avail_out;
                             num62 = tmp9;
@@ -557,11 +538,10 @@ arg5.inflate = function inflate(state) {
                             tmp39 = tmp12;
                             if (0 !== tmp12) {
                               while (true) {
-                                buf8 = input[tmp14 + num];
+                                let tmp536 = input[tmp14 + num106];
                                 let head3 = state.head;
-                                buf8 = num;
                                 if (head3) {
-                                  head3 = buf8;
+                                  head3 = tmp536;
                                 }
                                 if (head3) {
                                   head3 = state.length < 65536;
@@ -569,1454 +549,1665 @@ arg5.inflate = function inflate(state) {
                                 if (head3) {
                                   let head4 = state.head;
                                   let _String2 = String;
-                                  head4.comment = head4.comment + String.fromCharCode(buf8);
+                                  head4.comment = head4.comment + String.fromCharCode(tmp536);
                                 }
-                                buf8 = num + 1;
-                                if (!buf8) {
+                                let sum8 = num106 + 1;
+                                if (!tmp536) {
                                   break;
                                 } else {
-                                  num = buf8;
-                                  if (buf8 >= tmp12) {
+                                  num106 = sum8;
+                                  if (sum8 >= tmp12) {
                                     break;
                                   }
                                 }
                               }
                               if (512 & state.flags) {
-                                buf8 = require;
-                                buf8 = dependencyMap;
                                 let check9 = state.check;
-                                buf8 = check9;
-                                buf8 = input;
-                                buf8 = tmp14;
-                                state.check = _mod13658(check9, tmp16, buf8, buf8);
+                                state.check = _mod13658(check9, tmp16, sum8, tmp596);
                               }
-                              buf8 = tmp12 - buf8;
-                              buf8 = tmp14 + buf8;
+                              let diff4 = tmp12 - sum8;
+                              let sum9 = tmp14 + sum8;
                               num61 = num56;
                               tmp37 = avail_out;
                               num62 = tmp9;
                               num63 = tmp10;
-                              tmp39 = buf8;
-                              tmp38 = buf8;
+                              tmp39 = diff4;
+                              tmp38 = sum9;
                             }
                           } else {
-                            buf8 = tmp12;
-                            buf8 = tmp14;
+                            diff4 = tmp12;
+                            sum9 = tmp14;
                             if (state.head) {
                               state.head.comment = null;
-                              buf8 = tmp12;
-                              buf8 = tmp14;
+                              diff4 = tmp12;
+                              sum9 = tmp14;
                             }
                           }
                           state.mode = 9;
-                          buf8 = tmp9;
-                          buf8 = tmp10;
-                        } else {
-                          buf8 = bits;
-                          buf8 = hold;
-                          buf8 = diff8;
-                          buf8 = next_in;
-                          if (9 === mode) {
-                            num = tmp9;
-                            num = tmp10;
-                            buf8 = tmp12;
-                            buf8 = tmp14;
-                            if (512 & state.flags) {
-                              buf8 = tmp9;
-                              buf8 = tmp10;
-                              buf8 = tmp12;
-                              buf8 = tmp14;
-                              buf8 = tmp9;
-                              buf8 = tmp10;
-                              buf8 = tmp12;
-                              buf8 = tmp14;
-                              if (tmp9 >= 16) {
-                                num = 0;
-                                num = 0;
-                                if (buf8 !== (65535 & state.check)) {
-                                  state.msg = "header crc mismatch";
-                                  state.mode = 30;
-                                  bits = buf8;
-                                  hold = buf8;
-                                  diff8 = buf8;
-                                  next_in = buf8;
-                                  continue;
-                                }
-                              } else {
-                                num61 = num56;
-                                tmp37 = avail_out;
-                                num62 = buf8;
-                                num63 = buf8;
-                                tmp38 = buf8;
-                                tmp39 = buf8;
-                                while (0 !== buf8) {
-                                  buf8 = buf8 - 1;
-                                  buf8 = +buf8;
-                                  buf8 = buf8 + 1;
-                                  buf8 = buf8 + (input[buf8] << buf8);
-                                  buf8 = buf8 + 8;
-                                  break;
-                                }
-                              }
-                            }
-                            if (state.head) {
-                              state.head.hcrc = (state.flags >> 9) & 1;
-                              state.head.done = true;
-                            }
-                            state.check = 0;
-                            state.adler = 0;
-                            state.mode = 12;
-                            bits = num;
-                            hold = num;
-                            diff8 = buf8;
-                            next_in = buf8;
-                            continue;
-                          } else {
-                            if (10 === mode) {
-                              buf8 = bits;
-                              buf8 = hold;
-                              buf8 = diff8;
-                              buf8 = next_in;
-                              buf8 = hold;
-                              buf8 = diff8;
-                              buf8 = next_in;
-                              if (bits >= 32) {
-                                buf8 =
-                                  ((buf8 >>> 24) & 255) +
-                                  ((buf8 >>> 8) & 65280) +
-                                  ((65280 & buf8) << 8) +
-                                  ((255 & buf8) << 24);
-                                state.check = buf8;
-                                state.adler = buf8;
-                                state.mode = 11;
-                                let num75 = 0;
-                                let num76 = 0;
-                              } else {
-                                num61 = num56;
-                                tmp37 = avail_out;
-                                num62 = buf8;
-                                num63 = buf8;
-                                tmp38 = buf8;
-                                tmp39 = buf8;
-                                while (0 !== buf8) {
-                                  buf8 = buf8 - 1;
-                                  buf8 = +buf8;
-                                  buf8 = buf8 + 1;
-                                  buf8 = buf8 + (input[buf8] << buf8);
-                                  buf8 = buf8 + 8;
-                                  break;
-                                }
+                        } else if (9 === mode) {
+                          let num107 = tmp9;
+                          let num108 = tmp10;
+                          let tmp549 = tmp12;
+                          let tmp550 = tmp14;
+                          if (512 & state.flags) {
+                            let sum12 = tmp9;
+                            let sum11 = tmp10;
+                            let diff5 = tmp12;
+                            let sum10 = tmp14;
+                            let tmp555 = tmp9;
+                            let tmp556 = tmp10;
+                            let tmp557 = tmp12;
+                            let tmp558 = tmp14;
+                            if (tmp9 >= 16) {
+                              num107 = 0;
+                              num108 = 0;
+                              tmp549 = tmp557;
+                              tmp550 = tmp558;
+                              if (tmp556 !== (65535 & state.check)) {
+                                state.msg = "header crc mismatch";
+                                state.mode = 30;
+                                bits = tmp555;
+                                hold = tmp556;
+                                diff45 = tmp557;
+                                next_in = tmp558;
+                                continue;
                               }
                             } else {
-                              num75 = bits;
-                              num76 = hold;
-                              buf8 = diff8;
-                              buf8 = next_in;
-                              if (11 !== mode) {
-                                buf8 = bits;
-                                buf8 = hold;
-                                buf8 = diff8;
-                                buf8 = next_in;
-                                if (12 !== mode) {
-                                  buf8 = bits;
-                                  buf8 = hold;
-                                  buf8 = diff8;
-                                  buf8 = next_in;
-                                  if (13 !== mode) {
-                                    if (14 === mode) {
-                                      buf8 = hold >>> (7 & bits);
-                                      buf8 = bits - (7 & bits);
-                                      buf8 = diff8;
-                                      buf8 = next_in;
-                                      buf8 = diff8;
-                                      buf8 = next_in;
-                                      if (buf8 >= 32) {
-                                        buf8 = 65535 & buf8;
-                                        if (buf8 !== ((buf8 >>> 16) ^ 65535)) {
-                                          state.msg = "invalid stored block lengths";
-                                          state.mode = 30;
-                                          bits = buf8;
-                                          hold = buf8;
-                                          diff8 = buf8;
-                                          next_in = buf8;
-                                          continue;
-                                        } else {
-                                          state.length = buf8;
-                                          state.mode = 15;
-                                          num = 0;
-                                          num = 0;
-                                          num61 = num56;
-                                          tmp37 = avail_out;
-                                          num62 = 0;
-                                          num63 = 0;
-                                          tmp39 = buf8;
-                                          tmp38 = buf8;
-                                        }
+                              num61 = num56;
+                              tmp37 = avail_out;
+                              num62 = sum12;
+                              num63 = sum11;
+                              tmp38 = sum10;
+                              tmp39 = diff5;
+                              while (0 !== diff5) {
+                                diff5 = diff5 - 1;
+                                let tmp677 = +sum10;
+                                sum10 = tmp677 + 1;
+                                sum11 = sum11 + (input[tmp677] << sum12);
+                                sum12 = sum12 + 8;
+                                tmp556 = sum11;
+                                tmp557 = diff5;
+                                tmp558 = sum10;
+                                tmp555 = sum12;
+                                break;
+                              }
+                            }
+                          }
+                          if (state.head) {
+                            state.head.hcrc = (state.flags >> 9) & 1;
+                            state.head.done = true;
+                          }
+                          state.check = 0;
+                          state.adler = 0;
+                          state.mode = 12;
+                          bits = num107;
+                          hold = num108;
+                          diff45 = tmp549;
+                          next_in = tmp550;
+                          continue;
+                        } else {
+                          if (10 === mode) {
+                            let sum16 = bits;
+                            let sum15 = hold;
+                            let diff6 = diff45;
+                            let sum14 = next_in;
+                            let tmp366 = hold;
+                            let tmp367 = diff45;
+                            let tmp368 = next_in;
+                            if (bits >= 32) {
+                              let sum13 =
+                                ((tmp366 >>> 24) & 255) +
+                                ((tmp366 >>> 8) & 65280) +
+                                ((65280 & tmp366) << 8) +
+                                ((255 & tmp366) << 24);
+                              state.check = sum13;
+                              state.adler = sum13;
+                              state.mode = 11;
+                              let tmp374 = tmp367;
+                              let tmp375 = tmp368;
+                              let num75 = 0;
+                              let num76 = 0;
+                            } else {
+                              num61 = num56;
+                              tmp37 = avail_out;
+                              num62 = sum16;
+                              num63 = sum15;
+                              tmp38 = sum14;
+                              tmp39 = diff6;
+                              while (0 !== diff6) {
+                                diff6 = diff6 - 1;
+                                let tmp671 = +sum14;
+                                sum14 = tmp671 + 1;
+                                sum15 = sum15 + (input[tmp671] << sum16);
+                                sum16 = sum16 + 8;
+                                tmp366 = sum15;
+                                tmp367 = diff6;
+                                tmp368 = sum14;
+                                break;
+                              }
+                            }
+                          } else {
+                            num75 = bits;
+                            num76 = hold;
+                            tmp374 = diff45;
+                            tmp375 = next_in;
+                            if (11 !== mode) {
+                              let tmp601 = bits;
+                              let tmp602 = hold;
+                              let tmp603 = diff45;
+                              let tmp604 = next_in;
+                              if (12 !== mode) {
+                                let tmp605 = bits;
+                                let tmp606 = hold;
+                                let tmp607 = diff45;
+                                let tmp608 = next_in;
+                                if (13 !== mode) {
+                                  if (14 === mode) {
+                                    let sum18 = hold >>> (7 & bits);
+                                    let diff7 = bits - (7 & bits);
+                                    let diff8 = diff45;
+                                    let sum17 = next_in;
+                                    let tmp349 = sum18;
+                                    let tmp350 = diff45;
+                                    let tmp351 = next_in;
+                                    let tmp352 = diff7;
+                                    if (diff7 >= 32) {
+                                      let tmp357 = 65535 & tmp349;
+                                      if (tmp357 !== ((tmp349 >>> 16) ^ 65535)) {
+                                        state.msg = "invalid stored block lengths";
+                                        state.mode = 30;
+                                        bits = tmp352;
+                                        hold = tmp349;
+                                        diff45 = tmp350;
+                                        next_in = tmp351;
+                                        continue;
                                       } else {
+                                        state.length = tmp357;
+                                        state.mode = 15;
+                                        let num117 = 0;
+                                        let num118 = 0;
+                                        let tmp609 = tmp350;
+                                        let tmp610 = tmp351;
                                         num61 = num56;
                                         tmp37 = avail_out;
-                                        num62 = buf8;
-                                        num63 = buf8;
-                                        tmp38 = buf8;
-                                        tmp39 = buf8;
-                                        while (0 !== buf8) {
-                                          buf8 = buf8 - 1;
-                                          buf8 = +buf8;
-                                          buf8 = buf8 + 1;
-                                          buf8 = buf8 + (input[buf8] << buf8);
-                                          buf8 = buf8 + 8;
-                                          break;
-                                        }
+                                        num62 = 0;
+                                        num63 = 0;
+                                        tmp39 = tmp350;
+                                        tmp38 = tmp351;
                                       }
                                     } else {
-                                      num = bits;
-                                      num = hold;
-                                      buf8 = diff8;
-                                      buf8 = next_in;
-                                      if (15 !== mode) {
-                                        buf8 = bits;
-                                        buf8 = hold;
-                                        buf8 = diff8;
-                                        buf8 = next_in;
-                                        if (16 !== mode) {
-                                          if (17 === mode) {
-                                            let sum2 = bits;
-                                            let sum1 = hold;
-                                            let diff1 = diff8;
-                                            let sum = next_in;
-                                            let tmp74 = bits;
-                                            let tmp75 = hold;
-                                            let tmp76 = diff8;
-                                            let tmp77 = next_in;
-                                            if (bits >= 14) {
-                                              state.nlen = 257 + (31 & tmp75);
-                                              let tmp82 = tmp75 >>> 5;
-                                              state.ndist = 1 + (31 & tmp82);
-                                              let tmp83 = tmp82 >>> 5;
-                                              state.ncode = 4 + (15 & tmp83);
-                                              let tmp84 = tmp83 >>> 4;
-                                              let diff = tmp74 - 5 - 5 - 4;
-                                              if (state.nlen <= 286) {
-                                                if (state.ndist <= 30) {
-                                                  state.have = 0;
-                                                  state.mode = 18;
-                                                  buf8 = diff;
-                                                  buf8 = tmp84;
-                                                  buf8 = tmp76;
-                                                  buf8 = tmp77;
-                                                }
-                                              }
-                                              state.msg = "too many length or distance symbols";
-                                              state.mode = 30;
-                                              bits = diff;
-                                              hold = tmp84;
-                                              diff8 = tmp76;
-                                              next_in = tmp77;
-                                              continue;
-                                            } else {
-                                              let tmp78 = sum2;
-                                              let tmp79 = sum1;
-                                              let tmp80 = diff1;
-                                              let tmp81 = sum;
-                                              num61 = num56;
-                                              tmp37 = avail_out;
-                                              num62 = sum2;
-                                              num63 = sum1;
-                                              tmp38 = sum;
-                                              tmp39 = diff1;
-                                              while (0 !== diff1) {
-                                                diff1 = diff1 - 1;
-                                                buf8 = +sum;
-                                                sum = buf8 + 1;
-                                                sum1 = sum1 + (input[buf8] << sum2);
-                                                sum2 = sum2 + 8;
-                                                tmp75 = sum1;
-                                                tmp76 = diff1;
-                                                tmp77 = sum;
-                                                tmp74 = sum2;
-                                                break;
+                                      num61 = num56;
+                                      tmp37 = avail_out;
+                                      num62 = diff7;
+                                      num63 = sum18;
+                                      tmp38 = sum17;
+                                      tmp39 = diff8;
+                                      while (0 !== diff8) {
+                                        diff8 = diff8 - 1;
+                                        let tmp661 = +sum17;
+                                        sum17 = tmp661 + 1;
+                                        sum18 = sum18 + (input[tmp661] << diff7);
+                                        diff7 = diff7 + 8;
+                                        tmp349 = sum18;
+                                        tmp350 = diff8;
+                                        tmp351 = sum17;
+                                        tmp352 = diff7;
+                                        break;
+                                      }
+                                    }
+                                  } else {
+                                    num117 = bits;
+                                    num118 = hold;
+                                    tmp609 = diff45;
+                                    tmp610 = next_in;
+                                    if (15 !== mode) {
+                                      let tmp358 = bits;
+                                      let tmp359 = hold;
+                                      let tmp360 = diff45;
+                                      let tmp361 = next_in;
+                                      if (16 !== mode) {
+                                        if (17 === mode) {
+                                          let sum21 = bits;
+                                          let sum20 = hold;
+                                          let diff10 = diff45;
+                                          let sum19 = next_in;
+                                          let tmp74 = bits;
+                                          let tmp75 = hold;
+                                          let tmp76 = diff45;
+                                          let tmp77 = next_in;
+                                          if (bits >= 14) {
+                                            state.nlen = 257 + (31 & tmp75);
+                                            let tmp82 = tmp75 >>> 5;
+                                            state.ndist = 1 + (31 & tmp82);
+                                            let tmp83 = tmp82 >>> 5;
+                                            state.ncode = 4 + (15 & tmp83);
+                                            let tmp84 = tmp83 >>> 4;
+                                            let diff9 = tmp74 - 5 - 5 - 4;
+                                            if (state.nlen <= 286) {
+                                              if (state.ndist <= 30) {
+                                                state.have = 0;
+                                                state.mode = 18;
+                                                let tmp611 = diff9;
+                                                let tmp612 = tmp84;
+                                                let tmp613 = tmp76;
+                                                let tmp614 = tmp77;
                                               }
                                             }
+                                            state.msg = "too many length or distance symbols";
+                                            state.mode = 30;
+                                            bits = diff9;
+                                            hold = tmp84;
+                                            diff45 = tmp76;
+                                            next_in = tmp77;
+                                            continue;
                                           } else {
-                                            buf8 = bits;
-                                            buf8 = hold;
-                                            buf8 = diff8;
-                                            buf8 = next_in;
-                                            if (18 !== mode) {
-                                              buf8 = num56;
-                                              buf8 = bits;
-                                              buf8 = hold;
-                                              buf8 = diff8;
-                                              buf8 = next_in;
-                                              if (19 !== mode) {
-                                                buf8 = num56;
-                                                buf8 = bits;
-                                                buf8 = hold;
-                                                buf8 = diff8;
-                                                buf8 = next_in;
-                                                if (20 !== mode) {
-                                                  buf8 = num56;
-                                                  buf8 = bits;
-                                                  buf8 = hold;
-                                                  buf8 = diff8;
-                                                  buf8 = next_in;
-                                                  if (21 !== mode) {
-                                                    buf8 = num56;
-                                                    buf8 = bits;
-                                                    buf8 = hold;
-                                                    buf8 = diff8;
-                                                    buf8 = next_in;
-                                                    if (22 !== mode) {
-                                                      buf8 = num56;
-                                                      buf8 = bits;
-                                                      buf8 = hold;
-                                                      buf8 = diff8;
-                                                      buf8 = next_in;
-                                                      if (23 !== mode) {
-                                                        buf8 = num56;
-                                                        buf8 = bits;
-                                                        buf8 = hold;
-                                                        buf8 = diff8;
-                                                        buf8 = next_in;
-                                                        if (24 !== mode) {
-                                                          buf8 = num56;
-                                                          buf8 = bits;
-                                                          buf8 = hold;
-                                                          buf8 = diff8;
-                                                          buf8 = next_in;
-                                                          if (25 !== mode) {
-                                                            if (26 === mode) {
-                                                              num61 = num56;
-                                                              tmp37 = avail_out;
-                                                              num62 = bits;
-                                                              num63 = hold;
-                                                              tmp39 = diff8;
-                                                              tmp38 = next_in;
-                                                              if (0 !== diff2) {
-                                                                buf8 = +next_out;
-                                                                next_out = buf8 + 1;
-                                                                output[buf8] = state.length;
-                                                                diff2 = diff2 - 1;
-                                                                state.mode = 21;
-                                                                continue;
-                                                              }
-                                                            } else {
-                                                              if (27 === mode) {
-                                                                let tmp22 = avail_out;
-                                                                let num59 = bits;
-                                                                let num60 = hold;
-                                                                let tmp23 = diff8;
-                                                                let tmp24 = next_in;
-                                                                if (!state.wrap) {
-                                                                  state.mode = 28;
-                                                                  let tmp17 = tmp22;
-                                                                  let tmp18 = num59;
-                                                                  let tmp19 = num60;
-                                                                  let tmp20 = tmp23;
-                                                                  let tmp21 = tmp24;
-                                                                } else {
-                                                                  let sum5 = bits;
-                                                                  let tmp26 = hold;
-                                                                  let diff4 = diff8;
-                                                                  let sum4 = next_in;
-                                                                  let tmp29 = bits;
-                                                                  let tmp30 = hold;
-                                                                  let tmp31 = diff8;
-                                                                  let tmp32 = next_in;
-                                                                  if (bits >= 32) {
-                                                                    let diff3 = avail_out - diff2;
-                                                                    state.total_out = state.total_out + diff3;
-                                                                    state.total = state.total + diff3;
-                                                                    if (!diff3) {
-                                                                      let sum3 = tmp30;
-                                                                      if (!state.flags) {
-                                                                        sum3 =
-                                                                          ((tmp30 >>> 24) & 255) +
-                                                                          ((tmp30 >>> 8) & 65280) +
-                                                                          ((65280 & tmp30) << 8) +
-                                                                          ((255 & tmp30) << 24);
-                                                                      }
-                                                                      tmp22 = diff2;
-                                                                      num59 = 0;
-                                                                      num60 = 0;
-                                                                      tmp23 = tmp31;
-                                                                      tmp24 = tmp32;
-                                                                      if (sum3 !== state.check) {
-                                                                        state.msg = "incorrect data check";
-                                                                        state.mode = 30;
-                                                                        avail_out = diff2;
-                                                                        bits = tmp29;
-                                                                        hold = tmp30;
-                                                                        diff8 = tmp31;
-                                                                        next_in = tmp32;
-                                                                        continue;
-                                                                      }
-                                                                    } else {
-                                                                      let tmp41 = require;
-                                                                      let tmp42 = dependencyMap;
-                                                                      if (state.flags) {
-                                                                        tmp42 = 13658;
-                                                                        let check2 = state.check;
-                                                                        let tmp47 = check2;
-                                                                        let tmp48 = output;
-                                                                        let tmp49 = diff3;
-                                                                        let tmp46 = tmp41(tmp42)(
-                                                                          check2,
-                                                                          tmp15,
-                                                                          diff3,
-                                                                          next_out - diff3,
-                                                                        );
-                                                                      } else {
-                                                                        let check = state.check;
-                                                                        let tmp43 = check;
-                                                                        let tmp44 = output;
-                                                                        let tmp45 = diff3;
-                                                                        tmp46 = tmp41(13657)(
-                                                                          check,
-                                                                          tmp15,
-                                                                          diff3,
-                                                                          next_out - diff3,
-                                                                        );
-                                                                      }
-                                                                      state.check = tmp46;
-                                                                      state.adler = tmp46;
-                                                                    }
-                                                                  } else {
-                                                                    let tmp33 = sum5;
-                                                                    let tmp34 = tmp26;
-                                                                    let tmp35 = diff4;
-                                                                    let tmp36 = sum4;
-                                                                    num61 = num56;
-                                                                    tmp37 = avail_out;
-                                                                    num62 = sum5;
-                                                                    num63 = tmp26;
-                                                                    tmp38 = sum4;
-                                                                    tmp39 = diff4;
-                                                                    while (0 !== diff4) {
-                                                                      diff4 = diff4 - 1;
-                                                                      buf8 = +sum4;
-                                                                      sum4 = buf8 + 1;
-                                                                      tmp26 = tmp26 | (input[buf8] << sum5);
-                                                                      sum5 = sum5 + 8;
-                                                                      tmp30 = tmp26;
-                                                                      tmp31 = diff4;
-                                                                      tmp32 = sum4;
-                                                                      tmp29 = sum5;
-                                                                      break;
-                                                                    }
-                                                                  }
-                                                                }
+                                            num61 = num56;
+                                            tmp37 = avail_out;
+                                            num62 = sum21;
+                                            num63 = sum20;
+                                            tmp38 = sum19;
+                                            tmp39 = diff10;
+                                            while (0 !== diff10) {
+                                              diff10 = diff10 - 1;
+                                              let tmp623 = +sum19;
+                                              sum19 = tmp623 + 1;
+                                              sum20 = sum20 + (input[tmp623] << sum21);
+                                              sum21 = sum21 + 8;
+                                              tmp75 = sum20;
+                                              tmp76 = diff10;
+                                              tmp77 = sum19;
+                                              tmp74 = sum21;
+                                              break;
+                                            }
+                                          }
+                                        } else {
+                                          tmp611 = bits;
+                                          tmp612 = hold;
+                                          tmp613 = diff45;
+                                          tmp614 = next_in;
+                                          if (18 !== mode) {
+                                            let tmp113 = num56;
+                                            let tmp114 = bits;
+                                            let tmp115 = hold;
+                                            let tmp116 = diff45;
+                                            let tmp117 = next_in;
+                                            if (19 !== mode) {
+                                              let tmp192 = num56;
+                                              let tmp193 = bits;
+                                              let tmp194 = hold;
+                                              let tmp195 = diff45;
+                                              let tmp196 = next_in;
+                                              if (20 !== mode) {
+                                                let tmp197 = num56;
+                                                let tmp198 = bits;
+                                                let tmp199 = hold;
+                                                let tmp200 = diff45;
+                                                let tmp201 = next_in;
+                                                if (21 !== mode) {
+                                                  let tmp244 = num56;
+                                                  let tmp245 = bits;
+                                                  let tmp246 = hold;
+                                                  let tmp247 = diff45;
+                                                  let tmp248 = next_in;
+                                                  if (22 !== mode) {
+                                                    let tmp269 = num56;
+                                                    let tmp265 = bits;
+                                                    let tmp266 = hold;
+                                                    let tmp267 = diff45;
+                                                    let tmp268 = next_in;
+                                                    if (23 !== mode) {
+                                                      let tmp312 = num56;
+                                                      let tmp313 = bits;
+                                                      let tmp314 = hold;
+                                                      let tmp315 = diff45;
+                                                      let tmp316 = next_in;
+                                                      if (24 !== mode) {
+                                                        let tmp615 = num56;
+                                                        let tmp616 = bits;
+                                                        let tmp617 = hold;
+                                                        let tmp618 = diff45;
+                                                        let tmp619 = next_in;
+                                                        if (25 !== mode) {
+                                                          if (26 === mode) {
+                                                            num61 = num56;
+                                                            tmp37 = avail_out;
+                                                            num62 = bits;
+                                                            num63 = hold;
+                                                            tmp39 = diff45;
+                                                            tmp38 = next_in;
+                                                            if (0 !== diff11) {
+                                                              let tmp622 = +next_out;
+                                                              next_out = tmp622 + 1;
+                                                              output[tmp622] = state.length;
+                                                              diff11 = diff11 - 1;
+                                                              state.mode = 21;
+                                                              continue;
+                                                            }
+                                                          } else {
+                                                            if (27 === mode) {
+                                                              let tmp22 = avail_out;
+                                                              let num59 = bits;
+                                                              let num60 = hold;
+                                                              let tmp23 = diff45;
+                                                              let tmp24 = next_in;
+                                                              if (!state.wrap) {
+                                                                state.mode = 28;
+                                                                let tmp17 = tmp22;
+                                                                let tmp18 = num59;
+                                                                let tmp19 = num60;
+                                                                let tmp20 = tmp23;
+                                                                let tmp21 = tmp24;
                                                               } else {
-                                                                tmp17 = avail_out;
-                                                                tmp18 = bits;
-                                                                tmp19 = hold;
-                                                                tmp20 = diff8;
-                                                                tmp21 = next_in;
-                                                                if (28 !== mode) {
-                                                                  break;
-                                                                }
-                                                              }
-                                                              let num64 = tmp18;
-                                                              let num65 = tmp19;
-                                                              let tmp51 = tmp20;
-                                                              let tmp52 = tmp21;
-                                                              if (state.wrap) {
-                                                                num64 = tmp18;
-                                                                num65 = tmp19;
-                                                                tmp51 = tmp20;
-                                                                tmp52 = tmp21;
-                                                                if (state.flags) {
-                                                                  let sum8 = tmp18;
-                                                                  let sum7 = tmp19;
-                                                                  let diff5 = tmp20;
-                                                                  let sum6 = tmp21;
-                                                                  let tmp57 = tmp18;
-                                                                  let tmp58 = tmp19;
-                                                                  let tmp59 = tmp20;
-                                                                  let tmp60 = tmp21;
-                                                                  if (tmp18 >= 32) {
-                                                                    num64 = 0;
-                                                                    num65 = 0;
-                                                                    tmp51 = tmp59;
-                                                                    tmp52 = tmp60;
-                                                                    if (tmp58 !== (4294967295 & state.total)) {
-                                                                      state.msg = "incorrect length check";
+                                                                let sum24 = bits;
+                                                                let tmp26 = hold;
+                                                                let diff13 = diff45;
+                                                                let sum23 = next_in;
+                                                                let tmp29 = bits;
+                                                                let tmp30 = hold;
+                                                                let tmp31 = diff45;
+                                                                let tmp32 = next_in;
+                                                                if (bits >= 32) {
+                                                                  let diff12 = avail_out - diff11;
+                                                                  state.total_out = state.total_out + diff12;
+                                                                  state.total = state.total + diff12;
+                                                                  if (!diff12) {
+                                                                    let sum22 = tmp30;
+                                                                    if (!state.flags) {
+                                                                      sum22 =
+                                                                        ((tmp30 >>> 24) & 255) +
+                                                                        ((tmp30 >>> 8) & 65280) +
+                                                                        ((65280 & tmp30) << 8) +
+                                                                        ((255 & tmp30) << 24);
+                                                                    }
+                                                                    tmp22 = diff11;
+                                                                    num59 = 0;
+                                                                    num60 = 0;
+                                                                    tmp23 = tmp31;
+                                                                    tmp24 = tmp32;
+                                                                    if (sum22 !== state.check) {
+                                                                      state.msg = "incorrect data check";
                                                                       state.mode = 30;
-                                                                      avail_out = tmp17;
-                                                                      bits = tmp57;
-                                                                      hold = tmp58;
-                                                                      diff8 = tmp59;
-                                                                      next_in = tmp60;
+                                                                      avail_out = diff11;
+                                                                      bits = tmp29;
+                                                                      hold = tmp30;
+                                                                      diff45 = tmp31;
+                                                                      next_in = tmp32;
                                                                       continue;
                                                                     }
                                                                   } else {
-                                                                    let tmp61 = sum8;
-                                                                    let tmp62 = sum7;
-                                                                    let tmp63 = diff5;
-                                                                    let tmp64 = sum6;
-                                                                    num61 = num56;
-                                                                    tmp37 = tmp17;
-                                                                    num62 = sum8;
-                                                                    num63 = sum7;
-                                                                    tmp38 = sum6;
-                                                                    tmp39 = diff5;
-                                                                    while (0 !== diff5) {
-                                                                      diff5 = diff5 - 1;
-                                                                      buf8 = +sum6;
-                                                                      sum6 = buf8 + 1;
-                                                                      sum7 = sum7 + (input[buf8] << sum8);
-                                                                      sum8 = sum8 + 8;
-                                                                      tmp58 = sum7;
-                                                                      tmp59 = diff5;
-                                                                      tmp60 = sum6;
-                                                                      tmp57 = sum8;
-                                                                      break;
+                                                                    let tmp41 = require;
+                                                                    let tmp42 = dependencyMap;
+                                                                    if (state.flags) {
+                                                                      tmp42 = 13658;
+                                                                      let check2 = state.check;
+                                                                      let tmp46 = tmp41(tmp42)(
+                                                                        check2,
+                                                                        tmp15,
+                                                                        diff12,
+                                                                        next_out - diff12,
+                                                                      );
+                                                                    } else {
+                                                                      let check = state.check;
+                                                                      tmp46 = tmp41(13657)(
+                                                                        check,
+                                                                        tmp15,
+                                                                        diff12,
+                                                                        next_out - diff12,
+                                                                      );
                                                                     }
+                                                                    state.check = tmp46;
+                                                                    state.adler = tmp46;
+                                                                  }
+                                                                } else {
+                                                                  num61 = num56;
+                                                                  tmp37 = avail_out;
+                                                                  num62 = sum24;
+                                                                  num63 = tmp26;
+                                                                  tmp38 = sum23;
+                                                                  tmp39 = diff13;
+                                                                  while (0 !== diff13) {
+                                                                    diff13 = diff13 - 1;
+                                                                    let tmp620 = +sum23;
+                                                                    sum23 = tmp620 + 1;
+                                                                    tmp26 = tmp26 | (input[tmp620] << sum24);
+                                                                    sum24 = sum24 + 8;
+                                                                    tmp30 = tmp26;
+                                                                    tmp31 = diff13;
+                                                                    tmp32 = sum23;
+                                                                    tmp29 = sum24;
+                                                                    break;
                                                                   }
                                                                 }
                                                               }
-                                                              let num66 = 29;
-                                                              state.mode = 29;
-                                                              let tmp65 = num64;
-                                                              let tmp66 = num65;
-                                                              let tmp67 = tmp51;
-                                                              let tmp68 = tmp52;
-                                                              let tmp69 = tmp17;
-                                                              tmp37 = tmp69;
-                                                              num62 = tmp65;
-                                                              num63 = tmp66;
-                                                              tmp39 = tmp67;
-                                                              tmp38 = tmp68;
-                                                              num61 = 1;
-                                                            }
-                                                          }
-                                                        }
-                                                        num61 = buf8;
-                                                        tmp37 = avail_out;
-                                                        num62 = buf8;
-                                                        num63 = buf8;
-                                                        tmp39 = buf8;
-                                                        tmp38 = buf8;
-                                                        if (0 !== diff2) {
-                                                          buf8 = avail_out - diff2;
-                                                          if (state.offset > buf8) {
-                                                            buf8 = state.offset - buf8;
-                                                            if (buf8 > state.whave) {
-                                                              if (state.sane) {
-                                                                state.msg = "invalid distance too far back";
-                                                                state.mode = 30;
-                                                                num56 = buf8;
-                                                                bits = buf8;
-                                                                hold = buf8;
-                                                                diff8 = buf8;
-                                                                next_in = buf8;
-                                                                continue;
+                                                            } else {
+                                                              tmp17 = avail_out;
+                                                              tmp18 = bits;
+                                                              tmp19 = hold;
+                                                              tmp20 = diff45;
+                                                              tmp21 = next_in;
+                                                              if (28 !== mode) {
+                                                                break;
                                                               }
                                                             }
-                                                            if (buf8 > state.wnext) {
-                                                              buf8 = buf8 - state.wnext;
-                                                              buf8 = state.wsize - buf8;
-                                                              let length2 = buf8;
-                                                            } else {
-                                                              buf8 = state.wnext - buf8;
-                                                              length2 = buf8;
+                                                            let num64 = tmp18;
+                                                            let num65 = tmp19;
+                                                            let tmp51 = tmp20;
+                                                            let tmp52 = tmp21;
+                                                            if (state.wrap) {
+                                                              num64 = tmp18;
+                                                              num65 = tmp19;
+                                                              tmp51 = tmp20;
+                                                              tmp52 = tmp21;
+                                                              if (state.flags) {
+                                                                let sum27 = tmp18;
+                                                                let sum26 = tmp19;
+                                                                let diff14 = tmp20;
+                                                                let sum25 = tmp21;
+                                                                let tmp57 = tmp18;
+                                                                let tmp58 = tmp19;
+                                                                let tmp59 = tmp20;
+                                                                let tmp60 = tmp21;
+                                                                if (tmp18 >= 32) {
+                                                                  num64 = 0;
+                                                                  num65 = 0;
+                                                                  tmp51 = tmp59;
+                                                                  tmp52 = tmp60;
+                                                                  if (tmp58 !== (4294967295 & state.total)) {
+                                                                    state.msg = "incorrect length check";
+                                                                    state.mode = 30;
+                                                                    avail_out = tmp17;
+                                                                    bits = tmp57;
+                                                                    hold = tmp58;
+                                                                    diff45 = tmp59;
+                                                                    next_in = tmp60;
+                                                                    continue;
+                                                                  }
+                                                                } else {
+                                                                  num61 = num56;
+                                                                  tmp37 = tmp17;
+                                                                  num62 = sum27;
+                                                                  num63 = sum26;
+                                                                  tmp38 = sum25;
+                                                                  tmp39 = diff14;
+                                                                  while (0 !== diff14) {
+                                                                    diff14 = diff14 - 1;
+                                                                    let tmp621 = +sum25;
+                                                                    sum25 = tmp621 + 1;
+                                                                    sum26 = sum26 + (input[tmp621] << sum27);
+                                                                    sum27 = sum27 + 8;
+                                                                    tmp58 = sum26;
+                                                                    tmp59 = diff14;
+                                                                    tmp60 = sum25;
+                                                                    tmp57 = sum27;
+                                                                    break;
+                                                                  }
+                                                                }
+                                                              }
                                                             }
-                                                            if (length2 > state.length) {
-                                                              length2 = state.length;
+                                                            state.mode = 29;
+                                                            let tmp65 = num64;
+                                                            let tmp66 = num65;
+                                                            let tmp67 = tmp51;
+                                                            let tmp68 = tmp52;
+                                                            let tmp69 = tmp17;
+                                                            tmp37 = tmp69;
+                                                            num62 = tmp65;
+                                                            num63 = tmp66;
+                                                            tmp39 = tmp67;
+                                                            tmp38 = tmp68;
+                                                            num61 = 1;
+                                                          }
+                                                        }
+                                                      }
+                                                      num61 = tmp615;
+                                                      tmp37 = avail_out;
+                                                      num62 = tmp616;
+                                                      num63 = tmp617;
+                                                      tmp39 = tmp618;
+                                                      tmp38 = tmp619;
+                                                      if (0 !== diff11) {
+                                                        let diff15 = avail_out - diff11;
+                                                        if (state.offset > diff15) {
+                                                          let diff16 = state.offset - diff15;
+                                                          if (diff16 > state.whave) {
+                                                            if (state.sane) {
+                                                              state.msg = "invalid distance too far back";
+                                                              state.mode = 30;
+                                                              num56 = tmp615;
+                                                              bits = tmp616;
+                                                              hold = tmp617;
+                                                              diff45 = tmp618;
+                                                              next_in = tmp619;
+                                                              continue;
                                                             }
-                                                            let _window = state.window;
-                                                            let length = length2;
+                                                          }
+                                                          if (diff16 > state.wnext) {
+                                                            let diff17 = diff16 - state.wnext;
+                                                            let diff18 = state.wsize - diff17;
+                                                            let length2 = diff17;
                                                           } else {
-                                                            buf8 = next_out - state.offset;
-                                                            length = state.length;
-                                                            _window = output;
+                                                            diff18 = state.wnext - diff16;
+                                                            length2 = diff16;
                                                           }
-                                                          if (length > diff2) {
-                                                            length = diff2;
+                                                          if (length2 > state.length) {
+                                                            length2 = state.length;
                                                           }
-                                                          buf8 = diff2 - length;
-                                                          state.length = state.length - length;
-                                                          buf8 = next_out;
-                                                          do {
-                                                            buf8 = +buf8;
-                                                            buf8 = buf8 + 1;
-                                                            buf8 = +buf8;
-                                                            buf8 = buf8 + 1;
-                                                            output[buf8] = _window[buf8];
-                                                            length = length - 1;
-                                                          } while (length);
-                                                          num56 = buf8;
-                                                          bits = buf8;
-                                                          hold = buf8;
-                                                          diff2 = buf8;
-                                                          diff8 = buf8;
-                                                          next_out = buf8;
-                                                          next_in = buf8;
-                                                          if (0 !== state.length) {
-                                                            continue;
-                                                          } else {
-                                                            state.mode = 21;
-                                                            num56 = buf8;
-                                                            avail_out = tmp8;
-                                                            bits = buf8;
-                                                            hold = buf8;
-                                                            diff2 = buf8;
-                                                            diff8 = buf8;
-                                                            next_out = buf8;
-                                                            next_in = buf8;
-                                                            output = tmp15;
-                                                            input = tmp16;
-                                                            continue;
-                                                          }
+                                                          let _window = state.window;
+                                                          let length = length2;
+                                                          let diff19 = diff18;
+                                                        } else {
+                                                          diff19 = next_out - state.offset;
+                                                          length = state.length;
+                                                          _window = output;
+                                                        }
+                                                        if (length > diff11) {
+                                                          length = diff11;
+                                                        }
+                                                        let diff20 = diff11 - length;
+                                                        state.length = state.length - length;
+                                                        let tmp338 = next_out;
+                                                        do {
+                                                          let tmp339 = +tmp338;
+                                                          let sum28 = tmp339 + 1;
+                                                          let tmp341 = +diff19;
+                                                          diff19 = tmp341 + 1;
+                                                          output[tmp339] = _window[tmp341];
+                                                          length = length - 1;
+                                                          tmp338 = sum28;
+                                                        } while (length);
+                                                        num56 = tmp615;
+                                                        bits = tmp616;
+                                                        hold = tmp617;
+                                                        diff11 = diff20;
+                                                        diff45 = tmp618;
+                                                        next_out = sum28;
+                                                        next_in = tmp619;
+                                                        if (0 !== state.length) {
+                                                          continue;
+                                                        } else {
+                                                          state.mode = 21;
+                                                          num56 = tmp615;
+                                                          avail_out = tmp8;
+                                                          bits = tmp616;
+                                                          hold = tmp617;
+                                                          diff11 = diff20;
+                                                          diff45 = tmp618;
+                                                          next_out = sum28;
+                                                          next_in = tmp619;
+                                                          output = tmp15;
+                                                          input = tmp16;
                                                           continue;
                                                         }
+                                                        continue;
                                                       }
-                                                      if (state.extra) {
-                                                        let extra2 = state.extra;
-                                                        if (buf8 >= extra2) {
-                                                          state.offset =
-                                                            state.offset + (buf8 & ((1 << state.extra) - 1));
-                                                          buf8 = buf8 >>> state.extra;
-                                                          buf8 = buf8 - state.extra;
-                                                          state.back = state.back + state.extra;
-                                                        } else {
-                                                          num61 = buf8;
-                                                          tmp37 = avail_out;
-                                                          num62 = buf8;
-                                                          num63 = buf8;
-                                                          tmp38 = buf8;
-                                                          tmp39 = buf8;
-                                                          while (0 !== buf8) {
-                                                            buf8 = buf8 - 1;
-                                                            buf8 = +buf8;
-                                                            buf8 = buf8 + 1;
-                                                            buf8 = buf8 + (input[buf8] << buf8);
-                                                            buf8 = buf8 + 8;
-                                                            break;
-                                                          }
+                                                    }
+                                                    let diff21 = tmp313;
+                                                    let tmp318 = tmp314;
+                                                    let tmp319 = tmp315;
+                                                    let tmp320 = tmp316;
+                                                    if (state.extra) {
+                                                      let extra2 = state.extra;
+                                                      let sum31 = tmp313;
+                                                      let sum30 = tmp314;
+                                                      let diff22 = tmp315;
+                                                      let sum29 = tmp316;
+                                                      let tmp325 = tmp313;
+                                                      let tmp326 = tmp314;
+                                                      let tmp327 = tmp315;
+                                                      let tmp328 = tmp316;
+                                                      if (tmp313 >= extra2) {
+                                                        state.offset =
+                                                          state.offset + (tmp326 & ((1 << state.extra) - 1));
+                                                        tmp318 = tmp326 >>> state.extra;
+                                                        diff21 = tmp325 - state.extra;
+                                                        state.back = state.back + state.extra;
+                                                        tmp319 = tmp327;
+                                                        tmp320 = tmp328;
+                                                      } else {
+                                                        num61 = tmp312;
+                                                        tmp37 = avail_out;
+                                                        num62 = sum31;
+                                                        num63 = sum30;
+                                                        tmp38 = sum29;
+                                                        tmp39 = diff22;
+                                                        while (0 !== diff22) {
+                                                          diff22 = diff22 - 1;
+                                                          let tmp659 = +sum29;
+                                                          sum29 = tmp659 + 1;
+                                                          sum30 = sum30 + (input[tmp659] << sum31);
+                                                          sum31 = sum31 + 8;
+                                                          tmp326 = sum30;
+                                                          tmp327 = diff22;
+                                                          tmp328 = sum29;
+                                                          tmp325 = sum31;
+                                                          break;
                                                         }
                                                       }
-                                                      if (state.offset > state.dmax) {
-                                                        state.msg = "invalid distance too far back";
-                                                        state.mode = 30;
-                                                        num56 = buf8;
-                                                        bits = buf8;
-                                                        hold = buf8;
-                                                        diff8 = buf8;
-                                                        next_in = buf8;
-                                                        continue;
-                                                      } else {
-                                                        state.mode = 25;
-                                                      }
                                                     }
-                                                    buf8 = state.distcode[buf8 & ((1 << state.distbits) - 1)];
-                                                    buf8 = (buf8 >>> 16) & 255;
-                                                    buf8 = 65535 & buf8;
-                                                    buf8 = buf8 >>> 24;
-                                                    if (buf8 <= buf8) {
-                                                      if (!(240 & buf8)) {
-                                                        buf8 = (1 << (buf8 + buf8)) - 1;
-                                                        buf8 = state.distcode[buf8 + ((buf8 & buf8) >> buf8)];
-                                                        buf8 = (buf8 >>> 16) & 255;
-                                                        buf8 = 65535 & buf8;
-                                                        buf8 = buf8 >>> 24;
-                                                        if (buf8 + buf8 <= buf8) {
-                                                          buf8 = buf8 >>> buf8;
-                                                          buf8 = buf8 - buf8;
-                                                          state.back = state.back + buf8;
-                                                        } else {
-                                                          num61 = buf8;
-                                                          tmp37 = avail_out;
-                                                          num62 = buf8;
-                                                          num63 = buf8;
-                                                          tmp38 = buf8;
-                                                          tmp39 = buf8;
-                                                          while (0 !== buf8) {
-                                                            buf8 = buf8 - 1;
-                                                            buf8 = +buf8;
-                                                            buf8 = buf8 + 1;
-                                                            buf8 = buf8 + (input[buf8] << buf8);
-                                                            buf8 = buf8 + 8;
-                                                            buf8 = state.distcode[buf8 + ((buf8 & buf8) >> buf8)];
-                                                            buf8 = (buf8 >>> 16) & 255;
-                                                            buf8 = 65535 & buf8;
-                                                            buf8 = buf8 >>> 24;
-                                                            break;
-                                                          }
+                                                    if (state.offset > state.dmax) {
+                                                      state.msg = "invalid distance too far back";
+                                                      state.mode = 30;
+                                                      num56 = tmp312;
+                                                      bits = diff21;
+                                                      hold = tmp318;
+                                                      diff45 = tmp319;
+                                                      next_in = tmp320;
+                                                      continue;
+                                                    } else {
+                                                      state.mode = 25;
+                                                      tmp615 = tmp312;
+                                                      tmp616 = diff21;
+                                                      tmp617 = tmp318;
+                                                      tmp618 = tmp319;
+                                                      tmp619 = tmp320;
+                                                    }
+                                                  }
+                                                  let tmp270 = state.distcode[tmp266 & ((1 << state.distbits) - 1)];
+                                                  let tmp271 = (tmp270 >>> 16) & 255;
+                                                  let tmp272 = 65535 & tmp270;
+                                                  let tmp273 = tmp270 >>> 24;
+                                                  let sum37 = tmp265;
+                                                  let tmp275 = tmp266;
+                                                  let diff27 = tmp267;
+                                                  let sum35 = tmp268;
+                                                  let tmp278 = tmp266;
+                                                  let tmp279 = tmp267;
+                                                  let tmp280 = tmp268;
+                                                  let tmp281 = tmp265;
+                                                  if (tmp273 <= tmp265) {
+                                                    let tmp286 = tmp272;
+                                                    let tmp287 = tmp271;
+                                                    let tmp288 = tmp273;
+                                                    let diff24 = tmp281;
+                                                    let tmp290 = tmp278;
+                                                    let tmp291 = tmp279;
+                                                    let tmp292 = tmp280;
+                                                    if (!(240 & tmp271)) {
+                                                      let diff23 = (1 << (tmp273 + tmp271)) - 1;
+                                                      let tmp294 =
+                                                        state.distcode[tmp272 + ((tmp278 & diff23) >> tmp273)];
+                                                      let tmp295 = (tmp294 >>> 16) & 255;
+                                                      let tmp296 = 65535 & tmp294;
+                                                      let tmp297 = tmp294 >>> 24;
+                                                      let sum34 = tmp281;
+                                                      let tmp299 = tmp278;
+                                                      let diff25 = tmp279;
+                                                      let sum32 = tmp280;
+                                                      let tmp302 = tmp281;
+                                                      let tmp303 = tmp278;
+                                                      let tmp304 = tmp279;
+                                                      let tmp305 = tmp280;
+                                                      if (tmp273 + tmp297 <= tmp281) {
+                                                        tmp290 = tmp303 >>> tmp273;
+                                                        diff24 = tmp302 - tmp273;
+                                                        state.back = state.back + tmp273;
+                                                        tmp286 = tmp296;
+                                                        tmp287 = tmp295;
+                                                        tmp288 = tmp297;
+                                                        tmp291 = tmp304;
+                                                        tmp292 = tmp305;
+                                                      } else {
+                                                        num61 = tmp269;
+                                                        tmp37 = avail_out;
+                                                        num62 = sum34;
+                                                        num63 = tmp299;
+                                                        tmp38 = sum32;
+                                                        tmp39 = diff25;
+                                                        while (0 !== diff25) {
+                                                          diff25 = diff25 - 1;
+                                                          let tmp655 = +sum32;
+                                                          sum32 = tmp655 + 1;
+                                                          let sum33 = tmp299 + (input[tmp655] << sum34);
+                                                          sum34 = sum34 + 8;
+                                                          let tmp657 =
+                                                            state.distcode[tmp272 + ((sum33 & diff23) >> tmp273)];
+                                                          tmp295 = (tmp657 >>> 16) & 255;
+                                                          tmp296 = 65535 & tmp657;
+                                                          let tmp658 = tmp657 >>> 24;
+                                                          tmp299 = sum33;
+                                                          tmp297 = tmp658;
+                                                          tmp303 = sum33;
+                                                          tmp304 = diff25;
+                                                          tmp305 = sum32;
+                                                          tmp302 = sum34;
+                                                          break;
                                                         }
                                                       }
-                                                      buf8 = buf8 >>> buf8;
-                                                      buf8 = buf8 - buf8;
-                                                      state.back = state.back + buf8;
-                                                      if (64 & buf8) {
-                                                        state.msg = "invalid distance code";
-                                                        state.mode = 30;
-                                                        num56 = buf8;
-                                                        bits = buf8;
-                                                        hold = buf8;
-                                                        diff8 = buf8;
-                                                        next_in = buf8;
-                                                        continue;
-                                                      } else {
-                                                        state.offset = buf8;
-                                                        state.extra = 15 & buf8;
-                                                        state.mode = 24;
-                                                      }
+                                                    }
+                                                    let tmp310 = tmp290 >>> tmp288;
+                                                    let diff26 = diff24 - tmp288;
+                                                    state.back = state.back + tmp288;
+                                                    if (64 & tmp287) {
+                                                      state.msg = "invalid distance code";
+                                                      state.mode = 30;
+                                                      num56 = tmp269;
+                                                      bits = diff26;
+                                                      hold = tmp310;
+                                                      diff45 = tmp291;
+                                                      next_in = tmp292;
+                                                      continue;
                                                     } else {
-                                                      num61 = buf8;
-                                                      tmp37 = avail_out;
-                                                      num62 = buf8;
-                                                      num63 = buf8;
-                                                      tmp38 = buf8;
-                                                      tmp39 = buf8;
-                                                      while (0 !== buf8) {
-                                                        buf8 = buf8 - 1;
-                                                        buf8 = +buf8;
-                                                        buf8 = buf8 + 1;
-                                                        buf8 = buf8 + (input[buf8] << buf8);
-                                                        buf8 = buf8 + 8;
-                                                        buf8 = state.distcode[buf8 & ((1 << state.distbits) - 1)];
-                                                        buf8 = (buf8 >>> 16) & 255;
-                                                        buf8 = 65535 & buf8;
-                                                        buf8 = buf8 >>> 24;
-                                                        break;
-                                                      }
+                                                      state.offset = tmp286;
+                                                      state.extra = 15 & tmp287;
+                                                      state.mode = 24;
+                                                      tmp312 = tmp269;
+                                                      tmp313 = diff26;
+                                                      tmp314 = tmp310;
+                                                      tmp315 = tmp291;
+                                                      tmp316 = tmp292;
+                                                    }
+                                                  } else {
+                                                    num61 = tmp269;
+                                                    tmp37 = avail_out;
+                                                    num62 = sum37;
+                                                    num63 = tmp275;
+                                                    tmp38 = sum35;
+                                                    tmp39 = diff27;
+                                                    while (0 !== diff27) {
+                                                      diff27 = diff27 - 1;
+                                                      let tmp652 = +sum35;
+                                                      sum35 = tmp652 + 1;
+                                                      let sum36 = tmp275 + (input[tmp652] << sum37);
+                                                      sum37 = sum37 + 8;
+                                                      let tmp654 = state.distcode[sum36 & ((1 << state.distbits) - 1)];
+                                                      tmp271 = (tmp654 >>> 16) & 255;
+                                                      tmp272 = 65535 & tmp654;
+                                                      tmp273 = tmp654 >>> 24;
+                                                      tmp275 = sum36;
+                                                      tmp278 = sum36;
+                                                      tmp279 = diff27;
+                                                      tmp280 = sum35;
+                                                      tmp281 = sum37;
+                                                      break;
                                                     }
                                                   }
-                                                  if (state.extra) {
-                                                    let extra = state.extra;
-                                                    if (buf8 >= extra) {
-                                                      state.length = state.length + (buf8 & ((1 << state.extra) - 1));
-                                                      buf8 = buf8 >>> state.extra;
-                                                      buf8 = buf8 - state.extra;
-                                                      state.back = state.back + state.extra;
-                                                    } else {
-                                                      num61 = buf8;
-                                                      tmp37 = avail_out;
-                                                      num62 = buf8;
-                                                      num63 = buf8;
-                                                      tmp38 = buf8;
-                                                      tmp39 = buf8;
-                                                      while (0 !== buf8) {
-                                                        buf8 = buf8 - 1;
-                                                        buf8 = +buf8;
-                                                        buf8 = buf8 + 1;
-                                                        buf8 = buf8 + (input[buf8] << buf8);
-                                                        buf8 = buf8 + 8;
-                                                        break;
-                                                      }
-                                                    }
-                                                  }
-                                                  state.was = state.length;
-                                                  state.mode = 23;
                                                 }
-                                                if (buf8 >= 6) {
-                                                  if (diff2 >= 258) {
-                                                    state.next_out = next_out;
-                                                    state.avail_out = diff2;
-                                                    state.next_in = buf8;
-                                                    state.avail_in = buf8;
-                                                    state.hold = buf8;
-                                                    state.bits = buf8;
-                                                    buf8 = require;
-                                                    buf8 = dependencyMap;
-                                                    buf8 = inflate_fast(state, avail_out);
-                                                    ({
-                                                      next_out: next_out2,
-                                                      output: output2,
-                                                      avail_out: avail_out2,
-                                                      next_in: next_in2,
-                                                      input: input2,
-                                                      avail_in: avail_in2,
-                                                    } = state);
-                                                    ({ hold: hold2, bits: bits2 } = state);
-                                                    num56 = buf8;
+                                                let diff28 = tmp245;
+                                                let tmp250 = tmp246;
+                                                let tmp251 = tmp247;
+                                                let tmp252 = tmp248;
+                                                if (state.extra) {
+                                                  let extra = state.extra;
+                                                  let sum40 = tmp245;
+                                                  let sum39 = tmp246;
+                                                  let diff29 = tmp247;
+                                                  let sum38 = tmp248;
+                                                  let tmp257 = tmp245;
+                                                  let tmp258 = tmp246;
+                                                  let tmp259 = tmp247;
+                                                  let tmp260 = tmp248;
+                                                  if (tmp245 >= extra) {
+                                                    state.length = state.length + (tmp258 & ((1 << state.extra) - 1));
+                                                    tmp250 = tmp258 >>> state.extra;
+                                                    diff28 = tmp257 - state.extra;
+                                                    state.back = state.back + state.extra;
+                                                    tmp251 = tmp259;
+                                                    tmp252 = tmp260;
+                                                  } else {
+                                                    num61 = tmp244;
+                                                    tmp37 = avail_out;
+                                                    num62 = sum40;
+                                                    num63 = sum39;
+                                                    tmp38 = sum38;
+                                                    tmp39 = diff29;
+                                                    while (0 !== diff29) {
+                                                      diff29 = diff29 - 1;
+                                                      let tmp651 = +sum38;
+                                                      sum38 = tmp651 + 1;
+                                                      sum39 = sum39 + (input[tmp651] << sum40);
+                                                      sum40 = sum40 + 8;
+                                                      tmp258 = sum39;
+                                                      tmp259 = diff29;
+                                                      tmp260 = sum38;
+                                                      tmp257 = sum40;
+                                                      break;
+                                                    }
+                                                  }
+                                                }
+                                                state.was = state.length;
+                                                state.mode = 23;
+                                                tmp265 = diff28;
+                                                tmp266 = tmp250;
+                                                tmp267 = tmp251;
+                                                tmp268 = tmp252;
+                                                tmp269 = tmp244;
+                                              }
+                                              if (tmp200 >= 6) {
+                                                if (diff11 >= 258) {
+                                                  state.next_out = next_out;
+                                                  state.avail_out = diff11;
+                                                  state.next_in = tmp201;
+                                                  state.avail_in = tmp200;
+                                                  state.hold = tmp199;
+                                                  state.bits = tmp198;
+                                                  let tmp344 = inflate_fast(state, avail_out);
+                                                  ({
+                                                    next_out: next_out2,
+                                                    output: output2,
+                                                    avail_out: avail_out2,
+                                                    next_in: next_in2,
+                                                    input: input2,
+                                                    avail_in: avail_in2,
+                                                  } = state);
+                                                  ({ hold: hold2, bits: bits2 } = state);
+                                                  num56 = tmp197;
+                                                  bits = bits2;
+                                                  hold = hold2;
+                                                  diff11 = avail_out2;
+                                                  diff45 = avail_in2;
+                                                  next_out = next_out2;
+                                                  next_in = next_in2;
+                                                  output = output2;
+                                                  input = input2;
+                                                  if (state.mode !== 12) {
+                                                    continue;
+                                                  } else {
+                                                    state.back = -1;
+                                                    num56 = tmp197;
+                                                    avail_out = tmp8;
                                                     bits = bits2;
                                                     hold = hold2;
-                                                    diff2 = avail_out2;
-                                                    diff8 = avail_in2;
+                                                    diff11 = avail_out2;
+                                                    diff45 = avail_in2;
                                                     next_out = next_out2;
                                                     next_in = next_in2;
                                                     output = output2;
                                                     input = input2;
-                                                    if (state.mode !== 12) {
-                                                      continue;
-                                                    } else {
-                                                      state.back = -1;
-                                                      num56 = buf8;
-                                                      avail_out = tmp8;
-                                                      bits = bits2;
-                                                      hold = hold2;
-                                                      diff2 = avail_out2;
-                                                      diff8 = avail_in2;
-                                                      next_out = next_out2;
-                                                      next_in = next_in2;
-                                                      output = output2;
-                                                      input = input2;
-                                                      continue;
-                                                    }
-                                                    continue;
-                                                  }
-                                                }
-                                                state.back = 0;
-                                                buf8 = state.lencode[buf8 & ((1 << state.lenbits) - 1)];
-                                                buf8 = (buf8 >>> 16) & 255;
-                                                buf8 = 65535 & buf8;
-                                                buf8 = buf8 >>> 24;
-                                                if (buf8 <= buf8) {
-                                                  if (buf8) {
-                                                    if (!(240 & buf8)) {
-                                                      buf8 = (1 << (buf8 + buf8)) - 1;
-                                                      buf8 = state.lencode[buf8 + ((buf8 & buf8) >> buf8)];
-                                                      buf8 = (buf8 >>> 16) & 255;
-                                                      buf8 = 65535 & buf8;
-                                                      buf8 = buf8 >>> 24;
-                                                      if (buf8 + buf8 <= buf8) {
-                                                        buf8 = buf8 >>> buf8;
-                                                        buf8 = buf8 - buf8;
-                                                        state.back = state.back + buf8;
-                                                      } else {
-                                                        num61 = buf8;
-                                                        tmp37 = avail_out;
-                                                        num62 = buf8;
-                                                        num63 = buf8;
-                                                        tmp38 = buf8;
-                                                        tmp39 = buf8;
-                                                        while (0 !== buf8) {
-                                                          buf8 = buf8 - 1;
-                                                          buf8 = +buf8;
-                                                          buf8 = buf8 + 1;
-                                                          buf8 = buf8 + (input[buf8] << buf8);
-                                                          buf8 = buf8 + 8;
-                                                          buf8 = state.lencode[buf8 + ((buf8 & buf8) >> buf8)];
-                                                          buf8 = (buf8 >>> 16) & 255;
-                                                          buf8 = 65535 & buf8;
-                                                          buf8 = buf8 >>> 24;
-                                                          break;
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                  buf8 = buf8 >>> buf8;
-                                                  buf8 = buf8 - buf8;
-                                                  state.back = state.back + buf8;
-                                                  state.length = buf8;
-                                                  if (0 === buf8) {
-                                                    state.mode = 26;
-                                                    num56 = buf8;
-                                                    bits = buf8;
-                                                    hold = buf8;
-                                                    diff8 = buf8;
-                                                    next_in = buf8;
-                                                    continue;
-                                                  } else {
-                                                    if (32 & buf8) {
-                                                      state.back = -1;
-                                                      state.mode = 12;
-                                                      num56 = buf8;
-                                                      bits = buf8;
-                                                      hold = buf8;
-                                                      diff8 = buf8;
-                                                      next_in = buf8;
-                                                      continue;
-                                                    } else if (64 & buf8) {
-                                                      state.msg = "invalid literal/length code";
-                                                      state.mode = 30;
-                                                      num56 = buf8;
-                                                      bits = buf8;
-                                                      hold = buf8;
-                                                      diff8 = buf8;
-                                                      next_in = buf8;
-                                                      continue;
-                                                    } else {
-                                                      state.extra = 15 & buf8;
-                                                      state.mode = 22;
-                                                    }
                                                     continue;
                                                   }
                                                   continue;
-                                                } else {
-                                                  num61 = buf8;
-                                                  tmp37 = avail_out;
-                                                  num62 = buf8;
-                                                  num63 = buf8;
-                                                  tmp38 = buf8;
-                                                  tmp39 = buf8;
-                                                  while (0 !== buf8) {
-                                                    buf8 = buf8 - 1;
-                                                    buf8 = +buf8;
-                                                    buf8 = buf8 + 1;
-                                                    buf8 = buf8 + (input[buf8] << buf8);
-                                                    buf8 = buf8 + 8;
-                                                    buf8 = state.lencode[buf8 & ((1 << state.lenbits) - 1)];
-                                                    buf8 = (buf8 >>> 16) & 255;
-                                                    buf8 = 65535 & buf8;
-                                                    buf8 = buf8 >>> 24;
-                                                    break;
-                                                  }
                                                 }
                                               }
-                                              state.mode = 21;
-                                            }
-                                            if (state.have >= state.nlen + state.ndist) {
-                                              num56 = buf8;
-                                              bits = buf8;
-                                              hold = buf8;
-                                              diff8 = buf8;
-                                              next_in = buf8;
-                                              if (state.mode === 30) {
+                                              state.back = 0;
+                                              let tmp202 = state.lencode[tmp199 & ((1 << state.lenbits) - 1)];
+                                              let tmp203 = (tmp202 >>> 16) & 255;
+                                              let tmp204 = 65535 & tmp202;
+                                              let tmp205 = tmp202 >>> 24;
+                                              let sum46 = tmp198;
+                                              let tmp207 = tmp199;
+                                              let diff34 = tmp200;
+                                              let sum44 = tmp201;
+                                              let tmp210 = tmp199;
+                                              let tmp211 = tmp200;
+                                              let tmp212 = tmp201;
+                                              let tmp213 = tmp198;
+                                              if (tmp205 <= tmp198) {
+                                                let tmp218 = tmp204;
+                                                let tmp219 = tmp203;
+                                                let tmp220 = tmp205;
+                                                let diff31 = tmp213;
+                                                let tmp222 = tmp210;
+                                                let tmp223 = tmp211;
+                                                let tmp224 = tmp212;
+                                                if (tmp203) {
+                                                  tmp218 = tmp204;
+                                                  tmp219 = tmp203;
+                                                  tmp220 = tmp205;
+                                                  diff31 = tmp213;
+                                                  tmp222 = tmp210;
+                                                  tmp223 = tmp211;
+                                                  tmp224 = tmp212;
+                                                  if (!(240 & tmp203)) {
+                                                    let diff30 = (1 << (tmp205 + tmp203)) - 1;
+                                                    let tmp226 = state.lencode[tmp204 + ((tmp210 & diff30) >> tmp205)];
+                                                    let tmp227 = (tmp226 >>> 16) & 255;
+                                                    let tmp228 = 65535 & tmp226;
+                                                    let tmp229 = tmp226 >>> 24;
+                                                    let sum43 = tmp213;
+                                                    let tmp231 = tmp210;
+                                                    let diff32 = tmp211;
+                                                    let sum41 = tmp212;
+                                                    let tmp234 = tmp213;
+                                                    let tmp235 = tmp210;
+                                                    let tmp236 = tmp211;
+                                                    let tmp237 = tmp212;
+                                                    if (tmp205 + tmp229 <= tmp213) {
+                                                      tmp222 = tmp235 >>> tmp205;
+                                                      diff31 = tmp234 - tmp205;
+                                                      state.back = state.back + tmp205;
+                                                      tmp218 = tmp228;
+                                                      tmp219 = tmp227;
+                                                      tmp220 = tmp229;
+                                                      tmp223 = tmp236;
+                                                      tmp224 = tmp237;
+                                                    } else {
+                                                      num61 = tmp197;
+                                                      tmp37 = avail_out;
+                                                      num62 = sum43;
+                                                      num63 = tmp231;
+                                                      tmp38 = sum41;
+                                                      tmp39 = diff32;
+                                                      while (0 !== diff32) {
+                                                        diff32 = diff32 - 1;
+                                                        let tmp647 = +sum41;
+                                                        sum41 = tmp647 + 1;
+                                                        let sum42 = tmp231 + (input[tmp647] << sum43);
+                                                        sum43 = sum43 + 8;
+                                                        let tmp649 =
+                                                          state.lencode[tmp204 + ((sum42 & diff30) >> tmp205)];
+                                                        tmp227 = (tmp649 >>> 16) & 255;
+                                                        tmp228 = 65535 & tmp649;
+                                                        let tmp650 = tmp649 >>> 24;
+                                                        tmp231 = sum42;
+                                                        tmp229 = tmp650;
+                                                        tmp235 = sum42;
+                                                        tmp236 = diff32;
+                                                        tmp237 = sum41;
+                                                        tmp234 = sum43;
+                                                        break;
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                                let tmp242 = tmp222 >>> tmp220;
+                                                let diff33 = diff31 - tmp220;
+                                                state.back = state.back + tmp220;
+                                                state.length = tmp218;
+                                                if (0 === tmp219) {
+                                                  state.mode = 26;
+                                                  num56 = tmp197;
+                                                  bits = diff33;
+                                                  hold = tmp242;
+                                                  diff45 = tmp223;
+                                                  next_in = tmp224;
+                                                  continue;
+                                                } else {
+                                                  if (32 & tmp219) {
+                                                    state.back = -1;
+                                                    state.mode = 12;
+                                                    num56 = tmp197;
+                                                    bits = diff33;
+                                                    hold = tmp242;
+                                                    diff45 = tmp223;
+                                                    next_in = tmp224;
+                                                    continue;
+                                                  } else if (64 & tmp219) {
+                                                    state.msg = "invalid literal/length code";
+                                                    state.mode = 30;
+                                                    num56 = tmp197;
+                                                    bits = diff33;
+                                                    hold = tmp242;
+                                                    diff45 = tmp223;
+                                                    next_in = tmp224;
+                                                    continue;
+                                                  } else {
+                                                    state.extra = 15 & tmp219;
+                                                    state.mode = 22;
+                                                    tmp244 = tmp197;
+                                                    tmp245 = diff33;
+                                                    tmp246 = tmp242;
+                                                    tmp247 = tmp223;
+                                                    tmp248 = tmp224;
+                                                  }
+                                                  continue;
+                                                }
                                                 continue;
                                               } else {
-                                                if (0 === state.lens[256]) {
-                                                  state.msg = "invalid code -- missing end-of-block";
+                                                num61 = tmp197;
+                                                tmp37 = avail_out;
+                                                num62 = sum46;
+                                                num63 = tmp207;
+                                                tmp38 = sum44;
+                                                tmp39 = diff34;
+                                                while (0 !== diff34) {
+                                                  diff34 = diff34 - 1;
+                                                  let tmp644 = +sum44;
+                                                  sum44 = tmp644 + 1;
+                                                  let sum45 = tmp207 + (input[tmp644] << sum46);
+                                                  sum46 = sum46 + 8;
+                                                  let tmp646 = state.lencode[sum45 & ((1 << state.lenbits) - 1)];
+                                                  tmp203 = (tmp646 >>> 16) & 255;
+                                                  tmp204 = 65535 & tmp646;
+                                                  tmp205 = tmp646 >>> 24;
+                                                  tmp207 = sum45;
+                                                  tmp210 = sum45;
+                                                  tmp211 = diff34;
+                                                  tmp212 = sum44;
+                                                  tmp213 = sum46;
+                                                  break;
+                                                }
+                                              }
+                                            }
+                                            state.mode = 21;
+                                            tmp197 = tmp192;
+                                            tmp198 = tmp193;
+                                            tmp199 = tmp194;
+                                            tmp200 = tmp195;
+                                            tmp201 = tmp196;
+                                          }
+                                          let tmp118 = tmp114;
+                                          let tmp119 = tmp115;
+                                          let tmp120 = tmp116;
+                                          let tmp121 = tmp117;
+                                          let tmp122 = tmp114;
+                                          let tmp123 = tmp115;
+                                          let tmp124 = tmp116;
+                                          let tmp125 = tmp117;
+                                          if (state.have >= state.nlen + state.ndist) {
+                                            num56 = tmp113;
+                                            bits = tmp122;
+                                            hold = tmp123;
+                                            diff45 = tmp124;
+                                            next_in = tmp125;
+                                            if (state.mode === 30) {
+                                              continue;
+                                            } else {
+                                              if (0 === state.lens[256]) {
+                                                state.msg = "invalid code -- missing end-of-block";
+                                                state.mode = 30;
+                                                num56 = tmp113;
+                                                avail_out = tmp8;
+                                                bits = tmp122;
+                                                hold = tmp123;
+                                                diff11 = tmp11;
+                                                diff45 = tmp124;
+                                                next_out = tmp13;
+                                                next_in = tmp125;
+                                                output = tmp15;
+                                                input = tmp16;
+                                                continue;
+                                              } else {
+                                                state.lenbits = 9;
+                                                let obj = { bits: state.lenbits };
+                                                let tmp639 = require;
+                                                let lens5 = state.lens;
+                                                let tmp643 = inflate_table(
+                                                  1,
+                                                  lens5,
+                                                  0,
+                                                  state.nlen,
+                                                  state.lencode,
+                                                  0,
+                                                  state.work,
+                                                  obj,
+                                                );
+                                                state.lenbits = obj.bits;
+                                                if (tmp643) {
+                                                  state.msg = "invalid literal/lengths set";
                                                   state.mode = 30;
-                                                  num56 = buf8;
+                                                  num56 = tmp643;
                                                   avail_out = tmp8;
-                                                  bits = buf8;
-                                                  hold = buf8;
-                                                  diff2 = tmp11;
-                                                  diff8 = buf8;
+                                                  bits = tmp122;
+                                                  hold = tmp123;
+                                                  diff11 = tmp11;
+                                                  diff45 = tmp124;
                                                   next_out = tmp13;
-                                                  next_in = buf8;
+                                                  next_in = tmp125;
                                                   output = tmp15;
                                                   input = tmp16;
                                                   continue;
                                                 } else {
-                                                  state.lenbits = 9;
-                                                  let obj = { bits: null };
-                                                  obj[0] = state.lenbits;
-                                                  buf8 = require;
-                                                  buf8 = dependencyMap;
-                                                  let lens5 = state.lens;
-                                                  buf8 = lens5;
-                                                  num = 1;
-                                                  num = 0;
-                                                  num = 0;
-                                                  buf8 = obj;
-                                                  buf8 = inflate_table(
-                                                    1,
-                                                    lens5,
-                                                    0,
+                                                  state.distbits = 6;
+                                                  state.distcode = state.distdyn;
+                                                  obj = { bits: null };
+                                                  ({ distbits: obj2.bits, lens: lens2 } = state);
+                                                  let tmp191 = tmp639(13662)(
+                                                    2,
+                                                    lens2,
                                                     state.nlen,
-                                                    state.lencode,
+                                                    state.ndist,
+                                                    state.distcode,
                                                     0,
                                                     state.work,
                                                     obj,
                                                   );
-                                                  state.lenbits = obj.bits;
-                                                  if (buf8) {
-                                                    state.msg = "invalid literal/lengths set";
+                                                  state.distbits = obj.bits;
+                                                  if (tmp191) {
+                                                    state.msg = "invalid distances set";
                                                     state.mode = 30;
-                                                    num56 = buf8;
+                                                    num56 = tmp191;
                                                     avail_out = tmp8;
-                                                    bits = buf8;
-                                                    hold = buf8;
-                                                    diff2 = tmp11;
-                                                    diff8 = buf8;
+                                                    bits = tmp122;
+                                                    hold = tmp123;
+                                                    diff11 = tmp11;
+                                                    diff45 = tmp124;
                                                     next_out = tmp13;
-                                                    next_in = buf8;
+                                                    next_in = tmp125;
                                                     output = tmp15;
                                                     input = tmp16;
                                                     continue;
                                                   } else {
-                                                    state.distbits = 6;
-                                                    state.distcode = state.distdyn;
-                                                    obj = { bits: null };
-                                                    ({ distbits: obj2[0], lens: lens2 } = state);
-                                                    buf8 = lens2;
-                                                    let num73 = 2;
-                                                    let num74 = 0;
-                                                    buf8 = obj;
-                                                    buf8 = buf8(13662)(
-                                                      2,
-                                                      lens2,
-                                                      state.nlen,
-                                                      state.ndist,
-                                                      state.distcode,
-                                                      0,
-                                                      state.work,
-                                                      obj,
-                                                    );
-                                                    state.distbits = obj.bits;
-                                                    if (buf8) {
-                                                      state.msg = "invalid distances set";
-                                                      state.mode = 30;
-                                                      num56 = buf8;
-                                                      avail_out = tmp8;
-                                                      bits = buf8;
-                                                      hold = buf8;
-                                                      diff2 = tmp11;
-                                                      diff8 = buf8;
-                                                      next_out = tmp13;
-                                                      next_in = buf8;
-                                                      output = tmp15;
-                                                      input = tmp16;
-                                                      continue;
-                                                    } else {
-                                                      state.mode = 20;
-                                                      num61 = buf8;
-                                                      tmp37 = tmp8;
-                                                      num62 = buf8;
-                                                      num63 = buf8;
-                                                      tmp39 = buf8;
-                                                      tmp38 = buf8;
-                                                    }
+                                                    state.mode = 20;
+                                                    tmp192 = tmp191;
+                                                    tmp193 = tmp122;
+                                                    tmp194 = tmp123;
+                                                    tmp195 = tmp124;
+                                                    tmp196 = tmp125;
+                                                    num61 = tmp191;
+                                                    tmp37 = tmp8;
+                                                    num62 = tmp122;
+                                                    num63 = tmp123;
+                                                    tmp39 = tmp124;
+                                                    tmp38 = tmp125;
                                                   }
-                                                  continue;
                                                 }
                                                 continue;
                                               }
                                               continue;
-                                            } else {
-                                              while (true) {
-                                                buf8 = state.lencode[buf8 & ((1 << state.lenbits) - 1)];
-                                                buf8 = buf8 >>> 16;
-                                                buf8 = 65535 & buf8;
-                                                buf8 = buf8 >>> 24;
-                                                if (buf8 <= buf8) {
-                                                  if (buf8 < 16) {
-                                                    buf8 = buf8 >>> buf8;
-                                                    buf8 = buf8 - buf8;
-                                                    buf8 = +state.have;
-                                                    state.have = buf8 + 1;
-                                                    state.lens[buf8] = buf8;
-                                                  } else {
-                                                    if (16 === buf8) {
-                                                      buf8 = buf8 + 2;
-                                                      if (buf8 >= buf8) {
-                                                        buf8 = buf8 >>> buf8;
-                                                        buf8 = buf8 - buf8;
-                                                        if (0 === state.have) {
-                                                          state.msg = "invalid bit length repeat";
-                                                          state.mode = 30;
-                                                        } else {
-                                                          let num72 = state.lens[state.have - 1];
-                                                          buf8 = 3 + (3 & buf8);
-                                                          buf8 = buf8 >>> 2;
-                                                          buf8 = buf8 - 2;
-                                                        }
-                                                      } else {
-                                                        num61 = buf8;
-                                                        tmp37 = avail_out;
-                                                        num62 = buf8;
-                                                        num63 = buf8;
-                                                        tmp38 = buf8;
-                                                        tmp39 = buf8;
-                                                        while (0 !== buf8) {
-                                                          buf8 = buf8 - 1;
-                                                          buf8 = +buf8;
-                                                          buf8 = buf8 + 1;
-                                                          buf8 = buf8 + (input[buf8] << buf8);
-                                                          buf8 = buf8 + 8;
-                                                          break;
-                                                        }
-                                                      }
-                                                      break;
-                                                    } else if (17 === buf8) {
-                                                      buf8 = buf8 + 3;
-                                                      if (buf8 >= buf8) {
-                                                        buf8 = buf8 >>> buf8;
-                                                        buf8 = 3 + (7 & buf8);
-                                                        buf8 = buf8 >>> 3;
-                                                        buf8 = buf8 - buf8 - 3;
-                                                        num72 = 0;
-                                                      } else {
-                                                        num61 = buf8;
-                                                        tmp37 = avail_out;
-                                                        num62 = buf8;
-                                                        num63 = buf8;
-                                                        tmp38 = buf8;
-                                                        tmp39 = buf8;
-                                                        while (0 !== buf8) {
-                                                          buf8 = buf8 - 1;
-                                                          buf8 = +buf8;
-                                                          buf8 = buf8 + 1;
-                                                          buf8 = buf8 + (input[buf8] << buf8);
-                                                          buf8 = buf8 + 8;
-                                                          break;
-                                                        }
-                                                      }
-                                                      break;
-                                                    } else {
-                                                      buf8 = buf8 + 7;
-                                                      if (buf8 >= buf8) {
-                                                        buf8 = buf8 >>> buf8;
-                                                        buf8 = 11 + (127 & buf8);
-                                                        buf8 = buf8 >>> 7;
-                                                        buf8 = buf8 - buf8 - 7;
-                                                        num72 = 0;
-                                                      } else {
-                                                        num61 = buf8;
-                                                        tmp37 = avail_out;
-                                                        num62 = buf8;
-                                                        num63 = buf8;
-                                                        tmp38 = buf8;
-                                                        tmp39 = buf8;
-                                                        while (0 !== buf8) {
-                                                          buf8 = buf8 - 1;
-                                                          buf8 = +buf8;
-                                                          buf8 = buf8 + 1;
-                                                          buf8 = buf8 + (input[buf8] << buf8);
-                                                          buf8 = buf8 + 8;
-                                                          break;
-                                                        }
-                                                      }
-                                                      break;
-                                                    }
-                                                    if (state.have + buf8 > state.nlen + state.ndist) {
-                                                      state.msg = "invalid bit length repeat";
-                                                      state.mode = 30;
-                                                    } else {
-                                                      buf8 = buf8 - 1;
-                                                      for (let buf8 = buf8; buf8; buf8 = buf8) {
-                                                        buf8 = +state.have;
-                                                        state.have = buf8 + 1;
-                                                        state.lens[buf8] = num72;
-                                                        buf8 = buf8 - 1;
-                                                      }
-                                                    }
-                                                  }
-                                                  break;
+                                            }
+                                            continue;
+                                          } else {
+                                            while (true) {
+                                              let tmp126 = state.lencode[tmp119 & ((1 << state.lenbits) - 1)];
+                                              let tmp127 = tmp126 >>> 16;
+                                              let tmp128 = 65535 & tmp126;
+                                              let tmp129 = tmp126 >>> 24;
+                                              let sum62 = tmp118;
+                                              let tmp131 = tmp119;
+                                              let diff42 = tmp120;
+                                              let sum60 = tmp121;
+                                              let tmp134 = tmp119;
+                                              let tmp135 = tmp120;
+                                              let tmp136 = tmp121;
+                                              let tmp137 = tmp118;
+                                              if (tmp129 <= tmp118) {
+                                                if (tmp128 < 16) {
+                                                  let tmp183 = tmp134 >>> tmp129;
+                                                  let diff35 = tmp137 - tmp129;
+                                                  let tmp188 = +state.have;
+                                                  state.have = tmp188 + 1;
+                                                  state.lens[tmp188] = tmp128;
+                                                  let tmp184 = tmp135;
+                                                  let tmp185 = tmp136;
+                                                  tmp118 = diff35;
+                                                  tmp119 = tmp183;
+                                                  tmp120 = tmp184;
+                                                  tmp121 = tmp185;
+                                                  tmp122 = diff35;
+                                                  tmp123 = tmp183;
+                                                  tmp124 = tmp184;
+                                                  tmp125 = tmp185;
                                                 } else {
-                                                  num61 = buf8;
-                                                  tmp37 = avail_out;
-                                                  num62 = buf8;
-                                                  num63 = buf8;
-                                                  tmp38 = buf8;
-                                                  tmp39 = buf8;
-                                                  while (0 !== buf8) {
-                                                    buf8 = buf8 - 1;
-                                                    buf8 = +buf8;
-                                                    buf8 = buf8 + 1;
-                                                    buf8 = buf8 + (input[buf8] << buf8);
-                                                    buf8 = buf8 + 8;
-                                                    buf8 = state.lencode[buf8 & ((1 << state.lenbits) - 1)];
-                                                    buf8 = buf8 >>> 16;
-                                                    buf8 = 65535 & buf8;
-                                                    buf8 = buf8 >>> 24;
-                                                    continue;
+                                                  if (16 === tmp128) {
+                                                    let sum47 = tmp129 + 2;
+                                                    let sum51 = tmp137;
+                                                    let sum50 = tmp134;
+                                                    let diff38 = tmp135;
+                                                    let sum49 = tmp136;
+                                                    let tmp171 = tmp134;
+                                                    let tmp172 = tmp135;
+                                                    let tmp173 = tmp136;
+                                                    let tmp174 = tmp137;
+                                                    if (tmp137 >= sum47) {
+                                                      let tmp179 = tmp171 >>> tmp129;
+                                                      let diff36 = tmp174 - tmp129;
+                                                      if (0 === state.have) {
+                                                        state.msg = "invalid bit length repeat";
+                                                        state.mode = 30;
+                                                        tmp122 = diff36;
+                                                        tmp123 = tmp179;
+                                                        tmp124 = tmp172;
+                                                        tmp125 = tmp173;
+                                                      } else {
+                                                        let num72 = state.lens[state.have - 1];
+                                                        let sum48 = 3 + (3 & tmp179);
+                                                        let tmp148 = tmp179 >>> 2;
+                                                        let diff37 = diff36 - 2;
+                                                        let tmp164 = tmp172;
+                                                        let tmp165 = tmp173;
+                                                      }
+                                                    } else {
+                                                      num61 = tmp113;
+                                                      tmp37 = avail_out;
+                                                      num62 = sum51;
+                                                      num63 = sum50;
+                                                      tmp38 = sum49;
+                                                      tmp39 = diff38;
+                                                      while (0 !== diff38) {
+                                                        diff38 = diff38 - 1;
+                                                        let tmp638 = +sum49;
+                                                        sum49 = tmp638 + 1;
+                                                        sum50 = sum50 + (input[tmp638] << sum51);
+                                                        sum51 = sum51 + 8;
+                                                        tmp171 = sum50;
+                                                        tmp172 = diff38;
+                                                        tmp173 = sum49;
+                                                        tmp174 = sum51;
+                                                        break;
+                                                      }
+                                                    }
+                                                    break;
+                                                  } else if (17 === tmp128) {
+                                                    let sum52 = tmp129 + 3;
+                                                    let sum55 = tmp137;
+                                                    let sum54 = tmp134;
+                                                    let diff39 = tmp135;
+                                                    let sum53 = tmp136;
+                                                    let tmp155 = tmp137;
+                                                    let tmp156 = tmp134;
+                                                    let tmp157 = tmp135;
+                                                    let tmp158 = tmp136;
+                                                    if (tmp137 >= sum52) {
+                                                      let tmp163 = tmp156 >>> tmp129;
+                                                      sum48 = 3 + (7 & tmp163);
+                                                      tmp148 = tmp163 >>> 3;
+                                                      diff37 = tmp155 - tmp129 - 3;
+                                                      tmp164 = tmp157;
+                                                      tmp165 = tmp158;
+                                                      num72 = 0;
+                                                    } else {
+                                                      num61 = tmp113;
+                                                      tmp37 = avail_out;
+                                                      num62 = sum55;
+                                                      num63 = sum54;
+                                                      tmp38 = sum53;
+                                                      tmp39 = diff39;
+                                                      while (0 !== diff39) {
+                                                        diff39 = diff39 - 1;
+                                                        let tmp637 = +sum53;
+                                                        sum53 = tmp637 + 1;
+                                                        sum54 = sum54 + (input[tmp637] << sum55);
+                                                        sum55 = sum55 + 8;
+                                                        tmp156 = sum54;
+                                                        tmp157 = diff39;
+                                                        tmp158 = sum53;
+                                                        tmp155 = sum55;
+                                                        break;
+                                                      }
+                                                    }
+                                                    break;
+                                                  } else {
+                                                    let sum56 = tmp129 + 7;
+                                                    let sum59 = tmp137;
+                                                    let sum58 = tmp134;
+                                                    let diff40 = tmp135;
+                                                    let sum57 = tmp136;
+                                                    let tmp634 = tmp137;
+                                                    let tmp635 = tmp134;
+                                                    tmp164 = tmp135;
+                                                    tmp165 = tmp136;
+                                                    if (tmp137 >= sum56) {
+                                                      let tmp146 = tmp635 >>> tmp129;
+                                                      sum48 = 11 + (127 & tmp146);
+                                                      tmp148 = tmp146 >>> 7;
+                                                      diff37 = tmp634 - tmp129 - 7;
+                                                      num72 = 0;
+                                                    } else {
+                                                      num61 = tmp113;
+                                                      tmp37 = avail_out;
+                                                      num62 = sum59;
+                                                      num63 = sum58;
+                                                      tmp38 = sum57;
+                                                      tmp39 = diff40;
+                                                      while (0 !== diff40) {
+                                                        diff40 = diff40 - 1;
+                                                        let tmp636 = +sum57;
+                                                        sum57 = tmp636 + 1;
+                                                        sum58 = sum58 + (input[tmp636] << sum59);
+                                                        sum59 = sum59 + 8;
+                                                        tmp635 = sum58;
+                                                        tmp164 = diff40;
+                                                        tmp165 = sum57;
+                                                        tmp634 = sum59;
+                                                        break;
+                                                      }
+                                                    }
+                                                    break;
+                                                  }
+                                                  if (state.have + sum48 > state.nlen + state.ndist) {
+                                                    state.msg = "invalid bit length repeat";
+                                                    state.mode = 30;
+                                                    tmp122 = diff37;
+                                                    tmp123 = tmp148;
+                                                    tmp124 = tmp164;
+                                                    tmp125 = tmp165;
+                                                  } else {
+                                                    let diff41 = sum48 - 1;
+                                                    diff35 = diff37;
+                                                    tmp183 = tmp148;
+                                                    tmp184 = tmp164;
+                                                    tmp185 = tmp165;
+                                                    if (sum48) {
+                                                      do {
+                                                        let tmp186 = +state.have;
+                                                        state.have = tmp186 + 1;
+                                                        state.lens[tmp186] = num72;
+                                                        tmp187 = diff41;
+                                                        diff41 = diff41 - 1;
+                                                        diff35 = diff37;
+                                                        tmp183 = tmp148;
+                                                        tmp184 = tmp164;
+                                                        tmp185 = tmp165;
+                                                      } while (tmp187);
+                                                    }
                                                   }
                                                 }
                                                 break;
-                                              }
-                                            }
-                                          }
-                                          let diff6 = buf8;
-                                          let tmp87 = buf8;
-                                          let tmp88 = buf8;
-                                          let tmp89 = buf8;
-                                          let tmp90 = buf8;
-                                          let tmp91 = buf8;
-                                          let tmp92 = buf8;
-                                          let tmp93 = buf8;
-                                          if (state.have < state.ncode) {
-                                            while (true) {
-                                              let sum11 = diff6;
-                                              let sum10 = tmp87;
-                                              let diff7 = tmp88;
-                                              let sum9 = tmp89;
-                                              let tmp98 = tmp87;
-                                              let tmp99 = tmp88;
-                                              buf8 = tmp89;
-                                              buf8 = diff6;
-                                              if (diff6 >= 3) {
-                                                buf8 = +state.have;
-                                                state.have = buf8 + 1;
-                                                state.lens[items[buf8]] = 7 & tmp98;
-                                                tmp87 = tmp98 >>> 3;
-                                                diff6 = buf8 - 3;
-                                                tmp88 = tmp99;
-                                                tmp89 = buf8;
-                                                tmp90 = diff6;
-                                                tmp91 = tmp87;
-                                                tmp92 = tmp99;
-                                                tmp93 = buf8;
-                                                break;
                                               } else {
-                                                buf8 = sum11;
-                                                buf8 = sum10;
-                                                buf8 = diff7;
-                                                buf8 = sum9;
-                                                num61 = num56;
+                                                num61 = tmp113;
                                                 tmp37 = avail_out;
-                                                num62 = sum11;
-                                                num63 = sum10;
-                                                tmp38 = sum9;
-                                                tmp39 = diff7;
-                                                while (0 !== diff7) {
-                                                  diff7 = diff7 - 1;
-                                                  buf8 = +sum9;
-                                                  sum9 = buf8 + 1;
-                                                  sum10 = sum10 + (input[buf8] << sum11);
-                                                  sum11 = sum11 + 8;
-                                                  tmp98 = sum10;
-                                                  tmp99 = diff7;
-                                                  buf8 = sum9;
-                                                  buf8 = sum11;
+                                                num62 = sum62;
+                                                num63 = tmp131;
+                                                tmp38 = sum60;
+                                                tmp39 = diff42;
+                                                while (0 !== diff42) {
+                                                  diff42 = diff42 - 1;
+                                                  let tmp625 = +sum60;
+                                                  sum60 = tmp625 + 1;
+                                                  let sum61 = tmp131 + (input[tmp625] << sum62);
+                                                  sum62 = sum62 + 8;
+                                                  let tmp627 = state.lencode[sum61 & ((1 << state.lenbits) - 1)];
+                                                  let tmp628 = tmp627 >>> 16;
+                                                  tmp128 = 65535 & tmp627;
+                                                  tmp129 = tmp627 >>> 24;
+                                                  tmp131 = sum61;
+                                                  tmp134 = sum61;
+                                                  tmp135 = diff42;
+                                                  tmp136 = sum60;
+                                                  tmp137 = sum62;
                                                   continue;
                                                 }
                                               }
                                               break;
                                             }
                                           }
-                                          if (state.have < 19) {
-                                            do {
-                                              buf8 = +state.have;
-                                              state.have = buf8 + 1;
-                                              state.lens[items[buf8]] = 0;
-                                              have = state.have;
-                                            } while (have < 19);
+                                        }
+                                        let diff43 = tmp611;
+                                        let tmp87 = tmp612;
+                                        let tmp88 = tmp613;
+                                        let tmp89 = tmp614;
+                                        let tmp90 = tmp611;
+                                        let tmp91 = tmp612;
+                                        let tmp92 = tmp613;
+                                        let tmp93 = tmp614;
+                                        if (state.have < state.ncode) {
+                                          while (true) {
+                                            let sum65 = diff43;
+                                            let sum64 = tmp87;
+                                            let diff44 = tmp88;
+                                            let sum63 = tmp89;
+                                            let tmp98 = tmp87;
+                                            let tmp99 = tmp88;
+                                            let tmp100 = tmp89;
+                                            let tmp101 = diff43;
+                                            if (diff43 >= 3) {
+                                              let tmp106 = +state.have;
+                                              state.have = tmp106 + 1;
+                                              state.lens[items[tmp106]] = 7 & tmp98;
+                                              tmp87 = tmp98 >>> 3;
+                                              diff43 = tmp101 - 3;
+                                              tmp88 = tmp99;
+                                              tmp89 = tmp100;
+                                              tmp90 = diff43;
+                                              tmp91 = tmp87;
+                                              tmp92 = tmp99;
+                                              tmp93 = tmp100;
+                                              break;
+                                            } else {
+                                              num61 = num56;
+                                              tmp37 = avail_out;
+                                              num62 = sum65;
+                                              num63 = sum64;
+                                              tmp38 = sum63;
+                                              tmp39 = diff44;
+                                              while (0 !== diff44) {
+                                                diff44 = diff44 - 1;
+                                                let tmp624 = +sum63;
+                                                sum63 = tmp624 + 1;
+                                                sum64 = sum64 + (input[tmp624] << sum65);
+                                                sum65 = sum65 + 8;
+                                                tmp98 = sum64;
+                                                tmp99 = diff44;
+                                                tmp100 = sum63;
+                                                tmp101 = sum65;
+                                                continue;
+                                              }
+                                            }
+                                            break;
                                           }
-                                          state.lencode = state.lendyn;
-                                          state.lenbits = 7;
-                                          obj = { bits: null };
-                                          obj[0] = state.lenbits;
-                                          buf8 = require;
-                                          buf8 = dependencyMap;
-                                          let lens = state.lens;
-                                          buf8 = lens;
-                                          let num67 = 0;
-                                          let num68 = 0;
-                                          let num69 = 0;
-                                          let num70 = 19;
-                                          let num71 = 0;
-                                          buf8 = obj;
-                                          buf8 = inflate_table(0, lens, 0, 19, state.lencode, 0, state.work, obj);
-                                          state.lenbits = obj.bits;
-                                          if (buf8) {
-                                            state.msg = "invalid code lengths set";
-                                            state.mode = 30;
-                                            num56 = buf8;
-                                            bits = tmp90;
-                                            hold = tmp91;
-                                            diff8 = tmp92;
-                                            next_in = tmp93;
-                                            continue;
-                                          } else {
-                                            state.have = 0;
-                                            state.mode = 19;
-                                            buf8 = tmp90;
-                                            buf8 = tmp91;
-                                            buf8 = tmp92;
-                                            buf8 = tmp93;
-                                          }
+                                        }
+                                        if (state.have < 19) {
+                                          do {
+                                            let tmp107 = +state.have;
+                                            state.have = tmp107 + 1;
+                                            state.lens[items[tmp107]] = 0;
+                                            have = state.have;
+                                          } while (have < 19);
+                                        }
+                                        state.lencode = state.lendyn;
+                                        state.lenbits = 7;
+                                        obj = { bits: state.lenbits };
+                                        let lens = state.lens;
+                                        let tmp112 = inflate_table(0, lens, 0, 19, state.lencode, 0, state.work, obj);
+                                        state.lenbits = obj.bits;
+                                        if (tmp112) {
+                                          state.msg = "invalid code lengths set";
+                                          state.mode = 30;
+                                          num56 = tmp112;
+                                          bits = tmp90;
+                                          hold = tmp91;
+                                          diff45 = tmp92;
+                                          next_in = tmp93;
+                                          continue;
+                                        } else {
+                                          state.have = 0;
+                                          state.mode = 19;
+                                          tmp113 = tmp112;
+                                          tmp114 = tmp90;
+                                          tmp115 = tmp91;
+                                          tmp116 = tmp92;
+                                          tmp117 = tmp93;
                                         }
                                       }
-                                      let length3 = state.length;
-                                      if (length3) {
-                                        if (length3 > buf8) {
-                                          length3 = buf8;
-                                        }
-                                        if (length3 > diff2) {
-                                          length3 = diff2;
-                                        }
-                                        num61 = num56;
-                                        tmp37 = avail_out;
-                                        num62 = buf8;
-                                        num63 = buf8;
-                                        tmp39 = buf8;
-                                        tmp38 = buf8;
-                                        if (0 !== length3) {
-                                          buf8 = require;
-                                          buf8 = dependencyMap;
-                                          let obj5 = assign;
-                                          buf8 = obj5;
-                                          buf8 = output;
-                                          buf8 = input;
-                                          buf8 = length3;
-                                          buf8 = next_out;
-                                          buf8 = obj5.arraySet(tmp15, tmp16, buf8, length3, tmp13);
-                                          diff8 = buf8 - length3;
-                                          next_in = buf8 + length3;
-                                          diff2 = diff2 - length3;
-                                          next_out = next_out + length3;
-                                          state.length = state.length - length3;
-                                          bits = buf8;
-                                          hold = buf8;
-                                          continue;
-                                        }
-                                      } else {
-                                        state.mode = 12;
-                                        bits = buf8;
-                                        hold = buf8;
-                                        diff8 = buf8;
-                                        next_in = buf8;
+                                    }
+                                    let length3 = state.length;
+                                    if (length3) {
+                                      if (length3 > tmp360) {
+                                        length3 = tmp360;
+                                      }
+                                      if (length3 > diff11) {
+                                        length3 = diff11;
+                                      }
+                                      num61 = num56;
+                                      tmp37 = avail_out;
+                                      num62 = tmp358;
+                                      num63 = tmp359;
+                                      tmp39 = tmp360;
+                                      tmp38 = tmp361;
+                                      if (0 !== length3) {
+                                        let obj5 = _mod13651;
+                                        arraySetResult = obj5.arraySet(tmp15, tmp16, tmp361, length3, tmp13);
+                                        diff45 = tmp360 - length3;
+                                        next_in = tmp361 + length3;
+                                        diff11 = diff11 - length3;
+                                        next_out = next_out + length3;
+                                        state.length = state.length - length3;
+                                        bits = tmp358;
+                                        hold = tmp359;
                                         continue;
                                       }
+                                    } else {
+                                      state.mode = 12;
+                                      bits = tmp358;
+                                      hold = tmp359;
+                                      diff45 = tmp360;
+                                      next_in = tmp361;
                                       continue;
                                     }
-                                    state.mode = 16;
-                                    buf8 = num;
-                                    buf8 = num;
+                                    continue;
                                   }
+                                  state.mode = 16;
+                                  tmp358 = num117;
+                                  tmp359 = num118;
+                                  tmp360 = tmp609;
+                                  tmp361 = tmp610;
                                 }
-                                if (state.last) {
-                                  hold = buf8 >>> (7 & buf8);
-                                  bits = buf8 - (7 & buf8);
-                                  state.mode = 27;
-                                  diff8 = buf8;
-                                  next_in = buf8;
-                                  continue;
-                                } else if (buf8 >= 3) {
-                                  state.last = 1 & buf8;
-                                  buf8 = buf8 - 1;
-                                  buf8 = buf8 >>> 1;
-                                  buf8 = 3 & buf8;
-                                  if (0 === buf8) {
+                              }
+                              if (state.last) {
+                                hold = tmp606 >>> (7 & tmp605);
+                                bits = tmp605 - (7 & tmp605);
+                                state.mode = 27;
+                                diff45 = tmp607;
+                                next_in = tmp608;
+                                continue;
+                              } else {
+                                let sum73 = tmp605;
+                                let sum72 = tmp606;
+                                let diff47 = tmp607;
+                                let sum71 = tmp608;
+                                let tmp380 = tmp606;
+                                let tmp381 = tmp607;
+                                let tmp382 = tmp608;
+                                let tmp383 = tmp605;
+                                if (tmp605 >= 3) {
+                                  state.last = 1 & tmp380;
+                                  let diff46 = tmp383 - 1;
+                                  let tmp389 = tmp380 >>> 1;
+                                  let tmp390 = 3 & tmp389;
+                                  if (0 === tmp390) {
                                     state.mode = 14;
-                                  } else if (1 === buf8) {
-                                    buf8 = c7;
+                                  } else if (1 === tmp390) {
                                     if (c7) {
-                                      buf8 = require;
-                                      buf8 = dependencyMap;
-                                      buf8 = new.target;
-                                      buf8 = new.target;
-                                      let num77 = 512;
-                                      buf8 = new assign.Buf32(512);
-                                      buf8 = new.target;
-                                      buf8 = new.target;
-                                      let num78 = 32;
-                                      buf8 = new assign.Buf32(32);
+                                      let tmp394 = new.target;
+                                      let tmp395 = new.target;
+                                      buf32 = new _mod13651.Buf32(512);
+                                      let tmp398 = new.target;
+                                      let tmp399 = new.target;
+                                      buf321 = new _mod13651.Buf32(32);
                                       let num79 = 0;
                                       do {
-                                        buf8 = num79 + 1;
+                                        sum66 = num79 + 1;
                                         state.lens[num79] = 8;
-                                        num79 = buf8;
-                                      } while (buf8 < 144);
-                                      if (buf8 < 256) {
+                                        num79 = sum66;
+                                      } while (sum66 < 144);
+                                      let tmp403 = sum66;
+                                      let tmp404 = sum66;
+                                      if (sum66 < 256) {
                                         do {
-                                          buf8 = buf8 + 1;
-                                          state.lens[buf8] = 9;
-                                        } while (buf8 < 256);
+                                          sum67 = tmp403 + 1;
+                                          state.lens[tmp403] = 9;
+                                          tmp403 = sum67;
+                                          tmp404 = sum67;
+                                        } while (sum67 < 256);
                                       }
-                                      if (buf8 < 280) {
+                                      let tmp406 = tmp404;
+                                      let tmp407 = tmp404;
+                                      if (tmp404 < 280) {
                                         do {
-                                          buf8 = buf8 + 1;
-                                          state.lens[buf8] = 7;
-                                        } while (buf8 < 280);
+                                          sum68 = tmp406 + 1;
+                                          state.lens[tmp406] = 7;
+                                          tmp406 = sum68;
+                                          tmp407 = sum68;
+                                        } while (sum68 < 280);
                                       }
-                                      if (buf8 < 288) {
+                                      if (tmp407 < 288) {
                                         do {
-                                          buf8 = buf8 + 1;
-                                          state.lens[buf8] = 8;
-                                        } while (buf8 < 288);
+                                          sum69 = tmp407 + 1;
+                                          state.lens[tmp407] = 8;
+                                          tmp407 = sum69;
+                                        } while (sum69 < 288);
                                       }
-                                      buf8 = require;
-                                      buf8 = dependencyMap;
                                       let lens3 = state.lens;
-                                      buf8 = lens3;
-                                      let num80 = 1;
-                                      let num81 = 0;
-                                      let num82 = 288;
-                                      let num83 = 0;
-                                      buf8 = inflate_table(1, lens3, 0, 288, buf8, 0, state.work, { bits: 9 });
+                                      let tmp414 = inflate_table(1, lens3, 0, 288, buf32, 0, state.work, { bits: 9 });
                                       let num84 = 0;
                                       do {
-                                        buf8 = num84 + 1;
+                                        sum70 = num84 + 1;
                                         state.lens[num84] = 5;
-                                        num84 = buf8;
-                                      } while (buf8 < 32);
-                                      buf8 = require;
-                                      buf8 = dependencyMap;
+                                        num84 = sum70;
+                                      } while (sum70 < 32);
                                       let lens4 = state.lens;
-                                      buf8 = lens4;
-                                      let num85 = 2;
-                                      let num86 = 0;
-                                      let num87 = 32;
-                                      let num88 = 0;
-                                      buf8 = inflate_table(2, lens4, 0, 32, buf8, 0, state.work, { bits: 5 });
+                                      let tmp420 = inflate_table(2, lens4, 0, 32, buf321, 0, state.work, { bits: 5 });
                                       c7 = false;
                                     }
-                                    state.lencode = buf8;
+                                    state.lencode = buf32;
                                     state.lenbits = 9;
-                                    state.distcode = buf8;
+                                    state.distcode = buf321;
                                     state.distbits = 5;
                                     state.mode = 20;
                                     if (6 === arg1) {
-                                      num63 = buf8 >>> 2;
-                                      num62 = buf8 - 2;
+                                      num63 = tmp389 >>> 2;
+                                      num62 = diff46 - 2;
                                       num61 = num56;
                                       tmp37 = avail_out;
-                                      tmp39 = buf8;
-                                      tmp38 = buf8;
+                                      tmp39 = tmp381;
+                                      tmp38 = tmp382;
                                     }
-                                  } else if (2 === buf8) {
+                                  } else if (2 === tmp390) {
                                     state.mode = 17;
-                                  } else if (3 === buf8) {
+                                  } else if (3 === tmp390) {
                                     state.msg = "invalid block type";
                                     state.mode = 30;
                                   }
-                                  hold = buf8 >>> 2;
-                                  bits = buf8 - 2;
-                                  diff8 = buf8;
-                                  next_in = buf8;
+                                  hold = tmp389 >>> 2;
+                                  bits = diff46 - 2;
+                                  diff45 = tmp381;
+                                  next_in = tmp382;
                                   continue;
                                 } else {
                                   num61 = num56;
                                   tmp37 = avail_out;
-                                  num62 = buf8;
-                                  num63 = buf8;
-                                  tmp38 = buf8;
-                                  tmp39 = buf8;
-                                  while (0 !== buf8) {
-                                    buf8 = buf8 - 1;
-                                    buf8 = +buf8;
-                                    buf8 = buf8 + 1;
-                                    buf8 = buf8 + (input[buf8] << buf8);
-                                    buf8 = buf8 + 8;
+                                  num62 = sum73;
+                                  num63 = sum72;
+                                  tmp38 = sum71;
+                                  tmp39 = diff47;
+                                  while (0 !== diff47) {
+                                    diff47 = diff47 - 1;
+                                    let tmp672 = +sum71;
+                                    sum71 = tmp672 + 1;
+                                    sum72 = sum72 + (input[tmp672] << sum73);
+                                    sum73 = sum73 + 8;
+                                    tmp380 = sum72;
+                                    tmp381 = diff47;
+                                    tmp382 = sum71;
+                                    tmp383 = sum73;
                                     break;
                                   }
                                 }
                               }
+                            }
+                            num61 = num56;
+                            tmp37 = avail_out;
+                            num62 = tmp601;
+                            num63 = tmp602;
+                            tmp39 = tmp603;
+                            tmp38 = tmp604;
+                            if (5 !== arg1) {
+                              tmp605 = tmp601;
+                              tmp606 = tmp602;
+                              tmp607 = tmp603;
+                              tmp608 = tmp604;
                               num61 = num56;
                               tmp37 = avail_out;
-                              num62 = buf8;
-                              num63 = buf8;
-                              tmp39 = buf8;
-                              tmp38 = buf8;
-                              if (5 !== arg1) {
-                                num61 = num56;
-                                tmp37 = avail_out;
-                                num62 = buf8;
-                                num63 = buf8;
-                                tmp39 = buf8;
-                                tmp38 = buf8;
-                              }
+                              num62 = tmp601;
+                              num63 = tmp602;
+                              tmp39 = tmp603;
+                              tmp38 = tmp604;
                             }
-                            if (0 === state.havedict) {
-                              state.next_out = next_out;
-                              state.avail_out = diff2;
-                              state.next_in = buf8;
-                              state.avail_in = buf8;
-                              state.hold = num76;
-                              state.bits = num75;
-                              return 2;
-                            } else {
-                              state.check = 1;
-                              state.adler = 1;
-                              state.mode = 12;
-                              buf8 = num75;
-                              buf8 = num76;
-                            }
+                          }
+                          if (0 === state.havedict) {
+                            state.next_out = next_out;
+                            state.avail_out = diff11;
+                            state.next_in = tmp375;
+                            state.avail_in = tmp374;
+                            state.hold = num76;
+                            state.bits = num75;
+                            return 2;
+                          } else {
+                            state.check = 1;
+                            state.adler = 1;
+                            state.mode = 12;
+                            tmp601 = num75;
+                            tmp602 = num76;
+                            tmp603 = tmp374;
+                            tmp604 = tmp375;
                           }
                         }
                       }
                     }
                     if (2048 & state.flags) {
-                      num = 0;
+                      let num105 = 0;
                       num61 = num56;
                       tmp37 = avail_out;
-                      num62 = buf8;
-                      num63 = buf8;
-                      tmp38 = buf8;
-                      tmp39 = buf8;
-                      if (0 !== buf8) {
+                      num62 = tmp517;
+                      num63 = tmp518;
+                      tmp38 = tmp516;
+                      tmp39 = tmp515;
+                      if (0 !== tmp515) {
                         while (true) {
-                          buf8 = input[buf8 + num];
+                          let tmp521 = input[tmp516 + num105];
                           let head = state.head;
-                          buf8 = num;
                           if (head) {
-                            head = buf8;
+                            head = tmp521;
                           }
                           if (head) {
                             head = state.length < 65536;
@@ -2024,247 +2215,234 @@ arg5.inflate = function inflate(state) {
                           if (head) {
                             let head2 = state.head;
                             let _String = String;
-                            head2.name = head2.name + String.fromCharCode(buf8);
+                            head2.name = head2.name + String.fromCharCode(tmp521);
                           }
-                          buf8 = num + 1;
-                          if (!buf8) {
+                          let sum74 = num105 + 1;
+                          if (!tmp521) {
                             break;
                           } else {
-                            num = buf8;
-                            if (buf8 >= buf8) {
+                            num105 = sum74;
+                            if (sum74 >= tmp515) {
                               break;
                             }
                           }
                         }
                         if (512 & state.flags) {
-                          buf8 = require;
-                          buf8 = dependencyMap;
                           let check8 = state.check;
-                          buf8 = check8;
-                          buf8 = input;
-                          state.check = _mod13658(check8, tmp16, buf8, buf8);
+                          state.check = _mod13658(check8, tmp16, sum74, tmp516);
                         }
-                        buf8 = buf8 - buf8;
-                        buf8 = buf8 + buf8;
+                        let diff48 = tmp515 - sum74;
+                        let sum75 = tmp516 + sum74;
                         num61 = num56;
                         tmp37 = avail_out;
-                        num62 = buf8;
-                        num63 = buf8;
-                        tmp39 = buf8;
-                        tmp38 = buf8;
+                        num62 = tmp517;
+                        num63 = tmp518;
+                        tmp39 = diff48;
+                        tmp38 = sum75;
                       }
-                    } else if (state.head) {
-                      state.head.name = null;
+                    } else {
+                      diff48 = tmp515;
+                      sum75 = tmp516;
+                      if (state.head) {
+                        state.head.name = null;
+                        diff48 = tmp515;
+                        sum75 = tmp516;
+                      }
                     }
                     state.length = 0;
                     state.mode = 8;
                   }
                 }
                 if (1024 & state.flags) {
-                  buf8 = num99;
-                  buf8 = num;
+                  let sum78 = num99;
+                  let sum77 = num100;
+                  let diff49 = tmp471;
+                  let sum76 = tmp472;
                   if (num99 < 16) {
-                    num99 = buf8;
+                    num99 = sum78;
                     num61 = num56;
                     tmp37 = avail_out;
-                    num62 = buf8;
-                    num63 = buf8;
-                    tmp38 = buf8;
-                    tmp39 = buf8;
-                    while (0 !== buf8) {
-                      buf8 = buf8 - 1;
-                      buf8 = +buf8;
-                      buf8 = buf8 + 1;
-                      buf8 = buf8 + (input[buf8] << num99);
-                      buf8 = num99 + 8;
-                      num = buf8;
+                    num62 = sum78;
+                    num63 = sum77;
+                    tmp38 = sum76;
+                    tmp39 = diff49;
+                    while (0 !== diff49) {
+                      diff49 = diff49 - 1;
+                      let tmp676 = +sum76;
+                      sum76 = tmp676 + 1;
+                      sum77 = sum77 + (input[tmp676] << num99);
+                      sum78 = num99 + 8;
+                      num100 = sum77;
+                      tmp471 = diff49;
+                      tmp472 = sum76;
                       continue;
                     }
                   }
-                  state.length = num;
+                  state.length = num100;
                   if (state.head) {
-                    state.head.extra_len = num;
+                    state.head.extra_len = num100;
                   }
-                  num = 0;
-                  num = 0;
                   if (512 & state.flags) {
-                    buf8[0] = 255 & num;
-                    buf8[1] = (num >>> 8) & 255;
-                    buf8 = require;
-                    buf8 = dependencyMap;
+                    buf8[0] = 255 & num100;
+                    buf8[1] = (num100 >>> 8) & 255;
                     let check6 = state.check;
-                    buf8 = check6;
-                    num = 2;
-                    num = 0;
-                    num = _mod13658(check6, tmp2, 2, 0);
-                    state.check = num;
-                    num = 0;
-                    num = 0;
+                    num100 = _mod13658(check6, tmp2, 2, 0);
+                    state.check = num100;
                   }
-                } else {
-                  num = num99;
-                  if (state.head) {
-                    state.head.extra = null;
-                    num = num99;
-                  }
+                } else if (state.head) {
+                  state.head.extra = null;
                 }
                 state.mode = 6;
-                buf8 = num;
-                buf8 = num;
               }
-              buf8 = num96;
-              buf8 = num96;
+              let sum80 = num96;
+              let diff50 = tmp455;
+              let sum79 = tmp456;
+              let tmp460 = num96;
+              let tmp461 = tmp455;
+              let tmp462 = tmp456;
               if (num95 >= 16) {
                 if (state.head) {
-                  state.head.xflags = 255 & buf8;
-                  state.head.os = buf8 >> 8;
+                  state.head.xflags = 255 & tmp460;
+                  state.head.os = tmp460 >> 8;
                 }
                 if (512 & state.flags) {
-                  buf8[0] = 255 & buf8;
-                  buf8[1] = (buf8 >>> 8) & 255;
-                  buf8 = require;
-                  buf8 = dependencyMap;
+                  buf8[0] = 255 & tmp460;
+                  buf8[1] = (tmp460 >>> 8) & 255;
                   let check5 = state.check;
-                  buf8 = check5;
-                  let num97 = 2;
-                  let num98 = 0;
                   state.check = _mod13658(check5, tmp2, 2, 0);
                 }
                 state.mode = 5;
                 num99 = 0;
-                num = 0;
+                num100 = 0;
+                tmp471 = tmp461;
+                tmp472 = tmp462;
               } else {
-                buf8 = num95;
                 num61 = num56;
                 tmp37 = avail_out;
                 num62 = num95;
-                num63 = buf8;
-                tmp38 = buf8;
-                tmp39 = buf8;
-                while (0 !== buf8) {
-                  buf8 = buf8 - 1;
-                  buf8 = +buf8;
-                  buf8 = buf8 + 1;
-                  buf8 = buf8 + (input[buf8] << num95);
+                num63 = sum80;
+                tmp38 = sum79;
+                tmp39 = diff50;
+                while (0 !== diff50) {
+                  diff50 = diff50 - 1;
+                  let tmp675 = +sum79;
+                  sum79 = tmp675 + 1;
+                  sum80 = sum80 + (input[tmp675] << num95);
                   num95 = num95 + 8;
+                  tmp460 = sum80;
+                  tmp461 = diff50;
+                  tmp462 = sum79;
                   break;
                 }
               }
             }
-            buf8 = num92;
-            buf8 = num92;
+            let sum82 = num92;
+            let diff51 = tmp439;
+            let sum81 = tmp440;
+            let tmp444 = num92;
+            let tmp445 = tmp439;
+            let tmp446 = tmp440;
             if (num91 >= 32) {
               if (state.head) {
-                state.head.time = buf8;
+                state.head.time = tmp444;
               }
               if (512 & state.flags) {
-                buf8[0] = 255 & buf8;
-                buf8[1] = (buf8 >>> 8) & 255;
-                buf8[2] = (buf8 >>> 16) & 255;
-                buf8[3] = (buf8 >>> 24) & 255;
-                buf8 = require;
-                buf8 = dependencyMap;
+                buf8[0] = 255 & tmp444;
+                buf8[1] = (tmp444 >>> 8) & 255;
+                buf8[2] = (tmp444 >>> 16) & 255;
+                buf8[3] = (tmp444 >>> 24) & 255;
                 let check4 = state.check;
-                buf8 = check4;
-                let num93 = 4;
-                let num94 = 0;
                 state.check = _mod13658(check4, tmp2, 4, 0);
               }
               state.mode = 4;
               num95 = 0;
               num96 = 0;
+              tmp455 = tmp445;
+              tmp456 = tmp446;
             } else {
-              buf8 = num91;
               num61 = num56;
               tmp37 = avail_out;
               num62 = num91;
-              num63 = buf8;
-              tmp38 = buf8;
-              tmp39 = buf8;
-              while (0 !== buf8) {
-                buf8 = buf8 - 1;
-                buf8 = +buf8;
-                buf8 = buf8 + 1;
-                buf8 = buf8 + (input[buf8] << num91);
+              num63 = sum82;
+              tmp38 = sum81;
+              tmp39 = diff51;
+              while (0 !== diff51) {
+                diff51 = diff51 - 1;
+                let tmp674 = +sum81;
+                sum81 = tmp674 + 1;
+                sum82 = sum82 + (input[tmp674] << num91);
                 num91 = num91 + 8;
+                tmp444 = sum82;
+                tmp445 = diff51;
+                tmp446 = sum81;
                 break;
               }
             }
           }
           state.next_out = next_out;
-          state.avail_out = diff2;
+          state.avail_out = diff11;
           state.next_in = tmp38;
           state.avail_in = tmp39;
           state.hold = num63;
           state.bits = num62;
           if (state.wsize) {
-            buf8 = updatewindow;
             let output3 = state.output;
-            buf8 = output3;
-            num = 0;
-            num = 0;
-            buf8 = state;
-            buf8 = updatewindow(state, output3, state.next_out, tmp37 - state.avail_out);
+            let tmp574 = updatewindow(state, output3, state.next_out, tmp37 - state.avail_out);
           }
-          buf8 = avail_in - state.avail_in;
-          buf8 = tmp37 - state.avail_out;
-          state.total_in = state.total_in + buf8;
-          state.total_out = state.total_out + buf8;
-          state.total = state.total + buf8;
-          buf8 = state.wrap && buf8;
-          if (!buf8) {
-            num = 0;
+          let diff52 = avail_in - state.avail_in;
+          let diff53 = tmp37 - state.avail_out;
+          state.total_in = state.total_in + diff52;
+          state.total_out = state.total_out + diff53;
+          state.total = state.total + diff53;
+          let tmp577 = state.wrap && diff53;
+          if (!tmp577) {
+            let num114 = 0;
             if (state.last) {
-              num = 64;
+              num114 = 64;
             }
-            num = 0;
-            buf8 = state.bits + num;
+            let num115 = 0;
+            let sum83 = state.bits + num114;
             if (state.mode === 12) {
-              num = 128;
+              num115 = 128;
             }
             if (20 === state.mode) {
-              num = 256;
+              let num116 = 256;
             } else {
-              num = 0;
+              num116 = 0;
             }
-            state.data_type = buf8 + num + num;
-            buf8 = ((0 === buf8 && 0 === buf8) || 4 === arg1) && 0 === num61;
-            if (buf8) {
+            state.data_type = sum83 + num115 + num116;
+            let tmp588 = ((0 === diff52 && 0 === diff53) || 4 === arg1) && 0 === num61;
+            if (tmp588) {
               num61 = -5;
             }
             return num61;
           } else {
-            buf8 = require;
+            let tmp578 = require;
             let next_out3 = dependencyMap;
             if (state.flags) {
               let check12 = state.check;
-              buf8 = check12;
-              buf8 = buf8(13658);
+              let tmp578Result = tmp578(13658);
               next_out3 = state.next_out;
-              buf8 = output;
-              buf8 = buf8(check12, tmp15, buf8, next_out3 - buf8);
+              let tmp578ResultResult = tmp578Result(check12, tmp15, diff53, next_out3 - diff53);
             } else {
               let check11 = state.check;
-              buf8 = check11;
-              buf8 = output;
-              buf8 = buf8(13657)(check11, tmp15, buf8, state.next_out - buf8);
+              tmp578ResultResult = tmp578(13657)(check11, tmp15, diff53, state.next_out - diff53);
             }
-            state.check = buf8;
-            state.adler = buf8;
+            state.check = tmp578ResultResult;
+            state.adler = tmp578ResultResult;
           }
         }
-        num = 29;
         tmp69 = avail_out;
         tmp65 = bits;
         tmp66 = hold;
-        tmp67 = diff8;
+        tmp67 = diff45;
         tmp68 = next_in;
         if (29 !== mode) {
           num61 = -3;
           tmp37 = avail_out;
           num62 = bits;
           num63 = hold;
-          tmp39 = diff8;
+          tmp39 = diff45;
           tmp38 = next_in;
           if (30 !== mode) {
             if (31 === mode) {
@@ -2279,7 +2457,7 @@ arg5.inflate = function inflate(state) {
   }
   return -2;
 };
-arg5.inflateEnd = function inflateEnd(state) {
+export const inflateEnd = function inflateEnd(state) {
   if (state) {
     if (state.state) {
       state = state.state;
@@ -2292,7 +2470,7 @@ arg5.inflateEnd = function inflateEnd(state) {
   }
   return -2;
 };
-arg5.inflateGetHeader = function inflateGetHeader(strm, header) {
+export const inflateGetHeader = function inflateGetHeader(strm, header) {
   let num = -2;
   if (strm) {
     num = -2;
@@ -2308,7 +2486,7 @@ arg5.inflateGetHeader = function inflateGetHeader(strm, header) {
   }
   return num;
 };
-arg5.inflateSetDictionary = function inflateSetDictionary(state, output3) {
+export const inflateSetDictionary = function inflateSetDictionary(state, output3) {
   let num = -2;
   let num2 = -2;
   if (state) {
@@ -2330,4 +2508,4 @@ arg5.inflateSetDictionary = function inflateSetDictionary(state, output3) {
   }
   return num2;
 };
-arg5.inflateInfo = "pako inflate (from Nodeca project)";
+export const inflateInfo = "pako inflate (from Nodeca project)";

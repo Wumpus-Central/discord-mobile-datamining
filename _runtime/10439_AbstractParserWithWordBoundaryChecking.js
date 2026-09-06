@@ -1,22 +1,24 @@
 // _runtime/10439_AbstractParserWithWordBoundaryChecking.js
-import AbstractParserWithWordBoundaryChecking from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 class AbstractParserWithWordBoundaryChecking {
   constructor() {
-    tmp = AbstractParserWithWordBoundaryChecking(this, AbstractParserWithWordBoundaryChecking);
+    tmp = closure_0(this, AbstractParserWithWordBoundaryChecking);
     this.cachedInnerPattern = null;
     this.cachedPattern = null;
     return;
   }
 }
-const items = [
-  {
-    key: "innerPatternHasChange",
-    value: function innerPatternHasChange(arg0, arg1) {
-      return this.innerPattern(arg0) !== arg1;
-    },
+_classCallCheck = AbstractParserWithWordBoundaryChecking;
+const entry = {
+  key: "innerPatternHasChange",
+  value: function innerPatternHasChange(arg0, arg1) {
+    return this.innerPattern(arg0) !== arg1;
   },
+};
+const items = [
+  entry,
   {
     key: "patternLeftBoundary",
     value: function patternLeftBoundary() {

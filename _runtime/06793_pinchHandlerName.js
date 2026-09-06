@@ -1,7 +1,9 @@
 // _runtime/06793_pinchHandlerName.js
-import _isNativeReflectConstructDefault from "06682__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct from "metro/06682__.js";
 
-const obj = { name: "PinchGestureHandler", allowedProps: require("items1").baseGestureHandlerProps, config: {} };
+const obj = { name: "PinchGestureHandler", allowedProps: null, config: null };
+obj.allowedProps = fn(6680).baseGestureHandlerProps;
+obj.config = {};
 
 export const pinchHandlerName = "PinchGestureHandler";
-export const PinchGestureHandler = _isNativeReflectConstructDefault(obj);
+export const PinchGestureHandler = _isNativeReflectConstruct(obj);

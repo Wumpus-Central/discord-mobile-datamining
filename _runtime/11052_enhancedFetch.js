@@ -1,106 +1,92 @@
 // _runtime/11052_enhancedFetch.js
 import asyncGeneratorStepDefault from "00005_asyncGeneratorStep.js";
 
-let closure_0 = asyncGeneratorStepDefault((arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  c4 = 0;
-  c5 = 0;
-  return (function* (arg0, arg1) {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+let closure_0 = asyncGeneratorStepDefault(function* (arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_3 = tmp4;
-            let request = closure_1;
-            closure_0 = undefined;
-            let stringify = globalThis;
-            let method;
-            if (closure_1 != null) {
-              method = request.method;
-            }
-            let GET = method;
-            if (method == null) {
-              GET = "GET";
-            }
-            obj1 = { method: null, headers: null };
-            obj1[0] = GET;
-            obj1[1] = { Accept: "application/json", "Content-Type": "application/json" };
-            let body;
-            if (request != null) {
-              body = request.body;
-            }
-            if (body) {
-              const obj2 = { body: null };
-              const _JSON = stringify.JSON;
-              stringify = _JSON.stringify;
-              request = stringify(request.body);
-              obj2[0] = request;
-              let obj3 = obj2;
-            } else {
-              obj3 = {};
-            }
-            const merged = Object.assign(obj3);
-            obj1 = fetch(closure_0, obj1);
-            c4 = 1;
-            c5 = 1;
-            const tmp28 = closure_0;
-          }
-        } else if (arg0 === 1) {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
+          obj = { value, done: true };
+          return obj;
         } else {
-          closure_0 = arg1;
-          if (closure_0.ok) {
-            c5 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = closure_0.json();
-            return obj5;
-          } else {
-            const _Object = Object;
-            const _Error = Error;
-            error = new Error(closure_0.statusText);
-            obj = { statusCode: null };
-            obj[0] = closure_0.status;
-            throw Object.assign(error, obj);
+          closure_3 = tmp4;
+          let request = closure_1;
+          closure_131_0 = undefined;
+          let stringify = globalThis;
+          let method;
+          if (closure_1 != null) {
+            method = request.method;
           }
+          let GET = method;
+          if (method == null) {
+            GET = "GET";
+          }
+          let obj1 = { method: GET, headers: { Accept: "application/json", "Content-Type": "application/json" } };
+          let body;
+          if (request != null) {
+            body = request.body;
+          }
+          if (body) {
+            const obj2 = { body: null };
+            const _JSON = stringify.JSON;
+            stringify = _JSON.stringify;
+            request = stringify(request.body);
+            obj2.body = request;
+            let obj3 = obj2;
+          } else {
+            obj3 = {};
+          }
+          const merged = Object.assign(obj3);
+          obj1 = fetch(closure_0, obj1);
+          c4 = 1;
+          c5 = 1;
         }
-      } catch (tmp19) {
-        c5 = tmp;
-        throw tmp19;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        closure_131_0 = value;
+        if (closure_131_0.ok) {
+          c5 = 3;
+          const obj5 = { value: closure_131_0.json(), done: true };
+          return obj5;
+        } else {
+          const _Object = Object;
+          const _Error = Error;
+          const error = new Error(closure_131_0.statusText);
+          obj = { statusCode: closure_131_0.status };
+          throw Object.assign(error, obj);
+        }
       }
+    } catch (tmp19) {
+      c5 = tmp;
+      throw tmp19;
     }
-  })();
+  }
 });
 
-export const enhancedFetch = function enhancedFetch(c4) {
+export const enhancedFetch = function enhancedFetch(arg0, arg1) {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

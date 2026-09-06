@@ -1,4 +1,4 @@
 // _runtime/04316_c.js
-import c from "04317_c.js";
+import _mod4317 from "metro/04317__.js";
 
-export default c;
+export default _mod4317;

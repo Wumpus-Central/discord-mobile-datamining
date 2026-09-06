@@ -1,12 +1,11 @@
 // _runtime/04646_baseKeysIn.js
-import isObject from "00521_isObject.js";
+import _mod521 from "metro/00521__.js";
 
 export default function baseKeysIn(obj) {
-  if (isObject(obj)) {
+  if (_mod521(obj)) {
     const tmp3 = tmp(545)(obj);
     const items = [];
     for (const key10017 in arg0) {
-      let tmp10 = key10017;
       let tmp8 = "constructor" != key10017;
       if (!tmp8) {
         if (tmp3) {
@@ -19,7 +18,6 @@ export default function baseKeysIn(obj) {
           } else {
             callResult = call(arg0, key10017);
           }
-          let tmp7 = callResult;
         }
       }
       if (!tmp8) {

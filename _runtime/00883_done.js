@@ -1,7 +1,7 @@
 // _runtime/00883_done.js
-import noop from "00884_noop.js";
+import _mod884 from "metro/00884__.js";
 
-noop.prototype.done = function (arg0, arg1) {
+_mod884.prototype.done = function (arg0, arg1) {
   const self = this;
   let self2 = this;
   if (arguments.length) {
@@ -16,4 +16,4 @@ noop.prototype.done = function (arg0, arg1) {
   });
 };
 
-export default noop;
+export default _mod884;

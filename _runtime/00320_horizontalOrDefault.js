@@ -1,7 +1,5 @@
 // _runtime/00320_horizontalOrDefault.js
-import noopAll from "00019_noop.js";
-
-noopAll;
+import noop from "metro/00019__.js";
 
 export const horizontalOrDefault = function horizontalOrDefault(horizontal) {
   let flag = horizontal;

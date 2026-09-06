@@ -1,5 +1,5 @@
 // _runtime/00603_baseIsNative.js
-import isObject from "00521_isObject.js";
+import _mod521 from "metro/00521__.js";
 
 const re2 = /^\[object .+?Constructor\]$/;
 const call = toString.call;
@@ -16,7 +16,7 @@ let closure_3 = RegExp(
 
 export default function baseIsNative(arg0) {
   let tmp2 = dependencyMap;
-  const tmp3 = isObject(arg0);
+  const tmp3 = _mod521(arg0);
   let tmp4 = !tmp3;
   if (tmp3) {
     tmp4 = tmp(604)(arg0);
@@ -25,7 +25,7 @@ export default function baseIsNative(arg0) {
     return !tmp4;
   } else {
     tmp2 = tmp(606)(arg0);
-    const isMatch = tmp(520)(arg0) ? closure_3 : closure_2.test(tmp2);
-    const obj = tmp(520)(arg0) ? closure_3 : closure_2;
+    const isMatch = tmp(520)(arg0) ? closure_3 : re2.test(tmp2);
+    const obj = tmp(520)(arg0) ? closure_3 : re2;
   }
 }

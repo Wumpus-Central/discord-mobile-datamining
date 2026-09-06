@@ -1,24 +1,27 @@
 // _runtime/metro/05258__.js
-import getDataView from "../05213_getDataView.js";
-import readTag from "../05233_readTag.js";
-import importDefaultResult1 from "../05234_importDefaultResult1.js";
+import _mod5213 from "05213__.js";
+import _modDef5218 from "05218__.js";
+import _modDef5230 from "05230__.js";
+import get0thIfdOffset from "../05233_get0thIfdOffset.js";
+import IFD_TYPE_0TH from "../05234_IFD_TYPE_0TH.js";
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 let c3 = 16;
-arg5.default = {
-  read(buffer, sum) {
+
+export default {
+  read(buffer, c5, arg2) {
     let iter;
-    let obj = module(5218);
-    const byteOrder = obj.getByteOrder(buffer, sum);
-    obj1 = readTag;
-    let obj2 = readTag;
+    let obj = _modDef5218;
+    const byteOrder = obj.getByteOrder(buffer, c5);
+    let obj1 = get0thIfdOffset;
+    let obj2 = get0thIfdOffset;
     const ifd = obj1.readIfd(
       buffer,
-      importDefaultResult1.IFD_TYPE_MPF,
-      sum,
-      obj2.get0thIfdOffset(buffer, sum, byteOrder),
+      IFD_TYPE_0TH.IFD_TYPE_MPF,
+      c5,
+      obj2.get0thIfdOffset(buffer, c5, byteOrder),
       byteOrder,
       arg2,
     );
@@ -29,15 +32,11 @@ arg5.default = {
       if (0 < Math.ceil(ifd.MPEntry.value.length / c3)) {
         while (true) {
           items[num13] = {};
-          let value = ifd.MPEntry.value;
-          let tmp5 = c3;
+          value = ifd.MPEntry.value;
           let result = num13 * c3;
-          let tmp7 = module;
-          let tmp8 = dependencyMap;
-          let obj3 = module(5230);
+          let obj3 = _modDef5230;
           let typeSize = obj3.getTypeSize("LONG");
-          let tmp10 = num13;
-          if (byteOrder === module(5218).LITTLE_ENDIAN) {
+          if (byteOrder === _modDef5218.LITTLE_ENDIAN) {
             let num17 = 0;
             let num18 = 0;
             let num19 = 0;
@@ -72,23 +71,20 @@ arg5.default = {
           if (items1[2]) {
             let arr1 = items2.push("Representative Image");
           }
-          obj = { value: null, description: null };
-          obj[0] = items1;
+          obj = { value: items1, description: null };
           let tmp14 = items2.join(", ") || "None";
-          obj[1] = tmp14;
+          obj.description = tmp14;
           items[num13].ImageFlags = obj;
           let tmp15 = (num16 >> 24) & 7;
-          obj = { value: null, description: null };
-          obj[0] = tmp15;
+          obj = { value: tmp15, description: null };
           let str11 = "Unknown";
           if (0 === tmp15) {
             str11 = "JPEG";
           }
-          obj[1] = str11;
+          obj.description = str11;
           items[num13].ImageFormat = obj;
           let tmp16 = 16777215 & num16;
-          obj1 = { value: null, description: null };
-          obj1[0] = tmp16;
+          obj1 = { value: tmp16, description: null };
           let str12 = {
             196608: "Baseline MP Primary Image",
             65537: "Large Thumbnail (VGA equivalent)",
@@ -101,16 +97,13 @@ arg5.default = {
           if (!str12) {
             str12 = "Unknown";
           }
-          obj1[1] = str12;
+          obj1.description = str12;
           items[num13].ImageType = obj1;
           value = ifd.MPEntry.value;
-          let tmp17 = c3;
-          sum = num13 * c3 + 4;
-          let tmp19 = module;
-          let tmp20 = dependencyMap;
-          let obj8 = module(5230);
+          let sum = num13 * c3 + 4;
+          let obj8 = _modDef5230;
           let typeSize1 = obj8.getTypeSize("LONG");
-          if (byteOrder === module(5218).LITTLE_ENDIAN) {
+          if (byteOrder === _modDef5218.LITTLE_ENDIAN) {
             let num23 = 0;
             let num24 = 0;
             let num25 = 0;
@@ -134,27 +127,19 @@ arg5.default = {
               } while (num20 < typeSize1);
             }
           }
-          obj2 = { value: null, description: null };
-          obj2[0] = num22;
-          obj2[1] = "" + num22;
+          obj2 = { value: num22, description: "" + num22 };
           items[num13].ImageSize = obj2;
-          let num26 = 0;
           iter = ifd.MPEntry;
           if (0 !== num13) {
             break;
           } else {
-            obj3 = { value: null, description: null };
-            obj3[0] = 0;
-            obj3[1] = "";
+            obj3 = { value: 0, description: "" };
             items[num13].ImageOffset = obj3;
             value = ifd.MPEntry.value;
-            let tmp23 = c3;
             let sum1 = num13 * c3 + 12;
-            let tmp25 = module;
-            let tmp26 = dependencyMap;
-            let obj11 = module(5230);
+            let obj11 = _modDef5230;
             let typeSize2 = obj11.getTypeSize("SHORT");
-            if (byteOrder === module(5218).LITTLE_ENDIAN) {
+            if (byteOrder === _modDef5218.LITTLE_ENDIAN) {
               let num36 = 0;
               let num37 = 0;
               let num38 = 0;
@@ -178,18 +163,13 @@ arg5.default = {
                 } while (num33 < typeSize2);
               }
             }
-            let obj4 = { value: null, description: null };
-            obj4[0] = num35;
-            obj4[1] = "" + num35;
+            let obj4 = { value: num35, description: "" + num35 };
             items[num13].DependentImage1EntryNumber = obj4;
             let value1 = ifd.MPEntry.value;
-            let tmp28 = c3;
             let sum2 = num13 * c3 + 14;
-            let tmp30 = module;
-            let tmp31 = dependencyMap;
-            let obj13 = module(5230);
+            let obj13 = _modDef5230;
             let typeSize3 = obj13.getTypeSize("SHORT");
-            if (byteOrder === module(5218).LITTLE_ENDIAN) {
+            if (byteOrder === _modDef5218.LITTLE_ENDIAN) {
               let num42 = 0;
               let num43 = 0;
               let num44 = 0;
@@ -213,27 +193,22 @@ arg5.default = {
                 } while (num39 < typeSize3);
               }
             }
-            let obj5 = { value: null, description: null };
-            obj5[0] = num41;
-            obj5[1] = "" + num41;
+            let obj5 = { value: num41, description: "" + num41 };
             items[num13].DependentImage2EntryNumber = obj5;
             buffer = buffer.buffer;
             items[num13].image = buffer.slice(0, num22);
-            let tmp33 = require;
-            let tmp34 = dependencyMap;
-            let obj15 = getDataView;
+            let obj15 = _mod5213;
             let deferInitResult = obj15.deferInit(items[num13], "base64", function () {
-              return callback(table[4]).getBase64Image(this.image);
+              return _mod5213.getBase64Image(this.image);
             });
             num13 = num13 + 1;
             let _Math2 = Math;
-            let tmp36 = c3;
           }
         }
-        const value2 = iter.value;
+        value2 = iter.value;
         const sum3 = num13 * c3 + 8;
-        const typeSize4 = module(5230).getTypeSize("LONG");
-        if (byteOrder === module(5218).LITTLE_ENDIAN) {
+        const typeSize4 = _modDef5230.getTypeSize("LONG");
+        if (byteOrder === _modDef5218.LITTLE_ENDIAN) {
           let num30 = 0;
           let num31 = 0;
           let num32 = 0;
@@ -257,8 +232,7 @@ arg5.default = {
             } while (num27 < typeSize4);
           }
         }
-        const sum4 = num29 + sum;
-        const obj16 = module(5230);
+        const sum4 = num29 + c5;
       }
       ifd.Images = items;
     }

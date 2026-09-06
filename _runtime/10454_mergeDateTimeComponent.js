@@ -1,5 +1,5 @@
 // _runtime/10454_mergeDateTimeComponent.js
-import _mod10437 from "metro/10437__.js";
+import Meridiem from "10437_Meridiem.js";
 import assignSimilarDate from "10438_assignSimilarDate.js";
 
 require = arg1;
@@ -37,8 +37,8 @@ function mergeDateTimeComponent(start, start2) {
     }
     tmp14 = null != start2.get("meridiem") && null == cloneResult.get("meridiem");
   }
-  const value = cloneResult.get("meridiem");
-  let tmp18 = value == _mod10437.Meridiem.PM;
+  value = cloneResult.get("meridiem");
+  let tmp18 = value == Meridiem.Meridiem.PM;
   if (tmp18) {
     tmp18 = cloneResult.get("hour") < 12;
   }
@@ -53,7 +53,8 @@ function mergeDateTimeComponent(start, start2) {
   cloneResult.addTags(start2.tags());
   return cloneResult;
 }
-arg5.mergeDateTimeResult = function mergeDateTimeResult(clone, start) {
+
+export const mergeDateTimeResult = function mergeDateTimeResult(clone, start) {
   const cloneResult = clone.clone();
   cloneResult.start = mergeDateTimeComponent(clone.start, start.start);
   if (null == clone.end) {
@@ -85,4 +86,4 @@ arg5.mergeDateTimeResult = function mergeDateTimeResult(clone, start) {
   }
   cloneResult.end = tmp2Result;
 };
-arg5.mergeDateTimeComponent = mergeDateTimeComponent;
+export { mergeDateTimeComponent };

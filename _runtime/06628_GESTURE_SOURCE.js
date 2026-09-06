@@ -1,6 +1,6 @@
 // _runtime/06628_GESTURE_SOURCE.js
 import cancelAnimation from "01636_cancelAnimation.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import get_ActivityIndicator from "metro/00017__.js";
 
 ({ Dimensions, Platform } = get_ActivityIndicator);
 let value = Dimensions.get("window");

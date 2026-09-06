@@ -1,8 +1,7 @@
 // _runtime/00263_IntersectionObserver.js
 import _createClassDefault from "metro/00042__createClass.js";
-import getTargetFromInstanceHandleAll from "00264_getTargetFromInstanceHandle.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import setPlatformObject from "00126_setPlatformObject.js";
+import _modAll264 from "metro/00264__.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const IntersectionObserver = importDefault;
 class IntersectionObserver {
@@ -28,19 +27,19 @@ class IntersectionObserver {
       tmp56 = typeError1;
       throw typeError1;
     } else {
-      tmp61 = arg1;
+      tmp61 = fn;
       root = undefined;
-      if (arg1 != null) {
-        root = arg1.root;
+      if (fn != null) {
+        root = fn.root;
       }
       if (null != root) {
         root1 = undefined;
-        if (arg1 != null) {
-          root1 = arg1.root;
+        if (fn != null) {
+          root1 = fn.root;
         }
-        tmp5 = IntersectionObserver;
-        tmp6 = closure_2;
-        if (!(root1 instanceof require("_isNativeReflectConstruct"))) {
+        tmp5 = closure_0;
+        tmp6 = c2;
+        if (!(root1 instanceof closure_0(c2[2]))) {
           _TypeError = TypeError;
           tmp7 = new.target;
           str =
@@ -53,9 +52,9 @@ class IntersectionObserver {
           throw typeError2;
         }
       }
-      if (null != arg1) {
+      if (null != fn) {
         str2 = "delay";
-        if ("delay" in arg1) {
+        if ("delay" in fn) {
           _Error3 = Error;
           tmp49 = new.target;
           str15 = "Failed to construct 'IntersectionObserver': The 'delay' option is not supported.";
@@ -65,9 +64,9 @@ class IntersectionObserver {
           throw error;
         }
       }
-      if (null != arg1) {
+      if (null != fn) {
         str3 = "scrollMargin";
-        if ("scrollMargin" in arg1) {
+        if ("scrollMargin" in fn) {
           _Error2 = Error;
           tmp45 = new.target;
           str14 = "Failed to construct 'IntersectionObserver': The 'scrollMargin' option is not supported.";
@@ -77,9 +76,9 @@ class IntersectionObserver {
           throw error1;
         }
       }
-      if (null != arg1) {
+      if (null != fn) {
         str4 = "trackVisibility";
-        if ("trackVisibility" in arg1) {
+        if ("trackVisibility" in fn) {
           _Error = Error;
           tmp41 = new.target;
           str13 = "Failed to construct 'IntersectionObserver': The 'trackVisibility' option is not supported.";
@@ -93,17 +92,17 @@ class IntersectionObserver {
       }
       self._callback = global;
       rnRootThreshold = undefined;
-      if (arg1 != null) {
-        rnRootThreshold = arg1.rnRootThreshold;
+      if (fn != null) {
+        rnRootThreshold = fn.rnRootThreshold;
       }
       _Array = Array;
       tmp12 = rnRootThreshold;
       if (Array.isArray(rnRootThreshold)) {
-        mapped = rnRootThreshold.map((arg0) => {
+        mapped = rnRootThreshold.map((item) => {
           let tmp = null;
-          if (null != arg0) {
+          if (null != item) {
             const _Number = Number;
-            const NumberResult = Number(arg0);
+            const NumberResult = Number(item);
             const _Number2 = Number;
             if (Number.isFinite(NumberResult)) {
               if (NumberResult >= 0) {
@@ -127,7 +126,7 @@ class IntersectionObserver {
           }
           return tmp;
         });
-        found = mapped.filter((arg0) => null != arg0);
+        found = mapped.filter((item) => null != item);
         sorted = found.sort();
         num3 = 0;
         tmp24 = null;
@@ -182,8 +181,8 @@ class IntersectionObserver {
       }
       self._rootThresholds = tmp23;
       threshold = undefined;
-      if (arg1 != null) {
-        threshold = arg1.threshold;
+      if (fn != null) {
+        threshold = fn.threshold;
       }
       tmp26 = null != self._rootThresholds;
       _Array2 = Array;
@@ -191,11 +190,11 @@ class IntersectionObserver {
       if (Array.isArray(threshold)) {
         num6 = 0;
         if (mapped1.length > 0) {
-          mapped1 = mapped1.map((arg0) => {
+          mapped1 = mapped1.map((item) => {
             let tmp = null;
-            if (null != arg0) {
+            if (null != item) {
               const _Number = Number;
-              const NumberResult = Number(arg0);
+              const NumberResult = Number(item);
               const _Number2 = Number;
               if (Number.isFinite(NumberResult)) {
                 if (NumberResult >= 0) {
@@ -219,9 +218,9 @@ class IntersectionObserver {
             }
             return tmp;
           });
-          mapped2 = mapped1.map((arg0) => {
-            let num = arg0;
-            if (arg0 == null) {
+          mapped2 = mapped1.map((item) => {
+            let num = item;
+            if (item == null) {
               num = 0;
             }
             return num;
@@ -277,16 +276,16 @@ class IntersectionObserver {
         }
         self._thresholds = items1;
         root2 = undefined;
-        if (arg1 != null) {
-          root2 = arg1.root;
+        if (fn != null) {
+          root2 = fn.root;
         }
         if (root2 == null) {
           root2 = null;
         }
         self._root = root2;
         rootMargin = undefined;
-        if (arg1 != null) {
-          rootMargin = arg1.rootMargin;
+        if (fn != null) {
+          rootMargin = fn.rootMargin;
         }
         num7 = 0;
         self._rootMargin = (function normalizeRootMargin(rootMargin) {
@@ -318,7 +317,6 @@ class IntersectionObserver {
                       } else {
                         let tmp3 = globalThis;
                         let _SyntaxError = SyntaxError;
-                        let tmp4 = item10005;
                         let _HermesInternal = HermesInternal;
                         let str = "' is not a valid length. Only 'px' and '%' units are allowed.";
                         let str2 = "Failed to construct 'IntersectionObserver': Failed to parse rootMargin: '";
@@ -329,7 +327,6 @@ class IntersectionObserver {
                             tmp2 +
                             "' is not a valid length. Only 'px' and '%' units are allowed.",
                         );
-                        let tmp8 = syntaxError1;
                         throw syntaxError1;
                       }
                     }
@@ -395,7 +392,7 @@ let items = [
   {
     key: "delay",
     get() {
-      error = new Error(
+      const error = new Error(
         "Failed to read the 'delay' property from 'IntersectionObserver': This property is not supported.",
       );
       throw error;
@@ -404,7 +401,7 @@ let items = [
   {
     key: "scrollMargin",
     get() {
-      error = new Error(
+      const error = new Error(
         "Failed to read the 'scrollMargin' property from 'IntersectionObserver': This property is not supported.",
       );
       throw error;
@@ -413,7 +410,7 @@ let items = [
   {
     key: "trackVisibility",
     get() {
-      error = new Error(
+      const error = new Error(
         "Failed to read the 'trackVisibility' property from 'IntersectionObserver': This property is not supported.",
       );
       throw error;
@@ -421,25 +418,21 @@ let items = [
   },
   {
     key: "observe",
-    value: function observe(arg0) {
-      if (null == arg0) {
+    value: function observe(target) {
+      if (null == target) {
         const _TypeError2 = TypeError;
         const typeError = new TypeError(
           "Failed to execute 'observe' on 'IntersectionObserver': parameter 1 is null or undefined.",
         );
         throw typeError;
-      } else if (arg0 instanceof IntersectionObserver(143)) {
+      } else if (target instanceof IntersectionObserver(143)) {
         const self = this;
         const _observationTargets = this._observationTargets;
-        if (!_observationTargets.has(arg0)) {
-          let obj = getTargetFromInstanceHandleAll;
-          obj = { intersectionObserverId: null, root: null, target: null };
-          obj[0] = self._getOrCreateIntersectionObserverId();
-          obj[1] = self._root;
-          obj[2] = arg0;
+        if (!_observationTargets.has(target)) {
+          const obj = { intersectionObserverId: self._getOrCreateIntersectionObserverId(), root: self._root, target };
           if (obj.observe(obj)) {
             const _observationTargets2 = self._observationTargets;
-            _observationTargets2.add(arg0);
+            _observationTargets2.add(target);
           }
         }
       } else {
@@ -460,7 +453,7 @@ let items = [
         if (_observationTargets.has(arg0)) {
           const _intersectionObserverId = self._intersectionObserverId;
           if (null != _intersectionObserverId) {
-            getTargetFromInstanceHandleAll.unobserve(_intersectionObserverId, arg0);
+            _modAll264.unobserve(_intersectionObserverId, arg0);
             const _observationTargets2 = self._observationTargets;
             _observationTargets2.delete(arg0);
             if (0 === self._observationTargets.size) {
@@ -468,7 +461,6 @@ let items = [
               self._intersectionObserverId = null;
               const tmp10Result = tmp10(264);
             }
-            const obj = getTargetFromInstanceHandleAll;
             tmp10 = importAll;
           } else {
             const _console = console;
@@ -504,10 +496,9 @@ let items = [
       const self = this;
       let _intersectionObserverId = this._intersectionObserverId;
       if (null == _intersectionObserverId) {
-        const registerObserverResult = getTargetFromInstanceHandleAll.registerObserver(self, self._callback);
+        const registerObserverResult = _modAll264.registerObserver(self, self._callback);
         self._intersectionObserverId = registerObserverResult;
         _intersectionObserverId = registerObserverResult;
-        const obj = getTargetFromInstanceHandleAll;
       }
       return _intersectionObserverId;
     },
@@ -520,6 +511,7 @@ let items = [
   },
 ];
 let tmp2 = _createClassDefault(IntersectionObserver, items);
-setPlatformObject.setPlatformObject(tmp2);
+const module_126 = fn(126);
+module_126.setPlatformObject(tmp2);
 
 export default tmp2;

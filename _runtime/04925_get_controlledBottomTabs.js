@@ -32,7 +32,6 @@ let c1 = {
   },
 };
 ios26AllowInteractionsDuringTransition = "synchronousScreenUpdatesEnabled";
-c1 = false;
 let closure_2 = {
   get() {
     return ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
@@ -53,7 +52,6 @@ let closure_2 = {
   },
 };
 ios26AllowInteractionsDuringTransition = "synchronousHeaderConfigUpdatesEnabled";
-c1 = false;
 let closure_3 = {
   get() {
     return ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
@@ -74,7 +72,6 @@ let closure_3 = {
   },
 };
 ios26AllowInteractionsDuringTransition = "synchronousHeaderSubviewUpdatesEnabled";
-c1 = false;
 let closure_4 = {
   get() {
     return ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
@@ -95,7 +92,6 @@ let closure_4 = {
   },
 };
 ios26AllowInteractionsDuringTransition = "androidResetScreenShadowStateOnOrientationChangeEnabled";
-c1 = true;
 let closure_5 = {
   get() {
     return ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
@@ -116,7 +112,6 @@ let closure_5 = {
   },
 };
 ios26AllowInteractionsDuringTransition = "iosPreventReattachmentOfDismissedScreens";
-c1 = true;
 let closure_6 = {
   get() {
     return ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
@@ -166,47 +161,48 @@ Object.defineProperty(obj, "controlledBottomTabs", {
   },
 });
 Object.defineProperty(obj, "synchronousScreenUpdatesEnabled", {
-  get: () => store.get(),
+  get: () => closure_2.get(),
   set: (arg0) => {
-    const result = store.set(arg0);
+    const result = closure_2.set(arg0);
   },
 });
 Object.defineProperty(obj, "synchronousHeaderConfigUpdatesEnabled", {
-  get: () => store2.get(),
+  get: () => closure_3.get(),
   set: (arg0) => {
-    const result = store2.set(arg0);
+    const result = closure_3.set(arg0);
   },
 });
 Object.defineProperty(obj, "synchronousHeaderSubviewUpdatesEnabled", {
-  get: () => store3.get(),
+  get: () => closure_4.get(),
   set: (arg0) => {
-    const result = store3.set(arg0);
+    const result = closure_4.set(arg0);
   },
 });
 Object.defineProperty(obj, "androidResetScreenShadowStateOnOrientationChangeEnabled", {
-  get: () => store4.get(),
+  get: () => closure_5.get(),
   set: (arg0) => {
-    const result = store4.set(arg0);
+    const result = closure_5.set(arg0);
   },
 });
 Object.defineProperty(obj, "iosPreventReattachmentOfDismissedScreens", {
-  get: () => store5.get(),
+  get: () => closure_6.get(),
   set: (arg0) => {
-    const result = store5.set(arg0);
+    const result = closure_6.set(arg0);
   },
 });
 Object.defineProperty(obj, "ios26AllowInteractionsDuringTransition", {
-  get: () => store6.get(),
+  get: () => closure_7.get(),
   set: (arg0) => {
-    const result = store6.set(arg0);
+    const result = closure_7.set(arg0);
   },
 });
-obj[0] = obj;
-obj[1] = {};
-arg5.default = obj;
-arg5.compatibilityFlags = {
+obj.experiment = obj;
+obj.stable = {};
+
+export default obj;
+export const compatibilityFlags = {
   isNewBackTitleImplementation: true,
   usesHeaderFlexboxImplementation: true,
   usesNewAndroidHeaderHeightImplementation: true,
 };
-arg5.featureFlags = obj;
+export const featureFlags = obj;

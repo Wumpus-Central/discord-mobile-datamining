@@ -1,5 +1,5 @@
 // _runtime/01820_startScreenTransition.js
-import createViewDescriptorPaper from "01821_createViewDescriptorPaper.js";
+import applyStyle from "01821_applyStyle.js";
 import computeEasingProgress from "01822_computeEasingProgress.js";
 import configureProps from "01735_configureProps.js";
 
@@ -8,10 +8,10 @@ function startScreenTransition(sharedEvent) {
   closure_0 = sharedEvent;
   sharedEvent = sharedEvent.sharedEvent;
   sharedEvent.addListener(sharedEvent.stackTag, () => {
-    sharedEvent(sharedEvent[1]).applyStyle(sharedEvent, sharedEvent.value);
+    applyStyle.applyStyle(closure_0, sharedEvent.value);
   });
 }
-let obj = { applyStyle: createViewDescriptorPaper.applyStyle };
+let obj = { applyStyle: applyStyle.applyStyle };
 startScreenTransition.__closure = obj;
 startScreenTransition.__workletHash = 9428952089760;
 startScreenTransition.__initData = {
@@ -38,20 +38,21 @@ getLockAxis.__initData = {
 function finishScreenTransition(stackTag) {
   ({ sharedEvent, goBackGesture } = stackTag);
   sharedEvent.removeListener(stackTag.stackTag);
-  if (typeof getLockAxis !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const items = ["swipeRight", "swipeLeft", "horizontalSwipe"];
-  let str = "x";
-  if (!items.includes(goBackGesture)) {
-    const items1 = ["swipeUp", "swipeDown", "verticalSwipe"];
-    let str2;
-    if (items1.includes(goBackGesture)) {
-      str2 = "y";
+  if (typeof getLockAxis === "function") {
+    const items = ["swipeRight", "swipeLeft", "horizontalSwipe"];
+    let str = "x";
+    if (!items.includes(goBackGesture)) {
+      const items1 = ["swipeUp", "swipeDown", "verticalSwipe"];
+      let str2;
+      if (items1.includes(goBackGesture)) {
+        str2 = "y";
+      }
+      str = str2;
     }
-    str = str2;
+    computeEasingProgress.getSwipeSimulator(sharedEvent.value, stackTag, str)();
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  computeEasingProgress.getSwipeSimulator(sharedEvent.value, stackTag, str)();
 }
 obj = { getLockAxis, getSwipeSimulator: computeEasingProgress.getSwipeSimulator };
 finishScreenTransition.__closure = obj;

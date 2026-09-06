@@ -1,5 +1,5 @@
 // _runtime/06714_ComposedGestureName.js
-import _mod6715 from "metro/06715__.js";
+import SingleGestureName from "06715_SingleGestureName.js";
 
-export const ComposedGestureName = _mod6715.ComposedGestureName;
-export const SingleGestureName = _mod6715.SingleGestureName;
+export const ComposedGestureName = SingleGestureName.ComposedGestureName;
+export const SingleGestureName = SingleGestureName.SingleGestureName;

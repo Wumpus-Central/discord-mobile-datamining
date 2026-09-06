@@ -2,7 +2,7 @@
 import bind from "../01296_bind.js";
 import _mod1298 from "01298__.js";
 import _mod1299 from "01299__.js";
-import apply from "../01295_apply.js";
+import apply from "01295__.js";
 
 if (apply) {
   module.exports = apply;

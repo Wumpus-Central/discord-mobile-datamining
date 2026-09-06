@@ -1,17 +1,17 @@
 // _runtime/00593_memoizeCapped.js
-import memoizeCapped from "00594_memoizeCapped.js";
+import _mod594 from "metro/00594__.js";
 
 const re0 = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
 const re1 = /\\(\\)?/g;
 
-export default memoizeCapped((str) => {
+export default _mod594((str) => {
   const items = [];
   if (46 === str.charCodeAt(0)) {
     items.push("");
   }
   let replaced = str.replace(items, (arg0, arg1, arg2, str) => {
     if (arg2) {
-      let replaced = str.replace(closure_1_1, "$1");
+      let replaced = str.replace(re1, "$1");
     } else {
       replaced = arg1;
       if (!arg1) {

@@ -1,7 +1,7 @@
 // _runtime/05152_launchCamera.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
+const NativeModules = _mod17.NativeModules;
 let closure_1 = {
   mediaType: "photo",
   videoQuality: "high",
@@ -16,40 +16,39 @@ let closure_1 = {
   includeExtra: false,
 };
 for (const key10017 in require("metro/05153__.js")) {
-  let tmp2 = key10017;
   arg5[key10017] = require("metro/05153__.js")[key10017];
   continue;
 }
 
 export const launchCamera = function launchCamera(arg0, arg1) {
-  closure_0 = arg0;
+  let ImagePickerManager = arg0;
   closure_1 = arg1;
   return new Promise((arg0) => {
-    let ImagePickerManager = arg0;
+    ImagePickerManager = arg0;
     ImagePickerManager = ImagePickerManager.ImagePickerManager;
     const merged = Object.assign(closure_1);
     const merged1 = Object.assign(ImagePickerManager);
     ImagePickerManager.launchCamera({}, (arg0) => {
-      if (closure_1_1) {
+      if (closure_1) {
         tmp(arg0);
       }
-      callback(arg0);
+      closure_0(arg0);
     });
   });
 };
 export const launchImageLibrary = function launchImageLibrary(arg0, arg1) {
-  closure_0 = arg0;
+  let ImagePickerManager = arg0;
   closure_1 = arg1;
   return new Promise((arg0) => {
-    let ImagePickerManager = arg0;
+    ImagePickerManager = arg0;
     ImagePickerManager = ImagePickerManager.ImagePickerManager;
     const merged = Object.assign(closure_1);
     const merged1 = Object.assign(ImagePickerManager);
     ImagePickerManager.launchImageLibrary({}, (arg0) => {
-      if (closure_1_1) {
+      if (closure_1) {
         tmp(arg0);
       }
-      callback(arg0);
+      closure_0(arg0);
     });
   });
 };

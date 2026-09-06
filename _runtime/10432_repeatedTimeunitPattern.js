@@ -1,5 +1,6 @@
 // _runtime/10432_repeatedTimeunitPattern.js
-arg5.repeatedTimeunitPattern = function repeatedTimeunitPattern(arg0, combined, arg2) {
+
+export const repeatedTimeunitPattern = function repeatedTimeunitPattern(arg0, combined, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "\\s{0,5},?\\s{0,5}";
@@ -7,7 +8,7 @@ arg5.repeatedTimeunitPattern = function repeatedTimeunitPattern(arg0, combined, 
   const replaced = combined.replace(/\((?!\?)/g, "(?:");
   return "" + arg0 + replaced + "(?:" + str + replaced + "){0,10}";
 };
-arg5.extractTerms = function extractTerms(arr) {
+export const extractTerms = function extractTerms(arr) {
   if (arr instanceof Array) {
     const items = [];
     HermesBuiltin.arraySpread(arr, 0);
@@ -24,7 +25,7 @@ arg5.extractTerms = function extractTerms(arr) {
   }
   return keys;
 };
-arg5.matchAnyPattern = function matchAnyPattern(MONTH_DICTIONARY) {
+export const matchAnyPattern = function matchAnyPattern(MONTH_DICTIONARY) {
   if (MONTH_DICTIONARY instanceof Array) {
     const items = [];
     HermesBuiltin.arraySpread(MONTH_DICTIONARY, 0);

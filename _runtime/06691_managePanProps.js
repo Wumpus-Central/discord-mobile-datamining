@@ -1,5 +1,5 @@
 // _runtime/06691_managePanProps.js
-import _isNativeReflectConstructDefault from "06682__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct from "metro/06682__.js";
 
 function managePanProps(activeOffsetX) {
   const obj = {};
@@ -85,15 +85,19 @@ const items1 = [
 ];
 let obj = {
   name: "PanGestureHandler",
-  allowedProps: items2,
-  config: {},
-  transformProps: managePanProps,
-  customNativeProps: items1,
+  allowedProps: null,
+  config: null,
+  transformProps: null,
+  customNativeProps: null,
 };
-items2 = [...items];
+const items2 = [...items];
+obj.allowedProps = items2;
+obj.config = {};
+obj.transformProps = managePanProps;
+obj.customNativeProps = items1;
 
 export const panGestureHandlerProps = items;
 export const panGestureHandlerCustomNativeProps = items1;
 export const panHandlerName = "PanGestureHandler";
-export const PanGestureHandler = _isNativeReflectConstructDefault(obj);
+export const PanGestureHandler = _isNativeReflectConstruct(obj);
 export { managePanProps };

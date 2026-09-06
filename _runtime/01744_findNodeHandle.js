@@ -1,4 +1,4 @@
 // _runtime/01744_findNodeHandle.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 
-export const findNodeHandle = get_ActivityIndicator.findNodeHandle;
+export const findNodeHandle = _mod17.findNodeHandle;

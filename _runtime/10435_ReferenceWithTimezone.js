@@ -1,6 +1,6 @@
 // _runtime/10435_ReferenceWithTimezone.js
 import _readOnlyError from "metro/00377__readOnlyError.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 let ParsingComponents = require;
@@ -8,7 +8,7 @@ class ReferenceWithTimezone {
   constructor(arg0, arg1) {
     self = this;
     date = global;
-    tmp2 = closure_2(this, ParsingResult);
+    tmp2 = c2(this, ParsingResult);
     if (null == global) {
       tmp3 = globalThis;
       _Date = Date;
@@ -26,7 +26,7 @@ class ReferenceWithTimezone {
   }
 }
 ParsingComponents = ReferenceWithTimezone;
-let obj = {
+const entry = {
   key: "getDateWithAdjustedTimezone",
   value: function getDateWithAdjustedTimezone() {
     const self = this;
@@ -39,7 +39,7 @@ let obj = {
   },
 };
 let items = [
-  obj,
+  entry,
   {
     key: "getSystemTimezoneAdjustmentMinute",
     value: function getSystemTimezoneAdjustmentMinute(instant, arg1) {
@@ -80,12 +80,12 @@ let items = [
     },
   },
 ];
-obj = {
+const entry1 = {
   key: "fromDate",
   value: function fromDate(arg0) {
     let date = arg0;
     const obj = Object.create(ParsingComponents.prototype);
-    callback(obj, ParsingComponents);
+    _classCallCheck(obj, ParsingComponents);
     if (null == arg0) {
       const _Date = Date;
       date = new Date();
@@ -96,7 +96,7 @@ obj = {
   },
 };
 const items1 = [
-  obj,
+  entry1,
   {
     key: "fromInput",
     value: function fromInput(instant, timezones) {
@@ -117,7 +117,7 @@ const items1 = [
         }
         const toTimezoneOffsetResult = ParsingComponents(10436).toTimezoneOffset(timezone, instant, timezones);
         const obj = Object.create(ParsingComponents.prototype);
-        callback(obj, ParsingComponents);
+        _classCallCheck(obj, ParsingComponents);
         if (null == instant) {
           const _Date2 = Date;
           instant = new Date();
@@ -136,7 +136,7 @@ const items1 = [
 class ParsingComponents {
   constructor(arg0, arg1) {
     self = this;
-    tmp = closure_2(this, ParsingResult);
+    tmp = c2(this, ParsingResult);
     set = new Set();
     this._tags = set;
     this.reference = global;
@@ -161,7 +161,7 @@ class ParsingComponents {
     return;
   }
 }
-obj = {
+const entry2 = {
   key: "get",
   value: function get(arg0) {
     const self = this;
@@ -177,7 +177,7 @@ obj = {
   },
 };
 const items2 = [
-  obj,
+  entry2,
   {
     key: "isCertain",
     value: function isCertain(meridiem) {
@@ -210,19 +210,19 @@ const items2 = [
   },
   {
     key: "addDurationAsImplied",
-    value: function addDurationAsImplied(EmptyDuration) {
+    value: function addDurationAsImplied(start8) {
       const self = this;
       const result = this.dateWithoutTimezoneAdjustment();
-      const addDurationResult = ParsingComponents(10434).addDuration(result, EmptyDuration);
-      let tmp2 = "day" in EmptyDuration;
+      const addDurationResult = ParsingComponents(10434).addDuration(result, start8);
+      let tmp2 = "day" in start8;
       if (!tmp2) {
-        tmp2 = "week" in EmptyDuration;
+        tmp2 = "week" in start8;
       }
       if (!tmp2) {
-        tmp2 = "month" in EmptyDuration;
+        tmp2 = "month" in start8;
       }
       if (!tmp2) {
-        tmp2 = "year" in EmptyDuration;
+        tmp2 = "year" in start8;
       }
       if (tmp2) {
         self.delete(["day", "weekday", "month", "year"]);
@@ -231,12 +231,12 @@ const items2 = [
         self.imply("month", addDurationResult.getMonth() + 1);
         self.imply("year", addDurationResult.getFullYear());
       }
-      let tmp8 = "second" in EmptyDuration;
+      let tmp8 = "second" in start8;
       if (!tmp8) {
-        tmp8 = "minute" in EmptyDuration;
+        tmp8 = "minute" in start8;
       }
       if (!tmp8) {
-        tmp8 = "hour" in EmptyDuration;
+        tmp8 = "hour" in start8;
       }
       if (tmp8) {
         self.delete(["second", "minute", "hour"]);
@@ -271,7 +271,7 @@ const items2 = [
       const self = this;
       const reference = this.reference;
       const obj = Object.create(ParsingComponents.prototype);
-      callback(obj, ParsingComponents);
+      _classCallCheck(obj, ParsingComponents);
       obj._tags = new Set();
       obj.reference = reference;
       obj.knownValues = {};
@@ -287,12 +287,10 @@ const items2 = [
       obj.knownValues = {};
       obj.impliedValues = {};
       for (const key10053 in this.knownValues) {
-        let tmp10 = key10053;
         obj.knownValues[key10053] = self.knownValues[key10053];
         continue;
       }
       for (const key10056 in self.impliedValues) {
-        let tmp11 = key10056;
         obj.impliedValues[key10056] = self.impliedValues[key10056];
         continue;
       }
@@ -452,11 +450,11 @@ const items2 = [
   {
     key: "dateWithoutTimezoneAdjustment",
     value: function dateWithoutTimezoneAdjustment() {
-      let value = this.get("year");
+      this.get("year");
       const diff = this.get("month") - 1;
       value = this.get("day");
       const value1 = this.get("hour");
-      const value2 = this.get("minute");
+      value2 = this.get("minute");
       const value3 = this.get("second");
       const date = new Date(value, diff, value, value1, value2, value3, this.get("millisecond"));
       date.setFullYear(this.get("year"));
@@ -464,82 +462,81 @@ const items2 = [
     },
   },
 ];
-const items3 = [
-  {
-    key: "createRelativeFromReference",
-    value: function createRelativeFromReference(reference, reverseDurationResult) {
-      let EmptyDuration = reverseDurationResult;
-      if (reverseDurationResult === undefined) {
-        EmptyDuration = ParsingComponents(10434).EmptyDuration;
-      }
-      const addDurationResult = ParsingComponents(10434).addDuration(
-        reference.getDateWithAdjustedTimezone(),
-        EmptyDuration,
-      );
-      let obj = Object.create(ParsingComponents.prototype);
-      callback(obj, ParsingComponents);
-      obj._tags = new Set();
-      obj.reference = reference;
-      obj.knownValues = {};
-      obj.impliedValues = {};
-      const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
-      obj.imply("day", dateWithAdjustedTimezone.getDate());
-      obj.imply("month", dateWithAdjustedTimezone.getMonth() + 1);
-      obj.imply("year", dateWithAdjustedTimezone.getFullYear());
-      obj.imply("hour", 12);
-      obj.imply("minute", 0);
-      obj.imply("second", 0);
-      obj.imply("millisecond", 0);
-      obj.addTag("result/relativeDate");
-      if (!("hour" in EmptyDuration)) {
-        if (!("minute" in EmptyDuration)) {
-          if (!("second" in EmptyDuration)) {
-            if (!("millisecond" in EmptyDuration)) {
-              ParsingComponents(10438).implySimilarTime(obj, addDurationResult);
-              obj.imply("timezoneOffset", reference.getTimezoneOffset());
-              if ("day" in EmptyDuration) {
-                obj = obj.assign("day", addDurationResult.getDate());
+const entry3 = {
+  key: "createRelativeFromReference",
+  value: function createRelativeFromReference(reference, reverseDurationResult) {
+    let EmptyDuration = reverseDurationResult;
+    if (reverseDurationResult === undefined) {
+      EmptyDuration = ParsingComponents(10434).EmptyDuration;
+    }
+    const addDurationResult = ParsingComponents(10434).addDuration(
+      reference.getDateWithAdjustedTimezone(),
+      EmptyDuration,
+    );
+    let obj = Object.create(ParsingComponents.prototype);
+    _classCallCheck(obj, ParsingComponents);
+    obj._tags = new Set();
+    obj.reference = reference;
+    obj.knownValues = {};
+    obj.impliedValues = {};
+    const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+    obj.imply("day", dateWithAdjustedTimezone.getDate());
+    obj.imply("month", dateWithAdjustedTimezone.getMonth() + 1);
+    obj.imply("year", dateWithAdjustedTimezone.getFullYear());
+    obj.imply("hour", 12);
+    obj.imply("minute", 0);
+    obj.imply("second", 0);
+    obj.imply("millisecond", 0);
+    obj.addTag("result/relativeDate");
+    if (!("hour" in EmptyDuration)) {
+      if (!("minute" in EmptyDuration)) {
+        if (!("second" in EmptyDuration)) {
+          if (!("millisecond" in EmptyDuration)) {
+            ParsingComponents(10438).implySimilarTime(obj, addDurationResult);
+            obj.imply("timezoneOffset", reference.getTimezoneOffset());
+            if ("day" in EmptyDuration) {
+              obj = obj.assign("day", addDurationResult.getDate());
+              obj.assign("month", addDurationResult.getMonth() + 1);
+              obj.assign("year", addDurationResult.getFullYear());
+              obj.assign("weekday", addDurationResult.getDay());
+            } else if ("week" in EmptyDuration) {
+              obj.assign("day", addDurationResult.getDate());
+              obj.assign("month", addDurationResult.getMonth() + 1);
+              obj.assign("year", addDurationResult.getFullYear());
+              obj.imply("weekday", addDurationResult.getDay());
+            } else {
+              obj.imply("day", addDurationResult.getDate());
+              if ("month" in EmptyDuration) {
                 obj.assign("month", addDurationResult.getMonth() + 1);
                 obj.assign("year", addDurationResult.getFullYear());
-                obj.assign("weekday", addDurationResult.getDay());
-              } else if ("week" in EmptyDuration) {
-                obj.assign("day", addDurationResult.getDate());
-                obj.assign("month", addDurationResult.getMonth() + 1);
-                obj.assign("year", addDurationResult.getFullYear());
-                obj.imply("weekday", addDurationResult.getDay());
               } else {
-                obj.imply("day", addDurationResult.getDate());
-                if ("month" in EmptyDuration) {
-                  obj.assign("month", addDurationResult.getMonth() + 1);
+                obj.imply("month", addDurationResult.getMonth() + 1);
+                if ("year" in EmptyDuration) {
                   obj.assign("year", addDurationResult.getFullYear());
                 } else {
-                  obj.imply("month", addDurationResult.getMonth() + 1);
-                  if ("year" in EmptyDuration) {
-                    obj.assign("year", addDurationResult.getFullYear());
-                  } else {
-                    obj.imply("year", addDurationResult.getFullYear());
-                  }
+                  obj.imply("year", addDurationResult.getFullYear());
                 }
               }
             }
-            return obj;
           }
+          return obj;
         }
       }
-      obj.addTag("result/relativeDateAndTime");
-      ParsingComponents(10438).assignSimilarTime(obj, addDurationResult);
-      ParsingComponents(10438).assignSimilarDate(obj, addDurationResult);
-      obj.assign("timezoneOffset", reference.getTimezoneOffset());
-    },
+    }
+    obj.addTag("result/relativeDateAndTime");
+    ParsingComponents(10438).assignSimilarTime(obj, addDurationResult);
+    ParsingComponents(10438).assignSimilarDate(obj, addDurationResult);
+    obj.assign("timezoneOffset", reference.getTimezoneOffset());
   },
-];
+};
+const items3 = [entry3];
 const _module1Result = _createClass(ParsingComponents, items2, items3);
 let c3 = _module1Result;
 class ParsingResult {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     self = this;
     tmp = importAll;
-    tmp2 = closure_2(this, ParsingResult);
+    tmp2 = c2(this, ParsingResult);
     this.reference = global;
     this.refDate = global.instant;
     this.index = require;
@@ -557,35 +554,36 @@ class ParsingResult {
   }
 }
 ParsingComponents = ParsingResult;
-const items4 = [
-  {
-    key: "clone",
-    value: function clone() {
-      const self = this;
-      ({ reference, index, text } = this);
-      const obj = Object.create(ParsingComponents.prototype);
-      callback(obj, ParsingComponents);
-      obj.reference = reference;
-      obj.refDate = reference.instant;
-      obj.index = index;
-      obj.text = text;
-      obj.start = new _module1Result(reference);
-      obj.end = undefined;
-      let cloneResult = null;
-      if (this.start) {
-        const start = self.start;
-        cloneResult = start.clone();
-      }
-      obj.start = cloneResult;
-      let cloneResult1 = null;
-      if (self.end) {
-        const end = self.end;
-        cloneResult1 = end.clone();
-      }
-      obj.end = cloneResult1;
-      return obj;
-    },
+const entry4 = {
+  key: "clone",
+  value: function clone() {
+    const self = this;
+    ({ reference, index, text } = this);
+    const obj = Object.create(ParsingComponents.prototype);
+    _classCallCheck(obj, ParsingComponents);
+    obj.reference = reference;
+    obj.refDate = reference.instant;
+    obj.index = index;
+    obj.text = text;
+    obj.start = new c3(reference);
+    obj.end = undefined;
+    let cloneResult = null;
+    if (this.start) {
+      const start = self.start;
+      cloneResult = start.clone();
+    }
+    obj.start = cloneResult;
+    let cloneResult1 = null;
+    if (self.end) {
+      const end = self.end;
+      cloneResult1 = end.clone();
+    }
+    obj.end = cloneResult1;
+    return obj;
   },
+};
+const items4 = [
+  entry4,
   {
     key: "date",
     value: function date() {

@@ -1,24 +1,22 @@
 // _runtime/04058_roundToNearestMinutes.js
-import getRoundingMethod from "03844_getRoundingMethod.js";
-import _typeof from "metro/03650__typeof.js";
-import toInteger from "03654_toInteger.js";
+import _mod3844 from "metro/03844__.js";
+import _typeof from "metro/03650__.js";
+import 03654__ from "metro/03654__.js";
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!toInteger) {
-  obj = { default: null };
-  obj[0] = toInteger;
+if (!module_3654) {
+  obj = { default: module_3654 };
   let tmp5 = obj;
 } else {
-  tmp5 = toInteger;
+  tmp5 = module_3654;
 }
-toInteger = tmp5;
+module_3654 = tmp5;
 
 export default function roundToNearestMinutes(arg0, nearestTo) {
   if (arguments.length < 1) {
@@ -37,7 +35,7 @@ export default function roundToNearestMinutes(arg0, nearestTo) {
         num = nearestTo;
       }
     }
-    const defaultResult = toInteger.default(num);
+    const defaultResult = module_3654.default(num);
     if (defaultResult >= 1) {
       if (defaultResult <= 30) {
         const defaultResult1 = _typeof.default(arg0);
@@ -48,7 +46,7 @@ export default function roundToNearestMinutes(arg0, nearestTo) {
           roundingMethod = nearestTo.roundingMethod;
         }
         const _Math = Math;
-        const result = getRoundingMethod.getRoundingMethod(roundingMethod)(sum / defaultResult) * defaultResult;
+        const result = _mod3844.getRoundingMethod(roundingMethod)(sum / defaultResult) * defaultResult;
         const _Date = Date;
         const result1 = Math.round(sum % defaultResult / defaultResult) * defaultResult;
         const fullYear = defaultResult1.getFullYear();

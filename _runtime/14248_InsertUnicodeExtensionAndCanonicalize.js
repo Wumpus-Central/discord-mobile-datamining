@@ -1,12 +1,13 @@
 // _runtime/14248_InsertUnicodeExtensionAndCanonicalize.js
-import isMatched from "14241_isMatched.js";
+import _mod14241 from "metro/14241__.js";
 import CanonicalizeUnicodeLocaleId from "14249_CanonicalizeUnicodeLocaleId.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndCanonicalize(arr) {
+
+export const InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndCanonicalize(arr, arg1, arg2) {
   let length;
-  isMatched.invariant(-1 === arr.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
+  _mod14241.invariant(-1 === arr.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
   let num = 0;
   let str = "-u";
   let str2 = "-u";
@@ -25,10 +26,9 @@ arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndC
   if (0 < arg2.length) {
     do {
       let iter = arg2[num2];
-      let value = iter.value;
+      value = iter.value;
       let concat2 = "-".concat;
       let sum = tmp2 + "-".concat(iter.key);
-      let tmp5 = num2;
       let sum1 = sum;
       if ("" !== value) {
         let concat3 = "-".concat;

@@ -1,6 +1,7 @@
 // _runtime/00078_pointsDiffer.js
 let closure_0 = { x: "hash", y: "call" };
-arg5.default = function pointsDiffer(arg0, arg1) {
+
+export default function pointsDiffer(arg0, arg1) {
   let point = arg0;
   if (!arg0) {
     point = closure_0;
@@ -15,4 +16,4 @@ arg5.default = function pointsDiffer(arg0, arg1) {
     const tmp2 = point.x !== point2.x || point.y !== point2.y;
   }
   return tmp;
-};
+}

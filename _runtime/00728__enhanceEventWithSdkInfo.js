@@ -1,4 +1,6 @@
 // _runtime/00728__enhanceEventWithSdkInfo.js
+import spanToJSON2 from "00684_spanToJSON.js";
+import logIgnoredSpan from "00724_logIgnoredSpan.js";
 import forEachEnvelopeItem from "00729_forEachEnvelopeItem.js";
 
 require = arg1;
@@ -60,8 +62,9 @@ function _enhanceEventWithSdkInfo(sdk, name) {
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5._enhanceEventWithSdkInfo = _enhanceEventWithSdkInfo;
-arg5.createEventEnvelope = function createEventEnvelope(type, arg1, sdk) {
+
+export { _enhanceEventWithSdkInfo };
+export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk, arg3) {
   const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(sdk);
   let str = "event";
   if (type.type) {
@@ -83,22 +86,21 @@ arg5.createEventEnvelope = function createEventEnvelope(type, arg1, sdk) {
   const items1 = [items];
   return tmp3Result.createEnvelope(eventEnvelopeHeaders, items1);
 };
-arg5.createSessionEnvelope = function createSessionEnvelope(toJSON) {
+export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1, arg2, arg3) {
   let obj = forEachEnvelopeItem;
   const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(arg2);
   obj = { sent_at: new Date().toISOString() };
   let tmp4 = sdkMetadataForEnvelopeHeader;
   if (sdkMetadataForEnvelopeHeader) {
-    obj = { sdk: null };
-    obj[0] = sdkMetadataForEnvelopeHeader;
+    obj = { sdk: sdkMetadataForEnvelopeHeader };
     tmp4 = obj;
   }
   const merged = Object.assign(tmp4);
   let tmp6 = arg3 && arg1;
   if (tmp6) {
-    obj1 = { dsn: null };
+    const obj1 = { dsn: null };
     let tmpResult = tmp(702);
-    obj1[0] = tmpResult.dsnToString(arg1);
+    obj1.dsn = tmpResult.dsnToString(arg1);
     tmp6 = obj1;
   }
   const merged1 = Object.assign(tmp6);
@@ -112,7 +114,7 @@ arg5.createSessionEnvelope = function createSessionEnvelope(toJSON) {
   const items2 = [items1];
   return tmpResult.createEnvelope(obj, items2);
 };
-arg5.createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
+export const createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
   let obj = beforeSendSpan(ignoreSpans[2]);
   const dynamicSamplingContextFromSpan = obj.getDynamicSamplingContextFromSpan(arr[0]);
   let dsn;
@@ -128,15 +130,13 @@ arg5.createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
     return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
   })(dynamicSamplingContextFromSpan);
   if (tmp8) {
-    obj = { trace: null };
-    obj[0] = dynamicSamplingContextFromSpan;
+    obj = { trace: dynamicSamplingContextFromSpan };
     tmp8 = obj;
   }
   const merged = Object.assign(tmp8);
   let tmp10 = tunnel && dsn;
   if (tmp10) {
-    obj1 = { dsn: null };
-    obj1[0] = tmp2(tmp4[1]).dsnToString(dsn);
+    const obj1 = { dsn: tmp2(tmp4[1]).dsnToString(dsn) };
     tmp10 = obj1;
     const tmp2Result = tmp2(tmp4[1]);
   }
@@ -156,9 +156,9 @@ arg5.createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
   }
   let found = arr;
   if (length) {
-    found = arr.filter((arg0) => {
-      const obj = beforeSendSpan(ignoreSpans[3]);
-      return !obj.shouldIgnoreSpan(beforeSendSpan(ignoreSpans[4]).spanToJSON(arg0), ignoreSpans);
+    found = arr.filter((item) => {
+      const obj = logIgnoredSpan;
+      return !obj.shouldIgnoreSpan(spanToJSON2.spanToJSON(item), ignoreSpans);
     });
   }
   const diff = arr.length - found.length;
@@ -169,12 +169,12 @@ arg5.createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
   }
   if (beforeSendSpan) {
     const fn = (arg0) => {
-      const spanToJSONResult = beforeSendSpan(ignoreSpans[4]).spanToJSON(arg0);
+      const spanToJSONResult = spanToJSON2.spanToJSON(arg0);
       let tmp4 = beforeSendSpan(spanToJSONResult);
       if (!tmp4) {
-        beforeSendSpan(ignoreSpans[4]).showSpanDropWarning();
+        spanToJSON2.showSpanDropWarning();
         tmp4 = spanToJSONResult;
-        const tmpResult = beforeSendSpan(ignoreSpans[4]);
+        const tmpResult = spanToJSON2;
       }
       return tmp4;
     };

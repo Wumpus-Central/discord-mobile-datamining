@@ -1,6 +1,4 @@
 // _runtime/metro/09006__.js
-import _mod8935 from "08935__.js";
-
 const self = this;
 let self2 = this;
 if (this) {
@@ -26,26 +24,24 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
               continue;
             } else {
               let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
               let call = hasOwnProperty.call;
               if (typeof call === "unknown") {
                 let hasOwnPropertyResult = hasOwnProperty(key10009);
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -64,7 +60,7 @@ if (self2) {
     exports.getErrorMap = function getErrorMap() {
       return closure_4.config().customError;
     };
-    let closure_4 = fn(_mod8935);
+    let closure_4 = fn(require("08935__.js"));
     exports.ZodIssueCode = {
       invalid_type: "invalid_type",
       too_big: "too_big",
@@ -79,15 +75,19 @@ if (self2) {
       custom: "custom",
     };
     const _Object4 = Object;
-    let obj = { enumerable: true, get: null };
-    obj[1] = function get() {
-      return _mod8935.$brand;
+    let obj = {
+      enumerable: true,
+      get() {
+        return require("08935__.js").$brand;
+      },
     };
     Object.defineProperty(exports, "$brand", obj);
     const _Object5 = Object;
-    obj = { enumerable: true, get: null };
-    obj[1] = function get() {
-      return _mod8935.config;
+    obj = {
+      enumerable: true,
+      get() {
+        return require("08935__.js").config;
+      },
     };
     Object.defineProperty(exports, "config", obj);
     exports.ZodFirstPartyTypeKind = {};

@@ -1,11 +1,11 @@
 // _runtime/08323_merged1.js
 import colorPropType from "08314_colorPropType.js";
-import emptyFunction from "04389_emptyFunction.js";
+import emptyFunction from "metro/04389__.js";
 
-let obj = { shadowColor: colorPropType, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
-obj = { width: emptyFunction.number, height: emptyFunction.number };
-obj[1] = emptyFunction.shape(obj);
-obj[2] = emptyFunction.number;
-obj[3] = emptyFunction.number;
+const obj = { shadowColor: colorPropType, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
+const size = { width: emptyFunction.number, height: emptyFunction.number };
+obj.shadowOffset = emptyFunction.shape(size);
+obj.shadowOpacity = emptyFunction.number;
+obj.shadowRadius = emptyFunction.number;
 
 export default obj;

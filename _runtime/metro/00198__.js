@@ -1,35 +1,20 @@
 // _runtime/metro/00198__.js
-import t from "../00215_t.js";
+import _mod215 from "00215__.js";
 import URL from "../00226_URL.js";
-import _isNativeReflectConstruct from "../00228__isNativeReflectConstruct.js";
+import _mod228 from "00228__.js";
 import polyfillObjectProperty from "../00123_polyfillObjectProperty.js";
-import { _isNativeReflectConstruct } from "../00199__isNativeReflectConstruct.js";
-import { Blob } from "../00203_Blob.js";
-import { FormData } from "../00211_FormData.js";
-import { _isNativeReflectConstruct } from "../00217__isNativeReflectConstruct.js";
-import { _isNativeReflectConstruct } from "../00222__isNativeReflectConstruct.js";
-import { _isNativeReflectConstruct } from "../00223__isNativeReflectConstruct.js";
 
-polyfillObjectProperty.polyfillGlobal(
-  "XMLHttpRequest",
-  () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
-);
-polyfillObjectProperty.polyfillGlobal("FormData", () => FormData /* FormData */.default);
-polyfillObjectProperty.polyfillGlobal("fetch", () => t.fetch);
-polyfillObjectProperty.polyfillGlobal("Headers", () => t.Headers);
-polyfillObjectProperty.polyfillGlobal("Request", () => t.Request);
-polyfillObjectProperty.polyfillGlobal("Response", () => t.Response);
-polyfillObjectProperty.polyfillGlobal(
-  "WebSocket",
-  () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
-);
-polyfillObjectProperty.polyfillGlobal("Blob", () => Blob /* Blob */.default);
-polyfillObjectProperty.polyfillGlobal("File", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
-polyfillObjectProperty.polyfillGlobal(
-  "FileReader",
-  () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
-);
+polyfillObjectProperty.polyfillGlobal("XMLHttpRequest", () => require("00199__.js").default);
+polyfillObjectProperty.polyfillGlobal("FormData", () => require("FormData").default);
+polyfillObjectProperty.polyfillGlobal("fetch", () => _mod215.fetch);
+polyfillObjectProperty.polyfillGlobal("Headers", () => _mod215.Headers);
+polyfillObjectProperty.polyfillGlobal("Request", () => _mod215.Request);
+polyfillObjectProperty.polyfillGlobal("Response", () => _mod215.Response);
+polyfillObjectProperty.polyfillGlobal("WebSocket", () => require("00217__.js").default);
+polyfillObjectProperty.polyfillGlobal("Blob", () => require("Blob").default);
+polyfillObjectProperty.polyfillGlobal("File", () => require("00222__.js").default);
+polyfillObjectProperty.polyfillGlobal("FileReader", () => require("00223__.js").default);
 polyfillObjectProperty.polyfillGlobal("URL", () => URL.URL);
 polyfillObjectProperty.polyfillGlobal("URLSearchParams", () => URL.URLSearchParams);
-polyfillObjectProperty.polyfillGlobal("AbortController", () => _isNativeReflectConstruct.AbortController);
-polyfillObjectProperty.polyfillGlobal("AbortSignal", () => _isNativeReflectConstruct.AbortSignal);
+polyfillObjectProperty.polyfillGlobal("AbortController", () => _mod228.AbortController);
+polyfillObjectProperty.polyfillGlobal("AbortSignal", () => _mod228.AbortSignal);

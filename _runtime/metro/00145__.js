@@ -1,0 +1,14 @@
+// _runtime/metro/00145__.js
+import codegenNativeCommandsDefault from "../00113_codegenNativeCommands.js";
+import 00065__ from "00065__.js";
+
+let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "AndroidTextInput", bubblingEventTypes: null, directEventTypes: null, validAttributes: null };
+__INTERNAL_VIEW_CONFIG = { topEndEditing: { phasedRegistrationNames: { bubbled: "onEndEditing", captured: "onEndEditingCapture" } }, topKeyPress: { phasedRegistrationNames: { bubbled: "onKeyPress", captured: "onKeyPressCapture" } }, topSubmitEditing: { phasedRegistrationNames: { bubbled: "onSubmitEditing", captured: "onSubmitEditingCapture" } } };
+__INTERNAL_VIEW_CONFIG.bubblingEventTypes = __INTERNAL_VIEW_CONFIG;
+__INTERNAL_VIEW_CONFIG.directEventTypes = { topScroll: { registrationName: "onScroll" } };
+__INTERNAL_VIEW_CONFIG = { acceptDragAndDropTypes: true, maxFontSizeMultiplier: true, adjustsFontSizeToFit: true, minimumFontScale: true, autoFocus: true, placeholder: true, inlineImagePadding: true, contextMenuHidden: true, textShadowColor: fn(26).colorAttribute, maxLength: true, selectTextOnFocus: true, textShadowRadius: true, underlineColorAndroid: fn(26).colorAttribute, textDecorationLine: true, submitBehavior: true, textAlignVertical: true, fontStyle: true, textShadowOffset: true, selectionColor: fn(26).colorAttribute, selectionHandleColor: fn(26).colorAttribute, placeholderTextColor: fn(26).colorAttribute, importantForAutofill: true, lineHeight: true, textTransform: true, returnKeyType: true, keyboardType: true, multiline: true, color: fn(26).colorAttribute, autoComplete: true, numberOfLines: true, letterSpacing: true, returnKeyLabel: true, fontSize: true, onKeyPress: true, cursorColor: fn(26).colorAttribute, text: true, showSoftInputOnFocus: true, textAlign: true, autoCapitalize: true, autoCorrect: true, caretHidden: true, secureTextEntry: true, textBreakStrategy: true, onScroll: true, onContentSizeChange: true, disableFullscreenUI: true, includeFontPadding: true, fontWeight: true, fontFamily: true, allowFontScaling: true, onSelectionChange: true, mostRecentEventCount: true, inlineImageLeft: true, editable: true, fontVariant: true, borderBottomRightRadius: true, borderBottomColor: fn(26).colorAttribute, borderRadius: true, borderRightColor: fn(26).colorAttribute, borderColor: fn(26).colorAttribute, borderTopRightRadius: true, borderStyle: true, borderBottomLeftRadius: true, borderLeftColor: fn(26).colorAttribute, borderTopLeftRadius: true, borderTopColor: fn(26).colorAttribute };
+__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+
+export default module_65.get("AndroidTextInput", () => obj);
+export const Commands = codegenNativeCommandsDefault({ supportedCommands: ["focus", "blur", "setTextAndSelection"] });
+export { __INTERNAL_VIEW_CONFIG };

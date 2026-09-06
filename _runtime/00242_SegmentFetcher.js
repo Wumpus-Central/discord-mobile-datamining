@@ -1,10 +1,9 @@
 // _runtime/00242_SegmentFetcher.js
-import SegmentFetcherDefault from "00243_SegmentFetcher.js";
+import _modDef243 from "metro/00243__.js";
 
-for (const key10016 in require("SegmentFetcher")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("SegmentFetcher")[key10016];
+for (const key10016 in require("metro/00243__.js")) {
+  arg5[key10016] = require("metro/00243__.js")[key10016];
   continue;
 }
 
-export default SegmentFetcherDefault;
+export default _modDef243;

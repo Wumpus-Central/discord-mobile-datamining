@@ -1,46 +1,42 @@
 // _runtime/03891_startOfUTCWeekYear.js
-import getDefaultOptions from "03655_getDefaultOptions.js";
-import getUTCWeekYear from "03892_getUTCWeekYear.js";
+import _mod3655 from "metro/03655__.js";
+import 03892__ from "metro/03892__.js";
 import requiredArgs from "03651_requiredArgs.js";
 import startOfUTCWeek from "03653_startOfUTCWeek.js";
-import toInteger from "03654_toInteger.js";
+import 03654__ from "metro/03654__.js";
 
-if (!getUTCWeekYear) {
-  let obj = { default: null };
-  obj[0] = getUTCWeekYear;
+if (!module_3892) {
+  let obj = { default: module_3892 };
   let tmp3 = obj;
 } else {
-  tmp3 = getUTCWeekYear;
+  tmp3 = module_3892;
 }
-getUTCWeekYear = tmp3;
+module_3892 = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
 if (!startOfUTCWeek) {
-  obj = { default: null };
-  obj[0] = startOfUTCWeek;
+  obj = { default: startOfUTCWeek };
   let tmp7 = obj;
 } else {
   tmp7 = startOfUTCWeek;
 }
 startOfUTCWeek = tmp7;
-if (!toInteger) {
-  const obj1 = { default: null };
-  obj1[0] = toInteger;
+if (!module_3654) {
+  const obj1 = { default: module_3654 };
   let tmp9 = obj1;
 } else {
-  tmp9 = toInteger;
+  tmp9 = module_3654;
 }
-toInteger = tmp9;
+module_3654 = tmp9;
 
 export default function startOfUTCWeekYear(arg0, firstWeekContainsDate) {
   requiredArgs.default(1, arguments);
-  const defaultOptions = getDefaultOptions.getDefaultOptions();
+  const defaultOptions = _mod3655.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
     prop = firstWeekContainsDate.firstWeekContainsDate;
@@ -48,7 +44,7 @@ export default function startOfUTCWeekYear(arg0, firstWeekContainsDate) {
   if (null === prop) {
     let prop1;
     if (null != firstWeekContainsDate) {
-      const locale = firstWeekContainsDate.locale;
+      locale = firstWeekContainsDate.locale;
       if (null !== locale) {
         if (undefined !== locale) {
           const options = locale.options;
@@ -87,9 +83,9 @@ export default function startOfUTCWeekYear(arg0, firstWeekContainsDate) {
       num = prop;
     }
   }
-  const defaultResult1 = toInteger.default(num);
+  const defaultResult1 = module_3654.default(num);
   const date = new Date(0);
-  date.setUTCFullYear(getUTCWeekYear.default(arg0, firstWeekContainsDate), 0, defaultResult1);
+  date.setUTCFullYear(module_3892.default(arg0, firstWeekContainsDate), 0, defaultResult1);
   date.setUTCHours(0, 0, 0, 0);
   return startOfUTCWeek.default(date, firstWeekContainsDate);
 };

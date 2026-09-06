@@ -1,5 +1,6 @@
 // _runtime/metro/14280__.js
-arg5.calendars = [
+
+export const calendars = [
   "buddhist",
   "chinese",
   "coptic",

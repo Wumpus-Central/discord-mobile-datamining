@@ -1,11 +1,12 @@
 // _runtime/00869_encodeUTF8.js
-import getSentryCarrier from "00870_getSentryCarrier.js";
+import _mod870 from "metro/00870__.js";
 import globalEncodeFactory from "00871_globalEncodeFactory.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.encodeUTF8 = function encodeUTF8(json) {
-  const sentryCarrier = getSentryCarrier.getSentryCarrier();
+
+export const encodeUTF8 = function encodeUTF8(json) {
+  const sentryCarrier = _mod870.getSentryCarrier();
   if (!sentryCarrier.encodePolyfill) {
     const encodePolyfill = globalEncodeFactory.useEncodePolyfill();
     const tmpResult = globalEncodeFactory;

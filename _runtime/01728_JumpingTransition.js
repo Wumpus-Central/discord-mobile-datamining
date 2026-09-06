@@ -3,7 +3,8 @@ import linear from "01688_linear.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.JumpingTransition = function JumpingTransition(name) {
+
+export const JumpingTransition = function JumpingTransition(name, arg1) {
   ({ translateX, translateY, scaleX, scaleY } = arg1);
   const absolute = Math.abs(translateX);
   const result = Math.max(absolute, Math.abs(translateY)) / 2;
@@ -18,18 +19,24 @@ arg5.JumpingTransition = function JumpingTransition(name) {
   const items = [
     { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY },
   ];
-  obj[0] = items;
-  obj[1] = linear.Easing.exp;
-  obj[0] = obj;
+  obj.transform = items;
+  obj.easing = linear.Easing.exp;
+  obj.transform = obj;
   const obj2 = { transform: null };
-  obj1 = { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY };
+  const obj1 = {
+    translateX: "" + translateX + "px",
+    translateY: "" + translateY + "px",
+    scale: "" + scaleX + "," + scaleY,
+  };
   const items1 = [
     { translateX: `${translateX / 2}px`, translateY: "" + diff + "px", scale: "" + scaleX + "," + scaleY },
   ];
-  obj2[0] = items1;
+  obj2.transform = items1;
   obj[50] = obj2;
+  const obj4 = { transform: null };
   const items2 = [{ translateX: "0px", translateY: "0px", scale: "1,1" }];
-  obj[100] = { transform: items2 };
-  obj[1] = obj;
+  obj4.transform = items2;
+  obj[100] = obj4;
+  obj.style = obj;
   return obj;
 };

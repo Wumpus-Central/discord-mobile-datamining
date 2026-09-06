@@ -1,9 +1,10 @@
 // _runtime/00332_convertObjectFitToResizeMode.js
 let closure_0 = { contain: "contain", cover: "cover", fill: "stretch", "scale-down": "contain", none: "none" };
-arg5.convertObjectFitToResizeMode = function convertObjectFitToResizeMode(objectFit) {
+
+export const convertObjectFitToResizeMode = function convertObjectFitToResizeMode(objectFit) {
   let tmp;
   if (null != objectFit) {
-    tmp = table[objectFit];
+    tmp = closure_0[objectFit];
   }
   return tmp;
 };

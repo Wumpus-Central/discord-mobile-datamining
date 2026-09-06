@@ -1,9 +1,9 @@
 // _runtime/01465_State.js
-import _createClassDefault from "metro/00042__createClass.js";
-import get_ActivityIndicatorDefault from "01466_get_ActivityIndicator.js";
+import _modDef1466 from "metro/01466__.js";
 import InternetReachabilityDefault from "01468_InternetReachability.js";
-import closure_3 from "00005_asyncGeneratorStep.js";
-import closure_4 from "metro/00041__classCallCheck.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import _createClass from "metro/00042__createClass.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class State {
   constructor(arg0) {
@@ -21,38 +21,33 @@ class State {
       closure_0 = _convertStateResult;
       self._latestState = _convertStateResult;
       const _subscriptions = self._subscriptions;
-      const item = _subscriptions.forEach((arg0) => arg0(closure_0));
+      const item = _subscriptions.forEach((fn) => fn(_convertStateResult));
     };
     this._handleInternetReachabilityUpdate = (isInternetReachable) => {
       if (self._latestState) {
-        const obj = {};
+        const _latestState = {};
         const merged = Object.assign(tmp._latestState);
-        obj.isInternetReachable = isInternetReachable;
-        tmp._latestState = obj;
+        _latestState.isInternetReachable = isInternetReachable;
+        tmp._latestState = _latestState;
         const _subscriptions = tmp._subscriptions;
-        const item = _subscriptions.forEach((arg0) => arg0(obj));
+        const item = _subscriptions.forEach((fn) => fn(obj));
       }
     };
     closure_0 = undefined;
-    closure_0 = closure_3((arg0) => {
-      closure_0 = arg0;
-      c3 = 0;
-      c4 = 0;
-      return (function* (arg0) {
-        closure_2 = tmp5;
-        closure_1 = tmp2;
-        const obj2 = lib(closure_2_2[3]);
-        closure_1 = yield obj2.getCurrentState(lib);
-        const _internetReachability = lib._internetReachability;
-        _internetReachability.update(closure_1);
-        closure_2 = lib._convertState(closure_1);
-        if (!lib) {
-          lib._latestState = closure_2;
-          const _subscriptions = lib._subscriptions;
-          const item = _subscriptions.forEach((arg0) => arg0(closure_2));
-        }
-        return closure_2;
-      })();
+    closure_0 = closure_3(async (arg0) => {
+      closure_2 = tmp5;
+      closure_1 = tmp2;
+      closure_129_0 = closure_0;
+      closure_129_1 = await closure_0(dependencyMap[3]).getCurrentState(closure_0);
+      const _internetReachability = closure_0._internetReachability;
+      _internetReachability.update(closure_129_1);
+      closure_129_2 = closure_0._convertState(closure_129_1);
+      if (!closure_129_0) {
+        closure_0._latestState = closure_129_2;
+        const _subscriptions = closure_0._subscriptions;
+        const item = _subscriptions.forEach((fn) => fn(closure_1_2));
+      }
+      return closure_129_2;
     });
     this._fetchCurrentState = function (arg0) {
       self = this;
@@ -85,13 +80,13 @@ class State {
       }
       return _fetchCurrentStateResult;
     };
-    this.add = (arg0) => {
+    this.add = (fn) => {
       const _subscriptions = self._subscriptions;
-      _subscriptions.add(arg0);
+      _subscriptions.add(fn);
       if (self._latestState) {
-        arg0(obj._latestState);
+        fn(obj._latestState);
       } else {
-        obj.latest().then(arg0);
+        obj.latest().then(fn);
         const latestResult = obj.latest();
       }
     };
@@ -111,11 +106,11 @@ class State {
       const _subscriptions = tmp._subscriptions;
       _subscriptions.clear();
     };
-    tmp3 = new require("InternetReachability")(global, this._handleInternetReachabilityUpdate);
+    tmp3 = new closure_0(closure_2[4])(global, this._handleInternetReachabilityUpdate);
     this._internetReachability = tmp3;
-    eventEmitter = require("get ActivityIndicator").eventEmitter;
+    eventEmitter = closure_0(closure_2[3]).eventEmitter;
     this._nativeEventSubscription = eventEmitter.addListener(
-      require("metro/01469__.js").DEVICE_CONNECTIVITY_EVENT,
+      self(closure_2[5]).DEVICE_CONNECTIVITY_EVENT,
       this._handleNativeStateUpdate,
     );
     _fetchCurrentStateResult = this._fetchCurrentState();
@@ -123,4 +118,4 @@ class State {
   }
 }
 
-export default _createClassDefault(State);
+export default _createClass(State);

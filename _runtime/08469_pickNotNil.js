@@ -1,11 +1,14 @@
 // _runtime/08469_pickNotNil.js
-const module = arg2;
+import _modDef4921 from "metro/04921__.js";
+
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.pickNotNil = function pickNotNil(obj) {
+
+export const pickNotNil = function pickNotNil(obj) {
   obj = {};
   for (const key10006 in arg0) {
-    let tmp3 = key10006;
     let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
     let call = hasOwnProperty.call;
     if (typeof call === "unknown") {
       let hasOwnPropertyResult = hasOwnProperty(key10006);
@@ -28,14 +31,14 @@ arg5.pickNotNil = function pickNotNil(obj) {
   }
   return obj;
 };
-arg5.idPattern = /#([^)]+)'?\)?$/;
-arg5.getRandomNumber = () => {
+export const idPattern = /#([^)]+)'?\)?$/;
+export const getRandomNumber = () => {
   const random = Math.random();
   const random1 = Math.random();
   return Math.floor(random * Math.floor(random1 * Date.now()));
 };
-arg5.warnUnimplementedFilter = () => {
-  module(4921)(
+export const warnUnimplementedFilter = () => {
+  _modDef4921(
     true,
     "Some of the used filters are not yet supported on native platforms. Please check the USAGE.md for more info. Not implemented filters:\n",
     JSON.stringify(

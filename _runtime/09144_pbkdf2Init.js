@@ -1,7 +1,7 @@
 // _runtime/09144_pbkdf2Init.js
 import _asyncLoop from "09141__asyncLoop.js";
 import number from "09142_number.js";
-import closure_2 from "00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 function pbkdf2Init(sha256, B, B, arg3) {
   number.hash(sha256);
@@ -11,22 +11,18 @@ function pbkdf2Init(sha256, B, B, arg3) {
   number.number(asyncTick);
   if (c < 1) {
     const _Error = Error;
-    error = new Error("PBKDF2: iterations (c) should be >= 1");
+    const error = new Error("PBKDF2: iterations (c) should be >= 1");
     throw error;
   } else {
     const _Uint8Array = Uint8Array;
     const toBytesResult = tmp(9141).toBytes(B);
     const uint8Array = new Uint8Array(dkLen);
     const hmac = tmp(9145).hmac;
-    let obj = hmac.create(sha256, toBytesResult);
+    hmac.create(sha256, toBytesResult);
     const toBytesResult1 = tmp(9141).toBytes(B);
-    obj = { c: null, dkLen: null, asyncTick: null, DK: null, PRF: null, PRFSalt: null };
-    obj[0] = c;
-    obj[1] = dkLen;
-    obj[2] = asyncTick;
-    obj[3] = uint8Array;
-    obj[4] = obj;
-    obj[5] = obj._cloneInto().update(toBytesResult1);
+    const obj = { c, dkLen, asyncTick, DK: uint8Array, PRF: null, PRFSalt: null };
+    obj.PRF = obj;
+    obj.PRFSalt = obj._cloneInto().update(toBytesResult1);
     return obj;
   }
   const checkOptsResult = _asyncLoop.checkOpts({ dkLen: 32, asyncTick: 10 }, arg3);
@@ -40,245 +36,219 @@ function pbkdf2Output(destroy, destroy2, arg2, destroy3, arr) {
   arr.fill(0);
   return arg2;
 }
-function _pbkdf2Async() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c12 = 0;
-    c13 = 0;
-    c10 = 0;
-    return (function* (arg0, arg1, arg2, arg3) {
-      if (c13 === 2) {
-        c13 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_5 = async function _pbkdf2Async(arg0, value) {
+  if (c13 === 2) {
+    c13 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c13 = 2;
+      if (0 === c12) {
         if (arg0 === 1) {
-          throw arg1;
+          c13 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c13 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c13 = 2;
-          if (0 === c12) {
-            if (arg0 === 1) {
-              c13 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c13 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+          closure_9 = tmp3;
+          const int32 = tmp7;
+          closure_136_0 = undefined;
+          closure_136_1 = undefined;
+          closure_136_2 = undefined;
+          closure_136_3 = undefined;
+          closure_136_4 = undefined;
+          closure_136_5 = undefined;
+          let PRFSalt;
+          closure_136_7 = undefined;
+          closure_136_8 = undefined;
+          closure_136_9 = undefined;
+          closure_136_10 = undefined;
+          closure_136_11 = undefined;
+          closure_136_12 = undefined;
+          const tmp67 = pbkdf2Init(closure_0, closure_1, closure_2, closure_3);
+          ({ c: closure_136_1, dkLen } = tmp67);
+          closure_136_2 = dkLen;
+          ({ asyncTick: closure_136_3, DK: closure_136_4, PRF } = tmp67);
+          closure_136_5 = PRF;
+          PRFSalt = tmp67.PRFSalt;
+          const _Uint8Array = Uint8Array;
+          const uint8Array = new Uint8Array(4);
+          closure_136_7 = uint8Array;
+          closure_136_8 = _asyncLoop.createView(uint8Array);
+          const _Uint8Array2 = Uint8Array;
+          const uint8Array1 = new Uint8Array(PRF.outputLen);
+          closure_136_9 = uint8Array1;
+          closure_136_10 = async function _loop(arg0, value) {
+            if (v3 === 2) {
+              v3 = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp3 === 3) {
+              if (arg0 === 1) {
+                throw value;
+              } else if (arg0 === 2) {
+                let obj = { value, done: true };
+                return obj;
+              } else {
+                return { value: "HermesInternal", done: null };
+              }
             } else {
-              let uint8Array1 = tmp3;
-              closure_8 = tmp7;
-              c0 = undefined;
-              c1 = undefined;
-              dkLen = undefined;
-              c3 = undefined;
-              let callback3;
-              let iter4;
-              let next;
-              let iter3;
-              closure_8 = undefined;
-              uint8Array1 = undefined;
-              let v0;
-              closure_11 = undefined;
-              c12 = undefined;
-              const tmp69 = callback2(c0, c1, dkLen, c3);
-              ({ c: c1, dkLen } = tmp69);
-              ({ asyncTick: c3, DK: closure_4, PRF } = tmp69);
-              iter4 = PRF;
-              next = tmp69.PRFSalt;
-              const _Uint8Array = Uint8Array;
-              const uint8Array = new Uint8Array(4);
-              iter3 = uint8Array;
-              closure_8 = callback(table[2]).createView(uint8Array);
-              const _Uint8Array2 = Uint8Array;
-              uint8Array1 = new Uint8Array(PRF.outputLen);
-              v0 = function* _loop() {
-                if (v0 === 2) {
-                  v0 = 3;
-                  HermesBuiltin.throwTypeError();
-                } else if (tmp3 === 3) {
+              try {
+                v3 = 2;
+                if (0 === c1) {
                   if (arg0 === 1) {
-                    throw arg1;
+                    v3 = 3;
+                    throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    v3 = 3;
+                    obj = { value, done: true };
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    const subarrayResult = closure_2_4.subarray(closure_2_12, closure_2_12 + outputLen.outputLen);
+                    v3 = subarrayResult;
+                    int32.setInt32(0, closure_2_11, false);
+                    _cloneIntoResult = next._cloneInto(_cloneIntoResult);
+                    _cloneIntoResult.update(iter3).digestInto(tmp3);
+                    const result = subarrayResult.set(tmp3.subarray(0, subarrayResult.length));
+                    c1 = 1;
+                    v3 = 1;
+                    const obj1 = {
+                      value: v3(c1[2]).asyncLoop(closure_2_1 - 1, closure_2_3, async () => {
+                        let length;
+                        _cloneIntoResult = outputLen._cloneInto(c0);
+                        outputLen._cloneInto(c0).update(closure_2_9).digestInto(closure_2_9);
+                        let num = 0;
+                        if (0 < subarrayResult.length) {
+                          do {
+                            subarrayResult[num] = subarrayResult[num] ^ closure_2_9[num];
+                            num = num + 1;
+                            length = subarrayResult.length;
+                          } while (num < length);
+                        }
+                      }),
+                      done: false,
+                    };
+                    return obj1;
                   }
+                } else if (arg0 === 1) {
+                  v3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  v3 = 3;
+                  obj = { value, done: true };
+                  return obj;
                 } else {
-                  try {
-                    v0 = 2;
-                    if (0 === table) {
-                      if (arg0 === 1) {
-                        v0 = 3;
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        v0 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      } else {
-                        const subarrayResult = closure_1_4.subarray(closure_1_12, closure_1_12 + closure_1_5.outputLen);
-                        v0 = subarrayResult;
-                        closure_1_8.setInt32(0, closure_1_11, false);
-                        let _cloneIntoResult = closure_1_6._cloneInto(v0);
-                        v0 = _cloneIntoResult;
-                        _cloneIntoResult.update(closure_1_7).digestInto(closure_1_9);
-                        const result = subarrayResult.set(closure_1_9.subarray(0, subarrayResult.length));
-                        table = 1;
-                        v0 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = v0(table[2]).asyncLoop(table - 1, closure_1_3, () => {
-                          let length;
-                          const _cloneIntoResult = closure_1_5._cloneInto(c0);
-                          closure_1_5._cloneInto(c0).update(closure_1_9).digestInto(closure_1_9);
-                          let num = 0;
-                          if (0 < c0.length) {
-                            do {
-                              let tmp2 = c0;
-                              let tmp3 = closure_1_9;
-                              c0[num] = c0[num] ^ closure_1_9[num];
-                              num = num + 1;
-                              length = c0.length;
-                            } while (num < length);
-                          }
-                        });
-                        return obj1;
-                      }
-                    } else if (arg0 === 1) {
-                      v0 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      v0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      v0 = 3;
-                      return { value: "HermesInternal", done: null };
-                    }
-                  } catch (tmp5) {
-                    v0 = tmp;
-                    throw tmp5;
-                  }
+                  v3 = 3;
+                  return { value: "HermesInternal", done: null };
                 }
-              };
-              closure_11 = 1;
-              c12 = 0;
-              if (c12 < dkLen) {
-                iter3 = v0()[tmp62.iterator]();
-                HermesBuiltin.ensureObject("iterator is not an object");
-                next = iter3.next;
-                callback3 = undefined;
-                const tmp29 = v0();
+              } catch (tmp5) {
+                v3 = tmp;
+                throw tmp5;
               }
-              callback3(iter4, next, callback3, c0, uint8Array1);
-              c13 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = callback3;
-              return obj1;
             }
+          };
+          closure_136_11 = 1;
+          closure_136_12 = 0;
+          if (closure_136_12 < dkLen) {
+            const iter3 = closure_136_10()[tmp60.iterator]();
+            HermesBuiltin.ensureObject("iterator is not an object");
+            const next = iter3.next;
+            closure_4 = undefined;
+            const tmp28 = closure_136_10();
+          }
+          closure_137_4(closure_136_5, PRFSalt, closure_136_4, closure_136_0, closure_136_9);
+          c13 = 3;
+          let obj1 = { value: closure_136_4, done: true };
+          return obj1;
+        }
+      } else {
+        if (1 === tmp7) {
+          c10 = 1;
+          if (arg0 === 1) {
+            c13 = 3;
+            throw value;
           } else {
-            if (1 !== tmp7) {
-              v0 = 0;
-              const method = HermesBuiltin.getMethod("throw");
+            closure_4 = value;
+            if (arg0 === 2) {
+              closure_4 = value;
+              c10 = 0;
+              const method = HermesBuiltin.getMethod("return");
               if (method === undefined) {
-                const method1 = HermesBuiltin.getMethod("return");
-                if (method1 !== undefined) {
-                  HermesBuiltin.ensureObject("iterator.return() did not return an object");
-                }
-                HermesBuiltin.throwTypeError();
+                c13 = 3;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
-                const iter = method(tmp9);
-                HermesBuiltin.ensureObject("iterator.throw() did not return an object");
-                if (iter.done) {
-                  iter4 = iter;
+                const iter2 = method(closure_4);
+                HermesBuiltin.ensureObject("iterator.return() did not return an object");
+                if (iter2.done) {
+                  c13 = 3;
+                  obj = { value: iter2.value, done: true };
+                  return obj;
                 } else {
                   c12 = 1;
                   c13 = 1;
-                  return iter;
+                  return iter2;
                 }
               }
-              const value = iter4.value;
-              closure_11 = closure_11 + 1;
-              c12 = c12 + iter4.outputLen;
-              tmp9 = closure_11;
-            }
-            v0 = 1;
-            if (arg0 === 1) {
-              c13 = 3;
-              throw arg1;
             } else {
-              callback3 = arg1;
-              if (arg0 === 2) {
-                callback3 = arg1;
-                v0 = 0;
-                const method2 = HermesBuiltin.getMethod("return");
-                if (method2 === undefined) {
-                  c13 = 3;
-                  const obj2 = { value: null, done: true };
-                  obj2[0] = arg1;
-                  return obj2;
-                } else {
-                  const iter2 = method2(callback3);
-                  HermesBuiltin.ensureObject("iterator.return() did not return an object");
-                  if (iter2.done) {
-                    c13 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = iter2.value;
-                    return obj;
-                  } else {
-                    c12 = 1;
-                    c13 = 1;
-                    return iter2;
-                  }
-                }
-              } else {
-                v0 = 0;
-                const tmp20 = arg1;
-              }
+              c10 = 0;
+              const tmp19 = value;
             }
           }
-          iter4 = next(tmp20);
-          HermesBuiltin.ensureObject("iterator.next() did not return an object");
-          if (!iter4.done) {
-            c12 = 1;
-            c13 = 1;
-            return iter4;
-          }
-        } catch (tmp54) {
-          closure_11 = tmp54;
-          if (tmp4 === v0) {
-            c13 = tmp2;
-            throw tmp54;
+        } else {
+          c10 = 0;
+          const method1 = HermesBuiltin.getMethod("throw");
+          if (method1 === undefined) {
+            const method2 = HermesBuiltin.getMethod("return");
+            if (method2 !== undefined) {
+              HermesBuiltin.ensureObject("iterator.return() did not return an object");
+            }
+            throw new TypeError("yield* delegate must have a .throw() method");
           } else {
-            c12 = tmp;
+            const iter = method1(tmp9);
+            HermesBuiltin.ensureObject("iterator.throw() did not return an object");
+            if (iter.done) {
+              let iter4 = iter;
+            } else {
+              c12 = 1;
+              c13 = 1;
+              return iter;
+            }
           }
+          tmp9 = closure_11;
         }
+        value = iter4.value;
+        closure_136_11 = closure_136_11 + 1;
+        closure_136_12 = closure_136_12 + closure_136_5.outputLen;
       }
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      iter4 = next(tmp19);
+      HermesBuiltin.ensureObject("iterator.next() did not return an object");
+      if (!iter4.done) {
+        c12 = 1;
+        c13 = 1;
+        return iter4;
+      }
+    } catch (tmp53) {
+      closure_11 = tmp53;
+      if (tmp4 === c10) {
+        c13 = tmp2;
+        throw tmp53;
+      } else {
+        c12 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
 
 export const pbkdf2 = function pbkdf2(sha256, B, B, arg3) {
   ({ c, dkLen, DK, PRF, PRFSalt } = pbkdf2Init(sha256, B, B, arg3));
@@ -296,13 +266,10 @@ export const pbkdf2 = function pbkdf2(sha256, B, B, arg3) {
       let updateResult = _cloneIntoResult.update(uint8Array);
       let digestIntoResult = updateResult.digestInto(uint8Array1);
       let result = subarrayResult.set(uint8Array1.subarray(0, subarrayResult.length));
-      let tmp8 = num;
-      let tmp9 = num2;
       for (let num3 = 1; num3 < c; num3 = num3 + 1) {
         let _cloneIntoResult1 = PRF._cloneInto(_cloneIntoResult);
         let updateResult1 = _cloneIntoResult1.update(uint8Array1);
         let digestIntoResult1 = updateResult1.digestInto(uint8Array1);
-        let tmp11 = num3;
         let num4 = 0;
         if (0 < subarrayResult.length) {
           do {
@@ -328,7 +295,7 @@ export const pbkdf2 = function pbkdf2(sha256, B, B, arg3) {
 };
 export const pbkdf2Async = function pbkdf2Async(arg0, arg1, arg2, arg3) {
   const self = this;
-  const apply = _pbkdf2Async.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

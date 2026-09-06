@@ -1,5 +1,5 @@
 // _runtime/01823_RNScreensTurboModule.js
-import addLogBoxLog from "01640_addLogBoxLog.js";
+import _mod1640 from "metro/01640__.js";
 
 let c0 = require;
 let RNScreensTurboModule = global.RNScreensTurboModule;
@@ -9,49 +9,43 @@ if (!RNScreensTurboModule) {
   };
   obj = { startTransition: null, updateTransition: null, finishTransition: null };
   obj = { topScreenId: -1, belowTopScreenId: -1, canStartTransition: false };
-  c0 = obj;
   const fn = function t() {
     const logger = _undefined(1640).logger;
     logger.warn(
       "RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.",
     );
-    return _undefined;
+    return c0;
   };
-  const obj1 = { logger: null, defaultReturnValue: null };
-  obj1[0] = addLogBoxLog.logger;
-  obj1[1] = obj;
+  const obj1 = { logger: _mod1640.logger, defaultReturnValue: obj };
   fn.__closure = obj1;
   fn.__workletHash = 6450550757460;
   fn.__initData = obj;
-  obj[0] = fn;
-  c0 = undefined;
+  obj.startTransition = fn;
   const fn2 = function t() {
     const logger = _undefined(1640).logger;
     logger.warn(
       "RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.",
     );
-    return _undefined;
+    return c0;
   };
-  const obj2 = { logger: null, defaultReturnValue: "a" };
-  obj2[0] = addLogBoxLog.logger;
+  const obj2 = { logger: _mod1640.logger, defaultReturnValue: "a" };
   fn2.__closure = obj2;
   fn2.__workletHash = 6450550757460;
   fn2.__initData = obj;
-  obj[1] = fn2;
+  obj.updateTransition = fn2;
   c0 = undefined;
   const fn3 = function t() {
     const logger = _undefined(1640).logger;
     logger.warn(
       "RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.",
     );
-    return _undefined;
+    return c0;
   };
-  const obj3 = { logger: null, defaultReturnValue: "a" };
-  obj3[0] = addLogBoxLog.logger;
+  const obj3 = { logger: _mod1640.logger, defaultReturnValue: "a" };
   fn3.__closure = obj3;
   fn3.__workletHash = 6450550757460;
   fn3.__initData = obj;
-  obj[2] = fn3;
+  obj.finishTransition = fn3;
   RNScreensTurboModule = obj;
 }
 

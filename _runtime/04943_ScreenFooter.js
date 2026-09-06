@@ -1,17 +1,16 @@
 // _runtime/04943_ScreenFooter.js
-import noopDefault from "00019_noop.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/04944___INTERNAL_VIEW_CONFIG.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _modDef4944 from "metro/04944__.js";
+import noop from "metro/00019__.js";
 
 class ScreenFooter {
   constructor(arg0) {
     obj = {};
-    tmp = require("__INTERNAL_VIEW_CONFIG");
+    tmp = closure_0(closure_1[2]);
     merged = Object.assign(global);
     return jsx(tmp, obj);
   }
 }
-noopDefault;
+const jsx = fn(21).jsx;
 
 export default ScreenFooter;
 export const FooterComponent = function FooterComponent(children) {

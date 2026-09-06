@@ -1,4 +1,6 @@
 // _runtime/08387_baseOrderBy.js
+import arrayMap from "00628_arrayMap.js";
+import compareMultiple from "08390_compareMultiple.js";
 
 export default function baseOrderBy(arg0, arg1, arg2) {
   closure_0 = arg1;
@@ -6,14 +8,14 @@ export default function baseOrderBy(arg0, arg1, arg2) {
   if (arg1.length) {
     let items = tmp(tmp2[0])(arg1, (arg0) => {
       let fn = arg0;
-      const callback = arg0;
-      if (callback(514)(arg0)) {
+      closure_0 = arg0;
+      if (closure_0(closure_1[1])(arg0)) {
         fn = (arg0) => {
-          let first = lib;
-          if (1 === lib.length) {
-            first = lib[0];
+          let first = closure_0;
+          if (1 === closure_0.length) {
+            first = closure_0[0];
           }
-          return lib(closure_1_1[2])(arg0, first);
+          return closure_0(closure_1[2])(arg0, first);
         };
       }
       return fn;
@@ -25,18 +27,19 @@ export default function baseOrderBy(arg0, arg1, arg2) {
     tmp3 = tmp2;
     tmp4 = tmp;
   }
-  closure_0 = items;
   c2 = -1;
-  let tmp4Result = tmp4(tmp3[0]);
-  tmp4Result = tmp4(tmp3[4]);
+  tmp4(tmp3[0]);
+  const tmp4Result = tmp4(tmp3[4]);
   closure_0 = tmp4Result(items, tmp4Result(tmp4(tmp3[5])));
   return tmp4(tmp3[7])(
-    tmp4(tmp3[6])(arg0, (value) => {
-      const callback = value;
+    tmp4(tmp3[6])(arg0, (value, arg1, arg2) => {
+      closure_0 = value;
+      const obj = { criteria: arrayMap(closure_0, (fn) => fn(closure_0)), index: null, value };
       const sum = c2 + 1;
       c2 = sum;
-      return { criteria: callback(628)(callback, (arg0) => arg0(closure_0)), index: sum, value };
+      obj.index = sum;
+      return obj;
     }),
-    (arg0, arg1) => callback(8390)(arg0, arg1, dependencyMap),
+    (arg0, arg1) => compareMultiple(arg0, arg1, closure_1),
   );
 }

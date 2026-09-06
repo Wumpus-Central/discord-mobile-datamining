@@ -1,5 +1,5 @@
 // _runtime/01322_ResponseBase.js
-import _createForOfIteratorHelper from "01274__createForOfIteratorHelper.js";
+import _mod1274 from "metro/01274__.js";
 
 class ResponseBase {
   constructor() {
@@ -11,9 +11,9 @@ class ResponseBase {
   _setHeaderProperties(arg0) {
     tmp = global["content-type"] || "";
     self = this;
-    obj = require("_createForOfIteratorHelper");
+    obj = closure_0(closure_1[0]);
     this.type = obj.type(tmp);
-    obj2 = require("_createForOfIteratorHelper");
+    obj2 = closure_0(closure_1[0]);
     paramsResult = obj2.params(tmp);
     for (const key10017 in paramsResult) {
       tmp6 = key10017;
@@ -39,7 +39,7 @@ class ResponseBase {
       } else {
         tmp4 = closure_0;
         tmp5 = closure_1;
-        obj3 = require("_createForOfIteratorHelper");
+        obj3 = closure_0(closure_1[0]);
         self.links = obj3.parseLinks(global.link);
       }
       return;

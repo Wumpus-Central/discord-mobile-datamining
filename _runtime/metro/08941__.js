@@ -1,8 +1,8 @@
 // _runtime/metro/08941__.js
-import _isNativeReflectConstruct from "../08936__isNativeReflectConstruct.js";
-import mergeDefs from "../08939_mergeDefs.js";
-import mergeDefs2 from "../08942_mergeDefs.js";
-import closure_1 from "00032__slicedToArray.js";
+import _mod8936 from "08936__.js";
+import _mod8939 from "08939__.js";
+import _mod8942 from "08942__.js";
+import _slicedToArray from "00032__.js";
 
 const self = this;
 let self2 = this;
@@ -29,26 +29,24 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
               continue;
             } else {
               let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
               let call = hasOwnProperty.call;
               if (typeof call === "unknown") {
                 let hasOwnPropertyResult = hasOwnProperty(key10009);
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -79,9 +77,9 @@ if (self2) {
     exports.$ZodCheckProperty = undefined;
     exports.$ZodCheckMimeType = undefined;
     exports.$ZodCheckOverwrite = undefined;
-    const fnResult = fn(_isNativeReflectConstruct);
-    let closure_4 = fn(mergeDefs2);
-    let closure_5 = fn(mergeDefs);
+    const fnResult = fn(_mod8936);
+    let closure_4 = fn(_mod8942);
+    let closure_5 = fn(_mod8939);
     exports.$ZodCheck = fnResult.$constructor("$ZodCheck", (_zod, def) => {
       if (_zod._zod == null) {
         _zod._zod = {};
@@ -92,13 +90,13 @@ if (self2) {
         _zod.onattach = [];
       }
     });
-    let closure_6 = { number: "number", bigint: "bigint", object: "date" };
-    exports.$ZodCheckLessThan = fnResult.$constructor("$ZodCheckLessThan", (_zod) => {
-      const _exports = _zod;
+    const dependencyMap = { number: "number", bigint: "bigint", object: "date" };
+    exports.$ZodCheckLessThan = fnResult.$constructor("$ZodCheckLessThan", (_zod, arg1) => {
+      const inst = _zod;
       closure_1 = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
+      const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
-      closure_2 = dependencyMap[typeof arg1.value];
+      const origin = dependencyMap[typeof arg1.value];
       const onattach = _zod._zod.onattach;
       onattach.push((_zod) => {
         const bag = _zod._zod.bag;
@@ -108,7 +106,7 @@ if (self2) {
           POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
         }
         if (closure_1.value < POSITIVE_INFINITY) {
-          const value = iter.value;
+          value = iter.value;
           if (iter.inclusive) {
             bag.maximum = value;
           } else {
@@ -119,12 +117,11 @@ if (self2) {
       _zod._zod.check = (value) => {
         let iter = value;
         let iter2 = closure_1;
-        value = value.value;
         value = closure_1.value;
         if (!(closure_1.inclusive ? value <= value : value < value)) {
           const issues = iter.issues;
           let obj = {
-            origin: null,
+            origin,
             code: "too_big",
             maximum: null,
             input: null,
@@ -132,30 +129,29 @@ if (self2) {
             inst: null,
             continue: null,
           };
-          obj[0] = closure_2;
           if (typeof iter2.value === "object") {
             value = iter2.value;
             let time = value.getTime();
           } else {
             time = iter2.value;
           }
-          obj[2] = time;
-          obj[3] = iter.value;
+          obj.maximum = time;
+          obj.input = iter.value;
           iter = iter2.inclusive;
-          obj[4] = iter;
-          obj[5] = closure_0;
+          obj.inclusive = iter;
+          obj.inst = inst;
           iter2 = iter2.abort;
-          obj[6] = !iter2;
+          obj.continue = !iter2;
           obj = issues.push(obj);
         }
       };
     });
-    exports.$ZodCheckGreaterThan = fnResult.$constructor("$ZodCheckGreaterThan", (_zod) => {
-      const _exports = _zod;
+    exports.$ZodCheckGreaterThan = fnResult.$constructor("$ZodCheckGreaterThan", (_zod, arg1) => {
+      const inst = _zod;
       closure_1 = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
+      const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
-      closure_2 = dependencyMap[typeof arg1.value];
+      const origin = dependencyMap[typeof arg1.value];
       const onattach = _zod._zod.onattach;
       onattach.push((_zod) => {
         const bag = _zod._zod.bag;
@@ -165,7 +161,7 @@ if (self2) {
           NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY;
         }
         if (closure_1.value > NEGATIVE_INFINITY) {
-          const value = iter.value;
+          value = iter.value;
           if (iter.inclusive) {
             bag.minimum = value;
           } else {
@@ -176,12 +172,11 @@ if (self2) {
       _zod._zod.check = (value) => {
         let iter = value;
         let iter2 = closure_1;
-        value = value.value;
         value = closure_1.value;
         if (!(closure_1.inclusive ? value >= value : value > value)) {
           const issues = iter.issues;
           let obj = {
-            origin: null,
+            origin,
             code: "too_small",
             minimum: null,
             input: null,
@@ -189,26 +184,25 @@ if (self2) {
             inst: null,
             continue: null,
           };
-          obj[0] = closure_2;
           if (typeof iter2.value === "object") {
             value = iter2.value;
             let time = value.getTime();
           } else {
             time = iter2.value;
           }
-          obj[2] = time;
-          obj[3] = iter.value;
+          obj.minimum = time;
+          obj.input = iter.value;
           iter = iter2.inclusive;
-          obj[4] = iter;
-          obj[5] = closure_0;
+          obj.inclusive = iter;
+          obj.inst = inst;
           iter2 = iter2.abort;
-          obj[6] = !iter2;
+          obj.continue = !iter2;
           obj = issues.push(obj);
         }
       };
     });
-    exports.$ZodCheckMultipleOf = fnResult.$constructor("$ZodCheckMultipleOf", (_zod) => {
-      const _exports = _zod;
+    exports.$ZodCheckMultipleOf = fnResult.$constructor("$ZodCheckMultipleOf", (_zod, arg1) => {
+      _exports = _zod;
       closure_1 = arg1;
       const $ZodCheck = _exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
@@ -222,7 +216,7 @@ if (self2) {
       _zod._zod.check = (value) => {
         if (typeof value.value !== typeof closure_1.value) {
           const _Error = Error;
-          error = new Error("Cannot mix number and bigint in multiple_of check.");
+          const error = new Error("Cannot mix number and bigint in multiple_of check.");
           throw error;
         } else {
           if (typeof value.value === "bigint") {
@@ -230,31 +224,26 @@ if (self2) {
             const result = value.value % iter.value;
             let tmp3 = result === BigInt(0);
           } else {
-            tmp3 = 0 === closure_1_5.floatSafeRemainder(value.value, iter.value);
+            tmp3 = 0 === closure_5.floatSafeRemainder(value.value, iter.value);
           }
           if (!tmp3) {
             const issues = value.issues;
             const obj = {
-              origin: null,
+              origin: typeof value.value,
               code: "not_multiple_of",
-              divisor: null,
-              input: null,
-              inst: null,
-              continue: null,
+              divisor: iter.value,
+              input: value.value,
+              inst,
+              continue: !iter.abort,
             };
-            obj[0] = typeof value.value;
-            obj[2] = iter.value;
-            obj[3] = value.value;
-            obj[4] = closure_0;
-            obj[5] = !iter.abort;
             issues.push(obj);
           }
         }
       };
     });
     exports.$ZodCheckNumberFormat = fnResult.$constructor("$ZodCheckNumberFormat", (_zod, format) => {
-      const _exports = _zod;
-      const callback = format;
+      _exports = _zod;
+      _slicedToArray = format;
       const $ZodCheck = _exports.$ZodCheck;
       $ZodCheck.init(_zod, format);
       format.format = format.format || "float64";
@@ -267,15 +256,15 @@ if (self2) {
       if (hasItem) {
         str2 = "int";
       }
-      [closure_4, closure_5] = callback(closure_5.NUMBER_FORMAT_RANGES[format.format], 2);
+      [closure_4, closure_5] = _slicedToArray(maximum.NUMBER_FORMAT_RANGES[format.format], 2);
       const onattach = _zod._zod.onattach;
       onattach.push((_zod) => {
         const bag = _zod._zod.bag;
         bag.format = closure_1.format;
-        bag.minimum = closure_4;
-        bag.maximum = closure_5;
+        bag.minimum = minimum;
+        bag.maximum = maximum;
         if (hasItem) {
-          bag.pattern = closure_1_4.integer;
+          bag.pattern = minimum.integer;
         }
       });
       _zod._zod.check = (value) => {
@@ -288,7 +277,7 @@ if (self2) {
               if (value > 0) {
                 const issues = value.issues;
                 let obj = {
-                  input: null,
+                  input: value,
                   code: "too_big",
                   maximum: null,
                   note: "Integers must be within the safe integer range.",
@@ -297,17 +286,16 @@ if (self2) {
                   inclusive: true,
                   continue: null,
                 };
-                obj[0] = value;
                 const _Number4 = Number;
-                obj[2] = Number.MAX_SAFE_INTEGER;
-                obj[4] = closure_0;
-                obj[5] = str2;
-                obj[7] = !closure_1.abort;
+                obj.maximum = Number.MAX_SAFE_INTEGER;
+                obj.inst = inst;
+                obj.origin = str2;
+                obj.continue = !closure_1.abort;
                 issues.push(obj);
               } else {
                 const issues1 = value.issues;
                 obj = {
-                  input: null,
+                  input: value,
                   code: "too_small",
                   minimum: null,
                   note: "Integers must be within the safe integer range.",
@@ -316,114 +304,100 @@ if (self2) {
                   inclusive: true,
                   continue: null,
                 };
-                obj[0] = value;
                 const _Number3 = Number;
-                obj[2] = Number.MIN_SAFE_INTEGER;
-                obj[4] = closure_0;
-                obj[5] = str2;
-                obj[7] = !closure_1.abort;
+                obj.minimum = Number.MIN_SAFE_INTEGER;
+                obj.inst = inst;
+                obj.origin = str2;
+                obj.continue = !closure_1.abort;
                 issues1.push(obj);
               }
             }
           } else {
             const issues2 = value.issues;
-            obj = { expected: null, format: null, code: "invalid_type", continue: false, input: null, inst: null };
-            obj[0] = str2;
-            obj[1] = closure_1.format;
-            obj[4] = value;
-            obj[5] = closure_0;
+            obj = {
+              expected: str2,
+              format: closure_1.format,
+              code: "invalid_type",
+              continue: false,
+              input: value,
+              inst,
+            };
             issues2.push(obj);
           }
         }
-        if (value < closure_4) {
+        if (value < minimum) {
           const issues3 = value.issues;
-          obj1 = {
+          const obj1 = {
             origin: "number",
-            input: null,
+            input: value,
             code: "too_small",
-            minimum: null,
+            minimum: tmp14,
             inclusive: true,
-            inst: null,
-            continue: null,
+            inst,
+            continue: !closure_1.abort,
           };
-          obj1[1] = value;
-          obj1[3] = tmp14;
-          obj1[5] = closure_0;
-          obj1[6] = !closure_1.abort;
           issues3.push(obj1);
         }
-        if (value > closure_5) {
+        if (value > maximum) {
           const issues4 = value.issues;
           const obj2 = {
             origin: "number",
-            input: null,
+            input: value,
             code: "too_big",
-            maximum: null,
+            maximum: tmp18,
             inclusive: true,
-            inst: null,
-            continue: null,
+            inst,
+            continue: !closure_1.abort,
           };
-          obj2[1] = value;
-          obj2[3] = tmp18;
-          obj2[5] = closure_0;
-          obj2[6] = !closure_1.abort;
           issues4.push(obj2);
         }
       };
     });
-    exports.$ZodCheckBigIntFormat = fnResult.$constructor("$ZodCheckBigIntFormat", (_zod) => {
-      const _exports = _zod;
-      const callback = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
+    exports.$ZodCheckBigIntFormat = fnResult.$constructor("$ZodCheckBigIntFormat", (_zod, arg1) => {
+      const inst = _zod;
+      closure_1 = arg1;
+      const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
-      [self2, __setModuleDefault] = callback(closure_5.BIGINT_FORMAT_RANGES[arg1.format], 2);
+      [self2, __setModuleDefault] = _slicedToArray(closure_5.BIGINT_FORMAT_RANGES[arg1.format], 2);
       const onattach = _zod._zod.onattach;
       onattach.push((_zod) => {
         const bag = _zod._zod.bag;
         bag.format = closure_1.format;
-        bag.minimum = closure_2;
-        bag.maximum = closure_3;
+        bag.minimum = minimum;
+        bag.maximum = maximum;
       });
       _zod._zod.check = (value) => {
         value = value.value;
-        if (value < closure_2) {
+        if (value < minimum) {
           const issues = value.issues;
           let obj = {
             origin: "bigint",
-            input: null,
+            input: value,
             code: "too_small",
-            minimum: null,
+            minimum: tmp,
             inclusive: true,
-            inst: null,
-            continue: null,
+            inst,
+            continue: !closure_1.abort,
           };
-          obj[1] = value;
-          obj[3] = tmp;
-          obj[5] = closure_0;
-          obj[6] = !closure_1.abort;
           issues.push(obj);
         }
-        if (value > closure_3) {
+        if (value > maximum) {
           const issues1 = value.issues;
           obj = {
             origin: "bigint",
-            input: null,
+            input: value,
             code: "too_big",
-            maximum: null,
+            maximum: tmp5,
             inclusive: true,
-            inst: null,
-            continue: null,
+            inst,
+            continue: !closure_1.abort,
           };
-          obj[1] = value;
-          obj[3] = tmp5;
-          obj[5] = closure_0;
-          obj[6] = !closure_1.abort;
           issues1.push(obj);
         }
       };
     });
-    exports.$ZodCheckMaxSize = fnResult.$constructor("$ZodCheckMaxSize", (_zod) => {
-      const _exports = _zod;
+    exports.$ZodCheckMaxSize = fnResult.$constructor("$ZodCheckMaxSize", (_zod, arg1) => {
+      _exports = _zod;
       closure_1 = arg1;
       const $ZodCheck = _exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
@@ -431,7 +405,7 @@ if (self2) {
       if (def.when == null) {
         def.when = (value) => {
           value = value.value;
-          const nullishResult = closure_5.nullish(value);
+          const nullishResult = closure_1_5.nullish(value);
           let tmp2 = !nullishResult;
           if (!nullishResult) {
             tmp2 = undefined !== value.size;
@@ -455,25 +429,20 @@ if (self2) {
         if (value.size > closure_1.maximum) {
           const issues = value.issues;
           const obj = {
-            origin: null,
+            origin: closure_5.getSizableOrigin(value),
             code: "too_big",
-            maximum: null,
+            maximum: tmp.maximum,
             inclusive: true,
-            input: null,
-            inst: null,
-            continue: null,
+            input: value,
+            inst,
+            continue: !tmp.abort,
           };
-          obj[0] = closure_1_5.getSizableOrigin(value);
-          obj[2] = tmp.maximum;
-          obj[4] = value;
-          obj[5] = closure_0;
-          obj[6] = !tmp.abort;
           issues.push(obj);
         }
       };
     });
-    exports.$ZodCheckMinSize = fnResult.$constructor("$ZodCheckMinSize", (_zod) => {
-      const _exports = _zod;
+    exports.$ZodCheckMinSize = fnResult.$constructor("$ZodCheckMinSize", (_zod, arg1) => {
+      _exports = _zod;
       closure_1 = arg1;
       const $ZodCheck = _exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
@@ -481,7 +450,7 @@ if (self2) {
       if (def.when == null) {
         def.when = (value) => {
           value = value.value;
-          const nullishResult = closure_5.nullish(value);
+          const nullishResult = closure_1_5.nullish(value);
           let tmp2 = !nullishResult;
           if (!nullishResult) {
             tmp2 = undefined !== value.size;
@@ -505,33 +474,28 @@ if (self2) {
         if (value.size < closure_1.minimum) {
           const issues = value.issues;
           const obj = {
-            origin: null,
+            origin: closure_5.getSizableOrigin(value),
             code: "too_small",
-            minimum: null,
+            minimum: tmp.minimum,
             inclusive: true,
-            input: null,
-            inst: null,
-            continue: null,
+            input: value,
+            inst,
+            continue: !tmp.abort,
           };
-          obj[0] = closure_1_5.getSizableOrigin(value);
-          obj[2] = tmp.minimum;
-          obj[4] = value;
-          obj[5] = closure_0;
-          obj[6] = !tmp.abort;
           issues.push(obj);
         }
       };
     });
-    exports.$ZodCheckSizeEquals = fnResult.$constructor("$ZodCheckSizeEquals", (_zod) => {
-      const _exports = _zod;
-      closure_1 = arg1;
+    exports.$ZodCheckSizeEquals = fnResult.$constructor("$ZodCheckSizeEquals", (_zod, arg1) => {
+      _exports = _zod;
+      let size = arg1;
       const $ZodCheck = _exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
       const def = _zod._zod.def;
       if (def.when == null) {
         def.when = (value) => {
           value = value.value;
-          const nullishResult = closure_5.nullish(value);
+          const nullishResult = closure_1_5.nullish(value);
           let tmp2 = !nullishResult;
           if (!nullishResult) {
             tmp2 = undefined !== value.size;
@@ -547,26 +511,23 @@ if (self2) {
       _zod._zod.check = (value) => {
         let iter = value;
         value = value.value;
-        const size = value.size;
+        size = value.size;
         let abort = size;
         if (size !== size.size) {
           const issues = iter.issues;
-          let arr = { origin: null };
-          arr[0] = closure_1_5.getSizableOrigin(value);
+          let arr = { origin: closure_5.getSizableOrigin(value) };
           if (tmp5) {
-            const obj = { code: "too_big", maximum: null };
-            obj[1] = abort.size;
+            const obj = { code: "too_big", maximum: abort.size };
             arr = obj;
           } else {
-            arr = { code: "too_small", minimum: null };
-            arr[1] = abort.size;
+            arr = { code: "too_small", minimum: abort.size };
           }
           const merged = Object.assign(arr);
           arr.inclusive = true;
           arr.exact = true;
           iter = iter.value;
           arr.input = iter;
-          arr.inst = closure_0;
+          arr.inst = inst;
           abort = abort.abort;
           arr.continue = !abort;
           arr = issues.push(arr);
@@ -574,8 +535,8 @@ if (self2) {
         }
       };
     });
-    exports.$ZodCheckMaxLength = fnResult.$constructor("$ZodCheckMaxLength", (_zod) => {
-      const _exports = _zod;
+    exports.$ZodCheckMaxLength = fnResult.$constructor("$ZodCheckMaxLength", (_zod, arg1) => {
+      _exports = _zod;
       closure_1 = arg1;
       const $ZodCheck = _exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
@@ -583,7 +544,7 @@ if (self2) {
       if (def.when == null) {
         def.when = (value) => {
           value = value.value;
-          const nullishResult = closure_5.nullish(value);
+          const nullishResult = closure_1_5.nullish(value);
           let tmp2 = !nullishResult;
           if (!nullishResult) {
             tmp2 = undefined !== value.length;
@@ -607,25 +568,20 @@ if (self2) {
         if (value.length > closure_1.maximum) {
           const issues = value.issues;
           const obj = {
-            origin: null,
+            origin: closure_5.getLengthableOrigin(value),
             code: "too_big",
-            maximum: null,
+            maximum: tmp.maximum,
             inclusive: true,
-            input: null,
-            inst: null,
-            continue: null,
+            input: value,
+            inst,
+            continue: !tmp.abort,
           };
-          obj[0] = closure_1_5.getLengthableOrigin(value);
-          obj[2] = tmp.maximum;
-          obj[4] = value;
-          obj[5] = closure_0;
-          obj[6] = !tmp.abort;
           issues.push(obj);
         }
       };
     });
-    exports.$ZodCheckMinLength = fnResult.$constructor("$ZodCheckMinLength", (_zod) => {
-      const _exports = _zod;
+    exports.$ZodCheckMinLength = fnResult.$constructor("$ZodCheckMinLength", (_zod, arg1) => {
+      _exports = _zod;
       closure_1 = arg1;
       const $ZodCheck = _exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
@@ -633,7 +589,7 @@ if (self2) {
       if (def.when == null) {
         def.when = (value) => {
           value = value.value;
-          const nullishResult = closure_5.nullish(value);
+          const nullishResult = closure_1_5.nullish(value);
           let tmp2 = !nullishResult;
           if (!nullishResult) {
             tmp2 = undefined !== value.length;
@@ -657,33 +613,27 @@ if (self2) {
         if (value.length < closure_1.minimum) {
           const issues = value.issues;
           const obj = {
-            origin: null,
+            origin: closure_5.getLengthableOrigin(value),
             code: "too_small",
-            minimum: null,
+            minimum: tmp.minimum,
             inclusive: true,
-            input: null,
-            inst: null,
-            continue: null,
+            input: value,
+            inst,
+            continue: !tmp.abort,
           };
-          obj[0] = closure_1_5.getLengthableOrigin(value);
-          obj[2] = tmp.minimum;
-          obj[4] = value;
-          obj[5] = closure_0;
-          obj[6] = !tmp.abort;
           issues.push(obj);
         }
       };
     });
-    exports.$ZodCheckLengthEquals = fnResult.$constructor("$ZodCheckLengthEquals", (_zod) => {
-      const _exports = _zod;
-      closure_1 = arg1;
+    exports.$ZodCheckLengthEquals = fnResult.$constructor("$ZodCheckLengthEquals", (_zod, arg1) => {
+      _exports = _zod;
       const $ZodCheck = _exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
       const def = _zod._zod.def;
       if (def.when == null) {
         def.when = (value) => {
           value = value.value;
-          const nullishResult = closure_5.nullish(value);
+          const nullishResult = closure_1_5.nullish(value);
           let tmp2 = !nullishResult;
           if (!nullishResult) {
             tmp2 = undefined !== value.length;
@@ -702,22 +652,19 @@ if (self2) {
         let abort = length;
         if (value.length !== value.length.length) {
           const issues = iter.issues;
-          let arr = { origin: null };
-          arr[0] = closure_1_5.getLengthableOrigin(value);
+          let arr = { origin: closure_5.getLengthableOrigin(value) };
           if (length > abort.length) {
-            const obj = { code: "too_big", maximum: null };
-            obj[1] = abort.length;
+            const obj = { code: "too_big", maximum: abort.length };
             arr = obj;
           } else {
-            arr = { code: "too_small", minimum: null };
-            arr[1] = abort.length;
+            arr = { code: "too_small", minimum: abort.length };
           }
           const merged = Object.assign(arr);
           arr.inclusive = true;
           arr.exact = true;
           iter = iter.value;
           arr.input = iter;
-          arr.inst = closure_0;
+          arr.inst = inst;
           abort = abort.abort;
           arr.continue = !abort;
           arr = issues.push(arr);
@@ -725,9 +672,8 @@ if (self2) {
       };
     });
     exports.$ZodCheckStringFormat = fnResult.$constructor("$ZodCheckStringFormat", (_zod, pattern) => {
-      const _exports = _zod;
-      closure_1 = pattern;
-      const $ZodCheck = _exports.$ZodCheck;
+      const inst = _zod;
+      const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, pattern);
       const onattach = _zod._zod.onattach;
       onattach.push((_zod) => {
@@ -753,19 +699,15 @@ if (self2) {
             pattern = pattern.pattern;
             if (!pattern.test(value.value)) {
               const issues = value.issues;
-              let obj = { origin: "string", code: "invalid_format", format: null, input: null };
-              obj[2] = abort.format;
-              obj[3] = value.value;
+              let obj = { origin: "string", code: "invalid_format", format: abort.format, input: value.value };
               if (abort.pattern) {
-                obj = { pattern: null };
-                obj[0] = abort.pattern.toString();
-                obj1 = obj;
-                const str = abort.pattern;
+                obj = { pattern: abort.pattern.toString() };
+                let obj1 = obj;
               } else {
                 obj1 = {};
               }
               const merged = Object.assign(obj1);
-              obj.inst = closure_0;
+              obj.inst = inst;
               abort = abort.abort;
               obj.continue = !abort;
               obj = issues.push(obj);
@@ -776,10 +718,10 @@ if (self2) {
         _zod.check = () => {};
       }
     });
-    exports.$ZodCheckRegex = fnResult.$constructor("$ZodCheckRegex", (_zod) => {
-      const _exports = _zod;
+    exports.$ZodCheckRegex = fnResult.$constructor("$ZodCheckRegex", (_zod, arg1) => {
+      const inst = _zod;
       closure_1 = arg1;
-      const $ZodCheckStringFormat = _exports.$ZodCheckStringFormat;
+      const $ZodCheckStringFormat = exports.$ZodCheckStringFormat;
       $ZodCheckStringFormat.init(_zod, arg1);
       _zod._zod.check = (value) => {
         closure_1.pattern.lastIndex = 0;
@@ -790,17 +732,12 @@ if (self2) {
             origin: "string",
             code: "invalid_format",
             format: "regex",
-            input: null,
-            pattern: null,
-            inst: null,
-            continue: null,
+            input: value.value,
+            pattern: tmp.pattern.toString(),
+            inst,
+            continue: !tmp.abort,
           };
-          obj[3] = value.value;
-          obj[4] = tmp.pattern.toString();
-          obj[5] = closure_0;
-          obj[6] = !tmp.abort;
           issues.push(obj);
-          const str = tmp.pattern;
         }
       };
     });
@@ -819,9 +756,8 @@ if (self2) {
       $ZodCheckStringFormat.init(arg0, pattern);
     });
     exports.$ZodCheckIncludes = fnResult.$constructor("$ZodCheckIncludes", (_zod, position) => {
-      const _exports = _zod;
-      closure_1 = position;
-      const $ZodCheck = _exports.$ZodCheck;
+      const inst = _zod;
+      const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, position);
       const escapeRegexResult = closure_5.escapeRegex(position.includes);
       let combined = escapeRegexResult;
@@ -850,23 +786,18 @@ if (self2) {
             origin: "string",
             code: "invalid_format",
             format: "includes",
-            includes: null,
-            input: null,
-            inst: null,
-            continue: null,
+            includes: tmp.includes,
+            input: value.value,
+            inst,
+            continue: !tmp.abort,
           };
-          obj[3] = tmp.includes;
-          obj[4] = value.value;
-          obj[5] = closure_0;
-          obj[6] = !tmp.abort;
           issues.push(obj);
         }
       };
     });
     exports.$ZodCheckStartsWith = fnResult.$constructor("$ZodCheckStartsWith", (_zod, prefix) => {
-      const _exports = _zod;
-      closure_1 = prefix;
-      const $ZodCheck = _exports.$ZodCheck;
+      const inst = _zod;
+      const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, prefix);
       const regExp = new RegExp("^" + closure_5.escapeRegex(prefix.prefix) + ".*");
       if (prefix.pattern == null) {
@@ -891,23 +822,18 @@ if (self2) {
             origin: "string",
             code: "invalid_format",
             format: "starts_with",
-            prefix: null,
-            input: null,
-            inst: null,
-            continue: null,
+            prefix: tmp.prefix,
+            input: value.value,
+            inst,
+            continue: !tmp.abort,
           };
-          obj[3] = tmp.prefix;
-          obj[4] = value.value;
-          obj[5] = closure_0;
-          obj[6] = !tmp.abort;
           issues.push(obj);
         }
       };
     });
     exports.$ZodCheckEndsWith = fnResult.$constructor("$ZodCheckEndsWith", (_zod, suffix) => {
-      const _exports = _zod;
-      closure_1 = suffix;
-      const $ZodCheck = _exports.$ZodCheck;
+      const inst = _zod;
+      const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, suffix);
       const regExp = new RegExp(".*" + closure_5.escapeRegex(suffix.suffix) + "$");
       if (suffix.pattern == null) {
@@ -932,34 +858,29 @@ if (self2) {
             origin: "string",
             code: "invalid_format",
             format: "ends_with",
-            suffix: null,
-            input: null,
-            inst: null,
-            continue: null,
+            suffix: tmp.suffix,
+            input: value.value,
+            inst,
+            continue: !tmp.abort,
           };
-          obj[3] = tmp.suffix;
-          obj[4] = value.value;
-          obj[5] = closure_0;
-          obj[6] = !tmp.abort;
           issues.push(obj);
         }
       };
     });
-    exports.$ZodCheckProperty = fnResult.$constructor("$ZodCheckProperty", (_zod) => {
-      const _exports = arg1;
+    exports.$ZodCheckProperty = fnResult.$constructor("$ZodCheckProperty", (_zod, arg1) => {
+      _exports = arg1;
       const $ZodCheck = _exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
       _zod._zod.check = (issues) => {
-        closure_0 = issues;
-        const _zod = closure_0.schema._zod;
-        const runResult = _zod.run({ value: issues.value[closure_0.property], issues: [] }, {});
+        const _zod = issues.schema._zod;
+        const runResult = _zod.run({ value: issues.value[issues.property], issues: [] }, {});
         if (runResult instanceof Promise) {
           return runResult.then((issues) => {
             if (issues.issues.length) {
               issues = issues.issues;
               const push = issues.push;
               const items = [];
-              HermesBuiltin.arraySpread(closure_2_5.prefixIssues(tmp, issues.issues), 0);
+              HermesBuiltin.arraySpread(closure_5.prefixIssues(tmp, issues.issues), 0);
               HermesBuiltin.apply(items, issues);
             }
           });
@@ -970,13 +891,12 @@ if (self2) {
           HermesBuiltin.arraySpread(closure_1_5.prefixIssues(tmp, runResult.issues), 0);
           HermesBuiltin.apply(items, issues);
         }
-        const obj = { value: issues.value[closure_0.property], issues: [] };
+        const obj = { value: issues.value[issues.property], issues: [] };
       };
     });
     exports.$ZodCheckMimeType = fnResult.$constructor("$ZodCheckMimeType", (_zod, mime) => {
-      const _exports = _zod;
-      closure_1 = mime;
-      const $ZodCheck = _exports.$ZodCheck;
+      const inst = _zod;
+      const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, mime);
       const set = new Set(mime.mime);
       const onattach = _zod._zod.onattach;
@@ -986,18 +906,20 @@ if (self2) {
       _zod._zod.check = (value) => {
         if (!set.has(value.value.type)) {
           const issues = value.issues;
-          const obj = { code: "invalid_value", values: null, input: null, inst: null, continue: null };
-          obj[1] = mime.mime;
-          obj[2] = value.value.type;
-          obj[3] = closure_0;
-          obj[4] = !mime.abort;
+          const obj = {
+            code: "invalid_value",
+            values: mime.mime,
+            input: value.value.type,
+            inst,
+            continue: !mime.abort,
+          };
           issues.push(obj);
         }
       };
     });
-    exports.$ZodCheckOverwrite = fnResult.$constructor("$ZodCheckOverwrite", (_zod) => {
-      const _exports = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
+    exports.$ZodCheckOverwrite = fnResult.$constructor("$ZodCheckOverwrite", (_zod, arg1) => {
+      closure_0 = arg1;
+      const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
       _zod._zod.check = (value) => {
         value.value = closure_0.tx(value.value);

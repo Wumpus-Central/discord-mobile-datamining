@@ -1,18 +1,16 @@
 // _runtime/03856_eachDayOfInterval.js
-import _typeof from "metro/03650__typeof.js";
+import _typeof from "metro/03650__.js";
 import requiredArgs from "03651_requiredArgs.js";
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
@@ -48,14 +46,8 @@ export default function eachDayOfInterval(arg0, step) {
         const items = [];
         if (defaultResult1.getTime() <= time) {
           do {
-            let tmp15 = _typeof;
             let arr = items.push(_typeof.default(defaultResult1));
             let setDateResult = defaultResult1.setDate(defaultResult1.getDate() + NumberResult);
-            let tmp18 = defaultResult1;
-            let num6 = 0;
-            let num7 = 0;
-            let num8 = 0;
-            let num9 = 0;
             let setHoursResult1 = defaultResult1.setHours(0, 0, 0, 0);
             time1 = defaultResult1.getTime();
           } while (time1 <= time);

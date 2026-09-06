@@ -1,13 +1,13 @@
 // _runtime/09142_number.js
 function number(NumberResult) {
-  error = new Error("positive integer expected, not " + NumberResult);
+  const error = new Error("positive integer expected, not " + NumberResult);
   throw error;
 }
 function bool(flag) {
   if (typeof flag !== "boolean") {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("boolean expected, not " + flag);
+    const error = new Error("boolean expected, not " + flag);
     throw error;
   }
 }
@@ -26,7 +26,7 @@ function bytes(obj) {
       if (!substr.includes(obj.length)) {
         const _Error2 = Error;
         const _HermesInternal = HermesInternal;
-        error = new Error("Uint8Array expected of length " + substr + ", not of length=" + obj.length);
+        const error = new Error("Uint8Array expected of length " + substr + ", not of length=" + obj.length);
         throw error;
       }
     }
@@ -36,18 +36,18 @@ function bytes(obj) {
     throw error1;
   }
 }
-function hash(fn) {
-  if (typeof fn === "function") {
-    if (typeof fn.create === "function") {
-      const outputLen = fn.outputLen;
+function hash(create) {
+  if (typeof create === "function") {
+    if (typeof create.create === "function") {
+      const outputLen = create.outputLen;
       const _Number2 = Number;
       if (Number.isSafeInteger(outputLen)) {
         if (outputLen >= 0) {
-          const blockLen = fn.blockLen;
+          const blockLen = create.blockLen;
           const _Number = Number;
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          error = new Error("positive integer expected, not " + blockLen);
+          const error = new Error("positive integer expected, not " + blockLen);
           throw error;
         }
       }
@@ -67,7 +67,7 @@ function exists(destroyed) {
   }
   if (destroyed.destroyed) {
     const _Error2 = Error;
-    error = new Error("Hash instance has been destroyed");
+    const error = new Error("Hash instance has been destroyed");
     throw error;
   } else if (flag) {
     if (destroyed.finished) {
@@ -83,11 +83,12 @@ function output(content, state) {
   if (content.length < outputLen) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("digestInto() expects output buffer of length at least " + outputLen);
+    const error = new Error("digestInto() expects output buffer of length at least " + outputLen);
     throw error;
   }
 }
-arg5.isBytes = function isBytes(obj) {
+
+export const isBytes = function isBytes(obj) {
   let tmp = obj instanceof Uint8Array;
   if (!tmp) {
     let tmp3 = null != obj && typeof obj === "object";
@@ -98,10 +99,10 @@ arg5.isBytes = function isBytes(obj) {
   }
   return tmp;
 };
-arg5.number = number;
-arg5.bool = bool;
-arg5.bytes = bytes;
-arg5.hash = hash;
-arg5.exists = exists;
-arg5.output = output;
-arg5.default = { number, bool, bytes, hash, exists, output };
+export { number };
+export { bool };
+export { bytes };
+export { hash };
+export { exists };
+export { output };
+export default { number, bool, bytes, hash, exists, output };

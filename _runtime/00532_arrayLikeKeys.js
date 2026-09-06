@@ -1,8 +1,8 @@
 // _runtime/00532_arrayLikeKeys.js
 import _mod514 from "metro/00514__.js";
-import isIndex from "00543_isIndex.js";
+import _mod543 from "metro/00543__.js";
 
-export default function arrayLikeKeys(obj) {
+export default function arrayLikeKeys(obj, arg1) {
   const tmp3 = _mod514(obj);
   let tmp4 = !tmp3;
   if (!tmp3) {
@@ -42,7 +42,6 @@ export default function arrayLikeKeys(obj) {
     items = [];
   }
   for (const key10033 in arg0) {
-    let tmp23 = key10033;
     let tmp21 = !arg1;
     if (arg1) {
       if (!tmp21) {
@@ -75,9 +74,7 @@ export default function arrayLikeKeys(obj) {
             tmp14 = tmp17;
           }
           if (!tmp14) {
-            let tmp19 = require;
-            let tmp20 = dependencyMap;
-            tmp14 = isIndex(key10033, tmp9);
+            tmp14 = _mod543(key10033, tmp9);
           }
           tmp13 = tmp14;
         }

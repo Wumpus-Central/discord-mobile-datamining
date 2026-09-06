@@ -2,9 +2,9 @@
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let fn = getPrototypeOf.bind();
+    exports = getPrototypeOf.bind();
   } else {
-    fn = (arg0) => {
+    exports = (arg0) => {
       let __proto__ = arg0.__proto__;
       if (!__proto__) {
         const _Object = Object;
@@ -13,8 +13,9 @@ function _getPrototypeOf(arg0) {
       return __proto__;
     };
   }
-  module.exports = fn;
-  return fn(arg0);
+  module.exports = exports;
+  return exports(arg0);
 }
+let exports = _getPrototypeOf;
 
 export default _getPrototypeOf;

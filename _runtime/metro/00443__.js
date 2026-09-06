@@ -1,14 +1,15 @@
 // _runtime/metro/00443__.js
-import noopAll from "../00019_noop.js";
 import _modDef444 from "00444__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import defaultItemToKey from "../00438_defaultItemToKey.js";
+import noop from "00019__.js";
 
-noopAll;
-({ Fragment: c0, jsxs: closure_1 } = jsxProd);
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsxs: closure_1 } = jsxProd);
+const defaultItemToKey = fn(438);
 
 export default defaultItemToKey.createVirtualCollectionView(function VirtualRowLayout(arg0) {
-  const children = [,];
+  const obj = { children: null };
+  const items = [,];
   ({ children: arr[0], spacer: arr[1] } = arg0);
-  return callback(closure_0, { children });
+  obj.children = items;
+  return framebus(React, obj);
 }, _modDef444);

@@ -1,27 +1,24 @@
 // _runtime/03812_differenceInCalendarDays.js
-import getTimezoneOffsetInMilliseconds from "03813_getTimezoneOffsetInMilliseconds.js";
+import 03813__ from "metro/03813__.js";
 import startOfDay from "03814_startOfDay.js";
 import requiredArgs from "03651_requiredArgs.js";
 
-if (!getTimezoneOffsetInMilliseconds) {
-  let obj = { default: null };
-  obj[0] = getTimezoneOffsetInMilliseconds;
+if (!module_3813) {
+  let obj = { default: module_3813 };
   let tmp3 = obj;
 } else {
-  tmp3 = getTimezoneOffsetInMilliseconds;
+  tmp3 = module_3813;
 }
-getTimezoneOffsetInMilliseconds = tmp3;
+module_3813 = tmp3;
 if (!startOfDay) {
-  obj = { default: null };
-  obj[0] = startOfDay;
+  obj = { default: startOfDay };
   let tmp5 = obj;
 } else {
   tmp5 = startOfDay;
 }
 startOfDay = tmp5;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
   tmp7 = requiredArgs;
@@ -34,8 +31,8 @@ export default function differenceInCalendarDays(arg0, arg1) {
   const defaultResult1 = startOfDay.default(arg0);
   const defaultResult2 = startOfDay.default(arg1);
   const time = defaultResult1.getTime();
-  const diff = time - getTimezoneOffsetInMilliseconds.default(defaultResult1);
+  const diff = time - module_3813.default(defaultResult1);
   const time1 = defaultResult2.getTime();
-  return Math.round((diff - (time1 - getTimezoneOffsetInMilliseconds.default(defaultResult2))) / c3);
+  return Math.round((diff - (time1 - module_3813.default(defaultResult2))) / c3);
 };
 export default exports.default;

@@ -1,6 +1,6 @@
 // _runtime/05197_CompressedTypes.js
 import _createClass from "metro/00042__createClass.js";
-import closure_0 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class CompressedTypes {
   constructor() {
@@ -9,12 +9,20 @@ class CompressedTypes {
   }
 }
 const _moduleResult = _createClass(CompressedTypes);
-const items = [{ sequence: [55, 122, 188, 175, 39, 28] }];
-_moduleResult._7Z = {
+let obj = {
   extension: "7z",
   mimeType: "application/x-7z-compressed",
   description: "7-Zip compressed file",
-  signatures: items,
+  signatures: null,
+};
+const items = [{ sequence: [55, 122, 188, 175, 39, 28] }];
+obj.signatures = items;
+_moduleResult._7Z = obj;
+obj = {
+  extension: "lzh",
+  mimeType: "application/x-lzh-compressed",
+  description: "Compressed file using Lempel-Ziv and Haruyasu (LZH) compression algorithm",
+  signatures: null,
 };
 const items1 = [
   {
@@ -28,21 +36,25 @@ const items1 = [
     compatibleExtensions: ["lha"],
   },
 ];
-_moduleResult.LZH = {
-  extension: "lzh",
-  mimeType: "application/x-lzh-compressed",
-  description: "Compressed file using Lempel-Ziv and Haruyasu (LZH) compression algorithm",
-  signatures: items1,
+obj.signatures = items1;
+_moduleResult.LZH = obj;
+obj = {
+  extension: "rar",
+  mimeType: "application/x-rar-compressed",
+  description: "Roshal ARchive compressed archive file",
+  signatures: null,
 };
 const items2 = [
   { sequence: [82, 97, 114, 33, 26, 7, 0], description: "Compressed archive v5.00 onwards" },
   { sequence: [82, 97, 114, 33, 26, 7, 1, 0], description: "Compressed archive v1.50 onwards" },
 ];
-_moduleResult.RAR = {
-  extension: "rar",
-  mimeType: "application/x-rar-compressed",
-  description: "Roshal ARchive compressed archive file",
-  signatures: items2,
+obj.signatures = items2;
+_moduleResult.RAR = obj;
+const obj1 = {
+  extension: "zip",
+  mimeType: "application/zip",
+  description: "Compressed archive file",
+  signatures: null,
 };
 const items3 = [
   { sequence: [87, 105, 110, 90, 105, 112], offset: 29152, description: "WinZip compressed archive" },
@@ -129,11 +141,7 @@ const items3 = [
     ],
   },
 ];
-_moduleResult.ZIP = {
-  extension: "zip",
-  mimeType: "application/zip",
-  description: "Compressed archive file",
-  signatures: items3,
-};
+obj1.signatures = items3;
+_moduleResult.ZIP = obj1;
 
 export const CompressedTypes = _moduleResult;

@@ -1,13 +1,12 @@
 // _runtime/metro/01872__.js
-import noopDefault from "../00019_noop.js";
-import useResizeMode from "../01830_useResizeMode.js";
+import _mod1830 from "01830__.js";
 import KeyboardAvoidingView from "../01841_KeyboardAvoidingView.js";
-import { Animated } from "../00017_get_ActivityIndicator.js";
-import { jsx } from "../react/00021_jsxProd.js";
+import noop from "00019__.js";
 
-require = arg1;
-noopDefault;
-let closure_3 = Animated.createAnimatedComponent(require("nativeEventEmitter").KeyboardBackgroundView);
+require = fn;
+const Animated = fn(17).Animated;
+const jsx = fn(21).jsx;
+let closure_3 = Animated.createAnimatedComponent(fn(1626).KeyboardBackgroundView);
 
 export default function _default(children) {
   const enabled = children.enabled;
@@ -15,13 +14,11 @@ export default function _default(children) {
   if (!tmp) {
     tmp = enabled;
   }
-  let obj = useResizeMode;
-  obj = {
-    enabled: tmp,
-    children: <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3>,
-  };
+  let obj = { enabled: tmp, children: null };
+  obj = { style: { opacity: obj.useKeyboardAnimation().progress }, children: children.children };
+  obj.children = <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3>;
   return jsx(KeyboardAvoidingView.KeyboardStickyView, {
-    enabled: tmp,
-    children: <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3>,
+    style: { opacity: obj.useKeyboardAnimation().progress },
+    children: children.children,
   });
 }

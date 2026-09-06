@@ -1,9 +1,10 @@
 // _runtime/10433_findMostLikelyADYear.js
-import addDuration from "10434_addDuration.js";
+import EmptyDuration from "10434_EmptyDuration.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.findMostLikelyADYear = function findMostLikelyADYear(parsed) {
+
+export const findMostLikelyADYear = function findMostLikelyADYear(parsed) {
   let sum = parsed;
   if (parsed < 100) {
     let num2 = 2000;
@@ -14,12 +15,12 @@ arg5.findMostLikelyADYear = function findMostLikelyADYear(parsed) {
   }
   return sum;
 };
-arg5.findYearClosestToRef = function findYearClosestToRef(refDate, result, parsed) {
+export const findYearClosestToRef = function findYearClosestToRef(refDate, parsed, parsed2) {
   const date = new Date(refDate);
-  date.setMonth(parsed - 1);
-  date.setDate(result);
-  let addDurationResult = addDuration.addDuration(date, { year: 1 });
-  const addDurationResult1 = addDuration.addDuration(date, { year: -1 });
+  date.setMonth(parsed2 - 1);
+  date.setDate(parsed);
+  let addDurationResult = EmptyDuration.addDuration(date, { year: 1 });
+  const addDurationResult1 = EmptyDuration.addDuration(date, { year: -1 });
   const time = addDurationResult.getTime();
   const absolute = Math.abs(time - refDate.getTime());
   const time1 = date.getTime();

@@ -1,32 +1,33 @@
 // _runtime/00085_AssetSourceResolver.js
 import _createClassDefault from "metro/00042__createClass.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
-const AssetSourceResolver = arg1;
+const AssetSourceResolver = fn;
 class AssetSourceResolver {
   constructor(arg0, arg1, arg2) {
-    tmp = closure_2(this, AssetSourceResolver);
+    tmp = c2(this, AssetSourceResolver);
     this.serverUrl = global;
-    this.jsbundleUrl = arg1;
+    this.jsbundleUrl = fn;
     this.asset = importDefault;
     return;
   }
 }
-const items = [
-  {
-    key: "isLoadedFromServer",
-    value: function isLoadedFromServer() {
-      const self = this;
-      let tmp = null != this.serverUrl;
-      if (tmp) {
-        tmp = "" !== self.serverUrl;
-      }
-      if (tmp) {
-        tmp = "xml" !== self.asset.type;
-      }
-      return tmp;
-    },
+const entry = {
+  key: "isLoadedFromServer",
+  value: function isLoadedFromServer() {
+    const self = this;
+    let tmp = null != this.serverUrl;
+    if (tmp) {
+      tmp = "" !== self.serverUrl;
+    }
+    if (tmp) {
+      tmp = "xml" !== self.asset.type;
+    }
+    return tmp;
   },
+};
+const items = [
+  entry,
   {
     key: "isLoadedFromFileSystem",
     value: function isLoadedFromFileSystem() {
@@ -78,7 +79,9 @@ const items = [
         const _JSON2 = JSON;
         const text1 = `${`Don't know how to get asset via provided resolver: ${resolver}`}
       Asset: ${JSON.stringify(self.asset, null, "\t")}`;
-        error = new Error(text1 + "\nPossible resolvers are:" + JSON.stringify(["android", "generic"], null, "\t"));
+        const error = new Error(
+          text1 + "\nPossible resolvers are:" + JSON.stringify(["android", "generic"], null, "\t"),
+        );
         throw error;
       }
     },
@@ -176,14 +179,14 @@ const items = [
   {
     key: "fromSource",
     value: function fromSource(uri) {
-      const obj = { __packager_asset: true, width: this.asset.width, height: this.asset.height, uri, scale: null };
+      const size = { __packager_asset: true, width: this.asset.width, height: this.asset.height, uri, scale: null };
       const obj2 = AssetSourceResolver(86);
-      obj[4] = obj2.pickScale(this.asset.scales, AssetSourceResolver(87).default.get());
-      return obj;
+      size.scale = obj2.pickScale(this.asset.scales, AssetSourceResolver(87).default.get());
+      return size;
     },
   },
 ];
 const tmp2 = _createClassDefault(AssetSourceResolver, items);
-tmp2.pickScale = require("pickScale").pickScale;
+tmp2.pickScale = fn(86).pickScale;
 
 export default tmp2;

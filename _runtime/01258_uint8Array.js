@@ -1,6 +1,7 @@
 // _runtime/01258_uint8Array.js
 const uint8Array = new Uint8Array(16);
-arg5.default = function rng() {
+
+export default function rng() {
   let tmp = getRandomValues;
   if (!getRandomValues) {
     const _crypto = crypto;
@@ -17,11 +18,11 @@ arg5.default = function rng() {
     tmp = getRandomValues;
     if (!getRandomValues) {
       const _Error = Error;
-      error = new Error(
+      const error = new Error(
         "crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported",
       );
       throw error;
     }
   }
   return tmp(uint8Array);
-};
+}

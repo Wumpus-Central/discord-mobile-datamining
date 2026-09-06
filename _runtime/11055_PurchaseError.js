@@ -1,6 +1,6 @@
 // _runtime/11055_PurchaseError.js
-import _createClassDefault from "metro/00042__createClass.js";
-import closure_0 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class PurchaseError {
   constructor(arg0, arg1, arg2, arg3, arg4, arg5) {
@@ -40,4 +40,4 @@ export const ErrorCode = {
   E_INTERRUPTED: "E_INTERRUPTED",
   E_IAP_NOT_AVAILABLE: "E_IAP_NOT_AVAILABLE",
 };
-export const PurchaseError = _createClassDefault(PurchaseError);
+export const PurchaseError = _createClass(PurchaseError);

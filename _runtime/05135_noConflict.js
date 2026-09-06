@@ -1,17 +1,15 @@
 // _runtime/05135_noConflict.js
 let self = this;
-const dependencyMap = arg4;
-const exports = arg5;
+const module = arg4;
 const fn = function () {
   const self = this;
-  let obj = this.humanize;
-  obj = {};
-  if (undefined !== obj) {
+  const humanize = {};
+  if (undefined !== humanize) {
     if (tmp5) {
-      tmp4.exports = obj;
+      tmp4.exports = humanize;
     }
-    obj.humanize = obj;
-    tmp5 = undefined !== self && self.exports;
+    humanize.humanize = humanize;
+    tmp5 = undefined !== module && module.exports;
   } else {
     let amd = typeof globalThis.define === "function";
     if (typeof globalThis.define === "function") {
@@ -20,13 +18,13 @@ const fn = function () {
     if (amd) {
       globalThis.define("humanize", () => obj);
     }
-    tmp.humanize = obj;
+    tmp.humanize = humanize;
   }
-  obj.noConflict = function () {
-    self.humanize = obj;
+  humanize.noConflict = function () {
+    self.humanize = humanize;
     return this;
   };
-  obj.pad = (arg0, arg1, str) => {
+  humanize.pad = (arg0, arg1, str, arg3) => {
     let length;
     let length2;
     const text = `${arg0}`;
@@ -65,10 +63,10 @@ const fn = function () {
     }
     return tmp2;
   };
-  obj.time = () => new Date().getTime() / 1000;
+  humanize.time = () => new Date().getTime() / 1000;
   closure_3 = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
   closure_4 = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
-  obj.date = (str) => {
+  humanize.date = (str, arg1) => {
     if (undefined === arg1) {
       const _Date3 = Date;
       let date = new Date();
@@ -90,8 +88,8 @@ const fn = function () {
       }
       return tmp;
     }
-    closure_3 = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    closure_4 = [
+    dependencyMap = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const dependencyMap2 = [
       "January",
       "February",
       "March",
@@ -107,7 +105,7 @@ const fn = function () {
     ];
     closure_5 = {
       d() {
-        return formatChrCb.pad(closure_5.j(), 2, "0");
+        return obj.pad(closure_5.j(), 2, "0");
       },
       D() {
         return closure_5.l().slice(0, 3);
@@ -149,13 +147,13 @@ const fn = function () {
         if (3.5 < sum % 7) {
           num = 1;
         }
-        return formatChrCb.pad(sum1 + num, 2, "0");
+        return obj.pad(sum1 + num, 2, "0");
       },
       F() {
         return dependencyMap2[date.getMonth(date)];
       },
       m() {
-        return formatChrCb.pad(closure_5.n(), 2, "0");
+        return obj.pad(closure_5.n(), 2, "0");
       },
       M() {
         return closure_5.F().slice(0, 3);
@@ -228,19 +226,19 @@ const fn = function () {
         return date.getHours();
       },
       h() {
-        return formatChrCb.pad(closure_5.g(), 2, "0");
+        return obj.pad(closure_5.g(), 2, "0");
       },
       H() {
-        return formatChrCb.pad(closure_5.G(), 2, "0");
+        return obj.pad(closure_5.G(), 2, "0");
       },
       i() {
-        return formatChrCb.pad(date.getMinutes(), 2, "0");
+        return obj.pad(date.getMinutes(), 2, "0");
       },
       s() {
-        return formatChrCb.pad(date.getSeconds(), 2, "0");
+        return obj.pad(date.getSeconds(), 2, "0");
       },
       u() {
-        return formatChrCb.pad(1000 * date.getMilliseconds(), 6, "0");
+        return obj.pad(1000 * date.getMilliseconds(), 6, "0");
       },
       O() {
         const timezoneOffset = date.getTimezoneOffset();
@@ -249,7 +247,7 @@ const fn = function () {
         if (timezoneOffset > 0) {
           str = "-";
         }
-        return str + formatChrCb.pad(100 * Math.floor(absolute / 60) + (absolute % 60), 4, "0");
+        return str + obj.pad(100 * Math.floor(absolute / 60) + (absolute % 60), 4, "0");
       },
       P() {
         const str = closure_5.O();
@@ -260,10 +258,10 @@ const fn = function () {
         return 60 * -date.getTimezoneOffset();
       },
       c() {
-        return "Y-m-d\\TH:i:sP".replace(closure_1, formatChrCb);
+        return "Y-m-d\\TH:i:sP".replace(re1, formatChrCb);
       },
       r() {
-        return "D, d M Y H:i:s O".replace(closure_1, formatChrCb);
+        return "D, d M Y H:i:s O".replace(re1, formatChrCb);
       },
       U() {
         return date.getTime() / 1000 || 0;
@@ -271,7 +269,7 @@ const fn = function () {
     };
     return str.replace(tmp11, formatChrCb);
   };
-  obj.numberFormat = (arg0, arg1, arg2, arg3) => {
+  humanize.numberFormat = (arg0, arg1, arg2, arg3) => {
     let num = 2;
     if (!isNaN(arg1)) {
       const _Math = Math;
@@ -313,7 +311,7 @@ const fn = function () {
     }
     return sum1 + str3;
   };
-  obj.naturalDay = (arg0, arg1) => {
+  humanize.naturalDay = (arg0, arg1) => {
     let timeResult = arg0;
     if (undefined === arg0) {
       timeResult = obj.time();
@@ -343,7 +341,7 @@ const fn = function () {
     }
     return str2;
   };
-  obj.relativeTime = (arg0) => {
+  humanize.relativeTime = (arg0) => {
     let timeResult = arg0;
     if (undefined === arg0) {
       timeResult = obj.time();
@@ -476,8 +474,8 @@ const fn = function () {
       text5 = `${"in " + -tmp11} years`;
     }
   };
-  obj.ordinal = (joined) => {
-    const parsed = parseInt(joined, 10);
+  humanize.ordinal = (match) => {
+    const parsed = parseInt(match, 10);
     let num = 0;
     if (!isNaN(parsed)) {
       num = parsed;
@@ -497,7 +495,7 @@ const fn = function () {
     }
     return sum + str2;
   };
-  obj.filesize = (arg0, arg1, arg2, arg3, arg4, arg5) => {
+  humanize.filesize = (arg0, arg1, arg2, arg3, arg4, arg5) => {
     let str = "0 bytes";
     if (arg0 > 0) {
       let num = 1024;
@@ -517,7 +515,7 @@ const fn = function () {
     }
     return str;
   };
-  obj.intword = (arg0, arg1, sum) => {
+  humanize.intword = (arg0, arg1, sum, arg3, arg4, arg5, arg6) => {
     let items = arg1;
     if (!arg1) {
       items = ["", "K", "M", "B", "T"];
@@ -565,7 +563,7 @@ const fn = function () {
     }
     return obj.numberFormat(result, num2, str, str2) + str4;
   };
-  obj.linebreaks = (str) => {
+  humanize.linebreaks = (str) => {
     str = str.replace(/^([\n|\r]*)/, "");
     const str2 = str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "");
     const str3 = str
@@ -583,15 +581,15 @@ const fn = function () {
       "</p>"
     );
   };
-  obj.nl2br = (str) => str.replace(/(\r\n|\n|\r)/g, "<br />");
-  obj.truncatechars = (arg0, arg1) => {
+  humanize.nl2br = (str) => str.replace(/(\r\n|\n|\r)/g, "<br />");
+  humanize.truncatechars = (arg0, arg1) => {
     let text = arg0;
     if (arg0.length > arg1) {
       text = `${arg0.substr(0, arg1)}…`;
     }
     return text;
   };
-  obj.truncatewords = (str) => {
+  humanize.truncatewords = (str, arg1) => {
     let text = str;
     const parts = str.split(" ");
     if (parts.length >= arg1) {

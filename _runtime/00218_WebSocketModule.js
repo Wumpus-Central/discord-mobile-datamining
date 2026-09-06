@@ -1,10 +1,9 @@
 // _runtime/00218_WebSocketModule.js
-import WebSocketModuleDefault from "00219_WebSocketModule.js";
+import _modDef219 from "metro/00219__.js";
 
-for (const key10016 in require("WebSocketModule")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("WebSocketModule")[key10016];
+for (const key10016 in require("metro/00219__.js")) {
+  arg5[key10016] = require("metro/00219__.js")[key10016];
   continue;
 }
 
-export default WebSocketModuleDefault;
+export default _modDef219;

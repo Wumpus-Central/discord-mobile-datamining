@@ -1,6 +1,6 @@
 // _runtime/04596_baseFindIndex.js
 
-export default function baseFindIndex(arg0, arg1, arg2, arg3) {
+export default function baseFindIndex(arg0, fn, arg2, arg3) {
   let num = -1;
   if (arg3) {
     num = 1;
@@ -14,14 +14,13 @@ export default function baseFindIndex(arg0, arg1, arg2, arg3) {
     tmp3 = diff < length;
   }
   if (tmp3) {
-    while (!arg1(arg0[diff], diff, arg0)) {
+    while (!fn(arg0[diff], diff, arg0)) {
       if (arg3) {
         let tmp8 = +diff;
         let diff1 = tmp8 - 1;
-        let tmp7 = tmp8;
       } else {
         diff1 = diff + 1;
-        tmp7 = diff1 < length;
+        let tmp7 = diff1 < length;
       }
       diff = diff1;
     }

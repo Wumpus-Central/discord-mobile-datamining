@@ -1,5 +1,5 @@
 // _runtime/11264_SwipeDirection.js
-import str2Default from "11265_str2.js";
+import leftThresholdDefault from "11265_leftThreshold.js";
 
-export default str2Default;
-export const SwipeDirection = require("metro/11266__.js").SwipeDirection;
+export default leftThresholdDefault;
+export const SwipeDirection = fn(11266).SwipeDirection;

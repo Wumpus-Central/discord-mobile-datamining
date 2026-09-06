@@ -1,4 +1,5 @@
 // _runtime/00081_resolveAssetSource.js
+import _modDef82 from "metro/00082__.js";
 import _mod84 from "metro/00084__.js";
 import pickScale from "00086_pickScale.js";
 
@@ -12,8 +13,7 @@ function resolveAssetSource(source) {
             let tmp = first;
             if (undefined === first) {
               if (null == scriptURL) {
-                scriptURL = callback(82).getConstants().scriptURL;
-                const obj = callback(82);
+                scriptURL = _modDef82.getConstants().scriptURL;
               }
               let match;
               if (str != null) {
@@ -31,8 +31,7 @@ function resolveAssetSource(source) {
             let tmp = c4;
             if (undefined === c4) {
               if (null == scriptURL) {
-                scriptURL = callback(82).getConstants().scriptURL;
-                const obj = callback(82);
+                scriptURL = _modDef82.getConstants().scriptURL;
               }
               let text = str;
               if (null == str) {
@@ -54,12 +53,10 @@ function resolveAssetSource(source) {
           })(),
           assetByID,
         );
-        if (closure_6) {
+        if (items) {
           for (const item10021 of tmp6) {
             let item10021Result = item10021(_default);
-            let tmp10 = item10021Result;
             if (null != item10021Result) {
-              let tmp11 = obj2;
               obj2.return();
               return item10021Result;
             }
@@ -69,17 +66,18 @@ function resolveAssetSource(source) {
       } else {
         return null;
       }
-      const obj3 = _mod84;
       tmp12 = require;
     }
   }
   return source;
 }
-let closure_6 = [];
+let items = [];
 resolveAssetSource.pickScale = pickScale.pickScale;
 resolveAssetSource.setCustomSourceTransformer = function setCustomSourceTransformer(arg0) {
-  const items = [arg0];
+  items = [arg0];
 };
-resolveAssetSource.addCustomSourceTransformer = function addCustomSourceTransformer(arg0) {};
+resolveAssetSource.addCustomSourceTransformer = function addCustomSourceTransformer(arg0) {
+  items.push(arg0);
+};
 
 export default resolveAssetSource;

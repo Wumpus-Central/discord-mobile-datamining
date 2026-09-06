@@ -1,14 +1,14 @@
 // _runtime/17269__default2.js
-import CanonicalizeLocaleList from "17270_CanonicalizeLocaleList.js";
+import _mod17270 from "metro/17270__.js";
 import 01318__ from "metro/01318__.js";
 
-global.IntlPolyfill = CanonicalizeLocaleList.default;
+global.IntlPolyfill = _mod17270.default;
 if (!global.Intl) {
-  global.Intl = CanonicalizeLocaleList.default;
-  const result = CanonicalizeLocaleList.default.__applyLocaleSensitivePrototypes();
-  const _default = CanonicalizeLocaleList.default;
+  global.Intl = _mod17270.default;
+  const result = _mod17270.default.__applyLocaleSensitivePrototypes();
+  const _default = _mod17270.default;
 }
-const _default2 = CanonicalizeLocaleList.default;
-_default2.default = CanonicalizeLocaleList.default;
+const _default2 = _mod17270.default;
+_default2.default = _mod17270.default;
 
 export default _default2;

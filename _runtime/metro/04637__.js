@@ -1,0 +1,12 @@
+// _runtime/metro/04637__.js
+import _mod545 from "00545__.js";
+
+export default function initCloneObject(arg0) {
+  if (typeof arg0.constructor === "function") {
+    if (!_mod545(arg0)) {
+      tmp3(4638)(tmp3(4639)(arg0));
+      const tmp = tmp3(4638);
+    }
+    return {};
+  }
+}

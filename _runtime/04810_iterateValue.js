@@ -1,8 +1,8 @@
 // _runtime/04810_iterateValue.js
-import getIterator from "04811_getIterator.js";
+import _mod4811 from "metro/04811__.js";
 
 export default function iterateValue(arg0) {
-  const tmp3 = getIterator(arg0);
+  const tmp3 = _mod4811(arg0);
   if (tmp3) {
     if (arguments.length > 1) {
       let tmp9 = tmp(4812)(tmp3, arguments[1]);

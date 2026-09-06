@@ -1,5 +1,6 @@
 // _runtime/00077_matricesDiffer.js
-arg5.default = function matricesDiffer(arg0, arg1) {
+
+export default function matricesDiffer(arg0, arg1) {
   let tmp = arg0 !== arg1;
   if (tmp) {
     let tmp2 = !arg0;
@@ -57,4 +58,4 @@ arg5.default = function matricesDiffer(arg0, arg1) {
     tmp = tmp2;
   }
   return tmp;
-};
+}

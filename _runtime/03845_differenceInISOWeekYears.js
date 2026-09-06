@@ -1,45 +1,40 @@
 // _runtime/03845_differenceInISOWeekYears.js
-import _typeof from "metro/03650__typeof.js";
+import _typeof from "metro/03650__.js";
 import differenceInCalendarISOWeekYears from "03834_differenceInCalendarISOWeekYears.js";
 import compareAsc from "03826_compareAsc.js";
 import subISOWeekYears from "03846_subISOWeekYears.js";
 import requiredArgs from "03651_requiredArgs.js";
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!differenceInCalendarISOWeekYears) {
-  obj = { default: null };
-  obj[0] = differenceInCalendarISOWeekYears;
+  obj = { default: differenceInCalendarISOWeekYears };
   let tmp5 = obj;
 } else {
   tmp5 = differenceInCalendarISOWeekYears;
 }
 differenceInCalendarISOWeekYears = tmp5;
 if (!compareAsc) {
-  obj = { default: null };
-  obj[0] = compareAsc;
+  obj = { default: compareAsc };
   let tmp7 = obj;
 } else {
   tmp7 = compareAsc;
 }
 compareAsc = tmp7;
 if (!subISOWeekYears) {
-  const obj1 = { default: null };
-  obj1[0] = subISOWeekYears;
+  const obj1 = { default: subISOWeekYears };
   let tmp9 = obj1;
 } else {
   tmp9 = subISOWeekYears;
 }
 subISOWeekYears = tmp9;
 if (!requiredArgs) {
-  const obj2 = { default: null };
-  obj2[0] = requiredArgs;
+  const obj2 = { default: requiredArgs };
   let tmp11 = obj2;
 } else {
   tmp11 = requiredArgs;

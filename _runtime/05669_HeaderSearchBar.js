@@ -1,13 +1,19 @@
 // _runtime/05669_HeaderSearchBar.js
-import closure_3 from "metro/00032__slicedToArray.js";
-import importAllResult from "00019_noop.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import jsxProd from "react/00021_jsxProd.js";
+import _slicedToArray from "metro/00032__.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
-let c4 = importAllResult;
-({ Animated: c5, Image, Platform, StyleSheet, TextInput: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({
+  Animated: hasOwnProperty,
+  Image,
+  Platform,
+  StyleSheet,
+  TextInput: metroRequire,
+  View: closure_7,
+} = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { text: "text", number: "numeric", phone: "tel", email: "email" };
 let c11 = true;
 const styles = StyleSheet.create({
@@ -30,7 +36,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchBarInternal(visible, ref) {
+export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(visible, ref) {
   visible = visible.visible;
   ({ inputType, autoFocus } = visible);
   if (autoFocus === undefined) {
@@ -47,49 +53,53 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
   const onChangeText = visible.onChangeText;
   const onClose = visible.onClose;
   let text = visible.tintColor;
-  const merged = Object.assign(visible, Object.create(null));
-  let navigation;
+  const merged = Object.assign(
+    visible,
+    Object.assign({
+      visible: 0,
+      inputType: 0,
+      autoFocus: 0,
+      autoCapitalize: 0,
+      placeholder: 0,
+      cancelButtonText: 0,
+      enterKeyHint: 0,
+      onChangeText: 0,
+      onClose: 0,
+      tintColor: 0,
+      style: 0,
+    }),
+  );
   let first;
-  let RN;
   c6 = undefined;
-  let first1;
-  let first2;
-  closure_9 = undefined;
-  closure_10 = undefined;
-  ref = undefined;
-  closure_12 = undefined;
-  let callback;
-  let callback1;
-  let callback2;
   let obj = visible(onClose[4]);
-  navigation = obj.useNavigation();
-  obj1 = visible(onClose[4]);
+  const navigation = obj.useNavigation();
+  let obj1 = visible(onClose[4]);
   const theme = obj1.useTheme();
   ({ dark, colors } = theme);
   const tmp6 = navigation(first.useState(""), 2);
   first = tmp6[0];
   RN = tmp8;
   [tmp10, c6] = navigation(first.useState(visible), 2);
-  first1 = navigation(
+  const first1 = navigation(
     first.useState(() => {
       let num = 0;
       if (visible) {
         num = 1;
       }
-      const value = new lib.Value(num);
+      value = new RN.Value(num);
       return value;
     }),
     1,
   )[0];
-  first2 = navigation(
+  const first2 = navigation(
     first.useState(() => {
-      const value = new lib.Value(0);
+      value = new closure_5.Value(0);
       return value;
     }),
     1,
   )[0];
-  closure_9 = first.useRef(visible);
-  closure_10 = first.useRef(false);
+  first.useRef(visible);
+  const ref2 = first.useRef(false);
   ref = first.useRef(null);
   const items = [visible, first1];
   const effect = first.useEffect(() => {
@@ -98,41 +108,36 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
       if (tmp) {
         num = 1;
       }
-      const obj = { toValue: null, duration: 100, useNativeDriver: null };
-      obj[0] = num;
-      obj[2] = ref;
-      lib.timing(first1, obj).start((finished) => {
+      const obj = { toValue: num, duration: 100, useNativeDriver };
+      RN.timing(first1, obj).start((finished) => {
         if (finished.finished) {
-          callback(closure_0);
-          closure_9.current = closure_0;
+          closure_1_6(current);
+          ref.current = current;
         }
       });
       return () => {
-        closure_7.stopAnimation();
+        first1.stopAnimation();
       };
     }
   }, items);
   closure_12 = tmp15;
   const items1 = [first2, "" !== first];
   const effect1 = first.useEffect(() => {
-    if (ref2.current !== closure_12) {
+    if (ref2.current !== current) {
       let num = 0;
       if (tmp) {
         num = 1;
       }
-      const obj = { toValue: null, duration: 100, useNativeDriver: null };
-      obj[0] = num;
-      obj[2] = ref;
-      lib.timing(first2, obj).start((finished) => {
+      const obj = { toValue: num, duration: 100, useNativeDriver };
+      RN.timing(first2, obj).start((finished) => {
         if (finished.finished) {
-          closure_10.current = closure_12;
+          ref2.current = current;
         }
       });
-      const timingResult = lib.timing(first2, obj);
-      const tmp3 = first2;
+      const timingResult = RN.timing(first2, obj);
     }
   }, items1);
-  callback = first.useCallback(() => {
+  const clearText = first.useCallback(() => {
     const current = ref.current;
     if (current != null) {
       current.clear();
@@ -141,19 +146,18 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
     if (current2 != null) {
       current2.focus();
     }
-    lib("");
+    closure_5("");
   }, []);
-  const items2 = [callback, onChangeText];
-  callback1 = first.useCallback(() => {
+  const items2 = [clearText, onChangeText];
+  const callback1 = first.useCallback(() => {
     callback();
     if (onChangeText != null) {
-      const obj = { nativeEvent: null };
-      obj[0] = { text: "" };
+      const obj = { nativeEvent: { text: "" } };
       tmp2(obj);
     }
   }, items2);
   const items3 = [callback1, onClose];
-  callback2 = first.useCallback(() => {
+  const callback2 = first.useCallback(() => {
     callback1();
     onClose();
   }, items3);
@@ -165,7 +169,7 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
     }
     return addListenerResult;
   }, items4);
-  const items5 = [callback2, callback];
+  const items5 = [callback2, clearText];
   const imperativeHandle = first.useImperativeHandle(
     ref,
     () => ({
@@ -181,16 +185,15 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
           current.blur();
         }
       },
-      setText(arg0) {
+      setText(text) {
         const current = ref.current;
         if (current != null) {
-          const obj = { text: null };
-          obj[0] = arg0;
+          const obj = { text };
           current.setNativeProps(obj);
         }
-        callback(arg0);
+        closure_1_5(text);
       },
-      clearText: callback,
+      clearText,
       cancelSearch: callback2,
     }),
     items5,
@@ -207,8 +210,9 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
   if (visible) {
     str = "auto";
   }
-  obj = { pointerEvents: str, "aria-live": "polite", "aria-hidden": !visible, style: items6, children: null };
-  items6 = [closure_12.container, { opacity: first1 }, visible.style];
+  obj = { pointerEvents: str, "aria-live": "polite", "aria-hidden": !visible, style: null, children: null };
+  const items6 = [closure_12.container, { opacity: first1 }, visible.style];
+  obj.style = items6;
   obj = { style: closure_12.searchbarContainer, children: null };
   obj1 = { source: onChangeText(tmp3[6]), tintColor: text, style: closure_12.inputSearchIcon };
   const items7 = [first2(visible(onClose[5]).HeaderIcon, obj1), ,];
@@ -226,12 +230,11 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
   if (inputType == null) {
     inputType = "text";
   }
-  obj2.inputMode = closure_10[inputType];
+  obj2.inputMode = ref2[inputType];
   obj2.enterKeyHint = enterKeyHint;
   obj2.placeholder = placeholder;
   const tmp24 = first1;
   const tmp27 = c6;
-  const tmp30 = closure_10;
   const tmp9 = navigation(first.useState(visible), 2);
   const obj7 = onChangeText(onClose[7])(text);
   obj2.placeholderTextColor = onChangeText(onClose[7])(text).alpha(0.5).string();
@@ -243,13 +246,13 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
   const obj3 = { backgroundColor: "transparent", color: text, borderBottomColor: null };
   const alphaResult1 = onChangeText(onClose[7])(colors.primary).alpha(0.3);
   const obj12 = onChangeText(onClose[7])(text);
-  obj3[2] = onChangeText(onClose[7])(text).alpha(0.2).string();
+  obj3.borderBottomColor = onChangeText(onClose[7])(text).alpha(0.2).string();
   items8[2] = obj3;
   obj2.style = items8;
   items7[1] = first2(tmp27, obj2);
   items7[2] = null;
-  obj[1] = items7;
-  const items9 = [closure_9(tmp24, obj), ,];
+  obj.children = items7;
+  const items9 = [ref(tmp24, obj), ,];
   const obj4 = {
     onPress() {
       if (first) {
@@ -262,9 +265,9 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
     children: null,
   };
   const alphaResult2 = onChangeText(onClose[7])(text).alpha(0.2);
-  obj4[2] = first2(visible(onClose[5]).HeaderIcon, { source: onChangeText(onClose[9]), tintColor: text });
+  obj4.children = first2(visible(onClose[5]).HeaderIcon, { source: onChangeText(onClose[9]), tintColor: text });
   items9[1] = first2(visible(onClose[8]).HeaderButton, obj4);
   items9[2] = null;
-  obj[4] = items9;
-  return closure_9(RN.View, obj);
+  obj.children = items9;
+  return ref(RN.View, obj);
 });

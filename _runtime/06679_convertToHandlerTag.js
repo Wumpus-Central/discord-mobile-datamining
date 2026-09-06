@@ -1,16 +1,16 @@
 // _runtime/06679_convertToHandlerTag.js
-import _isNativeReflectConstruct from "06676__isNativeReflectConstruct.js";
-import closure_2 from "metro/00032__slicedToArray.js";
-import noop from "00019_noop.js";
+import _mod6658 from "metro/06658__.js";
+import _mod6676 from "metro/06676__.js";
+import _slicedToArray from "metro/00032__.js";
 
-require = arg1;
-function convertToHandlerTag(num) {
-  if (typeof num === "number") {
-    return num;
-  } else if (num instanceof _isNativeReflectConstruct.BaseGesture) {
-    num = num.handlerTag;
+require = fn;
+function convertToHandlerTag(handlerTag) {
+  if (typeof handlerTag === "number") {
+    return handlerTag;
+  } else if (handlerTag instanceof _mod6676.BaseGesture) {
+    let num = handlerTag.handlerTag;
   } else {
-    const current = num.current;
+    const current = handlerTag.current;
     num = undefined;
     if (current != null) {
       num = current.handlerTag;
@@ -20,17 +20,18 @@ function convertToHandlerTag(num) {
     }
   }
 }
-({ useCallback: c3, useRef: c4, useState: c5 } = noop);
+const noop = fn(19);
+({ useCallback: c3, useRef: closure_4, useState: hasOwnProperty } = noop);
 let items = [
-  ...require("items1").baseGestureHandlerWithDetectorProps,
-  ...require("items1").tapGestureHandlerProps,
-  ...require("managePanProps").panGestureHandlerProps,
-  ...require("managePanProps").panGestureHandlerCustomNativeProps,
-  ...require("items1").longPressGestureHandlerProps,
-  ...require("_isNativeReflectConstruct").forceTouchGestureHandlerProps,
-  ...require("items1").flingGestureHandlerProps,
-  ...require("_isNativeReflectConstruct").hoverGestureHandlerProps,
-  ...require("items").nativeViewGestureHandlerProps,
+  ...fn(6680).baseGestureHandlerWithDetectorProps,
+  ...fn(6681).tapGestureHandlerProps,
+  ...fn(6691).panGestureHandlerProps,
+  ...fn(6691).panGestureHandlerCustomNativeProps,
+  ...fn(6692).longPressGestureHandlerProps,
+  ...fn(6693).forceTouchGestureHandlerProps,
+  ...fn(6695).flingGestureHandlerProps,
+  ...fn(6696).hoverGestureHandlerProps,
+  ...fn(6697).nativeViewGestureHandlerProps,
 ];
 function emptyWorklet() {}
 emptyWorklet.__closure = {};
@@ -44,7 +45,7 @@ export const extractGestureRelations = function extractGestureRelations(item1000
   if (requireToFail != null) {
     const mapped = requireToFail.map(convertToHandlerTag);
     if (mapped != null) {
-      found = mapped.filter((arg0) => arg0 > 0);
+      found = mapped.filter((item) => item > 0);
     }
   }
   if (found == null) {
@@ -56,45 +57,45 @@ export const extractGestureRelations = function extractGestureRelations(item1000
   if (simultaneousWith != null) {
     const mapped1 = simultaneousWith.map(convertToHandlerTag);
     if (mapped1 != null) {
-      found1 = mapped1.filter((arg0) => arg0 > 0);
+      found1 = mapped1.filter((item) => item > 0);
     }
   }
   if (found1 == null) {
     found1 = [];
   }
   const set = new Set(found);
-  obj[1] = Array.from(new Set(found1));
+  obj.simultaneousHandlers = Array.from(new Set(found1));
   let found2;
   if (item10007.config.blocksHandlers != null) {
     const mapped2 = blocksHandlers.map(convertToHandlerTag);
     if (mapped2 != null) {
-      found2 = mapped2.filter((arg0) => arg0 > 0);
+      found2 = mapped2.filter((item) => item > 0);
     }
   }
   if (found2 == null) {
     found2 = [];
   }
   const set1 = new Set(found1);
-  obj[2] = Array.from(new Set(found2));
+  obj.blocksHandlers = Array.from(new Set(found2));
   return obj;
 };
 export function checkGestureCallbacksForWorklets(item10022) {}
 export const useForceRender = function useForceRender() {
-  const tmp = callback(callback4(false), 2);
+  const tmp = _slicedToArray(hasOwnProperty(false), 2);
   const first = tmp[0];
   closure_1 = tmp3;
   const items = [first, tmp[1]];
-  return callback2(() => {
-    callback(!first);
+  return React3(() => {
+    closure_1(!first);
   }, items);
 };
 export const useWebEventHandlers = function useWebEventHandlers() {
-  return callback3({
+  return React4({
     onGestureHandlerEvent(nativeEvent) {
-      const result = callback(6658).onGestureHandlerEvent(nativeEvent.nativeEvent);
+      const result = _mod6658.onGestureHandlerEvent(nativeEvent.nativeEvent);
     },
     onGestureHandlerStateChange(nativeEvent) {
-      const result = callback(6658).onGestureHandlerEvent(nativeEvent.nativeEvent);
+      const result = _mod6658.onGestureHandlerEvent(nativeEvent.nativeEvent);
     },
     onGestureHandlerTouchEvent() {},
   });

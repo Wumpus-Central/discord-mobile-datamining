@@ -1,18 +1,16 @@
 // _runtime/03870_eachYearOfInterval.js
-import _typeof from "metro/03650__typeof.js";
+import _typeof from "metro/03650__.js";
 import requiredArgs from "03651_requiredArgs.js";
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
@@ -34,7 +32,6 @@ export default function eachYearOfInterval(arg0) {
     defaultResult1.setMonth(0, 1);
     if (defaultResult1.getTime() <= time) {
       do {
-        let tmp11 = _typeof;
         let arr = items.push(_typeof.default(defaultResult1));
         let setFullYearResult = defaultResult1.setFullYear(defaultResult1.getFullYear() + 1);
         time1 = defaultResult1.getTime();

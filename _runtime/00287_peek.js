@@ -1,4 +1,4 @@
 // _runtime/00287_peek.js
-import peek from "00288_peek.js";
+import _mod288 from "metro/00288__.js";
 
-export default peek;
+export default _mod288;

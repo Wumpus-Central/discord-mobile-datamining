@@ -1,5 +1,11 @@
 // _runtime/14210_DefaultNumberOption.js
-arg5.DefaultNumberOption = function DefaultNumberOption(maximumFractionDigits, minimumSignificantDigits, arg2, arg3) {
+
+export const DefaultNumberOption = function DefaultNumberOption(
+  maximumFractionDigits,
+  minimumSignificantDigits,
+  arg2,
+  arg3,
+) {
   if (undefined === maximumFractionDigits) {
     return arg3;
   } else {

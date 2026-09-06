@@ -1,14 +1,13 @@
 // _runtime/04945_FullWindowOverlay.js
-import noopDefault from "00019_noop.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import noop from "metro/00019__.js";
 
-noopDefault;
-({ Platform, StyleSheet, View: c0, useWindowDimensions: closure_1 } = get_ActivityIndicator);
+get_ActivityIndicator = fn(17);
+({ Platform, StyleSheet, View: closure_0, useWindowDimensions: closure_1 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 
 export default function FullWindowOverlay(arg0) {
-  ({ width, height } = callback());
+  ({ width, height } = framebus());
   console.warn("Using FullWindowOverlay is only valid on iOS devices.");
   const merged = Object.assign(arg0);
-  return <closure_0 />;
+  return <React />;
 }

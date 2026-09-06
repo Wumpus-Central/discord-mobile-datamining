@@ -1,8 +1,6 @@
 // _runtime/metro/00407__.js
-import noopAll from "../00019_noop.js";
-import useTextPressabilityDefault from "../00298_useTextPressability.js";
-import createAnimatedComponentDefault from "../00387_createAnimatedComponent.js";
+import _modDef298 from "00298__.js";
+import noop from "00019__.js";
+import module_387 from "../00387_unstable_createAnimatedComponentWithAllowlist.js";
 
-noopAll;
-
-export default createAnimatedComponentDefault(useTextPressabilityDefault);
+export default module_387(_modDef298);

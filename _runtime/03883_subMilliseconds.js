@@ -1,35 +1,32 @@
 // _runtime/03883_subMilliseconds.js
-import addMilliseconds from "03805_addMilliseconds.js";
+import 03805__ from "metro/03805__.js";
 import requiredArgs from "03651_requiredArgs.js";
-import toInteger from "03654_toInteger.js";
+import 03654__ from "metro/03654__.js";
 
-if (!addMilliseconds) {
-  let obj = { default: null };
-  obj[0] = addMilliseconds;
+if (!module_3805) {
+  let obj = { default: module_3805 };
   let tmp3 = obj;
 } else {
-  tmp3 = addMilliseconds;
+  tmp3 = module_3805;
 }
-addMilliseconds = tmp3;
+module_3805 = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-if (!toInteger) {
-  obj = { default: null };
-  obj[0] = toInteger;
+if (!module_3654) {
+  obj = { default: module_3654 };
   let tmp7 = obj;
 } else {
-  tmp7 = toInteger;
+  tmp7 = module_3654;
 }
-toInteger = tmp7;
+module_3654 = tmp7;
 
 export default function subMilliseconds(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addMilliseconds.default(arg0, -toInteger.default(arg1));
+  return module_3805.default(arg0, -module_3654.default(arg1));
 };
 export default exports.default;

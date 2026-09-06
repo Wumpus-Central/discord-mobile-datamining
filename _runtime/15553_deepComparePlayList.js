@@ -1,5 +1,6 @@
 // _runtime/15553_deepComparePlayList.js
-arg5.deepComparePlayList = function deepComparePlayList(current, playList) {
+
+export const deepComparePlayList = function deepComparePlayList(current, playList) {
   let tmp = current === playList;
   if (!tmp) {
     const _Array = Array;

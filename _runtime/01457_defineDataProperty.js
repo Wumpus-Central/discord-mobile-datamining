@@ -3,7 +3,7 @@ import _mod1283 from "metro/01283__.js";
 import _mod1284 from "metro/01284__.js";
 import flag from "01306_flag.js";
 
-export default function defineDataProperty(obj, str) {
+export default function defineDataProperty(obj, str, value) {
   if (obj) {
     if (typeof str !== "string") {
       if (typeof str !== "symbol") {
@@ -59,16 +59,15 @@ export default function defineDataProperty(obj, str) {
         if (tmp9) {
           let configurable = tmp9.configurable;
         }
-        obj = { configurable: null, enumerable: null, value: null, writable: null };
-        obj[0] = configurable;
+        obj = { configurable, enumerable: null, value: null, writable: null };
         if (null === tmp3) {
           if (tmp9) {
             let enumerable = tmp9.enumerable;
           }
-          obj[1] = enumerable;
-          obj[2] = arg2;
+          obj.enumerable = enumerable;
+          obj.value = value;
           if (null !== tmp4) {
-            obj[3] = !tmp4;
+            obj.writable = !tmp4;
             obj = tmp15(obj, str, obj);
           }
           const writable = tmp9.writable;
@@ -83,7 +82,7 @@ export default function defineDataProperty(obj, str) {
         );
         throw tmp13;
       }
-      obj[str] = arg2;
+      obj[str] = value;
     }
     tmp6 = arguments.length > 6 && arguments[6];
   }

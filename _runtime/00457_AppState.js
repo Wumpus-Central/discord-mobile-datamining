@@ -1,10 +1,9 @@
 // _runtime/00457_AppState.js
-import AppStateDefault from "00458_AppState.js";
+import _modDef458 from "metro/00458__.js";
 
-for (const key10016 in require("AppState")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("AppState")[key10016];
+for (const key10016 in require("metro/00458__.js")) {
+  arg5[key10016] = require("metro/00458__.js")[key10016];
   continue;
 }
 
-export default AppStateDefault;
+export default _modDef458;

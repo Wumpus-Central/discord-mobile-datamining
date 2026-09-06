@@ -1,10 +1,14 @@
 // _runtime/08468_extractProps.js
+import extractResponderDefault from "08460_extractResponder.js";
+import appendTransformPropsDefault from "08461_appendTransformProps.js";
 import pickNotNil from "08469_pickNotNil.js";
+import actionDefault from "08470_action.js";
+import extractStrokeDefault from "08473_extractStroke.js";
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
-function extractProps(markerMid) {
+function extractProps(markerMid, arg1) {
   ({ id, opacity, onLayout, clipPath, clipRule, display, mask, filter, marker, markerStart } = markerMid);
   if (undefined === markerStart) {
     markerStart = marker;
@@ -20,16 +24,16 @@ function extractProps(markerMid) {
   ({ testID, accessibilityLabel, accessible } = markerMid);
   const obj = {};
   const items = [];
-  module(8460)(obj, markerMid, arg1);
-  module(8470)(obj, markerMid, items);
-  module(8473)(obj, markerMid, items);
+  extractResponderDefault(obj, markerMid, arg1);
+  actionDefault(obj, markerMid, items);
+  extractStrokeDefault(obj, markerMid, items);
   if (markerMid.color) {
     obj.color = markerMid.color;
   }
   if (items.length) {
     obj.propList = items;
   }
-  const tmp6 = module(8461)(markerMid);
+  const tmp6 = appendTransformPropsDefault(markerMid);
   if (null !== tmp6) {
     obj.matrix = tmp6;
   }
@@ -97,7 +101,7 @@ function extractProps(markerMid) {
   }
   if (clipRule) {
     let num = 1;
-    if (0 === table[clipRule]) {
+    if (0 === closure_3[clipRule]) {
       num = 0;
     }
     obj.clipRule = num;
@@ -132,8 +136,9 @@ function extractProps(markerMid) {
   return obj;
 }
 let closure_3 = { evenodd: 0, nonzero: 1 };
-arg5.default = extractProps;
-arg5.propsAndStyles = function propsAndStyles(props) {
+
+export default extractProps;
+export const propsAndStyles = function propsAndStyles(props) {
   const style = props.style;
   let tmp = props;
   if (style) {
@@ -153,7 +158,7 @@ arg5.propsAndStyles = function propsAndStyles(props) {
   }
   return tmp;
 };
-arg5.extract = function extract(arg0, style) {
+export const extract = function extract(arg0, style) {
   style = style.style;
   let tmp2 = style;
   if (style) {
@@ -173,7 +178,7 @@ arg5.extract = function extract(arg0, style) {
   }
   return extractProps(tmp2, arg0);
 };
-arg5.withoutXY = function withoutXY(self, props) {
+export const withoutXY = function withoutXY(self, props) {
   const style = props.style;
   let tmp2 = props;
   if (style) {

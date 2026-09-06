@@ -1,13 +1,15 @@
 // _runtime/metro/00096__get.js
+import _superPropBase from "../00097__superPropBase.js";
+
 function _get() {
   if (typeof Reflect !== "undefined") {
     const _Reflect2 = Reflect;
     if (Reflect.get) {
       const _Reflect = Reflect;
-      let fn = get.bind();
+      exports = get.bind();
     }
-    tmp.exports = fn;
-    const apply = fn.apply;
+    tmp.exports = exports;
+    const apply = exports.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(null);
     } else {
@@ -15,8 +17,8 @@ function _get() {
     }
     return applyArgumentsResult;
   }
-  fn = (arg0, arg1, arg2) => {
-    const tmp = callback(table[0])(arg0, arg1);
+  exports = (arg0, arg1, arg2) => {
+    const tmp = _superPropBase(arg0, arg1);
     if (tmp) {
       const _Object = Object;
       const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
@@ -34,5 +36,6 @@ function _get() {
     }
   };
 }
+let exports = _get;
 
 export default _get;

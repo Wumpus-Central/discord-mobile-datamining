@@ -1,7 +1,8 @@
 // _runtime/metro/00105__.js
-import result from "../00026_result.js";
-import resultDefault from "../00026_result.js";
+import _mod26 from "00026__.js";
 import weakSet from "../00106_weakSet.js";
+
+const _modDef26 = _mod26;
 
 let obj = { directEventTypes: null, bubblingEventTypes: null, validAttributes: null };
 obj = {
@@ -21,22 +22,24 @@ obj = {
   topScroll: null,
   topLayout: null,
 };
-obj[1] = weakSet.DynamicallyInjectedByGestureHandler({ registrationName: "onGestureHandlerEvent" });
-obj[2] = weakSet.DynamicallyInjectedByGestureHandler({ registrationName: "onGestureHandlerStateChange" });
-obj[3] = { registrationName: "onContentSizeChange" };
-obj[4] = { registrationName: "onScrollBeginDrag" };
-obj[5] = { registrationName: "onMessage" };
-obj[6] = { registrationName: "onSelectionChange" };
-obj[7] = { registrationName: "onLoadingFinish" };
-obj[8] = { registrationName: "onMomentumScrollEnd" };
-obj[9] = { registrationName: "onLoadingStart" };
-obj[10] = { registrationName: "onLoadingError" };
-obj[11] = { registrationName: "onMomentumScrollBegin" };
-obj[12] = { registrationName: "onScrollEndDrag" };
-obj[13] = { registrationName: "onScroll" };
-obj[14] = { registrationName: "onLayout" };
-obj[0] = obj;
-obj[1] = {
+obj.onGestureHandlerEvent = weakSet.DynamicallyInjectedByGestureHandler({ registrationName: "onGestureHandlerEvent" });
+obj.onGestureHandlerStateChange = weakSet.DynamicallyInjectedByGestureHandler({
+  registrationName: "onGestureHandlerStateChange",
+});
+obj.topContentSizeChange = { registrationName: "onContentSizeChange" };
+obj.topScrollBeginDrag = { registrationName: "onScrollBeginDrag" };
+obj.topMessage = { registrationName: "onMessage" };
+obj.topSelectionChange = { registrationName: "onSelectionChange" };
+obj.topLoadingFinish = { registrationName: "onLoadingFinish" };
+obj.topMomentumScrollEnd = { registrationName: "onMomentumScrollEnd" };
+obj.topLoadingStart = { registrationName: "onLoadingStart" };
+obj.topLoadingError = { registrationName: "onLoadingError" };
+obj.topMomentumScrollBegin = { registrationName: "onMomentumScrollBegin" };
+obj.topScrollEndDrag = { registrationName: "onScrollEndDrag" };
+obj.topScroll = { registrationName: "onScroll" };
+obj.topLayout = { registrationName: "onLayout" };
+obj.directEventTypes = obj;
+obj = {
   topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } },
   topSelect: { phasedRegistrationNames: { captured: "onSelectCapture", bubbled: "onSelect" } },
   topTouchEnd: { phasedRegistrationNames: { captured: "onTouchEndCapture", bubbled: "onTouchEnd" } },
@@ -61,22 +64,23 @@ obj[1] = {
   topKeyDown: { phasedRegistrationNames: { captured: "onKeyDownCapture", bubbled: "onKeyDown" } },
   topKeyUp: { phasedRegistrationNames: { captured: "onKeyUpCapture", bubbled: "onKeyUp" } },
 };
-obj = {};
-const merged = Object.assign({
-  backgroundColor: result.colorAttribute,
+obj.bubblingEventTypes = obj;
+const obj1 = {};
+const size = {
+  backgroundColor: _mod26.colorAttribute,
   transform: true,
   transformOrigin: true,
-  experimental_backgroundImage: result.backgroundImageAttribute,
-  experimental_backgroundSize: result.backgroundSizeAttribute,
-  experimental_backgroundPosition: result.backgroundPositionAttribute,
-  experimental_backgroundRepeat: result.backgroundRepeatAttribute,
-  boxShadow: result.boxShadowAttribute,
-  filter: result.filterAttribute,
+  experimental_backgroundImage: _mod26.backgroundImageAttribute,
+  experimental_backgroundSize: _mod26.backgroundSizeAttribute,
+  experimental_backgroundPosition: _mod26.backgroundPositionAttribute,
+  experimental_backgroundRepeat: _mod26.backgroundRepeatAttribute,
+  boxShadow: _mod26.boxShadowAttribute,
+  filter: _mod26.filterAttribute,
   mixBlendMode: true,
   isolation: true,
   opacity: true,
   elevation: true,
-  shadowColor: result.colorAttribute,
+  shadowColor: _mod26.colorAttribute,
   zIndex: true,
   renderToHardwareTextureAndroid: true,
   testID: true,
@@ -176,7 +180,7 @@ const merged = Object.assign({
   borderBottomWidth: true,
   borderLeftWidth: true,
   borderRightWidth: true,
-  outlineColor: result.colorAttribute,
+  outlineColor: _mod26.colorAttribute,
   outlineOffset: true,
   outlineStyle: true,
   outlineWidth: true,
@@ -194,7 +198,7 @@ const merged = Object.assign({
   insetInlineEnd: true,
   insetInlineStart: true,
   position: true,
-  style: resultDefault,
+  style: _modDef26,
   removeClippedSubviews: true,
   accessible: true,
   hasTVPreferredFocus: true,
@@ -222,51 +226,52 @@ const merged = Object.assign({
   nativeBackgroundAndroid: true,
   nativeForegroundAndroid: true,
   needsOffscreenAlphaCompositing: true,
-  borderColor: result.colorAttribute,
-  borderLeftColor: result.colorAttribute,
-  borderRightColor: result.colorAttribute,
-  borderTopColor: result.colorAttribute,
-  borderBottomColor: result.colorAttribute,
-  borderStartColor: result.colorAttribute,
-  borderEndColor: result.colorAttribute,
-  borderBlockColor: result.colorAttribute,
-  borderBlockEndColor: result.colorAttribute,
-  borderBlockStartColor: result.colorAttribute,
+  borderColor: _mod26.colorAttribute,
+  borderLeftColor: _mod26.colorAttribute,
+  borderRightColor: _mod26.colorAttribute,
+  borderTopColor: _mod26.colorAttribute,
+  borderBottomColor: _mod26.colorAttribute,
+  borderStartColor: _mod26.colorAttribute,
+  borderEndColor: _mod26.colorAttribute,
+  borderBlockColor: _mod26.colorAttribute,
+  borderBlockEndColor: _mod26.colorAttribute,
+  borderBlockStartColor: _mod26.colorAttribute,
   focusable: true,
   tabIndex: true,
   backfaceVisibility: true,
-});
-obj.onLayout = true;
-obj.onMoveShouldSetResponder = true;
-obj.onMoveShouldSetResponderCapture = true;
-obj.onStartShouldSetResponder = true;
-obj.onStartShouldSetResponderCapture = true;
-obj.onResponderGrant = true;
-obj.onResponderReject = true;
-obj.onResponderStart = true;
-obj.onResponderEnd = true;
-obj.onResponderRelease = true;
-obj.onResponderMove = true;
-obj.onResponderTerminate = true;
-obj.onResponderTerminationRequest = true;
-obj.onShouldBlockNativeResponder = true;
-obj.onTouchStart = true;
-obj.onTouchMove = true;
-obj.onTouchEnd = true;
-obj.onTouchCancel = true;
-obj.onClick = true;
-obj.onClickCapture = true;
-obj.onPointerEnter = true;
-obj.onPointerEnterCapture = true;
-obj.onPointerLeave = true;
-obj.onPointerLeaveCapture = true;
-obj.onPointerMove = true;
-obj.onPointerMoveCapture = true;
-obj.onPointerOut = true;
-obj.onPointerOutCapture = true;
-obj.onPointerOver = true;
-obj.onPointerOverCapture = true;
-obj.preventClipping = true;
-obj[2] = obj;
+};
+const merged = Object.assign(size);
+obj1.onLayout = true;
+obj1.onMoveShouldSetResponder = true;
+obj1.onMoveShouldSetResponderCapture = true;
+obj1.onStartShouldSetResponder = true;
+obj1.onStartShouldSetResponderCapture = true;
+obj1.onResponderGrant = true;
+obj1.onResponderReject = true;
+obj1.onResponderStart = true;
+obj1.onResponderEnd = true;
+obj1.onResponderRelease = true;
+obj1.onResponderMove = true;
+obj1.onResponderTerminate = true;
+obj1.onResponderTerminationRequest = true;
+obj1.onShouldBlockNativeResponder = true;
+obj1.onTouchStart = true;
+obj1.onTouchMove = true;
+obj1.onTouchEnd = true;
+obj1.onTouchCancel = true;
+obj1.onClick = true;
+obj1.onClickCapture = true;
+obj1.onPointerEnter = true;
+obj1.onPointerEnterCapture = true;
+obj1.onPointerLeave = true;
+obj1.onPointerLeaveCapture = true;
+obj1.onPointerMove = true;
+obj1.onPointerMoveCapture = true;
+obj1.onPointerOut = true;
+obj1.onPointerOutCapture = true;
+obj1.onPointerOver = true;
+obj1.onPointerOverCapture = true;
+obj1.preventClipping = true;
+obj.validAttributes = obj1;
 
 export default obj;

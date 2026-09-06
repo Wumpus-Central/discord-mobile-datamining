@@ -1,7 +1,10 @@
 // _runtime/06703_attachHandlers.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
+import convertToHandlerTag from "06679_convertToHandlerTag.js";
+import RNGestureHandlerModuleDefault from "06684_RNGestureHandlerModule.js";
+import transformIntoHandlerTags from "06686_transformIntoHandlerTags.js";
 
-const Platform = get_ActivityIndicator.Platform;
+const Platform = _mod17.Platform;
 
 export const attachHandlers = function attachHandlers(preparedGesture) {
   preparedGesture = preparedGesture.preparedGesture;
@@ -14,13 +17,8 @@ export const attachHandlers = function attachHandlers(preparedGesture) {
     }
   });
   for (const item10022 of gesturesToAttach) {
-    let tmp4 = preparedGesture;
-    let tmp5 = preparedGesture;
-    let tmp6 = gesturesToAttach;
-    let tmp7 = gesturesToAttach;
     let obj2 = preparedGesture(gesturesToAttach[2]);
     let result = obj2.checkGestureCallbacksForWorklets(item10022);
-    let tmp9 = gestureConfig;
     let obj3 = gestureConfig(gesturesToAttach[3]);
     ({ handlerName, handlerTag } = item10022);
     let obj4 = preparedGesture(gesturesToAttach[4]);
@@ -37,51 +35,35 @@ export const attachHandlers = function attachHandlers(preparedGesture) {
   preparedGesture(gesturesToAttach[1]).ghQueueMicrotask(() => {
     if (preparedGesture.isMounted) {
       for (const item10007 of gesturesToAttach) {
-        let tmp3 = gestureConfig;
-        let tmp4 = gesturesToAttach;
-        let obj = gestureConfig(gesturesToAttach[3]);
-        let tmp5 = preparedGesture;
-        let tmp6 = gesturesToAttach;
-        let obj2 = preparedGesture(gesturesToAttach[4]);
-        let tmp7 = preparedGesture;
-        let tmp8 = gesturesToAttach;
+        let obj = RNGestureHandlerModuleDefault;
+        let obj2 = transformIntoHandlerTags;
         let result = obj.setGestureHandlerConfig(
           item10007.handlerTag,
-          obj2.filterConfig(item10007.config, preparedGesture(gesturesToAttach[2]).ALLOWED_PROPS),
+          obj2.filterConfig(item10007.config, convertToHandlerTag.ALLOWED_PROPS),
         );
-        let tmp10 = gesturesToAttach;
-        let obj3 = gestureConfig(gesturesToAttach[3]);
-        let tmp11 = preparedGesture;
-        let tmp12 = gesturesToAttach;
-        let obj4 = preparedGesture(gesturesToAttach[2]);
+        let obj3 = RNGestureHandlerModuleDefault;
+        let obj4 = convertToHandlerTag;
         let configureRelationsResult = obj3.configureRelations(
           item10007.handlerTag,
           obj4.extractGestureRelations(item10007),
         );
         continue;
       }
-      const result1 = preparedGesture(gesturesToAttach[4]).scheduleFlushOperations();
-      const obj5 = preparedGesture(gesturesToAttach[4]);
+      const result1 = transformIntoHandlerTags.scheduleFlushOperations();
     }
   });
   for (const item10067 of gesturesToAttach) {
     let tmp13 = item10067;
     let tmp17 = gesturesToAttach;
-    let tmp14 = preparedGesture;
     let tmp15 = preparedGesture;
-    let tmp16 = gesturesToAttach;
     let ActionType = preparedGesture(gesturesToAttach[6]).ActionType;
     if (item10067.shouldUseReanimated) {
       let JS_FUNCTION_NEW_API = ActionType.REANIMATED_WORKLET;
     } else {
       JS_FUNCTION_NEW_API = ActionType.JS_FUNCTION_NEW_API;
     }
-    let tmp18 = gestureConfig;
-    let tmp19 = tmp16;
     let obj7 = gestureConfig(tmp17[3]);
-    let tmp20 = item10067;
     let attachGestureHandlerResult = obj7.attachGestureHandler(tmp13.handlerTag, tmp, JS_FUNCTION_NEW_API);
-    let tmp22 = tmp14;
     let MountRegistry = tmp15(tmp17[7]).MountRegistry;
     let gestureWillMountResult = MountRegistry.gestureWillMount(tmp13);
     continue;

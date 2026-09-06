@@ -1,54 +1,84 @@
 // _runtime/metro/07355__.js
+let obj = {
+  v: "4.8.0",
+  meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" },
+  fr: 60,
+  ip: 0,
+  op: 120,
+  w: 1280,
+  h: 720,
+  nm: "FrameEffect_01-5_Out",
+  ddd: 0,
+  assets: null,
+  layers: null,
+  markers: [],
+};
 const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }];
-const items1 = [
-  {
-    ddd: 0,
-    ind: 3,
-    ty: 2,
-    nm: "smile",
-    refId: "image_0",
-    sr: 1,
-    ks: {
-      o: { a: 0, k: 100, ix: 11 },
-      r: { a: 0, k: 0, ix: 10 },
-      p: { a: 0, k: [19.875, 20.125, 0], ix: 2 },
-      a: { a: 0, k: [17.25, 17.25, 0], ix: 1 },
-      s: { a: 0, k: [108.7, 108.7, 100], ix: 6 },
-    },
-    ao: 0,
-    ip: 0,
-    op: 914,
-    st: 0,
-    bm: 0,
+obj = { id: "comp_0", layers: null };
+obj = {
+  ddd: 0,
+  ind: 3,
+  ty: 2,
+  nm: "smile",
+  refId: "image_0",
+  sr: 1,
+  ks: {
+    o: { a: 0, k: 100, ix: 11 },
+    r: { a: 0, k: 0, ix: 10 },
+    p: { a: 0, k: [19.875, 20.125, 0], ix: 2 },
+    a: { a: 0, k: [17.25, 17.25, 0], ix: 1 },
+    s: { a: 0, k: [108.7, 108.7, 100], ix: 6 },
   },
-];
-items[1] = { id: "comp_0", layers: items1 };
-const items2 = [
-  {
-    ddd: 0,
-    ind: 1,
-    ty: 4,
-    nm: "Null_3",
-    sr: 1,
-    ks: {
-      o: { a: 0, k: 100, ix: 11 },
-      r: { a: 0, k: 0, ix: 10 },
-      p: { a: 0, k: [2, 720, 0], ix: 2 },
-      a: { a: 0, k: [0, 0, 0], ix: 1 },
-      s: { a: 0, k: [-100, 100, 100], ix: 6 },
-    },
-    ao: 0,
-    shapes: [],
-    ip: -1,
-    op: 359,
-    st: -1,
-    bm: 0,
+  ao: 0,
+  ip: 0,
+  op: 914,
+  st: 0,
+  bm: 0,
+};
+const items1 = [obj];
+obj.layers = items1;
+items[1] = obj;
+obj.assets = items;
+const obj2 = {
+  ddd: 0,
+  ind: 1,
+  ty: 4,
+  nm: "Null_3",
+  sr: 1,
+  ks: {
+    o: { a: 0, k: 100, ix: 11 },
+    r: { a: 0, k: 0, ix: 10 },
+    p: { a: 0, k: [2, 720, 0], ix: 2 },
+    a: { a: 0, k: [0, 0, 0], ix: 1 },
+    s: { a: 0, k: [-100, 100, 100], ix: 6 },
   },
-  ,
-  ,
-  ,
-  ,
-];
+  ao: 0,
+  shapes: [],
+  ip: -1,
+  op: 359,
+  st: -1,
+  bm: 0,
+};
+const items2 = [obj2, , , , ,];
+const obj4 = {
+  ddd: 0,
+  ind: 2,
+  ty: 0,
+  nm: "Bounce_3",
+  parent: 1,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: -1,
+  op: 118,
+  st: -1,
+  bm: 0,
+};
+const obj5 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: null };
+const obj6 = { a: 1, k: null, ix: 10 };
 const items3 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 4, s: [-44] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 21, s: [-19.578] },
@@ -66,6 +96,9 @@ const items3 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 127, s: [-14.7] },
   { t: 129, s: [0] },
 ];
+obj6.k = items3;
+obj5.r = obj6;
+const obj21 = { a: 1, k: null, ix: 2 };
 const items4 = [
   {
     i: { x: 1, y: 1 },
@@ -141,6 +174,9 @@ const items4 = [
   },
   { t: 129, s: [933.972, 0, 0] },
 ];
+obj21.k = items4;
+obj5.p = obj21;
+const obj22 = { a: 1, k: null, ix: 6 };
 const items5 = [
   {
     i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 0.833] },
@@ -252,30 +288,11 @@ const items5 = [
   },
   { t: 129, s: [394.08, 323.36, 100] },
 ];
-items2[1] = {
-  ddd: 0,
-  ind: 2,
-  ty: 0,
-  nm: "Bounce_3",
-  parent: 1,
-  refId: "comp_0",
-  sr: 1,
-  ks: {
-    o: { a: 0, k: 100, ix: 11 },
-    r: { a: 1, k: items3, ix: 10 },
-    p: { a: 1, k: items4, ix: 2 },
-    a: { a: 0, k: [20, 40, 0], ix: 1 },
-    s: { a: 1, k: items5, ix: 6 },
-  },
-  ao: 0,
-  w: 40,
-  h: 40,
-  ip: -1,
-  op: 118,
-  st: -1,
-  bm: 0,
-};
-items2[2] = {
+obj22.k = items5;
+obj5.s = obj22;
+obj4.ks = obj5;
+items2[1] = obj4;
+const obj41 = {
   ddd: 0,
   ind: 3,
   ty: 4,
@@ -295,6 +312,26 @@ items2[2] = {
   st: 21,
   bm: 0,
 };
+items2[2] = obj41;
+const obj43 = {
+  ddd: 0,
+  ind: 4,
+  ty: 0,
+  nm: "Bounce_2",
+  parent: 3,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: -5,
+  op: 125,
+  st: -5,
+  bm: 0,
+};
+const obj44 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: null };
+const obj45 = { a: 1, k: null, ix: 10 };
 const items6 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 0, s: [-44] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 17, s: [-19.578] },
@@ -312,6 +349,9 @@ const items6 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 123, s: [-14.7] },
   { t: 125, s: [0] },
 ];
+obj45.k = items6;
+obj44.r = obj45;
+const obj60 = { a: 1, k: null, ix: 2 };
 const items7 = [
   {
     i: { x: 1, y: 1 },
@@ -387,6 +427,9 @@ const items7 = [
   },
   { t: 125, s: [933.972, 0, 0] },
 ];
+obj60.k = items7;
+obj44.p = obj60;
+const obj61 = { a: 1, k: null, ix: 6 };
 const items8 = [
   {
     i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 0.833] },
@@ -498,30 +541,11 @@ const items8 = [
   },
   { t: 125, s: [394.08, 323.36, 100] },
 ];
-items2[3] = {
-  ddd: 0,
-  ind: 4,
-  ty: 0,
-  nm: "Bounce_2",
-  parent: 3,
-  refId: "comp_0",
-  sr: 1,
-  ks: {
-    o: { a: 0, k: 100, ix: 11 },
-    r: { a: 1, k: items6, ix: 10 },
-    p: { a: 1, k: items7, ix: 2 },
-    a: { a: 0, k: [20, 40, 0], ix: 1 },
-    s: { a: 1, k: items8, ix: 6 },
-  },
-  ao: 0,
-  w: 40,
-  h: 40,
-  ip: -5,
-  op: 125,
-  st: -5,
-  bm: 0,
-};
-items2[4] = {
+obj61.k = items8;
+obj44.s = obj61;
+obj43.ks = obj44;
+items2[3] = obj43;
+const obj80 = {
   ddd: 0,
   ind: 5,
   ty: 4,
@@ -541,6 +565,26 @@ items2[4] = {
   st: 53,
   bm: 0,
 };
+items2[4] = obj80;
+const obj82 = {
+  ddd: 0,
+  ind: 6,
+  ty: 0,
+  nm: "Bounce_1",
+  parent: 5,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 14,
+  op: 149,
+  st: 14,
+  bm: 0,
+};
+const obj83 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: null };
+const obj84 = { a: 1, k: null, ix: 10 };
 const items9 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 19, s: [-44] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 36, s: [-19.578] },
@@ -558,6 +602,9 @@ const items9 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 142, s: [-14.7] },
   { t: 144, s: [0] },
 ];
+obj84.k = items9;
+obj83.r = obj84;
+const obj99 = { a: 1, k: null, ix: 2 };
 const items10 = [
   {
     i: { x: 1, y: 1 },
@@ -633,6 +680,9 @@ const items10 = [
   },
   { t: 144, s: [933.972, 0, 0] },
 ];
+obj99.k = items10;
+obj83.p = obj99;
+const obj100 = { a: 1, k: null, ix: 6 };
 const items11 = [
   {
     i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 0.833] },
@@ -744,41 +794,10 @@ const items11 = [
   },
   { t: 144, s: [394.08, 323.36, 100] },
 ];
-items2[5] = {
-  ddd: 0,
-  ind: 6,
-  ty: 0,
-  nm: "Bounce_1",
-  parent: 5,
-  refId: "comp_0",
-  sr: 1,
-  ks: {
-    o: { a: 0, k: 100, ix: 11 },
-    r: { a: 1, k: items9, ix: 10 },
-    p: { a: 1, k: items10, ix: 2 },
-    a: { a: 0, k: [20, 40, 0], ix: 1 },
-    s: { a: 1, k: items11, ix: 6 },
-  },
-  ao: 0,
-  w: 40,
-  h: 40,
-  ip: 14,
-  op: 149,
-  st: 14,
-  bm: 0,
-};
+obj100.k = items11;
+obj83.s = obj100;
+obj82.ks = obj83;
+items2[5] = obj82;
+obj.layers = items2;
 
-export default {
-  v: "4.8.0",
-  meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" },
-  fr: 60,
-  ip: 0,
-  op: 120,
-  w: 1280,
-  h: 720,
-  nm: "FrameEffect_01-5_Out",
-  ddd: 0,
-  assets: items,
-  layers: items2,
-  markers: [],
-};
+export default obj;

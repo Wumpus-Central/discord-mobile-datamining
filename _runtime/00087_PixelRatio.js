@@ -1,21 +1,22 @@
 // _runtime/00087_PixelRatio.js
 import _createClassDefault from "metro/00042__createClass.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const PixelRatio = arg1;
 class PixelRatio {
   constructor() {
-    tmp = closure_2(this, PixelRatio);
+    tmp = c2(this, PixelRatio);
     return;
   }
 }
-const items = [
-  {
-    key: "get",
-    value: function get() {
-      return PixelRatio(88).default.get("window").scale;
-    },
+const entry = {
+  key: "get",
+  value: function get() {
+    return PixelRatio(88).default.get("window").scale;
   },
+};
+const items = [
+  entry,
   {
     key: "getFontScale",
     value: function getFontScale() {
@@ -35,7 +36,7 @@ const items = [
   {
     key: "roundToNearestPixel",
     value: function roundToNearestPixel(arg0) {
-      const value = PixelRatio.get();
+      value = PixelRatio.get();
       return Math.round(arg0 * value) / value;
     },
   },

@@ -1,10 +1,10 @@
 // _runtime/metro/14353__.js
-import getOwnPropertyDescriptor from "../14300_getOwnPropertyDescriptor.js";
+import _mod14300 from "14300__.js";
 import _mod14334 from "14334__.js";
-import defineProperty from "../14351_defineProperty.js";
+import _mod14351 from "14351__.js";
 
-export default getOwnPropertyDescriptor
-  ? (arg0, arg1, arg2) => defineProperty.f(arg0, arg1, _mod14334(1, arg2))
+export default _mod14300
+  ? (arg0, arg1, arg2) => _mod14351.f(arg0, arg1, _mod14334(1, arg2))
   : (arg0, arg1, arg2) => {
       arg0[arg1] = arg2;
       return arg0;

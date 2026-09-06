@@ -1,11 +1,11 @@
 // _runtime/00437_VirtualArray.js
-import _createClassDefault from "metro/00042__createClass.js";
-import closure_0 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class VirtualArray {
   constructor(arg0) {
     self = this;
-    tmp = closure_0(this, self);
+    tmp = closure_0(this, VirtualArray);
     items = [...global];
     closure_0 = items;
     this.size = items.length;
@@ -22,4 +22,4 @@ class VirtualArray {
   }
 }
 
-export const VirtualArray = _createClassDefault(VirtualArray);
+export const VirtualArray = _createClass(VirtualArray);

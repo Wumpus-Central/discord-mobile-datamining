@@ -1,10 +1,10 @@
 // _runtime/07015_SlideFromRightIOS.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import Animated from "07009_Animated.js";
+import _mod17 from "metro/00017__.js";
+import _mod7009 from "metro/07009__.js";
 import TransitionIOSSpec from "07016_TransitionIOSSpec.js";
 import forHorizontalIOS from "07017_forHorizontalIOS.js";
 
-const Platform = get_ActivityIndicator.Platform;
+const Platform = _mod17.Platform;
 let obj = {
   gestureDirection: "horizontal",
   transitionSpec: null,
@@ -12,14 +12,14 @@ let obj = {
   headerStyleInterpolator: null,
 };
 obj = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
-obj[1] = obj;
-obj[2] = forHorizontalIOS.forHorizontalIOS;
-obj[3] = Animated.forFade;
+obj.transitionSpec = obj;
+obj.cardStyleInterpolator = forHorizontalIOS.forHorizontalIOS;
+obj.headerStyleInterpolator = _mod7009.forFade;
 obj = {
   gestureDirection: "vertical",
   transitionSpec: { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec },
   cardStyleInterpolator: forHorizontalIOS.forVerticalIOS,
-  headerStyleInterpolator: Animated.forFade,
+  headerStyleInterpolator: _mod7009.forFade,
 };
 const obj2 = {
   gestureDirection: "vertical",
@@ -28,9 +28,9 @@ const obj2 = {
   headerStyleInterpolator: null,
 };
 const obj1 = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
-obj2[1] = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
-obj2[2] = forHorizontalIOS.forModalPresentationIOS;
-obj2[3] = Animated.forFade;
+obj2.transitionSpec = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
+obj2.cardStyleInterpolator = forHorizontalIOS.forModalPresentationIOS;
+obj2.headerStyleInterpolator = _mod7009.forFade;
 const obj4 = {
   gestureDirection: "vertical",
   transitionSpec: null,
@@ -38,9 +38,12 @@ const obj4 = {
   headerStyleInterpolator: null,
 };
 const obj3 = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
-obj4[1] = { open: TransitionIOSSpec.FadeInFromBottomAndroidSpec, close: TransitionIOSSpec.FadeOutToBottomAndroidSpec };
-obj4[2] = forHorizontalIOS.forFadeFromBottomAndroid;
-obj4[3] = Animated.forFade;
+obj4.transitionSpec = {
+  open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
+  close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
+};
+obj4.cardStyleInterpolator = forHorizontalIOS.forFadeFromBottomAndroid;
+obj4.headerStyleInterpolator = _mod7009.forFade;
 const obj6 = {
   gestureDirection: "vertical",
   transitionSpec: null,
@@ -51,9 +54,12 @@ const obj5 = {
   open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
   close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
 };
-obj6[1] = { open: TransitionIOSSpec.RevealFromBottomAndroidSpec, close: TransitionIOSSpec.RevealFromBottomAndroidSpec };
-obj6[2] = forHorizontalIOS.forRevealFromBottomAndroid;
-obj6[3] = Animated.forFade;
+obj6.transitionSpec = {
+  open: TransitionIOSSpec.RevealFromBottomAndroidSpec,
+  close: TransitionIOSSpec.RevealFromBottomAndroidSpec,
+};
+obj6.cardStyleInterpolator = forHorizontalIOS.forRevealFromBottomAndroid;
+obj6.headerStyleInterpolator = _mod7009.forFade;
 const obj8 = {
   gestureDirection: "horizontal",
   transitionSpec: null,
@@ -64,9 +70,12 @@ const obj7 = {
   open: TransitionIOSSpec.RevealFromBottomAndroidSpec,
   close: TransitionIOSSpec.RevealFromBottomAndroidSpec,
 };
-obj8[1] = { open: TransitionIOSSpec.ScaleFromCenterAndroidSpec, close: TransitionIOSSpec.ScaleFromCenterAndroidSpec };
-obj8[2] = forHorizontalIOS.forScaleFromCenterAndroid;
-obj8[3] = Animated.forFade;
+obj8.transitionSpec = {
+  open: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
+  close: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
+};
+obj8.cardStyleInterpolator = forHorizontalIOS.forScaleFromCenterAndroid;
+obj8.headerStyleInterpolator = _mod7009.forFade;
 const obj10 = {
   gestureDirection: "horizontal",
   transitionSpec: null,
@@ -77,9 +86,12 @@ const obj9 = {
   open: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
   close: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
 };
-obj10[1] = { open: TransitionIOSSpec.FadeInFromBottomAndroidSpec, close: TransitionIOSSpec.FadeOutToBottomAndroidSpec };
-obj10[2] = forHorizontalIOS.forFadeFromRightAndroid;
-obj10[3] = Animated.forFade;
+obj10.transitionSpec = {
+  open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
+  close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
+};
+obj10.cardStyleInterpolator = forHorizontalIOS.forFadeFromRightAndroid;
+obj10.headerStyleInterpolator = _mod7009.forFade;
 const obj12 = {
   gestureDirection: "vertical",
   transitionSpec: null,
@@ -90,9 +102,12 @@ const obj11 = {
   open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
   close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
 };
-obj12[1] = { open: TransitionIOSSpec.BottomSheetSlideInSpec, close: TransitionIOSSpec.BottomSheetSlideOutSpec };
-obj12[2] = forHorizontalIOS.forBottomSheetAndroid;
-obj12[3] = Animated.forFade;
+obj12.transitionSpec = {
+  open: TransitionIOSSpec.BottomSheetSlideInSpec,
+  close: TransitionIOSSpec.BottomSheetSlideOutSpec,
+};
+obj12.cardStyleInterpolator = forHorizontalIOS.forBottomSheetAndroid;
+obj12.headerStyleInterpolator = _mod7009.forFade;
 const obj14 = {
   gestureDirection: "vertical",
   transitionSpec: null,
@@ -100,9 +115,12 @@ const obj14 = {
   headerStyleInterpolator: null,
 };
 const obj13 = { open: TransitionIOSSpec.BottomSheetSlideInSpec, close: TransitionIOSSpec.BottomSheetSlideOutSpec };
-obj14[1] = { open: TransitionIOSSpec.BottomSheetSlideInSpec, close: TransitionIOSSpec.BottomSheetSlideOutSpec };
-obj14[2] = forHorizontalIOS.forFadeFromCenter;
-obj14[3] = Animated.forFade;
+obj14.transitionSpec = {
+  open: TransitionIOSSpec.BottomSheetSlideInSpec,
+  close: TransitionIOSSpec.BottomSheetSlideOutSpec,
+};
+obj14.cardStyleInterpolator = forHorizontalIOS.forFadeFromCenter;
+obj14.headerStyleInterpolator = _mod7009.forFade;
 let tmp2 = obj10;
 if (Number(Platform.Version) < 34) {
   const _Number = Number;

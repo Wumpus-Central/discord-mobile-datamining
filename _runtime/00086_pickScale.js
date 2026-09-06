@@ -1,11 +1,13 @@
 // _runtime/00086_pickScale.js
-const module = arg2;
+import PixelRatioDefault from "00087_PixelRatio.js";
+
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.pickScale = function pickScale(scales, _default) {
-  let value = _default;
+
+export const pickScale = function pickScale(scales, _default) {
+  value = _default;
   if (_default == null) {
-    value = module(87).get();
-    const obj = module(87);
+    value = PixelRatioDefault.get();
   }
   let num = 0;
   if (0 < scales.length) {
@@ -16,13 +18,13 @@ arg5.pickScale = function pickScale(scales, _default) {
   }
   return scales[scales.length - 1] || 1;
 };
-arg5.setUrlCacheBreaker = function setUrlCacheBreaker(arg0) {
-  closure_2 = arg0;
-};
-arg5.getUrlCacheBreaker = function getUrlCacheBreaker() {
+export function setUrlCacheBreaker(arg0) {
+  global = arg0;
+}
+export const getUrlCacheBreaker = function getUrlCacheBreaker() {
   let str = "";
-  if (null != closure_2) {
-    str = closure_2;
+  if (null != global) {
+    str = global;
   }
   return str;
 };

@@ -1,12 +1,12 @@
 // _runtime/12899_CounterMetric.js
-import _mod12894 from "metro/12894__.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import COUNTER_METRIC_TYPE from "12894_COUNTER_METRIC_TYPE.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 let SetMetric = require;
 class CounterMetric {
   constructor(arg0) {
-    tmp = closure_2(this, SetMetric);
+    tmp = c2(this, SetMetric);
     this._value = global;
     return;
   }
@@ -36,7 +36,7 @@ let items = [
 const _moduleResult = _createClass(CounterMetric, items);
 class GaugeMetric {
   constructor(arg0) {
-    tmp = closure_2(this, SetMetric);
+    tmp = c2(this, SetMetric);
     this._last = global;
     this._min = global;
     this._max = global;
@@ -79,7 +79,7 @@ const items1 = [
 const _moduleResult1 = _createClass(GaugeMetric, items1);
 class DistributionMetric {
   constructor(arg0) {
-    tmp = closure_2(this, SetMetric);
+    tmp = c2(this, SetMetric);
     items = [];
     items[0] = global;
     this._value = items;
@@ -113,7 +113,7 @@ const items2 = [
 const _moduleResult2 = _createClass(DistributionMetric, items2);
 class SetMetric {
   constructor(arg0) {
-    tmp = closure_2(this, SetMetric);
+    tmp = c2(this, SetMetric);
     this.first = global;
     items = [];
     items[0] = global;
@@ -139,11 +139,11 @@ const items3 = [
   {
     key: "toString",
     value: function toString() {
-      const mapped = Array.from(this._value).map((str) => {
-        let simpleHashResult = str;
-        if (typeof str === "string") {
-          simpleHashResult = callback(table[2]).simpleHash(str);
-          const obj = callback(table[2]);
+      const mapped = Array.from(this._value).map((item) => {
+        let simpleHashResult = item;
+        if (typeof item === "string") {
+          simpleHashResult = SetMetric(dependencyMap[2]).simpleHash(item);
+          const obj = SetMetric(dependencyMap[2]);
         }
         return simpleHashResult;
       });
@@ -157,9 +157,9 @@ export const CounterMetric = _moduleResult;
 export const DistributionMetric = _moduleResult2;
 export const GaugeMetric = _moduleResult1;
 export const METRIC_MAP = {
-  [_mod12894.COUNTER_METRIC_TYPE]: _moduleResult,
-  [_mod12894.GAUGE_METRIC_TYPE]: _moduleResult1,
-  [_mod12894.DISTRIBUTION_METRIC_TYPE]: _moduleResult2,
-  [_mod12894.SET_METRIC_TYPE]: _moduleResult3,
+  [COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE]: _moduleResult,
+  [COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE]: _moduleResult1,
+  [COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE]: _moduleResult2,
+  [COUNTER_METRIC_TYPE.SET_METRIC_TYPE]: _moduleResult3,
 };
 export const SetMetric = _moduleResult3;

@@ -1,16 +1,16 @@
 // _runtime/08286_StepNumber.js
-import noop2 from "00019_noop.js";
-import styles from "08283_styles.js";
+import _mod19 from "metro/00019__.js";
+import _mod8283 from "metro/08283__.js";
 import 08279__ from "metro/08279__.js";
-import closure_2 from "00017_get_ActivityIndicator.js";
-import closure_3 from "react/00021_jsxProd.js";
+import get_ActivityIndicator from "metro/00017__.js";
+import jsxProd from "react/00021_jsxProd.js";
 
-const noop = module_8279(noop2);
+const noop = module_8279(_mod19);
 
 export const StepNumber = function StepNumber(arg0) {
-  let obj = { style: styles.styles.stepNumber, children: null };
+  let obj = { style: _mod8283.styles.stepNumber, children: null };
   ({ i, index, style } = arg0);
   obj = { testID: "" + index + "th-step", style, children: i };
-  obj[1] = <RN.Text testID={"" + index + "th-step"} style={style}>{i}</RN.Text>;
-  return <RN.View testID={"" + index + "th-step"} style={style}>{i}</RN.View>;
+  obj.children = <get ActivityIndicator.Text testID={"" + index + "th-step"} style={style}>{i}</get ActivityIndicator.Text>;
+  return <get ActivityIndicator.View testID={"" + index + "th-step"} style={style}>{i}</get ActivityIndicator.View>;
 };

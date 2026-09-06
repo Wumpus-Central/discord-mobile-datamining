@@ -1,6 +1,5 @@
 // _runtime/10427_Chrono.js
 import ENDefaultConfiguration from "10429_ENDefaultConfiguration.js";
-import { ReferenceWithTimezone } from "10435_ReferenceWithTimezone.js";
 
 let fn = this;
 if (this) {
@@ -9,8 +8,7 @@ if (this) {
 if (!fn) {
   fn = (__esModule) => {
     if (!__esModule) {
-      const obj = { default: null };
-      obj[0] = __esModule;
+      const obj = { default: __esModule };
       let tmp = obj;
     } else {
       tmp = __esModule;
@@ -19,11 +17,11 @@ if (!fn) {
   };
 }
 const configuration = exports.configuration;
-const chrono = new require("Chrono").Chrono(configuration.createCasualConfiguration(false));
+const chrono = new require("metro/10428__.js").Chrono(configuration.createCasualConfiguration(false));
 const configuration2 = exports.configuration;
-const chrono1 = new require("Chrono").Chrono(configuration2.createConfiguration(true, false));
+const chrono1 = new require("metro/10428__.js").Chrono(configuration2.createConfiguration(true, false));
 const configuration3 = exports.configuration;
-const chrono2 = new require("Chrono").Chrono(configuration3.createCasualConfiguration(true));
+const chrono2 = new require("metro/10428__.js").Chrono(configuration3.createCasualConfiguration(true));
 
 export const parse = function parse(arg0, arg1, arg2) {
   const casual = exports.casual;
@@ -33,12 +31,12 @@ export const parseDate = function parseDate(arg0, arg1, arg2) {
   const casual = exports.casual;
   return casual.parseDate(arg0, arg1, arg2);
 };
-export const Chrono = ReferenceWithTimezone /* ReferenceWithTimezone */.ParsingComponents;
-export const ParsingResult = ReferenceWithTimezone /* ReferenceWithTimezone */.ParsingComponents;
-export const ParsingComponents = ReferenceWithTimezone /* ReferenceWithTimezone */.ParsingComponents;
-export const ReferenceWithTimezone = ReferenceWithTimezone /* ReferenceWithTimezone */.ReferenceWithTimezone;
-export const Meridiem = require("metro/10437__.js").Meridiem;
-export const Weekday = require("metro/10437__.js").Weekday;
+export const Chrono = require("ReferenceWithTimezone").ParsingComponents;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingComponents;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
 export const configuration = new fn(ENDefaultConfiguration).default();
 export const casual = chrono;
 export const strict = chrono1;

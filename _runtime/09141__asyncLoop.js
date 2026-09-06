@@ -1,113 +1,93 @@
 // _runtime/09141__asyncLoop.js
-import closure_3 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-let Hash = require;
-function _asyncLoop() {
-  const self = this;
-  const tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function* (arg0, arg1, arg2) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = 1;
-              closure_3 = 1;
-              closure_3 = undefined;
-              closure_4 = undefined;
-              c5 = undefined;
-              const _Date2 = Date;
-              closure_3 = Date.now();
-              closure_4 = 0;
-              if (closure_4 < closure_0) {
-                callback(closure_4);
-                const _Date = Date;
-                c5 = Date.now() - closure_3;
-                let tmp15 = c5 >= 0;
-                if (tmp15) {
-                  tmp15 = c5 < closure_1;
-                }
-                if (!tmp15) {
-                  c5 = 1;
-                  c6 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = closure_1.nextTick();
-                  return obj1;
-                }
-              }
-              c6 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_3 = closure_3 + c5;
-          }
-          closure_4 = closure_4 + 1;
-        } catch (tmp25) {
-          c6 = tmp;
-          throw tmp25;
-        }
-      }
-    })();
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let uint32Array = new Uint32Array([287454020]);
-let uint8Array = new Uint8Array(uint32Array.buffer);
-let closure_5 = Array.from({ length: 256 }, (arg0, arg1) => arg1.toString(16).padStart(2, "0"));
-let closure_6 = { _0: 48, _9: 57, _A: 65, _F: 70, _a: 97, _f: 102 };
-Hash = asyncGeneratorStep(function* () {
-  if (c0 === 2) {
-    c0 = 3;
-    HermesBuiltin.throwTypeError();
+const Hash = require;
+let closure_7 = async function _asyncLoop(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp3 === 3) {
     if (arg0 === 1) {
-      throw arg1;
+      throw value;
     } else if (arg0 === 2) {
-      let obj = { value: null, done: true };
-      obj[0] = arg1;
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          c4 = 1;
+          c3 = 1;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          closure_131_2 = closure_2;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          const _Date2 = Date;
+          closure_131_3 = Date.now();
+          closure_131_4 = 0;
+          if (closure_131_4 < closure_0) {
+            closure_131_2(closure_131_4);
+            const _Date = Date;
+            closure_131_5 = Date.now() - closure_131_3;
+            let tmp15 = closure_131_5 >= 0;
+            if (tmp15) {
+              tmp15 = closure_131_5 < closure_131_1;
+            }
+            if (!tmp15) {
+              c5 = 1;
+              c6 = 1;
+              const obj1 = { value: closure_132_1.nextTick(), done: false };
+              return obj1;
+            }
+          }
+          c6 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        closure_131_3 = closure_131_3 + closure_131_5;
+      }
+      closure_131_4 = closure_131_4 + 1;
+    } catch (tmp25) {
+      c6 = tmp;
+      throw tmp25;
+    }
+  }
+};
+let uint32Array = new Uint32Array([287454020]);
+let uint8Array = new Uint8Array(uint32Array.buffer);
+let closure_5 = Array.from({ length: 256 }, (arg0, arg1) => require("checkEnv").padStart(2, "0"));
+const _0 = { _0: 48, _9: 57, _A: 65, _F: 70, _a: 97, _f: 102 };
+let closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
+  if (c0 === 2) {
+    c0 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
       return obj;
     } else {
       return { value: "HermesInternal", done: null };
@@ -117,11 +97,10 @@ Hash = asyncGeneratorStep(function* () {
       c0 = 2;
       if (arg0 === 1) {
         c0 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
@@ -139,14 +118,13 @@ class Hash {
     return;
   }
 }
-let items = [
-  {
-    key: "clone",
-    value: function clone() {
-      return this._cloneInto();
-    },
+const entry = {
+  key: "clone",
+  value: function clone() {
+    return this._cloneInto();
   },
-];
+};
+let items = [entry];
 const toString = {}.toString;
 
 export const isBytes = function isBytes(obj) {
@@ -165,7 +143,6 @@ export const byteSwap32 = function byteSwap32(B32) {
   let num = 0;
   if (0 < B32.length) {
     do {
-      let tmp = exports;
       B32[num] = exports.byteSwap(B32[num]);
       num = num + 1;
       length = B32.length;
@@ -180,7 +157,6 @@ export const bytesToHex = function bytesToHex(arg0) {
   let str2 = "";
   if (0 < arg0.length) {
     do {
-      let tmp2 = table;
       str = `${closure_5[arg0[num]]}`;
       num = num + 1;
       str2 = str;
@@ -193,7 +169,7 @@ export const hexToBytes = function hexToBytes(str) {
   let sum;
   if (typeof str !== "string") {
     const _Error3 = Error;
-    error = new Error("hex string expected, got " + typeof str);
+    const error = new Error("hex string expected, got " + typeof str);
     throw error;
   } else {
     const result = length / 2;
@@ -210,8 +186,6 @@ export const hexToBytes = function hexToBytes(str) {
         while (true) {
           let charCodeAtResult = str.charCodeAt(num);
           let tmp7 = _0;
-          let tmp8 = num;
-          let tmp9 = num5;
           if (charCodeAtResult >= _0._0) {
             if (charCodeAtResult <= tmp7._9) {
               let diff = charCodeAtResult - tmp7._0;
@@ -264,9 +238,9 @@ export const hexToBytes = function hexToBytes(str) {
     }
   }
 };
-export const asyncLoop = function asyncLoop(c1, closure_11, arg2) {
+export const asyncLoop = function asyncLoop(arg0, arg1, arg2) {
   const self = this;
-  const apply = _asyncLoop.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -277,13 +251,13 @@ export const asyncLoop = function asyncLoop(c1, closure_11, arg2) {
 export const utf8ToBytes = function utf8ToBytes(str) {
   if (typeof str !== "string") {
     const _Error = Error;
-    error = new Error("utf8ToBytes expected string, got " + typeof str);
+    const error = new Error("utf8ToBytes expected string, got " + typeof str);
     throw error;
   } else {
     const _Uint8Array = Uint8Array;
     const _TextEncoder = TextEncoder;
-    const textEncoder = new TextEncoder();
-    const uint8Array = new Uint8Array(textEncoder.encode(str));
+    const encoder = new TextEncoder();
+    const uint8Array = new Uint8Array(encoder.encode(str));
     return uint8Array;
   }
 };
@@ -292,13 +266,13 @@ export const toBytes = function toBytes(B) {
   if (typeof B === "string") {
     if (typeof B !== "string") {
       const _Error = Error;
-      error = new Error("utf8ToBytes expected string, got " + typeof B);
+      const error = new Error("utf8ToBytes expected string, got " + typeof B);
       throw error;
     } else {
       const _Uint8Array = Uint8Array;
       const _TextEncoder = TextEncoder;
-      const textEncoder = new TextEncoder();
-      uint8Array = new Uint8Array(textEncoder.encode(B));
+      const encoder = new TextEncoder();
+      uint8Array = new Uint8Array(encoder.encode(B));
     }
   }
   Hash(9142).bytes(uint8Array);
@@ -314,8 +288,6 @@ export const concatBytes = function concatBytes() {
   if (0 < items.length) {
     do {
       let arr2 = items[num];
-      let tmp = Hash;
-      let tmp2 = dependencyMap;
       let bytesResult = Hash(9142).bytes(arr2);
       num2 = num2 + arr2.length;
       num = num + 1;
@@ -342,83 +314,83 @@ export const checkOpts = function checkOpts(arg0, arg1) {
     const call = toString.call;
     if ("[object Object]" !== (typeof call === "unknown" ? tmp() : call(arg1))) {
       const _Error = Error;
-      error = new Error("Options should be object or undefined");
+      const error = new Error("Options should be object or undefined");
       throw error;
     }
     tmp = toString;
   }
   return Object.assign(arg0, arg1);
 };
-export const wrapConstructor = function wrapConstructor(arg0) {
-  closure_0 = arg0;
+export const wrapConstructor = function wrapConstructor(fn) {
+  closure_0 = fn;
   function hashC(str) {
     let uint8Array = str;
     if (typeof str === "string") {
       if (typeof str !== "string") {
         const _Error = Error;
-        error = new Error("utf8ToBytes expected string, got " + typeof str);
+        const error = new Error("utf8ToBytes expected string, got " + typeof str);
         throw error;
       } else {
         const _Uint8Array = Uint8Array;
         const _TextEncoder = TextEncoder;
-        const textEncoder = new TextEncoder();
-        uint8Array = new Uint8Array(textEncoder.encode(str));
+        const encoder = new TextEncoder();
+        uint8Array = new Uint8Array(encoder.encode(str));
       }
     }
-    callback(closure_1_2[3]).bytes(uint8Array);
-    const obj = callback();
-    return callback().update(uint8Array).digest();
+    Hash(9142).bytes(uint8Array);
+    const obj = closure_0();
+    return closure_0().update(uint8Array).digest();
   }
-  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = arg0());
-  hashC.create = () => callback();
+  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = fn());
+  hashC.create = () => closure_0();
   return hashC;
 };
-export const wrapConstructorWithOpts = function wrapConstructorWithOpts(arg0) {
-  closure_0 = arg0;
-  function hashC(str) {
+export const wrapConstructorWithOpts = function wrapConstructorWithOpts(fn) {
+  closure_0 = fn;
+  function hashC(str, arg1) {
     let uint8Array = str;
     if (typeof str === "string") {
       if (typeof str !== "string") {
         const _Error = Error;
-        error = new Error("utf8ToBytes expected string, got " + typeof str);
+        const error = new Error("utf8ToBytes expected string, got " + typeof str);
         throw error;
       } else {
         const _Uint8Array = Uint8Array;
         const _TextEncoder = TextEncoder;
-        const textEncoder = new TextEncoder();
-        uint8Array = new Uint8Array(textEncoder.encode(str));
+        const encoder = new TextEncoder();
+        uint8Array = new Uint8Array(encoder.encode(str));
       }
     }
-    callback(closure_1_2[3]).bytes(uint8Array);
-    const obj = callback(arg1);
-    return callback(arg1).update(uint8Array).digest();
+    Hash(9142).bytes(uint8Array);
+    const obj = closure_0(arg1);
+    return closure_0(arg1).update(uint8Array).digest();
   }
-  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = arg0({}));
-  hashC.create = (arg0) => callback(arg0);
+  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = fn({}));
+  hashC.create = (arg0) => closure_0(arg0);
   return hashC;
 };
-export const wrapXOFConstructorWithOpts = function wrapXOFConstructorWithOpts(arg0) {
-  closure_0 = arg0;
-  function hashC(str) {
+export const wrapXOFConstructorWithOpts = function wrapXOFConstructorWithOpts(fn) {
+  closure_0 = fn;
+  function hashC(str, arg1) {
     let uint8Array = str;
     if (typeof str === "string") {
       if (typeof str !== "string") {
         const _Error = Error;
-        error = new Error("utf8ToBytes expected string, got " + typeof str);
+        const error = new Error("utf8ToBytes expected string, got " + typeof str);
         throw error;
       } else {
         const _Uint8Array = Uint8Array;
         const _TextEncoder = TextEncoder;
-        const textEncoder = new TextEncoder();
-        uint8Array = new Uint8Array(textEncoder.encode(str));
+        const encoder = new TextEncoder();
+        uint8Array = new Uint8Array(encoder.encode(str));
       }
     }
-    callback(closure_1_2[3]).bytes(uint8Array);
-    const obj = callback(arg1);
-    return callback(arg1).update(uint8Array).digest();
+    Hash(9142).bytes(uint8Array);
+    const obj = closure_0(arg1);
+    return closure_0(arg1).update(uint8Array).digest();
   }
-  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = arg0({}));
-  hashC.create = (arg0) => callback(arg0);
+  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = fn({}));
+  hashC.create = (arg0) => closure_0(arg0);
   return hashC;
 };
 export const randomBytes = function randomBytes(result) {
@@ -440,7 +412,7 @@ export const randomBytes = function randomBytes(result) {
       return _crypto.randomBytes(num);
     }
   }
-  error = new Error("crypto.getRandomValues must be defined");
+  const error = new Error("crypto.getRandomValues must be defined");
   throw error;
 };
 export const u8 = (buffer) => {
@@ -461,7 +433,7 @@ export const isLE = 68 === uint8Array[0];
 export const byteSwap = (arg0) =>
   ((arg0 << 24) & 4278190080) | ((arg0 << 8) & 16711680) | ((arg0 >>> 8) & 65280) | ((arg0 >>> 24) & 255);
 export const byteSwapIfBE = exports.isLE ? (arg0) => arg0 : (arg0) => exports.byteSwap(arg0);
-export const nextTick = function nextTick(cb) {
+export const nextTick = function nextTick() {
   const self = this;
   const apply = Hash.apply;
   if (typeof apply === "unknown") {

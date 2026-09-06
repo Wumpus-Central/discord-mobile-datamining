@@ -1,15 +1,14 @@
 // _runtime/00344_LayoutConformance.js
-import noopAll from "00019_noop.js";
-import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
-import LayoutConformanceDefault from "00345_LayoutConformance.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _modDef345 from "metro/00345__.js";
+import noop from "metro/00019__.js";
+import get_hairlineWidth from "00254_get_hairlineWidth.js";
 
-noopAll;
-let closure_3 = get_hairlineWidthDefault.create({ container: { display: "contents" } });
+const jsx = fn(21).jsx;
+const container = get_hairlineWidth.create({ container: { display: "contents" } });
 
 export default function LayoutConformance(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.style = container.container;
-  return jsx(LayoutConformanceDefault, {});
+  return jsx(_modDef345, {});
 }

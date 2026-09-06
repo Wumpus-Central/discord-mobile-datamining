@@ -1,11 +1,11 @@
 // _runtime/metro/09874__.js
 let num2;
 let num3;
-const obj = {
+const exports = {
   glog(self) {
     if (self < 1) {
       const _Error = Error;
-      error = new Error("glog(" + self + ")");
+      const error = new Error("glog(" + self + ")");
       throw error;
     } else {
       return obj.LOG_TABLE[self];
@@ -34,24 +34,27 @@ const obj = {
   LOG_TABLE: null,
 };
 let array = new Array(256);
-obj[2] = array;
 array = new Array(256);
-obj[3] = array;
 let num = 0;
 do {
-  obj.EXP_TABLE[num] = 1 << num;
+  exports.EXP_TABLE[num] = 1 << num;
   num = num + 1;
   num2 = 8;
 } while (num < 8);
 do {
-  obj.EXP_TABLE[num2] =
-    obj.EXP_TABLE[num2 - 4] ^ obj.EXP_TABLE[num2 - 5] ^ obj.EXP_TABLE[num2 - 6] ^ obj.EXP_TABLE[num2 - 8];
+  exports.EXP_TABLE[num2] =
+    exports.EXP_TABLE[num2 - 4] ^
+    exports.EXP_TABLE[num2 - 5] ^
+    exports.EXP_TABLE[num2 - 6] ^
+    exports.EXP_TABLE[num2 - 8];
   num2 = num2 + 1;
   num3 = 0;
 } while (num2 < 256);
 do {
-  obj.LOG_TABLE[obj.EXP_TABLE[num3]] = num3;
+  exports.LOG_TABLE[exports.EXP_TABLE[num3]] = num3;
   num3 = num3 + 1;
 } while (num3 < 255);
 
-export default obj;
+export const EXP_TABLE = array;
+export const LOG_TABLE = array;
+export default exports;

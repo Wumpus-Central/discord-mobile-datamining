@@ -1,42 +1,44 @@
 // _runtime/00031_genModule.js
-import _mod38 from "metro/00038__.js";
-import closure_3 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__.js";
 
-require = arg1;
-function genModule(arg0, arg1) {
-  closure_0 = arg1;
-  if (arg0) {
-    const tmp3 = callback(arg0, 5);
+let require = fn;
+function genModule(global, index) {
+  closure_0 = index;
+  if (global) {
+    const tmp3 = _slicedToArray(global, 5);
     [obj, tmp4] = tmp3;
     require = tmp4;
     dependencyMap = tmp3[3];
-    callback = tmp3[4];
-    const startsWithResult = obj.startsWith("RCT");
+    _slicedToArray = tmp3[4];
+    const startsWithResult = module.startsWith("RCT");
     let tmp9 = !startsWithResult;
     if (!startsWithResult) {
-      tmp9 = !obj.startsWith("RK");
+      tmp9 = !module.startsWith("RK");
     }
-    _mod38(tmp9, `Module name prefixes should've been stripped by the native side but wasn't for ${obj}`);
+    require("metro/00038__.js")(
+      tmp9,
+      `Module name prefixes should've been stripped by the native side but wasn't for ${obj}`,
+    );
     if (!tmp4) {
       if (!arr) {
-        obj = { name: null };
-        obj[0] = obj;
-        return obj;
+        module = { name: null };
+        module.name = module;
+        return module;
       }
     }
-    obj = {};
+    module = {};
     if (tmp3[2]) {
-      const item = arr.forEach((arg0, arg1) => {
+      const item = arr.forEach((item, index) => {
         let flag = str;
         if (str) {
-          flag = -1 !== str.indexOf(arg1);
+          flag = -1 !== str.indexOf(index);
         }
         if (!flag) {
           flag = false;
         }
         let flag2 = closure_3;
         if (closure_3) {
-          flag2 = -1 !== closure_3.indexOf(arg1);
+          flag2 = -1 !== closure_3.indexOf(index);
         }
         if (!flag2) {
           flag2 = false;
@@ -45,7 +47,7 @@ function genModule(arg0, arg1) {
         if (flag) {
           tmp2 = !flag2;
         }
-        tmp4(table[1])(tmp2, "Cannot have a method that is both async and a sync hook");
+        require("metro/00038__.js")(tmp2, "Cannot have a method that is both async and a sync hook");
         str = "promise";
         if (!flag) {
           let str2 = "async";
@@ -54,26 +56,24 @@ function genModule(arg0, arg1) {
           }
           str = str2;
         }
-        tmp4 = arg1;
-        tmp4 =
+        let tmp4 =
           "promise" === str
             ? function promiseMethodWrapper() {
                 closure_0 = [...arguments];
-                error = undefined;
-                error = new Error();
-                return new Promise((closure_0) => {
+                let error = new Error();
+                return new Promise((substr, arg1) => {
                   error = arg1;
                   error(str[2]).default.enqueueNativeCall(
-                    closure_0,
+                    substr,
                     error,
-                    closure_0,
-                    (arg0) => callback(arg0),
+                    substr,
+                    (arg0) => substr(arg0),
                     (arg0) => {
                       obj = arg0;
                       if (!arg0) {
                         obj = {};
                       }
-                      return closure_1(Object.assign(closure_1, obj));
+                      return closure_1(Object.assign(error, obj));
                     },
                   );
                 });
@@ -89,7 +89,7 @@ function genModule(arg0, arg1) {
                   tmp2 = items[items.length - 2];
                 }
                 if (typeof tmp2 === "function") {
-                  callback("Cannot have a non-function arg after a function arg."[1])(
+                  index("Cannot have a non-function arg after a function arg."[1])(
                     tmp3,
                     "Cannot have a non-function arg after a function arg.",
                   );
@@ -104,21 +104,21 @@ function genModule(arg0, arg1) {
                 }
                 const substr = items.slice(0, items.length - (tmp3 + (typeof tmp2 === "function")));
                 if ("sync" === str) {
-                  const _default2 = callback(str[2]).default;
-                  return _default2.callNativeSyncHook(closure_0, callback, substr, tmp5, tmp4);
+                  const _default2 = index(str[2]).default;
+                  return _default2.callNativeSyncHook(closure_0, index, substr, tmp5, tmp4);
                 } else {
-                  const _default = callback(str[2]).default;
-                  _default.enqueueNativeCall(closure_0, callback, substr, tmp5, tmp4);
+                  const _default = index(str[2]).default;
+                  _default.enqueueNativeCall(closure_0, index, substr, tmp5, tmp4);
                 }
               };
         tmp4.type = str;
-        obj[arg0] = tmp4;
+        obj[item] = tmp4;
       });
     }
     let _Object = Object;
-    const merged = Object.assign(obj, tmp4);
-    if (null == obj.getConstants) {
-      obj.getConstants = () => {
+    const merged = Object.assign(module, tmp4);
+    if (null == module.getConstants) {
+      module.getConstants = () => {
         let frozen = closure_1;
         if (!closure_1) {
           const _Object = Object;
@@ -131,15 +131,13 @@ function genModule(arg0, arg1) {
       const _HermesInternal = HermesInternal;
       console.warn(
         "Unable to define method 'getConstants()' on NativeModule '" +
-          obj +
+          module +
           "'. NativeModule '" +
-          obj +
+          module +
           "' already has a constant or method called 'getConstants'. Please remove it.",
       );
     }
-    obj1 = { name: null, module: null };
-    obj1[0] = obj;
-    obj1[1] = obj;
+    const obj1 = { name: module, module };
     return obj1;
   } else {
     return null;
@@ -153,35 +151,33 @@ if (global.nativeModuleProxy) {
   obj = nativeModuleProxy;
 } else {
   const __fbBatchedBridgeConfig = global.__fbBatchedBridgeConfig;
-  require("metro/00038__.js")(
-    __fbBatchedBridgeConfig,
-    "__fbBatchedBridgeConfig is not set, cannot invoke native modules",
-  );
-  let closure_6 = require("defineLazyObjectProperty").default;
+  fn(38)(__fbBatchedBridgeConfig, "__fbBatchedBridgeConfig is not set, cannot invoke native modules");
+  let closure_6 = fn(49).default;
   let item =
     __fbBatchedBridgeConfig.remoteModuleConfig ||
-    [].forEach((arg0, arg1) => {
-      closure_0 = arg1;
-      const tmp = genModule(arg0, arg1);
-      closure_1 = tmp;
+    [].forEach((item, index) => {
+      closure_0 = index;
+      const tmp = genModule(item, index);
+      const name = tmp;
       if (tmp) {
         if (tmp.module) {
           nativeModuleProxy[tmp.name] = tmp.module;
         } else {
-          const obj = { get: null };
-          obj[0] = function get() {
-            lib(closure_1_2[1])(
-              closure_0.nativeRequireModuleConfig,
-              "Can't lazily create module without nativeRequireModuleConfig",
-            );
-            const tmp2 = closure_1_4(closure_0.nativeRequireModuleConfig(lib.name), closure_0);
-            let _module = tmp2;
-            if (tmp2) {
-              _module = tmp2.module;
-            }
-            return _module;
+          const obj = {
+            get() {
+              require("metro/00038__.js")(
+                global.nativeRequireModuleConfig,
+                "Can't lazily create module without nativeRequireModuleConfig",
+              );
+              const tmp2 = genModule(global.nativeRequireModuleConfig(name.name), closure_0);
+              let _module = tmp2;
+              if (tmp2) {
+                _module = tmp2.module;
+              }
+              return _module;
+            },
           };
-          callback2(nativeModuleProxy, tmp.name, obj);
+          closure_6(nativeModuleProxy, tmp.name, obj);
         }
       }
     });

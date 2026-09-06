@@ -1,7 +1,11 @@
 // _runtime/08284_StepsIndicator.js
-import noop from "00019_noop.js";
-import closure_3 from "00017_get_ActivityIndicator.js";
-import closure_4 from "react/00021_jsxProd.js";
+import _mod8282 from "metro/08282__.js";
+import _mod8283 from "metro/08283__.js";
+import SliderTrackMark from "08285_SliderTrackMark.js";
+import StepNumber from "08286_StepNumber.js";
+import noop from "metro/00019__.js";
+import get_ActivityIndicator from "metro/00017__.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
@@ -10,18 +14,17 @@ if (typeof WeakMap === "function") {
   const weakMap1 = new WeakMap();
 }
 if (!noop) {
-  let obj = Object.create(null);
-  obj[0] = noop;
-  let value = obj;
+  const merged = Object.assign({ default: null });
+  merged[0] = noop;
+  let value = merged;
   if (null !== noop) {
     if (typeof noop === "object") {
       if (!weakMap) {
-        value = obj;
+        value = merged;
         const keys = Object.keys();
         if (keys !== undefined) {
-          value = obj;
+          value = merged;
           while (keys[tmp] !== undefined) {
-            let tmp18 = tmp10;
             let tmp19 = "default" !== tmp10;
             if (!tmp19) {
               if (!tmp19) {
@@ -34,10 +37,10 @@ if (!noop) {
                   ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp10);
                 }
                 if (!ownPropertyDescriptor) {
-                  obj[tmp10] = noop[tmp10];
+                  merged[tmp10] = noop[tmp10];
                   continue;
                 } else {
-                  let definePropertyResult1 = defineProperty(obj, tmp10, ownPropertyDescriptor);
+                  let definePropertyResult1 = defineProperty(merged, tmp10, ownPropertyDescriptor);
                   continue;
                 }
                 continue;
@@ -53,15 +56,16 @@ if (!noop) {
       } else if (weakMap.has(noop)) {
         value = weakMap.get(noop);
       } else {
-        const result = weakMap.set(noop, obj);
+        const result = weakMap.set(noop, merged);
       }
     } else {
-      value = obj;
+      value = merged;
     }
   }
 } else {
   value = noop;
 }
+let c2 = value;
 
 export const StepsIndicator = function StepsIndicator(options) {
   options = options.options;
@@ -74,36 +78,32 @@ export const StepsIndicator = function StepsIndicator(options) {
   let obj = currentValue;
   const memo = currentValue.useMemo(() => {
     if (options.length > 9) {
-      let fontSize = options(sliderWidth[3]).constants.STEP_NUMBER_TEXT_FONT_SMALL;
+      let fontSize = _mod8282.constants.STEP_NUMBER_TEXT_FONT_SMALL;
     } else {
-      fontSize = options(sliderWidth[3]).constants.STEP_NUMBER_TEXT_FONT_BIG;
+      fontSize = _mod8282.constants.STEP_NUMBER_TEXT_FONT_BIG;
     }
     return { fontSize };
   }, items);
   const items1 = [sliderWidth];
   const memo1 = currentValue.useMemo(() => {
-    if ("web" === StepMarker.Platform.OS) {
-      let stepsIndicator = options(sliderWidth[4]).styles.stepsIndicator;
-      let tmp4 = sliderWidth;
-      let tmp6 = options;
+    if ("web" === get_ActivityIndicator.Platform.OS) {
+      let stepsIndicator = _mod8283.styles.stepsIndicator;
+      let tmp6 = require;
     } else {
       const _Object = Object;
-      tmp4 = sliderWidth;
-      let obj = { marginHorizontal: null };
-      obj[0] = sliderWidth * options(sliderWidth[3]).constants.MARGIN_HORIZONTAL_PADDING;
-      stepsIndicator = Object.assign({}, options(sliderWidth[4]).styles.stepsIndicator, obj);
-      tmp6 = options;
+      let obj = { marginHorizontal: sliderWidth * _mod8282.constants.MARGIN_HORIZONTAL_PADDING };
+      stepsIndicator = Object.assign({}, _mod8283.styles.stepsIndicator, obj);
+      tmp6 = require;
     }
     obj = { stepIndicatorContainerStyle: stepsIndicator, stepIndicatorElementStyle: null };
-    if ("web" === StepMarker.Platform.OS) {
+    if ("web" === get_ActivityIndicator.Platform.OS) {
       const _Object2 = Object;
-      obj = { width: null, justifyContent: "space-between" };
-      obj[0] = tmp6(tmp4[3]).constants.THUMB_SIZE;
-      let stepIndicatorElement = Object.assign({}, tmp6(tmp4[4]).styles.stepIndicatorElement, obj);
+      obj = { width: tmp6(8282).constants.THUMB_SIZE, justifyContent: "space-between" };
+      let stepIndicatorElement = Object.assign({}, tmp6(8283).styles.stepIndicatorElement, obj);
     } else {
-      stepIndicatorElement = tmp6(tmp4[4]).styles.stepIndicatorElement;
+      stepIndicatorElement = tmp6(8283).styles.stepIndicatorElement;
     }
-    obj[1] = stepIndicatorElement;
+    obj.stepIndicatorElementStyle = stepIndicatorElement;
     return obj;
   }, items1);
   let reversed = options;
@@ -111,24 +111,21 @@ export const StepsIndicator = function StepsIndicator(options) {
     reversed = options.reverse();
   }
   const items2 = [currentValue, StepMarker, options, thumbImage, renderStepNumber, memo, memo1.stepIndicatorElementStyle];
-  closure_8 = obj.useCallback((index) => {
+  closure_8 = obj.useCallback((index, index2) => {
     let obj = { style: memo1.stepIndicatorElementStyle, children: null };
-    obj = renderStepNumber;
-    obj = { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] };
-    const items = [renderStepNumber.jsx(options(sliderWidth[5]).SliderTrackMark, { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] }, "" + arg1 + "-SliderTrackMark"), ];
+    obj = jsxProd;
+    const range = { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] };
+    const items = [jsxProd.jsx(SliderTrackMark.SliderTrackMark, { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] }, "" + index2 + "-SliderTrackMark"), ];
     let jsxResult = null;
     if (renderStepNumber) {
-      obj1 = { i: null, index: null, style: null };
-      obj1[0] = index;
-      obj1[1] = arg1;
-      obj1[2] = memo;
+      obj = { i: index, index: index2, style: memo };
       const _HermesInternal = HermesInternal;
-      jsxResult = obj.jsx(options(sliderWidth[6]).StepNumber, { i: null, index: null, style: null }, "" + arg1 + "th-step");
+      jsxResult = obj.jsx(StepNumber.StepNumber, { i: index, index: index2, style: memo }, "" + index2 + "th-step");
     }
     items[1] = jsxResult;
-    obj[1] = items;
-    return < key={arg1}><StepMarker.View key={"" + arg1 + "-View"} isTrue={currentValue === arg0} index={arg0} thumbImage={thumbImage} StepMarker={StepMarker} currentValue={currentValue} min={options[0]} max={options[options.length - 1]} /></>;
+    obj.children = items;
+    return < key={arg1}><get ActivityIndicator.View key={"" + arg1 + "-View"} {...obj} /></>;
   }, items2);
-  obj = { pointerEvents: "none", testID: "StepsIndicator-Container", style: memo1.stepIndicatorContainerStyle, children: reversed.map((arg0, arg1) => callback(arg0, arg1)) };
-  return <StepMarker.View pointerEvents="none" testID="StepsIndicator-Container" style={memo1.stepIndicatorContainerStyle}>{reversed.map((arg0, arg1) => callback(arg0, arg1))}</StepMarker.View>;
+  obj = { pointerEvents: "none", testID: "StepsIndicator-Container", style: memo1.stepIndicatorContainerStyle, children: reversed.map((item, index) => closure_8(item, index)) };
+  return <StepMarker.View pointerEvents="none" testID="StepsIndicator-Container" style={memo1.stepIndicatorContainerStyle}>{reversed.map((item, index) => closure_8(item, index))}</StepMarker.View>;
 };

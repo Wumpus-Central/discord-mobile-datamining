@@ -1,18 +1,16 @@
 // _runtime/metro/07021__.js
-import noopAll from "../00019_noop.js";
-import { View } from "../00017_get_ActivityIndicator.js";
-import { jsx } from "../react/00021_jsxProd.js";
+import noop from "00019__.js";
 
-noopAll;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
 try {
-  let closure_0 = require("enableScreens");
+  let closure_0 = fn(4912);
   exports.MaybeScreenContainer = (enabled) => {
-    const merged = Object.assign(enabled, Object.create(null));
+    const merged = Object.assign(enabled, Object.assign({ enabled: 0 }));
     if (null != closure_0) {
-      let obj = { enabled: null };
-      obj[0] = enabled.enabled;
+      let obj = { enabled: enabled.enabled };
       const merged1 = Object.assign(merged);
-      let tmp8 = <tmp2.ScreenContainer enabled={null} />;
+      let tmp8 = <tmp2.ScreenContainer enabled={arg0.enabled} />;
     } else {
       obj = {};
       const merged2 = Object.assign(merged);
@@ -22,13 +20,11 @@ try {
   };
   exports.MaybeScreen = (arg0) => {
     ({ enabled, active } = arg0);
-    const merged = Object.assign(arg0, Object.create(null));
+    const merged = Object.assign(arg0, Object.assign({ enabled: 0, active: 0 }));
     if (null != closure_0) {
-      let obj = { enabled: null, activityState: null };
-      obj[0] = enabled;
-      obj[1] = active;
+      let obj = { enabled, activityState: active };
       const merged1 = Object.assign(merged);
-      let tmp8 = <tmp2.Screen enabled={null} activityState={null} />;
+      let tmp8 = <tmp2.Screen enabled={enabled} activityState={active} />;
     } else {
       obj = {};
       const merged2 = Object.assign(merged);

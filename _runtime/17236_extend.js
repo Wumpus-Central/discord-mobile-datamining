@@ -1,5 +1,6 @@
 // _runtime/17236_extend.js
-arg5.extend = function extend(arg0) {
+
+export const extend = function extend(arg0) {
   const call = slice.call;
   if (typeof call === "unknown") {
     let substr = slice(1);
@@ -8,11 +9,8 @@ arg5.extend = function extend(arg0) {
   }
   for (let num2 = 0; num2 < length; num2 = num2 + 1) {
     let tmp2 = substr[num2];
-    let tmp3 = num2;
     if (tmp2) {
-      let tmp4 = tmp2;
       for (const key10018 in tmp2) {
-        let tmp8 = key10018;
         let tmp9 = hasOwnProperty;
         let call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {
@@ -32,4 +30,4 @@ arg5.extend = function extend(arg0) {
   }
   return arg0;
 };
-arg5.hop = hasOwnProperty;
+export const hop = hasOwnProperty;

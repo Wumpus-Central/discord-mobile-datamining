@@ -1,22 +1,24 @@
 // _runtime/metro/08317__.js
 import _mod8318 from "08318__.js";
 import _mod8326 from "08326__.js";
-import flattenStyle from "../08319_flattenStyle.js";
-import emptyFunction from "../04389_emptyFunction.js";
+import flattenStyle from "08319__.js";
+import "module_4389";
+import emptyFunction from "04389__.js";
 
 let obj = {};
 const module_8318 = Object.assign(_mod8318);
 obj.style = flattenStyle(_mod8326);
 obj = { uri: emptyFunction.string, headers: null };
-obj[1] = emptyFunction.objectOf(emptyFunction.string);
+obj.headers = emptyFunction.objectOf(emptyFunction.string);
 const items = [emptyFunction.shape(obj), emptyFunction.number];
-obj = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
-obj[3] = emptyFunction.objectOf(emptyFunction.string);
-items[2] = emptyFunction.arrayOf(emptyFunction.shape(obj));
+const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
+size.headers = emptyFunction.objectOf(emptyFunction.string);
+items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
 obj.source = emptyFunction.oneOfType(items);
 obj.blurRadius = emptyFunction.number;
 obj.defaultSource = emptyFunction.number;
-const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
+obj = { uri: emptyFunction.string };
+const items1 = [emptyFunction.shape(obj), emptyFunction.number];
 obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
 obj.progressiveRenderingEnabled = emptyFunction.bool;
 obj.fadeDuration = emptyFunction.number;

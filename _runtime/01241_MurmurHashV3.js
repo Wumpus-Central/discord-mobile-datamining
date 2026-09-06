@@ -7,9 +7,9 @@ class MurmurHashV3 {
       _TextEncoder = TextEncoder;
       tmp24 = new.target;
       tmp25 = new.target;
-      textEncoder = new TextEncoder();
-      tmp26 = textEncoder;
-      encodeResult = textEncoder.encode(global);
+      encoder = new TextEncoder();
+      tmp26 = encoder;
+      encodeResult = encoder.encode(global);
     }
     tmp = 3 & encodeResult.length;
     diff = encodeResult.length - tmp;
@@ -65,12 +65,12 @@ class MurmurHashV3 {
     return;
   }
 }
-MurmurHashV3.v2 = function MurmurHashV2(str) {
+MurmurHashV3.v2 = function MurmurHashV2(str, arg1) {
   let encodeResult = str;
   if (typeof str === "string") {
     const _TextEncoder = TextEncoder;
-    const textEncoder = new TextEncoder();
-    encodeResult = textEncoder.encode(str);
+    const encoder = new TextEncoder();
+    encodeResult = encoder.encode(str);
   }
   let tmp = arg1 ^ length;
   let num = 0;
@@ -105,14 +105,13 @@ MurmurHashV3.v2 = function MurmurHashV2(str) {
   } else {
     tmp11 = tmp3;
     if (2 !== tmp4) {
-      let tmp12 = tmp3;
       let sum5 = tmp3;
       const sum4 = 1540483477 * (65535 & tmp15) + (((1540483477 * (tmp15 >>> 16)) & 65535) << 16);
       return (sum4 ^ (sum4 >>> 15)) >>> 0;
     }
     sum5 = 1540483477 * (65535 & tmp14) + (((1540483477 * (tmp14 >>> 16)) & 65535) << 16);
   }
-  tmp12 = tmp11 ^ ((255 & encodeResult[num2 + 1]) << 8);
+  const tmp12 = tmp11 ^ ((255 & encodeResult[num2 + 1]) << 8);
 };
 MurmurHashV3.v3 = MurmurHashV3;
 if (undefined !== module) {
@@ -126,9 +125,9 @@ if (undefined !== module) {
         _TextEncoder = TextEncoder;
         tmp24 = new.target;
         tmp25 = new.target;
-        textEncoder = new TextEncoder();
-        tmp26 = textEncoder;
-        encodeResult = textEncoder.encode(global);
+        encoder = new TextEncoder();
+        tmp26 = encoder;
+        encodeResult = encoder.encode(global);
       }
       tmp = 3 & encodeResult.length;
       diff = encodeResult.length - tmp;
@@ -185,7 +184,7 @@ if (undefined !== module) {
     }
   }
   MurmurHashV3.noConflict = () => {
-    globalThis.murmur = closure_1;
+    globalThis.murmur = murmur;
     return MurmurHashV3;
   };
   globalThis.murmur = MurmurHashV3;

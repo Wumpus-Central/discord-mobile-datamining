@@ -1,14 +1,16 @@
 // _runtime/metro/08278__.js
-import _slicedToArray from "00032__slicedToArray.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import __INTERNAL_VIEW_CONFIG from "08280___INTERNAL_VIEW_CONFIG.js";
+import _mod32 from "00032__.js";
+import _objectWithoutProperties2 from "00109__objectWithoutProperties.js";
+import _mod8280 from "08280__.js";
+import _mod8282 from "08282__.js";
+import _mod8283 from "08283__.js";
 import 08279__ from "08279__.js";
-import noop from "../00019_noop.js";
-import closure_5 from "../00017_get_ActivityIndicator.js";
-import closure_7 from "../react/00021_jsxProd.js";
+import noop from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
 
-let closure_2 = module_8279(_slicedToArray);
-let closure_3 = module_8279(_objectWithoutProperties);
+const _slicedToArray = module_8279(_mod32);
+const _objectWithoutProperties = module_8279(_objectWithoutProperties2);
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
   const weakMap = new WeakMap();
@@ -16,18 +18,17 @@ if (typeof WeakMap === "function") {
   const weakMap1 = new WeakMap();
 }
 if (!noop) {
-  let obj = Object.create(null);
-  obj[0] = noop;
-  let value = obj;
+  const merged = Object.assign({ default: null });
+  merged[0] = noop;
+  let value = merged;
   if (null !== noop) {
     if (typeof noop === "object") {
       if (!weakMap) {
-        value = obj;
+        value = merged;
         const keys = Object.keys();
         if (keys !== undefined) {
-          value = obj;
+          value = merged;
           while (keys[tmp] !== undefined) {
-            let tmp19 = tmp11;
             let tmp20 = "default" !== tmp11;
             if (!tmp20) {
               if (!tmp20) {
@@ -40,10 +41,10 @@ if (!noop) {
                   ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp11);
                 }
                 if (!ownPropertyDescriptor) {
-                  obj[tmp11] = noop[tmp11];
+                  merged[tmp11] = noop[tmp11];
                   continue;
                 } else {
-                  let definePropertyResult1 = defineProperty(obj, tmp11, ownPropertyDescriptor);
+                  let definePropertyResult1 = defineProperty(merged, tmp11, ownPropertyDescriptor);
                   continue;
                 }
                 continue;
@@ -59,26 +60,25 @@ if (!noop) {
       } else if (weakMap.has(noop)) {
         value = weakMap.get(noop);
       } else {
-        let result = weakMap.set(noop, obj);
+        let result = weakMap.set(noop, merged);
       }
     } else {
-      value = obj;
+      value = merged;
     }
   }
 } else {
   value = noop;
 }
-let c4 = value;
-let closure_6 = module_8279(__INTERNAL_VIEW_CONFIG);
+const __INTERNAL_VIEW_CONFIG = module_8279(_mod8280);
 let closure_8 = ["onValueChange", "onSlidingStart", "onSlidingComplete", "onAccessibilityAction", "value", "minimumValue", "maximumValue", "step", "inverted", "tapToSeek", "lowerLimit", "upperLimit"];
 
-export default value.default.forwardRef(function SliderComponent(onSlidingComplete) {
+export default value.default.forwardRef(function SliderComponent(onSlidingComplete, ref) {
   ({ onValueChange: require, onSlidingStart } = onSlidingComplete);
   onSlidingComplete = onSlidingComplete.onSlidingComplete;
   const onAccessibilityAction = onSlidingComplete.onAccessibilityAction;
   let SLIDER_DEFAULT_INITIAL_VALUE = onSlidingComplete.value;
   if (undefined === SLIDER_DEFAULT_INITIAL_VALUE) {
-    SLIDER_DEFAULT_INITIAL_VALUE = require(onSlidingStart[7]).constants.SLIDER_DEFAULT_INITIAL_VALUE;
+    SLIDER_DEFAULT_INITIAL_VALUE = _mod8282.constants.SLIDER_DEFAULT_INITIAL_VALUE;
   }
   const minimumValue = onSlidingComplete.minimumValue;
   let num = 0;
@@ -99,56 +99,50 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
   const tapToSeek = onSlidingComplete.tapToSeek;
   let lowerLimit = onSlidingComplete.lowerLimit;
   if (undefined === lowerLimit) {
-    const Platform = lowerLimit.Platform;
-    let obj = { web: null, default: null };
-    obj[0] = num;
-    obj[1] = require(onSlidingStart[7]).constants.LIMIT_MIN_VALUE;
+    const Platform = get_ActivityIndicator.Platform;
+    let obj = { web: num, default: _mod8282.constants.LIMIT_MIN_VALUE };
     lowerLimit = Platform.select(obj);
   }
   let upperLimit = onSlidingComplete.upperLimit;
   if (undefined === upperLimit) {
-    const Platform2 = lowerLimit.Platform;
-    obj = { web: null, default: null };
-    obj[0] = num2;
-    obj[1] = require(onSlidingStart[7]).constants.LIMIT_MAX_VALUE;
+    const Platform2 = get_ActivityIndicator.Platform;
+    obj = { web: num2, default: _mod8282.constants.LIMIT_MAX_VALUE };
     upperLimit = Platform2.select(obj);
   }
-  const defaultResult = onAccessibilityAction.default(onSlidingComplete, closure_8);
-  let obj2 = num;
+  const defaultResult = _objectWithoutProperties.default(onSlidingComplete, closure_8);
+  let obj2 = value;
   let SLIDER_DEFAULT_INITIAL_VALUE2 = num;
   if (null != SLIDER_DEFAULT_INITIAL_VALUE) {
     SLIDER_DEFAULT_INITIAL_VALUE2 = SLIDER_DEFAULT_INITIAL_VALUE;
   }
   if (null == SLIDER_DEFAULT_INITIAL_VALUE2) {
-    SLIDER_DEFAULT_INITIAL_VALUE2 = require(onSlidingStart[7]).constants.SLIDER_DEFAULT_INITIAL_VALUE;
+    SLIDER_DEFAULT_INITIAL_VALUE2 = _mod8282.constants.SLIDER_DEFAULT_INITIAL_VALUE;
   }
-  [tmp15, closure_7] = onSlidingComplete.default(num.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
-  const defaultResult1 = onSlidingComplete.default(num.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  [tmp15, jsxProd] = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  const defaultResult1 = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
   const tmp4 = undefined !== tapToSeek && tapToSeek;
-  [tmp17, closure_8] = onSlidingComplete.default(obj2.useState(0), 2);
+  [tmp17, closure_8] = _slicedToArray.default(obj2.useState(0), 2);
   let DEFAULT_STEP_RESOLUTION = num3;
   if (!num3) {
-    DEFAULT_STEP_RESOLUTION = require(onSlidingStart[7]).constants.DEFAULT_STEP_RESOLUTION;
+    DEFAULT_STEP_RESOLUTION = _mod8282.constants.DEFAULT_STEP_RESOLUTION;
   }
-  const result = (num2 - num) / DEFAULT_STEP_RESOLUTION;
+  let result = (num2 - num) / DEFAULT_STEP_RESOLUTION;
   let tmp21 = num3;
   if (!num3) {
     tmp21 = result;
   }
-  closure_9 = tmp21;
+  result = tmp21;
   if (num3) {
     DEFAULT_STEP_RESOLUTION = result;
   }
   obj = { length: DEFAULT_STEP_RESOLUTION + 1 };
-  const defaultResult2 = onSlidingComplete.default(obj2.useState(0), 2);
-  if ("ios" === lowerLimit.Platform.OS) {
-    let defaultSlider = require(onSlidingStart[8]).styles.defaultSlideriOS;
-    let tmp25 = onSlidingStart;
+  const defaultResult2 = _slicedToArray.default(obj2.useState(0), 2);
+  if ("ios" === get_ActivityIndicator.Platform.OS) {
+    let defaultSlider = _mod8283.styles.defaultSlideriOS;
     let tmp24 = require;
   } else {
     tmp24 = require;
-    tmp25 = onSlidingStart;
-    defaultSlider = require(onSlidingStart[8]).styles.defaultSlider;
+    defaultSlider = _mod8283.styles.defaultSlider;
   }
   const items = [defaultSlider, defaultResult.style];
   if (typeof defaultResult.disabled === "boolean") {
@@ -163,8 +157,7 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
   }
   if (typeof defaultResult.disabled === "boolean") {
     const _Object = Object;
-    obj1 = { disabled: null };
-    obj1[0] = defaultResult.disabled;
+    const obj1 = { disabled: defaultResult.disabled };
     let accessibilityState = Object.assign({}, defaultResult.accessibilityState, obj1);
   } else {
     accessibilityState = defaultResult.accessibilityState;
@@ -202,26 +195,24 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
   }, items1);
   obj2 = {
     onLayout(nativeEvent) {
-      callback2(nativeEvent.nativeEvent.layout.width);
+      closure_1_8(nativeEvent.nativeEvent.layout.width);
     },
-    style: items2,
+    style: null,
     children: null
   };
-  items2 = [items, { justifyContent: "center" }];
+  const items2 = [items, { justifyContent: "center" }];
+  obj2.style = items2;
   if (defaultResult.StepMarker) {
-    const obj3 = { options: null, sliderWidth: null, currentValue: null, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null };
-    obj3[0] = arr;
-    obj3[1] = tmp17;
-    obj3[2] = tmp15;
-    ({ renderStepNumber: obj8[3], thumbImage: obj8[4], StepMarker: obj8[5] } = defaultResult);
-    obj3[6] = tmp3;
-    let jsxResult = obj6.jsx(tmp24(tmp25[9]).StepsIndicator, { options: null, sliderWidth: null, currentValue: null, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null });
+    const obj3 = { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null };
+    ({ renderStepNumber: obj8.renderStepNumber, thumbImage: obj8.thumbImage, StepMarker: obj8.StepMarker } = defaultResult);
+    obj3.isLTR = tmp3;
+    let jsxResult = obj6.jsx(tmp24(8284).StepsIndicator, { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null });
   } else {
     jsxResult = null;
   }
   const items3 = [jsxResult, ];
   const obj4 = { minimumValue: num, maximumValue: num2, step: num3, inverted: undefined !== inverted && inverted, tapToSeek: tmp4, value: tmp29, lowerLimit, upperLimit, accessibilityState, thumbImage: null, ref: null, style: null, onChange: null, onRNCSliderSlidingStart: null, onRNCSliderSlidingComplete: null, onRNCSliderValueChange: null, disabled: null, onStartShouldSetResponder: null, onResponderTerminationRequest: null, onRNCSliderAccessibilityAction: null, thumbTintColor: null };
-  if ("web" === lowerLimit.Platform.OS) {
+  if ("web" === get_ActivityIndicator.Platform.OS) {
     let thumbImage = defaultResult.thumbImage;
   } else if (!defaultResult.StepMarker) {
     if (defaultResult.thumbImage) {
@@ -230,36 +221,36 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
     }
   }
   function onValueChangeEvent(nativeEvent) {
-    if (closure_0) {
+    if (require) {
       tmp(nativeEvent.nativeEvent.value);
     }
-    callback(nativeEvent.nativeEvent.value);
+    jsxProd(nativeEvent.nativeEvent.value);
   }
-  obj4[9] = thumbImage;
-  obj4[10] = arg1;
+  obj4.thumbImage = thumbImage;
+  obj4.ref = ref;
   const items4 = [{ zIndex: 1, width: tmp17 }, defaultSlider, { alignContent: "center", alignItems: "center" }];
-  obj4[11] = items4;
-  obj4[12] = onValueChangeEvent;
-  obj4[13] = fn;
-  obj4[14] = fn2;
-  obj4[15] = onValueChangeEvent;
-  obj4[16] = disabled;
-  obj4[17] = function onStartShouldSetResponder() {
+  obj4.style = items4;
+  obj4.onChange = onValueChangeEvent;
+  obj4.onRNCSliderSlidingStart = fn;
+  obj4.onRNCSliderSlidingComplete = fn2;
+  obj4.onRNCSliderValueChange = onValueChangeEvent;
+  obj4.disabled = disabled;
+  obj4.onStartShouldSetResponder = function onStartShouldSetResponder() {
     return true;
   };
-  obj4[18] = function onResponderTerminationRequest() {
+  obj4.onResponderTerminationRequest = function onResponderTerminationRequest() {
     return false;
   };
-  obj4[19] = fn3;
+  obj4.onRNCSliderAccessibilityAction = fn3;
   if (!defaultResult.thumbImage) {
     let str = defaultResult.thumbTintColor;
   } else {
     str = "transparent";
   }
-  obj4[20] = str;
-  items3[1] = <upperLimit.default {...Object.assign({}, defaultResult, obj4)} />;
-  obj2[2] = items3;
-  return <lowerLimit.View onLayout={function onLayout(nativeEvent) {
-    callback2(nativeEvent.nativeEvent.layout.width);
-  }} style={items2}>{null}</lowerLimit.View>;
+  obj4.thumbTintColor = str;
+  items3[1] = <__INTERNAL_VIEW_CONFIG.default {...Object.assign({}, defaultResult, obj4)} />;
+  obj2.children = items3;
+  return <get ActivityIndicator.View onLayout={function onLayout(nativeEvent) {
+    closure_1_8(nativeEvent.nativeEvent.layout.width);
+  }} style={null}>{null}</get ActivityIndicator.View>;
 });

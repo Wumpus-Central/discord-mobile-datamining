@@ -1,4 +1,4 @@
 // _runtime/01502_NavigationIndependentTreeContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const NavigationIndependentTreeContext = noopAll.createContext(false);
+export const NavigationIndependentTreeContext = noop.createContext(false);

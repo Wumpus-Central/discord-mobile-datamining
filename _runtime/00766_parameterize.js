@@ -9,5 +9,6 @@ function parameterize(join) {
   return string;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.fmt = parameterize;
-arg5.parameterize = parameterize;
+
+export const fmt = parameterize;
+export { parameterize };

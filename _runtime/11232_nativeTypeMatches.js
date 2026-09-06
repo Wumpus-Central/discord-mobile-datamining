@@ -1,27 +1,29 @@
 // _runtime/11232_nativeTypeMatches.js
 function nativeTypeMatches(arg0, arg1) {}
-arg5.safeValidate = (arr, nativeType) => {
+
+export const safeValidate = (arr, nativeType) => {
   nativeType = nativeType.nativeType;
-  return arr.some((str) => {
-    if (typeof nativeType !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    let flag = true;
-    if (str !== nativeType) {
-      flag = true;
-      if ("*/*" !== str) {
-        flag = false;
-        if (null !== obj) {
+  return arr.some((item) => {
+    if (typeof nativeTypeMatches === "function") {
+      let flag = true;
+      if (item !== obj) {
+        flag = true;
+        if ("*/*" !== item) {
           flag = false;
-          if (str.endsWith("/*")) {
+          if (null !== obj) {
             flag = false;
-            if (obj.startsWith(str.slice(0, -2))) {
-              flag = true;
+            if (item.endsWith("/*")) {
+              flag = false;
+              if (obj.startsWith(item.slice(0, -2))) {
+                flag = true;
+              }
             }
           }
         }
       }
+      return flag;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    return flag;
   });
 };

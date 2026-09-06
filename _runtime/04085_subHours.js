@@ -1,35 +1,32 @@
 // _runtime/04085_subHours.js
-import addHours from "03804_addHours.js";
+import 03804__ from "metro/03804__.js";
 import requiredArgs from "03651_requiredArgs.js";
-import toInteger from "03654_toInteger.js";
+import 03654__ from "metro/03654__.js";
 
-if (!addHours) {
-  let obj = { default: null };
-  obj[0] = addHours;
+if (!module_3804) {
+  let obj = { default: module_3804 };
   let tmp3 = obj;
 } else {
-  tmp3 = addHours;
+  tmp3 = module_3804;
 }
-addHours = tmp3;
+module_3804 = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-if (!toInteger) {
-  obj = { default: null };
-  obj[0] = toInteger;
+if (!module_3654) {
+  obj = { default: module_3654 };
   let tmp7 = obj;
 } else {
-  tmp7 = toInteger;
+  tmp7 = module_3654;
 }
-toInteger = tmp7;
+module_3654 = tmp7;
 
 export default function subHours(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addHours.default(arg0, -toInteger.default(arg1));
+  return module_3804.default(arg0, -module_3654.default(arg1));
 };
 export default exports.default;

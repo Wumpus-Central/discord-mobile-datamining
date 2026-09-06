@@ -1,11 +1,14 @@
 // _runtime/00460_Clipboard.js
-const module = arg2;
+import _modDef461 from "metro/00461__.js";
+
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = {
+
+export default {
   getString() {
-    return module(461).getString();
+    return _modDef461.getString();
   },
   setString(arg0) {
-    module(461).setString(arg0);
+    _modDef461.setString(arg0);
   },
 };

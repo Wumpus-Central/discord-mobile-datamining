@@ -1,12 +1,10 @@
 // _runtime/00476_PermissionsAndroidImpl.js
-import importDefaultResult from "00005_asyncGeneratorStep.js";
-import PermissionsAndroidImpl from "metro/00041__classCallCheck.js";
-import importDefaultResult1 from "metro/00042__createClass.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
-let closure_0 = importDefault;
-let closure_1 = dependencyMap;
-let closure_3 = Object.freeze({ GRANTED: "granted", DENIED: "denied", NEVER_ASK_AGAIN: "never_ask_again" });
-let closure_4 = Object.freeze({
+const React3 = Object.freeze({ GRANTED: "granted", DENIED: "denied", NEVER_ASK_AGAIN: "never_ask_again" });
+const React4 = Object.freeze({
   READ_CALENDAR: "android.permission.READ_CALENDAR",
   WRITE_CALENDAR: "android.permission.WRITE_CALENDAR",
   CAMERA: "android.permission.CAMERA",
@@ -51,54 +49,55 @@ let closure_4 = Object.freeze({
   POST_NOTIFICATIONS: "android.permission.POST_NOTIFICATIONS",
   NEARBY_WIFI_DEVICES: "android.permission.NEARBY_WIFI_DEVICES",
 });
-closure_0 = undefined;
-closure_1 = undefined;
+let closure_0;
+let dependencyMap;
 class PermissionsAndroidImpl {
   constructor() {
-    tmp = PermissionsAndroidImpl(this, PermissionsAndroidImpl);
+    tmp = c2(this, PermissionsAndroidImpl);
     this.PERMISSIONS = closure_4;
     this.RESULTS = closure_3;
     return;
   }
 }
-let obj = {
+_classCallCheck = PermissionsAndroidImpl;
+const entry = {
   key: "checkPermission",
   value: function checkPermission(arg0) {
     console.warn('"PermissionsAndroid.checkPermission" is deprecated. Use "PermissionsAndroid.check" instead');
-    callback(38)(callback(477), "PermissionsAndroid is not installed correctly.");
-    const tmp2 = callback(38);
-    return callback(477).checkPermission(arg0);
+    closure_0(38)(closure_0(477), "PermissionsAndroid is not installed correctly.");
+    const tmp2 = closure_0(38);
+    return closure_0(477).checkPermission(arg0);
   },
 };
 const items = [
-  obj,
+  entry,
   {
     key: "check",
     value: function check(arg0) {
-      callback(38)(callback(477), "PermissionsAndroid is not installed correctly.");
-      const tmp = callback(38);
-      return callback(477).checkPermission(arg0);
+      closure_0(38)(closure_0(477), "PermissionsAndroid is not installed correctly.");
+      const tmp = closure_0(38);
+      return closure_0(477).checkPermission(arg0);
     },
   },
   ,
   ,
 ];
-obj = { key: "requestPermission", value: null };
-closure_1 = importDefaultResult(function (arg0, arg1) {
+const entry1 = { key: "requestPermission", value: null };
+dependencyMap = asyncGeneratorStep(async function (arg0, arg1) {
   const self = this;
   closure_1 = arg0;
   closure_2 = arg1;
   c4 = 0;
   c5 = 0;
-  return (function* (arg0, arg1) {
-    const constants = self;
+  return (async (arg0, value) => {
+    constants = self;
     const _console = console;
     console.warn('"PermissionsAndroid.requestPermission" is deprecated. Use "PermissionsAndroid.request" instead');
-    yield self.request(closure_1, closure_2);
-    return arg1 === constants.RESULTS.GRANTED;
+    await self.request(closure_1, closure_2);
+    return value === constants.RESULTS.GRANTED;
   })();
 });
-obj[1] = function requestPermission(arg0, arg1) {
+entry1.value = function requestPermission(arg0, arg1) {
   const self = this;
   const apply = closure_1.apply;
   if (typeof apply === "unknown") {
@@ -108,23 +107,22 @@ obj[1] = function requestPermission(arg0, arg1) {
   }
   return applyArgumentsResult;
 };
-items[2] = obj;
-obj = { key: "request", value: null };
-closure_0 = importDefaultResult((arg0, arg1) => {
+items[2] = entry1;
+const entry2 = { key: "request", value: null };
+closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
   closure_0 = arg0;
-  closure_1 = arg1;
+  dependencyMap = arg1;
   c4 = 0;
   c5 = 0;
-  return (function* (arg0, arg1) {
+  return (async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -135,55 +133,54 @@ closure_0 = importDefaultResult((arg0, arg1) => {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_3 = tmp5;
             closure_2 = tmp2;
-            callback(38)(callback(477), "PermissionsAndroid is not installed correctly.");
+            closure_130_0 = closure_0;
+            closure_130_1 = dependencyMap;
+            closure_0(38)(closure_0(477), "PermissionsAndroid is not installed correctly.");
             if (dependencyMap) {
               c4 = 1;
               c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = callback(477).shouldShowRequestPermissionRationale(tmp28);
+              let obj1 = { value: closure_0(477).shouldShowRequestPermissionRationale(tmp27), done: false };
               return obj1;
             } else {
-              obj1 = callback(477);
-              const permission = obj1.requestPermission(callback);
+              obj1 = closure_0(477);
+              const permission = obj1.requestPermission(closure_130_0);
               c5 = 3;
             }
-            tmp28 = callback;
-            const tmp32 = callback(38);
+            tmp27 = closure_0;
+            const tmp31 = closure_0(38);
           }
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
-          if (arg1) {
-            if (callback(232)) {
+          if (value) {
+            if (closure_0(232)) {
               new Promise((arg0, arg1) => {
-                const callback = arg0;
-                const table = arg1;
-                const merged = Object.assign(table);
-                callback(table[5]).showAlert(
+                closure_0 = arg0;
+                dependencyMap = arg1;
+                const merged = Object.assign(dependencyMap);
+                closure_1_0(closure_1_1[5]).showAlert(
                   {},
                   () => {
-                    error = new Error("Error showing rationale");
+                    const error = new Error("Error showing rationale");
                     return dependencyMap(error);
                   },
-                  () => callback(callback(477).requestPermission(callback)),
+                  () => closure_0(closure_0(477).requestPermission(closure_2_0)),
                 );
               });
             }
           }
         }
         c5 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } catch (tmp22) {
         c5 = tmp;
@@ -192,7 +189,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
     }
   })();
 });
-obj[1] = function request(arg0, arg1) {
+entry2.value = function request(arg0, arg1) {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -202,14 +199,14 @@ obj[1] = function request(arg0, arg1) {
   }
   return applyArgumentsResult;
 };
-items[3] = obj;
+items[3] = entry2;
 items[4] = {
   key: "requestMultiple",
   value: function requestMultiple(arg0) {
-    callback(38)(callback(477), "PermissionsAndroid is not installed correctly.");
-    const tmp = callback(38);
-    return callback(477).requestMultiplePermissions(arg0);
+    closure_0(38)(closure_0(477), "PermissionsAndroid is not installed correctly.");
+    const tmp = closure_0(38);
+    return closure_0(477).requestMultiplePermissions(arg0);
   },
 };
 
-export default new importDefaultResult1(PermissionsAndroidImpl, items)();
+export default new _createClass(PermissionsAndroidImpl, items)();

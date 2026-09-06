@@ -1,4 +1,4 @@
 // _runtime/07027_CardAnimationContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const CardAnimationContext = noopAll.createContext(undefined);
+export const CardAnimationContext = noop.createContext(undefined);

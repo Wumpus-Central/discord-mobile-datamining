@@ -1,14 +1,15 @@
 // _runtime/01209_reflectionScalarDefault.js
-import RepeatType from "01201_RepeatType.js";
+import ScalarType from "01201_ScalarType.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {
+
+export const reflectionScalarDefault = function reflectionScalarDefault(T, L) {
   let STRING = L;
   if (L === undefined) {
-    STRING = RepeatType.LongType.STRING;
+    STRING = ScalarType.LongType.STRING;
   }
-  if (RepeatType.ScalarType.BOOL === T) {
+  if (ScalarType.ScalarType.BOOL === T) {
     return false;
   } else {
     if (tmp3(1201).ScalarType.UINT64 !== T) {

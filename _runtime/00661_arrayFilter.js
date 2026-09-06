@@ -1,6 +1,6 @@
 // _runtime/00661_arrayFilter.js
 
-export default function arrayFilter(arg0, arg1) {
+export default function arrayFilter(arg0, fn) {
   let num = 0;
   if (null != arg0) {
     num = arg0.length;
@@ -11,10 +11,8 @@ export default function arrayFilter(arg0, arg1) {
   if (0 < num) {
     do {
       let tmp = arg0[num3];
-      let tmp2 = num2;
-      let tmp3 = num3;
       let sum = num2;
-      if (arg1(tmp, num3, arg0)) {
+      if (fn(tmp, num3, arg0)) {
         sum = num2 + 1;
         items[num2] = tmp;
       }

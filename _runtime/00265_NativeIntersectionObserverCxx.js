@@ -1,4 +1,4 @@
 // _runtime/00265_NativeIntersectionObserverCxx.js
-import getAll from "00030_get.js";
+import get from "metro/00030__.js";
 
-export default getAll.get("NativeIntersectionObserverCxx");
+export default get.get("NativeIntersectionObserverCxx");

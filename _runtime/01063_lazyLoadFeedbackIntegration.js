@@ -1,13 +1,14 @@
 // _runtime/01063_lazyLoadFeedbackIntegration.js
-import registerSpanErrorInstrumentation from "00682_registerSpanErrorInstrumentation.js";
+import _mod682 from "metro/00682__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 const AutoInjectMobileFeedback = "AutoInjectMobileFeedback";
 const AutoInjectMobileFeedbackButton = "AutoInjectMobileFeedbackButton";
 const AutoInjectMobileScreenshotButton = "AutoInjectMobileScreenshotButton";
-arg5.lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
-  const client = registerSpanErrorInstrumentation.getClient();
+
+export const lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
+  const client = _mod682.getClient();
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
@@ -27,9 +28,9 @@ arg5.lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
     obj3.addIntegration(tmpResult.feedbackIntegration());
   }
 };
-arg5.AUTO_INJECT_FEEDBACK_INTEGRATION_NAME = "AutoInjectMobileFeedback";
-arg5.lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInjectFeedbackIntegration() {
-  let obj = registerSpanErrorInstrumentation;
+export const AUTO_INJECT_FEEDBACK_INTEGRATION_NAME = "AutoInjectMobileFeedback";
+export const lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInjectFeedbackIntegration() {
+  let obj = _mod682;
   const client = obj.getClient();
   let integrationByName;
   if (null !== client) {
@@ -38,22 +39,21 @@ arg5.lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInjectFeedback
     }
   }
   if (!integrationByName) {
-    const client1 = registerSpanErrorInstrumentation.getClient();
+    const client1 = _mod682.getClient();
     integrationByName = null === client1;
-    const tmpResult = registerSpanErrorInstrumentation;
+    const tmpResult = _mod682;
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;
   }
   if (!integrationByName) {
-    obj = { name: null };
-    obj[0] = AutoInjectMobileFeedback;
+    obj = { name: AutoInjectMobileFeedback };
     obj3.addIntegration(obj);
   }
 };
-arg5.AUTO_INJECT_FEEDBACK_BUTTON_INTEGRATION_NAME = "AutoInjectMobileFeedbackButton";
-arg5.lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAutoInjectFeedbackButtonIntegration() {
-  let obj = registerSpanErrorInstrumentation;
+export const AUTO_INJECT_FEEDBACK_BUTTON_INTEGRATION_NAME = "AutoInjectMobileFeedbackButton";
+export const lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAutoInjectFeedbackButtonIntegration() {
+  let obj = _mod682;
   const client = obj.getClient();
   let integrationByName;
   if (null !== client) {
@@ -62,22 +62,21 @@ arg5.lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAutoInjectFe
     }
   }
   if (!integrationByName) {
-    const client1 = registerSpanErrorInstrumentation.getClient();
+    const client1 = _mod682.getClient();
     integrationByName = null === client1;
-    const tmpResult = registerSpanErrorInstrumentation;
+    const tmpResult = _mod682;
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;
   }
   if (!integrationByName) {
-    obj = { name: null };
-    obj[0] = AutoInjectMobileFeedbackButton;
+    obj = { name: AutoInjectMobileFeedbackButton };
     obj3.addIntegration(obj);
   }
 };
-arg5.AUTO_INJECT_SCREENSHOT_BUTTON_INTEGRATION_NAME = "AutoInjectMobileScreenshotButton";
-arg5.lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAutoInjectScreenshotButtonIntegration() {
-  let obj = registerSpanErrorInstrumentation;
+export const AUTO_INJECT_SCREENSHOT_BUTTON_INTEGRATION_NAME = "AutoInjectMobileScreenshotButton";
+export const lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAutoInjectScreenshotButtonIntegration() {
+  let obj = _mod682;
   const client = obj.getClient();
   let integrationByName;
   if (null !== client) {
@@ -86,16 +85,15 @@ arg5.lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAutoInject
     }
   }
   if (!integrationByName) {
-    const client1 = registerSpanErrorInstrumentation.getClient();
+    const client1 = _mod682.getClient();
     integrationByName = null === client1;
-    const tmpResult = registerSpanErrorInstrumentation;
+    const tmpResult = _mod682;
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;
   }
   if (!integrationByName) {
-    obj = { name: null };
-    obj[0] = AutoInjectMobileScreenshotButton;
+    obj = { name: AutoInjectMobileScreenshotButton };
     obj3.addIntegration(obj);
   }
 };

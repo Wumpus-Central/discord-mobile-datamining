@@ -1,5 +1,5 @@
 // _runtime/00632_baseIsEqual.js
-import isObjectLike from "00535_isObjectLike.js";
+import _mod535 from "metro/00535__.js";
 
 function baseIsEqual(arg0, arg1, arg2, arg3, arg4) {
   if (arg0 === arg1) {
@@ -7,7 +7,7 @@ function baseIsEqual(arg0, arg1, arg2, arg3, arg4) {
   } else {
     if (null != arg0) {
       if (null != arg1) {
-        if (isObjectLike(arg0)) {
+        if (_mod535(arg0)) {
           let tmp11 = tmp3(633)(arg0, arg1, arg2, arg3, baseIsEqual, arg4);
         }
       }

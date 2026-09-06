@@ -1,5 +1,6 @@
 // _runtime/01037_PrimitiveToString.js
-arg5.PrimitiveToString = function PrimitiveToString(arg0) {
+
+export const PrimitiveToString = function PrimitiveToString(arg0) {
   if (null === arg0) {
     return "";
   } else {

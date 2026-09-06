@@ -4,7 +4,7 @@ class Events {
     return;
   }
 }
-function EE(fn, context) {
+function EE(fn, context, arg2) {
   let flag = arg2;
   if (!arg2) {
     flag = false;
@@ -61,7 +61,7 @@ class EventEmitter {
           substr = key10004;
           if (!c1) {
           } else {
-            substr = require("../discord_app/modules/debug/logAppStart.tsx");
+            substr = key10004.slice(1);
           }
           arr = items.push(substr);
           continue;

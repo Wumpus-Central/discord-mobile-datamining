@@ -3,7 +3,7 @@ function recordTouchStart(identifier) {
   identifier = identifier.identifier;
   if (null == identifier) {
     const _Error = Error;
-    error = new Error("Touch object is missing identifier.");
+    const error = new Error("Touch object is missing identifier.");
     throw error;
   } else {
     if (items[identifier]) {
@@ -15,7 +15,7 @@ function recordTouchStart(identifier) {
       ({ pageX: tmp3.previousPageX, pageY: tmp3.previousPageY } = identifier);
       tmp3.previousTimeStamp = tmp;
     } else {
-      obj = {
+      const obj = {
         touchActive: true,
         startPageX: null,
         startPageY: null,
@@ -27,12 +27,12 @@ function recordTouchStart(identifier) {
         previousPageY: null,
         previousTimeStamp: null,
       };
-      ({ pageX: obj[1], pageY: obj[2] } = identifier);
-      obj[3] = tmp;
-      ({ pageX: obj[4], pageY: obj[5] } = identifier);
-      obj[6] = tmp;
-      ({ pageX: obj[7], pageY: obj[8] } = identifier);
-      obj[9] = tmp;
+      ({ pageX: obj.startPageX, pageY: obj.startPageY } = identifier);
+      obj.startTimeStamp = tmp;
+      ({ pageX: obj.currentPageX, pageY: obj.currentPageY } = identifier);
+      obj.currentTimeStamp = tmp;
+      ({ pageX: obj.previousPageX, pageY: obj.previousPageY } = identifier);
+      obj.previousTimeStamp = tmp;
       tmp2[identifier] = obj;
     }
     obj.mostRecentTimeStamp = identifier.timeStamp || identifier.timestamp;
@@ -42,7 +42,7 @@ function recordTouchMove(identifier) {
   identifier = identifier.identifier;
   if (null == identifier) {
     const _Error = Error;
-    error = new Error("Touch object is missing identifier.");
+    const error = new Error("Touch object is missing identifier.");
     throw error;
   } else if (tmp[identifier]) {
     tmp2.touchActive = true;
@@ -60,7 +60,7 @@ function recordTouchEnd(identifier) {
   identifier = identifier.identifier;
   if (null == identifier) {
     const _Error = Error;
-    error = new Error("Touch object is missing identifier.");
+    const error = new Error("Touch object is missing identifier.");
     throw error;
   } else if (tmp[identifier]) {
     tmp2.touchActive = false;
@@ -75,19 +75,20 @@ function recordTouchEnd(identifier) {
   }
 }
 const items = [];
-let obj = { touchBank: items, numberActiveTouches: 0, indexOfSingleActiveTouch: -1, mostRecentTimeStamp: 0 };
-arg5.default = {
+const touchHistory = { touchBank: items, numberActiveTouches: 0, indexOfSingleActiveTouch: -1, mostRecentTimeStamp: 0 };
+
+export default {
   instrument(arg0) {
-    closure_0 = arg0;
+    global = arg0;
   },
-  recordTouchTrack(arg0, changedTouches) {
-    if (null != callback) {
-      callback(arg0, changedTouches);
+  recordTouchTrack(framebus, changedTouches) {
+    if (null != global) {
+      global(framebus, changedTouches);
     }
-    if ("topTouchMove" === arg0) {
+    if ("topTouchMove" === framebus) {
       changedTouches = changedTouches.changedTouches;
       const item = changedTouches.forEach(recordTouchMove);
-    } else if ("topTouchStart" === arg0) {
+    } else if ("topTouchStart" === framebus) {
       const changedTouches1 = changedTouches.changedTouches;
       const item1 = changedTouches1.forEach(recordTouchStart);
       obj.numberActiveTouches = changedTouches.touches.length;
@@ -95,9 +96,9 @@ arg5.default = {
         tmp12.indexOfSingleActiveTouch = changedTouches.touches[0].identifier;
       }
     } else {
-      let tmp3 = "topTouchEnd" === arg0;
+      let tmp3 = "topTouchEnd" === framebus;
       if (!tmp3) {
-        tmp3 = "topTouchCancel" === arg0;
+        tmp3 = "topTouchCancel" === framebus;
       }
       if (tmp3) {
         const changedTouches2 = changedTouches.changedTouches;
@@ -108,8 +109,6 @@ arg5.default = {
           if (0 < items.length) {
             while (true) {
               let tmp7 = items[num2];
-              let tmp8 = num2;
-              let arr2 = items;
               if (null != tmp7) {
                 if (tmp7.touchActive) {
                   break;
@@ -123,5 +122,5 @@ arg5.default = {
       }
     }
   },
-  touchHistory: obj,
+  touchHistory,
 };

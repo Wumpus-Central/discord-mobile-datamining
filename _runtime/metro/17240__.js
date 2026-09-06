@@ -1,5 +1,6 @@
 // _runtime/metro/17240__.js
-arg5.default = {
+
+export default {
   locale: "en",
   pluralRuleFunction(arg0, arg1) {
     const parts = String(arg0).split(".");

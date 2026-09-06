@@ -1,5 +1,5 @@
 // _runtime/06952_encode.js
-import encode from "06953_encode.js";
+import _mod6953 from "metro/06953__.js";
 
-export const encode = encode.encode;
-export const decode = encode.decode;
+export const encode = _mod6953.encode;
+export const decode = _mod6953.decode;

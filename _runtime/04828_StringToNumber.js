@@ -1,19 +1,19 @@
 // _runtime/04828_StringToNumber.js
-import getEvalledConstructor from "01282_getEvalledConstructor.js";
+import _mod1282 from "metro/01282__.js";
 import _mod1283 from "metro/01283__.js";
 import callBoundIntrinsic from "01316_callBoundIntrinsic.js";
 import regexTester from "01446_regexTester.js";
 import trim from "04829_trim.js";
 
-let tmp = getEvalledConstructor("%RegExp%");
-let closure_2 = getEvalledConstructor("%parseInt%");
-let closure_3 = callBoundIntrinsic("String.prototype.slice");
-let closure_4 = regexTester(/^0b[01]+$/i);
-let closure_5 = regexTester(/^0o[0-7]+$/i);
-let closure_6 = regexTester(/^[-+]0x[0-9a-f]+$/i);
+let tmp = _mod1282("%RegExp%");
+const React2 = _mod1282("%parseInt%");
+const React3 = callBoundIntrinsic("String.prototype.slice");
+const React4 = regexTester(/^0b[01]+$/i);
+const hasOwnProperty = regexTester(/^0o[0-7]+$/i);
+const timestampProducer = regexTester(/^[-+]0x[0-9a-f]+$/i);
 const items = ["\u0085", "\u200B", "\uFFFE"];
 tmp = new tmp("[" + items.join("") + "]", "g");
-let closure_7 = regexTester(tmp);
+const React5 = regexTester(tmp);
 class StringToNumber {
   constructor(arg0) {
     if (typeof global !== "string") {
@@ -22,7 +22,7 @@ class StringToNumber {
       tmp15 = new.target;
       str = "Assertion failed: `argument` is not a String";
       tmp16 = new.target;
-      tmp17 = new require("metro/01283__.js")("Assertion failed: `argument` is not a String");
+      tmp17 = new closure_0(closure_1[3])("Assertion failed: `argument` is not a String");
       tmp18 = tmp17;
       throw tmp17;
     } else {
@@ -47,7 +47,7 @@ class StringToNumber {
             if (!closure_6(global)) {
               tmp4 = closure_0;
               tmp5 = closure_1;
-              tmp6 = require("trim")(global);
+              tmp6 = closure_0(closure_1[4])(global);
               if (tmp6 !== global) {
                 tmp8 = StringToNumber;
                 tmp7 = StringToNumber(tmp6);

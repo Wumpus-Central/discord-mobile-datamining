@@ -1,6 +1,6 @@
 // _runtime/00138_ReactNativeDocumentElementInstanceHandleImpl.js
-import _createClassDefault from "metro/00042__createClass.js";
-import closure_0 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class ReactNativeDocumentElementInstanceHandleImpl {
   constructor() {
@@ -8,7 +8,7 @@ class ReactNativeDocumentElementInstanceHandleImpl {
     return;
   }
 }
-let closure_1 = _createClassDefault(ReactNativeDocumentElementInstanceHandleImpl);
+let closure_1 = _createClass(ReactNativeDocumentElementInstanceHandleImpl);
 
 export const createReactNativeDocumentElementInstanceHandle =
   function createReactNativeDocumentElementInstanceHandle() {
@@ -36,8 +36,6 @@ export const setPublicInstanceForReactNativeDocumentElementInstanceHandle =
   ) {
     reactNativeDocumentElementInstanceHandle.publicInstance = publicInstance;
   };
-export const isReactNativeDocumentElementInstanceHandle = function isReactNativeDocumentElementInstanceHandle(
-  nativeElementReference3,
-) {
-  return nativeElementReference3 instanceof closure_1;
+export const isReactNativeDocumentElementInstanceHandle = function isReactNativeDocumentElementInstanceHandle(c5) {
+  return c5 instanceof closure_1;
 };

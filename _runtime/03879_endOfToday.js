@@ -2,8 +2,7 @@
 import endOfDay from "03850_endOfDay.js";
 
 if (!endOfDay) {
-  const obj = { default: null };
-  obj[0] = endOfDay;
+  const obj = { default: endOfDay };
   let tmp3 = obj;
 } else {
   tmp3 = endOfDay;

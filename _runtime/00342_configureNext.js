@@ -1,14 +1,14 @@
 // _runtime/00342_configureNext.js
-import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
+import _mod71 from "metro/00071__.js";
 import get_VersionDefault from "00273_get_Version.js";
-import { getFabricUIManager } from "00071_getFabricUIManager.js";
+import javaScriptFlagGetter from "metro/00027__.js";
 
-const require = arg1;
-function configureNext(duration) {
-  const _global = arg1;
+require = arg1;
+function configureNext(duration, arg1, arg2) {
+  closure_0 = arg1;
   if (!get_VersionDefault.isDisableAnimations) {
     if (closure_4) {
-      const _require = false;
+      c1 = false;
       let num = duration.duration;
       if (num == null) {
         num = 0;
@@ -18,21 +18,21 @@ function configureNext(duration) {
           c1 = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(closure_2);
-          if (callback != null) {
-            callback();
+          if (closure_0 != null) {
+            closure_0();
           }
         }
       }
-      importDefault = setTimeout(onAnimationComplete, num + 17);
-      const fabricUIManager = require("00071_getFabricUIManager.js").getFabricUIManager();
+      const timeout = setTimeout(onAnimationComplete, num + 17);
+      const fabricUIManager = _mod71.getFabricUIManager();
       let prop;
       if (fabricUIManager != null) {
         prop = fabricUIManager.configureNextLayoutAnimation;
       }
       let fn = arg2;
       if (prop) {
-        if (_global != null) {
-          const nativeFabricUIManager = _global.nativeFabricUIManager;
+        if (global != null) {
+          const nativeFabricUIManager = global.nativeFabricUIManager;
           if (nativeFabricUIManager != null) {
             if (fn == null) {
               fn = () => {};
@@ -55,11 +55,10 @@ function configureNext(duration) {
           const _default2 = tmp6(68).default;
         }
       }
-      const obj = getFabricUIManager;
     }
   }
 }
-let closure_4 = javaScriptFlagGetterAll.isLayoutAnimationEnabled();
+let closure_4 = javaScriptFlagGetter.isLayoutAnimationEnabled();
 let obj = {
   easeInEaseOut: {
     duration: 300,
@@ -83,10 +82,7 @@ let obj = {
 obj = {
   configureNext,
   create: function createLayoutAnimation(duration, type, property) {
-    obj = { duration, create: obj, update: obj, delete: obj1 };
-    obj = { type, property };
-    obj = { type };
-    return obj;
+    return { duration, create: { type, property }, update: { type }, delete: { type, property } };
   },
   Types: Object.freeze({
     spring: "spring",

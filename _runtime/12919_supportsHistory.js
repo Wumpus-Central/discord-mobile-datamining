@@ -1,10 +1,11 @@
 // _runtime/12919_supportsHistory.js
-import getGlobalSingleton from "12798_getGlobalSingleton.js";
+import _mod12798 from "metro/12798__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.supportsHistory = function supportsHistory() {
-  const chrome = getGlobalSingleton.GLOBAL_OBJ.chrome;
+
+export const supportsHistory = function supportsHistory() {
+  const chrome = _mod12798.GLOBAL_OBJ.chrome;
   let runtime = chrome;
   if (chrome) {
     runtime = chrome.app;

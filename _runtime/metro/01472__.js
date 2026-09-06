@@ -29,7 +29,6 @@ export default (str, SEPARATOR, arg2, maxKeys) => {
         let str5 = parts[num3];
         let replaced = str5.replace(tmp11, "%20");
         let index = replaced.indexOf(str2);
-        let tmp5 = num3;
         let str6 = "";
         let substr = replaced;
         if (index >= 0) {
@@ -41,6 +40,7 @@ export default (str, SEPARATOR, arg2, maxKeys) => {
         let _decodeURIComponent2 = decodeURIComponent;
         let decodeURIComponentResult1 = decodeURIComponent(str6);
         let _Object = Object;
+        hasOwnProperty = Object.prototype.hasOwnProperty;
         let call = hasOwnProperty.call;
         if (
           typeof call === "unknown" ? hasOwnProperty(decodeURIComponentResult) : call(obj, decodeURIComponentResult)

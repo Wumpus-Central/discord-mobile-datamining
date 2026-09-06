@@ -1,5 +1,5 @@
 // _runtime/03841_compareLocalAsc.js
-import _typeof from "metro/03650__typeof.js";
+import _typeof from "metro/03650__.js";
 import differenceInCalendarDays from "03812_differenceInCalendarDays.js";
 import requiredArgs from "03651_requiredArgs.js";
 
@@ -41,24 +41,21 @@ function compareLocalAsc(defaultResult1, defaultResult2) {
   return num;
 }
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!differenceInCalendarDays) {
-  obj = { default: null };
-  obj[0] = differenceInCalendarDays;
+  obj = { default: differenceInCalendarDays };
   let tmp5 = obj;
 } else {
   tmp5 = differenceInCalendarDays;
 }
 differenceInCalendarDays = tmp5;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
   tmp7 = requiredArgs;

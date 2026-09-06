@@ -1,7 +1,7 @@
 // _runtime/01574_NavigationContent.js
-import closure_0 from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
+import noop from "metro/00019__.js";
 
+const jsx = fn(21).jsx;
 function NavigationContent(render) {
   return render.render(render.children);
 }
@@ -16,13 +16,11 @@ export const useComponent = function useComponent(current) {
     const current = ref.current;
     if (null === current) {
       const _Error = Error;
-      error = new Error("The returned component must be rendered in the same render phase as the hook.");
+      const error = new Error("The returned component must be rendered in the same render phase as the hook.");
       throw error;
     } else {
-      const obj = { render: null, children: null };
-      obj[0] = current;
-      obj[1] = tmp;
-      return closure_1_1(closure_1_2, obj);
+      const obj = { render: current, children: tmp };
+      return <NavigationContent render={current}>{tmp}</NavigationContent>;
     }
   }).current;
 };

@@ -1,35 +1,46 @@
 // _runtime/metro/04939__.js
-import _objectWithoutPropertiesDefault from "00109__objectWithoutProperties.js";
-import AnimatedDefault from "../04916_Animated.js";
-import warnOnceDefault from "../04921_warnOnce.js";
-import importAllResult from "../00019_noop.js";
-import get_ActivityIndicator from "../00017_get_ActivityIndicator.js";
-import jsxProd from "../react/00021_jsxProd.js";
+import _modDef4916 from "04916__.js";
+import _modDef4921 from "04921__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import noop from "00019__.js";
 
-const require = arg1;
-_objectWithoutPropertiesDefault;
-let c3 = importAllResult;
-({ Platform: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Platform: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const styles = StyleSheet.create({
   container: { flex: 1 },
   absoluteWithNoBottom: { position: "absolute", top: 0, start: 0, end: 0 },
 });
 
-export default importAllResult.forwardRef(function ScreenStackItem(unstable_sheetFooter, ref) {
+export default noop.forwardRef(function ScreenStackItem(unstable_sheetFooter, ref) {
   ({ headerConfig, stackPresentation, sheetAllowedDetents, screenId } = unstable_sheetFooter);
   unstable_sheetFooter = unstable_sheetFooter.unstable_sheetFooter;
   ({ children, activityState, shouldFreeze, contentStyle, style, onHeaderHeightChange } = unstable_sheetFooter);
-  const merged = Object.assign(unstable_sheetFooter, Object.create(null));
-  importDefault = undefined;
-  dependencyMap = undefined;
+  const merged = Object.assign(
+    unstable_sheetFooter,
+    Object.assign({
+      children: 0,
+      headerConfig: 0,
+      activityState: 0,
+      shouldFreeze: 0,
+      stackPresentation: 0,
+      sheetAllowedDetents: 0,
+      contentStyle: 0,
+      style: 0,
+      screenId: 0,
+      onHeaderHeightChange: 0,
+      unstable_sheetFooter: 0,
+    }),
+  );
   let flag4;
   closure_4 = undefined;
   let obj = flag4;
   importDefault = flag4.useRef(null);
   dependencyMap = flag4.useContext(screenId(4937).RNSScreensRefContext);
   const imperativeHandle = flag4.useImperativeHandle(ref, () => ref.current);
-  obj1 = screenId(4928);
+  let obj1 = screenId(4928);
   let flag;
   if (headerConfig != null) {
     flag = headerConfig.disableLeftInsetApplication;
@@ -64,7 +75,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   closure_4 = obj.useRef(flag4);
   const items = [flag4, stackPresentation];
   const effect = obj.useEffect(() => {
-    ref(table[6])(
+    _modDef4921(
       false,
       "Dynamically changing header's visibility in modals will result in remounting the screen and losing all local state.",
     );
@@ -78,7 +89,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   if (!flag5) {
     const _Object = Object;
     const values = Object.values(merged.scrollEdgeEffects);
-    flag5 = values.some((arg0) => "hidden" !== arg0);
+    flag5 = values.some((item) => "hidden" !== item);
   }
   let blurEffect;
   if (headerConfig != null) {
@@ -94,7 +105,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   if (flag5) {
     flag5 = false;
   }
-  warnOnceDefault(
+  _modDef4921(
     flag5,
     "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.",
   );
@@ -107,22 +118,18 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   }
   obj = {
     value: obj1.useEdgeInsetApplication(flag, flag2, flag3).nextContextValue,
-    children: callback(tmp10(4940), { contentStyle, style: container, stackPresentation, children }),
+    children: closure_5(tmp10(4940), { contentStyle, style: container, stackPresentation, children }),
   };
-  const items1 = [callback(screenId(4928).EdgeInsetApplicationContext.Provider, obj), ,];
+  const items1 = [closure_5(screenId(4928).EdgeInsetApplicationContext.Provider, obj), ,];
   obj = {};
   const merged1 = Object.assign(headerConfig);
-  items1[1] = callback(screenId(4927).ScreenStackHeaderConfig, obj);
+  items1[1] = closure_5(screenId(4927).ScreenStackHeaderConfig, obj);
   let tmp18Result = "formSheet" === stackPresentation && unstable_sheetFooter;
   if (tmp18Result) {
-    obj1 = { children: null };
-    obj1[0] = unstable_sheetFooter();
+    obj1 = { children: unstable_sheetFooter() };
     tmp18Result = tmp18(tmp2(4943).FooterComponent, obj1);
   }
   items1[2] = tmp18Result;
-  const tmp11 = warnOnceDefault;
-  const tmp16 = closure_7;
-  const tmp17 = closure_6;
   const obj2 = {
     ref(current) {
       closure_1.current = current;
@@ -130,8 +137,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
         if (null === current) {
           delete tmp2[tmp];
         } else {
-          const obj = { current: null };
-          obj[0] = current;
+          const obj = { current };
           tmp5[screenId] = obj;
         }
       } else {
@@ -160,12 +166,12 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   if (flag6 == null) {
     flag6 = false;
   }
-  obj2[7] = flag6;
-  obj2[8] = sheetAllowedDetents;
+  obj2.hasLargeHeader = flag6;
+  obj2.sheetAllowedDetents = sheetAllowedDetents;
   const items2 = [style, undefined];
-  obj2[9] = items2;
-  obj2[10] = onHeaderHeightChange;
+  obj2.style = items2;
+  obj2.onHeaderHeightChange = onHeaderHeightChange;
   const merged2 = Object.assign(merged);
   obj2.children = tmp16Result;
-  return callback(AnimatedDefault, obj2);
+  return closure_5(_modDef4916, obj2);
 });

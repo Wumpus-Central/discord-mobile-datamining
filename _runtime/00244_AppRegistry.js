@@ -1,20 +1,19 @@
 // _runtime/00244_AppRegistry.js
-import MessageQueueDefault from "00236_MessageQueue.js";
-import importAllResult from "00245_map.js";
+import componentProviderInstrumentationHook from "00245_componentProviderInstrumentationHook.js";
+import MessageQueue from "metro/00236__.js";
 
-importAllResult.registerComponent(
+componentProviderInstrumentationHook.registerComponent(
   "LogBox",
   () =>
     function NoOp() {
       return null;
     },
 );
-global.RN$AppRegistry = importAllResult;
+global.RN$AppRegistry = componentProviderInstrumentationHook;
 global.RN$SurfaceRegistry = {
-  renderSurface: importAllResult.runApplication,
-  setSurfaceProps: importAllResult.setSurfaceProps,
+  renderSurface: componentProviderInstrumentationHook.runApplication,
+  setSurfaceProps: componentProviderInstrumentationHook.setSurfaceProps,
 };
-const obj = { renderSurface: importAllResult.runApplication, setSurfaceProps: importAllResult.setSurfaceProps };
-MessageQueueDefault("AppRegistry", importAllResult);
+MessageQueue("AppRegistry", componentProviderInstrumentationHook);
 
-export const AppRegistry = importAllResult;
+export const AppRegistry = componentProviderInstrumentationHook;

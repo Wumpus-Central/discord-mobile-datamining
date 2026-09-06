@@ -1,17 +1,20 @@
 // _runtime/metro/14418__.js
-arg5.default = () => (arg0) => {
+
+export default () => (arg0) => {
   closure_0 = arg0;
-  const features = {
-    image(uri) {
-      return closure_0.send("image", {
-        uri: uri.uri,
-        preview: uri.preview,
-        filename: uri.filename,
-        width: uri.width,
-        height: uri.height,
-        caption: uri.caption,
-      });
+  return {
+    features: {
+      image(dependencyMap) {
+        const size = {
+          uri: dependencyMap.uri,
+          preview: dependencyMap.preview,
+          filename: dependencyMap.filename,
+          width: dependencyMap.width,
+          height: dependencyMap.height,
+          caption: dependencyMap.caption,
+        };
+        return closure_0.send("image", size);
+      },
     },
   };
-  return { features };
 };

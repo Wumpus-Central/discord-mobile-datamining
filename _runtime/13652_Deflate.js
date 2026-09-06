@@ -1,7 +1,7 @@
 // _runtime/13652_Deflate.js
-import assign from "13651_assign.js";
+import _mod13651 from "metro/13651__.js";
 import _mod13655 from "metro/13655__.js";
-import assign2 from "13659_assign.js";
+import _mod13659 from "metro/13659__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -12,7 +12,7 @@ class Deflate {
     if (this instanceof Deflate) {
       tmp4 = closure_0;
       tmp5 = closure_1;
-      obj = require("assign");
+      obj = closure_0(closure_1[0]);
       obj = arg0;
       if (!arg0) {
         obj = {};
@@ -36,11 +36,11 @@ class Deflate {
         self.chunks = [];
         tmp6 = new.target;
         tmp7 = new.target;
-        tmp8 = new require("ZStream")();
+        tmp8 = new tmp4(tmp5[1])();
         tmp9 = tmp8;
         self.strm = tmp8;
         self.strm.avail_out = 0;
-        tmp4Result = require("flush_block_only");
+        tmp4Result = tmp4(tmp5[2]);
         tmp10 = tmp4Result;
         deflateInit2Result = tmp4Result.deflateInit2(
           self.strm,
@@ -55,17 +55,17 @@ class Deflate {
           _Error2 = Error;
           tmp23 = new.target;
           tmp24 = new.target;
-          error = new Error(require("metro/13655__.js")[deflateInit2Result]);
+          error = new Error(tmp4(tmp5[3])[deflateInit2Result]);
           tmp26 = error;
           throw error;
         } else {
           if (options.header) {
-            tmp4Result1 = require("flush_block_only");
+            tmp4Result1 = tmp4(tmp5[2]);
             deflateSetHeaderResult = tmp4Result1.deflateSetHeader(self.strm, options.header);
           }
           if (options.dictionary) {
             if (typeof options.dictionary === "string") {
-              tmp4Result2 = require("assign");
+              tmp4Result2 = tmp4(tmp5[4]);
               dictionary = tmp4Result2.string2buf(options.dictionary);
             } else {
               tmp27 = toString;
@@ -82,14 +82,14 @@ class Deflate {
                 dictionary = options.dictionary;
               }
             }
-            tmp4Result3 = require("flush_block_only");
+            tmp4Result3 = tmp4(tmp5[2]);
             deflateSetDictionaryResult = tmp4Result3.deflateSetDictionary(self.strm, dictionary);
             if (0 !== deflateSetDictionaryResult) {
               tmp17 = globalThis;
               _Error = Error;
               tmp18 = new.target;
               tmp19 = new.target;
-              error1 = new Error(require("metro/13655__.js")[deflateSetDictionaryResult]);
+              error1 = new Error(tmp4(tmp5[3])[deflateSetDictionaryResult]);
               tmp21 = error1;
               throw error1;
             } else {
@@ -140,7 +140,7 @@ class Deflate {
       if (typeof arg0 === "string") {
         tmp10 = closure_0;
         tmp11 = closure_1;
-        obj = require("assign");
+        obj = closure_0(closure_1[4]);
         strm.input = obj.string2buf(arg0);
         num2 = 0;
         strm.next_in = 0;
@@ -186,7 +186,7 @@ class Deflate {
       } else {
         tmp = closure_0;
         tmp2 = closure_1;
-        obj = require("assign");
+        obj = closure_0(closure_1[0]);
         self.result = obj.flattenChunks(self.chunks);
       }
     }
@@ -196,8 +196,9 @@ class Deflate {
     return;
   }
 }
-arg5.Deflate = Deflate;
-arg5.deflate = function deflate(arg0, arg1) {
+
+export { Deflate };
+export const deflate = function deflate(arg0, arg1) {
   let arr = Deflate(arg1);
   arr = arr.push(arg0, true);
   if (arr.err) {
@@ -210,7 +211,7 @@ arg5.deflate = function deflate(arg0, arg1) {
     return arr.result;
   }
 };
-arg5.deflateRaw = function deflateRaw(arg0, arg1) {
+export const deflateRaw = function deflateRaw(arg0, arg1) {
   let obj = arg1;
   if (!arg1) {
     obj = {};
@@ -228,7 +229,7 @@ arg5.deflateRaw = function deflateRaw(arg0, arg1) {
     return arr.result;
   }
 };
-arg5.gzip = function gzip(arg0, arg1) {
+export const gzip = function gzip(arg0, arg1) {
   let obj = arg1;
   if (!arg1) {
     obj = {};

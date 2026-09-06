@@ -36,9 +36,6 @@ const obj = {
       if (0 < touchBank.length) {
         while (true) {
           tmp2 = touchBank[num];
-          let tmp3 = num;
-          let tmp4 = num2;
-          let tmp5 = num3;
           let tmp6 = num2;
           let tmp7 = num3;
           if (null != tmp2) {
@@ -82,24 +79,25 @@ const obj = {
     }
     return noCentroid;
   },
-  currentCentroidXOfTouchesChangedAfter(touchBank) {
+  currentCentroidXOfTouchesChangedAfter(touchBank, arg1) {
     return obj.centroidDimension(touchBank, arg1, true, true);
   },
-  currentCentroidYOfTouchesChangedAfter(touchBank) {
+  currentCentroidYOfTouchesChangedAfter(touchBank, arg1) {
     return obj.centroidDimension(touchBank, arg1, false, true);
   },
-  previousCentroidXOfTouchesChangedAfter(touchBank) {
+  previousCentroidXOfTouchesChangedAfter(touchBank, arg1) {
     return obj.centroidDimension(touchBank, arg1, true, false);
   },
-  previousCentroidYOfTouchesChangedAfter(touchBank) {
+  previousCentroidYOfTouchesChangedAfter(touchBank, arg1) {
     return obj.centroidDimension(touchBank, arg1, false, false);
   },
-  currentCentroidX(touchBank) {
-    return obj.centroidDimension(touchBank, 0, true, true);
+  currentCentroidX(touchHistory) {
+    return obj.centroidDimension(touchHistory, 0, true, true);
   },
-  currentCentroidY(touchBank) {
-    return obj.centroidDimension(touchBank, 0, false, true);
+  currentCentroidY(touchHistory) {
+    return obj.centroidDimension(touchHistory, 0, false, true);
   },
   noCentroid: -1,
 };
-arg5.default = obj;
+
+export default obj;

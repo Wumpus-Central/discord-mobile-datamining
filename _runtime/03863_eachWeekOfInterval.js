@@ -1,36 +1,32 @@
 // _runtime/03863_eachWeekOfInterval.js
-import addWeeks from "03818_addWeeks.js";
+import 03818__ from "metro/03818__.js";
 import startOfWeek from "03809_startOfWeek.js";
-import _typeof from "metro/03650__typeof.js";
+import _typeof from "metro/03650__.js";
 import requiredArgs from "03651_requiredArgs.js";
 
-if (!addWeeks) {
-  let obj = { default: null };
-  obj[0] = addWeeks;
+if (!module_3818) {
+  let obj = { default: module_3818 };
   let tmp3 = obj;
 } else {
-  tmp3 = addWeeks;
+  tmp3 = module_3818;
 }
-addWeeks = tmp3;
+module_3818 = tmp3;
 if (!startOfWeek) {
-  obj = { default: null };
-  obj[0] = startOfWeek;
+  obj = { default: startOfWeek };
   let tmp5 = obj;
 } else {
   tmp5 = startOfWeek;
 }
 startOfWeek = tmp5;
 if (!_typeof) {
-  obj = { default: null };
-  obj[0] = _typeof;
+  obj = { default: _typeof };
   let tmp7 = obj;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
@@ -57,10 +53,8 @@ export default function eachWeekOfInterval(arg0, arg1) {
     if (defaultResult3.getTime() <= time1) {
       do {
         let setHoursResult2 = defaultResult3.setHours(0);
-        let tmp14 = _typeof;
         let arr = items.push(_typeof.default(defaultResult3));
-        let tmp16 = addWeeks;
-        let defaultResult5 = addWeeks.default(defaultResult3, 1);
+        let defaultResult5 = module_3818.default(defaultResult3, 1);
         let setHoursResult3 = defaultResult5.setHours(15);
         defaultResult3 = defaultResult5;
         time2 = defaultResult5.getTime();

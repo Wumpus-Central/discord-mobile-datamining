@@ -1,4 +1,4 @@
 // _runtime/07007_GestureHandlerRefContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const GestureHandlerRefContext = noopAll.createContext(null);
+export const GestureHandlerRefContext = noop.createContext(null);

@@ -1,82 +1,62 @@
 // _runtime/00328__queryCache.js
-import noopAll from "00019_noop.js";
 import resolveAssetSourceDefault from "00081_resolveAssetSource.js";
-import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
 import ImageLoaderDefault from "00329_ImageLoader.js";
-import getImageSourcesFromImageProps from "00331_getImageSourcesFromImageProps.js";
-import closure_3 from "00005_asyncGeneratorStep.js";
-import { use } from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
-import set from "00333_set.js";
+import _mod331 from "metro/00331__.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import noop from "metro/00019__.js";
+import get_hairlineWidth from "00254_get_hairlineWidth.js";
 
-require = arg1;
-function _queryCache() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c1 = 0;
-    return (function*(arg0) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            obj = v0(closure_1_2[3]);
-            v0 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = obj.queryCache(closure_0);
-            return obj1;
-          }
-        } catch (tmp7) {
-          v0 = tmp;
-          throw tmp7;
-        }
-      }
-    })();
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+require = fn;
+let closure_7 = async function _queryCache(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c1 = 2;
+      if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        obj = ImageLoaderDefault;
+        c1 = 3;
+        const obj1 = { value: obj.queryCache(closure_0), done: true };
+        return obj1;
+      }
+    } catch (tmp7) {
+      c1 = tmp;
+      throw tmp7;
+    }
   }
-  return applyArgumentsResult;
-}
-noopAll;
-let c6 = 1;
+};
+const use = fn(19).use;
+const jsx = fn(21).jsx;
+let closure_6 = 1;
 let closure_8 = { uri: "Array", width: "call", height: "o" };
 function _BaseImage(arg0) {
   ({ alt, accessible, aria-labelledby: tmp, aria-busy: tmp2, aria-checked: tmp3, aria-disabled: tmp4, aria-expanded: tmp5, aria-label: tmp7, aria-selected: tmp8, accessibilityLabel, accessibilityLabelledBy, accessibilityState, defaultSource, loadingIndicatorSource, style, onLoadStart, onLoad, onLoadEnd, onError, width, height } = arg0);
   ({ ref, aria-hidden: tmp6, children, source, src, crossOrigin, referrerPolicy, srcSet, resizeMode } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
-  let obj = getImageSourcesFromImageProps;
+  const merged = Object.assign(arg0, Object.assign({ ref: 0, alt: 0, accessible: 0, "aria-labelledby": 0, "aria-busy": 0, "aria-checked": 0, "aria-disabled": 0, "aria-expanded": 0, "aria-hidden": 0, "aria-label": 0, "aria-selected": 0, accessibilityLabel: 0, accessibilityLabelledBy: 0, accessibilityState: 0, defaultSource: 0, loadingIndicatorSource: 0, children: 0, source: 0, src: 0, style: 0, crossOrigin: 0, referrerPolicy: 0, srcSet: 0, onLoadStart: 0, onLoad: 0, onLoadEnd: 0, onError: 0, width: 0, height: 0, resizeMode: 0 }));
+  let obj = _mod331;
   const arr = obj.getImageSourcesFromImageProps({ crossOrigin, referrerPolicy, src, srcSet, width, height, source }) || closure_8;
   const tmp13 = resolveAssetSourceDefault(defaultSource);
   const tmp14 = resolveAssetSourceDefault(loadingIndicatorSource);
   if (null != children) {
     const _Error2 = Error;
-    error = new Error("The <Image> component cannot contain children. If you want to render content on top of the image, consider using the <ImageBackground> component or absolute positioning.");
+    const error = new Error("The <Image> component cannot contain children. If you want to render content on top of the image, consider using the <ImageBackground> component or absolute positioning.");
     throw error;
   } else {
     if (null != defaultSource) {
@@ -94,10 +74,8 @@ function _BaseImage(arg0) {
       }
       let tmp18 = 1 === arr.length;
       if (tmp18) {
-        obj = { width: null, height: null };
-        obj[0] = width3;
-        obj[1] = height3;
-        tmp18 = obj;
+        const size = { width: width3, height: height3 };
+        tmp18 = size;
       }
       const items = [tmp18, closure_9.base, style];
       merged.style = items;
@@ -111,13 +89,12 @@ function _BaseImage(arg0) {
       if (width2 == null) {
         width2 = width;
       }
-      obj = { width: null, height: null };
-      obj[0] = width2;
+      const size1 = { width: width2, height: null };
       if (height2 == null) {
         height2 = height;
       }
-      obj[1] = height2;
-      const items1 = [obj, closure_9.base, style];
+      size1.height = height2;
+      const items1 = [size1, closure_9.base, style];
       merged.style = items1;
       const items2 = [arr];
       merged.source = items2;
@@ -168,37 +145,36 @@ function _BaseImage(arg0) {
           busy = accessibilityState.busy;
         }
       }
-      obj1 = { busy: null, checked: null, disabled: null, expanded: null, selected: null };
-      obj1[0] = tmp2;
+      obj = { busy: tmp2, checked: null, disabled: null, expanded: null, selected: null };
       if (tmp3 == null) {
         let checked;
         if (accessibilityState != null) {
           checked = accessibilityState.checked;
         }
       }
-      obj1[1] = tmp3;
+      obj.checked = tmp3;
       if (tmp4 == null) {
         let disabled;
         if (accessibilityState != null) {
           disabled = accessibilityState.disabled;
         }
       }
-      obj1[2] = tmp4;
+      obj.disabled = tmp4;
       if (tmp5 == null) {
         let expanded;
         if (accessibilityState != null) {
           expanded = accessibilityState.expanded;
         }
       }
-      obj1[3] = tmp5;
+      obj.expanded = tmp5;
       if (tmp8 == null) {
         let selected;
         if (accessibilityState != null) {
           selected = accessibilityState.selected;
         }
       }
-      obj1[4] = tmp8;
-      merged.accessibilityState = obj1;
+      obj.selected = tmp8;
+      merged.accessibilityState = obj;
     }
     if (true === tmp6) {
       merged.importantForAccessibility = "no-hide-descendants";
@@ -226,25 +202,26 @@ function _BaseImage(arg0) {
     if (null !== tmp33) {
       merged.internal_analyticTag = tmp33;
     }
-    const obj2 = {};
+    obj = {};
     tmp20 = null != tmp13 && null != tmp13.uri;
     tmp21 = null != tmp14 && null != tmp14.uri;
     tmp22 = null == accessibilityState && null == tmp2 && null == tmp3 && null == tmp4 && null == tmp5 && null == tmp8;
     const wrapRefWithImageAttachedCallbacks = tmp10Result.useWrapRefWithImageAttachedCallbacks(ref);
     const merged1 = Object.assign(merged);
-    obj2.ref = wrapRefWithImageAttachedCallbacks;
+    obj.ref = wrapRefWithImageAttachedCallbacks;
     return jsx(tmp12(337), {});
   }
 }
-set = set.unstable_getImageComponentDecorator();
+let unstable_setImageComponentDecorator = fn(333);
+unstable_setImageComponentDecorator = unstable_setImageComponentDecorator.unstable_getImageComponentDecorator();
 let resultResult = _BaseImage;
-if (null != set) {
-  resultResult = set(_BaseImage);
+if (null != unstable_setImageComponentDecorator) {
+  resultResult = unstable_setImageComponentDecorator(_BaseImage);
 }
 resultResult.displayName = "Image";
-resultResult.getSize = function getSize(arg0, fn) {
+resultResult.getSize = function getSize(arg0, fn, arg2) {
   closure_0 = arg0;
-  importDefault = fn;
+  closure_1 = fn;
   const size = ImageLoaderDefault.getSize(arg0);
   if (typeof fn !== "function") {
     return size;
@@ -255,13 +232,12 @@ resultResult.getSize = function getSize(arg0, fn) {
         console.warn(`Failed to get size for image: ${closure_0}`);
       };
     }
-    size.then((width) => callback(width.width, width.height)).catch(fn);
+    size.then((width) => closure_1(width.width, width.height)).catch(fn);
   }
-  const obj = ImageLoaderDefault;
 };
-resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1, fn) {
+resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1, fn, arg3) {
   closure_0 = arg0;
-  importDefault = fn;
+  closure_1 = fn;
   const sizeWithHeaders = ImageLoaderDefault.getSizeWithHeaders(arg0, arg1);
   if (typeof fn !== "function") {
     return sizeWithHeaders;
@@ -272,30 +248,29 @@ resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1, fn) {
         console.warn(`Failed to get size for image: ${closure_0}`);
       };
     }
-    sizeWithHeaders.then((width) => callback(width.width, width.height)).catch(fn);
+    sizeWithHeaders.then((width) => closure_1(width.width, width.height)).catch(fn);
   }
-  const obj = ImageLoaderDefault;
 };
-resultResult.prefetch = function prefetch(closure_0) {
+resultResult.prefetch = function prefetch(arg0, fn) {
   closure_6 = tmp + 1;
-  if (arg1) {
-    arg1(tmp);
+  if (fn) {
+    fn(tmp);
   }
-  return ImageLoaderDefault.prefetchImage(closure_0, +closure_6);
+  return ImageLoaderDefault.prefetchImage(arg0, +closure_6);
 };
-resultResult.prefetchWithMetadata = function prefetchWithMetadata(arg0, arg1, arg2, arg3) {
+resultResult.prefetchWithMetadata = function prefetchWithMetadata(arg0, arg1, arg2, fn) {
   closure_6 = tmp + 1;
-  if (arg3) {
-    arg3(tmp);
+  if (fn) {
+    fn(tmp);
   }
   return ImageLoaderDefault.prefetchImage(arg0, +closure_6);
 };
 resultResult.abortPrefetch = function abortPrefetch(_requestId) {
   ImageLoaderDefault.abortRequest(_requestId);
 };
-resultResult.queryCache = function queryCache(closure_0) {
+resultResult.queryCache = function queryCache(arg0) {
   const self = this;
-  const apply = _queryCache.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -304,6 +279,6 @@ resultResult.queryCache = function queryCache(closure_0) {
   return applyArgumentsResult;
 };
 resultResult.resolveAssetSource = resolveAssetSourceDefault;
-let closure_9 = get_hairlineWidthDefault.create({ base: { overflow: "hidden" } });
+let closure_9 = get_hairlineWidth.create({ base: { overflow: "hidden" } });
 
 export default resultResult;

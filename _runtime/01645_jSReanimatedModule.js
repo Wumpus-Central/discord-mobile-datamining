@@ -1,13 +1,13 @@
 // _runtime/01645_jSReanimatedModule.js
 import _makeShareableClone from "01646__makeShareableClone.js";
-import importDefaultResult1 from "01662_importDefaultResult1.js";
-import isJest from "01639_isJest.js";
+import NativeReanimatedModule from "01662_NativeReanimatedModule.js";
+import 01639__ from "metro/01639__.js";
 
-if (isJest.shouldBeUseWeb()) {
+if (module_1639.shouldBeUseWeb()) {
   const _module1 = _makeShareableClone;
   let jSReanimatedModule = _module1.createJSReanimatedModule();
 } else {
-  const _module2 = importDefaultResult1;
+  const _module2 = NativeReanimatedModule;
   jSReanimatedModule = _module2.createNativeReanimatedModule();
 }
 

@@ -1,8 +1,8 @@
 // _runtime/08471_extractBrush.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 import percentTo255 from "08472_percentTo255.js";
 
-const processColor = get_ActivityIndicator.processColor;
+const processColor = _mod17.processColor;
 const re3 = /^url\(#(.+)\)$/;
 let closure_4 = { type: 2 };
 let closure_5 = { type: 3 };
@@ -20,19 +20,17 @@ export default function extractBrush(str) {
   } else {
     let match = typeof str === "string";
     if (typeof str === "string") {
-      match = str.match(closure_3);
+      match = str.match(re3);
     }
     if (match) {
-      let obj = { type: 1, brushRef: null };
-      obj[1] = match[1];
+      let obj = { type: 1, brushRef: match[1] };
       return obj;
     } else {
       obj = percentTo255;
       const tmp4 = processColor(obj.convertPercentageColor(str));
       if (typeof tmp4 === "number") {
-        obj = { type: 0, payload: null };
-        obj[1] = tmp4;
-        let tmp7 = obj;
+        const action = { type: 0, payload: tmp4 };
+        let tmp7 = action;
       } else {
         const _console = console;
         const _String = String;

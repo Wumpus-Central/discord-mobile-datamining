@@ -1,6 +1,6 @@
 // _runtime/08999_JSONSchemaGenerator.js
-import closure_2 from "metro/00109__objectWithoutProperties.js";
-import closure_3 from "metro/00041__classCallCheck.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const JSONSchemaGenerator = require;
@@ -21,14 +21,14 @@ class JSONSchemaGenerator {
     if ("draft-7" === str) {
       str = "draft-07";
     }
-    obj = { processors: require("stringProcessor").allProcessors, target: str };
+    obj = { processors: closure_0(closure_1[4]).allProcessors, target: str };
     metadata = undefined;
     if (global != null) {
       metadata = global.metadata;
     }
     if (metadata) {
       obj = { metadata: null };
-      obj[0] = global.metadata;
+      obj.metadata = global.metadata;
       metadata = obj;
     }
     merged = Object.assign(metadata);
@@ -38,7 +38,7 @@ class JSONSchemaGenerator {
     }
     if (unrepresentable) {
       obj1 = { unrepresentable: null };
-      obj1[0] = global.unrepresentable;
+      obj1.unrepresentable = global.unrepresentable;
       unrepresentable = obj1;
     }
     merged1 = Object.assign(unrepresentable);
@@ -48,7 +48,7 @@ class JSONSchemaGenerator {
     }
     if (override) {
       obj2 = { override: null };
-      obj2[0] = global.override;
+      obj2.override = global.override;
       override = obj2;
     }
     merged2 = Object.assign(override);
@@ -58,11 +58,11 @@ class JSONSchemaGenerator {
     }
     if (io) {
       obj3 = { io: null };
-      obj3[0] = global.io;
+      obj3.io = global.io;
       io = obj3;
     }
     merged3 = Object.assign(io);
-    this.ctx = require("initializeContext").initializeContext(obj);
+    this.ctx = closure_0(closure_1[3]).initializeContext(obj);
     return;
   }
 }
@@ -117,9 +117,7 @@ const items = [
     value: function process(arg0) {
       let tmp = arg1;
       if (arg1 === undefined) {
-        const obj = { path: null, schemaPath: null };
-        obj[0] = [];
-        obj[1] = [];
+        const obj = { path: [], schemaPath: [] };
         tmp = obj;
       }
       return JSONSchemaGenerator(8997).process(arg0, this.ctx, tmp);
@@ -141,7 +139,7 @@ const items = [
         }
       }
       JSONSchemaGenerator(8997).extractDefs(self.ctx, _idmap);
-      return callback(JSONSchemaGenerator(8997).finalize(self.ctx, _idmap), closure_4);
+      return _objectWithoutProperties(JSONSchemaGenerator(8997).finalize(self.ctx, _idmap), closure_4);
     },
   },
 ];

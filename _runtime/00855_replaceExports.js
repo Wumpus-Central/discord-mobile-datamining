@@ -1,6 +1,7 @@
 // _runtime/00855_replaceExports.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.replaceExports = function replaceExports(arg0, arg1, arg2) {
+
+export const replaceExports = function replaceExports(arg0, arg1, arg2) {
   if (typeof arg0[arg1] === "function") {
     try {
       arg0[arg1] = arg2;
@@ -9,15 +10,13 @@ arg5.replaceExports = function replaceExports(arg0, arg1, arg2) {
           arg0.default = arg2;
         } catch (err) {
           const _Object2 = Object;
-          let obj = { value: null, writable: true, configurable: true, enumerable: true };
-          obj[0] = tmp;
+          let obj = { value: tmp, writable: true, configurable: true, enumerable: true };
           Object.defineProperty(tmp2, "default", obj);
         }
       }
     } catch (err) {
       const _Object = Object;
-      obj = { value: null, writable: true, configurable: true, enumerable: true };
-      obj[0] = tmp;
+      obj = { value: tmp, writable: true, configurable: true, enumerable: true };
       Object.defineProperty(tmp2, tmp3, obj);
     }
   }

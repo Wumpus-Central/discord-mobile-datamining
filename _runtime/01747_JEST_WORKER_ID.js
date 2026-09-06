@@ -1,7 +1,7 @@
 // _runtime/01747_JEST_WORKER_ID.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 
-const Platform = get_ActivityIndicator.Platform;
+const Platform = _mod17.Platform;
 let flag = JEST_WORKER_ID;
 if (!JEST_WORKER_ID) {
   flag = false;

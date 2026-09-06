@@ -1,12 +1,13 @@
 // _runtime/06701_needsToReattach.js
-arg5.needsToReattach = function needsToReattach(closure_1, closure_2) {
-  if (closure_2.length !== closure_1.attachedGestures.length) {
+
+export const needsToReattach = function needsToReattach(current2, arg1) {
+  if (arg1.length !== current2.attachedGestures.length) {
     return true;
   } else {
     let num = 0;
-    if (0 < closure_2.length) {
-      while (closure_2[num].handlerName === closure_1.attachedGestures[num].handlerName) {
-        if (closure_2[num].shouldUseReanimated !== closure_1.attachedGestures[num].shouldUseReanimated) {
+    if (0 < arg1.length) {
+      while (arg1[num].handlerName === current2.attachedGestures[num].handlerName) {
+        if (arg1[num].shouldUseReanimated !== current2.attachedGestures[num].shouldUseReanimated) {
           break;
         } else {
           num = num + 1;

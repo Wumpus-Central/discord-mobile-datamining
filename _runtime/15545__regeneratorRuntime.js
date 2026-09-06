@@ -1,7 +1,7 @@
 // _runtime/15545__regeneratorRuntime.js
-import _regeneratorRuntime from "15546__regeneratorRuntime.js";
+import _mod15546 from "metro/15546__.js";
 
-const tmp3 = _regeneratorRuntime();
+const tmp3 = _mod15546();
 try {
   globalThis.regeneratorRuntime = tmp3;
 } catch (err) {

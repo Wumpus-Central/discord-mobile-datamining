@@ -4,6 +4,8 @@ import _unsupportedIterableToArray from "00035__unsupportedIterableToArray.js";
 import _nonIterableRest from "00037__nonIterableRest.js";
 import _iterableToArray from "00719__iterableToArray.js";
 
-export default function _toArray(arg0) {
-  return _arrayWithHoles(arg0) || _iterableToArray(arg0) || _unsupportedIterableToArray(arg0) || _nonIterableRest();
+export default function _toArray(current) {
+  return (
+    _arrayWithHoles(current) || _iterableToArray(current) || _unsupportedIterableToArray(current) || _nonIterableRest()
+  );
 }

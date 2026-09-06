@@ -1,23 +1,25 @@
 // _runtime/06757_PressableStateMachine.js
 import _createClassDefault from "metro/00042__createClass.js";
-import PressableStateMachine from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class PressableStateMachine {
   constructor() {
-    tmp = PressableStateMachine(this, PressableStateMachine);
+    tmp = closure_0(this, PressableStateMachine);
     this.states = null;
     this.currentStepIndex = 0;
     this.eventPayload = null;
     return;
   }
 }
-const items = [
-  {
-    key: "setStates",
-    value: function setStates(statesConfig) {
-      this.states = statesConfig;
-    },
+_classCallCheck = PressableStateMachine;
+const entry = {
+  key: "setStates",
+  value: function setStates(statesConfig) {
+    this.states = statesConfig;
   },
+};
+const items = [
+  entry,
   {
     key: "reset",
     value: function reset() {},

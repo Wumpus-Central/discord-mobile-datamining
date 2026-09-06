@@ -1,16 +1,16 @@
 // _runtime/01635_controlEdgeToEdgeValues.js
-import closure_0 from "00017_get_ActivityIndicator.js";
+import get_ActivityIndicator from "metro/00017__.js";
 
 
 export (arg0) => {
 
 }
 export const isEdgeToEdge = () => {
-  TurboModuleRegistry = TurboModuleRegistry.TurboModuleRegistry;
+  const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
   let tmp2 = null != TurboModuleRegistry.get("RNEdgeToEdge");
   if (!tmp2) {
-    const TurboModuleRegistry2 = TurboModuleRegistry.TurboModuleRegistry;
-    const value = TurboModuleRegistry2.get("DeviceInfo");
+    const TurboModuleRegistry2 = get_ActivityIndicator.TurboModuleRegistry;
+    value = TurboModuleRegistry2.get("DeviceInfo");
     let getConstants;
     if (null != value) {
       getConstants = value.getConstants;

@@ -1,5 +1,5 @@
 // _runtime/04483_ref.js
-import closure_0 from "00019_noop.js";
+import noop from "metro/00019__.js";
 import shallowEqual from "04484_shallowEqual.js";
 
 if (shallowEqual) {
@@ -11,20 +11,11 @@ if (shallowEqual) {
 }
 let closure_2 = {};
 
-export default (arg0, arg1) => {
-  let tmp = arg1;
-  if (undefined === arg1) {
-    tmp = closure_1;
-  }
-  ref = ref.useRef(closure_2);
-  let current = ref.current;
-  closure_1 = current;
-  const effect = ref.useEffect(() => {
-    ref.current = closure_1;
+export default (current, arg1) => {
+  const ref = noop.useRef(closure_2);
+  current = ref.current;
+  const effect = noop.useEffect(() => {
+    ref.current = current;
   });
-  if (!tmp4) {
-    closure_1 = arg0;
-    current = arg0;
-  }
   return current;
 };

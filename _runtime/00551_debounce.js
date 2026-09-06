@@ -1,16 +1,15 @@
 // _runtime/00551_debounce.js
-import { isObject } from "00521_isObject.js";
-import { toNumber } from "00552_toNumber.js";
+import _mod556 from "metro/00556__.js";
 
 export default function debounce(fn, arg1, leading) {
-  const _require = fn;
+  _require = fn;
   dependencyMap = arg1;
   function timerExpired() {
-    const tmp = callback(556)();
-    const diff = tmp - closure_7;
-    let tmp3 = undefined === closure_7;
+    const tmp = _mod556();
+    const diff = tmp - c7;
+    let tmp3 = undefined === c7;
     if (!tmp3) {
-      tmp3 = diff >= dependencyMap;
+      tmp3 = diff >= closure_1;
     }
     if (!tmp3) {
       tmp3 = diff < 0;
@@ -18,7 +17,7 @@ export default function debounce(fn, arg1, leading) {
     if (!tmp3) {
       let tmp5 = closure_10;
       if (closure_10) {
-        tmp5 = tmp - closure_8 >= closure_4;
+        tmp5 = tmp - c8 >= closure_4;
       }
       tmp3 = tmp5;
     }
@@ -28,21 +27,21 @@ export default function debounce(fn, arg1, leading) {
         if (c2) {
           c3 = undefined;
           c2 = undefined;
-          closure_8 = tmp;
-          const applyResult = callback.apply(c3, tmp19);
-          closure_5 = applyResult;
+          c8 = tmp;
+          const applyResult = closure_0.apply(c3, tmp19);
           let tmp20 = applyResult;
+          applyResult1 = applyResult;
         }
         return tmp20;
       }
       c3 = undefined;
       c2 = undefined;
-      tmp20 = closure_5;
+      tmp20 = applyResult1;
     } else {
-      const diff1 = dependencyMap - (tmp - closure_7);
+      const diff1 = closure_1 - (tmp - c7);
       let tmp14 = diff1;
       if (closure_10) {
-        tmp14 = closure_1_3(diff1, closure_4 - (tmp - closure_8));
+        tmp14 = min(diff1, closure_4 - (tmp - c8));
       }
       timeout = setTimeout(timerExpired, tmp14);
     }
@@ -56,15 +55,14 @@ export default function debounce(fn, arg1, leading) {
     const typeError = new TypeError("Expected a function");
     throw typeError;
   } else {
-    let tmp = toNumber(arg1) || 0;
+    let tmp = require("metro/00552__.js")(arg1) || 0;
     dependencyMap = tmp;
-    if (isObject(leading)) {
+    if (require("metro/00521__.js")(leading)) {
       leading = leading.leading;
       closure_10 = tmp3;
       let tmp5Result;
       if ("maxWait" in leading) {
         tmp5Result = max(tmp12(552)(leading.maxWait) || 0, tmp);
-        let tmp5 = max;
         let tmp6 = tmp12(552)(leading.maxWait) || 0;
       }
       closure_4 = tmp5Result;
@@ -74,11 +72,11 @@ export default function debounce(fn, arg1, leading) {
       }
     }
     function debounced() {
-      const tmp = callback(556)();
-      const diff = tmp - closure_7;
-      let tmp3 = undefined === closure_7;
+      const tmp = _mod556();
+      const diff = tmp - c7;
+      let tmp3 = undefined === c7;
       if (!tmp3) {
-        tmp3 = diff >= dependencyMap;
+        tmp3 = diff >= closure_1;
       }
       if (!tmp3) {
         tmp3 = diff < 0;
@@ -86,24 +84,24 @@ export default function debounce(fn, arg1, leading) {
       if (!tmp3) {
         let tmp5 = closure_10;
         if (closure_10) {
-          tmp5 = tmp - closure_8 >= closure_4;
+          tmp5 = tmp - c8 >= closure_4;
         }
         tmp3 = tmp5;
       }
       c2 = arguments;
       c3 = this;
-      closure_7 = tmp;
+      c7 = tmp;
       if (tmp3) {
         if (undefined === timeout) {
-          closure_8 = tmp;
+          c8 = tmp;
           const _setTimeout3 = setTimeout;
-          timeout = setTimeout(timerExpired, dependencyMap);
+          timeout = setTimeout(timerExpired, closure_1);
           if (leading) {
             c3 = undefined;
             c2 = undefined;
-            closure_8 = tmp;
-            const applyResult = callback.apply(c3, c2);
-            let applyResult1 = applyResult;
+            c8 = tmp;
+            const applyResult = closure_0.apply(c3, c2);
+            applyResult1 = applyResult;
             let tmp26 = applyResult;
           } else {
             tmp26 = applyResult1;
@@ -113,17 +111,17 @@ export default function debounce(fn, arg1, leading) {
           const _clearTimeout = clearTimeout;
           clearTimeout(timeout);
           const _setTimeout2 = setTimeout;
-          timeout = setTimeout(timerExpired, dependencyMap);
+          timeout = setTimeout(timerExpired, closure_1);
           c3 = undefined;
           c2 = undefined;
-          closure_8 = closure_7;
-          applyResult1 = callback.apply(c3, c2);
+          c8 = c7;
+          applyResult1 = closure_0.apply(c3, c2);
           return applyResult1;
         }
       }
       if (undefined === timeout) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(timerExpired, dependencyMap);
+        timeout = setTimeout(timerExpired, closure_1);
       }
       return applyResult1;
     }
@@ -140,7 +138,7 @@ export default function debounce(fn, arg1, leading) {
     };
     debounced.flush = function flush() {
       if (undefined === c6) {
-        let tmp6 = closure_5;
+        let tmp6 = applyResult1;
       } else {
         c6 = undefined;
         if (flag) {
@@ -148,14 +146,13 @@ export default function debounce(fn, arg1, leading) {
             c3 = undefined;
             c2 = undefined;
             c8 = tmp3;
-            const applyResult = callback.apply(c3, tmp5);
-            closure_5 = applyResult;
+            const applyResult = closure_0.apply(c3, tmp5);
             tmp6 = applyResult;
           }
         }
         c3 = undefined;
         c2 = undefined;
-        tmp6 = closure_5;
+        tmp6 = applyResult1;
       }
       return tmp6;
     };

@@ -1,13 +1,13 @@
 // _runtime/06878_RecyclerViewManager.js
-import _createClassDefault from "metro/06867__createClass.js";
+import _modDef6867 from "metro/06867__.js";
 import ViewabilityManagerDefault from "06882_ViewabilityManager.js";
-import closure_3 from "metro/06866__classCallCheck.js";
+import _classCallCheck from "metro/06866__.js";
 
 const RecyclerViewManager = arg1;
 class RecyclerViewManager {
   constructor(arg0) {
     self = this;
-    tmp = closure_3(this, self);
+    tmp = closure_3(this, RecyclerViewManager);
     this.initialDrawBatchSize = 2;
     this.isFirstLayoutComplete = false;
     this.hasRenderedProgressively = false;
@@ -31,11 +31,11 @@ class RecyclerViewManager {
     overrideItemLayout = this.overrideItemLayout;
     this.overrideItemLayout = overrideItemLayout.bind(this);
     this.propsRef = global;
-    rVEngagedIndicesTrackerImpl = new require("RVEngagedIndicesTrackerImpl").RVEngagedIndicesTrackerImpl();
+    rVEngagedIndicesTrackerImpl = new closure_0(c2[2]).RVEngagedIndicesTrackerImpl();
     this.engagedIndicesTracker = rVEngagedIndicesTrackerImpl;
-    renderStackManager = new require("RenderStackManager").RenderStackManager(global.maxItemsInRecyclePool);
+    renderStackManager = new closure_0(c2[3]).RenderStackManager(global.maxItemsInRecyclePool);
     this.renderStackManager = renderStackManager;
-    tmp4 = new require("ViewabilityManager")(this);
+    tmp4 = new closure_1(c2[4])(this);
     this.itemViewabilityManager = tmp4;
     this.isInitialScrollComplete = undefined === this.getInitialScrollIndex();
     checkPropsAndWarnResult = this.checkPropsAndWarn();
@@ -148,7 +148,7 @@ const items = [
         return layoutManager.getLayout(arg0);
       } else {
         const _Error = Error;
-        error = new Error(RecyclerViewManager(6854).ErrorMessages.layoutManagerNotInitializedLayoutInfo);
+        const error = new Error(RecyclerViewManager(6854).ErrorMessages.layoutManagerNotInitializedLayoutInfo);
         throw error;
       }
     },
@@ -190,7 +190,7 @@ const items = [
         return layoutManager.getLayoutSize();
       } else {
         const _Error = Error;
-        error = new Error(RecyclerViewManager(6854).ErrorMessages.layoutManagerNotInitializedChildContainer);
+        const error = new Error(RecyclerViewManager(6854).ErrorMessages.layoutManagerNotInitializedChildContainer);
         throw error;
       }
     },
@@ -210,7 +210,7 @@ const items = [
         return layoutManager.getWindowsSize();
       } else {
         const _Error = Error;
-        error = new Error(RecyclerViewManager(6854).ErrorMessages.layoutManagerNotInitializedWindowSize);
+        const error = new Error(RecyclerViewManager(6854).ErrorMessages.layoutManagerNotInitializedWindowSize);
         throw error;
       }
     },
@@ -270,7 +270,7 @@ const items = [
         const _Boolean = Boolean;
         if (BooleanResult !== Boolean(self.propsRef.horizontal)) {
           const _Error = Error;
-          error = new Error(RecyclerViewManager(6854).ErrorMessages.horizontalPropCannotBeToggled);
+          const error = new Error(RecyclerViewManager(6854).ErrorMessages.horizontalPropCannotBeToggled);
           throw error;
         }
         BooleanResult = Boolean(isHorizontalResult);
@@ -291,8 +291,12 @@ const items = [
       if (flag2 == null) {
         flag2 = true;
       }
-      obj[3] = flag2;
-      ({ overrideItemLayout: obj[4], getItemType: obj[5], layoutManager: layoutManager2 } = self);
+      obj.optimizeItemArrangement = flag2;
+      ({
+        overrideItemLayout: obj.overrideItemLayout,
+        getItemType: obj.getItemType,
+        layoutManager: layoutManager2,
+      } = self);
       if (self.layoutManager instanceof layoutManagerClass) {
         layoutManager2.updateLayoutParams(obj);
       } else {
@@ -316,7 +320,7 @@ const items = [
         return engagedIndicesTracker.computeVisibleIndices(self.layoutManager);
       } else {
         const _Error = Error;
-        error = new Error(RecyclerViewManager(6854).ErrorMessages.layoutManagerNotInitializedVisibleIndices);
+        const error = new Error(RecyclerViewManager(6854).ErrorMessages.layoutManagerNotInitializedVisibleIndices);
         throw error;
       }
     },
@@ -515,7 +519,7 @@ const items = [
       if (this.propsRef.masonry) {
         if (self.propsRef.horizontal) {
           const _Error2 = Error;
-          error = new Error(RecyclerViewManager(6854).ErrorMessages.masonryAndHorizontalIncompatible);
+          const error = new Error(RecyclerViewManager(6854).ErrorMessages.masonryAndHorizontalIncompatible);
           throw error;
         }
       }
@@ -574,7 +578,7 @@ const items = [
         const result = self.applyInitialScrollAdjustment();
         const visibleIndices = self.computeVisibleIndices();
         self.hasRenderedProgressively = visibleIndices.every(
-          (arg0) => layoutManager.getLayout(arg0).isHeightMeasured && layoutManager.getLayout(arg0).isWidthMeasured,
+          (item) => layoutManager.getLayout(item).isHeightMeasured && layoutManager.getLayout(item).isWidthMeasured,
         );
         if (self.hasRenderedProgressively) {
           self.isFirstLayoutComplete = true;
@@ -609,13 +613,13 @@ const items = [
   },
   {
     key: "overrideItemLayout",
-    value: function overrideItemLayout(sum, spanSizeInfo, sum, numColumns, extraData) {
+    value: function overrideItemLayout(sum, data) {
       const self = this;
       const propsRef = this.propsRef;
       if (propsRef != null) {
         const overrideItemLayout = propsRef.overrideItemLayout;
         if (overrideItemLayout != null) {
-          overrideItemLayout(spanSizeInfo, self.propsRef.data[sum], sum, self.numColumns, self.propsRef.extraData);
+          overrideItemLayout(data, self.propsRef.data[sum], sum, self.numColumns, self.propsRef.extraData);
         }
       }
     },
@@ -631,4 +635,4 @@ const items = [
   },
 ];
 
-export const RecyclerViewManager = _createClassDefault(RecyclerViewManager, items);
+export const RecyclerViewManager = _modDef6867(RecyclerViewManager, items);

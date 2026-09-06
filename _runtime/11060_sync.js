@@ -1,7 +1,7 @@
 // _runtime/11060_sync.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 
-const RNIapIosSk2 = get_ActivityIndicator.NativeModules.RNIapIosSk2;
+const RNIapIosSk2 = _mod17.NativeModules.RNIapIosSk2;
 
 export const sync = () => RNIapIosSk2.sync();
 export const isEligibleForIntroOffer = (arg0) => RNIapIosSk2.isEligibleForIntroOffer(arg0);

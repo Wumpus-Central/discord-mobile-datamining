@@ -1,12 +1,12 @@
 // _runtime/00227_URLSearchParams.js
 import _createClassDefault from "metro/00042__createClass.js";
-import URLSearchParams from "metro/00032__slicedToArray.js";
-import closure_1 from "metro/00041__classCallCheck.js";
+import _slicedToArray from "metro/00032__.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class URLSearchParams {
   constructor(arg0) {
     self = this;
-    tmp = closure_1(this, self);
+    tmp = closure_1(this, URLSearchParams);
     map = new Map();
     this._searchParams = map;
     if (null !== global) {
@@ -15,11 +15,11 @@ class URLSearchParams {
         str2 = global.replace(/^\?/, "");
         str3 = "&";
         parts = str2.split("&");
-        item = parts.forEach((str) => {
-          if (str) {
-            const parts = str.split("=");
-            const tmp2 = self(
-              parts.map((str) => decodeURIComponent(str.replace(/\+/g, " "))),
+        item = parts.forEach((item) => {
+          if (item) {
+            const parts = item.split("=");
+            const tmp2 = _slicedToArray(
+              parts.map((item) => decodeURIComponent(item.replace(/\+/g, " "))),
               2,
             );
             self.append(tmp2[0], tmp2[1]);
@@ -28,15 +28,15 @@ class URLSearchParams {
       } else {
         _Array = Array;
         if (Array.isArray(global)) {
-          item1 = global.forEach((arg0) => {
-            [tmp, tmp2] = arg0;
+          item1 = global.forEach((item) => {
+            [tmp, tmp2] = item;
             return self.append(tmp, tmp2);
           });
         } else if (typeof global === "object") {
           _Object = Object;
           entries = Object.entries(global);
-          item2 = entries.forEach((arg0) => {
-            [tmp, tmp2] = arg0;
+          item2 = entries.forEach((item) => {
+            [tmp, tmp2] = item;
             return self.append(tmp, tmp2);
           });
         }
@@ -45,20 +45,20 @@ class URLSearchParams {
     return;
   }
 }
-let obj = {
-  key: "size",
-  get() {
-    return this._searchParams.size;
-  },
-};
+_slicedToArray = URLSearchParams;
 let items = [
-  obj,
+  {
+    key: "size",
+    get() {
+      return this._searchParams.size;
+    },
+  },
   {
     key: "append",
     value: function append(arg0, arg1) {
       ({ _searchParams, _searchParams: _searchParams2 } = this);
       if (_searchParams.has(arg0)) {
-        const value = _searchParams2.get(arg0);
+        value = _searchParams2.get(arg0);
         if (value != null) {
           value.push(arg1);
         }
@@ -79,7 +79,7 @@ let items = [
     key: "get",
     value: function get(arg0) {
       const _searchParams = this._searchParams;
-      const value = _searchParams.get(arg0);
+      value = _searchParams.get(arg0);
       let first = null;
       if (value) {
         first = value[0];
@@ -124,111 +124,79 @@ let items = [
     key: "values",
     value: function values() {
       return (function generateValues(_searchParams) {
-        closure_0 = _searchParams;
         c6 = 0;
         c9 = 0;
         c8 = 0;
-        return (function* generateValues(arg0) {
+        return (function* generateValues(arg0, value) {
           if (c9 === 2) {
             c9 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp2 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
+              let obj = { value, done: true };
               return obj;
             } else {
               return { value: "HermesInternal", done: null };
             }
           } else {
             while (true) {
-              let num = 2;
               c9 = 2;
               let tmp3 = c6;
               if (0 === c6) {
                 if (arg0 === 1) {
-                  let num7 = 3;
                   c9 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let num6 = 3;
                   c9 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 } else {
                   closure_5 = tmp3;
-                  let tmp26 = _searchParams;
-                  _searchParams = undefined;
-                  closure_1 = undefined;
-                  let values = _searchParams.values();
-                  let tmp28 = values;
+                  closure_133_0 = undefined;
+                  closure_133_1 = undefined;
+                  values = _searchParams.values();
                   closure_1 = values[Symbol.iterator]();
-                  let tmp12 = values;
-                  let tmp13 = closure_1;
                   if (closure_1 === undefined) {
-                    let num5 = 3;
                     c9 = 3;
                     return { value: "HermesInternal", done: null };
                   } else {
-                    let tmp15 = closure_5;
                     c8 = 1;
-                    _searchParams = tmp14;
-                    let tmp16 = _searchParams;
-                    closure_4 = _searchParams;
-                    let tmp17 = _searchParams;
-                    closure_4 = _searchParams;
-                    closure_3 = _searchParams[Symbol.iterator]();
+                    closure_133_0 = tmp14;
+                    closure_4 = closure_133_0;
+                    closure_3 = closure_133_0[Symbol.iterator]();
                   }
                 }
               } else if (1 === tmp3) {
-                let tmp9 = closure_7;
-                let tmp10 = closure_7;
                 c8 = 0;
-                let tmp11 = closure_1;
                 closure_1.return();
-                throw closure_7;
+                throw closure_1_7;
               } else if (2 === tmp3) {
-                let tmp6 = closure_7;
-                let tmp7 = closure_7;
                 c8 = 1;
-                let tmp8 = closure_3;
                 closure_3.return();
-                throw closure_7;
+                throw closure_1_7;
               } else if (arg0 === 1) {
-                let num3 = 3;
                 c9 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                c8 = 1;
-                let tmp4 = closure_3;
                 closure_3.return();
                 c8 = 0;
-                let tmp5 = closure_1;
                 closure_1.return();
-                let num2 = 3;
                 c9 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
                 c8 = 1;
               }
-              let tmp18 = closure_4;
-              let tmp19 = closure_3;
               if (closure_3 === undefined) {
                 c8 = 0;
               } else {
-                let tmp21 = closure_5;
                 c8 = 2;
-                closure_1 = tmp20;
+                closure_133_1 = tmp20;
                 c6 = 3;
-                let num4 = 1;
                 c9 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1;
+                let obj1 = { value: closure_133_1, done: false };
                 return obj1;
               }
             }
@@ -241,128 +209,89 @@ let items = [
     key: "entries",
     value: function entries() {
       return (function generateEntries(_searchParams) {
-        closure_0 = _searchParams;
+        dependencyMap = _searchParams;
         c9 = 0;
         c10 = 0;
         c8 = 0;
-        return (function* generateEntries(arg0) {
+        return (function* generateEntries(arg0, value) {
           if (c10 === 2) {
             c10 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp4 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
+              let obj = { value, done: true };
               return obj;
             } else {
               return { value: "HermesInternal", done: null };
             }
           } else {
             while (true) {
-              let num = 2;
               c10 = 2;
               let tmp5 = c9;
               if (0 === c9) {
                 if (arg0 === 1) {
-                  let num7 = 3;
                   c10 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let num6 = 3;
                   c10 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 } else {
                   closure_6 = tmp;
                   closure_5 = tmp2;
-                  let tmp27 = dependencyMap;
-                  dependencyMap = undefined;
-                  closure_1 = undefined;
-                  closure_2 = undefined;
-                  let lib;
-                  closure_4 = undefined;
-                  closure_2 = dependencyMap;
-                  let tmp28 = dependencyMap;
+                  closure_133_0 = undefined;
+                  closure_133_1 = undefined;
+                  closure_133_2 = undefined;
+                  closure_133_3 = undefined;
+                  closure_133_4 = undefined;
                   closure_2 = dependencyMap;
                   closure_1 = dependencyMap[Symbol.iterator]();
-                  let tmp14 = closure_2;
-                  let tmp15 = closure_1;
                   if (closure_1 === undefined) {
-                    let num5 = 3;
                     c10 = 3;
                     return { value: "HermesInternal", done: null };
                   } else {
-                    let tmp29 = closure_5;
-                    let tmp30 = closure_6;
                     c8 = 1;
-                    dependencyMap = tmp16;
-                    let tmp31 = dependencyMap;
-                    let tmp32 = dependencyMap;
-                    closure_1 = dependencyMap(dependencyMap, 2);
-                    let tmp33 = closure_1;
-                    closure_2 = closure_1[0];
-                    let tmp34 = closure_1;
-                    lib = closure_1[1];
-                    let tmp35 = lib;
-                    closure_4 = lib;
-                    let tmp36 = lib;
-                    closure_4 = lib;
-                    lib = lib[Symbol.iterator]();
+                    closure_133_0 = tmp16;
+                    closure_133_1 = dependencyMap(closure_133_0, 2);
+                    closure_133_2 = closure_133_1[0];
+                    closure_133_3 = closure_133_1[1];
+                    closure_4 = closure_133_3;
+                    closure_3 = closure_133_3[Symbol.iterator]();
                   }
                 }
               } else if (1 === tmp5) {
-                let tmp11 = closure_7;
-                let tmp12 = closure_7;
                 c8 = 0;
-                let tmp13 = closure_1;
                 closure_1.return();
-                throw closure_7;
+                throw closure_1_7;
               } else if (2 === tmp5) {
-                let tmp8 = closure_7;
-                let tmp9 = closure_7;
                 c8 = 1;
-                let tmp10 = lib;
-                lib.return();
-                throw closure_7;
+                closure_3.return();
+                throw closure_1_7;
               } else if (arg0 === 1) {
-                let num3 = 3;
                 c10 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                c8 = 1;
-                let tmp6 = lib;
-                lib.return();
+                closure_3.return();
                 c8 = 0;
-                let tmp7 = closure_1;
                 closure_1.return();
-                let num2 = 3;
                 c10 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
                 c8 = 1;
               }
-              let tmp17 = closure_4;
-              let tmp18 = lib;
-              if (lib === undefined) {
+              if (closure_3 === undefined) {
                 c8 = 0;
               } else {
-                let tmp20 = closure_5;
                 c8 = 2;
-                closure_4 = tmp19;
-                let tmp21 = closure_2;
-                let items = [closure_2];
-                let tmp22 = closure_4;
-                items[1] = closure_4;
+                closure_133_4 = tmp19;
+                let items = [closure_133_2];
+                items[1] = closure_133_4;
                 c9 = 3;
-                let num4 = 1;
                 c10 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = items;
+                let obj1 = { value: items, done: false };
                 return obj1;
               }
             }
@@ -373,15 +302,11 @@ let items = [
   },
   {
     key: "forEach",
-    value: function forEach(arg0) {
+    value: function forEach(fn) {
       while (tmp !== undefined) {
-        let tmp3 = URLSearchParams;
-        let tmp4 = URLSearchParams(tmp2, 2);
+        let tmp4 = _slicedToArray(tmp2, 2);
         [tmp5, tmp6] = tmp4;
-        let tmp7 = tmp6;
-        let tmp8 = tmp6;
         for (const item10018 of tmp6) {
-          let tmp9 = tmp5;
           let tmp10 = arg0(item10018, tmp5, this);
           continue;
         }
@@ -405,18 +330,14 @@ let items = [
   },
   ,
 ];
-obj = {
+const entry = {
   key: Symbol.iterator,
   value() {
     const items = [];
     while (tmp !== undefined) {
-      let tmp3 = URLSearchParams;
-      let tmp4 = URLSearchParams(tmp2, 2);
+      let tmp4 = _slicedToArray(tmp2, 2);
       [tmp5, tmp6] = tmp4;
-      let tmp7 = tmp6;
-      let tmp8 = tmp6;
       for (const item10018 of tmp6) {
-        let tmp9 = tmp5;
         let items1 = [tmp5, item10018];
         let arr = items.push(items1);
         continue;
@@ -426,17 +347,17 @@ obj = {
     return items[Symbol.iterator]();
   },
 };
-items[12] = obj;
+items[12] = entry;
 items[13] = {
   key: "toString",
   value: function toString() {
     const _searchParams = this._searchParams;
-    let mapped = Array.from(_searchParams.entries()).map((arg0) => {
-      [, arr] = arg0;
-      const mapped = arr.map((arg0) => {
-        const replaced = encodeURIComponent(closure_0).replace(/%20/g, "+");
-        const str = encodeURIComponent(closure_0);
-        return "" + replaced + "=" + encodeURIComponent(arg0).replace(/%20/g, "+");
+    let mapped = Array.from(_searchParams.entries()).map((item) => {
+      [, arr] = item;
+      const mapped = arr.map((item) => {
+        const replaced = encodeURIComponent(closure_1_0).replace(/%20/g, "+");
+        const str = encodeURIComponent(closure_1_0);
+        return "" + replaced + "=" + encodeURIComponent(item).replace(/%20/g, "+");
       });
       return mapped.join("&");
     });

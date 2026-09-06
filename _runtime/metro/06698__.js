@@ -1,14 +1,14 @@
 // _runtime/metro/06698__.js
 import cancelAnimation from "../01636_cancelAnimation.js";
-import _mod4295 from "../../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
+import reactNativeWorkletsCompat from "../../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
 import tagMessage from "../06660_tagMessage.js";
-import _mod6687 from "06687__.js";
-import n from "../06699_n.js";
+import ghQueueMicrotask from "../06687_ghQueueMicrotask.js";
+import _mod6699 from "06699__.js";
 
 try {
   const _module = cancelAnimation;
   try {
-    const _module1 = _mod4295;
+    const _module1 = reactNativeWorkletsCompat;
     if (_module1 != null) {
       const fn = function t() {};
       fn.__closure = {};
@@ -16,9 +16,9 @@ try {
       fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
       _module1.scheduleOnUI(fn);
     }
-    const _module2 = _mod6687;
+    const _module2 = ghQueueMicrotask;
     _module2.ghQueueMicrotask(() => {
-      const NativeProxy = n.NativeProxy;
+      const NativeProxy = _mod6699.NativeProxy;
       if (!NativeProxy.installUIRuntimeBindings()) {
         const _console = console;
         console.warn(
@@ -48,8 +48,8 @@ try {
       let obj = { tagMessage: null };
       obj = {
         code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}",
+        tagMessage: tagMessage.tagMessage,
       };
-      obj[0] = tagMessage.tagMessage;
       fn2.__closure = obj;
       fn2.__workletHash = 3596069664305;
       fn2.__initData = obj;

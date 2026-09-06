@@ -1,7 +1,7 @@
 // _runtime/metro/14296__.js
 import _mod14297 from "14297__.js";
-import getOwnPropertyDescriptor from "../14299_getOwnPropertyDescriptor.js";
-import isForced from "../14336_isForced.js";
+import _mod14299 from "14299__.js";
+import _mod14336 from "14336__.js";
 
 export default (dontCallGetSet, obj) => {
   ({ target, global: _global, stat } = dontCallGetSet);
@@ -27,11 +27,9 @@ export default (dontCallGetSet, obj) => {
       let tmp21 = arg1[key10024];
       let tmp20 = key10024;
       if (arg0.dontCallGetSet) {
-        let tmp8 = require;
-        let tmp9 = dependencyMap;
-        obj = getOwnPropertyDescriptor;
+        obj = _mod14299;
         let iter = obj.f(prototype, key10024);
-        let value = iter;
+        value = iter;
         if (iter) {
           value = iter.value;
         }
@@ -40,9 +38,8 @@ export default (dontCallGetSet, obj) => {
         tmp7 = prototype[key10024];
       }
       let tmp10 = require;
-      let tmp11 = dependencyMap;
       let sum = key10024;
-      let tmp12 = isForced;
+      let tmp12 = _mod14336;
       if (!_global) {
         let str4 = "#";
         if (stat) {
@@ -71,10 +68,6 @@ export default (dontCallGetSet, obj) => {
       if (sham) {
         let tmp14 = tmp10(14353)(tmp21, "sham", true);
       }
-      let tmp15 = prototype;
-      let tmp16 = key10024;
-      let tmp17 = tmp21;
-      let tmp18 = arg0;
       let tmp19 = tmp10(14354)(prototype, tmp20, tmp21, arg0);
       continue;
     }

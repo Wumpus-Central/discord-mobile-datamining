@@ -1,26 +1,26 @@
 // _runtime/01002_captureReactException.js
-import closure_2 from "00019_noop.js";
+import feedbackAsyncIntegration from "00889_feedbackAsyncIntegration.js";
+import noop from "metro/00019__.js";
 
-function captureReactException(closure_1, closure_2, arg2) {
-  let weakSet = closure_1;
-  const componentStack = closure_2.componentStack;
+function captureReactException(message, componentStack, arg2) {
+  let weakSet = message;
+  componentStack = componentStack.componentStack;
   let recurse = componentStack;
-  const version = arg2;
-  const match = version.version.match(/^([^.]+)/);
+  noop = arg2;
+  const match = noop.version.match(/^([^.]+)/);
   let tmp2 = null !== match;
   if (tmp2) {
     const _parseInt = parseInt;
     tmp2 = parseInt(match[0]) >= 17;
   }
   if (tmp2) {
-    if (obj.isError(closure_1)) {
+    if (obj.isError(message)) {
       if (componentStack) {
         const _Error = Error;
-        error = new Error(closure_1.message);
+        const error = new Error(message.message);
         const _HermesInternal = HermesInternal;
-        error.name = "React ErrorBoundary " + closure_1.name;
+        error.name = "React ErrorBoundary " + message.name;
         error.stack = componentStack;
-        weakSet = undefined;
         const _WeakSet = WeakSet;
         weakSet = new WeakSet();
         recurse = function recurse(cause, error) {
@@ -35,10 +35,10 @@ function captureReactException(closure_1, closure_2, arg2) {
           }
           obj = weakSet;
         };
-        if (!weakSet.has(closure_1)) {
-          if (closure_1.cause) {
-            weakSet.add(closure_1);
-            const cause = closure_1.cause;
+        if (!weakSet.has(message)) {
+          if (message.cause) {
+            weakSet.add(message);
+            const cause = message.cause;
             if (!weakSet.has(cause)) {
               if (cause.cause) {
                 weakSet.add(cause);
@@ -48,7 +48,7 @@ function captureReactException(closure_1, closure_2, arg2) {
               }
             }
           } else {
-            closure_1.cause = error;
+            message.cause = error;
           }
         }
       }
@@ -57,7 +57,7 @@ function captureReactException(closure_1, closure_2, arg2) {
   }
   return weakSet(recurse[2]).withScope((setContext) => {
     setContext.setContext("react", { componentStack: recurse });
-    return weakSet(recurse[2]).captureException(weakSet, closure_2);
+    return feedbackAsyncIntegration.captureException(weakSet, closure_2);
   });
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -74,13 +74,9 @@ export const isAtLeastReact17 = function isAtLeastReact17(str) {
 };
 export function reactErrorHandler(arg0) {
   closure_0 = arg0;
-  return (arg0, arg1) => {
+  return (message, componentStack) => {
     if (closure_0) {
-      closure_0(
-        arg0,
-        arg1,
-        closure_1_3(arg0, arg1, { mechanism: { handled: tmp2, type: "auto.function.react.error_handler" } }),
-      );
+      closure_0(message, componentStack, captureReactException(message, componentStack, obj));
     }
   };
 }

@@ -3,16 +3,14 @@ import endOfWeek from "03874_endOfWeek.js";
 import requiredArgs from "03651_requiredArgs.js";
 
 if (!endOfWeek) {
-  let obj = { default: null };
-  obj[0] = endOfWeek;
+  let obj = { default: endOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = endOfWeek;
 }
 endOfWeek = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;

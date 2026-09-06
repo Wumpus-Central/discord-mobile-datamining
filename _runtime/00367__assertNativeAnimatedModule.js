@@ -1,16 +1,16 @@
 // _runtime/00367__assertNativeAnimatedModule.js
 import _createClassDefault from "metro/00042__createClass.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const AnimatedNode = importDefault;
-let c3 = 1;
-function _assertNativeAnimatedModule() {
+let closure_3 = 1;
+let c4 = function _assertNativeAnimatedModule() {
   const result = AnimatedNode(357).assertNativeAnimatedModule();
   c4 = null;
-}
+};
 class AnimatedNode {
   constructor(arg0) {
-    tmp = closure_2(this, AnimatedNode);
+    tmp = c2(this, AnimatedNode);
     this._platformConfig = undefined;
     this.__isNative = false;
     this.__nativeTag = undefined;
@@ -26,11 +26,12 @@ class AnimatedNode {
     return;
   }
 }
+const entry = {
+  key: "__attach",
+  value: function __attach() {},
+};
 const items = [
-  {
-    key: "__attach",
-    value: function __attach() {},
-  },
+  entry,
   {
     key: "__detach",
     value: function __detach() {
@@ -104,7 +105,7 @@ const items = [
   },
   {
     key: "hasListeners",
-    value: function hasListeners(progress) {
+    value: function hasListeners() {
       return this._listeners.size > 0;
     },
   },
@@ -119,8 +120,8 @@ const items = [
     value: function __callListeners(value) {
       const obj = { value };
       const _listeners = this._listeners;
-      const item = _listeners.forEach((arg0) => {
-        arg0(obj);
+      const item = _listeners.forEach((fn) => {
+        fn(obj);
       });
     },
   },
@@ -131,12 +132,13 @@ const items = [
       let __nativeTag = this.__nativeTag;
       if (null == __nativeTag) {
         if (c4 != null) {
-          if (typeof c4 !== "function") {
-            HermesBuiltin.throwTypeError();
+          if (typeof c4 === "function") {
+            const result = AnimatedNode(357).assertNativeAnimatedModule();
+            c4 = null;
+            const obj = AnimatedNode(357);
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-          const result = AnimatedNode(357).assertNativeAnimatedModule();
-          c4 = null;
-          const obj = AnimatedNode(357);
         }
         AnimatedNode(38)(self.__isNative, 'Attempt to get native tag from node not marked as "native"');
         const newNodeTag = AnimatedNode(357).generateNewNodeTag();
@@ -152,7 +154,6 @@ const items = [
         const animatedNode = API.createAnimatedNode(newNodeTag, __getNativeConfigResult);
         __nativeTag = newNodeTag;
         const obj2 = AnimatedNode(357);
-        const tmp4 = AnimatedNode;
       }
       return __nativeTag;
     },
@@ -160,7 +161,7 @@ const items = [
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      error = new Error("This JS animated node type cannot be used as native animated node");
+      const error = new Error("This JS animated node type cannot be used as native animated node");
       throw error;
     },
   },

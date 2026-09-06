@@ -1,5 +1,5 @@
 // _runtime/04161_s.js
-import hooks from "04153_hooks.js";
+import _mod4153 from "metro/04153__.js";
 
 const fn = function s(moment) {
   const tmp =
@@ -103,7 +103,7 @@ const fn = function s(moment) {
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(hooks);
+      fn(_mod4153);
     }
   }
 }

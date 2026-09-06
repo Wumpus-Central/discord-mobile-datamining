@@ -1,5 +1,6 @@
 // _runtime/08459_extractOpacity.js
-arg5.default = function extractOpacity(str) {
+
+export default function extractOpacity(str) {
   if (typeof str === "string") {
     const trimmed = str.trim();
     if (trimmed.endsWith("%")) {
@@ -17,4 +18,4 @@ arg5.default = function extractOpacity(str) {
     return num5;
   }
   result = +str;
-};
+}

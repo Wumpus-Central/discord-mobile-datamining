@@ -1,5 +1,5 @@
 // _runtime/00425_Position.js
-import oneArgumentPoolerDefault from "00426_oneArgumentPooler.js";
+import oneArgumentPooler from "00426_oneArgumentPooler.js";
 
 class Position {
   constructor(arg0, arg1) {
@@ -9,6 +9,6 @@ class Position {
     return;
   }
 }
-oneArgumentPoolerDefault.addPoolingTo(Position, oneArgumentPoolerDefault.twoArgumentPooler);
+oneArgumentPooler.addPoolingTo(Position, oneArgumentPooler.twoArgumentPooler);
 
 export default Position;

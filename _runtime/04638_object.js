@@ -1,6 +1,5 @@
 // _runtime/04638_object.js
-let object = require;
-object = function object() {};
+function object() {}
 
 export default (arg0) => {
   if (object(521)(arg0)) {

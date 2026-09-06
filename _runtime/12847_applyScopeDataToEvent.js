@@ -1,13 +1,14 @@
 // _runtime/12847_applyScopeDataToEvent.js
-import addNonEnumerableProperty from "12803_addNonEnumerableProperty.js";
-import merge from "12822_merge.js";
+import _mod12803 from "metro/12803__.js";
+import _mod12822 from "metro/12822__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
+
+export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1) {
   ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, level, transactionName } = arg1);
   ({ extra, tags, user, contexts } = arg1);
-  let obj = addNonEnumerableProperty;
+  let obj = _mod12803;
   const dropUndefinedKeysResult = obj.dropUndefinedKeys(extra);
   let length = dropUndefinedKeysResult;
   if (dropUndefinedKeysResult) {
@@ -41,12 +42,12 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     length3 = Object.keys(dropUndefinedKeysResult2).length;
   }
   if (length3) {
-    obj1 = {};
+    const obj1 = {};
     const merged4 = Object.assign(dropUndefinedKeysResult2);
     const merged5 = Object.assign(extra.user);
     extra.user = obj1;
   }
-  const dropUndefinedKeysResult3 = addNonEnumerableProperty.dropUndefinedKeys(contexts);
+  const dropUndefinedKeysResult3 = _mod12803.dropUndefinedKeys(contexts);
   let length4 = dropUndefinedKeysResult3;
   if (dropUndefinedKeysResult3) {
     const _Object4 = Object;
@@ -69,13 +70,12 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     extra.transaction = transactionName;
   }
   if (span) {
-    const obj3 = { trace: null };
-    obj3[0] = tmp3(12802).spanToTraceContext(span);
+    const obj3 = { trace: tmp3(12802).spanToTraceContext(span) };
     const merged8 = Object.assign(extra.contexts);
     extra.contexts = obj3;
     const obj4 = { dynamicSamplingContext: null };
     const tmp3Result2 = tmp3(12802);
-    obj4[0] = tmp3(12833).getDynamicSamplingContextFromSpan(span);
+    obj4.dynamicSamplingContext = tmp3(12833).getDynamicSamplingContextFromSpan(span);
     const merged9 = Object.assign(extra.sdkProcessingMetadata);
     extra.sdkProcessingMetadata = obj4;
     const tmp3Result3 = tmp3(12833);
@@ -125,21 +125,18 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     extra.sdkProcessingMetadata = obj5;
   }
 };
-arg5.mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
-  arg0[arg1] = merge.merge(arg0[arg1], arg2, 1);
+export const mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
+  arg0[arg1] = _mod12822.merge(arg0[arg1], arg2, 1);
 };
-arg5.mergeScopeData = function mergeScopeData(extra) {
+export const mergeScopeData = function mergeScopeData(extra, arg1) {
   ({ level, breadcrumbs, fingerprint, eventProcessors, attachments, propagationContext, transactionName, span } = arg1);
   ({ extra, tags, user, contexts, sdkProcessingMetadata } = arg1);
-  let obj = merge;
+  let obj = _mod12822;
   extra.extra = obj.merge(extra.extra, extra, 1);
-  extra.tags = merge.merge(extra.tags, tags, 1);
-  const obj2 = merge;
-  extra.user = merge.merge(extra.user, user, 1);
-  const obj3 = merge;
-  extra.contexts = merge.merge(extra.contexts, contexts, 1);
-  const obj4 = merge;
-  extra.sdkProcessingMetadata = merge.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
+  extra.tags = _mod12822.merge(extra.tags, tags, 1);
+  extra.user = _mod12822.merge(extra.user, user, 1);
+  extra.contexts = _mod12822.merge(extra.contexts, contexts, 1);
+  extra.sdkProcessingMetadata = _mod12822.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
   if (level) {
     extra.level = level;
   }

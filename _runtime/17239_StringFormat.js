@@ -86,7 +86,7 @@ class Compiler {
       str = "numberFormat";
       if ("numberFormat" === type) {
         obj = { id: null, format: null };
-        obj[0] = arg0.id;
+        obj.id = arg0.id;
         tmp27 = globalThis;
         _Intl3 = Intl;
         tmp28 = new.target;
@@ -94,13 +94,13 @@ class Compiler {
         tmp30 = locales;
         numberFormat = new Intl.NumberFormat(locales, formats.number[format.style]);
         tmp32 = numberFormat;
-        obj[1] = numberFormat.format;
+        obj.format = numberFormat.format;
         return obj;
       } else {
         str4 = "dateFormat";
         if ("dateFormat" === type) {
           obj1 = { id: null, format: null };
-          obj1[0] = arg0.id;
+          obj1.id = arg0.id;
           tmp21 = globalThis;
           _Intl2 = Intl;
           tmp22 = new.target;
@@ -108,13 +108,13 @@ class Compiler {
           tmp24 = locales;
           dateTimeFormat = new Intl.DateTimeFormat(locales, formats.date[format.style]);
           tmp26 = dateTimeFormat;
-          obj1[1] = dateTimeFormat.format;
+          obj1.format = dateTimeFormat.format;
           return obj1;
         } else {
           str5 = "timeFormat";
           if ("timeFormat" === type) {
             obj2 = { id: null, format: null };
-            obj2[0] = arg0.id;
+            obj2.id = arg0.id;
             tmp15 = globalThis;
             _Intl = Intl;
             tmp16 = new.target;
@@ -122,7 +122,7 @@ class Compiler {
             tmp18 = locales;
             dateTimeFormat1 = new Intl.DateTimeFormat(locales, formats.time[format.style]);
             tmp20 = dateTimeFormat1;
-            obj2[1] = dateTimeFormat1.format;
+            obj2.format = dateTimeFormat1.format;
             return obj2;
           } else {
             str6 = "pluralFormat";
@@ -242,4 +242,5 @@ class SelectFormat {
     return tmp;
   }
 }
-arg5.default = Compiler;
+
+export default Compiler;

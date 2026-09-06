@@ -1,5 +1,5 @@
 // _runtime/01853_colors.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import get_ActivityIndicator from "metro/00017__.js";
 
 ({ Platform, PlatformColor } = get_ActivityIndicator);
 

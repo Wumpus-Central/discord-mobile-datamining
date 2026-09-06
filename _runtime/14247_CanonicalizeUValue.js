@@ -1,10 +1,11 @@
 // _runtime/14247_CanonicalizeUValue.js
-import isMatched from "14241_isMatched.js";
+import _mod14241 from "metro/14241__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.CanonicalizeUValue = function CanonicalizeUValue(formatted, str) {
+
+export const CanonicalizeUValue = function CanonicalizeUValue(formatted, str) {
   formatted = str.toLowerCase();
-  isMatched.invariant(undefined !== formatted, "ukey must be defined");
+  _mod14241.invariant(undefined !== formatted, "ukey must be defined");
   return formatted;
 };

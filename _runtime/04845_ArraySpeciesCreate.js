@@ -1,12 +1,12 @@
 // _runtime/04845_ArraySpeciesCreate.js
-import getEvalledConstructor from "01282_getEvalledConstructor.js";
+import _mod1282 from "metro/01282__.js";
 import _mod1283 from "metro/01283__.js";
-import isInteger from "04846_isInteger.js";
+import _mod4846 from "metro/04846__.js";
 
-let closure_2 = getEvalledConstructor("%Symbol.species%", true);
+let closure_2 = _mod1282("%Symbol.species%", true);
 
 export default function ArraySpeciesCreate(arg0, arg1) {
-  if (isInteger(arg1)) {
+  if (_mod4846(arg1)) {
     if (arg1 >= 0) {
       if (tmp(4847)(arg0)) {
         const tmp3 = tmp(4855)(arg0, "constructor");

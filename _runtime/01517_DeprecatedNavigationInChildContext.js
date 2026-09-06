@@ -1,4 +1,4 @@
 // _runtime/01517_DeprecatedNavigationInChildContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const DeprecatedNavigationInChildContext = noopAll.createContext(false);
+export const DeprecatedNavigationInChildContext = noop.createContext(false);

@@ -1,36 +1,32 @@
 // _runtime/03855_differenceInYears.js
-import _typeof from "metro/03650__typeof.js";
+import _typeof from "metro/03650__.js";
 import differenceInCalendarYears from "03840_differenceInCalendarYears.js";
 import compareAsc from "03826_compareAsc.js";
 import requiredArgs from "03651_requiredArgs.js";
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!differenceInCalendarYears) {
-  obj = { default: null };
-  obj[0] = differenceInCalendarYears;
+  obj = { default: differenceInCalendarYears };
   let tmp5 = obj;
 } else {
   tmp5 = differenceInCalendarYears;
 }
 differenceInCalendarYears = tmp5;
 if (!compareAsc) {
-  obj = { default: null };
-  obj[0] = compareAsc;
+  obj = { default: compareAsc };
   let tmp7 = obj;
 } else {
   tmp7 = compareAsc;
 }
 compareAsc = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;

@@ -1,10 +1,11 @@
 // _runtime/07010_Header.js
-import importAllResult from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
+import Link from "01484_Link.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
 
-export const Header = importAllResult.memo(function Header(navigation) {
+export const Header = noop.memo(function Header(navigation) {
   ({ back, options, route } = navigation);
   navigation = navigation.navigation;
   ({ layout, progress, styleInterpolator } = navigation);
@@ -17,12 +18,12 @@ export const Header = importAllResult.memo(function Header(navigation) {
   }
   let tmpResult = tmp(tmp2[3]);
   const items = [navigation, route.key];
-  const callback = importAllResult.useCallback(
+  const callback = noop.useCallback(
     tmpResult.throttle(() => {
       let obj = navigation;
       if (tmp) {
         obj = {};
-        const StackActions = route(navigation[4]).StackActions;
+        const StackActions = Link.StackActions;
         const merged = Object.assign(StackActions.pop());
         obj.source = route.key;
         obj.dispatch(obj);
@@ -30,7 +31,7 @@ export const Header = importAllResult.memo(function Header(navigation) {
     }, 50),
     items,
   );
-  const context = importAllResult.useContext(tmp(tmp2[5]).ModalPresentationContext);
+  const context = noop.useContext(tmp(tmp2[5]).ModalPresentationContext);
   if (undefined !== options.headerStatusBarHeight) {
     let num = options.headerStatusBarHeight;
   } else {

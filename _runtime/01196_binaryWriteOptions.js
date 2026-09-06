@@ -1,19 +1,19 @@
 // _runtime/01196_binaryWriteOptions.js
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const BinaryWriter = require;
 let closure_3 = {
   writeUnknownFields: true,
   writerFactory() {
-    return new closure_4();
+    return new _moduleResult();
   },
 };
 class BinaryWriter {
   constructor(arg0) {
     self = this;
     textEncoder = global;
-    tmp2 = closure_2(this, BinaryWriter);
+    tmp2 = c2(this, BinaryWriter);
     this.stack = [];
     if (null == global) {
       tmp3 = globalThis;
@@ -28,42 +28,43 @@ class BinaryWriter {
     return;
   }
 }
-const items = [
-  {
-    key: "finish",
-    value: function finish() {
-      let length;
-      let length2;
-      const self = this;
-      const chunks = this.chunks;
-      const uint8Array = new Uint8Array(this.buf);
-      chunks.push(uint8Array);
-      let num = 0;
-      let num2 = 0;
-      let num3 = 0;
-      if (0 < this.chunks.length) {
-        do {
-          num2 = num2 + self.chunks[num].length;
-          num = num + 1;
-          num3 = num2;
-          length = self.chunks.length;
-        } while (num < length);
-      }
-      const uint8Array1 = new Uint8Array(num3);
-      let num4 = 0;
-      let num5 = 0;
-      if (0 < self.chunks.length) {
-        do {
-          let result = uint8Array1.set(self.chunks[num4], num5);
-          num5 = num5 + self.chunks[num4].length;
-          num4 = num4 + 1;
-          length2 = self.chunks.length;
-        } while (num4 < length2);
-      }
-      self.chunks = [];
-      return uint8Array1;
-    },
+const entry = {
+  key: "finish",
+  value: function finish() {
+    let length;
+    let length2;
+    const self = this;
+    const chunks = this.chunks;
+    const uint8Array = new Uint8Array(this.buf);
+    chunks.push(uint8Array);
+    let num = 0;
+    let num2 = 0;
+    let num3 = 0;
+    if (0 < this.chunks.length) {
+      do {
+        num2 = num2 + self.chunks[num].length;
+        num = num + 1;
+        num3 = num2;
+        length = self.chunks.length;
+      } while (num < length);
+    }
+    const uint8Array1 = new Uint8Array(num3);
+    let num4 = 0;
+    let num5 = 0;
+    if (0 < self.chunks.length) {
+      do {
+        let result = uint8Array1.set(self.chunks[num4], num5);
+        num5 = num5 + self.chunks[num4].length;
+        num4 = num4 + 1;
+        length2 = self.chunks.length;
+      } while (num4 < length2);
+    }
+    self.chunks = [];
+    return uint8Array1;
   },
+};
+const items = [
+  entry,
   {
     key: "fork",
     value: function fork() {
@@ -87,7 +88,7 @@ const items = [
         return self.raw(finishResult);
       } else {
         const _Error = Error;
-        error = new Error("invalid state, fork stack empty");
+        const error = new Error("invalid state, fork stack empty");
         throw error;
       }
     },
@@ -278,7 +279,6 @@ const items = [
   },
 ];
 const _moduleResult = _createClass(BinaryWriter, items);
-let c4 = _moduleResult;
 
 export const binaryWriteOptions = function binaryWriteOptions(arg0) {
   if (arg0) {

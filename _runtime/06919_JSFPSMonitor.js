@@ -1,12 +1,12 @@
 // _runtime/06919_JSFPSMonitor.js
-import _createClassDefault from "metro/06867__createClass.js";
-import closure_2 from "metro/06866__classCallCheck.js";
+import _modDef6867 from "metro/06867__.js";
+import _classCallCheck from "metro/06866__.js";
 
 const JSFPSMonitor = arg1;
 class JSFPSMonitor {
   constructor() {
     self = this;
-    tmp = closure_2(this, self);
+    tmp = c2(this, JSFPSMonitor);
     this.startTime = 0;
     this.frameCount = 0;
     this.timeWindow = { frameCount: 0, startTime: 0 };
@@ -40,20 +40,21 @@ class JSFPSMonitor {
     return;
   }
 }
-const items = [
-  {
-    key: "measureLoop",
-    value: function measureLoop() {
-      this.clearAnimationNumber = requestAnimationFrame(this.updateLoopCompute);
-    },
+const entry = {
+  key: "measureLoop",
+  value: function measureLoop() {
+    this.clearAnimationNumber = requestAnimationFrame(this.updateLoopCompute);
   },
+};
+const items = [
+  entry,
   {
     key: "startTracking",
     value: function startTracking() {
       const self = this;
       if (0 !== this.startTime) {
         const _Error = Error;
-        error = new Error(JSFPSMonitor(6854).ErrorMessages.fpsMonitorAlreadyRunning);
+        const error = new Error(JSFPSMonitor(6854).ErrorMessages.fpsMonitorAlreadyRunning);
         throw error;
       } else {
         const _Date = Date;
@@ -74,12 +75,12 @@ const items = [
       }
       const obj = { minFPS: JSFPSMonitor(6920).roundToDecimalPlaces(self.minFPS, 1), maxFPS: null, averageFPS: null };
       const obj2 = JSFPSMonitor(6920);
-      obj[1] = JSFPSMonitor(6920).roundToDecimalPlaces(self.maxFPS, 1);
+      obj.maxFPS = JSFPSMonitor(6920).roundToDecimalPlaces(self.maxFPS, 1);
       const obj3 = JSFPSMonitor(6920);
-      obj[2] = JSFPSMonitor(6920).roundToDecimalPlaces(self.averageFPS, 1);
+      obj.averageFPS = JSFPSMonitor(6920).roundToDecimalPlaces(self.averageFPS, 1);
       return obj;
     },
   },
 ];
 
-export const JSFPSMonitor = _createClassDefault(JSFPSMonitor, items);
+export const JSFPSMonitor = _modDef6867(JSFPSMonitor, items);

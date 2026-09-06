@@ -1,19 +1,17 @@
 // _runtime/12807_generatePropagationContext.js
-import addContextToFrame from "12808_addContextToFrame.js";
+import _mod12808 from "metro/12808__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.generatePropagationContext = function generatePropagationContext() {
-  const obj = { traceId: addContextToFrame.uuid4(), spanId: null };
-  const obj2 = addContextToFrame;
-  const obj3 = addContextToFrame;
-  obj[1] = addContextToFrame.uuid4().substring(16);
+
+export const generatePropagationContext = function generatePropagationContext() {
+  const obj = { traceId: _mod12808.uuid4(), spanId: null };
+  obj.spanId = _mod12808.uuid4().substring(16);
   return obj;
 };
-arg5.generateSpanId = function generateSpanId() {
-  const obj = addContextToFrame;
-  return addContextToFrame.uuid4().substring(16);
+export const generateSpanId = function generateSpanId() {
+  return _mod12808.uuid4().substring(16);
 };
-arg5.generateTraceId = function generateTraceId() {
-  return addContextToFrame.uuid4();
+export const generateTraceId = function generateTraceId() {
+  return _mod12808.uuid4();
 };

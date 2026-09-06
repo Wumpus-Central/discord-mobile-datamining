@@ -1,11 +1,7 @@
 // _runtime/01194_varint64read.js
-arg5.varint64read = undefined;
-arg5.varint64write = undefined;
-arg5.int64fromString = undefined;
-arg5.int64toString = undefined;
-arg5.varint32write = undefined;
-arg5.varint32read = undefined;
-arg5.varint64read = function varint64read() {
+let c0 = 4294967296;
+
+export const varint64read = function varint64read() {
   const self = this;
   let num = 0;
   let num2 = 0;
@@ -20,20 +16,15 @@ arg5.varint64read = function varint64read() {
       let tmp5 = +self.pos;
       self.pos = tmp5 + 1;
       let tmp6 = self.buf[tmp5];
-      let num3 = 15;
       let tmp7 = tmp3 | ((15 & tmp6) << 28);
-      let num4 = 112;
-      let num5 = 4;
       let tmp8 = (112 & tmp6) >> 4;
       let num6 = 3;
-      let num7 = 31;
       let tmp9 = tmp8;
       if (128 & tmp6) {
         let tmp11 = +self.pos;
         self.pos = tmp11 + 1;
         let tmp12 = self.buf[tmp11];
         let tmp13 = tmp9 | ((127 & tmp12) << num6);
-        let tmp14 = num6;
         while (128 & tmp12) {
           num6 = num6 + 7;
           tmp9 = tmp13;
@@ -45,8 +36,7 @@ arg5.varint64read = function varint64read() {
             let tmp17 = new.target;
             let str = "invalid varint";
             let tmp18 = new.target;
-            error = new Error("invalid varint");
-            let tmp20 = error;
+            let error = new Error("invalid varint");
             throw error;
           }
         }
@@ -64,13 +54,12 @@ arg5.varint64read = function varint64read() {
   const items2 = [tmp3, 0];
   return items2;
 };
-arg5.varint64write = function varint64write(lo, hi, buf) {
+export const varint64write = function varint64write(lo, hi, buf) {
   let num = 0;
   while (true) {
     let tmp = lo >>> num;
     let tmp2 = tmp >>> 7;
     let tmp3 = tmp2 === 0;
-    let tmp4 = num;
     if (tmp2 === 0) {
       tmp3 = 0 == hi;
     }
@@ -87,8 +76,6 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
       if (num < 28) {
         continue;
       } else {
-        let num2 = 4;
-        let num3 = 15;
         let tmp8 = ((lo >>> 28) & 15) | ((7 & hi) << 4);
         let num4 = 3;
         let tmp9 = hi >> 3;
@@ -97,12 +84,10 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
           tmp10 = 128 | tmp8;
         }
         arr = buf.push(255 & tmp10);
-        let num5 = 31;
         if (tmp9) {
           while (true) {
             let tmp12 = hi >>> num4;
             let tmp13 = tmp12 >>> 7 !== 0;
-            let tmp14 = num4;
             let tmp15 = tmp12;
             if (tmp13) {
               tmp15 = 128 | tmp12;
@@ -115,7 +100,6 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
               if (num4 < 31) {
                 continue;
               } else {
-                let num6 = 1;
                 let arr2 = buf.push((hi >>> 31) & 1);
               }
             }
@@ -125,8 +109,7 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
     }
   }
 };
-let c0 = 4294967296;
-arg5.int64fromString = function int64fromString(trimmed) {
+export const int64fromString = function int64fromString(trimmed) {
   let substr = trimmed;
   if ("-" == trimmed[0]) {
     substr = trimmed.slice(1);
@@ -165,7 +148,7 @@ arg5.int64fromString = function int64fromString(trimmed) {
   const items = ["-" == trimmed[0], result6, sum5];
   return items;
 };
-arg5.int64toString = function int64toString(lo, hi) {
+export const int64toString = function int64toString(lo, hi) {
   if (hi <= 2097151) {
     return "" + (c0 * hi + (lo >>> 0));
   } else {
@@ -211,7 +194,7 @@ arg5.int64toString = function int64toString(lo, hi) {
     return sum5 + ("0000000".slice(str.length) + str);
   }
 };
-arg5.varint32write = function varint32write(NumberResult, buf) {
+export const varint32write = function varint32write(NumberResult, buf) {
   let num = 0;
   let tmp = NumberResult;
   if (NumberResult >= 0) {
@@ -234,7 +217,7 @@ arg5.varint32write = function varint32write(NumberResult, buf) {
     buf.push(1);
   }
 };
-arg5.varint32read = function varint32read() {
+export const varint32read = function varint32read() {
   const self = this;
   this.pos = +this.pos + 1;
   if (128 & this.buf[+this.pos]) {
@@ -263,7 +246,7 @@ arg5.varint32read = function varint32read() {
           }
           if (128 & tmp18) {
             const _Error = Error;
-            error = new Error("invalid varint");
+            const error = new Error("invalid varint");
             throw error;
           } else {
             self.assertBounds();

@@ -1,18 +1,16 @@
 // _runtime/09878_QRCodeSvg.js
 import inlineStyles from "08453_inlineStyles.js";
-import emptyFunction from "09875_emptyFunction.js";
-import noop from "00019_noop.js";
+import emptyFunction from "metro/09875__.js";
+import noop from "metro/00019__.js";
 
 let fn = Object.assign;
 if (!fn) {
   fn = (arg0) => {
     for (let num = 1; num < arguments.length; num = num + 1) {
       let tmp = arguments[num];
-      let tmp2 = tmp;
-      let tmp3 = num;
       for (const key10012 in tmp) {
-        let tmp5 = key10012;
         let _Object = Object;
+        hasOwnProperty = Object.prototype.hasOwnProperty;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
           let hasOwnPropertyResult = hasOwnProperty(key10012);
@@ -32,41 +30,41 @@ if (!fn) {
   };
 }
 if (!emptyFunction) {
-  let obj = { default: null };
-  obj[0] = emptyFunction;
+  let obj = { default: emptyFunction };
   let tmp3 = obj;
 } else {
   tmp3 = emptyFunction;
 }
 if (!noop) {
-  obj = { default: null };
-  obj[0] = noop;
+  obj = { default: noop };
   let tmp4 = obj;
 } else {
   tmp4 = noop;
 }
 noop = tmp4;
 obj = {
-  bgColor: _default.oneOfType(items).isRequired,
+  bgColor: null,
   bgD: tmp3.default.string.isRequired,
-  fgColor: _default2.oneOfType(items1).isRequired,
+  fgColor: null,
   fgD: tmp3.default.string.isRequired,
   size: tmp3.default.number.isRequired,
   viewBoxSize: tmp3.default.number.isRequired,
 };
-items = [tmp3.default.object, tmp3.default.string];
-items1 = [tmp3.default.object, tmp3.default.string];
+let items = [tmp3.default.object, tmp3.default.string];
+obj.bgColor = tmp3.default.oneOfType(items).isRequired;
+const items1 = [tmp3.default.object, tmp3.default.string];
+obj.fgColor = tmp3.default.oneOfType(items1).isRequired;
 const forwardRefResult = noop.forwardRef((obj, ref) => {
   ({ size, viewBoxSize } = obj);
   const items = ["bgColor", "bgD", "fgD", "fgColor", "size", "viewBoxSize"];
   obj = {};
   ({ bgColor, bgD, fgD, fgColor } = obj);
   for (const key10013 in arg0) {
-    let tmp4 = key10013;
     if (items.indexOf(key10013) >= 0) {
       continue;
     } else {
       let _Object = Object;
+      hasOwnProperty = Object.prototype.hasOwnProperty;
       let call = hasOwnProperty.call;
       if (typeof call === "unknown") {
         let hasOwnPropertyResult = hasOwnProperty(key10013);
@@ -83,7 +81,7 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
     }
     continue;
   }
-  obj = {
+  size = {
     height: size,
     ref,
     style: { height: size, width: size },
@@ -93,7 +91,7 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
   const element = noop.default.createElement(inlineStyles.Path, { d: bgD, fill: bgColor });
   return noop.default.createElement(
     inlineStyles.Svg,
-    fn({}, obj, obj),
+    fn({}, obj, size),
     element,
     noop.default.createElement(inlineStyles.Path, { d, fill }),
   );

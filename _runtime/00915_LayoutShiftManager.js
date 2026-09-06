@@ -1,5 +1,5 @@
 // _runtime/00915_LayoutShiftManager.js
-import LayoutShiftManager from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -7,7 +7,7 @@ class LayoutShiftManager {
   constructor() {
     self = this;
     tmp = LayoutShiftManager;
-    tmp2 = LayoutShiftManager(this, LayoutShiftManager);
+    tmp2 = closure_0(this, LayoutShiftManager);
     __init = LayoutShiftManager.prototype.__init;
     call = __init.call;
     if (typeof call === "unknown") {
@@ -25,13 +25,15 @@ class LayoutShiftManager {
     return;
   }
 }
-let items = [
-  {
-    key: "__init",
-    value: function __init() {
-      this._sessionValue = 0;
-    },
+_classCallCheck = LayoutShiftManager;
+const entry = {
+  key: "__init",
+  value: function __init() {
+    this._sessionValue = 0;
   },
+};
+let items = [
+  entry,
   {
     key: "__init2",
     value: function __init2() {

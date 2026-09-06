@@ -1,8 +1,11 @@
 // _runtime/00948_showReportDialog.js
-const require = arg1;
+import ignoreNextOnError from "00893_ignoreNextOnError.js";
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.showReportDialog = function showReportDialog(arg0) {
+
+export const showReportDialog = function showReportDialog(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -53,14 +56,14 @@ arg5.showReportDialog = function showReportDialog(arg0) {
         element.onload = onLoad;
       }
       if (onClose) {
-        reportDialogClosedMessageHandler = function reportDialogClosedMessageHandler(data) {
-          if ("__sentry_reportdialog_closed__" === data.data) {
+        reportDialogClosedMessageHandler = function reportDialogClosedMessageHandler(event) {
+          if ("__sentry_reportdialog_closed__" === event.data) {
             try {
               onClose();
-              const WINDOW = onClose(reportDialogClosedMessageHandler[0]).WINDOW;
+              const WINDOW = ignoreNextOnError.WINDOW;
               const removed = WINDOW.removeEventListener("message", reportDialogClosedMessageHandler);
             } catch (tmp7) {
-              const WINDOW2 = onClose(reportDialogClosedMessageHandler[0]).WINDOW;
+              const WINDOW2 = ignoreNextOnError.WINDOW;
               const removed1 = WINDOW2.removeEventListener("message", reportDialogClosedMessageHandler);
               throw tmp7;
             }

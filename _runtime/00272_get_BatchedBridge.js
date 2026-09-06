@@ -1,87 +1,62 @@
 // _runtime/00272_get_BatchedBridge.js
-import { MessageQueue } from "00039_MessageQueue.js";
-import { map } from "00066_map.js";
-import { measure } from "00068_measure.js";
-import { set } from "00144_set.js";
-import { restoreDeletedValuesInNestedArray } from "00146_restoreDeletedValuesInNestedArray.js";
-import { deepDiffer } from "00147_deepDiffer.js";
-import { flattenStyle } from "00148_flattenStyle.js";
-import { _isNativeReflectConstruct } from "00152__isNativeReflectConstruct.js";
-import { _isNativeReflectConstruct } from "00189__isNativeReflectConstruct.js";
-import { MessageQueue } from "00276_MessageQueue.js";
-import { deepFreezeAndThrowOnMutationInDev } from "00277_deepFreezeAndThrowOnMutationInDev.js";
-import { _isNativeReflectConstruct } from "00278__isNativeReflectConstruct.js";
-import { legacySendAccessibilityEvent } from "00279_legacySendAccessibilityEvent.js";
-import { EventEmitter } from "00280_EventEmitter.js";
-import { createPublicRootInstance } from "00281_createPublicRootInstance.js";
-import { dispatchNativeEvent } from "00282_dispatchNativeEvent.js";
 const obj = {};
-Object.defineProperty(obj, "BatchedBridge", { get: () => MessageQueue /* MessageQueue */.default, set: undefined });
-Object.defineProperty(obj, "ExceptionsManager", {
-  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+Object.defineProperty(obj, "BatchedBridge", { get: () => require("metro/00039__.js").default, set: undefined });
+Object.defineProperty(obj, "ExceptionsManager", { get: () => require("metro/00189__.js").default, set: undefined });
+Object.defineProperty(obj, "Platform", { get: () => require("get Version").default, set: undefined });
+Object.defineProperty(obj, "RCTEventEmitter", { get: () => require("metro/00276__.js").default, set: undefined });
+Object.defineProperty(obj, "ReactNativeViewConfigRegistry", {
+  get: () => require("customBubblingEventTypes"),
   set: undefined,
 });
-Object.defineProperty(obj, "Platform", {
-  get: () => require("00273_get_Version.js") /* get Version */ /* get Version */.default,
-  set: undefined,
-});
-Object.defineProperty(obj, "RCTEventEmitter", { get: () => MessageQueue /* MessageQueue */.default, set: undefined });
-Object.defineProperty(obj, "ReactNativeViewConfigRegistry", { get: () => map, set: undefined });
-Object.defineProperty(obj, "TextInputState", { get: () => set /* set */.default, set: undefined });
-Object.defineProperty(obj, "UIManager", { get: () => measure /* measure */.default, set: undefined });
-Object.defineProperty(obj, "deepDiffer", { get: () => deepDiffer /* deepDiffer */.default, set: undefined });
+Object.defineProperty(obj, "TextInputState", { get: () => require("metro/00144__.js").default, set: undefined });
+Object.defineProperty(obj, "UIManager", { get: () => require("measure").default, set: undefined });
+Object.defineProperty(obj, "deepDiffer", { get: () => require("deepDiffer").default, set: undefined });
 Object.defineProperty(obj, "deepFreezeAndThrowOnMutationInDev", {
-  get: () => deepFreezeAndThrowOnMutationInDev /* deepFreezeAndThrowOnMutationInDev */.default,
+  get: () => require("deepFreezeAndThrowOnMutationInDev").default,
   set: undefined,
 });
-Object.defineProperty(obj, "flattenStyle", { get: () => flattenStyle /* flattenStyle */.default, set: undefined });
-Object.defineProperty(obj, "ReactFiberErrorDialog", {
-  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
-  set: undefined,
-});
+Object.defineProperty(obj, "flattenStyle", { get: () => require("flattenStyle").default, set: undefined });
+Object.defineProperty(obj, "ReactFiberErrorDialog", { get: () => require("metro/00278__.js").default, set: undefined });
 Object.defineProperty(obj, "legacySendAccessibilityEvent", {
-  get: () => legacySendAccessibilityEvent /* legacySendAccessibilityEvent */.default,
+  get: () => require("legacySendAccessibilityEvent").default,
   set: undefined,
 });
-Object.defineProperty(obj, "RawEventEmitter", { get: () => EventEmitter /* EventEmitter */.default, set: undefined });
-Object.defineProperty(obj, "CustomEvent", {
-  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
-  set: undefined,
-});
+Object.defineProperty(obj, "RawEventEmitter", { get: () => require("metro/00280__.js").default, set: undefined });
+Object.defineProperty(obj, "CustomEvent", { get: () => require("metro/00152__.js").default, set: undefined });
 Object.defineProperty(obj, "createAttributePayload", {
-  get: () => restoreDeletedValuesInNestedArray /* restoreDeletedValuesInNestedArray */.create,
+  get: () => require("restoreDeletedValuesInNestedArray").create,
   set: undefined,
 });
 Object.defineProperty(obj, "diffAttributePayloads", {
-  get: () => restoreDeletedValuesInNestedArray /* restoreDeletedValuesInNestedArray */.diff,
+  get: () => require("restoreDeletedValuesInNestedArray").diff,
   set: undefined,
 });
 Object.defineProperty(obj, "createPublicRootInstance", {
-  get: () => createPublicRootInstance /* createPublicRootInstance */.createPublicRootInstance,
+  get: () => require("metro/00281__.js").createPublicRootInstance,
   set: undefined,
 });
 Object.defineProperty(obj, "createPublicInstance", {
-  get: () => createPublicRootInstance /* createPublicRootInstance */.createPublicInstance,
+  get: () => require("metro/00281__.js").createPublicInstance,
   set: undefined,
 });
 Object.defineProperty(obj, "createPublicTextInstance", {
-  get: () => createPublicRootInstance /* createPublicRootInstance */.createPublicTextInstance,
+  get: () => require("metro/00281__.js").createPublicTextInstance,
   set: undefined,
 });
 Object.defineProperty(obj, "getNativeTagFromPublicInstance", {
-  get: () => createPublicRootInstance /* createPublicRootInstance */.getNativeTagFromPublicInstance,
+  get: () => require("metro/00281__.js").getNativeTagFromPublicInstance,
   set: undefined,
 });
 Object.defineProperty(obj, "getNodeFromPublicInstance", {
-  get: () => createPublicRootInstance /* createPublicRootInstance */.getNodeFromPublicInstance,
+  get: () => require("metro/00281__.js").getNodeFromPublicInstance,
   set: undefined,
 });
 Object.defineProperty(obj, "getInternalInstanceHandleFromPublicInstance", {
-  get: () => createPublicRootInstance /* createPublicRootInstance */.getInternalInstanceHandleFromPublicInstance,
+  get: () => require("metro/00281__.js").getInternalInstanceHandleFromPublicInstance,
   set: undefined,
 });
 Object.defineProperty(obj, "dispatchNativeEvent", {
-  get: () => dispatchNativeEvent /* dispatchNativeEvent */.default,
+  get: () => require("dispatchNativeEvent").default,
   set: undefined,
 });
 

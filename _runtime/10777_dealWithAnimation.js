@@ -1,5 +1,7 @@
 // _runtime/10777_dealWithAnimation.js
-const require = arg1;
+import cancelAnimation from "01636_cancelAnimation.js";
+
+require = fn;
 const dependencyMap = arg6;
 let closure_2 = {
   code: "function pnpm_dealWithAnimationTs2(isFinished){const{cb}=this.__closure;return cb(isFinished);}",
@@ -8,7 +10,6 @@ let closure_3 = {
   code: "function pnpm_dealWithAnimationTs3(isFinished){const{cb}=this.__closure;return cb(isFinished);}",
 };
 function dealWithAnimation(type) {
-  closure_0 = type;
   type = type.type;
   if ("spring" === type) {
     return (value, cb) => {
@@ -18,8 +19,8 @@ function dealWithAnimation(type) {
       };
       fn.__closure = { cb };
       fn.__workletHash = 5381689684735;
-      fn.__initData = closure_1_2;
-      return type(closure_1_1[0]).withSpring(value, type.config, fn);
+      fn.__initData = __initData;
+      return cancelAnimation.withSpring(value, type.config, fn);
     };
   } else {
     return "timing" === type
@@ -30,18 +31,16 @@ function dealWithAnimation(type) {
           };
           fn.__closure = { cb };
           fn.__workletHash = 457847741022;
-          fn.__initData = closure_1_3;
-          return type(closure_1_1[0]).withTiming(value, type.config, fn);
+          fn.__initData = __initData2;
+          return cancelAnimation.withTiming(value, type.config, fn);
         }
       : undefined;
   }
 }
-dealWithAnimation.__closure = {
-  withSpring: require("cancelAnimation").withSpring,
-  withTiming: require("cancelAnimation").withTiming,
-};
+dealWithAnimation.__closure = { withSpring: fn(1636).withSpring, withTiming: fn(1636).withTiming };
 dealWithAnimation.__workletHash = 2113361159301;
 dealWithAnimation.__initData = {
   code: 'function dealWithAnimation_Pnpm_dealWithAnimationTs1(withAnimation){const{withSpring,withTiming}=this.__closure;switch(withAnimation.type){case"spring":return function(value,cb){return withSpring(value,withAnimation.config,function(isFinished){return cb(isFinished);});};case"timing":return function(value,cb){return withTiming(value,withAnimation.config,function(isFinished){return cb(isFinished);});};}}',
 };
-arg5.dealWithAnimation = dealWithAnimation;
+
+export { dealWithAnimation };

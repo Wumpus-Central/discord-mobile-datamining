@@ -1,29 +1,29 @@
 // _runtime/01669_ReanimatedFlatList.js
-import closure_3 from "metro/00109__objectWithoutProperties.js";
-import closure_4 from "00019_noop.js";
-import { useRef } from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
-import createAnimatedComponent from "01670_createAnimatedComponent.js";
-import isReactRendering from "01775_isReactRendering.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["itemLayoutAnimation", "skipEnteringExitingAnimations", "CellRendererComponentStyle"];
-let closure_7 = createAnimatedComponent.createAnimatedComponent(require("get ActivityIndicator").FlatList);
+const useRef = fn(19).useRef;
+const jsx = fn(21).jsx;
+const _isNativeReflectConstruct = fn(1670);
+let closure_7 = _isNativeReflectConstruct.createAnimatedComponent(fn(17).FlatList);
+const module_1775 = fn(1775);
 
-export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnteringExitingAnimations, ref) => {
+export const ReanimatedFlatList = module_1775.componentWithRef((skipEnteringExitingAnimations, ref) => {
   ({ itemLayoutAnimation, CellRendererComponentStyle } = skipEnteringExitingAnimations);
-  const tmp = callback(skipEnteringExitingAnimations, closure_2);
+  const tmp = _objectWithoutProperties(skipEnteringExitingAnimations, closure_2);
   if (!("scrollEventThrottle" in tmp)) {
     tmp.scrollEventThrottle = 1;
   }
   const tmp2 = useRef(itemLayoutAnimation);
-  const _require = tmp2;
+  _require = tmp2;
   tmp2.current = itemLayoutAnimation;
   const tmp3 = useRef(CellRendererComponentStyle);
   dependencyMap = tmp3;
   tmp3.current = CellRendererComponentStyle;
   let obj = { ref };
-  const memo = React.useMemo(
+  const memo = noop.useMemo(
     () => (onLayout) => {
       let current;
       if (ref != null) {
@@ -32,14 +32,14 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
       let obj = { layout: current, onLayout: onLayout.onLayout, style: null, children: null };
       const items = [onLayout.style];
       let current1;
-      if (table != null) {
+      if (closure_1 != null) {
         current1 = obj2.current;
       }
       if (typeof current1 === "function") {
         let currentResult;
         if (obj2 != null) {
           obj = { index: null, item: null };
-          ({ index: obj3[0], item: obj3[1] } = onLayout);
+          ({ index: obj3.index, item: obj3.item } = onLayout);
           currentResult = obj2.current(obj);
         }
         current = currentResult;
@@ -47,9 +47,14 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
         current = obj2.current;
       }
       items[1] = current;
-      obj[2] = items;
-      obj[3] = onLayout.children;
-      return closure_1_6(ref(table[5]).AnimatedView, obj);
+      obj.style = items;
+      obj.children = onLayout.children;
+      return jsx(ref(closure_1[5]).AnimatedView, {
+        layout: current,
+        onLayout: onLayout.onLayout,
+        style: null,
+        children: null,
+      });
     },
     [],
   );
@@ -58,12 +63,11 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
   const tmp7 = <closure_7 ref={arg1} />;
   let tmp5Result = tmp7;
   if (undefined !== skipEnteringExitingAnimations.skipEnteringExitingAnimations) {
-    obj = { skipEntering: true, skipExiting: true, children: null };
-    obj[2] = tmp7;
-    tmp5Result = jsx(require("01774__isNativeReflectConstruct.js").LayoutAnimationConfig, {
+    obj = { skipEntering: true, skipExiting: true, children: tmp7 };
+    tmp5Result = jsx(require("metro/01774__.js").LayoutAnimationConfig, {
       skipEntering: true,
       skipExiting: true,
-      children: null,
+      children: tmp7,
     });
   }
   return tmp5Result;

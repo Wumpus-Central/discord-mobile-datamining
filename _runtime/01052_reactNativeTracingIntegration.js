@@ -1,30 +1,28 @@
 // _runtime/01052_reactNativeTracingIntegration.js
 import startIdleSpan from "01025_startIdleSpan.js";
-import INTEGRATION_NAME from "01031_INTEGRATION_NAME.js";
-import reactNavigationIntegration from "01033_reactNavigationIntegration.js";
-import reactNativeNavigationIntegration from "01055_reactNativeNavigationIntegration.js";
-import _isNativeReflectConstruct from "01056__isNativeReflectConstruct.js";
-import addGestureBreadcrumb from "01058_addGestureBreadcrumb.js";
+import _mod1031 from "metro/01031__.js";
+import _mod1033 from "metro/01033__.js";
+import _mod1055 from "metro/01055__.js";
+import _mod1056 from "metro/01056__.js";
+import sentryTraceGesture from "01058_sentryTraceGesture.js";
 
-for (const key10013 in require("metro/01020__.js")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("metro/01020__.js")[key10013];
+for (const key10013 in require("DEFAULT")) {
+  arg5[key10013] = require("DEFAULT")[key10013];
   continue;
 }
 for (const key10017 in require("TimeToInitialDisplay")) {
-  let tmp3 = key10017;
   arg5[key10017] = require("TimeToInitialDisplay")[key10017];
   continue;
 }
 
-export const reactNativeTracingIntegration = INTEGRATION_NAME.reactNativeTracingIntegration;
-export const REACT_NATIVE_TRACING_INTEGRATION_NAME = INTEGRATION_NAME.INTEGRATION_NAME;
-export const getCurrentReactNativeTracingIntegration = INTEGRATION_NAME.getCurrentReactNativeTracingIntegration;
-export const getReactNativeTracingIntegration = INTEGRATION_NAME.getReactNativeTracingIntegration;
-export const reactNavigationIntegration = reactNavigationIntegration.reactNavigationIntegration;
-export const reactNativeNavigationIntegration = reactNativeNavigationIntegration.reactNativeNavigationIntegration;
+export const reactNativeTracingIntegration = _mod1031.reactNativeTracingIntegration;
+export const REACT_NATIVE_TRACING_INTEGRATION_NAME = _mod1031.INTEGRATION_NAME;
+export const getCurrentReactNativeTracingIntegration = _mod1031.getCurrentReactNativeTracingIntegration;
+export const getReactNativeTracingIntegration = _mod1031.getReactNativeTracingIntegration;
+export const reactNavigationIntegration = _mod1033.reactNavigationIntegration;
+export const reactNativeNavigationIntegration = _mod1055.reactNativeNavigationIntegration;
 export const startIdleNavigationSpan = startIdleSpan.startIdleNavigationSpan;
 export const startIdleSpan = startIdleSpan.startIdleSpan;
 export const getDefaultIdleNavigationSpanOptions = startIdleSpan.getDefaultIdleNavigationSpanOptions;
-export const ReactNativeProfiler = _isNativeReflectConstruct.ReactNativeProfiler;
-export const sentryTraceGesture = addGestureBreadcrumb.sentryTraceGesture;
+export const ReactNativeProfiler = _mod1056.ReactNativeProfiler;
+export const sentryTraceGesture = sentryTraceGesture.sentryTraceGesture;

@@ -1,5 +1,5 @@
 // _runtime/05656___react_navigation__elements_contexts.js
-import closure_0 from "00019_noop.js";
+import noop from "metro/00019__.js";
 
 let __react_navigation__elements_contexts = "__react_navigation__elements_contexts";
 __react_navigation__elements_contexts = globalThis.__react_navigation__elements_contexts;
@@ -10,9 +10,9 @@ if (__react_navigation__elements_contexts == null) {
 globalThis.__react_navigation__elements_contexts = __react_navigation__elements_contexts;
 
 export const getNamedContext = function getNamedContext(FrameContext, arg1) {
-  let value = globalThis[__react_navigation__elements_contexts].get(FrameContext);
+  value = globalThis[__react_navigation__elements_contexts].get(FrameContext);
   if (!value) {
-    const context = React.createContext(arg1);
+    const context = noop.createContext(arg1);
     context.displayName = FrameContext;
     const _globalThis = globalThis;
     const result = globalThis[tmp].set(FrameContext, context);

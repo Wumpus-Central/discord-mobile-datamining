@@ -1,28 +1,68 @@
 // _runtime/metro/07350__.js
+let obj = {
+  v: "4.8.0",
+  meta: { g: "LottieFiles AE 3.0.2", a: "", k: "", d: "", tc: "" },
+  fr: 60,
+  ip: 2,
+  op: 81,
+  w: 1280,
+  h: 720,
+  nm: "FrameEffect_10-1_Out",
+  ddd: 0,
+  assets: null,
+  layers: null,
+  markers: [],
+};
 const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }];
-const items1 = [
-  {
-    ddd: 0,
-    ind: 3,
-    ty: 2,
-    nm: "smile",
-    refId: "image_0",
-    sr: 1,
-    ks: {
-      o: { a: 0, k: 100, ix: 11 },
-      r: { a: 0, k: 0, ix: 10 },
-      p: { a: 0, k: [19.875, 20.125, 0], ix: 2 },
-      a: { a: 0, k: [17.25, 17.25, 0], ix: 1 },
-      s: { a: 0, k: [108.7, 108.7, 100], ix: 6 },
-    },
-    ao: 0,
-    ip: 0,
-    op: 914,
-    st: 0,
-    bm: 0,
+obj = { id: "comp_0", layers: null };
+obj = {
+  ddd: 0,
+  ind: 3,
+  ty: 2,
+  nm: "smile",
+  refId: "image_0",
+  sr: 1,
+  ks: {
+    o: { a: 0, k: 100, ix: 11 },
+    r: { a: 0, k: 0, ix: 10 },
+    p: { a: 0, k: [19.875, 20.125, 0], ix: 2 },
+    a: { a: 0, k: [17.25, 17.25, 0], ix: 1 },
+    s: { a: 0, k: [108.7, 108.7, 100], ix: 6 },
   },
-];
-items[1] = { id: "comp_0", layers: items1 };
+  ao: 0,
+  ip: 0,
+  op: 914,
+  st: 0,
+  bm: 0,
+};
+const items1 = [obj];
+obj.layers = items1;
+items[1] = obj;
+obj.assets = items;
+const obj2 = {
+  ddd: 0,
+  ind: 1,
+  ty: 0,
+  nm: "particle",
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 3,
+  op: 80,
+  st: -2,
+  bm: 0,
+};
+const obj3 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 20, 0], ix: 1 },
+  s: null,
+};
+const obj4 = { a: 1, k: null, ix: 2 };
 const items2 = [
   { i: { x: 0.487, y: 1 }, o: { x: 0, y: 0 }, t: 2, s: [640, 883.838, 0], to: [0, 0, 0], ti: [0, 0, 0] },
   { i: { x: 0.667, y: 1 }, o: { x: 0.333, y: 0 }, t: 16, s: [640, 296, 0], to: [0, 0, 0], ti: [0, 0, 0] },
@@ -33,6 +73,9 @@ const items2 = [
   { i: { x: 0.667, y: 1 }, o: { x: 0.641, y: 0 }, t: 69, s: [640, 433.6, 0], to: [0, 0, 0], ti: [0, 0, 0] },
   { t: 81, s: [640, -156.8, 0] },
 ];
+obj4.k = items2;
+obj3.p = obj4;
+const obj5 = { a: 1, k: null, ix: 6 };
 const items3 = [
   {
     i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] },
@@ -90,42 +133,10 @@ const items3 = [
   },
   { t: 74, s: [560, 704, 100] },
 ];
-const items4 = [
-  {
-    ddd: 0,
-    ind: 1,
-    ty: 0,
-    nm: "particle",
-    refId: "comp_0",
-    sr: 1,
-    ks: {
-      o: { a: 0, k: 100, ix: 11 },
-      r: { a: 0, k: 0, ix: 10 },
-      p: { a: 1, k: items2, ix: 2 },
-      a: { a: 0, k: [20, 20, 0], ix: 1 },
-      s: { a: 1, k: items3, ix: 6 },
-    },
-    ao: 0,
-    w: 40,
-    h: 40,
-    ip: 3,
-    op: 80,
-    st: -2,
-    bm: 0,
-  },
-];
+obj5.k = items3;
+obj3.s = obj5;
+obj2.ks = obj3;
+const items4 = [obj2];
+obj.layers = items4;
 
-export default {
-  v: "4.8.0",
-  meta: { g: "LottieFiles AE 3.0.2", a: "", k: "", d: "", tc: "" },
-  fr: 60,
-  ip: 2,
-  op: 81,
-  w: 1280,
-  h: 720,
-  nm: "FrameEffect_10-1_Out",
-  ddd: 0,
-  assets: items,
-  layers: items4,
-  markers: [],
-};
+export default obj;

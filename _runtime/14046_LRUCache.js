@@ -1,33 +1,35 @@
 // _runtime/14046_LRUCache.js
 import _createClass from "metro/00042__createClass.js";
-import LRUCache from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class LRUCache {
   constructor() {
-    tmp = LRUCache(this, LRUCache);
+    tmp = closure_0(this, LRUCache);
     this.max = 1000;
     map = new Map();
     this.map = map;
     return;
   }
 }
-const items = [
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const value = this.map.get(arg0);
-      let tmp2;
-      if (undefined !== value) {
-        self.map.delete(arg0);
-        const result = self.map.set(arg0, value);
-        tmp2 = value;
-        const map2 = self.map;
-        const map3 = self.map;
-      }
-      return tmp2;
-    },
+_classCallCheck = LRUCache;
+const entry = {
+  key: "get",
+  value: function get(arg0) {
+    const self = this;
+    value = this.map.get(arg0);
+    let tmp2;
+    if (undefined !== value) {
+      self.map.delete(arg0);
+      const result = self.map.set(arg0, value);
+      tmp2 = value;
+      const map2 = self.map;
+      const map3 = self.map;
+    }
+    return tmp2;
   },
+};
+const items = [
+  entry,
   {
     key: "delete",
     value: function _delete(arg0) {

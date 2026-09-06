@@ -1,4 +1,4 @@
 // _runtime/01599_ServerContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const ServerContext = noopAll.createContext(undefined);
+export const ServerContext = noop.createContext(undefined);

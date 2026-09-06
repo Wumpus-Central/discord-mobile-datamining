@@ -1,12 +1,13 @@
 // _runtime/00945_httpContextIntegration.js
-import registerSpanErrorInstrumentation from "00682_registerSpanErrorInstrumentation.js";
+import ignoreNextOnError from "00893_ignoreNextOnError.js";
+import registerSpanErrorInstrumentation from "metro/00682__.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const httpContextIntegration = registerSpanErrorInstrumentation.defineIntegration(() => ({
   name: "HttpContext",
   preprocessEvent(request) {
-    const httpRequestData = callback(table[1]).getHttpRequestData();
+    const httpRequestData = ignoreNextOnError.getHttpRequestData();
     let obj = {};
     const merged = Object.assign(httpRequestData.headers);
     request = request.request;

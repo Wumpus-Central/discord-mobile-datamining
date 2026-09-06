@@ -1,8 +1,8 @@
 // _runtime/13660_Inflate.js
-import assign from "13651_assign.js";
+import _mod13651 from "metro/13651__.js";
 import ZStream from "13653_ZStream.js";
 import _mod13655 from "metro/13655__.js";
-import assign2 from "13659_assign.js";
+import _mod13659 from "metro/13659__.js";
 import _mod13664 from "metro/13664__.js";
 
 require = arg1;
@@ -14,7 +14,7 @@ class Inflate {
     if (this instanceof Inflate) {
       tmp4 = closure_0;
       tmp5 = closure_1;
-      obj = require("assign");
+      obj = closure_0(closure_1[0]);
       obj = arg0;
       if (!arg0) {
         obj = {};
@@ -75,27 +75,27 @@ class Inflate {
       self.chunks = [];
       tmp9 = new.target;
       tmp10 = new.target;
-      tmp11 = new require("ZStream")();
+      tmp11 = new tmp4(tmp5[1])();
       tmp12 = tmp11;
       self.strm = tmp11;
       self.strm.avail_out = 0;
-      tmp4Result = require("InflateState");
+      tmp4Result = tmp4(tmp5[2]);
       inflateInit2Result = tmp4Result.inflateInit2(self.strm, options.windowBits);
-      if (inflateInit2Result !== require("metro/13664__.js").Z_OK) {
+      if (inflateInit2Result !== tmp4(tmp5[3]).Z_OK) {
         tmp19 = globalThis;
         _Error = Error;
         tmp20 = new.target;
         tmp21 = new.target;
-        error = new Error(require("metro/13655__.js")[inflateInit2Result]);
+        error = new Error(tmp4(tmp5[4])[inflateInit2Result]);
         tmp23 = error;
         throw error;
       } else {
         tmp14 = new.target;
         tmp15 = new.target;
-        tmp16 = new require("GZheader")();
+        tmp16 = new tmp4(tmp5[5])();
         tmp17 = tmp16;
         self.header = tmp16;
-        tmp4Result1 = require("InflateState");
+        tmp4Result1 = tmp4(tmp5[2]);
         inflateGetHeaderResult = tmp4Result1.inflateGetHeader(self.strm, self.header);
         return;
       }
@@ -118,7 +118,7 @@ class Inflate {
         if (typeof arg0 === "string") {
           tmp15 = closure_0;
           tmp16 = closure_1;
-          obj = require("assign");
+          obj = closure_0(closure_1[6]);
           strm.input = obj.binstring2buf(arg0);
           num = 0;
           strm.next_in = 0;
@@ -150,11 +150,11 @@ class Inflate {
         if (true === arg1) {
           tmp5 = closure_0;
           tmp6 = closure_1;
-          Z_NO_FLUSH = require("metro/13664__.js").Z_FINISH;
+          Z_NO_FLUSH = closure_0(closure_1[3]).Z_FINISH;
         } else {
           tmp3 = closure_0;
           tmp4 = closure_1;
-          Z_NO_FLUSH = require("metro/13664__.js").Z_NO_FLUSH;
+          Z_NO_FLUSH = closure_0(closure_1[3]).Z_NO_FLUSH;
         }
         tmp7 = Z_NO_FLUSH;
       }
@@ -170,14 +170,14 @@ class Inflate {
     self = this;
     tmp = closure_0;
     tmp2 = closure_1;
-    if (arg0 === require("metro/13664__.js").Z_OK) {
+    if (arg0 === closure_0(closure_1[3]).Z_OK) {
       str = "string";
       if ("string" === self.options.to) {
         chunks = self.chunks;
         str2 = "";
         self.result = chunks.join("");
       } else {
-        tmpResult = require("assign");
+        tmpResult = tmp(tmp2[0]);
         self.result = tmpResult.flattenChunks(self.chunks);
       }
     }
@@ -200,9 +200,10 @@ function inflate(arg0, windowBits) {
     return arr.result;
   }
 }
-arg5.Inflate = Inflate;
-arg5.inflate = inflate;
-arg5.inflateRaw = function inflateRaw(arg0, windowBits) {
+
+export { Inflate };
+export { inflate };
+export const inflateRaw = function inflateRaw(arg0, windowBits) {
   let obj = windowBits;
   if (!windowBits) {
     obj = {};
@@ -220,4 +221,4 @@ arg5.inflateRaw = function inflateRaw(arg0, windowBits) {
     return arr.result;
   }
 };
-arg5.ungzip = inflate;
+export const ungzip = inflate;

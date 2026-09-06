@@ -1,36 +1,20 @@
 // _runtime/12923__asyncOptionalChainDelete2.js
-import closure_2 from "00005_asyncGeneratorStep.js";
+import _asyncOptionalChain2 from "12922__asyncOptionalChain2.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-function _asyncOptionalChainDelete2() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function* (arg0) {
-      closure_1 = tmp2;
-      const obj2 = callback(closure_1_1[1]);
-      callback = yield obj2._asyncOptionalChain(callback);
-      let tmp9 = null == callback;
-      if (!tmp9) {
-        tmp9 = callback;
-      }
-      return tmp9;
-    })();
-  });
-  closure_3 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+let closure_3 = async function _asyncOptionalChainDelete2() {
+  closure_1 = tmp2;
+  closure_129_0 = await _asyncOptionalChain2._asyncOptionalChain(closure_0);
+  let tmp9 = null == closure_129_0;
+  if (!tmp9) {
+    tmp9 = closure_129_0;
   }
-  return applyArgumentsResult;
-}
+  return tmp9;
+};
 
 export const _asyncOptionalChainDelete = function _asyncOptionalChainDelete(arg0) {
   const self = this;
-  const apply = _asyncOptionalChainDelete2.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

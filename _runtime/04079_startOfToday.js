@@ -2,8 +2,7 @@
 import startOfDay from "03814_startOfDay.js";
 
 if (!startOfDay) {
-  const obj = { default: null };
-  obj[0] = startOfDay;
+  const obj = { default: startOfDay };
   let tmp3 = obj;
 } else {
   tmp3 = startOfDay;

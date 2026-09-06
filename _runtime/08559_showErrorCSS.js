@@ -1,14 +1,15 @@
 // _runtime/08559_showErrorCSS.js
-arg5.showErrorCSS = function showErrorCSS(trying, trying2) {
+
+export const showErrorCSS = function showErrorCSS(arg0, arg1) {
   throw Error(
     "[react-native-svg] You are trying to import a " +
-      trying2 +
+      arg1 +
       " `" +
-      trying +
+      arg0 +
       "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.",
   );
 };
-arg5.SvgCss = function SvgCss() {
+export const SvgCss = function SvgCss() {
   throw Error(
     "[react-native-svg] You are trying to import a " +
       "component" +
@@ -17,7 +18,7 @@ arg5.SvgCss = function SvgCss() {
       "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.",
   );
 };
-arg5.SvgCssUri = function SvgCssUri() {
+export const SvgCssUri = function SvgCssUri() {
   throw Error(
     "[react-native-svg] You are trying to import a " +
       "component" +
@@ -26,7 +27,7 @@ arg5.SvgCssUri = function SvgCssUri() {
       "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.",
   );
 };
-arg5.SvgWithCss = function SvgWithCss() {
+export const SvgWithCss = function SvgWithCss() {
   throw Error(
     "[react-native-svg] You are trying to import a " +
       "component" +
@@ -35,7 +36,7 @@ arg5.SvgWithCss = function SvgWithCss() {
       "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.",
   );
 };
-arg5.SvgWithCssUri = function SvgWithCssUri() {
+export const SvgWithCssUri = function SvgWithCssUri() {
   throw Error(
     "[react-native-svg] You are trying to import a " +
       "component" +
@@ -44,7 +45,7 @@ arg5.SvgWithCssUri = function SvgWithCssUri() {
       "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.",
   );
 };
-arg5.inlineStyles = function inlineStyles() {
+export const inlineStyles = function inlineStyles() {
   throw Error(
     "[react-native-svg] You are trying to import a " +
       "function" +
@@ -53,7 +54,7 @@ arg5.inlineStyles = function inlineStyles() {
       "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.",
   );
 };
-arg5.LocalSvg = function LocalSvg() {
+export const LocalSvg = function LocalSvg() {
   throw Error(
     "[react-native-svg] You are trying to import a " +
       "component" +
@@ -62,7 +63,7 @@ arg5.LocalSvg = function LocalSvg() {
       "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.",
   );
 };
-arg5.WithLocalSvg = function WithLocalSvg() {
+export const WithLocalSvg = function WithLocalSvg() {
   throw Error(
     "[react-native-svg] You are trying to import a " +
       "component" +
@@ -71,7 +72,7 @@ arg5.WithLocalSvg = function WithLocalSvg() {
       "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.",
   );
 };
-arg5.loadLocalRawResource = function loadLocalRawResource() {
+export const loadLocalRawResource = function loadLocalRawResource() {
   throw Error(
     "[react-native-svg] You are trying to import a " +
       "function" +

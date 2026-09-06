@@ -1,12 +1,12 @@
 // _runtime/04821_ToNumber.js
-import getEvalledConstructor from "01282_getEvalledConstructor.js";
-import isPrimitive from "04822_isPrimitive.js";
+import _mod1282 from "metro/01282__.js";
+import _mod4822 from "metro/04822__.js";
 
-let closure_2 = getEvalledConstructor("%Number%");
+let closure_2 = _mod1282("%Number%");
 
 export default function ToNumber(arg0) {
   let tmp3 = arg0;
-  if (!isPrimitive(arg0)) {
+  if (!_mod4822(arg0)) {
     tmp3 = tmp(4823)(arg0, closure_2);
   }
   if (typeof tmp3 === "symbol") {

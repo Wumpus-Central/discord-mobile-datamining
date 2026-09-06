@@ -1,28 +1,25 @@
 // _runtime/04024_lastDayOfWeek.js
-import getDefaultOptions from "03655_getDefaultOptions.js";
-import _typeof from "metro/03650__typeof.js";
-import toInteger from "03654_toInteger.js";
+import _mod3655 from "metro/03655__.js";
+import _typeof from "metro/03650__.js";
+import 03654__ from "metro/03654__.js";
 import requiredArgs from "03651_requiredArgs.js";
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!toInteger) {
-  obj = { default: null };
-  obj[0] = toInteger;
+if (!module_3654) {
+  obj = { default: module_3654 };
   let tmp5 = obj;
 } else {
-  tmp5 = toInteger;
+  tmp5 = module_3654;
 }
-toInteger = tmp5;
+module_3654 = tmp5;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
   tmp7 = requiredArgs;
@@ -31,7 +28,7 @@ requiredArgs = tmp7;
 
 export default function lastDayOfWeek(arg0, weekStartsOn) {
   requiredArgs.default(1, arguments);
-  const defaultOptions = getDefaultOptions.getDefaultOptions();
+  const defaultOptions = _mod3655.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;
@@ -39,7 +36,7 @@ export default function lastDayOfWeek(arg0, weekStartsOn) {
   if (null === weekStartsOn) {
     let weekStartsOn1;
     if (null != weekStartsOn) {
-      const locale = weekStartsOn.locale;
+      locale = weekStartsOn.locale;
       if (null !== locale) {
         if (undefined !== locale) {
           const options = locale.options;
@@ -78,7 +75,7 @@ export default function lastDayOfWeek(arg0, weekStartsOn) {
       num = weekStartsOn;
     }
   }
-  const defaultResult1 = toInteger.default(num);
+  const defaultResult1 = module_3654.default(num);
   if (defaultResult1 >= 0) {
     if (defaultResult1 <= 6) {
       const defaultResult2 = _typeof.default(arg0);

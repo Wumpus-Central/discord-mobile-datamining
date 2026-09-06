@@ -1,5 +1,6 @@
 // _runtime/metro/00467__.js
-arg5.default = {
+
+export default {
   addMenuItem(arg0, arg1) {},
   reload(arg0) {},
   onFastRefresh() {},

@@ -1,8 +1,8 @@
 // _runtime/metro/04643__.js
 import arrayPush from "../00658_arrayPush.js";
-import getOwnPropertySymbols from "../00659_getOwnPropertySymbols.js";
-import stubArray from "../00660_stubArray.js";
-import overArg from "../04639_overArg.js";
+import stubArray from "../00659_stubArray.js";
+import _mod660 from "00660__.js";
+import _mod4639 from "04639__.js";
 
 if (Object.getOwnPropertySymbols) {
   let fn = (arg0) => {
@@ -10,17 +10,15 @@ if (Object.getOwnPropertySymbols) {
     const items = [];
     if (arg0) {
       do {
-        let tmp2 = require;
-        let tmp3 = dependencyMap;
         let tmp4 = arrayPush;
-        let tmp4Result = tmp4(items, getOwnPropertySymbols(tmp));
-        tmp = overArg(tmp);
+        let tmp4Result = tmp4(items, stubArray(tmp));
+        tmp = _mod4639(tmp);
       } while (tmp);
     }
     return items;
   };
 } else {
-  fn = stubArray;
+  fn = _mod660;
 }
 
 export default fn;

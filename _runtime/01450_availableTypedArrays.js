@@ -11,10 +11,7 @@ export default function availableTypedArrays() {
   let num = 0;
   if (0 < _mod1451.length) {
     do {
-      let tmp = global;
       tmp2 = require;
-      let tmp3 = dependencyMap;
-      let tmp4 = num;
       if (typeof global[_mod1451[num]] === "function") {
         items[items.length] = tmp2(1451)[num];
       }

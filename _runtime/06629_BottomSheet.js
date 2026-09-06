@@ -1,4 +1,4 @@
 // _runtime/06629_BottomSheet.js
-import BottomSheetDefault from "06630_BottomSheet.js";
+import _modDef6630 from "metro/06630__.js";
 
-export default BottomSheetDefault;
+export default _modDef6630;

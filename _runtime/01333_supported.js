@@ -28,6 +28,7 @@ function unsupported(obj) {
     }
   } else {
     const _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
     if (typeof call === "unknown") {
       let hasOwnPropertyResult = hasOwnProperty("callee");

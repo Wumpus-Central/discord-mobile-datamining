@@ -1,4 +1,4 @@
 // _runtime/06683_customDirectEventTypes.js
-import map from "00066_map.js";
+import customBubblingEventTypes from "00066_customBubblingEventTypes.js";
 
-export const customDirectEventTypes = map.customDirectEventTypes;
+export const customDirectEventTypes = customBubblingEventTypes.customDirectEventTypes;

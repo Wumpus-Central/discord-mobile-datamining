@@ -1,11 +1,14 @@
 // _runtime/00294_SoundManager.js
-const module = arg2;
+import _modDef295 from "metro/00295__.js";
+
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = {
+
+export default {
   playTouchSound() {
-    if (module(295)) {
-      module(295).playTouchSound();
-      const tmpResult = module(295);
+    if (_modDef295) {
+      _modDef295.playTouchSound();
+      const tmpResult = _modDef295;
     }
   },
 };

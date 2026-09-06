@@ -1,5 +1,5 @@
 // _runtime/04865_SameValue.js
-import isNaN from "01314_isNaN.js";
+import _mod1314 from "metro/01314__.js";
 
 export default function SameValue(arg0, arg1) {
   if (arg0 === arg1) {
@@ -9,8 +9,7 @@ export default function SameValue(arg0, arg1) {
     }
     let tmp3 = tmp4;
   } else {
-    tmp3 = isNaN(arg0) && isNaN(arg1);
-    const tmp = require;
+    tmp3 = _mod1314(arg0) && _mod1314(arg1);
   }
   return tmp3;
 }

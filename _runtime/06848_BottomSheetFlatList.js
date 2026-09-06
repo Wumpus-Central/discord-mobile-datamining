@@ -1,13 +1,10 @@
 // _runtime/06848_BottomSheetFlatList.js
-import cancelAnimationDefault from "01636_cancelAnimation.js";
-import createBottomSheetScrollableComponent from "06840_createBottomSheetScrollableComponent.js";
+import cancelAnimation from "01636_cancelAnimation.js";
 
-const animatedComponent = cancelAnimationDefault.createAnimatedComponent(require("get ActivityIndicator").FlatList);
-const memoResult = require("noop").memo(
-  createBottomSheetScrollableComponent.createBottomSheetScrollableComponent(
-    require("GESTURE_SOURCE").SCROLLABLE_TYPE.FLATLIST,
-    animatedComponent,
-  ),
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).FlatList);
+const module_6840 = fn(6840);
+const memoResult = fn(19).memo(
+  module_6840.createBottomSheetScrollableComponent(fn(6628).SCROLLABLE_TYPE.FLATLIST, animatedComponent),
 );
 memoResult.displayName = "BottomSheetFlatList";
 

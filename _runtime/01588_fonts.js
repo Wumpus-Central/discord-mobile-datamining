@@ -1,7 +1,7 @@
 // _runtime/01588_fonts.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 
-const Platform = get_ActivityIndicator.Platform;
+const Platform = _mod17.Platform;
 
 export const fonts = {
   regular: { fontFamily: "sans-serif", fontWeight: "normal" },

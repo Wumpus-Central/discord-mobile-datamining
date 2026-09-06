@@ -1,12 +1,12 @@
 // _runtime/06746_transformRotationProps.js
 import ComposedGestureName from "06714_ComposedGestureName.js";
-import isGestureEnabled from "06723_isGestureEnabled.js";
-import useGesture from "06738_useGesture.js";
+import DEFAULT_PROPS_TRANSFORMER from "06723_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6738 from "metro/06738__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 function transformRotationProps(arg0) {
-  arg0.changeEventCalculator = isGestureEnabled.getChangeEventCalculator(diffCalculator);
+  arg0.changeEventCalculator = DEFAULT_PROPS_TRANSFORMER.getChangeEventCalculator(diffCalculator);
   arg0.fillInDefaultValues = fillInDefaultValues;
   return arg0;
 }
@@ -34,12 +34,16 @@ fillInDefaultValues.__initData = {
 };
 const map = new Map();
 let closure_6 = {};
-arg5.useRotationGesture = function useRotationGesture(gestureHandlerProps) {
+
+export const useRotationGesture = function useRotationGesture(gestureHandlerProps) {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_6;
   }
-  const clonedAndRemappedConfig = isGestureEnabled.useClonedAndRemappedConfig(tmp, map, transformRotationProps);
-  const obj = isGestureEnabled;
-  return useGesture.useGesture(ComposedGestureName.SingleGestureName.Rotation, clonedAndRemappedConfig);
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(
+    tmp,
+    map,
+    transformRotationProps,
+  );
+  return _mod6738.useGesture(ComposedGestureName.SingleGestureName.Rotation, clonedAndRemappedConfig);
 };

@@ -1,5 +1,5 @@
 // _runtime/01801_AnimatedText.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import createAnimatedComponent from "01670_createAnimatedComponent.js";
+import _mod17 from "metro/00017__.js";
+import _isNativeReflectConstruct from "metro/01670__.js";
 
-export const AnimatedText = createAnimatedComponent.createAnimatedComponent(get_ActivityIndicator.Text);
+export const AnimatedText = _isNativeReflectConstruct.createAnimatedComponent(_mod17.Text);

@@ -3,29 +3,36 @@ import _modDef38 from "metro/00038__.js";
 import renderElementAll from "00114_renderElement.js";
 import childrenDefault from "00251_children.js";
 import RootTagContext from "00253_RootTagContext.js";
-import frozenDefault from "00257_frozen.js";
-import closure_4 from "00019_noop.js";
-import 00247__ from "metro/00247__.js";
-import { jsx } from "react/00021_jsxProd.js";
+import noop from "metro/00019__.js";
 
-require = arg1;
+const frozenDefault = tmp(257);
+require = fn;
+const module_247 = fn(247);
+const jsx = fn(21).jsx;
 
 export default function renderApplication(arg0) {
   ({ initialProps, rootTag, debugName, displayMode } = arg0);
   ({ RootComponent, WrapperComponent, rootViewStyle, isLogBox, useOffscreen } = arg0);
   _modDef38(rootTag, "Expect to have a valid rootTag, instead got ", rootTag);
-  let obj = { rootTag, WrapperComponent, rootViewStyle, initialProps: null, internal_excludeLogBox: null, children: null };
+  let obj = {
+    rootTag,
+    WrapperComponent,
+    rootViewStyle,
+    initialProps: null,
+    internal_excludeLogBox: null,
+    children: null,
+  };
   let frozen = initialProps;
   if (initialProps == null) {
     const _Object = Object;
     frozen = Object.freeze({});
   }
-  obj[3] = frozen;
-  obj[4] = isLogBox;
+  obj.initialProps = frozen;
+  obj.internal_excludeLogBox = isLogBox;
   obj = {};
   const merged = Object.assign(initialProps);
   obj.rootTag = rootTag;
-  obj[5] = <RootComponent />;
+  obj.children = <RootComponent />;
   let tmp4Result = tmp4(childrenDefault, obj);
   if (true === useOffscreen) {
     if (null != displayMode) {
@@ -33,16 +40,12 @@ export default function renderApplication(arg0) {
       if (displayMode === frozenDefault.VISIBLE) {
         str = "visible";
       }
-      obj = { mode: null, children: null };
-      obj[0] = str;
-      obj[1] = tmp4Result;
-      tmp4Result = tmp4(unstable_Activity.unstable_Activity, obj);
+      obj = { mode: str, children: tmp4Result };
+      tmp4Result = tmp4(noop.unstable_Activity, obj);
     }
   }
-  const tmp = importDefault;
-  const tmp5 = childrenDefault;
-  obj1 = { element: tmp4Result, rootTag: null };
+  const obj1 = { element: tmp4Result, rootTag: null };
   const obj4 = renderElementAll;
-  obj1[1] = RootTagContext.createRootTag(rootTag);
+  obj1.rootTag = RootTagContext.createRootTag(rootTag);
   obj4.renderElement(obj1);
-};
+}

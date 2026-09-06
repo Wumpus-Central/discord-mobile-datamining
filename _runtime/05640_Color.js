@@ -1,7 +1,7 @@
 // _runtime/05640_Color.js
-import keys2 from "05641_keys.js";
-import hasOwnProperty from "05645_hasOwnProperty.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import _mod5641 from "metro/05641__.js";
+import _mod5645 from "metro/05645__.js";
+import _slicedToArray from "metro/00032__.js";
 
 class Color {
   constructor(arg0, arg1) {
@@ -20,7 +20,7 @@ class Color {
       if (str) {
         tmp6 = closure_0;
         tmp7 = closure_1;
-        if (!(str in require("keys"))) {
+        if (!(str in closure_0(closure_1[1]))) {
           tmp8 = globalThis;
           _Error = Error;
           str2 = "Unknown model: ";
@@ -49,7 +49,7 @@ class Color {
       } else if (typeof global === "string") {
         tmp29 = closure_0;
         tmp30 = closure_1;
-        obj2 = require("hasOwnProperty");
+        obj2 = closure_0(closure_1[2]);
         iter = obj2.get(global);
         if (null === iter) {
           tmp31 = globalThis;
@@ -62,10 +62,10 @@ class Color {
           throw error1;
         } else {
           self.model = iter.model;
-          channels2 = require("keys")[self.model].channels;
+          channels2 = tmp29(tmp30[1])[self.model].channels;
           value = iter.value;
           num10 = 0;
-          self.color = require("../discord_app/index.native.tsx");
+          self.color = value.slice(0, channels2);
           num11 = 1;
           if (typeof iter.value[channels2] === "number") {
             num11 = iter.value[channels2];
@@ -81,12 +81,12 @@ class Color {
           self.model = str;
           tmp24 = closure_0;
           tmp25 = closure_1;
-          channels = require("keys")[self.model].channels;
+          channels = closure_0(closure_1[1])[self.model].channels;
           tmp26 = globalThis;
           _Array = Array;
           slice = Array.prototype.slice;
           call = slice.call;
-          tmp27 = typeof call === "unknown" ? require("../discord_app/index.native.tsx") : call(global, 0, channels);
+          tmp27 = typeof call === "unknown" ? slice(0, channels) : call(global, 0, channels);
           num8 = 1;
           for (let num9 = 0; num9 < channels; num9 = num9 + num8) {
             tmp28 = num9;
@@ -134,7 +134,7 @@ class Color {
             self.model = closure_4[joined];
             tmp20 = closure_0;
             tmp21 = closure_1;
-            labels = require("keys")[self.model].labels;
+            labels = closure_0(closure_1[1])[self.model].labels;
             items2 = [];
             num2 = 0;
             if (0 < labels.length) {
@@ -171,7 +171,7 @@ class Color {
       if (closure_5[self.model]) {
         tmp39 = closure_0;
         tmp40 = closure_1;
-        channels3 = require("keys")[self.model].channels;
+        channels3 = closure_0(closure_1[1])[self.model].channels;
         num14 = 0;
         num15 = 1;
         if (0 < channels3) {
@@ -191,7 +191,7 @@ class Color {
       _Math2 = Math;
       num16 = 1;
       num17 = 0;
-      self.valpha = require("../discord_app/index.native.tsx");
+      self.valpha = Math.max(0, Math.min(1, self.valpha));
       _Object = Object;
       if (Object.freeze) {
         _Object2 = Object;
@@ -207,14 +207,12 @@ class Color {
 }
 let closure_3 = ["keyword", "gray", "hex"];
 let obj = {};
-let keys = Object.keys(keys2);
-let iter = keys[Symbol.iterator]();
+let keys1 = Object.keys(_mod5641);
+let iter = keys1[Symbol.iterator]();
 const nextResult = iter.next();
 while (iter !== undefined) {
   let items = [];
-  let tmp3 = items;
-  let num = 0;
-  let arraySpreadResult = HermesBuiltin.arraySpread(keys2[nextResult].labels, 0);
+  let arraySpreadResult = HermesBuiltin.arraySpread(_mod5641[nextResult].labels, 0);
   class Color {
     constructor(arg0, arg1) {
       self = this;
@@ -232,7 +230,7 @@ while (iter !== undefined) {
         if (str) {
           tmp6 = closure_0;
           tmp7 = closure_1;
-          if (!(str in require("keys"))) {
+          if (!(str in closure_0(closure_1[1]))) {
             tmp8 = globalThis;
             _Error = Error;
             str2 = "Unknown model: ";
@@ -261,7 +259,7 @@ while (iter !== undefined) {
         } else if (typeof global === "string") {
           tmp29 = closure_0;
           tmp30 = closure_1;
-          obj2 = require("hasOwnProperty");
+          obj2 = closure_0(closure_1[2]);
           iter = obj2.get(global);
           if (null === iter) {
             tmp31 = globalThis;
@@ -274,10 +272,10 @@ while (iter !== undefined) {
             throw error1;
           } else {
             self.model = iter.model;
-            channels2 = require("keys")[self.model].channels;
+            channels2 = tmp29(tmp30[1])[self.model].channels;
             value = iter.value;
             num10 = 0;
-            self.color = require("../discord_app/index.native.tsx");
+            self.color = value.slice(0, channels2);
             num11 = 1;
             if (typeof iter.value[channels2] === "number") {
               num11 = iter.value[channels2];
@@ -293,12 +291,12 @@ while (iter !== undefined) {
             self.model = str;
             tmp24 = closure_0;
             tmp25 = closure_1;
-            channels = require("keys")[self.model].channels;
+            channels = closure_0(closure_1[1])[self.model].channels;
             tmp26 = globalThis;
             _Array = Array;
             slice = Array.prototype.slice;
             call = slice.call;
-            tmp27 = typeof call === "unknown" ? require("../discord_app/index.native.tsx") : call(global, 0, channels);
+            tmp27 = typeof call === "unknown" ? slice(0, channels) : call(global, 0, channels);
             num8 = 1;
             for (let num9 = 0; num9 < channels; num9 = num9 + num8) {
               tmp28 = num9;
@@ -346,7 +344,7 @@ while (iter !== undefined) {
               self.model = closure_4[joined];
               tmp20 = closure_0;
               tmp21 = closure_1;
-              labels = require("keys")[self.model].labels;
+              labels = closure_0(closure_1[1])[self.model].labels;
               items2 = [];
               num2 = 0;
               if (0 < labels.length) {
@@ -383,7 +381,7 @@ while (iter !== undefined) {
         if (closure_5[self.model]) {
           tmp39 = closure_0;
           tmp40 = closure_1;
-          channels3 = require("keys")[self.model].channels;
+          channels3 = closure_0(closure_1[1])[self.model].channels;
           num14 = 0;
           num15 = 1;
           if (0 < channels3) {
@@ -403,7 +401,7 @@ while (iter !== undefined) {
         _Math2 = Math;
         num16 = 1;
         num17 = 0;
-        self.valpha = require("../discord_app/index.native.tsx");
+        self.valpha = Math.max(0, Math.min(1, self.valpha));
         _Object = Object;
         if (Object.freeze) {
           _Object2 = Object;
@@ -433,7 +431,6 @@ function getset(cmyk, arg1, arg2) {
   for (const item10014 of tmp) {
     let tmp4 = dependencyMap[item10014];
     if (!tmp4) {
-      let tmp5 = item10014;
       let items1 = [];
       tmp3[tmp2] = items1;
       tmp4 = items1;
@@ -446,8 +443,8 @@ function getset(cmyk, arg1, arg2) {
     const self = this;
     if (undefined !== arg0) {
       let tmp5 = arg0;
-      if (callback) {
-        tmp5 = callback(arg0);
+      if (closure_2) {
+        tmp5 = closure_2(arg0);
       }
       const tmp7 = self[closure_0]();
       tmp7.color[closure_1] = tmp5;
@@ -455,8 +452,8 @@ function getset(cmyk, arg1, arg2) {
     } else {
       const tmp3 = self[closure_0]().color[closure_1];
       tmp4 = tmp3;
-      if (callback) {
-        tmp4 = callback(tmp3);
+      if (closure_2) {
+        tmp4 = closure_2(tmp3);
       }
     }
     return tmp4;
@@ -466,8 +463,8 @@ function maxfn(arg0) {
   closure_0 = arg0;
   return (arg0) => Math.max(0, Math.min(closure_0, arg0));
 }
-let closure_5 = {};
-obj = {
+const hasOwnProperty = {};
+const point = {
   toString() {
     return this.string();
   },
@@ -477,7 +474,7 @@ obj = {
   string(num) {
     const self = this;
     let self2 = this;
-    if (!(this.model in hasOwnProperty.to)) {
+    if (!(this.model in _mod5645.to)) {
       self2 = self.rgb();
     }
     num = 1;
@@ -488,7 +485,7 @@ obj = {
       color = [];
       color[HermesBuiltin.arraySpread(roundResult.color, 0)] = self.valpha;
     }
-    const to = hasOwnProperty.to;
+    const to = _mod5645.to;
     return to[roundResult.model](color);
   },
   percentString(num) {
@@ -501,7 +498,7 @@ obj = {
       items[HermesBuiltin.arraySpread(roundResult.color, 0)] = this.valpha;
       color = items;
     }
-    const rgb = hasOwnProperty.to.rgb;
+    const rgb = _mod5645.to.rgb;
     return rgb.percent(color);
   },
   array() {
@@ -519,9 +516,9 @@ obj = {
   object() {
     const self = this;
     obj = {};
-    const channels = keys2[this.model].channels;
+    const channels = _mod5641[this.model].channels;
     for (let num = 0; num < channels; num = num + 1) {
-      obj[keys2[this.model].labels[num]] = self.color[num];
+      obj[_mod5641[this.model].labels[num]] = self.color[num];
     }
     if (1 !== self.valpha) {
       obj.alpha = self.valpha;
@@ -568,7 +565,7 @@ obj = {
     } = this);
     return Color(items, model);
   },
-  alpha(alphaResult, arg1) {
+  alpha(alphaResult) {
     const self = this;
     if (undefined !== alphaResult) {
       const items = [];
@@ -582,26 +579,26 @@ obj = {
     }
     return valpha;
   },
-  red: getset("rgb", 0, require("00255_get_hairlineWidth.js")),
-  green: getset("rgb", 1, require("00255_get_hairlineWidth.js")),
-  blue: getset("rgb", 2, require("00255_get_hairlineWidth.js")),
+  red: getset("rgb", 0, maxfn(255)),
+  green: getset("rgb", 1, maxfn(255)),
+  blue: getset("rgb", 2, maxfn(255)),
   hue: getset(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (arg0) => ((arg0 % 360) + 360) % 360),
-  saturationl: getset("hsl", 1, require("00100_getConstants.js")),
-  lightness: getset("hsl", 2, require("00100_getConstants.js")),
-  saturationv: getset("hsv", 1, require("00100_getConstants.js")),
-  value: getset("hsv", 2, require("00100_getConstants.js")),
-  chroma: getset("hcg", 1, require("00100_getConstants.js")),
-  gray: getset("hcg", 2, require("00100_getConstants.js")),
-  white: getset("hwb", 1, require("00100_getConstants.js")),
-  wblack: getset("hwb", 2, require("00100_getConstants.js")),
-  cyan: getset("cmyk", 0, require("00100_getConstants.js")),
-  magenta: getset("cmyk", 1, require("00100_getConstants.js")),
-  yellow: getset("cmyk", 2, require("00100_getConstants.js")),
-  black: getset("cmyk", 3, require("00100_getConstants.js")),
+  saturationl: getset("hsl", 1, maxfn(100)),
+  lightness: getset("hsl", 2, maxfn(100)),
+  saturationv: getset("hsv", 1, maxfn(100)),
+  value: getset("hsv", 2, maxfn(100)),
+  chroma: getset("hcg", 1, maxfn(100)),
+  gray: getset("hcg", 2, maxfn(100)),
+  white: getset("hwb", 1, maxfn(100)),
+  wblack: getset("hwb", 2, maxfn(100)),
+  cyan: getset("cmyk", 0, maxfn(100)),
+  magenta: getset("cmyk", 1, maxfn(100)),
+  yellow: getset("cmyk", 2, maxfn(100)),
+  black: getset("cmyk", 3, maxfn(100)),
   x: getset("xyz", 0, maxfn(95.047)),
-  y: getset("xyz", 1, require("00100_getConstants.js")),
+  y: getset("xyz", 1, maxfn(100)),
   z: getset("xyz", 2, maxfn(108.833)),
-  l: getset("lab", 0, require("00100_getConstants.js")),
+  l: getset("lab", 0, maxfn(100)),
   a: getset("lab", 1),
   b: getset("lab", 2),
   keyword(color) {
@@ -609,8 +606,7 @@ obj = {
       let keywordResult = Color(color);
     } else {
       const self = this;
-      keywordResult = keys2[this.model].keyword(this.color);
-      obj = keys2[this.model];
+      keywordResult = _mod5641[this.model].keyword(this.color);
     }
     return keywordResult;
   },
@@ -619,7 +615,7 @@ obj = {
       let hexResult = Color(arg0);
     } else {
       const self = this;
-      const to = hasOwnProperty.to;
+      const to = _mod5645.to;
       hexResult = to.hex(this.rgb().round().color);
       const rgbResult = this.rgb();
     }
@@ -641,7 +637,7 @@ obj = {
       if (1 === formatted.length) {
         text = `0${arr}`;
       }
-      const to = hasOwnProperty.to;
+      const to = _mod5645.to;
       return to.hex(rgbResult.round().color) + text;
     }
   },
@@ -654,16 +650,12 @@ obj = {
     const items = [];
     const entries = color.entries();
     while (tmp2 !== undefined) {
-      let tmp4 = callback;
-      let tmp5 = callback(tmp3, 2);
+      let tmp5 = _slicedToArray(tmp3, 2);
       let result = tmp5[1] / 255;
       let tmp7 = result;
       if (result <= 0.04045) {
-        let tmp10 = result;
         let result1 = tmp7 / 12.92;
       } else {
-        let tmp8 = result;
-        let num = 2.4;
         result1 = ((tmp7 + 0.055) / 1.055) ** 2.4;
       }
       items[tmp5[0]] = result1;
@@ -766,61 +758,56 @@ obj = {
     hslResult.color[0] = sum;
     return hslResult;
   },
-  mix(gradientSecondaryBackground, hexResult, arg2, rgb) {
+  mix(gradientSecondaryBackground, hexResult) {
     if (gradientSecondaryBackground) {
       if (gradientSecondaryBackground.rgb) {
         const self = this;
-        const rgbResult = gradientSecondaryBackground.rgb();
-        const rgbResult1 = this.rgb();
+        const color = gradientSecondaryBackground.rgb();
+        const color2 = this.rgb();
         let num = 0.5;
         if (undefined !== hexResult) {
           num = hexResult;
         }
         const diff = 2 * num - 1;
-        const diff1 = rgbResult.alpha() - rgbResult1.alpha();
+        const diff1 = color.alpha() - color2.alpha();
         let result = diff;
         if (diff * diff1 !== -1) {
           result = (diff + diff1) / (1 + diff * diff1);
         }
         const result1 = (result + 1) / 2;
         const diff2 = 1 - result1;
-        const result2 = result1 * rgbResult.red();
-        const result3 = diff2 * rgbResult1.red();
-        const result4 = result1 * rgbResult.green();
-        const result5 = diff2 * rgbResult1.green();
-        const result6 = result1 * rgbResult.blue();
-        const result7 = diff2 * rgbResult1.blue();
-        const result8 = rgbResult.alpha() * num;
-        return Color.rgb(
-          result2 + result3,
-          result4 + result5,
-          result6 + result7,
-          result8 + rgbResult1.alpha() * (1 - num),
-        );
+        const result2 = result1 * color.red();
+        const result3 = diff2 * color2.red();
+        const result4 = result1 * color.green();
+        const result5 = diff2 * color2.green();
+        const result6 = result1 * color.blue();
+        const result7 = diff2 * color2.blue();
+        const result8 = color.alpha() * num;
+        return Color.rgb(result2 + result3, result4 + result5, result6 + result7, result8 + color2.alpha() * (1 - num));
       }
     }
-    error = new Error(
+    const error = new Error(
       'Argument to "mix" was not a Color instance, but rather an instance of ' + typeof gradientSecondaryBackground,
     );
     throw error;
   },
 };
-Color.prototype = obj;
+Color.prototype = point;
 function _loop(item10136) {
-  const _require = item10136;
+  _require = item10136;
   if (closure_3.includes(item10136)) {
     return 1;
   } else {
-    channels = _require(channels[1])[item10136].channels;
+    channels = require("metro/05641__.js")[item10136].channels;
     Color.prototype[item10136] = function () {
       const self = this;
       const items = [...arguments];
-      if (this.model === item10136) {
-        let tmp8Result = closure_1_6(self);
+      if (this.model === closure_0) {
+        let tmp8Result = Color(self);
       } else if (items.length > 0) {
-        tmp8Result = closure_1_6(items, tmp);
+        tmp8Result = Color(items, tmp);
       } else {
-        const rawResult = item10136(channels[1])[self.model][tmp].raw(self.color);
+        const rawResult = _mod5641[self.model][tmp].raw(self.color);
         const _Array = Array;
         let tmp2 = rawResult;
         if (!Array.isArray(rawResult)) {
@@ -829,9 +816,7 @@ function _loop(item10136) {
         }
         const items2 = [];
         items2[HermesBuiltin.arraySpread(tmp2, 0)] = self.valpha;
-        tmp8Result = closure_1_6(items2, tmp);
-        obj = item10136(channels[1])[self.model][tmp];
-        const tmp8 = closure_1_6;
+        tmp8Result = Color(items2, tmp);
       }
       return tmp8Result;
     };
@@ -843,7 +828,6 @@ function _loop(item10136) {
         first = items;
         if (0 < channels) {
           do {
-            let tmp2 = num;
             if (typeof items[num] !== "number") {
               items[num] = 0;
             }
@@ -852,11 +836,11 @@ function _loop(item10136) {
           } while (num < tmp4);
         }
       }
-      return closure_1_6(first, closure_0);
+      return Color(first, closure_0);
     };
   }
 }
-keys = Object.keys(keys2);
+keys1 = Object.keys(_mod5641);
 for (const item10136 of keys1) {
   let _loopResult = _loop(item10136);
   continue;

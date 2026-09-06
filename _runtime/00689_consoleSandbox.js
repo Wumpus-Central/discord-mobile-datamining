@@ -1,46 +1,47 @@
 // _runtime/00689_consoleSandbox.js
-import __SENTRY_DEBUG__ from "metro/00688___SENTRY_DEBUG__.js";
-import getGlobalSingleton from "00690_getGlobalSingleton.js";
+import _mod686 from "metro/00686__.js";
+import _mod688 from "metro/00688__.js";
+import _mod690 from "metro/00690__.js";
 
 require = arg1;
 let dependencyMap = arg6;
-function consoleSandbox(arg0) {
+function consoleSandbox(fn) {
   if ("console" in console(686).GLOBAL_OBJ) {
     console = console(686).GLOBAL_OBJ.console;
     dependencyMap = {};
     const _Object = Object;
     const keys = Object.keys(obj);
-    const item = keys.forEach((arg0) => {
-      closure_1[arg0] = console[arg0];
-      console[arg0] = closure_1_2[arg0];
+    const item = keys.forEach((item) => {
+      closure_1[item] = console[item];
+      console[item] = obj[item];
     });
     try {
-      const item1 = keys.forEach((arg0) => {
-        console[arg0] = table[arg0];
+      const item1 = keys.forEach((item) => {
+        console[item] = closure_1[item];
       });
-      return arg0();
+      return fn();
     } catch (tmp8) {
-      const item2 = arr.forEach((arg0) => {
-        console[arg0] = table[arg0];
+      const item2 = arr.forEach((item) => {
+        console[item] = closure_1[item];
       });
       throw tmp8;
     }
   } else {
-    return arg0();
+    return fn();
   }
 }
 function _maybeLog(arg0) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = [...arguments].slice();
   let str = _require;
   let fn = dependencyMap;
-  const DEBUG_BUILD = require("metro/00688___SENTRY_DEBUG__.js").DEBUG_BUILD;
+  const DEBUG_BUILD = require("metro/00688__.js").DEBUG_BUILD;
   if (!DEBUG_BUILD) {
     if (DEBUG_BUILD) {
       consoleSandbox(() => {
-        const _console = callback(table[0]).GLOBAL_OBJ.console;
-        const items = ["Sentry Logger [" + callback + "]:", ...closure_1];
-        _console[callback].apply(items);
+        const _console = _mod686.GLOBAL_OBJ.console;
+        const items = ["Sentry Logger [" + closure_0 + "]:", ...closure_1];
+        _console[closure_0].apply(items);
       });
     }
   } else {
@@ -56,30 +57,30 @@ function _maybeLog(arg0) {
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let obj = {};
-obj = {
+let originalConsoleMethods = {};
+originalConsoleMethods = {
   enable() {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      let globalSingleton = getGlobalSingleton.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
-      const tmpResult = getGlobalSingleton;
+    if (_mod688.DEBUG_BUILD) {
+      let globalSingleton = _mod690.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
+      const tmpResult = _mod690;
     } else {
       globalSingleton = { enabled: false };
     }
     globalSingleton.enabled = true;
   },
   disable() {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      let globalSingleton = getGlobalSingleton.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
-      const tmpResult = getGlobalSingleton;
+    if (_mod688.DEBUG_BUILD) {
+      let globalSingleton = _mod690.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
+      const tmpResult = _mod690;
     } else {
       globalSingleton = { enabled: false };
     }
     globalSingleton.enabled = false;
   },
   isEnabled() {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      let globalSingleton = getGlobalSingleton.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
-      const tmpResult = getGlobalSingleton;
+    if (_mod688.DEBUG_BUILD) {
+      let globalSingleton = _mod690.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
+      const tmpResult = _mod690;
     } else {
       globalSingleton = { enabled: false };
     }
@@ -101,7 +102,8 @@ obj = {
     _maybeLog();
   },
 };
-arg5.CONSOLE_LEVELS = ["debug", "info", "warn", "error", "log", "assert", "trace"];
-arg5.consoleSandbox = consoleSandbox;
-arg5.debug = obj;
-arg5.originalConsoleMethods = obj;
+
+export const CONSOLE_LEVELS = ["debug", "info", "warn", "error", "log", "assert", "trace"];
+export { consoleSandbox };
+export const debug = originalConsoleMethods;
+export { originalConsoleMethods };

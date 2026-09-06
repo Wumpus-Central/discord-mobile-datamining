@@ -1,6 +1,6 @@
 // _runtime/01205_ReflectionJsonReader.js
-import closure_2 from "metro/00032__slicedToArray.js";
-import closure_3 from "metro/00041__classCallCheck.js";
+import _slicedToArray from "metro/00032__.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const ReflectionJsonReader = require;
@@ -11,26 +11,27 @@ class ReflectionJsonReader {
     return;
   }
 }
-let items = [
-  {
-    key: "prepare",
-    value: function prepare() {
-      const self = this;
-      if (undefined === this.fMap) {
-        self.fMap = {};
-        let fields = self.info.fields;
-        if (null === fields) {
-          fields = [];
-        }
-        for (const item10010 of fields) {
-          self.fMap[item10010.name] = item10010;
-          self.fMap[item10010.jsonName] = item10010;
-          self.fMap[item10010.localName] = item10010;
-          continue;
-        }
+const entry = {
+  key: "prepare",
+  value: function prepare() {
+    const self = this;
+    if (undefined === this.fMap) {
+      self.fMap = {};
+      let fields = self.info.fields;
+      if (null === fields) {
+        fields = [];
       }
-    },
+      for (const item10010 of fields) {
+        self.fMap[item10010.name] = item10010;
+        self.fMap[item10010.jsonName] = item10010;
+        self.fMap[item10010.localName] = item10010;
+        continue;
+      }
+    }
   },
+};
+let items = [
+  entry,
   {
     key: "assert",
     value: function assert(arg0, arg1, arg2) {
@@ -48,7 +49,7 @@ let items = [
         const self = this;
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        error = new Error("Cannot parse JSON " + str + " for " + this.info.typeName + "#" + arg1);
+        const error = new Error("Cannot parse JSON " + str + " for " + this.info.typeName + "#" + arg1);
         throw error;
       }
     },
@@ -57,20 +58,17 @@ let items = [
     key: "read",
     value: function read(arg0, arg1, ignoreUnknownFields) {
       const self = this;
-      let prepareResult = this.prepare();
+      this.prepare();
       const items = [];
       const entries = Object.entries(arg0);
       while (tmp3 !== undefined) {
-        let tmp5 = callback;
-        let tmp6 = callback(tmp4, 2);
+        let tmp6 = _slicedToArray(tmp4, 2);
         [tmp7, tmp9] = tmp6;
         let tmp10 = self.fMap[tmp7];
         let obj = tmp10;
         if (tmp10) {
-          let tmp16 = tmp10;
           let localName = obj.localName;
           if (obj.oneof) {
-            let tmp18 = tmp10;
             if (items.includes(obj.oneof)) {
               let _Error2 = Error;
               let _HermesInternal2 = HermesInternal;
@@ -78,90 +76,59 @@ let items = [
               let str5 = '" of ';
               let str6 = 'Multiple members of the oneof group "';
               let tmp99 = new.target;
-              prepareResult = new.target;
-              prepareResult = new Error(
+              let tmp100 = new.target;
+              let error = new Error(
                 'Multiple members of the oneof group "' +
                   tmp10.oneof +
                   '" of ' +
                   self.info.typeName +
                   " are present in JSON.",
               );
-              throw prepareResult;
+              throw error;
             } else {
-              let tmp19 = tmp10;
               let arr = items.push(obj.oneof);
               obj = { oneofKind: null };
-              let tmp21 = localName;
-              obj[0] = localName;
+              obj.oneofKind = localName;
               arg1[obj.oneof] = obj;
               let tmp17 = obj;
             }
           } else {
             tmp17 = arg1;
           }
-          let tmp22 = tmp10;
           if ("map" == obj.kind) {
-            let tmp61 = tmp9;
             if (null === tmp9) {
               continue;
             } else {
-              prepareResult = ReflectionJsonReader;
-              prepareResult = ReflectionJsonReader;
-              prepareResult = dependencyMap;
-              prepareResult = dependencyMap;
               let obj6 = ReflectionJsonReader(1189);
-              prepareResult = tmp9;
-              prepareResult = tmp10;
-              prepareResult = self.assert(obj6.isJsonObject(tmp9), obj.name, tmp9);
-              prepareResult = tmp17;
-              prepareResult = localName;
-              prepareResult = tmp17[localName];
+              let assertResult = self.assert(obj6.isJsonObject(tmp9), obj.name, tmp9);
+              let tmp124 = tmp17[localName];
               let _Object = Object;
-              prepareResult = Object.entries(tmp9);
-              let tmp62 = prepareResult;
-              for (const item10165 of prepareResult) {
-                let tmp63 = callback;
-                let tmp64 = callback(item10165, 2);
+              let entries1 = Object.entries(tmp9);
+              for (const item10165 of entries1) {
+                let tmp64 = _slicedToArray(item10165, 2);
                 let tmp65 = tmp64[1];
                 let tmp66 = tmp65;
-                let tmp67 = tmp10;
-                let assertResult = self.assert(null !== tmp65, obj.name + " map value", null);
+                let assertResult1 = self.assert(null !== tmp65, obj.name + " map value", null);
                 let internalJsonReadResult;
                 let kind3 = obj.V.kind;
                 if ("message" === kind3) {
-                  let tmp74 = tmp10;
                   let V2 = obj.V;
                   let TResult = V2.T();
-                  let tmp75 = tmp65;
                   internalJsonReadResult = TResult.internalJsonRead(tmp66, arg2);
                 } else if ("enum" === kind3) {
-                  let tmp70 = tmp10;
                   let V = obj.V;
-                  let tmp71 = tmp65;
-                  let tmp72 = self;
                   let enumResult = self.enum(V.T(), tmp66, obj.name, arg2.ignoreUnknownFields);
                   internalJsonReadResult = enumResult;
                   continue;
                 } else if ("scalar" === kind3) {
-                  prepareResult = tmp65;
-                  prepareResult = tmp10;
-                  prepareResult = self;
                   internalJsonReadResult = self.scalar(tmp66, obj.V.T, obj.V.L, obj.name);
                 }
-                let tmp76 = internalJsonReadResult;
-                let tmp77 = tmp10;
-                let tmp78 = tmp65;
-                let assertResult1 = self.assert(undefined !== internalJsonReadResult, obj.name + " map value", tmp66);
+                let assertResult2 = self.assert(undefined !== internalJsonReadResult, obj.name + " map value", tmp66);
                 let first = tmp64[0];
-                let tmp81 = ReflectionJsonReader;
                 let tmp82 = ReflectionJsonReader;
-                let tmp83 = dependencyMap;
-                let tmp84 = dependencyMap;
                 if (obj.K == ReflectionJsonReader(1201).ScalarType.BOOL) {
-                  let tmp85 = first;
                   let tmp86 = "true" == first;
                   if (!tmp86) {
-                    let tmp87 = first;
                     let tmp88 = "false" != first;
                     if (tmp88) {
                       tmp88 = first;
@@ -170,126 +137,73 @@ let items = [
                   }
                   first = tmp86;
                 }
-                let tmp89 = prepareResult;
-                let tmp90 = first;
-                let tmp91 = tmp10;
-                let tmp92 = tmp81;
-                let tmp93 = tmp83;
-                let tmp94 = self;
-                let tmp95 = first;
                 let str3 = self.scalar(first, obj.K, tmp82(1201).LongType.STRING, obj.name);
                 let str = str3.toString();
-                let tmp97 = str;
-                let tmp98 = internalJsonReadResult;
-                prepareResult[str] = internalJsonReadResult;
+                tmp124[str] = internalJsonReadResult;
+                continue;
+              }
+            }
+          } else if (obj.repeat) {
+            if (null === tmp9) {
+              continue;
+            } else {
+              let _Array = Array;
+              let assertResult3 = self.assert(Array.isArray(tmp9), obj.name, tmp9);
+              let arr2 = tmp17[localName];
+              for (const item10121 of tmp9) {
+                let tmp42 = item10121;
+                let assertResult4 = self.assert(null !== item10121, obj.name, null);
+                let internalJsonReadResult1;
+                let kind2 = obj.kind;
+                if ("message" === kind2) {
+                  let TResult1 = obj.T();
+                  internalJsonReadResult1 = TResult1.internalJsonRead(tmp42, arg2);
+                } else if ("enum" === kind2) {
+                  let enumResult1 = self.enum(obj.T(), tmp42, obj.name, arg2.ignoreUnknownFields);
+                  internalJsonReadResult1 = enumResult1;
+                  continue;
+                } else if ("scalar" === kind2) {
+                  internalJsonReadResult1 = self.scalar(tmp42, obj.T, obj.L, obj.name);
+                }
+                let assertResult5 = self.assert(undefined !== internalJsonReadResult1, obj.name, tmp9);
+                arr = arr2.push(internalJsonReadResult1);
                 continue;
               }
             }
           } else {
-            prepareResult = tmp10;
-            if (obj.repeat) {
-              let tmp40 = tmp9;
+            let kind = obj.kind;
+            if ("message" === kind) {
               if (null === tmp9) {
+                if ("google.protobuf.Value" != obj.T().typeName) {
+                  let assertResult6 = self.assert(undefined === obj.oneof, `${obj.name} (oneof member)`, null);
+                  continue;
+                }
+              }
+              let TResult2 = obj.T();
+              tmp17[localName] = TResult2.internalJsonRead(tmp9, ignoreUnknownFields, tmp17[localName]);
+            } else if ("enum" === kind) {
+              let enumResult2 = self.enum(obj.T(), tmp9, obj.name, ignoreUnknownFields.ignoreUnknownFields);
+              if (false === enumResult2) {
                 continue;
               } else {
-                let _Array = Array;
-                prepareResult = tmp9;
-                prepareResult = tmp10;
-                prepareResult = self.assert(Array.isArray(tmp9), obj.name, tmp9);
-                prepareResult = tmp17;
-                prepareResult = localName;
-                let arr2 = tmp17[localName];
-                prepareResult = tmp9;
-                let tmp41 = prepareResult;
-                for (const item10121 of tmp9) {
-                  let tmp42 = item10121;
-                  let tmp43 = tmp10;
-                  let assertResult2 = self.assert(null !== item10121, obj.name, null);
-                  let internalJsonReadResult1;
-                  let kind2 = obj.kind;
-                  if ("message" === kind2) {
-                    let tmp53 = tmp10;
-                    let TResult1 = obj.T();
-                    let tmp54 = item10121;
-                    internalJsonReadResult1 = TResult1.internalJsonRead(tmp42, arg2);
-                  } else if ("enum" === kind2) {
-                    let tmp49 = tmp10;
-                    let tmp50 = item10121;
-                    let tmp51 = self;
-                    let enumResult1 = self.enum(obj.T(), tmp42, obj.name, arg2.ignoreUnknownFields);
-                    internalJsonReadResult1 = enumResult1;
-                    continue;
-                  } else if ("scalar" === kind2) {
-                    let tmp46 = item10121;
-                    let tmp47 = tmp10;
-                    let tmp48 = self;
-                    internalJsonReadResult1 = self.scalar(tmp42, obj.T, obj.L, obj.name);
-                  }
-                  let tmp55 = internalJsonReadResult1;
-                  let tmp56 = tmp10;
-                  let tmp57 = tmp9;
-                  let assertResult3 = self.assert(undefined !== internalJsonReadResult1, obj.name, tmp9);
-                  let tmp59 = arr2;
-                  arr = arr2.push(internalJsonReadResult1);
-                  continue;
-                }
+                tmp17[localName] = tmp28;
               }
-            } else {
-              let tmp23 = tmp10;
-              let kind = obj.kind;
-              if ("message" === kind) {
-                let tmp32 = tmp9;
-                if (null === tmp9) {
-                  let tmp33 = tmp10;
-                  if ("google.protobuf.Value" != obj.T().typeName) {
-                    let tmp38 = tmp10;
-                    let assertResult4 = self.assert(undefined === obj.oneof, `${obj.name} (oneof member)`, null);
-                    continue;
-                  }
-                }
-                let tmp34 = tmp17;
-                let tmp35 = localName;
-                let tmp36 = tmp10;
-                let TResult2 = obj.T();
-                let tmp37 = tmp9;
-                tmp17[localName] = TResult2.internalJsonRead(tmp9, ignoreUnknownFields, tmp17[localName]);
-              } else if ("enum" === kind) {
-                let tmp24 = tmp10;
-                let tmp25 = tmp9;
-                let tmp26 = self;
-                let enumResult2 = self.enum(obj.T(), tmp9, obj.name, ignoreUnknownFields.ignoreUnknownFields);
-                if (false === enumResult2) {
-                  continue;
-                } else {
-                  let tmp29 = tmp17;
-                  let tmp30 = localName;
-                  let tmp31 = enumResult2;
-                  tmp17[localName] = tmp28;
-                }
-              } else if ("scalar" === kind) {
-                prepareResult = tmp17;
-                prepareResult = localName;
-                prepareResult = tmp9;
-                prepareResult = tmp10;
-                prepareResult = self;
-                tmp17[localName] = self.scalar(tmp9, obj.T, obj.L, obj.name);
-              }
+            } else if ("scalar" === kind) {
+              tmp17[localName] = self.scalar(tmp9, obj.T, obj.L, obj.name);
             }
           }
           continue;
         } else if (!ignoreUnknownFields.ignoreUnknownFields) {
           let _Error = Error;
-          let tmp11 = tmp7;
           let _HermesInternal = HermesInternal;
           str = " from JSON format. JSON key: ";
           let str2 = "Found unknown field while reading ";
           let tmp12 = new.target;
           let tmp13 = new.target;
-          error = new Error(
+          let error1 = new Error(
             "Found unknown field while reading " + self.info.typeName + " from JSON format. JSON key: " + tmp8,
           );
-          let tmp15 = error;
-          throw error;
+          throw error1;
         }
         continue;
       }
@@ -297,7 +211,7 @@ let items = [
   },
   {
     key: "enum",
-    value: function _enum(arg0, str) {
+    value: function _enum(arg0, str, arg2, arg3) {
       const self = this;
       if ("google.protobuf.NullValue" == arg0[0]) {
         const _HermesInternal = HermesInternal;
@@ -366,7 +280,7 @@ let items = [
   },
   {
     key: "scalar",
-    value: function scalar(flag, arg1, STRING) {
+    value: function scalar(flag, arg1, STRING, arg3) {
       try {
         if (ReflectionJsonReader(1201).ScalarType.DOUBLE !== arg1) {
           if (tmp3(1201).ScalarType.FLOAT !== arg1) {

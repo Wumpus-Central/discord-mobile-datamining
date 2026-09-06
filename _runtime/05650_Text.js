@@ -1,14 +1,14 @@
 // _runtime/05650_Text.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 import jsxProd from "react/00021_jsxProd.js";
-import createStandardNavigationFactories from "01484_createStandardNavigationFactories.js";
+import Link from "01484_Link.js";
 
-const Text = get_ActivityIndicator.Text;
+const Text = _mod17.Text;
 const jsx = jsxProd.jsx;
 
 export const Text = function Text(style) {
-  const merged = Object.assign(style, Object.create(null));
-  let obj = createStandardNavigationFactories;
+  const merged = Object.assign(style, Object.assign({ style: 0 }));
+  let obj = Link;
   const theme = obj.useTheme();
   obj = {};
   ({ colors, fonts } = theme);

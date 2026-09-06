@@ -1,25 +1,21 @@
 // _runtime/00736_mergeScopeData.js
 import spanToJSON from "00684_spanToJSON.js";
-import merge from "00711_merge.js";
-import getClient from "00713_getClient.js";
-import getDynamicSamplingContextFromSpan from "00722_getDynamicSamplingContextFromSpan.js";
+import _mod711 from "metro/00711__.js";
+import _mod713 from "metro/00713__.js";
+import _mod722 from "metro/00722__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function mergeScopeData(extra) {
+function mergeScopeData(extra, arg1) {
   ({ level, breadcrumbs, fingerprint, eventProcessors, attachments, propagationContext, transactionName, span } = arg1);
   ({ extra, tags, attributes, user, contexts, sdkProcessingMetadata } = arg1);
-  let obj = merge;
+  let obj = _mod711;
   extra.extra = obj.merge(extra.extra, extra, 1);
-  extra.tags = merge.merge(extra.tags, tags, 1);
-  const obj2 = merge;
-  extra.attributes = merge.merge(extra.attributes, attributes, 1);
-  const obj3 = merge;
-  extra.user = merge.merge(extra.user, user, 1);
-  const obj4 = merge;
-  extra.contexts = merge.merge(extra.contexts, contexts, 1);
-  const obj5 = merge;
-  extra.sdkProcessingMetadata = merge.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
+  extra.tags = _mod711.merge(extra.tags, tags, 1);
+  extra.attributes = _mod711.merge(extra.attributes, attributes, 1);
+  extra.user = _mod711.merge(extra.user, user, 1);
+  extra.contexts = _mod711.merge(extra.contexts, contexts, 1);
+  extra.sdkProcessingMetadata = _mod711.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
   if (level) {
     extra.level = level;
   }
@@ -55,7 +51,8 @@ function mergeScopeData(extra) {
   extra.propagationContext = obj;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
+
+export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1) {
   ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, extra, tags, user, contexts, level, transactionName } =
     arg1);
   if (Object.keys(extra).length) {
@@ -77,7 +74,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     extra.user = obj;
   }
   if (Object.keys(contexts).length) {
-    obj1 = {};
+    const obj1 = {};
     const merged6 = Object.assign(contexts);
     const merged7 = Object.assign(extra.contexts);
     extra.contexts = obj1;
@@ -93,18 +90,14 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     extra.transaction = transactionName;
   }
   if (span) {
-    const obj2 = { trace: null };
-    obj2[0] = spanToJSON.spanToTraceContext(span);
+    const obj2 = { trace: spanToJSON.spanToTraceContext(span) };
     const merged8 = Object.assign(extra.contexts);
     extra.contexts = obj2;
     const obj3 = { dynamicSamplingContext: null };
-    const obj6 = spanToJSON;
-    obj3[0] = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromSpan(span);
+    obj3.dynamicSamplingContext = _mod722.getDynamicSamplingContextFromSpan(span);
     const merged9 = Object.assign(extra.sdkProcessingMetadata);
     extra.sdkProcessingMetadata = obj3;
-    const obj8 = getDynamicSamplingContextFromSpan;
     const rootSpan = spanToJSON.getRootSpan(span);
-    const obj9 = spanToJSON;
     const description = spanToJSON.spanToJSON(rootSpan).description;
     let tmp31 = description;
     if (description) {
@@ -116,7 +109,6 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     if (tmp31) {
       extra.transaction = description;
     }
-    const obj10 = spanToJSON;
   }
   if (extra.fingerprint) {
     const _Array = Array;
@@ -149,8 +141,8 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     extra.sdkProcessingMetadata = obj4;
   }
 };
-arg5.getCombinedScopeData = function getCombinedScopeData(isolationScope, currentScope) {
-  const globalScope = getClient.getGlobalScope();
+export const getCombinedScopeData = function getCombinedScopeData(isolationScope, currentScope) {
+  const globalScope = _mod713.getGlobalScope();
   const scopeData = globalScope.getScopeData();
   if (isolationScope) {
     mergeScopeData(scopeData, isolationScope.getScopeData());
@@ -160,7 +152,7 @@ arg5.getCombinedScopeData = function getCombinedScopeData(isolationScope, curren
   }
   return scopeData;
 };
-arg5.mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
-  arg0[arg1] = merge.merge(arg0[arg1], arg2, 1);
+export const mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
+  arg0[arg1] = _mod711.merge(arg0[arg1], arg2, 1);
 };
-arg5.mergeScopeData = mergeScopeData;
+export { mergeScopeData };

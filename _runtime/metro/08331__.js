@@ -1,2 +1,3 @@
 // _runtime/metro/08331__.js
-arg5.default = { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+
+export default { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };

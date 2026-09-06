@@ -1,13 +1,13 @@
 // _runtime/00694_generateSpanId.js
-import addContextToFrame from "00695_addContextToFrame.js";
+import uuid4 from "00695_uuid4.js";
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.generateSpanId = function generateSpanId() {
-  const obj = addContextToFrame;
-  return addContextToFrame.uuid4().substring(16);
+
+export const generateSpanId = function generateSpanId() {
+  return uuid4.uuid4().substring(16);
 };
-arg5.generateTraceId = function generateTraceId() {
-  return addContextToFrame.uuid4();
+export const generateTraceId = function generateTraceId() {
+  return uuid4.uuid4();
 };

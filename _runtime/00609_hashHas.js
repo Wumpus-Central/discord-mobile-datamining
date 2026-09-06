@@ -1,14 +1,13 @@
 // _runtime/00609_hashHas.js
-import getNative from "00600_getNative.js";
+import _mod600 from "metro/00600__.js";
 
 export default function hashHas(arg0) {
   const __data__ = this.__data__;
-  if (getNative) {
+  if (_mod600) {
     let tmp2 = undefined !== __data__[arg0];
   } else {
     const call = hasOwnProperty.call;
     tmp2 = typeof call === "unknown" ? hasOwnProperty(arg0) : call(__data__, arg0);
-    const tmp = hasOwnProperty;
   }
   return tmp2;
 }

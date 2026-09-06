@@ -1,26 +1,29 @@
 // _runtime/04156_processRelativeTime.js
-import hooks from "04153_hooks.js";
+import _mod4153 from "metro/04153__.js";
 
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = hooks;
+      const _module = _mod4153;
       const processRelativeTime2 = function processRelativeTime(arg0, arg1, arg2, arg3) {
-        const items = [`${arg0} Tage`, `${arg0} Tagen`];
-        const items1 = [`${arg0} Monate`, `${arg0} Monaten`];
-        const items2 = [`${arg0} Jahre`, `${arg0} Jahren`];
-        const tmp = {
+        const obj = {
           m: ["eine Minute", "einer Minute"],
           h: ["eine Stunde", "einer Stunde"],
           d: ["ein Tag", "einem Tag"],
-          dd: items,
+          dd: null,
           w: ["eine Woche", "einer Woche"],
           M: ["ein Monat", "einem Monat"],
-          MM: items1,
+          MM: null,
           y: ["ein Jahr", "einem Jahr"],
-          yy: items2,
-        }[arg2];
-        return arg1 ? tmp[0] : tmp[1];
+          yy: null,
+        };
+        const items = [`${arg0} Tage`, `${arg0} Tagen`];
+        obj.dd = items;
+        const items1 = [`${arg0} Monate`, `${arg0} Monaten`];
+        obj.MM = items1;
+        const items2 = [`${arg0} Jahre`, `${arg0} Jahren`];
+        obj.yy = items2;
+        return arg1 ? obj[arg2][0] : obj[arg2][1];
       };
       let obj = {
         months: null,
@@ -38,16 +41,16 @@ if (typeof exports === "object") {
         week: null,
       };
       const split = "Januar_Februar_M\u00E4rz_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split;
-      obj[0] = "Januar_Februar_M\u00E4rz_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_");
+      obj.months = "Januar_Februar_M\u00E4rz_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_");
       const split2 = "Jan._Feb._M\u00E4rz_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.".split;
-      obj[1] = "Jan._Feb._M\u00E4rz_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.".split("_");
+      obj.monthsShort = "Jan._Feb._M\u00E4rz_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.".split("_");
       const split3 = "Sonntag_Montag_Dienstag_Mittwoch_Donnerstag_Freitag_Samstag".split;
-      obj[3] = "Sonntag_Montag_Dienstag_Mittwoch_Donnerstag_Freitag_Samstag".split("_");
+      obj.weekdays = "Sonntag_Montag_Dienstag_Mittwoch_Donnerstag_Freitag_Samstag".split("_");
       const split4 = "So._Mo._Di._Mi._Do._Fr._Sa.".split;
-      obj[4] = "So._Mo._Di._Mi._Do._Fr._Sa.".split("_");
+      obj.weekdaysShort = "So._Mo._Di._Mi._Do._Fr._Sa.".split("_");
       const split5 = "So_Mo_Di_Mi_Do_Fr_Sa".split;
-      obj[5] = "So_Mo_Di_Mi_Do_Fr_Sa".split("_");
-      obj[7] = {
+      obj.weekdaysMin = "So_Mo_Di_Mi_Do_Fr_Sa".split("_");
+      obj.longDateFormat = {
         LT: "HH:mm",
         LTS: "HH:mm:ss",
         L: "DD.MM.YYYY",
@@ -55,7 +58,7 @@ if (typeof exports === "object") {
         LLL: "D. MMMM YYYY HH:mm",
         LLLL: "dddd, D. MMMM YYYY HH:mm",
       };
-      obj[8] = {
+      obj.calendar = {
         sameDay: "[heute um] LT [Uhr]",
         sameElse: "L",
         nextDay: "[morgen um] LT [Uhr]",
@@ -68,31 +71,22 @@ if (typeof exports === "object") {
         past: "vor %s",
         s: "ein paar Sekunden",
         ss: "%d Sekunden",
-        m: null,
+        m: processRelativeTime2,
         mm: "%d Minuten",
-        h: null,
+        h: processRelativeTime2,
         hh: "%d Stunden",
-        d: null,
-        dd: null,
-        w: null,
+        d: processRelativeTime2,
+        dd: processRelativeTime2,
+        w: processRelativeTime2,
         ww: "%d Wochen",
-        M: null,
-        MM: null,
-        y: null,
-        yy: null,
+        M: processRelativeTime2,
+        MM: processRelativeTime2,
+        y: processRelativeTime2,
+        yy: processRelativeTime2,
       };
-      obj[4] = processRelativeTime2;
-      obj[6] = processRelativeTime2;
-      obj[8] = processRelativeTime2;
-      obj[9] = processRelativeTime2;
-      obj[10] = processRelativeTime2;
-      obj[12] = processRelativeTime2;
-      obj[13] = processRelativeTime2;
-      obj[14] = processRelativeTime2;
-      obj[15] = processRelativeTime2;
-      obj[9] = obj;
-      obj[10] = /\d{1,2}\./;
-      obj[12] = { dow: 1, doy: 4 };
+      obj.relativeTime = obj;
+      obj.dayOfMonthOrdinalParse = /\d{1,2}\./;
+      obj.week = { dow: 1, doy: 4 };
       _module.defineLocale("de", obj);
     }
   }
@@ -101,21 +95,24 @@ if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function t(defineLocale) {
       function processRelativeTime(arg0, arg1, arg2, arg3) {
-        const items = [`${arg0} Tage`, `${arg0} Tagen`];
-        const items1 = [`${arg0} Monate`, `${arg0} Monaten`];
-        const items2 = [`${arg0} Jahre`, `${arg0} Jahren`];
-        const tmp = {
+        const obj = {
           m: ["eine Minute", "einer Minute"],
           h: ["eine Stunde", "einer Stunde"],
           d: ["ein Tag", "einem Tag"],
-          dd: items,
+          dd: null,
           w: ["eine Woche", "einer Woche"],
           M: ["ein Monat", "einem Monat"],
-          MM: items1,
+          MM: null,
           y: ["ein Jahr", "einem Jahr"],
-          yy: items2,
-        }[arg2];
-        return arg1 ? tmp[0] : tmp[1];
+          yy: null,
+        };
+        const items = [`${arg0} Tage`, `${arg0} Tagen`];
+        obj.dd = items;
+        const items1 = [`${arg0} Monate`, `${arg0} Monaten`];
+        obj.MM = items1;
+        const items2 = [`${arg0} Jahre`, `${arg0} Jahren`];
+        obj.yy = items2;
+        return arg1 ? obj[arg2][0] : obj[arg2][1];
       }
       return defineLocale.defineLocale("de", {
         months: "Januar_Februar_M\u00E4rz_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -168,21 +165,24 @@ if (typeof globalThis.define === "function") {
 }
 const moment = this.moment;
 function processRelativeTime(arg0, arg1, arg2, arg3) {
-  const items = [`${arg0} Tage`, `${arg0} Tagen`];
-  const items1 = [`${arg0} Monate`, `${arg0} Monaten`];
-  const items2 = [`${arg0} Jahre`, `${arg0} Jahren`];
-  const tmp = {
+  const obj = {
     m: ["eine Minute", "einer Minute"],
     h: ["eine Stunde", "einer Stunde"],
     d: ["ein Tag", "einem Tag"],
-    dd: items,
+    dd: null,
     w: ["eine Woche", "einer Woche"],
     M: ["ein Monat", "einem Monat"],
-    MM: items1,
+    MM: null,
     y: ["ein Jahr", "einem Jahr"],
-    yy: items2,
-  }[arg2];
-  return arg1 ? tmp[0] : tmp[1];
+    yy: null,
+  };
+  const items = [`${arg0} Tage`, `${arg0} Tagen`];
+  obj.dd = items;
+  const items1 = [`${arg0} Monate`, `${arg0} Monaten`];
+  obj.MM = items1;
+  const items2 = [`${arg0} Jahre`, `${arg0} Jahren`];
+  obj.yy = items2;
+  return arg1 ? obj[arg2][0] : obj[arg2][1];
 }
 obj = {
   months: "Januar_Februar_M\u00E4rz_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),

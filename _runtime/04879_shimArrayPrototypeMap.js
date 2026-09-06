@@ -1,10 +1,10 @@
 // _runtime/04879_shimArrayPrototypeMap.js
-import { getPolyfill } from "04814_getPolyfill.js";
-import { defineProperty } from "04833_defineProperty.js";
+import properlyBoxed from "04814_properlyBoxed.js";
+import defineProperty from "04833_defineProperty.js";
 
 export default function shimArrayPrototypeMap() {
-  const tmp = getPolyfill();
-  _require = tmp;
+  const tmp = properlyBoxed();
+  closure_0 = tmp;
   defineProperty(
     Array.prototype,
     { map: tmp },

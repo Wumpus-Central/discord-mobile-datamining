@@ -1,37 +1,33 @@
 // _runtime/03932_startOfWeekYear.js
-import getDefaultOptions from "03655_getDefaultOptions.js";
-import getWeekYear from "03933_getWeekYear.js";
+import _mod3655 from "metro/03655__.js";
+import 03933__ from "metro/03933__.js";
 import startOfWeek from "03809_startOfWeek.js";
-import toInteger from "03654_toInteger.js";
+import 03654__ from "metro/03654__.js";
 import requiredArgs from "03651_requiredArgs.js";
 
-if (!getWeekYear) {
-  let obj = { default: null };
-  obj[0] = getWeekYear;
+if (!module_3933) {
+  let obj = { default: module_3933 };
   let tmp3 = obj;
 } else {
-  tmp3 = getWeekYear;
+  tmp3 = module_3933;
 }
-getWeekYear = tmp3;
+module_3933 = tmp3;
 if (!startOfWeek) {
-  obj = { default: null };
-  obj[0] = startOfWeek;
+  obj = { default: startOfWeek };
   let tmp5 = obj;
 } else {
   tmp5 = startOfWeek;
 }
 startOfWeek = tmp5;
-if (!toInteger) {
-  obj = { default: null };
-  obj[0] = toInteger;
+if (!module_3654) {
+  obj = { default: module_3654 };
   let tmp7 = obj;
 } else {
-  tmp7 = toInteger;
+  tmp7 = module_3654;
 }
-toInteger = tmp7;
+module_3654 = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
@@ -40,7 +36,7 @@ requiredArgs = tmp9;
 
 export default function startOfWeekYear(arg0, firstWeekContainsDate) {
   requiredArgs.default(1, arguments);
-  const defaultOptions = getDefaultOptions.getDefaultOptions();
+  const defaultOptions = _mod3655.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
     prop = firstWeekContainsDate.firstWeekContainsDate;
@@ -48,7 +44,7 @@ export default function startOfWeekYear(arg0, firstWeekContainsDate) {
   if (null === prop) {
     let prop1;
     if (null != firstWeekContainsDate) {
-      const locale = firstWeekContainsDate.locale;
+      locale = firstWeekContainsDate.locale;
       if (null !== locale) {
         if (undefined !== locale) {
           const options = locale.options;
@@ -87,9 +83,9 @@ export default function startOfWeekYear(arg0, firstWeekContainsDate) {
       num = prop;
     }
   }
-  const defaultResult1 = toInteger.default(num);
+  const defaultResult1 = module_3654.default(num);
   const date = new Date(0);
-  date.setFullYear(getWeekYear.default(arg0, firstWeekContainsDate), 0, defaultResult1);
+  date.setFullYear(module_3933.default(arg0, firstWeekContainsDate), 0, defaultResult1);
   date.setHours(0, 0, 0, 0);
   return startOfWeek.default(date, firstWeekContainsDate);
 };

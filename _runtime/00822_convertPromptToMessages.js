@@ -1,7 +1,7 @@
 // _runtime/00822_convertPromptToMessages.js
-import _mod821 from "metro/00821__.js";
-import _mod823 from "metro/00823__.js";
-import map2 from "00824_map.js";
+import AI_MODEL_ID_ATTRIBUTE from "00821_AI_MODEL_ID_ATTRIBUTE.js";
+import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "00823_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
+import toolCallSpanMap2 from "00824_toolCallSpanMap.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -14,13 +14,11 @@ function convertPromptToMessages(data) {
         ({ prompt: _prompt, system } = tmp4);
         const items = [];
         if (typeof system === "string") {
-          let obj = { role: "system", content: null };
-          obj[1] = system;
+          let obj = { role: "system", content: system };
           items.push(obj);
         }
         if (typeof _prompt === "string") {
-          obj = { role: "user", content: null };
-          obj[1] = _prompt;
+          obj = { role: "user", content: _prompt };
           items.push(obj);
         }
         return items;
@@ -30,19 +28,20 @@ function convertPromptToMessages(data) {
   } catch (err) {}
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5._INTERNAL_cleanupToolCallSpan = function _INTERNAL_cleanupToolCallSpan(arg0) {
-  const toolCallSpanMap = map2.toolCallSpanMap;
+
+export const _INTERNAL_cleanupToolCallSpan = function _INTERNAL_cleanupToolCallSpan(arg0) {
+  const toolCallSpanMap = toolCallSpanMap2.toolCallSpanMap;
   toolCallSpanMap.delete(arg0);
 };
-arg5._INTERNAL_getSpanForToolCallId = function _INTERNAL_getSpanForToolCallId(arg0) {
-  const toolCallSpanMap = map2.toolCallSpanMap;
+export const _INTERNAL_getSpanForToolCallId = function _INTERNAL_getSpanForToolCallId(arg0) {
+  const toolCallSpanMap = toolCallSpanMap2.toolCallSpanMap;
   return toolCallSpanMap.get(arg0);
 };
-arg5.accumulateTokensForParent = function accumulateTokensForParent(item10015, map) {
+export const accumulateTokensForParent = function accumulateTokensForParent(item10015, map) {
   const parent_span_id = item10015.parent_span_id;
   if (parent_span_id) {
-    const tmp3 = item10015.data[_mod823.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
-    const tmp4 = item10015.data[_mod823.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE];
+    const tmp3 = item10015.data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
+    const tmp4 = item10015.data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE];
     if (typeof tmp3 === "number") {
       const tmp6 = map.get(parent_span_id) || { inputTokens: 0, outputTokens: 0 };
       if (typeof tmp3 === "number") {
@@ -55,18 +54,18 @@ arg5.accumulateTokensForParent = function accumulateTokensForParent(item10015, m
     }
   }
 };
-arg5.applyAccumulatedTokens = function applyAccumulatedTokens(trace, map) {
-  const value = map.get(trace.span_id);
+export const applyAccumulatedTokens = function applyAccumulatedTokens(trace, map) {
+  value = map.get(trace.span_id);
   let data = value;
   if (value) {
     data = trace.data;
   }
   if (data) {
     if (value.inputTokens > 0) {
-      trace.data[_mod823.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = value.inputTokens;
+      trace.data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = value.inputTokens;
     }
     if (value.outputTokens > 0) {
-      trace.data[_mod823.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = value.outputTokens;
+      trace.data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = value.outputTokens;
     }
     if (tmp6) {
       trace.data["gen_ai.usage.total_tokens"] = value.inputTokens + value.outputTokens;
@@ -74,559 +73,57 @@ arg5.applyAccumulatedTokens = function applyAccumulatedTokens(trace, map) {
     tmp6 = value.inputTokens > 0 || value.outputTokens > 0;
   }
 };
-arg5.convertAvailableToolsToJsonString = function convertAvailableToolsToJsonString(arr) {
+export const convertAvailableToolsToJsonString = function convertAvailableToolsToJsonString(data) {
   return JSON.stringify(
-    arr.map((str) => {
-      if (typeof str === "string") {
+    data.map((item) => {
+      if (typeof item === "string") {
         try {
           const _JSON = JSON;
-          return JSON.parse(str);
+          return JSON.parse(item);
         } catch (err) {
           return tmp;
         }
       } else {
-        return str;
+        return item;
       }
     }),
   );
 };
-arg5.convertPromptToMessages = convertPromptToMessages;
-arg5.getSpanOpFromName = function getSpanOpFromName(description) {
+export { convertPromptToMessages };
+export const getSpanOpFromName = function getSpanOpFromName(description) {
   switch (description) {
-    case "TypeError":
-      break;
-    case "Error":
-      break;
-    case "HTTP":
-      break;
-    case "T":
-      break;
-    case "HermesInternal":
-      break;
-    case "Icon":
-      break;
-    case "IconComponent":
-      break;
-    case "c":
-      break;
-    case "p":
-      break;
-    case "LengthDelimited":
-      break;
-    case "limit":
-      break;
-    case "i":
-      break;
-    case "it":
-      break;
-    case "d":
-      break;
-    case "Map":
-      break;
-    case "Math":
-      break;
-    case "h":
-      break;
-    case "Number":
-      break;
-    case "Object":
-      break;
-    case "ct":
-      break;
-    case "PX_16":
-      break;
-    case "flex":
-      break;
-    case "flexDirection":
-      break;
-    case "PX_8":
-      break;
-    case "Path":
-      break;
-    case "Promise":
-      break;
-    case "s":
-      break;
-    case "Reflect":
-      break;
-    case "Set":
-      break;
-    case "format":
-      break;
-    case "formatToPlainString":
-      break;
-    case "String":
-      break;
-    case "Symbol":
-      break;
-    case "Text":
-      break;
-    case "x":
-      break;
-    case "View":
-      break;
-    case "w":
-      break;
-    case "WireType":
-      break;
-    case "__closure":
-      break;
-    case "__d":
-      break;
-    case "__esModule":
-      break;
-    case "__initData":
-      break;
-    case "filter":
-      break;
-    case "__packager_asset":
-      break;
-    case "k":
-      break;
-    case "set":
-      break;
-    case "__workletHash":
-      break;
-    case "_desired":
-      break;
-    case "_distance":
-      break;
-    case "st":
-      break;
-    case "accessibilityLabel":
-      break;
-    case "accessibilityRole":
-      break;
-    case "accessible":
-      break;
-    case "padding":
-      break;
-    case "paddingHorizontal":
-      break;
-    case "add":
-      break;
-    case "alignItems":
-      break;
-    case "ao":
-      break;
-    case "applicationId":
-      break;
-    case "ti":
-      break;
-    case "apply":
-      break;
-    case "assign":
-      break;
-    case "backgroundColor":
-      break;
-    case "round":
-      break;
-    case "bm":
-      break;
-    case "body":
-      break;
-    case "borderRadius":
-      let tmp17 = _mod823;
+    case "ai.generateText":
+      let tmp17 = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
-    case "bottom":
-      break;
-    case "call":
-      tmp17 = _mod823;
+    case "ai.streamText":
+      tmp17 = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
-    case "channel":
-      break;
-    case "channelId":
-      tmp17 = _mod823;
+    case "ai.generateObject":
+      tmp17 = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
-    case "channel_id":
-      break;
-    case "id":
-      tmp17 = _mod823;
+    case "ai.streamObject":
+      tmp17 = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
-    case "children":
-      break;
-    case "cix":
-      tmp17 = _mod823;
+    case "ai.embed":
+      tmp17 = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
-    case "ix":
-      break;
-    case "unicodeVersion":
-      tmp17 = _mod823;
+    case "ai.embedMany":
+      tmp17 = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE;
       return tmp17.GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
-    case "code":
-      break;
-    case "color":
-      return _mod823.GEN_AI_GENERATE_TEXT_DO_GENERATE_OPERATION_ATTRIBUTE;
-    case "colors":
-      break;
-    case "concat":
-      return _mod823.GEN_AI_STREAM_TEXT_DO_STREAM_OPERATION_ATTRIBUTE;
-    case "construct":
-      break;
-    case "constructor":
-      return _mod823.GEN_AI_GENERATE_OBJECT_DO_GENERATE_OPERATION_ATTRIBUTE;
-    case "container":
-      break;
-    case "content":
-      return _mod823.GEN_AI_STREAM_OBJECT_DO_STREAM_OPERATION_ATTRIBUTE;
-    case "context":
-      break;
-    case "text":
-      return _mod823.GEN_AI_EMBED_DO_EMBED_OPERATION_ATTRIBUTE;
-    case "count":
-      break;
-    case "create":
-      return _mod823.GEN_AI_EMBED_MANY_DO_EMBED_OPERATION_ATTRIBUTE;
-    case "createStyles":
-      break;
-    case "ty":
-      return _mod823.GEN_AI_EXECUTE_TOOL_OPERATION_ATTRIBUTE;
-    case "current":
-      break;
-    case "cursor":
-      break;
-    case "data":
-      break;
-    case "ddd":
-      break;
-    case "default":
-      break;
-    case "defineProperty":
-      break;
-    case "op":
-      break;
-    case "delete":
-      break;
-    case "description":
-      break;
-    case "ip":
-      break;
-    case "disabled":
-      break;
-    case "sa":
-      break;
-    case "dispatch":
-      break;
-    case "displayName":
-      break;
-    case "diversity":
-      break;
-    case "v":
-      break;
-    case "done":
-      break;
-    case "duration":
-      break;
-    case "enabled":
-      break;
-    case "end":
-      break;
-    case "enumerable":
-      break;
-    case "error":
-      break;
-    case "exports":
-      break;
-    case "fileFinishedImporting":
-      break;
-    case "fill":
-      break;
-    case "find":
-      break;
-    case "ind":
-      break;
-    case "flags":
-      break;
-    case "forEach":
-      break;
-    case "gap":
-      break;
-    case "get":
-      break;
-    case "getChannel":
-      break;
-    case "getCurrentUser":
-      break;
-    case "guild":
-      break;
-    case "guildId":
-      break;
-    case "guild_id":
-      break;
-    case "has":
-      break;
-    case "hasDiversityParent":
-      break;
-    case "hash":
-      break;
-    case "hd":
-      break;
-    case "header":
-      break;
-    case "height":
-      break;
-    case "httpServerLocation":
-      break;
-    case "icon":
-      break;
-    case "includes":
-      break;
-    case "index":
-      break;
-    case "indexOf":
-      break;
-    case "intl":
-      break;
-    case "items":
-      break;
-    case "join":
-      break;
-    case "jsx":
-      break;
-    case "jsxs":
-      break;
-    case "justifyContent":
-      break;
-    case "key":
-      break;
-    case "keys":
-      break;
-    case "kind":
-      break;
-    case "ks":
-      break;
-    case "space":
-      break;
-    case "label":
-      break;
-    case "lc":
-      break;
-    case "left":
-      break;
-    case "length":
-      break;
-    case "lj":
-      break;
-    case "loadJsonAsset":
-      break;
-    case "location":
-      break;
-    case "map":
-      break;
-    case "marginTop":
-      break;
-    case "marginBottom":
-      break;
-    case "match":
-      break;
-    case "max":
-      break;
-    case "memo":
-      break;
-    case "message":
-      break;
-    case "messageId":
-      break;
-    case "method":
-      break;
-    case "methodobject":
-      break;
-    case "withTiming":
-      break;
-    case "min":
-      break;
-    case "mn":
-      break;
-    case "mode":
-      break;
-    case "name":
-      break;
-    case "names":
-      break;
-    case "next":
-      break;
-    case "nm":
-      break;
-    case "no":
-      break;
-    case "now":
-      break;
-    case "np":
-      break;
-    case "onPress":
-      break;
-    case "opacity":
-      break;
-    case "options":
-      break;
-    case "parent":
-      break;
-    case "paths":
-      break;
-    case "pos":
-      break;
-    case "position":
-      break;
-    case "props":
-      break;
-    case "prototype":
-      break;
-    case "type":
-      break;
-    case "push":
-      break;
-    case "radii":
-      break;
-    case "raw":
-      break;
-    case "ref":
-      break;
-    case "registerAsset":
-      break;
-    case "rejectWithError":
-      break;
-    case "replace":
-      break;
-    case "resizeMode":
-      break;
-    case "size":
-      break;
-    case "resolve":
-      break;
-    case "result":
-      break;
-    case "right":
-      break;
-    case "runOnJS":
-      break;
-    case "scales":
-      break;
-    case "shapes":
-      break;
-    case "sk":
-      break;
-    case "skuId":
-      break;
-    case "slice":
-      break;
-    case "source":
-      break;
-    case "split":
-      break;
-    case "spriteIndex":
-      break;
-    case "sr":
-      break;
-    case "start":
-      break;
-    case "state":
-      break;
-    case "status":
-      break;
-    case "substring_i":
-      break;
-    case "string":
-      break;
-    case "style":
-      break;
-    case "surrogates":
-      break;
-    case "tag":
-      break;
-    case "test":
-      break;
-    case "then":
-      break;
-    case "title":
-      break;
-    case "toCharArray$esjava$1":
-      break;
-    case "toLowerCase":
-      break;
-    case "toString":
-      break;
-    case "top":
-      break;
-    case "track":
-      break;
-    case "transform":
-      break;
-    case "uri":
-      break;
-    case "url":
-      break;
-    case "useCallback":
-      break;
-    case "useEffect":
-      break;
-    case "useMemo":
-      break;
-    case "useRef":
-      break;
-    case "useState":
-      break;
-    case "useStateFromStores":
-      break;
-    case "user":
-      break;
-    case "userId":
-      break;
-    case "value":
-      break;
-    case "values":
-      break;
-    case "variant":
-      break;
-    case "width":
-      break;
-    case "window":
-      break;
-    case "withSpring":
-      break;
-    case "":
-      break;
-    case "isArrayBuffer":
-      break;
-    case "A":
-      break;
-    case "ay":
-      break;
-    case "guild_metadata":
-      break;
-    case "metadataRefreshing":
-      break;
-    case "getIsLoading":
-      break;
-    case "getIsLoadingAgeVerification":
-      break;
-    case "AgeVerificationDmCta":
-      break;
-    case "tapImageData":
-      break;
-    case "person_standing_tone5":
-      break;
-    case "extraBottomHeight":
-      break;
-    case "$ZodBoolean":
-      break;
-    case "ZodBoolean":
-      break;
-    case "B":
-      break;
-    case "le":
-      break;
-    case "an":
-      break;
-    case "n":
-      break;
-    case "ActionBarPrimaryButton":
-      break;
-    case "u":
-      break;
-    case "tt":
-      break;
-    case "on":
-      break;
+    case "ai.generateText.doGenerate":
+      return ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_GENERATE_TEXT_DO_GENERATE_OPERATION_ATTRIBUTE;
+    case "ai.streamText.doStream":
+      return ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_STREAM_TEXT_DO_STREAM_OPERATION_ATTRIBUTE;
+    case "ai.generateObject.doGenerate":
+      return ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_GENERATE_OBJECT_DO_GENERATE_OPERATION_ATTRIBUTE;
+    case "ai.streamObject.doStream":
+      return ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_STREAM_OBJECT_DO_STREAM_OPERATION_ATTRIBUTE;
+    case "ai.embed.doEmbed":
+      return ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_EMBED_DO_EMBED_OPERATION_ATTRIBUTE;
+    case "ai.embedMany.doEmbed":
+      return ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_EMBED_MANY_DO_EMBED_OPERATION_ATTRIBUTE;
+    case "ai.toolCall":
+      return ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_EXECUTE_TOOL_OPERATION_ATTRIBUTE;
     default:
       let str2;
       if (description.startsWith("ai.stream")) {
@@ -635,15 +132,15 @@ arg5.getSpanOpFromName = function getSpanOpFromName(description) {
       return str2;
   }
 };
-arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute, data) {
-  if (data[_mod821.AI_PROMPT_ATTRIBUTE]) {
+export const requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute, data) {
+  if (data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE]) {
     let tmpResult = tmp(825);
     const attr = setAttribute.setAttribute(
       "gen_ai.prompt",
       tmpResult.getTruncatedJsonString(data[tmp(undefined, 821).AI_PROMPT_ATTRIBUTE]),
     );
   }
-  const tmp4 = data[_mod821.AI_PROMPT_ATTRIBUTE];
+  const tmp4 = data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE];
   if (typeof tmp4 === "string") {
     if (!data[tmp(undefined, 823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE]) {
       if (!data[tmp(undefined, 821).AI_PROMPT_MESSAGES_ATTRIBUTE]) {
@@ -658,7 +155,7 @@ arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute
       }
     }
   }
-  if (typeof data[_mod821.AI_PROMPT_MESSAGES_ATTRIBUTE] === "string") {
+  if (typeof data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_MESSAGES_ATTRIBUTE] === "string") {
     try {
       const _JSON = JSON;
       const parsed = JSON.parse(data[tmp(undefined, 821).AI_PROMPT_MESSAGES_ATTRIBUTE]);

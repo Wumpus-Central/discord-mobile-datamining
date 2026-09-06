@@ -1,6 +1,7 @@
 // _runtime/metro/00239__.js
 let c0 = false;
-arg5.default = {
+
+export default {
   addTimespan() {
     if (!c0) {
       c0 = true;
@@ -152,7 +153,7 @@ arg5.default = {
       );
     }
   },
-  startTimespan(_perfKey) {
+  startTimespan() {
     if (!c0) {
       c0 = true;
       const _console = console;
@@ -161,7 +162,7 @@ arg5.default = {
       );
     }
   },
-  stopTimespan(_perfKey) {
+  stopTimespan() {
     if (!c0) {
       c0 = true;
       const _console = console;

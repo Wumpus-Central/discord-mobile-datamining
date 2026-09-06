@@ -1,11 +1,11 @@
 // _runtime/14311_withoutSetter.js
 import _mod14297 from "metro/14297__.js";
-import __core_js_shared__ from "14312___core-js_shared__.js";
-import sum from "14319_sum.js";
-import call from "14320_call.js";
-import prop from "14315_prop.js";
+import _mod14312 from "metro/14312__.js";
+import _mod14319 from "metro/14319__.js";
+import _mod14320 from "metro/14320__.js";
+import prop from "metro/14315__.js";
 
-let closure_2 = __core_js_shared__("wks");
+let closure_2 = _mod14312("wks");
 let _Symbol = _mod14297.Symbol;
 if (prop) {
   let withoutSetter = _Symbol.for || _mod14297.Symbol;
@@ -16,13 +16,13 @@ if (prop) {
     withoutSetter = _mod14297.Symbol.withoutSetter;
   }
   if (!withoutSetter) {
-    withoutSetter = sum;
+    withoutSetter = _mod14319;
   }
 }
 
 export default (arg0) => {
   let _Symbol = dependencyMap;
-  if (call(closure_2, arg0)) {
+  if (_mod14320(closure_2, arg0)) {
     return tmp2[arg0];
   } else {
     if (!tmp(14316)) {

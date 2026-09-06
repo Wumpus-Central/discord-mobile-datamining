@@ -1,25 +1,24 @@
 // _runtime/06785_LegacyText.js
-import noopDefault from "00019_noop.js";
-import closure_3 from "metro/00109__objectWithoutProperties.js";
-import noop from "00019_noop.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["onPress", "onLongPress", "ref"];
-({ useEffect: c4, useMemo: c5, useRef: closure_6 } = noop);
-noopDefault;
-({ Platform, Text: error } = get_ActivityIndicator);
+let noop = fn(19);
+({ useEffect: closure_4, useMemo: hasOwnProperty, useRef: metroRequire } = noop);
+get_ActivityIndicator = fn(17);
+({ Platform, Text: closure_7 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 
 export const LegacyText = (arg0) => {
   ({ onPress, onLongPress, ref } = arg0);
-  const tmp = callback(arg0, closure_2);
-  dependencyMap = callback4(null);
+  const tmp = _objectWithoutProperties(arg0, closure_2);
+  dependencyMap = closure_6(null);
   const items = [ref];
-  const tmp3 = callback3(() => {
+  const tmp3 = closure_5(() => {
     function handler(current) {
-      closure_1.current = current;
-      if (closure_0) {
+      closure_1_1.current = current;
+      if (ref) {
         if (typeof tmp === "function") {
           tmp(current);
         } else {
@@ -30,25 +29,24 @@ export const LegacyText = (arg0) => {
     handler.rngh = true;
     return handler;
   }, items);
-  callback2(() => {}, []);
+  closure_4(() => {}, []);
   if (!onPress) {
     if (!onLongPress) {
-      let obj = { ref: null };
-      obj[0] = tmp3;
+      let obj = { ref: tmp3 };
       const merged = Object.assign(tmp);
-      let tmp10 = <closure_7 ref={null} />;
+      let tmp10 = <closure_7 ref={tmp3} />;
     }
     return tmp10;
   }
   obj = {
-    gesture: callback3(() => {
-      const GestureObjects = ref(table[4]).GestureObjects;
+    gesture: closure_5(() => {
+      const GestureObjects = ref(closure_1[4]).GestureObjects;
       return GestureObjects.Native().runOnJS(true);
     }, []),
     children: null,
   };
   obj = { onPress, onLongPress, ref: tmp3 };
   const merged1 = Object.assign(tmp);
-  obj[1] = <closure_7 onPress={onPress} onLongPress={onLongPress} ref={tmp3} />;
+  obj.children = <closure_7 onPress={onPress} onLongPress={onLongPress} ref={tmp3} />;
   tmp10 = jsx(ref(6678).GestureDetector, { onPress, onLongPress, ref: tmp3 });
 };

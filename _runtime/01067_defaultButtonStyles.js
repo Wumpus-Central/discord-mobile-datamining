@@ -1,43 +1,33 @@
 // _runtime/01067_defaultButtonStyles.js
 function defaultButtonStyles(theme) {
-  const triggerButton = {
-    position: "absolute",
-    bottom: 30,
-    right: 30,
-    backgroundColor: theme.background,
-    padding: 15,
-    borderRadius: 40,
-    justifyContent: "center",
-    alignItems: "center",
-    elevation: 5,
-    shadowColor: theme.border,
-    shadowOffset: { width: 1, height: 2 },
-    shadowOpacity: 0.5,
-    shadowRadius: 3,
-    flexDirection: "row",
-    borderWidth: 1,
-    borderColor: theme.border,
-  };
-  const triggerText = { color: theme.foreground, fontSize: 18 };
   return {
-    triggerButton,
-    triggerText,
+    triggerButton: {
+      position: "absolute",
+      bottom: 30,
+      right: 30,
+      backgroundColor: theme.background,
+      padding: 15,
+      borderRadius: 40,
+      justifyContent: "center",
+      alignItems: "center",
+      elevation: 5,
+      shadowColor: theme.border,
+      shadowOffset: { width: 1, height: 2 },
+      shadowOpacity: 0.5,
+      shadowRadius: 3,
+      flexDirection: "row",
+      borderWidth: 1,
+      borderColor: theme.border,
+    },
+    triggerText: { color: theme.foreground, fontSize: 18 },
     triggerIcon: { width: 24, height: 24, padding: 2, marginEnd: 6, tintColor: theme.sentryLogo },
   };
 }
-arg5.default = function _default(color) {
-  const container = { flex: 1, padding: 20, backgroundColor: color.background };
-  const title = {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
-    textAlign: "left",
-    flex: 1,
-    color: color.foreground,
-  };
+
+export default function _default(color) {
   return {
-    container,
-    title,
+    container: { flex: 1, padding: 20, backgroundColor: color.background },
+    title: { fontSize: 24, fontWeight: "bold", marginBottom: 20, textAlign: "left", flex: 1, color: color.foreground },
     label: { marginBottom: 4, fontSize: 16, color: color.foreground },
     input: {
       height: 50,
@@ -93,11 +83,11 @@ arg5.default = function _default(color) {
     titleContainer: { flexDirection: "row", width: "100%" },
     sentryLogo: { width: 40, height: 40, tintColor: color.sentryLogo },
   };
-};
-arg5.defaultButtonStyles = defaultButtonStyles;
-arg5.defaultScreenshotButtonStyles = defaultButtonStyles;
-arg5.modalWrapper = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
-arg5.modalSheetContainer = (background) => ({
+}
+export { defaultButtonStyles };
+export const defaultScreenshotButtonStyles = defaultButtonStyles;
+export const modalWrapper = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
+export const modalSheetContainer = (background) => ({
   backgroundColor: background.background,
   borderTopLeftRadius: 16,
   borderTopRightRadius: 16,
@@ -110,4 +100,4 @@ arg5.modalSheetContainer = (background) => ({
   elevation: 5,
   flex: 1,
 });
-arg5.topSpacer = { height: 64 };
+export const topSpacer = { height: 64 };

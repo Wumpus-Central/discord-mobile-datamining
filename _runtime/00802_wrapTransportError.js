@@ -1,56 +1,53 @@
 // _runtime/00802_wrapTransportError.js
-import addNonEnumerableProperty from "00687_addNonEnumerableProperty.js";
-import closure_2 from "00005_asyncGeneratorStep.js";
-import { addNonEnumerableProperty } from "00687_addNonEnumerableProperty.js";
+import _mod687 from "metro/00687__.js";
+import _mod731 from "metro/00731__.js";
+import _mod806 from "metro/00806__.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const wrapTransportError = function wrapTransportError(closure_0) {
-  if (closure_0.onerror) {
-    addNonEnumerableProperty.fill(closure_0, "onerror", (arg0) => {
+export const wrapTransportError = function wrapTransportError(onerror) {
+  if (onerror.onerror) {
+    _mod687.fill(onerror, "onerror", (arg0) => {
       closure_0 = arg0;
       return function (error) {
         const self = this;
         (function captureTransportError(error) {
           try {
-            callback(table[10]).captureError(error, "transport");
+            closure_1_0(closure_1_1[10]).captureError(error, "transport");
           } catch (err) {}
         })(error);
         const call = closure_0.call;
         return typeof call === "unknown" ? closure_0(error) : call(self, error);
       };
     });
-    const obj = addNonEnumerableProperty;
   }
 };
-export const wrapTransportOnClose = function wrapTransportOnClose(closure_0) {
-  if (closure_0.onclose) {
-    addNonEnumerableProperty.fill(closure_0, "onclose", (arg0) => {
+export const wrapTransportOnClose = function wrapTransportOnClose(onclose) {
+  if (onclose.onclose) {
+    _mod687.fill(onclose, "onclose", (arg0) => {
       closure_0 = arg0;
       return function () {
         const items = [...arguments];
-        const result = callback(closure_1_1[9]).cleanupPendingSpansForTransport(this);
-        const obj = callback(closure_1_1[9]);
-        const result1 = callback(closure_1_1[4]).cleanupSessionDataForTransport(this);
+        const result = require("metro/00810__.js").cleanupPendingSpansForTransport(this);
+        const obj = require("metro/00810__.js");
+        const result1 = require("metro/00804__.js").cleanupSessionDataForTransport(this);
         const items1 = [this, ...items];
-        return callback.call.apply(items1);
+        return closure_0.call.apply(items1);
       };
     });
-    let obj = addNonEnumerableProperty;
   }
 };
-export const wrapTransportOnMessage = function wrapTransportOnMessage(closure_0, closure_02) {
-  const _require = closure_02;
-  if (closure_0.onmessage) {
-    require("00687_addNonEnumerableProperty.js").fill(closure_0, "onmessage", (arg0) => {
+export const wrapTransportOnMessage = function wrapTransportOnMessage(onmessage, arg1) {
+  _require = arg1;
+  if (onmessage.onmessage) {
+    require("metro/00687__.js").fill(onmessage, "onmessage", (arg0) => {
       closure_0 = arg0;
       return function (method, extra) {
-        let self = this;
-        self = this;
-        closure_1 = method;
+        const self = this;
         closure_2 = extra;
         if (obj.isJsonRpcRequest(method)) {
-          const callback = tmp10;
+          closure_0 = tmp10;
           if ("initialize" === method.method) {
             try {
               let tmpResult = tmp(tmp2[3]);
@@ -64,79 +61,73 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(closure_0,
           const tmpResult1 = tmp(tmp2[5]);
           const cloneResult = isolationScope.clone();
           return tmp(tmp2[5]).withIsolationScope(cloneResult, () => {
-            let obj = callback(closure_3_1[6]);
-            const mcpServerSpanConfig = obj.buildMcpServerSpanConfig(closure_1, self, closure_2, callback);
-            const startInactiveSpanResult = callback(closure_3_1[7]).startInactiveSpan(mcpServerSpanConfig);
-            let tmp6 = callback;
-            if (callback) {
-              tmp6 = closure_3;
+            let obj = _mod806;
+            const mcpServerSpanConfig = obj.buildMcpServerSpanConfig(method, self, closure_2, closure_0);
+            const startInactiveSpanResult = _mod731.startInactiveSpan(mcpServerSpanConfig);
+            let tmp6 = closure_0;
+            if (closure_0) {
+              tmp6 = result;
             }
             if (tmp6) {
               obj = {};
-              let tmpResult = tmp(tmp2[3]);
-              const merged = Object.assign(tmpResult.buildClientAttributesFromInfo(closure_3.clientInfo));
-              let protocolVersion = closure_3.protocolVersion;
+              let tmpResult = tmp(803);
+              const merged = Object.assign(tmpResult.buildClientAttributesFromInfo(result.clientInfo));
+              let protocolVersion = result.protocolVersion;
               if (protocolVersion) {
                 obj = {};
-                obj[tmp(tmp2[8]).MCP_PROTOCOL_VERSION_ATTRIBUTE] = tmp7.protocolVersion;
+                obj[tmp(805).MCP_PROTOCOL_VERSION_ATTRIBUTE] = tmp7.protocolVersion;
                 protocolVersion = obj;
               }
               const merged1 = Object.assign(protocolVersion);
               startInactiveSpanResult.setAttributes(obj);
-              tmp7 = closure_3;
+              tmp7 = result;
             }
-            tmpResult = tmp(tmp2[9]);
-            tmpResult.storeSpanForRequest(self, closure_1.id, startInactiveSpanResult, closure_1.method);
-            const obj2 = callback(closure_3_1[7]);
-            const tmp4 = self;
-            return callback(closure_3_1[7]).withActiveSpan(startInactiveSpanResult, () => {
-              const call = closure_1_0.call;
-              return typeof call === "unknown"
-                ? closure_1_0(closure_1, closure_2)
-                : call(closure_4, closure_1, closure_2);
+            tmpResult = tmp(810);
+            tmpResult.storeSpanForRequest(self, method.id, startInactiveSpanResult, method.method);
+            return _mod731.withActiveSpan(startInactiveSpanResult, () => {
+              const call = closure_0.call;
+              return typeof call === "unknown" ? closure_0(method, extra) : call(self, method, extra);
             });
           });
         } else {
           if (tmpResult3.isJsonRpcNotification(method)) {
             const tmpResult4 = tmp(tmp2[6]);
-            let mcpNotificationSpan = tmpResult4.createMcpNotificationSpan(method, self, extra, callback, () => {
+            let mcpNotificationSpan = tmpResult4.createMcpNotificationSpan(method, self, extra, closure_0, () => {
               const call = closure_0.call;
               return typeof call === "unknown" ? closure_0(closure_1, closure_2) : call(self, closure_1, closure_2);
             });
           } else {
-            let call = callback.call;
-            mcpNotificationSpan = typeof call === "unknown" ? callback(method, extra) : call(self, method, extra);
-            const tmp3 = callback;
+            let call = closure_0.call;
+            mcpNotificationSpan = typeof call === "unknown" ? closure_0(method, extra) : call(self, method, extra);
           }
           return mcpNotificationSpan;
         }
-        obj = callback(closure_2_1[2]);
+        obj = closure_0(dependencyMap[2]);
       };
     });
-    let obj = addNonEnumerableProperty;
+    let obj = require("metro/00687__.js");
   }
 };
-export const wrapTransportSend = function wrapTransportSend(closure_0, closure_02) {
-  const _require = closure_02;
-  if (closure_0.send) {
-    require("00687_addNonEnumerableProperty.js").fill(closure_0, "send", (arg0) => {
+export const wrapTransportSend = function wrapTransportSend(send, arg1) {
+  _require = arg1;
+  if (send.send) {
+    require("metro/00687__.js").fill(send, "send", (arg0) => {
       closure_0 = arg0;
-      return closure_1_2(function () {
+      return asyncGeneratorStep(async function () {
         const self = this;
         closure_1 = [...arguments];
         c6 = 0;
         c7 = 0;
         c5 = 0;
-        const iter = (function* () {
+        const iter = (async (arg0, value) => {
           if (c7 === 2) {
             c7 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp6 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
+              let obj = { value, done: true };
               return obj;
             } else {
               return { value: "HermesInternal", done: null };
@@ -147,19 +138,19 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
               if (0 === c6) {
                 if (arg0 === 1) {
                   c7 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c7 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 } else {
-                  closure_4 = c0;
+                  closure_4 = self;
                   closure_3 = tmp3;
-                  let user = c0;
-                  closure_3 = c0;
-                  user = undefined;
-                  c0 = undefined;
+                  closure_2 = self;
+                  closure_130_3 = self;
+                  closure_130_1 = dependencyMap;
+                  closure_130_2 = undefined;
+                  closure_130_0 = undefined;
                   c6 = 1;
                   c7 = 1;
                   return { value: "PX_16", done: true };
@@ -168,29 +159,30 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
                 if (1 === tmp7) {
                   if (arg0 === 1) {
                     c7 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c7 = 3;
-                    obj1 = { value: null, done: true };
-                    obj1[0] = arg1;
+                    let obj1 = { value, done: true };
                     return obj1;
                   } else {
-                    user = table[0];
-                    if (obj12.isJsonRpcNotification(user)) {
-                      const obj7 = _self(closure_2_1[6]);
+                    closure_130_2 = closure_130_1[0];
+                    if (obj12.isJsonRpcNotification(closure_130_2)) {
+                      const obj7 = _self(806);
                       c7 = 3;
-                      let obj2 = { value: null, done: true };
-                      obj2[0] = obj7.createMcpOutgoingNotificationSpan(user, closure_4, self, () => {
-                        const items = [closure_3, ...closure_1];
-                        return c0.call.apply(items);
-                      });
+                      let obj2 = {
+                        value: obj7.createMcpOutgoingNotificationSpan(closure_130_2, closure_4, self, () => {
+                          const items = [closure_1_3, ...closure_1_1];
+                          return self.call.apply(items);
+                        }),
+                        done: true,
+                      };
                       return obj2;
                     } else {
-                      obj = _self(closure_2_1[2]);
-                      if (obj.isJsonRpcResponse(user)) {
-                        if (null !== user.id) {
-                          if (undefined !== user.id) {
-                            if (user.error) {
+                      obj = _self(801);
+                      if (obj.isJsonRpcResponse(closure_130_2)) {
+                        if (null !== closure_130_2.id) {
+                          if (undefined !== closure_130_2.id) {
+                            if (closure_130_2.error) {
                               (function captureJsonRpcErrorResponse(error) {
                                 try {
                                   if (error) {
@@ -202,45 +194,44 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
                                             error = new Error(error.message);
                                             const _HermesInternal = HermesInternal;
                                             error.name = "JsonRpcError_" + error.code;
-                                            _undefined(table[10]).captureError(error, "protocol");
-                                            const obj = _undefined(table[10]);
+                                            _self(dependencyMap[10]).captureError(error, "protocol");
+                                            const obj = _self(dependencyMap[10]);
                                           }
                                         }
                                       }
                                     }
                                   }
                                 } catch (err) {}
-                              })(user.error);
+                              })(closure_130_2.error);
                             }
-                            obj1 = _self(closure_2_1[2]);
-                            if (obj1.isValidContentItem(closure_3_2.result)) {
-                              if (closure_3_2.result.protocolVersion) {
+                            obj1 = _self(801);
+                            if (obj1.isValidContentItem(closure_130_2.result)) {
+                              if (closure_130_2.result.protocolVersion) {
                                 c5 = 1;
-                                obj2 = _self(closure_2_1[3]);
-                                _self = obj2.extractSessionDataFromInitializeResponse(closure_3_2.result);
-                                let obj3 = _self(closure_2_1[4]);
-                                const result = obj3.updateSessionDataForTransport(closure_4, _self);
+                                obj2 = _self(803);
+                                closure_130_0 = obj2.extractSessionDataFromInitializeResponse(closure_130_2.result);
+                                let obj3 = _self(804);
+                                const result = obj3.updateSessionDataForTransport(closure_4, closure_130_0);
                                 c5 = 0;
                               }
                             }
                           }
                         }
                       }
-                      const call = self.call;
+                      const call = closure_131_0.call;
                       let items = [closure_4];
-                      HermesBuiltin.arraySpread(table, 1);
+                      HermesBuiltin.arraySpread(closure_130_1, 1);
                       c7 = 3;
-                      obj3 = { value: null, done: true };
-                      obj3[0] = HermesBuiltin.apply(items, self);
+                      obj3 = { value: HermesBuiltin.apply(items, closure_131_0), done: true };
                       return obj3;
                     }
-                    obj12 = _self(closure_2_1[2]);
+                    obj12 = _self(801);
                   }
                 } else {
                   c5 = 0;
                 }
-                const obj5 = _self(closure_2_1[9]);
-                const result1 = obj5.completeSpanWithResults(closure_4, closure_2_2.id, closure_2_2.result, self);
+                const obj5 = _self(810);
+                const result1 = obj5.completeSpanWithResults(closure_4, closure_130_2.id, closure_130_2.result, self);
               }
             } catch (tmp65) {
               if (tmp4 === c5) {
@@ -256,6 +247,6 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
         return iter;
       });
     });
-    let obj = addNonEnumerableProperty;
+    let obj = require("metro/00687__.js");
   }
 };

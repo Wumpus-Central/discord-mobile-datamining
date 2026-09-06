@@ -1,9 +1,7 @@
 // _runtime/01279_pushToArray.js
 import _mod1276 from "metro/01276__.js";
-import items5 from "01278_items.js";
-import getSideChannel from "01280_getSideChannel.js";
-import { items } from "01278_items.js";
-import { getSideChannel } from "01280_getSideChannel.js";
+import arrayToObject from "01278_arrayToObject.js";
+import _mod1280 from "metro/01280__.js";
 
 let obj = {
   brackets(arg0) {
@@ -29,21 +27,18 @@ obj = {
   delimiter: "&",
   encode: true,
   encodeDotInKeys: false,
-  encoder: items5.encode,
+  encoder: arrayToObject.encode,
   encodeValuesOnly: false,
   filter: "r",
-  format: false,
-  formatter: null,
+  format: _mod1276.default,
+  formatter: _mod1276.formatters[_mod1276.default],
   indices: false,
-  serializeDate: false,
+  serializeDate(arg0) {
+    const call = toISOString.call;
+    return typeof call === "unknown" ? toISOString() : call(arg0);
+  },
   skipNulls: 1,
   strictNullHandling: 1,
-};
-obj[13] = _mod1276.default;
-obj[14] = _mod1276.formatters[_mod1276.default];
-obj[16] = function serializeDate(arg0) {
-  const call = toISOString.call;
-  return typeof call === "unknown" ? toISOString() : call(arg0);
 };
 let closure_9 = {};
 function stringify(
@@ -55,19 +50,19 @@ function stringify(
   arg5,
   arg6,
   arg7,
-  arg8,
   fn2,
+  fn3,
   arg10,
   arg11,
-  arg12,
+  fn4,
   arg13,
-  arg14,
+  fn5,
   arg15,
   arg16,
   get,
 ) {
-  const _require = arg12;
-  let value = get.get(closure_9);
+  closure_0 = fn4;
+  value = get.get(closure_9);
   let flag = false;
   let num = 0;
   let num2 = 0;
@@ -76,7 +71,6 @@ function stringify(
       value = value.get(parts1);
       let num3 = num + 1;
       let flag2 = flag;
-      let tmp2 = value;
       if (undefined !== value) {
         flag2 = true;
         if (value === num3) {
@@ -100,12 +94,12 @@ function stringify(
     const rangeError = new RangeError("Cyclic object value");
     throw rangeError;
   }
-  if (typeof fn2 === "function") {
-    let str2 = fn2(arg1, parts1);
+  if (typeof fn3 === "function") {
+    let str2 = fn3(arg1, parts1);
   } else {
     const _Date = Date;
     if (parts1 instanceof Date) {
-      str2 = arg12(parts1);
+      str2 = fn4(parts1);
     } else {
       let tmp5 = "comma" === fn;
       if (tmp5) {
@@ -113,14 +107,13 @@ function stringify(
       }
       str2 = parts1;
       if (tmp5) {
-        str2 = require("01278_items.js").maybeMap(parts1, (arg0) => {
+        str2 = arrayToObject.maybeMap(parts1, (arg0) => {
           let tmp = arg0;
           if (arg0 instanceof Date) {
-            tmp = callback(arg0);
+            tmp = closure_0(arg0);
           }
           return tmp;
         });
-        const obj2 = items;
       }
     }
   }
@@ -128,10 +121,10 @@ function stringify(
     str2 = "";
     if (arg5) {
       let tmp74 = arg1;
-      if (arg8) {
+      if (fn2) {
         tmp74 = arg1;
         if (!arg15) {
-          tmp74 = arg8(arg1, obj.encoder, arg16, "key", arg13);
+          tmp74 = fn2(arg1, obj.encoder, arg16, "key", arg13);
         }
       }
       return tmp74;
@@ -160,11 +153,11 @@ function stringify(
           if (isArray(str2)) {
             let tmp17 = arg15;
             if (arg15) {
-              tmp17 = arg8;
+              tmp17 = fn2;
             }
             let maybeMapResult = str2;
             if (tmp17) {
-              maybeMapResult = tmp10(1278).maybeMap(str2, arg8);
+              maybeMapResult = tmp10(1278).maybeMap(str2, fn2);
               const tmp10Result = tmp10(1278);
             }
             let tmp18;
@@ -172,8 +165,7 @@ function stringify(
               tmp18 = maybeMapResult.join(",") || null;
               const tmp19 = maybeMapResult.join(",") || null;
             }
-            obj = { value: null };
-            obj[0] = tmp18;
+            obj = { value: tmp18 };
             const items1 = [obj];
             let arr2 = items1;
             let arr3 = maybeMapResult;
@@ -207,7 +199,6 @@ function stringify(
           if (0 < arr2.length) {
             while (true) {
               let iter = arr2[num4];
-              let tmp26 = num4;
               if (typeof iter === "object") {
                 if (iter) {
                   if (undefined !== iter.value) {
@@ -234,34 +225,12 @@ function stringify(
                             sum = text + text1;
                           }
                           let result = get.set(parts1, num2);
-                          let tmp33 = _require;
-                          let tmp34 = dependencyMap;
-                          let obj7 = getSideChannel();
-                          let tmp35 = closure_9;
+                          let obj7 = _mod1280();
                           let result1 = obj7.set(closure_9, get);
                           if (tmp86) {
                             if (arg15) {
                               let tmp39 = null;
                             }
-                            let num5 = 0;
-                            let tmp40 = value;
-                            let tmp41 = sum;
-                            let tmp42 = fn;
-                            let tmp43 = arg3;
-                            let tmp44 = arg4;
-                            let tmp45 = arg5;
-                            let tmp46 = arg6;
-                            let tmp47 = arg7;
-                            let tmp48 = tmp39;
-                            let tmp49 = fn2;
-                            let tmp50 = arg10;
-                            let tmp51 = arg11;
-                            let tmp52 = arg12;
-                            let tmp53 = arg13;
-                            let tmp54 = arg14;
-                            let tmp55 = arg15;
-                            let tmp56 = arg16;
-                            let tmp57 = obj7;
                             let tmp38Result = tmp38(
                               value,
                               sum,
@@ -272,50 +241,47 @@ function stringify(
                               arg6,
                               arg7,
                               tmp39,
-                              fn2,
+                              fn3,
                               arg10,
                               arg11,
-                              arg12,
+                              fn4,
                               arg13,
-                              arg14,
+                              fn5,
                               arg15,
                               arg16,
                               obj7,
                             );
                             if (typeof tmp37 !== "function") {
-                              let str20 = "Trying to call a non-function";
-                              let throwTypeErrorResult = HermesBuiltin.throwTypeError();
+                              break;
+                            } else {
+                              let tmp60 = tmp38Result;
+                              if (!tmp28(tmp38Result)) {
+                                let items2 = [tmp38Result];
+                                tmp60 = items2;
+                              }
+                              let applyResult = push.apply(items, tmp60);
                             }
-                            let tmp59 = push;
-                            let tmp60 = tmp38Result;
-                            if (!tmp28(tmp38Result)) {
-                              let items2 = [tmp38Result];
-                              tmp60 = items2;
-                            }
-                            let applyResult = push.apply(items, tmp60);
                           }
-                          tmp39 = arg8;
+                          tmp39 = fn2;
                         }
                       }
                       let _String2 = String;
                       replaced1 = String(iter);
                     }
                     num4 = num4 + 1;
-                    if (num4 >= arr2.length) {
-                      break;
-                    }
                   }
                 }
               }
               value = arr3[iter];
             }
+            throw new TypeError("Trying to call a non-function");
           }
           return items;
         }
-        arr2 = fn2;
+        arr2 = fn3;
         arr3 = str2;
         tmp14 = isArray;
-        if (!isArray(fn2)) {
+        if (!isArray(fn3)) {
           const _Object = Object;
           const keys = Object.keys(str2);
           let sorted = keys;
@@ -329,21 +295,21 @@ function stringify(
         tmp13 = isArray;
       }
     }
-    obj3 = items;
-    tmp10 = _require;
+    obj3 = arrayToObject;
+    tmp10 = require;
   }
-  if (arg8) {
+  if (fn2) {
     let tmp64 = arg1;
     if (!arg15) {
-      tmp64 = arg8(arg1, obj.encoder, arg16, "key", arg13);
+      tmp64 = fn2(arg1, obj.encoder, arg16, "key", arg13);
     }
-    const text2 = `${arg14(tmp64)}=`;
-    const items3 = [`${arg14(tmp64)}=` + arg14(arg8(str2, obj.encoder, arg16, "value", arg13))];
+    const text2 = `${fn5(tmp64)}=`;
+    const items3 = [`${fn5(tmp64)}=` + fn5(fn2(str2, obj.encoder, arg16, "value", arg13))];
     let items4 = items3;
   } else {
     const _String4 = String;
-    const text3 = `${arg14(arg1)}=`;
-    items4 = [`${arg14(arg1)}=` + arg14(String(str2))];
+    const text3 = `${fn5(arg1)}=`;
+    items4 = [`${fn5(arg1)}=` + fn5(String(str2))];
   }
   return items4;
 }
@@ -454,38 +420,39 @@ export default (arg0, allowEmptyArrays) => {
       sort: null,
       strictNullHandling: null,
     };
-    obj[0] =
+    obj.addQueryPrefix =
       typeof allowEmptyArrays.addQueryPrefix === "boolean" ? allowEmptyArrays.addQueryPrefix : obj.addQueryPrefix;
-    obj[1] = allowDots;
+    obj.allowDots = allowDots;
     if (typeof allowEmptyArrays.allowEmptyArrays === "boolean") {
       allowEmptyArrays = allowEmptyArrays.allowEmptyArrays;
     } else {
       allowEmptyArrays = tmp11.allowEmptyArrays;
     }
-    obj[2] = allowEmptyArrays;
-    obj[3] = arrayFormat;
-    obj[4] = charset;
-    obj[5] =
+    obj.allowEmptyArrays = allowEmptyArrays;
+    obj.arrayFormat = arrayFormat;
+    obj.charset = charset;
+    obj.charsetSentinel =
       typeof allowEmptyArrays.charsetSentinel === "boolean" ? allowEmptyArrays.charsetSentinel : obj.charsetSentinel;
-    obj[6] = allowEmptyArrays.commaRoundTrip;
-    obj[7] = undefined === allowEmptyArrays.delimiter ? obj.delimiter : allowEmptyArrays.delimiter;
-    obj[8] = typeof allowEmptyArrays.encode === "boolean" ? allowEmptyArrays.encode : obj.encode;
-    obj[9] =
+    obj.commaRoundTrip = allowEmptyArrays.commaRoundTrip;
+    obj.delimiter = undefined === allowEmptyArrays.delimiter ? obj.delimiter : allowEmptyArrays.delimiter;
+    obj.encode = typeof allowEmptyArrays.encode === "boolean" ? allowEmptyArrays.encode : obj.encode;
+    obj.encodeDotInKeys =
       typeof allowEmptyArrays.encodeDotInKeys === "boolean" ? allowEmptyArrays.encodeDotInKeys : obj.encodeDotInKeys;
-    obj[10] = typeof allowEmptyArrays.encoder === "function" ? allowEmptyArrays.encoder : obj.encoder;
-    obj[11] =
+    obj.encoder = typeof allowEmptyArrays.encoder === "function" ? allowEmptyArrays.encoder : obj.encoder;
+    obj.encodeValuesOnly =
       typeof allowEmptyArrays.encodeValuesOnly === "boolean" ? allowEmptyArrays.encodeValuesOnly : obj.encodeValuesOnly;
-    obj[12] = filter;
-    obj[13] = format;
-    obj[14] = _mod1276.formatters[format];
-    obj[15] = typeof allowEmptyArrays.serializeDate === "function" ? allowEmptyArrays.serializeDate : obj.serializeDate;
-    obj[16] = typeof allowEmptyArrays.skipNulls === "boolean" ? allowEmptyArrays.skipNulls : obj.skipNulls;
+    obj.filter = filter;
+    obj.format = format;
+    obj.formatter = _mod1276.formatters[format];
+    obj.serializeDate =
+      typeof allowEmptyArrays.serializeDate === "function" ? allowEmptyArrays.serializeDate : obj.serializeDate;
+    obj.skipNulls = typeof allowEmptyArrays.skipNulls === "boolean" ? allowEmptyArrays.skipNulls : obj.skipNulls;
     let sort = null;
     if (typeof allowEmptyArrays.sort === "function") {
       sort = allowEmptyArrays.sort;
     }
-    obj[17] = sort;
-    obj[18] =
+    obj.sort = sort;
+    obj.strictNullHandling =
       typeof allowEmptyArrays.strictNullHandling === "boolean"
         ? allowEmptyArrays.strictNullHandling
         : obj.strictNullHandling;
@@ -509,67 +476,63 @@ export default (arg0, allowEmptyArrays) => {
           const sorted = filter.sort(arr.sort);
         }
         const items = [];
-        const tmp25 = getSideChannel();
-        for (let num3 = 0; num3 < filter.length; num3 = num3 + 1) {
-          let tmp26 = filter[num3];
-          let tmp27 = found[tmp26];
-          let skipNulls = arr.skipNulls;
-          let tmp28 = num3;
-          if (skipNulls) {
-            skipNulls = null === tmp27;
+        const tmp25 = _mod1280();
+        let num3 = 0;
+        if (0 < filter.length) {
+          while (true) {
+            let tmp26 = filter[num3];
+            let tmp27 = found[tmp26];
+            let skipNulls = arr.skipNulls;
+            if (skipNulls) {
+              skipNulls = null === tmp27;
+            }
+            if (!skipNulls) {
+              ({
+                allowEmptyArrays: allowEmptyArrays2,
+                strictNullHandling,
+                skipNulls: skipNulls2,
+                encodeDotInKeys,
+              } = arr);
+              let encoder = null;
+              let tmp29 = pushToArray;
+              let tmp30 = stringify;
+              if (arr.encode) {
+                encoder = arr.encoder;
+              }
+              let tmp30Result = tmp30(
+                tmp27,
+                tmp26,
+                tmp79,
+                tmp20,
+                allowEmptyArrays2,
+                strictNullHandling,
+                skipNulls2,
+                encodeDotInKeys,
+                encoder,
+                arr.filter,
+                arr.sort,
+                arr.allowDots,
+                arr.serializeDate,
+                arr.format,
+                arr.formatter,
+                arr.encodeValuesOnly,
+                arr.charset,
+                tmp25,
+              );
+              if (typeof tmp29 !== "function") {
+                break;
+              } else {
+                let tmp45 = tmp30Result;
+                if (!isArray(tmp30Result)) {
+                  let items1 = [tmp30Result];
+                  tmp45 = items1;
+                }
+                let applyResult = push.apply(items, tmp45);
+              }
+            }
+            num3 = num3 + 1;
           }
-          if (!skipNulls) {
-            ({ allowEmptyArrays: allowEmptyArrays2, strictNullHandling, skipNulls: skipNulls2, encodeDotInKeys } = arr);
-            let encoder = null;
-            let tmp29 = pushToArray;
-            let tmp30 = stringify;
-            if (arr.encode) {
-              encoder = arr.encoder;
-            }
-            let num4 = 0;
-            let tmp32 = tmp27;
-            let tmp33 = tmp26;
-            let tmp34 = tmp79;
-            let tmp35 = tmp20;
-            let tmp36 = allowEmptyArrays2;
-            let tmp37 = strictNullHandling;
-            let tmp38 = skipNulls2;
-            let tmp39 = encodeDotInKeys;
-            let tmp40 = encoder;
-            let tmp41 = tmp25;
-            let tmp30Result = tmp30(
-              tmp27,
-              tmp26,
-              tmp79,
-              tmp20,
-              allowEmptyArrays2,
-              strictNullHandling,
-              skipNulls2,
-              encodeDotInKeys,
-              encoder,
-              arr.filter,
-              arr.sort,
-              arr.allowDots,
-              arr.serializeDate,
-              arr.format,
-              arr.formatter,
-              arr.encodeValuesOnly,
-              arr.charset,
-              tmp25,
-            );
-            if (typeof tmp29 !== "function") {
-              let str20 = "Trying to call a non-function";
-              let throwTypeErrorResult = HermesBuiltin.throwTypeError();
-            }
-            let tmp44 = isArray;
-            let tmp43 = push;
-            let tmp45 = tmp30Result;
-            if (!isArray(tmp30Result)) {
-              let items1 = [tmp30Result];
-              tmp45 = items1;
-            }
-            let applyResult = push.apply(items, tmp45);
-          }
+          throw new TypeError("Trying to call a non-function");
         }
         const joined = items.join(arr.delimiter);
         let str8 = "";

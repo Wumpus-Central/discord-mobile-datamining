@@ -1,16 +1,15 @@
 // _runtime/10789_Custom.js
-import noopDefault from "00019_noop.js";
-import { View } from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
-noopDefault;
+const require = fn;
+const View = fn(17).View;
+let jsx = fn(21).jsx;
 
 export const Custom = (activeDotStyle) => {
   activeDotStyle = activeDotStyle.activeDotStyle;
   const dotStyle = activeDotStyle.dotStyle;
   ({ progress: View, horizontal } = activeDotStyle);
-  closure_3 = tmp;
+  jsx = tmp;
   const data = activeDotStyle.data;
   let num = activeDotStyle.size;
   ({
@@ -76,28 +75,31 @@ export const Custom = (activeDotStyle) => {
             if (num6 == null) {
               num6 = 0;
             }
-            let obj = { justifyContent: "space-between", alignSelf: "center", minWidth: null, minHeight: null };
-            obj[2] = bound;
-            obj[3] = Math.max(num, num5, num6);
+            let obj = {
+              justifyContent: "space-between",
+              alignSelf: "center",
+              minWidth: bound,
+              minHeight: Math.max(num, num5, num6),
+            };
             const items = [obj, ,];
             obj = { style: null, children: null };
             items[1] = tmp ? { flexDirection: "row" } : { flexDirection: "column" };
             items[2] = tmp2;
-            obj[0] = items;
-            obj[1] = data.map((arg0, index) => {
-              closure_0 = index;
+            obj.style = items;
+            obj.children = data.map((item, index) => {
+              activeDotStyle = index;
               const obj = {
                 index,
                 size: num,
                 count: data.length,
                 dotStyle,
-                animValue: closure_2,
+                animValue,
                 horizontal: !closure_3,
-                activeDotStyle: closure_0,
-                customReanimatedStyle: closure_8,
+                activeDotStyle,
+                customReanimatedStyle,
                 onPress() {
                   let tmpResult;
-                  if (closure_1_7 != null) {
+                  if (closure_2_7 != null) {
                     tmpResult = tmp(closure_0);
                   }
                   return tmpResult;
@@ -107,17 +109,17 @@ export const Custom = (activeDotStyle) => {
               };
               let tmp2Result;
               if (closure_6 != null) {
-                tmp2Result = tmp2(arg0, index);
+                tmp2Result = tmp2(item, index);
               }
-              obj[10] = tmp2Result;
+              obj.children = tmp2Result;
               return closure_3(activeDotStyle(dotStyle[3]).PaginationItem, obj, index);
             });
-            return closure_3(View, obj);
+            return jsx(View, obj);
           }
         }
       }
     }
   }
-  error = new Error("size/width/height must be a number");
+  const error = new Error("size/width/height must be a number");
   throw error;
 };

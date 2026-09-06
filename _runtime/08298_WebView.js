@@ -1,7 +1,7 @@
 // _runtime/08298_WebView.js
-import NativeModulesDefault from "08299_NativeModules.js";
-import getWebViewProxyDefault from "08304_getWebViewProxy.js";
+import _modDef8299 from "metro/08299__.js";
+import _modDef8304 from "metro/08304__.js";
 
-export default NativeModulesDefault;
-export const WebView = NativeModulesDefault;
-export const getWebViewProxy = getWebViewProxyDefault;
+export default _modDef8299;
+export const WebView = _modDef8299;
+export const getWebViewProxy = _modDef8304;

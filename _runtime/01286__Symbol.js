@@ -1,5 +1,5 @@
 // _runtime/01286__Symbol.js
-import hasSymbols from "01287_hasSymbols.js";
+import _mod1287 from "metro/01287__.js";
 
 let _Symbol = typeof Symbol !== "undefined";
 if (typeof Symbol !== "undefined") {
@@ -19,7 +19,7 @@ export default function hasNativeSymbols() {
         const SymbolResult = Symbol("bar");
         let tmp8 = typeof SymbolResult === "symbol";
         if (typeof SymbolResult === "symbol") {
-          tmp8 = hasSymbols();
+          tmp8 = _mod1287();
         }
         tmp3 = tmp8;
       }

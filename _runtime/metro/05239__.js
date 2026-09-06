@@ -1,7 +1,7 @@
 // _runtime/metro/05239__.js
-obj = {
-  0: obj,
-  1: obj,
+let obj = {
+  0: null,
+  1: null,
   2: null,
   3: null,
   4: null,
@@ -52,7 +52,8 @@ obj = {
     return str;
   },
 };
-obj = {
+obj.name = obj;
+obj.description = {
   name: "GPSLatitudeRef",
   description(join) {
     const joined = join.join("");
@@ -67,7 +68,8 @@ obj = {
     return str;
   },
 };
-obj[2] = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
+obj = { name: "GPSLatitude", description: fn(5238).getCalculatedGpsValue };
+obj[2] = obj;
 obj[3] = {
   name: "GPSLongitudeRef",
   description(join) {
@@ -83,8 +85,7 @@ obj[3] = {
     return str;
   },
 };
-const obj1 = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[4] = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
+obj[4] = { name: "GPSLongitude", description: fn(5238).getCalculatedGpsValue };
 obj[5] = {
   name: "GPSAltitudeRef",
   description(arg0) {
@@ -108,8 +109,8 @@ obj[6] = {
 obj[7] = {
   name: "GPSTimeStamp",
   description(arr) {
-    const mapped = arr.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    const mapped = arr.map((item) => {
+      [tmp, tmp2] = item;
       const result = tmp / tmp2;
       let combined = result;
       if (obj.test("" + result)) {
@@ -276,10 +277,10 @@ obj[25] = {
     return str;
   },
 };
-const obj2 = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[27] = { name: "GPSProcessingMethod", description: require("getStringValue").getEncodedString };
-const obj3 = { name: "GPSProcessingMethod", description: require("getStringValue").getEncodedString };
-obj[28] = { name: "GPSAreaInformation", description: require("getStringValue").getEncodedString };
+const obj1 = { name: "GPSLongitude", description: fn(5238).getCalculatedGpsValue };
+obj[27] = { name: "GPSProcessingMethod", description: fn(5238).getEncodedString };
+const obj2 = { name: "GPSProcessingMethod", description: fn(5238).getEncodedString };
+obj[28] = { name: "GPSAreaInformation", description: fn(5238).getEncodedString };
 obj[30] = {
   name: "GPSDifferential",
   description(arg0) {
@@ -294,4 +295,5 @@ obj[30] = {
     return str;
   },
 };
-arg5.default = obj;
+
+export default obj;

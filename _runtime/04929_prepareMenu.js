@@ -1,16 +1,16 @@
 // _runtime/04929_prepareMenu.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import get_ActivityIndicator from "metro/00017__.js";
 
-({ Image: c0, processColor: closure_1 } = get_ActivityIndicator);
+({ Image: closure_0, processColor: closure_1 } = get_ActivityIndicator);
 function prepareMenu(arg0, arg1, arg2) {
 
 }
 
-export const prepareHeaderBarButtonItems = (arr) => {
+export const prepareHeaderBarButtonItems = (arr, arg1) => {
   closure_0 = arg1;
   let mapped;
   if (arr != null) {
-    mapped = arr.map((type) => {
+    mapped = arr.map((type, index) => {
       if ("spacing" === type.type) {
         return type;
       } else {
@@ -20,7 +20,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
           type = icon4.type;
         }
         if ("imageSource" === type) {
-          let assetSource = closure_0.resolveAssetSource(type.icon.imageSource);
+          let assetSource = React.resolveAssetSource(type.icon.imageSource);
         } else {
           let icon = type.icon;
           let type1;
@@ -28,19 +28,19 @@ export const prepareHeaderBarButtonItems = (arr) => {
             type1 = icon.type;
           }
           if ("templateSource" === type1) {
-            let assetSource1 = closure_0.resolveAssetSource(type.icon.templateSource);
+            let assetSource1 = React.resolveAssetSource(type.icon.templateSource);
           }
         }
         let tmp7;
         if (type.titleStyle) {
           let obj = {};
           let merged = Object.assign(type.titleStyle);
-          obj.color = closure_1_1(type.titleStyle.color);
+          obj.color = framebus(type.titleStyle.color);
           tmp7 = obj;
         }
         let tmp11;
         if (type.tintColor) {
-          tmp11 = closure_1_1(type.tintColor);
+          tmp11 = framebus(type.tintColor);
         }
         let tmp13;
         if (type.badge) {
@@ -53,19 +53,17 @@ export const prepareHeaderBarButtonItems = (arr) => {
           if (style != null) {
             color = style.color;
           }
-          obj.color = closure_1_1(color);
+          obj.color = framebus(color);
           const style2 = type.badge.style;
           let backgroundColor;
           if (style2 != null) {
             backgroundColor = style2.backgroundColor;
           }
-          obj.backgroundColor = closure_1_1(backgroundColor);
+          obj.backgroundColor = framebus(backgroundColor);
           obj.style = obj;
           tmp13 = obj;
-          const tmp18 = closure_1_1;
-          const tmp20 = closure_1_1;
         }
-        obj1 = {};
+        const obj1 = {};
         let merged3 = Object.assign(type);
         obj1.imageSource = assetSource;
         obj1.templateSource = assetSource1;
@@ -96,7 +94,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
           const obj2 = {};
           const merged4 = Object.assign(obj1);
           let _HermesInternal = HermesInternal;
-          obj2.buttonId = "" + arg1 + "-" + closure_0;
+          obj2.buttonId = "" + index + "-" + index;
           let tmp38 = obj2;
         } else {
           tmp38 = null;
@@ -104,117 +102,61 @@ export const prepareHeaderBarButtonItems = (arr) => {
             const obj3 = {};
             const merged5 = Object.assign(obj1);
             const menu = type.menu;
-            if (typeof closure_1_2 !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            closure_0 = arg1;
-            closure_1 = closure_0;
-            const obj4 = {};
-            const merged6 = Object.assign(menu);
-            let items = menu.items;
-            obj4.items = items.map((icon) => {
-              icon = icon.icon;
-              let type;
-              if (icon != null) {
-                type = icon.type;
-              }
-              if ("sfSymbol" === type) {
-                const icon2 = icon.icon;
-                let name;
-                if (icon2 != null) {
-                  name = icon2.name;
+            if (typeof prepareMenu === "function") {
+              closure_1 = tmp34;
+              const obj4 = {};
+              const merged6 = Object.assign(menu);
+              let items = menu.items;
+              obj4.items = items.map((icon, index) => {
+                icon = icon.icon;
+                let type;
+                if (icon != null) {
+                  type = icon.type;
                 }
-              }
-              if ("xcasset" === type) {
-                const icon3 = icon.icon;
-                let name1;
-                if (icon3 != null) {
-                  name1 = icon3.name;
+                if ("sfSymbol" === type) {
+                  const icon2 = icon.icon;
+                  let name;
+                  if (icon2 != null) {
+                    name = icon2.name;
+                  }
                 }
-              }
-              const icon4 = icon.icon;
-              let type1;
-              if (icon4 != null) {
-                type1 = icon4.type;
-              }
-              if ("imageSource" === type1) {
-                const assetSource = closure_0.resolveAssetSource(icon.icon.imageSource);
-              } else {
-                const icon5 = icon.icon;
-                let type2;
-                if (icon5 != null) {
-                  type2 = icon5.type;
+                if ("xcasset" === type) {
+                  const icon3 = icon.icon;
+                  let name1;
+                  if (icon3 != null) {
+                    name1 = icon3.name;
+                  }
                 }
-                if ("templateSource" === type2) {
-                  const assetSource1 = closure_0.resolveAssetSource(icon.icon.templateSource);
+                const icon4 = icon.icon;
+                let type1;
+                if (icon4 != null) {
+                  type1 = icon4.type;
                 }
-              }
-              if ("submenu" === icon.type) {
-                let obj = {};
-                const merged = Object.assign(icon);
-                obj.sfSymbolName = tmp2;
-                obj.xcassetName = tmp4;
-                obj.imageSource = assetSource;
-                obj.templateSource = assetSource1;
-                if (typeof closure_1_2 !== "function") {
-                  HermesBuiltin.throwTypeError();
+                if ("imageSource" === type1) {
+                  const assetSource = index.resolveAssetSource(icon.icon.imageSource);
+                } else {
+                  const icon5 = icon.icon;
+                  let type2;
+                  if (icon5 != null) {
+                    type2 = icon5.type;
+                  }
+                  if ("templateSource" === type2) {
+                    const assetSource1 = index.resolveAssetSource(icon.icon.templateSource);
+                  }
                 }
-                closure_0 = arg1;
-                obj = {};
-                const merged1 = Object.assign(icon);
-                const items = icon.items;
-                obj.items = items.map((icon) => {
-                  icon = icon.icon;
-                  let type;
-                  if (icon != null) {
-                    type = icon.type;
-                  }
-                  if ("sfSymbol" === type) {
-                    const icon2 = icon.icon;
-                    let name;
-                    if (icon2 != null) {
-                      name = icon2.name;
-                    }
-                  }
-                  if ("xcasset" === type) {
-                    const icon3 = icon.icon;
-                    let name1;
-                    if (icon3 != null) {
-                      name1 = icon3.name;
-                    }
-                  }
-                  const icon4 = icon.icon;
-                  let type1;
-                  if (icon4 != null) {
-                    type1 = icon4.type;
-                  }
-                  if ("imageSource" === type1) {
-                    const assetSource = closure_0.resolveAssetSource(icon.icon.imageSource);
-                  } else {
-                    const icon5 = icon.icon;
-                    let type2;
-                    if (icon5 != null) {
-                      type2 = icon5.type;
-                    }
-                    if ("templateSource" === type2) {
-                      const assetSource1 = closure_0.resolveAssetSource(icon.icon.templateSource);
-                    }
-                  }
-                  if ("submenu" === icon.type) {
-                    let obj = {};
-                    const merged = Object.assign(icon);
-                    obj.sfSymbolName = tmp2;
-                    obj.xcassetName = tmp4;
-                    obj.imageSource = assetSource;
-                    obj.templateSource = assetSource1;
-                    if (typeof closure_1_2 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    closure_0 = arg1;
+                if ("submenu" === icon.type) {
+                  let obj = {};
+                  const merged = Object.assign(icon);
+                  obj.sfSymbolName = tmp2;
+                  obj.xcassetName = tmp4;
+                  obj.imageSource = assetSource;
+                  obj.templateSource = assetSource1;
+                  if (typeof prepareMenu === "function") {
+                    closure_1 = tmp23;
                     obj = {};
                     const merged1 = Object.assign(icon);
                     const items = icon.items;
-                    obj.items = items.map((icon) => {
+                    obj.items = items.map((icon, index) => {
                       icon = icon.icon;
                       let type;
                       if (icon != null) {
@@ -240,7 +182,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
                         type1 = icon4.type;
                       }
                       if ("imageSource" === type1) {
-                        const assetSource = closure_0.resolveAssetSource(icon.icon.imageSource);
+                        const assetSource = index.resolveAssetSource(icon.icon.imageSource);
                       } else {
                         const icon5 = icon.icon;
                         let type2;
@@ -248,7 +190,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
                           type2 = icon5.type;
                         }
                         if ("templateSource" === type2) {
-                          const assetSource1 = closure_0.resolveAssetSource(icon.icon.templateSource);
+                          const assetSource1 = index.resolveAssetSource(icon.icon.templateSource);
                         }
                       }
                       if ("submenu" === icon.type) {
@@ -258,16 +200,81 @@ export const prepareHeaderBarButtonItems = (arr) => {
                         obj.xcassetName = tmp4;
                         obj.imageSource = assetSource;
                         obj.templateSource = assetSource1;
-                        if (typeof closure_1_2 !== "function") {
-                          HermesBuiltin.throwTypeError();
+                        if (typeof prepareMenu === "function") {
+                          closure_1 = tmp23;
+                          obj = {};
+                          const merged1 = Object.assign(icon);
+                          const items = icon.items;
+                          obj.items = items.map((icon, index) => {
+                            icon = icon.icon;
+                            let type;
+                            if (icon != null) {
+                              type = icon.type;
+                            }
+                            if ("sfSymbol" === type) {
+                              const icon2 = icon.icon;
+                              let name;
+                              if (icon2 != null) {
+                                name = icon2.name;
+                              }
+                            }
+                            if ("xcasset" === type) {
+                              const icon3 = icon.icon;
+                              let name1;
+                              if (icon3 != null) {
+                                name1 = icon3.name;
+                              }
+                            }
+                            const icon4 = icon.icon;
+                            let type1;
+                            if (icon4 != null) {
+                              type1 = icon4.type;
+                            }
+                            if ("imageSource" === type1) {
+                              const assetSource = index.resolveAssetSource(icon.icon.imageSource);
+                            } else {
+                              const icon5 = icon.icon;
+                              let type2;
+                              if (icon5 != null) {
+                                type2 = icon5.type;
+                              }
+                              if ("templateSource" === type2) {
+                                const assetSource1 = index.resolveAssetSource(icon.icon.templateSource);
+                              }
+                            }
+                            if ("submenu" === icon.type) {
+                              let obj = {};
+                              const merged = Object.assign(icon);
+                              obj.sfSymbolName = tmp2;
+                              obj.xcassetName = tmp4;
+                              obj.imageSource = assetSource;
+                              obj.templateSource = assetSource1;
+                              if (typeof prepareMenu === "function") {
+                                closure_1 = tmp23;
+                                obj = {};
+                                const merged1 = Object.assign(icon);
+                                const items = icon.items;
+                                obj.items = items.map(() => { ... });
+                                const merged2 = Object.assign(obj);
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            } else {
+                              obj = {};
+                              const merged3 = Object.assign(icon);
+                              obj.sfSymbolName = tmp2;
+                              obj.xcassetName = tmp4;
+                              obj.imageSource = assetSource;
+                              obj.templateSource = assetSource1;
+                              const _HermesInternal = HermesInternal;
+                              obj.menuId = "" + index + "-" + index + "-" + closure_1;
+                            }
+                            return obj;
+                          });
+                          const merged2 = Object.assign(obj);
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
                         }
-                        closure_0 = arg1;
-                        obj = {};
-                        const merged1 = Object.assign(icon);
-                        const items = icon.items;
-                        obj.items = items.map(() => { ... });
-                        const merged2 = Object.assign(obj);
-                        const tmp23 = closure_1;
                       } else {
                         obj = {};
                         const merged3 = Object.assign(icon);
@@ -276,41 +283,31 @@ export const prepareHeaderBarButtonItems = (arr) => {
                         obj.imageSource = assetSource;
                         obj.templateSource = assetSource1;
                         const _HermesInternal = HermesInternal;
-                        obj.menuId = "" + arg1 + "-" + closure_0 + "-" + closure_1;
+                        obj.menuId = "" + index + "-" + index + "-" + closure_1;
                       }
                       return obj;
                     });
                     const merged2 = Object.assign(obj);
-                    const tmp23 = closure_1;
                   } else {
-                    obj = {};
-                    const merged3 = Object.assign(icon);
-                    obj.sfSymbolName = tmp2;
-                    obj.xcassetName = tmp4;
-                    obj.imageSource = assetSource;
-                    obj.templateSource = assetSource1;
-                    const _HermesInternal = HermesInternal;
-                    obj.menuId = "" + arg1 + "-" + closure_0 + "-" + closure_1;
+                    throw new TypeError("Trying to call a non-function");
                   }
-                  return obj;
-                });
-                const merged2 = Object.assign(obj);
-                const tmp23 = closure_1;
-              } else {
-                obj = {};
-                const merged3 = Object.assign(icon);
-                obj.sfSymbolName = tmp2;
-                obj.xcassetName = tmp4;
-                obj.imageSource = assetSource;
-                obj.templateSource = assetSource1;
-                const _HermesInternal = HermesInternal;
-                obj.menuId = "" + arg1 + "-" + closure_0 + "-" + closure_1;
-              }
-              return obj;
-            });
-            obj3.menu = obj4;
-            tmp38 = obj3;
-            const tmp34 = closure_0;
+                } else {
+                  obj = {};
+                  const merged3 = Object.assign(icon);
+                  obj.sfSymbolName = tmp2;
+                  obj.xcassetName = tmp4;
+                  obj.imageSource = assetSource;
+                  obj.templateSource = assetSource1;
+                  const _HermesInternal = HermesInternal;
+                  obj.menuId = "" + index + "-" + index + "-" + closure_1;
+                }
+                return obj;
+              });
+              obj3.menu = obj4;
+              tmp38 = obj3;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
           }
         }
         return tmp38;

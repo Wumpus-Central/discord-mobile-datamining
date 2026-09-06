@@ -1,7 +1,7 @@
 // _runtime/01572_StaticContainer.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const StaticContainer = noopAll.memo(
+export const StaticContainer = noop.memo(
   function StaticContainer(children) {
     return children.children;
   },
@@ -15,9 +15,7 @@ export const StaticContainer = noopAll.memo(
       while (iter !== undefined) {
         let tmp5 = nextResult;
         if ("children" !== nextResult) {
-          let tmp6 = nextResult;
           if (arg0[tmp5] !== arg1[tmp5]) {
-            let tmp7 = iter;
             iter.return();
             let flag = false;
             return false;

@@ -173,7 +173,7 @@ QRRSBlock.getRSBlocks = (arg0, arg1) => {
   const rsBlockTable = QRRSBlock.getRsBlockTable(arg0, arg1);
   if (null == rsBlockTable) {
     const _Error = Error;
-    error = new Error("bad rs block @ typeNumber:" + arg0 + "/errorCorrectLevel:" + arg1);
+    const error = new Error("bad rs block @ typeNumber:" + arg0 + "/errorCorrectLevel:" + arg1);
     throw error;
   } else {
     const result = rsBlockTable.length / 3;
@@ -184,9 +184,7 @@ QRRSBlock.getRSBlocks = (arg0, arg1) => {
       do {
         let result1 = 3 * num2;
         let tmp2 = rsBlockTable[result1];
-        let tmp5 = num2;
         for (let num = 0; num < tmp2; num = num + 1) {
-          let tmp6 = QRRSBlock;
           let obj = Object.create(QRRSBlock.prototype);
           obj = { totalCount: tmp3, dataCount: tmp4 };
           let arr = array.push(obj);

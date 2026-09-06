@@ -1,12 +1,12 @@
 // _runtime/01554_transformPreventedRoutes.js
-import closure_3 from "metro/00032__slicedToArray.js";
-import closure_4 from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _slicedToArray from "metro/00032__.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
-function transformPreventedRoutes(arr) {
+const require = fn;
+const jsx = fn(21).jsx;
+function transformPreventedRoutes(first1) {
   const obj = {};
-  const values = arr.values();
+  const values = first1.values();
   for (const item10008 of values) {
     obj[item10008] = { preventRemove: true };
     continue;
@@ -15,32 +15,25 @@ function transformPreventedRoutes(arr) {
 }
 
 export const PreventRemoveProvider = function PreventRemoveProvider(children) {
-  let first;
-  let first1;
-  dependencyMap = undefined;
-  let callback;
-  let React;
-  let context;
-  let setPreventRemove;
+  _slicedToArray = undefined;
+  noop = undefined;
   let notifyPreventRemove;
-  closure_8 = undefined;
-  closure_9 = undefined;
   closure_10 = undefined;
-  first = callback(
-    React.useState(() => first(1492).nanoid()),
+  const first = _slicedToArray(
+    noop.useState(() => first(1492).nanoid()),
     1,
   )[0];
-  const tmp2 = callback(
-    React.useState(() => new Map()),
+  const tmp2 = _slicedToArray(
+    noop.useState(() => new Map()),
     2,
   );
-  first1 = tmp2[0];
+  const first1 = tmp2[0];
   dependencyMap = tmp2[1];
-  callback = React.useRef(new Map());
-  React = React.useContext(first(1549).NavigationHelpersContext);
-  context = React.useContext(first(1524).NavigationRouteContext);
-  const context1 = React.useContext(first(1553).PreventRemoveContext);
-  setPreventRemove = undefined;
+  _slicedToArray = noop.useRef(new Map());
+  noop = noop.useContext(first(1549).NavigationHelpersContext);
+  const context = noop.useContext(first(1524).NavigationRouteContext);
+  const context1 = noop.useContext(first(1553).PreventRemoveContext);
+  let setPreventRemove;
   if (context1 != null) {
     setPreventRemove = context1.setPreventRemove;
   }
@@ -60,7 +53,9 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
       }
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("Couldn't find a route with the key " + arg1 + ". Is your component inside NavigationContent?");
+      const error = new Error(
+        "Couldn't find a route with the key " + arg1 + ". Is your component inside NavigationContent?",
+      );
       throw error;
     }
     const current = ref.current;
@@ -70,11 +65,10 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
       current.delete(arg0);
     }
   });
-  closure_8 = tmp11;
+  setPreventRemove = tmp11;
   const tmp12 = first1(1505)(() => {
     dependencyMap((size) => {
       let map = size;
-      closure_0 = size;
       const current = ref.current;
       if (size.size !== current.size) {
         const _Map = Map;
@@ -86,14 +80,14 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
       return map;
     });
   });
-  closure_9 = tmp12;
+  notifyPreventRemove = tmp12;
   const effect = obj.useEffect(() => {
-    callback();
+    notifyPreventRemove();
     if (notifyPreventRemove != null) {
       notifyPreventRemove();
     }
     return () => {
-      if (closure_7 != null) {
+      if (notifyPreventRemove != null) {
         tmp();
       }
     };
@@ -115,14 +109,14 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
       if (undefined !== setPreventRemove) {
         tmp3(first, tmp.key, closure_10);
         return () => {
-          callback(closure_0, key.key, false);
+          setPreventRemove(first, key.key, false);
         };
       }
     }
   }, items);
   const items1 = [tmp11, tmp12, first1];
-  const value = obj.useMemo(
-    () => ({ setPreventRemove: closure_8, notifyPreventRemove: closure_9, preventedRoutes: setPreventRemove(first1) }),
+  value = obj.useMemo(
+    () => ({ setPreventRemove, notifyPreventRemove, preventedRoutes: transformPreventedRoutes(first1) }),
     items1,
   );
   return context(first(1553).PreventRemoveContext.Provider, { value, children: children.children });

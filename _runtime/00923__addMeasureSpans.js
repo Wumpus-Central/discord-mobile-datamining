@@ -1,12 +1,20 @@
 // _runtime/00923__addMeasureSpans.js
-import registerSpanErrorInstrumentation from "00682_registerSpanErrorInstrumentation.js";
-import triggerHandlers from "00899_triggerHandlers.js";
-import getNavigationEntry from "00908_getNavigationEntry.js";
+import _mod682 from "metro/00682__.js";
+import _mod899 from "metro/00899__.js";
+import _mod904 from "metro/00904__.js";
+import _mod905 from "metro/00905__.js";
+import _mod908 from "metro/00908__.js";
 import extractNetworkProtocol from "00924_extractNetworkProtocol.js";
-import closure_2 from "metro/00032__slicedToArray.js";
-import { extractNetworkProtocol } from "00924_extractNetworkProtocol.js";
+import _slicedToArray from "metro/00032__.js";
 
-function _addMeasureSpans(activeSpan, entryType) {
+function _addMeasureSpans(
+  activeSpan,
+  entryType,
+  msToSecResult,
+  msToSecResult1,
+  msToSecResult2,
+  ignorePerformanceApiSpans,
+) {
   if (
     !(function isReact19MeasureEntry(entryType) {
       entryType = undefined;
@@ -24,18 +32,17 @@ function _addMeasureSpans(activeSpan, entryType) {
   ) {
     const items = ["mark", "measure"];
     if (!items.includes(entryType.entryType)) {
-      const navigationEntry = getNavigationEntry.getNavigationEntry(false);
-      let obj2 = getNavigationEntry;
+      const navigationEntry = _mod908.getNavigationEntry(false);
       let num = 0;
       if (navigationEntry) {
         num = navigationEntry.requestStart;
       }
       const _Math = Math;
-      const sum = arg4 + Math.max(arg2, extractNetworkProtocol.msToSec(num));
-      const sum1 = arg4 + arg2;
-      const sum2 = sum1 + arg3;
+      const sum = msToSecResult2 + Math.max(msToSecResult, extractNetworkProtocol.msToSec(num));
+      const sum1 = msToSecResult2 + msToSecResult;
+      const sum2 = sum1 + msToSecResult1;
       let obj = {};
-      obj[registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.resource.browser.metrics";
+      obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.resource.browser.metrics";
       if (sum !== sum1) {
         obj["sentry.browser.measure_happened_before_request"] = true;
         obj["sentry.browser.measure_start_time"] = sum;
@@ -49,13 +56,13 @@ function _addMeasureSpans(activeSpan, entryType) {
               const entries = Object.entries(detail);
               const tmp11 = entries[Symbol.iterator]();
               if (tmp11 !== undefined) {
-                [tmp17, tmp18] = callback2(tmp13, 2);
+                [tmp17, tmp18] = _slicedToArray(tmp13, 2);
                 if (tmp18) {
                   if (obj.isPrimitive(tmp19)) {
                     const _HermesInternal2 = HermesInternal;
                     arg0["sentry.browser.measure.detail." + tmp17] = tmp19;
                   }
-                  obj = callback(682);
+                  obj = require("metro/00682__.js");
                 }
                 if (undefined !== tmp18) {
                   try {
@@ -65,7 +72,7 @@ function _addMeasureSpans(activeSpan, entryType) {
                     arg0[combined] = JSON.stringify(tmp19);
                   } catch (err) {}
                 }
-                const tmp16 = callback2(tmp13, 2);
+                const tmp16 = _slicedToArray(tmp13, 2);
               }
             } else {
               if (obj2.isPrimitive(tmp2)) {
@@ -76,7 +83,7 @@ function _addMeasureSpans(activeSpan, entryType) {
                   arg0["sentry.browser.measure.detail"] = JSON.stringify(tmp2);
                 } catch (err) {}
               }
-              obj2 = callback(682);
+              obj2 = require("metro/00682__.js");
             }
           }
         } catch (err) {}
@@ -84,51 +91,48 @@ function _addMeasureSpans(activeSpan, entryType) {
       if (sum <= sum2) {
         const tmp4Result = tmp4(924);
         obj = { name: null, op: null, attributes: null };
-        ({ name: obj6[0], entryType: obj6[1] } = entryType);
-        obj[2] = obj;
+        ({ name: obj6.name, entryType: obj6.op } = entryType);
+        obj.attributes = obj;
         tmp4Result.startAndEndSpan(activeSpan, sum, sum2, obj);
       }
-      const obj3 = extractNetworkProtocol;
     } else {
-      obj = registerSpanErrorInstrumentation;
+      obj = _mod682;
     }
   }
 }
-function _addNavigationSpans(activeSpan, requestStart) {
-  const _require = activeSpan;
+function _addNavigationSpans(activeSpan, requestStart, msToSecResult) {
+  _require = activeSpan;
   dependencyMap = requestStart;
-  closure_2 = arg2;
+  closure_2 = msToSecResult;
   const items = ["unloadEvent", "redirect", "domContentLoadedEvent", "loadEvent", "connect"];
-  const item = items.forEach((arg0) => {
-    closure_1_9(closure_0, closure_1, arg0, closure_2);
+  const item = items.forEach((item) => {
+    _addPerformanceNavigationTiming(closure_0, closure_1, item, closure_2);
   });
-  _addPerformanceNavigationTiming(activeSpan, requestStart, "secureConnection", arg2, "TLS/SSL");
-  _addPerformanceNavigationTiming(activeSpan, requestStart, "fetch", arg2, "cache");
-  _addPerformanceNavigationTiming(activeSpan, requestStart, "domainLookup", arg2, "DNS");
-  let obj = extractNetworkProtocol;
-  const sum = arg2 + obj.msToSec(requestStart.requestStart);
-  obj1 = extractNetworkProtocol;
-  const sum1 = arg2 + obj1.msToSec(requestStart.responseEnd);
-  let obj2 = extractNetworkProtocol;
-  const sum2 = arg2 + obj2.msToSec(requestStart.responseStart);
+  _addPerformanceNavigationTiming(activeSpan, requestStart, "secureConnection", msToSecResult, "TLS/SSL");
+  _addPerformanceNavigationTiming(activeSpan, requestStart, "fetch", msToSecResult, "cache");
+  _addPerformanceNavigationTiming(activeSpan, requestStart, "domainLookup", msToSecResult, "DNS");
+  let obj = require("extractNetworkProtocol");
+  const sum = msToSecResult + obj.msToSec(requestStart.requestStart);
+  let obj1 = require("extractNetworkProtocol");
+  const sum1 = msToSecResult + obj1.msToSec(requestStart.responseEnd);
+  let obj2 = require("extractNetworkProtocol");
+  const sum2 = msToSecResult + obj2.msToSec(requestStart.responseStart);
   if (requestStart.responseEnd) {
     let tmp5Result = tmp5(924);
-    obj = { op: "browser.request", name: null, attributes: null };
-    obj[1] = requestStart.name;
+    obj = { op: "browser.request", name: requestStart.name, attributes: null };
     obj = {};
     obj[tmp5(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
-    obj[2] = obj;
+    obj.attributes = obj;
     tmp5Result.startAndEndSpan(activeSpan, sum, sum1, obj);
     tmp5Result = tmp5(924);
-    obj1 = { op: "browser.response", name: null, attributes: null };
-    obj1[1] = requestStart.name;
+    obj1 = { op: "browser.response", name: requestStart.name, attributes: null };
     obj2 = {};
     obj2[tmp5(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
-    obj1[2] = obj2;
+    obj1.attributes = obj2;
     tmp5Result.startAndEndSpan(activeSpan, sum2, sum1, obj1);
   }
 }
-function _addPerformanceNavigationTiming(activeSpan, requestStart, domainLookup, arg3, DNS) {
+function _addPerformanceNavigationTiming(activeSpan, requestStart, domainLookup, msToSecResult, DNS) {
   let tmp = DNS;
   if (DNS === undefined) {
     tmp = domainLookup;
@@ -148,30 +152,37 @@ function _addPerformanceNavigationTiming(activeSpan, requestStart, domainLookup,
     tmp5 = tmp3;
   }
   if (tmp5) {
-    let obj = extractNetworkProtocol;
-    obj1 = extractNetworkProtocol;
-    const sum = arg3 + obj1.msToSec(tmp4);
+    let obj1 = extractNetworkProtocol;
+    const sum = msToSecResult + obj1.msToSec(tmp4);
     let obj2 = extractNetworkProtocol;
-    const sum1 = arg3 + obj2.msToSec(tmp3);
-    obj = { op: null, name: null, attributes: null };
+    const sum1 = msToSecResult + obj2.msToSec(tmp3);
+    let obj = { op: null, name: null, attributes: null };
     const _HermesInternal2 = HermesInternal;
-    obj[0] = "browser." + tmp;
-    obj[1] = redirectCount.name;
+    obj.op = "browser." + tmp;
+    obj.name = redirectCount.name;
     obj = {};
-    obj[registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
+    obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
     if ("redirect" !== domainLookup) {
       obj1 = {};
       const merged = Object.assign(obj1);
-      obj[2] = obj;
+      obj.attributes = obj;
       obj.startAndEndSpan(activeSpan, sum, sum1, obj);
     }
     obj2 = { "http.redirect_count": null };
     redirectCount = redirectCount.redirectCount;
-    obj2[0] = redirectCount;
+    obj2["http.redirect_count"] = redirectCount;
     obj1 = obj2;
   }
 }
-function _addResourceSpans(activeSpan, initiatorType, arr, arg3, arg4, arg5, arr2) {
+function _addResourceSpans(
+  activeSpan,
+  initiatorType,
+  name,
+  msToSecResult,
+  msToSecResult1,
+  msToSecResult2,
+  ignoreResourceSpans,
+) {
   if ("xmlhttprequest" !== initiatorType.initiatorType) {
     if ("fetch" !== initiatorType.initiatorType) {
       let str2 = "resource.other";
@@ -180,22 +191,21 @@ function _addResourceSpans(activeSpan, initiatorType, arr, arg3, arg4, arg5, arr
         str2 = "resource." + initiatorType.initiatorType;
       }
       let hasItem;
-      if (arr2 != null) {
-        hasItem = arr2.includes(str2);
+      if (ignoreResourceSpans != null) {
+        hasItem = ignoreResourceSpans.includes(str2);
       }
       if (!hasItem) {
-        let obj = {};
-        obj[_require(obj[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.resource.browser.metrics";
-        const url = _require(obj[2]).parseUrl(arr);
+        let attributes = {};
+        attributes[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.resource.browser.metrics";
+        const url = _mod682.parseUrl(name);
         if (url.protocol) {
           const parts = url.protocol.split(":");
-          obj["url.scheme"] = parts.pop();
-          const str4 = url.protocol;
+          attributes["url.scheme"] = parts.pop();
         }
         if (url.host) {
-          obj["server.address"] = url.host;
+          attributes["server.address"] = url.host;
         }
-        obj["url.same_origin"] = arr.includes(_require(obj[3]).WINDOW.location.origin);
+        attributes["url.same_origin"] = name.includes(_mod904.WINDOW.location.origin);
         const items = [
           ["responseStatus", "http.response.status_code"],
           ["transferSize", "http.response_transfer_size"],
@@ -204,9 +214,9 @@ function _addResourceSpans(activeSpan, initiatorType, arr, arg3, arg4, arg5, arr
           ["renderBlockingStatus", "resource.render_blocking_status"],
           ["deliveryType", "http.response_delivery_type"],
         ];
-        _require = initiatorType;
-        const item = items.forEach((arg0) => {
-          [tmp, tmp2] = arg0;
+        closure_0 = initiatorType;
+        const item = items.forEach((item) => {
+          [tmp, tmp2] = item;
           let tmp4 = null != tmp3;
           if (tmp4) {
             let tmp5 = typeof tmp3 === "number";
@@ -222,19 +232,16 @@ function _addResourceSpans(activeSpan, initiatorType, arr, arg3, arg4, arg5, arr
             closure_1[tmp2] = tmp3;
           }
         });
-        obj = {};
-        const merged = Object.assign(obj);
-        let tmp6Result = tmp6(tmp7[10]);
+        attributes = {};
+        const merged = Object.assign(attributes);
+        let tmp6Result = tmp6(928);
         const merged1 = Object.assign(tmp6Result.resourceTimingToSpanAttributes(initiatorType));
-        const sum = arg5 + arg3;
-        const sum1 = sum + arg4;
-        tmp6Result = tmp6(tmp7[1]);
-        obj = { name: null, op: null, attributes: null };
-        obj[0] = arr.replace(_require(obj[3]).WINDOW.location.origin, "");
-        obj[1] = str2;
-        obj[2] = obj;
-        tmp6Result.startAndEndSpan(activeSpan, sum, sum1, obj);
-        const obj2 = _require(obj[2]);
+        const sum = msToSecResult2 + msToSecResult;
+        const sum1 = sum + msToSecResult1;
+        tmp6Result = tmp6(924);
+        attributes = { name: name.replace(_mod904.WINDOW.location.origin, ""), op: str2, attributes: null };
+        attributes.attributes = attributes;
+        tmp6Result.startAndEndSpan(activeSpan, sum, sum1, attributes);
       }
     }
   }
@@ -249,8 +256,8 @@ export { _addResourceSpans };
 export const _setResourceRequestAttributes = function _setResourceRequestAttributes(arg0, arg1, arr) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const item = arr.forEach((arg0) => {
-    [tmp, tmp2] = arg0;
+  const item = arr.forEach((item) => {
+    [tmp, tmp2] = item;
     let tmp4 = null != tmp3;
     if (tmp4) {
       let tmp5 = typeof tmp3 === "number";
@@ -268,11 +275,11 @@ export const _setResourceRequestAttributes = function _setResourceRequestAttribu
   });
 };
 export const addPerformanceEntries = function addPerformanceEntries(setAttribute, recordClsOnPageloadSpan) {
-  let _require = setAttribute;
+  _require = setAttribute;
   dependencyMap = recordClsOnPageloadSpan;
-  let obj = extractNetworkProtocol;
+  let obj = require("extractNetworkProtocol");
   const browserPerformanceAPI = obj.getBrowserPerformanceAPI();
-  const result = require("00682_registerSpanErrorInstrumentation.js").browserPerformanceTimeOrigin();
+  const result = require("metro/00682__.js").browserPerformanceTimeOrigin();
   let getEntries;
   if (browserPerformanceAPI != null) {
     getEntries = browserPerformanceAPI.getEntries;
@@ -281,61 +288,59 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
     if (result) {
       let tmp3Result = tmp3(924);
       let msToSecResult = tmp3Result.msToSec(result);
-      closure_2 = msToSecResult;
+      _slicedToArray = msToSecResult;
       const entries = browserPerformanceAPI.getEntries();
       tmp3Result = tmp3(682);
       const spanToJSONResult = tmp3Result.spanToJSON(setAttribute);
       const op = spanToJSONResult.op;
-      let user = op;
+      user = op;
       let start_timestamp = spanToJSONResult.start_timestamp;
       const substr = entries.slice(closure_5);
       const item = substr.forEach((startTime) => {
-        let obj = setAttribute(closure_1[1]);
+        let obj = extractNetworkProtocol;
         msToSecResult = obj.msToSec(startTime.startTime);
-        const msToSecResult1 = setAttribute(closure_1[1]).msToSec(Math.max(0, startTime.duration));
+        const msToSecResult1 = extractNetworkProtocol.msToSec(Math.max(0, startTime.duration));
         const entryType = startTime.entryType;
         if ("navigation" === entryType) {
-          closure_1_8(setAttribute, startTime, closure_2);
+          _addNavigationSpans(closure_0, startTime, msToSecResult);
         } else {
           if ("mark" !== entryType) {
             if ("paint" !== entryType) {
               if ("measure" !== entryType) {
                 if ("resource" === entryType) {
-                  closure_1_10(
-                    setAttribute,
+                  _addResourceSpans(
+                    closure_0,
                     startTime,
                     startTime.name,
                     msToSecResult,
                     msToSecResult1,
-                    closure_2,
+                    msToSecResult,
                     closure_1.ignoreResourceSpans,
                   );
                 }
               }
             }
           }
-          closure_1_7(
-            setAttribute,
+          _addMeasureSpans(
+            closure_0,
             startTime,
             msToSecResult,
             msToSecResult1,
-            closure_2,
+            msToSecResult,
             closure_1.ignorePerformanceApiSpans,
           );
-          const tmp15 = startTime.startTime < setAttribute(closure_1[7]).getVisibilityWatcher().firstHiddenTime;
+          const tmp15 = startTime.startTime < _mod905.getVisibilityWatcher().firstHiddenTime;
           if (tmp16) {
-            obj = { value: null, unit: "millisecond" };
-            obj[0] = startTime.startTime;
+            obj = { value: startTime.startTime, unit: "millisecond" };
             closure_6.fp = obj;
           }
           if (tmp18) {
-            obj = { value: null, unit: "millisecond" };
-            obj[0] = startTime.startTime;
+            obj = { value: startTime.startTime, unit: "millisecond" };
             closure_6.fcp = obj;
           }
           tmp16 = "first-paint" === startTime.name && tmp15;
           tmp18 = "first-contentful-paint" === startTime.name && tmp15;
-          const tmpResult = setAttribute(closure_1[7]);
+          const tmpResult = _mod905;
         }
       });
       const _Math = Math;
@@ -351,8 +356,7 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
             const attr1 = setAttribute.setAttribute("connectionType", connection.type);
           }
           if (tmp3Result1.isMeasurementValue(connection.rtt)) {
-            obj = { value: null, unit: "millisecond" };
-            obj[0] = connection.rtt;
+            obj = { value: connection.rtt, unit: "millisecond" };
             closure_6["connection.rtt"] = obj;
           }
           tmp3Result1 = tmp3(924);
@@ -373,8 +377,7 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
         if (navigationEntry) {
           ({ responseStart, requestStart } = navigationEntry);
           if (requestStart <= responseStart) {
-            obj = { value: null, unit: "millisecond" };
-            obj[0] = responseStart - requestStart;
+            obj = { value: responseStart - requestStart, unit: "millisecond" };
             tmp43["ttfb.requestTime"] = obj;
           }
         }
@@ -386,15 +389,15 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
         }
         const _Object = Object;
         const entries1 = Object.entries(closure_6);
-        const item1 = entries1.forEach((arg0) => {
-          [tmp, iter] = arg0;
+        const item1 = entries1.forEach((item) => {
+          [tmp, iter] = item;
           setAttribute(closure_1[2]).setMeasurement(tmp, iter.value, iter.unit);
         });
         const attr4 = setAttribute.setAttribute("performance.timeOrigin", msToSecResult);
         const tmp3Result4 = tmp3(908);
         tmp43 = closure_6;
         const attr5 = setAttribute.setAttribute("performance.activationStart", tmp3(907).getActivationStart());
-        _require = setAttribute;
+        closure_129_0 = setAttribute;
         let recordLcpOnPageloadSpan = user;
         if (user) {
           recordLcpOnPageloadSpan = recordClsOnPageloadSpan.recordLcpOnPageloadSpan;
@@ -410,7 +413,6 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
           if (user.url) {
             const trimmed = user.url.trim();
             const attr8 = setAttribute.setAttribute("lcp.url", trimmed.slice(0, 200));
-            const str14 = user.url;
           }
           if (null != user.loadTime) {
             const attr9 = setAttribute.setAttribute("lcp.loadTime", user.loadTime);
@@ -429,9 +431,9 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
         }
         if (sources) {
           const sources1 = start_timestamp.sources;
-          const item2 = sources1.forEach((node) => {
-            const combined = "cls.source." + arg1 + 1;
-            return setAttribute.setAttribute(combined, setAttribute(closure_1[2]).htmlTreeAsString(node.node));
+          const item2 = sources1.forEach((node, index) => {
+            const combined = "cls.source." + index + 1;
+            return setAttribute.setAttribute(combined, _mod682.htmlTreeAsString(node.node));
           });
         }
         const tmp3Result5 = tmp3(907);
@@ -443,9 +445,9 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
   }
 };
 export const startTrackingInteractions = function startTrackingInteractions() {
-  const result = triggerHandlers.addPerformanceInstrumentationHandler("event", (arg0) => {
+  const result = _mod899.addPerformanceInstrumentationHandler("event", (arg0) => {
     const entries = arg0.entries;
-    let obj = callback(682);
+    let obj = require("metro/00682__.js");
     const activeSpan = obj.getActiveSpan();
     if (activeSpan) {
       const iter = entries[Symbol.iterator]();
@@ -453,43 +455,29 @@ export const startTrackingInteractions = function startTrackingInteractions() {
       while (iter !== undefined) {
         let tmp7 = nextResult;
         if ("click" === nextResult.name) {
-          let tmp19 = callback;
-          let tmp20 = callback;
-          let tmp21 = dependencyMap;
-          let tmp22 = dependencyMap;
-          let obj3 = callback(924);
-          let obj4 = callback(682);
-          let tmp23 = nextResult;
+          let tmp20 = _require;
+          let obj3 = require("extractNetworkProtocol");
+          let obj4 = require("metro/00682__.js");
           let msToSecResult = obj3.msToSec(obj4.browserPerformanceTimeOrigin() + tmp7.startTime);
           let tmp25 = msToSecResult;
-          let obj5 = callback(924);
+          let obj5 = require("extractNetworkProtocol");
           let msToSecResult1 = obj5.msToSec(tmp7.duration);
           obj = { name: null, op: null, startTime: null, attributes: null };
-          let obj7 = callback(682);
-          obj[0] = obj7.htmlTreeAsString(tmp7.target);
+          let obj7 = require("metro/00682__.js");
+          obj.name = obj7.htmlTreeAsString(tmp7.target);
           let _HermesInternal = HermesInternal;
-          obj[1] = "ui.interaction." + tmp7.name;
-          obj[2] = msToSecResult;
+          obj.op = "ui.interaction." + tmp7.name;
+          obj.startTime = msToSecResult;
           obj = {};
-          obj[callback(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
-          obj[3] = obj;
+          obj[require("metro/00682__.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
+          obj.attributes = obj;
           let tmp27 = obj;
-          let obj9 = callback(682);
+          let obj9 = require("metro/00682__.js");
           let componentName = obj9.getComponentName(tmp7.target);
           if (componentName) {
-            let tmp8 = obj;
-            let tmp9 = componentName;
             tmp27.attributes["ui.component_name"] = tmp29;
           }
-          let tmp10 = tmp19;
-          let tmp11 = tmp21;
           let tmp20Result = tmp20(924);
-          let tmp12 = msToSecResult;
-          let tmp13 = msToSecResult1;
-          let tmp14 = obj;
-          let tmp15 = tmp20Result;
-          let tmp16 = activeSpan;
-          let tmp17 = tmp25;
           let startAndEndSpanResult = tmp20Result.startAndEndSpan(
             activeSpan,
             msToSecResult,
@@ -504,7 +492,7 @@ export const startTrackingInteractions = function startTrackingInteractions() {
 };
 export const startTrackingLongAnimationFrames = function startTrackingLongAnimationFrames() {
   const performanceObserver = new globalThis.PerformanceObserver((getEntries) => {
-    let obj = callback(682);
+    let obj = require("metro/00682__.js");
     const activeSpan = obj.getActiveSpan();
     if (activeSpan) {
       const entries = getEntries.getEntries();
@@ -513,28 +501,16 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
       while (iter !== undefined) {
         let tmp8 = nextResult;
         if (nextResult.scripts[0]) {
-          let tmp9 = callback;
-          let tmp10 = callback;
-          let tmp11 = dependencyMap;
-          let tmp12 = dependencyMap;
-          let obj2 = callback(924);
-          let obj3 = callback(682);
-          let tmp13 = nextResult;
+          let tmp10 = _require;
+          let obj2 = require("extractNetworkProtocol");
+          let obj3 = require("metro/00682__.js");
           let msToSecResult = obj2.msToSec(obj3.browserPerformanceTimeOrigin() + tmp8.startTime);
-          let obj4 = callback(682);
+          let obj4 = require("metro/00682__.js");
           let spanToJSONResult = obj4.spanToJSON(activeSpan);
           let start_timestamp = spanToJSONResult.start_timestamp;
           if ("navigation" === spanToJSONResult.op) {
-            let tmp16 = start_timestamp;
-            if (start_timestamp) {
-              let tmp17 = msToSecResult;
-              let tmp18 = start_timestamp;
-            }
           }
-          let tmp19 = tmp9;
-          let tmp20 = tmp11;
           let tmp10Result = tmp10(924);
-          let tmp21 = nextResult;
           let msToSecResult1 = tmp10Result.msToSec(tmp8.duration);
           obj = {};
           obj[tmp10(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
@@ -547,34 +523,17 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
             invokerType: obj6["browser.script.invoker_type"],
           } = tmp8.scripts[0]);
           if (sourceURL) {
-            let tmp25 = obj;
-            let tmp26 = sourceURL;
             tmp23["code.filepath"] = tmp24;
           }
-          let tmp27 = sourceFunctionName;
           if (sourceFunctionName) {
-            let tmp28 = obj;
-            let tmp29 = sourceFunctionName;
             tmp23["code.function"] = sourceFunctionName;
           }
-          let tmp30 = sourceCharPosition;
           if (-1 !== sourceCharPosition) {
-            let tmp31 = obj;
-            let tmp32 = sourceCharPosition;
             tmp23["browser.script.source_char_position"] = sourceCharPosition;
           }
-          let tmp33 = tmp9;
-          let tmp34 = tmp11;
           tmp10Result = tmp10(924);
-          let tmp35 = msToSecResult;
-          let tmp36 = msToSecResult1;
           obj = { name: "Main UI thread blocked", op: "ui.long-animation-frame", attributes: null };
-          let tmp37 = obj;
-          obj[2] = tmp23;
-          let tmp38 = tmp10Result;
-          let tmp39 = activeSpan;
-          let tmp40 = msToSecResult;
-          let tmp41 = obj;
+          obj.attributes = tmp23;
           let startAndEndSpanResult = tmp10Result.startAndEndSpan(
             activeSpan,
             msToSecResult,
@@ -589,63 +548,51 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
   performanceObserver.observe({ type: "long-animation-frame", buffered: true });
 };
 export const startTrackingLongTasks = function startTrackingLongTasks() {
-  const result = triggerHandlers.addPerformanceInstrumentationHandler("longtask", (arg0) => {
+  const result = _mod899.addPerformanceInstrumentationHandler("longtask", (arg0) => {
     const entries = arg0.entries;
-    let obj = callback(682);
+    let obj = require("metro/00682__.js");
     const activeSpan = obj.getActiveSpan();
     if (activeSpan) {
-      const spanToJSONResult = callback(682).spanToJSON(activeSpan);
+      const spanToJSONResult = require("metro/00682__.js").spanToJSON(activeSpan);
       const start_timestamp = spanToJSONResult.start_timestamp;
       const iter = entries[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp15 = callback;
-        let tmp17 = dependencyMap;
-        let tmp14 = callback;
-        let tmp16 = dependencyMap;
-        let obj3 = callback(924);
-        let obj4 = callback(682);
+        let tmp15 = _require;
+        let obj3 = require("extractNetworkProtocol");
+        let obj4 = require("metro/00682__.js");
         let msToSecResult = obj3.msToSec(obj4.browserPerformanceTimeOrigin() + nextResult.startTime);
-        let obj5 = callback(924);
+        let obj5 = require("extractNetworkProtocol");
         let msToSecResult1 = obj5.msToSec(nextResult.duration);
         let tmp20 = tmp10;
         if (tmp10) {
           tmp20 = start_timestamp;
         }
         if (tmp20) {
-          let tmp21 = msToSecResult;
           tmp20 = msToSecResult < start_timestamp;
         }
         if (!tmp20) {
-          let tmp22 = tmp14;
-          let tmp23 = tmp16;
           let tmp15Result = tmp15(924);
-          let tmp24 = msToSecResult;
-          let tmp25 = msToSecResult1;
           obj = { name: "Main UI thread blocked", op: "ui.long-task", attributes: null };
           obj = {};
           let sum = msToSecResult + msToSecResult1;
           obj[tmp15(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
-          obj[2] = obj;
-          let tmp27 = tmp15Result;
-          let tmp28 = activeSpan;
-          let tmp29 = msToSecResult;
-          let tmp30 = obj;
+          obj.attributes = obj;
           let startAndEndSpanResult = tmp15Result.startAndEndSpan(activeSpan, msToSecResult, sum, obj);
         }
         continue;
       }
-      const tmp2Result = callback(682);
+      const tmp2Result = require("metro/00682__.js");
     }
   });
 };
 export const startTrackingWebVitals = function startTrackingWebVitals(client) {
   client = client.client;
-  let _require;
+  _require = undefined;
   dependencyMap = undefined;
   let result1;
   ({ recordClsStandaloneSpans, recordLcpStandaloneSpans } = client);
-  const browserPerformanceAPI = require("00924_extractNetworkProtocol.js").getBrowserPerformanceAPI();
+  const browserPerformanceAPI = require("extractNetworkProtocol").getBrowserPerformanceAPI();
   if (browserPerformanceAPI) {
     let tmpResult = tmp(682);
     if (tmpResult.browserPerformanceTimeOrigin()) {
@@ -660,9 +607,8 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
         result = tmp(899).addLcpInstrumentationHandler((metric) => {
           const tmp = metric.metric.entries[metric.metric.entries.length - 1];
           if (tmp) {
-            const obj = { value: null, unit: "millisecond" };
-            obj[0] = iter.value;
-            closure_6.lcp = obj;
+            const obj = { value: iter.value, unit: "millisecond" };
+            closure_1_6.lcp = obj;
             closure_3 = tmp;
           }
         }, true);
@@ -671,9 +617,8 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
       _require = result;
       dependencyMap = tmp(899).addTtfbInstrumentationHandler((metric) => {
         if (metric.metric.entries[metric.metric.entries.length - 1]) {
-          const obj = { value: null, unit: "millisecond" };
-          obj[0] = iter.value;
-          closure_6.ttfb = obj;
+          const obj = { value: iter.value, unit: "millisecond" };
+          closure_1_6.ttfb = obj;
         }
       });
       if (recordClsStandaloneSpans) {
@@ -683,9 +628,8 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
         result1 = tmp(899).addClsInstrumentationHandler((metric) => {
           const tmp = metric.metric.entries[metric.metric.entries.length - 1];
           if (tmp) {
-            const obj = { value: null, unit: "" };
-            obj[0] = iter.value;
-            closure_6.cls = obj;
+            const obj = { value: iter.value, unit: "" };
+            closure_1_6.cls = obj;
             closure_4 = tmp;
           }
         }, true);
@@ -695,7 +639,7 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
         if (c0 != null) {
           tmp();
         }
-        callback();
+        closure_1();
         if (result1 != null) {
           result1();
         }

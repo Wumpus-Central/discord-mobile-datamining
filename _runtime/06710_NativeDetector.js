@@ -1,12 +1,11 @@
 // _runtime/06710_NativeDetector.js
-import noopDefault from "00019_noop.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/06670___INTERNAL_VIEW_CONFIG.js";
-import { useMemo } from "00019_noop.js";
-import { Platform } from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _modDef6670 from "metro/06670__.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
-noopDefault;
+const require = fn;
+const useMemo = fn(19).useMemo;
+const Platform = fn(17).Platform;
+const jsx = fn(21).jsx;
 
 export const NativeDetector = function NativeDetector(gesture) {
   gesture = gesture.gesture;
@@ -17,7 +16,7 @@ export const NativeDetector = function NativeDetector(gesture) {
   } else if (gesture.config.shouldUseReanimatedDetector) {
     ReanimatedNativeDetector = tmp(6728).ReanimatedNativeDetector;
   } else {
-    ReanimatedNativeDetector = __INTERNAL_VIEW_CONFIGDefault;
+    ReanimatedNativeDetector = _modDef6670;
   }
   let tmpResult = tmp(6729);
   const result = tmpResult.ensureNativeDetectorComponent(ReanimatedNativeDetector);

@@ -1,6 +1,6 @@
 // _runtime/15058_CircularProgress.js
-import _isNativeReflectConstructDefault from "15059__isNativeReflectConstruct.js";
-import _isNativeReflectConstructDefault2 from "15060__isNativeReflectConstruct.js";
+import _modDef15059 from "metro/15059__.js";
+import _modDef15060 from "metro/15060__.js";
 
-export const CircularProgress = _isNativeReflectConstructDefault;
-export const AnimatedCircularProgress = _isNativeReflectConstructDefault2;
+export const CircularProgress = _modDef15059;
+export const AnimatedCircularProgress = _modDef15060;

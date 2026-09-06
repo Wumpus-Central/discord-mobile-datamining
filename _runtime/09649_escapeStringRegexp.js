@@ -1,5 +1,6 @@
 // _runtime/09649_escapeStringRegexp.js
-arg5.default = function escapeStringRegexp(str) {
+
+export default function escapeStringRegexp(str) {
   if (typeof str !== "string") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a string");
@@ -7,4 +8,4 @@ arg5.default = function escapeStringRegexp(str) {
   } else {
     return str.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&").replace(/-/g, "\\x2d");
   }
-};
+}

@@ -1,27 +1,27 @@
 // _runtime/10429_ENDefaultConfiguration.js
-import _isNativeReflectConstruct from "10430__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct2 from "10440__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct3 from "10441__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct4 from "10442__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct5 from "10443__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct6 from "10444__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct7 from "10445__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct8 from "10447__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct9 from "10448__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct10 from "10449__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct11 from "10452__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct12 from "10455__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct13 from "10457__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct14 from "10458__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct15 from "10460__isNativeReflectConstruct.js";
-import regExp from "10461_regExp.js";
-import _isNativeReflectConstruct16 from "10462__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct17 from "10463__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct18 from "10464__isNativeReflectConstruct.js";
-import OverlapRemovalRefiner from "10465_OverlapRemovalRefiner.js";
-import regExp2 from "10466_regExp.js";
-import _isNativeReflectConstruct19 from "10467__isNativeReflectConstruct.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _mod10430 from "metro/10430__.js";
+import _mod10440 from "metro/10440__.js";
+import _mod10441 from "metro/10441__.js";
+import _mod10442 from "metro/10442__.js";
+import _mod10443 from "metro/10443__.js";
+import _mod10444 from "metro/10444__.js";
+import _mod10445 from "metro/10445__.js";
+import _mod10447 from "metro/10447__.js";
+import _mod10448 from "metro/10448__.js";
+import _mod10449 from "metro/10449__.js";
+import _mod10452 from "metro/10452__.js";
+import _mod10455 from "metro/10455__.js";
+import _mod10457 from "metro/10457__.js";
+import _mod10458 from "metro/10458__.js";
+import _mod10460 from "metro/10460__.js";
+import _mod10461 from "metro/10461__.js";
+import _mod10462 from "metro/10462__.js";
+import _mod10463 from "metro/10463__.js";
+import _mod10464 from "metro/10464__.js";
+import OverlapRemovalRefiner2 from "10465_OverlapRemovalRefiner.js";
+import _mod10466 from "metro/10466__.js";
+import _mod10467 from "metro/10467__.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const ENDefaultConfiguration = require;
@@ -32,8 +32,7 @@ if (this) {
 if (!fn) {
   fn = (__esModule) => {
     if (!__esModule) {
-      const obj = { default: null };
-      obj[0] = __esModule;
+      const obj = { default: __esModule };
       let tmp = obj;
     } else {
       tmp = __esModule;
@@ -41,63 +40,64 @@ if (!fn) {
     return tmp;
   };
 }
-let closure_3 = fn(_isNativeReflectConstruct);
-let closure_4 = fn(_isNativeReflectConstruct2);
-let closure_5 = fn(_isNativeReflectConstruct3);
-let closure_6 = fn(_isNativeReflectConstruct4);
-let closure_7 = fn(_isNativeReflectConstruct5);
-let closure_8 = fn(_isNativeReflectConstruct6);
-let closure_9 = fn(_isNativeReflectConstruct7);
-let closure_10 = fn(_isNativeReflectConstruct8);
-let closure_11 = fn(_isNativeReflectConstruct9);
-let closure_12 = fn(_isNativeReflectConstruct10);
-let closure_13 = fn(_isNativeReflectConstruct11);
-let closure_14 = fn(_isNativeReflectConstruct12);
-let closure_15 = fn(_isNativeReflectConstruct13);
-let closure_16 = fn(_isNativeReflectConstruct14);
-let closure_17 = fn(_isNativeReflectConstruct15);
-let closure_18 = fn(regExp);
-let closure_19 = fn(_isNativeReflectConstruct16);
-let closure_20 = fn(_isNativeReflectConstruct17);
-let closure_21 = fn(_isNativeReflectConstruct18);
-let closure_22 = fn(OverlapRemovalRefiner);
-let closure_23 = fn(regExp2);
-let closure_24 = fn(_isNativeReflectConstruct19);
+fn(_mod10430);
+fn(_mod10440);
+fn(_mod10441);
+fn(_mod10442);
+fn(_mod10443);
+fn(_mod10444);
+fn(_mod10445);
+fn(_mod10447);
+fn(_mod10448);
+fn(_mod10449);
+fn(_mod10452);
+fn(_mod10455);
+fn(_mod10457);
+fn(_mod10458);
+fn(_mod10460);
+fn(_mod10461);
+fn(_mod10462);
+fn(_mod10463);
+fn(_mod10464);
+const OverlapRemovalRefiner = fn(OverlapRemovalRefiner2);
+const regExp = fn(_mod10466);
+const _isNativeReflectConstruct = fn(_mod10467);
 class ENDefaultConfiguration {
   constructor() {
-    tmp = closure_2(this, ENDefaultConfiguration);
+    tmp = c2(this, ENDefaultConfiguration);
     return;
   }
 }
-let items = [
-  {
-    key: "createCasualConfiguration",
-    value: function createCasualConfiguration() {
-      let flag = arg0;
-      if (arg0 === undefined) {
-        flag = false;
-      }
-      const configuration = this.createConfiguration(false, flag);
-      const parsers = configuration.parsers;
-      parsers.push(new mod12.default());
-      const parsers1 = configuration.parsers;
-      const _default = new mod12.default();
-      parsers1.push(new mod13.default());
-      const parsers2 = configuration.parsers;
-      const _default1 = new mod13.default();
-      parsers2.push(new mod4.default());
-      const parsers3 = configuration.parsers;
-      const _default2 = new mod4.default();
-      parsers3.push(new mod15.default());
-      const parsers4 = configuration.parsers;
-      const _default3 = new mod15.default();
-      parsers4.push(new mod17.default());
-      const refiners = configuration.refiners;
-      const _default4 = new mod17.default();
-      refiners.push(new mod22.default());
-      return configuration;
-    },
+const entry = {
+  key: "createCasualConfiguration",
+  value: function createCasualConfiguration() {
+    let flag = arg0;
+    if (arg0 === undefined) {
+      flag = false;
+    }
+    const configuration = this.createConfiguration(false, flag);
+    const parsers = configuration.parsers;
+    parsers.push(new _isNativeReflectConstruct.default());
+    const parsers1 = configuration.parsers;
+    const _default = new _isNativeReflectConstruct.default();
+    parsers1.push(new _isNativeReflectConstruct.default());
+    const parsers2 = configuration.parsers;
+    const _default1 = new _isNativeReflectConstruct.default();
+    parsers2.push(new _isNativeReflectConstruct.default());
+    const parsers3 = configuration.parsers;
+    const _default2 = new _isNativeReflectConstruct.default();
+    parsers3.push(new _isNativeReflectConstruct.default());
+    const parsers4 = configuration.parsers;
+    const _default3 = new _isNativeReflectConstruct.default();
+    parsers4.push(new _isNativeReflectConstruct.default());
+    const refiners = configuration.refiners;
+    const _default4 = new _isNativeReflectConstruct.default();
+    refiners.push(new _isNativeReflectConstruct.default());
+    return configuration;
   },
+};
+let items = [
+  entry,
   {
     key: "createConfiguration",
     value: function createConfiguration(flag) {
@@ -109,49 +109,49 @@ let items = [
         flag2 = false;
       }
       const obj = { parsers: null, refiners: null };
-      const items = [new mod16.default(flag2), , , , , , , ,];
-      const _default = new mod16.default(flag2);
-      items[1] = new mod.default(flag);
-      const _default1 = new mod.default(flag);
-      items[2] = new mod2.default();
-      const _default2 = new mod2.default();
-      items[3] = new mod3.default(flag2);
-      const _default3 = new mod3.default(flag2);
-      items[4] = new mod14.default();
-      const _default4 = new mod14.default();
-      items[5] = new mod6.default();
-      const _default5 = new mod6.default();
-      items[6] = new mod7.default(flag);
-      const _default6 = new mod7.default(flag);
-      items[7] = new mod8.default(flag);
-      const _default7 = new mod8.default(flag);
-      items[8] = new mod9.default(flag);
-      obj[0] = items;
-      const _default8 = new mod9.default(flag);
-      const items1 = [new mod11.default()];
-      obj[1] = items1;
+      const items = [new regExp.default(flag2), , , , , , , ,];
+      const _default = new regExp.default(flag2);
+      items[1] = new _isNativeReflectConstruct.default(flag);
+      const _default1 = new _isNativeReflectConstruct.default(flag);
+      items[2] = new _isNativeReflectConstruct.default();
+      const _default2 = new _isNativeReflectConstruct.default();
+      items[3] = new _isNativeReflectConstruct.default(flag2);
+      const _default3 = new _isNativeReflectConstruct.default(flag2);
+      items[4] = new _isNativeReflectConstruct.default();
+      const _default4 = new _isNativeReflectConstruct.default();
+      items[5] = new _isNativeReflectConstruct.default();
+      const _default5 = new _isNativeReflectConstruct.default();
+      items[6] = new _isNativeReflectConstruct.default(flag);
+      const _default6 = new _isNativeReflectConstruct.default(flag);
+      items[7] = new _isNativeReflectConstruct.default(flag);
+      const _default7 = new _isNativeReflectConstruct.default(flag);
+      items[8] = new _isNativeReflectConstruct.default(flag);
+      obj.parsers = items;
+      const _default8 = new _isNativeReflectConstruct.default(flag);
+      const items1 = [new _isNativeReflectConstruct.default()];
+      obj.refiners = items1;
       const result = ENDefaultConfiguration(10468).includeCommonConfiguration(obj, flag);
       const parsers = result.parsers;
-      const _default9 = new mod11.default();
-      parsers.unshift(new mod5.default(flag));
+      const _default9 = new _isNativeReflectConstruct.default();
+      parsers.unshift(new _isNativeReflectConstruct.default(flag));
       const refiners = result.refiners;
-      const _default10 = new mod5.default(flag);
-      refiners.unshift(new mod19.default());
+      const _default10 = new _isNativeReflectConstruct.default(flag);
+      refiners.unshift(new _isNativeReflectConstruct.default());
       const refiners1 = result.refiners;
-      const _default11 = new mod19.default();
-      refiners1.unshift(new mod18.default());
+      const _default11 = new _isNativeReflectConstruct.default();
+      refiners1.unshift(new _isNativeReflectConstruct.default());
       const refiners2 = result.refiners;
-      const _default12 = new mod18.default();
-      refiners2.unshift(new mod20.default());
+      const _default12 = new _isNativeReflectConstruct.default();
+      refiners2.unshift(new OverlapRemovalRefiner.default());
       const refiners3 = result.refiners;
-      const _default13 = new mod20.default();
-      refiners3.push(new mod11.default());
+      const _default13 = new OverlapRemovalRefiner.default();
+      refiners3.push(new _isNativeReflectConstruct.default());
       const refiners4 = result.refiners;
-      const _default14 = new mod11.default();
-      refiners4.push(new mod21.default());
+      const _default14 = new _isNativeReflectConstruct.default();
+      refiners4.push(new regExp.default());
       const refiners5 = result.refiners;
-      const _default15 = new mod21.default();
-      refiners5.push(new mod10.default());
+      const _default15 = new regExp.default();
+      refiners5.push(new _isNativeReflectConstruct.default());
       return result;
     },
   },

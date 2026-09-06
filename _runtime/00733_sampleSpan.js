@@ -1,11 +1,12 @@
 // _runtime/00733_sampleSpan.js
-import { hasSpansEnabled } from "00720_hasSpansEnabled.js";
-const require = arg1;
+import _mod720 from "metro/00720__.js";
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
-  const _require = parentSampled;
-  let obj = hasSpansEnabled;
+
+export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, arg2) {
+  let obj = _mod720;
   if (obj.hasSpansEnabled(tracesSampler)) {
     if (typeof tracesSampler.tracesSampler === "function") {
       obj = {};

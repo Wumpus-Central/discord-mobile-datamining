@@ -1,21 +1,21 @@
 // _runtime/06926_LayoutCommitObserver.js
-import noopDefault from "00019_noop.js";
-import closure_2 from "metro/06857__slicedToArray.js";
-import noop from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _mod6875 from "metro/06875__.js";
+import _mod6876 from "metro/06876__.js";
+import _slicedToArray from "metro/06857__.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
-({ useLayoutEffect: c3, useMemo: c4, useRef: c5 } = noop);
-const memoResult = noopDefault.memo((children) => {
+require = fn;
+let noop = fn(19);
+({ useLayoutEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+const jsx = fn(21).jsx;
+const memoResult = noop.memo((children) => {
   const onCommitLayoutEffect = children.onCommitLayoutEffect;
-  recyclerViewContext = onCommitLayoutEffect(recyclerViewContext[3]).useRecyclerViewContext();
-  const obj = onCommitLayoutEffect(recyclerViewContext[3]);
-  const obj2 = onCommitLayoutEffect(recyclerViewContext[4]);
-  [r10018, tmp3] = callback(onCommitLayoutEffect(recyclerViewContext[4]).useLayoutState(0), 2);
-  callback = tmp3;
-  const tmp2 = callback(onCommitLayoutEffect(recyclerViewContext[4]).useLayoutState(0), 2);
-  const current = callback3(new Set()).current;
-  current(() => {
+  const recyclerViewContext = _mod6876.useRecyclerViewContext();
+  [r10018, tmp3] = _slicedToArray(_mod6875.useLayoutState(0), 2);
+  _slicedToArray = tmp3;
+  const tmp2 = _slicedToArray(_mod6875.useLayoutState(0), 2);
+  const current = hasOwnProperty(new Set()).current;
+  React3(() => {
     if (current.size <= 0) {
       if (onCommitLayoutEffect != null) {
         tmp();
@@ -23,15 +23,15 @@ const memoResult = noopDefault.memo((children) => {
     }
   });
   const items = [recyclerViewContext, current, tmp3];
-  const value = callback2(
+  value = React4(
     () => ({
       layout() {
-        callback((arg0) => arg0 + 1);
+        closure_1_2((arg0) => arg0 + 1);
       },
       getRef() {
         let ref;
-        if (closure_1 != null) {
-          ref = closure_1.getRef();
+        if (recyclerViewContext != null) {
+          ref = recyclerViewContext.getRef();
         }
         if (ref == null) {
           ref = null;
@@ -40,8 +40,8 @@ const memoResult = noopDefault.memo((children) => {
       },
       getParentRef() {
         let parentRef;
-        if (closure_1 != null) {
-          parentRef = closure_1.getParentRef();
+        if (recyclerViewContext != null) {
+          parentRef = recyclerViewContext.getParentRef();
         }
         if (parentRef == null) {
           parentRef = null;
@@ -50,8 +50,8 @@ const memoResult = noopDefault.memo((children) => {
       },
       getParentScrollViewRef() {
         let parentScrollViewRef;
-        if (closure_1 != null) {
-          parentScrollViewRef = closure_1.getParentScrollViewRef();
+        if (recyclerViewContext != null) {
+          parentScrollViewRef = recyclerViewContext.getParentScrollViewRef();
         }
         if (parentScrollViewRef == null) {
           parentScrollViewRef = null;
@@ -60,8 +60,8 @@ const memoResult = noopDefault.memo((children) => {
       },
       getScrollViewRef() {
         let scrollViewRef;
-        if (closure_1 != null) {
-          scrollViewRef = closure_1.getScrollViewRef();
+        if (recyclerViewContext != null) {
+          scrollViewRef = recyclerViewContext.getScrollViewRef();
         }
         if (scrollViewRef == null) {
           scrollViewRef = null;
@@ -69,28 +69,24 @@ const memoResult = noopDefault.memo((children) => {
         return scrollViewRef;
       },
       markChildLayoutAsPending(arg0) {
-        if (closure_1 != null) {
-          const result = closure_1.markChildLayoutAsPending(arg0);
+        if (recyclerViewContext != null) {
+          const result = recyclerViewContext.markChildLayoutAsPending(arg0);
         }
         set.add(arg0);
       },
       unmarkChildLayoutAsPending(arg0) {
-        if (closure_1 != null) {
-          const result = closure_1.unmarkChildLayoutAsPending(arg0);
+        if (recyclerViewContext != null) {
+          const result = recyclerViewContext.unmarkChildLayoutAsPending(arg0);
         }
         if (set.has(arg0)) {
           set.delete(arg0);
-          closure_4.layout();
+          closure_1_4.layout();
         }
       },
     }),
     items,
   );
-  callback2 = value;
-  return jsx(onCommitLayoutEffect(recyclerViewContext[3]).RecyclerViewContextProvider, {
-    value,
-    children: children.children,
-  });
+  return jsx(_mod6876.RecyclerViewContextProvider, { value, children: children.children });
 });
 memoResult.displayName = "LayoutCommitObserver";
 

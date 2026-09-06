@@ -1,9 +1,11 @@
 // _runtime/10768_CarouselLayout.js
-import importDefaultResult from "00019_noop.js";
-import { StyleSheet } from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import cancelAnimation from "01636_cancelAnimation.js";
+import SINGLE_ITEM from "10760_SINGLE_ITEM.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
 let closure_4 = {
   code: "function pnpm_CarouselLayoutTsx1(){const{size,dataLength,handlerOffset,loop}=this.__closure;const totalSize=size*dataLength;const x=handlerOffset.value%totalSize;if(!loop)return handlerOffset.value;return Number.isNaN(x)?0:x;}",
 };
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
   itemsVertical: { flexDirection: "column" },
 });
 
-export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
+export const CarouselLayout = noop.forwardRef((arg0, ref) => {
   let obj = loop(autoFillData[3]);
   const globalState = obj.useGlobalState();
   const props = globalState.props;
@@ -49,9 +51,9 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
     customAnimation,
     defaultIndex,
   } = props);
-  obj1 = loop(autoFillData[4]);
+  let obj1 = loop(autoFillData[4]);
   const commonVariables = obj1.useCommonVariables(props);
-  const size = commonVariables.size;
+  let size = commonVariables.size;
   const handlerOffset = commonVariables.handlerOffset;
   let obj2 = loop(autoFillData[5]);
   obj = {};
@@ -66,7 +68,7 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
       if (!Number.isNaN(result)) {
         num = result;
       }
-      let value = num;
+      value = num;
     } else {
       value = iter.value;
     }
@@ -101,13 +103,12 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
     fixedDirection,
     duration: scrollAnimationDuration,
     onScrollEnd() {
-      return loop(autoFillData[6]).runOnJS(callback)();
+      return cancelAnimation.runOnJS(callback)();
     },
     onScrollStart() {
       let tmp2 = onScrollStart;
       if (tmp2) {
-        tmp2 = loop(autoFillData[6]).runOnJS(tmp)();
-        const obj = loop(autoFillData[6]);
+        tmp2 = cancelAnimation.runOnJS(tmp)();
       }
       return tmp2;
     },
@@ -117,8 +118,7 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
   const items1 = [loop, autoFillData, rawDataLength, getSharedIndex, onSnapToItem, onScrollEnd];
   const callback = dataLength.useCallback(() => {
     const rounded = Math.round(getSharedIndex());
-    let obj = loop(autoFillData[9]);
-    obj = { index: rounded, dataLength: rawDataLength, loop, autoFillData };
+    const obj = { index: rounded, dataLength: rawDataLength, loop, autoFillData };
     const result = obj.computedRealIndexWithAutoFillData(obj);
     if (onSnapToItem) {
       onSnapToItem(result);
@@ -154,13 +154,13 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
       if (!width) {
         str = "100%";
       }
-      obj = { width: str, height: null };
+      size = { width: str, height: null };
       str2 = height;
       if (!height) {
         str2 = "100%";
       }
-      obj[1] = str2;
-      return obj;
+      size.height = str2;
+      return size;
     }
   }
   Q.__closure = { width, height };
@@ -168,12 +168,13 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
   Q.__initData = height;
   const items6 = [width, height, size, globalState.layout.itemDimensions];
   const animatedStyle = loop(autoFillData[6]).useAnimatedStyle(Q, items6);
-  obj1 = { style: items7, children: null };
-  items7 = [onScrollEnd.layoutContainer, containerStyle];
+  obj1 = { style: null, children: null };
+  const items7 = [onScrollEnd.layoutContainer, containerStyle];
+  obj1.style = items7;
   obj2 = {
     size,
     translation: handlerOffset,
-    style: items8,
+    style: null,
     testID,
     onScrollStart: callback1,
     onScrollEnd: callback2,
@@ -194,12 +195,13 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
       customAnimation,
     }),
   };
-  items8 = [
+  const items8 = [
     onScrollEnd.contentContainer,
     animatedStyle,
     style,
     vertical ? onScrollEnd.itemsVertical : onScrollEnd.itemsHorizontal,
   ];
-  obj1[1] = rawDataLength(loop(autoFillData[12]).ScrollViewGesture, obj2, mode);
+  obj2.style = items8;
+  obj1.children = rawDataLength(loop(autoFillData[12]).ScrollViewGesture, obj2, mode);
   return rawDataLength(loop(autoFillData[11]).GestureHandlerRootView, obj1);
 });

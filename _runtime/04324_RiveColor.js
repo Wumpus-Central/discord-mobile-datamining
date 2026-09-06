@@ -1,10 +1,10 @@
 // _runtime/04324_RiveColor.js
 import _createClassDefault from "metro/00042__createClass.js";
-import RiveColor from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class RiveColor {
   constructor(arg0, arg1, arg2, arg3) {
-    tmp = RiveColor(this, RiveColor);
+    tmp = closure_0(this, RiveColor);
     this.r = global;
     this.g = arg1;
     this.b = importDefault;
@@ -12,7 +12,8 @@ class RiveColor {
     return;
   }
 }
-let obj = {
+_classCallCheck = RiveColor;
+const entry = {
   key: "equals",
   value: function equals(arg0) {
     let tmp = arg0;
@@ -25,7 +26,7 @@ let obj = {
   },
 };
 const items = [
-  obj,
+  entry,
   {
     key: "toInt",
     value: function toInt() {
@@ -33,7 +34,7 @@ const items = [
     },
   },
 ];
-obj = {
+const entry1 = {
   key: "fromHexString",
   value: function fromHexString(str) {
     const replaced = str.replace(/^#/, "");
@@ -50,8 +51,8 @@ obj = {
         const _parseInt4 = parseInt;
         num8 = parseInt(replaced.slice(6, 8), 16);
       }
-      obj = Object.create(RiveColor.prototype);
-      RiveColor(obj, RiveColor);
+      obj = Object.create(_classCallCheck.prototype);
+      _classCallCheck(obj, _classCallCheck);
       obj.r = parsed;
       obj.g = parsed1;
       obj.b = parsed2;
@@ -61,8 +62,8 @@ obj = {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.warn("Rive invalid hex color: " + str);
-      obj = Object.create(RiveColor.prototype);
-      RiveColor(obj, RiveColor);
+      obj = Object.create(_classCallCheck.prototype);
+      _classCallCheck(obj, _classCallCheck);
       obj.r = 0;
       obj.g = 0;
       obj.b = 0;
@@ -72,12 +73,12 @@ obj = {
   },
 };
 const items1 = [
-  obj,
+  entry1,
   {
     key: "fromInt",
     value: function fromInt(arg0) {
-      const obj = Object.create(RiveColor.prototype);
-      RiveColor(obj, RiveColor);
+      const obj = Object.create(_classCallCheck.prototype);
+      _classCallCheck(obj, _classCallCheck);
       obj.r = (arg0 >> 16) & 255;
       obj.g = (arg0 >> 8) & 255;
       obj.b = 255 & arg0;

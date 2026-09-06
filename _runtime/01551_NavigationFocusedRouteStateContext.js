@@ -1,4 +1,4 @@
 // _runtime/01551_NavigationFocusedRouteStateContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const NavigationFocusedRouteStateContext = noopAll.createContext(undefined);
+export const NavigationFocusedRouteStateContext = noop.createContext(undefined);

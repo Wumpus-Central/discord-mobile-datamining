@@ -1,0 +1,277 @@
+// _runtime/metro/00162__.js
+import _modDef154 from "00154__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c2 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
+import _classPrivateFieldBase from "../00090__classPrivateFieldBase.js";
+import _classPrivateFieldKey from "../00091__classPrivateFieldKey.js";
+import nullthrows from "../00070_nullthrows.js";
+
+let EventCounts = global;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+const NativePerformanceCxx = nullthrows(_modDef154);
+let closure_9 = _classPrivateFieldKey("processingStart");
+let closure_10 = _classPrivateFieldKey("processingEnd");
+let closure_11 = _classPrivateFieldKey("interactionId");
+class PerformanceEventTiming {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_1(this, EventCounts);
+    items = ["event"];
+    items[1] = global;
+    tmp2 = closure_3;
+    obj = closure_3(EventCounts);
+    tmp3 = c2;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp7 = closure_9;
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "a" });
+    tmp9 = c10;
+    definePropertyResult1 = Object.defineProperty(tmp3Result, c10, { writable: true, value: "a" });
+    tmp11 = closure_11;
+    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "a" });
+    tmp13 = hasOwnProperty;
+    num = global.processingStart;
+    tmp14 = hasOwnProperty(tmp3Result, closure_9);
+    if (num == null) {
+      num = 0;
+    }
+    tmp14[tmp7] = num;
+    num2 = global.processingEnd;
+    tmp13Result = tmp13(tmp3Result, tmp9);
+    if (num2 == null) {
+      num2 = 0;
+    }
+    tmp13Result[tmp9] = num2;
+    num3 = global.interactionId;
+    tmp13Result1 = tmp13(tmp3Result, tmp11);
+    if (num3 == null) {
+      num3 = 0;
+    }
+    tmp13Result1[tmp11] = num3;
+    return tmp3Result;
+  }
+}
+EventCounts = PerformanceEventTiming;
+_inherits(PerformanceEventTiming, fn(163).PerformanceEntry);
+let obj = {
+  key: "processingStart",
+  get() {
+    return _classPrivateFieldBase(this, closure_9)[closure_9];
+  },
+};
+let items = [
+  obj,
+  {
+    key: "processingEnd",
+    get() {
+      return _classPrivateFieldBase(this, closure_10)[closure_10];
+    },
+  },
+  {
+    key: "interactionId",
+    get() {
+      return _classPrivateFieldBase(this, closure_11)[closure_11];
+    },
+  },
+  {
+    key: "toJSON",
+    value: function toJSON() {
+      const self = this;
+      const tmp = _get(_getPrototypeOf(EventCounts.prototype), "toJSON", this);
+      closure_1 = tmp;
+      let fn = tmp;
+      if (typeof tmp === "function") {
+        fn = (arg0) => closure_1.apply(self, arg0);
+      }
+      const obj = {};
+      const merged = Object.assign(fn([]));
+      obj.processingStart = hasOwnProperty(self, closure_9)[closure_9];
+      obj.processingEnd = hasOwnProperty(self, c10)[c10];
+      obj.interactionId = hasOwnProperty(self, closure_11)[closure_11];
+      return obj;
+    },
+  },
+];
+const importDefaultResultResult = _createClass(PerformanceEventTiming, items);
+class PerformanceEventTiming {
+  constructor() {
+    typeError = new TypeError("Failed to construct 'PerformanceEventTiming': Illegal constructor");
+    throw typeError;
+  }
+}
+PerformanceEventTiming.prototype = importDefaultResultResult.prototype;
+class EventCounts {
+  constructor() {
+    tmp = closure_1(this, EventCounts);
+    return;
+  }
+}
+obj = {
+  key: "size",
+  get() {
+    let tmp = map;
+    if (!map) {
+      let eventCounts = NativePerformanceCxx.getEventCounts();
+      if (eventCounts == null) {
+        eventCounts = [];
+      }
+      map = new Map(eventCounts);
+      EventCounts.queueMicrotask(() => {
+        c7 = null;
+      });
+      tmp = map;
+    }
+    return tmp.size;
+  },
+};
+const items1 = [
+  obj,
+  {
+    key: "entries",
+    value: function entries() {
+      let obj = map;
+      if (!map) {
+        let eventCounts = NativePerformanceCxx.getEventCounts();
+        if (eventCounts == null) {
+          eventCounts = [];
+        }
+        map = new Map(eventCounts);
+        EventCounts.queueMicrotask(() => {
+          c7 = null;
+        });
+        obj = map;
+      }
+      return obj.entries();
+    },
+  },
+  {
+    key: "forEach",
+    value: function forEach(arg0) {
+      let arr = map;
+      if (!map) {
+        let eventCounts = NativePerformanceCxx.getEventCounts();
+        if (eventCounts == null) {
+          eventCounts = [];
+        }
+        map = new Map(eventCounts);
+        EventCounts.queueMicrotask(() => {
+          c7 = null;
+        });
+        arr = map;
+      }
+      return arr.forEach(arg0);
+    },
+  },
+  {
+    key: "get",
+    value: function get(arg0) {
+      let obj = map;
+      if (!map) {
+        let eventCounts = NativePerformanceCxx.getEventCounts();
+        if (eventCounts == null) {
+          eventCounts = [];
+        }
+        map = new Map(eventCounts);
+        EventCounts.queueMicrotask(() => {
+          c7 = null;
+        });
+        obj = map;
+      }
+      return obj.get(arg0);
+    },
+  },
+  {
+    key: "has",
+    value: function has(arg0) {
+      let obj = map;
+      if (!map) {
+        let eventCounts = NativePerformanceCxx.getEventCounts();
+        if (eventCounts == null) {
+          eventCounts = [];
+        }
+        map = new Map(eventCounts);
+        EventCounts.queueMicrotask(() => {
+          c7 = null;
+        });
+        obj = map;
+      }
+      return obj.has(arg0);
+    },
+  },
+  {
+    key: "keys",
+    value: function keys() {
+      let obj = map;
+      if (!map) {
+        let eventCounts = NativePerformanceCxx.getEventCounts();
+        if (eventCounts == null) {
+          eventCounts = [];
+        }
+        map = new Map(eventCounts);
+        EventCounts.queueMicrotask(() => {
+          c7 = null;
+        });
+        obj = map;
+      }
+      return obj.keys();
+    },
+  },
+  {
+    key: "values",
+    value: function values() {
+      let obj = map;
+      if (!map) {
+        let eventCounts = NativePerformanceCxx.getEventCounts();
+        if (eventCounts == null) {
+          eventCounts = [];
+        }
+        map = new Map(eventCounts);
+        EventCounts.queueMicrotask(() => {
+          c7 = null;
+        });
+        obj = map;
+      }
+      return obj.values();
+    },
+  },
+];
+const importDefaultResultResult1 = _createClass(EventCounts, items1);
+class EventCounts {
+  constructor() {
+    typeError = new TypeError("Failed to construct 'EventCounts': Illegal constructor");
+    throw typeError;
+  }
+}
+EventCounts.prototype = importDefaultResultResult1.prototype;
+
+export const PerformanceEventTiming = importDefaultResultResult;
+export const PerformanceEventTiming_public = PerformanceEventTiming;
+export const EventCounts = importDefaultResultResult1;
+export const EventCounts_public = EventCounts;

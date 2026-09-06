@@ -1,7 +1,7 @@
 // _runtime/06873_reactNativeVersion.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 
-const constants = get_ActivityIndicator.Platform.constants;
+const constants = _mod17.Platform.constants;
 let reactNativeVersion;
 if (constants != null) {
   reactNativeVersion = constants.reactNativeVersion;

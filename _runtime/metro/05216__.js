@@ -1,5 +1,6 @@
 // _runtime/metro/05216__.js
-arg5.default = {
+
+export default {
   USE_FILE: true,
   USE_JFIF: true,
   USE_PNG_FILE: true,

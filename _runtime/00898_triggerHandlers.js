@@ -1,0 +1,42 @@
+// _runtime/00898_triggerHandlers.js
+import _mod899 from "metro/00899__.js";
+import _addMeasureSpans from "00923__addMeasureSpans.js";
+import extractNetworkProtocol from "00924_extractNetworkProtocol.js";
+import resourceTimingToSpanAttributes from "00928_resourceTimingToSpanAttributes.js";
+import _onElementTiming from "00929__onElementTiming.js";
+import instrumentDOM from "00930_instrumentDOM.js";
+import instrumentHistory from "00931_instrumentHistory.js";
+import fetch from "00932_fetch.js";
+import instrumentXHR from "00933_instrumentXHR.js";
+import serializeFormData from "00934_serializeFormData.js";
+import _onInp from "00935__onInp.js";
+
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export const addClsInstrumentationHandler = _mod899.addClsInstrumentationHandler;
+export const addInpInstrumentationHandler = _mod899.addInpInstrumentationHandler;
+export const addLcpInstrumentationHandler = _mod899.addLcpInstrumentationHandler;
+export const addPerformanceInstrumentationHandler = _mod899.addPerformanceInstrumentationHandler;
+export const addTtfbInstrumentationHandler = _mod899.addTtfbInstrumentationHandler;
+export const addPerformanceEntries = _addMeasureSpans.addPerformanceEntries;
+export const startTrackingInteractions = _addMeasureSpans.startTrackingInteractions;
+export const startTrackingLongAnimationFrames = _addMeasureSpans.startTrackingLongAnimationFrames;
+export const startTrackingLongTasks = _addMeasureSpans.startTrackingLongTasks;
+export const startTrackingWebVitals = _addMeasureSpans.startTrackingWebVitals;
+export const startTrackingElementTiming = _onElementTiming.startTrackingElementTiming;
+export const extractNetworkProtocol = extractNetworkProtocol.extractNetworkProtocol;
+export const addClickKeypressInstrumentationHandler = instrumentDOM.addClickKeypressInstrumentationHandler;
+export const addHistoryInstrumentationHandler = instrumentHistory.addHistoryInstrumentationHandler;
+export const clearCachedImplementation = fetch.clearCachedImplementation;
+export const fetch = fetch.fetch;
+export const getNativeImplementation = fetch.getNativeImplementation;
+export const setTimeout = fetch.setTimeout;
+export const SENTRY_XHR_DATA_KEY = instrumentXHR.SENTRY_XHR_DATA_KEY;
+export const addXhrInstrumentationHandler = instrumentXHR.addXhrInstrumentationHandler;
+export const getBodyString = serializeFormData.getBodyString;
+export const getFetchRequestArgBody = serializeFormData.getFetchRequestArgBody;
+export const parseXhrResponseHeaders = serializeFormData.parseXhrResponseHeaders;
+export const serializeFormData = serializeFormData.serializeFormData;
+export const resourceTimingToSpanAttributes = resourceTimingToSpanAttributes.resourceTimingToSpanAttributes;
+export const registerInpInteractionListener = _onInp.registerInpInteractionListener;
+export const startTrackingINP = _onInp.startTrackingINP;

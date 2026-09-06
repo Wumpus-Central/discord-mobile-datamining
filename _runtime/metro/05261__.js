@@ -1,33 +1,31 @@
 // _runtime/metro/05261__.js
-import getDataView from "../05213_getDataView.js";
-import _mod5220 from "05220__.js";
+import _mod5213 from "05213__.js";
+import PNG_CHUNK_TYPE_SIZE from "../05220_PNG_CHUNK_TYPE_SIZE.js";
+import _modDef5230 from "05230__.js";
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = {
-  read(byteLength) {
+
+export default {
+  read(byteLength, arg1) {
     let obj = {};
     for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp = module;
-      let tmp2 = dependencyMap;
-      obj1 = module(5230);
+      let tmp = importDefault;
+      let obj1 = _modDef5230;
       let tmp3 = require;
-      let longAt = obj1.getLongAt(byteLength, arg1[num] + _mod5220.PNG_CHUNK_LENGTH_OFFSET);
-      let obj2 = getDataView;
-      let sum = arg1[num] + _mod5220.PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, _mod5220.PNG_CHUNK_TYPE_SIZE);
-      let tmp7 = num;
-      if (stringFromDataView === _mod5220.TYPE_PHYS) {
+      let longAt = obj1.getLongAt(byteLength, arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_LENGTH_OFFSET);
+      let obj2 = _mod5213;
+      let sum = arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_OFFSET;
+      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_SIZE);
+      if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_PHYS) {
         let tmp22 = arg1[num];
         let tmp23 = 4 <= longAt && tmp22 + tmp3(5220).PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
         let tmp24;
         if (tmp23) {
           let tmpResult = tmp(5230);
           let longAt1 = tmpResult.getLongAt(byteLength, tmp22 + tmp3(5220).PNG_CHUNK_DATA_OFFSET);
-          obj = { value: null, description: null };
-          obj[0] = longAt1;
-          obj[1] = "" + longAt1;
+          obj = { value: longAt1, description: "" + longAt1 };
           tmp24 = obj;
         }
         obj["Pixels Per Unit X"] = tmp24;
@@ -37,9 +35,7 @@ arg5.default = {
         if (tmp27) {
           tmpResult = tmp(5230);
           let longAt2 = tmpResult.getLongAt(byteLength, tmp26 + tmp3(5220).PNG_CHUNK_DATA_OFFSET + 4);
-          obj = { value: null, description: null };
-          obj[0] = longAt2;
-          obj[1] = "" + longAt2;
+          obj = { value: longAt2, description: "" + longAt2 };
           tmp28 = obj;
         }
         obj["Pixels Per Unit Y"] = tmp28;
@@ -49,13 +45,12 @@ arg5.default = {
         if (tmp31) {
           let tmpResult1 = tmp(5230);
           let byteAt = tmpResult1.getByteAt(byteLength, tmp30 + tmp3(5220).PNG_CHUNK_DATA_OFFSET + 8);
-          obj1 = { value: null, description: null };
-          obj1[0] = byteAt;
+          obj1 = { value: byteAt, description: null };
           let str7 = "Unknown";
           if (1 === byteAt) {
             str7 = "meters";
           }
-          obj1[1] = str7;
+          obj1.description = str7;
           tmp32 = obj1;
         }
         obj["Pixel Units"] = tmp32;
@@ -78,7 +73,7 @@ arg5.default = {
           let byteAt5 = tmpResult7.getByteAt(byteLength, tmp34 + tmp3(5220).PNG_CHUNK_DATA_OFFSET + 6);
           obj2 = { value: null, description: null };
           let items = [shortAt, byteAt1, byteAt2, byteAt3, byteAt4, byteAt5];
-          obj2[0] = items;
+          obj2.value = items;
           let repeat = "0".repeat;
           let _HermesInternal = HermesInternal;
           let combined = "" + "0".repeat(4 - "" + shortAt.length) + shortAt;
@@ -98,13 +93,12 @@ arg5.default = {
           let _HermesInternal6 = HermesInternal;
           let _HermesInternal7 = HermesInternal;
           let str = "";
-          let tmp21 = combined;
           let str2 = "-";
           let str3 = "-";
           let str4 = " ";
           let str5 = ":";
           let str6 = ":";
-          obj2[1] =
+          obj2.description =
             "" +
             combined +
             "-" +

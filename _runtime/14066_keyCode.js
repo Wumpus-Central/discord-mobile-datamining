@@ -2,13 +2,13 @@
 let num2;
 let num3;
 let num4;
-function keyCode(obj) {
-  let tmp = obj;
-  if (obj) {
-    tmp = obj;
-    if (typeof obj === "object") {
-      tmp = obj;
-      if (obj.which || obj.keyCode || obj.charCode) {
+function keyCode(which) {
+  let tmp = which;
+  if (which) {
+    tmp = which;
+    if (typeof which === "object") {
+      tmp = which;
+      if (which.which || which.keyCode || which.charCode) {
         tmp = tmp2;
       }
     }
@@ -18,7 +18,7 @@ function keyCode(obj) {
   } else {
     const _String = String;
     const str = String(tmp);
-    let tmp6 = obj[str.toLowerCase(str)];
+    let tmp6 = rect[str.toLowerCase(str)];
     if (!tmp6) {
       let tmp4 = obj[str.toLowerCase(str)];
       if (!tmp4) {
@@ -33,14 +33,14 @@ function keyCode(obj) {
     return tmp6;
   }
 }
-keyCode.isEventKey = function isEventKey(obj, str) {
-  if (obj) {
-    if (typeof obj === "object") {
-      if (null == (obj.which || obj.keyCode || obj.charCode)) {
+keyCode.isEventKey = function isEventKey(which, str) {
+  if (which) {
+    if (typeof which === "object") {
+      if (null == (which.which || which.keyCode || which.charCode)) {
         return false;
       } else {
         if (typeof str === "string") {
-          const tmp5 = obj[str.toLowerCase(str)];
+          const tmp5 = rect[str.toLowerCase(str)];
           if (tmp5) {
             return tmp5 === tmp;
           } else {
@@ -57,7 +57,7 @@ keyCode.isEventKey = function isEventKey(obj, str) {
     }
   }
 };
-let obj = {
+const rect = {
   backspace: 8,
   tab: 9,
   enter: 13,
@@ -102,9 +102,9 @@ let obj = {
   "]": 221,
   "'": 222,
 };
-keyCode.codes = obj;
-keyCode.code = obj;
-obj = {
+keyCode.codes = rect;
+keyCode.code = rect;
+let obj = {
   windows: 91,
   "⇧": 16,
   "⌥": 18,
@@ -130,22 +130,22 @@ keyCode.aliases = obj;
 let num = 97;
 do {
   let _String = String;
-  obj[String.fromCharCode(num)] = num - 32;
+  rect[String.fromCharCode(num)] = num - 32;
   num = num + 1;
   num2 = 48;
 } while (num < 123);
 do {
-  obj[num2 - 48] = num2;
+  rect[num2 - 48] = num2;
   num2 = num2 + 1;
   num3 = 1;
 } while (num2 < 58);
 do {
-  obj["f" + num3] = num3 + 111;
+  rect["f" + num3] = num3 + 111;
   num3 = num3 + 1;
   num4 = 0;
 } while (num3 < 13);
 do {
-  obj["numpad " + num4] = num4 + 96;
+  rect["numpad " + num4] = num4 + 96;
   num4 = num4 + 1;
 } while (num4 < 10);
 obj = {};
@@ -154,16 +154,14 @@ keyCode.names = obj;
 const keys = Object.keys();
 if (keys !== undefined) {
   while (keys[10] !== undefined) {
-    let tmp5 = tmp2;
-    obj[obj[tmp2]] = tmp2;
+    obj[rect[tmp2]] = tmp2;
     continue;
   }
 }
 const keys1 = Object.keys();
 if (keys1 !== undefined) {
   while (keys1[10] !== undefined) {
-    let tmp6 = tmp4;
-    obj[tmp4] = obj[tmp4];
+    rect[tmp4] = obj[tmp4];
     continue;
   }
 }

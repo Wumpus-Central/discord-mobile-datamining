@@ -1,4 +1,4 @@
 // _runtime/01532_CurrentRenderContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const CurrentRenderContext = noopAll.createContext(undefined);
+export const CurrentRenderContext = noop.createContext(undefined);

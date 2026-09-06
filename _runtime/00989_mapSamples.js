@@ -1,7 +1,7 @@
 // _runtime/00989_mapSamples.js
-import registerSpanErrorInstrumentation from "00682_registerSpanErrorInstrumentation.js";
-import DEFAULT_BUNDLE_NAME from "00985_DEFAULT_BUNDLE_NAME.js";
-import _mod988 from "metro/00988__.js";
+import _mod682 from "metro/00682__.js";
+import _mod985 from "metro/00985__.js";
+import MAX_PROFILE_DURATION_MS from "00988_MAX_PROFILE_DURATION_MS.js";
 
 function mapSamples(samples) {
   let tmp = arg1;
@@ -24,15 +24,11 @@ function mapSamples(samples) {
       let result = 1000 * (Number(nextResult.ts) - NumberResult);
       let obj4 = result;
       if (result >= tmp) {
-        let tmp18 = require;
-        let tmp19 = dependencyMap;
-        let debug2 = registerSpanErrorInstrumentation.debug;
-        let tmp20 = result;
+        let debug2 = _mod682.debug;
         let _HermesInternal = HermesInternal;
         let str2 = "ns.";
         let str3 = "ns greater than the max elapsed time ";
         let str4 = "[Profiling] Sample has elapsed time since start ";
-        let tmp21 = tmp;
         let warnResult = debug2.warn(
           "[Profiling] Sample has elapsed time since start " +
             obj4 +
@@ -40,54 +36,41 @@ function mapSamples(samples) {
             tmp +
             "ns.",
         );
-        let tmp23 = iter;
         iter.return();
         break;
       } else {
         let obj = { stack_id: null, thread_id: null, elapsed_since_start_ns: null };
-        let tmp15 = nextResult;
-        ({ sf: obj5[0], tid: obj5[1] } = tmp11);
-        let tmp16 = result;
-        obj[2] = obj4.toFixed(0);
+        ({ sf: obj5.stack_id, tid: obj5.thread_id } = tmp11);
+        obj.elapsed_since_start_ns = obj4.toFixed(0);
         let arr = items.push(obj);
         continue;
       }
-      obj = { samples: null, hermesStacks: null, jsThreads: null };
-      obj[0] = items;
-      obj[1] = set1;
-      obj[2] = set;
+      obj = { samples: items, hermesStacks: set1, jsThreads: set };
       return obj;
     }
     NumberResult = Number(first.ts);
   } else {
-    const debug = registerSpanErrorInstrumentation.debug;
+    const debug = _mod682.debug;
     debug.warn("[Profiling] No samples found in profile.");
-    obj1 = { samples: null, hermesStacks: null, jsThreads: null };
-    obj1[0] = items;
-    obj1[1] = set1;
-    obj1[2] = set;
+    const obj1 = { samples: items, hermesStacks: set1, jsThreads: set };
     return obj1;
   }
 }
 function parseHermesJSStackFrame(category) {
   if ("JavaScript" !== category.category) {
     if ("[root]" === category.name) {
-      let obj = { function: null, in_app: false };
-      obj[0] = category.name;
+      let obj = { function: category.name, in_app: false };
     } else {
-      obj = { function: null };
-      obj[0] = category.name;
+      obj = { function: category.name };
     }
     return obj;
   } else {
     if (undefined !== category.funcVirtAddr) {
       if (undefined !== category.offset) {
-        obj1 = { function: null, abs_path: null, lineno: 1, colno: null };
-        obj1[0] = category.name;
-        obj1[1] = DEFAULT_BUNDLE_NAME.DEFAULT_BUNDLE_NAME;
+        const obj1 = { function: category.name, abs_path: _mod985.DEFAULT_BUNDLE_NAME, lineno: 1, colno: null };
         const _Number3 = Number;
         const _Number4 = Number;
-        obj1[3] = Number(category.funcVirtAddr) + Number(category.offset) + 1;
+        obj1.colno = Number(category.funcVirtAddr) + Number(category.offset) + 1;
         return obj1;
       }
     }
@@ -95,34 +78,31 @@ function parseHermesJSStackFrame(category) {
     const index = name.indexOf("(");
     if (-1 !== index) {
       name = category.name.substring(0, index) || undefined;
-      const str2 = category.name;
       const tmp2 = category.name.substring(0, index) || undefined;
     } else {
       name = category.name;
     }
-    obj = { function: null, abs_path: null, lineno: null, colno: null };
-    obj[0] = name;
-    obj[1] = DEFAULT_BUNDLE_NAME.DEFAULT_BUNDLE_NAME;
+    obj = { function: name, abs_path: _mod985.DEFAULT_BUNDLE_NAME, lineno: null, colno: null };
     let NumberResult1;
     if (undefined !== category.line) {
       const _Number = Number;
       NumberResult1 = Number(category.line);
     }
-    obj[2] = NumberResult1;
+    obj.lineno = NumberResult1;
     let NumberResult2;
     if (undefined !== category.column) {
       const _Number2 = Number;
       NumberResult2 = Number(category.column);
     }
-    obj[3] = NumberResult2;
+    obj.colno = NumberResult2;
     return obj;
   }
 }
-let closure_2 = 1000000 * _mod988.MAX_PROFILE_DURATION_MS;
+let closure_2 = 1000000 * MAX_PROFILE_DURATION_MS.MAX_PROFILE_DURATION_MS;
 
 export const convertToSentryProfile = function convertToSentryProfile(hermesProfile) {
   if (0 === hermesProfile.samples.length) {
-    const debug2 = registerSpanErrorInstrumentation.debug;
+    const debug2 = _mod682.debug;
     debug2.warn("[Profiling] No samples found in profile.");
     return null;
   } else {
@@ -131,8 +111,8 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
       const frames = [];
       const hermesStackFrameIdToSentryFrameIdMap = new Map();
       for (const key10011 in arg0) {
-        let tmp6 = key10011;
         let _Object = Object;
+        hasOwnProperty = Object.prototype.hasOwnProperty;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
           let hasOwnPropertyResult = hasOwnProperty(key10011);
@@ -148,8 +128,7 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
           } else {
             let _Number = Number;
             let result = hermesStackFrameIdToSentryFrameIdMap.set(Number(key10011), frames.length);
-            let tmp4 = callback;
-            let arr = frames.push(callback(tmp2));
+            let arr = frames.push(parseHermesJSStackFrame(tmp2));
             continue;
           }
           continue;
@@ -169,28 +148,21 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
         let tmp3 = nextResult;
         if (undefined !== nextResult) {
           do {
-            let tmp4 = tmp3;
-            let value = hermesStackFrameIdToSentryFrameIdMap.get(tmp3);
+            value = hermesStackFrameIdToSentryFrameIdMap.get(tmp3);
             if (undefined !== value) {
-              let tmp7 = items1;
-              let tmp8 = value;
               let arr = items1.push(tmp6);
             }
-            let tmp10 = tmp3;
             let tmp11 = stackFrames[tmp3];
             let tmp12 = tmp11;
             parent = undefined;
             if (null !== tmp11) {
-              let tmp14 = tmp11;
               if (undefined !== tmp12) {
-                let tmp15 = tmp11;
                 parent = tmp12.parent;
               }
             }
             tmp3 = parent;
           } while (undefined !== parent);
         }
-        let tmp16 = items1;
         arr = stacks.push(items1);
         continue;
       }
@@ -201,20 +173,15 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
     let nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;
-      let value = hermesStackToSentryStackMap.get(nextResult.stack_id);
+      value = hermesStackToSentryStackMap.get(nextResult.stack_id);
       if (undefined === value) {
-        let tmp9 = require;
-        let tmp10 = dependencyMap;
-        let debug = registerSpanErrorInstrumentation.debug;
-        let tmp11 = nextResult;
+        let debug = _mod682.debug;
         let _HermesInternal = HermesInternal;
         let errorResult = debug.error(
           "[Profiling] Hermes Stack ID " + tmp4.stack_id + " not found when mapping to Sentry Stack ID.",
         );
         tmp4.stack_id = -1;
       } else {
-        let tmp7 = nextResult;
-        let tmp8 = value;
         tmp4.stack_id = tmp6;
       }
       continue;
@@ -224,14 +191,11 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
       obj[item10034] = { name: "JavaScriptThread", priority: 1 };
       continue;
     }
-    obj = { samples: null, frames: null, stacks: null, thread_metadata: null, active_thread_id: null };
-    obj[0] = samples;
-    obj[1] = tmp22.frames;
-    obj[2] = tmp23.stacks;
-    obj[3] = obj;
+    obj = { samples, frames: tmp22.frames, stacks: tmp23.stacks, thread_metadata: null, active_thread_id: null };
+    obj.thread_metadata = obj;
     let _Object = Object;
     const tmp21 = mapSamples(hermesProfile.samples);
-    obj[4] = Object.keys(obj)[0] || "0";
+    obj.active_thread_id = Object.keys(obj)[0] || "0";
     return obj;
   }
 };

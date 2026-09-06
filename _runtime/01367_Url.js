@@ -3,7 +3,7 @@ import _mod1275 from "metro/01275__.js";
 import decode from "01368_decode.js";
 
 require = arg1;
-const dependencyMap = arg6;
+let dependencyMap = arg6;
 class Url {
   constructor() {
     return;
@@ -43,8 +43,8 @@ class Url {
       if (!arg2) {
         num2 = 1;
         if (1 === str4.split("#").length) {
-          tmp79 = closure_5;
-          match = closure_5.exec(str5);
+          tmp79 = re5;
+          match = re5.exec(str5);
           if (match) {
             self.path = str5;
             self.href = str5;
@@ -54,12 +54,12 @@ class Url {
               if (arg1) {
                 tmp4 = closure_0;
                 tmp5 = closure_1;
-                obj2 = require("metro/01275__.js");
+                obj2 = closure_0(closure_1[0]);
                 str8 = self.search;
-                parsed = obj2.parse(require("../discord_app/modules/debug/logAppStart.tsx"));
+                parsed = obj2.parse(str8.substr(1));
               } else {
                 str7 = self.search;
-                parsed = require("../discord_app/modules/debug/logAppStart.tsx");
+                parsed = str7.substr(1);
               }
               self.query = parsed;
             } else {
@@ -73,8 +73,8 @@ class Url {
           }
         }
       }
-      tmp6 = closure_3;
-      match1 = closure_3.exec(str5);
+      tmp6 = re3;
+      match1 = re3.exec(str5);
       str9 = str5;
       tmp9 = match1;
       if (match1) {
@@ -126,7 +126,7 @@ class Url {
             }
             substr1 = substr7;
             if (-1 !== lastIndexOfResult) {
-              substr = require("../discord_app/index.native.tsx");
+              substr = substr7.slice(0, lastIndexOfResult);
               substr1 = substr7.slice(lastIndexOfResult + 1);
               tmp27 = globalThis;
               _decodeURIComponent = decodeURIComponent;
@@ -158,7 +158,7 @@ class Url {
             if (-1 === num10) {
               num10 = substr1.length;
             }
-            self.host = require("../discord_app/index.native.tsx");
+            self.host = substr1.slice(0, num10);
             substr2 = substr1.slice(num10);
             parseHostResult = self.parseHost();
             self.hostname = self.hostname || "";
@@ -183,8 +183,8 @@ class Url {
                   str19 = parts1[num12];
                   tmp38 = num12;
                   if (str19) {
-                    tmp39 = closure_9;
-                    if (!str19.match(closure_9)) {
+                    tmp39 = re9;
+                    if (!str19.match(re9)) {
                       length2 = str19.length;
                       num13 = 0;
                       str20 = "";
@@ -203,8 +203,8 @@ class Url {
                           str21 = text;
                         } while (num13 < length2);
                       }
-                      tmp43 = closure_9;
-                      if (!str21.match(closure_9)) {
+                      tmp43 = re9;
+                      if (!str21.match(re9)) {
                         break;
                       }
                     }
@@ -212,12 +212,12 @@ class Url {
                   num12 = num12 + 1;
                   tmp37 = substr2;
                 }
-                substr3 = require("../discord_app/index.native.tsx");
+                substr3 = parts1.slice(0, num12);
                 substr4 = parts1.slice(num12 + 1);
-                tmp44 = closure_10;
-                match2 = str19.match(closure_10);
+                tmp44 = re10;
+                match2 = str19.match(re10);
                 if (match2) {
-                  arr = require("decode");
+                  arr = substr3.push(match2[1]);
                   arr1 = substr4.unshift(match2[2]);
                 }
                 text1 = substr2;
@@ -241,7 +241,7 @@ class Url {
             if (!tmp36) {
               tmp49 = closure_0;
               tmp50 = closure_1;
-              obj3 = require("decode");
+              obj3 = closure_0(closure_1[1]);
               self.hostname = obj3.toASCII(self.hostname);
             }
             str26 = "";
@@ -257,7 +257,7 @@ class Url {
             if (tmp36) {
               str29 = self.hostname;
               num15 = 2;
-              self.hostname = require("../discord_app/modules/debug/logAppStart.tsx");
+              self.hostname = str29.substr(1, self.hostname.length - 2);
               text2 = tmp37;
               if ("/" !== tmp37[0]) {
                 text2 = `/${tmp37}`;
@@ -310,7 +310,7 @@ class Url {
         substr5 = arr8;
         if (-1 !== index3) {
           self.hash = arr8.substr(index3);
-          substr5 = require("../discord_app/index.native.tsx");
+          substr5 = arr8.slice(0, index3);
         }
         index4 = substr5.indexOf("?");
         tmp65 = substr5;
@@ -321,10 +321,10 @@ class Url {
           if (arg1) {
             tmp67 = closure_0;
             tmp68 = closure_1;
-            obj5 = require("metro/01275__.js");
+            obj5 = closure_0(closure_1[0]);
             self.query = obj5.parse(self.query);
           }
-          substr6 = require("../discord_app/index.native.tsx");
+          substr6 = substr5.slice(0, index4);
         } else {
           substr6 = substr5;
           if (arg1) {
@@ -352,7 +352,7 @@ class Url {
       }
       num3 = 2;
       str11 = "//";
-      tmp12 = "//" === require("../discord_app/index.native.tsx");
+      tmp12 = "//" === str9.substr(0, 2);
       tmp13 = !tmp12;
       if (tmp12) {
         tmp14 = tmp9;
@@ -365,7 +365,7 @@ class Url {
       tmp11 = tmp12;
       substr7 = str9;
       if (!tmp13) {
-        substr7 = require("00002_set.js");
+        substr7 = str9.substr(2);
         flag = true;
         self.slashes = true;
         tmp11 = tmp12;
@@ -421,7 +421,7 @@ class Url {
     if (length) {
       tmp7 = closure_0;
       tmp8 = closure_1;
-      obj = require("metro/01275__.js");
+      obj = closure_0(closure_1[0]);
       str10 = obj.stringify(self.query, { arrayFormat: "repeat", addQueryPrefix: false });
     }
     str11 = self.search;
@@ -440,7 +440,7 @@ class Url {
     if (str4) {
       num2 = -1;
       str13 = ":";
-      tmp10 = ":" !== require("module_4294967295");
+      tmp10 = ":" !== str4.substr(-1);
     }
     text3 = str4;
     if (tmp10) {
@@ -454,7 +454,7 @@ class Url {
         if (str6) {
           num4 = 0;
           str20 = "#";
-          tmp15 = "#" !== require("../discord_app/index.native.tsx");
+          tmp15 = "#" !== str6.charAt(0);
         }
         text4 = str6;
         if (tmp15) {
@@ -465,7 +465,7 @@ class Url {
         if (str11) {
           num5 = 0;
           str22 = "?";
-          tmp17 = "?" !== require("../discord_app/index.native.tsx");
+          tmp17 = "?" !== str11.charAt(0);
         }
         str23 = str11;
         if (tmp17) {
@@ -495,7 +495,7 @@ class Url {
     if (str5) {
       num3 = 0;
       str18 = "/";
-      tmp13 = "/" !== require("../discord_app/index.native.tsx");
+      tmp13 = "/" !== str5.charAt(0);
     }
     text5 = `//${str17}`;
     str16 = text5;
@@ -517,7 +517,7 @@ class Url {
       return tmp2Result.format();
     }
     obj = Object.create(Url.prototype);
-    obj = {
+    url = {
       protocol: null,
       slashes: null,
       auth: null,
@@ -531,8 +531,8 @@ class Url {
       path: null,
       href: null,
     };
-    parsed = obj.parse(arg0, false, true);
-    tmp5 = obj;
+    parsed = url.parse(arg0, false, true);
+    tmp5 = url;
     return;
   }
   resolveObject(arg0) {
@@ -687,7 +687,7 @@ class Url {
       if (pathname) {
         str3 = url2.pathname;
         str4 = "/";
-        pathname = "/" === require("../discord_app/index.native.tsx");
+        pathname = "/" === str3.charAt(0);
       }
       host = url.host;
       if (!host) {
@@ -695,7 +695,7 @@ class Url {
         if (pathname2) {
           str5 = url.pathname;
           str6 = "/";
-          pathname2 = "/" === require("../discord_app/index.native.tsx");
+          pathname2 = "/" === str5.charAt(0);
         }
         host = pathname2;
       }
@@ -828,7 +828,7 @@ class Url {
         }
         if (combined.length) {
           num3 = -1;
-          first = require("module_4294967295")[0];
+          first = combined.slice(-1)[0];
           tmp19 = url2.host || url.host || combined.length > 1;
           if (tmp19) {
             str17 = ".";
@@ -889,7 +889,7 @@ class Url {
             if (first1) {
               str21 = combined[0];
               str22 = "/";
-              first1 = "/" === require("../discord_app/index.native.tsx");
+              first1 = "/" === str21.charAt(0);
             }
             tmp31 = first1;
           }
@@ -899,7 +899,7 @@ class Url {
           if (tmp19) {
             str23 = "/";
             str24 = combined.join("/");
-            tmp19 = "/" !== require("module_4294967295");
+            tmp19 = "/" !== str24.substr(-1);
           }
           if (tmp19) {
             arr9 = combined.push("");
@@ -910,7 +910,7 @@ class Url {
             if (first2) {
               str25 = combined[0];
               str26 = "/";
-              first2 = "/" === require("../discord_app/index.native.tsx");
+              first2 = "/" === str25.charAt(0);
             }
             tmp35 = first2;
           }
@@ -993,17 +993,17 @@ class Url {
   parseHost() {
     self = this;
     str = this.host;
-    match = closure_4.exec(str);
+    match = re4.exec(str);
     substr = str;
     if (match) {
       str2 = match[0];
       str3 = ":";
       if (":" !== str2) {
         num = 1;
-        self.port = require("../discord_app/modules/debug/logAppStart.tsx");
+        self.port = str2.substr(1);
       }
       num2 = 0;
-      substr = require("../discord_app/index.native.tsx");
+      substr = str.substr(0, str.length - str2.length);
     }
     if (substr) {
       self.hostname = substr;
@@ -1018,25 +1018,14 @@ let items = ["{", "}", "|", "\\", "^", "`"];
 const items1 = ["'"];
 let combined = items1.concat(items.concat(["<", ">", '"', "`", " ", "\r", "\n", "\t"]));
 const items2 = ["%", "/", "?", ";", "#"];
-let closure_7 = items2.concat(combined);
-let closure_8 = ["/", "?", "#"];
+const React5 = items2.concat(combined);
+const React6 = ["/", "?", "#"];
 const re9 = /^[+a-z0-9A-Z_-]{0,63}$/;
 const re10 = /^([+a-z0-9A-Z_-]{0,63})(.*)$/;
 let closure_11 = { javascript: true, "javascript:": true };
-let closure_12 = { javascript: true, "javascript:": true };
-let closure_13 = {
-  http: true,
-  https: true,
-  ftp: true,
-  gopher: true,
-  file: true,
-  "http:": true,
-  "https:": true,
-  "ftp:": true,
-  "gopher:": true,
-  "file:": true,
-};
-arg5.parse = function urlParse(obj) {
+dependencyMap = { javascript: true, "javascript:": true };
+
+export const parse = function urlParse(obj, arg1, arg2) {
   if (obj) {
     if (typeof obj === "object") {
       if (obj instanceof Url) {
@@ -1044,8 +1033,8 @@ arg5.parse = function urlParse(obj) {
       }
     }
   }
-  obj = Object.create(Url.prototype);
-  obj = {
+  Object.create(Url.prototype);
+  const url = {
     protocol: null,
     slashes: null,
     auth: null,
@@ -1059,18 +1048,18 @@ arg5.parse = function urlParse(obj) {
     path: null,
     href: null,
   };
-  const parsed = obj.parse(obj, arg1, arg2);
-  return obj;
+  const parsed = url.parse(obj, arg1, arg2);
+  return url;
 };
-arg5.resolve = function urlResolve(obj) {
+export const resolve = function urlResolve(obj, arg1) {
   if (obj) {
     if (typeof obj === "object") {
       let obj2 = obj;
     }
     return obj2.resolve(arg1);
   }
-  obj = Object.create(Url.prototype);
-  obj = {
+  Object.create(Url.prototype);
+  const url = {
     protocol: null,
     slashes: null,
     auth: null,
@@ -1084,10 +1073,10 @@ arg5.resolve = function urlResolve(obj) {
     path: null,
     href: null,
   };
-  const parsed = obj.parse(obj, false, true);
-  obj2 = obj;
+  const parsed = url.parse(obj, false, true);
+  obj2 = url;
 };
-arg5.resolveObject = function urlResolveObject(obj) {
+export const resolveObject = function urlResolveObject(obj, arg1) {
   let object = arg1;
   if (obj) {
     if (obj) {
@@ -1096,7 +1085,7 @@ arg5.resolveObject = function urlResolveObject(obj) {
       }
       object = obj2.resolveObject(arg1);
     }
-    obj = Object.create(Url.prototype);
+    Object.create(Url.prototype);
     obj = {
       protocol: null,
       slashes: null,
@@ -1116,7 +1105,7 @@ arg5.resolveObject = function urlResolveObject(obj) {
   }
   return object;
 };
-arg5.format = function urlFormat(str) {
+export const format = function urlFormat(str) {
   let obj = str;
   if (typeof str === "string") {
     if (str) {
@@ -1125,7 +1114,7 @@ arg5.format = function urlFormat(str) {
       }
       obj = tmp5;
     }
-    obj = Object.create(Url.prototype);
+    Object.create(Url.prototype);
     obj = {
       protocol: null,
       slashes: null,
@@ -1152,4 +1141,4 @@ arg5.format = function urlFormat(str) {
   }
   return formatResult;
 };
-arg5.Url = Url;
+export { Url };

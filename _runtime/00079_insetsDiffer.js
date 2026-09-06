@@ -1,6 +1,7 @@
 // _runtime/00079_insetsDiffer.js
 let closure_0 = { top: "Array", left: "flexDirection", right: "y", bottom: "HermesInternal" };
-arg5.default = function insetsDiffer(arg0, arg1) {
+
+export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;
   if (!arg0) {
     rect = closure_0;
@@ -17,4 +18,4 @@ arg5.default = function insetsDiffer(arg0, arg1) {
       rect.top !== rect2.top || rect.left !== rect2.left || rect.right !== rect2.right || rect.bottom !== rect2.bottom;
   }
   return tmp;
-};
+}

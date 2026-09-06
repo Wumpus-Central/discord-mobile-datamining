@@ -1,8 +1,7 @@
 // _runtime/00843_asString.js
-import _mod704 from "metro/00704__.js";
-import _mod823 from "metro/00823__.js";
-import truncateTextByBytes from "00826_truncateTextByBytes.js";
-import _mod844 from "metro/00844__.js";
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "00704_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
+import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "00823_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
+import LANGCHAIN_INTEGRATION_NAME from "00844_LANGCHAIN_INTEGRATION_NAME.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -25,10 +24,10 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
     str = "langchain";
   }
   let obj = {};
-  obj[_mod823.GEN_AI_SYSTEM_ATTRIBUTE] = asString(str);
-  obj[_mod823.GEN_AI_OPERATION_NAME_ATTRIBUTE] = arg2;
-  obj[_mod823.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = asString(arg1);
-  obj[_mod704.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = _mod844.LANGCHAIN_ORIGIN;
+  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_SYSTEM_ATTRIBUTE] = asString(str);
+  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_OPERATION_NAME_ATTRIBUTE] = arg2;
+  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = asString(arg1);
+  obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = LANGCHAIN_INTEGRATION_NAME.LANGCHAIN_ORIGIN;
   if ("kwargs" in kwargs) {
     kwargs = kwargs.kwargs;
   }
@@ -50,95 +49,109 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
     }
     temperature = temperature1;
   }
-  if (typeof setNumberIfDefined !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = {};
-  const NumberResult = Number(temperature);
-  if (!Number.isNaN(NumberResult)) {
-    obj[tmp(823).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = NumberResult;
-  }
-  let max_tokens;
-  if (temperature != null) {
-    max_tokens = temperature.max_tokens;
-  }
-  if (max_tokens == null) {
-    let ls_max_tokens;
-    if (ls_temperature != null) {
-      ls_max_tokens = ls_temperature.ls_max_tokens;
+  if (typeof setNumberIfDefined === "function") {
+    obj = {};
+    const _Number = Number;
+    const NumberResult = Number(temperature);
+    const _Number2 = Number;
+    if (!Number.isNaN(NumberResult)) {
+      obj[tmp8] = NumberResult;
     }
-    max_tokens = ls_max_tokens;
-  }
-  if (max_tokens == null) {
-    let max_tokens1;
-    if (kwargs != null) {
-      max_tokens1 = kwargs.max_tokens;
+    let max_tokens;
+    if (temperature != null) {
+      max_tokens = temperature.max_tokens;
     }
-    max_tokens = max_tokens1;
-  }
-  if (typeof setNumberIfDefined !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const NumberResult1 = Number(max_tokens);
-  if (!Number.isNaN(NumberResult1)) {
-    obj[tmp(823).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = NumberResult1;
-  }
-  let top_p;
-  if (temperature != null) {
-    top_p = temperature.top_p;
-  }
-  if (top_p == null) {
-    let top_p1;
-    if (kwargs != null) {
-      top_p1 = kwargs.top_p;
+    if (max_tokens == null) {
+      let ls_max_tokens;
+      if (ls_temperature != null) {
+        ls_max_tokens = ls_temperature.ls_max_tokens;
+      }
+      max_tokens = ls_max_tokens;
     }
-    top_p = top_p1;
-  }
-  if (typeof setNumberIfDefined !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const NumberResult2 = Number(top_p);
-  if (!Number.isNaN(NumberResult2)) {
-    obj[tmp(823).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = NumberResult2;
-  }
-  let frequency_penalty;
-  if (temperature != null) {
-    frequency_penalty = temperature.frequency_penalty;
-  }
-  if (typeof setNumberIfDefined !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const NumberResult3 = Number(frequency_penalty);
-  if (!Number.isNaN(NumberResult3)) {
-    obj[tmp(823).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = NumberResult3;
-  }
-  let presence_penalty;
-  if (temperature != null) {
-    presence_penalty = temperature.presence_penalty;
-  }
-  if (typeof setNumberIfDefined !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const NumberResult4 = Number(presence_penalty);
-  if (!Number.isNaN(NumberResult4)) {
-    obj[tmp(823).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = NumberResult4;
-  }
-  let tmp20 = temperature;
-  if (temperature) {
-    tmp20 = "stream" in temperature;
-  }
-  if (tmp20) {
-    const _Boolean = Boolean;
-    const BooleanResult = Boolean(temperature.stream);
-    if (typeof setIfDefined !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (max_tokens == null) {
+      let max_tokens1;
+      if (kwargs != null) {
+        max_tokens1 = kwargs.max_tokens;
+      }
+      max_tokens = max_tokens1;
     }
-    if (null != BooleanResult) {
-      obj[tmp(823).GEN_AI_REQUEST_STREAM_ATTRIBUTE] = BooleanResult;
+    if (typeof tmp7 === "function") {
+      const _Number3 = Number;
+      const NumberResult1 = Number(max_tokens);
+      const _Number4 = Number;
+      if (!Number.isNaN(NumberResult1)) {
+        obj[tmp14] = NumberResult1;
+      }
+      let top_p;
+      if (temperature != null) {
+        top_p = temperature.top_p;
+      }
+      if (top_p == null) {
+        let top_p1;
+        if (kwargs != null) {
+          top_p1 = kwargs.top_p;
+        }
+        top_p = top_p1;
+      }
+      if (typeof tmp7 === "function") {
+        const _Number5 = Number;
+        const NumberResult2 = Number(top_p);
+        const _Number6 = Number;
+        if (!Number.isNaN(NumberResult2)) {
+          obj[tmp18] = NumberResult2;
+        }
+        if (temperature != null) {
+          const frequency_penalty = temperature.frequency_penalty;
+        }
+        if (typeof tmp7 === "function") {
+          const _Number7 = Number;
+          const NumberResult3 = Number(frequency_penalty);
+          const _Number8 = Number;
+          if (!Number.isNaN(NumberResult3)) {
+            obj[tmp20] = NumberResult3;
+          }
+          if (temperature != null) {
+            const presence_penalty = temperature.presence_penalty;
+          }
+          if (typeof tmp7 === "function") {
+            const _Number9 = Number;
+            const NumberResult4 = Number(presence_penalty);
+            const _Number10 = Number;
+            if (!Number.isNaN(NumberResult4)) {
+              obj[tmp22] = NumberResult4;
+            }
+            let tmp24 = temperature;
+            if (temperature) {
+              tmp24 = "stream" in temperature;
+            }
+            if (tmp24) {
+              const _Boolean = Boolean;
+              const BooleanResult = Boolean(temperature.stream);
+              if (typeof setIfDefined === "function") {
+                if (null != BooleanResult) {
+                  obj[tmp(823).GEN_AI_REQUEST_STREAM_ATTRIBUTE] = BooleanResult;
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }
+            const merged = Object.assign(obj);
+            return obj;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const merged = Object.assign(obj);
-  return obj;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 function setIfDefined(arg0, arg1, arg2) {
@@ -147,10 +160,11 @@ function setIfDefined(arg0, arg1, arg2) {
   }
 }
 function setNumberIfDefined(arg0, arg1, arg2) {}
-arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttributes(
+
+export const extractChatModelRequestAttributes = function extractChatModelRequestAttributes(
   id,
   arr,
-  closure_0,
+  arg2,
   invocationParams,
   ls_provider,
 ) {
@@ -181,7 +195,7 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
     str = "unknown";
   }
   const tmpResult = baseRequestAttributes(ls_provider, str, "chat", id, invocationParams, ls_provider);
-  if (closure_0) {
+  if (arg2) {
     let _Array = Array;
     if (Array.isArray(arr)) {
       if (arr.length > 0) {
@@ -190,13 +204,11 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
           if (typeof _getType === "function") {
             const call = _getType.call;
             const formatted = typeof call === "unknown" ? _getType() : call(_getType).toLowerCase();
-            let tmp31 = callback(844).ROLE_MAP[formatted];
+            let tmp31 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted];
             if (tmp31 == null) {
               tmp31 = formatted;
             }
-            let obj = { role: null, content: null };
-            obj[0] = tmp31;
-            obj[1] = callback2(_getType.content);
+            let obj = { role: tmp31, content: asString(_getType.content) };
             return obj;
           } else {
             const constructor = _getType.constructor;
@@ -229,36 +241,30 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
                 str18 = str21;
               }
               const formatted1 = str18.toLowerCase();
-              let tmp26 = callback(844).ROLE_MAP[formatted1];
+              let tmp26 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted1];
               if (tmp26 == null) {
                 tmp26 = formatted1;
               }
-              obj = { role: null, content: null };
-              obj[0] = tmp26;
-              obj[1] = callback2(_getType.content);
+              obj = { role: tmp26, content: asString(_getType.content) };
               return obj;
             } else if (_getType.type) {
               const _String2 = String;
               const str15 = String(_getType.type);
               const formatted2 = String(_getType.type).toLowerCase().toLowerCase();
-              let tmp21 = callback(844).ROLE_MAP[formatted2];
+              let tmp21 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted2];
               if (tmp21 == null) {
                 tmp21 = formatted2;
               }
-              obj1 = { role: null, content: null };
-              obj1[0] = tmp21;
-              obj1[1] = callback2(_getType.content);
+              const obj1 = { role: tmp21, content: asString(_getType.content) };
               return obj1;
             } else if (_getType.role) {
               const _String = String;
               const formatted3 = String(_getType.role).toLowerCase();
-              let tmp15 = callback(844).ROLE_MAP[formatted3];
+              let tmp15 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted3];
               if (tmp15 == null) {
                 tmp15 = formatted3;
               }
-              const obj2 = { role: null, content: null };
-              obj2[0] = tmp15;
-              obj2[1] = callback2(_getType.content);
+              const obj2 = { role: tmp15, content: asString(_getType.content) };
               return obj2;
             } else {
               if (1 === _getType.lc) {
@@ -300,53 +306,54 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
                     str4 = str13;
                   }
                   const formatted4 = str4.toLowerCase();
-                  let tmp8 = callback(844).ROLE_MAP[formatted4];
+                  let tmp8 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted4];
                   if (tmp8 == null) {
                     tmp8 = formatted4;
                   }
-                  const obj3 = { role: null, content: null };
-                  obj3[0] = tmp8;
+                  const obj3 = { role: tmp8, content: null };
                   const kwargs = _getType.kwargs;
                   let content;
                   if (kwargs != null) {
                     content = kwargs.content;
                   }
-                  obj3[1] = callback2(content);
+                  obj3.content = asString(content);
                   return obj3;
                 }
               }
-              obj = { role: "user", content: null };
-              obj[1] = callback2(_getType.content);
+              obj = { role: "user", content: asString(_getType.content) };
               return obj;
             }
           }
         });
-        if (typeof setIfDefined !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (null != mapped.length) {
-          tmpResult[_mod823.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
+        if (typeof setIfDefined === "function") {
+          if (null != length) {
+            tmpResult[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] =
+              length;
+          }
+          const result = tmp12(826).truncateGenAiMessages(mapped);
+          const tmp10 = asString(result);
+          if (typeof tmp11 === "function") {
+            if (null != tmp10) {
+              tmpResult[tmp12(823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp10;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          const tmp12Result = tmp12(826);
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
         const flatResult = arr.flat();
-        const tmp11 = setIfDefined;
-        const result = truncateTextByBytes.truncateGenAiMessages(mapped);
-        const tmp10 = asString(result);
-        if (typeof tmp11 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (null != tmp10) {
-          tmpResult[tmp12(823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp10;
-        }
-        const tmp12Result = truncateTextByBytes;
+        tmp11 = setIfDefined;
       }
     }
   }
   return tmpResult;
 };
-arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(
+export const extractLLMRequestAttributes = function extractLLMRequestAttributes(
   arg0,
   arr,
-  closure_0,
+  arg2,
   invocationParams,
   ls_provider,
 ) {
@@ -369,23 +376,26 @@ arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(
     str = "unknown";
   }
   const tmp2Result = baseRequestAttributes(ls_provider, str, "pipeline", arg0, invocationParams, ls_provider);
-  if (closure_0) {
+  if (arg2) {
     const _Array = Array;
     if (Array.isArray(arr)) {
       if (arr.length > 0) {
-        if (typeof setIfDefined !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (null != arr.length) {
-          tmp2Result[_mod823.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
-        }
-        const mapped = arr.map((content) => ({ role: "user", content }));
-        const tmp9 = asString(mapped);
-        if (typeof tmp10 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (null != tmp9) {
-          tmp2Result[tmp11(823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp9;
+        if (typeof setIfDefined === "function") {
+          if (null != length) {
+            tmp2Result[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] =
+              length;
+          }
+          const mapped = arr.map((content) => ({ role: "user", content }));
+          const tmp9 = asString(mapped);
+          if (typeof tmp10 === "function") {
+            if (null != tmp9) {
+              tmp2Result[tmp11(823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp9;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
         tmp10 = setIfDefined;
         tmp11 = require;
@@ -394,7 +404,7 @@ arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(
   }
   return tmp2Result;
 };
-arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(generations, flag2) {
+export const extractLlmResponseAttributes = function extractLlmResponseAttributes(generations, flag2) {
   if (generations) {
     const obj = {};
     let _Array = Array;
@@ -421,14 +431,15 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         }
         return finish_reason1;
       });
-      const found = mapped.filter((str) => typeof str === "string");
+      const found = mapped.filter((item) => typeof item === "string");
       if (found.length > 0) {
         const tmp6 = asString(found);
-        if (typeof setIfDefined !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (null != tmp6) {
-          obj[_mod823.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = tmp6;
+        if (typeof setIfDefined === "function") {
+          if (null != tmp6) {
+            obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = tmp6;
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
       }
       (function addToolCallsAttributes(generations, arg1) {
@@ -441,13 +452,9 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
             content = message.content;
           }
           let _Array = Array;
-          let tmp3 = content;
           if (Array.isArray(content)) {
-            let tmp4 = tmp3;
-            let tmp5 = content;
             for (const item10026 of content) {
               if ("tool_use" === item10026.type) {
-                let tmp7 = item10026;
                 let arr = items.push(tmp6);
               }
               continue;
@@ -456,7 +463,11 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
           continue;
         }
         if (items.length > 0) {
-          callback2(arg1, callback(table[1]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE, callback3(items));
+          setIfDefined(
+            arg1,
+            ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE,
+            asString(items),
+          );
         }
       })(generations.generations, obj);
       if (flag2) {
@@ -473,14 +484,15 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
           }
           return text;
         });
-        const found1 = mapped1.filter((str) => typeof str === "string");
+        const found1 = mapped1.filter((item) => typeof item === "string");
         if (found1.length > 0) {
           const tmp14 = asString(found1);
-          if (typeof setIfDefined !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          if (null != tmp14) {
-            obj[_mod823.GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = tmp14;
+          if (typeof setIfDefined === "function") {
+            if (null != tmp14) {
+              obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = tmp14;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
         }
         const flatResult1 = generations2.flat();
@@ -491,99 +503,107 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
     if (llmOutput) {
       ({ tokenUsage, usage } = llmOutput);
       if (tokenUsage) {
-        if (typeof setNumberIfDefined !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        const _Number15 = Number;
-        const NumberResult = Number(tokenUsage.promptTokens);
-        const _Number16 = Number;
-        if (!Number.isNaN(NumberResult)) {
-          obj[_mod823.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = NumberResult;
-        }
-        if (typeof setNumberIfDefined !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        const _Number17 = Number;
-        const NumberResult1 = Number(tokenUsage.completionTokens);
-        const _Number18 = Number;
-        if (!Number.isNaN(NumberResult1)) {
-          obj[tmp28(823).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = NumberResult1;
-        }
-        if (typeof setNumberIfDefined !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        const _Number19 = Number;
-        const NumberResult2 = Number(tokenUsage.totalTokens);
-        const _Number20 = Number;
-        if (!Number.isNaN(NumberResult2)) {
-          obj[tmp28(823).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = NumberResult2;
+        if (typeof setNumberIfDefined === "function") {
+          const _Number15 = Number;
+          const NumberResult = Number(tmp38);
+          const _Number16 = Number;
+          if (!Number.isNaN(NumberResult)) {
+            obj[tmp37] = NumberResult;
+          }
+          if (typeof tmp34 === "function") {
+            const _Number17 = Number;
+            const NumberResult1 = Number(tmp41);
+            const _Number18 = Number;
+            if (!Number.isNaN(NumberResult1)) {
+              obj[tmp40] = NumberResult1;
+            }
+            if (typeof tmp34 === "function") {
+              const _Number19 = Number;
+              const NumberResult2 = Number(tmp44);
+              const _Number20 = Number;
+              if (!Number.isNaN(NumberResult2)) {
+                obj[tmp43] = NumberResult2;
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
       } else if (usage) {
-        if (typeof setNumberIfDefined !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        const _Number = Number;
-        const NumberResult3 = Number(usage.input_tokens);
-        const _Number2 = Number;
-        if (!Number.isNaN(NumberResult3)) {
-          obj[_mod823.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = NumberResult3;
-        }
-        if (typeof setNumberIfDefined !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        const _Number3 = Number;
-        const NumberResult4 = Number(usage.output_tokens);
-        const _Number4 = Number;
-        if (!Number.isNaN(NumberResult4)) {
-          obj[tmp17(823).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = NumberResult4;
-        }
-        const _Number5 = Number;
-        const NumberResult5 = Number(usage.input_tokens);
-        const _Number6 = Number;
-        const NumberResult6 = Number(usage.output_tokens);
-        const _Number7 = Number;
-        let num3 = 0;
-        if (!Number.isNaN(NumberResult5)) {
-          num3 = NumberResult5;
-        }
-        const _Number8 = Number;
-        let num4 = 0;
-        if (!Number.isNaN(NumberResult6)) {
-          num4 = NumberResult6;
-        }
-        const sum = num3 + num4;
-        if (sum > 0) {
-          if (typeof tmp16 !== "function") {
-            HermesBuiltin.throwTypeError();
+        if (typeof setNumberIfDefined === "function") {
+          const _Number = Number;
+          const NumberResult3 = Number(tmp20);
+          const _Number2 = Number;
+          if (!Number.isNaN(NumberResult3)) {
+            obj[tmp19] = NumberResult3;
           }
-          const _Number9 = Number;
-          const NumberResult7 = Number(sum);
-          const _Number10 = Number;
-          if (!Number.isNaN(NumberResult7)) {
-            obj[tmp17(823).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = NumberResult7;
+          if (typeof tmp16 === "function") {
+            const _Number3 = Number;
+            const NumberResult4 = Number(tmp23);
+            const _Number4 = Number;
+            if (!Number.isNaN(NumberResult4)) {
+              obj[tmp22] = NumberResult4;
+            }
+            const _Number5 = Number;
+            const NumberResult5 = Number(usage.input_tokens);
+            const _Number6 = Number;
+            const NumberResult6 = Number(usage.output_tokens);
+            const _Number7 = Number;
+            let num3 = 0;
+            if (!Number.isNaN(NumberResult5)) {
+              num3 = NumberResult5;
+            }
+            const _Number8 = Number;
+            let num4 = 0;
+            if (!Number.isNaN(NumberResult6)) {
+              num4 = NumberResult6;
+            }
+            const sum = num3 + num4;
+            if (sum > 0) {
+              if (typeof tmp16 === "function") {
+                const _Number9 = Number;
+                const NumberResult7 = Number(sum);
+                const _Number10 = Number;
+                if (!Number.isNaN(NumberResult7)) {
+                  obj[tmp28] = NumberResult7;
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }
+            if (undefined !== usage.cache_creation_input_tokens) {
+              if (typeof tmp16 === "function") {
+                const _Number11 = Number;
+                const NumberResult8 = Number(tmp31);
+                const _Number12 = Number;
+                if (!Number.isNaN(NumberResult8)) {
+                  obj[tmp30] = NumberResult8;
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }
+            if (undefined !== usage.cache_read_input_tokens) {
+              if (typeof tmp16 === "function") {
+                const _Number13 = Number;
+                const NumberResult9 = Number(tmp68);
+                const _Number14 = Number;
+                if (!Number.isNaN(NumberResult9)) {
+                  obj[tmp67] = NumberResult9;
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-        }
-        if (undefined !== usage.cache_creation_input_tokens) {
-          if (typeof tmp16 !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          const _Number11 = Number;
-          const NumberResult8 = Number(usage.cache_creation_input_tokens);
-          const _Number12 = Number;
-          if (!Number.isNaN(NumberResult8)) {
-            obj[tmp17(823).GEN_AI_USAGE_CACHE_CREATION_INPUT_TOKENS_ATTRIBUTE] = NumberResult8;
-          }
-        }
-        if (undefined !== usage.cache_read_input_tokens) {
-          if (typeof tmp16 !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          const _Number13 = Number;
-          const NumberResult9 = Number(usage.cache_read_input_tokens);
-          const _Number14 = Number;
-          if (!Number.isNaN(NumberResult9)) {
-            obj[tmp17(823).GEN_AI_USAGE_CACHE_READ_INPUT_TOKENS_ATTRIBUTE] = NumberResult9;
-          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
       }
     }
@@ -620,11 +640,12 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
       model_name = model_name1;
     }
     if (model_name) {
-      if (typeof setIfDefined !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if (null != model_name) {
-        obj[_mod823.GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = model_name;
+      if (typeof setIfDefined === "function") {
+        if (null != model_name) {
+          obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = model_name;
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
     }
     let id;
@@ -639,11 +660,12 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
       id = id1;
     }
     if (id) {
-      if (typeof setIfDefined !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if (null != id) {
-        obj[_mod823.GEN_AI_RESPONSE_ID_ATTRIBUTE] = id;
+      if (typeof setIfDefined === "function") {
+        if (null != id) {
+          obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_ID_ATTRIBUTE] = id;
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
     }
     let stop_reason;
@@ -661,18 +683,19 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
       stop_reason = finish_reason;
     }
     if (stop_reason) {
-      const tmp53 = asString(stop_reason);
-      if (typeof setIfDefined !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if (null != tmp53) {
-        obj[_mod823.GEN_AI_RESPONSE_STOP_REASON_ATTRIBUTE] = tmp53;
+      const tmp66 = asString(stop_reason);
+      if (typeof setIfDefined === "function") {
+        if (null != tmp66) {
+          obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_STOP_REASON_ATTRIBUTE] = tmp66;
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
     }
     return obj;
   }
 };
-arg5.getInvocationParams = function getInvocationParams(invocation_params) {
+export const getInvocationParams = function getInvocationParams(invocation_params) {
   if (invocation_params) {
     const _Array = Array;
     if (!Array.isArray(invocation_params)) {
@@ -680,19 +703,17 @@ arg5.getInvocationParams = function getInvocationParams(invocation_params) {
     }
   }
 };
-arg5.normalizeLangChainMessages = function normalizeLangChainMessages(items) {
+export const normalizeLangChainMessages = function normalizeLangChainMessages(items) {
   return items.map((_getType) => {
     _getType = _getType._getType;
     if (typeof _getType === "function") {
       const call = _getType.call;
       const formatted = typeof call === "unknown" ? _getType() : call(_getType).toLowerCase();
-      let tmp31 = callback(844).ROLE_MAP[formatted];
+      let tmp31 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted];
       if (tmp31 == null) {
         tmp31 = formatted;
       }
-      let obj = { role: null, content: null };
-      obj[0] = tmp31;
-      obj[1] = callback2(_getType.content);
+      let obj = { role: tmp31, content: asString(_getType.content) };
       return obj;
     } else {
       const constructor = _getType.constructor;
@@ -725,36 +746,30 @@ arg5.normalizeLangChainMessages = function normalizeLangChainMessages(items) {
           str18 = str21;
         }
         const formatted1 = str18.toLowerCase();
-        let tmp26 = callback(844).ROLE_MAP[formatted1];
+        let tmp26 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted1];
         if (tmp26 == null) {
           tmp26 = formatted1;
         }
-        obj = { role: null, content: null };
-        obj[0] = tmp26;
-        obj[1] = callback2(_getType.content);
+        obj = { role: tmp26, content: asString(_getType.content) };
         return obj;
       } else if (_getType.type) {
         const _String2 = String;
         const str15 = String(_getType.type);
         const formatted2 = String(_getType.type).toLowerCase().toLowerCase();
-        let tmp21 = callback(844).ROLE_MAP[formatted2];
+        let tmp21 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted2];
         if (tmp21 == null) {
           tmp21 = formatted2;
         }
-        obj1 = { role: null, content: null };
-        obj1[0] = tmp21;
-        obj1[1] = callback2(_getType.content);
+        const obj1 = { role: tmp21, content: asString(_getType.content) };
         return obj1;
       } else if (_getType.role) {
         const _String = String;
         const formatted3 = String(_getType.role).toLowerCase();
-        let tmp15 = callback(844).ROLE_MAP[formatted3];
+        let tmp15 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted3];
         if (tmp15 == null) {
           tmp15 = formatted3;
         }
-        const obj2 = { role: null, content: null };
-        obj2[0] = tmp15;
-        obj2[1] = callback2(_getType.content);
+        const obj2 = { role: tmp15, content: asString(_getType.content) };
         return obj2;
       } else {
         if (1 === _getType.lc) {
@@ -796,23 +811,21 @@ arg5.normalizeLangChainMessages = function normalizeLangChainMessages(items) {
               str4 = str13;
             }
             const formatted4 = str4.toLowerCase();
-            let tmp8 = callback(844).ROLE_MAP[formatted4];
+            let tmp8 = LANGCHAIN_INTEGRATION_NAME.ROLE_MAP[formatted4];
             if (tmp8 == null) {
               tmp8 = formatted4;
             }
-            const obj3 = { role: null, content: null };
-            obj3[0] = tmp8;
+            const obj3 = { role: tmp8, content: null };
             const kwargs = _getType.kwargs;
             let content;
             if (kwargs != null) {
               content = kwargs.content;
             }
-            obj3[1] = callback2(content);
+            obj3.content = asString(content);
             return obj3;
           }
         }
-        obj = { role: "user", content: null };
-        obj[1] = callback2(_getType.content);
+        obj = { role: "user", content: asString(_getType.content) };
         return obj;
       }
     }

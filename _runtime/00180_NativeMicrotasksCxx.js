@@ -1,4 +1,4 @@
 // _runtime/00180_NativeMicrotasksCxx.js
-import getAll from "00030_get.js";
+import get from "metro/00030__.js";
 
-export default getAll.getEnforcing("NativeMicrotasksCxx");
+export default get.getEnforcing("NativeMicrotasksCxx");

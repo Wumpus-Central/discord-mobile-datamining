@@ -1,10 +1,10 @@
 // _runtime/12909_supportsFetch.js
-import getGlobalSingleton from "12798_getGlobalSingleton.js";
+import _mod12798 from "metro/12798__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 function supportsFetch() {
-  if ("fetch" in getGlobalSingleton.GLOBAL_OBJ) {
+  if ("fetch" in _mod12798.GLOBAL_OBJ) {
     try {
       const _Headers = Headers;
       const headers = new Headers();
@@ -28,8 +28,9 @@ function isNativeFunction(arg0) {
   }
   return isMatch;
 }
-arg5.isNativeFunction = isNativeFunction;
-arg5.supportsDOMError = function supportsDOMError() {
+
+export { isNativeFunction };
+export const supportsDOMError = function supportsDOMError() {
   try {
     const dOMError = new globalThis.DOMError("");
     return true;
@@ -37,7 +38,7 @@ arg5.supportsDOMError = function supportsDOMError() {
     return false;
   }
 };
-arg5.supportsDOMException = function supportsDOMException() {
+export const supportsDOMException = function supportsDOMException() {
   try {
     const dOMException = new globalThis.DOMException("");
     return true;
@@ -45,7 +46,7 @@ arg5.supportsDOMException = function supportsDOMException() {
     return false;
   }
 };
-arg5.supportsErrorEvent = function supportsErrorEvent() {
+export const supportsErrorEvent = function supportsErrorEvent() {
   try {
     const errorEvent = new globalThis.ErrorEvent("");
     return true;
@@ -53,12 +54,12 @@ arg5.supportsErrorEvent = function supportsErrorEvent() {
     return false;
   }
 };
-arg5.supportsFetch = supportsFetch;
-arg5.supportsNativeFetch = function supportsNativeFetch() {
+export { supportsFetch };
+export const supportsNativeFetch = function supportsNativeFetch() {
   if (typeof globalThis.EdgeRuntime === "string") {
     return true;
   } else if (supportsFetch()) {
-    if (isNativeFunction(getGlobalSingleton.GLOBAL_OBJ.fetch)) {
+    if (isNativeFunction(_mod12798.GLOBAL_OBJ.fetch)) {
       return true;
     } else {
       let flag2 = false;
@@ -95,7 +96,7 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
     return false;
   }
 };
-arg5.supportsReferrerPolicy = function supportsReferrerPolicy() {
+export const supportsReferrerPolicy = function supportsReferrerPolicy() {
   if (supportsFetch()) {
     try {
       const _Request = Request;
@@ -108,6 +109,6 @@ arg5.supportsReferrerPolicy = function supportsReferrerPolicy() {
     return false;
   }
 };
-arg5.supportsReportingObserver = function supportsReportingObserver() {
-  return "ReportingObserver" in getGlobalSingleton.GLOBAL_OBJ;
+export const supportsReportingObserver = function supportsReportingObserver() {
+  return "ReportingObserver" in _mod12798.GLOBAL_OBJ;
 };

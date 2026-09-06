@@ -1,7 +1,8 @@
 // _runtime/00790_markAsInstrumented.js
-import __SENTRY_DEBUG__ from "metro/00688___SENTRY_DEBUG__.js";
-import closure_2 from "metro/00032__slicedToArray.js";
-import closure_3 from "00718__toArray.js";
+import _mod688 from "metro/00688__.js";
+import _mod731 from "metro/00731__.js";
+import _slicedToArray from "metro/00032__.js";
+import _toArray from "00718__toArray.js";
 import setupIntegration from "00752_setupIntegration.js";
 
 function markAsInstrumented(arg0) {
@@ -52,7 +53,7 @@ function translateFiltersIntoMethods(str, str2) {
       } else {
         if ("or" !== str) {
           if (!str.endsWith(".or")) {
-            const arr = callback(str2.split("."));
+            const arr = _toArray(str2.split("."));
             const first = arr[0];
             const substr = arr.slice(1);
             let startsWithResult;
@@ -106,82 +107,78 @@ function translateFiltersIntoMethods(str, str2) {
   return "select(*)";
 }
 function instrumentAuthOperation(arg0) {
-  closure_0 = arg0;
+  let name = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   const proxy = new Proxy(arg0, {
     apply(arg0, arg1, arg2) {
-      const lib = arg0;
+      name = arg0;
       closure_1 = arg1;
-      closure_2 = arg2;
-      obj = lib(flag[2]);
+      const args = arg2;
+      let attributes = _mod731;
       let str = "";
       let str2 = "";
-      if (closure_1) {
+      if (flag) {
         str2 = "(admin) ";
       }
-      obj = { name: "auth " + str2 + lib.name, attributes: null };
-      obj = { [tmp(tmp2[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [tmp(tmp2[3]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
-      if (closure_1) {
+      attributes = { name: "auth " + str2 + name.name, attributes: null };
+      attributes = { [tmp(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [tmp(704).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
+      if (flag) {
         str = "admin.";
       }
-      obj["db.operation"] = "auth." + str + lib.name;
-      obj[1] = obj;
-      return obj.startSpan(obj, (arg0) => {
+      attributes["db.operation"] = "auth." + str + name.name;
+      attributes.attributes = attributes;
+      return attributes.startSpan(attributes, (arg0) => {
         closure_0 = arg0;
-        const applyResult = Reflect.apply(closure_0, closure_1, args);
-        const nextPromise = Reflect.apply(closure_0, closure_1, args).then((obj) => {
-          if (obj) {
-            if (typeof obj === "object") {
-              if ("error" in obj) {
-                if (obj.error) {
-                  obj = { code: null };
-                  obj[0] = store(closure_1_1[4]).SPAN_STATUS_ERROR;
-                  store.setStatus(obj);
-                  obj = { mechanism: null };
-                  obj[0] = { handled: false, type: "auto.db.supabase.auth" };
-                  store(closure_1_1[5]).captureException(obj.error, obj);
-                  obj = store;
-                  const obj4 = store(closure_1_1[5]);
+        const applyResult = Reflect.apply(closure_0, dependencyMap, args);
+        const nextPromise = Reflect.apply(closure_0, dependencyMap, args).then((error) => {
+          if (error) {
+            if (typeof error === "object") {
+              if ("error" in error) {
+                if (error.error) {
+                  obj = { code: closure_0(705).SPAN_STATUS_ERROR };
+                  closure_0.setStatus(obj);
+                  obj = { mechanism: { handled: false, type: "auto.db.supabase.auth" } };
+                  closure_0(734).captureException(error.error, obj);
+                  obj = closure_0;
+                  const obj4 = closure_0(734);
                 }
                 obj.end();
-                return obj;
+                return error;
               }
             }
           }
-          obj = store;
-          store.setStatus({ code: store(closure_1_1[4]).SPAN_STATUS_OK });
+          obj = closure_0;
+          closure_0.setStatus({ code: closure_0(705).SPAN_STATUS_OK });
         });
         items = [...closure_2];
-        return Reflect.apply(closure_0, closure_1, args).then((obj) => {
-          if (obj) {
-            if (typeof obj === "object") {
-              if ("error" in obj) {
-                if (obj.error) {
-                  obj = { code: null };
-                  obj[0] = store(closure_1_1[4]).SPAN_STATUS_ERROR;
-                  store.setStatus(obj);
-                  obj = { mechanism: null };
-                  obj[0] = { handled: false, type: "auto.db.supabase.auth" };
-                  store(closure_1_1[5]).captureException(obj.error, obj);
-                  obj = store;
-                  const obj4 = store(closure_1_1[5]);
+        return Reflect.apply(closure_0, dependencyMap, args).then((error) => {
+          if (error) {
+            if (typeof error === "object") {
+              if ("error" in error) {
+                if (error.error) {
+                  obj = { code: closure_0(705).SPAN_STATUS_ERROR };
+                  closure_0.setStatus(obj);
+                  obj = { mechanism: { handled: false, type: "auto.db.supabase.auth" } };
+                  closure_0(734).captureException(error.error, obj);
+                  obj = closure_0;
+                  const obj4 = closure_0(734);
                 }
                 obj.end();
-                return obj;
+                return error;
               }
             }
           }
-          obj = store;
-          store.setStatus({ code: store(closure_1_1[4]).SPAN_STATUS_OK });
-        }).catch((arg0) => {
-          store.setStatus({ code: store(closure_1_1[4]).SPAN_STATUS_ERROR });
-          store.end();
-          obj = { code: store(closure_1_1[4]).SPAN_STATUS_ERROR };
-          store(closure_1_1[5]).captureException(arg0, { mechanism: { handled: false, type: "auto.db.supabase.auth" } });
-          throw arg0;
+          obj = closure_0;
+          closure_0.setStatus({ code: closure_0(705).SPAN_STATUS_OK });
+        }).catch((error) => {
+          closure_0.setStatus({ code: closure_0(705).SPAN_STATUS_ERROR });
+          closure_0.end();
+          obj = { code: closure_0(705).SPAN_STATUS_ERROR };
+          closure_0(734).captureException(error, { mechanism: { handled: false, type: "auto.db.supabase.auth" } });
+          throw error;
         }).then.apply(items);
       });
     }
@@ -191,79 +188,75 @@ function instrumentAuthOperation(arg0) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_4 = ["reauthenticate", "signInAnonymously", "signInWithOAuth", "signInWithIdToken", "signInWithOtp", "signInWithPassword", "signInWithSSO", "signOut", "signUp", "verifyOtp"];
 let closure_5 = ["createUser", "deleteUser", "listUsers", "getUserById", "updateUserById", "inviteUserByEmail"];
-let obj = { eq: "eq", neq: "neq", gt: "gt", gte: "gte", lt: "lt", lte: "lte", like: "like", "like(all)": "likeAllOf", "like(any)": "likeAnyOf", ilike: "ilike", "ilike(all)": "ilikeAllOf", "ilike(any)": "ilikeAnyOf", is: "is", in: "in", cs: "contains", cd: "containedBy", sr: "rangeGt", nxl: "rangeGte", sl: "rangeLt", nxr: "rangeLte", adj: "rangeAdjacent", ov: "overlaps", fts: "", plfts: "plain", phfts: "phrase", wfts: "websearch", not: "not" };
+const FILTER_MAPPINGS = { eq: "eq", neq: "neq", gt: "gt", gte: "gte", lt: "lt", lte: "lte", like: "like", "like(all)": "likeAllOf", "like(any)": "likeAnyOf", ilike: "ilike", "ilike(all)": "ilikeAllOf", "ilike(any)": "ilikeAnyOf", is: "is", in: "in", cs: "contains", cd: "containedBy", sr: "rangeGt", nxl: "rangeGte", sl: "rangeLt", nxr: "rangeLte", adj: "rangeAdjacent", ov: "overlaps", fts: "", plfts: "plain", phfts: "phrase", wfts: "websearch", not: "not" };
 let items = ["select", "insert", "upsert", "update", "delete"];
-function instrumentSupabaseClient(auth) {
-  if (auth) {
+function instrumentSupabaseClient(supabaseClient) {
+  if (supabaseClient) {
     const _Function = Function;
-    let constructor = auth;
-    if (auth.constructor !== Function) {
-      constructor = auth.constructor;
+    let constructor = supabaseClient;
+    if (supabaseClient.constructor !== Function) {
+      constructor = supabaseClient.constructor;
     }
     if (!isInstrumented(constructor.prototype.from)) {
       const _Proxy = Proxy;
-      obj = { apply: null };
-      obj[0] = function apply(arg0, arg1, arg2) {
-        let applyResult = Reflect.apply(arg0, arg1, arg2);
-        (function instrumentPostgRESTQueryBuilder(constructor) {
-          closure_0 = constructor;
-          for (const item10007 of closure_7) {
-            let tmp = (function _loop(item10007) {
-              const ctor = item10007;
-              if (closure_1_9(ctor.prototype[item10007])) {
-                return 1;
-              } else {
-                let _Proxy = Proxy;
-                obj = { apply: null };
-                obj[0] = function apply(arg0, arg1, arg2) {
-                  let applyResult = Reflect.apply(arg0, arg1, arg2);
-                  constructor = applyResult.constructor;
-                  if (item10007(closure_1_1[9]).DEBUG_BUILD) {
-                    const debug = item10007(closure_1_1[10]).debug;
-                    let _HermesInternal = HermesInternal;
-                    debug.log("Instrumenting " + item10007 + " operation's PostgRESTFilterBuilder");
-                  }
-                  if (!closure_1_9(constructor.prototype.then)) {
-                    const _Proxy = Proxy;
-                    obj = { apply: null };
-                    obj[0] = function apply() { ... };
-                    const proxy = new Proxy(constructor.prototype.then, obj);
-                    constructor.prototype.then = proxy;
-                    closure_1_8(constructor.prototype.then);
-                  }
-                  return applyResult;
-                };
-                let proxy = new Proxy(tmp.prototype[item10007], obj);
-                tmp.prototype[item10007] = proxy;
-                closure_1_8(tmp.prototype[item10007]);
-              }
-            })(item10007);
-            continue;
-          }
-        })(applyResult.constructor);
-        return applyResult;
+      obj = {
+        apply(arg0, arg1, arg2) {
+              let applyResult = Reflect.apply(arg0, arg1, arg2);
+              (function instrumentPostgRESTQueryBuilder(constructor) {
+                closure_0 = constructor;
+                for (const item10007 of closure_7) {
+                  let tmp = (function _loop(item10007) {
+                    if (closure_2_9(item10007.prototype[item10007])) {
+                      return 1;
+                    } else {
+                      let _Proxy = Proxy;
+                      obj = {
+                        apply(arg0, arg1, arg2) {
+                            let applyResult = Reflect.apply(arg0, arg1, arg2);
+                            constructor = applyResult.constructor;
+                            if (item10007(dependencyMap[9]).DEBUG_BUILD) {
+                              const debug = item10007(dependencyMap[10]).debug;
+                              let _HermesInternal = HermesInternal;
+                              debug.log("Instrumenting " + item10007 + " operation's PostgRESTFilterBuilder");
+                            }
+                            if (!closure_2_9(constructor.prototype.then)) {
+                              const _Proxy = Proxy;
+                              obj = { apply() { ... } };
+                              const proxy = new Proxy(constructor.prototype.then, obj);
+                              constructor.prototype.then = proxy;
+                              closure_2_8(constructor.prototype.then);
+                            }
+                            return applyResult;
+                          }
+                      };
+                      let proxy = new Proxy(tmp.prototype[item10007], obj);
+                      tmp.prototype[item10007] = proxy;
+                      closure_2_8(tmp.prototype[item10007]);
+                    }
+                  })(item10007);
+                  continue;
+                }
+              })(applyResult.constructor);
+              return applyResult;
+            }
       };
       const proxy = new Proxy(constructor.prototype.from, obj);
       constructor.prototype.from = proxy;
       markAsInstrumented(constructor.prototype.from);
     }
-    (function instrumentSupabaseAuthClient(auth) {
-      auth = auth.auth;
+    (function instrumentSupabaseAuthClient(supabaseClient) {
+      const auth = supabaseClient.auth;
       if (auth) {
-        if (!callback2(auth.auth)) {
-          for (const item10014 of closure_4) {
+        if (!closure_1_9(supabaseClient.auth)) {
+          for (const item10014 of closure_1_4) {
             let tmp4 = item10014;
             let tmp5 = auth[item10014];
             let tmp6 = tmp5;
             if (tmp5) {
-              let tmp7 = item10014;
               tmp5 = typeof arg0.auth[tmp4] === "function";
             }
             if (tmp5) {
-              let tmp8 = item10014;
-              let tmp9 = callback3;
-              let tmp10 = tmp6;
-              arg0.auth[tmp4] = callback3(tmp6);
+              arg0.auth[tmp4] = closure_1_12(tmp6);
             }
             continue;
           }
@@ -274,24 +267,19 @@ function instrumentSupabaseClient(auth) {
             let tmp17 = auth.admin[nextResult];
             let tmp18 = tmp17;
             if (tmp17) {
-              let tmp19 = nextResult;
-              tmp17 = typeof auth.auth.admin[tmp16] === "function";
+              tmp17 = typeof supabaseClient.auth.admin[tmp16] === "function";
             }
             if (tmp17) {
-              let tmp20 = nextResult;
-              let tmp21 = callback3;
-              let tmp22 = tmp18;
-              auth.auth.admin[tmp16] = callback3(tmp18, true);
+              supabaseClient.auth.admin[tmp16] = closure_1_12(tmp18, true);
             }
             continue;
           }
-          callback(auth.auth);
-          const tmp11 = dependencyMap;
+          closure_1_8(supabaseClient.auth);
         }
       }
-    })(auth);
+    })(supabaseClient);
   } else {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    if (_mod688.DEBUG_BUILD) {
       const debug = tmp(689).debug;
       debug.warn("Supabase integration was not installed because no Supabase client was provided.");
     }
@@ -300,102 +288,92 @@ function instrumentSupabaseClient(auth) {
 }
 
 export const DB_OPERATIONS_TO_INSTRUMENT = items;
-export const FILTER_MAPPINGS = obj;
+export { FILTER_MAPPINGS };
 export { extractOperation };
 export { instrumentSupabaseClient };
 export const supabaseIntegration = setupIntegration.defineIntegration((supabaseClient) => {
   supabaseClient = supabaseClient.supabaseClient;
   return {
     setupOnce() {
-      if (typeof closure_1_13 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if (supabaseClient) {
-        const _Function = Function;
-        let constructor = tmp;
-        if (tmp.constructor !== Function) {
-          constructor = tmp.constructor;
-        }
-        if (!closure_1_9(constructor.prototype.from)) {
-          let _Proxy = Proxy;
-          obj = { apply: null };
-          obj[0] = function apply(arg0, arg1, arg2) {
-            let applyResult = Reflect.apply(arg0, arg1, arg2);
-            (function instrumentPostgRESTQueryBuilder(constructor) {
-              closure_0 = constructor;
-              for (const item10007 of closure_7) {
-                let tmp = (function _loop(item10007) {
-                  const ctor = item10007;
-                  if (closure_1_9(ctor.prototype[item10007])) {
-                    return 1;
-                  } else {
-                    let _Proxy = Proxy;
-                    obj = { apply: null };
-                    obj[0] = function apply() { ... };
-                    let proxy = new Proxy(tmp.prototype[item10007], obj);
-                    tmp.prototype[item10007] = proxy;
-                    closure_1_8(tmp.prototype[item10007]);
-                  }
-                })(item10007);
-                continue;
-              }
-            })(applyResult.constructor);
-            return applyResult;
-          };
-          let proxy = new Proxy(constructor.prototype.from, obj);
-          constructor.prototype.from = proxy;
-          closure_1_8(constructor.prototype.from);
-        }
-        (function instrumentSupabaseAuthClient(auth) {
-          auth = auth.auth;
-          if (auth) {
-            if (!callback2(auth.auth)) {
-              for (const item10014 of closure_4) {
-                let tmp4 = item10014;
-                let tmp5 = auth[item10014];
-                let tmp6 = tmp5;
-                if (tmp5) {
-                  let tmp7 = item10014;
-                  tmp5 = typeof arg0.auth[tmp4] === "function";
-                }
-                if (tmp5) {
-                  let tmp8 = item10014;
-                  let tmp9 = callback3;
-                  let tmp10 = tmp6;
-                  arg0.auth[tmp4] = callback3(tmp6);
-                }
-                continue;
-              }
-              const iter = dependencyMap[Symbol.iterator]();
-              const nextResult = iter.next();
-              while (iter !== undefined) {
-                let tmp16 = nextResult;
-                let tmp17 = auth.admin[nextResult];
-                let tmp18 = tmp17;
-                if (tmp17) {
-                  let tmp19 = nextResult;
-                  tmp17 = typeof auth.auth.admin[tmp16] === "function";
-                }
-                if (tmp17) {
-                  let tmp20 = nextResult;
-                  let tmp21 = callback3;
-                  let tmp22 = tmp18;
-                  auth.auth.admin[tmp16] = callback3(tmp18, true);
-                }
-                continue;
-              }
-              callback(auth.auth);
-              const tmp11 = dependencyMap;
-            }
+      if (typeof instrumentSupabaseClient === "function") {
+        if (tmp) {
+          const _Function = Function;
+          let constructor = tmp;
+          if (tmp.constructor !== Function) {
+            constructor = tmp.constructor;
           }
-        })(tmp);
-      } else {
-        if (supabaseClient(closure_1_1[9]).DEBUG_BUILD) {
-          let debug = tmp2(tmp3[10]).debug;
-          debug.warn("Supabase integration was not installed because no Supabase client was provided.");
+          if (!isInstrumented(constructor.prototype.from)) {
+            let _Proxy = Proxy;
+            obj = {
+              apply(arg0, arg1, arg2) {
+                      let applyResult = Reflect.apply(arg0, arg1, arg2);
+                      (function instrumentPostgRESTQueryBuilder(constructor) {
+                        closure_0 = constructor;
+                        for (const item10007 of closure_7) {
+                          let tmp = (function _loop(item10007) {
+                            if (closure_2_9(item10007.prototype[item10007])) {
+                              return 1;
+                            } else {
+                              let _Proxy = Proxy;
+                              obj = { apply() { ... } };
+                              let proxy = new Proxy(tmp.prototype[item10007], obj);
+                              tmp.prototype[item10007] = proxy;
+                              closure_2_8(tmp.prototype[item10007]);
+                            }
+                          })(item10007);
+                          continue;
+                        }
+                      })(applyResult.constructor);
+                      return applyResult;
+                    }
+            };
+            let proxy = new Proxy(constructor.prototype.from, obj);
+            constructor.prototype.from = proxy;
+            markAsInstrumented(constructor.prototype.from);
+          }
+          (function instrumentSupabaseAuthClient(supabaseClient) {
+            const auth = supabaseClient.auth;
+            if (auth) {
+              if (!closure_1_9(supabaseClient.auth)) {
+                for (const item10014 of closure_1_4) {
+                  let tmp4 = item10014;
+                  let tmp5 = auth[item10014];
+                  let tmp6 = tmp5;
+                  if (tmp5) {
+                    tmp5 = typeof arg0.auth[tmp4] === "function";
+                  }
+                  if (tmp5) {
+                    arg0.auth[tmp4] = closure_1_12(tmp6);
+                  }
+                  continue;
+                }
+                const iter = dependencyMap[Symbol.iterator]();
+                const nextResult = iter.next();
+                while (iter !== undefined) {
+                  let tmp16 = nextResult;
+                  let tmp17 = auth.admin[nextResult];
+                  let tmp18 = tmp17;
+                  if (tmp17) {
+                    tmp17 = typeof supabaseClient.auth.admin[tmp16] === "function";
+                  }
+                  if (tmp17) {
+                    supabaseClient.auth.admin[tmp16] = closure_1_12(tmp18, true);
+                  }
+                  continue;
+                }
+                closure_1_8(supabaseClient.auth);
+              }
+            }
+          })(tmp);
+        } else {
+          if (_mod688.DEBUG_BUILD) {
+            let debug = tmp2(689).debug;
+            debug.warn("Supabase integration was not installed because no Supabase client was provided.");
+          }
+          tmp2 = require;
         }
-        tmp2 = supabaseClient;
-        tmp3 = closure_1_1;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
     },
     name: "Supabase"

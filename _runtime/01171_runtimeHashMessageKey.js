@@ -2,8 +2,13 @@
 import textEncoder from "01172_textEncoder.js";
 
 require = arg1;
-const dependencyMap = arg6;
-arg5.runtimeHashMessageKey = function runtimeHashMessageKey(code) {
+const dependencyMap = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split("");
+let uint8Array = new Uint8Array(4);
+const uint32Array = new Uint32Array(uint8Array.buffer);
+uint32Array[0] = 1;
+let closure_3 = !(1 & uint8Array[0]);
+
+export const runtimeHashMessageKey = function runtimeHashMessageKey(code) {
   let num = 0;
   const BigIntResult = BigInt(textEncoder.hash(code, 0));
   const items = [];
@@ -33,8 +38,3 @@ arg5.runtimeHashMessageKey = function runtimeHashMessageKey(code) {
   ];
   return items1.join("");
 };
-let closure_2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split("");
-let uint8Array = new Uint8Array(4);
-const uint32Array = new Uint32Array(uint8Array.buffer);
-uint32Array[0] = 1;
-let closure_3 = !(1 & uint8Array[0]);

@@ -1,4 +1,4 @@
 // _runtime/06815_BottomSheetBackgroundContainer.js
-import BottomSheetBackgroundContainer from "06816_BottomSheetBackgroundContainer.js";
+import _mod6816 from "metro/06816__.js";
 
-export const BottomSheetBackgroundContainer = BottomSheetBackgroundContainer.BottomSheetBackgroundContainer;
+export const BottomSheetBackgroundContainer = _mod6816.BottomSheetBackgroundContainer;

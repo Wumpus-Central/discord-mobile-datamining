@@ -1,9 +1,7 @@
 // _runtime/00253_RootTagContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-noopAll;
-
-export const RootTagContext = require("../discord_app/index.native.tsx");
+export const RootTagContext = fn(19).createContext(0);
 export function createRootTag(rootTag) {
   return rootTag;
 }

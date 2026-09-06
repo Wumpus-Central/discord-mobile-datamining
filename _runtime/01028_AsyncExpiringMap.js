@@ -1,7 +1,7 @@
 // _runtime/01028_AsyncExpiringMap.js
 import _createClassDefault from "metro/00042__createClass.js";
-import AsyncExpiringMap from "metro/00032__slicedToArray.js";
-import closure_1 from "metro/00041__classCallCheck.js";
+import _slicedToArray from "metro/00032__.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class AsyncExpiringMap {
   constructor() {
@@ -26,46 +26,46 @@ class AsyncExpiringMap {
     return;
   }
 }
-const items = [
-  {
-    key: "set",
-    value: function set(arg0, value) {
-      let self = this;
-      self = this;
-      if (!this._cleanupInterval) {
-        self.startCleanup();
-      }
-      if (typeof value === "object") {
-        if (value) {
-          if ("then" in value) {
-            let obj = { value: "r", expiresAt: "flexDirection", promise: null };
-            obj[2] = value;
-            const _map2 = self._map;
-            const result = _map2.set(arg0, obj);
-            value.then(
-              (value) => {
-                obj.value = value;
-                obj.expiresAt = Date.now() + self._ttl;
-                obj.promise = null;
-              },
-              () => {
-                obj.expiresAt = Date.now() + self._ttl;
-                obj.promise = null;
-              },
-            );
-          }
+_slicedToArray = AsyncExpiringMap;
+const entry = {
+  key: "set",
+  value: function set(arg0, value) {
+    const self = this;
+    if (!this._cleanupInterval) {
+      self.startCleanup();
+    }
+    if (typeof value === "object") {
+      if (value) {
+        if ("then" in value) {
+          let obj = { value: "r", expiresAt: "flexDirection", promise: value };
+          const _map2 = self._map;
+          const result = _map2.set(arg0, obj);
+          value.then(
+            (value) => {
+              obj.value = value;
+              obj.expiresAt = Date.now() + self._ttl;
+              obj.promise = null;
+            },
+            () => {
+              obj.expiresAt = Date.now() + self._ttl;
+              obj.promise = null;
+            },
+          );
         }
       }
-      const _map = self._map;
-      obj = { value, expiresAt: Date.now() + self._ttl, promise: null };
-      const result1 = _map.set(arg0, obj);
-    },
+    }
+    const _map = self._map;
+    obj = { value, expiresAt: Date.now() + self._ttl, promise: null };
+    const result1 = _map.set(arg0, obj);
   },
+};
+const items = [
+  entry,
   {
     key: "pop",
     value: function pop(arg0) {
       const _map = this._map;
-      const value = this.get(arg0);
+      value = this.get(arg0);
       _map.delete(arg0);
       return value;
     },
@@ -77,7 +77,7 @@ const items = [
       const iter = _map.get(arg0);
       if (iter) {
         if (iter.promise) {
-          let value = iter.promise;
+          value = iter.promise;
         } else {
           let expiresAt = iter.expiresAt;
           if (expiresAt) {
@@ -98,7 +98,7 @@ const items = [
     key: "has",
     value: function has(arg0) {
       const _map = this._map;
-      const value = _map.get(arg0);
+      value = _map.get(arg0);
       let tmp2 = value;
       if (tmp2) {
         let promise = value.promise;
@@ -125,7 +125,7 @@ const items = [
     key: "ttl",
     value: function ttl(arg0) {
       const _map = this._map;
-      const value = _map.get(arg0);
+      value = _map.get(arg0);
       let expiresAt;
       if (null != value) {
         expiresAt = value.expiresAt;
@@ -149,17 +149,14 @@ const items = [
       const timestamp = Date.now();
       const entries = _map.entries();
       while (tmp3 !== undefined) {
-        let tmp5 = AsyncExpiringMap;
-        let tmp6 = AsyncExpiringMap(tmp4, 2);
+        let tmp6 = _slicedToArray(tmp4, 2);
         [tmp7, tmp8] = tmp6;
         let expiresAt = tmp8.expiresAt;
         if (expiresAt) {
-          let tmp10 = tmp8;
           expiresAt = tmp9.expiresAt <= timestamp;
         }
         if (expiresAt) {
           let _map2 = self._map;
-          let tmp11 = tmp7;
           let deleteResult = _map2.delete(tmp7);
         }
         continue;

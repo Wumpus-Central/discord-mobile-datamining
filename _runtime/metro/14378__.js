@@ -1,47 +1,45 @@
 // _runtime/metro/14378__.js
-import SymbolResult1 from "../14372_SymbolResult1.js";
+import _mod14372 from "14372__.js";
 import URLSearchParamsImpl from "../14379_URLSearchParamsImpl.js";
-import _ from "../14380__.js";
-import closure_3 from "00041__classCallCheck.js";
-import closure_4 from "00042__createClass.js";
-import closure_5 from "00032__slicedToArray.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _slicedToArray from "00032__.js";
 
-obj = { next: obj };
-obj = {
-  value: function next() {
-    const tmp3 = this[SymbolResult1.iterInternalSymbol];
-    ({ kind, index } = tmp3);
-    const arr = Array.from(tmp3.target[SymbolResult1.implSymbol]);
-    if (index >= arr.length) {
-      return { value: "HermesInternal", done: null };
-    } else {
-      tmp3.index = index + 1;
-      [tmp7, tmp8] = callback2(arr[index].map(SymbolResult1.tryWrapperForImpl), 2);
-      if ("key" === kind) {
-        let tmp4 = tmp7;
-      } else if ("value" === kind) {
-        tmp4 = tmp8;
-      } else if ("key+value" === kind) {
-        const items = [tmp7, tmp8];
-        tmp4 = items;
+let exports = {
+  next: {
+    value: function next() {
+      const tmp3 = this[_mod14372.iterInternalSymbol];
+      ({ kind, index } = tmp3);
+      const arr = Array.from(tmp3.target[_mod14372.implSymbol]);
+      if (index >= arr.length) {
+        return { value: "HermesInternal", done: null };
+      } else {
+        tmp3.index = index + 1;
+        [tmp7, tmp8] = _slicedToArray(arr[index].map(_mod14372.tryWrapperForImpl), 2);
+        if ("key" === kind) {
+          let tmp4 = tmp7;
+        } else if ("value" === kind) {
+          tmp4 = tmp8;
+        } else if ("key+value" === kind) {
+          const items = [tmp7, tmp8];
+          tmp4 = items;
+        }
+        obj = { value: tmp4, done: false };
+        return obj;
       }
-      obj = { value: null, done: false };
-      obj[0] = tmp4;
-      return obj;
-    }
-    const tmp = require;
+    },
+    writable: true,
+    enumerable: true,
+    configurable: true,
   },
-  writable: true,
-  enumerable: true,
-  configurable: true,
 };
-obj[Symbol.toStringTag] = { value: "URLSearchParams Iterator", configurable: true };
-let closure_6 = Object.create(SymbolResult1.IteratorPrototype, obj);
-obj = {
+exports[Symbol.toStringTag] = { value: "URLSearchParams Iterator", configurable: true };
+let closure_6 = Object.create(_mod14372.IteratorPrototype, exports);
+exports = {
   _mixedIntoPredicates: [],
   is(arg0) {
     if (arg0) {
-      if (obj.hasOwn(arg0, SymbolResult1.implSymbol)) {
+      if (obj.hasOwn(arg0, _mod14372.implSymbol)) {
         if (arg0[tmp(undefined, 14372).implSymbol] instanceof tmp(14379).implementation) {
           return true;
         }
@@ -49,13 +47,12 @@ obj = {
       const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
       for (const item10025 of _mixedIntoPredicates) {
         if (item10025(arg0)) {
-          let tmp6 = obj2;
           obj2.return();
           let flag = true;
           return true;
         }
       }
-      obj = SymbolResult1;
+      obj = _mod14372;
     }
     return false;
   },
@@ -67,7 +64,6 @@ obj = {
         const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
         for (const item10018 of _mixedIntoPredicates) {
           if (item10018(tmpResult.wrapperForImpl(arg0))) {
-            let tmp6 = obj2;
             obj2.return();
             let flag = true;
             return true;
@@ -90,7 +86,7 @@ obj = {
     }
     const _exports = module.exports;
     if (_exports.is(arg0)) {
-      return SymbolResult1.implForWrapper(arg0);
+      return _mod14372.implForWrapper(arg0);
     } else {
       const _TypeError = TypeError;
       const _HermesInternal = HermesInternal;
@@ -99,18 +95,20 @@ obj = {
     }
   },
   createDefaultIterator(self, key) {
-    obj = Object.create(closure_6);
-    obj = { target: self, kind: key, index: 0 };
-    Object.defineProperty(obj, SymbolResult1.iterInternalSymbol, { value: obj, configurable: true });
-    return obj;
+    Object.create(closure_6);
+    value = { value: null, configurable: true };
+    value = { target: self, kind: key, index: 0 };
+    value.value = value;
+    Object.defineProperty(value, _mod14372.iterInternalSymbol, value);
+    return value;
   },
   create(arg0, arg1, arg2) {
-    if (undefined === arg0[SymbolResult1.ctorRegistrySymbol]) {
+    if (undefined === arg0[_mod14372.ctorRegistrySymbol]) {
       const _Error2 = Error;
-      error = new Error("Internal error: invalid global object");
+      const error = new Error("Internal error: invalid global object");
       throw error;
     } else {
-      const _URLSearchParams = arg0[SymbolResult1.ctorRegistrySymbol].URLSearchParams;
+      const _URLSearchParams = arg0[_mod14372.ctorRegistrySymbol].URLSearchParams;
       if (undefined === _URLSearchParams) {
         const _Error = Error;
         const error1 = new Error(
@@ -122,15 +120,14 @@ obj = {
         return obj.setup(Object.create(_URLSearchParams.prototype), arg0, arg1, arg2);
       }
     }
-    const tmp = require;
   },
   createImpl(arg0, arg1, arg2) {
-    obj = obj.create(arg0, arg1, arg2);
-    obj = SymbolResult1;
+    obj.create(arg0, arg1, arg2);
+    obj = _mod14372;
     return obj.implForWrapper(obj);
   },
   _internalSetup(arg0) {},
-  setup(wrapper) {
+  setup(wrapper, arg1) {
     let items = arg2;
     if (arg2 === undefined) {
       items = [];
@@ -143,9 +140,9 @@ obj = {
     obj._internalSetup(wrapper);
     obj = { value: null, configurable: true };
     const implementation = new URLSearchParamsImpl.implementation(arg1, items, obj);
-    obj[0] = implementation;
-    Object.defineProperty(wrapper, SymbolResult1.implSymbol, obj);
-    wrapper[SymbolResult1.implSymbol][SymbolResult1.wrapperSymbol] = wrapper;
+    obj.value = implementation;
+    Object.defineProperty(wrapper, _mod14372.implSymbol, obj);
+    wrapper[_mod14372.implSymbol][_mod14372.wrapperSymbol] = wrapper;
     if (URLSearchParamsImpl.init) {
       tmp2(14379).init(wrapper[tmp2(undefined, 14372).implSymbol], obj);
       const tmp2Result = tmp2(14379);
@@ -162,9 +159,9 @@ obj = {
         if (undefined !== first) {
           tmp54 = closure_0;
           tmp55 = closure_0;
-          tmp56 = closure_2;
-          tmp57 = closure_2;
-          obj7 = closure_0(closure_2[3]);
+          tmp56 = c2;
+          tmp57 = c2;
+          obj7 = closure_0(c2[3]);
           if (obj7.isObject(first)) {
             tmp5 = globalThis;
             _Symbol = Symbol;
@@ -180,10 +177,10 @@ obj = {
                 for (const item10081 of first) {
                   tmp34 = closure_0;
                   tmp35 = closure_0;
-                  tmp36 = closure_2;
-                  tmp37 = closure_2;
+                  tmp36 = c2;
+                  tmp37 = c2;
                   tmp33 = item10081;
-                  obj5 = closure_0(closure_2[3]);
+                  obj5 = closure_0(c2[3]);
                   if (obj5.isObject(item10081)) {
                     items1 = [];
                     tmp42 = tmp33;
@@ -191,9 +188,9 @@ obj = {
                     for (const item10103 of item10081) {
                       tmp44 = closure_0;
                       tmp45 = closure_0;
-                      tmp46 = closure_2;
-                      tmp47 = closure_2;
-                      obj6 = closure_0(closure_2[5]);
+                      tmp46 = c2;
+                      tmp47 = c2;
+                      obj6 = closure_0(c2[5]);
                       tmp48 = items1;
                       arr = items1.push(
                         obj6.USVString(item10103, {
@@ -255,13 +252,13 @@ obj = {
                       tmp19 = item10039;
                       tmp20 = closure_0;
                       tmp21 = closure_0;
-                      tmp22 = closure_2;
-                      tmp23 = closure_2;
-                      obj2 = closure_0(closure_2[5]);
+                      tmp22 = c2;
+                      tmp23 = c2;
+                      obj2 = closure_0(c2[5]);
                       USVStringResult = obj2.USVString(tmp15, {
                         context: "Failed to construct 'URLSearchParams': parameter 1 record's key",
                       });
-                      obj3 = closure_0(closure_2[5]);
+                      obj3 = closure_0(c2[5]);
                       obj[USVStringResult] = obj3.USVString(first[tmp15], {
                         context: "Failed to construct 'URLSearchParams': parameter 1 record's value",
                       });
@@ -290,15 +287,15 @@ obj = {
         }
         items2 = [];
         arr2 = items2.push(str);
-        return closure_7.setup(Object.create(this.constructor.prototype), URLSearchParams, items2);
+        return closure_7.setup(Object.create(this.constructor.prototype), closure_0, items2);
       }
     }
-    obj = {
+    const entry = {
       key: "append",
       value: function append(arg0, arg1) {
         const self = this;
         if (this) {
-          const _exports = closure_1.exports;
+          const _exports = module.exports;
           if (_exports.is(self)) {
             if (arguments.length < 2) {
               const _TypeError = TypeError;
@@ -334,13 +331,13 @@ obj = {
       },
     };
     let items = [
-      obj,
+      entry,
       {
         key: "delete",
         value: function _delete(arg0) {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               if (arguments.length < 1) {
                 const _TypeError = TypeError;
@@ -374,7 +371,7 @@ obj = {
         value: function get(arg0) {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               if (arguments.length < 1) {
                 const _TypeError = TypeError;
@@ -408,7 +405,7 @@ obj = {
         value: function getAll(arg0) {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               if (arguments.length < 1) {
                 const _TypeError = TypeError;
@@ -443,7 +440,7 @@ obj = {
         value: function has(arg0) {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               if (arguments.length < 1) {
                 const _TypeError = TypeError;
@@ -477,7 +474,7 @@ obj = {
         value: function set(arg0, arg1) {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               if (arguments.length < 2) {
                 const _TypeError = TypeError;
@@ -516,7 +513,7 @@ obj = {
         value: function sort() {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               return self[URLSearchParams(undefined, 14372).implSymbol].sort();
             }
@@ -530,7 +527,7 @@ obj = {
         value: function toString() {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               return self[URLSearchParams(undefined, 14372).implSymbol].toString();
             }
@@ -544,12 +541,12 @@ obj = {
         value: function keys() {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               const _exports2 = tmp.exports;
               return _exports2.createDefaultIterator(self, "key");
             }
-            tmp = closure_1;
+            tmp = module;
           }
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
@@ -560,12 +557,12 @@ obj = {
         value: function values() {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               const _exports2 = tmp.exports;
               return _exports2.createDefaultIterator(self, "value");
             }
-            tmp = closure_1;
+            tmp = module;
           }
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
@@ -576,12 +573,12 @@ obj = {
         value: function entries() {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               const _exports2 = tmp.exports;
               return _exports2.createDefaultIterator(self, "key+value");
             }
-            tmp = closure_1;
+            tmp = module;
           }
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
@@ -589,10 +586,10 @@ obj = {
       },
       {
         key: "forEach",
-        value: function forEach(fn) {
+        value: function forEach(call) {
           const self = this;
           if (this) {
-            const _exports = closure_1.exports;
+            const _exports = module.exports;
             if (_exports.is(self)) {
               if (arguments.length < 1) {
                 const _TypeError2 = TypeError;
@@ -600,7 +597,7 @@ obj = {
                   "Failed to execute 'forEach' on 'iterable': 1 argument required, but only 0 present.",
                 );
                 throw typeError;
-              } else if (typeof fn !== "function") {
+              } else if (typeof call !== "function") {
                 const _TypeError = TypeError;
                 const typeError1 = new TypeError(
                   "Failed to execute 'forEach' on 'iterable': The callback provided as parameter 1 is not a function.",
@@ -616,20 +613,12 @@ obj = {
                   do {
                     arr = tmp11[num2];
                     let tmp3 = URLSearchParams;
-                    let tmp4 = dependencyMap;
-                    let tmp5 = callback2;
-                    let tmp6 = callback2(arr.map(URLSearchParams(14372).tryWrapperForImpl), 2);
+                    let tmp6 = _slicedToArray(arr.map(URLSearchParams(14372).tryWrapperForImpl), 2);
                     [tmp7, tmp8] = tmp6;
-                    let call = fn.call;
-                    let tmp9 = num2;
+                    call = call.call;
                     if (typeof call === "unknown") {
-                      let tmp10 = fn(tmp8, tmp7, self);
+                      let tmp10 = call(tmp8, tmp7, self);
                     } else {
-                      let tmp27 = fn;
-                      let tmp28 = tmp23;
-                      let tmp29 = tmp8;
-                      let tmp30 = tmp7;
-                      let tmp31 = self;
                       let callResult = call(tmp23, tmp8, tmp7, self);
                     }
                     let _Array = Array;
@@ -646,7 +635,7 @@ obj = {
         },
       },
     ];
-    let tmp = callback(URLSearchParams, items);
+    let tmp = _createClass(URLSearchParams, items);
     obj = {
       append: { enumerable: true },
       delete: { enumerable: true },
@@ -675,9 +664,9 @@ obj = {
           if (undefined !== first) {
             tmp54 = closure_0;
             tmp55 = closure_0;
-            tmp56 = closure_2;
-            tmp57 = closure_2;
-            obj7 = closure_0(closure_2[3]);
+            tmp56 = c2;
+            tmp57 = c2;
+            obj7 = closure_0(c2[3]);
             if (obj7.isObject(first)) {
               tmp5 = globalThis;
               _Symbol = Symbol;
@@ -693,10 +682,10 @@ obj = {
                   for (const item10081 of first) {
                     tmp34 = closure_0;
                     tmp35 = closure_0;
-                    tmp36 = closure_2;
-                    tmp37 = closure_2;
+                    tmp36 = c2;
+                    tmp37 = c2;
                     tmp33 = item10081;
-                    obj5 = closure_0(closure_2[3]);
+                    obj5 = closure_0(c2[3]);
                     if (obj5.isObject(item10081)) {
                       items1 = [];
                       tmp42 = tmp33;
@@ -704,9 +693,9 @@ obj = {
                       for (const item10103 of item10081) {
                         tmp44 = closure_0;
                         tmp45 = closure_0;
-                        tmp46 = closure_2;
-                        tmp47 = closure_2;
-                        obj6 = closure_0(closure_2[5]);
+                        tmp46 = c2;
+                        tmp47 = c2;
+                        obj6 = closure_0(c2[5]);
                         tmp48 = items1;
                         arr = items1.push(
                           obj6.USVString(item10103, {
@@ -768,13 +757,13 @@ obj = {
                         tmp19 = item10039;
                         tmp20 = closure_0;
                         tmp21 = closure_0;
-                        tmp22 = closure_2;
-                        tmp23 = closure_2;
-                        obj2 = closure_0(closure_2[5]);
+                        tmp22 = c2;
+                        tmp23 = c2;
+                        obj2 = closure_0(c2[5]);
                         USVStringResult = obj2.USVString(tmp15, {
                           context: "Failed to construct 'URLSearchParams': parameter 1 record's key",
                         });
-                        obj3 = closure_0(closure_2[5]);
+                        obj3 = closure_0(c2[5]);
                         obj[USVStringResult] = obj3.USVString(first[tmp15], {
                           context: "Failed to construct 'URLSearchParams': parameter 1 record's value",
                         });
@@ -803,7 +792,7 @@ obj = {
           }
           items2 = [];
           arr2 = items2.push(str);
-          return closure_7.setup(Object.create(this.constructor.prototype), URLSearchParams, items2);
+          return closure_7.setup(Object.create(this.constructor.prototype), closure_0, items2);
         }
       }
     }
@@ -812,4 +801,4 @@ obj = {
   },
 };
 
-export default obj;
+export default exports;

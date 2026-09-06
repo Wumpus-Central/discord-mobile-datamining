@@ -1,13 +1,12 @@
 // _runtime/00950__parseCookieHeaders.js
-import closure_2 from "metro/00032__slicedToArray.js";
-import registerSpanErrorInstrumentation from "00682_registerSpanErrorInstrumentation.js";
-import { registerSpanErrorInstrumentation } from "00682_registerSpanErrorInstrumentation.js";
+import _slicedToArray from "metro/00032__.js";
+import registerSpanErrorInstrumentation from "metro/00682__.js";
 
 function _parseCookieHeaders(arg0, headers) {
   const tmp2 = (function _extractFetchHeaders(headers) {
     const obj = {};
-    const item = headers.forEach((arg0, arg1) => {
-      obj[arg1] = arg0;
+    const item = headers.forEach((item, index) => {
+      obj[index] = item;
     });
     return obj;
   })(headers.headers);
@@ -26,45 +25,44 @@ function _parseCookieHeaders(arg0, headers) {
 }
 function _parseCookieString(str) {
   const parts = str.split("; ");
-  return parts.reduce((arg0, str) => {
-    [tmp2, tmp3] = callback(str.split("="), 2);
+  return parts.reduce((acc, item) => {
+    [tmp2, tmp3] = _slicedToArray(item.split("="), 2);
     let tmp4 = tmp2;
     if (tmp2) {
       tmp4 = tmp3;
     }
     if (tmp4) {
-      arg0[tmp2] = tmp3;
+      acc[tmp2] = tmp3;
     }
-    return arg0;
+    return acc;
   }, {});
 }
-function _shouldCaptureResponse(failedRequestStatusCodes) {
+function _shouldCaptureResponse(failedRequestStatusCodes, arg1, arg2) {
   failedRequestStatusCodes = failedRequestStatusCodes.failedRequestStatusCodes;
-  let _require = arg1;
-  let someResult = failedRequestStatusCodes.some((num) => {
-    if (typeof num === "number") {
-      let tmp = num === url;
+  closure_0 = arg1;
+  let someResult = failedRequestStatusCodes.some((item) => {
+    if (typeof item === "number") {
+      let tmp = item === url;
     } else {
-      tmp = url >= num[0] && tmp3 <= num[1];
+      tmp = url >= item[0] && tmp3 <= item[1];
     }
     return tmp;
   });
   if (someResult) {
     const failedRequestTargets = failedRequestStatusCodes.failedRequestTargets;
-    _require = arg2;
-    someResult = failedRequestTargets.some((str) => {
-      if (typeof str === "string") {
-        let hasItem = url.includes(str);
+    closure_0 = arg2;
+    someResult = failedRequestTargets.some((test) => {
+      if (typeof test === "string") {
+        let hasItem = url.includes(test);
       } else {
-        hasItem = str.test(url);
+        hasItem = test.test(url);
       }
       return hasItem;
     });
   }
   if (someResult) {
     const obj = registerSpanErrorInstrumentation;
-    someResult = !obj.isSentryRequestUrl(arg2, require("00682_registerSpanErrorInstrumentation.js").getClient());
-    const obj2 = registerSpanErrorInstrumentation;
+    someResult = !obj.isSentryRequestUrl(arg2, registerSpanErrorInstrumentation.getClient());
   }
   return someResult;
 }
@@ -92,15 +90,16 @@ function _createEvent(error) {
   obj = { type: "Error", value: combined, stacktrace: null };
   let tmp7;
   if (stackParserResult) {
-    obj1 = { frames: null };
-    obj1[0] = stackParserResult;
+    const obj1 = { frames: stackParserResult };
     tmp7 = obj1;
   }
-  obj[2] = tmp7;
+  const obj2 = { values: null };
+  obj.stacktrace = tmp7;
   const items = [obj];
-  obj[1] = { values: items };
-  obj[2] = { url: error.url, method: error.method, headers: error.requestHeaders, cookies: error.requestCookies };
-  const obj2 = { status_code: error.status, headers: error.responseHeaders, cookies: error.responseCookies, body_size: null };
+  obj2.values = items;
+  obj.exception = obj2;
+  obj.request = { url: error.url, method: error.method, headers: error.requestHeaders, cookies: error.requestCookies };
+  const obj3 = { status_code: error.status, headers: error.responseHeaders, cookies: error.responseCookies, body_size: null };
   const responseHeaders = error.responseHeaders;
   let parsed;
   if (responseHeaders) {
@@ -109,9 +108,8 @@ function _createEvent(error) {
       parsed = parseInt(tmp9, 10);
     }
   }
-  obj2[3] = parsed;
-  obj[3] = { response: obj2 };
-  const tmp = require;
+  obj3.body_size = parsed;
+  obj.contexts = { response: obj3 };
   const tmpResult = registerSpanErrorInstrumentation;
   const result = tmpResult.addExceptionMechanism(obj, { type: "auto.http.client." + error.type, handled: false });
   return obj;
@@ -132,53 +130,53 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = undefined;
-  obj = { failedRequestStatusCodes: items, failedRequestTargets: items1 };
-  items = [[500, 599]];
-  items1 = [/.*/];
+  obj = { failedRequestStatusCodes: null, failedRequestTargets: null };
+  const items = [[500, 599]];
+  obj.failedRequestStatusCodes = items;
+  const items1 = [/.*/];
+  obj.failedRequestTargets = items1;
   const merged = Object.assign(obj);
   obj = {
     name: "HttpClient",
     setup(arg0) {
       closure_0 = arg0;
-      closure_1 = closure_0;
-      obj = obj(closure_1_1[1]);
+      closure_1 = obj;
+      obj = registerSpanErrorInstrumentation;
       if (obj.supportsNativeFetch()) {
-        let tmp2Result = tmp2(tmp3[1]);
+        let tmp2Result = tmp2(682);
         const result = tmp2Result.addFetchInstrumentationHandler((args) => {
-          obj = callback(682);
-          if (obj.getClient() === url) {
+          obj = obj(682);
+          if (obj.getClient() === closure_0) {
             ({ response, error } = args);
-            [tmp27, tmp28] = closure_1_2(args.args, 2);
+            [tmp27, tmp28] = _slicedToArray(args.args, 2);
             if (response) {
               if (!error) {
                 error = args.virtualError;
               }
-              url = response.url;
               const failedRequestStatusCodes = tmp3.failedRequestStatusCodes;
-              url = response.status;
-              let someResult = failedRequestStatusCodes.some((num) => {
-                if (typeof num === "number") {
-                  let tmp = num === url;
+              const url = response.status;
+              let someResult = failedRequestStatusCodes.some((item) => {
+                if (typeof item === "number") {
+                  let tmp = item === url;
                 } else {
-                  tmp = url >= num[0] && tmp3 <= num[1];
+                  tmp = url >= item[0] && tmp3 <= item[1];
                 }
                 return tmp;
               });
               if (someResult) {
                 const failedRequestTargets = tmp3.failedRequestTargets;
-                someResult = failedRequestTargets.some((str) => {
-                  if (typeof str === "string") {
-                    let hasItem = url.includes(str);
+                someResult = failedRequestTargets.some((test) => {
+                  if (typeof test === "string") {
+                    let hasItem = url.includes(test);
                   } else {
-                    hasItem = str.test(url);
+                    hasItem = test.test(url);
                   }
                   return hasItem;
                 });
               }
               if (someResult) {
-                let tmpResult = tmp(682);
-                tmpResult = tmp(682);
+                tmp(682);
+                const tmpResult = tmp(682);
                 someResult = !tmpResult.isSentryRequestUrl(url, tmpResult.getClient());
               }
               if (someResult) {
@@ -201,35 +199,36 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                   BooleanResult = Boolean(client.getOptions().sendDefaultPii);
                 }
                 if (BooleanResult) {
-                  let tmp25Result = tmp25(closure_1_3("Cookie", request), 2);
+                  let tmp25Result = tmp25(_parseCookieHeaders("Cookie", request), 2);
                   [tmp17, tmp15] = tmp25Result;
-                  tmp25Result = tmp25(closure_1_3("Set-Cookie", response), 2);
+                  tmp25Result = tmp25(_parseCookieHeaders("Set-Cookie", response), 2);
                   [tmp16, tmp14] = tmp25Result;
                 }
-                obj = { url: null, method: null, status: null, requestHeaders: null, responseHeaders: null, requestCookies: null, responseCookies: null, error: null, type: "fetch" };
-                ({ url: obj6[0], method: obj6[1] } = request);
-                obj[2] = response.status;
-                obj[3] = undefined;
-                obj[4] = undefined;
-                obj[5] = undefined;
-                obj[6] = undefined;
-                obj[7] = error;
+                const request1 = { url: null, method: null, status: null, requestHeaders: null, responseHeaders: null, requestCookies: null, responseCookies: null, error: null, type: "fetch" };
+                ({ url: obj6.url, method: obj6.method } = request);
+                request1.status = response.status;
+                request1.requestHeaders = undefined;
+                request1.responseHeaders = undefined;
+                request1.requestCookies = undefined;
+                request1.responseCookies = undefined;
+                request1.error = error;
                 const tmpResult1 = tmp(682);
-                const tmp22 = closure_1_6(obj);
+                const tmp22 = _createEvent(request1);
                 tmp(682).captureEvent(tmp22);
                 const tmpResult2 = tmp(682);
               }
             }
-            const tmp26 = closure_1_2(args.args, 2);
+            const tmp26 = _slicedToArray(args.args, 2);
           }
         }, false);
       }
       closure_0 = arg0;
-      closure_1 = closure_0;
-      if ("XMLHttpRequest" in obj(closure_1_1[1]).GLOBAL_OBJ) {
-        tmp2Result = tmp2(tmp3[2]);
+      closure_1 = obj;
+      if ("XMLHttpRequest" in registerSpanErrorInstrumentation.GLOBAL_OBJ) {
+        tmp2Result = tmp2(898);
         const result1 = tmp2Result.addXhrInstrumentationHandler((arg0) => {
-          if (obj.getClient() === callback) {
+          obj = obj(682);
+          if (obj.getClient() === closure_0) {
             ({ error, xhr, virtualError } = arg0);
             const tmp16 = xhr[tmp4(undefined, 898).SENTRY_XHR_DATA_KEY];
             if (tmp16) {
@@ -239,19 +238,12 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                   error = virtualError;
                 }
                 (function _xhrResponseHandler(arg0, xhr, method, request_headers, error) {
-                  if (callback3(arg0, xhr.status, xhr.responseURL)) {
-                    if (!callback5()) {
-                      obj = { url: null, method: null, status: null, requestHeaders: null, responseHeaders: null, responseCookies: null, error: null, type: "xhr" };
-                      obj[0] = xhr.responseURL;
-                      obj[1] = method;
-                      obj[2] = xhr.status;
-                      obj[3] = undefined;
-                      obj[4] = undefined;
-                      obj[5] = undefined;
-                      obj[6] = error;
-                      const tmp11 = callback4(obj);
-                      callback(table[1]).captureEvent(tmp11);
-                      const obj2 = callback(table[1]);
+                  if (closure_1_5(arg0, xhr.status, xhr.responseURL)) {
+                    if (!closure_1_7()) {
+                      const request = { url: xhr.responseURL, method, status: xhr.status, requestHeaders: undefined, responseHeaders: undefined, responseCookies: undefined, error, type: "xhr" };
+                      const tmp11 = closure_1_6(request);
+                      closure_1_0(dependencyMap[1]).captureEvent(tmp11);
+                      const obj2 = closure_1_0(dependencyMap[1]);
                     } else {
                       try {
                         let responseHeader = xhr.getResponseHeader("Set-Cookie");
@@ -259,7 +251,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                           responseHeader = xhr.getResponseHeader("set-cookie");
                         }
                         if (responseHeader) {
-                          callback2(responseHeader);
+                          closure_1_4(responseHeader);
                         }
                         try {
                           (function _getXHRResponseHeaders(getAllResponseHeaders) {

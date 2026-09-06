@@ -1,5 +1,6 @@
 // _runtime/metro/14288__.js
-arg5.timezones = [
+
+export const timezones = [
   "Africa/Abidjan",
   "Africa/Accra",
   "Africa/Addis_Ababa",

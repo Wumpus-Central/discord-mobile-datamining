@@ -1,10 +1,10 @@
 // _runtime/08314_colorPropType.js
-import hslToRgb from "08315_hslToRgb.js";
+import _mod8315 from "metro/08315__.js";
 
 function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
   let tmp = arg5;
   if (null == arg1[arg2]) {
-    error = undefined;
+    let error;
     if (arg0) {
       const text = `Required ${arg4}`;
       if (!tmp) {
@@ -15,7 +15,7 @@ function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
     let error1 = error;
   } else if (typeof tmp2 !== "number") {
     if (typeof tmp2 === "string") {
-      if (null === hslToRgb(tmp2)) {
+      if (null === _mod8315(tmp2)) {
         let tmp5 = tmp;
         const text1 = `Invalid ${arg4}`;
         if (!tmp) {

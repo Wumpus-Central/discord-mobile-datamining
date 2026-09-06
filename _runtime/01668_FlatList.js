@@ -1,6 +1,6 @@
 // _runtime/01668_FlatList.js
 import ReanimatedFlatList from "01669_ReanimatedFlatList.js";
-import createAnimatedComponent from "01670_createAnimatedComponent.js";
+import _mod1670 from "metro/01670__.js";
 import configureProps from "01735_configureProps.js";
 import AnimatedView from "01776_AnimatedView.js";
 import AnimatedImage from "01777_AnimatedImage.js";
@@ -14,4 +14,4 @@ export const Text = AnimatedText.AnimatedText;
 export const View = AnimatedView.AnimatedView;
 export const addWhitelistedNativeProps = configureProps.addWhitelistedNativeProps;
 export const addWhitelistedUIProps = configureProps.addWhitelistedUIProps;
-export const createAnimatedComponent = createAnimatedComponent.createAnimatedComponent;
+export const createAnimatedComponent = _mod1670.createAnimatedComponent;

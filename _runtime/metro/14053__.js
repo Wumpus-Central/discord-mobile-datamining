@@ -1,18 +1,14 @@
 // _runtime/metro/14053__.js
-import Comparator from "../14044_Comparator.js";
-import { SemVer } from "../14016_SemVer.js";
-import { Range } from "../14045_Range.js";
-import { Range } from "../14047_Range.js";
 
 export default (arg0, arg1, arg2, arg3) => {
   let obj;
-  let _require = arg3;
-  const tmp3 = new SemVer(arg0, arg3);
-  const tmp4 = new Range(arg1, arg3);
+  _require = arg3;
+  const tmp3 = new require("14016__.js")(arg0, arg3);
+  const tmp4 = new require("14045__.js")(arg1, arg3);
   if (">" === arg2) {
     dependencyMap = tmp(14036);
-    let tmpResult = tmp(14041);
-    tmpResult = tmp(14037);
+    tmp(14041);
+    let tmpResult = tmp(14037);
     closure_2 = tmpResult;
     let str3 = ">=";
     let str = ">";
@@ -31,7 +27,7 @@ export default (arg0, arg1, arg2, arg3) => {
       throw typeError;
     }
   }
-  if (Range(tmp3, tmp4, arg3)) {
+  if (require("14047__.js")(tmp3, tmp4, arg3)) {
     return false;
   } else {
     let num = 0;
@@ -43,43 +39,34 @@ export default (arg0, arg1, arg2, arg3) => {
         dependencyMap = null;
         let item = arr.forEach((semver) => {
           let tmp = semver;
-          if (semver.semver === Comparator.ANY) {
-            tmp = new Comparator(">=0.0.0");
+          if (semver.semver === closure_0(semver[7]).ANY) {
+            tmp = new closure_0(semver[7])(">=0.0.0");
           }
-          let tmp6 = _null;
-          if (!_null) {
+          let tmp6 = closure_0;
+          if (!closure_0) {
             tmp6 = tmp;
           }
-          _null = tmp6;
-          let tmp7 = _null2;
-          if (!_null2) {
+          closure_0 = tmp6;
+          let tmp7 = semver;
+          if (!semver) {
             tmp7 = tmp;
           }
-          _null2 = tmp7;
-          if (_null2(tmp.semver, _null.semver, c0)) {
-            _null = tmp;
-          } else if (callback(tmp.semver, _null2.semver, c0)) {
-            _null2 = tmp;
+          semver = tmp7;
+          if (dependencyMap(tmp.semver, closure_0.semver, require)) {
+            closure_0 = tmp;
+          } else if (React2(tmp.semver, semver.semver, require)) {
+            semver = tmp;
           }
         });
-        let tmp15 = _require;
-        let tmp16 = num;
         if (_require.operator !== str) {
-          let tmp22 = _require;
           if (_require.operator !== str3) {
-            let tmp17 = dependencyMap;
             if (!dependencyMap.operator) {
-              let tmp19 = dependencyMap;
               if (tmpResult(tmp3, dependencyMap.semver)) {
                 obj = { v: false };
               }
-            } else {
-              let tmp18 = dependencyMap;
             }
-            let tmp20 = dependencyMap;
             obj = undefined;
             if (dependencyMap.operator === str3) {
-              let tmp21 = dependencyMap;
               if (tmpResult1(tmp3, dependencyMap.semver)) {
                 obj = { v: false };
               }

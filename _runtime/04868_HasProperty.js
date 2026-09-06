@@ -1,8 +1,8 @@
 // _runtime/04868_HasProperty.js
-import isObject from "04809_isObject.js";
+import _mod4809 from "metro/04809__.js";
 
 export default function HasProperty(arg0, arg1) {
-  if (isObject(arg0)) {
+  if (_mod4809(arg0)) {
     if (tmp(4856)(arg1)) {
       return arg1 in arg0;
     } else {

@@ -15,7 +15,7 @@ class ListCache {
     clearResult = this.clear();
     for (let num2 = 0; num2 < num; num2 = num2 + 1) {
       tmp2 = global[num2];
-      result = require("listCacheClear");
+      result = self.set(tmp2[0], tmp2[1]);
     }
     return;
   }

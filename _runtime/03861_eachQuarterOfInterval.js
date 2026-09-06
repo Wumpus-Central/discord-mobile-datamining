@@ -1,36 +1,32 @@
 // _runtime/03861_eachQuarterOfInterval.js
-import addQuarters from "03816_addQuarters.js";
+import 03816__ from "metro/03816__.js";
 import startOfQuarter from "03862_startOfQuarter.js";
-import _typeof from "metro/03650__typeof.js";
+import _typeof from "metro/03650__.js";
 import requiredArgs from "03651_requiredArgs.js";
 
-if (!addQuarters) {
-  let obj = { default: null };
-  obj[0] = addQuarters;
+if (!module_3816) {
+  let obj = { default: module_3816 };
   let tmp3 = obj;
 } else {
-  tmp3 = addQuarters;
+  tmp3 = module_3816;
 }
-addQuarters = tmp3;
+module_3816 = tmp3;
 if (!startOfQuarter) {
-  obj = { default: null };
-  obj[0] = startOfQuarter;
+  obj = { default: startOfQuarter };
   let tmp5 = obj;
 } else {
   tmp5 = startOfQuarter;
 }
 startOfQuarter = tmp5;
 if (!_typeof) {
-  obj = { default: null };
-  obj[0] = _typeof;
+  obj = { default: _typeof };
   let tmp7 = obj;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
@@ -53,10 +49,8 @@ export default function eachQuarterOfInterval(arg0) {
     const items = [];
     if (defaultResult3.getTime() <= time1) {
       do {
-        let tmp10 = _typeof;
         let arr = items.push(_typeof.default(defaultResult3));
-        let tmp12 = addQuarters;
-        let defaultResult5 = addQuarters.default(defaultResult3, 1);
+        let defaultResult5 = module_3816.default(defaultResult3, 1);
         defaultResult3 = defaultResult5;
         time2 = defaultResult5.getTime();
       } while (time2 <= time1);

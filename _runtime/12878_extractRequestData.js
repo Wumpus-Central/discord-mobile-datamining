@@ -1,27 +1,31 @@
 // _runtime/12878_extractRequestData.js
-import addNonEnumerableProperty from "12803_addNonEnumerableProperty.js";
-import getNumberOfUrlSegments from "12879_getNumberOfUrlSegments.js";
+import _mod12796 from "metro/12796__.js";
+import _mod12803 from "metro/12803__.js";
+import _mod12804 from "metro/12804__.js";
+import _mod12806 from "metro/12806__.js";
+import _mod12842 from "metro/12842__.js";
+import stripUrlQueryAndFragment from "12879_stripUrlQueryAndFragment.js";
+import _mod12880 from "metro/12880__.js";
+import _mod12881 from "metro/12881__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 function extractRequestData(headers, arg1) {
-  closure_0 = headers;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
-  let include;
   obj = undefined;
-  closure_3 = undefined;
+  let headers2;
   let method;
   let combined;
-  include = obj.include;
+  let include = obj.include;
   if (undefined === include) {
-    include = closure_3;
+    include = headers2;
   }
   obj = {};
   const tmp = headers.headers || {};
-  closure_3 = tmp;
+  headers2 = tmp;
   method = headers.method;
   if ("https" === headers.protocol) {
     let str2 = "https";
@@ -36,32 +40,31 @@ function extractRequestData(headers, arg1) {
     let _HermesInternal = HermesInternal;
     combined = "" + str2 + "://" + tmp2 + tmp3;
   }
-  let item = include.forEach((key10009) => {
-    if ("headers" === key10009) {
-      obj.headers = cookie;
+  let item = include.forEach((item) => {
+    if ("headers" === item) {
+      obj.headers = headers2;
       if (!include.includes("cookies")) {
         headers = tmp28.headers;
         delete tmp2[tmp];
       }
-      if (!obj6.includes("ip")) {
-        const ipHeaderNames = headers(include[1]).ipHeaderNames;
-        const item = ipHeaderNames.forEach((arg0) => {
+      if (!obj5.includes("ip")) {
+        const ipHeaderNames = _mod12880.ipHeaderNames;
+        item = ipHeaderNames.forEach((item) => {
           delete tmp2[tmp];
         });
       }
-      obj6 = include;
+      obj5 = include;
       tmp28 = obj;
-    } else if ("method" === key10009) {
+    } else if ("method" === item) {
       obj.method = method;
-    } else if ("url" === key10009) {
+    } else if ("url" === item) {
       obj.url = combined;
-    } else if ("cookies" === key10009) {
+    } else if ("cookies" === item) {
       let cookies = headers.cookies;
       if (!cookies) {
-        cookie = cookie.cookie;
+        let cookie = headers2.cookie;
         if (cookie) {
-          cookie = headers(include[2]).parseCookie(tmp21.cookie);
-          const obj5 = headers(include[2]);
+          cookie = _mod12881.parseCookie(tmp21.cookie);
         }
         cookies = cookie;
       }
@@ -69,17 +72,16 @@ function extractRequestData(headers, arg1) {
         cookies = {};
       }
       obj.cookies = cookies;
-      const tmp19 = obj;
-    } else if ("query_string" === key10009) {
-      obj.query_string = (function extractQueryParams(closure_0) {
-        if (closure_0.originalUrl || closure_0.url || "") {
+    } else if ("query_string" === item) {
+      obj.query_string = (function extractQueryParams(originalUrl) {
+        if (originalUrl.originalUrl || originalUrl.url || "") {
           combined = obj;
           if (obj.startsWith("/")) {
             const _HermesInternal = HermesInternal;
             combined = "http://dogs.are.great" + obj;
           }
           try {
-            let query = closure_0.query;
+            let query = originalUrl.query;
             if (!query) {
               const _URL = URL;
               const uRL = new URL(combined);
@@ -96,36 +98,35 @@ function extractRequestData(headers, arg1) {
           }
         }
       })(headers);
-    } else if ("data" === key10009) {
+    } else if ("data" === item) {
       if ("GET" !== method) {
         if ("HEAD" !== tmp5) {
           const body = headers.body;
           if (undefined !== body) {
-            if (obj7.isString(body)) {
+            if (obj6.isString(body)) {
               if (body) {
                 obj.data = body;
               }
             } else {
-              obj = headers(include[3]);
+              obj = _mod12804;
               if (obj.isPlainObject(body)) {
                 const _JSON = JSON;
-                let json = JSON.stringify(headers(include[4]).normalize(body));
-                const obj3 = headers(include[4]);
+                const normalizer = _mod12842;
+                let json = JSON.stringify(normalizer.normalize(body));
               } else {
                 let _HermesInternal = HermesInternal;
-                json = headers(include[5]).truncate("" + body, 1024);
-                const obj2 = headers(include[5]);
+                json = _mod12806.truncate("" + body, 1024);
               }
             }
-            obj7 = headers(include[3]);
+            obj6 = _mod12804;
           }
         }
       }
     } else {
-      const hasOwnProperty = {}.hasOwnProperty;
+      hasOwnProperty = {}.hasOwnProperty;
       const call = hasOwnProperty.call;
-      if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(headers, key10009)) {
-        obj[key10009] = tmp3[key10009];
+      if (typeof call === "unknown" ? hasOwnProperty(item) : call(headers, item)) {
+        obj[item] = tmp3[item];
       }
     }
   });
@@ -134,18 +135,18 @@ function extractRequestData(headers, arg1) {
 function winterCGHeadersToDict(arr) {
   const obj = {};
   try {
-    const item = arr.forEach((str) => {
-      if (typeof str === "string") {
-        obj[arg1] = str;
+    const item = arr.forEach((item, index) => {
+      if (typeof item === "string") {
+        obj[index] = item;
       }
     });
     return obj;
   } catch (err) {
-    if (obj(12796).DEBUG_BUILD) {
+    if (_mod12796.DEBUG_BUILD) {
       const logger = tmp3(12797).logger;
       logger.warn("Sentry failed extracting headers from a request object. If you see this, please file an issue.");
     }
-    tmp3 = obj;
+    tmp3 = require;
   }
 }
 function headersToDict(arg0) {
@@ -153,19 +154,19 @@ function headersToDict(arg0) {
   try {
     const _Object = Object;
     const entries = Object.entries(arg0);
-    const item = entries.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item = entries.forEach((item) => {
+      [tmp, tmp2] = item;
       if (typeof tmp2 === "string") {
         obj[tmp] = tmp2;
       }
     });
     return obj;
   } catch (err) {
-    if (obj(12796).DEBUG_BUILD) {
+    if (_mod12796.DEBUG_BUILD) {
       const logger = tmp4(12797).logger;
       logger.warn("Sentry failed extracting headers from a request object. If you see this, please file an issue.");
     }
-    tmp4 = obj;
+    tmp4 = require;
   }
 }
 function extractQueryParamsFromUrl(arg0) {
@@ -188,8 +189,9 @@ function extractQueryParamsFromUrl(arg0) {
 let closure_2 = { ip: false, request: true, user: true };
 let closure_3 = ["cookies", "data", "headers", "method", "query_string", "url"];
 let items = ["id", "username", "email"];
-arg5.DEFAULT_USER_INCLUDES = items;
-arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
+
+export const DEFAULT_USER_INCLUDES = items;
+export const addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
   request,
   normalizedRequest,
   user,
@@ -216,7 +218,7 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
       arr2.push("ip");
     }
     const _Array2 = Array;
-    obj1 = arr2;
+    let obj1 = arr2;
     if (!Array.isArray(arr2)) {
       obj1 = closure_3;
     }
@@ -230,8 +232,8 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
         delete tmp2[tmp];
       }
       if (!arr2.includes("ip")) {
-        const ipHeaderNames = user(obj2[1]).ipHeaderNames;
-        const item = ipHeaderNames.forEach((arg0) => {
+        const ipHeaderNames = _mod12880.ipHeaderNames;
+        const item = ipHeaderNames.forEach((item) => {
           delete tmp2[tmp];
         });
       }
@@ -247,7 +249,7 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
       if (!cookies) {
         let parseCookieResult;
         if (obj.cookie) {
-          let obj5 = user(obj2[2]);
+          let obj5 = _mod12881;
           parseCookieResult = obj5.parseCookie(obj.cookie);
         }
         cookies = parseCookieResult;
@@ -273,18 +275,18 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
       if (obj8.isPlainObject(user.user)) {
         user = obj.user;
         user = user.user;
-        obj2 = {};
+        const obj2 = {};
         const _Array3 = Array;
         if (!Array.isArray(user)) {
           user = items;
         }
-        const item1 = user.forEach((arg0) => {
+        const item1 = user.forEach((item) => {
           let tmp2 = user;
           if (user) {
-            tmp2 = arg0 in tmp;
+            tmp2 = item in tmp;
           }
           if (tmp2) {
-            obj1[arg0] = tmp[arg0];
+            obj1[item] = tmp[item];
           }
         });
         let obj4 = obj2;
@@ -296,15 +298,14 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
         const merged6 = Object.assign(request.user);
         request.user = obj3;
       }
-      obj8 = user(obj2[3]);
+      obj8 = _mod12804;
     }
     obj4 = {};
   }
   if (obj.ip) {
     let ipAddress = normalizedRequest.headers;
     if (ipAddress) {
-      ipAddress = user(obj2[1]).getClientIPAddress(normalizedRequest.headers);
-      const obj12 = user(obj2[1]);
+      ipAddress = _mod12880.getClientIPAddress(normalizedRequest.headers);
     }
     if (!ipAddress) {
       ipAddress = user.ipAddress;
@@ -317,7 +318,7 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
     }
   }
 };
-arg5.addRequestDataToEvent = function addRequestDataToEvent(request, request, include) {
+export const addRequestDataToEvent = function addRequestDataToEvent(request, request, include) {
   let obj = {};
   const merged = Object.assign(closure_2);
   if (include) {
@@ -338,8 +339,7 @@ arg5.addRequestDataToEvent = function addRequestDataToEvent(request, request, in
     if (obj.ip) {
       arr2.push("ip");
     }
-    obj = { include: null };
-    obj[0] = arr2;
+    obj = { include: arr2 };
     const tmp11 = extractRequestData(request, obj);
     obj = {};
     const merged2 = Object.assign(request.request);
@@ -348,22 +348,21 @@ arg5.addRequestDataToEvent = function addRequestDataToEvent(request, request, in
   }
   if (obj.user) {
     if (request.user) {
-      let obj3 = user(obj1[3]);
+      let obj3 = _mod12804;
       if (obj3.isPlainObject(request.user)) {
-        user = obj.user;
-        user = request.user;
-        obj1 = {};
+        let user = request.user;
+        const obj1 = {};
         const _Array2 = Array;
         if (!Array.isArray(user)) {
           user = items;
         }
-        const item = user.forEach((arg0) => {
+        const item = user.forEach((item) => {
           let tmp2 = user;
           if (user) {
-            tmp2 = arg0 in tmp;
+            tmp2 = item in tmp;
           }
           if (tmp2) {
-            obj1[arg0] = tmp[arg0];
+            obj1[item] = tmp[item];
           }
         });
         obj3 = obj1;
@@ -381,8 +380,7 @@ arg5.addRequestDataToEvent = function addRequestDataToEvent(request, request, in
   if (obj.ip) {
     let ip = request.headers;
     if (ip) {
-      ip = user(obj1[1]).getClientIPAddress(request.headers);
-      const obj8 = user(obj1[1]);
+      ip = _mod12880.getClientIPAddress(request.headers);
     }
     if (!ip) {
       ip = request.ip;
@@ -400,7 +398,7 @@ arg5.addRequestDataToEvent = function addRequestDataToEvent(request, request, in
   }
   return request;
 };
-arg5.extractPathForTransaction = function extractPathForTransaction(method) {
+export const extractPathForTransaction = function extractPathForTransaction(method) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -408,7 +406,6 @@ arg5.extractPathForTransaction = function extractPathForTransaction(method) {
   method = method.method;
   if (method) {
     method = method.method.toUpperCase();
-    const str = method.method;
   }
   if (!obj.customRoute) {
     if (!method.route) {
@@ -422,9 +419,8 @@ arg5.extractPathForTransaction = function extractPathForTransaction(method) {
         if (!str6) {
           str6 = "";
         }
-        str5 = getNumberOfUrlSegments.stripUrlQueryAndFragment(str6);
+        str5 = stripUrlQueryAndFragment.stripUrlQueryAndFragment(str6);
         str4 = "url";
-        const obj2 = getNumberOfUrlSegments;
       }
       tmp = method.originalUrl || method.url;
     }
@@ -453,10 +449,10 @@ arg5.extractPathForTransaction = function extractPathForTransaction(method) {
   str4 = "route";
   str5 = customRoute;
 };
-arg5.extractQueryParamsFromUrl = extractQueryParamsFromUrl;
-arg5.extractRequestData = extractRequestData;
-arg5.headersToDict = headersToDict;
-arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
+export { extractQueryParamsFromUrl };
+export { extractRequestData };
+export { headersToDict };
+export const httpRequestToRequestData = function httpRequestToRequestData(headers) {
   const tmp = headers.headers || {};
   let str = "http";
   if (headers.socket) {
@@ -465,13 +461,12 @@ arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
       str = "https";
     }
   }
-  let obj = headers.url || "";
   let combined = obj;
-  if (!obj.startsWith(str)) {
+  if (!headers.url || "".startsWith(str)) {
     const _HermesInternal = HermesInternal;
     combined = "" + str + "://" + tmp2 + tmp3;
   }
-  obj = {
+  const request = {
     url: combined,
     method: headers.method,
     query_string: extractQueryParamsFromUrl(obj),
@@ -479,15 +474,15 @@ arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
     cookies: headers.cookies,
     data: headers.body || undefined,
   };
-  return addNonEnumerableProperty.dropUndefinedKeys(obj);
+  return _mod12803.dropUndefinedKeys(request);
 };
-arg5.winterCGHeadersToDict = winterCGHeadersToDict;
-arg5.winterCGRequestToRequestData = function winterCGRequestToRequestData(method) {
-  const obj = {
+export { winterCGHeadersToDict };
+export const winterCGRequestToRequestData = function winterCGRequestToRequestData(method) {
+  const request = {
     method: method.method,
     url: method.url,
     query_string: extractQueryParamsFromUrl(method.url),
     headers: winterCGHeadersToDict(method.headers),
   };
-  return obj;
+  return request;
 };

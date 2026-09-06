@@ -1,8 +1,8 @@
 // _runtime/00620_mapCacheDelete.js
-import getMapData from "00621_getMapData.js";
+import _mod621 from "metro/00621__.js";
 
 export default function mapCacheDelete(arg0) {
-  const deleteResult = getMapData(this, arg0).delete(arg0);
+  const deleteResult = _mod621(this, arg0).delete(arg0);
   let num = 0;
   if (deleteResult) {
     num = 1;

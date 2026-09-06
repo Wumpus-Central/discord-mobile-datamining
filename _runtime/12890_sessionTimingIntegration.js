@@ -1,21 +1,21 @@
 // _runtime/12890_sessionTimingIntegration.js
-import setupIntegration from "12853_setupIntegration.js";
-import { dateTimestampInSeconds } from "12811_dateTimestampInSeconds.js";
+import _mod12811 from "metro/12811__.js";
+import setupIntegration from "metro/12853__.js";
 
 export const sessionTimingIntegration = setupIntegration.defineIntegration(() => {
-  let obj = dateTimestampInSeconds;
+  let obj = require("metro/12811__.js");
   _require = 1000 * obj.timestampInSeconds();
   obj = {
     name: "SessionTiming",
     processEvent(extra) {
-      let obj = callback(closure_1_1[0]);
+      let obj = _mod12811;
       const result = 1000 * obj.timestampInSeconds();
       obj = {};
       const merged = Object.assign(extra);
       obj = {};
       const merged1 = Object.assign(extra.extra);
-      obj["session:start"] = callback;
-      obj["session:duration"] = result - callback;
+      obj["session:start"] = closure_0;
+      obj["session:duration"] = result - closure_0;
       obj["session:end"] = result;
       obj.extra = obj;
       return obj;

@@ -1,4 +1,4 @@
 // _runtime/00546_overArg.js
-import overArg from "00547_overArg.js";
+import _mod547 from "metro/00547__.js";
 
-export default overArg(Object.keys, Object);
+export default _mod547(Object.keys, Object);

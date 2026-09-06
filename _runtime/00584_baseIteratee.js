@@ -7,7 +7,6 @@ export default function baseIteratee(fn) {
   if (typeof fn === "function") {
     return tmp;
   } else if (null == tmp) {
-    let tmp8 = identity;
   } else if (typeof tmp === "object") {
     let tmp2 = require;
     if (_mod514(tmp)) {
@@ -19,6 +18,6 @@ export default function baseIteratee(fn) {
     }
     tmp3 = dependencyMap;
   } else {
-    tmp8 = property(tmp);
+    const tmp8 = property(tmp);
   }
 }

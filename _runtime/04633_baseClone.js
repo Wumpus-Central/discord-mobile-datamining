@@ -1,5 +1,6 @@
 // _runtime/04633_baseClone.js
-import { isObject } from "00521_isObject.js";
+import assignValue from "04642_assignValue.js";
+
 let obj = {};
 obj["[object Uint32Array]"] = true;
 obj["[object Uint16Array]"] = true;
@@ -26,14 +27,14 @@ obj["[object Arguments]"] = true;
 obj["[object WeakMap]"] = false;
 obj["[object Function]"] = false;
 obj["[object Error]"] = false;
-function baseClone(arr) {
-  const _require = arr;
+function baseClone(arr, arg1, fn, arg3, arg4, arg5) {
+  _require = arr;
   dependencyMap = arg1;
-  obj = arg2;
+  closure_2 = fn;
   closure_3 = arg5;
-  if (!arg2) {
+  if (!fn) {
     {
-      if (isObject(arr)) {
+      if (require("metro/00521__.js")(arr)) {
         const tmp10 = tmp32(514)(arr);
         if (tmp10) {
           const tmp18 = tmp32(4634)(arr);
@@ -53,7 +54,7 @@ function baseClone(arr) {
           } else {
             if (tmp11 != "[object Object]") {
               if (tmp11 != "[object Arguments]") {
-                if (obj[tmp11]) {
+                if (closure_2[tmp11]) {
                   tmp14 = tmp32(4650)(arr, tmp11, tmp);
                   closure_4 = tmp14;
                 } else {
@@ -91,18 +92,18 @@ function baseClone(arr) {
           closure_3 = tmp21;
           obj3 = tmp21;
         }
-        const value = obj3.get(arr);
+        value = obj3.get(arr);
         if (value) {
           return value;
         } else {
           let result = obj3.set(arr, tmp14);
           if (tmp32(4656)(arr)) {
-            const item = arr.forEach((arg0) => {
-              closure_4.add(callback(arg0, closure_1, closure_2, arg0, closure_0, callback));
+            const item = arr.forEach((item) => {
+              closure_4.add(baseClone(item, closure_1, closure_2, item, closure_0, closure_3));
             });
           } else if (tmp32(4658)(arr)) {
-            const item1 = arr.forEach((arg0, arg1) => {
-              const result = closure_4.set(arg1, callback(arg0, closure_1, closure_2, arg1, closure_0, callback));
+            const item1 = arr.forEach((item, index) => {
+              const result = closure_4.set(index, baseClone(item, closure_1, closure_2, index, closure_0, closure_3));
             });
           }
           if (!tmp3) {
@@ -118,10 +119,10 @@ function baseClone(arr) {
               let tmp = arg1;
               let tmp2 = arg0;
               if (closure_5) {
-                tmp2 = arr[arg0];
+                tmp2 = closure_0[arg0];
                 tmp = arg0;
               }
-              arr(table[21])(closure_4, tmp, callback(tmp2, table, closure_2, tmp, arr, callback));
+              assignValue(closure_4, tmp, baseClone(tmp2, closure_1, closure_2, tmp, closure_0, closure_3));
             });
             return tmp14;
           }
@@ -132,9 +133,9 @@ function baseClone(arr) {
     }
   } else {
     if (arg4) {
-      let tmp4 = arg2(arr, arg3, arg4, arg5);
+      let tmp4 = fn(arr, arg3, arg4, arg5);
     } else {
-      tmp4 = arg2(arr);
+      tmp4 = fn(arr);
     }
     closure_4 = tmp4;
   }

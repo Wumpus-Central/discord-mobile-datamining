@@ -3,7 +3,8 @@ import byteLength from "00206_byteLength.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.default = function binaryToBase64(arg0) {
+
+export default function binaryToBase64(arg0) {
   let uint8Array = arg0;
   if (arg0 instanceof ArrayBuffer) {
     const _Uint8Array = Uint8Array;
@@ -21,8 +22,8 @@ arg5.default = function binaryToBase64(arg0) {
       return byteLength.fromByteArray(uint8Array1);
     } else {
       const _Error = Error;
-      error = new Error("data must be ArrayBuffer or typed array");
+      const error = new Error("data must be ArrayBuffer or typed array");
       throw error;
     }
   }
-};
+}

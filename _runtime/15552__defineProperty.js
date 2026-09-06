@@ -1,15 +1,14 @@
 // _runtime/15552__defineProperty.js
-import toPropertyKey from "00043_toPropertyKey.js";
+import _mod43 from "metro/00043__.js";
 
-export default function _defineProperty(arg0, arg1, arg2) {
-  const tmp = toPropertyKey(arg1);
+export default function _defineProperty(arg0, arg1, value) {
+  const tmp = _mod43(arg1);
   if (tmp in arg0) {
     const _Object = Object;
-    const obj = { value: null, enumerable: true, configurable: true, writable: true };
-    obj[0] = arg2;
+    const obj = { value, enumerable: true, configurable: true, writable: true };
     Object.defineProperty(arg0, tmp, obj);
   } else {
-    arg0[tmp] = arg2;
+    arg0[tmp] = value;
   }
   return arg0;
 }

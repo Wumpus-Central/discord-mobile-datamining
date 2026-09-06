@@ -1,5 +1,6 @@
 // _runtime/metro/00076__.js
-arg5.default = [
+
+export default [
   "clearJSResponder",
   "configureNextLayoutAnimation",
   "createView",

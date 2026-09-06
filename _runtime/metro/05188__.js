@@ -1,11 +1,11 @@
 // _runtime/metro/05188__.js
-import getFileChunk from "../05185_getFileChunk.js";
+import _mod5185 from "05185__.js";
 import _mod5186 from "05186__.js";
-import isAAC from "../05189_isAAC.js";
+import _mod5189 from "05189__.js";
 import is7Z from "../05190_is7Z.js";
-import isAVIF from "../05191_isAVIF.js";
-import isBLEND from "../05192_isBLEND.js";
-import isAVI from "../05193_isAVI.js";
+import _mod5191 from "05191__.js";
+import _mod5192 from "05192__.js";
+import _mod5193 from "05193__.js";
 
 const self = this;
 let self2 = this;
@@ -20,43 +20,41 @@ if (self2) {
   if (!fn) {
     fn = (obj, exports) => {
       for (const key10007 in arg0) {
-        let tmp5 = key10007;
         let tmp6 = "default" === key10007;
         if (tmp6) {
           if (tmp6) {
             continue;
           } else {
-            let tmp3 = self2;
             let tmp4 = self2(arg1, arg0, key10007);
             continue;
           }
           continue;
         } else {
           let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
           let call = hasOwnProperty.call;
           if (typeof call === "unknown") {
             let hasOwnPropertyResult = hasOwnProperty(key10007);
           } else {
             hasOwnPropertyResult = call(arg1, key10007);
           }
-          let tmp2 = hasOwnPropertyResult;
         }
       }
     };
   }
   let _Object2 = Object;
   exports.validateFileType = undefined;
-  fn(isAAC, exports);
+  fn(_mod5189, exports);
   fn(is7Z, exports);
-  fn(isAVIF, exports);
-  fn(isBLEND, exports);
-  fn(isAVI, exports);
+  fn(_mod5191, exports);
+  fn(_mod5192, exports);
+  fn(_mod5193, exports);
   exports.validateFileType = function validateFileType(fileChunk, arr, chunkSize) {
     let items = [];
     const items1 = [
       ...new Set(
-        arr.map((str) => {
-          const parts = str.split(".");
+        arr.map((item) => {
+          const parts = item.split(".");
           const formatted = parts.join("").toUpperCase();
           let combined = formatted;
           if ("7Z" === formatted) {
@@ -70,11 +68,8 @@ if (self2) {
     for (const item10023 of items1) {
       let str = item10023;
       let _Object = Object;
+      hasOwnProperty = Object.prototype.hasOwnProperty;
       let call = hasOwnProperty.call;
-      let tmp2 = require;
-      let tmp3 = require;
-      let tmp4 = dependencyMap;
-      let tmp5 = dependencyMap;
       let FileTypes = _mod5186.FileTypes;
       if (typeof call === "unknown") {
         let hasOwnPropertyResult = hasOwnProperty(item10023);
@@ -82,12 +77,10 @@ if (self2) {
         hasOwnPropertyResult = call(FileTypes, item10023);
       }
       if (hasOwnPropertyResult) {
-        let tmp12 = item10023;
         arr = items.push(str);
         continue;
       } else {
         let _TypeError = TypeError;
-        let tmp7 = item10023;
         let _HermesInternal = HermesInternal;
         let str2 = "` is not supported. Please make sure that `types` list conatins only supported files";
         let str3 = "Type `";
@@ -98,7 +91,6 @@ if (self2) {
             str.toLowerCase() +
             "` is not supported. Please make sure that `types` list conatins only supported files",
         );
-        let tmp11 = typeError;
         throw typeError;
       }
     }
@@ -131,10 +123,10 @@ if (self2) {
     }
     if (!chunkSize) {
       const arr3 = (function addSimilarTypes(items) {
-        if (items.some((arg0) => "MP4" === arg0)) {
+        if (items.some((item) => "MP4" === item)) {
           items = ["M4V"];
         } else {
-          items = items.some((arg0) => "AAC" === arg0) ? ["M4A"] : [];
+          items = items.some((item) => "AAC" === item) ? ["M4A"] : [];
         }
         return items;
       })(items);
@@ -153,19 +145,12 @@ if (self2) {
     const items3 = [];
     for (const item10079 of combined) {
       let tmp19 = item10079;
-      let tmp20 = require;
       let tmp21 = require;
-      let tmp22 = dependencyMap;
-      let tmp23 = dependencyMap;
       let FileTypes2 = _mod5186.FileTypes;
-      let tmp24 = items2;
       items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
       let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = _mod5186.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
       if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
-        let tmp25 = tmp20;
-        let tmp26 = tmp22;
         let FileTypes3 = tmp21(5186).FileTypes;
-        let tmp27 = item10079;
         arr = items3.push(FileTypes3.getInfoByName(tmp19));
       }
       continue;
@@ -177,7 +162,7 @@ if (self2) {
     if (!num2) {
       num2 = 64;
     }
-    fileChunk = getFileChunk.getFileChunk(fileChunk, num2);
+    fileChunk = _mod5185.getFileChunk(fileChunk, num2);
     const FileTypes4 = _mod5186.FileTypes;
     const detectSignatureResult = FileTypes4.detectSignature(fileChunk, items2);
     require = detectSignatureResult;
@@ -185,13 +170,13 @@ if (self2) {
       if (items3.length > 0) {
         const found = items3.filter((signatures) => {
           signatures = signatures.signatures;
-          return signatures.includes(closure_0);
+          return signatures.includes(detectSignatureResult);
         });
         if (found.length > 0) {
           const FileTypes5 = _mod5186.FileTypes;
           const result = FileTypes5.detectTypeByAdditionalCheck(fileChunk, found);
           dependencyMap = result;
-          return result && combined.some((str) => str.toLowerCase() === closure_1);
+          return result && combined.some((item) => item.toLowerCase() === result);
         }
       }
       return true;
@@ -199,8 +184,8 @@ if (self2) {
       return false;
     }
     const set = new Set(
-      arr.map((str) => {
-        const parts = str.split(".");
+      arr.map((item) => {
+        const parts = item.split(".");
         const formatted = parts.join("").toUpperCase();
         let combined = formatted;
         if ("7Z" === formatted) {
@@ -210,8 +195,6 @@ if (self2) {
         return combined;
       }),
     );
-    const tmp29 = require;
-    const tmp30 = require;
   };
 } else {
   let _Object = Object;

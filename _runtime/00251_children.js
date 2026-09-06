@@ -1,6 +1,4 @@
 // _runtime/00251_children.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-noopAll;
-
-export { default as default } from "children";
+export default fn(252).default;

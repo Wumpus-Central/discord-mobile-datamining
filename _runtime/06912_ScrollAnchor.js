@@ -1,32 +1,31 @@
 // _runtime/06912_ScrollAnchor.js
-import noopDefault from "00019_noop.js";
-import closure_2 from "metro/06857__slicedToArray.js";
-import noop from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
+import CompatView from "06907_CompatView.js";
+import _slicedToArray from "metro/06857__.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
-({ useImperativeHandle: c3, useMemo: c4, useState: c5 } = noop);
-noopDefault;
+require = fn;
+let noop = fn(19);
+({ useImperativeHandle: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+const jsx = fn(21).jsx;
 
 export const ScrollAnchor = function ScrollAnchor(horizontal) {
   horizontal = horizontal.horizontal;
-  let first;
-  let callback;
-  const tmp = callback(callback4(1000000), 2);
-  first = tmp[0];
-  callback = tmp[1];
-  callback2(
+  _slicedToArray = undefined;
+  const tmp = _slicedToArray(closure_5(1000000), 2);
+  const first = tmp[0];
+  _slicedToArray = tmp[1];
+  closure_3(
     horizontal.scrollAnchorRef,
     () => ({
       scrollBy(diff) {
         closure_0 = diff;
-        callback((arg0) => arg0 + closure_0);
+        closure_1_2((arg0) => arg0 + closure_0);
       },
     }),
     [],
   );
   const items = [first, horizontal];
-  return callback3(() => {
+  return closure_4(() => {
     let num = 0;
     if (!horizontal) {
       num = first;
@@ -36,7 +35,7 @@ export const ScrollAnchor = function ScrollAnchor(horizontal) {
     if (horizontal) {
       num2 = first;
     }
-    style[3] = num2;
-    return closure_1_6(horizontal(first[3]).CompatView, { style });
+    style.left = num2;
+    return jsx(CompatView.CompatView, { style });
   }, items);
 };

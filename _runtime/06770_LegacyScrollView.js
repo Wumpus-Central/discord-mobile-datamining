@@ -1,17 +1,17 @@
 // _runtime/06770_LegacyScrollView.js
 import tagMessage from "06660_tagMessage.js";
-import itemsDefault from "06769_items.js";
-import closure_4 from "metro/00032__slicedToArray.js";
-import closure_5 from "metro/00109__objectWithoutProperties.js";
-import closure_6 from "00019_noop.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _modDef6769 from "metro/06769__.js";
+import _slicedToArray from "metro/00032__.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import noop from "metro/00019__.js";
 
-require = arg1;
+require = fn;
 let closure_2 = ["refreshControl", "waitFor"];
 let closure_3 = ["waitFor", "refreshControl"];
-({ FlatList: error, DrawerLayoutAndroid, RefreshControl, ScrollView, Switch, TextInput } = get_ActivityIndicator);
-let closure_9 = itemsDefault(ScrollView, { disallowInterruption: true, shouldCancelWhenOutside: false });
+get_ActivityIndicator = fn(17);
+({ FlatList: closure_7, DrawerLayoutAndroid, RefreshControl, ScrollView, Switch, TextInput } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+let closure_9 = _modDef6769(ScrollView, { disallowInterruption: true, shouldCancelWhenOutside: false });
 class LegacyScrollView {
   constructor(arg0) {
     obj = closure_6;
@@ -21,7 +21,7 @@ class LegacyScrollView {
     tmp2 = jsx;
     tmp3 = closure_9;
     merged = Object.assign(closure_5(global, closure_2));
-    obj3 = require("tagMessage");
+    obj3 = closure_0(closure_1[6]);
     if (waitFor == null) {
       waitFor = [];
     }
@@ -31,15 +31,15 @@ class LegacyScrollView {
     cloneElementResult = undefined;
     if (refreshControl) {
       obj1 = { ref: null };
-      obj1[0] = ref;
+      obj1.ref = ref;
       cloneElementResult = obj.cloneElement(refreshControl, obj1);
     }
     obj.refreshControl = cloneElementResult;
     return tmp2(tmp3, obj);
   }
 }
-const tmp3 = itemsDefault(RefreshControl, { disallowInterruption: true, shouldCancelWhenOutside: false });
-const tmp4 = itemsDefault(Switch, {
+const tmp3 = _modDef6769(RefreshControl, { disallowInterruption: true, shouldCancelWhenOutside: false });
+const tmp4 = _modDef6769(Switch, {
   shouldCancelWhenOutside: false,
   shouldActivateOnStart: true,
   disallowInterruption: true,
@@ -48,25 +48,20 @@ const tmp4 = itemsDefault(Switch, {
 export const LegacyRefreshControl = tmp3;
 export { LegacyScrollView };
 export const LegacySwitch = tmp4;
-export const LegacyTextInput = itemsDefault(TextInput);
-export const LegacyDrawerLayoutAndroid = itemsDefault(DrawerLayoutAndroid, { disallowInterruption: true });
+export const LegacyTextInput = _modDef6769(TextInput);
+export const LegacyDrawerLayoutAndroid = _modDef6769(DrawerLayoutAndroid, { disallowInterruption: true });
 export const LegacyFlatList = (arg0) => {
-  const ref = React.useRef(null);
+  const ref = noop.useRef(null);
   ({ waitFor: dependencyMap, refreshControl } = arg0);
   let obj = {};
   obj = {};
-  const entries = Object.entries(callback2(arg0, closure_3));
+  const entries = Object.entries(_objectWithoutProperties(arg0, closure_3));
   while (tmp3 !== undefined) {
-    let tmp5 = callback;
-    let tmp6 = callback(tmp4, 2);
+    let tmp6 = _slicedToArray(tmp4, 2);
     let first = tmp6[0];
     let tmp8 = first;
     let tmp9 = tmp6[1];
-    let tmp10 = ref;
-    let tmp11 = dependencyMap;
     let nativeViewProps = ref(6697).nativeViewProps;
-    let tmp12 = first;
-    let tmp13 = tmp9;
     if (nativeViewProps.includes(first)) {
       obj[tmp8] = tmp9;
     } else {
@@ -80,20 +75,19 @@ export const LegacyFlatList = (arg0) => {
     obj = {};
     const merged = Object.assign(arg0);
     const merged1 = Object.assign(obj);
-    let items = closure_1;
-    if (closure_1 == null) {
+    let items = dependencyMap;
+    if (dependencyMap == null) {
       items = [];
     }
     const items1 = [];
-    items1[HermesBuiltin.arraySpread(ref(closure_1_1[6]).toArray(items), 0)] = ref;
+    items1[HermesBuiltin.arraySpread(tagMessage.toArray(items), 0)] = ref;
     obj.waitFor = items1;
-    return closure_1_8(closure_1_10, obj);
+    return <LegacyScrollView />;
   };
   let cloneElementResult;
   if (refreshControl) {
-    obj1 = { ref: null };
-    obj1[0] = ref;
-    cloneElementResult = React.cloneElement(refreshControl, obj1);
+    const obj1 = { ref };
+    cloneElementResult = noop.cloneElement(refreshControl, obj1);
   }
   obj.refreshControl = cloneElementResult;
   return <closure_7 />;

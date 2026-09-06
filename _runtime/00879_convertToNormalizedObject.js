@@ -1,21 +1,22 @@
 // _runtime/00879_convertToNormalizedObject.js
-import registerSpanErrorInstrumentation from "00682_registerSpanErrorInstrumentation.js";
+import _mod682 from "metro/00682__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 const value = "value";
-arg5.convertToNormalizedObject = function convertToNormalizedObject(data) {
-  let obj = registerSpanErrorInstrumentation;
-  const normalizeResult = obj.normalize(data);
+
+export const convertToNormalizedObject = function convertToNormalizedObject(data) {
+  const normalizer = _mod682;
+  const normalizeResult = normalizer.normalize(data);
   if (null !== normalizeResult) {
     if (typeof normalizeResult === "object") {
       const _Array = Array;
       if (!Array.isArray(normalizeResult)) {
         const _Object = Object;
-        obj = normalizeResult;
+        let obj = normalizeResult;
       }
       return obj;
     }
   }
-  obj = { [closure_2]: normalizeResult };
+  obj = { [closure_1_2]: normalizeResult };
 };

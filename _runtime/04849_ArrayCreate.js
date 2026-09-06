@@ -1,12 +1,12 @@
 // _runtime/04849_ArrayCreate.js
-import getEvalledConstructor from "01282_getEvalledConstructor.js";
+import _mod1282 from "metro/01282__.js";
 import _mod1283 from "metro/01283__.js";
-import isInteger from "04846_isInteger.js";
+import _mod4846 from "metro/04846__.js";
 
-let closure_2 = getEvalledConstructor("%Array.prototype%");
+let closure_2 = _mod1282("%Array.prototype%");
 
 export default function ArrayCreate(arg0) {
-  if (isInteger(arg0)) {
+  if (_mod4846(arg0)) {
     if (arg0 >= 0) {
       if (arg0 > tmp(4850)) {
         const tmp12 = new tmp(1302)("length is greater than (2**32 - 1)");

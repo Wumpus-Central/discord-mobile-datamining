@@ -1,33 +1,35 @@
 // _runtime/01598_ServerContainer.js
-import importAllResult from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
+import BaseNavigationContainer from "01486_BaseNavigationContainer.js";
+import ServerContext from "01599_ServerContext.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
 
-export const ServerContainer = importAllResult.forwardRef(function ServerContainer(arg0, fn) {
-  let obj;
+export const ServerContainer = noop.forwardRef(function ServerContainer(arg0, fn) {
   ({ children, location: _location } = arg0);
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     console.error("'ServerContainer' should only be used on the server with 'react-dom/server' for SSR.");
   }, []);
-  obj = {};
+  value = {};
   if (fn) {
-    obj = { getCurrentOptions: null };
-    obj[0] = function getCurrentOptions() {
-      return obj.options;
+    value = {
+      getCurrentOptions() {
+        return obj.options;
+      },
     };
     if (typeof fn === "function") {
-      fn(obj);
+      fn(value);
     } else {
-      fn.current = obj;
+      fn.current = value;
     }
   }
-  obj = {
+  value = {
     value: { location: _location },
-    children: jsx(obj(1486).CurrentRenderContext.Provider, { value: obj, children }),
+    children: jsx(BaseNavigationContainer.CurrentRenderContext.Provider, { value, children }),
   };
-  return jsx(obj(1599).ServerContext.Provider, {
+  return jsx(ServerContext.ServerContext.Provider, {
     value: { location: _location },
-    children: jsx(obj(1486).CurrentRenderContext.Provider, { value: obj, children }),
+    children: jsx(BaseNavigationContainer.CurrentRenderContext.Provider, { value, children }),
   });
 });

@@ -1,13 +1,13 @@
 // _runtime/00420_returnsFalse.js
-import noopAll from "00019_noop.js";
-import useMergeRefsDefault from "00334_useMergeRefs.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/00421___INTERNAL_VIEW_CONFIG.js";
-import closure_5 from "metro/00032__slicedToArray.js";
-import closure_6 from "metro/00109__objectWithoutProperties.js";
-import noop from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _modDef334 from "metro/00334__.js";
+import _mod421 from "metro/00421__.js";
+import _slicedToArray from "metro/00032__.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import "module_19";
 
-const require = arg1;
+const _modDef421 = _mod421;
+
+require = fn;
 let closure_3 = [
   "disabled",
   "ios_backgroundColor",
@@ -19,8 +19,9 @@ let closure_3 = [
   "value",
 ];
 let closure_4 = ["onTintColor", "tintColor"];
-noopAll;
-({ useLayoutEffect: error, useRef: closure_8, useState: c9 } = noop);
+const noop = fn(19);
+({ useLayoutEffect: closure_7, useRef: closure_8, useState: closure_9 } = noop);
+const jsx = fn(21).jsx;
 function returnsFalse() {
   return false;
 }
@@ -29,17 +30,16 @@ function returnsTrue() {
 }
 
 export default function Switch(ref) {
-  const merged = Object.assign(ref, Object.create(null));
+  const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   c0 = undefined;
   importDefault = undefined;
-  dependencyMap = undefined;
-  closure_3 = undefined;
+  ref = undefined;
   let first;
-  let callback;
+  _slicedToArray = undefined;
   ({ disabled, ios_backgroundColor, onChange: c0, onValueChange: c1, trackColor, value } = merged);
   dependencyMap = value;
   ({ style, thumbColor } = merged);
-  const tmp3 = callback2(merged, closure_3);
+  const tmp3 = _objectWithoutProperties(merged, ref);
   let _false;
   if (trackColor != null) {
     _false = trackColor.false;
@@ -48,13 +48,13 @@ export default function Switch(ref) {
   if (trackColor != null) {
     _true = trackColor.true;
   }
-  const tmp6 = callback4(null);
-  closure_3 = tmp6;
-  const tmp10 = callback(callback5({ value: null }), 2);
+  const tmp6 = closure_8(null);
+  ref = tmp6;
+  const tmp10 = _slicedToArray(closure_9({ value: null }), 2);
   first = tmp10[0];
-  callback = tmp10[1];
+  _slicedToArray = tmp10[1];
   const items = [value, first];
-  callback3(() => {
+  closure_7(() => {
     let tmp2 = null != first.value && first.value !== tmp;
     if (tmp2) {
       const current = ref.current;
@@ -65,12 +65,12 @@ export default function Switch(ref) {
       tmp2 = null != setNativeProps;
     }
     if (tmp2) {
-      const Commands = _undefined(_undefined2[5]).Commands;
+      const Commands = _mod421.Commands;
       Commands.setNativeValue(ref.current, tmp);
     }
   }, items);
   ({ onTintColor, tintColor } = tmp3);
-  const tmp2Result = callback2(tmp3, first);
+  const tmp2Result = _objectWithoutProperties(tmp3, first);
   const accessibilityState = tmp2Result.accessibilityState;
   if (null == disabled) {
     disabled = undefined;
@@ -92,7 +92,7 @@ export default function Switch(ref) {
   obj = {
     accessibilityState: tmp16,
     enabled: true !== disabled,
-    on: tmp20,
+    on: true === value,
     style,
     thumbTintColor: thumbColor,
     trackColorForFalse: _false,
@@ -102,12 +102,10 @@ export default function Switch(ref) {
   if (true === value) {
     _false = _true;
   }
-  obj[7] = _false;
+  obj.trackTintColor = _false;
   obj = {};
-  let tmp2 = callback2;
   const tmp21 = jsx;
-  const tmp7 = importDefault;
-  const tmp9 = useMergeRefsDefault(tmp6, ref.ref);
+  const tmp9 = _modDef334(tmp6, ref.ref);
   const merged2 = Object.assign(tmp2Result);
   const merged3 = Object.assign(obj);
   let str = merged.accessibilityRole;
@@ -122,10 +120,10 @@ export default function Switch(ref) {
     if (c1 != null) {
       tmp3(nativeEvent.nativeEvent.value);
     }
-    callback({ value: nativeEvent.nativeEvent.value });
+    closure_5({ value: nativeEvent.nativeEvent.value });
   };
   obj.onResponderTerminationRequest = returnsFalse;
   obj.onStartShouldSetResponder = returnsTrue;
   obj.ref = tmp9;
-  return tmp21(__INTERNAL_VIEW_CONFIGDefault, obj);
+  return tmp21(_modDef421, obj);
 }

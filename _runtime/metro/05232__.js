@@ -1,33 +1,34 @@
 // _runtime/metro/05232__.js
-import readTag from "../05233_readTag.js";
-import importDefaultResult1 from "../05234_importDefaultResult1.js";
+import _modDef5218 from "05218__.js";
+import get0thIfdOffset from "../05233_get0thIfdOffset.js";
+import IFD_TYPE_0TH from "../05234_IFD_TYPE_0TH.js";
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 let c3 = "Exif IFD Pointer";
 let c4 = "GPS Info IFD Pointer";
 let c5 = "Interoperability IFD Pointer";
-arg5.default = {
-  read(getUint16, sum) {
-    const byteOrder = module(5218).getByteOrder(getUint16, sum);
-    const obj = module(5218);
-    const obj2 = readTag;
+
+export default {
+  read(getUint16, c5, arg2) {
+    const byteOrder = _modDef5218.getByteOrder(getUint16, c5);
+    const obj2 = get0thIfdOffset;
     const ifd = obj2.readIfd(
       getUint16,
-      importDefaultResult1.IFD_TYPE_0TH,
-      sum,
-      readTag.get0thIfdOffset(getUint16, sum, byteOrder),
+      IFD_TYPE_0TH.IFD_TYPE_0TH,
+      c5,
+      get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder),
       byteOrder,
       arg2,
     );
     let objectAssignResult = ifd;
     if (undefined !== ifd[c3]) {
-      let tmp3Result = tmp3(5213);
-      tmp3Result = tmp3(5233);
+      tmp3(5213);
+      const tmp3Result = tmp3(5233);
       objectAssignResult = tmp3Result.objectAssign(
         ifd,
-        tmp3Result.readIfd(getUint16, tmp3(5234).IFD_TYPE_EXIF, sum, sum + ifd[tmp5].value, byteOrder, arg2),
+        tmp3Result.readIfd(getUint16, tmp3(5234).IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
       );
     }
     if (undefined !== objectAssignResult[c4]) {
@@ -37,8 +38,8 @@ arg5.default = {
         tmp3Result2.readIfd(
           getUint16,
           tmp3(5234).IFD_TYPE_GPS,
-          sum,
-          sum + objectAssignResult[tmp12].value,
+          c5,
+          c5 + objectAssignResult[tmp12].value,
           byteOrder,
           arg2,
         ),
@@ -53,8 +54,8 @@ arg5.default = {
         tmp3Result4.readIfd(
           getUint16,
           tmp3(5234).IFD_TYPE_INTEROPERABILITY,
-          sum,
-          sum + objectAssignResult[tmp19].value,
+          c5,
+          c5 + objectAssignResult[tmp19].value,
           byteOrder,
           arg2,
         ),

@@ -1,48 +1,49 @@
 // _runtime/06898_VelocityTracker.js
-import _createClassDefault from "metro/06867__createClass.js";
-import VelocityTracker from "metro/06866__classCallCheck.js";
+import _modDef6867 from "metro/06867__.js";
+import _classCallCheck from "metro/06866__.js";
 
 class VelocityTracker {
   constructor() {
-    tmp = VelocityTracker(this, VelocityTracker);
+    tmp = closure_0(this, VelocityTracker);
     this.lastUpdateTime = Date.now();
     this.velocity = { x: 0, y: 0 };
     this.timeoutId = null;
     return;
   }
 }
-const items = [
-  {
-    key: "computeVelocity",
-    value: function computeVelocity(arg0, absoluteLastScrollOffset, arg2, arg3) {
-      let self = this;
-      self = this;
-      closure_0 = arg3;
-      this.cleanUp();
-      const timestamp = Date.now();
-      const diff = arg0 - absoluteLastScrollOffset;
-      const result = diff / Math.max(1, timestamp - this.lastUpdateTime);
-      this.lastUpdateTime = timestamp;
-      let num = 0;
-      if (arg2) {
-        num = result;
-      }
-      this.velocity.x = num;
-      let num2 = 0;
-      if (!arg2) {
-        num2 = result;
-      }
-      self.velocity.y = num2;
-      arg3(self.velocity, false);
-      self.timeoutId = setTimeout(() => {
-        self.cleanUp();
-        self.lastUpdateTime = Date.now();
-        self.velocity.x = 0;
-        self.velocity.y = 0;
-        callback(self.velocity, true);
-      }, 100);
-    },
+_classCallCheck = VelocityTracker;
+const entry = {
+  key: "computeVelocity",
+  value: function computeVelocity(adjustOffsetForRTLResult, absoluteLastScrollOffset, arg2, fn) {
+    const self = this;
+    closure_0 = fn;
+    this.cleanUp();
+    const timestamp = Date.now();
+    const diff = adjustOffsetForRTLResult - absoluteLastScrollOffset;
+    const result = diff / Math.max(1, timestamp - this.lastUpdateTime);
+    this.lastUpdateTime = timestamp;
+    let num = 0;
+    if (arg2) {
+      num = result;
+    }
+    this.velocity.x = num;
+    let num2 = 0;
+    if (!arg2) {
+      num2 = result;
+    }
+    self.velocity.y = num2;
+    fn(self.velocity, false);
+    self.timeoutId = setTimeout(() => {
+      self.cleanUp();
+      self.lastUpdateTime = Date.now();
+      self.velocity.x = 0;
+      self.velocity.y = 0;
+      closure_0(self.velocity, true);
+    }, 100);
   },
+};
+const items = [
+  entry,
   {
     key: "cleanUp",
     value: function cleanUp() {
@@ -56,4 +57,4 @@ const items = [
   },
 ];
 
-export const VelocityTracker = _createClassDefault(VelocityTracker, items);
+export const VelocityTracker = _modDef6867(VelocityTracker, items);

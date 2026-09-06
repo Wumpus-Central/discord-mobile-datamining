@@ -1,10 +1,10 @@
 // _runtime/04162_translate.js
-import hooks from "04153_hooks.js";
+import _mod4153 from "metro/04153__.js";
 
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = hooks;
+      const _module = _mod4153;
       const translate2 = function translate(arg0, arg1, arg2) {
         const text = `${arg0} `;
         if ("ss" === arg2) {
@@ -102,27 +102,27 @@ if (typeof exports === "object") {
       const split =
         "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca"
           .split;
-      obj[0] =
+      obj.format =
         "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split(
           "_",
         );
       const split2 =
         "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac"
           .split;
-      obj[1] =
+      obj.standalone =
         "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split(
           "_",
         );
-      obj[0] = obj;
+      obj.months = obj;
       const split3 = "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split;
-      obj[1] = "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_");
+      obj.monthsShort = "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_");
       const split4 = "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split;
-      obj[3] = "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_");
+      obj.weekdays = "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_");
       const split5 = "ned._pon._uto._sri._\u010Det._pet._sub.".split;
-      obj[4] = "ned._pon._uto._sri._\u010Det._pet._sub.".split("_");
+      obj.weekdaysShort = "ned._pon._uto._sri._\u010Det._pet._sub.".split("_");
       const split6 = "ne_po_ut_sr_\u010De_pe_su".split;
-      obj[5] = "ne_po_ut_sr_\u010De_pe_su".split("_");
-      obj[7] = {
+      obj.weekdaysMin = "ne_po_ut_sr_\u010De_pe_su".split("_");
+      obj.longDateFormat = {
         LT: "H:mm",
         LTS: "H:mm:ss",
         L: "DD.MM.YYYY",
@@ -133,63 +133,53 @@ if (typeof exports === "object") {
       const obj1 = {
         sameDay: "[danas u] LT",
         nextDay: "[sutra u] LT",
-        nextWeek: null,
+        nextWeek() {
+          const dayResult = this.day();
+          if (0 === dayResult) {
+            return "[u] [nedjelju] [u] LT";
+          } else if (3 === dayResult) {
+            return "[u] [srijedu] [u] LT";
+          } else if (6 === dayResult) {
+            return "[u] [subotu] [u] LT";
+          } else {
+            return "[u] dddd [u] LT";
+          }
+        },
         lastDay: "[ju\u010Der u] LT",
-        lastWeek: null,
+        lastWeek() {
+          const dayResult = this.day();
+          if (0 === dayResult) {
+            return "[pro\u0161lu] [nedjelju] [u] LT";
+          } else if (3 === dayResult) {
+            return "[pro\u0161lu] [srijedu] [u] LT";
+          } else if (6 === dayResult) {
+            return "[pro\u0161le] [subote] [u] LT";
+          } else {
+            return "[pro\u0161li] dddd [u] LT";
+          }
+        },
         sameElse: "L",
       };
-      obj1[2] = function nextWeek() {
-        const dayResult = this.day();
-        if (0 === dayResult) {
-          return "[u] [nedjelju] [u] LT";
-        } else if (3 === dayResult) {
-          return "[u] [srijedu] [u] LT";
-        } else if (6 === dayResult) {
-          return "[u] [subotu] [u] LT";
-        } else {
-          return "[u] dddd [u] LT";
-        }
-      };
-      obj1[4] = function lastWeek() {
-        const dayResult = this.day();
-        if (0 === dayResult) {
-          return "[pro\u0161lu] [nedjelju] [u] LT";
-        } else if (3 === dayResult) {
-          return "[pro\u0161lu] [srijedu] [u] LT";
-        } else if (6 === dayResult) {
-          return "[pro\u0161le] [subote] [u] LT";
-        } else {
-          return "[pro\u0161li] dddd [u] LT";
-        }
-      };
-      obj[8] = obj1;
+      obj.calendar = obj1;
       const obj2 = {
         future: "za %s",
         past: "prije %s",
         s: "par sekundi",
-        ss: null,
-        m: null,
-        mm: null,
-        h: null,
-        hh: null,
+        ss: translate2,
+        m: translate2,
+        mm: translate2,
+        h: translate2,
+        hh: translate2,
         d: "dan",
-        dd: null,
+        dd: translate2,
         M: "mjesec",
-        MM: null,
+        MM: translate2,
         y: "godinu",
-        yy: null,
+        yy: translate2,
       };
-      obj2[3] = translate2;
-      obj2[4] = translate2;
-      obj2[5] = translate2;
-      obj2[6] = translate2;
-      obj2[7] = translate2;
-      obj2[9] = translate2;
-      obj2[11] = translate2;
-      obj2[13] = translate2;
-      obj[9] = obj2;
-      obj[10] = /\d{1,2}\./;
-      obj[12] = { dow: 1, doy: 7 };
+      obj.relativeTime = obj2;
+      obj.dayOfMonthOrdinalParse = /\d{1,2}\./;
+      obj.week = { dow: 1, doy: 7 };
       _module.defineLocale("hr", obj);
     }
   }
@@ -300,12 +290,12 @@ if (typeof globalThis.define === "function") {
             "_",
           ),
       };
-      obj[0] = obj;
-      obj[1] = "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_");
-      obj[3] = "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_");
-      obj[4] = "ned._pon._uto._sri._\u010Det._pet._sub.".split("_");
-      obj[5] = "ne_po_ut_sr_\u010De_pe_su".split("_");
-      obj[7] = {
+      obj.months = obj;
+      obj.monthsShort = "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_");
+      obj.weekdays = "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_");
+      obj.weekdaysShort = "ned._pon._uto._sri._\u010Det._pet._sub.".split("_");
+      obj.weekdaysMin = "ne_po_ut_sr_\u010De_pe_su".split("_");
+      obj.longDateFormat = {
         LT: "H:mm",
         LTS: "H:mm:ss",
         L: "DD.MM.YYYY",
@@ -313,7 +303,7 @@ if (typeof globalThis.define === "function") {
         LLL: "Do MMMM YYYY H:mm",
         LLLL: "dddd, Do MMMM YYYY H:mm",
       };
-      obj[8] = {
+      obj.calendar = {
         sameDay: "[danas u] LT",
         nextDay: "[sutra u] LT",
         nextWeek() {
@@ -343,7 +333,7 @@ if (typeof globalThis.define === "function") {
         },
         sameElse: "L",
       };
-      obj[9] = {
+      obj.relativeTime = {
         future: "za %s",
         past: "prije %s",
         s: "par sekundi",
@@ -359,8 +349,8 @@ if (typeof globalThis.define === "function") {
         y: "godinu",
         yy: translate,
       };
-      obj[10] = /\d{1,2}\./;
-      obj[12] = { dow: 1, doy: 7 };
+      obj.dayOfMonthOrdinalParse = /\d{1,2}\./;
+      obj.week = { dow: 1, doy: 7 };
       return defineLocale.defineLocale("hr", obj);
     });
   }

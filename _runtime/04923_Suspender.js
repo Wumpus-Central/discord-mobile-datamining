@@ -1,13 +1,11 @@
 // _runtime/04923_Suspender.js
 import jsxProd from "react/00021_jsxProd.js";
-import noop from "00019_noop.js";
-import closure_3 from "00019_noop.js";
+import noop from "metro/00019__.js";
 
 function Suspender(children) {
   const freeze = children.freeze;
-  let ref1;
-  const ref = React.useRef(null);
-  ref1 = React.useRef(null);
+  const ref = noop.useRef(null);
+  const ref1 = noop.useRef(null);
   if (tmp2) {
     const promise = new Promise((current) => {
       ref1.current = current;
@@ -23,14 +21,14 @@ function Suspender(children) {
     ref1.current = null;
   }
   if (null !== ref.current) {
-    callback(ref.current);
+    React2(ref.current);
   }
   if (!freeze) {
     ref.current = null;
   }
-  return <closure_1>{arg0.children}</closure_1>;
+  return <framebus>{arg0.children}</framebus>;
 }
-({ Suspense: c0, Fragment: closure_1, use: obj1 } = noop);
+({ Suspense: closure_0, Fragment: closure_1, use: c2 } = noop);
 const jsx = jsxProd.jsx;
 
 export const Freeze = function Freeze(placeholder) {
@@ -40,8 +38,8 @@ export const Freeze = function Freeze(placeholder) {
     placeholder = null;
   }
   return (
-    <closure_0 fallback={placeholder}>
+    <React fallback={placeholder}>
       <Suspender freeze={freeze}>{children}</Suspender>
-    </closure_0>
+    </React>
   );
 };

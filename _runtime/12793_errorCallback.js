@@ -1,6 +1,6 @@
 // _runtime/12793_errorCallback.js
-import instrumentError from "12794_instrumentError.js";
-import instrumentUnhandledRejection from "12801_instrumentUnhandledRejection.js";
+import _mod12794 from "metro/12794__.js";
+import _mod12801 from "metro/12801__.js";
 import spanTimeInputToSeconds from "12802_spanTimeInputToSeconds.js";
 
 require = arg1;
@@ -19,19 +19,17 @@ function errorCallback() {
       const _HermesInternal = HermesInternal;
       logger.log("[Tracing] Root span: " + "internal_error" + " -> Global error occurred");
     }
-    obj = { code: null, message: "internal_error" };
-    obj[0] = tmp(12814).SPAN_STATUS_ERROR;
+    obj = { code: tmp(12814).SPAN_STATUS_ERROR, message: "internal_error" };
     rootSpan.setStatus(obj);
   }
 }
 let c2 = false;
 errorCallback.tag = "sentry_tracingErrorCallback";
-arg5.registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
+
+export const registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
   if (!c2) {
     c2 = true;
-    const result = instrumentError.addGlobalErrorInstrumentationHandler(errorCallback);
-    const obj = instrumentError;
-    const result1 = instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
-    const obj2 = instrumentUnhandledRejection;
+    const result = _mod12794.addGlobalErrorInstrumentationHandler(errorCallback);
+    const result1 = _mod12801.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
   }
 };

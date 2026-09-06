@@ -8,7 +8,6 @@ function areInputsEqual(arg0, arg1) {
       while (true) {
         let tmp = arg0[num];
         let tmp2 = arg1[num];
-        let tmp3 = num;
         if (tmp !== tmp2) {
           let tmp4 = ponyfill;
           if (!ponyfill(tmp)) {
@@ -38,11 +37,14 @@ if (!ponyfill) {
 export default function memoizeOne(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  closure_4 = [];
+  if (undefined === arg1) {
+    closure_1 = areInputsEqual;
+  }
+  let items = [];
   c5 = false;
   return function memoized() {
     let length;
-    const items = [];
+    items = [];
     let num = 0;
     if (0 < arguments.length) {
       do {
@@ -51,16 +53,16 @@ export default function memoizeOne(arg0, arg1) {
         length = arguments.length;
       } while (num < length);
     }
-    const self = this;
+    self = this;
     let tmp = c5;
     if (c5) {
       tmp = self === self;
     }
     if (tmp) {
-      tmp = callback2(items, items);
+      tmp = closure_1(items, items);
     }
     if (!tmp) {
-      closure_3 = callback.apply(self, items);
+      closure_3 = closure_0.apply(self, items);
       c5 = true;
     }
     return closure_3;

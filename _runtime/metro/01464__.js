@@ -1,5 +1,6 @@
 // _runtime/metro/01464__.js
-arg5.default = {
+
+export default {
   reachabilityUrl: "https://clients3.google.com/generate_204",
   reachabilityMethod: "HEAD",
   reachabilityHeaders: {},

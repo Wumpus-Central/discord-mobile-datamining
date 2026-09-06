@@ -1,18 +1,16 @@
 // _runtime/03824_closestIndexTo.js
-import _typeof from "metro/03650__typeof.js";
+import _typeof from "metro/03650__.js";
 import requiredArgs from "03651_requiredArgs.js";
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
@@ -20,7 +18,7 @@ if (!requiredArgs) {
 requiredArgs = tmp5;
 
 export default function closestIndexTo(arg0, arg1) {
-  requiredArgs.default(2, arguments);
+  absolute.default(2, arguments);
   const defaultResult1 = _typeof.default(arg0);
   if (isNaN(Number(defaultResult1))) {
     return NaN;
@@ -36,11 +34,11 @@ export default function closestIndexTo(arg0, arg1) {
         typeof call === "unknown" ? slice() : call(arg1);
       }
     }
-    const item = items.forEach((arg0, arg1) => {
-      const defaultResult = closure_1_0.default(arg0);
+    const item = items.forEach((item, index) => {
+      const defaultResult = _typeof.default(item);
       if (isNaN(Number(defaultResult))) {
         closure_0 = NaN;
-        let absolute = NaN;
+        absolute = NaN;
       } else {
         const _Math = Math;
         absolute = Math.abs(closure_2 - defaultResult.getTime());
@@ -50,7 +48,7 @@ export default function closestIndexTo(arg0, arg1) {
           tmp5 = absolute < Number(absolute);
         }
         if (tmp5) {
-          closure_0 = arg1;
+          closure_0 = index;
         }
       }
     });

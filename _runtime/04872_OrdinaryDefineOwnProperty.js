@@ -1,8 +1,8 @@
 // _runtime/04872_OrdinaryDefineOwnProperty.js
-import isObject from "04809_isObject.js";
+import _mod4809 from "metro/04809__.js";
 
 export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
-  if (isObject(arg0)) {
+  if (_mod4809(arg0)) {
     if (tmp(4856)(arg1)) {
       if (tmp(4860)(__Writable__)) {
         if (tmp(1284)) {

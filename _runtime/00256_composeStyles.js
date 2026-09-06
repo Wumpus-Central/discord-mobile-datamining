@@ -1,5 +1,6 @@
 // _runtime/00256_composeStyles.js
-arg5.default = function composeStyles(arg0, arg1) {
+
+export default function composeStyles(arg0, arg1) {
   let tmp = arg1;
   if (null != arg0) {
     let tmp2 = arg0;
@@ -10,4 +11,4 @@ arg5.default = function composeStyles(arg0, arg1) {
     tmp = tmp2;
   }
   return tmp;
-};
+}

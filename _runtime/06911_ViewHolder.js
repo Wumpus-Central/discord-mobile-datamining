@@ -1,14 +1,14 @@
 // _runtime/06911_ViewHolder.js
-import noopDefault from "00019_noop.js";
-import noop from "00019_noop.js";
+import noop from "metro/00019__.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-({ useCallback: obj1, useLayoutEffect: c3, useMemo: c4, useRef: c5 } = noop);
-({ jsx: closure_6, jsxs: error } = jsxProd);
+({ useCallback: c2, useLayoutEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 
-export const ViewHolder = noopDefault.memo(
+export const ViewHolder = noop.memo(
   (index) => {
-    const ref = extraData(null);
+    const tmp = extraData(null);
+    _require = tmp;
     index = index.index;
     const refHolder = index.refHolder;
     ({ layout, onSizeChanged } = index);
@@ -22,44 +22,42 @@ export const ViewHolder = noopDefault.memo(
     const items = [index, refHolder];
     ({ hidden, inverted } = index);
     onSizeChanged(() => {
-      const result = refHolder.set(index, ref);
+      const result = refHolder.set(index, closure_0);
       return () => {
-        if (closure_2.get(closure_1) === closure_0) {
-          closure_2.delete(closure_1);
+        if (refHolder.get(index) === closure_1_0) {
+          refHolder.delete(index);
         }
       };
     }, items);
     const items1 = [index, onSizeChanged];
     const items2 = [ItemSeparatorComponent, item, trailingItem];
-    const onLayout = refHolder((nativeEvent) => {
+    const items3 = [item, extraData, target, renderItem];
+    const tmp3 = refHolder((nativeEvent) => {
       if (onSizeChanged != null) {
         tmp(index, nativeEvent.nativeEvent.layout);
       }
     }, items1);
-    const items3 = [item, extraData, target, renderItem];
     let invertedTransformStyle;
     const tmp4 = renderItem(() => {
       let tmp2 = null;
       if (ItemSeparatorComponent) {
         tmp2 = null;
         if (undefined !== trailingItem) {
-          const obj = { leadingItem: null, trailingItem: null };
-          obj[0] = item;
-          obj[1] = tmp3;
-          tmp2 = item(tmp, obj);
+          const obj = { leadingItem: item, trailingItem: tmp3 };
+          tmp2 = timestampProducer(tmp, obj);
         }
       }
       return tmp2;
     }, items2);
     if (inverted) {
-      let style = ref(index[2]);
-      invertedTransformStyle = style.getInvertedTransformStyle(horizontal);
+      let obj = require("metro/06874__.js");
+      invertedTransformStyle = obj.getInvertedTransformStyle(horizontal);
     }
     let str = "column";
     if (horizontal) {
       str = "row";
     }
-    style = {
+    const size = {
       flexDirection: str,
       position: null,
       width: null,
@@ -76,36 +74,40 @@ export const ViewHolder = noopDefault.memo(
     if ("StickyHeader" === target) {
       str2 = "relative";
     }
-    style[1] = str2;
+    size.position = str2;
     let width;
     if (layout.enforcedWidth) {
       width = layout.width;
     }
-    style[2] = width;
+    size.width = width;
     let height;
     if (layout.enforcedHeight) {
       height = layout.height;
     }
-    style[3] = height;
-    ({ minHeight: obj2[4], minWidth: obj2[5], maxHeight: obj2[6], maxWidth: obj2[7], x: obj2[8], y: obj2[9] } = layout);
+    size.height = height;
+    ({
+      minHeight: obj2.minHeight,
+      minWidth: obj2.minWidth,
+      maxHeight: obj2.maxHeight,
+      maxWidth: obj2.maxWidth,
+      x: obj2.left,
+      y: obj2.top,
+    } = layout);
     let num = 1;
     if (hidden) {
       num = 0;
     }
-    style[10] = num;
+    size.opacity = num;
     const merged = Object.assign(invertedTransformStyle);
     if (CellRendererComponent == null) {
-      CellRendererComponent = ref(index[3]).CompatView;
+      CellRendererComponent = require("CompatView").CompatView;
     }
-    const children = [
+    obj = { ref: tmp, onLayout: tmp3, style: size, index, children: null };
+    const items4 = [
       renderItem(() => {
         let tmpResult;
         if (renderItem != null) {
-          const obj = { item: null, index: null, extraData: null, target: null };
-          obj[0] = item;
-          obj[1] = index;
-          obj[2] = extraData;
-          obj[3] = target;
+          const obj = { item, index, extraData, target };
           tmpResult = tmp(obj);
         }
         if (tmpResult == null) {
@@ -115,7 +117,8 @@ export const ViewHolder = noopDefault.memo(
       }, items3),
       tmp4,
     ];
-    return target(CellRendererComponent, { ref, onLayout, style, index, children });
+    obj.children = items4;
+    return target(CellRendererComponent, obj);
   },
   (index, index2) => {
     let tmp = index.index === index2.index;

@@ -1,5 +1,6 @@
 // _runtime/metro/14282__.js
-arg5.collations = [
+
+export const collations = [
   "big5han",
   "compat",
   "dict",

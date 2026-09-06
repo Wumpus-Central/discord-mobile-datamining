@@ -1,12 +1,13 @@
 // _runtime/00812_captureError.js
-import getClient from "00713_getClient.js";
+import _mod713 from "metro/00713__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.captureError = function captureError(error, prompt_execution, arg2) {
+
+export const captureError = function captureError(error, prompt_execution, arg2) {
   try {
-    let obj = getClient;
+    let obj = _mod713;
     if (obj.getClient()) {
       let tmpResult = tmp(684);
       const activeSpan = tmpResult.getActiveSpan();
@@ -15,8 +16,7 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
         isRecordingResult = activeSpan.isRecording();
       }
       if (isRecordingResult) {
-        obj = { code: null, message: "internal_error" };
-        obj[0] = tmp(705).SPAN_STATUS_ERROR;
+        obj = { code: tmp(705).SPAN_STATUS_ERROR, message: "internal_error" };
         activeSpan.setStatus(obj);
       }
       let str = prompt_execution;
@@ -25,12 +25,11 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
         str = "handler_execution";
       }
       obj = { mechanism: null };
-      obj1 = { type: "auto.ai.mcp_server", handled: false, data: null };
-      const obj2 = { error_type: null };
-      obj2[0] = str;
+      const obj1 = { type: "auto.ai.mcp_server", handled: false, data: null };
+      const obj2 = { error_type: str };
       const merged = Object.assign(arg2);
-      obj1[2] = obj2;
-      obj[0] = obj1;
+      obj1.data = obj2;
+      obj.mechanism = obj1;
       tmpResult.captureException(error, obj);
     }
   } catch (err) {}

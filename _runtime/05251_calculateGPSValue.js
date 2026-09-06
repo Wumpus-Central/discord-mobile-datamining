@@ -1,9 +1,9 @@
 // _runtime/05251_calculateGPSValue.js
 import _modDef5236 from "metro/05236__.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__.js";
 
 function calculateGPSValue(str) {
-  [tmp2, str] = callback(str.split(","), 2);
+  [tmp2, str] = _slicedToArray(str.split(","), 2);
   if (undefined !== tmp2) {
     if (undefined !== str) {
       const _parseFloat = parseFloat;
@@ -59,7 +59,7 @@ export default {
     }
     return str;
   },
-  (joined) => _modDef5236.ResolutionUnit(parseInt(joined, 10)),
+  (match) => _modDef5236.ResolutionUnit(parseInt(match, 10)),
   (str) => {
     let XResolutionResult = str;
     if (obj.test(str)) {
@@ -97,44 +97,43 @@ export default {
     }
     return FocalLengthResult;
   },
-  (joined) => _modDef5236.FocalPlaneResolutionUnit(parseInt(joined, 10)),
-  (joined) => {
-    if ("0x" === joined.substring(0, 2)) {
+  (match) => _modDef5236.FocalPlaneResolutionUnit(parseInt(match, 10)),
+  (match) => {
+    if ("0x" === match.substring(0, 2)) {
       const _parseInt2 = parseInt;
-      let parsed = parseInt(joined.substring(2), 16);
+      let parsed = parseInt(match.substring(2), 16);
     } else {
       const _parseInt = parseInt;
-      parsed = parseInt(joined, 10);
+      parsed = parseInt(match, 10);
     }
     return _modDef5236.ColorSpace(parsed);
   },
   (arg0, str) => {
     if (obj.test(str)) {
       const parts = str.split(", ");
-      const mapped = parts.map((str) => str.charCodeAt(0));
+      const mapped = parts.map((item) => item.charCodeAt(0));
       return _modDef5236.ComponentsConfiguration(mapped);
     } else {
       return str;
     }
     obj = /^\d, \d, \d, \d$/;
   },
-  (joined) => _modDef5236.Contrast(parseInt(joined, 10)),
-  (joined) => _modDef5236.CustomRendered(parseInt(joined, 10)),
-  (joined) => _modDef5236.ExposureMode(parseInt(joined, 10)),
-  (joined) => _modDef5236.ExposureProgram(parseInt(joined, 10)),
+  (match) => _modDef5236.Contrast(parseInt(match, 10)),
+  (match) => _modDef5236.CustomRendered(parseInt(match, 10)),
+  (match) => _modDef5236.ExposureMode(parseInt(match, 10)),
+  (match) => _modDef5236.ExposureProgram(parseInt(match, 10)),
   (str) => {
     let ExposureTimeResult = str;
     if (obj.test(str)) {
       const parts = str.split("/");
-      ExposureTimeResult = _modDef5236.ExposureTime(parts.map((joined) => parseInt(joined, 10)));
-      const obj2 = _modDef5236;
+      ExposureTimeResult = _modDef5236.ExposureTime(parts.map((item) => parseInt(item, 10)));
     }
     return ExposureTimeResult;
   },
-  (joined) => _modDef5236.MeteringMode(parseInt(joined, 10)),
-  (joined) => _modDef5236.Saturation(parseInt(joined, 10)),
-  (joined) => _modDef5236.SceneCaptureType(parseInt(joined, 10)),
-  (joined) => _modDef5236.Sharpness(parseInt(joined, 10)),
+  (match) => _modDef5236.MeteringMode(parseInt(match, 10)),
+  (match) => _modDef5236.Saturation(parseInt(match, 10)),
+  (match) => _modDef5236.SceneCaptureType(parseInt(match, 10)),
+  (match) => _modDef5236.Sharpness(parseInt(match, 10)),
   (str) => {
     let ShutterSpeedValueResult = str;
     if (obj.test(str)) {
@@ -142,5 +141,5 @@ export default {
     }
     return ShutterSpeedValueResult;
   },
-  (joined) => _modDef5236.WhiteBalance(parseInt(joined, 10))
+  (match) => _modDef5236.WhiteBalance(parseInt(match, 10))
 };

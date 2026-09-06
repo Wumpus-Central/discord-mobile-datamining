@@ -1,2 +1,3 @@
 // _runtime/04948_TabsHost.js
-arg5.default = { Host: require("TabsHost"), Screen: require("mapItemAppearanceToNativeProp") };
+
+export default { Host: fn(4949), Screen: fn(4956) };

@@ -1,27 +1,24 @@
 // _runtime/03857_eachHourOfInterval.js
-import addHours from "03804_addHours.js";
-import _typeof from "metro/03650__typeof.js";
+import 03804__ from "metro/03804__.js";
+import _typeof from "metro/03650__.js";
 import requiredArgs from "03651_requiredArgs.js";
 
-if (!addHours) {
-  let obj = { default: null };
-  obj[0] = addHours;
+if (!module_3804) {
+  let obj = { default: module_3804 };
   let tmp3 = obj;
 } else {
-  tmp3 = addHours;
+  tmp3 = module_3804;
 }
-addHours = tmp3;
+module_3804 = tmp3;
 if (!_typeof) {
-  obj = { default: null };
-  obj[0] = _typeof;
+  obj = { default: _typeof };
   let tmp5 = obj;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
   tmp7 = requiredArgs;
@@ -58,10 +55,8 @@ export default function eachHourOfInterval(arg0, step) {
         const items = [];
         if (defaultResult1.getTime() <= time1) {
           do {
-            let tmp15 = _typeof;
             let arr = items.push(_typeof.default(defaultResult1));
-            let tmp17 = addHours;
-            let defaultResult3 = addHours.default(defaultResult1, NumberResult);
+            let defaultResult3 = module_3804.default(defaultResult1, NumberResult);
             defaultResult1 = defaultResult3;
             time2 = defaultResult3.getTime();
           } while (time2 <= time1);

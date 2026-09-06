@@ -1,7 +1,7 @@
 // _runtime/04653_cloneTypedArray.js
 import cloneArrayBuffer from "04651_cloneArrayBuffer.js";
 
-export default function cloneTypedArray(buffer) {
+export default function cloneTypedArray(buffer, arg1) {
   if (arg1) {
     buffer = cloneArrayBuffer(buffer.buffer);
   } else {

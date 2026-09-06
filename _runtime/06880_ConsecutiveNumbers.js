@@ -1,23 +1,23 @@
 // _runtime/06880_ConsecutiveNumbers.js
-import _createClassDefault from "metro/06867__createClass.js";
-import ConsecutiveNumbers from "metro/06866__classCallCheck.js";
+import _modDef6867 from "metro/06867__.js";
+import _classCallCheck from "metro/06866__.js";
 
 class ConsecutiveNumbers {
   constructor(arg0, arg1) {
-    tmp = ConsecutiveNumbers(this, ConsecutiveNumbers);
+    tmp = closure_0(this, ConsecutiveNumbers);
     this.startIndex = global;
     this.endIndex = arg1;
     return;
   }
 }
-let obj = {
-  key: "length",
-  get() {
-    return Math.max(0, this.endIndex - this.startIndex + 1);
-  },
-};
+_classCallCheck = ConsecutiveNumbers;
 const items = [
-  obj,
+  {
+    key: "length",
+    get() {
+      return Math.max(0, this.endIndex - this.startIndex + 1);
+    },
+  },
   {
     key: "at",
     value: function at(arg0) {
@@ -70,12 +70,12 @@ const items = [
   },
   {
     key: "findValue",
-    value: function findValue(arg0) {
+    value: function findValue(fn) {
       const self = this;
       let num = 0;
       if (0 < this.length) {
         const sum = self.startIndex + num;
-        while (!arg0(sum, num, self)) {
+        while (!fn(sum, num, self)) {
           num = num + 1;
         }
         return sum;
@@ -84,11 +84,11 @@ const items = [
   },
   {
     key: "every",
-    value: function every(arg0) {
+    value: function every(fn) {
       const self = this;
       let num = 0;
       if (0 < this.length) {
-        while (arg0(self.startIndex + num, num, self)) {
+        while (fn(self.startIndex + num, num, self)) {
           num = num + 1;
         }
         return false;
@@ -110,30 +110,29 @@ const items = [
       }
       const sum = self.startIndex + num;
       const bound = Math.max(sum - 1, self.startIndex + Math.min(length, self.length) - 1);
-      const obj = Object.create(ConsecutiveNumbers.prototype);
-      ConsecutiveNumbers(obj, ConsecutiveNumbers);
+      const obj = Object.create(_classCallCheck.prototype);
+      _classCallCheck(obj, _classCallCheck);
       obj.startIndex = sum;
       obj.endIndex = bound;
       return obj;
     },
   },
 ];
-obj = {
+const entry = {
   key: Symbol.iterator,
   value() {
     const self = this;
     c3 = 0;
     c4 = 0;
-    return (function* value() {
+    return (function* value(arg0, value) {
       if (c4 === 2) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -144,22 +143,20 @@ obj = {
           if (0 === c3) {
             if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              const endIndex = _self;
+              endIndex = self;
               closure_1 = tmp4;
-              _self = undefined;
-              _self = _self.startIndex;
-              if (_self <= _self.endIndex) {
+              let startIndex;
+              startIndex = self.startIndex;
+              if (startIndex <= self.endIndex) {
                 c3 = 1;
                 c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = _self;
+                const obj1 = { value: startIndex, done: false };
                 return obj1;
               } else {
                 c4 = 3;
@@ -167,13 +164,12 @@ obj = {
             }
           } else if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            _self = _self + 1;
+            startIndex = startIndex + 1;
           }
           c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } catch (tmp13) {
           c4 = tmp;
@@ -183,8 +179,8 @@ obj = {
     })();
   },
 };
-items[9] = obj;
-let tmp2 = _createClassDefault(ConsecutiveNumbers, items);
+items[9] = entry;
+let tmp2 = _modDef6867(ConsecutiveNumbers, items);
 tmp2 = new tmp2(-1, -2);
 tmp2.EMPTY = tmp2;
 

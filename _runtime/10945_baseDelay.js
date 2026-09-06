@@ -1,6 +1,6 @@
 // _runtime/10945_baseDelay.js
 
-export default function baseDelay(fn) {
+export default function baseDelay(fn, arg1, arg2) {
   closure_0 = fn;
   closure_1 = arg2;
   if (typeof fn !== "function") {
@@ -10,7 +10,7 @@ export default function baseDelay(fn) {
   } else {
     const _setTimeout = setTimeout;
     return setTimeout(() => {
-      callback.apply(undefined, closure_1);
+      closure_0.apply(undefined, closure_1);
     }, arg1);
   }
 }

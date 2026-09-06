@@ -2,8 +2,7 @@
 import requiredArgs from "03651_requiredArgs.js";
 
 if (!requiredArgs) {
-  const obj = { default: null };
-  obj[0] = requiredArgs;
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;

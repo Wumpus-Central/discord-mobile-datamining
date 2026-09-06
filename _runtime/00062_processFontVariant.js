@@ -1,5 +1,6 @@
 // _runtime/00062_processFontVariant.js
-arg5.default = function processFontVariant(str) {
+
+export default function processFontVariant(str) {
   let found = str;
   if (!Array.isArray(str)) {
     const parts = str.split(" ");
@@ -7,4 +8,4 @@ arg5.default = function processFontVariant(str) {
     found = parts.filter(Boolean);
   }
   return found;
-};
+}

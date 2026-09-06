@@ -1,4 +1,4 @@
 // _runtime/01527_NavigationContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const NavigationContext = noopAll.createContext(undefined);
+export const NavigationContext = noop.createContext(undefined);

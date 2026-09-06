@@ -1,5 +1,6 @@
 // _runtime/metro/00240__.js
-arg5.default = {
+
+export default {
   setup() {},
   enable() {
     console.error(

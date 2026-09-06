@@ -9,7 +9,7 @@ import stackSet from "00644_stackSet.js";
 class Stack {
   constructor(arg0) {
     obj = {};
-    tmp = new require("ListCache")(global);
+    tmp = new closure_0(closure_1[0])(global);
     obj.__data__ = tmp;
     obj.size = tmp.size;
     return;

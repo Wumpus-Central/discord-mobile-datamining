@@ -1,5 +1,5 @@
 // _runtime/00761_MIN_DELAY.js
-import closure_2 from "00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let c3 = 100;
@@ -11,8 +11,8 @@ export function makeOfflineTransport(arg0) {
   closure_0 = arg0;
   function log() {
     const items = [...arguments];
-    if (callback(log[1]).DEBUG_BUILD) {
-      const debug = callback(log[2]).debug;
+    if (closure_0(log[1]).DEBUG_BUILD) {
+      const debug = closure_0(log[2]).debug;
       log = debug.log;
       const items1 = ["[Offline]:"];
       HermesBuiltin.arraySpread(items, 1);
@@ -20,78 +20,76 @@ export function makeOfflineTransport(arg0) {
     }
   }
   return (createStore) => {
-    const callback = createStore;
+    closure_0 = createStore;
     function flushIn(arg0) {
       if (timerId) {
         const _clearTimeout = clearTimeout;
         clearTimeout(timerId);
       }
-      timerId = setTimeout(closure_2_2(function*() {
-        if (arr === 2) {
-          arr = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            arr = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                arr = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                arr = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp5;
-                let table = tmp2;
-                table = undefined;
-                c2 = undefined;
-                c2 = 1;
-                arr = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = arr.shift();
-                return obj1;
-              }
-            } else if (arg0 === 1) {
-              arr = 3;
-              throw arg1;
+      timerId = setTimeout(
+        asyncGeneratorStep(async (arg0, value) => {
+          if (c3 === 2) {
+            c3 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw value;
             } else if (arg0 === 2) {
-              arr = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
+              let obj = { value, done: true };
+              return obj;
             } else {
-              table = arg1;
-              if (table) {
-                closure_1_1("Attempting to send previously queued event");
-                const _Date = Date;
-                const date = new Date();
-                table[0].sent_at = date.toISOString();
-                callback(table, true).catch((arg0) => {
-                  tmp5("Failed to retry sending", arg0);
-                });
-                const promise = callback(table, true);
-              }
-              arr = 3;
               return { value: "HermesInternal", done: null };
             }
-          } catch (tmp18) {
-            arr = tmp;
-            throw tmp18;
+          } else {
+            try {
+              c3 = 2;
+              if (0 === c2) {
+                if (arg0 === 1) {
+                  c3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  obj = { value, done: true };
+                  return obj;
+                } else {
+                  closure_0 = tmp2;
+                  closure_128_0 = undefined;
+                  c2 = undefined;
+                  c2 = 1;
+                  c3 = 1;
+                  const obj1 = { value: closure_2_3.shift(), done: false };
+                  return obj1;
+                }
+              } else if (arg0 === 1) {
+                c3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                const obj2 = { value, done: true };
+                return obj2;
+              } else {
+                closure_128_0 = value;
+                if (closure_128_0) {
+                  tmp5("Attempting to send previously queued event");
+                  const _Date = Date;
+                  const date = new Date();
+                  closure_128_0[0].sent_at = date.toISOString();
+                  closure_129_7(closure_128_0, true).catch((error) => {
+                    closure_1_1("Failed to retry sending", error);
+                  });
+                  const promise = closure_129_7(closure_128_0, true);
+                }
+                c3 = 3;
+                return { value: "HermesInternal", done: null };
+              }
+            } catch (tmp18) {
+              c3 = tmp;
+              throw tmp18;
+            }
           }
-        }
-      }), arg0);
+        }),
+        arg0,
+      );
       let unref = typeof timerId !== "number";
       if (typeof timerId !== "number") {
         unref = timerId.unref;
@@ -107,72 +105,70 @@ export function makeOfflineTransport(arg0) {
           clearTimeout(timerId);
         }
         const _setTimeout = setTimeout;
-        timerId = setTimeout(closure_2_2(function*() {
-          if (arr === 2) {
-            arr = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              arr = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  arr = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  arr = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  closure_1 = tmp5;
-                  let table = tmp2;
-                  table = undefined;
-                  c2 = undefined;
-                  c2 = 1;
-                  arr = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = arr.shift();
-                  return obj1;
-                }
-              } else if (arg0 === 1) {
-                arr = 3;
-                throw arg1;
+        timerId = setTimeout(
+          asyncGeneratorStep(async (arg0, value) => {
+            if (c3 === 2) {
+              c3 = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp4 === 3) {
+              if (arg0 === 1) {
+                throw value;
               } else if (arg0 === 2) {
-                arr = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
+                let obj = { value, done: true };
+                return obj;
               } else {
-                table = arg1;
-                if (table) {
-                  closure_1_1("Attempting to send previously queued event");
-                  const _Date = Date;
-                  const date = new Date();
-                  table[0].sent_at = date.toISOString();
-                  callback(table, true).catch((arg0) => {
-                    tmp5("Failed to retry sending", arg0);
-                  });
-                  const promise = callback(table, true);
-                }
-                arr = 3;
                 return { value: "HermesInternal", done: null };
               }
-            } catch (tmp18) {
-              arr = tmp;
-              throw tmp18;
+            } else {
+              try {
+                c3 = 2;
+                if (0 === c2) {
+                  if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    obj = { value, done: true };
+                    return obj;
+                  } else {
+                    closure_0 = tmp2;
+                    closure_128_0 = undefined;
+                    c2 = undefined;
+                    c2 = 1;
+                    c3 = 1;
+                    const obj1 = { value: closure_2_3.shift(), done: false };
+                    return obj1;
+                  }
+                } else if (arg0 === 1) {
+                  c3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  const obj2 = { value, done: true };
+                  return obj2;
+                } else {
+                  closure_128_0 = value;
+                  if (closure_128_0) {
+                    tmp5("Attempting to send previously queued event");
+                    const _Date = Date;
+                    const date = new Date();
+                    closure_128_0[0].sent_at = date.toISOString();
+                    closure_129_7(closure_128_0, true).catch((error) => {
+                      closure_1_1("Failed to retry sending", error);
+                    });
+                    const promise = closure_129_7(closure_128_0, true);
+                  }
+                  c3 = 3;
+                  return { value: "HermesInternal", done: null };
+                }
+              } catch (tmp18) {
+                c3 = tmp;
+                throw tmp18;
+              }
             }
-          }
-        }), closure_4);
+          }),
+          closure_4,
+        );
         let unref = typeof timerId !== "number";
         if (typeof timerId !== "number") {
           unref = timerId.unref;
@@ -182,12 +178,11 @@ export function makeOfflineTransport(arg0) {
         }
         const _Math = Math;
         closure_4 = Math.min(2 * closure_4, 3600000);
-        const tmp2 = closure_4;
       }
     }
     function send(arg0) {
       const self = this;
-      const apply = _send.apply;
+      const apply = closure_8.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -195,254 +190,177 @@ export function makeOfflineTransport(arg0) {
       }
       return applyArgumentsResult;
     }
-    function _send() {
-      const self = this;
-      const tmp = closure_2_2((arg0) => {
-        closure_0 = arg0;
-        closure_1 = arg1;
-        c6 = 0;
-        c7 = 0;
-        c5 = 0;
-        const iter = (function*(arg0) {
-          if (c7 === 2) {
-            c7 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp5 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
+    closure_8 = async function _send(arg0, value) {
+      if (1 === tmp6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          return { value, done: true };
+        } else {
+          if (!closure_130_1) {
+            let obj13 = createStore(729);
+            if (obj13.envelopeContainsItemType(closure_130_0, ["replay_event", "replay_recording"])) {
+              c6 = 2;
+              c7 = 1;
+              return { value: closure_131_3.push(closure_130_0), done: false };
             }
-          } else {
-            try {
-              c7 = 2;
-              if (0 === v02) {
-                if (arg0 === 1) {
-                  c7 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  c3 = tmp2;
-                  let config = tmp6;
-                  let flag;
-                  if (flag === undefined) {
-                    flag = false;
-                  }
-                  config = undefined;
-                  c3 = undefined;
-                  v02 = 1;
-                  c7 = 1;
-                  return { value: "PX_16", done: true };
-                }
-              } else {
-                if (1 === tmp6) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    obj1 = { value: null, done: true };
-                    obj1[0] = arg1;
-                    return obj1;
-                  } else {
-                    if (!closure_2_1) {
-                      let obj13 = closure_2_0(closure_2_1[3]);
-                      if (obj13.envelopeContainsItemType(closure_2_0, ["replay_event", "replay_recording"])) {
-                        v02 = 2;
-                        c7 = 1;
-                        let obj2 = { value: null, done: false };
-                        obj2[0] = arr.push(closure_2_0);
-                        return obj2;
-                      }
-                    }
-                    let v0 = 1;
-                    if (closure_2_0.shouldSend) {
-                      v02 = 6;
-                      c7 = 1;
-                      const obj3 = { value: null, done: false };
-                      obj3[0] = closure_2_0.shouldSend(closure_2_0);
-                      return obj3;
-                    }
-                  }
-                } else if (2 === tmp6) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    const obj4 = { value: null, done: true };
-                    obj4[0] = arg1;
-                    return obj4;
-                  } else {
-                    v0(arr);
-                    c7 = 3;
-                    let obj5 = { value: null, done: true };
-                    obj5[0] = {};
-                    return obj5;
-                  }
-                } else if (3 === tmp6) {
-                  v0 = 0;
-                  v02 = 4;
-                  c7 = 1;
-                  const obj6 = { value: null, done: false };
-                  obj6[0] = (function shouldQueue() { ... })(closure_2_0, closure_4, closure_4);
-                  return obj6;
-                } else if (4 === tmp6) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    const obj7 = { value: null, done: true };
-                    obj7[0] = arg1;
-                    return obj7;
-                  } else if (arg1) {
-                    arr = c3;
-                    if (closure_2_1) {
-                      v02 = 8;
-                      c7 = 1;
-                      const obj8 = { value: null, done: false };
-                      obj8[0] = arr.unshift(closure_2_0);
-                      return obj8;
-                    } else {
-                      v02 = 7;
-                      c7 = 1;
-                      const obj9 = { value: null, done: false };
-                      obj9[0] = arr.push(closure_2_0);
-                      return obj9;
-                    }
-                  } else {
-                    throw closure_4;
-                  }
-                } else if (5 === tmp6) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    v0 = 0;
-                    c7 = 3;
-                    const obj10 = { value: null, done: true };
-                    obj10[0] = arg1;
-                    return obj10;
-                  } else {
-                    config = arg1;
-                    c3 = arr;
-                    if (!config) {
-                      v0(arr);
-                      v0 = 0;
-                      c7 = 3;
-                    } else {
-                      const headers = config.headers;
-                      let prop;
-                      if (headers != null) {
-                        prop = headers["retry-after"];
-                      }
-                      if (!prop) {
-                        const headers2 = closure_2_2.headers;
-                        let prop1;
-                        if (headers2 != null) {
-                          prop1 = headers2["x-sentry-rate-limits"];
-                        }
-                        if (prop1) {
-                          c3 = 60000;
-                        } else {
-                          let num9 = config.statusCode;
-                          if (!num9) {
-                            num9 = 0;
-                          }
-                          if (num9 >= 400) {
-                            v0 = 0;
-                            c7 = 3;
-                            const obj11 = { value: null, done: true };
-                            obj11[0] = config;
-                            return obj11;
-                          }
-                        }
-                      }
-                    }
-                    obj5 = closure_2_0(closure_2_1[4]);
-                    arr = obj5.parseRetryAfterHeader(closure_2_2.headers["retry-after"]);
-                  }
-                } else if (6 === tmp6) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    v0 = 0;
-                    c7 = 3;
-                    const obj12 = { value: null, done: true };
-                    obj12[0] = arg1;
-                    return obj12;
-                  } else if (false === arg1) {
-                    const _Error = Error;
-                    error = new Error("Envelope not sent because `shouldSend` callback returned false");
-                    throw error;
-                  }
-                } else {
-                  if (7 === tmp6) {
-                    if (arg0 === 1) {
-                      c7 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      c7 = 3;
-                      obj13 = { value: null, done: true };
-                      obj13[0] = arg1;
-                      return obj13;
-                    }
-                  } else if (arg0 === 1) {
-                    c7 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  }
-                  v02();
-                  callback("Error sending. Event queued.", closure_4);
-                  c7 = 3;
-                  const obj14 = { value: null, done: true };
-                  obj14[0] = {};
-                  return obj14;
-                }
-                v02 = 5;
-                c7 = 1;
-                const obj15 = { value: null, done: false };
-                obj15[0] = closure_2_1.send(closure_2_0);
-                return obj15;
+          }
+          c5 = 1;
+          if (closure_131_0.shouldSend) {
+            c6 = 6;
+            c7 = 1;
+            return { value: closure_131_0.shouldSend(closure_130_0), done: false };
+          }
+        }
+      } else if (2 === tmp6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          return { value, done: true };
+        } else {
+          closure_131_5(closure_2_3);
+          c7 = 3;
+          let obj5 = { value: {}, done: true };
+          return obj5;
+        }
+      } else if (3 === tmp6) {
+        c5 = 0;
+        closure_130_4 = closure_4;
+        c6 = 4;
+        c7 = 1;
+        return {
+          value: (function shouldQueue(arg0, arg1, arg2) {
+            const result = createStore(729).envelopeContainsItemType(arg0, ["client_report"]);
+            let tmp2 = !result;
+            if (!result) {
+              shouldStore = shouldStore.shouldStore;
+              let shouldStoreResult = !shouldStore;
+              if (shouldStore) {
+                shouldStoreResult = obj2.shouldStore(arg0, arg1, arg2);
               }
-            } catch (tmp69) {
-              closure_4 = tmp69;
-              if (tmp3 === v0) {
-                c7 = tmp;
-                throw tmp69;
+              tmp2 = shouldStoreResult;
+              obj2 = shouldStore;
+            }
+            return tmp2;
+          })(closure_130_0, closure_130_4, closure_131_4),
+          done: false,
+        };
+      } else if (4 === tmp6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          return { value, done: true };
+        } else if (value) {
+          if (closure_130_1) {
+            c6 = 8;
+            c7 = 1;
+            return { value: arr.unshift(closure_130_0), done: false };
+          } else {
+            c6 = 7;
+            c7 = 1;
+            return { value: arr.push(closure_130_0), done: false };
+          }
+        } else {
+          throw closure_130_4;
+        }
+      } else if (5 === tmp6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          return { value, done: true };
+        } else {
+          closure_130_2 = value;
+          closure_130_3 = closure_2_3;
+          if (!closure_130_2) {
+            closure_131_5(closure_130_3);
+            closure_131_4 = closure_2_4;
+            c5 = 0;
+            c7 = 3;
+          } else {
+            const headers = closure_130_2.headers;
+            let prop;
+            if (headers != null) {
+              prop = headers["retry-after"];
+            }
+            if (!prop) {
+              const headers2 = closure_130_2.headers;
+              let prop1;
+              if (headers2 != null) {
+                prop1 = headers2["x-sentry-rate-limits"];
+              }
+              if (prop1) {
+                closure_130_3 = 60000;
               } else {
-                v02 = tmp;
+                let num9 = closure_130_2.statusCode;
+                if (!num9) {
+                  num9 = 0;
+                }
+                if (num9 >= 400) {
+                  c5 = 0;
+                  c7 = 3;
+                  return { value: closure_130_2, done: true };
+                }
               }
             }
           }
-        })();
-        iter.next();
-        return iter;
-      });
-      closure_8 = tmp;
-      const apply = tmp.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          obj5 = createStore(744);
+          closure_130_3 = obj5.parseRetryAfterHeader(closure_130_2.headers["retry-after"]);
+        }
+      } else if (6 === tmp6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          return { value, done: true };
+        } else if (false === value) {
+          const _Error = Error;
+          const error = new Error("Envelope not sent because `shouldSend` callback returned false");
+          throw error;
+        }
       } else {
-        applyArgumentsResult = apply(self, arguments);
+        if (7 === tmp6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj13 = { value, done: true };
+            return obj13;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          return { value, done: true };
+        }
+        closure_131_6();
+        closure_1("Error sending. Event queued.", closure_130_4);
+        c7 = 3;
+        return { value: {}, done: true };
       }
-      return applyArgumentsResult;
-    }
-    closure_1 = callback(createStore);
+      await closure_131_1.send(closure_130_0);
+      closure_3 = tmp2;
+      closure_130_0 = shouldStore;
+      let flag = closure_1;
+      if (closure_1 === undefined) {
+        flag = false;
+      }
+      closure_130_1 = flag;
+      return "PX_16";
+    };
+    closure_1 = closure_0(createStore);
     if (createStore.createStore) {
       closure_3 = createStore.createStore(createStore);
       closure_4 = closure_1_4;
@@ -453,72 +371,70 @@ export function makeOfflineTransport(arg0) {
             clearTimeout(timerId);
           }
           let _setTimeout = setTimeout;
-          timerId = setTimeout(closure_1_2(function*() {
-            if (arr === 2) {
-              arr = 3;
-              HermesBuiltin.throwTypeError();
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw arg1;
-              } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                arr = 2;
-                if (0 === c2) {
-                  if (arg0 === 1) {
-                    arr = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    arr = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    closure_1 = tmp5;
-                    let table = tmp2;
-                    table = undefined;
-                    c2 = undefined;
-                    c2 = 1;
-                    arr = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = arr.shift();
-                    return obj1;
-                  }
-                } else if (arg0 === 1) {
-                  arr = 3;
-                  throw arg1;
+          timerId = setTimeout(
+            asyncGeneratorStep(async (arg0, value) => {
+              if (c3 === 2) {
+                c3 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp4 === 3) {
+                if (arg0 === 1) {
+                  throw value;
                 } else if (arg0 === 2) {
-                  arr = 3;
-                  const obj2 = { value: null, done: true };
-                  obj2[0] = arg1;
-                  return obj2;
+                  let obj = { value, done: true };
+                  return obj;
                 } else {
-                  table = arg1;
-                  if (table) {
-                    closure_1_1("Attempting to send previously queued event");
-                    const _Date = Date;
-                    const date = new Date();
-                    table[0].sent_at = date.toISOString();
-                    callback(table, true).catch((arg0) => {
-                      tmp5("Failed to retry sending", arg0);
-                    });
-                    const promise = callback(table, true);
-                  }
-                  arr = 3;
                   return { value: "HermesInternal", done: null };
                 }
-              } catch (tmp18) {
-                arr = tmp;
-                throw tmp18;
+              } else {
+                try {
+                  c3 = 2;
+                  if (0 === c2) {
+                    if (arg0 === 1) {
+                      c3 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      obj = { value, done: true };
+                      return obj;
+                    } else {
+                      closure_0 = tmp2;
+                      closure_128_0 = undefined;
+                      c2 = undefined;
+                      c2 = 1;
+                      c3 = 1;
+                      const obj1 = { value: closure_2_3.shift(), done: false };
+                      return obj1;
+                    }
+                  } else if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    const obj2 = { value, done: true };
+                    return obj2;
+                  } else {
+                    closure_128_0 = value;
+                    if (closure_128_0) {
+                      tmp5("Attempting to send previously queued event");
+                      const _Date = Date;
+                      const date = new Date();
+                      closure_128_0[0].sent_at = date.toISOString();
+                      closure_129_7(closure_128_0, true).catch((error) => {
+                        closure_1_1("Failed to retry sending", error);
+                      });
+                      const promise = closure_129_7(closure_128_0, true);
+                    }
+                    c3 = 3;
+                    return { value: "HermesInternal", done: null };
+                  }
+                } catch (tmp18) {
+                  c3 = tmp;
+                  throw tmp18;
+                }
               }
-            }
-          }), closure_4);
+            }),
+            closure_4,
+          );
           let unref = typeof timerId !== "number";
           if (typeof timerId !== "number") {
             unref = timerId.unref;
@@ -528,100 +444,97 @@ export function makeOfflineTransport(arg0) {
           }
           let _Math = Math;
           closure_4 = Math.min(2 * closure_4, 3600000);
-          const tmp8 = closure_4;
         }
       }
-      let obj = { send: null, flush: null };
-      obj[0] = send;
-      obj[1] = function flush(arg0) {
-        if (undefined === arg0) {
-          closure_4 = closure_2_4;
-          if (timerId) {
-            const _clearTimeout = clearTimeout;
-            clearTimeout(timerId);
-          }
-          const _setTimeout = setTimeout;
-          timerId = setTimeout(closure_2_2(function*() {
-            if (arr === 2) {
-              arr = 3;
-              HermesBuiltin.throwTypeError();
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw arg1;
-              } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                arr = 2;
-                if (0 === c2) {
+      let obj = {
+        send,
+        flush(arg0) {
+          if (undefined === arg0) {
+            closure_4 = c4;
+            if (timerId) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(timerId);
+            }
+            const _setTimeout = setTimeout;
+            timerId = setTimeout(
+              asyncGeneratorStep(async (arg0, value) => {
+                if (c3 === 2) {
+                  c3 = 3;
+                  throw new TypeError("Generator functions may not be called on executing generators");
+                } else if (tmp4 === 3) {
                   if (arg0 === 1) {
-                    arr = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
-                    arr = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    let obj = { value, done: true };
                     return obj;
                   } else {
-                    closure_1 = tmp5;
-                    let table = tmp2;
-                    table = undefined;
-                    c2 = undefined;
-                    c2 = 1;
-                    arr = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = arr.shift();
-                    return obj1;
+                    return { value: "HermesInternal", done: null };
                   }
-                } else if (arg0 === 1) {
-                  arr = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  arr = 3;
-                  const obj2 = { value: null, done: true };
-                  obj2[0] = arg1;
-                  return obj2;
                 } else {
-                  table = arg1;
-                  if (table) {
-                    closure_1_1("Attempting to send previously queued event");
-                    const _Date = Date;
-                    const date = new Date();
-                    table[0].sent_at = date.toISOString();
-                    callback(table, true).catch((arg0) => {
-                      tmp5("Failed to retry sending", arg0);
-                    });
-                    const promise = callback(table, true);
+                  try {
+                    c3 = 2;
+                    if (0 === c2) {
+                      if (arg0 === 1) {
+                        c3 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c3 = 3;
+                        obj = { value, done: true };
+                        return obj;
+                      } else {
+                        closure_0 = tmp2;
+                        closure_128_0 = undefined;
+                        c2 = undefined;
+                        c2 = 1;
+                        c3 = 1;
+                        const obj1 = { value: closure_2_3.shift(), done: false };
+                        return obj1;
+                      }
+                    } else if (arg0 === 1) {
+                      c3 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      const obj2 = { value, done: true };
+                      return obj2;
+                    } else {
+                      closure_128_0 = value;
+                      if (closure_128_0) {
+                        tmp5("Attempting to send previously queued event");
+                        const _Date = Date;
+                        const date = new Date();
+                        closure_128_0[0].sent_at = date.toISOString();
+                        closure_129_7(closure_128_0, true).catch((error) => {
+                          closure_1_1("Failed to retry sending", error);
+                        });
+                        const promise = closure_129_7(closure_128_0, true);
+                      }
+                      c3 = 3;
+                      return { value: "HermesInternal", done: null };
+                    }
+                  } catch (tmp18) {
+                    c3 = tmp;
+                    throw tmp18;
                   }
-                  arr = 3;
-                  return { value: "HermesInternal", done: null };
                 }
-              } catch (tmp18) {
-                arr = tmp;
-                throw tmp18;
-              }
+              }),
+              c3,
+            );
+            let unref = typeof timerId !== "number";
+            if (typeof timerId !== "number") {
+              unref = timerId.unref;
             }
-          }), closure_2_3);
-          let unref = typeof timerId !== "number";
-          if (typeof timerId !== "number") {
-            unref = timerId.unref;
+            if (unref) {
+              timerId.unref();
+            }
           }
-          if (unref) {
-            timerId.unref();
-          }
-          const tmp2 = closure_2_3;
-        }
-        return closure_1.flush(arg0);
+          return closure_1.flush(arg0);
+        },
       };
       return obj;
     } else {
       let _Error = Error;
-      error = new Error("No `createStore` function was provided");
+      let error = new Error("No `createStore` function was provided");
       throw error;
     }
   };

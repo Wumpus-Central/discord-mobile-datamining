@@ -1,31 +1,27 @@
 // _runtime/00061_processTransformOrigin.js
-import _slicedToArrayDefault from "metro/00032__slicedToArray.js";
 import _modDef38 from "metro/00038__.js";
+import _slicedToArray from "metro/00032__.js";
 
-_slicedToArrayDefault;
 const re2 = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;
 
 export default function processTransformOrigin(str) {
   let tmp = str;
   if (typeof str === "string") {
-    regex.lastIndex = 0;
+    re2.lastIndex = 0;
     const items = ["50%", "50%", 0];
-    let match = regex.exec(str);
+    let match = re2.exec(str);
     let num4 = 0;
     tmp = items;
     if (match) {
       while (true) {
         str = match[0];
         let formatted = str.toLowerCase();
-        let tmp3 = num4;
         let sum = num4 + 1;
         if ("left" !== formatted) {
           if ("right" !== formatted) {
             if ("top" !== formatted) {
               if ("bottom" !== formatted) {
                 if ("center" === formatted) {
-                  let tmp5 = importDefault;
-                  let tmp6 = dependencyMap;
                   let tmp7 = _modDef38(2 !== num4, "Transform-origin value %s cannot be used for z-position", str);
                   items[num4] = "50%";
                   let num = sum;
@@ -40,7 +36,6 @@ export default function processTransformOrigin(str) {
               }
             }
             let tmp8 = importDefault;
-            let tmp9 = dependencyMap;
             let tmp10 = _modDef38(2 !== num4, "Transform-origin %s can only be used for y-position", str);
             let num2 = "100%";
             if ("top" === formatted) {
@@ -49,8 +44,7 @@ export default function processTransformOrigin(str) {
             items[1] = num2;
             num = sum;
             if (0 === num4) {
-              let tmp20 = regex;
-              let match1 = regex.exec(str);
+              let match1 = re2.exec(str);
               tmp = items;
               if (null == match1) {
                 break;
@@ -74,16 +68,13 @@ export default function processTransformOrigin(str) {
             }
             break;
           }
-          let tmp15 = regex;
-          match = regex.exec(str);
+          match = re2.exec(str);
           num4 = num;
           tmp = items;
           if (!match) {
             break;
           }
         }
-        let tmp12 = importDefault;
-        let tmp13 = dependencyMap;
         let tmp14 = _modDef38(0 === num4, "Transform-origin %s can only be used for x-position", str);
         let num3 = "100%";
         if ("left" === formatted) {

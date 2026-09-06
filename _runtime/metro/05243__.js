@@ -1,11 +1,11 @@
 // _runtime/metro/05243__.js
-arg5.default = {
-  0: {
-    name: "PentaxVersion",
-    description(join) {
-      return join.join(".");
-    },
+let obj = { 0: null, 5: "PentaxModelID", 555: "LevelInfo" };
+obj = {
+  name: "PentaxVersion",
+  description(join) {
+    return join.join(".");
   },
-  5: "PentaxModelID",
-  555: "LevelInfo",
 };
+obj.name = obj;
+
+export default obj;

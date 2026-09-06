@@ -1,6 +1,7 @@
 // _runtime/00983_enrichAndroidProfileWithEventContext.js
-import isHermesEnabled from "00867_isHermesEnabled.js";
-import getDebugMetadata from "00984_getDebugMetadata.js";
+import _mod682 from "metro/00682__.js";
+import _mod867 from "metro/00867__.js";
+import DEFAULT_BUNDLE_NAME from "00984_DEFAULT_BUNDLE_NAME.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -29,10 +30,10 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   };
   obj = { images: null };
   const merged = Object.assign({}, build_id);
-  obj[0] = getDebugMetadata.getDebugMetadata();
-  obj[0] = obj;
-  obj[1] = build_id.build_id || "";
-  obj[2] = [];
+  obj.images = DEFAULT_BUNDLE_NAME.getDebugMetadata();
+  obj.debug_meta = obj;
+  obj.build_id = build_id.build_id || "";
+  obj.device_cpu_frequencies = [];
   contexts = contexts.contexts;
   let device;
   if (null !== contexts) {
@@ -49,7 +50,7 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   if (!flag) {
     flag = false;
   }
-  obj[3] = flag;
+  obj.device_is_emulator = flag;
   const contexts2 = contexts.contexts;
   let str;
   if (null !== contexts2) {
@@ -63,7 +64,7 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   if (!str) {
     str = "";
   }
-  obj[4] = str;
+  obj.device_locale = str;
   const contexts3 = contexts.contexts;
   let device1;
   if (null !== contexts3) {
@@ -80,7 +81,7 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   if (!str2) {
     str2 = "";
   }
-  obj[5] = str2;
+  obj.device_manufacturer = str2;
   const contexts4 = contexts.contexts;
   let device2;
   if (null !== contexts4) {
@@ -97,7 +98,7 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   if (!str3) {
     str3 = "";
   }
-  obj[6] = str3;
+  obj.device_model = str3;
   const contexts5 = contexts.contexts;
   let os;
   if (null !== contexts5) {
@@ -114,7 +115,7 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   if (!str4) {
     str4 = "";
   }
-  obj[7] = str4;
+  obj.device_os_name = str4;
   const contexts6 = contexts.contexts;
   let os1;
   if (null !== contexts6) {
@@ -131,7 +132,7 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   if (!str5) {
     str5 = "";
   }
-  obj[8] = str5;
+  obj.device_os_version = str5;
   const contexts7 = contexts.contexts;
   let device3;
   if (null !== contexts7) {
@@ -153,14 +154,14 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   if (!str6) {
     str6 = "";
   }
-  obj[9] = str6;
+  obj.device_physical_memory_bytes = str6;
   let environment = contexts.environment;
   if (!environment) {
-    environment = isHermesEnabled.getDefaultEnvironment();
-    const tmp2Result = isHermesEnabled;
+    environment = _mod867.getDefaultEnvironment();
+    const tmp2Result = _mod867;
   }
-  obj[10] = environment;
-  obj[11] = profile_id;
+  obj.environment = environment;
+  obj.profile_id = profile_id;
   let _Date = Date;
   if (contexts.start_timestamp) {
     _Date = new _Date(1000 * contexts.start_timestamp);
@@ -169,11 +170,11 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
     const _Date1 = new _Date();
     toISOStringResult = _Date1.toISOString();
   }
-  obj[12] = toISOStringResult;
-  obj[13] = contexts.release || "";
-  obj[14] = contexts.dist || "";
-  obj[15] = contexts.event_id || "";
-  obj[16] = contexts.transaction || "";
+  obj.timestamp = toISOStringResult;
+  obj.release = contexts.release || "";
+  obj.dist = contexts.dist || "";
+  obj.transaction_id = contexts.event_id || "";
+  obj.transaction_name = contexts.transaction || "";
   const contexts8 = contexts.contexts;
   let trace;
   if (null !== contexts8) {
@@ -190,21 +191,21 @@ function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
   if (!str8) {
     str8 = "";
   }
-  obj[17] = str8;
-  obj[18] = contexts.release || "";
-  obj[19] = contexts.dist || "";
+  obj.trace_id = str8;
+  obj.version_name = contexts.release || "";
+  obj.version_code = contexts.dist || "";
   return Object.assign(merged, obj);
 }
-arg5.isValidProfile = function isValidProfile(samples) {
+
+export const isValidProfile = function isValidProfile(samples) {
   return samples.samples.length > 1;
 };
-arg5.findProfiledTransactionsFromEnvelope = function findProfiledTransactionsFromEnvelope(arg0) {
+export const findProfiledTransactionsFromEnvelope = function findProfiledTransactionsFromEnvelope(arg0) {
   const items = [];
-  items(682).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+  _mod682.forEachEnvelopeItem(arg0, (arg0, arg1) => {
     if ("transaction" === arg1) {
       for (let num = 1; num < arg0.length; num = num + 1) {
         let contexts = arg0[num].contexts;
-        let tmp = num;
         let trace;
         if (null !== contexts) {
           if (undefined !== contexts) {
@@ -224,7 +225,6 @@ arg5.findProfiledTransactionsFromEnvelope = function findProfiledTransactionsFro
           }
         }
         if (profile_id) {
-          let tmp5 = items;
           let arr = items.push(arg0[num]);
         }
       }
@@ -232,7 +232,7 @@ arg5.findProfiledTransactionsFromEnvelope = function findProfiledTransactionsFro
   });
   return items;
 };
-arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithEventContext(
+export const enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithEventContext(
   profile_id,
   value,
   contexts,
@@ -260,8 +260,8 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         }
         const _Object = Object;
         let obj = {
-          event_id: null,
-          runtime: null,
+          event_id: profile_id,
+          runtime: { name: "hermes", version: "" },
           timestamp: null,
           release: null,
           environment: null,
@@ -270,8 +270,6 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
           transaction: null,
           debug_meta: null,
         };
-        obj[0] = profile_id;
-        obj[1] = { name: "hermes", version: "" };
         let _Date = Date;
         const merged = Object.assign({}, value);
         if (contexts.start_timestamp) {
@@ -281,14 +279,13 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
           const _Date1 = new _Date();
           toISOStringResult = _Date1.toISOString();
         }
-        obj[2] = toISOStringResult;
-        obj[3] = contexts.release || "";
+        obj.timestamp = toISOStringResult;
+        obj.release = contexts.release || "";
         let environment = contexts.environment;
         if (!environment) {
-          environment = isHermesEnabled.getDefaultEnvironment();
-          const obj4 = isHermesEnabled;
+          environment = _mod867.getDefaultEnvironment();
         }
-        obj[4] = environment;
+        obj.environment = environment;
         const contexts2 = contexts.contexts;
         let os;
         if (null !== contexts2) {
@@ -305,8 +302,7 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         if (!str2) {
           str2 = "";
         }
-        obj = { name: null, version: null, build_number: null };
-        obj[0] = str2;
+        obj = { name: str2, version: null, build_number: null };
         const contexts3 = contexts.contexts;
         let os1;
         if (null !== contexts3) {
@@ -323,7 +319,7 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         if (!str3) {
           str3 = "";
         }
-        obj[1] = str3;
+        obj.version = str3;
         const contexts4 = contexts.contexts;
         let os2;
         if (null !== contexts4) {
@@ -340,8 +336,8 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         if (!str4) {
           str4 = "";
         }
-        obj[2] = str4;
-        obj[5] = obj;
+        obj.build_number = str4;
+        obj.os = obj;
         const contexts5 = contexts.contexts;
         let str5;
         if (null !== contexts5) {
@@ -355,8 +351,7 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         if (!str5) {
           str5 = "";
         }
-        obj = { locale: null, model: null, manufacturer: null, architecture: null, is_emulator: null };
-        obj[0] = str5;
+        obj = { locale: str5, model: null, manufacturer: null, architecture: null, is_emulator: null };
         const contexts6 = contexts.contexts;
         let device;
         if (null !== contexts6) {
@@ -373,7 +368,7 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         if (!str6) {
           str6 = "";
         }
-        obj[1] = str6;
+        obj.model = str6;
         const contexts7 = contexts.contexts;
         let device1;
         if (null !== contexts7) {
@@ -390,7 +385,7 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         if (!str7) {
           str7 = "";
         }
-        obj[2] = str7;
+        obj.manufacturer = str7;
         const contexts8 = contexts.contexts;
         let device2;
         if (null !== contexts8) {
@@ -407,7 +402,7 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         if (!str8) {
           str8 = "";
         }
-        obj[3] = str8;
+        obj.architecture = str8;
         const contexts9 = contexts.contexts;
         let device3;
         if (null !== contexts9) {
@@ -424,12 +419,14 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         if (!flag) {
           flag = false;
         }
-        obj[4] = flag;
-        obj[6] = obj;
-        obj1 = { name: null, id: null, trace_id: null, active_thread_id: null };
-        obj1[0] = contexts.transaction || "";
-        obj1[1] = contexts.event_id || "";
-        obj1[2] = str;
+        obj.is_emulator = flag;
+        obj.device = obj;
+        const obj1 = {
+          name: contexts.transaction || "",
+          id: contexts.event_id || "",
+          trace_id: str,
+          active_thread_id: null,
+        };
         const transaction = value.transaction;
         let str9;
         if (null !== transaction) {
@@ -440,10 +437,10 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         if (!str9) {
           str9 = "";
         }
-        obj1[3] = str9;
-        obj[7] = obj1;
+        obj1.active_thread_id = str9;
+        obj.transaction = obj1;
         const items = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(getDebugMetadata.getDebugMetadata(), 0);
+        let arraySpreadResult = HermesBuiltin.arraySpread(DEFAULT_BUNDLE_NAME.getDebugMetadata(), 0);
         const debug_meta = value.debug_meta;
         let images;
         if (null !== debug_meta) {
@@ -456,21 +453,24 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         }
         const obj2 = { images: null };
         arraySpreadResult = HermesBuiltin.arraySpread(images, arraySpreadResult);
-        obj2[0] = items;
-        obj[8] = obj2;
+        obj2.images = items;
+        obj.debug_meta = obj2;
         return Object.assign(merged, obj);
       }
     }
     return null;
   }
 };
-arg5.enrichAndroidProfileWithEventContext = enrichAndroidProfileWithEventContext;
-arg5.createHermesProfilingEvent = function createHermesProfilingEvent(result1) {
-  obj = { platform: "javascript", version: "1", profile: result1, transaction: obj };
-  obj = { active_thread_id: result1.active_thread_id };
-  return obj;
+export { enrichAndroidProfileWithEventContext };
+export const createHermesProfilingEvent = function createHermesProfilingEvent(result1) {
+  return {
+    platform: "javascript",
+    version: "1",
+    profile: result1,
+    transaction: { active_thread_id: result1.active_thread_id },
+  };
 };
-arg5.addProfilesToEnvelope = function addProfilesToEnvelope(arg0, arg1) {
+export const addProfilesToEnvelope = function addProfilesToEnvelope(arg0, arg1) {
   if (arg1.length) {
     const tmp2 = arg1[Symbol.iterator]();
     while (tmp2 !== undefined) {

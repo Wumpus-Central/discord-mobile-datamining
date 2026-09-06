@@ -1,10 +1,9 @@
 // _runtime/00249_DeviceEventManager.js
-import DeviceEventManagerDefault from "00250_DeviceEventManager.js";
+import _modDef250 from "metro/00250__.js";
 
-for (const key10016 in require("DeviceEventManager")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("DeviceEventManager")[key10016];
+for (const key10016 in require("metro/00250__.js")) {
+  arg5[key10016] = require("metro/00250__.js")[key10016];
   continue;
 }
 
-export default DeviceEventManagerDefault;
+export default _modDef250;

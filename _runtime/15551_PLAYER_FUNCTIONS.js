@@ -1,5 +1,5 @@
 // _runtime/15551_PLAYER_FUNCTIONS.js
-import _mod15547 from "metro/15547__.js";
+import PLAY_MODE from "15547_PLAY_MODE.js";
 import _defineProperty2 from "15552__defineProperty.js";
 import 08279__ from "metro/08279__.js";
 
@@ -58,16 +58,16 @@ let obj = {
   }
 };
 obj = {};
-_defineProperty.default(obj, _mod15547.PLAY_MODE, obj.playVideo);
-_defineProperty.default(obj, _mod15547.PAUSE_MODE, obj.pauseVideo);
+_defineProperty.default(obj, PLAY_MODE.PLAY_MODE, obj.playVideo);
+_defineProperty.default(obj, PLAY_MODE.PAUSE_MODE, obj.pauseVideo);
 const obj1 = {};
-_defineProperty.default(obj1, _mod15547.MUTE_MODE, obj.muteVideo);
-_defineProperty.default(obj1, _mod15547.UNMUTE_MODE, obj.unMuteVideo);
+_defineProperty.default(obj1, PLAY_MODE.MUTE_MODE, obj.muteVideo);
+_defineProperty.default(obj1, PLAY_MODE.UNMUTE_MODE, obj.unMuteVideo);
 
 export const PLAYER_FUNCTIONS = obj;
 export const playMode = obj;
 export const soundMode = obj1;
-export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, closure_12, num) {
+export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, allowWebViewZoom, num) {
   ({ end, color, start, playerLang, loop } = current3);
   let tmp = undefined !== loop;
   if (tmp) {
@@ -127,7 +127,7 @@ export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, clo
   }
   const text = `initial-scale=${num5}`;
   let text1 = text;
-  if (!closure_12) {
+  if (!allowWebViewZoom) {
     text1 = `initial-scale=${num5}${", maximum-scale=" + num5}`;
   }
   let obj = { end, list: tmp3, start, color, rel_s: num, loop_s: num2, listType: str2, playlist: null, videoId_s: null, controls_s: null, playerLang: null, iv_load_policy: null, contentScale_s: null, cc_lang_pref_s: null, allowWebViewZoom: null, modestbranding_s: null, preventFullScreen_s: null, showClosedCaptions_s: null };
@@ -135,17 +135,17 @@ export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, clo
   if (Array.isArray(current2)) {
     joined = current2.join(",");
   }
-  obj[7] = joined;
-  obj[8] = str;
-  obj[9] = num3;
-  obj[10] = playerLang;
-  obj[11] = iv_load_policy;
-  obj[12] = num5;
-  obj[13] = cc_lang_pref;
-  obj[14] = closure_12;
-  obj[15] = num4;
-  obj[16] = num6;
-  obj[17] = num7;
+  obj.playlist = joined;
+  obj.videoId_s = str;
+  obj.controls_s = num3;
+  obj.playerLang = playerLang;
+  obj.iv_load_policy = iv_load_policy;
+  obj.contentScale_s = num5;
+  obj.cc_lang_pref_s = cc_lang_pref;
+  obj.allowWebViewZoom = allowWebViewZoom;
+  obj.modestbranding_s = num4;
+  obj.preventFullScreen_s = num6;
+  obj.showClosedCaptions_s = num7;
   const sum = "\n<!DOCTYPE html>\n<html>\n  <head>\n    <meta\n      name=\"viewport\"\n      content=\"width=device-width, " + text1 + "\"\n    >\n    <style>\n      body {\n        margin: 0;\n      }\n      .container {\n        position: relative;\n        width: 100%;\n        height: 0;\n        padding-bottom: 56.25%;\n      }\n      .video {\n          position: absolute;\n          top: 0;\n          left: 0;\n          width: 100%;\n          height: 100%;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <div class=\"video\" id=\"player\" />\n    </div>\n\n    <script>\n      var tag = document.createElement('script');\n\n      tag.src = \"https://www.youtube.com/iframe_api\";\n      var firstScriptTag = document.getElementsByTagName('script')[0];\n      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n\n      var player;\n      function onYouTubeIframeAPIReady() {\n        player = new YT.Player('player', {\n          width: '1000',\n          height: '1000',\n          videoId: '" + str;
   let str5 = "";
   let str6 = "";

@@ -1,5 +1,6 @@
 // _runtime/metro/08311__.js
-arg5.default = {
+
+export default {
   NONE: "",
   INVERT: "CIColorInvert",
   MONOCHROME: "CIColorMonochrome",

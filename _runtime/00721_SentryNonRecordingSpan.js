@@ -1,5 +1,5 @@
 // _runtime/00721_SentryNonRecordingSpan.js
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const SentryNonRecordingSpan = require;
@@ -11,33 +11,34 @@ class SentryNonRecordingSpan {
       obj = {};
     }
     self = this;
-    tmp = closure_2(this, SentryNonRecordingSpan);
+    tmp = c2(this, SentryNonRecordingSpan);
     traceId = obj.traceId;
     if (!traceId) {
-      tmp2 = SentryNonRecordingSpan;
+      tmp2 = closure_0;
       tmp3 = closure_1;
-      obj2 = require("generateSpanId");
+      obj2 = closure_0(closure_1[2]);
       traceId = obj2.generateTraceId();
     }
     self._traceId = traceId;
     spanId = obj.spanId;
     if (!spanId) {
-      tmp4 = SentryNonRecordingSpan;
+      tmp4 = closure_0;
       tmp5 = closure_1;
-      obj3 = require("generateSpanId");
+      obj3 = closure_0(closure_1[2]);
       spanId = obj3.generateSpanId();
     }
     self._spanId = spanId;
     return;
   }
 }
-const items = [
-  {
-    key: "spanContext",
-    value: function spanContext() {
-      return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(684).TRACE_FLAG_NONE };
-    },
+const entry = {
+  key: "spanContext",
+  value: function spanContext() {
+    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(684).TRACE_FLAG_NONE };
   },
+};
+const items = [
+  entry,
   {
     key: "end",
     value: function end(arg0) {},

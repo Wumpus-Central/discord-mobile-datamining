@@ -1,5 +1,5 @@
 // _runtime/13654_flush_block_only.js
-import assign from "13651_assign.js";
+import _mod13651 from "metro/13651__.js";
 import _mod13655 from "metro/13655__.js";
 import StaticTreeDesc from "13656_StaticTreeDesc.js";
 import adler32 from "13657_adler32.js";
@@ -20,7 +20,7 @@ function flush_block_only(state8, arg1) {
     avail_out = strm.avail_out;
   }
   if (0 !== avail_out) {
-    const tmpResult = assign;
+    const tmpResult = _mod13651;
     tmpResult.arraySet(strm.output, state.pending_buf, state.pending_out, avail_out, strm.next_out);
     strm.next_out = strm.next_out + avail_out;
     state.pending_out = state.pending_out + avail_out;
@@ -62,13 +62,6 @@ function longest_match(strstart, arg1) {
     tmp11 = arg1;
   }
   while (true) {
-    let tmp12 = tmp6;
-    let tmp13 = tmp7;
-    let tmp14 = nice_match;
-    let tmp15 = tmp8;
-    let tmp16 = tmp9;
-    let tmp17 = diff2;
-    let tmp18 = tmp11;
     let tmp19 = tmp6;
     let tmp20 = tmp7;
     let tmp21 = tmp8;
@@ -202,13 +195,7 @@ function fill_window(state) {
     let diff = state.window_size - state.lookahead - state.strstart;
     let sum = diff;
     if (state.strstart >= w_size + (w_size - 262)) {
-      let tmp23 = require;
-      let tmp24 = dependencyMap;
-      let obj = assign;
-      let tmp25 = obj;
-      let tmp26 = w_size;
-      let tmp27 = w_size;
-      let num4 = 0;
+      let obj = _mod13651;
       let arraySetResult = obj.arraySet(state.window, state.window, w_size, w_size, 0);
       state.match_start = state.match_start - w_size;
       state.strstart = state.strstart - w_size;
@@ -218,7 +205,6 @@ function fill_window(state) {
       do {
         let diff1 = tmp6 - 1;
         let tmp4 = state.head[diff1];
-        let tmp5 = hash_size;
         let num = 0;
         if (tmp4 >= w_size) {
           num = tmp4 - w_size;
@@ -232,7 +218,6 @@ function fill_window(state) {
       do {
         let diff2 = tmp8 - 1;
         let tmp10 = state.prev[diff2];
-        let tmp11 = diff3;
         let num2 = 0;
         if (tmp10 >= w_size) {
           num2 = tmp10 - w_size;
@@ -252,7 +237,6 @@ function fill_window(state) {
       if (avail_in > sum) {
         avail_in = sum;
       }
-      let num3 = 0;
       if (0 === avail_in) {
         state.lookahead = state.lookahead;
         if (state.lookahead + state.insert >= 3) {
@@ -266,7 +250,6 @@ function fill_window(state) {
             let sum2 = diff4 + 1;
             state.insert = state.insert - 1;
             if (state.lookahead + state.insert >= 3) {
-              let tmp22 = sum2;
               while (state.insert) {
                 state.ins_h = ((state.ins_h << state.hash_shift) ^ state.window[sum2 + 3 - 1]) & state.hash_mask;
                 state.prev[sum2 & state.w_mask] = state.head[state.ins_h];
@@ -289,36 +272,24 @@ function fill_window(state) {
         strm.avail_in = strm.avail_in - avail_in;
         let tmp15 = require;
         let sum3 = dependencyMap;
-        let obj2 = assign;
-        let tmp30 = obj2;
-        let tmp31 = _window;
-        let tmp32 = avail_in;
-        let tmp33 = sum1;
+        let obj2 = _mod13651;
         arraySetResult = obj2.arraySet(_window, strm.input, strm.next_in, avail_in, sum1);
         if (1 === strm.state.wrap) {
           tmp15 = tmp15(13657);
-          let tmp16 = _window;
-          let tmp17 = avail_in;
-          let tmp18 = sum1;
           strm.adler = tmp15(strm.adler, _window, avail_in, sum1);
         } else if (2 === strm.state.wrap) {
-          let tmp12 = _window;
-          let tmp13 = avail_in;
-          let tmp14 = sum1;
           strm.adler = tmp15(13658)(strm.adler, _window, avail_in, sum1);
         }
         strm.next_in = strm.next_in + avail_in;
         sum3 = strm.total_in + avail_in;
         strm.total_in = sum3;
-        let tmp20 = avail_in;
       }
     }
   }
 }
-function deflate_fast(lookahead) {
+function deflate_fast(lookahead, arg1) {
   while (true) {
     if (lookahead.lookahead < 262) {
-      let tmp = fill_window;
       let tmp2 = fill_window(lookahead);
       if (lookahead.lookahead < 262) {
         if (0 === arg1) {
@@ -326,7 +297,6 @@ function deflate_fast(lookahead) {
         }
       }
       if (0 === lookahead.lookahead) {
-        let num2 = 2;
         let num3 = 2;
         if (lookahead.strstart < 2) {
           num3 = lookahead.strstart;
@@ -334,7 +304,6 @@ function deflate_fast(lookahead) {
         lookahead.insert = num3;
         let num4 = 4;
         if (4 === arg1) {
-          let tmp17 = flush_block_only;
           let flag = true;
           let tmp18 = flush_block_only(lookahead, true);
           if (0 === lookahead.strm.avail_out) {
@@ -344,7 +313,6 @@ function deflate_fast(lookahead) {
         } else {
           num5 = 2;
           if (lookahead.last_lit) {
-            let tmp15 = flush_block_only;
             let tmp16 = flush_block_only(lookahead, false);
             num5 = 2;
             if (0 === lookahead.strm.avail_out) {
@@ -367,12 +335,9 @@ function deflate_fast(lookahead) {
     }
     let tmp4 = 0 !== num && lookahead.strstart - num <= lookahead.w_size - 262;
     if (tmp4) {
-      let tmp5 = longest_match;
       lookahead.match_length = longest_match(lookahead, num);
     }
     if (lookahead.match_length >= 3) {
-      let tmp9 = require;
-      let tmp10 = dependencyMap;
       let obj2 = StaticTreeDesc;
       let _tr_tallyResult = obj2._tr_tally(
         lookahead,
@@ -404,8 +369,6 @@ function deflate_fast(lookahead) {
         ((lookahead.ins_h << lookahead.hash_shift) ^ lookahead.window[lookahead.strstart + 1]) & lookahead.hash_mask;
       _tr_tallyResult1 = _tr_tallyResult;
     } else {
-      let tmp6 = require;
-      let tmp7 = dependencyMap;
       let obj = StaticTreeDesc;
       _tr_tallyResult1 = obj._tr_tally(lookahead, 0, lookahead.window[lookahead.strstart]);
       lookahead.lookahead = lookahead.lookahead - 1;
@@ -414,7 +377,6 @@ function deflate_fast(lookahead) {
     if (!_tr_tallyResult1) {
       continue;
     } else {
-      let tmp13 = flush_block_only;
       let tmp14 = flush_block_only(lookahead, false);
       if (0 !== lookahead.strm.avail_out) {
         continue;
@@ -426,10 +388,9 @@ function deflate_fast(lookahead) {
   }
   return 1;
 }
-function deflate_slow(lookahead) {
+function deflate_slow(lookahead, arg1) {
   while (true) {
     if (lookahead.lookahead < 262) {
-      let tmp = fill_window;
       let tmp2 = fill_window(lookahead);
       if (lookahead.lookahead < 262) {
         if (0 === arg1) {
@@ -438,8 +399,6 @@ function deflate_slow(lookahead) {
       }
       if (0 === lookahead.lookahead) {
         if (lookahead.match_available) {
-          let tmp21 = require;
-          let tmp22 = dependencyMap;
           let obj3 = StaticTreeDesc;
           let _tr_tallyResult = obj3._tr_tally(lookahead, 0, lookahead.window[lookahead.strstart - 1]);
           lookahead.match_available = 0;
@@ -451,7 +410,6 @@ function deflate_slow(lookahead) {
         lookahead.insert = num2;
         let num3 = 4;
         if (4 === arg1) {
-          let tmp26 = flush_block_only;
           let flag = true;
           let tmp27 = flush_block_only(lookahead, true);
           if (0 === lookahead.strm.avail_out) {
@@ -461,7 +419,6 @@ function deflate_slow(lookahead) {
         } else {
           num4 = 2;
           if (lookahead.last_lit) {
-            let tmp24 = flush_block_only;
             let tmp25 = flush_block_only(lookahead, false);
             num4 = 2;
             if (0 === lookahead.strm.avail_out) {
@@ -489,7 +446,6 @@ function deflate_slow(lookahead) {
       lookahead.prev_length < lookahead.max_lazy_match &&
       lookahead.strstart - num <= lookahead.w_size - 262;
     if (tmp4) {
-      let tmp5 = longest_match;
       lookahead.match_length = longest_match(lookahead, num);
       let tmp6 = lookahead.match_length <= 5;
       if (tmp6) {
@@ -506,8 +462,6 @@ function deflate_slow(lookahead) {
     }
     if (lookahead.prev_length >= 3) {
       if (lookahead.match_length <= lookahead.prev_length) {
-        let tmp14 = require;
-        let tmp15 = dependencyMap;
         let diff = lookahead.strstart + lookahead.lookahead - 3;
         let obj2 = StaticTreeDesc;
         lookahead.lookahead = lookahead.lookahead - (lookahead.prev_length - 1);
@@ -536,7 +490,6 @@ function deflate_slow(lookahead) {
         if (!_tr_tallyResult1) {
           continue;
         } else {
-          let tmp19 = flush_block_only;
           let tmp20 = flush_block_only(lookahead, false);
           if (0 !== lookahead.strm.avail_out) {
             continue;
@@ -548,11 +501,8 @@ function deflate_slow(lookahead) {
       }
     }
     if (lookahead.match_available) {
-      let tmp9 = require;
-      let tmp10 = dependencyMap;
       let obj = StaticTreeDesc;
       if (obj._tr_tally(lookahead, 0, lookahead.window[lookahead.strstart - 1])) {
-        let tmp11 = flush_block_only;
         let tmp12 = flush_block_only(lookahead, false);
       }
       lookahead.strstart = lookahead.strstart + 1;
@@ -617,11 +567,11 @@ function DeflateState() {
     good_match: 0,
     nice_match: 0,
   };
-  const buf16 = new assign.Buf16(1146);
+  const buf16 = new _mod13651.Buf16(1146);
   obj.dyn_ltree = buf16;
-  const buf161 = new assign.Buf16(122);
+  const buf161 = new _mod13651.Buf16(122);
   obj.dyn_dtree = buf161;
-  const buf162 = new assign.Buf16(78);
+  const buf162 = new _mod13651.Buf16(78);
   obj.bl_tree = buf162;
   const dyn_ltree = obj.dyn_ltree;
   let diff = dyn_ltree.length - 1;
@@ -710,7 +660,6 @@ function deflateReset(state) {
       state.last_flush = 0;
       StaticTreeDesc._tr_init(state);
       let num = 0;
-      const obj = StaticTreeDesc;
     }
     if (0 === num) {
       const state2 = state.state;
@@ -783,15 +732,15 @@ function deflateInit2(strm, level, method, windowBits, memLevel, strategy) {
                       obj.hash_size = 1 << obj.hash_bits;
                       obj.hash_mask = obj.hash_size - 1;
                       obj.hash_shift = ~~(obj.hash_bits + 3 - 1) / 3;
-                      const buf8 = new assign.Buf8(2 * obj.w_size);
+                      const buf8 = new _mod13651.Buf8(2 * obj.w_size);
                       obj.window = buf8;
-                      const buf16 = new assign.Buf16(obj.hash_size);
+                      const buf16 = new _mod13651.Buf16(obj.hash_size);
                       obj.head = buf16;
-                      const buf161 = new assign.Buf16(obj.w_size);
+                      const buf161 = new _mod13651.Buf16(obj.w_size);
                       obj.prev = buf161;
                       obj.lit_bufsize = 1 << (memLevel + 6);
                       obj.pending_buf_size = 4 * obj.lit_bufsize;
-                      const buf81 = new assign.Buf8(obj.pending_buf_size);
+                      const buf81 = new _mod13651.Buf8(obj.pending_buf_size);
                       obj.pending_buf = buf81;
                       obj.d_buf = obj.lit_bufsize;
                       obj.l_buf = 3 * obj.lit_bufsize;
@@ -814,13 +763,13 @@ function deflateInit2(strm, level, method, windowBits, memLevel, strategy) {
     return -2;
   }
 }
-let obj = Object.create(Config.prototype);
-obj = {
+Object.create(Config.prototype);
+let obj = {
   good_length: 0,
   max_lazy: 0,
   nice_length: 0,
   max_chain: 0,
-  func: function deflate_stored(pending_buf_size) {
+  func: function deflate_stored(pending_buf_size, arg1) {
     let num = 65535;
     if (pending_buf_size.pending_buf_size - 5 < 65535) {
       num = pending_buf_size.pending_buf_size - 5;
@@ -828,7 +777,6 @@ obj = {
     while (true) {
       let tmp = num;
       if (pending_buf_size.lookahead <= 1) {
-        let tmp2 = fill_window;
         let tmp3 = fill_window(pending_buf_size);
         if (0 === pending_buf_size.lookahead) {
           if (0 === arg1) {
@@ -839,7 +787,6 @@ obj = {
           pending_buf_size.insert = 0;
           let num2 = 4;
           if (4 === arg1) {
-            let tmp9 = flush_block_only;
             let flag = true;
             let tmp10 = flush_block_only(pending_buf_size, true);
             if (0 === pending_buf_size.strm.avail_out) {
@@ -849,7 +796,6 @@ obj = {
           } else {
             num3 = 1;
             if (pending_buf_size.strstart > pending_buf_size.block_start) {
-              let tmp7 = flush_block_only;
               let tmp8 = flush_block_only(pending_buf_size, false);
               let avail_out = pending_buf_size.strm.avail_out;
               num3 = 1;
@@ -864,7 +810,6 @@ obj = {
       if (0 === pending_buf_size.strstart) {
         pending_buf_size.lookahead = pending_buf_size.strstart - sum;
         pending_buf_size.strstart = sum;
-        let tmp5 = flush_block_only;
         let tmp6 = flush_block_only(pending_buf_size, false);
         if (0 === pending_buf_size.strm.avail_out) {
           return 1;
@@ -873,7 +818,6 @@ obj = {
       if (pending_buf_size.strstart - pending_buf_size.block_start < pending_buf_size.w_size - 262) {
         continue;
       } else {
-        let tmp11 = flush_block_only;
         let tmp12 = flush_block_only(pending_buf_size, false);
         num = tmp;
         if (0 !== pending_buf_size.strm.avail_out) {
@@ -906,12 +850,13 @@ Object.create(Config.prototype);
 items[8] = { good_length: 32, max_lazy: 128, nice_length: 258, max_chain: 1024, func: deflate_slow };
 Object.create(Config.prototype);
 items[9] = { good_length: 32, max_lazy: 258, nice_length: 258, max_chain: 4096, func: deflate_slow };
-arg5.deflateInit = function deflateInit(strm, level) {
+
+export const deflateInit = function deflateInit(strm, level) {
   return deflateInit2(strm, level, 8, 15, 8, 0);
 };
-arg5.deflateInit2 = deflateInit2;
-arg5.deflateReset = deflateReset;
-arg5.deflateResetKeep = function deflateResetKeep(state) {
+export { deflateInit2 };
+export { deflateReset };
+export const deflateResetKeep = function deflateResetKeep(state) {
   if (state) {
     if (state.state) {
       state.total_out = 0;
@@ -936,14 +881,13 @@ arg5.deflateResetKeep = function deflateResetKeep(state) {
       state.last_flush = 0;
       StaticTreeDesc._tr_init(state);
       let num = 0;
-      const obj = StaticTreeDesc;
     }
     return num;
   }
   num = -2;
   state.msg = _mod13655[-2];
 };
-arg5.deflateSetHeader = function deflateSetHeader(strm, header) {
+export const deflateSetHeader = function deflateSetHeader(strm, header) {
   let num = -2;
   let num2 = -2;
   if (strm) {
@@ -958,10 +902,9 @@ arg5.deflateSetHeader = function deflateSetHeader(strm, header) {
   }
   return num2;
 };
-arg5.deflate = function deflate(state, last_flush) {
+export const deflate = function deflate(state, last_flush) {
   if (state) {
     if (state.state) {
-      let diff = last_flush;
       if (last_flush <= 5) {
         if (last_flush >= 0) {
           const state8 = state.state;
@@ -1062,20 +1005,15 @@ arg5.deflate = function deflate(state, last_flush) {
                     state8.status = 113;
                   }
                 } else {
-                  let num5 = 0;
-                  diff = state8.w_bits - 8;
+                  const diff = state8.w_bits - 8;
                   if (state8.strategy < 2) {
-                    num5 = 0;
                     if (state8.level >= 2) {
-                      let num7 = 1;
                       if (state8.level >= 6) {
                         let num8 = 3;
                         if (6 === state8.level) {
                           num8 = 2;
                         }
-                        num7 = num8;
                       }
-                      num5 = num7;
                     }
                   }
                   let tmp3 = tmp2;
@@ -1089,20 +1027,14 @@ arg5.deflate = function deflate(state, last_flush) {
                   state8.pending = +state8.pending + 1;
                   state8.pending_buf[+state8.pending] = 255 & sum;
                   if (0 !== state8.strstart) {
-                    diff = state.adler >>> 16;
-                    diff = +state8.pending;
-                    state8.pending = diff + 1;
-                    state8.pending_buf[diff] = (diff >>> 8) & 255;
-                    diff = +state8.pending;
-                    state8.pending = diff + 1;
-                    state8.pending_buf[diff] = 255 & diff;
-                    diff = 65535 & state.adler;
-                    diff = +state8.pending;
-                    state8.pending = diff + 1;
-                    state8.pending_buf[diff] = (diff >>> 8) & 255;
-                    diff = +state8.pending;
-                    state8.pending = diff + 1;
-                    state8.pending_buf[diff] = 255 & diff;
+                    state8.pending = +state8.pending + 1;
+                    state8.pending_buf[+state8.pending] = ((state.adler >>> 16) >>> 8) & 255;
+                    state8.pending = +state8.pending + 1;
+                    state8.pending_buf[+state8.pending] = 255 & (state.adler >>> 16);
+                    state8.pending = +state8.pending + 1;
+                    state8.pending_buf[+state8.pending] = ((65535 & state.adler) >>> 8) & 255;
+                    state8.pending = +state8.pending + 1;
+                    state8.pending_buf[+state8.pending] = 255 & (65535 & state.adler);
                   }
                   state.adler = 1;
                 }
@@ -1123,9 +1055,6 @@ arg5.deflate = function deflate(state, last_flush) {
                         } else {
                           let tmp36 = state8.gzhead.hcrc && state8.pending > tmp35;
                           if (tmp36) {
-                            let tmp37 = require;
-                            let tmp38 = dependencyMap;
-                            let tmp39 = tmp35;
                             state.adler = _mod13658(state.adler, state8.pending_buf, state8.pending - tmp35, tmp35);
                           }
                           let state2 = state.state;
@@ -1134,12 +1063,8 @@ arg5.deflate = function deflate(state, last_flush) {
                             avail_out2 = state.avail_out;
                           }
                           if (0 !== avail_out2) {
-                            diff = require;
-                            diff = dependencyMap;
-                            let obj7 = assign;
-                            diff = obj7;
-                            diff = avail_out2;
-                            diff = obj7.arraySet(
+                            let obj7 = _mod13651;
+                            let arraySetResult = obj7.arraySet(
                               state.output,
                               state2.pending_buf,
                               state2.pending_out,
@@ -1172,18 +1097,8 @@ arg5.deflate = function deflate(state, last_flush) {
                         avail_out = state.avail_out;
                       }
                       if (0 !== avail_out) {
-                        diff = require;
-                        diff = dependencyMap;
-                        const obj6 = assign;
-                        diff = obj6;
-                        diff = avail_out;
-                        diff = obj6.arraySet(
-                          state.output,
-                          state.pending_buf,
-                          state.pending_out,
-                          avail_out,
-                          state.next_out,
-                        );
+                        const obj6 = _mod13651;
+                        obj6.arraySet(state.output, state.pending_buf, state.pending_out, avail_out, state.next_out);
                         state.next_out = state.next_out + avail_out;
                         state.pending_out = state.pending_out + avail_out;
                         state.total_out = state.total_out + avail_out;
@@ -1234,9 +1149,6 @@ arg5.deflate = function deflate(state, last_flush) {
                     } else {
                       let tmp46 = state8.gzhead.hcrc && state8.pending > pending3;
                       if (tmp46) {
-                        let tmp47 = require;
-                        let tmp48 = dependencyMap;
-                        let tmp49 = pending3;
                         state.adler = _mod13658(state.adler, state8.pending_buf, state8.pending - pending3, tmp44);
                       }
                       let state3 = state.state;
@@ -1245,12 +1157,8 @@ arg5.deflate = function deflate(state, last_flush) {
                         avail_out3 = state.avail_out;
                       }
                       if (0 !== avail_out3) {
-                        diff = require;
-                        diff = dependencyMap;
-                        let obj8 = assign;
-                        diff = obj8;
-                        diff = avail_out3;
-                        diff = obj8.arraySet(
+                        let obj8 = _mod13651;
+                        let arraySetResult1 = obj8.arraySet(
                           state.output,
                           state3.pending_buf,
                           state3.pending_out,
@@ -1274,14 +1182,10 @@ arg5.deflate = function deflate(state, last_flush) {
                     }
                     let tmp52 = state8.gzhead.hcrc && state8.pending > pending4;
                     if (tmp52) {
-                      let tmp53 = require;
-                      let tmp54 = dependencyMap;
-                      let tmp55 = pending4;
                       state.adler = _mod13658(state.adler, state8.pending_buf, state8.pending - pending4, pending4);
                     }
                     if (0 === num46) {
                       state8.gzindex = 0;
-                      let num48 = 91;
                       state8.status = 91;
                     }
                   }
@@ -1314,9 +1218,6 @@ arg5.deflate = function deflate(state, last_flush) {
                     } else {
                       let tmp58 = state8.gzhead.hcrc && state8.pending > pending5;
                       if (tmp58) {
-                        let tmp59 = require;
-                        let tmp60 = dependencyMap;
-                        let tmp61 = pending5;
                         state.adler = _mod13658(state.adler, state8.pending_buf, state8.pending - pending5, tmp56);
                       }
                       let state4 = state.state;
@@ -1325,12 +1226,8 @@ arg5.deflate = function deflate(state, last_flush) {
                         avail_out4 = state.avail_out;
                       }
                       if (0 !== avail_out4) {
-                        diff = require;
-                        diff = dependencyMap;
-                        let obj9 = assign;
-                        diff = obj9;
-                        diff = avail_out4;
-                        diff = obj9.arraySet(
+                        let obj9 = _mod13651;
+                        let arraySetResult2 = obj9.arraySet(
                           state.output,
                           state4.pending_buf,
                           state4.pending_out,
@@ -1354,13 +1251,9 @@ arg5.deflate = function deflate(state, last_flush) {
                     }
                     let tmp64 = state8.gzhead.hcrc && state8.pending > pending6;
                     if (tmp64) {
-                      let tmp65 = require;
-                      let tmp66 = dependencyMap;
-                      let tmp67 = pending6;
                       state.adler = _mod13658(state.adler, state8.pending_buf, state8.pending - pending6, pending6);
                     }
                     if (0 === num53) {
-                      let num55 = 103;
                       state8.status = 103;
                     }
                   }
@@ -1377,18 +1270,8 @@ arg5.deflate = function deflate(state, last_flush) {
                       avail_out5 = state.avail_out;
                     }
                     if (0 !== avail_out5) {
-                      diff = require;
-                      diff = dependencyMap;
-                      const obj10 = assign;
-                      diff = obj10;
-                      diff = avail_out5;
-                      diff = obj10.arraySet(
-                        state.output,
-                        state9.pending_buf,
-                        state9.pending_out,
-                        avail_out5,
-                        state.next_out,
-                      );
+                      const obj10 = _mod13651;
+                      obj10.arraySet(state.output, state9.pending_buf, state9.pending_out, avail_out5, state.next_out);
                       state.next_out = state.next_out + avail_out5;
                       state9.pending_out = state9.pending_out + avail_out5;
                       state.total_out = state.total_out + avail_out5;
@@ -1418,18 +1301,8 @@ arg5.deflate = function deflate(state, last_flush) {
                   avail_out6 = state.avail_out;
                 }
                 if (0 !== avail_out6) {
-                  diff = require;
-                  diff = dependencyMap;
-                  const obj11 = assign;
-                  diff = obj11;
-                  diff = avail_out6;
-                  diff = obj11.arraySet(
-                    state.output,
-                    state5.pending_buf,
-                    state5.pending_out,
-                    avail_out6,
-                    state.next_out,
-                  );
+                  const obj11 = _mod13651;
+                  obj11.arraySet(state.output, state5.pending_buf, state5.pending_out, avail_out6, state.next_out);
                   state.next_out = state.next_out + avail_out6;
                   state5.pending_out = state5.pending_out + avail_out6;
                   state.total_out = state.total_out + avail_out6;
@@ -1445,7 +1318,6 @@ arg5.deflate = function deflate(state, last_flush) {
                 }
               } else if (0 === state.avail_in) {
                 let num62 = 0;
-                diff = last_flush << 1;
                 if (last_flush > 4) {
                   num62 = 9;
                 }
@@ -1453,20 +1325,17 @@ arg5.deflate = function deflate(state, last_flush) {
                 if (last_flush > 4) {
                   num63 = 9;
                 }
-                if (diff - num62 <= tmp70 - num63) {
+                if (tmp159 - num62 <= tmp70 - num63) {
                   if (4 !== last_flush) {
-                    diff = require;
-                    diff = dependencyMap;
                     state.msg = _mod13655[-5];
                     return -5;
                   }
                 }
+                tmp159 = last_flush << 1;
                 tmp70 = last_flush << 1;
               }
               if (state8.status === 666) {
                 if (0 !== state.avail_in) {
-                  diff = require;
-                  diff = dependencyMap;
                   state.msg = _mod13655[-5];
                   return -5;
                 }
@@ -1478,45 +1347,31 @@ arg5.deflate = function deflate(state, last_flush) {
                   let num83 = 1;
                   if (state8.wrap > 0) {
                     if (2 === state8.wrap) {
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = 255 & state.adler;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = (state.adler >> 8) & 255;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = (state.adler >> 16) & 255;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = (state.adler >> 24) & 255;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = 255 & state.total_in;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = (state.total_in >> 8) & 255;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = (state.total_in >> 16) & 255;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = (state.total_in >> 24) & 255;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = 255 & state.adler;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = (state.adler >> 8) & 255;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = (state.adler >> 16) & 255;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = (state.adler >> 24) & 255;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = 255 & state.total_in;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = (state.total_in >> 8) & 255;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = (state.total_in >> 16) & 255;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = (state.total_in >> 24) & 255;
                     } else {
-                      diff = state.adler >>> 16;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = (diff >>> 8) & 255;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = 255 & diff;
-                      diff = 65535 & state.adler;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = (diff >>> 8) & 255;
-                      diff = +state8.pending;
-                      state8.pending = diff + 1;
-                      state8.pending_buf[diff] = 255 & diff;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = ((state.adler >>> 16) >>> 8) & 255;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = 255 & (state.adler >>> 16);
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = ((65535 & state.adler) >>> 8) & 255;
+                      state8.pending = +state8.pending + 1;
+                      state8.pending_buf[+state8.pending] = 255 & (65535 & state.adler);
                     }
                     const state7 = state.state;
                     let avail_out8 = state7.pending;
@@ -1524,18 +1379,8 @@ arg5.deflate = function deflate(state, last_flush) {
                       avail_out8 = state.avail_out;
                     }
                     if (0 !== avail_out8) {
-                      diff = require;
-                      diff = dependencyMap;
-                      const obj14 = assign;
-                      diff = obj14;
-                      diff = avail_out8;
-                      diff = obj14.arraySet(
-                        state.output,
-                        state7.pending_buf,
-                        state7.pending_out,
-                        avail_out8,
-                        state.next_out,
-                      );
+                      const obj14 = _mod13651;
+                      obj14.arraySet(state.output, state7.pending_buf, state7.pending_out, avail_out8, state.next_out);
                       state.next_out = state.next_out + avail_out8;
                       state7.pending_out = state7.pending_out + avail_out8;
                       state.total_out = state.total_out + avail_out8;
@@ -1560,23 +1405,19 @@ arg5.deflate = function deflate(state, last_flush) {
               if (2 === state8.strategy) {
                 while (true) {
                   if (0 === state8.lookahead) {
-                    let tmp97 = fill_window;
                     let tmp98 = fill_window(state8);
                     if (0 === state8.lookahead) {
                       break;
                     }
                   }
                   state8.match_length = 0;
-                  let tmp99 = require;
-                  diff = dependencyMap;
                   let obj4 = StaticTreeDesc;
                   state8.lookahead = state8.lookahead - 1;
                   state8.strstart = state8.strstart + 1;
                   if (!obj4._tr_tally(state8, 0, state8.window[state8.strstart])) {
                     continue;
                   } else {
-                    diff = flush_block_only;
-                    diff = flush_block_only(state8, false);
+                    let tmp102 = flush_block_only(state8, false);
                     let num70 = 1;
                   }
                   let funcResult = num70;
@@ -1584,57 +1425,30 @@ arg5.deflate = function deflate(state, last_flush) {
                 num70 = 1;
                 if (0 !== last_flush) {
                   state8.insert = 0;
-                  let num71 = 4;
                   if (4 === last_flush) {
-                    diff = flush_block_only;
-                    diff = flush_block_only(state8, true);
-                    if (0 === state8.strm.avail_out) {
-                      num71 = 3;
-                    }
-                    let num72 = num71;
-                  } else {
-                    num72 = 2;
-                    if (state8.last_lit) {
-                      diff = flush_block_only;
-                      diff = flush_block_only(state8, false);
-                      num72 = 2;
-                      if (0 === state8.strm.avail_out) {
-                        num72 = 1;
-                      }
-                    }
+                    flush_block_only(state8, true);
+                  } else if (state8.last_lit) {
+                    flush_block_only(state8, false);
                   }
-                  diff = num72;
                 }
               } else if (3 === state8.strategy) {
                 const _window = state8.window;
                 while (true) {
                   if (state8.lookahead <= 258) {
-                    let tmp73 = fill_window;
                     let tmp74 = fill_window(state8);
                     if (state8.lookahead > 258) {
                       if (0 === state8.lookahead) {
                         state8.insert = 0;
                         let num68 = 4;
                         if (4 === last_flush) {
-                          let tmp94 = flush_block_only;
                           let flag2 = true;
                           let tmp95 = flush_block_only(state8, true);
                           if (0 === state8.strm.avail_out) {
                             num68 = 3;
                           }
-                          let num69 = num68;
-                        } else {
-                          num69 = 2;
-                          if (state8.last_lit) {
-                            let tmp92 = flush_block_only;
-                            let tmp93 = flush_block_only(state8, false);
-                            num69 = 2;
-                            if (0 === state8.strm.avail_out) {
-                              num69 = 1;
-                            }
-                          }
+                        } else if (state8.last_lit) {
+                          let tmp93 = flush_block_only(state8, false);
                         }
-                        let tmp96 = num69;
                       }
                     } else {
                       let num67 = 1;
@@ -1647,56 +1461,56 @@ arg5.deflate = function deflate(state, last_flush) {
                   state8.match_length = 0;
                   if (state8.lookahead >= 3) {
                     if (state8.strstart > 0) {
-                      diff = state8.strstart - 1;
-                      diff = _window[diff];
-                      diff = diff + 1;
-                      if (diff === _window[diff]) {
-                        diff = diff + 1;
-                        if (diff === _window[diff]) {
-                          let sum1 = diff + 1;
-                          if (diff === _window[sum1]) {
-                            diff = state8.strstart + 258;
-                            let sum2 = sum1 + 1;
-                            let tmp76 = sum2;
-                            while (diff === _window[sum2]) {
-                              let sum3 = sum2 + 1;
-                              tmp76 = sum3;
-                              if (diff !== _window[sum3]) {
+                      let diff1 = state8.strstart - 1;
+                      let tmp168 = _window[diff1];
+                      let sum1 = diff1 + 1;
+                      if (tmp168 === _window[sum1]) {
+                        let sum2 = sum1 + 1;
+                        if (tmp168 === _window[sum2]) {
+                          let sum3 = sum2 + 1;
+                          if (tmp168 === _window[sum3]) {
+                            let sum4 = state8.strstart + 258;
+                            let sum5 = sum3 + 1;
+                            let tmp76 = sum5;
+                            while (tmp168 === _window[sum5]) {
+                              let sum6 = sum5 + 1;
+                              tmp76 = sum6;
+                              if (tmp168 !== _window[sum6]) {
                                 break;
                               } else {
-                                let sum4 = sum3 + 1;
-                                tmp76 = sum4;
-                                if (diff !== _window[sum4]) {
+                                let sum7 = sum6 + 1;
+                                tmp76 = sum7;
+                                if (tmp168 !== _window[sum7]) {
                                   break;
                                 } else {
-                                  let sum5 = sum4 + 1;
-                                  tmp76 = sum5;
-                                  if (diff !== _window[sum5]) {
+                                  let sum8 = sum7 + 1;
+                                  tmp76 = sum8;
+                                  if (tmp168 !== _window[sum8]) {
                                     break;
                                   } else {
-                                    let sum6 = sum5 + 1;
-                                    tmp76 = sum6;
-                                    if (diff !== _window[sum6]) {
+                                    let sum9 = sum8 + 1;
+                                    tmp76 = sum9;
+                                    if (tmp168 !== _window[sum9]) {
                                       break;
                                     } else {
-                                      let sum7 = sum6 + 1;
-                                      tmp76 = sum7;
-                                      if (diff !== _window[sum7]) {
+                                      let sum10 = sum9 + 1;
+                                      tmp76 = sum10;
+                                      if (tmp168 !== _window[sum10]) {
                                         break;
                                       } else {
-                                        let sum8 = sum7 + 1;
-                                        tmp76 = sum8;
-                                        if (diff !== _window[sum8]) {
+                                        let sum11 = sum10 + 1;
+                                        tmp76 = sum11;
+                                        if (tmp168 !== _window[sum11]) {
                                           break;
                                         } else {
-                                          let sum9 = sum8 + 1;
-                                          tmp76 = sum9;
-                                          if (diff !== _window[sum9]) {
+                                          let sum12 = sum11 + 1;
+                                          tmp76 = sum12;
+                                          if (tmp168 !== _window[sum12]) {
                                             break;
                                           } else {
-                                            sum1 = sum9;
-                                            tmp76 = sum9;
-                                            if (sum9 >= diff) {
+                                            sum3 = sum12;
+                                            tmp76 = sum12;
+                                            if (sum12 >= sum4) {
                                               break;
                                             }
                                           }
@@ -1707,7 +1521,7 @@ arg5.deflate = function deflate(state, last_flush) {
                                 }
                               }
                             }
-                            state8.match_length = 258 - (diff - tmp76);
+                            state8.match_length = 258 - (sum4 - tmp76);
                             if (state8.match_length > state8.lookahead) {
                               state8.match_length = state8.lookahead;
                             }
@@ -1717,16 +1531,12 @@ arg5.deflate = function deflate(state, last_flush) {
                     }
                   }
                   if (state8.match_length >= 3) {
-                    let tmp88 = require;
-                    let tmp89 = dependencyMap;
                     let obj3 = StaticTreeDesc;
                     let _tr_tallyResult = obj3._tr_tally(state8, 1, state8.match_length - 3);
                     state8.lookahead = state8.lookahead - state8.match_length;
                     state8.strstart = state8.strstart + state8.match_length;
                     state8.match_length = 0;
                   } else {
-                    let tmp85 = require;
-                    let tmp86 = dependencyMap;
                     let obj2 = StaticTreeDesc;
                     _tr_tallyResult = obj2._tr_tally(state8, 0, state8.window[state8.strstart]);
                     state8.lookahead = state8.lookahead - 1;
@@ -1735,7 +1545,6 @@ arg5.deflate = function deflate(state, last_flush) {
                   if (!_tr_tallyResult) {
                     continue;
                   } else {
-                    let tmp90 = flush_block_only;
                     let tmp91 = flush_block_only(state8, false);
                     num67 = 1;
                     if (0 === state8.strm.avail_out) {
@@ -1746,38 +1555,30 @@ arg5.deflate = function deflate(state, last_flush) {
                 }
               } else {
                 funcResult = items[state8.level].func(state8, last_flush);
-                const obj = items[state8.level];
               }
-              diff = 3 !== funcResult;
-              if (diff) {
-                diff = 4 !== funcResult;
+              let tmp108 = 3 !== funcResult;
+              if (tmp108) {
+                tmp108 = 4 !== funcResult;
               }
-              if (!diff) {
+              if (!tmp108) {
                 state8.status = 666;
               }
               if (1 !== funcResult) {
                 if (3 !== funcResult) {
                   if (2 === funcResult) {
                     if (1 === last_flush) {
-                      diff = require;
-                      diff = dependencyMap;
-                      diff = StaticTreeDesc._tr_align(state8);
-                      const obj5 = StaticTreeDesc;
+                      StaticTreeDesc._tr_align(state8);
                     } else if (5 !== last_flush) {
-                      diff = require;
-                      diff = dependencyMap;
                       const obj12 = StaticTreeDesc;
-                      diff = obj12;
-                      diff = state8;
-                      diff = obj12._tr_stored_block(state8, 0, 0, false);
+                      obj12._tr_stored_block(state8, 0, 0, false);
                       if (3 === last_flush) {
                         const head = state8.head;
-                        diff = head.length - 1;
-                        if (diff >= 0) {
+                        let diff2 = head.length - 1;
+                        if (diff2 >= 0) {
                           do {
-                            head[diff] = 0;
-                            diff = diff - 1;
-                          } while (diff >= 0);
+                            head[diff2] = 0;
+                            diff2 = diff2 - 1;
+                          } while (diff2 >= 0);
                         }
                         if (0 === state8.lookahead) {
                           state8.strstart = 0;
@@ -1792,18 +1593,8 @@ arg5.deflate = function deflate(state, last_flush) {
                       avail_out7 = state.avail_out;
                     }
                     if (0 !== avail_out7) {
-                      diff = require;
-                      diff = dependencyMap;
-                      const obj13 = assign;
-                      diff = obj13;
-                      diff = avail_out7;
-                      diff = obj13.arraySet(
-                        state.output,
-                        state6.pending_buf,
-                        state6.pending_out,
-                        avail_out7,
-                        state.next_out,
-                      );
+                      const obj13 = _mod13651;
+                      obj13.arraySet(state.output, state6.pending_buf, state6.pending_out, avail_out7, state.next_out);
                       state.next_out = state.next_out + avail_out7;
                       state6.pending_out = state6.pending_out + avail_out7;
                       state.total_out = state.total_out + avail_out7;
@@ -1830,8 +1621,6 @@ arg5.deflate = function deflate(state, last_flush) {
           if (0 !== state.avail_out) {
             num88 = -2;
           }
-          diff = require;
-          diff = dependencyMap;
           state.msg = _mod13655[num88];
           return num88;
         }
@@ -1839,13 +1628,11 @@ arg5.deflate = function deflate(state, last_flush) {
     }
   }
   if (state) {
-    diff = require;
-    diff = dependencyMap;
     state.msg = _mod13655[-2];
   }
   return -2;
 };
-arg5.deflateEnd = function deflateEnd(state) {
+export const deflateEnd = function deflateEnd(state) {
   let num = -2;
   if (state) {
     num = -2;
@@ -1857,23 +1644,20 @@ arg5.deflateEnd = function deflateEnd(state) {
             if (91 !== status) {
               if (status !== 103) {
                 state.msg = _mod13655[-2];
-                let num10 = -2;
               }
             }
           }
         }
       }
       state.state = null;
-      num10 = 0;
       if (status === 113) {
         state.msg = _mod13655[-3];
-        num10 = -3;
       }
     }
   }
   return num;
 };
-arg5.deflateSetDictionary = function deflateSetDictionary(strm, dictionary) {
+export const deflateSetDictionary = function deflateSetDictionary(strm, dictionary) {
   if (strm) {
     if (strm.state) {
       const state = strm.state;
@@ -1901,8 +1685,8 @@ arg5.deflateSetDictionary = function deflateSetDictionary(strm, dictionary) {
                 state.block_start = 0;
                 state.insert = 0;
               }
-              const buf8 = new assign.Buf8(state.w_size);
-              const obj = assign;
+              const buf8 = new _mod13651.Buf8(state.w_size);
+              const obj = _mod13651;
               obj.arraySet(buf8, dictionary, length - state.w_size, state.w_size, 0);
               w_size = state.w_size;
               tmp5 = buf8;
@@ -1926,7 +1710,6 @@ arg5.deflateSetDictionary = function deflateSetDictionary(strm, dictionary) {
                 } while (diff1);
                 state.strstart = sum;
                 state.lookahead = 2;
-                let tmp21 = fill_window;
                 let tmp22 = fill_window(state);
               } while (state.lookahead >= 3);
             }
@@ -1949,4 +1732,4 @@ arg5.deflateSetDictionary = function deflateSetDictionary(strm, dictionary) {
   }
   return -2;
 };
-arg5.deflateInfo = "pako deflate (from Nodeca project)";
+export const deflateInfo = "pako deflate (from Nodeca project)";

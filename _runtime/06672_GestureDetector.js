@@ -1,14 +1,14 @@
 // _runtime/06672_GestureDetector.js
 import jsxProd from "react/00021_jsxProd.js";
-import useEnsureGestureHandlerRootView from "06673_useEnsureGestureHandlerRootView.js";
-import _isNativeReflectConstruct from "06675__isNativeReflectConstruct.js";
+import _mod6673 from "metro/06673__.js";
+import _mod6675 from "metro/06675__.js";
 
 const jsx = jsxProd.jsx;
 
 export const GestureDetector = function GestureDetector(gesture) {
-  let obj = useEnsureGestureHandlerRootView;
+  let obj = _mod6673;
   obj.useEnsureGestureHandlerRootView();
-  if (!(gesture.gesture instanceof _isNativeReflectConstruct.ComposedGesture)) {
+  if (!(gesture.gesture instanceof _mod6675.ComposedGesture)) {
     if (!(gesture.gesture instanceof tmp(6676).BaseGesture)) {
       obj = {};
       const merged = Object.assign(gesture);

@@ -1,11 +1,11 @@
 // _runtime/08388_baseMap.js
-import { baseForOwn } from "00516_baseForOwn.js";
-import { isArrayLike } from "00518_isArrayLike.js";
+import baseForOwn from "00516_baseForOwn.js";
+import _mod518 from "metro/00518__.js";
 
 export default function baseMap(arg0, arg1) {
-  const _require = arg1;
-  dependencyMap = -1;
-  if (isArrayLike(arg0)) {
+  closure_0 = arg1;
+  c1 = -1;
+  if (_mod518(arg0)) {
     const _Array = Array;
     let ArrayResult = Array(arg0.length);
   } else {
@@ -15,7 +15,7 @@ export default function baseMap(arg0, arg1) {
   baseForOwn(arg0, (arg0, arg1, arg2) => {
     const sum = c1 + 1;
     c1 = sum;
-    closure_2[sum] = callback(arg0, arg1, arg2);
+    ArrayResult[sum] = closure_0(arg0, arg1, arg2);
   });
   return ArrayResult;
 }

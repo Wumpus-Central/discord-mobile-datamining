@@ -1,12 +1,12 @@
 // _runtime/metro/14357__.js
-import call from "../14320_call.js";
-import getOwnPropertyDescriptor from "../14300_getOwnPropertyDescriptor.js";
+import _mod14320 from "14320__.js";
+import getOwnPropertyDescriptor from "14300__.js";
 
 if (getOwnPropertyDescriptor) {
   const _Object = Object;
   getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 }
-const tmp = call(prototype, "name");
+const tmp = _mod14320(prototype, "name");
 let tmp2 = tmp;
 if (tmp) {
   tmp2 = "something" === function something() {}.name;

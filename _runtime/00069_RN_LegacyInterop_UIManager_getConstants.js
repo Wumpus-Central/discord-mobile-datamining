@@ -1,18 +1,16 @@
 // _runtime/00069_RN_LegacyInterop_UIManager_getConstants.js
 import nullthrowsDefault from "00070_nullthrows.js";
 
-let c0 = arg1;
-let c1 = importDefault;
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
-let closure_4 = {};
+let dependencyMap = {};
 const f18352 = () => {};
 ({
-  RN$LegacyInterop_UIManager_getConstantsForViewManager: error,
+  RN$LegacyInterop_UIManager_getConstantsForViewManager: closure_7,
   RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8,
 } = global);
-c0 = false;
-c1 = null;
+let c0 = false;
+let c1 = null;
 const f69037 = () => {};
 let obj = {};
 obj = {
@@ -57,7 +55,7 @@ obj = {
 const merged = Object.assign(obj);
 obj = {
   getConstantsForViewManager(arg0) {
-    if (closure_7) {
+    if (React5) {
       obj = tmp(arg0);
     } else {
       const _console = console;
@@ -73,15 +71,16 @@ obj = {
     return obj;
   },
   getDefaultEventTypes() {
-    if (closure_8) {
-      if (typeof f69037 !== "function") {
-        HermesBuiltin.throwTypeError();
+    if (React6) {
+      if (typeof f69037 === "function") {
+        if (!closure_137_0) {
+          closure_137_1 = _null(70)(React6)();
+          closure_137_0 = true;
+        }
+        let items = closure_137_1;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      if (!c0) {
-        closure_1 = _null(70)(closure_1_8)();
-        c0 = true;
-      }
-      let items = closure_1;
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
@@ -113,7 +112,7 @@ obj = {
       }
     }
     const tmp3 = _null(70);
-    const tmp3Result = tmp3(callback(71).getFabricUIManager());
+    const tmp3Result = tmp3(c0(71).getFabricUIManager());
     const result = tmp3Result.findShadowNodeByTag_DEPRECATED(arg0);
     if (result) {
       const result1 = tmp3Result.sendAccessibilityEvent(result, str);
@@ -177,21 +176,22 @@ const merged2 = Object.assign({
 });
 obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f18352 !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof f18352 === "function") {
+      if (!c3) {
+        dependencyMap = _null(70)(tmp)();
+        c3 = true;
+      }
+      let getConstantsForViewManager = !tmp15;
+      if (!dependencyMap[arg0]) {
+        getConstantsForViewManager = obj.getConstantsForViewManager;
+      }
+      if (getConstantsForViewManager) {
+        tmp14[arg0] = obj.getConstantsForViewManager(arg0);
+      }
+      return dependencyMap[arg0];
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    if (!c3) {
-      dependencyMap = _null(70)(tmp)();
-      c3 = true;
-    }
-    let getConstantsForViewManager = !tmp15;
-    if (!dependencyMap[arg0]) {
-      getConstantsForViewManager = obj.getConstantsForViewManager;
-    }
-    if (getConstantsForViewManager) {
-      tmp14[arg0] = obj.getConstantsForViewManager(arg0);
-    }
-    return dependencyMap[arg0];
   } else {
     const _HermesInternal = HermesInternal;
     const _HermesInternal2 = HermesInternal;
@@ -215,18 +215,19 @@ obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
   }
 };
 obj.hasViewManagerConfig = function hasViewManagerConfig(arg0) {
-  return callback(72).unstable_hasComponent(arg0);
+  return c0(72).unstable_hasComponent(arg0);
 };
 obj.getConstants = function getConstants() {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f18352 !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof f18352 === "function") {
+      if (!c3) {
+        closure_4 = _null(70)(tmp)();
+        c3 = true;
+      }
+      let tmp4 = closure_4;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    if (!c3) {
-      closure_4 = _null(70)(tmp)();
-      c3 = true;
-    }
-    let tmp4 = closure_4;
   } else {
     const _console = console;
     const _HermesInternal = HermesInternal;
@@ -241,10 +242,10 @@ obj.getConstants = function getConstants() {
   return tmp4;
 };
 obj.findSubviewIn = function findSubviewIn(arg0, arg1, arg2) {
-  const callback = arg2;
+  closure_0 = arg2;
   const tmp = _null(70);
-  const tmpResult = tmp(callback(71).getFabricUIManager());
-  _null = tmpResult;
+  const tmpResult = tmp(c0(71).getFabricUIManager());
+  closure_1 = tmpResult;
   const result = tmpResult.findShadowNodeByTag_DEPRECATED(arg0);
   if (result) {
     tmpResult.findNodeAtPoint(result, arg1[0], arg1[1], (stateNode) => {
@@ -270,15 +271,15 @@ obj.findSubviewIn = function findSubviewIn(arg0, arg1, arg2) {
     console.error("findSubviewIn() noop: Cannot find view with reactTag " + arg0);
   }
 };
-obj.viewIsDescendantOf = function viewIsDescendantOf(arg0, arg1, arg2) {
+obj.viewIsDescendantOf = function viewIsDescendantOf(arg0, arg1, fn) {
   const tmp = _null(70);
-  const tmpResult = tmp(callback(71).getFabricUIManager());
+  const tmpResult = tmp(c0(71).getFabricUIManager());
   const result = tmpResult.findShadowNodeByTag_DEPRECATED(arg0);
   if (result) {
     const result1 = tmpResult.findShadowNodeByTag_DEPRECATED(arg1);
     if (result1) {
       const items = [16 & tmpResult.compareDocumentPosition(result1, result)];
-      arg2(items);
+      fn(items);
     } else {
       const _console2 = console;
       const _HermesInternal2 = HermesInternal;
@@ -292,35 +293,36 @@ obj.viewIsDescendantOf = function viewIsDescendantOf(arg0, arg1, arg2) {
 };
 obj.configureNextLayoutAnimation = function configureNextLayoutAnimation(duration, onAnimationComplete, fn) {
   const tmp = _null(70);
-  obj = callback(71);
-  const result = tmp(callback(71).getFabricUIManager()).configureNextLayoutAnimation(duration, onAnimationComplete, fn);
+  obj = c0(71);
+  const result = tmp(c0(71).getFabricUIManager()).configureNextLayoutAnimation(duration, onAnimationComplete, fn);
 };
 if (RN$LegacyInterop_UIManager_getConstants) {
   if (!c3) {
-    closure_4 = nullthrowsDefault(RN$LegacyInterop_UIManager_getConstants)();
+    dependencyMap = nullthrowsDefault(RN$LegacyInterop_UIManager_getConstants)();
     c3 = true;
   }
-  const keys = Object.keys(closure_4);
-  const item = keys.forEach((arg0) => {
-    if (typeof f18352 !== "function") {
-      HermesBuiltin.throwTypeError();
+  const keys = Object.keys(dependencyMap);
+  const item = keys.forEach((item) => {
+    if (typeof f18352 === "function") {
+      if (!c3) {
+        dependencyMap = _null(70)(RN$LegacyInterop_UIManager_getConstants)();
+        c3 = true;
+      }
+      tmp[item] = dependencyMap[item];
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    if (!c3) {
-      dependencyMap = _null(70)(RN$LegacyInterop_UIManager_getConstants)();
-      c3 = true;
-    }
-    obj[arg0] = dependencyMap[arg0];
   });
   if (obj.getConstants().ViewManagerNames) {
     const ViewManagerNames = obj.getConstants().ViewManagerNames;
-    const item1 = ViewManagerNames.forEach((arg0) => {
-      closure_0 = arg0;
+    const item1 = ViewManagerNames.forEach((item) => {
+      closure_0 = item;
       obj = {
         get() {
-          return closure_1_1(closure_1_2[0])(closure_1_10.getConstantsForViewManager)(closure_0);
+          return c1(70)(obj.getConstantsForViewManager)(closure_0);
         },
       };
-      _null(49)(obj, arg0, obj);
+      _null(49)(obj, item, obj);
     });
   }
 }

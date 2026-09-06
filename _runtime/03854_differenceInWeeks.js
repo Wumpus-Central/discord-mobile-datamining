@@ -1,19 +1,17 @@
 // _runtime/03854_differenceInWeeks.js
-import getRoundingMethod from "03844_getRoundingMethod.js";
+import _mod3844 from "metro/03844__.js";
 import compareLocalAsc from "03841_compareLocalAsc.js";
 import requiredArgs from "03651_requiredArgs.js";
 
 if (!compareLocalAsc) {
-  let obj = { default: null };
-  obj[0] = compareLocalAsc;
+  let obj = { default: compareLocalAsc };
   let tmp3 = obj;
 } else {
   tmp3 = compareLocalAsc;
 }
 compareLocalAsc = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
@@ -27,6 +25,6 @@ export default function differenceInWeeks(arg0, arg1, roundingMethod) {
   if (null != roundingMethod) {
     roundingMethod = roundingMethod.roundingMethod;
   }
-  return getRoundingMethod.getRoundingMethod(roundingMethod)(result);
+  return _mod3844.getRoundingMethod(roundingMethod)(result);
 };
 export default exports.default;

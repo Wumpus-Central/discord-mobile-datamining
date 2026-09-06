@@ -1,15 +1,13 @@
 // _runtime/00729_forEachEnvelopeItem.js
 import _mod686 from "metro/00686__.js";
-import getGlobalSingleton from "00690_getGlobalSingleton.js";
-import dsnFromString from "00702_dsnFromString.js";
-import closure_2 from "metro/00032__slicedToArray.js";
-import { getGlobalSingleton } from "00690_getGlobalSingleton.js";
-import { normalize } from "00730_normalize.js";
+import _mod690 from "metro/00690__.js";
+import _mod702 from "metro/00702__.js";
+import normalize from "00730_normalize.js";
+import _slicedToArray from "metro/00032__.js";
 
-function forEachEnvelopeItem(arg0, arg1) {
+function forEachEnvelopeItem(arg0, fn) {
   for (const item10007 of tmp) {
     if (arg1(item10007, item10007[0].type)) {
-      let tmp2 = obj;
       obj.return();
       let flag = true;
       return true;
@@ -40,7 +38,7 @@ let closure_4 = {
 };
 
 export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
-  const tmp = callback(arg0, 2);
+  const tmp = _slicedToArray(arg0, 2);
   const items = [tmp[0]];
   const items1 = [];
   items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
@@ -50,20 +48,19 @@ export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
 export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
   if (typeof data.data === "string") {
     data = data.data;
-    let obj = getGlobalSingleton;
+    let obj = _mod690;
     const sentryCarrier = obj.getSentryCarrier(_mod686.GLOBAL_OBJ);
     if (sentryCarrier.encodePolyfill) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(data);
     } else {
       const _TextEncoder = TextEncoder;
-      const textEncoder = new TextEncoder();
-      encodePolyfillResult = textEncoder.encode(data);
+      const encoder = new TextEncoder();
+      encodePolyfillResult = encoder.encode(data);
     }
   } else {
     data = data.data;
-    obj = { type: "attachment", length: null, filename: null, content_type: null, attachment_type: null };
-    obj[1] = data.length;
-    ({ filename: obj4[2], contentType: obj4[3], attachmentType: obj4[4] } = data);
+    obj = { type: "attachment", length: data.length, filename: null, content_type: null, attachment_type: null };
+    ({ filename: obj3.filename, contentType: obj3.content_type, attachmentType: obj3.attachment_type } = data);
     const items = [obj, data];
     return items;
   }
@@ -76,32 +73,28 @@ export function createEnvelope(arg0) {
   const items1 = [arg0, items];
   return items1;
 }
-export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id) {
+export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id, sdk, arg2, arg3) {
   const sdkProcessingMetadata = event_id.sdkProcessingMetadata;
   let prop;
   if (sdkProcessingMetadata != null) {
     prop = sdkProcessingMetadata.dynamicSamplingContext;
   }
   let obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
-  let tmp2 = arg1;
-  if (arg1) {
-    obj = { sdk: null };
-    obj[0] = arg1;
+  let tmp2 = sdk;
+  if (sdk) {
+    obj = { sdk };
     tmp2 = obj;
   }
   const merged = Object.assign(tmp2);
   let tmp4 = arg2 && arg3;
   if (tmp4) {
-    obj = { dsn: null };
-    obj[0] = dsnFromString.dsnToString(arg3);
+    obj = { dsn: _mod702.dsnToString(arg3) };
     tmp4 = obj;
-    const obj5 = dsnFromString;
   }
   const merged1 = Object.assign(tmp4);
   let tmp8 = prop;
   if (prop) {
-    obj1 = { trace: null };
-    obj1[0] = prop;
+    const obj1 = { trace: prop };
     tmp8 = obj1;
   }
   const merged2 = Object.assign(tmp8);
@@ -116,7 +109,7 @@ export const envelopeContainsItemType = function envelopeContainsItemType(arg0, 
   return forEachEnvelopeItem(arg0, (arg0, arg1) => closure_0.includes(arg1));
 };
 export const envelopeItemTypeToDataCategory = function envelopeItemTypeToDataCategory(arg0) {
-  return table[arg0];
+  return closure_4[arg0];
 };
 export { forEachEnvelopeItem };
 export const getSdkMetadataForEnvelopeHeader = function getSdkMetadataForEnvelopeHeader(sdk) {
@@ -126,30 +119,30 @@ export const getSdkMetadataForEnvelopeHeader = function getSdkMetadataForEnvelop
   }
   if (sdk) {
     const obj = { name: null, version: null };
-    ({ name: obj[0], version: obj[1] } = sdk.sdk);
+    ({ name: obj.name, version: obj.version } = sdk.sdk);
     return obj;
   }
 };
 export const parseEnvelope = function parseEnvelope(arr) {
   if (typeof arr !== "string") {
     function readJson() {
-      let length = lib.indexOf(10);
+      let length = closure_0.indexOf(10);
       if (length < 0) {
-        length = lib.length;
+        length = closure_0.length;
       }
-      const subarrayResult = lib.subarray(0, length);
-      lib = lib.subarray(length + 1);
-      const sentryCarrier = lib(closure_1_1[1]).getSentryCarrier(lib(closure_1_1[2]).GLOBAL_OBJ);
+      const subarrayResult = closure_0.subarray(0, length);
+      closure_0 = closure_0.subarray(length + 1);
+      const sentryCarrier = _mod690.getSentryCarrier(_mod686.GLOBAL_OBJ);
       if (sentryCarrier.decodePolyfill) {
         let decodePolyfillResult = sentryCarrier.decodePolyfill(subarrayResult);
       } else {
         const _TextDecoder = TextDecoder;
-        const textDecoder = new TextDecoder();
-        decodePolyfillResult = textDecoder.decode(subarrayResult);
+        const decoder = new TextDecoder();
+        decodePolyfillResult = decoder.decode(subarrayResult);
       }
       return JSON.parse(decodePolyfillResult);
     }
-    let _require = arr;
+    _require = arr;
     const items = [];
     const json = readJson();
     while (_require.length) {
@@ -160,76 +153,69 @@ export const parseEnvelope = function parseEnvelope(arr) {
       }
       let items1 = [json1];
       if (length) {
-        let tmp11 = _require;
-        let subarrayResult = _require.subarray(0, length);
-        let tmp12 = _require;
+        let subarrayResult = require("Discord");
         _require = _require.subarray(length + 1);
       } else {
         subarrayResult = readJson();
       }
       items1[1] = subarrayResult;
       arr = items.push(items1);
-      let tmp14 = _require;
     }
     const items2 = [json, items];
     return items2;
   } else {
-    let sentryCarrier = require("00690_getGlobalSingleton.js").getSentryCarrier(require("metro/00686__.js").GLOBAL_OBJ);
+    let sentryCarrier = require("metro/00690__.js").getSentryCarrier(require("metro/00686__.js").GLOBAL_OBJ);
     if (sentryCarrier.encodePolyfill) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(arr);
     } else {
       const _TextEncoder = TextEncoder;
-      const textEncoder = new TextEncoder();
-      encodePolyfillResult = textEncoder.encode(arr);
+      const encoder = new TextEncoder();
+      encodePolyfillResult = encoder.encode(arr);
     }
-    const obj2 = getGlobalSingleton;
+    const obj = require("metro/00690__.js");
   }
 };
 export const serializeEnvelope = function serializeEnvelope(arg0) {
   function append(json) {
-    let arr = callback;
-    if (typeof callback === "string") {
+    let arr = sum;
+    if (typeof sum === "string") {
       if (typeof json === "string") {
-        let sum = arr + json;
+        sum = arr + json;
       } else {
-        const sentryCarrier = callback(closure_1_1[1]).getSentryCarrier(callback(closure_1_1[2]).GLOBAL_OBJ);
+        const sentryCarrier = _mod690.getSentryCarrier(_mod686.GLOBAL_OBJ);
         if (sentryCarrier.encodePolyfill) {
           let encodePolyfillResult = sentryCarrier.encodePolyfill(arr);
         } else {
           const _TextEncoder2 = TextEncoder;
-          const textEncoder = new TextEncoder();
-          encodePolyfillResult = textEncoder.encode(arr);
+          const encoder2 = new TextEncoder();
+          encodePolyfillResult = encoder2.encode(arr);
         }
         sum = [encodePolyfillResult, json];
-        const obj5 = callback(closure_1_1[1]);
       }
-      callback = sum;
     } else if (typeof json !== "string") {
       arr = arr.push(json);
     } else {
-      const sentryCarrier1 = callback(closure_1_1[1]).getSentryCarrier(callback(closure_1_1[2]).GLOBAL_OBJ);
+      const sentryCarrier1 = _mod690.getSentryCarrier(_mod686.GLOBAL_OBJ);
       if (sentryCarrier1.encodePolyfill) {
         let encodePolyfillResult1 = sentryCarrier1.encodePolyfill(json);
       } else {
         const _TextEncoder = TextEncoder;
-        const textEncoder1 = new TextEncoder();
-        encodePolyfillResult1 = textEncoder1.encode(json);
+        const encoder = new TextEncoder();
+        encodePolyfillResult1 = encoder.encode(json);
       }
-      const obj3 = callback(closure_1_1[1]);
     }
   }
-  const tmp4 = callback(arg0, 2);
-  const _require = JSON.stringify(tmp4[0]);
+  const tmp4 = _slicedToArray(arg0, 2);
+  const require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
-    let tmp22 = _require;
-    if (typeof _require !== "string") {
+    let tmp22 = require;
+    if (typeof require !== "string") {
       tmp22 = (function concatBuffers(arr) {
-        const uint8Array = new Uint8Array(arr.reduce((arg0, arg1) => arg0 + arg1.length, 0));
+        const uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
         let num = 0;
         const iter = arr[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp = num;
           let result = uint8Array.set(nextResult, num);
           num = num + nextResult.length;
           continue;
@@ -239,7 +225,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
     }
     return tmp22;
   } else {
-    const tmp8 = callback(tmp6, 2);
+    const tmp8 = _slicedToArray(tmp6, 2);
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
     append("\n" + JSON.stringify(tmp8[0]) + "\n");
@@ -252,8 +238,8 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
           append(json);
         } catch (err) {
           const _JSON3 = tmp2.JSON;
-          json = _JSON3.stringify(require("00730_normalize.js").normalize(tmp3));
-          const obj = normalize;
+          const normalizer = normalize;
+          json = _JSON3.stringify(normalizer.normalize(tmp3));
         }
       }
     }

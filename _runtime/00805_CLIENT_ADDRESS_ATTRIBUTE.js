@@ -1,0 +1,33 @@
+// _runtime/00805_CLIENT_ADDRESS_ATTRIBUTE.js
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+
+export const CLIENT_ADDRESS_ATTRIBUTE = "client.address";
+export const CLIENT_PORT_ATTRIBUTE = "client.port";
+export const MCP_FUNCTION_ORIGIN_VALUE = "auto.function.mcp_server";
+export const MCP_LOGGING_DATA_TYPE_ATTRIBUTE = "mcp.logging.data_type";
+export const MCP_LOGGING_LEVEL_ATTRIBUTE = "mcp.logging.level";
+export const MCP_LOGGING_LOGGER_ATTRIBUTE = "mcp.logging.logger";
+export const MCP_LOGGING_MESSAGE_ATTRIBUTE = "mcp.logging.message";
+export const MCP_METHOD_NAME_ATTRIBUTE = "mcp.method.name";
+export const MCP_NOTIFICATION_CLIENT_TO_SERVER_OP_VALUE = "mcp.notification.client_to_server";
+export const MCP_NOTIFICATION_ORIGIN_VALUE = "auto.mcp.notification";
+export const MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = "mcp.notification.server_to_client";
+export const MCP_PROMPT_NAME_ATTRIBUTE = "mcp.prompt.name";
+export const MCP_PROMPT_RESULT_DESCRIPTION_ATTRIBUTE = "mcp.prompt.result.description";
+export const MCP_PROMPT_RESULT_MESSAGE_COUNT_ATTRIBUTE = "mcp.prompt.result.message_count";
+export const MCP_PROTOCOL_VERSION_ATTRIBUTE = "mcp.protocol.version";
+export const MCP_REQUEST_ARGUMENT = "mcp.request.argument";
+export const MCP_REQUEST_ID_ATTRIBUTE = "mcp.request.id";
+export const MCP_RESOURCE_URI_ATTRIBUTE = "mcp.resource.uri";
+export const MCP_ROUTE_SOURCE_VALUE = "route";
+export const MCP_SERVER_NAME_ATTRIBUTE = "mcp.server.name";
+export const MCP_SERVER_OP_VALUE = "mcp.server";
+export const MCP_SERVER_TITLE_ATTRIBUTE = "mcp.server.title";
+export const MCP_SERVER_VERSION_ATTRIBUTE = "mcp.server.version";
+export const MCP_SESSION_ID_ATTRIBUTE = "mcp.session.id";
+export const MCP_TOOL_NAME_ATTRIBUTE = "mcp.tool.name";
+export const MCP_TOOL_RESULT_CONTENT_COUNT_ATTRIBUTE = "mcp.tool.result.content_count";
+export const MCP_TOOL_RESULT_IS_ERROR_ATTRIBUTE = "mcp.tool.result.is_error";
+export const MCP_TRANSPORT_ATTRIBUTE = "mcp.transport";
+export const NETWORK_PROTOCOL_VERSION_ATTRIBUTE = "network.protocol.version";
+export const NETWORK_TRANSPORT_ATTRIBUTE = "network.transport";

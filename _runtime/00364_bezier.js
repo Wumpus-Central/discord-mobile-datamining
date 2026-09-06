@@ -1,5 +1,5 @@
 // _runtime/00364_bezier.js
-import bezier from "00365_bezier.js";
+import _mod365 from "metro/00365__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -22,10 +22,9 @@ const obj = {
     return arg0;
   },
   ease(arg0) {
-    let tmp = closure_2;
-    if (!closure_2) {
-      const bezierResult = obj.bezier(0.42, 0, 1, 1);
-      closure_2 = bezierResult;
+    let tmp = bezierResult;
+    if (!bezierResult) {
+      bezierResult = obj.bezier(0.42, 0, 1, 1);
       tmp = bezierResult;
     }
     return tmp(arg0);
@@ -54,15 +53,10 @@ const obj = {
     if (arg0 === undefined) {
       num = 1;
     }
-    closure_0 = undefined;
     closure_0 = num * Math.PI;
     return (arg0) => 1 - Math.pow(Math.cos((arg0 * Math.PI) / 2), 3) * Math.cos(arg0 * closure_0);
   },
   back() {
-    let num = arg0;
-    if (arg0 === undefined) {
-      num = 1.70158;
-    }
     return (arg0) => arg0 * arg0 * ((num + 1) * arg0 - num);
   },
   bounce(arg0) {
@@ -80,25 +74,26 @@ const obj = {
     }
   },
   bezier(arg0, arg1, arg2, arg3) {
-    return bezier.default(arg0, arg1, arg2, arg3);
+    return _mod365.default(arg0, arg1, arg2, arg3);
   },
   in(ease) {
     return ease;
   },
   out(arg0) {
     closure_0 = arg0;
-    return (arg0) => 1 - callback(1 - arg0);
+    return (arg0) => 1 - closure_0(1 - arg0);
   },
   inOut(arg0) {
     closure_0 = arg0;
     return (arg0) => {
       if (arg0 < 0.5) {
-        let result = callback(2 * arg0) / 2;
+        let result = closure_0(2 * arg0) / 2;
       } else {
-        result = 1 - callback(2 * (1 - arg0)) / 2;
+        result = 1 - closure_0(2 * (1 - arg0)) / 2;
       }
       return result;
     };
   },
 };
-arg5.default = obj;
+
+export default obj;

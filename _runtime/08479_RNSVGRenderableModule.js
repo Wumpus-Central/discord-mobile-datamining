@@ -1,6 +1,6 @@
 // _runtime/08479_RNSVGRenderableModule.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
 export default TurboModuleRegistry.getEnforcing("RNSVGRenderableModule");

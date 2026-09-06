@@ -1,4 +1,4 @@
 // _runtime/06684_RNGestureHandlerModule.js
-import RNGestureHandlerModuleDefault from "06685_RNGestureHandlerModule.js";
+import _modDef6685 from "metro/06685__.js";
 
-export default RNGestureHandlerModuleDefault;
+export default _modDef6685;

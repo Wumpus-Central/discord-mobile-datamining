@@ -12,129 +12,130 @@ class Integer {
         if (10 === +arg1) {
         }
         tmp3 = parseBase;
-        if (typeof parseBase !== "function") {
-          str10 = "Trying to call a non-function";
-          throwTypeErrorResult = HermesBuiltin.throwTypeError();
-        }
-        if (!str) {
-          str = c1;
-        }
-        tmp4 = arg3;
-        tmp5 = globalThis;
-        _String = String;
-        str2 = String(arg0);
-        formatted1 = str;
-        formatted = str2;
-        if (!arg3) {
-          formatted = str2.toLowerCase();
-          formatted1 = str.toLowerCase();
-        }
-        length = formatted.length;
-        _Math = Math;
-        absolute = Math.abs(arg1);
-        obj = {};
-        num2 = 0;
-        num3 = 1;
-        num4 = 0;
-        if (0 < formatted1.length) {
-          do {
-            obj[formatted1[num4]] = num4;
-            num4 = num4 + 1;
-            length2 = formatted1.length;
-          } while (num4 < length2);
-        }
-        str3 = "1";
-        str4 = "-";
-        num5 = 0;
-        if (0 < length) {
-          while (true) {
-            tmp7 = formatted[num5];
-            tmp8 = num5;
-            if ("-" !== tmp7) {
-              if (tmp7 in obj) {
-                if (obj[tmp7] >= absolute) {
-                  if ("1" !== tmp7) {
-                    break;
-                  } else if (1 !== absolute) {
-                    break;
+        if (typeof parseBase === "function") {
+          if (!str) {
+            str = c1;
+          }
+          tmp4 = arg3;
+          tmp5 = globalThis;
+          _String = String;
+          str2 = String(arg0);
+          formatted1 = str;
+          formatted = str2;
+          if (!arg3) {
+            formatted = str2.toLowerCase();
+            formatted1 = str.toLowerCase();
+          }
+          length = formatted.length;
+          _Math = Math;
+          absolute = Math.abs(arg1);
+          obj = {};
+          num2 = 0;
+          num3 = 1;
+          num4 = 0;
+          if (0 < formatted1.length) {
+            do {
+              obj[formatted1[num4]] = num4;
+              num4 = num4 + 1;
+              length2 = formatted1.length;
+            } while (num4 < length2);
+          }
+          str3 = "1";
+          str4 = "-";
+          num5 = 0;
+          if (0 < length) {
+            while (true) {
+              tmp7 = formatted[num5];
+              tmp8 = num5;
+              if ("-" !== tmp7) {
+                if (tmp7 in obj) {
+                  if (obj[tmp7] >= absolute) {
+                    if ("1" !== tmp7) {
+                      break;
+                    } else if (1 !== absolute) {
+                      break;
+                    }
                   }
                 }
               }
+              num5 = num5 + 1;
             }
-            num5 = num5 + 1;
+            _Error = Error;
+            str5 = " is not a valid digit in base ";
+            tmp9 = new.target;
+            str6 = ".";
+            tmp10 = new.target;
+            error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
+            tmp12 = error;
+            throw error;
           }
-          _Error = Error;
-          str5 = " is not a valid digit in base ";
-          tmp9 = new.target;
-          str6 = ".";
-          tmp10 = new.target;
-          error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
-          tmp12 = error;
-          throw error;
-        }
-        tmp13 = parseValue;
-        tmp15 = "-" === formatted[0];
-        num6 = 0;
-        tmp14 = parseValue(arg1);
-        if (tmp15) {
-          num6 = 1;
-        }
-        items = [];
-        str7 = "<";
-        str8 = ">";
-        if (num6 < formatted.length) {
-          while (true) {
-            tmp16 = formatted[num6];
-            tmp17 = num6;
-            if (tmp16 in obj) {
-              tmp26 = parseValue;
-              arr = items.push(parseValue(obj[tmp16]));
-              sum = num6;
-            } else {
-              tmp18 = num6;
-              if ("<" !== tmp16) {
-                break;
+          tmp13 = parseValue;
+          tmp15 = "-" === formatted[0];
+          num6 = 0;
+          tmp14 = parseValue(arg1);
+          if (tmp15) {
+            num6 = 1;
+          }
+          items = [];
+          str7 = "<";
+          str8 = ">";
+          if (num6 < formatted.length) {
+            while (true) {
+              tmp16 = formatted[num6];
+              tmp17 = num6;
+              if (tmp16 in obj) {
+                tmp26 = parseValue;
+                arr = items.push(parseValue(obj[tmp16]));
+                sum = num6;
               } else {
-                sum = tmp18 + 1;
-                while (">" !== formatted[sum]) {
-                  tmp18 = sum;
-                  if (sum >= formatted.length) {
-                    break;
+                tmp18 = num6;
+                if ("<" !== tmp16) {
+                  break;
+                } else {
+                  sum = tmp18 + 1;
+                  while (">" !== formatted[sum]) {
+                    tmp18 = sum;
+                    if (sum >= formatted.length) {
+                      break;
+                    }
                   }
+                  tmp20 = parseValue;
+                  arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                 }
-                tmp20 = parseValue;
-                arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
               }
+              num6 = sum + 1;
             }
-            num6 = sum + 1;
+            _Error2 = Error;
+            str9 = " is not a valid character";
+            tmp22 = new.target;
+            tmp23 = new.target;
+            error1 = new Error(tmp16 + " is not a valid character");
+            tmp25 = error1;
+            throw error1;
           }
-          _Error2 = Error;
-          str9 = " is not a valid character";
-          tmp22 = new.target;
-          tmp23 = new.target;
-          error1 = new Error(tmp16 + " is not a valid character");
-          tmp25 = error1;
-          throw error1;
+          tmp28 = Integer;
+          [tmp29, obj2] = Integer;
+          diff = items.length - 1;
+          addResult = tmp29;
+          obj4 = tmp29;
+          if (0 <= diff) {
+            do {
+              obj5 = items[diff];
+              addResult = addResult.add(obj5.times(timesResult));
+              timesResult = timesResult.times(tmp14);
+              diff = diff - 1;
+              obj4 = addResult;
+            } while (0 <= diff);
+          }
+          negateResult = obj4;
+          if (tmp15) {
+            negateResult = obj4.negate();
+          }
+          first = negateResult;
+        } else {
+          str10 = "Trying to call a non-function";
+          throw new TypeError("Trying to call a non-function");
         }
-        tmp28 = Integer;
-        [tmp29, obj2] = Integer;
-        diff = items.length - 1;
-        addResult = tmp29;
-        obj4 = tmp29;
-        if (0 <= diff) {
-          do {
-            obj5 = items[diff];
-            addResult = addResult.add(obj5.times(timesResult));
-            timesResult = timesResult.times(tmp14);
-            diff = diff - 1;
-            obj4 = addResult;
-          } while (0 <= diff);
-        }
-        negateResult = obj4;
-        if (tmp15) {
-          negateResult = obj4.negate();
-        }
-        first = negateResult;
       }
       tmp = parseValue;
       first = parseValue(arg0);
@@ -601,7 +602,7 @@ class BigInteger {
             multiplyResult1 = obj7.multiply(modInvResult);
             modResult1 = multiplyResult1.mod(obj2);
           }
-          divideResult = require("00002_set.js");
+          divideResult = obj6.divide(2);
           squareResult = modInvResult.square();
           modInvResult = squareResult.mod(obj2);
           obj7 = modResult1;
@@ -761,7 +762,7 @@ class BigInteger {
         self = this;
         num = 2;
         num2 = 0;
-        if (0 === require("00002_set.js")) {
+        if (0 === obj.compareAbs(2)) {
           isEvenResult = self.isEven();
         } else {
           modResult = self.mod(obj);
@@ -779,30 +780,30 @@ class BigInteger {
     tmp2 = !isUnitResult;
     if (!isUnitResult) {
       num = 2;
-      equalsResult = require("00002_set.js");
+      equalsResult = absResult.equals(2);
       if (!equalsResult) {
         num2 = 3;
-        equalsResult = require("../discord_app/modules/debug/Logger.tsx");
+        equalsResult = absResult.equals(3);
       }
       if (!equalsResult) {
         num3 = 5;
-        equalsResult = require("00005_asyncGeneratorStep.js");
+        equalsResult = absResult.equals(5);
       }
       tmp4 = equalsResult;
       if (!tmp4) {
         isEvenResult = absResult.isEven();
         if (!isEvenResult) {
           num4 = 3;
-          isEvenResult = require("../discord_app/modules/debug/Logger.tsx");
+          isEvenResult = absResult.isDivisibleBy(3);
         }
         if (!isEvenResult) {
           num5 = 5;
-          isEvenResult = require("00005_asyncGeneratorStep.js");
+          isEvenResult = absResult.isDivisibleBy(5);
         }
         tmp6 = !isEvenResult;
         if (!isEvenResult) {
           num6 = 49;
-          tmp7 = require("00049_defineLazyObjectProperty.js") || undefined;
+          tmp7 = absResult.lesser(49) || undefined;
           tmp6 = tmp7;
         }
         tmp4 = tmp6;
@@ -824,7 +825,7 @@ class BigInteger {
         tmp15 = globalThis;
         _Math2 = Math;
         num12 = 2;
-        logResult = require("00002_set.js");
+        logResult = Math.log(2);
         result = logResult * bitLengthResult.toJSNumber();
         flag = true;
         result1 = result;
@@ -837,8 +838,8 @@ class BigInteger {
         num7 = 0;
         num8 = 1;
         for (let num9 = 0; num9 < rounded; num9 = num9 + 1) {
-          tmp10 = Integer;
-          arr = items.push(Integer(num9 + 2));
+          tmp10 = closure_0;
+          arr = items.push(closure_0(num9 + 2));
         }
         tmp12 = millerRabinTest;
         return millerRabinTest(absResult1, items);
@@ -852,30 +853,30 @@ class BigInteger {
     tmp2 = !isUnitResult;
     if (!isUnitResult) {
       num = 2;
-      equalsResult = require("00002_set.js");
+      equalsResult = absResult.equals(2);
       if (!equalsResult) {
         num2 = 3;
-        equalsResult = require("../discord_app/modules/debug/Logger.tsx");
+        equalsResult = absResult.equals(3);
       }
       if (!equalsResult) {
         num3 = 5;
-        equalsResult = require("00005_asyncGeneratorStep.js");
+        equalsResult = absResult.equals(5);
       }
       tmp4 = equalsResult;
       if (!tmp4) {
         isEvenResult = absResult.isEven();
         if (!isEvenResult) {
           num4 = 3;
-          isEvenResult = require("../discord_app/modules/debug/Logger.tsx");
+          isEvenResult = absResult.isDivisibleBy(3);
         }
         if (!isEvenResult) {
           num5 = 5;
-          isEvenResult = require("00005_asyncGeneratorStep.js");
+          isEvenResult = absResult.isDivisibleBy(5);
         }
         tmp6 = !isEvenResult;
         if (!isEvenResult) {
           num6 = 49;
-          tmp7 = require("00049_defineLazyObjectProperty.js") || undefined;
+          tmp7 = absResult.lesser(49) || undefined;
           tmp6 = tmp7;
         }
         tmp4 = tmp6;
@@ -896,8 +897,8 @@ class BigInteger {
       num9 = 2;
       num10 = 1;
       for (let num11 = 0; num11 < num7; num11 = num11 + 1) {
-        tmp9 = Integer;
-        arr = items.push(require("00002_set.js"));
+        tmp9 = closure_0;
+        arr = items.push(closure_0.randBetween(2, absResult1.minus(2), arg1));
       }
       tmp11 = millerRabinTest;
       return millerRabinTest(absResult1, items);
@@ -905,7 +906,7 @@ class BigInteger {
   }
   modInv(arg0) {
     self = this;
-    ({ zero, one } = Integer);
+    ({ zero, one } = closure_0);
     obj = parseValue(arg0);
     absResult = this.abs();
     tmp = absResult;
@@ -930,7 +931,7 @@ class BigInteger {
       num = 0;
       num2 = -1;
       addResult = obj5;
-      if (-1 === require("../discord_app/index.native.tsx")) {
+      if (-1 === obj5.compare(0)) {
         addResult = obj5.add(arg0);
       }
       negateResult = addResult;
@@ -1180,18 +1181,18 @@ class BigInteger {
   }
   bitLength() {
     self = this;
-    tmp = Integer;
+    tmp = closure_0;
     self2 = this;
-    if (this.compareTo(require("../discord_app/index.native.tsx")) < 0) {
+    if (this.compareTo(closure_0(0)) < 0) {
       negateResult = self.negate();
       num = 1;
-      self2 = negateResult.subtract(require("../discord_app/modules/debug/logAppStart.tsx"));
+      self2 = negateResult.subtract(tmp(1));
     }
-    if (0 === self2.compareTo(require("../discord_app/index.native.tsx"))) {
-      tmpResult = require("../discord_app/index.native.tsx");
+    if (0 === self2.compareTo(tmp(0))) {
+      tmpResult = tmp(0);
     } else {
       num6 = 2;
-      tmpResult1 = require("00002_set.js");
+      tmpResult1 = tmp(2);
       if (tmpResult1.compareTo(self2) <= 0) {
         squareResult = tmpResult1.square(tmpResult1);
         if (squareResult.compareTo(self2) <= 0) {
@@ -1201,43 +1202,43 @@ class BigInteger {
           multiplyResult = p.multiply(squareResult);
           if (multiplyResult.compareTo(self2) <= 0) {
             obj = { p: null, e: null };
-            obj[0] = multiplyResult;
+            obj.p = multiplyResult;
             num4 = 1;
-            obj[1] = num6 * e + 1;
+            obj.e = num6 * e + 1;
             obj1 = obj;
           } else {
             obj1 = { p: null, e: null };
-            obj1[0] = p;
-            obj1[1] = num6 * e;
+            obj1.p = p;
+            obj1.e = num6 * e;
           }
           tmp4 = obj1;
         } else {
           obj2 = { p: null, e: 0 };
           num3 = 1;
-          obj2[0] = require("../discord_app/modules/debug/logAppStart.tsx");
+          obj2.p = tmp(1);
           ({ p: p2, e: e2 } = obj2);
           multiplyResult1 = p2.multiply(tmpResult1);
           if (multiplyResult1.compareTo(self2) <= 0) {
             obj3 = { p: null, e: null };
-            obj3[0] = multiplyResult1;
+            obj3.p = multiplyResult1;
             num5 = 1;
             num6 = num6 * e2 + 1;
-            obj3[1] = num6;
+            obj3.e = num6;
             obj4 = obj3;
           } else {
             obj4 = { p: null, e: null };
-            obj4[0] = p2;
-            obj4[1] = num6 * e2;
+            obj4.p = p2;
+            obj4.e = num6 * e2;
           }
           tmp5 = obj4;
         }
       } else {
         obj5 = { p: null, e: 0 };
         num2 = 1;
-        obj5[0] = require("../discord_app/modules/debug/logAppStart.tsx");
+        obj5.p = tmp(1);
         tmpResult2 = tmp(obj5.e);
         num7 = 1;
-        tmpResult = tmpResult2.add(require("../discord_app/modules/debug/logAppStart.tsx"));
+        tmpResult = tmpResult2.add(tmp(1));
       }
     }
     return tmpResult;
@@ -1263,15 +1264,15 @@ class BigInteger {
         str3 = "-";
       }
       value = iter.value;
-      mapped = value.map((arg0) => {
+      mapped = value.map((item) => {
         let arr = closure_0;
         if (!closure_0) {
-          arr = closure_1_1;
+          arr = c1;
         }
-        if (arg0 < arr.length) {
-          let text = arr[arg0];
+        if (item < arr.length) {
+          let text = arr[item];
         } else {
-          text = `${"<" + arg0}>`;
+          text = `${"<" + item}>`;
         }
         return text;
       });
@@ -1721,15 +1722,15 @@ class SmallInteger {
         str2 = "-";
       }
       value = iter.value;
-      mapped = value.map((arg0) => {
+      mapped = value.map((item) => {
         let arr = closure_0;
         if (!closure_0) {
-          arr = closure_1_1;
+          arr = c1;
         }
-        if (arg0 < arr.length) {
-          let text = arr[arg0];
+        if (item < arr.length) {
+          let text = arr[item];
         } else {
-          text = `${"<" + arg0}>`;
+          text = `${"<" + item}>`;
         }
         return text;
       });
@@ -1797,8 +1798,8 @@ class NativeBigInt {
     iter = parseValue(arg0);
     value = this.value;
     value = iter.value;
-    BigIntResult = require("../discord_app/index.native.tsx");
-    BigIntResult1 = require("../discord_app/modules/debug/logAppStart.tsx");
+    BigIntResult = BigInt(0);
+    BigIntResult1 = BigInt(1);
     if (value === BigIntResult) {
       tmp18 = Integer;
       return Integer[1];
@@ -1811,7 +1812,7 @@ class NativeBigInt {
     } else {
       _BigInt = BigInt;
       num = -1;
-      if (value === require("module_4294967295")) {
+      if (value === BigInt(-1)) {
         tmp15 = Integer;
         return iter.isEven() ? tmp15[1] : tmp15[-1];
       } else if (iter.isNegative()) {
@@ -1899,27 +1900,27 @@ class NativeBigInt {
     }
   }
   isEven() {
-    tmp = this.value & require("../discord_app/modules/debug/logAppStart.tsx");
-    return tmp === require("../discord_app/index.native.tsx");
+    tmp = this.value & BigInt(1);
+    return tmp === BigInt(0);
   }
   isOdd() {
-    tmp = this.value & require("../discord_app/modules/debug/logAppStart.tsx");
-    return tmp === require("../discord_app/modules/debug/logAppStart.tsx");
+    tmp = this.value & BigInt(1);
+    return tmp === BigInt(1);
   }
   isUnit() {
-    return this.abs().value === require("../discord_app/modules/debug/logAppStart.tsx");
+    return this.abs().value === BigInt(1);
   }
   isZero() {
-    return this.value === require("../discord_app/index.native.tsx");
+    return this.value === BigInt(0);
   }
   next() {
-    sum = this.value + require("../discord_app/modules/debug/logAppStart.tsx");
+    sum = this.value + BigInt(1);
     obj = Object.create(NativeBigInt.prototype);
     obj.value = sum;
     return obj;
   }
   prev() {
-    diff = this.value - require("../discord_app/modules/debug/logAppStart.tsx");
+    diff = this.value - BigInt(1);
     obj = Object.create(NativeBigInt.prototype);
     obj.value = diff;
     return obj;
@@ -1989,7 +1990,6 @@ function addAny(substr1, substr) {
     if (0 < substr.length) {
       do {
         let sum = substr1[num11] + substr[num11] + num10;
-        let tmp14 = num11;
         let num14 = 0;
         if (sum >= 10000000) {
           num14 = 1;
@@ -2032,7 +2032,6 @@ function addAny(substr1, substr) {
     if (0 < substr1.length) {
       do {
         let sum2 = substr[num2] + substr1[num2] + num3;
-        let tmp2 = num2;
         let num = 0;
         if (sum2 >= 10000000) {
           num = 1;
@@ -2077,7 +2076,6 @@ function subtract(arg0, arg1) {
   if (0 < arg1.length) {
     do {
       let diff = arg0[num2] - num - arg1[num2];
-      let tmp2 = num2;
       let num4 = 0;
       let sum = diff;
       if (diff < 0) {
@@ -2131,7 +2129,6 @@ function subtractSmall(value, arg1, sign) {
       let sum = value[num] + tmp2;
       let _Math = Math;
       let result = sum % 10000000;
-      let tmp6 = num;
       let sum1 = result;
       let rounded = Math.floor(sum / 10000000);
       if (result < 0) {
@@ -2148,9 +2145,9 @@ function subtractSmall(value, arg1, sign) {
     if (sign) {
       tmp9 = -tmp8;
     }
-    let obj = Object.create(SmallInteger.prototype);
-    obj = { value: tmp9, sign: tmp9 < 0, isSmall: true };
-    obj1 = obj;
+    Object.create(SmallInteger.prototype);
+    let obj = { value: tmp9, sign: tmp9 < 0, isSmall: true };
+    let obj1 = obj;
   } else {
     obj = Object.create(BigInteger.prototype);
     obj1 = { value: tmp8, sign, isSmall: false };
@@ -2169,7 +2166,6 @@ function multiplyLong(value, value2) {
     } while (num < sum);
   }
   for (let num2 = 0; num2 < length; num2 = num2 + 1) {
-    let tmp3 = num2;
     for (let num3 = 0; num3 < length2; num3 = num3 + 1) {
       let sum1 = num2 + num3;
       let sum2 = tmp2 * value2[num3] + arr[sum1];
@@ -2295,10 +2291,9 @@ function multiplySmallAndArray(arg0, value, sign) {
       items2[2] = Math.floor(arg0 / 100000000000000);
     }
     tmp15Result = multiplyLong(value, items2);
-    const tmp15 = multiplyLong;
   }
-  let obj = Object.create(BigInteger.prototype);
-  obj = { value: tmp15Result, sign, isSmall: false };
+  Object.create(BigInteger.prototype);
+  const obj = { value: tmp15Result, sign, isSmall: false };
   return obj;
 }
 function square(squareResult) {
@@ -2315,7 +2310,6 @@ function square(squareResult) {
   for (let num2 = 0; num2 < length; num2 = num2 + 1) {
     let tmp2 = squareResult[num2];
     let diff = 0 - tmp2 * tmp2;
-    let tmp4 = num2;
     let tmp5 = diff;
     let sum3 = num2;
     if (num2 < length) {
@@ -2346,510 +2340,475 @@ function square(squareResult) {
   arr.length = tmp12 + 1;
   return arr;
 }
-function divModAny(value, closure_19) {
+function divModAny(self, items1) {
   let diff4;
-  const iter = parseValue(closure_19);
+  const iter = parseValue(items1);
   if (closure_2) {
-    let result = NativeBigInt;
-    result = value.value / iter.value;
-    result = Object.create(NativeBigInt.prototype);
-    result.value = result;
-    const items = [result, ];
-    result = value.value % iter.value;
-    result = Object.create(NativeBigInt.prototype);
-    result.value = result;
-    items[1] = result;
+    let result = self.value / iter.value;
+    let obj = Object.create(NativeBigInt.prototype);
+    obj.value = result;
+    const items = [obj, ];
+    const result1 = self.value % iter.value;
+    obj = Object.create(NativeBigInt.prototype);
+    obj.value = result1;
+    items[1] = obj;
     return items;
   } else {
-    result = value.value;
+    result = self.value;
     value = iter.value;
     if (0 === value) {
-      result = globalThis;
       const _Error = Error;
-      result = new.target;
-      result = new.target;
-      result = new Error("Cannot divide by zero");
-      throw result;
+      const error = new Error("Cannot divide by zero");
+      throw error;
     } else {
       const isSmall = iter.isSmall;
-      if (value.isSmall) {
+      if (self.isSmall) {
         if (isSmall) {
-          result = SmallInteger;
-          result = result / value;
-          if (result > 0) {
-            result = globalThis;
+          const result2 = result / value;
+          if (result2 > 0) {
             const _Math19 = Math;
-            result = Math.floor(result);
+            let rounded = Math.floor(result2);
           } else {
-            result = globalThis;
             const _Math18 = Math;
-            result = Math.ceil(result);
+            rounded = Math.ceil(result2);
           }
-          result = Object.create(result.prototype);
-          let obj = { value: result, sign: result < 0, isSmall: true };
-          items1 = [obj, ];
+          Object.create(SmallInteger.prototype);
+          const obj2 = { value: rounded, sign: rounded < 0, isSmall: true };
+          items1 = [obj2, ];
           result = result % value;
-          result = Object.create(result.prototype);
+          Object.create(SmallInteger.prototype);
           value = { value: result, sign: result < 0, isSmall: true };
           items1[1] = value;
-          result = items1;
         } else {
-          result = Integer;
-          const items2 = [Integer[0], value];
+          const items2 = [Integer[0], self];
           return items2;
         }
-      } else {
-        result = value;
-        if (!isSmall) {
-          if (result.length !== value.length) {
-            let num6 = -1;
-            if (result.length > value.length) {
-              num6 = 1;
-            }
-            let num4 = num6;
-          } else {
-            let diff = result.length - 1;
-            num4 = 0;
-            if (0 <= diff) {
-              while (result[diff] === value[diff]) {
-                diff = diff - 1;
-                num4 = 0;
-              }
-              let num5 = -1;
-              if (result[diff] > value[diff]) {
-                num5 = 1;
-              }
-              num4 = num5;
-            }
+      } else if (!isSmall) {
+        if (result.length !== value.length) {
+          let num6 = -1;
+          if (result.length > value.length) {
+            num6 = 1;
           }
-          let num7 = -1;
-          if (-1 === num4) {
-            const items3 = [Integer[0], value];
-            return items3;
-          } else if (0 === num4) {
-            if (value.sign === iter.sign) {
-              num7 = 1;
-            }
-            const items4 = [Integer[num7], Integer[0]];
-            return items4;
-          } else {
-            if (result.length + value.length <= 200) {
-              ({ length: length4, length: length5 } = value);
-              const _Array2 = Array;
-              let array = new Array(length5);
-              for (let num19 = 0; num19 < length5; num19 = num19 + 1) {
-                array[num19] = 0;
-              }
-              const _Math7 = Math;
-              const rounded = Math.ceil(10000000 / (2 * value[length4 - 1]));
-              const _Array3 = Array;
-              array = new Array(length6);
-              let num22 = 0;
-              let num23 = 0;
-              let num24 = 0;
-              let num25 = 0;
-              if (0 < result.length) {
-                do {
-                  let sum = result[num23] * rounded + num22;
-                  let _Math8 = Math;
-                  let rounded1 = Math.floor(sum / 10000000);
-                  array[num23] = sum - rounded1 * 10000000;
-                  num23 = num23 + 1;
-                  num22 = rounded1;
-                  num24 = rounded1;
-                  num25 = num23;
-                } while (num23 < length6);
-              }
-              if (num24 > 0) {
-                do {
-                  array[num25] = num24 % 10000000;
-                  let _Math9 = Math;
-                  let sum1 = num25 + 1;
-                  num24 = Math.floor(num24 / 10000000);
-                  num25 = sum1;
-                } while (num24 > 0);
-              }
-              const _Array4 = Array;
-              const array1 = new Array(length7);
-              let num26 = 0;
-              let num27 = 0;
-              let num28 = 0;
-              let num29 = 0;
-              if (0 < value.length) {
-                do {
-                  let sum2 = value[num27] * rounded + num26;
-                  let _Math10 = Math;
-                  let rounded2 = Math.floor(sum2 / 10000000);
-                  array1[num27] = sum2 - rounded2 * 10000000;
-                  num27 = num27 + 1;
-                  num26 = rounded2;
-                  num28 = rounded2;
-                  num29 = num27;
-                } while (num27 < length7);
-              }
-              if (num28 > 0) {
-                do {
-                  array1[num29] = num28 % 10000000;
-                  let _Math11 = Math;
-                  let sum3 = num29 + 1;
-                  num28 = Math.floor(num28 / 10000000);
-                  num29 = sum3;
-                } while (num28 > 0);
-              }
-              if (array.length <= result.length) {
-                array.push(0);
-              }
-              array1.push(0);
-              let diff1 = length3 - length4;
-              if (diff1 >= 0) {
-                do {
-                  let tmp60 = diff1;
-                  let num31 = 9999999;
-                  if (array[diff1 + length4] !== tmp58) {
-                    let _Math12 = Math;
-                    num31 = Math.floor((array[diff1 + length4] * 10000000 + array[diff1 + length4 - 1]) / tmp58);
-                  }
-                  let length8 = array1.length;
-                  let num32 = 0;
-                  let num33 = 0;
-                  let num34 = 0;
-                  let num35 = 0;
-                  if (0 < length8) {
-                    do {
-                      let sum4 = num34 + num31 * array1[num32];
-                      let _Math13 = Math;
-                      let rounded3 = Math.floor(sum4 / 10000000);
-                      let sum5 = num33 + (array[diff1 + num32] - (sum4 - rounded3 * 10000000));
-                      let tmp64 = num32;
-                      if (sum5 < 0) {
-                        array[diff1 + num32] = sum5 + 10000000;
-                        let num36 = num7;
-                      } else {
-                        array[diff1 + num32] = sum5;
-                        num36 = 0;
-                      }
-                      num32 = num32 + 1;
-                      num33 = num36;
-                      num34 = rounded3;
-                      num35 = num36;
-                    } while (num32 < length8);
-                  }
-                  let tmp65 = num31;
-                  let tmp66 = num31;
-                  if (0 !== num35) {
-                    do {
-                      let diff2 = tmp65 - 1;
-                      let tmp68 = num35;
-                      let num37 = 0;
-                      let num38 = 0;
-                      let num39 = 0;
-                      if (0 < length8) {
-                        do {
-                          let sum6 = num38 + (array[diff1 + num37] - 10000000 + array1[num37]);
-                          let tmp70 = num37;
-                          if (sum6 < 0) {
-                            array[diff1 + num37] = sum6 + 10000000;
-                            let num40 = 0;
-                          } else {
-                            array[diff1 + num37] = sum6;
-                            num40 = 1;
-                          }
-                          num37 = num37 + 1;
-                          num38 = num40;
-                          num39 = num40;
-                        } while (num37 < length8);
-                      }
-                      num35 = num35 + num39;
-                      tmp65 = diff2;
-                      tmp66 = diff2;
-                    } while (0 !== num35);
-                  }
-                  array[diff1] = tmp66;
-                  diff1 = diff1 - 1;
-                } while (diff1 >= 0);
-              }
-              const _Array5 = Array;
-              const array2 = new Array(length9);
-              for (let num41 = 0; num41 < length9; num41 = num41 + 1) {
-                array2[num41] = 0;
-              }
-              let diff3 = length9 - 1;
-              let num42 = 0;
-              let num43 = 0;
-              if (0 <= diff3) {
-                do {
-                  let sum7 = num42 * 10000000 + array[diff3];
-                  let result1 = sum7 / rounded;
-                  let tmp79 = diff3;
-                  if (0 < result1) {
-                    let _Math15 = Math;
-                    let rounded4 = Math.floor(result1);
-                  } else {
-                    let _Math14 = Math;
-                    rounded4 = Math.ceil(result1);
-                  }
-                  num42 = sum7 - rounded4 * rounded;
-                  array2[diff3] = rounded4 | 0;
-                  diff3 = diff3 - 1;
-                  num43 = num42;
-                } while (0 <= diff3);
-              }
-              const items5 = [array2, num43 | 0];
-              const items6 = [arrayToSmall(array), arrayToSmall(items5[0])];
-              let items9 = items6;
-            } else {
-              let length2 = result.length;
-              const items7 = [];
-              let items8 = [];
-              result = globalThis;
-              let tmp32 = items8;
-              if (length2) {
-                do {
-                  diff4 = length2 - 1;
-                  let arr1 = items8.unshift(result[diff4]);
-                  let diff5 = items8.length - 1;
-                  let tmp8 = items8;
-                  let tmp9 = diff5;
-                  let tmp10 = diff5;
-                  if (0 === items8[diff5]) {
-                    do {
-                      let diff6 = tmp9 - 1;
-                      tmp9 = diff6;
-                      tmp10 = diff6;
-                      tmp12 = items8[diff6];
-                    } while (0 === tmp12);
-                  }
-                  items8.length = tmp10 + 1;
-                  if (items8.length !== value.length) {
-                    let num10 = num7;
-                    if (items8.length > value.length) {
-                      num10 = 1;
-                    }
-                    let num8 = num10;
-                  } else {
-                    let diff7 = items8.length - 1;
-                    num8 = 0;
-                    if (0 <= diff7) {
-                      let tmp14 = diff7;
-                      while (items8[diff7] === value[diff7]) {
-                        diff7 = diff7 - 1;
-                        num8 = 0;
-                      }
-                      let num9 = num7;
-                      if (items8[diff7] > value[diff7]) {
-                        num9 = 1;
-                      }
-                      num8 = num9;
-                    }
-                  }
-                  if (num8 < 0) {
-                    let arr2 = items7.push(0);
-                    let tmp30 = items8;
-                  } else {
-                    let length12 = items8.length;
-                    result = items8[length12 - 1] * 10000000 + items8[length12 - 2];
-                    let result2 = result;
-                    result = value[length11 - 1] * 10000000 + value[length11 - 2];
-                    if (length12 > length11) {
-                      result2 = (result + 1) * 10000000;
-                    }
-                    let _Math4 = Math;
-                    let rounded5 = Math.ceil(result2 / result);
-                    while (true) {
-                      length = value.length;
-                      let _Array = Array;
-                      let tmp17 = new.target;
-                      let tmp18 = new.target;
-                      let tmp19 = length;
-                      let array3 = new Array(length);
-                      let tmp20 = array3;
-                      let tmp21 = rounded5;
-                      let num11 = 0;
-                      let num12 = 0;
-                      let num13 = 0;
-                      let num14 = 0;
-                      if (0 < length) {
-                        do {
-                          let sum8 = value[num12] * rounded5 + num11;
-                          let _Math5 = Math;
-                          let rounded6 = Math.floor(sum8 / 10000000);
-                          array3[num12] = sum8 - rounded6 * 10000000;
-                          num12 = num12 + 1;
-                          num11 = rounded6;
-                          num13 = rounded6;
-                          num14 = num12;
-                        } while (num12 < length);
-                      }
-                      if (num13 > 0) {
-                        do {
-                          array3[num14] = num13 % 10000000;
-                          let _Math6 = Math;
-                          let sum9 = num14 + 1;
-                          num13 = Math.floor(num13 / 10000000);
-                          num14 = sum9;
-                        } while (num13 > 0);
-                      }
-                      if (array3.length !== items8.length) {
-                        let num17 = num7;
-                        if (array3.length > items8.length) {
-                          num17 = 1;
-                        }
-                        let num15 = num17;
-                      } else {
-                        let diff8 = array3.length - 1;
-                        num15 = 0;
-                        if (0 <= diff8) {
-                          let tmp26 = diff8;
-                          while (array3[diff8] === items8[diff8]) {
-                            diff8 = diff8 - 1;
-                            num15 = 0;
-                          }
-                          let num16 = num7;
-                          if (array3[diff8] > items8[diff8]) {
-                            num16 = 1;
-                          }
-                          num15 = num16;
-                        }
-                      }
-                      let tmp27 = rounded5;
-                      if (num15 <= 0) {
-                        break;
-                      } else {
-                        rounded5 = rounded5 - 1;
-                        tmp27 = rounded5;
-                        if (!rounded5) {
-                          break;
-                        }
-                      }
-                    }
-                    let arr3 = items7.push(tmp27);
-                    let tmp29 = subtract;
-                    tmp30 = subtract(items8, array3);
-                  }
-                  items8 = tmp30;
-                  tmp32 = tmp30;
-                  length2 = diff4;
-                } while (diff4);
-              }
-              const reversed = items7.reverse();
-              items9 = [arrayToSmall(items7), arrayToSmall(tmp32)];
-            }
-            const first = items9[0];
-            const sign = value.sign;
-            if (typeof first === "number") {
-              let tmp85 = first;
-              if (tmp83) {
-                tmp85 = -first;
-              }
-              obj = Object.create(SmallInteger.prototype);
-              obj1 = { value: tmp85, sign: tmp85 < 0, isSmall: true };
-              let obj2 = obj1;
-            } else {
-              result = BigInteger;
-              result = Object.create(BigInteger.prototype);
-              obj2 = { value: first, sign: tmp83, isSmall: false };
-            }
-            if (typeof items9[1] === "number") {
-              let tmp88 = tmp84;
-              if (sign) {
-                tmp88 = -tmp84;
-              }
-              Object.create(SmallInteger.prototype);
-              const obj4 = { value: tmp88, sign: tmp88 < 0, isSmall: true };
-              let obj5 = obj4;
-            } else {
-              result = BigInteger;
-              result = Object.create(BigInteger.prototype);
-              obj5 = { value: tmp84, sign, isSmall: false };
-            }
-            const items10 = [obj2, obj5];
-            return items10;
-          }
-        } else if (1 === value) {
-          const items11 = [value, ];
-          result = Integer;
-          items11[1] = Integer[0];
-          return items11;
-        } else if (-1 == value) {
-          const items12 = [value.negate(), ];
-          result = Integer;
-          items12[1] = Integer[0];
-          return items12;
+          let num4 = num6;
         } else {
-          result = globalThis;
-          const _Math20 = Math;
-          result = Math.abs(value);
-          if (result < 10000000) {
-            const _Array6 = Array;
-            const array4 = new Array(length10);
-            for (let num44 = 0; num44 < length10; num44 = num44 + 1) {
-              array4[num44] = 0;
+          let diff = result.length - 1;
+          num4 = 0;
+          if (0 <= diff) {
+            while (result[diff] === value[diff]) {
+              diff = diff - 1;
+              num4 = 0;
             }
-            let diff9 = length10 - 1;
-            let num45 = 0;
-            let num46 = 0;
-            if (0 <= diff9) {
-              do {
-                result = num45 * 10000000 + result[diff9];
-                result = result / result;
-                result = diff9;
-                if (0 < result) {
-                  let _Math17 = Math;
-                  result = Math.floor(result);
-                } else {
-                  let _Math16 = Math;
-                  result = Math.ceil(result);
-                }
-                num45 = result - result * result;
-                array4[diff9] = result | 0;
-                diff9 = diff9 - 1;
-                num46 = num45;
-              } while (0 <= diff9);
+            let num5 = -1;
+            if (result[diff] > value[diff]) {
+              num5 = 1;
             }
-            const items13 = [array4, num46 | 0];
-            result = arrayToSmall(items13[0]);
-            result = items13[1];
-            if (value.sign) {
-              result = -result;
-            }
-            if (typeof result === "number") {
-              if (value.sign !== iter.sign) {
-                result = -result;
-              }
-              result = SmallInteger;
-              result = Object.create(SmallInteger.prototype);
-              const obj6 = { value: result, sign: result < 0, isSmall: true };
-              const items14 = [obj6, ];
-              result = Object.create(SmallInteger.prototype);
-              const obj7 = { value: result, sign: result < 0, isSmall: true };
-              items14[1] = obj7;
-              let items15 = items14;
-            } else {
-              result = BigInteger;
-              result = Object.create(BigInteger.prototype);
-              const obj8 = { value: result, sign: value.sign !== iter.sign, isSmall: false };
-              items15 = [obj8, ];
-              result = SmallInteger;
-              result = Object.create(SmallInteger.prototype);
-              const obj9 = { value: result, sign: result < 0, isSmall: true };
-              items15[1] = obj9;
-            }
-            return items15;
-          } else if (result < 10000000) {
-            const items16 = [result];
-            let items18 = items16;
-          } else if (result < 100000000000000) {
-            const items17 = [result % 10000000, ];
-            const _Math3 = Math;
-            items17[1] = Math.floor(result / 10000000);
-            items18 = items17;
-          } else {
-            items18 = [result % 10000000, , ];
-            const _Math = Math;
-            items18[1] = Math.floor(result / 10000000) % 10000000;
-            const _Math2 = Math;
-            items18[2] = Math.floor(result / 100000000000000);
+            num4 = num5;
           }
+        }
+        let num7 = -1;
+        if (-1 === num4) {
+          const items3 = [Integer[0], self];
+          return items3;
+        } else if (0 === num4) {
+          if (self.sign === iter.sign) {
+            num7 = 1;
+          }
+          const items4 = [Integer[num7], Integer[0]];
+          return items4;
+        } else {
+          if (result.length + value.length <= 200) {
+            ({ length: length4, length: length5 } = value);
+            const _Array2 = Array;
+            let array = new Array(length5);
+            for (let num19 = 0; num19 < length5; num19 = num19 + 1) {
+              array[num19] = 0;
+            }
+            const _Math7 = Math;
+            const rounded1 = Math.ceil(10000000 / (2 * value[length4 - 1]));
+            const _Array3 = Array;
+            array = new Array(length6);
+            let num22 = 0;
+            let num23 = 0;
+            let num24 = 0;
+            let num25 = 0;
+            if (0 < result.length) {
+              do {
+                let sum = result[num23] * rounded1 + num22;
+                let _Math8 = Math;
+                let rounded2 = Math.floor(sum / 10000000);
+                array[num23] = sum - rounded2 * 10000000;
+                num23 = num23 + 1;
+                num22 = rounded2;
+                num24 = rounded2;
+                num25 = num23;
+              } while (num23 < length6);
+            }
+            if (num24 > 0) {
+              do {
+                array[num25] = num24 % 10000000;
+                let _Math9 = Math;
+                let sum1 = num25 + 1;
+                num24 = Math.floor(num24 / 10000000);
+                num25 = sum1;
+              } while (num24 > 0);
+            }
+            const _Array4 = Array;
+            const array1 = new Array(length7);
+            let num26 = 0;
+            let num27 = 0;
+            let num28 = 0;
+            let num29 = 0;
+            if (0 < value.length) {
+              do {
+                let sum2 = value[num27] * rounded1 + num26;
+                let _Math10 = Math;
+                let rounded3 = Math.floor(sum2 / 10000000);
+                array1[num27] = sum2 - rounded3 * 10000000;
+                num27 = num27 + 1;
+                num26 = rounded3;
+                num28 = rounded3;
+                num29 = num27;
+              } while (num27 < length7);
+            }
+            if (num28 > 0) {
+              do {
+                array1[num29] = num28 % 10000000;
+                let _Math11 = Math;
+                let sum3 = num29 + 1;
+                num28 = Math.floor(num28 / 10000000);
+                num29 = sum3;
+              } while (num28 > 0);
+            }
+            if (array.length <= result.length) {
+              array.push(0);
+            }
+            array1.push(0);
+            let diff1 = length3 - length4;
+            if (diff1 >= 0) {
+              do {
+                let num31 = 9999999;
+                if (array[diff1 + length4] !== tmp58) {
+                  let _Math12 = Math;
+                  num31 = Math.floor((array[diff1 + length4] * 10000000 + array[diff1 + length4 - 1]) / tmp58);
+                }
+                let length8 = array1.length;
+                let num32 = 0;
+                let num33 = 0;
+                let num34 = 0;
+                let num35 = 0;
+                if (0 < length8) {
+                  do {
+                    let sum4 = num34 + num31 * array1[num32];
+                    let _Math13 = Math;
+                    let rounded4 = Math.floor(sum4 / 10000000);
+                    let sum5 = num33 + (array[diff1 + num32] - (sum4 - rounded4 * 10000000));
+                    if (sum5 < 0) {
+                      array[diff1 + num32] = sum5 + 10000000;
+                      let num36 = num7;
+                    } else {
+                      array[diff1 + num32] = sum5;
+                      num36 = 0;
+                    }
+                    num32 = num32 + 1;
+                    num33 = num36;
+                    num34 = rounded4;
+                    num35 = num36;
+                  } while (num32 < length8);
+                }
+                let tmp65 = num31;
+                let tmp66 = num31;
+                if (0 !== num35) {
+                  do {
+                    let diff2 = tmp65 - 1;
+                    let num37 = 0;
+                    let num38 = 0;
+                    let num39 = 0;
+                    if (0 < length8) {
+                      do {
+                        let sum6 = num38 + (array[diff1 + num37] - 10000000 + array1[num37]);
+                        if (sum6 < 0) {
+                          array[diff1 + num37] = sum6 + 10000000;
+                          let num40 = 0;
+                        } else {
+                          array[diff1 + num37] = sum6;
+                          num40 = 1;
+                        }
+                        num37 = num37 + 1;
+                        num38 = num40;
+                        num39 = num40;
+                      } while (num37 < length8);
+                    }
+                    num35 = num35 + num39;
+                    tmp65 = diff2;
+                    tmp66 = diff2;
+                  } while (0 !== num35);
+                }
+                array[diff1] = tmp66;
+                diff1 = diff1 - 1;
+              } while (diff1 >= 0);
+            }
+            const _Array5 = Array;
+            const array2 = new Array(length9);
+            for (let num41 = 0; num41 < length9; num41 = num41 + 1) {
+              array2[num41] = 0;
+            }
+            let diff3 = length9 - 1;
+            let num42 = 0;
+            let num43 = 0;
+            if (0 <= diff3) {
+              do {
+                let sum7 = num42 * 10000000 + array[diff3];
+                let result3 = sum7 / rounded1;
+                if (0 < result3) {
+                  let _Math15 = Math;
+                  let rounded5 = Math.floor(result3);
+                } else {
+                  let _Math14 = Math;
+                  rounded5 = Math.ceil(result3);
+                }
+                num42 = sum7 - rounded5 * rounded1;
+                array2[diff3] = rounded5 | 0;
+                diff3 = diff3 - 1;
+                num43 = num42;
+              } while (0 <= diff3);
+            }
+            const items5 = [array2, num43 | 0];
+            const items6 = [arrayToSmall(array), arrayToSmall(items5[0])];
+            let items9 = items6;
+          } else {
+            let length2 = result.length;
+            const items7 = [];
+            let items8 = [];
+            let tmp32 = items8;
+            if (length2) {
+              do {
+                diff4 = length2 - 1;
+                let arr1 = items8.unshift(result[diff4]);
+                let diff5 = items8.length - 1;
+                let tmp9 = diff5;
+                let tmp10 = diff5;
+                if (0 === items8[diff5]) {
+                  do {
+                    let diff6 = tmp9 - 1;
+                    tmp9 = diff6;
+                    tmp10 = diff6;
+                    tmp12 = items8[diff6];
+                  } while (0 === tmp12);
+                }
+                items8.length = tmp10 + 1;
+                if (items8.length !== value.length) {
+                  let num10 = num7;
+                  if (items8.length > value.length) {
+                    num10 = 1;
+                  }
+                  let num8 = num10;
+                } else {
+                  let diff7 = items8.length - 1;
+                  num8 = 0;
+                  if (0 <= diff7) {
+                    while (items8[diff7] === value[diff7]) {
+                      diff7 = diff7 - 1;
+                      num8 = 0;
+                    }
+                    let num9 = num7;
+                    if (items8[diff7] > value[diff7]) {
+                      num9 = 1;
+                    }
+                    num8 = num9;
+                  }
+                }
+                if (num8 < 0) {
+                  let arr2 = items7.push(0);
+                  let tmp30 = items8;
+                } else {
+                  let length12 = items8.length;
+                  let sum8 = items8[length12 - 1] * 10000000 + items8[length12 - 2];
+                  let result4 = sum8;
+                  let sum9 = value[length11 - 1] * 10000000 + value[length11 - 2];
+                  if (length12 > length11) {
+                    result4 = (sum8 + 1) * 10000000;
+                  }
+                  let _Math4 = Math;
+                  let rounded6 = Math.ceil(result4 / sum9);
+                  while (true) {
+                    length = value.length;
+                    let _Array = Array;
+                    let tmp17 = new.target;
+                    let tmp18 = new.target;
+                    let array3 = new Array(length);
+                    let num11 = 0;
+                    let num12 = 0;
+                    let num13 = 0;
+                    let num14 = 0;
+                    if (0 < length) {
+                      do {
+                        let sum10 = value[num12] * rounded6 + num11;
+                        let _Math5 = Math;
+                        let rounded7 = Math.floor(sum10 / 10000000);
+                        array3[num12] = sum10 - rounded7 * 10000000;
+                        num12 = num12 + 1;
+                        num11 = rounded7;
+                        num13 = rounded7;
+                        num14 = num12;
+                      } while (num12 < length);
+                    }
+                    if (num13 > 0) {
+                      do {
+                        array3[num14] = num13 % 10000000;
+                        let _Math6 = Math;
+                        let sum11 = num14 + 1;
+                        num13 = Math.floor(num13 / 10000000);
+                        num14 = sum11;
+                      } while (num13 > 0);
+                    }
+                    if (array3.length !== items8.length) {
+                      let num17 = num7;
+                      if (array3.length > items8.length) {
+                        num17 = 1;
+                      }
+                      let num15 = num17;
+                    } else {
+                      let diff8 = array3.length - 1;
+                      num15 = 0;
+                      if (0 <= diff8) {
+                        while (array3[diff8] === items8[diff8]) {
+                          diff8 = diff8 - 1;
+                          num15 = 0;
+                        }
+                        let num16 = num7;
+                        if (array3[diff8] > items8[diff8]) {
+                          num16 = 1;
+                        }
+                        num15 = num16;
+                      }
+                    }
+                    let tmp27 = rounded6;
+                    if (num15 <= 0) {
+                      break;
+                    } else {
+                      rounded6 = rounded6 - 1;
+                      tmp27 = rounded6;
+                      if (!rounded6) {
+                        break;
+                      }
+                    }
+                  }
+                  let arr3 = items7.push(tmp27);
+                  tmp30 = subtract(items8, array3);
+                }
+                items8 = tmp30;
+                tmp32 = tmp30;
+                length2 = diff4;
+              } while (diff4);
+            }
+            const reversed = items7.reverse();
+            items9 = [arrayToSmall(items7), arrayToSmall(tmp32)];
+          }
+          const first = items9[0];
+          const sign = self.sign;
+          if (typeof first === "number") {
+            let tmp85 = first;
+            if (tmp83) {
+              tmp85 = -first;
+            }
+            Object.create(SmallInteger.prototype);
+            const obj5 = { value: tmp85, sign: tmp85 < 0, isSmall: true };
+            let obj7 = obj5;
+          } else {
+            Object.create(BigInteger.prototype);
+            obj7 = { value: first, sign: tmp83, isSmall: false };
+          }
+          if (typeof items9[1] === "number") {
+            let tmp88 = tmp84;
+            if (sign) {
+              tmp88 = -tmp84;
+            }
+            Object.create(SmallInteger.prototype);
+            const obj9 = { value: tmp88, sign: tmp88 < 0, isSmall: true };
+            let obj11 = obj9;
+          } else {
+            Object.create(BigInteger.prototype);
+            obj11 = { value: tmp84, sign, isSmall: false };
+          }
+          const items10 = [obj7, obj11];
+          return items10;
+        }
+      } else if (1 === value) {
+        const items11 = [self, Integer[0]];
+        return items11;
+      } else if (-1 == value) {
+        const items12 = [self.negate(), Integer[0]];
+        return items12;
+      } else {
+        const _Math20 = Math;
+        const absolute = Math.abs(value);
+        if (absolute < 10000000) {
+          const _Array6 = Array;
+          const array4 = new Array(length10);
+          for (let num44 = 0; num44 < length10; num44 = num44 + 1) {
+            array4[num44] = 0;
+          }
+          let diff9 = length10 - 1;
+          let num45 = 0;
+          let num46 = 0;
+          if (0 <= diff9) {
+            do {
+              let sum12 = num45 * 10000000 + result[diff9];
+              let result5 = sum12 / absolute;
+              if (0 < result5) {
+                let _Math17 = Math;
+                let rounded8 = Math.floor(result5);
+              } else {
+                let _Math16 = Math;
+                rounded8 = Math.ceil(result5);
+              }
+              num45 = sum12 - rounded8 * absolute;
+              array4[diff9] = rounded8 | 0;
+              diff9 = diff9 - 1;
+              num46 = num45;
+            } while (0 <= diff9);
+          }
+          const items13 = [array4, num46 | 0];
+          const tmp93Result = arrayToSmall(items13[0]);
+          let tmp106 = tmp105;
+          if (self.sign) {
+            tmp106 = -tmp105;
+          }
+          if (typeof tmp93Result === "number") {
+            let tmp107 = tmp93Result;
+            if (self.sign !== iter.sign) {
+              tmp107 = -tmp93Result;
+            }
+            Object.create(SmallInteger.prototype);
+            const obj13 = { value: tmp107, sign: tmp107 < 0, isSmall: true };
+            const items14 = [obj13, ];
+            Object.create(SmallInteger.prototype);
+            const obj15 = { value: tmp106, sign: tmp106 < 0, isSmall: true };
+            items14[1] = obj15;
+            let items15 = items14;
+          } else {
+            Object.create(BigInteger.prototype);
+            const obj17 = { value: tmp93Result, sign: self.sign !== iter.sign, isSmall: false };
+            items15 = [obj17, ];
+            Object.create(SmallInteger.prototype);
+            const obj19 = { value: tmp106, sign: tmp106 < 0, isSmall: true };
+            items15[1] = obj19;
+          }
+          return items15;
+        } else if (absolute < 10000000) {
+          const items16 = [absolute];
+          let items18 = items16;
+        } else if (absolute < 100000000000000) {
+          const items17 = [absolute % 10000000, ];
+          const _Math3 = Math;
+          items17[1] = Math.floor(absolute / 10000000);
+          items18 = items17;
+        } else {
+          items18 = [absolute % 10000000, , ];
+          const _Math = Math;
+          items18[1] = Math.floor(absolute / 10000000) % 10000000;
+          const _Math2 = Math;
+          items18[2] = Math.floor(absolute / 100000000000000);
         }
       }
     }
@@ -2876,9 +2835,7 @@ function millerRabinTest(absResult1, items) {
   let num3 = 0;
   if (0 < items.length) {
     while (true) {
-      let tmp4 = num3;
       if (!absResult1.lesser(items[num3])) {
-        let tmp5 = Integer;
         let obj4 = Integer(items[num3]);
         let modPowResult = obj4.modPow(tmp, absResult1);
         if (!modPowResult.isUnit()) {
@@ -2889,7 +2846,6 @@ function millerRabinTest(absResult1, items) {
             } else {
               let squareResult = modPowResult.square();
               let modResult = squareResult.mod(absResult1);
-              let tmp7 = diff1;
               while (!modResult.isUnit()) {
                 if (!modResult.equals(prevResult)) {
                   diff1 = diff1 - 1;
@@ -2915,7 +2871,7 @@ function millerRabinTest(absResult1, items) {
   }
   return true;
 }
-function bitwise(isNegative, arg1, arg2) {
+function bitwise(isNegative, arg1, fn) {
   const obj = parseValue(arg1);
   const isNegativeResult = isNegative.isNegative();
   const isNegativeResult1 = obj.isNegative();
@@ -2937,7 +2893,6 @@ function bitwise(isNegative, arg1, arg2) {
       let tmp7 = divModAny(tmp4, closure_19);
       let obj4 = tmp7[1];
       let toJSNumberResult = obj4.toJSNumber();
-      let tmp9 = tmp3;
       let diff = toJSNumberResult;
       if (isNegativeResult) {
         diff = tmp6 - 1 - toJSNumberResult;
@@ -2951,7 +2906,7 @@ function bitwise(isNegative, arg1, arg2) {
       }
       let first = tmp7[0];
       let first1 = tmp5Result[0];
-      let arr = items.push(arg2(diff, diff1));
+      let arr = items.push(fn(diff, diff1));
       tmp3 = first1;
       tmp4 = first;
       if (!first.isZero()) {
@@ -2977,7 +2932,7 @@ function bitwise(isNegative, arg1, arg2) {
   if (isNegativeResult1) {
     num2 = 1;
   }
-  if (0 !== arg2(num, num2)) {
+  if (0 !== fn(num, num2)) {
     let tmp16 = Integer(-1);
   } else {
     tmp16 = Integer(0);
@@ -2987,9 +2942,7 @@ function bitwise(isNegative, arg1, arg2) {
   let tmp19 = tmp16;
   if (0 <= diff2) {
     do {
-      let tmp20 = closure_19;
       let multiplyResult = addResult.multiply(closure_19);
-      let tmp21 = Integer;
       addResult = multiplyResult.add(Integer(items[diff2]));
       diff2 = diff2 - 1;
       tmp19 = addResult;
@@ -3002,18 +2955,13 @@ function integerLogarithm(self2, squareResult) {
     ({ p, e } = integerLogarithm(self2, squareResult.square(squareResult)));
     const multiplyResult = p.multiply(squareResult);
     if (multiplyResult.compareTo(self2) <= 0) {
-      let obj = { p: null, e: null };
-      obj[0] = multiplyResult;
-      obj[1] = 2 * e + 1;
+      let obj = { p: multiplyResult, e: 2 * e + 1 };
     } else {
-      obj = { p: null, e: null };
-      obj[0] = p;
-      obj[1] = 2 * e;
+      obj = { p, e: 2 * e };
     }
     return obj;
   } else {
-    obj = { p: null, e: 0 };
-    obj[0] = Integer(1);
+    obj = { p: Integer(1), e: 0 };
     return obj;
   }
 }
@@ -3043,16 +2991,11 @@ function gcd(absResult, absResult1) {
       obj6 = absResult;
       if (absResult1.isEven()) {
         while (true) {
-          let value = iter2.value;
-          let tmp5 = obj7;
-          let tmp6 = iter;
-          let tmp7 = iter2;
+          value = iter2.value;
           if (typeof value === "number") {
-            let tmp10 = c21;
             let tmp9 = value | c21;
           } else if (typeof value === "bigint") {
             let _BigInt = BigInt;
-            let tmp8 = c21;
             tmp9 = value | BigInt(c21);
           } else {
             tmp9 = value[0] + value[1] * 10000000 | 1073758208;
@@ -3060,16 +3003,13 @@ function gcd(absResult, absResult1) {
           value = iter.value;
           let tmp11 = tmp9 & -tmp9;
           if (typeof value === "number") {
-            let tmp14 = c21;
             let tmp13 = value | c21;
           } else if (typeof value === "bigint") {
             let _BigInt2 = BigInt;
-            let tmp12 = c21;
             tmp13 = value | BigInt(c21);
           } else {
             tmp13 = value[0] + value[1] * 10000000 | 1073758208;
           }
-          let tmp16 = parseValue;
           let tmp15 = tmp13 & -tmp13;
           let obj8 = parseValue(tmp11);
           let tmp17 = parseValue(tmp15);
@@ -3104,13 +3044,10 @@ function gcd(absResult, absResult1) {
     if (obj6.isEven()) {
       do {
         value = iter3.value;
-        let tmp20 = iter3;
         if (typeof value === "number") {
-          let tmp23 = c21;
           let tmp22 = value | c21;
         } else if (typeof value === "bigint") {
           let _BigInt3 = BigInt;
-          let tmp21 = c21;
           tmp22 = value | BigInt(c21);
         } else {
           tmp22 = value[0] + value[1] * 10000000 | 1073758208;
@@ -3123,18 +3060,14 @@ function gcd(absResult, absResult1) {
     }
     do {
       let iter4 = obj11;
-      let tmp24 = obj12;
       let tmp25 = obj11;
       if (obj11.isEven()) {
         do {
           let value1 = iter4.value;
-          let tmp26 = iter4;
           if (typeof value1 === "number") {
-            let tmp29 = c21;
             let tmp28 = value1 | c21;
           } else if (typeof value1 === "bigint") {
             let _BigInt4 = BigInt;
-            let tmp27 = c21;
             tmp28 = value1 | BigInt(c21);
           } else {
             tmp28 = value1[0] + value1[1] * 10000000 | 1073758208;
@@ -3166,26 +3099,24 @@ function toBase(self, arg1) {
   let obj = Integer(arg1);
   if (obj.isZero()) {
     if (self.isZero()) {
-      obj = { value: null, isNegative: false };
-      obj[0] = [0];
+      obj = { value: [0], isNegative: false };
       return obj;
     } else {
       const _Error = Error;
-      error = new Error("Cannot convert nonzero numbers to base 0.");
+      const error = new Error("Cannot convert nonzero numbers to base 0.");
       throw error;
     }
   } else if (obj.equals(-1)) {
     if (self.isZero()) {
-      obj = { value: null, isNegative: false };
-      obj[0] = [0];
+      obj = { value: [0], isNegative: false };
       return obj;
     } else if (self.isNegative()) {
-      obj1 = { value: null, isNegative: false };
+      const obj1 = { value: null, isNegative: false };
       const concat2 = [].concat;
       const _Array6 = Array;
       const _Array7 = Array;
       const _Array8 = Array;
-      obj1[0] = concat2.apply([], Array.apply(null, Array(-self.toJSNumber())).map(Array.prototype.valueOf, [1, 0]));
+      obj1.value = concat2.apply([], Array.apply(null, Array(-self.toJSNumber())).map(Array.prototype.valueOf, [1, 0]));
       return obj1;
     } else {
       const _Array3 = Array;
@@ -3195,7 +3126,7 @@ function toBase(self, arg1) {
       mapped.unshift([1]);
       let obj2 = { value: null, isNegative: false };
       const concat = [].concat;
-      obj2[0] = concat.apply([], mapped);
+      obj2.value = concat.apply([], mapped);
       return obj2;
     }
   } else {
@@ -3207,16 +3138,15 @@ function toBase(self, arg1) {
     }
     if (obj.isUnit()) {
       if (absResult.isZero()) {
-        let obj3 = { value: null, isNegative: false };
-        obj3[0] = [0];
+        let obj3 = { value: [0], isNegative: false };
         let obj4 = obj3;
       } else {
         obj4 = { value: null, isNegative: null };
         const _Array = Array;
         const _Array2 = Array;
         const _Number = Number;
-        obj4[0] = Array.apply(null, Array(absResult.toJSNumber())).map(Number.prototype.valueOf, 1);
-        obj4[1] = flag;
+        obj4.value = Array.apply(null, Array(absResult.toJSNumber())).map(Number.prototype.valueOf, 1);
+        obj4.isNegative = flag;
         const applyResult2 = Array.apply(null, Array(absResult.toJSNumber()));
       }
       return obj4;
@@ -3239,7 +3169,6 @@ function toBase(self, arg1) {
           if (nextResult.isNegative()) {
             continue;
           } else {
-            let num3 = 0;
             obj2 = nextResult;
             obj3 = nextResult;
             if (nextResult.compareAbs(obj) < 0) {
@@ -3253,9 +3182,7 @@ function toBase(self, arg1) {
         obj3 = absResult;
       }
       items.push(obj3.toJSNumber());
-      const obj5 = { value: null, isNegative: null };
-      obj5[0] = items.reverse();
-      obj5[1] = flag;
+      const obj5 = { value: items.reverse(), isNegative: flag };
       return obj5;
     }
     tmp = self.isNegative() && obj.isPositive();
@@ -3280,7 +3207,7 @@ function parseStringValue(arr) {
         const _BigInt = BigInt;
         let obj = Object.create(NativeBigInt.prototype);
         obj.value = BigInt(tmp51);
-        obj1 = obj;
+        let obj1 = obj;
         const BigIntResult = BigInt(tmp51);
       } else {
         obj = Object.create(SmallInteger.prototype);
@@ -3289,7 +3216,7 @@ function parseStringValue(arr) {
       return obj1;
     } else {
       const _Error5 = Error;
-      error = new Error("Invalid integer: " + arr);
+      const error = new Error("Invalid integer: " + arr);
       throw error;
     }
   } else {
@@ -3363,7 +3290,6 @@ function parseStringValue(arr) {
             do {
               arr = items.push(+str2.slice(diff1, length));
               let num10 = diff1 - 7;
-              let tmp23 = length;
               if (num10 < 0) {
                 num10 = 0;
               }
@@ -3395,47 +3321,45 @@ function parseStringValue(arr) {
     }
   }
 }
-function parseValue(result) {
-  if (typeof result === "number") {
+function parseValue(value) {
+  if (typeof value === "number") {
     if (closure_2) {
       const _BigInt = BigInt;
       let obj = Object.create(NativeBigInt.prototype);
-      obj.value = BigInt(result);
-      let tmp6 = obj;
-      const BigIntResult = BigInt(result);
+      obj.value = BigInt(value);
+      const BigIntResult = BigInt(value);
     } else {
-      let tmp4 = -9007199254740992 < result;
+      let tmp4 = -9007199254740992 < value;
       if (tmp4) {
-        tmp4 = result < 9007199254740992;
+        tmp4 = value < 9007199254740992;
       }
       if (!tmp4) {
-        tmp6 = parseStringValue(result.toString());
+        const tmp6 = parseStringValue(value.toString());
       }
     }
-    if (result > 0) {
+    if (value > 0) {
       const _Math2 = Math;
-      let rounded = Math.floor(result);
+      let rounded = Math.floor(value);
     } else {
       const _Math = Math;
-      rounded = Math.ceil(result);
+      rounded = Math.ceil(value);
     }
-    if (result !== rounded) {
+    if (value !== rounded) {
       const _Error = Error;
-      error = new Error(result + " is not an integer.");
+      const error = new Error(value + " is not an integer.");
       throw error;
     } else {
-      obj = Object.create(SmallInteger.prototype);
-      obj = { value: result, sign: result < 0, isSmall: true };
-      tmp6 = obj;
+      Object.create(SmallInteger.prototype);
+      obj = { value, sign: value < 0, isSmall: true };
     }
   } else {
-    if (typeof result === "string") {
-      let tmp2 = parseStringValue(result);
+    if (typeof value === "string") {
+      let tmp2 = parseStringValue(value);
     } else {
-      tmp2 = result;
-      if (typeof result === "bigint") {
-        obj1 = Object.create(NativeBigInt.prototype);
-        obj1.value = result;
+      tmp2 = value;
+      if (typeof value === "bigint") {
+        const obj1 = Object.create(NativeBigInt.prototype);
+        obj1.value = value;
         tmp2 = obj1;
       }
     }
@@ -3557,341 +3481,7 @@ if (2 * items1[items1.length - 1] <= 10000000) {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
-            str10 = "Trying to call a non-function";
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          if (!str) {
-            str = c1;
-          }
-          tmp4 = arg3;
-          tmp5 = globalThis;
-          _String = String;
-          str2 = String(arg0);
-          formatted1 = str;
-          formatted = str2;
-          if (!arg3) {
-            formatted = str2.toLowerCase();
-            formatted1 = str.toLowerCase();
-          }
-          length = formatted.length;
-          _Math = Math;
-          absolute = Math.abs(arg1);
-          obj = {};
-          num2 = 0;
-          num3 = 1;
-          num4 = 0;
-          if (0 < formatted1.length) {
-            do {
-              obj[formatted1[num4]] = num4;
-              num4 = num4 + 1;
-              length2 = formatted1.length;
-            } while (num4 < length2);
-          }
-          str3 = "1";
-          str4 = "-";
-          num5 = 0;
-          if (0 < length) {
-            while (true) {
-              tmp7 = formatted[num5];
-              tmp8 = num5;
-              if ("-" !== tmp7) {
-                if (tmp7 in obj) {
-                  if (obj[tmp7] >= absolute) {
-                    if ("1" !== tmp7) {
-                      break;
-                    } else if (1 !== absolute) {
-                      break;
-                    }
-                  }
-                }
-              }
-              num5 = num5 + 1;
-            }
-            _Error = Error;
-            str5 = " is not a valid digit in base ";
-            tmp9 = new.target;
-            str6 = ".";
-            tmp10 = new.target;
-            error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
-            tmp12 = error;
-            throw error;
-          }
-          tmp13 = parseValue;
-          tmp15 = "-" === formatted[0];
-          num6 = 0;
-          tmp14 = parseValue(arg1);
-          if (tmp15) {
-            num6 = 1;
-          }
-          items = [];
-          str7 = "<";
-          str8 = ">";
-          if (num6 < formatted.length) {
-            while (true) {
-              tmp16 = formatted[num6];
-              tmp17 = num6;
-              if (tmp16 in obj) {
-                tmp26 = parseValue;
-                arr = items.push(parseValue(obj[tmp16]));
-                sum = num6;
-              } else {
-                tmp18 = num6;
-                if ("<" !== tmp16) {
-                  break;
-                } else {
-                  sum = tmp18 + 1;
-                  while (">" !== formatted[sum]) {
-                    tmp18 = sum;
-                    if (sum >= formatted.length) {
-                      break;
-                    }
-                  }
-                  tmp20 = parseValue;
-                  arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
-                }
-              }
-              num6 = sum + 1;
-            }
-            _Error2 = Error;
-            str9 = " is not a valid character";
-            tmp22 = new.target;
-            tmp23 = new.target;
-            error1 = new Error(tmp16 + " is not a valid character");
-            tmp25 = error1;
-            throw error1;
-          }
-          tmp28 = Integer;
-          [tmp29, obj2] = Integer;
-          diff = items.length - 1;
-          addResult = tmp29;
-          obj4 = tmp29;
-          if (0 <= diff) {
-            do {
-              obj5 = items[diff];
-              addResult = addResult.add(obj5.times(timesResult));
-              timesResult = timesResult.times(tmp14);
-              diff = diff - 1;
-              obj4 = addResult;
-            } while (0 <= diff);
-          }
-          negateResult = obj4;
-          if (tmp15) {
-            negateResult = obj4.negate();
-          }
-          first = negateResult;
-        }
-        tmp = parseValue;
-        first = parseValue(arg0);
-      }
-      return first;
-    }
-  }
-}
-let length = items1.length;
-let closure_19 = items1[length - 1];
-const shiftLeft = BigInteger.prototype.shiftLeft;
-SmallInteger.prototype.shiftLeft = shiftLeft;
-NativeBigInt.prototype.shiftLeft = shiftLeft;
-const shiftRight = BigInteger.prototype.shiftRight;
-SmallInteger.prototype.shiftRight = shiftRight;
-NativeBigInt.prototype.shiftRight = shiftRight;
-const not = BigInteger.prototype.not;
-SmallInteger.prototype.not = not;
-NativeBigInt.prototype.not = not;
-const and = BigInteger.prototype.and;
-SmallInteger.prototype.and = and;
-NativeBigInt.prototype.and = and;
-const or = BigInteger.prototype.or;
-SmallInteger.prototype.or = or;
-NativeBigInt.prototype.or = or;
-const xor = BigInteger.prototype.xor;
-SmallInteger.prototype.xor = xor;
-NativeBigInt.prototype.xor = xor;
-let c21 = 1073741824;
-const bitLength = BigInteger.prototype.bitLength;
-SmallInteger.prototype.bitLength = bitLength;
-NativeBigInt.prototype.bitLength = bitLength;
-function parseBase(arg0, arg1, arg2, arg3) {
-
-}
-NativeBigInt.prototype.toString = SmallInteger.prototype.toString;
-const fn3 = function() {
-  return this.toString();
-};
-SmallInteger.prototype.toJSON = fn3;
-BigInteger.prototype.toJSON = fn3;
-NativeBigInt.prototype.toJSON = fn3;
-BigInteger.prototype.toJSNumber = BigInteger.prototype.valueOf;
-SmallInteger.prototype.toJSNumber = SmallInteger.prototype.valueOf;
-const fn4 = function() {
-  return parseInt(this.toString(), 10);
-};
-NativeBigInt.prototype.toJSNumber = fn4;
-NativeBigInt.prototype.valueOf = fn4;
-while (true) {
-  class Integer {
-    constructor(arg0, arg1, arg2, arg3) {
-      if (undefined === arg0) {
-        tmp32 = Integer;
-        first = Integer[0];
-      } else {
-        tmp33 = arg1;
-        if (undefined !== arg1) {
-          str = arg2;
-          num = 10;
-          if (10 === +arg1) {
-          }
-          tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
-            str10 = "Trying to call a non-function";
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          if (!str) {
-            str = c1;
-          }
-          tmp4 = arg3;
-          tmp5 = globalThis;
-          _String = String;
-          str2 = String(arg0);
-          formatted1 = str;
-          formatted = str2;
-          if (!arg3) {
-            formatted = str2.toLowerCase();
-            formatted1 = str.toLowerCase();
-          }
-          length = formatted.length;
-          _Math = Math;
-          absolute = Math.abs(arg1);
-          obj = {};
-          num2 = 0;
-          num3 = 1;
-          num4 = 0;
-          if (0 < formatted1.length) {
-            do {
-              obj[formatted1[num4]] = num4;
-              num4 = num4 + 1;
-              length2 = formatted1.length;
-            } while (num4 < length2);
-          }
-          str3 = "1";
-          str4 = "-";
-          num5 = 0;
-          if (0 < length) {
-            while (true) {
-              tmp7 = formatted[num5];
-              tmp8 = num5;
-              if ("-" !== tmp7) {
-                if (tmp7 in obj) {
-                  if (obj[tmp7] >= absolute) {
-                    if ("1" !== tmp7) {
-                      break;
-                    } else if (1 !== absolute) {
-                      break;
-                    }
-                  }
-                }
-              }
-              num5 = num5 + 1;
-            }
-            _Error = Error;
-            str5 = " is not a valid digit in base ";
-            tmp9 = new.target;
-            str6 = ".";
-            tmp10 = new.target;
-            error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
-            tmp12 = error;
-            throw error;
-          }
-          tmp13 = parseValue;
-          tmp15 = "-" === formatted[0];
-          num6 = 0;
-          tmp14 = parseValue(arg1);
-          if (tmp15) {
-            num6 = 1;
-          }
-          items = [];
-          str7 = "<";
-          str8 = ">";
-          if (num6 < formatted.length) {
-            while (true) {
-              tmp16 = formatted[num6];
-              tmp17 = num6;
-              if (tmp16 in obj) {
-                tmp26 = parseValue;
-                arr = items.push(parseValue(obj[tmp16]));
-                sum = num6;
-              } else {
-                tmp18 = num6;
-                if ("<" !== tmp16) {
-                  break;
-                } else {
-                  sum = tmp18 + 1;
-                  while (">" !== formatted[sum]) {
-                    tmp18 = sum;
-                    if (sum >= formatted.length) {
-                      break;
-                    }
-                  }
-                  tmp20 = parseValue;
-                  arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
-                }
-              }
-              num6 = sum + 1;
-            }
-            _Error2 = Error;
-            str9 = " is not a valid character";
-            tmp22 = new.target;
-            tmp23 = new.target;
-            error1 = new Error(tmp16 + " is not a valid character");
-            tmp25 = error1;
-            throw error1;
-          }
-          tmp28 = Integer;
-          [tmp29, obj2] = Integer;
-          diff = items.length - 1;
-          addResult = tmp29;
-          obj4 = tmp29;
-          if (0 <= diff) {
-            do {
-              obj5 = items[diff];
-              addResult = addResult.add(obj5.times(timesResult));
-              timesResult = timesResult.times(tmp14);
-              diff = diff - 1;
-              obj4 = addResult;
-            } while (0 <= diff);
-          }
-          negateResult = obj4;
-          if (tmp15) {
-            negateResult = obj4.negate();
-          }
-          first = negateResult;
-        }
-        tmp = parseValue;
-        first = parseValue(arg0);
-      }
-      return first;
-    }
-  }
-  let tmp = num;
-  if (0 < num) {
-    class Integer {
-      constructor(arg0, arg1, arg2, arg3) {
-        if (undefined === arg0) {
-          tmp32 = Integer;
-          first = Integer[0];
-        } else {
-          tmp33 = arg1;
-          if (undefined !== arg1) {
-            str = arg2;
-            num = 10;
-            if (10 === +arg1) {
-            }
-            tmp3 = parseBase;
-            if (typeof parseBase !== "function") {
-              str10 = "Trying to call a non-function";
-              throwTypeErrorResult = HermesBuiltin.throwTypeError();
-            }
+          if (typeof parseBase === "function") {
             if (!str) {
               str = c1;
             }
@@ -4011,6 +3601,342 @@ while (true) {
               negateResult = obj4.negate();
             }
             first = negateResult;
+          } else {
+            str10 = "Trying to call a non-function";
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+        tmp = parseValue;
+        first = parseValue(arg0);
+      }
+      return first;
+    }
+  }
+}
+let length = items1.length;
+let closure_19 = items1[length - 1];
+const shiftLeft = BigInteger.prototype.shiftLeft;
+SmallInteger.prototype.shiftLeft = shiftLeft;
+NativeBigInt.prototype.shiftLeft = shiftLeft;
+const shiftRight = BigInteger.prototype.shiftRight;
+SmallInteger.prototype.shiftRight = shiftRight;
+NativeBigInt.prototype.shiftRight = shiftRight;
+const not = BigInteger.prototype.not;
+SmallInteger.prototype.not = not;
+NativeBigInt.prototype.not = not;
+const and = BigInteger.prototype.and;
+SmallInteger.prototype.and = and;
+NativeBigInt.prototype.and = and;
+const or = BigInteger.prototype.or;
+SmallInteger.prototype.or = or;
+NativeBigInt.prototype.or = or;
+const xor = BigInteger.prototype.xor;
+SmallInteger.prototype.xor = xor;
+NativeBigInt.prototype.xor = xor;
+let c21 = 1073741824;
+const bitLength = BigInteger.prototype.bitLength;
+SmallInteger.prototype.bitLength = bitLength;
+NativeBigInt.prototype.bitLength = bitLength;
+function parseBase(arg0, arg1, arg2, arg3) {
+
+}
+NativeBigInt.prototype.toString = SmallInteger.prototype.toString;
+const fn3 = function() {
+  return this.toString();
+};
+SmallInteger.prototype.toJSON = fn3;
+BigInteger.prototype.toJSON = fn3;
+NativeBigInt.prototype.toJSON = fn3;
+BigInteger.prototype.toJSNumber = BigInteger.prototype.valueOf;
+SmallInteger.prototype.toJSNumber = SmallInteger.prototype.valueOf;
+const fn4 = function() {
+  return parseInt(this.toString(), 10);
+};
+NativeBigInt.prototype.toJSNumber = fn4;
+NativeBigInt.prototype.valueOf = fn4;
+while (true) {
+  class Integer {
+    constructor(arg0, arg1, arg2, arg3) {
+      if (undefined === arg0) {
+        tmp32 = Integer;
+        first = Integer[0];
+      } else {
+        tmp33 = arg1;
+        if (undefined !== arg1) {
+          str = arg2;
+          num = 10;
+          if (10 === +arg1) {
+          }
+          tmp3 = parseBase;
+          if (typeof parseBase === "function") {
+            if (!str) {
+              str = c1;
+            }
+            tmp4 = arg3;
+            tmp5 = globalThis;
+            _String = String;
+            str2 = String(arg0);
+            formatted1 = str;
+            formatted = str2;
+            if (!arg3) {
+              formatted = str2.toLowerCase();
+              formatted1 = str.toLowerCase();
+            }
+            length = formatted.length;
+            _Math = Math;
+            absolute = Math.abs(arg1);
+            obj = {};
+            num2 = 0;
+            num3 = 1;
+            num4 = 0;
+            if (0 < formatted1.length) {
+              do {
+                obj[formatted1[num4]] = num4;
+                num4 = num4 + 1;
+                length2 = formatted1.length;
+              } while (num4 < length2);
+            }
+            str3 = "1";
+            str4 = "-";
+            num5 = 0;
+            if (0 < length) {
+              while (true) {
+                tmp7 = formatted[num5];
+                tmp8 = num5;
+                if ("-" !== tmp7) {
+                  if (tmp7 in obj) {
+                    if (obj[tmp7] >= absolute) {
+                      if ("1" !== tmp7) {
+                        break;
+                      } else if (1 !== absolute) {
+                        break;
+                      }
+                    }
+                  }
+                }
+                num5 = num5 + 1;
+              }
+              _Error = Error;
+              str5 = " is not a valid digit in base ";
+              tmp9 = new.target;
+              str6 = ".";
+              tmp10 = new.target;
+              error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
+              tmp12 = error;
+              throw error;
+            }
+            tmp13 = parseValue;
+            tmp15 = "-" === formatted[0];
+            num6 = 0;
+            tmp14 = parseValue(arg1);
+            if (tmp15) {
+              num6 = 1;
+            }
+            items = [];
+            str7 = "<";
+            str8 = ">";
+            if (num6 < formatted.length) {
+              while (true) {
+                tmp16 = formatted[num6];
+                tmp17 = num6;
+                if (tmp16 in obj) {
+                  tmp26 = parseValue;
+                  arr = items.push(parseValue(obj[tmp16]));
+                  sum = num6;
+                } else {
+                  tmp18 = num6;
+                  if ("<" !== tmp16) {
+                    break;
+                  } else {
+                    sum = tmp18 + 1;
+                    while (">" !== formatted[sum]) {
+                      tmp18 = sum;
+                      if (sum >= formatted.length) {
+                        break;
+                      }
+                    }
+                    tmp20 = parseValue;
+                    arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
+                  }
+                }
+                num6 = sum + 1;
+              }
+              _Error2 = Error;
+              str9 = " is not a valid character";
+              tmp22 = new.target;
+              tmp23 = new.target;
+              error1 = new Error(tmp16 + " is not a valid character");
+              tmp25 = error1;
+              throw error1;
+            }
+            tmp28 = Integer;
+            [tmp29, obj2] = Integer;
+            diff = items.length - 1;
+            addResult = tmp29;
+            obj4 = tmp29;
+            if (0 <= diff) {
+              do {
+                obj5 = items[diff];
+                addResult = addResult.add(obj5.times(timesResult));
+                timesResult = timesResult.times(tmp14);
+                diff = diff - 1;
+                obj4 = addResult;
+              } while (0 <= diff);
+            }
+            negateResult = obj4;
+            if (tmp15) {
+              negateResult = obj4.negate();
+            }
+            first = negateResult;
+          } else {
+            str10 = "Trying to call a non-function";
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+        tmp = parseValue;
+        first = parseValue(arg0);
+      }
+      return first;
+    }
+  }
+  if (0 < num) {
+    class Integer {
+      constructor(arg0, arg1, arg2, arg3) {
+        if (undefined === arg0) {
+          tmp32 = Integer;
+          first = Integer[0];
+        } else {
+          tmp33 = arg1;
+          if (undefined !== arg1) {
+            str = arg2;
+            num = 10;
+            if (10 === +arg1) {
+            }
+            tmp3 = parseBase;
+            if (typeof parseBase === "function") {
+              if (!str) {
+                str = c1;
+              }
+              tmp4 = arg3;
+              tmp5 = globalThis;
+              _String = String;
+              str2 = String(arg0);
+              formatted1 = str;
+              formatted = str2;
+              if (!arg3) {
+                formatted = str2.toLowerCase();
+                formatted1 = str.toLowerCase();
+              }
+              length = formatted.length;
+              _Math = Math;
+              absolute = Math.abs(arg1);
+              obj = {};
+              num2 = 0;
+              num3 = 1;
+              num4 = 0;
+              if (0 < formatted1.length) {
+                do {
+                  obj[formatted1[num4]] = num4;
+                  num4 = num4 + 1;
+                  length2 = formatted1.length;
+                } while (num4 < length2);
+              }
+              str3 = "1";
+              str4 = "-";
+              num5 = 0;
+              if (0 < length) {
+                while (true) {
+                  tmp7 = formatted[num5];
+                  tmp8 = num5;
+                  if ("-" !== tmp7) {
+                    if (tmp7 in obj) {
+                      if (obj[tmp7] >= absolute) {
+                        if ("1" !== tmp7) {
+                          break;
+                        } else if (1 !== absolute) {
+                          break;
+                        }
+                      }
+                    }
+                  }
+                  num5 = num5 + 1;
+                }
+                _Error = Error;
+                str5 = " is not a valid digit in base ";
+                tmp9 = new.target;
+                str6 = ".";
+                tmp10 = new.target;
+                error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
+                tmp12 = error;
+                throw error;
+              }
+              tmp13 = parseValue;
+              tmp15 = "-" === formatted[0];
+              num6 = 0;
+              tmp14 = parseValue(arg1);
+              if (tmp15) {
+                num6 = 1;
+              }
+              items = [];
+              str7 = "<";
+              str8 = ">";
+              if (num6 < formatted.length) {
+                while (true) {
+                  tmp16 = formatted[num6];
+                  tmp17 = num6;
+                  if (tmp16 in obj) {
+                    tmp26 = parseValue;
+                    arr = items.push(parseValue(obj[tmp16]));
+                    sum = num6;
+                  } else {
+                    tmp18 = num6;
+                    if ("<" !== tmp16) {
+                      break;
+                    } else {
+                      sum = tmp18 + 1;
+                      while (">" !== formatted[sum]) {
+                        tmp18 = sum;
+                        if (sum >= formatted.length) {
+                          break;
+                        }
+                      }
+                      tmp20 = parseValue;
+                      arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
+                    }
+                  }
+                  num6 = sum + 1;
+                }
+                _Error2 = Error;
+                str9 = " is not a valid character";
+                tmp22 = new.target;
+                tmp23 = new.target;
+                error1 = new Error(tmp16 + " is not a valid character");
+                tmp25 = error1;
+                throw error1;
+              }
+              tmp28 = Integer;
+              [tmp29, obj2] = Integer;
+              diff = items.length - 1;
+              addResult = tmp29;
+              obj4 = tmp29;
+              if (0 <= diff) {
+                do {
+                  obj5 = items[diff];
+                  addResult = addResult.add(obj5.times(timesResult));
+                  timesResult = timesResult.times(tmp14);
+                  diff = diff - 1;
+                  obj4 = addResult;
+                } while (0 <= diff);
+              }
+              negateResult = obj4;
+              if (tmp15) {
+                negateResult = obj4.negate();
+              }
+              first = negateResult;
+            } else {
+              str10 = "Trying to call a non-function";
+              throw new TypeError("Trying to call a non-function");
+            }
           }
           tmp = parseValue;
           first = parseValue(arg0);
@@ -4479,7 +4405,7 @@ while (true) {
               multiplyResult1 = obj7.multiply(modInvResult);
               modResult1 = multiplyResult1.mod(obj2);
             }
-            divideResult = require("00002_set.js");
+            divideResult = obj6.divide(2);
             squareResult = modInvResult.square();
             modInvResult = squareResult.mod(obj2);
             obj7 = modResult1;
@@ -4639,7 +4565,7 @@ while (true) {
           self = this;
           num = 2;
           num2 = 0;
-          if (0 === require("00002_set.js")) {
+          if (0 === obj.compareAbs(2)) {
             isEvenResult = self.isEven();
           } else {
             modResult = self.mod(obj);
@@ -4657,30 +4583,30 @@ while (true) {
       tmp2 = !isUnitResult;
       if (!isUnitResult) {
         num = 2;
-        equalsResult = require("00002_set.js");
+        equalsResult = absResult.equals(2);
         if (!equalsResult) {
           num2 = 3;
-          equalsResult = require("../discord_app/modules/debug/Logger.tsx");
+          equalsResult = absResult.equals(3);
         }
         if (!equalsResult) {
           num3 = 5;
-          equalsResult = require("00005_asyncGeneratorStep.js");
+          equalsResult = absResult.equals(5);
         }
         tmp4 = equalsResult;
         if (!tmp4) {
           isEvenResult = absResult.isEven();
           if (!isEvenResult) {
             num4 = 3;
-            isEvenResult = require("../discord_app/modules/debug/Logger.tsx");
+            isEvenResult = absResult.isDivisibleBy(3);
           }
           if (!isEvenResult) {
             num5 = 5;
-            isEvenResult = require("00005_asyncGeneratorStep.js");
+            isEvenResult = absResult.isDivisibleBy(5);
           }
           tmp6 = !isEvenResult;
           if (!isEvenResult) {
             num6 = 49;
-            tmp7 = require("00049_defineLazyObjectProperty.js") || undefined;
+            tmp7 = absResult.lesser(49) || undefined;
             tmp6 = tmp7;
           }
           tmp4 = tmp6;
@@ -4702,7 +4628,7 @@ while (true) {
           tmp15 = globalThis;
           _Math2 = Math;
           num12 = 2;
-          logResult = require("00002_set.js");
+          logResult = Math.log(2);
           result = logResult * bitLengthResult.toJSNumber();
           flag = true;
           result1 = result;
@@ -4715,8 +4641,8 @@ while (true) {
           num7 = 0;
           num8 = 1;
           for (let num9 = 0; num9 < rounded; num9 = num9 + 1) {
-            tmp10 = Integer;
-            arr = items.push(Integer(num9 + 2));
+            tmp10 = closure_0;
+            arr = items.push(closure_0(num9 + 2));
           }
           tmp12 = millerRabinTest;
           return millerRabinTest(absResult1, items);
@@ -4730,30 +4656,30 @@ while (true) {
       tmp2 = !isUnitResult;
       if (!isUnitResult) {
         num = 2;
-        equalsResult = require("00002_set.js");
+        equalsResult = absResult.equals(2);
         if (!equalsResult) {
           num2 = 3;
-          equalsResult = require("../discord_app/modules/debug/Logger.tsx");
+          equalsResult = absResult.equals(3);
         }
         if (!equalsResult) {
           num3 = 5;
-          equalsResult = require("00005_asyncGeneratorStep.js");
+          equalsResult = absResult.equals(5);
         }
         tmp4 = equalsResult;
         if (!tmp4) {
           isEvenResult = absResult.isEven();
           if (!isEvenResult) {
             num4 = 3;
-            isEvenResult = require("../discord_app/modules/debug/Logger.tsx");
+            isEvenResult = absResult.isDivisibleBy(3);
           }
           if (!isEvenResult) {
             num5 = 5;
-            isEvenResult = require("00005_asyncGeneratorStep.js");
+            isEvenResult = absResult.isDivisibleBy(5);
           }
           tmp6 = !isEvenResult;
           if (!isEvenResult) {
             num6 = 49;
-            tmp7 = require("00049_defineLazyObjectProperty.js") || undefined;
+            tmp7 = absResult.lesser(49) || undefined;
             tmp6 = tmp7;
           }
           tmp4 = tmp6;
@@ -4774,8 +4700,8 @@ while (true) {
         num9 = 2;
         num10 = 1;
         for (let num11 = 0; num11 < num7; num11 = num11 + 1) {
-          tmp9 = Integer;
-          arr = items.push(require("00002_set.js"));
+          tmp9 = closure_0;
+          arr = items.push(closure_0.randBetween(2, absResult1.minus(2), arg1));
         }
         tmp11 = millerRabinTest;
         return millerRabinTest(absResult1, items);
@@ -4783,7 +4709,7 @@ while (true) {
     }
     modInv(arg0) {
       self = this;
-      ({ zero, one } = Integer);
+      ({ zero, one } = closure_0);
       obj = parseValue(arg0);
       absResult = this.abs();
       tmp = absResult;
@@ -4808,7 +4734,7 @@ while (true) {
         num = 0;
         num2 = -1;
         addResult = obj5;
-        if (-1 === require("../discord_app/index.native.tsx")) {
+        if (-1 === obj5.compare(0)) {
           addResult = obj5.add(arg0);
         }
         negateResult = addResult;
@@ -5058,18 +4984,18 @@ while (true) {
     }
     bitLength() {
       self = this;
-      tmp = Integer;
+      tmp = closure_0;
       self2 = this;
-      if (this.compareTo(require("../discord_app/index.native.tsx")) < 0) {
+      if (this.compareTo(closure_0(0)) < 0) {
         negateResult = self.negate();
         num = 1;
-        self2 = negateResult.subtract(require("../discord_app/modules/debug/logAppStart.tsx"));
+        self2 = negateResult.subtract(tmp(1));
       }
-      if (0 === self2.compareTo(require("../discord_app/index.native.tsx"))) {
-        tmpResult = require("../discord_app/index.native.tsx");
+      if (0 === self2.compareTo(tmp(0))) {
+        tmpResult = tmp(0);
       } else {
         num6 = 2;
-        tmpResult1 = require("00002_set.js");
+        tmpResult1 = tmp(2);
         if (tmpResult1.compareTo(self2) <= 0) {
           squareResult = tmpResult1.square(tmpResult1);
           if (squareResult.compareTo(self2) <= 0) {
@@ -5079,43 +5005,43 @@ while (true) {
             multiplyResult = p.multiply(squareResult);
             if (multiplyResult.compareTo(self2) <= 0) {
               obj = { p: null, e: null };
-              obj[0] = multiplyResult;
+              obj.p = multiplyResult;
               num4 = 1;
-              obj[1] = num6 * e + 1;
+              obj.e = num6 * e + 1;
               obj1 = obj;
             } else {
               obj1 = { p: null, e: null };
-              obj1[0] = p;
-              obj1[1] = num6 * e;
+              obj1.p = p;
+              obj1.e = num6 * e;
             }
             tmp4 = obj1;
           } else {
             obj2 = { p: null, e: 0 };
             num3 = 1;
-            obj2[0] = require("../discord_app/modules/debug/logAppStart.tsx");
+            obj2.p = tmp(1);
             ({ p: p2, e: e2 } = obj2);
             multiplyResult1 = p2.multiply(tmpResult1);
             if (multiplyResult1.compareTo(self2) <= 0) {
               obj3 = { p: null, e: null };
-              obj3[0] = multiplyResult1;
+              obj3.p = multiplyResult1;
               num5 = 1;
               num6 = num6 * e2 + 1;
-              obj3[1] = num6;
+              obj3.e = num6;
               obj4 = obj3;
             } else {
               obj4 = { p: null, e: null };
-              obj4[0] = p2;
-              obj4[1] = num6 * e2;
+              obj4.p = p2;
+              obj4.e = num6 * e2;
             }
             tmp5 = obj4;
           }
         } else {
           obj5 = { p: null, e: 0 };
           num2 = 1;
-          obj5[0] = require("../discord_app/modules/debug/logAppStart.tsx");
+          obj5.p = tmp(1);
           tmpResult2 = tmp(obj5.e);
           num7 = 1;
-          tmpResult = tmpResult2.add(require("../discord_app/modules/debug/logAppStart.tsx"));
+          tmpResult = tmpResult2.add(tmp(1));
         }
       }
       return tmpResult;
@@ -5141,15 +5067,15 @@ while (true) {
           str3 = "-";
         }
         value = iter.value;
-        mapped = value.map((arg0) => {
+        mapped = value.map((item) => {
           let arr = closure_0;
           if (!closure_0) {
-            arr = closure_1_1;
+            arr = c1;
           }
-          if (arg0 < arr.length) {
-            let text = arr[arg0];
+          if (item < arr.length) {
+            let text = arr[item];
           } else {
-            text = `${"<" + arg0}>`;
+            text = `${"<" + item}>`;
           }
           return text;
         });
@@ -5200,129 +5126,130 @@ while (true) {
             if (10 === +arg1) {
             }
             tmp3 = parseBase;
-            if (typeof parseBase !== "function") {
-              str10 = "Trying to call a non-function";
-              throwTypeErrorResult = HermesBuiltin.throwTypeError();
-            }
-            if (!str) {
-              str = c1;
-            }
-            tmp4 = arg3;
-            tmp5 = globalThis;
-            _String = String;
-            str2 = String(arg0);
-            formatted1 = str;
-            formatted = str2;
-            if (!arg3) {
-              formatted = str2.toLowerCase();
-              formatted1 = str.toLowerCase();
-            }
-            length = formatted.length;
-            _Math = Math;
-            absolute = Math.abs(arg1);
-            obj = {};
-            num2 = 0;
-            num3 = 1;
-            num4 = 0;
-            if (0 < formatted1.length) {
-              do {
-                obj[formatted1[num4]] = num4;
-                num4 = num4 + 1;
-                length2 = formatted1.length;
-              } while (num4 < length2);
-            }
-            str3 = "1";
-            str4 = "-";
-            num5 = 0;
-            if (0 < length) {
-              while (true) {
-                tmp7 = formatted[num5];
-                tmp8 = num5;
-                if ("-" !== tmp7) {
-                  if (tmp7 in obj) {
-                    if (obj[tmp7] >= absolute) {
-                      if ("1" !== tmp7) {
-                        break;
-                      } else if (1 !== absolute) {
-                        break;
+            if (typeof parseBase === "function") {
+              if (!str) {
+                str = c1;
+              }
+              tmp4 = arg3;
+              tmp5 = globalThis;
+              _String = String;
+              str2 = String(arg0);
+              formatted1 = str;
+              formatted = str2;
+              if (!arg3) {
+                formatted = str2.toLowerCase();
+                formatted1 = str.toLowerCase();
+              }
+              length = formatted.length;
+              _Math = Math;
+              absolute = Math.abs(arg1);
+              obj = {};
+              num2 = 0;
+              num3 = 1;
+              num4 = 0;
+              if (0 < formatted1.length) {
+                do {
+                  obj[formatted1[num4]] = num4;
+                  num4 = num4 + 1;
+                  length2 = formatted1.length;
+                } while (num4 < length2);
+              }
+              str3 = "1";
+              str4 = "-";
+              num5 = 0;
+              if (0 < length) {
+                while (true) {
+                  tmp7 = formatted[num5];
+                  tmp8 = num5;
+                  if ("-" !== tmp7) {
+                    if (tmp7 in obj) {
+                      if (obj[tmp7] >= absolute) {
+                        if ("1" !== tmp7) {
+                          break;
+                        } else if (1 !== absolute) {
+                          break;
+                        }
                       }
                     }
                   }
+                  num5 = num5 + 1;
                 }
-                num5 = num5 + 1;
+                _Error = Error;
+                str5 = " is not a valid digit in base ";
+                tmp9 = new.target;
+                str6 = ".";
+                tmp10 = new.target;
+                error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
+                tmp12 = error;
+                throw error;
               }
-              _Error = Error;
-              str5 = " is not a valid digit in base ";
-              tmp9 = new.target;
-              str6 = ".";
-              tmp10 = new.target;
-              error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
-              tmp12 = error;
-              throw error;
-            }
-            tmp13 = parseValue;
-            tmp15 = "-" === formatted[0];
-            num6 = 0;
-            tmp14 = parseValue(arg1);
-            if (tmp15) {
-              num6 = 1;
-            }
-            items = [];
-            str7 = "<";
-            str8 = ">";
-            if (num6 < formatted.length) {
-              while (true) {
-                tmp16 = formatted[num6];
-                tmp17 = num6;
-                if (tmp16 in obj) {
-                  tmp26 = parseValue;
-                  arr = items.push(parseValue(obj[tmp16]));
-                  sum = num6;
-                } else {
-                  tmp18 = num6;
-                  if ("<" !== tmp16) {
-                    break;
+              tmp13 = parseValue;
+              tmp15 = "-" === formatted[0];
+              num6 = 0;
+              tmp14 = parseValue(arg1);
+              if (tmp15) {
+                num6 = 1;
+              }
+              items = [];
+              str7 = "<";
+              str8 = ">";
+              if (num6 < formatted.length) {
+                while (true) {
+                  tmp16 = formatted[num6];
+                  tmp17 = num6;
+                  if (tmp16 in obj) {
+                    tmp26 = parseValue;
+                    arr = items.push(parseValue(obj[tmp16]));
+                    sum = num6;
                   } else {
-                    sum = tmp18 + 1;
-                    while (">" !== formatted[sum]) {
-                      tmp18 = sum;
-                      if (sum >= formatted.length) {
-                        break;
+                    tmp18 = num6;
+                    if ("<" !== tmp16) {
+                      break;
+                    } else {
+                      sum = tmp18 + 1;
+                      while (">" !== formatted[sum]) {
+                        tmp18 = sum;
+                        if (sum >= formatted.length) {
+                          break;
+                        }
                       }
+                      tmp20 = parseValue;
+                      arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                     }
-                    tmp20 = parseValue;
-                    arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                   }
+                  num6 = sum + 1;
                 }
-                num6 = sum + 1;
+                _Error2 = Error;
+                str9 = " is not a valid character";
+                tmp22 = new.target;
+                tmp23 = new.target;
+                error1 = new Error(tmp16 + " is not a valid character");
+                tmp25 = error1;
+                throw error1;
               }
-              _Error2 = Error;
-              str9 = " is not a valid character";
-              tmp22 = new.target;
-              tmp23 = new.target;
-              error1 = new Error(tmp16 + " is not a valid character");
-              tmp25 = error1;
-              throw error1;
+              tmp28 = Integer;
+              [tmp29, obj2] = Integer;
+              diff = items.length - 1;
+              addResult = tmp29;
+              obj4 = tmp29;
+              if (0 <= diff) {
+                do {
+                  obj5 = items[diff];
+                  addResult = addResult.add(obj5.times(timesResult));
+                  timesResult = timesResult.times(tmp14);
+                  diff = diff - 1;
+                  obj4 = addResult;
+                } while (0 <= diff);
+              }
+              negateResult = obj4;
+              if (tmp15) {
+                negateResult = obj4.negate();
+              }
+              first = negateResult;
+            } else {
+              str10 = "Trying to call a non-function";
+              throw new TypeError("Trying to call a non-function");
             }
-            tmp28 = Integer;
-            [tmp29, obj2] = Integer;
-            diff = items.length - 1;
-            addResult = tmp29;
-            obj4 = tmp29;
-            if (0 <= diff) {
-              do {
-                obj5 = items[diff];
-                addResult = addResult.add(obj5.times(timesResult));
-                timesResult = timesResult.times(tmp14);
-                diff = diff - 1;
-                obj4 = addResult;
-              } while (0 <= diff);
-            }
-            negateResult = obj4;
-            if (tmp15) {
-              negateResult = obj4.negate();
-            }
-            first = negateResult;
           }
           tmp = parseValue;
           first = parseValue(arg0);
@@ -5344,129 +5271,130 @@ while (true) {
             if (10 === +arg1) {
             }
             tmp3 = parseBase;
-            if (typeof parseBase !== "function") {
-              str10 = "Trying to call a non-function";
-              throwTypeErrorResult = HermesBuiltin.throwTypeError();
-            }
-            if (!str) {
-              str = c1;
-            }
-            tmp4 = arg3;
-            tmp5 = globalThis;
-            _String = String;
-            str2 = String(arg0);
-            formatted1 = str;
-            formatted = str2;
-            if (!arg3) {
-              formatted = str2.toLowerCase();
-              formatted1 = str.toLowerCase();
-            }
-            length = formatted.length;
-            _Math = Math;
-            absolute = Math.abs(arg1);
-            obj = {};
-            num2 = 0;
-            num3 = 1;
-            num4 = 0;
-            if (0 < formatted1.length) {
-              do {
-                obj[formatted1[num4]] = num4;
-                num4 = num4 + 1;
-                length2 = formatted1.length;
-              } while (num4 < length2);
-            }
-            str3 = "1";
-            str4 = "-";
-            num5 = 0;
-            if (0 < length) {
-              while (true) {
-                tmp7 = formatted[num5];
-                tmp8 = num5;
-                if ("-" !== tmp7) {
-                  if (tmp7 in obj) {
-                    if (obj[tmp7] >= absolute) {
-                      if ("1" !== tmp7) {
-                        break;
-                      } else if (1 !== absolute) {
-                        break;
+            if (typeof parseBase === "function") {
+              if (!str) {
+                str = c1;
+              }
+              tmp4 = arg3;
+              tmp5 = globalThis;
+              _String = String;
+              str2 = String(arg0);
+              formatted1 = str;
+              formatted = str2;
+              if (!arg3) {
+                formatted = str2.toLowerCase();
+                formatted1 = str.toLowerCase();
+              }
+              length = formatted.length;
+              _Math = Math;
+              absolute = Math.abs(arg1);
+              obj = {};
+              num2 = 0;
+              num3 = 1;
+              num4 = 0;
+              if (0 < formatted1.length) {
+                do {
+                  obj[formatted1[num4]] = num4;
+                  num4 = num4 + 1;
+                  length2 = formatted1.length;
+                } while (num4 < length2);
+              }
+              str3 = "1";
+              str4 = "-";
+              num5 = 0;
+              if (0 < length) {
+                while (true) {
+                  tmp7 = formatted[num5];
+                  tmp8 = num5;
+                  if ("-" !== tmp7) {
+                    if (tmp7 in obj) {
+                      if (obj[tmp7] >= absolute) {
+                        if ("1" !== tmp7) {
+                          break;
+                        } else if (1 !== absolute) {
+                          break;
+                        }
                       }
                     }
                   }
+                  num5 = num5 + 1;
                 }
-                num5 = num5 + 1;
+                _Error = Error;
+                str5 = " is not a valid digit in base ";
+                tmp9 = new.target;
+                str6 = ".";
+                tmp10 = new.target;
+                error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
+                tmp12 = error;
+                throw error;
               }
-              _Error = Error;
-              str5 = " is not a valid digit in base ";
-              tmp9 = new.target;
-              str6 = ".";
-              tmp10 = new.target;
-              error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
-              tmp12 = error;
-              throw error;
-            }
-            tmp13 = parseValue;
-            tmp15 = "-" === formatted[0];
-            num6 = 0;
-            tmp14 = parseValue(arg1);
-            if (tmp15) {
-              num6 = 1;
-            }
-            items = [];
-            str7 = "<";
-            str8 = ">";
-            if (num6 < formatted.length) {
-              while (true) {
-                tmp16 = formatted[num6];
-                tmp17 = num6;
-                if (tmp16 in obj) {
-                  tmp26 = parseValue;
-                  arr = items.push(parseValue(obj[tmp16]));
-                  sum = num6;
-                } else {
-                  tmp18 = num6;
-                  if ("<" !== tmp16) {
-                    break;
+              tmp13 = parseValue;
+              tmp15 = "-" === formatted[0];
+              num6 = 0;
+              tmp14 = parseValue(arg1);
+              if (tmp15) {
+                num6 = 1;
+              }
+              items = [];
+              str7 = "<";
+              str8 = ">";
+              if (num6 < formatted.length) {
+                while (true) {
+                  tmp16 = formatted[num6];
+                  tmp17 = num6;
+                  if (tmp16 in obj) {
+                    tmp26 = parseValue;
+                    arr = items.push(parseValue(obj[tmp16]));
+                    sum = num6;
                   } else {
-                    sum = tmp18 + 1;
-                    while (">" !== formatted[sum]) {
-                      tmp18 = sum;
-                      if (sum >= formatted.length) {
-                        break;
+                    tmp18 = num6;
+                    if ("<" !== tmp16) {
+                      break;
+                    } else {
+                      sum = tmp18 + 1;
+                      while (">" !== formatted[sum]) {
+                        tmp18 = sum;
+                        if (sum >= formatted.length) {
+                          break;
+                        }
                       }
+                      tmp20 = parseValue;
+                      arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                     }
-                    tmp20 = parseValue;
-                    arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                   }
+                  num6 = sum + 1;
                 }
-                num6 = sum + 1;
+                _Error2 = Error;
+                str9 = " is not a valid character";
+                tmp22 = new.target;
+                tmp23 = new.target;
+                error1 = new Error(tmp16 + " is not a valid character");
+                tmp25 = error1;
+                throw error1;
               }
-              _Error2 = Error;
-              str9 = " is not a valid character";
-              tmp22 = new.target;
-              tmp23 = new.target;
-              error1 = new Error(tmp16 + " is not a valid character");
-              tmp25 = error1;
-              throw error1;
+              tmp28 = Integer;
+              [tmp29, obj2] = Integer;
+              diff = items.length - 1;
+              addResult = tmp29;
+              obj4 = tmp29;
+              if (0 <= diff) {
+                do {
+                  obj5 = items[diff];
+                  addResult = addResult.add(obj5.times(timesResult));
+                  timesResult = timesResult.times(tmp14);
+                  diff = diff - 1;
+                  obj4 = addResult;
+                } while (0 <= diff);
+              }
+              negateResult = obj4;
+              if (tmp15) {
+                negateResult = obj4.negate();
+              }
+              first = negateResult;
+            } else {
+              str10 = "Trying to call a non-function";
+              throw new TypeError("Trying to call a non-function");
             }
-            tmp28 = Integer;
-            [tmp29, obj2] = Integer;
-            diff = items.length - 1;
-            addResult = tmp29;
-            obj4 = tmp29;
-            if (0 <= diff) {
-              do {
-                obj5 = items[diff];
-                addResult = addResult.add(obj5.times(timesResult));
-                timesResult = timesResult.times(tmp14);
-                diff = diff - 1;
-                obj4 = addResult;
-              } while (0 <= diff);
-            }
-            negateResult = obj4;
-            if (tmp15) {
-              negateResult = obj4.negate();
-            }
-            first = negateResult;
           }
           tmp = parseValue;
           first = parseValue(arg0);
@@ -5520,8 +5448,8 @@ Integer.randBetween = function randBetween(arg0, absResult1, arg2) {
     const _Math = Math;
     random = Math.random;
   }
-  let tmpResult = tmp(tmp2);
-  tmpResult = tmp(tmp3);
+  tmp(tmp2);
+  const tmpResult = tmp(tmp3);
   const tmpResult1 = parseValue(tmp2);
   let tmpResult2 = tmp(tmp3);
   if (tmpResult1.greater(tmpResult2)) {
@@ -5532,13 +5460,12 @@ Integer.randBetween = function randBetween(arg0, absResult1, arg2) {
     const _Math4 = Math;
     return tmpResult.add(Math.floor(random() * addResult));
   } else {
-    const value = toBase(addResult, 10000000).value;
+    value = toBase(addResult, 10000000).value;
     const items = [];
     let num3 = 0;
     let flag2 = true;
     if (0 < value.length) {
       do {
-        let tmp8 = num3;
         let flag3 = flag2;
         let num4 = 10000000;
         if (flag2) {
@@ -5564,7 +5491,7 @@ Integer.randBetween = function randBetween(arg0, absResult1, arg2) {
   }
   const subtractResult = tmpResult2.subtract(tmpResult);
 };
-Integer.fromArray = (arr) => {
+Integer.fromArray = (arr, arg1, arg2) => {
   const mapped = arr.map(parseValue);
   [tmp2, obj] = Integer;
   let diff = mapped.length - 1;
@@ -5600,129 +5527,130 @@ if (hasOwnPropertyResult) {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
-            str10 = "Trying to call a non-function";
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          if (!str) {
-            str = c1;
-          }
-          tmp4 = arg3;
-          tmp5 = globalThis;
-          _String = String;
-          str2 = String(arg0);
-          formatted1 = str;
-          formatted = str2;
-          if (!arg3) {
-            formatted = str2.toLowerCase();
-            formatted1 = str.toLowerCase();
-          }
-          length = formatted.length;
-          _Math = Math;
-          absolute = Math.abs(arg1);
-          obj = {};
-          num2 = 0;
-          num3 = 1;
-          num4 = 0;
-          if (0 < formatted1.length) {
-            do {
-              obj[formatted1[num4]] = num4;
-              num4 = num4 + 1;
-              length2 = formatted1.length;
-            } while (num4 < length2);
-          }
-          str3 = "1";
-          str4 = "-";
-          num5 = 0;
-          if (0 < length) {
-            while (true) {
-              tmp7 = formatted[num5];
-              tmp8 = num5;
-              if ("-" !== tmp7) {
-                if (tmp7 in obj) {
-                  if (obj[tmp7] >= absolute) {
-                    if ("1" !== tmp7) {
-                      break;
-                    } else if (1 !== absolute) {
-                      break;
+          if (typeof parseBase === "function") {
+            if (!str) {
+              str = c1;
+            }
+            tmp4 = arg3;
+            tmp5 = globalThis;
+            _String = String;
+            str2 = String(arg0);
+            formatted1 = str;
+            formatted = str2;
+            if (!arg3) {
+              formatted = str2.toLowerCase();
+              formatted1 = str.toLowerCase();
+            }
+            length = formatted.length;
+            _Math = Math;
+            absolute = Math.abs(arg1);
+            obj = {};
+            num2 = 0;
+            num3 = 1;
+            num4 = 0;
+            if (0 < formatted1.length) {
+              do {
+                obj[formatted1[num4]] = num4;
+                num4 = num4 + 1;
+                length2 = formatted1.length;
+              } while (num4 < length2);
+            }
+            str3 = "1";
+            str4 = "-";
+            num5 = 0;
+            if (0 < length) {
+              while (true) {
+                tmp7 = formatted[num5];
+                tmp8 = num5;
+                if ("-" !== tmp7) {
+                  if (tmp7 in obj) {
+                    if (obj[tmp7] >= absolute) {
+                      if ("1" !== tmp7) {
+                        break;
+                      } else if (1 !== absolute) {
+                        break;
+                      }
                     }
                   }
                 }
+                num5 = num5 + 1;
               }
-              num5 = num5 + 1;
+              _Error = Error;
+              str5 = " is not a valid digit in base ";
+              tmp9 = new.target;
+              str6 = ".";
+              tmp10 = new.target;
+              error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
+              tmp12 = error;
+              throw error;
             }
-            _Error = Error;
-            str5 = " is not a valid digit in base ";
-            tmp9 = new.target;
-            str6 = ".";
-            tmp10 = new.target;
-            error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
-            tmp12 = error;
-            throw error;
-          }
-          tmp13 = parseValue;
-          tmp15 = "-" === formatted[0];
-          num6 = 0;
-          tmp14 = parseValue(arg1);
-          if (tmp15) {
-            num6 = 1;
-          }
-          items = [];
-          str7 = "<";
-          str8 = ">";
-          if (num6 < formatted.length) {
-            while (true) {
-              tmp16 = formatted[num6];
-              tmp17 = num6;
-              if (tmp16 in obj) {
-                tmp26 = parseValue;
-                arr = items.push(parseValue(obj[tmp16]));
-                sum = num6;
-              } else {
-                tmp18 = num6;
-                if ("<" !== tmp16) {
-                  break;
+            tmp13 = parseValue;
+            tmp15 = "-" === formatted[0];
+            num6 = 0;
+            tmp14 = parseValue(arg1);
+            if (tmp15) {
+              num6 = 1;
+            }
+            items = [];
+            str7 = "<";
+            str8 = ">";
+            if (num6 < formatted.length) {
+              while (true) {
+                tmp16 = formatted[num6];
+                tmp17 = num6;
+                if (tmp16 in obj) {
+                  tmp26 = parseValue;
+                  arr = items.push(parseValue(obj[tmp16]));
+                  sum = num6;
                 } else {
-                  sum = tmp18 + 1;
-                  while (">" !== formatted[sum]) {
-                    tmp18 = sum;
-                    if (sum >= formatted.length) {
-                      break;
+                  tmp18 = num6;
+                  if ("<" !== tmp16) {
+                    break;
+                  } else {
+                    sum = tmp18 + 1;
+                    while (">" !== formatted[sum]) {
+                      tmp18 = sum;
+                      if (sum >= formatted.length) {
+                        break;
+                      }
                     }
+                    tmp20 = parseValue;
+                    arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                   }
-                  tmp20 = parseValue;
-                  arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                 }
+                num6 = sum + 1;
               }
-              num6 = sum + 1;
+              _Error2 = Error;
+              str9 = " is not a valid character";
+              tmp22 = new.target;
+              tmp23 = new.target;
+              error1 = new Error(tmp16 + " is not a valid character");
+              tmp25 = error1;
+              throw error1;
             }
-            _Error2 = Error;
-            str9 = " is not a valid character";
-            tmp22 = new.target;
-            tmp23 = new.target;
-            error1 = new Error(tmp16 + " is not a valid character");
-            tmp25 = error1;
-            throw error1;
+            tmp28 = Integer;
+            [tmp29, obj2] = Integer;
+            diff = items.length - 1;
+            addResult = tmp29;
+            obj4 = tmp29;
+            if (0 <= diff) {
+              do {
+                obj5 = items[diff];
+                addResult = addResult.add(obj5.times(timesResult));
+                timesResult = timesResult.times(tmp14);
+                diff = diff - 1;
+                obj4 = addResult;
+              } while (0 <= diff);
+            }
+            negateResult = obj4;
+            if (tmp15) {
+              negateResult = obj4.negate();
+            }
+            first = negateResult;
+          } else {
+            str10 = "Trying to call a non-function";
+            throw new TypeError("Trying to call a non-function");
           }
-          tmp28 = Integer;
-          [tmp29, obj2] = Integer;
-          diff = items.length - 1;
-          addResult = tmp29;
-          obj4 = tmp29;
-          if (0 <= diff) {
-            do {
-              obj5 = items[diff];
-              addResult = addResult.add(obj5.times(timesResult));
-              timesResult = timesResult.times(tmp14);
-              diff = diff - 1;
-              obj4 = addResult;
-            } while (0 <= diff);
-          }
-          negateResult = obj4;
-          if (tmp15) {
-            negateResult = obj4.negate();
-          }
-          first = negateResult;
         }
         tmp = parseValue;
         first = parseValue(arg0);
@@ -5746,129 +5674,130 @@ if (hasOwnPropertyResult) {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
-            str10 = "Trying to call a non-function";
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          if (!str) {
-            str = c1;
-          }
-          tmp4 = arg3;
-          tmp5 = globalThis;
-          _String = String;
-          str2 = String(arg0);
-          formatted1 = str;
-          formatted = str2;
-          if (!arg3) {
-            formatted = str2.toLowerCase();
-            formatted1 = str.toLowerCase();
-          }
-          length = formatted.length;
-          _Math = Math;
-          absolute = Math.abs(arg1);
-          obj = {};
-          num2 = 0;
-          num3 = 1;
-          num4 = 0;
-          if (0 < formatted1.length) {
-            do {
-              obj[formatted1[num4]] = num4;
-              num4 = num4 + 1;
-              length2 = formatted1.length;
-            } while (num4 < length2);
-          }
-          str3 = "1";
-          str4 = "-";
-          num5 = 0;
-          if (0 < length) {
-            while (true) {
-              tmp7 = formatted[num5];
-              tmp8 = num5;
-              if ("-" !== tmp7) {
-                if (tmp7 in obj) {
-                  if (obj[tmp7] >= absolute) {
-                    if ("1" !== tmp7) {
-                      break;
-                    } else if (1 !== absolute) {
-                      break;
+          if (typeof parseBase === "function") {
+            if (!str) {
+              str = c1;
+            }
+            tmp4 = arg3;
+            tmp5 = globalThis;
+            _String = String;
+            str2 = String(arg0);
+            formatted1 = str;
+            formatted = str2;
+            if (!arg3) {
+              formatted = str2.toLowerCase();
+              formatted1 = str.toLowerCase();
+            }
+            length = formatted.length;
+            _Math = Math;
+            absolute = Math.abs(arg1);
+            obj = {};
+            num2 = 0;
+            num3 = 1;
+            num4 = 0;
+            if (0 < formatted1.length) {
+              do {
+                obj[formatted1[num4]] = num4;
+                num4 = num4 + 1;
+                length2 = formatted1.length;
+              } while (num4 < length2);
+            }
+            str3 = "1";
+            str4 = "-";
+            num5 = 0;
+            if (0 < length) {
+              while (true) {
+                tmp7 = formatted[num5];
+                tmp8 = num5;
+                if ("-" !== tmp7) {
+                  if (tmp7 in obj) {
+                    if (obj[tmp7] >= absolute) {
+                      if ("1" !== tmp7) {
+                        break;
+                      } else if (1 !== absolute) {
+                        break;
+                      }
                     }
                   }
                 }
+                num5 = num5 + 1;
               }
-              num5 = num5 + 1;
+              _Error = Error;
+              str5 = " is not a valid digit in base ";
+              tmp9 = new.target;
+              str6 = ".";
+              tmp10 = new.target;
+              error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
+              tmp12 = error;
+              throw error;
             }
-            _Error = Error;
-            str5 = " is not a valid digit in base ";
-            tmp9 = new.target;
-            str6 = ".";
-            tmp10 = new.target;
-            error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
-            tmp12 = error;
-            throw error;
-          }
-          tmp13 = parseValue;
-          tmp15 = "-" === formatted[0];
-          num6 = 0;
-          tmp14 = parseValue(arg1);
-          if (tmp15) {
-            num6 = 1;
-          }
-          items = [];
-          str7 = "<";
-          str8 = ">";
-          if (num6 < formatted.length) {
-            while (true) {
-              tmp16 = formatted[num6];
-              tmp17 = num6;
-              if (tmp16 in obj) {
-                tmp26 = parseValue;
-                arr = items.push(parseValue(obj[tmp16]));
-                sum = num6;
-              } else {
-                tmp18 = num6;
-                if ("<" !== tmp16) {
-                  break;
+            tmp13 = parseValue;
+            tmp15 = "-" === formatted[0];
+            num6 = 0;
+            tmp14 = parseValue(arg1);
+            if (tmp15) {
+              num6 = 1;
+            }
+            items = [];
+            str7 = "<";
+            str8 = ">";
+            if (num6 < formatted.length) {
+              while (true) {
+                tmp16 = formatted[num6];
+                tmp17 = num6;
+                if (tmp16 in obj) {
+                  tmp26 = parseValue;
+                  arr = items.push(parseValue(obj[tmp16]));
+                  sum = num6;
                 } else {
-                  sum = tmp18 + 1;
-                  while (">" !== formatted[sum]) {
-                    tmp18 = sum;
-                    if (sum >= formatted.length) {
-                      break;
+                  tmp18 = num6;
+                  if ("<" !== tmp16) {
+                    break;
+                  } else {
+                    sum = tmp18 + 1;
+                    while (">" !== formatted[sum]) {
+                      tmp18 = sum;
+                      if (sum >= formatted.length) {
+                        break;
+                      }
                     }
+                    tmp20 = parseValue;
+                    arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                   }
-                  tmp20 = parseValue;
-                  arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                 }
+                num6 = sum + 1;
               }
-              num6 = sum + 1;
+              _Error2 = Error;
+              str9 = " is not a valid character";
+              tmp22 = new.target;
+              tmp23 = new.target;
+              error1 = new Error(tmp16 + " is not a valid character");
+              tmp25 = error1;
+              throw error1;
             }
-            _Error2 = Error;
-            str9 = " is not a valid character";
-            tmp22 = new.target;
-            tmp23 = new.target;
-            error1 = new Error(tmp16 + " is not a valid character");
-            tmp25 = error1;
-            throw error1;
+            tmp28 = Integer;
+            [tmp29, obj2] = Integer;
+            diff = items.length - 1;
+            addResult = tmp29;
+            obj4 = tmp29;
+            if (0 <= diff) {
+              do {
+                obj5 = items[diff];
+                addResult = addResult.add(obj5.times(timesResult));
+                timesResult = timesResult.times(tmp14);
+                diff = diff - 1;
+                obj4 = addResult;
+              } while (0 <= diff);
+            }
+            negateResult = obj4;
+            if (tmp15) {
+              negateResult = obj4.negate();
+            }
+            first = negateResult;
+          } else {
+            str10 = "Trying to call a non-function";
+            throw new TypeError("Trying to call a non-function");
           }
-          tmp28 = Integer;
-          [tmp29, obj2] = Integer;
-          diff = items.length - 1;
-          addResult = tmp29;
-          obj4 = tmp29;
-          if (0 <= diff) {
-            do {
-              obj5 = items[diff];
-              addResult = addResult.add(obj5.times(timesResult));
-              timesResult = timesResult.times(tmp14);
-              diff = diff - 1;
-              obj4 = addResult;
-            } while (0 <= diff);
-          }
-          negateResult = obj4;
-          if (tmp15) {
-            negateResult = obj4.negate();
-          }
-          first = negateResult;
         }
         tmp = parseValue;
         first = parseValue(arg0);
@@ -5892,129 +5821,130 @@ if (typeof globalThis.define === "function") {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
-            str10 = "Trying to call a non-function";
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          if (!str) {
-            str = c1;
-          }
-          tmp4 = arg3;
-          tmp5 = globalThis;
-          _String = String;
-          str2 = String(arg0);
-          formatted1 = str;
-          formatted = str2;
-          if (!arg3) {
-            formatted = str2.toLowerCase();
-            formatted1 = str.toLowerCase();
-          }
-          length = formatted.length;
-          _Math = Math;
-          absolute = Math.abs(arg1);
-          obj = {};
-          num2 = 0;
-          num3 = 1;
-          num4 = 0;
-          if (0 < formatted1.length) {
-            do {
-              obj[formatted1[num4]] = num4;
-              num4 = num4 + 1;
-              length2 = formatted1.length;
-            } while (num4 < length2);
-          }
-          str3 = "1";
-          str4 = "-";
-          num5 = 0;
-          if (0 < length) {
-            while (true) {
-              tmp7 = formatted[num5];
-              tmp8 = num5;
-              if ("-" !== tmp7) {
-                if (tmp7 in obj) {
-                  if (obj[tmp7] >= absolute) {
-                    if ("1" !== tmp7) {
-                      break;
-                    } else if (1 !== absolute) {
-                      break;
+          if (typeof parseBase === "function") {
+            if (!str) {
+              str = c1;
+            }
+            tmp4 = arg3;
+            tmp5 = globalThis;
+            _String = String;
+            str2 = String(arg0);
+            formatted1 = str;
+            formatted = str2;
+            if (!arg3) {
+              formatted = str2.toLowerCase();
+              formatted1 = str.toLowerCase();
+            }
+            length = formatted.length;
+            _Math = Math;
+            absolute = Math.abs(arg1);
+            obj = {};
+            num2 = 0;
+            num3 = 1;
+            num4 = 0;
+            if (0 < formatted1.length) {
+              do {
+                obj[formatted1[num4]] = num4;
+                num4 = num4 + 1;
+                length2 = formatted1.length;
+              } while (num4 < length2);
+            }
+            str3 = "1";
+            str4 = "-";
+            num5 = 0;
+            if (0 < length) {
+              while (true) {
+                tmp7 = formatted[num5];
+                tmp8 = num5;
+                if ("-" !== tmp7) {
+                  if (tmp7 in obj) {
+                    if (obj[tmp7] >= absolute) {
+                      if ("1" !== tmp7) {
+                        break;
+                      } else if (1 !== absolute) {
+                        break;
+                      }
                     }
                   }
                 }
+                num5 = num5 + 1;
               }
-              num5 = num5 + 1;
+              _Error = Error;
+              str5 = " is not a valid digit in base ";
+              tmp9 = new.target;
+              str6 = ".";
+              tmp10 = new.target;
+              error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
+              tmp12 = error;
+              throw error;
             }
-            _Error = Error;
-            str5 = " is not a valid digit in base ";
-            tmp9 = new.target;
-            str6 = ".";
-            tmp10 = new.target;
-            error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
-            tmp12 = error;
-            throw error;
-          }
-          tmp13 = parseValue;
-          tmp15 = "-" === formatted[0];
-          num6 = 0;
-          tmp14 = parseValue(arg1);
-          if (tmp15) {
-            num6 = 1;
-          }
-          items = [];
-          str7 = "<";
-          str8 = ">";
-          if (num6 < formatted.length) {
-            while (true) {
-              tmp16 = formatted[num6];
-              tmp17 = num6;
-              if (tmp16 in obj) {
-                tmp26 = parseValue;
-                arr = items.push(parseValue(obj[tmp16]));
-                sum = num6;
-              } else {
-                tmp18 = num6;
-                if ("<" !== tmp16) {
-                  break;
+            tmp13 = parseValue;
+            tmp15 = "-" === formatted[0];
+            num6 = 0;
+            tmp14 = parseValue(arg1);
+            if (tmp15) {
+              num6 = 1;
+            }
+            items = [];
+            str7 = "<";
+            str8 = ">";
+            if (num6 < formatted.length) {
+              while (true) {
+                tmp16 = formatted[num6];
+                tmp17 = num6;
+                if (tmp16 in obj) {
+                  tmp26 = parseValue;
+                  arr = items.push(parseValue(obj[tmp16]));
+                  sum = num6;
                 } else {
-                  sum = tmp18 + 1;
-                  while (">" !== formatted[sum]) {
-                    tmp18 = sum;
-                    if (sum >= formatted.length) {
-                      break;
+                  tmp18 = num6;
+                  if ("<" !== tmp16) {
+                    break;
+                  } else {
+                    sum = tmp18 + 1;
+                    while (">" !== formatted[sum]) {
+                      tmp18 = sum;
+                      if (sum >= formatted.length) {
+                        break;
+                      }
                     }
+                    tmp20 = parseValue;
+                    arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                   }
-                  tmp20 = parseValue;
-                  arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                 }
+                num6 = sum + 1;
               }
-              num6 = sum + 1;
+              _Error2 = Error;
+              str9 = " is not a valid character";
+              tmp22 = new.target;
+              tmp23 = new.target;
+              error1 = new Error(tmp16 + " is not a valid character");
+              tmp25 = error1;
+              throw error1;
             }
-            _Error2 = Error;
-            str9 = " is not a valid character";
-            tmp22 = new.target;
-            tmp23 = new.target;
-            error1 = new Error(tmp16 + " is not a valid character");
-            tmp25 = error1;
-            throw error1;
+            tmp28 = Integer;
+            [tmp29, obj2] = Integer;
+            diff = items.length - 1;
+            addResult = tmp29;
+            obj4 = tmp29;
+            if (0 <= diff) {
+              do {
+                obj5 = items[diff];
+                addResult = addResult.add(obj5.times(timesResult));
+                timesResult = timesResult.times(tmp14);
+                diff = diff - 1;
+                obj4 = addResult;
+              } while (0 <= diff);
+            }
+            negateResult = obj4;
+            if (tmp15) {
+              negateResult = obj4.negate();
+            }
+            first = negateResult;
+          } else {
+            str10 = "Trying to call a non-function";
+            throw new TypeError("Trying to call a non-function");
           }
-          tmp28 = Integer;
-          [tmp29, obj2] = Integer;
-          diff = items.length - 1;
-          addResult = tmp29;
-          obj4 = tmp29;
-          if (0 <= diff) {
-            do {
-              obj5 = items[diff];
-              addResult = addResult.add(obj5.times(timesResult));
-              timesResult = timesResult.times(tmp14);
-              diff = diff - 1;
-              obj4 = addResult;
-            } while (0 <= diff);
-          }
-          negateResult = obj4;
-          if (tmp15) {
-            negateResult = obj4.negate();
-          }
-          first = negateResult;
         }
         tmp = parseValue;
         first = parseValue(arg0);
@@ -6038,129 +5968,130 @@ if (amd) {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
-            str10 = "Trying to call a non-function";
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          if (!str) {
-            str = c1;
-          }
-          tmp4 = arg3;
-          tmp5 = globalThis;
-          _String = String;
-          str2 = String(arg0);
-          formatted1 = str;
-          formatted = str2;
-          if (!arg3) {
-            formatted = str2.toLowerCase();
-            formatted1 = str.toLowerCase();
-          }
-          length = formatted.length;
-          _Math = Math;
-          absolute = Math.abs(arg1);
-          obj = {};
-          num2 = 0;
-          num3 = 1;
-          num4 = 0;
-          if (0 < formatted1.length) {
-            do {
-              obj[formatted1[num4]] = num4;
-              num4 = num4 + 1;
-              length2 = formatted1.length;
-            } while (num4 < length2);
-          }
-          str3 = "1";
-          str4 = "-";
-          num5 = 0;
-          if (0 < length) {
-            while (true) {
-              tmp7 = formatted[num5];
-              tmp8 = num5;
-              if ("-" !== tmp7) {
-                if (tmp7 in obj) {
-                  if (obj[tmp7] >= absolute) {
-                    if ("1" !== tmp7) {
-                      break;
-                    } else if (1 !== absolute) {
-                      break;
+          if (typeof parseBase === "function") {
+            if (!str) {
+              str = c1;
+            }
+            tmp4 = arg3;
+            tmp5 = globalThis;
+            _String = String;
+            str2 = String(arg0);
+            formatted1 = str;
+            formatted = str2;
+            if (!arg3) {
+              formatted = str2.toLowerCase();
+              formatted1 = str.toLowerCase();
+            }
+            length = formatted.length;
+            _Math = Math;
+            absolute = Math.abs(arg1);
+            obj = {};
+            num2 = 0;
+            num3 = 1;
+            num4 = 0;
+            if (0 < formatted1.length) {
+              do {
+                obj[formatted1[num4]] = num4;
+                num4 = num4 + 1;
+                length2 = formatted1.length;
+              } while (num4 < length2);
+            }
+            str3 = "1";
+            str4 = "-";
+            num5 = 0;
+            if (0 < length) {
+              while (true) {
+                tmp7 = formatted[num5];
+                tmp8 = num5;
+                if ("-" !== tmp7) {
+                  if (tmp7 in obj) {
+                    if (obj[tmp7] >= absolute) {
+                      if ("1" !== tmp7) {
+                        break;
+                      } else if (1 !== absolute) {
+                        break;
+                      }
                     }
                   }
                 }
+                num5 = num5 + 1;
               }
-              num5 = num5 + 1;
+              _Error = Error;
+              str5 = " is not a valid digit in base ";
+              tmp9 = new.target;
+              str6 = ".";
+              tmp10 = new.target;
+              error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
+              tmp12 = error;
+              throw error;
             }
-            _Error = Error;
-            str5 = " is not a valid digit in base ";
-            tmp9 = new.target;
-            str6 = ".";
-            tmp10 = new.target;
-            error = new Error(tmp7 + " is not a valid digit in base " + arg1 + ".");
-            tmp12 = error;
-            throw error;
-          }
-          tmp13 = parseValue;
-          tmp15 = "-" === formatted[0];
-          num6 = 0;
-          tmp14 = parseValue(arg1);
-          if (tmp15) {
-            num6 = 1;
-          }
-          items = [];
-          str7 = "<";
-          str8 = ">";
-          if (num6 < formatted.length) {
-            while (true) {
-              tmp16 = formatted[num6];
-              tmp17 = num6;
-              if (tmp16 in obj) {
-                tmp26 = parseValue;
-                arr = items.push(parseValue(obj[tmp16]));
-                sum = num6;
-              } else {
-                tmp18 = num6;
-                if ("<" !== tmp16) {
-                  break;
+            tmp13 = parseValue;
+            tmp15 = "-" === formatted[0];
+            num6 = 0;
+            tmp14 = parseValue(arg1);
+            if (tmp15) {
+              num6 = 1;
+            }
+            items = [];
+            str7 = "<";
+            str8 = ">";
+            if (num6 < formatted.length) {
+              while (true) {
+                tmp16 = formatted[num6];
+                tmp17 = num6;
+                if (tmp16 in obj) {
+                  tmp26 = parseValue;
+                  arr = items.push(parseValue(obj[tmp16]));
+                  sum = num6;
                 } else {
-                  sum = tmp18 + 1;
-                  while (">" !== formatted[sum]) {
-                    tmp18 = sum;
-                    if (sum >= formatted.length) {
-                      break;
+                  tmp18 = num6;
+                  if ("<" !== tmp16) {
+                    break;
+                  } else {
+                    sum = tmp18 + 1;
+                    while (">" !== formatted[sum]) {
+                      tmp18 = sum;
+                      if (sum >= formatted.length) {
+                        break;
+                      }
                     }
+                    tmp20 = parseValue;
+                    arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                   }
-                  tmp20 = parseValue;
-                  arr1 = items.push(parseValue(formatted.slice(num6 + 1, sum)));
                 }
+                num6 = sum + 1;
               }
-              num6 = sum + 1;
+              _Error2 = Error;
+              str9 = " is not a valid character";
+              tmp22 = new.target;
+              tmp23 = new.target;
+              error1 = new Error(tmp16 + " is not a valid character");
+              tmp25 = error1;
+              throw error1;
             }
-            _Error2 = Error;
-            str9 = " is not a valid character";
-            tmp22 = new.target;
-            tmp23 = new.target;
-            error1 = new Error(tmp16 + " is not a valid character");
-            tmp25 = error1;
-            throw error1;
+            tmp28 = Integer;
+            [tmp29, obj2] = Integer;
+            diff = items.length - 1;
+            addResult = tmp29;
+            obj4 = tmp29;
+            if (0 <= diff) {
+              do {
+                obj5 = items[diff];
+                addResult = addResult.add(obj5.times(timesResult));
+                timesResult = timesResult.times(tmp14);
+                diff = diff - 1;
+                obj4 = addResult;
+              } while (0 <= diff);
+            }
+            negateResult = obj4;
+            if (tmp15) {
+              negateResult = obj4.negate();
+            }
+            first = negateResult;
+          } else {
+            str10 = "Trying to call a non-function";
+            throw new TypeError("Trying to call a non-function");
           }
-          tmp28 = Integer;
-          [tmp29, obj2] = Integer;
-          diff = items.length - 1;
-          addResult = tmp29;
-          obj4 = tmp29;
-          if (0 <= diff) {
-            do {
-              obj5 = items[diff];
-              addResult = addResult.add(obj5.times(timesResult));
-              timesResult = timesResult.times(tmp14);
-              diff = diff - 1;
-              obj4 = addResult;
-            } while (0 <= diff);
-          }
-          negateResult = obj4;
-          if (tmp15) {
-            negateResult = obj4.negate();
-          }
-          first = negateResult;
         }
         tmp = parseValue;
         first = parseValue(arg0);

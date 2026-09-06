@@ -1,5 +1,5 @@
 // _runtime/10501_JPStandardParser.js
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const JPStandardParser = require;
@@ -7,27 +7,27 @@ const re3 =
   /(?:(?:([同今本])|((昭和|平成|令和)?([0-9０-９]{1,4}|元)))年\s*)?([0-9０-９]{1,2})月\s*([0-9０-９]{1,2})日/i;
 class JPStandardParser {
   constructor() {
-    tmp = closure_2(this, JPStandardParser);
+    tmp = c2(this, JPStandardParser);
     return;
   }
 }
-const items = [
-  {
-    key: "pattern",
-    value: function pattern() {
-      return closure_3;
-    },
+const entry = {
+  key: "pattern",
+  value: function pattern() {
+    return re3;
   },
+};
+const items = [
+  entry,
   {
     key: "extract",
-    value: function extract(createParsingComponents) {
+    value: function extract(createParsingComponents, arg1) {
       const parsed = parseInt(JPStandardParser(10502).toHankaku(arg1[5]));
       const parsed1 = parseInt(JPStandardParser(10502).toHankaku(arg1[6]));
       const parsingComponents = createParsingComponents.createParsingComponents({ day: parsed1, month: parsed });
       let match = arg1[1];
       if (match) {
         match = arg1[1].match("\u540C|\u4ECA|\u672C");
-        const str = arg1[1];
       }
       if (match) {
         const reference = createParsingComponents.reference;

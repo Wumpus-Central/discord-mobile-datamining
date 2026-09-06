@@ -34,12 +34,10 @@ if (_module) {
   }
   _module = tmp8;
   tmp4 = match;
-  const str3 = _mod14318;
 }
 if (_module) {
   _module = _mod14318.match(/Chrome\/(\d+)/);
   tmp4 = _module;
-  const str4 = _mod14318;
 }
 if (_module) {
   tmp3 = +tmp4[1];

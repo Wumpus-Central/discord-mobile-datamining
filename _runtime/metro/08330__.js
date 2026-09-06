@@ -1,9 +1,10 @@
 // _runtime/metro/08330__.js
 import colorPropType from "../08314_colorPropType.js";
 import _mod8321 from "08321__.js";
-import emptyFunction from "../04389_emptyFunction.js";
+import emptyFunction from "04389__.js";
+import "module_4389";
 
-let obj = {};
+const obj = {};
 const module_8321 = Object.assign(_mod8321);
 obj.color = colorPropType;
 obj.fontFamily = emptyFunction.string;
@@ -13,8 +14,8 @@ obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "40
 obj.fontVariant = emptyFunction.arrayOf(
   emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]),
 );
-obj = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(obj);
+const size = { width: emptyFunction.number, height: emptyFunction.number };
+obj.textShadowOffset = emptyFunction.shape(size);
 obj.textShadowRadius = emptyFunction.number;
 obj.textShadowColor = colorPropType;
 obj.letterSpacing = emptyFunction.number;

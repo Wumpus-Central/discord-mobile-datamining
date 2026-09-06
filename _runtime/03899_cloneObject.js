@@ -2,8 +2,7 @@
 import assign from "03900_assign.js";
 
 if (!assign) {
-  const obj = { default: null };
-  obj[0] = assign;
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
   tmp3 = assign;

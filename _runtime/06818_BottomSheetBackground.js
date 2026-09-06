@@ -1,12 +1,11 @@
 // _runtime/06818_BottomSheetBackground.js
-import noopDefault from "00019_noop.js";
-import styles from "06817_styles.js";
-import { View } from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _mod6817 from "metro/06817__.js";
+import noop from "metro/00019__.js";
 
-require = arg1;
-noopDefault;
-const memoResult = require("noop").memo((pointerEvents) => {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const memoResult = fn(19).memo((pointerEvents) => {
   const obj = {
     pointerEvents: pointerEvents.pointerEvents,
     accessible: true,
@@ -14,8 +13,8 @@ const memoResult = require("noop").memo((pointerEvents) => {
     accessibilityLabel: "Bottom Sheet",
     style: null,
   };
-  const items = [styles.styles.background, pointerEvents.style];
-  obj[4] = items;
+  const items = [_mod6817.styles.background, pointerEvents.style];
+  obj.style = items;
   return (
     <View
       pointerEvents={arg0.pointerEvents}

@@ -1,5 +1,6 @@
 // _runtime/12843_memoBuilder.js
-arg5.memoBuilder = function memoBuilder() {
+
+export const memoBuilder = function memoBuilder() {
   closure_0 = typeof WeakSet === "function";
   if (typeof WeakSet === "function") {
     const _WeakSet = WeakSet;

@@ -20,43 +20,43 @@ export default {
     const tmp = str.match(/(P+)(p+)?/) || [];
     if (tmp[2]) {
       if ("P" === tmp2) {
-        let str7 = dateTime.dateTime({ width: "short" });
+        dateTime.dateTime({ width: "short" });
       } else if ("PP" === tmp2) {
-        str7 = dateTime.dateTime({ width: "medium" });
+        dateTime.dateTime({ width: "medium" });
       } else if ("PPP" === tmp2) {
-        str7 = dateTime.dateTime({ width: "long" });
+        dateTime.dateTime({ width: "long" });
       } else {
-        str7 = dateTime.dateTime({ width: "full" });
+        dateTime.dateTime({ width: "full" });
       }
-      if (typeof dateLongFormatter !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if ("P" === tmp2) {
-        let dateResult = dateTime.date({ width: "short" });
-      } else if ("PP" === tmp2) {
-        dateResult = dateTime.date({ width: "medium" });
-      } else if ("PPP" === tmp2) {
-        dateResult = dateTime.date({ width: "long" });
+      if (typeof dateLongFormatter === "function") {
+        if ("P" === tmp2) {
+          let dateResult = dateTime.date({ width: "short" });
+        } else if ("PP" === tmp2) {
+          dateResult = dateTime.date({ width: "medium" });
+        } else if ("PPP" === tmp2) {
+          dateResult = dateTime.date({ width: "long" });
+        } else {
+          dateResult = dateTime.date({ width: "full" });
+        }
+        tmp7("{{date}}", dateResult);
+        if (typeof timeLongFormatter === "function") {
+          if ("p" === tmp3) {
+            let timeResult = dateTime.time({ width: "short" });
+          } else if ("pp" === tmp3) {
+            timeResult = dateTime.time({ width: "medium" });
+          } else if ("ppp" === tmp3) {
+            timeResult = dateTime.time({ width: "long" });
+          } else {
+            timeResult = dateTime.time({ width: "full" });
+          }
+          return tmp11("{{time}}", timeResult);
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
       } else {
-        dateResult = dateTime.date({ width: "full" });
+        throw new TypeError("Trying to call a non-function");
       }
-      if (typeof timeLongFormatter !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if ("p" === tmp3) {
-        let timeResult = dateTime.time({ width: "short" });
-      } else if ("pp" === tmp3) {
-        timeResult = dateTime.time({ width: "medium" });
-      } else if ("ppp" === tmp3) {
-        timeResult = dateTime.time({ width: "long" });
-      } else {
-        timeResult = dateTime.time({ width: "full" });
-      }
-      return str7.replace("{{date}}", dateResult).replace("{{time}}", timeResult);
-    } else {
-      if (typeof dateLongFormatter !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
+    } else if (typeof dateLongFormatter === "function") {
       if ("P" === str) {
         let dateResult1 = dateTime.date({ width: "short" });
       } else if ("PP" === str) {
@@ -67,6 +67,8 @@ export default {
         dateResult1 = dateTime.date({ width: "full" });
       }
       return dateResult1;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
   }
 };

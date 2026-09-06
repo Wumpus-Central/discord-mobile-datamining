@@ -1,19 +1,20 @@
 // _runtime/04927_ScreenStackHeaderSubview.js
-import noopDefault from "00019_noop.js";
 import get_controlledBottomTabsDefault from "04925_get_controlledBottomTabs.js";
-import context from "04928_context.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/04931___INTERNAL_VIEW_CONFIG.js";
-import closure_6 from "metro/00109__objectWithoutProperties.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _mod4928 from "metro/04928__.js";
+import _modDef4930 from "metro/04930__.js";
+import _modDef4931 from "metro/04931__.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import noop from "metro/00019__.js";
 
-require = arg1;
+require = fn;
 let closure_3 = ["style"];
 let closure_4 = ["style"];
 let closure_5 = ["style"];
-({ Image: error, Platform, StyleSheet } = get_ActivityIndicator);
-const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, ref) => {
-  let obj = context;
+get_ActivityIndicator = fn(17);
+({ Image: closure_7, Platform, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const forwardRefResult = noop.forwardRef((disableLeftInsetApplication, ref) => {
+  let obj = _mod4928;
   let flag = disableLeftInsetApplication.disableLeftInsetApplication;
   if (flag == null) {
     flag = false;
@@ -62,9 +63,9 @@ const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, re
   let fn;
   if (isHeaderBarButtonsAvailableForCurrentPlatform) {
     fn = (arg0) => {
-      closure_0 = arg0;
-      let items = closure_0;
-      if (closure_0 == null) {
+      const nativeEvent = arg0;
+      let items = result;
+      if (result == null) {
         items = [];
       }
       const items1 = [...items];
@@ -104,32 +105,22 @@ const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, re
         while (iter !== undefined) {
           let tmp2 = nextResult;
           if ("items" in nextResult) {
-            let tmp7 = findInMenu;
-            let tmp8 = nextResult;
             let tmp9 = findInMenu(tmp2, menuId);
-            let tmp10 = tmp9;
             if (tmp9) {
-              let tmp11 = iter;
               iter.return();
               return tmp9;
             }
-          } else {
-            let tmp3 = nextResult;
-            if ("menuId" in tmp2) {
-              let tmp4 = nextResult;
-              if (tmp2.menuId === menuId) {
-                let tmp5 = nextResult;
-                let tmp6 = iter;
-                iter.return();
-                return tmp2;
-              }
+          } else if ("menuId" in tmp2) {
+            if (tmp2.menuId === menuId) {
+              iter.return();
+              return tmp2;
             }
           }
           continue;
         }
       }
-      let items = findInMenu;
-      if (findInMenu == null) {
+      let items = result;
+      if (result == null) {
         items = [];
       }
       const items1 = [...items];
@@ -143,17 +134,12 @@ const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, re
       while (iter !== undefined) {
         let tmp4 = nextResult;
         if (nextResult) {
-          let tmp5 = nextResult;
           if ("menu" === tmp4.type) {
-            let tmp6 = nextResult;
             if (tmp4.menu) {
-              let tmp7 = nextResult;
               let findInMenuResult = findInMenu(tmp4.menu, nativeEvent.nativeEvent.menuId);
               let obj = findInMenuResult;
               if (findInMenuResult) {
-                let tmp9 = findInMenuResult;
                 let onPressResult = obj.onPress();
-                let tmp11 = iter;
                 iter.return();
               }
             }
@@ -176,8 +162,9 @@ const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, re
   obj.ref = ref;
   obj.style = closure_9.headerConfig;
   obj.pointerEvents = "box-none";
-  obj.synchronousShadowStateUpdatesEnabled = result1(4925).experiment.synchronousHeaderConfigUpdatesEnabled;
-  return jsx(result1(4930), {});
+  obj.synchronousShadowStateUpdatesEnabled =
+    get_controlledBottomTabsDefault.experiment.synchronousHeaderConfigUpdatesEnabled;
+  return jsx(_modDef4930, {});
 });
 forwardRefResult.displayName = "ScreenStackHeaderConfig";
 const styles = StyleSheet.create({
@@ -192,53 +179,58 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ScreenStackHeaderSubview = __INTERNAL_VIEW_CONFIGDefault;
+export const ScreenStackHeaderSubview = _modDef4931;
 export const ScreenStackHeaderConfig = forwardRefResult;
 export const ScreenStackHeaderBackButtonImage = (arg0) => {
-  let obj = {
+  const element = {
     type: "back",
     style: closure_9.headerSubview,
     synchronousShadowStateUpdatesEnabled:
       get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled,
     children: null,
   };
-  obj = { resizeMode: "center", fadeDuration: 0 };
   const merged = Object.assign(arg0);
-  obj[3] = <closure_7 resizeMode="center" fadeDuration={0} />;
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, { resizeMode: "center", fadeDuration: 0 });
+  element.children = <React5 resizeMode="center" fadeDuration={0} />;
+  return jsx(_modDef4931, {
+    type: "back",
+    style: closure_9.headerSubview,
+    synchronousShadowStateUpdatesEnabled:
+      get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled,
+    children: null,
+  });
 };
 export const ScreenStackHeaderRightView = (style) => {
   const obj = {};
-  const tmp = callback(style, closure_3);
+  const tmp = _objectWithoutProperties(style, closure_3);
   const merged = Object.assign(tmp);
   obj.type = "right";
   obj.synchronousShadowStateUpdatesEnabled =
     get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
   const items = [closure_9.headerSubview, style.style];
   obj.style = items;
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+  return jsx(_modDef4931, {});
 };
 export const ScreenStackHeaderLeftView = (style) => {
   const obj = {};
-  const tmp = callback(style, closure_4);
+  const tmp = _objectWithoutProperties(style, closure_4);
   const merged = Object.assign(tmp);
   obj.type = "left";
   obj.synchronousShadowStateUpdatesEnabled =
     get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
   const items = [closure_9.headerSubview, style.style];
   obj.style = items;
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+  return jsx(_modDef4931, {});
 };
 export const ScreenStackHeaderCenterView = (style) => {
   const obj = {};
-  const tmp = callback(style, closure_5);
+  const tmp = _objectWithoutProperties(style, closure_5);
   const merged = Object.assign(tmp);
   obj.type = "center";
   obj.synchronousShadowStateUpdatesEnabled =
     get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
   const items = [closure_9.headerSubviewCenter, style.style];
   obj.style = items;
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+  return jsx(_modDef4931, {});
 };
 export const ScreenStackHeaderSearchBarView = (arg0) => {
   const obj = {};
@@ -247,5 +239,5 @@ export const ScreenStackHeaderSearchBarView = (arg0) => {
   obj.synchronousShadowStateUpdatesEnabled =
     get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
   obj.style = closure_9.headerSubview;
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+  return jsx(_modDef4931, {});
 };

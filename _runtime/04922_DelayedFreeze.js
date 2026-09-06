@@ -1,19 +1,19 @@
 // _runtime/04922_DelayedFreeze.js
-import closure_2 from "metro/00032__slicedToArray.js";
-import closure_3 from "00019_noop.js";
-import { jsx } from "react/00021_jsxProd.js";
+import Suspender from "04923_Suspender.js";
+import _slicedToArray from "metro/00032__.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
 
 export default function DelayedFreeze(children) {
   let freeze = children.freeze;
-  dependencyMap = undefined;
-  const tmp = callback(React.useState(false), 2);
-  dependencyMap = tmp[1];
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_1 = tmp[1];
   const items = [freeze];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
-      callback(closure_0);
+      closure_1_1(closure_0);
     }, 0);
     return () => {
       clearTimeout(closure_0);
@@ -22,5 +22,5 @@ export default function DelayedFreeze(children) {
   if (freeze) {
     freeze = tmp[0];
   }
-  return jsx(freeze(4923).Freeze, { freeze, children: children.children });
+  return jsx(Suspender.Freeze, { freeze, children: children.children });
 }

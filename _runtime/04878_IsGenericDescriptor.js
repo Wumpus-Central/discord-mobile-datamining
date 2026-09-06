@@ -1,10 +1,10 @@
 // _runtime/04878_IsGenericDescriptor.js
-import isPropertyDescriptor from "04860_isPropertyDescriptor.js";
+import _mod4860 from "metro/04860__.js";
 
 export default function IsGenericDescriptor(arg0) {
   if (undefined === arg0) {
     return false;
-  } else if (isPropertyDescriptor(arg0)) {
+  } else if (_mod4860(arg0)) {
     const tmp7 = tmp(4873)(arg0);
     let tmp8 = !tmp7;
     if (!tmp7) {

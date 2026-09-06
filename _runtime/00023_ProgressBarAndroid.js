@@ -1,7 +1,7 @@
 // _runtime/00023_ProgressBarAndroid.js
 import jsxProd from "react/00021_jsxProd.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/00024___INTERNAL_VIEW_CONFIG.js";
-import noop from "00019_noop.js";
+import _modDef24 from "metro/00024__.js";
+import noop from "metro/00019__.js";
 
 const jsx = jsxProd.jsx;
 
@@ -18,9 +18,9 @@ export default function ProgressBarAndroid(styleAttr) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const merged = Object.assign(styleAttr, Object.create(null));
+  const merged = Object.assign(styleAttr, Object.assign({ ref: 0, styleAttr: 0, indeterminate: 0, animating: 0 }));
   const obj = { styleAttr: str, indeterminate: flag, animating: flag2 };
   const merged1 = Object.assign(merged);
   obj.ref = styleAttr.ref;
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, { styleAttr: str, indeterminate: flag, animating: flag2 });
+  return jsx(_modDef24, { styleAttr: str, indeterminate: flag, animating: flag2 });
 }

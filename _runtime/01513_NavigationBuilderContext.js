@@ -1,19 +1,19 @@
 // _runtime/01513_NavigationBuilderContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const NavigationBuilderContext = noopAll.createContext({
-  onDispatchAction(target, arg1) {},
+export const NavigationBuilderContext = noop.createContext({
+  onDispatchAction() {},
   onEmitEvent() {},
   onOptionsChange() {},
   getIsStateEmitted() {
     return false;
   },
   scheduleUpdate() {
-    error = new Error("Couldn't find a context for scheduling updates.");
+    const error = new Error("Couldn't find a context for scheduling updates.");
     throw error;
   },
   flushUpdates() {
-    error = new Error("Couldn't find a context for flushing updates.");
+    const error = new Error("Couldn't find a context for flushing updates.");
     throw error;
   },
 });

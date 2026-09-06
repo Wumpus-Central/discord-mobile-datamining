@@ -1,41 +1,32 @@
 // _runtime/01211_reflectionCreate.js
-import _mod1199 from "metro/01199__.js";
+import MESSAGE_TYPE from "01199_MESSAGE_TYPE.js";
 import reflectionScalarDefault from "01209_reflectionScalarDefault.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.reflectionCreate = function reflectionCreate(value) {
+
+export const reflectionCreate = function reflectionCreate(value) {
   let obj = {};
   obj = { enumerable: false, value };
-  Object.defineProperty(obj, _mod1199.MESSAGE_TYPE, obj);
+  Object.defineProperty(obj, MESSAGE_TYPE.MESSAGE_TYPE, obj);
   const iter = value.fields[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
     let localName = nextResult.localName;
     if (!nextResult.opt) {
-      let tmp4 = nextResult;
-      let tmp5 = nextResult;
       if (tmp3.oneof) {
         obj[tmp3.oneof] = { oneofKind: "Array" };
       } else if (tmp3.repeat) {
-        let tmp13 = localName;
         obj[localName] = [];
       } else {
-        let tmp6 = nextResult;
         let kind = tmp3.kind;
         if ("scalar" === kind) {
-          let tmp9 = localName;
-          let tmp10 = require;
-          let tmp11 = dependencyMap;
           let obj3 = reflectionScalarDefault;
-          let tmp12 = nextResult;
           obj[localName] = obj3.reflectionScalarDefault(tmp3.T, tmp3.L);
         } else if ("enum" === kind) {
-          let tmp8 = localName;
           obj[localName] = 0;
         } else if ("map" === kind) {
-          let tmp7 = localName;
           obj[localName] = {};
         }
       }

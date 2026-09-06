@@ -1,4 +1,4 @@
 // _runtime/01553_PreventRemoveContext.js
-import noopAll from "00019_noop.js";
+import noop from "metro/00019__.js";
 
-export const PreventRemoveContext = noopAll.createContext(undefined);
+export const PreventRemoveContext = noop.createContext(undefined);

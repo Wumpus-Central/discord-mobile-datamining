@@ -1,16 +1,16 @@
 // _runtime/07024_CardA11yWrapper.js
-import closure_0 from "metro/00032__slicedToArray.js";
-import importAllResult from "00019_noop.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import { jsx } from "react/00021_jsxProd.js";
+import _slicedToArray from "metro/00032__.js";
+import noop from "metro/00019__.js";
 
-({ Platform, StyleSheet: obj1, View: c3 } = get_ActivityIndicator);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+get_ActivityIndicator = fn(17);
+({ Platform, StyleSheet: c2, View: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const forwardRefResult = noop.forwardRef((arg0, ref) => {
   ({ focused, animated } = arg0);
-  let callback;
+  c0 = undefined;
   ({ active, isNextScreenTransparent, detachCurrentScreen, children } = arg0);
-  [tmp2, c0] = callback(importAllResult.useState(false), 2);
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({ setInert: c0 }), []);
+  [tmp2, c0] = _slicedToArray(noop.useState(false), 2);
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({ setInert }), []);
   let tmp4 = !animated;
   if (!animated) {
     tmp4 = false === isNextScreenTransparent;
@@ -29,23 +29,23 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   if (tmp2) {
     str = "none";
   }
-  obj[1] = str;
+  obj.pointerEvents = str;
   const items = [absoluteFill.absoluteFill];
   obj = { overflow: str2, display: null, visibility: null };
   let str3 = "flex";
   if (tmp4) {
     str3 = "none";
   }
-  obj[1] = str3;
+  obj.display = str3;
   let str4 = "visible";
   if (tmp4) {
     str4 = "hidden";
   }
-  obj[2] = str4;
+  obj.visibility = str4;
   items[1] = obj;
-  obj[2] = items;
-  obj[4] = children;
-  return <closure_3 overflow={str2} display={null} visibility={null} />;
+  obj.style = items;
+  obj.children = children;
+  return <React3 overflow={str2} display={null} visibility={null} />;
 });
 forwardRefResult.displayName = "CardA11yWrapper";
 

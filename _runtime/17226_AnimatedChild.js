@@ -1,13 +1,16 @@
 // _runtime/17226_AnimatedChild.js
-import closure_3 from "metro/00032__slicedToArray.js";
-import importAllResult from "00019_noop.js";
-import { StyleSheet, View } from "00017_get_ActivityIndicator.js";
-import jsxProd from "react/00021_jsxProd.js";
+import cancelAnimation from "01636_cancelAnimation.js";
+import _slicedToArray from "metro/00032__.js";
+import noop from "metro/00019__.js";
 
-const require = arg1;
-let c4 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = {
+const cancelAnimationDefault = cancelAnimation;
+
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const __initData = {
   code: "function pnpm_indexTsx1(){const{index,textWidth,spacing,anim}=this.__closure;return{position:'absolute',left:index*(textWidth.value+spacing),transform:[{translateX:-(anim.value%(textWidth.value+spacing))}]};}",
 };
 function AnimatedChild(children) {
@@ -16,23 +19,24 @@ function AnimatedChild(children) {
   const textWidth = children.textWidth;
   const spacing = children.spacing;
   const fn = function c() {
-    let obj = { position: "absolute", left: index * (textWidth.value + spacing), transform: items };
+    let obj = { position: "absolute", left: index * (textWidth.value + spacing), transform: null };
     obj = { translateX: -anim.value % (textWidth.value + spacing) };
-    items = [obj];
+    const items = [obj];
+    obj.transform = items;
     return obj;
   };
   fn.__closure = { index, textWidth, spacing, anim };
   fn.__workletHash = 9107973864402;
-  fn.__initData = closure_8;
+  fn.__initData = __initData;
   let items = [index, spacing, textWidth];
-  const style = index(textWidth[4]).useAnimatedStyle(fn, items);
-  return callback(anim(textWidth[4]).View, { style, children: children.children });
+  const style = cancelAnimation.useAnimatedStyle(fn, items);
+  return timestampProducer(cancelAnimationDefault.View, { style, children: children.children });
 }
-let closure_10 = { code: "function pnpm_indexTsx2(){const{anim,speed}=this.__closure;anim.value+=speed;}" };
-let closure_11 = {
+const __initData2 = { code: "function pnpm_indexTsx2(){const{anim,speed}=this.__closure;anim.value+=speed;}" };
+const __initData3 = {
   code: "function pnpm_indexTsx3(){const{textWidth,parentWidth}=this.__closure;if(textWidth.value===0||parentWidth.value===0){return 0;}return Math.round(parentWidth.value/textWidth.value)+1;}",
 };
-let closure_12 = {
+const __initData4 = {
   code: "function pnpm_indexTsx4(v){const{runOnJS,setCloneTimes}=this.__closure;if(v===0){return;}runOnJS(setCloneTimes)(v*2);}",
 };
 const styles = StyleSheet.create({
@@ -40,7 +44,7 @@ const styles = StyleSheet.create({
   row: { flexDirection: "row", overflow: "hidden" },
 });
 
-export const Marquee = importAllResult.memo((speed) => {
+export const Marquee = noop.memo((speed) => {
   let num = speed.speed;
   if (num === undefined) {
     num = 1;
@@ -50,25 +54,21 @@ export const Marquee = importAllResult.memo((speed) => {
   if (num2 === undefined) {
     num2 = 0;
   }
-  let sharedValue;
-  let sharedValue1;
-  c5 = undefined;
-  let sharedValue2;
   let obj = num(num2[4]);
-  sharedValue = obj.useSharedValue(0);
-  obj1 = num(num2[4]);
-  sharedValue1 = obj1.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
+  let obj1 = num(num2[4]);
+  const sharedValue1 = obj1.useSharedValue(0);
   [tmp4, tmp5] = sharedValue(sharedValue1.useState(0), 2);
   c5 = tmp5;
   let obj2 = num(num2[4]);
-  sharedValue2 = obj2.useSharedValue(0);
+  const sharedValue2 = obj2.useSharedValue(0);
   let obj3 = num(num2[4]);
   const fn = function w() {
     sharedValue2.value = sharedValue2.value + num;
   };
   fn.__closure = { anim: sharedValue2, speed: num };
   fn.__workletHash = 5612715942613;
-  fn.__initData = closure_10;
+  fn.__initData = __initData2;
   obj3.useFrameCallback(fn, true);
   const tmp3 = sharedValue(sharedValue1.useState(0), 2);
   class W {
@@ -88,17 +88,16 @@ export const Marquee = importAllResult.memo((speed) => {
   }
   W.__closure = { textWidth: sharedValue1, parentWidth: sharedValue };
   W.__workletHash = 4132969599661;
-  W.__initData = closure_11;
+  W.__initData = __initData3;
   const fn2 = function y(arg0) {
     if (0 !== arg0) {
-      2(num2[4]).runOnJS(c5)(2 * arg0);
-      const obj = num(num2[4]);
+      cancelAnimation.runOnJS(c5)(2 * arg0);
     }
   };
   obj = { runOnJS: num(num2[4]).runOnJS, setCloneTimes: tmp5 };
   fn2.__closure = obj;
   fn2.__workletHash = 8842395428122;
-  fn2.__initData = closure_12;
+  fn2.__initData = __initData4;
   const animatedReaction = num(num2[4]).useAnimatedReaction(W, fn2, []);
   obj = {
     style: speed.style,
@@ -109,30 +108,31 @@ export const Marquee = importAllResult.memo((speed) => {
     children: null,
   };
   obj1 = { style: closure_13.row, pointerEvents: "box-none", children: null };
-  obj2 = { horizontal: true, style: closure_13.hidden, pointerEvents: "box-none", children: sharedValue2(c5, obj3) };
+  obj2 = { horizontal: true, style: closure_13.hidden, pointerEvents: "box-none", children: null };
   obj3 = {
     onLayout(nativeEvent) {
       sharedValue1.value = nativeEvent.nativeEvent.layout.width;
     },
     children,
   };
+  obj2.children = sharedValue2(c5, obj3);
   const items = [sharedValue2(children(num2[4]).ScrollView, obj2)];
   let mapped = tmp4 > 0;
   if (mapped) {
     const _Array = Array;
     const items1 = [];
     HermesBuiltin.arraySpread(Array(tmp4).keys(), 0);
-    mapped = items1.map((index) =>
-      sharedValue2(
-        closure_1_9,
-        { index, anim: sharedValue2, textWidth: sharedValue1, spacing: num2, children },
-        "clone-" + index,
+    mapped = items1.map((item) =>
+      timestampProducer(
+        AnimatedChild,
+        { index: item, anim: sharedValue2, textWidth: sharedValue1, spacing: num2, children },
+        "clone-" + item,
       ),
     );
     const ArrayResult = Array(tmp4);
   }
   items[1] = mapped;
-  obj1[2] = items;
-  obj[3] = closure_7(children(num2[4]).View, obj1);
+  obj1.children = items;
+  obj.children = closure_7(children(num2[4]).View, obj1);
   return sharedValue2(children(num2[4]).View, obj);
 });

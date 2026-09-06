@@ -1,5 +1,6 @@
 // _runtime/00410_processDecelerationRate.js
-arg5.default = function processDecelerationRate(arg0) {
+
+export default function processDecelerationRate(arg0) {
   let num = 0.985;
   if ("normal" !== arg0) {
     let num2 = 0.9;
@@ -9,4 +10,4 @@ arg5.default = function processDecelerationRate(arg0) {
     num = num2;
   }
   return num;
-};
+}

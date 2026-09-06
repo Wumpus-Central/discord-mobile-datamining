@@ -1,12 +1,14 @@
 // _runtime/01266_v4.js
 import unsafeStringify from "01259_unsafeStringify.js";
+import _modDef1267 from "metro/01267__.js";
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = function v4(arg0, arg1, arg2) {
+
+export default function v4(arg0, arg1, arg2) {
   let obj = arg0;
-  if (module(1267).randomUUID) {
+  if (_modDef1267.randomUUID) {
     if (!arg1) {
       if (!obj) {
         return tmp(1267).randomUUID();
@@ -37,4 +39,4 @@ arg5.default = function v4(arg0, arg1, arg2) {
   } else {
     return unsafeStringify.unsafeStringify(random);
   }
-};
+}

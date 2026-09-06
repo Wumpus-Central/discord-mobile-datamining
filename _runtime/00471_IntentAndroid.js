@@ -1,10 +1,9 @@
 // _runtime/00471_IntentAndroid.js
-import IntentAndroidDefault from "00472_IntentAndroid.js";
+import _modDef472 from "metro/00472__.js";
 
-for (const key10016 in require("IntentAndroid")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("IntentAndroid")[key10016];
+for (const key10016 in require("metro/00472__.js")) {
+  arg5[key10016] = require("metro/00472__.js")[key10016];
   continue;
 }
 
-export default IntentAndroidDefault;
+export default _modDef472;

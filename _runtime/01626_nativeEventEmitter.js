@@ -1,24 +1,25 @@
 // _runtime/01626_nativeEventEmitter.js
 import KeyboardController from "01627_KeyboardController.js";
-import __INTERNAL_VIEW_CONFIG from "metro/01628___INTERNAL_VIEW_CONFIG.js";
-import __INTERNAL_VIEW_CONFIG2 from "metro/01629___INTERNAL_VIEW_CONFIG.js";
-import __INTERNAL_VIEW_CONFIG3 from "metro/01630___INTERNAL_VIEW_CONFIG.js";
-import __INTERNAL_VIEW_CONFIG4 from "metro/01631___INTERNAL_VIEW_CONFIG.js";
-import __INTERNAL_VIEW_CONFIG5 from "metro/01632___INTERNAL_VIEW_CONFIG.js";
-import __INTERNAL_VIEW_CONFIG6 from "metro/01633___INTERNAL_VIEW_CONFIG.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod1628 from "metro/01628__.js";
+import _mod1629 from "metro/01629__.js";
+import _mod1630 from "metro/01630__.js";
+import _mod1631 from "metro/01631__.js";
+import _mod1632 from "metro/01632__.js";
+import _mod1633 from "metro/01633__.js";
+import get_ActivityIndicator from "metro/00017__.js";
 
 ({ NativeEventEmitter, Platform } = get_ActivityIndicator);
 if (KeyboardController.default) {
   let _default = KeyboardController.default;
 } else {
   const _Proxy = Proxy;
-  let obj = { get: null };
-  obj[0] = function get() {
-    error = new Error(
-      "The package 'react-native-keyboard-controller' doesn't seem to be linked. Make sure: \n\n- You rebuilt the app after installing the package\n- You are not using Expo Go\n",
-    );
-    throw error;
+  let obj = {
+    get() {
+      const error = new Error(
+        "The package 'react-native-keyboard-controller' doesn't seem to be linked. Make sure: \n\n- You rebuilt the app after installing the package\n- You are not using Expo Go\n",
+      );
+      throw error;
+    },
   };
   _default = new Proxy({}, obj);
 }
@@ -35,7 +36,7 @@ obj = {
   },
 };
 if (Platform.Version >= 30) {
-  let fn = __INTERNAL_VIEW_CONFIG.default;
+  let fn = _mod1628.default;
 } else {
   fn = (children) => children.children;
 }
@@ -48,11 +49,11 @@ export const WindowDimensionsEvents = {
     return nativeEventEmitter.addListener(c0 + arg0, arg1);
   },
 };
-export const KeyboardControllerView = __INTERNAL_VIEW_CONFIG2.default;
-export const KeyboardControllerViewCommands = __INTERNAL_VIEW_CONFIG2.Commands;
+export const KeyboardControllerView = _mod1629.default;
+export const KeyboardControllerViewCommands = _mod1629.Commands;
 export const KeyboardGestureArea = fn;
-export const RCTOverKeyboardView = __INTERNAL_VIEW_CONFIG3.default;
-export const KeyboardBackgroundView = __INTERNAL_VIEW_CONFIG4.default;
+export const RCTOverKeyboardView = _mod1630.default;
+export const KeyboardBackgroundView = _mod1631.default;
 export const RCTKeyboardExtender = (children) => children.children;
-export const ClippingScrollView = __INTERNAL_VIEW_CONFIG5.default;
-export const RCTKeyboardToolbarGroupView = __INTERNAL_VIEW_CONFIG6.default;
+export const ClippingScrollView = _mod1632.default;
+export const RCTKeyboardToolbarGroupView = _mod1633.default;

@@ -1,42 +1,33 @@
 // _runtime/08285_SliderTrackMark.js
-import noop2 from "00019_noop.js";
-import styles from "08283_styles.js";
+import _mod19 from "metro/00019__.js";
+import _mod8283 from "metro/08283__.js";
 import 08279__ from "metro/08279__.js";
-import closure_2 from "00017_get_ActivityIndicator.js";
-import closure_3 from "react/00021_jsxProd.js";
+import get_ActivityIndicator from "metro/00017__.js";
+import jsxProd from "react/00021_jsxProd.js";
 
-const noop = module_8279(noop2);
+const noop = module_8279(_mod19);
 
 export const SliderTrackMark = function SliderTrackMark(arg0) {
   ({ isTrue, thumbImage, StepMarker } = arg0);
-  let obj = React;
-  obj = { style: styles.styles.trackMarkContainer, children: null };
+  let obj = { style: _mod8283.styles.trackMarkContainer, children: null };
   ({ index, currentValue, min, max } = arg0);
   let jsxResult = null;
   if (StepMarker) {
-    obj = { stepMarked: null, index: null, currentValue: null, min: null, max: null };
-    obj[0] = isTrue;
-    obj[1] = index;
-    obj[2] = currentValue;
-    obj[3] = min;
-    obj[4] = max;
-    jsxResult = <StepMarker stepMarked={null} index={null} currentValue={null} min={null} max={null} />;
+    const range = { stepMarked: isTrue, index, currentValue, min, max };
+    jsxResult = <StepMarker stepMarked={isTrue} index={index} currentValue={currentValue} min={min} max={max} />;
   }
   const items = [jsxResult, ];
   let jsxResult1 = null;
   if (thumbImage) {
     jsxResult1 = null;
     if (isTrue) {
-      obj1 = { style: null, testID: "sliderTrackMark-thumbImage", children: null };
-      obj1[0] = tmp2(8283).styles.thumbImageContainer;
-      const obj2 = { source: null, style: null };
-      obj2[0] = thumbImage;
-      obj2[1] = tmp2(8283).styles.thumbImage;
-      obj1[2] = <tmp.Image source={null} style={null} />;
-      jsxResult1 = <tmp.View style={null} testID="sliderTrackMark-thumbImage">{null}</tmp.View>;
+      obj = { style: tmp2(8283).styles.thumbImageContainer, testID: "sliderTrackMark-thumbImage", children: null };
+      const obj1 = { source: thumbImage, style: tmp2(8283).styles.thumbImage };
+      obj.children = <tmp.Image source={thumbImage} style={tmp2(8283).styles.thumbImage} />;
+      jsxResult1 = <tmp.View style={tmp2(8283).styles.thumbImageContainer} testID="sliderTrackMark-thumbImage">{null}</tmp.View>;
     }
   }
   items[1] = jsxResult1;
-  obj[1] = items;
-  return <RN.View style={styles.styles.trackMarkContainer}>{null}</RN.View>;
+  obj.children = items;
+  return <get ActivityIndicator.View style={_mod8283.styles.trackMarkContainer}>{null}</get ActivityIndicator.View>;
 };

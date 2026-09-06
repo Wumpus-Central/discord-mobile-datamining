@@ -1,7 +1,7 @@
 // _runtime/01042_ignoreRequireCycleLogs.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod17 from "metro/00017__.js";
 
-const LogBox = get_ActivityIndicator.LogBox;
+const LogBox = _mod17.LogBox;
 
 export const ignoreRequireCycleLogs = function ignoreRequireCycleLogs(version) {
   let tmp = version;

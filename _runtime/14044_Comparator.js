@@ -1,16 +1,16 @@
 // _runtime/14044_Comparator.js
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const Comparator = require;
-let closure_3 = Symbol("SemVer ANY");
+const semver = Symbol("SemVer ANY");
 class Comparator {
   constructor(arg0, arg1) {
     self = this;
-    tmp = closure_2(this, Comparator);
-    tmp2 = Comparator;
+    tmp = c2(this, Comparator);
+    tmp2 = closure_0;
     tmp3 = closure_1;
-    tmp4 = require("metro/14017__.js")(require);
+    tmp4 = closure_0(closure_1[2])(require);
     str = global;
     if (global instanceof Comparator) {
       if (global.loose === tmp4.loose) {
@@ -22,7 +22,7 @@ class Comparator {
     str2 = str.trim();
     parts = str2.split(/\s+/);
     joined = parts.join(" ");
-    tmp6 = require("metro/14019__.js")("comparator", joined, tmp4);
+    tmp6 = tmp2(tmp3[3])("comparator", joined, tmp4);
     self.options = tmp4;
     self.loose = tmp4.loose;
     parsed = self.parse(joined);
@@ -32,11 +32,11 @@ class Comparator {
     } else {
       self.value = self.operator + self.semver.version;
     }
-    tmp8 = require("metro/14019__.js")("comp", self);
+    tmp8 = tmp2(tmp3[3])("comp", self);
     return;
   }
 }
-let obj = {
+const entry = {
   key: "parse",
   value: function parse(str) {
     const self = this;
@@ -63,7 +63,7 @@ let obj = {
         const tmp15 = new tmp5(14016)(match[2], self.options.loose);
         self.semver = tmp15;
       } else {
-        self.semver = closure_3;
+        self.semver = semver;
       }
     } else {
       const _TypeError = TypeError;
@@ -74,7 +74,7 @@ let obj = {
   },
 };
 const items = [
-  obj,
+  entry,
   {
     key: "toString",
     value: function toString() {
@@ -104,7 +104,7 @@ const items = [
   },
   {
     key: "intersects",
-    value: function intersects(value) {
+    value: function intersects(value, arg1) {
       if (value instanceof Comparator) {
         const self = this;
         if ("" === this.operator) {
@@ -214,12 +214,13 @@ const items = [
     },
   },
 ];
-obj = {
-  key: "ANY",
-  get() {
-    return closure_3;
+const items1 = [
+  {
+    key: "ANY",
+    get() {
+      return closure_3;
+    },
   },
-};
-const items1 = [obj];
+];
 
 export default _createClass(Comparator, items, items1);

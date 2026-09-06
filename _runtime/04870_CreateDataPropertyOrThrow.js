@@ -1,8 +1,8 @@
 // _runtime/04870_CreateDataPropertyOrThrow.js
-import isObject from "04809_isObject.js";
+import _mod4809 from "metro/04809__.js";
 
 export default function CreateDataPropertyOrThrow(arg0, arg1, arg2) {
-  if (isObject(arg0)) {
+  if (_mod4809(arg0)) {
     if (tmp(4856)(arg1)) {
       if (!tmp(4871)(arg0, arg1, arg2)) {
         const tmp15 = new tmp(1283)("unable to create data property");

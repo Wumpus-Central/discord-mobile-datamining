@@ -1,6 +1,7 @@
 // _runtime/04950_bottomTabsDebugLog.js
 let c0 = false;
-arg5.bottomTabsDebugLog = function bottomTabsDebugLog(arg0) {
+
+export const bottomTabsDebugLog = function bottomTabsDebugLog() {
   const items = [...arguments];
   if (c0) {
     const _console = console;
@@ -10,6 +11,6 @@ arg5.bottomTabsDebugLog = function bottomTabsDebugLog(arg0) {
     HermesBuiltin.apply(items1, console);
   }
 };
-arg5.internalEnableDetailedBottomTabsLogging = function internalEnableDetailedBottomTabsLogging() {
+export function internalEnableDetailedBottomTabsLogging() {
   c0 = true;
-};
+}

@@ -1,128 +1,130 @@
 // _runtime/04875_ValidateAndApplyPropertyDescriptor.js
-import isPropertyKey from "04856_isPropertyKey.js";
-import Type from "04876_Type.js";
+import _mod4856 from "metro/04856__.js";
+import _mod4876 from "metro/04876__.js";
 
-export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __Configurable__) {
-  const tmp3 = Type(arg0);
+export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __Configurable__, arg4) {
+  const tmp3 = _mod4876(arg0);
   if (undefined !== arg0) {
     if (!tmp(4809)(arg0)) {
       const tmp6 = new tmp(1283)("Assertion failed: O must be undefined or an Object");
       throw tmp6;
     }
   }
-  if (isPropertyKey(arg1)) {
+  if (_mod4856(arg1)) {
     if (typeof flag !== "boolean") {
-      const tmp87 = new tmp(1283)("Assertion failed: extensible must be a Boolean");
-      throw tmp87;
+      const tmp88 = new tmp(1283)("Assertion failed: extensible must be a Boolean");
+      throw tmp88;
     } else if (tmp(4860)(__Configurable__)) {
-      __Set__ = arg4;
+      let prop = arg4;
       if (undefined !== arg4) {
-        if (!tmp(4860)(__Set__)) {
-          const tmp19 = new tmp(1283)("Assertion failed: current must be a Property Descriptor, or undefined");
-          throw tmp19;
+        if (!tmp(4860)(prop)) {
+          const tmp20 = new tmp(1283)("Assertion failed: current must be a Property Descriptor, or undefined");
+          throw tmp20;
         }
       }
-      if (undefined === __Set__) {
-        let tmp64 = flag;
-        if (tmp64) {
+      if (undefined === prop) {
+        let tmp65 = flag;
+        if (tmp65) {
           if ("Undefined" === tmp3) {
-            tmp64 = tmp65;
+            tmp65 = tmp66;
           } else {
-            let tmpResult = tmp(4863);
-            tmpResult = tmp(4864);
+            tmp(4863);
+            const tmpResult = tmp(4864);
             const tmpResult1 = tmp(4865);
             const tmpResult2 = tmp(4866);
-            if (tmp66) {
+            if (tmp67) {
               let tmpResultResult = tmpResult(tmpResult, tmpResult1, tmpResult2, arg0, arg1, __Configurable__);
             } else {
-              let obj = { "[[Configurable]]": null, "[[Enumerable]]": null, "[[Value]]": null, "[[Writable]]": null };
-              obj[0] = __Configurable__["[[Configurable]]"];
-              obj[1] = __Configurable__["[[Enumerable]]"];
-              obj[2] = __Configurable__["[[Value]]"];
-              obj[3] = __Configurable__["[[Writable]]"];
+              let obj = {
+                "[[Configurable]]": __Configurable__["[[Configurable]]"],
+                "[[Enumerable]]": __Configurable__["[[Enumerable]]"],
+                "[[Value]]": __Configurable__["[[Value]]"],
+                "[[Writable]]": __Configurable__["[[Writable]]"],
+              };
               tmpResultResult = tmpResult(tmpResult, tmpResult1, tmpResult2, arg0, arg1, obj);
             }
-            tmp66 = tmp(4873)(__Configurable__);
+            tmp67 = tmp(4873)(__Configurable__);
           }
         }
-        return tmp64;
+        return tmp65;
       } else {
-        obj = { IsAccessorDescriptor: null, IsDataDescriptor: null };
-        obj[0] = tmp(4873);
-        obj[1] = tmp(4864);
-        if (tmpResult3(obj, __Set__)) {
-          if (!__Set__["[[Configurable]]"]) {
+        obj = { IsAccessorDescriptor: tmp(4873), IsDataDescriptor: tmp(4864) };
+        if (tmpResult3(obj, prop)) {
+          if (!prop["[[Configurable]]"]) {
             if ("[[Configurable]]" in __Configurable__) {
               if (__Configurable__["[[Configurable]]"]) {
                 return false;
               }
             }
             if ("[[Enumerable]]" in __Configurable__) {
-              if (!tmp(4865)(__Configurable__["[[Enumerable]]"], __Set__["[[Enumerable]]"])) {
+              if (!tmp(4865)(__Configurable__["[[Enumerable]]"], prop["[[Enumerable]]"])) {
                 return false;
               }
             }
             if (!tmp(4878)(__Configurable__)) {
               const tmpResult4 = tmp(4865);
-              if (!tmpResult4(tmp26, tmp(4873)(__Set__))) {
+              if (!tmpResult4(tmp27, tmp(4873)(prop))) {
                 return false;
               }
-              tmp26 = tmp(4873)(__Configurable__);
+              tmp27 = tmp(4873)(__Configurable__);
             }
-            if (tmp(4873)(__Set__)) {
+            if (tmp(4873)(prop)) {
               if ("[[Get]]" in __Configurable__) {
-                if (!tmp(4865)(__Configurable__["[[Get]]"], __Set__["[[Get]]"])) {
+                if (!tmp(4865)(__Configurable__["[[Get]]"], prop["[[Get]]"])) {
                   return false;
                 }
               }
               if ("[[Set]]" in __Configurable__) {
-                if (!tmp(4865)(__Configurable__["[[Set]]"], __Set__["[[Set]]"])) {
+                if (!tmp(4865)(__Configurable__["[[Set]]"], prop["[[Set]]"])) {
                   return false;
                 }
               }
-            } else if (!__Set__["[[Writable]]"]) {
+            } else if (!prop["[[Writable]]"]) {
               if ("[[Writable]]" in __Configurable__) {
                 if (__Configurable__["[[Writable]]"]) {
                   return false;
                 }
               }
               if ("[[Value]]" in __Configurable__) {
-                if (!tmp(4865)(__Configurable__["[[Value]]"], __Set__["[[Value]]"])) {
+                if (!tmp(4865)(__Configurable__["[[Value]]"], prop["[[Value]]"])) {
                   return false;
                 }
               }
             }
           }
           if ("Undefined" === tmp3) {
-            return tmp27;
+            return tmp28;
           } else {
-            if (!tmp(4864)(__Set__)) {
-              if (tmp(4873)(__Set__)) {
+            if (!tmp(4864)(prop)) {
+              if (tmp(4873)(prop)) {
                 if (tmp(4864)(__Configurable__)) {
-                  let tmp36 = __Set__;
+                  let tmp37 = prop;
                   if ("[[Configurable]]" in __Configurable__) {
-                    tmp36 = __Configurable__;
-                  }
-                  let tmp37 = __Set__;
-                  if ("[[Enumerable]]" in __Configurable__) {
                     tmp37 = __Configurable__;
+                  }
+                  let tmp38 = prop;
+                  if ("[[Enumerable]]" in __Configurable__) {
+                    tmp38 = __Configurable__;
                   }
                   const tmpResult6 = tmp(4864);
                   const tmpResult7 = tmp(4865);
                   const tmpResult8 = tmp(4866);
-                  obj = { "[[Configurable]]": null, "[[Enumerable]]": null, "[[Value]]": null, "[[Writable]]": null };
-                  obj[0] = tmp36["[[Configurable]]"];
-                  obj[1] = tmp37["[[Enumerable]]"];
-                  let tmp42 = __Set__;
+                  obj = {
+                    "[[Configurable]]": tmp37["[[Configurable]]"],
+                    "[[Enumerable]]": tmp38["[[Enumerable]]"],
+                    "[[Value]]": null,
+                    "[[Writable]]": null,
+                  };
+                  let tmp43 = prop;
                   if ("[[Value]]" in __Configurable__) {
-                    tmp42 = __Configurable__;
-                  }
-                  obj[2] = tmp42["[[Value]]"];
-                  let tmp43 = __Set__;
-                  if ("[[Writable]]" in __Configurable__) {
                     tmp43 = __Configurable__;
                   }
-                  obj[3] = tmp43["[[Writable]]"];
+                  obj["[[Value]]"] = tmp43["[[Value]]"];
+                  let tmp44 = prop;
+                  if ("[[Writable]]" in __Configurable__) {
+                    tmp44 = __Configurable__;
+                  }
+                  obj["[[Writable]]"] = tmp44["[[Writable]]"];
                   let tmpResult6Result = tmp(4863)(tmpResult6, tmpResult7, tmpResult8, arg0, arg1, obj);
                   const tmpResult5 = tmp(4863);
                 }
@@ -132,38 +134,41 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
               tmpResult6Result = tmpResult9(tmpResult10, tmp(4865), tmp(4866), arg0, arg1, __Configurable__);
               const tmpResult11 = tmp(4865);
             }
-            let tmp50 = __Set__;
+            let tmp51 = prop;
             if ("[[Configurable]]" in __Configurable__) {
-              tmp50 = __Configurable__;
-            }
-            let tmp51 = __Set__;
-            if ("[[Enumerable]]" in __Configurable__) {
               tmp51 = __Configurable__;
+            }
+            let tmp52 = prop;
+            if ("[[Enumerable]]" in __Configurable__) {
+              tmp52 = __Configurable__;
             }
             const tmpResult13 = tmp(4864);
             const tmpResult14 = tmp(4865);
             const tmpResult15 = tmp(4866);
-            obj1 = { "[[Configurable]]": null, "[[Enumerable]]": null, "[[Get]]": null, "[[Set]]": null };
-            obj1[0] = tmp50["[[Configurable]]"];
-            obj1[1] = tmp51["[[Enumerable]]"];
-            let tmp56 = __Set__;
+            const obj1 = {
+              "[[Configurable]]": tmp51["[[Configurable]]"],
+              "[[Enumerable]]": tmp52["[[Enumerable]]"],
+              "[[Get]]": null,
+              "[[Set]]": null,
+            };
+            let tmp57 = prop;
             if ("[[Get]]" in __Configurable__) {
-              tmp56 = __Configurable__;
+              tmp57 = __Configurable__;
             }
-            obj1[2] = tmp56["[[Get]]"];
+            obj1["[[Get]]"] = tmp57["[[Get]]"];
             if ("[[Set]]" in __Configurable__) {
-              __Set__ = __Configurable__;
+              prop = __Configurable__;
             }
-            __Set__ = __Set__["[[Set]]"];
-            obj1[3] = __Set__;
+            prop = prop["[[Set]]"];
+            obj1["[[Set]]"] = prop;
             tmpResult6Result = tmp(4863)(tmpResult13, tmpResult14, tmpResult15, arg0, arg1, obj1);
             const tmpResult12 = tmp(4863);
           }
         } else {
-          const tmp23 = new tmp(1283)(
+          const tmp24 = new tmp(1283)(
             "`current`, when present, must be a fully populated and valid Property Descriptor",
           );
-          throw tmp23;
+          throw tmp24;
         }
         tmpResult3 = tmp(4877);
       }

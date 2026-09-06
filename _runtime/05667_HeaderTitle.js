@@ -1,16 +1,16 @@
 // _runtime/05667_HeaderTitle.js
 import jsxProd from "react/00021_jsxProd.js";
-import createStandardNavigationFactories from "01484_createStandardNavigationFactories.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import Link from "01484_Link.js";
+import get_ActivityIndicator from "metro/00017__.js";
 
-({ Animated: obj1, Platform, StyleSheet } = get_ActivityIndicator);
+({ Animated: c2, Platform, StyleSheet } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
-const styles = StyleSheet.create({ title: { fontSize: 20 } });
+const title = StyleSheet.create({ title: { fontSize: 20 } });
 
 export const HeaderTitle = function HeaderTitle(tintColor) {
   let text = tintColor.tintColor;
-  const merged = Object.assign(tintColor, Object.create(null));
-  let obj = createStandardNavigationFactories;
+  const merged = Object.assign(tintColor, Object.assign({ tintColor: 0, style: 0 }));
+  let obj = Link;
   const theme = obj.useTheme();
   obj = { role: "heading", "aria-level": "1", numberOfLines: 1 };
   ({ colors, fonts } = theme);

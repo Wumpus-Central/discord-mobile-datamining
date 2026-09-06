@@ -1,17 +1,16 @@
 // _runtime/03894_M.js
-import addLeadingZeros from "03893_addLeadingZeros.js";
+import 03893__ from "metro/03893__.js";
 
-if (!addLeadingZeros) {
-  const obj = { default: null };
-  obj[0] = addLeadingZeros;
+if (!module_3893) {
+  const obj = { default: module_3893 };
   let tmp3 = obj;
 } else {
-  tmp3 = addLeadingZeros;
+  tmp3 = module_3893;
 }
-addLeadingZeros = tmp3;
+module_3893 = tmp3;
 
 export default {
-  y(getUTCFullYear) {
+  y(getUTCFullYear, arg1) {
     const uTCFullYear = getUTCFullYear.getUTCFullYear();
     let diff = uTCFullYear;
     if (uTCFullYear <= 0) {
@@ -21,22 +20,22 @@ export default {
     if ("yy" === arg1) {
       result = diff % 100;
     }
-    return addLeadingZeros.default(result, arg1.length);
+    return module_3893.default(result, arg1.length);
   },
-  M(getUTCMonth) {
+  M(getUTCMonth, arg1) {
     const uTCMonth = getUTCMonth.getUTCMonth();
     if ("M" === arg1) {
       const _String = String;
       let StringResult = String(uTCMonth + 1);
     } else {
-      StringResult = addLeadingZeros.default(uTCMonth + 1, 2);
+      StringResult = module_3893.default(uTCMonth + 1, 2);
     }
     return StringResult;
   },
-  d(getUTCDate) {
-    return addLeadingZeros.default(getUTCDate.getUTCDate(), arg1.length);
+  d(getUTCDate, arg1) {
+    return module_3893.default(getUTCDate.getUTCDate(), arg1.length);
   },
-  a(getUTCHours) {
+  a(getUTCHours, arg1) {
     let str = "am";
     if (1 <= getUTCHours.getUTCHours() / 12) {
       str = "pm";
@@ -58,21 +57,21 @@ export default {
     }
     return str.toUpperCase();
   },
-  h(getUTCHours) {
-    return addLeadingZeros.default(getUTCHours.getUTCHours() % 12 || 12, arg1.length);
+  h(getUTCHours, arg1) {
+    return module_3893.default(getUTCHours.getUTCHours() % 12 || 12, arg1.length);
   },
-  H(getUTCHours) {
-    return addLeadingZeros.default(getUTCHours.getUTCHours(), arg1.length);
+  H(getUTCHours, arg1) {
+    return module_3893.default(getUTCHours.getUTCHours(), arg1.length);
   },
-  m(getUTCMinutes) {
-    return addLeadingZeros.default(getUTCMinutes.getUTCMinutes(), arg1.length);
+  m(getUTCMinutes, arg1) {
+    return module_3893.default(getUTCMinutes.getUTCMinutes(), arg1.length);
   },
-  s(getUTCSeconds) {
-    return addLeadingZeros.default(getUTCSeconds.getUTCSeconds(), arg1.length);
+  s(getUTCSeconds, arg1) {
+    return module_3893.default(getUTCSeconds.getUTCSeconds(), arg1.length);
   },
-  S(getUTCMilliseconds) {
+  S(getUTCMilliseconds, arg1) {
     const uTCMilliseconds = getUTCMilliseconds.getUTCMilliseconds();
-    return addLeadingZeros.default(Math.floor(uTCMilliseconds * Math.pow(10, arg1.length - 3)), arg1.length);
+    return module_3893.default(Math.floor(uTCMilliseconds * Math.pow(10, arg1.length - 3)), arg1.length);
   }
 };
 export default exports.default;

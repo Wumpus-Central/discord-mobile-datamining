@@ -1,4 +1,5 @@
 // _runtime/00792_thirdPartyErrorFilterIntegration.js
+import _mod698 from "metro/00698__.js";
 import setupIntegration from "00752_setupIntegration.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -11,9 +12,9 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
   return {
     name: "ThirdPartyErrorsFilter",
     setup(on) {
-      closure_0 = on;
+      const options = on;
       on.on("beforeEnvelope", (arg0) => {
-        options(table[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
           if ("event" === arg1) {
             const _Array = Array;
             let tmp3;
@@ -21,27 +22,27 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
               tmp3 = arg0[1];
             }
             if (tmp3) {
-              const result = callback(table[2]).stripMetadataFromStackFrames(tmp3);
+              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
               arg0[1] = tmp3;
-              const obj = callback(table[2]);
+              const obj = options(dependencyMap[2]);
             }
           }
         });
       });
       on.on("applyFrameMetadata", (type) => {
         if (!type.type) {
-          const result = options(closure_1_1[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-          const obj = options(closure_1_1[2]);
+          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
+          const obj = options(dependencyMap[2]);
         }
       });
     },
     processEvent(tags) {
-      lib = lib.ignoreSentryInternalFrames;
-      let obj = lib(closure_1_1[3]);
+      closure_0 = closure_0.ignoreSentryInternalFrames;
+      let obj = _mod698;
       const framesFromEvent = obj.getFramesFromEvent(tags);
       let mapped;
       if (framesFromEvent) {
-        let found = framesFromEvent.filter((filename) => {
+        let found = framesFromEvent.filter((filename, index) => {
           filename = filename.filename;
           if (filename) {
             let tmp3 = null != filename.lineno || null != filename.colno || null != filename.instruction_addr;
@@ -49,7 +50,7 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
               let tmp5 = !closure_0;
               if (closure_0) {
                 let flag = false;
-                if (0 === arg1) {
+                if (0 === index) {
                   flag = false;
                   if (filename.context_line) {
                     flag = false;
@@ -62,7 +63,7 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
                         if (filename2.includes("helpers")) {
                           const context_line = filename.context_line;
                           flag = false;
-                          if (context_line.includes(closure_1_4)) {
+                          if (context_line.includes(closure_2_4)) {
                             flag = false;
                             if (filename.pre_context) {
                               let num3 = 0;
@@ -70,11 +71,9 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
                               if (0 < filename.pre_context.length) {
                                 while (true) {
                                   let obj = filename.pre_context[num3];
-                                  let tmp8 = num3;
                                   let hasItem;
                                   if (obj != null) {
-                                    let tmp10 = closure_1_3;
-                                    hasItem = obj.includes(closure_1_3);
+                                    hasItem = obj.includes(closure_2_3);
                                   }
                                   flag = true;
                                   if (hasItem) {
@@ -108,7 +107,7 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
           if (module_metadata.module_metadata) {
             const _Object = Object;
             const keys = Object.keys(module_metadata.module_metadata);
-            const found = keys.filter((str) => str.startsWith(closure_2));
+            const found = keys.filter((item) => item.startsWith(length));
             let mapped = found.map((arr) => arr.slice(length.length));
           } else {
             mapped = [];
@@ -125,9 +124,9 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
         if (
           mapped[str2](
             (arr) =>
-              !arr.some((arg0) => {
+              !arr.some((item) => {
                 filterKeys = filterKeys.filterKeys;
-                return filterKeys.includes(arg0);
+                return filterKeys.includes(item);
               }),
           )
         ) {

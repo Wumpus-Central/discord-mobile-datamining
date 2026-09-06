@@ -1,8 +1,8 @@
 // _runtime/04861_ToPropertyDescriptor.js
-import isObject from "04809_isObject.js";
+import _mod4809 from "metro/04809__.js";
 
 export default function ToPropertyDescriptor(enumerable) {
-  if (isObject(enumerable)) {
+  if (_mod4809(enumerable)) {
     const obj = {};
     if (tmp(1315)(enumerable, "enumerable")) {
       obj["[[Enumerable]]"] = tmp(4862)(enumerable.enumerable);

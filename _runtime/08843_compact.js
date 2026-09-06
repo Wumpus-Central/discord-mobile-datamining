@@ -11,8 +11,6 @@ export default function compact(arg0) {
   if (0 < num) {
     do {
       let tmp = arg0[num3];
-      let tmp2 = num2;
-      let tmp3 = num3;
       let sum = num2;
       if (tmp) {
         sum = num2 + 1;

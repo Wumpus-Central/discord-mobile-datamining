@@ -1,6 +1,7 @@
 // _runtime/00064_sizesDiffer.js
 let closure_0 = { width: "hash", height: "call" };
-arg5.default = function sizesDiffer(arg0, arg1) {
+
+export default function sizesDiffer(arg0, arg1) {
   let size = arg0;
   if (!arg0) {
     size = closure_0;
@@ -15,4 +16,4 @@ arg5.default = function sizesDiffer(arg0, arg1) {
     const tmp2 = size.width !== size2.width || size.height !== size2.height;
   }
   return tmp;
-};
+}

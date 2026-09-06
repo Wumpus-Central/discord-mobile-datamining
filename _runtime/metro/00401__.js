@@ -1,8 +1,6 @@
 // _runtime/metro/00401__.js
-import noopAll from "../00019_noop.js";
 import _queryCacheDefault from "../00328__queryCache.js";
-import createAnimatedComponentDefault from "../00387_createAnimatedComponent.js";
+import noop from "00019__.js";
+import module_387 from "../00387_unstable_createAnimatedComponentWithAllowlist.js";
 
-noopAll;
-
-export default createAnimatedComponentDefault(_queryCacheDefault);
+export default module_387(_queryCacheDefault);

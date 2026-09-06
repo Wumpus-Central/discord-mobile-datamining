@@ -1,4 +1,4 @@
 // _runtime/react/00021_jsxProd.js
-import jsxProd from "00022_jsxProd.js";
+import _mod22 from "../metro/00022__.js";
 
-export default jsxProd;
+export default _mod22;

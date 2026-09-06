@@ -1,23 +1,23 @@
 // _runtime/01731_JSPropsUpdaterPaper.js
 import runWorkletOnJS from "01643_runWorkletOnJS.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import importDefaultResult from "metro/00042__createClass.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import isJest from "01639_isJest.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 let JSPropsUpdaterWeb = global;
-require = arg1;
-({ NativeEventEmitter: c4, Platform } = get_ActivityIndicator);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ NativeEventEmitter: closure_4, Platform } = get_ActivityIndicator);
+let module_1639 = fn(1639);
 class JSPropsUpdaterPaper {
   constructor() {
     tmp = closure_3(this, JSPropsUpdaterWeb);
-    tmp2 = new NativeEventEmitter(undefined);
+    tmp2 = new closure_4(undefined);
     this._reanimatedEventEmitter = tmp2;
     return;
   }
 }
 JSPropsUpdaterWeb = JSPropsUpdaterPaper;
-isJest = {
+const entry = {
   key: "addOnJSPropsChangeListener",
   value: function addOnJSPropsChangeListener(getComponentViewTag) {
     let _tagToComponentMapping = JSPropsUpdaterWeb._tagToComponentMapping;
@@ -26,8 +26,8 @@ isJest = {
       const self = this;
       const _reanimatedEventEmitter = this._reanimatedEventEmitter;
       _reanimatedEventEmitter.addListener("onReanimatedPropsChange", (viewTag) => {
-        const _tagToComponentMapping = obj._tagToComponentMapping;
-        const value = _tagToComponentMapping.get(viewTag.viewTag);
+        const _tagToComponentMapping = JSPropsUpdaterWeb._tagToComponentMapping;
+        value = _tagToComponentMapping.get(viewTag.viewTag);
         if (value != null) {
           value._updateFromNative(viewTag.props);
         }
@@ -36,7 +36,7 @@ isJest = {
   },
 };
 const items = [
-  isJest,
+  entry,
   {
     key: "removeOnJSPropsChangeListener",
     value: function removeOnJSPropsChangeListener(getComponentViewTag) {
@@ -50,10 +50,10 @@ const items = [
     },
   },
 ];
-isJest = isJest.shouldBeUseWeb();
-let importDefaultResultResult = importDefaultResult(JSPropsUpdaterPaper, items);
+module_1639 = module_1639.shouldBeUseWeb();
+let importDefaultResultResult = _createClass(JSPropsUpdaterPaper, items);
 importDefaultResultResult._tagToComponentMapping = new Map();
-let closure_5 = {
+const hasOwnProperty = {
   code: "function pnpm_JSPropsUpdaterTs1(){const{runOnJS,updater}=this.__closure;global.updateJSProps=function(viewTag,props){runOnJS(updater)(viewTag,props);};}",
 };
 class JSPropsUpdaterFabric {
@@ -70,15 +70,15 @@ class JSPropsUpdaterFabric {
       };
       tmp3 = closure_1;
       tmp4 = closure_2;
-      obj = require("runWorkletOnJS");
+      obj = closure_1(closure_2[4]);
       fn = function t() {
-        JSPropsUpdaterWeb.updateJSProps = (arg0, arg1) => {
-          closure_2_1(closure_2_2[4]).runOnJS(closure_0)(arg0, arg1);
+        closure_0.updateJSProps = (arg0, arg1) => {
+          runWorkletOnJS.runOnJS(updater)(arg0, arg1);
         };
       };
       obj = { runOnJS: null, updater: null };
-      obj[0] = require("runWorkletOnJS").runOnJS;
-      obj[1] = updater;
+      obj.runOnJS = closure_1(closure_2[4]).runOnJS;
+      obj.updater = updater;
       fn.__closure = obj;
       num = 2068327241111;
       fn.__workletHash = 2068327241111;
@@ -92,7 +92,7 @@ class JSPropsUpdaterFabric {
   }
 }
 JSPropsUpdaterWeb = JSPropsUpdaterFabric;
-isJest = {
+const entry1 = {
   key: "addOnJSPropsChangeListener",
   value: function addOnJSPropsChangeListener(getComponentViewTag) {
     if (JSPropsUpdaterWeb.isInitialized) {
@@ -102,7 +102,7 @@ isJest = {
   },
 };
 const items1 = [
-  isJest,
+  entry1,
   {
     key: "removeOnJSPropsChangeListener",
     value: function removeOnJSPropsChangeListener(getComponentViewTag) {
@@ -113,24 +113,28 @@ const items1 = [
     },
   },
 ];
-const importDefaultResultResult1 = importDefaultResult(JSPropsUpdaterFabric, items1);
+const importDefaultResultResult1 = _createClass(JSPropsUpdaterFabric, items1);
 const map = new Map();
 importDefaultResultResult1._tagToComponentMapping = new Map();
 importDefaultResultResult1.isInitialized = false;
-if (isJest) {
+if (module_1639) {
   class JSPropsUpdaterWeb {
     constructor() {
       tmp = closure_3(this, JSPropsUpdaterWeb);
       return;
     }
   }
-  const obj1 = { key: "addOnJSPropsChangeListener", value: null };
-  obj1[1] = function addOnJSPropsChangeListener(arg0) {};
-  const items2 = [obj1];
-  const obj2 = { key: "removeOnJSPropsChangeListener", value: null };
-  obj2[1] = function removeOnJSPropsChangeListener(arg0) {};
-  items2[1] = obj2;
-  importDefaultResultResult = importDefaultResult(JSPropsUpdaterWeb, items2);
+  const entry2 = {
+    key: "addOnJSPropsChangeListener",
+    value: function addOnJSPropsChangeListener(arg0) {},
+  };
+  const items2 = [entry2];
+  const entry3 = {
+    key: "removeOnJSPropsChangeListener",
+    value: function removeOnJSPropsChangeListener(arg0) {},
+  };
+  items2[1] = entry3;
+  importDefaultResultResult = _createClass(JSPropsUpdaterWeb, items2);
 } else {
   class JSPropsUpdaterWeb {
     constructor() {

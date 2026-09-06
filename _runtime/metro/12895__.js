@@ -1,11 +1,12 @@
 // _runtime/metro/12895__.js
-import getClient from "../12824_getClient.js";
+import _mod12824 from "12824__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.profiler = {
+
+export const profiler = {
   startProfiler() {
-    const client = getClient.getClient();
+    const client = _mod12824.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {
@@ -31,7 +32,7 @@ arg5.profiler = {
     }
   },
   stopProfiler() {
-    const client = getClient.getClient();
+    const client = _mod12824.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {

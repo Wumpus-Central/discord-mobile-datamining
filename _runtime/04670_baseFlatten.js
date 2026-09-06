@@ -1,11 +1,11 @@
 // _runtime/04670_baseFlatten.js
 import arrayPush from "00658_arrayPush.js";
-import isConcatSpreadable from "04671_isConcatSpreadable.js";
+import _mod4671 from "metro/04671__.js";
 
 function baseFlatten(arg0, arg1, arg2, arg3, arg4) {
   let tmp = arg2;
   if (!arg2) {
-    tmp = isConcatSpreadable;
+    tmp = _mod4671;
   }
   let items = arg4;
   if (!arg4) {
@@ -15,19 +15,11 @@ function baseFlatten(arg0, arg1, arg2, arg3, arg4) {
   if (0 < arg0.length) {
     while (true) {
       let tmp4 = arg0[num];
-      let tmp5 = num;
       if (arg1 > 0) {
         if (tmp(tmp4)) {
           if (arg1 > 1) {
-            let tmp9 = baseFlatten;
-            let tmp10 = tmp4;
-            let tmp11 = tmp;
-            let tmp12 = arg3;
-            let tmp13 = items;
             let tmp14 = baseFlatten(tmp4, arg1 - 1, tmp, arg3, items);
           } else {
-            let tmp6 = require;
-            let tmp7 = dependencyMap;
             let tmp8 = arrayPush(items, tmp4);
           }
           num = num + 1;

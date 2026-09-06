@@ -15,24 +15,22 @@ if (
           let obj = {};
           let num2 = 0;
           do {
-            let tmp6 = obj;
             let _String2 = String;
-            let tmp7 = num2;
             tmp10["_" + String.fromCharCode(num2)] = num2;
             sum = num2 + 1;
             num2 = sum;
           } while (sum < 10);
           const _Object3 = Object;
           const ownPropertyNames = Object.getOwnPropertyNames(obj);
-          const mapped = ownPropertyNames.map((arg0) => obj[arg0]);
+          const mapped = ownPropertyNames.map((item) => obj[item]);
           if ("0123456789" !== mapped.join("")) {
             return false;
           } else {
             obj = {};
             const split = "abcdefghijklmnopqrst".split;
             const parts = "abcdefghijklmnopqrst".split("");
-            const item = parts.forEach((arg0) => {
-              obj[arg0] = arg0;
+            const item = parts.forEach((item) => {
+              obj[item] = item;
             });
             const _Object4 = Object;
             const _Object5 = Object;
@@ -62,10 +60,7 @@ if (
       for (let num2 = 1; num2 < arguments.length; num2 = num2 + 1) {
         let _Object = Object;
         let ObjectResult1 = Object(arguments[num2]);
-        let tmp2 = ObjectResult1;
-        let tmp3 = num2;
         for (const key10010 in ObjectResult1) {
-          let tmp15 = key10010;
           let tmp16 = hasOwnProperty;
           let call2 = hasOwnProperty.call;
           if (typeof call2 === "unknown") {
@@ -87,7 +82,6 @@ if (
             let tmp5 = propertyIsEnumerable;
             let call = propertyIsEnumerable.call;
             let tmp6 = arr[num];
-            let tmp7 = num;
             if (typeof call === "unknown" ? tmp5(tmp6) : call(ObjectResult1, tmp6)) {
               ObjectResult[arr[num]] = ObjectResult1[arr[num]];
             }

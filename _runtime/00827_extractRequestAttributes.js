@@ -1,18 +1,18 @@
 // _runtime/00827_extractRequestAttributes.js
-import _mod704 from "metro/00704__.js";
-import _mod823 from "metro/00823__.js";
-import buildMethodPath from "00825_buildMethodPath.js";
-import getOperationName from "00828_getOperationName.js";
-import closure_2 from "00005_asyncGeneratorStep.js";
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "00704_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
+import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "00823_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
+import _mod825 from "metro/00825__.js";
+import extractRequestParameters from "00828_extractRequestParameters.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-function extractRequestAttributes(first, closure_1_1) {
-  let obj = { [closure_0(closure_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "openai" };
-  obj[_mod823.GEN_AI_OPERATION_NAME_ATTRIBUTE] = getOperationName.getOperationName(closure_1_1);
-  obj[_mod704.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
-  if (first.length > 0) {
-    if (typeof first[0] === "object") {
-      if (null !== first[0]) {
-        first = first[0];
+function extractRequestAttributes(model, arr) {
+  let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "openai" };
+  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_OPERATION_NAME_ATTRIBUTE] = extractRequestParameters.getOperationName(arr);
+  obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
+  if (model.length > 0) {
+    if (typeof model[0] === "object") {
+      if (null !== model[0]) {
+        const first = model[0];
         const _Array = Array;
         const tmp5 = Array.isArray(first.tools) ? first.tools : [];
         const items = [];
@@ -42,7 +42,7 @@ function extractRequestAttributes(first, closure_1_1) {
       return obj;
     }
   }
-  obj[_mod823.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = "unknown";
+  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = "unknown";
 }
 function addRequestAttributes(setAttribute, input) {
   if ("input" in input) {
@@ -52,12 +52,11 @@ function addRequestAttributes(setAttribute, input) {
   }
   if (input) {
     if (0 !== length) {
-      const truncatedJsonString = buildMethodPath.getTruncatedJsonString(input);
-      const attr = setAttribute.setAttribute(_mod823.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
+      const truncatedJsonString = _mod825.getTruncatedJsonString(input);
+      const attr = setAttribute.setAttribute(ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
       if (length) {
         const attr1 = setAttribute.setAttribute(tmp2(823).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE, length);
       }
-      const obj = buildMethodPath;
       tmp2 = require;
     }
   }
@@ -65,7 +64,7 @@ function addRequestAttributes(setAttribute, input) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1) {
-  obj = _require(obj[9]);
+  obj = require("metro/00713__.js");
   const client = obj.getClient();
   let sendDefaultPii;
   if (client != null) {
@@ -76,29 +75,27 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
   const merged = Object.assign(arg1);
   _require = "";
   obj = {
-    get(self) {
+    get(self, arg1) {
       let obj = self[arg1];
-      let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
+      let methodPath = closure_2_0(closure_2_1[2]).buildMethodPath(closure_1_0, String(arg1));
       if (typeof obj === "function") {
         if (tmpResult.shouldInstrument(methodPath)) {
-          str = obj;
           closure_1 = methodPath;
-          str = self;
-          closure_3 = closure_1;
-          str = closure_1_2(() => {
+          closure_2 = self;
+          closure_3 = closure_1_1;
+          str = closure_2_2(() => {
             closure_0 = [...arguments];
             c3 = 0;
             c4 = 0;
-            const iter = (function*() {
+            const iter = (function*(arg0, value) {
               if (c4 === 2) {
                 c4 = 3;
-                HermesBuiltin.throwTypeError();
+                throw new TypeError("Generator functions may not be called on executing generators");
               } else if (tmp4 === 3) {
                 if (arg0 === 1) {
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  let obj = { value, done: true };
                   return obj;
                 } else {
                   return { value: "HermesInternal", done: null };
@@ -109,65 +106,64 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                   if (0 === c3) {
                     if (arg0 === 1) {
                       c4 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
                       c4 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
+                      obj = { value, done: true };
                       return obj;
                     } else {
-                      c2 = tmp5;
-                      let dependencyMap = tmp2;
-                      dependencyMap = undefined;
-                      c2 = undefined;
-                      c3 = undefined;
-                      c4 = undefined;
+                      closure_2 = tmp5;
+                      closure_129_0 = closure_0;
+                      closure_129_1 = undefined;
+                      closure_129_2 = undefined;
+                      let operationName;
+                      closure_129_4 = undefined;
                       c3 = 1;
                       c4 = 1;
                       return { value: "PX_16", done: true };
                     }
                   } else if (arg0 === 1) {
                     c4 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c4 = 3;
-                    let obj1 = { value: null, done: true };
-                    obj1[0] = arg1;
+                    let obj1 = { value, done: true };
                     return obj1;
                   } else {
-                    dependencyMap = v0(closure_0, closure_1_1);
-                    str = dependencyMap[str(undefined, dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                    closure_129_1 = v1(closure_129_0, tmp2);
+                    str = closure_129_1[str(undefined, tmp2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
                     if (!str) {
                       str = "unknown";
                     }
-                    obj = str(dependencyMap[2]);
-                    v0 = obj.getOperationName(closure_1_1);
-                    const stream = str[0];
-                    if (stream) {
-                      if (typeof stream === "object") {
+                    closure_129_2 = str;
+                    obj = str(tmp2[2]);
+                    operationName = obj.getOperationName(tmp2);
+                    closure_129_4 = closure_129_0[0];
+                    if (closure_129_4) {
+                      if (typeof closure_129_4 === "object") {
                         c4 = 3;
                       }
                       let obj2 = { name: null, op: null, attributes: null };
                       const _HermesInternal2 = HermesInternal;
-                      obj2[0] = "" + v0 + " " + str + " stream-response";
-                      let obj5 = str(dependencyMap[5]);
-                      obj2[1] = str(dependencyMap[2]).getSpanOperation(closure_1_1);
-                      obj2[2] = dependencyMap;
+                      obj2.name = "" + operationName + " " + closure_129_2 + " stream-response";
+                      let obj5 = str(tmp2[5]);
+                      obj2.op = str(tmp2[2]).getSpanOperation(tmp2);
+                      obj2.attributes = closure_129_1;
                       obj5.startSpanManual(obj2, (() => {
-                        closure_0 = closure_2_2(/* F125481 */ function() { ... });
+                        closure_0 = closure_2(/* F125481 */ function() { ... });
                         return () => { ... };
                       })());
-                      let obj7 = str(dependencyMap[2]);
+                      let obj7 = str(tmp2[2]);
                     }
-                    obj1 = str(dependencyMap[5]);
+                    obj1 = str(tmp2[5]);
                     let obj3 = { name: null, op: null, attributes: null };
                     const _HermesInternal = HermesInternal;
-                    obj3[0] = "" + v0 + " " + str;
-                    obj3 = str(dependencyMap[2]);
-                    obj3[1] = obj3.getSpanOperation(closure_1_1);
-                    obj3[2] = dependencyMap;
+                    obj3.name = "" + operationName + " " + closure_129_2;
+                    obj3 = str(tmp2[2]);
+                    obj3.op = obj3.getSpanOperation(tmp2);
+                    obj3.attributes = closure_129_1;
                     obj1.startSpan(obj3, (() => {
-                      closure_0 = closure_2_2(/* F125483 */ function() { ... });
+                      closure_0 = closure_2(/* F125483 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -181,7 +177,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
             return iter;
           });
           function instrumentedMethod() {
-            const self = this;
+            self = this;
             const apply = str.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -200,155 +196,109 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
         if (obj) {
           instrumentedMethod = obj;
           if (typeof obj === "object") {
-            str = methodPath;
             if (methodPath === undefined) {
               str = "";
             }
+            closure_1 = closure_1_1;
             let _Proxy = Proxy;
-            obj = { get: null };
-            obj[0] = function get(self) {
-              let obj = self[arg1];
-              let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
-              if (typeof obj === "function") {
-                if (tmpResult.shouldInstrument(methodPath)) {
-                  str = obj;
-                  closure_1 = methodPath;
-                  str = self;
-                  closure_3 = closure_1;
-                  str = closure_1_2(() => {
-                    closure_0 = [...arguments];
-                    c3 = 0;
-                    c4 = 0;
-                    const iter = (function*() {
-                      if (c4 === 2) {
-                        c4 = 3;
-                        HermesBuiltin.throwTypeError();
-                      } else if (tmp4 === 3) {
-                        if (arg0 === 1) {
-                          throw arg1;
-                        } else if (arg0 === 2) {
-                          let obj = { value: null, done: true };
-                          obj[0] = arg1;
-                          return obj;
-                        } else {
-                          return { value: "HermesInternal", done: null };
-                        }
-                      } else {
-                        try {
-                          c4 = 2;
-                          if (0 === c3) {
-                            if (arg0 === 1) {
-                              c4 = 3;
-                              throw arg1;
-                            } else if (arg0 === 2) {
-                              c4 = 3;
-                              obj = { value: null, done: true };
-                              obj[0] = arg1;
-                              return obj;
-                            } else {
-                              c2 = tmp5;
-                              let dependencyMap = tmp2;
-                              dependencyMap = undefined;
-                              c2 = undefined;
-                              c3 = undefined;
-                              c4 = undefined;
-                              c3 = 1;
-                              c4 = 1;
-                              return { value: "PX_16", done: true };
-                            }
-                          } else if (arg0 === 1) {
-                            c4 = 3;
-                            throw arg1;
-                          } else if (arg0 === 2) {
-                            c4 = 3;
-                            let obj1 = { value: null, done: true };
-                            obj1[0] = arg1;
-                            return obj1;
-                          } else {
-                            dependencyMap = v0(closure_0, closure_1_1);
-                            str = dependencyMap[str(undefined, dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
-                            if (!str) {
-                              str = "unknown";
-                            }
-                            obj = str(dependencyMap[2]);
-                            v0 = obj.getOperationName(closure_1_1);
-                            const stream = str[0];
-                            if (stream) {
-                              if (typeof stream === "object") {
-                                c4 = 3;
-                              }
-                              let obj2 = { name: null, op: null, attributes: null };
-                              const _HermesInternal2 = HermesInternal;
-                              obj2[0] = "" + v0 + " " + str + " stream-response";
-                              let obj5 = str(dependencyMap[5]);
-                              obj2[1] = str(dependencyMap[2]).getSpanOperation(closure_1_1);
-                              obj2[2] = dependencyMap;
-                              obj5.startSpanManual(obj2, (() => { ... })());
-                              let obj7 = str(dependencyMap[2]);
-                            }
-                            obj1 = str(dependencyMap[5]);
-                            let obj3 = { name: null, op: null, attributes: null };
-                            const _HermesInternal = HermesInternal;
-                            obj3[0] = "" + v0 + " " + str;
-                            obj3 = str(dependencyMap[2]);
-                            obj3[1] = obj3.getSpanOperation(closure_1_1);
-                            obj3[2] = dependencyMap;
-                            obj1.startSpan(obj3, (() => { ... })());
-                          }
-                        } catch (tmp40) {
-                          c4 = tmp;
-                          throw tmp40;
-                        }
-                      }
-                    })();
-                    iter.next();
-                    return iter;
-                  });
-                  function instrumentedMethod() {
-                    const self = this;
-                    const apply = str.apply;
-                    if (typeof apply === "unknown") {
-                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                    } else {
-                      applyArgumentsResult = apply(self, arguments);
-                    }
-                    return applyArgumentsResult;
-                  }
-                }
-                return instrumentedMethod;
-              }
-              if (typeof obj === "function") {
-                instrumentedMethod = obj.bind(self);
-              } else {
-                instrumentedMethod = obj;
-                if (obj) {
-                  instrumentedMethod = obj;
-                  if (typeof obj === "object") {
-                    str = methodPath;
-                    if (methodPath === undefined) {
-                      str = "";
-                    }
-                    let _Proxy = Proxy;
-                    obj = { get: null };
-                    obj[0] = function get(self) {
+            obj = {
+              get(self, arg1) {
                       let obj = self[arg1];
-                      let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
+                      let methodPath = closure_2_0(closure_2_1[2]).buildMethodPath(closure_1_0, String(arg1));
                       if (typeof obj === "function") {
                         if (tmpResult.shouldInstrument(methodPath)) {
-                          str = obj;
                           closure_1 = methodPath;
-                          str = self;
-                          closure_3 = closure_1;
-                          str = closure_1_2(() => {
+                          closure_2 = self;
+                          closure_3 = closure_1_1;
+                          str = closure_2_2(() => {
                             closure_0 = [...arguments];
                             c3 = 0;
                             c4 = 0;
-                            const iter = (/* F120233 */ function*() { ... })();
+                            const iter = (function*(arg0, value) {
+                              if (c4 === 2) {
+                                c4 = 3;
+                                throw new TypeError("Generator functions may not be called on executing generators");
+                              } else if (tmp4 === 3) {
+                                if (arg0 === 1) {
+                                  throw value;
+                                } else if (arg0 === 2) {
+                                  let obj = { value, done: true };
+                                  return obj;
+                                } else {
+                                  return { value: "HermesInternal", done: null };
+                                }
+                              } else {
+                                try {
+                                  c4 = 2;
+                                  if (0 === c3) {
+                                    if (arg0 === 1) {
+                                      c4 = 3;
+                                      throw value;
+                                    } else if (arg0 === 2) {
+                                      c4 = 3;
+                                      obj = { value, done: true };
+                                      return obj;
+                                    } else {
+                                      closure_2 = tmp5;
+                                      closure_129_0 = closure_0;
+                                      closure_129_1 = undefined;
+                                      closure_129_2 = undefined;
+                                      let operationName;
+                                      closure_129_4 = undefined;
+                                      c3 = 1;
+                                      c4 = 1;
+                                      return { value: "PX_16", done: true };
+                                    }
+                                  } else if (arg0 === 1) {
+                                    c4 = 3;
+                                    throw value;
+                                  } else if (arg0 === 2) {
+                                    c4 = 3;
+                                    let obj1 = { value, done: true };
+                                    return obj1;
+                                  } else {
+                                    closure_129_1 = v1(closure_129_0, tmp2);
+                                    str = closure_129_1[str(undefined, tmp2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                                    if (!str) {
+                                      str = "unknown";
+                                    }
+                                    closure_129_2 = str;
+                                    obj = str(tmp2[2]);
+                                    operationName = obj.getOperationName(tmp2);
+                                    closure_129_4 = closure_129_0[0];
+                                    if (closure_129_4) {
+                                      if (typeof closure_129_4 === "object") {
+                                        c4 = 3;
+                                      }
+                                      let obj2 = { name: null, op: null, attributes: null };
+                                      const _HermesInternal2 = HermesInternal;
+                                      obj2.name = "" + operationName + " " + closure_129_2 + " stream-response";
+                                      let obj5 = str(tmp2[5]);
+                                      obj2.op = str(tmp2[2]).getSpanOperation(tmp2);
+                                      obj2.attributes = closure_129_1;
+                                      obj5.startSpanManual(obj2, (() => { ... })());
+                                      let obj7 = str(tmp2[2]);
+                                    }
+                                    obj1 = str(tmp2[5]);
+                                    let obj3 = { name: null, op: null, attributes: null };
+                                    const _HermesInternal = HermesInternal;
+                                    obj3.name = "" + operationName + " " + closure_129_2;
+                                    obj3 = str(tmp2[2]);
+                                    obj3.op = obj3.getSpanOperation(tmp2);
+                                    obj3.attributes = closure_129_1;
+                                    obj1.startSpan(obj3, (() => { ... })());
+                                  }
+                                } catch (tmp40) {
+                                  c4 = tmp;
+                                  throw tmp40;
+                                }
+                              }
+                            })();
                             iter.next();
                             return iter;
                           });
                           function instrumentedMethod() {
-                            const self = this;
+                            self = this;
                             const apply = str.apply;
                             if (typeof apply === "unknown") {
                               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -367,60 +317,99 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                         if (obj) {
                           instrumentedMethod = obj;
                           if (typeof obj === "object") {
-                            str = methodPath;
                             if (methodPath === undefined) {
                               str = "";
                             }
+                            closure_1 = closure_1_1;
                             let _Proxy = Proxy;
-                            obj = { get: null };
-                            obj[0] = function get(self) {
-                              let obj = self[arg1];
-                              let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
-                              if (typeof obj === "function") {
-                                if (tmpResult.shouldInstrument(methodPath)) {
-                                  str = obj;
-                                  closure_1 = methodPath;
-                                  str = self;
-                                  closure_3 = closure_1;
-                                  str = closure_1_2(() => { ... });
-                                  function instrumentedMethod() { ... }
-                                }
-                                return instrumentedMethod;
-                              }
-                              if (typeof obj === "function") {
-                                instrumentedMethod = obj.bind(self);
-                              } else {
-                                instrumentedMethod = obj;
-                                if (obj) {
-                                  instrumentedMethod = obj;
-                                  if (typeof obj === "object") {
-                                    str = methodPath;
-                                    if (methodPath === undefined) {
-                                      str = "";
+                            obj = {
+                              get(self, arg1) {
+                                      let obj = self[arg1];
+                                      let methodPath = closure_2_0(closure_2_1[2]).buildMethodPath(closure_1_0, String(arg1));
+                                      if (typeof obj === "function") {
+                                        if (tmpResult.shouldInstrument(methodPath)) {
+                                          closure_1 = methodPath;
+                                          closure_2 = self;
+                                          closure_3 = closure_1_1;
+                                          str = closure_2_2(() => {
+                                            closure_0 = [...arguments];
+                                            c3 = 0;
+                                            c4 = 0;
+                                            const iter = (/* F120233 */ function*() { ... })();
+                                            iter.next();
+                                            return iter;
+                                          });
+                                          function instrumentedMethod() {
+                                            self = this;
+                                            const apply = str.apply;
+                                            if (typeof apply === "unknown") {
+                                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                                            } else {
+                                              applyArgumentsResult = apply(self, arguments);
+                                            }
+                                            return applyArgumentsResult;
+                                          }
+                                        }
+                                        return instrumentedMethod;
+                                      }
+                                      if (typeof obj === "function") {
+                                        instrumentedMethod = obj.bind(self);
+                                      } else {
+                                        instrumentedMethod = obj;
+                                        if (obj) {
+                                          instrumentedMethod = obj;
+                                          if (typeof obj === "object") {
+                                            if (methodPath === undefined) {
+                                              str = "";
+                                            }
+                                            closure_1 = closure_1_1;
+                                            let _Proxy = Proxy;
+                                            obj = {
+                                              get(self, arg1) {
+                                                      let obj = self[arg1];
+                                                      let methodPath = closure_2_0(closure_2_1[2]).buildMethodPath(closure_1_0, String(arg1));
+                                                      if (typeof obj === "function") {
+                                                        if (tmpResult.shouldInstrument(methodPath)) {
+                                                          closure_1 = methodPath;
+                                                          closure_2 = self;
+                                                          closure_3 = closure_1_1;
+                                                          str = closure_2_2(() => { ... });
+                                                          function instrumentedMethod() { ... }
+                                                        }
+                                                        return instrumentedMethod;
+                                                      }
+                                                      if (typeof obj === "function") {
+                                                        instrumentedMethod = obj.bind(self);
+                                                      } else {
+                                                        instrumentedMethod = obj;
+                                                        if (obj) {
+                                                          instrumentedMethod = obj;
+                                                          if (typeof obj === "object") {
+                                                            if (methodPath === undefined) {
+                                                              str = "";
+                                                            }
+                                                            closure_1 = closure_1_1;
+                                                            let _Proxy = Proxy;
+                                                            obj = { get() { ... } };
+                                                            instrumentedMethod = new Proxy(obj, obj);
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                            };
+                                            instrumentedMethod = new Proxy(obj, obj);
+                                          }
+                                        }
+                                      }
                                     }
-                                    let _Proxy = Proxy;
-                                    obj = { get: null };
-                                    obj[0] = function get() { ... };
-                                    instrumentedMethod = new Proxy(obj, obj);
-                                    let tmp10 = closure_1;
-                                  }
-                                }
-                              }
                             };
                             instrumentedMethod = new Proxy(obj, obj);
-                            let tmp10 = closure_1;
                           }
                         }
                       }
-                    };
-                    instrumentedMethod = new Proxy(obj, obj);
-                    let tmp10 = closure_1;
-                  }
-                }
-              }
+                    }
             };
             instrumentedMethod = new Proxy(obj, obj);
-            let tmp10 = closure_1;
           }
         }
       }

@@ -1,9 +1,9 @@
 // _runtime/14413_objectifyError.js
+import emptyPromise from "14414_emptyPromise.js";
 import install from "00473_install.js";
 
 if (!install) {
-  let obj = { default: null };
-  obj[0] = install;
+  let obj = { default: install };
   let tmp3 = obj;
 } else {
   tmp3 = install;
@@ -14,8 +14,8 @@ function objectifyError(headers) {
   closure_0 = headers;
   const obj = {};
   const ownPropertyNames = Object.getOwnPropertyNames(headers);
-  const item = ownPropertyNames.forEach((arg0) => {
-    obj[arg0] = headers[arg0];
+  const item = ownPropertyNames.forEach((item) => {
+    obj[item] = error[item];
   });
   return obj;
 }
@@ -24,7 +24,7 @@ export default (arg0) => {
   closure_0 = arg0;
   return (arg0) => {
     function reportError(stack) {
-      const logger = stack;
+      logger = stack;
       try {
         if (_default) {
           if (_default2) {
@@ -32,15 +32,11 @@ export default (arg0) => {
               if (_default2) {
                 if (typeof tmp16 !== "function") {
                   logger.error("parseErrorStack is not a function", []);
-                  let obj = { parseErrorStackType: null, parseErrorStack: null };
-                  obj[0] = typeof _default;
-                  obj[1] = _default;
+                  let obj = { parseErrorStackType: typeof _default, parseErrorStack: _default };
                   logger.debug(obj);
                 } else if (typeof tmp18 !== "function") {
                   logger.error("symbolicateStackTrace is not a function", []);
-                  obj = { symbolicateStackTraceType: null, symbolicateStackTrace: null };
-                  obj[0] = typeof _default2;
-                  obj[1] = _default2;
+                  obj = { symbolicateStackTraceType: typeof _default2, symbolicateStackTrace: _default2 };
                   logger.debug(obj);
                 } else {
                   try {
@@ -54,29 +50,31 @@ export default (arg0) => {
                           lineNumber: file.lineNumber,
                         }));
                         let found = mapped;
-                        if (closure_1_1.veto) {
-                          found = mapped.filter((arg0) => {
+                        if (veto.veto) {
+                          found = mapped.filter((item) => {
                             let vetoResult;
-                            if (closure_1 != null) {
-                              vetoResult = closure_1.veto(arg0);
+                            if (veto != null) {
+                              vetoResult = veto.veto(item);
                             }
                             return vetoResult;
                           });
                         }
                         stack.error(stack.message, found);
                       })
-                      .catch((headers) => {
+                      .catch((error) => {
                         stack.error("Unable to symbolicate stack trace from error object", []);
-                        if (typeof closure_1_6 !== "function") {
-                          HermesBuiltin.throwTypeError();
+                        if (typeof closure_2_6 === "function") {
+                          stack = error;
+                          const obj = {};
+                          const _Object = Object;
+                          const ownPropertyNames = Object.getOwnPropertyNames(error);
+                          const item = ownPropertyNames.forEach((item) => {
+                            obj[item] = error[item];
+                          });
+                          tmp3(obj);
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
                         }
-                        stack = headers;
-                        const obj = {};
-                        const ownPropertyNames = Object.getOwnPropertyNames(headers);
-                        const item = ownPropertyNames.forEach((arg0) => {
-                          obj[arg0] = headers[arg0];
-                        });
-                        stack.debug(obj);
                       });
                   } catch (tmp32) {
                     logger.error("Unable to parse stack trace from error object", []);
@@ -86,9 +84,7 @@ export default (arg0) => {
               }
             }
             logger.error("parseErrorStack or symbolicateStackTrace is not available", []);
-            obj = { parseErrorStackAvailable: null, symbolicateStackTraceAvailable: null };
-            obj[0] = _default;
-            obj[1] = _default2;
+            obj = { parseErrorStackAvailable: _default, symbolicateStackTraceAvailable: _default2 };
             logger.debug(obj);
           } else {
             const tmp12 = logger(863);
@@ -114,22 +110,22 @@ export default (arg0) => {
         logger.debug(closure_1_6(tmp47));
       }
     }
-    const result = callback(closure_1_1[1]).assertHasLoggerPlugin(arg0);
-    callback = arg0;
-    let obj = callback;
-    if (!callback) {
+    const result = emptyPromise.assertHasLoggerPlugin(arg0);
+    let logger = arg0;
+    let obj = logger;
+    if (!logger) {
       obj = {};
     }
-    closure_1 = Object.assign({}, closure_1_5, obj);
+    dependencyMap = Object.assign({}, closure_5, obj);
     obj = {
       onConnect() {
-        const proxy = new Proxy(closure_1_4.addException, {
-          apply(apply) {
-            callback(arg2[0]);
+        const proxy = new Proxy(addException.addException, {
+          apply(apply, arg1, arg2) {
+            _default(arg2[0]);
             return apply.apply(arg1, arg2);
           },
         });
-        closure_1_4.addException = proxy;
+        addException.addException = proxy;
       },
       features: { reportError },
     };

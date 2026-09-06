@@ -1,8 +1,8 @@
 // _runtime/05235_decodeXPValue.js
 function decodeXPValue(arg0) {
-  const textDecoder = new TextDecoder("utf-16");
+  const decoder = new TextDecoder("utf-16");
   const uint8Array = new Uint8Array(arg0);
-  return textDecoder.decode(uint8Array).replace(/\u0000+$/, "");
+  return decoder.decode(uint8Array).replace(/\u0000+$/, "");
 }
 let obj = {
   11: "ProcessingSoftware",
@@ -235,9 +235,9 @@ obj[274] = {
     return str;
   },
 };
-obj = { name: "XResolution", description: require("metro/05236__.js").XResolution };
+obj = { name: "XResolution", description: fn(5236).XResolution };
 obj[282] = obj;
-obj = { name: "YResolution", description: require("metro/05236__.js").YResolution };
+obj = { name: "YResolution", description: fn(5236).YResolution };
 obj[283] = obj;
 obj[286] = {
   name: "XPosition",
@@ -257,18 +257,18 @@ obj[290] = {
     return { 1: "0.1", 2: "0.001", 3: "0.0001", 4: "1e-05", 5: "1e-06" }[arg0] || "Unknown";
   },
 };
-obj[296] = { name: "ResolutionUnit", description: require("metro/05236__.js").ResolutionUnit };
+obj[296] = { name: "ResolutionUnit", description: fn(5236).ResolutionUnit };
 obj[318] = {
   name: "WhitePoint",
   description(arr) {
-    const mapped = arr.map((arg0) => "" + arg0[0] + "/" + arg0[1]);
+    const mapped = arr.map((item) => "" + item[0] + "/" + item[1]);
     return mapped.join(", ");
   },
 };
 obj[319] = {
   name: "PrimaryChromaticities",
   description(arr) {
-    const mapped = arr.map((arg0) => "" + arg0[0] + "/" + arg0[1]);
+    const mapped = arr.map((item) => "" + item[0] + "/" + item[1]);
     return mapped.join(", ");
   },
 };
@@ -290,7 +290,7 @@ obj[339] = {
     closure_0 = { 1: "Unsigned", 2: "Signed", 3: "Float", 4: "Undefined", 5: "Complex int", 6: "Complex float" };
     let str = "Unknown";
     if (Array.isArray(arr)) {
-      const mapped = arr.map((arg0) => table[arg0] || "Unknown");
+      const mapped = arr.map((item) => closure_0[item] || "Unknown");
       str = mapped.join(", ");
     }
     return str;
@@ -299,7 +299,7 @@ obj[339] = {
 obj[529] = {
   name: "YCbCrCoefficients",
   description(arr) {
-    const mapped = arr.map((arg0) => "" + arg0[0] / arg0[1]);
+    const mapped = arr.map((item) => "" + item[0] / item[1]);
     return mapped.join("/");
   },
 };
@@ -320,7 +320,7 @@ obj[531] = {
 obj[532] = {
   name: "ReferenceBlackWhite",
   description(arr) {
-    const mapped = arr.map((arg0) => "" + arg0[0] / arg0[1]);
+    const mapped = arr.map((item) => "" + item[0] / item[1]);
     return mapped.join(", ");
   },
 };
@@ -341,10 +341,10 @@ obj[50741] = {
     return { 0: "Unsafe", 1: "Safe" }[arg0] || "Unknown";
   },
 };
-const obj1 = { name: "ResolutionUnit", description: require("metro/05236__.js").ResolutionUnit };
-obj[50778] = { name: "CalibrationIlluminant1", description: require("metro/05236__.js").LightSource };
-const obj2 = { name: "CalibrationIlluminant1", description: require("metro/05236__.js").LightSource };
-obj[50779] = { name: "CalibrationIlluminant2", description: require("metro/05236__.js").LightSource };
+const obj1 = { name: "ResolutionUnit", description: fn(5236).ResolutionUnit };
+obj[50778] = { name: "CalibrationIlluminant1", description: fn(5236).LightSource };
+const obj2 = { name: "CalibrationIlluminant1", description: fn(5236).LightSource };
+obj[50779] = { name: "CalibrationIlluminant2", description: fn(5236).LightSource };
 obj[50941] = {
   name: "ProfileEmbedPolicy",
   description(arg0) {
@@ -375,4 +375,5 @@ obj[51110] = {
     return { 0: "Auto", 1: "None" }[arg0] || "Unknown";
   },
 };
-arg5.default = obj;
+
+export default obj;

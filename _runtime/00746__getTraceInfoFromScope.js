@@ -1,31 +1,34 @@
 // _runtime/00746__getTraceInfoFromScope.js
-import { getClient } from "00713_getClient.js";
-const require = arg1;
+import spanToJSON from "00684_spanToJSON.js";
+import _mod722 from "metro/00722__.js";
+
+require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5._getTraceInfoFromScope = function _getTraceInfoFromScope(arg0, arg1) {
-  const _require = arg0;
+
+export const _getTraceInfoFromScope = function _getTraceInfoFromScope(arg0, arg1) {
+  _require = arg0;
   dependencyMap = arg1;
   if (arg1) {
-    let withScopeResult = require("00713_getClient.js").withScope(arg1, () => {
-      const activeSpan = callback(table[1]).getActiveSpan();
+    let withScopeResult = require("metro/00713__.js").withScope(arg1, () => {
+      const activeSpan = spanToJSON.getActiveSpan();
       if (activeSpan) {
-        let tmpResult = tmp(tmp2[1]);
+        let tmpResult = tmp(684);
         let spanToTraceContextResult = tmpResult.spanToTraceContext(activeSpan);
       } else {
-        tmpResult = tmp(tmp2[0]);
-        spanToTraceContextResult = tmpResult.getTraceContextFromScope(table);
+        tmpResult = tmp(713);
+        spanToTraceContextResult = tmpResult.getTraceContextFromScope(closure_1);
       }
-      const tmpResult1 = callback(table[2]);
+      const tmpResult1 = _mod722;
       if (activeSpan) {
         let dynamicSamplingContextFromSpan = tmpResult1.getDynamicSamplingContextFromSpan(activeSpan);
       } else {
-        dynamicSamplingContextFromSpan = tmpResult1.getDynamicSamplingContextFromScope(callback, table);
+        dynamicSamplingContextFromSpan = tmpResult1.getDynamicSamplingContextFromScope(closure_0, closure_1);
       }
       const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
       return items;
     });
-    const obj = getClient;
+    const obj = require("metro/00713__.js");
   } else {
     withScopeResult = [undefined, undefined];
   }

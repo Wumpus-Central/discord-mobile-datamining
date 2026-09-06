@@ -1,4 +1,4 @@
 // _runtime/01652_WorkletsModule.js
-import WorkletsModule from "01653_WorkletsModule.js";
+import _mod1653 from "metro/01653__.js";
 
-export const WorkletsModule = WorkletsModule.WorkletsModule;
+export const WorkletsModule = _mod1653.WorkletsModule;
