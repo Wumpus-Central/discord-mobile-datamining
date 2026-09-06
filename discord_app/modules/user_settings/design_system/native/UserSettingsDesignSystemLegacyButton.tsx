@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import Form from "Form" /* 8593 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,8 +17,8 @@ function ComparisonRow(entry) {
   const combined = "" + entry.color;
   let redesignVariant = null;
   if (entry.look !== native.ButtonLooks.LINK) {
-    redesignVariant = tmp4(1178).getRedesignVariant(entry.color);
-    const tmp4Result = tmp4(1178);
+    redesignVariant = native.getRedesignVariant(entry.color);
+    const tmp4Result = native;
   }
   items = [tmp.comparisonRow, ];
   let darkBg = hasItem;
@@ -46,7 +47,7 @@ function ComparisonRow(entry) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (entry.look === tmp4(1178).ButtonLooks.FILLED) {
+    if (entry.look === native.ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -59,7 +60,7 @@ function ComparisonRow(entry) {
   const items4 = [React4(React3, obj2), ];
   if (null != redesignVariant) {
     const obj4 = { style: tmp.comparisonSide, children: null };
-    const items5 = [tmp9(tmp4(4556).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
+    const items5 = [hasOwnProperty(Text_Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
     const obj5 = {
       variant: redesignVariant,
       size: "md",
@@ -68,12 +69,12 @@ function ComparisonRow(entry) {
 
         }
     };
-    items5[1] = tmp9(tmp4(4975).Button, obj5);
+    items5[1] = hasOwnProperty(components_Button_Button.Button, obj5);
     obj4.children = items5;
-    let tmp9Result = tmp7(tmp8, obj4);
+    let tmp9Result = React4(React3, obj4);
   } else {
-    const obj6 = { style: tmp.comparisonSide, children: tmp9(tmp4(4556).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" }) };
-    tmp9Result = tmp9(tmp8, obj6);
+    const obj6 = { style: tmp.comparisonSide, children: hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" }) };
+    tmp9Result = hasOwnProperty(React3, obj6);
   }
   items4[1] = tmp9Result;
   obj1.children = items4;
@@ -110,7 +111,7 @@ function ComboRow(combo) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (combo.look === tmp6(1178).ButtonLooks.FILLED) {
+    if (combo.look === native.ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }

@@ -47,7 +47,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     closure_1 = tmp5;
     await tmp2(paths[10])(paths[9], paths.paths);
-    closure_128_0 = arg1.default;
+    closure_128_0 = value.default;
     if (closure_129_0 === constants.AUTH) {
       closure_128_0.modalConfig = { animation: tmp2(paths[11]).ModalAnimation.SLIDE_IN_OUT };
       { animation: tmp2(paths[11]).ModalAnimation.SLIDE_IN_OUT };

@@ -90,8 +90,8 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   stateFromStores3 = stateFromStores(504).useStateFromStores(items3, () => {
     let result = null != stateFromStores;
     if (result) {
-      const guild = GuildStore.getGuild(tmp);
-      result = GuildOnboardingUtils.isBlockedByOnboarding(guild, GuildMemberStore.getSelfMember(tmp));
+      const guild = GuildStore.getGuild(stateFromStores);
+      result = GuildOnboardingUtils.isBlockedByOnboarding(guild, GuildMemberStore.getSelfMember(stateFromStores));
     }
     return result;
   });
@@ -171,4 +171,5 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
       ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16524, dependencyMap.paths), c16, obj);
     }
   }, items6);
+  const obj8 = stateFromStores(504);
 };

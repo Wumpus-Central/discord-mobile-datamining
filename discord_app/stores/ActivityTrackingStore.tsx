@@ -16,7 +16,7 @@ import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;
-function stopActivity(applicationId, flag) {
+function stopActivity(applicationId) {
   if (flag === undefined) {
     flag = true;
   }
@@ -81,7 +81,7 @@ function updateActivity(applicationId) {
     const result1 = Storage.set(ActivityTrackingStore, obj);
   }
 }
-function handleRunningGamesChange(flag) {
+function handleRunningGamesChange() {
   if (flag === undefined) {
     flag = true;
   }
@@ -99,7 +99,6 @@ function handleRunningGamesChange(flag) {
         obj = { applicationId: null, updatedAt: null, distributor: null, exePath: null };
         obj.applicationId = tmp6.id;
         let _Date = Date;
-        let tmp7 = updateActivity;
         obj.updatedAt = Date.now();
         obj.distributor = tmp3.distributor;
         let obj3 = GameAnalyticsUtils;
@@ -108,16 +107,15 @@ function handleRunningGamesChange(flag) {
           str = "";
         }
         obj.exePath = obj3.removeExecutablePathPrefix(str);
-        let tmp7Result = tmp7(obj);
+        let tmp7Result = updateActivity(obj);
       }
     }
     continue;
   }
   const keys = Object.keys(obj);
   for (const item10052 of keys) {
-    let tmp14 = item10052;
     if (!set.has(item10052)) {
-      let tmp18 = stopActivity(obj[tmp14], flag);
+      let tmp18 = stopActivity(obj[item10052], flag);
     }
     continue;
   }
@@ -129,6 +127,7 @@ function handleLogout() {
     continue;
   }
   c16 = false;
+  tmp2 = keys[Symbol.iterator]();
 }
 const Distributors = fn(1074).Distributors;
 const ActivityTrackingStore = "ActivityTrackingStore";

@@ -1,7 +1,9 @@
 // === Module 17734: GuildSettingsRoleSubscriptionContainer ===
 
 // Module 17734 (GuildSettingsRoleSubscriptionContainer)
+import ErrorBlockDefault from "ErrorBlock" /* 12223 */;
 import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15213 */;
+import WarningNoticeDefault from "WarningNotice" /* 17683 */;
 import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17710 */;
 import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17724 */;
 import noop from "module_19" /* 19 */;
@@ -25,15 +27,15 @@ function ApplicationRejectedNotice(guildId) {
   ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlowDefault(stateFromStores));
   if (null != resubmissionError) {
     obj = { children: null };
-    let tmp9Result = tmp9(12223);
+    let tmp9Result = ErrorBlockDefault;
     obj.children = resubmissionError.getAnyErrorMessage();
     let tmp14 = closure_7(tmp9Result, obj);
   } else if (null != requestRejectedNoticeText) {
     obj = { notice: requestRejectedNoticeText };
-    tmp14 = closure_7(tmp9(17683), obj);
+    tmp14 = closure_7(WarningNoticeDefault, obj);
   } else if (tmp13) {
     const obj1 = { notice: null };
-    tmp9Result = tmp9(17683);
+    tmp9Result = WarningNoticeDefault;
     const intl3 = tmp2(1114).intl;
     obj1.notice = intl3.string(tmp2(1114).t.MyJpJT);
     tmp14 = closure_7(tmp9Result, obj1);
@@ -43,22 +45,22 @@ function ApplicationRejectedNotice(guildId) {
     obj2.ctaLabel = intl2.string(tmp2(1114).t["YKw/NQ"]);
     obj2.onClick = tmp12;
     obj2.submitting = tmp11;
-    tmp14 = closure_7(tmp9(17683), obj2);
-    const tmp9Result1 = tmp9(17683);
+    tmp14 = closure_7(WarningNoticeDefault, obj2);
+    const tmp9Result1 = WarningNoticeDefault;
   } else if (true === hasItem1) {
     const obj3 = { notice: null };
     const intl = tmp2(1114).intl;
     obj3.notice = intl.string(tmp2(1114).t.e2g9sW);
-    tmp14 = closure_7(tmp9(17683), obj3);
-    const tmp9Result2 = tmp9(17683);
+    tmp14 = closure_7(WarningNoticeDefault, obj3);
+    const tmp9Result2 = WarningNoticeDefault;
   } else {
     tmp14 = null;
     if (true === hasItem) {
       const obj4 = { notice: null };
       const intl4 = tmp2(1114).intl;
       obj4.notice = intl4.string(tmp2(1114).t.rxI9sl);
-      tmp14 = closure_7(tmp9(17683), obj4);
-      const tmp9Result3 = tmp9(17683);
+      tmp14 = closure_7(WarningNoticeDefault, obj4);
+      const tmp9Result3 = WarningNoticeDefault;
     }
   }
   let tmp24 = null;

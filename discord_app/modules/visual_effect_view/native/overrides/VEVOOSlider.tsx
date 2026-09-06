@@ -26,7 +26,6 @@ export default noop.memo(function VEVOOSlider(disabled) {
   const items = [closure_4().slider, ];
   let num = 1;
   const tmp = closure_4();
-  const tmp2 = jsx;
   if (flag) {
     num = 0.5;
   }
@@ -34,11 +33,10 @@ export default noop.memo(function VEVOOSlider(disabled) {
   items[1] = { opacity: num };
   const current = initialValue.current;
   obj.value = current;
-  const tmp5 = _modDef8278;
   let fn;
   if (obj2.isAndroid()) {
     fn = () => true;
   }
   obj.onResponderGrant = fn;
-  return tmp2(tmp5, obj);
+  return <tmp5 style={items} disabled={disabled.disabled} value={null} minimumValue={0} maximumValue={1} minimumTrackTintColor={nativeDefault.unsafe_rawColors.BRAND_500} maximumTrackTintColor={nativeDefault.unsafe_rawColors.PRIMARY_400} onValueChange={onValueChange} onResponderGrant={null} />;
 });

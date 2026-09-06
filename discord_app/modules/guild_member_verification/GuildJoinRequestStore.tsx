@@ -17,12 +17,11 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
         const result = map.set(guildId, _modDef4153());
       }
-      if (applicationStatus === tmp12(4384).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      if (applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
         const result1 = map.set(guildId, _modDef4153());
       }
-      tmp12 = require;
     }
   }
 }
@@ -54,6 +53,7 @@ function upsert(joinRequestId) {
     secondaryIndexMap1.delete(joinRequestId.joinRequestId);
     const result2 = secondaryIndexMap2.set(joinRequestId.joinRequestId, joinRequestId);
   }
+  tmp2Result = GuildJoinRequestUtils;
 }
 function handleGuildJoinRequestCreateOrUpdate(request) {
   const tmp = joinRequestFromServer(request.request);
@@ -138,7 +138,7 @@ prototype["isFetching"] = function isFetching() {
 };
 prototype["hasFetched"] = function hasFetched(arg0) {
   if (map.has(arg0)) {
-    value = obj.get(arg0);
+    value = map.get(arg0);
     let tmp3 = null != value;
     if (tmp3) {
       tmp3 = _modDef4153().diff(value, "seconds") < closure_20;
@@ -148,7 +148,6 @@ prototype["hasFetched"] = function hasFetched(arg0) {
   } else {
     return false;
   }
-  obj = map;
 };
 prototype["getSelectedApplicationTab"] = function getSelectedApplicationTab(arg0) {
   let SUBMITTED = dependencyMap2[arg0];
@@ -195,6 +194,7 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(DispatcherDefault, {
       secondaryIndexMap1.delete(joinRequest.joinRequestId);
       const result2 = secondaryIndexMap2.set(joinRequest.joinRequestId, joinRequest);
     }
+    tmp2Result = GuildJoinRequestUtils;
   },
   GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS: function handleFetchForUserSuccess(requests) {
     requests = requests.requests;
@@ -223,6 +223,7 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(DispatcherDefault, {
         map.delete(joinRequestId.joinRequestId);
         const result2 = map2.set(joinRequestId.joinRequestId, joinRequestId);
       }
+      tmp2Result = GuildJoinRequestUtils;
     });
   },
   GUILD_JOIN_REQUESTS_FETCH_START: function handleFetchStart() {

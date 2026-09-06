@@ -31,7 +31,6 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   obj = { style: closure_9().headerIcon, children: null };
   obj1 = { guild: stateFromStores, size: null };
   const tmp = closure_9();
-  const tmp6 = closure_8;
   const tmp8 = stateFromStores1;
   obj1.size = guildId(5584).GuildIconSizes.LARGE;
   obj.children = closure_7(stateFromStores1(5584), obj1);
@@ -71,5 +70,5 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   };
   items2[2] = closure_7(guildId(8593).FormRow, obj5);
   obj7.children = items2;
-  return tmp6(guildId(7198).ActionSheet, obj7);
+  return closure_8(guildId(7198).ActionSheet, obj7);
 };

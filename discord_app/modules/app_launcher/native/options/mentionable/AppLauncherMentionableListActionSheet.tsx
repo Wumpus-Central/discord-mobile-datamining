@@ -52,7 +52,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
   };
   const items1 = [ref(require("AppLauncherList").AppLauncherListSearchBar, obj), ];
   if (0 === first1.length) {
-    let tmp9Result = tmp9(tmp7(tmp8[8]).AppLauncherListEmptyState, {});
+    let tmp9Result = tmp9(require("AppLauncherList").AppLauncherListEmptyState, {});
   } else {
     obj = {
       ref,
@@ -80,12 +80,12 @@ export default function AppLauncherMentionableListActionSheet(channel) {
             obj.subLabel = ref(require("Text/Text").Text, obj);
             const merged = Object.assign(obj);
             return ref(tmp25, obj, user.id);
-          } else if (tmp.ROLE === type) {
+          } else if (guild_id.ROLE === type) {
             const result2 = item.result;
             let obj1 = { guildRole: result2, guildId: guild_id };
             const merged1 = Object.assign(obj);
             return ref(require("AppLauncherRoleListActionSheet").RoleRow, obj1, result2.id);
-          } else if (tmp.GLOBAL === type) {
+          } else if (guild_id.GLOBAL === type) {
             const result = item.result;
             obj1 = onActionSheetDismiss(channel[13]);
             if (result.text === obj1.MENTION_EVERYONE().text) {
@@ -94,10 +94,10 @@ export default function AppLauncherMentionableListActionSheet(channel) {
               let tmp9 = ref;
             } else {
               const obj2 = { icon: ref(require("UserCircleIcon").UserCircleIcon, { size: "sm", color: "interactive-text-default" }) };
-              tmp7 = ref(onActionSheetDismiss(tmp3[14]), obj2);
+              tmp7 = ref(onActionSheetDismiss(channel[14]), obj2);
               tmp8 = require;
               tmp9 = ref;
-              const tmp2Result = onActionSheetDismiss(tmp3[14]);
+              const tmp2Result = onActionSheetDismiss(channel[14]);
             }
             const obj3 = { label: null, icon: null };
             const obj4 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: result.text };
@@ -108,7 +108,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
           }
         }
     };
-    tmp9Result = tmp9(tmp7(tmp8[8]).AppLauncherList, obj);
+    tmp9Result = tmp9(require("AppLauncherList").AppLauncherList, obj);
   }
   items1[1] = tmp9Result;
   obj.children = items1;

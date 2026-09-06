@@ -1,6 +1,7 @@
 // === Module 12065: BotsBanner ===
 
 // Module 12065 (BotsBanner)
+import util from "util" /* 1114 */;
 import BannerBaseDefault from "BannerBase" /* 12061 */;
 import useBannerBots from "useBannerBots" /* 12066 */;
 import noop from "module_19" /* 19 */;
@@ -19,9 +20,9 @@ export default function BotsBanner(context) {
     tmp4Result = null;
     if (null != secondBotApplication) {
       obj = { image: tmp6, text: null };
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       obj = { firstApplicationName: firstBotApplication.name, secondApplicationName: secondBotApplication.name };
-      obj.text = intl.formatToPlainString(tmp(1114).t["9SN0xw"], obj);
+      obj.text = intl.formatToPlainString(util.t["9SN0xw"], obj);
       tmp4Result = jsx(BannerBaseDefault, { firstApplicationName: firstBotApplication.name, secondApplicationName: secondBotApplication.name });
       const tmp5Result = BannerBaseDefault;
     }

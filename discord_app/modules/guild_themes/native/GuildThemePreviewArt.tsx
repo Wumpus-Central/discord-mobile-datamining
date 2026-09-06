@@ -31,13 +31,13 @@ export default function GuildThemePreviewArt(themeSettings) {
   const memo = noop.useMemo(() => {
     let tmp3 = null;
     if (null != themeSettings) {
-      const customUserThemeSettings = tmp.customUserThemeSettings;
+      const customUserThemeSettings = themeSettings.customUserThemeSettings;
       if (null != customUserThemeSettings) {
         const first = customUserThemeSettings.colors[0];
         if (null != first) {
           let obj = { colors: null, angle: null };
           const items = [];
-          HermesBuiltin.arraySpread(GuildThemePresets.getSingleColorGuildThemeGradientColors(first, tmp2), 0);
+          HermesBuiltin.arraySpread(GuildThemePresets.getSingleColorGuildThemeGradientColors(first, closure_1), 0);
           obj.colors = items;
           let num2 = customUserThemeSettings.gradientAngle;
           if (num2 == null) {
@@ -48,10 +48,10 @@ export default function GuildThemePreviewArt(themeSettings) {
         }
       }
       obj = GuildThemePresets;
-      const guildThemePreset = obj.getGuildThemePreset(tmp.presetId);
+      const guildThemePreset = obj.getGuildThemePreset(themeSettings.presetId);
       tmp3 = null;
       if (null != guildThemePreset) {
-        const guildThemePresetAppearance = GuildThemePresets.getGuildThemePresetAppearance(guildThemePreset, tmp2);
+        const guildThemePresetAppearance = GuildThemePresets.getGuildThemePresetAppearance(guildThemePreset, closure_1);
         obj = { colors: null, locations: null, angle: null };
         const colors = guildThemePresetAppearance.colors;
         obj.colors = colors.map((hex) => hex.hex);

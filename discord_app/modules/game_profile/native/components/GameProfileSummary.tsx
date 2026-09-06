@@ -37,6 +37,7 @@ export default function GameProfileSummary(arg0) {
     const GameProfileTrackActionActions = GameProfileAnalyticUtils.GameProfileTrackActionActions;
     trackAction(first ? GameProfileTrackActionActions.ShowLess : GameProfileTrackActionActions.ShowMore);
     closure_2(!first);
+    const tmp = !first;
   }, items1);
   if (game != null) {
     summaryLocalized = game.summaryLocalized;
@@ -61,8 +62,8 @@ export default function GameProfileSummary(arg0) {
     if (first1) {
       obj = { onPress: callback1, accessibilityRole: "button", accessibilityLabel: stringResult, children: null };
       const obj1 = { variant: "text-md/medium", color: "text-brand", children: stringResult };
-      obj.children = tmp13(tmp16(tmp17[7]).Text, obj1);
-      tmp13Result = tmp13(closure_5, obj);
+      obj.children = closure_6(trackAction(tmp17[7]).Text, obj1);
+      tmp13Result = closure_6(closure_5, obj);
     }
     items2[1] = tmp13Result;
     obj.children = items2;

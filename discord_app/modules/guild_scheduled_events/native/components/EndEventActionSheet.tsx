@@ -58,7 +58,7 @@ export default function EndEventActionSheet(channel) {
     obj6.text = intl4.string(tmp2(1114).t.mjB9pd);
     obj6.onPress = function onPress() {
       if (null != activeEvent) {
-        GuildScheduledEventsActionCreatorsDefault.endEvent(tmp.id, tmp.guild_id);
+        GuildScheduledEventsActionCreatorsDefault.endEvent(activeEvent.id, activeEvent.guild_id);
         ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
         CallsUtils.handleDisconnect(channel);
       }

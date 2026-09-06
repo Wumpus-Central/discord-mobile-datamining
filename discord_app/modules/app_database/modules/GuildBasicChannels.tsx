@@ -84,7 +84,8 @@ prototype["getAsync"] = function getAsync(arg0) {
     let items = [tmp3(1986).basicChannels(closure_0).getKvEntries(), ];
     tmp3(1986).basicChannels(closure_0);
     items[1] = tmp3(1986).syncedBasicChannels(closure_0).getKvEntries();
-    closure_128_1 = await Promise.all(items);
+    await Promise.all(items);
+    closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
     closure_128_3 = closure_128_2[0];
     closure_128_4 = closure_128_2[1];
@@ -192,7 +193,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(arg0, arg1) {
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c10 === 2) {
       c10 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -239,7 +240,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                     c5 = 0;
                     c6 = 0;
                     c4 = 0;
-                    return (function* _loop2(arg0, value) {
+                    return (function* _loop2(arg0) {
                       if (c6 === 2) {
                         c6 = 3;
                         throw new TypeError("Generator functions may not be called on executing generators");

@@ -18,7 +18,7 @@ function SearchListSectionLabel(label) {
   let tmpResult = label;
   if (typeof label === "string") {
     obj = { title: label };
-    tmpResult = tmp(TableRowGroup.TableRowGroupTitle, obj);
+    tmpResult = jsx(TableRowGroup.TableRowGroupTitle, { title: label });
   }
   obj.children = tmpResult;
   return <View style={closure_9().spacer}>{null}</View>;
@@ -28,7 +28,7 @@ function SearchListSectionSubLabel(subLabel) {
   let obj = { style: closure_9().subLabel, children: null };
   if (typeof subLabel === "string") {
     obj = { variant: "text-xs/normal", color: "text-muted", children: subLabel };
-    let tmpResult = tmp(Text_Text.Text, obj);
+    let tmpResult = jsx(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", children: subLabel });
   } else {
     const _Array = Array;
     tmpResult = subLabel;
@@ -39,10 +39,10 @@ function SearchListSectionSubLabel(subLabel) {
 function getItemType(type) {
   type = type.type;
   if (ListItemType.SECTION_HEADER !== type) {
-    if (tmp.SECTION_FOOTER !== type) {
-      if (tmp.SECTION_ROW !== type) {
-        if (tmp.SETTING_SEARCH_RESULT !== type) {
-          return tmp.SECTION_ROW_PLACEHOLDER === type ? type.type : undefined;
+    if (ListItemType.SECTION_FOOTER !== type) {
+      if (ListItemType.SECTION_ROW !== type) {
+        if (ListItemType.SETTING_SEARCH_RESULT !== type) {
+          return ListItemType.SECTION_ROW_PLACEHOLDER === type ? type.type : undefined;
         }
       }
       const _HermesInternal = HermesInternal;
@@ -57,14 +57,14 @@ function renderItem(item) {
   if (ListItemType.SECTION_HEADER === type) {
     let obj = { label: item.label };
     return <SearchListSectionLabel label={item.label} />;
-  } else if (tmp.SECTION_FOOTER === type) {
+  } else if (ListItemType.SECTION_FOOTER === type) {
     obj = { subLabel: item.label };
     return <SearchListSectionSubLabel subLabel={item.label} />;
-  } else if (tmp.SETTING_SEARCH_RESULT === type) {
+  } else if (ListItemType.SETTING_SEARCH_RESULT === type) {
     return SettingRenderer.renderSettingSearchResultItem(item);
-  } else if (tmp.SECTION_ROW === type) {
+  } else if (ListItemType.SECTION_ROW === type) {
     return SettingRenderer.renderSettingItem(item);
-  } else if (tmp.SECTION_ROW_PLACEHOLDER === type) {
+  } else if (ListItemType.SECTION_ROW_PLACEHOLDER === type) {
     obj = SettingRenderer;
     return obj.renderSettingSearchResultPlaceholderItem(item);
   }
@@ -72,10 +72,10 @@ function renderItem(item) {
 function keyExtractor(type, arg1) {
   type = type.type;
   if (ListItemType.SECTION_HEADER !== type) {
-    if (tmp.SECTION_FOOTER !== type) {
-      if (tmp.SECTION_ROW !== type) {
-        if (tmp.SETTING_SEARCH_RESULT !== type) {
-          if (tmp.SECTION_ROW_PLACEHOLDER === type) {
+    if (ListItemType.SECTION_FOOTER !== type) {
+      if (ListItemType.SECTION_ROW !== type) {
+        if (ListItemType.SETTING_SEARCH_RESULT !== type) {
+          if (ListItemType.SECTION_ROW_PLACEHOLDER === type) {
             const _HermesInternal = HermesInternal;
             return "" + type.type + "-" + arg1;
           }

@@ -52,14 +52,13 @@ export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEn
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, tmp6] = tmp4;
-    let tmp7 = tmp6;
     if (!isSponsoredPlayQuest(tmp6)) {
-      if (!hasVariant(tmp7, constants.NON_GAMING_PLAY_QUEST)) {
+      if (!hasVariant(tmp6, constants.NON_GAMING_PLAY_QUEST)) {
         let obj2 = QuestTaskUtils;
-        let questTaskTypes = obj2.getQuestTaskTypes(tmp7);
+        let questTaskTypes = obj2.getQuestTaskTypes(tmp6);
         for (const item10038 of questTaskTypes) {
           if (arg1.has(item10038)) {
-            let result = map.set(tmp5, tmp7);
+            let result = map.set(tmp5, tmp6);
             obj3.return();
             break;
           }

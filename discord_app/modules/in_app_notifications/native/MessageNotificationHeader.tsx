@@ -5,6 +5,10 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import useChannelName from "useChannelName" /* 4713 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
+import ChatIcon2 from "ChatIcon" /* 5071 */;
+import ThreadIcon2 from "ThreadIcon" /* 5073 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
@@ -35,14 +39,14 @@ function LocationText(channel) {
       }
       return element;
     } else {
-      if (tmp.type !== tmp3(1094).ChannelTypes.PUBLIC_THREAD) {
-        tmp3Result = tmp3(5028);
-        const simpleChannelIconComponent = tmp3Result.getSimpleChannelIconComponent(tmp);
+      if (channel.type !== ChannelTypes.ChannelTypes.PUBLIC_THREAD) {
+        tmp3Result = utils_ChannelUtils;
+        const simpleChannelIconComponent = tmp3Result.getSimpleChannelIconComponent(channel);
       }
-      if (null == tmp2) {
-        const ThreadIcon = tmp3(5073).ThreadIcon;
+      if (null == parentChannel) {
+        const ThreadIcon = ThreadIcon2.ThreadIcon;
       }
-      tmp3Result = tmp3(5071);
+      tmp3Result = ChatIcon2;
       const ChatIcon = tmp3Result.ChatIcon;
     }
   }, items);
@@ -90,33 +94,33 @@ export default function MessageNotificationHeader(locationTextColor) {
     obj = { color: tmp5 };
     const tmp6 = obj;
   }
-  let tmp2Result = tmp2(4713);
+  let tmp2Result = useChannelName;
   const channelName = tmp2Result.computeChannelName(channel, UserStore, RelationshipStore);
   const type = channel.type;
   let tmp10 = channelName;
   if (ChannelTypes.ChannelTypes.GROUP_DM !== type) {
-    if (tmp2(1094).ChannelTypes.GUILD_FORUM !== type) {
-      if (tmp2(1094).ChannelTypes.GUILD_MEDIA !== type) {
-        if (tmp2(1094).ChannelTypes.GUILD_TEXT !== type) {
-          if (tmp2(1094).ChannelTypes.GUILD_ANNOUNCEMENT !== type) {
-            if (tmp2(1094).ChannelTypes.GUILD_APP !== type) {
-              if (tmp2(1094).ChannelTypes.GUILD_VOICE !== type) {
-                if (tmp2(1094).ChannelTypes.GUILD_STAGE_VOICE !== type) {
-                  if (tmp2(1094).ChannelTypes.ANNOUNCEMENT_THREAD !== type) {
-                    if (tmp2(1094).ChannelTypes.PUBLIC_THREAD !== type) {
-                      if (tmp2(1094).ChannelTypes.PRIVATE_THREAD !== type) {
-                        if (tmp2(1094).ChannelTypes.MEDIA_THREAD !== type) {
+    if (ChannelTypes.ChannelTypes.GUILD_FORUM !== type) {
+      if (ChannelTypes.ChannelTypes.GUILD_MEDIA !== type) {
+        if (ChannelTypes.ChannelTypes.GUILD_TEXT !== type) {
+          if (ChannelTypes.ChannelTypes.GUILD_ANNOUNCEMENT !== type) {
+            if (ChannelTypes.ChannelTypes.GUILD_APP !== type) {
+              if (ChannelTypes.ChannelTypes.GUILD_VOICE !== type) {
+                if (ChannelTypes.ChannelTypes.GUILD_STAGE_VOICE !== type) {
+                  if (ChannelTypes.ChannelTypes.ANNOUNCEMENT_THREAD !== type) {
+                    if (ChannelTypes.ChannelTypes.PUBLIC_THREAD !== type) {
+                      if (ChannelTypes.ChannelTypes.PRIVATE_THREAD !== type) {
+                        if (ChannelTypes.ChannelTypes.MEDIA_THREAD !== type) {
                           tmp10 = null;
-                          if (tmp2(1094).ChannelTypes.DM !== type) {
+                          if (ChannelTypes.ChannelTypes.DM !== type) {
                             tmp10 = null;
-                            if (tmp2(1094).ChannelTypes.GUILD_CATEGORY !== type) {
+                            if (ChannelTypes.ChannelTypes.GUILD_CATEGORY !== type) {
                               tmp10 = null;
-                              if (tmp2(1094).ChannelTypes.GUILD_STORE !== type) {
+                              if (ChannelTypes.ChannelTypes.GUILD_STORE !== type) {
                                 tmp10 = null;
-                                if (tmp2(1094).ChannelTypes.GUILD_DIRECTORY !== type) {
+                                if (ChannelTypes.ChannelTypes.GUILD_DIRECTORY !== type) {
                                   tmp10 = null;
-                                  if (tmp2(1094).ChannelTypes.GUILD_SPACE !== type) {
-                                    const UNKNOWN = tmp2(1094).ChannelTypes.UNKNOWN;
+                                  if (ChannelTypes.ChannelTypes.GUILD_SPACE !== type) {
+                                    const UNKNOWN = ChannelTypes.ChannelTypes.UNKNOWN;
                                     tmp10 = null;
                                   }
                                 }
@@ -129,7 +133,7 @@ export default function MessageNotificationHeader(locationTextColor) {
                   }
                   let channelName1 = null;
                   if (null != parentChannel) {
-                    tmp2Result = tmp2(4713);
+                    tmp2Result = useChannelName;
                     channelName1 = tmp2Result.computeChannelName(parentChannel, UserStore, RelationshipStore);
                   }
                   if (null != channelName1) {
@@ -165,13 +169,13 @@ export default function MessageNotificationHeader(locationTextColor) {
     const items1 = [tmp.primaryText, tmp6];
     obj2.style = items1;
     obj2.children = author.nick;
-    tmp17Result = tmp17(tmp2(4556).Text, obj2);
+    tmp17Result = React5(Text_Text.Text, obj2);
   }
   const items2 = [tmp17Result, ];
   tmp17Result = null != tmp10;
   if (tmp17Result) {
     const obj3 = { location: tmp10, channel, parentChannel, author, color: locationTextColor.locationTextColor };
-    tmp17Result = tmp17(LocationText, obj3);
+    tmp17Result = React5(LocationText, obj3);
   }
   items2[1] = tmp17Result;
   obj1.children = items2;
@@ -191,11 +195,11 @@ export const SimpleNotificationHeader = function SimpleNotificationHeader(second
   if (tmp2Result) {
     obj = { style: tmp.secondaryTextContainer, children: null };
     const obj1 = { variant: "text-md/bold", color: "text-muted", maxFontSizeMultiplier: 1.75, style: tmp.separator, children: "\u00B7" };
-    const items2 = [tmp4(tmp5(4556).Text, obj1), ];
+    const items2 = [React5(Text_Text.Text, obj1), ];
     const obj2 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: tmp.secondaryText, children: secondaryText };
-    items2[1] = tmp4(tmp5(4556).Text, obj2);
+    items2[1] = React5(Text_Text.Text, obj2);
     obj.children = items2;
-    tmp2Result = tmp2(tmp3, obj);
+    tmp2Result = React6(View, obj);
   }
   items1[1] = tmp2Result;
   obj.children = items1;

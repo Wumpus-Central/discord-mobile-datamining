@@ -68,9 +68,9 @@ export default function AcceptInviteContainer(code) {
           if (roles1 == null) {
             roles1 = [];
           }
-          const set = new Set(roles1);
           roles = invite.roles;
           flag = roles.some((id) => !set.has(id.id));
+          const set = new Set(roles1);
         }
       }
     }
@@ -92,7 +92,7 @@ export default function AcceptInviteContainer(code) {
     navigation.setOptions({ headerLeft: fn });
   }, items1);
   const items2 = [isRegistration, stateFromStoresObject];
-  callback = navigation.useCallback(isRegistration(function*(arg0, value) {
+  callback = navigation.useCallback(isRegistration(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -173,7 +173,7 @@ export default function AcceptInviteContainer(code) {
     }
   }), items2);
   const items3 = [stateFromStoresObject, callback, onPressClose, inviteInstanceId, code];
-  const callback1 = navigation.useCallback(isRegistration(function*(arg0, value) {
+  const callback1 = navigation.useCallback(isRegistration(function*() {
     if (inviteInstanceId === 2) {
       inviteInstanceId = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -211,7 +211,7 @@ export default function AcceptInviteContainer(code) {
             };
             closure_128_2 = function _transitionToInviteChannel() {
               const self = this;
-              const tmp = isRegistration(function*(arg0, value) {
+              const tmp = isRegistration(function*(arg0) {
                 if (c6 === 2) {
                   c6 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");
@@ -240,35 +240,35 @@ export default function AcceptInviteContainer(code) {
                         closure_1 = tmp7;
                         closure_129_0 = closure_0;
                         if (null != closure_0) {
-                          let obj1 = closure_2_0(closure_2_2[15]);
-                          if (obj1.isGuildScheduledEventInviteEmbed(tmp37)) {
+                          let obj1 = closure_2_0(dependencyMap[15]);
+                          if (obj1.isGuildScheduledEventInviteEmbed(closure_0)) {
                             let prop;
-                            if (tmp37 != null) {
-                              prop = tmp37.guild_scheduled_event;
+                            if (closure_0 != null) {
+                              prop = closure_0.guild_scheduled_event;
                             }
                             if (null == prop) {
                               c6 = 3;
                               return { value: "HermesInternal", done: null };
                             } else {
                               closure_1();
-                              let tmp11Result = tmp11(tmp12[16]);
+                              let tmp11Result = closure_2_0(dependencyMap[16]);
                               const result = tmp11Result.transitionToEventDetailsFromInvite(prop);
                               c6 = 3;
                               obj1 = { value: undefined, done: true };
                               return obj1;
                             }
                           } else {
-                            const guild = tmp37.guild;
+                            const guild = closure_0.guild;
                             if (guild != null) {
                               const id = guild.id;
                             }
-                            tmp11Result = tmp11(tmp12[15]);
-                            if (tmp11Result.isRoleSubscriptionInvite(tmp37)) {
+                            tmp11Result = closure_2_0(dependencyMap[15]);
+                            if (tmp11Result.isRoleSubscriptionInvite(closure_0)) {
                               if (null != id) {
                                 c4 = 1;
                                 c5 = 2;
                                 c6 = 1;
-                                const obj2 = { value: v1(tmp12[17]).performRoleSubscriptionUpsellRedirect(id), done: false };
+                                const obj2 = { value: v1(dependencyMap[17]).performRoleSubscriptionUpsellRedirect(id), done: false };
                                 return obj2;
                               }
                             }
@@ -311,7 +311,7 @@ export default function AcceptInviteContainer(code) {
                   }
                 }
               });
-              closure_2 = tmp;
+              dependencyMap = tmp;
               const apply = tmp.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -339,8 +339,8 @@ export default function AcceptInviteContainer(code) {
                   const obj5 = { location: "Accept Invite Page" };
                   const merged = Object.assign(obj4);
                   obj2.context = obj5;
-                  obj2.callback = function callback(arg0) {
-                    v1(arg0);
+                  obj2.callback = function callback(c2) {
+                    v1(c2);
                   };
                   obj2 = v1(tmp23[18]).acceptInvite(obj2);
                   const obj11 = v1(tmp23[18]);

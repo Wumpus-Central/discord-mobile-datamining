@@ -1,6 +1,7 @@
 // === Module 16496: ICYMIMessageRowPreview ===
 
 // Module 16496 (ICYMIMessageRowPreview)
+import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import createStyles from "createStyles" /* 4560 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
@@ -39,8 +40,8 @@ function ICYMIMessageRowPreview(pointerEvents) {
       arg0.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
       if (null != closure_1_0) {
         const obj = { numberOfLines: tmp3, expandable: false, seeMoreLabel: null, seeMoreLabelColor: null };
-        const intl = tmp(1114).intl;
-        obj.seeMoreLabel = intl.string(tmp(1114).t.qCozu3);
+        const intl = util.intl;
+        obj.seeMoreLabel = intl.string(util.t.qCozu3);
         obj.seeMoreLabelColor = seeMoreLabelColor.seeMoreLabelColor;
         arg0.truncation = obj;
       }

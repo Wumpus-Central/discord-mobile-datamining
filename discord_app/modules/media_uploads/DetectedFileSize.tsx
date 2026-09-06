@@ -3,7 +3,7 @@
 // Module 5178 (DetectedFileSize)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_1 = async function _getDetectedFileSize(arg0, value) {
+let closure_1 = async function _getDetectedFileSize(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

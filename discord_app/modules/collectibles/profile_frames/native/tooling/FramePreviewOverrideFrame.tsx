@@ -28,12 +28,12 @@ function OverrideProfileFrameLayer(layer) {
       let obj = {};
       const merged = Object.assign(rect);
       let tmp12;
-      if ("top" === tmp2.anchor) {
+      if ("top" === layer.anchor) {
         tmp12 = -overflowTop;
       }
       obj.top = tmp12;
       let tmp14;
-      if ("bottom" === tmp2.anchor) {
+      if ("bottom" === layer.anchor) {
         tmp14 = -overflowBottom;
       }
       obj.bottom = tmp14;
@@ -42,9 +42,9 @@ function OverrideProfileFrameLayer(layer) {
       obj = {};
       const merged1 = Object.assign(rect);
       let str2 = "center";
-      if ("center" !== tmp2.anchor) {
+      if ("center" !== layer.anchor) {
         let str3 = "flex-end";
-        if ("top" === tmp2.anchor) {
+        if ("top" === layer.anchor) {
           str3 = "flex-start";
         }
         str2 = str3;
@@ -80,9 +80,9 @@ function OverrideProfileFrameLayer(layer) {
               obj.style = items1;
               const _Array = Array;
               obj = { length: Math.ceil(containerHeight / result) };
-              obj.children = Array.from(obj, (arg0, arg1) => {
+              obj.children = Array.from(obj, (arg0, key) => {
                 const size = { source: { uri }, resizeMode: "cover", width, height };
-                return jsx(FastImageDefault, { source: { uri }, resizeMode: "cover", width, height }, arg1);
+                return jsx(FastImageDefault, { source: { uri }, resizeMode: "cover", width, height }, key);
               });
               return <overflowBottom length={Math.ceil(containerHeight / result)} />;
             }
@@ -193,7 +193,7 @@ export default function FramePreviewOverrideFrame(override) {
               obj.overflowHorizontal = overflowHorizontal;
               obj.containerWidth = containerWidth;
               obj.containerHeight = containerHeight;
-              return <OverrideProfileFrameLayer key={arg0.id} layer={arg0} uri={null} ratio={null} overflowTop={null} overflowBottom={null} overflowHorizontal={null} containerWidth={null} containerHeight={null} />;
+              return <OverrideProfileFrameLayer key={layer.id} layer={layer} uri={null} ratio={null} overflowTop={null} overflowBottom={null} overflowHorizontal={null} containerWidth={null} containerHeight={null} />;
             })
       };
       return <profileThemeType style={tmp.container}>{memo.map((layer) => {
@@ -219,7 +219,7 @@ export default function FramePreviewOverrideFrame(override) {
         obj.overflowHorizontal = overflowHorizontal;
         obj.containerWidth = containerWidth;
         obj.containerHeight = containerHeight;
-        return <OverrideProfileFrameLayer key={arg0.id} layer={arg0} uri={null} ratio={null} overflowTop={null} overflowBottom={null} overflowHorizontal={null} containerWidth={null} containerHeight={null} />;
+        return <OverrideProfileFrameLayer key={layer.id} layer={layer} uri={null} ratio={null} overflowTop={null} overflowBottom={null} overflowHorizontal={null} containerWidth={null} containerHeight={null} />;
       })}</profileThemeType>;
     }
   }

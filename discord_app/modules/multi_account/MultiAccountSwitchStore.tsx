@@ -157,11 +157,11 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
             return tmp;
           });
           if (0 !== found.length) {
-            let tmp41Result = tmp41(1099);
+            let tmp41Result = TokenManagerAll;
             let tmp46 = tmp41Result.getToken(id2) === token2;
             let obj3 = {};
             obj4 = { from_user_id, to_user_id: _null, actual_user_id: id2, fast_connect_user_id: id2(15).getLastFastConnectIdentifyUserId(), linked_user_ids: null, has_ever_connected: null, switch_origin: null };
-            const users3 = obj11.getUsers();
+            const users3 = MultiAccountStore.getUsers();
             obj4.linked_user_ids = users3.map((id) => id.id);
             obj4.has_ever_connected = has_ever_connected;
             obj4.switch_origin = switch_origin;
@@ -177,9 +177,8 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
             token2(1242).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, obj3);
             const obj12 = token2(1242);
           }
-          obj11 = MultiAccountStore;
         }
-        tmp41Result = tmp41(1099);
+        tmp41Result = TokenManagerAll;
         tmp41Result.setToken(token2, user.id);
       }
       const id3 = user.id;

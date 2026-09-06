@@ -46,7 +46,7 @@ export default {
   },
   checkScreenreaderEnabled() {
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -106,9 +106,9 @@ export default {
     let DARK = SystemTheme.NO_PREFERENCE;
     colorScheme = colorScheme.colorScheme;
     if ("light" === colorScheme) {
-      DARK = tmp.LIGHT;
+      DARK = SystemTheme.LIGHT;
     } else if ("dark" === colorScheme) {
-      DARK = tmp.DARK;
+      DARK = SystemTheme.DARK;
     }
     ThemeActionCreators.setSystemTheme(DARK);
   },

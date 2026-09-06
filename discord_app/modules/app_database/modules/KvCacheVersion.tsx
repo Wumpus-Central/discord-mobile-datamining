@@ -31,7 +31,8 @@ const prototype = KvCacheVersion.prototype;
 prototype["okAsync"] = function okAsync(databaseResult) {
   closure_0 = databaseResult;
   return (async () => {
-    closure_128_0 = await tmp5(tmp2[3]).cache(tmp5).get(closure_1_7);
+    await tmp5(tmp2[3]).cache(tmp5).get(closure_1_7);
+    closure_128_0 = value;
     let tmp8 = null;
     if (null != closure_128_0) {
       tmp8 = closure_128_0 === closure_1_6;
@@ -56,7 +57,8 @@ prototype["doesDatabaseVersionMatchJsConstants"] = function doesDatabaseVersionM
     if (null == forceResyncVersionResult) {
       return false;
     }
-    closure_128_0 = await forceResyncVersionResult.get(closure_2_5);
+    await forceResyncVersionResult.get(closure_2_5);
+    closure_128_0 = value;
     if (closure_128_0 != null) {
       version = closure_128_0.version;
     }

@@ -107,9 +107,9 @@ export default function ChatInputNotificationNudge(channel) {
   const stateFromStores = obj.useStateFromStores(items, () => {
     const guildId = channel.getGuildId();
     if (channel.isThread()) {
-      let isMutedResult = JoinedThreadsStore.isMuted(tmp.id);
+      let isMutedResult = JoinedThreadsStore.isMuted(channel.id);
     } else {
-      isMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, tmp.id);
+      isMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, channel.id);
     }
     return isMutedResult;
   });
@@ -130,8 +130,6 @@ export default function ChatInputNotificationNudge(channel) {
     }
   }
   obj = { cooldownDurationMs };
-  const tmp10 = cooldownDurationMs;
-  const tmp11 = _slicedToArray;
   const tmpResult1 = channel(7388);
   [tmp13, tmp14] = _slicedToArray(channel(7388).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   importDefault = tmp14;
@@ -149,15 +147,15 @@ export default function ChatInputNotificationNudge(channel) {
       }
     }
   }
-  obj = { cooldownDurationMs: tmp10 };
-  const tmp11Result = tmp11(channel(7388).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true), 2);
+  obj = { cooldownDurationMs };
+  const tmp11Result = _slicedToArray(channel(7388).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true), 2);
   dependencyMap = tmp17;
   const items1 = [tmp14];
   const items2 = [tmp11Result[1]];
   const tmpResult2 = channel(7388);
   const tmp18 = closure_4(() => _undefined(ContentDismissActionType.USER_DISMISS), items1);
   if (tmp13 === channel(1943).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
-    const obj1 = { promptType: tmp6.CHANNEL_BANNER, location: constants2.CHANNEL_BANNER, surface: constants5.CHANNEL_BANNER, body: null, onDismiss: null };
+    const obj1 = { promptType: PermissionPromptType.CHANNEL_BANNER, location: constants2.CHANNEL_BANNER, surface: constants5.CHANNEL_BANNER, body: null, onDismiss: null };
     const intl2 = tmp(1114).intl;
     obj1.body = intl2.string(tmp(1114).t["/6SnPw"]);
     obj1.onDismiss = tmp18;
@@ -165,7 +163,7 @@ export default function ChatInputNotificationNudge(channel) {
   } else {
     tmp24 = null;
     if (tmp11Result[0] === tmp(1943).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER) {
-      const obj2 = { promptType: tmp6.POST_REACTION_BANNER, location: constants2.POST_REACTION, surface: constants5.POST_REACTION_BANNER, body: null, onDismiss: null };
+      const obj2 = { promptType: PermissionPromptType.POST_REACTION_BANNER, location: constants2.POST_REACTION, surface: constants5.POST_REACTION_BANNER, body: null, onDismiss: null };
       const intl = tmp(1114).intl;
       obj2.body = intl.string(tmp(1114).t.VS6ey0);
       obj2.onDismiss = tmp19;

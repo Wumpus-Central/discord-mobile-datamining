@@ -1,6 +1,8 @@
 // === Module 16366: useYouBarAccessibilityLabel ===
 
 // Module 16366 (useYouBarAccessibilityLabel)
+import util from "util" /* 1114 */;
+import UserUtils from "UserUtils" /* 4404 */;
 import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10878 */;
 import useUserVoiceActivity from "useUserVoiceActivity" /* 10879 */;
 import isGameActivityDefault from "isGameActivity" /* 10886 */;
@@ -71,12 +73,12 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
       let text = null;
       if (closure_2) {
         text = null;
-        if (null != tmp6) {
+        if (null != id) {
           text = null;
           if (status !== constants.OFFLINE) {
             text = null;
             if (status !== constants.INVISIBLE) {
-              const activities = PresenceStore.getActivities(tmp6);
+              const activities = PresenceStore.getActivities(id);
               if (null != discoverableApplicationStream) {
                 let name;
                 if (activities != null) {
@@ -86,12 +88,12 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   }
                 }
                 if (null == name) {
-                  const intl3 = tmp4(1114).intl;
-                  let stringResult = intl3.string(tmp4(1114).t.eXan7B);
+                  const intl3 = util.intl;
+                  let stringResult = intl3.string(util.t.eXan7B);
                 }
-                const intl4 = tmp4(1114).intl;
+                const intl4 = util.intl;
                 obj1 = { name };
-                stringResult = intl4.formatToPlainString(tmp4(1114).t["0wJXSh"], obj1);
+                stringResult = intl4.formatToPlainString(util.t["0wJXSh"], obj1);
               } else {
                 let found1;
                 if (activities != null) {
@@ -107,9 +109,9 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   if (null != voiceChannel) {
                     if (!voiceChannel.isDM()) {
                       if (!voiceChannel.isGroupDM()) {
-                        const intl = tmp4(1114).intl;
+                        const intl = util.intl;
                         const string = intl.string;
-                        const t = tmp4(1114).t;
+                        const t = util.t;
                         if (isGuildStageVoiceResult) {
                           let stringResult1 = string(t.QygGCN);
                         } else {
@@ -119,8 +121,8 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                       }
                       text = stringResult1;
                     }
-                    const intl2 = tmp4(1114).intl;
-                    stringResult1 = intl2.string(tmp4(1114).t["9FaEzi"]);
+                    const intl2 = util.intl;
+                    stringResult1 = intl2.string(util.t["9FaEzi"]);
                   }
                 }
               }
@@ -132,8 +134,8 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
         text = closure_3;
       }
       if (text == null) {
-        text = tmp4(4404).humanizeStatus(status);
-        const tmp4Result = tmp4(4404);
+        text = UserUtils.humanizeStatus(status);
+        const tmp4Result = UserUtils;
       }
       const items1 = [tmp, tag, text];
       const found2 = items1.filter((item) => null != item);

@@ -2,6 +2,7 @@
 
 // Module 9953 (getStreamSettingsForPreset)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 4698 */;
 import GoLiveVideoPresetResolutionExperimentDefault from "GoLiveVideoPresetResolutionExperiment" /* 9954 */;
 import canStreamWithSettingsDefault from "canStreamWithSettings" /* 9955 */;
 import StreamSettingsConstants from "StreamSettingsConstants" /* 4607 */;
@@ -29,16 +30,13 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3) {
     return null;
   } else {
     for (const item10011 of tmp) {
-      let tmp3 = item10011;
-      let tmp4 = importDefault;
       if (canStreamWithSettingsDefault(arg0, item10011.resolution, item10011.fps, arg1, arg2)) {
         if (arg0 === constants.PRESET_VIDEO) {
-          let tmp26 = require;
           if (PlatformUtils.isPlatformEmbedded) {
-            let tmp26Result = tmp26(1115);
+            let tmp26Result = PlatformUtils;
             if (tmp26Result.isDesktop()) {
               let str = "getStreamSettingsForPreset";
-              let tmp11 = tmp4(4698)("getStreamSettingsForPreset", arg1, arg3);
+              let tmp11 = getFrontierTuningConfigIfEligibleDefault("getStreamSettingsForPreset", arg1, arg3);
               let tmp12 = tmp11;
               let maxResolution;
               if (tmp11 != null) {
@@ -46,9 +44,9 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3) {
               }
               if (null != maxResolution) {
                 if (null != tmp12.maxFPS) {
-                  if (tmp3.resolution !== hasOwnProperty.RESOLUTION_SOURCE) {
-                    if (tmp3.resolution < tmp12.maxResolution) {
-                      if (tmp3.fps <= tmp12.maxFPS) {
+                  if (item10011.resolution !== hasOwnProperty.RESOLUTION_SOURCE) {
+                    if (item10011.resolution < tmp12.maxResolution) {
+                      if (item10011.fps <= tmp12.maxFPS) {
                         let items = [, ];
                         ({ maxResolution: arr2[0], maxFPS: arr2[1] } = tmp12);
                         obj2.return();
@@ -62,7 +60,7 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3) {
           }
         }
         let items1 = [, ];
-        ({ resolution: arr[0], fps: arr[1] } = tmp3);
+        ({ resolution: arr[0], fps: arr[1] } = item10011);
         obj2.return();
         return items1;
       }

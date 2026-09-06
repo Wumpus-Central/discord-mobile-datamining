@@ -66,7 +66,7 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj.children = tmp10(tmp4(5587), size);
+    obj.children = jsx(tmp4(5587), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null });
     const tmp4Result = tmp4(5587);
   }
   return <closure_5 {...obj} />;
@@ -148,10 +148,9 @@ function ProfileEffect(profileEffect) {
         return shouldAnimateResult;
       });
       if (c1) {
-        tmp9.current = mapped;
+        ref2.current = mapped;
         _undefined2(mapped);
       }
-      tmp9 = ref2;
     }
   }, items4));
   const stop = tmp9Result.stop;
@@ -163,16 +162,16 @@ function ProfileEffect(profileEffect) {
   const items6 = [stateFromStores, stop, reset];
   const effect2 = noop.useEffect(() => {
     if (null !== ref5.current) {
-      if (tmp.current !== stateFromStores) {
-        if (tmp3 === ConstantsIOS.AppStates.ACTIVE) {
+      if (ref5.current !== stateFromStores) {
+        if (stateFromStores === ConstantsIOS.AppStates.ACTIVE) {
           reset();
         } else {
           stop();
         }
-        tmp.current = tmp3;
+        ref5.current = stateFromStores;
       }
     } else {
-      tmp.current = stateFromStores;
+      ref5.current = stateFromStores;
     }
   }, items6);
   const items7 = [paused, stop, reset];

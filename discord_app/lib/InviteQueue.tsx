@@ -7,7 +7,7 @@ import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import Queue from "Queue" /* 7835 */;
 
-let sum = DurationsDefault.Millis.SECOND + 10;
+const sum = DurationsDefault.Millis.SECOND + 10;
 let c3 = sum;
 const InvitePropertiesType = { GROUP_DM: 0, [0]: "GROUP_DM", USER: 1, [1]: "USER", CHANNEL: 2, [2]: "CHANNEL" };
 class InviteQueue extends tmp4 {

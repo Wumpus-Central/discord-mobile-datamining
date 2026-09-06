@@ -4,6 +4,8 @@
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import ChatInputUtils from "ChatInputUtils" /* 4425 */;
+import transitionToChannel from "transitionToChannel" /* 4571 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import PanelsNavigationUtils from "PanelsNavigationUtils" /* 16004 */;
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16005 */;
@@ -44,10 +46,10 @@ export default noop.memo(function MainTabsNavigatorPanel() {
   const items = [isChatLockedOpen];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (ref.current !== isChatLockedOpen) {
-      tmp.current = tmp2;
+      tmp.current = isChatLockedOpen;
       let obj = require;
       let result = dependencyMap;
-      if (tmp2) {
+      if (isChatLockedOpen) {
         obj = obj(16004);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
@@ -153,10 +155,9 @@ export default noop.memo(function MainTabsNavigatorPanel() {
           }
           if ("modal" !== name) {
             tmp2.current = true;
-            tmp14(4571).transitionToChannel(tmp5.current.channelId);
-            const tmp14Result = tmp14(4571);
+            transitionToChannel.transitionToChannel(tmp5.current.channelId);
+            const tmp14Result = transitionToChannel;
           }
-          tmp14 = require;
         }
       }
     } else {
@@ -241,10 +242,9 @@ export default noop.memo(function MainTabsNavigatorPanel() {
           movePanel(true, false, 0, true);
         }
       } else if (movePanel(false, false, 0, false)) {
-        tmp4(4425).dismissKeyboard();
-        const tmp4Result = tmp4(4425);
+        ChatInputUtils.dismissKeyboard();
+        const tmp4Result = ChatInputUtils;
       }
-      tmp4 = require;
     }
   }, items7);
   let channelId;

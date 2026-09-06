@@ -2,6 +2,7 @@
 
 // Module 9924 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 4965 */;
 import Pressables from "Pressables" /* 5123 */;
 import noop from "module_19" /* 19 */;
@@ -63,16 +64,16 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     tmp2Result = null;
     if (!flag) {
       const obj1 = { blurTheme: "dark", style: absoluteFill.absoluteFill };
-      tmp2Result = tmp2(VisualEffectViewDefault, obj1);
+      tmp2Result = closure_6(VisualEffectViewDefault, obj1);
     }
   }
   const items1 = [tmp2Result, , ];
   if (null != IconComponent) {
     const obj2 = { color: tmp.iconColor.color, size: "sm" };
-    tmp2Result = tmp2(IconComponent, obj2);
+    tmp2Result = closure_6(IconComponent, obj2);
   } else {
-    const obj3 = { source, color: tmp.iconColor.color, size: tmp5(1178).Icon.Sizes.SMALL_20 };
-    tmp2Result = tmp2(tmp5(1178).Icon, obj3);
+    const obj3 = { source, color: tmp.iconColor.color, size: native.Icon.Sizes.SMALL_20 };
+    tmp2Result = closure_6(native.Icon, obj3);
   }
   items1[1] = tmp2Result;
   let tmp2Result1 = null != membersCount;
@@ -81,7 +82,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
   }
   if (tmp2Result1) {
     const obj4 = { style: tmp.text, children: membersCount };
-    tmp2Result1 = tmp2(tmp5(1178).LegacyText, obj4);
+    tmp2Result1 = closure_6(native.LegacyText, obj4);
   }
   items1[2] = tmp2Result1;
   obj.children = items1;

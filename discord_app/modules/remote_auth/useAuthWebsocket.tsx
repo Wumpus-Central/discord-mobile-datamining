@@ -42,6 +42,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
       logger.info("document is not visible, will defer reconnection when document becomes visible.");
       closure_5(true);
     }
+    const obj = { step: typing.RemoteAuthStep.INITIALIZING };
   });
   const items = [cancel, memo];
   callback = noop.useCallback(() => {
@@ -50,6 +51,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
     if (!memo.pending) {
       memo.fail(cancel);
     }
+    const obj = { step: typing.RemoteAuthStep.INITIALIZING };
   }, items);
   const items1 = [state, arg1, first, tmp2[1]];
   const effect = noop.useEffect(() => {
@@ -107,7 +109,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
       let data = arg0;
       c3 = 0;
       c4 = 0;
-      let iter = (async (arg0, value) => {
+      let iter = (async (arg0) => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -327,7 +329,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
       }
       return applyArgumentsResult;
     }
-    closure_13 = async function _onopen(arg0, value) {
+    closure_13 = async function _onopen() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

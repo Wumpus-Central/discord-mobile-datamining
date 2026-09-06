@@ -133,11 +133,10 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
         if (null != tmp7) {
           let tmp38 = obj[tmp7];
           for (const key10031 in tmp9) {
-            let tmp41 = key10031;
             let addResult = set1.add(key10031);
             ({ evaluation_id, assignments } = tmp9[key10031]);
             obj = { evaluationId: evaluation_id, assignments: {} };
-            tmp38[tmp41] = obj;
+            tmp38[key10031] = obj;
             for (const item10042 of assignments) {
               let tmp16 = _slicedToArray(item10042, 6);
               [tmp17, tmp18, tmp19] = tmp16;
@@ -148,8 +147,7 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
               if (tmp19 == null) {
                 num = 0;
               }
-              obj = { hashedName: tmp17, variantId: null, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null, config: null };
-              obj.variantId = tmp18;
+              obj = { hashedName: tmp17, variantId: tmp18, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null, config: null };
               obj.trackedVariantId = tmp21;
               obj.isOverride = num & ApexTypes.ExperimentFlags.IsOverride;
               obj.revision = tmp20;
@@ -191,9 +189,7 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
       if (tmp17 == null) {
         num = 0;
       }
-      obj = { hashedName: null, variantId: null, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null };
-      obj.hashedName = tmp15;
-      obj.variantId = tmp16;
+      obj = { hashedName: tmp15, variantId: tmp16, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null };
       obj.trackedVariantId = tmp19;
       obj.isOverride = num & ApexTypes.ExperimentFlags.IsOverride;
       obj.revision = tmp18;
@@ -204,6 +200,7 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
     }
     continue;
   }
+  tmp3 = entries[Symbol.iterator]();
 };
 prototype["createOverride"] = function createOverride(experimentName, variantId) {
   obj = {};
@@ -306,8 +303,8 @@ prototype["getEvaluation"] = function getEvaluation(arg0, arg1) {
   }
   return evaluationId;
 };
-prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignmentInner(user, LOGGED_OUT_USER_ID_SENTINEL, arg2) {
-  const override = this.getOverride(arg2);
+prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignmentInner(user, LOGGED_OUT_USER_ID_SENTINEL, logger) {
+  const override = this.getOverride(logger);
   if (null != override) {
     items = [undefined, override];
     return items;
@@ -317,11 +314,11 @@ prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignme
       let items2 = items1;
     } else {
       items2 = [tmp10.evaluationId, ];
-      let tmp3 = dependencyMap4[arg2];
+      let tmp3 = dependencyMap4[logger];
       if (null == tmp3) {
         obj = MurmurHashV3Default;
-        const v3Result = obj.v3(arg2);
-        tmp2[arg2] = v3Result;
+        const v3Result = obj.v3(logger);
+        tmp2[logger] = v3Result;
         tmp3 = v3Result;
       }
       items2[1] = tmp10.assignments[tmp3];
@@ -329,9 +326,9 @@ prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignme
     return items2;
   }
 };
-prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(user, id, arg2, tmpResult) {
+prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(user, id, logger, tmpResult) {
   const self = this;
-  [tmp3, tmp4] = _slicedToArray(this.getEvaluationAndAssignmentInner(user, id, arg2), 2);
+  [tmp3, tmp4] = _slicedToArray(this.getEvaluationAndAssignmentInner(user, id, logger), 2);
   if ("guild" !== user) {
     items = [tmp3, tmp4];
     return items;
@@ -340,7 +337,8 @@ prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(us
     if (tmpResult == null) {
       LOGGED_OUT_USER_ID_SENTINEL = ApexTypes.LOGGED_OUT_USER_ID_SENTINEL;
     }
-    [r10021, tmp8] = tmp(self.getEvaluationAndAssignmentInner("user", LOGGED_OUT_USER_ID_SENTINEL, arg2), 2);
+    tmpResult = _slicedToArray(self.getEvaluationAndAssignmentInner("user", LOGGED_OUT_USER_ID_SENTINEL, logger), 2);
+    [r10021, tmp8] = tmpResult;
     if (null == tmp8) {
       const items1 = [undefined, undefined];
       let items6 = items1;
@@ -362,8 +360,7 @@ prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(us
     }
     return items6;
   }
-  tmp = _slicedToArray;
-  const tmp2 = _slicedToArray(this.getEvaluationAndAssignmentInner(user, id, arg2), 2);
+  const tmp2 = _slicedToArray(this.getEvaluationAndAssignmentInner(user, id, logger), 2);
 };
 prototype["trackExperimentExposure"] = function trackExperimentExposure(evaluation_id, experiment, location, unit_type, revision, trackedVariantId, arg6) {
   const self = this;

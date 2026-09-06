@@ -69,7 +69,7 @@ export default function ForumPostActionBar(channel) {
     obj = { style: tmp.reactionRow, children: null };
     obj1 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
     obj.children = closure_10(tmp2(11414).ForumPostActionBarReactions, obj1);
-    tmp11 = closure_10(tmp10, obj);
+    tmp11 = closure_10(View, obj);
   }
   const items5 = [tmp11, ];
   obj2 = { style: null, onLayout: callback, children: null };
@@ -104,9 +104,9 @@ export default function ForumPostActionBar(channel) {
     obj4.children = closure_10(tmp2(11415).ArrowLargeUpIcon, { size: "xs" });
     items7[2] = closure_10(tmp2(5123).PressableOpacity, obj4);
     obj2.children = items7;
-    items5[1] = tmp9(tmp10, obj2);
+    items5[1] = closure_11(View, obj2);
     obj.children = items5;
-    return tmp9(tmp10, obj);
+    return closure_11(View, obj);
   } else {
     let items9 = function handleFollow() {
       const result = messages_MessagesUtils.handleToggleFollowForumPost(channel, stateFromStores1);
@@ -143,6 +143,6 @@ export default function ForumPostActionBar(channel) {
       obj5.children = items11;
       tmp15 = obj5;
     }
-    tmp9(tmp2(5123).PressableOpacity, tmp15);
+    closure_11(tmp2(5123).PressableOpacity, tmp15);
   }
 };

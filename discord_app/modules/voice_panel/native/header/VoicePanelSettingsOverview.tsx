@@ -7,19 +7,23 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
+import LockIcon from "LockIcon" /* 5095 */;
 import TableRow from "TableRow" /* 5605 */;
 import TableRowIcon from "TableRowIcon" /* 5611 */;
 import TableRowArrow from "TableRowArrow" /* 5612 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
+import showShareActionSheet from "showShareActionSheet" /* 8361 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8625 */;
 import _modDef8627 from "module_8627" /* 8627 */;
 import FormComponents from "FormComponents" /* 9118 */;
 import useIsSecureFramesVerified from "useIsSecureFramesVerified" /* 9131 */;
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9154 */;
 import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9170 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 9212 */;
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 9978 */;
 import WrenchIcon from "WrenchIcon" /* 15562 */;
 import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17109 */;
@@ -110,14 +114,13 @@ function ShareActivityLogsButton() {
     const json = obj.stringify(items);
     if ("" === json) {
       obj = { key: "EMBEDDED_ACTIVITIES_SHARE_EMPTY_LOGS_ERROR_MESSAGE", content: null };
-      const intl = tmp(tmp2[24]).intl;
-      obj.content = intl.string(tmp(tmp2[24]).t["i+9VWy"]);
-      require("ToastActionCreators").open(obj);
-      const obj5 = require("ToastActionCreators");
+      const intl = util.intl;
+      obj.content = intl.string(util.t["i+9VWy"]);
+      ToastActionCreatorsDefault.open(obj);
     } else {
-      let tmpResult = tmp(tmp2[28]);
+      let tmpResult = VoicePanelSettingsActionCreators;
       const result = tmpResult.closeVoicePanelSettingsActionSheet();
-      tmpResult = tmp(tmp2[29]);
+      tmpResult = showShareActionSheet;
       obj = { message: json };
       tmpResult.showShareActionSheet(obj, "Activity Logs");
     }
@@ -184,18 +187,17 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   const items3 = [stateFromStores, stateFromStores1];
   const stateFromStoresArray = obj2.useStateFromStoresArray(items2, () => {
     if (null != stateFromStores) {
-      if (obj.isPrivate()) {
+      if (stateFromStores.isPrivate()) {
         const _Set = Set;
         const set = new Set(stateFromStores1.map((user) => user.user.id));
         const items = [];
-        const recipients = obj.recipients;
+        const recipients = stateFromStores.recipients;
         for (const item10020 of recipients) {
-          let tmp8 = item10020;
           let user = UserStore.getUser(item10020);
           let hasItem = null == user;
           let tmp11 = user;
           if (!hasItem) {
-            hasItem = set.has(tmp8);
+            hasItem = set.has(item10020);
           }
           if (!hasItem) {
             let arr = items.push(tmp11);
@@ -277,8 +279,8 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   if (tmp22) {
     obj = { hasIcons: false, children: null };
     obj = { channel: stateFromStores, analyticsSection: constants.CHANNEL_ACTION_SHEET };
-    obj.children = tmp26(tmp17(tmp2[52]), obj);
-    tmp26Result = tmp26(tmp(tmp2[51]).VoicePanelFormSection, obj);
+    obj.children = closure_18(tmp17(tmp2[52]), obj);
+    tmp26Result = closure_18(tmp(tmp2[51]).VoicePanelFormSection, obj);
   }
   children[1] = tmp26Result;
   let tmp26Result1 = stateFromStores6;
@@ -293,11 +295,11 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
       obj1.label = intl.string(tmp(tmp2[24]).t.XPDhcc);
       const intl2 = tmp(tmp2[24]).intl;
       obj1.subLabel = intl2.string(tmp(tmp2[24]).t.w7ZEot);
-      obj1.trailing = tmp26(tmp(tmp2[34]).TableRowArrow, {});
-      tmp26Result = tmp26(tmp(tmp2[30]).TableRow, obj1);
+      obj1.trailing = closure_18(tmp(tmp2[34]).TableRowArrow, {});
+      tmp26Result = closure_18(tmp(tmp2[30]).TableRow, obj1);
     }
     obj2 = { hasIcons: false, children: tmp26Result };
-    tmp26Result1 = tmp26(tmp(tmp2[51]).VoicePanelFormSection, obj2);
+    tmp26Result1 = closure_18(tmp(tmp2[51]).VoicePanelFormSection, obj2);
   }
   children[2] = tmp26Result1;
   obj3 = { onPress: callback3, icon: null, label: null, subLabel: null, trailing: null };
@@ -343,13 +345,13 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   if (tmp26Result2) {
     obj9 = { onPress: callback4, icon: null, label: null, subLabel: null, trailing: null };
     obj10 = { IconComponent: tmp(tmp2[25]).LockIcon, source: tmp17(tmp2[54]) };
-    obj9.icon = tmp26(tmp(tmp2[31]).TableRowIcon, obj10);
+    obj9.icon = closure_18(tmp(tmp2[31]).TableRowIcon, obj10);
     const intl11 = tmp(tmp2[24]).intl;
     obj9.label = intl11.string(tmp(tmp2[24]).t.cTQI5t);
     const intl12 = tmp(tmp2[24]).intl;
     obj9.subLabel = intl12.string(tmp(tmp2[24]).t.Etxti2);
-    obj9.trailing = tmp26(tmp(tmp2[34]).TableRowArrow, {});
-    tmp26Result2 = tmp26(tmp(tmp2[30]).TableRow, obj9);
+    obj9.trailing = closure_18(tmp(tmp2[34]).TableRowArrow, {});
+    tmp26Result2 = closure_18(tmp(tmp2[30]).TableRow, obj9);
   }
   items16[3] = tmp26Result2;
   if (isSecureFramesUIEnabled) {
@@ -361,13 +363,13 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   if (isSecureFramesUIEnabled) {
     obj11 = { onPress: callback5, icon: null, label: null, subLabel: null, trailing: null };
     obj12 = { IconComponent: tmp(tmp2[25]).LockIcon, source: tmp17(tmp2[54]) };
-    obj11.icon = tmp26(tmp(tmp2[31]).TableRowIcon, obj12);
+    obj11.icon = closure_18(tmp(tmp2[31]).TableRowIcon, obj12);
     const intl13 = tmp(tmp2[24]).intl;
     obj11.label = intl13.string(tmp(tmp2[24]).t.QogHld);
     const intl14 = tmp(tmp2[24]).intl;
     obj11.subLabel = intl14.string(tmp(tmp2[24]).t["j5+1ed"]);
-    obj11.trailing = tmp26(tmp(tmp2[34]).TableRowArrow, {});
-    isSecureFramesUIEnabled = tmp26(tmp(tmp2[30]).TableRow, obj11);
+    obj11.trailing = closure_18(tmp(tmp2[34]).TableRowArrow, {});
+    isSecureFramesUIEnabled = closure_18(tmp(tmp2[30]).TableRow, obj11);
   }
   items16[4] = isSecureFramesUIEnabled;
   children[3] = closure_19(tmp(tmp2[51]).VoicePanelFormSection, { hasIcons: true, children: items16 });
@@ -384,11 +386,11 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
     if (canInviteMembers) {
       const obj15 = { onPress: inviteMembersCallback, icon: null, label: null, trailing: null };
       const obj16 = { IconComponent: tmp(tmp2[59]).GroupPlusIcon, source: tmp17(tmp2[60]) };
-      obj15.icon = tmp26(tmp(tmp2[31]).TableRowIcon, obj16);
+      obj15.icon = closure_18(tmp(tmp2[31]).TableRowIcon, obj16);
       const intl16 = tmp(tmp2[24]).intl;
       obj15.label = intl16.string(tmp(tmp2[24]).t["f1+QIK"]);
-      obj15.trailing = tmp26(tmp(tmp2[34]).TableRowArrow, {});
-      tmp26Result3 = tmp26(tmp(tmp2[30]).TableRow, obj15);
+      obj15.trailing = closure_18(tmp(tmp2[34]).TableRowArrow, {});
+      tmp26Result3 = closure_18(tmp(tmp2[30]).TableRow, obj15);
     }
     const items17 = [
       tmp26Result3,
@@ -401,7 +403,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
       stateFromStoresArray.map((user) => collapsedCategories(FormComponents.MemberRowItem, { user, channelId, guildId, notConnected: true, showRing: true }, user.id))
     ];
     obj13.children = items17;
-    tmp24Result = tmp24(tmp(tmp2[51]).VoicePanelFormSection, obj13);
+    tmp24Result = closure_19(tmp(tmp2[51]).VoicePanelFormSection, obj13);
   }
   children[4] = tmp24Result;
   tmp24Result = null;
@@ -411,11 +413,11 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
     obj17.title = intl17.string(tmp(tmp2[24]).t.J6rqB7);
     let tmp26Result4 = null;
     if (stateFromStores5) {
-      tmp26Result4 = tmp26(ShareActivityLogsButton, {});
+      tmp26Result4 = closure_18(ShareActivityLogsButton, {});
     }
-    const items18 = [tmp26Result4, tmp26(ActivityDebugToggle, {})];
+    const items18 = [tmp26Result4, closure_18(ActivityDebugToggle, {})];
     obj17.children = items18;
-    tmp24Result = tmp24(tmp(tmp2[51]).VoicePanelFormSection, obj17);
+    tmp24Result = closure_19(tmp(tmp2[51]).VoicePanelFormSection, obj17);
   }
   children[5] = tmp24Result;
   return closure_19(closure_20, { children });

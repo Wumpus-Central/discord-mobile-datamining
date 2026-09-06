@@ -45,5 +45,5 @@ export default function OnboardingHomeScrollView(children) {
   const tmp = ref();
   return <ScrollView ref={ref} scrollIndicatorInsets={{ right: 1 }} onScroll={function onScroll(nativeEvent) {
     const result = scrollValue.set(nativeEvent.nativeEvent.contentOffset.y);
-  }} scrollEventThrottle={16} style={ref().guildFeedBackground} contentContainerStyle={noop.useMemo(() => ({ paddingBottom: 16 + bottom, marginTop: headerOffset }), items2)}>{arg0.children}</ScrollView>;
+  }} scrollEventThrottle={16} style={ref().guildFeedBackground} contentContainerStyle={noop.useMemo(() => ({ paddingBottom: 16 + bottom, marginTop: headerOffset }), items2)}>{children.children}</ScrollView>;
 };

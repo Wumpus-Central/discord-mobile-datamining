@@ -27,7 +27,7 @@ export default function useOpenProfileSettings() {
   return useCallback(() => {
     if (null != guild) {
       let obj = GuildIdentityActionCreators;
-      const guildIdentitySettings = obj.initGuildIdentitySettings(tmp.id);
+      const guildIdentitySettings = obj.initGuildIdentitySettings(guild.id);
     }
     if (null != guild) {
       let USER_PROFILE = constants.GUILD;

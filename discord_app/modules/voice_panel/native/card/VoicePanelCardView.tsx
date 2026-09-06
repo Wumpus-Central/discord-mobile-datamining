@@ -7,21 +7,22 @@ import native from "native" /* 4271 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import Suspender from "Suspender" /* 4923 */;
+import spring from "spring" /* 4974 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7073 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9495 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10993 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12277 */;
 import VoicePanelCardDefault from "VoicePanelCard" /* 17132 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 
-const spring = tmp23(4974);
-const roundToNearestPixelDefault = tmp3(10993);
 require = fn;
 function getCardKey(type) {
   return "" + type.type + "-" + type.id;
 }
-function renderCard(arg0, item, transitionState, cleanUp) {
-  return jsx(VoicePanelCardDefault, { item, transitionState, cleanUp }, arg0);
+function renderCard(key, item, transitionState, cleanUp) {
+  return jsx(VoicePanelCardDefault, { item, transitionState, cleanUp }, key);
 }
 function CardContentFreezer(children) {
   children = children.children;
@@ -53,7 +54,7 @@ function CardContentFreezer(children) {
   const tmp6 = mode === VoicePanelPIPModes.IN_APP && require("useRefValue")(ref);
   importDefault = tmp6;
   closure_130_0 = tmp6;
-  const context = obj2.useContext(tmp5(tmp2[13]));
+  const context = noop.useContext(tmp5(tmp2[13]));
   const connected = context.connected;
   closure_130_1 = connected;
   const controlsSpecs = context.controlsSpecs;
@@ -77,7 +78,6 @@ function CardContentFreezer(children) {
   const fn = function o() {
     obj = animatedStyle;
     const bound = Math.max(_slicedToArray.get().bottom, EDGE_GUTTER);
-    const tmp = EDGE_GUTTER;
     ({ height, paddingTop } = calculateVoicePanelHeaderSpecsDefault(_slicedToArray.get(), closure_1_9));
     let num = 1;
     let num2 = 0;
@@ -86,7 +86,7 @@ function CardContentFreezer(children) {
     if (freeze.get()) {
       let height2 = paddingTop + noop.get().height + bound;
       if (height2 - absoluteFill.get().height < 8) {
-        height2 = obj3.get().height;
+        height2 = absoluteFill.get().height;
       }
       num2 = 0;
       num3 = num;
@@ -100,28 +100,28 @@ function CardContentFreezer(children) {
           num3 = num;
           num4 = height2;
           if (null == ChannelRTCStore.get()) {
-            const diff = height2 - height - tmp;
+            const diff = height2 - height - EDGE_GUTTER;
             const diff1 = diff - obj.get().height - bound;
-            const diff2 = obj3.get().height - paddingTop - bound;
-            const diff3 = obj3.get().height - height;
+            const diff2 = absoluteFill.get().height - paddingTop - bound;
+            const diff3 = absoluteFill.get().height - height;
             const diff4 = diff3 - obj.get().height - bound;
             let result = num;
-            if (obj2.get().height > diff1) {
-              result = diff1 / obj2.get().height;
+            if (noop.get().height > diff1) {
+              result = diff1 / noop.get().height;
             }
             let diff5 = height;
             if (tmp16) {
-              const result1 = (diff2 - obj2.get().height) / 2;
-              diff5 = height - (result1 - (diff4 - obj2.get().height * result) / 2) * result;
+              const result1 = (diff2 - noop.get().height) / 2;
+              diff5 = height - (result1 - (diff4 - noop.get().height * result) / 2) * result;
             }
-            if (obj2.get().height > diff1) {
+            if (noop.get().height > diff1) {
               let sum = diff5 + (height2 * result - height2) / 2;
             } else {
-              sum = diff5 + (diff1 - (obj3.get().height - paddingTop - bound)) / 2;
+              sum = diff5 + (diff1 - (absoluteFill.get().height - paddingTop - bound)) / 2;
             }
             paddingTop = paddingTop * result;
             const diff6 = sum - paddingTop;
-            tmp16 = obj2.get().height < diff2 && obj2.get().height > diff4;
+            tmp16 = noop.get().height < diff2 && noop.get().height > diff4;
           }
         }
       }
@@ -146,6 +146,7 @@ function CardContentFreezer(children) {
       return size;
     }
     tmp27 = closure_2_8;
+    obj5 = spring;
   };
   __closure = { controlsSpecs, VoicePanelControlsModes, safeArea, EDGE_GUTTER, calculateVoicePanelHeaderSpecs: tmp5(tmp2[16]), edgeGutter: token, connected, contentDimensions, windowDimensions, mode: mode2, VoicePanelModes, focused, roundToNearestPixel: tmp5(tmp2[17]), withSpring: tmp(tmp2[18]).withSpring, wrapperOffset, LAYOUT_PHYSICS, SCALE_PHYSICS: __closure, freeze: tmp6 };
   fn.__closure = __closure;
@@ -195,8 +196,8 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
     chunkedParticipants((start) => {
       let tmp2 = start;
       if (start.start === start.start) {
-        tmp2 = tmp;
-        if (start.end === tmp.end) {
+        tmp2 = start;
+        if (start.end === start.end) {
           tmp2 = start;
         }
       }
@@ -212,17 +213,19 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   fn.__workletHash = 1074173860641;
   fn.__initData = __initData;
   const fn2 = function s(safeAreaState, current) {
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
+    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
       ReanimatedRexport.runOnJS(stateFromStoresArray)(safeAreaState);
       const tmp2Result = ReanimatedRexport;
     }
+    obj = cheapWorkletShallowEqual;
+    tmp = current;
   };
   const __closure = { cheapWorkletShallowEqual: channelId(stateFromStoresArray[12]).cheapWorkletShallowEqual, runOnJS: channelId(stateFromStoresArray[11]).runOnJS, updateValueIfChange: callback };
   fn2.__closure = __closure;
   fn2.__workletHash = 13543715159803;
   fn2.__initData = __initData2;
   const animatedReaction = __closure.useAnimatedReaction(fn, fn2);
-  const tmp = _slicedToArray(noop.useState(closure_18), 2);
+  let tmp = _slicedToArray(noop.useState(closure_18), 2);
   chunkedParticipants = channelId(stateFromStoresArray[23]).useChunkedParticipants(channelId, tmp2);
   const obj3 = channelId(stateFromStoresArray[23]);
   const items = [ChannelRTCStore];
@@ -236,7 +239,7 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   const effect = noop.useEffect(() => {
     obj = _modDef12;
     if (!obj.isEqual(ref.current, stateFromStoresArray)) {
-      const differenceWithResult = _modDef12.differenceWith(tmp3.current, tmp4, (id, id2) => id.id === id2.id);
+      const differenceWithResult = _modDef12.differenceWith(ref.current, stateFromStoresArray, (id, id2) => id.id === id2.id);
       let user = null;
       if (differenceWithResult.length > 0) {
         user = differenceWithResult[0].user;

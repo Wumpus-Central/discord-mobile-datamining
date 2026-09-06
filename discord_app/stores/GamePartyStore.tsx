@@ -120,7 +120,7 @@ function handleLocalPresenceUpdate() {
 function handleRelationshipAddOrUpdate(relationship) {
   relationship = relationship.relationship;
   if (!RelationshipStore.isBlocked(relationship.id)) {
-    if (!obj.isIgnored(relationship.id)) {
+    if (!RelationshipStore.isIgnored(relationship.id)) {
       return false;
     }
   }
@@ -137,7 +137,6 @@ function handleRelationshipAddOrUpdate(relationship) {
       continue;
     }
   }
-  obj = RelationshipStore;
 }
 const Constants = fn(1074);
 ({ StatusTypes: hasOwnProperty, ME: metroRequire } = Constants);

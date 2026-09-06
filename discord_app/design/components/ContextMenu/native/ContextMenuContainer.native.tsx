@@ -25,8 +25,8 @@ let closure_7 = [];
 function EMPTY_CALLBACK() {
 
 }
-function renderItem(arg0, menu, transitionState, cleanUp) {
-  return jsx(ContextMenuPopout.ContextMenuPopout, { menu, transitionState, cleanUp }, arg0);
+function renderItem(key, menu, transitionState, cleanUp) {
+  return jsx(ContextMenuPopout.ContextMenuPopout, { menu, transitionState, cleanUp }, key);
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuContainer.native.tsx");
@@ -87,7 +87,7 @@ export const ContextMenuContainer = function ContextMenuContainer() {
     if (0 === arg1.length) {
       str = "none";
     }
-    obj = { pointerEvents: str, style: closure_0.wrapperView, children: tmp(React4, obj) };
+    obj = { pointerEvents: str, style: closure_0.wrapperView, children: <React4 style={closure_0.overlayView}>{null}</React4> };
     obj = { onDismiss, children };
     obj.children = jsx(Dialog.Dialog, { onDismiss, children });
     return jsx(OverlayViewDefault, { onDismiss, children });

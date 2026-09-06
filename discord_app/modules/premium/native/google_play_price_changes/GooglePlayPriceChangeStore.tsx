@@ -3,9 +3,10 @@
 // Module 16932 (GooglePlayPriceChangeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
-const require = fn;
+require = fn;
 function onInitializeSync() {
   priceChange = null;
   c4 = false;
@@ -31,6 +32,7 @@ function onInitializeSync() {
       c4 = true;
     }
   }
+  obj = PlatformUtils;
 }
 let items = [, , ];
 ({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = fn(1074).SubscriptionStatusTypes);

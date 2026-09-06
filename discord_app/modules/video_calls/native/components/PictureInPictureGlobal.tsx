@@ -136,8 +136,8 @@ let closure_19 = noop.memo((channel) => {
     type1 = tmp10.type;
   }
   if (ParticipantTypes.HIDDEN_STREAM !== type1) {
-    if (tmp18.STREAM !== type1) {
-      if (tmp18.USER === type1) {
+    if (ParticipantTypes.STREAM !== type1) {
+      if (ParticipantTypes.USER === type1) {
         let tmp22 = null;
         if (!stateFromStores2) {
           obj = { participant: tmp10, avatarSize: null, resizeMode: null, onSingleTap: null, onDoubleTap: null };
@@ -151,7 +151,7 @@ let closure_19 = noop.memo((channel) => {
         let tmp21 = tmp22;
       } else {
         tmp21 = null;
-        if (tmp18.ACTIVITY === type1) {
+        if (ParticipantTypes.ACTIVITY === type1) {
           obj1 = {
             participant: tmp10,
             channel,
@@ -187,13 +187,13 @@ let closure_19 = noop.memo((channel) => {
       obj4.avatarSize = tmp5(tmp3[12]).AvatarSizes.PROFILE;
       obj4.resizeMode = tmp5(tmp3[25]).ResizeMode.COVER;
       obj4.onSingleTap = onDoubleTap;
-      tmp26Result = tmp26(tmp2Result, obj4);
+      tmp26Result = closure_15(tmp2Result, obj4);
     }
     const items8 = [tmp26Result, , ];
     tmp26Result = null != stateFromStores && !tmp19;
     if (tmp26Result) {
       const obj5 = { onSingleTap: onDoubleTap };
-      tmp26Result = tmp26(tmp2(tmp3[29]), obj5);
+      tmp26Result = closure_15(tmp2(tmp3[29]), obj5);
     }
     items8[1] = tmp26Result;
     const obj6 = { activeOpacity: 0.7, children: null };
@@ -210,6 +210,7 @@ let closure_19 = noop.memo((channel) => {
   obj7.onSingleTap = onDoubleTap;
   obj7.onDoubleTap = onDoubleTap;
   tmp21 = closure_15(stateFromStores1(onDoubleTap[24]), obj7);
+  const tmp2Result1 = stateFromStores1(onDoubleTap[24]);
 });
 let closure_20 = noop.memo((channel) => {
   channel = channel.channel;

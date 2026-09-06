@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
+import WarningIcon from "WarningIcon" /* 8588 */;
 import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14865 */;
 import useParentalConsentWarning from "useParentalConsentWarning" /* 14866 */;
 import noop from "module_19" /* 19 */;
@@ -36,9 +37,9 @@ let SettingBuilders = {
         tmp6 = null;
         if (daysRemaining >= 0) {
           obj = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
-          const intl = tmp(1114).intl;
+          const intl = util.intl;
           obj.accessibilityLabel = intl.string(_modDef2396.wucWfE);
-          tmp6 = jsx(tmp(8588).WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
+          tmp6 = jsx(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
         }
       }
     }

@@ -18,14 +18,14 @@ export default function ViewAllRow(title) {
   title = title.title;
   let formatToPlainStringResult;
   if (null != title) {
-    const intl = tmp3(1114).intl;
+    const intl = util.intl;
     let obj = { title };
-    formatToPlainStringResult = intl.formatToPlainString(tmp3(1114).t["bj/2kV"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(util.t["bj/2kV"], obj);
   }
   obj = { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true };
   obj = { style: closure_4().expandCTALabelContainer, children: null };
   const obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
-  const intl2 = tmp3(1114).intl;
+  const intl2 = util.intl;
   obj1.children = intl2.format(util.t.gVw57p, {});
   obj.children = jsx(Text_Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
   obj.label = <View style={closure_4().expandCTALabelContainer}>{null}</View>;

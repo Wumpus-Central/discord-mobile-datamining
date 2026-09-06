@@ -3,6 +3,7 @@
 // Module 14660 (WebAuthnScreens)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1114 */;
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import WebAuthnConstants from "WebAuthnConstants" /* 14657 */;
 import PasskeyUpsellViewDefault from "PasskeyUpsellView" /* 14661 */;
 import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 14663 */;
@@ -34,7 +35,7 @@ export const getScreens = function getScreens(isModal) {
   };
   let headerCloseButton;
   if (isModal) {
-    let tmp2Result = tmp2(5624);
+    let tmp2Result = NavigatorHeader;
     headerCloseButton = tmp2Result.getHeaderCloseButton(PasskeyUpsellActionCreatorsDefault.closePasskeyUpsellModal);
   }
   obj.headerLeft = headerCloseButton;
@@ -46,7 +47,7 @@ export const getScreens = function getScreens(isModal) {
     },
     title: null
   };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj1.title = intl2.string(util.t.UBBwwF);
   obj[WebAuthnScreens.EDIT] = obj1;
   const obj2 = {
@@ -55,7 +56,7 @@ export const getScreens = function getScreens(isModal) {
     },
     title: null
   };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj2.title = intl3.string(util.t.vrOCCk);
   obj[WebAuthnScreens.REGISTER] = obj2;
   const obj3 = {
@@ -66,11 +67,11 @@ export const getScreens = function getScreens(isModal) {
     title: null,
     headerLeft: null
   };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = util.intl;
   obj3.title = intl4.string(util.t["cY/IOu"]);
   let headerCloseButton1;
   if (isModal) {
-    tmp2Result = tmp2(5624);
+    tmp2Result = NavigatorHeader;
     headerCloseButton1 = tmp2Result.getHeaderCloseButton(PasskeyUpsellActionCreatorsDefault.closePasskeyUpsellModal);
   }
   obj3.headerLeft = headerCloseButton1;
@@ -81,7 +82,7 @@ export const getScreens = function getScreens(isModal) {
     },
     title: null
   };
-  const intl5 = tmp2(1114).intl;
+  const intl5 = util.intl;
   obj4.title = intl5.string(util.t["7wPZln"]);
   obj[WebAuthnScreens.SUCCESS] = obj4;
   return obj;

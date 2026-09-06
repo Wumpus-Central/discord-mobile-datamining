@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
+import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 import SearchEmpty from "SearchEmpty" /* 10317 */;
 import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 10321 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +32,7 @@ export default noop.memo(function EmojiPickerListComponentEmpty(insetBottom) {
   const tmp = closure_5();
   const modalDismissGuardRefreshControl = useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp3(6627).BottomSheetScrollView;
+    let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
@@ -42,7 +43,7 @@ export default noop.memo(function EmojiPickerListComponentEmpty(insetBottom) {
   }
   obj.refreshControl = tmp8;
   obj = { source: searchEmptySource, body: null, bodyStyle: null, containerStyle: null, imageStyle: null };
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.body = intl.string(util.t.IxxiKF);
   ({ emptyStateBody: obj4.bodyStyle, emptyStateContainer: obj4.containerStyle, emptyStateImage: obj4.imageStyle } = tmp);
   obj.children = jsx(native.RefreshEmptyState, { source: searchEmptySource, body: null, bodyStyle: null, containerStyle: null, imageStyle: null });

@@ -2,10 +2,15 @@
 
 // Module 11823 (MentionableSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 4792 */;
+import guild_boosting_RoleIconUtils from "guild_boosting/RoleIconUtils" /* 7187 */;
 import RoleIconDefault from "RoleIcon" /* 7188 */;
 import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8120 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9752 */;
 import DiscordTagDefault from "DiscordTag" /* 9803 */;
+import UserIcon from "UserIcon" /* 11825 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -56,18 +61,18 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
       } else {
         const isMobileOnlineResult = PresenceStore.isMobileOnline(user.id);
         const status = PresenceStore.getStatus(user.id);
-        let obj = { user, isMobileOnline: isMobileOnlineResult, isVROnline: PresenceStore.isVROnline(user.id), status, guildId, size: tmp(1178).AvatarSizes.XSMALL };
-        return closure_2_10(tmp(1178).Avatar, obj);
+        let obj = { user, isMobileOnline: isMobileOnlineResult, isVROnline: PresenceStore.isVROnline(user.id), status, guildId, size: native.AvatarSizes.XSMALL };
+        return closure_2_10(native.Avatar, obj);
       }
-    } else if (type.type === tmp(4792).SelectOptionType.ROLE) {
+    } else if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
       if (null != guild) {
-        const role = GuildRoleStore.getRole(tmp3.id, type.value);
+        const role = GuildRoleStore.getRole(guild.id, type.value);
       }
       if (null != guild) {
         if (null != role) {
-          let tmpResult = tmp(7187);
-          if (tmpResult.canGuildUseRoleIcons(tmp3, role)) {
-            tmpResult = tmp(7187);
+          let tmpResult = guild_boosting_RoleIconUtils;
+          if (tmpResult.canGuildUseRoleIcons(guild, role)) {
+            tmpResult = guild_boosting_RoleIconUtils;
             let roleIconData = tmpResult.getRoleIconData(role);
             if (roleIconData == null) {
               roleIconData = {};
@@ -89,7 +94,7 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
             colorString = React7;
           }
           const obj2 = { color: colorString };
-          return closure_2_10(tmp(9752).ShieldUserIcon, obj2);
+          return closure_2_10(ShieldUserIcon.ShieldUserIcon, obj2);
         }
       }
       return null;
@@ -123,7 +128,7 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         if (null != tmp7) {
           let obj = { style: closure_3.roleCountContainer, children: null };
           obj = { style: closure_3.roleCountText, variant: "text-sm/medium", color: "interactive-text-default", children: tmp7 };
-          const items = [closure_2_10(tmp(4556).Text, obj), closure_2_10(tmp(11825).UserIcon, { size: "xs" })];
+          const items = [closure_2_10(Text_Text.Text, obj), closure_2_10(UserIcon.UserIcon, { size: "xs" })];
           obj.children = items;
           return closure_2_11(View, obj);
         }
@@ -144,9 +149,9 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         if (user != null) {
           bot = user.bot;
         }
-        const intl2 = tmp(tmp2[22]).intl;
+        const intl2 = selectionActionComponent(guildId[22]).intl;
         const formatToPlainString = intl2.formatToPlainString;
-        const t = tmp(tmp2[22]).t;
+        const t = selectionActionComponent(guildId[22]).t;
         if (bot) {
           let obj = { username: type.label, discriminator: null };
           let discriminator;
@@ -165,10 +170,10 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj);
         }
         return formatToPlainStringResult;
-      } else if (type.type === tmp(tmp2[13]).SelectOptionType.ROLE) {
-        const intl = tmp(tmp2[22]).intl;
+      } else if (type.type === selectionActionComponent(guildId[13]).SelectOptionType.ROLE) {
+        const intl = selectionActionComponent(guildId[22]).intl;
         obj = { roleName: type.label };
-        return intl.formatToPlainString(tmp(tmp2[22]).t.F6ejkk, obj);
+        return intl.formatToPlainString(selectionActionComponent(guildId[22]).t.F6ejkk, obj);
       }
     },
     channelId,

@@ -64,7 +64,6 @@ function QuestProgressBottomSheet(quest) {
     tmp14 = null == claimedAt;
   }
   const formatToPlainStringResult = intl.formatToPlainString(quest(1114).t.EAYZAr, obj);
-  const tmp11 = QuestsExperimentLocations;
   const isQuestAccessSuspended = quest(11483).useIsQuestAccessSuspended();
   const tmpResult1 = quest(11483);
   obj1 = { quest, questContent: tmp(5447).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: tmp(5447).QuestContent.RUNNING_ACTIVITY };
@@ -72,7 +71,7 @@ function QuestProgressBottomSheet(quest) {
   ({ isClaiming, claim } = questRewardClaimHandler);
   const items = [claim];
   const items1 = [quest.id];
-  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -154,7 +153,7 @@ function QuestProgressBottomSheet(quest) {
   obj2 = { style: tmp4.heroContainer, children: null };
   let tmp24 = null != url;
   if (tmp24) {
-    const obj3 = { source: null, style: null };
+    let obj3 = { source: null, style: null };
     const obj4 = { uri: url };
     obj3.source = obj4;
     obj3.style = tmp4.heroImg;
@@ -188,7 +187,7 @@ function QuestProgressBottomSheet(quest) {
   const intl2 = tmp(1114).intl;
   obj8.accessibilityLabel = intl2.string(quest(1114).t.RDE0Sc);
   const items5 = [closure_11(quest(8097).IconButton, obj8), ];
-  const obj9 = { quest, showShareLink: true, location: tmp11.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: null, children: null };
+  const obj9 = { quest, showShareLink: true, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: null, children: null };
   const tmpResult2 = quest(15122);
   obj9.sourceQuestContent = quest(5447).QuestContent.RUNNING_ACTIVITY;
   obj9.children = contextMenuButton;
@@ -270,7 +269,7 @@ let closure_13 = createStyles.createStyles((arg0) => {
   obj = { height: num, position: "relative", marginBottom: null };
   let num2 = 0;
   if (!arg0) {
-    num2 = 52 + tmp(576).space.PX_8;
+    num2 = 52 + nativeDefault.space.PX_8;
   }
   obj.marginBottom = num2;
   obj.heroContainer = obj;
@@ -286,20 +285,20 @@ let closure_13 = createStyles.createStyles((arg0) => {
   obj.heroGradient = obj2;
   let num4 = -52;
   if (arg0) {
-    num4 = tmp(576).space.PX_12;
+    num4 = nativeDefault.space.PX_12;
   }
   obj.gameTileContainer = { position: "absolute", bottom: num4, left: 0, right: 0, alignItems: "center" };
-  const rect = { position: "absolute", top: tmp(576).space.PX_16, right: tmp(576).space.PX_16, display: "flex", flexDirection: "row", gap: tmp(576).space.PX_16, alignItems: "center" };
+  const rect = { position: "absolute", top: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_16, alignItems: "center" };
   obj.contextMenuContainer = rect;
   let PX_16;
   if (!arg0) {
-    PX_16 = tmp(576).space.PX_16;
+    PX_16 = nativeDefault.space.PX_16;
   }
   obj.textContainer = { alignItems: "center", paddingTop: PX_16, gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16, textAlign: "center" };
   obj.questDescription = { textAlign: "center" };
   let PX_161;
   if (!arg0) {
-    PX_161 = tmp(576).space.PX_16;
+    PX_161 = nativeDefault.space.PX_16;
   }
   obj.buttonsContainer = { paddingTop: PX_161 };
   return obj;

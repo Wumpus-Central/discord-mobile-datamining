@@ -91,8 +91,8 @@ export default function InstantInviteQRCodeActionSheet(location) {
     if (tmp19Result) {
       obj7 = { style: tmp.iconContainer, children: null };
       const obj8 = { style: tmp.icon, children: tmp13 };
-      obj7.children = tmp19(tmp21, obj8);
-      tmp19Result = tmp19(tmp21, obj7);
+      obj7.children = closure_9(View, obj8);
+      tmp19Result = closure_9(View, obj7);
     }
     const obj9 = { children: null };
     items2[1] = tmp19Result;
@@ -101,7 +101,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     tmp19Result = null != tmp12;
     if (tmp19Result) {
       const obj10 = { variant: "text-md/normal", children: tmp12.visible };
-      tmp19Result = tmp19(tmp6(4556).Text, obj10);
+      tmp19Result = closure_9(tmp6(4556).Text, obj10);
     }
     items3[1] = tmp19Result;
     obj5.children = items3;
@@ -122,4 +122,5 @@ export default function InstantInviteQRCodeActionSheet(location) {
       tmp12 = obj11;
     }
   }
+  const tmp6Result = tmp6(504);
 };

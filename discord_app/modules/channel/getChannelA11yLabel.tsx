@@ -1,14 +1,14 @@
 // === Module 9770: getChannelA11yLabel ===
 
 // Module 9770 (getChannelA11yLabel)
+import util from "util" /* 1114 */;
 import UserUtils from "UserUtils" /* 4404 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
+import utils from "utils" /* 8135 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserStore from "UserStore" /* 1371 */;
 
-const util = tmp(1114);
-const utils = tmp(8135);
 require = fn;
 const Constants = fn(1074);
 ({ ChannelTypes: hasOwnProperty, StatusTypes: metroRequire } = Constants);
@@ -62,7 +62,7 @@ export default function getChannelA11yLabel(mentionCount) {
       TO8LYt = unread ? t8.F2MZsu : t8.fYqXVY;
     }
   } else {
-    if (tmp6.GROUP_DM === type) {
+    if (constants.GROUP_DM === type) {
       if (num > 0) {
         let Lo0dCa = util.t.Lo0dCa;
       } else {
@@ -76,11 +76,11 @@ export default function getChannelA11yLabel(mentionCount) {
       obj = { members: channel.recipients.length + 1 };
       items[1] = intl12.formatToPlainString(util.t.CxSA5N, obj);
       let joined = items.join(", ");
-    } else if (tmp6.GUILD_STORE === type) {
+    } else if (constants.GUILD_STORE === type) {
       let g8ONM0 = util.t.Bo4msg;
-    } else if (tmp6.GUILD_DIRECTORY === type) {
+    } else if (constants.GUILD_DIRECTORY === type) {
       g8ONM0 = util.t["92EAF2"];
-    } else if (tmp6.GUILD_ANNOUNCEMENT === type) {
+    } else if (constants.GUILD_ANNOUNCEMENT === type) {
       if (num > 0) {
         let sDKIpm = util.t.sDKIpm;
       } else {
@@ -88,7 +88,7 @@ export default function getChannelA11yLabel(mentionCount) {
         sDKIpm = unread ? t6.VM7z8f : t6.WJ3MPt;
       }
       g8ONM0 = sDKIpm;
-    } else if (tmp6.GUILD_APP === type) {
+    } else if (constants.GUILD_APP === type) {
       if (num > 0) {
         let BILI3J = util.t.BILI3J;
       } else {
@@ -96,7 +96,7 @@ export default function getChannelA11yLabel(mentionCount) {
         BILI3J = unread ? t5["xzhzM/"] : t5.F98YPC;
       }
       g8ONM0 = BILI3J;
-    } else if (tmp6.GUILD_FORUM === type) {
+    } else if (constants.GUILD_FORUM === type) {
       if (num > 0) {
         let rSsuUF = util.t.rSsuUF;
       } else {
@@ -104,7 +104,7 @@ export default function getChannelA11yLabel(mentionCount) {
         rSsuUF = unread ? t4["dr/Oik"] : t4.Ajnhpa;
       }
       g8ONM0 = rSsuUF;
-    } else if (tmp6.GUILD_MEDIA === type) {
+    } else if (constants.GUILD_MEDIA === type) {
       if (num > 0) {
         let KqEUsJ = util.t.KqEUsJ;
       } else {
@@ -112,7 +112,7 @@ export default function getChannelA11yLabel(mentionCount) {
         KqEUsJ = unread ? t3["37AyNG"] : t3.KuUltE;
       }
       g8ONM0 = KqEUsJ;
-    } else if (tmp6.GUILD_VOICE === type) {
+    } else if (constants.GUILD_VOICE === type) {
       const intl4 = util.intl;
       const obj1 = { channelName };
       const items1 = [intl4.formatToPlainString(util.t.bkpadO, obj1)];
@@ -167,17 +167,17 @@ export default function getChannelA11yLabel(mentionCount) {
       }
       joined = items1.join(", ");
       tmp17 = null != activityNames && activityNames.length > 0;
-    } else if (tmp6.GUILD_STAGE_VOICE === type) {
+    } else if (constants.GUILD_STAGE_VOICE === type) {
       g8ONM0 = util.t.TPPk2T;
     } else {
-      if (tmp6.ANNOUNCEMENT_THREAD !== type) {
-        if (tmp6.PUBLIC_THREAD !== type) {
-          if (tmp6.PRIVATE_THREAD !== type) {
-            if (tmp6.MEDIA_THREAD !== type) {
-              if (tmp6.GUILD_TEXT !== type) {
-                if (tmp6.GUILD_CATEGORY !== type) {
-                  if (tmp6.GUILD_SPACE !== type) {
-                    const UNKNOWN = tmp6.UNKNOWN;
+      if (constants.ANNOUNCEMENT_THREAD !== type) {
+        if (constants.PUBLIC_THREAD !== type) {
+          if (constants.PRIVATE_THREAD !== type) {
+            if (constants.MEDIA_THREAD !== type) {
+              if (constants.GUILD_TEXT !== type) {
+                if (constants.GUILD_CATEGORY !== type) {
+                  if (constants.GUILD_SPACE !== type) {
+                    const UNKNOWN = constants.UNKNOWN;
                   }
                 }
               }
@@ -252,13 +252,13 @@ export default function getChannelA11yLabel(mentionCount) {
 };
 export const getStatusLabel = function getStatusLabel(status) {
   if (constants2.ONLINE === status) {
-    return UserUtils.humanizeStatus(tmp.ONLINE);
-  } else if (tmp.IDLE === status) {
-    return UserUtils.humanizeStatus(tmp.IDLE);
-  } else if (tmp.DND === status) {
-    return UserUtils.humanizeStatus(tmp.DND);
-  } else if (tmp.INVISIBLE === status) {
-    return UserUtils.humanizeStatus(tmp.INVISIBLE);
+    return UserUtils.humanizeStatus(constants2.ONLINE);
+  } else if (constants2.IDLE === status) {
+    return UserUtils.humanizeStatus(constants2.IDLE);
+  } else if (constants2.DND === status) {
+    return UserUtils.humanizeStatus(constants2.DND);
+  } else if (constants2.INVISIBLE === status) {
+    return UserUtils.humanizeStatus(constants2.INVISIBLE);
   } else {
     return "";
   }

@@ -64,7 +64,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
       let note = request.note;
     }
     const obj1 = { variant: "text-sm/normal", color: "text-default", children: note };
-    items2[1] = tmp7(tmp9, obj1);
+    items2[1] = closure_6(tmp9, obj1);
     let tmp7Result = null;
     if (found.length > 0) {
       const obj2 = {
@@ -76,15 +76,15 @@ export default function VibegrationsSettingsRequestCard(projectId) {
               return timestampProducer(View, obj, children.key);
             })
       };
-      tmp7Result = tmp7(tmp6, obj2);
+      tmp7Result = closure_6(View, obj2);
     }
     items2[2] = tmp7Result;
     const obj3 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp2(1114).intl;
     obj3.text = intl3.string(tmp8(3547)["KO2xN+"]);
-    items2[3] = tmp7(tmp2(4975).Button, obj3);
+    items2[3] = closure_6(tmp2(4975).Button, obj3);
     obj.children = items2;
-    return closure_7(tmp6, obj);
+    return closure_7(View, obj);
   }
   const intl2 = tmp2(1114).intl;
   note = intl2.string(tmp8(3547)["V+DBhs"]);

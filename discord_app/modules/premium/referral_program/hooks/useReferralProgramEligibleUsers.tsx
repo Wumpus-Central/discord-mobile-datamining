@@ -15,7 +15,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
   ({ selectedUsers: importDefault, limit } = searchQuery);
   noop = undefined;
   c6 = undefined;
-  closure_14 = async function _getLocalReferrals(arg0, value) {
+  closure_14 = async function _getLocalReferrals() {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -106,7 +106,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
     }
     return applyArgumentsResult;
   }
-  closure_16 = async function _getNextRows(arg0, value) {
+  closure_16 = async function _getNextRows(arg0) {
     if (c10 === 2) {
       c10 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

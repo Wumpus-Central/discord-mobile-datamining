@@ -4,6 +4,8 @@
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtilsDefault from "utils/AvatarUtils" /* 1399 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
+import MessageRequestPreviewDefault from "MessageRequestPreview" /* 16878 */;
+import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 16879 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 
@@ -38,9 +40,9 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   const stateFromStores = obj.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != otherUser) {
-      let nickname = RelationshipStore.getNickname(tmp.id);
+      let nickname = RelationshipStore.getNickname(otherUser.id);
       if (nickname == null) {
-        nickname = UserUtilsDefault.getGlobalName(tmp);
+        nickname = UserUtilsDefault.getGlobalName(otherUser);
       }
       tmp2 = nickname;
     }
@@ -77,18 +79,18 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     stringResult = username;
   }
   if (stringResult == null) {
-    const intl = tmp2(1114).intl;
-    stringResult = intl.string(tmp2(1114).t["30mdIx"]);
+    const intl = otherUser(1114).intl;
+    stringResult = intl.string(otherUser(1114).t["30mdIx"]);
   }
   obj5.children = stringResult;
   const items2 = [closure_5(otherUser(4556).Text, obj5), ];
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj6 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const items3 = [" ", tmp2(4404).getUserTag(otherUser)];
+    const items3 = [" ", otherUser(4404).getUserTag(otherUser)];
     obj6.children = items3;
-    tmp9Result = tmp9(tmp2(4556).Text, obj6);
-    const tmp2Result = tmp2(4404);
+    tmp9Result = closure_6(otherUser(4556).Text, obj6);
+    const tmp2Result = otherUser(4404);
   }
   items2[1] = tmp9Result;
   obj4.children = items2;
@@ -98,7 +100,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   let tmp11Result = !flag;
   if (!flag) {
     const obj8 = { style: tmp.messagePreview, channel };
-    tmp11Result = tmp11(tmp7(16878), obj8);
+    tmp11Result = closure_5(MessageRequestPreviewDefault, obj8);
   }
   items5[1] = tmp11Result;
   if (flag) {
@@ -106,10 +108,10 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   }
   if (flag) {
     const obj9 = { style: tmp.messagePreview, userId: otherUser.id, suffix: null };
-    const intl2 = tmp2(1114).intl;
-    obj9.suffix = intl2.string(tmp2(1114).t.hTltPn);
-    flag = tmp11(tmp7(16879), obj9);
-    const tmp7Result = tmp7(16879);
+    const intl2 = otherUser(1114).intl;
+    obj9.suffix = intl2.string(otherUser(1114).t.hTltPn);
+    flag = closure_5(MessageRequestMutualServersDefault, obj9);
+    const tmp7Result = MessageRequestMutualServersDefault;
   }
   const obj10 = { children: null };
   items5[2] = flag;

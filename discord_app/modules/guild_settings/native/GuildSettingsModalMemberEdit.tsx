@@ -4,14 +4,21 @@
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4188 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
 import TableRow2 from "TableRow" /* 5605 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import TableRowGroup2 from "TableRowGroup" /* 5687 */;
+import TextInput from "TextInput" /* 6606 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
+import Form from "Form" /* 8593 */;
 import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9403 */;
+import BotTagDefault from "BotTag" /* 9438 */;
 import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 11838 */;
 import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11839 */;
 import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 11844 */;
@@ -81,29 +88,29 @@ class GuildSettingsModalMemberEditScene {
         canManageUserResult = null != user;
       }
       if (canManageUserResult) {
-        canManageUserResult = PermissionStore.canManageUser(constants.MANAGE_NICKNAMES, user, tmp);
+        canManageUserResult = PermissionStore.canManageUser(constants.MANAGE_NICKNAMES, user, stateFromStores);
       }
       obj.canChangeNick = canManageUserResult;
       obj.canManageRoles = PermissionStore.can(constants.MANAGE_ROLES, stateFromStores);
-      let canManageUserResult1 = null != tmp;
+      let canManageUserResult1 = null != stateFromStores;
       if (canManageUserResult1) {
         canManageUserResult1 = null != user;
       }
       if (canManageUserResult1) {
-        canManageUserResult1 = obj2.canManageUser(tmp7.KICK_MEMBERS, user, tmp);
+        canManageUserResult1 = PermissionStore.canManageUser(constants.KICK_MEMBERS, user, stateFromStores);
       }
       obj.canKick = canManageUserResult1;
-      let canManageUserResult2 = null != tmp;
+      let canManageUserResult2 = null != stateFromStores;
       if (canManageUserResult2) {
         canManageUserResult2 = null != user;
       }
       if (canManageUserResult2) {
-        canManageUserResult2 = obj2.canManageUser(tmp7.BAN_MEMBERS, user, tmp);
+        canManageUserResult2 = PermissionStore.canManageUser(constants.BAN_MEMBERS, user, stateFromStores);
       }
       obj.canBan = canManageUserResult2;
       let id;
       if (stateFromStores != null) {
-        id = tmp.id;
+        id = stateFromStores.id;
       }
       let id1;
       if (user != null) {
@@ -218,7 +225,7 @@ RolesList.prototype["render"] = function render() {
         obj = { color: null, colors: null, containerStyles: null };
         ({ colorString: obj3.color, colorStrings: obj3.colors } = children);
         obj.containerStyles = closure_1_23.roleDot;
-        tmp2Result = tmp2(tmp3(tmp4[18]).RoleDot, obj);
+        tmp2Result = closure_1_19(guild(currentUserId[18]).RoleDot, obj);
       }
       const items = [tmp2Result, ];
       let tmp11;
@@ -251,7 +258,7 @@ RolesList.prototype["render"] = function render() {
         obj = { color: null, colors: null, containerStyles: null };
         ({ colorString: obj3.color, colorStrings: obj3.colors } = children);
         obj.containerStyles = closure_1_23.roleDot;
-        tmp2Result = tmp2(tmp3(tmp4[18]).RoleDot, obj);
+        tmp2Result = closure_1_19(guild(currentUserId[18]).RoleDot, obj);
       }
       const items = [tmp2Result, ];
       let tmp11;
@@ -283,7 +290,7 @@ RolesList.prototype["render"] = function render() {
         obj = { color: null, colors: null, containerStyles: null };
         ({ colorString: obj2.color, colorStrings: obj2.colors } = children);
         obj.containerStyles = closure_23.roleDot;
-        tmpResult = tmp(tmp2(1178).RoleDot, obj);
+        tmpResult = closure_2_19(native.RoleDot, obj);
       }
       const items = [tmpResult, ];
       let tmp10;
@@ -315,7 +322,7 @@ RolesList.prototype["render"] = function render() {
         obj = { color: null, colors: null, containerStyles: null };
         ({ colorString: obj2.color, colorStrings: obj2.colors } = children);
         obj.containerStyles = closure_23.roleDot;
-        tmpResult = tmp(tmp2(1178).RoleDot, obj);
+        tmpResult = closure_2_19(native.RoleDot, obj);
       }
       const items = [tmpResult, ];
       let tmp10;
@@ -357,10 +364,10 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
     applyArgumentsResult.handleSaveNickname = function handleSaveNickname() {
       if (null != applyArgumentsResult.state.nick) {
         let id = null;
-        if (tmp.props.currentUser.id !== tmp.props.user.id) {
-          id = tmp.props.user.id;
+        if (applyArgumentsResult.props.currentUser.id !== applyArgumentsResult.props.user.id) {
+          id = applyArgumentsResult.props.user.id;
         }
-        GuildSettingsModalMembersActionCreatorsDefault.changeNickname(tmp.props.guild.id, id, tmp.state.nick);
+        GuildSettingsModalMembersActionCreatorsDefault.changeNickname(applyArgumentsResult.props.guild.id, id, applyArgumentsResult.state.nick);
       }
     };
     applyArgumentsResult.handleStartEditingRoles = function handleStartEditingRoles() {
@@ -403,7 +410,7 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
     };
     applyArgumentsResult.handleSaveMemberRoles = function handleSaveMemberRoles() {
       if (null != applyArgumentsResult.props.editRoles) {
-        GuildSettingsModalMembersActionCreatorsDefault.updateMemberRoles(tmp.props.guild.id, tmp.props.user.id, tmp.props.editRoles);
+        GuildSettingsModalMembersActionCreatorsDefault.updateMemberRoles(applyArgumentsResult.props.guild.id, applyArgumentsResult.props.user.id, applyArgumentsResult.props.editRoles);
       }
     };
     applyArgumentsResult.handleCancelEditMemberRoles = function handleCancelEditMemberRoles() {
@@ -459,6 +466,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
     };
     setOptionsResult = navigation.setOptions(setOptionsResult);
   }
+  tmp = null != submitting && submitting === submitting.submitting && isEditing === submitting.isEditing && onClose === submitting.onClose;
 };
 prototype["render"] = function render() {
   const self = this;
@@ -474,9 +482,9 @@ prototype["render"] = function render() {
     let tmp18Result = null;
     if (user.bot) {
       obj = { verified: null };
-      let tmp21Result = tmp21(9438);
+      let tmp21Result = BotTagDefault;
       obj.verified = user.isVerifiedBot();
-      tmp18Result = tmp18(tmp21Result, obj);
+      tmp18Result = closure_1_19(tmp21Result, obj);
     }
     items[1] = tmp18Result;
     obj.children = items;
@@ -492,39 +500,39 @@ prototype["render"] = function render() {
       if (!bot) {
         const obj1 = { hasIcons: false, children: null };
         const obj2 = { variant: "danger", label: null, onPress: null };
-        const intl2 = tmp19(1114).intl;
-        obj2.label = intl2.string(tmp19(1114).t.Z5s7PM);
+        const intl2 = util.intl;
+        obj2.label = intl2.string(util.t.Z5s7PM);
         obj2.onPress = self.handleTransferOwnership;
-        obj1.children = tmp18(tmp19(5605).TableRow, obj2);
-        tmp18Result = tmp18(tmp19(5687).TableRowGroup, obj1);
+        obj1.children = closure_1_19(TableRow2.TableRow, obj2);
+        tmp18Result = closure_1_19(TableRowGroup2.TableRowGroup, obj1);
       }
       const obj3 = { style: tmp.form, contentContainerStyle: null, children: null };
       const items1 = [tmp.formContent, self.props.contentContainerStyle];
       obj3.contentContainerStyle = items1;
-      const obj4 = { style: tmp.stackPadding, spacing: tmp21(576).space.PX_24, children: null };
+      const obj4 = { style: tmp.stackPadding, spacing: nativeDefault.space.PX_24, children: null };
       const obj5 = { hasIcons: true, children: null };
       const obj6 = { icon: null, label: null };
       const obj7 = { style: tmp.avatar, user, guildId: guild.id };
-      obj6.icon = tmp18(tmp19(1178).Avatar, obj7);
+      obj6.icon = closure_1_19(native.Avatar, obj7);
       obj6.label = tmp7;
-      obj5.children = tmp18(tmp19(5605).TableRow, obj6);
-      const items2 = [tmp18(tmp19(5687).TableRowGroup, obj5), , , , , , ];
+      obj5.children = closure_1_19(TableRow2.TableRow, obj6);
+      const items2 = [closure_1_19(TableRowGroup2.TableRowGroup, obj5), , , , , , ];
       if (!canChangeNick) {
         canChangeNick = currentUser.id === user.id;
       }
       if (canChangeNick) {
         const obj8 = { label: null, value: null, placeholder: null, onChange: null, onBlur: null, maxLength: 32, errorMessage: null };
-        const intl3 = tmp19(1114).intl;
-        obj8.label = intl3.string(tmp19(1114).t["621LJD"]);
+        const intl3 = util.intl;
+        obj8.label = intl3.string(util.t["621LJD"]);
         if (str == null) {
           str = "";
         }
         obj8.value = str;
-        const intl4 = tmp19(1114).intl;
-        obj8.placeholder = intl4.string(tmp19(1114).t.h7UKXj);
+        const intl4 = util.intl;
+        obj8.placeholder = intl4.string(util.t.h7UKXj);
         ({ handleChangeNickname: obj16.onChange, handleSaveNickname: obj16.onBlur } = self);
         obj8.errorMessage = tmp3;
-        canChangeNick = tmp18(tmp19(6606).TextInput, obj8);
+        canChangeNick = closure_1_19(TextInput.TextInput, obj8);
       }
       items2[1] = canChangeNick;
       if (canManageRoles) {
@@ -540,7 +548,7 @@ prototype["render"] = function render() {
         obj9.currentUserId = currentUser.id;
         obj9.isEditing = isEditing;
         ({ handleToggleRole: obj17.onToggleRole, handleStartEditingRoles: obj17.onStartEditing } = self);
-        canManageRoles = tmp18(RolesList, obj9);
+        canManageRoles = closure_1_19(RolesList, obj9);
       }
       items2[2] = canManageRoles;
       if (canDisableCommunication) {
@@ -550,61 +558,60 @@ prototype["render"] = function render() {
       if (canKick) {
         const obj10 = { hasIcons: false, children: null };
         const obj11 = { variant: "danger", label: null, onPress: null };
-        const intl5 = tmp19(1114).intl;
+        const intl5 = util.intl;
         const obj12 = { user: null };
-        tmp21Result = tmp21(4404);
+        tmp21Result = UserUtilsDefault;
         obj12.user = tmp21Result.getName(user);
-        obj11.label = intl5.formatToPlainString(tmp19(1114).t.yOiJHB, obj12);
+        obj11.label = intl5.formatToPlainString(util.t.yOiJHB, obj12);
         obj11.onPress = self.handleKick;
-        obj10.children = tmp18(tmp19(5605).TableRow, obj11);
-        canKick = tmp18(tmp19(5687).TableRowGroup, obj10);
+        obj10.children = closure_1_19(TableRow2.TableRow, obj11);
+        canKick = closure_1_19(TableRowGroup2.TableRowGroup, obj10);
       }
       items2[4] = canKick;
       if (canBan) {
         const obj13 = { hasIcons: false, children: null };
         const obj14 = { variant: "danger", label: null, onPress: null };
-        const intl6 = tmp19(1114).intl;
-        const obj15 = { user: tmp21(4404).getName(user) };
-        obj14.label = intl6.formatToPlainString(tmp19(1114).t.TuAZuW, obj15);
+        const intl6 = util.intl;
+        const obj15 = { user: UserUtilsDefault.getName(user) };
+        obj14.label = intl6.formatToPlainString(util.t.TuAZuW, obj15);
         obj14.onPress = self.handleBan;
-        obj13.children = tmp18(tmp19(5605).TableRow, obj14);
-        canBan = tmp18(tmp19(5687).TableRowGroup, obj13);
-        const tmp21Result1 = tmp21(4404);
+        obj13.children = closure_1_19(TableRow2.TableRow, obj14);
+        canBan = closure_1_19(TableRowGroup2.TableRowGroup, obj13);
+        const tmp21Result1 = UserUtilsDefault;
       }
       items2[5] = canBan;
       items2[6] = tmp18Result;
       obj4.children = items2;
-      obj3.children = tmp16(tmp19(4973).Stack, obj4);
-      return tmp18(tmp19(8593).Form, obj3);
+      obj3.children = closure_1_20(Stack_Stack.Stack, obj4);
+      return closure_1_19(Form.Form, obj3);
     } else {
-      const result = tmp19(4188).isMemberCommunicationDisabled(member);
-      const TableRowGroup = tmp19(5687).TableRowGroup;
+      const result = CommunicationDisabledUtils.isMemberCommunicationDisabled(member);
+      const TableRowGroup = TableRowGroup2.TableRowGroup;
       const obj16 = { hasIcons: false, children: null };
-      const TableRow = tmp19(5605).TableRow;
+      const TableRow = TableRow2.TableRow;
       let obj17 = { variant: "danger", label: null, onPress: null };
-      const intl = tmp19(1114).intl;
+      const intl = util.intl;
       const formatToPlainString = intl.formatToPlainString;
-      let handleClearCommunicationDisabled = tmp19(1114).t;
+      let handleClearCommunicationDisabled = util.t;
       if (result) {
-        const obj18 = { user: tmp21(4404).getName(user) };
+        const obj18 = { user: UserUtilsDefault.getName(user) };
         obj17.label = formatToPlainString(handleClearCommunicationDisabled.RuL6o7, obj18);
         handleClearCommunicationDisabled = self.handleClearCommunicationDisabled;
         obj17.onPress = handleClearCommunicationDisabled;
-        obj17 = tmp18(TableRow, obj17);
+        obj17 = closure_1_19(TableRow, obj17);
         obj16.children = obj17;
-        let tmp18Result1 = tmp18(TableRowGroup, obj16);
-        const tmp21Result2 = tmp21(4404);
+        let tmp18Result1 = closure_1_19(TableRowGroup, obj16);
+        const tmp21Result2 = UserUtilsDefault;
       } else {
-        const obj19 = { user: tmp21(4404).getName(user) };
+        const obj19 = { user: UserUtilsDefault.getName(user) };
         obj17[1] = formatToPlainString(handleClearCommunicationDisabled.FN7NIS, obj19);
         obj17[2] = self.handleSetCommunicationDisabled;
-        obj16.children = tmp18(TableRow, obj17);
-        tmp18Result1 = tmp18(TableRowGroup, obj16);
-        const tmp21Result3 = tmp21(4404);
+        obj16.children = closure_1_19(TableRow, obj17);
+        tmp18Result1 = closure_1_19(TableRowGroup, obj16);
+        const tmp21Result3 = UserUtilsDefault;
       }
-      const tmp19Result = tmp19(4188);
+      const tmp19Result = CommunicationDisabledUtils;
     }
-    tmp16 = closure_1_20;
   }
 };
 GuildSettingsModalMemberEdit.contextType = fn(4271).ThemeContext;

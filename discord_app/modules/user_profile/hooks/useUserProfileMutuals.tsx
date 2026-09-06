@@ -31,11 +31,11 @@ export default function useUserProfileMutuals(arg0) {
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => flattenedGuildIds.getFlattenedGuildIds());
   const items3 = [tmp3, stateFromStores];
   let tmp7 = stateFromStores1(() => {
-    let sortByResult = closure_1;
-    if (null != closure_1) {
-      sortByResult = arr;
-      if (arr.length >= 2) {
-        sortByResult = _mod12.sortBy(arr, (user) => {
+    let sortByResult = tmp3;
+    if (null != tmp3) {
+      sortByResult = tmp3;
+      if (tmp3.length >= 2) {
+        sortByResult = _mod12.sortBy(tmp3, (user) => {
           value = stateFromStores.get(user.user.id);
           let num;
           if (value != null) {
@@ -52,15 +52,15 @@ export default function useUserProfileMutuals(arg0) {
   }, items3);
   const items4 = [tmp[2], stateFromStores1];
   let tmp8 = stateFromStores1(() => {
-    if (null != closure_2) {
-      if (arr.length >= 2) {
+    if (null != length) {
+      if (length.length >= 2) {
         const _Object = Object;
         closure_0 = Object.fromEntries(stateFromStores1.map((item, index) => {
           const items = [item, index];
           return items;
         }));
-        return closure_0(closure_2[6]).sortBy(arr, (arg0) => {
-          let length = closure_0[arg0.guild.id];
+        return closure_0(length[6]).sortBy(length, (arg0) => {
+          length = closure_0[arg0.guild.id];
           if (length == null) {
             length = stateFromStores1.length;
           }
@@ -68,7 +68,7 @@ export default function useUserProfileMutuals(arg0) {
         });
       }
     }
-    return closure_2;
+    return length;
   }, items4);
   const obj3 = require("initialize");
   const tmp9 = usePrevValueDefault(tmp2);

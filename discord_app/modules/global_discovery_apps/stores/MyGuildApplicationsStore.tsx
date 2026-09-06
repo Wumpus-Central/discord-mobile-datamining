@@ -10,10 +10,11 @@ function addToApplicationIdToGuildIds(applicationId) {
   if (null == closure_3.applicationIdToGuildIds[applicationId]) {
     const _Set = Set;
     const set = new Set();
-    tmp.applicationIdToGuildIds[applicationId] = set;
+    closure_3.applicationIdToGuildIds[applicationId] = set;
   }
   closure_3.applicationIdToGuildIds[applicationId].add(applicationId.guildId);
   closure_3.applicationIdToGuildIds[applicationId] = new Set(closure_3.applicationIdToGuildIds[applicationId]);
+  const set1 = new Set(closure_3.applicationIdToGuildIds[applicationId]);
 }
 let FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", ERROR: 3, [3]: "ERROR" };
 let closure_3 = { applicationIdToGuildIds: {}, lastFetchTimeMs: null, nextFetchRetryTimeMs: null, fetchState: FetchState.NOT_FETCHED };
@@ -95,7 +96,7 @@ FetchState = {
       if (null == closure_3.applicationIdToGuildIds[id]) {
         const _Set = Set;
         const set = new Set();
-        tmp13.applicationIdToGuildIds[id] = set;
+        closure_3.applicationIdToGuildIds[id] = set;
       }
       closure_3.applicationIdToGuildIds[id].add(tmp);
       const _Set2 = Set;
@@ -107,10 +108,10 @@ FetchState = {
     applicationId = applicationId.applicationId;
     if (null != applicationId) {
       if (null != closure_3.applicationIdToGuildIds[applicationId]) {
-        tmp2.applicationIdToGuildIds[applicationId].delete(tmp);
+        closure_3.applicationIdToGuildIds[applicationId].delete(tmp);
         const _Set = Set;
-        const set = new Set(tmp2.applicationIdToGuildIds[applicationId]);
-        tmp2.applicationIdToGuildIds[applicationId] = set;
+        const set = new Set(closure_3.applicationIdToGuildIds[applicationId]);
+        closure_3.applicationIdToGuildIds[applicationId] = set;
       }
     }
   }

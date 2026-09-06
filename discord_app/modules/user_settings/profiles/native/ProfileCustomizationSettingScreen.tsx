@@ -149,7 +149,7 @@ export default noop.memo(() => {
         const intl = closure_0(first[11]).intl;
         obj.label = intl.string(closure_0(first[11]).t["R3BPH+"]);
         obj.disabled = !stateFromStores;
-        obj.onPress = field(function*(arg0, value) {
+        obj.onPress = field(function*() {
           if (c2 === 2) {
             c2 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");

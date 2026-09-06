@@ -83,7 +83,7 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     };
     const intl4 = tmp(1114).intl;
     obj.label = intl4.string(tmp(1114).t.rk35Gm);
-    tmp4Result = tmp4(tmp(5605).TableRow, obj);
+    tmp4Result = closure_2(tmp(5605).TableRow, obj);
   }
   const obj1 = { children: null };
   items = [tmp4Result, ];

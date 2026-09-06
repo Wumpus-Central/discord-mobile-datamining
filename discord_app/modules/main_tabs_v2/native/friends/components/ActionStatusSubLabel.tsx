@@ -204,7 +204,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   let items1 = [animate(closure_7, { variant: str, maxFontSizeMultiplier, color: "text-default", style: animatedStyle1, lineClamp: 1, children: label }), , ];
   if (tmp) {
     const obj4 = { variant: str, maxFontSizeMultiplier, style: animatedStyle1, color: "text-default", lineClamp: 1, children: secondaryLabel };
-    tmp = tmp9(tmp10, obj4);
+    tmp = animate(closure_7, obj4);
   }
   items1[1] = tmp;
   obj5 = { variant: str, maxFontSizeMultiplier, color: "text-default", style: null, lineClamp: 1, children: actionStatus };

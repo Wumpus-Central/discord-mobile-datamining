@@ -23,7 +23,7 @@ let closure_5 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TextField/native/TextAreaField.native.tsx");
 
-export const TextAreaField = noop.forwardRef((isDisabled, ref) => {
+export const TextAreaField = noop.forwardRef((isDisabled, arg1) => {
   let prop = require;
   let obj1 = InputFieldContainer;
   let obj = { size: "lg", isRound: false, isDisabled: isDisabled.isDisabled };
@@ -31,7 +31,7 @@ export const TextAreaField = noop.forwardRef((isDisabled, ref) => {
   const tmp3 = closure_5();
   const maxLength = isDisabled.maxLength;
   let obj3 = useTextField;
-  const textField = obj3.useTextField(isDisabled, ref);
+  const textField = obj3.useTextField(isDisabled, arg1);
   ({ state, inputProps, innerRef } = textField);
   let obj4 = native;
   const focus = obj4.useFocus();
@@ -51,7 +51,6 @@ export const TextAreaField = noop.forwardRef((isDisabled, ref) => {
   obj1.isFocused = isFocused;
   const obj2 = {};
   const propResult1 = useCharacterLimitAnnouncement;
-  const tmp9 = React4;
   const merged1 = Object.assign(native.mergeProps(inputProps, focusProps));
   obj2.ref = innerRef;
   const items = [, , ];
@@ -64,7 +63,7 @@ export const TextAreaField = noop.forwardRef((isDisabled, ref) => {
   if (null == diff) {
     items1[1] = null;
     obj1.children = items1;
-    return tmp9(InputFieldContainer.InputFieldContainer, obj1);
+    return React4(InputFieldContainer.InputFieldContainer, obj1);
   } else {
     obj3 = { style: tmp3.maxLengthIndicator, children: null };
     let str3 = "text-muted";
@@ -95,8 +94,9 @@ export const TextAreaField = noop.forwardRef((isDisabled, ref) => {
     }
     obj4.accessibilityLabel = formatToPlainStringResult;
     obj4.children = diff;
-    obj4 = tmp11(Text_Text.Text, obj4);
+    obj4 = React3(Text_Text.Text, obj4);
     obj3.children = obj4;
-    tmp11(View, obj3);
+    React3(View, obj3);
   }
+  const propResult2 = native;
 });

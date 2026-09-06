@@ -2,6 +2,8 @@
 
 // Module 17851 (AVErrorCameraSendLowFPS)
 import DurationsDefault from "Durations" /* 1090 */;
+import AVError from "AVError" /* 9110 */;
+import AVErrorContext from "AVErrorContext" /* 17834 */;
 import AVErrorUtils from "AVErrorUtils" /* 17837 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -35,10 +37,10 @@ export const AVErrorCameraSendLowFPSDefinition = {
           let tmp7 = null;
           if (null != accumulatedStatsWithMinDatapoints) {
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
-              obj = { type: tmp4(9110).AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
-              const merged = Object.assign(tmp4(17834).getVoiceChannelErrorContext());
+              obj = { type: AVError.AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
+              const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
               const items = [obj];
-              const tmp4Result = tmp4(17834);
+              const tmp4Result = AVErrorContext;
               const tmp8 = items;
             }
             tmp7 = tmp8;

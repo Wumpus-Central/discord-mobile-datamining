@@ -16,6 +16,7 @@ export default function useStageChannelConnectAction(arg0) {
     return NORMAL;
   }
   NORMAL = obj.NORMAL;
+  tmp = useStateChannelIsLiveDefault(arg0);
 };
 export { ChannelConnectAction };
 export const useStageChannelStartEvent = function useStageChannelStartEvent(id) {

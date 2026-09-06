@@ -210,16 +210,14 @@ function useQuestDockSwipeGesture() {
           obj1.width = questDockExpandHandler(activeQuestDockMode[14]).getQuestDockClosedWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
           let tmp49 = sum;
           if (0 < result3) {
-            tmp49 = tmp76;
+            tmp49 = restingQuestDockMode;
           }
           obj1.height = tmp49;
           obj1.prevDeltaY = diff;
           const result4 = questDockWrapperSpecs.set(obj1);
-          const result5 = obj8.set(minExpandedContentHeight.CLOSED);
+          const result5 = closure_1_2.set(minExpandedContentHeight.CLOSED);
           const obj9 = questDockExpandHandler(activeQuestDockMode[14]);
-          tmp76 = restingQuestDockMode;
         }
-        obj8 = closure_1_2;
       } else {
         const result6 = -1 * (sum - height) * (1 - sum / sharedValue / youBarHorizontalMargin);
         let num = 0;
@@ -235,7 +233,7 @@ function useQuestDockSwipeGesture() {
           const result8 = obj.set(obj2);
         }
         let obj3 = questDockWrapperSpecs;
-        let tmp17 = tmp69 !== questDockWrapperSpecs.get().height;
+        let tmp17 = height !== questDockWrapperSpecs.get().height;
         if (tmp17) {
           tmp17 = closure_1_2.get() !== minExpandedContentHeight.EXPANDED;
         }
@@ -282,19 +280,19 @@ function useQuestDockSwipeGesture() {
       const absolute = Math.abs(velocityY);
       if (absolute <= sharedValue2) {
         if (restingQuestDockMode.get() !== minExpandedContentHeight.COLLAPSED) {
-          if (velocityY <= tmp3) {
-            if (obj.get() !== tmp5.COLLAPSED) {
-              if (obj.get() !== tmp5.CLOSED) {
-                let COLLAPSED = tmp5.COLLAPSED;
+          if (velocityY <= sharedValue2) {
+            if (restingQuestDockMode.get() !== minExpandedContentHeight.COLLAPSED) {
+              if (restingQuestDockMode.get() !== minExpandedContentHeight.CLOSED) {
+                let COLLAPSED = minExpandedContentHeight.COLLAPSED;
               }
             }
-            COLLAPSED = tmp5.RESET_TO_PREVIOUS;
+            COLLAPSED = minExpandedContentHeight.RESET_TO_PREVIOUS;
           }
-          COLLAPSED = tmp5.COLLAPSED;
+          COLLAPSED = minExpandedContentHeight.COLLAPSED;
         } else {
-          COLLAPSED = tmp5.SOFT_DISMISSED;
+          COLLAPSED = minExpandedContentHeight.SOFT_DISMISSED;
         }
-        let tmp10 = obj.get() === tmp5.CLOSED && COLLAPSED !== tmp5.EXPANDED;
+        let tmp10 = restingQuestDockMode.get() === minExpandedContentHeight.CLOSED && COLLAPSED !== minExpandedContentHeight.EXPANDED;
         if (tmp10) {
           tmp10 = y < 0;
         }
@@ -302,13 +300,14 @@ function useQuestDockSwipeGesture() {
           tmp10 = tmp2 > sharedValue1;
         }
         if (tmp10) {
-          COLLAPSED = tmp5.COLLAPSED;
+          COLLAPSED = minExpandedContentHeight.COLLAPSED;
         }
         if (COLLAPSED === minExpandedContentHeight.EXPANDED) {
           questDockExpandHandler(activeQuestDockMode[10]).runOnJS(closure_1_0)();
           const obj2 = questDockExpandHandler(activeQuestDockMode[10]);
         }
         questDockExpandHandler(activeQuestDockMode[10]).runOnJS(setRestingQuestDockMode)(COLLAPSED);
+        const obj3 = questDockExpandHandler(activeQuestDockMode[10]);
       }
       restingQuestDockMode.get() === minExpandedContentHeight.EXPANDED ? minExpandedContentHeight.RESET_TO_PREVIOUS : minExpandedContentHeight.EXPANDED;
     };
@@ -318,7 +317,7 @@ function useQuestDockSwipeGesture() {
     fn2.__initData = __initData;
     return onChangeResult.onEnd(fn2);
   }, items1);
-  let obj8 = questDockExpandHandler(activeQuestDockMode[12]);
+  const obj8 = questDockExpandHandler(activeQuestDockMode[12]);
   class W {
     constructor() {
       obj = { mode: activeQuestDockMode.get(), isVisible: closure_12.get() };

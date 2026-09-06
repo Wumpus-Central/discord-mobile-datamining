@@ -2,9 +2,13 @@
 
 // Module 8657 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7623 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7630 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8241 */;
 import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8658 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 8674 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,21 +40,21 @@ export default function WidgetPreview(arg0) {
         obj = { userId, widget, disableInteraction: true, cardStyle: null };
         const items1 = [tmp4.card, tmp.card];
         obj.cardStyle = items1;
-        tmp6 = React4(tmp5(8674).WidgetSection, obj);
+        tmp6 = React4(UserProfileWidgetsBoard.WidgetSection, obj);
       }
     }
-    tmp5Result = tmp5(7623);
+    tmp5Result = UserProfileGameWidgetTypes;
   }
   let tmp9 = null;
   if (null !== tmp6) {
     const obj1 = { style: tmp.container, children: null };
     const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-    const intl = tmp5(1114).intl;
-    obj2.children = intl.string(tmp5(1114).t.SpsnDY).toUpperCase();
-    const items2 = [React4(tmp5(4556).Text, obj2), tmp6];
+    const intl = util.intl;
+    obj2.children = intl.string(util.t.SpsnDY).toUpperCase();
+    const items2 = [React4(Text_Text.Text, obj2), tmp6];
     obj1.children = items2;
     tmp9 = hasOwnProperty(View, obj1);
-    const str = intl.string(tmp5(1114).t.SpsnDY);
+    const str = intl.string(util.t.SpsnDY);
   }
   return tmp9;
 };

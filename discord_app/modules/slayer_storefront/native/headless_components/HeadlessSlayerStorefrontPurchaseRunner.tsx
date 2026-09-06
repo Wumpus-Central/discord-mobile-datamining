@@ -1,10 +1,11 @@
 // === Module 10813: HeadlessSlayerStorefrontPurchaseRunner ===
 
 // Module 10813 (HeadlessSlayerStorefrontPurchaseRunner)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
 
-const require = fn;
+require = fn;
 let useNativeCheckoutStore = fn(7424).useNativeCheckoutStore;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
@@ -48,6 +49,7 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
       AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, closure_3);
     }
     closure_1_1();
+    obj = PlatformUtils;
   };
   obj.onPurchaseError = onPurchaseError;
   obj.onPurchasePending = function onPurchasePending() {

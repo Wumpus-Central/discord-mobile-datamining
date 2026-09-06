@@ -143,9 +143,9 @@ export default function AppInteractionInfoActionSheet(message) {
     obj18.children = intl3.string(tmp10(1114).t["04gxNg"]);
     items11[1] = closure_8(tmp10(4556).Text, obj18);
     obj16.children = items11;
-    items10[1] = tmp31(id, obj16);
+    items10[1] = closure_9(id, obj16);
     obj14.children = items10;
-    obj13.children = tmp31(id, obj14);
+    obj13.children = closure_9(id, obj14);
     tmp32 = closure_8(tmp10(5123).PressableOpacity, obj13);
   }
   items9[1] = tmp32;

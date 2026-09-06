@@ -54,7 +54,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     }
     return id;
   } else {
-    if (channelId === tmp8.GAME_SHOP) {
+    if (channelId === StaticChannelRoute.GAME_SHOP) {
       if (obj2.canSeeGameShop(guildId)) {
         return channelId;
       }

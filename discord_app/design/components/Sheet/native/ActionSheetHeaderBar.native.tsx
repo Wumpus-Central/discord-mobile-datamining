@@ -24,14 +24,14 @@ let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
   obj.header = obj;
   const size = { alignSelf: "center", width: nativeDefault.modules.mobile.SHEET_HANDLE_WIDTH, height: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, borderRadius: nativeDefault.radii.sm, top: nativeDefault.modules.mobile.SHEET_HANDLE_MARGIN_TOP };
   if ("default" === arg0) {
-    obj = { backgroundColor: tmp2(576).colors.BACKGROUND_MOD_STRONG };
+    obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
     let tmp4 = obj;
   } else if ("floating" === arg0) {
-    const obj1 = { backgroundColor: tmp2(576).colors.BACKGROUND_MOD_MUTED };
+    const obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
     tmp4 = obj1;
   } else if ("overlay" === arg0) {
-    const obj2 = { backgroundColor: tmp2(576).unsafe_rawColors.WHITE };
-    const merged1 = Object.assign(tmp2(576).shadows.SHADOW_LOW);
+    const obj2 = { backgroundColor: nativeDefault.unsafe_rawColors.WHITE };
+    const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
     tmp4 = obj2;
   }
   const merged2 = Object.assign(tmp4);

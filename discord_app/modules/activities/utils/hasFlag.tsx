@@ -8,8 +8,8 @@ import size from "module_2" /* 2 */;
 const ActivityFlags = Constants.ActivityFlags;
 const result = size.fileFinishedImporting("modules/activities/utils/hasFlag.tsx");
 
-export default function hasFlag(flags, arg1) {
-  let tmp = arg1 !== ActivityFlags.INSTANCE;
+export default function hasFlag(flags, IS_ANIMATED) {
+  let tmp = IS_ANIMATED !== ActivityFlags.INSTANCE;
   if (tmp) {
     let hasFlagResult = null != flags && null != flags.flags;
     if (hasFlagResult) {
@@ -17,7 +17,7 @@ export default function hasFlag(flags, arg1) {
       if (num == null) {
         num = 0;
       }
-      hasFlagResult = FlagUtils.hasFlag(num, arg1);
+      hasFlagResult = FlagUtils.hasFlag(num, IS_ANIMATED);
     }
     tmp = hasFlagResult;
   }

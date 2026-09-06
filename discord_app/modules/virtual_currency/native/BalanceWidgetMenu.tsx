@@ -8,6 +8,7 @@ import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 4991 */;
 import Pressables from "Pressables" /* 5123 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import _mod8850 from "module_8850" /* 8850 */;
@@ -52,8 +53,8 @@ class OrbsOnboardingMenuDismissibleContent {
           style(11767).openQuestHome(obj);
         }
         let obj = { onPress: handleOnboardingPress, style, accessibilityLabel: null, children: null };
-        const intl = tmp(1114).intl;
-        obj.accessibilityLabel = intl.string(tmp(1114).t.Kt2QDh);
+        const intl = util.intl;
+        obj.accessibilityLabel = intl.string(util.t.Kt2QDh);
         obj = { onPress: handleOnboardingPress, accessible: false };
         obj.children = closure_2_10(OrbOnboardingPillDefault, obj);
         return closure_2_10(BalanceWidget, obj);
@@ -150,10 +151,10 @@ export default function BalanceWidgetMenuWrapper(style) {
       accessibilityState: null,
       children: null
     };
-    const intl = tmp2(1114).intl;
-    obj.accessibilityLabel = intl.string(tmp2(1114).t.cKwv4k);
+    const intl = util.intl;
+    obj.accessibilityLabel = intl.string(util.t.cKwv4k);
     obj.accessibilityState = { busy: true };
-    obj = { style: tmp.loadingContainer, children: closure_1_10(tmp2(4991).Ellipsis, { variant: "primary", size: "sm" }) };
+    obj = { style: tmp.loadingContainer, children: closure_1_10(ButtonEllipsis.Ellipsis, { variant: "primary", size: "sm" }) };
     obj.children = closure_1_10(View, obj);
     let tmp6Result = closure_1_10(BalanceWidget, obj);
   } else {

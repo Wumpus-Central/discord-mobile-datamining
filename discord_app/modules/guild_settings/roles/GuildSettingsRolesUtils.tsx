@@ -167,7 +167,8 @@ export const useQueryGuildMembers = function useQueryGuildMembers(id, formatted)
   }, items);
 };
 export const filterFullMembersByQuery = function filterFullMembersByQuery(str, id) {
-  const formatted = str.trim().toLowerCase();
+  str = str.trim();
+  const formatted = str.toLowerCase();
   let tmp8Result = id.id === formatted;
   if (!tmp8Result) {
     tmp8Result = fuzzysearchDefault(formatted, id.name.toLowerCase());
@@ -180,11 +181,11 @@ export const filterFullMembersByQuery = function filterFullMembersByQuery(str, i
 export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY) {
   if (constants.MEMBERS === DISPLAY) {
     return "Members";
-  } else if (tmp.PERMISSIONS === DISPLAY) {
+  } else if (constants.PERMISSIONS === DISPLAY) {
     return "Permissions";
-  } else if (tmp.DISPLAY === DISPLAY) {
+  } else if (constants.DISPLAY === DISPLAY) {
     return "Role Settings";
-  } else if (tmp.VERIFICATIONS === DISPLAY) {
+  } else if (constants.VERIFICATIONS === DISPLAY) {
     return "Connections";
   } else {
     GlobalUtils.assertNever(DISPLAY);
@@ -193,9 +194,8 @@ export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY)
 export const filterRole = function filterRole(name, str) {
   let hasItem = "" === str;
   if (!hasItem) {
-    const formatted = name.name.toLowerCase();
+    const formatted = str.toLowerCase();
     hasItem = formatted.includes(str.toLowerCase());
-    str = name.name;
   }
   return hasItem;
 };

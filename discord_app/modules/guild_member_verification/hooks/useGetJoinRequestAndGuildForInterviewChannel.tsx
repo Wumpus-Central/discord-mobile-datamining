@@ -20,7 +20,7 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   const tmp3 = _slicedToArray(joinRequest.useState(false), 2);
   const first = tmp3[0];
   dependencyMap = tmp3[1];
-  const tmp = _slicedToArray(joinRequest.useState(false), 2);
+  let tmp = _slicedToArray(joinRequest.useState(false), 2);
   const castResult = first(11).cast(id);
   _slicedToArray = castResult;
   let obj = first(11);
@@ -52,6 +52,7 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
       closure_2(true);
       const requestToJoinGuilds = GuildJoinRequestActionCreatorsDefault.fetchRequestToJoinGuilds();
     }
+    tmp = null != joinRequestGuild || first;
   }, items1);
   const items2 = [joinRequest, castResult];
   const effect1 = joinRequest.useEffect(() => {

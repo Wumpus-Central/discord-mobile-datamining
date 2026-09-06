@@ -2,10 +2,10 @@
 
 // Module 5499 (IAPEligibility)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import getSystemVersion from "getSystemVersion" /* 5500 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
-const getSystemVersion = tmp(5500);
 require = fn;
 let c4 = "13.2";
 let items = [fn(1074).GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];

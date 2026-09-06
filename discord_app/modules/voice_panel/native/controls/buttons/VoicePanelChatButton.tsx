@@ -39,6 +39,7 @@ export default function ChatButton(props) {
     value = connected.get();
     const VoicePanelTabAnalyticsSources = trackVoicePanelTabOpened.VoicePanelTabAnalyticsSources;
     openTab({ tab: "chat", source: value ? VoicePanelTabAnalyticsSources.CONNECTED_BUTTON : VoicePanelTabAnalyticsSources.PREJOIN_BUTTON });
+    const obj = { tab: "chat", source: value ? VoicePanelTabAnalyticsSources.CONNECTED_BUTTON : VoicePanelTabAnalyticsSources.PREJOIN_BUTTON };
   }, items);
   const element = { onPress: callback, props, accessibilityLabel: null, children: null };
   let obj = props(connected[5]);

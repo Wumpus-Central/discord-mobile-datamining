@@ -2,6 +2,7 @@
 
 // Module 10270 (RoleLabel)
 import initialize from "initialize" /* 504 */;
+import native from "native" /* 1178 */;
 import Form from "Form" /* 8593 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -36,7 +37,7 @@ export const RoleLabel = function RoleLabel(color) {
   }
   if (tmp10) {
     const obj1 = { color, colors, containerStyles: tmp.roleDot };
-    tmp10 = React4(tmp2(1178).RoleDot, obj1);
+    tmp10 = React4(native.RoleDot, obj1);
   }
   const items1 = [tmp10, React4(Form.FormLabel, { style: {}, text: name })];
   obj.children = items1;

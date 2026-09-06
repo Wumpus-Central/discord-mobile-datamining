@@ -13,4 +13,5 @@ export const setDerivedQosData = function setDerivedQosData(id, qosToken) {
   if (null != id) {
     NativeFastConnectModuleDefault.setDerivedQosData(id, qosToken);
   }
+  const obj = { userId: id, dataPresent: null != qosToken };
 };

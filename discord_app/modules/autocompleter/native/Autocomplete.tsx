@@ -3,6 +3,7 @@
 // Module 12386 (Autocomplete)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
 import StringUtils from "StringUtils" /* 1925 */;
@@ -15,6 +16,7 @@ import FastImageDefault from "FastImage" /* 5587 */;
 import TableRow from "TableRow" /* 5605 */;
 import TableRowTrailingText from "TableRowTrailingText" /* 5614 */;
 import _modDef8124 from "module_8124" /* 8124 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8565 */;
 import Form from "Form" /* 8593 */;
 import StickerDefault from "Sticker" /* 10176 */;
 import StickersHooks from "StickersHooks" /* 10387 */;
@@ -101,12 +103,12 @@ export default {
     if (null != badge) {
       obj = { style: tmp.labelRow, children: null };
       obj = { text };
-      const items = [tmp2(AutocompleteLabel, obj), badge];
+      const items = [React7(AutocompleteLabel, obj), badge];
       obj.children = items;
       let tmp2Result = closure_1_10(View, obj);
     } else {
       const obj1 = { text };
-      tmp2Result = tmp2(AutocompleteLabel, obj1);
+      tmp2Result = React7(AutocompleteLabel, obj1);
     }
     obj.label = tmp2Result;
     obj.trailing = React7(TableRowTrailingText.TableRowTrailingText, { text: description });
@@ -127,8 +129,8 @@ export default {
     obj.label = React7(Form.FormRow.Label, obj);
     let str = "";
     if (showDescription) {
-      const intl = tmp3(1114).intl;
-      str = intl.string(tmp3(1114).t.HrUmDH);
+      const intl = util.intl;
+      str = intl.string(util.t.HrUmDH);
     }
     obj.trailing = React7(TableRowTrailingText.TableRowTrailingText, { text: str });
     return React7(TableRow.TableRow, obj);
@@ -220,14 +222,14 @@ export default {
     let obj = StringUtils;
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: tmp.gameIcon };
-      let tmp6Result = tmp6(tmp5(8565).UnknownGameIcon, obj);
-      let tmp8 = tmp6;
+      let tmp6Result = React7(UnknownGameIcon.UnknownGameIcon, obj);
+      let tmp8 = React7;
     } else {
       obj = { style: tmp.gameIcon, source: null };
       const obj1 = { uri: tmp4 };
       obj.source = obj1;
-      tmp6Result = tmp6(FastImageDefault, obj);
-      tmp8 = tmp6;
+      tmp6Result = React7(FastImageDefault, obj);
+      tmp8 = React7;
     }
     const obj2 = { onPress: game.onPress, accessibilityRole: "menuitem", leading: tmp6Result, label: tmp8(AutocompleteLabel, { text: game.name }) };
     return tmp8(Form.FormRow, obj2);
@@ -246,8 +248,8 @@ export default {
         str = "";
       }
       const obj1 = { text: str };
-      obj.trailing = React7(tmp(5614).TableRowTrailingText, obj1);
-      tmp5Result = tmp5(tmp(5605).TableRow, obj);
+      obj.trailing = React7(TableRowTrailingText.TableRowTrailingText, obj1);
+      tmp5Result = React7(TableRow.TableRow, obj);
     }
     return tmp5Result;
   }

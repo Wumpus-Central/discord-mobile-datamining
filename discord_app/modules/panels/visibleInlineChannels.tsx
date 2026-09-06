@@ -6,22 +6,22 @@ import size from "module_2" /* 2 */;
 const map = new Map();
 let result = size.fileFinishedImporting("modules/panels/visibleInlineChannels.tsx");
 
-export const registerVisibleInlineChannel = function registerVisibleInlineChannel(arg0, arg1) {
-  value = map.get(arg0);
+export const registerVisibleInlineChannel = function registerVisibleInlineChannel(channelId, windowId) {
+  value = map.get(channelId);
   if (null == value) {
     const _Set = Set;
     const set = new Set();
-    const result = map.set(arg0, set);
+    const result = map.set(channelId, set);
     value = set;
   }
-  value.add(arg1);
+  value.add(windowId);
 };
-export const unregisterVisibleInlineChannel = function unregisterVisibleInlineChannel(arg0, arg1) {
-  value = map.get(arg0);
+export const unregisterVisibleInlineChannel = function unregisterVisibleInlineChannel(channelId, windowId) {
+  value = map.get(channelId);
   if (null != value) {
-    value.delete(arg1);
+    value.delete(windowId);
     if (0 === value.size) {
-      map.delete(arg0);
+      map.delete(channelId);
     }
   }
 };

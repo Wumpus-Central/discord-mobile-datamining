@@ -139,11 +139,11 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   const callback2 = obj4.useCallback(() => {
     let premiumTier;
     if (first != null) {
-      premiumTier = tmp.premiumTier;
+      premiumTier = first.premiumTier;
     }
     if (null != premiumTier) {
       let obj = useBuyNitroTrialAndPriceOverrides;
-      const result = obj.markBuyNitroTrialUnavailable(tmp.premiumTier);
+      const result = obj.markBuyNitroTrialUnavailable(first.premiumTier);
     }
     obj = { title: null, body: null, hideActionSheet: false };
     const intl = util.intl;
@@ -162,23 +162,23 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
       beginResult = BuyNitroPurchaseLock.begin();
     }
     if (beginResult) {
-      value = priceStringByProductId.get(tmp.item.productId);
+      value = priceStringByProductId.get(selection.item.productId);
       if (value == null) {
         value = null;
       }
       _undefined(value);
       let tmp10;
-      if (tmp.isTrial) {
+      if (selection.isTrial) {
         tmp10 = trialId;
       }
       _undefined2(tmp10);
-      closure_4(tmp.item);
+      closure_4(selection.item);
     }
   }, items4);
   const items5 = [onExit(selection(trialId[19]).Button, { text: stringResult, variant: str, size: "lg", grow: true, onPress: callback3, loading: stateFromStores, disabled: isBuyNitroPurchaseBlocked }), ];
   let tmp34Result = null != outgoing;
   if (tmp34Result) {
-    const obj2 = { snapshot: outgoing.snapshot, onDone: buyNitroButtonCrossfade.onOutgoingDone };
+    let obj2 = { snapshot: outgoing.snapshot, onDone: buyNitroButtonCrossfade.onOutgoingDone };
     tmp34Result = tmp34(tmp13(tmp5[11]), obj2, outgoing.key);
   }
   items5[1] = tmp34Result;

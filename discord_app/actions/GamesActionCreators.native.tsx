@@ -68,7 +68,7 @@ export default {
   },
   join(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -98,7 +98,7 @@ export default {
               if (undefined === locationObject) {
                 locationObject = {};
               }
-              let analyticsLocations = tmp24.analyticsLocations;
+              let analyticsLocations = closure_0.analyticsLocations;
               if (undefined === analyticsLocations) {
                 analyticsLocations = [];
               }
@@ -128,7 +128,7 @@ export default {
                   return obj4;
                 }
               } else if (null != tmp7) {
-                let tmp9 = fetchJoinSecret(tmp24, () => true);
+                let tmp9 = fetchJoinSecret(closure_0, () => true);
               } else {
                 tmp9 = (function joinViaDeeplink(application) {
                   application = application.application;
@@ -161,31 +161,28 @@ export default {
                       activityChannelId(573).dispatch(obj);
                       let flag2 = true;
                       const obj4 = activityChannelId(573);
+                    } else if (null == deeplink_uri) {
+                      activityChannelId(573);
+                      obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: application.id };
+                      obj.dispatch(obj);
+                      flag2 = false;
                     } else {
-                      if (null == deeplink_uri) {
-                        activityChannelId(573);
-                        obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: application.id };
-                        obj.dispatch(obj);
-                        flag2 = false;
-                      } else {
-                        const _HermesInternal = HermesInternal;
-                        const combined = "" + str.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-                        activityChannelId(4255).openURL(combined, constants2.SAFARI);
-                        const obj6 = activityChannelId(4255);
-                        const obj1 = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
-                        ({ id: obj8.applicationId, parent_id: obj8.parentApplicationId } = application);
-                        obj1.secret = secret;
-                        obj1.intent = constants4.PLAY;
-                        let flag = application.embedded;
-                        if (flag == null) {
-                          flag = false;
-                        }
-                        obj1.embedded = flag;
-                        activityChannelId(573).dispatch(obj1);
-                        flag2 = true;
-                        const obj7 = activityChannelId(573);
+                      const _HermesInternal = HermesInternal;
+                      const combined = "" + deeplink_uri.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
+                      activityChannelId(4255).openURL(combined, constants2.SAFARI);
+                      const obj6 = activityChannelId(4255);
+                      const obj1 = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
+                      ({ id: obj8.applicationId, parent_id: obj8.parentApplicationId } = application);
+                      obj1.secret = secret;
+                      obj1.intent = constants4.PLAY;
+                      let flag = application.embedded;
+                      if (flag == null) {
+                        flag = false;
                       }
-                      str = deeplink_uri;
+                      obj1.embedded = flag;
+                      activityChannelId(573).dispatch(obj1);
+                      flag2 = true;
+                      const obj7 = activityChannelId(573);
                     }
                     return flag2;
                   };
@@ -212,7 +209,8 @@ export default {
                     obj.dispatch(obj);
                     return false;
                   });
-                })(tmp24);
+                  const obj2 = deeplink_uri(application[7]);
+                })(closure_0);
               }
             }
           } else {

@@ -201,9 +201,9 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
     if (arg2) {
       if (constants2.LANDSCAPE === arg1) {
         layoutManager.setTargetAspectRatio(applicationId, "landscape");
-      } else if (tmp5.PORTRAIT === arg1) {
+      } else if (constants2.PORTRAIT === arg1) {
         layoutManager.setTargetAspectRatio(applicationId, "portrait");
-      } else if (tmp5.UNLOCKED === arg1) {
+      } else if (constants2.UNLOCKED === arg1) {
         let str2 = "portrait";
         if (arg0) {
           str2 = "landscape";
@@ -252,7 +252,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   const tmp39 = !sharedVisible(9472)();
   __initData3 = tmp39;
   backgroundColor = tmp.activityContainerBackground.backgroundColor;
-  const obj2 = { runOnJS: applicationId(4296).runOnJS, handleTargetAspectRatioParams: callback1, gridOrientationLockState, hasJoined: tmp21, updateNotJoinedActivityDimensions: callback2 };
+  let obj2 = { runOnJS: applicationId(4296).runOnJS, handleTargetAspectRatioParams: callback1, gridOrientationLockState, hasJoined: tmp21, updateNotJoinedActivityDimensions: callback2 };
   class Te {
     constructor() {
       num = 0;

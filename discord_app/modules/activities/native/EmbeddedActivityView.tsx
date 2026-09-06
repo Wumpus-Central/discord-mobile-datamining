@@ -37,6 +37,7 @@ function useBaseActivityView(orientationLockState) {
   const items = [isLandscape];
   const layoutEffect = obj.useLayoutEffect(() => {
     DispatcherDefault.dispatch({ type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE", screenOrientation: isLandscape ? constants.LANDSCAPE : constants.PORTRAIT });
+    const tmp2 = isLandscape ? constants.LANDSCAPE : constants.PORTRAIT;
   }, items);
   const items1 = [id];
   const layoutEffect1 = obj.useLayoutEffect(() => {
@@ -139,7 +140,7 @@ const memoResult = noop.memo(function EmbeddedActivityViewInner(portraitSafeArea
   if (null == currentEmbeddedActivity) {
     obj = { instance_id: "" };
   } else {
-    let tmp5Result = tmp5(9637);
+    let tmp5Result = layoutMode(9637);
     const discordEnvQueryParams = tmp5Result.getDiscordEnvQueryParams();
     const ui_density = discordEnvQueryParams.ui_density;
     const tmp38 = _objectWithoutProperties(discordEnvQueryParams, setIsResetting);
@@ -229,7 +230,7 @@ const memoResult = noop.memo(function EmbeddedActivityViewInner(portraitSafeArea
   if (!tmp22) {
     tmp22 = null == tmp4;
   }
-  obj1 = { orientationLockState: stateFromStores, showLoadingIndicator: tmp22, setShowLoadingStateForLockingOrientation: tmp9, application: tmp4, setOrientationLockState: tmp5(9634).setOrientationLockState };
+  obj1 = { orientationLockState: stateFromStores, showLoadingIndicator: tmp22, setShowLoadingStateForLockingOrientation: tmp9, application: tmp4, setOrientationLockState: layoutMode(9634).setOrientationLockState };
   const tmp7 = _slicedToArray(noop.useState(true), 2);
   setIsResetting = useBaseActivityView(obj1).setIsResetting;
   let tmp28Result = null;
@@ -276,17 +277,17 @@ const memoResult = noop.memo(function EmbeddedActivityViewInner(portraitSafeArea
       obj3.activitySessionId = compositeInstanceId;
       obj3.queryParams = obj;
       obj3.onLoadError = callback;
-      tmp5Result = tmp5(9650);
+      tmp5Result = layoutMode(9650);
       obj3.allowPopups = tmp5Result.allowPopups(tmp4);
       obj3.isPipOrGridMode = layoutMode === constants.PIP || layoutMode === constants.GRID;
-      obj3.webViewKey = tmp5(9515).EMBEDDED_ACTIVITY_WEB_VIEW_KEY;
+      obj3.webViewKey = layoutMode(9515).EMBEDDED_ACTIVITY_WEB_VIEW_KEY;
       if (tmp26) {
         landscapeSafeAreasConfig = portraitSafeAreasConfig.landscapeSafeAreasConfig;
       }
       obj3.safeAreasConfig = landscapeSafeAreasConfig;
       obj3.ignoreSilentHardwareSwitch = !set.has(id);
       obj2.children = closure_13(tmp2(9642), obj3);
-      tmp28Result = tmp28(BaseActivityView, obj2);
+      tmp28Result = closure_13(BaseActivityView, obj2);
       const tmp2Result = tmp2(9642);
     }
   }

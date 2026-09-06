@@ -7,6 +7,7 @@ import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
 import BackgroundImageDefault from "BackgroundImage" /* 6975 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
 import MfaScreenUtilsDefault from "MfaScreenUtils" /* 15671 */;
+import BackButtonDefault from "BackButton" /* 15672 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,13 +40,13 @@ export default function MFAOptionScreen(arg0) {
   let tmp10Result = null != subtitle;
   if (tmp10Result) {
     const obj1 = { variant: "heading-sm/normal", color: "text-default", children: subtitle };
-    tmp10Result = tmp10(tmp8(4556).Text, obj1);
+    tmp10Result = React4(Text_Text.Text, obj1);
   }
   items[2] = tmp10Result;
   tmp10Result = null != error;
   if (tmp10Result) {
     const obj2 = { variant: "text-sm/normal", color: "text-feedback-critical", children: error };
-    tmp10Result = tmp10(tmp8(4556).Text, obj2);
+    tmp10Result = React4(Text_Text.Text, obj2);
   }
   let tmp10Result1 = type === mfaMethod;
   const obj3 = { children: null };
@@ -58,7 +59,7 @@ export default function MFAOptionScreen(arg0) {
   const items3 = [submit, ];
   if (tmp10Result1) {
     const obj5 = { props: screenProps };
-    tmp10Result1 = tmp10(tmp(15672), obj5);
+    tmp10Result1 = React4(BackButtonDefault, obj5);
   }
   items3[1] = tmp10Result1;
   obj4.children = items3;
@@ -69,7 +70,7 @@ export default function MFAOptionScreen(arg0) {
   let tmp10Result2 = tmp7Result;
   if (tmp3) {
     const obj6 = { keyboardShouldPersistTaps: "handled", children: tmp7Result };
-    tmp10Result2 = tmp10(ScrollView, obj6);
+    tmp10Result2 = React4(ScrollView, obj6);
   }
   children[1] = tmp10Result2;
   return hasOwnProperty(timestampProducer, { children });

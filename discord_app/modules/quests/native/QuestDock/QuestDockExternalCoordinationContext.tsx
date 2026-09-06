@@ -38,7 +38,7 @@ export const QuestDockExternalCoordinationContextProvider = noop.memo(function Q
   sharedValue1 = sharedValue(sharedValue1[7]).useSharedValue(0);
   let obj2 = sharedValue(sharedValue1[7]);
   const obj3 = sharedValue(sharedValue1[7]);
-  const sharedValue2 = obj3.useSharedValue(sharedValue(sharedValue1[8]).isSoftDismissed(setRestingQuestDockMode.questDockSoftDismissedAt) ? tmp3.SOFT_DISMISSED : tmp3.COLLAPSED);
+  const sharedValue2 = obj3.useSharedValue(sharedValue(sharedValue1[8]).isSoftDismissed(setRestingQuestDockMode.questDockSoftDismissedAt) ? QuestDockMode.SOFT_DISMISSED : QuestDockMode.COLLAPSED);
   const items = [sharedValue2, sharedValue1];
   setRestingQuestDockMode = sharedValue2.useCallback((mode) => {
     const result = sharedValue1.set(0);
@@ -51,7 +51,7 @@ export const QuestDockExternalCoordinationContextProvider = noop.memo(function Q
   }, items);
   const items1 = [sharedValue, sharedValue2, setRestingQuestDockMode, sharedValue1];
   obj = { value: sharedValue2.useMemo(() => ({ lastScrollEventSourceId: sharedValue, restingQuestDockMode: sharedValue2, setRestingQuestDockMode, questDockOffset: sharedValue1 }), items1), children: children.children };
-  return <context.Provider value={sharedValue2.useMemo(() => ({ lastScrollEventSourceId: sharedValue, restingQuestDockMode: sharedValue2, setRestingQuestDockMode, questDockOffset: sharedValue1 }), items1)}>{arg0.children}</context.Provider>;
+  return <context.Provider value={sharedValue2.useMemo(() => ({ lastScrollEventSourceId: sharedValue, restingQuestDockMode: sharedValue2, setRestingQuestDockMode, questDockOffset: sharedValue1 }), items1)}>{children.children}</context.Provider>;
 });
 export const useExternalScrollEventHandler = function useExternalScrollEventHandler(id) {
   id = id.id;
@@ -67,7 +67,7 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
   const scheduleReopenQuestDock = restingQuestDockMode.useCallback(() => {
     if (-1 !== ref.current) {
       const _window = window;
-      window.clearTimeout(tmp.current);
+      window.clearTimeout(ref.current);
     }
     ref.current = window.setTimeout(() => {
       if (restingQuestDockMode.get() !== constants.EXPANDED) {

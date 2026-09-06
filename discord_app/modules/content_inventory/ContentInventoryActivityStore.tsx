@@ -59,10 +59,9 @@ function detectMatchingActivityForEntries(entries) {
       let tmp8 = entryToKey(tmp2.content);
       let tmp9 = tmp8;
       let addResult = matchedKeys.add(tmp8);
-      let obj3 = map;
       if (tmp5 !== map.get(tmp8)) {
         let addResult1 = updatedKeys.add(tmp9);
-        let result = obj3.set(tmp9, tmp5);
+        let result = map.set(tmp9, tmp5);
       }
     }
     continue;
@@ -71,7 +70,7 @@ function detectMatchingActivityForEntries(entries) {
 }
 function handlePresenceUpdates() {
   let flag = false;
-  set = new Set();
+  const arr = Array.from(map.keys());
   const set1 = new Set();
   const feeds = ContentInventoryStore.getFeeds();
   const values = feeds.values();
@@ -107,6 +106,7 @@ function handlePresenceUpdates() {
       tmp9 = updatedKeys[Symbol.iterator]();
     }
   }
+  set = new Set();
 }
 const ActivityTypes = fn(1074).ActivityTypes;
 let items = [fn(8130).ContentInventoryEntryType.LISTENED_SESSION];

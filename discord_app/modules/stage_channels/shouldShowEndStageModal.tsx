@@ -28,7 +28,7 @@ export default function shouldShowEndStageModal(isGuildStageVoice) {
             return isModeratorResult;
           });
           if (!tmp7) {
-            const mutableParticipants1 = obj2.getMutableParticipants(isGuildStageVoice.id, require("StageChannelParticipants").StageChannelParticipantNamedIndex.SPEAKER);
+            const mutableParticipants1 = StageChannelParticipantStore.getMutableParticipants(isGuildStageVoice.id, require("StageChannelParticipants").StageChannelParticipantNamedIndex.SPEAKER);
             tmp7 = null == mutableParticipants1.find((user) => {
               let isModeratorResult = user.user.id !== id;
               if (isModeratorResult) {
@@ -38,7 +38,6 @@ export default function shouldShowEndStageModal(isGuildStageVoice) {
             });
           }
           isSpeakerResult = tmp7;
-          obj2 = StageChannelParticipantStore;
         }
         isModeratorResult = isSpeakerResult;
       }

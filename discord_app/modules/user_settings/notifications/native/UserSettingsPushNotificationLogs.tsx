@@ -42,7 +42,7 @@ export default function UserSettingsPushNotificationLogs() {
   dependencyMap = tmp3[1];
   [tmp6, asyncGeneratorStep] = _slicedToArray(noop.useState([]), 2);
   const effect = noop.useEffect(() => {
-    closure_0 = async function _load(arg0, value) {
+    closure_0 = async function _load() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -116,12 +116,12 @@ export default function UserSettingsPushNotificationLogs() {
           closure_1_3(first1.filter((type) => {
             let tmp2 = null != type.type.match(regExp);
             if (!tmp2) {
-              tmp2 = null != type.title.match(tmp);
+              tmp2 = null != type.title.match(regExp);
             }
             if (!tmp2) {
               let match;
               if (type.content != null) {
-                match = str3.match(tmp);
+                match = str3.match(regExp);
               }
               tmp2 = null != match;
             }
@@ -147,7 +147,7 @@ export default function UserSettingsPushNotificationLogs() {
   obj = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
   const intl = defaultValue(1114).intl;
   obj.accessibilityLabel = intl.string(defaultValue(1114).t.leICvh);
-  obj.onPress = asyncGeneratorStep(async (arg0, value) => {
+  obj.onPress = asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

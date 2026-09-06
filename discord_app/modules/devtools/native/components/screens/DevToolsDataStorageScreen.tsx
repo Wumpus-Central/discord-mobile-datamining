@@ -153,9 +153,9 @@ export default function DevToolsDataStorageScreen() {
     obj.sections = items.map((item) => {
       if (constants.DATABASE_CONTROLS === item) {
         return 3;
-      } else if (tmp.DATABASE_CURRENT === item) {
+      } else if (constants.DATABASE_CURRENT === item) {
         return 1;
-      } else if (tmp.PERSISTED_STORES === item) {
+      } else if (constants.PERSISTED_STORES === item) {
         let num3 = 1;
         if (found.length > 0) {
           num3 = found.length;
@@ -183,13 +183,13 @@ export default function DevToolsDataStorageScreen() {
       } else {
         return null;
       }
-    } else if (tmp.DATABASE_CURRENT === arg0) {
+    } else if (constants.DATABASE_CURRENT === arg0) {
       let tmp14 = null;
       if (0 === arg1) {
         tmp14 = <closure_1_11 />;
       }
       return tmp14;
-    } else if (tmp.PERSISTED_STORES === arg0) {
+    } else if (constants.PERSISTED_STORES === arg0) {
       if (0 === arg1) {
         let obj = { label: null, start: true };
         obj = {
@@ -254,8 +254,8 @@ export default function DevToolsDataStorageScreen() {
     let str = "Database Controls";
     if (constants.DATABASE_CONTROLS !== arg0) {
       str = "Database (Current)";
-      if (tmp2.DATABASE_CURRENT !== arg0) {
-        if (tmp2.PERSISTED_STORES === arg0) {
+      if (constants.DATABASE_CURRENT !== arg0) {
+        if (constants.PERSISTED_STORES === arg0) {
           str = "Persisted Stores";
         }
       }

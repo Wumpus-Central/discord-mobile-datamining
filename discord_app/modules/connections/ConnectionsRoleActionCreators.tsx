@@ -5,7 +5,7 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_5 = async function _putRoleConnectionsConfigurations(arg0, value) {
+let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -102,7 +102,7 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0, value) {
 let closure_6 = async function _fetchUserApplicationRoleConnections() {
   const HTTP = require("HTTPUtils").HTTP;
   await HTTP.get({ url: constants.APPLICATION_USER_ROLE_CONNECTIONS, rejectWithError: false });
-  return arg1.body;
+  return value.body;
 };
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

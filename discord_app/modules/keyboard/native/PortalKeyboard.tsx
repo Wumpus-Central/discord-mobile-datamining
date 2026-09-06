@@ -22,7 +22,7 @@ export const PortalKeyboard = function PortalKeyboard(children) {
       let tmp3 = modal;
     }
     obj = { hostName: tmp3, children: children.children };
-    return jsx(tmp(4432).Portal, { hostName: tmp3, children: children.children });
+    return jsx(Portal.Portal, { hostName: tmp3, children: children.children });
   }
   tmp3 = c3;
 };

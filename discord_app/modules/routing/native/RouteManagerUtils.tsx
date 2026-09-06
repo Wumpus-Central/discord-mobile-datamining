@@ -4,6 +4,7 @@
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
+import RouteUtils from "RouteUtils" /* 4399 */;
 import Client from "Client" /* 4491 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
@@ -55,18 +56,18 @@ function voiceRouteRewriter(location) {
     }
   }
   if (null != tmp4) {
-    if (closure_15 != null) {
+    if (logger != null) {
       const _JSON = JSON;
       const _HermesInternal = HermesInternal;
-      obj5.log("voiceRouteRewriter: has voiceChannelParams = " + JSON.stringify(tmp4));
+      logger.log("voiceRouteRewriter: has voiceChannelParams = " + JSON.stringify(tmp4));
     }
     const _HermesInternal2 = HermesInternal;
     const combined = "" + DefaultRouteStore.lastNonVoiceRoute + Routes.VOICE_CHAT_CHANNEL_PARTIAL(tmp4.guildId, tmp4.channelId, tmp4.messageId);
     let tmp17 = null;
     if (combined !== location.pathname) {
-      if (obj5 != null) {
+      if (logger != null) {
         const _HermesInternal3 = HermesInternal;
-        obj5.log("voiceRouteRewriter: rewriting route: " + location.pathname + " -> " + combined);
+        logger.log("voiceRouteRewriter: rewriting route: " + location.pathname + " -> " + combined);
       }
       obj1 = { path: combined, state };
       tmp17 = obj1;
@@ -128,13 +129,13 @@ function updateSelectedChannelListener(location) {
   ({ guildId, channelId, messageId, jumpType, voiceChannelId: voiceChannelId2, voiceGuildId: voiceGuildId2, voiceMessageId: voiceMessageId2 } = obj);
   if (null == voiceChannelId2) {
     if (null == voiceGuildId2) {
-      if (closure_15 != null) {
+      if (logger != null) {
         const _JSON5 = JSON;
         const json = JSON.stringify(location);
         const _JSON6 = JSON;
         const obj2 = { guildId, channelId, messageId, jumpType, voiceChannelId: voiceChannelId2, voiceGuildId: voiceGuildId2, voiceMessageId: voiceMessageId2 };
         const _HermesInternal3 = HermesInternal;
-        obj19.verbose("UpdateSelectedChannelListener -> no voice route present in " + json + " " + JSON.stringify(obj2) + " ");
+        logger.verbose("UpdateSelectedChannelListener -> no voice route present in " + json + " " + JSON.stringify(obj2) + " ");
       }
       const channel = ChannelStore.getChannel(SelectedChannelStore.getLastSelectedChannelId());
       let isGuildVoiceResult;
@@ -153,7 +154,6 @@ function updateSelectedChannelListener(location) {
         ModalActionCreatorsDefault.popWithKey(tmpResult.getVoiceChannelKey(channel.id));
       }
       const guild = GuildActionCreatorsDefault.selectGuild(guildId);
-      obj19 = closure_15;
       const obj3 = { guildId, channelId, messageId, jumpType, skipMessageFetch: tmp5, opensChannel: null };
       let tmp41 = null != channelId;
       if (tmp41) {
@@ -175,7 +175,7 @@ function updateSelectedChannelListener(location) {
       type1 = channel2.type;
     }
     if (type1 !== tmp7.GUILD_STAGE_VOICE) {
-      if (closure_15 != null) {
+      if (logger != null) {
         let id;
         if (channel2 != null) {
           id = channel2.id;
@@ -185,18 +185,17 @@ function updateSelectedChannelListener(location) {
         const obj4 = { guildId, channelId, messageId, jumpType, voiceChannelId: voiceChannelId2, voiceGuildId: voiceGuildId2, voiceMessageId: voiceMessageId2 };
         const json1 = JSON.stringify(location);
         const _HermesInternal = HermesInternal;
-        obj26.log("UpdateSelectedChannelListener -> !!!VERY BAD!!! channel.id " + id + " (voiceChannelId " + voiceChannelId2 + ") is not a voice channel! and yet RouteUtils thinks it is! " + json1 + " " + JSON.stringify(obj4) + " ");
+        logger.log("UpdateSelectedChannelListener -> !!!VERY BAD!!! channel.id " + id + " (voiceChannelId " + voiceChannelId2 + ") is not a voice channel! and yet RouteUtils thinks it is! " + json1 + " " + JSON.stringify(obj4) + " ");
       }
-      obj26 = closure_15;
     }
   }
-  if (closure_15 != null) {
+  if (logger != null) {
     const _JSON3 = JSON;
     const json2 = JSON.stringify(location);
     const _JSON4 = JSON;
     const obj5 = { guildId, channelId, messageId, jumpType, voiceChannelId: voiceChannelId2, voiceGuildId: voiceGuildId2, voiceMessageId: voiceMessageId2 };
     const _HermesInternal2 = HermesInternal;
-    obj8.verbose("UpdateSelectedChannelListener -> voice route present! " + json2 + " " + JSON.stringify(obj5) + " ");
+    logger.verbose("UpdateSelectedChannelListener -> voice route present! " + json2 + " " + JSON.stringify(obj5) + " ");
   }
   tmpResult = tmp(9681);
   if (!tmpResult.isVoicePanelEnabled(channel2)) {
@@ -205,7 +204,6 @@ function updateSelectedChannelListener(location) {
     const channel3 = SelectedChannelActionCreatorsDefault.selectChannel(obj6);
   }
   const obj1 = { match: matchPathResult, location };
-  obj8 = closure_15;
   const tmpResult1 = channel2(4417);
   if (!tmpResult1.isModalOpen(tmpResult2.getVoiceChannelKey(channel2.id))) {
     const obj15 = ModalActionCreatorsDefault;
@@ -224,6 +222,7 @@ function updateSelectedChannelListener(location) {
     }
     tmp25 = null != voiceGuildId2 && null != voiceChannelId2 && null != voiceMessageId2;
   }
+  tmp21 = channel2.isGuildVoice() && null != voiceMessageId2 || channel2.isGuildStageVoice();
 }
 function extractParams(arg0) {
   ({ match, location: _location } = arg0);
@@ -234,13 +233,12 @@ function extractParams(arg0) {
     const params = match.params;
     ({ guildId, channelId } = params);
     if (_location.jumpType === Client.JumpType.INSTANT) {
-      let ANIMATED = tmp5(4491).JumpType.INSTANT;
+      let ANIMATED = Client.JumpType.INSTANT;
     } else {
-      ANIMATED = tmp5(4491).JumpType.ANIMATED;
+      ANIMATED = Client.JumpType.ANIMATED;
     }
-    tmp5(4399);
     obj = { guildId, channelId: null, messageId: null, jumpType: null, skipMessageFetch: null };
-    const tmp5Result = tmp5(4399);
+    const tmp5Result = RouteUtils;
     let tmp = null;
     if (tmp5Result.isValidChannelId(channelId)) {
       tmp = channelId;
@@ -324,7 +322,7 @@ export const popVoiceRoute = function popVoiceRoute(guildId) {
     }
   }
 };
-export const transitionToVoiceRoute = function transitionToVoiceRoute(arg0, arg1) {
+export const transitionToVoiceRoute = function transitionToVoiceRoute(guild_id, id) {
   const defaultRoute = DefaultRouteStore.defaultRoute;
   const obj = { path: items, strict: false, exact: false };
   const matchPathResult = obj.matchPath(defaultRoute, obj);
@@ -336,13 +334,13 @@ export const transitionToVoiceRoute = function transitionToVoiceRoute(arg0, arg1
     params = {};
   }
   const voiceChannelId = params.voiceChannelId;
-  logger.log("transitionToVoiceRoute(<" + arg0 + ">, <" + arg1 + ">), current route " + defaultRoute + " has voiceChannelId " + voiceChannelId);
-  if (voiceChannelId !== arg1) {
-    router_utils.transitionToGuild(arg0, arg1);
+  logger.log("transitionToVoiceRoute(<" + guild_id + ">, <" + id + ">), current route " + defaultRoute + " has voiceChannelId " + voiceChannelId);
+  if (voiceChannelId !== id) {
+    router_utils.transitionToGuild(guild_id, id);
     const tmpResult = router_utils;
   } else {
     const _HermesInternal = HermesInternal;
-    logger.log("transitionToVoiceRoute -> " + voiceChannelId + " === " + arg1 + ". staying where we are");
+    logger.log("transitionToVoiceRoute -> " + voiceChannelId + " === " + id + ". staying where we are");
   }
 };
 export { voiceRouteRewriter };

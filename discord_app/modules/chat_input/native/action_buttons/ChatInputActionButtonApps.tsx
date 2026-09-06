@@ -46,24 +46,22 @@ export default noop.memo(function ChatInputActionButtonApps(onPress) {
         obj.timeMs = Date.now();
         let guild_id;
         if (channel != null) {
-          guild_id = tmp13.guild_id;
+          guild_id = channel.guild_id;
         }
         obj.guildId = guild_id;
         obj.willShowGlobalSearchOnboarding = willShowGlobalSearchOnboarding;
         const result = AppLauncherOnboardingActionCreators.setTriggeredOnboardingContentMetadata(obj);
-        tmp13 = channel;
       } else if (canShowAppsOrActivitiesBanner) {
         obj = { channelId: channel.id, timeMs: null, guildId: null, canShowBotsBanner: false, canShowAppsOrActivitiesBanner: true, willShowGlobalSearchOnboarding: null };
         const _Date = Date;
         obj.timeMs = Date.now();
         let guild_id1;
         if (channel != null) {
-          guild_id1 = tmp5.guild_id;
+          guild_id1 = channel.guild_id;
         }
         obj.guildId = guild_id1;
         obj.willShowGlobalSearchOnboarding = willShowGlobalSearchOnboarding;
         const result1 = obj.setTriggeredOnboardingContentMetadata(obj);
-        tmp5 = channel;
       }
       if (willShowGlobalSearchOnboarding) {
         const obj1 = { channelId: channel.id, timeMs: null, guildId: null, canShowAppsOrActivitiesBanner: null, canShowBotsBanner: null, willShowGlobalSearchOnboarding: true };
@@ -71,19 +69,17 @@ export default noop.memo(function ChatInputActionButtonApps(onPress) {
         obj1.timeMs = Date.now();
         let guild_id2;
         if (channel != null) {
-          guild_id2 = tmp22.guild_id;
+          guild_id2 = channel.guild_id;
         }
         obj1.guildId = guild_id2;
         obj1.canShowAppsOrActivitiesBanner = canShowAppsOrActivitiesBanner;
-        obj1.canShowBotsBanner = tmp;
+        obj1.canShowBotsBanner = canShowBotsBanner;
         const result2 = AppLauncherOnboardingActionCreators.setTriggeredOnboardingContentMetadata(obj1);
-        tmp22 = channel;
       }
       const _setTimeout = setTimeout;
       closure_7.current = setTimeout(() => {
         channel(ref[5]).setLastSeenTimeMs();
       }, AppLauncherOnboardingChatInputButtonAnimation.APP_LAUNCHER_ONBOARDING_CHAT_INPUT_BUTTON_ANIMATION_DURATION_MS);
-      tmp = canShowBotsBanner;
     }
   }, items);
   let tmp9 = null;

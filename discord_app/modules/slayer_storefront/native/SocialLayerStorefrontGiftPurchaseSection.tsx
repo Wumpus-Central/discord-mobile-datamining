@@ -104,6 +104,7 @@ export default function SocialLayerStorefrontGiftPurchaseSection(disabled) {
     obj.analyticsLocations = analyticsLocations;
     const result = SocialLayerStorefrontNativeActionCreators.openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj);
     result.then(SocialLayerStorefrontNativeActionCreators.closeSocialLayerStorefrontGiftModal);
+    const tmpResult = SocialLayerStorefrontNativeActionCreators;
   };
   obj.onPurchaseError = onPurchaseError;
   obj.onPurchasePending = function onPurchasePending() {

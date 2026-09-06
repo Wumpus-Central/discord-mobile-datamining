@@ -5,7 +5,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_3 = async function _preloadAllIntlMessageFiles(arg0, value) {
+let closure_3 = async function _preloadAllIntlMessageFiles() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

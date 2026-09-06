@@ -43,7 +43,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     if (type === ChannelTypes.DM) {
       user = UserStore.getUser(channel.getRecipientId());
     }
-    const call = CallStore.getCall(tmp);
+    const call = CallStore.getCall(channelId);
     const id = AuthenticationStore.getId();
     let hasItem = null != call && null != id;
     if (hasItem) {
@@ -75,10 +75,9 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     if (isDMResult) {
       let avatarSource;
       if (dmRecipient != null) {
-        avatarSource = obj2.getAvatarSource(undefined);
+        avatarSource = dmRecipient.getAvatarSource(undefined);
       }
       tmp2 = avatarSource;
-      obj2 = dmRecipient;
     }
     return tmp2;
   }, items2);
@@ -106,7 +105,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
   let tmp11Result = null;
   if (null != channel) {
     obj = { channel };
-    tmp11Result = tmp11(tmp7(tmp3[18]), obj);
+    tmp11Result = jsx(tmp7(tmp3[18]), { channel });
   }
   obj.expandedChildren = tmp11Result;
   let isMultiUserDMResult1;
@@ -115,13 +114,13 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
   }
   if (isMultiUserDMResult1) {
     obj1 = { channel, size: tmp2(tmp3[20]).AvatarSizes.LARGE_48, pileSizeOverride: tmp2(tmp3[20]).AvatarSizes.REFRESH_MEDIUM_32, animate: true };
-    tmp11Result = tmp11(tmp7(tmp3[19]), obj1);
+    tmp11Result = jsx(tmp7(tmp3[19]), { channel, size: tmp2(tmp3[20]).AvatarSizes.LARGE_48, pileSizeOverride: tmp2(tmp3[20]).AvatarSizes.REFRESH_MEDIUM_32, animate: true });
     const tmp7Result = tmp7(tmp3[19]);
   } else {
     tmp11Result = null;
     if (null != memo) {
       obj2 = { style: tmp.dm, source: memo };
-      tmp11Result = tmp11(tmp7(tmp3[21]), obj2);
+      tmp11Result = jsx(tmp7(tmp3[21]), { style: tmp.dm, source: memo });
     }
   }
   obj.children = tmp11Result;

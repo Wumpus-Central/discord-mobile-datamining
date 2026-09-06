@@ -26,12 +26,12 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   const memo = noop.useMemo(() => {
     let group_listings;
     if (store_page != null) {
-      const role_subscription = tmp.role_subscription;
+      const role_subscription = store_page.role_subscription;
       if (role_subscription != null) {
         group_listings = role_subscription.group_listings;
       }
     }
-    const set = new Set();
+    new Set();
     if (group_listings != null) {
       let item = group_listings.forEach((subscription_listings) => {
         const prop = subscription_listings.subscription_listings;
@@ -44,7 +44,7 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     }
     let benefit_emojis;
     if (store_page != null) {
-      const role_subscription2 = tmp.role_subscription;
+      const role_subscription2 = store_page.role_subscription;
       if (role_subscription2 != null) {
         benefit_emojis = role_subscription2.benefit_emojis;
       }
@@ -69,9 +69,9 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   const memo1 = obj.useMemo(() => {
     let substr = memo;
     if (null != memo) {
-      substr = arr;
-      if (arr.length > closure_0) {
-        substr = arr.slice(0, tmp2);
+      substr = memo;
+      if (memo.length > closure_0) {
+        substr = memo.slice(0, tmp2);
       }
     }
     return substr;

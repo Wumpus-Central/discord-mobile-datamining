@@ -43,10 +43,9 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
         const _Object = Object;
         obj = { color, radius, borderless, cornerRadius, foreground: tmp5 };
         const frozen = Object.freeze(obj);
-        const result = obj3.set(sum, frozen);
+        const result = map.set(sum, frozen);
         return frozen;
       }
-      obj3 = map;
     } else {
       shared.isThemeLight(ThemeStore.theme) ? semanticColor1 : semanticColor;
       const tmpResult = shared;

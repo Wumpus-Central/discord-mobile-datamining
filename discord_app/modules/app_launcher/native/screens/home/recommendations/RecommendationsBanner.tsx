@@ -5,11 +5,11 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import useAvatarColorDefault from "useAvatarColor" /* 8132 */;
 import useDisplayProfileDefault from "useDisplayProfile" /* 8186 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8246 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9652 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1385 */;
 
-const UserProfileBannerDefault = tmp(8246);
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);

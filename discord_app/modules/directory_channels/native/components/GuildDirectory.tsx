@@ -7,6 +7,7 @@ import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
+import Pressables from "Pressables" /* 5123 */;
 import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7051 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7475 */;
 import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11896 */;
@@ -19,6 +20,7 @@ import GuildDirectoryPlaceholderRowDefault from "GuildDirectoryPlaceholderRow" /
 import GuildDirectoryRowGenerator from "GuildDirectoryRowGenerator" /* 12670 */;
 import _mod12671 from "module_12671" /* 12671 */;
 import HubProgressHeaderDefault from "HubProgressHeader" /* 12672 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 12753 */;
 import GuildDirectoryCategorySelectorDefault from "GuildDirectoryCategorySelector" /* 12758 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -111,22 +113,22 @@ function GuildDirectoryFooter(hideFooter) {
     tmp4 = null;
     if (!hideFooter.hideFooter) {
       obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-      const intl = tmp2(1114).intl;
-      obj.accessibilityLabel = intl.string(tmp2(1114).t.H9jxS1);
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.H9jxS1);
       obj.onPress = function onPress() {
         const obj = { directoryGuildName: user.name, directoryGuildId: user.id, directoryChannelId: channel.id };
         return obj.open(obj);
       };
       obj = { style: tmp.footer, children: null };
-      const obj1 = { style: tmp.addIcon, children: closure_19(tmp2(12753).PlusMediumIcon, {}) };
+      const obj1 = { style: tmp.addIcon, children: closure_19(PlusMediumIcon.PlusMediumIcon, {}) };
       const items = [closure_19(closure_5, obj1), ];
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-      const intl2 = tmp2(1114).intl;
-      obj2.children = intl2.string(tmp2(1114).t.H9jxS1);
-      items[1] = closure_19(tmp2(4556).Text, obj2);
+      const intl2 = util.intl;
+      obj2.children = intl2.string(util.t.H9jxS1);
+      items[1] = closure_19(Text_Text.Text, obj2);
       obj.children = items;
       obj.children = closure_20(closure_5, obj);
-      tmp4 = closure_19(tmp2(5123).PressableOpacity, obj);
+      tmp4 = closure_19(Pressables.PressableOpacity, obj);
     }
   }
   return tmp4;
@@ -204,9 +206,9 @@ export default function GuildDirectory(channel) {
       tmp3 = currentCategoryId;
     }
     directoryEntries = GuildDirectoryStore.getDirectoryEntries(channel.id, tmp3);
-    const directoryAllEntriesCount = obj.getDirectoryAllEntriesCount(tmp.id);
+    const directoryAllEntriesCount = obj.getDirectoryAllEntriesCount(channel.id);
     obj = { currentCategoryId, directoryEntries, directoryIsFetching: null, allEntriesCount: null, categoryCounts: null };
-    const directoryCategoryCounts = obj.getDirectoryCategoryCounts(tmp.id);
+    const directoryCategoryCounts = obj.getDirectoryCategoryCounts(channel.id);
     let isFetchingResult = obj.isFetching();
     if (!isFetchingResult) {
       isFetchingResult = null === currentCategoryId && null == directoryEntries;
@@ -315,7 +317,7 @@ export default function GuildDirectory(channel) {
         obj1 = { style: tmp.border };
         const items9 = [closure_19(currentCategoryId, obj1), , ];
         obj2 = { guild: onPressSearch, channel };
-        items9[1] = closure_19(guildId(12754), obj2);
+        items9[1] = closure_19(tmp4(12754), obj2);
         items9[2] = closure_19(tmp2(11896).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
         obj.children = items9;
         let tmp23 = closure_20(currentCategoryId, obj);
@@ -367,4 +369,6 @@ export default function GuildDirectory(channel) {
     obj3.children = closure_19(directoryIsFetching, obj4);
     tmp23 = closure_19(currentCategoryId, obj3);
   }
+  const tmp2Result1 = channel(4392);
+  tmp4 = guildId;
 };

@@ -40,13 +40,13 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
   const callback2 = listRef.useCallback((arg0) => {
     if (enabled) {
       if (arg0 > offsets.lastBounty) {
-        const revealHeight = tmp2.revealHeight;
+        const revealHeight = offsets.revealHeight;
         if (typeof getRevealProgress === "function") {
           let num = 0;
           if (revealHeight > 0) {
             num = (arg0 - tmp8) / revealHeight;
           }
-          const tmp3 = num >= 0.25 ? tmp2.fullRecap : tmp2.lastBounty;
+          const tmp3 = num >= 0.25 ? offsets.fullRecap : offsets.lastBounty;
           const _Math = Math;
           if (Math.abs(arg0 - tmp3) >= 2) {
             callback(tmp3);

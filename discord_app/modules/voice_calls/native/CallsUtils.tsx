@@ -26,7 +26,7 @@ import AudioManagerStore from "AudioManagerStore" /* 9086 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-let closure_16 = async function _handleToggleVideo(arg0, value) {
+let closure_16 = async function _handleToggleVideo(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -94,10 +94,10 @@ let closure_16 = async function _handleToggleVideo(arg0, value) {
                 obj5.show(obj2);
               }
             } else if (closure_130_2) {
-              let tmp12Result = tmp12(tmp13[16]);
+              let tmp12Result = closure_131_1(closure_131_3[16]);
               tmp12Result.setVideoEnabled(false);
             } else {
-              tmp12Result = tmp12(tmp13[15]);
+              tmp12Result = closure_131_1(closure_131_3[15]);
               c4 = 2;
               c5 = 1;
               const obj4 = { value: tmp12Result.requestPermission(closure_131_15.CAMERA), done: false };
@@ -208,9 +208,9 @@ export const showMinOSScreenshareRequirementAlert = function showMinOSScreenshar
   }
   const formatToPlainStringResult = intl.formatToPlainString(util.t.ejOT95, { errorCode });
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj.title = intl2.string(util.t.oblMYa);
-  const intl3 = tmp(1114).intl;
+  const intl3 = util.intl;
   obj.body = "" + intl3.string(util.t.Wnhd3q) + "\n\n" + formatToPlainStringResult;
   actions_AlertActionCreatorsDefault.show(obj);
 };
@@ -242,8 +242,8 @@ export const getAudioDeviceToDisplayText = function getAudioDeviceToDisplayText(
   const intl5 = util.intl;
   obj.INVALID = intl5.string(util.t.kCBL6t);
   if (deviceType.deviceType === constants.TYPE_BLE_HEADSET) {
-    const intl6 = tmp(1114).intl;
-    let stringResult = intl6.string(tmp(1114).t.BtXSp9);
+    const intl6 = util.intl;
+    let stringResult = intl6.string(util.t.BtXSp9);
   } else {
     stringResult = obj[deviceType.simpleDeviceType];
   }

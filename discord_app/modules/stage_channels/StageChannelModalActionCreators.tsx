@@ -12,7 +12,7 @@ import PermissionStore from "PermissionStore" /* 4199 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 const require = fn;
-function connectToStage(channel, flag) {
+function connectToStage(channel) {
   if (flag === undefined) {
     flag = false;
   }
@@ -23,23 +23,21 @@ function connectToStage(channel, flag) {
     if (canResult) {
       let num = StageChannelActionCreatorExtrasAll.shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = tmp7(8394).openStageBlockedUsersSheet(channel, () => {
+        const result = StageChannelActionCreatorExtrasAll.openStageBlockedUsersSheet(channel, () => {
           connectAndOpen(closure_0, true);
         });
         num = 1;
-        const tmp7Result = tmp7(8394);
+        const tmp7Result = StageChannelActionCreatorExtrasAll;
       }
       tmp6 = num;
-      tmp7 = importAll;
     }
     if (tmp6) {
       return false;
     }
   }
   StageChannelNewUserManagerDefault.initialize();
-  const obj = SelectedChannelStore;
   const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
-  if (obj.getVoiceChannelId() !== channel.id) {
+  if (SelectedChannelStore.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
     const allApplicationStreamsForChannel = ApplicationStreamingStore.getAllApplicationStreamsForChannel(channel.id);
@@ -51,7 +49,7 @@ function connectToStage(channel, flag) {
     return true;
   }
 }
-function connectAndOpen(channel, flag, flag2, arg3) {
+function connectAndOpen(channel) {
   _require = channel;
   if (flag === undefined) {
     flag = false;
@@ -95,7 +93,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
   if (arg2 === undefined) {
     flag = false;
   }
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -126,7 +124,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             if (null != channel) {
               connectToStage(channel, closure_2);
               c4 = 3;
-              let obj1 = { value: tmp25(channel), done: true };
+              let obj1 = { value: closure_0(channel), done: true };
               return obj1;
             } else {
               let obj4 = closure_0(7321);
@@ -136,7 +134,6 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
               const obj2 = { value: obj4.stopLurkingAll(items), done: false };
               return obj2;
             }
-            tmp25 = closure_0;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -195,8 +192,8 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
 };
 export { connectToStage };
 export { connectAndOpen };
-export const navigateToStage = function navigateToStage(arg0, arg1) {
-  StageChannelActionCreatorExtrasAll.navigateToStage(arg0, arg1);
+export const navigateToStage = function navigateToStage(id, arg1) {
+  StageChannelActionCreatorExtrasAll.navigateToStage(id, arg1);
 };
 export const showUserProfile = function showUserProfile(arg0) {
   const result = StageChannelActionCreatorExtrasAll.showPlatformUserProfile(arg0);

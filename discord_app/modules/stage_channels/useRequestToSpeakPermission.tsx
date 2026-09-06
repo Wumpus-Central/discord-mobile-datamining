@@ -28,7 +28,7 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
     tmp4,
     (arg0) => {
       if (null != stateFromStores) {
-        tmp5(arg0);
+        require(arg0);
         const result = StageChannelActionCreators.setEveryoneRolePermissionAllowed(tmp, Permissions.REQUEST_TO_SPEAK, arg0);
       }
     }

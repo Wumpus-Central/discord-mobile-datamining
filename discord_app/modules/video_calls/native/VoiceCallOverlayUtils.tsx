@@ -49,16 +49,16 @@ doRectanglesIntersectWorklet.__workletHash = 697248006216;
 doRectanglesIntersectWorklet.__initData = { code: "function doRectanglesIntersectWorklet_VoiceCallOverlayUtilsTsx1(rectA,rectB,minMarginBetweenOverlays){if(rectA==null||rectA.x==null||rectA.y==null||rectA.width==null||rectA.height==null||rectB==null||rectB.x==null||rectB.y==null||rectB.width==null||rectB.height==null){return false;}const minAx=rectA.x-minMarginBetweenOverlays;const maxAx=rectA.x+rectA.width+minMarginBetweenOverlays;const minAy=rectA.y-minMarginBetweenOverlays;const maxAy=rectA.y+rectA.height+minMarginBetweenOverlays;const minBx=rectB.x;const maxBx=rectB.x+rectB.width;const minBy=rectB.y;const maxBy=rectB.y+rectB.height;const aLeftOfB=maxAx<minBx;const aRightOfB=minAx>maxBx;const aBelowB=minAy>maxBy;const aAboveB=maxAy<minBy;return!(aLeftOfB||aRightOfB||aAboveB||aBelowB);}" };
 function doesTargetPositionIntersectOtherOverlaysWorklet(arg0, arg1, arg2) {
   if (VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON === arg1) {
-    if (arg0[tmp.CAMERA_PREVIEW_PICTURE_IN_PICTURE].isVisible) {
-      if (doRectanglesIntersectWorklet(arg2, arg0[tmp.CAMERA_PREVIEW_PICTURE_IN_PICTURE], MIN_MARGIN_BETWEEN_OVERLAYS)) {
+    if (arg0[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE].isVisible) {
+      if (doRectanglesIntersectWorklet(arg2, arg0[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE], MIN_MARGIN_BETWEEN_OVERLAYS)) {
         return true;
       }
     } else {
       return false;
     }
-  } else if (tmp.CAMERA_PREVIEW_PICTURE_IN_PICTURE === arg1) {
-    if (arg0[tmp.VOICE_CONTROLS_TOGGLE_BUTTON].isVisible) {
-      if (doRectanglesIntersectWorklet(arg2, arg0[tmp.VOICE_CONTROLS_TOGGLE_BUTTON], MIN_MARGIN_BETWEEN_OVERLAYS)) {
+  } else if (VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE === arg1) {
+    if (arg0[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON].isVisible) {
+      if (doRectanglesIntersectWorklet(arg2, arg0[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON], MIN_MARGIN_BETWEEN_OVERLAYS)) {
         return true;
       }
     } else {

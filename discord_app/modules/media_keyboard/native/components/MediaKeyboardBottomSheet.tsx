@@ -104,8 +104,8 @@ export default noop.memo(function MediaKeyboardBottomSheet(animatedIndex) {
   callback3 = obj.useCallback((arg0) => {
     if (null != ref2.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref2.current);
+      ref2.current = null;
     }
     if (arg0) {
       let tmp5 = isScreenReaderEnabled;
@@ -114,7 +114,7 @@ export default noop.memo(function MediaKeyboardBottomSheet(animatedIndex) {
       }
       if (tmp5) {
         const _setTimeout = setTimeout;
-        tmp.current = setTimeout(() => {
+        ref2.current = setTimeout(() => {
           ref2.current = null;
           closure_1_8.current = true;
           animatedIndex(onClose[20]);

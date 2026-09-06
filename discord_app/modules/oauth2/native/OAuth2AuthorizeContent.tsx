@@ -4,6 +4,8 @@
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5578 */;
+import ObscuredSurfaceDefault from "ObscuredSurface" /* 8711 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -115,13 +117,12 @@ export default function OAuth2AuthorizeContent(onScroll) {
   obj.style = items2;
   const items3 = [size.width > size.height ? tmp.scrollViewContentLandscape : tmp.scrollViewContentPortrait];
   obj.contentContainerStyle = items3;
-  tmp3(5578);
   const obj1 = { obscured, children: null };
   let tmp17Result = null;
-  const tmp3Result = tmp3(8711);
+  const tmp3Result = ObscuredSurfaceDefault;
   if (null != header) {
     const obj2 = { style: tmp.header, children: header };
-    tmp17Result = tmp17(React4, obj2);
+    tmp17Result = timestampProducer(React4, obj2);
   }
   const items4 = [tmp17Result, ];
   const items5 = [tmp.bodyContainer, , ];
@@ -137,11 +138,11 @@ export default function OAuth2AuthorizeContent(onScroll) {
   if (null != appDetails) {
     const obj4 = { children: null };
     const obj5 = { style: tmp.separator };
-    const items7 = [tmp17(tmp22, obj5), ];
+    const items7 = [timestampProducer(React4, obj5), ];
     const obj6 = { children: appDetails };
-    items7[1] = tmp17(tmp22, obj6);
+    items7[1] = timestampProducer(React4, obj6);
     obj4.children = items7;
-    tmp15Result = tmp15(React5, obj4);
+    tmp15Result = React6(React5, obj4);
   }
   items6[1] = tmp15Result;
   obj3.children = items6;
@@ -158,7 +159,7 @@ export default function OAuth2AuthorizeContent(onScroll) {
       style: tmp.footerPortrait,
       children: footer
     };
-    tmp17Result = tmp17(tmp22, obj7);
+    tmp17Result = timestampProducer(React4, obj7);
   }
   items8[1] = tmp17Result;
   obj.children = items8;

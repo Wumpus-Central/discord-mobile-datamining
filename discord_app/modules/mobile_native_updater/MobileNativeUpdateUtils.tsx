@@ -3,12 +3,13 @@
 // Module 13906 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import Linking from "Linking" /* 4255 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _checkForNewerBuild(arg0, value) {
+let closure_5 = async function _checkForNewerBuild() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -98,6 +99,7 @@ function openBuildInstallerUrl(install) {
       } else {
         openURLExternally(str.toString());
       }
+      obj = PlatformUtils;
     }
   } catch (err) {
   }

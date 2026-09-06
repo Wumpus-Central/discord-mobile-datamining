@@ -34,18 +34,18 @@ export default function useDiscountOffer(arg0, arg1) {
   const effect = obj3.useEffect(() => {
     let hasAcknowledgedResult;
     if (stateFromStores != null) {
-      hasAcknowledgedResult = obj.hasAcknowledged();
+      hasAcknowledgedResult = stateFromStores.hasAcknowledged();
     }
     if (hasAcknowledgedResult) {
       const timeout = new closure_0(stateFromStores[7]).Timeout();
       let hasAcknowledgedResult1;
-      if (obj != null) {
-        hasAcknowledgedResult1 = obj.hasAcknowledged();
+      if (stateFromStores != null) {
+        hasAcknowledgedResult1 = stateFromStores.hasAcknowledged();
       }
       if (hasAcknowledgedResult1) {
         let num = 0;
-        if (null != obj.expiresAt) {
-          const expiresAt = obj.expiresAt;
+        if (null != stateFromStores.expiresAt) {
+          const expiresAt = stateFromStores.expiresAt;
           const _Date = Date;
           const time = expiresAt.getTime();
           num = time - Date.now();
@@ -58,18 +58,18 @@ export default function useDiscountOffer(arg0, arg1) {
           }
           let hasAcknowledgedResult;
           if (closure_2_1 != null) {
-            hasAcknowledgedResult = obj.hasAcknowledged();
+            hasAcknowledgedResult = closure_2_1.hasAcknowledged();
           }
           if (hasAcknowledgedResult) {
             let num = 0;
-            if (null != obj.expiresAt) {
-              let expiresAt = obj.expiresAt;
+            if (null != closure_2_1.expiresAt) {
+              let expiresAt = closure_2_1.expiresAt;
               let _Date = Date;
               let time = expiresAt.getTime();
               num = time - Date.now();
             }
             if (closure_1_0 != null) {
-              obj2.start(num, () => {
+              closure_1_0.start(num, () => {
                 if (!closure_2_2) {
                   if (closure_2_1.hasExpired()) {
                     closure_2_3(true);
@@ -77,18 +77,18 @@ export default function useDiscountOffer(arg0, arg1) {
                 }
                 let hasAcknowledgedResult;
                 if (closure_2_1 != null) {
-                  hasAcknowledgedResult = obj.hasAcknowledged();
+                  hasAcknowledgedResult = closure_2_1.hasAcknowledged();
                 }
                 if (hasAcknowledgedResult) {
                   let num = 0;
-                  if (null != obj.expiresAt) {
-                    let expiresAt = obj.expiresAt;
+                  if (null != closure_2_1.expiresAt) {
+                    let expiresAt = closure_2_1.expiresAt;
                     let _Date = Date;
                     let time = expiresAt.getTime();
                     num = time - Date.now();
                   }
                   if (closure_1_0 != null) {
-                    obj2.start(num, () => {
+                    closure_1_0.start(num, () => {
                       if (!closure_2_2) {
                         if (closure_2_1.hasExpired()) {
                           closure_2_3(true);
@@ -96,28 +96,25 @@ export default function useDiscountOffer(arg0, arg1) {
                       }
                       let hasAcknowledgedResult;
                       if (closure_2_1 != null) {
-                        hasAcknowledgedResult = obj.hasAcknowledged();
+                        hasAcknowledgedResult = closure_2_1.hasAcknowledged();
                       }
                       if (hasAcknowledgedResult) {
                         let num = 0;
-                        if (null != obj.expiresAt) {
-                          let expiresAt = obj.expiresAt;
+                        if (null != closure_2_1.expiresAt) {
+                          let expiresAt = closure_2_1.expiresAt;
                           let _Date = Date;
                           let time = expiresAt.getTime();
                           num = time - Date.now();
                         }
                         if (closure_1_0 != null) {
-                          obj2.start(num, () => { ... });
+                          closure_1_0.start(num, () => { ... });
                         }
-                        obj2 = closure_1_0;
                       }
                     });
                   }
-                  obj2 = closure_1_0;
                 }
               });
             }
-            obj2 = closure_1_0;
           }
         });
       }

@@ -2,6 +2,7 @@
 
 // Module 5156 (DiscordMd5Native)
 import _mod17 from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1152 */;
 import DiscordMd5 from "DiscordMd5" /* 5157 */;
 import size from "module_2" /* 2 */;
@@ -23,14 +24,14 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
       const error = new Error("RTNFileManager doesn't exist?");
       let rejectResult = Promise.reject(error);
     } else {
-      rejectResult = tmp3(1152).getFileHash(uri, "md5", num);
-      const tmp3Result = tmp3(1152);
+      rejectResult = NativeFileModuleDefault.getFileHash(uri, "md5", num);
+      const tmp3Result = NativeFileModuleDefault;
     }
-    tmp3 = importDefault;
   } else {
     const DCDFileManager = NativeModules.DCDFileManager;
     return DCDFileManager.getFileHash(uri, "md5", num);
   }
+  obj = PlatformUtils;
 };
 const result = size.fileFinishedImporting("modules/discord_md5/native/DiscordMd5Native.tsx");
 

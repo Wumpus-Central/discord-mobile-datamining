@@ -95,17 +95,16 @@ export default {
       [tmp, tmp2] = item;
       let tmp3 = (function isRecentExperiment(str, arg1) {
         try {
-          [tmp4, tmp5] = closure_1_3(str.split("-"), 2);
+          [tmp4, tmp5] = closure_1_3("-".split("-"), 2);
           if (null == tmp5) {
             return false;
           } else {
             const _Date = Date;
             const _HermesInternal = HermesInternal;
-            const date = new Date("" + tmp4 + "-" + arr.slice(0, 2) + "-01");
+            const date = new Date("" + tmp4 + "-" + tmp5.slice(0, 2) + "-01");
             return date > arg1;
           }
-          arr = tmp5;
-          const tmp3 = closure_1_3(str.split("-"), 2);
+          const tmp3 = closure_1_3("-".split("-"), 2);
         } catch (err) {
           return false;
         }

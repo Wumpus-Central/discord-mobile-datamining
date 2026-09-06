@@ -159,9 +159,8 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     while (tmp12 !== undefined) {
       let tmp15 = _slicedToArray(tmp13, 2);
       [tmp16, tmp18] = tmp15;
-      let tmp17 = tmp16;
       if (map.has(tmp16)) {
-        let result2 = map.set(tmp17, tmp18);
+        let result2 = map.set(tmp16, tmp18);
       }
       continue;
     }
@@ -172,9 +171,8 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     const set = new Set();
     if (memo1.size > 0) {
       for (const item10015 of memo) {
-        let tmp3 = item10015;
         if (!memo1.has(item10015.productId)) {
-          let addResult = set.add(tmp3.productId);
+          let addResult = set.add(item10015.productId);
         }
         continue;
       }

@@ -18,7 +18,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   closure_129_0 = arg0;
   closure_129_1 = arg1;
   let items = [arg0, arg1];
-  let tmp = _slicedToArray(noop.useMemo(() => {
+  const tmp = _slicedToArray(noop.useMemo(() => {
     if (_private.isPrivate()) {
       const found = closure_0.filter((application) => {
         application = application.application;
@@ -113,15 +113,14 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
       return items;
     }, items3)
   ];
-  let tmp4 = _slicedToArray(items4, 2);
+  const tmp4 = _slicedToArray(items4, 2);
   _require = tmp5;
   const items5 = [tmp4[1]];
   const effect = noop.useEffect(() => {
     for (const item10006 of closure_0) {
-      let tmp = item10006;
       if (!PresenceSubscriptionsStore.isSubscribed(item10006)) {
         let obj = PresenceSubscriptionsActionCreators;
-        let subscription = obj.subscribe(tmp);
+        let subscription = obj.subscribe(item10006);
       }
       continue;
     }

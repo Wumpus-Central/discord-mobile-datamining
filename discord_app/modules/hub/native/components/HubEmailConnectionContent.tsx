@@ -37,7 +37,7 @@ export default function HubEmailConnectionContent(arg0) {
   ({ onClose: require, invite } = arg0);
   _slicedToArray = undefined;
   noop = undefined;
-  closure_7 = async function _signup(arg0, value) {
+  closure_7 = async function _signup() {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -71,7 +71,7 @@ export default function HubEmailConnectionContent(arg0) {
             c5 = 2;
             let id;
             if (invite != null) {
-              const guild = tmp104.guild;
+              const guild = invite.guild;
               if (guild != null) {
                 id = guild.id;
               }
@@ -79,8 +79,8 @@ export default function HubEmailConnectionContent(arg0) {
             let guildId = id;
             if (id == null) {
               let id1;
-              if (tmp104 != null) {
-                let channel = tmp104.channel;
+              if (invite != null) {
+                let channel = invite.channel;
                 if (channel != null) {
                   id1 = channel.id;
                 }
@@ -204,9 +204,9 @@ export default function HubEmailConnectionContent(arg0) {
       }
       formatToPlainStringResult = stringResult;
       if (null != prop) {
-        const intl2 = tmp2(1114).intl;
+        const intl2 = util.intl;
         obj = { guildName: invite.guild.name, count: invite.approximate_member_count };
-        formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t["4T4+p1"], obj);
+        formatToPlainStringResult = intl2.formatToPlainString(util.t["4T4+p1"], obj);
       }
     }
   }
@@ -220,7 +220,7 @@ export default function HubEmailConnectionContent(arg0) {
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   const items1 = [closure_12(ref, { style: tmp.header, children: closure_12(native2.InkQuillSpotIllustration, { scale: 0.75 }) }), closure_12(Text_Text.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult }), , ];
   let obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj5.children = intl3.format(util.t["6kzaqs"], {
     onClick() {
       invite(paths[18]).openLazy(require("asyncRequireImpl")(paths[19], paths.paths), "HubEmailConnectionDescriptionActionsheet");
@@ -235,12 +235,12 @@ export default function HubEmailConnectionContent(arg0) {
       invite(paths[18]).openLazy(require("asyncRequireImpl")(paths[19], paths.paths), "HubEmailConnectionDescriptionActionsheet");
     }
   };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = util.intl;
   obj7.label = intl4.string(util.t["K/7rLI"]);
-  const intl5 = tmp2(1114).intl;
+  const intl5 = util.intl;
   obj7.placeholder = intl5.string(util.t.ImAOh5);
   obj7.value = value;
-  const intl6 = tmp2(1114).intl;
+  const intl6 = util.intl;
   obj7.hint = intl6.format(util.t.RPT0vj, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
   obj7.textStyle = tmp.textInput;
   obj7.onChangeText = tmp4[1];
@@ -273,7 +273,7 @@ export default function HubEmailConnectionContent(arg0) {
   const items2 = [closure_13(ref, obj2), closure_12(ref, { style: tmp.growSpacing }), ];
   const obj11 = { style: tmp.buttonContainer, children: null };
   const obj12 = { size: "lg", text: null, onPress: null, loading: null };
-  const intl7 = tmp2(1114).intl;
+  const intl7 = util.intl;
   obj12.text = intl7.string(util.t["8vmKO0"]);
   obj12.onPress = function signup() {
     const self = this;

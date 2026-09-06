@@ -31,14 +31,14 @@ export default {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         tmp3(tmp21[3]).dispatch({ type: "CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS", stats: closure_128_0.body, channelId: closure_129_0 });
         c3 = 0;
         tmp3(tmp21[3]);
       }
-      return arg1;
+      return value;
     })();
   },
   dismissPublishBump(messageId) {

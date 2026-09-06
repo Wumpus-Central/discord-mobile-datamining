@@ -2,6 +2,7 @@
 
 // Module 10335 (useMaybeAddPollsMarketingEasterEggNote)
 import initialize from "initialize" /* 504 */;
+import util from "util" /* 1114 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 require = fn;
@@ -15,9 +16,9 @@ export default function useMaybeAddPollsMarketingEasterEggNote(emojiName) {
   if (":pizza:" === emojiName) {
     formatToPlainStringResult = emojiName;
     if (tmp4) {
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       const obj = { emojiName };
-      formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t["1knDPI"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(util.t["1knDPI"], obj);
     }
   }
   return formatToPlainStringResult;

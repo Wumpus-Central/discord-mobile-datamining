@@ -9,7 +9,10 @@ import Text_Text from "Text/Text" /* 4556 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import useUserLinks from "useUserLinks" /* 8645 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
+import _modDef9566 from "module_9566" /* 9566 */;
 import useAgeSpecificText from "useAgeSpecificText" /* 11919 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14918 */;
+import _modDef14923 from "module_14923" /* 14923 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,16 +31,16 @@ function FamilyCenterPendingLinkRow(otherUser) {
       }
       let obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
       obj = { name: str };
-      obj.accessibilityLabel = intl3.formatToPlainString(tmp2(2396).oUpA6X, obj);
+      obj.accessibilityLabel = intl3.formatToPlainString(_modDef2396.oUpA6X, obj);
       obj.onPress = function onPress() {
         const obj = { otherUser: str };
         obj.pushLazy(asyncRequireImpl(14927, dependencyMap.paths), obj);
       };
       obj.style = tmp.actionButton;
-      const obj1 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(14923) };
+      const obj1 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: _modDef14923 };
       obj.children = closure_5(tmp5(1178).Icon, obj1);
-      let tmp8Result = tmp17(tmp5(5123).PressableOpacity, obj);
-      let tmp14 = tmp17;
+      let tmp8Result = closure_5(tmp5(5123).PressableOpacity, obj);
+      let tmp14 = closure_5;
     } else {
       let tmp12Result = null;
       if (!tmp7) {
@@ -48,7 +51,7 @@ function FamilyCenterPendingLinkRow(otherUser) {
         }
         obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
         const obj2 = { name: str1 };
-        obj.accessibilityLabel = intl.formatToPlainString(tmp2(2396).jc1Ip7, obj2);
+        obj.accessibilityLabel = intl.formatToPlainString(_modDef2396.jc1Ip7, obj2);
         obj.onPress = function onPress() {
           const obj = { otherUser: str };
           obj.pushLazy(asyncRequireImpl(14925, dependencyMap.paths), obj);
@@ -56,9 +59,9 @@ function FamilyCenterPendingLinkRow(otherUser) {
         const items = [, ];
         ({ actionButton: arr[0], actionButtonFirst: arr[1] } = tmp);
         obj.style = items;
-        const obj3 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(9566) };
+        const obj3 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: _modDef9566 };
         obj.children = closure_5(tmp5(1178).Icon, obj3);
-        tmp12Result = tmp12(tmp5(5123).PressableOpacity, obj);
+        tmp12Result = closure_5(tmp5(5123).PressableOpacity, obj);
       }
       const items1 = [tmp12Result, ];
       tmp14 = closure_5;
@@ -70,20 +73,20 @@ function FamilyCenterPendingLinkRow(otherUser) {
       const obj4 = { children: null };
       const obj5 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
       const obj6 = { name: str2 };
-      obj5.accessibilityLabel = intl2.formatToPlainString(tmp2(2396)["4GtllP"], obj6);
+      obj5.accessibilityLabel = intl2.formatToPlainString(_modDef2396["4GtllP"], obj6);
       obj5.onPress = function onPress() {
         const obj = { otherUser: str };
         obj.pushLazy(asyncRequireImpl(14926, dependencyMap.paths), obj);
       };
       obj5.style = tmp.actionButton;
-      const obj7 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(14923) };
+      const obj7 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: _modDef14923 };
       obj5.children = tmp14(tmp5(1178).Icon, obj7);
       items1[1] = tmp14(tmp5(5123).PressableOpacity, obj5);
       obj4.children = items1;
       tmp8Result = closure_6(closure_7, obj4);
     }
     const obj8 = { otherUser: str, actions: tmp8Result };
-    return tmp14(tmp2(14918), obj8);
+    return tmp14(FamilyCenterLinkRowDefault, obj8);
   }
   tmp4 = useIsInAdultAgeGroupDefault();
 }

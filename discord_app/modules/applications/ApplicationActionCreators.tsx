@@ -17,7 +17,7 @@ function fetchApplication() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _fetchApplication(arg0, value) {
+let closure_10 = async function _fetchApplication(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -127,7 +127,7 @@ let obj = {
       const HTTP = tmp5(1272).HTTP;
       const request = { url: constants.APPLICATIONS, body: { name, type, guild_id, team_id }, rejectWithError: tmp5(1272).rejectWithMigratedError() };
       await HTTP.post(request);
-      const body = arg1.body;
+      const body = value.body;
       let tmp8 = null != closure_129_1;
       if (tmp8) {
         tmp8 = null != closure_129_2;
@@ -156,7 +156,7 @@ let obj = {
       request.query = obj1;
       request.rejectWithError = tmp5(1272).rejectWithMigratedError();
       await HTTP.get(request);
-      const body = arg1.body;
+      const body = value.body;
       tmp2(573).dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: body });
       return body;
     })();
@@ -170,7 +170,7 @@ let obj = {
       const HTTP = tmp5(channel_id[6]).HTTP;
       const request = { url: closure_1_7.GUILD_EMBEDDED_APPLICATIONS(tmp5), query: { channel_id, surface }, rejectWithError: tmp5(channel_id[6]).rejectWithMigratedError() };
       await HTTP.get(request);
-      const items = arg1.body.items;
+      const items = value.body.items;
       surface(channel_id[5]).dispatch({ type: "GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS", guildId: closure_129_0, surface: closure_129_1, items });
       return items;
     })();
@@ -181,7 +181,7 @@ let obj = {
       const HTTP = tmp5(1272).HTTP;
       const request = { url: closure_1_7.APPLICATION_OWNER_TRANSFER(_require), body: { team_id }, rejectWithError: tmp5(1272).rejectWithMigratedError() };
       await HTTP.post(request);
-      const body = arg1.body;
+      const body = value.body;
       tmp2(573).dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: body });
       return body;
     })();
@@ -192,7 +192,7 @@ let obj = {
     if (arg1 === undefined) {
       flag = true;
     }
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -224,14 +224,14 @@ let obj = {
               closure_128_0 = tmp5;
               let arr = tmp5;
               if (!flag) {
-                const found = arr2.filter((item) => {
+                const found = tmp5.filter((item) => {
                   const tmp = null != application.getApplication(item) && application.isHydrated(item);
                   let tmp2 = !tmp;
                   if (!tmp) {
-                    tmp2 = !obj.isFetchingApplication(item);
+                    tmp2 = !application.isFetchingApplication(item);
                   }
                   if (tmp2) {
-                    tmp2 = !obj.didFetchingApplicationFail(item);
+                    tmp2 = !application.didFetchingApplicationFail(item);
                   }
                   if (tmp2) {
                     tmp2 = item.length > 0;
@@ -262,7 +262,6 @@ let obj = {
               } else {
                 c5 = 3;
               }
-              arr2 = tmp5;
             }
           } else if (1 === tmp8) {
             c3 = 0;

@@ -13,6 +13,7 @@ import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import LurkerActionCreators from "LurkerActionCreators" /* 7321 */;
 import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7323 */;
 import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 7327 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 7329 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import BulkBanStore from "BulkBanStore" /* 5521 */;
@@ -40,7 +41,7 @@ function deleteGuild(id) {
   obj.guild = obj;
   obj.dispatch(obj);
 }
-let closure_26 = async function _joinGuild(arg0, value) {
+let closure_26 = async function _joinGuild(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -198,9 +199,9 @@ let closure_26 = async function _joinGuild(arg0, value) {
         if (code1 === closure_132_15.TOO_MANY_USER_GUILDS) {
           let obj16 = closure_132_0(closure_132_3[21]);
           if (obj16.hasIncreasedGuildCap(closure_132_14.getCurrentUser())) {
-            tmp81(closure_132_20);
+            closure_132_24(closure_132_20);
           } else {
-            tmp81(closure_132_19);
+            closure_132_24(closure_132_19);
           }
         }
         const body3 = closure_131_13.body;
@@ -361,7 +362,7 @@ export default {
     closure_1 = arg1;
     closure_2 = ROLE_SUBSCRIPTIONS;
     closure_3 = messageId;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -485,11 +486,11 @@ export default {
     HTTP.patch(request);
   },
   kickUser(id, id1, c0, moderator_report_id) {
-    _require = id;
+    const _require = id;
     const userId = id1;
     const HTTP = require("HTTPUtils").HTTP;
-    const request = { url: closure_16.GUILD_MEMBER(id, id1), query: { reason: c0, moderator_report_id }, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
-    let obj = { reason: c0, moderator_report_id };
+    const request = { url: closure_16.GUILD_MEMBER(id, id1), query: { reason, moderator_report_id }, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    let obj = { reason, moderator_report_id };
     const obj3 = require("HTTPUtils");
     return HTTP.del(request).then(() => {
       const obj = { type: "GUILD_MEMBER_REMOVE_LOCAL", guildId, userId };
@@ -524,7 +525,7 @@ export default {
   },
   banUser(id, id2, value, c1, moderator_report_id) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: value2.GUILD_BAN(id, id2), reason: c1, body: { delete_message_seconds: value, moderator_report_id }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: value2.GUILD_BAN(id, id2), reason: importDefault, body: { delete_message_seconds: value, moderator_report_id }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.put(request);
   },
   unbanUser(id, id2) {
@@ -532,16 +533,16 @@ export default {
     const obj = { url: value2.GUILD_BAN(id, id2), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(obj);
   },
-  banMultipleUsers(arg0, user_ids, delete_message_seconds, reason, usePubSub) {
+  banMultipleUsers(arg0, user_ids, delete_message_seconds, reason) {
     let flag = usePubSub;
     if (usePubSub === undefined) {
       flag = false;
     }
     const HTTP = HTTPUtils.HTTP;
     if (flag) {
-      let BULK_GUILD_BAN_V2Result = obj.BULK_GUILD_BAN_V2(arg0);
+      let BULK_GUILD_BAN_V2Result = value2.BULK_GUILD_BAN_V2(arg0);
     } else {
-      BULK_GUILD_BAN_V2Result = obj.BULK_GUILD_BAN(arg0);
+      BULK_GUILD_BAN_V2Result = value2.BULK_GUILD_BAN(arg0);
     }
     const request = { url: BULK_GUILD_BAN_V2Result, body: { user_ids, delete_message_seconds }, reason, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.post(request);
@@ -552,7 +553,7 @@ export default {
     closure_2 = arg2;
     closure_3 = arg3;
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -674,7 +675,7 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    return (async (arg0, value) => {
+    return (async () => {
       if (c8 === 2) {
         c8 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -716,8 +717,8 @@ export default {
               obj1.color = color;
               let obj2 = dependencyMap;
               if (dependencyMap == null) {
-                let primary_color = tmp37;
-                if (tmp37 == null) {
+                let primary_color = closure_2;
+                if (closure_2 == null) {
                   primary_color = 0;
                 }
                 obj2 = { primary_color, secondary_color: null, tertiary_color: null };
@@ -793,7 +794,8 @@ export default {
       obj1.unicode_emoji = closure_2.unicodeEmoji;
       request.body = obj1;
       request.rejectWithError = tmp5(1272).rejectWithMigratedError();
-      closure_128_0 = await HTTP.patch(request);
+      await HTTP.patch(request);
+      closure_128_0 = value;
       _objectWithoutProperties(closure_2, closure_1_4);
       const result = tmp2(7323).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
@@ -805,7 +807,7 @@ export default {
     return HTTP.patch(request);
   },
   deleteRole(id, id2) {
-    _require = id;
+    const _require = id;
     const HTTP = require("HTTPUtils").HTTP;
     const obj = { url: closure_16.GUILD_ROLE(id, id2), oldFormErrors: true, rejectWithError: true };
     HTTP.del({ url: closure_16.GUILD_ROLE(id, id2), oldFormErrors: true, rejectWithError: true }).then(() => {
@@ -819,7 +821,8 @@ export default {
       const body = tmp2;
       const HTTP = tmp5(1272).HTTP;
       const request = { url: closure_1_16.GUILD_CHANNELS(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
-      closure_128_0 = await HTTP.patch(request);
+      await HTTP.patch(request);
+      closure_128_0 = value;
       const result = body(7323).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
@@ -831,7 +834,8 @@ export default {
       const body = tmp2;
       const HTTP = tmp5(1272).HTTP;
       const request = { url: closure_1_16.GUILD_ROLES(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
-      closure_128_0 = await HTTP.patch(request);
+      await HTTP.patch(request);
+      closure_128_0 = value;
       const result = body(7323).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
@@ -890,7 +894,7 @@ export default {
     const obj = { type: "GUILD_MOVE", fromIndex, toIndex, fromFolderIndex, toFolderIndex };
     obj.dispatch(obj);
   },
-  moveById(id, id2, c4, arg3) {
+  moveById(id, id2) {
     let flag = c4;
     if (c4 === undefined) {
       flag = false;
@@ -933,6 +937,7 @@ export default {
     isFolderExpandedResult = ExpandedGuildFolderStore.isFolderExpanded(id);
     obj = { type: "TOGGLE_GUILD_FOLDER_EXPAND", folderId: id };
     DispatcherDefault.dispatch(obj);
+    const tmp2Result = DispatcherDefault;
   },
   setGuildFolderExpanded(folderId, expanded) {
     const obj = { type: "SET_GUILD_FOLDER_EXPANDED", folderId, expanded };
@@ -952,9 +957,9 @@ export default {
         const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
-            let tmp11Result = tmp11(7329);
+            let tmp11Result = SpoilerChannelUtils;
             if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
-              tmp11Result = tmp11(1100);
+              tmp11Result = router_utils;
               tmp11Result.transitionTo(__initData.CHANNEL(guildId, defaultChannel.id));
             }
           }
@@ -987,7 +992,7 @@ export default {
   fetchApplications(arg0, arg1) {
     closure_0 = arg0;
     closure_1 = arg1;
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1053,7 +1058,7 @@ export default {
       tmp = null;
     }
     c2 = tmp;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1121,7 +1126,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1149,17 +1154,17 @@ export default {
               const obj1 = { limit: num };
               let tmp5 = null != userIds;
               if (tmp5) {
-                tmp5 = arr.length > 0;
+                tmp5 = userIds.length > 0;
               }
               if (tmp5) {
-                obj1.user_ids = arr;
+                obj1.user_ids = userIds;
               }
-              let tmp6 = null != closure_1;
+              let tmp6 = null != query;
               if (tmp6) {
-                tmp6 = str.trim().length > 0;
+                tmp6 = query.trim().length > 0;
               }
               if (tmp6) {
-                obj1.query = str;
+                obj1.query = query;
               }
               const HTTP = v3(1272).HTTP;
               const request = { url: closure_1_16.GUILD_BANS_SEARCH(guildId), oldFormErrors: true, query: obj1, rejectWithError: null };
@@ -1198,7 +1203,7 @@ export default {
   },
   fetchGuildBans(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1257,7 +1262,7 @@ export default {
     })();
   },
   fetchGuildRoleConnectionsEligibility(guildId, id) {
-    _require = id;
+    const _require = id;
     const HTTP = require("HTTPUtils").HTTP;
     let obj = { url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     value = HTTP.get(obj);
@@ -1268,10 +1273,10 @@ export default {
       return body;
     });
   },
-  assignGuildRoleConnection(arg0, id) {
-    closure_0 = arg0;
+  assignGuildRoleConnection(guildId, id) {
+    closure_0 = guildId;
     closure_1 = id;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1324,7 +1329,7 @@ export default {
   unassignGuildRoleConnection(arg0, id) {
     closure_0 = arg0;
     closure_1 = id;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1379,7 +1384,7 @@ export default {
     return (async () => {
       const HTTP = v3(1272).HTTP;
       await HTTP.get({ url: closure_1_16.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(closure_0), oldFormErrors: true, rejectWithError: v3(1272).rejectWithMigratedError() });
-      return arg1.body;
+      return value.body;
     })();
   }
 };

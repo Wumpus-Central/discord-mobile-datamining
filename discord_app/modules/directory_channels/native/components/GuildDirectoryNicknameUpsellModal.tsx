@@ -10,6 +10,7 @@ import components_Button_Button from "components/Button/Button" /* 4975 */;
 import GuildIcon from "GuildIcon" /* 5584 */;
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6605 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
 import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12652 */;
 import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12661 */;
@@ -20,7 +21,6 @@ import GuildStore from "GuildStore" /* 1979 */;
 
 const GuildIconDefault = GuildIcon;
 
-const FreeFormInputGroupDefault = tmp5(6605);
 require = fn;
 function GuildDirectoryNicknameUpsell(arg0) {
   ({ guildId: require, handleClose: importDefault } = arg0);
@@ -38,12 +38,12 @@ function GuildDirectoryNicknameUpsell(arg0) {
       c5 = 3;
     } else if (arg0 === 1) {
       c5 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       closure_129_1();
       c3 = 0;
     }
-    return arg1;
+    return value;
   };
   const tmp = closure_12();
   let obj = initialize;
@@ -60,7 +60,6 @@ function GuildDirectoryNicknameUpsell(arg0) {
   items1[1] = obj;
   obj.contentContainerStyle = items1;
   const obj1 = { style: tmp.guildIcon, guild: stateFromStores, size: null };
-  const tmp11 = closure_7;
   const tmp6 = ref(noop.useState(null), 2);
   obj1.size = GuildIcon.GuildIconSizes.XLARGE;
   const items2 = [closure_10(GuildIconDefault, obj1), , , , ];
@@ -74,15 +73,15 @@ function GuildDirectoryNicknameUpsell(arg0) {
   obj3.children = intl.format(util.t["d+6kzl"], { guildName: name });
   const items3 = [closure_10(Text_Text.Text, obj3), ];
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj4.children = intl2.string(util.t.b3L8yx);
   items3[1] = closure_10(Text_Text.Text, obj4);
   obj2.children = items3;
   items2[1] = closure_11(closure_6, obj2);
   const obj5 = { label: null, placeholder: null, value: null, onChangeText: null, style: null, textStyle: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj5.label = intl3.string(util.t.ilDlmW);
-  const intl4 = tmp2(1114).intl;
+  const intl4 = util.intl;
   obj5.placeholder = intl4.string(util.t.RfWvWI);
   obj5.value = value;
   obj5.onChangeText = tmp7[1];
@@ -113,7 +112,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
   items2[3] = closure_10(closure_6, { style: tmp.redesignGrowSpacing });
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };
-  const intl5 = tmp2(1114).intl;
+  const intl5 = util.intl;
   obj8.text = intl5.string(util.t.Np4yXU);
   obj8.onPress = function handleSubmit() {
     const self = this;
@@ -128,7 +127,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
   obj7.children = closure_10(components_Button_Button.Button, obj8);
   items2[4] = closure_10(closure_6, obj7);
   obj.children = items2;
-  return closure_11(tmp11, obj);
+  return closure_11(closure_7, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);

@@ -11,11 +11,13 @@ import timing from "timing" /* 4561 */;
 import spring from "spring" /* 4974 */;
 import Upload from "Upload" /* 5128 */;
 import EyeIcon from "EyeIcon" /* 6970 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8245 */;
 import PlayIcon from "PlayIcon" /* 8274 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9307 */;
 import AttachmentPreviewDefault from "AttachmentPreview" /* 10196 */;
 import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10633 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10635 */;
+import _modDef11245 from "module_11245" /* 11245 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4900 */;
 
@@ -153,45 +155,45 @@ function Tile(onEdit) {
     const items1 = [closure_2_11(AttachmentPreviewDefault, size), , ];
     let tmp6Result = null;
     if (isThumbnail) {
-      obj = { style: tmp5.footerRightContainer, children: null };
-      obj = { source: tmp3(11245), size: native.Icon.Sizes.SMALL_14 };
-      obj.children = tmp6(native.Icon, obj);
-      tmp6Result = tmp6(React4, obj);
+      obj = { style: tileContainer.footerRightContainer, children: null };
+      obj = { source: _modDef11245, size: native.Icon.Sizes.SMALL_14 };
+      obj.children = closure_2_11(native.Icon, obj);
+      tmp6Result = closure_2_11(React4, obj);
     }
     items1[1] = tmp6Result;
     const obj1 = { style: tileContainer.decorationsContainer, children: null };
     tmp6Result = null;
     if (stateFromStores) {
-      const obj2 = { style: tmp5.spoilerOverlay };
-      tmp6Result = tmp6(tmp3(8245), obj2);
+      const obj2 = { style: tileContainer.spoilerOverlay };
+      tmp6Result = closure_2_11(VisualEffectViewThemedDefault, obj2);
     }
     const items2 = [tmp6Result, , ];
     let tmp6Result1 = null;
     if (null != description) {
       let length;
-      if (arr4 != null) {
-        length = arr4.length;
+      if (description != null) {
+        length = description.length;
       }
       tmp6Result1 = null;
       if (length > 0) {
-        const obj3 = { variant: "text-xs/medium", color: "text-overlay-light", allowFontScaling: false, style: tmp5.altTagText, children: null };
+        const obj3 = { variant: "text-xs/medium", color: "text-overlay-light", allowFontScaling: false, style: tileContainer.altTagText, children: null };
         const intl = util.intl;
         obj3.children = intl.string(util.t.QEW81z);
-        tmp6Result1 = tmp6(Text_Text.Text, obj3);
+        tmp6Result1 = closure_2_11(Text_Text.Text, obj3);
       }
     }
     const items3 = [tmp6Result1, ];
     let tmp6Result2 = null;
     if (isVideo) {
-      const obj4 = { style: tmp5.iconContainer, children: tmp6(PlayIcon.PlayIcon, { size: "xxs", color: "white" }) };
-      tmp6Result2 = tmp6(tmp12, obj4);
+      const obj4 = { style: tileContainer.iconContainer, children: closure_2_11(PlayIcon.PlayIcon, { size: "xxs", color: "white" }) };
+      tmp6Result2 = closure_2_11(React4, obj4);
     }
     items3[1] = tmp6Result2;
     items2[1] = closure_2_12(React4, { children: items3 });
     let tmp6Result3 = null;
     if (stateFromStores) {
-      const obj5 = { style: tmp5.iconContainer, children: tmp6(EyeIcon.EyeIcon, { size: "xxs", color: "white" }) };
-      tmp6Result3 = tmp6(tmp12, obj5);
+      const obj5 = { style: tileContainer.iconContainer, children: closure_2_11(EyeIcon.EyeIcon, { size: "xxs", color: "white" }) };
+      tmp6Result3 = closure_2_11(React4, obj5);
     }
     items2[2] = tmp6Result3;
     obj1.children = items2;
@@ -250,14 +252,14 @@ function CustomScrollView(arg0) {
   noop.useRef(0);
   const ref = noop.useRef(null);
   const callback = noop.useCallback((current) => {
-    const tmp = ref;
     if (tmp2) {
       current = ref.current;
       if (current != null) {
         current.scrollToEnd();
       }
     }
-    tmp.current = current;
+    ref.current = current;
+    tmp2 = current > ref.current || ref2.current + useWindowDimensions.getWindowDimensions().width > current;
   }, []);
   let obj = {};
   const callback1 = noop.useCallback((nativeEvent) => {

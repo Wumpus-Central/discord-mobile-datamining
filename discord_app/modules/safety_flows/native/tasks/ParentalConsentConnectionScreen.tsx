@@ -118,7 +118,7 @@ export default function ParentalConsentConnectionScreen() {
   [tmp27, noop] = tmp14(obj9.useState(false), 2);
   const items6 = [onTaskComplete];
   const items7 = [tmp21, parsed, getLinkCode];
-  const callback1 = obj9.useCallback(parsed(function*(arg0, value) {
+  const callback1 = obj9.useCallback(parsed(function*() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -229,7 +229,7 @@ export default function ParentalConsentConnectionScreen() {
     obj3.disabled = tmp38;
     obj3.loading = tmp27;
     obj3.onPress = callback1;
-    tmp30Result = tmp30(tmp2(tmp3[31]).ModalActionButton, obj3);
+    tmp30Result = closure_10(tmp2(tmp3[31]).ModalActionButton, obj3);
   }
   const tmp14Result = tmp14(obj9.useState(false), 2);
   items8[1] = tmp30Result;
@@ -238,17 +238,17 @@ export default function ParentalConsentConnectionScreen() {
   const obj5 = { spacing: getLinkCode(str2[9]).space.PX_16, style: tmp.body, children: null };
   if (tmp16) {
     const obj6 = { pendingRequests: derivedPendingRequests, linkedUsersProcessed: stateFromStores1, expiresAt: parsed, onRefreshLinkCode: getLinkCode, onShare: callback, onInviteAnotherGuardian: callback2 };
-    tmp30Result = tmp30(tmp5(tmp3[32]), obj6);
+    tmp30Result = closure_10(tmp5(tmp3[32]), obj6);
   } else {
     const obj7 = { style: tmp.cardSection, children: null };
     const obj8 = { style: tmp.cardTitle, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl4 = tmp2(tmp3[22]).intl;
     obj8.children = intl4.string(tmp5(tmp3[34]).pojgfk);
-    const items9 = [tmp30(tmp2(tmp3[33]).Text, obj8), ];
+    const items9 = [closure_10(tmp2(tmp3[33]).Text, obj8), ];
     obj9 = { shareActions: "full", linkCode: tmp21, expiresAt: parsed, onRefresh: getLinkCode };
-    items9[1] = tmp30(tmp2(tmp3[35]).ConnectGuardianCard, obj9);
+    items9[1] = closure_10(tmp2(tmp3[35]).ConnectGuardianCard, obj9);
     obj7.children = items9;
-    tmp30Result = tmp36(View, obj7);
+    tmp30Result = closure_11(View, obj7);
   }
   obj5.children = tmp30Result;
   obj.children = closure_10(onTaskComplete(str2[29]).Stack, obj5);

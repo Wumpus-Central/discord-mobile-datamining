@@ -3,9 +3,13 @@
 // Module 15191 (QuestDockUnenrolledHeader)
 import useThemeDefault from "useTheme" /* 4495 */;
 import QuestTypes from "QuestTypes" /* 5447 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15113 */;
 import QuestGameLogotypeDefault from "QuestGameLogotype" /* 15150 */;
+import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader" /* 15192 */;
+import _modDef15196 from "module_15196" /* 15196 */;
+import _modDef15197 from "module_15197" /* 15197 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,17 +38,16 @@ export default noop.memo(function QuestDockUnenrolledHeader() {
   const actionSheetPressHandler = obj2.useActionSheetPressHandler(questCreative);
   let obj3 = questCreative(4411);
   if (obj3.isThemeDark(tmp8)) {
-    let LIGHT = tmp9.DARK;
-    let tmp10 = tmp9;
+    let LIGHT = ThemeTypes.DARK;
+    let tmp10 = ThemeTypes;
   } else {
-    LIGHT = tmp9.LIGHT;
-    tmp10 = tmp9;
+    LIGHT = ThemeTypes.LIGHT;
+    tmp10 = ThemeTypes;
   }
   const tmp11 = closure_8();
   tmp8 = useThemeDefault();
   const questGameLogotypeAssetUrl = questCreative(15091).useQuestGameLogotypeAssetUrl(questDockQuest);
   const questBarHeroBlurhash = questDockQuest.config.assets.questBarHeroBlurhash;
-  tmp7(15192);
   obj = { blurHash: questBarHeroBlurhash, collapsedContent: null, withPressableDisclosure: true, onDisclosurePress: null, onSubmenuPress: null, children: null };
   obj = { style: tmp11.getRewardLabel, variant: "text-sm/medium", color: "interactive-text-active", children: null };
   const intl = tmp(1114).intl;
@@ -53,11 +56,11 @@ export default noop.memo(function QuestDockUnenrolledHeader() {
   obj.onDisclosurePress = callback;
   obj.onSubmenuPress = actionSheetPressHandler;
   obj1 = { style: tmp11.primaryContent, children: null };
-  const tmp7Result = tmp7(5587);
+  const tmp7Result = FastImageDefault;
   if (LIGHT === tmp10.DARK) {
-    let tmp7Result1 = tmp7(15196);
+    let tmp7Result1 = _modDef15196;
   } else {
-    tmp7Result1 = tmp7(15197);
+    tmp7Result1 = _modDef15197;
   }
   obj2 = { source: tmp7Result1, resizeMode: "contain", style: tmp11.wreathImage };
   const items1 = [closure_6(tmp7Result, obj2), ];

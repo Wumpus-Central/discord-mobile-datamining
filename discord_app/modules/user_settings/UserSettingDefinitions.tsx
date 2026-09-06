@@ -11,7 +11,7 @@ const UserSettingsDelay = fn(1084).UserSettingsDelay;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingDefinitions.tsx");
 
-export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, UserSettingDefinitions) {
+export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto) {
   let getSetting = textAndImages;
   let f74584 = activityRestrictedGuildIds;
   closure_3 = explicitContentToProto;

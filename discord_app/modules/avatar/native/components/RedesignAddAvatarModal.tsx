@@ -35,7 +35,7 @@ export default function RedesignAddAvatarModal(route) {
   const onComplete = route.route.params.onComplete;
   importDefault = undefined;
   let pendingImage;
-  noop = async function _handleSelectAvatar(arg0, value) {
+  noop = async function _handleSelectAvatar() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -154,7 +154,6 @@ export default function RedesignAddAvatarModal(route) {
   obj3.children = items2;
   const items3 = [closure_11(closure_6, obj3), , ];
   const memoizedImageSourceResult = onComplete(selectedAvatar[14]).memoizedImageSource(imageUri);
-  const tmp15 = closure_7;
   items3[1] = closure_10(require("TouchableUploadAvatar"), {
     avatarSource: onComplete(selectedAvatar[14]).memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
@@ -174,7 +173,7 @@ export default function RedesignAddAvatarModal(route) {
     const obj8 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
     const intl3 = tmp9(tmp8[19]).intl;
     obj8.children = intl3.string(tmp9(tmp8[19]).t.XyLlVm);
-    tmp17Result = tmp17(tmp9(tmp8[18]).Text, obj8);
+    tmp17Result = closure_10(tmp9(tmp8[18]).Text, obj8);
   }
   obj7.children = tmp17Result;
   items3[2] = closure_10(closure_6, obj7);
@@ -197,5 +196,5 @@ export default function RedesignAddAvatarModal(route) {
   obj10.children = closure_10(onComplete(selectedAvatar[21]).Button, obj11);
   items4[3] = closure_10(closure_6, obj10);
   obj.children = items4;
-  return closure_11(tmp15, obj);
+  return closure_11(closure_7, obj);
 };

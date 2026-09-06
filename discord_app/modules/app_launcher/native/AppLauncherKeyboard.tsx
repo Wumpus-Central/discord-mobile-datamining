@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1481 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
@@ -186,6 +187,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         const result = setAccessibilityFocus.setAccessibilityFocus(obj1);
       }
     }
+    obj3 = MetaQuestUtils;
   }, items5);
   obj1 = { ref: ref2, animationConfigs, animatedIndex: sharedValue, animatedPosition: sharedValue1, chatInputRef, forceMaxHeight: null, enablePanDownToClose: null, onAnimate: null, onClose: null, transitionState: null, backdropComponent: null, disableHeaderRoundingAnimation: null, roundingViewStyle: null, headerStyle: null, isAppsKeyboard: true, rendersHandle: null, width: null, children: null };
   let obj6 = context(onClose[13]);

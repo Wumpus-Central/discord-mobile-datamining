@@ -13,7 +13,6 @@ export const convertSkemaError = function convertSkemaError(errors) {
     if (null == tmp3) {
       continue;
     } else {
-      let tmp = _errors;
       if (key10007 === _errors) {
         let arr = arg0[key10007];
         obj._misc = arr.map((message) => message.message);
@@ -22,7 +21,7 @@ export const convertSkemaError = function convertSkemaError(errors) {
       if (Array.isArray(tmp3)) {
         continue;
       } else {
-        let arr2 = tmp3[tmp];
+        let arr2 = tmp3[_errors];
         if (null != arr2) {
           let mapped = arr2.map((message) => message.message);
         } else {

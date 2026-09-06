@@ -28,7 +28,7 @@ export default function createDefinedContext() {
         const error = new Error("Context was used outside of defined provider.");
         throw error;
       } else {
-        return (children) => <context.Provider value={context}>{arg0.children}</context.Provider>;
+        return (children) => <context.Provider value={context}>{children.children}</context.Provider>;
       }
     }
   ];

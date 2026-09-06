@@ -34,7 +34,7 @@ export default function ShopFlashList(initialScrollIndex) {
   if (tmp5) {
     tmp5 = initialScrollIndex > 0;
   }
-  obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(15813).INITIAL_SCROLL_DELAY_MS };
+  obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS };
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
   obj = { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: closure_4().contentContainer };
   return jsx(_mod8874.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: closure_4().contentContainer });

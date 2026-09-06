@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import _modDef4257 from "module_4257" /* 4257 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8096 */;
 import noop from "module_19" /* 19 */;
 import CustomMarkup from "CustomMarkup" /* 4995 */;
 
@@ -87,9 +88,9 @@ function ChangeLogStrong(arg0) {
     if (str == null) {
       str = "text-default";
     }
-    obj = { variant: "experimental/body-sm/semibold", color: str, children: tmp(8096).smartOutput(node, output, state) };
-    let reactResult = jsx(tmp(4556).Text, { variant: "experimental/body-sm/semibold", color: str, children: tmp(8096).smartOutput(node, output, state) });
-    const tmpResult = tmp(8096);
+    obj = { variant: "experimental/body-sm/semibold", color: str, children: MarkupRulesUtils.smartOutput(node, output, state) };
+    let reactResult = jsx(Text_Text.Text, { variant: "experimental/body-sm/semibold", color: str, children: MarkupRulesUtils.smartOutput(node, output, state) });
+    const tmpResult = MarkupRulesUtils;
   } else {
     const strong = rules.strong;
     reactResult = strong.react(node, output, state);
@@ -135,7 +136,7 @@ export const customRules = {
     const styling = inlineStoreParams;
     return {
       react(node, output, state) {
-        return <ChangeLogLink accessibilityRole="link" node={arg0} output={arg1} state={arg2} styling={styling} />;
+        return <ChangeLogLink accessibilityRole="link" node={node} output={output} state={state} styling={styling} />;
       }
     };
   },
@@ -156,29 +157,29 @@ export const customRules = {
   list(styling) {
     return {
       react(node, output, state) {
-        return <ChangeLogList node={arg0} output={arg1} state={arg2} styling={styling} />;
+        return <ChangeLogList node={node} output={output} state={state} styling={styling} />;
       }
     };
   },
   image: {
     react(node, output, state) {
-      return <ChangeLogImage node={arg0} output={arg1} state={arg2} />;
+      return <ChangeLogImage node={node} output={output} state={state} />;
     }
   },
   blockQuote: {
     react(node, output, state) {
-      return <ChangeLogBlockQuote node={arg0} output={arg1} state={arg2} />;
+      return <ChangeLogBlockQuote node={node} output={output} state={state} />;
     }
   },
   strong: {
     react(node, output, state) {
-      return <ChangeLogStrong key={arg2.key} node={arg0} output={arg1} state={arg2} />;
+      return <ChangeLogStrong key={state.key} node={node} output={output} state={state} />;
     }
   },
   paragraph(dependencyMap) {
     return {
       react(node, output, state) {
-        return <ChangeLogParagraph node={arg0} output={arg1} state={arg2} styling={dependencyMap} />;
+        return <ChangeLogParagraph node={node} output={output} state={state} styling={dependencyMap} />;
       }
     };
   }

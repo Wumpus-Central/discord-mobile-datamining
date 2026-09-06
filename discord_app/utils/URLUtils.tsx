@@ -138,10 +138,10 @@ export default {
     }
     return false;
   },
-  isDiscordUri(arg0) {
-    let tmp = null != arg0;
+  isDiscordUri(src) {
+    let tmp = null != src;
     if (tmp) {
-      const protocol = UrlAll.parse(arg0).protocol;
+      const protocol = UrlAll.parse(src).protocol;
       let tmp4 = null != protocol;
       if (tmp4) {
         tmp4 = "discord:" === protocol;
@@ -291,8 +291,8 @@ export default {
     }
     return startsWithResult;
   },
-  format(arg0) {
-    return UrlAll.format(arg0);
+  format(safeParseWithQueryResult) {
+    return UrlAll.format(safeParseWithQueryResult);
   },
   formatPathWithQuery(pathname, arg1) {
     const obj = { pathname, query: _modDef12.pickBy(arg1) };

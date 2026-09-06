@@ -4,6 +4,7 @@
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _mod4745 from "module_4745" /* 4745 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -50,7 +51,7 @@ prototype["getManifestInfo"] = function getManifestInfo() {
   return BundleUpdaterManager.getManifestInfo();
 };
 prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -81,12 +82,11 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
             if (obj1.isIOS()) {
               c2 = 1;
               c3 = 1;
-              obj1 = { value: tmp14(tmp15[6])(tmp15[5], tmp15.paths), done: false };
+              obj1 = { value: asyncRequireImpl(dependencyMap[5], dependencyMap.paths), done: false };
               return obj1;
             } else {
               c3 = 3;
             }
-            tmp14 = require;
           }
         } else if (arg0 === 1) {
           c3 = 3;

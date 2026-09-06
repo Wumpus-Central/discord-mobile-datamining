@@ -7,7 +7,7 @@ import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 
 require = fn;
-function getEventChannelsByType(id, channelTypeFromEntity, items) {
+function getEventChannelsByType(id, channelTypeFromEntity) {
   let tmp = items;
   if (items === undefined) {
     items = [GuildChannelStore];

@@ -2,6 +2,7 @@
 
 // Module 12523 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8809 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -39,4 +40,5 @@ export default function GuildPowerupsImage(style) {
   const items2 = [tmp.image, style];
   obj.style = items2;
   tmp6 = jsx(FastImageDefault, { style: null, source: { uri: imageUrl } });
+  obj2 = utils_PlatformUtils;
 };

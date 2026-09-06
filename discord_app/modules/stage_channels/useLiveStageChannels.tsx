@@ -39,7 +39,7 @@ export const getAllLiveStageChannels = function getAllLiveStageChannels() {
       canResult = PermissionStore.can(require("StageChannelPermissions").JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     }
     if (canResult) {
-      arr.push(channel);
+      arr = arr.push(channel);
     }
     return arr;
   }, []);

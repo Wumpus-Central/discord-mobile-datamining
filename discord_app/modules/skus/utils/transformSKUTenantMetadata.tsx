@@ -70,7 +70,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           obj1.assets = tmp13;
           obj1.label = item.label;
           tmp7 = obj1;
-        } else if (tmp8(1889).CollectiblesItemType.NAMEPLATE === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
           const obj3 = { id: null, type: null, asset: null, assets: null, label: null, palette: null };
           ({ id: obj5.id, type: obj5.type, asset: obj5.asset, assets } = item);
           let tmp12;
@@ -82,7 +82,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           obj3.assets = tmp12;
           ({ label: obj5.label, palette: obj5.palette } = item);
           tmp7 = obj3;
-        } else if (tmp8(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
           const obj5 = { id: null, type: null, title: null, description: null, accessibilityLabel: null, animationType: null, staticFrameSrc: null, thumbnailPreviewSrc: null, reducedMotionSrc: null, effects: null };
           ({ id: obj4.id, type: obj4.type, title: obj4.title, description: obj4.description, accessibilityLabel: obj4.accessibilityLabel, animationType: obj4.animationType, staticFrameSrc: obj4.staticFrameSrc, thumbnailPreviewSrc: obj4.thumbnailPreviewSrc, reducedMotionSrc: obj4.reducedMotionSrc, effects } = item);
           let mapped1;
@@ -91,7 +91,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           }
           obj5.effects = mapped1;
           tmp7 = obj5;
-        } else if (tmp8(1889).CollectiblesItemType.PROFILE_FRAME === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
           const obj6 = { id: null, type: null, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
           ({ id: obj10.id, type: obj10.type, label: obj10.label, layers: obj10.layers, inner_width: obj10.innerWidth, overflow_top: obj10.overflowTop, overflow_bottom: obj10.overflowBottom, overflow_horizontal: obj10.overflowHorizontal } = item);
           tmp7 = obj6;

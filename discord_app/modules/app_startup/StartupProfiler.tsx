@@ -49,6 +49,6 @@ export default function StartupProfiler(children) {
   return <noop.Profiler id={profile} onRender={function onRender(arg0, arg1, arg2) {
     const obj = AppStartPerformanceDefault;
     obj.mark("\u{1F3A8}", "" + obj[profile] + profile + " " + arg1, arg2);
-  }}>{arg0.children}</noop.Profiler>;
+  }}>{children.children}</noop.Profiler>;
 };
 export { Profiles };

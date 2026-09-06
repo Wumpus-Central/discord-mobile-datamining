@@ -1,8 +1,11 @@
 // === Module 4290: BaseRive ===
 
 // Module 4290 (BaseRive)
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4279 */;
 import DataBindByName from "DataBindByName" /* 4291 */;
+import ManaContext from "ManaContext" /* 4341 */;
 import useRivePlayback from "useRivePlayback" /* 4342 */;
+import RiveTypes from "RiveTypes" /* 4343 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +17,7 @@ const container = StyleSheet.create({ container: { flexGrow: 1 }, fill: { flex: 
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/BaseRive.tsx");
 
-export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding, ref) {
+export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding, arg1) {
   ({ artboard, defaultViewModelInstance: require, referencedAssets, stateMachine, fit, alignment, withReducedMotion } = renderDataBinding);
   ({ src, style, artboardProperties, artboardViewModelInstances } = renderDataBinding);
   if (withReducedMotion === undefined) {
@@ -30,12 +33,12 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
     tmp3 = obj;
   }
   let riveFile = obj.useRiveFile(src, tmp3).riveFile;
-  let tmpResult = tmp(4291);
+  let tmpResult = DataBindByName;
   const rive = tmpResult.useRive();
   const riveViewRef = rive.riveViewRef;
   let obj3 = noop;
-  const enabled = noop.useContext(tmp(4279).AccessibilityPreferencesContext).reducedMotion.enabled;
-  tmpResult = tmp(4341);
+  const enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled;
+  tmpResult = ManaContext;
   const experiments = tmpResult.useManaContext().experiments;
   let flag;
   if (experiments != null) {
@@ -67,14 +70,13 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
   let instance = DataBindByName.useViewModelInstance(tmp11, { artboardName: artboard, instanceName: memo }).instance;
   let None = instance;
   if (instance == null) {
-    None = tmp(4291).DataBindMode.None;
+    None = DataBindByName.DataBindMode.None;
   }
   let reducedMotion;
   if (artboardProperties[artboard] != null) {
     reducedMotion = tmp14.reducedMotion;
   }
   const tmp16 = null != reducedMotion;
-  const tmp9 = items.length > 0;
   const tmpResult1 = DataBindByName;
   obj = { isReady: tmp6, appStatePlaybackEnabled: flag, shouldShortLoopForReducedMotion: null };
   let tmp17 = enabled;
@@ -89,11 +91,11 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
   play = rivePlayback.play;
   pause = rivePlayback.pause;
   const items1 = [play, pause];
-  const imperativeHandle = obj3.useImperativeHandle(ref, () => ({ play, pause }), items1);
+  const imperativeHandle = obj3.useImperativeHandle(arg1, () => ({ play, pause }), items1);
   const items2 = [container.container, ];
   let hidden;
   if (null == riveViewRef) {
-    hidden = tmp22.hidden;
+    hidden = container.hidden;
   }
   const obj1 = { style: items2, children: null };
   items2[1] = hidden;
@@ -118,7 +120,7 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
     return React5(React3, obj1);
   } else {
     obj3 = { file: riveFile, hybridRef: rive.setHybridRef, artboardName: artboard, autoPlay: true, dataBind: None, style: null };
-    const items4 = [tmp22.fill, style];
+    const items4 = [container.fill, style];
     obj3.style = items4;
     if (null != stateMachine) {
       const obj4 = { stateMachineName: stateMachine };
@@ -128,14 +130,14 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
     }
     const merged = Object.assign(obj5);
     if (null != fit) {
-      const obj6 = { fit: tmp(4343).FIT_MAP[fit] };
+      const obj6 = { fit: RiveTypes.FIT_MAP[fit] };
       let obj7 = obj6;
     } else {
       obj7 = {};
     }
     const merged1 = Object.assign(obj7);
     if (null != alignment) {
-      const obj8 = { alignment: tmp(4343).ALIGNMENT_MAP[alignment] };
+      const obj8 = { alignment: RiveTypes.ALIGNMENT_MAP[alignment] };
       let obj9 = obj8;
     } else {
       obj9 = {};
@@ -148,8 +150,9 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
       obj11 = {};
     }
     const merged3 = Object.assign(obj11);
-    timestampProducer(tmp(4291).RiveView, obj3);
+    timestampProducer(DataBindByName.RiveView, obj3);
   }
+  const tmpResult2 = useRivePlayback;
 });
 export const useNumberBinding = function useNumberBinding(AnimationState, instance, AnimationState2, AnimationState1, playIfNeeded) {
   AnimationState1 = playIfNeeded;
@@ -158,19 +161,19 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
   value = iter.value;
   const items = [AnimationState2, setValue, playIfNeeded];
   const effect = noop.useEffect(() => {
-    if (null != closure_0) {
-      if (typeof str !== "number") {
+    if (null != AnimationState2) {
+      if (typeof AnimationState2 !== "number") {
         const _Number = Number;
         const _parseFloat = parseFloat;
         let num = 0;
-        if (!Number.isNaN(parseFloat(str.toString()))) {
+        if (!Number.isNaN(parseFloat(AnimationState2.toString()))) {
           const _parseFloat2 = parseFloat;
-          num = parseFloat(str.toString());
+          num = parseFloat(AnimationState2.toString());
         }
         let tmp2 = num;
       } else {
         const _Number2 = Number;
-        tmp2 = str;
+        tmp2 = AnimationState2;
       }
       closure_2(tmp2);
       if (AnimationState1 != null) {
@@ -178,7 +181,7 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
       }
     }
   }, items);
-  closure_0 = value;
+  AnimationState2 = value;
   closure_2 = noop.useRef(AnimationState1);
   const items1 = [AnimationState1];
   const effect1 = noop.useEffect(() => {
@@ -284,7 +287,8 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
     }
   }, items2);
 };
-export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, set, arg4) {
+export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, current, arg4) {
+  current = arg4;
   const iter = DataBindByName.useRiveEnum(FillColor, instance);
   const setValue = iter.setValue;
   value = iter.value;
@@ -298,9 +302,8 @@ export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2,
     }
   }, items);
   closure_0 = value;
-  let current = set;
-  noop.useRef(set);
-  const items1 = [set];
+  noop.useRef(current);
+  const items1 = [current];
   const effect1 = noop.useEffect(() => {
     closure_2.current = current;
   }, items1);
@@ -327,9 +330,9 @@ export const useTriggerBinding = function useTriggerBinding(startAnimation, inst
   const effect = noop.useEffect(() => {
     let tmp2 = closure_0;
     if (typeof closure_0 !== "boolean") {
-      let tmp4 = 0 !== tmp;
+      let tmp4 = 0 !== closure_0;
       if (tmp4) {
-        tmp4 = null != tmp;
+        tmp4 = null != closure_0;
       }
       tmp2 = tmp4;
     }
@@ -350,9 +353,9 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
       if (null != closure_2) {
         c0 = false;
         const RiveImages = img(instance[3]).RiveImages;
-        let uri = tmp;
-        if (typeof tmp === "number") {
-          uri = playIfNeeded.resolveAssetSource(tmp).uri;
+        let uri = closure_2;
+        if (typeof closure_2 === "number") {
+          uri = playIfNeeded.resolveAssetSource(closure_2).uri;
         }
         const fromURLAsync = RiveImages.loadFromURLAsync(uri);
         fromURLAsync.then((result) => {
@@ -398,18 +401,18 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
 };
 export const useArtboardBinding = function useArtboardBinding(Icon, instance, file, Icon2, playIfNeeded) {
   closure_0 = Icon;
-  closure_2 = file;
+  const bindableArtboard = file;
   closure_3 = Icon2;
   closure_4 = playIfNeeded;
   const items = [Icon, instance, file, Icon2, playIfNeeded];
   const effect = noop.useEffect(() => {
     if (null != instance) {
-      if (null != closure_2) {
+      if (null != bindableArtboard) {
         if (typeof closure_3 === "string") {
           try {
             const artboardPropertyResult = instance.artboardProperty(closure_0);
             if (artboardPropertyResult != null) {
-              const result = artboardPropertyResult.set(obj2.getBindableArtboard(tmp));
+              const result = artboardPropertyResult.set(bindableArtboard.getBindableArtboard(tmp));
             }
             if (closure_4 != null) {
               tmp4();
@@ -418,7 +421,6 @@ export const useArtboardBinding = function useArtboardBinding(Icon, instance, fi
           }
         }
       }
-      obj2 = closure_2;
     }
   }, items);
 };

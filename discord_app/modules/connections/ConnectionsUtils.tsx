@@ -33,9 +33,9 @@ export const getCallbackParamsFromURL = function getCallbackParamsFromURL(c0) {
     toURLSafeResult = obj;
   }
   ({ code, state, error, error_description } = Object.fromEntries(toURLSafeResult.searchParams));
-  let tmpResult = tmp(38);
+  let tmpResult = _modDef38;
   tmpResult(!Array.isArray(code), "Received multiple query param values for code");
-  tmpResult = tmp(38);
+  tmpResult = _modDef38;
   tmpResult(!Array.isArray(state), "Received multiple query param values for state");
   const fromEntriesResult = Object.fromEntries(toURLSafeResult.searchParams);
   _modDef38(!Array.isArray(error), "Received multiple query param values for error");
@@ -57,13 +57,13 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
       H97H4S = tmp11(1114).t["N95b+f"];
     }
     tmp11 = _require;
-  } else if (tmp2.NOT_EQUAL === operator) {
+  } else if (constants2.NOT_EQUAL === operator) {
     H97H4S = require("util").t["D9B/q2"];
-  } else if (tmp2.LESS_THAN === operator) {
+  } else if (constants2.LESS_THAN === operator) {
     H97H4S = require("util").t["3ru8/N"];
     const _Math2 = Math;
     _require = Math.max(0, rounded - 1);
-  } else if (tmp2.GREATER_THAN === operator) {
+  } else if (constants2.GREATER_THAN === operator) {
     H97H4S = require("util").t.wCVDHn;
     const _Math = Math;
     _require = Math.max(0, rounded + 1);
@@ -90,7 +90,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl26.format(H97H4S, obj);
-        } else if (tmp67.REDDIT_TOTAL_KARMA === connectionMetadataField) {
+        } else if (constants.REDDIT_TOTAL_KARMA === connectionMetadataField) {
           const intl25 = require("util").intl;
           obj = {
             platformQuantityHook() {
@@ -99,7 +99,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl25.format(H97H4S, obj);
-        } else if (tmp67.REDDIT_GOLD === connectionMetadataField) {
+        } else if (constants.REDDIT_GOLD === connectionMetadataField) {
           const intl24 = require("util").intl;
           const obj1 = {
             platformQuantityHook() {
@@ -108,7 +108,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl24.format(H97H4S, obj1);
-        } else if (tmp67.REDDIT_MOD === connectionMetadataField) {
+        } else if (constants.REDDIT_MOD === connectionMetadataField) {
           const intl23 = require("util").intl;
           const obj2 = {
             platformQuantityHook() {
@@ -120,7 +120,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (tmp76.STEAM === connectionType) {
+      } else if (constants4.STEAM === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl22 = require("util").intl;
           const obj3 = {
@@ -130,7 +130,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl22.format(H97H4S, obj3);
-        } else if (tmp58.STEAM_GAME_COUNT === connectionMetadataField) {
+        } else if (constants.STEAM_GAME_COUNT === connectionMetadataField) {
           const intl21 = require("util").intl;
           const obj4 = {
             platformQuantityHook() {
@@ -139,7 +139,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl21.format(H97H4S, obj4);
-        } else if (tmp58.STEAM_ITEM_COUNT_TF2 === connectionMetadataField) {
+        } else if (constants.STEAM_ITEM_COUNT_TF2 === connectionMetadataField) {
           const intl20 = require("util").intl;
           const obj5 = {
             platformQuantityHook() {
@@ -148,7 +148,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl20.format(H97H4S, obj5);
-        } else if (tmp58.STEAM_ITEM_COUNT_DOTA2 === connectionMetadataField) {
+        } else if (constants.STEAM_ITEM_COUNT_DOTA2 === connectionMetadataField) {
           const intl19 = require("util").intl;
           const obj6 = {
             platformQuantityHook() {
@@ -160,7 +160,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (tmp76.BLUESKY === connectionType) {
+      } else if (constants4.BLUESKY === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl18 = require("util").intl;
           const obj7 = {
@@ -170,7 +170,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl18.format(H97H4S, obj7);
-        } else if (tmp51.BLUESKY_FOLLOWERS_COUNT === connectionMetadataField) {
+        } else if (constants.BLUESKY_FOLLOWERS_COUNT === connectionMetadataField) {
           const intl17 = require("util").intl;
           const obj8 = {
             platformQuantityHook() {
@@ -179,7 +179,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl17.format(H97H4S, obj8);
-        } else if (tmp51.BLUESKY_STATUSES_COUNT === connectionMetadataField) {
+        } else if (constants.BLUESKY_STATUSES_COUNT === connectionMetadataField) {
           const intl16 = require("util").intl;
           const obj9 = {
             platformQuantityHook() {
@@ -191,7 +191,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (tmp76.TWITTER === connectionType) {
+      } else if (constants4.TWITTER === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl15 = require("util").intl;
           const obj10 = {
@@ -201,7 +201,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl15.format(H97H4S, obj10);
-        } else if (tmp42.TWITTER_VERIFIED === connectionMetadataField) {
+        } else if (constants.TWITTER_VERIFIED === connectionMetadataField) {
           const intl14 = require("util").intl;
           const obj11 = {
             platformQuantityHook() {
@@ -210,7 +210,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl14.format(H97H4S, obj11);
-        } else if (tmp42.TWITTER_FOLLOWERS_COUNT === connectionMetadataField) {
+        } else if (constants.TWITTER_FOLLOWERS_COUNT === connectionMetadataField) {
           const intl13 = require("util").intl;
           const obj12 = {
             platformQuantityHook() {
@@ -219,7 +219,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl13.format(H97H4S, obj12);
-        } else if (tmp42.TWITTER_STATUSES_COUNT === connectionMetadataField) {
+        } else if (constants.TWITTER_STATUSES_COUNT === connectionMetadataField) {
           const intl12 = require("util").intl;
           const obj13 = {
             platformQuantityHook() {
@@ -231,7 +231,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (tmp76.PAYPAL === connectionType) {
+      } else if (constants4.PAYPAL === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl11 = require("util").intl;
           const obj14 = {
@@ -253,7 +253,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (tmp76.EBAY === connectionType) {
+      } else if (constants4.EBAY === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl9 = require("util").intl;
           const obj16 = {
@@ -263,7 +263,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl9.format(H97H4S, obj16);
-        } else if (tmp26.EBAY_TOP_RATED_SELLER === connectionMetadataField) {
+        } else if (constants.EBAY_TOP_RATED_SELLER === connectionMetadataField) {
           const intl8 = require("util").intl;
           const obj17 = {
             platformQuantityHook() {
@@ -272,7 +272,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl8.format(H97H4S, obj17);
-        } else if (tmp26.EBAY_POSITIVE_FEEDBACK_PERCENTAGE === connectionMetadataField) {
+        } else if (constants.EBAY_POSITIVE_FEEDBACK_PERCENTAGE === connectionMetadataField) {
           const intl7 = require("util").intl;
           const obj18 = {
             platformQuantityHook() {
@@ -281,7 +281,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl7.format(H97H4S, obj18);
-        } else if (tmp26.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT === connectionMetadataField) {
+        } else if (constants.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT === connectionMetadataField) {
           const intl6 = require("util").intl;
           const obj19 = {
             platformQuantityHook() {
@@ -290,7 +290,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl6.format(H97H4S, obj19);
-        } else if (tmp26.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT === connectionMetadataField) {
+        } else if (constants.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT === connectionMetadataField) {
           const intl5 = require("util").intl;
           const obj20 = {
             platformQuantityHook() {
@@ -302,7 +302,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (tmp76.TIKTOK === connectionType) {
+      } else if (constants4.TIKTOK === connectionType) {
         if (constants.TIKTOK_VERIFIED === connectionMetadataField) {
           const intl4 = require("util").intl;
           const obj21 = {
@@ -312,7 +312,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl4.format(H97H4S, obj21);
-        } else if (tmp17.TIKTOK_FOLLOWER_COUNT === connectionMetadataField) {
+        } else if (constants.TIKTOK_FOLLOWER_COUNT === connectionMetadataField) {
           const intl3 = require("util").intl;
           const obj22 = {
             platformQuantityHook() {
@@ -321,7 +321,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl3.format(H97H4S, obj22);
-        } else if (tmp17.TIKTOK_FOLLOWING_COUNT === connectionMetadataField) {
+        } else if (constants.TIKTOK_FOLLOWING_COUNT === connectionMetadataField) {
           const intl2 = require("util").intl;
           const obj23 = {
             platformQuantityHook() {
@@ -330,7 +330,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
                     }
           };
           formatResult = intl2.format(H97H4S, obj23);
-        } else if (tmp17.TIKTOK_LIKES_COUNT === connectionMetadataField) {
+        } else if (constants.TIKTOK_LIKES_COUNT === connectionMetadataField) {
           let intl = require("util").intl;
           obj = {
             platformQuantityHook() {

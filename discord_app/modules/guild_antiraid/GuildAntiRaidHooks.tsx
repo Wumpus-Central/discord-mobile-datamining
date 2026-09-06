@@ -28,10 +28,9 @@ function getFirstGuildIncidentId(guildId) {
       let tmp17 = incidentsByGuild[tmp5.id];
       let tmp18 = tmp17;
       if (null != tmp17) {
-        let tmp19 = require;
         let obj7 = GuildAntiRaidUtils;
         if (obj7.hasDetectedActivity(tmp18)) {
-          let tmp19Result = tmp19(8015);
+          let tmp19Result = GuildAntiRaidUtils;
           if (!tmp19Result.isUnderLockdown(tmp18)) {
             let obj4 = BigFlagUtilsAll;
             let obj5 = PermissionUtilsAll;
@@ -43,7 +42,7 @@ function getFirstGuildIncidentId(guildId) {
             }
           }
         } else {
-          tmp19Result = tmp19(8015);
+          tmp19Result = GuildAntiRaidUtils;
         }
       }
     }

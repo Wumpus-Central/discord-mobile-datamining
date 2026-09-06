@@ -38,10 +38,10 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   const t = util.t;
   if (null != onRemoveName) {
     let stringResult = string(t.i4jeWR);
-    let tmp9 = tmp7;
+    let tmp9 = require;
   } else {
     stringResult = string(t.PDTjLN);
-    tmp9 = tmp7;
+    tmp9 = require;
   }
   let obj = { style: null, children: null };
   const items = [tmp.content, { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom }];
@@ -79,7 +79,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
     const obj4 = { style: tmp.formSubtitle, variant: "text-xs/medium", color: "text-default", children: null };
     const intl5 = tmp9(1114).intl;
     obj4.children = intl5.string(tmp9(1114).t.bCQt9K);
-    tmp12Result = tmp12(tmp9(4556).Text, obj4);
+    tmp12Result = timestampProducer(tmp9(4556).Text, obj4);
   }
   items1[4] = tmp12Result;
   obj.children = items1;
@@ -111,8 +111,8 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
       }
       return tmp;
     };
-    obj6.children = tmp12(tmp9(4975).Button, obj7);
-    tmp12Result = tmp12(tmp11, obj6);
+    obj6.children = timestampProducer(tmp9(4975).Button, obj7);
+    tmp12Result = timestampProducer(View, obj6);
   }
   items2[2] = tmp12Result;
   items2[3] = timestampProducer(ContactSyncErrorDefault, { style: tmp.error, error });

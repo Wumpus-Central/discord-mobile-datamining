@@ -23,7 +23,7 @@ export const MenuGroup = noop.forwardRef((arg0, ref) => {
   let tmp4 = null === ref;
   if (tmp4) {
     obj = { style: tmp.divider };
-    tmp4 = closure_2(tmp3, obj);
+    tmp4 = closure_2(closure_1, obj);
   }
   const items = [tmp4, ];
   const Children = noop.Children;

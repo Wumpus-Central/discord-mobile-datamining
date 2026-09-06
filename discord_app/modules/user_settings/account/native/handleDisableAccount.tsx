@@ -26,9 +26,9 @@ export default function handleDisableAccount() {
   const string = intl.string;
   const t = util.t;
   if (someResult) {
-    const intl4 = tmp4(1114).intl;
+    const intl4 = util.intl;
     const stringResult = string(t.vJiTOL);
-    const stringResult1 = intl4.string(tmp4(1114).t.UyVVan);
+    const stringResult1 = intl4.string(util.t.UyVVan);
     let obj = { title: stringResult, body: stringResult1 };
     AlertActionCreatorsDefault.show(obj);
   } else {
@@ -38,20 +38,20 @@ export default function handleDisableAccount() {
       obj.onSubmit = function onSubmit(password) {
         return currentUser(6984).disableAccount(password, true);
       };
-      const intl3 = tmp4(1114).intl;
-      obj.title = intl3.string(tmp4(1114).t["8lQ2rR"]).toUpperCase();
+      const intl3 = util.intl;
+      obj.title = intl3.string(util.t["8lQ2rR"]).toUpperCase();
       obj.placeholder = formatted;
       let tmp8 = obj;
-      const str3 = intl3.string(tmp4(1114).t["8lQ2rR"]);
+      const str3 = intl3.string(util.t["8lQ2rR"]);
     } else {
       obj.onSubmit = function onSubmit(password) {
         return currentUser(6984).disableAccount(password, false);
       };
-      const intl2 = tmp4(1114).intl;
-      obj.title = intl2.string(tmp4(1114).t.jf5GGb).toUpperCase();
+      const intl2 = util.intl;
+      obj.title = intl2.string(util.t.jf5GGb).toUpperCase();
       obj.placeholder = formatted;
       tmp8 = obj;
-      const str2 = intl2.string(tmp4(1114).t.jf5GGb);
+      const str2 = intl2.string(util.t.jf5GGb);
     }
     showUserSettingsInputAlertDefault(tmp8);
     const str = string(t["CIGa+7"]);

@@ -100,7 +100,7 @@ function GuildChannelDetailsTopic(channel) {
   const callback1 = first1.useCallback((nativeEvent) => sharedValue1.set(nativeEvent.nativeEvent.layout.height), items1);
   const memo = first1.useMemo(() => first ? (() => {
     closure_1_5(!first1);
-    const result = sharedValue2.set(first1 ? tmp2.VISIBLE : tmp2.HIDDEN);
+    const result = sharedValue2.set(first1 ? constants.VISIBLE : constants.HIDDEN);
   }) : undefined, items2);
   const items3 = [sharedValue];
   const items4 = [, ];

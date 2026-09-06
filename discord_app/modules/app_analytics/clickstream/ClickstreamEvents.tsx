@@ -8,7 +8,7 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamEvents.tsx");
 
 export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, arr) {
-  const date = new Date();
+  new Date();
   if (AnalyticEvents.GUILD_VIEWED_CLICKSTREAM === arg0) {
     let obj = {
       time_minus: arr.map((timestamp) => {
@@ -20,7 +20,7 @@ export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, 
       guild_ids: arr.map((guild_id) => guild_id.guild_id)
     };
     return obj;
-  } else if (tmp2.FRIENDS_LIST_VIEWED_CLICKSTREAM === arg0) {
+  } else if (AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM === arg0) {
     obj = {
       time_minus: arr.map((timestamp) => {
           timestamp = timestamp.timestamp;
@@ -34,7 +34,7 @@ export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, 
       now_playing_num_cards: arr.map((now_playing_num_cards) => now_playing_num_cards.now_playing_num_cards)
     };
     return obj;
-  } else if (tmp2.CHANNEL_OPENED_CLICKSTREAM === arg0) {
+  } else if (AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM === arg0) {
     const obj1 = {
       time_minus: arr.map((timestamp) => {
           timestamp = timestamp.timestamp;
@@ -46,7 +46,7 @@ export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, 
       channel_types: arr.map((channel_type) => channel_type.channel_type)
     };
     return obj1;
-  } else if (tmp2.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM === arg0) {
+  } else if (AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM === arg0) {
     obj = {
       time_minus: arr.map((timestamp) => {
           timestamp = timestamp.timestamp;

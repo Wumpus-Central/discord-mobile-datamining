@@ -4,6 +4,7 @@
 import Constants from "Constants" /* 1074 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
+import Server from "Server" /* 1894 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 4710 */;
 import size from "module_2" /* 2 */;
 
@@ -25,7 +26,7 @@ function messageAttachmentToUnfurledMediaItem(flags) {
   if (tmpResult.hasFlag(num3, MessageAttachmentFlags.IS_ANIMATED)) {
     num4 = obj.IS_ANIMATED | 0;
   }
-  const size = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: tmp(1894).UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
+  const size = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: Server.UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
   let tmp6;
   if (null != flags.content_scan_version) {
     obj = { version: flags.content_scan_version, flags: num2 };
@@ -87,12 +88,12 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
   const merged = Object.assign(messageAttachmentToUnfurledMediaItem(found2));
   let str = "IMAGE";
   if (!obj2.isImageFile(found2.filename)) {
+    tmp2Result = MediaFormatTesters;
     let str2 = "INVALID";
     if (tmp2Result.isVideoFile(found2.filename)) {
       str2 = "VIDEO";
     }
     str = str2;
-    tmp2Result = MediaFormatTesters;
   }
   obj.type = str;
   obj.alt = found2.description;

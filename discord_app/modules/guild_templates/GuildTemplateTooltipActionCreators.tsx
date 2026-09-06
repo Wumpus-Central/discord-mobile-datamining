@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplate
 export default {
   checkGuildTemplateDirty(guildId) {
     closure_0 = guildId;
-    return (async (arg0, value) => {
+    return (async () => {
       if (guildId === 2) {
         guildId = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

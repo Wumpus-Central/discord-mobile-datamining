@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_co
 
 export default noop.memo(function NewMessagesTagListInput(forceSearchResults) {
   ({ onSelectUser: require, selectedUserIds } = forceSearchResults);
-  ({ autoFocus, onChangeText, onFocus, hasQuery, onForceSearchResults, tagListInputRef } = forceSearchResults);
+  ({ autoFocus, onChangeText, onFocus, hasQuery, onForceSearchResults, tagListInputRef } = forceSearchResults.forceSearchResults);
   const tmp = closure_7();
   let items = [selectedUserIds];
   const memo = noop.useMemo(() => {
@@ -60,12 +60,12 @@ export default noop.memo(function NewMessagesTagListInput(forceSearchResults) {
       }
       obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress: onForceSearchResults, style: tmp.showSearchButton, children: null };
       if (forceSearchResults) {
-        let CirclePlusIcon = tmp7(tmp4[12]).ChevronLargeRightIcon;
+        let CirclePlusIcon = require("ChevronLargeRightIcon").ChevronLargeRightIcon;
       } else {
-        CirclePlusIcon = tmp7(tmp4[13]).CirclePlusIcon;
+        CirclePlusIcon = require("CirclePlusIcon").CirclePlusIcon;
       }
-      obj.children = tmp2(CirclePlusIcon, { size: "xs" });
-      tmp2(require("Pressables").PressableOpacity, obj);
+      obj.children = <CirclePlusIcon size="xs" />;
+      jsx(require("Pressables").PressableOpacity, { accessibilityRole: "button", accessibilityLabel: stringResult, onPress: onForceSearchResults, style: tmp.showSearchButton, children: null });
     }
   }
   obj.footer = tmp6;

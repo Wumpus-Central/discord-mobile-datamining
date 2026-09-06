@@ -98,12 +98,12 @@ export default function FormSwitchRowContainer(DEPRECATED_style) {
     obj = { value: null, onValueChange: null };
     ({ value: obj3.value, onValueChange: obj3.onValueChange } = DEPRECATED_style);
     const merged = Object.assign(DEPRECATED_style);
-    obj.children = tmp3(TableSwitchRow.TableSwitchRow, obj);
-    let tmp3Result = tmp3(View, obj);
+    obj.children = timestampProducer(TableSwitchRow.TableSwitchRow, obj);
+    let tmp3Result = timestampProducer(View, obj);
   } else {
     obj = {};
     const merged1 = Object.assign(DEPRECATED_style);
-    tmp3Result = tmp3(FormSwitchRow, obj);
+    tmp3Result = timestampProducer(FormSwitchRow, obj);
   }
   return tmp3Result;
 };

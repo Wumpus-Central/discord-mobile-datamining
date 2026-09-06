@@ -1,6 +1,7 @@
 // === Module 8242: useBadges ===
 
 // Module 8242 (useBadges)
+import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import StreamerModeStore from "StreamerModeStore" /* 4405 */;
@@ -17,10 +18,10 @@ export default function useBadges(getBadges, arg1) {
   if (undefined !== arg1) {
     setting = arg1;
   }
-  let tmpResult = tmp(563);
+  let tmpResult = useStateFromStores;
   const items = [UserStore];
   const stateFromStores = tmpResult.useStateFromStores(items, () => currentUser.getCurrentUser());
-  tmpResult = tmp(563);
+  tmpResult = useStateFromStores;
   [][0] = StreamerModeStore;
   if (null == getBadges) {
     return [];

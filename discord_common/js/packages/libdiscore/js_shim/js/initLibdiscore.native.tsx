@@ -4,7 +4,7 @@
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import timers from "timers" /* 1356 */;
 
-let closure_2 = async function _initLibdiscore(arg0, value) {
+let closure_2 = async function _initLibdiscore() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

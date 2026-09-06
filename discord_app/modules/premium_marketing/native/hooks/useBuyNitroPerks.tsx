@@ -2,40 +2,42 @@
 
 // Module 13360 (useBuyNitroPerks)
 import util from "util" /* 1114 */;
+import ChatIcon from "ChatIcon" /* 5071 */;
+import AppsIcon from "AppsIcon" /* 5106 */;
 import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7393 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
+import TrophyIcon from "TrophyIcon" /* 8717 */;
 import ReactionIcon from "ReactionIcon" /* 8757 */;
+import TagIcon from "TagIcon" /* 8862 */;
+import ScreenStreamIcon from "ScreenStreamIcon" /* 9221 */;
 import UploadIcon from "UploadIcon" /* 9371 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9373 */;
+import BoostGemIcon from "BoostGemIcon" /* 9375 */;
+import UserSquareIcon from "UserSquareIcon" /* 9377 */;
+import VideoIcon from "VideoIcon" /* 10110 */;
+import StickerIcon from "StickerIcon" /* 10114 */;
+import SoundboardIcon from "SoundboardIcon" /* 12528 */;
 import _modDef13361 from "module_13361" /* 13361 */;
 import _modDef13362 from "module_13362" /* 13362 */;
 import AppIconUtils from "AppIconUtils" /* 13363 */;
+import _modDef13365 from "module_13365" /* 13365 */;
+import _modDef13366 from "module_13366" /* 13366 */;
 import _modDef13367 from "module_13367" /* 13367 */;
 import _modDef13368 from "module_13368" /* 13368 */;
 import _modDef13369 from "module_13369" /* 13369 */;
 import _modDef13370 from "module_13370" /* 13370 */;
+import DoorEnterIcon from "DoorEnterIcon" /* 13371 */;
 import _modDef13373 from "module_13373" /* 13373 */;
 import _modDef13374 from "module_13374" /* 13374 */;
+import ServerGridIcon from "ServerGridIcon" /* 13375 */;
 import _modDef13377 from "module_13377" /* 13377 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 13378 */;
 import _modDef13380 from "module_13380" /* 13380 */;
+import LettersIcon from "LettersIcon" /* 13381 */;
+import SparklesIcon from "SparklesIcon" /* 13383 */;
 import noop from "module_19" /* 19 */;
 import n from "module_672" /* 672 */;
 
-const ChatIcon = tmp(5071);
-const AppsIcon = tmp(5106);
-const NitroWheelIcon = tmp(8662);
-const TrophyIcon = tmp(8717);
-const TagIcon = tmp(8862);
-const ScreenStreamIcon = tmp(9221);
-const SuperReactionIcon = tmp(9373);
-const BoostGemIcon = tmp(9375);
-const UserSquareIcon = tmp(9377);
-const VideoIcon = tmp(10110);
-const StickerIcon = tmp(10114);
-const SoundboardIcon = tmp(12528);
-const DoorEnterIcon = tmp(13371);
-const ServerGridIcon = tmp(13375);
-const PaintPaletteIcon = tmp(13378);
-const LettersIcon = tmp(13381);
-const SparklesIcon = tmp(13383);
 require = fn;
 const Gradients = fn(7432).Gradients;
 const PremiumConstants = fn(1373);
@@ -50,7 +52,7 @@ let result = size.fileFinishedImporting("modules/premium_marketing/native/hooks/
 
 export default function useBuyNitroPerks(arg0) {
   closure_0 = arg0;
-  let tmp = useFractionalPremiumInfoDefault({ forceFetch: true }).fractionalState === constants.FP_ONLY;
+  const tmp = useFractionalPremiumInfoDefault({ forceFetch: true }).fractionalState === constants.FP_ONLY;
   importDefault = tmp;
   let items = [arg0, tmp];
   return noop.useMemo(() => {
@@ -93,7 +95,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl9 = util.intl;
     obj3.subLabel = intl9.string(util.t["t/Mvdj"]);
     obj3.IconComponent = UserSquareIcon.UserSquareIcon;
-    obj4 = { image: tmp3(13365), description: util.t.kWcDK8 };
+    obj4 = { image: _modDef13365, description: util.t.kWcDK8 };
     obj3.detail = obj4;
     items[arraySpreadResult] = obj3;
     if (closure_1) {
@@ -106,7 +108,7 @@ export default function useBuyNitroPerks(arg0) {
       const intl11 = util.intl;
       obj5.subLabel = intl11.string(util.t["n+DGY/"]);
       obj5.IconComponent = BoostGemIcon.BoostGemIcon;
-      const obj7 = { image: tmp3(13366), description: util.t.jsyNHm };
+      const obj7 = { image: _modDef13366, description: util.t.jsyNHm };
       obj5.detail = obj7;
       items3 = [obj5];
     }
@@ -268,6 +270,7 @@ export default function useBuyNitroPerks(arg0) {
         return obj;
       }
       label = includedInNitroBasic.label;
+      const obj4 = closure_2_8(result1);
     });
     const obj30 = { kind: "section-header", id: "explore-perks-header", title: null };
     const intl40 = util.intl;

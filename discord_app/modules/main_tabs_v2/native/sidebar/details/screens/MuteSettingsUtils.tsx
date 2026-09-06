@@ -5,6 +5,7 @@ import util from "util" /* 1114 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7114 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7119 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7765 */;
 import ChannelMuteUtilsAll from "ChannelMuteUtils" /* 9058 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -64,10 +65,10 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     if (channel.isThread()) {
-      let tmp7Result = tmp7(7765);
+      let tmp7Result = ThreadActionCreatorsDefault;
       const result = tmp7Result.setNotificationSettings(channel, { muted: false });
     } else {
-      tmp7Result = tmp7(7119);
+      tmp7Result = NotificationSettingsModalActionCreatorsDefault;
       const result1 = tmp7Result.updateChannelOverrideSettings(guildId, channel.id, { muted: false, mute_config: null }, NotificationSettingsUtils.NotificationLabels.Unmuted);
     }
   }
@@ -82,18 +83,18 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
     onOptionPress(muteSettings);
   } else if (null != channel) {
     if (channel.isThread()) {
-      let tmp4Result = tmp4(7765);
+      let tmp4Result = ThreadActionCreatorsDefault;
       const result = tmp4Result.setNotificationSettings(channel, muteSettings);
     } else {
-      tmp4Result = tmp4(7119);
+      tmp4Result = NotificationSettingsModalActionCreatorsDefault;
       const result1 = tmp4Result.updateChannelOverrideSettings(guildId, channel.id, muteSettings, NotificationSettingsUtils.NotificationLabels.Muted);
     }
   } else if (null != guild) {
     const result2 = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guild.id, muteSettings, NotificationSettingsUtils.NotificationLabels.Muted);
   }
 };
-export const getMuteSettings = function getMuteSettings(arg0) {
-  let id = ChannelStore.getChannel(arg0);
+export const getMuteSettings = function getMuteSettings(channelId) {
+  let id = ChannelStore.getChannel(channelId);
   if (null == id) {
     const obj = { muteConfig: undefined, muted: undefined, messageNotifications: undefined, guildMuted: undefined, guildMessageNotifications: undefined };
     return obj;
@@ -116,10 +117,10 @@ export const getMessageNotificationsText = function getMessageNotificationsText(
   if (constants2.ALL_MESSAGES === messageNotifications) {
     const intl3 = util.intl;
     return intl3.string(util.t.DZi15z);
-  } else if (tmp.ONLY_MENTIONS === messageNotifications) {
+  } else if (constants2.ONLY_MENTIONS === messageNotifications) {
     const intl2 = util.intl;
     return intl2.string(util.t.xGICju);
-  } else if (tmp.NO_MESSAGES === messageNotifications) {
+  } else if (constants2.NO_MESSAGES === messageNotifications) {
     const intl = util.intl;
     return intl.string(util.t.CtVGyQ);
   } else {

@@ -72,10 +72,10 @@ const memoResult1 = noop.memo((textVariant) => {
   function renderContent() {
     let tmp4 = importDefault;
     if (null != importDefault) {
-      tmp4 = tmp3;
-      if (typeof tmp3 === "string") {
+      tmp4 = importDefault;
+      if (typeof importDefault === "string") {
         let obj = { source: null, size: null };
-        obj = { uri: tmp3 };
+        obj = { uri: importDefault };
         obj.source = obj;
         obj.size = badgeSize;
         tmp4 = React6(memoResult, obj);

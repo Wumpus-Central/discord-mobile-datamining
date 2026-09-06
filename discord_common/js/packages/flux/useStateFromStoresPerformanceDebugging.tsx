@@ -83,6 +83,7 @@ function flushViolators() {
       continue;
     }
     logger.log(`${"|".padEnd(tmp, "-")}|`);
+    tmp10 = dependencyMap[Symbol.iterator]();
   })();
 }
 const logger = new fn(4).Logger("useStateFromStores");

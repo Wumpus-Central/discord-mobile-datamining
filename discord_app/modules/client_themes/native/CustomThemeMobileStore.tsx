@@ -88,9 +88,9 @@ prototype["initialize"] = function initialize(arg0) {
   }
 };
 prototype["getState"] = function getState() {
-  let tmp2 = null != theme && null != tmp;
+  let tmp2 = null != theme && null != prop;
   if (tmp2) {
-    tmp2 = tmp.colors.length > 0;
+    tmp2 = prop.colors.length > 0;
   }
   if (tmp2) {
     let obj = { theme, customTheme: prop };
@@ -176,8 +176,8 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       if (null == prop) {
         let theme = obj.theme;
       } else {
-        theme = tmp10(1229).getCustomThemeBaseTheme(obj.theme);
-        const tmp10Result = tmp10(1229);
+        theme = ClientThemesUtils.getCustomThemeBaseTheme(obj.theme);
+        const tmp10Result = ClientThemesUtils;
       }
       obj = { baseTheme: theme, customTheme: prop };
     } else {
@@ -196,7 +196,6 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       return tmp9;
     }
     obj5 = isPerModeThemingActive;
-    tmp10 = require;
   }
 };
 prototype["hasCustomTheme"] = function hasCustomTheme() {

@@ -11,5 +11,5 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/renderChannelPressableWrapper.tsx");
 
 export default function renderChannelPressableWrapper(children) {
-  return <View style={items}>{arg0}</View>;
+  return <View style={items}>{children}</View>;
 };

@@ -2,6 +2,7 @@
 
 // Module 9706 (GuildEventRsvpUtils)
 import util from "util" /* 1114 */;
+import ScheduleUtils from "ScheduleUtils" /* 9665 */;
 import useEventSchedule from "useEventSchedule" /* 9668 */;
 import useEventException from "useEventException" /* 9669 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -42,7 +43,7 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     }
     let recurrenceStatus = null;
     if (null != scheduled_start_time) {
-      let tmp33Result = tmp33(9665);
+      let tmp33Result = ScheduleUtils;
       let scheduled_start_time1;
       if (guildScheduledEvent != null) {
         scheduled_start_time1 = guildScheduledEvent.scheduled_start_time;
@@ -52,7 +53,7 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     }
     if (null == recurrenceStatus) {
       if (recurrenceId == null) {
-        tmp33Result = tmp33(9665);
+        tmp33Result = ScheduleUtils;
         recurrenceId = tmp33Result.getNextRecurrenceIdInEvent(guildScheduledEvent);
       }
       let tmp12 = recurrenceId;

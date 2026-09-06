@@ -3,6 +3,8 @@
 // Module 9092 (AudioSettingsUtils)
 import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5015 */;
+import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9093 */;
 import size from "module_2" /* 2 */;
 
 const constants = UserSettingsConstants.ProtoAudioSettingsContextTypes;
@@ -10,14 +12,14 @@ let result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettin
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    USER = tmp(9093).AudioSettingsDefaultVolumes.STREAM;
+    USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
   } else {
-    USER = tmp(9093).AudioSettingsDefaultVolumes.USER;
+    USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
   }
   let tmp3 = USER;
-  let tmpResult = tmp(5015);
+  let tmpResult = PerceptualVolumeUtils;
   const result = tmpResult.amplitudeToPerceptual(USER);
-  tmpResult = tmp(5015);
+  tmpResult = PerceptualVolumeUtils;
   if (Math.abs(result - tmpResult.amplitudeToPerceptual(USER)) < 1) {
     tmp3 = USER;
   }

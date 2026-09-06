@@ -56,14 +56,12 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       let obj = _modDef1471;
       const parsed = obj.parse(substr);
       const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
-      const tmp10 = readSnowflake;
-      const tmp6 = require;
       const tmp12 = readSnowflake(QueryStringUtils.getFirstQueryStringValue(parsed[channel]));
       obj = { baseCode: match2, guildScheduledEventId: firstQueryStringValue, targetChannelId: tmp12, targetMessageId: null };
       let tmp10Result;
       if (null != tmp12) {
-        tmp10Result = tmp10(tmp6(4546).getFirstQueryStringValue(parsed[message]));
-        const tmp6Result = tmp6(4546);
+        tmp10Result = readSnowflake(QueryStringUtils.getFirstQueryStringValue(parsed[message]));
+        const tmp6Result = QueryStringUtils;
       }
       obj.targetMessageId = tmp10Result;
       return generateInviteKeyFromExtraData(obj);
@@ -80,12 +78,11 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     return obj;
   } else {
     const parsed = _modDef1471.parse(tmp3);
-    const tmp12 = require;
     const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
     const firstQueryStringValue1 = QueryStringUtils.getFirstQueryStringValue(parsed[channel]);
     let tmp4;
     if (typeof firstQueryStringValue1 === "string") {
-      let tmp9Result = tmp9(11);
+      let tmp9Result = SnowflakeUtilsDefault;
       if (tmp9Result.isProbablyAValidSnowflake(firstQueryStringValue1)) {
         tmp4 = firstQueryStringValue1;
       }
@@ -93,16 +90,16 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     obj = { baseCode: tmp2, guildScheduledEventId: firstQueryStringValue, targetChannelId: tmp4, targetMessageId: null };
     let tmp5;
     if (null != tmp4) {
-      const firstQueryStringValue2 = tmp12(4546).getFirstQueryStringValue(parsed[message]);
+      const firstQueryStringValue2 = QueryStringUtils.getFirstQueryStringValue(parsed[message]);
       let tmp8;
       if (typeof firstQueryStringValue2 === "string") {
-        tmp9Result = tmp9(11);
+        tmp9Result = SnowflakeUtilsDefault;
         if (tmp9Result.isProbablyAValidSnowflake(firstQueryStringValue2)) {
           tmp8 = firstQueryStringValue2;
         }
       }
       tmp5 = tmp8;
-      const tmp12Result = tmp12(4546);
+      const tmp12Result = QueryStringUtils;
     }
     obj.targetMessageId = tmp5;
     return obj;

@@ -133,25 +133,24 @@ function BundleThumbnailRow(trackPDPClick) {
       const items = [thumbnail.thumbnail, ];
       let thumbnailSelected = thumbnailInnerSelected;
       if (thumbnailInnerSelected) {
-        thumbnailSelected = tmp8.thumbnailSelected;
+        thumbnailSelected = thumbnail.thumbnailSelected;
       }
       items[1] = thumbnailSelected;
       obj.style = items;
       const items1 = [thumbnail.thumbnailInner, ];
       if (thumbnailInnerSelected) {
-        thumbnailInnerSelected = tmp8.thumbnailInnerSelected;
+        thumbnailInnerSelected = thumbnail.thumbnailInnerSelected;
       }
       obj = { style: items1, children: null };
       items1[1] = thumbnailInnerSelected;
       obj = { source: null, style: null, resizeMode: "cover" };
       const obj1 = { uri: null };
       const tmp10 = require("FastImage");
-      const tmp9 = closure_1_7;
       obj1.uri = dependencyMap(onSelectIndex[12]).getThumbnailSrc(item);
       obj.source = obj1;
       obj.style = thumbnail.thumbnailImage;
       obj.children = closure_1_14(tmp10, obj);
-      obj.children = closure_1_14(tmp9, obj);
+      obj.children = closure_1_14(closure_1_7, obj);
       return closure_1_14(dependencyMap(onSelectIndex[18]).PressableOpacity, obj, index);
     })
   };
@@ -166,18 +165,17 @@ function SKUNameAndDescriptionSection(sku) {
   if (!obj.isNullOrEmpty(sku.name)) {
     obj = { style: tmp.section, children: null };
     obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: sku.name };
-    const items = [closure_1_14(tmp2(4556).Heading, obj), ];
-    const isNullOrEmptyResult = tmp2(1925).isNullOrEmpty(sku.description);
+    const items = [closure_1_14(Text_Text.Heading, obj), ];
+    const isNullOrEmptyResult = StringUtils.isNullOrEmpty(sku.description);
     let tmp7Result = !isNullOrEmptyResult;
     if (!isNullOrEmptyResult) {
       const obj1 = { variant: "text-md/medium", color: "text-muted", children: sku.description };
-      tmp7Result = tmp7(tmp2(4556).Text, obj1);
+      tmp7Result = closure_1_14(Text_Text.Text, obj1);
     }
     items[1] = tmp7Result;
     obj.children = items;
     tmp5Result = __initData(React5, obj);
-    const tmp2Result = tmp2(1925);
-    tmp7 = closure_1_14;
+    const tmp2Result = StringUtils;
   }
   return tmp5Result;
 }
@@ -203,9 +201,9 @@ function ItemDetailsSection(selectedItem) {
   }
   let obj1 = StringUtils;
   if (obj1.isNullOrEmpty(trimmed)) {
-    let tmp8Result = tmp8(1925);
+    let tmp8Result = StringUtils;
     if (tmp8Result.isNullOrEmpty(trimmed1)) {
-      tmp8Result = tmp8(1925);
+      tmp8Result = StringUtils;
       let tmp11Result = null;
     }
     return tmp11Result;
@@ -215,7 +213,7 @@ function ItemDetailsSection(selectedItem) {
   let tmp14 = !isNullOrEmptyResult;
   if (!isNullOrEmptyResult) {
     obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: trimmed };
-    tmp14 = closure_1_14(tmp8(4556).Heading, obj);
+    tmp14 = closure_1_14(Text_Text.Heading, obj);
   }
   const items = [tmp14, , ];
   const tmp8Result1 = StringUtils;
@@ -233,9 +231,9 @@ function ItemDetailsSection(selectedItem) {
     }
     const items1 = [tmp18, ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: trimmed1 };
-    items1[1] = closure_1_14(tmp8(4556).Text, obj4);
+    items1[1] = closure_1_14(Text_Text.Text, obj4);
     obj1.children = items1;
-    tmp11Result = tmp11(tmp12, obj1);
+    tmp11Result = __initData(React5, obj1);
   }
   items[1] = tmp11Result;
   const tmp8Result2 = StringUtils;
@@ -243,11 +241,12 @@ function ItemDetailsSection(selectedItem) {
   let tmp23 = !isNullOrEmptyResult2;
   if (!isNullOrEmptyResult2) {
     const obj5 = { variant: "text-md/medium", color: "text-default", children: trimmed2 };
-    tmp23 = closure_1_14(tmp8(4556).Text, obj5);
+    tmp23 = closure_1_14(Text_Text.Text, obj5);
   }
   items[2] = tmp23;
   obj.children = items;
-  tmp11Result = tmp11(tmp12, obj);
+  tmp11Result = __initData(React5, obj);
+  const tmp8Result3 = StringUtils;
 }
 function SocialLayerStorefrontProductDetailsModal(skuId) {
   skuId = skuId.skuId;
@@ -329,14 +328,14 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   let tmp13Result = tmp13(obj5.useMemo(() => {
     let applicationId;
     if (stateFromStores != null) {
-      applicationId = tmp.applicationId;
+      applicationId = stateFromStores.applicationId;
     }
     if (null == applicationId) {
       const items = [[], []];
       let result = items;
     } else {
       const obj2 = carouselMediaItems;
-      const tenantMetadata = tmp.tenantMetadata;
+      const tenantMetadata = stateFromStores.tenantMetadata;
       let carouselItems;
       if (tenantMetadata != null) {
         const socialLayer = tenantMetadata.socialLayer;
@@ -348,7 +347,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
         carouselItems = [];
       }
       const obj = { heroWidth: carouselMediaItems.MOBILE_HERO_WIDTH_PX };
-      result = obj2.convertCarouselItemsToMediaItems(carouselItems, tmp.applicationId, stateFromStores2, obj);
+      result = obj2.convertCarouselItemsToMediaItems(carouselItems, stateFromStores.applicationId, stateFromStores2, obj);
     }
     return result;
   }, items6), 2);
@@ -407,7 +406,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       if (!current) {
         ref.current = true;
         const obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
-        ({ applicationId, id } = tmp);
+        ({ applicationId, id } = stateFromStores);
         obj.withGoogleSkuIds = PlatformUtils.isAndroid();
         let country;
         if (storeFront != null) {
@@ -423,6 +422,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
         tmp5Result = PlatformUtils;
       }
     }
+    tmp2 = null != stateFromStores && null != stateFromStores.applicationId;
   }, items7);
   const items8 = [skuId, , ];
   let orbsReward;
@@ -515,7 +515,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     obj.checkoutAnalyticsFields = obj;
     obj1 = { attempt: tmp30, skuId, sku: stateFromStores, analyticsLocations: memo1, onPurchaseComplete: callback2, onPurchaseError: callback1 };
     obj.children = closure_14(tmp4(10813).HeadlessSlayerStorefrontPurchaseRunner, obj1);
-    tmp41Result = tmp41(tmp2Result, obj, skuId);
+    tmp41Result = closure_14(tmp2Result, obj, skuId);
   }
   const items11 = [skuId, memo1, trackPDPClick];
   if (null == stateFromStores) {
@@ -564,44 +564,44 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const obj8 = { style: stateFromStores2.absoluteFill, colors: null, pointerEvents: "none" };
       const items15 = [closure_17, closure_18];
       obj8.colors = items15;
-      exclusive = tmp47(tmp2(4987), obj8);
+      exclusive = closure_14(tmp2(4987), obj8);
     }
     const items16 = [exclusive, ];
     const obj9 = { contentContainerStyle: tmp.scrollContent, children: null };
     if (null != tmp23) {
       const obj10 = { mediaItem: tmp23 };
-      let tmp47Result = tmp47(HeroMedia, obj10);
+      let tmp47Result = closure_14(HeroMedia, obj10);
     } else {
       tmp47Result = null != memo;
       if (tmp47Result) {
         const obj11 = { sku: stateFromStores };
-        tmp47Result = tmp47(tmp2(8825), obj11);
+        tmp47Result = closure_14(tmp2(8825), obj11);
       }
     }
     const items17 = [tmp47Result, , ];
     let exclusive2 = stateFromStores.exclusive;
     if (exclusive2) {
-      const obj12 = { style: tmp.exclusiveBadgeContainer, children: tmp47(tmp4(10817).ExclusiveBadge, {}) };
-      exclusive2 = tmp47(tmp70, obj12);
+      const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10817).ExclusiveBadge, {}) };
+      exclusive2 = closure_14(tmp70, obj12);
     }
     items17[1] = exclusive2;
     if (tmp21) {
       const obj13 = { sku: stateFromStores };
-      const items18 = [tmp47(SKUNameAndDescriptionSection, obj13), , ];
+      const items18 = [closure_14(SKUNameAndDescriptionSection, obj13), , ];
       const obj14 = { items: arr8, mediaItems: arr9, selectedIndex: num, onSelectIndex: tmp14[1], trackPDPClick };
-      items18[1] = tmp47(BundleThumbnailRow, obj14);
+      items18[1] = closure_14(BundleThumbnailRow, obj14);
       tmp47Result = null != stateFromStores.applicationId && null != tmp22;
       if (tmp47Result) {
         const obj15 = { selectedItem: tmp22, applicationId: stateFromStores.applicationId };
-        tmp47Result = tmp47(ItemDetailsSection, obj15);
+        tmp47Result = closure_14(ItemDetailsSection, obj15);
       }
       const obj16 = { children: null };
       items18[2] = tmp47Result;
       obj16.children = items18;
-      let tmp47Result1 = tmp69(closure_16, obj16);
+      let tmp47Result1 = closure_15(closure_16, obj16);
     } else {
       const obj17 = { sku: stateFromStores };
-      tmp47Result1 = tmp47(SKUNameAndDescriptionSection, obj17);
+      tmp47Result1 = closure_14(SKUNameAndDescriptionSection, obj17);
     }
     items17[2] = tmp47Result1;
     obj9.children = items17;
@@ -620,7 +620,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const obj21 = { variant: "text-xs/normal", color: "text-muted", style: tmp.availabilityCopy, children: null };
       const intl2 = tmp4(1114).intl;
       obj21.children = intl2.string(tmp2(3417).gndWN7);
-      tmp47Result2 = tmp47(tmp4(4556).Text, obj21);
+      tmp47Result2 = closure_14(tmp4(4556).Text, obj21);
     }
     items20[1] = tmp47Result2;
     const obj22 = { style: tmp.footerButtonRow, children: null };
@@ -639,7 +639,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const intl3 = tmp4(1114).intl;
       obj25.accessibilityLabel = intl3.string(tmp4(1114).t.QAZA5f);
       obj25.onPress = tmp46;
-      result1 = tmp47(tmp4(8097).IconButton, obj25);
+      result1 = closure_14(tmp4(8097).IconButton, obj25);
     }
     items21[1] = result1;
     obj22.children = items21;
@@ -649,7 +649,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const obj27 = { shouldAppendDisclaimer: false === tmp2Result(tmp10).hasAlreadyLinked };
       const mobileFinePrintMessageForApplication = tmp4(10820).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj27);
       obj26.children = mobileFinePrintMessageForApplication.map((children, index) => closure_1_14(skuId(closeButtonIcon[15]).Text, { variant: "text-xs/normal", color: "text-muted", children }, index));
-      result = tmp47(tmp70, obj26);
+      result = closure_14(tmp70, obj26);
       const tmp4Result4 = tmp4(10820);
     }
     items20[3] = result;

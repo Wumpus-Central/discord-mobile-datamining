@@ -8,10 +8,10 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_7 = async function _openStickersPremiumUpsellAlert(_location) {
+let closure_7 = async function _openStickersPremiumUpsellAlert() {
   c3 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

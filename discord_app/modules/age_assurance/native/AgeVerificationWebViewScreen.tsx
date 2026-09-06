@@ -107,6 +107,18 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
               tmp2.current = true;
               onClose();
             }
+            const obj = { error };
+          });
+          const nextPromise = result.then(() => {
+            const current = ref.current;
+            let isAgeVerifiedResult = !current;
+            if (!current) {
+              isAgeVerifiedResult = webviewUrl(onClose[10]).isAgeVerified();
+              const obj = webviewUrl(onClose[10]);
+            }
+            if (isAgeVerifiedResult) {
+              callback1();
+            }
           });
         } else if ("fallback_request" === tmp4.kind) {
           let obj = AgeVerificationURLActionCreators;
@@ -128,6 +140,21 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
             callback3({ error: true });
           }).catch((error) => {
             logger.warn("Failed to bootstrap Incode fallback session from WebView", { error });
+            callback3({ error: true });
+          });
+          const nextPromise1 = incodeSessionBootstrap.then((incode_parameters) => {
+            incode_parameters = incode_parameters.incode_parameters;
+            let session_token;
+            if (incode_parameters != null) {
+              session_token = incode_parameters.session_token;
+            }
+            if (null != session_token) {
+              if (null != incode_parameters.interview_id) {
+                const obj = { sessionToken: null, interviewId: null };
+                ({ session_token: obj.sessionToken, interview_id: obj.interviewId } = incode_parameters);
+                callback3(obj);
+              }
+            }
             callback3({ error: true });
           });
         } else if (tmp4.status === constants.COMPLETED) {
@@ -168,7 +195,6 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
   const tmp15 = closure_13();
   obj = { style: tmp15.container, children: null };
   obj = { ref, allowsInlineMediaPlayback: true, mediaCapturePermissionGrantType: "grant", javaScriptEnabled: true, source: { uri: webviewUrl }, onShouldStartLoadWithRequest: null, onMessage: null, onError: null, onLoadEnd: null, injectedJavaScriptBeforeContentLoaded: null, style: null, containerStyle: null };
-  const tmp16 = closure_11;
   const tmp2 = ref(noop.useState(true), 2);
   const tmp8 = webviewUrl;
   const tmp9 = onClose;
@@ -195,5 +221,5 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
   }
   items6[1] = tmp18Result;
   obj.children = items6;
-  return tmp16(ref2, obj);
+  return closure_11(ref2, obj);
 };

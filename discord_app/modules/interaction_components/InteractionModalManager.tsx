@@ -10,7 +10,7 @@ import InteractionStore from "InteractionStore" /* 7941 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
 let require = fn;
-let closure_8 = async function _handleInteractionModalCreate(arg0, value) {
+let closure_8 = async function _handleInteractionModalCreate(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -35,7 +35,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0, value) {
           obj = { value, done: true };
           return obj;
         } else {
-          closure_2 = tmp2;
+          dependencyMap = tmp2;
           closure_1 = tmp3;
           closure_129_0 = closure_0;
           closure_129_1 = undefined;

@@ -3,7 +3,14 @@
 // Module 15952 (AccountSwitcherListItem)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import StreamerModeStore from "StreamerModeStore" /* 4405 */;
@@ -75,23 +82,23 @@ export default function AccountSwitcherListItem(arg0) {
   if (user.id === id) {
     if (showActiveAccountLabel) {
       obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
-      const intl = tmp2(1114).intl;
-      obj.children = intl.string(tmp2(1114).t.seV8yt);
-      let tmp8 = React7(tmp2(4556).Text, obj);
+      const intl = util.intl;
+      obj.children = intl.string(util.t.seV8yt);
+      let tmp8 = React7(Text_Text.Text, obj);
     }
     if (null == onPressUser) {
       let PressableOpacity = React3;
     } else {
-      PressableOpacity = tmp2(5123).PressableOpacity;
+      PressableOpacity = Pressables.PressableOpacity;
     }
     obj = { selected: tmp7 };
-    const radioA11yNative = tmp2(4277).useRadioA11yNative(obj);
+    const radioA11yNative = useA11yRolesNative.useRadioA11yNative(obj);
     obj1 = { accessibilityRole: null, accessibilityState: null, accessibilityHint: null, style: null, delayLongPress: null, onPress: null };
     ({ accessibilityRole: obj7.accessibilityRole, accessibilityState: obj7.accessibilityState } = radioA11yNative);
     let stringResult;
     if (!tmp7) {
-      const intl2 = tmp2(1114).intl;
-      stringResult = intl2.string(tmp2(1114).t.wY4y0R);
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.wY4y0R);
     }
     obj1.accessibilityHint = stringResult;
     obj1.style = tmp.accountSwitcherListItem;
@@ -101,18 +108,18 @@ export default function AccountSwitcherListItem(arg0) {
     const items2 = [leading, , ];
     obj2 = { style: tmp.accountInfo, children: null };
     const obj3 = { user: obj2, guildId: "a" };
-    const items3 = [React7(tmp2(1178).Avatar, obj3), ];
+    const items3 = [React7(native.Avatar, obj3), ];
     const obj4 = { style: tmp.accountListTag, children: null };
     const obj5 = { style: tmp.tagContainer, children: null };
     const obj6 = { variant: "text-md/semibold", color: "text-default", style: tmp.username, lineClamp: 1, children: null };
-    const tmp2Result = tmp2(4277);
+    const tmp2Result = useA11yRolesNative;
     let str = "always";
     if (stateFromStores) {
       str = "never";
     }
     const obj7 = { mode: "username", identifiable: str };
     obj6.children = UserUtilsDefault.getUserTag(obj2, obj7);
-    const items4 = [React7(tmp2(4556).Text, obj6), ];
+    const items4 = [React7(Text_Text.Text, obj6), ];
     let tmp18Result = !stateFromStores;
     if (!stateFromStores) {
       tmp18Result = !obj2.hasUniqueUsername();
@@ -121,7 +128,7 @@ export default function AccountSwitcherListItem(arg0) {
       const obj8 = { variant: "text-md/normal", color: "text-muted", children: null };
       const _HermesInternal = HermesInternal;
       obj8.children = "#" + obj2.discriminator;
-      tmp18Result = tmp18(tmp2(4556).Text, obj8);
+      tmp18Result = React7(Text_Text.Text, obj8);
     }
     items4[1] = tmp18Result;
     obj5.children = items4;
@@ -132,7 +139,7 @@ export default function AccountSwitcherListItem(arg0) {
     items2[1] = closure_1_10(React4, obj2);
     if (undefined === trailing) {
       const obj9 = { user };
-      trailing = tmp18(AccountStatusIcon, obj9);
+      trailing = React7(AccountStatusIcon, obj9);
     }
     items2[2] = trailing;
     obj1.children = items2;
@@ -141,9 +148,9 @@ export default function AccountSwitcherListItem(arg0) {
   tmp8 = null;
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
     const obj10 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
-    const intl3 = tmp2(1114).intl;
-    obj10.children = intl3.string(tmp2(1114).t.tYX2ps);
-    tmp8 = React7(tmp2(4556).Text, obj10);
+    const intl3 = util.intl;
+    obj10.children = intl3.string(util.t.tYX2ps);
+    tmp8 = React7(Text_Text.Text, obj10);
   }
 };
 export { AccountStatusIcon };

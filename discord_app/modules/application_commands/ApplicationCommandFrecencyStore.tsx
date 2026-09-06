@@ -144,6 +144,7 @@ export const getTopRealCommands = function getTopRealCommands(arg0) {
     let arraySpreadResult = HermesBuiltin.arraySpread(set, 0);
     return items;
   }
+  str = iter.next();
 };
 export const getFilteredTopCommands = function getFilteredTopCommands(arr, arg1) {
   closure_0 = arg1;
@@ -153,11 +154,11 @@ export const getFilteredTopCommands = function getFilteredTopCommands(arr, arg1)
     if (hasItem) {
       let guild;
       if (closure_0 != null) {
-        guild = tmp3.guild;
+        guild = closure_0.guild;
       }
       let tmp6 = null != guild;
       if (tmp6) {
-        tmp6 = tmp3.guild.id === arr.split(":")[1];
+        tmp6 = closure_0.guild.id === arr.split(":")[1];
       }
       tmp2 = tmp6;
     }

@@ -53,7 +53,7 @@ function handleInviteResolveOrCreate(invite) {
       const _Date2 = Date;
       obj.lastSyncTimestamp = Date.now();
       obj.fetchStatus = obj.FETCHED;
-      const result = obj3.set(profile.id, obj);
+      const result = map.set(profile.id, obj);
     } else {
       obj = {};
       const merged1 = Object.assign(value);
@@ -61,7 +61,7 @@ function handleInviteResolveOrCreate(invite) {
       const _Date = Date;
       obj.lastSyncTimestamp = Date.now();
       obj.fetchStatus = obj.FETCHED;
-      const result1 = obj3.set(profile.id, obj);
+      const result1 = map.set(profile.id, obj);
     }
   }
 }
@@ -201,7 +201,7 @@ GuildProfileFetchStatus = {
       const _Date2 = Date;
       obj.lastSyncTimestamp = Date.now();
       obj.fetchStatus = obj.FETCHED;
-      const result = obj3.set(guildId, obj);
+      const result = map.set(guildId, obj);
     } else {
       obj = {};
       const merged1 = Object.assign(value);
@@ -211,7 +211,7 @@ GuildProfileFetchStatus = {
       obj.fetchStatus = obj.FETCHED;
       obj.error = null;
       obj.nextFetchAllowedAt = null;
-      const result1 = obj3.set(guildId, obj);
+      const result1 = map.set(guildId, obj);
     }
   },
   GUILD_PROFILE_FETCH_FAILURE: function handleFetchFailure(arg0) {
@@ -231,15 +231,16 @@ GuildProfileFetchStatus = {
       obj.error = error;
       obj.fetchStatus = obj.FETCHED;
       obj.nextFetchAllowedAt = sum;
-      const result1 = obj3.set(guildId, obj);
+      const result1 = map.set(guildId, obj);
     } else {
       obj = {};
       const merged1 = Object.assign(value);
       obj.error = error;
       obj.fetchStatus = obj.FETCHED;
       obj.nextFetchAllowedAt = sum;
-      const result2 = obj3.set(guildId, obj);
+      const result2 = map.set(guildId, obj);
     }
+    const failResult = value.fail();
   },
   GUILD_PROFILE_UPDATE: handleUpdateStart,
   GUILD_PROFILE_UPDATE_SUCCESS: function handleUpdateSuccess(arg0) {
@@ -275,7 +276,7 @@ GuildProfileFetchStatus = {
         const _Date2 = Date;
         obj.lastSyncTimestamp = Date.now();
         obj.fetchStatus = obj.FETCHED;
-        const result = obj3.set(guildId, obj);
+        const result = map.set(guildId, obj);
       } else {
         obj = {};
         const merged1 = Object.assign(value);
@@ -283,7 +284,7 @@ GuildProfileFetchStatus = {
         const _Date = Date;
         obj.lastSyncTimestamp = Date.now();
         obj.fetchStatus = obj.FETCHED;
-        const result1 = obj3.set(guildId, obj);
+        const result1 = map.set(guildId, obj);
       }
     }
   },
@@ -306,6 +307,7 @@ GuildProfileFetchStatus = {
       map.delete(guildId);
       map1.delete(guildId);
     }
+    tmp = null != guildId && guildId.enabled;
   },
   GUILD_UPDATE: function handleGuildUpdate(guild) {
     guild = guild.guild;

@@ -5,6 +5,7 @@ import util from "util" /* 1114 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
 import MetricEvents from "MetricEvents" /* 7607 */;
 import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8417 */;
+import GoogleWalletExperiment from "GoogleWalletExperiment" /* 8585 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -41,11 +42,10 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
         obj.tags = items;
         obj.increment(obj);
         if (result) {
-          result = tmp4(8585).isGoogleWalletEnabled("age_verification_methods");
-          const tmp4Result = tmp4(8585);
+          result = GoogleWalletExperiment.isGoogleWalletEnabled("age_verification_methods");
+          const tmp4Result = GoogleWalletExperiment;
         }
         closure_4(result);
-        tmp4 = require;
       }
     });
     return () => {
@@ -74,7 +74,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
             obj.title = intl.string(title);
             const intl2 = onGoogleWalletSelect(1114).intl;
             obj.description = intl2.string(description);
-            closure_1 = first(function*(arg0, value) {
+            closure_1 = first(function*(arg0) {
               if (c1 === 2) {
                 c1 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");

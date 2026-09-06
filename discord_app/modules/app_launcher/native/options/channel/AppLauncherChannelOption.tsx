@@ -22,8 +22,8 @@ export default function AppLauncherChannelOption(option) {
     let channelId = null;
     if (null != importDefault) {
       channelId = null;
-      if ("channelMention" === tmp.type) {
-        channelId = tmp.channelId;
+      if ("channelMention" === importDefault.type) {
+        channelId = importDefault.channelId;
       }
     }
     return channelId;

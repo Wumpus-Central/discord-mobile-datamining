@@ -32,7 +32,7 @@ let obj5 = { fontSize: 12, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/ChatGDMCustomize.tsx");
 
-export default noop.memo(noop.forwardRef((channelId, ref) => {
+export default noop.memo(noop.forwardRef((channelId, arg1) => {
   channelId = channelId.channelId;
   const onFinish = channelId.onFinish;
   let stateFromStores;
@@ -134,7 +134,7 @@ export default noop.memo(noop.forwardRef((channelId, ref) => {
   closure_11 = tmp29;
   const items3 = [tmp29, channelId, first, first !== tmp2ResultResult, first1, onFinish];
   const items4 = [first2];
-  const callback1 = obj4.useCallback(first(function*(arg0, value) {
+  const callback1 = obj4.useCallback(first(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -165,8 +165,8 @@ export default noop.memo(noop.forwardRef((channelId, ref) => {
             if (null != first1) {
               let obj6 = tmp4(tmp51[15]);
               let tmp50 = null;
-              if (tmp79 !== CLEARED_ICON) {
-                tmp50 = tmp79;
+              if (first1 !== CLEARED_ICON) {
+                tmp50 = first1;
               }
               c4 = 3;
               c5 = 1;
@@ -272,7 +272,7 @@ export default noop.memo(noop.forwardRef((channelId, ref) => {
       const timerId = setTimeout(() => closure_1_9(null), 1000 * tmp);
     }
   }, items4);
-  const imperativeHandle = obj4.useImperativeHandle(ref, () => ({ hasUnsavedChanges }));
+  const imperativeHandle = obj4.useImperativeHandle(arg1, () => ({ hasUnsavedChanges }));
   if (null == stateFromStores) {
     obj = { style: tmp.container };
     let tmp44Result = c10(closure_6, obj);

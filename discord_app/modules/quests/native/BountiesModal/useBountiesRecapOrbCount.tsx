@@ -57,14 +57,14 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
           let obj = { count: 0, revealed: false };
         } else if (typeof getRecapOrbCountFromPullProgress === "function") {
           let num2 = 0;
-          if (tmp9 > 0) {
+          if (targetOrbAmount > 0) {
             const _Number = Number;
             num2 = 0;
-            if (Number.isFinite(tmp9)) {
+            if (Number.isFinite(targetOrbAmount)) {
               const _Math = Math;
               const _Math2 = Math;
               const _Math3 = Math;
-              num2 = Math.round(Math.min(1, Math.max(0, result)) * tmp9);
+              num2 = Math.round(Math.min(1, Math.max(0, result)) * targetOrbAmount);
             }
           }
           obj = { count: num2, revealed: true };

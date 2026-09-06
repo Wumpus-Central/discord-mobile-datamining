@@ -16,9 +16,9 @@ function handleAudioRouteChanged() {
     const currentRouteType = AudioRouteStore.getCurrentRouteType();
     let flag2 = currentRouteType !== VoiceCallTypes.RouteTypes.UNKNOWN;
     if (flag2) {
-      if (currentRouteType !== tmp3(9084).RouteTypes.SPEAKER) {
-        if (currentRouteType !== tmp3(9084).RouteTypes.BLUETOOTH) {
-          if (currentRouteType !== tmp3(9084).RouteTypes.WIRED) {
+      if (currentRouteType !== VoiceCallTypes.RouteTypes.SPEAKER) {
+        if (currentRouteType !== VoiceCallTypes.RouteTypes.BLUETOOTH) {
+          if (currentRouteType !== VoiceCallTypes.RouteTypes.WIRED) {
             const AudioRoutePicker = NativeModules.AudioRoutePicker;
             if (AudioRoutePicker != null) {
               AudioRoutePicker.toggleSpeaker(true);

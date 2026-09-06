@@ -15,10 +15,10 @@ export default function UserProfileActivityCardBadges(activity) {
   if (activity.type === ActivityTypes.PLAYING) {
     const items = [activity(13005).PartyBadge, activity(13005).TimestampBadge];
     let items3 = items;
-  } else if (activity.type === tmp.LISTENING) {
+  } else if (activity.type === ActivityTypes.LISTENING) {
     const items1 = [activity(13005).TimestampBadge];
     items3 = items1;
-  } else if (activity.type === tmp.WATCHING) {
+  } else if (activity.type === ActivityTypes.WATCHING) {
     const items2 = [activity(13005).TimestampBadge, activity(13005).EpisodeBadge];
     items3 = items2;
   } else {
@@ -26,8 +26,8 @@ export default function UserProfileActivityCardBadges(activity) {
   }
   let tmp8 = null;
   if (0 !== items3.length) {
-    const obj = { style: activity.style, children: items3.map((item, index) => jsx(item, { activity }, index)) };
-    tmp8 = <View style={arg0.style}>{items3.map((item, index) => jsx(item, { activity }, index))}</View>;
+    const obj = { style: activity.style, children: items3.map((item, index) => <item key={index} activity={activity} />) };
+    tmp8 = <View style={activity.style}>{items3.map((item, index) => <item key={index} activity={activity} />)}</View>;
   }
   return tmp8;
 };

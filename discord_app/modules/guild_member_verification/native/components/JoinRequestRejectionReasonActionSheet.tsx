@@ -32,7 +32,7 @@ class JoinRequestRejectionReasonActionSheet {
     items[2] = onError;
     items[3] = first;
     items[4] = userId;
-    callback = closure_5.useCallback(joinRequestId(function*(arg0, value) {
+    callback = closure_5.useCallback(joinRequestId(function*() {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -86,11 +86,11 @@ class JoinRequestRejectionReasonActionSheet {
               obj2.icon = function icon() {
                 return closure_1_6(closure_1_0(6616).CircleXIcon, { color: closure_1_1(576).colors.BACKGROUND_FEEDBACK_CRITICAL, secondaryColor: closure_1_1(576).colors.ICON_FEEDBACK_CRITICAL });
               };
-              tmp42(tmp24[8]).open(obj2);
-              const obj5 = tmp42(tmp24[8]);
-              tmp42(tmp24[12]).hideAllActionSheets();
+              tmp4(tmp24[8]).open(obj2);
+              const obj5 = tmp4(tmp24[8]);
+              tmp4(tmp24[12]).hideAllActionSheets();
               c3 = 1;
-              const obj7 = tmp42(tmp24[12]);
+              const obj7 = tmp4(tmp24[12]);
             }
             c3 = 0;
             closure_129_5(false);

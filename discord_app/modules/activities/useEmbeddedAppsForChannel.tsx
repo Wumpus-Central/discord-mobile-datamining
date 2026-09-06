@@ -74,10 +74,10 @@ export default function useEmbeddedAppsForChannel(arg0, arg1) {
   _require = arg0;
   const items = [EmbeddedActivitiesStore];
   return useEmbeddedApps(require("initialize").useStateFromStoresArray(items, () => {
-    if (null != closure_0) {
-      if (null != tmp.id) {
-        if ("" !== tmp.id) {
-          let embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp.id);
+    if (null != user) {
+      if (null != user.id) {
+        if ("" !== user.id) {
+          let embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(user.id);
         }
         return embeddedActivitiesForChannel;
       }
@@ -110,6 +110,7 @@ export const useEmbeddedAppsByChannel = function useEmbeddedAppsByChannel(arg0) 
         items.push(embeddedActivity);
         const result = map.set(embeddedActivityLocationChannelId, items);
       }
+      const obj = map(dependencyMap[5]);
     });
     return map;
   }, items1);
@@ -148,6 +149,16 @@ export const useEmbeddedAppsWithPresence = function useEmbeddedAppsWithPresence(
         return application_id.application_id === id;
       });
       const result = map.set(id, obj);
+      const findActivityResult = PresenceStore.findActivity(value, (application_id) => {
+        let id;
+        if (embeddedActivity != null) {
+          const application = embeddedActivity.application;
+          if (application != null) {
+            id = application.id;
+          }
+        }
+        return application_id.application_id === id;
+      });
     });
     return map;
   }, items1, require("initialize").statesWillNeverBeEqual);

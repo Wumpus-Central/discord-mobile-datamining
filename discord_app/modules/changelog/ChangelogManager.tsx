@@ -16,7 +16,7 @@ let prototype = function ChangelogManager() {
       return applyArgumentsResult.handleConnectionOpen(arg0);
     }
   };
-  closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_129_0 = asyncGeneratorStep(async () => {
     if (locale === 2) {
       locale = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -71,10 +71,10 @@ let prototype = function ChangelogManager() {
           } else {
             closure_128_0 = value;
             body = closure_128_0.body;
-            closure_128_2 = (function getLatestChangelogIdForVersion(arg0, clientVersionForChangelog) {
+            closure_128_2 = (function getLatestChangelogIdForVersion(body, clientVersionForChangelog) {
               let num = 0;
               let first = null;
-              const entries = Object.entries(arg0);
+              const entries = Object.entries(body);
               while (tmp3 !== undefined) {
                 let tmp6 = closure_1_4(tmp4, 2);
                 let min_version = tmp6[1].min_version;

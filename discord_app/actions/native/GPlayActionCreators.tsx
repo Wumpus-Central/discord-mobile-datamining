@@ -37,7 +37,7 @@ function fetchDesktopSubscriptionSkus() {
   }
   return applyArgumentsResult;
 }
-let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0, value) {
+let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
   if (c22 === 2) {
     c22 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -164,8 +164,8 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0, value) {
         } else {
           closure_145_10 = value;
           closure_6 = closure_145_10;
-          closure_5 = closure_145_10[Symbol.iterator]();
-          while (closure_5 !== undefined) {
+          subscriptionId = closure_145_10[Symbol.iterator]();
+          while (subscriptionId !== undefined) {
             c20 = 2;
             closure_145_11 = tmp16;
             closure_10 = closure_145_11;
@@ -180,8 +180,8 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0, value) {
             continue;
           }
           closure_8 = closure_145_0;
-          _objectWithoutProperties = closure_145_0[Symbol.iterator]();
-          while (_objectWithoutProperties !== undefined) {
+          purchaseToken = closure_145_0[Symbol.iterator]();
+          while (purchaseToken !== undefined) {
             c20 = 4;
             closure_145_13 = tmp32;
             closure_145_14 = closure_145_5[closure_145_13];
@@ -298,7 +298,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0, value) {
         }
       } else if (4 === tmp4) {
         c20 = 0;
-        closure_5.return();
+        subscriptionId.return();
         throw closure_1_19;
       } else if (5 === tmp4) {
         c20 = 2;
@@ -306,13 +306,13 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0, value) {
         throw closure_1_19;
       } else {
         c20 = 0;
-        _objectWithoutProperties.return();
+        purchaseToken.return();
         throw closure_1_19;
       }
     }
   }
 };
-let closure_32 = async function _loadUserCountry(arg0, value) {
+let closure_32 = async function _loadUserCountry() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -366,7 +366,7 @@ let closure_32 = async function _loadUserCountry(arg0, value) {
     }
   }
 };
-let closure_33 = async function _subscribe(arg0, arg1) {
+let closure_33 = async function _subscribe(arg0) {
   closure_7 = tmp3;
   closure_134_0 = closure_0;
   closure_134_1 = closure_2;
@@ -397,145 +397,151 @@ let closure_33 = async function _subscribe(arg0, arg1) {
     closure_135_0(closure_135_2[19]);
   } else if (arg0 === 1) {
     c11 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     c9 = 0;
   }
-  return arg1;
+  return value;
 };
-let closure_34 = async function _verifyPurchase(arg0, value) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_34 = async function _verifyPurchase(arg0) {
+  closure_0 = arg0;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c8 = 2;
-      if (0 === c7) {
-        if (arg0 === 1) {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_4 = tmp3;
+            closure_3 = tmp5;
+            closure_131_0 = closure_0;
+            closure_131_1 = undefined;
+            closure_131_2 = undefined;
+            closure_131_3 = undefined;
+            closure_131_4 = undefined;
+            closure_131_5 = undefined;
+            const tmp77 = state.getState().analyticsByProductId[closure_0.productId];
+            closure_131_1 = tmp77;
+            id = id.getId();
+            const SubscriptionProductIds = closure_2_0(7240).SubscriptionProductIds;
+            const hasItem = SubscriptionProductIds.includes(closure_0.productId);
+            let tmp54 = !hasItem;
+            closure_131_2 = tmp54;
+            const productId = closure_0.productId;
+            if (hasItem) {
+              let tmp52 = null;
+              let tmp53 = productId;
+            } else {
+              tmp52 = productId;
+              tmp53 = null;
+            }
+            if (!hasItem) {
+              tmp54 = null != gift_info_options;
+            }
+            if (tmp54) {
+              tmp54 = null == gift_info_options.gift_style;
+            }
+            if (tmp54) {
+              let obj8 = _true(1242);
+              const obj1 = { source: "verifyPurchase", sku_id: closure_0.productId };
+              obj8.track(constants.GIFT_INFO_OPTIONS_MISSING, obj1);
+            }
+            c6 = 1;
+            const HTTP = closure_2_0(1272).HTTP;
+            const request = { url: constants2.VERIFY_PURCHASE, body: null, rejectWithError: false };
+            const obj2 = { purchase_token: closure_0.purchaseToken, user_id: id, package_name: closure_0.packageName, subscription_sku_id: tmp53, one_time_purchase_sku_id: tmp52, gift_info_options, one_time_purchase_options: { consume_on_validate: true }, load_id: null };
+            load_id = undefined;
+            if (tmp77 != null) {
+              load_id = tmp77.load_id;
+            }
+            if (load_id == null) {
+              load_id = null;
+            }
+            obj2.load_id = load_id;
+            request.body = obj2;
+            c7 = 2;
+            c8 = 1;
+            let obj3 = { value: HTTP.post(request), done: false };
+            return obj3;
+          }
+        } else if (1 === tmp8) {
+          c6 = 0;
+          closure_131_6 = closure_5;
+          obj3 = closure_132_0(closure_132_2[19]);
+          const obj4 = { tags: null };
+          const obj5 = { productId: closure_131_0.productId };
+          obj4.tags = obj5;
+          const result = obj3.captureBillingException(closure_131_6, obj4);
+          if (null != closure_131_1) {
+            const succeededOnlyFields2 = closure_131_1.succeededOnlyFields;
+            closure_131_5 = closure_132_7(closure_131_1, closure_132_6);
+            let obj6 = closure_132_1(closure_132_2[20]);
+            obj6 = {};
+            const merged = Object.assign(closure_131_5);
+            obj6.payment_gateway = closure_132_20.GOOGLE;
+            obj6.track(closure_132_13.PAYMENT_FLOW_FAILED, obj6);
+          }
+          throw closure_131_6;
+        } else if (arg0 === 1) {
           c8 = 3;
           throw value;
         } else if (arg0 === 2) {
+          c6 = 0;
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
-          closure_4 = tmp3;
-          closure_3 = tmp5;
-          closure_131_0 = closure_0;
-          closure_131_1 = undefined;
-          closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          closure_131_4 = undefined;
-          closure_131_5 = undefined;
-          const tmp77 = state.getState().analyticsByProductId[closure_0.productId];
-          closure_131_1 = tmp77;
-          id = id.getId();
-          const SubscriptionProductIds = React(7240).SubscriptionProductIds;
-          const hasItem = SubscriptionProductIds.includes(closure_0.productId);
-          let tmp54 = !hasItem;
-          closure_131_2 = tmp54;
-          const productId = closure_0.productId;
-          if (hasItem) {
-            let tmp52 = null;
-            let tmp53 = productId;
-          } else {
-            tmp52 = productId;
-            tmp53 = null;
+          closure_131_3 = value;
+          if (null != closure_131_1) {
+            if (!closure_131_2) {
+              const succeededOnlyFields = closure_131_1.succeededOnlyFields;
+              closure_131_4 = closure_132_7(closure_131_1, closure_132_5);
+              obj = closure_132_1(closure_132_2[20]);
+              obj.track(closure_132_13.PAYMENT_FLOW_COMPLETED, closure_131_4);
+              closure_132_9(closure_131_0.productId);
+            }
           }
-          if (!hasItem) {
-            tmp54 = null != tmp75;
-          }
-          if (tmp54) {
-            tmp54 = null == tmp75.gift_style;
-          }
-          if (tmp54) {
-            let obj8 = _true(1242);
-            const obj1 = { source: "verifyPurchase", sku_id: tmp74.productId };
-            obj8.track(constants.GIFT_INFO_OPTIONS_MISSING, obj1);
-          }
-          c6 = 1;
-          const HTTP = React(1272).HTTP;
-          const request = { url: constants2.VERIFY_PURCHASE, body: null, rejectWithError: false };
-          const obj2 = { purchase_token: closure_0.purchaseToken, user_id: id, package_name: closure_0.packageName, subscription_sku_id: tmp53, one_time_purchase_sku_id: tmp52, gift_info_options, one_time_purchase_options: { consume_on_validate: true }, load_id: null };
-          let load_id;
-          if (tmp77 != null) {
-            load_id = tmp77.load_id;
-          }
-          if (load_id == null) {
-            load_id = null;
-          }
-          obj2.load_id = load_id;
-          request.body = obj2;
-          c7 = 2;
-          c8 = 1;
-          let obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          c6 = 0;
+          c8 = 3;
+          obj8 = { value: closure_131_3.body, done: true };
+          return obj8;
         }
-      } else if (1 === tmp8) {
-        c6 = 0;
-        closure_131_6 = closure_5;
-        obj3 = closure_132_0(closure_132_2[19]);
-        const obj4 = { tags: null };
-        const obj5 = { productId: closure_131_0.productId };
-        obj4.tags = obj5;
-        const result = obj3.captureBillingException(closure_131_6, obj4);
-        if (null != closure_131_1) {
-          const succeededOnlyFields2 = closure_131_1.succeededOnlyFields;
-          closure_131_5 = closure_132_7(closure_131_1, closure_132_6);
-          let obj6 = closure_132_1(closure_132_2[20]);
-          obj6 = {};
-          const merged = Object.assign(closure_131_5);
-          obj6.payment_gateway = closure_132_20.GOOGLE;
-          obj6.track(closure_132_13.PAYMENT_FLOW_FAILED, obj6);
+      } catch (tmp64) {
+        closure_5 = tmp64;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp64;
+        } else {
+          c7 = tmp;
         }
-        throw closure_131_6;
-      } else if (arg0 === 1) {
-        c8 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 0;
-        c8 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_131_3 = value;
-        if (null != closure_131_1) {
-          if (!closure_131_2) {
-            const succeededOnlyFields = closure_131_1.succeededOnlyFields;
-            closure_131_4 = closure_132_7(closure_131_1, closure_132_5);
-            obj = closure_132_1(closure_132_2[20]);
-            obj.track(closure_132_13.PAYMENT_FLOW_COMPLETED, closure_131_4);
-            closure_132_9(closure_131_0.productId);
-          }
-        }
-        c6 = 0;
-        c8 = 3;
-        obj8 = { value: closure_131_3.body, done: true };
-        return obj8;
-      }
-    } catch (tmp64) {
-      closure_5 = tmp64;
-      if (tmp4 === c6) {
-        c8 = tmp2;
-        throw tmp64;
-      } else {
-        c7 = tmp;
       }
     }
-  }
+  })();
 };
 let closure_3 = ["succeededOnlyFields"];
 let closure_4 = ["succeededOnlyFields"];
-let closure_5 = ["succeededOnlyFields"];
+let subscriptionId = ["succeededOnlyFields"];
 let closure_6 = ["succeededOnlyFields"];
 const GPlayAnalyticsStore = fn(9368);
 ({ deleteGPlayAnalytics: closure_9, useGPlayAnalyticsStore: c10 } = GPlayAnalyticsStore);
@@ -548,7 +554,7 @@ const PremiumConstants = fn(1373);
 const PaymentGateways = fn(1085).PaymentGateways;
 const BillingManager = fn(17).NativeModules.BillingManager;
 let closure_22 = new LoggerDefault("GPlayActionCreators");
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async () => {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -674,7 +680,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  const iter = (async (arg0, value) => {
+  const iter = (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -809,7 +815,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
   iter.next();
   return iter;
 });
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async () => {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -957,7 +963,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  const iter = (async (arg0, value) => {
+  const iter = (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1092,7 +1098,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
   iter.next();
   return iter;
 });
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async () => {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1146,7 +1152,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  const iter = (async (arg0, value) => {
+  const iter = (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1285,7 +1291,7 @@ let tmp7 = new LoggerDefault("GPlayActionCreators");
 let closure_29 = new BackoffDefault(5000, 300000, true);
 let c30 = 0;
 let c31 = null;
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async (arg0, arg1) => {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1320,7 +1326,7 @@ asyncGeneratorStep(async (arg0, value) => {
           c6 = 1;
           v2 = 2;
           c8 = 1;
-          let obj1 = { value: BillingManager.purchase(closure_0, gift_info_options), done: false };
+          let obj1 = { value: BillingManager.purchase(closure_0, _true), done: false };
           return obj1;
         }
       } else if (1 === tmp8) {
@@ -1338,7 +1344,7 @@ asyncGeneratorStep(async (arg0, value) => {
         closure_131_2 = dependencyMap;
         const succeededOnlyFields = closure_131_2.succeededOnlyFields;
         closure_131_3 = v2(closure_131_2, closure_3);
-        let obj4 = gift_info_options(1242);
+        let obj4 = _true(1242);
         obj4 = {};
         const merged = Object.assign(closure_131_3);
         obj4.location = "purchase";
@@ -1370,7 +1376,7 @@ asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async () => {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1480,7 +1486,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  const iter = (async (arg0, value) => {
+  const iter = (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1641,7 +1647,7 @@ export const ensureSkusLoaded = function ensureSkusLoaded(items) {
           } else if (!AuthenticationStore.isAuthenticated()) {
             return Promise.resolve();
           }
-          const tmp9 = (async (arg0, value) => {
+          const tmp9 = (async () => {
             if (c5 === 2) {
               c5 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -1730,7 +1736,7 @@ export const ensureSkusLoaded = function ensureSkusLoaded(items) {
         } else {
           return Promise.resolve();
         }
-        obj3 = _true(tmp2[18]);
+        obj3 = _true(getUserCountry[18]);
       }
     }
   } else {
@@ -1808,7 +1814,7 @@ export const updatePendingDowngrade = function updatePendingDowngrade(arg0, c6, 
         }
       }
       obj = { type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null };
-      obj = { purchaseToken: c7, subscriptionId: c5, newSubscriptionSkuId: tmp.identifier };
+      obj = { purchaseToken, subscriptionId, newSubscriptionSkuId: tmp.identifier };
       obj.pendingDowngrade = obj;
       _true(getUserCountry[14]).dispatch(obj);
       const obj2 = _true(getUserCountry[14]);

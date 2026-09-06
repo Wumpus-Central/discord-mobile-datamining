@@ -79,7 +79,7 @@ export default function GuildRoleSubscriptionsOverview(guildId) {
   }, items3);
   if (canUseRoleSubscriptionIAP) {
     obj = { guildId, gatedChannelId: guildId.gatedChannelId };
-    let tmp6Result = tmp6(PurchasePage, obj);
+    let tmp6Result = <PurchasePage guildId={guildId} gatedChannelId={guildId.gatedChannelId} />;
   } else {
     let str;
     if (stateFromStores != null) {
@@ -89,7 +89,7 @@ export default function GuildRoleSubscriptionsOverview(guildId) {
       str = "";
     }
     obj = { serverName: str };
-    tmp6Result = tmp6(RoleSubscriptionsUnavailableNotice, obj);
+    tmp6Result = <RoleSubscriptionsUnavailableNotice serverName={str} />;
   }
   return tmp6Result;
 };

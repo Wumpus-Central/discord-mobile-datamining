@@ -3,9 +3,9 @@
 // Module 12239 (ChatInputActionButton)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
+import Pressables from "Pressables" /* 5123 */;
 import noop from "module_19" /* 19 */;
 
-const Pressables = tmp(5123);
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;

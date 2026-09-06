@@ -10,6 +10,7 @@ import transformStatsDefault from "transformStats" /* 4677 */;
 import _modDef4679 from "module_4679" /* 4679 */;
 import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 4680 */;
 import reduceDefault from "reduce" /* 4681 */;
+import _modDef4684 from "module_4684" /* 4684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import BaseConnection from "BaseConnection" /* 4627 */;
 
@@ -92,24 +93,23 @@ class Connection extends tmp4 {
       if (NONE == null) {
         NONE = constants6.NONE;
       }
-      const experimentFlags = obj.experimentFlags;
+      const experimentFlags = closure_0.experimentFlags;
       if (!experimentFlags.has(constants.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS)) {
-        obj.localSpeakingFlags[id] = flag;
-        if (id === obj.userId) {
-          let audioSSRC = obj.audioSSRC;
+        closure_0.localSpeakingFlags[id] = flag;
+        if (id === closure_0.userId) {
+          let audioSSRC = closure_0.audioSSRC;
         } else {
-          audioSSRC = obj.remoteAudioSSRCs[id];
+          audioSSRC = closure_0.remoteAudioSSRCs[id];
         }
-        obj.emit(BaseConnectionEvent.BaseConnectionEvent.Speaking, id, flag, audioSSRC, arg2);
+        closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Speaking, id, flag, audioSSRC, arg2);
         let tmp11 = flag & constants6.SOUNDSHARE;
         if (tmp11) {
-          tmp11 = false === obj.soundshareSentSpeakingEvent;
+          tmp11 = false === closure_0.soundshareSentSpeakingEvent;
         }
         if (tmp11) {
-          obj.emit(tmp3(4615).BaseConnectionEvent.SoundshareSpeaking);
-          obj.soundshareSentSpeakingEvent = true;
+          closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.SoundshareSpeaking);
+          closure_0.soundshareSentSpeakingEvent = true;
         }
-        tmp3 = require;
       }
     };
     tmp.handleSpeakingWhileMuted = function handleSpeakingWhileMuted() {
@@ -127,9 +127,9 @@ class Connection extends tmp4 {
     };
     tmp.handleConnectionFailed = function handleConnectionFailed(arg0) {
       if (!closure_0.destroyed) {
-        obj.setConnectionState(constants4.NO_ROUTE);
+        closure_0.setConnectionState(constants4.NO_ROUTE);
         const _HermesInternal = HermesInternal;
-        obj.emit(BaseConnectionEvent.BaseConnectionEvent.Error, "UDP endpoint retarget failed: " + arg0);
+        closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Error, "UDP endpoint retarget failed: " + arg0);
       }
     };
     tmp.handleVideoEncoderFallback = function handleVideoEncoderFallback(arg0) {
@@ -228,8 +228,8 @@ class Connection extends tmp4 {
                   if (rid.rid === item.rid) {
                     const obj = {};
                     const merged = Object.assign(rid);
-                    ({ ssrc: obj.ssrc, rtxSsrc: obj.rtxSsrc } = tmp);
-                    obj.active = tmp.active;
+                    ({ ssrc: obj.ssrc, rtxSsrc: obj.rtxSsrc } = item);
+                    obj.active = item.active;
                     item[index] = obj;
                   }
                 });
@@ -318,8 +318,8 @@ class Connection extends tmp4 {
     tmp.handleSoundshareEnded = function handleSoundshareEnded() {
       closure_0.soundshareActive = false;
       if (!closure_0.destroyed) {
-        const conn = tmp.conn;
-        const obj = { encodingVoiceBitRate: tmp.voiceBitrate };
+        const conn = closure_0.conn;
+        const obj = { encodingVoiceBitRate: closure_0.voiceBitrate };
         conn.setTransportOptions(obj);
       }
     };
@@ -331,7 +331,7 @@ class Connection extends tmp4 {
     tmp.handleStats = function handleStats(rtp) {
       if (closure_0.connectionState !== constants4.DISCONNECTED) {
         if (null != rtp) {
-          if (null != obj.stats) {
+          if (null != closure_0.stats) {
             const tmp26 = reduceDefault(rtp.rtp.outbound, (lost, packetsLost) => {
               let num = packetsLost.packetsLost;
               if (num == null) {
@@ -345,7 +345,7 @@ class Connection extends tmp4 {
               lost.sent = lost.sent + num2;
               return lost;
             }, { lost: 0, sent: 0 });
-            const tmp27 = reduceDefault(obj.stats.rtp.outbound, (lost, packetsLost) => {
+            const tmp27 = reduceDefault(closure_0.stats.rtp.outbound, (lost, packetsLost) => {
               let num = packetsLost.packetsLost;
               if (num == null) {
                 num = 0;
@@ -361,16 +361,16 @@ class Connection extends tmp4 {
             const diff = tmp26.sent - tmp27.sent;
             const diff1 = tmp26.lost - tmp27.lost;
             if (0 === diff) {
-              obj.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
+              closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
             } else if (diff > 0) {
               if (diff1 >= 0) {
-                obj.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * tmp24(4684)(diff1 / (diff + diff1), 0, 1));
-                const tmp6 = tmp24(4684)(diff1 / (diff + diff1), 0, 1);
+                closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * _modDef4684(diff1 / (diff + diff1), 0, 1));
+                const tmp6 = _modDef4684(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
             const first = outbound.filter((type) => "audio" === type.type)[0];
-            const outbound1 = obj.stats.rtp.outbound;
+            const outbound1 = closure_0.stats.rtp.outbound;
             const first1 = outbound1.filter((type) => "audio" === type.type)[0];
             if (null != first) {
               if (null != first1) {
@@ -386,28 +386,28 @@ class Connection extends tmp4 {
                       tmp13 = num3;
                     }
                     if (!obj2.supportsFeature(constants8.KRISP_NATIVE_ERROR)) {
-                      if (obj.noiseCancellation) {
+                      if (closure_0.noiseCancellation) {
                         if (tmp13 > 50) {
                           if (null != first.noiseCancellerProcessTime) {
                             if (null != first1.noiseCancellerProcessTime) {
                               const diff3 = first.noiseCancellerProcessTime - first1.noiseCancellerProcessTime;
                               if (diff3 / tmp13 > 8) {
-                                obj.emit(tmp14(4615).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_CPU_OVERUSE);
+                                closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_CPU_OVERUSE);
                               } else if (0 === diff3) {
-                                obj.emit(tmp14(4615).BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_FAILED);
+                                closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.NoiseCancellationError, constants9.KRISP_FAILED);
                               }
                             }
                           }
                         }
                       }
-                      if (obj.inputMode === constants3.VOICE_ACTIVITY) {
-                        if (obj.vadAutoThreshold) {
-                          if (obj.vadUseKrisp) {
+                      if (closure_0.inputMode === constants3.VOICE_ACTIVITY) {
+                        if (closure_0.vadAutoThreshold) {
+                          if (closure_0.vadUseKrisp) {
                             if (diff2 > 50) {
                               if (null != first.voiceActivityDetectorProcessTime) {
                                 if (null != first1.voiceActivityDetectorProcessTime) {
                                   if ((first.voiceActivityDetectorProcessTime - first1.voiceActivityDetectorProcessTime) / diff2 > 4) {
-                                    obj.emit(tmp14(4615).BaseConnectionEvent.VoiceActivityDetectorError, constants9.KRISP_VAD_CPU_OVERUSE);
+                                    closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.VoiceActivityDetectorError, constants9.KRISP_VAD_CPU_OVERUSE);
                                   }
                                 }
                               }
@@ -421,12 +421,11 @@ class Connection extends tmp4 {
                 }
               }
             }
-            tmp24 = importDefault;
           }
-          obj.stats = rtp;
+          closure_0.stats = rtp;
         }
       } else {
-        obj.off(BaseConnectionEvent.BaseConnectionEvent.Stats, obj.handleStats);
+        closure_0.off(BaseConnectionEvent.BaseConnectionEvent.Stats, closure_0.handleStats);
       }
     };
     tmp.handleMLSFailure = function handleMLSFailure(arg0, arg1) {
@@ -514,13 +513,13 @@ prototype["initialize"] = function initialize(address) {
   address.context = this.context;
   const voiceEngine = createVoiceConnection(1910).getVoiceEngine();
   if (null != voiceEngine.createOwnStreamConnectionWithOptions) {
-    if (self.context !== tmp3.STREAM) {
+    if (self.context !== constants5.STREAM) {
       const createVoiceConnectionWithOptions = voiceEngine.createVoiceConnectionWithOptions;
     }
     const createOwnStreamConnectionWithOptions = voiceEngine.createOwnStreamConnectionWithOptions;
   } else {
     if (null != voiceEngine.createOwnStreamConnection) {
-      if (self.context === tmp3.STREAM) {
+      if (self.context === constants5.STREAM) {
         if (self.streamUserId === self.userId) {
           createVoiceConnection = voiceEngine.createOwnStreamConnection;
         }
@@ -539,8 +538,8 @@ prototype["initialize"] = function initialize(address) {
       if (!self.destroyed) {
         if (null != arg0) {
           if ("" !== arg0) {
-            obj.setConnectionState(constants.NO_ROUTE);
-            obj.emit(createVoiceConnection(fnResult[6]).BaseConnectionEvent.Error, arg0);
+            self.setConnectionState(constants.NO_ROUTE);
+            self.emit(createVoiceConnection(fnResult[6]).BaseConnectionEvent.Error, arg0);
           }
         }
         if (null == transportInfo) {
@@ -548,15 +547,15 @@ prototype["initialize"] = function initialize(address) {
           const error = new Error("Invalid transport info");
           throw error;
         } else {
-          obj.transportInfo = transportInfo;
+          self.transportInfo = transportInfo;
           const protocol = transportInfo.protocol;
           address = transportInfo.address;
           const port = transportInfo.port;
-          let logger = obj.logger;
+          let logger = self.logger;
           const _HermesInternal = HermesInternal;
           logger.info("Connected with local address " + address + ":" + port + " and protocol: " + protocol);
           const _performance = performance;
-          obj.onConnectCallbackAt = performance.now();
+          self.onConnectCallbackAt = performance.now();
           const codecCapabilities = voiceEngine.getCodecCapabilities((arg0) => {
             connectionTransportOptions.onVideoCodecsCallbackAt = performance.now();
             let logger = connectionTransportOptions.logger;
@@ -580,12 +579,12 @@ prototype["initialize"] = function initialize(address) {
             }
             HermesBuiltin.arraySpread(mapped, 1);
             connectionTransportOptions.codecs = items;
-            const map = new Map(parseNativeCodecsResult.map((item) => {
+            new Map(parseNativeCodecsResult.map((item) => {
               const items = [, ];
               ({ name: arr[0], encode: arr[1] } = item);
               return items;
             }));
-            codecs = tmp.codecs;
+            codecs = connectionTransportOptions.codecs;
             connectionTransportOptions.initialCodecs = codecs.map((type) => {
               const obj = {};
               const merged = Object.assign(type);
@@ -619,14 +618,14 @@ prototype["initialize"] = function initialize(address) {
               }
               port.setSelfMute(selfMute);
               port.setSelfDeafen(obj.selfDeaf);
-              const result = obj2.setOnSpeakingCallback(obj.handleSpeakingNative);
+              const result = port.setOnSpeakingCallback(obj.handleSpeakingNative);
               if (port.setOnNativeMuteChangedCallback != null) {
                 const result1 = setOnNativeMuteChangedCallback(obj.handleNativeMuteChanged);
               }
               if (port.setOnSpeakingWhileMutedCallback != null) {
                 const result2 = setOnSpeakingWhileMutedCallback(obj.handleSpeakingWhileMuted);
               }
-              const setPingInterval = obj2.setPingInterval;
+              const setPingInterval = port.setPingInterval;
               if (setPingInterval != null) {
                 setPingInterval(closure_3_27);
               }
@@ -648,29 +647,29 @@ prototype["initialize"] = function initialize(address) {
               voiceEngine.setNoInputThreshold(-100);
               voiceEngine.setNoInputCallback(obj.handleNoInput);
               if (obj.videoSupported) {
-                obj2.setOnVideoCallback(obj.handleVideo);
-                if (obj2.setOnFirstFrameCallback != null) {
+                port.setOnVideoCallback(obj.handleVideo);
+                if (port.setOnFirstFrameCallback != null) {
                   const result7 = setOnFirstFrameCallback(obj.handleFirstFrame);
                 }
-                if (obj2.setOnFirstFrameDeliveredStatsCallback != null) {
+                if (port.setOnFirstFrameDeliveredStatsCallback != null) {
                   const result8 = setOnFirstFrameDeliveredStatsCallback(obj.handleFirstFrameStats);
                 }
-                if (obj2.setOnFirstFrameEncryptedStatsCallback != null) {
+                if (port.setOnFirstFrameEncryptedStatsCallback != null) {
                   const result9 = setOnFirstFrameEncryptedStatsCallback(obj.handleFirstFrameEncryptedStats);
                 }
-                const setOnDesktopSourceEnded = obj2.setOnDesktopSourceEnded;
+                const setOnDesktopSourceEnded = port.setOnDesktopSourceEnded;
                 if (setOnDesktopSourceEnded != null) {
                   const result10 = setOnDesktopSourceEnded(obj.handleDesktopSourceEnded);
                 }
-                const setOnSoundshare = obj2.setOnSoundshare;
+                const setOnSoundshare = port.setOnSoundshare;
                 if (setOnSoundshare != null) {
                   setOnSoundshare(obj.handleSoundshare);
                 }
-                const setOnSoundshareEnded = obj2.setOnSoundshareEnded;
+                const setOnSoundshareEnded = port.setOnSoundshareEnded;
                 if (setOnSoundshareEnded != null) {
                   setOnSoundshareEnded(obj.handleSoundshareEnded);
                 }
-                const setOnSoundshareFailed = obj2.setOnSoundshareFailed;
+                const setOnSoundshareFailed = port.setOnSoundshareFailed;
                 if (setOnSoundshareFailed != null) {
                   const result11 = setOnSoundshareFailed(obj.handleSoundshareFailed);
                 }
@@ -699,14 +698,13 @@ prototype["initialize"] = function initialize(address) {
               obj.emit(createVoiceConnection(fnResult[6]).BaseConnectionEvent.RemoteStreamsReady, userOptions.length);
               const keys = Object.keys(obj.localSpeakingFlags);
               for (const item10173 of keys) {
-                let tmp52 = item10173;
-                let obj5 = connectionTransportOptions;
                 if (item10173 !== connectionTransportOptions.userId) {
-                  let setSpeakingFlagsResult = obj5.setSpeakingFlags(tmp52, obj5.localSpeakingFlags[tmp52]);
+                  let setSpeakingFlagsResult = connectionTransportOptions.setSpeakingFlags(item10173, connectionTransportOptions.localSpeakingFlags[item10173]);
                 }
                 continue;
               }
             });
+            const obj2 = createVoiceConnection(fnResult[7]);
           });
         }
       }
@@ -750,6 +748,8 @@ prototype["initialize"] = function initialize(address) {
     }
     self.on("newListener", self.handleNewListenerNative);
   }
+  let obj = { type: constants2.AUDIO, ssrc: this.audioSSRC, rid: "", maxBitrate: 64000, soundshare: this.context === constants5.STREAM };
+  let obj2 = createVoiceConnection(1910);
 };
 prototype["setCodecs"] = function setCodecs(OPUS, H264, context) {
   const self = this;
@@ -822,6 +822,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
+  _modDef4679(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1192,7 +1193,7 @@ prototype["setSilenceThreshold"] = function setSilenceThreshold(arg0) {
   const voiceEngine = inject.getVoiceEngine();
   voiceEngine.setNoInputThreshold(arg0);
 };
-prototype["setForceAudioInput"] = function setForceAudioInput(arg0, flag, arg2) {
+prototype["setForceAudioInput"] = function setForceAudioInput(arg0) {
   if (flag === undefined) {
     flag = false;
   }
@@ -1290,11 +1291,10 @@ prototype["setAudioVideoOverridesTransport"] = function setAudioVideoOverridesTr
   }
   if (someResult) {
     if (self.initialCodecs.length > 0) {
-      let set = null;
       if (self.lastOverrideCodecDenylist.length > 0) {
         const _Set = Set;
         const parts = self.lastOverrideCodecDenylist.split(",");
-        set = new Set(parts.map((item) => item.trim().toUpperCase()));
+        new Set(parts.map((item) => item.trim().toUpperCase()));
       }
       const initialCodecs = self.initialCodecs;
       const mapped = initialCodecs.map((item) => {
@@ -1323,7 +1323,6 @@ prototype["setAudioVideoOverridesTransport"] = function setAudioVideoOverridesTr
       const set1 = new Set(found1.map((name) => name.name));
       const _Set3 = Set;
       const found2 = found.filter((type) => "video" === type.type && type.encode);
-      const set2 = new Set(found2.map((name) => name.name));
       const items = [];
       HermesBuiltin.arraySpread(set1, 0);
       self.codecs = found;
@@ -1335,6 +1334,7 @@ prototype["setAudioVideoOverridesTransport"] = function setAudioVideoOverridesTr
         self.overrideCodecResetAt = performance.now();
       }
       self.emit(BaseConnectionEvent.BaseConnectionEvent.VideoEncoderFallback, self.codecs);
+      const set2 = new Set(found2.map((name) => name.name));
     }
   }
 };
@@ -1487,7 +1487,7 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(widt
         const obj = { capture: size2, encode: size2, bitrateMax: calcMaxBitrateFuncResult };
         videoQualityManager2.setGoliveQuality(obj);
         if (self.videoStreamParameters.length <= num5) {
-          const Video = tmp9(4615).BaseConnectionEvent.Video;
+          const Video = BaseConnectionEvent.BaseConnectionEvent.Video;
           ({ userId, audioSSRC } = self);
           const ssrc = self.videoStreamParameters[num5].ssrc;
           const ssrc2 = self.videoStreamParameters[num5].ssrc;
@@ -1511,7 +1511,6 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(widt
           const SOURCE = constants7.SOURCE;
         }
       }
-      tmp9 = require;
     } else if (0 !== resolution) {
       if (resolution <= 720) {
       }
@@ -1535,15 +1534,14 @@ prototype["setLocalVideoSinkWants"] = function setLocalVideoSinkWants(localVideo
     let num = 0;
     let num2 = 0;
     for (const item10032 of tmp7) {
-      let tmp10 = item10032;
       let tmp12;
       if (localVideoSinkWants != null) {
-        tmp12 = localVideoSinkWants[tmp10];
+        tmp12 = localVideoSinkWants[item10032];
       }
       num = num + tmp12;
       let tmp15;
       if (arg0 != null) {
-        tmp15 = arg0[tmp10];
+        tmp15 = arg0[item10032];
       }
       num2 = num2 + tmp15;
       continue;
@@ -1573,6 +1571,7 @@ prototype["setLocalVideoSinkWants"] = function setLocalVideoSinkWants(localVideo
     continue;
   }
   self.localVideoSinkWants = localVideoSinkWants;
+  tmp2 = entries[Symbol.iterator]();
 };
 prototype["startSamplesLocalPlayback"] = function startSamplesLocalPlayback(arg0, numberOfChannels, items, fn) {
   if (numberOfChannels.numberOfChannels > 2) {
@@ -1632,15 +1631,15 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         return { v: "Array" };
       } else {
         const items = [];
-        if (!_modDef4679(self.videoStreamParameters[findIndexResult], tmp[findIndexResult])) {
+        if (!_modDef4679(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           let obj = {};
-          const merged = Object.assign(tmp[findIndexResult]);
-          tmp18.videoStreamParameters[findIndexResult] = obj;
+          const merged = Object.assign(closure_1[findIndexResult]);
+          self.videoStreamParameters[findIndexResult] = obj;
           obj = {};
-          const merged1 = Object.assign(tmp[findIndexResult]);
+          const merged1 = Object.assign(closure_1[findIndexResult]);
           items.push(obj);
         }
-        const conn = tmp18.conn;
+        const conn = self.conn;
         obj = { streamParameters: items };
         conn.setTransportOptions(obj);
       }
@@ -1797,7 +1796,6 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
     let tmp4 = nextResult;
     if (nextResult.name !== name) {
       let obj = { name: null, type: null, rtxType: null, params: null };
-      let tmp25 = require;
       let obj5 = VideoCodecUtils;
       obj.name = obj5.codecNameToPayloadName(tmp4.name);
       let num3;
@@ -1819,27 +1817,26 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
       obj.params = self.getCodecParams(tmp4.name, true);
       let tmp7 = obj;
       let experimentFlags = self.experimentFlags;
-      let tmp8 = constants;
       if (experimentFlags.has(constants.RESET_DECODER_ON_ERRORS)) {
         tmp7.params["reset-on-errors"] = "1";
       }
       let experimentFlags2 = self.experimentFlags;
-      if (experimentFlags2.has(tmp8.SOFTWARE_FALLBACK_ON_ERRORS)) {
+      if (experimentFlags2.has(constants.SOFTWARE_FALLBACK_ON_ERRORS)) {
         tmp7.params["fallback-after-errors"] = "3";
       }
       let experimentFlags3 = self.experimentFlags;
-      if (experimentFlags3.has(tmp8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS)) {
+      if (experimentFlags3.has(constants.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS)) {
         tmp7.params["fallback-on-consecutive-errors"] = "1";
       }
       let experimentFlags4 = self.experimentFlags;
-      if (experimentFlags4.has(tmp8.SIGNAL_AV1_HARDWARE_DECODE)) {
+      if (experimentFlags4.has(constants.SIGNAL_AV1_HARDWARE_DECODE)) {
         tmp7.params["hardware-av1-decode"] = "1";
       }
       name = tmp7.name;
       tmp7.params["hardware-h264"] = "1";
       let experimentFlags5 = self.experimentFlags;
-      if (experimentFlags5.has(tmp8.USE_LIBOPENH264_DECODER)) {
-        let tmp25Result = tmp25(1910);
+      if (experimentFlags5.has(constants.USE_LIBOPENH264_DECODER)) {
+        let tmp25Result = inject;
         let openH264LibraryPath = tmp25Result.getOpenH264LibraryPath();
         if (null != openH264LibraryPath) {
           tmp7.params.libopenh264 = "1";
@@ -1853,19 +1850,19 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
         obj1.params = self.getCodecParams(tmp4.name, false);
         videoEncoder = obj1;
         let experimentFlags9 = self.experimentFlags;
-        if (experimentFlags9.has(tmp8.VIDEOTOOLBOX_RATE_CONTROL)) {
+        if (experimentFlags9.has(constants.VIDEOTOOLBOX_RATE_CONTROL)) {
           videoEncoder.params["fixed-rate-presentation-timestamps"] = "1";
         }
         let experimentFlags6 = self.experimentFlags;
-        if (experimentFlags6.has(tmp8.LOW_LATENCY_RATE_CONTROL)) {
+        if (experimentFlags6.has(constants.LOW_LATENCY_RATE_CONTROL)) {
           videoEncoder.params["low-latency-rate-control"] = "1";
         }
         let experimentFlags7 = self.experimentFlags;
-        if (experimentFlags7.has(tmp8.WMF_GPU_ENCODE)) {
+        if (experimentFlags7.has(constants.WMF_GPU_ENCODE)) {
           videoEncoder.params["wmf-gpu"] = "1";
         }
         let experimentFlags8 = self.experimentFlags;
-        if (experimentFlags8.has(tmp8.INTEL_GPU_DISABLE)) {
+        if (experimentFlags8.has(constants.INTEL_GPU_DISABLE)) {
           videoEncoder.params["intel-gpu"] = "0";
         }
       }

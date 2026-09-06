@@ -118,49 +118,45 @@ HighLow["asUintN"] = function asUintN(arg0, flags) {
 prototype["and"] = function and(parts) {
   parts = parts.parts;
   if (typeof HighLow === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(HighLow.prototype);
     obj.parts = tmp2;
     obj.str = undefined;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = HighLow;
 };
 prototype["or"] = function or(parts) {
   parts = parts.parts;
   if (typeof HighLow === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(HighLow.prototype);
     obj.parts = tmp2;
     obj.str = undefined;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = HighLow;
 };
 prototype["xor"] = function xor(parts) {
   parts = parts.parts;
   if (typeof HighLow === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(HighLow.prototype);
     obj.parts = tmp2;
     obj.str = undefined;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = HighLow;
 };
 prototype["not"] = function not() {
   if (typeof HighLow === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(HighLow.prototype);
     obj.parts = tmp2;
     obj.str = undefined;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = HighLow;
 };
 prototype["equals"] = function equals(parts) {
   parts = this.parts;
@@ -220,12 +216,11 @@ prototype["toString"] = function toString() {
       }
       do {
         let num7 = items[3 - num2];
-        let tmp10 = array;
         let result1 = 4 * index;
         if (!num7) {
           num7 = 0;
         }
-        tmp10[num2 + result1] = num7;
+        array[num2 + result1] = num7;
         num2 = num2 + 1;
       } while (num2 < 4);
     });
@@ -257,7 +252,7 @@ if (tmp3) {
     return this.toString();
   };
 }
-let closure_4 = {};
+const dependencyMap = {};
 let tmp6 = tmp2 ? ((arg0) => BigInt(arg0)) : ((num) => {
   let tmp = num;
   if (!(num instanceof HighLow)) {
@@ -265,10 +260,10 @@ let tmp6 = tmp2 ? ((arg0) => BigInt(arg0)) : ((num) => {
     if (typeof num === "number") {
       str = num.toString();
     }
-    if (null == closure_4[str]) {
-      tmp3[str] = HighLow.fromString(str);
+    if (null == dependencyMap[str]) {
+      dependencyMap[str] = HighLow.fromString(str);
     }
-    tmp = tmp3[str];
+    tmp = dependencyMap[str];
   }
   return tmp;
 });
@@ -387,23 +382,23 @@ export const combine = function combine() {
   }
   return tmp2;
 };
-export const has = function has(arg0, arg1) {
-  return closure_9(closure_6(arg0, arg1), arg1);
+export const has = function has(deny, VIEW_CHANNEL) {
+  return closure_9(closure_6(deny, VIEW_CHANNEL), VIEW_CHANNEL);
 };
-export const hasAny = function hasAny(arg0, arg1) {
-  return !closure_9(closure_6(arg0, arg1), closure_5);
+export const hasAny = function hasAny(permissions, RESTRICTED_TO_ADULT) {
+  return !closure_9(closure_6(permissions, RESTRICTED_TO_ADULT), closure_5);
 };
-export const add = function add(arg0, arg1) {
-  let tmp = arg0;
-  if (arg1 !== closure_5) {
-    tmp = closure_7(arg0, arg1);
+export const add = function add(NONE, VIEW_CHANNEL) {
+  let tmp = NONE;
+  if (VIEW_CHANNEL !== closure_5) {
+    tmp = closure_7(NONE, VIEW_CHANNEL);
   }
   return tmp;
 };
-export const remove = function remove(arg0, arg1) {
-  let tmp = arg0;
-  if (arg1 !== closure_5) {
-    tmp = closure_8(arg0, closure_6(arg0, arg1));
+export const remove = function remove(deny, MODERATE_STAGE_CHANNEL_PERMISSIONS) {
+  let tmp = deny;
+  if (MODERATE_STAGE_CHANNEL_PERMISSIONS !== closure_5) {
+    tmp = closure_8(deny, closure_6(deny, MODERATE_STAGE_CHANNEL_PERMISSIONS));
   }
   return tmp;
 };

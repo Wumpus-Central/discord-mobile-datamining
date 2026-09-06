@@ -14,7 +14,7 @@ SpotifyResourceTypes = {
   PLAYER_PLAY: "" + "https://api.spotify.com/v1" + "/me/player/play",
   PLAYER_PAUSE: "" + "https://api.spotify.com/v1" + "/me/player/pause",
   PLAYER_REPEAT: "" + "https://api.spotify.com/v1" + "/me/player/repeat",
-  WEB_OPEN(ALBUM, album_id, mobile) {
+  WEB_OPEN(ALBUM, album_id) {
     let str = mobile;
     if (mobile === undefined) {
       str = "desktop";
@@ -29,7 +29,7 @@ SpotifyResourceTypes = {
     }
     return "https://open.spotify.com/embed" + arg0 + "?utm_source=discord&utm_medium=" + str;
   },
-  PLAYER_OPEN(TRACK, sync_id, arg2, mobile) {
+  PLAYER_OPEN(TRACK, sync_id, arg2) {
     let flag = arg2;
     if (arg2 === undefined) {
       flag = true;
@@ -39,13 +39,12 @@ SpotifyResourceTypes = {
       str = "desktop";
     }
     const encodeURIComponentResult = encodeURIComponent(TRACK);
-    const tmp = spotify;
     let str2 = "";
     if (flag) {
       const _HermesInternal = HermesInternal;
       str2 = "?utm_source=discord&utm_medium=" + str;
     }
-    return "" + tmp + ":" + encodeURIComponentResult + ":" + encodeURIComponent(sync_id) + str2;
+    return "" + spotify + ":" + encodeURIComponentResult + ":" + encodeURIComponent(sync_id) + str2;
   },
   PREMIUM_SITE: "https://www.spotify.com/premium/" + "?utm_source=discord&utm_medium=" + "desktop",
   INSTALL_ATTRIBUTION(Identifier) {
@@ -83,7 +82,7 @@ export const getSpotifyResourceType = function getSpotifyResourceType(str) {
     return null;
   } else if ("track" === str) {
     return obj.TRACK;
-  } else if ("artist" === str) {
+  } else if ("artist" === "artist") {
     return obj.ARTIST;
   } else if ("album" === str) {
     return obj.ALBUM;

@@ -55,11 +55,11 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       return jsx(FastImageDefault, { uri: stateFromStores.item.uri });
     } else {
       let emoji;
-      if (closure_2 != null) {
-        emoji = tmp20.emoji;
+      if (mediaAttachmentState != null) {
+        emoji = mediaAttachmentState.emoji;
       }
       if (null != emoji) {
-        emoji = tmp20.emoji;
+        emoji = mediaAttachmentState.emoji;
         obj = { fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
         const size1 = { width: fontSize, height: fontSize };
         obj.fastImageStyle = size1;

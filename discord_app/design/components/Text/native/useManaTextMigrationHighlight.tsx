@@ -2,6 +2,7 @@
 
 // Module 4558 (useManaTextMigrationHighlight)
 import _mod17 from "module_17" /* 17 */;
+import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DevSettingsStore from "DevSettingsStore" /* 4559 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -49,6 +50,7 @@ export const useManaTextMigrationHighlight = function useManaTextMigrationHighli
       }
     }) ? tmp.overridden : tmp.highlight;
   }
+  obj = initialize;
 };
 export const withManaTextMigrationHighlight = function withManaTextMigrationHighlight(fromEntriesResult) {
   let proxy = fromEntriesResult;

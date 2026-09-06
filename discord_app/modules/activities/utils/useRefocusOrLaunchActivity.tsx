@@ -29,7 +29,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
   const canLaunchFrameResult = applicationId(runBeforeLaunchAttempt[7]).canLaunchFrame(data);
   c7 = canLaunchFrameResult;
   const items2 = [analyticsLocations, data, applicationId, canLaunchFrameResult, stateFromStores, stateFromStores1, runAfterLaunchAttempt, runBeforeLaunchAttempt];
-  return data.useCallback(runAfterLaunchAttempt(function*(arg0, value) {
+  return data.useCallback(runAfterLaunchAttempt(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -58,17 +58,17 @@ export default function useRefocusOrLaunchActivity(applicationId) {
               if (null != data) {
                 let tmp9 = null != stateFromStores;
                 if (tmp9) {
-                  tmp9 = tmp43.applicationId === tmp41;
+                  tmp9 = stateFromStores.applicationId === applicationId;
                 }
                 if (null != stateFromStores1) {
-                  if (tmp10.applicationId === tmp41) {
-                    const obj1 = { frameId: tmp10.id, layoutMode: constants.FOCUSED };
+                  if (stateFromStores1.applicationId === applicationId) {
+                    const obj1 = { frameId: stateFromStores1.id, layoutMode: constants.FOCUSED };
                     const result = tmp3(9507).updateFrameLayoutMode(obj1);
                     const obj10 = tmp3(9507);
                   }
                 }
                 if (tmp9) {
-                  const _location = tmp43.location;
+                  const _location = stateFromStores.location;
                   let guild_id = null;
                   if ("guild_id" in _location) {
                     guild_id = _location.guild_id;
@@ -82,7 +82,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   c4 = 1;
                   if (c7) {
                     let obj5 = tmp3(9507);
-                    let obj2 = { applicationId: tmp41, surface, analyticsContext: null };
+                    let obj2 = { applicationId, surface, analyticsContext: null };
                     const obj3 = { isStart: true, analyticsLocations };
                     obj2.analyticsContext = obj3;
                     dependencyMap = 2;
@@ -91,8 +91,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     return obj4;
                   } else {
                     let id;
-                    if (tmp42 != null) {
-                      const bot = tmp42.bot;
+                    if (data != null) {
+                      const bot = data.bot;
                       if (bot != null) {
                         id = bot.id;
                       }
@@ -103,10 +103,10 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   }
                 }
                 obj2 = analyticsLocations(11519);
-                obj5 = { appId: tmp41, botId: null, analyticsLocations: null };
+                obj5 = { appId: applicationId, botId: null, analyticsLocations: null };
                 let id1;
-                if (tmp42 != null) {
-                  const bot2 = tmp42.bot;
+                if (data != null) {
+                  const bot2 = data.bot;
                   if (bot2 != null) {
                     id1 = bot2.id;
                   }

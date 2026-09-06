@@ -15,6 +15,7 @@ BlockedDomainManager.prototype["_initialize"] = function _initialize() {
     const result = js_shim_shim.startFetchingBlockedDomains(combined);
     const tmpResult = js_shim_shim;
   }
+  obj = js_shim_shim;
 };
 const blockedDomainManager = new BlockedDomainManager();
 const size = fn(2);

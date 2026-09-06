@@ -22,16 +22,16 @@ function computeGuildRoleSubscriptionSettingsVisibility(guild) {
       let tmp4 = !shouldRestrictUpdatingRoleSubscriptionSettings;
       if (!shouldRestrictUpdatingRoleSubscriptionSettings) {
         const features2 = guild.features;
-        let hasItem = features2.has(tmp.CREATOR_MONETIZABLE);
+        let hasItem = features2.has(constants.CREATOR_MONETIZABLE);
         let tmp6 = !hasItem;
         if (!hasItem) {
           const features3 = guild.features;
-          tmp6 = !features3.has(tmp.CREATOR_MONETIZABLE_PROVISIONAL);
+          tmp6 = !features3.has(constants.CREATOR_MONETIZABLE_PROVISIONAL);
         }
         let tmp7 = !tmp6;
         if (tmp6) {
           const features4 = guild.features;
-          hasItem = features4.has(tmp.COMMUNITY);
+          hasItem = features4.has(constants.COMMUNITY);
           if (hasItem) {
             if (isOwner) {
               isOwner = tmp2;
@@ -44,7 +44,7 @@ function computeGuildRoleSubscriptionSettingsVisibility(guild) {
       }
       prop = tmp4;
     }
-    NONE = prop ? tmp9.VISIBLE : tmp9.NONE;
+    NONE = prop ? obj.VISIBLE : obj.NONE;
   }
   return NONE;
 }
@@ -103,12 +103,12 @@ export const canSeeGuildRoleSubscriptionSettingsContent = function canSeeGuildRo
       let tmp6 = !hasItem;
       if (!hasItem) {
         const features2 = guild.features;
-        tmp6 = !features2.has(tmp4.CREATOR_MONETIZABLE_PROVISIONAL);
+        tmp6 = !features2.has(constants.CREATOR_MONETIZABLE_PROVISIONAL);
       }
       let tmp7 = !tmp6;
       if (tmp6) {
         const features3 = guild.features;
-        hasItem = features3.has(tmp4.COMMUNITY);
+        hasItem = features3.has(constants.COMMUNITY);
         if (hasItem) {
           if (isOwner) {
             isOwner = tmp;

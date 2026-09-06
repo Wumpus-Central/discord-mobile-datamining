@@ -72,7 +72,6 @@ export default function fitCardsInGrid(arg0) {
       obj.overscroll = availableHeight - sum1;
       obj.rows = sum;
       obj.cardSize = result1;
-      let tmp11 = isNewLayoutBetter;
       let tmp12 = obj;
       if (isNewLayoutBetter(obj, obj)) {
         tmp12 = obj;
@@ -87,7 +86,7 @@ export default function fitCardsInGrid(arg0) {
         obj.overscroll = availableHeight - sum2;
         obj.cardSize = result2;
         tmp13 = tmp12;
-        if (tmp11(obj, tmp12)) {
+        if (isNewLayoutBetter(obj, tmp12)) {
           tmp13 = obj;
         }
       }

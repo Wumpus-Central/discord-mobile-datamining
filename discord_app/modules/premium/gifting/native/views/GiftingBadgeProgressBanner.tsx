@@ -2,11 +2,13 @@
 
 // Module 10756 (GiftingBadgeProgressBanner)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import _modDef2492 from "module_2492" /* 2492 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,12 +45,12 @@ export default function GiftingBadgeProgressBanner(arg0) {
   let tmp10Result = null != nextTierIcon;
   if (tmp10Result) {
     const obj1 = { icon: nextTierIcon, size: 24 };
-    tmp10Result = tmp10(tmp2(10749), obj1);
+    tmp10Result = React4(GiftingBadgeIconDefault, obj1);
   }
   obj.children = tmp10Result;
   const items2 = [React4(View, obj), ];
   const obj2 = { variant: "text-md/semibold", children: null };
-  const intl = tmp6(1114).intl;
+  const intl = util.intl;
   obj2.children = intl.formatToPlainString(_modDef2492["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
   items2[1] = React4(Text_Text.Text, obj2);
   obj.children = items2;

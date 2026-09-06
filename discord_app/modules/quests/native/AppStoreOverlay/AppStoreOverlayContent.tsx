@@ -6,7 +6,7 @@ import LinkingDefault from "Linking" /* 4255 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_4 = async function _getAppStoreOverlayContent(arg0, value) {
+let closure_4 = async function _getAppStoreOverlayContent(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

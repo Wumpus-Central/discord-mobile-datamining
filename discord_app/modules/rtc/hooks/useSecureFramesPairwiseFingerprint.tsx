@@ -9,7 +9,7 @@ import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
 const require = fn;
-let closure_12 = async function _computeNativeDisplayPair(arg0, value) {
+let closure_12 = async function _computeNativeDisplayPair(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -17,7 +17,8 @@ let closure_12 = async function _computeNativeDisplayPair(arg0, value) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      value = { value, done: true };
+      value = { value: null, done: true };
+      value.value = value;
       return value;
     } else {
       return { value: "HermesInternal", done: null };
@@ -31,7 +32,8 @@ let closure_12 = async function _computeNativeDisplayPair(arg0, value) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          value = { value, done: true };
+          value = { value: null, done: true };
+          value.value = value;
           return value;
         } else {
           let mLSPairwiseFingerprint = tmp4;
@@ -119,7 +121,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
   const items2 = [stateFromStores2];
   stateFromStores2 = userId(stateFromStores[9]).useStateFromStores(items2, () => RTCConnectionStore.getSecureFramesRosterMapEntry(stateFromStores));
   const items3 = [userId];
-  const callback = first1.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = first1.useCallback(asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -233,7 +235,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
   return first1.useMemo(() => {
     let fingerprint;
     if (first != null) {
-      fingerprint = tmp.fingerprint;
+      fingerprint = first.fingerprint;
     }
     if (fingerprint == null) {
       fingerprint = null;
@@ -241,7 +243,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
     obj = { fingerprint, fingerprintUserKey: null, loading: null };
     let fingerprintUserKey;
     if (first != null) {
-      fingerprintUserKey = tmp.fingerprintUserKey;
+      fingerprintUserKey = first.fingerprintUserKey;
     }
     if (fingerprintUserKey == null) {
       fingerprintUserKey = null;

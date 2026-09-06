@@ -117,7 +117,7 @@ export default function CustomTypingIndicatorEditScreen() {
   first1.useRef(null);
   const callback3 = first1.useCallback(() => {
     if (ref.current == null) {
-      tmp.current = CustomTypingIndicatorUtils.getSurpriseMeEmojiPool();
+      ref.current = CustomTypingIndicatorUtils.getSurpriseMeEmojiPool();
     }
     closure_6(CustomTypingIndicatorUtils.pickRandomCustomTypingIndicatorEmojis(ref.current));
     onChange(CustomTypingIndicatorUtils.getRandomCustomTypingIndicatorSuggestion());
@@ -134,7 +134,7 @@ export default function CustomTypingIndicatorEditScreen() {
   [tmp28, closure_16] = first(first1.useState(false), 2);
   closure_17 = first1.useRef(false);
   const items6 = [!tmp20, memo1, mode, nativeStackNavigation, memo, first3, first2];
-  let callback5 = first1.useCallback(analyticsLocations(function*(arg0, value) {
+  let callback5 = first1.useCallback(analyticsLocations(function*() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

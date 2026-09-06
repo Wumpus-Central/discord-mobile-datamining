@@ -107,7 +107,7 @@ export default function TabBar(tabIndexSelected) {
   const callback1 = tabStyleSelected.useCallback((arg0, arg1) => "tab-" + arg1, []);
   const callback2 = tabStyleSelected.useCallback((children) => {
     const index = children.index;
-    return <Tab index={index} isSelected={index === tabIndexSelected} tabStyle={tabStyle} tabStyleActive={tabStyleActive} tabStyleSelected={tabStyleSelected} onSelect={flag2 ? callback : onSelect}>{arg0.item}</Tab>;
+    return <Tab index={index} isSelected={index === tabIndexSelected} tabStyle={tabStyle} tabStyleActive={tabStyleActive} tabStyleSelected={tabStyleSelected} onSelect={flag2 ? callback : onSelect}>{children.item}</Tab>;
   }, items3);
   let obj = { style: tmp.container, accessibilityRole: "tablist", accessibilityLabel: null, children: null };
   const memo = tabStyleSelected.useMemo(() => {

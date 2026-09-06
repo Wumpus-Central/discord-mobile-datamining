@@ -6,7 +6,11 @@ import useToken from "useToken" /* 4262 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import inlineStyles from "inlineStyles" /* 8453 */;
 import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13445 */;
+import _modDef13456 from "module_13456" /* 13456 */;
+import _modDef13457 from "module_13457" /* 13457 */;
 import noop from "module_19" /* 19 */;
+
+const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
@@ -30,21 +34,21 @@ export default function ProgressWheel(arg0) {
   let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
-    let tmp4Result = tmp4(5587);
-    obj.source = tmp4(13456);
+    let tmp4Result = FastImageDefault;
+    obj.source = _modDef13456;
     obj.style = tmp.glowImage;
     tmp9 = React4(tmp4Result, obj);
   }
   const items = [tmp9, , ];
   const size = { width: v160, height: v160, children: null };
-  tmp4Result = tmp4(8453);
+  tmp4Result = inlineStylesDefault;
   const items1 = [React4(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), ];
   obj1 = { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray, strokeDashoffset: strokeDasharray * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" };
   items1[1] = React4(inlineStyles.Circle, obj1);
   size.children = items1;
   items[1] = hasOwnProperty(tmp4Result, size);
   if (altImage == null) {
-    altImage = tmp4(13457);
+    altImage = _modDef13457;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj.children = items;

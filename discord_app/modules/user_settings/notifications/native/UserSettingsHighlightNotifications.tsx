@@ -15,7 +15,7 @@ function Row(guildId) {
   const items = [guildId];
   ({ isStart, isEnd } = guildId);
   const callback = noop.useCallback((arg0) => {
-    const obj = { notify_highlights: arg0 ? tmp3.ENABLED : tmp3.DISABLED };
+    const obj = { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED };
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.highlights(!arg0));
   }, items);

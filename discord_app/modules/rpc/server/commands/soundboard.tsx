@@ -42,7 +42,7 @@ obj1.validation = function validation(string) {
 };
 obj1.handler = function handler(args) {
   ({ guild_id: require, sound_id: importDefault } = args.args);
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -101,7 +101,7 @@ obj1.handler = function handler(args) {
             const tmp52 = new tmp5(9554)(obj3, "Invalid Channel.");
             throw tmp52;
           } else if (closure_128_3) {
-            if (tmp74(7375)(closure_128_2)) {
+            if (tmp5(7375)(closure_128_2)) {
               if (null != sound2) {
                 obj3 = tmp2(7344);
                 const items = [tmp5(7182).RPC];
@@ -116,7 +116,7 @@ obj1.handler = function handler(args) {
             }
           } else {
             const obj5 = { errorCode: constants.INVALID_SOUND };
-            const tmp22 = new tmp74(9554)(obj5, "Invalid Sound.");
+            const tmp22 = new tmp5(9554)(obj5, "Invalid Sound.");
             throw tmp22;
           }
         }

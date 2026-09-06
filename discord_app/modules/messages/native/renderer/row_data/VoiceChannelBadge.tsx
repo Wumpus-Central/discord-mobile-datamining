@@ -3,6 +3,8 @@
 // Module 13182 (VoiceChannelBadge)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
+import AgeGateUtils from "AgeGateUtils" /* 4771 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 13183 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
@@ -25,18 +27,18 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
         }
         const channel = ChannelStore.getChannel(channelId);
         if (null != channel) {
-          let tmpResult = tmp(5028);
+          let tmpResult = utils_ChannelUtils;
           const assetSource = Image.resolveAssetSource(tmpResult.getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            tmpResult = tmp(4771);
+            tmpResult = AgeGateUtils;
             let result = tmpResult.shouldAgeVerifyForAgeGate();
             if (result) {
-              result = tmp(4771).shouldShowAgeGateForChannelId(channel.id);
-              const tmpResult1 = tmp(4771);
+              result = AgeGateUtils.shouldShowAgeGateForChannelId(channel.id);
+              const tmpResult1 = AgeGateUtils;
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {

@@ -3,6 +3,7 @@
 // Module 14879 (ConnectGuardianBottomSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
@@ -47,15 +48,15 @@ export default function ConnectGuardianBottomSheet(arg0) {
   obj = { style: tmp.info, children: null };
   obj1 = { style: tmp.centered, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   if (title == null) {
-    const intl = tmp2(1114).intl;
-    title = intl.string(tmp7(2396).aCUVfL);
+    const intl = util.intl;
+    title = intl.string(_modDef2396.aCUVfL);
   }
   obj1.children = title;
   const items2 = [React5(Text_Text.Text, obj1), ];
   const obj2 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
   if (body == null) {
-    const intl2 = tmp2(1114).intl;
-    body = intl2.format(tmp7(2396)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
+    const intl2 = util.intl;
+    body = intl2.format(_modDef2396["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   }
   obj2.children = body;
   items2[1] = React5(Text_Text.Text, obj2);
@@ -75,7 +76,7 @@ export default function ConnectGuardianBottomSheet(arg0) {
   obj3.children = React5(ConnectGuardianCard.ConnectGuardianCard, obj4);
   items3[1] = React5(View, obj3);
   const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj6.text = intl3.string(_modDef2396.Hsm5IF);
   obj6.onPress = callback;
   items3[2] = React5(components_Button_Button.Button, obj6);

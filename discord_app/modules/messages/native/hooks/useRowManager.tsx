@@ -66,7 +66,7 @@ export default function useRowManager(arg0) {
               if (null != closure_2_27.current) {
                 let flag = false;
                 if (jumpTargetId) {
-                  let obj = { scrollToMessageId: tmp, jumpTargetId: tmp, jumpType, focusTargetId: tmp, overrideScrollJumpType: Client.JumpType.INSTANT, isRescrolling: true, hasJumpedToOriginalPost };
+                  let obj = { scrollToMessageId, jumpTargetId: scrollToMessageId, jumpType, focusTargetId: scrollToMessageId, overrideScrollJumpType: Client.JumpType.INSTANT, isRescrolling: true, hasJumpedToOriginalPost };
                   updateRows(obj);
                   flag = true;
                 }
@@ -189,7 +189,7 @@ export default function useRowManager(arg0) {
             overrideScrollJumpType = messages.jumpType;
           }
           obj.jumpType = overrideScrollJumpType;
-          const current2 = tmp15.current;
+          const current2 = ref2.current;
           let tmp30 = !current2;
           if (current2) {
             tmp30 = flag4;
@@ -198,7 +198,7 @@ export default function useRowManager(arg0) {
           obj.animated = ref3.current;
           obj.scrollPosition = MIDDLE;
           obj.focusTargetId = focusTargetId;
-          tmp15.current = true;
+          ref2.current = true;
           obj = { rows: measureResult, hasMoreMessagesAfter: messages.hasMoreAfter, isLoadingAtTop: null, scrollData: null, HACK_iOSForceAnimations: null, forceReload: null, isAnimated: null };
           const tmp27 = require("computeScrollData");
           obj.isLoadingAtTop = closure_32(measureResult, ref4.current);
@@ -217,7 +217,7 @@ export default function useRowManager(arg0) {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => closure_1_39(), 100);
         }
-        tmp42 = tmp15.current && tmp15.current !== current && closure_22;
+        tmp42 = ref2.current && ref2.current !== current && closure_22;
       }
       if (ref2.current) {
         obj1 = closure_36;
@@ -229,7 +229,7 @@ export default function useRowManager(arg0) {
         if (null != measureResult) {
           if (0 === measureResult.length) {
             let obj2 = require("NativeChatUtils");
-            obj2.fadeIn(tmp9.current);
+            obj2.fadeIn(closure_27.current);
           }
         }
       }
@@ -242,7 +242,7 @@ export default function useRowManager(arg0) {
       if (null != focusTargetId) {
         const tmp47 = closure_38(focusTargetId);
         if (null != tmp47) {
-          require("NativeChatUtils").focus(tmp9.current, tmp47);
+          require("NativeChatUtils").focus(closure_27.current, tmp47);
           const obj8 = require("NativeChatUtils");
         }
       }
@@ -278,17 +278,9 @@ export default function useRowManager(arg0) {
     scrollToMessageId,
     maybeRescrollToMessageId(arg0) {
       closure_0 = arg0;
-      let flag = arg1;
-      if (arg1 === undefined) {
-        flag = false;
-      }
       let INSTANT = arg2;
       if (arg2 === undefined) {
         INSTANT = chatManager(ref[2]).JumpType.INSTANT;
-      }
-      let flag2 = arg3;
-      if (arg3 === undefined) {
-        flag2 = false;
       }
       if (null != arg0) {
         const _setTimeout = setTimeout;
@@ -298,7 +290,7 @@ export default function useRowManager(arg0) {
             if (null != closure_2_27.current) {
               let flag = false;
               if (jumpTargetId) {
-                let obj = { scrollToMessageId: tmp, jumpTargetId: tmp, jumpType, focusTargetId: tmp, overrideScrollJumpType: Client.JumpType.INSTANT, isRescrolling: true, hasJumpedToOriginalPost };
+                let obj = { scrollToMessageId, jumpTargetId: scrollToMessageId, jumpType, focusTargetId: scrollToMessageId, overrideScrollJumpType: Client.JumpType.INSTANT, isRescrolling: true, hasJumpedToOriginalPost };
                 updateRows(obj);
                 flag = true;
               }

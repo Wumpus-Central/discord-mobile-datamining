@@ -17,14 +17,14 @@ export default function useTopAndNewlyAddedEmojis(arg0, arg1) {
   return require("useStateFromStores").useStateFromStoresObject(items, () => {
     let obj = EmojiStore;
     if (EmojiStore !== undefined) {
-      if (tmp2 !== EmojiIntention.REACTION) {
-        let topEmoji = obj.getTopEmoji(tmp);
+      if (closure_1 !== EmojiIntention.REACTION) {
+        let topEmoji = obj.getTopEmoji(closure_0);
       } else {
         topEmoji = closure_4;
       }
       obj = { topEmojis: topEmoji, newlyAddedEmojis: null };
-      if (tmp2 !== EmojiIntention.REACTION) {
-        let newlyAddedEmoji = obj.getNewlyAddedEmoji(tmp);
+      if (closure_1 !== EmojiIntention.REACTION) {
+        let newlyAddedEmoji = obj.getNewlyAddedEmoji(closure_0);
       } else {
         newlyAddedEmoji = closure_4;
       }

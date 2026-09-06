@@ -25,16 +25,16 @@ class ToastEmoji {
     items1[1] = stateFromStores;
     memo = closure_3.useMemo(() => {
       if (null != emoji.id) {
-        const obj = { id: tmp.id, animated: null, size: null };
+        const obj = { id: emoji.id, animated: null, size: null };
         let animated = !stateFromStores;
         if (!stateFromStores) {
-          animated = tmp.animated;
+          animated = emoji.animated;
         }
         obj.animated = animated;
         obj.size = EMOJI_URL_BASE_SIZE;
         let url = obj.getEmojiURL(obj);
       } else {
-        url = tmp.url;
+        url = emoji.url;
       }
       return url;
     }, items1);

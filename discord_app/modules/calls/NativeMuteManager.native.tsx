@@ -25,11 +25,11 @@ class NativeMuteManager {
     obj.handleAudioRouteChange = function handleAudioRouteChange() {
       const audioRouteChangeIgnoreTimer = obj.audioRouteChangeIgnoreTimer;
       if (audioRouteChangeIgnoreTimer.isStarted()) {
-        const audioRouteChangeIgnoreTimer2 = tmp.audioRouteChangeIgnoreTimer;
+        const audioRouteChangeIgnoreTimer2 = obj.audioRouteChangeIgnoreTimer;
         audioRouteChangeIgnoreTimer2.stop();
       }
       obj.ignoreForAudioRouteChange = true;
-      const audioRouteChangeIgnoreTimer3 = tmp.audioRouteChangeIgnoreTimer;
+      const audioRouteChangeIgnoreTimer3 = obj.audioRouteChangeIgnoreTimer;
       audioRouteChangeIgnoreTimer3.start(obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS, () => {
         obj.ignoreForAudioRouteChange = false;
       });
@@ -89,11 +89,11 @@ obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
 obj.handleAudioRouteChange = function handleAudioRouteChange() {
   const audioRouteChangeIgnoreTimer = obj.audioRouteChangeIgnoreTimer;
   if (audioRouteChangeIgnoreTimer.isStarted()) {
-    const audioRouteChangeIgnoreTimer2 = tmp.audioRouteChangeIgnoreTimer;
+    const audioRouteChangeIgnoreTimer2 = obj.audioRouteChangeIgnoreTimer;
     audioRouteChangeIgnoreTimer2.stop();
   }
   obj.ignoreForAudioRouteChange = true;
-  const audioRouteChangeIgnoreTimer3 = tmp.audioRouteChangeIgnoreTimer;
+  const audioRouteChangeIgnoreTimer3 = obj.audioRouteChangeIgnoreTimer;
   audioRouteChangeIgnoreTimer3.start(obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS, () => {
     obj.ignoreForAudioRouteChange = false;
   });

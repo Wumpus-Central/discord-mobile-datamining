@@ -35,13 +35,12 @@ function updateGuildIncident(id) {
   if (null != incidentsData) {
     let hasDetectedActivityResult = GuildAntiRaidUtils.hasDetectedActivity(incidentsData);
     if (!hasDetectedActivityResult) {
-      hasDetectedActivityResult = tmp6(8015).isUnderLockdown(incidentsData);
-      const tmp6Result = tmp6(8015);
+      hasDetectedActivityResult = GuildAntiRaidUtils.isUnderLockdown(incidentsData);
+      const tmp6Result = GuildAntiRaidUtils;
     }
     if (hasDetectedActivityResult) {
       tmp5 = incidentsData;
     }
-    tmp6 = require;
   }
   let flag = dependencyMap[id] !== tmp5;
   if (flag) {
@@ -83,6 +82,7 @@ const guildIncidentsStore = new GuildIncidentsStore(DispatcherDefault, {
       let tmp4 = updateGuildIncident(tmp2.id);
       continue;
     }
+    tmp = arg0.guilds[Symbol.iterator]();
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     const id = guild.guild.id;
@@ -95,13 +95,12 @@ const guildIncidentsStore = new GuildIncidentsStore(DispatcherDefault, {
     if (null != incidentsData) {
       let hasDetectedActivityResult = GuildAntiRaidUtils.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(8015).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(8015);
+        hasDetectedActivityResult = GuildAntiRaidUtils.isUnderLockdown(incidentsData);
+        const tmp6Result = GuildAntiRaidUtils;
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;
       }
-      tmp6 = require;
     }
     let flag = dependencyMap[id] !== tmp5;
     if (flag) {
@@ -126,13 +125,12 @@ const guildIncidentsStore = new GuildIncidentsStore(DispatcherDefault, {
     if (null != incidentsData) {
       let hasDetectedActivityResult = GuildAntiRaidUtils.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(8015).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(8015);
+        hasDetectedActivityResult = GuildAntiRaidUtils.isUnderLockdown(incidentsData);
+        const tmp6Result = GuildAntiRaidUtils;
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;
       }
-      tmp6 = require;
     }
     let flag = dependencyMap[id] !== tmp5;
     if (flag) {

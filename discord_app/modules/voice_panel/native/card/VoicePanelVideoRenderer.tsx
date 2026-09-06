@@ -2,6 +2,7 @@
 
 // Module 17133 (VoicePanelVideoRenderer)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
+import timing from "timing" /* 4561 */;
 import spring from "spring" /* 4974 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9495 */;
@@ -440,7 +441,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   le.__workletHash = 9695573702258;
   le.__initData = __initData;
   function ce(safeAreaState, current) {
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
+    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
       value = sharedCoords.get();
       id = undefined;
       if (value != null) {
@@ -451,6 +452,8 @@ export default noop.memo(function VideoRenderer(streamKey) {
       }
       tmp6 = id === id && safeAreaState !== current && null != current;
     }
+    obj = cheapWorkletShallowEqual;
+    tmp = current;
   }
   obj2 = { cheapWorkletShallowEqual: tmp2(tmp3[13]).cheapWorkletShallowEqual, focused, id, resetOnLayoutChange: callback3 };
   ce.__closure = obj2;
@@ -534,7 +537,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   function ye() {
     if (onReady.get() <= 0) {
       if (setHasActiveVideoOutputSink.get()) {
-        const result = obj2.set(false);
+        const result = setHasActiveVideoOutputSink.set(false);
         token("cover");
       } else {
         value = pIPState.get();
@@ -542,9 +545,9 @@ export default noop.memo(function VideoRenderer(streamKey) {
           token("fit");
         } else {
           const _Math = Math;
-          const bound = Math.max(0, (flag2.get().height - flag.get().height / obj.get()) / 2);
+          const bound = Math.max(0, (flag2.get().height - flag.get().height / pIPState.get()) / 2);
           const _Math2 = Math;
-          const bound1 = Math.max(0, (flag2.get().width - flag.get().width / obj.get()) / 2);
+          const bound1 = Math.max(0, (flag2.get().width - flag.get().width / pIPState.get()) / 2);
           const _Math3 = Math;
           const _Math4 = Math;
           const result1 = translateX.set(spring.withSpring(Math.min(bound1, Math.max(-bound1, translateX.get())), SCALE_PHYSICS));
@@ -555,7 +558,6 @@ export default noop.memo(function VideoRenderer(streamKey) {
           const tmp20 = -bound;
         }
       }
-      obj2 = setHasActiveVideoOutputSink;
     }
   }
   obj3 = { numGesturesActive: sharedValue5, isInSnap: sharedValue6, resetToDefaultSize: callback2, scale: sharedValue2, fitScale: derivedValue2, videoDimensions: sharedValue1, containerLayout: derivedValue, translateX: sharedValue3, withSpring: tmp2(tmp3[12]).withSpring, SCALE_PHYSICS, translateY: sharedValue4 };
@@ -865,9 +867,9 @@ export default noop.memo(function VideoRenderer(streamKey) {
         const diff2 = scaleChange.focalX - flag.get().width / 2;
         const diff3 = scaleChange.focalY - flag.get().height / 2;
         const diff4 = scaleChange.scaleChange - 1;
-        const result1 = -1 * diff2 * diff4 / obj.get();
+        const result1 = -1 * diff2 * diff4 / PAN_TO_ZOOM_SCALE_FACTOR.get();
         const diff5 = scaleChange.scaleChange - 1;
-        const result2 = -1 * diff3 * diff5 / obj.get();
+        const result2 = -1 * diff3 * diff5 / PAN_TO_ZOOM_SCALE_FACTOR.get();
         const result3 = translateX.set(translateX.get() + result1);
         const result4 = translateY.set(translateY.get() + result2);
         const result5 = setHasActiveVideoOutputSink.set(isInCoverSnap());
@@ -1128,7 +1130,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   _t.__workletHash = 16147365192890;
   _t.__initData = __initData20;
   function ut(inPip, isFocused) {
-    if (!obj.cheapWorkletShallowEqual(inPip, isFocused)) {
+    if (!obj.cheapWorkletShallowEqual(inPip, tmp3)) {
       if (!inPip.inPip) {
         if (!inPip.isFocused) {
           isFocused = undefined;
@@ -1137,8 +1139,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
           }
           let num2 = 0.3;
           if (true === isFocused) {
-            tmp(4296);
-            const tmpResult = tmp(4561);
+            const tmpResult = timing;
             num2 = tmpResult.withDelay(300, tmpResult.withTiming(0.3, { duration: 0 }, "animate-never"));
           }
           const result = sharedValue10.set(num2);
@@ -1146,6 +1147,8 @@ export default noop.memo(function VideoRenderer(streamKey) {
       }
       const result1 = sharedValue10.set(0);
     }
+    obj = cheapWorkletShallowEqual;
+    tmp3 = isFocused;
   }
   const tmp2Result24 = id(tmp3[8]);
   ut.__closure = { cheapWorkletShallowEqual: id(tmp3[13]).cheapWorkletShallowEqual, strokeOpacity: sharedValue10, withDelay: id(tmp3[8]).withDelay, withTiming: id(tmp3[26]).withTiming };

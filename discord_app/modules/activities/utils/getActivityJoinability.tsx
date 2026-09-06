@@ -6,6 +6,7 @@ import hasFlagDefault from "hasFlag" /* 7313 */;
 import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9502 */;
 import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9531 */;
 import getPartySize from "getPartySize" /* 11755 */;
+import isPartyFull from "isPartyFull" /* 11757 */;
 import getIsInParty from "getIsInParty" /* 11758 */;
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11761 */;
 import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13035 */;
@@ -57,10 +58,12 @@ export default function getActivityJoinability(arg0) {
         }
       }
       if (!isEmbedded) {
+        if (isActivityJoinableOnCurrentPlatformDefault(activity)) {
+          PlatformUtils;
+        }
         return obj.CANNOT_JOIN;
       }
       const partySize = getPartySize.getPartySize(activity);
-      const tmp27 = require;
       if (obj4.hasPartySize(partySize)) {
         if (!tmp27Result.isPartyFull(partySize)) {
           if (hasFlagDefault(activity, constants.PARTY_PRIVACY_FRIENDS)) {
@@ -68,7 +71,7 @@ export default function getActivityJoinability(arg0) {
               return obj.CAN_JOIN;
             }
           }
-          if (tmp30(7313)(activity, tmp31.PARTY_PRIVACY_VOICE_CHANNEL)) {
+          if (hasFlagDefault(activity, constants.PARTY_PRIVACY_VOICE_CHANNEL)) {
             const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
             if (null != channel) {
               if (VoiceStateStore.isInChannel(channel.id, user.id)) {
@@ -99,10 +102,8 @@ export default function getActivityJoinability(arg0) {
           } else {
             return obj.CANNOT_JOIN;
           }
-          tmp30 = importDefault;
-          tmp31 = constants;
         }
-        tmp27Result = tmp27(11757);
+        tmp27Result = isPartyFull;
       }
       return obj.CANNOT_JOIN;
     }

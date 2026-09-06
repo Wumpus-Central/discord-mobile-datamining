@@ -20,10 +20,6 @@ function notifyListeners(isConnected) {
     carrier = details.carrier;
   }
   obj.serviceProvider = carrier;
-  flag = isConnected;
-  if (isConnected == null) {
-    flag = false;
-  }
   obj.log("Network status changed: isConnected:" + isConnected + " type:" + isConnected.type + " speed:" + obj.cellularGeneration);
   const item = isConnected ? closure_4 : closure_5.forEach((fn) => {
     flag = isConnected;
@@ -33,6 +29,7 @@ function notifyListeners(isConnected) {
     return fn(flag, obj);
   });
   const item1 = closure_6.forEach((fn) => fn(obj));
+  const arr = isConnected ? closure_4 : closure_5;
 }
 const NetworkConnectionTypes = Constants.NetworkConnectionTypes;
 let obj = new LoggerDefault("NetworkUtils");
@@ -58,10 +55,10 @@ obj = {
   removeOnlineCallback(_handleNetworkOnline) {
     const index = closure_4.indexOf(_handleNetworkOnline);
     if (-1 !== index) {
-      arr.splice(index, 1);
+      closure_4.splice(index, 1);
       let tmp5 = null != _null;
       if (tmp5) {
-        tmp5 = 0 === arr.length;
+        tmp5 = 0 === closure_4.length;
       }
       if (tmp5) {
         tmp5 = 0 === closure_5.length;
@@ -84,13 +81,13 @@ obj = {
   removeOfflineCallback(_handleNetworkOffline) {
     const index = closure_5.indexOf(_handleNetworkOffline);
     if (-1 !== index) {
-      arr.splice(index, 1);
+      closure_5.splice(index, 1);
       let tmp5 = null != _null;
       if (tmp5) {
         tmp5 = 0 === closure_4.length;
       }
       if (tmp5) {
-        tmp5 = 0 === arr.length;
+        tmp5 = 0 === closure_5.length;
       }
       if (tmp5) {
         tmp5 = 0 === closure_6.length;
@@ -110,7 +107,7 @@ obj = {
   removeChangeCallback(arg0) {
     const index = closure_6.indexOf(arg0);
     if (-1 !== index) {
-      arr.splice(index, 1);
+      closure_6.splice(index, 1);
       let tmp5 = null != _null;
       if (tmp5) {
         tmp5 = 0 === closure_4.length;
@@ -119,7 +116,7 @@ obj = {
         tmp5 = 0 === closure_5.length;
       }
       if (tmp5) {
-        tmp5 = 0 === arr.length;
+        tmp5 = 0 === closure_6.length;
       }
       if (tmp5) {
         _null();

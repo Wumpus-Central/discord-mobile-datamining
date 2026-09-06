@@ -41,14 +41,14 @@ export default function useMessagesData() {
   const items3 = [connected, connectedToGateway, first, tmp4[1], numFriendSuggestions, friendSuggestions, setting, stateFromStores, setAdded];
   return setAdded.useMemo(() => {
     if (-1 === ref.current) {
-      tmp.current = 0;
+      ref.current = 0;
     } else {
       let tmp2 = connected;
       if (connected) {
         tmp2 = connectedToGateway;
       }
       if (tmp2) {
-        tmp.current = tmp.current + 1;
+        ref.current = ref.current + 1;
       }
     }
     let arr = first;
@@ -100,7 +100,7 @@ export default function useMessagesData() {
     let combined = null;
     if (ref.current > 0) {
       const _HermesInternal = HermesInternal;
-      combined = "" + tmp.current;
+      combined = "" + ref.current;
     }
     obj.dataKey = combined;
     let tmp26 = !tmp3;

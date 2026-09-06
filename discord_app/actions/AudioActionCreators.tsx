@@ -210,7 +210,7 @@ settings = {
     const obj = { type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE", context: DEFAULT, userId: id };
     obj.dispatch(obj);
   },
-  setDisableLocalVideo(id, MANUAL_ENABLED, DEFAULT, arg3) {
+  setDisableLocalVideo(id, MANUAL_ENABLED) {
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
@@ -229,7 +229,7 @@ settings = {
       throw new TypeError("Trying to call a non-function");
     }
   },
-  setLocalVolume(userId, USER, DEFAULT) {
+  setLocalVolume(userId, USER) {
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
@@ -269,7 +269,7 @@ settings = {
     const rect = { type: "AUDIO_SET_LOCAL_PAN", context: DEFAULT, userId, left, right };
     DispatcherDefault.dispatch(rect);
   },
-  setMode(mode, arg1, DEFAULT) {
+  setMode(mode, arg1) {
     let obj = arg1;
     if (arg1 === undefined) {
       obj = {};
@@ -309,7 +309,7 @@ settings = {
         if (null != tmp29) {
           str2 = tmp29.name;
         }
-        let tmp5Result = tmp5(1242);
+        let tmp5Result = AnalyticsUtilsDefault;
         obj2 = { mode, location_stack: analyticsLocations, voice_channel_type: null, input_device_name: null, audio_subsystem: null, audio_layer: null };
         let type;
         if (channel != null) {
@@ -337,7 +337,7 @@ settings = {
           if (null != tmp17) {
             str = tmp17.name;
           }
-          tmp5Result = tmp5(1242);
+          tmp5Result = AnalyticsUtilsDefault;
           obj3 = { location_stack: analyticsLocations, voice_channel_type: null, input_device_name: null, audio_subsystem: null, audio_layer: null, old_threshold: null, new_threshold: null, old_auto_threshold: null, new_auto_threshold: null };
           let type1;
           if (channel1 != null) {
@@ -385,6 +385,7 @@ settings = {
       }
       obj.voice_channel_type = type;
       AnalyticsUtilsDefault.track(constants2.MEDIA_INPUT_VOLUME_CHANGED, obj);
+      const tmp3Result = AnalyticsUtilsDefault;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -408,6 +409,7 @@ settings = {
       }
       obj.voice_channel_type = type;
       AnalyticsUtilsDefault.track(constants2.MEDIA_OUTPUT_VOLUME_CHANGED, obj);
+      const tmp3Result = AnalyticsUtilsDefault;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -477,6 +479,7 @@ settings = {
       trackVoiceAndVideoSettingsUpdateDefault("active_input_profile", inputProfile, activeInputProfile, analyticsLocations);
       obj = { type: "AUDIO_SET_ACTIVE_INPUT_PROFILE", inputProfile };
       DispatcherDefault.dispatch(obj);
+      const tmpResult = DispatcherDefault;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -596,7 +599,7 @@ settings = {
   },
   setDebugLogging(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -678,7 +681,7 @@ settings = {
   },
   setAudioSubsystem(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

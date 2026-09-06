@@ -51,7 +51,7 @@ function GuildInviteSuggestionRows(openInviteSheet) {
     tmp6Result = null;
     if (suggestions.length > 6) {
       obj = { openInviteSheet: openInviteSheet.openInviteSheet };
-      tmp6Result = tmp6(SeeMoreFooter, obj);
+      tmp6Result = closure_19(SeeMoreFooter, obj);
     }
     obj.ListFooterComponent = tmp6Result;
     obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
@@ -61,7 +61,7 @@ function GuildInviteSuggestionRows(openInviteSheet) {
       return item.item.id;
     };
     obj.children = closure_19(closure_7, obj);
-    tmp6Result = tmp6(closure_6, obj);
+    tmp6Result = closure_19(closure_6, obj);
   }
   return tmp6Result;
 }
@@ -130,14 +130,13 @@ export default function GuildInvite(closeOnEditInviteLink) {
     if (null != channelId) {
       return channel.getChannel(channelId);
     } else {
-      const guildId = obj.getGuildId();
+      const guildId = closure_10.getGuildId();
       defaultChannel = null;
       if (null != guildId) {
         defaultChannel = defaultChannel.getDefaultChannel(guildId, true, constants4.CREATE_INSTANT_INVITE);
       }
       return defaultChannel;
     }
-    obj = closure_10;
   });
   const items2 = [isScreenReaderEnabled, stateFromStores];
   const effect = ref.useEffect(() => {
@@ -247,7 +246,7 @@ export default function GuildInvite(closeOnEditInviteLink) {
       let tmp29Result = !tmp20;
       if (!tmp20) {
         obj2 = { source: tmp13(tmp3[33]), resizeMode: "contain", style: tmp.headerImage };
-        tmp29Result = tmp29(first, obj2);
+        tmp29Result = closure_19(first, obj2);
       }
       items8[2] = tmp29Result;
       obj3 = { style: tmp.linkContainer, children: null };

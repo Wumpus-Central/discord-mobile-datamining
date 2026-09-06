@@ -72,10 +72,10 @@ export const useAppChannelBotUserId = function useAppChannelBotUserId(channel) {
   }
   return tmp2;
 };
-export const isAppChannelFloorPermission = function isAppChannelFloorPermission(appChannelBotUserId, id, arg2) {
+export const isAppChannelFloorPermission = function isAppChannelFloorPermission(appChannelBotUserId, id, VIEW_CHANNEL) {
   let hasItem = appChannelBotUserId === id;
   if (hasItem) {
-    hasItem = BigFlagUtilsAll.has(AppChannelPermissions.APP_CHANNEL_MINIMUM_BOT_PERMISSIONS, arg2);
+    hasItem = BigFlagUtilsAll.has(AppChannelPermissions.APP_CHANNEL_MINIMUM_BOT_PERMISSIONS, VIEW_CHANNEL);
   }
   return hasItem;
 };

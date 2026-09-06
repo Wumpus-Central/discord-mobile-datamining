@@ -522,7 +522,7 @@ let items = [
   },
   { no: 2, name: "viewed_tutorial", kind: "scalar", T: 8 }
 ];
-let tmp9 = new "CUSTOM"("discord_protos.discord_users.v1.InboxSettings", items, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp9 = new "CUSTOM"("discord_protos.discord_users.v1.InboxSettings", items, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_25 = tmp9;
 const MessageType3 = fn(1188).MessageType;
 class AllGuildSettings$Type extends MessageType3 {
@@ -780,7 +780,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(dismissed, tag,
   return tag;
 };
 const items2 = [{ no: 1, name: "dismissed", kind: "scalar", T: 8 }, { no: 2, name: "last_dismissed_version", kind: "scalar", T: 13 }, { no: 3, name: "last_dismissed_at_ms", kind: "scalar", T: 4 }, { no: 4, name: "last_dismissed_object_id", kind: "scalar", T: 4 }, { no: 5, name: "num_times_dismissed", kind: "scalar", T: 13 }];
-let tmp11 = new "CUSTOM"("discord_protos.discord_users.v1.GuildDismissibleContentState", items2, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp11 = new "CUSTOM"("discord_protos.discord_users.v1.GuildDismissibleContentState", items2, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_27 = tmp11;
 const MessageType5 = fn(1188).MessageType;
 class GuildSettings$Type extends MessageType5 {
@@ -1321,7 +1321,7 @@ const items4 = [
     }
   }
 ];
-let tmp14 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelSettings", items4, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp14 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelSettings", items4, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_30 = tmp14;
 const MessageType8 = fn(1188).MessageType;
 class CustomNotificationSoundConfig$Type extends MessageType8 {
@@ -1522,7 +1522,7 @@ prototype9["internalBinaryWrite"] = function internalBinaryWrite(lastDismissedVe
   return tag;
 };
 const items6 = [{ no: 1, name: "last_dismissed_version", kind: "scalar", T: 13 }, { no: 2, name: "last_dismissed_at_ms", kind: "scalar", T: 4 }, { no: 3, name: "last_dismissed_object_id", kind: "scalar", T: 4 }, { no: 4, name: "num_times_dismissed", kind: "scalar", T: 13 }];
-let tmp16 = new "binaryReadMap12"("discord_protos.discord_users.v1.RecurringDismissibleContentState", items6, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp16 = new "binaryReadMap12"("discord_protos.discord_users.v1.RecurringDismissibleContentState", items6, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_32 = tmp16;
 const MessageType10 = fn(1188).MessageType;
 class UserContentSettings$Type extends MessageType10 {
@@ -1798,7 +1798,7 @@ const items7 = [
   },
   { no: 8, name: "last_gift_intent_dismissed_at_ms", kind: "scalar", T: 6 }
 ];
-let tmp17 = new "binaryReadMap12"("discord_protos.discord_users.v1.UserContentSettings", items7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp17 = new "binaryReadMap12"("discord_protos.discord_users.v1.UserContentSettings", items7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_33 = tmp17;
 const MessageType11 = fn(1188).MessageType;
 class VideoFilterAsset$Type extends MessageType11 {
@@ -2511,7 +2511,7 @@ const items12 = [
     }
   }
 ];
-let tmp22 = new "binaryReadMap12"("discord_protos.discord_users.v1.GoreContentSettings", items12, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp22 = new "binaryReadMap12"("discord_protos.discord_users.v1.GoreContentSettings", items12, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_38 = tmp22;
 const MessageType16 = fn(1188).MessageType;
 class SelfHarmContentSettings$Type extends MessageType16 {
@@ -2658,7 +2658,7 @@ const items13 = [
     }
   }
 ];
-let tmp23 = new "binaryReadMap12"("discord_protos.discord_users.v1.SelfHarmContentSettings", items13, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp23 = new "binaryReadMap12"("discord_protos.discord_users.v1.SelfHarmContentSettings", items13, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_39 = tmp23;
 const MessageType17 = fn(1188).MessageType;
 class KeywordFilterSettings$Type extends MessageType17 {
@@ -5070,7 +5070,7 @@ const items20 = [
     }
   }
 ];
-let tmp33 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelListSettings", items20, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp33 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelListSettings", items20, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_49 = tmp33;
 const MessageType27 = fn(1188).MessageType;
 class AppearanceSettings$Type extends MessageType27 {
@@ -6777,7 +6777,7 @@ prototype38["internalBinaryWrite"] = function internalBinaryWrite(soundId, tag, 
   return tag;
 };
 const items31 = [{ no: 1, name: "sound_id", kind: "scalar", T: 6 }, { no: 2, name: "guild_id", kind: "scalar", T: 6 }];
-let tmp45 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomCallSound", items31, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp45 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomCallSound", items31, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_61 = tmp45;
 const MessageType39 = fn(1188).MessageType;
 class BroadcastSettings$Type extends MessageType39 {
@@ -6965,7 +6965,7 @@ const items32 = [
     }
   }
 ];
-let tmp46 = new "binaryReadMap12"("discord_protos.discord_users.v1.BroadcastSettings", items32, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp46 = new "binaryReadMap12"("discord_protos.discord_users.v1.BroadcastSettings", items32, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_62 = tmp46;
 const MessageType40 = fn(1188).MessageType;
 class ClipsSettings$Type extends MessageType40 {
@@ -7248,7 +7248,7 @@ const items35 = [
     }
   }
 ];
-let tmp49 = new "binaryReadMap12"("discord_protos.discord_users.v1.SpendingLimitSettings", items35, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
+const tmp49 = new "binaryReadMap12"("discord_protos.discord_users.v1.SpendingLimitSettings", items35, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, GuildOnboardingProgress);
 let closure_65 = tmp49;
 const MessageType43 = fn(1188).MessageType;
 class SafetySettings$Type extends MessageType43 {

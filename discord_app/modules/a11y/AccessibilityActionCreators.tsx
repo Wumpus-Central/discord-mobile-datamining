@@ -3,6 +3,7 @@
 // Module 14437 (AccessibilityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9358 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -72,7 +73,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(reduce) 
   const useReducedMotion2 = AccessibilityStore.useReducedMotion;
   if (!useReducedMotion) {
     if (useReducedMotion2) {
-      let tmpResult = tmp(9358);
+      let tmpResult = UserSettingsActionCreatorsDefault;
       obj = { gifAutoPlay: null, animateEmoji: null, animateStickers: null };
       const obj1 = { value: false, reasonKey: constants.REDUCED_MOTION };
       obj.gifAutoPlay = obj1;
@@ -87,7 +88,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(reduce) 
     useReducedMotion = !useReducedMotion2;
   }
   if (useReducedMotion) {
-    tmpResult = tmp(9358);
+    tmpResult = UserSettingsActionCreatorsDefault;
     const result1 = tmpResult.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
   }
 };

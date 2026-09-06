@@ -6,6 +6,7 @@ import _mod17 from "module_17" /* 17 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import Constants2 from "Constants" /* 4585 */;
 import NativeAudioManagerModuleDefault from "NativeAudioManagerModule" /* 9087 */;
 import size from "module_2" /* 2 */;
@@ -69,16 +70,16 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
           tmp8 = device.simpleDeviceType !== NativeAudioManagerModule.AudioDeviceType.INVALID;
         }
         if (tmp8) {
-          let tmp4Result = tmp4(12);
+          let tmp4Result = _modDef12;
           if (tmp4Result.isString(device)) {
-            tmp4Result = tmp4(1232);
+            tmp4Result = SentryUtilsDefault;
             let obj = { extra: null };
-            obj = { deviceString: tmp10 };
+            obj = { deviceString: device };
             obj.extra = obj;
             tmp4Result.captureMessage("AudioManagerStore received a string for an android audio device", obj);
           } else {
-            tmp4(9087).setActiveAudioDevice(tmp10);
-            const tmp4Result1 = tmp4(9087);
+            NativeAudioManagerModuleDefault.setActiveAudioDevice(device);
+            const tmp4Result1 = NativeAudioManagerModuleDefault;
           }
         }
       } else if (tmp13.DISCONNECTED === state) {
@@ -95,13 +96,13 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
     if (c9) {
       let obj = _modDef12;
       if (obj.isString(device)) {
-        let tmpResult = tmp(1232);
+        let tmpResult = SentryUtilsDefault;
         obj = { extra: null };
         obj = { deviceString: device };
         obj.extra = obj;
         tmpResult.captureMessage("AudioManagerStore received a string for an android audio device", obj);
       } else {
-        tmpResult = tmp(9087);
+        tmpResult = NativeAudioManagerModuleDefault;
         tmpResult.setActiveAudioDevice(device);
       }
     }

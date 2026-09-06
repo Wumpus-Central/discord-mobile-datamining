@@ -3,6 +3,7 @@
 // Module 9853 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 576 */;
 import FreeFormTextInputDefault from "FreeFormTextInput" /* 6939 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9822 */;
 import _modDef9854 from "module_9854" /* 9854 */;
 import noop from "module_19" /* 19 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 9821 */;
@@ -55,16 +56,16 @@ export default function _default(link) {
   const obj4 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
   if (null == stateFromStores) {
     obj4.children = null;
-    items1[2] = tmp7(tmp10, obj4);
+    items1[2] = closure_5(tmp10, obj4);
     const obj5 = { text: null, onPress: null };
     const intl5 = tmp2(1114).intl;
     obj5.text = intl5.string(tmp2(1114).t.Ej3B3Y);
     obj5.onPress = onShare;
-    items1[3] = tmp7(tmp2(4975).Button, obj5);
+    items1[3] = closure_5(tmp2(4975).Button, obj5);
     obj.children = items1;
-    return tmp5(tmp6, obj);
+    return closure_6(View, obj);
   } else {
-    const maxAgeOptionByValue = tmp8(9822).getMaxAgeOptionByValue(stateFromStores.maxAge);
+    const maxAgeOptionByValue = InstantInviteUtilsDefault.getMaxAgeOptionByValue(stateFromStores.maxAge);
     let str2 = "";
     let str3 = "";
     if (null != maxAgeOptionByValue) {
@@ -74,7 +75,7 @@ export default function _default(link) {
       }
       str3 = descriptiveLabel;
     }
-    const getMaxUsesOptions = tmp8(9822).getMaxUsesOptions;
+    const getMaxUsesOptions = InstantInviteUtilsDefault.getMaxUsesOptions;
     const found = getMaxUsesOptions.find((value) => value.value === stateFromStores.maxUses);
     if (null != found) {
       str2 = found.descriptiveLabel;
@@ -87,6 +88,6 @@ export default function _default(link) {
     const intl4 = tmp2(1114).intl;
     const obj6 = { maxAge: str3, maxUses: str2 };
     intl4.format(dqPWMN, obj6);
-    const tmp8Result = tmp8(9822);
+    const tmp8Result = InstantInviteUtilsDefault;
   }
 };

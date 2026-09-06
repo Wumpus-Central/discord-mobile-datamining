@@ -49,10 +49,10 @@ const tooltipStore = new TooltipStore(DispatcherDefault, {
     if (!set.has(tooltip)) {
       if (!set.has(tooltip)) {
         if (!ignoreMaxShownLimit) {
-          ignoreMaxShownLimit = obj.size < 1;
+          ignoreMaxShownLimit = set.size < 1;
         }
         if (ignoreMaxShownLimit) {
-          obj.add(tooltip);
+          set.add(tooltip);
         }
       }
     }

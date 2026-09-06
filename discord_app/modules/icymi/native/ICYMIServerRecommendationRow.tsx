@@ -3,11 +3,15 @@
 // Module 16517 (ICYMIServerRecommendationRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import FastestListDefault from "FastestList" /* 7055 */;
 import ClipViewDefault from "ClipView" /* 8813 */;
+import ICYMIShared from "ICYMIShared" /* 16491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -43,23 +47,22 @@ function CutoutGuildBanner(guild) {
   obj.cutouts = items2;
   if (null != guild.banner) {
     obj1 = { style: tmp.bannerImage, source: animatableSourceWithFallback, resizeMode: "cover" };
-    let tmp12Result = tmp12(tmp13(5587), obj1);
+    let tmp12Result = closure_14(FastImageDefault, obj1);
   } else {
     const obj2 = { style: null };
     const items3 = [, ];
     ({ bannerImage: arr4[0], emptyBanner: arr4[1] } = tmp);
     obj2.style = items3;
-    tmp12Result = tmp12(tmp11, obj2);
+    tmp12Result = closure_14(View, obj2);
   }
   obj.children = tmp12Result;
   const items4 = [closure_14(ClipViewDefault, obj), ];
   const obj3 = { style: tmp.guildIcon, guild: memo, size: null, animate: null };
-  const tmp10 = closure_15;
   obj3.size = guild(5584).GuildIconSizes.LARGE;
   obj3.animate = !stateFromStores;
   items4[1] = closure_14(GuildIconDefault, obj3);
   obj.children = items4;
-  return tmp10(View, obj);
+  return closure_15(View, obj);
 }
 function FeaturedServer(guild) {
   guild = guild.guild;
@@ -68,7 +71,7 @@ function FeaturedServer(guild) {
   let items = [GuildStore];
   const stateFromStores = obj.useStateFromStores(items, () => null != GuildStore.getGuild(guild.id));
   const items1 = [guild.id];
-  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -126,7 +129,7 @@ function FeaturedServer(guild) {
             const result = obj7.addedRecommendedGuild();
             let obj8 = closure_1(8351);
             const dehydrated = obj8.fetchDehydrated({ isReloading: true, forceRefresh: true });
-            dehydrated.then(asyncGeneratorStep(async (arg0, value) => {
+            dehydrated.then(asyncGeneratorStep(async () => {
               if (dependencyMap === 2) {
                 dependencyMap = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -307,17 +310,17 @@ export const ICYMIServerRecommendationRow = function ICYMIServerRecommendationRo
     obj = { children: null };
     obj = { style: tmp3.container, children: null };
     const obj1 = { style: tmp3.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp(1114).intl;
-    obj1.children = intl.string(tmp(1114).t.lv1tce);
-    const items1 = [closure_1_14(tmp(4556).Text, obj1), , ];
+    const intl = util.intl;
+    obj1.children = intl.string(util.t.lv1tce);
+    const items1 = [closure_1_14(Text_Text.Text, obj1), , ];
     const obj2 = { style: tmp3.subtitle, variant: "heading-sm/normal", color: "text-muted", children: null };
-    const intl2 = tmp(1114).intl;
-    obj2.children = intl2.string(tmp(1114).t.x4OezN);
-    items1[1] = closure_1_14(tmp(4556).Text, obj2);
+    const intl2 = util.intl;
+    obj2.children = intl2.string(util.t.x4OezN);
+    items1[1] = closure_1_14(Text_Text.Text, obj2);
     const obj3 = { discoverableGuilds: stateFromStoresArray };
     items1[2] = closure_1_14(RecommendedGuildsRow, obj3);
     obj.children = items1;
-    const items2 = [__initData(View, obj), closure_1_14(tmp(16491).Separator, {})];
+    const items2 = [__initData(View, obj), closure_1_14(ICYMIShared.Separator, {})];
     obj.children = items2;
     tmp4 = __initData(value2, obj);
   }

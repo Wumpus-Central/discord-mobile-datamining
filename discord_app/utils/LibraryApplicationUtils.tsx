@@ -12,8 +12,8 @@ const Constants = fn(1074);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/LibraryApplicationUtils.tsx");
 
-export const getComboId = function getComboId(arg0, arg1) {
-  return "" + arg0 + ":" + arg1;
+export const getComboId = function getComboId(applicationId, branchId) {
+  return "" + applicationId + ":" + branchId;
 };
 export const convertComboId = function convertComboId(str) {
   const tmp = _slicedToArray(str.split(":"), 2);
@@ -60,7 +60,7 @@ export const convertToTransitionState = function convertToTransitionState(type) 
   let tmp = null;
   if (null != type) {
     if (type.type !== constants2.INSTALLING) {
-      if (type.type !== tmp2.UPDATING) {
+      if (type.type !== constants2.UPDATING) {
         let tmp3 = null;
       }
       tmp = tmp3;
@@ -74,7 +74,7 @@ export const getCombinedProgress = function getCombinedProgress(arr) {
     let tmp = null;
     if (null != type) {
       if (type.type !== constants.INSTALLING) {
-        if (type.type !== tmp2.UPDATING) {
+        if (type.type !== constants.UPDATING) {
           let tmp3 = null;
         }
         tmp = tmp3;

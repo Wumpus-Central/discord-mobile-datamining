@@ -3,6 +3,9 @@
 // Module 15479 (SettingsNotificationScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Card from "Card" /* 5607 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
 import SettingBuilders from "SettingBuilders" /* 11468 */;
 import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12411 */;
@@ -29,9 +32,9 @@ function SystemNotificationsSubLabel() {
       str = "experimental/body-xs/normal";
     }
     obj = { variant: str, color: "text-muted", children: null };
-    const intl = tmp2(1114).intl;
-    obj.children = intl.string(tmp2(1114).t["/TZX1J"]);
-    result = React5(tmp2(4556).Text, obj);
+    const intl = util.intl;
+    obj.children = intl.string(util.t["/TZX1J"]);
+    result = React5(Text_Text.Text, obj);
   }
   const children = [result, ];
   if (showReactivationPrompt) {
@@ -42,16 +45,16 @@ function SystemNotificationsSubLabel() {
     obj1 = { border: "none", shadow: "none", children: null };
     obj2 = { style: tmp.cardContent, children: null };
     obj3 = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
-    const items1 = [React5(tmp2(6610).CircleErrorIcon, obj3), ];
+    const items1 = [React5(CircleErrorIcon.CircleErrorIcon, obj3), ];
     const obj4 = { style: tmp.text, children: null };
     const obj5 = { color: "text-default", variant: "text-sm/medium", children: null };
-    const intl2 = tmp2(1114).intl;
-    obj5.children = intl2.string(tmp2(1114).t.TAuasM);
-    obj4.children = React5(tmp2(4556).Text, obj5);
+    const intl2 = util.intl;
+    obj5.children = intl2.string(util.t.TAuasM);
+    obj4.children = React5(Text_Text.Text, obj5);
     items1[1] = React5(View, obj4);
     obj2.children = items1;
-    obj1.children = tmp8(View, obj2);
-    obj.children = React5(tmp2(5607).Card, obj1);
+    obj1.children = React6(View, obj2);
+    obj.children = React5(Card.Card, obj1);
     showReactivationPrompt = React5(View, obj);
   }
   children[1] = showReactivationPrompt;

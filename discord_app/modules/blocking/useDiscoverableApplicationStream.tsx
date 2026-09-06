@@ -5,7 +5,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 
 const require = fn;
-function getDiscoverableApplicationStream(id, items) {
+function getDiscoverableApplicationStream(id) {
   let tmp = items;
   if (items === undefined) {
     items = [ApplicationStreamingStore, RelationshipStore];

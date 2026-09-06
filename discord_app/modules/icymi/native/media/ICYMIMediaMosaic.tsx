@@ -28,7 +28,6 @@ function MediaMosaicVideo(source) {
   const items = [ICYMIStore];
   let isGIFV = initialize.useStateFromStores(items, () => ICYMIStore.videosMuted());
   let uri = source.videoURI;
-  const tmp2 = __initData;
   if (uri == null) {
     uri = source.sourceURI;
   }
@@ -42,7 +41,7 @@ function MediaMosaicVideo(source) {
     isGIFV = source.isGIFV;
   }
   size.disableFocus = isGIFV;
-  return tmp2(common_VideoDefault, size);
+  return __initData(common_VideoDefault, size);
 }
 function MediaMosaicImage(source) {
   source = source.source;
@@ -70,8 +69,8 @@ function MediaMosaicImage(source) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   const memo = noop.useMemo(() => {
     if (null != source.placeholder) {
-      const size = { uri: ThumbhashUtils.createThumbhashImageFromPlaceholder(tmp.placeholder), width: null, height: null };
-      ({ width: obj.width, height: obj.height } = tmp);
+      const size = { uri: ThumbhashUtils.createThumbhashImageFromPlaceholder(source.placeholder), width: null, height: null };
+      ({ width: obj.width, height: obj.height } = source);
       return size;
     }
   }, items);
@@ -141,20 +140,20 @@ function Media(handlePressMedia) {
     obj = { style: tmp.centerContainer, children: null };
     obj1 = { style: tmp.spoilerText, children: null };
     obj2 = { maxFontSizeMultiplier: 1, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp6(tmp7[21]).intl;
-    obj2.children = intl.string(tmp6(tmp7[21]).t["F+x38C"]).toUpperCase();
-    obj1.children = closure_15(tmp6(tmp7[20]).Text, obj2);
+    const intl = initialIndex(tmp7[21]).intl;
+    obj2.children = intl.string(initialIndex(tmp7[21]).t["F+x38C"]).toUpperCase();
+    obj1.children = closure_15(initialIndex(tmp7[20]).Text, obj2);
     obj.children = closure_15(closure_6, obj1);
     tmp12 = closure_15(closure_6, obj);
-    const str = intl.string(tmp6(tmp7[21]).t["F+x38C"]);
+    const str = intl.string(initialIndex(tmp7[21]).t["F+x38C"]);
   }
   const items3 = [tmp12, , , ];
   let tmp15 = null != source.videoURI && !isSpoiler;
   if (tmp15) {
     let isGIFV = source.isGIFV;
     if (!isGIFV) {
-      let tmp6Result = tmp6(tmp7[12]);
-      isGIFV = tmp6Result.urlMatchesFileExtension(source.sourceURI, tmp6(tmp7[13]).GIF_RE_IOS);
+      let tmp6Result = initialIndex(tmp7[12]);
+      isGIFV = tmp6Result.urlMatchesFileExtension(source.sourceURI, initialIndex(tmp7[13]).GIF_RE_IOS);
     }
     tmp15 = !isGIFV;
   }
@@ -165,18 +164,18 @@ function Media(handlePressMedia) {
     const obj3 = { style: tmp.centerContainer, children: null };
     const obj4 = { style: tmp.videoIcon, children: null };
     const obj5 = { color: handlePressMedia(tmp7[11]).colors.REDESIGN_BUTTON_TERTIARY_TEXT, size: "lg" };
-    obj4.children = closure_15(tmp6(tmp7[22]).PlayIcon, obj5);
+    obj4.children = closure_15(initialIndex(tmp7[22]).PlayIcon, obj5);
     obj3.children = closure_15(closure_6, obj4);
     tmp15 = closure_15(closure_6, obj3);
   }
   items3[1] = tmp15;
-  tmp6Result = tmp6(tmp7[23]);
+  tmp6Result = initialIndex(tmp7[23]);
   let tmp19 = null;
   if (tmp6Result.isVideo(source.uri)) {
     let isGIFV2 = source.isGIFV;
     if (!isGIFV2) {
-      isGIFV2 = tmp6(tmp7[12]).urlMatchesFileExtension(source.sourceURI, tmp6(tmp7[13]).GIF_RE_IOS);
-      const tmp6Result1 = tmp6(tmp7[12]);
+      isGIFV2 = initialIndex(tmp7[12]).urlMatchesFileExtension(source.sourceURI, initialIndex(tmp7[13]).GIF_RE_IOS);
+      const tmp6Result1 = initialIndex(tmp7[12]);
     }
     tmp19 = null;
     if (!isGIFV2) {
@@ -190,15 +189,15 @@ function Media(handlePressMedia) {
       };
       if (stateFromStores) {
         const obj8 = { color: handlePressMedia(tmp7[11]).colors.INTERACTIVE_TEXT_DEFAULT, size: "sm" };
-        let tmp20Result = tmp20(tmp6(tmp7[26]).VoiceXIcon, obj8);
+        let tmp20Result = closure_15(initialIndex(tmp7[26]).VoiceXIcon, obj8);
       } else {
         const obj9 = { color: handlePressMedia(tmp7[11]).colors.BLACK, size: "sm" };
-        tmp20Result = tmp20(tmp6(tmp7[27]).VoiceNormalIcon, obj9);
+        tmp20Result = closure_15(initialIndex(tmp7[27]).VoiceNormalIcon, obj9);
       }
       obj7.children = tmp20Result;
-      obj7 = tmp20(tmp6(tmp7[24]).PressableOpacity, obj7);
+      obj7 = closure_15(initialIndex(tmp7[24]).PressableOpacity, obj7);
       obj6.children = obj7;
-      tmp20Result = tmp20(closure_6, obj6);
+      tmp20Result = closure_15(closure_6, obj6);
     }
   }
   items3[2] = tmp19;
@@ -212,15 +211,17 @@ function Media(handlePressMedia) {
     }
     items3[3] = tmp26;
     obj.children = items3;
-    return closure_17(stateFromStores, obj);
+    return closure_17(tmp11, obj);
   } else {
     let isGIFV3 = source.isGIFV;
     if (!isGIFV3) {
-      isGIFV3 = tmp6(tmp7[12]).urlMatchesFileExtension(source.sourceURI, tmp6(tmp7[13]).GIF_RE_IOS);
-      const tmp6Result3 = tmp6(tmp7[12]);
+      isGIFV3 = initialIndex(tmp7[12]).urlMatchesFileExtension(source.sourceURI, initialIndex(tmp7[13]).GIF_RE_IOS);
+      const tmp6Result3 = initialIndex(tmp7[12]);
     }
   }
   tmp26 = closure_15(MediaMosaicImage, { source, style, dimensions, isSpoiler });
+  tmp11 = stateFromStores;
+  tmp6Result2 = initialIndex(ref[23]);
 }
 function OneImageRow(widthOverride) {
   widthOverride = widthOverride.widthOverride;
@@ -388,7 +389,7 @@ function SingleImage(source) {
         const bound1 = Math.min(size.height, 330);
         const result1 = bound1 * result;
         if (result1 > widthOverride) {
-          const size1 = { width: tmp5, height: tmp5 / result };
+          const size1 = { width: widthOverride, height: widthOverride / result };
           let size2 = size1;
         } else {
           size2 = { width: result1, height: bound1 };
@@ -552,7 +553,7 @@ export default function ICYMIMediaMosaic(message) {
   let obj = message(itemType[14]);
   let items = [handlePressMedia];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(message.getChannelId()));
-  let tmp = closure_18();
+  const tmp = closure_18();
   [tmp4, c4] = stateFromStores(noop.useState(false), 2);
   let visible = !tmp4;
   if (!tmp4) {
@@ -595,13 +596,11 @@ export default function ICYMIMediaMosaic(message) {
     });
     _undefined(true);
     const obj4 = message(itemType[33]);
-    const tmp = itemType;
-    const tmp4 = message;
     obj1 = { disableDownload: false, initialSources: items, initialIndex, analyticsSource: "Channel", channelId: items.channel_id, contextName: null, contextIcon: "r", originViewOrOriginLayout: 0, onClose: "absolute" };
     let str = "";
     if (null != stateFromStores) {
-      str = tmp4(tmp[35]).computeChannelName(tmp8, UserStore, RelationshipStore);
-      const tmp4Result = tmp4(tmp[35]);
+      str = message(itemType[35]).computeChannelName(tmp8, UserStore, RelationshipStore);
+      const tmp4Result = message(itemType[35]);
     }
     obj1.contextName = str;
     obj1.originViewOrOriginLayout = ref.current;
@@ -609,6 +608,7 @@ export default function ICYMIMediaMosaic(message) {
       return _undefined(false);
     };
     message(itemType[34]).openMediaModal(obj1);
+    const obj6 = message(itemType[34]);
   }, items2);
   if (0 !== nonEmbedSources.length) {
     obj = { style: tmp.container, children: null };

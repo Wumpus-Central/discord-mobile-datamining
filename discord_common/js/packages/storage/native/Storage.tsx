@@ -51,10 +51,9 @@ prototype["refresh"] = function refresh() {
   if (DCDStrongboxManager != null) {
     const items2 = [];
     HermesBuiltin.arraySpread(self.secureKeys, 0);
-    refreshResult = obj.refresh(items2);
+    refreshResult = DCDStrongboxManager.refresh(items2);
   }
   items1[1] = refreshResult;
-  obj = DCDStrongboxManager;
   const set1 = new Set();
   return Promise.all(items1).then((result) => {
     [tmp2, tmp3] = result;
@@ -127,7 +126,7 @@ prototype["getAfterRefresh"] = function getAfterRefresh(arg0) {
   const self = this;
   return (async () => {
     await self.parsePromise.then(() => closure_1_1.get(closure_1_0));
-    return arg1;
+    return value;
   })();
 };
 prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1, arg2) {
@@ -178,7 +177,7 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const self = this;
-  return self(function*(arg0, value) {
+  return self(function*() {
     if (item === 2) {
       item = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -210,9 +209,9 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
             }
             const secureKeys = self.secureKeys;
             if (secureKeys.has(tmp5)) {
-              value = item2.getItem(tmp20);
+              value = item2.getItem(tmp5);
             } else {
-              value = item.getItem(tmp20);
+              value = item.getItem(tmp5);
             }
             c2 = 1;
             item = 1;

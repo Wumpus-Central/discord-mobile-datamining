@@ -322,7 +322,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         derivedValue2 = obj11.useDerivedValue(ee);
         const diff = (width - onSelect) / 2 - rect.left;
         viewerPos = diff;
-        let obj4 = { thumbnailsScrolling: mapped1, interpolate: arr(selectedIndex[5]).interpolate, viewerPos, interpolateInput: mapped, interpolateOutput: mapped1 };
+        const obj4 = { thumbnailsScrolling: mapped1, interpolate: arr(selectedIndex[5]).interpolate, viewerPos, interpolateInput: mapped, interpolateOutput: mapped1 };
         function te() {
           if (viewerScrolling.get() > 0) {
             let width = diff + derivedValue2.get();
@@ -493,12 +493,11 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
               }
               if (tmp4) {
                 const result1 = diff.set(selectedIndex);
-                tmp9(tmp10[5]).runOnJS(onSelectedIndexChange)();
-                const tmp9Result = tmp9(tmp10[5]);
+                arr(tmp10[5]).runOnJS(onSelectedIndexChange)();
+                const tmp9Result = arr(tmp10[5]);
               }
               const obj2 = arr(selectedIndex[11]);
               tmp10 = selectedIndex;
-              tmp9 = arr;
             }
           };
           obj = { viewerPos, screenWidth: width, swipeSource, resolveSelectedIndex: sources(onEndReached[11]).resolveSelectedIndex, maxIndex: diff, selectedIndex, runOnJS: sources(onEndReached[5]).runOnJS, onSelectedIndexChange };
@@ -640,7 +639,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           onContentSizeChange: callback,
           useItemVisible: React.useCallback((index) => {
             closure_0 = index;
-            const tmp = memo(sharedValue.useState(index === selectedIndex.get()), 2);
+            let tmp = memo(sharedValue.useState(index === selectedIndex.get()), 2);
             closure_1 = tmp2;
             animatedRef(diff[5]);
             const fn = function l() {
@@ -654,6 +653,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
                 arr(selectedIndex[5]).runOnJS(closure_1)(arg0);
                 const obj = arr(selectedIndex[5]);
               }
+              tmp = null != arg1 && arg1 !== arg0;
             };
             let obj = { runOnJS: animatedRef(diff[5]).runOnJS, setVisible: tmp2 };
             fn2.__closure = obj;

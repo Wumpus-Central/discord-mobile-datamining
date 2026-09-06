@@ -2,10 +2,13 @@
 
 // Module 9116 (VoicePanelAudioOutputActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
+import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import useOnConnectToConsole from "useOnConnectToConsole" /* 9216 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4577 */;
@@ -187,11 +190,11 @@ export default noop.memo(function VoicePanelAudioOutputActionSheet(arg0) {
   if (null != stateFromStores) {
     obj = { header: null, children: null };
     obj = { title: null };
-    const intl = tmp(1114).intl;
-    obj.title = intl.string(tmp(1114).t.iwxPM3);
-    obj.header = closure_11(tmp(7149).BottomSheetTitleHeader, obj);
+    const intl = util.intl;
+    obj.title = intl.string(util.t.iwxPM3);
+    obj.header = closure_11(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
     if (isConnectedToVoiceChannel) {
-      isConnectedToVoiceChannel = tmp5(VoicePanelAudioPhoneOutputSection, {});
+      isConnectedToVoiceChannel = closure_11(VoicePanelAudioPhoneOutputSection, {});
     }
     const obj1 = { children: null };
     const obj2 = { children: null };
@@ -201,7 +204,7 @@ export default noop.memo(function VoicePanelAudioOutputActionSheet(arg0) {
     obj2.children = items1;
     obj1.children = closure_12(NativeViewDefault, obj2);
     obj.children = closure_11(ScrollView, obj1);
-    tmp5Result = tmp5(tmp(7150).BottomSheet, obj);
+    tmp5Result = closure_11(Sheet_BottomSheet.BottomSheet, obj);
   }
   return tmp5Result;
 });

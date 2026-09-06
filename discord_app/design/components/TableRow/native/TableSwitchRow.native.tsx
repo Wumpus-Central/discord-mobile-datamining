@@ -52,7 +52,7 @@ export const TableSwitchRow = function TableSwitchRow(value) {
         str = "text-feedback-critical";
       }
       obj1 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
-      tmp10Result = tmp10(tmp3(4556).Text, obj1);
+      tmp10Result = hasOwnProperty(tmp3(4556).Text, obj1);
     }
     const items1 = [tmp10Result, trailing];
     obj.children = items1;

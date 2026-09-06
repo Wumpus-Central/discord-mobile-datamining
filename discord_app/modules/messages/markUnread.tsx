@@ -11,7 +11,7 @@ import MessageStore from "MessageStore" /* 4781 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
-let closure_11 = async function _markUnread(arg0, value) {
+let closure_11 = async function _markUnread(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -47,7 +47,7 @@ let closure_11 = async function _markUnread(arg0, value) {
           currentUser = currentUser.getCurrentUser();
           closure_130_2 = currentUser;
           if (null != currentUser) {
-            messages = messages.getMessages(tmp40);
+            messages = messages.getMessages(closure_0);
             const found = messages.toArray().filter((id) => closure_1(11).compare(id.id, closure_1_1) < 0);
             const sorted = found.sort((id, id2) => closure_1_1(11).compare(id.id, id2.id));
             const first = sorted.reverse()[0];
@@ -67,8 +67,9 @@ let closure_11 = async function _markUnread(arg0, value) {
               if (tmp) {
                 closure_4 = closure_4 + 1;
               }
+              const obj = closure_1(11);
             });
-            channel = channel.getChannel(tmp40);
+            channel = channel.getChannel(closure_0);
             closure_130_5 = channel;
             let isThreadResult = null != channel;
             if (isThreadResult) {

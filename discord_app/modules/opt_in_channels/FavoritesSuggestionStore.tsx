@@ -22,14 +22,14 @@ function handleChange() {
           if (null == dependencyMap[guild_id]) {
             const _Set = Set;
             const set = new Set();
-            tmp6[guild_id] = set;
+            dependencyMap[guild_id] = set;
           }
           if (UserGuildSettingsStore.isFavorite(guild_id, channelId)) {
-            tmp6[guild_id].delete(channelId);
+            dependencyMap[guild_id].delete(channelId);
           } else {
             if (null == dependencyMap2[guild_id]) {
               if (channelOpensByChannelId[channelId] > 50) {
-                tmp6[guild_id].add(channelId);
+                dependencyMap[guild_id].add(channelId);
               }
             }
             return flag;
@@ -95,7 +95,7 @@ const favoritesSuggestionStore = new FavoritesSuggestionStore(DispatcherDefault,
     if (null == dependencyMap2[guildId]) {
       const _Set = Set;
       const set = new Set();
-      tmp[guildId] = set;
+      dependencyMap2[guildId] = set;
     }
     dependencyMap2[guildId].add(channelId);
     dependencyMap[guildId].delete(channelId);

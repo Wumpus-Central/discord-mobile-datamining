@@ -85,13 +85,13 @@ export const getRemoveModeratorTooltipHint = function getRemoveModeratorTooltipH
   if (RowType.OWNER === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t.icuNBM);
-  } else if (tmp.ADMINISTRATOR === arg0) {
+  } else if (RowType.ADMINISTRATOR === arg0) {
     const intl2 = util.intl;
     return intl2.string(util.t.eTmN5a);
   } else {
-    if (tmp.MEMBER !== arg0) {
-      if (tmp.ROLE !== arg0) {
-        if (tmp.EMPTY_STATE === arg0) {
+    if (RowType.MEMBER !== arg0) {
+      if (RowType.ROLE !== arg0) {
+        if (RowType.EMPTY_STATE === arg0) {
           return null;
         } else {
           return null;
@@ -127,7 +127,7 @@ export const getStageChannelMetadata = function getStageChannelMetadata(channel_
   return obj;
 };
 export const getParticipantNamesText = function getParticipantNamesText(channel, found) {
-  const set = new Set();
+  new Set();
   found = found.filter((user) => {
     const id = user.user.id;
     const hasItem = set.has(id);

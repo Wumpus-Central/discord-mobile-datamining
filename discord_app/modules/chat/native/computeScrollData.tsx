@@ -1,6 +1,7 @@
 // === Module 11270: computeScrollData ===
 
 // Module 11270 (computeScrollData)
+import Client from "Client" /* 4491 */;
 import NativeChatUtils from "NativeChatUtils" /* 11271 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
@@ -55,12 +56,12 @@ export default function computeScrollData(shouldInitialScroll) {
       const useReducedMotion = AccessibilityStore.useReducedMotion;
       let tmp10 = !useReducedMotion;
       if (!useReducedMotion) {
-        tmp10 = jumpType !== tmp7(4491).JumpType.INSTANT;
+        tmp10 = jumpType !== Client.JumpType.INSTANT;
       }
       obj.animate = tmp10;
       obj.highlight = scrollToMessageId === jumpTargetId;
       if (scrollPosition == null) {
-        scrollPosition = tmp7(11271).ChatScrollPosition.TOP;
+        scrollPosition = NativeChatUtils.ChatScrollPosition.TOP;
       }
       obj.position = scrollPosition;
       tmp4 = obj;

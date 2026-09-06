@@ -108,7 +108,7 @@ prototype["getForSKU"] = function getForSKU(arg0) {
   }
   return Array.from(items).map((item) => closure_1_10[item]);
 };
-prototype["getForSkuAndInterval"] = function getForSkuAndInterval(GUILD, interval, intervalCount) {
+prototype["getForSkuAndInterval"] = function getForSkuAndInterval(GUILD, interval) {
   closure_0 = interval;
   const forSKU = this.getForSKU(GUILD);
   return forSKU.find((id) => {

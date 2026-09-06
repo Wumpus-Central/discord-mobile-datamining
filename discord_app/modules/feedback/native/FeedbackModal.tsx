@@ -43,7 +43,7 @@ function FeedbackForm(result) {
     let obj6 = require("HelpdeskUtils");
     obj3.helpdeskURL = obj6.getSubmitRequestURL();
     obj2.children = intl3.format(tmp6(tmp7[6]).t.ybi2tD, obj3);
-    tmp8Result = tmp8(tmp6(tmp7[7]).Text, obj2);
+    tmp8Result = closure_7(tmp6(tmp7[7]).Text, obj2);
   }
   const items2 = [tmp8Result, ];
   const obj4 = { style: tmp.submitButton, children: null };

@@ -2,6 +2,7 @@
 
 // Module 11697 (MosaicMediaType)
 import Constants from "Constants" /* 1074 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 4710 */;
 import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 11698 */;
 import size from "module_2" /* 2 */;
@@ -32,12 +33,12 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
           if (height > 0) {
             let str3 = "IMAGE";
             if (!obj2.isImageFile(filename)) {
-              let tmp5Result = tmp5(4710);
+              let tmp5Result = MediaFormatTesters;
               let str5 = "INVALID";
               if (tmp5Result.isVideoFile(filename)) {
                 str5 = "INVALID";
                 if (null != proxy_url.proxy_url) {
-                  tmp5Result = tmp5(1384);
+                  tmp5Result = FlagUtils;
                   let num2 = proxy_url.flags;
                   if (num2 == null) {
                     num2 = 0;
@@ -86,10 +87,9 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
             if (tmpResult.isVideoContentType(contentType)) {
               return "VIDEO";
             }
-            tmpResult = tmp(4710);
+            tmpResult = MediaFormatTesters;
           }
           obj = MediaFormatTesters;
-          tmp = require;
         }
       }
     }

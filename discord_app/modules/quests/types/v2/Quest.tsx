@@ -3,9 +3,9 @@
 // Module 7711 (Quest)
 import Task from "Task" /* 7712 */;
 import Reward from "Reward" /* 7716 */;
+import CTA from "CTA" /* 7717 */;
 import size from "module_2" /* 2 */;
 
-const CTA = tmp(7717);
 const result = size.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 
 export const questFromServerV2 = function questFromServerV2(id) {

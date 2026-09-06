@@ -51,7 +51,7 @@ export default noop.memo(() => {
   obj.contentContainerStyle = obj;
   let tmp10Result = null;
   if (null != stateFromStores) {
-    const obj1 = { icon: tmp7(tmp3(4507).CopyIcon, {}), label: null, subLabel: null, onPress: null };
+    const obj1 = { icon: jsx(tmp3(4507).CopyIcon, {}), label: null, subLabel: null, onPress: null };
     first = stateFromStores;
     const found = items.find((value) => value.value === first.type);
     let label;
@@ -65,13 +65,13 @@ export default noop.memo(() => {
       ClipboardUtils.copy(first.id);
       const result = ToastUtils.presentCopiedToClipboard();
     };
-    const items1 = [tmp7(tmp3(5605).TableRow, obj1), , ];
-    let obj3 = { icon: tmp7(tmp3(15158).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11789).refreshBuildOverride, arrow: true };
-    items1[1] = tmp7(tmp3(5605).TableRow, obj3);
-    const obj4 = { icon: tmp7(tmp3(4518).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11789).clearBuildOverride, arrow: true };
-    items1[2] = tmp7(tmp3(5605).TableRow, obj4);
+    const items1 = [jsx(tmp3(5605).TableRow, { icon: jsx(tmp3(4507).CopyIcon, {}), label: null, subLabel: null, onPress: null }), , ];
+    let obj3 = { icon: jsx(tmp3(15158).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11789).refreshBuildOverride, arrow: true };
+    items1[1] = jsx(tmp3(5605).TableRow, { icon: jsx(tmp3(15158).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11789).refreshBuildOverride, arrow: true });
+    const obj4 = { icon: jsx(tmp3(4518).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11789).clearBuildOverride, arrow: true };
+    items1[2] = jsx(tmp3(5605).TableRow, { icon: jsx(tmp3(4518).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11789).clearBuildOverride, arrow: true });
     obj2.children = items1;
-    tmp10Result = tmp10(tmp3(5687).TableRowGroup, obj2);
+    tmp10Result = jsxs(tmp3(5687).TableRowGroup, { title: "Current Override", hasIcons: true, children: null });
   }
   const items2 = [tmp10Result, , , ];
   let str = "";
@@ -144,15 +144,15 @@ export default noop.memo(() => {
     onPress() {
       const type = first.type;
       if ("branch" === type) {
-        const result = build_overrides_BuildOverrideUtils.setBuildOverrideForBranch(tmp.id);
+        const result = build_overrides_BuildOverrideUtils.setBuildOverrideForBranch(first.id);
       } else if ("id" === type) {
-        const result1 = build_overrides_BuildOverrideUtils.setBuildOverrideForId(tmp.id);
+        const result1 = build_overrides_BuildOverrideUtils.setBuildOverrideForId(first.id);
       } else {
-        GlobalUtils.assertNever(tmp.type);
+        GlobalUtils.assertNever(first.type);
       }
     }
   });
   obj8.children = items2;
   obj.children = jsxs(first(4973).Stack, { spacing: 16, children: null });
-  return <tmp8 />;
+  return <ScrollView />;
 });

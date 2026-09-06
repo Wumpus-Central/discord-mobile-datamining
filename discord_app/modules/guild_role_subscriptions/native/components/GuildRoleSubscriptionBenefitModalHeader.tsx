@@ -55,7 +55,6 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   const obj2 = { style: tmp.titleContainer, children: null };
   const items2 = [timestampProducer(native.LegacyText, { style: tmp.title, accessibilityRole: "header", children: title }), ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", children: title };
-  const tmp3 = React5;
   items2[1] = timestampProducer(Text_Text.Text, { style: tmp.subtitle, variant: "text-xs/medium", color: "text-default", children: _slicedToArray(obj.useName(listingId), 1)[0] });
   obj2.children = items2;
   items1[1] = React5(View, obj2);
@@ -71,10 +70,10 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   }
   const obj6 = { style: items4, children: null };
   items4[1] = disabledButton;
-  const intl2 = tmp4(1114).intl;
+  const intl2 = util.intl;
   obj6.children = intl2.string(util.t["R3BPH+"]);
   obj5.children = timestampProducer(native.LegacyText, obj6);
   items1[2] = timestampProducer(TouchableHitBoxDefault, obj5);
   obj.children = items1;
-  return tmp3(common_SafeAreaView.SafeAreaPaddingView, obj);
+  return React5(common_SafeAreaView.SafeAreaPaddingView, obj);
 };

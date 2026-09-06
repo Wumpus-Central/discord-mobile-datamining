@@ -16,8 +16,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/MFA.tsx");
 
 export default function ConnectedMFA() {
-  let obj = arg0;
-  if (arg0 === undefined) {
+  let obj = size;
+  if (size === undefined) {
     obj = {};
   }
   ({ inContainer, isMultiAccount } = obj);
@@ -25,7 +25,7 @@ export default function ConnectedMFA() {
   if (inContainer) {
     inContainer = navigation(6944)();
   }
-  let tmpResult = tmp(504);
+  let tmpResult = isMultiAccount(504);
   const items = [AuthenticationStore];
   const items1 = [isMultiAccount];
   const stateFromStores = tmpResult.useStateFromStores(items, () => ({ ticket: AuthenticationStore.getMFATicket(), methods: AuthenticationStore.getMFAMethods() }), [], statesAreEqual);
@@ -57,9 +57,9 @@ export default function ConnectedMFA() {
       tmp13 = obj;
     }
     obj.headerRightContainerStyle = tmp13;
-    return jsx(tmp(15666).MFAModal, obj);
+    return jsx(isMultiAccount(15666).MFAModal, obj);
   } else {
-    tmpResult = tmp(1116);
+    tmpResult = isMultiAccount(1116);
     tmp4(576).space;
     const isAndroidResult = tmpResult.isAndroid();
     const space = { paddingLeft: null, paddingTop: null };
@@ -67,4 +67,5 @@ export default function ConnectedMFA() {
     space.paddingTop = tmp4(576).space.PX_12;
     const tmp11 = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
   }
+  const obj2 = isMultiAccount(1483);
 };

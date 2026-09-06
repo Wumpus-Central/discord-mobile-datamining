@@ -26,5 +26,5 @@ export default function VoicePanelAccessibilityView(pointerEvents) {
   obj.accessibilityViewIsModal = accessibilityViewIsModal;
   obj.onAccessibilityEscape = onAccessibilityEscape;
   const merged1 = Object.assign(merged);
-  return <closure_4 style={arg0.style} pointerEvents={str} nativeID={nativeID} accessibilityViewIsModal={null} onAccessibilityEscape={null} />;
+  return <closure_4 style={pointerEvents.style} pointerEvents={str} nativeID={nativeID} accessibilityViewIsModal={null} onAccessibilityEscape={null} />;
 };

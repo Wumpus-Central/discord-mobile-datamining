@@ -3,8 +3,10 @@
 // Module 15906 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14851 */;
 import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 15907 */;
 import noop from "module_19" /* 19 */;
 
@@ -52,15 +54,15 @@ let SettingBuilders = {
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
     let obj = ActivityPrivacyMatchingExperiment;
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
-      let tmp2Result = tmp2(14851);
+      let tmp2Result = ActivityPrivacyUpsellUtils;
       const affectedGuilds = tmp2Result.computeAffectedGuilds(setting, NumberResult);
       if (null != affectedGuilds) {
-        tmp2Result = tmp2(14851);
+        tmp2Result = ActivityPrivacyUpsellUtils;
         const activityRestrictionSettingName = tmp2Result.getActivityRestrictionSettingName(NumberResult);
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj.settingName = activityRestrictionSettingName;
-        ActionSheetActionCreatorsDefault.openLazy(tmp2(1896)(15908, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15908, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
       }
     }
   }

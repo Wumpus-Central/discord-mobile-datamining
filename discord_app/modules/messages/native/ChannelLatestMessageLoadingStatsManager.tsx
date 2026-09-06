@@ -30,13 +30,12 @@ prototype["finish"] = function finish(channelId) {
       const diff = Date.now() - latestChannelMessagesLoad.startMs;
       const hasItem = seenChannelIds2.has(channelId.channelId);
       if (!hasItem) {
-        const seenChannelIds = tmp10.seenChannelIds;
+        const seenChannelIds = ChannelLatestMessageLoadingStatsManager.seenChannelIds;
         seenChannelIds.add(channelId.channelId);
       }
       const obj = { load_duration_ms: diff, were_messages_cached: channelId.areMessagesCached, is_first_load: !hasItem };
       obj.trackClickstream(AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, obj);
       tmp.latestChannelMessagesLoad = undefined;
-      tmp10 = ChannelLatestMessageLoadingStatsManager;
       const tmp12 = !hasItem;
     }
   }

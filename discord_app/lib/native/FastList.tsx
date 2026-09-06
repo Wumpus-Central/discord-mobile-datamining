@@ -40,7 +40,7 @@ function FastListScrollWorklet(scrollViewRef) {
       const result1 = scrollPosValue.set(Math.min(tmp2, tmp3));
       if (null != onScrollWorklet) {
         const layoutMeasurement = contentOffset.layoutMeasurement;
-        tmp10(tmp2, tmp3, tmp ? layoutMeasurement.width : layoutMeasurement.height);
+        tmp10(tmp2, tmp3, horizontal ? layoutMeasurement.width : layoutMeasurement.height);
       }
     }
   };
@@ -297,21 +297,17 @@ prototype2["getChunk"] = function getChunk(arg0) {
 prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
   closure_0 = lastStartChunk;
   closure_1 = lastEndChunk;
-  let flag = arg3;
-  if (arg3 === undefined) {
-    flag = false;
-  }
   const self = this;
   getRecyclerKey = undefined;
   let items;
   let obj3;
   closure_6 = undefined;
   function addInitialSection(section, layoutStart, layoutSize, layoutStart2) {
-    let arr = items.push(obj3.get(obj.SECTION, layoutStart, layoutSize, getRecyclerKey(obj.SECTION, section), section));
+    let arr = items.push(obj3.get(obj3.SECTION, layoutStart, layoutSize, getRecyclerKey(obj3.SECTION, section), section));
     const sum = layoutStart + layoutSize;
     if (sum < layoutStart2) {
       closure_6 = closure_6 + 1;
-      arr = arr.push(obj.get(obj3.SPACER, sum, layoutStart2 - sum, undefined, 0, closure_6));
+      arr = arr.push(obj3.get(obj3.SPACER, sum, layoutStart2 - sum, undefined, 0, closure_6));
     }
   }
   function isVisible(layoutStart, layoutSize) {
@@ -385,23 +381,22 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
     if (null != item10103) {
       let data = tmp21.data;
       for (const item10107 of data) {
-        let tmp23 = item10107;
         if (item10107.layoutStart + item10107.layoutSize >= result1) {
-          let type4 = tmp23.type;
+          let type4 = item10107.type;
           let tmp224 = obj;
           if (obj.HEADER === type4) {
-            if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
-              arr = items.push(obj3.get(tmp224.HEADER, tmp23.layoutStart, tmp23.layoutSize, undefined));
+            if (isVisible(item10107.layoutStart, item10107.layoutSize)) {
+              arr = items.push(obj3.get(tmp224.HEADER, item10107.layoutStart, item10107.layoutSize, undefined));
             }
-            result1 = tmp23.layoutStart + tmp23.layoutSize;
+            result1 = item10107.layoutStart + item10107.layoutSize;
           } else if (tmp224.SECTION === type4) {
-            if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
+            if (isVisible(item10107.layoutStart, item10107.layoutSize)) {
               if (-1 === section2) {
-                ({ section: section2, section: section3 } = tmp23);
+                ({ section: section2, section: section3 } = item10107);
               } else {
-                section3 = tmp23.section;
+                section3 = item10107.section;
               }
-              let recyclerKey1 = getRecyclerKey(tmp224.SECTION, tmp23.section);
+              let recyclerKey1 = getRecyclerKey(tmp224.SECTION, item10107.section);
               let tmp104 = recyclerKey1;
               let hasItem = null != recyclerKey1;
               if (hasItem) {
@@ -410,23 +405,23 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
               if (hasItem) {
                 let deleteResult = map.delete(tmp104);
               }
-              arr = items.push(obj3.get(tmp224.SECTION, tmp23.layoutStart, tmp23.layoutSize, tmp104, tmp23.section));
+              arr = items.push(obj3.get(tmp224.SECTION, item10107.layoutStart, item10107.layoutSize, tmp104, item10107.section));
             }
-            result1 = tmp23.layoutStart + tmp23.layoutSize;
+            result1 = item10107.layoutStart + item10107.layoutSize;
           } else if (tmp224.ITEM === type4) {
-            if (null == tmp23.uniform) {
-              if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
+            if (null == item10107.uniform) {
+              if (isVisible(item10107.layoutStart, item10107.layoutSize)) {
                 if (0 === items.length) {
-                  let addInitialSectionResult = addInitialSection(tmp23.section, tmp23.sectionData.layoutStart, tmp23.sectionData.layoutSize, tmp23.layoutStart);
+                  let addInitialSectionResult = addInitialSection(item10107.section, item10107.sectionData.layoutStart, item10107.sectionData.layoutSize, item10107.layoutStart);
                 }
                 if (-1 === section2) {
-                  section2 = tmp23.section;
+                  section2 = item10107.section;
                 }
                 if (-1 === num) {
-                  num = tmp23.item;
+                  num = item10107.item;
                 }
-                ({ section: section3, item } = tmp23);
-                let recyclerKey2 = getRecyclerKey(tmp224.ITEM, tmp23.section, tmp23.item);
+                ({ section: section3, item } = item10107);
+                let recyclerKey2 = getRecyclerKey(tmp224.ITEM, item10107.section, item10107.item);
                 let tmp86 = recyclerKey2;
                 let hasItem1 = null != recyclerKey2;
                 if (hasItem1) {
@@ -435,34 +430,34 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
                 if (hasItem1) {
                   let deleteResult1 = map.delete(tmp86);
                 }
-                let arr1 = items.push(obj3.get(tmp224.ITEM, tmp23.layoutStart, tmp23.layoutSize, tmp86, tmp23.section, tmp23.item));
+                let arr1 = items.push(obj3.get(tmp224.ITEM, item10107.layoutStart, item10107.layoutSize, tmp86, item10107.section, item10107.item));
               }
-              result1 = tmp23.layoutStart + tmp23.layoutSize;
+              result1 = item10107.layoutStart + item10107.layoutSize;
             } else {
               let num3 = 0;
-              if (result1 > tmp23.layoutStart) {
+              if (result1 > item10107.layoutStart) {
                 let _Math = Math;
-                num3 = Math.floor((result1 - tmp23.layoutStart) / tmp23.itemSize);
+                num3 = Math.floor((result1 - item10107.layoutStart) / item10107.itemSize);
               }
               let sum2 = num3;
-              let sum = tmp23.layoutStart + tmp23.itemSize * num3;
+              let sum = item10107.layoutStart + item10107.itemSize * num3;
               result1 = sum;
               if (sum < bound * self.chunkSize) {
-                if (sum2 < tmp23.items) {
+                if (sum2 < item10107.items) {
                   while (true) {
-                    if (isVisible(result1, tmp23.itemSize)) {
+                    if (isVisible(result1, item10107.itemSize)) {
                       if (0 === items.length) {
-                        let addInitialSectionResult1 = addInitialSection(tmp23.section, tmp23.sectionData.layoutStart, tmp23.sectionData.layoutSize, result1);
+                        let addInitialSectionResult1 = addInitialSection(item10107.section, item10107.sectionData.layoutStart, item10107.sectionData.layoutSize, result1);
                       }
                       if (-1 === section2) {
-                        section2 = tmp23.section;
+                        section2 = item10107.section;
                       }
                       if (-1 === num) {
                         num = sum2;
                       }
-                      section3 = tmp23.section;
+                      section3 = item10107.section;
                       let tmp58 = obj;
-                      let recyclerKey3 = getRecyclerKey(obj.ITEM, tmp23.section, sum2);
+                      let recyclerKey3 = getRecyclerKey(obj.ITEM, item10107.section, sum2);
                       let tmp60 = recyclerKey3;
                       let hasItem2 = null != recyclerKey3;
                       if (hasItem2) {
@@ -471,15 +466,15 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
                       if (hasItem2) {
                         let deleteResult2 = map.delete(tmp60);
                       }
-                      let arr2 = items.push(obj3.get(tmp58.ITEM, result1, tmp23.itemSize, tmp60, tmp23.section, sum2));
+                      let arr2 = items.push(obj3.get(tmp58.ITEM, result1, item10107.itemSize, tmp60, item10107.section, sum2));
                     }
-                    let sum1 = result1 + tmp23.itemSize;
+                    let sum1 = result1 + item10107.itemSize;
                     result1 = sum1;
                     sum2 = sum2 + 1;
                     if (sum1 >= bound * self.chunkSize) {
                       break;
                     } else {
-                      if (sum2 < tmp23.items) {
+                      if (sum2 < item10107.items) {
                         continue;
                       } else {
                         break;
@@ -491,20 +486,20 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
               }
             }
           } else if (tmp224.SECTION_FOOTER === type4) {
-            if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
+            if (isVisible(item10107.layoutStart, item10107.layoutSize)) {
               if (0 === items.length) {
-                let addInitialSectionResult2 = addInitialSection(tmp23.section, tmp23.sectionData.layoutStart, tmp23.sectionData.layoutSize, tmp23.layoutStart);
+                let addInitialSectionResult2 = addInitialSection(item10107.section, item10107.sectionData.layoutStart, item10107.sectionData.layoutSize, item10107.layoutStart);
               }
               let SECTION_FOOTER = tmp224.SECTION_FOOTER;
-              let layoutStart = tmp23.layoutStart;
-              let arr3 = items.push(obj3.get(SECTION_FOOTER, layoutStart, tmp23.layoutSize, getRecyclerKey(tmp224.SECTION_FOOTER, tmp23.section), tmp23.section));
+              let layoutStart = item10107.layoutStart;
+              let arr3 = items.push(obj3.get(SECTION_FOOTER, layoutStart, item10107.layoutSize, getRecyclerKey(tmp224.SECTION_FOOTER, item10107.section), item10107.section));
             }
-            result1 = tmp23.layoutStart + tmp23.layoutSize;
+            result1 = item10107.layoutStart + item10107.layoutSize;
           } else if (tmp224.FOOTER === type4) {
-            if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
-              let arr4 = items.push(obj3.get(tmp224.FOOTER, tmp23.layoutStart, tmp23.layoutSize, undefined));
+            if (isVisible(item10107.layoutStart, item10107.layoutSize)) {
+              let arr4 = items.push(obj3.get(tmp224.FOOTER, item10107.layoutStart, item10107.layoutSize, undefined));
             }
-            result1 = tmp23.layoutStart + tmp23.layoutSize;
+            result1 = item10107.layoutStart + item10107.layoutSize;
           }
         }
         continue;
@@ -519,25 +514,24 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
   while (tmp121 !== undefined) {
     let tmp124 = obj3(tmp122, 2);
     [tmp125, tmp126] = tmp124;
-    let tmp127 = tmp126;
     if (tmp126.section < section2) {
-      num6 = num6 + tmp127.layoutSize;
-      let items3 = [tmp125, tmp127];
+      num6 = num6 + tmp126.layoutSize;
+      let items3 = [tmp125, tmp126];
       let arr5 = items1.push(items3);
-    } else if (tmp127.section > section3) {
-      num7 = num7 + tmp127.layoutSize;
-      let items4 = [tmp125, tmp127];
+    } else if (tmp126.section > section3) {
+      num7 = num7 + tmp126.layoutSize;
+      let items4 = [tmp125, tmp126];
       let arr6 = items2.push(items4);
-    } else if (tmp127.type === obj.ITEM) {
-      if (tmp127.section === section2) {
-        if (tmp127.item < num) {
-          num6 = num6 + tmp127.layoutSize;
-          let items5 = [tmp125, tmp127];
+    } else if (tmp126.type === obj.ITEM) {
+      if (tmp126.section === section2) {
+        if (tmp126.item < num) {
+          num6 = num6 + tmp126.layoutSize;
+          let items5 = [tmp125, tmp126];
           let arr7 = items1.push(items5);
         }
       }
-      num7 = num7 + tmp127.layoutSize;
-      let items6 = [tmp125, tmp127];
+      num7 = num7 + tmp126.layoutSize;
+      let items6 = [tmp125, tmp126];
       let arr8 = items2.push(items6);
     }
     continue;
@@ -652,9 +646,9 @@ prototype2["fullCompute"] = function fullCompute() {
   _require = num;
   self.headerDataCache = undefined;
   self.footerDataCache = undefined;
-  function pushData(arg0, arg1, type) {
-    closure_0 = closure_0 + (arg1 - arg0);
-    const bound = Math.max(Math.floor(arg0 / chunkSize), 0);
+  function pushData(_require, arg1, type) {
+    closure_0 = closure_0 + (arg1 - _require);
+    const bound = Math.max(Math.floor(_require / chunkSize), 0);
     const bound1 = Math.max(Math.floor(arg1 / chunkSize) - 1, bound);
     let chunk = self.getChunk(bound);
     if (null == chunk) {
@@ -663,9 +657,9 @@ prototype2["fullCompute"] = function fullCompute() {
       chunk = obj;
     }
     if (type.type === obj.HEADER) {
-      tmp3.headerDataCache = type;
+      self.headerDataCache = type;
     } else if (type.type === tmp7.FOOTER) {
-      tmp3.footerDataCache = type;
+      self.footerDataCache = type;
     }
     chunk.end = bound1;
     const data = chunk.data;
@@ -761,13 +755,12 @@ prototype2["getChunkDataFromSectionItem"] = function getChunkDataFromSectionItem
     let tmp3 = nextResult;
     let data = nextResult.data;
     for (const item10022 of data) {
-      let tmp6 = item10022;
       let type = item10022.type;
       if (obj.ITEM === type) {
         if (null != arg1) {
-          if (true === tmp6.uniform) {
-            if (tmp6.section === arg0) {
-              if (arg1 > tmp6.items) {
+          if (true === item10022.uniform) {
+            if (item10022.section === arg0) {
+              if (arg1 > item10022.items) {
                 obj.return();
                 iter.return();
               } else {
@@ -777,9 +770,9 @@ prototype2["getChunkDataFromSectionItem"] = function getChunkDataFromSectionItem
               }
             }
           }
-          if (null == tmp6.uniform) {
-            if (tmp6.section === arg0) {
-              if (tmp6.item === arg1) {
+          if (null == item10022.uniform) {
+            if (item10022.section === arg0) {
+              if (item10022.item === arg1) {
                 obj.return();
                 iter.return();
                 return tmp3;
@@ -789,7 +782,7 @@ prototype2["getChunkDataFromSectionItem"] = function getChunkDataFromSectionItem
         }
       } else {
         if (tmp7.SECTION === type) {
-          if (tmp6.section > arg0) {
+          if (item10022.section > arg0) {
             obj.return();
             iter.return();
           } else if (null != arg1) {
@@ -891,22 +884,19 @@ prototype2["computeScrollPosition"] = function computeScrollPosition(arg0, arg1,
       while (iter !== undefined) {
         let data = iter.next().data;
         for (const item10020 of data) {
-          let tmp7 = item10020;
           let type = item10020.type;
           if (obj.ITEM === type) {
             if (null != arg2) {
-              if (true === tmp7.uniform) {
-                if (tmp7.section === arg1) {
-                  if (arg2 > tmp7.items) {
+              if (true === item10020.uniform) {
+                if (item10020.section === arg1) {
+                  if (arg2 > item10020.items) {
                     obj.return();
                     iter.return();
                   } else {
-                    obj = { scrollPosition: null, size: null, sectionOffset: null };
-                    obj.scrollPosition = tmp7.sectionData.layoutStart + tmp7.sectionData.layoutSize + tmp7.itemSize * arg2;
-                    obj.size = tmp7.itemSize;
+                    obj = { scrollPosition: item10020.sectionData.layoutStart + item10020.sectionData.layoutSize + item10020.itemSize * arg2, size: item10020.itemSize, sectionOffset: null };
                     let num4 = 0;
                     if (arg0) {
-                      num4 = tmp7.sectionData.layoutSize;
+                      num4 = item10020.sectionData.layoutSize;
                     }
                     obj.sectionOffset = num4;
                     obj.return();
@@ -915,14 +905,14 @@ prototype2["computeScrollPosition"] = function computeScrollPosition(arg0, arg1,
                   }
                 }
               }
-              if (null == tmp7.uniform) {
-                if (tmp7.section === arg1) {
-                  if (tmp7.item === arg2) {
+              if (null == item10020.uniform) {
+                if (item10020.section === arg1) {
+                  if (item10020.item === arg2) {
                     obj = { scrollPosition: null, size: null, sectionOffset: null };
-                    ({ layoutStart: obj4.scrollPosition, layoutSize: obj4.size } = tmp7);
+                    ({ layoutStart: obj4.scrollPosition, layoutSize: obj4.size } = item10020);
                     let num3 = 0;
                     if (arg0) {
-                      num3 = tmp7.sectionData.layoutSize;
+                      num3 = item10020.sectionData.layoutSize;
                     }
                     obj.sectionOffset = num3;
                     obj.return();
@@ -934,14 +924,14 @@ prototype2["computeScrollPosition"] = function computeScrollPosition(arg0, arg1,
             }
           } else {
             if (tmp8.SECTION === type) {
-              if (tmp7.section > arg1) {
+              if (item10020.section > arg1) {
                 obj.return();
                 iter.return();
               } else {
                 if (null == arg2) {
-                  if (tmp7.section === arg1) {
+                  if (item10020.section === arg1) {
                     let obj1 = { scrollPosition: null, size: null, sectionOffset: 0 };
-                    ({ layoutStart: obj2.scrollPosition, layoutSize: obj2.size } = tmp7);
+                    ({ layoutStart: obj2.scrollPosition, layoutSize: obj2.size } = item10020);
                     obj.return();
                     iter.return();
                     return obj1;
@@ -1340,9 +1330,9 @@ class FastList extends PureComponent {
         }
         ({ scrollPosition, size, sectionOffset } = itemCoords);
         if (closure_0.containerSize > 0) {
-          let num3 = tmp.containerSize;
+          let num3 = closure_0.containerSize;
         } else {
-          num3 = tmp.props.chunkBase;
+          num3 = closure_0.props.chunkBase;
           if (num3 == null) {
             num3 = 0;
           }
@@ -1351,13 +1341,13 @@ class FastList extends PureComponent {
           orientation = "top";
         }
         if ("visible" === orientation) {
-          if (scrollPosition + sectionOffset >= tmp.scrollPos + num) {
-            if (scrollPosition + size <= tmp.scrollPos + (num3 - num2)) {
+          if (scrollPosition + sectionOffset >= closure_0.scrollPos + num) {
+            if (scrollPosition + size <= closure_0.scrollPos + (num3 - num2)) {
               return null;
             }
           }
           if (size <= num3) {
-            if (scrollPosition >= tmp.scrollPos) {
+            if (scrollPosition >= closure_0.scrollPos) {
               let diff = scrollPosition + size + num2 - num3;
             }
           }
@@ -1395,7 +1385,7 @@ class FastList extends PureComponent {
         tmp.handleViewabilityChange = function handleViewabilityChange() {
           const onViewableItemsChanged = closure_0.props.onViewableItemsChanged;
           if (null != onViewableItemsChanged) {
-            const sum = tmp.scrollPos + tmp.containerSize;
+            const sum = closure_0.scrollPos + closure_0.containerSize;
             const items = [];
             const iter = items[Symbol.iterator]();
             const nextResult = iter.next();
@@ -1418,9 +1408,8 @@ class FastList extends PureComponent {
                 continue;
               }
               obj = discord_common_shallowEqual;
-              let tmp19 = closure_0;
               if (!obj.areArraysShallowEqual(items, closure_0.previouslyViewableItems)) {
-                tmp19.previouslyViewableItems = items;
+                closure_0.previouslyViewableItems = items;
                 let result = onViewableItemsChanged(items);
               }
             }
@@ -1629,18 +1618,19 @@ class FastList extends PureComponent {
           }
           closure_0.containerSize = (horizontal ? layout.width : layout.height) - num - num2;
           if (null == chunkBase) {
-            fastListComputer.setInfo(obj.containerSize);
+            fastListComputer.setInfo(closure_0.containerSize);
           }
           if (onLayout != null) {
-            onLayout(nativeEvent, obj);
+            onLayout(nativeEvent, closure_0);
           }
           if (state.isFirstLayout) {
             if (null == chunkBase) {
-              obj.setState(obj.getInitialState(obj.containerSize, fastListComputer, false));
+              closure_0.setState(closure_0.getInitialState(closure_0.containerSize, fastListComputer, false));
             }
-            const result = obj.queueViewabilityChange();
+            const result = closure_0.queueViewabilityChange();
           }
-          const blocks = obj.computeBlocks();
+          const blocks = closure_0.computeBlocks();
+          const tmp = horizontal ? layout.width : layout.height;
         };
         tmp.handleMomentumScrollEnd = function handleMomentumScrollEnd(arg0) {
           const onScrollEnd = closure_0.props.onScrollEnd;
@@ -2118,123 +2108,71 @@ prototype4["renderItems"] = function renderItems() {
   const nextResult = iter.next();
   while (iter !== undefined) {
     ({ type, key, layoutStart, recyclerKey, layoutSize } = nextResult);
-    let tmp5 = layoutSize;
     ({ section, item } = nextResult);
     if (0 !== layoutSize) {
       let tmp45 = obj;
       if (obj.SPACER === type) {
-        obj = { horizontal: flag, layoutSize: null };
-        obj.layoutSize = tmp5;
+        obj = { horizontal: flag, layoutSize };
         let _HermesInternal7 = HermesInternal;
         let arr = items2.push(closure_11(closure_25, obj, "" + key));
       } else if (tmp45.HEADER === type) {
-        obj = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, debug: false, children: null };
-        obj.recyclerKey = recyclerKey;
-        obj.horizontal = flag;
-        obj.disableWrapper = tmp2;
-        obj.fastListInstance = self;
-        obj.layoutSize = tmp5;
+        obj = { recyclerKey, horizontal: flag, disableWrapper: tmp2, fastListInstance: self, layoutSize, debug: false, children: null };
         let fn6 = renderHeader;
-        let tmp33 = closure_11;
-        let tmp34 = closure_24;
         if (!tmp) {
           fn6 = () => renderHeader(...HermesBuiltin.copyRestArgs());
         }
         obj.children = fn6;
         let _HermesInternal6 = HermesInternal;
-        arr = items2.push(tmp33(tmp34, obj, "" + key));
+        arr = items2.push(closure_11(closure_24, obj, "" + key));
       } else if (tmp45.FOOTER === type) {
-        let obj1 = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, debug: false, children: null };
-        obj1.recyclerKey = recyclerKey;
-        obj1.horizontal = flag;
-        obj1.disableWrapper = tmp2;
-        obj1.fastListInstance = self;
-        obj1.layoutSize = tmp5;
+        let obj1 = { recyclerKey, horizontal: flag, disableWrapper: tmp2, fastListInstance: self, layoutSize, debug: false, children: null };
         let fn5 = renderFooter;
-        let tmp27 = closure_11;
-        let tmp28 = closure_24;
         if (!tmp) {
           fn5 = () => renderFooter(...HermesBuiltin.copyRestArgs());
         }
         obj1.children = fn5;
         let _HermesInternal5 = HermesInternal;
-        let arr1 = items2.push(tmp27(tmp28, obj1, "" + key));
+        let arr1 = items2.push(closure_11(closure_24, obj1, "" + key));
       } else if (tmp45.SECTION === type) {
         let arr2 = items1.shift();
         if ("default" !== str) {
-          let obj2 = { recyclerKey: null, horizontal: null, disableWrapper: null, layoutStart: null, layoutSize: null, fastListInstance: null, section: null, debug: false, children: null };
-          obj2.recyclerKey = recyclerKey;
-          obj2.horizontal = flag;
-          obj2.disableWrapper = tmp2;
-          obj2.layoutStart = layoutStart;
-          obj2.layoutSize = tmp5;
-          obj2.fastListInstance = self;
-          obj2.section = section;
+          let obj2 = { recyclerKey, horizontal: flag, disableWrapper: tmp2, layoutStart, layoutSize, fastListInstance: self, section, debug: false, children: null };
           let fn4 = renderSection;
-          let tmp19 = closure_11;
-          let tmp20 = closure_21;
           if (!tmp) {
             fn4 = () => renderSection(...HermesBuiltin.copyRestArgs());
           }
           obj2.children = fn4;
           let _HermesInternal4 = HermesInternal;
-          let arr3 = items2.push(tmp19(tmp20, obj2, "" + key));
+          let arr3 = items2.push(closure_11(closure_21, obj2, "" + key));
         } else {
-          let obj3 = { recyclerKey: null, horizontal: null, disableWrapper: null, layoutStart: null, layoutSize: null, nextSectionLayoutPosition: null, scrollPosValue: null, fastListInstance: null, section: null, debug: false, children: null };
-          obj3.recyclerKey = recyclerKey;
-          obj3.horizontal = flag;
-          obj3.disableWrapper = tmp2;
-          obj3.layoutStart = layoutStart;
-          obj3.layoutSize = tmp5;
-          obj3.nextSectionLayoutPosition = items1[0];
-          obj3.scrollPosValue = self.scrollPosValue;
-          obj3.fastListInstance = self;
-          obj3.section = section;
+          let obj3 = { recyclerKey, horizontal: flag, disableWrapper: tmp2, layoutStart, layoutSize, nextSectionLayoutPosition: items1[0], scrollPosValue: self.scrollPosValue, fastListInstance: self, section, debug: false, children: null };
           let fn3 = renderSection;
-          let tmp51 = closure_11;
-          let tmp52 = closure_20;
           if (!tmp) {
             fn3 = () => renderSection(...HermesBuiltin.copyRestArgs());
           }
           obj3.children = fn3;
           let _HermesInternal3 = HermesInternal;
-          let arr4 = items2.push(tmp51(tmp52, obj3, "" + key));
+          let arr4 = items2.push(closure_11(closure_20, obj3, "" + key));
         }
       } else if (tmp45.ITEM === type) {
-        obj = { recyclerKey: null, horizontal: null, disableWrapper: null, layoutSize: null, fastListInstance: null, section: null, item: null, debug: false, children: null };
-        obj.recyclerKey = recyclerKey;
-        obj.horizontal = flag;
-        obj.disableWrapper = tmp2;
-        obj.layoutSize = tmp5;
-        obj.fastListInstance = self;
-        obj.section = section;
+        obj = { recyclerKey, horizontal: flag, disableWrapper: tmp2, layoutSize, fastListInstance: self, section, item: null, debug: false, children: null };
         obj.item = item;
         let fn2 = renderItem;
-        let tmp8 = closure_11;
-        let tmp9 = closure_23;
         if (!tmp) {
           fn2 = () => renderItem(...HermesBuiltin.copyRestArgs());
         }
         obj.children = fn2;
         let _HermesInternal2 = HermesInternal;
-        let arr5 = items2.push(tmp8(tmp9, obj, "" + key));
+        let arr5 = items2.push(closure_11(closure_23, obj, "" + key));
       } else if (tmp45.SECTION_FOOTER === type) {
-        let obj4 = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, section: null, debug: false, children: null };
-        obj4.recyclerKey = recyclerKey;
-        obj4.horizontal = flag;
-        obj4.disableWrapper = tmp2;
-        obj4.fastListInstance = self;
-        obj4.layoutSize = tmp5;
-        obj4.section = section;
+        let obj4 = { recyclerKey, horizontal: flag, disableWrapper: tmp2, fastListInstance: self, layoutSize, section, debug: false, children: null };
         let fn = renderSectionFooter;
-        let tmp46 = closure_11;
-        let tmp47 = closure_22;
         if (!tmp) {
           fn = () => renderSectionFooter(...HermesBuiltin.copyRestArgs());
         }
         obj4.children = fn;
         let _HermesInternal = HermesInternal;
-        let arr6 = items2.push(tmp46(tmp47, obj4, "" + key));
+        let arr6 = items2.push(closure_11(closure_22, obj4, "" + key));
       }
     }
     continue;

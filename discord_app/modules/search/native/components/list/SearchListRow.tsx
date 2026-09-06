@@ -56,7 +56,7 @@ export const SearchListRow = noop.memo((accessibilityRole) => {
   let tmp7Result = label;
   if (typeof label === "string") {
     const obj2 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmpResult.text, children: label };
-    tmp7Result = tmp7(Text_Text.Text, obj2);
+    tmp7Result = hasOwnProperty(Text_Text.Text, obj2);
   }
   const items5 = [tmp7Result, subLabel];
   obj1.children = items5;
@@ -70,7 +70,7 @@ export const SearchListRow = noop.memo((accessibilityRole) => {
     const items6 = [tmpResult.extrasContainer];
     obj3.style = items6;
     obj3.children = extras;
-    tmp7Result = tmp7(tmp6, obj3);
+    tmp7Result = hasOwnProperty(View, obj3);
   }
   items1[2] = tmp7Result;
   obj.children = items1;

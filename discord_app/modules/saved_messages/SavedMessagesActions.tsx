@@ -12,7 +12,8 @@ let closure_6 = async function _upsertSavedMessage() {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: Endpoints.PUT_SAVED_MESSAGE(_require.channelId, _require.messageId), body: { due_at: null, source: null }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   ({ dueAt: obj8.due_at, source: obj8.source } = _require);
-  closure_129_0 = await HTTP.put(request);
+  await HTTP.put(request);
+  closure_129_0 = value;
   return closure_130_0(closure_130_2[4]).savedMessageCreateObjectToClient(closure_129_0.body);
 };
 let closure_7 = async function _deleteSavedMessage() {
@@ -31,7 +32,8 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
   obj1.rejectWithError = obj10.rejectWithMigratedError();
   await HTTP.get(obj1);
   await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: [] });
-  closure_128_0 = await "HermesInternal";
+  await "HermesInternal";
+  closure_128_0 = value;
   const results = closure_128_0.body.results;
   closure_128_1 = results.map((message) => {
     let messageRecord = null;

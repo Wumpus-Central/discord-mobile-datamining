@@ -3,15 +3,23 @@
 // Module 16458 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
+import GuildIcon from "GuildIcon" /* 5584 */;
+import TableRow from "TableRow" /* 5605 */;
 import useDesignToggleDefault from "useDesignToggle" /* 5626 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
+import ICYMIUtils from "ICYMIUtils" /* 8350 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 10998 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16459 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import ICYMIStore from "ICYMIStore" /* 8335 */;
 
-const GuildIconDefault = tmp5(5584);
+const GuildIconDefault = GuildIcon;
+
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -43,12 +51,12 @@ export default function ItemDetailsActionSheet(arg0) {
   });
   const tmp6 = useChannelNameDefault(stateFromStores, true);
   if (null != stateFromStores1) {
-    obj = { guild: stateFromStores1, size: tmp(5584).GuildIconSizes.LARGE };
+    obj = { guild: stateFromStores1, size: GuildIcon.GuildIconSizes.LARGE };
     let tmp9 = closure_7(GuildIconDefault, obj);
     const tmp5Result = GuildIconDefault;
   } else if (null != stateFromStores) {
-    obj = { size: tmp(1178).AvatarSizes.LARGE, channel: stateFromStores };
-    tmp9 = closure_7(tmp(1178).Avatar, obj);
+    obj = { size: native.AvatarSizes.LARGE, channel: stateFromStores };
+    tmp9 = closure_7(native.Avatar, obj);
   }
   let result = null != stateFromStores;
   const tmp8 = useDesignToggleDefault("show_icymi_debug_scores");
@@ -56,8 +64,8 @@ export default function ItemDetailsActionSheet(arg0) {
     result = null != stateFromStores1;
   }
   if (result) {
-    result = tmp(8350).isChannelCustomScoreEligible(stateFromStores);
-    const tmpResult = tmp(8350);
+    result = ICYMIUtils.isChannelCustomScoreEligible(stateFromStores);
+    const tmpResult = ICYMIUtils;
   }
   obj1 = { icon: tmp9, title: tmp6, subtitle: null };
   let str;
@@ -67,26 +75,26 @@ export default function ItemDetailsActionSheet(arg0) {
   if (str == null) {
     str = "";
   }
-  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(10998).ActionSheetIconHeader, obj1), children: null };
+  obj2 = { showGradient: true, startExpanded: true, header: closure_7(ActionSheetIconHeader.ActionSheetIconHeader, obj1), children: null };
   obj1.subtitle = str;
   let tmp16Result = result;
   if (result) {
     const obj3 = { channel: stateFromStores, guild: stateFromStores1 };
-    tmp16Result = tmp16(tmp(16459).ChannelScoreSettings, obj3);
+    tmp16Result = closure_7(ICYMIContentSettingControl.ChannelScoreSettings, obj3);
   }
   const items3 = [tmp16Result, , ];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
   if (tmp15Result) {
     if (result) {
       const obj4 = { style: tmp13.divider };
-      result = tmp16(View, obj4);
+      result = closure_7(View, obj4);
     }
     const obj5 = { children: null };
     const items4 = [result, ];
     const obj6 = { guild: stateFromStores1 };
-    items4[1] = tmp16(tmp(16459).GuildScoreSettings, obj6);
+    items4[1] = closure_7(ICYMIContentSettingControl.GuildScoreSettings, obj6);
     obj5.children = items4;
-    tmp15Result = tmp15(closure_8, obj5);
+    tmp15Result = closure_9(closure_8, obj5);
   }
   items3[1] = tmp15Result;
   tmp16Result = null;
@@ -97,8 +105,8 @@ export default function ItemDetailsActionSheet(arg0) {
       const obj8 = { label: `Total Score: ${tmp7.score}`, subLabel: null };
       const _JSON = JSON;
       obj8.subLabel = JSON.stringify(stateFromStores2.score_components);
-      obj7.children = tmp16(tmp(5605).TableRow, obj8);
-      tmp16Result = tmp16(tmp(5687).TableRowGroup, obj7);
+      obj7.children = closure_7(TableRow.TableRow, obj8);
+      tmp16Result = closure_7(TableRowGroup.TableRowGroup, obj7);
     }
   }
   items3[2] = tmp16Result;

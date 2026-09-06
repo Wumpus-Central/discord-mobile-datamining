@@ -2,6 +2,7 @@
 
 // Module 11249 (AvailableForumTag)
 import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import EmojiDefault from "Emoji" /* 7130 */;
 import native from "native" /* 8902 */;
@@ -55,10 +56,10 @@ export default function AvailableForumTag(tag) {
     const items = [];
     items.push(pill.pill);
     if (selected) {
-      items.push(tmp.pillSelected);
+      items.push(pill.pillSelected);
     }
     if (disabled) {
-      items.push(tmp.pillDisabled);
+      items.push(pill.pillDisabled);
     }
     return items;
   }, items1);
@@ -79,12 +80,12 @@ export default function AvailableForumTag(tag) {
         obj = { style: null, textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
         ({ emoji: obj3.style, textEmoji: obj3.textEmojiStyle, imageEmoji: obj3.fastImageStyle } = closure_4);
         let emojiURL;
-        if (null != tmp6) {
+        if (null != closure_8) {
           const obj1 = { id: null, animated: null, size: null };
-          ({ id: obj5.id, animated: obj5.animated } = tmp6);
+          ({ id: obj5.id, animated: obj5.animated } = closure_8);
           obj1.size = EMOJI_URL_BASE_SIZE;
-          emojiURL = tmp10(1396).getEmojiURL(obj1);
-          const tmp10Result = tmp10(1396);
+          emojiURL = AvatarUtilsDefault.getEmojiURL(obj1);
+          const tmp10Result = AvatarUtilsDefault;
         }
         obj.src = emojiURL;
         let str = c7;
@@ -93,7 +94,6 @@ export default function AvailableForumTag(tag) {
         }
         obj.name = str;
         tmp9Result = timestampProducer(EmojiDefault, obj);
-        tmp10 = importDefault;
       }
       const items = [tmp9Result, timestampProducer(Text_Text.Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children })];
       obj.children = items;

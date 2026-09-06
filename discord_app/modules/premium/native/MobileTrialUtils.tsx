@@ -1,10 +1,13 @@
 // === Module 7446: MobileTrialUtils ===
 
 // Module 7446 (MobileTrialUtils)
+import util from "util" /* 1114 */;
 import PremiumConstants from "PremiumConstants" /* 1373 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
+import PremiumUtils from "PremiumUtils" /* 4218 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7447 */;
+import AndroidTwoWeekTrialsExperiment from "AndroidTwoWeekTrialsExperiment" /* 13298 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = PremiumConstants.PremiumSubscriptionSKUToPremiumType;
@@ -47,16 +50,16 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = tmp(13298);
+    let tmpResult = AndroidTwoWeekTrialsExperiment;
     obj = { location: user_profile_premium_upsell_card };
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {
-      tmpResult = tmp(4218);
+      tmpResult = PremiumUtils;
       obj = { intervalType: null, intervalCount: null };
       ({ interval: obj3.intervalType, intervalCount: obj3.intervalCount } = subscriptionTrial);
       const result = tmpResult.formatIntervalDuration(obj);
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       const obj1 = { duration: result };
-      return intl.formatToPlainString(tmp(1114).t["6xpY54"], obj1);
+      return intl.formatToPlainString(util.t["6xpY54"], obj1);
     } else {
       return null;
     }

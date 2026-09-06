@@ -29,13 +29,13 @@ export default function useLoadGuildStickersWithCreator(arg0) {
         c4 = 3;
       } else if (arg0 === 1) {
         c4 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         v2("success");
         closure_128_0 = null;
         c3 = 0;
       }
-      return arg1;
+      return value;
     };
     const abortController = new AbortController();
     const signal = abortController.signal;

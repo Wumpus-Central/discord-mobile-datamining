@@ -3,6 +3,8 @@
 // Module 7690 (ApplicationCodedLink)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import CodedLink from "CodedLink" /* 4548 */;
+import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7691 */;
+import activityBookmarkUtils from "activityBookmarkUtils" /* 7692 */;
 import size from "module_2" /* 2 */;
 
 const items = [CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLink.CodedLinkType.ACTIVITY_BOOKMARK, CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, CodedLink.CodedLinkType.APP_OAUTH2_LINK];
@@ -21,10 +23,10 @@ export const isApplicationCodedLinkMobileSupported = function isApplicationCoded
 };
 export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
   if (CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
-    if (tmp(4548).CodedLinkType.APP_OAUTH2_LINK !== type) {
-      if (tmp(4548).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-        if (tmp(4548).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          let tmpResult = tmp(7691);
+    if (CodedLink.CodedLinkType.APP_OAUTH2_LINK !== type) {
+      if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+        if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
+          let tmpResult = storefrontMessageEmbedCodedLink;
           const result = tmpResult.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
@@ -33,9 +35,9 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
             tmp5 = obj;
           }
           return tmp5;
-        } else if (tmp(4548).CodedLinkType.ACTIVITY_BOOKMARK === type) {
+        } else if (CodedLink.CodedLinkType.ACTIVITY_BOOKMARK === type) {
           obj = { type, applicationId: code, params: null };
-          tmpResult = tmp(7692);
+          tmpResult = activityBookmarkUtils;
           obj.params = tmpResult.extractActivityBookmarkParams(url);
           return obj;
         }

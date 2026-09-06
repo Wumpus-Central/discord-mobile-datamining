@@ -64,6 +64,7 @@ export default noop.memo(noop.forwardRef((playerState, ref) => {
       const result = sharedValue.set(0);
       const result1 = sharedValue1.set(1);
     }
+    tmp3 = playerState !== obj.BUFFERING && playerState !== obj.PLAYING && playerState !== obj.ERRORED;
   }, items);
   const items1 = [onDataReceived, panGestureConfig];
   const items2 = [baseURL];
@@ -99,11 +100,10 @@ export default noop.memo(noop.forwardRef((playerState, ref) => {
   const items3 = [animatedStyle, { flex: 1 }];
   obj2.style = items3;
   const obj3 = {};
-  const tmp11 = closure_7;
   const tmp12 = sharedValue1;
   const tmp14 = onDataReceived;
   const tmp2 = closure_10();
-  const tmp3 = baseURL;
+  let tmp3 = baseURL;
   const merged1 = Object.assign(merged);
   obj3.injectedJavaScript = "" + injectedJavaScript + "\n" + str;
   obj3.bounces = false;
@@ -121,11 +121,11 @@ export default noop.memo(noop.forwardRef((playerState, ref) => {
     obj4 = { style: null, children: null };
     const items5 = [animatedStyle1, tmp2.loading];
     obj4.style = items5;
-    obj4.children = tmp13(sharedValue, { color: "white", size: "large" });
-    tmp13Result = tmp13(tmp14(tmp3[5]).View, obj4);
+    obj4.children = closure_6(sharedValue, { color: "white", size: "large" });
+    tmp13Result = closure_6(tmp14(tmp3[5]).View, obj4);
   }
   items4[1] = tmp13Result;
   obj1.children = items4;
-  return tmp11(tmp12, obj1);
+  return closure_7(tmp12, obj1);
 }));
 export { PlayerState };

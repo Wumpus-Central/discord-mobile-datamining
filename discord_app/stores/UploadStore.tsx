@@ -116,7 +116,7 @@ const uploadStore = new UploadStore(DispatcherDefault, {
         if (id.id === file.id) {
           const obj = {};
           const merged = Object.assign(id);
-          const merged1 = Object.assign(tmp);
+          const merged1 = Object.assign(file);
           tmp2 = obj;
         }
         return tmp2;
@@ -141,7 +141,7 @@ const uploadStore = new UploadStore(DispatcherDefault, {
         if (id.id === file.id) {
           const obj = {};
           const merged = Object.assign(id);
-          const merged1 = Object.assign(tmp);
+          const merged1 = Object.assign(file);
           tmp2 = obj;
         }
         return tmp2;
@@ -163,10 +163,10 @@ const uploadStore = new UploadStore(DispatcherDefault, {
     const id = channelId.file.id;
     let tmp5 = null != arr;
     if (tmp5) {
-      tmp4[channelId] = arr.filter((id) => id.id !== id);
+      dependencyMap[channelId] = arr.filter((id) => id.id !== id);
       delete tmp3[tmp2];
       delete tmp[tmp2];
-      tmp5 = arr.length !== tmp4[channelId].length;
+      tmp5 = arr.length !== dependencyMap[channelId].length;
     }
     return tmp5;
   },
@@ -175,10 +175,10 @@ const uploadStore = new UploadStore(DispatcherDefault, {
     const id = channelId.file.id;
     let tmp5 = null != arr;
     if (tmp5) {
-      tmp4[channelId] = arr.filter((id) => id.id !== id);
+      dependencyMap[channelId] = arr.filter((id) => id.id !== id);
       delete tmp3[tmp2];
       delete tmp[tmp2];
-      tmp5 = arr.length !== tmp4[channelId].length;
+      tmp5 = arr.length !== dependencyMap[channelId].length;
     }
     return tmp5;
   },
@@ -255,7 +255,7 @@ const uploadStore = new UploadStore(DispatcherDefault, {
         if (id.id === file.id) {
           const obj = {};
           const merged = Object.assign(id);
-          const merged1 = Object.assign(tmp);
+          const merged1 = Object.assign(file);
           tmp2 = obj;
         }
         return tmp2;

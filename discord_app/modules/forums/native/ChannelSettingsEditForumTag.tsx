@@ -102,11 +102,11 @@ export default function ChannelSettingsEditForumTag(channelId) {
   const stateFromStores = tmp3Result.useStateFromStores(items1, () => {
     let id;
     if (first != null) {
-      id = tmp.id;
+      id = first.id;
     }
     let usableCustomEmojiById = null;
     if (null != id) {
-      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp.id);
+      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(first.id);
     }
     return usableCustomEmojiById;
   });

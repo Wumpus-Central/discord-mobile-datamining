@@ -65,14 +65,13 @@ function recomputeGuild(guildId) {
                   set = new Set();
                   const roles2 = member.roles;
                   for (const item10071 of roles2) {
-                    let tmp22 = item10071;
                     let role1 = GuildRoleStore.getRole(guild.id, item10071);
                     let managed = null == role1;
                     if (!managed) {
                       managed = tmp25.managed;
                     }
                     if (!managed) {
-                      let addResult1 = set.add(tmp22);
+                      let addResult1 = set.add(item10071);
                     }
                     continue;
                   }
@@ -117,17 +116,17 @@ function recomputeGuild(guildId) {
                   let flag10 = false;
                   let flag11 = false;
                   if (!currentUser.isStaff()) {
-                    let tmp53 = guild.verificationLevel >= tmp49.MEDIUM;
+                    let tmp53 = guild.verificationLevel >= constants.MEDIUM;
                     if (tmp53) {
                       tmp53 = diff > 0;
                     }
-                    flag8 = guild.verificationLevel >= tmp49.HIGH && diff1 > 0;
+                    flag8 = guild.verificationLevel >= constants.HIGH && diff1 > 0;
                     flag9 = tmp53;
-                    flag10 = guild.verificationLevel >= tmp49.VERY_HIGH;
-                    flag11 = guild.verificationLevel >= tmp49.LOW && !currentUser.verified;
-                    const tmp51 = guild.verificationLevel >= tmp49.LOW && !currentUser.verified;
-                    const tmp52 = guild.verificationLevel >= tmp49.VERY_HIGH;
-                    const tmp54 = guild.verificationLevel >= tmp49.HIGH && diff1 > 0;
+                    flag10 = guild.verificationLevel >= constants.VERY_HIGH;
+                    flag11 = guild.verificationLevel >= constants.LOW && !currentUser.verified;
+                    const tmp51 = guild.verificationLevel >= constants.LOW && !currentUser.verified;
+                    const tmp52 = guild.verificationLevel >= constants.VERY_HIGH;
+                    const tmp54 = guild.verificationLevel >= constants.HIGH && diff1 > 0;
                   }
                   flag2 = flag8;
                   flag3 = flag9;
@@ -189,11 +188,11 @@ function recomputeGuild(guildId) {
             obj.timeoutRef = timerId;
             closure_14[guildId] = obj;
           } else {
+            require("FlagUtils");
             let num = member.flags;
             if (num == null) {
               num = 0;
             }
-            const obj2 = require("FlagUtils");
           }
         }
       }

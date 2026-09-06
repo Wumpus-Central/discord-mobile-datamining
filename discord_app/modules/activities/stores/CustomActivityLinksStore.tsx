@@ -23,6 +23,7 @@ const customActivityLinksStore = new CustomActivityLinksStore(DispatcherDefault,
       dependencyMap[applicationId] = Object.create(null);
     }
     dependencyMap[applicationId][link.link_id] = new CustomActivityLinkRecord(link);
+    const tmp3 = new CustomActivityLinkRecord(link);
   },
   LOGOUT: function handleLogout() {
     closure_1 = {};

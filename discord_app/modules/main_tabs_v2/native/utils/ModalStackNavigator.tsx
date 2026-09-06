@@ -56,7 +56,7 @@ export default noop.memo(function ModalStackNavigator(children) {
     }
     obj.orientation = str;
     return obj;
-  }}>{arg0.render}</closure_4.Screen>;
+  }}>{children.render}</closure_4.Screen>;
   return <closure_4.Navigator name={screenKey} options={function options() {
     const obj = { title, orientation: null };
     let str;
@@ -65,5 +65,5 @@ export default noop.memo(function ModalStackNavigator(children) {
     }
     obj.orientation = str;
     return obj;
-  }}>{arg0.render}</closure_4.Navigator>;
+  }}>{children.render}</closure_4.Navigator>;
 });

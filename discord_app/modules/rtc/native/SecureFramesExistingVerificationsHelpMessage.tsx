@@ -3,6 +3,8 @@
 // Module 9163 (SecureFramesExistingVerificationsHelpMessage)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9164 */;
 import createStyles from "createStyles" /* 4560 */;
 import size from "module_2" /* 2 */;
@@ -21,12 +23,12 @@ export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
     obj = { style: null, children: null };
     const items = [tmp.container, style];
     obj.style = items;
-    obj = { messageType: tmp2(1178).HelpMessageTypes.INFO, children: null };
-    const intl = tmp2(1114).intl;
+    obj = { messageType: native.HelpMessageTypes.INFO, children: null };
+    const intl = util.intl;
     const obj1 = { count: secureFramesUserVerifiedKeysCount };
-    obj.children = intl.format(tmp2(1114).t.uZDkz0, obj1);
-    obj.children = jsx(tmp2(1178).HelpMessage, { messageType: tmp2(1178).HelpMessageTypes.INFO, children: null });
-    tmp5 = <View messageType={tmp2(1178).HelpMessageTypes.INFO}>{null}</View>;
+    obj.children = intl.format(util.t.uZDkz0, obj1);
+    obj.children = jsx(native.HelpMessage, { messageType: native.HelpMessageTypes.INFO, children: null });
+    tmp5 = <View messageType={native.HelpMessageTypes.INFO}>{null}</View>;
   }
   return tmp5;
 };

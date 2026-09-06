@@ -23,6 +23,7 @@ obj.awaitOnline = function awaitOnline() {
       if (!c3) {
         c3 = true;
         tmp(1462).default.addOnlineCallback(whenOnline);
+        const _default2 = tmp(1462).default;
       }
     }
     _default = whenOnline(1462).default;

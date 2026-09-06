@@ -5,7 +5,7 @@ import util from "util" /* 1114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_9 = async function _handleEnableSystemNotification(arg0, value) {
+let closure_9 = async function _handleEnableSystemNotification() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

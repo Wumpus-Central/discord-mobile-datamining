@@ -44,7 +44,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
   _slicedToArray = tmp8;
   [tmp10, c5] = _slicedToArray(noop.useState(false), 2);
   const items1 = [value, tmp7[1], onFormSubmit, onSuccess];
-  const callback = noop.useCallback(value(function*(arg0, value) {
+  const callback = noop.useCallback(value(function*() {
     if (v32 === 2) {
       v32 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -160,7 +160,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         obj3 = { key: "USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", content: null };
         const intl = onFormSubmit(tmp33[12]).intl;
@@ -169,7 +169,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
         c3 = 0;
         tmp3(tmp33[15]);
       }
-      return arg1;
+      return value;
     });
     items2[3] = closure_11(tmp2(tmp3[14]).LinkButton, obj4);
     obj.children = items2;

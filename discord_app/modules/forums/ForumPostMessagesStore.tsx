@@ -204,6 +204,7 @@ const forumPostMessagesStore = new ForumPostMessagesStore(DispatcherDefault, {
           const merged = Object.assign(tmp3);
           obj.firstMessage = firstMessage.addReactionBatch(tmp2, id);
           dependencyMap[channelId] = obj;
+          const addReactionBatchResult = firstMessage.addReactionBatch(tmp2, id);
         }
       }
     }

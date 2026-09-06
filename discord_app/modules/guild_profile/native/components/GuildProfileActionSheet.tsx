@@ -112,4 +112,5 @@ export default function GuildProfileActionSheet(guildId) {
   tmp19 = closure_10(closure_4, { style: tmp.loadingContainer, children: closure_10(closure_5, { animating: true, size: "large" }) });
   tmp18 = null;
   tmp20 = closure_10;
+  const obj9 = { style: tmp.loadingContainer, children: closure_10(closure_5, { animating: true, size: "large" }) };
 };

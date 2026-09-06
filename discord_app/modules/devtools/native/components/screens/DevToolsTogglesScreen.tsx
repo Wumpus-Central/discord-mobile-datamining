@@ -18,11 +18,10 @@ function fuzzySearchToggle(str, str2, str3) {
     let tmp3ResultResult = fuzzysearchDefault(formatted, str2.toLowerCase());
     if (!tmp3ResultResult) {
       const formatted1 = str.toLowerCase();
-      tmp3ResultResult = tmp3(5517)(formatted1, str3.toLowerCase());
-      const tmp3Result = tmp3(5517);
+      tmp3ResultResult = fuzzysearchDefault(formatted1, str3.toLowerCase());
+      const tmp3Result = fuzzysearchDefault;
     }
     tmp = tmp3ResultResult;
-    tmp3 = importDefault;
   }
   return tmp;
 }
@@ -98,15 +97,14 @@ export default function DevToolsTogglesScreen() {
     [str, , str2] = item;
     let tmp = 0 === length.length;
     if (!tmp) {
-      const formatted = str3.toLowerCase();
+      const formatted = length.toLowerCase();
       let tmp2ResultResult = fuzzysearchDefault(formatted, str.toLowerCase());
       if (!tmp2ResultResult) {
-        const formatted1 = str3.toLowerCase();
-        tmp2ResultResult = tmp2(5517)(formatted1, str2.toLowerCase());
-        const tmp2Result = tmp2(5517);
+        const formatted1 = length.toLowerCase();
+        tmp2ResultResult = fuzzysearchDefault(formatted1, str2.toLowerCase());
+        const tmp2Result = fuzzysearchDefault;
       }
       tmp = tmp2ResultResult;
-      tmp2 = importDefault;
     }
     return tmp;
   }), items1, query(504).statesWillNeverBeEqual);
@@ -148,7 +146,7 @@ export default function DevToolsTogglesScreen() {
           }, tmp);
         })
     };
-    tmp7Result = tmp7(query(5687).TableRowGroup, obj4);
+    tmp7Result = closure_9(query(5687).TableRowGroup, obj4);
   }
   const obj5 = { spacing: 16, children: null };
   items4[1] = tmp7Result;

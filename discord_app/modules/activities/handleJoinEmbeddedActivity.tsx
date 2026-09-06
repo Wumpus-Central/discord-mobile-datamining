@@ -9,7 +9,7 @@ import UserStore from "UserStore" /* 1371 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 const require = fn;
-let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0, value) {
+let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

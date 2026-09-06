@@ -44,7 +44,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelUI.tsx");
 
 export default function MediaPlaybackPanelUI() {
-  const tmp = closure_12();
+  let tmp = closure_12();
   _require = tmp;
   const tmp4 = useWindowDimensionsDefault();
   importDefault = tmp4;
@@ -90,7 +90,7 @@ export default function MediaPlaybackPanelUI() {
   fn2.__initData = disableHorizontalSafeAreas;
   const fn3 = function p(mode, current) {
     let obj = cheapWorkletShallowEqual;
-    if (!obj.cheapWorkletShallowEqual(mode, current)) {
+    if (!obj.cheapWorkletShallowEqual(mode, tmp)) {
       mode = mode.mode;
       if (MediaPlaybackPanelModes.PIP === mode) {
         ({ width, height } = mode.canShowPIP ? { width: 120, height: 120 } : { width: 0, height: 0 });
@@ -102,6 +102,7 @@ export default function MediaPlaybackPanelUI() {
         updateSharedValueIfChangedDefault(closure_1, obj);
       }
     }
+    tmp = current;
   };
   obj = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, MediaPlaybackPanelModes, updateSharedValueIfChanged: updateSharedValueIfChangedDefault, wrapperDimensions, wrapperOffset };
   fn3.__closure = obj;
@@ -341,4 +342,5 @@ export default function MediaPlaybackPanelUI() {
     }
   }
   maskEmptyElevation = tmp8.maskEmptyElevation;
+  const tmp5 = useContext(MediaPlaybackPanelStateContextDefault);
 };

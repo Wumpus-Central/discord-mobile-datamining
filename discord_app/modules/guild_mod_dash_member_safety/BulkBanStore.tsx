@@ -27,21 +27,19 @@ const bulkBanStore = new BulkBanStore(DispatcherDefault, {
   },
   GUILD_BULK_BAN_FAILED: function handleBulkBanFailed(guildId) {
     if (set.has(guildId.guildId)) {
-      obj.delete(guildId.guildId);
+      set.delete(guildId.guildId);
     } else {
       return false;
     }
-    obj = set;
   },
   GUILD_BULK_BAN_UPDATE: function handleBulkBanUpdate(guildId) {
     if (set.has(guildId.guildId)) {
-      obj.delete(guildId.guildId);
+      set.delete(guildId.guildId);
     } else {
       const _HermesInternal = HermesInternal;
       set1.add("" + guildId.guildId + ":" + AuthenticationStore.getId());
       return false;
     }
-    obj = set;
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
     set.clear();

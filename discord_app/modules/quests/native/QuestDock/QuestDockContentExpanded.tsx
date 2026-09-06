@@ -41,8 +41,7 @@ export default noop.memo(function QuestDockContentExpanded(children) {
     }
     size.opacity = spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS);
     const obj = { translateX: null };
-    const obj2 = windowDimensions;
-    obj.translateX = spring.withSpring((questDockWrapperSpecs.get().width - obj2.get().width) / 2, QUEST_DOCK_MODE_CHANGE_PHYSICS);
+    obj.translateX = spring.withSpring((questDockWrapperSpecs.get().width - windowDimensions.get().width) / 2, QUEST_DOCK_MODE_CHANGE_PHYSICS);
     const items = [obj];
     size.transform = items;
     return size;

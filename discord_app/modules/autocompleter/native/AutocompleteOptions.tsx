@@ -27,7 +27,7 @@ const executeCommand = apply.debounce(executeCommandDefault, fn(4999).AUTOCOMPLE
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
 
-export const getAutocompleteOptions = function getAutocompleteOptions(channel, arg1, setting) {
+export const getAutocompleteOptions = function getAutocompleteOptions(channel, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -124,14 +124,13 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       const TimestampAutocompleteMobileExperiment = channel(flag2[17]).TimestampAutocompleteMobileExperiment;
       const items = [];
       if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamps autocomplete" }).enabled) {
-        const result = tmp(tmp2[18]).queryTimestampSuggestions(str.trim());
+        const result = channel(flag2[18]).queryTimestampSuggestions(str.trim());
         const iter = result[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp10 = nextResult;
           if (null != nextResult.mention) {
-            let obj = { type: null, mention: null, description: null };
-            obj.type = constants.TIMESTAMP_MENTION;
+            let obj = { type: constants.TIMESTAMP_MENTION, mention: null, description: null };
             ({ mention: obj2.mention, description: obj2.description } = tmp10);
             let arr = items.push(obj);
           }
@@ -141,8 +140,6 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       } else {
         return items;
       }
-      tmp = channel;
-      tmp2 = flag2;
     },
     matches() {
       return false;
@@ -268,7 +265,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               let items5 = items;
             }
             let items1 = [];
-            if (flag2) {
+            if (tmp) {
               let hasLoadedStickerPacks = c20;
               if (!c20) {
                 hasLoadedStickerPacks = StickersStore.hasLoadedStickerPacks;
@@ -311,6 +308,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
           }
         }
         items5 = [];
+        tmp = flag2;
       },
       matches(arg0, arr) {
         let tmp2 = arg0 === closure_1_13;

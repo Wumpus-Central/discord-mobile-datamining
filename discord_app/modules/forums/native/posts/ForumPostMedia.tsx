@@ -78,13 +78,13 @@ function ForumPostMedia(obscureReason) {
     if (tmp3Result.isAndroid()) {
       obj = {};
       const merged1 = Object.assign(obscureReason);
-      tmp6Result = tmp6(ForumPostMediaAndroid, obj);
-      tmp12 = tmp6;
+      tmp6Result = closure_10(ForumPostMediaAndroid, obj);
+      tmp12 = closure_10;
     } else {
       const obj1 = {};
       const merged2 = Object.assign(obscureReason);
-      tmp6Result = tmp6(ForumPostMediaIOS, obj1);
-      tmp12 = tmp6;
+      tmp6Result = closure_10(ForumPostMediaIOS, obj1);
+      tmp12 = closure_10;
     }
     tmp3Result = tmp3(1115);
   }
@@ -199,14 +199,13 @@ export const ForumPostMediaThumbnail = function ForumPostMediaThumbnail(firstMes
   let obj2 = noop;
   const obj3 = isLocalDeviceMedia(media[18]);
   const tmp2 = media;
-  const tmp4 = isLocalDeviceMedia;
   [flag, tmp6] = onTapMedia(isLocalDeviceMedia(media[18]).useShouldObscure({ media, channel }), 2);
   const tmp5 = onTapMedia(isLocalDeviceMedia(media[18]).useShouldObscure({ media, channel }), 2);
   let str = "light";
   if (obj4.isThemeDark(ThemeStore.theme)) {
     str = "dark";
   }
-  const GifAutoPlay = tmp4(tmp2[20]).GifAutoPlay;
+  const GifAutoPlay = isLocalDeviceMedia(tmp2[20]).GifAutoPlay;
   let tmp7 = "png";
   if (GifAutoPlay.useSetting()) {
     tmp7 = null;
@@ -258,7 +257,6 @@ export const ForumPostGridMedia = function ForumPostGridMedia(targetWidth) {
   noop = undefined;
   let obj = media(targetHeight[18]);
   const tmp = closure_15();
-  const tmp2 = media;
   const tmp3 = targetHeight;
   [flag, tmp5] = _slicedToArray(obj.useShouldObscure({ media, channel }), 2);
   const tmp4 = _slicedToArray(obj.useShouldObscure({ media, channel }), 2);
@@ -266,7 +264,7 @@ export const ForumPostGridMedia = function ForumPostGridMedia(targetWidth) {
   if (obj2.isThemeDark(ThemeStore.theme)) {
     str = "dark";
   }
-  const GifAutoPlay = tmp2(tmp3[20]).GifAutoPlay;
+  const GifAutoPlay = media(tmp3[20]).GifAutoPlay;
   let tmp6 = "png";
   if (GifAutoPlay.useSetting()) {
     tmp6 = null;

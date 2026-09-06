@@ -8,7 +8,7 @@ import size from "module_2" /* 2 */;
 const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");
 
-export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message, roleStyle, useReducedMotion) {
+export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message, roleStyle) {
   closure_0 = message;
   closure_1 = roleStyle;
   let flag = useReducedMotion;

@@ -118,10 +118,10 @@ function RTCConnect() {
     const obj = { channelType: type, guildId, connected: state === constants.RTC_CONNECTED, connectHasStarted: null, awaitingRemote: null, connectedRemote: null };
     let tmp6 = !wasEverRtcConnected;
     if (!wasEverRtcConnected) {
-      tmp6 = state !== tmp5.DISCONNECTED;
+      tmp6 = state !== constants.DISCONNECTED;
     }
     if (!tmp6) {
-      tmp6 = state === tmp5.RTC_CONNECTED;
+      tmp6 = state === constants.RTC_CONNECTED;
     }
     obj.connectHasStarted = tmp6;
     obj.awaitingRemote = null != GameConsoleStore.getAwaitingRemoteSessionInfo();
@@ -481,13 +481,13 @@ function ActivitySounds() {
     } else {
       embeddedActivitiesForChannel = NO_ACTIVITIES;
     }
-    let tmp4Result = tmp4(tmp5[25]);
+    let tmp4Result = items(f104008[25]);
     if (tmp4Result.isNotNullish(voiceChannelId)) {
       let embeddedActivitiesForChannel1 = obj.getEmbeddedActivitiesForChannel(voiceChannelId);
     } else {
       embeddedActivitiesForChannel1 = NO_ACTIVITIES;
     }
-    tmp4Result = tmp4(tmp5[25]);
+    tmp4Result = items(f104008[25]);
     if (tmp4Result.isNotNullish(embeddedActivityLocationChannelId)) {
       let embeddedActivitiesForChannel2 = obj.getEmbeddedActivitiesForChannel(embeddedActivityLocationChannelId);
     } else {
@@ -514,8 +514,8 @@ function ActivitySounds() {
     }
     let result1 = null != tmp13Result;
     if (result1) {
-      result1 = tmp4(tmp5[26]).isVibegrationsChannelCandidate(channel.getChannel(tmp13Result), "ActivitySounds");
-      const tmp4Result2 = tmp4(tmp5[26]);
+      result1 = items(f104008[26]).isVibegrationsChannelCandidate(channel.getChannel(tmp13Result), "ActivitySounds");
+      const tmp4Result2 = items(f104008[26]);
     }
     if (!result1) {
       result1 = result;
@@ -529,7 +529,7 @@ function ActivitySounds() {
     const someResult = voiceChannelActivities.some((applicationId) => {
       applicationId = undefined;
       if (userConnectedActivity != null) {
-        applicationId = tmp.applicationId;
+        applicationId = userConnectedActivity.applicationId;
       }
       return applicationId.applicationId === applicationId && applicationId.launchId === userConnectedActivity.launchId;
     });
@@ -546,7 +546,7 @@ function ActivitySounds() {
       });
       let isNotNullishResult = voiceChannelActivities.voiceChannelActivities.length < voiceChannelActivities.length;
       if (isNotNullishResult) {
-        let tmp2Result = tmp2(tmp3[25]);
+        let tmp2Result = items(f104008[25]);
         isNotNullishResult = tmp2Result.isNotNullish(voiceChannelActivities.voiceChannelId);
       }
       let str2;
@@ -555,7 +555,7 @@ function ActivitySounds() {
       }
       let isNotNullishResult1 = undefined === found1;
       if (isNotNullishResult1) {
-        tmp2Result = tmp2(tmp3[25]);
+        tmp2Result = items(f104008[25]);
         isNotNullishResult1 = tmp2Result.isNotNullish(found);
       }
       if (isNotNullishResult1) {
@@ -563,8 +563,8 @@ function ActivitySounds() {
       }
       let isNotNullishResult2 = undefined === found;
       if (isNotNullishResult2) {
-        isNotNullishResult2 = tmp2(tmp3[25]).isNotNullish(found1);
-        const tmp2Result1 = tmp2(tmp3[25]);
+        isNotNullishResult2 = items(f104008[25]).isNotNullish(found1);
+        const tmp2Result1 = items(f104008[25]);
       }
       if (isNotNullishResult2) {
         isNotNullishResult2 = found1.userIds.size > 1;
@@ -572,10 +572,10 @@ function ActivitySounds() {
       if (isNotNullishResult2) {
         str2 = "activity_user_join";
       }
-      let isNotNullishResult3 = tmp2(tmp3[25]).isNotNullish(found1);
+      let isNotNullishResult3 = items(f104008[25]).isNotNullish(found1);
       if (isNotNullishResult3) {
-        isNotNullishResult3 = tmp2(tmp3[25]).isNotNullish(found);
-        const tmp2Result3 = tmp2(tmp3[25]);
+        isNotNullishResult3 = items(f104008[25]).isNotNullish(found);
+        const tmp2Result3 = items(f104008[25]);
       }
       str = str2;
       if (isNotNullishResult3) {
@@ -587,7 +587,7 @@ function ActivitySounds() {
         }
         str = str2;
       }
-      const tmp2Result2 = tmp2(tmp3[25]);
+      const tmp2Result2 = items(f104008[25]);
     }
     let str3 = str;
     if (!someResult) {
@@ -597,16 +597,16 @@ function ActivitySounds() {
       const userConnectedActivity2 = voiceChannelActivities.userConnectedActivity;
       let isNotNullishResult4 = null == userConnectedActivity;
       if (isNotNullishResult4) {
-        isNotNullishResult4 = tmp2(tmp3[25]).isNotNullish(userConnectedActivity2);
-        const tmp2Result4 = tmp2(tmp3[25]);
+        isNotNullishResult4 = items(f104008[25]).isNotNullish(userConnectedActivity2);
+        const tmp2Result4 = items(f104008[25]);
       }
       if (isNotNullishResult4) {
         str = "activity_end";
       }
-      let isNotNullishResult5 = tmp2(tmp3[25]).isNotNullish(userConnectedActivity);
+      let isNotNullishResult5 = items(f104008[25]).isNotNullish(userConnectedActivity);
       if (isNotNullishResult5) {
-        isNotNullishResult5 = tmp2(tmp3[25]).isNotNullish(userConnectedActivity2);
-        const tmp2Result6 = tmp2(tmp3[25]);
+        isNotNullishResult5 = items(f104008[25]).isNotNullish(userConnectedActivity2);
+        const tmp2Result6 = items(f104008[25]);
       }
       str3 = str;
       if (isNotNullishResult5) {
@@ -619,7 +619,7 @@ function ActivitySounds() {
         str3 = str;
       }
       tmp10 = voiceChannelActivities.connectedChannelActivities.length < connectedChannelActivities.length && voiceChannelActivities.channelActivities.length < channelActivities.length;
-      const tmp2Result5 = tmp2(tmp3[25]);
+      const tmp2Result5 = items(f104008[25]);
     }
     let tmp14 = null != str3;
     if (!tmp14) {

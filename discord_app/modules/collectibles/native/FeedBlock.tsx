@@ -102,8 +102,8 @@ export default function _default(feedBlock) {
     };
     const intl2 = tmp(1114).intl;
     obj3["aria-label"] = intl2.string(tmp(1114).t.hvVgAZ);
-    obj3.children = tmp12(tmp(4515).CircleInformationIcon, { size: "xs" });
-    isPersonalized = tmp12(tmp(5123).PressableOpacity, obj3);
+    obj3.children = closure_11(tmp(4515).CircleInformationIcon, { size: "xs" });
+    isPersonalized = closure_11(tmp(5123).PressableOpacity, obj3);
   }
   function goToShopAll() {
     feedBlock(paths[15]);
@@ -122,7 +122,7 @@ export default function _default(feedBlock) {
     const obj4 = { onPress: goToShopAll, text: null, variant: "primary", size: "sm" };
     const intl3 = tmp(1114).intl;
     obj4.text = intl3.string(tmp(1114).t.xFcotU);
-    tmp12Result = tmp12(tmp(4975).Button, obj4);
+    tmp12Result = closure_11(tmp(4975).Button, obj4);
   }
   items5[1] = tmp12Result;
   obj1.children = items5;
@@ -145,20 +145,20 @@ export default function _default(feedBlock) {
       obj8.source = obj9;
       feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
       obj8.style = feedFooterOrbImage;
-      tmp12Result = tmp12(closure_4, obj8);
+      tmp12Result = closure_11(closure_4, obj8);
     } else {
       if (tmpResult.isAndroid()) {
         const obj10 = { url: null, autoplay: true, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
         tmp5Result = tmp5(8809);
         obj10.url = tmp5(15833);
         obj10.style = feedFooterOrbImage.feedFooterOrbImage;
-        tmp12Result = tmp12(tmp5Result, obj10);
+        tmp12Result = closure_11(tmp5Result, obj10);
       } else {
         const obj11 = { source: null, enableAnimation: true, resizeMode: "contain", style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
         const obj12 = { uri: tmp5(15833) };
         obj11.source = obj12;
         obj11.style = feedFooterOrbImage.feedFooterOrbImage;
-        tmp12Result = tmp12(tmp5(5587), obj11);
+        tmp12Result = closure_11(tmp5(5587), obj11);
         const tmp5Result1 = tmp5(5587);
       }
       tmpResult = tmp(1115);
@@ -174,11 +174,12 @@ export default function _default(feedBlock) {
       obj13.style = feedFooterOrbImage.feedFooterImage;
       tmp18 = obj13;
     }
-    items7[2] = tmp12(closure_4, tmp18);
+    items7[2] = closure_11(closure_4, tmp18);
     obj5.children = items7;
-    items6[2] = tmp13(tmp14, obj5);
+    items6[2] = closure_12(closure_5, obj5);
     obj.children = items6;
-    obj.children = tmp13(tmp14, obj);
-    return tmp12(tmp(7162).AnalyticsLocationProvider, obj);
+    obj.children = closure_12(closure_5, obj);
+    return closure_11(tmp(7162).AnalyticsLocationProvider, obj);
   }
+  const tmp10 = stateFromStores1(7162);
 };

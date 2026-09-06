@@ -65,11 +65,11 @@ export default function HelpMessage(children) {
   const items = [tmp3.container, , ];
   if (ColorUtils.WARNING === messageType) {
     let successContainer = tmp3.warningContainer;
-  } else if (tmp6.INFO === messageType) {
+  } else if (ColorUtils.INFO === messageType) {
     successContainer = tmp3.infoContainer;
-  } else if (tmp6.ERROR === messageType) {
+  } else if (ColorUtils.ERROR === messageType) {
     successContainer = tmp3.errorContainer;
-  } else if (tmp6.SUCCESS === messageType) {
+  } else if (ColorUtils.SUCCESS === messageType) {
     successContainer = tmp3.successContainer;
   }
   let obj = { style: items, children: null };
@@ -79,13 +79,13 @@ export default function HelpMessage(children) {
   if (ColorUtils.WARNING === messageType) {
     obj = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
     let tmp7 = React4(CircleErrorIcon.CircleErrorIcon, obj);
-  } else if (tmp6.INFO === messageType) {
+  } else if (ColorUtils.INFO === messageType) {
     const obj1 = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
     tmp7 = React4(CircleInformationIcon.CircleInformationIcon, obj1);
-  } else if (tmp6.ERROR === messageType) {
+  } else if (ColorUtils.ERROR === messageType) {
     const obj2 = { color: nativeDefault.unsafe_rawColors.RED_400 };
     tmp7 = React4(CircleXIcon.CircleXIcon, obj2);
-  } else if (tmp6.SUCCESS === messageType) {
+  } else if (ColorUtils.SUCCESS === messageType) {
     const obj3 = { color: nativeDefault.unsafe_rawColors.GREEN_400 };
     tmp7 = React4(CircleCheckIcon.CircleCheckIcon, obj3);
   }

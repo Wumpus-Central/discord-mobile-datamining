@@ -103,7 +103,7 @@ export default function useGuildProfileEditForm() {
     id1 = selectedGuild.id;
   }
   obj = {
-    handleSubmit: obj6.useCallback(pendingPronouns(function*(arg0, value) {
+    handleSubmit: obj6.useCallback(pendingPronouns(function*() {
       closure_3 = tmp2;
       if (!closure_15) {
         if (null != stateFromStores) {

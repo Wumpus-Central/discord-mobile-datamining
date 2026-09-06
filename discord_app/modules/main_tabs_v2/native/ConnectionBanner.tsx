@@ -3,6 +3,7 @@
 // Module 16396 (ConnectionBanner)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
+import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useToken from "useToken" /* 4262 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
@@ -10,6 +11,8 @@ import Text_Text from "Text/Text" /* 4556 */;
 import spring from "spring" /* 4974 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import _modDef5664 from "module_5664" /* 5664 */;
+import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 16397 */;
+import ConnectionFineIcon from "ConnectionFineIcon" /* 16399 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13686 */;
@@ -26,15 +29,15 @@ function ConnectionBannerIcon(state) {
     obj = { size: "small", color: tmp6, style: tmp.spinner };
     obj.children = closure_1_12(hasOwnProperty, obj);
     return closure_1_12(timestampProducer, obj);
-  } else if (tmp7.NO_CONNECTION === state) {
+  } else if (constants.NO_CONNECTION === state) {
     const obj1 = { style: tmp.leadingSlot, children: null };
-    const obj2 = { size: "xs", color: tmp5(576).colors.INTERACTIVE_ICON_DEFAULT };
-    obj1.children = closure_1_12(tmp2(16397).ConnectionUnknownIcon, obj2);
+    const obj2 = { size: "xs", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
+    obj1.children = closure_1_12(ConnectionUnknownIcon.ConnectionUnknownIcon, obj2);
     return closure_1_12(timestampProducer, obj1);
-  } else if (tmp7.BACK_ONLINE === state) {
+  } else if (constants.BACK_ONLINE === state) {
     obj = { style: tmp.leadingSlot, children: null };
-    const obj3 = { size: "xs", color: tmp5(576).colors.ICON_FEEDBACK_POSITIVE };
-    obj.children = closure_1_12(tmp2(16399).ConnectionFineIcon, obj3);
+    const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
+    obj.children = closure_1_12(ConnectionFineIcon.ConnectionFineIcon, obj3);
     return closure_1_12(timestampProducer, obj);
   }
 }
@@ -48,14 +51,14 @@ function ConnectionBannerContent(state) {
   }
   obj = { variant: "text-sm/medium", color: str, maxFontSizeMultiplier: 1.5, children: null };
   if (constants.WAITING_FOR_NETWORK === state) {
-    const intl2 = tmp4(1114).intl;
-    let stringResult = intl2.string(tmp4(1114).t.XKk1gp);
-  } else if (tmp6.NO_CONNECTION === state) {
-    const intl = tmp4(1114).intl;
-    stringResult = intl.string(tmp4(1114).t.zPerw8);
-  } else if (tmp6.BACK_ONLINE === state) {
-    const intl3 = tmp4(1114).intl;
-    stringResult = intl3.string(tmp4(1114).t.j8lYE2);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.XKk1gp);
+  } else if (constants.NO_CONNECTION === state) {
+    const intl = util.intl;
+    stringResult = intl.string(util.t.zPerw8);
+  } else if (constants.BACK_ONLINE === state) {
+    const intl3 = util.intl;
+    stringResult = intl3.string(util.t.j8lYE2);
   }
   obj.children = stringResult;
   items[1] = closure_1_12(Text_Text.Text, obj);
@@ -100,8 +103,7 @@ function ConnectionBannerInner() {
   }
   let tmp2Result = tmp2(tmp3[15]);
   sharedValue = tmp2Result.useSharedValue(0);
-  const tmp = closure_21();
-  const tmp6 = constants;
+  let tmp = closure_21();
   [tmp12, tmp13] = _slicedToArray(sharedValue1.useState(tmp9), 2);
   _slicedToArray = tmp13;
   tmp2Result = tmp2(tmp3[15]);
@@ -121,6 +123,7 @@ function ConnectionBannerInner() {
         closure_0(sharedValue[15]).runOnJS(setRenderState)(null);
         const obj = closure_0(sharedValue[15]);
       }
+      tmp = true !== arg0 || shouldShowBanner;
     };
     obj = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState };
     fn.__closure = obj;
@@ -158,7 +161,7 @@ function ConnectionBannerInner() {
   const items3 = [tmp.container, { height: youBarBottomMargin + CONNECTION_BANNER_HEIGHT }, animatedStyle];
   obj.style = items3;
   let tmp21 = null;
-  if (tmp12 === tmp6.BACK_ONLINE) {
+  if (tmp12 === constants.BACK_ONLINE) {
     obj1 = { progress: sharedValue };
     tmp21 = closure_12(BackOnlineGlow, obj1);
   }
@@ -217,12 +220,12 @@ export default function ConnectionBanner() {
     ref.current = stateFromStores;
     if (null != current) {
       if (current === constants.HIDDEN) {
-        if (tmp !== tmp7.HIDDEN) {
-          if (tmp !== tmp7.BACK_ONLINE) {
+        if (stateFromStores !== constants.HIDDEN) {
+          if (stateFromStores !== constants.BACK_ONLINE) {
             let str = "hidden";
             if (!hidden) {
               let str2 = "connecting";
-              if (tmp === tmp7.NO_CONNECTION) {
+              if (stateFromStores === constants.NO_CONNECTION) {
                 str2 = "offline";
               }
               str = str2;

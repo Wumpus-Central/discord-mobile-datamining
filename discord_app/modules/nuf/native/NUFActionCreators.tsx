@@ -12,24 +12,72 @@ import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-let closure_13 = async function _startContactSyncForDiscoverability(arg0, value) {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_13 = async function _startContactSyncForDiscoverability() {
+  c2 = 0;
+  c3 = 0;
+  return (async (arg0) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_1 = tmp4;
+            currentUser = currentUser.getCurrentUser();
+            let phone;
+            if (currentUser != null) {
+              phone = currentUser.phone;
+            }
+            localAccount = localAccount.getLocalAccount(constants.CONTACTS);
+            ContactSyncUtils;
+            if (null == phone) {
+              const _Error = Error;
+              const error = new Error("Cannot start contact sync without a phone number");
+              throw error;
+            } else {
+              closure_2_6(name);
+              let obj4 = ContactSyncActionCreatorsDefault;
+              let obj1 = { enabled: tmp15, name };
+              c2 = 1;
+              c3 = 1;
+              const obj2 = { value: obj4.updateContactSyncEnabled(obj1), done: false };
+              return obj2;
+            }
+          }
+        } else if (1 === tmp4) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            obj1 = closure_129_0(closure_129_2[15]);
+            c2 = 2;
+            c3 = 1;
+            obj4 = { value: obj1.uploadContacts("[]", true), done: false };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
@@ -37,59 +85,15 @@ let closure_13 = async function _startContactSyncForDiscoverability(arg0, value)
           obj = { value, done: true };
           return obj;
         } else {
-          closure_1 = tmp4;
-          currentUser = currentUser.getCurrentUser();
-          let phone;
-          if (currentUser != null) {
-            phone = currentUser.phone;
-          }
-          localAccount = localAccount.getLocalAccount(constants.CONTACTS);
-          ContactSyncUtils;
-          if (null == phone) {
-            const _Error = Error;
-            const error = new Error("Cannot start contact sync without a phone number");
-            throw error;
-          } else {
-            timestampProducer(tmp30);
-            let obj4 = ContactSyncActionCreatorsDefault;
-            let obj1 = { enabled: tmp15, name: tmp30 };
-            c2 = 1;
-            c3 = 1;
-            const obj2 = { value: obj4.updateContactSyncEnabled(obj1), done: false };
-            return obj2;
-          }
-        }
-      } else if (1 === tmp4) {
-        if (arg0 === 1) {
           c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          obj1 = closure_129_0(closure_129_2[15]);
-          c2 = 2;
-          c3 = 1;
-          obj4 = { value: obj1.uploadContacts("[]", true), done: false };
-          return obj4;
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        obj = { value, done: true };
-        return obj;
-      } else {
-        c3 = 3;
-        return { value: "HermesInternal", done: null };
+      } catch (tmp25) {
+        c3 = tmp;
+        throw tmp25;
       }
-    } catch (tmp25) {
-      c3 = tmp;
-      throw tmp25;
     }
-  }
+  })();
 };
 const ContactSyncModalStore = fn(12677);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
@@ -121,7 +125,7 @@ export const transitionToNUFGuildTemplatesModal = function transitionToNUFGuildT
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     closure_1 = tmp5;
     await tmp2(paths[10])(paths[9], paths.paths);
-    closure_128_0 = arg1.default;
+    closure_128_0 = value.default;
     closure_128_0.modalConfig = { animation: closure_129_0 };
     return closure_128_0;
   }), {}, closure_12);
@@ -148,7 +152,7 @@ export const openDiscoverabilityModal = function openDiscoverabilityModal() {
     closure_1 = tmp5;
     closure_0 = tmp2;
     await require("asyncRequireImpl")(paths[13], paths.paths);
-    closure_128_0 = arg1.default;
+    closure_128_0 = value.default;
     closure_128_0.modalConfig = { animation: closure_129_0(closure_129_2[14]).ModalAnimation.SLIDE_IN_OUT };
     return closure_128_0;
   }), {}, closure_10);

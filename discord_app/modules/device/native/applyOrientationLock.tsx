@@ -7,7 +7,7 @@ import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/device/native/applyOrientationLock.tsx");
 
-export const applyOrientationLock = function applyOrientationLock(PORTRAIT, flag) {
+export const applyOrientationLock = function applyOrientationLock(PORTRAIT) {
   if (flag === undefined) {
     flag = true;
   }

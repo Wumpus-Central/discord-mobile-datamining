@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIActio
 export default {
   customScoreGuild(arg0) {
     ({ guildId: require, channelScores: importDefault, guildScore: dependencyMap } = arg0);
-    return (async (arg0, value) => {
+    return (async () => {
       if (constants === 2) {
         constants = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

@@ -34,24 +34,24 @@ function renderItemJSX(result) {
     if (sortByMatchScore.AutocompleterResultTypes.GUILD === type) {
       let obj = { guild: result.record };
       return React7(closure_14, obj);
-    } else if (tmp13(9835).AutocompleterResultTypes.TEXT_CHANNEL === type) {
+    } else if (sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL === type) {
       obj = { channel: result.record, navigationReplace: true, showGuildBadgeIcon: true };
       return React7(shared_TextChannelDefault, obj);
-    } else if (tmp13(9835).AutocompleterResultTypes.GROUP_DM === type) {
+    } else if (sortByMatchScore.AutocompleterResultTypes.GROUP_DM === type) {
       const obj1 = { channel: result.record, navigationReplace: true };
       return React7(shared_DMChannelDefault, obj1);
-    } else if (tmp13(9835).AutocompleterResultTypes.VOICE_CHANNEL === type) {
+    } else if (sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj2 = { channel: result.record };
       return React7(VoiceOrStageChannelDefault, obj2);
-    } else if (tmp13(9835).AutocompleterResultTypes.USER === type) {
+    } else if (sortByMatchScore.AutocompleterResultTypes.USER === type) {
       ({ record: obj4.user, comparator: obj4.comparator } = result);
       return React7(LaunchPadSearchResultUserDefault, { user: null, comparator: null });
-    } else if (tmp13(9835).AutocompleterResultTypes.HEADER === type) {
+    } else if (sortByMatchScore.AutocompleterResultTypes.HEADER === type) {
       const obj4 = { name: result.record.text, styles: tmp };
-      return tmp13(16106).renderCategoryItem(obj4);
+      return RedesignCategory.renderCategoryItem(obj4);
     } else {
       obj = { variant: "text-sm/semibold", children: result.type };
-      return React7(tmp13(4556).Text, obj);
+      return React7(Text_Text.Text, obj);
     }
   }
 }
@@ -170,7 +170,7 @@ const memoResult = noop.memo(function InitialResultsInner(history) {
         obj.children = string(t2["/XSoJ+"]);
         tmp14 = obj;
       }
-      obj.note = tmp(Text_Text.Text, tmp14);
+      obj.note = React7(Text_Text.Text, tmp14);
       obj.onPress = toggleExpandedHistory;
     } else if (null != stateFromStores) {
       const intl2 = util.intl;
@@ -181,7 +181,7 @@ const memoResult = noop.memo(function InitialResultsInner(history) {
       const intl = util.intl;
       t = util.t;
       const obj1 = { name: intl.string(c7 ? t.C5viSQ : t.ieCAhD) };
-      return tmp(tmp2, obj1);
+      return React7(tmp2, obj1);
     }
   }, items2);
   let tmp9 = unreads(toggleExpandedHistory[9])();
@@ -267,7 +267,7 @@ export const SearchResults = noop.memo(function SearchResultsInner(results) {
     obj.sections = items3;
     obj.scrollIndicatorInsets = scrollIndicatorInsets;
     obj.chunkBase = categoryStyles(ref[28])().height;
-    tmp11Result = tmp11(categoryStyles(ref[30]), obj);
+    tmp11Result = closure_9(categoryStyles(ref[30]), obj);
   }
   obj.children = tmp11Result;
   return closure_9(fontScale, obj);

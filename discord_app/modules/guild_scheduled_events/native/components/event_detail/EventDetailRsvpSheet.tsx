@@ -90,10 +90,10 @@ class EventDetailRsvpSheet {
       let obj = EventDetailTypes;
       if (obj.isRemainingUsersGroup(item)) {
         obj = { remainingUsersGroup: item };
-        let tmpResult = tmp(RemainingUsersRow, obj);
+        let tmpResult = React5(RemainingUsersRow, obj);
       } else {
         obj = { eventUser: item, guildId };
-        tmpResult = tmp(memoResult, obj);
+        tmpResult = React5(memoResult, obj);
       }
       return tmpResult;
     }, items);
@@ -248,7 +248,7 @@ const memoResult = noop.memo((eventUser) => {
   let tmp7Result = null;
   if (null != stateFromStores) {
     obj = { user: stateFromStores, guildId: eventUser.guildId, isMobileOnline, isVROnline, status, size: tmp4(1178).AvatarSizes.REFRESH_MEDIUM_32, autoStatusCutout: true };
-    tmp7Result = tmp7(tmp4(1178).Avatar, obj);
+    tmp7Result = closure_7(tmp4(1178).Avatar, obj);
   }
   obj.leading = tmp7Result;
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };

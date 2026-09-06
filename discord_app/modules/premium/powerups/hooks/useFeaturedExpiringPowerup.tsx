@@ -24,7 +24,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
     if (expiringPowerupCoachmarkEnabled) {
       let unlockedPowerups;
       if (stateFromStores != null) {
-        unlockedPowerups = tmp2.unlockedPowerups;
+        unlockedPowerups = stateFromStores.unlockedPowerups;
       }
       if (unlockedPowerups == null) {
         unlockedPowerups = {};
@@ -63,8 +63,8 @@ export default function useFeaturedExpiringPowerup(arg0) {
           return tmp;
         });
         let title;
-        if (tmp2 != null) {
-          if (tmp2.allPowerups[reduced.sku_id] != null) {
+        if (stateFromStores != null) {
+          if (stateFromStores.allPowerups[reduced.sku_id] != null) {
             title = tmp9.title;
           }
         }

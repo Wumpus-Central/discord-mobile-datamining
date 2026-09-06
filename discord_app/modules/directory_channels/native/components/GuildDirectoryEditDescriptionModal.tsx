@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 function GuildDirectoryEditDescription(entry) {
   entry = entry.entry;
-  importDefault = async function _onSubmit(arg0, value) {
+  importDefault = async function _onSubmit(arg0) {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

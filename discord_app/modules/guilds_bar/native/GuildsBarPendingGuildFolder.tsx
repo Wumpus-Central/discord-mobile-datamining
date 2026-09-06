@@ -71,7 +71,7 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     obj = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = tmp8(tmp(16293).GuildsBarGuildFolderBG, obj);
+    tmp8Result = jsx(tmp(16293).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj.externalChildren = tmp8Result;
   obj.children = jsx(id(9030).HourglassIcon, {});

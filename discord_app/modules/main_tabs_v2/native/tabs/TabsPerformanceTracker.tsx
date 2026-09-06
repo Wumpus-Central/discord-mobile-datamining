@@ -29,16 +29,17 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
     function log() {
       if (tmp2) {
         const _performance = performance;
-        tmp.layoutUITime = performance.now();
+        tab.layoutUITime = performance.now();
         if (tmp5) {
-          let obj = { tab: tmp4, start_time: null, layout_effect_time: null, layout_ui_thread_time: null, effect_time: null, ui_thread_time: null };
-          ({ startTime: obj2.start_time, layoutEffectTime: obj2.layout_effect_time, layoutUITime: obj2.layout_ui_thread_time, effectTime: obj2.effect_time, uiTime: obj2.ui_thread_time } = tmp);
+          let obj = { tab, start_time: null, layout_effect_time: null, layout_ui_thread_time: null, effect_time: null, ui_thread_time: null };
+          ({ startTime: obj2.start_time, layoutEffectTime: obj2.layout_effect_time, layoutUITime: obj2.layout_ui_thread_time, effectTime: obj2.effect_time, uiTime: obj2.ui_thread_time } = tab);
           obj.track(AnalyticEvents.REDESIGN_NAV_BAR_RENDERED, obj);
-          obj = { layoutEffectDuration: tmp.layoutEffectTime - tmp.startTime, effectDuration: tmp.effectTime - tmp.startTime, layoutUIDuration: tmp.layoutUITime - tmp.startTime, uiDuration: tmp.uiTime - tmp.startTime };
-          logger.info("First navigation to", tmp4, "took", obj);
+          obj = { layoutEffectDuration: tab.layoutEffectTime - tab.startTime, effectDuration: tab.effectTime - tab.startTime, layoutUIDuration: tab.layoutUITime - tab.startTime, uiDuration: tab.uiTime - tab.startTime };
+          logger.info("First navigation to", tab, "took", obj);
         }
-        tmp5 = null != tmp.uiTime && null != tmp.layoutUITime;
+        tmp5 = null != tab.uiTime && null != tab.layoutUITime;
       }
+      tmp2 = null != tab && null != tab.startTime;
     }
     GUILDS = tmp3;
     if (null != dependencyMap2[GUILDS]) {
@@ -56,7 +57,7 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
         const obj2 = GUILDS(4296);
       }
     }
-    obj = tmp[tmp2];
+    obj = dependencyMap2[tmp2];
     if (obj == null) {
       obj = {};
     }
@@ -67,16 +68,17 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
     function log() {
       if (tmp2) {
         const _performance = performance;
-        tmp.uiTime = performance.now();
+        tab.uiTime = performance.now();
         if (tmp5) {
-          let obj = { tab: tmp4, start_time: null, layout_effect_time: null, layout_ui_thread_time: null, effect_time: null, ui_thread_time: null };
-          ({ startTime: obj2.start_time, layoutEffectTime: obj2.layout_effect_time, layoutUITime: obj2.layout_ui_thread_time, effectTime: obj2.effect_time, uiTime: obj2.ui_thread_time } = tmp);
+          let obj = { tab, start_time: null, layout_effect_time: null, layout_ui_thread_time: null, effect_time: null, ui_thread_time: null };
+          ({ startTime: obj2.start_time, layoutEffectTime: obj2.layout_effect_time, layoutUITime: obj2.layout_ui_thread_time, effectTime: obj2.effect_time, uiTime: obj2.ui_thread_time } = tab);
           obj.track(AnalyticEvents.REDESIGN_NAV_BAR_RENDERED, obj);
-          obj = { layoutEffectDuration: tmp.layoutEffectTime - tmp.startTime, effectDuration: tmp.effectTime - tmp.startTime, layoutUIDuration: tmp.layoutUITime - tmp.startTime, uiDuration: tmp.uiTime - tmp.startTime };
-          logger.info("First navigation to", tmp4, "took", obj);
+          obj = { layoutEffectDuration: tab.layoutEffectTime - tab.startTime, effectDuration: tab.effectTime - tab.startTime, layoutUIDuration: tab.layoutUITime - tab.startTime, uiDuration: tab.uiTime - tab.startTime };
+          logger.info("First navigation to", tab, "took", obj);
         }
-        tmp5 = null != tmp.uiTime && null != tmp.layoutUITime;
+        tmp5 = null != tab.uiTime && null != tab.layoutUITime;
       }
+      tmp2 = null != tab && null != tab.startTime;
     }
     GUILDS = tmp3;
     if (null != dependencyMap2[GUILDS]) {
@@ -94,7 +96,7 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
         const obj2 = GUILDS(4296);
       }
     }
-    obj = tmp[tmp2];
+    obj = dependencyMap2[tmp2];
     if (obj == null) {
       obj = {};
     }

@@ -45,8 +45,8 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
   const memo = noop.useMemo(() => {
     if (null != stateFromStores) {
       let obj = GameInvitesChannelUtils;
-      if (obj.canInviteToActivity(tmp)) {
-        obj = { type: ActivityActionTypes.JOIN, activity: tmp };
+      if (obj.canInviteToActivity(stateFromStores)) {
+        obj = { type: ActivityActionTypes.JOIN, activity: stateFromStores };
         return obj;
       }
     }
@@ -84,7 +84,7 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
     voiceToggleDisabled,
     submitting: tmp9,
     canSubmit: tmp10,
-    submit: obj4.useCallback(createForumPostCommon(function*(arg0, value) {
+    submit: obj4.useCallback(createForumPostCommon(function*() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

@@ -71,16 +71,16 @@ export default function ChannelAccessInfo(guild) {
   if (null != first) {
     let obj1 = { children: null };
     let obj2 = { style: tmp.avatar, user: first, guildId: guild.id, size: tmp2(1178).AvatarSizes.XSMALL };
-    const items3 = [tmp13(tmp2(1178).Avatar, obj2), ];
+    const items3 = [closure_8(tmp2(1178).Avatar, obj2), ];
     let obj3 = { children: null };
     let obj4 = { variant: "text-sm/semibold", children: first.tag };
-    const items4 = [tmp13(tmp2(4556).Text, obj4), ];
+    const items4 = [closure_8(tmp2(4556).Text, obj4), ];
     let obj5 = { variant: "text-xs/medium", children: null };
     let intl2 = tmp2(1114).intl;
     obj5.children = intl2.string(tmp2(1114).t.rt0ERW);
-    items4[1] = tmp13(tmp2(4556).Text, obj5);
+    items4[1] = closure_8(tmp2(4556).Text, obj5);
     obj3.children = items4;
-    items3[1] = tmp11(tmp14, obj3);
+    items3[1] = closure_9(View, obj3);
     obj1.children = items3;
     let obj6 = obj1;
   } else {

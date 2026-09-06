@@ -4,6 +4,8 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import useFontScale from "useFontScale" /* 4982 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
@@ -95,7 +97,7 @@ export default function PremiumPerkCard(variant) {
       const obj2 = { style: tmp4.imageOverlayText, variant: "text-md/bold", children: null };
       imageStyle = imageOverlayText.toUpperCase();
       obj2.children = imageStyle;
-      imageSrc = React7(tmp6(4556).Text, obj2);
+      imageSrc = React7(Text_Text.Text, obj2);
       obj1.children = imageSrc;
       items1[1] = React7(React4, obj1);
       obj.children = items1;
@@ -115,7 +117,7 @@ export default function PremiumPerkCard(variant) {
     }
     if (null != description) {
       const obj4 = { variant: "text-sm/normal", children: description };
-      let tmp21 = React7(tmp6(4556).Text, obj4);
+      let tmp21 = React7(Text_Text.Text, obj4);
     } else {
       tmp21 = null;
       if (null != bodyComponent) {
@@ -123,7 +125,7 @@ export default function PremiumPerkCard(variant) {
       }
     }
     const items3 = [tmp4.container, , ];
-    let tmp25 = WIDE === obj.NARROW;
+    let tmp25 = WIDE === tmp5.NARROW;
     if (tmp25) {
       const obj5 = { height: tmp9 };
       tmp25 = obj5;
@@ -142,20 +144,21 @@ export default function PremiumPerkCard(variant) {
     const items5 = [tmp4.title, titleStyle];
     obj8.style = items5;
     obj8.children = title;
-    items4[2] = React7(tmp6(4556).Text, obj8);
+    items4[2] = React7(Text_Text.Text, obj8);
     const obj9 = { style: tmp4.description, children: tmp21 };
     items4[3] = React7(hasOwnProperty, obj9);
     let tmp29Result = null != buttonOnPress;
     if (tmp29Result) {
       const obj10 = { style: tmp4.button, children: null };
       const obj11 = { size: "sm", variant: "secondary", text: cta, onPress: buttonOnPress };
-      obj10.children = tmp29(tmp6(4975).Button, obj11);
-      tmp29Result = tmp29(tmp24, obj10);
+      obj10.children = React7(components_Button_Button.Button, obj11);
+      tmp29Result = React7(React4, obj10);
     }
     items4[4] = tmp29Result;
     obj6.children = items4;
     return closure_1_10(React4, obj6);
   }
+  tmp5 = obj;
 };
 export const PerkCardTypes = { CUSTOM_PROFILE: "customProfile", CLIENT_THEMES: "clientThemes", SERVER_BOOSTS: "serverBoosts", GREYED_SERVER_BOOSTS: "greyServerBoosts", CUSTOM_APP_ICONS: "customAppIcons", EMOJI: "emoji", CUSTOM_SOUNDS: "customSounds", STICKER: "sticker", EARLY_ACCESS: "earlyAccess", MEMBER_PRICING: "memberPricing", LARGE_UPLOADS: "largeUploads", HD_VIDEO: "hdVideo", SUPER_REACTIONS: "superReactions", ENTRACE_SOUNDS: "entranceSounds", BADGE: "badge", GREYED_BADGE: "greyBadge", XBOX_GAME_PASS: "xboxGamePass" };
 export { PerkCardVariant };

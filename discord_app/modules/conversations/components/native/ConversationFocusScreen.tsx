@@ -109,11 +109,10 @@ export default function ConversationFocusScreen() {
       const intl2 = ChatPreview(tmp[10]).intl;
       obj4.text = intl2.string(ChatPreview(tmp[10]).t.aBNTxl);
       obj4.onPress = callback1;
-      tmp12Result = tmp12(ChatPreview(tmp[12]).Button, obj4);
+      tmp12Result = closure_7(ChatPreview(tmp[12]).Button, obj4);
     }
     items7[1] = tmp12Result;
     obj2.children = items7;
     closure_8(closure_5, obj2);
-    tmp12 = closure_7;
   }
 };

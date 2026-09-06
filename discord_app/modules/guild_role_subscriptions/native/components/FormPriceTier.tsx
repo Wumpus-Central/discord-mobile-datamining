@@ -75,6 +75,7 @@ export default function FormPriceTier(guildId) {
           };
           obj.selectedItem = price;
           obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj);
+          const tmp2 = asyncRequireImpl(9426, dependencyMap.paths);
         },
       placeholder: null
     };
@@ -100,6 +101,7 @@ export default function FormPriceTier(guildId) {
           };
           obj.selectedItem = price;
           obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj);
+          const tmp2 = asyncRequireImpl(9426, dependencyMap.paths);
         },
       placeholder: null
     });

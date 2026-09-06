@@ -92,16 +92,11 @@ function InitialPinsScreen(searchContext) {
       });
     }
     if (showLoading) {
-      let num = 0;
-      if (0 < fullscreenPlaceholderCount) {
-        do {
-          let obj = { type: null, key: null };
-          obj.type = constants.MESSAGE_PLACEHOLDER;
-          let _HermesInternal = HermesInternal;
-          obj.key = "message-placeholder-" + num;
-          let arr = items.push(obj);
-          num = num + 1;
-        } while (num < fullscreenPlaceholderCount);
+      for (let num = 0; num < fullscreenPlaceholderCount; num = num + 1) {
+        let obj = { type: constants.MESSAGE_PLACEHOLDER, key: null };
+        let _HermesInternal = HermesInternal;
+        obj.key = "message-placeholder-" + num;
+        let arr = items.push(obj);
       }
     }
     return items;

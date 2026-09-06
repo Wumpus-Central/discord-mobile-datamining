@@ -17,14 +17,12 @@ class RTCBandwidthMonitor {
           let tmp28 = arg0.rtp.inbound[key10007];
           for (const item10009 of tmp28) {
             let _HermesInternal = HermesInternal;
-            let tmp2 = item10009;
             let combined = "inbound-" + key10007 + "-" + item10009.type;
             let tmp4 = combined;
-            let tmp6 = obj;
             if (!(combined in obj.bytes)) {
-              tmp6.bytes[tmp4] = 0;
+              obj.bytes[tmp4] = 0;
             }
-            tmp6.bytes[tmp4] = tmp2.bytesReceived;
+            obj.bytes[tmp4] = item10009.bytesReceived;
             continue;
           }
         }
@@ -36,11 +34,10 @@ class RTCBandwidthMonitor {
           let tmp16 = nextResult;
           let combined1 = "outbound-" + nextResult.type;
           let tmp18 = combined1;
-          let tmp20 = obj;
           if (!(combined1 in obj.bytes)) {
-            tmp20.bytes[tmp18] = 0;
+            obj.bytes[tmp18] = 0;
           }
-          tmp20.bytes[tmp18] = tmp16.bytesSent;
+          obj.bytes[tmp18] = tmp16.bytesSent;
           continue;
         }
       }
@@ -58,14 +55,12 @@ RTCBandwidthMonitor["create"] = function create() {
           let tmp28 = arg0.rtp.inbound[key10007];
           for (const item10009 of tmp28) {
             let _HermesInternal = HermesInternal;
-            let tmp2 = item10009;
             let combined = "inbound-" + key10007 + "-" + item10009.type;
             let tmp4 = combined;
-            let tmp6 = obj;
             if (!(combined in obj.bytes)) {
-              tmp6.bytes[tmp4] = 0;
+              obj.bytes[tmp4] = 0;
             }
-            tmp6.bytes[tmp4] = tmp2.bytesReceived;
+            obj.bytes[tmp4] = item10009.bytesReceived;
             continue;
           }
         }
@@ -77,11 +72,10 @@ RTCBandwidthMonitor["create"] = function create() {
           let tmp16 = nextResult;
           let combined1 = "outbound-" + nextResult.type;
           let tmp18 = combined1;
-          let tmp20 = obj;
           if (!(combined1 in obj.bytes)) {
-            tmp20.bytes[tmp18] = 0;
+            obj.bytes[tmp18] = 0;
           }
-          tmp20.bytes[tmp18] = tmp16.bytesSent;
+          obj.bytes[tmp18] = tmp16.bytesSent;
           continue;
         }
       }

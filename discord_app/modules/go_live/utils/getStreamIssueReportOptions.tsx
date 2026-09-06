@@ -16,14 +16,14 @@ export default function getStreamIssueReportOptions(isEndStream) {
   const t = util.t;
   if (isEndStream) {
     let stringResult = string(t["0X5Zbq"]);
-    let tmp6 = tmp2;
+    let tmp6 = require;
   } else {
     stringResult = string(t.fxiRNr);
-    tmp6 = tmp2;
+    tmp6 = require;
   }
   obj.label = stringResult;
   const items = [obj, , , , , , , , ];
-  obj = { id: "blurry", value: tmp.BLURRY, label: null };
+  obj = { id: "blurry", value: StreamIssueReportReasons.BLURRY, label: null };
   const intl2 = tmp6(1114).intl;
   const string2 = intl2.string;
   const t2 = tmp6(1114).t;
@@ -34,7 +34,7 @@ export default function getStreamIssueReportOptions(isEndStream) {
   }
   obj.label = string2Result;
   items[1] = obj;
-  obj = { id: "lagging", value: tmp.LAGGING, label: null };
+  obj = { id: "lagging", value: StreamIssueReportReasons.LAGGING, label: null };
   const intl3 = tmp6(1114).intl;
   const string3 = intl3.string;
   const t3 = tmp6(1114).t;

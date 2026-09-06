@@ -106,8 +106,8 @@ function ArchivedLockedThreadChatBanner(channel) {
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj);
       ThreadActionCreatorsDefault.unarchiveThread(channel, false);
     };
-    obj1.children = tmp8(tmp3(4975).Button, obj2);
-    canUnarchiveThread = tmp8(tmp7, obj1);
+    obj1.children = closure_12(tmp3(4975).Button, obj2);
+    canUnarchiveThread = closure_12(closure_4, obj1);
   }
   items1[1] = canUnarchiveThread;
   obj.children = items1;
@@ -152,8 +152,8 @@ function LockedThreadChatBanner(channel) {
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj);
       ThreadActionCreatorsDefault.unlockThread(channel);
     };
-    obj1.children = tmp8(tmp3(4975).Button, obj2);
-    isThreadModerator = tmp8(tmp7, obj1);
+    obj1.children = closure_12(tmp3(4975).Button, obj2);
+    isThreadModerator = closure_12(closure_4, obj1);
   }
   items1[1] = isThreadModerator;
   obj.children = items1;

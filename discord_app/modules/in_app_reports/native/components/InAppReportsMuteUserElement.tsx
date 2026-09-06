@@ -30,11 +30,11 @@ export default function MuteUserElement(user) {
   const memo = stateFromStores.useMemo(() => {
     let guild_id;
     if (stateFromStores != null) {
-      guild_id = tmp.guild_id;
+      guild_id = stateFromStores.guild_id;
     }
     let id;
     if (stateFromStores != null) {
-      id = tmp.id;
+      id = stateFromStores.id;
     }
     return NicknameUtilsDefault.getName(guild_id, id, user);
   }, items2);

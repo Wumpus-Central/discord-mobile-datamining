@@ -6,6 +6,7 @@ import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1085 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
@@ -110,6 +111,7 @@ prototype["_initialize"] = function _initialize() {
     });
   }
   closure_16.verbose("Initialized and subscribed to playback events");
+  tmp2Result = PlatformUtils;
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
@@ -195,21 +197,21 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
   const self = this;
   ({ source: importDefault, rate: require } = arg0);
   require("ReactBatchUpdates").batchUpdates(() => {
-    if (null == closure_1_1) {
+    if (null == source) {
       obj.setState({ rate: 0, isPlaying: false });
     }
     let id;
-    if (closure_1_1 != null) {
-      id = tmp.id;
+    if (source != null) {
+      id = source.id;
     }
     closure_16.verbose("Playback rate changed to " + _require + ": " + id);
     const state = obj.getState();
     ({ activeMediaPlayerSource, isPlaying, wasPipClosedByUser } = state);
-    if (tmp9(activeMediaPlayerSource, tmp10)) {
-      obj = { rate: tmp5, isPlaying: 0 !== tmp5, wasPipClosedByUser: null };
+    if (tmp9(activeMediaPlayerSource, source)) {
+      obj = { rate: _require, isPlaying: 0 !== _require, wasPipClosedByUser: null };
       let tmp15 = false === isPlaying;
       if (tmp15) {
-        tmp15 = tmp5 > 0;
+        tmp15 = _require > 0;
       }
       let tmp16 = !tmp15;
       if (!tmp15) {
@@ -219,12 +221,11 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
       obj.setState(obj);
       self.updateDisplayState();
     } else {
-      obj = { source: tmp };
+      obj = { source };
       const result = self.handleMediaPlayerPlaybackSourceChanged(obj);
-      obj = { source: tmp, rate: tmp5 };
+      obj = { source, rate: _require };
       const result1 = self.handleMediaPlayerPlaybackRateChanged(obj);
     }
-    tmp10 = closure_1_1;
     tmp9 = discord_common_shallowEqualDefault;
   });
 };
@@ -237,10 +238,10 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
       if (state.showPip) {
         let tmp7;
         if (dependencyMap > 0) {
-          obj = { time, duration: tmp6, isCompleted: null };
+          obj = { time, duration: dependencyMap, isCompleted: null };
           let flag;
-          if (tmp6 > 0) {
-            flag = tmp6 - time <= map1;
+          if (dependencyMap > 0) {
+            flag = dependencyMap - time <= map1;
           }
           if (flag == null) {
             flag = false;
@@ -263,11 +264,12 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
         }
       } else if (null != currentlyDisplayedChannelId) {
         let channelId;
-        if (tmp3 != null) {
-          channelId = tmp3.channelId;
+        if (_require != null) {
+          channelId = _require.channelId;
         }
       }
     }
+    tmp2 = discord_common_shallowEqualDefault;
   });
 };
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
@@ -277,21 +279,22 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     let id;
     const state = obj.getState();
     if (source != null) {
-      id = tmp3.id;
+      id = source.id;
     }
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      obj = { activeMediaPlayerSource: tmp3, mediaSourceMessage: null, progress: "ip", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
+      obj = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "ip", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
       let orFetchMediaSourceMessage;
-      if (null != tmp3) {
-        orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(tmp3);
+      if (null != source) {
+        orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);
       }
       obj.mediaSourceMessage = orFetchMediaSourceMessage;
       obj.setState(obj);
       const result = self.updateMediaPermissions();
       self.updateDisplayState();
     }
+    tmp6 = discord_common_shallowEqualDefault;
   });
 };
 prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessage(source) {
@@ -304,7 +307,7 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         return message;
       } else {
         if (null != assetUrl) {
-          const messages = obj4.getMessages(channelId);
+          const messages = MessageStore.getMessages(channelId);
           const found = messages.toArray().find((getContentMessage) => {
             const contentMessage = getContentMessage.getContentMessage();
             let someResult;
@@ -329,7 +332,6 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
           }
         });
       }
-      obj4 = MessageStore;
     }
   }
 };
@@ -360,6 +362,7 @@ prototype["handleMediaPlayerViewWillAppear"] = function handleMediaPlayerViewWil
     displayedMediaItemIdsPerChannel[_require] = new Set(items1);
     obj.setState({ displayedMediaItemIdsPerChannel });
     self.updateDisplayState();
+    const set = new Set(items1);
   });
 };
 prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewDidDisappear(arg0) {

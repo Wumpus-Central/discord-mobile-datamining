@@ -14,7 +14,7 @@ let closure_7 = async function _fetchGuildIntegrationsApplications() {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: Endpoints.GUILD_INTEGRATIONS(closure_0), query: { include_applications: true, include_role_connections_metadata: true }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   await HTTP.get(request);
-  const body = arg1.body;
+  const body = value.body;
   closure_129_1 = body.map((application) => {
     const obj = {};
     const merged = Object.assign(application);
@@ -52,9 +52,9 @@ export const fetchGuildIntegrationsApplications = function fetchGuildIntegration
   }
   return applyArgumentsResult;
 };
-export const fetchGuildEmbed = function fetchGuildEmbed(arg0) {
+export const fetchGuildEmbed = function fetchGuildEmbed(guildId) {
   const HTTP = HTTPUtils.HTTP;
-  value = HTTP.get({ url: Endpoints.GUILD_WIDGET(arg0), oldFormErrors: true, rejectWithError: true });
+  value = HTTP.get({ url: Endpoints.GUILD_WIDGET(guildId), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
     const obj = { type: "GUILD_SETTINGS_SET_WIDGET", enabled: body.body.enabled, channelId: body.body.channel_id };
     obj.dispatch(obj);

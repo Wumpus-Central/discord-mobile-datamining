@@ -159,13 +159,13 @@ export default function GuildSettingsModalServerTagCustomize(guildId) {
         obj3.accessibilityLabel = intl2.string(tmp2(tmp3[23]).t["4tVt6P"]);
         obj3.style = tmp.warning;
         const obj4 = { size: "sm", color: tmp5(tmp3[7]).colors.ICON_SUBTLE };
-        const items11 = [tmp27(tmp2(tmp3[24]).CircleInformationIcon, obj4), ];
+        const items11 = [closure_9(tmp2(tmp3[24]).CircleInformationIcon, obj4), ];
         const obj5 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.warningText, children: null };
         const intl3 = tmp2(tmp3[23]).intl;
         obj5.children = intl3.string(tmp2(tmp3[23]).t["4tVt6P"]);
-        items11[1] = tmp27(tmp2(tmp3[25]).Text, obj5);
+        items11[1] = closure_9(tmp2(tmp3[25]).Text, obj5);
         obj3.children = items11;
-        tmp28Result = tmp28(tmp29, obj3);
+        tmp28Result = closure_10(tmp29, obj3);
       }
       const obj6 = { children: null };
       items10[1] = tmp28Result;

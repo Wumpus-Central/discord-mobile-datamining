@@ -3,10 +3,12 @@
 // Module 14850 (ProfilePrivacySetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import SettingsConstants from "SettingsConstants" /* 7975 */;
 import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13075 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14851 */;
 import SettingBuilders from "SettingBuilders" /* 11468 */;
 import size from "module_2" /* 2 */;
 
@@ -28,13 +30,13 @@ const radio = SettingBuilders.createRadio({
     ProfileVisibility2.updateSetting(NumberResult);
     let obj = PrivateProfilesExperiment;
     if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14851).computeProfileToActivityUpsell(setting, NumberResult);
+      const profileToActivityUpsell = ActivityPrivacyUpsellUtils.computeProfileToActivityUpsell(setting, NumberResult);
       if (null != profileToActivityUpsell) {
         obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
         ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds, settingName: obj4.settingName, mappedActivityValue: obj4.mappedActivityValue } = profileToActivityUpsell);
-        ActionSheetActionCreatorsDefault.openLazy(tmp2(1896)(14852, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14852, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
       }
-      const tmp2Result = tmp2(14851);
+      const tmp2Result = ActivityPrivacyUpsellUtils;
     }
   },
   useOptions() {

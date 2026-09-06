@@ -4,6 +4,7 @@
 import utils from "utils" /* 1886 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import useCollectibleListLayout from "useCollectibleListLayout" /* 13170 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13171 */;
 import useNameplateSections from "useNameplateSections" /* 14637 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,10 +36,10 @@ const memoResult = noop.memo((arg0) => {
   obj.children = substr.map((nameplate, index) => {
     if (nameplate === useNameplateSections.NONE_ITEM) {
       let obj = { size: width, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return timestampProducer(tmp(13171).EditCollectiblesListItemNone, obj, "none");
-    } else if (nameplate === tmp(14637).SHOP_ITEM) {
+      return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj, "none");
+    } else if (nameplate === useNameplateSections.SHOP_ITEM) {
       obj = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_NAMEPLATE_SHEET };
-      return timestampProducer(tmp(13171).EditCollectiblesListItemShop, obj, "shop");
+      return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj, "shop");
     } else if (isNameplateRecord(nameplate)) {
       const obj1 = { nameplate, isSelected: closure_1_0 === nameplate.skuId, setSelectedNameplate, size: width };
       return timestampProducer(memoResult1, obj1, nameplate.skuId);

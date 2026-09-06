@@ -33,4 +33,5 @@ export const setUserId = function setUserId(id) {
     const DCDAppDatabase = NativeModules.DCDAppDatabase;
     DCDAppDatabase.setUserId(id);
   }
+  obj = PlatformUtils;
 };

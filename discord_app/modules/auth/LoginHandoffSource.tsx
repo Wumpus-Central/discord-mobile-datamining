@@ -4,6 +4,7 @@
 import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
 import ChannelConstants from "ChannelConstants" /* 1964 */;
 import LinkUtils from "LinkUtils" /* 4714 */;
+import UserSettingsURLUtils from "UserSettingsURLUtils" /* 5454 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
@@ -26,4 +27,5 @@ export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourc
   if (formatted === tmpResult.settingsPathToRoute(UserSettingsPath.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS)) {
     ROLE_SUBSCRIPTION_SETTING = obj.ROLE_SUBSCRIPTION_SETTING;
   }
+  tmpResult = UserSettingsURLUtils;
 };

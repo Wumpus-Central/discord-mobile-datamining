@@ -19,5 +19,5 @@ const result = size.fileFinishedImporting("modules/self_mod/shared/native/Safety
 export default function SafetyTipsRow(arg0) {
   ({ index, tip, description, end } = arg0);
   _require = closure_4();
-  return jsx(require("TableRow").TableRow, { icon: jsx((children) => <View style={indexContainer.indexContainer}>{jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: arg0.index })}</View>, { index }), label: tip, subLabel: description, end });
+  return jsx(require("TableRow").TableRow, { icon: jsx((children) => <View style={indexContainer.indexContainer}>{jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: children.index })}</View>, { index }), label: tip, subLabel: description, end });
 };

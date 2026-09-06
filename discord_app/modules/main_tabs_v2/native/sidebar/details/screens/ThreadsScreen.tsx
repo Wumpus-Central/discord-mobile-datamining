@@ -38,7 +38,7 @@ function ThreadsScreen(channel) {
   obj.onThreadPress = callback1;
   obj.contentContainerStyle = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom + nativeDefault.space.PX_16, paddingHorizontal: 16 };
   obj.children = <tmp9 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
-  return <tmp8 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
+  return <View channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
 }
 const View = fn(17).View;
 const SearchTypes = fn(1074).SearchTypes;

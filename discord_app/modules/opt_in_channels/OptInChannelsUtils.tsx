@@ -2,6 +2,7 @@
 
 // Module 11559 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import _modDef4153 from "module_4153" /* 4153 */;
 import useChannelName from "useChannelName" /* 4713 */;
@@ -16,7 +17,6 @@ import ReadStateStore from "ReadStateStore" /* 4575 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserStore from "UserStore" /* 1371 */;
 
-const router_utils = tmp2(1100);
 require = fn;
 function setIndex(arg0, index) {
   arg0.index = index;
@@ -95,9 +95,9 @@ export const getFirstRouteFor = function getFirstRouteFor(getSections) {
     const row = guildActionSection.getRow(0);
     if (ChannelListGuildActionRow.GUILD_HOME === row) {
       return constants3.GUILD_HOME;
-    } else if (tmp5.GUILD_ROLE_SUBSCRIPTIONS === row) {
+    } else if (ChannelListGuildActionRow.GUILD_ROLE_SUBSCRIPTIONS === row) {
       return constants3.ROLE_SUBSCRIPTIONS;
-    } else if (tmp5.GUILD_MOD_DASH_MEMBER_SAFETY === row) {
+    } else if (ChannelListGuildActionRow.GUILD_MOD_DASH_MEMBER_SAFETY === row) {
       return constants3.MEMBER_SAFETY;
     }
   }

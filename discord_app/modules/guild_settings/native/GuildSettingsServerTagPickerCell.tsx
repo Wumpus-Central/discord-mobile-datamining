@@ -41,5 +41,5 @@ export default function GuildSettingsServerTagPickerCell(accessibilityLabel) {
   items[2] = { width: size, height: size };
   obj1.style = items;
   obj1.children = children;
-  return <Pressable accessibilityRole={radioA11yNative.accessibilityRole} accessibilityState={radioA11yNative.accessibilityState} accessibilityLabel={arg0.accessibilityLabel} onPress={onPress} style={null}>{null}</Pressable>;
+  return <Pressable accessibilityRole={radioA11yNative.accessibilityRole} accessibilityState={radioA11yNative.accessibilityState} accessibilityLabel={accessibilityLabel.accessibilityLabel} onPress={onPress} style={null}>{null}</Pressable>;
 };

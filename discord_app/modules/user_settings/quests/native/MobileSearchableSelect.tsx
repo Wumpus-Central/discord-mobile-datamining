@@ -61,13 +61,13 @@ class MobileSearchableSelect {
     effect = obj.useEffect(() => {
       let tmp2 = null == value;
       if (!tmp2) {
-        tmp2 = tmp === first;
+        tmp2 = value === first;
       }
       if (!tmp2) {
         tmp2 = first1;
       }
       if (!tmp2) {
-        closure_7(tmp);
+        closure_7(value);
       }
     }, items);
     items1 = [, , ];
@@ -77,7 +77,7 @@ class MobileSearchableSelect {
     memo = obj.useMemo(() => {
       let found = options;
       if ("" !== first.trim()) {
-        closure_0 = str.toLowerCase();
+        closure_0 = first.toLowerCase();
         found = options.filter((label) => {
           const formatted = label.label.toLowerCase();
           let hasItem = formatted.includes(closure_0);
@@ -93,8 +93,8 @@ class MobileSearchableSelect {
         tmp = found;
         if (0 === found.length) {
           tmp = found;
-          if ("" !== str.trim()) {
-            const obj = { label: str.trim(), value: str.trim() };
+          if ("" !== first.trim()) {
+            const obj = { label: first.trim(), value: first.trim() };
             const items = [obj];
             tmp = items;
           }
@@ -167,7 +167,7 @@ class MobileSearchableSelect {
         const items = [dropdownItem.dropdownItem, ];
         let dropdownItemLast = index === memo.length - 1;
         if (dropdownItemLast) {
-          dropdownItemLast = tmp3.dropdownItemLast;
+          dropdownItemLast = dropdownItem.dropdownItemLast;
         }
         let obj = {
           style: items,
@@ -179,7 +179,7 @@ class MobileSearchableSelect {
           children: null
         };
         items[1] = dropdownItemLast;
-        obj = { variant: "text-sm/medium", color: "text-default", style: tmp3.dropdownItemText, children: children.label };
+        obj = { variant: "text-sm/medium", color: "text-default", style: dropdownItem.dropdownItemText, children: children.label };
         obj.children = closure_7(options(value[9]).Text, obj);
         return closure_7(first, obj, "option-" + children.value + "-" + index);
       });

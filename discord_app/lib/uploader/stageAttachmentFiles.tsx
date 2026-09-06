@@ -9,11 +9,11 @@ let closure_4 = async function _stageAttachmentFiles() {
     item = fn;
     closure_1 = fn2;
     const status = item.status;
-    if (closure_2_0(closure_2_1[2]).CloudUploadStatus.NOT_STARTED === status) {
+    if (closure_2_0(dependencyMap[2]).CloudUploadStatus.NOT_STARTED === status) {
       obj.upload();
-    } else if (tmp(tmp2[2]).CloudUploadStatus.COMPLETED === status) {
+    } else if (closure_2_0(dependencyMap[2]).CloudUploadStatus.COMPLETED === status) {
       fn("complete");
-    } else if (tmp(tmp2[2]).CloudUploadStatus.ERROR === status) {
+    } else if (closure_2_0(dependencyMap[2]).CloudUploadStatus.ERROR === status) {
       if (closure_1_1) {
         if (obj.error !== constants.ENTITY_TOO_LARGE) {
           obj.upload();
@@ -22,11 +22,11 @@ let closure_4 = async function _stageAttachmentFiles() {
       const _Error2 = Error;
       let error = new Error("File failed to upload");
       fn2(error);
-    } else if (tmp(tmp2[2]).CloudUploadStatus.CANCELED === status) {
+    } else if (closure_2_0(dependencyMap[2]).CloudUploadStatus.CANCELED === status) {
       const _Error = Error;
       const error1 = new Error("Upload is canceled");
       fn2(error1);
-    } else if (tmp(tmp2[2]).CloudUploadStatus.REMOVED_FROM_MSG_DRAFT === status) {
+    } else if (closure_2_0(dependencyMap[2]).CloudUploadStatus.REMOVED_FROM_MSG_DRAFT === status) {
       const _Error3 = Error;
       const error2 = new Error("Upload is removed from draft");
       fn2(error2);
@@ -48,8 +48,8 @@ let closure_4 = async function _stageAttachmentFiles() {
   await "HermesInternal";
   constants = tmp2;
   closure_131_0 = closure_0;
-  let flag = closure_1;
-  if (closure_1 === undefined) {
+  let flag = dependencyMap;
+  if (dependencyMap === undefined) {
     flag = false;
   }
   closure_131_1 = flag;

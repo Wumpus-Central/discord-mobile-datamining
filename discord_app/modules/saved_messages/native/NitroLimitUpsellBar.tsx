@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import WarningIcon from "WarningIcon" /* 8588 */;
 import _modDef9963 from "module_9963" /* 9963 */;
 import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9970 */;
@@ -29,12 +30,12 @@ export default function NitroLimitUpsellBar(isAtLimit) {
   let obj = { style: tmp.container, children: null };
   if (isAtLimit) {
     obj = { color: "text-feedback-warning", style: tmp.icon };
-    let tmp4Result = tmp4(WarningIcon.WarningIcon, obj);
-    let tmp9 = tmp4;
+    let tmp4Result = hasOwnProperty(WarningIcon.WarningIcon, obj);
+    let tmp9 = hasOwnProperty;
   } else {
     obj = { source: _modDef9963, style: tmp.icon };
-    tmp4Result = tmp4(React3, obj);
-    tmp9 = tmp4;
+    tmp4Result = hasOwnProperty(React3, obj);
+    tmp9 = hasOwnProperty;
   }
   const items = [tmp4Result, , ];
   const obj1 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
@@ -47,10 +48,10 @@ export default function NitroLimitUpsellBar(isAtLimit) {
   if (isAtLimit) {
     let Button = NitroUpsellButtonDefault;
   } else {
-    Button = tmp12(4975).Button;
+    Button = components_Button_Button.Button;
   }
   const obj3 = { size: "sm", text: null, onPress: null, loading: null };
-  const intl2 = tmp12(1114).intl;
+  const intl2 = util.intl;
   obj3.text = intl2.string(util.t["8x0jKT"]);
   obj3.onPress = onPress;
   obj3.loading = loading;

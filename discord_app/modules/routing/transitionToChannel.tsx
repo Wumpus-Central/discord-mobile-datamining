@@ -5,6 +5,7 @@ import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1100 */;
 import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 4572 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -16,7 +17,6 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
   const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
-    const tmp7 = importDefault;
     ChannelActionCreatorsDefault.preload(channel.guild_id, channel.id);
     const obj = { openChannel: true };
     const obj5 = router_utils;
@@ -30,8 +30,8 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
       prop = channel.isGuildVocal();
     }
     if (prop) {
-      tmp7(4761).updateChatOpen(channel.id, true);
-      const tmp7Result = tmp7(4761);
+      ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
+      const tmp7Result = ChannelRTCActionCreatorsDefault;
     }
     const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id);
   }
@@ -69,7 +69,6 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
     const channel1 = obj.getChannel(parentChannelId);
     if (null != channel1) {
       const guildIdForGenericRedirect1 = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel1);
-      const tmp20 = importDefault;
       ChannelActionCreatorsDefault.preload(channel1.guild_id, channel1.id);
       obj = { openChannel: true };
       const obj9 = router_utils;
@@ -83,8 +82,8 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
         prop = channel1.isGuildVocal();
       }
       if (prop) {
-        tmp20(4761).updateChatOpen(channel1.id, true);
-        const tmp20Result = tmp20(4761);
+        ChannelRTCActionCreatorsDefault.updateChatOpen(channel1.id, true);
+        const tmp20Result = ChannelRTCActionCreatorsDefault;
       }
       const CHANNELResult1 = Routes.CHANNEL(guildIdForGenericRedirect1, channel1.id);
     }

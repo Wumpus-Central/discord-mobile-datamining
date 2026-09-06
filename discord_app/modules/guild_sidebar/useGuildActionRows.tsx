@@ -46,7 +46,6 @@ export default function useGuildActionRows(id) {
   const hasItem1 = features2.has(GuildFeatures.COMMUNITY);
   const hasItem2 = features3.has(GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
   const obj10 = require("canUseGuildSpace");
-  const tmp14 = GuildFeatures;
   const tmp18 = useHasAllocateBoostPermissionDefault(id.id);
   const mobileBoostProgressBarEnabled = require("MobileBoostProgressBarExperiment").useMobileBoostProgressBarEnabled("useGuildActionRows");
   const obj11 = require("MobileBoostProgressBarExperiment");
@@ -106,7 +105,7 @@ export default function useGuildActionRows(id) {
               }
               if (canReviewGuildMemberApplications) {
                 const features5 = id.features;
-                canReviewGuildMemberApplications = features5.has(tmp14.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+                canReviewGuildMemberApplications = features5.has(GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL);
               }
               if (canReviewGuildMemberApplications) {
                 items3.push(ChannelListGuildActionRow.GUILD_MOD_DASH_MEMBER_SAFETY);
@@ -142,4 +141,5 @@ export default function useGuildActionRows(id) {
     }
   }
   items2 = [];
+  const obj14 = require("GameServerTabAlwaysOnExperiment");
 };

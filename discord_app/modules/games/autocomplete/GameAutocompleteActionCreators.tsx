@@ -2,12 +2,13 @@
 
 // Module 8900 (GameAutocompleteActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
 import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameAutocompleteStore from "GameAutocompleteStore" /* 5108 */;
 
 require = fn;
-let closure_6 = async function _fetchGameAutocomplete(arg0, value) {
+let closure_6 = async function _fetchGameAutocomplete(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -48,7 +49,7 @@ let closure_6 = async function _fetchGameAutocomplete(arg0, value) {
               const obj2 = { type: "GAME_AUTOCOMPLETE_FETCH", query: result };
               dispatch(obj2);
               c5 = 1;
-              const HTTP = tmp38(1272).HTTP;
+              const HTTP = HTTPUtils.HTTP;
               const request = { url: constants.GAMES_AUTOCOMPLETE, query: null, rejectWithError: false };
               let obj3 = { q: result };
               request.query = obj3;
@@ -59,7 +60,6 @@ let closure_6 = async function _fetchGameAutocomplete(arg0, value) {
             }
           }
           c7 = 3;
-          tmp38 = require;
         }
       } else if (1 === tmp7) {
         c5 = 0;

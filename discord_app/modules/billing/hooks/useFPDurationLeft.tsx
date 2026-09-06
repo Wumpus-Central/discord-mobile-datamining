@@ -63,21 +63,21 @@ function roundFPCountdownUnits(arg0) {
 const CountDownMessageTypes = { SHORT_TIME_LEFT: 0, [0]: "SHORT_TIME_LEFT", LONG_TIME_LEFT: 1, [1]: "LONG_TIME_LEFT", ENDS_IN: 2, [2]: "ENDS_IN", SHORT_TIME: 3, [3]: "SHORT_TIME", CREDITS_ENDS_IN: 4, [4]: "CREDITS_ENDS_IN" };
 const result = size.fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
 
-export default function useFPDurationLeft(toDate, arg1) {
-  if (obj.SHORT_TIME_LEFT === arg1) {
+export default function useFPDurationLeft(toDate, SHORT_TIME) {
+  if (obj.SHORT_TIME_LEFT === SHORT_TIME) {
     const time = { days: util.t["/wnvqA"], hours: util.t.Jsq0XN, minutes: util.t["SBd+Bs"] };
-  } else if (tmp.LONG_TIME_LEFT === arg1) {
+  } else if (obj.LONG_TIME_LEFT === SHORT_TIME) {
     const time1 = { days: util.t.UD5nn5, hours: util.t.Hg8Fee, minutes: util.t.XSbQZZ };
   } else {
-    if (tmp.ENDS_IN === arg1) {
+    if (obj.ENDS_IN === SHORT_TIME) {
       const time2 = { days: util.t.rLqNad, hours: util.t.d1LvCA, minutes: util.t.Z2LX7K };
-    } else if (tmp.CREDITS_ENDS_IN !== arg1) {
-      if (tmp.SHORT_TIME === arg1) {
+    } else if (obj.CREDITS_ENDS_IN !== SHORT_TIME) {
+      if (obj.SHORT_TIME === SHORT_TIME) {
         const time3 = { days: util.t.fYmirx, hours: util.t["C3RO+g"], minutes: util.t.r77oHc };
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Unknown messageType (" + arg1 + ") when rendering time left");
+        const error = new Error("Unknown messageType (" + SHORT_TIME + ") when rendering time left");
         throw error;
       }
     }

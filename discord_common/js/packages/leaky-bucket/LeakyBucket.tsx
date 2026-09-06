@@ -20,18 +20,18 @@ prototype["_processQueue"] = function _processQueue() {
   const self = this;
   const timerId = setTimeout(() => {
     if (self._queue.length > 0) {
-      if (obj._tokenCount > 0) {
-        obj._tokenCount = obj._tokenCount - 1;
-        if (null == obj._intervalID) {
+      if (self._tokenCount > 0) {
+        self._tokenCount = self._tokenCount - 1;
+        if (null == self._intervalID) {
           const _setInterval = setInterval;
-          obj._intervalID = setInterval(() => self._iterate(), obj._intervalPeriod);
+          self._intervalID = setInterval(() => self._iterate(), self._intervalPeriod);
         }
-        const _queue = obj._queue;
+        const _queue = self._queue;
         const arr = _queue.shift();
         if (arr != null) {
           arr.resolve();
         }
-        obj._processQueue();
+        self._processQueue();
       }
     }
   }, 0);

@@ -7,6 +7,8 @@ import timing from "timing" /* 4561 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7244 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
+import PlayIcon2 from "PlayIcon" /* 8274 */;
+import PauseIcon from "PauseIcon" /* 8276 */;
 import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14536 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -90,20 +92,20 @@ function MediaInfo(message) {
         if (memo) {
           const obj2 = { style: { flex: 1 }, children: null };
           const obj3 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [tmp13(tmp2(17226).Marquee, obj3), ];
+          const items3 = [closure_15(tmp2(17226).Marquee, obj3), ];
           const obj4 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, locations: [0, 0.1, 0.2, 0.8, 0.9, 1], colors: null, style: null };
           const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
           obj4.colors = items4;
           obj4.style = tmp.infoContainerGradient;
-          items3[1] = tmp13(tmp4(4987), obj4);
+          items3[1] = closure_15(tmp4(4987), obj4);
           obj2.children = items3;
-          tmp16Result = tmp16(tmp15, obj2);
+          tmp16Result = closure_16(closure_7, obj2);
         }
         const items5 = [tmp16Result, ];
         let tmp13Result = null != stateFromStores;
         if (tmp13Result) {
           const obj5 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: stateFromStores };
-          tmp13Result = tmp13(tmp2(4556).Text, obj5);
+          tmp13Result = closure_15(tmp2(4556).Text, obj5);
         }
         items5[1] = tmp13Result;
         obj1.children = items5;
@@ -122,16 +124,16 @@ function PiPControls(message) {
   const items = [message];
   const callback = noop.useCallback(() => {
     if (null != message) {
-      if (null != tmp.channel_id) {
-        if (null != tmp.id) {
+      if (null != message.channel_id) {
+        if (null != message.id) {
           const obj = MessageActionCreatorsDefault;
-          obj.trackJump(tmp.channel_id, tmp.id, "Media PIP", {});
-          const channel = ChannelStore.getChannel(tmp.channel_id);
+          obj.trackJump(message.channel_id, message.id, "Media PIP", {});
+          const channel = ChannelStore.getChannel(message.channel_id);
           let guildId;
           if (channel != null) {
             guildId = channel.getGuildId();
           }
-          safeTransitionToDefault(closure_2_14.CHANNEL(guildId, tmp.channel_id, tmp.id), { navigationReplace: true, openChannel: true });
+          safeTransitionToDefault(closure_2_14.CHANNEL(guildId, message.channel_id, message.id), { navigationReplace: true, openChannel: true });
           const tmp6Result = safeTransitionToDefault;
         }
       }
@@ -236,10 +238,10 @@ export default function MediaPlaybackPip() {
   const stateFromStores = progress(closePip[13]).useStateFromStores(items, () => {
     let channelId;
     if (callback != null) {
-      channelId = tmp.channelId;
+      channelId = callback.channelId;
     }
     if (callback != null) {
-      const messageId = tmp.messageId;
+      const messageId = callback.messageId;
     }
     let message = null;
     if (null != channelId) {
@@ -279,14 +281,14 @@ export default function MediaPlaybackPip() {
     }
     if (tmp2) {
       const obj = { initialProgress: callback, activeMediaPlayerSource: progress, message: closePip };
-      tmp.current = obj;
+      mediaSourceMessage.current = obj;
     }
-    let tmp9 = null != tmp.current;
+    let tmp9 = null != mediaSourceMessage.current;
     if (tmp9) {
       tmp9 = null != callback;
     }
     if (tmp9) {
-      tmp.current.finalProgress = callback;
+      mediaSourceMessage.current.finalProgress = callback;
     }
   }, items2);
   const effect1 = obj.useEffect(() => {
@@ -383,7 +385,7 @@ export default function MediaPlaybackPip() {
     }
     return () => clearTimeout(closure_0);
   }, items3);
-  const dismissPanel = obj.useContext(callback(tmp4[30])).dismissPanel;
+  const dismissPanel = obj.useContext(callback(closePip[30])).dismissPanel;
   const items4 = [dismissPanel, closePip];
   callback = obj.useCallback(() => {
     dismissPanel();
@@ -431,26 +433,26 @@ export default function MediaPlaybackPip() {
   const items8 = [mediaSourceMessage, activeMediaPlayerSource, hasFlagResult, first];
   const memo = obj.useMemo(() => {
     if (progress) {
-      let PlayIcon = tmp2(8276).PauseIcon;
+      let PlayIcon = PauseIcon.PauseIcon;
     } else {
-      PlayIcon = tmp2(8274).PlayIcon;
+      PlayIcon = PlayIcon2.PlayIcon;
     }
     return __initData(PlayIcon, { color: nativeDefault.colors.WHITE, size: "md" });
   }, items7);
   const items9 = [mediaSourceMessage, callback, first, hasFlagResult];
   const memo1 = obj.useMemo(() => __initData(MediaInfo, { message: mediaSourceMessage, activeMediaPlayerSource: callback, isVoiceMessage: hasFlagResult, isControlVisible: first }), items8);
   const memo2 = obj.useMemo(() => __initData(PiPControls, { message: mediaSourceMessage, handleClosePip: callback, visible: first, isVoiceMessage: hasFlagResult }), items9);
-  const intl = tmp3(tmp4[23]).intl;
+  const intl = tmp3(closePip[23]).intl;
   const string = intl.string;
-  const t = tmp3(tmp4[23]).t;
+  const t = tmp3(closePip[23]).t;
   if (hasFlagResult) {
     let stringResult = string(t.AlHqHT);
   } else {
     stringResult = string(t.RscU7I);
   }
-  const intl2 = tmp3(tmp4[23]).intl;
+  const intl2 = tmp3(closePip[23]).intl;
   const string2 = intl2.string;
-  const t2 = tmp3(tmp4[23]).t;
+  const t2 = tmp3(closePip[23]).t;
   if (hasFlagResult) {
     let string2Result = string2(t2["3XohGn"]);
   } else {
@@ -493,9 +495,9 @@ export default function MediaPlaybackPip() {
   }
   obj1.fill = num5;
   obj1.ref = ref;
-  let tmp3Result = tmp3(tmp4[12]);
+  let tmp3Result = tmp3(closePip[12]);
   obj1.tintColor = tmp3Result.useToken(callback(closePip[11]).colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT);
-  tmp3Result = tmp3(tmp4[12]);
+  tmp3Result = tmp3(closePip[12]);
   obj1.backgroundColor = tmp3Result.useToken(callback(closePip[11]).colors.BACKGROUND_MOD_MUTED);
   const items11 = [closure_15(progress(closePip[33]).AnimatedCircularProgress, obj1), ];
   obj2 = { style: tmp.playPauseButton, onPress: callback1, accessibilityRole: "button", accessibilityLabel: null, children: null };

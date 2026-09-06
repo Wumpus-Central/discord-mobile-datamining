@@ -22,7 +22,7 @@ let closure_6 = async function _getAttachments(arg0) {
   c7 = 0;
   c8 = 0;
   c6 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -67,11 +67,10 @@ let closure_6 = async function _getAttachments(arg0) {
           c6 = 1;
           closure_131_6 = closure_1_5;
           let uri;
-          let tmp17 = closure_132_5;
           if ("uri" in closure_131_1.item) {
             uri = closure_131_1.item.uri;
           }
-          closure_131_4 = tmp17(uri);
+          closure_131_4 = closure_132_5(uri);
           let obj1 = { scheme: null, filename: null, mimeType: null, isImage: null, error: null };
           obj1.scheme = closure_131_4;
           obj1.filename = closure_131_1.filename;

@@ -64,7 +64,7 @@ function getSelectedGuildChannel() {
     ({ channel: obj4.channel, guild: obj4.guild } = obj);
   }
 }
-function buildTestMessageData(arg0, items) {
+function buildTestMessageData(arg0) {
   if (items === undefined) {
     items = [];
   }
@@ -112,18 +112,17 @@ function buildTestMessageData(arg0, items) {
     if (null != currentUser) {
       if ("media-only" === arg0) {
         obj1 = { content: "", attachments: [], stickerItems: null };
-        name = StickersStore.getStickerById(c17);
+        name = StickersStore.getStickerById(id);
         if (null != name) {
           const obj2 = { id: null, format_type: null, name: null };
           ({ id: obj12.id, format_type: obj12.format_type, name } = name);
           obj2.name = name;
           obj3 = obj2;
         } else {
-          obj3 = { id: tmp20, format_type: StickersTypes.StickerFormat.APNG, name: "Cheer" };
+          obj3 = { id, format_type: StickersTypes.StickerFormat.APNG, name: "Cheer" };
         }
         items1 = [obj3];
         obj1.stickerItems = items1;
-        tmp20 = c17;
       } else {
         if ("text-and-media" === arg0) {
           const obj4 = { content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..", attachments: null, stickerItems: null };
@@ -180,7 +179,7 @@ function buildTestMessageData(arg0, items) {
   }
   return null;
 }
-function buildReactionNotification(arg0, items) {
+function buildReactionNotification(arg0) {
   let tmp = items;
   if (items === undefined) {
     items = [reaction];

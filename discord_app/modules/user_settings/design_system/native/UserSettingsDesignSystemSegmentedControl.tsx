@@ -23,11 +23,11 @@ const result = size.fileFinishedImporting("modules/user_settings/design_system/n
 export default function UserSettingsDesignSystemSegmentedControl() {
   const tmp = _slicedToArray(noop.useState(0), 2);
   _require = tmp[1];
-  let tmp2 = _slicedToArray(noop.useState(3), 2);
+  const tmp2 = _slicedToArray(noop.useState(3), 2);
   const first = tmp2[0];
   _slicedToArray = tmp2[1];
   closure_129_0 = first;
-  let tmp5 = closure_8();
+  const tmp5 = closure_8();
   closure_129_1 = tmp5;
   let items = [first, tmp5.item];
   const memo = noop.useMemo(() => {
@@ -42,8 +42,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         obj.label = "Item " + sum;
         let _HermesInternal2 = HermesInternal;
         obj.id = "item-" + sum;
-        obj = { style: null, children: null };
-        obj.style = first.item;
+        obj = { style: first.item, children: null };
         obj = { variant: "heading-xxl/bold", children: null };
         let items1 = ["Item ", sum];
         obj.children = items1;

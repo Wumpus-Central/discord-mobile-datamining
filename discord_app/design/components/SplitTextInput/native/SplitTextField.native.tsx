@@ -3,6 +3,7 @@
 // Module 6967 (SplitTextField)
 import useTextField from "useTextField" /* 6614 */;
 import useInputClearButton from "useInputClearButton" /* 6615 */;
+import useInputAttachments from "useInputAttachments" /* 6619 */;
 import InputFieldContainer from "InputFieldContainer" /* 6621 */;
 import BaseTextField from "BaseTextField" /* 6623 */;
 import noop from "module_19" /* 19 */;
@@ -14,11 +15,11 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 
-export const SplitTextField = noop.forwardRef((size, ref) => {
+export const SplitTextField = noop.forwardRef((size, arg1) => {
   let obj = { size: size.size, isRound: size.isRound };
   const inputStyles = obj.useInputStyles(obj);
   let obj2 = useTextField;
-  const textField = obj2.useTextField(size, ref);
+  const textField = obj2.useTextField(size, arg1);
   ({ inputProps, innerRef, state } = textField);
   let obj3 = useInputClearButton;
   const inputClearButtonConfig = obj3.useInputClearButtonConfig(size, state);
@@ -28,7 +29,7 @@ export const SplitTextField = noop.forwardRef((size, ref) => {
     ({ content: obj5.trailing, pressableProps: obj5.trailingPressableProps } = inputClearButtonConfig);
     tmp6 = obj;
   }
-  let tmpResult = tmp(6619);
+  let tmpResult = useInputAttachments;
   const inputAttachments = tmpResult.useInputAttachments(size, tmp6);
   let tmp8 = null;
   ({ trailing, inputStyle } = inputAttachments);
@@ -47,7 +48,7 @@ export const SplitTextField = noop.forwardRef((size, ref) => {
             }
       };
       const merged = Object.assign(size.leadingPressableProps);
-      tmpResult = tmp(6619);
+      tmpResult = useInputAttachments;
       obj2.children = tmpResult.renderInputAttachment(undefined, size.leadingText, inputStyles.text);
       obj1.children = <React2 style={function style(pressed) {
         let obj;

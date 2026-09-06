@@ -33,7 +33,7 @@ function VideoUploadQualityNitroUpsell() {
     obj1 = { border: "none", shadow: "none", children: null };
     const obj2 = { style: tmp3.cardContent, children: null };
     const obj3 = { style: tmp3.cardIcon, source: _modDef10398, size: tmp(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
-    const items2 = [tmp7(tmp(1178).Icon, obj3), ];
+    const items2 = [closure_9(tmp(1178).Icon, obj3), ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1114).intl;
     const obj5 = {
@@ -43,11 +43,11 @@ function VideoUploadQualityNitroUpsell() {
         }
     };
     obj4.children = intl2.format(tmp(1114).t.uW1zul, obj5);
-    items2[1] = tmp7(tmp(4556).Text, obj4);
+    items2[1] = closure_9(tmp(4556).Text, obj4);
     obj2.children = items2;
-    obj1.children = tmp5(tmp6, obj2);
-    obj.children = tmp7(tmp(5607).Card, obj1);
-    tmp7Result = tmp7(tmp6, obj);
+    obj1.children = closure_10(View, obj2);
+    obj.children = closure_9(tmp(5607).Card, obj1);
+    tmp7Result = closure_9(View, obj);
   }
   children[1] = tmp7Result;
   return closure_10(View, { children });

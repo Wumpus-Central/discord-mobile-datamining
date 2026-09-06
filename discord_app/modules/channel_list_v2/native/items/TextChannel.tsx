@@ -66,10 +66,10 @@ export default noop.memo((channel) => {
     let num = 0;
     if (null != channel) {
       num = 0;
-      if (null != tmp2.id) {
+      if (null != channel.id) {
         num = 0;
-        if ("" !== tmp2.id) {
-          const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp2.id);
+        if ("" !== channel.id) {
+          const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channel.id);
           let num2;
           if (embeddedActivitiesForChannel != null) {
             num2 = embeddedActivitiesForChannel.length;
@@ -150,7 +150,7 @@ export default noop.memo((channel) => {
   let tmp17Result = channelMode === tmp3(tmp4[15]).ChannelModes.SELECTED;
   if (tmp17Result) {
     const obj2 = { style: tmp.selectedBorder };
-    tmp17Result = tmp17(View, obj2);
+    tmp17Result = closure_13(View, obj2);
   }
   const items7 = [tmp17Result, ];
   const obj3 = { ref, style: null, children: null };
@@ -165,9 +165,9 @@ export default noop.memo((channel) => {
     const merged1 = Object.assign(tmp3(tmp4[15]).getChannelSubtitleTextProps(channelMode));
     const tmp3Result5 = tmp3(tmp4[15]);
     obj5.children = tmp3(tmp4[30]).getChannelSubtitleData(subtitle).subtitle;
-    items10[1] = tmp17(tmp3(tmp4[25]).Text, obj5);
+    items10[1] = closure_13(tmp3(tmp4[25]).Text, obj5);
     obj4.children = items10;
-    tmp20Result = tmp20(tmp26, obj4);
+    tmp20Result = closure_14(View, obj4);
     const tmp3Result6 = tmp3(tmp4[30]);
   }
   items9[1] = tmp20Result;
@@ -178,7 +178,7 @@ export default noop.memo((channel) => {
   children[1] = closure_14(channel(id[28]).AnimatedPressableHighlight, obj);
   if (selected) {
     const obj6 = { targetRef: ref, channelType: channel.type };
-    selected = tmp17(tmp15(tmp4[32]), obj6);
+    selected = closure_13(isSuggestedSection(tmp4[32]), obj6);
   }
   children[2] = selected;
   return closure_14(tmp21, { children });

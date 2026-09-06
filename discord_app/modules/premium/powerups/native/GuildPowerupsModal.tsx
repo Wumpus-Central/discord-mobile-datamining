@@ -47,8 +47,8 @@ export default function GuildPowerupsModal(guildId) {
   const autoDismissGuildPowerupsNotifications = obj1.useAutoDismissGuildPowerupsNotifications(guildId);
   autoOpenPerkId(autoOpenRequestId[9])(guildId, "GuildPowerupsModal", null != autoOpenPerkId);
   ({ bottom, top } = autoOpenPerkId(autoOpenRequestId[10])());
-  let tmp9 = closure_10();
-  let tmp8 = autoOpenPerkId(autoOpenRequestId[10])();
+  const tmp9 = closure_10();
+  const tmp8 = autoOpenPerkId(autoOpenRequestId[10])();
   if (null != analyticsLocation) {
     const items = [analyticsLocation];
     let items1 = items;
@@ -67,28 +67,26 @@ export default function GuildPowerupsModal(guildId) {
           while (iter !== undefined) {
             let listings = iter.next().listings;
             for (const item10011 of listings) {
-              let tmp5 = item10011;
               if ("singlePerk" === item10011.type) {
-                if (tmp5.powerup.skuId === autoOpenPerkId) {
+                if (item10011.powerup.skuId === autoOpenPerkId) {
                   ref.current = autoOpenRequestId;
-                  let obj = { guildId: null, powerup: null };
-                  obj.guildId = guildId;
-                  obj.powerup = tmp5.powerup;
+                  let obj = { guildId, powerup: item10011.powerup };
                   let tmp29 = openGuildPowerupsBottomSheetDefault(obj);
                   obj.return();
                   iter.return();
                 }
               }
-              if ("multiPerk" === tmp5.type) {
-                if (tmp5.group !== autoOpenPerkId) {
-                  let powerups = tmp5.powerups;
+              if ("multiPerk" === item10011.type) {
+                if (item10011.group !== autoOpenPerkId) {
+                  let powerups = item10011.powerups;
                 }
                 ref.current = autoOpenRequestId;
-                obj = { guildId: null, listing: null, onDismiss: null };
-                obj.guildId = guildId;
-                obj.listing = tmp5;
-                obj.onDismiss = function onDismiss() {
-                  return autoOpenPerkId(autoOpenRequestId[15]).pop();
+                obj = {
+                  guildId,
+                  listing: item10011,
+                  onDismiss() {
+                                return autoOpenPerkId(autoOpenRequestId[15]).pop();
+                              }
                 };
                 let tmp19 = openGuildPowerupsMultiPerkBottomSheetDefault(obj);
                 obj.return();
@@ -106,7 +104,7 @@ export default function GuildPowerupsModal(guildId) {
     let arr = autoOpenPerkId(autoOpenRequestId[15]);
     arr = arr.pop();
   }, []);
-  let tmp10 = autoOpenPerkId(autoOpenRequestId[11]);
+  const tmp10 = autoOpenPerkId(autoOpenRequestId[11]);
   ({ available, spent, total } = autoOpenPerkId(autoOpenRequestId[16])(guildId));
   obj = { value: tmp10(...items1).analyticsLocations, children: null };
   obj = { style: tmp9.container, children: null };

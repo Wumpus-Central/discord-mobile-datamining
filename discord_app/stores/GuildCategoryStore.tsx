@@ -20,9 +20,9 @@ function rebuildGuild(arg0) {
     if (null != channel.parent_id) {
       str = channel.parent_id;
     }
-    let _null = tmp[str];
+    let _null = obj[str];
     if (_null == null) {
-      _null = tmp.null;
+      _null = obj.null;
     }
     _null.push({ channel, index: -1 });
   }
@@ -49,9 +49,9 @@ function handleConnectionOpen() {
       if (null != channel.parent_id) {
         str = channel.parent_id;
       }
-      let _null = tmp[str];
+      let _null = obj[str];
       if (_null == null) {
-        _null = tmp.null;
+        _null = obj.null;
       }
       _null.push({ channel, index: -1 });
     }
@@ -80,9 +80,9 @@ function handleGuildUpdates(guild) {
       if (null != channel.parent_id) {
         str = channel.parent_id;
       }
-      let _null = tmp[str];
+      let _null = obj[str];
       if (_null == null) {
-        _null = tmp.null;
+        _null = obj.null;
       }
       _null.push({ channel, index: -1 });
     }
@@ -114,9 +114,9 @@ function handleChannelUpdate(channel) {
         if (null != channel.parent_id) {
           str = channel.parent_id;
         }
-        let _null = tmp[str];
+        let _null = obj[str];
         if (_null == null) {
-          _null = tmp.null;
+          _null = obj.null;
         }
         _null.push({ channel, index: -1 });
       }
@@ -146,9 +146,9 @@ function handleGuildRoleUpdate(guildId) {
       if (null != channel.parent_id) {
         str = channel.parent_id;
       }
-      let _null = tmp[str];
+      let _null = obj[str];
       if (_null == null) {
-        _null = tmp.null;
+        _null = obj.null;
       }
       _null.push({ channel, index: -1 });
     }
@@ -183,9 +183,9 @@ function updateSelectedVoiceChannel(channel, channelId) {
             if (null != channel.parent_id) {
               str = channel.parent_id;
             }
-            let _null = tmp[str];
+            let _null = obj[str];
             if (_null == null) {
-              _null = tmp.null;
+              _null = obj.null;
             }
             _null.push({ channel, index: -1 });
           }
@@ -217,9 +217,9 @@ function handleFavoritesUpdate() {
     if (null != channel.parent_id) {
       str = channel.parent_id;
     }
-    let _null = tmp[str];
+    let _null = obj[str];
     if (_null == null) {
-      _null = tmp.null;
+      _null = obj.null;
     }
     _null.push({ channel, index: -1 });
   }
@@ -263,9 +263,9 @@ prototype["getCategories"] = function getCategories(arg0) {
         if (null != channel.parent_id) {
           str = channel.parent_id;
         }
-        let _null = tmp[str];
+        let _null = obj[str];
         if (_null == null) {
-          _null = tmp.null;
+          _null = obj.null;
         }
         _null.push({ channel, index: -1 });
       }
@@ -308,9 +308,9 @@ const guildCategoryStore = new GuildCategoryStore(DispatcherDefault, {
           if (null != channel.parent_id) {
             str = channel.parent_id;
           }
-          let _null = tmp[str];
+          let _null = obj[str];
           if (_null == null) {
-            _null = tmp.null;
+            _null = obj.null;
           }
           _null.push({ channel, index: -1 });
         }
@@ -372,9 +372,9 @@ const guildCategoryStore = new GuildCategoryStore(DispatcherDefault, {
           if (null != channel.parent_id) {
             str = channel.parent_id;
           }
-          let _null = tmp[str];
+          let _null = obj[str];
           if (_null == null) {
-            _null = tmp.null;
+            _null = obj.null;
           }
           _null.push({ channel, index: -1 });
         }
@@ -404,9 +404,9 @@ const guildCategoryStore = new GuildCategoryStore(DispatcherDefault, {
         if (null != channel.parent_id) {
           str = channel.parent_id;
         }
-        let _null = tmp[str];
+        let _null = obj[str];
         if (_null == null) {
-          _null = tmp.null;
+          _null = obj.null;
         }
         _null.push({ channel, index: -1 });
       }
@@ -422,6 +422,7 @@ const guildCategoryStore = new GuildCategoryStore(DispatcherDefault, {
       const item2 = channels[timestampProducer].forEach(updateChannel);
       const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
       closure_12[c11] = obj;
+      const arr4 = getFlattedChannelListDefault(obj._categories, obj);
     }
   },
   GUILD_ROLE_CREATE: handleGuildRoleUpdate,

@@ -13,13 +13,13 @@ export { RegisterTransitionSteps };
 export const authStateToRegisterTransitionStep = function authStateToRegisterTransitionStep(arg0) {
   if (ConstantsIOS.AuthStates.REGISTER_IDENTITY === arg0) {
     return obj.ACCOUNT_IDENTITY;
-  } else if (tmp(1093).AuthStates.REGISTER_DISPLAY_NAME === arg0) {
+  } else if (ConstantsIOS.AuthStates.REGISTER_DISPLAY_NAME === arg0) {
     return obj.ACCOUNT_DISPLAY_NAME;
-  } else if (tmp(1093).AuthStates.REGISTER_ACCOUNT_INFORMATION === arg0) {
+  } else if (ConstantsIOS.AuthStates.REGISTER_ACCOUNT_INFORMATION === arg0) {
     return obj.ACCOUNT_INFORMATION;
-  } else if (tmp(1093).AuthStates.AGE_GATE === arg0) {
+  } else if (ConstantsIOS.AuthStates.AGE_GATE === arg0) {
     return obj.AGE_GATE;
-  } else if (tmp(1093).AuthStates.VERIFY_PHONE === arg0) {
+  } else if (ConstantsIOS.AuthStates.VERIFY_PHONE === arg0) {
     return obj.PHONE_VERIFICATION;
   }
 };

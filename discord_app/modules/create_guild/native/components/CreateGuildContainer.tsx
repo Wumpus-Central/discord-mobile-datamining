@@ -54,7 +54,7 @@ export default function CreateGuildContainer(onCreate) {
     return flag;
   }), 2);
   const first2 = tmp11[0];
-  const callback = first1.useCallback(isCommunityIntent(function*(arg0, value) {
+  const callback = first1.useCallback(isCommunityIntent(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -110,7 +110,7 @@ export default function CreateGuildContainer(onCreate) {
     }
   }), []);
   const items = [guildTemplate, first1, name, onCreate, onHubGuildInfoSet, first2, isCommunityIntent];
-  const callback1 = first1.useCallback(isCommunityIntent(function*(arg0, value) {
+  const callback1 = first1.useCallback(isCommunityIntent(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

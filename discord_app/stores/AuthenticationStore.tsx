@@ -17,6 +17,7 @@ import ApexActionCreators from "ApexActionCreators" /* 11482 */;
 import isStaffFromRawUserDefault from "isStaffFromRawUser" /* 12415 */;
 import fetchExperiments from "fetchExperiments" /* 14190 */;
 import awaitExperiments from "awaitExperiments" /* 14191 */;
+import TrackingConsentUtilsDefault from "TrackingConsentUtils" /* 14192 */;
 import ClientStateStoreStorage from "ClientStateStoreStorage" /* 14193 */;
 import BrowserHandoffStore from "BrowserHandoffStore" /* 503 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
@@ -33,13 +34,13 @@ function fetchFingerprint(arg0) {
   const Storage2 = Storage6.Storage;
   value = Storage2.get(analytics_installation);
   if (null == value) {
-    const Storage3 = tmp(510).Storage;
+    const Storage3 = Storage6.Storage;
     value = Storage3.get("analytics_installation");
     let tmp4 = null;
     if (null != value) {
       tmp4 = null;
       if (value.length > 0) {
-        const Storage4 = tmp(510).Storage;
+        const Storage4 = Storage6.Storage;
         const result = Storage4.set(analytics_installation, value);
         tmp4 = value;
       }
@@ -56,7 +57,7 @@ function fetchFingerprint(arg0) {
       let obj = TokenManagerAll;
       token = obj.getToken();
     }
-    let tmpResult = tmp(1100);
+    let tmpResult = router_utils;
     if (tmpResult.isValidFingerprintRoute()) {
       if (flag) {
         if (!BrowserHandoffStore.isHandoffAvailable()) {
@@ -71,11 +72,11 @@ function fetchFingerprint(arg0) {
           if (null != installation) {
             obj["X-Installation-ID"] = installation;
           }
-          tmpResult = tmp(14190);
+          tmpResult = fetchExperiments;
           obj = { withGuildExperiments: true, headers: null, context: null };
           obj.headers = obj;
           const obj1 = { location: null };
-          obj1.location = tmp(1100).getFingerprintLocation();
+          obj1.location = router_utils.getFingerprintLocation();
           obj.context = obj1;
           const experiments = tmpResult.fetchExperiments(obj);
           let nextPromise = experiments.then((body) => {
@@ -102,7 +103,7 @@ function fetchFingerprint(arg0) {
             Dispatcher.dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
           });
           closure_33 = nextPromise;
-          const tmpResult1 = tmp(1100);
+          const tmpResult1 = router_utils;
         }
         return nextPromise;
       }
@@ -132,7 +133,7 @@ function handleLogout(isSwitchingAccount) {
     if (removeTokenResult) {
       closure_22 = c21;
       c21 = null;
-      const Storage3 = tmp3(510).Storage;
+      const Storage3 = Storage6.Storage;
       Storage3.remove(fingerprint);
     }
     fetchFingerprint();
@@ -149,12 +150,12 @@ function handleLogout(isSwitchingAccount) {
   }
   obj1.type = str;
   PersistedStore.clearAll(obj1);
-  const Store = tmp14(504).Store;
+  const Store = initializeDefault.Store;
   const result = Store.removeAllConditionalListeners();
   MobileCacheSnapshotStore.clearAll();
   removeTokenResult = TokenManagerAll.removeToken();
   SentryUtilsDefault.clearUser();
-  const Storage4 = tmp3(510).Storage;
+  const Storage4 = Storage6.Storage;
   Storage4.remove(user_id_cache);
   id = null;
   sessionId = null;
@@ -162,7 +163,7 @@ function handleLogout(isSwitchingAccount) {
   if (isSwitchingAccount != null) {
     isSwitchingAccount1 = isSwitchingAccount.isSwitchingAccount;
   }
-  NONE = isSwitchingAccount1 ? tmp22.LOGGING_IN : tmp22.NONE;
+  NONE = isSwitchingAccount1 ? LoginStates.LOGGING_IN : LoginStates.NONE;
   c28 = "";
   c30 = null;
   c29 = false;
@@ -178,6 +179,7 @@ function handleLogout(isSwitchingAccount) {
   if (c29) {
     items.push({ type: "sms" });
   }
+  const tmp14Result = SentryUtilsDefault;
 }
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, LoginStates } = Constants);
@@ -219,13 +221,13 @@ prototype["initialize"] = function initialize() {
   const Storage2 = Storage6.Storage;
   value = Storage2.get(analytics_installation);
   if (null == value) {
-    const Storage3 = tmp(510).Storage;
+    const Storage3 = Storage6.Storage;
     value = Storage3.get("analytics_installation");
     let tmp4 = null;
     if (null != value) {
       tmp4 = null;
       if (value.length > 0) {
-        const Storage4 = tmp(510).Storage;
+        const Storage4 = Storage6.Storage;
         const result = Storage4.set(analytics_installation, value);
         tmp4 = value;
       }
@@ -247,6 +249,7 @@ prototype["initialize"] = function initialize() {
     promise = fetchFingerprint();
   }
   this.addChangeListener(() => ClientStateStoreStorage.setClientState(id));
+  obj = TokenManagerAll;
 };
 prototype["getLoginStatus"] = function getLoginStatus() {
   return NONE;
@@ -335,7 +338,7 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
     if (undefined !== auth) {
       authenticator_types = auth.authenticator_types;
     }
-    const Storage2 = tmp4(510).Storage;
+    const Storage2 = Storage6.Storage;
     const result = Storage2.set(user_id_cache, user.id);
     installation = undefined;
     if (apexExperiments != null) {
@@ -344,21 +347,22 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
     if (null != installation) {
       installation = apexExperiments.installation;
       if (null == installation) {
-        let tmp6Result = tmp6(14192);
+        let tmp6Result = TrackingConsentUtilsDefault;
         if (tmp6Result.canUseInstallationId()) {
-          const Storage3 = tmp4(510).Storage;
+          const Storage3 = Storage6.Storage;
           const result1 = Storage3.set(analytics_installation, installation);
         }
       }
     }
-    const Storage4 = tmp4(510).Storage;
+    const Storage4 = Storage6.Storage;
     if (Storage4.get(constants.APP_FIRST_LOGIN, true)) {
-      tmp6Result = tmp6(1242);
+      tmp6Result = AnalyticsUtilsDefault;
       obj = { platform: constants2.IOS };
-      tmp6Result.track(tmp15.APP_FIRST_LOGIN, obj);
-      const Storage5 = tmp4(510).Storage;
-      const result2 = Storage5.set(tmp15.APP_FIRST_LOGIN, false);
+      tmp6Result.track(constants.APP_FIRST_LOGIN, obj);
+      const Storage5 = Storage6.Storage;
+      const result2 = Storage5.set(constants.APP_FIRST_LOGIN, false);
     }
+    const tmpResult = TokenManagerAll;
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
     ({ user, analyticsToken } = arg0);
@@ -375,22 +379,23 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
       tmp8 = id2 === id;
     }
     if (!tmp8) {
-      let tmp4Result = tmp4(1099);
+      let tmp4Result = TokenManagerAll;
       tmp4Result.removeAnalyticsToken();
     }
-    tmp4Result = tmp4(1099);
+    tmp4Result = TokenManagerAll;
     tmp4Result.setToken(token, id2);
     if (null != analyticsToken) {
-      tmp4(1099).setAnalyticsToken(analyticsToken);
-      const tmp4Result1 = tmp4(1099);
+      TokenManagerAll.setAnalyticsToken(analyticsToken);
+      const tmp4Result1 = TokenManagerAll;
     }
     closure_22 = c21;
     c21 = null;
-    const Storage2 = tmp6(510).Storage;
+    const Storage2 = Storage6.Storage;
     Storage2.remove(fingerprint);
     id = user.id;
-    const Storage3 = tmp6(510).Storage;
+    const Storage3 = Storage6.Storage;
     const result = Storage3.set(user_id_cache, user.id);
+    const tmp5 = null != TokenManagerAll.getToken();
   },
   CONNECTION_CLOSED: function handleConnectionClosed(code) {
     code = code.code;
@@ -416,6 +421,7 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
         setImmediate(() => router_utils.transitionTo(constants.DEFAULT_LOGGED_OUT));
       }
     }
+    const tmp3 = null != obj.getToken();
   },
   AUTH_SESSION_CHANGE: function handleAuthSessionChange(authSessionIdHash) {
     authSessionIdHash = authSessionIdHash.authSessionIdHash;
@@ -477,6 +483,7 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
     } else {
       NONE = LoginStates.NONE;
     }
+    obj = getAuthenticationErrorsFromAPIError;
   },
   LOGIN_MFA_STEP: function handleLoginMFAStep(arg0) {
     ({ ticket, webauthn } = arg0);
@@ -606,6 +613,7 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
       const Storage = Storage6.Storage;
       const result = Storage.set(analytics_installation, installation);
     }
+    obj = TrackingConsentUtilsDefault;
   },
   REGISTER_SUCCESS: function handleRegisterSuccess(token) {
     let obj = TokenManagerAll;
@@ -641,15 +649,16 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
       tmp8 = userId === id;
     }
     if (!tmp8) {
-      let tmpResult = tmp(1099);
+      let tmpResult = TokenManagerAll;
       tmpResult.removeAnalyticsToken();
     }
-    tmpResult = tmp(1099);
+    tmpResult = TokenManagerAll;
     tmpResult.setToken(userId.token, userId);
     closure_22 = c21;
     c21 = null;
     const Storage3 = Storage6.Storage;
     Storage3.remove(fingerprint);
+    const tmp6 = null != TokenManagerAll.getToken();
   },
   EXPERIMENTS_FETCH(withGuildExperiments) {
     let obj = {};

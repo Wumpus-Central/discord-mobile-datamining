@@ -1,9 +1,11 @@
 // === Module 4897: EmbedUtils ===
 
 // Module 4897 (EmbedUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
+import _modDef4153 from "module_4153" /* 4153 */;
 import InteractionComponentUtils from "InteractionComponentUtils" /* 4785 */;
 import EmbedConstants from "EmbedConstants" /* 4898 */;
 import Constants from "Constants" /* 1074 */;
@@ -64,7 +66,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   }
   if (null != footer.timestamp) {
     const _Date = Date;
-    let tmpResult = tmp(4153);
+    let tmpResult = _modDef4153;
     const date = new Date(footer.timestamp);
     obj.timestamp = tmpResult(date);
   }
@@ -144,17 +146,17 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     }
     if (tmp20) {
       const size3 = { width: footer.video.width, height: footer.video.height, url: null };
-      const obj2 = { format: "webp" };
       const _URL = URL;
       const str = new URL(footer.video.proxy_url);
       const _Object = Object;
-      const keys = Object.keys(obj2);
+      const keys = Object.keys({ format: "webp" });
       const item = keys.forEach((item) => {
         const searchParams = str.searchParams;
         const result = searchParams.set(item, obj2[item]);
       });
       size3.url = str.toString();
       obj.thumbnail = size3;
+      const obj2 = { format: "webp" };
     }
     let tmp27 = null != obj.thumbnail;
     if (tmp27) {
@@ -174,7 +176,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
           }
           let tmp33 = null != id;
           if (tmp33) {
-            tmpResult = tmp(11);
+            tmpResult = SnowflakeUtilsDefault;
             tmp33 = tmpResult.extractTimestamp(id) < 1492472454139;
           }
           let tmp34 = isMatch;
@@ -240,7 +242,7 @@ export const mergeEmbedsOnURL = function mergeEmbedsOnURL(mapped) {
       value = map.get(url.url);
       if (null == value) {
         items.push(url);
-        const result = obj.set(url.url, url);
+        const result = map.set(url.url, url);
       } else if (null != url.image) {
         if (null == value.images) {
           value.images = [];
@@ -252,7 +254,6 @@ export const mergeEmbedsOnURL = function mergeEmbedsOnURL(mapped) {
         const images1 = value.images;
         images1.push(url.image);
       }
-      obj = map;
     } else {
       items.push(url);
     }

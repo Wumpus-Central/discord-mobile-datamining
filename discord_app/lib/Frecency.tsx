@@ -66,10 +66,10 @@ class Frecency {
   }
 }
 const prototype = Frecency.prototype;
-prototype["overwriteHistory"] = function overwriteHistory(arg0, pendingUsages) {
+prototype["overwriteHistory"] = function overwriteHistory(dependencyMap, pendingUsages) {
   const self = this;
-  let obj = arg0;
-  if (arg0 == null) {
+  let obj = dependencyMap;
+  if (dependencyMap == null) {
     obj = {};
   }
   self.usageHistory = _modDef12.mapValues(obj, (arg0) => {
@@ -205,23 +205,22 @@ prototype["compute"] = function compute() {
         if (arg1 >= self.maxSamples) {
           return false;
         } else {
-          score.score = score.score + closure_1 * obj.computeWeight(closure_1.diff(_modDef4153(arg0), "days"));
+          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef4153(arg0), "days"));
         }
-        obj = self;
       });
       if (recentUses.score > 0) {
         if (recentUses.recentUses.length > 0) {
-          let obj = { numOfRecentUses: recentUses.length, maxTotalUse: null };
+          const obj = { numOfRecentUses: recentUses.length, maxTotalUse: null };
           let totalUses;
           if (maxByResult != null) {
             totalUses = maxByResult.totalUses;
           }
           obj.maxTotalUse = totalUses;
-          recentUses.frecency = obj2.computeFrecency(tmp3, recentUses.score, obj);
+          recentUses.frecency = self.computeFrecency(tmp3, recentUses.score, obj);
         }
-        obj2.usageHistory[arg1] = recentUses;
+        self.usageHistory[arg1] = recentUses;
       } else {
-        const usageHistory = obj2.usageHistory;
+        const usageHistory = self.usageHistory;
         delete tmp2[tmp];
       }
       const arr2 = maxByResult(dependencyMap[0]);

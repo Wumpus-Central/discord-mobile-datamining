@@ -2,7 +2,9 @@
 
 // Module 8009 (ApplicationCommandSourceSystemMessage)
 import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
 import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5000 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
 import ApplicationCommands from "ApplicationCommands" /* 8010 */;
@@ -22,8 +24,8 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
   }
   if (null != applicationCommand) {
     if (null != name) {
-      const messageAuthorWithProcessedColor = tmp(7960).getMessageAuthorWithProcessedColor(message);
-      const intl = tmp(1114).intl;
+      const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+      const intl = util.intl;
       obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, commandName: null, applicationName: null };
       obj = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
       obj.usernameOnClick = formatUsernameOnClickDefault(obj);
@@ -36,7 +38,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
       const obj1 = { content: null };
       obj.commandName = name2;
       obj.applicationName = name;
-      obj1.content = intl.formatToParts(tmp(1114).t["1Zm+zw"], obj);
+      obj1.content = intl.formatToParts(util.t["1Zm+zw"], obj);
       const merged = Object.assign(createCommonMessageDefault(message));
       return obj1;
     }

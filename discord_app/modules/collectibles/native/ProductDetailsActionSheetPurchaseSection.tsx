@@ -2,6 +2,7 @@
 
 // Module 13151 (ProductDetailsActionSheetPurchaseSection)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -37,7 +38,7 @@ function GiftButton(onTrackPress) {
     obj = { skuId: skuId.skuId, analyticsLocations };
     openGiftModal.openShopGiftModal(obj);
   };
-  const intl = tmp2(tmp3[15]).intl;
+  const intl = require("util").intl;
   obj.accessibilityLabel = intl.string(require("util").t.PEjaCx);
   return closure_15(require("IconButton").IconButton, obj);
 }
@@ -82,8 +83,8 @@ function VCButton(balance) {
         const collectiblesPurchases = obj.fetchCollectiblesPurchases();
         let obj1 = product(4763);
         obj1.popWithKey(ORB_CHECKOUT_MODAL);
-        if (closure_1_1.skuId === constants.ORB_PROFILE_BADGE) {
-          let tmp4Result = tmp4(4763);
+        if (product.skuId === constants.ORB_PROFILE_BADGE) {
+          let tmp4Result = product(4763);
           obj = {
             modalKey,
             onPressViewBadge() {
@@ -91,12 +92,12 @@ function VCButton(balance) {
               },
             orbBalancePriorToPurchase
           };
-          tmp4Result.pushLazy(tmp(1896)(13156, tmp2.paths), obj, modalKey);
+          tmp4Result.pushLazy(balance(1896)(13156, dependencyMap.paths), obj, modalKey);
         } else {
-          const ALL = tmp(1077).FractionalPremiumSKUsSets.ALL;
-          if (ALL.has(tmp6.skuId)) {
-            tmp4Result = tmp4(4527);
-            obj = { skuId: tmp6.skuId, consumed: null, onPressExplorePerks: null, onPressViewCredits: null };
+          const ALL = balance(1077).FractionalPremiumSKUsSets.ALL;
+          if (ALL.has(product.skuId)) {
+            tmp4Result = product(4527);
+            obj = { skuId: product.skuId, consumed: null, onPressExplorePerks: null, onPressViewCredits: null };
             const first = arg0.entitlements[0];
             let flag;
             if (first != null) {
@@ -108,18 +109,18 @@ function VCButton(balance) {
             obj.consumed = flag;
             obj.onPressExplorePerks = function onPressExplorePerks() {
               navigation.navigate(constants2.PREMIUM);
-              closure_2_1(4527).hideActionSheet();
+              product(4527).hideActionSheet();
             };
             obj.onPressViewCredits = function onPressViewCredits() {
               navigation.navigate(constants2.PREMIUM_MANAGE_PLAN);
-              closure_2_1(4527).hideActionSheet();
+              product(4527).hideActionSheet();
             };
-            tmp4Result.openLazy(tmp(1896)(13157, tmp2.paths), "FractionalNitroCollectedActionSheet", obj);
-            const tmp10 = tmp(1896)(13157, tmp2.paths);
+            tmp4Result.openLazy(balance(1896)(13157, dependencyMap.paths), "FractionalNitroCollectedActionSheet", obj);
+            const tmp10 = balance(1896)(13157, dependencyMap.paths);
           } else {
-            obj1 = { product: tmp6, useCategoryImage: true, showOrbBalancePill: true, orbBalancePriorToPurchase, stageCollectibleChangeForEditProfile };
-            tmp4(11077).open(obj1);
-            const tmp4Result1 = tmp4(11077);
+            obj1 = { product, useCategoryImage: true, showOrbBalancePill: true, orbBalancePriorToPurchase, stageCollectibleChangeForEditProfile };
+            product(11077).open(obj1);
+            const tmp4Result1 = product(11077);
           }
         }
       }
@@ -131,10 +132,6 @@ function VCButton(balance) {
   } else {
     const colors = nativeDefault.colors;
     color = isPartiallyOwnedBundle ? colors.INTERACTIVE_TEXT_ACTIVE : colors.WHITE;
-    let str = "text-overlay-light";
-    if (isPartiallyOwnedBundle) {
-      str = "interactive-text-active";
-    }
     const intl = tmp2(1114).intl;
     obj = {
       orbPrice: price.amount,
@@ -192,9 +189,9 @@ function PurchaseDisclaimer(arg0) {
   let obj = { style: closure_20().disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: null };
   let formatResult = product.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   if (formatResult) {
-    const intl = tmp3(1114).intl;
+    const intl = util.intl;
     obj = { buyButtonLabel, paidServiceTermURL: constants3.PAID_TERMS };
-    formatResult = intl.format(tmp3(1114).t.iIglwJ, obj);
+    formatResult = intl.format(util.t.iIglwJ, obj);
   }
   obj.children = formatResult;
   return __initData(Text_Text.Text, obj);
@@ -238,7 +235,6 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
   _slicedToArray = undefined;
   c4 = undefined;
   const tmp = closure_20();
-  const tmp3 = onTrackPress;
   let obj = require("shared");
   const isThemeDarkResult = obj.isThemeDark(require("useTheme")());
   let obj1 = require("useToken");
@@ -275,11 +271,11 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
   if (tmp16) {
     tmp21Result = !isPurchased;
   }
-  tmp5(tmp3[46]);
+  tmp5(onTrackPress[46]);
   const tmp4 = require("useTheme")();
-  const tmp5Result = tmp5(tmp3[47]);
+  const tmp5Result = tmp5(onTrackPress[47]);
   let canGiftProduct = tmp5Result.useCanGiftProduct(product);
-  let PX_16 = tmp2(tmp3[48])().bottom;
+  let PX_16 = require("useSafeAreaInsets")().bottom;
   const items2 = [tmp.container, , ];
   let containerFramesEA = tmp21Result;
   if (tmp21Result) {
@@ -287,7 +283,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
   }
   items2[1] = containerFramesEA;
   if (PX_16 == null) {
-    PX_16 = tmp2(tmp3[10]).space.PX_16;
+    PX_16 = require("native").space.PX_16;
   }
   obj = { style: items2, children: null };
   items2[2] = { paddingBottom: PX_16 };
@@ -295,7 +291,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
     obj = { colors: ["rgba(160, 86, 242, 0.45)", "rgba(22, 26, 138, 0.45)"], locations: [0.0854, 0.7847], start: { x: 0, y: 0 }, end: { x: 1, y: 1 }, style: null, pointerEvents: "none" };
     const items3 = [tmp.gradientOverlay, ];
     obj1 = !isThemeDarkResult;
-    let tmp2Result = tmp2(tmp3[49]);
+    let tmp2Result = require("LinearGradient");
     if (!isThemeDarkResult) {
       obj1 = { opacity: 0.4 };
     }
@@ -304,30 +300,30 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
     obj.style = items3;
     const items4 = [closure_15(tmp2Result, obj), ];
     obj3 = { style: tmp.gradientOverlay, preserveAspectRatio: "none", viewBox: "0 0 100 100", pointerEvents: "none", children: null };
-    tmp2Result = tmp2(tmp3[50]);
+    tmp2Result = require("inlineStyles");
     obj4 = { children: null };
     obj5 = { id: "frameEAVignette", cx: "50%", cy: "100%", rx: "100%", ry: "100%", fx: "50%", fy: "100%", children: null };
     obj6 = { offset: "60%", stopColor: token, stopOpacity: 1 };
-    const items5 = [closure_15(tmp5(tmp3[50]).Stop, obj6), ];
+    const items5 = [closure_15(tmp5(onTrackPress[50]).Stop, obj6), ];
     obj7 = { offset: "100%", stopColor: token, stopOpacity: 0 };
-    items5[1] = closure_15(tmp5(tmp3[50]).Stop, obj7);
+    items5[1] = closure_15(tmp5(onTrackPress[50]).Stop, obj7);
     obj5.children = items5;
-    obj4.children = tmp21(tmp5(tmp3[50]).RadialGradient, obj5);
-    const items6 = [closure_15(tmp5(tmp3[50]).Defs, obj4), closure_15(tmp5(tmp3[50]).Rect, { x: "0", y: "0", width: "100", height: "100", fill: "url(#frameEAVignette)" })];
+    obj4.children = closure_16(tmp5(onTrackPress[50]).RadialGradient, obj5);
+    const items6 = [closure_15(tmp5(onTrackPress[50]).Defs, obj4), closure_15(tmp5(onTrackPress[50]).Rect, { x: "0", y: "0", width: "100", height: "100", fill: "url(#frameEAVignette)" })];
     obj3.children = items6;
-    items4[1] = tmp21(tmp2Result, obj3);
+    items4[1] = closure_16(tmp2Result, obj3);
     obj2.children = items4;
-    tmp21Result = tmp21(closure_17, obj2);
+    tmp21Result = closure_16(closure_17, obj2);
   }
   const items7 = [tmp21Result, ];
   if (isPurchased) {
-    tmp21Result = product.type !== tmp5(tmp3[32]).CollectiblesItemType.EXTERNAL_SKU;
+    tmp21Result = product.type !== tmp5(onTrackPress[32]).CollectiblesItemType.EXTERNAL_SKU;
     if (tmp21Result) {
       obj8 = { style: tmp.buttonContainer, children: null };
       if (canUseNow) {
         obj9 = { loading: isApplying, text: null, onPress: null, size: "lg", grow: true };
-        const intl13 = tmp5(tmp3[15]).intl;
-        obj9.text = intl13.string(tmp5(tmp3[15]).t.MAS7uK);
+        const intl13 = tmp5(onTrackPress[15]).intl;
+        obj9.text = intl13.string(tmp5(onTrackPress[15]).t.MAS7uK);
         obj9.onPress = function onPress() {
           if (onTrackPress != null) {
             tmp(constants.USE_NOW);
@@ -337,8 +333,8 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
         obj10 = obj9;
       } else {
         obj10 = { text: null, onPress: null, size: "lg", grow: true };
-        const intl12 = tmp5(tmp3[15]).intl;
-        obj10.text = intl12.string(tmp5(tmp3[15]).t["2p2aYz"]);
+        const intl12 = tmp5(onTrackPress[15]).intl;
+        obj10.text = intl12.string(tmp5(onTrackPress[15]).t["2p2aYz"]);
         obj10.onPress = function onPress() {
           if (onTrackPress != null) {
             tmp(constants.EDIT_PROFILE);
@@ -346,78 +342,78 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
           _undefined2();
         };
       }
-      const items8 = [closure_15(tmp5(tmp3[51]).Button, obj10), ];
+      const items8 = [closure_15(tmp5(onTrackPress[51]).Button, obj10), ];
       if (canGiftProduct) {
         obj11 = { product, analyticsLocations, onTrackPress };
-        canGiftProduct = tmp53(GiftButton, obj11);
+        canGiftProduct = closure_15(GiftButton, obj11);
       }
       items8[1] = canGiftProduct;
       obj8.children = items8;
-      tmp21Result = tmp21(tmp22, obj8);
+      tmp21Result = closure_16(tmp22, obj8);
     }
     let tmp21Result2 = tmp21Result;
   } else if (tmp16) {
-    const tmp5Result1 = tmp5(tmp3[52]);
-    const t = tmp5(tmp3[15]).t;
-    const isAndroidResult = tmp5(tmp3[52]).isAndroid();
+    const tmp5Result1 = tmp5(onTrackPress[52]);
+    const t = tmp5(onTrackPress[15]).t;
+    const isAndroidResult = tmp5(onTrackPress[52]).isAndroid();
     obj12 = { value: null, children: null };
     const items9 = [];
-    const tmp45 = tmp5(tmp3[52]).isAndroid() ? t.COObWR : t["7wpqfj"];
-    items9[HermesBuiltin.arraySpread(analyticsLocations, 0)] = tmp2(tmp3[53]).PROFILE_FRAMES_EA_MARKETING;
+    const tmp45 = tmp5(onTrackPress[52]).isAndroid() ? t.COObWR : t["7wpqfj"];
+    items9[HermesBuiltin.arraySpread(analyticsLocations, 0)] = require("AnalyticsLocation").PROFILE_FRAMES_EA_MARKETING;
     obj12.value = items9;
     obj13 = { style: tmp.framesEAContainer, children: null };
     const obj14 = { variant: "text-xs/semibold", color: "text-strong", children: null };
-    const intl8 = tmp5(tmp3[15]).intl;
+    const intl8 = tmp5(onTrackPress[15]).intl;
     const obj15 = { articleURL: null };
     const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
-    obj15.articleURL = tmp2(tmp3[54]).getArticleURL(constants2.SHOP_FRAMES_EARLY_ACCESS);
-    obj14.children = intl8.format(tmp5(tmp3[15]).t["3cglst"], obj15);
-    const items10 = [closure_15(tmp5(tmp3[30]).Text, obj14), , ];
+    obj15.articleURL = require("HelpdeskUtils").getArticleURL(constants2.SHOP_FRAMES_EARLY_ACCESS);
+    obj14.children = intl8.format(tmp5(onTrackPress[15]).t["3cglst"], obj15);
+    const items10 = [closure_15(tmp5(onTrackPress[30]).Text, obj14), , ];
     const obj16 = { onTrackPress, text: null };
-    const intl9 = tmp5(tmp3[15]).intl;
-    obj16.text = intl9.string(tmp5(tmp3[15]).t["9wfL34"]);
-    items10[1] = closure_15(tmp5(tmp3[55]).UnlockWithNitroButton, obj16);
+    const intl9 = tmp5(onTrackPress[15]).intl;
+    obj16.text = intl9.string(tmp5(onTrackPress[15]).t["9wfL34"]);
+    items10[1] = closure_15(tmp5(onTrackPress[55]).UnlockWithNitroButton, obj16);
     const obj17 = { variant: "text-xxs/normal", children: null };
-    const intl10 = tmp5(tmp3[15]).intl;
+    const intl10 = tmp5(onTrackPress[15]).intl;
     const obj18 = { paidURL: constants3.PAID_TERMS, interval: null, ctaText: null };
-    const tmp2Result1 = tmp2(tmp3[54]);
-    obj18.interval = tmp2(tmp3[39]).getIntervalStringAsNoun(tmp19);
-    const intl11 = tmp5(tmp3[15]).intl;
-    obj18.ctaText = intl11.string(tmp5(tmp3[15]).t["9wfL34"]);
+    const tmp2Result1 = require("HelpdeskUtils");
+    obj18.interval = require("PremiumUtils").getIntervalStringAsNoun(tmp19);
+    const intl11 = tmp5(onTrackPress[15]).intl;
+    obj18.ctaText = intl11.string(tmp5(onTrackPress[15]).t["9wfL34"]);
     obj17.children = intl10.format(tmp45, obj18);
-    items10[2] = closure_15(tmp5(tmp3[30]).Text, obj17);
+    items10[2] = closure_15(tmp5(onTrackPress[30]).Text, obj17);
     obj13.children = items10;
-    obj12.children = tmp21(tmp22, obj13);
-    tmp21Result2 = closure_15(tmp5(tmp3[20]).AnalyticsLocationProvider, obj12);
-    const tmp2Result2 = tmp2(tmp3[39]);
+    obj12.children = closure_16(tmp22, obj13);
+    tmp21Result2 = closure_15(tmp5(onTrackPress[20]).AnalyticsLocationProvider, obj12);
+    const tmp2Result2 = require("PremiumUtils");
   } else {
     if (result) {
       if (!isPremiumSubscriber) {
         if (!result1) {
           const obj19 = { onTrackPress };
-          tmp21Result2 = closure_15(tmp5(tmp3[55]).UnlockWithNitroButton, obj19);
+          tmp21Result2 = closure_15(tmp5(onTrackPress[55]).UnlockWithNitroButton, obj19);
         }
       }
     }
     if (!result1) {
-      if (product.type === tmp5(tmp3[32]).CollectiblesItemType.BUNDLE) {
-        const intl6 = tmp5(tmp3[15]).intl;
-        let stringResult = intl6.string(tmp5(tmp3[15]).t.V1AWw0);
-      } else if (product.type === tmp5(tmp3[32]).CollectiblesItemType.PROFILE_EFFECT) {
-        const intl5 = tmp5(tmp3[15]).intl;
-        stringResult = intl5.string(tmp5(tmp3[15]).t.kAeDcK);
-      } else if (product.type === tmp5(tmp3[32]).CollectiblesItemType.NAMEPLATE) {
-        const intl4 = tmp5(tmp3[15]).intl;
-        stringResult = intl4.string(tmp5(tmp3[15]).t.H3vhqU);
-      } else if (product.type === tmp5(tmp3[32]).CollectiblesItemType.AVATAR_DECORATION) {
-        const intl3 = tmp5(tmp3[15]).intl;
-        stringResult = intl3.string(tmp5(tmp3[15]).t.AQ0Veg);
-      } else if (product.type === tmp5(tmp3[32]).CollectiblesItemType.PROFILE_FRAME) {
-        const intl2 = tmp5(tmp3[15]).intl;
-        stringResult = intl2.string(tmp5(tmp3[15]).t.BlSW1e);
+      if (product.type === tmp5(onTrackPress[32]).CollectiblesItemType.BUNDLE) {
+        const intl6 = tmp5(onTrackPress[15]).intl;
+        let stringResult = intl6.string(tmp5(onTrackPress[15]).t.V1AWw0);
+      } else if (product.type === tmp5(onTrackPress[32]).CollectiblesItemType.PROFILE_EFFECT) {
+        const intl5 = tmp5(onTrackPress[15]).intl;
+        stringResult = intl5.string(tmp5(onTrackPress[15]).t.kAeDcK);
+      } else if (product.type === tmp5(onTrackPress[32]).CollectiblesItemType.NAMEPLATE) {
+        const intl4 = tmp5(onTrackPress[15]).intl;
+        stringResult = intl4.string(tmp5(onTrackPress[15]).t.H3vhqU);
+      } else if (product.type === tmp5(onTrackPress[32]).CollectiblesItemType.AVATAR_DECORATION) {
+        const intl3 = tmp5(onTrackPress[15]).intl;
+        stringResult = intl3.string(tmp5(onTrackPress[15]).t.AQ0Veg);
+      } else if (product.type === tmp5(onTrackPress[32]).CollectiblesItemType.PROFILE_FRAME) {
+        const intl2 = tmp5(onTrackPress[15]).intl;
+        stringResult = intl2.string(tmp5(onTrackPress[15]).t.BlSW1e);
       } else {
-        const intl = tmp5(tmp3[15]).intl;
-        stringResult = intl.string(tmp5(tmp3[15]).t.AQ0Veg);
+        const intl = tmp5(onTrackPress[15]).intl;
+        stringResult = intl.string(tmp5(onTrackPress[15]).t.AQ0Veg);
       }
       const obj20 = { style: tmp.purchaseSection, children: null };
       let tmp30 = canAfford;
@@ -453,7 +449,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
           str2 = "secondary";
         }
         obj23.variant = str2;
-        const items12 = [closure_15(tmp5(tmp3[51]).Button, obj23), ];
+        const items12 = [closure_15(tmp5(onTrackPress[51]).Button, obj23), ];
         let tmp34Result = canGiftProduct;
         if (canGiftProduct) {
           const obj24 = { product, analyticsLocations, variant: null, onTrackPress: null };
@@ -462,11 +458,11 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
           }
           obj24.variant = str;
           obj24.onTrackPress = onTrackPress;
-          tmp34Result = tmp34(GiftButton, obj24);
+          tmp34Result = closure_15(GiftButton, obj24);
         }
         items12[1] = tmp34Result;
         obj22.children = items12;
-        tmp21Result1 = tmp21(tmp22, obj22);
+        tmp21Result1 = closure_16(tmp22, obj22);
       }
       items11[1] = tmp21Result1;
       let tmp37 = !canAfford;
@@ -482,11 +478,11 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
       }
       items11[3] = tmp40;
       obj20.children = items11;
-      tmp21Result2 = tmp21(tmp22, obj20);
+      tmp21Result2 = closure_16(tmp22, obj20);
     }
     const obj27 = { text: null, loading: null, onPress: null, size: "lg", grow: true };
-    const intl7 = tmp5(tmp3[15]).intl;
-    obj27.text = intl7.string(tmp5(tmp3[15]).t.zp6caO);
+    const intl7 = tmp5(onTrackPress[15]).intl;
+    obj27.text = intl7.string(tmp5(onTrackPress[15]).t.zp6caO);
     obj27.loading = _slicedToArray(obj4.useStateFromStoresArray(items, () => {
       const items = [CollectiblesPurchaseStore.isClaiming === product.skuId];
       return items;
@@ -497,7 +493,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
       }
       handleClaim();
     };
-    tmp21Result2 = closure_15(tmp5(tmp3[51]).Button, obj27);
+    tmp21Result2 = closure_15(tmp5(onTrackPress[51]).Button, obj27);
   }
   items7[1] = tmp21Result2;
   obj.children = items7;

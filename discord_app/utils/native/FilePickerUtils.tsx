@@ -4,7 +4,7 @@
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_5 = async function _handleDocumentSelection(arg0, value) {
+let closure_5 = async function _handleDocumentSelection() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -29,7 +29,7 @@ let closure_5 = async function _handleDocumentSelection(arg0, value) {
           obj = { value, done: true };
           return obj;
         } else {
-          closure_2 = tmp3;
+          dependencyMap = tmp3;
           closure_1 = tmp7;
           closure_129_0 = undefined;
           let extensions;
@@ -61,20 +61,18 @@ let closure_5 = async function _handleDocumentSelection(arg0, value) {
           let tmp54;
           if (null != extensions) {
             if (extensions.length > 0) {
-              tmp54 = (function getPickerTypesForExtensions(arg0) {
+              tmp54 = (function getPickerTypesForExtensions(extensions) {
                 const items = [];
-                const iter = arg0[Symbol.iterator]();
+                const iter = extensions[Symbol.iterator]();
                 const nextResult = iter.next();
                 while (iter !== undefined) {
                   if ("jfif" !== nextResult) {
-                    let tmp10 = closure_1_0;
-                    let tmp11 = closure_1_2;
-                    let obj2 = closure_1_0(closure_1_2[2]);
+                    let obj2 = closure_1_0(dependencyMap[2]);
                     let obj = { kind: "extension", value: null };
                     obj.value = tmp2;
                     let isKnownTypeResult = obj2.isKnownType(obj);
                     if (isKnownTypeResult.isKnown) {
-                      let tmp10Result = tmp10(tmp11[3]);
+                      let tmp10Result = closure_1_0(dependencyMap[3]);
                       let tmp4 = tmp10Result.isIOS() ? tmp15 : tmp14;
                       if (null == tmp4) {
                         iter.return();

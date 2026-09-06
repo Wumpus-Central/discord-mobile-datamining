@@ -14,11 +14,11 @@ export const useAnnounceError = function useAnnounceError(arg0) {
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== closure_0;
     }
     if (tmp2) {
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(tmp);
+      AccessibilityAnnouncer.announce(closure_0);
     }
   }, items);
 };

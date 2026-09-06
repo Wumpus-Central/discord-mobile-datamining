@@ -8,13 +8,12 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/blocking/BlockedUserUtils.tsx");
 
-export const filterOutBlockedOrIgnoredUsers = function filterOutBlockedOrIgnoredUsers(mapped, arg1) {
-  const set = arg1;
-  const found = mapped.filter((item) => set(dependencyMap[1]).isNotNullish(item));
+export const filterOutBlockedOrIgnoredUsers = function filterOutBlockedOrIgnoredUsers(mapped, stateFromStores1) {
+  const found = mapped.filter((item) => stateFromStores1(dependencyMap[1]).isNotNullish(item));
   return found.filter((id) => {
     id = id.id;
-    if (null != set) {
-      let hasItem = set.has(id);
+    if (null != stateFromStores1) {
+      let hasItem = stateFromStores1.has(id);
     } else {
       hasItem = RelationshipStore.isBlockedOrIgnored(id);
     }
@@ -22,7 +21,6 @@ export const filterOutBlockedOrIgnoredUsers = function filterOutBlockedOrIgnored
   });
 };
 export const filterOutBlockedOrIgnoredUserIds = function filterOutBlockedOrIgnoredUserIds(arr, arg1) {
-  const set = arg1;
   return arr.filter((item) => {
     if (null != set) {
       let hasItem = set.has(item);

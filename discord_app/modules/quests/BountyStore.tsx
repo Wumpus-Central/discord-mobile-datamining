@@ -40,8 +40,8 @@ prototype["getCompletedBountyCount"] = function getCompletedBountyCount(arg0) {
   }
   return num;
 };
-prototype["isClaimingBountyReward"] = function isClaimingBountyReward(arg0) {
-  return set.has(arg0);
+prototype["isClaimingBountyReward"] = function isClaimingBountyReward(bountyId) {
+  return set.has(bountyId);
 };
 prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
   return closure_1.every((id) => set.has(id.id));

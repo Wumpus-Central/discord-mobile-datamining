@@ -9,10 +9,10 @@ const Permissions = fn(1085).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
 
-export const useCanSendStageStartNotification = function useCanSendStageStartNotification(arg0) {
-  _require = arg0;
+export const useCanSendStageStartNotification = function useCanSendStageStartNotification(channel) {
+  _require = channel;
   const items = [PermissionStore];
-  const items1 = [arg0];
+  const items1 = [channel];
   return require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {

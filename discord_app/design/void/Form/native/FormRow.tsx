@@ -109,7 +109,7 @@ let merged = Object.assign({}, noop.forwardRef((label, ref) => {
         tmp30 = trailing;
       }
       obj = { variant: label.variant, start, end: flag4, label: tmp18, subLabel: tmp19, icon: tmp26, trailing: tmp30, disabled: flag, accessible: flag3, accessibilityLabel, accessibilityHint, accessibilityRole, accessibilityState, accessibilityActions, onAccessibilityAction, onAccessibilityTap, labelLineClamp: numberOfLines, delayLongPress, onPress, onLongPress };
-      return style(tmp2(tmp3[7]).TableRow, obj);
+      return style(tmp2(subLabel[7]).TableRow, obj);
     }
     let tmp20 = null;
     if (null != subLabel) {
@@ -123,43 +123,43 @@ let merged = Object.assign({}, noop.forwardRef((label, ref) => {
   } else {
     function renderInnerView() {
       if (typeof label !== "function") {
-        if (!noop.isValidElement(tmp)) {
-          let obj = { numberOfLines, text: tmp, style };
+        if (!noop.isValidElement(label)) {
+          let obj = { numberOfLines, text: label, style };
           let tmp7 = hasOwnProperty(FormLabelDefault, obj);
         }
         if (typeof subLabel !== "function") {
-          if (!noop.isValidElement(tmp12)) {
+          if (!noop.isValidElement(subLabel)) {
             let tmp13 = null;
-            if (null != tmp12) {
-              obj = { text: tmp12, numberOfLines };
+            if (null != subLabel) {
+              obj = { text: subLabel, numberOfLines };
               tmp13 = hasOwnProperty(FormSubLabelDefault, obj);
             }
           }
           if (typeof leading === "function") {
             let tmp23 = null;
-            if (null != tmp22) {
-              let tmp25 = tmp22;
-              if (!noop.isValidElement(tmp22)) {
-                tmp25 = hasOwnProperty(tmp22, {});
+            if (null != leading) {
+              let tmp25 = leading;
+              if (!noop.isValidElement(leading)) {
+                tmp25 = hasOwnProperty(leading, {});
               }
               tmp23 = tmp25;
             }
             let tmp27 = tmp23;
           } else {
-            tmp27 = tmp22;
+            tmp27 = leading;
           }
           if (typeof trailing === "function") {
             let tmp29 = null;
-            if (null != tmp28) {
-              let tmp31 = tmp28;
-              if (!noop.isValidElement(tmp28)) {
-                tmp31 = hasOwnProperty(tmp28, {});
+            if (null != trailing) {
+              let tmp31 = trailing;
+              if (!noop.isValidElement(trailing)) {
+                tmp31 = hasOwnProperty(trailing, {});
               }
               tmp29 = tmp31;
             }
             let tmp33 = tmp29;
           } else {
-            tmp33 = tmp28;
+            tmp33 = trailing;
           }
           let tmp37 = null;
           if (null != leading) {
@@ -189,9 +189,9 @@ let merged = Object.assign({}, noop.forwardRef((label, ref) => {
         }
         let tmp18 = null;
         if (null != subLabel) {
-          let tmp20 = tmp12;
-          if (!noop.isValidElement(tmp12)) {
-            tmp20 = hasOwnProperty(tmp12, {});
+          let tmp20 = subLabel;
+          if (!noop.isValidElement(subLabel)) {
+            tmp20 = hasOwnProperty(subLabel, {});
           }
           tmp18 = tmp20;
         }
@@ -199,9 +199,9 @@ let merged = Object.assign({}, noop.forwardRef((label, ref) => {
       }
       let tmp8 = null;
       if (null != label) {
-        let tmp10 = tmp;
-        if (!noop.isValidElement(tmp)) {
-          tmp10 = hasOwnProperty(tmp, {});
+        let tmp10 = label;
+        if (!noop.isValidElement(label)) {
+          tmp10 = hasOwnProperty(label, {});
         }
         tmp8 = tmp10;
       }
@@ -279,7 +279,7 @@ let merged = Object.assign({}, noop.forwardRef((label, ref) => {
     }
     obj2.unstable_pressDelay = num2;
     obj2.children = renderInnerView();
-    tmp11Result = style(tmp2(tmp3[10]).PressableHighlight, obj2);
+    tmp11Result = style(tmp2(subLabel[10]).PressableHighlight, obj2);
   }
 }), obj);
 const size = fn(2);

@@ -4,6 +4,7 @@
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
 import useSelectedTeen from "useSelectedTeen" /* 8647 */;
 import useParentalControlSettings from "useParentalControlSettings" /* 14824 */;
 import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14825 */;
@@ -41,10 +42,9 @@ let SettingBuilders = {
       if (!arg0) {
         let obj = DefaultDMSettingsExperiment;
         if (obj.shouldAgeVerifyForDMDefaultOff()) {
-          obj = { entryPoint: tmp2(8413).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS };
+          obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS };
           const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
         }
-        tmp2 = require;
       }
       const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
       const result1 = ParentalControlledDefaultMessageRequestRestricted.updateControlledSetting(selectedTeenId, !arg0);

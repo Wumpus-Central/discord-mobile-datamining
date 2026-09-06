@@ -14,7 +14,6 @@ export default function useSortedOnboardingPrompts(arg0) {
   stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () => GuildOnboardingPromptsStore.getEnabledOnboardingPrompts(closure_0));
   let items1 = [stateFromStoresArray];
   return noop.useMemo(() => {
-    let arr5;
     const items = [];
     const items1 = [];
     const items2 = [];
@@ -25,7 +24,6 @@ export default function useSortedOnboardingPrompts(arg0) {
     let num3 = 0;
     if (0 < stateFromStoresArray.length) {
       do {
-        arr5 = stateFromStoresArray;
         let tmp2 = stateFromStoresArray[num];
         if (tmp2.isNew) {
           let arr = items.push(tmp2);
@@ -44,8 +42,8 @@ export default function useSortedOnboardingPrompts(arg0) {
         num = num + 1;
         num2 = sum;
         num3 = sum;
-        tmp = arr5;
-      } while (num < arr5.length);
+        tmp = stateFromStoresArray;
+      } while (num < stateFromStoresArray.length);
     }
     return { onboardingPromptsRaw: tmp, newOnboardingPrompts: items, onboardingPromptsWithNewAnswers: items1, newAnswersCount: num3, onboardingPrompts: items2.concat(items3) };
   }, items1);

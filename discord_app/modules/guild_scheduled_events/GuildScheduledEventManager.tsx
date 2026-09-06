@@ -17,7 +17,7 @@ function getGuildEventsForCurrentUser() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _getGuildEventsForCurrentUser(arg0, value) {
+let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -46,15 +46,15 @@ let closure_10 = async function _getGuildEventsForCurrentUser(arg0, value) {
           closure_1 = tmp7;
           closure_129_0 = closure_0;
           if (0 !== guildScheduledEventsForGuild.getGuildScheduledEventsForGuild(closure_0).length) {
-            if (!set.has(tmp32)) {
-              if (!set2.has(tmp32)) {
+            if (!set.has(closure_0)) {
+              if (!set2.has(closure_0)) {
                 c4 = 1;
-                set.add(tmp32);
+                set.add(closure_0);
                 let obj1 = GuildScheduledEventsActionCreatorsDefault;
                 c5 = 2;
                 c6 = 1;
                 obj1 = { value: null, done: false };
-                obj1.value = obj1.getGuildEventsForCurrentUser(tmp32);
+                obj1.value = obj1.getGuildEventsForCurrentUser(closure_0);
                 return obj1;
               }
             }
@@ -128,7 +128,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
         const _Date = Date;
         const _HermesInternal = HermesInternal;
         const timestamp = Date.now();
-        tmp3 = timestamp - dependencyMap["" + tmp + "-" + tmp2 + "-" + item] > closure_2_8;
+        tmp3 = timestamp - dependencyMap["" + v3 + "-" + closure_1_1 + "-" + item] > closure_2_8;
       }
       return tmp3;
     });
@@ -137,7 +137,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
     let timestamp = Date.now();
     let _HermesInternal = HermesInternal;
     let _Date = Date;
-    let combined = "" + tmp24 + "-" + tmp25;
+    let combined = "" + closure_0 + "-" + closure_1;
     dependencyMap[combined] = Date.now();
     const item = found.forEach((item) => {
       const combined = "" + v3 + "-" + closure_1_1 + "-" + item;
@@ -150,11 +150,11 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
       c3 = 0;
     } else if (arg0 === 1) {
       v3 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       c3 = 0;
     }
-    return arg1;
+    return value;
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
@@ -165,7 +165,7 @@ prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUse
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -275,11 +275,12 @@ prototype["handleInviteResolveSuccess"] = function handleInviteResolveSuccess(in
   if (tmp2) {
     getGuildEventsForCurrentUser(id);
   }
+  tmp2 = null != invite.guild_scheduled_event && null != id;
 };
 prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
   guildId = guildId.guildId;
   const self = this;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c9 === 2) {
       c9 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

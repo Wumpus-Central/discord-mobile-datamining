@@ -4,6 +4,7 @@
 import util from "util" /* 1114 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
 import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5527 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5529 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5569 */;
 import ChatInputGuardDefault from "ChatInputGuard" /* 12448 */;
 import _modDef12457 from "module_12457" /* 12457 */;
@@ -11,7 +12,6 @@ import _modDef12458 from "module_12458" /* 12458 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-const LottieAnimationViewDefault = tmp14(5529);
 require = fn;
 const Image = fn(17).Image;
 const TextAreaCta = fn(11962).TextAreaCta;
@@ -68,10 +68,10 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
   const tmp2Result = guildId(504);
   if (null != tmp8) {
     obj = { style: tmp.noticeIcon, source: tmp8 };
-    let tmp13Result = tmp13(Image, obj);
+    let tmp13Result = <Image style={tmp.noticeIcon} source={tmp8} />;
   } else {
     obj = { style: tmp.lottieAnimation, source: tmp2(12459), autoPlay: !stateFromStores };
-    tmp13Result = tmp13(LottieAnimationViewDefault, obj);
+    tmp13Result = jsx(LottieAnimationViewDefault, { style: tmp.lottieAnimation, source: tmp2(12459), autoPlay: !stateFromStores });
     const tmp14Result = LottieAnimationViewDefault;
   }
   const obj1 = { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null };

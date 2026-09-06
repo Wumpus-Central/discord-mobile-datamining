@@ -55,7 +55,7 @@ class BugCreateScreen {
     closure_22 = undefined;
     closure_23 = undefined;
     closure_24 = undefined;
-    closure_25 = async function _handleAttachmentSelect(arg0, value) {
+    closure_25 = async function _handleAttachmentSelect() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -215,8 +215,8 @@ class BugCreateScreen {
       if (null != screenshotUri) {
         const obj = {};
         const merged = Object.assign(screenshot);
-        obj.uri = tmp;
-        obj.originalUri = tmp;
+        obj.uri = screenshotUri;
+        obj.originalUri = screenshotUri;
         obj.platform = Upload.UploadPlatform.REACT_NATIVE;
         const tmp11 = new UploadDefault(obj);
         closure_0 = tmp11;
@@ -250,7 +250,7 @@ class BugCreateScreen {
         }
         return applyArgumentsResult;
       }
-      closure_1 = async function _handleSubmit(arg0, value) {
+      closure_1 = async function _handleSubmit() {
         if (priority === 2) {
           priority = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -282,7 +282,7 @@ class BugCreateScreen {
                 closure_128_2 = undefined;
                 closure_128_3 = function _submitReportWithNotifications() {
                   const self = this;
-                  const tmp = closure_3_3(function*(arg0, value, arg2) {
+                  const tmp = closure_3_3(function*(arg0, arg1, arg2) {
                     if (c6 === 2) {
                       c6 = 3;
                       throw new TypeError("Generator functions may not be called on executing generators");
@@ -507,12 +507,12 @@ class BugCreateScreen {
       navigation.setOptions({
         headerRight() {
           if (first5) {
-            const intl2 = tmp2(1114).intl;
-            let stringResult = intl2.string(tmp2(1114).t["tUu8V+"]);
+            const intl2 = util.intl;
+            let stringResult = intl2.string(util.t["tUu8V+"]);
           } else {
-            const intl = tmp2(1114).intl;
+            const intl = util.intl;
             const string = intl.string;
-            const t = tmp2(1114).t;
+            const t = util.t;
             if (first4) {
               stringResult = string(t.ZiWcJ0);
             } else {
@@ -548,7 +548,7 @@ class BugCreateScreen {
     items4 = [];
     items4[0] = stateFromStores;
     effect3 = closure_5.useEffect(() => {
-      closure_0 = async function _fetchConfig(arg0, value) {
+      closure_0 = async function _fetchConfig() {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

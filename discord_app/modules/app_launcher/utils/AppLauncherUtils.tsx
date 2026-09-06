@@ -140,7 +140,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
     commandOrigin = require("ApplicationCommandTypes").CommandOrigin.APPLICATION_LAUNCHER;
   }
   const channel = context.channel;
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async () => {
     if (commandOrigin === 2) {
       commandOrigin = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -245,7 +245,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
   };
   return fn();
 };
-export const getApplicationDetails = function getApplicationDetails(id, guildMember) {
+export const getApplicationDetails = function getApplicationDetails(id) {
   let obj = guildMember;
   if (guildMember === undefined) {
     obj = {};

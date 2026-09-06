@@ -31,7 +31,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
         obj.style = size;
         const obj1 = { uri: resourceChannelIconURL };
         obj.source = obj1;
-        tmp4Result = tmp4(height(tmp2[11]), obj);
+        tmp4Result = jsx(height(dependencyMap[11]), { style: null, source: null });
       }
       obj.icon = tmp4Result;
       obj.onPress = function onPress() {
@@ -54,7 +54,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
         obj.style = size;
         const obj1 = { uri: resourceChannelIconURL };
         obj.source = obj1;
-        tmp4Result = tmp4(height(tmp2[11]), obj);
+        tmp4Result = jsx(height(dependencyMap[11]), { style: null, source: null });
       }
       obj.icon = tmp4Result;
       obj.onPress = function onPress() {
@@ -77,7 +77,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
         obj.style = size;
         const obj1 = { uri: resourceChannelIconURL };
         obj.source = obj1;
-        tmp4Result = tmp4(height(tmp2[11]), obj);
+        tmp4Result = jsx(height(dependencyMap[11]), { style: null, source: null });
       }
       obj.icon = tmp4Result;
       obj.onPress = function onPress() {

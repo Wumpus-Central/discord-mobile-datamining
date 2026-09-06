@@ -21,7 +21,7 @@ function fetchWarning() {
       return closure_7;
     } else {
       _require = closure_9;
-      const tmp6 = (async (arg0, value) => {
+      const tmp6 = (async () => {
         if (logger === 2) {
           logger = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -164,7 +164,7 @@ function maybeFetchWarning() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _maybeFetchWarning(arg0, value) {
+let closure_13 = async function _maybeFetchWarning() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -219,7 +219,7 @@ let closure_13 = async function _maybeFetchWarning(arg0, value) {
     }
   }
 };
-let closure_14 = async function _forceFetchWarning(arg0, value) {
+let closure_14 = async function _forceFetchWarning() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

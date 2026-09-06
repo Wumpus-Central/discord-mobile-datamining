@@ -2,8 +2,12 @@
 
 // Module 7130 (Emoji)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import native from "native" /* 1178 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
+import shared from "shared" /* 4411 */;
 import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef7131 from "module_7131" /* 7131 */;
+import _modDef7132 from "module_7132" /* 7132 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
@@ -30,22 +34,21 @@ export default function Emoji(arg0) {
     if (null != uRL) {
       if ("" !== uRL) {
         obj = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
-        const tmp10 = FastImageDefault;
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
-          let tmp9Result = tmp9(7131);
+          let tmp9Result = _modDef7131;
         } else {
-          tmp9Result = tmp9(7132);
+          tmp9Result = _modDef7132;
         }
         obj.placeholder = tmp9Result;
         obj1 = { uri: uRL };
         obj.source = obj1;
         obj.onError = onError;
-        let tmp6Result = tmp6(tmp10, obj);
-        tmpResult = tmp(4411);
+        let tmp6Result = <tmp10 resizeMode="contain" style={fastImageStyle} placeholder={null} source={null} onError={null} />;
+        tmpResult = shared;
       }
       obj.children = tmp6Result;
-      return tmp6(tmp7, obj);
+      return <tmp7 {...obj} />;
     }
   }
-  tmp6Result = tmp6(tmp(1178).LegacyText, { style: textEmojiStyle, allowFontScaling: false, adjustsFontSizeToFit, children: name });
+  tmp6Result = jsx(native.LegacyText, { style: textEmojiStyle, allowFontScaling: false, adjustsFontSizeToFit, children: name });
 };

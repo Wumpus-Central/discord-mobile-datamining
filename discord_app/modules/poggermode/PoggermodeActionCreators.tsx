@@ -59,4 +59,5 @@ export const updateComboOnMessageSend = function updateComboOnMessageSend(channe
     }
   }
   DispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId, userId: id, multiplier: num, value: 0 });
+  const obj1 = { type: "POGGERMODE_UPDATE_COMBO", channelId, userId: id, multiplier: num, value: 0 };
 };

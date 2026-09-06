@@ -72,7 +72,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
   let obj = savedMessage(11711);
   const savedMessageChannel = obj.useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
-  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -107,7 +107,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
               }
               return applyArgumentsResult;
             }
-            const v3 = async function _jumpTo(arg0, value) {
+            const v3 = async function _jumpTo() {
               if (c2 === 2) {
                 c2 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -207,17 +207,17 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
       if (obj1.useStateFromStores(items1, () => {
         let type;
         if (savedMessageChannel != null) {
-          type = obj.type;
+          type = savedMessageChannel.type;
         }
         let tmp2 = type === constants.UNKNOWN;
         if (!tmp2) {
           let isPrivateResult;
-          if (obj != null) {
-            isPrivateResult = obj.isPrivate();
+          if (savedMessageChannel != null) {
+            isPrivateResult = savedMessageChannel.isPrivate();
           }
           let canResult = isPrivateResult;
           if (!canResult) {
-            canResult = PermissionStore.can(constants2.VIEW_CHANNEL, obj);
+            canResult = PermissionStore.can(constants2.VIEW_CHANNEL, savedMessageChannel);
           }
           tmp2 = canResult;
         }
@@ -229,7 +229,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
         let tmp6Result = null;
         if (null != savedMessage.saveData.dueAt) {
           obj1 = { savedMessage, throttledNow, actions: tmp8 };
-          tmp6Result = tmp6(tmp2(13289).ForLaterCardReminderHeader, obj1);
+          tmp6Result = closure_10(tmp2(13289).ForLaterCardReminderHeader, obj1);
         }
         const items2 = [tmp6Result, , , ];
         let obj2 = { channel: savedMessageChannel, actions: null };

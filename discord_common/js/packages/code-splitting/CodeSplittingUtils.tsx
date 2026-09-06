@@ -167,7 +167,5 @@ export const LazyLibrary = function LazyLibrary(arg0) {
     obj.importWithRetry(obj).then((result) => closure_1_2(result.default));
   }, []);
   const tmp = _slicedToArray(noop.useState(null), 2);
-  const tmp4 = closure_4;
-  const tmp5 = closure_5;
-  return tmp4(tmp5, { children: null == tmp2 ? renderFallback() : render(tmp2) });
+  return closure_4(closure_5, { children: null == tmp2 ? renderFallback() : render(tmp2) });
 };

@@ -33,6 +33,7 @@ prototype["createRequestPayload"] = function createRequestPayload(trackExactTota
     const merged3 = Object.assign(dependencyMap);
     obj.limit = require(item);
     obj.tabs[item] = obj;
+    const tmp = require(item);
   });
   return obj;
 };
@@ -41,12 +42,12 @@ prototype["createWithPayload"] = function createWithPayload(searchTabs) {
   const requestPayload = this.createRequestPayload({ searchQuery, searchTabs: searchTabs.searchTabs, getLimit: searchTabs.getLimit, pagination: searchTabs.pagination, trackExactTotalHits: searchTabs.trackExactTotalHits });
   const type = searchContext.type;
   if (SearchTypes.GUILD !== type) {
-    if (tmp2.GUILD_CHANNEL !== type) {
-      if (tmp2.THREAD !== type) {
-        if (tmp2.CHANNEL === type) {
+    if (SearchTypes.GUILD_CHANNEL !== type) {
+      if (SearchTypes.THREAD !== type) {
+        if (SearchTypes.CHANNEL === type) {
           const searchTabFetcherImpl = new SearchFetcher.SearchTabFetcherImpl(searchContext.channelId, searchContext.type, searchQuery, requestPayload);
           return searchTabFetcherImpl;
-        } else if (tmp2.DMS === type) {
+        } else if (SearchTypes.DMS === type) {
           const searchTabFetcherImpl1 = new SearchFetcher.SearchTabFetcherImpl(searchContext.type, searchContext.type, searchQuery, requestPayload);
           return searchTabFetcherImpl1;
         } else {

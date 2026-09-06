@@ -21,7 +21,7 @@ function collectAgeSignal() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _collectAgeSignal(arg0, value) {
+let closure_10 = async function _collectAgeSignal() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -95,7 +95,7 @@ let closure_10 = async function _collectAgeSignal(arg0, value) {
     }
   }
 };
-let closure_11 = async function _performAgeCheck(arg0, value) {
+let closure_11 = async function _performAgeCheck(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   const result = AppStoreAgeSignalAttestation.warmAgeSignalAttestation();
@@ -156,7 +156,7 @@ let closure_11 = async function _performAgeCheck(arg0, value) {
   }
   return value;
 };
-let closure_12 = async function _settleAppStoreAgeSignalReport(arg0, value) {
+let closure_12 = async function _settleAppStoreAgeSignalReport() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -231,8 +231,9 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(!c7);
+    })(!tmp);
   }
+  tmp = c7;
 };
 export const settleAppStoreAgeSignalReport = function settleAppStoreAgeSignalReport() {
   const self = this;

@@ -17,13 +17,13 @@ export default {
       const HTTP = v3(1272).HTTP;
       const request = { url: Endpoints.GUILD_PRUNE(closure_0), query: { days: num, include_roles }, oldFormErrors: true, rejectWithError: v3(1272).rejectWithMigratedError() };
       await HTTP.get(request);
-      return arg1.body.pruned;
+      return value.body.pruned;
     })();
   },
   updateEstimateV2(id, arg1) {
     closure_0 = id;
     asyncGeneratorStep = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

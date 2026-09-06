@@ -5,6 +5,13 @@ import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 4974 */;
 import Status_StatusUtils from "Status/StatusUtils" /* 14103 */;
 import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14104 */;
+import _modDef14106 from "module_14106" /* 14106 */;
+import _modDef14107 from "module_14107" /* 14107 */;
+import _modDef14108 from "module_14108" /* 14108 */;
+import _modDef14109 from "module_14109" /* 14109 */;
+import _modDef14110 from "module_14110" /* 14110 */;
+import _modDef14111 from "module_14111" /* 14111 */;
+import _modDef14112 from "module_14112" /* 14112 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,19 +34,19 @@ let closure_14 = createStyles.createStyles((items, arg1) => {
   if (StatusTypes.ONLINE === arg1) {
     let PRIMARY_400 = nativeDefault.unsafe_rawColors.GREEN_360;
     let tmp5 = importDefault;
-  } else if (tmp3.IDLE === arg1) {
+  } else if (StatusTypes.IDLE === arg1) {
     PRIMARY_400 = nativeDefault.unsafe_rawColors.YELLOW_300;
     tmp5 = importDefault;
-  } else if (tmp3.DND === arg1) {
+  } else if (StatusTypes.DND === arg1) {
     PRIMARY_400 = nativeDefault.unsafe_rawColors.RED_400;
     tmp5 = importDefault;
-  } else if (tmp3.STREAMING === arg1) {
+  } else if (StatusTypes.STREAMING === arg1) {
     PRIMARY_400 = nativeDefault.unsafe_rawColors.PLATFORM_TWITCH;
     tmp5 = importDefault;
   } else {
-    if (tmp3.INVISIBLE !== arg1) {
-      if (tmp3.UNKNOWN !== arg1) {
-        const OFFLINE = tmp3.OFFLINE;
+    if (StatusTypes.INVISIBLE !== arg1) {
+      if (StatusTypes.UNKNOWN !== arg1) {
+        const OFFLINE = StatusTypes.OFFLINE;
       }
     }
     PRIMARY_400 = nativeDefault.unsafe_rawColors.PRIMARY_400;
@@ -73,23 +80,23 @@ export default function Status(isMobileOnline) {
   obj.style = items;
   obj = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(14106);
+    let tmp4Result = _modDef14106;
   } else if (flag2) {
-    tmp4Result = tmp4(14107);
+    tmp4Result = _modDef14107;
   } else if (flag) {
-    tmp4Result = tmp4(14108);
+    tmp4Result = _modDef14108;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = tmp4(14109);
-  } else if (tmp7.DND === status) {
-    tmp4Result = tmp4(14110);
+    tmp4Result = _modDef14109;
+  } else if (StatusTypes.DND === status) {
+    tmp4Result = _modDef14110;
   } else {
-    if (tmp7.OFFLINE !== status) {
-      if (tmp7.INVISIBLE !== status) {
-        const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(14112);
+    if (StatusTypes.OFFLINE !== status) {
+      if (StatusTypes.INVISIBLE !== status) {
+        const ONLINE = StatusTypes.ONLINE;
+        tmp4Result = _modDef14112;
       }
     }
-    tmp4Result = tmp4(14111);
+    tmp4Result = _modDef14111;
   }
   obj.source = tmp4Result;
   obj.children = closure_1_11(React4, obj);
@@ -175,12 +182,11 @@ export const StatusWithTyping = function StatusWithTyping(status) {
     num2 = 0;
   }
   const tmp = closure_13();
-  const tmp12 = CHANNEL_SPRING_CONFIG;
   const fn = function f() {
     const obj = { opacity: spring.withSpring(num2, CHANNEL_SPRING_CONFIG) };
     return obj;
   };
-  obj = { withSpring: tmp5(tmp4[20]).withSpring, statusOpacity: num2, CHANNEL_SPRING_CONFIG: tmp12 };
+  obj = { withSpring: tmp5(tmp4[20]).withSpring, statusOpacity: num2, CHANNEL_SPRING_CONFIG };
   fn.__closure = obj;
   fn.__workletHash = 7224613224414;
   fn.__initData = __initData2;
@@ -209,12 +215,12 @@ export const StatusWithTyping = function StatusWithTyping(status) {
     tmp3Result = tmp3(tmp4[12]);
   } else if (StatusTypes.IDLE === status) {
     tmp3Result = tmp3(tmp4[13]);
-  } else if (tmp22.DND === status) {
+  } else if (StatusTypes.DND === status) {
     tmp3Result = tmp3(tmp4[14]);
   } else {
-    if (tmp22.OFFLINE !== status) {
-      if (tmp22.INVISIBLE !== status) {
-        const ONLINE = tmp22.ONLINE;
+    if (StatusTypes.OFFLINE !== status) {
+      if (StatusTypes.INVISIBLE !== status) {
+        const ONLINE = StatusTypes.ONLINE;
         tmp3Result = tmp3(tmp4[16]);
       }
     }

@@ -15,10 +15,10 @@ function updateVoiceState(arg0, arg1, fn) {
   if (arg0 == null) {
     tmp7 = ME;
   }
-  let tmp8 = tmp6[tmp7];
+  let tmp8 = dependencyMap[tmp7];
   if (null == tmp8) {
     let obj = {};
-    tmp6[tmp7] = obj;
+    dependencyMap[tmp7] = obj;
     tmp8 = obj;
   }
   const tmp10 = fn(tmp8[arg1]);
@@ -104,9 +104,8 @@ function updateVoiceState(arg0, arg1, fn) {
             const _Set4 = Set;
             const set2 = new Set(tmp38);
             set2.add(arg1);
-            const result1 = obj10.set(tmp5, set2);
+            const result1 = map.set(tmp5, set2);
           }
-          obj10 = map;
         }
       }
       if (null != tmp10.sessionId) {
@@ -130,7 +129,7 @@ function mergeVoiceState(guildId, userId) {
       return null;
     } else {
       const obj = { channelId: null, deaf: null, mute: null, requestToSpeakTimestamp: null, selfDeaf: null, selfMute: null, selfStream: null, selfVideo: null, sessionId: null, suppress: null, userId: null, discoverable: null, connectedAt: null };
-      ({ channelId: obj.channelId, deaf: obj.deaf, mute: obj.mute, requestToSpeakTimestamp: obj.requestToSpeakTimestamp, selfDeaf: obj.selfDeaf, selfMute: obj.selfMute, selfStream: obj.selfStream, selfVideo: obj.selfVideo, sessionId: obj.sessionId, suppress: obj.suppress, userId: obj.userId, discoverable: obj.discoverable, connectedAt: obj.connectedAt } = tmp);
+      ({ channelId: obj.channelId, deaf: obj.deaf, mute: obj.mute, requestToSpeakTimestamp: obj.requestToSpeakTimestamp, selfDeaf: obj.selfDeaf, selfMute: obj.selfMute, selfStream: obj.selfStream, selfVideo: obj.selfVideo, sessionId: obj.sessionId, suppress: obj.suppress, userId: obj.userId, discoverable: obj.discoverable, connectedAt: obj.connectedAt } = guildId);
       if (null != merge) {
         let mergeResult = merge.merge(obj);
       } else {
@@ -138,7 +137,6 @@ function mergeVoiceState(guildId, userId) {
       }
       return mergeResult;
     }
-    tmp = guildId;
   });
 }
 function handleGuildCreateOrDelete(guild) {
@@ -174,10 +172,10 @@ prototype["getVoiceStates"] = function getVoiceStates(arg0) {
   if (arg0 == null) {
     tmp = ME;
   }
-  let tmp3 = tmp2[tmp];
+  let tmp3 = dependencyMap[tmp];
   if (null == tmp3) {
     const obj = {};
-    tmp2[tmp] = obj;
+    dependencyMap[tmp] = obj;
     tmp3 = obj;
   }
   return tmp3;
@@ -214,7 +212,7 @@ prototype["getDiscoverableVoiceState"] = function getDiscoverableVoiceState(guil
   }
   return tmp2;
 };
-prototype["getVoiceStateForChannel"] = function getVoiceStateForChannel(channelId, userId) {
+prototype["getVoiceStateForChannel"] = function getVoiceStateForChannel(channelId) {
   let tmp = userId;
   if (userId === undefined) {
     tmp = id;
@@ -307,7 +305,7 @@ prototype["isCurrentClientInVoiceChannel"] = function isCurrentClientInVoiceChan
   }
   return tmp;
 };
-prototype["isInChannel"] = function isInChannel(id, id2) {
+prototype["isInChannel"] = function isInChannel(id) {
   let tmp = id2;
   if (id2 === undefined) {
     tmp = id;
@@ -418,6 +416,7 @@ const voiceStateStore = new VoiceStateStore(DispatcherDefault, {
       continue;
     }
     id = user.id;
+    tmp2 = entries[Symbol.iterator]();
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     channelId = channelId.channelId;
@@ -433,12 +432,12 @@ const voiceStateStore = new VoiceStateStore(DispatcherDefault, {
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((acc, guildId) => {
       let flag = acc;
-      let tmp = closure_5(closure_18(guildId.guildId, guildId.userId, (merge) => {
+      const tmp = closure_5(closure_18(guildId.guildId, guildId.userId, (merge) => {
         if (null == guildId.channelId) {
           return null;
         } else {
           const obj = { channelId: null, deaf: null, mute: null, requestToSpeakTimestamp: null, selfDeaf: null, selfMute: null, selfStream: null, selfVideo: null, sessionId: null, suppress: null, userId: null, discoverable: null, connectedAt: null };
-          ({ channelId: obj.channelId, deaf: obj.deaf, mute: obj.mute, requestToSpeakTimestamp: obj.requestToSpeakTimestamp, selfDeaf: obj.selfDeaf, selfMute: obj.selfMute, selfStream: obj.selfStream, selfVideo: obj.selfVideo, sessionId: obj.sessionId, suppress: obj.suppress, userId: obj.userId, discoverable: obj.discoverable, connectedAt: obj.connectedAt } = tmp);
+          ({ channelId: obj.channelId, deaf: obj.deaf, mute: obj.mute, requestToSpeakTimestamp: obj.requestToSpeakTimestamp, selfDeaf: obj.selfDeaf, selfMute: obj.selfMute, selfStream: obj.selfStream, selfVideo: obj.selfVideo, sessionId: obj.sessionId, suppress: obj.suppress, userId: obj.userId, discoverable: obj.discoverable, connectedAt: obj.connectedAt } = guildId);
           if (null != merge) {
             let mergeResult = merge.merge(obj);
           } else {
@@ -446,7 +445,6 @@ const voiceStateStore = new VoiceStateStore(DispatcherDefault, {
           }
           return mergeResult;
         }
-        tmp = guildId;
       }), 3);
       if (tmp[0]) {
         let tmp5 = guildId.sessionId === closure_4;

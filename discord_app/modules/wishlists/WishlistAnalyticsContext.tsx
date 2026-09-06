@@ -15,5 +15,5 @@ export const useWishlistAnalyticsContext = function useWishlistAnalyticsContext(
 export const WishlistAnalyticsProvider = function WishlistAnalyticsProvider(children) {
   const merged = Object.assign(noop.useContext(context));
   const merged1 = Object.assign(children.newValue);
-  return <context.Provider value={{}}>{arg0.children}</context.Provider>;
+  return <context.Provider value={{}}>{children.children}</context.Provider>;
 };

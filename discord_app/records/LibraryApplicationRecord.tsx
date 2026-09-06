@@ -42,7 +42,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   }
   obj.preorderApproximateReleaseDate = prop;
   obj.sku = obj;
-  if (typeof tmp2 === "function") {
+  if (typeof LibraryApplicationRecord === "function") {
     const tmp11 = new LibraryApplicationRecord(tmp, entitlements, tmp3);
     ({ id: tmp11.id, createdAt: tmp11.createdAt, flags: tmp11.flags, branchId: tmp11.branchId, entitlements: tmp11.entitlements, branch: tmp11.branch, sku: tmp11.sku } = obj);
     tmp11.isTestMode = obj.isTestMode || false;
@@ -50,7 +50,6 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp2 = LibraryApplicationRecord;
 };
 LibraryApplicationRecord["createForTestMode"] = function createForTestMode(id) {
   id = id.id;
@@ -78,8 +77,8 @@ LibraryApplicationRecord["createForTestMode"] = function createForTestMode(id) {
 prototype["getFlags"] = function getFlags() {
   return this.flags;
 };
-prototype["hasFlag"] = function hasFlag(arg0) {
-  return FlagUtilsAll.hasFlag(this.flags, arg0);
+prototype["hasFlag"] = function hasFlag(IS_ANIMATED) {
+  return FlagUtilsAll.hasFlag(this.flags, IS_ANIMATED);
 };
 prototype["isHidden"] = function isHidden() {
   return this.hasFlag(hasOwnProperty.HIDDEN);

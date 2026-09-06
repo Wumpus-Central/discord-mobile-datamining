@@ -65,24 +65,26 @@ export default function AppLauncherUserListActionSheet(onUserPress) {
             return callback1({ user });
           }
       };
-      let tmp3Result = tmp3(EmptyStateWithSnowflakeQuery, obj);
+      let tmp3Result = <EmptyStateWithSnowflakeQuery query={query} onPressRow={function onPressRow() {
+        return callback1({ user });
+      }} />;
     } else {
-      obj = { style: { paddingTop: 80 }, lightSource: onActionSheetDismiss(tmp2[7]), darkSource: onActionSheetDismiss(tmp2[7]), title: null, body: null };
-      const intl = tmp(tmp2[8]).intl;
-      obj.title = intl.string(tmp(tmp2[8]).t.vYocDz);
-      const intl2 = tmp(tmp2[8]).intl;
-      obj.body = intl2.string(tmp(tmp2[8]).t.V6nAfF);
-      tmp3Result = tmp3(tmp(tmp2[6]).EmptyState, obj);
+      obj = { style: { paddingTop: 80 }, lightSource: onActionSheetDismiss(callback[7]), darkSource: onActionSheetDismiss(callback[7]), title: null, body: null };
+      const intl = onUserPress(callback[8]).intl;
+      obj.title = intl.string(onUserPress(callback[8]).t.vYocDz);
+      const intl2 = onUserPress(callback[8]).intl;
+      obj.body = intl2.string(onUserPress(callback[8]).t.V6nAfF);
+      tmp3Result = jsx(onUserPress(callback[6]).EmptyState, { style: { paddingTop: 80 }, lightSource: onActionSheetDismiss(callback[7]), darkSource: onActionSheetDismiss(callback[7]), title: null, body: null });
     }
     return tmp3Result;
   }, items2);
   let obj = { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null };
   if (channel.isPrivate()) {
     obj = { channelId: id, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: callback1, opensUserProfileOnUserPress: false };
-    let tmp4Result = tmp4(tmp6(tmp5[10]), obj);
+    let tmp4Result = jsx(tmp6(tmp5[10]), { channelId: id, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: callback1, opensUserProfileOnUserPress: false });
   } else {
     obj = { channelId: id, guildId: channel.guild_id, searchable: true, searchableEmptyState: callback2, headerShown: false, opensUserProfileOnUserPress: false, onUserPress: callback1, inActionSheet: true, disableThemedGradient: true };
-    tmp4Result = tmp4(tmp6(tmp5[11]), obj);
+    tmp4Result = jsx(tmp6(tmp5[11]), { channelId: id, guildId: channel.guild_id, searchable: true, searchableEmptyState: callback2, headerShown: false, opensUserProfileOnUserPress: false, onUserPress: callback1, inActionSheet: true, disableThemedGradient: true });
   }
   obj.children = tmp4Result;
   return jsx(onUserPress(callback[9]).AppLauncherCommandOptionActionSheet, { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null });

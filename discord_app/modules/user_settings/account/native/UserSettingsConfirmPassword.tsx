@@ -3,7 +3,11 @@
 // Module 6993 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6605 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6941 */;
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6994 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
 import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 6998 */;
@@ -31,7 +35,7 @@ obj.redesignInput = createStyles;
 obj.button = { marginTop: 16 };
 obj.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };
 let closure_12 = createStyles.createStyles(obj);
-const forwardRefResult = noop.forwardRef((arg0, ref) => {
+const forwardRefResult = noop.forwardRef((arg0, arg1) => {
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap, parentLoading } = arg0);
   if (parentLoading === undefined) {
     parentLoading = false;
@@ -43,7 +47,7 @@ const forwardRefResult = noop.forwardRef((arg0, ref) => {
   c3 = undefined;
   value = undefined;
   noop = undefined;
-  closure_6 = async function _handleSubmit(arg0, value) {
+  closure_6 = async function _handleSubmit() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -149,7 +153,7 @@ const forwardRefResult = noop.forwardRef((arg0, ref) => {
     }
   };
   const tmp = closure_12();
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({}));
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({}));
   let obj = initialize;
   const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -184,17 +188,17 @@ const forwardRefResult = noop.forwardRef((arg0, ref) => {
     const items2 = [tmp15, ];
     obj = { style: tmp.container, children: null };
     let obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-    let intl = tmp3(1114).intl;
-    obj1.children = intl.string(tmp3(1114).t["x+d9t3"]);
-    const items3 = [closure_10(tmp3(4556).Text, obj1), , , , ];
+    let intl = util.intl;
+    obj1.children = intl.string(util.t["x+d9t3"]);
+    const items3 = [closure_10(Text_Text.Text, obj1), , , , ];
     obj2 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
-    const intl2 = tmp3(1114).intl;
-    obj2.children = intl2.string(tmp3(1114).t.vaZmAx);
-    items3[1] = closure_10(tmp3(4556).Text, obj2);
+    const intl2 = util.intl;
+    obj2.children = intl2.string(util.t.vaZmAx);
+    items3[1] = closure_10(Text_Text.Text, obj2);
     let obj3 = { style: null, textStyle: null, label: null, textContentType: "password", keyboardType: "default", secureTextEntry: true, value: null, onChangeText: null, onSubmitEditing: null, error: null, returnKeyType: "done", autoCapitalize: "none", autoFocus: true };
     ({ input: obj7.style, redesignInput: obj7.textStyle } = tmp);
-    const intl3 = tmp3(1114).intl;
-    obj3.label = intl3.string(tmp3(1114).t["CIGa+7"]);
+    const intl3 = util.intl;
+    obj3.label = intl3.string(util.t["CIGa+7"]);
     obj3.value = value;
     obj3.onChangeText = tmp8[1];
     obj3.onSubmitEditing = handleSubmit;
@@ -209,23 +213,22 @@ const forwardRefResult = noop.forwardRef((arg0, ref) => {
       tmp19Result = null;
       if (null == obj1.getFieldMessage("password")) {
         const obj4 = { style: tmp.hint, children: obj1.message };
-        tmp19Result = tmp19(tmp20(6941), obj4);
+        tmp19Result = closure_10(FreeFormErrorLabelDefault, obj4);
       }
     }
     items3[3] = tmp19Result;
     const obj5 = { style: tmp.button, children: null };
     const obj6 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
-    const intl4 = tmp3(1114).intl;
-    obj6.text = intl4.string(tmp3(1114).t.i4jeWR);
+    const intl4 = util.intl;
+    obj6.text = intl4.string(util.t.i4jeWR);
     obj6.onPress = handleSubmit;
     obj6.loading = tmp7;
-    obj5.children = closure_10(tmp3(4975).Button, obj6);
+    obj5.children = closure_10(components_Button_Button.Button, obj6);
     items3[4] = closure_10(closure_6, obj5);
     obj.children = items3;
     items2[1] = closure_11(closure_6, obj);
     obj.children = items2;
-    tmp13Result = tmp13(closure_7, obj);
-    tmp20 = importDefault;
+    tmp13Result = closure_11(closure_7, obj);
   }
   return tmp13Result;
 });

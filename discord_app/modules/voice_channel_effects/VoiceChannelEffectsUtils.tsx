@@ -50,7 +50,7 @@ export const getResizedEmojiData = apply.memoize((src) => new Promise((arg0) => 
   image.onload = () => {
     const result = React4 * ImageLoaderUtils.getDevicePixelRatio();
     if (image.width === result) {
-      if (tmp2.height === result) {
+      if (image.height === result) {
         closure_0(closure_0);
       }
     }
@@ -59,7 +59,7 @@ export const getResizedEmojiData = apply.memoize((src) => new Promise((arg0) => 
     element.height = result;
     const context = element.getContext("2d");
     if (context != null) {
-      context.drawImage(tmp2, 0, 0);
+      context.drawImage(image, 0, 0);
     }
     closure_0(element.toDataURL("image/png"));
   };

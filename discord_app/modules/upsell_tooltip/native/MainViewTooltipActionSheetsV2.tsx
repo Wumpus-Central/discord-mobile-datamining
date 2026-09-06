@@ -4,6 +4,8 @@
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 1944 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1948 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
 import ActionSheetStore from "ActionSheetStore" /* 4251 */;
@@ -31,10 +33,10 @@ function trackActionSheetImpression(actionSheetConfig) {
   const tmp = null != ActionSheetStore.getContent();
   let str = "snowflake_bound";
   if (!obj3.isSnowflakeBoundDismissibleContent(id)) {
-    let tmp3Result = tmp3(1944);
+    let tmp3Result = DismissibleContentTypes;
     let str2 = "versioned";
     if (!tmp3Result.isVersionedDismissibleContent(id)) {
-      tmp3Result = tmp3(1944);
+      tmp3Result = DismissibleContentTypes;
       let str3 = "single_use";
       if (tmp3Result.isTimeRecurringDismissibleContent(id)) {
         str3 = "time_recurring";
@@ -44,10 +46,11 @@ function trackActionSheetImpression(actionSheetConfig) {
     str = str2;
   }
   obj.dc_type = str;
-  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = tmp3(1948).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = DismissibleContentFatigueConfig.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
   obj.bypass_fatigue = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(actionSheetConfig.id);
   obj.is_another_action_sheet_open = tmp;
   obj.track(AnalyticEvents.MAIN_VIEW_ACTION_SHEET_SELECTED, obj);
+  obj3 = DismissibleContentTypes;
 }
 function TrackedDismissibleActionSheet(actionSheetConfig) {
   actionSheetConfig = actionSheetConfig.actionSheetConfig;
@@ -198,11 +201,11 @@ export default function MainViewTooltipActionSheetsV2() {
   let obj = mainViewTooltipActionSheetMap(16948);
   mainViewTooltipActionSheetMap = obj.useMainViewTooltipActionSheetMap();
   let tmp4 = _slicedToArray(noop.useState(null), 2);
-  const first = tmp4[0];
+  const actionSheetConfig = tmp4[0];
   dependencyMap = tmp4[1];
   _slicedToArray = ref(false);
   noop = ref(false);
-  const items = [first];
+  const items = [actionSheetConfig];
   stateFromStores(() => {
     closure_4.current = false;
   }, items);
@@ -292,21 +295,21 @@ export default function MainViewTooltipActionSheetsV2() {
   stateFromStores(() => {
     if (null != ref.current) {
       let _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
     if (stateFromStores) {
-      tmp4.current = true;
+      ref.current = true;
     } else {
       let num = 0;
-      if (tmp4.current) {
+      if (ref.current) {
         num = 350;
       }
       if (null == closure_6) {
-        tmp4.current = false;
+        ref.current = false;
       }
       const _setTimeout = setTimeout;
-      tmp.current = setTimeout(() => {
+      ref.current = setTimeout(() => {
         closure_1_2(closure_1_6);
         ref.current = null;
       }, num);
@@ -314,19 +317,19 @@ export default function MainViewTooltipActionSheetsV2() {
     return () => {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref.current);
+        ref.current = null;
       }
     };
   }, items5);
-  if (null == first) {
+  if (null == actionSheetConfig) {
     return null;
   } else {
-    obj = mainViewTooltipActionSheetMap[first.id];
+    obj = mainViewTooltipActionSheetMap[actionSheetConfig.id];
     if (obj == null) {
       obj = {};
     }
-    let id = first.id;
+    let id = actionSheetConfig.id;
     let tmpResult = tmp(1944);
     let str2 = "snowflake_bound";
     if (!tmpResult.isSnowflakeBoundDismissibleContent(id)) {
@@ -343,7 +346,7 @@ export default function MainViewTooltipActionSheetsV2() {
       str2 = str3;
     }
     if ("snowflake_bound" === str2) {
-      obj = { contentType: first.id, newSnowflakeId: null, groupName: null, children: null };
+      obj = { contentType: actionSheetConfig.id, newSnowflakeId: null, groupName: null, children: null };
       let str6 = obj.newSnowflakeId;
       if (str6 == null) {
         str6 = "";
@@ -352,14 +355,14 @@ export default function MainViewTooltipActionSheetsV2() {
       obj.groupName = constants.MAIN_VIEW_TOOLTIPS;
       obj.children = function children(visibleContent) {
         let tmp3 = null;
-        if (visibleContent.visibleContent === first.id) {
-          obj = { actionSheetConfig: tmp2, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: tmp2.importer, markAsDismissed: tmp };
+        if (visibleContent.visibleContent === actionSheetConfig.id) {
+          obj = { actionSheetConfig, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: actionSheetConfig.importer, markAsDismissed: tmp };
           const merged = Object.assign(obj.actionSheetProperties);
-          tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={tmp2} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={tmp2.importer} markAsDismissed={tmp} />;
+          tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={actionSheetConfig} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={actionSheetConfig.importer} markAsDismissed={tmp} />;
         }
         return tmp3;
       };
-      return jsx(tmp(10625).SelectedSnowflakeBoundDismissibleContent, { contentType: first.id, newSnowflakeId: null, groupName: null, children: null });
+      return jsx(tmp(10625).SelectedSnowflakeBoundDismissibleContent, { contentType: actionSheetConfig.id, newSnowflakeId: null, groupName: null, children: null });
     } else if ("versioned" === str2) {
       let num = obj.latestVersion;
       if (num == null) {
@@ -367,78 +370,78 @@ export default function MainViewTooltipActionSheetsV2() {
       }
       obj1 = {
         latestVersion: num,
-        contentType: first.id,
+        contentType: actionSheetConfig.id,
         groupName: constants.MAIN_VIEW_TOOLTIPS,
         children(visibleContent) {
               let tmp3 = null;
-              if (visibleContent.visibleContent === first.id) {
-                obj = { actionSheetConfig: tmp2, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: tmp2.importer, markAsDismissed: tmp, versionedDismissibleContentType: tmp2.id };
+              if (visibleContent.visibleContent === actionSheetConfig.id) {
+                obj = { actionSheetConfig, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: actionSheetConfig.importer, markAsDismissed: tmp, versionedDismissibleContentType: actionSheetConfig.id };
                 const merged = Object.assign(obj.actionSheetProperties);
-                tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={tmp2} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={tmp2.importer} markAsDismissed={tmp} versionedDismissibleContentType={tmp2.id} />;
+                tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={actionSheetConfig} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={actionSheetConfig.importer} markAsDismissed={tmp} versionedDismissibleContentType={actionSheetConfig.id} />;
               }
               return tmp3;
             }
       };
       return jsx(tmp(10625).SelectedVersionedDismissibleContent, {
         latestVersion: num,
-        contentType: first.id,
+        contentType: actionSheetConfig.id,
         groupName: constants.MAIN_VIEW_TOOLTIPS,
         children(visibleContent) {
               let tmp3 = null;
-              if (visibleContent.visibleContent === first.id) {
-                obj = { actionSheetConfig: tmp2, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: tmp2.importer, markAsDismissed: tmp, versionedDismissibleContentType: tmp2.id };
+              if (visibleContent.visibleContent === actionSheetConfig.id) {
+                obj = { actionSheetConfig, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: actionSheetConfig.importer, markAsDismissed: tmp, versionedDismissibleContentType: actionSheetConfig.id };
                 const merged = Object.assign(obj.actionSheetProperties);
-                tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={tmp2} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={tmp2.importer} markAsDismissed={tmp} versionedDismissibleContentType={tmp2.id} />;
+                tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={actionSheetConfig} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={actionSheetConfig.importer} markAsDismissed={tmp} versionedDismissibleContentType={actionSheetConfig.id} />;
               }
               return tmp3;
             }
       });
     } else if ("time_recurring" === str2) {
       obj2 = {
-        contentType: first.id,
+        contentType: actionSheetConfig.id,
         timeRecurringConfig: obj.cooldownConfig,
         groupName: constants.MAIN_VIEW_TOOLTIPS,
         bypassAutoDismiss: false,
         children(visibleContent) {
               let tmp3 = null;
-              if (visibleContent.visibleContent === first.id) {
-                obj = { actionSheetConfig: tmp2, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: tmp2.importer, markAsDismissed: tmp };
+              if (visibleContent.visibleContent === actionSheetConfig.id) {
+                obj = { actionSheetConfig, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: actionSheetConfig.importer, markAsDismissed: tmp };
                 const merged = Object.assign(obj.actionSheetProperties);
-                tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={tmp2} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={tmp2.importer} markAsDismissed={tmp} />;
+                tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={actionSheetConfig} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={actionSheetConfig.importer} markAsDismissed={tmp} />;
               }
               return tmp3;
             }
       };
       return jsx(tmp(10625).SelectedTimeRecurringDismissibleContent, {
-        contentType: first.id,
+        contentType: actionSheetConfig.id,
         timeRecurringConfig: obj.cooldownConfig,
         groupName: constants.MAIN_VIEW_TOOLTIPS,
         bypassAutoDismiss: false,
         children(visibleContent) {
               let tmp3 = null;
-              if (visibleContent.visibleContent === first.id) {
-                obj = { actionSheetConfig: tmp2, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: tmp2.importer, markAsDismissed: tmp };
+              if (visibleContent.visibleContent === actionSheetConfig.id) {
+                obj = { actionSheetConfig, hasTrackedRef, actionSheetKey: MainViewTooltipActionSheets, importer: actionSheetConfig.importer, markAsDismissed: tmp };
                 const merged = Object.assign(obj.actionSheetProperties);
-                tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={tmp2} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={tmp2.importer} markAsDismissed={tmp} />;
+                tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={actionSheetConfig} hasTrackedRef={hasTrackedRef} actionSheetKey={MainViewTooltipActionSheets} importer={actionSheetConfig.importer} markAsDismissed={tmp} />;
               }
               return tmp3;
             }
       });
     } else if ("single_use" === str2) {
       obj3 = { contentTypes: null, groupName: null, children: null };
-      const items6 = [first.id];
+      const items6 = [actionSheetConfig.id];
       obj3.contentTypes = items6;
       obj3.groupName = constants.MAIN_VIEW_TOOLTIPS;
       obj3.children = function children(visibleContent) {
         let tmp3 = null;
-        if (visibleContent.visibleContent === first.id) {
-          obj = { actionSheetConfig: tmp2, hasTrackedRef, markAsDismissed: tmp, importer: tmp2.importer, actionSheetKey: MainViewTooltipActionSheets };
+        if (visibleContent.visibleContent === actionSheetConfig.id) {
+          obj = { actionSheetConfig, hasTrackedRef, markAsDismissed: tmp, importer: actionSheetConfig.importer, actionSheetKey: MainViewTooltipActionSheets };
           const merged = Object.assign(obj.actionSheetProperties);
-          tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={tmp2} hasTrackedRef={hasTrackedRef} markAsDismissed={tmp} importer={tmp2.importer} actionSheetKey={MainViewTooltipActionSheets} />;
+          tmp3 = <TrackedDismissibleActionSheet actionSheetConfig={actionSheetConfig} hasTrackedRef={hasTrackedRef} markAsDismissed={tmp} importer={actionSheetConfig.importer} actionSheetKey={MainViewTooltipActionSheets} />;
         }
         return tmp3;
       };
-      return jsx(first(10625), { contentTypes: null, groupName: null, children: null });
+      return jsx(actionSheetConfig(10625), { contentTypes: null, groupName: null, children: null });
     } else {
       return null;
     }

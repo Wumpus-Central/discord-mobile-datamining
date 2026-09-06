@@ -4,6 +4,7 @@
 import util from "util" /* 1114 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2018 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import MarkupLinkRule from "MarkupLinkRule" /* 5001 */;
 import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5004 */;
@@ -133,11 +134,10 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = NicknameUtilsDefault.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4404).getName(str);
-        const tmp4Result = tmp4(4404);
+        nickname = UserUtilsDefault.getName(str);
+        const tmp4Result = UserUtilsDefault;
       }
       str = nickname;
-      tmp4 = importDefault;
     }
     tmp2 = str;
     id = str.id;
@@ -937,14 +937,13 @@ let items1 = [
         if (null != match) {
           return match;
         } else {
-          const match1 = tmp.inlineCode.match(arg0, arg1, arg2);
+          const match1 = importDefaultResult3Result.inlineCode.match(arg0, arg1, arg2);
           let tmp4;
           if (null != match1) {
             tmp4 = match1;
           }
           return tmp4;
         }
-        tmp = importDefaultResult3Result;
       }
     }
   }
@@ -956,14 +955,13 @@ const obj21 = {
       if (null != match) {
         return match;
       } else {
-        const match1 = tmp.inlineCode.match(arg0, arg1, arg2);
+        const match1 = importDefaultResult3Result.inlineCode.match(arg0, arg1, arg2);
         let tmp4;
         if (null != match1) {
           tmp4 = match1;
         }
         return tmp4;
       }
-      tmp = importDefaultResult3Result;
     }
   }
 };

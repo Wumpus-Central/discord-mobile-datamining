@@ -6,8 +6,10 @@ import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7292 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7297 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -39,10 +41,10 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     obj.onPress = function onPress() {
       let obj = ExplicitMediaRedactionUtils;
       if (obj.shouldAgeVerifyForExplicitMedia()) {
-        obj = { entryPoint: tmp(8413).AgeVerificationModalEntryPoint.OBSCURED_MEDIA };
+        obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.OBSCURED_MEDIA };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
       } else {
-        closure_1_0(tmp(1187).ExplicitContentRedaction.SHOW);
+        closure_1_0(preloaded_user_settings.ExplicitContentRedaction.SHOW);
       }
     };
     items.push(obj);
@@ -84,24 +86,24 @@ export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMe
       return false;
     } else {
       if (media.type === SearchMediaTypes.ATTACHMENT) {
-        let obj = { type: tmp4(7297).ObscuredMediaTypes.Attachment, media: media.attachment };
+        let obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: media.attachment };
         let tmp = obj;
-      } else if (media.type === tmp8.EMBED) {
-        obj = { type: tmp4(7297).ObscuredMediaTypes.Embed, media: media.embed };
+      } else if (media.type === SearchMediaTypes.EMBED) {
+        obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: media.embed };
         tmp = obj;
       } else {
         tmp = null;
-        if (media.type === tmp8.COMPONENT) {
-          obj = { type: tmp4(7297).ObscuredMediaTypes.GenericMedia, media: media.unfurledMediaItem };
+        if (media.type === SearchMediaTypes.COMPONENT) {
+          obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: media.unfurledMediaItem };
           tmp = obj;
         }
       }
       let tmp2 = null != tmp;
       if (tmp2) {
-        let tmp4Result = tmp4(7292);
+        let tmp4Result = ObscuredMediaUtils;
         let result = tmp4Result.isMediaObscuredForHarmTypes(tmp, enabledHarmTypesForMessage);
         if (result) {
-          tmp4Result = tmp4(7600);
+          tmp4Result = ExplicitMediaRedactionUtils;
           result = tmp4Result.shouldAgeVerifyForExplicitMedia();
         }
         tmp2 = result;

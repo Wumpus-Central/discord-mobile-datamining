@@ -34,17 +34,15 @@ export const requestMessageAuthor = function requestMessageAuthor(userId) {
           num = 0;
         }
         if (num < 3) {
-          const result = obj3.set(userId, num + 1);
-          obj2.add(userId);
+          const result = map.set(userId, num + 1);
+          set.add(userId);
           const user = UserActionCreatorsAll.getUser(userId);
           user.finally(() => set.delete(closure_0)).catch(() => {
 
           });
           const cleanupPromise = user.finally(() => set.delete(closure_0));
         }
-        obj3 = map;
       }
     }
-    obj2 = set;
   }
 };

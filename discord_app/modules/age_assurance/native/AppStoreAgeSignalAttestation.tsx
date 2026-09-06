@@ -3,6 +3,7 @@
 // Module 8568 (AppStoreAgeSignalAttestation)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 8569 */;
+import AppStoreAgeSignalActionCreators from "AppStoreAgeSignalActionCreators" /* 8570 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -53,16 +54,14 @@ let closure_6 = async function _requestPlayIntegrityToken() {
       c3 = 1;
       c2 = 2;
       c1 = 1;
-      return { value: tmp10(tmp11[1]).requestIntegrityToken(closure_0, tmp9), done: false };
+      return { value: NativePlayIntegrityModuleDefault.requestIntegrityToken(closure_0, tmp9), done: false };
     }
-    tmp10 = importDefault;
-    tmp11 = dependencyMap;
   }
   await "HermesInternal";
   await "HermesInternal";
-  return arg1;
+  return value;
 };
-let closure_7 = async function _getAgeSignalChallenge(arg0, value) {
+let closure_7 = async function _getAgeSignalChallenge() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -92,14 +91,12 @@ let closure_7 = async function _getAgeSignalChallenge(arg0, value) {
             c2 = 1;
             c1 = 2;
             c0 = 1;
-            const obj1 = { value: tmp7(tmp8[3]).requestAgeSignalChallenge(), done: false };
+            const obj1 = { value: AppStoreAgeSignalActionCreators.requestAgeSignalChallenge(), done: false };
             return obj1;
           } else {
             c0 = 3;
             return { value: "HermesInternal", done: null };
           }
-          tmp7 = require;
-          tmp8 = dependencyMap;
         }
       } else if (1 === tmp6) {
         c2 = 0;
@@ -129,7 +126,7 @@ let closure_7 = async function _getAgeSignalChallenge(arg0, value) {
     }
   }
 };
-let closure_8 = async function _getAgeSignalIntegrityToken(arg0, value) {
+let closure_8 = async function _getAgeSignalIntegrityToken(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

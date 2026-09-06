@@ -75,7 +75,7 @@ export default function useSortedDevToolsScreens() {
     return num2;
   });
 };
-export const updateSortOrder = function updateSortOrder(arg0, down) {
+export const updateSortOrder = function updateSortOrder(_require, down) {
   const items = [...DevToolsSettingsStore.sortedScreenKeys];
   const tmp = getSortedDevToolsScreens();
   while (tmp2 !== undefined) {
@@ -86,7 +86,7 @@ export const updateSortOrder = function updateSortOrder(arg0, down) {
     }
     continue;
   }
-  const index = items.indexOf(arg0);
+  const index = items.indexOf(_require);
   if ("up" === down) {
     items[index] = items[index - 1];
     items[index - 1] = items[index];

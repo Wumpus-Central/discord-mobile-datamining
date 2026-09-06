@@ -11,7 +11,8 @@ if (null == String.prototype.normalize) {
   let fn = (arg0) => arg0;
 } else {
   fn = (str) => {
-    const normalizer = str.normalize("NFD").replace(re2, "");
+    str = str.normalize("NFD");
+    const normalizer = str.replace(re2, "");
     return normalizer.normalize("NFC");
   };
 }
@@ -45,26 +46,26 @@ export const upperCaseFirstChar = function upperCaseFirstChar(item) {
   }
   return str;
 };
-export const truncateText = (arg0, arg1) => {
+export const truncateText = (name, React6) => {
   let str = arg2;
   if (arg2 === undefined) {
     str = "\u2026";
   }
-  let concat = arg0;
+  let concat = name;
   let str2 = "";
-  if (null != arg0) {
+  if (null != name) {
     str2 = "";
-    if (null != arg1) {
-      if (concat.length <= arg1) {
+    if (null != React6) {
+      if (concat.length <= React6) {
         str2 = concat;
       } else {
         if (re3.test(concat)) {
           const items = [];
           HermesBuiltin.arraySpread(concat, 0);
-          const substr = items.slice(0, arg1 - str.length);
+          const substr = items.slice(0, React6 - str.length);
           let str3 = substr.join("");
         } else {
-          str3 = concat.substring(0, arg1 - str.length);
+          str3 = concat.substring(0, React6 - str.length);
         }
         const _HermesInternal = HermesInternal;
         concat = HermesInternal.concat;

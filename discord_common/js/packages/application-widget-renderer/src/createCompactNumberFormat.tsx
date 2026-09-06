@@ -94,11 +94,10 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
               if (tmp16 > 0) {
                 num9 = tmp13 / tmp16;
               }
-              const result = obj.set(num, num9);
+              const result = map1.set(num, num9);
               value = num9;
             }
             num7 = value;
-            obj = map1;
           }
           const result1 = arg0 / num7;
           const _Math2 = Math;

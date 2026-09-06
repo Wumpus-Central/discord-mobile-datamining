@@ -6,6 +6,8 @@ import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12176 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12179 */;
+import UsernameTextDefault from "UsernameText" /* 12182 */;
 import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12185 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -37,8 +39,8 @@ export default function AppLauncherUserOption(option) {
     let userId = null;
     if (null != importDefault) {
       userId = null;
-      if ("userMention" === tmp.type) {
-        userId = tmp.userId;
+      if ("userMention" === importDefault.type) {
+        userId = importDefault.userId;
       }
     }
     return userId;
@@ -47,8 +49,8 @@ export default function AppLauncherUserOption(option) {
     let userId = null;
     if (null != importDefault) {
       userId = null;
-      if ("userMention" === tmp.type) {
-        userId = tmp.userId;
+      if ("userMention" === importDefault.type) {
+        userId = importDefault.userId;
       }
     }
     return userId;
@@ -90,13 +92,13 @@ export default function AppLauncherUserOption(option) {
     let tmp9Result = tmp9(tmp2(1178).Avatar, obj);
   } else {
     const obj1 = { icon: tmp9(tmp2(10917).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
-    tmp9Result = tmp9(tmp10(12179), obj1);
-    const tmp10Result = tmp10(12179);
+    tmp9Result = tmp9(AppLauncherOptionIconDefault, obj1);
+    const tmp10Result = AppLauncherOptionIconDefault;
   }
   obj.leading = tmp9Result;
   if (null != tmp8) {
     let obj2 = { guildId: guild_id, user: tmp8 };
-    tmp9Result = tmp9(tmp10(12182), obj2);
+    tmp9Result = tmp9(UsernameTextDefault, obj2);
   } else {
     tmp9Result = null;
     if (null != tmp6) {

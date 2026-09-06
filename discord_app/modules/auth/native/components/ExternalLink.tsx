@@ -17,9 +17,9 @@ let closure_9 = createStyles.createStyles((arg0) => {
     str = "space-between";
   }
   container.justifyContent = str;
-  const space = tmp(576).space;
+  const space = nativeDefault.space;
   container.paddingLeft = arg0 ? space.PX_24 : space.PX_16;
-  const space2 = tmp(576).space;
+  const space2 = nativeDefault.space;
   container.paddingRight = arg0 ? space2.PX_24 : space2.PX_16;
   return { container, description: { textAlign: "center", marginTop: 8 } };
 });

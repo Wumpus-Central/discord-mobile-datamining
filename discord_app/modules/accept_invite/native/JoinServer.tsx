@@ -83,7 +83,7 @@ export default function JoinServer(arg0) {
     obj3.children = intl2.string(tmp4(1114).t.lVvN3A);
     items2[1] = closure_8(tmp4(4556).Text, obj3);
     obj1.children = items2;
-    tmp7Result = tmp7(closure_10, obj1);
+    tmp7Result = closure_9(closure_10, obj1);
   }
   const obj4 = { children: null };
   const items3 = [tmp7Result, , ];

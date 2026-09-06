@@ -34,7 +34,7 @@ function getLocaleData() {
   ordinal = "month";
   let format5 = months;
   if (typeof months === "function") {
-    let tmpResult = tmp(4153);
+    let tmpResult = _modDef4153;
     closure_2 = months.bind(tmpResult.localeData());
     let fn = (arg0, arg1) => {
       closure_0 = arg0;
@@ -53,7 +53,7 @@ function getLocaleData() {
   ordinal = "month";
   format5 = monthsShort;
   if (typeof monthsShort === "function") {
-    tmpResult = tmp(4153);
+    tmpResult = _modDef4153;
     closure_2 = monthsShort.bind(tmpResult.localeData());
     let fn2 = (arg0, arg1) => {
       closure_0 = arg0;
@@ -72,12 +72,12 @@ function getLocaleData() {
   ordinal = "day";
   format5 = weekdays;
   if (typeof weekdays === "function") {
-    closure_2 = weekdays.bind(tmp(4153).localeData());
+    closure_2 = weekdays.bind(_modDef4153.localeData());
     let fn3 = (arg0, arg1) => {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
-    const tmpResult1 = tmp(4153);
+    const tmpResult1 = _modDef4153;
   } else {
     const _Array3 = Array;
     let format3 = weekdays;
@@ -91,12 +91,12 @@ function getLocaleData() {
   ordinal = "day";
   format5 = weekdaysShort;
   if (typeof weekdaysShort === "function") {
-    closure_2 = weekdaysShort.bind(tmp(4153).localeData());
+    closure_2 = weekdaysShort.bind(_modDef4153.localeData());
     let fn4 = (arg0, arg1) => {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
-    const tmpResult2 = tmp(4153);
+    const tmpResult2 = _modDef4153;
   } else {
     const _Array4 = Array;
     let format4 = weekdaysShort;
@@ -110,12 +110,12 @@ function getLocaleData() {
   ordinal = "day";
   format5 = weekdaysMin;
   if (typeof weekdaysMin === "function") {
-    closure_2 = weekdaysMin.bind(tmp(4153).localeData());
+    closure_2 = weekdaysMin.bind(_modDef4153.localeData());
     let fn5 = (arg0, arg1) => {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
-    const tmpResult3 = tmp(4153);
+    const tmpResult3 = _modDef4153;
   } else {
     const _Array5 = Array;
     format5 = weekdaysMin;

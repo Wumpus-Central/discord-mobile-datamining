@@ -2,7 +2,9 @@
 
 // Module 9020 (UserProfileApplicationWidgetBottomCollectionLayout)
 import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8926 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9014 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,23 +31,23 @@ function CollectionItem(arg0) {
     let tmp12 = React4;
   } else {
     const obj2 = { style: tmp.itemImage };
-    tmp11 = React4(tmp3(9014).ImageSkeleton, obj2);
+    tmp11 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj2);
     tmp12 = React4;
   }
   const items1 = [tmp11, ];
   const obj3 = { style: tmp.itemContent, children: null };
   if ("value" === singleStringOrSkeleton.status) {
     const obj4 = { variant: "text-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
-    let tmp12Result = tmp12(tmp3(4556).Text, obj4);
+    let tmp12Result = tmp12(Text_Text.Text, obj4);
   } else {
-    tmp12Result = tmp12(tmp3(9014).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
+    tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
   }
   const items2 = [tmp12Result, ];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj5 = { variant: "text-xxs/medium", color: "text-subtle", lineClamp: 2, children: singleStringOrSkeleton1.text };
-    tmp12Result = tmp12(tmp3(4556).Text, obj5);
+    tmp12Result = tmp12(Text_Text.Text, obj5);
   } else {
-    tmp12Result = tmp12(tmp3(9014).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
+    tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
   }
   items2[1] = tmp12Result;
   obj3.children = items2;

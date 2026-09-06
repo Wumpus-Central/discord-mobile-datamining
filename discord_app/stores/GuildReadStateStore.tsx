@@ -21,10 +21,10 @@ import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-function updateGuildUnreadSentinel(arg0) {
-  let tmp = arg0;
-  let tmp3 = arg0;
-  if (arg0 == null) {
+function updateGuildUnreadSentinel(NULL_STRING_GUILD_ID) {
+  let tmp = NULL_STRING_GUILD_ID;
+  let tmp3 = NULL_STRING_GUILD_ID;
+  if (NULL_STRING_GUILD_ID == null) {
     tmp3 = NULL_STRING_GUILD_ID;
   }
   let tmp5 = tmp;
@@ -51,14 +51,10 @@ function updateGuildUnreadSentinel(arg0) {
   tmp6.sentinel = tmp6.sentinel + 1;
   closure_24 = closure_24 + 1;
 }
-function isCountableChannel(channel, mentionCount, arg2) {
+function isCountableChannel(channel) {
   let num = mentionCount;
   if (mentionCount === undefined) {
     num = 0;
-  }
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
   }
   if (null == channel) {
     return false;
@@ -130,6 +126,7 @@ function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
         if (obj.compare(lastMessageIdResult, notifCenterReadState._ackMessageId) > 0) {
           closure_1 = closure_1 + mentionCounts.mentionCounts[item].count;
         }
+        obj = SnowflakeUtilsDefault;
       });
       const obj2 = require("SnowflakeUtils");
     }
@@ -148,6 +145,7 @@ function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
         if (obj.compare(lastMessageIdResult, notifCenterReadState._ackMessageId) > 0) {
           closure_1 = closure_1 + mentionCounts.mentionCounts[item].count;
         }
+        obj = SnowflakeUtilsDefault;
       });
       const obj3 = require("SnowflakeUtils");
     }
@@ -163,7 +161,6 @@ function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
   }
 }
 function aggregateGuildState(guild_id, unreadByType, unread) {
-  closure_0 = unreadByType;
   const entries = Object.entries(unreadByType.unreadByType);
   unreadByType.unread = entries.some((item) => {
     [tmp, tmp2] = item;
@@ -174,9 +171,9 @@ function aggregateGuildState(guild_id, unreadByType, unread) {
   const item = SnowflakeUtilsDefault.forEach(unreadByType.mentionCounts, (count) => {
     count = count.count;
     if (count.isMentionLowImportance) {
-      tmp.lowImportanceMentionCount = tmp.lowImportanceMentionCount + count;
+      unreadByType.lowImportanceMentionCount = unreadByType.lowImportanceMentionCount + count;
     } else {
-      tmp.highImportanceMentionCount = tmp.highImportanceMentionCount + count;
+      unreadByType.highImportanceMentionCount = unreadByType.highImportanceMentionCount + count;
     }
   });
   let flag = unreadByType.unread !== unread.unread || unreadByType.lowImportanceMentionCount !== unread.lowImportanceMentionCount || unreadByType.highImportanceMentionCount !== unread.highImportanceMentionCount;
@@ -189,9 +186,9 @@ function aggregateGuildState(guild_id, unreadByType, unread) {
     guilds[tmp5] = unreadByType;
     if (null != tmp2) {
       if (unreadByType.unread) {
-        obj2.add(tmp2);
+        set.add(tmp2);
       } else {
-        obj2.delete(tmp2);
+        set.delete(tmp2);
       }
     }
     closure_24 = closure_24 + 1;
@@ -210,17 +207,17 @@ function recountChannels(guildId, items) {
     closure_0 = tmp;
     let tmp6 = tmp;
     if (tmp == null) {
-      tmp6 = tmp2;
+      tmp6 = NULL_STRING_GUILD_ID;
     }
     let tmp8 = tmp;
     if (tmp == null) {
-      tmp8 = tmp2;
+      tmp8 = NULL_STRING_GUILD_ID;
     }
     let tmp9 = guilds[tmp8];
     if (tmp9 == null) {
       let tmp11 = tmp;
       if (tmp == null) {
-        tmp11 = tmp2;
+        tmp11 = NULL_STRING_GUILD_ID;
       }
       let mentionCounts = { unread: false, unreadByType: {}, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: {}, ncMentionCount: 0, sentinel: null };
       let num;
@@ -236,7 +233,7 @@ function recountChannels(guildId, items) {
     guilds[tmp6] = tmp9;
     let tmp14 = tmp;
     if (tmp == null) {
-      tmp14 = tmp2;
+      tmp14 = NULL_STRING_GUILD_ID;
     }
     mentionCounts = { unread: false, unreadByType: {}, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: {}, ncMentionCount: 0, sentinel: null };
     let num2;
@@ -264,7 +261,7 @@ function recountChannels(guildId, items) {
             hasUnreadResult = !c2;
           }
           if (hasUnreadResult) {
-            hasUnreadResult = obj3.hasUnread(channel.id);
+            hasUnreadResult = ReadStateStore.hasUnread(channel.id);
           }
           if (hasUnreadResult) {
             hasUnreadResult = isCountableChannel(channel, mentionCount, true);
@@ -275,7 +272,7 @@ function recountChannels(guildId, items) {
           }
           if (mentionCount > 0) {
             if (isCountableChannel(channel, mentionCount)) {
-              obj = { count: mentionCount, isMentionLowImportance: obj3.getIsMentionLowImportance(item) };
+              obj = { count: mentionCount, isMentionLowImportance: ReadStateStore.getIsMentionLowImportance(item) };
               obj.mentionCounts[channel.id] = obj;
             }
           }
@@ -290,7 +287,7 @@ function recountChannels(guildId, items) {
     });
     mentionCounts.unreadByType[constants.CHANNEL] = c2;
     if (mentionCounts.unreadByType[constants.CHANNEL] !== tmp9.unreadByType[constants.CHANNEL]) {
-      if (!mentionCounts.unreadByType[tmp22.CHANNEL]) {
+      if (!mentionCounts.unreadByType[constants.CHANNEL]) {
         let channel = ChannelStore.getChannel(tmp9.unreadChannelId);
         if (null != channel) {
           if (!items.includes(channel.id)) {
@@ -299,7 +296,7 @@ function recountChannels(guildId, items) {
                 if (null != tmp) {
                   set.add(tmp);
                 }
-                mentionCounts.unreadByType[tmp22.CHANNEL] = true;
+                mentionCounts.unreadByType[constants.CHANNEL] = true;
               }
             }
           }
@@ -364,7 +361,7 @@ function updateNonChannel(guild_id, GUILD_EVENT) {
       const isMutedResult = UserGuildSettingsStore.isMuted(guild_id);
       let tmp22 = !isMutedResult;
       if (!isMutedResult) {
-        const result = obj5.isMuteScheduledEventsEnabled(guild_id);
+        const result = UserGuildSettingsStore.isMuteScheduledEventsEnabled(guild_id);
         let tmp24 = !result;
         if (!result) {
           tmp24 = hasUnreadResult;
@@ -372,13 +369,12 @@ function updateNonChannel(guild_id, GUILD_EVENT) {
         tmp22 = tmp24;
       }
       tmp20 = tmp22;
-      obj5 = UserGuildSettingsStore;
     }
     obj.unreadByType[constants.GUILD_EVENT] = tmp20;
     return aggregateGuildState(guild_id, obj, tmp5);
   }
 }
-function recountGuild(guildId, arg1) {
+function recountGuild(guildId, hasItem) {
   let tmp2 = guildId;
   if (NULL_STRING_GUILD_ID !== guildId) {
     let tmp7 = tmp2;
@@ -416,18 +412,18 @@ function recountGuild(guildId, arg1) {
     } else {
       const isMutedResult = UserGuildSettingsStore.isMuted(tmp2);
       if (isMutedResult) {
-        if (false === arg1) {
+        if (false === hasItem) {
           return false;
         }
       }
-      const mutedChannels = obj11.getMutedChannels(tmp2);
-      const channelOverrides = obj11.getChannelOverrides(tmp2);
+      const mutedChannels = UserGuildSettingsStore.getMutedChannels(tmp2);
+      const channelOverrides = UserGuildSettingsStore.getChannelOverrides(tmp2);
       let obj2 = isOptInEnabled;
       const result = obj2.isOptInEnabledForGuild(tmp2);
       const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(tmp2);
       for (const key10034 in mutableBasicGuildChannelsForGuild) {
         let obj12 = mutableBasicGuildChannelsForGuild[key10034];
-        let hasItem = isMutedResult;
+        hasItem = isMutedResult;
         if (!isMutedResult) {
           hasItem = mutedChannels.has(key10034);
         }
@@ -439,7 +435,6 @@ function recountGuild(guildId, arg1) {
           hasItem = hasItem1;
         }
         let tmp20 = obj.unreadByType[constants.CHANNEL];
-        let tmp19 = constants;
         let guildChannelUnreadState = ReadStateStore.getGuildChannelUnreadState(obj12, result, channelOverrides, hasItem, tmp20);
         ({ mentionCount, isMentionLowImportance } = guildChannelUnreadState);
         let tmp30 = mentionCount > 0;
@@ -503,7 +498,7 @@ function recountGuild(guildId, arg1) {
               continue;
             } else {
               if (tmp32) {
-                obj.unreadByType[tmp19.CHANNEL] = true;
+                obj.unreadByType[constants.CHANNEL] = true;
                 obj.unreadChannelId = key10034;
               }
               if (!tmp30) {
@@ -535,7 +530,6 @@ function recountGuild(guildId, arg1) {
           let tmp55 = keys[tmp];
           while (tmp55 !== undefined) {
             let isMutedResult1 = obj.unreadByType[constants.CHANNEL];
-            let tmp100 = constants;
             if (!isMutedResult1) {
               isMutedResult1 = !ReadStateStore.hasUnread(tmp55);
             }
@@ -546,7 +540,7 @@ function recountGuild(guildId, arg1) {
               isMutedResult1 = isMutedResult;
             }
             if (!isMutedResult1) {
-              obj.unreadByType[tmp100.CHANNEL] = true;
+              obj.unreadByType[constants.CHANNEL] = true;
               obj.unreadChannelId = tmp55;
             }
             let mentionCount1 = ReadStateStore.getMentionCount(tmp55);
@@ -570,14 +564,14 @@ function recountGuild(guildId, arg1) {
       }
       let tmp64 = !tmp63;
       if (!obj.unreadByType[constants.GUILD_EVENT]) {
-        const GUILD_EVENT = tmp62.GUILD_EVENT;
+        const GUILD_EVENT = constants.GUILD_EVENT;
         const hasUnreadResult = ReadStateStore.hasUnread(tmp2, GUILD_EVENT);
         let tmp67 = hasUnreadResult;
-        if (GUILD_EVENT === tmp62.GUILD_EVENT) {
+        if (GUILD_EVENT === constants.GUILD_EVENT) {
           const isMutedResult2 = UserGuildSettingsStore.isMuted(tmp2);
           let tmp69 = !isMutedResult2;
           if (!isMutedResult2) {
-            const result2 = obj6.isMuteScheduledEventsEnabled(tmp2);
+            const result2 = UserGuildSettingsStore.isMuteScheduledEventsEnabled(tmp2);
             let tmp71 = !result2;
             if (!result2) {
               tmp71 = hasUnreadResult;
@@ -585,12 +579,11 @@ function recountGuild(guildId, arg1) {
             tmp69 = tmp71;
           }
           tmp67 = tmp69;
-          obj6 = UserGuildSettingsStore;
         }
         tmp64 = tmp67;
       }
       if (tmp64) {
-        obj.unreadByType[tmp62.GUILD_EVENT] = true;
+        obj.unreadByType[constants.GUILD_EVENT] = true;
       }
     }
     const _Object = Object;
@@ -634,9 +627,9 @@ function recountGuild(guildId, arg1) {
       guilds[tmp87] = obj;
       if (null != tmp2) {
         if (obj.unread) {
-          obj10.add(tmp2);
+          set.add(tmp2);
         } else {
-          obj10.delete(tmp2);
+          set.delete(tmp2);
         }
       }
       closure_24 = closure_24 + 1;
@@ -654,7 +647,7 @@ function recountGuild(guildId, arg1) {
 function handleOverlayInitialize(guilds) {
   guilds = {};
   closure_24 = 0;
-  set = new Set();
+  new Set();
   recountGuild(null);
   for (let num = 0; num < length; num = num + 1) {
     let tmp3 = guilds[num];
@@ -662,12 +655,13 @@ function handleOverlayInitialize(guilds) {
       let tmp6 = recountGuild(tmp3.properties.id);
     }
   }
+  length = guilds.length;
 }
 function handleConnectionOpen(arg0) {
   ({ guilds, readState } = arg0);
   closure_22 = {};
   c24 = 0;
-  set = new Set();
+  new Set();
   const set1 = new Set();
   if (readState.entries.length < 500) {
     const entries = readState.entries;
@@ -694,17 +688,16 @@ function handleConnectionOpen(arg0) {
   recountGuild(null);
   for (const item10032 of guilds) {
     let hasItem;
-    let tmp6 = recountGuild;
     if (tmp2) {
       hasItem = set1.has(tmp5.id);
     }
-    let tmp6Result = tmp6(item10032.id, hasItem);
+    let tmp6Result = recountGuild(item10032.id, hasItem);
     continue;
   }
 }
 function recomputeAllGuilds() {
   guilds = {};
-  set = new Set();
+  new Set();
   recountGuild(null);
   const values = Object.values(GuildStore.getGuildIds());
   for (const item10021 of values) {
@@ -794,10 +787,9 @@ function handleMessageCreate(channelId) {
         const hasJoinedResult = JoinedThreadsStore.hasJoined(channel.id);
         let isMutedResult = !hasJoinedResult;
         if (hasJoinedResult) {
-          isMutedResult = obj3.isMuted(channel.id);
+          isMutedResult = JoinedThreadsStore.isMuted(channel.id);
         }
         let result = isMutedResult;
-        obj3 = JoinedThreadsStore;
       } else {
         result = UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
       }
@@ -1032,7 +1024,7 @@ prototype["getMutableUnreadGuilds"] = function getMutableUnreadGuilds() {
 prototype["getMutableGuildStates"] = function getMutableGuildStates() {
   return guilds;
 };
-prototype["shouldCountChannelUnread"] = function shouldCountChannelUnread(channel, mentionCount) {
+prototype["shouldCountChannelUnread"] = function shouldCountChannelUnread(channel) {
   let num = mentionCount;
   if (mentionCount === undefined) {
     num = 0;

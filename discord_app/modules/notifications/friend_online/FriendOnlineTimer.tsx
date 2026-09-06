@@ -34,11 +34,11 @@ let closure_9 = async function _reportSessionMeaningfullyOnline() {
     return { value: undefined, done: true };
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     c3 = 0;
   }
-  return arg1;
+  return value;
 };
 const Endpoints = fn(1074).Endpoints;
 const StatusTypes = fn(1085).StatusTypes;
@@ -107,8 +107,8 @@ class FriendOnlineTimerManager extends tmp2 {
     applyArgumentsResult.clear = function clear() {
       if (null != applyArgumentsResult.timerId) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.timerId);
-        tmp.timerId = null;
+        clearTimeout(applyArgumentsResult.timerId);
+        applyArgumentsResult.timerId = null;
       }
     };
     return applyArgumentsResult;

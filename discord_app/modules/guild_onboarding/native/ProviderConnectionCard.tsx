@@ -45,7 +45,7 @@ export default function ProviderConnectionCard(connection) {
     ({ hasConnection, canConnect, loading } = startProviderConnection);
     const items = [startConnection, guildId, connection.provider_id, _location];
     const items1 = [connection.provider_id, tmp3];
-    const callback = startConnection.useCallback(asyncGeneratorStep(async (arg0, value) => {
+    const callback = startConnection.useCallback(asyncGeneratorStep(async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

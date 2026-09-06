@@ -1,6 +1,7 @@
 // === Module 15240: EmojiIcon ===
 
 // Module 15240 (EmojiIcon)
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import EmojiDefault from "Emoji" /* 7130 */;
 import _modDef10302 from "module_10302" /* 10302 */;
@@ -63,14 +64,13 @@ export default function EmojiIcon(size) {
       const obj2 = { id: null, animated: null, size: null };
       ({ id: obj4.id, animated: obj4.animated } = emojiByIdOrName);
       obj2.size = num;
-      let url = tmp9(1396).getEmojiURL(obj2);
-      const tmp9Result = tmp9(1396);
+      let url = AvatarUtilsDefault.getEmojiURL(obj2);
+      const tmp9Result = AvatarUtilsDefault;
     } else {
       url = emojiByIdOrName.url;
     }
     obj.src = url;
     tmp8Result = jsx(EmojiDefault, { style: size.style, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
-    tmp9 = importDefault;
   }
   return tmp8Result;
 };

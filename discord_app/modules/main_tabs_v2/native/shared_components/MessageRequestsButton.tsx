@@ -2,12 +2,17 @@
 
 // Module 16028 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
+import util from "util" /* 1114 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import IconButton from "IconButton" /* 8097 */;
 import _modDef9883 from "module_9883" /* 9883 */;
-import IconActionButtonDefault from "IconActionButton" /* 13253 */;
+import IconActionButton from "IconActionButton" /* 13253 */;
 import _mod16029 from "module_16029" /* 16029 */;
 import noop from "module_19" /* 19 */;
 import MessageRequestStore from "MessageRequestStore" /* 7219 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7220 */;
+
+const IconActionButtonDefault = IconActionButton;
 
 require = fn;
 function MessageRequestAnimation(color) {
@@ -61,26 +66,26 @@ export default function MessageRequestsButton(alternateVariant) {
     obj = { style: tmp2.buttonContainer, collapsable: false, children: null };
     if (null != str) {
       obj = { icon: React5(MessageRequestAnimation, {}), variant: "secondary", text: str, size: "sm", accessibilityLabel: null };
-      const intl3 = tmp3(1114).intl;
-      obj.accessibilityLabel = intl3.string(tmp3(1114).t.e7GWjQ);
+      const intl3 = util.intl;
+      obj.accessibilityLabel = intl3.string(util.t.e7GWjQ);
       const merged1 = Object.assign(merged);
-      let tmp21 = React5(tmp3(4975).Button, obj);
+      let tmp21 = React5(components_Button_Button.Button, obj);
       let tmp16 = React5;
     } else {
       tmp16 = React5;
       obj1 = { variant: "secondary", size: "sm", icon: React5(MessageRequestAnimation, {}), accessibilityLabel: null };
-      const intl2 = tmp3(1114).intl;
-      obj1.accessibilityLabel = intl2.string(tmp3(1114).t.e7GWjQ);
+      const intl2 = util.intl;
+      obj1.accessibilityLabel = intl2.string(util.t.e7GWjQ);
       const merged2 = Object.assign(merged);
-      tmp21 = React5(tmp3(8097).IconButton, obj1);
+      tmp21 = React5(IconButton.IconButton, obj1);
     }
-    const items2 = [tmp21, str > 0 && tmp16(tmp3(13253).ButtonBadge, { badgePosition: "right" })];
+    const items2 = [tmp21, str > 0 && tmp16(IconActionButton.ButtonBadge, { badgePosition: "right" })];
     obj.children = items2;
     return React6(View, obj);
   } else {
     const obj2 = { source: _modDef9883, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
-    const intl = tmp3(1114).intl;
-    obj2.accessibilityLabel = intl.string(tmp3(1114).t.e7GWjQ);
+    const intl = util.intl;
+    obj2.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str1;
     if (str > 0) {
       str1 = str.toString();

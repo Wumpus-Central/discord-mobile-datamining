@@ -48,7 +48,7 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
       const item = start.item;
       return <UserRow key={item.id} user={item} channel={item} onPress={function onPress() {
         return importDefault(item.id);
-      }} start={arg0.start} end={arg0.end} />;
+      }} start={start.start} end={start.end} />;
     }
   };
   obj.children = jsx(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, {
@@ -60,7 +60,7 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
       const item = start.item;
       return <UserRow key={item.id} user={item} channel={item} onPress={function onPress() {
         return importDefault(item.id);
-      }} start={arg0.start} end={arg0.end} />;
+      }} start={start.start} end={start.end} />;
     }
   });
   return jsx(UserProfileStackedActionSheetDefault, {
@@ -72,7 +72,7 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
       const item = start.item;
       return <UserRow key={item.id} user={item} channel={item} onPress={function onPress() {
         return importDefault(item.id);
-      }} start={arg0.start} end={arg0.end} />;
+      }} start={start.start} end={start.end} />;
     }
   });
 };

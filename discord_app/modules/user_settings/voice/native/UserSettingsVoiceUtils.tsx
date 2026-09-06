@@ -3,6 +3,7 @@
 // Module 9993 (UserSettingsVoiceUtils)
 import initialize from "initialize" /* 504 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 9994 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
@@ -28,7 +29,7 @@ export const handleNoiseSuppressionChange = function handleNoiseSuppressionChang
   AudioActionCreatorsDefault.setNoiseSuppression(arg0 === STANDARD, obj);
 };
 export { NoiseSuppressionOpt };
-export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppressionOption(MediaEngineStore) {
+export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppressionOption() {
   let obj = MediaEngineStore;
   if (MediaEngineStore === undefined) {
     obj = MediaEngineStore;
@@ -47,9 +48,10 @@ export const useSelectedNoiseSuppressionOption = function useSelectedNoiseSuppre
     const noiseSuppression = MediaEngineStore.getNoiseSuppression();
     const noiseCancellation = MediaEngineStore.getNoiseCancellation();
     if (noiseCancellation) {
-      obj.getNoiseCancellationDeferredToSystem(MediaEngineStore) ? tmp3.NONE : tmp3.KRISP;
+      obj.getNoiseCancellationDeferredToSystem(MediaEngineStore) ? NoiseSuppressionOpt.NONE : NoiseSuppressionOpt.KRISP;
     } else {
-      return noiseSuppression ? tmp3.STANDARD : tmp3.NONE;
+      return noiseSuppression ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE;
     }
+    obj = NoiseCancellationUtils;
   });
 };

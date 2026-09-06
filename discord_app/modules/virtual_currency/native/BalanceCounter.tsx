@@ -31,8 +31,8 @@ class BalanceCounter {
     clearAnimationTimeout = function clearAnimationTimeout() {
       if (null != ref2.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref2.current);
+        ref2.current = null;
       }
       setIsAnimating(false);
     };
@@ -79,18 +79,18 @@ class BalanceCounter {
       if (null !== duration) {
         if (null !== ref.current) {
           if (!enabled) {
-            if (tmp !== tmp2.current) {
-              const diff = tmp - tmp2.current;
+            if (tmp !== ref.current) {
+              const diff = tmp - ref.current;
               onValueChange(diff);
-              tmp2.current = tmp;
+              ref.current = tmp;
               value(ref[6]);
               const obj = { targetTime: value(ref[6]).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS };
               const orbBalanceCounterAnimationConfigs = obj.getOrbBalanceCounterAnimationConfigs(diff, obj);
               duration = orbBalanceCounterAnimationConfigs.duration;
               if (null != ref2.current) {
                 const _clearTimeout = clearTimeout;
-                clearTimeout(tmp12.current);
-                tmp12.current = null;
+                clearTimeout(ref2.current);
+                ref2.current = null;
               }
               setIsAnimating(false);
               const _setTimeout = setTimeout;

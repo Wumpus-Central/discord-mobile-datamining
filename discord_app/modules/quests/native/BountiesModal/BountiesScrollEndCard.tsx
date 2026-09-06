@@ -57,7 +57,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     const items2 = [tmp.overlayContent, animatedStyle];
     obj3.style = items2;
     const obj4 = { bounty, sourceQuestContent, disabled: !isActive };
-    const items3 = [tmp10(tmp9(15043), obj4), ];
+    const items3 = [closure_9(tmp9(15043), obj4), ];
     const obj5 = { style: tmp.endedCtaButtonsContainer, pointerEvents: "box-none", children: null };
     const obj6 = {
       bounty,
@@ -69,10 +69,10 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
       showCloseButton: false,
       disabled: !isActive
     };
-    obj5.children = tmp10(tmp9(15045), obj6);
-    items3[1] = tmp10(tmp11, obj5);
+    obj5.children = closure_9(tmp9(15045), obj6);
+    items3[1] = closure_9(closure_6, obj5);
     obj3.children = items3;
-    let tmp10Result = tmp8(tmp9(4296).View, obj3);
+    let tmp10Result = closure_10(tmp9(4296).View, obj3);
   } else {
     let tmp13;
     if (isActive) {
@@ -84,16 +84,16 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     obj8.style = items4;
     const obj9 = { style: tmp.textBlock, children: null };
     const obj10 = { variant: "heading-md/semibold", color: "text-strong", children: bountyCtaInfo.label };
-    const items5 = [tmp10(tmp2(4556).Text, obj10), ];
+    const items5 = [closure_9(isActive(4556).Text, obj10), ];
     const obj11 = { variant: "heading-sm/medium", color: "text-default", children: stringResult };
-    items5[1] = tmp10(tmp2(4556).Text, obj11);
+    items5[1] = closure_9(isActive(4556).Text, obj11);
     obj9.children = items5;
-    const items6 = [tmp8(tmp11, obj9), ];
+    const items6 = [closure_10(closure_6, obj9), ];
     const obj12 = { accessible: false, color: tmp9(576).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, style: tmp.replayIcon };
-    items6[1] = tmp10(tmp2(10180).RetryIcon, obj12);
+    items6[1] = closure_9(isActive(10180).RetryIcon, obj12);
     obj8.children = items6;
-    obj7.children = tmp8(tmp9(4296).View, obj8);
-    tmp10Result = tmp10(closure_4, obj7);
+    obj7.children = closure_10(tmp9(4296).View, obj8);
+    tmp10Result = closure_9(closure_4, obj7);
   }
   items1[2] = tmp10Result;
   obj.children = items1;
@@ -142,8 +142,8 @@ createStyles = { withTiming: fn(4561).withTiming, timingStandard: fn(4564).timin
 entering.__closure = createStyles;
 entering.__workletHash = 12127714049951;
 entering.__initData = { code: "function BountiesScrollEndCardTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
-const fn2 = function n(value, fn2) {
-  const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn2) };
+const fn2 = function n(value, fn) {
+  const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
 createStyles = { withTiming: fn(4561).withTiming, timingStandard: fn(4564).timingStandard };

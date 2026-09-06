@@ -3,10 +3,13 @@
 // Module 12555 (GuildPowerupsNotificationContainer)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2428 from "module_2428" /* 2428 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
 import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12556 */;
 import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12557 */;
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12560 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4560 */;
 import size from "module_2" /* 2 */;
@@ -48,20 +51,20 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       str2 = "experimental/heading-lg/semibold";
     }
     obj.variant = str2;
-    const intl = tmp6(1114).intl;
-    obj.children = intl.string(tmp2(2428)["3FRirU"]);
-    const items = [React4(tmp6(4556).Text, obj), , ];
+    const intl = util.intl;
+    obj.children = intl.string(_modDef2428["3FRirU"]);
+    const items = [React4(Text_Text.Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       const obj1 = { text: tmp4.text };
-      shouldShow = tmp11(Tier3OverrideNotice, obj1);
+      shouldShow = React4(Tier3OverrideNotice, obj1);
     }
     items[1] = shouldShow;
     let shouldShow2 = tmp5.shouldShow;
     if (shouldShow2) {
       const obj2 = { guildId, powerupNames: null, warnings: null };
       ({ expiringPowerupNames: obj5.powerupNames, warnings: obj5.warnings } = tmp5);
-      shouldShow2 = tmp11(tmp2(12560), obj2);
+      shouldShow2 = React4(GuildPowerupsWarningDefault, obj2);
     }
     items[2] = shouldShow2;
     obj.children = items;

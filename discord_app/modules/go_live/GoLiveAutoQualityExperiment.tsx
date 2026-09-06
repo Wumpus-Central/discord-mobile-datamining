@@ -2,6 +2,7 @@
 
 // Module 9956 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
+import StreamActionCreators from "StreamActionCreators" /* 4702 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4606 */;
 import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
@@ -47,10 +48,10 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
       if (state.preset !== ApplicationStreamPresets.PRESET_CUSTOM) {
         const obj = { preset: tmp9.PRESET_AUTO, resolution: null, frameRate: null, soundshareEnabled: null, noTrack: true };
         ({ resolution: obj2.resolution, fps: obj2.frameRate, soundshareEnabled: obj2.soundshareEnabled } = state);
-        tmp(4702).updateStreamSettings(obj);
-        const Storage2 = tmp(510).Storage;
+        StreamActionCreators.updateStreamSettings(obj);
+        const Storage2 = Storage3.Storage;
         const result = Storage2.set(GoLiveAutoQualityMigrationVersion, 1);
-        const tmpResult = tmp(4702);
+        const tmpResult = StreamActionCreators;
       }
     }
   }

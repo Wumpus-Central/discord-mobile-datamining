@@ -8,7 +8,7 @@ import size from "module_2" /* 2 */;
 _mod19.useCallback;
 const result = size.fileFinishedImporting("hooks/useCountdown.tsx");
 
-export default function useCountdown(expiresAt) {
+export default function useCountdown(expiresAt, arg1) {
   _require = expiresAt;
   let num = arg1;
   if (arg1 === undefined) {
@@ -19,7 +19,7 @@ export default function useCountdown(expiresAt) {
   if (arg3 === undefined) {
     flag = false;
   }
-  const obj = require("DateUtils");
+  let obj = require("DateUtils");
   const diffAsUnitsResult = require("DateUtils").diffAsUnits(Date.now(), expiresAt);
   const forceUpdate = require("areHookInputsEqual").useForceUpdate();
   const items = [expiresAt, flag, forceUpdate, arg2];
@@ -33,6 +33,7 @@ export default function useCountdown(expiresAt) {
         closure_1();
       }
     }
+    tmp = 0 === time.days && 0 === time.hours && 0 === time.minutes && 0 === time.seconds || flag;
   }, items);
   if (!flag) {
     tmp5 = num;

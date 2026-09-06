@@ -64,7 +64,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
       anyErrorMessage = errors.getAnyErrorMessage();
     }
     obj2.children = anyErrorMessage;
-    tmp3Result = tmp3(native.LegacyText, obj2);
+    tmp3Result = React7(native.LegacyText, obj2);
   }
   items1[1] = tmp3Result;
   obj.children = items1;
@@ -138,7 +138,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
       const id = item.id;
       return closure_1_9(HubEmailConnectionGuildSelectRow, {
         guildInfo: item,
-        signup: closure_3(function*(arg0, value) {
+        signup: closure_3(function*() {
           if (v3 === 2) {
             v3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");

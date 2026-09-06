@@ -2,8 +2,11 @@
 
 // Module 11045 (PremiumGiftDuration)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import TableRow from "TableRow" /* 5605 */;
+import RowButton2 from "RowButton" /* 8595 */;
 import NativeGiftContext from "NativeGiftContext" /* 10699 */;
 import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10751 */;
 import noop from "module_19" /* 19 */;
@@ -16,16 +19,15 @@ function PremiumGiftDurationButton(arg0) {
   const setPlanInterval = nativeGiftContext.setPlanInterval;
   const tmp4 = closure_9();
   if (selected) {
-    let RowButton = tmp(5605).TableRow;
+    let RowButton = TableRow.TableRow;
   } else {
-    RowButton = tmp(8595).RowButton;
+    RowButton = RowButton2.RowButton;
   }
   let combined = null;
   if (planInterval === SubscriptionIntervalTypes.YEAR) {
     const _HermesInternal = HermesInternal;
     combined = "" + React4 + "%";
   }
-  const tmp5 = SubscriptionIntervalTypes;
   const tmp9 = usePremiumProductPricingStringDefault(nativeGiftContext.premiumType, planInterval);
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
   items = [tmp4.container, ];
@@ -36,24 +38,24 @@ function PremiumGiftDurationButton(arg0) {
   obj = { style: items, children: null };
   items[1] = selected;
   obj = { style: tmp4.labelContainer, children: null };
-  if (planInterval === tmp5.MONTH) {
-    const intl2 = tmp(1114).intl;
-    let stringResult = intl2.string(tmp(1114).t.Mh9bTt);
+  if (planInterval === SubscriptionIntervalTypes.MONTH) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.Mh9bTt);
   } else {
-    const intl = tmp(1114).intl;
-    stringResult = intl.string(tmp(1114).t.DRgqMo);
+    const intl = util.intl;
+    stringResult = intl.string(util.t.DRgqMo);
   }
   const items1 = [timestampProducer(Text_Text.Text, { variant: "text-md/semibold", children: stringResult }), ];
   let tmp11Result = null != combined;
   if (tmp11Result) {
     const obj1 = { style: tmp4.labelPromo, children: null };
     const obj2 = { variant: "text-md/bold", color: "text-overlay-light", children: null };
-    const intl3 = tmp(1114).intl;
+    const intl3 = util.intl;
     const obj3 = { discount: combined };
-    obj2.children = intl3.formatToPlainString(tmp(1114).t.IAybsG, obj3).toUpperCase();
-    obj1.children = tmp11(tmp(4556).Text, obj2);
-    tmp11Result = tmp11(tmp12, obj1);
-    const str3 = intl3.formatToPlainString(tmp(1114).t.IAybsG, obj3);
+    obj2.children = intl3.formatToPlainString(util.t.IAybsG, obj3).toUpperCase();
+    obj1.children = timestampProducer(Text_Text.Text, obj2);
+    tmp11Result = timestampProducer(View, obj1);
+    const str3 = intl3.formatToPlainString(util.t.IAybsG, obj3);
   }
   const tmpResult = useA11yRolesNative;
   items1[1] = tmp11Result;

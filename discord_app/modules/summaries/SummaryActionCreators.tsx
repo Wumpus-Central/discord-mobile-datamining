@@ -21,96 +21,101 @@ function fetchSummary() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _fetchSummary(arg0, value) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_13 = async function _fetchSummary() {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      let dispatchResult1 = c6;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp3;
-          closure_130_0 = closure_0;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          if (SummaryStore.shouldFetch(closure_0, closure_1)) {
-            const _Date2 = Date;
-            const timestamp = Date.now();
-            closure_130_1 = timestamp;
-            let obj3 = DispatcherDefault;
-            let obj1 = { type: "REQUEST_CHANNEL_SUMMARY", channelId: tmp46, summaryId: tmp47, requestedAt: timestamp };
-            obj3.dispatch(obj1);
+      try {
+        c7 = 2;
+        dispatchResult1 = c6;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_130_0 = channelId;
+            closure_130_1 = undefined;
             closure_130_2 = undefined;
             closure_130_3 = undefined;
-            c5 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const obj2 = { url: Routes.CHANNEL_SUMMARY(tmp46, tmp47), rejectWithError: false };
-            c6 = 2;
-            c7 = 1;
-            obj3 = { value: HTTP.get(obj2), done: false };
-            return obj3;
+            closure_130_4 = undefined;
+            if (SummaryStore.shouldFetch(channelId, summaryId)) {
+              const _Date2 = Date;
+              const timestamp = Date.now();
+              closure_130_1 = timestamp;
+              let obj3 = DispatcherDefault;
+              let obj1 = { type: "REQUEST_CHANNEL_SUMMARY", channelId, summaryId, requestedAt: timestamp };
+              obj3.dispatch(obj1);
+              closure_130_2 = undefined;
+              closure_130_3 = undefined;
+              c5 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const obj2 = { url: Routes.CHANNEL_SUMMARY(channelId, summaryId), rejectWithError: false };
+              c6 = 2;
+              c7 = 1;
+              obj3 = { value: HTTP.get(obj2), done: false };
+              return obj3;
+            }
           }
-        }
-      } else {
-        if (1 === dispatchResult1) {
-          c5 = 0;
-          closure_130_5 = closure_4;
-          const aPIError = new closure_131_0(closure_131_2[9]).APIError(closure_130_5);
-          closure_130_2 = aPIError;
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
         } else {
-          closure_130_4 = value;
-          let body;
-          if (closure_130_4 != null) {
-            body = closure_130_4.body;
+          if (1 === dispatchResult1) {
+            c5 = 0;
+            closure_130_5 = closure_4;
+            const aPIError = new closure_131_0(closure_131_2[9]).APIError(closure_130_5);
+            closure_130_2 = aPIError;
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 0;
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_130_4 = value;
+            let body;
+            if (closure_130_4 != null) {
+              body = closure_130_4.body;
+            }
+            closure_130_3 = body;
+            c5 = 0;
           }
-          closure_130_3 = body;
-          c5 = 0;
+          obj1 = closure_131_1(closure_131_2[7]);
+          const obj4 = { type: "RECEIVE_CHANNEL_SUMMARY", channelId: closure_130_0, summary: closure_130_3, error: closure_130_2, requestedAt: closure_130_1, receivedAt: null };
+          const _Date = Date;
+          obj4.receivedAt = Date.now();
+          dispatchResult1 = obj1.dispatch(obj4);
         }
-        obj1 = closure_131_1(closure_131_2[7]);
-        const obj4 = { type: "RECEIVE_CHANNEL_SUMMARY", channelId: closure_130_0, summary: closure_130_3, error: closure_130_2, requestedAt: closure_130_1, receivedAt: null };
-        const _Date = Date;
-        obj4.receivedAt = Date.now();
-        dispatchResult1 = obj1.dispatch(obj4);
-      }
-      c7 = 3;
-    } catch (tmp37) {
-      closure_4 = tmp37;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp37;
-      } else {
-        c6 = tmp;
+        c7 = 3;
+      } catch (tmp37) {
+        closure_4 = tmp37;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp37;
+        } else {
+          c6 = tmp;
+        }
       }
     }
-  }
+  })();
 };
 function fetchSummaries() {
   const self = this;
@@ -122,121 +127,126 @@ function fetchSummaries() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _fetchSummaries(arg0, value) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_14 = async function _fetchSummaries() {
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c8 = 2;
-      let dispatchResult1 = c7;
-      if (0 === c7) {
-        if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c8 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_4 = tmp3;
-          closure_131_0 = closure_0;
-          closure_131_1 = undefined;
-          closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          closure_131_4 = undefined;
-          if (SummaryStore.shouldFetch(closure_0)) {
-            const _Date2 = Date;
-            const timestamp = Date.now();
-            closure_131_1 = timestamp;
-            let obj4 = DispatcherDefault;
-            let obj1 = { type: "REQUEST_CHANNEL_SUMMARIES", channelId: tmp54, requestedAt: timestamp };
-            obj4.dispatch(obj1);
+      try {
+        c8 = 2;
+        dispatchResult1 = c7;
+        if (0 === c7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_4 = tmp3;
+            closure_131_0 = channelId;
+            closure_131_1 = undefined;
             closure_131_2 = undefined;
             closure_131_3 = undefined;
-            c6 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            let obj2 = { url: Routes.CHANNEL_SUMMARIES(tmp54), rejectWithError: false };
-            c7 = 2;
-            c8 = 1;
-            const obj3 = { value: HTTP.get(obj2), done: false };
-            return obj3;
+            closure_131_4 = undefined;
+            if (SummaryStore.shouldFetch(channelId)) {
+              const _Date2 = Date;
+              const timestamp = Date.now();
+              closure_131_1 = timestamp;
+              let obj4 = DispatcherDefault;
+              let obj1 = { type: "REQUEST_CHANNEL_SUMMARIES", channelId, requestedAt: timestamp };
+              obj4.dispatch(obj1);
+              closure_131_2 = undefined;
+              closure_131_3 = undefined;
+              c6 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              let obj2 = { url: Routes.CHANNEL_SUMMARIES(channelId), rejectWithError: false };
+              c7 = 2;
+              c8 = 1;
+              const obj3 = { value: HTTP.get(obj2), done: false };
+              return obj3;
+            }
           }
-        }
-      } else {
-        if (1 === dispatchResult1) {
-          c6 = 0;
-          closure_131_5 = closure_5;
-          const aPIError = new closure_132_0(closure_132_2[9]).APIError(closure_131_5);
-          closure_131_2 = aPIError;
-        } else if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 0;
-          c8 = 3;
-          obj = { value, done: true };
-          return obj;
         } else {
-          closure_131_3 = value;
-          c6 = 0;
-        }
-        let summaries;
-        if (closure_131_3 != null) {
-          let body = closure_131_3.body;
-          if (body != null) {
-            summaries = body.summaries;
+          if (1 === dispatchResult1) {
+            c6 = 0;
+            closure_131_5 = closure_5;
+            const aPIError = new closure_132_0(closure_132_2[9]).APIError(closure_131_5);
+            closure_131_2 = aPIError;
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 0;
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_131_3 = value;
+            c6 = 0;
           }
+          let summaries;
+          if (closure_131_3 != null) {
+            let body = closure_131_3.body;
+            if (body != null) {
+              summaries = body.summaries;
+            }
+          }
+          const _Array = Array;
+          if (summaries instanceof Array) {
+            summaries = tmp23.body.summaries;
+          } else {
+            body = undefined;
+            if (tmp23 != null) {
+              body = tmp23.body;
+            }
+            closure_1 = body;
+            if (body == null) {
+              closure_1 = [];
+            }
+            summaries = closure_1;
+          }
+          closure_131_4 = summaries;
+          obj1 = closure_132_1(closure_132_2[10]);
+          closure_131_4 = obj1.takeRight(closure_131_4, 75);
+          obj2 = closure_132_1(closure_132_2[7]);
+          obj4 = { type: "RECEIVE_CHANNEL_SUMMARIES", channelId: closure_131_0, summaries: closure_131_4, error: null, requestedAt: null, receivedAt: null };
+          error = closure_131_2;
+          if (closure_131_2 == null) {
+            error = undefined;
+          }
+          obj4.error = error;
+          obj4.requestedAt = closure_131_1;
+          const _Date = Date;
+          obj4.receivedAt = Date.now();
+          dispatchResult1 = obj2.dispatch(obj4);
         }
-        const _Array = Array;
-        if (summaries instanceof Array) {
-          summaries = tmp23.body.summaries;
+        c8 = 3;
+      } catch (tmp45) {
+        closure_5 = tmp45;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp45;
         } else {
-          body = undefined;
-          if (tmp23 != null) {
-            body = tmp23.body;
-          }
-          closure_1 = body;
-          if (body == null) {
-            closure_1 = [];
-          }
-          summaries = closure_1;
+          c7 = tmp;
         }
-        closure_131_4 = summaries;
-        obj1 = closure_132_1(closure_132_2[10]);
-        closure_131_4 = obj1.takeRight(closure_131_4, 75);
-        obj2 = closure_132_1(closure_132_2[7]);
-        obj4 = { type: "RECEIVE_CHANNEL_SUMMARIES", channelId: closure_131_0, summaries: closure_131_4, error: null, requestedAt: null, receivedAt: null };
-        let error = closure_131_2;
-        if (closure_131_2 == null) {
-          error = undefined;
-        }
-        obj4.error = error;
-        obj4.requestedAt = closure_131_1;
-        const _Date = Date;
-        obj4.receivedAt = Date.now();
-        dispatchResult1 = obj2.dispatch(obj4);
-      }
-      c8 = 3;
-    } catch (tmp45) {
-      closure_5 = tmp45;
-      if (tmp4 === c6) {
-        c8 = tmp2;
-        throw tmp45;
-      } else {
-        c7 = tmp;
       }
     }
-  }
+  })();
 };
 function setHighlightedSummary(channelId, arg1) {
   let tmp = arg1;
@@ -258,6 +268,7 @@ function setSelectedSummary(channelId, summaryId) {
   }
   obj.summaryId = tmp;
   obj.dispatch(obj);
+  tmp2 = null != channelId && null != tmp;
 }
 function updateVisibleMessages(arg0, arg1) {
   let tmp = arg0;
@@ -287,7 +298,7 @@ function fetchChannelAffinities() {
   }
   return applyArgumentsResult;
 }
-let closure_16 = async function _fetchChannelAffinities(arg0, value) {
+let closure_16 = async function _fetchChannelAffinities() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -400,7 +411,7 @@ function fetchSummariesBulk() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _fetchSummariesBulk(arg0, value) {
+let closure_18 = async function _fetchSummariesBulk(arg0) {
   closure_2 = closure_131_0;
   if (closure_131_0 == null) {
     closure_2 = [];
@@ -500,7 +511,7 @@ function useChannelSummaries(channelIds) {
   memo = noop.useMemo(() => channelIds.join(","), items1);
   const items2 = [memo, stateFromStores];
   const effect = noop.useEffect(() => {
-    closure_0 = async function _fetch(arg0, value) {
+    closure_0 = async function _fetch() {
       closure_0 = tmp3;
       await closure_2_15();
       if (1 === tmp7) {
@@ -554,7 +565,7 @@ function deleteSummary(arg0) {
   }
   return applyArgumentsResult;
 }
-let closure_19 = async function _deleteSummary(arg0, value) {
+let closure_19 = async function _deleteSummary(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -640,14 +651,14 @@ export { setSelectedSummary };
 export { updateVisibleMessages };
 export const stopPolling = function stopPolling(arg0) {
   if (null == dependencyMap[arg0]) {
-    tmp[arg0] = 0;
+    dependencyMap[arg0] = 0;
   }
   dependencyMap[arg0] = dependencyMap[arg0] + -1;
   if (dependencyMap[arg0] <= 0) {
-    if (null == tmp[arg0]) {
-      tmp[arg0] = 0;
+    if (null == dependencyMap[arg0]) {
+      dependencyMap[arg0] = 0;
     }
-    tmp[arg0] = tmp[arg0];
+    dependencyMap[arg0] = dependencyMap[arg0];
     const _clearInterval = clearInterval;
     clearInterval(closure_11[arg0]);
   }
@@ -667,7 +678,7 @@ export const useMaybeFetchChannelAffinitiesAndSummaries = function useMaybeFetch
   memo = noop.useMemo(() => channelIds.join(","), items2);
   const items3 = [memo, stateFromStores];
   const effect = noop.useEffect(() => {
-    closure_0 = async function _fetch(arg0, value) {
+    closure_0 = async function _fetch() {
       closure_0 = tmp3;
       await closure_2_15();
       if (1 === tmp7) {

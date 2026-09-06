@@ -6,7 +6,7 @@ import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_6 = async function _getMyContentInventory(arg0, value) {
+let closure_6 = async function _getMyContentInventory(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -103,7 +103,7 @@ let closure_6 = async function _getMyContentInventory(arg0, value) {
     }
   }
 };
-let closure_7 = async function _getContentInventoryOutbox(userId, signal) {
+let closure_7 = async function _getContentInventoryOutbox() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
@@ -235,7 +235,7 @@ let closure_8 = async function _deleteContentInventoryEntryHistory(arg0, arg1, a
     return value;
   })();
 };
-let closure_9 = async function _postTrackToContentInventory(connection_id, arg1) {
+let closure_9 = async function _postTrackToContentInventory() {
   closure_1 = arg1;
   c6 = 0;
   c7 = 0;

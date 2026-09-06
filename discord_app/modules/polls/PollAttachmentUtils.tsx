@@ -5,7 +5,8 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_2 = async function _downloadPollGif() {
   const _fetch = fetch;
-  closure_130_0 = await fetch(closure_0);
+  await fetch(closure_0);
+  closure_130_0 = value;
   function convertBlobToBase64(value) {
     closure_0 = value;
     const fileReader = new FileReader();
@@ -19,7 +20,7 @@ let closure_2 = async function _downloadPollGif() {
     });
   }
   await closure_130_0.blob();
-  return convertBlobToBase64(arg1);
+  return convertBlobToBase64(value);
 };
 const POLL_ATTACHMENT_FOLDER = fn(7829).POLL_ATTACHMENT_FOLDER;
 const size = fn(2);
@@ -33,8 +34,8 @@ export const getFileNameFromGifUrl = function getFileNameFromGifUrl(localCreatio
   }
   return "" + localCreationAnswerId + "-" + str2;
 };
-export const getFilePathForGif = function getFilePathForGif(arg0) {
-  return POLL_ATTACHMENT_FOLDER + "/" + arg0;
+export const getFilePathForGif = function getFilePathForGif(fileNameFromGifUrl) {
+  return POLL_ATTACHMENT_FOLDER + "/" + fileNameFromGifUrl;
 };
 export const downloadPollGif = function downloadPollGif() {
   const self = this;

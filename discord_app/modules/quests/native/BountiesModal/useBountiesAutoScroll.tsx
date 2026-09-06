@@ -71,16 +71,16 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
   const callback = activeIndex.useCallback(() => {
     if (null != ref.current) {
       const _clearInterval = clearInterval;
-      clearInterval(tmp.current);
-      tmp.current = null;
+      clearInterval(ref.current);
+      ref.current = null;
     }
     closure_22.current = null;
   }, []);
   const callback1 = activeIndex.useCallback(() => {
     if (null != ref2.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref2.current);
+      ref2.current = null;
     }
   }, []);
   const items = [first];
@@ -217,7 +217,7 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
         const _Date = Date;
         const timestamp = Date.now();
         if (null != ref4.current) {
-          ref3.current = ref3.current + (timestamp - tmp4.current);
+          ref3.current = ref3.current + (timestamp - ref4.current);
         }
         ref4.current = timestamp;
         current = ref6.current;

@@ -1,7 +1,13 @@
 // === Module 8878: GameUpdatePlatformIcon ===
 
 // Module 8878 (GameUpdatePlatformIcon)
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6960 */;
 import PlatformType from "PlatformType" /* 8342 */;
+import AppleNeutralIcon from "AppleNeutralIcon" /* 8442 */;
+import XboxNeutralIcon from "XboxNeutralIcon" /* 8708 */;
+import ScreenIcon from "ScreenIcon" /* 8879 */;
+import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 8881 */;
+import NintendoSwitchNeutralIcon from "NintendoSwitchNeutralIcon" /* 8883 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,22 +23,22 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
   color = color.color;
   if (PlatformType.PlatformType.DESKTOP === platform) {
     let obj = { size, color };
-    return jsx(tmp(8879).ScreenIcon, { size, color });
-  } else if (tmp(8342).PlatformType.XBOX === platform) {
+    return jsx(ScreenIcon.ScreenIcon, { size, color });
+  } else if (PlatformType.PlatformType.XBOX === platform) {
     obj = { size, color };
-    return jsx(tmp(8708).XboxNeutralIcon, { size, color });
-  } else if (tmp(8342).PlatformType.PLAYSTATION === platform) {
+    return jsx(XboxNeutralIcon.XboxNeutralIcon, { size, color });
+  } else if (PlatformType.PlatformType.PLAYSTATION === platform) {
     const obj1 = { size, color };
-    return jsx(tmp(8881).PlaystationNeutralIcon, { size, color });
-  } else if (tmp(8342).PlatformType.NINTENDO === platform) {
+    return jsx(PlaystationNeutralIcon.PlaystationNeutralIcon, { size, color });
+  } else if (PlatformType.PlatformType.NINTENDO === platform) {
     const obj2 = { size, color };
-    return jsx(tmp(8883).NintendoSwitchNeutralIcon, { size, color });
-  } else if (tmp(8342).PlatformType.ANDROID === platform) {
+    return jsx(NintendoSwitchNeutralIcon.NintendoSwitchNeutralIcon, { size, color });
+  } else if (PlatformType.PlatformType.ANDROID === platform) {
     const obj3 = { size, color };
-    return jsx(tmp(6960).MobilePhoneIcon, { size, color });
-  } else if (tmp(8342).PlatformType.IOS === platform) {
+    return jsx(MobilePhoneIcon.MobilePhoneIcon, { size, color });
+  } else if (PlatformType.PlatformType.IOS === platform) {
     obj = { size, color };
-    return jsx(tmp(8442).AppleNeutralIcon, { size, color });
+    return jsx(AppleNeutralIcon.AppleNeutralIcon, { size, color });
   } else {
     return null;
   }

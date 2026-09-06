@@ -46,7 +46,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     tmp11 = isUserProfileLoading;
   }
   isUserProfileLoading = tmp11;
-  onError(function*(arg0, value) {
+  onError(function*(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -142,7 +142,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     }
     return applyArgumentsResult;
   }, items);
-  onError(function*(arg0, value) {
+  onError(function*(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -237,7 +237,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     }
     return applyArgumentsResult;
   }, items1);
-  onError(function*(arg0, value) {
+  onError(function*(arg0) {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -341,7 +341,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     }
     return applyArgumentsResult;
   }, items2);
-  closure_0 = onError(function*(arg0, value) {
+  closure_0 = onError(function*(arg0) {
     if (mutualGuilds === 2) {
       mutualGuilds = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -371,7 +371,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             closure_129_0 = channel_id;
             closure_129_1 = function _onConfirm() {
               const self = this;
-              const tmp = onError(function*(arg0, value) {
+              const tmp = onError(function*() {
                 if (c1 === 2) {
                   c1 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");
@@ -498,8 +498,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                 return applyArgumentsResult;
               },
           onCancel() {
-                if (null != closure_0) {
-                  mutualGuilds = mutualGuilds.getMutualGuilds(tmp.id);
+                if (null != user) {
+                  mutualGuilds = mutualGuilds.getMutualGuilds(user.id);
                   let mapped;
                   if (mutualGuilds != null) {
                     mapped = mutualGuilds.map((guild) => guild.guild.id);
@@ -515,8 +515,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                 }
                 obj.mutual_guild_ids = items;
                 let id;
-                if (closure_0 != null) {
-                  id = tmp.id;
+                if (user != null) {
+                  id = user.id;
                 }
                 obj.other_user_id = id;
                 obj.track(isUserProfileLoading.MESSAGE_REQUEST_ACTION, obj);
@@ -583,11 +583,12 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             obj.track(AnalyticEvents.MESSAGE_REQUEST_ACTION, obj);
           }
       };
-      let result = user(onRejectSuccess[12]).onMarkAsNotSpamConfirmationModal(obj);
-      const tmpResult = user(onRejectSuccess[12]);
+      let result = tmp(onRejectSuccess[12]).onMarkAsNotSpamConfirmationModal(obj);
+      const tmpResult = tmp(onRejectSuccess[12]);
     } else {
       onConfirm(setting);
     }
+    tmp = user;
   }, items4);
   if (tmp) {
     acceptMessageRequest = callback3;

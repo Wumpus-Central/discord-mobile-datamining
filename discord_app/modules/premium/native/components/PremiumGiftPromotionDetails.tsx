@@ -98,6 +98,7 @@ function AnimatedImage(arg0) {
   }
   obj = { style, resizeMode: "contain", source: { uri: imageUrl } };
   tmp13 = closure_7(tmp9(tmp2[12]), obj);
+  tmpResult = shouldAnimate(aPNGPlayerControls[10]);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -129,7 +130,7 @@ export default function PremiumGiftPromotionDetails(imageUrl) {
   let tmp3Result = null != imageUrl;
   if (tmp3Result) {
     let obj = { style: tmp2.image, imageUrl, shouldAnimate: imageUrl.shouldAnimate };
-    tmp3Result = tmp3(AnimatedImage, obj);
+    tmp3Result = React5(AnimatedImage, obj);
   }
   obj = { graphic: tmp3Result };
   const merged1 = Object.assign(merged);
@@ -142,12 +143,12 @@ export const PremiumGiftPromotionCollectibleRewardDetails = function PremiumGift
   const items = [product];
   const memo = noop.useMemo(() => {
     if (null != product) {
-      if (0 !== tmp.items.length) {
-        if (tmp.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
+      if (0 !== product.items.length) {
+        if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
           let obj = { type: "bundle", items: null, previewAssets: null };
-          ({ items: obj2.items, previewAssets: obj2.previewAssets } = tmp);
+          ({ items: obj2.items, previewAssets: obj2.previewAssets } = product);
         } else {
-          obj = { type: "single", item: tmp.items[0] };
+          obj = { type: "single", item: product.items[0] };
         }
         return obj;
       }
@@ -156,24 +157,25 @@ export const PremiumGiftPromotionCollectibleRewardDetails = function PremiumGift
   if (null == memo) {
     let obj = { graphic: tmp6 };
     const merged1 = Object.assign(merged);
-    return tmp4(tmp5, obj);
+    return closure_7(tmp5, obj);
   } else {
     obj = { style: tmp2.preview, children: null };
     obj = { collectiblesItemData: memo, size: null };
     if ("bundle" === memo.type) {
       const _Math2 = Math;
-      let rounded = Math.floor(1.2 * tmp10);
+      let rounded = Math.floor(1.2 * PX_40);
     } else {
-      rounded = tmp10;
+      rounded = PX_40;
       if (memo.item.type === tmp8(1889).CollectiblesItemType.AVATAR_DECORATION) {
         const _Math = Math;
-        rounded = Math.floor(1.5 * tmp10);
+        rounded = Math.floor(1.5 * PX_40);
       }
     }
     obj.size = rounded;
-    obj = tmp4(SKUPreview.CollectiblesPreview, obj);
+    obj = closure_7(SKUPreview.CollectiblesPreview, obj);
     obj.children = obj;
-    tmp4(View, obj);
+    closure_7(View, obj);
     tmp8 = require;
   }
+  tmp2 = closure_13();
 };

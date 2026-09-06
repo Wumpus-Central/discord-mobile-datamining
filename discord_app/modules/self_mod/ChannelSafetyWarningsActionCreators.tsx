@@ -30,9 +30,9 @@ export const acknowledgeChannelSafetyWarningTooltip = function acknowledgeChanne
   const obj = { type: "ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP", channelId };
   obj.dispatch(obj);
 };
-export const reportFalsePositive = function reportFalsePositive(arg0) {
+export const reportFalsePositive = function reportFalsePositive(channelId) {
   const HTTP = HTTPUtils.HTTP;
-  const obj = { url: Endpoints.SAFETY_WARNING_FALSE_POSITIVE(arg0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  const obj = { url: Endpoints.SAFETY_WARNING_FALSE_POSITIVE(channelId), rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.post(obj);
 };
 export const markAsStrangerDanger = function markAsStrangerDanger(id) {

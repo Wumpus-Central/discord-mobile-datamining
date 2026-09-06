@@ -5,8 +5,11 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native2 from "native" /* 1178 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
+import _modDef3010 from "module_3010" /* 3010 */;
 import shared from "shared" /* 4411 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
 import common_AlertDefault from "common/Alert" /* 4994 */;
 import Pressables from "Pressables" /* 5123 */;
 import PlatformsDefault from "Platforms" /* 5283 */;
@@ -14,7 +17,9 @@ import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreat
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import TableRow from "TableRow" /* 5605 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
+import _modDef6992 from "module_6992" /* 6992 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
+import InfoBoxDefault from "InfoBox" /* 9459 */;
 import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 14964 */;
 import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 14965 */;
 import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 14968 */;
@@ -55,7 +60,6 @@ function Integration(integration) {
     const obj3 = { style: legacyClassComponentStyles.integrationTextRowContainer, children: null };
     const obj4 = { lineClamp: 1, variant: "text-sm/medium", children: integration.guild.name };
     const items5 = [closure_14(tmp(4556).Text, obj4), ];
-    const tmp16 = closure_14;
     value = PlatformsDefault.get(integration.type);
     let platformUserUrl;
     if (value != null) {
@@ -65,7 +69,7 @@ function Integration(integration) {
       }
     }
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: platformUserUrl };
-    items5[1] = tmp16(tmp(4556).Text, obj5);
+    items5[1] = closure_14(tmp(4556).Text, obj5);
     obj3.children = items5;
     items4[1] = closure_15(View, obj3);
     items4[2] = tmp7;
@@ -96,10 +100,11 @@ function Integration(integration) {
       stringResult = string(RXvQQu.XpeFYr);
     }
     obj7.text = stringResult;
-    obj7 = tmp8(tmp(4975).Button, obj7);
+    obj7 = closure_14(tmp(4975).Button, obj7);
     obj6.children = obj7;
     closure_14(View, obj6);
   }
+  const tmp4 = _slicedToArray(noop.useState(), 2);
 }
 function RowSwitch(label) {
   const merged = Object.assign(label, Object.assign({ label: 0 }));
@@ -173,29 +178,30 @@ class ConnectedAccount extends PureComponent {
       if (shouldWarnConnectedAccountTwoWayDefault(account)) {
         obj = { children: null };
         const obj1 = { style: tmp2.alertBodyText, variant: "text-md/medium", children: formatResult };
-        const items = [closure_2_14(tmp6(4556).Text, obj1), ];
+        const items = [closure_2_14(Text_Text.Text, obj1), ];
         const obj2 = { style: tmp2.alertInfoBox, children: null };
-        let tmp3Result = tmp3(9459);
-        const intl2 = tmp6(1114).intl;
+        let tmp3Result = InfoBoxDefault;
+        const intl2 = util.intl;
         const obj3 = { platformName: value.name };
-        obj2.children = intl2.format(tmp6(1114).t.COW3Xn, obj3);
+        obj2.children = intl2.format(util.t.COW3Xn, obj3);
         items[1] = closure_2_14(tmp3Result, obj2);
         obj.children = items;
         tmp8 = __initData(View, obj);
       }
-      tmp3Result = tmp3(4904);
+      tmp3Result = AlertActionCreatorsDefault;
       const obj4 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
-      const intl3 = tmp6(1114).intl;
+      const intl3 = util.intl;
       obj4.title = intl3.formatToPlainString(util.t.U5x12f, { name: value.name });
       obj4.body = formatResult;
-      const intl4 = tmp6(1114).intl;
+      const intl4 = util.intl;
       obj4.cancelText = intl4.string(util.t["ETE/oC"]);
       obj4.children = tmp8;
-      const intl5 = tmp6(1114).intl;
+      const intl5 = util.intl;
       obj4.confirmText = intl5.string(util.t.ppppRJ);
       obj4.onConfirm = applyArgumentsResult.handleConfirmDisconnectAccount;
       obj4.confirmColor = common_AlertDefault.Colors.RED;
       tmp3Result.show(obj4);
+      const obj5 = { name: value.name };
     };
     applyArgumentsResult.handleConfirmDisconnectAccount = function handleConfirmDisconnectAccount() {
       const account = applyArgumentsResult.props.account;
@@ -203,36 +209,41 @@ class ConnectedAccount extends PureComponent {
     };
     closure_129_0 = undefined;
     closure_129_1 = applyArgumentsResult;
-    closure_129_0 = closure_3(async (arg0) => {
-      closure_129_0 = applyArgumentsResult;
-      const account = importDefault.props.account;
-      let num5 = 0;
-      if (applyArgumentsResult) {
-        num5 = 1;
-      }
-      if (applyArgumentsResult) {
-        if (!account.verified) {
-          importDefault.setState({ inProgressVisibility: num5 });
-          closure_1(tmp3[26])({ platformType: account.type });
-          c5 = 3;
-          return { value: undefined, done: true };
+    closure_129_0 = closure_3(async (isVisible) => {
+      c4 = 0;
+      c5 = 0;
+      c3 = 0;
+      return (async (arg0) => {
+        closure_129_0 = isVisible;
+        const account = importDefault.props.account;
+        let num5 = 0;
+        if (isVisible) {
+          num5 = 1;
         }
-      }
-      importDefault.setState({ isVisible: applyArgumentsResult });
-      let obj6 = closure_1(tmp3[13]);
-      await obj6.setVisibility(account.type, account.id, num5);
-      if (1 === tmp7) {
-        c3 = 0;
-        obj6 = { isVisible: !closure_129_0 };
-        closure_130_1.setState(obj6);
-        c5 = 3;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c3 = 0;
-      }
-      return arg1;
+        if (isVisible) {
+          if (!account.verified) {
+            importDefault.setState({ inProgressVisibility: num5 });
+            closure_1(tmp3[26])({ platformType: account.type });
+            c5 = 3;
+            return { value: undefined, done: true };
+          }
+        }
+        importDefault.setState({ isVisible });
+        let obj6 = closure_1(tmp3[13]);
+        await obj6.setVisibility(account.type, account.id, num5);
+        if (1 === tmp7) {
+          c3 = 0;
+          obj6 = { isVisible: !closure_129_0 };
+          closure_130_1.setState(obj6);
+          c5 = 3;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          c3 = 0;
+        }
+        return value;
+      })();
     });
     applyArgumentsResult.handleVisibilityChange = function() {
       const self = this;
@@ -246,36 +257,41 @@ class ConnectedAccount extends PureComponent {
     };
     closure_130_0 = undefined;
     closure_130_1 = applyArgumentsResult;
-    closure_130_0 = closure_3(async (arg0) => {
-      closure_129_0 = applyArgumentsResult;
-      const account = importDefault.props.account;
-      let num5 = 0;
-      if (applyArgumentsResult) {
-        num5 = 1;
-      }
-      if (applyArgumentsResult) {
-        if (!account.verified) {
-          importDefault.setState({ inProgressMetadataVisibility: num5 });
-          closure_1(tmp3[26])({ platformType: account.type });
-          c5 = 3;
-          return { value: undefined, done: true };
+    closure_130_0 = closure_3(async (isMetadataVisible) => {
+      c4 = 0;
+      c5 = 0;
+      c3 = 0;
+      return (async (arg0) => {
+        closure_129_0 = isMetadataVisible;
+        const account = importDefault.props.account;
+        let num5 = 0;
+        if (isMetadataVisible) {
+          num5 = 1;
         }
-      }
-      importDefault.setState({ isMetadataVisible: applyArgumentsResult });
-      let obj6 = closure_1(tmp3[13]);
-      await obj6.setMetadataVisibility(account.type, account.id, num5);
-      if (1 === tmp7) {
-        c3 = 0;
-        obj6 = { isMetadataVisible: !closure_129_0 };
-        closure_130_1.setState(obj6);
-        c5 = 3;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c3 = 0;
-      }
-      return arg1;
+        if (isMetadataVisible) {
+          if (!account.verified) {
+            importDefault.setState({ inProgressMetadataVisibility: num5 });
+            closure_1(tmp3[26])({ platformType: account.type });
+            c5 = 3;
+            return { value: undefined, done: true };
+          }
+        }
+        importDefault.setState({ isMetadataVisible });
+        let obj6 = closure_1(tmp3[13]);
+        await obj6.setMetadataVisibility(account.type, account.id, num5);
+        if (1 === tmp7) {
+          c3 = 0;
+          obj6 = { isMetadataVisible: !closure_129_0 };
+          closure_130_1.setState(obj6);
+          c5 = 3;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          c3 = 0;
+        }
+        return value;
+      })();
     });
     applyArgumentsResult.handleMetadataVisibilityChange = function() {
       const self = this;
@@ -293,7 +309,7 @@ class ConnectedAccount extends PureComponent {
       c4 = 0;
       c5 = 0;
       c3 = 0;
-      return (async (arg0, value) => {
+      return (async (arg0) => {
         closure_129_0 = friendSync;
         const account = importDefault.props.account;
         importDefault.setState({ friendSync });
@@ -327,7 +343,7 @@ class ConnectedAccount extends PureComponent {
       c4 = 0;
       c5 = 0;
       c3 = 0;
-      return (async (arg0, value) => {
+      return (async (arg0) => {
         closure_129_0 = showActivity;
         const account = importDefault.props.account;
         importDefault.setState({ showActivity });
@@ -440,22 +456,22 @@ prototype["renderMetadata"] = function renderMetadata() {
   if (constants.REDDIT === type) {
     let tmp2Result = tmp2(11575);
     let redditMetadataItems = tmp2Result.generateRedditMetadataItems(metadata);
-  } else if (tmp6.STEAM === type) {
+  } else if (constants.STEAM === type) {
     tmp2Result = tmp2(11575);
     redditMetadataItems = tmp2Result.generateSteamMetadataItems(metadata);
   } else {
-    if (tmp6.BLUESKY !== type) {
-      if (tmp6.TWITTER !== type) {
-        if (tmp6.MASTODON !== type) {
-          if (tmp6.EBAY === type) {
+    if (constants.BLUESKY !== type) {
+      if (constants.TWITTER !== type) {
+        if (constants.MASTODON !== type) {
+          if (constants.EBAY === type) {
             redditMetadataItems = tmp2(11575).generateEbayMetadataItems(metadata);
             const tmp2Result1 = tmp2(11575);
-          } else if (tmp6.PAYPAL === type) {
+          } else if (constants.PAYPAL === type) {
             redditMetadataItems = tmp2(11575).generatePaypalMetadataItems(metadata);
             const tmp2Result2 = tmp2(11575);
           } else {
             redditMetadataItems = [];
-            if (tmp6.TIKTOK === type) {
+            if (constants.TIKTOK === type) {
               redditMetadataItems = tmp2(11575).generateTikTokMetadataItems(metadata);
               const tmp2Result3 = tmp2(11575);
             }
@@ -531,9 +547,9 @@ prototype["renderMetadata"] = function renderMetadata() {
         const obj = self(4255);
         return obj.openURL(self(2024).getArticleURL(constants.CONNECTION_DETAILS));
       };
-      tmp = tmp23(Button, obj8);
+      tmp = closure_14(Button, obj8);
       obj7.children = tmp;
-      obj5 = tmp23(tmp22, obj7);
+      obj5 = closure_14(View, obj7);
       items1[4] = obj5;
       obj1.children = items1;
       closure_15(View, obj1);
@@ -635,7 +651,7 @@ prototype["render"] = function render() {
   if (migrationExperimentEnabled) {
     const intl = util.intl;
     obj = { platformName: account.name };
-    let name = intl.format(tmp2(3010).Glhokn, obj);
+    let name = intl.format(_modDef3010.Glhokn, obj);
   } else {
     name = account.name;
   }
@@ -644,17 +660,17 @@ prototype["render"] = function render() {
   let obj4 = shared;
   const icon = value.icon;
   obj.source = obj3.makeSource(obj4.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
-  tmp7(native2.Icon, obj);
+  closure_1_14(native2.Icon, obj);
   const obj1 = { spacing: 8, direction: "horizontal", align: "center", children: null };
   const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl2 = tmp8(1114).intl;
+  const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.string(util.t["DT39A+"]);
   obj2.onPress = self.handleDisconnect;
   obj2.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
-  obj3 = { style: tmp.deleteConnectionIcon, source: tmp2(6992) };
+  obj3 = { style: tmp.deleteConnectionIcon, source: _modDef6992 };
   obj2.children = closure_1_14(native2.Icon, obj3);
   obj1.children = closure_1_14(Pressables.PressableOpacity, obj2);
-  const tmp7Result = tmp7(tmp8(4973).Stack, obj1);
+  const tmp7Result = closure_1_14(Stack_Stack.Stack, obj1);
   const result = self.renderIntegrationsRow();
   const result1 = self.renderFriendSyncCheckRow();
   const result2 = self.renderActivityCheckRow();

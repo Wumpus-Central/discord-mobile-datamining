@@ -73,7 +73,7 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   }
   obj.hideBadge = hide_badge;
   if (typeof prototype === "function") {
-    obj = Object.create(tmp.prototype);
+    obj = Object.create(prototype.prototype);
     ({ id: tmp17.id, skuIds: tmp17.skuIds, name: tmp17.name, summary: tmp17.summary, options: tmp17.options, createdAt: tmp17.createdAt, updatedAt: tmp17.updatedAt, skus: tmp17.skus, primaryCollectionId: tmp17.primaryCollectionId, primaryCollectionStyles: tmp17.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp17.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp17.primaryCollectionWillUnpublishAt, gameApplicationId: tmp17.gameApplicationId, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge } = obj);
     return obj;
   } else {

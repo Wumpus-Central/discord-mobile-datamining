@@ -5,32 +5,33 @@ import shims from "shims" /* 575 */;
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import DMSafetyConstants from "DMSafetyConstants" /* 1937 */;
+import HighlightedSettingsTypes from "HighlightedSettingsTypes" /* 14838 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
-function mapColorToHighlightColor(arg0) {
-  if (obj.unsafe_getRawColor("PRIMARY_400") === arg0) {
-    return tmp(14838).HighlightColors.ACCENT;
+function mapColorToHighlightColor(color) {
+  if (obj.unsafe_getRawColor("PRIMARY_400") === color) {
+    return HighlightedSettingsTypes.HighlightColors.ACCENT;
   } else {
-    let tmpResult = tmp(575);
-    if (tmpResult.unsafe_getRawColor("GREEN_360") === arg0) {
-      return tmp(14838).HighlightColors.GREEN;
+    let tmpResult = shims;
+    if (tmpResult.unsafe_getRawColor("GREEN_360") === color) {
+      return HighlightedSettingsTypes.HighlightColors.GREEN;
     } else {
-      tmpResult = tmp(575);
-      if (tmpResult.unsafe_getRawColor("YELLOW_360") === arg0) {
-        return tmp(14838).HighlightColors.YELLOW;
+      tmpResult = shims;
+      if (tmpResult.unsafe_getRawColor("YELLOW_360") === color) {
+        return HighlightedSettingsTypes.HighlightColors.YELLOW;
       } else {
-        if (tmpResult1.unsafe_getRawColor("ORANGE_345") === arg0) {
-          return tmp(14838).HighlightColors.ORANGE;
+        if (tmpResult1.unsafe_getRawColor("ORANGE_345") === color) {
+          return HighlightedSettingsTypes.HighlightColors.ORANGE;
         } else {
-          if (tmpResult2.unsafe_getRawColor("RED_400") === arg0) {
-            return tmp(14838).HighlightColors.RED;
+          if (tmpResult2.unsafe_getRawColor("RED_400") === color) {
+            return HighlightedSettingsTypes.HighlightColors.RED;
           } else {
-            return tmp(14838).HighlightColors.NONE;
+            return HighlightedSettingsTypes.HighlightColors.NONE;
           }
-          tmpResult2 = tmp(575);
+          tmpResult2 = shims;
         }
-        tmpResult1 = tmp(575);
+        tmpResult1 = shims;
       }
     }
   }
@@ -44,7 +45,7 @@ export { mapColorToHighlightColor };
 export const mapOptionToHighlightedRowOptions = function mapOptionToHighlightedRowOptions(arr) {
   return arr.map((name) => ({ title: name.name, description: name.desc, highlightColor: mapColorToHighlightColor(name.color), value: name.value, disabled: name.disabled }));
 };
-export const generateVerificationLevelOptions = function generateVerificationLevelOptions(features) {
+export const generateVerificationLevelOptions = function generateVerificationLevelOptions() {
   let flag = features;
   if (features === undefined) {
     flag = false;
@@ -69,54 +70,54 @@ export const generateVerificationLevelOptions = function generateVerificationLev
   obj.disabled = flag;
   const items = [obj, , , , ];
   obj = { name: null, desc: null, value: null, color: null };
-  const intl3 = tmp(1114).intl;
+  const intl3 = util.intl;
   obj.name = intl3.string(util.t.SsCK8I);
-  const intl4 = tmp(1114).intl;
+  const intl4 = util.intl;
   obj.desc = intl4.string(util.t["8GCOX6"]);
   obj.value = constants.LOW;
   let unsafe_getRawColorResult;
   if (!flag2) {
-    let tmpResult = tmp(575);
+    let tmpResult = shims;
     unsafe_getRawColorResult = tmpResult.unsafe_getRawColor("GREEN_360");
   }
   obj.color = unsafe_getRawColorResult;
   items[1] = obj;
   obj = { name: null, desc: null, value: null, color: null };
-  const intl5 = tmp(1114).intl;
+  const intl5 = util.intl;
   obj.name = intl5.string(util.t.WwNoR4);
-  const intl6 = tmp(1114).intl;
+  const intl6 = util.intl;
   obj.desc = intl6.formatToPlainString(util.t.VS14ga, { min: constants2.ACCOUNT_AGE });
   obj.value = constants.MEDIUM;
   let unsafe_getRawColorResult1;
   if (!flag2) {
-    tmpResult = tmp(575);
+    tmpResult = shims;
     unsafe_getRawColorResult1 = tmpResult.unsafe_getRawColor("YELLOW_360");
   }
   obj.color = unsafe_getRawColorResult1;
   items[2] = obj;
   const obj2 = { name: null, desc: null, value: null, color: null };
-  const intl7 = tmp(1114).intl;
+  const intl7 = util.intl;
   obj2.name = intl7.string(util.t.I2jMUF);
-  const intl8 = tmp(1114).intl;
+  const intl8 = util.intl;
   obj2.desc = intl8.formatToPlainString(util.t["r+b3I4"], { min: constants2.MEMBER_AGE });
   obj2.value = constants.HIGH;
   let unsafe_getRawColorResult2;
   if (!flag2) {
-    unsafe_getRawColorResult2 = tmp(575).unsafe_getRawColor("ORANGE_345");
-    const tmpResult1 = tmp(575);
+    unsafe_getRawColorResult2 = shims.unsafe_getRawColor("ORANGE_345");
+    const tmpResult1 = shims;
   }
   obj2.color = unsafe_getRawColorResult2;
   items[3] = obj2;
   const obj4 = { name: null, desc: null, value: null, color: null };
-  const intl9 = tmp(1114).intl;
+  const intl9 = util.intl;
   obj4.name = intl9.string(util.t.cJY8w9);
-  const intl10 = tmp(1114).intl;
+  const intl10 = util.intl;
   obj4.desc = intl10.string(util.t.PWaKme);
   obj4.value = constants.VERY_HIGH;
   let unsafe_getRawColorResult3;
   if (!flag2) {
-    unsafe_getRawColorResult3 = tmp(575).unsafe_getRawColor("RED_400");
-    const tmpResult2 = tmp(575);
+    unsafe_getRawColorResult3 = shims.unsafe_getRawColor("RED_400");
+    const tmpResult2 = shims;
   }
   obj4.color = unsafe_getRawColorResult3;
   items[4] = obj4;
@@ -149,15 +150,15 @@ export const generateContentFilterHighlightedOptions = function generateContentF
   obj.desc = stringResult;
   obj.value = constants3.MEMBERS_WITHOUT_ROLES;
   obj.disabled = flag;
-  let tmpResult = tmp(575);
+  let tmpResult = shims;
   obj.color = tmpResult.unsafe_getRawColor("YELLOW_360");
   items[1] = obj;
   obj = { name: null, desc: null, value: null, disabled: null, color: null };
-  const intl5 = tmp(1114).intl;
+  const intl5 = util.intl;
   obj.name = intl5.string(util.t.VbSyAx);
-  const intl6 = tmp(1114).intl;
+  const intl6 = util.intl;
   const string2 = intl6.string;
-  const t2 = tmp(1114).t;
+  const t2 = util.t;
   if (flag) {
     let string2Result = string2(t2.j9WtHx);
   } else {
@@ -166,12 +167,12 @@ export const generateContentFilterHighlightedOptions = function generateContentF
   obj.desc = string2Result;
   obj.value = constants3.DISABLED;
   obj.disabled = flag;
-  tmpResult = tmp(575);
+  tmpResult = shims;
   obj.color = tmpResult.unsafe_getRawColor("PRIMARY_400");
   items[2] = obj;
   return items;
 };
-export const generateContentFilterOptions = function generateContentFilterOptions(features) {
+export const generateContentFilterOptions = function generateContentFilterOptions() {
   let flag = features;
   if (features === undefined) {
     flag = false;
@@ -199,11 +200,11 @@ export const generateContentFilterOptions = function generateContentFilterOption
   obj.disabled = flag;
   items[1] = obj;
   obj = { name: null, desc: null, value: null, disabled: null };
-  const intl5 = tmp(1114).intl;
+  const intl5 = util.intl;
   obj.name = intl5.string(util.t.VbSyAx);
-  const intl6 = tmp(1114).intl;
+  const intl6 = util.intl;
   const string2 = intl6.string;
-  const t2 = tmp(1114).t;
+  const t2 = util.t;
   if (flag) {
     let string2Result = string2(t2.j9WtHx);
   } else {

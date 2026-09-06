@@ -41,8 +41,8 @@ export default function NsfwGateGuildSidebar(guildId) {
       tmp2 = null != stateFromStores;
     }
     if (tmp2) {
-      const obj = { guild_id: guildId, user_id: tmp.id, is_member: GuildMemberStore.isMember(guildId, tmp.id), is_user_opted_in_to_age_restricted_servers: null, source: null };
-      let nsfwAllowed = tmp.nsfwAllowed;
+      const obj = { guild_id: guildId, user_id: currentUser.id, is_member: GuildMemberStore.isMember(guildId, currentUser.id), is_user_opted_in_to_age_restricted_servers: null, source: null };
+      let nsfwAllowed = currentUser.nsfwAllowed;
       if (nsfwAllowed) {
         nsfwAllowed = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();
       }

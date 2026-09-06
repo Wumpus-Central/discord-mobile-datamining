@@ -30,7 +30,7 @@ export default function NotificationContent(arg0) {
   let tmp4 = null;
   if (null != icon) {
     obj = { style: tmp.iconContainer, children: icon };
-    tmp4 = React4(tmp3, obj);
+    tmp4 = React4(View, obj);
   }
   const items = [tmp4, , ];
   obj = { style: tmp.body, children: null };
@@ -44,11 +44,11 @@ export default function NotificationContent(arg0) {
   if ("message" === header.type) {
     const obj3 = {};
     const merged = Object.assign(header);
-    let tmp7Result = tmp7(MessageNotificationHeaderDefault, obj3);
+    let tmp7Result = React4(MessageNotificationHeaderDefault, obj3);
   } else {
     const obj4 = {};
     const merged1 = Object.assign(header);
-    tmp7Result = tmp7(MessageNotificationHeader.SimpleNotificationHeader, obj4);
+    tmp7Result = React4(MessageNotificationHeader.SimpleNotificationHeader, obj4);
   }
   obj2.children = tmp7Result;
   items1[1] = React4(View, obj2);

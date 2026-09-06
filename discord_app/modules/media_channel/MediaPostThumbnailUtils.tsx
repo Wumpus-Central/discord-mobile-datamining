@@ -31,8 +31,8 @@ export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) 
     const _HermesInternal = HermesInternal;
     let combined = "" + coverImage + "?format=webp";
   } else {
+    MediaFormatTesters;
     combined = coverImage;
-    const tmpResult = MediaFormatTesters;
   }
   return combined;
 };

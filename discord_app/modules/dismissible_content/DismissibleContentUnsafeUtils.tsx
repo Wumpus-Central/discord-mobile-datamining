@@ -3,7 +3,9 @@
 // Module 4380 (DismissibleContentUnsafeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1090 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1942 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 1944 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
 import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4402 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
@@ -119,7 +121,7 @@ class UNSAFE_isDismissibleContentDismissed {
     }
   }
 }
-let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0, value) {
+let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -212,7 +214,7 @@ let closure_8 = async function _UNSAFE_markSingleUseGuildDismissibleContentAsDis
   closure_131_2 = obj1;
   return "PX_16";
 };
-let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(arg0, value) {
+let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -269,7 +271,7 @@ let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentA
     }
   }
 };
-let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(arg0, snowflakeId, arg2, arg3) {
+let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(arg0) {
   closure_0 = arg0;
   closure_2 = arg2;
   closure_3 = arg3;

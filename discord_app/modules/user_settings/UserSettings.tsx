@@ -12,9 +12,9 @@ import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
 import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 1936 */;
 
 require = fn;
-function explicitContentFromProto(arg0) {
-  let obj = arg0;
-  if (arg0 == null) {
+function explicitContentFromProto(settings) {
+  let obj = settings;
+  if (settings == null) {
     obj = {};
   }
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = obj);
@@ -1480,9 +1480,9 @@ UserSettingDefinitions = { delay: UserSettingsDelay.AUTOMATED };
 const defineProtoSettingResult94 = UserSettingDefinitions.defineProtoSetting("appearance", "uiDensity", (arg0) => {
   let DEFAULT = arg0;
   if (arg0 === preloaded_user_settings.UIDensity.UNSET_UI_DENSITY) {
-    DEFAULT = tmp(1187).UIDensity.DEFAULT;
+    DEFAULT = preloaded_user_settings.UIDensity.DEFAULT;
   } else if (DEFAULT == null) {
-    DEFAULT = tmp(1187).UIDensity.DEFAULT;
+    DEFAULT = preloaded_user_settings.UIDensity.DEFAULT;
   }
   return DEFAULT;
 }, (arg0) => arg0);

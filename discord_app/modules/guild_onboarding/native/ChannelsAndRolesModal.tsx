@@ -53,7 +53,7 @@ function ChannelsAndRolesScreen(guildId) {
       obj1 = { style: tmp.tabBar, children: null };
       const obj2 = { state: segmentedControlState };
       obj1.children = closure_8(tmp2(tmp3[12]).SegmentedControl, obj2);
-      tmp17 = closure_8(tmp16, obj1);
+      tmp17 = closure_8(View, obj1);
     }
     const items3 = [tmp17, ];
     if (defaultIndex === GuildOnboardingTab.CUSTOMIZE) {
@@ -87,7 +87,6 @@ export default function ChannelsAndRolesModal(arg0) {
   const items = [GuildStore];
   const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const tmp2 = useGuildOnboardingAvailableDefault(stateFromStores);
-  const tmp3 = closure_8;
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -103,5 +102,5 @@ export default function ChannelsAndRolesModal(arg0) {
       return React6(ChannelsAndRolesScreen, { guildId, defaultTab });
     }
   };
-  return tmp3(ModalStackNavigatorDefault, obj);
+  return closure_8(ModalStackNavigatorDefault, obj);
 };

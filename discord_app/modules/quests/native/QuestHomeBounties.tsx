@@ -3,14 +3,18 @@
 // Module 15067 (QuestHomeBounties)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import QuestTypes from "QuestTypes" /* 5447 */;
+import AdCreativeType from "AdCreativeType" /* 5451 */;
 import native from "native" /* 5692 */;
 import AnalyticsActions from "AnalyticsActions" /* 7718 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
 import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11192 */;
+import captureAdUserAction from "captureAdUserAction" /* 11193 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11197 */;
 import AnalyticsHooks from "AnalyticsHooks" /* 11774 */;
 import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15002 */;
 import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 15065 */;
@@ -30,23 +34,23 @@ function EmptyState(reason) {
   let obj = AnalyticsHooks;
   const bountyCarouselEmptyStateAnalytics = obj.useBountyCarouselEmptyStateAnalytics(reason);
   if (reason === constants.COMPLETED) {
-    const intl2 = tmp2(1114).intl;
-    let stringResult = intl2.string(tmp2(1114).t.O2hRaZ);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.O2hRaZ);
   } else {
-    const intl = tmp2(1114).intl;
-    stringResult = intl.string(tmp2(1114).t.TKuW8z);
+    const intl = util.intl;
+    stringResult = intl.string(util.t.TKuW8z);
   }
   if (reason === constants.COMPLETED) {
-    let ReqPds = tmp2(1114).t["D/790X"];
+    let ReqPds = util.t["D/790X"];
   } else {
-    ReqPds = tmp2(1114).t.ReqPds;
+    ReqPds = util.t.ReqPds;
   }
   obj = { style: tmp.emptyState, children: null };
   const items = [React7(native.BountiesPosterIllocon, { size: 32 }), ];
   obj = { style: tmp.emptyStateText, children: null };
   const items1 = [React7(Text_Text.Text, { variant: "text-sm/semibold", color: "text-default", children: stringResult }), ];
   const obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj1.children = intl3.format(ReqPds, {
     onClickLearnMore() {
       openBountiesNuxPromoSheetDefault();
@@ -90,14 +94,13 @@ function QuestHomeBountiesCarousel(bounties) {
     if (null != arg0) {
       const _Object2 = Object;
       if (Object.hasOwn(visibilityRef.current.children, arg0)) {
-        if (tmp8.current.children[arg0] != null) {
+        if (visibilityRef.current.children[arg0] != null) {
           const calculateVisibility2 = tmp9.calculateVisibility;
           if (calculateVisibility2 != null) {
             calculateVisibility2();
           }
         }
       }
-      tmp8 = visibilityRef;
     } else {
       const _Object = Object;
       const values = Object.values(visibilityRef.current.children);
@@ -141,10 +144,10 @@ function QuestHomeBountiesCarousel(bounties) {
       const timestamp = Date.now();
       let tmp5 = null == ref2.current;
       if (!tmp5) {
-        tmp5 = timestamp - tmp3.current >= 50;
+        tmp5 = timestamp - ref2.current >= 50;
       }
       if (tmp5) {
-        tmp3.current = timestamp;
+        ref2.current = timestamp;
         const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
       }
     }
@@ -158,8 +161,8 @@ function QuestHomeBountiesCarousel(bounties) {
     closure_14.current = false;
     if (null != ref3.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref3.current);
+      ref3.current = null;
     }
   }, []);
   const callback5 = first1.useCallback((nativeEvent) => {
@@ -170,13 +173,13 @@ function QuestHomeBountiesCarousel(bounties) {
       const BountyScrollingType = AnalyticsTypes.BountyScrollingType;
       let result = { scrollingType: tmp2 ? BountyScrollingType.AUTO : BountyScrollingType.MANUAL, scrollingDirection: null, carouselPosition: null, questContent: null };
       if (rounded > tmp3) {
-        let LEFT = tmp6(7728).HorizontalScrollingDirection.RIGHT;
+        let LEFT = AnalyticsTypes.HorizontalScrollingDirection.RIGHT;
       } else {
-        LEFT = tmp6(7728).HorizontalScrollingDirection.LEFT;
+        LEFT = AnalyticsTypes.HorizontalScrollingDirection.LEFT;
       }
       result.scrollingDirection = LEFT;
       result.carouselPosition = rounded;
-      QUEST_HOME_MOBILE_CAROUSEL = tmp6(5447).QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
+      QUEST_HOME_MOBILE_CAROUSEL = QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
       result.questContent = QUEST_HOME_MOBILE_CAROUSEL;
       result = AnalyticsActions.trackBountyCarouselScroll(result);
       closure_5(rounded);
@@ -186,8 +189,8 @@ function QuestHomeBountiesCarousel(bounties) {
     closure_0 = arg0;
     if (null != ref3.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref3.current);
+      ref3.current = null;
     }
     ref3.current = setTimeout(() => {
       closure_14.current = true;
@@ -202,8 +205,8 @@ function QuestHomeBountiesCarousel(bounties) {
   const effect = first1.useEffect(() => () => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
   }, []);
   const items5 = [bounties, first1, callback6];
@@ -257,12 +260,12 @@ function QuestHomeBountiesCarousel(bounties) {
   const callback7 = first1.useCallback((bountyId, questContentPosition) => {
     let obj = AdAnalyticsInterfaceExperiment;
     if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_home_bounties")) {
-      let tmpResult = tmp(11193);
-      obj = { type: tmp(11197).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp(5451).AdCreativeType.BOUNTY, adCreativeId: bountyId.id, questContentCTA: tmp(7728).QuestContentCTA.START_BOUNTY, surfaceId: tmp(5447).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, sourceQuestContent: tmp(5447).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentPosition };
+      let tmpResult = captureAdUserAction;
+      obj = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adCreativeId: bountyId.id, questContentCTA: AnalyticsTypes.QuestContentCTA.START_BOUNTY, surfaceId: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL, sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentPosition };
       tmpResult.captureAdUserAction(obj);
     } else {
-      tmpResult = tmp(7718);
-      obj = { adContentId: bountyId.id, adCreativeType: tmp(5451).AdCreativeType.BOUNTY, questContent: tmp(5447).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentCTA: tmp(7728).QuestContentCTA.START_BOUNTY, sourceQuestContent: tmp(5447).QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentPosition };
+      tmpResult = AnalyticsActions;
+      obj = { adContentId: bountyId.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, questContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentCTA: AnalyticsTypes.QuestContentCTA.START_BOUNTY, sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL, questContentPosition };
       const result = tmpResult.trackAdContentClicked(obj);
     }
     closure_8.current = bountyId.id;
@@ -270,6 +273,7 @@ function QuestHomeBountiesCarousel(bounties) {
     closure_7(true);
     const obj6 = BountiesModalActionCreatorsDefault;
     obj6.showModal({ bountyId: bountyId.id, sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL });
+    const obj1 = { bountyId: bountyId.id, sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL };
   }, []);
   const tmp20 = ref(first[29])();
   const isInView = tmp20.isInView;
@@ -380,12 +384,11 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       }
     }
     if (handleHide === first(ref[15]).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET) {
-      const subscription = closure_1(tmp[17]).subscribe("HIDE_ACTION_SHEET", handleHide);
+      const subscription = closure_1(ref[17]).subscribe("HIDE_ACTION_SHEET", handleHide);
       return () => {
         DispatcherDefault.unsubscribe("HIDE_ACTION_SHEET", handleHide);
       };
     }
-    tmp = ref;
   }, items3);
   tmpResult = tmp(504);
   const items4 = [BountyStore];
@@ -448,10 +451,10 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   const obj3 = { style: tmp3.container, children: null };
   if (verticalScrollEnabled) {
     const obj4 = { bounties: questHomeBounties, shopCarouselButtonVariant: buttonVariant, isEmptyOrCompleted: true };
-    let tmp29Result = tmp29(BountiesCtaHeaderDefault, obj4);
+    let tmp29Result = closure_9(BountiesCtaHeaderDefault, obj4);
   } else {
     const obj5 = { reason: tmp11 ? constants.EMPTY : constants.COMPLETED };
-    tmp29Result = tmp29(EmptyState, obj5);
+    tmp29Result = closure_9(EmptyState, obj5);
   }
   obj3.children = tmp29Result;
   return closure_9(View, obj3);

@@ -47,7 +47,6 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   }
   obj = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
   const obj4 = channel(12442);
-  const tmp8 = jsx;
   let intl = tmp(1114).intl;
   obj.message = intl.string(channel(1114).t.fS08qB);
   const intl2 = tmp(1114).intl;
@@ -71,5 +70,5 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   };
   obj.buttonSecondaryDisabled = tmp7;
   obj.buttonSecondaryLoading = isUserProfileLoading;
-  return tmp8(navigation(12448), obj);
+  return jsx(navigation(12448), { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null });
 });

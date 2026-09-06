@@ -1,6 +1,7 @@
 // === Module 8752: AnnouncementMessageUtils ===
 
 // Module 8752 (AnnouncementMessageUtils)
+import util from "util" /* 1114 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import MessageRecord from "MessageRecord" /* 4210 */;
 import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8754 */;
@@ -98,7 +99,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
         let tmp32;
         if (joined !== tmp2Result.content) {
-          if (!tmp5(tmp2Result)) {
+          if (!closure_3(tmp2Result)) {
             const first2 = tmp2Result.embeds[0];
             let tmp34;
             if (null != first2) {
@@ -218,13 +219,14 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
       }
     }
+    const tmp2 = found5(found6[4]);
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   let result = useFormattedExpirationLabel.formatExpirationLabel(poll.expiry);
   if (result == null) {
-    const intl = tmp(1114).intl;
-    result = intl.string(tmp(1114).t["e+J3JZ"]);
+    const intl = util.intl;
+    result = intl.string(util.t["e+J3JZ"]);
   }
   return result;
 };

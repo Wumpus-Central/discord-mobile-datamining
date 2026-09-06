@@ -38,11 +38,10 @@ export default function useCanDM(arg0, arg1) {
     if (tmp) {
       let isFriendResult = RelationshipStore.isFriend(closure_0);
       if (!isFriendResult) {
-        isFriendResult = null != GuildMemberStore.memberOf(tmp4).find((item) => !closure_1_4.includes(item));
-        const memberOfResult = GuildMemberStore.memberOf(tmp4);
+        isFriendResult = null != GuildMemberStore.memberOf(closure_0).find((item) => !closure_1_4.includes(item));
+        const memberOfResult = GuildMemberStore.memberOf(closure_0);
       }
       tmp = isFriendResult;
-      tmp4 = closure_0;
     }
     if (!tmp) {
       let setting = GameRelationshipStore.getGameFriendsForUser(closure_0).length > 0;

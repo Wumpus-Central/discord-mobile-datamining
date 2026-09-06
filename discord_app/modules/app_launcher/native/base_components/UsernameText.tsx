@@ -33,7 +33,7 @@ export default function UsernameText(color) {
     obj.color = "text-muted";
     const items1 = ["#", user.discriminator];
     obj.children = items1;
-    items[1] = React2(tmp(4556).Text, obj);
+    items[1] = React2(Text_Text.Text, obj);
     obj.children = items;
     str = React2(React3, obj);
   }
@@ -48,7 +48,7 @@ export default function UsernameText(color) {
     obj3.color = "text-muted";
     const items3 = ["(", str, ")"];
     obj3.children = items3;
-    items2[2] = React2(tmp(4556).Text, obj3);
+    items2[2] = React2(Text_Text.Text, obj3);
     obj2.children = items2;
     tmp13 = React2(React3, obj2);
   }

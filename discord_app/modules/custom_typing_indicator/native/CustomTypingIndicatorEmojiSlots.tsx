@@ -61,7 +61,7 @@ function PlaceholderEmojiGlyph(pressed) {
   const obj1 = { size: "custom", style: null };
   const size = { width: v28, height: v28 };
   obj1.style = size;
-  obj.children = jsx(pressed.Icon, { size: "custom", style: null });
+  obj.children = <pressed.Icon size="custom" style={null} />;
   return jsx(ReanimatedRexportDefault.View, { style: animatedStyle, children: null });
 }
 function CustomTypingIndicatorEmojiSlot(index) {
@@ -112,10 +112,10 @@ function CustomTypingIndicatorEmojiSlot(index) {
   const obj1 = { style: closure_9().slot, onPress: callback, onPressIn: callback1, onPressOut: callback2, accessibilityLabel: formatToPlainStringResult, radius: 16, children: null };
   if (null != emoji) {
     const obj2 = { emoji };
-    let tmp11Result = tmp11(EmojiGlyph, obj2);
+    let tmp11Result = <EmojiGlyph emoji={emoji} />;
   } else {
     const obj3 = { Icon: index.placeholderIcon, pressed: sharedValue };
-    tmp11Result = tmp11(PlaceholderEmojiGlyph, obj3);
+    tmp11Result = <PlaceholderEmojiGlyph Icon={index.placeholderIcon} pressed={sharedValue} />;
   }
   obj1.children = tmp11Result;
   return jsx(index(sharedValue[36]).Card, { style: closure_9().slot, onPress: callback, onPressIn: callback1, onPressOut: callback2, accessibilityLabel: formatToPlainStringResult, radius: 16, children: null });
@@ -144,7 +144,7 @@ export default function CustomTypingIndicatorEmojiSlots(arg0) {
     obj.emoji = tmp3;
     obj.placeholderIcon = dependencyMap2[index];
     obj.onChange = onChange;
-    return <CustomTypingIndicatorEmojiSlot key={arg1} index={arg1} emoji={null} placeholderIcon={null} onChange={null} />;
+    return <CustomTypingIndicatorEmojiSlot key={index} index={index} emoji={null} placeholderIcon={null} onChange={null} />;
   });
   return jsx(Stack_Stack.Stack, { length: CustomTypingIndicatorTypes.CUSTOM_TYPING_INDICATOR_EMOJI_COUNT });
 };

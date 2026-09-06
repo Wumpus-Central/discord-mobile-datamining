@@ -10,7 +10,7 @@ import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5418 */;
 
 require = fn;
-let closure_6 = { SELECTED: 0, [0]: "SELECTED", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE", MEDIA: 3, [3]: "MEDIA" };
+const constants = { SELECTED: 0, [0]: "SELECTED", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE", MEDIA: 3, [3]: "MEDIA" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelGridParticipants.tsx");
 
@@ -92,6 +92,7 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
       const chunkResult = _mod12.chunk(found, items1[item]);
       items1.push(chunkResult);
       items.push(chunkResult.length);
+      const tmpResult = _mod12;
     });
     pushSection(items2, 1, false);
     const items6 = [items, items1];
@@ -197,6 +198,7 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
       const chunkResult = _mod12.chunk(found, items1[item]);
       items1.push(chunkResult);
       items.push(chunkResult.length);
+      const tmpResult = _mod12;
     });
     pushSection(items2, 1, false);
     const items6 = [items, items1];
@@ -209,11 +211,11 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
   const obj3 = require("useThrottle");
   [tmp8, tmp9] = flag(require("useThrottle").useThrottledState(memo, throttleDurationForChannel, items5), 2);
   if (flag) {
-    let SELECTED = tmp10.MEDIA;
-    let tmp11 = tmp10;
+    let SELECTED = constants.MEDIA;
+    let tmp11 = constants;
   } else {
-    SELECTED = tmp10.SELECTED;
-    tmp11 = tmp10;
+    SELECTED = constants.SELECTED;
+    tmp11 = constants;
   }
   let items6 = [tmp5[SELECTED], tmp5[tmp11.SPEAKER], tmp8[tmp11.AUDIENCE]];
   const items7 = [items6, ];

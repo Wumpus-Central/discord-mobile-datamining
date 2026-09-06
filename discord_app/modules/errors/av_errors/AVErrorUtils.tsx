@@ -44,7 +44,7 @@ export const getAccumulatedStatsWithMinDatapoints = function getAccumulatedStats
   }
   return tmp3;
 };
-export const getWarningFrameRate = function getWarningFrameRate(maxFrameRate) {
+export const getWarningFrameRate = function getWarningFrameRate() {
   let num = maxFrameRate;
   if (maxFrameRate === undefined) {
     num = 30;

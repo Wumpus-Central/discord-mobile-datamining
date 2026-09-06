@@ -22,7 +22,7 @@ function getPaymentGateway() {
   }
   return GOOGLE;
 }
-let closure_12 = async function _fetchUserOffer(arg0, value) {
+let closure_12 = async function _fetchUserOffer(arg0) {
   if (c13 === 2) {
     c13 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -234,7 +234,7 @@ let closure_13 = async function _fetchExistingChurnDiscountOffer() {
   let obj5 = closure_130_1(closure_130_2[7]);
   obj5.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
   await "HermesInternal";
-  const offer = arg1.body.offer;
+  const offer = value.body.offer;
   c0 = offer;
   if (offer == null) {
     c0 = null;
@@ -259,9 +259,9 @@ let closure_14 = async function _fetchChurnDiscountOffer() {
     c6 = 3;
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    const offer = arg1.body.offer;
+    const offer = value.body.offer;
     c0 = offer;
     if (offer == null) {
       c0 = null;
@@ -274,7 +274,7 @@ let closure_14 = async function _fetchChurnDiscountOffer() {
     }
     c4 = 0;
   }
-  return arg1;
+  return value;
 };
 let closure_7 = fn(1373).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
 const Constants = fn(1074);

@@ -5,7 +5,7 @@ import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _updateGuildRoleSubscriptionGroupListing(arg0, arg1, body) {
+let closure_5 = async function _updateGuildRoleSubscriptionGroupListing(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   c7 = 0;
@@ -77,7 +77,7 @@ let closure_5 = async function _updateGuildRoleSubscriptionGroupListing(arg0, ar
     }
   })();
 };
-let closure_6 = async function _createGuildRoleSubscriptionGroupListing(arg0, body) {
+let closure_6 = async function _createGuildRoleSubscriptionGroupListing(arg0) {
   closure_0 = arg0;
   c6 = 0;
   c7 = 0;
@@ -148,7 +148,7 @@ let closure_6 = async function _createGuildRoleSubscriptionGroupListing(arg0, bo
     }
   })();
 };
-let closure_7 = async function _deleteGuildRoleSubscriptionGroupListing(arg0, value) {
+let closure_7 = async function _deleteGuildRoleSubscriptionGroupListing(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -412,7 +412,7 @@ let closure_9 = async function _updateGuildRoleSubscriptionListing(arg0, arg1, a
   iter.next();
   return iter;
 };
-let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(arg0, value) {
+let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -503,9 +503,9 @@ let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(a
 let closure_11 = async function _getGuildRoleSubscriptionsSettings() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() });
-  return arg1.body;
+  return value.body;
 };
-let closure_12 = async function _updateGuildRoleSubscriptionsSettings(arg0, body) {
+let closure_12 = async function _updateGuildRoleSubscriptionsSettings(arg0) {
   closure_0 = arg0;
   c6 = 0;
   c7 = 0;
@@ -576,11 +576,11 @@ let closure_12 = async function _updateGuildRoleSubscriptionsSettings(arg0, body
     }
   })();
 };
-let closure_13 = async function _getPriceTiers(guild_id) {
+let closure_13 = async function _getPriceTiers() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -649,7 +649,7 @@ let closure_13 = async function _getPriceTiers(guild_id) {
     }
   })();
 };
-let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0, value) {
+let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -738,7 +738,7 @@ let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0, valu
     }
   }
 };
-let closure_15 = async function _getGuildRoleSubscriptionGroupForSubscriptionPlan(arg0, value) {
+let closure_15 = async function _getGuildRoleSubscriptionGroupForSubscriptionPlan(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -803,7 +803,7 @@ let closure_15 = async function _getGuildRoleSubscriptionGroupForSubscriptionPla
     }
   }
 };
-let closure_16 = async function _deleteGuildRoleSubscriptionListing(arg0, value) {
+let closure_16 = async function _deleteGuildRoleSubscriptionListing(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -867,7 +867,7 @@ let closure_16 = async function _deleteGuildRoleSubscriptionListing(arg0, value)
     }
   }
 };
-let closure_17 = async function _archiveGuildRoleSubscriptionListing(arg0, value) {
+let closure_17 = async function _archiveGuildRoleSubscriptionListing(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -932,7 +932,7 @@ let closure_17 = async function _archiveGuildRoleSubscriptionListing(arg0, value
     }
   }
 };
-let closure_18 = async function _getGuildRoleSubscriptionTrials(arg0, value) {
+let closure_18 = async function _getGuildRoleSubscriptionTrials(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -997,7 +997,7 @@ let closure_18 = async function _getGuildRoleSubscriptionTrials(arg0, value) {
     }
   }
 };
-let closure_19 = async function _updateGuildRoleSubscriptionsTrial(arg0, arg1, body) {
+let closure_19 = async function _updateGuildRoleSubscriptionsTrial(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   c7 = 0;
@@ -1069,7 +1069,7 @@ let closure_19 = async function _updateGuildRoleSubscriptionsTrial(arg0, arg1, b
     }
   })();
 };
-let closure_20 = async function _getGuildRoleSubscriptionTrialEligibility(arg0, value) {
+let closure_20 = async function _getGuildRoleSubscriptionTrialEligibility(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1134,7 +1134,7 @@ let closure_20 = async function _getGuildRoleSubscriptionTrialEligibility(arg0, 
     }
   }
 };
-let closure_21 = async function _getGuildMonetizationRestrictions(arg0, value) {
+let closure_21 = async function _getGuildMonetizationRestrictions(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1219,7 +1219,7 @@ let closure_21 = async function _getGuildMonetizationRestrictions(arg0, value) {
     }
   }
 };
-let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0, value) {
+let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

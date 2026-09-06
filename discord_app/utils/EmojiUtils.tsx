@@ -3,8 +3,10 @@
 // Module 4217 (EmojiUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ImageUtils from "ImageUtils" /* 1474 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4192 */;
 import EmojiTypes from "EmojiTypes" /* 4216 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5464 */;
 import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7783 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
@@ -26,7 +28,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   }
   if (tmp5) {
     if (intention !== constants.GUILD_PROFILE) {
-      if (intention !== tmp8.NO_CUSTOM_EMOJI) {
+      if (intention !== constants.NO_CUSTOM_EMOJI) {
         let tmp10 = null != channel;
         if (tmp10) {
           tmp10 = managed(channel.type);
@@ -37,14 +39,14 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
         }
         let tmp13 = null != emoji && null != guildId;
         if (tmp13) {
-          const tmp14 = emoji.type === tmp3(4216).EmojiTypes.GUILD || null != emoji.guildId;
+          const tmp14 = emoji.type === EmojiTypes.EmojiTypes.GUILD || null != emoji.guildId;
           let tmp15 = !tmp14;
           if (tmp14) {
             tmp15 = guildId === emoji.guildId;
           }
           tmp13 = tmp15;
         }
-        if (intention === tmp8.COMMUNITY_CONTENT) {
+        if (intention === constants.COMMUNITY_CONTENT) {
           if (tmp13) {
             if (null != emoji.guildId) {
               let DISALLOW_EXTERNAL = null;
@@ -56,7 +58,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
           if (!closure_1_14(intention)) {
             let tmp19 = null != emoji && null != guildId;
             if (tmp19) {
-              const tmp20 = emoji.type === tmp3(4216).EmojiTypes.GUILD || null != emoji.guildId;
+              const tmp20 = emoji.type === EmojiTypes.EmojiTypes.GUILD || null != emoji.guildId;
               let tmp21 = !tmp20;
               if (tmp20) {
                 tmp21 = guildId === emoji.guildId;
@@ -85,7 +87,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
           if (!bypassPremiumEmojiEntitlement) {
             if (!obj.canUseEmojisEverywhere(currentUser)) {
               if (!tmp13) {
-                if (intention === tmp8.STATUS) {
+                if (intention === constants.STATUS) {
                   return EmojiDisabledReasons.PREMIUM_LOCKED;
                 } else if (!emoji.managed) {
                   return EmojiDisabledReasons.PREMIUM_LOCKED;
@@ -94,9 +96,9 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
             }
             obj = PremiumUtilsDefault;
           }
-          let tmp3Result = tmp3(5464);
+          let tmp3Result = RoleSubscriptionEmojiUtils;
           if (tmp3Result.isUnusableRoleSubscriptionEmoji(emoji, guildId)) {
-            tmp3Result = tmp3(4192);
+            tmp3Result = CreatorMonetizationRestrictionsUtils;
             tmp3Result.shouldHideGuildPurchaseEntryPoints(emoji.guildId) ? EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
           } else {
             let PREMIUM_LOCKED = null;
@@ -109,7 +111,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
                   if (!tmp3Result1.isPurchasableRoleSubscriptionEmoji(emoji)) {
                     PREMIUM_LOCKED = EmojiDisabledReasons.PREMIUM_LOCKED;
                   }
-                  tmp3Result1 = tmp3(5464);
+                  tmp3Result1 = RoleSubscriptionEmojiUtils;
                 }
                 obj3 = PremiumUtilsDefault;
               }
@@ -126,7 +128,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
 }
 let closure_19 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
-  return arg1;
+  return value;
 };
 const ChannelRecord = fn(1961);
 ({ isGuildTextChannelType: closure_4, isGuildVocalChannelType: hasOwnProperty } = ChannelRecord);

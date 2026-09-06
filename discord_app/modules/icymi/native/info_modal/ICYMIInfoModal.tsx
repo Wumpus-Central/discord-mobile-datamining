@@ -108,9 +108,9 @@ export default function ICYMIInfoModal(extendedOnboarding) {
     obj = { screens: navigatorScreens, steps: tmp4, initialRouteName: null };
     let ICYMIInfoScreens = tmp(16467).ICYMIInfoScreens;
     obj.initialRouteName = skipIntro ? ICYMIInfoScreens.TOPICS_CLOUD : ICYMIInfoScreens.DEFAULT;
-    tmp5(tmp(14174).StepModal, obj);
+    jsx(tmp(14174).StepModal, { screens: navigatorScreens, steps: tmp4, initialRouteName: null });
   } else {
     obj = { screens: navigatorScreens, initialRouteName: tmp(16467).ICYMIInfoScreens.DEFAULT };
-    return tmp5(tmp(11928).Modal, obj);
+    return jsx(tmp(11928).Modal, { screens: navigatorScreens, initialRouteName: tmp(16467).ICYMIInfoScreens.DEFAULT });
   }
 };

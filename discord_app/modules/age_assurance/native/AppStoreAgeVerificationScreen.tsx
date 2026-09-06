@@ -36,7 +36,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
     navigation.goBack();
   }, items);
   const items1 = [callback];
-  callback1 = noop.useCallback(callback(function*(arg0, value) {
+  callback1 = noop.useCallback(callback(function*() {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -203,11 +203,11 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
   }, items2);
   if ("loading" === tmp5.type) {
     obj = { children: null };
-    const items3 = [tmp10(ActivityIndicator, { size: "large" }), ];
+    const items3 = [closure_7(ActivityIndicator, { size: "large" }), ];
     obj = { variant: "text-md/medium", color: "text-strong", children: null };
     const intl = tmp(1114).intl;
     obj.children = intl.string(navigation(2946).MN6I4Y);
-    items3[1] = tmp10(tmp(4556).Text, obj);
+    items3[1] = closure_7(tmp(4556).Text, obj);
     obj.children = items3;
     let tmp15 = closure_9(closure_8, obj);
   } else {
@@ -215,7 +215,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
     let obj2 = { variant: "text-md/medium", color: "text-strong", accessibilityRole: "alert", children: null };
     const intl2 = tmp(1114).intl;
     obj2.children = intl2.string(navigation(2946).tBwanH);
-    const items4 = [tmp10(tmp(4556).Text, obj2), ];
+    const items4 = [closure_7(tmp(4556).Text, obj2), ];
     let obj3 = { children: null };
     let obj4 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl3 = tmp(1114).intl;
@@ -224,8 +224,8 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_V2, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.METHOD_SELECT);
       callback();
     };
-    obj3.children = tmp10(tmp(4975).Button, obj4);
-    items4[1] = tmp10(tmp(5433).ButtonGroup, obj3);
+    obj3.children = closure_7(tmp(4975).Button, obj4);
+    items4[1] = closure_7(tmp(5433).ButtonGroup, obj3);
     obj1.children = items4;
     tmp15 = closure_9(closure_8, obj1);
   }

@@ -8,13 +8,13 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5139 */;
 import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14878 */;
 import QrCodeIcon from "QrCodeIcon" /* 14882 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
-const NativePermissionUtilsDefault = tmp(5139);
 require = fn;
 function FamilyCenterTeenQRCodeButtonInner() {
   let obj = stateFromStores1;
@@ -137,8 +137,8 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
         tmp4 = null;
         if (tmpResult.isDiscordHostname(hostname)) {
           if (null !== pathname.match(closure_1_8)) {
-            const result = handleQrCodeScanSucess(tmp2[28]).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
-            const obj4 = handleQrCodeScanSucess(tmp2[28]);
+            const result = handleQrCodeScanSucess(paths[28]).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
+            const obj4 = handleQrCodeScanSucess(paths[28]);
           }
           tmp4 = tmp6;
         }
@@ -166,6 +166,7 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
           obj.pushLazy(handleQrCodeScanSucess(paths[20])(paths[31], paths.paths), obj);
         }
       });
+      const tmpResult = NativePermissionUtilsDefault;
     };
     return closure_12(FamilyCenterBannerButton, obj);
   }

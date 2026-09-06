@@ -47,7 +47,7 @@ function useNativeIAPPayments() {
       let obj = { tags: { alertPriority: "0" }, extra: null };
       let mapped;
       if (stateFromStores != null) {
-        mapped = arr.map((identifier) => identifier.identifier);
+        mapped = stateFromStores.map((identifier) => identifier.identifier);
       }
       if (mapped == null) {
         mapped = [];
@@ -55,7 +55,6 @@ function useNativeIAPPayments() {
       obj = { loadedProducts: mapped, connected, genericProductsLoaded, storeFront };
       obj.extra = obj;
       const result = obj.captureBillingMessage("useNativeIAPPayments failed to load required context", obj);
-      arr = stateFromStores;
     }
   }, 5000);
   return { nativePaymentsConnected, storeFront };
@@ -104,7 +103,7 @@ function useCreateSubscription(planId) {
       let obj = { tags: { alertPriority: "0" }, extra: null };
       let mapped;
       if (stateFromStores != null) {
-        mapped = arr.map((identifier) => identifier.identifier);
+        mapped = stateFromStores.map((identifier) => identifier.identifier);
       }
       if (mapped == null) {
         mapped = [];
@@ -112,7 +111,6 @@ function useCreateSubscription(planId) {
       obj = { loadedProducts: mapped, connected, genericProductsLoaded, storeFront };
       obj.extra = obj;
       const result = obj.captureBillingMessage("useNativeIAPPayments failed to load required context", obj);
-      arr = stateFromStores;
     }
   }, 5000);
   const items2 = [callback];
@@ -129,7 +127,7 @@ function useCreateSubscription(planId) {
   }, items4);
   obj = { createSubscription: null, nativePaymentsConnected };
   const items5 = [tmp11, nativePaymentsConnected, callback];
-  obj.createSubscription = noop.useCallback(analyticsLocation(function*(arg0, value) {
+  obj.createSubscription = noop.useCallback(analyticsLocation(function*() {
     v4(tmp30[18])(first, "cannot connect to IAP API");
     v4(tmp30[18])(null != closure_5, "plan not found");
     yield v4(tmp30[10]).restoreAndApplyPurchases();
@@ -213,7 +211,7 @@ function useCancelSubscription(arg0, arg1) {
       let obj = { tags: { alertPriority: "0" }, extra: null };
       let mapped;
       if (stateFromStores != null) {
-        mapped = arr.map((identifier) => identifier.identifier);
+        mapped = stateFromStores.map((identifier) => identifier.identifier);
       }
       if (mapped == null) {
         mapped = [];
@@ -221,7 +219,6 @@ function useCancelSubscription(arg0, arg1) {
       obj = { loadedProducts: mapped, connected, genericProductsLoaded, storeFront };
       obj.extra = obj;
       const result = obj.captureBillingMessage("useNativeIAPPayments failed to load required context", obj);
-      arr = stateFromStores;
     }
   }, 5000);
   asyncGeneratorStep = tmp6;
@@ -232,10 +229,10 @@ function useCancelSubscription(arg0, arg1) {
   memo = memo.useMemo(() => {
     let tmp3 = null != stateFromStores;
     if (tmp3) {
-      tmp3 = null != tmp2;
+      tmp3 = null != currency;
     }
     if (tmp3) {
-      tmp3 = stateFromStores.currency === tmp2.currency;
+      tmp3 = stateFromStores.currency === currency.currency;
     }
     return tmp3;
   }, items4);
@@ -247,7 +244,8 @@ function useCancelSubscription(arg0, arg1) {
     closure_1(38)(memo, "Cannot update subscription");
     closure_1(38)(first, "Cannot connect to IAP API");
     closure_1(38)(null != closure_6, "Subscription not found");
-    closure_128_0 = await tmp2(7419).cancelGenericSubscription(closure_6.requestIdentifier, closure_6.subscriptionId, closure_1);
+    await tmp2(7419).cancelGenericSubscription(closure_6.requestIdentifier, closure_6.subscriptionId, closure_1);
+    closure_128_0 = value;
     await tmp2(4884).fetchSubscriptions();
     return closure_128_0;
   }), items5);
@@ -289,7 +287,7 @@ function useResubscribeSubscription(connected) {
       let obj = { tags: { alertPriority: "0" }, extra: null };
       let mapped;
       if (stateFromStores != null) {
-        mapped = arr.map((identifier) => identifier.identifier);
+        mapped = stateFromStores.map((identifier) => identifier.identifier);
       }
       if (mapped == null) {
         mapped = [];
@@ -297,7 +295,6 @@ function useResubscribeSubscription(connected) {
       obj = { loadedProducts: mapped, connected, genericProductsLoaded, storeFront };
       obj.extra = obj;
       const result = obj.captureBillingMessage("useNativeIAPPayments failed to load required context", obj);
-      arr = stateFromStores;
     }
   }, 5000);
   dependencyMap = tmp6;
@@ -308,10 +305,10 @@ function useResubscribeSubscription(connected) {
   memo = noop.useMemo(() => {
     let tmp3 = null != stateFromStores;
     if (tmp3) {
-      tmp3 = null != tmp2;
+      tmp3 = null != storeFront;
     }
     if (tmp3) {
-      tmp3 = stateFromStores.currency === tmp2.currency;
+      tmp3 = stateFromStores.currency === storeFront.currency;
     }
     return tmp3;
   }, items4);
@@ -324,7 +321,8 @@ function useResubscribeSubscription(connected) {
     closure_1(38)(first, "Cannot connect to IAP API");
     closure_1(38)(null != closure_5, "Subscription not found");
     closure_1(38)(null != stateFromStores, "Subscription not found");
-    closure_128_0 = yield tmp2(7419).resubscribeGenericSubscription(closure_5, stateFromStores.isACOM);
+    yield tmp2(7419).resubscribeGenericSubscription(closure_5, stateFromStores.isACOM);
+    closure_128_0 = value;
     yield tmp2(4884).fetchSubscriptions();
     return closure_128_0;
   }), items5);

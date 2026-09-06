@@ -1,10 +1,13 @@
 // === Module 7823: BurstReactionFirstSendActionSheet ===
 
 // Module 7823 (BurstReactionFirstSendActionSheet)
+import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
@@ -77,14 +80,15 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
   let obj = ActionSheetActionCreatorsDefault;
   obj.hideActionSheet();
   if (obj2.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.SUPER_REACTIONS_FIRST_SENT)) {
-    let tmpResult = tmp(573);
+    let tmpResult = DispatcherDefault;
     obj = { type: "BURST_REACTION_EFFECT_SEND", channelId, messageId, emoji };
     tmpResult.dispatch(obj);
   } else {
-    const result = tmp4(4380).UNSAFE_markDismissibleContentAsDismissed(tmp4(1943).DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
-    tmpResult = tmp(4527);
+    const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
+    tmpResult = ActionSheetActionCreatorsDefault;
     obj = { channelId, messageId, emoji };
-    tmpResult.openLazy(tmp4(1896)(7823, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
-    const tmp4Result = tmp4(4380);
+    tmpResult.openLazy(asyncRequireImpl(7823, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
+    const tmp4Result = DismissibleContentUnsafeUtils;
   }
+  obj2 = DismissibleContentUnsafeUtils;
 };

@@ -11,7 +11,7 @@ export default {
     const obj = { type: "TOOLTIP_ACKNOWLEDGE", tooltip: GIF_PICKER_TOOLTIP };
     obj.dispatch(obj);
   },
-  attemptToShowTooltip(tooltip, flag) {
+  attemptToShowTooltip(tooltip) {
     if (flag === undefined) {
       flag = false;
     }

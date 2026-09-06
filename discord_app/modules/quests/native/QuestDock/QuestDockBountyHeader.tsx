@@ -3,6 +3,8 @@
 // Module 15202 (QuestDockBountyHeader)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 4974 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7073 */;
 import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader" /* 15192 */;
 import QuestDockHeaderSeparatorDefault from "QuestDockHeaderSeparator" /* 15195 */;
 import noop from "module_19" /* 19 */;
@@ -91,21 +93,21 @@ export default noop.memo(function QuestDockBountyHeader() {
     const obj3 = { style: tmp4.productIcon, source: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no" };
     const obj4 = { uri: questDockBounty.productIcon };
     obj3.source = obj4;
-    tmp10Result = tmp10(tmp11(5587), obj3);
+    tmp10Result = closure_7(FastImageDefault, obj3);
   }
   const items = [tmp10Result, ];
   const obj5 = { style: tmp4.crossFadeWrapper, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
   const obj6 = { style: null, children: null };
   const items1 = [tmp4.copy, animatedStyle];
   obj6.style = items1;
-  let tmp11Result = tmp11(7073);
+  let tmp11Result = ReanimatedNativeViewDefault;
   const items2 = [closure_7(activeQuestDockMode(4556).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, accessible: false, children: stringResult }), closure_7(activeQuestDockMode(4556).Text, { variant: "text-md/medium", color: "text-strong", lineClamp: 1, accessible: false, children: str })];
   obj6.children = items2;
   const items3 = [closure_8(tmp11Result, obj6), ];
   const obj7 = { style: null, children: null };
   const items4 = [tmp4.expandedContent, animatedStyle1];
   obj7.style = items4;
-  tmp11Result = tmp11(7073);
+  tmp11Result = ReanimatedNativeViewDefault;
   const items5 = [closure_7(QuestDockHeaderSeparatorDefault, {}), ];
   const obj8 = { style: tmp4.expandedLabel, children: null };
   const items6 = [closure_7(activeQuestDockMode(5692).BountiesPosterIllocon, { size: 32, accessible: false }), closure_7(activeQuestDockMode(4556).Text, { style: tmp4.expandedLabelText, variant: "text-sm/medium", color: "text-default", lineClamp: 1, accessible: false, children: stringResult })];

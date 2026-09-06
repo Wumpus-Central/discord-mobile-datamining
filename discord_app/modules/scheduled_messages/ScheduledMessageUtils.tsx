@@ -2,9 +2,12 @@
 
 // Module 7845 (ScheduledMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
+import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
 import _modDef4153 from "module_4153" /* 4153 */;
@@ -125,26 +128,25 @@ export const getDefaultScheduledTime = function getDefaultScheduledTime() {
   }
   return addResult1;
 };
-export const getScheduledTimeError = function getScheduledTimeError(isBefore, arg1) {
+export const getScheduledTimeError = function getScheduledTimeError(isBefore, dependencyMap) {
   if (isBefore.isBefore(obj.add(closure_1_11, "seconds"))) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t["w/fgvh"]);
   } else {
-    const addResult = tmp(4153)().add(React7, "seconds");
+    const addResult = _modDef4153().add(React7, "seconds");
     let minResult = addResult;
-    if (null != arg1) {
-      tmp(4153);
-      const tmpResult = tmp(11);
-      const tmpResultResult = tmpResult(tmpResult.extractTimestamp(arg1));
-      minResult = tmp(4153).min(addResult, tmpResultResult.add(React6, "seconds"));
-      const tmpResult1 = tmp(4153);
+    if (null != dependencyMap) {
+      const tmpResult = SnowflakeUtilsDefault;
+      const tmpResultResult = tmpResult(tmpResult.extractTimestamp(dependencyMap));
+      minResult = _modDef4153.min(addResult, tmpResultResult.add(React6, "seconds"));
+      const tmpResult1 = _modDef4153;
     }
     stringResult = null;
     if (isBefore.isAfter(minResult)) {
       const intl = util.intl;
       stringResult = intl.string(util.t.Nt0tz7);
     }
-    const obj2 = tmp(4153)();
+    const obj2 = _modDef4153();
   }
   return stringResult;
 };
@@ -156,10 +158,9 @@ export const getLatestScheduledTime = function getLatestScheduledTime(arg0) {
   if (null == arg0) {
     return addResult;
   } else {
-    tmp(4153);
-    const tmpResult = tmp(11);
+    const tmpResult = SnowflakeUtilsDefault;
     const tmpResultResult = tmpResult(tmpResult.extractTimestamp(arg0));
-    return tmp(4153).min(addResult, tmpResultResult.add(React6, "seconds"));
+    return _modDef4153.min(addResult, tmpResultResult.add(React6, "seconds"));
   }
   const obj = _modDef4153();
 };
@@ -175,6 +176,7 @@ export const getScheduledMessagesLimit = function getScheduledMessagesLimit(Sche
   } else {
     return { limit: 0, isUpgradable: false };
   }
+  isPremiumResult = obj.isPremium(UserStore.getCurrentUser(), PremiumTypes.TIER_2);
 };
 export const useScheduledMessagesLimit = function useScheduledMessagesLimit(ScheduledMessagesMobileModal) {
   let obj = { location: ScheduledMessagesMobileModal };
@@ -189,6 +191,7 @@ export const useScheduledMessagesLimit = function useScheduledMessagesLimit(Sche
   } else {
     return { limit: 0, isUpgradable: false };
   }
+  obj2 = initialize;
 };
 export const convertServerScheduledMessageSend = function convertServerScheduledMessageSend(body) {
   let obj = { userId: body.user_id, scheduledMessageId: body.scheduled_message_id, sendAtTimestamp: body.send_at_timestamp, createArgs: null, state: body.state, attachmentUploads: null, record: null };
@@ -208,36 +211,37 @@ export const convertServerScheduledMessageSend = function convertServerScheduled
 export const getMessageForState = function getMessageForState(state) {
   if (ScheduledMessageTypes.ScheduledMessageSendState.SCHEDULED === state) {
     let obj = { isError: false, stateMessage: null };
-    const intl6 = tmp(1114).intl;
-    obj.stateMessage = intl6.string(tmp(1114).t.Fn6Odn);
+    const intl6 = util.intl;
+    obj.stateMessage = intl6.string(util.t.Fn6Odn);
     return obj;
-  } else if (tmp(7847).ScheduledMessageSendState.ERROR_CHANNEL_NOT_FOUND === state) {
+  } else if (ScheduledMessageTypes.ScheduledMessageSendState.ERROR_CHANNEL_NOT_FOUND === state) {
     obj = { isError: true, stateMessage: null };
-    const intl5 = tmp(1114).intl;
-    obj.stateMessage = intl5.string(tmp(1114).t.v5O2dK);
+    const intl5 = util.intl;
+    obj.stateMessage = intl5.string(util.t.v5O2dK);
     return obj;
-  } else if (tmp(7847).ScheduledMessageSendState.ERROR_USER_NOT_FOUND === state) {
+  } else if (ScheduledMessageTypes.ScheduledMessageSendState.ERROR_USER_NOT_FOUND === state) {
     const obj1 = { isError: true, stateMessage: null };
-    const intl4 = tmp(1114).intl;
-    obj1.stateMessage = intl4.string(tmp(1114).t.j8uIfG);
+    const intl4 = util.intl;
+    obj1.stateMessage = intl4.string(util.t.j8uIfG);
     return obj1;
-  } else if (tmp(7847).ScheduledMessageSendState.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES === state) {
+  } else if (ScheduledMessageTypes.ScheduledMessageSendState.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES === state) {
     const obj2 = { isError: true, stateMessage: null };
-    const intl3 = tmp(1114).intl;
-    obj2.stateMessage = intl3.string(tmp(1114).t["w6zHX/"]);
+    const intl3 = util.intl;
+    obj2.stateMessage = intl3.string(util.t["w6zHX/"]);
     return obj2;
-  } else if (tmp(7847).ScheduledMessageSendState.ERROR_SEND_FAILED === state) {
+  } else if (ScheduledMessageTypes.ScheduledMessageSendState.ERROR_SEND_FAILED === state) {
     const obj3 = { isError: true, stateMessage: null };
-    const intl2 = tmp(1114).intl;
-    obj3.stateMessage = intl2.string(tmp(1114).t.pflV7z);
+    const intl2 = util.intl;
+    obj3.stateMessage = intl2.string(util.t.pflV7z);
     return obj3;
-  } else if (tmp(7847).ScheduledMessageSendState.ERROR_SCHEDULED_MESSAGES_DISABLED === state) {
+  } else if (ScheduledMessageTypes.ScheduledMessageSendState.ERROR_SCHEDULED_MESSAGES_DISABLED === state) {
     const obj4 = { isError: true, stateMessage: null };
-    const intl = tmp(1114).intl;
-    obj4.stateMessage = intl.string(tmp(1114).t.j8uIfG);
+    const intl = util.intl;
+    obj4.stateMessage = intl.string(util.t.j8uIfG);
     return obj4;
   } else {
-    tmp(1369).assertNever(state);
+    GlobalUtils.assertNever(state);
+    const tmpResult = GlobalUtils;
   }
 };
 export const convertServerScheduledMessageCreateArgs = function convertServerScheduledMessageCreateArgs(channelId) {

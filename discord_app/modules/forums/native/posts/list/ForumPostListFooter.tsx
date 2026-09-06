@@ -6,6 +6,8 @@ import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7272 */;
 import ForumPostReactions from "ForumPostReactions" /* 11414 */;
 import useTypingUsersIds from "useTypingUsersIds" /* 11966 */;
 import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 12018 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 12019 */;
+import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 12026 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,23 +35,23 @@ export default function ForumPostListFooter(parentChannel) {
   const items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), , , ];
   if (isGameInvitesPost) {
     obj = { channel: thread };
-    isGameInvitesPost = tmp8(tmp9(12026), obj);
+    isGameInvitesPost = hasOwnProperty(GameInviteVoiceCountDefault, obj);
   }
   items[1] = isGameInvitesPost;
   if (tmp6Result) {
     obj1 = { children: null };
     const obj2 = { style: tmp.dot };
-    const items1 = [tmp8(tmp7, obj2), ];
+    const items1 = [hasOwnProperty(View, obj2), ];
     const obj3 = { thread, typingUserIds, hasUnreads };
-    items1[1] = tmp8(tmp9(12019), obj3);
+    items1[1] = hasOwnProperty(ForumPostTypingUsersDefault, obj3);
     obj1.children = items1;
-    tmp6Result = tmp6(timestampProducer, obj1);
+    tmp6Result = React5(timestampProducer, obj1);
   }
   items[2] = tmp6Result;
   let tmp8Result = null != firstMessage;
   if (tmp8Result) {
     const obj4 = { thread, firstMessage, parentChannel: parentChannel.parentChannel, locationAnalyticsObject: AnalyticsObjects.FORUM_LIST_ITEM_FOOTER };
-    tmp8Result = tmp8(ForumPostReactions.MostCommonForumPostReaction, obj4);
+    tmp8Result = hasOwnProperty(ForumPostReactions.MostCommonForumPostReaction, obj4);
   }
   items[3] = tmp8Result;
   obj.children = items;

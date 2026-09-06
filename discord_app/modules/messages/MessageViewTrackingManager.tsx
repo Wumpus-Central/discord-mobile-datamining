@@ -150,6 +150,7 @@ prototype["handleMessageListVisibilityChange"] = function handleMessageListVisib
       continue;
     }
   }
+  tmp = items[Symbol.iterator]();
 };
 prototype["clearTimer"] = function clearTimer(arg0) {
   if (null != this.currentlyVisibleMessageTimers[arg0]) {
@@ -186,6 +187,7 @@ prototype["drainBuffer"] = function drainBuffer() {
     clearTimeout(self.batchTimerId);
     self.batchTimerId = null;
   }
+  tmp = this.batchBuffer[Symbol.iterator]();
 };
 prototype["bufferViewTrack"] = function bufferViewTrack(arg0) {
   const self = this;

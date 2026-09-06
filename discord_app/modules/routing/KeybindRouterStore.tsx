@@ -2,6 +2,7 @@
 
 // Module 12790 (KeybindRouterStore)
 import matchPathCompat from "matchPathCompat" /* 4386 */;
+import RouteUtils from "RouteUtils" /* 4399 */;
 import Constants from "Constants" /* 1074 */;
 import identity from "module_1244" /* 1244 */;
 import size from "module_2" /* 2 */;
@@ -15,8 +16,8 @@ function getMatchData(pathname) {
   }
   obj = { path: null };
   let obj2 = React2;
-  const RouteParam = tmp(4399).RouteParam;
-  const RouteParam2 = tmp(4399).RouteParam;
+  const RouteParam = RouteUtils.RouteParam;
+  const RouteParam2 = RouteUtils.RouteParam;
   obj.path = React2.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
   const matchPathResult = obj.matchPath(str2, obj);
   if (null != matchPathResult) {
@@ -36,9 +37,9 @@ function getMatchData(pathname) {
       str = "";
     }
     const obj1 = { path: null };
-    const RouteParam3 = tmp(4399).RouteParam;
+    const RouteParam3 = RouteUtils.RouteParam;
     obj1.path = obj2.GUILD_BOOSTING_MARKETING(RouteParam3.guildId());
-    const matchPathResult1 = tmp(4386).matchPath(str, obj1);
+    const matchPathResult1 = matchPathCompat.matchPath(str, obj1);
     if (null != matchPathResult1) {
       obj2 = { guildId: matchPathResult1.params.guildId, channelId: null };
       let obj3 = obj2;

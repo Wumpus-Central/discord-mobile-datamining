@@ -48,7 +48,7 @@ export default function FormCTA(arg0) {
     obj.source = iconSource;
     obj.size = native.Icon.Sizes.CUSTOM;
     obj.children = jsx(native.Icon, { style: null, source: null, size: null, disableColor: true });
-    tmp3Result = tmp3(View, obj);
+    tmp3Result = <View style={null} source={null} size={null} disableColor />;
   }
   let tmp9Result = null;
   if (undefined !== subtitle) {
@@ -65,7 +65,6 @@ export default function FormCTA(arg0) {
   }
   if ("row-button" === variant) {
     let FormCheckbox = require;
-    let obj4 = dependencyMap;
     const obj1 = { arrow: false, onPress, onLongPress, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null };
     const obj2 = { checked: completed };
     obj1.accessibilityState = obj2;
@@ -83,15 +82,14 @@ export default function FormCTA(arg0) {
     obj1.subLabel = tmp9Result;
     if (completed) {
       FormCheckbox = FormCheckbox(5617).FormCheckbox;
-      obj4 = { checked: true };
-      trailing = tmp16(FormCheckbox, obj4);
+      const obj4 = { checked: true };
+      trailing = <FormCheckbox checked />;
     } else if (trailing == null) {
-      trailing = tmp16(tmp17(7137).Arrow, {});
+      trailing = jsx(FormRowDefault.Arrow, {});
     }
     obj1.trailing = trailing;
     obj1.icon = tmp3Result;
     jsx(RowButton.RowButton, { arrow: false, onPress, onLongPress, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null });
-    tmp17 = importDefault;
   } else {
     const obj5 = { start: true, end: true, variant, onPress, onLongPress, DEPRECATED_style: null, accessibilityState: null, label: null, subLabel: null, trailing: null, leading: null };
     const items4 = [tmp.form, style];
@@ -111,11 +109,11 @@ export default function FormCTA(arg0) {
     obj5.label = jsx(FormRowDefault.Label, { style: null, text: null });
     obj5.subLabel = tmp9Result;
     if (completed) {
-      let tmp20Result = tmp20(FormCheckbox2.FormCheckbox, { checked: true });
+      let tmp20Result = jsx(FormCheckbox2.FormCheckbox, { checked: true });
     } else {
       tmp20Result = trailing;
       if (trailing == null) {
-        tmp20Result = tmp20(FormRowDefault.Arrow, {});
+        tmp20Result = jsx(FormRowDefault.Arrow, {});
       }
     }
     obj5.trailing = tmp20Result;

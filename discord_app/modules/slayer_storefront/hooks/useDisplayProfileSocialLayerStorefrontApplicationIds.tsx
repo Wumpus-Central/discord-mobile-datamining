@@ -3,6 +3,7 @@
 // Module 8789 (useDisplayProfileSocialLayerStorefrontApplicationIds)
 import _mod12 from "module_12" /* 12 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7623 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7633 */;
 import noop from "module_19" /* 19 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7228 */;
 
@@ -20,11 +21,11 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
   let items = [tmp];
   const memo = areUsersInSocialLayerStorefrontMutualGuildsApplicationIds.useMemo(() => {
     let userId;
-    if (closure_0 != null) {
-      userId = tmp.userId;
+    if (application != null) {
+      userId = application.userId;
     }
     if (null != userId) {
-      const items = [tmp.userId];
+      const items = [application.userId];
       let items1 = items;
     } else {
       items1 = [];
@@ -41,8 +42,8 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
   const items2 = [tmp];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
     let widgets;
-    if (closure_0 != null) {
-      widgets = tmp.widgets;
+    if (application != null) {
+      widgets = application.widgets;
     }
     if (null == widgets) {
       return [];
@@ -50,25 +51,23 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
       const _Set = Set;
       const set = new Set();
       let widgets1;
-      if (tmp != null) {
-        widgets1 = tmp.widgets;
+      if (application != null) {
+        widgets1 = application.widgets;
       }
       if (widgets1 == null) {
         widgets1 = [];
       }
       for (const item10011 of widgets1) {
-        let tmp5 = item10011;
-        let tmp6 = require;
         if (item10011 instanceof UserProfileGameWidgetTypes.BaseGameWidget) {
-          let games = tmp5.games;
+          let games = item10011.games;
           let item = games.forEach((gameId) => {
             const applicationIdFromDetectableId = stateFromStoresArray.getApplicationIdFromDetectableId(gameId.gameId);
             if (null != applicationIdFromDetectableId) {
               set.add(applicationIdFromDetectableId);
             }
           });
-        } else if (tmp5 instanceof tmp6(7633).ApplicationWidget) {
-          let applicationIdFromDetectableId = SocialLayerStorefrontStore.getApplicationIdFromDetectableId(tmp5.applicationId);
+        } else if (item10011 instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
+          let applicationIdFromDetectableId = SocialLayerStorefrontStore.getApplicationIdFromDetectableId(item10011.applicationId);
           if (null != applicationIdFromDetectableId) {
             let addResult = set.add(tmp12);
           }

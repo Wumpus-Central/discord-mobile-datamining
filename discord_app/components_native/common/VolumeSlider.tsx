@@ -2,6 +2,8 @@
 
 // Module 9986 (VolumeSlider)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import PlatformUtils2 from "PlatformUtils" /* 1115 */;
 import useToken from "useToken" /* 4262 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5015 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
@@ -48,21 +50,21 @@ export default function VolumeSlider(maxTrackTintColor) {
   obj = { style: tmp4.leftIcon };
   const items1 = [closure_5(VoiceXIcon.VoiceXIcon, obj), , ];
   const obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
-  let tmp5Result = tmp5(5015);
+  let tmp5Result = PerceptualVolumeUtils;
   obj1.value = tmp5Result.amplitudeToPerceptual(value);
   obj1.maximumValue = maxVolume;
   obj1.minimumTrackTintColor = minTrackColor;
   obj1.maximumTrackTintColor = PRIMARY_400;
   if (accessibilityLabel == null) {
-    const intl = tmp5(1114).intl;
-    accessibilityLabel = intl.string(tmp5(1114).t.xPHVBs);
+    const intl = util.intl;
+    accessibilityLabel = intl.string(util.t.xPHVBs);
   }
   obj1.accessibilityLabel = accessibilityLabel;
   obj1.onValueChange = function onValueChange(arg0) {
     return closure_1_0(PerceptualVolumeUtils.perceptualToAmplitude(arg0));
   };
   if (onResponderGrant == null) {
-    tmp5Result = tmp5(1115);
+    tmp5Result = PlatformUtils2;
     let fn;
     if (tmp5Result.isAndroid()) {
       fn = () => true;

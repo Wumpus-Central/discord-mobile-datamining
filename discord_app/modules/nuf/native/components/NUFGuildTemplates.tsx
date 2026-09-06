@@ -21,7 +21,7 @@ function onCreateGuild() {
   }
   return applyArgumentsResult;
 }
-let closure_16 = async function _onCreateGuild(arg0, value) {
+let closure_16 = async function _onCreateGuild(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -82,9 +82,8 @@ let closure_16 = async function _onCreateGuild(arg0, value) {
     }
   }
 };
-let closure_17 = async function _onCreateServer(arg0, arg1, arg2) {
+let closure_17 = async function _onCreateServer(arg0) {
   closure_0 = arg0;
-  closure_1 = arg1;
   let id = arg2;
   c4 = 0;
   c3 = 0;
@@ -117,10 +116,10 @@ let closure_17 = async function _onCreateServer(arg0, arg1, arg2) {
             if (id.id !== constants.CREATE) {
               c4 = 1;
               c3 = 1;
-              const obj1 = { value: onCreateGuild(tmp13), done: false };
+              const obj1 = { value: onCreateGuild(guildId), done: false };
               return obj1;
             } else {
-              const obj2 = { guildId: tmp13 };
+              const obj2 = { guildId };
               arr = arr.push(constants2.CHANNEL_PROMPT, obj2);
             }
           }

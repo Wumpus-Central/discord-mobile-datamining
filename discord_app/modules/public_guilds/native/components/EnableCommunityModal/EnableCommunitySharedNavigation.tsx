@@ -33,9 +33,9 @@ export const EnableCommunityModalScreen = function EnableCommunityModalScreen(ar
     const features = guild.features;
     hasItem = features.has(GuildFeatures.COMMUNITY);
   }
-  let tmp2Result = tmp2(tmp3[7]);
+  let tmp2Result = require("useNavigation");
   closure_5 = tmp2Result.useNavigation();
-  tmp2Result = tmp2(tmp3[8]);
+  tmp2Result = require("useIsScreenReaderEnabled");
   isScreenReaderEnabled = tmp2Result.useIsScreenReaderEnabled();
   GuildFeatures = tmp7;
   const items1 = [isScreenReaderEnabled, null != guild, headerRef];
@@ -61,7 +61,7 @@ export const EnableCommunityModalScreen = function EnableCommunityModalScreen(ar
     }
   }, items2);
   if (null == guild) {
-    let tmp12Result = closure_8(tmp2(tmp3[12]).SceneLoadingIndicator, {});
+    let tmp12Result = closure_8(require("SceneLoadingIndicator").SceneLoadingIndicator, {});
   } else {
     obj = { style: tmp.container, children: null };
     obj = { bottom: true, style: tmp.modal, children: null };
@@ -69,8 +69,8 @@ export const EnableCommunityModalScreen = function EnableCommunityModalScreen(ar
     const items3 = [closure_8(hasItem, obj1), ];
     const obj2 = { style: tmp.button, children: null };
     if (buttonText == null) {
-      const intl = tmp2(tmp3[15]).intl;
-      buttonText = intl.string(tmp2(tmp3[15]).t.PDTjLN);
+      const intl = require("util").intl;
+      buttonText = intl.string(require("util").t.PDTjLN);
     }
     const obj3 = {
       variant: "primary",
@@ -79,9 +79,9 @@ export const EnableCommunityModalScreen = function EnableCommunityModalScreen(ar
       onPress() {
           if (null != guild) {
             if (createStyles.STEP_1 === importDefault) {
-              closure_5.push(tmp3.STEP_2);
-            } else if (tmp3.STEP_2 === tmp2) {
-              closure_5.push(tmp3.STEP_3);
+              closure_5.push(createStyles.STEP_2);
+            } else if (createStyles.STEP_2 === tmp2) {
+              closure_5.push(createStyles.STEP_3);
             } else if (require != null) {
               tmp4(tmp);
             }
@@ -89,11 +89,11 @@ export const EnableCommunityModalScreen = function EnableCommunityModalScreen(ar
         },
       disabled: disableNextStep
     };
-    obj2.children = closure_8(tmp2(tmp3[14]).Button, obj3);
+    obj2.children = closure_8(require("components/Button/Button").Button, obj3);
     items3[1] = closure_8(hasItem, obj2);
     obj.children = items3;
-    obj.children = closure_9(tmp2(tmp3[13]).SafeAreaPaddingView, obj);
-    tmp12Result = tmp12(closure_5, obj);
+    obj.children = closure_9(require("common/SafeAreaView").SafeAreaPaddingView, obj);
+    tmp12Result = closure_8(closure_5, obj);
   }
   return tmp12Result;
 };

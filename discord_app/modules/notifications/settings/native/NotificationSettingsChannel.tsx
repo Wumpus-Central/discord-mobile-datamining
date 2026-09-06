@@ -74,7 +74,7 @@ export default function NotificationSettingsChannel(channel) {
   let isForumLikeChannelResult = channel.isForumLikeChannel();
   if (isForumLikeChannelResult) {
     let obj4 = { style: { marginTop: 24 }, channel: channel.channel };
-    isForumLikeChannelResult = tmp11(tmp(10169).NotificationSettingsChannelPost, obj4);
+    isForumLikeChannelResult = closure_6(tmp(10169).NotificationSettingsChannelPost, obj4);
   }
   items3[4] = isForumLikeChannelResult;
   const inherited = channelPresetInheritance.inherited;
@@ -84,8 +84,8 @@ export default function NotificationSettingsChannel(channel) {
     const obj6 = { variant: "secondary", onPress: callback, text: null };
     const intl3 = tmp(1114).intl;
     obj6.text = intl3.string(tmp(1114).t["3PBFN6"]);
-    obj5.children = tmp11(tmp(4975).Button, obj6);
-    tmp11Result = tmp11(View, obj5);
+    obj5.children = closure_6(tmp(4975).Button, obj6);
+    tmp11Result = closure_6(View, obj5);
   }
   items3[5] = tmp11Result;
   obj.children = items3;

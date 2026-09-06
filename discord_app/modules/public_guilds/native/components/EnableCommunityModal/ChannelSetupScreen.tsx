@@ -38,12 +38,12 @@ export default function ChannelSetupScreen() {
     let obj = ChannelStore;
     let rulesChannelId;
     if (guild != null) {
-      rulesChannelId = tmp.rulesChannelId;
+      rulesChannelId = guild.rulesChannelId;
     }
     obj = { rulesChannel: ChannelStore.getChannel(rulesChannelId), publicUpdatesChannel: null };
     let prop;
     if (guild != null) {
-      prop = tmp.publicUpdatesChannelId;
+      prop = guild.publicUpdatesChannelId;
     }
     obj.publicUpdatesChannel = obj.getChannel(prop);
     return obj;

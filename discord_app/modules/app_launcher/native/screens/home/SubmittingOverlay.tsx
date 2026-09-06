@@ -42,7 +42,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   const items = [submitting.style, closure_4().ellipsis, animatedStyle];
   obj.style = items;
   if (submitting) {
-    submitting = tmp5(submitting(4991).Ellipsis, { variant: "active", size: "md" });
+    submitting = jsx(submitting(4991).Ellipsis, { variant: "active", size: "md" });
   }
   obj.children = submitting;
   return jsx(ReanimatedRexportDefault.View, { style: null, children: null });

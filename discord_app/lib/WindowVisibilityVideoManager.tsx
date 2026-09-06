@@ -24,14 +24,14 @@ class WindowVisibilityVideoManager extends tmp2 {
     tmp6.HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * closure_1(closure_2[3]).Millis.SECOND;
     tmp6.update = function update() {
       if (discordVisible.discordVisible !== WindowVisibilityUtilsDefault()) {
-        obj.discordVisible = WindowVisibilityUtilsDefault();
-        obj.emit(obj.WindowVisibilityChanged, obj.discordVisible);
-        const disableVideoTimer = obj.disableVideoTimer;
-        if (obj.discordVisible) {
+        discordVisible.discordVisible = WindowVisibilityUtilsDefault();
+        discordVisible.emit(discordVisible.WindowVisibilityChanged, discordVisible.discordVisible);
+        const disableVideoTimer = discordVisible.disableVideoTimer;
+        if (discordVisible.discordVisible) {
           disableVideoTimer.stop();
-          let result = obj.setIncomingVideoEnabled(true);
+          let result = discordVisible.setIncomingVideoEnabled(true);
         } else {
-          disableVideoTimer.start(obj.HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS, () => {
+          disableVideoTimer.start(discordVisible.HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS, () => {
             const result = incomingVideoEnabled.setIncomingVideoEnabled(false);
           });
         }

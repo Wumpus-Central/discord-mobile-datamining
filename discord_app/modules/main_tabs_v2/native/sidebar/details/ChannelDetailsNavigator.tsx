@@ -163,10 +163,10 @@ export default noop.memo((navigation) => {
         const intl = util.intl;
         obj.title = intl.string(util.t["mp1N/2"]);
         if (DETAILS === navigation.route.name) {
-          let tmpResult = tmp(7863);
+          let tmpResult = HeaderShared;
           let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
         } else {
-          tmpResult = tmp(7863);
+          tmpResult = HeaderShared;
           renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
         }
         obj.headerLeft = renderModalCloseImage;
@@ -185,10 +185,10 @@ export default noop.memo((navigation) => {
         const intl = util.intl;
         obj.title = intl.string(util.t.w4m945);
         if (DETAILS === navigation.route.name) {
-          let tmpResult = tmp(7863);
+          let tmpResult = HeaderShared;
           let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
         } else {
-          tmpResult = tmp(7863);
+          tmpResult = HeaderShared;
           renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
         }
         obj.headerLeft = renderModalCloseImage;
@@ -210,10 +210,10 @@ export default noop.memo((navigation) => {
     const intl = util.intl;
     obj.title = intl.string(util.t.B2panI);
     if (DETAILS === route.name) {
-      let tmpResult = tmp(7863);
+      let tmpResult = HeaderShared;
       let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
     } else {
-      tmpResult = tmp(7863);
+      tmpResult = HeaderShared;
       renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
     }
     obj.headerLeft = renderModalCloseImage;

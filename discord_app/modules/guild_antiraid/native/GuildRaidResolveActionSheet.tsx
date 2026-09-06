@@ -100,16 +100,16 @@ export default function GuildRaidResolveActionSheet(arg0) {
     let items = [closure_1_8(guild_id(closure_2[14]).FormRow, obj), ];
     let hasItem = value === guild_id(closure_2[9]).RaidResolutionType.OTHER;
     if (hasItem) {
-      hasItem = _undefined.includes(tmp5(tmp6[9]).RaidResolutionType.OTHER);
+      hasItem = _undefined.includes(guild_id(closure_2[9]).RaidResolutionType.OTHER);
     }
     if (hasItem) {
-      const obj1 = { style: tmp3.textInputContainer, children: null };
-      const obj2 = { style: tmp3.textInput, autoComplete: "off", value: _undefined2, placeholder: null, onChangeText: null };
-      const intl = tmp5(tmp6[8]).intl;
-      obj2.placeholder = intl.string(tmp5(tmp6[8]).t["PAM+JR"]);
+      const obj1 = { style: closure_2.textInputContainer, children: null };
+      const obj2 = { style: closure_2.textInput, autoComplete: "off", value: _undefined2, placeholder: null, onChangeText: null };
+      const intl = guild_id(closure_2[8]).intl;
+      obj2.placeholder = intl.string(guild_id(closure_2[8]).t["PAM+JR"]);
       obj2.onChangeText = handleTextInputChange;
-      obj1.children = tmp4(tmp5(tmp6[15]).TextInput, obj2);
-      hasItem = tmp4(tmp2, obj1);
+      obj1.children = closure_1_8(guild_id(closure_2[15]).TextInput, obj2);
+      hasItem = closure_1_8(_undefined2, obj1);
     }
     items[1] = hasItem;
     obj.children = items;

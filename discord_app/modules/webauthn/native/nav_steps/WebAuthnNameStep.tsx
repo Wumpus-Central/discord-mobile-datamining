@@ -24,7 +24,7 @@ export default function WebAuthnNameStep(arg0) {
   ({ ticket: require, credential: importDefault, name } = arg0);
   _slicedToArray = undefined;
   value = undefined;
-  closure_6 = async function _onPress(arg0, value) {
+  closure_6 = async function _onPress() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -116,9 +116,9 @@ export default function WebAuthnNameStep(arg0) {
   value = tmp5Result[0];
   obj = { children: null };
   obj = { showTopContainer: false, value, onChange: tmp5Result[1], style: tmp.margin, error: tmp8, title: null, placeholder: null, disabled: null, clearButtonVisibility: null, autoFocus: true, showBorder: true, required: true, large: true };
-  let intl = tmp2(1114).intl;
+  let intl = util.intl;
   obj.title = intl.string(util.t["Jzd+z/"]);
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj.placeholder = intl2.string(util.t["I/sJtJ"]);
   obj.disabled = tmp6[0];
   obj.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
@@ -139,7 +139,7 @@ export default function WebAuthnNameStep(arg0) {
     disabled: null,
     size: "lg"
   };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj2.text = intl3.string(util.t["5dyZ1S"]);
   obj2.disabled = "" === value;
   obj1.children = closure_8(components_Button_Button.Button, obj2);

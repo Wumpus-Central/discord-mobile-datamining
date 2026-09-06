@@ -24,8 +24,7 @@ function stopScreenshare() {
   voiceEngine.stopBroadcast();
   const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    tmp(4702);
-    const tmpResult = tmp(4612);
+    const tmpResult = StreamKeyUtils;
     tmpResult.stopStream(tmpResult.encodeStreamKey(currentUserActiveStream));
   }
   AudioActionCreatorsDefault.setGoLiveSource(null);
@@ -34,17 +33,18 @@ function startStream() {
   if ("android" === obj.getVoiceEngine().platform) {
     const result = ForegroundServiceManagerDefault.isForegroundServiceRunning((arg0) => {
       if (arg0) {
-        let tmpResult = tmp(tmp2[8]);
+        let tmpResult = require("inject");
         const voiceEngine = tmpResult.getVoiceEngine();
         voiceEngine.startBroadcast();
       } else {
-        tmpResult = tmp(tmp2[9]);
+        tmpResult = require("CallsUtils");
         const result = tmpResult.showScreenshareDisabledAlert();
       }
     });
   } else {
     BroadcastUploadManager.showPicker();
   }
+  obj = inject;
 }
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
 const Features = fn(4585).Features;
@@ -86,12 +86,12 @@ export default function useScreenshareUtils(arg0) {
         let stringResult = intl.string(util.t.CpkXwZ);
       }
       obj.text = stringResult;
-      let flag = tmp4;
-      if (tmp4 === undefined) {
+      let flag = showMobileGoLiveUpsell;
+      if (showMobileGoLiveUpsell === undefined) {
         flag = false;
       }
       closure_1 = analyticsLocations;
-      if (tmp12) {
+      if (dependencyMap) {
         if (tmp11) {
           if (flag) {
             let fn = function l() {
@@ -116,19 +116,18 @@ export default function useScreenshareUtils(arg0) {
       }
       obj.onPress = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 9971 : 9972);
+        importDefault(tmp ? 9971 : 9972);
       } else {
-        if (tmp4) {
+        if (showMobileGoLiveUpsell) {
           let tmp20 = 9973;
         } else {
           tmp20 = tmp ? 9974 : 9973;
         }
-        obj.imgSource = tmp19(tmp20);
+        obj.imgSource = importDefault(tmp20);
         return obj;
       }
       obj2 = MetaQuestUtils;
       tmp11 = closure_1;
-      tmp12 = dependencyMap;
     }
     const intl2 = util.intl;
     stringResult = intl2.string(util.t.fjBNo1);
@@ -188,11 +187,11 @@ export const tryStartScreenShare = function tryStartScreenShare(channel) {
     if ("android" === obj2.getVoiceEngine().platform) {
       let result = ForegroundServiceManagerDefault.isForegroundServiceRunning((arg0) => {
         if (arg0) {
-          let tmpResult = tmp(tmp2[8]);
+          let tmpResult = require("inject");
           const voiceEngine = tmpResult.getVoiceEngine();
           voiceEngine.startBroadcast();
         } else {
-          tmpResult = tmp(tmp2[9]);
+          tmpResult = require("CallsUtils");
           const result = tmpResult.showScreenshareDisabledAlert();
         }
       });

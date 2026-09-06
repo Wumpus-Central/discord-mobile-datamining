@@ -6,6 +6,7 @@ import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1611 */;
 import AppEntryKey from "AppEntryKey" /* 1624 */;
 import readAppEntryWindowMetrics from "readAppEntryWindowMetrics" /* 1876 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1877 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
 import module_560 from "module_560" /* 560 */;
 import SafeAreaStore from "SafeAreaStore" /* 1612 */;
@@ -32,7 +33,7 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
   }
   let width = size.width;
   ({ width: width2, height } = size2);
-  let tmp2Result = tmp2(1611);
+  let tmp2Result = useSafeAreaInsets;
   const rect = tmp2Result.getSafeAreaInsets(appEntryKey);
   let tmp8 = height;
   let tmp9 = width2;
@@ -42,7 +43,7 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
   }
   const bound = Math.min(width + rect.left + rect.right, tmp9);
   const sum = size.height + rect.top + rect.bottom;
-  tmp2Result = tmp2(1877);
+  tmp2Result = useSystemKeyboardHeight;
   obj = { appEntryKey };
   const bound1 = Math.min(sum - tmp2Result.getSystemKeyboardHeight(obj), tmp8);
   width = undefined;
@@ -55,6 +56,7 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
   }
   const width3 = size.width;
   ({ width: width4, height: height2 } = size2);
+  const tmp5 = size2.width > size2.height;
   const rect2 = useSafeAreaInsets.getSafeAreaInsets(appEntryKey);
   let tmp14 = height2;
   let tmp15 = width4;
@@ -82,6 +84,7 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
     }
   }
   obj = { fontScale, screenIsLandscape: tmp5, windowDimensions, windowDimensionsIgnoringKeyboard: prop };
+  const tmp2Result1 = useSafeAreaInsets;
 }
 function getDimensionsStoreState(arg0) {
   let tmp = arg0;
@@ -92,11 +95,10 @@ function getDimensionsStoreState(arg0) {
   while (iter !== undefined) {
     let tmp3 = nextResult;
     let tmp5;
-    let tmp4 = getDimensionsStoreStateForEntry;
     if (tmp != null) {
       tmp5 = tmp.byAppEntry[tmp3];
     }
-    let tmp4Result = tmp4(nextResult, tmp5);
+    let tmp4Result = getDimensionsStoreStateForEntry(nextResult, tmp5);
     byAppEntry[tmp3] = tmp4Result;
     let tmp10;
     let tmp8 = tmp4Result;

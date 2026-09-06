@@ -100,7 +100,7 @@ function CreateWebhookButton(guild) {
     }
   });
   const items1 = [stateFromStores, guild.id, navigation];
-  const callback = noop.useCallback(stateFromStores(function*(arg0, value) {
+  const callback = noop.useCallback(stateFromStores(function*() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -217,21 +217,21 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   let tmp4Result = webhookType === constants3.INCOMING;
   if (tmp4Result) {
     let obj = { guild: self.props.guild, channel: self.props.channel };
-    tmp4Result = tmp4(CreateWebhookButton, obj);
+    tmp4Result = closure_18(CreateWebhookButton, obj);
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    obj = { Illustration: tmp5(16846).WebhookEmpty, title: null };
+    obj = { Illustration: webhookType(16846).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
-      const intl2 = tmp5(1114).intl;
-      dkHRkE = tmp5(1114).t.dkHRkE;
+      const intl2 = webhookType(1114).intl;
+      dkHRkE = webhookType(1114).t.dkHRkE;
       let stringResult = intl2.string(dkHRkE);
     } else {
-      const intl = tmp5(1114).intl;
-      stringResult = intl.string(tmp5(1114).t["4JAVI+"]);
+      const intl = webhookType(1114).intl;
+      stringResult = intl.string(webhookType(1114).t["4JAVI+"]);
     }
     obj.title = stringResult;
-    tmp4Result = tmp4(tmp5(1178).EmptyState, obj);
+    tmp4Result = closure_18(webhookType(1178).EmptyState, obj);
   } else {
     obj = {
       hasIcons: true,
@@ -243,7 +243,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
         })
     };
     const obj1 = { children: null };
-    items[2] = tmp4(tmp5(5687).TableRowGroup, obj);
+    items[2] = closure_18(webhookType(5687).TableRowGroup, obj);
     obj1.children = items;
     return closure_20(closure_19, obj1);
   }
@@ -303,12 +303,12 @@ export default function ConnectedWebhooksOverview(channelId) {
   const stateFromStoresArray = channelId(stateFromStores[19]).useStateFromStoresArray(items2, () => {
     if (null != id) {
       if (null != id1) {
-        let webhooksForChannel = WebhooksStore.getWebhooksForChannel(tmp, tmp2);
+        let webhooksForChannel = WebhooksStore.getWebhooksForChannel(id, tmp2);
       }
       return webhooksForChannel;
     }
     if (null != id) {
-      webhooksForChannel = WebhooksStore.getWebhooksForGuild(tmp);
+      webhooksForChannel = WebhooksStore.getWebhooksForGuild(id);
     } else {
       webhooksForChannel = closure_26;
     }
@@ -316,11 +316,11 @@ export default function ConnectedWebhooksOverview(channelId) {
   const effect = id1.useEffect(() => {
     if (null != id) {
       if (null != id1) {
-        const forChannel = WebhooksActionCreatorsDefault.fetchForChannel(tmp, tmp2);
+        const forChannel = WebhooksActionCreatorsDefault.fetchForChannel(id, tmp2);
       }
     }
     if (null != id) {
-      const forGuild = WebhooksActionCreatorsDefault.fetchForGuild(tmp);
+      const forGuild = WebhooksActionCreatorsDefault.fetchForGuild(id);
     }
   }, items3);
   let tmp9 = null;

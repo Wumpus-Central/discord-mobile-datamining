@@ -2,6 +2,7 @@
 
 // Module 15326 (AccessibilitySetting)
 import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,15 +25,15 @@ let SettingBuilders = {
     let tmp5 = null;
     if (null != tmp4) {
       let hasItem;
-      if (obj2 != null) {
-        hasItem = obj2.includes(tmp4);
+      if (items != null) {
+        hasItem = items.includes(tmp4);
       }
       tmp5 = null;
       if (hasItem) {
         obj = { text: null };
-        const intl = tmp(1114).intl;
-        obj.text = intl.string(tmp(1114).t.y2b7CA);
-        tmp5 = jsx(tmp(1178).TextBadge, { text: null });
+        const intl = util.intl;
+        obj.text = intl.string(util.t.y2b7CA);
+        tmp5 = jsx(native.TextBadge, { text: null });
       }
     }
     return tmp5;
@@ -47,10 +48,9 @@ let SettingBuilders = {
       if (tmp2) {
         let hasItem;
         if (items != null) {
-          hasItem = obj.includes(tmp);
+          hasItem = items.includes(tmp);
         }
         tmp2 = hasItem;
-        obj = items;
       }
       if (tmp2) {
         closure_1(ContentDismissActionType.TAKE_ACTION);

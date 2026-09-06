@@ -26,7 +26,7 @@ let closure_14 = async function _updateAssets() {
   closure_129_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: closure_2_6.APPLICATION_ASSETS(closure_0), oldFormErrors: true, rejectWithError: false });
-  const body = arg1.body;
+  const body = value.body;
   { url: timestampProducer.APPLICATION_ASSETS(closure_0), oldFormErrors: true, rejectWithError: false };
   closure_130_1(closure_130_2[7]).dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: closure_129_0, assets: body });
   return closure_130_5.getApplicationAssets(closure_129_0);
@@ -54,13 +54,14 @@ function getAssets() {
 }
 let closure_17 = async function _getAssets() {
   closure_1 = tmp2;
-  closure_129_0 = await getApplicationAssetsMap(closure_0);
+  await getApplicationAssetsMap(closure_0);
+  closure_129_0 = value;
   if (closure_129_0 != null) {
     const assets = closure_129_0.assets;
   }
   return assets;
 };
-let closure_18 = async function _resolveExternalAssets(arg0, value) {
+let closure_18 = async function _resolveExternalAssets(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -92,7 +93,6 @@ let closure_18 = async function _resolveExternalAssets(arg0, value) {
           closure_132_1 = undefined;
           let url;
           let external_asset_path;
-          let tmp28 = closure_0;
           let found = importDefault.filter((item) => {
             let tmp = null != item;
             if (tmp) {
@@ -102,8 +102,7 @@ let closure_18 = async function _resolveExternalAssets(arg0, value) {
           });
           if (0 !== found.length) {
             let HTTP = HTTPUtils.HTTP;
-            let request = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
-            request.url = timestampProducer.APPLICATION_EXTERNAL_ASSETS(tmp28);
+            let request = { url: timestampProducer.APPLICATION_EXTERNAL_ASSETS(closure_0), body: null, oldFormErrors: true, rejectWithError: false };
             let obj1 = { urls: found };
             request.body = obj1;
             c8 = 1;
@@ -233,7 +232,7 @@ function fetchAssetIds() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _fetchAssetIds(arg0, value) {
+let closure_22 = async function _fetchAssetIds(arg0) {
   if (1 === tmp5) {
     if (arg0 === 1) {
       c6 = 3;
@@ -421,7 +420,7 @@ export const getAssetFromImageURL = function getAssetFromImageURL(SPOTIFY, url) 
   }
   return combined;
 };
-export const getAssetImage = function getAssetImage(application_id, media_assets_large_image, items, png) {
+export const getAssetImage = function getAssetImage(application_id, media_assets_large_image, items) {
   let str = png;
   if (png === undefined) {
     str = "png";
@@ -444,7 +443,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
         const call = hasOwnProperty.call;
         let deserializeResult1;
         if (typeof call === "unknown" ? hasOwnProperty(tmp21) : call(closure_11, tmp21)) {
-          const deserializer = tmp25[tmp21];
+          const deserializer = closure_11[tmp21];
           deserializeResult1 = deserializer.deserialize(tmp22);
         }
         return deserializeResult1;

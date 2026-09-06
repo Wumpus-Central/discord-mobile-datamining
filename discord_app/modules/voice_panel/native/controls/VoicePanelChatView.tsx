@@ -111,7 +111,6 @@ export default noop.memo(function VoicePanelChatView(shown) {
   obj1.style = items2;
   const items3 = [closure_6(closure_10, {}), , ];
   const obj2 = { title: null, disablePill: true, blurStyle: null };
-  const tmp11 = closure_7;
   const tmp9 = ref(guildId[20])();
   const intl = shown(guildId[9]).intl;
   obj2.title = intl.string(shown(guildId[9]).t["/VQax8"]);
@@ -123,7 +122,7 @@ export default noop.memo(function VoicePanelChatView(shown) {
   }
   items3[2] = closure_6(ref(guildId[25]), { disableGradient: true, alwaysRespectKeyboard: false, setNoExtractUI: false, guildId, channelId, chatInputRef: ref, screenIndex: "voice-panel" });
   obj1.children = items3;
-  obj.children = tmp11(shown(guildId[23]).AccessibilityView, obj1);
+  obj.children = closure_7(shown(guildId[23]).AccessibilityView, obj1);
   obj.children = closure_6(shown(guildId[22]).ThemeContextProvider, obj);
   return closure_6(ref(guildId[21]).Provider, obj);
 });

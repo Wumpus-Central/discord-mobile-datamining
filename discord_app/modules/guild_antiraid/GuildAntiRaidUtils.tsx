@@ -139,7 +139,7 @@ export const initialLockdownDurationHours = function initialLockdownDurationHour
   if (null == prop) {
     prop = React4;
   } else {
-    const obj = hasOwnProperty();
+    hasOwnProperty();
   }
   return prop;
 };

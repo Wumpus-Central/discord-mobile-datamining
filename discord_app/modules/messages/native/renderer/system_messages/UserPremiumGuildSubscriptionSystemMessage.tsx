@@ -1,6 +1,7 @@
 // === Module 8003: UserPremiumGuildSubscriptionSystemMessage ===
 
 // Module 8003 (UserPremiumGuildSubscriptionSystemMessage)
+import util from "util" /* 1114 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
@@ -16,13 +17,13 @@ export const createUserPremiumGuildSubscriptionSystemMessage = function createUs
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp6 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (tmp3 > 1) {
-    const intl2 = tmp4(1114).intl;
+    const intl2 = util.intl;
     obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6, numSubscriptions: tmp3 };
-    let formatToPartsResult = intl2.formatToParts(tmp4(1114).t.rbj006, obj);
+    let formatToPartsResult = intl2.formatToParts(util.t.rbj006, obj);
   } else {
-    const intl = tmp4(1114).intl;
+    const intl = util.intl;
     obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6 };
-    formatToPartsResult = intl.formatToParts(tmp4(1114).t.ihxM9x, obj);
+    formatToPartsResult = intl.formatToParts(util.t.ihxM9x, obj);
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: formatToPartsResult };

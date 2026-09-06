@@ -3,10 +3,12 @@
 // Module 13576 (GuildPowerupsMarketingHeader)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
+import _modDef2428 from "module_2428" /* 2428 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12488 */;
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12513 */;
 import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13577 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 13578 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4449 */;
 
@@ -57,25 +59,25 @@ export default function GuildPowerupsMarketingHeader(guild) {
       if (null != arr) {
         str2 = "";
         if (0 !== arr.length) {
-          let first = tmp2(13578)(arr);
+          let first = orderMarketablePerksForDisplayDefault(arr);
           if (1 === first.length) {
             obj = { powerup: null };
             first = first[0];
             obj.powerup = first;
-            let formatResult = tmp6(PerkText, obj);
+            let formatResult = <PerkText powerup={null} />;
           } else {
             const intl2 = guild(1114).intl;
             const obj1 = { perk1: null, perk2: null };
             const obj2 = { powerup: first[0] };
-            obj1.perk1 = tmp6(PerkText, obj2);
+            obj1.perk1 = <PerkText powerup={first[0]} />;
             const obj3 = { powerup: first[1] };
-            obj1.perk2 = tmp6(PerkText, obj3);
-            formatResult = intl2.format(tmp2(2428).MNO3sG, obj1);
+            obj1.perk2 = <PerkText powerup={first[1]} />;
+            formatResult = intl2.format(_modDef2428.MNO3sG, obj1);
           }
         }
       }
       const obj4 = { perks: str2 };
-      obj.children = intl.format(tmp2(2428)["7lwpzR"], obj4);
+      obj.children = intl.format(_modDef2428["7lwpzR"], obj4);
       obj.children = jsx(guild(4556).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
       return <View style={tmp.text} variant="text-sm/semibold">{null}</View>;
     }

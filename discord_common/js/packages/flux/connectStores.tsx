@@ -91,13 +91,13 @@ export default function connectStores(items, arg1, arg2) {
               const cachedResult = memoizedGetStateFromStores.getCachedResult(closure_0.props.childProps);
               let tmp6Result = null != cachedResult;
               if (tmp6Result) {
-                const memoizedGetStateFromStores2 = obj.memoizedGetStateFromStores;
+                const memoizedGetStateFromStores2 = closure_0.memoizedGetStateFromStores;
                 memoizedGetStateFromStores2.clear();
-                tmp6Result = combined(FluxContainer[4])(obj.memoizedGetStateFromStores(obj.props.childProps), cachedResult);
+                tmp6Result = combined(FluxContainer[4])(closure_0.memoizedGetStateFromStores(closure_0.props.childProps), cachedResult);
                 const tmp6 = combined(FluxContainer[4]);
               }
               if (!tmp6Result) {
-                obj.forceUpdate();
+                closure_0.forceUpdate();
               }
             });
             applyArgumentsResult.listener = batchedStoreListener;
@@ -123,7 +123,7 @@ export default function connectStores(items, arg1, arg2) {
           return <closure_0 ref={forwardedConnectStoresRef} />;
         };
         FluxContainer.displayName = combined;
-        const forwardRefResult = React.forwardRef((childProps, forwardedConnectStoresRef) => <FluxContainer childProps={arg0} forwardedConnectStoresRef={arg1} />);
+        const forwardRefResult = React.forwardRef((childProps, forwardedConnectStoresRef) => <FluxContainer childProps={childProps} forwardedConnectStoresRef={forwardedConnectStoresRef} />);
         forwardRefResult.displayName = "ForwardRef(" + combined + ")";
         return forwardRefResult;
       };
@@ -207,13 +207,13 @@ export default function connectStores(items, arg1, arg2) {
           const cachedResult = memoizedGetStateFromStores.getCachedResult(closure_0.props);
           let tmp6Result = null != cachedResult;
           if (tmp6Result) {
-            const memoizedGetStateFromStores2 = obj.memoizedGetStateFromStores;
+            const memoizedGetStateFromStores2 = closure_0.memoizedGetStateFromStores;
             memoizedGetStateFromStores2.clear();
-            tmp6Result = combined(FluxContainer[4])(obj.memoizedGetStateFromStores(obj.props), cachedResult);
+            tmp6Result = combined(FluxContainer[4])(closure_0.memoizedGetStateFromStores(closure_0.props), cachedResult);
             const tmp6 = combined(FluxContainer[4]);
           }
           if (!tmp6Result) {
-            obj.forceUpdate();
+            closure_0.forceUpdate();
           }
         });
         applyArgumentsResult.listener = batchedStoreListener;

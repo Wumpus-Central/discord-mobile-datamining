@@ -29,7 +29,7 @@ export default function AddFriendScreen(navigation) {
   navigation = navigation.navigation;
   dependencyMap = undefined;
   let callback;
-  let tmp = closure_13();
+  const tmp = closure_13();
   let obj = navigation(12680);
   const contactSyncAccount = obj.useContactSyncAccount();
   let obj1 = navigation(12680);
@@ -47,6 +47,7 @@ export default function AddFriendScreen(navigation) {
     const obj2 = contactSyncAccount(_undefined[11]);
     const formatToPlainStringResult = intl.formatToPlainString(navigation(_undefined[12]).t["6E9a1J"], obj);
     navigation(_undefined[13]).showShareActionSheet({ message: formatToPlainStringResult }, "Add Friend Modal");
+    const obj4 = navigation(_undefined[13]);
   }, []);
   const items = [callback, navigation, contactSyncAccount];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -63,13 +64,13 @@ export default function AddFriendScreen(navigation) {
     const result = ContactSyncUtils.checkContactPermissions();
     result.then((result) => {
       const obj = navigation(1115);
-      const tmp2 = navigation;
       let tmp5 = result === constants2.NOT_DETERMINED || navigation(1115).isAndroid() && result === constants2.UNAUTHORIZED;
       if (!tmp5) {
-        tmp5 = !tmp2(12680).isContactSyncEnabled(contactSyncAccount);
-        const tmp2Result = tmp2(12680);
+        tmp5 = !navigation(12680).isContactSyncEnabled(contactSyncAccount);
+        const tmp2Result = navigation(12680);
       }
       dependencyMap(tmp5);
+      const tmp4 = navigation(1115).isAndroid() && result === constants2.UNAUTHORIZED;
     });
   }, items);
   const items1 = [closure_10(contactSyncAccount(5125), { absolute: true }), ];
@@ -84,7 +85,7 @@ export default function AddFriendScreen(navigation) {
   items2[1] = closure_10(navigation(4556).Text, obj1);
   items2[2] = closure_10(contactSyncAccount(13855), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
   const obj3 = { style: tmp.otherOptionsContainer, children: null };
-  const obj4 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
+  let obj4 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = navigation(1114).intl;
   obj4.children = intl3.string(navigation(1114).t.dukg0Z);
   const items3 = [closure_10(navigation(4556).Text, obj4), ];

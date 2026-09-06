@@ -13,11 +13,11 @@ export const GuildRoleRecordTypeTag = "GuildRole";
 export const isEveryoneRole = function isEveryoneRole(role) {
   return role.id === role.guildId;
 };
-export const hasPermission = function hasPermission(permissions, arg1) {
-  return BigFlagUtils.has(permissions.permissions, arg1);
+export const hasPermission = function hasPermission(permissions, VIEW_CHANNEL) {
+  return BigFlagUtils.has(permissions.permissions, VIEW_CHANNEL);
 };
-export const hasAnyPermission = function hasAnyPermission(permissions, arg1) {
-  return BigFlagUtils.hasAny(permissions.permissions, arg1);
+export const hasAnyPermission = function hasAnyPermission(permissions, RESTRICTED_TO_ADULT) {
+  return BigFlagUtils.hasAny(permissions.permissions, RESTRICTED_TO_ADULT);
 };
 export const isRoleEqual = function isRoleEqual(found, arg1) {
   return _modDef12.isEqualWith(found, arg1, (arg0, arg1, arg2) => {

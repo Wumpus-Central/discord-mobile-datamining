@@ -52,7 +52,7 @@ export default function UserSettingsGuildRoleSubscriptions() {
   const tmp5 = useActiveGuildSubscriptionsDefault({ ensureFresh: true });
   let obj = GuildRoleSubscriptionsHooks;
   if (obj.useFetchListingsForSubscriptions(tmp5).loading) {
-    let tmp6Result = tmp6(LoadingIndicatorDefault, {});
+    let tmp6Result = hasOwnProperty(LoadingIndicatorDefault, {});
   } else {
     obj = { style: tmp.container, children: null };
     obj = { contentContainerStyle: null, style: null, sections: null, stickySectionHeadersEnabled: false, keyExtractor: null, renderSectionHeader: null, renderItem: null, ItemSeparatorComponent: null };
@@ -68,8 +68,8 @@ export default function UserSettingsGuildRoleSubscriptions() {
       return closure_1_5(ManageSubscriptionCardDefault, { subscription: subscription.item });
     };
     obj.ItemSeparatorComponent = ItemSeparator;
-    obj.children = tmp6(React4, obj);
-    tmp6Result = tmp6(React3, obj);
+    obj.children = hasOwnProperty(React4, obj);
+    tmp6Result = hasOwnProperty(React3, obj);
   }
   return tmp6Result;
 };

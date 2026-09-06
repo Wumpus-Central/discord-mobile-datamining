@@ -16,7 +16,6 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 
 export default function LeaveGuildElement(guild) {
   guild = guild.guild;
-  const addCallback = guild.addCallback;
   const reportId = guild.reportId;
   _slicedToArray = undefined;
   noop = undefined;
@@ -27,7 +26,7 @@ export default function LeaveGuildElement(guild) {
   const effect = noop.useEffect(() => {
     closure_3(!closure_4);
   }, items);
-  const items1 = [addCallback, reportId, guild];
+  const items1 = [guild.addCallback, reportId, guild];
   const onConfirm = noop.useCallback(() => {
     if (null != guild) {
       addCallback(() => addCallback(reportId[4]).leaveGuild(id.id));
@@ -58,14 +57,14 @@ export default function LeaveGuildElement(guild) {
       name = guild.name;
     }
     obj.body = intl2.formatToPlainString(util.t.TB1og8, { name });
-    const intl3 = tmp3(1114).intl;
+    const intl3 = util.intl;
     obj.confirmText = intl3.string(util.t.p89ACt);
-    const intl4 = tmp3(1114).intl;
+    const intl4 = util.intl;
     obj.cancelText = intl4.string(util.t.gm1Vej);
     obj.onConfirm = onConfirm;
     obj.confirmColor = common_AlertDefault.Colors.RED;
     obj.show(obj);
   };
   obj.icon = jsx(guild(reportId[10]).DoorExitIcon, { color: "text-feedback-critical" });
-  return jsx(addCallback(reportId[6]), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+  return jsx(guild.addCallback(reportId[6]), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 };

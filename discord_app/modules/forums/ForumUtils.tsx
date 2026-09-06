@@ -19,7 +19,7 @@ const ChannelFlags = fn(1964).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumUtils.tsx");
 
-export const getForumPostReadStates = function getForumPostReadStates(isArchivedThread, guild, items) {
+export const getForumPostReadStates = function getForumPostReadStates(isArchivedThread, guild) {
   let tmp = items;
   if (items === undefined) {
     items = [ReadStateStore];

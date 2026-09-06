@@ -2,11 +2,14 @@
 
 // Module 17447 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import router_utils from "router_utils" /* 1100 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import Link from "Link" /* 1484 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import ContactSyncUtils from "ContactSyncUtils" /* 12680 */;
 import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12683 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12746 */;
 import NewUserModalTypes from "NewUserModalTypes" /* 17448 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ParentalConsentStore from "ParentalConsentStore" /* 15958 */;
@@ -14,7 +17,7 @@ import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-let closure_12 = async function _shouldSkipContactSyncStep(arg0, value) {
+let closure_12 = async function _shouldSkipContactSyncStep() {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -72,12 +75,13 @@ let closure_12 = async function _shouldSkipContactSyncStep(arg0, value) {
 function lastStepComplete(STEP_GUILD_TEMPLATE) {
   NewUserAnalyticsUtils.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
   if (obj2.isModalOpen(NewUserModalTypes.NEW_USER_MODAL_KEY)) {
-    ModalActionCreatorsDefault.popWithKey(tmp(17448).NEW_USER_MODAL_KEY);
+    ModalActionCreatorsDefault.popWithKey(NewUserModalTypes.NEW_USER_MODAL_KEY);
   }
-  let tmpResult = tmp(1100);
+  let tmpResult = router_utils;
   tmpResult.transitionTo(constants2.ME, { navigationReplace: true });
-  tmpResult = tmp(12746);
+  tmpResult = nuf_NUFActionCreators;
   const result = tmpResult.setNewUserFlowCompleted();
+  obj2 = NavigationRouteUtils;
 }
 function getNextOnboardingStep() {
   const self = this;
@@ -89,7 +93,7 @@ function getNextOnboardingStep() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _getNextOnboardingStep(arg0, value) {
+let closure_18 = async function _getNextOnboardingStep() {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -240,7 +244,7 @@ let obj = {
   }
 };
 obj = { key: "enable-notification", shouldShowStep: null };
-let closure_13 = asyncGeneratorStep(async (arg0, value) => {
+let closure_13 = asyncGeneratorStep(async () => {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -301,7 +305,7 @@ obj.shouldShowStep = function() {
   return applyArgumentsResult;
 };
 obj = { key: "contact-sync", shouldShowStep: null };
-let closure_14 = asyncGeneratorStep(async (arg0, value) => {
+let closure_14 = asyncGeneratorStep(async () => {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

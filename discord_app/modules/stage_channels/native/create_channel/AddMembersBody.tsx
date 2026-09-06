@@ -116,7 +116,7 @@ export default function AddMembersBody(pendingAdditions) {
   if (first) {
     let items2 = [];
   } else {
-    let tmp10Result = tmp10(9738);
+    let tmp10Result = ChannelPermissionsUtilsAll;
     const rolesRowsWithPermissionDisabled = tmp10Result.getRolesRowsWithPermissionDisabled(guild, stateFromStores, channel, permission, filterByQuery);
     let tmp19 = 0 === rolesRowsWithPermissionDisabled.length && "" === str.trim();
     if (tmp19) {
@@ -124,7 +124,7 @@ export default function AddMembersBody(pendingAdditions) {
     }
     items2 = rolesRowsWithPermissionDisabled;
     if (tmp19) {
-      tmp10Result = tmp10(9738);
+      tmp10Result = ChannelPermissionsUtilsAll;
       items2 = tmp10Result.getNoRolesRow();
     }
   }
@@ -132,12 +132,12 @@ export default function AddMembersBody(pendingAdditions) {
   const membersRows = ChannelPermissionsUtilsAll.getMembersRows(stateFromStoresArray, channel, guild, permission, obj);
   const items3 = [];
   obj = { title: null, data: null };
-  let intl = tmp6(1114).intl;
+  let intl = guild(1114).intl;
   obj.title = intl.string(guild(1114).t["LPJmL/"]);
   obj.data = items2;
   items3.push(obj);
   obj1 = { title: null, data: null };
-  let intl2 = tmp6(1114).intl;
+  let intl2 = guild(1114).intl;
   obj1.title = intl2.string(guild(1114).t["9Oq93m"]);
   obj1.data = membersRows;
   items3.push(obj1);
@@ -160,21 +160,19 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp6(6627).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(6627).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = tmp6(6627).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(6627).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
   obj2 = { style: tmp3.inputContainer, children: null };
   obj3 = { placeholder: null, tags: null, onChangeText: null, onRemove: null, autoFocus: true };
   const tmp10Result1 = ChannelPermissionsUtilsAll;
-  const tmp25 = closure_18;
-  const tmp26 = closure_17;
-  const intl3 = tmp6(1114).intl;
+  const intl3 = guild(1114).intl;
   obj3.placeholder = intl3.string(guild(1114).t.TVZdKh);
   obj3.tags = mapped;
   obj3.onChangeText = function onChangeText(str) {
@@ -201,35 +199,35 @@ export default function AddMembersBody(pendingAdditions) {
   if (null != inputDesc) {
     obj4 = { style: tmp3.inputDescContainer, children: null };
     const obj5 = { style: tmp3.inputDescText, variant: "text-xs/medium", color: "text-default", children: inputDesc };
-    obj4.children = tmp27(tmp6(4556).Text, obj5);
-    tmp27Result = tmp27(tmp28, obj4);
+    obj4.children = closure_16(guild(4556).Text, obj5);
+    tmp27Result = closure_16(tmp28, obj4);
   }
   items5[1] = tmp27Result;
   if (canEveryoneRoleResult) {
     const obj6 = { style: tmp3.adminWarning, children: null };
-    const obj7 = { messageType: tmp6(1178).HelpMessageTypes.WARNING, children: null };
-    const intl4 = tmp6(1114).intl;
-    obj7.children = intl4.string(tmp6(1114).t["5f3HIC"]);
-    obj6.children = tmp27(tmp6(1178).HelpMessage, obj7);
-    canEveryoneRoleResult = tmp27(tmp28, obj6);
+    const obj7 = { messageType: guild(1178).HelpMessageTypes.WARNING, children: null };
+    const intl4 = guild(1114).intl;
+    obj7.children = intl4.string(guild(1114).t["5f3HIC"]);
+    obj6.children = closure_16(guild(1178).HelpMessage, obj7);
+    canEveryoneRoleResult = closure_16(tmp28, obj6);
   }
   items5[2] = canEveryoneRoleResult;
   if ("" !== str) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj8 = { children: null };
-        const obj9 = { Illustration: tmp6(9760).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj9 = { Illustration: guild(9760).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
-        const intl5 = tmp6(1114).intl;
+        const intl5 = guild(1114).intl;
         const obj10 = { query: str };
-        obj9.body = intl5.format(tmp6(1114).t.ErpIY3, obj10);
-        obj8.children = tmp27(tmp6(1178).EmptyState, obj9);
-        tmp27Result = tmp27(BottomSheetScrollView, obj8);
+        obj9.body = intl5.format(guild(1114).t.ErpIY3, obj10);
+        obj8.children = closure_16(guild(1178).EmptyState, obj9);
+        tmp27Result = closure_16(BottomSheetScrollView, obj8);
       }
       const obj11 = { children: null };
       items5[3] = tmp27Result;
       obj11.children = items5;
-      return tmp25(tmp26, obj11);
+      return closure_18(closure_17, obj11);
     }
   }
   const obj12 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
@@ -251,35 +249,35 @@ export default function AddMembersBody(pendingAdditions) {
     }
     obj.subLabel = stringResult;
     obj.onPress = function onPress() {
-      closure_0 = item;
+      const row = item;
       if (item.rowType !== constants.EMPTY_STATE) {
         importAll((arg0) => {
           let obj = {};
           const merged = Object.assign(arg0);
-          const combined = "" + closure_0.rowType + ":" + closure_0.id;
+          const combined = "" + row.rowType + ":" + row.id;
           if (combined in obj) {
             delete tmp[tmp2];
           } else {
-            const rowType = tmp4.rowType;
+            const rowType = row.rowType;
             if (constants.ROLE !== rowType) {
-              if (tmp6.ADMINISTRATOR !== rowType) {
-                user = user.getUser(tmp4.id);
+              if (constants.ADMINISTRATOR !== rowType) {
+                user = user.getUser(row.id);
                 if (null != user) {
-                  obj = { text: tmp4.name, icon: null };
+                  obj = { text: row.name, icon: null };
                   obj = { user, guildId: item.id, avatarStyle: sectionRowWrapper.tagAvatar, style: sectionRowWrapper.tagAvatar };
                   obj.icon = closure_3_16(guild(closure_3[17]).Avatar, obj);
                   let tmp7 = obj;
                 }
               }
               if (null != tmp7) {
-                const obj1 = { display: tmp7, row: tmp4 };
+                const obj1 = { display: tmp7, row };
                 obj[combined] = obj1;
               }
             }
-            const obj2 = { text: tmp4.name, icon: null };
+            const obj2 = { text: row.name, icon: null };
             const obj3 = { style: null };
             const items = [sectionRowWrapper.tagRoleColor, ];
-            const obj4 = { backgroundColor: tmp4.colorString };
+            const obj4 = { backgroundColor: row.colorString };
             items[1] = obj4;
             obj3.style = items;
             obj2.icon = closure_3_16(closure_7, obj3);
@@ -302,6 +300,7 @@ export default function AddMembersBody(pendingAdditions) {
     obj = {};
     const merged1 = Object.assign(obj);
     tmp20 = closure_1_16(pendingAdditions(sectionRowWrapper[19]), obj);
+    const tmp21 = pendingAdditions(sectionRowWrapper[19]);
   };
   obj12.renderSectionHeader = function renderSectionHeader(section) {
     let tmp2 = null;
@@ -312,5 +311,6 @@ export default function AddMembersBody(pendingAdditions) {
     return tmp2;
   };
   obj12.sections = items3;
-  tmp27Result = tmp27(BottomSheetSectionList, obj12);
+  tmp27Result = closure_16(BottomSheetSectionList, obj12);
+  const obj13 = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(6981)(obj).insets.bottom };
 };

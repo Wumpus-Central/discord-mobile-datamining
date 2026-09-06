@@ -3,6 +3,7 @@
 // Module 13154 (OrbCheckoutModalComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import shared from "shared" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
@@ -105,15 +106,15 @@ export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPr
   if (orbProductContext != null) {
     const orbPriceAmount = orbProductContext.orbPriceAmount;
   }
-  let tmp3Result = tmp3(4411);
+  let tmp3Result = shared;
   let str = "primary";
   if (tmp3Result.isThemeDark(tmp2)) {
     str = "primary-overlay";
   }
   obj = { variant: str, size: "lg", text: null, icon: null, iconPosition: "start", loading: null, onPress: null, disabled: null };
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.text = intl.string(util.t["zLch/S"]);
-  tmp3Result = tmp3(4411);
+  tmp3Result = shared;
   let str2 = "control-primary-text-default";
   if (tmp3Result.isThemeDark(tmp2)) {
     str2 = "control-overlay-primary-text-default";

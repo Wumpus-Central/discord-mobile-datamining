@@ -15,7 +15,7 @@ export default function GameProfileGameClaimCta(trackAction) {
   const items = [trackAction];
   const linkedApplications = trackAction.game.linkedApplications;
   let someResult;
-  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

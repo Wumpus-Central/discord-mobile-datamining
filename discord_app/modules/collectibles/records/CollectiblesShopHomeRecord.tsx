@@ -22,23 +22,23 @@ const prototype = function CollectiblesShopHomeRecord(shop_blocks) {
     type = type.type;
     if (ShopBlockType.ShopBlockType.HERO === type) {
       return HeroBlockRecord.fromServer(type);
-    } else if (tmp(tmp2[11]).ShopBlockType.FEATURED === type) {
+    } else if (ShopBlockType.ShopBlockType.FEATURED === type) {
       return FeaturedBlockRecord.fromServer(type);
-    } else if (tmp(tmp2[11]).ShopBlockType.FEED === type) {
+    } else if (ShopBlockType.ShopBlockType.FEED === type) {
       return FeedBlockRecord.fromServer(type);
-    } else if (tmp(tmp2[11]).ShopBlockType.WIDE_BANNER === type) {
+    } else if (ShopBlockType.ShopBlockType.WIDE_BANNER === type) {
       return WideBannerBlockRecord.fromServer(type);
-    } else if (tmp(tmp2[11]).ShopBlockType.SHELF === type) {
+    } else if (ShopBlockType.ShopBlockType.SHELF === type) {
       return ShelfBlockRecord.fromServer(type);
-    } else if (tmp(tmp2[11]).ShopBlockType.COUNTDOWN_TIMER === type) {
+    } else if (ShopBlockType.ShopBlockType.COUNTDOWN_TIMER === type) {
       return CountdownTimerBlockRecord.fromServer(type);
-    } else if (tmp(tmp2[11]).ShopBlockType.IMMERSIVE_BANNER === type) {
+    } else if (ShopBlockType.ShopBlockType.IMMERSIVE_BANNER === type) {
       return closure_1_8.fromServer(type);
-    } else if (tmp(tmp2[11]).ShopBlockType.REWARD_HERO === type) {
+    } else if (ShopBlockType.ShopBlockType.REWARD_HERO === type) {
       return RewardHeroBlockRecord.fromServer(type);
-    } else if (tmp(tmp2[11]).ShopBlockType.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER === type) {
+    } else if (ShopBlockType.ShopBlockType.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER === type) {
       return closure_1_11.fromServer(type);
-    } else if (tmp(tmp2[11]).ShopBlockType.GAME_SERVER_HOSTING_BANNER === type) {
+    } else if (ShopBlockType.ShopBlockType.GAME_SERVER_HOSTING_BANNER === type) {
       return closure_1_6.fromServer(type);
     }
   });
@@ -55,23 +55,23 @@ prototype["fromServer"] = function fromServer(shop_blocks) {
       type = type.type;
       if (ShopBlockType.ShopBlockType.HERO === type) {
         return HeroBlockRecord.fromServer(type);
-      } else if (tmp(tmp2[11]).ShopBlockType.FEATURED === type) {
+      } else if (ShopBlockType.ShopBlockType.FEATURED === type) {
         return FeaturedBlockRecord.fromServer(type);
-      } else if (tmp(tmp2[11]).ShopBlockType.FEED === type) {
+      } else if (ShopBlockType.ShopBlockType.FEED === type) {
         return FeedBlockRecord.fromServer(type);
-      } else if (tmp(tmp2[11]).ShopBlockType.WIDE_BANNER === type) {
+      } else if (ShopBlockType.ShopBlockType.WIDE_BANNER === type) {
         return WideBannerBlockRecord.fromServer(type);
-      } else if (tmp(tmp2[11]).ShopBlockType.SHELF === type) {
+      } else if (ShopBlockType.ShopBlockType.SHELF === type) {
         return ShelfBlockRecord.fromServer(type);
-      } else if (tmp(tmp2[11]).ShopBlockType.COUNTDOWN_TIMER === type) {
+      } else if (ShopBlockType.ShopBlockType.COUNTDOWN_TIMER === type) {
         return CountdownTimerBlockRecord.fromServer(type);
-      } else if (tmp(tmp2[11]).ShopBlockType.IMMERSIVE_BANNER === type) {
+      } else if (ShopBlockType.ShopBlockType.IMMERSIVE_BANNER === type) {
         return closure_1_8.fromServer(type);
-      } else if (tmp(tmp2[11]).ShopBlockType.REWARD_HERO === type) {
+      } else if (ShopBlockType.ShopBlockType.REWARD_HERO === type) {
         return RewardHeroBlockRecord.fromServer(type);
-      } else if (tmp(tmp2[11]).ShopBlockType.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER === type) {
+      } else if (ShopBlockType.ShopBlockType.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER === type) {
         return closure_1_11.fromServer(type);
-      } else if (tmp(tmp2[11]).ShopBlockType.GAME_SERVER_HOSTING_BANNER === type) {
+      } else if (ShopBlockType.ShopBlockType.GAME_SERVER_HOSTING_BANNER === type) {
         return closure_1_6.fromServer(type);
       }
     });

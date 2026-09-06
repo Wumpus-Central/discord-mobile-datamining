@@ -4,6 +4,7 @@
 import UserSettings from "UserSettings" /* 1935 */;
 import useToken from "useToken" /* 4262 */;
 import LinkIcon from "LinkIcon" /* 4503 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import createStyles from "createStyles" /* 4560 */;
 import useFontScale from "useFontScale" /* 4982 */;
 import ImageIcon from "ImageIcon" /* 5087 */;
@@ -23,7 +24,6 @@ import ChannelListLayout from "ChannelListLayout" /* 10121 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 
-const Text_Text = tmp(4556);
 require = fn;
 function PreviewIcon(icon) {
   icon = icon.icon;
@@ -261,4 +261,5 @@ export const NativeMessageChannelRowPreview = noop.memo((message) => {
   obj = {};
   const merged1 = Object.assign(message);
   tmp7 = closure_6(ChannelRowPreview, obj);
+  obj2 = require("useFormattedMessagePreview");
 });

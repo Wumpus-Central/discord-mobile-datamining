@@ -2,9 +2,13 @@
 
 // Module 14840 (AndroidViewNsfwDmCommandsSetting)
 import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import UserSettings from "UserSettings" /* 1935 */;
 import AgeGateUtils from "AgeGateUtils" /* 4771 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
 import SettingsConstants from "SettingsConstants" /* 7975 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9296 */;
 import useNSFWAllowed from "useNSFWAllowed" /* 9297 */;
 import SettingBuilders from "SettingBuilders" /* 11468 */;
@@ -27,11 +31,11 @@ const toggle = SettingBuilders.createToggle({
     let obj = AgeGateUtils;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
-        obj = { entryPoint: tmp(8413).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS };
+        obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
       }
     }
-    const ViewNsfwCommands = tmp(1935).ViewNsfwCommands;
+    const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
@@ -40,7 +44,7 @@ const toggle = SettingBuilders.createToggle({
     if (flag == null) {
       flag = true;
     }
-    let tmpResult = tmp(4773);
+    let tmpResult = AgeVerificationUtils;
     if (shouldAgeVerifyForSettingsToggles) {
       shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
     }
@@ -48,7 +52,7 @@ const toggle = SettingBuilders.createToggle({
       shouldAgeVerifyForSettingsToggles = flag;
     }
     if (shouldAgeVerifyForSettingsToggles) {
-      tmpResult = tmp(1115);
+      tmpResult = PlatformUtils;
       shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
     }
     return shouldAgeVerifyForSettingsToggles;

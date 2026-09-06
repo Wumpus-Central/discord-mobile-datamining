@@ -2,9 +2,12 @@
 
 // Module 9437 (oauth2/Header)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import BotTagDefault from "BotTag" /* 9438 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +36,7 @@ export default function Header(accountScopes) {
   let userAvatarSource;
   const applicationIconSource = obj.getApplicationIconSource(obj);
   if (null != user) {
-    let tmp2Result = tmp2(1396);
+    let tmp2Result = AvatarUtilsDefault;
     userAvatarSource = tmp2Result.getUserAvatarSource(user);
   }
   obj = { style: tmp.header, children: null };
@@ -56,23 +59,23 @@ export default function Header(accountScopes) {
   if (null != bot) {
     const obj10 = { style: tmp.botTag, verified: null };
     let hasFlagResult = null != bot.public_flags;
-    tmp2Result = tmp2(9438);
+    tmp2Result = BotTagDefault;
     if (hasFlagResult) {
-      hasFlagResult = tmp9(1384).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
-      const tmp9Result = tmp9(1384);
+      hasFlagResult = FlagUtils.hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
+      const tmp9Result = FlagUtils;
     }
     obj10.verified = hasFlagResult;
-    tmp8Result = tmp8(tmp2Result, obj10);
+    tmp8Result = hasOwnProperty(tmp2Result, obj10);
   }
   items3[1] = tmp8Result;
   obj8.children = items3;
   items2[1] = timestampProducer(View, obj8);
   if (accountScopes.accountScopes.length > 0) {
-    const intl2 = tmp9(1114).intl;
-    let stringResult = intl2.string(tmp9(1114).t.jFbDnJ);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.jFbDnJ);
   } else {
-    const intl = tmp9(1114).intl;
-    stringResult = intl.string(tmp9(1114).t["X+Fdpo"]);
+    const intl = util.intl;
+    stringResult = intl.string(util.t["X+Fdpo"]);
   }
   items2[2] = hasOwnProperty(Text_Text.Text, { variant: "heading-md/normal", color: "text-default", children: stringResult });
   obj.children = items2;

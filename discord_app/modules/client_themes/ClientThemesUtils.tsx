@@ -53,17 +53,17 @@ export const getLinearGradientForBackgroundGradient = function getLinearGradient
 export const areThemesEqualForGradientThemes = function areThemesEqualForGradientThemes(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
-    let tmp3 = arg0 === ThemeTypes.DARK && arg1 === tmp2.DARKER;
+    let tmp3 = arg0 === ThemeTypes.DARK && arg1 === ThemeTypes.DARKER;
     if (!tmp3) {
-      tmp3 = arg0 === tmp2.DARKER && arg1 === tmp2.DARK;
-      const tmp4 = arg0 === tmp2.DARKER && arg1 === tmp2.DARK;
+      tmp3 = arg0 === ThemeTypes.DARKER && arg1 === ThemeTypes.DARK;
+      const tmp4 = arg0 === ThemeTypes.DARKER && arg1 === ThemeTypes.DARK;
     }
     tmp = tmp3;
   }
   return tmp;
 };
-export const getBaseTheme = function getBaseTheme(arg0) {
-  return shared.isThemeDark(closure_3[arg0]) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
+export const getBaseTheme = function getBaseTheme(UNSET) {
+  return shared.isThemeDark(closure_3[UNSET]) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
 };
 export const getThemeName = function getThemeName(DARK) {
   closure_0 = DARK;

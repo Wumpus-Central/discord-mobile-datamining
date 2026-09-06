@@ -3,11 +3,14 @@
 // Module 14938 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8886 */;
 import applications from "applications" /* 9241 */;
+import EmbedIcon from "EmbedIcon" /* 9431 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7107 */;
 
@@ -118,6 +121,7 @@ export default function UserSettingsAuthedApps() {
     return tmp10;
   }
   tmp10 = closure_11(closure_5, { style: tmp.spinner, animating: true, size: "large" });
+  let obj3 = { style: tmp.spinner, animating: true, size: "large" };
 };
 export const DisclosureIcon = function DisclosureIcon(disclosure) {
   disclosure = disclosure.disclosure;
@@ -126,14 +130,13 @@ export const DisclosureIcon = function DisclosureIcon(disclosure) {
   return noop.useMemo(() => {
     if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
       let obj = { style, size: "xs" };
-      return closure_2_11(tmp2(8886).GlobeEarthIcon, obj);
-    } else if (tmp2(9241).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === tmp) {
+      return closure_2_11(GlobeEarthIcon.GlobeEarthIcon, obj);
+    } else if (applications.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
       obj = { style, size: "xs" };
-      return closure_2_11(tmp2(9431).EmbedIcon, obj);
+      return closure_2_11(EmbedIcon.EmbedIcon, obj);
     } else {
       obj = { style, size: "xs" };
-      return closure_2_11(tmp2(4515).CircleInformationIcon, obj);
+      return closure_2_11(CircleInformationIcon.CircleInformationIcon, obj);
     }
-    tmp = disclosure;
   }, items);
 };

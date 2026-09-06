@@ -5,6 +5,8 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
 import CircleXIcon from "CircleXIcon" /* 6616 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 6968 */;
+import EyeIcon from "EyeIcon" /* 6970 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7209 */;
 import FlagIcon from "FlagIcon" /* 8664 */;
 import _modDef8665 from "module_8665" /* 8665 */;
@@ -125,15 +127,15 @@ export default function SafetyToolsActionSheet(channelId) {
     const obj2 = { label: stringResult, subLabel: null, icon: null, IconComponent: null, disabled: null, onPress: null };
     let stringResult1;
     if (!stateFromStores1) {
-      const intl8 = tmp(1114).intl;
-      stringResult1 = intl8.string(tmp(1114).t.fCfp49);
+      const intl8 = util.intl;
+      stringResult1 = intl8.string(util.t.fCfp49);
     }
     obj2.subLabel = stringResult1;
     obj2.icon = importDefault(stateFromStores1 ? 6971 : 6969);
     if (stateFromStores1) {
-      let EyeSlashIcon = tmp(6970).EyeIcon;
+      let EyeSlashIcon = EyeIcon.EyeIcon;
     } else {
-      EyeSlashIcon = tmp(6968).EyeSlashIcon;
+      EyeSlashIcon = EyeSlashIcon2.EyeSlashIcon;
     }
     obj2.IconComponent = EyeSlashIcon;
     obj2.disabled = stateFromStores;
@@ -148,9 +150,9 @@ export default function SafetyToolsActionSheet(channelId) {
       }
     };
     const items = [obj2, , ];
-    const intl9 = tmp(1114).intl;
+    const intl9 = util.intl;
     const string2 = intl9.string;
-    const t2 = tmp(1114).t;
+    const t2 = util.t;
     if (stateFromStores) {
       let string2Result = string2(t2.Hro40y);
     } else {
@@ -158,20 +160,20 @@ export default function SafetyToolsActionSheet(channelId) {
     }
     const obj3 = { sectionKey: "action", buttons: null };
     const obj4 = { label: string2Result, subLabel: null, icon: null, IconComponent: null, onPress: null };
-    const intl10 = tmp(1114).intl;
+    const intl10 = util.intl;
     obj4.subLabel = intl10.string(util.t.Lj37az);
     obj4.icon = _modDef11401;
     obj4.IconComponent = CircleXIcon.CircleXIcon;
     obj4.onPress = function onPress() {
       if (stateFromStores) {
-        let tmpResult = tmp(tmp2[24]);
+        let tmpResult = warningId(warningType[24]);
         let obj = { location: lastChannelMessage };
         tmpResult.unblockUser(recipientId, obj);
         const result = warningId(warningType[27]).showUnblockSuccessToast(recipientId, closure_1_0);
         trackAnalyticsEvent(channelId(warningType[11]).CtaEventTypes.USER_SAFETY_TOOLS_UNBLOCK);
         const obj5 = warningId(warningType[27]);
       } else {
-        tmpResult = tmp(tmp2[28]);
+        tmpResult = warningId(warningType[28]);
         obj = {
           importer() {
               return channelId(warningType[18])(warningType[29], warningType.paths).then((result) => {
@@ -185,9 +187,9 @@ export default function SafetyToolsActionSheet(channelId) {
     };
     items[1] = obj4;
     let obj5 = { label: null, subLabel: null, icon: null, IconComponent: null, onPress: null };
-    const intl11 = tmp(1114).intl;
+    const intl11 = util.intl;
     obj5.label = intl11.string(util.t.X27yhD);
-    const intl12 = tmp(1114).intl;
+    const intl12 = util.intl;
     obj5.subLabel = intl12.string(util.t["0tydOa"]);
     obj5.icon = _modDef8665;
     obj5.IconComponent = FlagIcon.FlagIcon;
@@ -200,9 +202,9 @@ export default function SafetyToolsActionSheet(channelId) {
     obj3.buttons = items;
     const items1 = [obj3, , ];
     const obj6 = { label: null, subLabel: null, icon: null, IconComponent: null, trailing: null, onPress: null };
-    const intl13 = tmp(1114).intl;
+    const intl13 = util.intl;
     obj6.label = intl13.string(util.t.syuaPI);
-    const intl14 = tmp(1114).intl;
+    const intl14 = util.intl;
     obj6.subLabel = intl14.string(util.t.LLBnNk);
     obj6.icon = _modDef9912;
     obj6.IconComponent = MusicIcon.MusicIcon;
@@ -220,9 +222,9 @@ export default function SafetyToolsActionSheet(channelId) {
     };
     const items2 = [obj6, , ];
     const obj7 = { label: null, subLabel: null, icon: null, IconComponent: null, trailing: null, onPress: null };
-    const intl15 = tmp(1114).intl;
+    const intl15 = util.intl;
     obj7.label = intl15.string(util.t["7LgVmt"]);
-    const intl16 = tmp(1114).intl;
+    const intl16 = util.intl;
     obj7.subLabel = intl16.string(util.t.pwoRjc);
     obj7.icon = _modDef11406;
     obj7.IconComponent = EducationIcon.EducationIcon;
@@ -253,7 +255,7 @@ export default function SafetyToolsActionSheet(channelId) {
     items1[1] = { sectionKey: "support", buttons: items2 };
     const obj8 = { sectionKey: "info", buttons: null };
     const obj9 = { label: null, icon: null, IconComponent: null, trailing: null, onPress: null };
-    const intl17 = tmp(1114).intl;
+    const intl17 = util.intl;
     obj9.label = intl17.string(util.t.otdt24);
     obj9.icon = _modDef9401;
     obj9.IconComponent = ShieldIcon.ShieldIcon;
@@ -297,7 +299,7 @@ export default function SafetyToolsActionSheet(channelId) {
         ({ label, subLabel, IconComponent, icon, trailing, onPress, disabled } = item);
         return stateFromStores1(channelId(5605).TableRow, { label, subLabel, onPress, trailing, disabled, icon: stateFromStores1(channelId(5611).TableRowIcon, { source: icon, IconComponent }) }, index);
       });
-      return <View key={arg0.sectionKey} hasIcons>{jsx(TableRowGroup.TableRowGroup, { style: actionRowGroup.actionRowGroup, children: null })}</View>;
+      return <View key={buttons.sectionKey} hasIcons>{jsx(TableRowGroup.TableRowGroup, { style: actionRowGroup.actionRowGroup, children: null })}</View>;
     })
   };
   obj.children = stateFromStores1(onClose, obj);

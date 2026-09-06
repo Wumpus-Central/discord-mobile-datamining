@@ -136,4 +136,5 @@ export default function ConnectedChannelSettingsInstantInvites() {
   items8[1] = tmpResult;
   obj2.children = items8;
   tmp16Result = closure_10(stateFromStoresArray, obj2);
+  const obj4 = require("initialize");
 };

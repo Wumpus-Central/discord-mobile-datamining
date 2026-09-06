@@ -5,9 +5,9 @@ import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9217 */;
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 9253 */;
+import beginConsoleTransfer from "beginConsoleTransfer" /* 9447 */;
 import noop from "module_19" /* 19 */;
 
-const beginConsoleTransfer = tmp(9447);
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
@@ -19,6 +19,7 @@ export const onConnectToConsole = function onConnectToConsole(channel, found) {
   if (found.twoWayLink) {
     if (!found.revoked) {
       beginConsoleTransfer.beginConsoleTransfer(channel, found.type);
+      const tmpResult = beginConsoleTransfer;
     }
   }
   const type = found.type;
@@ -36,18 +37,18 @@ export const useOnConnectToConsole = function useOnConnectToConsole(channel, acc
   return noop.useCallback(() => {
     const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.DONUT_MOBILE_NUX);
     if (account.twoWayLink) {
-      if (!tmp2.revoked) {
-        beginConsoleTransfer.beginConsoleTransfer(closure_0, tmp2.type);
+      if (!account.revoked) {
+        beginConsoleTransfer.beginConsoleTransfer(closure_0, account.type);
         const tmp3Result = beginConsoleTransfer;
       }
     }
-    const type = tmp2.type;
+    const type = account.type;
     if (constants2.XBOX === type) {
       const items = [constants.CHANNEL_CALL];
       XboxLinkModalActionCreatorsDefault.showModal(items);
-    } else if (tmp7.PLAYSTATION === type) {
+    } else if (constants2.PLAYSTATION === type) {
       const items1 = [constants.CHANNEL_CALL];
-      PlayStationLinkModalActionCreatorsDefault.showModal(items1, tmp2.type);
+      PlayStationLinkModalActionCreatorsDefault.showModal(items1, account.type);
     }
   }, items);
 };

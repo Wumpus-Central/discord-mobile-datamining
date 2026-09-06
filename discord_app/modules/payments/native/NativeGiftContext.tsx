@@ -210,12 +210,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       const obj = { gift_style, recipient_id: recipientUserId, custom_message: onClose, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null };
       let id;
       if (setCurrentAnalyticsStep != null) {
-        id = tmp.id;
+        id = setCurrentAnalyticsStep.id;
       }
       obj.emoji_id = id;
       let surrogates;
       if (setCurrentAnalyticsStep != null) {
-        surrogates = tmp.surrogates;
+        surrogates = setCurrentAnalyticsStep.surrogates;
       }
       obj.emoji_name = surrogates;
       let soundId;
@@ -333,15 +333,15 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                     tmp14 = tmp15;
                   }
                   const needsPlanSync = tmp14;
-                  needsGiftSync = tmp20;
+                  needsGiftSync = setSoundEffect.current.giftInfo !== id2;
                   c5 = false;
-                  let id2;
+                  id2 = undefined;
                   if (tmp != null) {
                     id2 = tmp.id;
                   }
                   tmp11.current = true;
                   closure_7 = tmp24;
-                  const promise = setCurrentAnalyticsStep(function*(arg0, value) {
+                  const promise = setCurrentAnalyticsStep(function*() {
                     if (c5 === 2) {
                       c5 = 3;
                       throw new TypeError("Generator functions may not be called on executing generators");
@@ -484,7 +484,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                       }
                     }
                   })();
-                  setCurrentAnalyticsStep(function*(arg0, value) {
+                  const tmp20 = setSoundEffect.current.giftInfo !== id2;
+                  setCurrentAnalyticsStep(function*() {
                     if (c5 === 2) {
                       c5 = 3;
                       throw new TypeError("Generator functions may not be called on executing generators");
@@ -635,6 +636,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                     if (!c5) {
                       first4(error);
                     }
+                    const obj1 = { error, orderId: id };
                   }).finally(() => {
                     first5.current = false;
                     if (ref.current.orderId !== id2) {
@@ -668,19 +670,18 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
             tmp6 = hasItem;
           }
           if (tmp6) {
-            const result = PremiumGiftingIntentActionCreators.logGiftIntentFlowPurchasedGift(tmp18);
+            const result = PremiumGiftingIntentActionCreators.logGiftIntentFlowPurchasedGift(recipientUserId);
           }
           if (closure_0 != null) {
             closure_0();
           }
           DispatcherDefault.unsubscribe("GIFT_CODE_CREATE", handleGiftCodeCreate);
-          tmp18 = recipientUserId;
         }
         closure_19(false);
       }
       return handleGiftCodeCreate;
     }, items8);
-    _require = setCurrentAnalyticsStep(function*(arg0, value) {
+    _require = setCurrentAnalyticsStep(function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -777,7 +778,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     callback3 = obj.useCallback((arg0) => {
       let obj = first1;
       if (null != first1.getNextTier(closure_0(onClose[26]).BadgeId.GIFTING)) {
-        const singleRequirementProgress = obj.getSingleRequirementProgress(tmp(tmp2[26]).BadgeId.GIFTING);
+        const singleRequirementProgress = obj.getSingleRequirementProgress(tmp(onClose[26]).BadgeId.GIFTING);
         let current;
         if (singleRequirementProgress != null) {
           current = singleRequirementProgress.current;
@@ -800,14 +801,14 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
             }
           }
         }
-        const subscription = recipientUserId(tmp2[31]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", handleGPlayUpdatePurchaseAction);
-        const obj3 = recipientUserId(tmp2[31]);
+        const subscription = recipientUserId(onClose[31]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", handleGPlayUpdatePurchaseAction);
+        const obj3 = recipientUserId(onClose[31]);
       }
       setCurrentAnalyticsStep(closure_0(onClose[33]).PaymentFlowStep.REVIEW);
       obj = { productId: productIdForGift, isGift: true, analyticsLoadId: closure_0.load_id, analyticsLocation: closure_0.location, analyticsLocations: closure_0.location_stack, allowPlanChange: false, giftInfoOptions: memo1, onPurchaseComplete: null, onPurchaseError: null, orderId: null, analyticsData: null };
       closure_0 = setCurrentAnalyticsStep(function*() {
         yield closure_1_39(closure_1);
-        return arg1;
+        return value;
       });
       obj.onPurchaseComplete = function() {
         const self = this;
@@ -825,11 +826,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       obj.orderId = orderContext.orderId;
       obj = { load_id: closure_0.load_id, succeededOnlyFields: null };
       const obj1 = { is_custom_message_edited: null, is_custom_emoji_sound_available: false };
-      const intl = tmp(tmp2[17]).intl;
+      const intl = tmp(onClose[17]).intl;
       obj1.is_custom_message_edited = first3 !== intl.string(closure_0(onClose[17]).t.ZkOo1U);
       obj.succeededOnlyFields = obj1;
       obj.analyticsData = obj;
       handlePremiumPurchase(obj);
+      tmpResult = closure_0(onClose[32]);
     }, items11);
     const items12 = [orderContext, recipientUserId, stateFromStores, first2, premiumType, first1, productIdForGift, first3, first4, first5, first6, first7, first10, basePurchaseAnalytics, setCurrentAnalyticsStep, tmp5, tmp9, onClose, callback3, stateFromStoresArray, fetchClaimableGiftingPromotionRewardSkuIds, first9, tmp29];
     obj1 = {

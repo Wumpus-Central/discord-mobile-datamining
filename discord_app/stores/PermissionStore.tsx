@@ -193,9 +193,9 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     if (set.has(context.type)) {
       const channel = ChannelStore.getChannel(context.parent_id);
       if (null == channel) {
-        let NONE4 = tmp(4204).NONE;
+        let NONE4 = PermissionUtilsAll.NONE;
       } else {
-        let tmpResult = tmp(4204);
+        let tmpResult = PermissionUtilsAll;
         const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
         NONE4 = tmpResult.applyThreadPermissions(context, tmp24, JoinedThreadsStore.hasJoined(context.id), GuildMemberStore.isCurrentUserGuest(context.guild_id));
         const hasJoinedResult = JoinedThreadsStore.hasJoined(context.id);
@@ -219,13 +219,13 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       if (null == NONE2) {
         const currentUser = UserStore.getCurrentUser();
         if (null == currentUser) {
-          NONE2 = tmp(4204).NONE;
+          NONE2 = PermissionUtilsAll.NONE;
         } else {
           const guild = GuildStore.getGuild(id);
           if (null == guild) {
-            let NONE3 = tmp(4204).NONE;
+            let NONE3 = PermissionUtilsAll.NONE;
           } else {
-            tmpResult = tmp(4204);
+            tmpResult = PermissionUtilsAll;
             obj = { user: currentUser, context: guild, checkElevated: true };
             NONE3 = tmpResult.computePermissions(obj);
             dependencyMap[id] = NONE3;
@@ -241,6 +241,7 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
   }
   obj = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
   NONE = PermissionUtilsAll.computePermissions(obj);
+  const tmpResult1 = PermissionUtilsAll;
 }
 const ChannelRecord = fn(1961);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
@@ -318,16 +319,16 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
   if (null == NONE) {
     const currentUser = UserStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4204).NONE;
+      NONE = PermissionUtilsAll.NONE;
     } else {
       const guild = GuildStore.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4204).NONE;
+        let NONE2 = PermissionUtilsAll.NONE;
       } else {
         obj = { user: currentUser, context: guild, checkElevated: true };
-        NONE2 = tmp(4204).computePermissions(obj);
+        NONE2 = PermissionUtilsAll.computePermissions(obj);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4204);
+        const tmpResult = PermissionUtilsAll;
       }
       NONE = NONE2;
     }
@@ -341,16 +342,16 @@ prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
   if (null == NONE) {
     const currentUser = UserStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4204).NONE;
+      NONE = PermissionUtilsAll.NONE;
     } else {
       guild = GuildStore.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4204).NONE;
+        let NONE2 = PermissionUtilsAll.NONE;
       } else {
         obj = { user: currentUser, context: guild, checkElevated: true };
-        NONE2 = tmp(4204).computePermissions(obj);
+        NONE2 = PermissionUtilsAll.computePermissions(obj);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4204);
+        const tmpResult = PermissionUtilsAll;
       }
       NONE = NONE2;
     }
@@ -370,9 +371,9 @@ prototype["canWithPartialContext"] = function canWithPartialContext(MANAGE_MESSA
     canResult = self.can(MANAGE_MESSAGES, GuildStore.getGuild(channelId.guildId));
   }
 };
-prototype["can"] = function can(arg0, arg1, arg2, arg3, arg4) {
+prototype["can"] = function can(VIEW_CHANNEL, arg1, arg2, arg3, arg4) {
   const tmp = computePermissions(arg1, arg2, arg3, arg4);
-  return BigFlagUtilsAll.has(tmp, arg0);
+  return BigFlagUtilsAll.has(tmp, VIEW_CHANNEL);
 };
 prototype["canBasicChannel"] = function canBasicChannel(VIEW_CHANNEL, basicChannel, arg2, arg3, arg4) {
   if ("basicPermissions" in basicChannel) {
@@ -421,15 +422,15 @@ prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, stateFrom
     }
   }
 };
-prototype["getHighestRole"] = function getHighestRole(arg0) {
+prototype["getHighestRole"] = function getHighestRole(guild) {
   const currentUser = UserStore.getCurrentUser();
   let highestRole = null;
   if (null != currentUser) {
-    highestRole = PermissionUtilsAll.getHighestRole(arg0, currentUser.id);
+    highestRole = PermissionUtilsAll.getHighestRole(guild, currentUser.id);
   }
   return highestRole;
 };
-prototype["isRoleHigher"] = function isRoleHigher(id, arg1, arg2) {
+prototype["isRoleHigher"] = function isRoleHigher(id, highestRole, role) {
   const currentUser = UserStore.getCurrentUser();
   const isViewingRolesResult = ImpersonateStore.isViewingRoles(id.id);
   let tmp3;
@@ -440,7 +441,7 @@ prototype["isRoleHigher"] = function isRoleHigher(id, arg1, arg2) {
     }
     tmp3 = id;
   }
-  return PermissionUtilsAll.isRoleHigher(id, tmp3, arg1, arg2);
+  return PermissionUtilsAll.isRoleHigher(id, tmp3, highestRole, role);
 };
 prototype["canImpersonateRole"] = function canImpersonateRole(arg0, id) {
   const self = this;

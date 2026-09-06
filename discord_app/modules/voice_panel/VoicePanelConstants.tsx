@@ -25,9 +25,9 @@ export const VoicePanelModes = MODE_CHANGE_PHYSICS_CLAMPED;
 export const getAnalyticsNameForVoicePanelMode = function getAnalyticsNameForVoicePanelMode(arg0) {
   if (obj.DISMISSED === arg0) {
     return "dismissed";
-  } else if (tmp.PIP === arg0) {
+  } else if (obj.PIP === arg0) {
     return "pip";
-  } else if (tmp.PANEL === arg0) {
+  } else if (obj.PANEL === arg0) {
     return "grid";
   }
 };

@@ -76,7 +76,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     let num = 0;
     if (tmp2) {
       const _Math = Math;
-      num = Math.max(tmp - length, 0);
+      num = Math.max(closure_3 - length, 0);
     }
     let tmp4 = arr;
     if (num > 0) {
@@ -93,11 +93,11 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
   let tmp5Result = tmp5(tmp2(tmp3[15])(() => {
     let id;
     if (stateFromStores != null) {
-      id = tmp.id;
+      id = stateFromStores.id;
     }
     let guild_id;
     if (stateFromStores != null) {
-      guild_id = tmp.guild_id;
+      guild_id = stateFromStores.guild_id;
     }
     return GuildScheduledEventManagerDefault.getGuildEventUsers(id, null, guild_id);
   }), 2);
@@ -158,8 +158,8 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     if (items4.length > 1) {
       obj2 = { style: tmp.segmentedControl, children: null };
       const obj3 = { state: tmp28 };
-      obj2.children = tmp35(tmp8(tmp3[20]).SegmentedControl, obj3);
-      tmp35Result = tmp35(tmp34, obj2);
+      obj2.children = closure_10(tmp8(tmp3[20]).SegmentedControl, obj3);
+      tmp35Result = closure_10(tmp34, obj2);
     }
     items5[1] = tmp35Result;
     obj.children = items5;
@@ -168,11 +168,11 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     if (tmp31 === tmp25.EVENT_INFO) {
       const obj6 = { children: null };
       const obj7 = { guildEvent: stateFromStores, safeBottomPadding: bottom, onCloseActionSheet, onLayout: callback, recurrenceId: first, onRecurrencePress: tmp6[1] };
-      obj6.children = tmp35(tmp2(tmp3[23]), obj7);
-      tmp35Result = tmp35(tmp8(tmp3[22]).BottomSheetScrollView, obj6);
+      obj6.children = closure_10(tmp2(tmp3[23]), obj7);
+      tmp35Result = closure_10(tmp8(tmp3[22]).BottomSheetScrollView, obj6);
     } else {
       const obj8 = { userListItems: memo, guildId: stateFromStores.guild_id, loading, error, contentHeight: tmp22 - bottom, safeBottomPadding: bottom };
-      tmp35Result = tmp35(tmp2(tmp3[24]), obj8);
+      tmp35Result = closure_10(tmp2(tmp3[24]), obj8);
     }
     obj5.children = tmp35Result;
     obj4.children = closure_10(tmp8(tmp3[21]).BottomSheet, obj5);

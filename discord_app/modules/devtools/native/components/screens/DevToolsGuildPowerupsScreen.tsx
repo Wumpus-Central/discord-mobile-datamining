@@ -3,6 +3,7 @@
 // Module 15701 (DevToolsGuildPowerupsScreen)
 import nativeDefault from "native" /* 576 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _modDef4153 from "module_4153" /* 4153 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
@@ -26,7 +27,7 @@ function setWarningBoosts() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _setWarningBoosts(arg0, value) {
+let closure_22 = async function _setWarningBoosts(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -90,7 +91,7 @@ let closure_22 = async function _setWarningBoosts(arg0, value) {
     }
   }
 };
-let closure_23 = async function _sendPowerupsSystemMessage(arg0, value) {
+let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -151,10 +152,10 @@ function GuildDCSwitchRow(dc) {
   const items = [dc, guildId];
   const callback = noop.useCallback((arg0) => {
     if (arg0) {
-      let tmpResult = tmp(12494);
+      let tmpResult = GuildDismissibleContentUtils;
       const result = tmpResult.markContentAsDismissed(dc, guildId, false);
     } else {
-      tmpResult = tmp(1940);
+      tmpResult = UserSettingsProtoActionCreators;
       const result1 = tmpResult.removeDismissedRecurringContent(dismissible_content.DismissibleContent.GUILD_POWERUP_NOTIFICATION);
       const result2 = GuildDismissibleContentUtils.unmarkContentAsDismissed(dc, guildId);
     }
@@ -297,7 +298,7 @@ export default function DevToolsGuildPowerupsScreen() {
     obj11.children = closure_18(tmp5(5605).TableRow, obj12);
     items6[6] = closure_18(tmp5(5687).TableRowGroup, obj11);
     obj.children = items6;
-    tmp16Result = tmp16(closure_5, obj);
+    tmp16Result = closure_19(closure_5, obj);
   }
   return tmp16Result;
 };

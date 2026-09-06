@@ -15,19 +15,19 @@ function getAdaptiveImageCompressionQuality(size, ADAPTIVE_COMPRESSION_CONFIG) {
             HIGH5 = CompressionQuality.HIGH;
           }
           let HIGH = HIGH5;
-        } else if (result <= tmp11.MEDIUM) {
+        } else if (result <= obj.MEDIUM) {
           let HIGH4 = ADAPTIVE_COMPRESSION_CONFIG.highQuality;
           if (HIGH4 == null) {
             HIGH4 = CompressionQuality.HIGH;
           }
           HIGH = HIGH4;
-        } else if (result <= tmp11.LARGE) {
+        } else if (result <= obj.LARGE) {
           let HIGH3 = ADAPTIVE_COMPRESSION_CONFIG.mediumQuality;
           if (HIGH3 == null) {
             HIGH3 = CompressionQuality.HIGH;
           }
           HIGH = HIGH3;
-        } else if (result <= tmp11.VERY_LARGE) {
+        } else if (result <= obj.VERY_LARGE) {
           let HIGH2 = ADAPTIVE_COMPRESSION_CONFIG.lowQuality;
           if (HIGH2 == null) {
             HIGH2 = CompressionQuality.HIGH;
@@ -70,6 +70,7 @@ prototype["selectEncodingConfig"] = function selectEncodingConfig(size1) {
     num = 0.5;
   }
   obj = { compressionQuality: 100 * num, targetWidth, targetHeight };
+  const clampDimensionsResult = prototype.clampDimensions(size1.width, size1.height, 3840, 2160);
 };
 prototype["clampDimensions"] = function clampDimensions(width, height, arg2, arg3) {
   const bound = Math.max(width, height);

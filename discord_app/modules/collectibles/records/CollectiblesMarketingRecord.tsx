@@ -26,7 +26,7 @@ prototype["fromServer"] = function fromServer(marketings) {
   }
   const entries = Object.entries(marketings);
   if (typeof prototype === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(prototype.prototype);
     obj.marketingsBySurfaces = tmp3;
     return obj;
   } else {

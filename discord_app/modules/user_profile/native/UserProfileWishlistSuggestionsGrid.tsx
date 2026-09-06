@@ -10,9 +10,12 @@ import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
 import MobileWishlistSuggestionsExperiment from "MobileWishlistSuggestionsExperiment" /* 13085 */;
 import useCardGridLayoutDefault from "useCardGridLayout" /* 13086 */;
 import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 13091 */;
+import AddToWishlistGridDefault from "AddToWishlistGrid" /* 13094 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import WishlistStore from "WishlistStore" /* 8777 */;
+
+const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 function UserProfileWishlistSuggestionsGridContent(arg0) {
@@ -134,7 +137,7 @@ function WishlistSuggestionsGridContents(arg0) {
     }
     obj8.importantForAccessibility = str2;
     const obj9 = { size: "sm", variant: "icon-only", icon: null, onPress: null, accessibilityLabel: null };
-    const obj10 = { size: "sm", color: tmp6(576).colors.CONTROL_ICON_ONLY_ICON_DEFAULT };
+    const obj10 = { size: "sm", color: nativeDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT };
     obj9.icon = closure_12(tmp(5680).XSmallIcon, obj10);
     obj9.onPress = markAsDismissed;
     const intl = tmp(1114).intl;
@@ -144,7 +147,7 @@ function WishlistSuggestionsGridContents(arg0) {
     obj6.children = items4;
     const items6 = [closure_13(View, obj6), , ];
     const obj11 = { items: items2, wishlist, analyticsLocations, cardSize: useCardGridLayoutDefault(obj).cardWidth };
-    items6[1] = closure_12(tmp6(13094), obj11);
+    items6[1] = closure_12(AddToWishlistGridDefault, obj11);
     const obj12 = { style: tmp3.shopButtonContainer, children: null };
     const obj13 = { size: "md", variant: "secondary", icon: closure_12(tmp(12138).ShopIcon, { size: "sm" }), text: null, onPress: null };
     const intl2 = tmp(1114).intl;
@@ -153,8 +156,8 @@ function WishlistSuggestionsGridContents(arg0) {
     obj12.children = closure_12(tmp(4975).Button, obj13);
     items6[2] = closure_12(View, obj12);
     obj5.children = items6;
-    obj3.children = closure_13(tmp6(4296).View, obj5);
-    tmp12Result = tmp12(tmp(13093).WishlistAnalyticsProvider, obj3);
+    obj3.children = closure_13(ReanimatedRexportDefault.View, obj5);
+    tmp12Result = closure_12(tmp(13093).WishlistAnalyticsProvider, obj3);
   }
   return tmp12Result;
 }

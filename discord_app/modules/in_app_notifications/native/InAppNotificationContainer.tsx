@@ -26,28 +26,28 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     let obj = { notification };
     return jsx(MessageNotificationDefault, { notification });
-  } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
+  } else if (constants.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification };
     return jsx(MessageFailedToSendNotificationDefault, { notification });
-  } else if (tmp.FORUM_THREAD_CREATED === type) {
+  } else if (constants.FORUM_THREAD_CREATED === type) {
     const obj1 = { notification };
     return jsx(ForumThreadCreatedNotificationDefault, { notification });
-  } else if (tmp.BUG_REPORTER === type) {
+  } else if (constants.BUG_REPORTER === type) {
     const obj2 = { notification };
     return jsx(BugReporterNotification.BugReporterNotification, { notification });
-  } else if (tmp.ALERT === type) {
+  } else if (constants.ALERT === type) {
     const obj3 = { notification };
     return jsx(AlertNotificationDefault, { notification });
-  } else if (tmp.REACTION === type) {
+  } else if (constants.REACTION === type) {
     const obj4 = { notification };
     return jsx(ReactionNotificationDefault, { notification });
-  } else if (tmp.MESSAGE_REMINDER === type) {
+  } else if (constants.MESSAGE_REMINDER === type) {
     const obj5 = { notification };
     return jsx(ReminderNotificationDefault, { notification });
   } else {
-    if (tmp.RESTRICTED_HOURS_WARNING !== type) {
-      if (tmp.RESTRICTED_SCHEDULE_UPDATED !== type) {
-        if (tmp.MESSAGE_REQUEST === type) {
+    if (constants.RESTRICTED_HOURS_WARNING !== type) {
+      if (constants.RESTRICTED_SCHEDULE_UPDATED !== type) {
+        if (constants.MESSAGE_REQUEST === type) {
           obj = { notification };
           return jsx(MessageRequestNotificationDefault, { notification });
         } else {

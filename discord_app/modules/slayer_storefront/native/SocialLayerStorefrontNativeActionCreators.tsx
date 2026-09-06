@@ -8,6 +8,7 @@ import BillingPlatformUtils from "BillingPlatformUtils" /* 4231 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
 import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10798 */;
+import redirectToSlayerStorefrontWebDefault from "redirectToSlayerStorefrontWeb" /* 10803 */;
 import SKUStore from "SKUStore" /* 5510 */;
 
 require = fn;
@@ -39,10 +40,10 @@ export const closeSocialLayerStorefrontProductDetailsModal = function closeSocia
 export const openSocialLayerStorefrontGiftModal = function openSocialLayerStorefrontGiftModal(skuId) {
   let obj = BillingPlatformUtils;
   if (obj.isSocialLayerStorefrontGiftingSupported()) {
-    let tmp3Result = tmp3(4763);
+    let tmp3Result = ModalActionCreatorsDefault;
     tmp3Result.pushLazy(asyncRequireImpl(10824, dependencyMap.paths), skuId, c6);
   } else {
-    tmp3Result = tmp3(10803);
+    tmp3Result = redirectToSlayerStorefrontWebDefault;
     value = SKUStore.get(skuId.skuId);
     let applicationId;
     if (value != null) {

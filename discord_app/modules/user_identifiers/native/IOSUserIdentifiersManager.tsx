@@ -28,7 +28,7 @@ class IOSUserIdentifiersManager extends tmp2 {
 const prototype = IOSUserIdentifiersManager.prototype;
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -59,20 +59,19 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
                 if (null != currentUser) {
                   const syncedUserIds = self.syncedUserIds;
                   if (!syncedUserIds.has(currentUser.id)) {
-                    const syncedUserIds2 = obj3.syncedUserIds;
+                    const syncedUserIds2 = self.syncedUserIds;
                     syncedUserIds2.add(currentUser.id);
                     c1 = 1;
                     v3 = 1;
-                    const obj1 = { value: obj3.syncAppTransactionId(), done: false };
+                    const obj1 = { value: self.syncAppTransactionId(), done: false };
                     return obj1;
                   }
                 }
               }
-              tmp14Result = tmp14(tmp15[6]);
+              tmp14Result = tmp14(dependencyMap[6]);
             }
             obj7 = v3(dependencyMap[5]);
             tmp14 = v3;
-            tmp15 = dependencyMap;
           }
         } else if (arg0 === 1) {
           v3 = 3;
@@ -93,7 +92,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
 };
 prototype["syncAppTransactionId"] = function syncAppTransactionId() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -222,6 +221,7 @@ prototype["trackSync"] = function trackSync(empty_id, arg1, verified) {
     obj.captureException(arg1, obj);
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.APP_TRANSACTION_ID_SYNCED, { success: "synced" === empty_id, reason: empty_id, verified });
+  const obj1 = { success: "synced" === empty_id, reason: empty_id, verified };
 };
 const iOSUserIdentifiersManager = new IOSUserIdentifiersManager();
 const size = fn(2);

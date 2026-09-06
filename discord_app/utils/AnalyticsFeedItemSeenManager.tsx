@@ -259,11 +259,11 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
   } else {
     const _Date3 = Date;
     self._lastFlushTimeMillis = Date.now();
-    if (IMMEDIATE !== tmp2.IMMEDIATE) {
-      if (IMMEDIATE !== tmp2.IMMEDIATE_WITH_COOLDOWN) {
+    if (IMMEDIATE !== obj.IMMEDIATE) {
+      if (IMMEDIATE !== obj.IMMEDIATE_WITH_COOLDOWN) {
         resolved = new Promise((arg0) => {
           closure_0 = arg0;
-          const timerId = setTimeout(asyncGeneratorStep(async (arg0, value) => {
+          const timerId = setTimeout(asyncGeneratorStep(async () => {
             if (c2 === 2) {
               c2 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -314,7 +314,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
         });
       }
     }
-    closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    closure_0 = asyncGeneratorStep(async (arg0) => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

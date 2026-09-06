@@ -66,10 +66,10 @@ export default function Overview() {
           onPress() {
               let tmp4 = item !== constants2.EMAIL_OR_PHONE;
               if (tmp4) {
-                tmp4 = tmp2 !== tmp3.EMAIL;
+                tmp4 = item !== constants2.EMAIL;
               }
               if (tmp4) {
-                tmp4 = tmp2 !== tmp3.REVERIFY_EMAIL;
+                tmp4 = item !== constants2.REVERIFY_EMAIL;
               }
               if (tmp4) {
                 const StackActions = item(navigation[18]).StackActions;

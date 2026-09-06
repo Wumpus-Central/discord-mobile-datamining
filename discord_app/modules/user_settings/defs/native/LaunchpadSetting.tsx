@@ -22,13 +22,13 @@ const radio = SettingBuilders.createRadio({
     if (LaunchPadTypes.GESTURE_FULL === arg0) {
       const LaunchPadModeSetting3 = UserSettings.LaunchPadModeSetting;
       LaunchPadModeSetting3.updateSetting(preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_GESTURE_FULL_SCREEN);
-    } else if (tmp.GESTURE_EDGE === arg0) {
+    } else if (LaunchPadTypes.GESTURE_EDGE === arg0) {
       const LaunchPadModeSetting2 = UserSettings.LaunchPadModeSetting;
       LaunchPadModeSetting2.updateSetting(preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_GESTURE_RIGHT_EDGE);
-    } else if (tmp.PULL_TAB === arg0) {
+    } else if (LaunchPadTypes.PULL_TAB === arg0) {
       const LaunchPadModeSetting = UserSettings.LaunchPadModeSetting;
       LaunchPadModeSetting.updateSetting(preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_PULL_TAB);
-    } else if (tmp.DISABLED === arg0) {
+    } else if (LaunchPadTypes.DISABLED === arg0) {
       const LaunchPadModeSetting4 = UserSettings.LaunchPadModeSetting;
       LaunchPadModeSetting4.updateSetting(preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_DISABLED);
     }

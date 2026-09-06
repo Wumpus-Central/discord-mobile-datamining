@@ -3,7 +3,9 @@
 // Module 7328 (NavigationHistoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import useChatLayout from "useChatLayout" /* 4420 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -119,10 +121,10 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
     const currentRoute = rootNavigationRef.getCurrentRoute();
     if (null != currentRoute) {
       if (null != currentRoute.params) {
-        let tmpResult = tmp(4417);
+        let tmpResult = NavigationRouteUtils;
         const coerceChannelRouteResult = tmpResult.coerceChannelRoute(currentRoute);
         if (null == coerceChannelRouteResult) {
-          tmpResult = tmp(4417);
+          tmpResult = NavigationRouteUtils;
           const coerceGuildsRouteResult = tmpResult.coerceGuildsRoute(currentRoute);
           if (null != coerceGuildsRouteResult) {
             if (tmpResult1.getChatLayout().isChatLockedOpen) {
@@ -140,9 +142,9 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
                 }
                 if (null != history[history.length - 1]) {
                   const _Date3 = Date;
-                  const result = obj4.set(tmp30, Date.now());
+                  const result = map.set(tmp30, Date.now());
                 }
-                const result1 = obj4.set(combined, undefined);
+                const result1 = map.set(combined, undefined);
                 history.push(combined);
                 if (history.length > 100) {
                   history.shift();
@@ -164,16 +166,16 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
               }
               if (null != history[history.length - 1]) {
                 const _Date2 = Date;
-                const result2 = obj8.set(tmp52, Date.now());
+                const result2 = map.set(tmp52, Date.now());
               }
-              const result3 = obj8.set(combined1, undefined);
+              const result3 = map.set(combined1, undefined);
               history.push(combined1);
               if (history.length > 100) {
                 history.shift();
               }
               navigationHistoryStore.emitChange();
             }
-            tmpResult1 = tmp(4420);
+            tmpResult1 = useChatLayout;
           }
         } else {
           const _HermesInternal2 = HermesInternal;
@@ -183,9 +185,9 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
           }
           if (null != history[history.length - 1]) {
             const _Date = Date;
-            const result4 = obj6.set(tmp47, Date.now());
+            const result4 = map.set(tmp47, Date.now());
           }
-          const result5 = obj6.set(combined2, undefined);
+          const result5 = map.set(combined2, undefined);
           history.push(combined2);
           if (history.length > 100) {
             history.shift();

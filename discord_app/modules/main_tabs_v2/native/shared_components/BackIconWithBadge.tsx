@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import XLargeIcon from "XLargeIcon" /* 4513 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5628 */;
+import XSmallIcon from "XSmallIcon" /* 5680 */;
 import ClipView from "ClipView" /* 8813 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
@@ -54,7 +55,6 @@ function IconWithBadge(includeNotificationsCount) {
   }
   obj = { style: size, children: null };
   obj = { style: tmp.backIcon, children: null };
-  const tmp11 = closure_7;
   tmp2Result = require("utils/PlatformUtils");
   if (null != memo1) {
     const items3 = [memo1];
@@ -68,12 +68,12 @@ function IconWithBadge(includeNotificationsCount) {
   if (sum > 0) {
     const obj3 = { style: tmp.badgeWrapper, children: null };
     const obj4 = { value: sum, maxValue: 99 };
-    obj3.children = tmp9(tmp2(1178).Badge, obj4);
-    tmp9Result = tmp9(tmp10, obj3);
+    obj3.children = closure_6(tmp2(1178).Badge, obj4);
+    tmp9Result = closure_6(View, obj3);
   }
   items5[1] = tmp9Result;
   obj.children = items5;
-  obj.children = tmp11(View, obj);
+  obj.children = closure_7(View, obj);
   return closure_6(View, obj);
 }
 const View = fn(17).View;
@@ -97,10 +97,10 @@ export const SettingsLeftIconWithBadge = function SettingsLeftIconWithBadge(navi
   const items = [navigation];
   const obj = { includeNotificationsCount: flag, Icon: null };
   if (noop.useMemo(() => navigation.getState().index > 0, items)) {
-    obj.Icon = tmp3(5628).ArrowLargeLeftIcon;
+    obj.Icon = ArrowLargeLeftIcon.ArrowLargeLeftIcon;
     let tmp5 = obj;
   } else {
-    obj.Icon = tmp3(5680).XSmallIcon;
+    obj.Icon = XSmallIcon.XSmallIcon;
     tmp5 = obj;
   }
   return timestampProducer(IconWithBadge, tmp5);

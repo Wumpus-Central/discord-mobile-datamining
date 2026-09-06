@@ -63,7 +63,7 @@ export default function VerifiedRoleIcon(arg0) {
     size = { width: diff, height: diff };
     obj2.style = size;
     obj2.color = higherContrastColor;
-    roleIcon = tmp9(LinkIcon.LinkIcon, obj2);
+    roleIcon = jsx(LinkIcon.LinkIcon, { style: null, size: "custom", color: null });
   }
   obj1.children = roleIcon;
   return <View style={null}>{null}</View>;

@@ -10,7 +10,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 
 require = fn;
-function canEveryoneRoleViewEvent(guildEvent, items1) {
+function canEveryoneRoleViewEvent(guildEvent) {
   let tmp = items1;
   if (items1 === undefined) {
     const items = [ChannelStore];
@@ -34,7 +34,7 @@ function canEveryoneRoleViewEvent(guildEvent, items1) {
     return canEveryoneRoleResult;
   }
 }
-function isGuildEventInvitable(guildEvent, items) {
+function isGuildEventInvitable(guildEvent) {
   let tmp = items;
   if (items === undefined) {
     items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];

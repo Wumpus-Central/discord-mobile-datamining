@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import useChannelName from "useChannelName" /* 4713 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import ChannelHeader from "ChannelHeader" /* 13263 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -33,18 +34,17 @@ function GuildChannelMemberCount(channel) {
     let num = 0;
     let num2 = 0;
     for (const item10021 of tmp) {
-      let tmp2 = item10021;
       let tmp3 = 0 !== item10021.count;
       if (tmp3) {
-        tmp3 = tmp2.id !== constants2.UNKNOWN;
+        tmp3 = item10021.id !== constants2.UNKNOWN;
       }
       if (tmp3) {
         flag = true;
-        num = num + tmp2.count;
-        if (tmp2.id === constants2.OFFLINE) {
+        num = num + item10021.count;
+        if (item10021.id === constants2.OFFLINE) {
           flag2 = true;
         } else {
-          num2 = num2 + tmp2.count;
+          num2 = num2 + item10021.count;
         }
       }
       continue;
@@ -71,20 +71,21 @@ function GuildChannelMemberCount(channel) {
     const tmpResult = tmp(13269);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(6620).ICON_SIZE[token]);
   }
+  const obj2 = channel(504);
 }
 function computeVisibleChannelName(channel) {
   channel = channel.channel;
   ({ guildId, showCreateThread, isConnected } = channel);
   if (obj.shouldNSFWGateGuild(guildId)) {
-    const intl3 = tmp(1114).intl;
-    let stringResult = intl3.string(tmp(1114).t.HbPHt1);
+    const intl3 = util.intl;
+    let stringResult = intl3.string(util.t.HbPHt1);
   } else if (showCreateThread) {
-    const intl2 = tmp(1114).intl;
-    stringResult = intl2.string(tmp(1114).t["4WNcpu"]);
+    const intl2 = util.intl;
+    stringResult = intl2.string(util.t["4WNcpu"]);
   } else if (null == channel) {
-    const intl = tmp(1114).intl;
+    const intl = util.intl;
     const string = intl.string;
-    let ai6Lbr = tmp(1114).t;
+    let ai6Lbr = util.t;
     if (isConnected) {
       ai6Lbr = ai6Lbr.ai6Lbr;
       let stringResult1 = string(ai6Lbr);
@@ -92,8 +93,8 @@ function computeVisibleChannelName(channel) {
       stringResult1 = string(ai6Lbr.ZTNur7);
     }
   } else {
-    stringResult = tmp(4713).computeChannelName(channel, UserStore, RelationshipStore);
-    const tmpResult = tmp(4713);
+    stringResult = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+    const tmpResult = useChannelName;
   }
   return stringResult;
 }
@@ -116,7 +117,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj.description = intl2.format(util.t.w8VWRT, obj);
     let linkedLobby;
     if (channel != null) {
-      linkedLobby = tmp3.linkedLobby;
+      linkedLobby = channel.linkedLobby;
     }
     obj.visible = null != linkedLobby && closure_3;
     obj.onDismiss = function onDismiss() {
@@ -124,7 +125,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
     };
     let channelIconWithGuild;
     if (null != channel) {
-      channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(tmp3, guild);
+      channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
       const tmpResult = utils_ChannelUtils;
     }
     obj.imgSource = channelIconWithGuild;
@@ -164,10 +165,10 @@ export default noop.memo(function GuildChannelHeader(channelId) {
   const stateFromStores2 = obj4.useStateFromStores(items2, () => {
     if (null != stateFromStores) {
       if (!showCreateThread) {
-        if (null != tmp) {
-          if (null != tmp.parent_id) {
-            if (THREAD_CHANNEL_TYPES.has(tmp.type)) {
-              let channel = ChannelStore.getChannel(tmp.parent_id);
+        if (null != stateFromStores) {
+          if (null != stateFromStores.parent_id) {
+            if (THREAD_CHANNEL_TYPES.has(stateFromStores.type)) {
+              let channel = ChannelStore.getChannel(stateFromStores.parent_id);
             }
           }
         }
@@ -202,7 +203,6 @@ export default noop.memo(function GuildChannelHeader(channelId) {
   obj = { channel: stateFromStores, guildId, showCreateThread, isConnected: channelId(guildId[17]).useStateFromStores(items4, () => GatewayConnectionStore.isConnected()) };
   const tmp12 = computeVisibleChannelName(obj);
   const tmp10 = !isGuildMemberCountVisible;
-  const tmp11 = computeVisibleChannelName;
   const tmp2Result1 = channelId(guildId[17]);
   const tmp9 = !pressable;
   const shouldNSFWGateGuildResult = channelId(guildId[20]).shouldNSFWGateGuild(guildId);
@@ -314,8 +314,8 @@ export default noop.memo(function GuildChannelHeader(channelId) {
     const obj5 = { channel: stateFromStores, guildId, showCreateThread, isConnected: stateFromStores1 };
     const intl2 = tmp2(tmp3[21]).intl;
     const _HermesInternal = HermesInternal;
-    const combined = "" + tmp11(obj5) + ", " + intl2.string(tmp2(tmp3[21]).t.x87QCk);
-    const tmp11Result = tmp11(obj5);
+    const combined = "" + computeVisibleChannelName(obj5) + ", " + intl2.string(tmp2(tmp3[21]).t.x87QCk);
+    const tmp11Result = computeVisibleChannelName(obj5);
   }
   if (pressable) {
     let num3 = 24;
@@ -325,7 +325,7 @@ export default noop.memo(function GuildChannelHeader(channelId) {
     const obj6 = { children: null };
     const tmp2Result7 = tmp2(tmp3[18]);
     obj6.children = tmp2Result7.renderTitleWrapper(tmp35Result, callback, combined, num3);
-    return closure_19(tmp36, obj6);
+    return closure_19(closure_20, obj6);
   } else {
     return tmp35Result;
   }

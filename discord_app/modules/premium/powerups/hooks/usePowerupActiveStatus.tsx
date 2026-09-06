@@ -96,13 +96,13 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           }
           obj = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
           if (isActiveFromLevel) {
-            const obj1 = { type: tmp11.LEVEL_ACTIVATED, powerup: skuId, sourceEntitlement: levelEntitlement, sourcePowerup: levelPowerup };
+            const obj1 = { type: constants.LEVEL_ACTIVATED, powerup: skuId, sourceEntitlement: levelEntitlement, sourcePowerup: levelPowerup };
             obj = obj1;
           } else if (hasItem1) {
-            const obj2 = { type: tmp11.TIER_OVERRIDE_ACTIVATED, powerup: skuId, sourceEntitlement: "Array", sourcePowerup: skuId };
+            const obj2 = { type: constants.TIER_OVERRIDE_ACTIVATED, powerup: skuId, sourceEntitlement: "Array", sourcePowerup: skuId };
             obj = obj2;
           } else if (null != tmp10) {
-            const obj3 = { type: tmp11.POWERUP_ACTIVATED, powerup: skuId, sourceEntitlement: tmp10, sourcePowerup: skuId };
+            const obj3 = { type: constants.POWERUP_ACTIVATED, powerup: skuId, sourceEntitlement: tmp10, sourcePowerup: skuId };
             obj = obj3;
           }
           return obj;
@@ -201,13 +201,13 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
           }
           obj = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
           if (isActiveFromLevel) {
-            const obj1 = { type: tmp11.LEVEL_ACTIVATED, powerup: skuId, sourceEntitlement: levelEntitlement, sourcePowerup: levelPowerup };
+            const obj1 = { type: constants.LEVEL_ACTIVATED, powerup: skuId, sourceEntitlement: levelEntitlement, sourcePowerup: levelPowerup };
             obj = obj1;
           } else if (hasItem1) {
-            const obj2 = { type: tmp11.TIER_OVERRIDE_ACTIVATED, powerup: skuId, sourceEntitlement: "Array", sourcePowerup: skuId };
+            const obj2 = { type: constants.TIER_OVERRIDE_ACTIVATED, powerup: skuId, sourceEntitlement: "Array", sourcePowerup: skuId };
             obj = obj2;
           } else if (null != tmp10) {
-            const obj3 = { type: tmp11.POWERUP_ACTIVATED, powerup: skuId, sourceEntitlement: tmp10, sourcePowerup: skuId };
+            const obj3 = { type: constants.POWERUP_ACTIVATED, powerup: skuId, sourceEntitlement: tmp10, sourcePowerup: skuId };
             obj = obj3;
           }
           return obj;

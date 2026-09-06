@@ -76,21 +76,21 @@ export default function AppLauncherApplicationViewScreen(route) {
   if (id == null) {
     id = applicationId;
   }
-  let tmpResult = tmp(tmp2[12]);
+  let tmpResult = require("useGetOrFetchApplications");
   let tmp7 = null;
   if (id !== BuiltInSectionId.BUILT_IN) {
     tmp7 = id;
   }
   const getOrFetchApplication = tmpResult.useGetOrFetchApplication(tmp7);
   if (id === BuiltInSectionId.BUILT_IN) {
-    let FAKE_BUILT_IN_APP = tmp(tmp2[9]).FAKE_BUILT_IN_APP;
+    let FAKE_BUILT_IN_APP = require("AppLauncherUtils").FAKE_BUILT_IN_APP;
   } else {
     FAKE_BUILT_IN_APP = getOrFetchApplication;
     if (getOrFetchApplication == null) {
       FAKE_BUILT_IN_APP = application;
     }
   }
-  tmpResult = tmp(tmp2[13]);
+  tmpResult = require("ReanimatedRexport");
   const items = [id, context, installOnDemand];
   const sharedValue = tmpResult.useSharedValue(0);
   const effect = navigation.useEffect(() => {
@@ -134,13 +134,27 @@ export default function AppLauncherApplicationViewScreen(route) {
       expandBottomSheet,
       onCommandExecuted
     };
-    let tmp11Result = tmp11(AppLauncherApplicationViewScreenInner, obj);
+    let tmp11Result = <AppLauncherApplicationViewScreenInner context={context} application={FAKE_BUILT_IN_APP} lockableScrollableContentOffsetY={sharedValue} initiallyExpanded={initiallyExpanded} installOnDemand={installOnDemand} sectionName={sectionName} onPressBack={function onPressBack() {
+      if (closure_1_0 != null) {
+        tmp();
+      }
+      let arr = navigation;
+      if (navigation.canGoBack()) {
+        arr = arr.pop();
+      } else {
+        c5.current = AppLauncherContext.AppLauncherKeyboardCloseReason.BACK;
+        const current = _undefined.current;
+        if (current != null) {
+          current.closeCustomKeyboard();
+        }
+      }
+    }} onActivityItemSelected={onActivityItemSelected} entrypoint={entrypoint} expandBottomSheet={expandBottomSheet} onCommandExecuted={onCommandExecuted} />;
   } else {
     const obj1 = { style: null, children: null };
-    const obj2 = { paddingTop: tmp(tmp2[14]).EXPANDED_HEADER_HEIGHT };
+    const obj2 = { paddingTop: require("application_view/Header").EXPANDED_HEADER_HEIGHT };
     obj1.style = obj2;
-    obj1.children = tmp11(c4, {});
-    tmp11Result = tmp11(tmp12, obj1);
+    obj1.children = <c4 />;
+    tmp11Result = <tmp12 style={null}>{null}</tmp12>;
   }
   obj.children = tmp11Result;
   return <c5 style={closure_10().container}>{null}</c5>;

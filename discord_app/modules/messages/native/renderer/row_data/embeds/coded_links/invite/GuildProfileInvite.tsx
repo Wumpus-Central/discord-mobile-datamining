@@ -1,9 +1,15 @@
 // === Module 13217: GuildProfileInvite ===
 
 // Module 13217 (GuildProfileInvite)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import util from "util" /* 1114 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1878 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2019 */;
 import guild_boosting_RoleIconUtils from "guild_boosting/RoleIconUtils" /* 7187 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7936 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -54,7 +60,7 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
     icon = guildProfileFromInvite.icon;
   }
   if (null != icon) {
-    let tmpResult = tmp(1396);
+    let tmpResult = AvatarUtilsDefault;
     obj = { id: null, icon: null, canAnimate: true, size: 128 };
     ({ id: obj8.id, icon: obj8.icon } = guildProfileFromInvite);
     const guildIconURL = tmpResult.getGuildIconURL(obj);
@@ -81,10 +87,10 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
       customBanner = guildProfileFromInvite.customBanner;
     }
     if (null != customBanner) {
-      tmpResult = tmp(1396);
+      tmpResult = AvatarUtilsDefault;
       obj = { id: null, splash: null, size: null };
       ({ id: obj10.id, customBanner: obj10.splash } = guildProfileFromInvite);
-      obj.size = 400 * tmp(1878)();
+      obj.size = 400 * getDevicePixelRatioDefault();
       const guildDiscoverySplashURL = tmpResult.getGuildDiscoverySplashURL(obj);
       tmp20 = guildDiscoverySplashURL;
     }
@@ -163,11 +169,11 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   let formatToPlainStringResult2;
   if (null != guildProfileFromInvite) {
     const tmp4Result5 = tmp4(7737);
-    const establishedDate = tmp4Result5.getEstablishedDate(tmp(11).extractTimestamp(guildProfileFromInvite.id), LocaleStore.locale);
+    const establishedDate = tmp4Result5.getEstablishedDate(SnowflakeUtilsDefault.extractTimestamp(guildProfileFromInvite.id), LocaleStore.locale);
     const intl8 = tmp4(1114).intl;
     const obj3 = { createdAtDate: establishedDate };
     formatToPlainStringResult2 = intl8.formatToPlainString(tmp4(1114).t.zb2Q56, obj3);
-    const tmpResult1 = tmp(11);
+    const tmpResult1 = SnowflakeUtilsDefault;
   }
   let mapped;
   if (null != invite.roles) {
@@ -186,7 +192,7 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
             roleIconData = {};
           }
           ({ customIconSrc, unicodeEmoji } = roleIconData);
-          let tmpResult = tmp(1091);
+          let tmpResult = utils_ColorUtils;
           let num = color.color;
           if (num == null) {
             num = 0;
@@ -199,13 +205,13 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
             }
             obj.unicodeEmoji = surrogates;
             obj.name = color.name;
-            const intl = tmp(1114).intl;
+            const intl = util.intl;
             obj = { name: color.name };
-            obj.alt = intl.formatToPlainString(tmp(1114).t["9+YWrE"], obj);
+            obj.alt = intl.formatToPlainString(util.t["9+YWrE"], obj);
             const tmp5 = obj;
           }
           obj1 = { id: color.id, name: color.name, color: null, roleIcon: null };
-          tmpResult = tmp(7936);
+          tmpResult = RowGeneratorStyleSheet;
           obj1.color = tmpResult.processColorOrThrow(tmpResult.int2hex(num));
           obj1.roleIcon = tmp5;
           return obj1;

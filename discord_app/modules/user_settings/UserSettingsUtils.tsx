@@ -44,12 +44,12 @@ export { b64ToProto };
 export const b64ToPreloadedUserSettingsProto = function b64ToPreloadedUserSettingsProto(settings) {
   return b64ToProto(preloaded_user_settings.PreloadedUserSettings, settings);
 };
-export const protoToB64WithType = function protoToB64WithType(arg0, arg1) {
+export const protoToB64WithType = function protoToB64WithType(arg0, QosToken2) {
   obj = ProtoUtils;
-  return obj.protoToB64(obj[arg0], arg1);
+  return obj.protoToB64(obj[arg0], QosToken2);
 };
-export const protoToB64 = function protoToB64(arg0, arg1) {
-  return ProtoUtils.protoToB64(arg0, arg1);
+export const protoToB64 = function protoToB64(DeclarativeSettings, QosToken2) {
+  return ProtoUtils.protoToB64(DeclarativeSettings, QosToken2);
 };
 export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, proto, proto2) {
   obj = {};
@@ -178,20 +178,20 @@ export const runMigrations = function runMigrations(proto, arg1) {
   obj = { proto, isDirty: flag, cleanupFuncs: items };
   return obj;
 };
-export const serializeUsageHistory = function serializeUsageHistory(usageHistory, arg1) {
+export const serializeUsageHistory = function serializeUsageHistory(usageHistory, FREQUENCY_ITEM_LIMIT) {
   let length;
   const entries = Object.entries(usageHistory);
-  if (entries.length > arg1) {
+  if (entries.length > FREQUENCY_ITEM_LIMIT) {
     obj = _modDef12;
     const reversed = obj.sortBy(entries, (arg0) => {
       [, tmp] = arg0;
       return tmp.recentUses[tmp.recentUses.length - 1];
     }).reverse();
-    if (reversed.length > arg1) {
+    if (reversed.length > FREQUENCY_ITEM_LIMIT) {
       do {
         let arr = reversed.pop();
         length = reversed.length;
-      } while (length > arg1);
+      } while (length > FREQUENCY_ITEM_LIMIT);
     }
     const sortByResult = obj.sortBy(entries, (arg0) => {
       [, tmp] = arg0;

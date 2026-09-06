@@ -5,6 +5,7 @@ import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 4427 */;
 import timing from "timing" /* 4561 */;
+import timingPresets from "timingPresets" /* 4564 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +29,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
         str = "45deg";
       }
       let obj = { transform: null };
-      obj = { rotate: timing.withTiming(str, tmp2(4564).timingStandard) };
+      obj = { rotate: timing.withTiming(str, timingPresets.timingStandard) };
       const items = [obj];
       obj.transform = items;
       return obj;

@@ -1,6 +1,8 @@
 // === Module 13139: AvatarDecorationProductPreview ===
 
 // Module 13139 (AvatarDecorationProductPreview)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import useShopProductItems from "useShopProductItems" /* 8171 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
 import noop from "module_19" /* 19 */;
@@ -21,11 +23,11 @@ export default function AvatarDecorationProductPreview(product) {
   let tmp5 = null;
   if (null != firstAvatarDecoration) {
     obj = { style: tmp.fullSizePreview, pointerEvents: "box-none", accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { a11y_text: firstAvatarDecoration.label };
-    obj.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t.Do2lxE, obj);
-    obj1 = { user: currentUser, guildId: "r", size: tmp2(1178).AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null };
-    obj.children = jsx(tmp2(1178).Avatar, { user: currentUser, guildId: "r", size: tmp2(1178).AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null });
+    obj.accessibilityLabel = intl.formatToPlainString(util.t.Do2lxE, obj);
+    obj1 = { user: currentUser, guildId: "r", size: native.AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null };
+    obj.children = jsx(native.Avatar, { user: currentUser, guildId: "r", size: native.AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null });
     tmp5 = <View a11y_text={firstAvatarDecoration.label} />;
   }
   return tmp5;

@@ -54,7 +54,7 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {
     const obj2 = { accessibilityRole: "header", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores };
-    tmp5Result = tmp5(Text_Text.Text, obj2);
+    tmp5Result = hasOwnProperty(Text_Text.Text, obj2);
   }
   items1[1] = tmp5Result;
   obj.children = items1;

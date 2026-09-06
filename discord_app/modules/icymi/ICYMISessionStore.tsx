@@ -196,7 +196,6 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
       num = 0;
     }
     let result1 = _impressionItemIdMap.set(tmp2.itemId, num + 1);
-    let tmp11 = require;
     let ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
     let obj = { icymiSessionId: self._sessionId, impressionId: null, itemId: null, itemType: null, dwellStartTimeMs: null, triggerType: null, itemOccurenceCountInSession: null, itemFeedIndex: null, itemScore: null, isInitiallyVisible: null, itemChannelType: null, itemCardHeight: null, isDwelling: null, interactionActionTypes: null, interactionCount: null, uxVariation: null, sessionImpressionIndex: null };
     ({ impressionId: obj.impressionId, itemId: obj.itemId, itemType: obj.itemType, impressionStartTimestamp: obj.dwellStartTimeMs, triggerType: obj.triggerType } = tmp7);
@@ -218,7 +217,7 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
     obj.isDwelling = null != tmp4;
     ({ interactionActionTypes: obj.interactionActionTypes, interactionCount: obj.interactionCount, uxVariation } = tmp7);
     if (uxVariation == null) {
-      uxVariation = tmp11(8359).DEFAULT_UX_VARIATION;
+      uxVariation = ICYMIAnalytics2.DEFAULT_UX_VARIATION;
     }
     obj.uxVariation = uxVariation;
     obj.sessionImpressionIndex = tmp7.sessionImpressionIndex;
@@ -407,7 +406,7 @@ prototype["_endImpression"] = function _endImpression(itemId) {
     obj.itemCardHeight = itemCardHeight;
     let DEFAULT_UX_VARIATION = tmp2.uxVariation;
     if (DEFAULT_UX_VARIATION == null) {
-      DEFAULT_UX_VARIATION = tmp5(8359).DEFAULT_UX_VARIATION;
+      DEFAULT_UX_VARIATION = ICYMIAnalytics2.DEFAULT_UX_VARIATION;
     }
     obj.uxVariation = DEFAULT_UX_VARIATION;
     ({ interactionActionTypes: obj.interactionActionTypes, interactionCount: obj.interactionCount, sessionImpressionIndex: obj.sessionImpressionIndex } = tmp2);
@@ -415,7 +414,6 @@ prototype["_endImpression"] = function _endImpression(itemId) {
     _activeItems = self._activeItems;
     _activeItems.splice(findIndexResult, 1);
     tmp3 = tmp2;
-    tmp5 = require;
   }
   return tmp3;
 };

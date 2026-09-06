@@ -231,7 +231,7 @@ export default function GameProfileDetails(game) {
           if (memo.length > 1) {
             prop = null;
             if (index < arr2.length - 1) {
-              prop = tmp3.detailsRowBottomBorder;
+              prop = closure_2.detailsRowBottomBorder;
             }
           }
           let obj = { style: items, children: null };
@@ -239,7 +239,7 @@ export default function GameProfileDetails(game) {
           obj = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, children: children.label };
           const items1 = [React6(Text_Text.Text, obj), ];
           if (typeof children.value === "string") {
-            obj = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, style: tmp3.detailsRowValue, children: children.value };
+            obj = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, style: closure_2.detailsRowValue, children: children.value };
             value = React6(Text_Text.Text, obj);
           } else {
             value = children.value;

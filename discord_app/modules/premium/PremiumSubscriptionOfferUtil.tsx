@@ -168,7 +168,7 @@ export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
   const items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => SubscriptionStore.getPremiumTypeSubscription());
   if (typeof useHasDiscountApplied === "function") {
-    const items1 = [tmp3];
+    const items1 = [SubscriptionStore];
     const stateFromStores1 = initialize.useStateFromStores(items1, () => SubscriptionStore.getPremiumTypeSubscription());
     let prop;
     if (stateFromStores1 != null) {
@@ -195,7 +195,6 @@ export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp3 = SubscriptionStore;
 };
 export const renewalInvoiceChurnDiscountInfo = function renewalInvoiceChurnDiscountInfo(arg0) {
   const iter = arg0.invoiceItems[Symbol.iterator]();

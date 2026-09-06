@@ -2,6 +2,7 @@
 
 // Module 14554 (AppContainer)
 import nativeDefault from "native" /* 576 */;
+import router_utils from "router_utils" /* 1100 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import SentryInitUtils from "SentryInitUtils" /* 1233 */;
@@ -10,6 +11,7 @@ import GlobalUtils from "GlobalUtils" /* 1369 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
 import Link from "Link" /* 1484 */;
 import ManaContext from "ManaContext" /* 4341 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4419 */;
 import Portal from "Portal" /* 4432 */;
@@ -73,26 +75,24 @@ function AppNavigationContainer(children) {
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
         const currentRoute = rootNavigationRef.getCurrentRoute();
-        tmp(4417);
-        const tmpResult = tmp(4417);
+        const tmpResult = NavigationRouteUtils;
         const tmp4 = null != tmpResult.coerceGuildsRoute(currentRoute);
-        const tmp5 = ref;
         if (tmp6) {
           AnalyticsUtilsDefault.track(constants.NAV_DRAWER_OPENED);
         }
-        tmp5.current = currentRoute;
+        ref.current = currentRoute;
         tmp6 = null != tmpResult.coerceChannelRoute(ref.current) && null != tmpResult.coerceGuildsRoute(currentRoute);
         const tmp14 = _slicedToArray(getChannelDetailsFromRouteDefault(currentRoute, true), 2)[1];
         if (null != tmp14) {
           if (isStaticChannelRoute(tmp14)) {
             if (tmp14 !== SelectedChannelStore.getChannelId()) {
-              const coerceChannelRouteResult = tmp(4417).coerceChannelRoute(currentRoute);
+              const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
               if (!tmp18) {
-                tmp(1100).transitionTo(closure_2_12.CHANNEL(tmp13, tmp14), { openChannel: true, navigationReplace: false });
-                const tmpResult2 = tmp(1100);
+                router_utils.transitionTo(closure_2_12.CHANNEL(tmp13, tmp14), { openChannel: true, navigationReplace: false });
+                const tmpResult2 = router_utils;
               }
               tmp18 = null != coerceChannelRouteResult && coerceChannelRouteResult.params.showCreateThread;
-              const tmpResult1 = tmp(4417);
+              const tmpResult1 = NavigationRouteUtils;
             }
           }
         }
@@ -128,6 +128,7 @@ function AppNavigationContainer(children) {
             rootNavigationRef.reset(closure_1_2(dependencyMap[26])(found));
           }
         }
+        const obj = ref2(dependencyMap[17]);
       }, 0);
       return () => {
         clearTimeout(closure_0);
@@ -213,6 +214,7 @@ try {
         const SplashScreenManager2 = NativeModules.SplashScreenManager;
         SplashScreenManager2.hideSplashScreen();
       }
+      const obj = appEntryKey(1115);
     }, []);
     let obj = appEntryKey(14560);
     const riveAppStatePlaybackExperiment = appEntryKey(15939).useRiveAppStatePlaybackExperiment("AppContainer");

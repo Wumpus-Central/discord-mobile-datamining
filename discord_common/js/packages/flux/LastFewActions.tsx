@@ -6,9 +6,9 @@ import size from "module_2" /* 2 */;
 let closure_0 = [];
 const result = size.fileFinishedImporting("../discord_common/js/packages/flux/LastFewActions.tsx");
 
-export const add = function add(arg0) {
+export const add = function add(type) {
   let length;
-  closure_0.push(arg0);
+  closure_0.push(type);
   if (closure_0.length > 10) {
     do {
       let arr = closure_0.shift();

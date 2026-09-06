@@ -176,9 +176,9 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   const items5 = [sharedValue2];
   const memo = prop.useMemo(() => {
     closure_0 = sharedValue2;
-    return (arg0, arg1, arg2) => {
+    return (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
       let obj = animatedScrollableState(6627);
-      const scrollEventsHandlersDefault = obj.useScrollEventsHandlersDefault(arg0, arg1, arg2);
+      const scrollEventsHandlersDefault = obj.useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
       animatedScrollableState = animatedScrollableState(6627).useBottomSheetInternal().animatedScrollableState;
       const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
       const obj2 = animatedScrollableState(6627);
@@ -417,6 +417,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
           AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj);
           const tmp3Result = AnalyticsUtilsDefault;
         }
+        atResult = prop.at(-1);
       }, items13);
       const items14 = [onClose];
       const effect4 = obj7.useEffect(() => () => {

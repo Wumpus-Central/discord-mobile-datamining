@@ -38,7 +38,6 @@ function FramePanelHeaderContentInner(arg0) {
   obj = { style: items1, children: null };
   items1[1] = prop;
   let tmp15;
-  const tmp12 = View;
   if (!landscape) {
     let name;
     if (first != null) {
@@ -55,7 +54,7 @@ function FramePanelHeaderContentInner(arg0) {
   }
   items2[2] = tmp17;
   obj.children = items2;
-  const items3 = [React6(tmp12, obj), , ];
+  const items3 = [React6(View, obj), , ];
   let tmp18 = null;
   if (!landscape) {
     tmp18 = tmp7Result;

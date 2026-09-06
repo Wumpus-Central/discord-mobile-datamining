@@ -8,10 +8,10 @@ import Client from "Client" /* 4491 */;
 import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4586 */;
 import DomainMigrationUtils from "DomainMigrationUtils" /* 5566 */;
 import IPCEvents from "IPCEvents" /* 5567 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 5568 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const FileExtensionUtils = tmp2(5568);
 require = fn;
 function sanitizeFilename(arg0) {
   try {
@@ -38,16 +38,18 @@ let closure_27 = async function _getFileData() {
   const _fetch = fetch;
   const _Request = Request;
   const request = new Request(closure_0, { method: "GET", mode: "cors" });
-  closure_129_0 = await fetch(request);
+  await fetch(request);
+  closure_129_0 = value;
   closure_130_1(closure_130_2[3])(200 === closure_129_0.status, "Data fetch unsuccessful");
-  closure_129_1 = await closure_129_0.arrayBuffer();
+  await closure_129_0.arrayBuffer();
+  closure_129_1 = value;
   closure_130_1(closure_130_2[3])(null != closure_129_1, "Data is null");
   return closure_129_1;
 };
 function getImageData(arg0) {
   return getFileData(arg0);
 }
-let closure_29 = async function _transcodeImageToPng(arg0, type) {
+let closure_29 = async function _transcodeImageToPng(arg0) {
   closure_0 = arg0;
   c6 = 0;
   c7 = 0;
@@ -162,7 +164,7 @@ let closure_29 = async function _transcodeImageToPng(arg0, type) {
     }
   })();
 };
-function normalizeRunningGame(id) {
+function normalizeRunningGame(id, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = closure_13;
@@ -258,8 +260,8 @@ obj = {
   requireModule(discord_voice) {
     if (global) {
       if (closure_15.hasOwnProperty(discord_voice)) {
-        if (null != tmp[discord_voice]) {
-          return tmp[discord_voice];
+        if (null != closure_15[discord_voice]) {
+          return closure_15[discord_voice];
         }
       }
     }
@@ -293,7 +295,7 @@ obj.getSetting = function getSetting(arg0, arg1) {
   return (async () => {
     settings = settings.settings;
     await settings.get(closure_0, closure_1);
-    return arg1;
+    return value;
   })();
 };
 obj.beforeUnload = function beforeUnload() {
@@ -579,12 +581,12 @@ obj.setBadge = function setBadge(arg0) {
     const dock = DiscordNative.app.dock;
     dock.setBadge(str2);
   } else {
-    let tmpResult = tmp(1115);
+    let tmpResult = require("PlatformUtils");
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(5567).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(IPCEvents.IPCEvents.APP_BADGE_SET, arg0);
     } else {
-      tmpResult = tmp(1115);
+      tmpResult = require("PlatformUtils");
       if ("linux" === tmpResult.getPlatformName()) {
         const app = DiscordNative.app;
         let num = 0;
@@ -595,6 +597,7 @@ obj.setBadge = function setBadge(arg0) {
       }
     }
   }
+  obj = require("PlatformUtils");
 };
 obj.setSystemTrayIcon = function setSystemTrayIcon(arg0) {
   if (require("PlatformUtils").isPlatformEmbedded) {
@@ -620,7 +623,7 @@ obj.bounceDock = function bounceDock(arg0) {
     if (null != app.dock) {
       let dock = app.dock;
       closure_1 = dock.bounce(arg0);
-      return asyncGeneratorStep(async (arg0, value) => {
+      return asyncGeneratorStep(async () => {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -727,7 +730,7 @@ obj.copy = function copy(arg0) {
 obj.copyImage = function copyImage(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -837,7 +840,7 @@ obj.copyImage = function copyImage(arg0, arg1) {
 obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -894,14 +897,13 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 obj.canSaveImage = function canSaveImage(uri, contentType) {
   if (null != uri) {
     if (require("PlatformUtils").isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(5568).decideFileExtension(uri, contentType);
+      const decideFileExtensionResult = FileExtensionUtils.decideFileExtension(uri, contentType);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
       }
       return hasItem;
     }
-    tmp = require;
   }
   return false;
 };
@@ -909,7 +911,7 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c10 === 2) {
       c10 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1090,7 +1092,7 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
 obj.saveFile = function saveFile(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1141,11 +1143,10 @@ obj.saveFile = function saveFile(arg0, arg1) {
               }
               c4 = 1;
               c5 = 1;
-              const obj1 = { value: getFileData(tmp32), done: false };
+              const obj1 = { value: getFileData(closure_0), done: false };
               return obj1;
             }
             const obj8 = closure_1(tmp3[12]);
-            tmp32 = closure_0;
           }
         } else if (1 === tmp6) {
           if (arg0 === 1) {
@@ -1198,7 +1199,7 @@ obj.downloadMLModelFile = function downloadMLModelFile(arg0, arg1, arg2) {
     v1(38)(null != v1(1365).toURLSafe(closure_0), "Could not download ML model, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadMLModelFile(closure_0, closure_1, closure_2);
-    return arg1;
+    return value;
   })();
 };
 obj.stopMLModelDownloads = function stopMLModelDownloads() {
@@ -1213,7 +1214,7 @@ obj.checkMLModelFilesExist = function checkMLModelFilesExist(arg0) {
   return (async () => {
     fileManager = fileManager.fileManager;
     await fileManager.checkMLModelFilesExist(closure_0);
-    return arg1;
+    return value;
   })();
 };
 obj.cleanupUnusedMLModelFiles = function cleanupUnusedMLModelFiles(arg0) {
@@ -1221,7 +1222,7 @@ obj.cleanupUnusedMLModelFiles = function cleanupUnusedMLModelFiles(arg0) {
   return (async () => {
     fileManager = fileManager.fileManager;
     await fileManager.cleanupUnusedMLModelFiles(closure_0);
-    return arg1;
+    return value;
   })();
 };
 obj.downloadClipsFile = function downloadClipsFile(arg0, arg1, arg2) {
@@ -1233,7 +1234,7 @@ obj.downloadClipsFile = function downloadClipsFile(arg0, arg1, arg2) {
     v1(38)(null != v1(1365).toURLSafe(closure_0), "Could not download clips file, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadClipsFile(closure_0, closure_1, closure_2);
-    return arg1;
+    return value;
   })();
 };
 obj.canCheckClipsFilesExist = function canCheckClipsFilesExist() {
@@ -1244,7 +1245,7 @@ obj.checkClipsFilesExist = function checkClipsFilesExist(arg0) {
   return (async () => {
     fileManager = fileManager.fileManager;
     await fileManager.checkClipsFilesExist(closure_0);
-    return arg1;
+    return value;
   })();
 };
 obj.cleanupUnusedClipsFiles = function cleanupUnusedClipsFiles(arg0) {
@@ -1252,7 +1253,7 @@ obj.cleanupUnusedClipsFiles = function cleanupUnusedClipsFiles(arg0) {
   return (async () => {
     fileManager = fileManager.fileManager;
     await fileManager.cleanupUnusedClipsFiles(closure_0);
-    return arg1;
+    return value;
   })();
 };
 obj.getClipsDataDirSync = function getClipsDataDirSync() {
@@ -1275,7 +1276,7 @@ obj.downloadOpenH264 = function downloadOpenH264(arg0, arg1, arg2, arg3) {
     v1(38)(null != v1(1365).toURLSafe(closure_0), "Could not download OpenH264, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadOpenH264(closure_0, closure_1, closure_2, closure_3);
-    return arg1;
+    return value;
   })();
 };
 obj.cleanupUnusedOpenH264Files = function cleanupUnusedOpenH264Files(items) {
@@ -1283,7 +1284,7 @@ obj.cleanupUnusedOpenH264Files = function cleanupUnusedOpenH264Files(items) {
   return (async () => {
     fileManager = fileManager.fileManager;
     await fileManager.cleanupUnusedOpenH264Files(closure_0);
-    return arg1;
+    return value;
   })();
 };
 obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
@@ -1388,11 +1389,11 @@ obj.isIPCReady = function isIPCReady() {
     try {
       let ipc;
       if (DiscordNative != null) {
-        ipc = tmp.ipc;
+        ipc = DiscordNative.ipc;
       }
       let tmp4 = null != ipc;
       if (tmp4) {
-        tmp4 = typeof tmp.ipc.send === "function";
+        tmp4 = typeof DiscordNative.ipc.send === "function";
       }
       return tmp4;
     } catch (err) {
@@ -1408,7 +1409,7 @@ obj.waitForIPCReady = function waitForIPCReady() {
     _window = window;
   }
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1482,7 +1483,7 @@ obj.webAuthnRegister = function webAuthnRegister(arg0) {
     await nativeModules.ensureModule("discord_webauthn");
     const webAuthn = DiscordNative.webAuthn;
     await webAuthn.webAuthnRegister(closure_128_0);
-    return arg1;
+    return value;
   })();
 };
 obj.webAuthnAuthenticate = function webAuthnAuthenticate(arg0) {
@@ -1492,7 +1493,7 @@ obj.webAuthnAuthenticate = function webAuthnAuthenticate(arg0) {
     await nativeModules.ensureModule("discord_webauthn");
     const webAuthn = DiscordNative.webAuthn;
     await webAuthn.webAuthnAuthenticate(closure_128_0);
-    return arg1;
+    return value;
   })();
 };
 obj.minimize = function minimize(arg0) {
@@ -1552,7 +1553,7 @@ obj.setAlwaysOnTop = function setAlwaysOnTop(arg0, arg1) {
 };
 obj.isAlwaysOnTop = function isAlwaysOnTop(arg0) {
   closure_0 = arg0;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1608,13 +1609,13 @@ obj.isAlwaysOnTop = function isAlwaysOnTop(arg0) {
 obj.showInactive = function showInactive(arg0) {
   let showInactive;
   if (DiscordNative != null) {
-    const _window = tmp.window;
+    const _window = DiscordNative.window;
     if (_window != null) {
       showInactive = _window.showInactive;
     }
   }
   if (typeof showInactive === "function") {
-    const _window2 = tmp.window;
+    const _window2 = DiscordNative.window;
     _window2.showInactive(arg0);
   }
 };
@@ -1634,11 +1635,11 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(5567).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(IPCEvents.IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }
-    tmpResult = tmp(1115);
+    tmpResult = require("PlatformUtils");
   }
 };
 obj.purgeMemory = function purgeMemory() {
@@ -1693,7 +1694,7 @@ obj.setChromiumSwitches = function setChromiumSwitches(arg0) {
   gpuSettings.setChromiumSwitches(arg0);
 };
 obj.getOpenOnStart = function getOpenOnStart() {
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     app = app.app;
     const getOpenOnStart = app.getOpenOnStart;
     if (getOpenOnStart != null) {
@@ -1745,10 +1746,10 @@ obj.setZoomFactor = function setZoomFactor(arg0) {
 };
 obj.setBackgroundThrottling = function setBackgroundThrottling(arg0) {
   if (null != DiscordNative.window.setBackgroundThrottling) {
-    const _window = tmp.window;
+    const _window = DiscordNative.window;
     const result = _window.setBackgroundThrottling(arg0);
   } else {
-    const webContents = tmp.window.webContents;
+    const webContents = DiscordNative.window.webContents;
     const result1 = webContents.setBackgroundThrottling(arg0);
   }
 };
@@ -1963,7 +1964,7 @@ obj.startCPUProfiling = function startCPUProfiling(arg0) {
 };
 obj.stopCPUProfiling = function stopCPUProfiling() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -2597,6 +2598,7 @@ obj.appViewed = function appViewed() {
     performance.mark("app_viewed");
     this.sendIPC(IPCEvents.IPCEvents.APP_VIEWED);
   }
+  obj = require("PlatformUtils");
 };
 obj.appFirstRenderAfterReadyPayload = function appFirstRenderAfterReadyPayload(arg0) {
   if (obj.isDesktop()) {
@@ -2605,6 +2607,7 @@ obj.appFirstRenderAfterReadyPayload = function appFirstRenderAfterReadyPayload(a
     performance.mark("app_first_render_after_ready_payload");
     this.sendIPC(IPCEvents.IPCEvents.APP_FIRST_RENDER_AFTER_READY_PAYLOAD, arg0);
   }
+  obj = require("PlatformUtils");
 };
 obj.appLoaded = function appLoaded() {
   backwardCompatSend(IPCEvents.IPCEvents.APP_LOADED);
@@ -2618,7 +2621,7 @@ obj.setUseRequireModuleCache = function setUseRequireModuleCache(arg0) {
 obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
   closure_0 = arg0;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

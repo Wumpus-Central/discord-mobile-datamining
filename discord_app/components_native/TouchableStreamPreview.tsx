@@ -2,7 +2,10 @@
 
 // Module 10058 (TouchableStreamPreview)
 import nativeDefault from "native" /* 576 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
 import StreamActionCreators from "StreamActionCreators" /* 4702 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
+import transitionToStreamDefault from "transitionToStream" /* 4762 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4577 */;
@@ -13,7 +16,6 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-const StreamKeyUtils = tmp5(4612);
 require = fn;
 function StreamPreviewContainer(disableTransition) {
   disableTransition = disableTransition.disableTransition;
@@ -75,16 +77,17 @@ function StreamPreviewContainer(disableTransition) {
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(stream.channelId);
     StreamActionCreators.watchStream(stream);
     if (disableTransition) {
-      let tmpResult = tmp(4761);
+      let tmpResult = ChannelRTCActionCreatorsDefault;
       const result = tmpResult.rebuildRTCActiveChannels();
     } else {
-      tmp(4762)(tmp3);
+      transitionToStreamDefault(stream);
     }
-    tmpResult = tmp(4761);
-    const participant = tmpResult.selectParticipant(tmp3.channelId, StreamKeyUtils.encodeStreamKey(tmp3));
+    tmpResult = ChannelRTCActionCreatorsDefault;
+    const participant = tmpResult.selectParticipant(stream.channelId, StreamKeyUtils.encodeStreamKey(stream));
     if (onPress != null) {
       onPress();
     }
+    const tmp5Result = StreamKeyUtils;
   }, items5);
   onPress(stream[22])(() => {
     if (channel.isGuildStageVoice()) {

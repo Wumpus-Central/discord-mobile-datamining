@@ -71,7 +71,7 @@ export const renderError = function renderError(type, content) {
         tmp = null;
       }
     }
-    if (type.type === tmp3.EmptyTags) {
+    if (type.type === obj.EmptyTags) {
       if (null != content.tags) {
         tmp = null;
       }
@@ -81,7 +81,6 @@ export const renderError = function renderError(type, content) {
       message = null;
     }
     tmp = message;
-    tmp3 = obj;
   }
   return tmp;
 };

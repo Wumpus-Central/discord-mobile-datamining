@@ -30,7 +30,7 @@ function SecureFramesCodeGrid(chunks) {
       let tmp3Result = index < memo.length - 1;
       if (tmp3Result) {
         obj = { style: row.divider };
-        tmp3Result = hasOwnProperty(tmp2, obj);
+        tmp3Result = hasOwnProperty(React4, obj);
       }
       children[1] = tmp3Result;
       return timestampProducer(React4, { children }, "" + join.join(" ") + "-" + index);
@@ -64,10 +64,10 @@ export default function SecureFramesCode(chunks) {
   obj = { style: tmp.code, children: null };
   if (null != chunks) {
     obj = { chunks, columns };
-    let tmp5Result = tmp5(SecureFramesCodeGrid, obj);
+    let tmp5Result = hasOwnProperty(SecureFramesCodeGrid, obj);
   } else {
     const obj1 = { style: tmp.loading };
-    tmp5Result = tmp5(React3, obj1);
+    tmp5Result = hasOwnProperty(React3, obj1);
   }
   const obj2 = { children: null };
   obj.children = tmp5Result;

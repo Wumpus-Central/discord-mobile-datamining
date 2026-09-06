@@ -3,6 +3,7 @@
 // Module 8827 (useTrackShopCardClick)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,21 +43,21 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
         tmp4 = closure_5;
       }
       let skuId;
-      if (tmp3.variants[tmp4] != null) {
+      if (product.variants[tmp4] != null) {
         skuId = tmp6.skuId;
       }
       if (skuId == null) {
-        skuId = tmp3.skuId;
+        skuId = product.skuId;
       }
     } else {
-      skuId = tmp3.skuId;
+      skuId = product.skuId;
     }
     obj = { sku_id: skuId, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: null, location_stack: null, position_in_section: null, discount_source: null };
-    let tmpResult = tmp(7553);
+    let tmpResult = CollectiblesProductUtils;
     obj.product_sku_ids = tmpResult.getProductSkuIds(product);
     obj.location_stack = analyticsLocations;
     obj.position_in_section = tilePosition;
-    tmpResult = tmp(7554);
+    tmpResult = CollectiblesUtils;
     obj.discount_source = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
     AnalyticsUtilsDefault.track(AnalyticEvents.SHOP_CARD_CLICKED, obj);
   }, items);

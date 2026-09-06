@@ -2,6 +2,8 @@
 
 // Module 13395 (BuyNitroMarketingHeader)
 import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import timing from "timing" /* 4561 */;
 import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4563 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,14 +21,14 @@ let closure_11 = createStyles.createStyles((arg0, arg1, arg2) => {
   if (arg1) {
     num = 0;
     if (arg2) {
-      num = tmp(576).space.PX_8;
+      num = nativeDefault.space.PX_8;
     }
   }
   let obj = { marginHorizontal: -nativeDefault.space.PX_16 + num, marginTop: null, marginBottom: null, overflow: null };
   PX_8 = undefined;
   if (arg1) {
     if (arg2) {
-      PX_8 = tmp(576).space.PX_8;
+      PX_8 = nativeDefault.space.PX_8;
     }
   }
   obj.marginTop = PX_8;
@@ -41,7 +43,7 @@ let closure_11 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   if (!arg1) {
-    let num2 = 5 * -tmp(576).space.PX_192;
+    let num2 = 5 * -nativeDefault.space.PX_192;
   } else {
     num2 = 0;
   }
@@ -50,40 +52,39 @@ let closure_11 = createStyles.createStyles((arg0, arg1, arg2) => {
   let sm;
   if (arg1) {
     if (arg2) {
-      sm = tmp(576).radii.sm;
+      sm = nativeDefault.radii.sm;
     }
   }
   obj.borderRadius = sm;
   obj.background = obj;
-  const rect = { position: "absolute", top: -tmp(576).space.PX_16, right: "call", left: "st", alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009372008290128806 };
+  const rect = { position: "absolute", top: -nativeDefault.space.PX_16, right: "call", left: "st", alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009372008290128806 };
   obj.clouds = rect;
-  const rect1 = { position: "absolute", top: arg0 + tmp(576).space.PX_20, right: tmp(576).space.PX_4 };
+  const rect1 = { position: "absolute", top: arg0 + nativeDefault.space.PX_20, right: nativeDefault.space.PX_4 };
   obj.wumpus = rect1;
   const tmp3 = -nativeDefault.space.PX_16;
-  const tmp5 = absoluteFillObject;
   obj.wumpusImage = { height: nativeDefault.space.PX_80 + nativeDefault.space.PX_4 };
   let num4 = 0;
   if (arg1) {
-    num4 = tmp(576).space.PX_8;
+    num4 = nativeDefault.space.PX_8;
   }
   const rect2 = { position: "absolute", top: arg0 - num4, left: null, transform: null };
   let num5 = 0;
   if (!arg1) {
-    num5 = tmp(576).space.PX_8;
+    num5 = nativeDefault.space.PX_8;
   }
   rect2.left = nativeDefault.space.PX_8 + num5;
   const items = [{ scaleX: -1 }];
   rect2.transform = items;
   obj.backButton = rect2;
   const obj2 = { alignItems: "center", gap: nativeDefault.space.PX_8, paddingTop: null, paddingHorizontal: null, paddingBottom: null };
-  const sum = arg0 + tmp(576).space.PX_80;
+  const sum = arg0 + nativeDefault.space.PX_80;
   obj2.paddingTop = sum + nativeDefault.space.PX_4;
   obj2.paddingHorizontal = nativeDefault.space.PX_16;
-  const space = tmp(576).space;
+  const space = nativeDefault.space;
   obj2.paddingBottom = arg1 ? space.PX_24 : space.PX_32;
   obj.content = obj2;
   const obj3 = {};
-  const merged1 = Object.assign(tmp5.absoluteFillObject);
+  const merged1 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj3.height = nativeDefault.space.PX_96;
   obj3.position = "absolute";
   obj3.top = undefined;
@@ -117,15 +118,14 @@ export default function BuyNitroMarketingHeader(arg0) {
   const effect = noop.useEffect(() => {
     const accessibilityPreferencesSharedValue = reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
     if (!accessibilityPreferencesSharedValue.get().reduceMotion) {
-      tmp(4296);
-      const tmpResult = tmp(4561);
+      const tmpResult = timing;
       const result = sharedValue.set(tmpResult.withRepeat(tmpResult.withTiming(PX_8, { duration: 3400 }), -1, true));
-      const tmpResult1 = tmp(4296);
-      const result1 = sharedValue1.set(tmpResult1.withRepeat(tmp(4561).withTiming(-PX_12, { duration: 2600 }), -1, true));
-      const tmpResult2 = tmp(4561);
-      const tmpResult3 = tmp(4296);
-      const result2 = sharedValue2.set(tmpResult3.withRepeat(tmp(4561).withTiming(0.6, { duration: 2800 }), -1, true));
-      const tmpResult4 = tmp(4561);
+      const tmpResult1 = ReanimatedRexport;
+      const result1 = sharedValue1.set(tmpResult1.withRepeat(timing.withTiming(-PX_12, { duration: 2600 }), -1, true));
+      const tmpResult2 = timing;
+      const tmpResult3 = ReanimatedRexport;
+      const result2 = sharedValue2.set(tmpResult3.withRepeat(timing.withTiming(0.6, { duration: 2800 }), -1, true));
+      const tmpResult4 = timing;
     }
   }, items);
   const tmp4Result2 = sharedValue(sharedValue2[6]);
@@ -187,7 +187,7 @@ export default function BuyNitroMarketingHeader(arg0) {
     obj5.colors = items4;
     obj5.start = tmp4(tmp2[14]).VerticalGradient.START;
     obj5.end = tmp4(tmp2[14]).VerticalGradient.END;
-    tmp18Result = tmp18(tmp(tmp2[18]), obj5);
+    tmp18Result = closure_7(tmp(tmp2[18]), obj5);
     let tmpResult2 = tmp(tmp2[18]);
   }
   items1[4] = tmp18Result;

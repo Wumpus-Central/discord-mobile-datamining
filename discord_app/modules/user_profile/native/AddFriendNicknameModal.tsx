@@ -34,7 +34,7 @@ export default function AddFriendNicknameModal(arg0) {
   _slicedToArray = undefined;
   noop = undefined;
   let callback1;
-  closure_7 = async function _handleSubmit(arg0, value) {
+  closure_7 = async function _handleSubmit() {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -150,11 +150,11 @@ export default function AddFriendNicknameModal(arg0) {
   const items1 = [UserStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => UserStore.getUser(require));
   if (null == stateFromStores) {
-    let intl2 = tmp5(1114).intl;
-    let stringResult = intl2.string(tmp5(1114).t.BGYkaH);
+    let intl2 = util.intl;
+    let stringResult = intl2.string(util.t.BGYkaH);
   } else {
-    let intl = tmp5(1114).intl;
-    stringResult = intl.string(tmp5(1114).t["8pOYUE"]);
+    let intl = util.intl;
+    stringResult = intl.string(util.t["8pOYUE"]);
   }
   const items2 = [showUserProfile];
   callback1 = obj.useCallback(() => {
@@ -166,10 +166,10 @@ export default function AddFriendNicknameModal(arg0) {
   }, items2);
   obj = { style: tmp.container, children: null };
   obj = { children: null };
-  tmp3(5578);
+  showUserProfile(5578);
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp3Result = tmp3(4994);
-  const intl3 = tmp5(1114).intl;
+  const tmp3Result = showUserProfile(4994);
+  const intl3 = util.intl;
   obj1.confirmText = intl3.string(util.t["R3BPH+"]);
   obj1.onConfirm = function handleSubmit() {
     const self = this;
@@ -181,16 +181,16 @@ export default function AddFriendNicknameModal(arg0) {
     }
     return applyArgumentsResult;
   };
-  const intl4 = tmp5(1114).intl;
+  const intl4 = util.intl;
   obj1.cancelText = intl4.string(util.t["ETE/oC"]);
   obj1.onCancel = callback1;
   const items3 = [closure_9(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult }), , ];
   let obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl5 = tmp5(1114).intl;
+  const intl5 = util.intl;
   obj3.children = intl5.string(util.t["NdQ+lP"]);
   items3[1] = closure_9(Text_Text.Text, obj3);
   const obj4 = { onChange: callback, autoFocus: true, accessibilityLabel: null, placeholder: null, defaultValue: null, maxLength: 32, isClearable: true };
-  const intl6 = tmp5(1114).intl;
+  const intl6 = util.intl;
   obj4.accessibilityLabel = intl6.string(util.t.pqG6GS);
   let obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
   const tmp5Result = initialize;

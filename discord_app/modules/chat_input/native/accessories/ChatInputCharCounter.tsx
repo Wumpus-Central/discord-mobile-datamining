@@ -2,6 +2,8 @@
 
 // Module 12429 (ChatInputCharCounter)
 import util from "util" /* 1114 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -13,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4560);
 let closure_10 = createStyles.createStyles({ container: { alignItems: "center", paddingBottom: 6 } });
-const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
+const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
   dependencyMap = undefined;
   _slicedToArray = undefined;
@@ -24,7 +26,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
   [tmp6, c2] = _slicedToArray(noop.useState(0), 2);
   const tmp7 = stateFromStores(9304)();
   _slicedToArray = tmp7;
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     onMessageLengthChanged(length) {
       _undefined(Math.max(0, length - maxLength));
     }

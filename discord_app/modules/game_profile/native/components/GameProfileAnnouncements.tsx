@@ -2,6 +2,7 @@
 
 // Module 8750 (GameProfileAnnouncements)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import DateUtils from "DateUtils" /* 4242 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import CustomMarkupAll from "CustomMarkup" /* 4995 */;
@@ -9,6 +10,7 @@ import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8680
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
 import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 8752 */;
 import ImageWithPlaceholder from "ImageWithPlaceholder" /* 8755 */;
+import ReactionIcon from "ReactionIcon" /* 8757 */;
 import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 8762 */;
 import noop from "module_19" /* 19 */;
 
@@ -64,7 +66,7 @@ function EmbedAnnouncementCard(message) {
     let tmp12Result = null != embedSource.url;
     if (tmp12Result) {
       const obj2 = { variant: "text-xs/medium", color: "text-link", lineClamp: 1, children: embedSource.url };
-      tmp12Result = tmp12(Text_Text.Text, obj2);
+      tmp12Result = closure_1_10(Text_Text.Text, obj2);
     }
     const items = [tmp12Result, ];
     const obj3 = { style: null, children: null };
@@ -79,21 +81,21 @@ function EmbedAnnouncementCard(message) {
         const obj6 = { uri: embedSource.authorIconUrl };
         obj5.source = obj6;
         obj5.style = tmp.embedAuthorIcon;
-        tmp12Result = tmp12(hasOwnProperty, obj5);
+        tmp12Result = closure_1_10(hasOwnProperty, obj5);
       }
       const items2 = [tmp12Result, ];
       const obj7 = { variant: "text-xs/semibold", color: "text-strong", lineClamp: 1, children: embedSource.authorName };
-      items2[1] = tmp12(Text_Text.Text, obj7);
+      items2[1] = closure_1_10(Text_Text.Text, obj7);
       obj4.children = items2;
-      tmp14Result = tmp14(tmp15, obj4);
+      tmp14Result = closure_1_11(timestampProducer, obj4);
     }
     const items3 = [tmp14Result, , , , ];
     let tmp12Result1 = null != message.media && null != posterUrl;
     if (tmp12Result1) {
       const obj8 = { style: tmp.embedMedia, children: null };
       const obj9 = { uri: posterUrl, placeholder: message.media.placeholder, placeholderVersion: message.media.placeholderVersion, style: tmp.mediaImage };
-      obj8.children = tmp12(ImageWithPlaceholder.ImageWithPlaceholder, obj9);
-      tmp12Result1 = tmp12(tmp15, obj8);
+      obj8.children = closure_1_10(ImageWithPlaceholder.ImageWithPlaceholder, obj9);
+      tmp12Result1 = closure_1_10(timestampProducer, obj8);
     }
     items3[1] = tmp12Result1;
     let tmp12Result2 = null != message.title;
@@ -101,7 +103,7 @@ function EmbedAnnouncementCard(message) {
       const obj10 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 2, children: null };
       obj11 = { guildId, channelId };
       obj10.children = tmp4(message.title, true, obj11);
-      tmp12Result2 = tmp12(Text_Text.Text, obj10);
+      tmp12Result2 = closure_1_10(Text_Text.Text, obj10);
     }
     items3[2] = tmp12Result2;
     let tmp12Result3 = message.body.length > 0;
@@ -109,7 +111,7 @@ function EmbedAnnouncementCard(message) {
       const obj12 = { variant: "text-sm/medium", color: "text-default", lineClamp: 3, children: null };
       const obj13 = { guildId, channelId };
       obj12.children = tmp4(message.body, true, obj13);
-      tmp12Result3 = tmp12(Text_Text.Text, obj12);
+      tmp12Result3 = closure_1_10(Text_Text.Text, obj12);
     }
     items3[3] = tmp12Result3;
     const obj14 = { style: tmp.metadataRow, children: null };
@@ -119,7 +121,7 @@ function EmbedAnnouncementCard(message) {
       const obj16 = { uri: embedSource.providerIconUrl };
       obj15.source = obj16;
       obj15.style = tmp.embedProviderIcon;
-      tmp12Result4 = tmp12(hasOwnProperty, obj15);
+      tmp12Result4 = closure_1_10(hasOwnProperty, obj15);
     }
     const items4 = [tmp12Result4, , ];
     let str2 = "";
@@ -138,24 +140,24 @@ function EmbedAnnouncementCard(message) {
     if (tmp14Result) {
       const obj18 = { style: tmp.reactionInfo, children: null };
       const obj19 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-      const items6 = [tmp12(tmp35(8757).ReactionIcon, obj19), ];
+      const items6 = [closure_1_10(ReactionIcon.ReactionIcon, obj19), ];
       let tmp46 = null != obj11;
       if (tmp46) {
-        tmp46 = obj11.locale === tmp35(1114).intl.currentLocale;
+        tmp46 = obj11.locale === util.intl.currentLocale;
       }
       if (!tmp46) {
-        const obj20 = { locale: tmp35(1114).intl.currentLocale, format: null };
+        const obj20 = { locale: util.intl.currentLocale, format: null };
         const _Intl = Intl;
-        const numberFormat = new Intl.NumberFormat(tmp35(1114).intl.currentLocale);
+        const numberFormat = new Intl.NumberFormat(util.intl.currentLocale);
         obj20.format = numberFormat;
         obj11 = obj20;
       }
       const obj21 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const format = obj11.format;
       obj21.children = format.format(message.reactionCount);
-      items6[1] = tmp12(tmp35(4556).Text, obj21);
+      items6[1] = closure_1_10(Text_Text.Text, obj21);
       obj18.children = items6;
-      tmp14Result = tmp14(tmp15, obj18);
+      tmp14Result = closure_1_11(timestampProducer, obj18);
     }
     items4[2] = tmp14Result;
     obj14.children = items4;
@@ -242,23 +244,23 @@ function MessageAnnouncementCard(message) {
   if (tmp11Result) {
     const obj9 = { style: tmp.reactionInfo, children: null };
     const obj10 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-    const items3 = [tmp27(tmp28(8757).ReactionIcon, obj10), ];
+    const items3 = [closure_1_10(ReactionIcon.ReactionIcon, obj10), ];
     let tmp34 = null != obj11;
     if (tmp34) {
-      tmp34 = obj11.locale === tmp28(1114).intl.currentLocale;
+      tmp34 = obj11.locale === util.intl.currentLocale;
     }
     if (!tmp34) {
-      obj11 = { locale: tmp28(1114).intl.currentLocale, format: null };
+      obj11 = { locale: util.intl.currentLocale, format: null };
       const _Intl = Intl;
-      const numberFormat = new Intl.NumberFormat(tmp28(1114).intl.currentLocale);
+      const numberFormat = new Intl.NumberFormat(util.intl.currentLocale);
       obj11.format = numberFormat;
     }
     obj12 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const format = obj11.format;
     obj12.children = format.format(message.reactionCount);
-    items3[1] = tmp27(tmp28(4556).Text, obj12);
+    items3[1] = closure_1_10(Text_Text.Text, obj12);
     obj9.children = items3;
-    tmp11Result = tmp11(tmp18, obj9);
+    tmp11Result = closure_1_11(timestampProducer, obj9);
   }
   items2[1] = tmp11Result;
   obj7.children = items2;
@@ -311,7 +313,7 @@ function PollAnnouncementCard(message) {
       const intl = tmp13(1114).intl;
       const obj3 = { count: diff };
       obj.children = intl.format(tmp13(1114).t["mv/nIa"], obj3);
-      tmp9Result = tmp9(tmp13(4556).Text, obj);
+      tmp9Result = closure_10(tmp13(4556).Text, obj);
     }
     items1[1] = tmp9Result;
     obj2.children = items1;
@@ -411,7 +413,7 @@ export default function GameProfileAnnouncements(gameId) {
   const callback = scrollOffsetRef.useCallback(() => {
     let id;
     if (invite != null) {
-      const guild = tmp.guild;
+      const guild = invite.guild;
       if (guild != null) {
         id = guild.id;
       }
@@ -428,14 +430,14 @@ export default function GameProfileAnnouncements(gameId) {
       let obj = { gameId, channelId, initialScrollOffset: scrollOffsetRef.current };
       const result = obj.setGameProfilePendingReturn(obj);
       closeModal();
-      obj = { invite: tmp, guildId: id, channelId, analyticsLocationStack: analyticsLocations };
+      obj = { invite, guildId: id, channelId, analyticsLocationStack: analyticsLocations };
       navigateToGameAnnouncementDefault(obj);
     }
   }, items);
   const onPress = scrollOffsetRef.useCallback((messageId) => {
     let id;
     if (invite != null) {
-      const guild = tmp.guild;
+      const guild = invite.guild;
       if (guild != null) {
         id = guild.id;
       }
@@ -452,7 +454,7 @@ export default function GameProfileAnnouncements(gameId) {
       let obj = { gameId, channelId, initialScrollOffset: scrollOffsetRef.current };
       const result = obj.setGameProfilePendingReturn(obj);
       closeModal();
-      obj = { invite: tmp, guildId: id, channelId, messageId, analyticsLocationStack: analyticsLocations };
+      obj = { invite, guildId: id, channelId, messageId, analyticsLocationStack: analyticsLocations };
       navigateToGameAnnouncementDefault(obj);
     }
   }, items1);

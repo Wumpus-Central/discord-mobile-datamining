@@ -2,9 +2,13 @@
 
 // Module 17579 (GuildSettingsStickerCreate)
 import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
+import EmojiDefault from "Emoji" /* 7130 */;
+import StickerDefault from "Sticker" /* 10176 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11121 */;
 import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11146 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -47,7 +51,7 @@ let obj6 = { marginTop: nativeDefault.space.PX_8 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx");
 
-export default noop.forwardRef((stickerId, ref) => {
+export default noop.forwardRef((stickerId, arg1) => {
   stickerId = stickerId.stickerId;
   ({ guildId: importDefault, onFinish: dependencyMap } = stickerId);
   let ref2;
@@ -55,17 +59,17 @@ export default noop.forwardRef((stickerId, ref) => {
   c8 = undefined;
   size = undefined;
   c13 = undefined;
-  closure_16 = undefined;
+  let user;
   closure_17 = undefined;
   function hasUnsavedChanges(arg0) {
     let flag = arg0;
     if (arg0 === undefined) {
       flag = true;
     }
-    if (null != closure_16) {
-      let tmp12 = null != c6 && tmp11 !== tmp.name;
+    if (null != user) {
+      let tmp12 = null != _undefined && tmp11 !== user.name;
       if (!tmp12) {
-        let tmp14 = null != c8 && tmp13 !== tmp.description;
+        let tmp14 = null != c8 && tmp13 !== user.description;
         if (!tmp14) {
           let tmp16 = null == first1;
           if (!tmp16) {
@@ -77,12 +81,12 @@ export default noop.forwardRef((stickerId, ref) => {
       }
       let tmp2 = tmp12;
     } else {
-      let tmp7 = null != c6;
+      let tmp7 = null != _undefined;
       if (flag) {
         if (tmp7) {
           let length;
-          if (arr != null) {
-            length = arr.length;
+          if (_undefined != null) {
+            length = _undefined.length;
           }
           tmp7 = length > 0;
         }
@@ -100,8 +104,8 @@ export default noop.forwardRef((stickerId, ref) => {
         tmp2 = tmp7;
         if (tmp7) {
           let length1;
-          if (arr != null) {
-            length1 = arr.length;
+          if (_undefined != null) {
+            length1 = _undefined.length;
           }
           tmp2 = length1 > 0;
         }
@@ -115,7 +119,7 @@ export default noop.forwardRef((stickerId, ref) => {
     }
     return tmp2;
   }
-  closure_19 = async function _handleImagePicker(arg0, value) {
+  closure_19 = async function _handleImagePicker() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -201,7 +205,7 @@ export default noop.forwardRef((stickerId, ref) => {
       }
     }
   };
-  closure_20 = async function _handleSave(arg0, value) {
+  closure_20 = async function _handleSave() {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -228,7 +232,7 @@ export default noop.forwardRef((stickerId, ref) => {
           } else {
             c5 = 1;
             if (null == stickerId) {
-              if (null != timestampProducer) {
+              if (null != _undefined) {
                 if (null != first1) {
                   if (null != uri) {
                     const obj1 = { guildId, name: tmp26, tags: null, description: null, uri: null, mimeType: "image/png", platform: "mobile", originalMd5: null };
@@ -252,11 +256,10 @@ export default noop.forwardRef((stickerId, ref) => {
               c6 = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              if (null != timestampProducer) {
+              if (null != _undefined) {
                 if (null != first1) {
                   const obj3 = { name: tmp38, tags: null, description: null };
                   const obj10 = description(tmp3[18]);
-                  const tmp42 = guildId;
                   obj3.tags = description(tmp3[19]).getStickerTagForEmoji(tmp39);
                   let description2 = EmojiStore;
                   if (EmojiStore == null) {
@@ -265,7 +268,7 @@ export default noop.forwardRef((stickerId, ref) => {
                   obj3.description = description2;
                   c3 = 3;
                   c6 = 1;
-                  let obj4 = { value: obj10.updateGuildSticker(tmp42, tmp37, obj3), done: false };
+                  let obj4 = { value: obj10.updateGuildSticker(guildId, tmp37, obj3), done: false };
                   return obj4;
                 }
               }
@@ -322,7 +325,7 @@ export default noop.forwardRef((stickerId, ref) => {
     }
   };
   let tmp = hasUnsavedChanges();
-  ref = ref2.useRef(null);
+  const ref = ref2.useRef(null);
   const ref1 = ref2.useRef(null);
   ref2 = ref2.useRef(null);
   [c6, tmp6] = ref1(ref2.useState(undefined), 2);
@@ -360,7 +363,7 @@ export default noop.forwardRef((stickerId, ref) => {
     return applyArgumentsResult;
   }
   const tmp16Result = useInitialValueDefault(stickerById);
-  closure_16 = tmp16Result;
+  user = tmp16Result;
   const tmp20 = useInitialValueDefault(() => {
     let tags = closure_16;
     if (null != closure_16) {
@@ -393,24 +396,24 @@ export default noop.forwardRef((stickerId, ref) => {
     }
   });
   closure_17 = tmp20;
-  const imperativeHandle = obj.useImperativeHandle(ref, () => ({ hasUnsavedChanges }));
+  const imperativeHandle = obj.useImperativeHandle(arg1, () => ({ hasUnsavedChanges }));
   const items1 = [stickerId, tmp16Result, tmp20];
   const effect = obj.useEffect(() => {
     let tmp = null != stickerId;
     if (tmp) {
-      tmp = null != closure_16;
+      tmp = null != user;
     }
     if (tmp) {
       onPressEmoji(closure_17);
-      _undefined(closure_16.name);
-      _undefined2(closure_16.description);
+      _undefined(user.name);
+      _undefined2(user.description);
       const current = ref1.current;
       if (current != null) {
-        current.setText(tmp7.name);
+        current.setText(user.name);
       }
       const current2 = ref2.current;
       if (current2 != null) {
-        let str = tmp7.description;
+        let str = user.description;
         if (str == null) {
           str = "";
         }
@@ -436,7 +439,7 @@ export default noop.forwardRef((stickerId, ref) => {
     let obj6 = { variant: "text-sm/medium", color: "text-muted", style: tmp.help, children: null };
     const intl3 = stickerId(1114).intl;
     const obj7 = { articleUrl: null };
-    let tmp14Result = tmp14(2024);
+    let tmp14Result = HelpdeskUtilsDefault;
     obj7.articleUrl = tmp14Result.getArticleURL(uri.STICKERS_UPLOAD);
     obj6.children = intl3.format(stickerId(1114).t.UBj0aX, obj7);
     items2[2] = onPressEmoji(stickerId(4556).Text, obj6);
@@ -452,7 +455,7 @@ export default noop.forwardRef((stickerId, ref) => {
     obj8.variant = str;
     items2[3] = onPressEmoji(stickerId(4975).Button, obj8);
     obj9.children = items2;
-    tmp23Result = tmp23(closure_16, obj9);
+    tmp23Result = tmp23(user, obj9);
   }
   const items3 = [tmp23Result, ];
   let obj10 = { style: tmp.stack, children: null };
@@ -465,8 +468,8 @@ export default noop.forwardRef((stickerId, ref) => {
   obj12.accessibilityLabel = intl6.string(stickerId(1114).t.O1REe1);
   if (null != tmp16Result) {
     let obj13 = { sticker: tmp16Result, size: null, animated: true };
-    tmp14Result = tmp14(10176);
-    obj13.size = tmp14(576).space.PX_96;
+    tmp14Result = StickerDefault;
+    obj13.size = nativeDefault.space.PX_96;
     let tmp32Result = tmp32(tmp14Result, obj13);
   } else if (null != uri) {
     const obj14 = { source: null, style: null, resizeMode: "contain" };
@@ -498,12 +501,12 @@ export default noop.forwardRef((stickerId, ref) => {
       const obj19 = { id: null, animated: null, size: null };
       ({ id: obj25.id, animated: obj25.animated } = first1);
       obj19.size = size;
-      emojiURL = tmp14(1396).getEmojiURL(obj19);
-      const tmp14Result2 = tmp14(1396);
+      emojiURL = AvatarUtilsDefault.getEmojiURL(obj19);
+      const tmp14Result2 = AvatarUtilsDefault;
     }
     obj18.src = emojiURL;
-    tmp32Result = tmp32(tmp14(7130), obj18);
-    const tmp14Result1 = tmp14(7130);
+    tmp32Result = tmp32(EmojiDefault, obj18);
+    const tmp14Result1 = EmojiDefault;
   } else {
     tmp32Result = tmp32(tmp31(8757).ReactionIcon, { size: "md", color: "text-subtle" });
   }

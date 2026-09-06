@@ -1,6 +1,7 @@
 // === Module 17719: GuildSettingsRoleSubscriptionsGroupEdit ===
 
 // Module 17719 (GuildSettingsRoleSubscriptionsGroupEdit)
+import util from "util" /* 1114 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
 import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 17734 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -78,7 +79,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
     tmp18 = source;
   }
   const items = [str, guildId, updateSubscriptionsSettings, subscriptionsSettings, first, first1, isFullServerGating];
-  callback = obj2.useCallback(first(function*(arg0, value) {
+  callback = obj2.useCallback(first(function*() {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -172,8 +173,8 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
     if (null != error) {
       let anyErrorMessage = error.getAnyErrorMessage();
       if (anyErrorMessage == null) {
-        const intl = tmp(1114).intl;
-        anyErrorMessage = intl.string(tmp(1114).t.ZUEGFn);
+        const intl = util.intl;
+        anyErrorMessage = intl.string(util.t.ZUEGFn);
       }
       ToastUtils.presentError(anyErrorMessage);
     }

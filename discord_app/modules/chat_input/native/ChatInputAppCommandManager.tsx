@@ -52,7 +52,7 @@ obj.timestampMention = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUN
 let obj3 = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: nativeDefault.colors.MENTION_FOREGROUND, borderRadius: nativeDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
 obj.autocomplete = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 let closure_14 = createStyles.createStyles(obj);
-const forwardRefResult = noop.forwardRef((chatInputRef, ref) => {
+const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
   chatInputRef = chatInputRef.chatInputRef;
   const chatInputStateRef = chatInputRef.chatInputStateRef;
   const channel = chatInputRef.channel;
@@ -72,7 +72,7 @@ const forwardRefResult = noop.forwardRef((chatInputRef, ref) => {
   const obj3 = chatInputRef(commandsDisabled[13]);
   let text = chatInputRef(commandsDisabled[16]).getTextBeforeFirstOption(chatInputStateRef.current.text).text;
   let substr = text.slice(1);
-  ref = applicationCommandOptionValueParser.useRef(substr.trimEnd());
+  let ref = applicationCommandOptionValueParser.useRef(substr.trimEnd());
   const tmp6 = _slicedToArray(applicationCommandOptionValueParser.useState(ref.current), 2);
   closure_9 = tmp6[1];
   const obj4 = chatInputRef(commandsDisabled[16]);
@@ -110,18 +110,17 @@ const forwardRefResult = noop.forwardRef((chatInputRef, ref) => {
       const _Map = Map;
       const map = new Map();
       for (const item10017 of tmp) {
-        let tmp8 = item10017;
         let game = GameStore.getGame(item10017);
         let tmp11 = game;
         if (null == game) {
-          let gameById = GameAutocompleteStore.getGameById(tmp8);
+          let gameById = GameAutocompleteStore.getGameById(item10017);
           if (null != gameById) {
-            let result = map.set(tmp8, tmp22);
+            let result = map.set(item10017, tmp22);
           }
         } else {
           let obj2 = useGameProfileObscured;
           if (!obj2.isGameProfileObscured(tmp11, nsfwAllowed)) {
-            let obj = { id: tmp8, name: null, icon: null };
+            let obj = { id: item10017, name: null, icon: null };
             ({ name: obj3.name, media } = tmp11);
             let icon;
             if (media != null) {
@@ -131,7 +130,7 @@ const forwardRefResult = noop.forwardRef((chatInputRef, ref) => {
               icon = null;
             }
             obj.icon = icon;
-            let result1 = map.set(tmp8, obj);
+            let result1 = map.set(item10017, obj);
           }
         }
         continue;
@@ -182,9 +181,9 @@ const forwardRefResult = noop.forwardRef((chatInputRef, ref) => {
       };
       obj.styles = obj;
       const tmp12 = new ApplicationCommandManagerDefault(obj);
-      tmp2.current = tmp12;
+      ref.current = tmp12;
     } else {
-      const current2 = tmp2.current;
+      const current2 = ref.current;
       const obj1 = { newState: obj };
       const result = current2.updateApplicationCommandManagerState(obj1);
     }
@@ -265,7 +264,7 @@ const forwardRefResult = noop.forwardRef((chatInputRef, ref) => {
       }
     }
   }, items8);
-  const imperativeHandle = applicationCommandOptionValueParser.useImperativeHandle(ref, () => ({
+  const imperativeHandle = applicationCommandOptionValueParser.useImperativeHandle(arg1, () => ({
     getApplicationCommandManager() {
       return ref.current;
     },

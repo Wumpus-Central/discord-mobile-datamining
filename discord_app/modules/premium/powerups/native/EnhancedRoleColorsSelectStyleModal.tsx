@@ -5,8 +5,10 @@ import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1114 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2018 */;
+import _modDef2428 from "module_2428" /* 2428 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5004 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
@@ -38,17 +40,16 @@ let closure_11 = createStyles.createStyles((arg0) => {
   obj.button = size;
   obj.message = { width: 400, flex: 1, marginStart: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8, alignSelf: "flex-start" };
   if (arg0 === ThemeTypes.LIGHT) {
-    let BACKGROUND_SURFACE_HIGH = tmp(576).colors.BACKGROUND_BASE_LOW;
+    let BACKGROUND_SURFACE_HIGH = nativeDefault.colors.BACKGROUND_BASE_LOW;
   } else {
-    BACKGROUND_SURFACE_HIGH = tmp(576).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
   }
   const obj1 = { width: 400, flex: 1, marginStart: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8, alignSelf: "flex-start" };
-  const tmp3 = ThemeTypes;
   obj.text = { width: "100%", textAlign: "center", backgroundColor: BACKGROUND_SURFACE_HIGH, paddingVertical: nativeDefault.space.PX_8 };
-  if (arg0 === tmp3.LIGHT) {
-    let BACKGROUND_SURFACE_HIGH2 = tmp(576).colors.BACKGROUND_BASE_LOW;
+  if (arg0 === ThemeTypes.LIGHT) {
+    let BACKGROUND_SURFACE_HIGH2 = nativeDefault.colors.BACKGROUND_BASE_LOW;
   } else {
-    BACKGROUND_SURFACE_HIGH2 = tmp(576).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH2 = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
   }
   const obj2 = { width: "100%", textAlign: "center", backgroundColor: BACKGROUND_SURFACE_HIGH, paddingVertical: nativeDefault.space.PX_8 };
   obj.upsellContainer = { backgroundColor: BACKGROUND_SURFACE_HIGH2, padding: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.sm };
@@ -89,12 +90,12 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
         const items = [button.button, , ];
         let selected = id === id.id;
         if (selected) {
-          selected = tmp5.selected;
+          selected = button.selected;
         }
         items[1] = selected;
         let disabled = tmp;
         if (tmp) {
-          disabled = tmp5.disabled;
+          disabled = button.disabled;
         }
         let obj = {
           style: items,
@@ -107,7 +108,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
         };
         items[2] = disabled;
         obj = {
-          style: tmp5.message,
+          style: button.message,
           pointerEvents: "none",
           message,
           rowGenerator,
@@ -120,7 +121,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           }
         };
         const items1 = [closure_1_9(require("ChatItem"), obj), ];
-        obj = { style: tmp5.text, variant: "text-sm/normal", children: null };
+        obj = { style: button.text, variant: "text-sm/normal", children: null };
         const intl = require("util").intl;
         obj.children = intl.string(id.labelString);
         items1[1] = closure_1_9(require("Text/Text").Text, obj);
@@ -134,23 +135,23 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   if (!hasEnhancedRoleColorsForRole) {
     const obj3 = { style: tmp3.upsellContainer, children: null };
     const obj4 = { style: tmp3.upsellText, variant: "text-sm/semibold", children: null };
-    const intl3 = tmp4(1114).intl;
+    const intl3 = util.intl;
     const obj5 = { magical: null };
     const obj6 = { gradientColors: null, variant: "text-sm/semibold", children: null };
     let items1 = [, , ];
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj6.gradientColors = items1;
-    const intl4 = tmp4(1114).intl;
-    obj6.children = intl4.string(tmp(2428)["+/IHLl"]);
-    obj5.magical = tmp7(tmp4(4556).Text, obj6);
-    obj4.children = intl3.format(tmp(2428).VpEDJc, obj5);
-    const items2 = [tmp7(tmp4(4556).Text, obj4), ];
+    const intl4 = util.intl;
+    obj6.children = intl4.string(_modDef2428["+/IHLl"]);
+    obj5.magical = closure_9(Text_Text.Text, obj6);
+    obj4.children = intl3.format(_modDef2428.VpEDJc, obj5);
+    const items2 = [closure_9(Text_Text.Text, obj4), ];
     const obj7 = { style: tmp3.upsellText, variant: "text-sm/normal", children: null };
-    const intl5 = tmp4(1114).intl;
-    obj7.children = intl5.string(tmp(2428).FJZeZF);
-    items2[1] = tmp7(tmp4(4556).Text, obj7);
+    const intl5 = util.intl;
+    obj7.children = intl5.string(_modDef2428.FJZeZF);
+    items2[1] = closure_9(Text_Text.Text, obj7);
     obj3.children = items2;
-    tmp8Result = tmp8(tmp9, obj3);
+    tmp8Result = closure_10(tmp9, obj3);
   }
   items[1] = tmp8Result;
   obj1.children = items;

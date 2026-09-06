@@ -47,12 +47,12 @@ class ICYMIForumThreadRow {
     effect = author.useEffect(() => {
       let id;
       if (stateFromStores != null) {
-        id = tmp.id;
+        id = stateFromStores.id;
       }
       if (null != id) {
         let id1;
-        if (tmp != null) {
-          id1 = tmp.id;
+        if (stateFromStores != null) {
+          id1 = stateFromStores.id;
         }
         const items = [author.id];
         const membersById = GuildActionCreatorsDefault.requestMembersById(id1, items);

@@ -9,14 +9,13 @@ get_ActivityIndicator = fn(17);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/native/useBackPressHandler.tsx");
 
-export default function useBackPressHandler(set) {
-  let current = set;
+export default function useBackPressHandler(current) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
   noop = undefined;
-  noop = noop.useRef(set);
+  noop = noop.useRef(current);
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_2.current = current;
   });
@@ -28,6 +27,7 @@ export default function useBackPressHandler(set) {
         return () => closure_0.remove();
       }
     }
+    obj = current(flag[2]);
   }, items);
 };
 export const BackPressHandler = {

@@ -38,7 +38,7 @@ export default function IconUploader(disabled) {
     str = "avatar";
   }
   ({ name, icon, onUpload: require, iconStyle, onChangeIconPress: importDefault } = disabled);
-  closure_3 = async function _handleChangeIcon(arg0, value) {
+  closure_3 = async function _handleChangeIcon() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

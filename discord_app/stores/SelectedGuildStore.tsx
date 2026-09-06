@@ -168,12 +168,11 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
           let num = 0;
           const keys = Object.keys(prop);
           for (const item10022 of keys) {
-            let tmp5 = item10022;
             if (item10022 !== arg0) {
-              let tmp8 = prop[tmp5];
+              let tmp8 = prop[item10022];
               let tmp11 = tmp8 > num;
               if (tmp11) {
-                tmp11 = null != GuildStore.getGuild(tmp5);
+                tmp11 = null != GuildStore.getGuild(item10022);
               }
               if (tmp11) {
                 tmp3 = item10022;
@@ -232,12 +231,11 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
           let num = 0;
           const keys = Object.keys(prop);
           for (const item10022 of keys) {
-            let tmp5 = item10022;
             if (item10022 !== arg0) {
-              let tmp8 = prop[tmp5];
+              let tmp8 = prop[item10022];
               let tmp11 = tmp8 > num;
               if (tmp11) {
-                tmp11 = null != GuildStore.getGuild(tmp5);
+                tmp11 = null != GuildStore.getGuild(item10022);
               }
               if (tmp11) {
                 tmp3 = item10022;

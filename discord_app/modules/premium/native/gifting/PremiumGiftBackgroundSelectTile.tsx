@@ -46,7 +46,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   }
   const obj = { container: size, selected: null, image: null };
   size.marginStart = num;
-  const size1 = { position: "absolute", borderColor: tmp(576).colors.TEXT_BRAND, borderRadius: tmp(576).radii.sm, borderWidth: 2, flex: 1, width: 78, height: 44 };
+  const size1 = { position: "absolute", borderColor: nativeDefault.colors.TEXT_BRAND, borderRadius: nativeDefault.radii.sm, borderWidth: 2, flex: 1, width: 78, height: 44 };
   obj.selected = size1;
   obj.image = { width: 72, height: 38, alignSelf: "center" };
   return obj;

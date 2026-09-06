@@ -140,33 +140,33 @@ function StartEarningButton(isTermsAccepted) {
     const intl2 = tmp5(tmp3[10]).intl;
     obj2.text = intl2.string(tmp5(tmp3[10]).t.NL5ZNS);
     obj2.onPress = callback;
-    obj1.children = tmp9(tmp5(tmp3[20]).Button, obj2);
-    const items3 = [tmp9(tmp12, obj1), ];
+    obj1.children = closure_11(tmp5(tmp3[20]).Button, obj2);
+    const items3 = [closure_11(closure_6, obj1), ];
     let tmp11Result = null != error;
     if (tmp11Result) {
       const obj3 = { children: null };
-      const items4 = [tmp9(tmp5(tmp3[21]).Spacer, { size: 12 }), ];
+      const items4 = [closure_11(tmp5(tmp3[21]).Spacer, { size: 12 }), ];
       const obj4 = { children: error.getAnyErrorMessage() };
-      items4[1] = tmp9(tmp2(tmp3[9]), obj4);
+      items4[1] = closure_11(require("ErrorBlock"), obj4);
       obj3.children = items4;
-      tmp11Result = tmp11(tmp16, obj3);
-      const tmp2Result = tmp2(tmp3[9]);
+      tmp11Result = closure_12(closure_13, obj3);
+      const tmp2Result = require("ErrorBlock");
     }
     const obj5 = { children: null };
     items3[1] = tmp11Result;
     obj5.children = items3;
-    tmp11Result = tmp11(tmp16, obj5);
+    tmp11Result = closure_12(closure_13, obj5);
   } else {
     obj1.style = tmp.startEarningButton;
     const obj6 = { loading, text: null, icon: null, pillStyle: null, onPress: null };
     const intl = tmp5(tmp3[10]).intl;
     obj6.text = intl.string(tmp5(tmp3[10]).t.NL5ZNS);
-    const obj7 = { source: tmp2(tmp3[23]), color: tmp2(tmp3[8]).unsafe_rawColors.WHITE, size: tmp5(tmp3[21]).Icon.Sizes.SMALL_20 };
-    obj6.icon = tmp9(tmp5(tmp3[21]).Icon, obj7);
+    const obj7 = { source: require("module_9625"), color: require("native").unsafe_rawColors.WHITE, size: tmp5(tmp3[21]).Icon.Sizes.SMALL_20 };
+    obj6.icon = closure_11(tmp5(tmp3[21]).Icon, obj7);
     obj6.pillStyle = { backgroundColor: "#EB5D30" };
     obj6.onPress = callback1;
-    obj1.children = tmp9(tmp5(tmp3[22]).BaseTextButton, obj6);
-    tmp11Result = tmp9(tmp12, obj1);
+    obj1.children = closure_11(tmp5(tmp3[22]).BaseTextButton, obj6);
+    tmp11Result = closure_11(closure_6, obj1);
   }
   items2[1] = tmp11Result;
   obj.children = items2;
@@ -215,15 +215,15 @@ class MarketingSections {
         type = type.type;
         if (constants.HOW_IT_WORKS === type) {
           return closure_0;
-        } else if (tmp.BENEFITS === type) {
+        } else if (constants.BENEFITS === type) {
           return closure_1;
-        } else if (tmp.OTHER_CREATORS === type) {
+        } else if (constants.OTHER_CREATORS === type) {
           let obj = { title: null, children: null };
           const intl = util.intl;
           obj.title = intl.string(util.t["tJp+QV"]);
           obj = { highlightedCreators: type.creators };
           obj.children = closure_2_11(CreatorHighlightSectionDefault, obj);
-          return closure_2_11(SectionContainer, obj, tmp.OTHER_CREATORS);
+          return closure_2_11(SectionContainer, obj, constants.OTHER_CREATORS);
         }
       });
       tmpResult = tmp(Fragment, obj3);
@@ -339,10 +339,10 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
         if (wasRejectedInV1) {
           const obj7 = { style: tmp.statusNoticeContainer };
           const merged = Object.assign(tmp5);
-          let tmp31Result = tmp31(ApplicationStatusNotice, obj7);
+          let tmp31Result = closure_11(ApplicationStatusNotice, obj7);
         } else {
           const obj8 = { style: tmp.startEarningButtonContainer, guildId: guild.id, isTermsAccepted: tmp10, setTermsAccepted: tmp11, eligibleForMonetization, eligibility, acceptTermsCheckboxText };
-          tmp31Result = tmp31(StartEarningButton, obj8);
+          tmp31Result = closure_11(StartEarningButton, obj8);
         }
         items4[2] = tmp31Result;
         const obj9 = { onboardingMarketing: creatorMonetizationOnboardingMarketing, onHowItWorksLayoutChange: callback };
@@ -360,17 +360,19 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
         }
         if (tmp31Result) {
           const obj10 = { style: tmp.startEarningFabContainer, guildId: guild.id, isTermsAccepted: tmp10, setTermsAccepted: tmp11, eligibleForMonetization, eligibility, acceptTermsCheckboxText, isFab: true };
-          tmp31Result = tmp31(StartEarningButton, obj10);
+          tmp31Result = closure_11(StartEarningButton, obj10);
         }
         items5[1] = tmp31Result;
         obj.children = items5;
-        let tmp30Result = tmp30(tmp2(tmp3[36]).SafeAreaPaddingView, obj);
+        let tmp30Result = closure_12(tmp2(tmp3[36]).SafeAreaPaddingView, obj);
         const tmp4Result = tmp4(tmp3[37]);
       }
       return tmp30Result;
     }
   }
   tmp30Result = closure_11(tmp4(tmp3[34]), {});
+  const tmp15 = ref(ref1[31]);
+  const tmp16 = null == guild.id || null == eligibility;
 };
 export { SectionContainer };
 export { MarketingSections };

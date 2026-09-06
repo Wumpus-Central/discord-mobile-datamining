@@ -21,5 +21,5 @@ export const CollectiblesAnalyticsProvider = function CollectiblesAnalyticsProvi
     const merged = Object.assign(context);
     const merged1 = Object.assign(newValue);
     return {};
-  }, items)}>{arg0.children}</context.Provider>;
+  }, items)}>{children.children}</context.Provider>;
 };

@@ -2,9 +2,11 @@
 
 // Module 14170 (GhostInput)
 import nativeDefault from "native" /* 576 */;
+import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 4278 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Input from "Input" /* 6607 */;
 import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 6608 */;
+import useTextField from "useTextField" /* 6614 */;
 import InputFieldContainer from "InputFieldContainer" /* 6621 */;
 import NativeTextInput from "NativeTextInput" /* 6624 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -43,10 +45,10 @@ export const GhostInput = function GhostInput(size) {
   const tmp4 = closure_6(size.size, size.status);
   const isCentered = size.isCentered;
   const autoFocus = size.autoFocus;
-  let tmpResult = tmp(4278);
+  let tmpResult = useFieldLabelA11yNative;
   const fieldLabelA11yNative = tmpResult.useFieldLabelA11yNative(size);
   const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
-  tmpResult = tmp(6614);
+  tmpResult = useTextField;
   const textField = tmpResult.useTextField(size, undefined);
   obj = {};
   const merged = Object.assign(size);

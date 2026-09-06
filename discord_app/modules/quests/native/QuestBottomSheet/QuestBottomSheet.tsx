@@ -2,12 +2,14 @@
 
 // Module 15120 (QuestBottomSheet)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import QuestTypes from "QuestTypes" /* 5447 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import utils_QuestUtils from "utils/QuestUtils" /* 7722 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7724 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
+import WarningIcon from "WarningIcon" /* 8588 */;
 import QuestActionCreators from "QuestActionCreators" /* 11276 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 11483 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 11496 */;
@@ -30,7 +32,6 @@ function QuestBottomSheet(initialStep) {
   const hasWatchVideoOnMobileTasks = obj1.useHasWatchVideoOnMobileTasks(quest.config);
   let obj2 = QuestTaskUtils;
   const tmp = closure_14();
-  const tmp2 = constants;
   let obj3 = QuestTaskUtils;
   const hasWatchVideoTasksResult = obj2.hasWatchVideoTasks(quest);
   const tmp8 = _slicedToArray(useState(0), 2);
@@ -54,7 +55,7 @@ function QuestBottomSheet(initialStep) {
         onDefib: defibrillator.start,
         onConnectConsoleNext: stepActions.onNext
       };
-      tmp9Result = tmp9(QuestBottomSheetFooterDefault, obj2);
+      tmp9Result = closure_1_10(QuestBottomSheetFooterDefault, obj2);
     } else {
       tmp9Result = null;
     }
@@ -65,7 +66,7 @@ function QuestBottomSheet(initialStep) {
   if (step !== obj.TASK_SELECT) {
     num = tmp8[0];
   }
-  obj3 = { style: items, children: closure_1_10(QuestBottomSheetContent, { defibrillator, quest, handleTaskSelect, location: tmp2.QUEST_HOME_MOBILE, showMicrophone, sourceQuestContent, step }) };
+  obj3 = { style: items, children: closure_1_10(QuestBottomSheetContent, { defibrillator, quest, handleTaskSelect, location: constants.QUEST_HOME_MOBILE, showMicrophone, sourceQuestContent, step }) };
   items[1] = { paddingBottom: num };
   obj.children = closure_1_10(View, obj3);
   obj.children = closure_1_10(Sheet_BottomSheet.BottomSheet, obj);
@@ -206,11 +207,11 @@ function useEnrolledQuestContentProps(quest) {
   const memo4 = obj8.useMemo(() => {
     let hasItem = 1 === impressionId.length;
     if (hasItem) {
-      hasItem = arr.includes(constants2.DESKTOP);
+      hasItem = impressionId.includes(constants2.DESKTOP);
     }
-    let hasItem1 = 1 === arr.length;
+    let hasItem1 = 1 === impressionId.length;
     if (hasItem1) {
-      hasItem1 = arr.includes(constants2.CONSOLE);
+      hasItem1 = impressionId.includes(constants2.CONSOLE);
     }
     let arr2 = constants;
     if (!hasItem) {
@@ -338,11 +339,11 @@ class QuestBottomSheetContent {
         obj = QuestTaskUtils;
         const tmp8 = QuestBottomSheetProgressCard;
         if (isInGameQuestResult) {
-          obj = { quest: tmp3, sourceQuestContent };
-          tmp5Result = tmp5(tmp8.QuestBottomSheetProgressCardInGameTask, obj);
+          obj = { quest, sourceQuestContent };
+          tmp5Result = closure_2_10(tmp8.QuestBottomSheetProgressCardInGameTask, obj);
         } else {
-          const obj1 = { quest: tmp3, sourceQuestContent };
-          tmp5Result = tmp5(tmp8.QuestBottomSheetProgressCardPlayStreamTask, obj1);
+          const obj1 = { quest, sourceQuestContent };
+          tmp5Result = closure_2_10(tmp8.QuestBottomSheetProgressCardPlayStreamTask, obj1);
         }
         isInGameQuestResult = obj.isInGameQuest(quest);
       }
@@ -423,30 +424,31 @@ function MicrophoneUnit(arg0) {
       str = "text-feedback-critical";
     }
     const obj1 = { color: str };
-    const items1 = [closure_1_10(tmp2(8588).WarningIcon, obj1), ];
-    const intl2 = tmp2(1114).intl;
+    const items1 = [closure_1_10(WarningIcon.WarningIcon, obj1), ];
+    const intl2 = util.intl;
     if (tmp4) {
       const obj2 = { gameTitle: quest.config.messages.gameTitle };
-      let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t["28Ql27"], obj2);
+      let formatToPlainStringResult = intl2.formatToPlainString(util.t["28Ql27"], obj2);
     } else {
-      formatToPlainStringResult = intl2.string(tmp2(1114).t.YstzGO);
+      formatToPlainStringResult = intl2.string(util.t.YstzGO);
     }
     const obj3 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: formatToPlainStringResult };
-    items1[1] = closure_1_10(tmp2(4556).Text, obj3);
+    items1[1] = closure_1_10(Text_Text.Text, obj3);
     obj.children = items1;
     const items2 = [closure_1_11(View, obj), items3.map((children, index) => closure_1_10(Text_Text.Text, { variant: "text-sm/normal", children }, index))];
     obj.children = items2;
     return closure_1_11(View, obj);
   }
   const tmp2Result = utils_QuestUtils;
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   if (isSponsoredPlayQuestResult) {
-    let stringResult = intl.string(tmp2(1114).t.bUyEZZ);
+    let stringResult = intl.string(util.t.bUyEZZ);
   } else {
     const obj4 = { gameTitle: quest.config.messages.gameTitle };
-    stringResult = intl.formatToPlainString(tmp2(1114).t.GXqvC1, obj4);
+    stringResult = intl.formatToPlainString(util.t.GXqvC1, obj4);
   }
   items3 = [stringResult];
+  isSponsoredPlayQuestResult = utils_QuestUtils.isSponsoredPlayQuest(quest);
 }
 const useState = fn(19).useState;
 const View = fn(17).View;
@@ -476,14 +478,14 @@ export default function QuestBottomSheetConnected(questContentPosition) {
     obj = {
       overrideVisibility: true,
       questOrQuests: stateFromStores,
-      questContent: tmp(tmp2[15]).QuestContent.QUEST_BOTTOM_SHEET,
+      questContent: require("QuestTypes").QuestContent.QUEST_BOTTOM_SHEET,
       questContentPosition: questContentPosition.questContentPosition,
       sourceQuestContent,
       children() {
           return closure_2_10(QuestBottomSheet, { quest: stateFromStores, initialStep, sourceQuestContent });
         }
     };
-    tmp4 = closure_10(tmp(tmp2[18]).QuestContentImpressionTrackerNative, obj);
+    tmp4 = closure_10(require("QuestContentImpressionTracker").QuestContentImpressionTrackerNative, obj);
   }
   return tmp4;
 };

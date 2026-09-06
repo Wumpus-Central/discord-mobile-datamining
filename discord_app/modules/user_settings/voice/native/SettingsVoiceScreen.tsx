@@ -7,6 +7,8 @@ import Text_Text from "Text/Text" /* 4556 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import NoiseCancellationUtils from "NoiseCancellationUtils" /* 9994 */;
 import KrispLogo2 from "KrispLogo" /* 9997 */;
+import _modDef9998 from "module_9998" /* 9998 */;
+import _modDef9999 from "module_9999" /* 9999 */;
 import SettingBuilders from "SettingBuilders" /* 11468 */;
 import SettingLayoutDefault from "SettingLayout" /* 14689 */;
 import noop from "module_19" /* 19 */;
@@ -18,21 +20,21 @@ function KrispLogo() {
   const tmp = closure_13();
   let obj = shared;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(9998);
+    let tmp2Result = _modDef9998;
   } else {
-    tmp2Result = tmp2(9999);
+    tmp2Result = _modDef9999;
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
-  const intl = tmp5(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.vFiCSx);
   const items = [React7(hasOwnProperty, obj), ];
   const obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
-  const intl2 = tmp5(1114).intl;
+  const intl2 = util.intl;
   obj1.accessibilityLabel = intl2.string(util.t.hvVgAZ);
   obj1.onPress = KrispLogo2.handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
-  const intl3 = tmp5(1114).intl;
+  const intl3 = util.intl;
   obj2.children = intl3.string(util.t.hvVgAZ);
   obj1.children = React7(Text_Text.Text, obj2);
   items[1] = React7(LegacyBaseButton.LegacyPressable, obj1);
@@ -44,15 +46,15 @@ function SystemProcessingSubLabel() {
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
     obj = { variant: "text-sm/medium", children: null };
-    const intl = tmp(1114).intl;
+    const intl = util.intl;
     obj = {
       onSettingsClick() {
           mediaEngine = mediaEngine.getMediaEngine();
           const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
         }
     };
-    obj.children = intl.format(tmp(1114).t.EUNgko, obj);
-    tmp3 = React7(tmp(4556).Text, obj);
+    obj.children = intl.format(util.t.EUNgko, obj);
+    tmp3 = React7(Text_Text.Text, obj);
   }
   return tmp3;
 }

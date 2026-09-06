@@ -98,7 +98,7 @@ export const getParserWithoutLinks = function getParserWithoutLinks(arg0) {
   return MarkupUtilsDefault.reactParserFor(createRulesWithoutLinks(obj, obj));
 };
 export { createNotifCenterV2MessagePreviewRules };
-export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2MessagePreviewParser(arg0, arg1, roleStyle) {
+export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2MessagePreviewParser(arg0, arg1) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};

@@ -61,13 +61,13 @@ export default noop.forwardRef((inActionSheet, ref) => {
         tmp11Result = tmp11(FastestListItemTypeDefault.ITEM, arg1, num3);
       }
       return tmp11Result;
-    } else if (tmp(7072).FastListItemTypes.SECTION === arg0) {
+    } else if (FastList.FastListItemTypes.SECTION === arg0) {
       let tmp7Result;
       if (keyExtractor != null) {
         tmp7Result = tmp7(FastestListItemTypeDefault.SECTION_HEADER, arg1, -1);
       }
       return tmp7Result;
-    } else if (tmp(7072).FastListItemTypes.SECTION_FOOTER === arg0) {
+    } else if (FastList.FastListItemTypes.SECTION_FOOTER === arg0) {
       let tmp3Result;
       if (keyExtractor != null) {
         tmp3Result = tmp3(FastestListItemTypeDefault.SECTION_FOOTER, arg1, -1);
@@ -77,10 +77,10 @@ export default noop.forwardRef((inActionSheet, ref) => {
   }, items);
   const memo = onContentLengthChange.useMemo(() => {
     if (horizontal) {
-      const rect = { left: tmp, right: scrollIndicatorInsetEnd };
+      const rect = { left: scrollIndicatorInsetStart, right: scrollIndicatorInsetEnd };
       let rect1 = rect;
     } else {
-      rect1 = { top: tmp, bottom: scrollIndicatorInsetEnd };
+      rect1 = { top: scrollIndicatorInsetStart, bottom: scrollIndicatorInsetEnd };
     }
   }, items1);
   const items2 = [preventNativeModalDismiss, inActionSheet];

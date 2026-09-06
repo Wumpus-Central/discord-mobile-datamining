@@ -39,25 +39,24 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         let obj = { buttonText: ctaText, interval: PremiumUtilsDefault.formatInterval(item.interval), cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
         obj.cancelSubscriptionArticle = HelpdeskUtilsDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
         obj.paidServiceTermsArticle = HelpdeskUtilsDefault.getArticleURL(constants.PAID_TERMS);
-        let formatResult = format(tmp3(1114).t["3uC7vj"], obj);
-        let tmp10 = tmp3;
+        let formatResult = format(util.t["3uC7vj"], obj);
+        let tmp10 = require;
       } else {
-        let tmp3Result = tmp3(1115);
-        let t = tmp3(1114).t;
+        let tmp3Result = PlatformUtils;
+        let t = util.t;
         obj = { paidURL: constants2.PAID_TERMS, interval: null, ctaText: null };
         const isAndroidResult = tmp3Result.isAndroid();
-        tmp3Result = tmp3(4218);
+        tmp3Result = PremiumUtils;
         obj.interval = tmp3Result.getIntervalStringAsNoun(item.interval);
         obj.ctaText = ctaText;
         formatResult = format(tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"], obj);
-        tmp10 = tmp3;
+        tmp10 = require;
         const tmp6 = tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"];
       }
       const obj1 = { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult };
       jsx(tmp10(4556).Text, { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult });
     }
     const tmp3Result1 = PlatformUtils;
-    tmp3(1114).t;
     const isAndroidResult1 = PlatformUtils.isAndroid();
     t = { paidURL: constants2.PAID_TERMS, interval: null, cancelURL: null };
     const tmp14 = PlatformUtils.isAndroid() ? t.tINI9V : t.ZWXtAj;
@@ -67,4 +66,5 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
     t.cancelURL = item;
     format(tmp14, t);
   }
+  tmp = closure_6();
 };

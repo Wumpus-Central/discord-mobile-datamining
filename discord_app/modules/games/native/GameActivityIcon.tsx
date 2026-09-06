@@ -2,8 +2,11 @@
 
 // Module 9183 (GameActivityIcon)
 import nativeDefault from "native" /* 576 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
 import native from "native" /* 4271 */;
+import shared from "shared" /* 4411 */;
 import FastImageDefault from "FastImage" /* 5587 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8565 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,15 +42,15 @@ export default noop.memo(function GameActivityIcon(style) {
       obj = { size: "custom", style: null, color: null };
       const items1 = [tmp.icon, size];
       obj.style = items1;
-      let tmp2Result = tmp2(4411);
+      let tmp2Result = shared;
       const colors = nativeDefault.colors;
       obj.color = tmp2Result.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
-      jsx(tmp2(8565).UnknownGameIcon, { size: "custom", style: null, color: null });
+      jsx(UnknownGameIcon.UnknownGameIcon, { size: "custom", style: null, color: null });
       const isThemeDarkResult = tmp2Result.isThemeDark(obj.useThemeContext().theme);
     }
   } else {
     obj = { source: null, style: null };
-    tmp2Result = tmp2(1396);
+    tmp2Result = AvatarUtils;
     obj.source = tmp2Result.makeSource(iconURL);
     const items2 = [tmp.icon, size];
     obj.style = items2;

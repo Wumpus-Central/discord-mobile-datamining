@@ -104,8 +104,8 @@ let closure_20 = noop.memo((channel) => {
     }
   }
   if (ParticipantTypes.HIDDEN_STREAM !== type1) {
-    if (tmp8.STREAM !== type1) {
-      if (tmp8.USER === type1) {
+    if (ParticipantTypes.STREAM !== type1) {
+      if (ParticipantTypes.USER === type1) {
         let tmp15 = null;
         if (tmp6(tmp2[25])(pipParticipant)) {
           tmp15 = null;
@@ -122,7 +122,7 @@ let closure_20 = noop.memo((channel) => {
         let tmp14 = tmp15;
       } else {
         tmp14 = null;
-        if (tmp8.ACTIVITY === type1) {
+        if (ParticipantTypes.ACTIVITY === type1) {
           obj = {
             participant: pipParticipant,
             channel,
@@ -189,6 +189,7 @@ let closure_20 = noop.memo((channel) => {
     closure_16(tmp6(tmp2[23]), obj4);
     const tmp6Result2 = tmp6(tmp2[23]);
   }
+  const tmpResult = channel(openVoice[20]);
 });
 let closure_22 = noop.memo((arg0) => {
   ({ channel, selfParticipant } = arg0);
@@ -265,20 +266,20 @@ let closure_22 = noop.memo((arg0) => {
         if (!tmp6) {
           let tmp28 = closure_16;
           obj1 = { participant: tmp14, avatarSize: tmp2(tmp3[14]).AvatarSizes.PROFILE, resizeMode: tmp2(tmp3[24]).ResizeMode.COVER };
-          let tmp30 = closure_16(tmp20(tmp3[26]), obj1);
-          const tmp20Result = tmp20(tmp3[26]);
+          let tmp30 = closure_16(selfParticipant(tmp3[26]), obj1);
+          const tmp20Result = selfParticipant(tmp3[26]);
         }
         const items7 = [tmp30, ];
         let tmp28Result = null;
         if (tmp5) {
           obj2 = { style: tmp.thermalAlertIconContainer, children: null };
-          obj3 = { style: tmp.thermalAlertIcon, source: tmp20(tmp3[32]), color: tmp.thermalAlertIcon.color };
+          obj3 = { style: tmp.thermalAlertIcon, source: selfParticipant(tmp3[32]), color: tmp.thermalAlertIcon.color };
           obj2.children = tmp28(tmp2(tmp3[14]).Icon, obj3);
-          tmp28Result = tmp28(tmp27, obj2);
+          tmp28Result = tmp28(closure_5, obj2);
         }
         items7[1] = tmp28Result;
         obj.children = items7;
-        return tmp26(tmp27, obj);
+        return tmp26(closure_5, obj);
       }
       obj4 = { size: tmp2(tmp3[14]).AvatarSizes.LARGE_48, channel, guildId: channel.guild_id, user: null, speaking: null };
       ({ user: obj10.user, speaking: obj10.speaking } = tmp14);
@@ -310,6 +311,10 @@ let closure_22 = noop.memo((arg0) => {
       }
     }
   }
+  const tmp8 = _slicedToArray(obj2.useStateFromStores(items2, () => {
+    const items = [ChannelRTCStore.getParticipants(id), ChannelRTCStore.getVideoParticipants(id), ChannelRTCStore.getParticipantsVersion(id)];
+    return items;
+  }, items3, areParticipantsEqual), 2);
 });
 let obj2 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 size = fn(2);
@@ -327,7 +332,6 @@ export default noop.memo((arg0) => {
   const obj1 = { style: isViewingActivity ? tmp.backgroundPipFab : tmp.background, children: null };
   const items = [isViewingActivity ? tmp.pipFab : tmp.pip, , , ];
   ({ width, height } = useWindowDimensionsDefault());
-  const tmp10 = React4;
   const tmp7 = useWindowDimensionsDefault();
   let elevationShadow;
   if (tmp2Result.isAndroid()) {
@@ -345,15 +349,15 @@ export default noop.memo((arg0) => {
   if (isViewingActivity) {
     const obj3 = { pointerEvents: "none", style: tmp.activityPipContainer, children: null };
     const obj4 = { channel, pipParticipant, selfParticipant };
-    obj3.children = tmp8(closure_22, obj4);
-    let tmp8Result = tmp8(tmp9, obj3);
+    obj3.children = value2(closure_22, obj4);
+    let tmp8Result = value2(hasOwnProperty, obj3);
   } else {
     const obj5 = { channel, pipParticipant, selfParticipant };
-    tmp8Result = tmp8(closure_20, obj5);
+    tmp8Result = value2(closure_20, obj5);
   }
   tmp2Result = PlatformUtils;
   obj2.children = tmp8Result;
-  obj1.children = value2(tmp10, { activeOpacity: 0.7, children: value2(hasOwnProperty, obj2) });
+  obj1.children = value2(React4, { activeOpacity: 0.7, children: value2(hasOwnProperty, obj2) });
   return value2(hasOwnProperty, obj1);
 });
 export { areParticipantsEqual };

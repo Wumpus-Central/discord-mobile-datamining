@@ -49,7 +49,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     if (result) {
       const channels = dependencyMap().channels;
       if (!channels.has(arg0)) {
-        closure_0(1249).batchUpdates(() => {
+        tmp(1249).batchUpdates(() => {
           closure_0((channels) => {
             const obj = {};
             const merged = Object.assign(channels);
@@ -61,16 +61,18 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
             return obj;
           });
         });
-        const tmpResult = closure_0(1249);
+        const tmpResult = tmp(1249);
       }
     }
+    let obj = closure_0(4769);
+    tmp = closure_0;
   };
   obj.closeChannel = function closeChannel(channelId) {
     channelId(1249).batchUpdates(() => {
       channelId((arg0) => {
         ({ channels, voicePanelsFullscreen, voicePanelsOpened } = arg0);
         if (!channels.has(channelId)) {
-          if (!voicePanelsFullscreen.has(tmp)) {
+          if (!voicePanelsFullscreen.has(channelId)) {
             let tmp2 = arg0;
           }
           return tmp2;
@@ -79,21 +81,21 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         if (channels.has(channelId)) {
           const _Set = Set;
           const set = new Set(channels);
-          set.delete(tmp);
+          set.delete(channelId);
           tmp3 = set;
         }
         let tmp10 = voicePanelsFullscreen;
         if (voicePanelsFullscreen.has(channelId)) {
           const _Set2 = Set;
           const set1 = new Set(voicePanelsFullscreen);
-          set1.delete(tmp);
+          set1.delete(channelId);
           tmp10 = set1;
         }
         let tmp17 = voicePanelsOpened;
         if (voicePanelsOpened.has(channelId)) {
           const _Set3 = Set;
           const set2 = new Set(voicePanelsOpened);
-          set2.delete(tmp);
+          set2.delete(channelId);
           tmp17 = set2;
         }
         const obj = {};
@@ -123,20 +125,20 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       });
     });
   };
-  obj.setChannelPanelFullscreen = function setChannelPanelFullscreen(channelId, arg1) {
-    dependencyMap = arg1;
+  obj.setChannelPanelFullscreen = function setChannelPanelFullscreen(channelId, lockEnabled) {
+    dependencyMap = lockEnabled;
     channelId(1249).batchUpdates(() => {
       channelId((voicePanelsFullscreen) => {
         const set = new Set(voicePanelsFullscreen.voicePanelsFullscreen);
         const hasItem = set.has(channelId);
-        if (closure_1_1) {
+        if (lockEnabled) {
           if (hasItem) {
             return voicePanelsFullscreen;
           } else {
-            set.add(tmp);
+            set.add(channelId);
           }
         } else if (hasItem) {
-          set.delete(tmp);
+          set.delete(channelId);
         } else {
           return voicePanelsFullscreen;
         }
@@ -155,15 +157,15 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         if (channels.has(channelId)) {
           const _Set = Set;
           const set = new Set(channels.voicePanelsOpened);
-          const hasItem = set.has(tmp);
+          const hasItem = set.has(channelId);
           if (closure_1_1) {
             if (hasItem) {
               return channels;
             } else {
-              set.add(tmp);
+              set.add(channelId);
             }
           } else if (hasItem) {
-            set.delete(tmp);
+            set.delete(channelId);
           } else {
             return channels;
           }
@@ -191,10 +193,10 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           if (hasItem) {
             return voicePanelsPIP;
           } else {
-            set.add(tmp);
+            set.add(channelId);
           }
         } else if (hasItem) {
-          set.delete(tmp);
+          set.delete(channelId);
         } else {
           return voicePanelsPIP;
         }

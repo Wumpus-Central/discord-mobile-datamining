@@ -8,6 +8,8 @@ import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReporting
 import ReportUtils from "ReportUtils" /* 7289 */;
 import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7290 */;
 import SelfModUtils from "SelfModUtils" /* 7291 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7292 */;
+import HarmTypeConfiguration from "HarmTypeConfiguration" /* 7295 */;
 import ForumChannelTypes from "ForumChannelTypes" /* 7303 */;
 import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7277 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -38,7 +40,7 @@ export const canReportMessageToMods = function canReportMessageToMods(message) {
   }
   obj = ReportUtils;
 };
-export const canAccessReportsChannel = function canAccessReportsChannel(arg0, items) {
+export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
   let tmp = items;
   if (items === undefined) {
     items = [GuildStore, UserStore];
@@ -74,8 +76,8 @@ export const getReportToModChannelId = function getReportToModChannelId(arg0) {
   }
   return tmp2;
 };
-export const isModeratorReportOrPostChannelId = function isModeratorReportOrPostChannelId(arg0) {
-  const channel = ChannelStore.getChannel(arg0);
+export const isModeratorReportOrPostChannelId = function isModeratorReportOrPostChannelId(channelId2) {
+  const channel = ChannelStore.getChannel(channelId2);
   let tmp = null != channel;
   if (tmp) {
     let tmp2 = null != channel;
@@ -180,8 +182,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(7292).messageHasObscurableMediaForBitmask(firstMessage, tmp10(7295).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(7292);
+          tmp9 = !ObscuredMediaUtils.messageHasObscurableMediaForBitmask(firstMessage, HarmTypeConfiguration.ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = ObscuredMediaUtils;
         }
         return tmp9;
       } else {

@@ -6,7 +6,7 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-function updateImpressionCaches(flag) {
+function updateImpressionCaches() {
   if (flag === undefined) {
     flag = false;
   }
@@ -113,10 +113,9 @@ const contentInventoryPersistedStore = new ContentInventoryPersistedStore(Dispat
     }
     let flag = false;
     for (const item10017 of tmp) {
-      let tmp5 = item10017;
       if (!set1.has(item10017)) {
         let itemImpressions = closure_2.itemImpressions;
-        let items = [tmp5, tmp4];
+        let items = [item10017, tmp4];
         let arr = itemImpressions.push(items);
         flag = true;
       }

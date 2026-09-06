@@ -6,14 +6,14 @@ import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1885 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
+import FavoritesLimits from "FavoritesLimits" /* 10225 */;
 import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10226 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
 import UserStore from "UserStore" /* 1371 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
-const FavoritesLimits = tmp(10225);
 require = fn;
-function useFavoritesAccess(FavoritesGuildActionSheet) {
+function useFavoritesAccess() {
   let str = FavoritesGuildActionSheet;
   if (FavoritesGuildActionSheet === undefined) {
     str = "useFavoritesAccess";
@@ -102,7 +102,7 @@ export const useFavoritedChannelIds = function useFavoritedChannelIds() {
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
   return SnowflakeUtilsDefault.keys(stateFromStoresObject);
 };
-export const getFavoritesCategories = function getFavoritesCategories(favoriteChannels) {
+export const getFavoritesCategories = function getFavoritesCategories() {
   if (favoriteChannels === undefined) {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }

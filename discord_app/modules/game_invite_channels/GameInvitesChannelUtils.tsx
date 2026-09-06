@@ -33,16 +33,16 @@ export const useIsGameInvitesPost = function useIsGameInvitesPost(channel) {
   _require = channel;
   const items = [ChannelStore];
   return require("initialize").useStateFromStores(items, () => {
-    let tmp = null != closure_0;
+    let tmp = null != forumPost;
     if (tmp) {
-      const isForumPostResult = obj.isForumPost();
+      const isForumPostResult = forumPost.isForumPost();
       let tmp3 = !isForumPostResult;
       if (isForumPostResult) {
-        tmp3 = null == obj.parent_id;
+        tmp3 = null == forumPost.parent_id;
       }
       let tmp4 = !tmp3;
       if (!tmp3) {
-        channel = ChannelStore.getChannel(obj.parent_id);
+        const channel = ChannelStore.getChannel(forumPost.parent_id);
         let flag;
         if (channel != null) {
           flag = channel.isGameInvitesChannel();
@@ -64,16 +64,16 @@ export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoice
   const items = [ChannelStore];
   const obj3 = require("initialize");
   return require("initialize").useStateFromStores(items, () => {
-    let tmp = null != closure_0;
+    let tmp = null != forumPost;
     if (tmp) {
-      const isForumPostResult = obj.isForumPost();
+      const isForumPostResult = forumPost.isForumPost();
       let tmp3 = !isForumPostResult;
       if (isForumPostResult) {
-        tmp3 = null == obj.parent_id;
+        tmp3 = null == forumPost.parent_id;
       }
       let tmp4 = !tmp3;
       if (!tmp3) {
-        channel = ChannelStore.getChannel(obj.parent_id);
+        const channel = ChannelStore.getChannel(forumPost.parent_id);
         let flag;
         if (channel != null) {
           flag = channel.isGameInvitesChannel();

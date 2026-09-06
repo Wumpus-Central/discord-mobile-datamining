@@ -37,6 +37,7 @@ export default function useEventSchedule(recurrence_rule, nextRecurrenceIdInEven
     date1 = new Date(recurrence_rule.scheduled_end_time);
   }
   obj.endTime = date1;
+  const date = new Date(recurrence_rule.scheduled_start_time);
 };
 export const useEventScheduleById = function useEventScheduleById(guildEventId, recurrenceId) {
   _require = guildEventId;
@@ -89,9 +90,9 @@ export const getEventSchedule = function getEventSchedule(guildEvent, recurrence
   useEventException;
   if (null != guildEvent.recurrence_rule) {
     if (null != recurrenceId) {
-      let tmpResult = tmp(9665);
+      let tmpResult = ScheduleUtils;
       const baseScheduleForRecurrence = tmpResult.getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-      tmpResult = tmp(9665);
+      tmpResult = ScheduleUtils;
       const scheduleForRecurrenceWithException = tmpResult.getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp4);
       ({ startDate, endDate } = scheduleForRecurrenceWithException);
       let obj = { startTime: startDate.toDate(), endTime: null };
@@ -110,4 +111,5 @@ export const getEventSchedule = function getEventSchedule(guildEvent, recurrence
     date1 = new Date(guildEvent.scheduled_end_time);
   }
   obj.endTime = date1;
+  const date = new Date(guildEvent.scheduled_start_time);
 };

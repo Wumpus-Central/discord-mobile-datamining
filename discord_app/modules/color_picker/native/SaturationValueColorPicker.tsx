@@ -2,12 +2,12 @@
 
 // Module 14600 (SaturationValueColorPicker)
 import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import ColorPickerUtils from "ColorPickerUtils" /* 14598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexport = tmp(4296);
 require = fn;
 function ColorBox(hue) {
   hue = hue.hue;
@@ -83,7 +83,7 @@ export default function SaturationValueColorPicker(hue) {
   noop = undefined;
   closure_8 = undefined;
   ({ style, colorBoxStyle, colorBoxInnerStyle, selectorStyle } = hue);
-  let tmp = closure_8();
+  const tmp = closure_8();
   const tmp2 = colorBoxWidth(noop.useState(0), 2);
   colorBoxWidth = tmp2[0];
   noop = tmp2[1];

@@ -26,7 +26,7 @@ export default noop.memo(function ChatInputGuardReturnToGameProfile(pendingGameP
     let obj = { style: tmp.icon, source: null };
     let obj1 = AvatarUtils;
     obj.source = obj1.makeSource(pendingGameProfileReturn.gameIconUrl);
-    tmp2Result = tmp2(Image, obj);
+    tmp2Result = <Image style={tmp.icon} source={null} />;
   }
   obj = { type: "simple-action", icon: tmp2Result, message: null, actionLabel: null, actionIcon: null, actionOnPress: null };
   const intl = util.intl;

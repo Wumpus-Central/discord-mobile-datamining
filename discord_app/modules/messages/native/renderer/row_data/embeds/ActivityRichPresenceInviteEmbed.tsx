@@ -1,7 +1,10 @@
 // === Module 13227: ActivityRichPresenceInviteEmbed ===
 
 // Module 13227 (ActivityRichPresenceInviteEmbed)
+import _modDef2882 from "module_2882" /* 2882 */;
 import isInviteActiveDefault from "isInviteActive" /* 11754 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11761 */;
+import getCoverImageFromActivityDefault from "getCoverImageFromActivity" /* 13234 */;
 import getRequestToStreamCTAAndIsDisabledDefault from "getRequestToStreamCTAAndIsDisabled" /* 13240 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 import SpotifyStore from "SpotifyStore" /* 5280 */;
@@ -124,7 +127,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                   if (activity7 != null) {
                     type3 = activity7.type;
                   }
-                  if (type3 === tmp29.JOIN_REQUEST) {
+                  if (type3 === constants2.JOIN_REQUEST) {
                     let recipientId1 = id2;
                     if (getApplicationActivity === id2) {
                       recipientId1 = id2;
@@ -140,7 +143,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                       type4 = activity8.type;
                     }
                     tmp128 = getApplicationActivity;
-                    if (type4 === tmp29.STREAM_REQUEST) {
+                    if (type4 === constants2.STREAM_REQUEST) {
                       tmp128 = id2;
                     }
                   }
@@ -148,7 +151,6 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                   const applicationActivity1 = getApplicationActivity(tmp128, message.application.id);
                 } else {
                   const findActivityResult1 = obj5.findActivity(message.author.id, (type) => type.type === constants.LISTENING);
-                  const tmp131 = importDefault;
                   const tmp132 = isInviteActiveDefault(obj5.findActivity(message.author.id, (type) => type.type === constants.LISTENING), message, application.id);
                   const requestToStreamText = intl(13232).getRequestToStreamText(message, channel, obj4.getId());
                   const tmp134 = getRequestToStreamCTAAndIsDisabledDefault(message);
@@ -159,7 +161,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                   obj.gradientColors = string2;
                   intl = intl(1114).intl;
                   string2 = intl.string;
-                  string2Result = string2(tmp131(2882).nAyuPp);
+                  string2Result = string2(_modDef2882.nAyuPp);
                   obj.headerText = string2Result;
                   obj.iconSrc = appIconSrc;
                   appIconSrc = [];
@@ -211,7 +213,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                   let length = intl(11755).getPartySize(findActivityResult).maxPartySize;
                   const intlResult8 = intl(11755);
                   const currentActivityGamePlatform = intl(13035).getCurrentActivityGamePlatform();
-                  const tmp40 = tmp137(11761)(LocalActivityStore, SelfPresenceStore, application.id);
+                  const tmp40 = getCurrentUserPresenceActivityDefault(LocalActivityStore, SelfPresenceStore, application.id);
                   const intlResult9 = intl(13035);
                   const isInParty = intl(11758).getIsInParty(tmp40, findActivityResult);
                   const intlResult11 = intl(13233);
@@ -292,8 +294,8 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                         const intl15 = intl(1114).intl;
                         const stringResult = intl15.string(intl(1114).t.sTo7s3);
                         if (tmp138) {
-                          const tmp95 = tmp137(13234)(findActivityResult, application.id);
                           const author = message.author;
+                          const tmp95 = getCoverImageFromActivityDefault(findActivityResult, application.id);
                           const syncingWith = SpotifyStore.getSyncingWith();
                           activity = SpotifyStore.getActivity();
                           let party1;
@@ -449,7 +451,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                       tmp91 = null != findActivityResult.application_id;
                     }
                     if (tmp91) {
-                      tmp91 = ActivityLauncherStore.getState(findActivityResult.application_id, tmp29.JOIN) === constants.LOADING;
+                      tmp91 = ActivityLauncherStore.getState(findActivityResult.application_id, constants2.JOIN) === constants.LOADING;
                     }
                     flag4 = false;
                     flag3 = tmp91;

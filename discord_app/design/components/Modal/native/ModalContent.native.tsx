@@ -12,5 +12,5 @@ const result = size.fileFinishedImporting("design/components/Modal/native/ModalC
 
 export const ModalContent = noop.forwardRef((children, ref) => {
   const tmp = closure_2();
-  return <ScrollView style={tmp.scrollContainer} contentContainerStyle={tmp.contentContainer} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled" ref={arg1}>{arg0.children}</ScrollView>;
+  return <ScrollView style={tmp.scrollContainer} contentContainerStyle={tmp.contentContainer} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled" ref={ref}>{children.children}</ScrollView>;
 });

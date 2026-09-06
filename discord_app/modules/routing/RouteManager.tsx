@@ -35,9 +35,9 @@ class RouteManager {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
           obj = size(12791);
           if (!obj.convertRouteToNavigation(pathname)) {
-            tmp2(1100).replaceWith(Routes.ME);
+            size(1100).replaceWith(Routes.ME);
+            const tmp2Result = size(1100);
           }
-          tmp2 = size;
         }
       }
       const state = KeybindRouterStore.getState();
@@ -53,15 +53,16 @@ class RouteManager {
         } catch (err) {
         }
       }
+      const nextResult = iter.next();
     };
     obj.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
       if (-1 !== obj.timer) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.timer);
+        clearTimeout(obj.timer);
       }
       if (null != path.path) {
         const _setTimeout = setTimeout;
-        tmp.timer = setTimeout(tmp.flushRoute, 200);
+        obj.timer = setTimeout(obj.flushRoute, 200);
       }
     };
     obj.flushRoute = function flushRoute() {
@@ -92,16 +93,15 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
     const rewrites = this.rewrites;
     let obj = rewrites[Symbol.iterator]();
     while (obj !== undefined) {
-      let tmp11 = size;
       let obj2 = size(1100);
       let tmp9Result = tmp9(location, REPLACE);
       if (null != tmp9Result) {
-        let tmp11Result = tmp11(12792);
+        let tmp11Result = size(12792);
         obj = { message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route", data: null };
         obj = { replacePath: tmp9Result.path, previousPath: obj2.getHistory().location.pathname };
         obj.data = obj;
         let addBreadcrumbResult = tmp11Result.addBreadcrumb(obj);
-        tmp11Result = tmp11(1100);
+        tmp11Result = size(1100);
         let replaceWithResult = tmp11Result.replaceWith(tmp9Result.path, tmp9Result.state);
         obj.return();
         let flag = true;
@@ -145,11 +145,10 @@ prototype["addRouteRewriter"] = function addRouteRewriter(voiceRouteRewriter) {
   closure_0 = voiceRouteRewriter;
   if (null != this.unlistenHistory) {
     const obj = size(1100);
-    const tmp = size;
     const tmp3 = voiceRouteRewriter(obj.getHistory().location, size(1100).getHistory().action);
     if (null != tmp3) {
-      tmp(1100).replaceWith(tmp3.path, tmp3.state);
-      const tmpResult = tmp(1100);
+      size(1100).replaceWith(tmp3.path, tmp3.state);
+      const tmpResult = size(1100);
     }
     const obj2 = size(1100);
   }
@@ -193,9 +192,9 @@ size.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
       obj = size(12791);
       if (!obj.convertRouteToNavigation(pathname)) {
-        tmp2(1100).replaceWith(Routes.ME);
+        size(1100).replaceWith(Routes.ME);
+        const tmp2Result = size(1100);
       }
-      tmp2 = size;
     }
   }
   const state = KeybindRouterStore.getState();
@@ -211,15 +210,16 @@ size.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
     } catch (err) {
     }
   }
+  const nextResult = iter.next();
 };
 size.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
   if (-1 !== obj.timer) {
     const _clearTimeout = clearTimeout;
-    clearTimeout(tmp.timer);
+    clearTimeout(obj.timer);
   }
   if (null != path.path) {
     const _setTimeout = setTimeout;
-    tmp.timer = setTimeout(tmp.flushRoute, 200);
+    obj.timer = setTimeout(obj.flushRoute, 200);
   }
 };
 size.flushRoute = function flushRoute() {

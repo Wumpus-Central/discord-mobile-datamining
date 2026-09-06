@@ -111,12 +111,12 @@ obj.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 obj.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 ({ VOICE: obj2.camera_on, VOICE: obj2.camera_off, VOICE: obj2.deafen, VOICE: obj2.disconnect, NOTIFICATION: obj2.mention1, NOTIFICATION: obj2.mention2, NOTIFICATION: obj2.mention3, NOTIFICATION: obj2.message1, NOTIFICATION: obj2.message2, NOTIFICATION: obj2.message3, VOICE: obj2.mute, VOICE: obj2.ptt_start, VOICE: obj2.ptt_stop, VOICE: obj2.reconnect, VOICE: obj2.stage_waiting, VOICE: obj2.stream_ended, VOICE: obj2.stream_started, VOICE: obj2.stream_user_joined, VOICE: obj2.stream_user_left, VOICE: obj2.soundboard_sound, VOICE: obj2.undeafen, VOICE: obj2.unmute, VOICE: obj2.user_join, VOICE: obj2.user_leave, VOICE: obj2.user_moved, MEDIA: obj2.vibing_wumpus, NOTIFICATION_NO_VIBRATION: obj2.activity_end, NOTIFICATION_NO_VIBRATION: obj2.activity_launch, NOTIFICATION_NO_VIBRATION: obj2.activity_user_join, NOTIFICATION_NO_VIBRATION: obj2.activity_user_left } = obj);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
-let fn = (name, arg1, _volume, outputChannel) => {
+let fn = (name, call_calling, _volume, DEFAULT) => {
   obj = Object.create(new.target.prototype);
   obj.name = name;
-  obj.usage = obj[arg1];
+  obj.usage = obj[call_calling];
   obj._volume = _volume;
-  obj.outputChannel = outputChannel;
+  obj.outputChannel = DEFAULT;
   return obj;
 };
 const prototype2 = fn.prototype;
@@ -169,6 +169,7 @@ prototype2["playWithListener"] = function playWithListener() {
       const timerId = setTimeout(() => {
         closure_1_0(true);
       }, duration.duration * num2);
+      obj = self(dependencyMap[2]);
     }).catch((error) => {
       closure_1(error);
     });

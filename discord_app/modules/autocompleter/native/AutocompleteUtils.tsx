@@ -58,19 +58,19 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     const user = type.user;
     if (obj6.hasSameRoleAsUsername(channel, user)) {
       const _HermesInternal9 = HermesInternal;
-      let combined = "" + tmp36 + user.tag;
+      let combined = "" + closure_1_14 + user.tag;
     } else {
       const _HermesInternal8 = HermesInternal;
-      combined = "" + tmp36 + UserUtilsDefault.getUserTag(user);
+      combined = "" + closure_1_14 + UserUtilsDefault.getUserTag(user);
       const tmp34Result = UserUtilsDefault;
     }
     return combined;
-  } else if (tmp.GLOBAL === type) {
+  } else if (constants.GLOBAL === type) {
     return type.text;
-  } else if (tmp.ROLE === type) {
+  } else if (constants.ROLE === type) {
     const _HermesInternal7 = HermesInternal;
     return "" + closure_1_14 + type.name;
-  } else if (tmp.CHANNEL === type) {
+  } else if (constants.CHANNEL === type) {
     channel = type.channel;
     if (channel.isThread()) {
       const obj4 = useChannelName;
@@ -96,18 +96,18 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
       const _HermesInternal4 = HermesInternal;
       return "" + closure_1_11 + useChannelName.computeChannelName(type.channel, UserStore, RelationshipStore);
     }
-  } else if (tmp.GAME_MENTION === type) {
+  } else if (constants.GAME_MENTION === type) {
     const _HermesInternal3 = HermesInternal;
     return "" + map1 + type.game.name;
-  } else if (tmp.TIMESTAMP_MENTION === type) {
+  } else if (constants.TIMESTAMP_MENTION === type) {
     return TimestampUtils.unparseTimestamp(type.mention.timestamp, type.mention.format);
-  } else if (tmp.EMOJI === type) {
+  } else if (constants.EMOJI === type) {
     const _HermesInternal2 = HermesInternal;
     return "" + closure_1_12 + type.name + ":";
   } else {
-    if (tmp.EMOJI_PREMIUM_UPSELL !== type) {
-      if (tmp.SLASH !== type) {
-        if (tmp.CHOICE === type) {
+    if (constants.EMOJI_PREMIUM_UPSELL !== type) {
+      if (constants.SLASH !== type) {
+        if (constants.CHOICE === type) {
           const _HermesInternal = HermesInternal;
           return "" + type.choice.displayName;
         } else {
@@ -121,10 +121,10 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
 export const getMentionTextWithUser = function getMentionTextWithUser(messageChannel, user) {
   if (obj.hasSameRoleAsUsername(messageChannel, user)) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "" + tmp3 + user.tag;
+    let combined = "" + closure_1_14 + user.tag;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "" + tmp3 + UserUtilsDefault.getUserTag(user);
+    combined = "" + closure_1_14 + UserUtilsDefault.getUserTag(user);
     const tmpResult = UserUtilsDefault;
   }
   return combined;
@@ -194,8 +194,8 @@ export const isSpaceJustTypedAtCaret = function isSpaceJustTypedAtCaret(text, se
   }
   return false;
 };
-export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(c22, selectionEnd, arg2) {
-  if (selectionEnd >= arg2.length + 2) {
+export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(c22, selectionEnd, collapsedCategories) {
+  if (selectionEnd >= collapsedCategories.length + 2) {
     if (" " === c22[selectionEnd - 1]) {
       const diff = selectionEnd - 1;
       let tmp3 = diff;
@@ -214,11 +214,11 @@ export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(c2
           }
         }
       }
-      if (c22.startsWith(arg2, tmp3)) {
-        if (c22.lastIndexOf(arg2, diff - arg2.length) !== tmp3) {
+      if (c22.startsWith(collapsedCategories, tmp3)) {
+        if (c22.lastIndexOf(collapsedCategories, diff - collapsedCategories.length) !== tmp3) {
           return null;
         } else {
-          const obj = { tokenStart: tmp3, trigger: c22.slice(tmp3 + arg2.length, diff) };
+          const obj = { tokenStart: tmp3, trigger: c22.slice(tmp3 + collapsedCategories.length, diff) };
           return obj;
         }
       } else {

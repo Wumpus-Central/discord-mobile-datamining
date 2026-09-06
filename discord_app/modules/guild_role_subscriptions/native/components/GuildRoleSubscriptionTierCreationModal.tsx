@@ -1,6 +1,7 @@
 // === Module 17740: GuildRoleSubscriptionTierCreationModal ===
 
 // Module 17740 (GuildRoleSubscriptionTierCreationModal)
+import util from "util" /* 1114 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
 import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15227 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -22,7 +23,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
   _slicedToArray = undefined;
   noop = undefined;
   error = undefined;
-  closure_8 = async function _handleCreate(arg0, value) {
+  closure_8 = async function _handleCreate() {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -94,8 +95,8 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     if (null != error) {
       let anyErrorMessage = error.getAnyErrorMessage();
       if (anyErrorMessage == null) {
-        const intl = tmp(1114).intl;
-        anyErrorMessage = intl.string(tmp(1114).t.R0RpRX);
+        const intl = util.intl;
+        anyErrorMessage = intl.string(util.t.R0RpRX);
       }
       ToastUtils.presentError(anyErrorMessage);
     }

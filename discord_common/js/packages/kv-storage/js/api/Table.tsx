@@ -152,7 +152,7 @@ prototype["putAll"] = function putAll(arr) {
   obj.overwrite = Replace === prefix(1993).ConflictOptions.Replace;
   transaction.add(obj);
 };
-prototype["delete"] = function delete(items) {
+prototype["delete"] = function delete() {
   if (items === undefined) {
     items = [];
   }
@@ -169,7 +169,7 @@ prototype["deleteRange"] = function deleteRange(key, key) {
   obj.range = items;
   transaction.add(obj);
 };
-prototype["deleteAllExcept"] = function deleteAllExcept(items, retain) {
+prototype["deleteAllExcept"] = function deleteAllExcept() {
   if (items === undefined) {
     items = [];
   }
@@ -177,7 +177,7 @@ prototype["deleteAllExcept"] = function deleteAllExcept(items, retain) {
   const obj = { type: "kv.delete_all_except", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items), retain };
   transaction.add(obj);
 };
-prototype["deleteGeneration"] = function deleteGeneration(items, comparer, generation) {
+prototype["deleteGeneration"] = function deleteGeneration() {
   if (items === undefined) {
     items = [];
   }
@@ -216,7 +216,7 @@ prototype2["get"] = function get(arg0) {
   const self = this;
   return (async () => {
     await self.getMany(closure_0, { limit: 1 });
-    const first = arg1[0];
+    const first = value[0];
     value = first;
     if (first == null) {
       value = null;
@@ -224,13 +224,13 @@ prototype2["get"] = function get(arg0) {
     return value;
   })();
 };
-prototype2["getMany"] = function getMany(items, ordering) {
+prototype2["getMany"] = function getMany() {
   if (items === undefined) {
     items = [];
   }
   const database = this.database;
   const obj = { type: "kv.get_many", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items), ordering: null, limit: null };
-  ordering = undefined;
+  let ordering;
   if (ordering != null) {
     ordering = ordering.ordering;
   }
@@ -261,7 +261,7 @@ prototype2["getRange"] = function getRange(key, key, ordering) {
   obj.limit = limit;
   return database.execute(obj, this.defaultDebugTag);
 };
-prototype2["getKvEntries"] = function getKvEntries(items) {
+prototype2["getKvEntries"] = function getKvEntries() {
   if (items === undefined) {
     items = [];
   }
@@ -269,7 +269,7 @@ prototype2["getKvEntries"] = function getKvEntries(items) {
   const obj = { type: "kv.get_kv_entries", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   return database.execute(obj, this.defaultDebugTag);
 };
-prototype2["getMapEntries"] = function getMapEntries(items) {
+prototype2["getMapEntries"] = function getMapEntries() {
   if (items === undefined) {
     items = [];
   }
@@ -277,7 +277,7 @@ prototype2["getMapEntries"] = function getMapEntries(items) {
   const obj = { type: "kv.get_map_entries", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   return database.execute(obj, this.defaultDebugTag);
 };
-prototype2["getChildIds"] = function getChildIds(items) {
+prototype2["getChildIds"] = function getChildIds() {
   if (items === undefined) {
     items = [];
   }
@@ -285,7 +285,7 @@ prototype2["getChildIds"] = function getChildIds(items) {
   const obj = { type: "kv.get_child_ids", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   return database.execute(obj, this.defaultDebugTag);
 };
-prototype2["getParentId"] = function getParentId(key) {
+prototype2["getParentId"] = function getParentId() {
   let items = key;
   if (key === undefined) {
     items = [];
@@ -343,7 +343,7 @@ prototype2["replaceAll"] = function replaceAll(arg0) {
     arg0.putAll(closure_0);
   }, this.defaultDebugTag);
 };
-prototype2["delete"] = function delete(items) {
+prototype2["delete"] = function delete() {
   if (items === undefined) {
     items = [];
   }
@@ -360,7 +360,7 @@ prototype2["deleteRange"] = function deleteRange(key, key) {
   obj.range = items;
   return database.execute(obj, this.defaultDebugTag);
 };
-prototype2["deleteGeneration"] = function deleteGeneration(items, comparer, generation) {
+prototype2["deleteGeneration"] = function deleteGeneration() {
   if (items === undefined) {
     items = [];
   }
@@ -477,13 +477,13 @@ prototype2["upgradeTransaction"] = function upgradeTransaction(transaction) {
     throw new TypeError("Trying to call a non-function");
   }
 };
-prototype2["getManySyncUnsafe"] = function getManySyncUnsafe(items, ordering) {
+prototype2["getManySyncUnsafe"] = function getManySyncUnsafe() {
   if (items === undefined) {
     items = [];
   }
   const database = this.database;
   const obj = { type: "kv.get_many", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items), ordering: null, limit: null };
-  ordering = undefined;
+  let ordering;
   if (ordering != null) {
     ordering = ordering.ordering;
   }
@@ -495,7 +495,7 @@ prototype2["getManySyncUnsafe"] = function getManySyncUnsafe(items, ordering) {
   obj.limit = limit;
   return database.executeSync(obj);
 };
-prototype2["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe(items) {
+prototype2["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe() {
   if (items === undefined) {
     items = [];
   }
@@ -503,7 +503,7 @@ prototype2["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe(items) 
   const obj = { type: "kv.get_map_entries", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   return database.executeSync(obj);
 };
-prototype2["deleteSyncUnsafe"] = function deleteSyncUnsafe(items) {
+prototype2["deleteSyncUnsafe"] = function deleteSyncUnsafe() {
   if (items === undefined) {
     items = [];
   }

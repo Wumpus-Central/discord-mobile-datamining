@@ -23,7 +23,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx");
 
 export default noop.memo(() => {
-  const currentUser = async function _onSelect(arg0, value) {
+  const currentUser = async function _onSelect(arg0) {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -51,7 +51,7 @@ export default noop.memo(() => {
             const tmp24 = getIconById(stateFromStores);
             if (null != tmp24) {
               const id = tmp24.id;
-              if (id === tmp22) {
+              if (id === stateFromStores) {
                 if (importDefault !== id) {
                   if (tmp26) {
                     if (!closure_2_2) {
@@ -81,7 +81,6 @@ export default noop.memo(() => {
                 return obj3;
               }
             }
-            tmp22 = stateFromStores;
           }
         } else if (1 === tmp4) {
           if (arg0 === 1) {
@@ -147,8 +146,8 @@ export default noop.memo(() => {
     };
     const intl = tmp2(1114).intl;
     obj4.text = intl.string(tmp2(1114).t.M0rDSO);
-    obj3.children = tmp9(NitroUpsellButtonDefault, obj4);
-    tmp9Result = tmp9(analyticsLocation, obj3);
+    obj3.children = closure_9(NitroUpsellButtonDefault, obj4);
+    tmp9Result = closure_9(analyticsLocation, obj3);
     const tmp6Result = NitroUpsellButtonDefault;
   }
   children[1] = tmp9Result;

@@ -4,8 +4,12 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4469 */;
+import GuildIconDefault from "GuildIcon" /* 5584 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
 import transitionToGuild from "transitionToGuild" /* 7342 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
+import _modDef10410 from "module_10410" /* 10410 */;
+import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 13507 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SortedGuildStore from "SortedGuildStore" /* 5438 */;
@@ -33,9 +37,8 @@ function GuildBoostingGuildListItem(guildId) {
         },
       children: null
     };
-    tmp2(9050);
     obj = { guild: stateFromStores, size: null, style: null, selected: false };
-    const tmp2Result = tmp2(5584);
+    const tmp2Result = GuildIconDefault;
     obj.size = tmp5(5584).GuildIconSizes.LARGE;
     obj.style = tmp.guildIcon;
     const items1 = [closure_8(tmp2Result, obj), , ];
@@ -43,7 +46,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj2 = { variant: "text-md/bold", children: stateFromStores.name };
     const items2 = [closure_8(tmp5(4556).Text, obj2), ];
     const obj3 = { style: tmp.subscriptionInfo, children: null };
-    const obj4 = { source: tmp2(10410), style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
+    const obj4 = { source: _modDef10410, style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
     const items3 = [closure_8(closure_4, obj4), ];
     const obj5 = { variant: "text-xs/medium", children: null };
     const intl = tmp5(1114).intl;
@@ -55,7 +58,7 @@ function GuildBoostingGuildListItem(guildId) {
     obj1.children = items2;
     items1[1] = closure_9(closure_3, obj1);
     const obj7 = { guild: stateFromStores, theme: tmp4 };
-    items1[2] = closure_8(tmp2(13507), obj7);
+    items1[2] = closure_8(BoostedGuildTierProgressCircleDefault, obj7);
     obj.children = items1;
     tmp9 = closure_9(tmp2Result, obj);
   }

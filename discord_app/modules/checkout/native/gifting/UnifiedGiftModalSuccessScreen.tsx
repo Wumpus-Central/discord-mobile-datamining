@@ -71,4 +71,5 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     return closure_7(tmp7, obj);
   }
   cpT0Cq = tmp2(tmp3[14]).t.cpT0Cq;
+  tmp7 = onClose(enabled[12]);
 };

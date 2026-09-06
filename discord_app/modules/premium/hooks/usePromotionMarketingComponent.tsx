@@ -22,7 +22,7 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
     if (null == marketingComponentByType) {
       return null;
     } else {
-      const promotionByTypeAndId = obj.getPromotionByTypeAndId(constants.PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
+      const promotionByTypeAndId = PromotionsStore.getPromotionByTypeAndId(constants.PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
       let trialId;
       if (promotionByTypeAndId != null) {
         trialId = promotionByTypeAndId.trialId;
@@ -33,7 +33,6 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
       }
       return marketingComponentByType;
     }
-    obj = PromotionsStore;
   });
   const obj2 = require("initialize");
   const items1 = [PromotionsStore];
@@ -55,7 +54,7 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
   [tmp6, noop] = endDate(noop.useState(false), 2);
   const tmp5 = endDate(noop.useState(false), 2);
   const items2 = [endDate];
-  const effect1 = obj.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (null != endDate) {
       const _Date = Date;
       const time = endDate.getTime();

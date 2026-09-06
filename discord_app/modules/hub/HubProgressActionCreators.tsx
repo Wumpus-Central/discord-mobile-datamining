@@ -23,12 +23,10 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
       const result = items(1940).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {
-          let tmp = item10008;
-          let tmp2 = require;
           let obj = FlagUtils;
           if (!obj.hasFlag(arg0.hubProgress, item10008)) {
-            let tmp2Result = tmp2(1384);
-            arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, tmp);
+            let tmp2Result = FlagUtils;
+            arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, item10008);
             flag = true;
           }
           continue;
@@ -44,12 +42,10 @@ export const skipHubProgress = function skipHubProgress(id) {
   const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(id, (hubProgress) => {
     let flag = false;
     for (const item10008 of closure_0) {
-      let tmp = item10008;
-      let tmp2 = require;
       let obj = FlagUtils;
       if (!obj.hasFlag(arg0.hubProgress, item10008)) {
-        let tmp2Result = tmp2(1384);
-        arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, tmp);
+        let tmp2Result = FlagUtils;
+        arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, item10008);
         flag = true;
       }
       continue;

@@ -55,7 +55,7 @@ function updateEmbeddedActivities(content_classification) {
     if (found1 != null) {
       const sessionId = found1.sessionId;
     }
-    const obj19 = application_id(4189);
+    mapped.some((item) => application_id(13985).isActivityParticipantCurrentUserCurrentSession(item));
     const value1 = map.get(application_id);
     let tmp12 = embeddedActivityLocationChannelId;
     if (embeddedActivityLocationChannelId == null) {
@@ -114,7 +114,7 @@ function updateEmbeddedActivities(content_classification) {
         proxyTicket = value1.proxyTicket;
       }
       obj.proxyTicket = proxyTicket;
-      const result = obj5.set(value1.applicationId, obj);
+      const result = map.set(value1.applicationId, obj);
     }
     if (null != value1) {
       if (_location.id === value1.location.id) {
@@ -137,7 +137,7 @@ function updateEmbeddedActivities(content_classification) {
               }
             }
             value3.upsert(application_id, _location.id, tmp61);
-            let tmp76Result = tmp76(4189);
+            let tmp76Result = application_id(4189);
             const embeddedActivityLocationChannelId1 = tmp76Result.getEmbeddedActivityLocationChannelId(_location);
             if (null != embeddedActivityLocationChannelId1) {
               let value4 = map2.get(embeddedActivityLocationChannelId1);
@@ -145,14 +145,14 @@ function updateEmbeddedActivities(content_classification) {
                 if (typeof ActivityBucket === "function") {
                   const merged3 = Object.assign({ items: null, cachedVisible: null, cachedHidden: null });
                   merged3[0] = [];
-                  const result2 = obj22.set(embeddedActivityLocationChannelId1, merged3);
+                  const result2 = map2.set(embeddedActivityLocationChannelId1, merged3);
                   value4 = merged3;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
               }
               value4.upsert(application_id, _location.id, tmp61);
-              tmp76Result = tmp76(4189);
+              tmp76Result = application_id(4189);
               let str5 = tmp76Result.getEmbeddedActivityLocationGuildId(_location);
               if (str5 == null) {
                 str5 = "0";
@@ -162,28 +162,26 @@ function updateEmbeddedActivities(content_classification) {
                 if (typeof ActivityBucket === "function") {
                   const merged4 = Object.assign({ items: null, cachedVisible: null, cachedHidden: null });
                   merged4[0] = [];
-                  const result3 = obj17.set(str5, merged4);
+                  const result3 = map1.set(str5, merged4);
                   value5 = merged4;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
               }
               value5.upsert(application_id, _location.id, tmp61);
-              obj17 = map1;
-              obj22 = map2;
             }
           } else {
             const _Array = Array;
-            const arr = Array.from(value1.userIds);
+            Array.from(value1.userIds);
           }
-          obj5.delete(value1.applicationId);
-          const ComponentDispatch = tmp76(1109).ComponentDispatch;
+          map.delete(value1.applicationId);
+          const ComponentDispatch = application_id(1109).ComponentDispatch;
           ComponentDispatch.dispatch(constants.RELEASE_ACTIVITY_WEB_VIEW);
         }
       }
     }
     if (someResult) {
-      if (sessionId === obj4.getSessionId()) {
+      if (sessionId === AuthenticationStore.getSessionId()) {
         ({ referrerId, customId } = obj);
         if (value2 != null) {
           const inviterUserId = value2.inviterUserId;
@@ -193,23 +191,22 @@ function updateEmbeddedActivities(content_classification) {
         }
         const tmp36 = getURLForApplicationDefault(application_id);
         if (null != tmp36) {
-          if (null != obj4.getSessionId()) {
-            const value6 = obj5.get(application_id);
+          if (null != AuthenticationStore.getSessionId()) {
+            const value6 = map.get(application_id);
             id = undefined;
             if (value6 != null) {
               id = value6.location.id;
             }
             if (id !== _location.id) {
-              const embeddedActivityLocationChannelId2 = tmp76(4189).getEmbeddedActivityLocationChannelId(_location);
+              const embeddedActivityLocationChannelId2 = application_id(4189).getEmbeddedActivityLocationChannelId(_location);
               const channel = ChannelStore.getChannel(embeddedActivityLocationChannelId2);
               if (channel != null) {
                 const guildId = channel.getGuildId();
               }
               if (null != UserStore.getCurrentUser()) {
                 if (null == guildId) {
-                  let isPrivateResult;
                   if (channel != null) {
-                    isPrivateResult = channel.isPrivate();
+                    channel.isPrivate();
                   }
                 }
                 obj1 = { applicationId: application_id, url: tmp36, userIds: null, participants: null, connectedSince: null, launchId: null, compositeInstanceId: null, location: null, referrerId: null, customId: null, proxyTicket: null, renderInFramePool: null };
@@ -226,11 +223,11 @@ function updateEmbeddedActivities(content_classification) {
                 obj1.customId = customId;
                 obj1.proxyTicket = obj.proxyTicket;
                 obj1.renderInFramePool = renderInFramePool;
-                const result4 = obj5.set(application_id, obj1);
-                const ComponentDispatch2 = tmp76(1109).ComponentDispatch;
+                const result4 = map.set(application_id, obj1);
+                const ComponentDispatch2 = application_id(1109).ComponentDispatch;
                 const obj2 = { location: _location, applicationId: application_id, isFirstActivityInChannel: 0 === arr2.length, isStart: tmp78, participants: mapped, embeddedActivity: obj1, inviterUserId };
                 ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj2);
-                tmp76(9534);
+                application_id(9534);
                 if (true === renderInFramePool) {
                   let ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.DISCONNECTED;
                   const _HermesInternal2 = HermesInternal;
@@ -253,7 +250,7 @@ function updateEmbeddedActivities(content_classification) {
                 const combinedResult = DispatcherDefault;
                 const tmp41 = 0 === arr2.length;
               }
-              const tmp76Result1 = tmp76(4189);
+              const tmp76Result1 = application_id(4189);
             }
           }
         }
@@ -264,10 +261,9 @@ function updateEmbeddedActivities(content_classification) {
         tmp59 = null;
       }
       const _HermesInternal3 = HermesInternal;
-      obj6.delete("" + application_id + ":" + tmp59);
+      map4.delete("" + application_id + ":" + tmp59);
     }
-    obj6 = map4;
-    const someResult1 = mapped.some((item) => application_id(13985).isActivityParticipantCurrentUserCurrentSession(item));
+    const obj19 = application_id(4189);
   }
 }
 const ActivityPanelConstants = fn(9505);
@@ -595,12 +591,11 @@ prototype2["getEmbeddedActivityForUserId"] = function getEmbeddedActivityForUser
         if (item10023.applicationId === arg1) {
           let userIds = tmp12.userIds;
           if (userIds.has(arg0)) {
-            let tmp = item10023;
             obj3.return();
             obj.return();
             break label0;
           }
-          return tmp;
+          return item10023;
         }
         continue;
       }
@@ -807,9 +802,9 @@ obj = {
   EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING: function handleEmbeddedActivitySetProxyTicketRefreshing(applicationId) {
     applicationId = applicationId.applicationId;
     if (applicationId.refreshing) {
-      obj.add(applicationId);
+      set2.add(applicationId);
     } else {
-      obj.delete(applicationId);
+      set2.delete(applicationId);
     }
   },
   EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function handleEmbeddedActivityLaunchSuccess(applicationId) {
@@ -890,6 +885,7 @@ obj = {
     }
     const result = map6.set(str, { isFetching: true, lastFetchTimestampMs });
     obj.lastCheckedForBadgeableActivities = new Date(Date.now()).toISOString();
+    const date = new Date(Date.now());
   },
   EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: function handleEmbeddedActivityFetchShelfSuccess(arg0) {
     ({ guildId, activities } = arg0);

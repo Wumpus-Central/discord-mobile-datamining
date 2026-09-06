@@ -6,6 +6,7 @@ import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import _modDef4153 from "module_4153" /* 4153 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7114 */;
 import getTimestampStringDefault from "getTimestampString" /* 7499 */;
 import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7774 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -50,7 +51,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
   if (null != result) {
     const guildId = getGuildId.getGuildId();
     const parent_id = getGuildId.parent_id;
-    let tmpResult = tmp(7114);
+    let tmpResult = NotificationSettingsUtils;
     const currentChannelSettings = tmpResult.getCurrentChannelSettings(guildId, parent_id);
     let num = JoinedThreadsStore.flags(getGuildId.id);
     if (num == null) {
@@ -58,28 +59,28 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     }
     function getNotificationAnalyticsString(flags) {
       if (obj.hasFlag(flags, constants.ALL_MESSAGES)) {
-        let tmp6 = tmp(tmp2[11]).MessageNotificationSettings[constants2.ALL_MESSAGES];
+        let tmp6 = require("NotificationSettingsUtils").MessageNotificationSettings[constants2.ALL_MESSAGES];
       } else {
-        let tmpResult = tmp(tmp2[12]);
-        if (tmpResult.hasFlag(flags, tmp3.ONLY_MENTIONS)) {
-          tmp6 = tmp(tmp2[11]).MessageNotificationSettings[constants2.ONLY_MENTIONS];
+        let tmpResult = require("FlagUtils");
+        if (tmpResult.hasFlag(flags, constants.ONLY_MENTIONS)) {
+          tmp6 = require("NotificationSettingsUtils").MessageNotificationSettings[constants2.ONLY_MENTIONS];
         } else {
-          tmpResult = tmp(tmp2[12]);
-          const MessageNotificationSettings = tmp(tmp2[11]).MessageNotificationSettings;
+          tmpResult = require("FlagUtils");
+          const MessageNotificationSettings = require("NotificationSettingsUtils").MessageNotificationSettings;
           if (hasFlagResult) {
-            tmp6 = MessageNotificationSettings[tmp5.NO_MESSAGES];
+            tmp6 = MessageNotificationSettings[constants2.NO_MESSAGES];
           } else {
-            tmp6 = MessageNotificationSettings[tmp5.NULL];
+            tmp6 = MessageNotificationSettings[constants2.NULL];
           }
-          hasFlagResult = tmpResult.hasFlag(flags, tmp3.NO_MESSAGES);
+          hasFlagResult = tmpResult.hasFlag(flags, constants.NO_MESSAGES);
         }
       }
       return tmp6;
     }
     let notificationAnalyticsString = getNotificationAnalyticsString(num);
     const isMutedResult = JoinedThreadsStore.isMuted(getGuildId.id);
-    tmpResult = tmp(7114);
-    let result1 = tmpResult.muteConfigToTimestamp(obj7.getMuteConfig(getGuildId.id));
+    tmpResult = NotificationSettingsUtils;
+    let result1 = tmpResult.muteConfigToTimestamp(JoinedThreadsStore.getMuteConfig(getGuildId.id));
     ({ can_send_message, parent_channel_type } = result);
     obj = {};
     const merged = Object.assign(_objectWithoutProperties(result, closure_3));
@@ -103,8 +104,8 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     obj.new_thread_is_muted = muted;
     obj.old_thread_muted_until = result1;
     if (null != flags.mute_config) {
-      result1 = tmp(7114).muteConfigToTimestamp(flags.mute_config);
-      const tmpResult1 = tmp(7114);
+      result1 = NotificationSettingsUtils.muteConfigToTimestamp(flags.mute_config);
+      const tmpResult1 = NotificationSettingsUtils;
     }
     obj.new_thread_muted_until = result1;
     AnalyticsUtilsDefault.track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj);

@@ -114,25 +114,22 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
     let tmp9 = null;
     const items = fastList.state.items;
     for (const item10031 of items) {
-      let tmp12 = item10031;
       if (item10031.layoutStart >= layoutStart) {
-        let tmp71 = require;
-        if (tmp12.type === FastList.FastListItemTypes.ITEM) {
-          if (tmp12.layoutStart > tmp8) {
+        if (item10031.type === FastList.FastListItemTypes.ITEM) {
+          if (item10031.layoutStart > tmp8) {
             obj.return();
             break;
           } else {
             if (-1 === section) {
-              ({ section, item } = tmp12);
+              ({ section, item } = item10031);
             }
-            if (tmp12.type !== tmp71(7072).FastListItemTypes.ITEM) {
+            if (item10031.type !== FastList.FastListItemTypes.ITEM) {
               tmp9 = item10031;
-            } else if (shouldSkipSection(tmp12.section)) {
+            } else if (shouldSkipSection(item10031.section)) {
               continue;
-            } else if (checkHasMentionOrUnread(arg1, tmp12.section, tmp12.item, MENTION)) {
-              let tmp27 = closure_18;
+            } else if (checkHasMentionOrUnread(arg1, item10031.section, item10031.item, MENTION)) {
               obj.return();
-              return tmp27;
+              return closure_18;
             }
             continue;
           }
@@ -153,8 +150,7 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
                     continue;
                   }
                   let obj = { beforeItem: null, afterItem: null };
-                  obj = { section: diff1, row: diff, isMention: null };
-                  obj.isMention = MENTION === constants.MENTION;
+                  obj = { section: diff1, row: diff, isMention: MENTION === constants.MENTION };
                   obj.beforeItem = obj;
                   return obj;
                 }
@@ -186,8 +182,7 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
                     }
                   }
                   let obj1 = { afterItem: null, beforeItem: null };
-                  let obj2 = { section: num5, row: num6, isMention: null };
-                  obj2.isMention = MENTION === constants.MENTION;
+                  let obj2 = { section: num5, row: num6, isMention: MENTION === constants.MENTION };
                   obj1.afterItem = obj2;
                   return obj1;
                 }
@@ -201,6 +196,7 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
       continue;
     }
   }
+  tmp = GuildReadStateStore.getMentionCount(guildChannels.id) > 0;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
@@ -246,16 +242,14 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
         let tmp6 = afterItem;
       } else {
         afterItem = afterItem.afterItem;
-        const afterItem2 = tmp.afterItem;
-        tmp6 = tmp;
+        const afterItem2 = closure_0.afterItem;
+        tmp6 = closure_0;
         if (tmp4(afterItem, afterItem2)) {
           beforeItem = afterItem.beforeItem;
-          const beforeItem2 = tmp.beforeItem;
-          tmp6 = tmp;
-          const tmp2Result = tmp2(tmp3[18]);
+          guildChannels(headerHeight[18]);
+          const beforeItem2 = closure_0.beforeItem;
+          tmp6 = closure_0;
         }
-        tmp2 = guildChannels;
-        tmp3 = headerHeight;
         tmp4 = guildChannels(headerHeight[18]);
       }
       return tmp6;

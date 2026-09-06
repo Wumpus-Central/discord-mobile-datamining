@@ -45,7 +45,7 @@ export default function CardSection(arg0) {
     const items3 = [tmp.card, cardStyle];
     obj.style = items3;
     obj.children = children;
-    tmp9 = React3(tmp3, obj);
+    tmp9 = React3(View, obj);
   }
   items2[2] = tmp9;
   obj.children = items2;

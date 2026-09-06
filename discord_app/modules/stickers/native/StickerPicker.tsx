@@ -4,15 +4,18 @@
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import StickersUtils from "StickersUtils" /* 4899 */;
 import StickerSendability from "StickerSendability" /* 7337 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
 import StickersSearchUtils from "StickersSearchUtils" /* 10393 */;
-import openStickerPackDetailActionSheetDefault from "openStickerPackDetailActionSheet" /* 10394 */;
+import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 10394 */;
 import showStickerDetailActionSheet from "showStickerDetailActionSheet" /* 10403 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import StickersStore from "StickersStore" /* 5502 */;
+
+const openStickerPackDetailActionSheetDefault = openStickerPackDetailActionSheet;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -75,12 +78,12 @@ export default noop.memo(function StickerPicker(channel) {
     const stickerSendability = obj.getStickerSendability(pack_id, UserStore.getCurrentUser(), channel);
     if (stickerSendability === StickerSendability.StickerSendability.SENDABLE) {
       onPressSticker(pack_id);
-    } else if (stickerSendability === tmp(7337).StickerSendability.SENDABLE_WITH_PREMIUM) {
-      let tmpResult = tmp(4899);
+    } else if (stickerSendability === StickerSendability.StickerSendability.SENDABLE_WITH_PREMIUM) {
+      let tmpResult = StickersUtils;
       if (tmpResult.isStandardSticker(pack_id)) {
         const stickerPack = StickersStore.getStickerPack(pack_id.pack_id);
         if (null != stickerPack) {
-          if (null != tmp3.guild_id) {
+          if (null != channel.guild_id) {
             let DM_CHANNEL2 = constants2.GUILD_CHANNEL;
           } else {
             DM_CHANNEL2 = constants2.DM_CHANNEL;
@@ -88,16 +91,16 @@ export default noop.memo(function StickerPicker(channel) {
           obj = { analyticsLocation: null, analyticsPopoutType: null, stickerPack: null };
           obj = { page: DM_CHANNEL2 };
           obj.analyticsLocation = obj;
-          obj.analyticsPopoutType = tmp(10394).AnalyticsPopoutType.STICKER_PACK_DETAIL;
+          obj.analyticsPopoutType = openStickerPackDetailActionSheet.AnalyticsPopoutType.STICKER_PACK_DETAIL;
           obj.stickerPack = stickerPack;
           openStickerPackDetailActionSheetDefault(obj);
         }
       } else {
-        tmpResult = tmp(4899);
+        tmpResult = StickersUtils;
         if (tmpResult.isGuildSticker(pack_id)) {
           let obj2 = PremiumUpsellUtilsDefault;
           const obj1 = { initialUpsellKey: constants4.GLOBAL_STICKER, analyticsLocation: null, analyticsLocations: null };
-          if (null != tmp3.guild_id) {
+          if (null != channel.guild_id) {
             let DM_CHANNEL = constants2.GUILD_CHANNEL;
           } else {
             DM_CHANNEL = constants2.DM_CHANNEL;
@@ -130,16 +133,16 @@ export default noop.memo(function StickerPicker(channel) {
     obj2.placeholder = intl.string(tmp2(1114).t.dt5h1C);
     obj2.onChange = callback;
     obj2.onFocus = callback2;
-    obj1.children = tmp18(tmp2(7050).SearchField, obj2);
-    tmp18Result = tmp18(tmp20, obj1);
+    obj1.children = closure_14(tmp2(7050).SearchField, obj2);
+    tmp18Result = closure_14(closure_5, obj1);
   }
   const items5 = [tmp18Result, , ];
   if (stateFromStores) {
     if (0 === stickerCategories.length) {
       obj3 = { style: tmp.emptyState, children: null };
-      tmp = tmp18(tmp8(10413), {});
+      tmp = closure_14(tmp8(10413), {});
       obj3.children = tmp;
-      tmp18Result = tmp18(tmp20, obj3);
+      tmp18Result = closure_14(closure_5, obj3);
     } else {
       const obj4 = { bottomSheetRef, bottomSheetIndex, setCategoryIndex: tmp7, onPressSticker: callback1, onLongPressStickerDetail: null, insetBottom: null, insetTop: null, channel: null, stickerFormats: null, searchResults: null, inPortalKeyboard: null };
       let tmp24;
@@ -153,16 +156,17 @@ export default noop.memo(function StickerPicker(channel) {
       obj4.stickerFormats = stickerFormats;
       obj4.searchResults = tmp11;
       obj4.inPortalKeyboard = inPortalKeyboard;
-      tmp18Result = tmp18(tmp8(10414), obj4);
+      tmp18Result = closure_14(tmp8(10414), obj4);
       const tmp8Result = tmp8(10414);
     }
   } else {
     const obj5 = { animating: true, size: "large", style: tmp.loadingIndicator };
-    items5[1] = tmp18(closure_6, obj5);
+    items5[1] = closure_14(closure_6, obj5);
     const obj6 = { categories: stickerCategories, categoryIndex: tmp6[0], style: safeAreaStyle };
-    items5[2] = tmp18(tmp8(10419), obj6);
+    items5[2] = closure_14(tmp8(10419), obj6);
     obj.children = items5;
-    obj.children = closure_15(tmp20, obj);
-    return tmp18(channel(7162).AnalyticsLocationProvider, obj);
+    obj.children = closure_15(closure_5, obj);
+    return closure_14(channel(7162).AnalyticsLocationProvider, obj);
   }
+  const tmp12 = onPressSticker(10283)({ hasCategories: true });
 });

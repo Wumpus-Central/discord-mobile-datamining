@@ -6,8 +6,10 @@ import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
 import TableRadioRow from "TableRadioRow" /* 5688 */;
 import NavScrim from "NavScrim" /* 7040 */;
+import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
 import Form from "Form" /* 8593 */;
 import useUserIsTeen from "useUserIsTeen" /* 8644 */;
@@ -31,24 +33,24 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
   let tmp7 = DEFAULT === constants4.AGE_RESTRICTED;
   const userIsTeen = obj.useUserIsTeen();
   if (tmp7) {
-    tmp7 = DEFAULT2 !== tmp6.AGE_RESTRICTED;
+    tmp7 = DEFAULT2 !== constants4.AGE_RESTRICTED;
   }
   let tmp9 = null;
   if (!userIsTeen) {
     obj = { title: null, hasIcons: false, description: null, children: null };
-    const intl = tmp3(1114).intl;
-    obj.title = intl.string(tmp3(1114).t.YJlvBM);
-    const intl2 = tmp3(1114).intl;
+    const intl = util.intl;
+    obj.title = intl.string(util.t.YJlvBM);
+    const intl2 = util.intl;
     obj = { helpArticleLink: HelpdeskUtilsDefault.getArticleURL(constants2.NSFW_SERVER_AGE_RESTRICTION) };
-    obj.description = intl2.format(tmp3(1114).t.iyQQ62, obj);
+    obj.description = intl2.format(util.t.iyQQ62, obj);
     const obj1 = { label: null, value: null, onValueChange: null, disabled: null };
-    const intl3 = tmp3(1114).intl;
-    obj1.label = intl3.string(tmp3(1114).t.N9xEJF);
-    obj1.value = DEFAULT2 === tmp6.AGE_RESTRICTED;
+    const intl3 = util.intl;
+    obj1.label = intl3.string(util.t.N9xEJF);
+    obj1.value = DEFAULT2 === constants4.AGE_RESTRICTED;
     obj1.onValueChange = tmp8;
     obj1.disabled = tmp7;
-    obj.children = closure_1_10(tmp3(7201).TableSwitchRow, obj1);
-    tmp9 = closure_1_10(tmp3(5687).TableRowGroup, obj, "filter-section");
+    obj.children = closure_1_10(TableSwitchRow.TableSwitchRow, obj1);
+    tmp9 = closure_1_10(TableRowGroup.TableRowGroup, obj, "filter-section");
   }
   return tmp9;
 }
@@ -128,7 +130,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
       obj = { color };
       obj.style = obj;
       obj.children = name;
-      tmpResult = tmp(Text_Text.Text, obj);
+      tmpResult = closure_2_10(Text_Text.Text, obj);
     }
     obj.label = tmpResult;
     obj.subLabel = desc;
@@ -182,7 +184,7 @@ prototype["render"] = function render() {
   const items1 = [this.renderVerificationLevelSection(), this.renderExplicitContentFilter(), ];
   if (canManageGuild) {
     obj = { guild, hasChanges };
-    canManageGuild = tmp4(GuildSettingsOwnerConfiguredContentLevel, obj);
+    canManageGuild = closure_1_10(GuildSettingsOwnerConfiguredContentLevel, obj);
   }
   const obj1 = { children: null };
   items1[2] = canManageGuild;

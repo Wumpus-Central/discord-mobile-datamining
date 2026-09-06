@@ -102,7 +102,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     let tmp30Result = null != formatResult;
     if (tmp30Result) {
       const obj5 = { variant: "heading-sm/normal", color: "text-muted", children: formatResult };
-      tmp30Result = tmp30(tmp(4556).Text, obj5);
+      tmp30Result = closure_7(tmp(4556).Text, obj5);
     }
     const obj6 = { children: null };
     items3[1] = tmp30Result;

@@ -1,26 +1,30 @@
 // === Module 12105: CommandRowButton ===
 
 // Module 12105 (CommandRowButton)
+import util from "util" /* 1114 */;
+import SendMessageIcon from "SendMessageIcon" /* 4505 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import TableRowArrow from "TableRowArrow" /* 5612 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const require = fn;
+require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
 
 export default function CommandRowIcon(hasOptions) {
   if (hasOptions.hasOptions) {
-    let tmp3Result = tmp3(tmp4(5612).TableRowArrow, {});
+    let tmp3Result = jsx(TableRowArrow.TableRowArrow, {});
   } else {
     const obj = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
-    const intl = tmp4(1114).intl;
-    obj.text = intl.string(tmp4(1114).t.TXNS7S);
+    const intl = util.intl;
+    obj.text = intl.string(util.t.TXNS7S);
     obj.onPress = tmp2;
-    obj.icon = tmp3(tmp4(4505).SendMessageIcon, { size: "sm" });
+    obj.icon = jsx(SendMessageIcon.SendMessageIcon, { size: "sm" });
     obj.disabled = tmp;
-    tmp3Result = tmp3(tmp4(4975).Button, obj);
+    tmp3Result = jsx(components_Button_Button.Button, { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null });
   }
   return tmp3Result;
 };
@@ -42,7 +46,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
   let obj = command(beforeExecuteCommand[4]);
   commandContext = obj.useCommandContext(command.context);
   const items = [onExecuteCommand, command, commandContext, beforeExecuteCommand, sectionName];
-  callback = sectionName.useCallback(onExecuteCommand(function*(arg0, value) {
+  callback = sectionName.useCallback(onExecuteCommand(function*() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

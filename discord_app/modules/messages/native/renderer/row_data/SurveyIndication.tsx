@@ -3,6 +3,8 @@
 // Module 13185 (SurveyIndication)
 import util from "util" /* 1114 */;
 import PushNotificationConstants from "PushNotificationConstants" /* 6596 */;
+import _modDef13186 from "module_13186" /* 13186 */;
+import _modDef13187 from "module_13187" /* 13187 */;
 import size from "module_2" /* 2 */;
 
 const NotificationTypes = PushNotificationConstants.NotificationTypes;
@@ -27,9 +29,9 @@ export const createSurveyIndication = function createSurveyIndication(message, f
   tmp2(7946);
   const tmp2Result = tmp2(4411);
   if (tmp2Result.isThemeDark(forcedTheme)) {
-    let tmp7Result = tmp7(13186);
+    let tmp7Result = _modDef13186;
   } else {
-    tmp7Result = tmp7(13187);
+    tmp7Result = _modDef13187;
   }
   obj.feedbackIconUrl = tmp2Result.getAssetUriForEmbed(tmp7Result);
   return obj;

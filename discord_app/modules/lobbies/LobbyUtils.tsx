@@ -34,17 +34,17 @@ export const useCanUnlinkLobbyChannel = function useCanUnlinkLobbyChannel(channe
   const items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     if (PermissionStore !== undefined) {
-      let tmp3 = null != tmp;
+      let tmp3 = null != linkedLobby;
       if (tmp3) {
-        let canResult = null != tmp.linkedLobby;
+        let canResult = null != linkedLobby.linkedLobby;
         if (canResult) {
-          canResult = obj.can(Permissions.MANAGE_CHANNELS, tmp);
+          canResult = PermissionStore.can(Permissions.MANAGE_CHANNELS, linkedLobby);
         }
         if (canResult) {
-          canResult = obj.can(Permissions.VIEW_CHANNEL, tmp);
+          canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, linkedLobby);
         }
         if (canResult) {
-          canResult = obj.can(Permissions.SEND_MESSAGES, tmp);
+          canResult = PermissionStore.can(Permissions.SEND_MESSAGES, linkedLobby);
         }
         tmp3 = canResult;
       }

@@ -72,7 +72,7 @@ let closure_14 = noop.memo((sourceQuestContent) => {
     }, items);
     const tmp15 = sharedValue();
     const pillarboxed = tmp15;
-    const tmp17 = sourceQuestContent(tmp2[11])(obj1.useContext(tmp(tmp2[10]).QuestDockGestureContext).windowDimensions);
+    const tmp17 = sourceQuestContent(tmp2[11])(obj1.useContext(initialStep(tmp2[10]).QuestDockGestureContext).windowDimensions);
     ({ width, height } = tmp17);
     let bound = null;
     if (tmp17.landscape) {
@@ -112,13 +112,13 @@ let closure_14 = noop.memo((sourceQuestContent) => {
       callback(false);
       closure_6(obj.POST_WATCH_VIDEO);
     }, items3);
-    let tmpResult = tmp(tmp2[12]);
+    let tmpResult = initialStep(tmp2[12]);
     let num3 = 0;
     if (first === bound.POST_WATCH_VIDEO) {
       num3 = 1;
     }
     sharedValue = tmpResult.useSharedValue(num3);
-    tmpResult = tmp(tmp2[12]);
+    tmpResult = initialStep(tmp2[12]);
     class L {
       constructor() {
         obj = { opacity: null, transform: null };
@@ -135,7 +135,7 @@ let closure_14 = noop.memo((sourceQuestContent) => {
         return obj;
       }
     }
-    __closure = { withSpring: tmp(tmp2[13]).withSpring, clamp: tmp(tmp2[12]).clamp, postWatchAnimationState: sharedValue, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: pillarboxed, interpolate: tmp(tmp2[12]).interpolate, CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y: -100 };
+    __closure = { withSpring: initialStep(tmp2[13]).withSpring, clamp: initialStep(tmp2[12]).clamp, postWatchAnimationState: sharedValue, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: pillarboxed, interpolate: initialStep(tmp2[12]).interpolate, CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y: -100 };
     L.__closure = __closure;
     L.__workletHash = 11571705142399;
     L.__initData = __initData;
@@ -161,12 +161,12 @@ let closure_14 = noop.memo((sourceQuestContent) => {
         return obj;
       }
     }
-    __closure = { withSpring: tmp(tmp2[13]).withSpring, interpolate: tmp(tmp2[12]).interpolate, postWatchAnimationState: sharedValue, safeAreaInsets: tmp29, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: pillarboxed };
+    __closure = { withSpring: initialStep(tmp2[13]).withSpring, interpolate: initialStep(tmp2[12]).interpolate, postWatchAnimationState: sharedValue, safeAreaInsets: tmp29, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: pillarboxed };
     U.__closure = __closure;
     U.__workletHash = 9769051401109;
     U.__initData = __initData2;
     const items4 = [sharedValue, first];
-    const animatedStyle1 = tmp(tmp2[12]).useAnimatedStyle(U);
+    const animatedStyle1 = initialStep(tmp2[12]).useAnimatedStyle(U);
     const effect = obj1.useEffect(() => {
       let num = 0;
       if (first === obj.POST_WATCH_VIDEO) {
@@ -212,19 +212,19 @@ let closure_14 = noop.memo((sourceQuestContent) => {
         bound = width;
       }
       const obj12 = { contentWidth: bound, isFullscreen: tmp12, onNavigateToPostWatchVideo: callback2, onClose, onEnd: callback2, setIsFullscreen, sourceQuestContent };
-      tmp33Result = tmp33(tmp16(tmp2[18]), obj12);
+      tmp33Result = closure_7(tmp16(tmp2[18]), obj12);
       const tmp16Result1 = tmp16(tmp2[18]);
     }
     const items12 = [tmp33Result, ];
     tmp33Result = first === tmp24.POST_WATCH_VIDEO;
     if (tmp33Result) {
       const obj13 = { onClose, onRestartVideo: callback1, sourceQuestContent };
-      tmp33Result = tmp33(tmp16(tmp2[19]), obj13);
+      tmp33Result = closure_7(tmp16(tmp2[19]), obj13);
     }
     items12[1] = tmp33Result;
     obj11.children = items12;
     obj9.children = setIsFullscreen(first, obj11);
-    items10[1] = closure_7(tmp(tmp2[17]).SafeAreaPaddingView, obj9);
+    items10[1] = closure_7(initialStep(tmp2[17]).SafeAreaPaddingView, obj9);
     obj2.children = items10;
     obj1.children = setIsFullscreen(tmp16Result, obj2);
     return closure_7(first, obj1);

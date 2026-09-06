@@ -32,7 +32,7 @@ class LinkButton {
   }
 }
 function handlePressPasswordManagerHint() {
-  const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+  let obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.lzsy7t);
   const intl2 = util.intl;
@@ -45,6 +45,7 @@ function handlePressPasswordManagerHint() {
     if (obj.isAndroid()) {
       const result = NativeDeviceSettingsModuleDefault.openAccessibilitySettings();
     }
+    obj = require("PlatformUtils");
   };
   obj.show(obj);
 }
@@ -121,7 +122,7 @@ export default function Login(isMultiAccount) {
     _undefined2(false);
   }, []));
   const items1 = [callback, first];
-  closure_13 = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  closure_13 = noop.useCallback(asyncGeneratorStep(async () => {
     if (v32 === 2) {
       v32 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -218,100 +219,91 @@ export default function Login(isMultiAccount) {
     }
   }), items1);
   _require = asyncGeneratorStep(async (isMultiAccount, arg1) => {
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (async (arg0, value) => {
-      if (c8 === 2) {
-        c8 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (isMultiAccount === 1) {
+        throw value;
+      } else if (isMultiAccount === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_3 = tmp7;
-              closure_131_2 = undefined;
-              closure_131_0 = isMultiAccount;
-              closure_131_1 = closure_1;
-              let flag = closure_2;
-              if (closure_2 === undefined) {
-                flag = false;
-              }
-              closure_131_2 = flag;
-              let authenticationErrorsFromV6OrEarlierAPIError;
-              c7 = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              let obj1 = { value, done: true };
-              return obj1;
-            } else {
-              tmp3(true);
-              tmp22({});
-              c6 = 1;
-              const obj2 = { login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount };
-              c7 = 3;
-              c8 = 1;
-              const obj3 = { value: navigation(ref[19]).login(obj2), done: false };
-              return obj3;
-            }
-          } else {
-            if (2 === tmp7) {
-              c6 = 0;
-              closure_131_4 = tmp22;
-              tmp3(false);
-              obj1 = isMultiAccount(ref[23]);
-              authenticationErrorsFromV6OrEarlierAPIError = obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
-              callback(authenticationErrorsFromV6OrEarlierAPIError);
-              c8 = 3;
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              c6 = 0;
-            }
-            c6 = 0;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount === 2) {
             c8 = 3;
             obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp22) {
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp22;
           } else {
-            c7 = tmp;
+            closure_3 = tmp7;
+            closure_131_2 = undefined;
+            closure_131_0 = isMultiAccount;
+            closure_131_1 = closure_1;
+            let flag = closure_2;
+            if (closure_2 === undefined) {
+              flag = false;
+            }
+            closure_131_2 = flag;
+            let authenticationErrorsFromV6OrEarlierAPIError;
+            c7 = 1;
+            c8 = 1;
+            return { value: "PX_16", done: true };
           }
+        } else if (1 === tmp7) {
+          if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount === 2) {
+            c8 = 3;
+            let obj1 = { value, done: true };
+            return obj1;
+          } else {
+            tmp3(true);
+            tmp22({});
+            c6 = 1;
+            const obj2 = { login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount };
+            c7 = 3;
+            c8 = 1;
+            const obj3 = { value: navigation(ref[19]).login(obj2), done: false };
+            return obj3;
+          }
+        } else {
+          if (2 === tmp7) {
+            c6 = 0;
+            closure_131_4 = tmp22;
+            tmp3(false);
+            obj1 = isMultiAccount(ref[23]);
+            authenticationErrorsFromV6OrEarlierAPIError = obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
+            callback(authenticationErrorsFromV6OrEarlierAPIError);
+            c8 = 3;
+          } else if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount !== 2) {
+            c6 = 0;
+          }
+          c6 = 0;
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp22) {
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp22;
+        } else {
+          c7 = tmp;
         }
       }
-    })();
-    iter.next();
-    return iter;
+    }
   });
   const items2 = [callback, flag];
   const callback1 = noop.useCallback(function() {
@@ -325,7 +317,7 @@ export default function Login(isMultiAccount) {
     return applyArgumentsResult;
   }, items2);
   const items3 = [callback, first1];
-  const callback2 = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback2 = noop.useCallback(asyncGeneratorStep(async () => {
     if (v32 === 2) {
       v32 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

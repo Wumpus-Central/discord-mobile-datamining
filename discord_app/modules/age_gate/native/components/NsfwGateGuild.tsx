@@ -45,17 +45,17 @@ export default function NsfwGateGuild(guildId) {
     const obj = { guild_id: guildId, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
     let id;
     if (currentUser != null) {
-      id = tmp3.id;
+      id = currentUser.id;
     }
     obj.user_id = id;
     let id1;
     if (currentUser != null) {
-      id1 = tmp3.id;
+      id1 = currentUser.id;
     }
     obj.is_member = GuildMemberStore.isMember(guildId, id1);
     let nsfwAllowed;
     if (currentUser != null) {
-      nsfwAllowed = tmp3.nsfwAllowed;
+      nsfwAllowed = currentUser.nsfwAllowed;
     }
     if (nsfwAllowed) {
       nsfwAllowed = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();

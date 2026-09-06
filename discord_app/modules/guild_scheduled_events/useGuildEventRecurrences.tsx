@@ -39,8 +39,8 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
       if (null != closure_4) {
         if (null != closure_2) {
           if (null != stateFromStores) {
-            if (!obj3.isEqual(tmp, tmp12)) {
-              const rRule = ScheduleUtils.getRRule(tmp12);
+            if (!obj3.isEqual(tmp, closure_2)) {
+              const rRule = ScheduleUtils.getRRule(closure_2);
               const _Date = Date;
               const date = new Date(tmp13.scheduled_start_time);
               closure_6(ScheduleUtils.generateNextRecurrences(first.length, rRule, date));
@@ -82,7 +82,7 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
                 const fullYear = date.getFullYear();
                 date.setFullYear(fullYear + ScheduleUtils.MAX_YEARS_AHEAD_RECURRING_EVENT);
                 const rRule = ScheduleUtils.getRRule(tmp);
-                const afterResult = rRule.after(arr[arr.length - 1]);
+                const afterResult = rRule.after(first[first.length - 1]);
                 return null != afterResult && afterResult <= date;
               }
             }

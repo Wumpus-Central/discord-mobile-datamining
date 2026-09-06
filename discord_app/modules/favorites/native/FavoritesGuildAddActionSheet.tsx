@@ -2,6 +2,7 @@
 
 // Module 16152 (FavoritesGuildAddActionSheet)
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4527 */;
+import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10227 */;
 import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10976 */;
 import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 16153 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +25,7 @@ function FavoritesGuildAddActionSheet() {
     ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildAddActionSheet);
     if (shouldShowUpsell) {
       if (isAtLimit) {
-        tmp(10227)(favoriteLimit);
+        openFavoritesGuildLimitUpsellDefault(favoriteLimit);
       }
     }
     openFavoritesGuildAddChannelModalDefault({ source: "favorites_header_add_button_context_menu" });

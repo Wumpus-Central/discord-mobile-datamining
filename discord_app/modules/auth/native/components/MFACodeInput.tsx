@@ -22,7 +22,7 @@ let closure_12 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/MFACodeInput.tsx");
 
-export default noop.forwardRef((appState, ref) => {
+export default noop.forwardRef((appState, arg1) => {
   appState = appState.appState;
   const handleSubmit = appState.handleSubmit;
   ({ error, resetLoginOnClose } = appState);
@@ -104,17 +104,17 @@ export default noop.forwardRef((appState, ref) => {
   const effect1 = noop.useEffect(() => {
     let isMatch = 6 === first.length;
     if (isMatch) {
-      isMatch = /^\d+$/.test(arr);
+      isMatch = /^\d+$/.test(first);
       const obj = /^\d+$/;
     }
     if (!isMatch) {
-      isMatch = 8 === arr.length;
+      isMatch = 8 === first.length;
     }
     if (isMatch) {
-      handleSubmit(arr);
+      handleSubmit(first);
     }
   }, items2);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     clear() {
       closure_1_4("");
     }
@@ -127,8 +127,6 @@ export default noop.forwardRef((appState, ref) => {
   const items4 = [closure_9(handleSubmit(resetLoginOnClose[12]), obj), ];
   const items5 = [tmp.status, ];
   const tmp10 = handleSubmit;
-  const tmp15 = closure_11;
-  const tmp16 = closure_10;
   const tmp18 = handleSubmit(resetLoginOnClose[12]);
   const tmp19 = closure_6;
   obj = { style: items5, children: null };
@@ -139,18 +137,19 @@ export default noop.forwardRef((appState, ref) => {
     const isThemeDarkResult = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme);
     const unsafe_rawColors = first1;
     const obj1 = { color: tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
-    let tmp17Result = tmp17(first1, obj1);
+    let tmp17Result = closure_9(first1, obj1);
     const tmp23 = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
   } else {
     tmp17Result = null;
     if (null != error) {
       let obj2 = { style: tmp.error, variant: "text-md/medium", children: error };
-      tmp17Result = tmp17(tmp2(tmp3[14]).Text, obj2);
+      tmp17Result = closure_9(tmp2(tmp3[14]).Text, obj2);
     }
     const obj3 = { children: null };
     obj.children = tmp17Result;
-    items4[1] = tmp17(tmp19, obj);
+    items4[1] = closure_9(tmp19, obj);
     obj3.children = items4;
-    return tmp15(tmp16, obj3);
+    return closure_11(closure_10, obj3);
   }
+  const tmp20 = Boolean(error) && tmp.minHeightGuard;
 });

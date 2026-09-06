@@ -6,7 +6,9 @@ import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
+import getDeviceSpecificString from "getDeviceSpecificString" /* 7824 */;
 import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9698 */;
+import SoundboardIcon from "SoundboardIcon" /* 12528 */;
 import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 17056 */;
 import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17059 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -117,11 +119,11 @@ function useFloatingCTAProps(stateFromStores) {
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items4, () => {
     let id;
     if (closure_0 != null) {
-      id = tmp.id;
+      id = closure_0.id;
     }
     let tmp3 = null != id;
     if (tmp3) {
-      tmp3 = 1 === ChannelRTCStore.getParticipants(tmp.id).length;
+      tmp3 = 1 === ChannelRTCStore.getParticipants(closure_0.id).length;
     }
     return tmp3;
   });
@@ -196,9 +198,9 @@ function getDismissableCTAProps(arg0) {
   ({ dismissableContent, channel: require } = arg0);
   if (dismissible_content.DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA === dismissableContent) {
     return getBadConnectionCTAProps();
-  } else if (tmp(1943).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
+  } else if (dismissible_content.DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
     let obj = {
-      icon: jsx(tmp(12528).SoundboardIcon, { color: "interactive-icon-default" }),
+      icon: jsx(SoundboardIcon.SoundboardIcon, { color: "interactive-icon-default" }),
       onPress() {
           if (null != _require) {
             const obj = { channel: tmp, analyticsSource: "SOUNDBOARD_MOBILE_FLOATING_CTA" };
@@ -209,12 +211,12 @@ function getDismissableCTAProps(arg0) {
       label: null,
       trailing: null
     };
-    obj = { quest: tmp(1114).t.XLlWUe };
-    obj.label = tmp(7824).getDeviceSpecificString(obj, tmp(1114).t.IJgkPX);
+    obj = { quest: util.t.XLlWUe };
+    obj.label = getDeviceSpecificString.getDeviceSpecificString(obj, util.t.IJgkPX);
     obj.trailing = <CloseSoundboardMobileFloatingCtaIcon />;
     return obj;
   } else {
-    const DONUT_MOBILE_NUX = tmp(1943).DismissibleContent.DONUT_MOBILE_NUX;
+    const DONUT_MOBILE_NUX = dismissible_content.DismissibleContent.DONUT_MOBILE_NUX;
     return null;
   }
 }

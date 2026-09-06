@@ -82,7 +82,6 @@ export default function ScreenRecordingActionSheet() {
   obj.children = items;
   const obj1 = { style: tmp.container, children: null };
   const tmp11 = closure_6(View, obj);
-  const tmp6 = closure_6;
   const tmp9 = _require;
   const items1 = [
     closure_5(require("Pressables").PressableOpacity, {
@@ -124,7 +123,7 @@ export default function ScreenRecordingActionSheet() {
   });
   items1[3] = closure_5(View, obj5);
   obj1.children = items1;
-  let children = tmp6(tmp7, obj1);
+  let children = closure_6(View, obj1);
   if (tmp3) {
     children = tmp11;
   }

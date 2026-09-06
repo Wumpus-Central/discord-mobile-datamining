@@ -2,6 +2,7 @@
 
 // Module 5425 (StageChannelParticipants)
 import SecondaryIndexMap from "SecondaryIndexMap" /* 4195 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5428 */;
@@ -168,7 +169,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId, 
       const merged = Object.assign(obj);
       obj.type = obj.VOICE;
       obj.id = user.id;
-      let tmp11Result = tmp11(4707);
+      let tmp11Result = useAudienceRequestToSpeakState;
       obj.rtsState = tmp11Result.getAudienceRequestToSpeakState(voiceStateForChannel);
       items.push(obj);
       let streamForUser = ApplicationStreamingStore.getStreamForUser(userId, self.guildId);
@@ -177,12 +178,12 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId, 
       }
       if (null != streamForUser) {
         if (streamForUser.channelId === self.channelId) {
-          tmp11Result = tmp11(4612);
+          tmp11Result = StreamKeyUtils;
           const obj1 = {};
           const merged1 = Object.assign(obj);
           obj1.id = tmp11Result.encodeStreamKey(streamForUser);
           obj1.type = obj.STREAM;
-          obj1.rtsState = tmp11(4707).RequestToSpeakStates.NONE;
+          obj1.rtsState = useAudienceRequestToSpeakState.RequestToSpeakStates.NONE;
           items.push(obj1);
           const encodeStreamKeyResult = tmp11Result.encodeStreamKey(streamForUser);
         }
@@ -214,11 +215,12 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
       if (id.id === closure_0) {
         const rtsState = id.rtsState;
         if (tmp6) {
-          const _requestToSpeakIndex2 = tmp._requestToSpeakIndex;
-          const result1 = _requestToSpeakIndex2.set(tmp3, id);
+          const _requestToSpeakIndex2 = self._requestToSpeakIndex;
+          const result1 = _requestToSpeakIndex2.set(closure_0, id);
         }
+        tmp6 = rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
       }
-      const _requestToSpeakIndex = tmp._requestToSpeakIndex;
+      const _requestToSpeakIndex = self._requestToSpeakIndex;
       _requestToSpeakIndex.delete(closure_0);
     });
     this.participants[arg0] = result;

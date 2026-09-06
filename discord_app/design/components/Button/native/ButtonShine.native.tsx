@@ -27,7 +27,7 @@ function useShineEffectStyles(width, variant) {
       obj = { transform: null };
       let obj1 = { translateX: null };
       if (enabled) {
-        obj1.translateX = (tmp - 56) / 2;
+        obj1.translateX = (closure_0 - 56) / 2;
         const items1 = [obj1];
         obj.transform = items1;
         tmp5 = obj;
@@ -36,7 +36,7 @@ function useShineEffectStyles(width, variant) {
         obj1 = ReanimatedRexport;
         const withTimingResult = timing.withTiming(-120, { duration: 0 }, "animate-always");
         const obj4 = ReanimatedRexport;
-        obj1.translateX = obj.withRepeat(obj1.withSequence(withTimingResult, obj4.withDelay(750, timing.withTiming(tmp + 120, { duration: 2000 }, "animate-always"))), -1);
+        obj1.translateX = obj.withRepeat(obj1.withSequence(withTimingResult, obj4.withDelay(750, timing.withTiming(closure_0 + 120, { duration: 2000 }, "animate-always"))), -1);
         const items2 = [obj1];
         obj.transform = items2;
         tmp5 = obj;

@@ -112,7 +112,7 @@ export default noop.forwardRef((arg0, ref) => {
   tmp12Result = null;
   if (null != hint) {
     const obj4 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
-    tmp12Result = tmp12(tmp3(tmp4[7]).Text, obj4);
+    tmp12Result = tmp12(require("Text/Text").Text, obj4);
   }
   items1[3] = tmp12Result;
   current.children = items1;

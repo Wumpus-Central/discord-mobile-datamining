@@ -7,14 +7,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
 
 export default {
-  setCommunicationDisabledDuration(arg0, id, value, current, arg4, arg5) {
-    closure_0 = arg0;
+  setCommunicationDisabledDuration(guildId, id, value, current, arg4, arg5) {
+    closure_0 = guildId;
     closure_1 = id;
     asyncGeneratorStep = value;
     closure_3 = current;
     closure_4 = arg4;
     closure_5 = arg5;
-    return (async (arg0, value) => {
+    return (async () => {
       if (guildId === 2) {
         guildId = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -42,8 +42,8 @@ export default {
               let toISOStringResult = null;
               if (null != duration) {
                 let obj1 = guildId(userId[1])();
-                toISOStringResult = obj1.add(tmp20, "s").toISOString();
-                const addResult = obj1.add(tmp20, "s");
+                toISOStringResult = obj1.add(duration, "s").toISOString();
+                const addResult = obj1.add(duration, "s");
               }
               obj1 = { guildId, userId, communicationDisabledUntilTimestamp: toISOStringResult, duration, reason, location: _location, moderatorReportId };
               userId = 1;

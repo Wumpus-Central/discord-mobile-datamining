@@ -7,6 +7,7 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
 import DeviceUtils from "DeviceUtils" /* 4539 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
 import profileModalTransition from "profileModalTransition" /* 16784 */;
+import SettingsNavigatorDefault from "SettingsNavigator" /* 16903 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,12 +42,12 @@ export default function Settings() {
   obj = {
     style: noop.useMemo(() => {
       if (closure_3) {
-        const items = [tmp.containerOuterTablet, ];
+        const items = [closure_4.containerOuterTablet, ];
         let obj = { paddingTop: top, paddingLeft: left, paddingRight: right };
         items[1] = obj;
         let items1 = items;
       } else {
-        items1 = [tmp.containerOuter, ];
+        items1 = [closure_4.containerOuter, ];
         obj = { paddingLeft: left, paddingRight: right };
         items1[1] = obj;
       }
@@ -54,7 +55,7 @@ export default function Settings() {
     }, items),
     children: null
   };
-  obj = { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(16903), {}) };
-  obj.children = jsx(ReanimatedRexportDefault.View, { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(16903), {}) });
-  return <View style={tmp5 ? tmp6.containerTablet : tmp6.container}>{tmp7(tmp4(16903), {})}</View>;
+  obj = { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: jsx(SettingsNavigatorDefault, {}) };
+  obj.children = jsx(ReanimatedRexportDefault.View, { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: jsx(SettingsNavigatorDefault, {}) });
+  return <View style={tmp5 ? tmp6.containerTablet : tmp6.container}>{jsx(SettingsNavigatorDefault, {})}</View>;
 };

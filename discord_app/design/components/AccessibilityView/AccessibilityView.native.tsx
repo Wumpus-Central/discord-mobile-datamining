@@ -31,7 +31,7 @@ const forwardRefResult = noop.forwardRef((accessibilityViewIsModal, ref) => {
   obj.onAccessibilityEscape = onAccessibilityEscape;
   obj.accessibilityViewIsModal = flag;
   const merged1 = Object.assign(merged);
-  return <View ref={arg1} nativeID={nativeID} collapsable={null} onAccessibilityEscape={null} accessibilityViewIsModal={null} />;
+  return <View ref={ref} nativeID={nativeID} collapsable={null} onAccessibilityEscape={null} accessibilityViewIsModal={null} />;
 });
 const animatedComponent = ReanimatedRexport.createAnimatedComponent(forwardRefResult);
 const size = fn(2);

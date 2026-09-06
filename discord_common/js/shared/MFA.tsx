@@ -14,7 +14,7 @@ function finishMFACheck() {
   }
   return applyArgumentsResult;
 }
-let closure_4 = async function _finishMFACheck(arg0, value) {
+let closure_4 = async function _finishMFACheck(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -119,7 +119,7 @@ let closure_5 = async function _trySubmit() {
   closure_2 = tmp4;
   closure_130_0 = closure_1;
   await finishMFACheck(closure_0);
-  const token = arg1.token;
+  const token = value.token;
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;

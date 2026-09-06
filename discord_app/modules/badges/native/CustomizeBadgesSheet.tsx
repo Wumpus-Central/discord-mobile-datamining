@@ -12,6 +12,8 @@ import HapticUtils from "HapticUtils" /* 4528 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
 import Card from "Card" /* 5607 */;
+import EyeSlashIcon from "EyeSlashIcon" /* 6968 */;
+import IconButton from "IconButton" /* 8097 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8197 */;
 import ContextMenu from "ContextMenu" /* 8666 */;
 import ContextMenuConstants from "ContextMenuConstants" /* 8668 */;
@@ -68,16 +70,16 @@ function BadgeTileContent(arg0) {
         const obj1 = { style: tmp.indicatorButton, children: null };
         const obj2 = { size: "sm", variant: "secondary-overlay", icon: null, accessibilityLabel: null, accessibilityHint: null, onPress: null };
         const obj3 = { size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
-        obj2.icon = tmp10(tmp8(6968).EyeSlashIcon, obj3);
+        obj2.icon = __initData(EyeSlashIcon.EyeSlashIcon, obj3);
         if (showAccessibilityLabel == null) {
           showAccessibilityLabel = badge.name;
         }
         obj2.accessibilityLabel = showAccessibilityLabel;
-        const intl = tmp8(1114).intl;
-        obj2.accessibilityHint = intl.string(tmp8(1114).t.hHHpvU);
+        const intl = util.intl;
+        obj2.accessibilityHint = intl.string(util.t.hHHpvU);
         obj2.onPress = onShowPress;
-        obj1.children = tmp10(tmp8(8097).IconButton, obj2);
-        let tmp10Result = tmp10(hasOwnProperty, obj1);
+        obj1.children = __initData(IconButton.IconButton, obj2);
+        let tmp10Result = __initData(hasOwnProperty, obj1);
       }
       items[1] = tmp10Result;
       obj.children = items;
@@ -87,7 +89,7 @@ function BadgeTileContent(arg0) {
   tmp10Result = null != tmp2;
   if (tmp10Result) {
     const obj4 = { style: tmp.indicator, "aria-hidden": true, children: tmp2 };
-    tmp10Result = tmp10(hasOwnProperty, obj4);
+    tmp10Result = __initData(hasOwnProperty, obj4);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -161,8 +163,8 @@ let closure_24 = noop.memo((badge) => {
     if (badge.hidden) {
       let obj = { style: items1, children: null };
       obj = { badge, alwaysVisible, showAccessibilityLabel: null, onShowPress: null };
-      let intl = tmp2(tmp3[14]).intl;
-      let t = tmp2(tmp3[14]).t;
+      let intl = tmp2(alwaysVisible[14]).intl;
+      let t = tmp2(alwaysVisible[14]).t;
       let obj1 = { badgeName: badge.name, position: index + 1 };
       obj.showAccessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], obj1);
       obj.onShowPress = onShowPress;
@@ -178,7 +180,7 @@ let closure_24 = noop.memo((badge) => {
         let obj = { ref, accessibilityLabel: null };
         const intl = util.intl;
         const t = util.t;
-        obj = { badgeName: tmp4.name, position: index + 1 };
+        obj = { badgeName: badge.name, position: index + 1 };
         obj.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], obj);
         if (!alwaysVisible) {
           obj = { accessibilityRole: "button", accessibilityHint: undefined };
@@ -193,7 +195,7 @@ let closure_24 = noop.memo((badge) => {
             prop = ref.onAccessibilityAction;
           }
           obj.onAccessibilityAction = prop;
-          if (tmp8) {
+          if (alwaysVisible) {
             onPress = callback;
           } else if (ref != null) {
             onPress = ref.onPress;
@@ -210,17 +212,17 @@ let closure_24 = noop.memo((badge) => {
             };
           }
           obj.onLongPress = fn;
-          obj.delayLongPress = tmp6(8668).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+          obj.delayLongPress = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;
           obj.style = items1;
-          const obj1 = { badge: tmp4, alwaysVisible: tmp8 };
-          obj.children = tmp(BadgeTileContent, obj1);
-          return tmp(React4, obj);
+          const obj1 = { badge, alwaysVisible };
+          obj.children = __initData(BadgeTileContent, obj1);
+          return __initData(React4, obj);
         } else {
-          const intl2 = tmp6(1114).intl;
-          const tmp6Result = tmp6(11199);
-          const t2 = tmp6(1114).t;
-          intl2.string(tmp6(11199).isPinnedBadge(tmp9) ? t2.t3udZb : t2.nPQVxb);
-          const isPinnedBadgeResult = tmp6(11199).isPinnedBadge(tmp9);
+          const intl2 = util.intl;
+          const tmp6Result = BadgeUtils;
+          const t2 = util.t;
+          intl2.string(BadgeUtils.isPinnedBadge(tmp9) ? t2.t3udZb : t2.nPQVxb);
+          const isPinnedBadgeResult = BadgeUtils.isPinnedBadge(tmp9);
         }
       }
       if (!alwaysVisible) {
@@ -304,10 +306,10 @@ let closure_37 = noop.memo((badge) => {
         if (typeof getSlotOffset === "function") {
           const point = { x: null, y: null };
           const result = sum % BadgeGrid.BADGE_GRID_COLUMNS;
-          point.x = result * (tmp6 + BadgeGrid.BADGE_GRID_GAP);
+          point.x = result * (tileSize + BadgeGrid.BADGE_GRID_GAP);
           const _Math = Math;
           const rounded = Math.floor(sum / BadgeGrid.BADGE_GRID_COLUMNS);
-          point.y = rounded * (tmp6 + BadgeGrid.BADGE_GRID_GAP);
+          point.y = rounded * (tileSize + BadgeGrid.BADGE_GRID_GAP);
           tmp2 = point;
         } else {
           throw new TypeError("Trying to call a non-function");
@@ -435,9 +437,9 @@ let closure_37 = noop.memo((badge) => {
             tmp15 = obj;
           }
           const result3 = sharedValue1.set(tmp15);
-          let tmp2Result = tmp2(tmp3[24]);
-          const result4 = sharedValue5.set(tmp2Result.withTiming(1.05, tmp2(tmp3[25]).timingStandard));
-          tmp2Result = tmp2(tmp3[23]);
+          let tmp2Result = badge(tileSize[24]);
+          const result4 = sharedValue5.set(tmp2Result.withTiming(1.05, badge(tileSize[25]).timingStandard));
+          tmp2Result = badge(tileSize[23]);
           const obj4 = badge(tileSize[23]);
           tmp2Result.runOnJS(badge(tileSize[11]).triggerHapticFeedback)(badge(tileSize[11]).HapticFeedbackTypes.DRAG_AND_DROP_START);
           const runOnJSResult = tmp2Result.runOnJS(badge(tileSize[11]).triggerHapticFeedback);
@@ -457,10 +459,10 @@ let closure_37 = noop.memo((badge) => {
             const diff = changeX.absoluteY - value.pageY;
             const diff1 = value.pageY + value.height - changeX.absoluteY;
             if (diff < sharedValue2) {
-              const result2 = autoScrollSpeed.set(badge(tileSize[23]).clamp(diff, 0, tmp23) / tmp23 - 1);
+              const result2 = autoScrollSpeed.set(badge(tileSize[23]).clamp(diff, 0, sharedValue2) / sharedValue2 - 1);
               const obj2 = badge(tileSize[23]);
-            } else if (diff1 < tmp23) {
-              const result3 = autoScrollSpeed.set(1 - badge(tileSize[23]).clamp(diff1, 0, tmp23) / tmp23);
+            } else if (diff1 < sharedValue2) {
+              const result3 = autoScrollSpeed.set(1 - badge(tileSize[23]).clamp(diff1, 0, sharedValue2) / sharedValue2);
               const obj = badge(tileSize[23]);
             } else {
               const result4 = autoScrollSpeed.set(0);
@@ -483,9 +485,9 @@ let closure_37 = noop.memo((badge) => {
             if (typeof closure_22 === "function") {
               const result2 = sum % badge(tileSize[15]).BADGE_GRID_COLUMNS;
               const _Math = Math;
-              const result3 = result2 * (tmp58 + badge(tileSize[15]).BADGE_GRID_GAP);
+              const result3 = result2 * (handleFinalize + badge(tileSize[15]).BADGE_GRID_GAP);
               const rounded = Math.floor(sum / badge(tileSize[15]).BADGE_GRID_COLUMNS);
-              const result4 = rounded * (tmp58 + badge(tileSize[15]).BADGE_GRID_GAP);
+              const result4 = rounded * (handleFinalize + badge(tileSize[15]).BADGE_GRID_GAP);
               const result5 = sharedValue2.set(badge(tileSize[24]).withTiming(result3, badge(tileSize[25]).timingStandard));
               const obj2 = badge(tileSize[24]);
               const result6 = sharedValue3.set(badge(tileSize[24]).withTiming(result4, badge(tileSize[25]).timingStandard));
@@ -590,10 +592,10 @@ let closure_37 = noop.memo((badge) => {
         if (result !== value) {
           const result1 = obj.set(result);
           onCommitOrder(result);
-          const AccessibilityAnnouncer = tmp4(4272).AccessibilityAnnouncer;
-          const intl = tmp4(1114).intl;
+          const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+          const intl = util.intl;
           obj = { from: index + slotOffset + 1, to: clampResult + slotOffset + 1 };
-          AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1114).t.qPHr0x, obj));
+          AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.qPHr0x, obj));
         }
         const tmp4Result = PendingBadgeSettings;
       }
@@ -625,8 +627,8 @@ let closure_37 = noop.memo((badge) => {
         ref = ref.ref;
       }
       obj = { ref, accessible: true, accessibilityLabel: null };
-      const intl = tmp2(tmp3[14]).intl;
-      const t = tmp2(tmp3[14]).t;
+      const intl = tmp2(tileSize[14]).intl;
+      const t = tmp2(tileSize[14]).t;
       obj.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], { badgeName: badge.name, position: index + 1 });
       if (!alwaysVisible) {
         const obj2 = { accessibilityRole: "button", accessibilityHint: undefined };
@@ -645,8 +647,8 @@ let closure_37 = noop.memo((badge) => {
           const actionName = nativeEvent.nativeEvent.actionName;
           if ("moveup" !== actionName) {
             if ("movedown" !== actionName) {
-              if (tmp != null) {
-                const onAccessibilityAction = tmp.onAccessibilityAction;
+              if (onLongPress != null) {
+                const onAccessibilityAction = onLongPress.onAccessibilityAction;
                 if (onAccessibilityAction != null) {
                   const result = onAccessibilityAction(nativeEvent);
                 }
@@ -655,7 +657,7 @@ let closure_37 = noop.memo((badge) => {
           }
           closure_24(nativeEvent);
         };
-        if (tmp9) {
+        if (alwaysVisible) {
           onPress = closure_14;
         } else if (ref != null) {
           onPress = ref.onPress;
@@ -672,20 +674,21 @@ let closure_37 = noop.memo((badge) => {
           };
         }
         obj.onLongPress = fn;
-        obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+        obj.delayLongPress = tmp2(tileSize[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
         obj.style = position.fill;
-        const obj3 = { badge: tmp7, alwaysVisible: tmp9 };
-        obj.children = tmp(closure_23, obj3);
-        obj.children = tmp(alwaysVisible, obj);
-        obj.children = tmp(index(tileSize[23]).View, obj);
-        return tmp(badge(tileSize[28]).GestureDetector, obj);
+        const obj3 = { badge: tmp7, alwaysVisible };
+        obj.children = sharedValue(closure_23, obj3);
+        obj.children = sharedValue(alwaysVisible, obj);
+        obj.children = sharedValue(index(tileSize[23]).View, obj);
+        return sharedValue(badge(tileSize[28]).GestureDetector, obj);
       } else {
-        const intl2 = tmp2(tmp3[14]).intl;
-        const tmp2Result = tmp2(tmp3[21]);
-        const t2 = tmp2(tmp3[14]).t;
-        intl2.string(tmp2(tmp3[21]).isPinnedBadge(tmp10) ? t2.t3udZb : t2.nPQVxb);
-        const isPinnedBadgeResult = tmp2(tmp3[21]).isPinnedBadge(tmp10);
+        const intl2 = tmp2(tileSize[14]).intl;
+        const tmp2Result = tmp2(tileSize[21]);
+        const t2 = tmp2(tileSize[14]).t;
+        intl2.string(tmp2(tileSize[21]).isPinnedBadge(tmp10) ? t2.t3udZb : t2.nPQVxb);
+        const isPinnedBadgeResult = tmp2(tileSize[21]).isPinnedBadge(tmp10);
       }
+      const obj1 = { badgeName: badge.name, position: index + 1 };
     }
     if (alwaysVisible) {
       let renderTileResult = renderTile(null);
@@ -775,7 +778,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const stateFromStoresObject = tmp5Result.useStateFromStoresObject(items5, () => {
     let hasCatalogForResult = null != stateFromStores;
     if (hasCatalogForResult) {
-      hasCatalogForResult = BadgeDirectoryStore.hasCatalogFor(tmp);
+      hasCatalogForResult = BadgeDirectoryStore.hasCatalogFor(stateFromStores);
     }
     return { hasCatalog: hasCatalogForResult, hasCatalogError: BadgeDirectoryStore.hasCatalogFetchErrorFor(stateFromStores) };
   }, items6);
@@ -798,9 +801,9 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const effect1 = analyticsLocations.useEffect(() => {
     if (null != stateFromStores) {
       if (!tmp2) {
-        const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(tmp);
+        const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(stateFromStores);
       }
-      tmp2 = BadgeDirectoryStore.hasCatalogFor(tmp) && !BadgeDirectoryStore.isCatalogStaleFor(tmp);
+      tmp2 = BadgeDirectoryStore.hasCatalogFor(stateFromStores) && !BadgeDirectoryStore.isCatalogStaleFor(stateFromStores);
     }
   }, items8);
   const tmp8 = stateFromStores(stateFromStores1[34]);
@@ -896,12 +899,11 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
           const result = sharedValue3.set(sharedValue3.get() + timeSincePreviousFrame);
           value = sharedValue3.get();
           if (value >= c18) {
-            const result1 = obj.set(0);
+            const result1 = sharedValue3.set(0);
             const obj2 = ReanimatedRexport;
             const _Math = Math;
             obj2.scrollTo(animatedRef, 0, Math.max(roundToNearestPixelDefault(scrollViewOffset.get() + 700 * value * value / 1000), 0), false);
           }
-          obj = sharedValue3;
         }
       }
     }
@@ -927,6 +929,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const result = sharedValue3.set(0);
       ReanimatedRexport.runOnJS(callback1)(arg0);
     }
+    tmp = null != arg1 && arg0 !== arg1;
   }
   obj = { autoScrollElapsed: sharedValue3, runOnJS: tmp5(tmp3[23]).runOnJS, setAutoScrollerActive: callback1 };
   te.__closure = obj;
@@ -952,7 +955,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     const items16 = [tmp39, ];
     let obj4 = { accessibilityRole: "list", style: null, children: null };
     const items17 = [tmp.grid, ];
-    const obj5 = { height: num };
+    let obj5 = { height: num };
     items17[1] = obj5;
     obj4.style = items17;
     const items18 = [
@@ -960,10 +963,10 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       reorderableBadges.map((badge, index) => {
           if (stateFromStores1) {
             let obj = { badge, index: fixedBadges.length + index, tileSize: badgeTileSize, slotOffset: fixedBadges.length, isFirst: 0 === index, isLast: index === reorderableBadges.length - 1, alwaysVisible: set.has(badge.badge_id), orderShared: sharedValue, isDragActive: sharedValue1, scrollRef: animatedRef, scrollOffset: scrollViewOffset, autoScrollSpeed: sharedValue2, onCommitOrder, onHide, onPress };
-            let tmpResult = tmp(closure_37, obj, badge.badge_id);
+            let tmpResult = __initData(closure_37, obj, badge.badge_id);
           } else {
             obj = { badge, index: fixedBadges.length + index, tileSize: badgeTileSize, alwaysVisible: set.has(badge.badge_id), onPress, onHide };
-            tmpResult = tmp(closure_24, obj, badge.badge_id);
+            tmpResult = __initData(closure_24, obj, badge.badge_id);
           }
           return tmpResult;
         }),

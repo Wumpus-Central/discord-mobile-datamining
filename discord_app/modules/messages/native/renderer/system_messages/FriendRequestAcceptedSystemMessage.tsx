@@ -1,8 +1,13 @@
 // === Module 8074: FriendRequestAcceptedSystemMessage ===
 
 // Module 8074 (FriendRequestAcceptedSystemMessage)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import createStyles from "createStyles" /* 4560 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7946 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
 import _modDef8075 from "module_8075" /* 8075 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -28,11 +33,11 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
-              let tmp15Result = tmp15(4560);
-              const obj1 = { baseTextColor: tmp17(576).colors.TEXT_SUBTLE };
-              const intl2 = tmp15(1114).intl;
+              let tmp15Result = createStyles;
+              const obj1 = { baseTextColor: nativeDefault.colors.TEXT_SUBTLE };
+              const intl2 = util.intl;
               const formatToParts2 = intl2.formatToParts;
-              let t = tmp15(1114).t;
+              let t = util.t;
               if (tmp18) {
                 t = {};
                 obj = Object.assign(obj);
@@ -53,19 +58,19 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
               const baseTextColor = tmp15Result.createNativeStyleProperties(obj1)(message.theme).baseTextColor;
             }
           }
-          const intl = tmp15(1114).intl;
+          const intl = util.intl;
           const formatToParts = intl.formatToParts;
-          t = tmp15(1114).t;
+          t = util.t;
           if (message.author.id === currentUser.id) {
             let formatToPartsResult = formatToParts(t.REfFZs, obj);
           } else {
             formatToPartsResult = formatToParts(t.hyPOTm, obj);
           }
           const obj4 = { content: formatToPartsResult, iconUrl: null, textColor: null };
-          tmp15Result = tmp15(7946);
+          tmp15Result = renderer_EmbedUtils;
           obj4.iconUrl = tmp15Result.getAssetUriForEmbed(_modDef8075);
           obj4.textColor = undefined;
-          const merged1 = Object.assign(tmp17(7964)(message));
+          const merged1 = Object.assign(createCommonMessageDefault(message));
           return obj4;
         }
       }

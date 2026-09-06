@@ -86,7 +86,8 @@ let closure_14 = async function _validateAutomodRule(arg0) {
     const request = { url: closure_2_8.GUILD_AUTOMOD_VALIDATE_RULE(guildId.guildId), body: _transformClientRuleToApiRule(guildId), rejectWithError: null };
     _transformClientRuleToApiRule(guildId);
     request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
-    closure_129_0 = await HTTP.post(request);
+    await HTTP.post(request);
+    closure_129_0 = value;
     return closure_130_0(closure_130_2[5])._transformMetadataToCamelCase(closure_129_0.body);
   })();
 };
@@ -94,7 +95,7 @@ let closure_15 = async function _createAutomodRule(arg0) {
   let guildId = arg0;
   c2 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     delete tmp3[tmp2];
     closure_1 = _transformApiRuletoClientRule;
     const HTTP = require("HTTPUtils").HTTP;
@@ -112,14 +113,14 @@ let closure_16 = async function _updateAutomodRule() {
   _transformClientRuleToApiRule(_require);
   request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
   await HTTP.patch(request);
-  return importDefault(arg1.body);
+  return importDefault(value.body);
 };
 let closure_17 = async function _deleteAutomodRule() {
   const HTTP = require("HTTPUtils").HTTP;
   await HTTP.del({ url: closure_2_8.GUILD_AUTOMOD_RULE(closure_1, closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
   return true;
 };
-let closure_18 = async function _fetchAutomodRules(arg0, value) {
+let closure_18 = async function _fetchAutomodRules(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -178,35 +179,38 @@ let closure_18 = async function _fetchAutomodRules(arg0, value) {
     }
   }
 };
-let closure_19 = async function _executeAlertAction(arg0, value) {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_19 = async function _executeAlertAction() {
+  closure_1 = arg1;
+  c4 = 0;
+  c3 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          if (PermissionStore.can(constants.MANAGE_MESSAGES, closure_1)) {
+      try {
+        c3 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else if (PermissionStore.can(constants.MANAGE_MESSAGES, closure_1)) {
             const HTTP = require("HTTPUtils").HTTP;
-            const request = { url: React6.GUILD_AUTOMOD_ALERT_ACTION(tmp14.guild_id), body: null, rejectWithError: null };
-            const obj1 = { message_id: tmp13, channel_id: tmp14.id, alert_action_type: tmp15 };
+            const request = { url: closure_2_8.GUILD_AUTOMOD_ALERT_ACTION(closure_1.guild_id), body: null, rejectWithError: null };
+            const obj1 = { message_id, channel_id: closure_1.id, alert_action_type };
             request.body = obj1;
             request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
             c4 = 1;
@@ -214,24 +218,22 @@ let closure_19 = async function _executeAlertAction(arg0, value) {
             const obj2 = { value: HTTP.post(request), done: false };
             return obj2;
           }
-          tmp13 = closure_0;
-          tmp15 = closure_2;
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          obj = { value, done: true };
+          return obj;
         }
-      } else if (arg0 === 1) {
         c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        obj = { value, done: true };
-        return obj;
+        return { value: "HermesInternal", done: null };
+      } catch (tmp8) {
+        c3 = tmp;
+        throw tmp8;
       }
-      c3 = 3;
-      return { value: "HermesInternal", done: null };
-    } catch (tmp8) {
-      c3 = tmp;
-      throw tmp8;
     }
-  }
+  })();
 };
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8, Permissions: closure_9 } = Constants);

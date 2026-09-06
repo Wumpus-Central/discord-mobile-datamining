@@ -52,11 +52,10 @@ export default function ChannelSpoiler(channelId) {
   const callback = obj3.useCallback(() => {
     if (isVocalResult) {
       if (ChannelRTCStore.getChatOpen(channelId.channelId)) {
-        ChannelRTCActionCreatorsDefault.updateChatOpen(tmp2.channelId, false);
+        ChannelRTCActionCreatorsDefault.updateChatOpen(channelId.channelId, false);
         let obj = { mode: VoicePanelControlsModes.FLOATING_DEFAULT };
         setControlsMode(obj);
       }
-      tmp2 = channelId;
     }
     obj = GuildActionCreatorsDefault;
     obj.nsfwReturnToSafety(channelId.guildId);
@@ -98,7 +97,7 @@ export default function ChannelSpoiler(channelId) {
     tmp23Result = null;
     if ("" !== str.trim()) {
       obj1 = { spacing: 4, style: tmp4.subtitleContainer, children: null };
-      const obj2 = { style: tmp4.subtitleMeasure, pointerEvents: "none", children: null };
+      let obj2 = { style: tmp4.subtitleMeasure, pointerEvents: "none", children: null };
       obj3 = { variant: "text-md/medium", maxFontSizeMultiplier: 2, onTextLayout: callback1, children: null };
       let tmp6Result = tmp6(4550);
       const obj4 = { channelId: stateFromStores1.id };
@@ -116,8 +115,8 @@ export default function ChannelSpoiler(channelId) {
         const obj8 = { variant: "text-sm/medium", color: "text-brand", style: { textDecorationLine: "underline" }, children: null };
         const intl2 = tmp(1114).intl;
         obj8.children = intl2.string(tmp(1114).t["/QvRak"]);
-        obj7.children = tmp24(tmp(4556).Text, obj8);
-        tmp24Result = tmp24(tmp(5123).PressableHighlight, obj7);
+        obj7.children = closure_10(tmp(4556).Text, obj8);
+        tmp24Result = closure_10(tmp(5123).PressableHighlight, obj7);
       }
       items5[2] = tmp24Result;
       const obj9 = { style: tmp4.divider };
@@ -128,7 +127,6 @@ export default function ChannelSpoiler(channelId) {
     str = stateFromStores1.topic;
   }
   const obj10 = { modalType: null, onAgree: null, onDisagree: null, title: null, subtitle: null, description: null, agreement: null, disagreement: null, guildId: null, channelId: null };
-  const tmp20 = closure_10;
   tmp7 = useChannelNameDefault(stateFromStores1);
   obj10.modalType = require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.SPOILER_CHANNEL;
   obj10.onAgree = function onAgree() {
@@ -149,5 +147,5 @@ export default function ChannelSpoiler(channelId) {
   }
   obj10.guildId = id;
   obj10.channelId = channelId.channelId;
-  return tmp20(GatedContentDefault, obj10);
+  return closure_10(GatedContentDefault, obj10);
 };

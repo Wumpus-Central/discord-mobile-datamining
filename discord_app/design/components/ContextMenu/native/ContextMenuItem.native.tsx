@@ -29,9 +29,9 @@ let closure_7 = createStyles.createStyles((arg0) => {
   const obj2 = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
   obj.pressed = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
   if ("destructive" === arg0) {
-    let TEXT_STRONG = tmp2(576).colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_STRONG = nativeDefault.colors.TEXT_FEEDBACK_CRITICAL;
   } else {
-    TEXT_STRONG = tmp2(576).colors.TEXT_STRONG;
+    TEXT_STRONG = nativeDefault.colors.TEXT_STRONG;
   }
   obj.icon = { width: 20, height: 20, tintColor: TEXT_STRONG };
   obj.label = { flexShrink: 1 };
@@ -80,15 +80,15 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
         const measureResult = ReanimatedRexport2.measure(animatedRef);
         if (null != measureResult) {
           ({ pageX, pageY, width, height } = measureResult);
-          const result = index * tmp2(8667).INDEX_BOUNDS_OFFSET;
+          const result = index * ContextMenuState.INDEX_BOUNDS_OFFSET;
           value = itemMeasurements.get();
-          value[result + tmp2(8667).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
+          value[result + ContextMenuState.INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
           value = itemMeasurements.get();
-          value[result + tmp2(8667).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
+          value[result + ContextMenuState.INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
           const value1 = itemMeasurements.get();
-          value1[result + tmp2(8667).INDEX_BOUNDS_WIDTH_OFFSET] = width;
+          value1[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;
           value2 = itemMeasurements.get();
-          value2[result + tmp2(8667).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+          value2[result + ContextMenuState.INDEX_BOUNDS_HEIGHT_OFFSET] = height;
         }
       }
     }

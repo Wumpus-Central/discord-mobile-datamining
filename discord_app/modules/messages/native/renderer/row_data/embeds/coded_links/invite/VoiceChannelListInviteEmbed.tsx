@@ -150,12 +150,10 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     obj = {};
     const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(guild.id);
     const merged = Object.assign(baseColors);
-    const tmp20 = AccessibilityStore;
-    const tmp29 = processColor;
     const tmp39 = displayNameStylesEnabled;
     const tmp41 = displayNameStylesEnabled(7945)(theme);
     const embedScrollGradientBackground = guild(4378).getEmbedScrollGradientBackground();
-    let backgroundColor = tmp29(embedScrollGradientBackground);
+    let backgroundColor = processColor(embedScrollGradientBackground);
     if (backgroundColor == null) {
       backgroundColor = baseColors.backgroundColor;
     }
@@ -185,7 +183,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const tmp39Result = tmp39(11311);
     obj.streamingLabel = intl3.string(guild(1114).t.dI3q4h).toUpperCase();
     obj.voiceHeaderBackgroundColor = colors.voiceHeaderBackgroundColor;
-    obj.reducedMotion = tmp20.useReducedMotion;
+    obj.reducedMotion = AccessibilityStore.useReducedMotion;
     obj.isConnected = tmp35;
     const intl4 = tmp30(1114).intl;
     obj.privacyHintText = intl4.string(guild(1114).t.fkg9mQ);

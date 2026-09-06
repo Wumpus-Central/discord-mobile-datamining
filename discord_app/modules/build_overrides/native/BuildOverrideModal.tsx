@@ -75,19 +75,19 @@ export default function BuildOverrideModal(overrideUrl) {
   if (null != id) {
     const obj2 = { children: null };
     obj3 = { style: tmp.buildOverrideName, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: id };
-    const items3 = [tmp14(tmp5(4556).Text, obj3), ];
+    const items3 = [closure_6(tmp5(4556).Text, obj3), ];
     const obj4 = { style: tmp.buildOverrideExpiration, variant: "text-md/medium", color: "text-default", children: null };
     const intl3 = tmp5(1114).intl;
     const obj5 = { expirationDuration: humanizeResult };
     obj4.children = intl3.format(tmp5(1114).t.lOsPpu, obj5);
-    items3[1] = tmp14(tmp5(4556).Text, obj4);
+    items3[1] = closure_6(tmp5(4556).Text, obj4);
     obj2.children = items3;
-    let tmp14Result = tmp12(closure_7, obj2);
+    let tmp14Result = closure_8(closure_7, obj2);
   } else {
     const obj6 = { style: tmp.buildOverrideInvalid, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp5(1114).intl;
     obj6.children = intl2.string(tmp5(1114).t["cz+sue"]);
-    tmp14Result = tmp14(tmp5(4556).Text, obj6);
+    tmp14Result = closure_6(tmp5(4556).Text, obj6);
   }
   items2[2] = tmp14Result;
   obj.children = items2;
@@ -106,17 +106,17 @@ export default function BuildOverrideModal(overrideUrl) {
       }
       const result = build_overrides_BuildOverrideUtils.setBuildOverrideFromLink(str);
     };
-    obj9.children = tmp14(tmp5(4975).Button, obj10);
-    const items5 = [tmp14(tmp13, obj9), ];
+    obj9.children = closure_6(tmp5(4975).Button, obj10);
+    const items5 = [closure_6(closure_4, obj9), ];
     const obj11 = { text: null, variant: "secondary", grow: true, onPress: null };
     const intl6 = tmp5(1114).intl;
     obj11.text = intl6.string(tmp5(1114).t.b5KKph);
     obj11.onPress = function onPress() {
       return stateFromStores(4763).pop();
     };
-    items5[1] = tmp14(tmp5(4975).Button, obj11);
+    items5[1] = closure_6(tmp5(4975).Button, obj11);
     obj8.children = items5;
-    let tmp12Result = tmp12(closure_7, obj8);
+    let tmp12Result = closure_8(closure_7, obj8);
   } else {
     const obj12 = { text: null, grow: true, onPress: null };
     const intl4 = tmp5(1114).intl;
@@ -124,7 +124,7 @@ export default function BuildOverrideModal(overrideUrl) {
     obj12.onPress = function onPress() {
       return stateFromStores(4763).pop();
     };
-    tmp12Result = tmp14(tmp5(4975).Button, obj12);
+    tmp12Result = closure_6(tmp5(4975).Button, obj12);
   }
   obj7.children = tmp12Result;
   items4[1] = closure_6(closure_4, obj7);

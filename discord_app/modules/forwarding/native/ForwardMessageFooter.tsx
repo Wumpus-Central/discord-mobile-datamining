@@ -56,7 +56,6 @@ export const ForwardMessageFooter = function ForwardMessageFooter(message) {
   }
   obj = { preview: null, sendButton: null, chatInput: null, warningText: null, avoidKeyboard: null };
   const obj5 = message(trackForwardEditContextMessageOnce[5]);
-  const tmp13 = onSend;
   obj.preview = jsx(message(trackForwardEditContextMessageOnce[11]).ForwardPreview, { message, channel: selectedDestinationChannel, forwardOptions });
   obj1 = { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null };
   let tmp15;
@@ -66,7 +65,7 @@ export const ForwardMessageFooter = function ForwardMessageFooter(message) {
   obj1.onPress = tmp15;
   obj1.loading = isSending;
   obj.sendButton = jsx(message(trackForwardEditContextMessageOnce[12]).Button, { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null });
-  obj.chatInput = jsx(tmp13(trackForwardEditContextMessageOnce[13]), { inputRef: textInputRef, text, onChange: callback, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend: callback1 });
+  obj.chatInput = jsx(onSend(trackForwardEditContextMessageOnce[13]), { inputRef: textInputRef, text, onChange: callback, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend: callback1 });
   obj.warningText = formatToPlainStringResult;
   obj.avoidKeyboard = isInputFocused;
   return jsx(onSend(trackForwardEditContextMessageOnce[10]), { preview: null, sendButton: null, chatInput: null, warningText: null, avoidKeyboard: null });

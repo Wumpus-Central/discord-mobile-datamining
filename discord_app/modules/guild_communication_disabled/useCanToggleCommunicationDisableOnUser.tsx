@@ -9,7 +9,7 @@ import PermissionStore from "PermissionStore" /* 4199 */;
 import UserStore from "UserStore" /* 1371 */;
 import size from "module_2" /* 2 */;
 
-function canToggleCommunicationDisableOnUser(id, id2, items) {
+function canToggleCommunicationDisableOnUser(id, id2) {
   let tmp = items;
   if (items === undefined) {
     items = [UserStore, GuildStore, PermissionStore];

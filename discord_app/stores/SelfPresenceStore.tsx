@@ -7,6 +7,7 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef1332 from "module_1332" /* 1332 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7399 */;
 import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10891 */;
 import SpotifyStore from "SpotifyStore" /* 5280 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
@@ -63,34 +64,34 @@ function shouldShowActivity(flags) {
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          let tmpResult = tmp(7399);
+          let tmpResult = LibraryApplicationUtils;
           shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
         }
       }
       return shouldShowActivityResult;
-    } else if (tmp3.PLAYING === type) {
+    } else if (constants2.PLAYING === type) {
       if (null != flags.application_id) {
-        tmpResult = tmp(7399);
+        tmpResult = LibraryApplicationUtils;
         let result = tmpResult.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
       } else {
         const searchGamesByNameResult = DetectableGameStore.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
-          result = tmp(7399).shouldShareApplicationActivity(searchGamesByNameResult[0], LibraryApplicationStore);
-          const tmpResult1 = tmp(7399);
+          result = LibraryApplicationUtils.shouldShareApplicationActivity(searchGamesByNameResult[0], LibraryApplicationStore);
+          const tmpResult1 = LibraryApplicationUtils;
         } else {
-          const ShowCurrentGame = tmp(1935).ShowCurrentGame;
+          const ShowCurrentGame = UserSettings.ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
         }
       }
       return result;
     } else {
-      if (tmp3.STREAMING !== type) {
-        const WATCHING = tmp3.WATCHING;
+      if (constants2.STREAMING !== type) {
+        const WATCHING = constants2.WATCHING;
       }
       let result1 = null == flags.application_id;
       if (!result1) {
-        result1 = tmp(7399).shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
-        const tmpResult2 = tmp(7399);
+        result1 = LibraryApplicationUtils.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+        const tmpResult2 = LibraryApplicationUtils;
       }
       return result1;
     }
@@ -123,10 +124,10 @@ function handleUpdate() {
     tmp7 = num > 0;
   }
   if (tmp7) {
-    IDLE = tmp6.IDLE;
+    IDLE = StatusTypes.IDLE;
   }
   if (!c23) {
-    if (IDLE !== tmp6.INVISIBLE) {
+    if (IDLE !== StatusTypes.INVISIBLE) {
       activities = LocalActivityStore.getActivities();
       found = activities.filter(shouldShowActivity);
     }
@@ -146,9 +147,9 @@ function handleUpdate() {
       arraySpreadResult = HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS), arraySpreadResult);
       const tmp12Result = _modDef12;
       const tmp12ResultResult = _modDef12(items.sort(sortActivity));
-      valueResult = _modDef12(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
-      closure_27 = filterPlayingActivities(valueResult);
       const iter = _modDef12(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
+      closure_27 = filterPlayingActivities(_modDef12(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value());
+      valueResult = _modDef12(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
     }
   }
   found = [];

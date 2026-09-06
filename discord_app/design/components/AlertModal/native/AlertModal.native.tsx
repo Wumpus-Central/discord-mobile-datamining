@@ -269,13 +269,13 @@ class AlertModal {
         tmp4 = false === first.dismissable;
       }
       if (!tmp4) {
-        let tmpResult = tmp(tmp2[10]);
+        let tmpResult = tmp(context2[10]);
         let key;
         if (first != null) {
           key = first.key;
         }
         tmpResult.dismissAlert(key);
-        tmpResult = tmp(tmp2[15]);
+        tmpResult = tmp(context2[15]);
         tmpResult.batchUpdates(() => {
           const useAlertStore = context(context2[10]).useAlertStore;
           return useAlertStore.setState({ alerts });
@@ -368,12 +368,11 @@ function useSharedAnimationState() {
   const fn2 = function t(arg0) {
     if (arg0 === native.TransitionStates.YEETED) {
       if (1 === sharedValue.get()) {
-        const result = obj.set(0);
+        const result = sharedValue.set(0);
       } else {
         ReanimatedRexport.runOnJS(context1)();
         const tmpResult = ReanimatedRexport;
       }
-      obj = sharedValue;
     } else {
       const result1 = sharedValue.set(1);
     }
@@ -409,7 +408,7 @@ class AlertActionButton {
     }
     obj.loading = loading;
     closure_0 = undefined;
-    closure_0 = closure_3(async (arg0, value) => {
+    closure_0 = closure_3(async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -512,9 +511,9 @@ const context4 = noop.createContext("");
 const context5 = noop.createContext(null);
 const __initData = { code: "function AlertModalNativeTsx1(){const{withAlertModalSpring,sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withAlertModalSpring(sharedVisible.get(),function(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}" };
 let __initData4 = { code: "function AlertModalNativeTsx2(){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp,windowHeight,ALERT_MODAL_MARGIN,safeAreaTop,safeAreaBottom,withAlertModalSpring,sharedIndex,sharedTopHeight,useReducedMotion}=this.__closure;var _CARD_OFFSETS$sharedI;function onComplete(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}const CARD_OFFSETS=[0,-20,-34];const maxHeight=windowHeight-ALERT_MODAL_MARGIN*2-Math.max(safeAreaTop,safeAreaBottom)*2;return{position:'absolute',opacity:withAlertModalSpring(sharedVisible.get(),onComplete),zIndex:10-sharedIndex.get(),height:sharedIndex.get()>0?sharedTopHeight.get():'auto',maxHeight:maxHeight,transform:useReducedMotion?[]:[{scale:withAlertModalSpring(sharedVisible.get()===1?1-sharedIndex.get()*0.1:0.7)},{translateY:withAlertModalSpring(sharedVisible.get()===1?(_CARD_OFFSETS$sharedI=CARD_OFFSETS[sharedIndex.get()])!==null&&_CARD_OFFSETS$sharedI!==void 0?_CARD_OFFSETS$sharedI:sharedVisible.get()*-12:50-sharedIndex.get()*50)}]};}" };
-function withAlertModalSpring(value, fn2) {
+function withAlertModalSpring(value, fn) {
   obj = spring;
-  return obj.withSpring(value, obj, "animate-always", fn2);
+  return obj.withSpring(value, obj, "animate-always", fn);
 }
 createStyles = { withSpring: fn(4974).withSpring, MODAL_SPRING };
 withAlertModalSpring.__closure = createStyles;
@@ -606,4 +605,5 @@ export const showConfirmModal = function showConfirmModal(arg0) {
   obj.children = items;
   obj.actions = closure_1_11(closure_1_12, obj);
   obj.openAlert(key, closure_1_10(AlertModal, obj), onCloseCallback, { dismissable });
+  const obj1 = { dismissable };
 };

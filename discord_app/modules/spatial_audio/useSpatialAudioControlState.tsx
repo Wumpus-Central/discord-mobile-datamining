@@ -27,11 +27,11 @@ export default function useSpatialAudioControlState(location) {
       tmp = supported;
     }
     if (tmp) {
-      if (constants2.MONO_OUTPUT === tmp2) {
+      if (constants2.MONO_OUTPUT === status) {
         let HIDDEN = obj.BLOCKED_MONO_OUTPUT;
-      } else if (tmp4.INIT_FAILED === tmp2) {
+      } else if (constants2.INIT_FAILED === status) {
         HIDDEN = obj.BLOCKED_INIT_FAILED;
-      } else if (tmp4.HRTF_FAILED === tmp2) {
+      } else if (constants2.HRTF_FAILED === status) {
         HIDDEN = obj.BLOCKED_HRTF_FAILED;
       } else {
         HIDDEN = obj.AVAILABLE;

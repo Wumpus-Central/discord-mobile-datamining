@@ -33,7 +33,7 @@ function SkeletonGrid(accessibilityLabel) {
     let _HermesInternal = HermesInternal;
     arr = items.push(<View key={"row-" + num} style={null}>{null}</View>);
   }
-  return <View style={tmp.skeletonGrid} accessibilityRole="list" accessibilityLabel={arg0.accessibilityLabel} accessibilityState={{ busy: true }} accessible>{items}</View>;
+  return <View style={tmp.skeletonGrid} accessibilityRole="list" accessibilityLabel={accessibilityLabel.accessibilityLabel} accessibilityState={{ busy: true }} accessible>{items}</View>;
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;

@@ -19,13 +19,12 @@ prototype["fromServer"] = function fromServer(arg0) {
   const merged = Object.assign(fromServerResult);
   obj.type = CollectiblesItemType.CollectiblesItemType.NONE;
   if (typeof prototype === "function") {
-    tmp2 = new tmp2(obj, fromServerResult, this, tmp, obj);
+    tmp2 = new tmp2(obj, fromServerResult, this, prototype, obj);
     tmp2.type = CollectiblesItemType.CollectiblesItemType.NONE;
     return tmp2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = prototype;
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/UnknownCollectiblesItemRecord.tsx");

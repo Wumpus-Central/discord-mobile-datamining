@@ -21,11 +21,12 @@ export default function WakeLock(wakeLockKey) {
     }
     return () => {
       if (obj.isAndroid()) {
-        NativeScreenWakeLockModuleDefault.releaseLock(wakeLockKey);
+        NativeScreenWakeLockModuleDefault.releaseLock(closure_1_0);
       } else {
         const ScreenWakeLockManager = NativeModules.ScreenWakeLockManager;
-        ScreenWakeLockManager.releaseLock(wakeLockKey);
+        ScreenWakeLockManager.releaseLock(closure_1_0);
       }
+      obj = wakeLockKey(dependencyMap[2]);
     };
   }, items);
   return null;
@@ -42,11 +43,12 @@ export const useWakeLock = function useWakeLock(VoiceMessageOverlay) {
     }
     return () => {
       if (obj.isAndroid()) {
-        NativeScreenWakeLockModuleDefault.releaseLock(wakeLockKey);
+        NativeScreenWakeLockModuleDefault.releaseLock(closure_1_0);
       } else {
         const ScreenWakeLockManager = NativeModules.ScreenWakeLockManager;
-        ScreenWakeLockManager.releaseLock(wakeLockKey);
+        ScreenWakeLockManager.releaseLock(closure_1_0);
       }
+      obj = wakeLockKey(dependencyMap[2]);
     };
   }, items);
 };

@@ -13,6 +13,7 @@ import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7105 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7106 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +28,8 @@ require = fn;
 let closure_23 = async function _getBackgroundGradientColor() {
   closure_2 = tmp5;
   closure_1 = tmp2;
-  closure_129_0 = await ImageUtils.getPaletteForAvatar(closure_0);
+  await ImageUtils.getPaletteForAvatar(closure_0);
+  closure_129_0 = value;
   closure_129_1 = closure_130_3(closure_129_0[0], 3);
   closure_129_2 = closure_129_1[0];
   closure_129_3 = closure_129_1[1];
@@ -274,7 +276,7 @@ export default function GuildOnboardingPrompt(guildId) {
     obj1 = { translateY: null };
     const withTimingResult = obj1.withTiming(num, obj);
     const obj2 = { duration: 300, easing: null };
-    const Easing2 = tmp(4296).Easing;
+    const Easing2 = ReanimatedRexport.Easing;
     obj2.easing = Easing2.out(ReanimatedRexport.Easing.ease);
     obj1.translateY = timing.withTiming(num2, obj2);
     const items = [obj1];
@@ -307,10 +309,9 @@ export default function GuildOnboardingPrompt(guildId) {
     }
     obj = { opacity: obj1.withDelay(200, obj2.withTiming(num, obj)), transform: null };
     obj1 = { translateY: null };
-    tmp(4296);
-    const tmpResult = tmp(4561);
+    const tmpResult = timing;
     obj2 = { duration: 300, easing: null };
-    const Easing2 = tmp(4296).Easing;
+    const Easing2 = ReanimatedRexport.Easing;
     obj2.easing = Easing2.out(ReanimatedRexport.Easing.ease);
     obj1.translateY = tmpResult.withDelay(200, tmpResult.withTiming(num2, obj2));
     const items = [obj1];
@@ -379,10 +380,9 @@ export default function GuildOnboardingPrompt(guildId) {
     }
     obj = { opacity: obj1.withDelay(600, obj2.withTiming(num, obj)), transform: null };
     obj1 = { translateY: null };
-    tmp(4296);
-    const tmpResult = tmp(4561);
+    const tmpResult = timing;
     obj2 = { duration: 300, easing: null };
-    const Easing2 = tmp(4296).Easing;
+    const Easing2 = ReanimatedRexport.Easing;
     obj2.easing = Easing2.out(ReanimatedRexport.Easing.ease);
     obj1.translateY = tmpResult.withDelay(600, tmpResult.withTiming(num2, obj2));
     const items = [obj1];
@@ -426,6 +426,7 @@ export default function GuildOnboardingPrompt(guildId) {
           } else {
             tmp5();
           }
+          const obj3 = guildId(prompts[32]);
         });
         navigation.setOptions(obj);
       }
@@ -495,25 +496,22 @@ export default function GuildOnboardingPrompt(guildId) {
             arr = prompts;
             if (currentPromptIdx < prompts.length - 1) {
               obj = {};
-              let tmp5Result = tmp5(4740);
-              const merged1 = Object.assign(tmp5Result.collectGuildAnalyticsMetadata(tmp6));
-              obj.step = tmp9 + 1;
-              obj.required = arr[tmp9 + 1].required;
-              tmp2(1242).track(tmp4.GUILD_ONBOARDING_STEP_VIEWED, obj);
-              const tmp2Result = tmp2(1242);
+              let tmp5Result = AppAnalyticsUtils;
+              const merged1 = Object.assign(tmp5Result.collectGuildAnalyticsMetadata(guildId));
+              obj.step = currentPromptIdx + 1;
+              obj.required = arr[currentPromptIdx + 1].required;
+              AnalyticsUtilsDefault.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj);
+              const tmp2Result = AnalyticsUtilsDefault;
             }
             if (currentPromptIdx + 1 < arr.length) {
-              const obj1 = { currentPrompt: tmp9 + 1 };
+              const obj1 = { currentPrompt: currentPromptIdx + 1 };
               arr = navigation.push(stateFromStoresArray.PROMPT, obj1);
             } else {
-              tmp5Result = tmp5(7106);
+              tmp5Result = GuildOnboardingUtils;
               if (tmp5Result.showRulesInOnboarding(stateFromStores2, stateFromStores)) {
                 navigation.push(stateFromStoresArray.RULES);
               }
             }
-            tmp2 = importDefault;
-            tmp4 = constants;
-            tmp6 = guildId;
           }
         }
       }

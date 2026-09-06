@@ -48,13 +48,13 @@ VideoQualityTarget.VERY_HIGH = obj3;
 VideoQualityTarget.fromCompressionQuality = function fromCompressionQuality(videoQualitySetting) {
   if (VideoCompressionQuality.VERY_LOW === videoQualitySetting) {
     let VERY_HIGH = VideoQualityTarget.VERY_LOW;
-  } else if (tmp.LOW === videoQualitySetting) {
+  } else if (VideoCompressionQuality.LOW === videoQualitySetting) {
     VERY_HIGH = VideoQualityTarget.LOW;
-  } else if (tmp.MEDIUM === videoQualitySetting) {
+  } else if (VideoCompressionQuality.MEDIUM === videoQualitySetting) {
     VERY_HIGH = VideoQualityTarget.MEDIUM;
-  } else if (tmp.HIGH === videoQualitySetting) {
+  } else if (VideoCompressionQuality.HIGH === videoQualitySetting) {
     VERY_HIGH = VideoQualityTarget.HIGH;
-  } else if (tmp.VERY_HIGH === videoQualitySetting) {
+  } else if (VideoCompressionQuality.VERY_HIGH === videoQualitySetting) {
     VERY_HIGH = VideoQualityTarget.VERY_HIGH;
   } else {
     const _Error = Error;
@@ -183,28 +183,28 @@ export const logEncoderSettings = function logEncoderSettings(videoQuality) {
   }
   logger.info("- Compression Quality Max Bitrate: " + targetBitrate + " bps");
   logger.info("Encoder Video Transcoding Settings:");
-  const info = obj.info;
+  const info = logger.info;
   if (videoQuality.skipVideoTranscode) {
     info("- Skip Video Transcode: Yes");
   } else {
     info("- Codec: avc1 (H.264)");
     const _HermesInternal = HermesInternal;
-    obj.info("- Dimensions: " + videoQuality.targetWidth + "x" + videoQuality.targetHeight);
+    logger.info("- Dimensions: " + videoQuality.targetWidth + "x" + videoQuality.targetHeight);
     const _HermesInternal2 = HermesInternal;
-    obj.info("- Bitrate: " + videoQuality.targetBitrate + " bps");
+    logger.info("- Bitrate: " + videoQuality.targetBitrate + " bps");
     const _HermesInternal3 = HermesInternal;
-    obj.info("- Frame Rate: " + videoQuality.frameRate + " fps");
+    logger.info("- Frame Rate: " + videoQuality.frameRate + " fps");
     const _HermesInternal4 = HermesInternal;
-    obj.info("- Key Frame Interval: " + videoQuality.keyFrameIntervalSeconds + " seconds");
+    logger.info("- Key Frame Interval: " + videoQuality.keyFrameIntervalSeconds + " seconds");
     let str10 = "No";
     if (videoQuality.createHDR) {
       str10 = "Yes";
     }
-    obj.info(`- Create HDR: ${str10}`);
+    logger.info(`- Create HDR: ${str10}`);
     const _HermesInternal5 = HermesInternal;
-    obj.info("- Rotation Degrees: " + videoQuality.rotationDegrees);
+    logger.info("- Rotation Degrees: " + videoQuality.rotationDegrees);
     const _HermesInternal6 = HermesInternal;
-    obj.info("- Progress Update Granularity: " + videoQuality.progressUpdateGranularity);
+    logger.info("- Progress Update Granularity: " + videoQuality.progressUpdateGranularity);
   }
 };
 export const calculateOptimalBitrate = function calculateOptimalBitrate(videoMetadata, targetBitrate, bitrateFloor) {

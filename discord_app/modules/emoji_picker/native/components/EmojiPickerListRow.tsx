@@ -4,10 +4,13 @@
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import PlatformUtils2 from "PlatformUtils" /* 1115 */;
+import native from "native" /* 1178 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import shared from "shared" /* 4411 */;
 import LockIcon from "LockIcon" /* 5095 */;
 import Pressables from "Pressables" /* 5123 */;
 import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef7132 from "module_7132" /* 7132 */;
 import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 10311 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -220,8 +223,6 @@ let closure_13 = noop.memo((arg0) => {
       } else {
         obj = { emoji: tmp4, category, animateEmoji, disabled: null, onPressEmoji: null, onLongPressEmoji: null, isSectionNitroLocked: null };
         let hasItem = null != tmp4.id;
-        let tmp6 = React5;
-        let tmp7 = EmojiItem;
         if (hasItem) {
           hasItem = emojisDisabled.has(tmp4.id);
         }
@@ -229,7 +230,7 @@ let closure_13 = noop.memo((arg0) => {
         obj.onPressEmoji = onPressEmoji;
         obj.onLongPressEmoji = onLongPressEmoji;
         obj.isSectionNitroLocked = isSectionNitroLocked;
-        arr = items.push(tmp6(tmp7, obj, sum));
+        arr = items.push(React5(EmojiItem, obj, sum));
       }
       sum = sum + 1;
     } while (sum < result + rowSize);

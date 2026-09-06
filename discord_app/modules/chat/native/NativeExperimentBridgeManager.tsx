@@ -5,7 +5,9 @@ import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5275 */;
 import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 17818 */;
+import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 17819 */;
 import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 17820 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -23,6 +25,7 @@ function syncYYTextReplacementExperiment() {
       }
     }
   }
+  obj = PlatformUtils;
 }
 function updateIOSExperiments() {
   if (obj.isIOS()) {
@@ -30,7 +33,7 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        let tmpResult = tmp(17818);
+        let tmpResult = YYTextReplacementExperiment;
         const result = setShouldEnableYYTextReplacement(tmpResult.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
       }
     }
@@ -39,32 +42,32 @@ function updateIOSExperiments() {
   if (NSUserDefaultsBridge2 != null) {
     const setShouldFixPushNotificationRawPayload = NSUserDefaultsBridge2.setShouldFixPushNotificationRawPayload;
     if (setShouldFixPushNotificationRawPayload != null) {
-      tmpResult = tmp(5275);
+      tmpResult = IOSPushNotificationRawPayloadFixExperiment;
       const result1 = setShouldFixPushNotificationRawPayload(tmpResult.isIOSPushNotificationRawPayloadFixExperimentEnabled());
     }
   }
   obj = PlatformUtils;
   if (obj4.getConfig({ location: "NativeExperimentBridgeManager" }).enabled) {
-    const RNVVideo = tmp6.RNVVideo;
+    const RNVVideo = NativeModules.RNVVideo;
     if (RNVVideo != null) {
       const result2 = RNVVideo.setOptimizeConfigureAudio(true);
     }
-    const RNVVideo2 = tmp6.RNVVideo;
+    const RNVVideo2 = NativeModules.RNVVideo;
     if (RNVVideo2 != null) {
       const result3 = RNVVideo2.setUseBackgroundProgressQueue(true);
     }
   }
+  obj4 = VideoStutterMitigationExperimentDefault;
 }
 function updateAndroidExperiments() {
   let obj = { "X-Super-Properties": AnalyticsUtilsDefault.getSuperPropertiesBase64(), "X-Fingerprint": AuthenticationStore.getFingerprint(), "X-Installation-ID": AuthenticationStore.getInstallationForTracking(), "X-Discord-Locale": LocaleStore.locale };
-  const obj3 = AuthenticationStore;
   const config = NotificationLoadMessagesExperimentDefault.getConfig({ location: "NativeExperimentBridgeManager" });
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
     obj = { headers: null, userId: null, enabled: null, apiBaseUrl: null, urlQueryParams: null, cooldownMs: null, debounceMs: null };
     obj.headers = obj;
-    obj.userId = obj3.getId();
+    obj.userId = AuthenticationStore.getId();
     obj.enabled = tmp3;
     obj.apiBaseUrl = HTTPUtils.getAPIBaseURL();
     const _HermesInternal = HermesInternal;

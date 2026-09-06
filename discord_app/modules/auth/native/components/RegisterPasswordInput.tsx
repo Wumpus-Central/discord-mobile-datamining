@@ -20,18 +20,18 @@ function PasswordStrength(passwordScore) {
       if (0 !== password.length) {
         if (null == passwordError) {
           if (passwordScore <= usePasswordScore.PasswordScore.WEAK) {
-            const intl2 = tmp9(1114).intl;
-            let str = intl2.string(tmp9(1114).t["w/8TuV"]);
+            const intl2 = util.intl;
+            let str = intl2.string(util.t["w/8TuV"]);
             let strong = tmp.weak;
-          } else if (passwordScore === tmp9(15970).PasswordScore.MEDIUM) {
-            const intl = tmp9(1114).intl;
-            str = intl.string(tmp9(1114).t["2fmTpT"]);
+          } else if (passwordScore === usePasswordScore.PasswordScore.MEDIUM) {
+            const intl = util.intl;
+            str = intl.string(util.t["2fmTpT"]);
             strong = tmp.medium;
           } else {
             str = "";
-            if (passwordScore === tmp9(15970).PasswordScore.STRONG) {
-              const intl4 = tmp9(1114).intl;
-              str = intl4.string(tmp9(1114).t.Xraqqc);
+            if (passwordScore === usePasswordScore.PasswordScore.STRONG) {
+              const intl4 = util.intl;
+              str = intl4.string(util.t.Xraqqc);
               strong = tmp.strong;
             }
           }
@@ -42,7 +42,7 @@ function PasswordStrength(passwordScore) {
           const items = [tmp.passwordStrength, strong];
           obj.style = items;
           obj.animated = true;
-          const intl3 = tmp9(1114).intl;
+          const intl3 = util.intl;
           const items1 = [intl3.string(util.t["5gbdUX"]), ": ", str];
           obj.children = items1;
           return closure_1_10(Text_Text.Text, obj);
@@ -106,8 +106,8 @@ export const RegisterPasswordInput = noop.forwardRef((arg0, ref) => {
   const items = [onPasswordChange, tmp13];
   const callback = obj.useCallback((arg0) => {
     if (null != user.password) {
-      const password = tmp.password;
-      React6(_objectWithoutProperties(tmp, closure_3));
+      const password = user.password;
+      React6(_objectWithoutProperties(user, closure_3));
     }
     onPasswordChange(arg0);
   }, items);
@@ -142,8 +142,6 @@ export const RegisterPasswordInput = noop.forwardRef((arg0, ref) => {
     tmp9((arg0) => !arg0);
   }, items5);
   obj = { ref: null, textContentType: "newPassword", autoComplete: "new-password", onChange: null, value: null, label: null, accessibilityHint: null, secureTextEntry: null, returnKeyType: null, autoCapitalize: "none", onSubmitEditing: null, onFocus: null, onBlur: null, trailingIcon: null, trailingPressableProps: null, errorMessage: null, status: null };
-  const tmp22 = closure_10;
-  const tmp23 = closure_12;
   const tmp7 = stateFromStores(obj.useState(false), 2);
   obj.ref = onPasswordChange(isPasswordFocused[17]).mergeRefs(ref, ref);
   obj.onChange = callback;
@@ -161,14 +159,14 @@ export const RegisterPasswordInput = noop.forwardRef((arg0, ref) => {
   obj.onFocus = callback1;
   obj.onBlur = callback2;
   if (tmp8) {
-    let EyeIcon = tmp16(tmp4[18]).EyeSlashIcon;
+    let EyeIcon = onPasswordChange(tmp4[18]).EyeSlashIcon;
   } else {
-    EyeIcon = tmp16(tmp4[19]).EyeIcon;
+    EyeIcon = onPasswordChange(tmp4[19]).EyeIcon;
   }
   obj.trailingIcon = EyeIcon;
-  const intl3 = tmp16(tmp4[10]).intl;
+  const intl3 = onPasswordChange(tmp4[10]).intl;
   const string = intl3.string;
-  const t = tmp16(tmp4[10]).t;
+  const t = onPasswordChange(tmp4[10]).t;
   if (tmp8) {
     let stringResult = string(t.Nusip4);
   } else {
@@ -194,9 +192,9 @@ export const RegisterPasswordInput = noop.forwardRef((arg0, ref) => {
       obj1.color = "text-muted";
       obj1.animated = true;
       obj1.children = memo;
-      tmp24Result = tmp24(tmp16(tmp4[11]).Text, obj1);
+      tmp24Result = closure_11(onPasswordChange(tmp4[11]).Text, obj1);
     }
   }
   children[2] = tmp24Result;
-  return tmp22(tmp23, { children });
+  return closure_10(closure_12, { children });
 });

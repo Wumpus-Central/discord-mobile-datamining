@@ -51,7 +51,7 @@ export default function NewChannelFollower(targetChannelId) {
   ({ reopenActionSheetWithTarget: noop, onSuccess: closure_5 } = targetChannelId);
   c7 = undefined;
   targetChannel = undefined;
-  const tmp = closure_18();
+  let tmp = closure_18();
   const tmp2 = targetChannelId(noop.useState(false), 2);
   closure_6 = tmp2[1];
   [tmp4, c7] = targetChannelId(noop.useState(null), 2);
@@ -78,11 +78,11 @@ export default function NewChannelFollower(targetChannelId) {
       }
     }
   });
-  let tmp5Result = tmp5(tmp6[18]);
+  let tmp5Result = require("shared");
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = tmp8(tmp6[19]);
+    let tmp8Result = require("module_11327");
   } else {
-    tmp8Result = tmp8(tmp6[20]);
+    tmp8Result = require("module_11328");
   }
   obj = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   obj = { source: tmp8Result, style: tmp.header, children: null };
@@ -94,7 +94,7 @@ export default function NewChannelFollower(targetChannelId) {
   const obj5 = { size: require("native").Icon.Sizes.CUSTOM, source: null, style: null };
   let channelIcon = null;
   if (null != sourceChannel) {
-    tmp5Result = tmp5(tmp6[25]);
+    tmp5Result = require("utils/ChannelUtils");
     channelIcon = tmp5Result.getChannelIcon(sourceChannel);
   }
   obj5.source = channelIcon;
@@ -108,29 +108,29 @@ export default function NewChannelFollower(targetChannelId) {
   const items4 = [closure_16(closure_6, obj), ];
   const obj6 = { style: tmp.container, children: null };
   const obj7 = { style: tmp.ctaHeader, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  let intl = tmp5(tmp6[27]).intl;
+  let intl = require("util").intl;
   obj7.children = intl.string(require("util").t.mvPFbA);
   const items5 = [closure_16(require("Text/Text").Text, obj7), , , , , ];
   const obj8 = { style: tmp.ctaSubhead, variant: "text-sm/medium", color: "text-default", children: null };
-  let intl2 = tmp5(tmp6[27]).intl;
+  let intl2 = require("util").intl;
   obj8.children = intl2.string(require("util").t.kbpkxJ);
   items5[1] = closure_16(require("Text/Text").Text, obj8);
   const obj9 = { title: null, hasIcons: true, children: null };
-  const intl3 = tmp5(tmp6[27]).intl;
+  const intl3 = require("util").intl;
   obj9.title = intl3.string(require("util").t.xFn72s);
   if (null != targetGuild) {
     let name = targetGuild.name;
   } else {
-    const intl4 = tmp5(tmp6[27]).intl;
-    name = intl4.string(tmp5(tmp6[27]).t.XqMe3N);
+    const intl4 = require("util").intl;
+    name = intl4.string(require("util").t.XqMe3N);
   }
   const obj10 = { label: name, icon: null, arrow: true, onPress: null };
   let tmp18Result = null;
   if (null != targetGuild) {
     const obj11 = { guild: targetGuild, size: null };
-    tmp8Result = tmp8(tmp6[23]);
-    obj11.size = tmp5(tmp6[23]).GuildIconSizes.XSMALL;
-    tmp18Result = tmp18(tmp8Result, obj11);
+    tmp8Result = require("GuildIcon");
+    obj11.size = require("GuildIcon").GuildIconSizes.XSMALL;
+    tmp18Result = closure_16(tmp8Result, obj11);
   }
   obj10.icon = tmp18Result;
   obj10.onPress = function onPress() {
@@ -148,7 +148,7 @@ export default function NewChannelFollower(targetChannelId) {
       if (canResult) {
         const obj = { label: null, value: null };
         ({ name: obj.label, id: obj.value } = guild);
-        arr.push(obj);
+        arr = arr.push(obj);
       }
       return arr;
     }, array);
@@ -165,23 +165,24 @@ export default function NewChannelFollower(targetChannelId) {
       closure_1_4(targetGuildId, targetChannelId);
     };
     obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj);
+    const tmp = asyncRequireImpl(9426, dependencyMap.paths);
   };
   obj9.children = closure_16(require("TableRow").TableRow, obj10);
   const items6 = [closure_16(require("TableRowGroup").TableRowGroup, obj9), ];
   const obj12 = { title: null, hasIcons: true, children: null };
-  const intl5 = tmp5(tmp6[27]).intl;
+  const intl5 = require("util").intl;
   obj12.title = intl5.string(require("util").t.PDn2fR);
   let stringResult = tmp13;
   if (tmp13 == null) {
-    const intl6 = tmp5(tmp6[27]).intl;
-    stringResult = intl6.string(tmp5(tmp6[27]).t.XqMe3N);
+    const intl6 = require("util").intl;
+    stringResult = intl6.string(require("util").t.XqMe3N);
   }
   const obj13 = { label: stringResult, disabled: null == targetGuildId, icon: null, arrow: true, onPress: null };
   tmp18Result = null;
   if (null != targetChannel) {
-    const obj14 = { size: tmp5(tmp6[24]).Icon.Sizes.CUSTOM, source: tmp5(tmp6[25]).getChannelIcon(targetChannel), style: tmp.channelIcon };
-    tmp18Result = tmp18(tmp5(tmp6[24]).Icon, obj14);
-    const tmp5Result1 = tmp5(tmp6[25]);
+    const obj14 = { size: require("native").Icon.Sizes.CUSTOM, source: require("utils/ChannelUtils").getChannelIcon(targetChannel), style: tmp.channelIcon };
+    tmp18Result = closure_16(require("native").Icon, obj14);
+    const tmp5Result1 = require("utils/ChannelUtils");
   }
   const obj15 = { spacing: 16, children: null };
   obj13.icon = tmp18Result;
@@ -209,19 +210,19 @@ export default function NewChannelFollower(targetChannelId) {
   obj15.children = items6;
   items5[2] = closure_17(require("Stack/Stack").Stack, obj15);
   const obj16 = { inset: true, children: null };
-  const intl7 = tmp5(tmp6[27]).intl;
+  const intl7 = require("util").intl;
   obj16.children = intl7.string(require("util").t.Z0quyN);
   items5[3] = closure_16(require("Form").FormHint, obj16);
   let tmp18Result1 = null;
   if (null != tmp4) {
     const obj17 = { inset: true, children: tmp4 };
-    tmp18Result1 = tmp18(tmp5(tmp6[35]).FormHint, obj17);
+    tmp18Result1 = closure_16(require("Form").FormHint, obj17);
   }
   const obj18 = { children: null };
   items5[4] = tmp18Result1;
   const obj19 = { children: null };
   const obj20 = { text: null, disabled: null, loading: null, onPress: null };
-  const intl8 = tmp5(tmp6[27]).intl;
+  const intl8 = require("util").intl;
   obj20.text = intl8.string(require("util").t["3aOv+h"]);
   obj20.disabled = !(null != targetGuildId && null != targetChannelId);
   obj20.loading = tmp2[0];
@@ -244,7 +245,7 @@ export default function NewChannelFollower(targetChannelId) {
   };
   const items7 = [closure_16(require("components/Button/Button").Button, obj20), ];
   const obj21 = { text: null, variant: "secondary", onPress: null };
-  const intl9 = tmp5(tmp6[27]).intl;
+  const intl9 = require("util").intl;
   obj21.text = intl9.string(require("util").t["ETE/oC"]);
   obj21.onPress = targetChannelId.onCancel;
   items7[1] = closure_16(require("components/Button/Button").Button, obj21);

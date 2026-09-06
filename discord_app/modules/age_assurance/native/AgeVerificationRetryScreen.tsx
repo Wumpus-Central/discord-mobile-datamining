@@ -47,7 +47,7 @@ export default function GetStartedScreen(modalSessionId) {
     let obj = { title: stringResult2, description: null, onPress: null };
     const intl = modalSessionId(isManualAgeVerificationHidden[11]).intl;
     obj.description = intl.string(modalSessionId(isManualAgeVerificationHidden[11]).t.ecdUKD);
-    closure_0 = stringResult2(function*(arg0, value) {
+    closure_0 = stringResult2(function*() {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -108,10 +108,10 @@ export default function GetStartedScreen(modalSessionId) {
     const items = [obj];
     if (!isManualAgeVerificationHidden) {
       obj = { title: null, description: null, onPress: null };
-      const intl2 = tmp(tmp2[11]).intl;
-      obj.title = intl2.string(tmp(tmp2[11]).t["LZO+Hd"]);
-      const intl3 = tmp(tmp2[11]).intl;
-      obj.description = intl3.string(tmp(tmp2[11]).t["ty+iWP"]);
+      const intl2 = modalSessionId(isManualAgeVerificationHidden[11]).intl;
+      obj.title = intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t["LZO+Hd"]);
+      const intl3 = modalSessionId(isManualAgeVerificationHidden[11]).intl;
+      obj.description = intl3.string(modalSessionId(isManualAgeVerificationHidden[11]).t["ty+iWP"]);
       obj.onPress = function onPress() {
         initiateAgeVerification(isManualAgeVerificationHidden[12]).openUrl(constants.APPEALS_LINK);
         const obj = initiateAgeVerification(isManualAgeVerificationHidden[12]);
@@ -138,7 +138,6 @@ export default function GetStartedScreen(modalSessionId) {
   const items2 = [closure_10(modalSessionId(isManualAgeVerificationHidden[14]).ShieldSpotIllustration, {}), closure_10(modalSessionId(isManualAgeVerificationHidden[15]).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult }), ];
   const obj4 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult };
   const stringResult1 = intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue);
-  const tmp10 = closure_12;
   items2[2] = closure_10(modalSessionId(isManualAgeVerificationHidden[15]).Text, { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue) });
   obj3.children = items2;
   const items3 = [closure_11(closure_7, obj3), , ];
@@ -166,5 +165,5 @@ export default function GetStartedScreen(modalSessionId) {
   obj2.children = items3;
   items1[1] = closure_11(closure_6, obj2);
   obj1.children = items1;
-  return closure_11(tmp10, obj1);
+  return closure_11(closure_12, obj1);
 };

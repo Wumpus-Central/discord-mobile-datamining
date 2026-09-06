@@ -45,7 +45,7 @@ export default noop.memo(function QuestDockUnenrolledBody() {
   tmpResult = tmp(tmp2[14]);
   const trackQuestContentClickedWithImpression = tmpResult.useTrackQuestContentClickedWithImpression();
   const items1 = [questDockQuest.id, hasWatchVideoOnMobileTasks, setRestingQuestDockMode, isMobileActivityQuest, launchMobileActivity, isQuestAccessSuspended, trackQuestContentClickedWithImpression];
-  const callback = obj1.useCallback(launchMobileActivity(function*(arg0, value) {
+  const callback = obj1.useCallback(launchMobileActivity(function*() {
     const v0 = 0;
     if (isQuestAccessSuspended) {
       trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(5447).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7728).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(5447).QuestContent.QUEST_BAR_MOBILE });
@@ -96,12 +96,12 @@ export default noop.memo(function QuestDockUnenrolledBody() {
   if (isQuestDockExpanded) {
     isQuestDockExpanded = isRendered;
   }
-  obj1 = { rewardTile: tmp19(tmp(tmp2[22]).QuestDockBodyQuestRewardTile, obj), premiumRewardPerkPill: null, title: null, description: null, ctaText: null, onCtaPress: null, renderCtaIcon: null, ctaLoading: null, showBonusOrbsGradient: null };
+  obj1 = { rewardTile: jsx(tmp(tmp2[22]).QuestDockBodyQuestRewardTile, { paused: tmp21, quest: questDockQuest, withAnimation: null }), premiumRewardPerkPill: null, title: null, description: null, ctaText: null, onCtaPress: null, renderCtaIcon: null, ctaLoading: null, showBonusOrbsGradient: null };
   obj.withAnimation = isQuestDockExpanded;
   let tmp19Result;
   if (shouldShowBonusOrbsUX) {
     obj2 = { questId: questDockQuest.config.id, orbMultiplierEligibility: questOrbMultiplierEligibility };
-    tmp19Result = tmp19(tmp(tmp2[23]).QuestOrbMultiplierPerkPill, obj2);
+    tmp19Result = jsx(tmp(tmp2[23]).QuestOrbMultiplierPerkPill, { questId: questDockQuest.config.id, orbMultiplierEligibility: questOrbMultiplierEligibility });
   }
   obj1.premiumRewardPerkPill = tmp19Result;
   const intl = tmp(tmp2[24]).intl;
@@ -113,5 +113,5 @@ export default noop.memo(function QuestDockUnenrolledBody() {
   obj1.renderCtaIcon = callback1;
   obj1.ctaLoading = stateFromStores;
   obj1.showBonusOrbsGradient = tmp12;
-  return jsx(tmp4(isMobileActivityQuest[22]), { rewardTile: tmp19(tmp(tmp2[22]).QuestDockBodyQuestRewardTile, obj), premiumRewardPerkPill: null, title: null, description: null, ctaText: null, onCtaPress: null, renderCtaIcon: null, ctaLoading: null, showBonusOrbsGradient: null });
+  return jsx(tmp4(isMobileActivityQuest[22]), { rewardTile: jsx(tmp(tmp2[22]).QuestDockBodyQuestRewardTile, { paused: tmp21, quest: questDockQuest, withAnimation: null }), premiumRewardPerkPill: null, title: null, description: null, ctaText: null, onCtaPress: null, renderCtaIcon: null, ctaLoading: null, showBonusOrbsGradient: null });
 });

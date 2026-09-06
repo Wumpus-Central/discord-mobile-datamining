@@ -3,12 +3,14 @@
 // Module 16662 (guild_channels/ChannelItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import useChannelName from "useChannelName" /* 4713 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import NotificationCenterUtils from "NotificationCenterUtils" /* 7641 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9770 */;
 import ChannelListLayout from "ChannelListLayout" /* 10121 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
 import ChannelWrapper from "ChannelWrapper" /* 16441 */;
+import ChannelContent from "ChannelContent" /* 16660 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
@@ -29,9 +31,6 @@ function LaunchpadChannelIcon(channel) {
   const items1 = [closure_8(View, obj), ];
   obj1 = { channel, size: null, wrapperSize: null };
   const tmp = closure_11(layout);
-  const tmp6 = closure_10;
-  const tmp7 = closure_9;
-  const tmp8 = closure_8;
   let str = "sm";
   if (obj6.isLayoutCozy(layout)) {
     str = "md";
@@ -44,9 +43,9 @@ function LaunchpadChannelIcon(channel) {
   }
   const obj2 = { children: null };
   obj1.wrapperSize = num;
-  items1[1] = tmp8(channel(12191).ChannelIcon, obj1);
+  items1[1] = closure_8(channel(12191).ChannelIcon, obj1);
   obj2.children = items1;
-  return tmp6(tmp7, obj2);
+  return closure_10(closure_9, obj2);
 }
 const View = fn(17).View;
 const UnreadSetting = fn(4742).UnreadSetting;
@@ -131,17 +130,17 @@ export const renderChannelItem = function renderChannelItem(unread) {
   obj.style = obj;
   if (channel.isGroupDM()) {
     obj1 = { channel, size: layoutStyles.icon.avatarSize };
-    let tmp10Result = tmp10(GroupDMAvatarDefault, obj1);
+    let tmp10Result = React6(GroupDMAvatarDefault, obj1);
   } else {
     obj2 = { channel, layout };
-    tmp10Result = tmp10(LaunchpadChannelIcon, obj2);
+    tmp10Result = React6(LaunchpadChannelIcon, obj2);
   }
   obj.children = tmp10Result;
   children[1] = React6(View, obj);
-  let tmp5Result = tmp5(16660);
+  let tmp5Result = ChannelContent;
   const obj3 = { layout, name: null, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, channel: null, locked: null, connected: null, live: null, mentionCount: null, mentionBadge: null, isSubscriptionGated: null, needSubscriptionToAccess: null };
   if (channelName == null) {
-    tmp5Result = tmp5(4713);
+    tmp5Result = useChannelName;
     channelName = tmp5Result.computeChannelName(channel, UserStore, RelationshipStore);
   }
   obj3.name = channelName;
@@ -162,7 +161,7 @@ export const renderChannelItem = function renderChannelItem(unread) {
   tmp10Result = null;
   if (null != end) {
     const obj4 = { style: { paddingLeft: 8 }, children: end };
-    tmp10Result = tmp10(tmp11, obj4);
+    tmp10Result = React6(View, obj4);
   }
   children[3] = tmp10Result;
   return obj2.renderChannelWrapper(closure_1_10(React7, { children }), { channel, layout, launchpad, fontScale, panelVariant });

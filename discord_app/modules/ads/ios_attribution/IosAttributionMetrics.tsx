@@ -30,6 +30,7 @@ export const trackIosAttributionImpression = function trackIosAttributionImpress
   obj.attribution_framework = str;
   obj.attribution_result = NO_FRAMEWORK;
   AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_VIEW_RESOLVED, obj);
+  const tmpResult = AnalyticsUtilsDefault;
 };
 export const trackIosAttributionClick = function trackIosAttributionClick(ATTRIBUTED, framework, impression_id) {
   let str = framework;
@@ -49,4 +50,5 @@ export const trackIosAttributionClick = function trackIosAttributionClick(ATTRIB
   obj.attribution_framework = str;
   obj.attribution_result = ATTRIBUTED;
   AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_CLICK_RESOLVED, obj);
+  const tmpResult = AnalyticsUtilsDefault;
 };

@@ -52,14 +52,16 @@ export default function _default(arg0) {
   if (null === fetchShopHomeError) {
     if (0 !== shopBlocks.length) {
       obj = { data: shopBlocks, renderItem: tmp8, getItemType };
-      let tmp10 = jsx(analyticsLocations(tmp3[15]), { data: shopBlocks, renderItem: tmp8, getItemType });
+      let tmp10 = jsx(tmp2(tmp3[15]), { data: shopBlocks, renderItem: tmp8, getItemType });
     }
     return tmp10;
   }
   obj = { style: closure_8().container, children: null };
-  obj1 = { style: { marginTop: 42 }, Illustration: tmp4(tmp3[13]).NoResults, body: null };
-  const intl = tmp4(tmp3[14]).intl;
+  obj1 = { style: { marginTop: 42 }, Illustration: onRenderFirstOrbsItem(tmp3[13]).NoResults, body: null };
+  const intl = onRenderFirstOrbsItem(tmp3[14]).intl;
   obj1.body = intl.string(onRenderFirstOrbsItem(collectiblesAnalyticsContext[14]).t.eAn6z2);
-  obj.children = jsx(onRenderFirstOrbsItem(collectiblesAnalyticsContext[12]).EmptyState, { style: { marginTop: 42 }, Illustration: tmp4(tmp3[13]).NoResults, body: null });
+  obj.children = jsx(onRenderFirstOrbsItem(collectiblesAnalyticsContext[12]).EmptyState, { style: { marginTop: 42 }, Illustration: onRenderFirstOrbsItem(tmp3[13]).NoResults, body: null });
   tmp10 = <initialVariantIndex style={closure_8().container}>{null}</initialVariantIndex>;
+  const tmp = closure_8();
+  tmp2 = analyticsLocations;
 };

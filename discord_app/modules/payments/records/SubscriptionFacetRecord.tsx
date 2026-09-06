@@ -74,7 +74,7 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
       flag = false;
     }
     if (typeof prototype === "function") {
-      const tmp14 = new prototype(tmp, renewal_line_items, tmp7, renewal_info, obj, tmp6, tmp3, new.target);
+      const tmp14 = new prototype(tmp, renewal_line_items, tmp7, renewal_info, obj, tmp6, prototype, new.target);
       if (subscription_id == null) {
         subscription_id = null;
       }

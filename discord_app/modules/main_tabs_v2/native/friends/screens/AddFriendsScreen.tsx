@@ -36,7 +36,7 @@ let closure_23 = async function _handleShare() {
   closure_129_0 = closure_0;
   let obj3 = InstantInviteActionCreatorsDefault;
   await obj3.createFriendInvite(null, constants.ADD_FRIENDS_MODAL);
-  const code = arg1.code;
+  const code = value.code;
   obj3 = { channel: null, code, message: null, location: null };
   const intl2 = closure_130_0(closure_130_2[16]).intl;
   obj3.message = intl2.formatToPlainString(closure_130_0(closure_130_2[16]).t.PJf9P9, { link: closure_130_1(closure_130_2[17])(code) });
@@ -279,9 +279,11 @@ export default function AddFriendsScreen(navigation) {
           tmp3 = tmp2;
         }
         closure_1_0(tmp3);
+        tmp2 = navigation(analyticsLocations[19]).isAndroid() && result === stateFromStores.UNAUTHORIZED;
       });
       const tmpResult = ContactSyncUtils;
     }
+    obj = ContactSyncUtils;
   }, []);
   const tmp14 = require("useSuggestedFriends")();
   let result = navigation(obj[18]).isContactSyncAvailable();
@@ -315,21 +317,21 @@ export default function AddFriendsScreen(navigation) {
   }, items7);
   const callback1 = obj1.useCallback((arg0) => {
     if (friendSuggestions.FIND_FRIENDS !== arg0) {
-      if (tmp.INCOMING_FRIEND_REQUESTS === arg0) {
+      if (friendSuggestions.INCOMING_FRIEND_REQUESTS === arg0) {
         const element = { type: "section", props: null };
         let obj = { title: null };
         const intl3 = navigation(analyticsLocations[16]).intl;
         obj.title = intl3.string(navigation(analyticsLocations[16]).t["93cLE3"]);
         element.props = obj;
         return element;
-      } else if (tmp.INCOMING_GAME_FRIEND_REQUESTS === arg0) {
+      } else if (friendSuggestions.INCOMING_GAME_FRIEND_REQUESTS === arg0) {
         const element1 = { type: "section", props: null };
         obj = { title: null };
         const intl2 = navigation(analyticsLocations[16]).intl;
         obj.title = intl2.string(navigation(analyticsLocations[16]).t["0uVuaU"]);
         element1.props = obj;
         return element1;
-      } else if (tmp.CONTACT_SUGGESTIONS === arg0) {
+      } else if (friendSuggestions.CONTACT_SUGGESTIONS === arg0) {
         const element2 = { type: "section", props: null };
         const obj1 = { title: null };
         const intl = navigation(analyticsLocations[16]).intl;
@@ -417,7 +419,7 @@ export default function AddFriendsScreen(navigation) {
                   return c17(navigation(analyticsLocations[34]).TableRow, obj);
                 }
             };
-          } else if (tmp3.INCOMING_FRIEND_REQUESTS === flag2) {
+          } else if (friendSuggestions.INCOMING_FRIEND_REQUESTS === flag2) {
             if (tmp2) {
               if (closure_20) {
                 const obj1 = {
@@ -451,7 +453,7 @@ export default function AddFriendsScreen(navigation) {
                 }
             };
             return obj2;
-          } else if (tmp3.INCOMING_GAME_FRIEND_REQUESTS === flag2) {
+          } else if (friendSuggestions.INCOMING_GAME_FRIEND_REQUESTS === flag2) {
             if (tmp2) {
               if (onPress3) {
                 const obj3 = {
@@ -484,7 +486,7 @@ export default function AddFriendsScreen(navigation) {
               return closure_3_17(IncomingRequestRow.ConnectedIncomingGameFriendRequestRow, { accepted: null != first1.find((userId) => userId.userId === id.id && userId.applicationId === tmp), applicationId, user, start, end, onPress: onPress2, onDeclineIncomingRequest, onAcceptIncomingRequest });
             };
             return obj4;
-          } else if (tmp3.CONTACT_SUGGESTIONS === flag2) {
+          } else if (friendSuggestions.CONTACT_SUGGESTIONS === flag2) {
             const suggestedFriend = tmp5;
             let mutualFriendsCount;
             if (friendSuggestions[arg1] != null) {

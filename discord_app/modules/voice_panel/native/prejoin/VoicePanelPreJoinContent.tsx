@@ -14,6 +14,7 @@ import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import spring from "spring" /* 4974 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
 import FormComponents from "FormComponents" /* 9118 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10993 */;
@@ -63,13 +64,11 @@ function StreamPreview(channelId) {
   obj.children = intl.format(stream(setFocused[32]).t.I0mOAs, { username });
   const items3 = [closure_25(stream(setFocused[31]).Text, obj), ];
   obj1 = { style: tmp.previewImageWrapper, children: null };
-  const tmp6 = stream;
-  const tmp8 = closure_26;
   const tmp9 = channelId(setFocused[30]);
-  obj1.children = closure_25(tmp6(setFocused[33]).VoicePanelStreamPreview, { mode: context.mode, disabled: !stateFromStores, stream, onPress: callback });
+  obj1.children = closure_25(stream(setFocused[33]).VoicePanelStreamPreview, { mode: context.mode, disabled: !stateFromStores, stream, onPress: callback });
   items3[1] = closure_25(channelId(setFocused[30]), obj1);
   obj.children = items3;
-  return tmp8(tmp9, obj);
+  return closure_26(tmp9, obj);
 }
 function ActivityInfo(activity) {
   activity = activity.activity;
@@ -113,7 +112,7 @@ function ActivityInfo(activity) {
   const items1 = [activity.launchId, analyticsLocations, application, tmp12, channelId, embeddedActivityJoinability];
   const callback = noop.useCallback(() => {
     let obj = { embeddedActivityJoinability, handleCanJoin: null };
-    closure_0 = channelId(function*(arg0, value) {
+    closure_0 = channelId(function*() {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -139,9 +138,9 @@ function ActivityInfo(activity) {
               obj = { value, done: true };
               return obj;
             } else if (closure_1_7) {
-              if (null != dependencyMap) {
+              if (null != inputApplication) {
                 let obj2 = v3(9530);
-                let obj1 = { channelId, applicationId: tmp9.id, launchId: v3.launchId, inputApplication: tmp9, analyticsLocations: num3 };
+                let obj1 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                 v3 = num3;
                 obj2 = { value: null, done: false };
                 obj2.value = obj2.maybeJoinEmbeddedActivity(obj1);
@@ -212,7 +211,7 @@ function ActivityInfo(activity) {
     obj4.children = items3;
     items2[1] = closure_26(tmp4(tmp3[42]).PressableOpacity, obj4);
     obj1.children = items2;
-    tmp16Result = tmp16(tmp2Result, obj1);
+    tmp16Result = closure_26(tmp2Result, obj1);
     const tmp2Result1 = tmp2(tmp3[30]);
   }
   return tmp16Result;
@@ -253,7 +252,7 @@ function RoomMembers(members) {
   const context = first.useContext(blockedMembers(ignoredMembers[25]));
   const channelId = context.channelId;
   const guildId = context.guildId;
-  let tmp3 = guildId(first.useState(20), 2);
+  const tmp3 = guildId(first.useState(20), 2);
   first = tmp3[0];
   closure_6 = tmp3[1];
   const sum = blockedMembers.size + ignoredMembers.size;
@@ -313,23 +312,19 @@ function RoomMembers(members) {
       (() => {
           const items = [];
           for (const item10007 of members) {
-            let tmp = item10007;
             if (items.length >= first) {
               obj.return();
               break;
             } else {
-              let hasItem = blockedMembers.has(tmp.user.id);
+              let hasItem = blockedMembers.has(item10007.user.id);
               if (!hasItem) {
-                hasItem = ignoredMembers.has(tmp.user.id);
+                hasItem = ignoredMembers.has(item10007.user.id);
               }
               if (!hasItem) {
-                let obj = { user: null, channelId: null, guildId: null, nick: null, showGameActivity: true };
-                obj.user = tmp.user;
-                obj.channelId = channelId;
-                obj.guildId = guildId;
+                let obj = { user: item10007.user, channelId, guildId, nick: null, showGameActivity: true };
                 let obj3 = NicknameUtilsDefault;
-                obj.nick = obj3.getName(guildId, channelId, tmp.user);
-                let arr = items.push(closure_2_25(FormComponents.MemberRowItem, obj, tmp.user.id));
+                obj.nick = obj3.getName(guildId, channelId, item10007.user);
+                let arr = items.push(closure_2_25(FormComponents.MemberRowItem, obj, item10007.user.id));
               }
               continue;
             }
@@ -350,7 +345,7 @@ function RoomMembers(members) {
     }
     items1[1] = tmp23;
     obj5.children = items1;
-    tmp7Result = tmp7(members(tmp[48]).VoicePanelFormSection, obj5);
+    tmp7Result = closure_26(members(tmp[48]).VoicePanelFormSection, obj5);
   }
   children[4] = tmp7Result;
   return closure_26(closure_27, { children });
@@ -380,8 +375,7 @@ function PreJoinTransitioner(transitionState) {
       num2 = 0;
     }
     obj.opacity = spring.withSpring(num2);
-    tmp4(4974);
-    const tmp4Result = tmp4(4296);
+    const tmp4Result = ReanimatedRexport;
     if (useReducedMotion.get()) {
       num = 0;
     }
@@ -399,7 +393,7 @@ function PreJoinTransitioner(transitionState) {
         const obj = transitionState(windowDimensions[38]);
       }
     };
-    obj = { transitionState: tmp5, TransitionStates: tmp4(4271).TransitionStates, runOnJS: tmp4(4296).runOnJS, transitionCleanUp };
+    obj = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, transitionCleanUp };
     fn.__closure = obj;
     fn.__workletHash = 2541522666097;
     fn.__initData = __initData;
@@ -494,32 +488,32 @@ let closure_34 = noop.memo((blockedUserIds) => {
   const stringResult = intl.string(util.t.CjrALd);
   if (size2 > 0) {
     if (size > 0) {
-      const intl4 = tmp5(1114).intl;
-      let stringResult1 = intl4.string(tmp5(1114).t.MpRfpC);
+      const intl4 = util.intl;
+      let stringResult1 = intl4.string(util.t.MpRfpC);
     }
     obj = { style: tmp.blockedMemberWarning, children: null };
-    const items = [closure_1_25(tmp5(6610).CircleErrorIcon, { color: "text-feedback-warning" }), ];
+    const items = [closure_1_25(CircleErrorIcon.CircleErrorIcon, { color: "text-feedback-warning" }), ];
     const obj1 = { variant: "text-sm/bold", color: "interactive-text-active", style: { flexShrink: 1 }, children: null };
     const items1 = [stringResult1, " ", ];
     let tmp11Result = null;
     if (null != stringResult) {
       const obj2 = { variant: "heading-sm/semibold", children: stringResult };
-      tmp11Result = closure_1_25(tmp5(4556).Text, obj2);
+      tmp11Result = closure_1_25(Text_Text.Text, obj2);
     }
     items1[2] = tmp11Result;
     obj1.children = items1;
-    items[1] = dependencyMap(tmp5(4556).Text, obj1);
+    items[1] = dependencyMap(Text_Text.Text, obj1);
     obj.children = items;
     return dependencyMap(NativeViewDefault, obj);
   }
   if (size > 0) {
-    const intl3 = tmp5(1114).intl;
+    const intl3 = util.intl;
     const obj3 = { n: size };
-    stringResult1 = intl3.format(tmp5(1114).t.u9trAZ, obj3);
+    stringResult1 = intl3.format(util.t.u9trAZ, obj3);
   } else {
-    const intl2 = tmp5(1114).intl;
+    const intl2 = util.intl;
     const obj4 = { n: size2 };
-    stringResult1 = intl2.format(tmp5(1114).t["6X29zb"], obj4);
+    stringResult1 = intl2.format(util.t["6X29zb"], obj4);
   }
 });
 let closure_37 = noop.memo((channelId) => {
@@ -596,20 +590,20 @@ let closure_38 = noop.memo(function VoicePanelPreJoinContentInner(members) {
   let tmp12Result = null;
   if (tmp6) {
     obj = { style: tmp.optInChannelsContainer, channel: stateFromStores, analyticsSection: constants2.CHANNEL };
-    tmp12Result = tmp12(tmp2(tmp3[56]), obj);
+    tmp12Result = closure_25(tmp2(tmp3[56]), obj);
   }
   items3[1] = tmp12Result;
   items3[2] = activities.map((activity) => closure_2_25(ActivityInfo, { activity, analyticsLocations }, activity.launchId));
   tmp12Result = members.length > 0 || blockedMembers.size > 0 || ignoredMembers.size > 0;
   if (tmp12Result) {
     const obj1 = { members, streamingMembers: members.streamingMembers, blockedMembers, ignoredMembers };
-    tmp12Result = tmp12(RoomMembers, obj1);
+    tmp12Result = closure_25(RoomMembers, obj1);
   }
   items3[3] = tmp12Result;
   let tmp12Result1 = null != guildId;
   if (tmp12Result1) {
     const obj2 = { members: memo, guildId };
-    tmp12Result1 = tmp12(tmp2(tmp3[57]), obj2);
+    tmp12Result1 = closure_25(tmp2(tmp3[57]), obj2);
   }
   const obj3 = { children: null };
   items3[4] = tmp12Result1;

@@ -4,6 +4,8 @@
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8164 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8167 */;
 import useShopProductItems from "useShopProductItems" /* 8171 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8187 */;
 import EditProfileEffectSection from "EditProfileEffectSection" /* 14629 */;
@@ -49,8 +51,9 @@ function EditProfileEffectInner(user) {
   const items1 = [user];
   const effect = noop.useEffect(() => {
     if (!tmp) {
-      maybeFetchUserProfileDefault(obj.id, obj.getAvatarURL(null, 80), { withMutualGuilds: true, dispatchWait: true });
+      maybeFetchUserProfileDefault(user.id, user.getAvatarURL(null, 80), { withMutualGuilds: true, dispatchWait: true });
     }
+    tmp = null == user || user.isNonUserBot();
   }, items1);
   const items2 = [setSelectedProfileEffect, guildId, flag];
   let skuId;
@@ -64,8 +67,6 @@ function EditProfileEffectInner(user) {
   const items3 = [closure_9(ProfileEffectSectionPreview, { previewSkuId: skuId, user, guildId }), , ];
   obj = { user, previewSkuId: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
   let skuId1;
-  const tmp13 = closure_10;
-  const tmp14 = closure_11;
   const tmp6 = setSelectedProfileEffect(guildId[23])();
   if (profilePreviewValue != null) {
     skuId1 = profilePreviewValue.skuId;
@@ -87,7 +88,7 @@ function EditProfileEffectInner(user) {
   obj1.isFetching = stateFromStores;
   items3[2] = closure_9(user(guildId[28]).EditCollectiblesPickerList, obj1);
   obj2.children = items3;
-  return tmp13(tmp14, obj2);
+  return closure_10(closure_11, obj2);
 }
 function ProfileEffectSectionPreview(arg0) {
   let purchase;
@@ -171,8 +172,8 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
     let tmp = null != closure_2;
     if (tmp) {
       let result;
-      if (obj2 != null) {
-        result = obj2.hasPremiumCustomization();
+      if (closure_2 != null) {
+        result = closure_2.hasPremiumCustomization();
       }
       tmp = result;
     }
@@ -197,10 +198,10 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
       purchasedItem = null;
     }
     if (isTryItOut) {
-      let tmpResult = tmp(8167);
+      let tmpResult = UserProfileActionCreators;
       const result = tmpResult.setTryItOutProfileEffect(purchasedItem);
     } else {
-      tmpResult = tmp(8164);
+      tmpResult = UserProfileSettingsActionCreators;
       obj = { guildId, profileEffect: purchasedItem };
       tmpResult.setPendingChanges(obj);
     }

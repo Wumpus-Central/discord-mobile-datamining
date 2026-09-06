@@ -44,11 +44,11 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   return noop.useMemo(() => {
     let priceString;
     if (stateFromStores != null) {
-      priceString = tmp.priceString;
+      priceString = stateFromStores.priceString;
     }
     if (null != priceString) {
       let obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
-      ({ priceString: obj2.normalPrice, priceString: obj2.userPrice } = tmp);
+      ({ priceString: obj2.normalPrice, priceString: obj2.userPrice } = stateFromStores);
     } else {
       obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     }

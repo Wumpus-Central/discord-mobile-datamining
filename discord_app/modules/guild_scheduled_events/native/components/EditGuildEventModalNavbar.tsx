@@ -2,6 +2,7 @@
 
 // Module 9707 (EditGuildEventModalNavbar)
 import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import _modDef6992 from "module_6992" /* 6992 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
@@ -24,25 +25,25 @@ export default function EditGuildEventModalNavbar(screen) {
   const tmp = closure_7();
   if (EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
     let items = [1, 3];
-  } else if (tmp2(9704).EditGuildEventScreens.DETAILS === screen) {
+  } else if (EditGuildEventUtils.EditGuildEventScreens.DETAILS === screen) {
     items = [2, 3];
-  } else if (tmp2(9704).EditGuildEventScreens.PREVIEW === screen) {
+  } else if (EditGuildEventUtils.EditGuildEventScreens.PREVIEW === screen) {
     items = [3, 3];
   } else {
-    tmp2(1369).assertNever(screen);
-    const tmp2Result = tmp2(1369);
+    GlobalUtils.assertNever(screen);
+    const tmp2Result = GlobalUtils;
   }
   [tmp6, tmp7] = _slicedToArray(items, 2);
   let obj = { top: true, style: tmp.header, children: null };
   obj = { style: tmp.buttonContainer };
   const items1 = [hasOwnProperty(View, obj), , ];
   const obj1 = { style: tmp.headerTitle, variant: "text-xs/bold", color: "text-default", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.format(util.t["42HaFY"], { step: tmp6, total: tmp7 });
   items1[1] = hasOwnProperty(Text_Text.Text, obj1);
   const obj2 = { style: tmp.buttonContainer, children: null };
   const obj3 = { accessibilityLabel: null, onPress: null, source: null, style: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj3.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj3.onPress = screen.onClose;
   obj3.source = _modDef6992;

@@ -40,7 +40,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   let obj = { children: null };
   obj = { style: tmp.content, children: null };
   obj = { resizeMode: "contain", style: tmp.headerImage, source: null };
-  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

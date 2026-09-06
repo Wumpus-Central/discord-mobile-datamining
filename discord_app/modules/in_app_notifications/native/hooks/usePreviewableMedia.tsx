@@ -8,6 +8,7 @@ import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
 import inlineStyles from "inlineStyles" /* 8453 */;
 import CirclePlayIcon from "CirclePlayIcon" /* 10132 */;
 import WaveformIcon from "WaveformIcon" /* 10135 */;
+import FileIcon from "FileIcon" /* 10137 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -55,7 +56,6 @@ function getBasePreviewableMedia(arg0) {
         let tmp6 = nextResult;
         let filename = nextResult.filename;
         let tmp7 = filename;
-        let tmp8 = require;
         obj = MediaFormatTesters;
         if (obj.isImageFile(filename)) {
           obj = { id: null, type: null, media: null, parentType: null };
@@ -70,7 +70,7 @@ function getBasePreviewableMedia(arg0) {
           obj.parentType = str7;
           let arr = items.push(obj);
         } else {
-          let tmp8Result = tmp8(4710);
+          let tmp8Result = MediaFormatTesters;
           if (tmp8Result.isVideoFile(tmp7)) {
             let obj1 = { id: null, type: null, media: null, parentType: null };
             let _HermesInternal3 = HermesInternal;
@@ -84,7 +84,7 @@ function getBasePreviewableMedia(arg0) {
             obj1.parentType = str6;
             let arr1 = items.push(obj1);
           } else {
-            tmp8Result = tmp8(4710);
+            tmp8Result = MediaFormatTesters;
             let push = items.push;
             let obj2 = { id: null, type: null, media: null, icon: null, parentType: null };
             let id = tmp6.id;
@@ -94,7 +94,7 @@ function getBasePreviewableMedia(arg0) {
               obj2.id = "" + id + "-" + tmp13.AUDIO;
               obj2.type = tmp13.AUDIO;
               obj2.media = tmp6;
-              obj2.icon = React5(tmp8(10132).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
+              obj2.icon = React5(CirclePlayIcon.CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
               let str5 = null;
               if (isForward) {
                 str5 = "forward";
@@ -106,9 +106,8 @@ function getBasePreviewableMedia(arg0) {
               obj2.id = "" + id + "-" + tmp13.FILE;
               obj2.type = tmp13.FILE;
               obj2.media = tmp6;
-              let obj3 = { size: "lg", color: null };
-              obj3.color = nativeDefault.colors.ICON_SUBTLE;
-              obj2.icon = React5(tmp8(10137).FileIcon, obj3);
+              let obj3 = { size: "lg", color: nativeDefault.colors.ICON_SUBTLE };
+              obj2.icon = React5(FileIcon.FileIcon, obj3);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";
@@ -186,8 +185,8 @@ export const usePreviewableMedia = function usePreviewableMedia(message) {
     const items1 = [...getBasePreviewableMedia(obj)];
     items.push.apply(items1);
     if (isForwardMessageDefault(message)) {
-      if (tmp2.messageSnapshots.length > 0) {
-        obj = { message: tmp2.messageSnapshots[0].message, isForward: true };
+      if (message.messageSnapshots.length > 0) {
+        obj = { message: message.messageSnapshots[0].message, isForward: true };
         const push = items.push;
         const items2 = [];
         HermesBuiltin.arraySpread(getBasePreviewableMedia(obj), 0);

@@ -2,13 +2,13 @@
 
 // Module 1114 (util)
 import _mod17 from "module_17" /* 17 */;
+import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1117 */;
 import intl_util from "intl/util" /* 1118 */;
 import native from "native" /* 1178 */;
 import migration from "migration" /* 14184 */;
 import _modDef14188 from "module_14188" /* 14188 */;
 import noop from "module_19" /* 19 */;
 
-const NativeDeviceLocaleModule = tmp(1117);
 require = fn;
 const Fonts = fn(1074).Fonts;
 const jsx = fn(21).jsx;
@@ -41,28 +41,28 @@ const util = fn(1118);
 const normalizedLocale = util.getNormalizedLocale(str, "en-US");
 const module_1155 = fn(1155);
 obj = {
-  $i(children, arg1) {
+  $i(children, key) {
     obj = { style: obj.italic, children };
-    return jsx(native.LegacyText, { style: obj.italic, children }, arg1);
+    return jsx(native.LegacyText, { style: obj.italic, children }, key);
   },
-  $b(children, arg1) {
+  $b(children, key) {
     obj = { style: obj.strong, children };
-    return jsx(native.LegacyText, { style: obj.strong, children }, arg1);
+    return jsx(native.LegacyText, { style: obj.strong, children }, key);
   },
-  $del(children, arg1) {
+  $del(children, key) {
     obj = { style: obj.del, children };
-    return jsx(native.LegacyText, { style: obj.del, children }, arg1);
+    return jsx(native.LegacyText, { style: obj.del, children }, key);
   },
-  $p(children, arg1) {
-    return jsx(native.LegacyText, { children }, arg1);
+  $p(children, key) {
+    return jsx(native.LegacyText, { children }, key);
   },
-  $code(children, arg1) {
+  $code(children, key) {
     obj = { style: obj.code, children };
-    return jsx(native.LegacyText, { style: obj.code, children }, arg1);
+    return jsx(native.LegacyText, { style: obj.code, children }, key);
   },
-  $link(children, arg1, arg2) {
+  $link(children, key, arg2) {
     [tmp] = arg2;
-    return jsx(migration.IntlLink, { target: tmp, children }, arg1);
+    return jsx(migration.IntlLink, { target: tmp, children }, key);
   }
 };
 const reactFormatter = module_1155.makeReactFormatter(obj);

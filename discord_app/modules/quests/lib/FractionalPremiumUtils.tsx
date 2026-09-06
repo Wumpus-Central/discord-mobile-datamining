@@ -14,13 +14,13 @@ export const getDurationStringOfFractionalPremium = function getDurationStringOf
   let obj = PremiumUtils;
   const fractionalPremiumUnitsHoursFromSkuIds = obj.getFractionalPremiumUnitsHoursFromSkuIds(arr.map((skuId) => skuId.skuId));
   if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     obj = { days: fractionalPremiumUnitsHoursFromSkuIds / 24 };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.Cz1G97, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t.Cz1G97, obj);
   } else {
-    const intl = tmp(1114).intl;
+    const intl = util.intl;
     obj = { hours: fractionalPremiumUnitsHoursFromSkuIds };
-    formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.J9Lu4h, obj);
+    formatToPlainStringResult = intl.formatToPlainString(util.t.J9Lu4h, obj);
   }
   return formatToPlainStringResult;
 };

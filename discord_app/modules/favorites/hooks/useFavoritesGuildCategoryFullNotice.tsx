@@ -2,6 +2,8 @@
 
 // Module 16107 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 504 */;
+import util from "util" /* 1114 */;
+import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import _modDef3225 from "module_3225" /* 3225 */;
 import FavoritesHooks from "FavoritesHooks" /* 10224 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -27,20 +29,20 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
         if (tmpResult.isFavoritesGuildId(getGuildId.getGuildId())) {
           tmp6 = null;
           if (getGuildId.type === ChannelTypes.GUILD_CATEGORY) {
-            const formatted = str.trim().toLowerCase();
+            str = str.trim();
+            const formatted = str.toLowerCase();
             tmp6 = null;
             if (formatted === closure_4.toLowerCase()) {
               obj = { label: null, tooltip: null };
-              const intl = tmp(1114).intl;
+              const intl = util.intl;
               obj.label = intl.string(_modDef3225.WsUrMD);
-              const intl2 = tmp(1114).intl;
+              const intl2 = util.intl;
               obj.tooltip = intl2.string(_modDef3225.dW9Kov);
               tmp6 = obj;
             }
-            str = str.trim();
           }
         }
-        tmpResult = tmp(1982);
+        tmpResult = FavoritesUtils;
       }
     }
   }

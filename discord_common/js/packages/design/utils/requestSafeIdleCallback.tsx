@@ -14,11 +14,11 @@ export const requestSafeIdleCallback = function requestSafeIdleCallback(arg0, ti
   closure_0 = arg0;
   closure_1 = global;
   if (undefined !== global) {
-    if (null != obj.requestIdleCallback) {
-      if (null != obj.cancelIdleCallback) {
+    if (null != global.requestIdleCallback) {
+      if (null != global.cancelIdleCallback) {
         c2 = false;
         timeout = null;
-        closure_4 = obj.requestIdleCallback(function runOnce() {
+        closure_4 = global.requestIdleCallback(function runOnce() {
           if (!c2) {
             c2 = true;
             if (null != c3) {
@@ -35,7 +35,7 @@ export const requestSafeIdleCallback = function requestSafeIdleCallback(arg0, ti
         if (num == null) {
           num = 1000;
         }
-        timeout = obj.setTimeout(() => {
+        timeout = global.setTimeout(() => {
           if (!c2) {
             closure_1.cancelIdleCallback(closure_4);
           }
@@ -58,7 +58,7 @@ export const requestSafeIdleCallback = function requestSafeIdleCallback(arg0, ti
       }
     }
   }
-  const timeout2 = obj.setTimeout(arg0, 0);
+  const timeout2 = global.setTimeout(arg0, 0);
   return () => {
     closure_1.clearTimeout(closure_5);
   };

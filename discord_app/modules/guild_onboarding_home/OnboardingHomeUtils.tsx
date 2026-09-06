@@ -3,6 +3,7 @@
 // Module 7222 (OnboardingHomeUtils)
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4749 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7106 */;
 import useIsNewMemberDefault from "useIsNewMember" /* 7223 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -24,8 +25,8 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
   const items1 = [guild_id, tmp];
   return require("useStateFromStores").useStateFromStores(items, () => {
     if (closure_0 !== React6) {
-      if (!obj3.isFavoritesGuildId(tmp2)) {
-        let has = GuildStore.getGuild(tmp2);
+      if (!obj3.isFavoritesGuildId(closure_0)) {
+        let has = GuildStore.getGuild(closure_0);
         let hasItem;
         if (has != null) {
           const features = has.features;
@@ -33,7 +34,7 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
         }
         if (!hasItem) {
           return tmp7;
-        } else if (ImpersonateStore.isFullServerPreview(tmp2)) {
+        } else if (ImpersonateStore.isFullServerPreview(closure_0)) {
           const id = has.id;
           let newMemberActions = GuildOnboardingHomeSettingsStore.getNewMemberActions(id);
           if (newMemberActions == null) {
@@ -53,14 +54,14 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
           }
           let result = hasItem1;
         } else {
-          result = tmp23(7106).isGuildOnboardingSettingsAvailable(tmp2);
+          result = GuildOnboardingUtils.isGuildOnboardingSettingsAvailable(closure_0);
           if (!result) {
             result = guildHasOnboardingHomeDefault(has);
           }
           if (result) {
             let tmp11 = closure_1;
             if (!closure_1) {
-              const mutableGuildChannelsForGuild = ChannelStore.getMutableGuildChannelsForGuild(tmp2);
+              const mutableGuildChannelsForGuild = ChannelStore.getMutableGuildChannelsForGuild(closure_0);
               let flag = false;
               const keys = Object.keys();
               if (keys !== undefined) {
@@ -77,11 +78,10 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
             }
             result = tmp11;
           }
-          const tmp23Result = tmp23(7106);
+          const tmp23Result = GuildOnboardingUtils;
         }
       }
       obj3 = FavoritesUtils;
-      tmp23 = require;
     }
     return false;
   }, items1);
@@ -112,7 +112,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           }
           return hasItem;
         } else {
-          let result = tmp14(7106).isGuildOnboardingSettingsAvailable(id);
+          let result = GuildOnboardingUtils.isGuildOnboardingSettingsAvailable(id);
           if (result) {
             const features = guild.features;
             result = features.has(constants.GUILD_ONBOARDING);
@@ -125,20 +125,19 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           let hasItem1 = features3.has(constants.GUILD_ONBOARDING);
           if (hasItem1) {
             const features4 = guild.features;
-            hasItem1 = features4.has(tmp6.GUILD_SERVER_GUIDE);
+            hasItem1 = features4.has(constants.GUILD_SERVER_GUIDE);
           }
           if (!hasItem1) {
             hasItem1 = result;
           }
           if (hasItem1) {
             const features5 = guild.features;
-            hasItem1 = features5.has(tmp6.COMMUNITY);
+            hasItem1 = features5.has(constants.COMMUNITY);
           }
           return hasItem1;
         }
       }
       obj3 = FavoritesUtils;
-      tmp14 = require;
     }
     return false;
   }

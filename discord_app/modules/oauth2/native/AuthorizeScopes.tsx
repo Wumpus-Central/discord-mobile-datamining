@@ -14,10 +14,10 @@ function Scope(arg0) {
   const t = util.t;
   if (isFake) {
     let stringResult = string(t.OX8EMU);
-    let tmp6 = tmp2;
+    let tmp6 = require;
   } else {
     stringResult = string(t["0lpCFG"]);
-    tmp6 = tmp2;
+    tmp6 = require;
   }
   let obj = { style: tmp.scopeContainer, accessible: true, accessibilityLabel: null, children: null };
   let str = "";
@@ -29,10 +29,10 @@ function Scope(arg0) {
   obj = { style: tmp.iconWrapper, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
   if (isFake) {
     obj = { style: tmp.fakeScopeIcon, color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    let tmp10Result = tmp10(tmp6(6616).CircleXIcon, obj);
+    let tmp10Result = React4(tmp6(6616).CircleXIcon, obj);
   } else {
     const obj1 = { color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    tmp10Result = tmp10(tmp6(4520).CircleCheckIcon, obj1);
+    tmp10Result = React4(tmp6(4520).CircleCheckIcon, obj1);
   }
   obj.children = tmp10Result;
   const items = [React4(View, obj), ];
@@ -45,7 +45,7 @@ function Scope(arg0) {
   tmp10Result = null;
   if (null != error) {
     const obj3 = { variant: "text-xs/normal", children: error };
-    tmp10Result = tmp10(tmp6(4556).Text, obj3);
+    tmp10Result = React4(tmp6(4556).Text, obj3);
   }
   items1[1] = tmp10Result;
   obj2.children = items1;
@@ -115,7 +115,7 @@ export default function AuthorizeScopes(accountScopes) {
       const obj2 = { text: null };
       const intl2 = tmp5(1114).intl;
       obj2.text = intl2.string(tmp5(1114).t.Ls2XRq);
-      hasItem = tmp10(Scope, obj2);
+      hasItem = closure_4(Scope, obj2);
     }
     items1[1] = hasItem;
     const obj3 = { text: tmp3(), isFake: true };

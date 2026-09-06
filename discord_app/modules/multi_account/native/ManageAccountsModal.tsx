@@ -20,7 +20,7 @@ require = fn;
 function RemoveMultiAccountUserButton(user) {
   user = user.user;
   importDefault = undefined;
-  closure_2 = async function _handlePressRemove(arg0, value) {
+  closure_2 = async function _handlePressRemove() {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -171,50 +171,49 @@ function ManageAccounts(isEditing) {
     disableSorting: !isEditing,
     wrapperStyles: tmp.sortableListView,
     renderRow(user, arg1) {
-      closure_0 = user;
       let obj = { user, onPressUser: null, showActiveAccountLabel: true, leading: null, trailing: null, delayLongPress: null };
       let fn = null;
-      if (!closure_0) {
+      if (!user) {
         fn = () => {
           if (!isEditing) {
-            if (tmp.id !== currentUserId) {
-              if (tmp.tokenStatus === MultiAccountTokenStatus.INVALID) {
+            if (user.id !== currentUserId) {
+              if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
                 navigation.push(constants3.LOGIN);
                 AnalyticsUtilsDefault.track(constants2.LOGIN_VIEWED, { source: "multi_account_invalid_user" });
               } else {
-                MultiAccountActionCreatorsAll.switchAccount(tmp.id, undefined, constants.MANAGE_ACCOUNTS_MODAL);
+                MultiAccountActionCreatorsAll.switchAccount(user.id, undefined, constants.MANAGE_ACCOUNTS_MODAL);
               }
             }
           }
         };
       }
       obj.onPressUser = fn;
-      obj = { component: tmp2(tmp3[23]).View, transitionEnter: true, transitionLeave: true, style, children: null };
+      obj = { component: navigation(multiAccountUsers[23]).View, transitionEnter: true, transitionLeave: true, style, children: null };
       let tmpResult = tmp5;
-      if (closure_0) {
+      if (user) {
         obj = { duration, children: null };
         const obj1 = { user };
-        let tmp2Result = tmp2(tmp3[31]);
-        obj.children = tmp(RemoveMultiAccountUserButton, obj1);
-        tmpResult = tmp(tmp2Result, obj);
+        let tmp2Result = navigation(multiAccountUsers[31]);
+        obj.children = closure_1_18(RemoveMultiAccountUserButton, obj1);
+        tmpResult = closure_1_18(tmp2Result, obj);
       }
       obj.children = tmpResult;
       obj.leading = closure_1_18(isEditing(multiAccountUsers[30]).TransitionGroup, obj);
       let obj2 = { component, transitionEnter: true, transitionLeave: true, transitionAppear: true, style: closure_2.trailingIconContainer, children: null };
-      tmp2Result = tmp2(tmp3[31]);
+      tmp2Result = navigation(multiAccountUsers[31]);
       const obj3 = { duration, style: closure_2.trailingIcon, children: null };
-      if (closure_0) {
-        obj3.children = tmp(tmp6(tmp3[32]).DragIcon, {});
-        tmpResult = tmp(tmp2Result, obj3, "drag");
+      if (user) {
+        obj3.children = closure_1_18(isEditing(multiAccountUsers[32]).DragIcon, {});
+        tmpResult = closure_1_18(tmp2Result, obj3, "drag");
       } else {
         const obj4 = { user };
-        obj3.children = tmp(tmp6(tmp3[29]).AccountStatusIcon, obj4);
-        tmpResult = tmp(tmp2Result, obj3, "status");
+        obj3.children = closure_1_18(isEditing(multiAccountUsers[29]).AccountStatusIcon, obj4);
+        tmpResult = closure_1_18(tmp2Result, obj3, "status");
       }
       obj2.children = tmpResult;
       obj.trailing = closure_1_18(isEditing(multiAccountUsers[30]).TransitionGroup, obj2);
       let num;
-      if (closure_0) {
+      if (user) {
         num = 100;
       }
       obj.delayLongPress = num;
@@ -231,11 +230,11 @@ function ManageAccounts(isEditing) {
     obj3 = { duration, children: null };
     let obj4 = { leading: null, label: null, onPress: null };
     const obj5 = { color: tmp6(tmp3[14]).colors.TEXT_LINK };
-    obj4.leading = tmp8(tmp2(tmp3[34]).CirclePlusIcon, obj5);
+    obj4.leading = closure_18(tmp2(tmp3[34]).CirclePlusIcon, obj5);
     const obj6 = { style: tmp.addAccountLabel, text: null };
     let intl = tmp2(tmp3[18]).intl;
     obj6.text = intl.string(tmp2(tmp3[18]).t.bPP34Q);
-    obj4.label = tmp8(tmp2(tmp3[33]).FormRow.Label, obj6);
+    obj4.label = closure_18(tmp2(tmp3[33]).FormRow.Label, obj6);
     obj4.onPress = function handlePressAddAccount() {
       if (multiAccountUsers.length >= map1) {
         let obj = { title: null, body: null, isDismissable: true };
@@ -251,8 +250,8 @@ function ManageAccounts(isEditing) {
         obj.track(constants2.LOGIN_VIEWED, { source: "multi_account_add_account" });
       }
     };
-    obj3.children = tmp8(tmp2(tmp3[33]).FormRow, obj4);
-    tmp8Result = tmp8(tmp6(tmp3[31]), obj3);
+    obj3.children = closure_18(tmp2(tmp3[33]).FormRow, obj4);
+    tmp8Result = closure_18(tmp6(tmp3[31]), obj3);
     const tmp6Result = tmp6(tmp3[31]);
   }
   obj2.children = tmp8Result;

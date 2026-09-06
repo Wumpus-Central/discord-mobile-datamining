@@ -1,6 +1,7 @@
 // === Module 11628: FeedbackForm ===
 
 // Module 11628 (FeedbackForm)
+import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import FeedbackUtils from "FeedbackUtils" /* 11629 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -38,6 +39,7 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
     if (!obj.isEqual(closure_5, reasons)) {
       _undefined(FeedbackUtils.shuffleProblems(reasons, otherKey));
     }
+    obj = _modDef12;
   }, items);
   const tmp8 = trackOpen(noop.useState({}), 2);
   const first = tmp8[0];
@@ -52,7 +54,7 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
       flag = false;
     }
     const obj = {};
-    const merged = Object.assign(tmp);
+    const merged = Object.assign(first);
     obj.doNotShowAgain = !flag;
     closure_8(obj);
     onFeedbackChanged(first);

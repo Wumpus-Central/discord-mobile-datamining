@@ -45,24 +45,24 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       if (null != firstProfileFrame) {
         obj.profileFrame = firstProfileFrame;
       }
-      if (null != closure_2) {
-        if (firstNameplate(tmp12)) {
-          obj.avatarDecoration = tmp12;
+      if (null != nameplate) {
+        if (firstNameplate(nameplate)) {
+          obj.avatarDecoration = nameplate;
         } else {
-          if (isProfileEffectRecord(tmp12)) {
-            obj.profileEffect = tmp12;
-          } else if (!firstProfileFrame(tmp12)) {
-            if (isProfileFrameRecord(tmp12)) {
-              obj.profileFrame = tmp12;
+          if (isProfileEffectRecord(nameplate)) {
+            obj.profileEffect = nameplate;
+          } else if (!firstProfileFrame(nameplate)) {
+            if (isProfileFrameRecord(nameplate)) {
+              obj.profileFrame = nameplate;
             }
           }
-          obj.nameplate = tmp12;
+          obj.nameplate = nameplate;
         }
       }
       obj = obj(8164);
       obj.setPendingChanges(obj);
     } else {
-      const first = closure_2(product.items, 1)[0];
+      const first = nameplate(tmp3.items, 1)[0];
       if (firstNameplate(first)) {
         let objResult = obj(8164);
         obj = { avatarDecoration: first };
@@ -90,5 +90,6 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
         }
       };
     }
+    tmp3 = product;
   }, items);
 };

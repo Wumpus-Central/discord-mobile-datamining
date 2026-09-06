@@ -96,8 +96,8 @@ function GuildCard(guildIds) {
   if (tmp12Result) {
     const obj6 = { style: tmp.chevron, children: null };
     const obj7 = { color: memo(tmp3[5]).colors.TEXT_SUBTLE, size: "xs" };
-    obj6.children = tmp12(tmp2(tmp3[13]).ChevronLargeRightIcon, obj7);
-    tmp12Result = tmp12(tmp11, obj6);
+    obj6.children = closure_7(tmp2(tmp3[13]).ChevronLargeRightIcon, obj7);
+    tmp12Result = closure_7(closure_5, obj6);
   }
   items6[2] = tmp12Result;
   obj.children = items6;

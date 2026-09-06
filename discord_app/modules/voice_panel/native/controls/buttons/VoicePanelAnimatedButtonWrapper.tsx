@@ -3,6 +3,8 @@
 // Module 17185 (VoicePanelAnimatedButtonWrapper)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import timing from "timing" /* 4561 */;
+import spring from "spring" /* 4974 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 
@@ -85,7 +87,7 @@ export default function AnimatedButtonWrapper(onPressOut) {
         obj.animations = obj;
         return obj;
       };
-      obj = { offsetFromCenter: sharedValue, withSpring: tmp(4974).withSpring, MODE_CHANGE_PHYSICS, withTiming: tmp(4561).withTiming };
+      obj = { offsetFromCenter: sharedValue, withSpring: spring.withSpring, MODE_CHANGE_PHYSICS, withTiming: timing.withTiming };
       fn.__closure = obj;
       fn.__workletHash = 16238937246135;
       fn.__initData = __initData;
@@ -113,7 +115,7 @@ export default function AnimatedButtonWrapper(onPressOut) {
         obj.animations = obj;
         return obj;
       };
-      obj = { withSpring: tmp(4974).withSpring, offsetFromCenter: sharedValue, MODE_CHANGE_PHYSICS, withTiming: tmp(4561).withTiming };
+      obj = { withSpring: spring.withSpring, offsetFromCenter: sharedValue, MODE_CHANGE_PHYSICS, withTiming: timing.withTiming };
       fn.__closure = obj;
       fn.__workletHash = 17504057367727;
       fn.__initData = __initData2;

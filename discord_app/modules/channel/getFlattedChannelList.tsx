@@ -6,15 +6,15 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
 
-export default function getFlattenedChannelList(arg0, arg1) {
-  dependencyMap = arg1;
+export default function getFlattenedChannelList(_categories, channels, arg2) {
+  dependencyMap = channels;
   let fn = arg2;
   if (arg2 === undefined) {
     fn = function l() {
       return true;
     };
   }
-  const mapped = _modDef12(arg0).map((channel) => {
+  const mapped = _modDef12(_categories).map((channel) => {
     if ("null" === channel.channel.id) {
       let items = dependencyMap[channel.channel.id];
     } else {
@@ -22,7 +22,7 @@ export default function getFlattenedChannelList(arg0, arg1) {
     }
     return items;
   });
-  const arr = _modDef12(arg0);
+  const arr = _modDef12(_categories);
   const flattenDeepResult = mapped.flattenDeep();
   return mapped.flattenDeep().filter(fn).value();
 };

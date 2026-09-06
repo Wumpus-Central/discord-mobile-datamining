@@ -80,21 +80,21 @@ export default function SettingsQuestPreviewScreen() {
     } else {
       let completedAt;
       if (stateFromStores != null) {
-        const userStatus = tmp14.userStatus;
+        const userStatus = stateFromStores.userStatus;
         if (userStatus != null) {
           completedAt = userStatus.completedAt;
         }
       }
       let progress;
       if (stateFromStores != null) {
-        const userStatus2 = tmp14.userStatus;
+        const userStatus2 = stateFromStores.userStatus;
         if (userStatus2 != null) {
           progress = userStatus2.progress;
         }
       }
       const _HermesInternal = HermesInternal;
-      const combined = "" + tmp + "-" + tmp13 + "-" + completedAt + "-" + progress;
-      const obj = { questId: tmp };
+      const combined = "" + first + "-" + stateFromStores1 + "-" + completedAt + "-" + progress;
+      const obj = { questId: first };
       return closure_2_10(QuestEmbedPreview.QuestEmbedPreview, obj, combined);
     }
   }, items4);
@@ -117,17 +117,17 @@ export default function SettingsQuestPreviewScreen() {
     obj.page = tmp3;
     const items1 = [obj, , , ];
     obj = { id: "bar", label: null, page: null };
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     obj.label = intl2.string(util.t.uL4oBf);
     obj.page = callback2();
     items1[1] = obj;
     const obj1 = { id: "card", label: null, page: null };
-    const intl3 = tmp(1114).intl;
+    const intl3 = util.intl;
     obj1.label = intl3.string(util.t.MAvIf1);
     obj1.page = callback();
     items1[2] = obj1;
     const obj2 = { id: "embed", label: null, page: null };
-    const intl4 = tmp(1114).intl;
+    const intl4 = util.intl;
     obj2.label = intl4.string(util.t.AswoU2);
     obj2.page = callback1();
     items1[3] = obj2;
@@ -161,10 +161,10 @@ export default function SettingsQuestPreviewScreen() {
   const effect = obj1.useEffect(() => {
     questId = undefined;
     if (params != null) {
-      questId = tmp.questId;
+      questId = params.questId;
     }
     if (null != questId) {
-      closure_3(tmp.questId);
+      closure_3(params.questId);
     }
   }, items7);
   const items8 = [questId];
@@ -177,9 +177,10 @@ export default function SettingsQuestPreviewScreen() {
   const effect2 = obj1.useEffect(() => {
     function listener(quest_id) {
       if (tmp2) {
-        const questPreview = params(first[14]).fetchQuestPreview(tmp);
+        const questPreview = params(first[14]).fetchQuestPreview(questId);
         const obj = params(first[14]);
       }
+      tmp2 = null != questId && quest_id.quest_id === questId;
     }
     const subscription = closure_1(first[15]).subscribe("QUEST_PREVIEW_UPDATE", listener);
     return () => {
@@ -229,12 +230,12 @@ export default function SettingsQuestPreviewScreen() {
     const obj3 = { children: null };
     const obj4 = { style: tmp3.segmentedControlContainer, children: null };
     const obj5 = { state: segmentedControlState };
-    obj4.children = tmp33(tmp(tmp2[17]).SegmentedControl, obj5);
-    const items16 = [tmp33(tmp32, obj4), ];
+    obj4.children = closure_10(tmp(tmp2[17]).SegmentedControl, obj5);
+    const items16 = [closure_10(tmp32, obj4), ];
     const obj6 = { style: tmp3.pagesContainer, onLayout: callback3, children: null };
     const obj7 = { state: segmentedControlState };
-    obj6.children = tmp33(tmp(tmp2[18]).SegmentedControlPages, obj7);
-    items16[1] = tmp33(callback1, obj6);
+    obj6.children = closure_10(tmp(tmp2[18]).SegmentedControlPages, obj7);
+    items16[1] = closure_10(callback1, obj6);
     obj3.children = items16;
     tmp31Result = tmp31(closure_12, obj3);
   }
@@ -242,4 +243,5 @@ export default function SettingsQuestPreviewScreen() {
   items15[2] = closure_10(params(questId[19]).QuestBarPreview, { quest: stateFromStores, isVisible: memo1 });
   obj1.children = items15;
   tmp31Result = tmp31(tmp32, obj1);
+  let obj2 = { style: tmp3.controlBarContainer, children: closure_10(params(questId[16]).MobileQuestPreviewControlBar, { questId, setQuestId: tmp6[1], refreshQuest: callback4 }) };
 };

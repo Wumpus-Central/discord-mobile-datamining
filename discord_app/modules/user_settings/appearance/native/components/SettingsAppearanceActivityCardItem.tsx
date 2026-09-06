@@ -3,10 +3,12 @@
 // Module 15293 (SettingsAppearanceActivityCardItem)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ClipViewDefault from "ClipView" /* 8813 */;
+import ClipView from "ClipView" /* 8813 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+
+const ClipViewDefault = ClipView;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -71,11 +73,11 @@ export default function ActivityCardItem(arg0) {
       obj = { style: shiftedAvatar, children: null };
       if (index !== diff) {
         obj = { cutouts: null, children: null };
-        const point = { shape: tmp3(8813).CutoutShape.Circle, x: tmp3(1178).AVATAR_SIZE_MAP[tmp3(undefined, 1178).AvatarSizes.XSMALL_20] - 4 - 2, y: -2, size: tmp3(1178).AVATAR_SIZE_MAP[tmp3(undefined, 1178).AvatarSizes.XSMALL_20] + 4 };
+        const point = { shape: ClipView.CutoutShape.Circle, x: native.AVATAR_SIZE_MAP[native.AvatarSizes.XSMALL_20] - 4 - 2, y: -2, size: native.AVATAR_SIZE_MAP[native.AvatarSizes.XSMALL_20] + 4 };
         const items = [point];
         obj.cutouts = items;
         obj.children = tmp5;
-        let tmp2Result = tmp2(ClipViewDefault, obj);
+        let tmp2Result = hasOwnProperty(ClipViewDefault, obj);
       } else {
         tmp2Result = tmp5;
       }
@@ -104,8 +106,8 @@ export default function ActivityCardItem(arg0) {
     const obj5 = { animated: true, variant: "text-xxs/semibold", allowFontScaling: false, style: animatedStyles.textNormal, children: null };
     const items6 = ["+", tmp(tmp2[13]).humanizeValue(num3, stateFromStores)];
     obj5.children = items6;
-    obj4.children = tmp6(tmp(tmp2[12]).Text, obj5);
-    tmp8Result = tmp8(tmp7(tmp2[5]).View, obj4);
+    obj4.children = closure_6(tmp(tmp2[12]).Text, obj5);
+    tmp8Result = closure_5(tmp7(tmp2[5]).View, obj4);
     const tmpResult = tmp(tmp2[13]);
   }
   const obj6 = { children: null };

@@ -44,7 +44,7 @@ function TypingIndicatorInner(channel) {
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items1, () => {
     if (null != first) {
       if (canView) {
-        const user = UserStore.getUser(tmp);
+        const user = UserStore.getUser(first);
         if (stateFromStores) {
           let typingIndicatorStyle;
           if (user != null) {
@@ -55,7 +55,7 @@ function TypingIndicatorInner(channel) {
           }
           let customTypingIndicatorConfig = typingIndicatorStyle;
         } else {
-          customTypingIndicatorConfig = TypingStore.getCustomTypingIndicatorConfig(tmp);
+          customTypingIndicatorConfig = TypingStore.getCustomTypingIndicatorConfig(first);
         }
         if (null != customTypingIndicatorConfig) {
           if (null != user) {
@@ -66,7 +66,7 @@ function TypingIndicatorInner(channel) {
             }
             const obj = { config: null, name: null };
             const obj2 = CustomTypingIndicatorUtils;
-            obj.config = obj2.getViewableCustomTypingIndicatorConfig(customTypingIndicatorConfig, channel, tmp, guildEmojis);
+            obj.config = obj2.getViewableCustomTypingIndicatorConfig(customTypingIndicatorConfig, channel, first, guildEmojis);
             obj.name = NicknameUtilsDefault.getName(guildId, channel.id, user);
             return obj;
           }
@@ -181,26 +181,26 @@ function TypingIndicatorInner(channel) {
       tmp27 = callback;
     }
     obj5.onPress = tmp27;
-    let tmp21Result = tmp20(tmp6(tmp2[25]), obj5);
-    const tmp6Result = tmp6(tmp2[25]);
+    let tmp21Result = closure_12(transitionState(tmp2[25]), obj5);
+    const tmp6Result = transitionState(tmp2[25]);
   } else {
     let tmp20Result = null;
     if (null != tmp7Result) {
-      tmp20Result = tmp20(tmp(tmp2[26]).Ellipsis, {});
+      tmp20Result = closure_12(tmp(tmp2[26]).Ellipsis, {});
     }
     const obj6 = { children: null };
     const items7 = [tmp20Result, ];
     const obj7 = { style: tmp15.text, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: tmp7Result };
-    items7[1] = tmp20(tmp(tmp2[27]).Text, obj7);
+    items7[1] = closure_12(tmp(tmp2[27]).Text, obj7);
     obj6.children = items7;
-    tmp21Result = tmp21(closure_13, obj6);
+    tmp21Result = closure_14(closure_13, obj6);
   }
   obj4.children = tmp21Result;
   const items8 = [closure_12(stateFromStores, obj4), ];
   let tmp20Result1 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj8 = { channel, hasTypingText: null != tmp7Result, slowmodeType: sharedValue1.SendMessage };
-    tmp20Result1 = tmp20(tmp6(tmp2[28]), obj8);
+    tmp20Result1 = closure_12(transitionState(tmp2[28]), obj8);
   }
   items8[1] = tmp20Result1;
   obj3.children = items8;
@@ -271,14 +271,14 @@ export default noop.memo((channel) => {
   const memo1 = noop.useMemo(() => {
     let tmp3 = typingUserIds.rateLimitPerUser > 0;
     if (!tmp3) {
-      tmp3 = arr.length > 0;
+      tmp3 = memo.length > 0;
     }
     if (tmp3) {
       tmp3 = !stateFromStores;
     }
     let tmp4;
     if (tmp3) {
-      const obj = { channel: typingUserIds, typingUserIds: arr };
+      const obj = { channel: typingUserIds, typingUserIds: memo };
       tmp4 = obj;
     }
     return tmp4;

@@ -2,6 +2,8 @@
 
 // Module 9757 (TextInput/TextInput)
 import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import ColorUtils from "ColorUtils" /* 4409 */;
 import shared from "shared" /* 4411 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,18 +29,18 @@ const forwardRefResult = noop.forwardRef((style, ref) => {
   obj = { ref, style: null, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   const items = [tmp2.input, style.style];
   obj.style = items;
-  let tmp3Result = tmp3(4411);
+  let tmp3Result = shared;
   obj.keyboardAppearance = tmp3Result.isThemeDark(theme) ? React4.DARK : React4.LIGHT;
   obj.placeholderTextColor = tmp2.placeholderTextColor.color;
-  tmp3Result = tmp3(1115);
+  tmp3Result = PlatformUtils;
   let hexWithOpacityResult = tmp6;
   if (tmp3Result.isAndroid()) {
-    hexWithOpacityResult = tmp3(4409).hexWithOpacity(tmp6, 0.5);
-    const tmp3Result1 = tmp3(4409);
+    hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp6, 0.5);
+    const tmp3Result1 = ColorUtils;
   }
   obj.selectionColor = hexWithOpacityResult;
   const merged1 = Object.assign(merged);
-  return <TextInput ref={arg1} style={null} keyboardAppearance={null} placeholderTextColor={null} selectionColor={null} />;
+  return <TextInput ref={ref} style={null} keyboardAppearance={null} placeholderTextColor={null} selectionColor={null} />;
 });
 forwardRefResult.displayName = "VoidTextInput";
 const size = fn(2);

@@ -136,7 +136,7 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
       }
       let SEARCH = null;
       if ("" !== current) {
-        SEARCH = tmp19.SEARCH;
+        SEARCH = constants3.SEARCH;
       }
       search(current, SEARCH, !flag, limit);
       if (!flag) {
@@ -145,7 +145,6 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
           current.setText(current);
         }
       }
-      tmp19 = constants3;
     }
   }, items5);
   const items6 = [callback2, initialQuery];
@@ -153,11 +152,11 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
     if (!ref2.current) {
       let tmp3 = null != initialQuery;
       if (tmp3) {
-        tmp3 = str.trim().length > 0;
+        tmp3 = initialQuery.trim().length > 0;
       }
       if (tmp3) {
         tmp.current = true;
-        callback2(str, false);
+        callback2(initialQuery, false);
       }
     }
   }, items6);
@@ -169,7 +168,7 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
   const items7 = [resultQuery, ref];
   const effect3 = onPressGIF.useEffect(() => {
     if ("" !== resultQuery) {
-      const suggestions = GIFPickerActionCreatorsAll.fetchSuggestions(tmp);
+      const suggestions = GIFPickerActionCreatorsAll.fetchSuggestions(resultQuery);
     }
     const current = ref.current;
     let text;

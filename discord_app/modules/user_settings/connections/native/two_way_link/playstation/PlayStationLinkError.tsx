@@ -20,14 +20,14 @@ export const PlayStationLinkError = function PlayStationLinkError(arg0) {
   const navigation = obj.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
   if (errorCode === AbortCodes.UNDER_MINIMUM_AGE) {
-    const intl2 = tmp(1114).intl;
-    let stringResult = intl2.string(tmp(1114).t["3dIn2A"]);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t["3dIn2A"]);
   } else {
-    const intl = tmp(1114).intl;
-    stringResult = intl.string(tmp(1114).t.qE9nqE);
+    const intl = util.intl;
+    stringResult = intl.string(util.t.qE9nqE);
   }
   obj = { title: null, body: null, onClose: null, onRetry: null };
-  const intl3 = tmp(1114).intl;
+  const intl3 = util.intl;
   obj.title = intl3.string(util.t.eY3qHd);
   obj.body = stringResult;
   obj.onClose = onClose;

@@ -18,7 +18,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx");
 
-export default noop.memo(noop.forwardRef(function MessagesFlashList(listItemHeight, ref) {
+export default noop.memo(noop.forwardRef(function MessagesFlashList(listItemHeight, arg1) {
   ({ data, insetEnd } = listItemHeight);
   listItemHeight = listItemHeight.listItemHeight;
   const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -33,14 +33,14 @@ export default noop.memo(noop.forwardRef(function MessagesFlashList(listItemHeig
   const renderFooter = data.renderFooter;
   const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ({ accessibilityLabel, handleScrollAnimated } = listItemHeight);
-  ref = listRefHappeningNow.useRef(null);
-  let tmp2 = listItemHeight(listItemSuggestedFriendHeight[3])(data, { listItemHeight });
+  const ref = listRefHappeningNow.useRef(null);
+  const tmp2 = listItemHeight(listItemSuggestedFriendHeight[3])(data, { listItemHeight });
   data = tmp2.listData;
   const friendsHeaderIndex = tmp2.friendsHeaderIndex;
   const extraData = tmp2.friendsHeaderOffset;
   const listHeaderHeight = tmp2.listHeaderHeight;
   let items = [listHeaderHeight];
-  const imperativeHandle = listRefHappeningNow.useImperativeHandle(ref, () => ({
+  const imperativeHandle = listRefHappeningNow.useImperativeHandle(arg1, () => ({
     scrollToTop() {
       let flag = arg0;
       if (arg0 === undefined) {
@@ -110,12 +110,11 @@ export default noop.memo(noop.forwardRef(function MessagesFlashList(listItemHeig
     if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
       const obj = { listRef: listRefHappeningNow };
       return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
-    } else if (useMessagesData.MessagesDataHeader.EmptyState === tmp) {
+    } else if (useMessagesData.MessagesDataHeader.EmptyState === renderHeader) {
       return jsx(MessagesItemEmptyStateDefault, {});
     } else {
       return null;
     }
-    tmp = renderHeader;
   }, items3);
   const ListFooterComponent = listRefHappeningNow.useMemo(() => {
     let tmp = null;

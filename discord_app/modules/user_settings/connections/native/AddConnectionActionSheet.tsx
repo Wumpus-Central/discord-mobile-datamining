@@ -2,7 +2,9 @@
 
 // Module 14957 (AddConnectionActionSheet)
 import Constants from "Constants" /* 1074 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
 import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 1921 */;
+import shared from "shared" /* 4411 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import TableRow from "TableRow" /* 5605 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -38,7 +40,7 @@ function AddApplicationIdentityTableRow(application) {
   let tmp7Result = null;
   if (null != iconSource) {
     obj = { source: iconSource, style: tmp4.icon, disableColor: true };
-    tmp7Result = tmp7(tmp5(1178).Icon, obj);
+    tmp7Result = closure_5(tmp5(1178).Icon, obj);
   }
   obj.icon = tmp7Result;
   obj.trailing = closure_5(require("TableRow").TableRow.Arrow, {});
@@ -106,8 +108,7 @@ export default function AddConnectionActionSheet() {
         icon: null,
         trailing: null
       };
-      tmp2(1396);
-      const tmp2Result = tmp2(4411);
+      const tmp2Result = shared;
       obj = { source: tmp2Result.makeSource(tmp2Result.isThemeDark(closure_0) ? icon.darkPNG : icon.lightPNG), disableColor: true };
       obj.icon = hasOwnProperty(native.Icon, obj);
       obj.trailing = hasOwnProperty(TableRow.TableRow.Arrow, {});

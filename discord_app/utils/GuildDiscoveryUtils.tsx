@@ -10,7 +10,7 @@ import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
-let closure_11 = async function _startLurking(arg0, value) {
+let closure_11 = async function _startLurking(arg0) {
   if (1 === tmp5) {
     if (arg0 === 1) {
       c8 = 3;
@@ -142,11 +142,11 @@ function makeDiscoverableGuild(body) {
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, premium_subscription_count: obj.premiumSubscriptionCount, preferred_locale: obj.preferredLocale, discovery_splash: obj.discoverySplash, emojis: obj.emojis, emoji_count: obj.emojiCount, stickers: obj.stickers, sticker_count: obj.stickerCount, keywords: obj.keywords } = body);
   return obj;
 }
-let closure_13 = async function _getDiscoverableGuild(guild_ids) {
+let closure_13 = async function _getDiscoverableGuild() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -226,7 +226,7 @@ let closure_13 = async function _getDiscoverableGuild(guild_ids) {
     }
   })();
 };
-let closure_14 = async function _fetchPublicDiscoveryGuild(arg0, value) {
+let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -361,8 +361,8 @@ export const trackGuildDiscoveryGetFeaturedGuildsFailed = function trackGuildDis
   AnalyticsUtilsDefault.track(constants.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: category_id.categoryId });
 };
 export const trackSearchResultsViewed = function trackSearchResultsViewed(guildResults) {
-  ({ loadId, searchId, query, analyticsContext, categoryId, isTagSearch } = guildResults);
-  const obj = { search_type: isTagSearch ? tmp.GUILD_DISCOVERY_TAG : tmp.GUILD_DISCOVERY, load_id: loadId, search_id: searchId, total_results: null, guild_ids: null, query: null, location: null, category_id: null };
+  ({ loadId, searchId, query, analyticsContext, categoryId, isTagSearch } = guildResults.guildResults);
+  const obj = { search_type: isTagSearch ? constants2.GUILD_DISCOVERY_TAG : constants2.GUILD_DISCOVERY, load_id: loadId, search_id: searchId, total_results: null, guild_ids: null, query: null, location: null, category_id: null };
   let length = null;
   if (undefined !== guildResults.guildResults) {
     length = guildResults.length;

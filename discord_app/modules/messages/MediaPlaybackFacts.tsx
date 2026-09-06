@@ -12,13 +12,13 @@ export const rememberMediaPlaybackFacts = function rememberMediaPlaybackFacts(id
   if (null != id) {
     if ("" !== id) {
       if (map.has(id)) {
-        obj2.delete(id);
-      } else if (obj2.size >= 512) {
-        const iter2 = obj2.keys().next();
+        map.delete(id);
+      } else if (map.size >= 512) {
+        const iter2 = map.keys().next();
         if (!iter2.done) {
-          obj2.delete(iter2.value);
+          map.delete(iter2.value);
         }
-        const iter = obj2.keys();
+        const iter = map.keys();
       }
       let size = id.size;
       if (size == null) {
@@ -30,7 +30,7 @@ export const rememberMediaPlaybackFacts = function rememberMediaPlaybackFacts(id
         duration_secs = null;
       }
       obj.fileDurationSec = duration_secs;
-      const result = obj2.set(id, obj);
+      const result = map.set(id, obj);
     }
   }
 };

@@ -4,6 +4,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import KeyboardUIStore from "KeyboardUIStore" /* 1481 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
@@ -39,25 +40,25 @@ export default function ForumComposerModal(parentChannelId) {
   function handleClose(arg0) {
     if (null != stateFromStores) {
       if (arg0) {
-        let tmp52Result = tmp52(10251);
+        let tmp52Result = ForumComposerModalActionCreators;
         let result = tmp52Result.closeCreateForumPostModal();
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
         UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);
       } else {
-        tmp52Result = tmp52(1481);
+        tmp52Result = KeyboardUIStore;
         let obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
         tmp52Result.setKeyboardType(obj);
         const draft = DraftStore.getDraft(parentChannelId, DraftType.ChannelMessage);
         let threadSettings = DraftStore.getThreadSettings(parentChannelId);
         if (threadSettings == null) {
-          threadSettings = obj3.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(tmp4));
+          threadSettings = DraftStore.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(parentChannelId));
         }
         if (isEdit) {
           let result1 = ForumComposerModalActionCreators.closeCreateForumPostModal();
-          DraftActionCreatorsDefault.clearDraft(tmp4, DraftType.ThreadSettings);
-          DraftActionCreatorsDefault.clearDraft(tmp4, DraftType.ChannelMessage);
-          UploadAttachmentActionCreatorsDefault.clearAll(tmp4, DraftType.ChannelMessage);
+          DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
+          DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
+          UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);
         } else {
           if (draft.length <= 0) {
             if (arr2.length <= 0) {
@@ -97,7 +98,6 @@ export default function ForumComposerModal(parentChannelId) {
           };
           actions_AlertActionCreatorsDefault.show(obj);
         }
-        obj3 = DraftStore;
       }
     }
   }
@@ -111,8 +111,8 @@ export default function ForumComposerModal(parentChannelId) {
   const items2 = [ChannelStore];
   const items3 = [threadId];
   const stateFromStores1 = parentChannelId(isEdit[16]).useStateFromStores(items2, () => ChannelStore.getChannel(threadId), items3);
-  const tmp6 = threadId(isEdit[17])(parentChannelId);
   let obj3 = parentChannelId(isEdit[16]);
+  const tmp6 = threadId(isEdit[17])(parentChannelId);
   const items4 = [ForumPostMessagesStore];
   const stateFromStores2 = parentChannelId(isEdit[16]).useStateFromStores(items4, () => {
     let firstMessage = null;
@@ -148,7 +148,7 @@ export default function ForumComposerModal(parentChannelId) {
           const obj1 = { parentChannel: stateFromStores, thread: stateFromStores1, message: stateFromStores2, threadSettingsDraft: tmp6, onClose: handleClose, isEdit };
           obj.children = jsx(tmp2(tmp3[24]), { parentChannel: stateFromStores, thread: stateFromStores1, message: stateFromStores2, threadSettingsDraft: tmp6, onClose: handleClose, isEdit });
           obj.children = <stateFromStores style={tmp.container} importantForAccessibility={null}>{null}</stateFromStores>;
-          tmp11Result = tmp11(tmp4(tmp3[15]).AnalyticsLocationProvider, obj);
+          tmp11Result = jsx(tmp4(tmp3[15]).AnalyticsLocationProvider, { style: tmp.container, importantForAccessibility: null, children: null });
         } else {
           tmp11Result = null;
         }

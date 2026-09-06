@@ -26,8 +26,8 @@ export default function useInterval(current, arg1) {
       return () => clearInterval(ref2.current);
     } else if (null !== ref.current) {
       const _clearInterval = clearInterval;
-      clearInterval(tmp2.current);
-      tmp2.current = null;
+      clearInterval(ref.current);
+      ref.current = null;
     }
   }, items1);
 };

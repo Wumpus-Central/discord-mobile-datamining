@@ -120,6 +120,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
           }
           obj = { kind: "result", status };
           tmp8 = obj;
+          tmp7 = obj;
         }
       }
     }

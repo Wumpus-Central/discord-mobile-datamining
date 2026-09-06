@@ -33,7 +33,7 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     obj.errorReason = type;
     tmp27(obj);
     return true;
-  } else if (code === tmp31.TOO_MANY_ATTACHMENTS) {
+  } else if (code === constants.TOO_MANY_ATTACHMENTS) {
     obj = { title: null, body: null };
     const intl5 = util.intl;
     obj.title = intl5.string(util.t.wOr6hB);
@@ -42,7 +42,7 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     obj.body = intl6.formatToPlainString(util.t["qqyp/e"], obj1);
     AlertActionCreatorsDefault.show(obj);
     return true;
-  } else if (code === tmp31.ENTITY_EMPTY) {
+  } else if (code === constants.ENTITY_EMPTY) {
     let obj2 = { title: null, body: null };
     const intl3 = util.intl;
     obj2.title = intl3.string(util.t.B3vFdU);
@@ -50,7 +50,7 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     obj2.body = intl4.string(util.t["9ZpT2C"]);
     AlertActionCreatorsDefault.show(obj2);
     return true;
-  } else if (code === tmp31.INVALID_FILE_ASSET) {
+  } else if (code === constants.INVALID_FILE_ASSET) {
     obj2 = AlertActionCreatorsDefault;
     const obj3 = { title: null, body: null };
     const intl = util.intl;

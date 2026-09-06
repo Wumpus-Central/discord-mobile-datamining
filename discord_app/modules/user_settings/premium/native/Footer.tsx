@@ -36,18 +36,17 @@ export default function Footer(showSubscribeButton) {
     const obj1 = { style: tmp.button, children: null };
     const obj2 = { text: tmp7, variant: "primary", size: "lg", onPress: tmp6, grow: true };
     obj1.children = React4(components_Button_Button.Button, obj2);
-    items1[1] = React4(tmp9, obj1);
+    items1[1] = React4(View, obj1);
     obj.children = items1;
-    tmp8Result = tmp8(hasOwnProperty, obj);
+    tmp8Result = timestampProducer(hasOwnProperty, obj);
   }
   const items2 = [tmp8Result, ];
   let easterEggSpacing = null;
-  const tmp14 = React4;
   if (!showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: _modDef13495 });
+  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13495 });
   obj.children = items2;
   return timestampProducer(View, obj);
 };

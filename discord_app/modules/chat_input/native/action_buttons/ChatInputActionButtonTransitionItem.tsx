@@ -2,9 +2,12 @@
 
 // Module 12246 (ChatInputActionButtonTransitionItem)
 import native from "native" /* 4271 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import timing from "timing" /* 4561 */;
 import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12247 */;
 import noop from "module_19" /* 19 */;
+
+const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 function FadeTransitionItem(state) {
@@ -21,20 +24,20 @@ function FadeTransitionItem(state) {
   const items = [state, sharedValue, cleanup];
   const effect = noop.useEffect(() => {
     if (state === native.TransitionStates.YEETED) {
-      let tmpResult = tmp(4561);
+      let tmpResult = timing;
       const fn = function t(arg0) {
         if (true === arg0) {
           state(sharedValue[5]).runOnJS(cleanup)();
           const obj = state(sharedValue[5]);
         }
       };
-      let obj = { runOnJS: tmp(4296).runOnJS, cleanup };
+      let obj = { runOnJS: ReanimatedRexport.runOnJS, cleanup };
       fn.__closure = obj;
       fn.__workletHash = 10965161938750;
       fn.__initData = __initData;
       const result = sharedValue.set(tmpResult.withTiming(0, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings", fn));
     } else {
-      tmpResult = tmp(4561);
+      tmpResult = timing;
       const result1 = sharedValue.set(tmpResult.withTiming(1, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings"));
     }
   }, items);
@@ -107,10 +110,10 @@ export default function ChatInputActionButtonTransitionItem(bounceEnterDelayMs) 
   }
   if (withBounce) {
     let obj = { state, cleanup, bounceEnterDelayMs: num, children };
-    let tmpResult = tmp(BounceTransitionItem, obj);
+    let tmpResult = <BounceTransitionItem state={state} cleanup={cleanup} bounceEnterDelayMs={num}>{children}</BounceTransitionItem>;
   } else {
     obj = { state, cleanup, children };
-    tmpResult = tmp(FadeTransitionItem, obj);
+    tmpResult = <FadeTransitionItem state={state} cleanup={cleanup}>{children}</FadeTransitionItem>;
   }
   return tmpResult;
 };

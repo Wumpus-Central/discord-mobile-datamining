@@ -2,7 +2,9 @@
 
 // Module 11293 (QuestOrbMultiplierUtils)
 import PerksStateUtils from "PerksStateUtils" /* 1377 */;
+import user from "user" /* 1379 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
+import XboxGamePassPerksExperiment from "XboxGamePassPerksExperiment" /* 7556 */;
 import size from "module_2" /* 2 */;
 
 let QuestOrbMultiplierSource = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
@@ -26,10 +28,10 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       if (perks != null) {
         perks = perks.perks;
       }
-      const perkSource = PerksStateUtils.getPerkSource(perks, tmp4(1379).Perk.MORE_QUEST_ORBS);
+      const perkSource = PerksStateUtils.getPerkSource(perks, user.Perk.MORE_QUEST_ORBS);
       let hasItem;
       if (perkSource != null) {
-        hasItem = perkSource.includes(tmp4(1379).PerkSource.SOURCE_NITRO);
+        hasItem = perkSource.includes(user.PerkSource.SOURCE_NITRO);
       }
       if (hasItem) {
         let NITRO = obj.NITRO;
@@ -38,14 +40,14 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
         if (tmp4Result.getIsXboxGamePassPerksEnabled("getQuestOrbMultiplierSource")) {
           let hasItem1;
           if (perkSource != null) {
-            hasItem1 = perkSource.includes(tmp4(1379).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+            hasItem1 = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
           }
           NITRO = null;
           if (hasItem1) {
             NITRO = obj.CREPE;
           }
         }
-        tmp4Result = tmp4(7556);
+        tmp4Result = XboxGamePassPerksExperiment;
       }
       return NITRO;
     }

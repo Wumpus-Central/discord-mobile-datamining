@@ -35,8 +35,9 @@ export default function CustomTypingIndicatorGlyph(config) {
     items = map.emojis;
     map = items.map;
     obj.children = map((emoji, index) => jsx(CustomTypingIndicatorAnimatedEmojiDefault, { emoji, index, emojiCount: map.emojis.length, animation, size }, index));
-    tmp3(View, obj);
+    <View gap={PX_4} />;
   } else {
-    return tmp3(tmp2(1178).Ellipsis, {});
+    return jsx(tmp2(1178).Ellipsis, {});
   }
+  obj3 = map(1392);
 };

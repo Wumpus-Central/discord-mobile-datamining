@@ -48,6 +48,7 @@ export default function ShopThisLookMarketingCoachmark(visible) {
     if (!ref.current) {
       closure_1_1(callback.AUTO_DISMISS);
     }
+    const obj = visible(onDismiss[7]);
   }) : undefined, items3);
   const items4 = [visible, onButtonPress, callback1];
   const memo = onPress.useMemo(() => {

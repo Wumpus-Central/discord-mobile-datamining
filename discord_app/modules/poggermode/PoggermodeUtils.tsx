@@ -17,7 +17,7 @@ let closure_6 = items.map((item) => {
 });
 let result = size.fileFinishedImporting("modules/poggermode/PoggermodeUtils.tsx");
 
-export const getComboShakeIntensity = function getComboShakeIntensity(userCombo, LEVEL_4) {
+export const getComboShakeIntensity = function getComboShakeIntensity(userCombo) {
   LEVEL_3 = LEVEL_4;
   if (LEVEL_4 === undefined) {
     LEVEL_3 = LEVEL_3.LEVEL_3;
@@ -34,13 +34,13 @@ export const getComboShakeIntensity = function getComboShakeIntensity(userCombo,
     num = Math.min(100000, arr2.reduce((acc, item, index) => {
       if (c2 > item) {
         if (index + 1 === length.length) {
-          return tmp4[index];
+          return dependencyMap[index];
         } else {
-          return (tmp - item) / (tmp6[index + 1] - item) * (tmp4[index + 1] - tmp5) + tmp5;
+          return (c2 - item) / (tmp6[index + 1] - item) * (dependencyMap[index + 1] - tmp5) + tmp5;
         }
       } else {
         let tmp2 = acc;
-        if (tmp === item) {
+        if (c2 === item) {
           tmp2 = dependencyMap[index];
         }
         return tmp2;
@@ -60,13 +60,13 @@ export const getComboPercentage = function getComboPercentage(value) {
     num = Math.min(1, arr2.reduce((acc, item, index) => {
       if (c2 > item) {
         if (index + 1 === length.length) {
-          return tmp4[index];
+          return dependencyMap[index];
         } else {
-          return (tmp - item) / (tmp6[index + 1] - item) * (tmp4[index + 1] - tmp5) + tmp5;
+          return (c2 - item) / (tmp6[index + 1] - item) * (dependencyMap[index + 1] - tmp5) + tmp5;
         }
       } else {
         let tmp2 = acc;
-        if (tmp === item) {
+        if (c2 === item) {
           tmp2 = dependencyMap[index];
         }
         return tmp2;

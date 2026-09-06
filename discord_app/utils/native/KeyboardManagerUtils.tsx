@@ -2,6 +2,7 @@
 
 // Module 1874 (KeyboardManagerUtils)
 import _mod17 from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import NativeKeyboardModuleDefault from "NativeKeyboardModule" /* 1875 */;
 import size from "module_2" /* 2 */;
 
@@ -18,6 +19,7 @@ export const dismissGlobalKeyboard = function dismissGlobalKeyboard() {
     const KeyboardManager = NativeModules.KeyboardManager;
     const result1 = KeyboardManager.dismissGlobalKeyboard();
   }
+  obj = PlatformUtils;
 };
 export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAndDismissKeyboard() {
   if (obj.isAndroid()) {
@@ -26,6 +28,7 @@ export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAnd
       const result = obj2.clearCurrentFocusAndDismissKeyboard();
     }
   }
+  obj = PlatformUtils;
 };
 export const onKeyboardChanged = function onKeyboardChanged(open) {
   if (obj.isAndroid()) {
@@ -41,4 +44,5 @@ export const onKeyboardChanged = function onKeyboardChanged(open) {
       onKeyboardChanged(globalThis.open);
     }
   }
+  obj = PlatformUtils;
 };

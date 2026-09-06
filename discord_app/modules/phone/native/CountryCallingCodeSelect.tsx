@@ -17,9 +17,9 @@ let closure_9 = createStyles.createStyles((arg0) => {
   const space = nativeDefault.space;
   obj.paddingHorizontal = arg0 ? space.PX_24 : space.PX_12;
   obj.paddingTop = nativeDefault.space.PX_16;
-  const space2 = tmp(576).space;
+  const space2 = nativeDefault.space;
   obj = { container: obj, searchFieldContainer: null, paddingBottom: arg0 ? space2.PX_24 : space2.PX_16 };
-  obj = { paddingBottom: tmp(576).space.PX_16 };
+  obj = { paddingBottom: nativeDefault.space.PX_16 };
   obj.searchFieldContainer = obj;
   return obj;
 });
@@ -54,23 +54,22 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
-      let str = first;
       let startsWithResult = 0 === first.length;
       if (!startsWithResult) {
         let str2 = tmp3.country.code;
         let replaced = str2.replace(/\+|\s/g, "");
-        startsWithResult = replaced.startsWith(str.replace(/\+|\s/g, ""));
+        startsWithResult = replaced.startsWith(first.replace(/\+|\s/g, ""));
       }
       if (!startsWithResult) {
         let tmp8 = fuzzysearchDefault;
         let str3 = tmp3.country.name;
-        let formatted = str.toLowerCase();
+        let formatted = first.toLowerCase();
         startsWithResult = tmp8(formatted, str3.toLowerCase());
       }
       if (!startsWithResult) {
         let tmp13 = fuzzysearchDefault;
         let str4 = tmp3.translatedName;
-        let formatted1 = str.toLowerCase();
+        let formatted1 = first.toLowerCase();
         startsWithResult = tmp13(formatted1, str4.toLowerCase());
       }
       if (startsWithResult) {
@@ -107,12 +106,13 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
       obj = { source: tmp(tmp2[15]), text: null };
       const intl = tmp13(tmp2[16]).intl;
       obj.text = intl.string(tmp13(tmp2[16]).t.wEHnxW);
-      let tmp12Result = tmp12(tmp(tmp2[14]), obj);
+      let tmp12Result = closure_7(tmp(tmp2[14]), obj);
       const tmpResult = tmp(tmp2[14]);
     }
     items2[1] = tmp12Result;
     obj.children = items2;
     return closure_8(View, obj);
   }
-  tmp12Result = tmp12(tmp(tmp2[17]), { sections: memo1.sections, renderItem: callback, itemSize: onClose(first[9])(), estimatedListSize: "windowSize", keyboardShouldPersistTaps: "always" });
+  tmp12Result = closure_7(tmp(tmp2[17]), { sections: memo1.sections, renderItem: callback, itemSize: onClose(first[9])(), estimatedListSize: "windowSize", keyboardShouldPersistTaps: "always" });
+  const tmp7 = onClose(first[9])();
 };

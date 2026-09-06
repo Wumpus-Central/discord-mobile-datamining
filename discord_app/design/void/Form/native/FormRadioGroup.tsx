@@ -26,12 +26,11 @@ export default function FormRadioGroup(arg0) {
     let tmp13Result = null;
     if (null != hint) {
       const obj2 = { style: { marginTop: 8 }, children: hint };
-      tmp13Result = tmp13(tmp12, obj2);
+      tmp13Result = hasOwnProperty(View, obj2);
     }
     items[1] = tmp13Result;
     obj.children = items;
-    let tmp11Result = timestampProducer(tmp12, obj);
-    tmp13 = hasOwnProperty;
+    let tmp11Result = timestampProducer(View, obj);
   } else {
     obj = { title, accessibilityRole: "radiogroup", accessibilityLabel: title, hint, icon };
     const merged1 = Object.assign(merged);

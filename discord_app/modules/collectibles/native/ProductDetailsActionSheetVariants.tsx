@@ -2,6 +2,7 @@
 
 // Module 13150 (ProductDetailsActionSheetVariants)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import Pressables from "Pressables" /* 5123 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7133 */;
 import useProductPurchaseState from "useProductPurchaseState" /* 8842 */;
@@ -15,9 +16,9 @@ function VariantOption(onPress) {
   let obj = useProductPurchaseState;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   if (isPurchased) {
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { variantLabel: variant.name };
-    let name = intl.formatToPlainString(tmp2(1114).t["SfQB4+"], obj);
+    let name = intl.formatToPlainString(util.t["SfQB4+"], obj);
   } else {
     name = variant.name;
   }
@@ -27,7 +28,7 @@ function VariantOption(onPress) {
   obj1.style = items;
   if (isPurchased) {
     const obj2 = { variant };
-    isPurchased = tmp4(VariantCheckmark, obj2);
+    isPurchased = React4(VariantCheckmark, obj2);
   }
   obj1.children = isPurchased;
   obj.children = React4(View, obj1);
@@ -36,8 +37,7 @@ function VariantOption(onPress) {
 function VariantCheckmark(variant) {
   const colors = nativeDefault.colors;
   const tmp = useIsVariantColorLightDefault(variant.variant);
-  const tmp2 = React4;
-  return tmp2(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
+  return React4(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -57,7 +57,7 @@ let closure_7 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   const obj = { variantOption: size, variantOptionInner: null };
   size.borderColor = arg0 ? colors.BUTTON_OUTLINE_PRIMARY_TEXT : colors.BORDER_STRONG;
-  const size1 = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: tmp(576).radii.round, borderWidth: 1, borderColor: tmp(576).colors.BACKGROUND_BASE_LOW };
+  const size1 = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
   obj.variantOptionInner = size1;
   return obj;
 });
@@ -78,13 +78,13 @@ export default function ProductDetailsActionSheetVariants(disabled) {
     obj = { style: tmp.container, children: null };
     obj = { style: tmp.headerRow, children: null };
     const obj1 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(tmp3[7]).intl;
-    obj1.children = intl.string(tmp2(tmp3[7]).t.wbgaj6);
-    const items = [closure_4(tmp2(tmp3[11]).Text, obj1), ];
+    const intl = selectedVariantIndex(tmp3[7]).intl;
+    obj1.children = intl.string(selectedVariantIndex(tmp3[7]).t.wbgaj6);
+    const items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj1), ];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
       const obj2 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: tmp.text, children: product.variants[selectedVariantIndex].variantLabel };
-      tmp7Result = tmp7(tmp2(tmp3[11]).Text, obj2);
+      tmp7Result = closure_4(selectedVariantIndex(tmp3[11]).Text, obj2);
     }
     items[1] = tmp7Result;
     obj.children = items;
@@ -104,7 +104,7 @@ export default function ProductDetailsActionSheetVariants(disabled) {
     });
     items1[1] = closure_4(View, obj3);
     obj.children = items1;
-    tmp5Result = tmp5(tmp6, obj);
+    tmp5Result = closure_5(View, obj);
   }
   return tmp5Result;
 };

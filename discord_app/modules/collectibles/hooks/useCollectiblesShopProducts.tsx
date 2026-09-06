@@ -284,21 +284,21 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
     if ("error" !== fetchState) {
       str = "error";
       if (!tmp2) {
-        if (!tmp5) {
+        if (!flag) {
           if ("success" !== tmp) {
-            if (null == tmp7) {
+            if (null == memo) {
               let str5 = "loading";
             } else {
               str5 = "ready";
-              if (tmp5) {
+              if (flag) {
                 str5 = "ready";
               }
             }
             str = str5;
           } else {
             str = "error";
-            if (null != tmp7) {
-              if (tmp5) {
+            if (null != memo) {
+              if (flag) {
                 str = "error";
               }
             }
@@ -464,7 +464,7 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
     }
     return obj;
   }, items12);
-  let tmp8 = stateFromStoresObject3(stateFromStoresObject1);
+  const tmp8 = stateFromStoresObject3(stateFromStoresObject1);
   let tmp9 = stateFromStoresObject3(stateFromStoresObject3);
   const items13 = [memo, stateFromStoresObject, stateFromStoresObject1, memo1, stateFromStoresObject2, stateFromStoresObject3, tmp8, tmp9, flag, flag2];
   return memo.useMemo(() => {
@@ -501,7 +501,6 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
       }
       let tmp23 = tmp17;
       let result1 = null;
-      let tmp24 = flag;
       if (flag) {
         result1 = null;
         if (null != tmp12) {
@@ -514,7 +513,6 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
       let obj1 = { productFetchState: null, productAbsent: null, collectionFetchState: null, collectionAbsent: null, needsCategory: null, collectionId: null, product: null, category: null };
       obj1.productFetchState = tmp7;
       let tmp29 = result1;
-      let tmp32 = computeEntryState;
       obj1.productAbsent = set.has(tmp3);
       obj1.collectionFetchState = tmp15;
       let hasItem = "" !== tmp9;
@@ -522,11 +520,11 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
         hasItem = set2.has(tmp9);
       }
       obj1.collectionAbsent = hasItem;
-      obj1.needsCategory = tmp24;
+      obj1.needsCategory = flag;
       obj1.collectionId = tmp9;
       obj1.product = tmp23;
       obj1.category = tmp29;
-      obj.state = tmp32(obj1);
+      obj.state = computeEntryState(obj1);
       obj[tmp3] = obj;
       continue;
     }

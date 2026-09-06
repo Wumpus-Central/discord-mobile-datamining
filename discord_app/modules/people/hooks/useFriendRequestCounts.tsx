@@ -24,7 +24,7 @@ export const useIncomingFriendRequestCount = function useIncomingFriendRequestCo
     return pendingCount + obj2.getPendingIncomingCount();
   });
 };
-export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCount(items1) {
+export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCount() {
   let tmp = items1;
   if (items1 === undefined) {
     const items = [globalThis.o, ];

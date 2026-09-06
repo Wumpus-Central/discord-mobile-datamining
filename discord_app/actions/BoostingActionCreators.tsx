@@ -9,7 +9,7 @@ import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 4460 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
 require = fn;
-let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0, value) {
+let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -96,7 +96,7 @@ let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0, value) {
     }
   }
 };
-let closure_9 = async function _fetchAppliedGuildBoostsForUser(arg0, value) {
+let closure_9 = async function _fetchAppliedGuildBoostsForUser() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -193,12 +193,12 @@ let closure_11 = async function _fetchGuildBoostSlots() {
   const obj1 = { url: constants.USER_GUILD_BOOST_SLOTS, oldFormErrors: true, rejectWithError: null };
   obj1.rejectWithError = HTTPUtils.rejectWithMigratedError();
   await HTTP.get(obj1);
-  const body = arg1.body;
+  const body = value.body;
   closure_128_0 = body.map((subscription_id) => closure_1_5.createFromServer(subscription_id, subscriptionById.getSubscriptionById(subscription_id.subscription_id)));
   closure_129_1(closure_129_2[6]).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS", guildBoostSlots: closure_128_0 });
   return closure_128_0;
 };
-let closure_12 = async function _fetchAppliedBoostsCooldown(arg0, value) {
+let closure_12 = async function _fetchAppliedBoostsCooldown() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -275,7 +275,7 @@ let closure_12 = async function _fetchAppliedBoostsCooldown(arg0, value) {
     }
   }
 };
-let closure_13 = async function _applyToGuild(arg0, value) {
+let closure_13 = async function _applyToGuild(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -384,7 +384,7 @@ let closure_13 = async function _applyToGuild(arg0, value) {
     }
   }
 };
-let closure_14 = async function _unapplyFromGuild(arg0, value) {
+let closure_14 = async function _unapplyFromGuild(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -464,7 +464,8 @@ let closure_15 = async function _cancelGuildBoostSlot() {
   closure_2 = tmp2;
   closure_1 = tmp5;
   const HTTP = HTTPUtils.HTTP;
-  closure_129_0 = await HTTP.post({ url: Endpoints.USER_GUILD_BOOST_SLOT_CANCEL(closure_0), oldFormErrors: true, rejectWithError: true });
+  await HTTP.post({ url: Endpoints.USER_GUILD_BOOST_SLOT_CANCEL(closure_0), oldFormErrors: true, rejectWithError: true });
+  closure_129_0 = value;
   closure_129_1 = closure_130_5.createFromServer(closure_129_0.body, closure_130_6.getSubscriptionById(closure_129_0.body.subscription_id));
   closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: closure_129_1 });
   return closure_129_1;
@@ -473,7 +474,8 @@ let closure_16 = async function _uncancelGuildBoostSlot() {
   closure_2 = tmp2;
   closure_1 = tmp5;
   const HTTP = HTTPUtils.HTTP;
-  closure_129_0 = await HTTP.post({ url: Endpoints.USER_GUILD_BOOST_SLOT_UNCANCEL(closure_0), oldFormErrors: true, rejectWithError: true });
+  await HTTP.post({ url: Endpoints.USER_GUILD_BOOST_SLOT_UNCANCEL(closure_0), oldFormErrors: true, rejectWithError: true });
+  closure_129_0 = value;
   closure_129_1 = closure_130_5.createFromServer(closure_129_0.body, closure_130_6.getSubscriptionById(closure_129_0.body.subscription_id));
   closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: closure_129_1 });
   return closure_129_1;

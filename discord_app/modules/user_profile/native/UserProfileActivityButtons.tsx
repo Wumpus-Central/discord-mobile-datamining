@@ -9,14 +9,16 @@ import LinkingDefault from "Linking" /* 4255 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4767 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import isStreamingDefault from "isStreaming" /* 8259 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8393 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9252 */;
 import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 9533 */;
 import GamesActionCreatorsDefault from "GamesActionCreators" /* 11765 */;
 import getActivityChannelIdDefault from "getActivityChannelId" /* 13033 */;
-import getActivityJoinabilityDefault from "getActivityJoinability" /* 13034 */;
+import getActivityJoinability from "getActivityJoinability" /* 13034 */;
 import getStreamURLDefault from "getStreamURL" /* 13036 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -31,6 +33,8 @@ import RelationshipStore from "RelationshipStore" /* 4209 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
 import VoiceStateStore from "VoiceStateStore" /* 4579 */;
+
+const getActivityJoinabilityDefault = getActivityJoinability;
 
 require = fn;
 const Constants = fn(1074);
@@ -111,16 +115,16 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(13034).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(13034).ActivityJoinability.JOINED) {
-        const intl2 = tmp(1114).intl;
-        let stringResult = intl2.string(tmp(1114).t.DPfdsq);
+    if (stateFromStores !== getActivityJoinability.ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === getActivityJoinability.ActivityJoinability.JOINED) {
+        const intl2 = util.intl;
+        let stringResult = intl2.string(util.t.DPfdsq);
       } else {
-        const intl = tmp(1114).intl;
-        stringResult = intl.string(tmp(1114).t.VJlc0S);
+        const intl = util.intl;
+        stringResult = intl.string(util.t.VJlc0S);
       }
       obj = { text: stringResult, variant: "active", disabled: null, onPress: null };
-      JOINED = tmp(13034).ActivityJoinability.JOINED;
+      JOINED = getActivityJoinability.ActivityJoinability.JOINED;
       obj.disabled = stateFromStores === JOINED;
       obj.onPress = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
@@ -128,7 +132,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
         const joined = obj.join(obj);
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
       };
-      jsx(tmp(4975).Button, { text: stringResult, variant: "active", disabled: null, onPress: null });
+      jsx(components_Button_Button.Button, { text: stringResult, variant: "active", disabled: null, onPress: null });
     }
   }
   return tmp3;
@@ -146,7 +150,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
       obj.text = intl.formatToPlainString(util.t.LEgD7t, obj);
       obj = { size: native.Icon.Sizes.SMALL, source: sync_id(8142), disableColor: true, style: tmp.icon };
       obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8142), disableColor: true, style: tmp.icon });
-      obj.onPress = asyncGeneratorStep(async (arg0, value) => {
+      obj.onPress = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -306,10 +310,10 @@ export const VoiceChannelButtons = function VoiceChannelButtons(channel) {
           rootNavigationRef.goBack();
         }
         if (c3) {
-          let tmp5Result = tmp5(8393);
+          let tmp5Result = StageChannelModalActionCreators;
           tmp5Result.connectAndOpen(channel);
         } else {
-          tmp5Result = tmp5(4767);
+          tmp5Result = PrivateChannelCallUtils;
           tmp5Result.openGuildVoiceModal(channel, newestAnalyticsLocation);
         }
       };
@@ -356,6 +360,15 @@ export const ConnectPlatformButton = function ConnectPlatformButton(type) {
           return obj.openUserSettings(obj);
         }
       });
+      let obj = {
+        platformType: _undefined.type,
+        location: newestAnalyticsLocation,
+        onClose() {
+          type(newestAnalyticsLocation[44]);
+          const obj = { screen: constants.CONNECTIONS };
+          return obj.openUserSettings(obj);
+        }
+      };
     };
     return jsx(tmp4(tmp3[24]).Button, { platform: value.name });
   }
@@ -372,15 +385,15 @@ export const CustomActivityButton = function CustomActivityButton(index) {
     if (index < activity.buttons.length) {
       let obj = index;
       if (activity(index[45])(activity)) {
-        const intl = tmp3(obj[25]).intl;
-        let stringResult = intl.string(tmp3(obj[25]).t.I6JG46);
+        const intl = require("util").intl;
+        let stringResult = intl.string(require("util").t.I6JG46);
       } else {
         stringResult = activity.buttons[index];
       }
       obj = {
         text: stringResult,
         variant: "secondary",
-        onPress: onAction(function*(arg0, value) {
+        onPress: onAction(function*() {
               if (c5 === 2) {
                 c5 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -489,7 +502,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
       jsx(require("components/Button/Button").Button, {
         text: stringResult,
         variant: "secondary",
-        onPress: onAction(function*(arg0, value) {
+        onPress: onAction(function*() {
               if (c5 === 2) {
                 c5 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");

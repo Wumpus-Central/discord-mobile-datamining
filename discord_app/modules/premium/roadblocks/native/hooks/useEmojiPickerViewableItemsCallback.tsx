@@ -36,7 +36,6 @@ export default function useEmojiPickerViewableItemsChanged(arg0) {
           let item = nextResult.item;
           let isSectionNitroLocked;
           let tmp2 = nextResult;
-          let tmp3 = ref;
           if (item != null) {
             isSectionNitroLocked = item.isSectionNitroLocked;
           }
@@ -48,7 +47,7 @@ export default function useEmojiPickerViewableItemsChanged(arg0) {
             }
             num = num2;
           }
-          tmp3.current = Math.max(0, ref.current + num);
+          ref.current = Math.max(0, ref.current + num);
           continue;
         }
         closure_0();

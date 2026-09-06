@@ -22,13 +22,12 @@ function SettingsEmoji(emoji) {
   obj = { fastImageStyle: { height: 24, width: 24 }, src: url, name: null, adjustsFontSizeToFit: true, textEmojiStyle: null };
   let str = "";
   const tmp = closure_7();
-  const tmp4 = jsx;
   if (null == emoji.id) {
     str = emoji.surrogates;
   }
   obj.name = str;
   obj.textEmojiStyle = tmp.textEmoji;
-  return tmp4(EmojiDefault, obj);
+  return jsx(EmojiDefault, { fastImageStyle: { height: 24, width: 24 }, src: url, name: null, adjustsFontSizeToFit: true, textEmojiStyle: null });
 }
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const EmojiIntention = fn(1374).EmojiIntention;
@@ -67,7 +66,7 @@ const pressable = SettingBuilders.createPressable({
   onPress: function onPressSetting() {
     require("openEmojiPickerActionSheet");
     let obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
-    _require = asyncGeneratorStep(async (arg0, value) => {
+    _require = asyncGeneratorStep(async (arg0) => {
       if (constants === 2) {
         constants = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

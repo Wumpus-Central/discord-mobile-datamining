@@ -1,6 +1,7 @@
 // === Module 16683: useSearchScreenError ===
 
 // Module 16683 (useSearchScreenError)
+import util from "util" /* 1114 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import _modDef9625 from "module_9625" /* 9625 */;
 import SearchUtils from "SearchUtils" /* 12340 */;
@@ -28,8 +29,8 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
     anyErrorMessage = stateFromStores.getAnyErrorMessage();
   }
   if (anyErrorMessage == null) {
-    const intl = tmp(tmp2[6]).intl;
-    anyErrorMessage = intl.string(tmp(tmp2[6]).t.uvDZBZ);
+    const intl = require("util").intl;
+    anyErrorMessage = intl.string(require("util").t.uvDZBZ);
   }
   ref = anyErrorMessage.useRef(null);
   const items1 = [stateFromStores, anyErrorMessage];
@@ -57,16 +58,16 @@ export const useMessageTabCountsErrorText = function useMessageTabCountsErrorTex
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, closure_6, searchResultsQuery);
     if (SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId)) {
-      if (null != obj2.getTotalCount(searchTabFetchId)) {
+      if (null != SearchMessageStore.getTotalCount(searchTabFetchId)) {
         return null;
       } else {
-        const error = obj2.getError(searchTabFetchId);
+        const error = SearchMessageStore.getError(searchTabFetchId);
         let tmp5 = null;
         if (null != error) {
           let anyErrorMessage = error.getAnyErrorMessage();
           if (anyErrorMessage == null) {
-            const intl = tmp2(1114).intl;
-            anyErrorMessage = intl.string(tmp2(1114).t.uvDZBZ);
+            const intl = util.intl;
+            anyErrorMessage = intl.string(util.t.uvDZBZ);
           }
           tmp5 = anyErrorMessage;
         }

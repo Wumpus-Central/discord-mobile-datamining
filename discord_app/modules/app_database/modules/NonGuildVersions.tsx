@@ -47,6 +47,7 @@ class NonGuildVersions {
             }
             const result1 = closure_1_1(1986).nonGuildVersionsTransaction(database);
             result1.delete("initial_guild_id");
+            const obj4 = closure_1_1(1986);
           });
         }
       }, 10 * closure_1(tmp2[6]).Millis.SECOND));
@@ -56,7 +57,7 @@ class NonGuildVersions {
 }
 const prototype = NonGuildVersions.prototype;
 prototype["getCommittedVersions"] = function getCommittedVersions() {
-  return (async (arg0, value) => {
+  return (async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -180,6 +181,7 @@ if (isCacheEnabled.isCacheEnabled()) {
         }
         const result1 = closure_1_1(1986).nonGuildVersionsTransaction(database);
         result1.delete("initial_guild_id");
+        const obj4 = closure_1_1(1986);
       });
     }
   }, 10 * DurationsDefault.Millis.SECOND));

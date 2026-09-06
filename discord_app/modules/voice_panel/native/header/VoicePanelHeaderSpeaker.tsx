@@ -2,6 +2,7 @@
 
 // Module 17118 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
@@ -111,6 +112,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     } else {
       toggleAudio(channelId, isConnectedToVoiceChannel);
     }
+    obj = PlatformUtils;
   }, items4);
   let tmp3Result = tmp3(tmp[16]);
   const items5 = [disabled];
@@ -125,13 +127,13 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
         let tmp9 = closure_7;
         let tmp5 = closure_7;
         if (!closure_7) {
-          tmp5 = stateFromStores2 !== tmp(tmp2[22]).RouteTypes.SPEAKER;
+          tmp5 = stateFromStores2 !== isConnectedToVoiceChannel(style[22]).RouteTypes.SPEAKER;
         }
         if (!tmp5) {
           obj = { label: null, iconSource: null, showIconFirst: false, action: null };
-          let intl = tmp(tmp2[23]).intl;
-          obj.label = intl.string(tmp(tmp2[23]).t.gvQIzx);
-          obj.iconSource = channelId(tmp2[24]);
+          let intl = isConnectedToVoiceChannel(style[23]).intl;
+          obj.label = intl.string(isConnectedToVoiceChannel(style[23]).t.gvQIzx);
+          obj.iconSource = channelId(style[24]);
           obj.action = function action() {
             const AudioRoutePicker = closure_1_6.AudioRoutePicker;
             let toggleSpeakerResult;
@@ -143,13 +145,13 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
           items.push(obj);
         }
         if (!tmp9) {
-          tmp9 = stateFromStores2 !== tmp(tmp2[22]).RouteTypes.RECEIVER;
+          tmp9 = stateFromStores2 !== isConnectedToVoiceChannel(style[22]).RouteTypes.RECEIVER;
         }
         if (!tmp9) {
           obj = { label: null, iconSource: null, showIconFirst: false, action: null };
-          let intl2 = tmp(tmp2[23]).intl;
-          obj.label = intl2.string(tmp(tmp2[23]).t.wwTN1g);
-          obj.iconSource = channelId(tmp2[25]);
+          let intl2 = isConnectedToVoiceChannel(style[23]).intl;
+          obj.label = intl2.string(isConnectedToVoiceChannel(style[23]).t.wwTN1g);
+          obj.iconSource = channelId(style[25]);
           obj.action = function action() {
             const AudioRoutePicker = closure_1_6.AudioRoutePicker;
             let toggleSpeakerResult;
@@ -161,9 +163,9 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
           items.push(obj);
         }
         const obj1 = { label: null, iconSource: null, showIconFirst: false, action: null };
-        const intl3 = tmp(tmp2[23]).intl;
-        obj1.label = intl3.string(tmp(tmp2[23]).t.dnI0AL);
-        obj1.iconSource = channelId(tmp2[26]);
+        const intl3 = isConnectedToVoiceChannel(style[23]).intl;
+        obj1.label = intl3.string(isConnectedToVoiceChannel(style[23]).t.dnI0AL);
+        obj1.iconSource = channelId(style[26]);
         obj1.action = function action() {
           const result = isConnectedToVoiceChannel(style[21]).showAudioOutputSelector(channelId, items);
         };
@@ -229,8 +231,6 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
       const items = [closure_2_14(closure_18, obj), ];
       obj = { style, ref, children: null };
       const tmp3 = _objectWithoutProperties(tmp, closure_3);
-      const tmp4 = value2;
-      const tmp5 = __initData;
       const obj1 = { ref: tmp.ref };
       const tmp11 = NativeViewDefault;
       const merged = Object.assign(tmp3);
@@ -254,7 +254,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
       obj.children = closure_2_14(VoicePanelIconButtonDefault, obj1);
       items[1] = closure_2_14(tmp11, obj);
       obj2.children = items;
-      return tmp4(tmp5, obj2);
+      return value2(__initData, obj2);
     }
     tmp3Result = tmp3(tmp[20]);
     if (!tmp3Result.isAndroid()) {
@@ -273,4 +273,5 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
   } else {
     return null;
   }
+  const obj4 = isConnectedToVoiceChannel(style[16]);
 });

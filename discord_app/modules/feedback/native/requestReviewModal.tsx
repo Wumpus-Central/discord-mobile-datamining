@@ -6,7 +6,7 @@ import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_6 = async function _showAndroidRatingRequest(arg0, value) {
+let closure_6 = async function _showAndroidRatingRequest() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

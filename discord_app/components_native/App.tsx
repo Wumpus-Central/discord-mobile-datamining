@@ -4,6 +4,7 @@
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import VoiceEngineStreamingManagerDefault from "VoiceEngineStreamingManager" /* 4701 */;
 import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 4961 */;
+import IosImageTypesManagerDefault from "IosImageTypesManager" /* 5160 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7756 */;
 import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 7760 */;
@@ -37,7 +38,6 @@ import noop from "module_19" /* 19 */;
 import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14394 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const IosImageTypesManagerDefault = tmp(5160);
 const require = fn;
 const NativeModules = fn(17).NativeModules;
 const AudioManagerStore = fn(9086);
@@ -93,13 +93,12 @@ export default function App() {
     SessionAdManagerDefault.initialize();
     VoiceEngineStreamingManagerDefault.initialize();
     TouchEventAnalyticsManagerDefault.initialize();
-    const tmp29 = stateFromStores;
     if (obj26.isIOS()) {
       IosImageTypesManagerDefault.initialize();
       const tmpResult = IosImageTypesManagerDefault;
     }
     obj26 = stateFromStores(1115);
-    const result = tmp29(12782).initializeRouteManagerIfNeeded();
+    const result = stateFromStores(12782).initializeRouteManagerIfNeeded();
     return () => {
       closure_1_1(14442).terminate();
       const obj = closure_1_1(14442);

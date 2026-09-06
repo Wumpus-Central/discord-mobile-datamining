@@ -105,7 +105,7 @@ export default function ReferralProgramShareActionSheet() {
       const index = arr.indexOf(id.id);
       const items = [...arr];
       if (-1 === index) {
-        items.push(id.id);
+        arr = items.push(id.id);
       } else {
         items.splice(index, 1);
       }
@@ -153,15 +153,15 @@ export default function ReferralProgramShareActionSheet() {
       c5 = 3;
     } else if (arg0 === 1) {
       c5 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
-      closure_129_1 = arg1;
+      closure_129_1 = value;
       v2(false);
       stateFromStores(first[23]).openLazy(closure_0(first[25])(first[24], first.paths), "referral-program-share-action-sheet", { selectedUsers: closure_129_0, trialCreationResult: closure_129_1 });
       c3 = 0;
       stateFromStores(first[23]);
     }
-    return arg1;
+    return value;
   });
   const items9 = [analyticsLocations];
   closure_15 = memo.useCallback(function() {

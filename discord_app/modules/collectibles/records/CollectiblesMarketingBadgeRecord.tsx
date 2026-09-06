@@ -15,14 +15,13 @@ prototype["fromServer"] = function fromServer(arg0) {
   const merged = Object.assign(arg0);
   ({ dismissible_content: obj.dismissibleContent, ref_target_background: obj.refTargetBackground, badge_icon: obj.badgeIcon, badge_text: obj.badgeText, show_hover_gradient: obj.showHoverGradient } = arg0);
   if (typeof prototype === "function") {
-    obj = Object.create(tmp.prototype);
+    obj = Object.create(prototype.prototype);
     obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BADGE;
     ({ dismissibleContent: tmp3.dismissibleContent, version: tmp3.version, refTargetBackground: tmp3.refTargetBackground, badgeIcon: tmp3.badgeIcon, badgeText: tmp3.badgeText, showHoverGradient: tmp3.showHoverGradient } = obj);
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = prototype;
 };
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx");
 

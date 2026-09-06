@@ -15,6 +15,9 @@ import ShieldUserIcon from "ShieldUserIcon" /* 9752 */;
 import StickerIcon from "StickerIcon" /* 10114 */;
 import StarIcon from "StarIcon" /* 10235 */;
 import HeadphonesIcon from "HeadphonesIcon" /* 12530 */;
+import _modDef13322 from "module_13322" /* 13322 */;
+import _modDef13331 from "module_13331" /* 13331 */;
+import _modDef13332 from "module_13332" /* 13332 */;
 import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13417 */;
 import _modDef13502 from "module_13502" /* 13502 */;
 import _modDef13524 from "module_13524" /* 13524 */;
@@ -26,6 +29,9 @@ import _modDef13530 from "module_13530" /* 13530 */;
 import _modDef13531 from "module_13531" /* 13531 */;
 import _modDef13532 from "module_13532" /* 13532 */;
 import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 13533 */;
+import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 13537 */;
+import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 13538 */;
+import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 13539 */;
 import noop from "module_19" /* 19 */;
 import SortedGuildStore from "SortedGuildStore" /* 5438 */;
 
@@ -91,68 +97,67 @@ export default function GuildBoostingUpsell(arg0) {
   }
   obj = { style: tmp.root, children: null };
   obj = { style: tmp.header, children: null };
-  obj1 = { style: tmp.imgPremiumGuild, source: tmp7(13322) };
+  obj1 = { style: tmp.imgPremiumGuild, source: _modDef13322 };
   const items1 = [React5(React4, obj1), , , ];
   obj2 = { style: tmp.logoPremiumGuild, source: null };
   const tmp8 = useThemeDefault();
-  const tmp9 = FractionalPremiumStates;
   if (tmp2Result.isThemeDark(tmp8)) {
-    let tmp7Result = tmp7(13331);
+    let tmp7Result = _modDef13331;
   } else {
-    tmp7Result = tmp7(13332);
+    tmp7Result = _modDef13332;
   }
   obj2.source = tmp7Result;
   items1[1] = React5(React4, obj2);
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj3.children = intl.string(util.t.hw6WTd);
   items1[2] = React5(Text_Text.Text, obj3);
   const obj4 = { style: tmp.cardText, variant: "text-md/medium", children: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj4.children = intl2.string(util.t.K5jBdG);
   items1[3] = React5(Text_Text.Text, obj4);
   obj.children = items1;
   const items2 = [React6(React3, obj), , , , , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj5.children = intl3.string(util.t.RvfRTB);
   items2[1] = React5(Text_Text.Text, obj5);
   const obj6 = { style: tmp.features, features: null };
-  tmp7Result = tmp7(9391);
+  tmp7Result = PremiumFeatureListDefault;
   obj6.features = FEATURES_PREMIUM_GUILD_USER();
   items2[2] = React5(tmp7Result, obj6);
   const obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = util.intl;
   obj7.children = intl4.string(util.t["/pVhjb"]);
   items2[3] = React5(Text_Text.Text, obj7);
   const obj8 = { style: tmp.features, features: null };
   const obj9 = { icon: null, label: null, IconComponent: null, color: null };
   tmp2Result = shared;
   obj9.icon = _modDef13528;
-  const intl5 = tmp2(1114).intl;
+  const intl5 = util.intl;
   obj9.label = intl5.string(util.t.Ts7BVI);
   obj9.IconComponent = ReactionIcon.ReactionIcon;
   obj9.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
   const items3 = [obj9, , , , ];
   const obj10 = { icon: _modDef13529, label: null, IconComponent: null, color: null };
-  const intl6 = tmp2(1114).intl;
+  const intl6 = util.intl;
   obj10.label = intl6.string(util.t.QcJbt6);
   obj10.IconComponent = StickerIcon.StickerIcon;
   obj10.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
   items3[1] = obj10;
   const obj11 = { icon: _modDef13530, label: null, color: "#4173da", IconComponent: null };
-  const intl7 = tmp2(1114).intl;
+  const intl7 = util.intl;
   obj11.label = intl7.string(util.t.rFNkf5);
   obj11.IconComponent = HeadphonesIcon.HeadphonesIcon;
   items3[2] = obj11;
   const obj12 = { icon: _modDef13531, label: null, IconComponent: null, color: null };
-  const intl8 = tmp2(1114).intl;
+  const intl8 = util.intl;
   obj12.label = intl8.string(util.t["BpjjS/"]);
   obj12.IconComponent = UploadIcon.UploadIcon;
   obj12.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
   items3[3] = obj12;
   const obj13 = { icon: _modDef13532, label: null, IconComponent: null, color: null };
-  const intl9 = tmp2(1114).intl;
+  const intl9 = util.intl;
   obj13.label = intl9.string(util.t["9g5Lgb"]);
   obj13.IconComponent = StarIcon.StarIcon;
   obj13.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_GOLD;
@@ -163,8 +168,8 @@ export default function GuildBoostingUpsell(arg0) {
   let tmp13Result = null;
   if (subscriptionPlansLoaded) {
     tmp13Result = null;
-    if (fractionalState === tmp9.NONE) {
-      tmp13Result = tmp13(tmp7(13537), {});
+    if (fractionalState === FractionalPremiumStates.NONE) {
+      tmp13Result = React5(PremiumSubscriptionPricingUpsellDefault, {});
     }
   }
   const items4 = [tmp13Result, , ];
@@ -173,47 +178,48 @@ export default function GuildBoostingUpsell(arg0) {
     tmp13Result = null;
     if (subscriptionPlansLoaded) {
       const obj15 = { onLearnMorePremium, style: tmp.subscriptionUpsell };
-      tmp13Result = tmp13(tmp7(13539), obj15);
+      tmp13Result = React5(PremiumSubscriptionUpsellDefault, obj15);
     }
     items4[2] = tmp13Result;
     obj14.children = items4;
-    items2[5] = tmp11(tmp12, obj14);
+    items2[5] = React6(React3, obj14);
     obj.children = items2;
-    tmp11Result = tmp11(tmp12, obj);
+    tmp11Result = React6(React3, obj);
   } else {
     const obj16 = { children: null };
     if (stateFromStores) {
       const obj17 = { style: tmp.cardText, variant: "text-md/medium", children: null };
-      const intl12 = tmp2(1114).intl;
-      obj17.children = intl12.string(tmp2(1114).t.WRzob8);
-      const items5 = [tmp13(tmp2(4556).Text, obj17), , ];
+      const intl12 = util.intl;
+      obj17.children = intl12.string(util.t.WRzob8);
+      const items5 = [React5(Text_Text.Text, obj17), , ];
       const obj18 = { style: null, variant: "text-md/bold", children: null };
       const items6 = [tmp.cardText];
       obj18.style = items6;
-      const intl13 = tmp2(1114).intl;
-      obj18.children = intl13.string(tmp2(1114).t.j4bXcm);
-      items5[1] = tmp13(tmp2(4556).Text, obj18);
+      const intl13 = util.intl;
+      obj18.children = intl13.string(util.t.j4bXcm);
+      items5[1] = React5(Text_Text.Text, obj18);
       const obj19 = { style: tmp.guildList };
-      items5[2] = tmp13(tmp7(13538), obj19);
+      items5[2] = React5(GuildBoostingGuildListDefault, obj19);
       obj16.children = items5;
       let tmp19 = obj16;
     } else {
       const obj20 = { style: tmp.imgNoGuilds, source: guildSubscriptionNoGuildsSource };
-      const items7 = [tmp13(tmp14, obj20), , ];
+      const items7 = [React5(React4, obj20), , ];
       const obj21 = { style: null, variant: "text-md/bold", children: null };
       const items8 = [tmp.cardText];
       obj21.style = items8;
-      const intl10 = tmp2(1114).intl;
-      obj21.children = intl10.string(tmp2(1114).t.FHm4bZ);
-      items7[1] = tmp13(tmp2(4556).Text, obj21);
+      const intl10 = util.intl;
+      obj21.children = intl10.string(util.t.FHm4bZ);
+      items7[1] = React5(Text_Text.Text, obj21);
       const obj22 = { style: tmp.cardText, variant: "text-md/medium", children: null };
-      const intl11 = tmp2(1114).intl;
-      obj22.children = intl11.string(tmp2(1114).t.PSLiiu);
-      items7[2] = tmp13(tmp2(4556).Text, obj22);
+      const intl11 = util.intl;
+      obj22.children = intl11.string(util.t.PSLiiu);
+      items7[2] = React5(Text_Text.Text, obj22);
       obj16.children = items7;
       tmp19 = obj16;
     }
-    tmp11Result = tmp11(tmp12, tmp19);
+    tmp11Result = React6(React3, tmp19);
   }
+  const tmp7Result1 = PremiumFeatureListDefault;
 };
 export { FEATURES_PREMIUM_GUILD_USER };

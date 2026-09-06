@@ -5,7 +5,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7330 */;
 
 const require = fn;
-function isChannelSpoilerGated(channel, ChannelSpoilerAgreeStore, ChannelStore) {
+function isChannelSpoilerGated(channel) {
   let obj = ChannelSpoilerAgreeStore;
   if (ChannelSpoilerAgreeStore === undefined) {
     obj = ChannelSpoilerAgreeStore;
@@ -56,25 +56,25 @@ export const useGetSpoilerGatingChannelId = function useGetSpoilerGatingChannelI
   const items1 = [stateFromStores];
   return require("initialize").useStateFromStores(items, () => {
     if (ChannelSpoilerAgreeStore !== undefined) {
-      if (obj3 !== undefined) {
+      if (ChannelStore !== undefined) {
         let id1 = null;
-        if (null != obj) {
-          if (obj.isSpoilerChannel()) {
+        if (null != stateFromStores) {
+          if (stateFromStores.isSpoilerChannel()) {
             let id = null;
-            if (!obj2.didAgree(obj.id)) {
-              id = obj.id;
+            if (!ChannelSpoilerAgreeStore.didAgree(stateFromStores.id)) {
+              id = stateFromStores.id;
             }
             id1 = id;
           } else {
             id1 = null;
-            if (null != obj.parent_id) {
-              const channel = obj3.getChannel(obj.parent_id);
+            if (null != stateFromStores.parent_id) {
+              const channel = ChannelStore.getChannel(stateFromStores.parent_id);
               id1 = null;
               if (null != channel) {
                 id1 = null;
                 if (channel.isSpoilerChannel()) {
                   id1 = null;
-                  if (!obj2.didAgree(channel.id)) {
+                  if (!ChannelSpoilerAgreeStore.didAgree(channel.id)) {
                     id1 = channel.id;
                   }
                 }

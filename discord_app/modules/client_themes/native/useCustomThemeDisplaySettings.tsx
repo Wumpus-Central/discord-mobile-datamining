@@ -2,10 +2,10 @@
 
 // Module 4494 (useCustomThemeDisplaySettings)
 import initialize from "initialize" /* 504 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
 import _slicedToArray from "module_32" /* 32 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
 
-const ClientThemesUtils = tmp(1229);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");

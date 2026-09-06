@@ -118,7 +118,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
       if (0 !== stateFromStoresArray.length) {
         if (1 === stateFromStoresArray.length) {
           obj = { autoStatusCutout: true, status, style, size, user: stateFromStoresArray[0], guildId: "a", animate, accessible, accessibilityLabel };
-          let tmp5 = closure_5(tmp(1178).Avatar, obj);
+          let tmp5 = closure_5(channel(1178).Avatar, obj);
         } else {
           obj = { status, style, size, animate, users: stateFromStoresArray, pileSizeOverride: pileSizeOverride.pileSizeOverride, accessible, accessibilityLabel };
           tmp5 = closure_5(FacepileGroupDMAvatar, obj);
@@ -127,6 +127,6 @@ export default function GroupDMAvatar(pileSizeOverride) {
       return tmp5;
     }
   }
-  tmp5 = closure_5(tmp(1178).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
+  tmp5 = closure_5(channel(1178).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
 };
 export { FacepileGroupDMAvatar };

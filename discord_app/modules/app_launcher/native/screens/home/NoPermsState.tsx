@@ -6,6 +6,7 @@ import util from "util" /* 1114 */;
 import shared from "shared" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9409 */;
 import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12051 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,12 +29,12 @@ export default function EmptyState() {
   const tmp = closure_7();
   let obj = shared;
   const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12114 : 12115);
-  const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(tmp2(9409).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
+  const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };
   const items = [hasOwnProperty(React4, obj), ];
   const obj1 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.string(util.t.uDnXXj);
   items[1] = hasOwnProperty(Text_Text.Text, obj1);
   obj.children = items;

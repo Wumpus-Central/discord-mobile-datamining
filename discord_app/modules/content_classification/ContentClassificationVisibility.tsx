@@ -36,9 +36,9 @@ export const useContentClassificationVisibility = function useContentClassificat
   initialize;
   [][0] = UserStore;
   if (null != data) {
-    const obj = { type: tmp(5113).ContentClassificationVariant.MINIMAL, data };
-    const result = tmp(5113).contentClassificationToAgeRestriction(obj);
-    if (result === tmp(5115).AgeRestrictionStatus.ADULT) {
+    const obj = { type: ContentClassificationToAgeRestriction.ContentClassificationVariant.MINIMAL, data };
+    const result = ContentClassificationToAgeRestriction.contentClassificationToAgeRestriction(obj);
+    if (result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT) {
       if (true !== tmp4) {
         let DISPLAY = obj.BLOCK_UNDERAGE;
       } else {

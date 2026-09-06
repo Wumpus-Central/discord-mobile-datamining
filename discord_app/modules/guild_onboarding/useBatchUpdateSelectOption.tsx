@@ -70,7 +70,6 @@ export default function useBatchUpdateSelectOption(guildId) {
         if (roleIds1 == null) {
           roleIds1 = [];
         }
-        const tmp10 = importDefault;
         const differenceResult = _modDef12.difference(roleIds, roleIds1);
         let roleIds2;
         if (found != null) {
@@ -83,9 +82,9 @@ export default function useBatchUpdateSelectOption(guildId) {
         if (roleIds3 == null) {
           roleIds3 = [];
         }
-        let differenceResult1 = tmp10(12).difference(roleIds2, roleIds3);
+        let differenceResult1 = _modDef12.difference(roleIds2, roleIds3);
         let items2 = differenceResult;
-        const tmp10Result = tmp10(12);
+        const tmp10Result = _modDef12;
       }
       closure_0 = roleIds;
       if (singleSelect.singleSelect) {
@@ -103,7 +102,6 @@ export default function useBatchUpdateSelectOption(guildId) {
           if (channelIds1 == null) {
             channelIds1 = [];
           }
-          const tmp21 = importDefault;
           const differenceResult2 = _modDef12.difference(channelIds, channelIds1);
           let channelIds2;
           if (found1 != null) {
@@ -116,9 +114,9 @@ export default function useBatchUpdateSelectOption(guildId) {
           if (channelIds3 == null) {
             channelIds3 = [];
           }
-          let differenceResult3 = tmp21(12).difference(channelIds2, channelIds3);
+          let differenceResult3 = _modDef12.difference(channelIds2, channelIds3);
           let items1 = differenceResult2;
-          const tmp21Result = tmp21(12);
+          const tmp21Result = _modDef12;
         }
         if (obj12.hasNotSetUpChannelOptIn(tmp)) {
           const push = items1.push;

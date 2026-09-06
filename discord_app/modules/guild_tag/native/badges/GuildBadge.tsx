@@ -57,163 +57,163 @@ export const GuildBadge = function GuildBadge(arg0) {
     let obj = { primaryTintColor, secondaryTintColor };
     const merged1 = Object.assign(merged);
     return jsx(GuildBadgeSword.GuildBadgeSword, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.WATER_DROP === badge) {
+  } else if (GuildTagBadgeKind.WATER_DROP === badge) {
     obj = { primaryTintColor };
     const merged2 = Object.assign(merged);
     return jsx(GuildBadgeWaterDrop.GuildBadgeWaterDrop, { primaryTintColor });
-  } else if (tmp2.SKULL === badge) {
+  } else if (GuildTagBadgeKind.SKULL === badge) {
     const obj1 = { primaryTintColor };
     const merged3 = Object.assign(merged);
     return jsx(GuildBadgeSkull.GuildBadgeSkull, { primaryTintColor });
-  } else if (tmp2.TOADSTOOL === badge) {
+  } else if (GuildTagBadgeKind.TOADSTOOL === badge) {
     const obj2 = { primaryTintColor, secondaryTintColor };
     const merged4 = Object.assign(merged);
     return jsx(GuildBadgeToadstool.GuildBadgeToadstool, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.MOON === badge) {
+  } else if (GuildTagBadgeKind.MOON === badge) {
     const obj3 = { primaryTintColor };
     const merged5 = Object.assign(merged);
     return jsx(GuildBadgeMoon.GuildBadgeMoon, { primaryTintColor });
-  } else if (tmp2.LIGHTNING === badge) {
+  } else if (GuildTagBadgeKind.LIGHTNING === badge) {
     const obj4 = { primaryTintColor };
     const merged6 = Object.assign(merged);
     return jsx(GuildBadgeLightning.GuildBadgeLightning, { primaryTintColor });
-  } else if (tmp2.LEAF === badge) {
+  } else if (GuildTagBadgeKind.LEAF === badge) {
     const obj5 = { primaryTintColor };
     const merged7 = Object.assign(merged);
     return jsx(GuildBadgeLeaf.GuildBadgeLeaf, { primaryTintColor });
-  } else if (tmp2.HEART === badge) {
+  } else if (GuildTagBadgeKind.HEART === badge) {
     const obj6 = { primaryTintColor };
     const merged8 = Object.assign(merged);
     return jsx(GuildBadgeHeart.GuildBadgeHeart, { primaryTintColor });
-  } else if (tmp2.FIRE === badge) {
+  } else if (GuildTagBadgeKind.FIRE === badge) {
     const obj7 = { primaryTintColor };
     const merged9 = Object.assign(merged);
     return jsx(GuildBadgeFire.GuildBadgeFire, { primaryTintColor });
-  } else if (tmp2.COMPASS === badge) {
+  } else if (GuildTagBadgeKind.COMPASS === badge) {
     const obj8 = { primaryTintColor, secondaryTintColor };
     const merged10 = Object.assign(merged);
     return jsx(GuildBadgeCompass.GuildBadgeCompass, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.CROSSHAIRS === badge) {
+  } else if (GuildTagBadgeKind.CROSSHAIRS === badge) {
     const obj9 = { primaryTintColor, secondaryTintColor };
     const merged11 = Object.assign(merged);
     return jsx(GuildBadgeCrosshairs.GuildBadgeCrosshairs, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.FLOWER === badge) {
+  } else if (GuildTagBadgeKind.FLOWER === badge) {
     const obj10 = { primaryTintColor, secondaryTintColor };
     const merged12 = Object.assign(merged);
     return jsx(GuildBadgeFlower.GuildBadgeFlower, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.FORCE === badge) {
+  } else if (GuildTagBadgeKind.FORCE === badge) {
     const obj11 = { primaryTintColor, secondaryTintColor };
     const merged13 = Object.assign(merged);
     return jsx(GuildBadgeForce.GuildBadgeForce, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.GEM === badge) {
+  } else if (GuildTagBadgeKind.GEM === badge) {
     const obj12 = { primaryTintColor, secondaryTintColor };
     const merged14 = Object.assign(merged);
     return jsx(GuildBadgeGem.GuildBadgeGem, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.LAVA === badge) {
+  } else if (GuildTagBadgeKind.LAVA === badge) {
     const obj13 = { primaryTintColor, secondaryTintColor };
     const merged15 = Object.assign(merged);
     return jsx(GuildBadgeLava.GuildBadgeLava, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.PSYCHIC === badge) {
+  } else if (GuildTagBadgeKind.PSYCHIC === badge) {
     const obj14 = { primaryTintColor, secondaryTintColor };
     const merged16 = Object.assign(merged);
     return jsx(GuildBadgePsychic.GuildBadgePsychic, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.SMOKE === badge) {
+  } else if (GuildTagBadgeKind.SMOKE === badge) {
     const obj15 = { primaryTintColor, secondaryTintColor };
     const merged17 = Object.assign(merged);
     return jsx(GuildBadgeSmoke.GuildBadgeSmoke, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.SNOW === badge) {
+  } else if (GuildTagBadgeKind.SNOW === badge) {
     const obj16 = { primaryTintColor, secondaryTintColor };
     const merged18 = Object.assign(merged);
     return jsx(GuildBadgeSnow.GuildBadgeSnow, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.SOUND === badge) {
+  } else if (GuildTagBadgeKind.SOUND === badge) {
     const obj17 = { primaryTintColor, secondaryTintColor };
     const merged19 = Object.assign(merged);
     return jsx(GuildBadgeSound.GuildBadgeSound, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.SUN === badge) {
+  } else if (GuildTagBadgeKind.SUN === badge) {
     const obj18 = { primaryTintColor, secondaryTintColor };
     const merged20 = Object.assign(merged);
     return jsx(GuildBadgeSun.GuildBadgeSun, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.WIND === badge) {
+  } else if (GuildTagBadgeKind.WIND === badge) {
     const obj19 = { primaryTintColor, secondaryTintColor };
     const merged21 = Object.assign(merged);
     return jsx(GuildBadgeWind.GuildBadgeWind, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.BUNNY === badge) {
+  } else if (GuildTagBadgeKind.BUNNY === badge) {
     const obj20 = { primaryTintColor };
     const merged22 = Object.assign(merged);
     return jsx(GuildBadgeBunny.GuildBadgeBunny, { primaryTintColor });
-  } else if (tmp2.DOG === badge) {
+  } else if (GuildTagBadgeKind.DOG === badge) {
     const obj21 = { primaryTintColor, secondaryTintColor };
     const merged23 = Object.assign(merged);
     return jsx(GuildBadgeDog.GuildBadgeDog, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.FROG === badge) {
+  } else if (GuildTagBadgeKind.FROG === badge) {
     const obj22 = { primaryTintColor, secondaryTintColor };
     const merged24 = Object.assign(merged);
     return jsx(GuildBadgeFrog.GuildBadgeFrog, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.GOAT === badge) {
+  } else if (GuildTagBadgeKind.GOAT === badge) {
     const obj23 = { primaryTintColor };
     const merged25 = Object.assign(merged);
     return jsx(GuildBadgeGoat.GuildBadgeGoat, { primaryTintColor });
-  } else if (tmp2.CAT === badge) {
+  } else if (GuildTagBadgeKind.CAT === badge) {
     const obj24 = { primaryTintColor };
     const merged26 = Object.assign(merged);
     return jsx(GuildBadgeCat.GuildBadgeCat, { primaryTintColor });
-  } else if (tmp2.DIAMOND === badge) {
+  } else if (GuildTagBadgeKind.DIAMOND === badge) {
     const obj25 = { primaryTintColor };
     const merged27 = Object.assign(merged);
     return jsx(GuildBadgeDiamond.GuildBadgeDiamond, { primaryTintColor });
-  } else if (tmp2.CROWN === badge) {
+  } else if (GuildTagBadgeKind.CROWN === badge) {
     const obj26 = { primaryTintColor, secondaryTintColor };
     const merged28 = Object.assign(merged);
     return jsx(GuildBadgeCrown.GuildBadgeCrown, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.TROPHY === badge) {
+  } else if (GuildTagBadgeKind.TROPHY === badge) {
     const obj27 = { primaryTintColor };
     const merged29 = Object.assign(merged);
     return jsx(GuildBadgeTrophy.GuildBadgeTrophy, { primaryTintColor });
-  } else if (tmp2.MONEY_BAG === badge) {
+  } else if (GuildTagBadgeKind.MONEY_BAG === badge) {
     const obj28 = { primaryTintColor };
     const merged30 = Object.assign(merged);
     return jsx(GuildBadgeMoneyBag.GuildBadgeMoneyBag, { primaryTintColor });
-  } else if (tmp2.DOLLAR_SIGN === badge) {
+  } else if (GuildTagBadgeKind.DOLLAR_SIGN === badge) {
     const obj29 = { primaryTintColor };
     const merged31 = Object.assign(merged);
     return jsx(GuildBadgeDollarSign.GuildBadgeDollarSign, { primaryTintColor });
-  } else if (tmp2.CLOVER === badge) {
+  } else if (GuildTagBadgeKind.CLOVER === badge) {
     const obj30 = { primaryTintColor };
     const merged32 = Object.assign(merged);
     return jsx(GuildBadgeClover.GuildBadgeClover, { primaryTintColor });
-  } else if (tmp2.BLOSSOM === badge) {
+  } else if (GuildTagBadgeKind.BLOSSOM === badge) {
     const obj31 = { primaryTintColor };
     const merged33 = Object.assign(merged);
     return jsx(GuildBadgeBlossom.GuildBadgeBlossom, { primaryTintColor });
-  } else if (tmp2.POTTED_PLANT === badge) {
+  } else if (GuildTagBadgeKind.POTTED_PLANT === badge) {
     const obj32 = { primaryTintColor, secondaryTintColor };
     const merged34 = Object.assign(merged);
     return jsx(GuildBadgePottedPlant.GuildBadgePottedPlant, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.MAPLE === badge) {
+  } else if (GuildTagBadgeKind.MAPLE === badge) {
     const obj33 = { primaryTintColor };
     const merged35 = Object.assign(merged);
     return jsx(GuildBadgeMaple.GuildBadgeMaple, { primaryTintColor });
-  } else if (tmp2.WILTED_FLOWER === badge) {
+  } else if (GuildTagBadgeKind.WILTED_FLOWER === badge) {
     const obj34 = { primaryTintColor, secondaryTintColor };
     const merged36 = Object.assign(merged);
     return jsx(GuildBadgeWiltedFlower.GuildBadgeWiltedFlower, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.BUTTERFLY === badge) {
+  } else if (GuildTagBadgeKind.BUTTERFLY === badge) {
     const obj35 = { primaryTintColor, secondaryTintColor };
     const merged37 = Object.assign(merged);
     return jsx(GuildBadgeButterfly.GuildBadgeButterfly, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.SNAIL === badge) {
+  } else if (GuildTagBadgeKind.SNAIL === badge) {
     const obj36 = { primaryTintColor, secondaryTintColor };
     const merged38 = Object.assign(merged);
     return jsx(GuildBadgeSnail.GuildBadgeSnail, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.CATERPILLAR === badge) {
+  } else if (GuildTagBadgeKind.CATERPILLAR === badge) {
     const obj37 = { primaryTintColor, secondaryTintColor };
     const merged39 = Object.assign(merged);
     return jsx(GuildBadgeCaterpillar.GuildBadgeCaterpillar, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.SPIDER === badge) {
+  } else if (GuildTagBadgeKind.SPIDER === badge) {
     const obj38 = { primaryTintColor, secondaryTintColor };
     const merged40 = Object.assign(merged);
     return jsx(GuildBadgeSpider.GuildBadgeSpider, { primaryTintColor, secondaryTintColor });
-  } else if (tmp2.BEE === badge) {
+  } else if (GuildTagBadgeKind.BEE === badge) {
     obj = { primaryTintColor };
     const merged41 = Object.assign(merged);
     return jsx(GuildBadgeBee.GuildBadgeBee, { primaryTintColor });

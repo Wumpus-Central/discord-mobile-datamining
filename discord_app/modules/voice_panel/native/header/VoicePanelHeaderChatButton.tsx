@@ -31,7 +31,6 @@ export default function VoicePanelHeaderChatButton(channelId) {
     ComponentDispatch.dispatch(constants.VOICE_PANEL_OPEN_CHAT_TAB);
   }, []);
   const tmp5 = useChatBadgeDefault(channelId.channelId);
-  const tmp6 = timestampProducer;
   let obj = { icon: null, accessibilityLabel: null, onPress: null };
   const tmp7 = NativeViewDefault;
   obj = { color: nativeDefault.colors.WHITE, size: "sm" };
@@ -47,10 +46,10 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const items1 = [, ];
     ({ badge: arr2[0], notificationBadge: arr2[1] } = tmp);
     obj1.style = items1;
-    obj.children = tmp8(tmp3(5589), obj1);
-    tmp8Result = tmp8(tmp3(5589), obj);
-    const tmp3Result = tmp3(5589);
+    obj.children = hasOwnProperty(NativeViewDefault, obj1);
+    tmp8Result = hasOwnProperty(NativeViewDefault, obj);
+    const tmp3Result = NativeViewDefault;
   }
   children[1] = tmp8Result;
-  return tmp6(tmp7, { children });
+  return timestampProducer(tmp7, { children });
 };

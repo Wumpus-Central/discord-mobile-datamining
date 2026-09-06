@@ -6,10 +6,9 @@ import noop from "module_19" /* 19 */;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
 
-export default function useAccessibilityPress(set, label) {
-  const current = set;
-  closure_2 = noop.useRef(set);
-  let items = [set];
+export default function useAccessibilityPress(current, label) {
+  closure_2 = noop.useRef(current);
+  let items = [current];
   const effect = noop.useEffect(() => {
     closure_2.current = current;
   }, items);

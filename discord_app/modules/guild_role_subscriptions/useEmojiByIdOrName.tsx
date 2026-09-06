@@ -14,9 +14,9 @@ function useEmojiByIdOrName(guildId, emojiId) {
       return null;
     } else {
       const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(closure_0);
-      let byId = disambiguatedEmojiContext.getById(tmp);
+      let byId = disambiguatedEmojiContext.getById(closure_1);
       if (byId == null) {
-        byId = disambiguatedEmojiContext.getByName(tmp);
+        byId = disambiguatedEmojiContext.getByName(closure_1);
       }
       return byId;
     }

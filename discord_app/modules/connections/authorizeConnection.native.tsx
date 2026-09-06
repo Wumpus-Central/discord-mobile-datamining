@@ -16,7 +16,7 @@ export default function authorizeConnection(overrideUrl) {
   overrideUrl = overrideUrl.overrideUrl;
   const successRedirect = overrideUrl.successRedirect;
   if (platformType === PlatformTypes.LEAGUE_OF_LEGENDS) {
-    platformType = tmp.RIOT_GAMES;
+    platformType = PlatformTypes.RIOT_GAMES;
   }
   if (null == _location) {
     _location = "mobile";
@@ -40,9 +40,9 @@ export default function authorizeConnection(overrideUrl) {
     }
     const obj16 = overrideUrl(9217);
   } else {
-    if (platformType !== tmp.PLAYSTATION) {
-      if (platformType !== tmp.PLAYSTATION_STAGING) {
-        if (platformType === tmp.CRUNCHYROLL) {
+    if (platformType !== PlatformTypes.PLAYSTATION) {
+      if (platformType !== PlatformTypes.PLAYSTATION_STAGING) {
+        if (platformType === PlatformTypes.CRUNCHYROLL) {
           overrideUrl(4527).hideActionSheet();
           const obj11 = overrideUrl(4527);
           const tmp15 = overrideUrl;
@@ -60,7 +60,7 @@ export default function authorizeConnection(overrideUrl) {
             const tmp15Result = tmp15(573);
           }
           const obj12 = overrideUrl(9270);
-        } else if (platformType === tmp.DOMAIN) {
+        } else if (platformType === PlatformTypes.DOMAIN) {
           overrideUrl(4527).hideActionSheet();
           const obj8 = overrideUrl(4527);
           const tmp10 = overrideUrl;
@@ -91,7 +91,7 @@ export default function authorizeConnection(overrideUrl) {
             tmp28Result.hideActionSheet();
             tmp28Result = tmp28(4763);
             obj = { platformType, location: _location, successRedirect };
-            tmp28Result.pushLazy(handleModalClose5(1896)(9283, tmp29.paths), obj);
+            tmp28Result.pushLazy(handleModalClose5(1896)(9283, dependencyMap.paths), obj);
             if (null != onClose) {
               const handleModalClose2 = function handleModalClose() {
                 if (require != null) {
@@ -129,7 +129,6 @@ export default function authorizeConnection(overrideUrl) {
             const authorizeResult = tmp28(5406).authorize(platformType, obj2);
           }
           const obj18 = overrideUrl(5283);
-          tmp29 = dependencyMap;
         }
       }
     }

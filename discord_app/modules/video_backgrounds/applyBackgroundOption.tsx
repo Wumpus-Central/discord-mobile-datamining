@@ -15,11 +15,13 @@ import VideoBackgroundStore from "VideoBackgroundStore" /* 9096 */;
 require = fn;
 let closure_9 = async function _getFilterBlob() {
   const _fetch = fetch;
-  closure_130_0 = await fetch(closure_0);
-  closure_130_1 = await closure_130_0.blob();
+  await fetch(closure_0);
+  closure_130_0 = value;
+  await closure_130_0.blob();
+  closure_130_1 = value;
   const _Uint8ClampedArray = Uint8ClampedArray;
   await closure_130_1.arrayBuffer();
-  return new Uint8ClampedArray(arg1);
+  return new Uint8ClampedArray(value);
 };
 function applyBackgroundMediaFilterSettings(arg0, target, graph, image, blob) {
   const obj = { graph, target, image, blob };
@@ -35,153 +37,160 @@ function applyBackgroundOption() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _applyBackgroundOption(arg0, value) {
-  if (c9 === 2) {
-    c9 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  let asset = arg2;
+  c8 = 0;
+  c9 = 0;
+  c7 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c9 === 2) {
+      c9 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c9 = 2;
-      if (0 === c8) {
-        if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c9 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_5 = tmp3;
-          closure_4 = tmp32;
-          closure_132_0 = closure_0;
-          closure_132_1 = closure_1;
-          closure_132_2 = undefined;
-          closure_132_4 = undefined;
-          closure_132_5 = undefined;
-          closure_132_3 = false;
-          if (null == closure_2) {
-            applyBackgroundMediaFilterSettings(tmp58, tmp59, BaseConnectionEvent.FilterSettingsGraph.NONE);
+      try {
+        c9 = 2;
+        if (0 === c8) {
+          if (arg0 === 1) {
             c9 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (tmp60 === React5) {
-            applyBackgroundMediaFilterSettings(tmp58, tmp59, BaseConnectionEvent.FilterSettingsGraph.BACKGROUND_BLUR);
+            throw value;
+          } else if (arg0 === 2) {
             c9 = 3;
-            return { value: "HermesInternal", done: null };
+            obj = { value, done: true };
+            return obj;
           } else {
-            if (typeof tmp60 !== "string") {
-              if (typeof tmp60 !== "number") {
-                const asset = tmp60.asset;
-                let isAnimatedIconHashResult = AvatarUtils.isAnimatedIconHash(asset);
-                if (!isAnimatedIconHashResult) {
-                  let obj3 = AvatarUtils;
-                  isAnimatedIconHashResult = obj3.isVideoAssetHash(asset);
-                }
-                closure_132_3 = isAnimatedIconHashResult;
-                let obj4 = AvatarUtils;
-                const obj1 = { userId: null, assetId: null, assetHash: null, size: null };
-                ({ user_id: obj6.userId, id: obj6.assetId } = tmp60);
-                obj1.assetHash = asset;
-                obj1.size = styles.width;
-                let videoFilterAssetURL = obj4.getVideoFilterAssetURL(obj1);
-                closure_132_2 = videoFilterAssetURL;
-              }
-              if (null != videoFilterAssetURL) {
-                c7 = 1;
-                if (isAnimatedIconHashResult) {
-                  closure_132_4 = tmp9;
-                  if (closure_132_3) {
-                    c8 = 3;
-                    c9 = 1;
-                    let obj2 = {
-                      value: (function getFilterBlob() {
-                                          const self = this;
-                                          const apply = closure_1_9.apply;
-                                          if (typeof apply === "unknown") {
-                                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                                          } else {
-                                            applyArgumentsResult = apply(self, arguments);
-                                          }
-                                          return applyArgumentsResult;
-                                        })(closure_132_2),
-                      done: false
-                    };
-                    return obj2;
-                  } else {
-                    closure_132_5 = tmp8;
-                    closure_133_10(closure_132_0, closure_132_1, closure_133_0(closure_133_2[6]).FilterSettingsGraph.BACKGROUND_REPLACEMENT, closure_132_4, closure_132_5);
-                    c7 = 0;
-                    tmp32 = closure_133_10;
+            closure_5 = tmp3;
+            closure_4 = closure_133_10;
+            closure_132_0 = closure_0;
+            closure_132_1 = closure_1;
+            closure_132_2 = undefined;
+            closure_132_4 = undefined;
+            closure_132_5 = undefined;
+            closure_132_3 = false;
+            if (null == asset) {
+              applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.NONE);
+              c9 = 3;
+              return { value: "HermesInternal", done: null };
+            } else if (asset === closure_2_7) {
+              applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.BACKGROUND_BLUR);
+              c9 = 3;
+              return { value: "HermesInternal", done: null };
+            } else {
+              if (typeof asset !== "string") {
+                if (typeof asset !== "number") {
+                  asset = asset.asset;
+                  let isAnimatedIconHashResult = AvatarUtils.isAnimatedIconHash(asset);
+                  if (!isAnimatedIconHashResult) {
+                    let obj3 = AvatarUtils;
+                    isAnimatedIconHashResult = obj3.isVideoAssetHash(asset);
                   }
-                } else {
-                  c8 = 2;
-                  c9 = 1;
-                  obj3 = { value: getFilterImageDefault(videoFilterAssetURL), done: false };
-                  return obj3;
+                  closure_132_3 = isAnimatedIconHashResult;
+                  let obj4 = AvatarUtils;
+                  const obj1 = { userId: null, assetId: null, assetHash: null, size: null };
+                  ({ user_id: obj6.userId, id: obj6.assetId } = asset);
+                  obj1.assetHash = asset;
+                  obj1.size = styles.width;
+                  let videoFilterAssetURL = obj4.getVideoFilterAssetURL(obj1);
+                  closure_132_2 = videoFilterAssetURL;
+                }
+                if (null != videoFilterAssetURL) {
+                  c7 = 1;
+                  if (isAnimatedIconHashResult) {
+                    closure_132_4 = tmp9;
+                    if (closure_132_3) {
+                      c8 = 3;
+                      c9 = 1;
+                      let obj2 = {
+                        value: (function getFilterBlob() {
+                                            const self = this;
+                                            const apply = closure_1_9.apply;
+                                            if (typeof apply === "unknown") {
+                                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                                            } else {
+                                              applyArgumentsResult = apply(self, arguments);
+                                            }
+                                            return applyArgumentsResult;
+                                          })(closure_132_2),
+                        done: false
+                      };
+                      return obj2;
+                    } else {
+                      closure_132_5 = tmp8;
+                      closure_133_10(closure_132_0, closure_132_1, closure_133_0(closure_133_2[6]).FilterSettingsGraph.BACKGROUND_REPLACEMENT, closure_132_4, closure_132_5);
+                      c7 = 0;
+                    }
+                  } else {
+                    c8 = 2;
+                    c9 = 1;
+                    obj3 = { value: getFilterImageDefault(videoFilterAssetURL), done: false };
+                    return obj3;
+                  }
                 }
               }
+              const tmp24 = getDefaultBackgroundDataDefault()[asset];
+              const isVideo = tmp24.isVideo;
+              c3 = isVideo;
+              if (isVideo == null) {
+                c3 = false;
+              }
+              closure_132_3 = c3;
+              const source = tmp24.source;
+              closure_132_2 = source;
+              isAnimatedIconHashResult = c3;
+              videoFilterAssetURL = source;
             }
-            const tmp24 = getDefaultBackgroundDataDefault()[tmp60];
-            const isVideo = tmp24.isVideo;
-            c3 = isVideo;
-            if (isVideo == null) {
-              c3 = false;
-            }
-            closure_132_3 = c3;
-            const source = tmp24.source;
-            closure_132_2 = source;
-            isAnimatedIconHashResult = c3;
-            videoFilterAssetURL = source;
           }
-        }
-      } else if (1 === tmp7) {
-        c7 = 0;
-        obj2 = closure_133_0(closure_133_2[5]);
-        const result = obj2.errorApplyingMediaFilterSettings();
-      } else if (2 === tmp7) {
-        if (arg0 === 1) {
+        } else if (1 === tmp7) {
+          c7 = 0;
+          obj2 = closure_133_0(closure_133_2[5]);
+          const result = obj2.errorApplyingMediaFilterSettings();
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else {
+            if (arg0 === 2) {
+              c7 = 0;
+              c9 = 3;
+              obj4 = { value, done: true };
+              return obj4;
+            }
+            tmp9 = value;
+          }
+        } else if (arg0 === 1) {
           c9 = 3;
           throw value;
         } else {
           if (arg0 === 2) {
             c7 = 0;
             c9 = 3;
-            obj4 = { value, done: true };
-            return obj4;
+            obj = { value, done: true };
+            return obj;
           }
-          tmp9 = value;
+          tmp8 = value;
         }
-      } else if (arg0 === 1) {
         c9 = 3;
-        throw value;
-      } else {
-        if (arg0 === 2) {
-          c7 = 0;
-          c9 = 3;
-          obj = { value, done: true };
-          return obj;
+      } catch (tmp50) {
+        closure_6 = tmp50;
+        if (tmp4 === c7) {
+          c9 = tmp2;
+          throw tmp50;
+        } else {
+          c8 = tmp;
         }
-        tmp8 = value;
-      }
-      c9 = 3;
-    } catch (tmp50) {
-      closure_6 = tmp50;
-      if (tmp4 === c7) {
-        c9 = tmp2;
-        throw tmp50;
-      } else {
-        c8 = tmp;
       }
     }
-  }
+  })();
 };
 function applyBackgroundOptionLive() {
   const self = this;

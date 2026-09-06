@@ -4,11 +4,11 @@
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
+import _modDef2626 from "module_2626" /* 2626 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import useActiveTheme from "useActiveTheme" /* 7874 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4379 */;
 
-const _modDef2626 = tmp(2626);
 require = fn;
 function useAppearanceSettingTrailing() {
   const tmp3 = useThemeDefault();
@@ -17,9 +17,9 @@ function useAppearanceSettingTrailing() {
   const themeName = ClientThemesUtils.getThemeName(tmp3);
   const activeThemeType = useActiveTheme.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
-    const intl2 = tmp4(1114).intl;
+    const intl2 = util.intl;
     return intl2.string(_modDef2626.KSBBpC);
-  } else if (tmp8.CLIENT === activeThemeType) {
+  } else if (ActiveThemeType.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
       const getName = stateFromStores.getName;
@@ -31,11 +31,11 @@ function useAppearanceSettingTrailing() {
       name = themeName;
     }
     return name;
-  } else if (tmp8.SYSTEM === activeThemeType) {
-    const intl = tmp4(1114).intl;
-    return intl.string(tmp4(1114).t.wFpwSk);
+  } else if (ActiveThemeType.SYSTEM === activeThemeType) {
+    const intl = util.intl;
+    return intl.string(util.t.wFpwSk);
   } else {
-    return tmp8.DEFAULT === activeThemeType ? themeName : undefined;
+    return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
   }
 }
 const ActiveThemeType = fn(1186).ActiveThemeType;

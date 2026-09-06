@@ -60,12 +60,13 @@ export default {
       });
     });
   },
-  post(request) {
+  post(trackedActionData) {
     post = post(trackedActionData[2]).HTTP.post;
+    trackedActionData = undefined;
     closure_2 = undefined;
     _objectWithoutProperties = undefined;
-    trackedActionData = request.trackedActionData;
-    const tmp = _objectWithoutProperties(request, closure_2);
+    trackedActionData = trackedActionData.trackedActionData;
+    const tmp = _objectWithoutProperties(trackedActionData, closure_2);
     closure_2 = tmp;
     _objectWithoutProperties = { url: tmp.url, request_method: "post" };
     return new Promise((arg0, arg1) => {

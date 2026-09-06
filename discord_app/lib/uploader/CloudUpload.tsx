@@ -7,6 +7,7 @@ import DurationsDefault from "Durations" /* 1090 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import Upload2 from "Upload" /* 5128 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 5136 */;
 import InlineUploaderDefault from "InlineUploader" /* 5169 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -139,13 +140,13 @@ ResumableUploadError["rejectionHandler"] = function rejectionHandler(status_chec
       obj = { cause: null };
       if (response instanceof Error) {
         obj.cause = response;
-        throw new tmp2(tmp3, obj);
+        throw new ResumableUploadError(closure_0, obj);
       } else {
         const _Error2 = Error;
         const _String = String;
         const error = new Error(String(response));
         obj.cause = error;
-        throw new tmp2(tmp3, obj);
+        throw new ResumableUploadError(closure_0, obj);
       }
     }
   };
@@ -378,17 +379,17 @@ prototype["uploadFileToCloud"] = function uploadFileToCloud() {
       throw error;
     }
     const _HermesInternal3 = HermesInternal;
-    const combined = "Uploading " + obj8.id;
-    if (obj8.item.platform === v3(dependencyMap[9]).UploadPlatform.REACT_NATIVE) {
+    const combined = "Uploading " + self.id;
+    if (self.item.platform === v3(dependencyMap[9]).UploadPlatform.REACT_NATIVE) {
       const _HermesInternal2 = HermesInternal;
-      let combined1 = "filename=" + obj8.item.filename + ", uri=" + obj8.item.uri;
+      let combined1 = "filename=" + self.item.filename + ", uri=" + self.item.uri;
     } else {
       const _HermesInternal = HermesInternal;
-      combined1 = "filename=" + obj8.item.file.name;
+      combined1 = "filename=" + self.item.file.name;
     }
     logger.log(combined, combined1);
-    if (obj8.item.platform === v3(dependencyMap[9]).UploadPlatform.REACT_NATIVE) {
-      const obj1 = { type: obj8.item.mimeType, uri: obj8.item.uri, name: obj8.item.filename };
+    if (self.item.platform === v3(dependencyMap[9]).UploadPlatform.REACT_NATIVE) {
+      const obj1 = { type: self.item.mimeType, uri: self.item.uri, name: self.item.filename };
       let str6 = "application/octet-stream";
       if (null != obj1.type) {
         str6 = "application/octet-stream";
@@ -399,17 +400,17 @@ prototype["uploadFileToCloud"] = function uploadFileToCloud() {
       let str4 = str6;
       let file = obj1;
     } else {
-      file = obj8.item.file;
+      file = self.item.file;
       str4 = "application/octet-stream";
     }
-    if (tmp25Result.canUploadNatively(obj8.item)) {
-      const libdiscoreHttpClient = new tmp25(tmp26[10]).LibdiscoreHttpClient();
-      obj8._uploadHttpClient = libdiscoreHttpClient;
-      obj8._libdiscoreEnabled = true;
+    if (tmp25Result.canUploadNatively(self.item)) {
+      const libdiscoreHttpClient = new tmp25(dependencyMap[10]).LibdiscoreHttpClient();
+      self._uploadHttpClient = libdiscoreHttpClient;
+      self._libdiscoreEnabled = true;
       logger.log("Using libdiscore client for file upload");
     }
-    await obj8.uploadFileWithResumption(obj8.responseUrl, file, str4);
-    return arg1;
+    await self.uploadFileWithResumption(self.responseUrl, file, str4);
+    return value;
   })();
 };
 prototype["getResumePosition"] = function getResumePosition(responseUrl) {
@@ -444,13 +445,13 @@ prototype["getResumePosition"] = function getResumePosition(responseUrl) {
       }
       return closure_2_14.rejectionHandler("status_check")(error);
     });
-    return arg1;
+    return value;
   })();
 };
 prototype["startOrResumeUpload"] = function startOrResumeUpload(arg0, arg1) {
   closure_0 = arg0;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -546,15 +547,15 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
   closure_1 = file;
   closure_2 = arg2;
   const self = this;
-  return (async (arg0, url) => {
+  return (async (arg0) => {
     if (c9 === 2) {
       c9 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw url;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: url, done: true };
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -565,10 +566,10 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
         if (0 === c8) {
           if (arg0 === 1) {
             c9 = 3;
-            throw url;
+            throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            obj = { value: url, done: true };
+            obj = { value, done: true };
             return obj;
           } else {
             closure_4 = tmp5;
@@ -589,7 +590,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
             request.timeout = retryOptsResult.timeout;
             closure_132_3 = request;
             closure_132_4 = 0;
-            closure_132_5 = async function _loop(arg0, value) {
+            closure_132_5 = async function _loop() {
               if (c6 === 2) {
                 c6 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -667,7 +668,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                           const obj4 = {
                             value: c3.trackTime("resumptionCheckTimeMs", tmp3(async () => {
                                           await resumePosition.getResumePosition(resumePosition.responseUrl);
-                                          return arg1;
+                                          return value;
                                         })),
                             done: false
                           };
@@ -772,30 +773,34 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
             c6 = 1;
             if (arg0 === 1) {
               c9 = 3;
-              throw url;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              const method = HermesBuiltin.getMethod("return");
-              if (method === undefined) {
-                c9 = 3;
-                let obj2 = { value: url, done: true };
-                return obj2;
-              } else {
-                const iter2 = method(url);
-                HermesBuiltin.ensureObject("iterator.return() did not return an object");
-                if (iter2.done) {
-                  c9 = 3;
-                  obj = { value: iter2.value, done: true };
-                  return obj;
-                } else {
-                  c8 = 1;
-                  c9 = 1;
-                  return iter2;
-                }
-              }
+              throw value;
             } else {
-              c6 = 0;
-              const tmp20 = url;
+              url = value;
+              if (arg0 === 2) {
+                url = value;
+                c6 = 0;
+                const method = HermesBuiltin.getMethod("return");
+                if (method === undefined) {
+                  c9 = 3;
+                  let obj2 = { value, done: true };
+                  return obj2;
+                } else {
+                  const iter2 = method(url);
+                  HermesBuiltin.ensureObject("iterator.return() did not return an object");
+                  if (iter2.done) {
+                    c9 = 3;
+                    obj = { value: iter2.value, done: true };
+                    return obj;
+                  } else {
+                    c8 = 1;
+                    c9 = 1;
+                    return iter2;
+                  }
+                }
+              } else {
+                c6 = 0;
+                const tmp20 = value;
+              }
             }
           } else {
             c6 = 0;
@@ -853,8 +858,8 @@ prototype["getSize"] = function getSize() {
     if (getFileSize != null) {
       const fileSize = getFileSize(self.item.uri);
     }
-    value = await fileSize;
-    if (arg1 == null) {
+    await fileSize;
+    if (value == null) {
       value = 0;
     }
     return value;
@@ -864,7 +869,7 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
   closure_0 = compressTimeMs;
   closure_1 = arg1;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -936,7 +941,7 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
 };
 prototype["upload"] = function upload() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c9 === 2) {
       c9 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1129,7 +1134,7 @@ prototype["upload"] = function upload() {
                                                     const merged = Object.assign(c0.createAttachmentUrlRetryOpts());
                                                     request.rejectWithError = false;
                                                     await HTTP.post(request);
-                                                    return arg1;
+                                                    return value;
                                                   })),
                             done: false
                           };
@@ -1206,7 +1211,7 @@ prototype["upload"] = function upload() {
                   const obj11 = {
                     value: closure_133_0.trackTime("uploadTimeMs", tmp3(async () => {
                                     await c0.uploadFileToCloud();
-                                    return arg1;
+                                    return value;
                                   })),
                     done: false
                   };
@@ -1241,8 +1246,8 @@ prototype["upload"] = function upload() {
             }
           }
           if (closure_133_0.isCancelled()) {
-            obj18.handleComplete(closure_133_0.id);
-          } else if (obj18.allowOptimization) {
+            closure_133_0.handleComplete(closure_133_0.id);
+          } else if (closure_133_0.allowOptimization) {
             if (closure_133_0.item.platform === v0(5128).UploadPlatform.WEB) {
               if (!closure_132_0) {
                 if (true !== closure_133_0.item.heicConversionEvaluated) {
@@ -1295,7 +1300,7 @@ prototype["upload"] = function upload() {
 };
 prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAndExtractData() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1330,7 +1335,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
             closure_129_5 = undefined;
             closure_129_6 = undefined;
             if (obj17.getUploadTarget(self.item.target).shouldReactNativeCompressUploads) {
-              if (true === tmp194.reactNativeFilePrepped) {
+              if (true === self.reactNativeFilePrepped) {
                 self.uploadAnalytics.fileAlreadyPrepped = true;
                 const _HermesInternal6 = HermesInternal;
                 logger.log("reactNativeCompressAndExtractData() file already prepped - " + self.id);
@@ -1349,14 +1354,14 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                                   reactNativeFileIndex = 0;
                                 }
                                 await size(dependencyMap[25]).getAttachmentFile(reactNativeFileIndex, reactNativeFileIndex);
-                                return arg1;
+                                return value;
                               })),
                   done: false
                 };
                 return obj2;
               }
             } else {
-              tmp194.uploadAnalytics.compressAndExtractDisabled = true;
+              self.uploadAnalytics.compressAndExtractDisabled = true;
               logger.log("reactNativeCompressAndExtractData() disabled by upload target");
               c4 = 3;
               const obj3 = { value: self, done: true };
@@ -1507,7 +1512,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
   closure_0 = file;
   closure_1 = arg1;
   closure_2 = id;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c9 === 2) {
       c9 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1691,7 +1696,7 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
   closure_2 = id;
   closure_3 = quality;
   closure_4 = maxFileSizeBytes;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1855,7 +1860,7 @@ prototype["isCancelled"] = function isCancelled() {
 };
 prototype["delete"] = function delete() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1881,9 +1886,9 @@ prototype["delete"] = function delete() {
             return obj;
           } else if (null != self.uploadedFilename) {
             let obj1 = v3(5174);
-            const uploadTarget = obj1.getUploadTarget(tmp17.item.target);
+            const uploadTarget = obj1.getUploadTarget(self.item.target);
             dependencyMap = 1;
-            const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp17.uploadedFilename);
+            const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
             const HTTP = v3(1272).HTTP;
             c1 = 2;
             v3 = 1;
@@ -1931,7 +1936,7 @@ CloudUpload["isResponseUrlStale"] = function isResponseUrlStale(responseUrlSetAt
 };
 prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -75,7 +75,7 @@ function anyChanged(data, fn) {
   return flag;
 }
 function handleLoadMessages(messages) {
-  return anyChanged(messages.messages, (arg0) => processMessage(arg0));
+  return anyChanged(messages.messages, (first_message) => processMessage(first_message));
 }
 function handleSearchMessagesSuccess(data) {
   return anyChanged(data.data, (messages) => anyChanged(messages.messages, (arg0) => closure_1_15(arg0, (arg0) => closure_1_14(arg0))));
@@ -90,7 +90,7 @@ function handleLoadThreadsSuccess(firstMessages) {
   firstMessages = firstMessages.firstMessages;
   let tmp = null != firstMessages;
   if (tmp) {
-    tmp = anyChanged(firstMessages, (arg0) => processMessage(arg0));
+    tmp = anyChanged(firstMessages, (first_message) => processMessage(first_message));
   }
   return tmp;
 }
@@ -308,7 +308,7 @@ ReferencedMessageState = {
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(messages) {
     messages = messages.messages;
-    return anyChanged(messages.concat(messages.messageReferences), (arg0) => processMessage(arg0));
+    return anyChanged(messages.concat(messages.messageReferences), (first_message) => processMessage(first_message));
   },
   CONVERSATIONS_FETCH_SUCCESS: function handleConversationsFetchSuccess(rawConversations) {
     return anyChanged(rawConversations.rawConversations, (messages) => {

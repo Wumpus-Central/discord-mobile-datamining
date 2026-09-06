@@ -6,6 +6,7 @@ import router_utils from "router_utils" /* 1100 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
 import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 6988 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +20,7 @@ function saveProfileAndAccountRequest() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _saveProfileAndAccountRequest(arg0, value) {
+let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -201,17 +202,16 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   }
   const Storage2 = tmp10(510).Storage;
   value = Storage2.get(closure_7);
-  let tmp16 = null != closure_8;
+  let tmp16 = null != push_voip_provider;
   if (tmp16) {
     tmp16 = null != value;
   }
   if (tmp16) {
-    user.push_voip_provider = tmp15;
+    user.push_voip_provider = push_voip_provider;
     user.push_voip_token = value;
   }
   obj = { headers: avatarId(5169).buildHeadersForMd5({ [avatar(6985).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
   tmp13 = null != tmp12 && null != value;
-  tmp15 = closure_8;
   let tmpResult = avatarId(5169);
   return saveProfileAndAccountRequest(user, obj).then((result) => {
     DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
@@ -293,19 +293,18 @@ export const saveAccountChanges = function saveAccountChanges(user, close) {
   }
   const Storage2 = tmp4(tmp[8]).Storage;
   value = Storage2.get(closure_7);
-  let tmp10 = null != closure_8;
+  let tmp10 = null != push_voip_provider;
   if (tmp10) {
     tmp10 = null != value;
   }
   if (tmp10) {
-    user.push_voip_provider = tmp9;
+    user.push_voip_provider = push_voip_provider;
     user.push_voip_token = value;
   }
   const HTTP = tmp4(tmp[4]).HTTP;
   const request = { url: constants.ME, oldFormErrors: true, body: user, rejectWithError: null };
   let obj = avatar(newPassword[3]);
   tmp7 = null != tmp6 && null != value;
-  tmp9 = closure_8;
   request.rejectWithError = password(newPassword[4]).rejectWithMigratedError();
   const tmp4Result = password(newPassword[4]);
   return HTTP.patch(request).then((body) => {
@@ -320,21 +319,21 @@ export const saveAccountChanges = function saveAccountChanges(user, close) {
       const result = trackUserAvatarUpdated.trackUserAvatarUpdated(obj);
     }
     if (null != newPassword) {
-      let tmp3Result = tmp3(573);
-      const obj1 = { type: "USER_PASSWORD_UPDATE", user: body, newPassword: tmp9 };
+      let tmp3Result = DispatcherDefault;
+      const obj1 = { type: "USER_PASSWORD_UPDATE", user: body, newPassword };
       tmp3Result.dispatch(obj1);
     }
     if (tmp11) {
-      tmp3Result = tmp3(573);
+      tmp3Result = DispatcherDefault;
       obj2 = { type: "PASSWORD_UPDATED", userId: body.id };
       tmp3Result.dispatch(obj2);
     }
     if (close) {
-      tmp3(6990).close();
-      const tmp3Result1 = tmp3(6990);
+      UserSettingsModalActionCreatorsDefault.close();
+      const tmp3Result1 = UserSettingsModalActionCreatorsDefault;
     } else {
-      tmp3(573).dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE" });
-      const tmp3Result2 = tmp3(573);
+      DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE" });
+      const tmp3Result2 = DispatcherDefault;
     }
     return body;
   }, (body) => {

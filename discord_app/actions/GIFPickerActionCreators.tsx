@@ -2,11 +2,13 @@
 
 // Module 10366 (GIFPickerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
 import frecency_user_settings from "frecency_user_settings" /* 1222 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9942 */;
 import GifProvider from "GifProvider" /* 10367 */;
 import GIFPickerUtils from "GIFPickerUtils" /* 10368 */;
@@ -57,6 +59,7 @@ function doSearchRequest(q, arg1, limit) {
     obj2.gif_provider = GifProvider.GIF_PROVIDER;
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_RESULT_VIEWED, obj2);
     DispatcherDefault.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query, items: body });
+    const obj3 = { type: "GIF_PICKER_QUERY_SUCCESS", query, items: body };
   }, () => {
     const obj = { type: "GIF_PICKER_QUERY_FAILURE", query };
     return obj.dispatch(obj);
@@ -110,7 +113,7 @@ export const trackSearchResultViewed = function trackSearchResultViewed(totalRes
   obj2.gif_provider = GifProvider.GIF_PROVIDER;
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_RESULT_VIEWED, obj2);
 };
-export const search = function search(query, arg1, arg2, limit) {
+export const search = function search(query, arg1, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -240,13 +243,12 @@ export const gifUrlKey = function gifUrlKey(uri) {
   let tmp4 = uri;
   if (null != toURLSafeResult) {
     if (obj2.isAttachmentPathUrl(toURLSafeResult)) {
-      str = tmp5(9942).removeSignedUrlParameters(toURLSafeResult);
+      str = AttachmentUrlUtilsAll.removeSignedUrlParameters(toURLSafeResult);
       str = str.toString();
-      const tmp5Result = tmp5(9942);
+      const tmp5Result = AttachmentUrlUtilsAll;
     }
     tmp4 = str;
     obj2 = AttachmentUrlUtilsAll;
-    tmp5 = importAll;
   }
   return tmp4;
 };
@@ -262,31 +264,30 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
     }
     let obj1 = /\.(mp4|webm)(\?|$)/i;
     if (obj1.test(size.src)) {
-      if (null != tmp3.gifSrc) {
-        if ("" !== tmp3.gifSrc) {
-          let tmpResult = tmp(1365);
-          const toURLSafeResult = tmpResult.toURLSafe(tmp3.src);
+      if (null != size.gifSrc) {
+        if ("" !== size.gifSrc) {
+          let tmpResult = URLUtilsDefault;
+          const toURLSafeResult = tmpResult.toURLSafe(size.src);
           let tmp9 = null != toURLSafeResult;
           if (tmp9) {
             let result = AttachmentUrlUtilsAll.isExternalProxiedAttachmentUrl(toURLSafeResult);
             if (!result) {
-              result = tmp10(9942).isAttachmentPathUrl(toURLSafeResult);
-              const tmp10Result = tmp10(9942);
+              result = AttachmentUrlUtilsAll.isAttachmentPathUrl(toURLSafeResult);
+              const tmp10Result = AttachmentUrlUtilsAll;
             }
             tmp9 = result;
-            tmp10 = importAll;
           }
           let obj9 = src;
           if (tmp9) {
             obj9 = src;
             if (re15.test(src)) {
-              tmpResult = tmp(1365);
+              tmpResult = URLUtilsDefault;
               const str2 = tmpResult.toURLSafe(src);
               let tmp13 = src;
               if (null != str2) {
                 const formatted = str2.pathname.toLowerCase();
                 let endsWithResult1 = formatted.endsWith(".avif");
-                const endsWithResult2 = formatted.endsWith(".gif");
+                const endsWithResult = formatted.endsWith(".webp");
                 if (!endsWithResult) {
                   tmp13 = src;
                 }
@@ -300,7 +301,7 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
                 const searchParams2 = str2.searchParams;
                 const result2 = searchParams2.set("animated", "true");
                 src = str2.toString();
-                endsWithResult = formatted.endsWith(".webp");
+                endsWithResult2 = formatted.endsWith(".gif");
               }
               obj9 = tmp13;
             }
@@ -313,23 +314,22 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
           if (re15.test(combined)) {
             let format = frecency_user_settings.GIFType.IMAGE;
           } else {
-            format = tmp3.format;
+            format = size.format;
           }
-          let url = tmp3.url;
-          const toURLSafeResult1 = tmp(1365).toURLSafe(url);
+          let url = size.url;
+          const toURLSafeResult1 = URLUtilsDefault.toURLSafe(url);
           let tmp23 = url;
           if (null != toURLSafeResult1) {
             if (obj12.isAttachmentPathUrl(toURLSafeResult1)) {
-              const tmp24Result = tmp24(9942);
-              url = tmp24(9942).removeSignedUrlParameters(toURLSafeResult1).toString();
-              const str9 = tmp24(9942).removeSignedUrlParameters(toURLSafeResult1);
+              const tmp24Result = AttachmentUrlUtilsAll;
+              url = AttachmentUrlUtilsAll.removeSignedUrlParameters(toURLSafeResult1).toString();
+              const str9 = AttachmentUrlUtilsAll.removeSignedUrlParameters(toURLSafeResult1);
             }
             tmp23 = url;
             obj12 = AttachmentUrlUtilsAll;
-            tmp24 = importAll;
           }
           obj = {};
-          const merged = Object.assign(tmp3);
+          const merged = Object.assign(size);
           obj.src = combined;
           obj.format = format;
           obj.order = num + 1;
@@ -337,24 +337,25 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
           const FavoriteGIFs = frecency_user_settings.FavoriteGIFs;
           if (FavoriteGIFs.toBinary(gifs).length > closure_2_10) {
             obj = { title: null, body: null };
-            const intl = tmp28(1114).intl;
-            obj.title = intl.string(tmp28(1114).t["+XYXtZ"]);
-            const intl2 = tmp28(1114).intl;
-            obj.body = intl2.string(tmp28(1114).t.YSDH9n);
-            tmp(4904).show(obj);
+            const intl = util.intl;
+            obj.title = intl.string(util.t["+XYXtZ"]);
+            const intl2 = util.intl;
+            obj.body = intl2.string(util.t.YSDH9n);
+            AlertActionCreatorsDefault.show(obj);
             return false;
           } else {
-            const sizeResult = tmp(12).size(gifs.gifs);
+            const sizeResult = apply.size(gifs.gifs);
             if (sizeResult > 2) {
               gifs.hideTooltip = true;
             }
-            const tmpResult3 = tmp(12);
+            const tmpResult3 = apply;
             obj1 = { total_num_favorited: sizeResult };
-            tmp(1242).track(constants.GIF_FAVORITED, obj1);
+            AnalyticsUtilsDefault.track(constants.GIF_FAVORITED, obj1);
+            const tmpResult4 = AnalyticsUtilsDefault;
           }
-          const tmpResult1 = tmp(1365);
+          const tmpResult1 = URLUtilsDefault;
         }
-        src = tmp3.gifSrc;
+        src = size.gifSrc;
       }
     }
     const toURLSafeResult2 = URLUtilsDefault.toURLSafe(size.src);
@@ -362,13 +363,13 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
     if (tmp5) {
       let result3 = AttachmentUrlUtilsAll.isExternalProxiedAttachmentUrl(toURLSafeResult2);
       if (!result3) {
-        result3 = tmp6(9942).isAttachmentPathUrl(toURLSafeResult2);
-        const tmp6Result = tmp6(9942);
+        result3 = AttachmentUrlUtilsAll.isAttachmentPathUrl(toURLSafeResult2);
+        const tmp6Result = AttachmentUrlUtilsAll;
       }
       tmp5 = result3;
-      tmp6 = importAll;
     }
-    src = tmp3.src;
+    src = size.src;
+    const tmpResult5 = URLUtilsDefault;
   }, constants5.INFREQUENT_USER_ACTION);
 };
 export const removeFavoriteGIF = function removeFavoriteGIF(uri) {
@@ -379,16 +380,15 @@ export const removeFavoriteGIF = function removeFavoriteGIF(uri) {
       delete tmp[tmp2];
     } else {
       let obj = URLUtilsDefault;
-      const toURLSafeResult = obj.toURLSafe(tmp4);
+      const toURLSafeResult = obj.toURLSafe(closure_0);
       if (null != toURLSafeResult) {
-        let str = tmp4;
+        let str = closure_0;
         if (obj2.isAttachmentPathUrl(toURLSafeResult)) {
-          str = tmp10(9942).removeSignedUrlParameters(toURLSafeResult);
+          str = AttachmentUrlUtilsAll.removeSignedUrlParameters(toURLSafeResult);
           str = str.toString();
-          const tmp10Result = tmp10(9942);
+          const tmp10Result = AttachmentUrlUtilsAll;
         }
         obj2 = AttachmentUrlUtilsAll;
-        tmp10 = importAll;
       }
       delete tmp[tmp3];
     }

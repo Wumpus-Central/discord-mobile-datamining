@@ -24,11 +24,11 @@ export default function PollCreationInputError(message) {
   const effect = noop.useEffect(() => {
     let tmp2 = null != message;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== message;
     }
     if (tmp2) {
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(tmp);
+      AccessibilityAnnouncer.announce(message);
     }
   }, items);
   const obj = { style: tmp.container, children: null };

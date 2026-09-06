@@ -10,8 +10,11 @@ import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import Navigator from "Navigator" /* 7000 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8169 */;
 import VideoBackground from "VideoBackground" /* 8248 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 14593 */;
 import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17433 */;
+import PresetAvatarSelect from "PresetAvatarSelect" /* 17436 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +23,7 @@ import TextStyles from "TextStyles" /* 5524 */;
 
 require = fn;
 function AddAvatarScreen() {
-  _slicedToArray = async function _handleSelectAvatar(noop, value) {
+  _slicedToArray = async function _handleSelectAvatar(noop) {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -105,9 +108,8 @@ function AddAvatarScreen() {
   let pendingImage;
   const stateFromStores = obj.useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
   if (null != selectedAvatar) {
-    tmp9(14593);
-    obj = { imageUri: tmp9(17436).DEFAULT_AVATARS[selectedAvatar], description: null };
-    const tmp9Result = tmp9(8169);
+    obj = { imageUri: PresetAvatarSelect.DEFAULT_AVATARS[selectedAvatar], description: null };
+    const tmp9Result = RecentAvatarUtils;
     obj.description = tmp9Result.generateAvatarDescription();
     pendingImage = tmp9Result.createPendingImage(obj);
   }
@@ -130,11 +132,11 @@ function AddAvatarScreen() {
   let obj1 = { style: tmp.headerContainer, children: null };
   let obj2 = { children: null };
   let obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp9(1114).intl;
+  const intl = util.intl;
   obj3.children = intl.string(util.t.XQRWvR);
   const items2 = [closure_9(Text_Text.Text, obj3), ];
   let obj4 = { style: tmp.subtitle, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
-  const intl2 = tmp9(1114).intl;
+  const intl2 = util.intl;
   obj4.children = intl2.string(util.t.fH9TLT);
   items2[1] = closure_9(Text_Text.Text, obj4);
   obj2.children = items2;
@@ -157,8 +159,8 @@ function AddAvatarScreen() {
   const obj6 = { style: tmp.errorContainer, children: null };
   const obj7 = { style: tmp.errorText, children: null };
   if (stringResult) {
-    const intl3 = tmp9(1114).intl;
-    stringResult = intl3.string(tmp9(1114).t.XyLlVm);
+    const intl3 = util.intl;
+    stringResult = intl3.string(util.t.XyLlVm);
   }
   obj7.children = stringResult;
   obj6.children = closure_9(native.LegacyText, obj7);
@@ -167,7 +169,7 @@ function AddAvatarScreen() {
   const items4 = [closure_10(View, obj1), closure_9(selectedAvatar(17436), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
   const obj8 = { style: tmp.buttonContainer, children: null };
   const obj9 = { text: null, grow: true, onPress: null, disabled: null };
-  const intl4 = tmp9(1114).intl;
+  const intl4 = util.intl;
   obj9.text = intl4.string(util.t.PDTjLN);
   obj9.onPress = function onPress() {
     return AddAvatarModalActionCreators.handlePressNext(pendingImage, first);

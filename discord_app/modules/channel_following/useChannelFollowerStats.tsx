@@ -33,6 +33,7 @@ export default function useChannelFollowerStats(arg0) {
     if (tmp11) {
       closure_2(false);
     }
+    tmp11 = null != stateFromStores && first;
   }, items2);
   const items3 = [stateFromStores, first];
   return items3;

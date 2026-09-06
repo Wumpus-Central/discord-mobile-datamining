@@ -4,7 +4,7 @@
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
 
-let closure_8 = async function _updateDiscoverability(arg0, value) {
+let closure_8 = async function _updateDiscoverability(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -102,7 +102,7 @@ const Constants = fn(1074);
 asyncGeneratorStep(async (name) => {
   c3 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -167,7 +167,7 @@ asyncGeneratorStep(async (name) => {
     }
   })();
 });
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
   if (constants === 2) {
     constants = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -203,28 +203,28 @@ let closure_0 = asyncGeneratorStep(async (arg0, value) => {
           if (localAccount != null) {
             id = localAccount.id;
           }
-          const enabled = tmp68.enabled;
+          const enabled = closure_0.enabled;
           closure_130_0 = enabled;
-          const name = tmp68.name;
+          const name = closure_0.name;
           closure_130_1 = name;
           if (null == id) {
             const obj15 = require("ConnectedAccountsActionCreators");
             const obj1 = { friend_sync: enabled };
             localAccount = 1;
             constants = 1;
-            const obj2 = { value: obj15.connect(tmp71.CONTACTS, "@me", name, tmp69, obj1), done: false };
+            const obj2 = { value: obj15.connect(constants3.CONTACTS, "@me", name, importDefault, obj1), done: false };
             return obj2;
           } else if (undefined !== name) {
             const obj3 = { friend_sync: enabled, name };
             localAccount = 3;
             constants = 1;
-            let obj4 = { value: require("ConnectedAccountsActionCreators").update(tmp71.CONTACTS, id, obj3), done: false };
+            let obj4 = { value: require("ConnectedAccountsActionCreators").update(constants3.CONTACTS, id, obj3), done: false };
             return obj4;
           } else {
             let obj9 = require("ConnectedAccountsActionCreators");
             localAccount = 2;
             constants = 1;
-            let obj5 = { value: obj9.setFriendSync(tmp71.CONTACTS, id, enabled), done: false };
+            let obj5 = { value: obj9.setFriendSync(constants3.CONTACTS, id, enabled), done: false };
             return obj5;
           }
         }

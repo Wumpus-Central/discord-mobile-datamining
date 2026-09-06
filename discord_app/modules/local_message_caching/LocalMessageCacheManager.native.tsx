@@ -17,17 +17,17 @@ import MessageStore from "MessageStore" /* 4781 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 
 require = fn;
-function _getKeyForFileId(arg0) {
+function _getKeyForFileId(id) {
   const entries = Object.entries(_getMessages());
   const obj = entries[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     let file = tmp4[1].file;
-    let id;
+    id = undefined;
     if (file != null) {
       id = file.id;
     }
-    if (id === arg0) {
+    if (id === id) {
       obj.return();
       return tmp4[0];
     }
@@ -62,6 +62,7 @@ function createFailedMessage(channel_id) {
     file(573).wait(() => UploadActionCreatorsDefault.restoreFailedUpload(id.id, file));
     const tmpResult = file(573);
   }
+  const obj2 = file(7456);
 }
 function resumeSendingMessage() {
   const self = this;
@@ -77,7 +78,7 @@ let closure_24 = async function _resumeSendingMessage(arg0) {
   let channel_id = arg0;
   c4 = 0;
   c5 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_3 = tmp5;
     closure_2 = tmp2;
     closure_130_0 = channel_id;
@@ -101,7 +102,7 @@ let closure_24 = async function _resumeSendingMessage(arg0) {
     return true;
   })();
 };
-let closure_25 = async function _rehydrateFailedMessages(arg0, value) {
+let closure_25 = async function _rehydrateFailedMessages(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -259,7 +260,7 @@ function _getMessages() {
 function _getMessage(arg0) {
 
 }
-function _writeMessage(arg0, id) {
+function _writeMessage(c0, id) {
   let obj = closure_11;
   id = undefined;
   if (id != null) {
@@ -284,8 +285,8 @@ function _writeMessage(arg0, id) {
         str = "";
       }
       obj.content = str;
-      obj[arg0] = obj;
-      obj.verbose("_writeMessage after write", obj[arg0].id, obj[arg0].channel_id);
+      obj[c0] = obj;
+      obj.verbose("_writeMessage after write", obj[c0].id, obj[c0].channel_id);
     } else {
       delete tmp[tmp2];
     }
@@ -309,7 +310,7 @@ class LocalMessageCacheManager extends tmp3 {
       tmp5 = set;
       applyArgumentsResult[set] = tmp3;
       tmp6 = closure_3;
-      applyArgumentsResult.handlePostConnectionOpen = closure_3(async (arg0, value) => {
+      applyArgumentsResult.handlePostConnectionOpen = closure_3(async () => {
         if (c10 === 2) {
           c10 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -356,7 +357,7 @@ class LocalMessageCacheManager extends tmp3 {
                   return obj2;
                 } else {
                   closure_134_0 = value;
-                  closure_134_1 = async function _loop(arg0, value) {
+                  closure_134_1 = async function _loop(arg0) {
                     if (c1 === 2) {
                       c1 = 3;
                       throw new TypeError("Generator functions may not be called on executing generators");
@@ -608,7 +609,7 @@ class LocalMessageCacheManager extends tmp3 {
                   sendMessageOptions = tmp7.sendMessageOptions;
                 }
                 obj.sendMessageOptions = sendMessageOptions;
-                _writeMessage(tmp, obj);
+                _writeMessage(closure_1_0, obj);
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -634,7 +635,7 @@ class LocalMessageCacheManager extends tmp3 {
       };
       closure_129_0 = undefined;
       closure_129_1 = applyArgumentsResult;
-      closure_129_0 = closure_3(async (arg0, value) => {
+      closure_129_0 = closure_3(async (arg0) => {
         if (c1 === 2) {
           c1 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -661,7 +662,7 @@ class LocalMessageCacheManager extends tmp3 {
               } else {
                 let obj1 = importDefault[closure_1_26];
                 if (!obj1.has(closure_0)) {
-                  obj1.add(tmp5);
+                  obj1.add(closure_0);
                   c2 = 1;
                   c1 = 1;
                   obj1 = {
@@ -674,7 +675,7 @@ class LocalMessageCacheManager extends tmp3 {
                                   applyArgumentsResult = apply(self, arguments);
                                 }
                                 return applyArgumentsResult;
-                              })(tmp5),
+                              })(closure_0),
                     done: false
                   };
                   return obj1;
@@ -770,7 +771,7 @@ class LocalMessageCacheManager extends tmp3 {
                   sendMessageOptions = tmp7.sendMessageOptions;
                 }
                 obj.sendMessageOptions = sendMessageOptions;
-                _writeMessage(tmp, obj);
+                _writeMessage(closure_1_0, obj);
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -785,7 +786,7 @@ class LocalMessageCacheManager extends tmp3 {
         closure_10(() => {
           const tmp2 = _getKeyForFileId(file.id);
           if (null != tmp2) {
-            let obj = { file };
+            { file: null }.file = file;
             closure_0 = tmp2;
             closure_2_10(() => {
               if (typeof closure_2_16 === "function") {
@@ -795,11 +796,11 @@ class LocalMessageCacheManager extends tmp3 {
                   if (null == obj) {
                     obj = {};
                   }
-                  if (null != obj[tmp]) {
+                  if (null != obj[closure_0]) {
                     obj = {};
                     const merged = Object.assign(tmp7);
                     const merged1 = Object.assign(obj);
-                    closure_2_17(tmp, obj);
+                    closure_2_17(closure_0, obj);
                   }
                 } else {
                   throw new TypeError("Trying to call a non-function");
@@ -808,6 +809,7 @@ class LocalMessageCacheManager extends tmp3 {
                 throw new TypeError("Trying to call a non-function");
               }
             });
+            let obj = { file: null };
           }
         });
       };
@@ -833,11 +835,11 @@ class LocalMessageCacheManager extends tmp3 {
               if (null == obj) {
                 obj = {};
               }
-              if (null != obj[tmp]) {
+              if (null != obj[closure_0]) {
                 obj = {};
                 const merged = Object.assign(tmp7);
                 const merged1 = Object.assign(obj);
-                closure_2_17(tmp, obj);
+                closure_2_17(closure_0, obj);
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -858,11 +860,11 @@ class LocalMessageCacheManager extends tmp3 {
               if (null == obj) {
                 obj = {};
               }
-              if (null != obj[tmp]) {
+              if (null != obj[closure_0]) {
                 obj = {};
                 const merged = Object.assign(tmp7);
                 const merged1 = Object.assign(obj);
-                closure_2_17(tmp, obj);
+                closure_2_17(closure_0, obj);
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -902,7 +904,7 @@ prototype["_initialize"] = function _initialize() {
   const subscription6 = DispatcherDefault.subscribe("UPLOAD_COMPLETE", this.handleUploadComplete);
   const subscription7 = DispatcherDefault.subscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
   const subscription8 = DispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
-  (async (arg0, value) => {
+  (async () => {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

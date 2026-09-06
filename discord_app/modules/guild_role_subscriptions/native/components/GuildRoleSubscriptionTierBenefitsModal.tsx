@@ -35,14 +35,13 @@ function AddBenefitButton(disabled) {
   let obj = { style: items, accessibilityRole: "button", accessibilityState: { disabled: flag }, onPress, disabled: flag, children: null };
   items[1] = disabled;
   obj = { source: null };
-  const tmp2 = map1;
   const tmp5 = TouchableHitBoxDefault;
   obj.source = _modDef17745;
   const items1 = [closure_1_12(FastImageDefault, obj), ];
   obj = { style: tmp.addBenefitLabel, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
   items1[1] = closure_1_12(Text_Text.Text, obj);
   obj.children = items1;
-  return tmp2(tmp5, obj);
+  return map1(tmp5, obj);
 }
 function Separator() {
   return closure_1_12(React5, { style: closure_15().separator });
@@ -185,19 +184,18 @@ function Content(arg0) {
     type = type.type;
     const obj = { style: closure_1(13898)().header, children: null };
     const tmp2 = closure_1(13898)();
-    const tmp3 = closure_12;
     if (closure_16.CHANNEL === type) {
       const intl2 = closure_0(1114).intl;
       let stringResult = intl2.string(closure_0(1114).t.LtfhAj);
-    } else if (tmp5.INTANGIBLE === type) {
+    } else if (closure_16.INTANGIBLE === type) {
       const intl = closure_0(1114).intl;
       stringResult = intl.string(closure_0(1114).t["8oxWpO"]);
-    } else if (tmp5.EMOJI === type) {
+    } else if (closure_16.EMOJI === type) {
       const intl3 = closure_0(1114).intl;
       stringResult = intl3.string(closure_0(1114).t.XBkDoA);
     }
     obj.children = stringResult;
-    return tmp3(closure_1(9816), obj);
+    return closure_12(closure_1(9816), obj);
   }
   ({ onlyChannels, onlyIntangible } = arg0);
   const tmp = addBenefit();
@@ -300,7 +298,7 @@ function Content(arg0) {
         obj.style = items1;
         obj = { emoji: item };
         obj.children = closure_12(EmojiRowLabel, obj);
-        let tmp3Result = tmp3(first, obj);
+        let tmp3Result = closure_12(first, obj);
       } else {
         const items2 = [items, ];
         let disabled = roleSubscriptionSettingsDisabled;
@@ -348,7 +346,7 @@ function Content(arg0) {
         obj.disabled = roleSubscriptionSettingsDisabled;
         const obj2 = { guildId, benefit: item };
         obj.children = closure_12(closure_0(17760).GuildRoleSubscriptionBenefitPreview, obj2);
-        tmp3Result = tmp3(closure_1(9050), obj);
+        tmp3Result = closure_12(closure_1(9050), obj);
         const tmp6 = closure_1(9050);
       }
       return tmp3Result;
@@ -380,10 +378,10 @@ function Content(arg0) {
     if (constants.CHANNEL === type) {
       const intl2 = closure_0(1114).intl;
       let stringResult = intl2.string(closure_0(1114).t.WEg7PK);
-    } else if (tmp3.INTANGIBLE === type) {
+    } else if (constants.INTANGIBLE === type) {
       const intl = closure_0(1114).intl;
       stringResult = intl.string(closure_0(1114).t.VinNZr);
-    } else if (tmp3.EMOJI === type) {
+    } else if (constants.EMOJI === type) {
       const intl3 = closure_0(1114).intl;
       stringResult = intl3.string(closure_0(1114).t["0t1aNC"]);
     }

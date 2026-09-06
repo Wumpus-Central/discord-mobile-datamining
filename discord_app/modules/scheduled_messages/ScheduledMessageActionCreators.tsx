@@ -7,7 +7,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_8 = async function _createScheduledMessage(arg0, value) {
+let closure_8 = async function _createScheduledMessage(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -120,7 +120,7 @@ let closure_8 = async function _createScheduledMessage(arg0, value) {
     }
   }
 };
-let closure_9 = async function _updateScheduledMessage(arg0, value) {
+let closure_9 = async function _updateScheduledMessage(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -251,11 +251,11 @@ let closure_9 = async function _updateScheduledMessage(arg0, value) {
     }
   }
 };
-let closure_10 = async function _deleteScheduledMessage(scheduledMessageId) {
+let closure_10 = async function _deleteScheduledMessage() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -342,11 +342,11 @@ let closure_10 = async function _deleteScheduledMessage(scheduledMessageId) {
     }
   })();
 };
-let closure_11 = async function _sendScheduledMessageNow(scheduledMessageId) {
+let closure_11 = async function _sendScheduledMessageNow() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -437,7 +437,7 @@ let closure_12 = async function _getScheduledMessages() {
   closure_0 = tmp2;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: constants.SCHEDULED_MESSAGES, rejectWithError: true });
-  const body = arg1.body;
+  const body = value.body;
   return body.map(closure_128_0(closure_128_2[6]).convertServerScheduledMessageSend);
 };
 let closure_13 = async function _fetchScheduledMessages() {
@@ -463,9 +463,9 @@ let closure_13 = async function _fetchScheduledMessages() {
     c5 = 3;
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_128_0 = arg1;
+    closure_128_0 = value;
     const scheduledMessageLogger = closure_129_0(closure_129_2[6]).scheduledMessageLogger;
     scheduledMessageLogger.info("Fetched scheduled messages", closure_128_0);
     obj3 = { type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: closure_128_0 };
@@ -473,7 +473,7 @@ let closure_13 = async function _fetchScheduledMessages() {
     c3 = 0;
     closure_129_1(closure_129_2[4]);
   }
-  return arg1;
+  return value;
 };
 const Constants = fn(1074);
 ({ Endpoints: hasOwnProperty, MessageFlags: metroRequire } = Constants);

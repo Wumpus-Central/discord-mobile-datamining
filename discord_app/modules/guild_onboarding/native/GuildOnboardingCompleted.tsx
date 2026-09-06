@@ -170,15 +170,14 @@ export default function GuildOnboardingCompleted(guildId) {
     const withDelayResult1 = obj10.withDelay(duration, timing.withTiming(1.5, obj1));
     let num = 1;
     if (!stateFromStores2) {
-      num = tmp4;
+      num = duration;
     }
     obj2 = { duration: num, easing: null };
-    const Easing3 = tmp(4296).Easing;
+    const Easing3 = ReanimatedRexport.Easing;
     obj2.easing = Easing3.out(ReanimatedRexport.Easing.ease);
     obj3 = { opacity: withSequenceResult, transform: null };
     const obj4 = { rotate: null };
-    tmp(4296);
-    const tmpResult = tmp(4561);
+    const tmpResult = timing;
     const withSequenceResult1 = obj8.withSequence(withTimingResult1, withDelayResult1, timing.withTiming(1, obj2));
     const withTimingResult2 = tmpResult.withTiming("0deg", { duration: 0 });
     const tmpResult1 = ReanimatedRexport;

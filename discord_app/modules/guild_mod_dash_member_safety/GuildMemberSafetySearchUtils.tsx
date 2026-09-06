@@ -1,6 +1,7 @@
 // === Module 7520: GuildMemberSafetySearchUtils ===
 
 // Module 7520 (GuildMemberSafetySearchUtils)
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7521 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx");
@@ -16,6 +17,7 @@ export const splitQuery = function splitQuery(query) {
     } else {
       items1.push(item);
     }
+    obj = ApplicationCommandUtils;
   });
   const items2 = [items1, items];
   return items2;

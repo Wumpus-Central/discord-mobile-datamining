@@ -33,7 +33,7 @@ export default noop.memo((guildId) => {
       let VoiceNormalIcon = tmp4(5097).StageIcon;
     }
     obj = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
-    const items1 = [tmp7(VoiceNormalIcon, obj), ];
+    const items1 = [closure_4(VoiceNormalIcon, obj), ];
     const obj1 = { offsetAmount: -6, style: tmp.iconContainer, overflowStyle: null, overflowComponent: null, items: null, max: null, renderItem: null };
     const items2 = [tmp.overflow, transparentBorder];
     obj1.overflowStyle = items2;
@@ -49,7 +49,7 @@ export default noop.memo((guildId) => {
       obj.cutout = tmp2;
       return React4(native.CutoutableAvatarImage, obj);
     };
-    items1[1] = tmp7(tmp4(1178).SummarizedIconRow, obj1);
+    items1[1] = closure_4(tmp4(1178).SummarizedIconRow, obj1);
     obj.children = items1;
     return tmp5(tmp6, obj);
   }

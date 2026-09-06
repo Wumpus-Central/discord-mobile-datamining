@@ -9,7 +9,7 @@ import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
-function updateStats(arr, arg1, timestamp) {
+function updateStats(arr, arg1) {
   obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -128,13 +128,12 @@ prototype["put"] = function put(arg0, arg1, arg2, arg3) {
     state["" + arg0 + ":" + arg1 + ":" + arg2] = arg3;
     const merged1 = Object.assign(self.state);
     if (typeof RTCDebugVideoOutputMap === "function") {
-      const obj1 = Object.create(tmp3.prototype);
+      const obj1 = Object.create(RTCDebugVideoOutputMap.prototype);
       obj1.state = state;
       return obj1;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    tmp3 = RTCDebugVideoOutputMap;
   }
 };
 prototype["get"] = function get(arg0, arg1, arg2) {
@@ -261,7 +260,7 @@ prototype2["getOutboundStats"] = function getOutboundStats(context) {
   obj.fps = tmp13;
   return obj;
 };
-prototype2["getAllStats"] = function getAllStats(context) {
+prototype2["getAllStats"] = function getAllStats() {
   let DEFAULT = context;
   if (context === undefined) {
     DEFAULT = MediaEngineContextTypes.DEFAULT;
@@ -370,7 +369,7 @@ graphs = {
         stats = stats.stats;
         if (null != stats) {
           const tmp7 = _slicedToArray(closure_11.split(":"), 3);
-          if (tmp7[0] === tmp3) {
+          if (tmp7[0] === closure_0) {
             const _parseInt = parseInt;
             if (parseInt(tmp9) === index) {
               if (null != user.getUser(tmp8)) {
@@ -387,7 +386,7 @@ graphs = {
           let tmp15 = stats;
           if (null != stats.screenshare) {
             const _HermesInternal = HermesInternal;
-            combined = "" + tmp3 + ":" + index;
+            combined = "" + closure_0 + ":" + index;
             value = map1.get(combined);
             if (tmp4[index] != null) {
               let screenshare = tmp43.screenshare;

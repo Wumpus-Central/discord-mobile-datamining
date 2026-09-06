@@ -94,11 +94,11 @@ export default function GuildSettingsModalIntegrations(contentContainerStyle) {
       obj2.label = intl.string(tmp(tmp2[17]).t.jp25Id);
       const intl2 = tmp(tmp2[17]).intl;
       obj2.subLabel = intl2.string(tmp(tmp2[17]).t.mKIOkI);
-      obj2.icon = tmp15(tmp(tmp2[18]).WebhookIcon, {});
+      obj2.icon = closure_7(tmp(tmp2[18]).WebhookIcon, {});
       obj2.onPress = function onPress() {
         return closure_1.push(constants.WEBHOOKS);
       };
-      tmp15Result = tmp15(tmp(tmp2[16]).TableRow, obj2);
+      tmp15Result = closure_7(tmp(tmp2[16]).TableRow, obj2);
     }
     const items4 = [tmp15Result, , , ];
     if (canManageWebhooks) {
@@ -107,11 +107,11 @@ export default function GuildSettingsModalIntegrations(contentContainerStyle) {
       obj3.label = intl3.string(tmp(tmp2[17]).t.OrV60r);
       const intl4 = tmp(tmp2[17]).intl;
       obj3.subLabel = intl4.string(tmp(tmp2[17]).t.rQREJl);
-      obj3.icon = tmp15(tmp(tmp2[19]).ChannelsFollowedIcon, {});
+      obj3.icon = closure_7(tmp(tmp2[19]).ChannelsFollowedIcon, {});
       obj3.onPress = function onPress() {
         return closure_1.push(constants.CHANNELS_FOLLOWED);
       };
-      canManageWebhooks = tmp15(tmp(tmp2[16]).TableRow, obj3);
+      canManageWebhooks = closure_7(tmp(tmp2[16]).TableRow, obj3);
     }
     items4[1] = canManageWebhooks;
     if (tmp15Result) {
@@ -120,11 +120,11 @@ export default function GuildSettingsModalIntegrations(contentContainerStyle) {
       obj4.label = intl5.string(tmp(tmp2[17]).t.tqtDXC);
       const intl6 = tmp(tmp2[17]).intl;
       obj4.subLabel = intl6.string(tmp(tmp2[17]).t.v8819e);
-      obj4.icon = tmp15(tmp(tmp2[20]).RefreshIcon, {});
+      obj4.icon = closure_7(tmp(tmp2[20]).RefreshIcon, {});
       obj4.onPress = function onPress() {
         return closure_1.push(constants.LOBBIES_LINKED);
       };
-      tmp15Result = tmp15(tmp(tmp2[16]).TableRow, obj4);
+      tmp15Result = closure_7(tmp(tmp2[16]).TableRow, obj4);
     }
     items4[2] = tmp15Result;
     if (canManageGuild) {
@@ -142,20 +142,19 @@ export default function GuildSettingsModalIntegrations(contentContainerStyle) {
             return null;
           } else {
             obj = { label: value.name, subLabel: null, icon: null, arrow: true, onPress: null };
-            const intl = platformType(tmp3[17]).intl;
+            const intl = platformType(stateFromStores[17]).intl;
             obj = { platformName: value.name };
-            obj.subLabel = intl.formatToPlainString(platformType(tmp3[17]).t.VXU4EU, obj);
-            const obj5 = platformType(tmp3[22]);
-            const tmp8 = closure_3;
+            obj.subLabel = intl.formatToPlainString(platformType(stateFromStores[17]).t.VXU4EU, obj);
+            const obj5 = platformType(stateFromStores[22]);
             let icon = value.icon;
-            obj1 = { source: obj5.makeSource(platformType(tmp3[23]).isThemeDark(closure_3) ? icon.darkPNG : icon.lightPNG), style: platformType.platformIcon };
-            icon = tmp6(tmp8, obj1);
+            obj1 = { source: obj5.makeSource(platformType(stateFromStores[23]).isThemeDark(closure_3) ? icon.darkPNG : icon.lightPNG), style: platformType.platformIcon };
+            icon = closure_1_7(closure_3, obj1);
             obj.icon = icon;
             obj.onPress = function onPress() {
               return closure_1.push(constants.INTEGRATION_PLATFORM, { platformType });
             };
-            closure_1_7(platformType(tmp3[16]).TableRow, obj, item);
-            const obj6 = platformType(tmp3[23]);
+            closure_1_7(platformType(stateFromStores[16]).TableRow, obj, item);
+            const obj6 = platformType(stateFromStores[23]);
           }
         } else {
           return null;
@@ -170,7 +169,7 @@ export default function GuildSettingsModalIntegrations(contentContainerStyle) {
     obj.children = closure_7(tmp(tmp2[14]).Stack, obj);
     const items5 = [closure_7(tmp(tmp2[13]).Form, obj), closure_7(tmp(tmp2[24]).NavScrim, {})];
     obj5.children = items5;
-    tmp13Result = tmp13(closure_9, obj5);
+    tmp13Result = closure_8(closure_9, obj5);
   }
   return tmp11;
 };

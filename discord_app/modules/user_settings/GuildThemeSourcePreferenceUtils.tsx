@@ -8,23 +8,23 @@ const result = size.fileFinishedImporting("modules/user_settings/GuildThemeSourc
 
 export const resolveDefaultGuildThemePreference = function resolveDefaultGuildThemePreference(arg0) {
   if (arg0 === preloaded_user_settings.GuildThemeSourcePreference.PERSONAL) {
-    let GUILD = tmp(1187).GuildThemeSourcePreference.PERSONAL;
+    let GUILD = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
   } else {
-    GUILD = tmp(1187).GuildThemeSourcePreference.GUILD;
+    GUILD = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
 };
-export const resolveGuildThemeSourcePreference = function resolveGuildThemeSourcePreference(arg0, arg1) {
+export const resolveGuildThemeSourcePreference = function resolveGuildThemeSourcePreference(guildThemeSourcePreferenceOverride, defaultGuildThemePreference) {
   let GuildThemeSourcePreference = dependencyMap;
-  let tmp2 = arg0;
-  if (arg0 !== preloaded_user_settings.GuildThemeSourcePreference.GUILD) {
-    tmp2 = arg0;
-    if (arg0 !== tmp(1187).GuildThemeSourcePreference.PERSONAL) {
-      if (arg1 === tmp(1187).GuildThemeSourcePreference.PERSONAL) {
-        GuildThemeSourcePreference = tmp(1187).GuildThemeSourcePreference;
+  let tmp2 = guildThemeSourcePreferenceOverride;
+  if (guildThemeSourcePreferenceOverride !== preloaded_user_settings.GuildThemeSourcePreference.GUILD) {
+    tmp2 = guildThemeSourcePreferenceOverride;
+    if (guildThemeSourcePreferenceOverride !== preloaded_user_settings.GuildThemeSourcePreference.PERSONAL) {
+      if (defaultGuildThemePreference === preloaded_user_settings.GuildThemeSourcePreference.PERSONAL) {
+        GuildThemeSourcePreference = preloaded_user_settings.GuildThemeSourcePreference;
         let GUILD = GuildThemeSourcePreference.PERSONAL;
       } else {
-        GUILD = tmp(1187).GuildThemeSourcePreference.GUILD;
+        GUILD = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
       }
     }
   }

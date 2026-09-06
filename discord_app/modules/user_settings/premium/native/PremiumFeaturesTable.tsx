@@ -8,18 +8,18 @@ import shared from "shared" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import _modDef13477 from "module_13477" /* 13477 */;
 import _modDef13478 from "module_13478" /* 13478 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef13477 = tmp(13477);
 require = fn;
 function CheckIcon() {
   let obj = shared;
   const tmp3 = useThemeDefault();
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
-  obj = { source: _modDef13477, color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: tmp4(1178).IconSizes.SMALL };
+  obj = { source: _modDef13477, color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL };
   return closure_1_11(native.Icon, obj);
 }
 function CloseIcon() {
@@ -165,11 +165,11 @@ function Row(withTopBorderRadius) {
         ({ START: obj9.start, END: obj9.end } = HorizontalGradient);
         obj6.colors = ["rgba(133, 71, 198, 0.10)", "rgba(184, 69, 193, 0.10)", "rgba(171, 93, 138, 0.10)"];
         obj6.children = column2;
-        obj4.children = tmp5(LinearGradientDefault, obj6);
+        obj4.children = closure_1_11(LinearGradientDefault, obj6);
       }
-      items2[2] = tmp5(tmp4, obj4);
+      items2[2] = closure_1_11(View, obj4);
       obj.children = items2;
-      return closure_1_12(tmp4, obj);
+      return closure_1_12(View, obj);
     }
   }
   const items6 = [, , , , ];
@@ -288,7 +288,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   } else {
     tmp2Result = tmp2(tmp3[23]);
   }
-  obj1 = { column1: tmp12(tmp2Result, obj), column2: null, withBottomBorder: false, withTopBorderRadius: true, disableAccessibility: true, hidden: null };
+  obj1 = { column1: closure_11(tmp2Result, obj), column2: null, withBottomBorder: false, withTopBorderRadius: true, disableAccessibility: true, hidden: null };
   obj.source = tmp2Result;
   const obj2 = { accessible: true, accessibilityLabel: null, style: null, source: null };
   const intl2 = tmp9(tmp3[15]).intl;
@@ -437,12 +437,11 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   }
   if (isPremiumGroup) {
     const obj25 = { style: tmp.premiumGroupCard, premiumGroupRole };
-    isPremiumGroup = tmp12(tmp2(tmp3[26]), obj25);
+    isPremiumGroup = closure_11(tmp2(tmp3[26]), obj25);
   }
   items2[1] = isPremiumGroup;
   const obj15 = { numBoosts };
   const obj16 = { numBoosts };
-  const tmp18 = closure_12;
   tmp9Result = tmp9(tmp3[10]);
   items2[2] = closure_11(View, {
     style: tmp.table,
@@ -457,5 +456,5 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
     })
   });
   obj23.children = items2;
-  return tmp18(View, obj23);
+  return closure_12(View, obj23);
 };

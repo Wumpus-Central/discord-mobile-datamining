@@ -73,16 +73,16 @@ export default function SettingsUpsellElement(settingsUpsells) {
     obj = { style: tmp.container, children: null };
     obj = { style: tmp.settingsContainer, children: null };
     obj1 = { title: null, hasIcons: true, children: null };
-    const intl = tmp2(tmp3[15]).intl;
-    obj1.title = intl.string(tmp2(tmp3[15]).t["1yxTIJ"]);
+    const intl = tmp2(reportId[15]).intl;
+    obj1.title = intl.string(tmp2(reportId[15]).t["1yxTIJ"]);
     obj1.children = settingsUpsellsConfigs.map((getTitle, index) => {
       ({ getDisabledTitle, getDescription, onApply } = getTitle);
       return React7(SettingsUpsellsTableRow, { title: getTitle.getTitle(), disabledTitle: getDisabledTitle(), description: getDescription(), onButtonClick: onApply, trackSettingsUpsellsAction: closure_5(settingsUpsells[index]) }, index);
     });
-    obj.children = closure_9(tmp2(tmp3[14]).TableRowGroup, obj1);
+    obj.children = closure_9(tmp2(reportId[14]).TableRowGroup, obj1);
     const items1 = [closure_9(closure_5, obj), ];
     const obj2 = { variant: "text-sm/medium", style: tmp.goToSettingsText, children: null };
-    const intl2 = tmp2(tmp3[15]).intl;
+    const intl2 = tmp2(reportId[15]).intl;
     const obj3 = {
       goToSettingsHook() {
           let obj = { screen: constants2.CONTENT_AND_SOCIAL };
@@ -91,8 +91,8 @@ export default function SettingsUpsellElement(settingsUpsells) {
           AppAnalyticsUtilsDefault.trackWithMetadata(constants.IAR_SETTINGS_UPSELLS_ACTION, obj);
         }
     };
-    obj2.children = intl2.format(tmp2(tmp3[15]).t["u7mo+k"], obj3);
-    items1[1] = closure_9(tmp2(tmp3[16]).Text, obj2);
+    obj2.children = intl2.format(tmp2(reportId[15]).t["u7mo+k"], obj3);
+    items1[1] = closure_9(tmp2(reportId[16]).Text, obj2);
     obj.children = items1;
     tmp6 = closure_10(closure_5, obj);
   }

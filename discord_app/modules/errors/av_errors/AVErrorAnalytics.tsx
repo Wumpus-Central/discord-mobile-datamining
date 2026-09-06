@@ -3,6 +3,7 @@
 // Module 17852 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1359 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4554 */;
 import VideoQualityStats from "VideoQualityStats" /* 7741 */;
 import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9609 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -264,7 +265,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.error_message = tmp2;
     let guild_id;
     if (closure_4 != null) {
-      guild_id = tmp3.guild_id;
+      guild_id = closure_4.guild_id;
     }
     if (guild_id == null) {
       guild_id = null;
@@ -277,7 +278,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.channel_id = tmp5;
     let type;
     if (closure_4 != null) {
-      type = tmp3.type;
+      type = closure_4.type;
     }
     if (type == null) {
       type = null;
@@ -351,7 +352,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.participant_type = tmp17;
     let num;
     if (inboundStats1 != null) {
-      num = tmp18.num_frames;
+      num = inboundStats1.num_frames;
     }
     if (num == null) {
       num = 0;
@@ -359,7 +360,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.num_frames = num;
     let num2;
     if (inboundStats1 != null) {
-      num2 = tmp18.num_packets;
+      num2 = inboundStats1.num_packets;
     }
     if (num2 == null) {
       num2 = 0;
@@ -367,14 +368,14 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.num_packets = num2;
     let num3;
     if (inboundStats1 != null) {
-      num3 = tmp18.num_bytes;
+      num3 = inboundStats1.num_bytes;
     }
     if (num3 == null) {
       num3 = 0;
     }
     obj.num_bytes = num3;
     if (isErrorOutbound) {
-      const connectionStats = MediaEngineStatsStore.getConnectionStats(tmp20);
+      const connectionStats = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
       let tmp29 = null;
       if (null != connectionStats) {
         const outbound = connectionStats.stats.rtp.outbound;
@@ -387,12 +388,12 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       let tmp22 = tmp29;
     } else {
       tmp22 = null;
-      if (null != tmp21) {
-        const connectionStats1 = MediaEngineStatsStore.getConnectionStats(tmp20);
+      if (null != userId) {
+        const connectionStats1 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
         tmp22 = null;
         if (null != connectionStats1) {
           let tmp25 = null;
-          if (null != connectionStats1.stats.rtp.inbound[tmp21]) {
+          if (null != connectionStats1.stats.rtp.inbound[userId]) {
             let found1 = arr.find((type) => "video" === type.type);
             if (found1 == null) {
               found1 = null;
@@ -413,8 +414,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.num_packets_lost = num4;
     let parseCodecTypeResult = videoCodec;
     if (videoCodec == null) {
-      if (tmp19) {
-        const connectionStats2 = MediaEngineStatsStore.getConnectionStats(tmp20);
+      if (isErrorOutbound) {
+        const connectionStats2 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
         let tmp39 = null;
         if (null != connectionStats2) {
           const outbound1 = connectionStats2.stats.rtp.outbound;
@@ -427,12 +428,12 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
         let tmp32 = tmp39;
       } else {
         tmp32 = null;
-        if (null != tmp21) {
-          const connectionStats3 = MediaEngineStatsStore.getConnectionStats(tmp20);
+        if (null != userId) {
+          const connectionStats3 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
           tmp32 = null;
           if (null != connectionStats3) {
             let tmp35 = null;
-            if (null != connectionStats3.stats.rtp.inbound[tmp21]) {
+            if (null != connectionStats3.stats.rtp.inbound[userId]) {
               let found3 = arr3.find((type) => "video" === type.type);
               if (found3 == null) {
                 found3 = null;
@@ -455,7 +456,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.video_codec = parseCodecTypeResult;
     let parseEncoderResult = videoEncoder;
     if (videoEncoder == null) {
-      const connectionStats4 = MediaEngineStatsStore.getConnectionStats(tmp20);
+      const connectionStats4 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
       let tmp47 = null;
       if (null != connectionStats4) {
         const outbound2 = connectionStats4.stats.rtp.outbound;
@@ -478,12 +479,12 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     let parseDecoderResult = videoDecoder;
     if (videoDecoder == null) {
       let tmp53 = null;
-      if (null != tmp21) {
-        const connectionStats5 = MediaEngineStatsStore.getConnectionStats(tmp20);
+      if (null != userId) {
+        const connectionStats5 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
         tmp53 = null;
         if (null != connectionStats5) {
           let tmp54 = null;
-          if (null != connectionStats5.stats.rtp.inbound[tmp21]) {
+          if (null != connectionStats5.stats.rtp.inbound[userId]) {
             let found5 = arr6.find((type) => "video" === type.type);
             if (found5 == null) {
               found5 = null;
@@ -508,7 +509,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       tmp57 = null;
     }
     obj.audio_capture_sample_rate_mismatch_percent = tmp57;
-    const connectionStats6 = MediaEngineStatsStore.getConnectionStats(tmp20);
+    const connectionStats6 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
     let currentSampleRate;
     if (connectionStats6 != null) {
       const outbound3 = connectionStats6.stats.rtp.outbound;
@@ -556,7 +557,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     const WindowVisibilityVideoManager = WindowVisibilityVideoManager2.WindowVisibilityVideoManager;
     obj.incoming_video_stopped_for_occlusion = !WindowVisibilityVideoManager.isIncomingVideoEnabled();
     if (isErrorOutbound) {
-      const connectionStats7 = obj7.getConnectionStats(tmp20);
+      const connectionStats7 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
       let tmp72 = null;
       if (null != connectionStats7) {
         const outbound4 = connectionStats7.stats.rtp.outbound;
@@ -569,12 +570,12 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       let tmp67 = tmp72;
     } else {
       tmp67 = null;
-      if (null != tmp21) {
-        const connectionStats8 = obj7.getConnectionStats(tmp20);
+      if (null != userId) {
+        const connectionStats8 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
         tmp67 = null;
         if (null != connectionStats8) {
           let tmp69 = null;
-          if (null != connectionStats8.stats.rtp.inbound[tmp21]) {
+          if (null != connectionStats8.stats.rtp.inbound[userId]) {
             let found8 = arr8.find((type) => "video" === type.type);
             if (found8 == null) {
               found8 = null;
@@ -595,7 +596,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.bitrate = bitrate;
     let tmp75 = null;
     if (isErrorOutbound) {
-      const connectionStats9 = obj7.getConnectionStats(tmp20);
+      const connectionStats9 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
       let tmp77 = null;
       if (null != connectionStats9) {
         const outbound5 = connectionStats9.stats.rtp.outbound;
@@ -616,7 +617,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     }
     obj.target_bitrate = tmp75;
     if (isErrorOutbound) {
-      const connectionStats10 = obj7.getConnectionStats(tmp80);
+      const connectionStats10 = MediaEngineStatsStore.getConnectionStats(mediaContext);
       let tmp87 = null;
       if (null != connectionStats10) {
         const outbound6 = connectionStats10.stats.rtp.outbound;
@@ -636,12 +637,12 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       let frameRateDecode = frameRateEncode;
     } else {
       let tmp81 = null;
-      if (null != tmp21) {
-        const connectionStats11 = obj7.getConnectionStats(tmp80);
+      if (null != userId) {
+        const connectionStats11 = MediaEngineStatsStore.getConnectionStats(mediaContext);
         tmp81 = null;
         if (null != connectionStats11) {
           let tmp83 = null;
-          if (null != connectionStats11.stats.rtp.inbound[tmp21]) {
+          if (null != connectionStats11.stats.rtp.inbound[userId]) {
             let found11 = arr11.find((type) => "video" === type.type);
             if (found11 == null) {
               found11 = null;
@@ -666,7 +667,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     let tmp90 = null;
     if (mediaContext === constants.STREAM) {
       tmp90 = null;
-      if (tmp19) {
+      if (isErrorOutbound) {
         tmp90 = closure_1_22;
       }
     }
@@ -845,13 +846,13 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       currentCPUUsagePercent = null;
     }
     obj.cpu_usage = currentCPUUsagePercent;
-    let tmp115Result = tmp115(1359);
+    let tmp115Result = ProcessUtilsDefault;
     let currentMemoryUsageKB = tmp115Result.getCurrentMemoryUsageKB();
     if (currentMemoryUsageKB == null) {
       currentMemoryUsageKB = null;
     }
     obj.memory_usage = currentMemoryUsageKB;
-    const connectionStats12 = obj7.getConnectionStats(tmp20);
+    const connectionStats12 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
     let prop3;
     if (connectionStats12 != null) {
       prop3 = connectionStats12.stats.transport.outboundBitrateEstimate;
@@ -860,7 +861,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       prop3 = null;
     }
     obj.outbound_bitrate_estimate = prop3;
-    const connectionStats13 = obj7.getConnectionStats(tmp20);
+    const connectionStats13 = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
     let prop4;
     if (connectionStats13 != null) {
       prop4 = connectionStats13.stats.transport.inboundBitrateEstimate;
@@ -872,8 +873,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.hardware_enabled = MediaEngineStore.getHardwareEncoding();
     let tmp122 = audioInputDeviceName;
     if (audioInputDeviceName == null) {
-      const inputDevices = obj10.getInputDevices();
-      const tmp124 = inputDevices[obj10.getInputDeviceId(obj10)];
+      const inputDevices = MediaEngineStore.getInputDevices();
+      const tmp124 = inputDevices[MediaEngineStore.getInputDeviceId(MediaEngineStore)];
       let name1;
       if (tmp124 != null) {
         name1 = tmp124.name;
@@ -883,8 +884,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.audio_input_device_name = tmp122;
     let tmp126 = prop1;
     if (prop1 == null) {
-      const outputDevices = obj10.getOutputDevices();
-      const tmp128 = outputDevices[obj10.getOutputDeviceId(obj10)];
+      const outputDevices = MediaEngineStore.getOutputDevices();
+      const tmp128 = outputDevices[MediaEngineStore.getOutputDeviceId(MediaEngineStore)];
       let name2;
       if (tmp128 != null) {
         name2 = tmp128.name;
@@ -894,8 +895,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.audio_output_device_name = tmp126;
     let tmp130 = videoDeviceName;
     if (videoDeviceName == null) {
-      const videoDevices = obj10.getVideoDevices();
-      const tmp132 = videoDevices[obj10.getVideoDeviceId(obj10)];
+      const videoDevices = MediaEngineStore.getVideoDevices();
+      const tmp132 = videoDevices[MediaEngineStore.getVideoDeviceId(MediaEngineStore)];
       let name3;
       if (tmp132 != null) {
         name3 = tmp132.name;
@@ -903,10 +904,10 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       tmp130 = name3;
     }
     obj.video_device_name = tmp130;
-    const mediaEngine = obj10.getMediaEngine();
+    const mediaEngine = MediaEngineStore.getMediaEngine();
     obj.audio_subsystem = mediaEngine.getAudioSubsystem();
     obj.automatic_audio_subsystem = MediaEngineStore.getSettings().automaticAudioSubsystem;
-    const mediaEngine1 = obj10.getMediaEngine();
+    const mediaEngine1 = MediaEngineStore.getMediaEngine();
     obj.audio_layer = mediaEngine1.getAudioLayer();
     obj.audio_input_mode = MediaEngineStore.getSettings().mode;
     obj.automatic_audio_input_sensitivity_enabled = MediaEngineStore.getSettings().modeOptions.autoThreshold;
@@ -920,19 +921,20 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.output_volume = MediaEngineStore.getOutputVolume();
     obj.audio_input_device_count = Object.keys(MediaEngineStore.getInputDevices()).length;
     obj.audio_output_device_count = Object.keys(MediaEngineStore.getOutputDevices()).length;
-    tmp115Result = tmp115(4554);
+    tmp115Result = CrossPlatformNativeUtilsDefault;
     obj.app_hardware_acceleration_enabled = tmp115Result.getAppHardwareAccelerationEnabled();
-    let inputDeviceOSMuted = obj10.getInputDeviceOSMuted();
+    let inputDeviceOSMuted = MediaEngineStore.getInputDeviceOSMuted();
     if (inputDeviceOSMuted == null) {
       inputDeviceOSMuted = null;
     }
     obj.input_device_os_muted = inputDeviceOSMuted;
-    let inputDeviceOSVolume = obj10.getInputDeviceOSVolume();
+    let inputDeviceOSVolume = MediaEngineStore.getInputDeviceOSVolume();
     if (inputDeviceOSVolume == null) {
       inputDeviceOSVolume = null;
     }
     obj.input_device_os_volume = inputDeviceOSVolume;
     obj5 = rTCConnection1;
     AnalyticsUtilsDefault.track(AnalyticEvents.AV_ERROR_REPORTED, obj);
+    const tmp115Result1 = AnalyticsUtilsDefault;
   });
 };

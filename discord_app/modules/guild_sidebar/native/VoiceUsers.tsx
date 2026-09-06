@@ -38,10 +38,10 @@ let closure_11 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
     let BACKGROUND_BASE_LOWEST = colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     BACKGROUND_BASE_LOWEST = colors.BACKGROUND_BASE_LOWEST;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   const round = tmp4(576).radii.round;
   let obj = { listeners: { display: "flex", flexDirection: "row", alignItems: "center", padding: 4, marginTop: 4, marginLeft: -8 }, listenersCollapsed: { flexDirection: "row", alignItems: "center", backgroundColor: BACKGROUND_BASE_LOWEST, borderRadius: round, marginLeft: -16, marginTop: 4, paddingLeft: 2, paddingRight: 6 }, listenersIconWrapper: null, listenersText: null, userCollapsedOverlap: null, headphonesIcon: null };
@@ -74,7 +74,6 @@ let closure_12 = noop.memo((voiceState) => {
   obj = { style: userCollapsedOverlap, children: null };
   obj = { user, member: null, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed: null, sessionId: null, channel: null, isGuest: null };
   tmp3 = closure_11(channel(7873)());
-  const tmp6 = View;
   if (member == null) {
     member = storeMember;
   }
@@ -85,7 +84,7 @@ let closure_12 = noop.memo((voiceState) => {
   obj.channel = channel;
   obj.isGuest = isGuest;
   obj.children = closure_6(channel(16122), obj, user.id);
-  return closure_6(tmp6, obj);
+  return closure_6(View, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");
@@ -128,12 +127,14 @@ export default function VoiceUsers(collapsed) {
       }
       items1[1] = tmp17;
       obj.children = items1;
-      tmp15Result = closure_7(channel(tmp2[17]), obj);
-      const tmpResult = channel(tmp2[17]);
+      tmp15Result = closure_7(tmp(tmp2[17]), obj);
+      const tmpResult = tmp(tmp2[17]);
     }
     return tmp15Result;
   }
   mapped = closure_9;
+  tmp = channel;
+  tmp3 = channel(guild_id[14])("channel_list");
 };
 export const getAudienceItemHeight = function getAudienceItemHeight(fontScale) {
   return 8 + Math.max(20, useScaledTextLineHeight.scaleTextLineHeight(c10, fontScale));

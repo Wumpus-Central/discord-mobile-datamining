@@ -2,12 +2,16 @@
 
 // Module 12608 (UserProfileMutualsActionSheet)
 import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import GuildIcon from "GuildIcon" /* 5584 */;
 import TableRow from "TableRow" /* 5605 */;
 import ActivityStatusDefault from "ActivityStatus" /* 10876 */;
 import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11151 */;
 import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 12602 */;
+import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 12603 */;
+import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 12609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4600 */;
@@ -119,7 +123,7 @@ export default function UserProfileMutualsActionSheet(user) {
   }
   obj.defaultIndex = num;
   let length;
-  let tmp3Result = tmp3(12609);
+  let tmp3Result = getMutualFriendsLabelDefault;
   if (mutualFriends != null) {
     length = mutualFriends.length;
   }
@@ -157,7 +161,7 @@ export default function UserProfileMutualsActionSheet(user) {
   obj.page = tmp10;
   const items = [obj, ];
   let length1;
-  tmp3Result = tmp3(12603);
+  tmp3Result = getMutualGuildsLabelDefault;
   if (mutualGuilds != null) {
     length1 = mutualGuilds.length;
   }

@@ -66,11 +66,11 @@ export default function FriendRequestsScreen() {
   let items1 = [stateFromStoresArray, setting];
   const effect = gameRelationshipsByType1.useEffect(() => {
     if (analyticsLocations.length > 0) {
-      const mapped = arr.map((local_id) => local_id.local_id);
+      const mapped = analyticsLocations.map((local_id) => local_id.local_id);
       const _Boolean = Boolean;
       const found = mapped.filter(Boolean);
       const result = NotificationCenterItemsActions.markNotificationCenterLocalItemsAcked(found);
-      const result1 = NotificationCenterItemsActions.bulkMarkNotificationCenterItemsAcked(arr.filter((item) => !analyticsLocations(closure_2[19]).isRemoteAcked(item, first)));
+      const result1 = NotificationCenterItemsActions.bulkMarkNotificationCenterItemsAcked(analyticsLocations.filter((item) => !analyticsLocations(closure_2[19]).isRemoteAcked(item, first)));
     }
   }, items1);
   const effect1 = gameRelationshipsByType1.useEffect(() => {
@@ -200,11 +200,11 @@ export default function FriendRequestsScreen() {
                 trailing: null,
                 arrow: true
               };
-              const intl = tmp2(tmp3[29]).intl;
-              obj.label = intl.string(tmp2(tmp3[29]).t.fUQoqD);
+              const intl = analyticsLocations(dependencyMap[29]).intl;
+              obj.label = intl.string(analyticsLocations(dependencyMap[29]).t.fUQoqD);
               obj = { variant: "text-sm/medium", color: "text-muted", children: arr.length };
-              obj.trailing = outgoingData(tmp2(tmp3[33]).Text, obj);
-              tmp4 = outgoingData(tmp2(tmp3[32]).TableRow, obj);
+              obj.trailing = outgoingData(analyticsLocations(dependencyMap[33]).Text, obj);
+              tmp4 = outgoingData(analyticsLocations(dependencyMap[32]).TableRow, obj);
             }
             const children = [tmp4, ];
             let tmp6 = null;
@@ -217,14 +217,14 @@ export default function FriendRequestsScreen() {
                 trailing: null,
                 arrow: true
               };
-              const intl2 = tmp2(tmp3[29]).intl;
-              obj.label = intl2.string(tmp2(tmp3[29]).t.en1Gkz);
+              const intl2 = analyticsLocations(dependencyMap[29]).intl;
+              obj.label = intl2.string(analyticsLocations(dependencyMap[29]).t.en1Gkz);
               const obj1 = { variant: "text-sm/medium", color: "text-muted", children: arr3.length };
-              obj.trailing = outgoingData(tmp2(tmp3[33]).Text, obj1);
-              tmp6 = outgoingData(tmp2(tmp3[32]).TableRow, obj);
+              obj.trailing = outgoingData(analyticsLocations(dependencyMap[33]).Text, obj1);
+              tmp6 = outgoingData(analyticsLocations(dependencyMap[32]).TableRow, obj);
             }
             children[1] = tmp6;
-            return first1(analyticsLocations(closure_2[31]).TableRowGroup, { hasIcons: false, children });
+            return first1(analyticsLocations(dependencyMap[31]).TableRowGroup, { hasIcons: false, children });
           },
         key: "spamRequests",
         itemType: "spamRequests"

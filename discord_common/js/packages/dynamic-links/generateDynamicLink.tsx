@@ -13,10 +13,10 @@ let c6 = "https://discordapp.onelink.me";
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
 
-export default function generateDynamicLink(arg0, arg1) {
+export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
   ({ utmSource, androidFallbackLink, iosFallbackLink } = arg1);
   const tmp = _objectWithoutProperties(arg1, closure_3);
-  const str = new URL(arg0);
+  const str = new URL(inviteDynamicLinkTemplate);
   for (const key10018 in tmp) {
     let tmp25 = tmp[key10018];
     if (null == tmp25) {
@@ -39,12 +39,12 @@ export default function generateDynamicLink(arg0, arg1) {
       match = str2.match(regExp);
     }
   }
-  let tmp5Result = tmp5(1341);
+  let tmp5Result = formatDefault;
   let name;
   if (tmp5Result != null) {
     name = tmp5Result.name;
   }
-  tmp5Result = tmp5(1341);
+  tmp5Result = formatDefault;
   let family;
   if (tmp5Result != null) {
     const os = tmp5Result.os;

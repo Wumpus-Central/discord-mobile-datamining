@@ -29,16 +29,16 @@ export const PersonalWidgetExpandCollapseProvider = function PersonalWidgetExpan
   const items = [first2];
   const setAnyFieldClipped = noop.useCallback((arg0, arg1) => {
     if (arg1) {
-      obj.add(arg0);
-      let tmp2 = obj;
+      first2.add(arg0);
+      let tmp2 = first2;
     } else {
-      obj.delete(arg0);
-      tmp2 = obj;
+      first2.delete(arg0);
+      tmp2 = first2;
     }
     closure_3(tmp2.size > 0);
   }, items);
   const items1 = [isExpanded, first1, setAnyFieldClipped];
-  return <redux.Provider value={noop.useMemo(() => ({ isExpanded, setIsExpanded, isAnyFieldClipped: first1, setAnyFieldClipped }), items1)}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={noop.useMemo(() => ({ isExpanded, setIsExpanded, isAnyFieldClipped: first1, setAnyFieldClipped }), items1)}>{children.children}</redux.Provider>;
 };
 export const usePersonalWidgetExpandCollapse = function usePersonalWidgetExpandCollapse() {
   return noop.useContext(closure_3);

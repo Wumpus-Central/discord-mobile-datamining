@@ -27,7 +27,7 @@ export default function useGuildsBarGuildMediaState(arg0) {
     const items3 = [arg0];
     stateFromStores = tmpResult.useStateFromStores(items2, () => GuildMediaStateStore.getGuildMediaState(closure_0), items3);
     const items4 = [arg0, tmp5, stateFromStores];
-    const effect = obj2.useEffect(() => {
+    const effect = noop.useEffect(() => {
       const result = GuildMediaStateShadowCompare.compareGuildMediaState(closure_0, closure_1, stateFromStores);
     }, items4);
     return tmp5;
@@ -35,5 +35,4 @@ export default function useGuildsBarGuildMediaState(arg0) {
     return require("useGuildMediaState")(arg0);
   }
   const obj = require("GuildMediaStateStoreExperiment");
-  obj2 = noop;
 };

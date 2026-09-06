@@ -29,7 +29,7 @@ export default function MediaViewerAltTextSheet(children) {
   }
   obj = { header: null, contentStyles: null, children: null };
   obj = { title: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj.title = intl.string(util.t.J3IOO1);
   obj.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   const items = [tmp.container, { minHeight: num }];

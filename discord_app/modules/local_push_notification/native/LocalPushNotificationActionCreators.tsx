@@ -31,28 +31,28 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
       obj1 = { notif_type: data.type, guild_id: null };
       let guildId = null;
       if ("guildId" in data) {
-        guildId = tmp4.guildId;
+        guildId = data.guildId;
       }
       obj1.guild_id = guildId;
       AnalyticsUtilsDefault.track(constants2.NOTIFICATION_CLICKED, obj1);
-      const type = tmp4.type;
+      const type = data.type;
       if (constants.GUILD_VERIFICATION === type) {
-        const result = GuildActionCreatorsDefault.transitionToGuildSync(tmp4.guildId);
+        const result = GuildActionCreatorsDefault.transitionToGuildSync(data.guildId);
         const tmpResult = GuildActionCreatorsDefault;
-      } else if (tmp8.CALL_RING === type) {
-        data(1896)(9536, tmp2.paths).then((result) => result.default(channelId.channelId));
-        const promise2 = data(1896)(9536, tmp2.paths);
-      } else if (tmp8.MESSAGE_SEND_FAILED === type) {
-        data(1896)(4571, tmp2.paths).then((transitionToMessage) => {
+      } else if (constants.CALL_RING === type) {
+        data(1896)(9536, dependencyMap.paths).then((result) => result.default(channelId.channelId));
+        const promise2 = data(1896)(9536, dependencyMap.paths);
+      } else if (constants.MESSAGE_SEND_FAILED === type) {
+        data(1896)(4571, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = closure_1_0);
           return transitionToMessage.transitionToMessage(channelId, messageId, { jumpType: data(4491).JumpType.INSTANT });
         });
-        const promise = data(1896)(4571, tmp2.paths);
-      } else if (tmp8.VIBEGRATIONS === type) {
-        if (null != tmp4.guildId) {
-          ({ guildId: data, projectId: closure_1 } = tmp4);
-          data(1896)(1100, tmp2.paths).then((transitionTo) => transitionTo.transitionTo(hasOwnProperty.CHANNEL(channelId, StaticChannelRoute.VIBEGRATIONS, closure_1_1)));
-          const promise3 = data(1896)(1100, tmp2.paths);
+        const promise = data(1896)(4571, dependencyMap.paths);
+      } else if (constants.VIBEGRATIONS === type) {
+        if (null != data.guildId) {
+          ({ guildId: data, projectId: closure_1 } = data);
+          data(1896)(1100, dependencyMap.paths).then((transitionTo) => transitionTo.transitionTo(hasOwnProperty.CHANNEL(channelId, StaticChannelRoute.VIBEGRATIONS, closure_1_1)));
+          const promise3 = data(1896)(1100, dependencyMap.paths);
         }
       }
     }

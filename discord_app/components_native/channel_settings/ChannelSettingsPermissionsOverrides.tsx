@@ -3,6 +3,7 @@
 // Module 16829 (ChannelSettingsPermissionsOverrides)
 import nativeDefault from "native" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import util from "util" /* 1114 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import PermissionUtils from "PermissionUtils" /* 4204 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
@@ -59,7 +60,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   if (appChannelBotUserId === id) {
     tmp9 = appChannelApplication;
   }
-  _require = stateFromStores(function*(arg0, value) {
+  _require = stateFromStores(function*(arg0, arg1) {
     if (stateFromStores === 2) {
       stateFromStores = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -102,7 +103,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             }
             if (tmp6) {
               let obj1 = fromCreate(tmp5[20]);
-              const everyoneOverwrite = obj1.makeEveryoneOverwrite(tmp124);
+              const everyoneOverwrite = obj1.makeEveryoneOverwrite(closure_1);
               closure_130_2 = everyoneOverwrite;
               tmp10 = everyoneOverwrite;
             }
@@ -114,14 +115,14 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             let obj4 = fromCreate(tmp5[21]);
             obj1.allow = obj4.remove(obj1.allow, closure_0);
             if (closure_1 === closure_0(tmp5[20]).ALLOW) {
-              obj1.allow = fromCreate(tmp5[21]).add(obj1.allow, tmp122);
+              obj1.allow = fromCreate(tmp5[21]).add(obj1.allow, closure_0);
               const obj9 = fromCreate(tmp5[21]);
-            } else if (tmp123 === closure_0(tmp5[20]).DENY) {
+            } else if (closure_1 === closure_0(tmp5[20]).DENY) {
               if (null != stateFromStores.guild_id) {
                 if (tmp126) {
                   c4 = 1;
                   stateFromStores = 1;
-                  const obj2 = { value: closure_0(tmp5[22]).checkChattableChannelThresholdMetAfterChannelPermissionDeny(stateFromStores, tmp122), done: false };
+                  const obj2 = { value: closure_0(tmp5[22]).checkChattableChannelThresholdMetAfterChannelPermissionDeny(stateFromStores, closure_0), done: false };
                   return obj2;
                 }
               }
@@ -177,7 +178,6 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             };
             id(tmp5[26]).show(obj4);
             const obj14 = id(tmp5[26]);
-            tmp124 = closure_1;
           }
         } else if (arg0 === 1) {
           stateFromStores = 3;
@@ -210,7 +210,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     return applyArgumentsResult;
   }, items1);
   const items2 = [stateFromStores, id, appChannelBotUserId];
-  closure_8 = appChannelBotUserId.useCallback((arg0) => {
+  closure_8 = appChannelBotUserId.useCallback((VIEW_CHANNEL) => {
     guild = GuildStore.getGuild(stateFromStores.guild_id);
     const currentUser = UserStore.getCurrentUser();
     if (null != guild) {
@@ -220,25 +220,25 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           canResult = PermissionStore.can(constants2.ADMINISTRATOR, guild);
         }
         if (!canResult) {
-          canResult = PermissionStore.can(constants2.MANAGE_ROLES, obj, undefined, undefined, true);
+          canResult = PermissionStore.can(constants2.MANAGE_ROLES, stateFromStores, undefined, undefined, true);
         }
-        if (obj.isGuildStageVoice()) {
+        if (stateFromStores.isGuildStageVoice()) {
           const STAGE_CHANNEL_DISABLED_PERMISSIONS = StageChannelPermissions.STAGE_CHANNEL_DISABLED_PERMISSIONS;
-          if (STAGE_CHANNEL_DISABLED_PERMISSIONS.has(arg0)) {
-            const intl3 = tmp11(1114).intl;
-            let stringResult = intl3.string(tmp11(1114).t.bTS5lf);
+          if (STAGE_CHANNEL_DISABLED_PERMISSIONS.has(VIEW_CHANNEL)) {
+            const intl3 = util.intl;
+            let stringResult = intl3.string(util.t.bTS5lf);
           }
           return stringResult;
         }
-        if (obj2.isAppChannelFloorPermission(appChannelBotUserId, id, arg0)) {
-          const intl2 = tmp13(1114).intl;
-          stringResult = intl2.string(tmp13(1114).t.yXmgpP);
+        if (obj2.isAppChannelFloorPermission(appChannelBotUserId, id, VIEW_CHANNEL)) {
+          const intl2 = util.intl;
+          stringResult = intl2.string(util.t.yXmgpP);
         } else {
-          stringResult = arg0 === constants2.MANAGE_ROLES && !canResult;
+          stringResult = VIEW_CHANNEL === constants2.MANAGE_ROLES && !canResult;
           if (!stringResult) {
-            let tmp19 = null != arg0;
+            let tmp19 = null != VIEW_CHANNEL;
             if (tmp19) {
-              tmp19 = !PermissionStore.can(arg0, guild);
+              tmp19 = !PermissionStore.can(VIEW_CHANNEL, guild);
             }
             if (tmp19) {
               tmp19 = !canResult;
@@ -246,8 +246,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             stringResult = tmp19;
           }
           if (stringResult) {
-            const intl = tmp13(1114).intl;
-            stringResult = intl.string(tmp13(1114).t.nOtPMM);
+            const intl = util.intl;
+            stringResult = intl.string(util.t.nOtPMM);
           }
         }
         obj2 = AppChannelPermissionUtils;
@@ -256,19 +256,19 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     return false;
   }, items2);
   const items3 = [stateFromStores, id];
-  closure_9 = appChannelBotUserId.useCallback((arg0) => {
+  closure_9 = appChannelBotUserId.useCallback((VIEW_CHANNEL) => {
     let allow;
     if (stateFromStores.permissionOverwrites[id] != null) {
       allow = tmp.allow;
     }
-    if (obj.has(allow, arg0)) {
+    if (obj.has(allow, VIEW_CHANNEL)) {
       let ALLOW = PermissionUtils.ALLOW;
     } else {
       let deny;
       if (tmp != null) {
         deny = tmp.deny;
       }
-      const hasItem = BigFlagUtilsAll.has(deny, arg0);
+      const hasItem = BigFlagUtilsAll.has(deny, VIEW_CHANNEL);
       const tmp8 = PermissionUtils;
       ALLOW = hasItem ? tmp8.DENY : tmp8.PASSTHROUGH;
       const tmp2Result = BigFlagUtilsAll;
@@ -297,12 +297,11 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   }, items4);
   obj = { variant: "text-md/medium", color: "text-muted", children: null };
   let tmp10 = navigation(appChannelBotUserId.useState(() => PermissionSpecUtilsDefault.generateChannelPermissionSpec(stateFromStores.guild_id, stateFromStores, id === stateFromStores.guild_id)), 2);
-  const tmp5 = id;
   obj.children = require("useChannelName").computeChannelName(stateFromStores, UserStore, RelationshipStore, true);
   const tmp13 = closure_19(require("Text/Text").Text, obj);
   if (fromCreate.type === constants.MEMBER) {
     obj = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    let tmp12Result = tmp12(tmp5(10942), obj);
+    let tmp12Result = closure_19(id(10942), obj);
   } else {
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -313,7 +312,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       str = "";
     }
     obj1 = { end: true, label: str, start: true, trailing: tmp13 };
-    tmp12Result = tmp12(tmp2(5605).TableRow, obj1);
+    tmp12Result = closure_19(tmp2(5605).TableRow, obj1);
   }
   obj2 = { style: tmp.container, contentContainerStyle: null, children: null };
   const items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1611)().bottom }];
@@ -327,8 +326,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     let intl = tmp2(1114).intl;
     const obj6 = { appName: tmp9.name };
     obj5.children = intl.format(tmp2(1114).t["Xq++FA"], obj6);
-    obj4.children = tmp12(tmp2(1178).HelpMessage, obj5);
-    tmp12Result = tmp12(closure_7, obj4);
+    obj4.children = closure_19(tmp2(1178).HelpMessage, obj5);
+    tmp12Result = closure_19(closure_7, obj4);
   }
   items6[1] = tmp12Result;
   items6[2] = first.map((permissions, index) => {
@@ -353,7 +352,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           tmp5Result = null;
           if ("" !== tmp) {
             obj = { variant: "text-xs/medium", color: "text-feedback-critical", children: tmp };
-            tmp5Result = tmp5(tmp6(4556).Text, obj);
+            tmp5Result = closure_1_19(closure_1_0(4556).Text, obj);
           }
         }
         items[1] = tmp5Result;

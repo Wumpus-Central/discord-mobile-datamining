@@ -2,9 +2,11 @@
 
 // Module 17208 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import Suspender from "Suspender" /* 4923 */;
 import spring from "spring" /* 4974 */;
 import useRefValueDefault from "useRefValue" /* 5586 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9495 */;
 import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12270 */;
 import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12279 */;
 import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17209 */;

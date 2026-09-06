@@ -14,13 +14,14 @@ let closure_5 = async function _fetchWelcomeScreen() {
   await HTTP.get({ url: Endpoints.GUILD_WELCOME_SCREEN(closure_0), oldFormErrors: true, rejectWithError: true });
   let obj4 = closure_130_1(closure_130_2[2]);
   obj4.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
-  closure_129_1 = await "HermesInternal";
+  await "HermesInternal";
+  closure_129_1 = value;
   { url: Endpoints.GUILD_WELCOME_SCREEN(closure_0), oldFormErrors: true, rejectWithError: true };
   obj4 = { type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: closure_129_0, welcomeScreen: closure_129_1.body };
   closure_130_1(closure_130_2[2]).dispatch(obj4);
   return closure_129_1.body;
 };
-let closure_6 = async function _saveWelcomeScreen(arg0, arg1) {
+let closure_6 = async function _saveWelcomeScreen(arg0) {
   closure_3 = tmp3;
   closure_130_0 = closure_0;
   DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
@@ -35,15 +36,15 @@ let closure_6 = async function _saveWelcomeScreen(arg0, arg1) {
     c7 = 3;
   } else if (arg0 === 1) {
     c7 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_130_1 = arg1;
+    closure_130_1 = value;
     obj3 = { type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId: closure_130_0, welcomeScreen: closure_130_1.body };
     closure_131_1(closure_131_2[2]).dispatch(obj3);
     c5 = 0;
     closure_131_1(closure_131_2[2]);
   }
-  return arg1;
+  return value;
 };
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

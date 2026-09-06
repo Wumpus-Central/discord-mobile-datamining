@@ -33,7 +33,7 @@ function SearchTabsPage(selectMediaTab) {
   const items = [ChannelStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
-      const channelId = tmp2.channelId;
+      const channelId = searchContext.channelId;
     }
     return ChannelStore.getChannel(channelId);
   });
@@ -57,31 +57,31 @@ function SearchTabsPage(selectMediaTab) {
     if (SearchTabs.RECENT === tab) {
       obj1 = { onJumpToMedia: selectMediaTab.selectMediaTab, searchContext, width };
       return jsx(RecentScreenDefault, { onJumpToMedia: selectMediaTab.selectMediaTab, searchContext, width });
-    } else if (tmp11.PEOPLE === tab) {
+    } else if (SearchTabs.PEOPLE === tab) {
       const obj2 = { searchContext };
       return jsx(PeopleScreenDefault, { searchContext });
-    } else if (tmp11.MEMBERS === tab) {
+    } else if (SearchTabs.MEMBERS === tab) {
       const obj3 = { searchContext };
       return jsx(MembersScreenDefault, { searchContext });
-    } else if (tmp11.GUILD_CHANNELS === tab) {
+    } else if (SearchTabs.GUILD_CHANNELS === tab) {
       const obj4 = { searchContext };
       return jsx(ChannelsScreenDefault, { searchContext });
-    } else if (tmp11.MEDIA === tab) {
+    } else if (SearchTabs.MEDIA === tab) {
       const obj5 = { tab, searchContext, isFocused, width };
       return jsx(MediaScreenDefault, { tab, searchContext, isFocused, width });
-    } else if (tmp11.FILES === tab) {
+    } else if (SearchTabs.FILES === tab) {
       const obj6 = { tab, searchContext, isFocused, width };
       return jsx(FilesScreenDefault, { tab, searchContext, isFocused, width });
-    } else if (tmp11.LINKS === tab) {
+    } else if (SearchTabs.LINKS === tab) {
       const obj7 = { tab, searchContext, isFocused, width };
       return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
-    } else if (tmp11.THREADS === tab) {
+    } else if (SearchTabs.THREADS === tab) {
       const obj8 = { searchContext };
-      return jsx(tmp4(16703).SearchTabsThreadScreen, { searchContext });
-    } else if (tmp11.MESSAGES === tab) {
+      return jsx(searchContext(16703).SearchTabsThreadScreen, { searchContext });
+    } else if (SearchTabs.MESSAGES === tab) {
       const obj9 = { tab, searchContext, isFocused };
       return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });
-    } else if (tmp11.PINS === tab) {
+    } else if (SearchTabs.PINS === tab) {
       const obj10 = { tab, searchContext, isFocused };
       return jsx(messages_PinsScreenDefault, { tab, searchContext, isFocused });
     } else {
@@ -91,7 +91,6 @@ function SearchTabsPage(selectMediaTab) {
     return null;
   }
   const tmp = _slicedToArray(noop.useState(isFocused), 2);
-  tmp4 = searchContext;
 }
 const View = fn(17).View;
 const SearchTabs = fn(7878).SearchTabs;

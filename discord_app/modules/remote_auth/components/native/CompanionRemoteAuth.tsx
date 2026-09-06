@@ -64,34 +64,34 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
         const user = state.user;
         obj1 = { children: null };
         obj2 = { style: tmp.avatar, user, size: tmp2(1178).AvatarSizes.LARGE, guildId: context };
-        const items2 = [tmp11(tmp2(1178).Avatar, obj2), , , ];
+        const items2 = [closure_7(tmp2(1178).Avatar, obj2), , , ];
         const obj3 = { variant: "heading-lg/bold", children: null };
         const intl2 = tmp2(1114).intl;
         obj3.children = intl2.string(tmp2(1114).t.apGCUT);
-        items2[1] = tmp11(tmp2(4556).Text, obj3);
+        items2[1] = closure_7(tmp2(4556).Text, obj3);
         const obj4 = { style: tmp.statusText, variant: "text-md/medium", color: "text-muted", children: null };
         const intl3 = tmp2(1114).intl;
         const obj5 = { username: null };
         tmp5Result = tmp5(4404);
         obj5.username = tmp5Result.getUserTag(user);
         obj4.children = intl3.format(tmp2(1114).t.Cbl5JK, obj5);
-        items2[2] = tmp11(tmp2(4556).Text, obj4);
+        items2[2] = closure_7(tmp2(4556).Text, obj4);
         const obj6 = { style: tmp.buttonContainer, children: null };
         const obj7 = { size: "lg", variant: "tertiary", text: null, onPress: null };
         const intl4 = tmp2(1114).intl;
         obj7.text = intl4.string(tmp2(1114).t["ETE/oC"]);
         obj7.onPress = callback1;
-        obj6.children = tmp11(tmp2(4975).Button, obj7);
-        items2[3] = tmp11(tmp13, obj6);
+        obj6.children = closure_7(tmp2(4975).Button, obj7);
+        items2[3] = closure_7(View, obj6);
         obj1.children = items2;
         let tmp11Result = closure_9(closure_8, obj1);
       } else if (tmp2(15988).RemoteAuthStep.PENDING_LOGIN === step) {
-        tmp11Result = tmp11(tmp2(5577).ActivityIndicator, {});
+        tmp11Result = closure_7(tmp2(5577).ActivityIndicator, {});
       }
     }
     obj.children = tmp11Result;
-    obj.children = tmp11(tmp13, obj);
-    return tmp11(tmp5Result, obj);
+    obj.children = closure_7(View, obj);
+    return closure_7(tmp5Result, obj);
   }
   const obj8 = { children: null };
   const items3 = [closure_7(navigation(5577).ActivityIndicator, {}), , ];

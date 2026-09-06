@@ -10,20 +10,20 @@ const Constants = fn(1074);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx");
 
-export const canReportRaid = function canReportRaid(guild, PermissionStore) {
+export const canReportRaid = function canReportRaid(guild) {
   let obj = PermissionStore;
   if (PermissionStore === undefined) {
     obj = PermissionStore;
   }
   let canResult = obj.can(constants.BAN_MEMBERS, guild);
   if (!canResult) {
-    canResult = obj.can(tmp.KICK_MEMBERS, guild);
+    canResult = obj.can(constants.KICK_MEMBERS, guild);
   }
   if (!canResult) {
-    canResult = obj.can(tmp.MODERATE_MEMBERS, guild);
+    canResult = obj.can(constants.MODERATE_MEMBERS, guild);
   }
   if (!canResult) {
-    canResult = obj.can(tmp.MANAGE_GUILD, guild);
+    canResult = obj.can(constants.MANAGE_GUILD, guild);
   }
   return canResult;
 };
@@ -33,7 +33,7 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   const items1 = [guild];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (PermissionStore !== undefined) {
-      return obj.can(constants.BAN_MEMBERS, tmp) || obj.can(constants.KICK_MEMBERS, tmp) || obj.can(constants.MODERATE_MEMBERS, tmp) || obj.can(constants.MANAGE_GUILD, tmp);
+      return PermissionStore.can(constants.BAN_MEMBERS, closure_0) || PermissionStore.can(constants.KICK_MEMBERS, closure_0) || PermissionStore.can(constants.MODERATE_MEMBERS, closure_0) || PermissionStore.can(constants.MANAGE_GUILD, closure_0);
     }
   }, items1);
   const obj = require("initialize");

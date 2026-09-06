@@ -4,12 +4,12 @@
 import LoggerDefault from "Logger" /* 3 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4962 */;
+import QuestTypes from "QuestTypes" /* 5447 */;
 import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10987 */;
 import NativeChatUtilsDefault from "NativeChatUtils" /* 11271 */;
 import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11273 */;
 import noop from "module_19" /* 19 */;
 
-const QuestTypes = tmp(5447);
 require = fn;
 const useChatBottomManagerUIStore = fn(9485);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
@@ -42,7 +42,7 @@ export default function useScrollHandlers(arg0) {
     }
     if (null != closure_1_10) {
       useIsScreenReaderEnabled;
-      const loadingMore = tmp29.loadingMore;
+      const loadingMore = closure_1_9.loadingMore;
       let tmp6 = !loadingMore;
       if (!loadingMore) {
         if (!flag2) {
@@ -58,7 +58,7 @@ export default function useScrollHandlers(arg0) {
       }
       if (!ref4.current) {
         if (flag) {
-          if (tmp29.hasMoreBefore) {
+          if (closure_1_9.hasMoreBefore) {
             if (tmp6) {
               closure_1_4.current = true;
               closure_1_5();
@@ -72,7 +72,7 @@ export default function useScrollHandlers(arg0) {
       }
       if (!ref3.current) {
         if (isNearBottom) {
-          if (tmp29.hasMoreAfter) {
+          if (closure_1_9.hasMoreAfter) {
             if (tmp6) {
               closure_1_4.current = true;
               logger();
@@ -130,9 +130,9 @@ export default function useScrollHandlers(arg0) {
       ref6.current = dragging;
       ref5.current = decelerating;
       ReactBatchUpdates.batchUpdates(() => {
-        hasMoreAfter = shouldShowJumpToPresent;
+        let hasMoreAfter = shouldShowJumpToPresent;
         if (!shouldShowJumpToPresent) {
-          hasMoreAfter = hasMoreAfter.hasMoreAfter;
+          hasMoreAfter = closure_2_9.hasMoreAfter;
         }
         hasOwnProperty(closure_2_11, closure_2_12, hasMoreAfter);
         React4(closure_2_12, isAtBottom);
@@ -190,11 +190,11 @@ export default function useScrollHandlers(arg0) {
     },
     updateNativeRows(isLoadingAtTop) {
       if (dependencyMap.isBlocking) {
-        obj.add(isLoadingAtTop);
+        dependencyMap.add(isLoadingAtTop);
       } else if (!isLoadingAtTop.isLoadingAtTop) {
         closure_1_8(isLoadingAtTop);
       } else {
-        obj.add(isLoadingAtTop);
+        dependencyMap.add(isLoadingAtTop);
       }
     },
     handleScrollCallbacks,

@@ -18,7 +18,7 @@ function libDiscoreSmokeTest() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = async function _libDiscoreSmokeTest(arg0, value) {
+let closure_7 = async function _libDiscoreSmokeTest() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

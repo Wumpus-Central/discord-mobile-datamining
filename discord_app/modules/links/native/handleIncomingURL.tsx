@@ -13,7 +13,7 @@ import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 
 require = fn;
-let closure_11 = async function _handleIncomingURL(arg0, value) {
+let closure_11 = async function _handleIncomingURL(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

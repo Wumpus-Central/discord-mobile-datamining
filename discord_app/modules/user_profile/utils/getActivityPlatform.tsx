@@ -2,7 +2,14 @@
 
 // Module 13016 (getActivityPlatform)
 import Constants from "Constants" /* 1074 */;
+import PlatformsDefault from "Platforms" /* 5283 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8344 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10891 */;
+import isOnXboxDefault from "isOnXbox" /* 13002 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 13003 */;
 import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 13015 */;
+import isOnMetaQuestDefault from "isOnMetaQuest" /* 13017 */;
+import isOnMetaHorizonDefault from "isOnMetaHorizon" /* 13018 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;
@@ -15,20 +22,20 @@ export default function getActivityPlatform(session_id) {
   const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
-  } else if (tmp(10891)(session_id)) {
-    let tmpResult = tmp(5283);
+  } else if (isListeningOnSpotifyDefault(session_id)) {
+    let tmpResult = PlatformsDefault;
     return tmpResult.get(PlatformTypes.SPOTIFY);
-  } else if (tmp(8344)(session_id)) {
-    tmpResult = tmp(5283);
+  } else if (isCrunchyrollActivityDefault(session_id)) {
+    tmpResult = PlatformsDefault;
     return tmpResult.get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(13002)(session_id)) {
-    return tmp(5283).get(PlatformTypes.XBOX);
-  } else if (tmp(13003)(session_id)) {
-    return tmp(5283).get(PlatformTypes.PLAYSTATION);
+  } else if (isOnXboxDefault(session_id)) {
+    return PlatformsDefault.get(PlatformTypes.XBOX);
+  } else if (isOnPlayStationDefault(session_id)) {
+    return PlatformsDefault.get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(13017)(session_id)) {
-      if (!tmp(13018)(session_id)) {
-        const found = tmp(5283).find((name) => name.name === session_id.name);
+    if (!isOnMetaQuestDefault(session_id)) {
+      if (!isOnMetaHorizonDefault(session_id)) {
+        const found = PlatformsDefault.find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {
           tmp5 = null;
@@ -39,6 +46,6 @@ export default function getActivityPlatform(session_id) {
         return tmp5;
       }
     }
-    return tmp(5283).get(PlatformTypes.META_QUEST_OR_HORIZON);
+    return PlatformsDefault.get(PlatformTypes.META_QUEST_OR_HORIZON);
   }
 };

@@ -38,9 +38,9 @@ function createItem(id, type, unread) {
     obj1.debugScore = JSON.stringify(id.score_components);
     obj1.unread = unread;
   } else {
-    if (tmp(8348).ICYMIItemTypes.ACTIVITY !== type) {
-      if (tmp(8348).ICYMIItemTypes.CUSTOM_STATUS !== type) {
-        if (tmp(8348).ICYMIItemTypes.GUILD_EVENT === type) {
+    if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
+      if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
+        if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT === type) {
           const obj3 = { id: id.id, timestamp: null, data: null, score: null, debugScore: null, unread: null };
           const _Date2 = Date;
           obj3.timestamp = Date.now();
@@ -51,7 +51,7 @@ function createItem(id, type, unread) {
           obj3.debugScore = JSON.stringify(id.score_components);
           obj3.unread = unread;
           return obj3;
-        } else if (tmp(8348).ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
+        } else if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
           obj = { id: id.id, timestamp: null, data: null, score: null, debugScore: null, unread: null };
           const _Date = Date;
           obj.timestamp = Date.now();

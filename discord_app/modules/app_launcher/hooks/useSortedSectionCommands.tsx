@@ -31,11 +31,11 @@ export default function useSortedSectionCommands(sectionId) {
   const items1 = [memo];
   const memo1 = noop.useMemo(() => {
     if (memo.length <= 1) {
-      let obj = { popularSortedCommands: arr, canSort: false };
+      let obj = { popularSortedCommands: memo, canSort: false };
       return obj;
     } else {
       closure_0 = false;
-      const mapped = arr.map((command, alphabeticalSortIndex) => {
+      const mapped = memo.map((command, alphabeticalSortIndex) => {
         let tmp = closure_0;
         if (!closure_0) {
           tmp = null != command.global_popularity_rank;
@@ -63,7 +63,7 @@ export default function useSortedSectionCommands(sectionId) {
         });
         obj = { popularSortedCommands: mapped.map((command) => command.command), canSort: true };
       } else {
-        obj = { popularSortedCommands: arr, canSort: false };
+        obj = { popularSortedCommands: memo, canSort: false };
       }
       return obj;
     }

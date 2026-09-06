@@ -39,14 +39,13 @@ function handleChannelDelete(channel) {
     for (const item10007 of ids) {
       let tmp5 = tmp13.messages[item10007];
       let channel_id;
-      let tmp4 = item10007;
       if (tmp5 != null) {
         channel_id = tmp5.channel_id;
       }
       if (channel_id === channel.id) {
         delete tmp[tmp2];
       } else {
-        let arr = items.push(tmp4);
+        let arr = items.push(item10007);
       }
       continue;
     }
@@ -278,7 +277,7 @@ messages = {
             let tmp5 = null != tmp4;
             if (tmp5) {
               if (null == tmp4.messages[message.id]) {
-                const messageRecord = tmp23(4783).createMessageRecord(message);
+                const messageRecord = MessageRecordUtils.createMessageRecord(message);
                 if (null != obj[guildId]) {
                   obj = {};
                   const merged = Object.assign(obj);
@@ -295,14 +294,13 @@ messages = {
                   const merged3 = Object.assign(obj1);
                   obj[guildId] = obj;
                 }
-                const tmp23Result = tmp23(4783);
+                const tmp23Result = MessageRecordUtils;
               }
               tmp5 = tmp6;
             }
             return tmp5;
           }
           obj6 = FlagUtils;
-          tmp23 = require;
         }
         return false;
       }
@@ -352,7 +350,7 @@ messages = {
         const hasFlagResult = obj12.hasFlag(num, MessageFlags.IS_GUILD_OFFICIAL);
         if (hasFlagResult) {
           if (null == tmp45) {
-            let tmp46Result = tmp46(4783);
+            let tmp46Result = MessageRecordUtils;
             const messageRecord = tmp46Result.createMessageRecord(message);
             if (null != obj[guildId]) {
               const obj3 = {};
@@ -396,7 +394,7 @@ messages = {
         }
         if (hasFlagResult) {
           if (null != tmp45) {
-            tmp46Result = tmp46(4783);
+            tmp46Result = MessageRecordUtils;
             const updateMessageRecordResult1 = tmp46Result.updateMessageRecord(tmp45, message);
             if (null != obj[guildId]) {
               const obj11 = {};

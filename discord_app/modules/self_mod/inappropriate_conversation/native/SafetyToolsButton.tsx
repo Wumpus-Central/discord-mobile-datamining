@@ -101,8 +101,8 @@ export const SafetyToolsButton = function SafetyToolsButton(channelId) {
     if (null != recipientId) {
       callback2();
       let obj = SafetyToolsActionCreators;
-      const result = obj.openSafetyToolsActionSheet(channelId, tmp, warningId, warningType);
-      obj = { channelId, senderId: tmp, warningId, warningType, cta: SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_BUTTON_CLICK, isNudgeWarning: null != safetyToolsButtonTooltipForChannel };
+      const result = obj.openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType);
+      obj = { channelId, senderId: recipientId, warningId, warningType, cta: SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_BUTTON_CLICK, isNudgeWarning: null != safetyToolsButtonTooltipForChannel };
       SafetyWarningUtils.trackCtaEvent(obj);
     }
   }, items5);

@@ -213,6 +213,7 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
       }
     }
   }
+  const obj5 = require("initialize");
 };
 export const getGuildActiveEvent = function getGuildActiveEvent(guildId) {
   let obj = arg1;
@@ -254,10 +255,10 @@ export const useGuildActiveEvent = function useGuildActiveEvent(guild_id) {
   const items1 = [guild_id];
   return require("initialize").useStateFromStores(items, () => {
     if (GuildScheduledEventStore !== undefined) {
-      if (tmp2 !== undefined) {
-        let basicChannel = tmp2;
-        if (tmp3 !== undefined) {
-          closure_1 = tmp3;
+      if (ChannelStore !== undefined) {
+        let basicChannel = ChannelStore;
+        if (PermissionStore !== undefined) {
+          closure_1 = PermissionStore;
           const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(React6.GUILD_EVENT_ACTIVE(tmp));
           return guildScheduledEventsByIndex.find((entity_type) => {
             if (entity_type.entity_type !== constants.NONE) {

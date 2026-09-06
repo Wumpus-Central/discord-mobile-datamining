@@ -102,18 +102,19 @@ function FamilyCenter() {
   const items3 = [closure_15(ref, { style: tmp.segmentedControlContainer, children: closure_15(familyCenterInitialized(9793).SegmentedControl, { state: segmentedControlState }) }), ];
   let obj6 = { style: tmp.container, children: null };
   if (isLoading) {
-    let tmp14Result = tmp14(FamilyCenterLoading, {});
+    let tmp14Result = closure_15(FamilyCenterLoading, {});
   } else {
     const obj7 = { state: segmentedControlState };
-    tmp14Result = tmp14(tmp4(12616).SegmentedControlPages, obj7);
+    tmp14Result = closure_15(tmp4(12616).SegmentedControlPages, obj7);
   }
   obj6.children = tmp14Result;
-  obj6 = tmp14(tmp23, obj6);
+  obj6 = closure_15(tmp23, obj6);
   items3[1] = obj6;
   obj4.children = items3;
   obj4 = closure_16(tmp23, obj4);
   obj3.children = obj4;
-  tmp14Result = tmp14(tmp4(7162).AnalyticsLocationProvider, obj3);
+  tmp14Result = closure_15(tmp4(7162).AnalyticsLocationProvider, obj3);
+  const obj5 = { style: tmp.segmentedControlContainer, children: closure_15(familyCenterInitialized(9793).SegmentedControl, { state: segmentedControlState }) };
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);

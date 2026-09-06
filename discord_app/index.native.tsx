@@ -164,16 +164,15 @@ function global() {
       _exports = (function loadModuleImplementation(id, value) {
         if (!value) {
           if (length.length > 0) {
-            let num2 = closure_13.get(id);
+            let num2 = map.get(id);
             if (num2 == null) {
               num2 = 0;
             }
             if (null != tmp8[num2]) {
               tmp10(id);
               value = closure_1.get(id);
-              obj.delete(id);
+              map.delete(id);
             }
-            obj = closure_13;
           }
         }
         const nativeRequire = __timingFunction.nativeRequire;
@@ -256,16 +255,15 @@ function global() {
       _exports = (function loadModuleImplementation(id, value) {
         if (!value) {
           if (length.length > 0) {
-            let num2 = closure_13.get(id);
+            let num2 = map.get(id);
             if (num2 == null) {
               num2 = 0;
             }
             if (null != tmp8[num2]) {
               tmp10(id);
               value = closure_1.get(id);
-              obj.delete(id);
+              map.delete(id);
             }
-            obj = closure_13;
           }
         }
         const nativeRequire = __timingFunction.nativeRequire;
@@ -337,13 +335,12 @@ function global() {
           let _exports = value.publicModule.exports;
         }
         if (!_exports) {
-          let obj = {};
+          const obj = {};
           if (_exports) {
             for (const key10017 in _exports) {
-              let tmp15 = hasOwnProperty;
               let call = hasOwnProperty.call;
               if (typeof call === "unknown") {
-                let callResult = tmp15(key10017);
+                let callResult = hasOwnProperty(key10017);
               } else {
                 callResult = call(_exports, key10017);
               }
@@ -367,16 +364,15 @@ function global() {
       _exports = (function loadModuleImplementation(id, value) {
         if (!value) {
           if (length.length > 0) {
-            let num2 = closure_13.get(id);
+            let num2 = map.get(id);
             if (num2 == null) {
               num2 = 0;
             }
             if (null != tmp8[num2]) {
               tmp10(id);
               value = closure_1.get(id);
-              obj.delete(id);
+              map.delete(id);
             }
-            obj = closure_13;
           }
         }
         const nativeRequire = __timingFunction.nativeRequire;
@@ -1200,44 +1196,37 @@ function global() {
         const items2 = [];
         items3 = [];
         let item = combined.forEach((item, index) => {
-          let arr;
           items3[index] = item.length;
-          let num = 0;
-          if (0 < items.length) {
-            do {
-              let obj = items[num];
-              arr = items;
-              if (item === c2) {
-                let str = obj[item];
-              } else {
-                str = "";
-                if (obj.hasOwnProperty(item)) {
-                  let tmp3 = obj[item];
-                  let tmp4 = typeof tmp3;
-                  str = "\u0192";
-                  if ("function" !== tmp4) {
-                    if ("string" === tmp4) {
-                      str = `${"'" + tmp3}'`;
-                    } else if ("object" === tmp4) {
-                      let str2 = "{\u2026}";
-                      if (null == tmp3) {
-                        str2 = "null";
-                      }
-                      str = str2;
-                    } else {
-                      let _String = String;
-                      str = String(tmp3);
+          for (let num = 0; num < items.length; num = num + 1) {
+            let obj = items[num];
+            if (item === c2) {
+              let str = obj[item];
+            } else {
+              str = "";
+              if (obj.hasOwnProperty(item)) {
+                let tmp3 = obj[item];
+                let tmp4 = typeof tmp3;
+                str = "\u0192";
+                if ("function" !== tmp4) {
+                  if ("string" === tmp4) {
+                    str = `${"'" + tmp3}'`;
+                  } else if ("object" === tmp4) {
+                    let str2 = "{\u2026}";
+                    if (null == tmp3) {
+                      str2 = "null";
                     }
+                    str = str2;
+                  } else {
+                    let _String = String;
+                    str = String(tmp3);
                   }
                 }
               }
-              let tmp5 = items2;
-              tmp5[num] = items2[num] || [];
-              tmp5[num][index] = str;
-              let _Math = Math;
-              items3[index] = Math.max(items3[index], str.length);
-              num = num + 1;
-            } while (num < arr.length);
+            }
+            items2[num] = items2[num] || [];
+            items2[num][index] = str;
+            let _Math = Math;
+            items3[index] = Math.max(items3[index], str.length);
           }
         });
         const mapped1 = items3.map((item) => {
@@ -1346,9 +1335,8 @@ function global() {
                 tmp4 = error;
               }
             }
-            const result1 = obj3.RN$handleException(tmp4, false, false);
+            const result1 = React.RN$handleException(tmp4, false, false);
           }
-          obj3 = React;
         }
       };
     }
@@ -1870,7 +1858,7 @@ function f21182() {
   };
   items[3] = {
     key: "registerMutation",
-    value: function registerMutation(timestamp) {
+    value: function registerMutation() {
       if (timestamp === undefined) {
         const _Date = Date;
         timestamp = Date.now();
@@ -1884,7 +1872,7 @@ function f21182() {
   };
   items[4] = {
     key: "registerScroll",
-    value: function registerScroll(timestamp) {
+    value: function registerScroll() {
       if (timestamp === undefined) {
         const _Date = Date;
         timestamp = Date.now();
@@ -2018,6 +2006,7 @@ function f21182() {
         obj.data = obj1;
         self._addBreadcrumbEvent(_replay, obj);
       }
+      tmp2 = scrollAfter.mutationAfter && scrollAfter.mutationAfter <= self._threshold;
     }
   };
   items[10] = {
@@ -2129,12 +2118,12 @@ function makeReplayDebugLogger() {
         debug[closure_0].apply(items1);
         if (traceInternals) {
           const joined = items.join("");
-          let tmpResult = tmp(tmp2[8]);
+          let tmpResult = closure_3_0(closure_3_1[8]);
           let str2 = tmpResult.severityLevelFromString(closure_0);
           if (str2 === undefined) {
             str2 = "info";
           }
-          tmpResult = tmp(tmp2[8]);
+          tmpResult = closure_3_0(closure_3_1[8]);
           obj = { category: "console", data: { logger: "replay" }, level: str2, message: null };
           const _HermesInternal = HermesInternal;
           obj.message = "" + closure_3_132 + joined;
@@ -2158,11 +2147,11 @@ function makeReplayDebugLogger() {
       const debug = closure_2_0(closure_2_1[8]).debug;
       debug.error(closure_2_132, arg0);
       if (captureExceptions) {
-        let tmp10Result = tmp10(tmp11[8]);
+        let tmp10Result = closure_2_0(closure_2_1[8]);
         obj = { mechanism: { handled: true, type: "auto.function.replay.debug" } };
         tmp10Result.captureException(arg0, obj);
       } else if (traceInternals) {
-        tmp10Result = tmp10(tmp11[8]);
+        tmp10Result = closure_2_0(closure_2_1[8]);
         obj = { category: "console", data: { logger: "replay" }, level: "error", message: null };
         const _HermesInternal = HermesInternal;
         obj.message = "" + closure_2_132 + arg0;
@@ -2257,7 +2246,7 @@ function f21190() {
     const self = this;
     closure_1 = arg0;
     c2 = 0;
-    return (function*(arg0, value) {
+    return (function*(arg0) {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -2287,13 +2276,11 @@ function f21190() {
               const tmp8 = new closure_1_134();
               throw tmp8;
             } else {
-              const events = tmp15.events;
-              events.push(tmp16);
+              const events = self.events;
+              events.push(closure_1);
               c2 = 3;
               return { value: "HermesInternal", done: null };
             }
-            tmp15 = self;
-            tmp16 = closure_1;
           }
         } catch (tmp10) {
           c2 = tmp;
@@ -2554,7 +2541,8 @@ function f21192() {
       closure_2 = self;
       closure_1 = tmp2;
       const _worker = self._worker;
-      closure_129_0 = yield _worker.postMessage("finish");
+      yield _worker.postMessage("finish");
+      closure_129_0 = value;
       closure_2._earliestTimestamp = null;
       closure_2._totalSize = 0;
       return closure_129_0;
@@ -2719,7 +2707,7 @@ function f21193() {
     c8 = 0;
     c9 = 0;
     c6 = 0;
-    return (function*(arg0, value) {
+    return (function*(arg0) {
       if (c9 === 2) {
         c9 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -2745,7 +2733,6 @@ function f21193() {
               obj = { value, done: true };
               return obj;
             } else {
-              let tmp26 = self;
               _fallback = self;
               closure_4 = tmp;
               closure_3 = tmp4;
@@ -2755,14 +2742,14 @@ function f21193() {
               ({ hasCheckout, waitForCheckout } = _fallback2);
               closure_1 = events[Symbol.iterator]();
               while (closure_1 !== undefined) {
-                let _compression = tmp26._compression;
+                let _compression = self._compression;
                 let arr = items.push(_compression.addEvent(tmp20));
                 c6 = 0;
                 continue;
               }
-              tmp26._compression.hasCheckout = hasCheckout;
-              tmp26._compression.waitForCheckout = waitForCheckout;
-              tmp26._used = tmp26._compression;
+              self._compression.hasCheckout = hasCheckout;
+              self._compression.waitForCheckout = waitForCheckout;
+              self._used = self._compression;
               c6 = 2;
               let _Promise = Promise;
               c8 = 3;
@@ -2898,19 +2885,19 @@ function f21196() {
         let flag = false;
         if (f108031.eventBuffer) {
           flag = false;
-          if (!obj.isPaused()) {
+          if (!f108031.isPaused()) {
             flag = false;
-            if (obj.isEnabled()) {
+            if (f108031.isEnabled()) {
               timestamp = timestamp.timestamp;
               let result = timestamp;
               if (timestamp <= 9999999999) {
                 result = 1000 * timestamp;
               }
               const _Date = Date;
-              const sum = result + obj.timeouts.sessionIdlePause;
+              const sum = result + f108031.timeouts.sessionIdlePause;
               let tmp4 = sum >= Date.now();
               if (tmp4) {
-                let flag2 = result <= obj.getContext().initialTimestamp + obj.getOptions().maxReplayDuration;
+                let flag2 = result <= f108031.getContext().initialTimestamp + f108031.getOptions().maxReplayDuration;
                 if (!flag2) {
                   flag2 = false;
                   if (closure_2_130) {
@@ -2926,7 +2913,7 @@ function f21196() {
           }
         }
         if (flag) {
-          let resolved = closure_2_147(obj, timestamp, arg1);
+          let resolved = closure_2_147(f108031, timestamp, arg1);
         } else {
           resolved = Promise.resolve(null);
         }
@@ -2956,7 +2943,7 @@ function f21196() {
           return str;
         } else {
           c2 = false;
-          const result = obj.set(rounded, (obj.get(rounded) || 0) + 1);
+          const result = map.set(rounded, (map.get(rounded) || 0) + 1);
           const items2 = [];
           HermesBuiltin.arraySpread(items, 0);
           return HermesBuiltin.apply(items2, undefined);
@@ -3200,11 +3187,11 @@ function f21196() {
       value: function startBuffering() {
         const self = this;
         if (this._isEnabled) {
-          if (tmp) {
+          if (closure_1_130) {
             closure_1_133.log("Buffering is in progress, call `flush()` to save the replay");
           }
         } else {
-          if (tmp) {
+          if (closure_1_130) {
             closure_1_133.infoTick("Starting replay in buffer mode");
           }
           let obj = { sessionIdleExpire: self.timeouts.sessionIdleExpire, maxReplayDuration: self._options.maxReplayDuration };
@@ -3239,7 +3226,7 @@ function f21196() {
           let obj4 = /iPhone|iPad|iPod/i;
           let str2;
           if (closure_1_168 != null) {
-            str2 = tmp9.userAgent;
+            str2 = closure_1_168.userAgent;
           }
           if (str2 == null) {
             str2 = "";
@@ -3250,21 +3237,21 @@ function f21196() {
           } else {
             let obj5 = /Macintosh/i;
             let str3;
-            if (tmp9 != null) {
-              str3 = tmp9.userAgent;
+            if (closure_1_168 != null) {
+              str3 = closure_1_168.userAgent;
             }
             if (str3 == null) {
               str3 = "";
             }
             if (obj5.test(str3)) {
               let maxTouchPoints;
-              if (tmp9 != null) {
-                maxTouchPoints = tmp9.maxTouchPoints;
+              if (closure_1_168 != null) {
+                maxTouchPoints = closure_1_168.maxTouchPoints;
               }
               if (maxTouchPoints) {
                 let maxTouchPoints1;
-                if (tmp9 != null) {
-                  maxTouchPoints1 = tmp9.maxTouchPoints;
+                if (closure_1_168 != null) {
+                  maxTouchPoints1 = closure_1_168.maxTouchPoints;
                 }
               }
             }
@@ -3281,6 +3268,7 @@ function f21196() {
           }
           const merged3 = Object.assign(obj5);
           self._stopRecording = closure_1_109(obj);
+          const _onMutationHandler = self._onMutationHandler;
         } catch (tmp20) {
           obj.handleException(tmp20);
         }
@@ -3345,7 +3333,7 @@ function f21196() {
     c7 = 0;
     c8 = 0;
     c5 = 0;
-    const iter = (function*(arg0, value) {
+    const iter = (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -3494,6 +3482,7 @@ function f21196() {
           closure_1_133.log("Resuming replay");
         }
       }
+      tmp = this._isPaused && self._checkSession();
     }
   };
   const entry2 = { key: "sendBufferedReplayOrFlush", value: null };
@@ -3696,9 +3685,9 @@ function f21196() {
   };
   items[25] = {
     key: "throttledAddEvent",
-    value: function throttledAddEvent(arg0, arg1) {
+    value: function throttledAddEvent(data, arg1) {
       const self = this;
-      const _throttledAddEventResult = this._throttledAddEvent(arg0, arg1);
+      const _throttledAddEventResult = this._throttledAddEvent(data, arg1);
       if (_throttledAddEventResult === closure_176) {
         let payload = { timestamp: null, type: "default" };
         const _Date = Date;
@@ -3845,7 +3834,7 @@ function f21196() {
     closure_1 = arg0;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, value) {
+    return (function*(arg0) {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -4059,7 +4048,7 @@ function f21196() {
                   })(name);
                 }
               });
-              let tmpResult = tmp(tmp2[9]);
+              let tmpResult = tmp(dependencyMap[9]);
               closure_129_0 = self;
               let result = tmpResult.addHistoryInstrumentationHandler((arg0) => {
                 if (data.isEnabled()) {
@@ -4090,7 +4079,7 @@ function f21196() {
                 }
               });
               closure_130_0 = self;
-              tmpResult = tmp(tmp2[8]);
+              tmpResult = tmp(dependencyMap[8]);
               const client1 = tmpResult.getClient();
               if (client1) {
                 client1.on("beforeAddBreadcrumb", (category) => {
@@ -4246,10 +4235,10 @@ function f21196() {
                             const timestamp = type.timestamp;
                             let flag = !timestamp;
                             if (timestamp) {
-                              let data = { type: Custom.Custom, timestamp: 1000 * tmp.timestamp, data: null };
+                              let data = { type: Custom.Custom, timestamp: 1000 * type.timestamp, data: null };
                               data = { tag: "breadcrumb", payload: null };
-                              data = { timestamp: tmp.timestamp, type: "default", category: "sentry.feedback", data: null };
-                              const obj1 = { feedbackId: tmp.event_id };
+                              data = { timestamp: type.timestamp, type: "default", category: "sentry.feedback", data: null };
+                              const obj1 = { feedbackId: type.event_id };
                               data.data = obj1;
                               data.payload = data;
                               data.data = data;
@@ -4342,10 +4331,10 @@ function f21196() {
                         if (currentScope.getPropagationContext().dsc) {
                           delete tmp5[tmp4];
                         }
-                        let tmp6Result = tmp6(tmp7[8]);
+                        let tmp6Result = closure_2_0(dependencyMap[8]);
                         const activeSpan = tmp6Result.getActiveSpan();
                         if (activeSpan) {
-                          tmp6Result = tmp6(tmp7[8]);
+                          tmp6Result = closure_2_0(dependencyMap[8]);
                           const dynamicSamplingContextFromSpan = tmp6Result.getDynamicSamplingContextFromSpan(activeSpan);
                           delete tmp3[tmp2];
                         }
@@ -4356,7 +4345,7 @@ function f21196() {
                 }
                 return type;
               }, { id: "Replay" });
-              tmp(tmp2[8]).addEventProcessor(merged);
+              tmp(dependencyMap[8]).addEventProcessor(merged);
               if (client) {
                 closure_132_0 = self;
                 client.on("beforeSendEvent", (type) => {
@@ -4406,10 +4395,10 @@ function f21196() {
                       }
                     }
                   }
+                  tmp = data.isEnabled() && !type.type;
                 });
                 closure_133_0 = self;
                 client.on("afterSendEvent", (type, statusCode) => {
-                  const obj = closure_0;
                   if (closure_0.isEnabled()) {
                     type = type.type;
                     if (!type) {
@@ -4423,7 +4412,7 @@ function f21196() {
                       }
                       if (!tmp4) {
                         if ("transaction" === type.type) {
-                          const context = obj.getContext();
+                          const context = closure_0.getContext();
                           const contexts = type.contexts;
                           let trace_id;
                           if (contexts != null) {
@@ -4440,7 +4429,7 @@ function f21196() {
                             traceIds.add(type.contexts.trace.trace_id);
                           }
                         } else {
-                          const context1 = obj.getContext();
+                          const context1 = closure_0.getContext();
                           let event_id = type.event_id;
                           if (event_id) {
                             event_id = context1.errorIds.size < 100;
@@ -4449,10 +4438,10 @@ function f21196() {
                             const errorIds = context1.errorIds;
                             errorIds.add(type.event_id);
                           }
-                          if ("buffer" === obj.recordingMode) {
+                          if ("buffer" === closure_0.recordingMode) {
                             if (type.tags) {
                               if (type.tags.replayId) {
-                                const beforeErrorSampling = obj.getOptions().beforeErrorSampling;
+                                const beforeErrorSampling = closure_0.getOptions().beforeErrorSampling;
                                 if (typeof beforeErrorSampling !== "function") {
                                   const timerId = closure_2_0(dependencyMap[9]).setTimeout(closure_2_2(function*() {
                                     closure_1 = tmp3;
@@ -4464,11 +4453,11 @@ function f21196() {
                                       c5 = 3;
                                     } else if (arg0 === 1) {
                                       c5 = 3;
-                                      throw arg1;
+                                      throw value;
                                     } else if (arg0 !== 2) {
                                       c3 = 0;
                                     }
-                                    return arg1;
+                                    return value;
                                   }));
                                   const obj2 = closure_2_0(dependencyMap[9]);
                                 }
@@ -4484,13 +4473,13 @@ function f21196() {
                   const sessionId = closure_0.getSessionId();
                   let isEnabledResult = sessionId;
                   if (sessionId) {
-                    isEnabledResult = obj.isEnabled();
+                    isEnabledResult = closure_0.isEnabled();
                   }
                   if (isEnabledResult) {
-                    isEnabledResult = "session" === obj.recordingMode;
+                    isEnabledResult = "session" === closure_0.recordingMode;
                   }
                   if (isEnabledResult) {
-                    isEnabledResult = obj.checkAndHandleExpiredSession();
+                    isEnabledResult = closure_0.checkAndHandleExpiredSession();
                   }
                   if (isEnabledResult) {
                     arg0.replay_id = sessionId;
@@ -4592,7 +4581,7 @@ function f21196() {
                   }
                   return applyArgumentsResult;
                 });
-                client.on("openFeedbackWidget", closure_2(function*(arg0, value) {
+                client.on("openFeedbackWidget", closure_2(function*() {
                   if (c0 === 2) {
                     c0 = 3;
                     throw new TypeError("Generator functions may not be called on executing generators");
@@ -4640,6 +4629,7 @@ function f21196() {
                   }
                 }));
               }
+              const tmpResult1 = tmp(dependencyMap[8]);
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -4865,7 +4855,7 @@ function f21196() {
     c6 = 0;
     c7 = 0;
     c4 = 0;
-    return (function*(arg0, value) {
+    return (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -4903,11 +4893,11 @@ function f21196() {
               const sessionId = self.getSessionId();
               closure_129_1 = sessionId;
               if (self.session) {
-                if (obj13.eventBuffer) {
+                if (self.eventBuffer) {
                   if (sessionId) {
                     c6 = 1;
                     c7 = 1;
-                    const obj1 = { value: obj13._addPerformanceEntries(), done: false };
+                    const obj1 = { value: self._addPerformanceEntries(), done: false };
                     return obj1;
                   }
                 }
@@ -5066,7 +5056,7 @@ function f21196() {
     c7 = 0;
     c8 = 0;
     c5 = 0;
-    const iter = (function*(arg0, value) {
+    const iter = (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -5251,6 +5241,7 @@ function f21196() {
       if (tmp) {
         closure_1_141(self.session);
       }
+      tmp = this.session && self._options.stickySession;
     }
   };
   items[45] = {
@@ -5454,8 +5445,8 @@ function f21197() {
         maskAttributeFn(arg0, str, tagName) {
               let tmp2 = str;
               if (flag3) {
-                if (!tmp.unmaskTextSelector) {
-                  if (obj.includes(arg0)) {
+                if (!maskAttributes.unmaskTextSelector) {
+                  if (maskAttributes.includes(arg0)) {
                     let replaced = str.replace(/[\S]/g, "*");
                   } else {
                     replaced = str;
@@ -5463,8 +5454,8 @@ function f21197() {
                       replaced = str;
                       if ("INPUT" === tagName.tagName) {
                         const items = ["submit", "button"];
+                        tagName.getAttribute("type") || "";
                         replaced = str;
-                        const tmp7 = tagName.getAttribute("type") || "";
                       }
                     }
                   }
@@ -5688,14 +5679,12 @@ function f21197() {
       const merged = Object.assign(this._initialOptions);
       const parseSampleRateResult = Replay(dependencyMap[8]).parseSampleRate(options.replaysSessionSampleRate);
       const obj2 = Replay(dependencyMap[8]);
-      const tmp3 = Replay;
-      const tmp4 = dependencyMap;
       const parseSampleRateResult1 = Replay(dependencyMap[8]).parseSampleRate(options.replaysOnErrorSampleRate);
       if (tmp7) {
-        tmp3(tmp4[8]).consoleSandbox(() => {
+        Replay(dependencyMap[8]).consoleSandbox(() => {
           console.warn("Replay is disabled because neither `replaysSessionSampleRate` nor `replaysOnErrorSampleRate` are set.");
         });
-        const tmp3Result = tmp3(tmp4[8]);
+        const tmp3Result = Replay(dependencyMap[8]);
       }
       if (null != parseSampleRateResult) {
         obj.sessionSampleRate = parseSampleRateResult;
@@ -5707,6 +5696,7 @@ function f21197() {
       const obj3 = Replay(dependencyMap[8]);
       tmp7 = null == parseSampleRateResult && null == parseSampleRateResult1;
       self._replay = new closure_1_177(obj);
+      const tmp9 = new closure_1_177(obj);
     }
   };
   items[10] = {
@@ -5801,17 +5791,17 @@ function f21223() {
       this.processMutation = (arg0, arg1) => {
         let invokeId = !tmp2;
         if (!(self.rafStamps.invokeId && self.rafStamps.latestId !== self.rafStamps.invokeId)) {
-          invokeId = tmp.rafStamps.invokeId;
+          invokeId = self.rafStamps.invokeId;
         }
         if (!invokeId) {
-          tmp.rafStamps.invokeId = tmp.rafStamps.latestId;
+          self.rafStamps.invokeId = self.rafStamps.latestId;
         }
-        const pendingCanvasMutations = tmp.pendingCanvasMutations;
+        const pendingCanvasMutations = self.pendingCanvasMutations;
         if (!pendingCanvasMutations.has(arg0)) {
-          const pendingCanvasMutations2 = tmp.pendingCanvasMutations;
+          const pendingCanvasMutations2 = self.pendingCanvasMutations;
           const result = pendingCanvasMutations2.set(arg0, []);
         }
-        const pendingCanvasMutations3 = tmp.pendingCanvasMutations;
+        const pendingCanvasMutations3 = self.pendingCanvasMutations;
         const value = pendingCanvasMutations3.get(arg0);
         value.push(arg1);
       };
@@ -5950,7 +5940,6 @@ function f21223() {
         closure_1 = arg0;
         const options = this.options;
         const sampling = options.sampling;
-        const str = "all";
         ({ blockClass: closure_3, blockSelector: closure_4, unblockSelector: closure_5, recordCanvas: CanvasManager } = options);
         const windowsSet = self.windowsSet;
         if (!windowsSet.has(arg0)) {
@@ -6176,6 +6165,7 @@ function f21223() {
             throw new TypeError("Trying to call a non-function");
           }
         });
+        const restoreHandlers = this.restoreHandlers;
       }
     },
     {
@@ -6250,9 +6240,9 @@ function f21223() {
             if (mirror2.hasNode(width)) {
               if (width.width) {
                 if (width.height) {
-                  let snapshotInProgressMap = tmp.snapshotInProgressMap;
+                  let snapshotInProgressMap = self.snapshotInProgressMap;
                   if (!snapshotInProgressMap.get(id)) {
-                    const snapshotInProgressMap2 = tmp.snapshotInProgressMap;
+                    const snapshotInProgressMap2 = self.snapshotInProgressMap;
                     const result = snapshotInProgressMap2.set(id, true);
                     if (!id) {
                       let items = ["webgl", "webgl2"];
@@ -6402,7 +6392,6 @@ function f21226() {
   closure_0 = undefined;
   closure_1 = undefined;
   obj = undefined;
-  let promise;
   [tmp3, tmp4] = closure_1(obj.maxCanvasSize || [], 2);
   obj = { quality: obj.quality || "medium", enableManualSnapshot: obj.enableManualSnapshot, maxCanvasSize: null };
   if (tmp3) {
@@ -6421,7 +6410,7 @@ function f21226() {
   }
   items[1] = bound1;
   obj.maxCanvasSize = items;
-  promise = new Promise((arg0) => {
+  new Promise((arg0) => {
     closure_1 = arg0;
     return arg0;
   });
@@ -6458,7 +6447,7 @@ function f21226() {
     snapshot(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
-      return closure_0(function*(arg0, value) {
+      return closure_0(function*() {
         if (c2 === 2) {
           c2 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -6858,7 +6847,7 @@ function fetch(arg0, arg1) {
           }, obj);
         }
       }
-      const str = xMLHttpRequest.getAllResponseHeaders() || "";
+      let str = xMLHttpRequest.getAllResponseHeaders() || "";
       let parts = xMLHttpRequest.getAllResponseHeaders() || "".replace(/\r?\n[\t ]+/g, " ").split("\r");
       const mapped = parts.map((arr) => {
         let substr = arr;
@@ -6879,27 +6868,29 @@ function fetch(arg0, arg1) {
             console.warn("Response " + tmp6.message);
           }
         }
+        const str = parts.shift();
       });
       obj.headers = obj;
       url = url.url;
       if (0 !== url.indexOf("file://")) {
-        obj.status = tmp.status;
+        obj.status = xMLHttpRequest.status;
       } else {
         obj.status = 200;
       }
       if ("responseURL" in xMLHttpRequest) {
-        let responseURL = tmp.responseURL;
+        let responseURL = xMLHttpRequest.responseURL;
       } else {
         const headers = obj.headers;
         responseURL = headers.get("X-Request-URL");
       }
       obj.url = responseURL;
-      url = "response" in tmp ? tmp.response : tmp.responseText;
+      url = "response" in xMLHttpRequest ? xMLHttpRequest.response : xMLHttpRequest.responseText;
       const timerId = setTimeout(() => {
         obj = Object.create(closure_4_14.prototype);
         closure_4_14(closure_2, obj);
         closure_0(obj);
       }, 0);
+      const str2 = xMLHttpRequest.getAllResponseHeaders() || "".replace(/\r?\n[\t ]+/g, " ");
     };
     xMLHttpRequest.onerror = () => {
       const timerId = setTimeout(() => {
@@ -7103,10 +7094,10 @@ function observe(doc) {
           obj.data = obj;
           closure_1_103(obj);
         },
-      customElementCb(arg0) {
+      customElementCb(define) {
           let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
           obj = { source: closure_1_74.CustomElement };
-          const merged = Object.assign(arg0);
+          const merged = Object.assign(define);
           obj.data = obj;
           closure_1_103(obj);
         },
@@ -7195,6 +7186,7 @@ function f71460() {
       throw new TypeError("Trying to call a non-function");
     }
   }
+  const obj = { type: closure_2_73.DomContentLoaded, data: {} };
 }
 
 function f71461() {
@@ -7208,6 +7200,7 @@ function f71461() {
       throw new TypeError("Trying to call a non-function");
     }
   }
+  const obj = { type: closure_2_73.Load, data: {} };
 }
 
 function f71462() {
@@ -7375,12 +7368,12 @@ function f72328(arg0, arg1, arg2, arg3, arg4, arg5) {
 
 function f73332(key10009) {
   const call = hasOwnProperty.call;
-  let tmp2 = typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp, key10009);
+  let tmp2 = typeof call === "unknown" ? hasOwnProperty(key10009) : call(closure_1_0, key10009);
   if (tmp2) {
     tmp2 = typeof closure_1_1[key10009] === "string";
   }
   if (tmp2) {
-    closure_1_1[key10009] = tmp[key10009](closure_1_1[key10009]);
+    closure_1_1[key10009] = closure_1_0[key10009](closure_1_1[key10009]);
   }
 }
 
@@ -7403,7 +7396,11 @@ function crc(uint8Array, sum48, sum13) {
 }
 
 function multVec(items, items1) {
-  items = [items[0] * items1[0] + items[1] * items1[1] + items[2] * items1[2] + items[3] * items1[3], items[4] * items1[0] + items[5] * items1[1] + items[6] * items1[2] + items[7] * items1[3], items[8] * items1[0] + items[9] * items1[1] + items[10] * items1[2] + items[11] * items1[3], items[12] * items1[0] + items[13] * items1[1] + items[14] * items1[2] + items[15] * items1[3]];
+  items = [, , , ];
+  items[0] = items[0] * items1[0] + items[1] * items1[1] + items[2] * items1[2] + items[3] * items1[3];
+  items[1] = items[4] * items1[0] + items[5] * items1[1] + items[6] * items1[2] + items[7] * items1[3];
+  items[2] = items[8] * items1[0] + items[9] * items1[1] + items[10] * items1[2] + items[11] * items1[3];
+  items[3] = items[12] * items1[0] + items[13] * items1[1] + items[14] * items1[2] + items[15] * items1[3];
   return items;
 }
 
@@ -7481,17 +7478,16 @@ function touchList(arg0, arg1) {
   closure_1_8.delete(arg0);
   const result = closure_1_8.set(arg0, arg1);
   if (closure_1_8.size > 50) {
-    const obj = tmp[Symbol.iterator]();
+    const obj = closure_1_8[Symbol.iterator]();
     while (obj !== undefined) {
       let tmp11 = closure_1_3(tmp8, 2);
       [tmp12, tmp13] = tmp11;
-      let obj2 = closure_1_8;
       if (closure_1_8.size <= 50) {
         obj.return();
         break;
       } else {
         if (!tmp13.loading) {
-          let deleteResult1 = obj2.delete(tmp12);
+          let deleteResult1 = closure_1_8.delete(tmp12);
         }
         continue;
       }
@@ -7518,7 +7514,7 @@ function _loop4() {
     }
     let obj1 = reversed[reversed.length - 1];
     if (null != closure_2[str]) {
-      obj = { location: tmp.index, length: str.length + 1, data: null };
+      obj = { location: closure_1.index, length: str.length + 1, data: null };
       obj = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: null };
       let colorString = null;
       if ("username" === closure_1_5.roleStyle) {
@@ -7528,16 +7524,17 @@ function _loop4() {
       obj.data = obj;
       str.push(obj);
     } else if (obj1.startsWith(closure_1_22)) {
-      obj1 = { location: tmp.index, length: 9, data: null };
+      obj1 = { location: closure_1.index, length: 9, data: null };
       const obj2 = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: closure_1_1(closure_1_2[19]).unsafe_rawColors.BRAND_500 };
       obj1.data = obj2;
       str.push(obj1);
     } else if (obj1.startsWith(closure_1_23)) {
-      const obj3 = { location: tmp.index, length: 5, data: null };
+      const obj3 = { location: closure_1.index, length: 5, data: null };
       const obj4 = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: closure_1_1(closure_1_2[19]).unsafe_rawColors.BRAND_500 };
       obj3.data = obj4;
       str.push(obj3);
     }
+    const str3 = obj.trimEnd();
   }
 }
 
@@ -7628,22 +7625,22 @@ function f122240(arg0, tldBlacklist) {
   const _Array = Array;
   if (tldBlacklist.tldBlacklist) {
     if (!isArray(tldBlacklist.tldBlacklist)) {
-      const hasOwn2 = arr2.hasOwn;
+      const hasOwn2 = closure_1_2.hasOwn;
       const call3 = hasOwn2.call;
       tldBlacklist = tldBlacklist.tldBlacklist;
       !(typeof call3 === "unknown" ? hasOwn2(arg0) : call3(tldBlacklist, arg0));
     }
-    const indexOf2 = arr2.indexOf;
+    const indexOf2 = closure_1_2.indexOf;
     const call4 = indexOf2.call;
     const tldBlacklist2 = tldBlacklist.tldBlacklist;
     -1 === (typeof call4 === "unknown" ? indexOf2(arg0) : call4(tldBlacklist2, arg0));
   } else if (isArray(tldBlacklist.tldWhitelist)) {
-    const indexOf = arr.indexOf;
+    const indexOf = closure_1_2.indexOf;
     const call2 = indexOf.call;
     const tldWhitelist2 = tldBlacklist.tldWhitelist;
     -1 !== (typeof call2 === "unknown" ? indexOf(arg0) : call2(tldWhitelist2, arg0));
   } else {
-    const hasOwn = arr.hasOwn;
+    const hasOwn = closure_1_2.hasOwn;
     const call = hasOwn.call;
     const tldWhitelist = tldBlacklist.tldWhitelist;
     return typeof call === "unknown" ? hasOwn(arg0) : call(tldWhitelist, arg0);
@@ -9160,7 +9157,7 @@ function f122241(arg0, arg1, arg2) {
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-      } else if (0 === tmp5) {
+      } else if (0 === sum2) {
         const rfc5321TLD = closure_2_2.diagnoses.rfc5321TLD;
         if (typeof updateResult === "function") {
           if (rfc5321TLD > dnsWarnNoRecord) {
@@ -9171,7 +9168,6 @@ function f122241(arg0, arg1, arg2) {
         }
       }
       obj = obj1.domains[sum2];
-      tmp5 = sum2;
     }
     if (dnsWarnNoRecord < valid) {
       dnsWarnNoRecord = closure_2_2.diagnoses.valid;
@@ -9183,9 +9179,9 @@ function f122241(arg0, arg1, arg2) {
     }
     if (domain) {
       if (c8) {
-        obj2(tmp15);
+        domain(tmp15);
       } else {
-        closure_2_2.defer(obj2.bind(null, tmp15));
+        closure_2_2.defer(domain.bind(null, tmp15));
       }
     }
     return tmp15;
@@ -9286,7 +9282,7 @@ function f122408(lastyear, lastmonth) {
           num12 = 366;
         }
         const sum = lastyear + 1;
-        if (typeof tmp5 === "function") {
+        if (typeof closure_1_20 === "function") {
           const result1 = sum % 4;
           let tmp10 = result1 === 0;
           if (result1 === 0) {
@@ -9307,7 +9303,7 @@ function f122408(lastyear, lastmonth) {
                 if (typeof closure_1_27 === "function") {
                   const tmp21 = closure_1_19[date.getUTCDay(date)];
                   let obj = { yearlen: num12, nextyearlen: num15, yearordinal: tmp18, yearweekday: tmp21 };
-                  if (typeof tmp5 === "function") {
+                  if (typeof closure_1_20 === "function") {
                     const result2 = lastyear % 4;
                     let tmp24 = result2 === 0;
                     if (result2 === 0) {
@@ -9326,14 +9322,14 @@ function f122408(lastyear, lastmonth) {
                       const _Date6 = Date;
                       const date1 = new Date(Date.UTC(lastyear, 0, 1, 0, 0, 0));
                       if (typeof tmp19 === "function") {
-                        const tmp29 = tmp20[date1.getUTCDay(date1)];
+                        const tmp29 = closure_1_19[date1.getUTCDay(date1)];
                         if (num11 === num20) {
                           obj = { mmask: closure_1_58, mdaymask: closure_1_61, nmdaymask: closure_1_63, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_65 };
                           let obj1 = obj;
                         } else {
                           obj1 = { mmask: closure_1_59, mdaymask: closure_1_60, nmdaymask: closure_1_62, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_64 };
                         }
-                        const tmp22Result = tmp22(tmp22(obj, obj1), { wnomask: null });
+                        const tmp22Result = closure_1_38(closure_1_38(obj, obj1), { wnomask: null });
                         const byweekno = options.byweekno;
                         if (typeof closure_1_12 === "function") {
                           if (typeof closure_1_3 === "function") {
@@ -9371,7 +9367,7 @@ function f122408(lastyear, lastmonth) {
                                     sum2 = result3 + 7;
                                   }
                                   if (4 <= sum2) {
-                                    if (typeof tmp49 === "function") {
+                                    if (typeof closure_1_10 === "function") {
                                       const result4 = (tmp21 - options.wkst) % 7;
                                       let sum3 = result4;
                                       if (result4 * 7 < 0) {
@@ -9387,7 +9383,7 @@ function f122408(lastyear, lastmonth) {
                                     num29 = sum2;
                                   }
                                   const _Math2 = Math;
-                                  if (typeof tmp49 === "function") {
+                                  if (typeof closure_1_10 === "function") {
                                     const result5 = sum4 % 7;
                                     let sum5 = result5;
                                     if (result5 * 7 < 0) {
@@ -9511,7 +9507,7 @@ function f122408(lastyear, lastmonth) {
                                                                   num11 = 366;
                                                                 }
                                                                 if (4 <= sum15) {
-                                                                  if (typeof tmp98 === "function") {
+                                                                  if (typeof closure_1_10 === "function") {
                                                                     const result8 = (obj7 - options.wkst) % 7;
                                                                     let sum16 = result8;
                                                                     if (result8 * 7 < 0) {
@@ -9524,7 +9520,7 @@ function f122408(lastyear, lastmonth) {
                                                                 } else {
                                                                   sum17 = num12 - num29;
                                                                 }
-                                                                if (typeof tmp98 === "function") {
+                                                                if (typeof closure_1_10 === "function") {
                                                                   const result9 = sum17 % 7;
                                                                   let sum18 = result9;
                                                                   if (result9 * 7 < 0) {
@@ -9629,7 +9625,6 @@ function f122408(lastyear, lastmonth) {
                   } else {
                     throw new TypeError("Trying to call a non-function");
                   }
-                  tmp20 = closure_1_19;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
@@ -9969,7 +9964,7 @@ function f122423(arg0, arg1, arg2) {
           const diff = tmp13 - 60 * date.getTimezoneOffset() * 1000;
           if (typeof tmp14 === "function") {
             const _Math = Math;
-            const diff1 = Math.round((diff - (tmp16 - 60 * obj2.getTimezoneOffset() * 1000)) / closure_1_17) - self.yearordinal;
+            const diff1 = Math.round((diff - (tmp16 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) - self.yearordinal;
             items[diff1] = diff1;
             const sum1 = diff1 + 1;
             let num12 = 0;
@@ -9997,7 +9992,6 @@ function f122423(arg0, arg1, arg2) {
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        obj2 = closure_1_18;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -10041,7 +10035,7 @@ function f122424(arg0, arg1, arg2) {
           const diff = tmp14 - 60 * date.getTimezoneOffset() * 1000;
           if (typeof tmp15 === "function") {
             const _Math = Math;
-            const diff1 = Math.round((diff - (tmp17 - 60 * obj2.getTimezoneOffset() * 1000)) / closure_1_17) - tmp.yearordinal;
+            const diff1 = Math.round((diff - (tmp17 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) - tmp.yearordinal;
             items[diff1] = diff1;
             const items2 = [items, diff1, diff1 + 1];
             return items2;
@@ -10051,7 +10045,6 @@ function f122424(arg0, arg1, arg2) {
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        obj2 = closure_1_18;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -10134,14 +10127,14 @@ function f122428(arg0) {
   if (closure_1_39.YEARLY === arg0) {
     const ydayset = self.ydayset;
     return ydayset.bind(self);
-  } else if (tmp.MONTHLY === arg0) {
+  } else if (closure_1_39.MONTHLY === arg0) {
     const mdayset = self.mdayset;
     return mdayset.bind(self);
-  } else if (tmp.WEEKLY === arg0) {
+  } else if (closure_1_39.WEEKLY === arg0) {
     const wdayset = self.wdayset;
     return wdayset.bind(self);
   } else {
-    const DAILY = tmp.DAILY;
+    const DAILY = closure_1_39.DAILY;
     const ddayset = self.ddayset;
     return ddayset.bind(self);
   }
@@ -10152,10 +10145,10 @@ function f122429(arg0) {
   if (closure_1_39.HOURLY === arg0) {
     const htimeset = self.htimeset;
     return htimeset.bind(self);
-  } else if (tmp.MINUTELY === arg0) {
+  } else if (closure_1_39.MINUTELY === arg0) {
     const mtimeset = self.mtimeset;
     return mtimeset.bind(self);
-  } else if (tmp.SECONDLY === arg0) {
+  } else if (closure_1_39.SECONDLY === arg0) {
     const stimeset = self.stimeset;
     return stimeset.bind(self);
   }
@@ -10187,7 +10180,7 @@ function t(arg0, arg1) {
     if (null != tmp5.byeaster) {
       tmp5.freq = closure_1_72.YEARLY;
     }
-    if (typeof tmp6 === "function") {
+    if (typeof closure_1_3 === "function") {
       if (null != tmp5.freq) {
         if (closure_1_72.FREQUENCIES[tmp5.freq]) {
           if (!tmp5.dtstart) {
@@ -10197,7 +10190,7 @@ function t(arg0, arg1) {
             const date1 = new Date(date.setMilliseconds(0));
             tmp5.dtstart = date1;
           }
-          if (typeof tmp6 === "function") {
+          if (typeof closure_1_3 === "function") {
             if (null != tmp5.wkst) {
               if (typeof closure_1_4 === "function") {
                 if (typeof tmp5.wkst !== "number") {
@@ -10209,7 +10202,7 @@ function t(arg0, arg1) {
             } else {
               tmp5.wkst = tmp8.MO.weekday;
             }
-            if (typeof tmp6 === "function") {
+            if (typeof closure_1_3 === "function") {
               if (null != tmp5.bysetpos) {
                 if (typeof closure_1_4 === "function") {
                   if (typeof tmp5.bysetpos === "number") {
@@ -10247,9 +10240,9 @@ function t(arg0, arg1) {
                       }
                       if (tmp30) {
                         const byyearday = tmp5.byyearday;
-                        if (typeof tmp26 === "function") {
-                          if (typeof tmp27 === "function") {
-                            if (typeof tmp28 === "function") {
+                        if (typeof closure_1_13 === "function") {
+                          if (typeof closure_1_12 === "function") {
+                            if (typeof closure_1_3 === "function") {
                               let tmp32 = !tmp31;
                               if (null != byyearday) {
                                 tmp32 = 0 === byyearday.length;
@@ -10258,17 +10251,17 @@ function t(arg0, arg1) {
                                 const _Boolean2 = Boolean;
                                 if (!Boolean(tmp5.bymonthday)) {
                                   const bymonthday = tmp5.bymonthday;
-                                  if (typeof tmp26 === "function") {
-                                    if (typeof tmp27 === "function") {
-                                      if (typeof tmp28 === "function") {
+                                  if (typeof closure_1_13 === "function") {
+                                    if (typeof closure_1_12 === "function") {
+                                      if (typeof closure_1_3 === "function") {
                                         let tmp34 = !tmp33;
                                         if (null != bymonthday) {
                                           tmp34 = 0 === bymonthday.length;
                                         }
                                         if (tmp34) {
-                                          if (typeof tmp28 === "function") {
+                                          if (typeof closure_1_3 === "function") {
                                             if (null == tmp5.byweekday) {
-                                              if (typeof tmp28 === "function") {
+                                              if (typeof closure_1_3 === "function") {
                                                 if (null == tmp5.byeaster) {
                                                   const freq = tmp5.freq;
                                                   if (closure_1_72.YEARLY === freq) {
@@ -10278,10 +10271,10 @@ function t(arg0, arg1) {
                                                     }
                                                     const dtstart3 = tmp5.dtstart;
                                                     tmp5.bymonthday = dtstart3.getUTCDate();
-                                                  } else if (tmp86.MONTHLY === freq) {
+                                                  } else if (closure_1_72.MONTHLY === freq) {
                                                     const dtstart = tmp5.dtstart;
                                                     tmp5.bymonthday = dtstart.getUTCDate();
-                                                  } else if (tmp86.WEEKLY === freq) {
+                                                  } else if (closure_1_72.WEEKLY === freq) {
                                                     const dtstart7 = tmp5.dtstart;
                                                     if (typeof closure_1_27 === "function") {
                                                       const items1 = [closure_1_19[dtstart7.getUTCDay(dtstart7)]];
@@ -10339,7 +10332,7 @@ function t(arg0, arg1) {
                   const items2 = [tmp5.bymonth];
                   tmp5.bymonth = items2;
                 }
-                if (typeof tmp36 === "function") {
+                if (typeof closure_1_3 === "function") {
                   let tmp39 = null != tmp5.byyearday;
                   if (tmp39) {
                     tmp39 = !closure_1_6(tmp5.byyearday);
@@ -10355,7 +10348,7 @@ function t(arg0, arg1) {
                     const items3 = [tmp5.byyearday];
                     tmp5.byyearday = items3;
                   }
-                  if (typeof tmp36 === "function") {
+                  if (typeof closure_1_3 === "function") {
                     if (null != tmp5.bymonthday) {
                       const bymonthday1 = tmp5.bymonthday;
                       if (closure_1_6(tmp5.bymonthday)) {
@@ -10397,14 +10390,14 @@ function t(arg0, arg1) {
                         const items8 = [tmp5.byweekno];
                         tmp5.byweekno = items8;
                       }
-                      if (typeof tmp47 === "function") {
+                      if (typeof closure_1_3 === "function") {
                         if (null != tmp5.byweekday) {
                           if (typeof closure_1_4 === "function") {
                             if (typeof tmp5.byweekday === "number") {
                               const items9 = [tmp5.byweekday];
                               tmp5.byweekday = items9;
                               tmp5.bynweekday = null;
-                              let tmp50 = tmp47;
+                              let tmp50 = closure_1_3;
                             } else {
                               let byweekday = tmp5.byweekday;
                               if (typeof closure_1_5 === "function") {
@@ -10416,7 +10409,7 @@ function t(arg0, arg1) {
                                   const items10 = [closure_1_2.fromStr(tmp5.byweekday).weekday];
                                   tmp5.byweekday = items10;
                                   tmp5.bynweekday = null;
-                                  tmp50 = tmp47;
+                                  tmp50 = closure_1_3;
                                 } else {
                                   byweekday = tmp5.byweekday;
                                   if (tmp5.byweekday instanceof closure_1_2) {
@@ -10426,13 +10419,13 @@ function t(arg0, arg1) {
                                         const items12 = [items11];
                                         tmp5.bynweekday = items12;
                                         tmp5.byweekday = null;
-                                        tmp50 = tmp47;
+                                        tmp50 = closure_1_3;
                                       }
                                     }
                                     const items13 = [tmp5.byweekday.weekday];
                                     tmp5.byweekday = items13;
                                     tmp5.bynweekday = null;
-                                    tmp50 = tmp47;
+                                    tmp50 = closure_1_3;
                                   } else {
                                     const items14 = [];
                                     const items15 = [];
@@ -10476,13 +10469,13 @@ function t(arg0, arg1) {
                                           tmp5.byweekday = tmp67;
                                           if (typeof tmp64 === "function") {
                                             if (typeof tmp65 === "function") {
-                                              if (typeof tmp66 === "function") {
+                                              if (typeof closure_1_3 === "function") {
                                                 let tmp68 = null;
                                                 if (0 !== items15.length) {
                                                   tmp68 = items15;
                                                 }
                                                 tmp5.bynweekday = tmp68;
-                                                tmp50 = tmp66;
+                                                tmp50 = closure_1_3;
                                               } else {
                                                 throw new TypeError("Trying to call a non-function");
                                               }
@@ -10512,7 +10505,7 @@ function t(arg0, arg1) {
                           }
                         } else {
                           tmp5.bynweekday = null;
-                          tmp50 = tmp47;
+                          tmp50 = closure_1_3;
                         }
                         if (typeof tmp50 === "function") {
                           if (null != tmp5.byhour) {
@@ -10883,7 +10876,6 @@ function e(arg0) {
 
 function f122447(accept) {
   ({ _rrule, _exrule, _rdate, _exdate } = this);
-  const tzidResult = this.tzid();
   let after = accept;
   let before = _exrule;
   accept = undefined;
@@ -10917,7 +10909,6 @@ function f122447(accept) {
       let tmp4 = !tmp3;
       if (!dependencyMap[NumberResult]) {
         const _Date = Date;
-        const date = new Date(NumberResult - 1);
         const _Date2 = Date;
         const date1 = new Date(NumberResult + 1);
         let item = date1.forEach((between) => {
@@ -10925,12 +10916,13 @@ function f122447(accept) {
             closure_1_3[Number(item)] = true;
           });
         });
-        tmp4 = !tmp2[NumberResult];
+        tmp4 = !dependencyMap[NumberResult];
+        const date = new Date(NumberResult - 1);
       }
       if (!tmp4) {
         return !tmp4;
       } else {
-        tmp2[NumberResult] = true;
+        dependencyMap[NumberResult] = true;
         const call = accept.call;
         typeof call === "unknown" ? accept(arg0) : call(self, arg0);
       }
@@ -11000,7 +10992,7 @@ function f122447(accept) {
       if ("between" !== method) {
         if ("before" === method) {
           tmp13 = _result.length && _result[_result.length - 1] || null;
-          let tmp15 = _result.length && _result[_result.length - 1] || null;
+          const tmp15 = _result.length && _result[_result.length - 1] || null;
         } else {
           tmp13 = _result.length && _result[0] || null;
           const tmp14 = _result.length && _result[0] || null;
@@ -11011,6 +11003,7 @@ function f122447(accept) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
+  tzidResult = this.tzid();
 }
 
 function f122448(arg0) {

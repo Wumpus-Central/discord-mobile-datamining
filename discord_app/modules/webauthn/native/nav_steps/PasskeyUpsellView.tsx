@@ -79,7 +79,6 @@ export default function PasskeyUpsellView() {
   const obj4 = { variant: "heading-md/normal", color: "text-default", style: tmp4.headerText, children: null };
   let obj8 = navigation(1115);
   const obj2 = { source: _modDef14666, style: tmp4.headerImage };
-  const tmp12 = closure_7;
   const intl2 = navigation(1114).intl;
   const string = intl2.string;
   const t = navigation(1114).t;
@@ -160,6 +159,6 @@ export default function PasskeyUpsellView() {
   obj12.children = items6;
   items2[2] = closure_12(closure_5, obj12);
   obj.children = items2;
-  obj.children = closure_12(tmp12, obj);
+  obj.children = closure_12(closure_7, obj);
   return closure_11(navigation(7123).SafeAreaPaddingView, obj);
 };

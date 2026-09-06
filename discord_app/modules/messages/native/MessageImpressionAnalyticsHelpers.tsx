@@ -1,9 +1,12 @@
 // === Module 11304: MessageImpressionAnalyticsHelpers ===
 
 // Module 11304 (MessageImpressionAnalyticsHelpers)
+import InviteCodeUtils from "InviteCodeUtils" /* 4545 */;
 import CodedLink from "CodedLink" /* 4548 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
 import MessageViewTrackingManager from "MessageViewTrackingManager" /* 11305 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 11306 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 11307 */;
 import noop from "module_19" /* 19 */;
 import InviteStore from "InviteStore" /* 4544 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4584 */;
@@ -11,15 +14,15 @@ import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4584 */;
 require = fn;
 function getVoiceInviteEmbedRenderInfo(state) {
   if (state.state !== constants3.RESOLVING) {
-    if (state.state !== tmp.EXPIRED) {
-      if (state.state !== tmp.BANNED) {
-        if (state.state !== tmp.ERROR) {
+    if (state.state !== constants3.EXPIRED) {
+      if (state.state !== constants3.BANNED) {
+        if (state.state !== constants3.ERROR) {
           if (obj5.getInviteType(state) !== InviteTypes.GUILD) {
             return null;
           } else {
-            let tmp7Result = tmp7(7735);
+            let tmp7Result = InviteTypeUtils;
             const guildInviteExtendedType = tmp7Result.getGuildInviteExtendedType(state);
-            if (guildInviteExtendedType !== tmp7(7735).GuildInviteExtendedType.VOICE_CHANNEL) {
+            if (guildInviteExtendedType !== InviteTypeUtils.GuildInviteExtendedType.VOICE_CHANNEL) {
               return null;
             } else {
               const guild = state.guild;
@@ -29,12 +32,12 @@ function getVoiceInviteEmbedRenderInfo(state) {
               }
               let tmp4 = null;
               if (null != id) {
-                tmp7Result = tmp7(11306);
+                tmp7Result = VoiceChannelListInviteExperiment;
                 let obj = { guildId: id, location: "mobile_invite_embed_impression" };
                 let enabled = tmp7Result.getVoiceChannelListInviteExperiment(obj).enabled;
                 if (enabled) {
-                  enabled = tmp7(11307).canShowVoiceChannelListInviteEmbed(state);
-                  const tmp7Result1 = tmp7(11307);
+                  enabled = VoiceChannelListInviteEmbed.canShowVoiceChannelListInviteEmbed(state);
+                  const tmp7Result1 = VoiceChannelListInviteEmbed;
                 }
                 obj = { treatmentRendered: enabled };
                 tmp4 = obj;
@@ -262,7 +265,6 @@ export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbe
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp6 = nextResult;
-          let tmp7 = require;
           if (nextResult.type === CodedLink.CodedLinkType.INVITE) {
             let invite = InviteStore.getInvite(tmp6.code);
             let tmp34 = invite;
@@ -297,14 +299,14 @@ export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbe
                 }
                 let obj = { type: null, messageId: null, channelId: null, guildId: null, inviteCode: null, inviteGuildId: null, inviteChannelId: null, inviteInstanceId: null, treatmentRendered: null, hasActiveStream: null };
                 let tmp20 = someResult;
-                obj.type = tmp7(11305).MessageViewTrackingType.VOICE_INVITE_EMBED;
+                obj.type = MessageViewTrackingManager.MessageViewTrackingType.VOICE_INVITE_EMBED;
                 obj.messageId = message.id;
                 obj.channelId = id.id;
                 obj.guildId = guildId;
                 obj.inviteCode = tmp6.code;
                 obj.inviteGuildId = tmp13;
                 obj.inviteChannelId = tmp10;
-                let tmp7Result = tmp7(4545);
+                let tmp7Result = InviteCodeUtils;
                 let inviteInstanceId = tmp7Result.getInviteInstanceId(tmp6.code, message.id);
                 if (inviteInstanceId == null) {
                   inviteInstanceId = null;

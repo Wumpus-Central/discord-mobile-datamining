@@ -47,7 +47,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
             let saveGuildResult = set;
             let saveGuild = constants;
             if (set.has(constants.COMMUNITY)) {
-              if (tmp17) {
+              if (closure_1) {
                 saveGuildResult.delete(saveGuild.RAID_ALERTS_DISABLED);
               } else {
                 saveGuildResult.add(saveGuild.RAID_ALERTS_DISABLED);
@@ -57,7 +57,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
               saveGuildResult = saveGuild(obj1.id, obj1, { throwErr: true });
               c3 = 1;
               c2 = 1;
-            } else if (!tmp17) {
+            } else if (!closure_1) {
               saveGuildResult.delete(saveGuild.NON_COMMUNITY_RAID_ALERTS);
             }
             saveGuildResult.add(saveGuild.NON_COMMUNITY_RAID_ALERTS);
@@ -83,9 +83,9 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
 let closure_10 = async function _setGuildIncidentActions() {
   let tmp5 = closure_1;
   if (!closure_1) {
-    tmp5 = tmp25;
+    tmp5 = closure_2;
   }
-  closure_4 = tmp26;
+  closure_4 = closure_3;
   if (closure_3 == null) {
     closure_4 = DEFAULT_LOCKDOWN_DURATION;
   }
@@ -113,76 +113,78 @@ let closure_10 = async function _setGuildIncidentActions() {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: React5.GUILD_INCIDENT_ACTIONS(closure_0), body: obj1, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   await HTTP.put(request);
-  return arg1;
+  return value;
 };
-let closure_11 = async function _handleResolveRaid(arg0, value) {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_11 = async function _handleResolveRaid(arg0) {
+  closure_0 = arg0;
+  c4 = 0;
+  c3 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
+      try {
+        c3 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            guild = guild.getGuild(closure_0);
+            let tmp8 = null;
+            if (null != guild) {
+              tmp8 = getGuildSafetyAlertsChannelIdDefault(guild);
+            }
+            let tmp5 = null;
+            if (null != tmp8) {
+              const HTTP = HTTPUtils.HTTP;
+              const request = { url: closure_2_7.GUILD_INCIDENT_REPORT_FALSE_ALARM(closure_0), body: null, rejectWithError: null };
+              const obj1 = { alert_message_id, reason };
+              request.body = obj1;
+              let obj3 = HTTPUtils;
+              request.rejectWithError = obj3.rejectWithMigratedError();
+              c4 = 1;
+              c3 = 1;
+              const obj2 = { value: HTTP.post(request), done: false };
+              return obj2;
+            }
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value, done: true };
-          return obj;
         } else {
-          guild = guild.getGuild(closure_0);
-          let tmp8 = null;
-          if (null != guild) {
-            tmp8 = getGuildSafetyAlertsChannelIdDefault(guild);
+          tmp5 = value;
+          if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
           }
-          let tmp5 = null;
-          if (null != tmp8) {
-            const HTTP = HTTPUtils.HTTP;
-            const request = { url: React5.GUILD_INCIDENT_REPORT_FALSE_ALARM(tmp17), body: null, rejectWithError: null };
-            const obj1 = { alert_message_id: tmp18, reason: tmp19 };
-            request.body = obj1;
-            let obj3 = HTTPUtils;
-            request.rejectWithError = obj3.rejectWithMigratedError();
-            c4 = 1;
-            c3 = 1;
-            const obj2 = { value: HTTP.post(request), done: false };
-            return obj2;
-          }
-          tmp17 = closure_0;
-          tmp18 = closure_1;
-          tmp19 = closure_2;
         }
-      } else if (arg0 === 1) {
         c3 = 3;
-        throw value;
-      } else {
-        tmp5 = value;
-        if (arg0 === 2) {
-          c3 = 3;
-          obj = { value, done: true };
-          return obj;
-        }
+        obj3 = { value: tmp5, done: true };
+        return obj3;
+      } catch (tmp12) {
+        c3 = tmp;
+        throw tmp12;
       }
-      c3 = 3;
-      obj3 = { value: tmp5, done: true };
-      return obj3;
-    } catch (tmp12) {
-      c3 = tmp;
-      throw tmp12;
     }
-  }
+  })();
 };
-let closure_12 = async function _handleReportRaid(arg0, value) {
+let closure_12 = async function _handleReportRaid(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -215,7 +217,7 @@ let closure_12 = async function _handleReportRaid(arg0, value) {
           let tmp5 = null;
           if (null != tmp8) {
             const HTTP = HTTPUtils.HTTP;
-            const obj1 = { url: React5.GUILD_INCIDENT_REPORT_RAID(tmp17), rejectWithError: null };
+            const obj1 = { url: React5.GUILD_INCIDENT_REPORT_RAID(closure_0), rejectWithError: null };
             let obj2 = HTTPUtils;
             obj1.rejectWithError = obj2.rejectWithMigratedError();
             c2 = 1;
@@ -223,7 +225,6 @@ let closure_12 = async function _handleReportRaid(arg0, value) {
             obj2 = { value: HTTP.post(obj1), done: false };
             return obj2;
           }
-          tmp17 = closure_0;
         }
       } else if (arg0 === 1) {
         c1 = 3;
@@ -251,7 +252,7 @@ const Constants = fn(1074);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
 
-export const trackReportRaidViewed = function trackReportRaidViewed(onChange, onSubmit) {
+export const trackReportRaidViewed = function trackReportRaidViewed(onChange) {
   let items = onSubmit;
   if (onSubmit === undefined) {
     items = [];

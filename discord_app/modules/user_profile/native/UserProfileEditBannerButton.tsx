@@ -70,12 +70,12 @@ export default function UserProfileEditBannerButton(arg0) {
   const items = [hasOwnProperty(UserProfileBannerDefault, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeightDefault(), bannerSafeArea }), , ];
   if (showProfilePreviewButton) {
     obj = { userId: user.id };
-    showProfilePreviewButton = tmp5(ProfilePreviewButton, obj);
+    showProfilePreviewButton = hasOwnProperty(ProfilePreviewButton, obj);
   }
   items[1] = showProfilePreviewButton;
   if (showEditButton) {
     obj = { onPress: onPressEdit, accessibilityLabel: editButtonAccessibilityLabel, disabled: editDisabled };
-    showEditButton = tmp5(EditButton, obj);
+    showEditButton = hasOwnProperty(EditButton, obj);
   }
   items[2] = showEditButton;
   obj.children = items;

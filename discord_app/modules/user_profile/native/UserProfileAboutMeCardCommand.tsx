@@ -5,6 +5,8 @@ import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7521 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
 import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11212 */;
 import navigateToLastChannelDefault from "navigateToLastChannel" /* 11217 */;
 import noop from "module_19" /* 19 */;
@@ -47,34 +49,33 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
       };
       obj.onSetCommand = function onSetCommand() {
         let obj = AnalyticsUtilsDefault;
-        let id;
-        if (closure_2_0 != null) {
-          id = tmp3.id;
+        id = undefined;
+        if (id != null) {
+          id = id.id;
         }
         obj = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
         const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
         obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj);
-        const tmp5 = command;
-        const tmp6 = channel;
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
         navigateToLastChannelDefault();
         if (bestActiveInput != null) {
-          obj5.openSystemKeyboard();
+          bestActiveInput.openSystemKeyboard();
         }
         if (bestActiveInput != null) {
-          const applicationCommandManager = obj5.getApplicationCommandManager();
+          const applicationCommandManager = bestActiveInput.getApplicationCommandManager();
           if (applicationCommandManager != null) {
-            obj = { channelId: tmp6.id, command: tmp5, section: null, location: null };
+            obj = { channelId: channel.id, command, section: null, location: null };
             let applicationCommandSection = null;
-            if (null != tmp3) {
-              applicationCommandSection = tmp7(7521).getApplicationCommandSection(tmp3);
-              const tmp7Result = tmp7(7521);
+            if (null != id) {
+              applicationCommandSection = ApplicationCommandUtils.getApplicationCommandSection(id);
+              const tmp7Result = ApplicationCommandUtils;
             }
             obj.section = applicationCommandSection;
-            obj.location = tmp7(7523).ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
+            obj.location = ApplicationCommandTypes.ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
             applicationCommandManager.setCommand(obj);
           }
         }
+        const tmpResult = ActionSheetActionCreatorsDefault;
       };
       const result = require("MarkupReactCommandRule").handleTapCommandMention(obj);
     },
@@ -110,34 +111,33 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
       };
       obj.onSetCommand = function onSetCommand() {
         let obj = AnalyticsUtilsDefault;
-        let id;
-        if (closure_2_0 != null) {
-          id = tmp3.id;
+        id = undefined;
+        if (id != null) {
+          id = id.id;
         }
         obj = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
         const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
         obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj);
-        const tmp5 = command;
-        const tmp6 = channel;
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
         navigateToLastChannelDefault();
         if (bestActiveInput != null) {
-          obj5.openSystemKeyboard();
+          bestActiveInput.openSystemKeyboard();
         }
         if (bestActiveInput != null) {
-          const applicationCommandManager = obj5.getApplicationCommandManager();
+          const applicationCommandManager = bestActiveInput.getApplicationCommandManager();
           if (applicationCommandManager != null) {
-            obj = { channelId: tmp6.id, command: tmp5, section: null, location: null };
+            obj = { channelId: channel.id, command, section: null, location: null };
             let applicationCommandSection = null;
-            if (null != tmp3) {
-              applicationCommandSection = tmp7(7521).getApplicationCommandSection(tmp3);
-              const tmp7Result = tmp7(7521);
+            if (null != id) {
+              applicationCommandSection = ApplicationCommandUtils.getApplicationCommandSection(id);
+              const tmp7Result = ApplicationCommandUtils;
             }
             obj.section = applicationCommandSection;
-            obj.location = tmp7(7523).ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
+            obj.location = ApplicationCommandTypes.ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
             applicationCommandManager.setCommand(obj);
           }
         }
+        const tmpResult = ActionSheetActionCreatorsDefault;
       };
       const result = require("MarkupReactCommandRule").handleTapCommandMention(obj);
     },

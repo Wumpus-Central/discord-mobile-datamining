@@ -13,7 +13,7 @@ const prototype = function SignalHelpers() {
 prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredentials(credentials, id) {
   closure_0 = credentials;
   closure_1 = id;
-  return (async (arg0, value) => {
+  return (async () => {
     if (credentials === 2) {
       credentials = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -70,7 +70,7 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
 };
 prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) {
   closure_0 = user;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -135,7 +135,7 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) 
 };
 prototype["signalUnknownCredential"] = function signalUnknownCredential(credential) {
   closure_0 = credential;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -4,6 +4,8 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import TableRow from "TableRow" /* 5605 */;
 import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5621 */;
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6998 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
@@ -63,8 +65,8 @@ export default noop.memo(() => {
       obj1 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6.text, button: obj6.accessibilityLabel } = bannerText);
       obj1.onPress = callback;
-      obj.trailing = React7(tmp2(4975).Button, obj1);
-      tmp14 = React7(tmp2(5605).TableRow, obj);
+      obj.trailing = React7(components_Button_Button.Button, obj1);
+      tmp14 = React7(TableRow.TableRow, obj);
     }
     items2[1] = tmp14;
     obj.children = items2;

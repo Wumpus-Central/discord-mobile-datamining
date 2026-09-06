@@ -6,6 +6,12 @@ import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PremiumUtils from "PremiumUtils" /* 4218 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import Card from "Card" /* 5607 */;
+import _modDef8068 from "module_8068" /* 8068 */;
+import _modDef9385 from "module_9385" /* 9385 */;
+import _modDef10715 from "module_10715" /* 10715 */;
+import _modDef10716 from "module_10716" /* 10716 */;
+import _modDef13565 from "module_13565" /* 13565 */;
+import _modDef13566 from "module_13566" /* 13566 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,18 +39,18 @@ export default function _default(premiumType) {
   obj.accessibilityLabel = obj2.getPremiumTypeDisplayName(premiumType);
   if (PremiumTypes.TIER_0 === premiumType) {
     let textLogoTier2 = tmp.textLogoTier0;
-  } else if (tmp10.TIER_1 === premiumType) {
+  } else if (PremiumTypes.TIER_1 === premiumType) {
     textLogoTier2 = tmp.textLogoTier1;
-  } else if (tmp10.TIER_2 === premiumType) {
+  } else if (PremiumTypes.TIER_2 === premiumType) {
     textLogoTier2 = tmp.textLogoTier2;
   }
   obj.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = tmp5(13565);
-  } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result = tmp5(13566);
-  } else if (tmp10.TIER_2 === premiumType) {
-    tmp5Result = tmp5(8068);
+    let tmp5Result = _modDef13565;
+  } else if (PremiumTypes.TIER_1 === premiumType) {
+    tmp5Result = _modDef13566;
+  } else if (PremiumTypes.TIER_2 === premiumType) {
+    tmp5Result = _modDef8068;
   }
   obj.source = tmp5Result;
   obj.children = React5(React4, obj);
@@ -52,19 +58,19 @@ export default function _default(premiumType) {
   const items1 = [tmp.wumpusLogo, ];
   if (PremiumTypes.TIER_0 === premiumType) {
     let wumpusLogoTier2 = tmp.wumpusLogoTier0;
-  } else if (tmp10.TIER_1 === premiumType) {
+  } else if (PremiumTypes.TIER_1 === premiumType) {
     wumpusLogoTier2 = tmp.wumpusLogoTier1;
-  } else if (tmp10.TIER_2 === premiumType) {
+  } else if (PremiumTypes.TIER_2 === premiumType) {
     wumpusLogoTier2 = tmp.wumpusLogoTier2;
   }
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp5Result = tmp5(9385);
-  } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result = tmp5(10715);
-  } else if (tmp10.TIER_2 === premiumType) {
-    tmp5Result = tmp5(10716);
+    tmp5Result = _modDef9385;
+  } else if (PremiumTypes.TIER_1 === premiumType) {
+    tmp5Result = _modDef10715;
+  } else if (PremiumTypes.TIER_2 === premiumType) {
+    tmp5Result = _modDef10716;
   }
   const obj1 = { children: null };
   obj.source = tmp5Result;

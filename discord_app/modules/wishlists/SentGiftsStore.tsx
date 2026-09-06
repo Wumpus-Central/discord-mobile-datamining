@@ -63,6 +63,7 @@ prototype["cleanupExpiredGifts"] = function cleanupExpiredGifts() {
     }
     continue;
   }
+  tmp5 = entries[Symbol.iterator]();
 };
 SentGiftsStore.displayName = "SentGiftsStore";
 SentGiftsStore.persistKey = "SentGiftsStore";

@@ -91,11 +91,11 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       }
       const name = application.name;
       const diff = bound - 32;
-      const sum = 40 + tmp11 / tmp12 + 12 + 16;
+      const sum = 40 + tmp11 / c14 + 12 + 16;
       let obj = { accessibilityRole: "button", accessibilityLabel: null, androidRippleConfig: null, onPress: null, children: null };
-      const intl = tmp4(tmp3[21]).intl;
+      const intl = channelId(tmp3[21]).intl;
       obj = { applicationName: name };
-      obj.accessibilityLabel = intl.formatToPlainString(tmp4(tmp3[21]).t.Yw5Hr2, obj);
+      obj.accessibilityLabel = intl.formatToPlainString(channelId(tmp3[21]).t.Yw5Hr2, obj);
       obj.androidRippleConfig = androidRippleConfig;
       obj.onPress = function onPress() {
         handlePressJoinActivityDefault({ embeddedActivityJoinability, handleCanJoin });
@@ -113,26 +113,26 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       const items5 = [closure_10(stateFromStores, obj4), , ];
       const obj5 = { style: tmp.centerGroup, children: null };
       const obj6 = { style: tmp.applicationName, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-      obj5.children = closure_10(tmp4(tmp3[22]).Text, obj6);
+      obj5.children = closure_10(channelId(tmp3[22]).Text, obj6);
       items5[1] = closure_10(guildId, obj5);
       const items6 = [tmp.overflow, ];
-      const result = diff / tmp12;
+      const result = diff / c14;
       const obj7 = { offsetAmount: -6, overflowStyle: null, overflowComponent: null, items: null, max: 5, renderItem: null };
       items6[1] = onItemPress.isActionSheet ? tmp.overflowBackgroundColorActionSheet : tmp.overflowBackgroundColor;
       obj7.overflowStyle = items6;
-      obj7.overflowComponent = tmp4(tmp3[9]).OverflowText;
+      obj7.overflowComponent = channelId(tmp3[9]).OverflowText;
       obj7.items = found;
       obj7.renderItem = function renderItem(user, arg1) {
         let obj = { user, guildId, size: XSMALL, cutout: null };
         let tmp5;
         if (!arg1) {
-          obj = { radius: tmp2(1178).AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: tmp2(1178).CutoutDirection.RIGHT, inset: -6 };
+          obj = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
           tmp5 = obj;
         }
         obj.cutout = tmp5;
         return closure_2_10(native.CutoutableAvatarImage, obj);
       };
-      items5[2] = closure_10(tmp4(tmp3[9]).SummarizedIconRow, obj7);
+      items5[2] = closure_10(channelId(tmp3[9]).SummarizedIconRow, obj7);
       obj3.children = items5;
       const items7 = [closure_11(guildId, obj3), ];
       const obj8 = { style: null, children: null };
@@ -146,7 +146,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       const items9 = [closure_10(tmp2(tmp3[23]), obj10), ];
       const obj11 = { style: tmp.joinButtonContainer, children: null };
       let tmp16Result = null;
-      if (embeddedActivityJoinability === tmp4(tmp3[16]).EmbeddedActivityJoinability.CAN_JOIN) {
+      if (embeddedActivityJoinability === channelId(tmp3[16]).EmbeddedActivityJoinability.CAN_JOIN) {
         const obj12 = {
           onPress() {
                   handlePressJoinActivityDefault({ embeddedActivityJoinability, handleCanJoin });
@@ -159,9 +159,9 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
           shrink: true
         };
         ({ joinButton: obj20.style, joinButtonPill: obj20.pillStyle } = tmp);
-        const intl2 = tmp4(tmp3[21]).intl;
-        obj12.text = intl2.string(tmp4(tmp3[21]).t["4i2vj+"]);
-        tmp16Result = tmp16(tmp4(tmp3[24]).BaseTextButton, obj12);
+        const intl2 = channelId(tmp3[21]).intl;
+        obj12.text = intl2.string(channelId(tmp3[21]).t["4i2vj+"]);
+        tmp16Result = closure_10(channelId(tmp3[24]).BaseTextButton, obj12);
       }
       obj11.children = tmp16Result;
       items9[1] = closure_10(guildId, obj11);
@@ -169,7 +169,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       items7[1] = closure_11(guildId, obj8);
       obj1.children = items7;
       obj.children = closure_11(guildId, obj1);
-      return closure_10(tmp4(tmp3[20]).PressableOpacity, obj);
+      return closure_10(channelId(tmp3[20]).PressableOpacity, obj);
     }
   }
   return null;

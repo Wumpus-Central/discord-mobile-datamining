@@ -85,21 +85,22 @@ export default function ParentalConsentWarningBanner(children) {
   const items1 = [daysRemaining];
   const sum = tmp2.top + closure_14;
   const items2 = [tmp.link];
-  const callback = obj7.useCallback(() => {
+  const callback = noop.useCallback(() => {
     let obj = { days_remaining: daysRemaining };
     obj.track(constants.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, obj);
     const tab = FamilyCenterActionCreatorsDefault.selectTab(FamilyCenterSubPages.REQUESTS);
     obj = { screen: constants2.FAMILY_CENTER };
     openUserSettings.openUserSettings(obj);
   }, items1);
-  const callback1 = obj7.useCallback((children, arg1) => closure_2_11(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: link.link, children }, arg1), items2);
+  const callback1 = noop.useCallback((children, arg1) => closure_2_11(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: link.link, children }, arg1), items2);
   const items3 = [StyleSheet.absoluteFill, ];
   let num2 = 0;
   if (isOnMainSurface) {
     num2 = closure_14;
   }
   items3[1] = { marginTop: num2 };
-  children = [closure_11(View, { style: items3, children: children.children }), ];
+  children = [, ];
+  children[0] = closure_11(View, { style: items3, children: children.children });
   let tmp18 = null;
   if (isOnMainSurface) {
     tmp18 = null;
@@ -111,7 +112,7 @@ export default function ParentalConsentWarningBanner(children) {
       obj.style = items5;
       obj1 = { pointerEvents: "none", style: StyleSheet.absoluteFill, colors: memo, locations, start: null, end: null };
       ({ START: obj10.start, END: obj10.end } = closure_10);
-      const items6 = [tmp15(Gfqlpa(obj[18]), obj1), ];
+      const items6 = [closure_11(Gfqlpa(obj[18]), obj1), ];
       obj2 = { accessibilityRole: "button", accessibilityHint: null, onPress: null, style: null, children: null };
       const intl2 = intl(obj[19]).intl;
       obj2.accessibilityHint = intl2.string(Gfqlpa(obj[20]).O2HKdA);
@@ -132,12 +133,12 @@ export default function ParentalConsentWarningBanner(children) {
         formatResult = intl3.format(Gfqlpa(obj[20]).ZBK5mM, obj5);
       }
       obj4.children = formatResult;
-      obj4 = tmp15(intl(obj[17]).Text, obj4);
+      obj4 = closure_11(intl(obj[17]).Text, obj4);
       obj2.children = obj4;
-      obj2 = tmp15(closure_4, obj2);
+      obj2 = closure_11(closure_4, obj2);
       items6[1] = obj2;
       obj.children = items6;
-      tmp13(tmp16, obj);
+      closure_12(View, obj);
     }
   }
   children[1] = tmp18;

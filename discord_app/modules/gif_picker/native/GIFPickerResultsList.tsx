@@ -51,7 +51,7 @@ export default function GIFPickerResultsList(columnWidth) {
     }
     return src;
   }, []);
-  const tmp = closure_6();
+  let tmp = closure_6();
   [tmp6, c0] = callback(noop.useState(() => new Set()), 2);
   noop = tmp6;
   const items1 = [tmp6, selectedGifSrc];
@@ -64,6 +64,7 @@ export default function GIFPickerResultsList(columnWidth) {
         if (tmp) {
           set.add(index);
         }
+        tmp = null !== index && item.isViewable;
       });
       return set;
     });
@@ -86,10 +87,10 @@ export default function GIFPickerResultsList(columnWidth) {
           tmp8 = item.src === extraData.selectedGifSrc;
         }
         obj.selected = tmp8;
-        let tmp15Result = tmp15(GIFPickerItemViewDefault, obj);
+        let tmp15Result = jsx(GIFPickerItemViewDefault, { height, index, item, onPressGIF, selected: null });
       } else {
         obj = { height };
-        tmp15Result = tmp15(GIFPickerItemView.GIFPickerItemPlaceholder, obj);
+        tmp15Result = jsx(GIFPickerItemView.GIFPickerItemPlaceholder, { height });
       }
       return tmp15Result;
     }

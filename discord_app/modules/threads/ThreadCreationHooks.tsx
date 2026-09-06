@@ -3,6 +3,7 @@
 // Module 9305 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import ThreadHooks from "ThreadHooks" /* 7269 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7274 */;
 import MessageParserDefault from "MessageParser" /* 7682 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -80,10 +81,9 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     if (str3 == null) {
       str3 = "";
     }
-    const tmp17 = importDefault;
     const str4 = MessageParserDefault.unparse(str3, stateFromStores.id, true);
-    const tmp17Result = tmp17(7274);
-    let str7 = tmp17(7274)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
+    const tmp17Result = sanitizeThreadNameDefault;
+    let str7 = sanitizeThreadNameDefault(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
     const items = [];
     const match = str7.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
     while (null != match) {
@@ -525,7 +525,7 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                           if (closure_1_3) {
                             let PRIVATE_THREAD = constants.PRIVATE_THREAD;
                           } else {
-                            PRIVATE_THREAD = tmp3.type === constants.GUILD_ANNOUNCEMENT ? tmp9.ANNOUNCEMENT_THREAD : tmp9.PUBLIC_THREAD;
+                            PRIVATE_THREAD = tmp3.type === constants.GUILD_ANNOUNCEMENT ? constants.ANNOUNCEMENT_THREAD : constants.PUBLIC_THREAD;
                           }
                           body.type = PRIVATE_THREAD;
                           body.auto_archive_duration = auto_archive_duration;
@@ -543,7 +543,7 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj2 = { value, done: true };
+            let obj2 = { value, done: true };
             return obj2;
           } else {
             closure_132_8 = value;
@@ -584,6 +584,7 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                 closure_1_1(7456);
                 obj = { location: constants.THREAD_CREATION };
                 sendStickersResult = obj.sendMessage(id.id, closure_1_1(7682).parse(id, arg1), undefined, obj);
+                const obj2 = closure_1_1(7682);
               })(closure_132_8, closure_132_0, closure_132_1, closure_132_2, c7);
               const obj10 = parentMessageId(threadSettings[19]);
             }
@@ -611,11 +612,11 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
     return applyArgumentsResult;
   }, items);
 };
-export const createThread = function createThread(arg0, name, PUBLIC_THREAD, autoArchiveDuration, _location) {
-  const id = arg0;
+export const createThread = function createThread(channel2, name, PUBLIC_THREAD, autoArchiveDuration, _location) {
+  const id = channel2;
   const type = PUBLIC_THREAD;
   const auto_archive_duration = autoArchiveDuration;
-  return createThread_(arg0, [], undefined, () => {
+  return createThread_(channel2, [], undefined, () => {
     const HTTP = HTTPUtils.HTTP;
     const request = { url: collapsedCategories.CHANNEL_THREADS(id.id), body: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     const body = { name, type, auto_archive_duration, location: _location };
@@ -722,11 +723,11 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
                 obj1.message.activity = tmp52;
               }
               if (null != applied_tags) {
-                if (arr2.length > 0) {
+                if (applied_tags.length > 0) {
                   applicationId = 1;
                   voiceChatEnabled = 3;
                   c9 = 1;
-                  let obj3 = { value: tmp3(arr2), done: false };
+                  let obj3 = { value: tmp3(applied_tags), done: false };
                   return obj3;
                 }
               }

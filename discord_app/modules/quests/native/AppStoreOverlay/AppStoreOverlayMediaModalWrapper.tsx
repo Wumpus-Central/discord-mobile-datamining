@@ -2,6 +2,8 @@
 
 // Module 11510 (AppStoreOverlayMediaModalWrapper)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 8288 */;
+import MediaModalDefault from "MediaModal" /* 8289 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4251 */;
 
@@ -12,12 +14,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
 
 export default function AppStoreOverlayMediaModalWrapper(onCloseCallback) {
-  onCloseCallback = onCloseCallback.onCloseCallback;
   const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
   const effect = noop.useEffect(() => () => {
     const result = onCloseCallback(closure_1_2[4]).clearMediaModalFooterAction();
   }, []);
-  const items = [onCloseCallback];
+  const items = [onCloseCallback.onCloseCallback];
   const callback = noop.useCallback(() => {
     if (onCloseCallback != null) {
       tmp();
@@ -26,16 +27,16 @@ export default function AppStoreOverlayMediaModalWrapper(onCloseCallback) {
   }, items);
   if (ActionSheetStore.isOpen()) {
     let obj = {};
-    let tmp5Result = tmp5(8288);
+    let tmp5Result = MediaModalSheetWrapperDefault;
     const merged1 = Object.assign(merged);
     obj.onCloseCallback = onCloseCallback;
-    let tmp4Result = tmp4(tmp5Result, obj);
+    let tmp4Result = <tmp5Result />;
   } else {
     obj = {};
-    tmp5Result = tmp5(8289);
+    tmp5Result = MediaModalDefault;
     const merged2 = Object.assign(merged);
     obj.onClose = callback;
-    tmp4Result = tmp4(tmp5Result, obj);
+    tmp4Result = <tmp5Result />;
   }
   return tmp4Result;
 };

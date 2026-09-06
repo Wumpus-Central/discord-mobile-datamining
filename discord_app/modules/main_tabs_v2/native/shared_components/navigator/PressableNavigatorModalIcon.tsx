@@ -2,6 +2,7 @@
 
 // Module 7870 (PressableNavigatorModalIcon)
 import jsxProd from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7866 */;
 import size from "module_2" /* 2 */;
@@ -19,14 +20,14 @@ export default function PressableNavigatorModalIcon(onPress) {
     str = "back";
   }
   let obj = { source: importDefault(tmp6 ? 7867 : 7871), onPress: goBack, accessibilityLabel: null };
-  const intl = tmp5(1114).intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = tmp5(1114).t;
+  const t = util.t;
   if ("back" === str) {
     let stringResult = string(t["13/7kX"]);
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: tmp(HeaderShared.HeaderIconButton, obj), accessibilityLabel: stringResult };
-  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: tmp(HeaderShared.HeaderIconButton, obj), accessibilityLabel: stringResult });
+  obj = { isModal: true, children: jsx(HeaderShared.HeaderIconButton, { source: importDefault(tmp6 ? 7867 : 7871), onPress: goBack, accessibilityLabel: null }), accessibilityLabel: stringResult };
+  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: jsx(HeaderShared.HeaderIconButton, { source: importDefault(tmp6 ? 7867 : 7871), onPress: goBack, accessibilityLabel: null }), accessibilityLabel: stringResult });
 };

@@ -492,6 +492,17 @@ prototype["collectAggregationStats"] = function collectAggregationStats(parseInb
     }
     continue;
   }
+  someResult = closure_9.some((item) => {
+    let tmp2 = null != tmp;
+    if (tmp2) {
+      let num = previousAggregationStats[item];
+      if (num == null) {
+        num = 0;
+      }
+      tmp2 = num > tmp;
+    }
+    return tmp2;
+  });
 };
 prototype["setVideoStopped"] = function setVideoStopped(arg0, SenderStopped) {
   const self = this;

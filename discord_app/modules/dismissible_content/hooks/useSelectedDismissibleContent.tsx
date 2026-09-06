@@ -9,7 +9,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx");
 
-export const useSelectedDismissibleContent = function useSelectedDismissibleContent(items, APP_LAUNCHER_ONBOARDING, bypassAutoDismiss) {
+export const useSelectedDismissibleContent = function useSelectedDismissibleContent(items, APP_LAUNCHER_ONBOARDING) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -20,7 +20,7 @@ export const useSelectedDismissibleContent = function useSelectedDismissibleCont
   items = [tmp2, tmp3];
   return items;
 };
-export const useSelectedSingleUseGuildDismissibleContent = function useSelectedSingleUseGuildDismissibleContent(items4, id, CHANNEL_NOTICES, flag) {
+export const useSelectedSingleUseGuildDismissibleContent = function useSelectedSingleUseGuildDismissibleContent(items4, id, CHANNEL_NOTICES) {
   if (flag === undefined) {
     flag = false;
   }
@@ -30,7 +30,7 @@ export const useSelectedSingleUseGuildDismissibleContent = function useSelectedS
   const items = [tmp2, tmp3];
   return items;
 };
-export const useSelectedVersionedDismissibleContent = function useSelectedVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName, bypassAutoDismiss) {
+export const useSelectedVersionedDismissibleContent = function useSelectedVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -41,7 +41,7 @@ export const useSelectedVersionedDismissibleContent = function useSelectedVersio
   const items = [tmp2, tmp3];
   return items;
 };
-export const useSelectedTimeRecurringDismissibleContent = function useSelectedTimeRecurringDismissibleContent(prop, timeRecurringConfig, groupName, bypassAutoDismiss) {
+export const useSelectedTimeRecurringDismissibleContent = function useSelectedTimeRecurringDismissibleContent(prop, timeRecurringConfig, groupName) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -52,7 +52,7 @@ export const useSelectedTimeRecurringDismissibleContent = function useSelectedTi
   const items = [tmp2, tmp3];
   return items;
 };
-export const useSelectedSnowflakeBoundDismissibleContent = function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName, bypassAutoDismiss) {
+export const useSelectedSnowflakeBoundDismissibleContent = function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -63,7 +63,7 @@ export const useSelectedSnowflakeBoundDismissibleContent = function useSelectedS
   const items = [tmp2, tmp3];
   return items;
 };
-export const useSelectedSnowflakeBoundGuildDismissibleContent = function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSnowflakeId, GUILD_HEADER_TOOLTIPS, flag) {
+export const useSelectedSnowflakeBoundGuildDismissibleContent = function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSnowflakeId, GUILD_HEADER_TOOLTIPS) {
   if (flag === undefined) {
     flag = false;
   }
@@ -73,7 +73,7 @@ export const useSelectedSnowflakeBoundGuildDismissibleContent = function useSele
   const items = [tmp2, tmp3];
   return items;
 };
-export const useSelectedTimeRecurringSnowflakeBoundDismissibleContent = function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(contentType, newSnowflakeId, timeRecurringConfig, groupName, bypassAutoDismiss) {
+export const useSelectedTimeRecurringSnowflakeBoundDismissibleContent = function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(contentType, newSnowflakeId, timeRecurringConfig, groupName) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;

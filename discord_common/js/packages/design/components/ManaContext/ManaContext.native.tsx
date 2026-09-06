@@ -16,5 +16,5 @@ export const ManaContextProvider = function ManaContextProvider(children) {
   if (value == null) {
     value = obj;
   }
-  return <context.Provider value={value}>{arg0.children}</context.Provider>;
+  return <context.Provider value={value}>{children.children}</context.Provider>;
 };

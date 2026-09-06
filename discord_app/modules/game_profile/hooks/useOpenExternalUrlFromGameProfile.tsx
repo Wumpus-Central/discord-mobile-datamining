@@ -11,7 +11,7 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
   let hostname = arg0;
   c3 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -115,11 +115,11 @@ const re8 = /^\/games\/store\/title\/([^/]+)/;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenExternalUrlFromGameProfile.tsx");
 
-export default function useOpenExternalUrlFromGameProfile(arg0) {
+export default function useOpenExternalUrlFromGameProfile(openURL) {
   const tmp = _slicedToArray(noop.useState(false), 2);
   const first = tmp[0];
   closure_2 = tmp[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -218,7 +218,7 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
       }
     }
   });
-  const items = [arg0, first];
+  const items = [openURL, first];
   return noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;

@@ -24,7 +24,6 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   let items = [UserApplicationIdentityStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserApplicationIdentityStore.getUserIdentityByApplication(closure_0, closure_1));
   const obj2 = require("initialize");
-  const tmp4 = UserApplicationIdentityStore;
   const items1 = [LocaleStore];
   const items2 = [arg1];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => locale.locale);
@@ -46,14 +45,14 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
     return resolvedValuesFromUserApplicationIdentityProfile.resolvedValuesFromUserApplicationIdentityProfile(profile);
   }, items3);
   let tmpResult = tmp(tmp2[6]);
-  const items4 = [tmp4];
+  const items4 = [UserApplicationIdentityStore];
   const stateFromStores2 = tmpResult.useStateFromStores(items4, () => UserApplicationIdentityStore.getFetchState(closure_0) !== FetchState.FETCHED);
   tmpResult = tmp(tmp2[6]);
   const items5 = [ApplicationAssetsV2Store];
   stateFromStores3 = tmpResult.useStateFromStores(items5, () => ApplicationAssetsV2Store.getAssets(closure_1));
   const items6 = [stateFromStores3];
   const items7 = [arg1];
-  const memo2 = obj4.useMemo(() => {
+  const memo2 = noop.useMemo(() => {
     let obj = stateFromStores3;
     if (stateFromStores3 == null) {
       obj = {};
@@ -63,7 +62,7 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   }, items6);
   obj = { locale: stateFromStores1, surfaceConfigs: null, isLoading: null, hasIdentity: null, resolutionContext: null };
   let surfaces;
-  const callback = obj4.useCallback((metadata) => ApplicationAssetV2Utils.getApplicationAssetUrl(closure_1, metadata, metadata.metadata.width), items7);
+  const callback = noop.useCallback((metadata) => ApplicationAssetV2Utils.getApplicationAssetUrl(closure_1, metadata, metadata.metadata.width), items7);
   if (first != null) {
     surfaces = first.surfaces;
   }

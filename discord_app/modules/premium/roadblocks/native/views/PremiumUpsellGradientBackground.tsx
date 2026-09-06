@@ -20,7 +20,6 @@ const result = size.fileFinishedImporting("modules/premium/roadblocks/native/vie
 export const PremiumUpsellGradientBackground = function PremiumUpsellGradientBackground(useTier0UpsellContent) {
   const obj = { style: closure_5().gradient, start: null, end: null, colors: null };
   const tmp = closure_5();
-  const tmp2 = jsx;
   obj.start = ConstantsIOS.HorizontalGradient.START;
   obj.end = ConstantsIOS.HorizontalGradient.END;
   if (true === useTier0UpsellContent.useTier0UpsellContent) {
@@ -29,5 +28,5 @@ export const PremiumUpsellGradientBackground = function PremiumUpsellGradientBac
     PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_2_TRI_COLOR;
   }
   obj.colors = PREMIUM_TIER_2_TRI_COLOR;
-  return tmp2(LinearGradientDefault, obj);
+  return jsx(LinearGradientDefault, { style: closure_5().gradient, start: null, end: null, colors: null });
 };

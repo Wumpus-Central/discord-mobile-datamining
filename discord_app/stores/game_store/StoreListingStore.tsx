@@ -28,6 +28,7 @@ function addRegularStoreListing(id) {
     dependencyMap[id] = fromServer;
     deleteResult = set.delete(deleteResult.sku.id);
   }
+  tmp2 = null != dependencyMap[id] && !dependencyMap[id].isSlimDirectoryVersion() && fromServer.isSlimDirectoryVersion();
 }
 function handleUserSettingsStoreUpdate() {
   if (locale === LocaleStore.locale) {
@@ -133,6 +134,7 @@ const storeListingStore = new StoreListingStore(DispatcherDefault, {
       let tmp4 = addRegularStoreListing(tmp2);
       continue;
     }
+    tmp = arg0.storeListings[Symbol.iterator]();
   },
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetch(arg0) {
     ({ storeListing, channelId } = arg0);

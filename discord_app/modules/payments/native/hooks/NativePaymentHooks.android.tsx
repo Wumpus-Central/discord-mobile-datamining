@@ -29,7 +29,7 @@ function useGoogleSkuIds(arg0, arg1) {
   _slicedToArray = fetchError[1];
   const items1 = [arg1, isFetchingGoogleSkus, arg0];
   const effect = noop.useEffect(() => {
-    closure_0 = async function _fetch(arg0, value) {
+    closure_0 = async function _fetch() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

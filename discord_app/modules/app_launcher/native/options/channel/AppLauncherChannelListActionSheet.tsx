@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import TextIcon3 from "TextIcon" /* 5080 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5442 */;
 import TableRow from "TableRow" /* 5605 */;
@@ -91,7 +92,7 @@ export default function AppLauncherChannelListActionSheet(channel) {
   };
   const items1 = [ref(require("AppLauncherList").AppLauncherListSearchBar, obj), ];
   if (0 === first1.length) {
-    let tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherListEmptyState, {});
+    let tmp9Result = tmp9(require("AppLauncherList").AppLauncherListEmptyState, {});
   } else {
     obj = {
       ref,
@@ -110,7 +111,7 @@ export default function AppLauncherChannelListActionSheet(channel) {
           });
         }
     };
-    tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherList, obj);
+    tmp9Result = tmp9(require("AppLauncherList").AppLauncherList, obj);
   }
   items1[1] = tmp9Result;
   obj.children = items1;

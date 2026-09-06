@@ -85,7 +85,7 @@ function NativeCheckoutStoreProvider(children) {
       obj.discardDraftOrder(obj);
     }
   }, items1);
-  return <contextMetadata value={value}><redux.Provider value={value}>{arg0.children}</redux.Provider></contextMetadata>;
+  return <contextMetadata value={value}><redux.Provider value={value}>{children.children}</redux.Provider></contextMetadata>;
 }
 const View = fn(17).View;
 const NativeCheckoutStore = fn(7424);
@@ -148,7 +148,8 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
       country = country.country;
     }
     obj2.countryCode = country;
-    closure_129_2 = yield closure_0(isGift[11]).createOrder(obj2);
+    yield closure_0(isGift[11]).createOrder(obj2);
+    closure_129_2 = value;
     _undefined(closure_129_2);
     if (null != v2) {
       v2(closure_129_2);
@@ -184,11 +185,11 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
       closure_0(isGift[12]);
     } else if (arg0 === 1) {
       c5 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       c3 = 0;
     }
-    return arg1;
+    return value;
   });
   let items1 = [callback, onOrderRetryCancellation];
   callback1 = obj.useCallback(function() {
@@ -212,7 +213,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
           if (null != defaultPlans) {
             const push = items.push;
             const items1 = [];
-            HermesBuiltin.arraySpread(arr2.map((skuId) => ({ sku_id: skuId.skuId, subscription_plan_id: skuId.subscriptionPlanId, quantity: skuId.quantity, purchase_type: constants.SUBSCRIPTION })), 0);
+            HermesBuiltin.arraySpread(defaultPlans.map((skuId) => ({ sku_id: skuId.skuId, subscription_plan_id: skuId.subscriptionPlanId, quantity: skuId.quantity, purchase_type: constants.SUBSCRIPTION })), 0);
             HermesBuiltin.apply(items1, items);
             let obj = { subscription_preview: null };
             obj = { currency: null, country_code: null };
@@ -224,22 +225,21 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
             }
             let tmp15 = null != initialSubscriptionFacet;
             if (tmp15) {
-              tmp15 = null != tmp14.subscription_preview.subscription_trial_id;
+              tmp15 = null != initialSubscriptionFacet.subscription_preview.subscription_trial_id;
             }
             let tmp5 = obj;
             if (tmp15) {
-              obj.subscription_preview.subscription_trial_id = tmp14.subscription_preview.subscription_trial_id;
+              obj.subscription_preview.subscription_trial_id = initialSubscriptionFacet.subscription_preview.subscription_trial_id;
               tmp5 = obj;
             }
-          } else if (null != tmp3) {
-            obj = { sku_id: tmp3, quantity: 1, purchase_type: ItemPurchaseType.ONE_TIME };
+          } else if (null != sku_id) {
+            obj = { sku_id, quantity: 1, purchase_type: ItemPurchaseType.ONE_TIME };
             items.push(obj);
           }
           tmp.current = true;
           tmp = callback1;
           const obj1 = { orderLineItems: items, subscriptionFacet: tmp5 };
           callback1(obj1);
-          arr2 = defaultPlans;
         }
       }
     }

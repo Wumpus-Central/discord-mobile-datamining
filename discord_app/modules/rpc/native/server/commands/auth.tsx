@@ -23,7 +23,7 @@ export default AuthCommandsFactoryDefault((arg0) => {
       let obj = importDefault;
       value = undefined;
       if (importDefault != null) {
-        value = obj.get(tmp);
+        value = obj.get(integrationType);
       }
       tmp2 = value;
     }

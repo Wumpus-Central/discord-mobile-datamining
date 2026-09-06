@@ -5,6 +5,7 @@ import ToastUtils from "ToastUtils" /* 4258 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11591 */;
 import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11592 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11594 */;
 import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11595 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -25,7 +26,6 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       }
       let obj = { memberCount: num + 1, recipientLimit: getGroupDMRecipientLimitDefault({ useNitroCapExperiment: true }), audience: null, showUpsell: null };
       const obj3 = GroupDMNitroUpsellModel;
-      const tmp4 = importDefault;
       let premiumType;
       if (currentUser != null) {
         premiumType = currentUser.premiumType;
@@ -40,7 +40,7 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       obj.audience = GroupDMNitroUpsellModel.getGroupDMNitroAudience(premiumType, flag);
       const tmp2Result = GroupDMNitroUpsellModel;
       obj = { location: CHANNEL_TEXT_AREA };
-      obj.showUpsell = tmp4(11594).getConfig(obj).enabled;
+      obj.showUpsell = GroupDMNitroCapExperimentDefault.getConfig(obj).enabled;
       return obj3.getGroupDMAddMembersEntryAction(obj);
     }
   }

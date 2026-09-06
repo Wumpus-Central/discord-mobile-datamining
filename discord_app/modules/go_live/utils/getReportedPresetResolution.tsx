@@ -9,10 +9,10 @@ const StreamSettingsConstants = fn(4607);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/getReportedPresetResolution.tsx");
 
-export default function getReportedPresetResolution(arg0, arg1, arg2, arg3) {
+export default function getReportedPresetResolution(RTCConnection, guildId, arg2, arg3) {
   if (arg2 === RESOLUTION_1080.RESOLUTION_1080) {
     if (arg3 === FPS_30.FPS_30) {
-      const tmp8Result = getFrontierTuningConfigIfEligibleDefault(arg0, UserStore.getCurrentUser(), arg1);
+      const tmp8Result = getFrontierTuningConfigIfEligibleDefault(RTCConnection, UserStore.getCurrentUser(), guildId);
       let maskReportedQuality;
       if (tmp8Result != null) {
         maskReportedQuality = tmp8Result.maskReportedQuality;

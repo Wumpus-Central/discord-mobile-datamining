@@ -64,7 +64,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
   const tmp7 = _slicedToArray(ref.useState(bound), 2);
   value = tmp7[0];
   closure_7 = tmp7[1];
-  let tmp9 = _slicedToArray(ref.useState(width), 2);
+  const tmp9 = _slicedToArray(ref.useState(width), 2);
   const first1 = tmp9[0];
   constants = tmp9[1];
   let obj1 = useIsScreenReaderEnabled;
@@ -132,7 +132,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
       return obj;
     }
   }
-  obj = { interpolate: tmp11(4296).interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: tmp11(4296).Extrapolation, inactiveOpacity: num };
+  obj = { interpolate: ReanimatedRexport.interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: ReanimatedRexport.Extrapolation, inactiveOpacity: num };
   V.__closure = obj;
   V.__workletHash = 1786335394860;
   V.__initData = __initData;
@@ -197,8 +197,8 @@ export default function GuildSettingsRoleTemplate(arg0) {
         if (null != contentPrefaceResult) {
           tmp3Result = null;
           if ("" !== contentPrefaceResult) {
-            const obj3 = { style: tmp7.templateSubtitle, variant: "text-sm/medium", children: item.contentPreface() };
-            tmp3Result = tmp3(tmp10(4556).Text, obj3);
+            let obj3 = { style: closure_3.templateSubtitle, variant: "text-sm/medium", children: item.contentPreface() };
+            tmp3Result = closure_1_14(require("Text/Text").Text, obj3);
           }
         }
         const obj4 = { children: null };
@@ -206,7 +206,6 @@ export default function GuildSettingsRoleTemplate(arg0) {
         const obj5 = { accessibilityRole: "list", children: null };
         const obj1 = { style: closure_3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
         const tmp6 = !item.index !== first && undefined;
-        const tmp9 = first;
         obj5.children = item.contents().map((children, index) => {
           let obj = { style: closure_3.templateContent, children: null };
           obj = { source: _modDef11564, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -220,10 +219,10 @@ export default function GuildSettingsRoleTemplate(arg0) {
         obj2.children = items1;
         items[2] = closure_1_15(ref1, obj2);
         obj4.children = items;
-        const items2 = [closure_1_15(tmp9, obj4), ];
+        const items2 = [closure_1_15(first, obj4), ];
         const obj6 = { style: closure_3.templateButton, children: null };
         const obj7 = { text: null, onPress: null };
-        const intl = tmp10(1114).intl;
+        const intl = require("util").intl;
         obj7.text = intl.string(require("util").t.mQS8Is);
         obj7.onPress = function onPress() {
           const communityPermissions = item.communityPermissions;

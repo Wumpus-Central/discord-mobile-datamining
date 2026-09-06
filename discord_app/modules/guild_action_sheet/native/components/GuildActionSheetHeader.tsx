@@ -154,7 +154,6 @@ export default function GuildActionSheetHeader(guild) {
     ({ id: obj8.id, icon: obj8.icon } = stateFromStores1);
     obj3 = { style: tmp.avatar, source: tmp2(tmp3[26]).getGuildIconSource(obj2) };
     guildSplashSource = null;
-    const tmp13 = closure_10;
     const tmp2Result1 = tmp2(tmp3[26]);
     if (null != stateFromStores1.splash) {
       guildSplashSource = null;
@@ -168,7 +167,7 @@ export default function GuildActionSheetHeader(guild) {
       }
     }
     tmp17 = closure_10(closure_5, obj3);
-    tmp18 = tmp13;
+    tmp18 = closure_10;
     const tmp15 = closure_10(closure_5, obj3);
   }
   ({ description, name } = stateFromStores1);

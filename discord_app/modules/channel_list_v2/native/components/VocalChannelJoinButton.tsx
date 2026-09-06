@@ -32,7 +32,7 @@ let closure_11 = createStyles.createStyles((arg0, arg1) => {
     str = "rgba(0, 0, 0, 0.08)";
   }
   obj = { joinButton: obj, joinButtonContent: { width: "auto", alignItems: "center" }, joinButtonIconActive: null, joinButtonIconInactive: null, joinButtonText: null, borderColor: str };
-  obj = { tintColor: tmp(576).colors.WHITE };
+  obj = { tintColor: nativeDefault.colors.WHITE };
   obj.joinButtonIconActive = obj;
   obj.joinButtonIconInactive = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   const obj1 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -117,9 +117,9 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
       connectedUserLimitFormatted = intl2.string(VJlc0S);
     }
     obj1.children = connectedUserLimitFormatted;
-    obj.children = tmp17(tmp3(4556).Text, obj1);
-    obj.children = tmp17(closure_4, obj);
-    let tmp17Result = tmp17(closure_5, obj);
+    obj.children = jsx(tmp3(4556).Text, { style: null, color: "interactive-text-default", variant: "text-xs/semibold", lineClamp: 1, children: null });
+    obj.children = <closure_4 style={joinButtonText.joinButtonContent}>{null}</closure_4>;
+    let tmp17Result = <closure_5 style={joinButtonText.joinButtonContent}>{null}</closure_5>;
   } else if (tmp15) {
     obj2 = { text: connectedUserLimitFormatted, icon: null, size: "sm", variant: null, onPress: null, pointerEvents: "none", accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" };
     if (!noIcon) {
@@ -134,7 +134,7 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
           VoiceNormalIcon = tmp3(5101).VoiceNormalIcon;
         }
         obj3 = { size: "xs", style: items3 };
-        tmp17Result = tmp17(VoiceNormalIcon, obj3);
+        tmp17Result = <VoiceNormalIcon size="xs" style={items3} />;
       }
       joinButtonIconActive = joinButtonText.joinButtonIconActive;
     }
@@ -145,7 +145,7 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
     }
     obj2.variant = str2;
     obj2.onPress = onPress;
-    tmp17Result = tmp17(tmp18, obj2);
+    tmp17Result = <tmp18 text={connectedUserLimitFormatted} icon={null} size="sm" variant={null} onPress={null} pointerEvents="none" accessible={false} accessibilityElementsHidden importantForAccessibility="no" />;
   } else {
     const intl = tmp3(1114).intl;
     let str = intl.string;
@@ -158,4 +158,5 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
       formatted = str(toUpperCase.VJlc0S);
     }
   }
+  const tmp3Result1 = channel(12294);
 });

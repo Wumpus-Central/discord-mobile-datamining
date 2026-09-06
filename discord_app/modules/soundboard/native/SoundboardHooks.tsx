@@ -25,7 +25,7 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
   const items1 = [ThemeStore];
   const items2 = [stateFromStores, shouldFetch(504).useStateFromStores(items1, () => shouldFetch(dependencyMap[8]).isThemeDark(theme.theme)), shouldFetch];
   const effect = noop.useEffect(() => {
-    closure_0 = async function _fetchAndHydrateColors(arg0, value) {
+    closure_0 = async function _fetchAndHydrateColors() {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

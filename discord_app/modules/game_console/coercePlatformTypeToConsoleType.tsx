@@ -13,8 +13,8 @@ export const coercePlatformTypeToConsoleType = function coercePlatformTypeToCons
   if (PlatformTypes.XBOX === type) {
     return GameConsoleTypes.XBOX;
   } else {
-    if (tmp.PLAYSTATION !== type) {
-      if (tmp.PLAYSTATION_STAGING !== type) {
+    if (PlatformTypes.PLAYSTATION !== type) {
+      if (PlatformTypes.PLAYSTATION_STAGING !== type) {
         return null;
       }
     }

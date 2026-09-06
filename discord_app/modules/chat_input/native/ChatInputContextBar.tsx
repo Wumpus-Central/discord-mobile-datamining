@@ -323,7 +323,7 @@ function ChatInputEditBar(onCancelEditing) {
   }
   obj.hitSlop = tmp9;
   obj.onPress = onCancelEditing.onCancelEditing;
-  obj1 = { source: _modDef6940, size: tmp2(1178).Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  obj1 = { source: _modDef6940, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   obj.children = closure_1_12(native.Icon, obj1);
   const obj2 = { style: tmp.contextBarRow, children: null };
   const obj3 = { children: null };
@@ -410,9 +410,9 @@ let closure_17 = createStyles.createStyles(() => {
 });
 const __initData = { code: "function ChatInputContextBarTsx1(){const{stylesBackgroundColor,heightSv}=this.__closure;return{backgroundColor:stylesBackgroundColor,...{maxHeight:heightSv.get()}};}" };
 let closure_23 = { code: "function ChatInputContextBarTsx2(finished){const{runOnJS,handleTransitionFinished}=this.__closure;if(finished){runOnJS(handleTransitionFinished)();}}" };
-let closure_24 = noop.forwardRef((children, ref) => {
+let closure_24 = noop.forwardRef((children, arg1) => {
   let backgroundColor;
-  ref = undefined;
+  let ref;
   noop = undefined;
   obj = backgroundColor(ref[21]);
   backgroundColor = closure_16(obj.useGradientValue(backgroundColor(ref[21]).GradientPercentage.END)).contextBar.backgroundColor;
@@ -434,7 +434,7 @@ let closure_24 = noop.forwardRef((children, ref) => {
       current();
     }
   }, items);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     componentDidAppear() {
       const result = sharedValue.set(backgroundColor(ref[23]).withTiming(60, obj));
     },
@@ -483,40 +483,38 @@ export default noop.memo(function ChatInputContextBar(channel) {
         channel(pendingReply[24]).deletePendingReply(id.id);
         const obj3 = channel(pendingReply[24]);
         const tmp10 = id;
-        const tmp8 = channel;
-        const tmp9 = pendingReply;
         id = undefined;
-        if (tmp != null) {
-          id = tmp.message.id;
+        if (closure_1_2 != null) {
+          id = closure_1_2.message.id;
         }
         obj = { message_id: id, channel_id: null, guild_id: null, context_action: "reply", reason: null, is_own_message: null };
         ({ id: obj.channel_id, guild_id: obj.guild_id } = tmp10);
         const obj4 = chatInputRef(pendingReply[25]);
-        obj.reason = tmp8(tmp9[26]).getContextBarCancelReason("reply", "cancel");
+        obj.reason = channel(pendingReply[26]).getContextBarCancelReason("reply", "cancel");
         currentUser = currentUser.getCurrentUser();
         let id1;
         if (currentUser != null) {
           id1 = currentUser.id;
         }
         let id2;
-        if (tmp != null) {
-          id2 = tmp.message.author.id;
+        if (closure_1_2 != null) {
+          id2 = closure_1_2.message.author.id;
         }
         obj.is_own_message = id1 === id2;
         obj4.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
-        const tmp8Result = tmp8(tmp9[26]);
+        const tmp8Result = channel(pendingReply[26]);
       }
     },
     onTapContextBarReply() {
       if (null != closure_1_2) {
-        channel = tmp.channel;
-        channel(pendingReply[27]).transitionTo(closure_2_11.CHANNEL(channel.getGuildId(), tmp.channel.id, tmp.message.id));
+        channel = closure_1_2.channel;
+        channel(pendingReply[27]).transitionTo(closure_2_11.CHANNEL(channel.getGuildId(), closure_1_2.channel.id, closure_1_2.message.id));
         obj = channel(pendingReply[27]);
       }
     },
     onToggleReplyMention() {
       if (null != closure_1_2) {
-        const result = channel(pendingReply[24]).setPendingReplyShouldMention(tmp.channel.id, !tmp.shouldMention);
+        const result = channel(pendingReply[24]).setPendingReplyShouldMention(closure_1_2.channel.id, !closure_1_2.shouldMention);
         obj = channel(pendingReply[24]);
       }
     }

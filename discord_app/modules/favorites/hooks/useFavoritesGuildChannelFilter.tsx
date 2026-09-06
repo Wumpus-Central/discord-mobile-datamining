@@ -1,6 +1,8 @@
 // === Module 10979: useFavoritesGuildChannelFilter ===
 
 // Module 10979 (useFavoritesGuildChannelFilter)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import sortByMatchScore from "sortByMatchScore" /* 9835 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -33,18 +35,18 @@ export default function useFavoritesGuildChannelFilter() {
         tmp15 = tmp17;
       }
       return tmp15;
-    } else if (tmp(9835).AutocompleterResultTypes.GROUP_DM === type) {
+    } else if (sortByMatchScore.AutocompleterResultTypes.GROUP_DM === type) {
       return null == stateFromStores[type.record.id];
     } else {
-      if (tmp(9835).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-        if (tmp(9835).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-          let tmpResult = tmp(1369);
+      if (sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+        if (sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+          let tmpResult = GlobalUtils;
           return tmpResult.assertNever(type);
         }
       }
       let canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, type.record);
       if (canResult) {
-        tmpResult = tmp(1982);
+        tmpResult = FavoritesUtils;
         canResult = tmpResult.isFavoritableChannel(type.record);
       }
       if (canResult) {

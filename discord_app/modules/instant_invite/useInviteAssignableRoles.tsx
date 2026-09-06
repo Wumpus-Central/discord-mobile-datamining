@@ -18,15 +18,15 @@ export default function useInviteAssignableRoles(arg0) {
   const items = [GuildRoleStore, UserStore, PermissionStore];
   const items1 = [arg0];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
-    if (null != closure_0) {
-      sortedRoles = GuildRoleStore.getSortedRoles(tmp.id);
+    if (null != id) {
+      sortedRoles = GuildRoleStore.getSortedRoles(id.id);
     } else {
       sortedRoles = [];
     }
     const obj = { sortedRoles, currentUser: UserStore.getCurrentUser(), canManageRoles: null };
-    let canResult = null != tmp;
+    let canResult = null != id;
     if (canResult) {
-      canResult = PermissionStore.can(Permissions.MANAGE_ROLES, tmp);
+      canResult = PermissionStore.can(Permissions.MANAGE_ROLES, id);
     }
     obj.canManageRoles = canResult;
     return obj;

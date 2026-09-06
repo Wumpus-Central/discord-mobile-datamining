@@ -77,7 +77,7 @@ function DiscoverabilityNameScene(onComplete) {
   }
   obj.initialName = name;
   obj.children = jsx(allowPhone(12697), { onNext: callback, loading: false, initialName: null });
-  return <tmp6 onNext={callback} loading={false} initialName={null} />;
+  return <View onNext={callback} loading={false} initialName={null} />;
 }
 class RedesignDiscoverabilityModal {
   constructor(arg0) {

@@ -69,7 +69,6 @@ let closure_18 = noop.memo((guildId) => {
     return items;
   }, items3), 1)[0];
   const obj2 = hasVideo(id[14]);
-  let tmp2 = hasVideo;
   const items4 = [MediaEngineStore];
   const items5 = [id];
   const tmp5 = hasVideo(id[14]).useStateFromStores(items4, () => {
@@ -85,7 +84,7 @@ let closure_18 = noop.memo((guildId) => {
     if (hasVideo) {
       if (!tmp5) {
         obj = { resizeMode, streamId, gestureEnabled, videoSpinnerContext: null, userId: null };
-        const VideoSpinnerContext = tmp2(tmp3[21]).VideoSpinnerContext;
+        const VideoSpinnerContext = hasVideo(tmp3[21]).VideoSpinnerContext;
         obj.videoSpinnerContext = stateFromStores ? VideoSpinnerContext.SELF_VIDEO : VideoSpinnerContext.REMOTE_VIDEO;
         obj.userId = user.id;
         let tmp6Result = closure_14(require("VideoRenderer"), obj);
@@ -123,6 +122,7 @@ let closure_18 = noop.memo((guildId) => {
     return tmp2;
   };
   tmp6Result = closure_14(require("VideoBackground"), obj);
+  const tmp10 = require("VideoBackground");
 });
 let closure_19 = noop.memo((userId) => {
   userId = userId.userId;
@@ -170,7 +170,7 @@ let closure_19 = noop.memo((userId) => {
       obj2.style = items4;
       const obj3 = { source: tmp6, size: tmp2(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef8614 };
       obj2.children = closure_14(tmp2(1178).Icon, obj3);
-      tmp19Result = tmp19(View, obj2);
+      tmp19Result = closure_14(View, obj2);
     }
     const obj4 = { children: null };
     items3[1] = tmp19Result;
@@ -322,7 +322,7 @@ export default function UserTile(participant) {
         userId: id,
         hasNotch
       };
-      tmp23Result = tmp23(tmp7(tmp8[32]), obj2);
+      tmp23Result = closure_14(tmp7(tmp8[32]), obj2);
     }
   }
   items7[1] = tmp23Result;

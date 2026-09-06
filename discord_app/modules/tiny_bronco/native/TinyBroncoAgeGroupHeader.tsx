@@ -4,9 +4,11 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
 import useAgeGroupPresentation from "useAgeGroupPresentation" /* 14716 */;
 import _modDef14722 from "module_14722" /* 14722 */;
+import handleOpenAgeGatedContentSupportArticle from "handleOpenAgeGatedContentSupportArticle" /* 14754 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -51,40 +53,40 @@ function AgeGroupDescription(ageGroup) {
   ageGroup = ageGroup.ageGroup;
   if (useAgeGroupPresentation.AgeGroupState.ADULT === ageGroup) {
     let obj = { variant: "text-sm/normal", color: "text-default", children: null };
-    const intl3 = tmp(1114).intl;
-    obj = { handleOnAgeGatedContentHook: tmp(14754).handleOpenAgeGatedContentSupportArticle };
+    const intl3 = util.intl;
+    obj = { handleOnAgeGatedContentHook: handleOpenAgeGatedContentSupportArticle.handleOpenAgeGatedContentSupportArticle };
     obj.children = intl3.format(_modDef14722.gi4ulu, obj);
-    return React6(tmp(4556).Text, obj);
-  } else if (tmp(14716).AgeGroupState.TEEN === ageGroup) {
+    return React6(Text_Text.Text, obj);
+  } else if (useAgeGroupPresentation.AgeGroupState.TEEN === ageGroup) {
     const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
-    const intl2 = tmp(1114).intl;
-    const obj2 = { handleOnAgeGatedContentHook: tmp(14754).handleOpenAgeGatedContentSupportArticle, handleOnConfirmAgeHook: tmp(14716).handleShowAgeVerification };
+    const intl2 = util.intl;
+    const obj2 = { handleOnAgeGatedContentHook: handleOpenAgeGatedContentSupportArticle.handleOpenAgeGatedContentSupportArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
     obj1.children = intl2.format(_modDef14722["221iML"], obj2);
-    return React6(tmp(4556).Text, obj1);
-  } else if (tmp(14716).AgeGroupState.UNVERIFIED === ageGroup) {
+    return React6(Text_Text.Text, obj1);
+  } else if (useAgeGroupPresentation.AgeGroupState.UNVERIFIED === ageGroup) {
     obj = { variant: "text-sm/normal", color: "text-default", children: null };
-    const intl = tmp(1114).intl;
-    obj3 = { handleOnAgeGatedContentHook: tmp(14754).handleOpenAgeGatedContentSupportArticle, handleOnConfirmAgeHook: tmp(14716).handleShowAgeVerification };
+    const intl = util.intl;
+    obj3 = { handleOnAgeGatedContentHook: handleOpenAgeGatedContentSupportArticle.handleOpenAgeGatedContentSupportArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
     obj.children = intl.format(_modDef14722["W0/7DD"], obj3);
-    return React6(tmp(4556).Text, obj);
+    return React6(Text_Text.Text, obj);
   }
 }
 function AgeGroupCallToAction(ageGroup) {
   ageGroup = ageGroup.ageGroup;
   if (useAgeGroupPresentation.AgeGroupState.ADULT === ageGroup) {
     return null;
-  } else if (tmp(14716).AgeGroupState.TEEN === ageGroup) {
+  } else if (useAgeGroupPresentation.AgeGroupState.TEEN === ageGroup) {
     let obj = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     obj.text = intl2.string(_modDef14722["+7NlgO"]);
-    obj.onPress = tmp(14754).handleOpenAgeGatedContentSupportArticle;
-    return React6(tmp(4975).Button, obj);
-  } else if (tmp(14716).AgeGroupState.UNVERIFIED === ageGroup) {
+    obj.onPress = handleOpenAgeGatedContentSupportArticle.handleOpenAgeGatedContentSupportArticle;
+    return React6(components_Button_Button.Button, obj);
+  } else if (useAgeGroupPresentation.AgeGroupState.UNVERIFIED === ageGroup) {
     obj = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
-    const intl = tmp(1114).intl;
+    const intl = util.intl;
     obj.text = intl.string(_modDef14722["cI+bc/"]);
-    obj.onPress = tmp(14716).handleShowAgeVerification;
-    return React6(tmp(4975).Button, obj);
+    obj.onPress = useAgeGroupPresentation.handleShowAgeVerification;
+    return React6(components_Button_Button.Button, obj);
   }
 }
 const View = fn(17).View;

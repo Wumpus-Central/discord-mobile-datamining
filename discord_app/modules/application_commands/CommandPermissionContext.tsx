@@ -22,22 +22,22 @@ function computePermissions(isPrivate, arg1) {
       let flag = true;
       let flag2 = true;
       if (!obj5.has(permissions, constants2.ADMINISTRATOR)) {
-        let tmp13Result = tmp13(1086);
+        let tmp13Result = BigFlagUtilsAll;
         const hasItem = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.VIEW_CHANNEL);
         if (tmp3) {
           let hasItem1 = hasItem;
           if (hasItem) {
-            tmp13Result = tmp13(1086);
+            tmp13Result = BigFlagUtilsAll;
             hasItem1 = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.USE_APPLICATION_COMMANDS);
           }
-          const has = tmp13(1086).has;
+          const has = BigFlagUtilsAll.has;
           if (arg1) {
             SEND_MESSAGES_IN_THREADS = SEND_MESSAGES_IN_THREADS.SEND_MESSAGES_IN_THREADS;
             let hasItem2 = has(permissions, SEND_MESSAGES_IN_THREADS);
           } else {
             hasItem2 = has(permissions, SEND_MESSAGES_IN_THREADS.SEND_MESSAGES);
           }
-          const tmp13Result1 = tmp13(1086);
+          const tmp13Result1 = BigFlagUtilsAll;
         } else {
           flag = true;
           flag2 = hasItem;
@@ -93,7 +93,7 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
     } else {
       items = [];
     }
-    let isThreadResult = channel instanceof tmp;
+    let isThreadResult = channel instanceof ChannelRecordBase;
     if (isThreadResult) {
       isThreadResult = channel.isThread();
     }
@@ -107,7 +107,7 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
     ({ computedPermissions: obj3.computedPermissions, hasBaseAccessPermissions: obj3.hasBaseAccessPermissions, hasSendMessagesPermission: obj3.hasSendMessagesPermission } = computePermissions(obj, isThreadResult));
     let tmp24 = flag;
     if (tmp24) {
-      let tmp25 = !(obj instanceof tmp);
+      let tmp25 = !(obj instanceof ChannelRecordBase);
       if (!tmp25) {
         if (null != obj.guild_id) {
           viewNsfwCommandsOrDefault = obj.isNSFW() || tmp23;
@@ -126,13 +126,13 @@ export const usePermissionContext = function usePermissionContext(channel, items
   const commandTypes = items;
   items = [channel];
   const memo = noop.useMemo(() => {
-    let tmp = closure_0;
-    if (closure_0 instanceof ChannelRecordBase) {
-      tmp = obj;
-      if (obj.isThread()) {
-        channel = ChannelStore.getChannel(obj.parent_id);
+    let tmp = thread;
+    if (thread instanceof ChannelRecordBase) {
+      tmp = thread;
+      if (thread.isThread()) {
+        let channel = ChannelStore.getChannel(thread.parent_id);
         if (channel == null) {
-          channel = obj;
+          channel = thread;
         }
         tmp = channel;
       }
@@ -196,17 +196,18 @@ export const usePermissionContext = function usePermissionContext(channel, items
     }
     viewNsfwCommandsOrDefault = tmp17;
     const items7 = [items, memo, stateFromStores2, stateFromStoresArray, stateFromStores, tmp17, channel];
-    return noop.useMemo(() => {
+    return obj.useMemo(() => {
       let obj = closure_0;
       let isThreadResult = closure_0 instanceof ChannelRecordBase;
       if (isThreadResult) {
         isThreadResult = obj.isThread();
       }
       const tmpResult = computePermissions(memo, isThreadResult);
-      obj = { context: tmp2, userId: stateFromStores, roleIds: stateFromStoresArray, commandTypes, isImpersonating: stateFromStores2, computedPermissions: tmpResult.computedPermissions, hasBaseAccessPermissions: tmpResult.hasBaseAccessPermissions, hasSendMessagesPermission: tmpResult.hasSendMessagesPermission, allowNsfw: viewNsfwCommandsOrDefault };
+      obj = { context: memo, userId: stateFromStores, roleIds: stateFromStoresArray, commandTypes, isImpersonating: stateFromStores2, computedPermissions: tmpResult.computedPermissions, hasBaseAccessPermissions: tmpResult.hasBaseAccessPermissions, hasSendMessagesPermission: tmpResult.hasSendMessagesPermission, allowNsfw: viewNsfwCommandsOrDefault };
       return obj;
     }, items7);
   }
+  obj = noop;
 };
 export const computeCommandContextType = function computeCommandContextType(channel, applicationId) {
   if (channel instanceof ChannelRecordBase) {

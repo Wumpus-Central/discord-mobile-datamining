@@ -66,5 +66,5 @@ let result = size.fileFinishedImporting("modules/nuf/native/components/notificat
 
 export default RedesignNotificationModal;
 export const RedesignNotificationScreen = function RedesignNotificationScreen(onComplete) {
-  return <RedesignNotificationModal onComplete={arg0.route.params.onComplete} />;
+  return <RedesignNotificationModal onComplete={onComplete.route.params.onComplete} />;
 };

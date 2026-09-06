@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/MediaViewerDimensionsContext.tsx");
 
 export const MediaViewerDimensionsProvider = function MediaViewerDimensionsProvider(children) {
-  return <redux.Provider value={useWindowDimensionsDefault({ ignoreKeyboard: true })}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={useWindowDimensionsDefault({ ignoreKeyboard: true })}>{children.children}</redux.Provider>;
 };
 export const useMediaViewerDimensions = function useMediaViewerDimensions() {
   const context = noop.useContext(closure_4);

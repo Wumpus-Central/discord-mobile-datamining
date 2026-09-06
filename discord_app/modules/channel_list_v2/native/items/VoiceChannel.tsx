@@ -19,7 +19,7 @@ let closure_17 = async function _handleVoiceChannelPress(arg0) {
   let guildId = arg0;
   c2 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_129_0 = guildId;
     guildId = guildId.getGuildId();
     closure_129_1 = guildId;
@@ -27,10 +27,9 @@ let closure_17 = async function _handleVoiceChannelPress(arg0) {
       if (obj3.shouldShowMembershipVerificationGate(guildId)) {
         c2 = 1;
         c3 = 1;
-        return { value: tmp10(tmp11[14])(tmp11[13], tmp11.paths), done: false };
+        return { value: require("asyncRequireImpl")(paths[13], paths.paths), done: false };
       }
       obj3 = require("useShowMemberVerificationGate");
-      tmp10 = require;
     }
     await require("asyncRequireImpl")(paths[15], paths.paths);
     value.openGuildVoiceModal(closure_129_0, "Channel List");
@@ -175,14 +174,14 @@ let closure_18 = noop.memo((channel) => {
       obj4 = { style: tmp21.voiceStatesCollapsed, children: null };
       const summarizedVoiceUsers = tmp(tmp2[31]).computeSummarizedVoiceUsers(obj2);
       obj5 = { users: summarizedVoiceUsers, max: 8, guildId: channel.guild_id, renderIcon: false };
-      obj4.children = tmp17(tmp18(tmp2[32]), obj5);
-      tmp17Result = tmp17(gameMentionsAsPlainText, obj4);
+      obj4.children = jsx(require("VoiceUserSummary"), { users: summarizedVoiceUsers, max: 8, guildId: channel.guild_id, renderIcon: false });
+      tmp17Result = <gameMentionsAsPlainText style={tmp21.voiceStatesCollapsed}>{null}</gameMentionsAsPlainText>;
       const tmpResult1 = tmp(tmp2[31]);
     } else {
       const obj6 = { style: tmp21.voiceStates, children: null };
       obj7 = { channel, collapsed, voiceStates: ensureSyncedChannelVoiceStates };
-      obj6.children = tmp17(tmp18(tmp2[33]), obj7);
-      tmp17Result = tmp17(gameMentionsAsPlainText, obj6);
+      obj6.children = jsx(require("VoiceUsers"), { channel, collapsed, voiceStates: ensureSyncedChannelVoiceStates });
+      tmp17Result = <gameMentionsAsPlainText style={tmp21.voiceStates}>{null}</gameMentionsAsPlainText>;
     }
   }
   obj1.children = tmp17Result;

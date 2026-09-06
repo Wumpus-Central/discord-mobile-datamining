@@ -1,7 +1,9 @@
 // === Module 14944: UserSettingsAuthedAppPermissions ===
 
 // Module 14944 (UserSettingsAuthedAppPermissions)
+import Text_Text from "Text/Text" /* 4556 */;
 import disclosures from "disclosures" /* 9240 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 14938 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -64,9 +66,9 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
           if (null != textForDisclosure) {
             obj = { style: items.permissionContainer, children: null };
             obj = { style: items.permissionIcon, disclosure };
-            items = [hasOwnProperty(tmp(14938).DisclosureIcon, obj), ];
+            items = [hasOwnProperty(UserSettingsAuthedApps.DisclosureIcon, obj), ];
             const obj1 = { style: items.permissionText, variant: "text-sm/normal", children: textForDisclosure };
-            items[1] = hasOwnProperty(tmp(4556).Text, obj1);
+            items[1] = hasOwnProperty(Text_Text.Text, obj1);
             obj.children = items;
             tmp4 = timestampProducer(React4, obj, index + items.length);
           }

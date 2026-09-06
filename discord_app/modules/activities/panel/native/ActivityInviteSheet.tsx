@@ -12,19 +12,17 @@ import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9833 */;
 
 require = fn;
 function Loading() {
-  let tmp2;
   const tmp = closure_16();
   const items = [];
   let num = 0;
   do {
-    tmp2 = map1;
     let obj = { row: num };
     let arr = items.push(map1(UserPlaceholderRowDefault, obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };
   obj = { style: tmp.placeholderHeader };
-  const items1 = [tmp2(View, obj), tmp2(View, { style: tmp.placeholderLabel }), items];
+  const items1 = [map1(View, obj), map1(View, { style: tmp.placeholderLabel }), items];
   obj.children = items1;
   return __initData(closure_1_14, obj);
 }
@@ -104,21 +102,21 @@ export default function ActivityInviteSheet(activity) {
         closure_1_6(id, item.item.id, constants2.SENDING);
         if (item.type === activity(_undefined[16]).RowTypes.CHANNEL) {
           try {
-            let obj = { channelId: tmp12, type: constants.JOIN, activity: tmp2, location: analyticsLocations(tmp24[13]).ACTIVITY_INVITE_SHEET };
-            const obj3 = analyticsLocations(tmp24[17]);
-            const sendActivityInviteResult = analyticsLocations(tmp24[17]).sendActivityInvite(obj);
-            analyticsLocations(tmp24[17]).sendActivityInvite(obj).then(markInviteSent).catch((error) => {
+            let obj = { channelId: tmp12, type: constants.JOIN, activity: tmp2, location: analyticsLocations(_undefined[13]).ACTIVITY_INVITE_SHEET };
+            const obj3 = analyticsLocations(_undefined[17]);
+            const sendActivityInviteResult = analyticsLocations(_undefined[17]).sendActivityInvite(obj);
+            analyticsLocations(_undefined[17]).sendActivityInvite(obj).then(markInviteSent).catch((error) => {
               _undefined(String(error));
             });
-            const nextPromise = analyticsLocations(tmp24[17]).sendActivityInvite(obj).then(markInviteSent);
+            const nextPromise = analyticsLocations(_undefined[17]).sendActivityInvite(obj).then(markInviteSent);
           } catch (tmp16) {
             const _String2 = String;
             _undefined(String(tmp16));
           }
-        } else if (item.type === tmp23(tmp24[16]).RowTypes.DM) {
+        } else if (item.type === activity(_undefined[16]).RowTypes.DM) {
           try {
-            obj = analyticsLocations(tmp24[17]);
-            obj = { userId: tmp4, type: constants.JOIN, activity: tmp2, location: analyticsLocations(tmp24[13]).ACTIVITY_INVITE_SHEET };
+            obj = analyticsLocations(_undefined[17]);
+            obj = { userId: tmp4, type: constants.JOIN, activity: tmp2, location: analyticsLocations(_undefined[13]).ACTIVITY_INVITE_SHEET };
             const result = obj.sendActivityInviteUser(obj);
             result.then(markInviteSent).catch((error) => _undefined(String(error)));
             const nextPromise1 = result.then(markInviteSent);
@@ -159,26 +157,26 @@ export default function ActivityInviteSheet(activity) {
   obj.header = closure_13(activity(7149).BottomSheetTitleHeader, obj1);
   if (null != tmp6) {
     const obj2 = { style: tmp.emptyState, Illustration: tmp11(9849).AppCrash, title: tmp6 };
-    let tmp19Result = tmp17(tmp11(1178).EmptyState, obj2);
+    let tmp19Result = closure_13(tmp11(1178).EmptyState, obj2);
   } else if (tmp15) {
-    tmp19Result = tmp17(Loading, {});
+    tmp19Result = closure_13(Loading, {});
   } else {
     let obj3 = { children: null };
     const obj4 = { style: tmp.searchAndShareContainer, children: null };
     const obj5 = { size: "md", isRound: true, onChange: tmp11(9847).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1114).intl;
     obj5.placeholder = intl2.string(tmp11(1114).t.iI1gMg);
-    obj4.children = tmp17(tmp11(7050).SearchField, obj5);
-    obj3.children = tmp17(View, obj4);
-    const items4 = [tmp17(View, obj3), ];
+    obj4.children = closure_13(tmp11(7050).SearchField, obj5);
+    obj3.children = closure_13(View, obj4);
+    const items4 = [closure_13(View, obj3), ];
     if (tmp16) {
       const obj6 = { style: tmp.emptyState, title: null };
       const intl3 = tmp11(1114).intl;
       obj6.title = intl3.string(tmp11(1114).t.ojoWgX);
-      let tmp17Result = tmp17(tmp11(1178).EmptyState, obj6);
+      let tmp17Result = closure_13(tmp11(1178).EmptyState, obj6);
     } else {
       const obj7 = { data: stateFromStores, error: tmp6, getSendState: callback, onInviteSent: callback2, onPressAvatar: callback1 };
-      tmp17Result = tmp17(tmp2(17028), obj7);
+      tmp17Result = closure_13(tmp2(17028), obj7);
     }
     const obj8 = { children: null };
     items4[1] = tmp17Result;

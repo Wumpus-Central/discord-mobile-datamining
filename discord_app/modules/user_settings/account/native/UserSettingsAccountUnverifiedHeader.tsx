@@ -4,6 +4,8 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
 import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5621 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -50,11 +52,11 @@ export default function UserSettingsAccountUnverifiedHeader() {
   if (null != tmp4) {
     obj = { accessibilityRole: "button", style: tmp.accountWarning, onPress: handleOpenEmailVerification, children: null };
     obj = { style: tmp.accountWarningText, variant: "text-xs/bold", color: "text-overlay-light", children: tmp4.title };
-    const items1 = [React4(tmp2(4556).Text, obj), ];
+    const items1 = [React4(Text_Text.Text, obj), ];
     const obj1 = { style: tmp.accountWarningButton, variant: "text-xs/medium", color: "text-overlay-light", children: tmp4.button };
-    items1[1] = React4(tmp2(4556).Text, obj1);
+    items1[1] = React4(Text_Text.Text, obj1);
     obj.children = items1;
-    tmp5 = hasOwnProperty(tmp2(5123).PressableOpacity, obj);
+    tmp5 = hasOwnProperty(Pressables.PressableOpacity, obj);
   }
   return tmp5;
 };

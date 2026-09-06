@@ -69,7 +69,7 @@ export default function TakeActionButtons(senderId) {
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK);
   }, items3);
   const items4 = [senderId, channelId, tmp.toastContainer, setReported, lastChannelMessage, trackAnalyticsEvent];
-  closure_8 = lastChannelMessage.useCallback(trackAnalyticsEvent(function*(arg0, value) {
+  closure_8 = lastChannelMessage.useCallback(trackAnalyticsEvent(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -153,10 +153,10 @@ export default function TakeActionButtons(senderId) {
   }
   obj.onPress = callback;
   const items5 = [closure_15(senderId(setReported[22]).Button, obj), , ];
-  obj1 = { variant: "secondary", size: "lg", icon: tmp15(tmp3[24]), loading: tmp8, disabled: isReported, text: null, grow: true, onPress: null };
-  const intl2 = tmp2(tmp3[19]).intl;
+  obj1 = { variant: "secondary", size: "lg", icon: tmp15(setReported[24]), loading: tmp8, disabled: isReported, text: null, grow: true, onPress: null };
+  const intl2 = tmp2(setReported[19]).intl;
   const string2 = intl2.string;
-  const t2 = tmp2(tmp3[19]).t;
+  const t2 = tmp2(setReported[19]).t;
   if (isReported) {
     let string2Result = string2(t2.QvwOJ6);
   } else {
@@ -168,32 +168,32 @@ export default function TakeActionButtons(senderId) {
   };
   items5[1] = closure_15(senderId(setReported[22]).Button, obj1);
   if (shouldShowHelplineLink) {
-    obj2 = { variant: "secondary", size: "lg", icon: tmp15(tmp3[25]), text: null, grow: true, onPress: null };
-    const intl6 = tmp2(tmp3[19]).intl;
-    obj2.text = intl6.string(tmp2(tmp3[19]).t.sZf6cz);
+    obj2 = { variant: "secondary", size: "lg", icon: tmp15(setReported[25]), text: null, grow: true, onPress: null };
+    const intl6 = tmp2(setReported[19]).intl;
+    obj2.text = intl6.string(tmp2(setReported[19]).t.sZf6cz);
     obj2.onPress = function onPress() {
       closure_7.push("CRISIS_TEXT_LINE");
       trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL);
     };
-    let tmp12Result = tmp14(tmp2(tmp3[22]).Button, obj2);
+    let tmp12Result = closure_15(tmp2(setReported[22]).Button, obj2);
   } else {
     obj3 = { style: tmp.helplineGroup, children: null };
-    const Button = tmp2(tmp3[22]).Button;
-    obj4 = { variant: "secondary", size: "lg", icon: tmp15(tmp3[26]), text: null, grow: true, onPress: null };
-    const intl3 = tmp2(tmp3[19]).intl;
+    const Button = tmp2(setReported[22]).Button;
+    obj4 = { variant: "secondary", size: "lg", icon: tmp15(setReported[26]), text: null, grow: true, onPress: null };
+    const intl3 = tmp2(setReported[19]).intl;
     const string3 = intl3.string;
-    const t3 = tmp2(tmp3[19]).t;
+    const t3 = tmp2(setReported[19]).t;
     if (shouldShowThroughlineLink) {
       obj4.text = string3(t3.HQ2nKl);
       obj4.onPress = function onPress() {
         LinkingDefault.openURL(closure_2_12);
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_THROUGHLINE);
       };
-      const items6 = [tmp14(Button, obj4), ];
+      const items6 = [closure_15(Button, obj4), ];
       const obj5 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
-      const intl5 = tmp2(tmp3[19]).intl;
-      obj5.children = intl5.string(tmp2(tmp3[19]).t["PMeb/r"]);
-      items6[1] = tmp14(tmp2(tmp3[28]).Text, obj5);
+      const intl5 = tmp2(setReported[19]).intl;
+      obj5.children = intl5.string(tmp2(setReported[19]).t["PMeb/r"]);
+      items6[1] = closure_15(tmp2(setReported[28]).Text, obj5);
       obj3.children = items6;
       let tmp18 = obj3;
     } else {
@@ -202,15 +202,15 @@ export default function TakeActionButtons(senderId) {
         LinkingDefault.openURL(closure_2_11);
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR);
       };
-      const items7 = [tmp14(Button, obj4), ];
+      const items7 = [closure_15(Button, obj4), ];
       const obj6 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
-      const intl4 = tmp2(tmp3[19]).intl;
-      obj6.children = intl4.string(tmp2(tmp3[19]).t.XNwhxC);
-      items7[1] = tmp14(tmp2(tmp3[28]).Text, obj6);
+      const intl4 = tmp2(setReported[19]).intl;
+      obj6.children = intl4.string(tmp2(setReported[19]).t.XNwhxC);
+      items7[1] = closure_15(tmp2(setReported[28]).Text, obj6);
       obj3.children = items7;
       tmp18 = obj3;
     }
-    tmp12Result = tmp12(tmp13, tmp18);
+    tmp12Result = closure_16(tmp13, tmp18);
   }
   items5[2] = tmp12Result;
   obj.children = items5;

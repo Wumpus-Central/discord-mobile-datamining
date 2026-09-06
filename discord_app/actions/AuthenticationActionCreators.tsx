@@ -4,18 +4,20 @@
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import TokenManagerAll from "TokenManager" /* 1099 */;
+import router_utils from "router_utils" /* 1100 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4461 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4554 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4753 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ConsentStore from "ConsentStore" /* 6595 */;
 
 require = fn;
-function handleLogout(source, CHANNELResult) {
+function handleLogout(source) {
   let DEFAULT_LOGGED_OUT = CHANNELResult;
   if (CHANNELResult === undefined) {
     DEFAULT_LOGGED_OUT = constants2.DEFAULT_LOGGED_OUT;
@@ -25,7 +27,7 @@ function handleLogout(source, CHANNELResult) {
   const id = AuthenticationStore.getId();
   obj = { type: "LOGOUT", userId: id };
   const merged = Object.assign(undefined);
-  let tmp2Result = tmp2(573);
+  let tmp2Result = DispatcherDefault;
   tmp2Result.dispatch(obj).catch((error) => {
     logger.error("Error while dispatching LOGOUT", error);
     if (DiscordErrors != null) {
@@ -36,7 +38,7 @@ function handleLogout(source, CHANNELResult) {
   if (null != DEFAULT_LOGGED_OUT) {
     const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
-      tmp2Result = tmp2(4763);
+      tmp2Result = ModalActionCreatorsDefault;
       tmp2Result.popAll();
       obj = { index: 0, routes: null };
       const items = [{ name: "auth" }];
@@ -44,11 +46,11 @@ function handleLogout(source, CHANNELResult) {
       rootNavigationRef.reset(obj);
     } else {
       const obj1 = { source };
-      tmp12(1100).transitionTo(DEFAULT_LOGGED_OUT, obj1);
-      const tmp12Result = tmp12(1100);
+      router_utils.transitionTo(DEFAULT_LOGGED_OUT, obj1);
+      const tmp12Result = router_utils;
     }
-    tmp12 = require;
   }
+  const dispatchResult = tmp2Result.dispatch(obj);
 }
 const setPromoEmailConsentState = fn(6594).setPromoEmailConsentState;
 const Constants = fn(1074);
@@ -97,13 +99,13 @@ PasswordResetResult = {
       obj = DispatcherDefault;
       obj.dispatch({ type: "LOGIN_ATTEMPTED", user_id, required_actions });
       if (mfa) {
-        let tmpResult = tmp(573);
+        let tmpResult = DispatcherDefault;
         obj = { type: "LOGIN_MFA_STEP", ticket, sms, webauthn, totp, backup, loginInstanceId: login_instance_id };
         tmpResult.dispatch(obj);
       } else if (isMultiAccount) {
         self.switchAccountToken(token);
       } else {
-        tmpResult = tmp(573);
+        tmpResult = DispatcherDefault;
         obj = { type: "LOGIN_SUCCESS", token };
         tmpResult.dispatch(obj);
       }
@@ -133,9 +135,9 @@ PasswordResetResult = {
       }
       if (code === constants.ACCOUNT_SCHEDULED_FOR_DELETION) {
         if (null != password) {
-          if ("" !== tmp6) {
+          if ("" !== password) {
             obj = { type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", credentials: null };
-            const obj1 = { login, password: tmp6 };
+            const obj1 = { login, password };
             obj.credentials = obj1;
             DispatcherDefault.dispatch(obj);
           }
@@ -144,10 +146,10 @@ PasswordResetResult = {
       }
       if (code === constants.ACCOUNT_DISABLED) {
         if (null != password) {
-          if ("" !== tmp7) {
+          if ("" !== password) {
             let obj5 = DispatcherDefault;
             let obj2 = { type: "LOGIN_ACCOUNT_DISABLED", credentials: null };
-            const obj3 = { login, password: tmp7 };
+            const obj3 = { login, password };
             obj2.credentials = obj3;
             obj5.dispatch(obj2);
           }
@@ -213,7 +215,7 @@ PasswordResetResult = {
   authenticatePasswordless(arg0) {
     ({ authenticateFunc: require, conditionalMediationAbortController: importDefault, source: importAll, giftCodeSKUId: dependencyMap, isMultiAccount: closure_4 } = arg0);
     const self = this;
-    return self(function*(arg0, value) {
+    return self(function*() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -244,12 +246,11 @@ PasswordResetResult = {
               let ticket;
               closure_128_3 = undefined;
               if (importDefault != null) {
-                obj17.abort("Starting non-conditional mediation");
+                importDefault.abort("Starting non-conditional mediation");
               }
               tmp3(573).dispatch({ type: "PASSWORDLESS_START" });
               dependencyMap = 1;
               const obj12 = tmp3(573);
-              obj17 = importDefault;
               c4 = 2;
               c5 = 1;
               const obj1 = { value: closure_0(6597).fetchWebAuthnPasswordlessChallenge(), done: false };
@@ -384,11 +385,11 @@ PasswordResetResult = {
       let aPIError = error;
       if (error instanceof isMultiAccount(dependencyMap[14]).HTTPResponseError) {
         if (null != error.body.suspended_user_token) {
-          self(tmp2[8]);
+          self(dependencyMap[8]);
           obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: error.body.suspended_user_token };
           obj.dispatch(obj);
         } else {
-          aPIError = new isMultiAccount(tmp2[15]).APIError(error);
+          aPIError = new isMultiAccount(dependencyMap[15]).APIError(error);
         }
       }
       throw aPIError;
@@ -417,7 +418,7 @@ PasswordResetResult = {
   oneTimeLogin(arg0) {
     closure_0 = arg0;
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -535,14 +536,15 @@ PasswordResetResult = {
       }
       throw error;
     });
+    const dispatchResult = DispatcherDefault.dispatch(obj);
   },
-  logout(TTI_test, LOGIN) {
+  logout(TTI_test) {
     _require = TTI_test;
     let DEFAULT_LOGGED_OUT = LOGIN;
     if (LOGIN === undefined) {
       DEFAULT_LOGGED_OUT = constants2.DEFAULT_LOGGED_OUT;
     }
-    importAll = arg2;
+    importAll = id;
     DEFAULT_LOGGED_OUT(4753);
     const request = { url: closure_9.LOGOUT, body: null, oldFormErrors: true, trackedActionData: null };
     let trackedActionData = { provider: closure_15(), token: null, voip_provider: null, voip_token: null };
@@ -554,9 +556,9 @@ PasswordResetResult = {
     request.body = trackedActionData;
     trackedActionData = { event: require("discord_common/AnalyticsUtils").NetworkActionNames.USER_LOGOUT, properties: { logout_source: TTI_test } };
     request.trackedActionData = trackedActionData;
-    let tmp4 = null != arg2;
+    let tmp4 = null != id;
     if (tmp4) {
-      let str = TokenManagerAll.getToken(arg2);
+      let str = TokenManagerAll.getToken(id);
       if (str == null) {
         str = "";
       }
@@ -578,7 +580,7 @@ PasswordResetResult = {
       }
     });
   },
-  switchAccountToken(token, switchSynchronously) {
+  switchAccountToken(token) {
     closure_0 = token;
     let flag = switchSynchronously;
     if (switchSynchronously === undefined) {
@@ -626,7 +628,8 @@ PasswordResetResult = {
       const request = { url: constants.VERIFY, body: { token }, trackedActionData: { event: token(1250).NetworkActionNames.USER_VERIFY }, rejectWithError: null };
       { event: token(1250).NetworkActionNames.USER_VERIFY };
       request.rejectWithError = token(1272).rejectWithMigratedError();
-      closure_128_0 = await tmp2(4753).post(request);
+      await tmp2(4753).post(request);
+      closure_128_0 = value;
       tmp2(573).dispatch({ type: "LOGIN_SUCCESS", token: closure_128_0.body.token });
       return closure_128_0.body.user_id;
     })();
@@ -658,7 +661,7 @@ PasswordResetResult = {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -709,12 +712,12 @@ PasswordResetResult = {
               }
               const Storage = token(510).Storage;
               value = Storage.get(closure_1_11);
-              let tmp37 = null != voip_provider;
+              let tmp37 = null != push_voip_provider;
               if (tmp37) {
                 tmp37 = null != value;
               }
               if (tmp37) {
-                obj1.push_voip_provider = tmp36;
+                obj1.push_voip_provider = push_voip_provider;
                 obj1.push_voip_token = value;
               }
               dependencyMap = 1;
@@ -723,7 +726,6 @@ PasswordResetResult = {
               let obj2 = { event: token(1250).NetworkActionNames.USER_RESET_PASSWORD };
               request.trackedActionData = obj2;
               const obj12 = password(573);
-              tmp36 = voip_provider;
               request.rejectWithError = token(1272).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
@@ -786,12 +788,12 @@ PasswordResetResult = {
       v1(573).dispatch({ type: "LOGIN_MFA" });
       const request = { url: constants.RESET_PASSWORD, body: { code, ticket, password, token, source, method }, oldFormErrors: true, trackedActionData: { event: v3(1250).NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: true } }, rejectWithError: true };
       await v1(4753).post(request);
-      return arg1.body.token;
+      return value.body.token;
     })();
   },
   forgotPassword(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

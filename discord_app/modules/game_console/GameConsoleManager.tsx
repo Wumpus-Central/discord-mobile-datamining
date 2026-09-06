@@ -8,6 +8,7 @@ import GlobalUtils from "GlobalUtils" /* 1369 */;
 import Timers from "Timers" /* 4447 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
 import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9448 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 9451 */;
 import _modDef17369 from "module_17369" /* 17369 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -33,7 +34,7 @@ let closure_15 = async function _syncLocalState(arg0) {
   let selfMute = arg0;
   c3 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -249,7 +250,7 @@ let prototype = function GameConsoleManager() {
           if (str2 == null) {
             str2 = "";
           }
-          let device = obj5.getDevice(awaitingRemoteSessionInfo.type, str2);
+          let device = GameConsoleStore.getDevice(awaitingRemoteSessionInfo.type, str2);
           if (device == null) {
             let obj = { id: "id", platform: null, name: null };
             const intl = util.intl;
@@ -267,23 +268,20 @@ let prototype = function GameConsoleManager() {
               type = awaitingRemoteSessionInfo.type;
             }
             obj.reconnectPlatformType = type;
-            result = tmp6(9451).showSelfDismissableAlert(obj);
-            const tmp6Result = tmp6(9451);
+            result = GameConsoleAlertUtilsDefault.showSelfDismissableAlert(obj);
+            const tmp6Result = GameConsoleAlertUtilsDefault;
           }
           if (set.has(error.code)) {
             const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
             if (awaitRemoteTimeout.isStarted()) {
-              const awaitRemoteTimeout2 = tmp14.awaitRemoteTimeout;
+              const awaitRemoteTimeout2 = applyArgumentsResult.awaitRemoteTimeout;
               awaitRemoteTimeout2.start(180000, () => closure_1_0(closure_1_2[15]).disconnectRemote(), true);
             }
-            tmp14 = applyArgumentsResult;
           }
           if (tmp2) {
             GameConsoleActionCreators.disconnectRemote();
           }
-          tmp6 = importDefault;
         }
-        obj5 = GameConsoleStore;
       }
     }
   };

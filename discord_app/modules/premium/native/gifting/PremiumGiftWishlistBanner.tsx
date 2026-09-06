@@ -146,7 +146,7 @@ export const PremiumGiftWishlistBanner = function PremiumGiftWishlistBanner(gift
               obj1.item_source = str;
               let num3 = null;
               let tmp4 = null;
-              if (tmp23 === openShopGiftModal(items1[12]).WishlistItemSource.WISHLIST) {
+              if (closure_1 === openShopGiftModal(items1[12]).WishlistItemSource.WISHLIST) {
                 tmp4 = defaultWishlistId;
               }
               obj1.wishlist_id = tmp4;
@@ -158,9 +158,9 @@ export const PremiumGiftWishlistBanner = function PremiumGiftWishlistBanner(gift
                   if (num3 != rootNavigationRef) {
                     if (rootNavigationRef.isReady()) {
                       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-                      const items = [tmp24(items1[16]).GIFT_SELECTION_MODAL_WISHLIST];
+                      const items = [size(items1[16]).GIFT_SELECTION_MODAL_WISHLIST];
                       obj2.analyticsLocations = items;
-                      obj2.analyticsSource = tmp24(items1[16]).GIFT_SELECTION_MODAL_WISHLIST;
+                      obj2.analyticsSource = size(items1[16]).GIFT_SELECTION_MODAL_WISHLIST;
                       obj2.screen = constants2.FEATURED_PAGE;
                       const result = openShopGiftModal(items1[24]).openCollectiblesShopMobile(obj2);
                       const openShopGiftModalResult1 = openShopGiftModal(items1[24]);
@@ -168,7 +168,7 @@ export const PremiumGiftWishlistBanner = function PremiumGiftWishlistBanner(gift
                       const obj3 = { skuId: null, analyticsLocations: null, lockedRecipientUser: null, giftingOrigin: null };
                       id = id.id;
                       obj3.skuId = id;
-                      prop = tmp24(items1[16]).GIFT_SELECTION_MODAL_WISHLIST;
+                      prop = size(items1[16]).GIFT_SELECTION_MODAL_WISHLIST;
                       items1 = [prop];
                       obj3.analyticsLocations = items1;
                       obj3.lockedRecipientUser = lockedRecipientUser;
@@ -181,11 +181,11 @@ export const PremiumGiftWishlistBanner = function PremiumGiftWishlistBanner(gift
                   const obj4 = { key: "WISHLIST_ITEM_PRESS_ERROR", content: null };
                   const intl = openShopGiftModal(items1[23]).intl;
                   obj4.content = intl.string(openShopGiftModal(items1[23]).t["rTU7/z"]);
-                  num3 = tmp24(items1[22]).open(obj4);
-                  const tmp24Result = tmp24(items1[22]);
+                  num3 = size(items1[22]).open(obj4);
+                  const tmp24Result = size(items1[22]);
                 } else {
                   const obj5 = { skuId: id.id, analyticsLocations: null, lockedRecipientUser: null, giftingOrigin: null };
-                  const items2 = [tmp24(items1[16]).GIFT_SELECTION_MODAL_WISHLIST];
+                  const items2 = [size(items1[16]).GIFT_SELECTION_MODAL_WISHLIST];
                   obj5.analyticsLocations = items2;
                   obj5.lockedRecipientUser = lockedRecipientUser;
                   obj5.giftingOrigin = memo.DM_CHANNEL_WISHLIST;
@@ -199,7 +199,6 @@ export const PremiumGiftWishlistBanner = function PremiumGiftWishlistBanner(gift
                 return obj6;
               }
               const obj14 = size(WISHLIST_IN_DM_LENGTH_MOBILE[17]);
-              tmp23 = closure_1;
             }
           } else {
             num3 = 1;

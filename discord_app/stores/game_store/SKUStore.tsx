@@ -161,6 +161,7 @@ const sKUStore = new SKUStore(DispatcherDefault, {
       let tmp4 = handleStoreListing(tmp2);
       continue;
     }
+    tmp = arg0.storeListings[Symbol.iterator]();
   },
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetchSuccess(storeListing) {
     storeListing = storeListing.storeListing;
@@ -208,6 +209,7 @@ const sKUStore = new SKUStore(DispatcherDefault, {
       set = new Set(skus.map((id) => id.id));
       const result = map3.set(guildId, set);
     }
+    tmp = skus[Symbol.iterator]();
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: handleEntitlementsFetch,
   APPLICATION_STORE_CLEAR_DATA: function handleClearData() {

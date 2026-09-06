@@ -124,11 +124,11 @@ export default function ICYMICardInCard(message) {
       if (null != guild_id) {
         id = undefined;
         if (message != null) {
-          id = tmp3.author.id;
+          id = message.author.id;
         }
         member = null;
         if (null != id) {
-          member = GuildMemberStore.getMember(tmp2, tmp3.author.id);
+          member = GuildMemberStore.getMember(tmp2, message.author.id);
         }
       }
     }
@@ -182,7 +182,7 @@ export default function ICYMICardInCard(message) {
       return null;
     } else {
       if (!flag2) {
-        let obj = { guild: tmp, size: GuildIcon.GuildIconSizes.NORMAL };
+        let obj = { guild: stateFromStores1, size: GuildIcon.GuildIconSizes.NORMAL };
         let tmp10 = React7(GuildIconDefault, obj);
       } else {
         let author;
@@ -190,17 +190,18 @@ export default function ICYMICardInCard(message) {
           author = author.author;
         }
       }
-      obj = { guild: tmp, author: null };
+      obj = { guild: stateFromStores1, author: null };
       author = author.author;
       obj.author = author;
       tmp10 = React7(CutoutGuildIconWithUserCustom, obj);
     }
+    tmp2 = null == stateFromStores1;
   }, items6);
   const memo1 = obj5.useMemo(() => {
     let tmp2 = null;
     if (null != stateFromStores1) {
-      const obj = { style: { maxWidth: 225 }, lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp.name };
-      tmp2 = React7(Text_Text.Text, obj, tmp.id);
+      const obj = { style: { maxWidth: 225 }, lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
+      tmp2 = React7(Text_Text.Text, obj, stateFromStores1.id);
     }
     return tmp2;
   }, items7);
@@ -231,7 +232,7 @@ export default function ICYMICardInCard(message) {
       if (null != author) {
         if (null != guild_id) {
           if (null != stateFromStores) {
-            if (null != c14) {
+            if (null != _undefined) {
               let colorString;
               if (stateFromStores2 != null) {
                 colorString = stateFromStores2.colorString;
@@ -252,10 +253,10 @@ export default function ICYMICardInCard(message) {
               const obj2 = { variant: "text-sm/semibold", style: null, children: null };
               items[1] = tmp42;
               obj2.style = items;
-              let combined = arr;
-              if (arr.length > 20) {
+              let combined = _undefined;
+              if (_undefined.length > 20) {
                 const _HermesInternal = HermesInternal;
-                combined = "" + arr.slice(0, 17) + "...";
+                combined = "" + _undefined.slice(0, 17) + "...";
               }
               obj2.children = combined;
               const items1 = [React7(Text_Text.Text, obj2), , ];
@@ -278,7 +279,7 @@ export default function ICYMICardInCard(message) {
     }
     if (null != stateFromStores) {
       obj = getIconForChannel;
-      let TextIcon = obj.getIconForChannel(tmp5);
+      let TextIcon = obj.getIconForChannel(stateFromStores);
     } else {
       TextIcon = TextIcon2.TextIcon;
     }

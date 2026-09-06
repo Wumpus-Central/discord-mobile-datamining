@@ -3,6 +3,7 @@
 // Module 11364 (useStrangerDangerWarning)
 import initialize from "initialize" /* 504 */;
 import useUserIsTeen from "useUserIsTeen" /* 8644 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10972 */;
 import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10973 */;
 import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11365 */;
 import useIsMessageRequest from "useIsMessageRequest" /* 11366 */;
@@ -21,7 +22,7 @@ export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
   const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
   const userIsTeen = useUserIsTeen.useUserIsTeen();
   if (stateFromStores != null) {
-    const isStaffResult = stateFromStores.isStaff();
+    stateFromStores.isStaff();
   }
   if (userIsTeen) {
     if (!isSpamMessageRequest) {
@@ -32,4 +33,5 @@ export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
       }
     }
   }
+  tmpResult = useInappropriateConversationWarningsForChannel;
 };

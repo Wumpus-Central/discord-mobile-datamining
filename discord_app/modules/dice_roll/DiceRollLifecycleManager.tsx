@@ -35,6 +35,7 @@ class DiceRollLifecycleManager extends tmp3 {
         applyArgumentsResult.clearTimers();
         applyArgumentsResult.dismiss();
       }
+      tmp2 = null != state.channelId && state.channelId !== channelId.channelId;
     };
     applyArgumentsResult.handleStartRoll = function handleStartRoll(channelId) {
       channelId = channelId.channelId;
@@ -63,7 +64,7 @@ class DiceRollLifecycleManager extends tmp3 {
           }
           closure_2 = tmp4;
           const obj = { channelId, rolling: true, diceCount: num3, diceSides: tmp4, results: null };
-          obj2.setState(obj);
+          state.setState(obj);
           items = [];
           for (let num4 = 0; num4 < num3; num4 = num4 + 1) {
             let _Math3 = Math;
@@ -76,7 +77,6 @@ class DiceRollLifecycleManager extends tmp3 {
             applyArgumentsResult.finishRoll(channelId, num3, closure_2, items);
           }, closure_1_12);
         }
-        obj2 = state;
       }
     };
     return applyArgumentsResult;

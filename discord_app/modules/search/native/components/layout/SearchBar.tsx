@@ -34,11 +34,11 @@ let closure_15 = createStyles.createStyles((minHeight) => {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/SearchBar.tsx");
 
-export default noop.memo(noop.forwardRef((searchContext, ref) => {
+export default noop.memo(noop.forwardRef((searchContext, arg1) => {
   searchContext = searchContext.searchContext;
   const setSuggestionsDismissed = searchContext.setSuggestionsDismissed;
   let stateFromStores;
-  ref = undefined;
+  let ref;
   let obj = searchContext(stateFromStores[15]);
   let tmp = closure_15(closure_10 * Math.min(2, obj.useFontScale()));
   const items = [SearchQueryStore];
@@ -49,13 +49,12 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
   const memo = ref.useMemo(() => stateFromStores.map(SearchPlatformUtils.toSearchBarTag), items2);
   const memo1 = ref.useMemo(() => {
     if (0 !== stateFromStores.length) {
-      const mapped = arr.map((text) => text.text);
+      const mapped = stateFromStores.map((text) => text.text);
       const joined = mapped.join(", ");
       const intl = util.intl;
       const obj = { text: joined };
       return intl.formatToPlainString(util.t["0zoRaK"], obj);
     }
-    arr = stateFromStores;
   }, items3);
   ref = ref.useRef(null);
   closure_129_0 = searchContext;
@@ -66,9 +65,9 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
     const type = searchContext.type;
     const channelIds = SearchQueryStore.getChannelIds(searchContext);
     if (SearchTypes.GUILD_CHANNEL !== type) {
-      if (tmp3.GUILD !== type) {
-        if (tmp3.CHANNEL === type) {
-          const channel = ChannelStore.getChannel(tmp.channelId);
+      if (SearchTypes.GUILD !== type) {
+        if (SearchTypes.CHANNEL === type) {
+          const channel = ChannelStore.getChannel(searchContext.channelId);
           if (null == channel) {
             const intl4 = util.intl;
             let stringResult = intl4.string(util.t["5h0QOP"]);
@@ -80,7 +79,7 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
             stringResult = intl3.formatToPlainString(util.t.LDpotA, obj);
           }
           return stringResult;
-        } else if (tmp3.DMS === type) {
+        } else if (SearchTypes.DMS === type) {
           const intl2 = util.intl;
           return intl2.string(util.t.m7OrlR);
         } else {
@@ -90,7 +89,7 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
       }
     }
     if (0 === channelIds.size) {
-      const guild = GuildStore.getGuild(tmp.guildId);
+      const guild = GuildStore.getGuild(searchContext.guildId);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -108,7 +107,7 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
       return intl5.string(util.t["5h0QOP"]);
     }
   }, items5);
-  const imperativeHandle = ref.useImperativeHandle(ref, () => ({
+  const imperativeHandle = ref.useImperativeHandle(arg1, () => ({
     setText(arg0) {
       const current = ref.current;
       let setTextResult;
@@ -198,19 +197,18 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
   const callback = ref.useCallback((arg0) => {
     closure_0 = arg0;
     if (SearchQueryStore.getTextInputValue(searchContext) !== arg0) {
-      SearchPlatformActionCreatorsDefault.updateSearchQuery(tmp, (setTextInputValue) => {
+      SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTextInputValue) => {
         setTextInputValue.setTextInputValue(closure_0, true);
       });
-      const tmp2 = importDefault;
-      const result = SearchPlatformUtilsDefault.syncAutocompleteDebounced(tmp);
-      if (!obj.isAutocompleteVisible(tmp)) {
-        const tmp2Result = tmp2(12338);
+      const result = SearchPlatformUtilsDefault.syncAutocompleteDebounced(searchContext);
+      if (!SearchQueryStore.isAutocompleteVisible(searchContext)) {
+        const tmp2Result = SearchPlatformUtilsDefault;
         if (isInitialSearchQueryResult) {
-          const initialMessages = tmp2Result.fetchInitialMessages(tmp);
+          const initialMessages = tmp2Result.fetchInitialMessages(searchContext);
         } else {
-          const initialMessagesDebounced = tmp2Result.fetchInitialMessagesDebounced(tmp);
+          const initialMessagesDebounced = tmp2Result.fetchInitialMessagesDebounced(searchContext);
         }
-        isInitialSearchQueryResult = obj.isInitialSearchQuery(tmp);
+        isInitialSearchQueryResult = SearchQueryStore.isInitialSearchQuery(searchContext);
       }
     }
   }, items7);
@@ -226,34 +224,33 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
       obj = { text: tmp2.text };
       AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj));
       if (tmp2.type === constants.COMPLETE) {
-        obj = { searchContext: tmp, searchTokenType: tmp2.searchTokenType, isDefault: tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD };
+        obj = { searchContext, searchTokenType: tmp2.searchTokenType, isDefault: tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD };
         let result = search_tracking_TrackingDefault.trackSearchFilterRemove(obj);
       }
-      SearchPlatformActionCreatorsDefault.updateSearchQuery(tmp, (removeTag) => {
+      SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (removeTag) => {
         removeTag.removeTag(closure_0);
         if (type.type === constants.PREFIX) {
           const result = removeTag.restoreDraftTextInputValue();
         }
       });
-      const tmp6 = importDefault;
-      const result1 = SearchPlatformUtilsDefault.syncAutocompleteDebounced(tmp);
-      const queryString = obj.getQueryString(tmp);
+      const result1 = SearchPlatformUtilsDefault.syncAutocompleteDebounced(searchContext);
+      const queryString = obj.getQueryString(searchContext);
       if (queryString !== searchResultsQuery) {
-        const tmp6Result = tmp6(12338);
+        const tmp6Result = SearchPlatformUtilsDefault;
         if (tmp11) {
-          const initialMessages = tmp6Result.fetchInitialMessages(tmp);
+          const initialMessages = tmp6Result.fetchInitialMessages(searchContext);
         } else {
-          const initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+          const initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(searchContext);
         }
       }
-      searchResultsQuery = obj.getSearchResultsQuery(tmp);
+      searchResultsQuery = obj.getSearchResultsQuery(searchContext);
     }
   }, items8);
   const memo2 = ref.useMemo(() => () => {
     closure_1_1();
     let obj = SearchQueryStore;
-    const prefixTag = SearchQueryStore.getPrefixTag(closure_1_0);
-    const trimmed = SearchQueryStore.getTextInputValue(closure_1_0).trim();
+    const prefixTag = SearchQueryStore.getPrefixTag(searchContext);
+    const trimmed = SearchQueryStore.getTextInputValue(searchContext).trim();
     let result = null != prefixTag;
     if (result) {
       result = "" !== trimmed;
@@ -263,23 +260,24 @@ export default noop.memo(noop.forwardRef((searchContext, ref) => {
       const obj2 = searchContext(stateFromStores[20]);
     }
     if (result) {
-      setSuggestionsDismissed(stateFromStores[17]).updateSearchQuery(tmp2, (setTextInputValue) => {
+      setSuggestionsDismissed(stateFromStores[17]).updateSearchQuery(searchContext, (setTextInputValue) => {
         setTextInputValue.setTextInputValue("");
         setTextInputValue.addTag({ type: constants.ANSWER, text: trimmed });
         const result = setTextInputValue.restoreDraftTextInputValue();
       });
       const obj3 = setSuggestionsDismissed(stateFromStores[17]);
-      obj = { searchContext: tmp2, searchTokenType: null, location: null };
+      obj = { searchContext, searchTokenType: null, location: null };
       ({ searchTokenType: obj5.searchTokenType, location: obj5.location } = prefixTag);
       setSuggestionsDismissed(stateFromStores[19]).trackSearchFilterAdd(obj);
       const obj4 = setSuggestionsDismissed(stateFromStores[19]);
     }
-    if (!obj.isQueryStringEmpty(closure_1_0)) {
-      setSuggestionsDismissed(stateFromStores[17]).updateSearchQuery(tmp2, (markExplicitSearchSubmitted) => markExplicitSearchSubmitted.markExplicitSearchSubmitted());
+    if (!obj.isQueryStringEmpty(searchContext)) {
+      setSuggestionsDismissed(stateFromStores[17]).updateSearchQuery(searchContext, (markExplicitSearchSubmitted) => markExplicitSearchSubmitted.markExplicitSearchSubmitted());
       const obj6 = setSuggestionsDismissed(stateFromStores[17]);
-      const initialMessages = setSuggestionsDismissed(stateFromStores[16]).fetchInitialMessages(tmp2);
+      const initialMessages = setSuggestionsDismissed(stateFromStores[16]).fetchInitialMessages(searchContext);
       const obj7 = setSuggestionsDismissed(stateFromStores[16]);
     }
+    const str = SearchQueryStore.getTextInputValue(searchContext);
   }, items9);
   const textInputValue = SearchQueryStore.getTextInputValue(searchContext);
   obj = { ref, accessibilityHint: memo1, autoFocus: true, defaultValue: textInputValue, style: tmp.searchBar, tags: memo, icon: null, onChangeText: null, onRemove: null, placeholder: null, onSubmitEditing: null, leadingFade: true, horizontal: true, autoClearInputOnTagAdd: false };

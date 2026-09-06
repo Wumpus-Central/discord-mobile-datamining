@@ -5,9 +5,9 @@ import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6994 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7385 */;
 import useShopOrientationLock from "useShopOrientationLock" /* 15806 */;
+import CollectiblesShopV2 from "CollectiblesShopV2" /* 15807 */;
 import noop from "module_19" /* 19 */;
 
-const CollectiblesShopV2 = tmp(15807);
 require = fn;
 const constants = fn(1076).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;

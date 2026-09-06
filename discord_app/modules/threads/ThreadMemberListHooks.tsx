@@ -19,11 +19,11 @@ export const useThreadMemberListSections = function useThreadMemberListSections(
   importDefault = stateFromStores;
   require("useMountEffect")(() => {
     let id;
-    if (closure_1 != null) {
-      id = tmp.id;
+    if (stateFromStores != null) {
+      id = stateFromStores.id;
     }
     if (null != id) {
-      GuildSubscriptionsActionCreators.subscribeChannel(tmp.id, closure_0, GuildChannelSubscriptions.DEFAULT_RANGES);
+      GuildSubscriptionsActionCreators.subscribeChannel(stateFromStores.id, closure_0, GuildChannelSubscriptions.DEFAULT_RANGES);
     }
   });
   const items = [closure_4];

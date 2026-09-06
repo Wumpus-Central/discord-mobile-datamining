@@ -64,8 +64,8 @@ export default function useProfileFrameSections() {
     const items1 = [obj, { section: obj.PREMIUM_PURCHASE, items: reduced.premium_purchase, height: 12, header: stringResult }, ];
     obj = { section: obj.PREVIEW, items: reduced.preview, height: 12, header: null };
     if (!isProfileFramesEarlyAccessPhase) {
-      const intl3 = tmp(1114).intl;
-      stringResult = intl3.string(tmp(1114).t["1vbbee"]);
+      const intl3 = util.intl;
+      stringResult = intl3.string(util.t["1vbbee"]);
     }
     obj.header = stringResult;
     items1[2] = obj;

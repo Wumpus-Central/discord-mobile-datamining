@@ -36,7 +36,7 @@ function RobloxIcon(theme) {
   const items = [tmp.robloxIconContainer, { backgroundColor: str }];
   obj.style = items;
   const source = AvatarUtils.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
-  obj = { size: tmp2(1178).IconSizes.LARGE, source, disableColor: true };
+  obj = { size: native.IconSizes.LARGE, source, disableColor: true };
   obj.children = map1(native.Icon, obj);
   return map1(View, obj);
 }
@@ -118,7 +118,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const items = [closure_13(RobloxIcon, { theme }), closure_13(UnionIcon, { theme }), closure_13(UserIcon, {})];
   obj2.children = items;
   const items1 = [closure_14(markAsDismissed(4973).Stack, obj2), , ];
-  const obj3 = { justify: "center", children: null };
+  let obj3 = { justify: "center", children: null };
   const obj4 = { variant: "heading-xl/bold", style: tmp.text, children: null };
   const intl = markAsDismissed(1114).intl;
   obj4.children = intl.string(markAsDismissed(1114).t.t3asUZ);

@@ -4,11 +4,12 @@
 import util from "util" /* 1114 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
 import isStreamingDefault from "isStreaming" /* 8259 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9770 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10891 */;
 import HappeningNowCard from "HappeningNowCard" /* 15295 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
-const getChannelA11yLabelDefault = tmp4(9770);
 require = fn;
 const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
@@ -62,7 +63,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     tmp3 = null;
     if (null != name) {
       if (!isStreamingDefault(activity)) {
-        if (tmp4(10891)(activity)) {
+        if (isListeningOnSpotifyDefault(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;
@@ -76,7 +77,6 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         const name2 = activity.name;
       }
       const details = activity.details;
-      tmp4 = importDefault;
     }
   }
 };

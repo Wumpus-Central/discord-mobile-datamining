@@ -30,7 +30,7 @@ const __initData2 = { code: "function EmojiPickerListComponentAndroidTsx2(index)
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx");
 
-export default noop.forwardRef((analyticsLocations, ref) => {
+export default noop.forwardRef((analyticsLocations, arg1) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const bottomSheetIndex = analyticsLocations.bottomSheetIndex;
   const categoryIndexActive = analyticsLocations.categoryIndexActive;
@@ -44,7 +44,7 @@ export default noop.forwardRef((analyticsLocations, ref) => {
   const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
   let callback1;
   ({ paddingTop, paddingBottom } = analyticsLocations);
-  ref = data.useRef(null);
+  const ref = data.useRef(null);
   const items = [ref, data];
   const effect = data.useEffect(() => {
     let hasGuildData = null != ref.current;
@@ -143,7 +143,7 @@ export default noop.forwardRef((analyticsLocations, ref) => {
   const callback5 = data.useCallback((nativeEvent) => {
     onShowNitroUpsell(nativeEvent.nativeEvent.showNitroUpsell);
   }, items5);
-  const imperativeHandle = data.useImperativeHandle(ref, () => ({
+  const imperativeHandle = data.useImperativeHandle(arg1, () => ({
     scrollToHeaderIndex(animated) {
       let flag = animated.animated;
       if (flag === undefined) {

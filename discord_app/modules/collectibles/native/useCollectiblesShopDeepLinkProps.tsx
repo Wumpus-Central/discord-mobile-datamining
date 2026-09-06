@@ -59,7 +59,7 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
         let bound;
         if (null != products) {
           const _Math = Math;
-          bound = Math.max(0, obj3.findIndex((skuId) => skuId.skuId === initialBaseProductSkuId));
+          bound = Math.max(0, products.findIndex((skuId) => skuId.skuId === initialBaseProductSkuId));
         }
         obj.productIndex = bound;
         obj = categories;
@@ -69,7 +69,6 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
           bound1 = Math.max(0, obj.findIndex((skuId) => skuId.skuId === initialCategorySkuId));
         }
         obj.categoryIndex = bound1;
-        obj3 = products;
       }
       return obj;
     }

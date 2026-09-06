@@ -6,6 +6,7 @@ import Constants from "Constants" /* 1074 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import NativePermissionConstants from "NativePermissionConstants" /* 4770 */;
 import NativePermissionUtils from "NativePermissionUtils" /* 5139 */;
+import ProcessArgs2 from "ProcessArgs" /* 5141 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 import size from "module_2" /* 2 */;
 
@@ -17,11 +18,11 @@ const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
   let isDesktopResult = PlatformUtils.isDesktop();
   if (isDesktopResult) {
-    isDesktopResult = tmp(1115).isMac();
-    const tmpResult = tmp(1115);
+    isDesktopResult = PlatformUtils.isMac();
+    const tmpResult = PlatformUtils;
   }
   if (isDesktopResult) {
-    const ProcessArgs = tmp(5141).ProcessArgs;
+    const ProcessArgs = ProcessArgs2.ProcessArgs;
     isDesktopResult = !ProcessArgs.isDiscordTestSet();
   }
   return isDesktopResult;

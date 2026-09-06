@@ -2,6 +2,8 @@
 
 // Module 8600 (FormHint)
 import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import RedesignCompat from "RedesignCompat" /* 5686 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +36,7 @@ export default function FormHint(inset) {
     const items = [redesignHorizontalPadding, style];
     obj.style = items;
     obj.children = children;
-    let tmp4Result = tmp4(tmp2(4556).Text, obj);
+    let tmp4Result = jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", style: null, children: null });
   } else {
     const items1 = [tmp.formHintText, , ];
     let horizonatalPadding = !flag;
@@ -46,7 +48,7 @@ export default function FormHint(inset) {
     items1[2] = style;
     obj.style = items1;
     obj.children = children;
-    tmp4Result = tmp4(tmp2(1178).LegacyText, obj);
+    tmp4Result = jsx(native.LegacyText, { style: null, children: null });
   }
   return tmp4Result;
 };

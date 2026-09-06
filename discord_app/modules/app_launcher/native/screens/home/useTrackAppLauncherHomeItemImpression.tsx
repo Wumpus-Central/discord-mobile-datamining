@@ -20,17 +20,17 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
       if (item.type === trackAppLauncherItemImpressionOnFirstView(dependencyMap[2]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
         shelfItem1SectionPosition = item.sectionPosition;
         applicationId = item.application.id;
-        let tmpResult = tmp(tmp2[3]);
+        let tmpResult = trackAppLauncherItemImpressionOnFirstView(dependencyMap[3]);
         let flags = tmpResult.getApplicationFlags(item.application);
-      } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD) {
+      } else if (item.type === trackAppLauncherItemImpressionOnFirstView(dependencyMap[2]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD) {
         shelfItem1SectionPosition = item.sectionPosition;
         applicationId = item.item.application.id;
-        tmpResult = tmp(tmp2[3]);
+        tmpResult = trackAppLauncherItemImpressionOnFirstView(dependencyMap[3]);
         flags = tmpResult.getApplicationFlags(item.item.application);
-      } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.SHELF_ITEM) {
+      } else if (item.type === trackAppLauncherItemImpressionOnFirstView(dependencyMap[2]).AppLauncherHomeListItemType.SHELF_ITEM) {
         ({ sectionPosition: shelfItem1SectionPosition, applicationId } = item);
         flags = item.section.application.flags;
-      } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE) {
+      } else if (item.type === trackAppLauncherItemImpressionOnFirstView(dependencyMap[2]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE) {
         ({ shelfItem1SectionPosition, shelfItem2SectionPosition } = item);
         applicationId = item.shelfItem1.application.id;
         const shelfItem2 = item.shelfItem2;
@@ -55,12 +55,13 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
         obj.applicationId = id;
         let asUintNResult;
         if (null != flags2) {
-          asUintNResult = require("BigFlagUtils").asUintN(32, flags2);
-          const tmp5Result = require("BigFlagUtils");
+          asUintNResult = BigFlagUtilsAll.asUintN(32, flags2);
+          const tmp5Result = BigFlagUtilsAll;
         }
         obj.applicationFlags = asUintNResult;
         closure_1_0(obj);
       }
+      tmp7 = null != id && null != shelfItem2SectionPosition;
     });
   }, items);
   return obj;

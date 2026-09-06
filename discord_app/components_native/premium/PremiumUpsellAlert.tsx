@@ -10,12 +10,19 @@ import useThemeDefault from "useTheme" /* 4495 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import createStyles2 from "createStyles" /* 4560 */;
 import FastImageDefault from "FastImage" /* 5587 */;
+import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7447 */;
 import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9304 */;
 import _modDef9314 from "module_9314" /* 9314 */;
 import _modDef9315 from "module_9315" /* 9315 */;
+import _modDef9350 from "module_9350" /* 9350 */;
+import _modDef9351 from "module_9351" /* 9351 */;
 import _modDef9352 from "module_9352" /* 9352 */;
 import _modDef9353 from "module_9353" /* 9353 */;
+import _modDef9354 from "module_9354" /* 9354 */;
+import _modDef9355 from "module_9355" /* 9355 */;
+import _modDef9356 from "module_9356" /* 9356 */;
+import _modDef9357 from "module_9357" /* 9357 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9358 */;
 import _modDef9360 from "module_9360" /* 9360 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -63,37 +70,37 @@ function GlobalEmojiUpsell(arg0) {
       skuId = subscriptionTrial.skuId;
     }
   }
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   const formatResult = intl.format(util.t["KEn+LY"], {});
   if (null != skuId) {
     if (TIER_0.TIER_0 === skuId) {
-      const intl3 = tmp(1114).intl;
+      const intl3 = util.intl;
       obj = { planName: null };
-      let tmpResult = tmp(4218);
+      let tmpResult = PremiumUtils;
       obj.planName = tmpResult.getPremiumTypeDisplayName(map1.TIER_0);
-      let formatResult1 = intl3.format(tmp(1114).t["1P7x8p"], obj);
+      let formatResult1 = intl3.format(util.t["1P7x8p"], obj);
     } else {
       formatResult1 = formatResult;
       if (tmp8.TIER_2 === skuId) {
-        const intl5 = tmp(1114).intl;
+        const intl5 = util.intl;
         obj = { planName: null };
-        tmpResult = tmp(4218);
+        tmpResult = PremiumUtils;
         obj.planName = tmpResult.getPremiumTypeDisplayName(map1.TIER_2);
-        formatResult1 = intl5.format(tmp(1114).t["1P7x8p"], obj);
+        formatResult1 = intl5.format(util.t["1P7x8p"], obj);
       }
     }
   } else {
     formatResult1 = formatResult;
     if (useTier0Description) {
-      const intl2 = tmp(1114).intl;
-      const obj1 = { planName: tmp(4218).getPremiumTypeDisplayName(map1.TIER_0) };
-      formatResult1 = intl2.format(tmp(1114).t.kWBwlJ, obj1);
-      const tmpResult1 = tmp(4218);
+      const intl2 = util.intl;
+      const obj1 = { planName: PremiumUtils.getPremiumTypeDisplayName(map1.TIER_0) };
+      formatResult1 = intl2.format(util.t.kWBwlJ, obj1);
+      const tmpResult1 = PremiumUtils;
     }
   }
   const obj2 = { alertWidth, upsellItem: null };
   const obj3 = { image: _modDef9314, title: null, description: null };
-  const intl4 = tmp(1114).intl;
+  const intl4 = util.intl;
   obj3.title = intl4.string(util.t.UNtcBV);
   obj3.description = formatResult1;
   obj2.upsellItem = obj3;
@@ -123,20 +130,18 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_17);
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
-  const tmp6 = closure_1_14;
-  const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(9350);
+    let tmp4Result = _modDef9350;
   } else {
-    tmp4Result = tmp4(9351);
+    tmp4Result = _modDef9351;
   }
   obj = { image: tmp4Result, title: null, description: null };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.title = intl.string(util.t.OVN9la);
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj.description = intl2.string(util.t.j0dyAG);
   obj.upsellItem = obj;
-  return tmp6(tmp7, obj);
+  return closure_1_14(PremiumUpsellItem, obj);
 }
 function CustomProfilesUpsell(alertWidth) {
   let obj = createStyles2;
@@ -167,9 +172,9 @@ function CustomAppIconsUpsell(alertWidth) {
     iconSource = arr.filter((isPremium) => isPremium.isPremium)[0].iconSource;
   }
   obj = { image: iconSource, title: null, description: null };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.title = intl.string(util.t["1B1Cyn"]);
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj.description = intl2.string(util.t.VL5TYT);
   obj.upsellItem = obj;
   return closure_1_14(PremiumUpsellItem, obj);
@@ -199,40 +204,36 @@ function LongerMessageUpsell(alertWidth) {
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
   const tmp6 = useMessageMaxLengthDefault();
-  const tmp7 = closure_1_14;
-  const tmp8 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(9354);
+    let tmp4Result = _modDef9354;
   } else {
-    tmp4Result = tmp4(9355);
+    tmp4Result = _modDef9355;
   }
   obj = { image: tmp4Result, title: null, description: null };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.title = intl.string(util.t["8cjmTj"]);
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj.description = intl2.formatToPlainString(util.t.moN9wh, { maxLength: tmp6 });
   obj.upsellItem = obj;
-  return tmp7(tmp8, obj);
+  return closure_1_14(PremiumUpsellItem, obj);
 }
 function GuildCapUpsell(alertWidth) {
   let obj = createStyles2;
   const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_17);
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
-  const tmp6 = closure_1_14;
-  const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(9356);
+    let tmp4Result = _modDef9356;
   } else {
-    tmp4Result = tmp4(9357);
+    tmp4Result = _modDef9357;
   }
   obj = { image: tmp4Result, title: null, description: null };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.title = intl.string(util.t["CoNXB+"]);
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj.description = intl2.format(util.t.mkXb2F, {});
   obj.upsellItem = obj;
-  return tmp6(tmp7, obj);
+  return closure_1_14(PremiumUpsellItem, obj);
 }
 function UploadUpsell(arg0) {
   ({ item, alertWidth } = arg0);
@@ -243,16 +244,16 @@ function UploadUpsell(arg0) {
   let tmp6Result = null;
   if (_slicedToArray(noop.useState(!stateFromStores), 1)[0]) {
     obj = { start: true, end: true, label: null, subLabel: null, value: null, onValueChange: null };
-    const intl = tmp(1114).intl;
-    obj.label = intl.string(tmp(1114).t.ix8XIj);
-    const intl2 = tmp(1114).intl;
-    obj.subLabel = intl2.string(tmp(1114).t["wC0+Ph"]);
+    const intl = util.intl;
+    obj.label = intl.string(util.t.ix8XIj);
+    const intl2 = util.intl;
+    obj.subLabel = intl2.string(util.t["wC0+Ph"]);
     obj.value = stateFromStores;
     obj.onValueChange = function onValueChange(dataSavingMode) {
       const obj = { dataSavingMode };
       const result = obj.updatedUnsyncedSettings(obj);
     };
-    tmp6Result = closure_1_14(tmp(7201).TableSwitchRow, obj);
+    tmp6Result = closure_1_14(TableSwitchRow.TableSwitchRow, obj);
   }
   children[1] = tmp6Result;
   return __initData(value2, { children });
@@ -325,10 +326,10 @@ class PremiumUpsellAlert {
     obj1.renderConfirmIcon = function renderConfirmIcon() {
       const obj = { source: _modDef9360, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
       if (constants2.GLOBAL_EMOJI !== initialUpsellKey) {
-        if (tmp4.ANIMATED_EMOJI !== tmp3) {
-          if (tmp4.CUSTOM_PROFILES !== tmp3) {
-            if (tmp4.PREMIUM_GUILD_PROFILE !== tmp3) {
-              if (tmp4.APP_ICONS !== tmp3) {
+        if (constants2.ANIMATED_EMOJI !== initialUpsellKey) {
+          if (constants2.CUSTOM_PROFILES !== initialUpsellKey) {
+            if (constants2.PREMIUM_GUILD_PROFILE !== initialUpsellKey) {
+              if (constants2.APP_ICONS !== initialUpsellKey) {
                 return null;
               }
             }

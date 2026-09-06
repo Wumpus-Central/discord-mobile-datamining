@@ -101,7 +101,6 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const nextResult = iter.next();
       while (iter !== undefined) {
         ({ questContentPosition, messageId, channelId } = nextResult);
-        let tmp2 = QuestStore;
         let quest = QuestStore.getQuest(nextResult.questId);
         let tmp4 = quest;
         if (null != quest) {
@@ -112,7 +111,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
           obj.channelId = channelId;
           obj.messageId = messageId;
           obj.questId = tmp4.id;
-          obj.isQuestEnrollmentBlocked = null != tmp2.questEnrollmentBlockedUntil;
+          obj.isQuestEnrollmentBlocked = null != QuestStore.questEnrollmentBlockedUntil;
           obj.sourceQuestContent = QuestTypes.QuestContent.QUEST_EMBED_MOBILE;
           obj.adCreativeType = AdCreativeType.AdCreativeType.QUEST;
           let ensureImpressionResult = applyArgumentsResult.ensureImpression(obj);
@@ -150,9 +149,9 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         if (tmp14) {
           cloneResult.start();
         }
-        const impressionCache2 = tmp2.impressionCache;
+        const impressionCache2 = applyArgumentsResult.impressionCache;
         const result = impressionCache2.set(cacheKey, cloneResult);
-        tmp14 = tmp2.isChatViewable && !cloneResult.isRunning;
+        tmp14 = applyArgumentsResult.isChatViewable && !cloneResult.isRunning;
       }
     };
     applyArgumentsResult.stopOne = function stopOne(key) {
@@ -168,7 +167,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       if (value != null) {
         value.stop();
       }
-      if (key.shouldDelete) {
+      if (key.key.shouldDelete) {
         log();
         const impressionCache2 = applyArgumentsResult.impressionCache;
         impressionCache2.del(key);
@@ -192,15 +191,13 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const impressionCache = applyArgumentsResult.impressionCache;
       const keys = impressionCache.keys();
       for (const item10023 of keys) {
-        let tmp3 = item10023;
         if (!set.has(item10023)) {
-          obj = { key: null, shouldDelete: null };
-          obj.key = tmp3;
-          obj.shouldDelete = flag;
+          obj = { key: item10023, shouldDelete: flag };
           let stopOneResult = applyArgumentsResult.stopOne(obj);
         }
         continue;
       }
+      const set = new Set(visibleEmbeds.map((item) => cacheKey.getCacheKey(item)));
     };
     applyArgumentsResult.getCacheKey = function getCacheKey(merged) {
       return merged.channelId + ":" + merged.messageId + ":" + merged.questId;
@@ -237,36 +234,36 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
           log();
           return false;
         } else {
-          const channel = ChannelStore.getChannel(obj.chatChannelId);
+          const channel = ChannelStore.getChannel(applyArgumentsResult.chatChannelId);
           let type;
           if (channel != null) {
             type = channel.type;
           }
-          const chatOpen = ChannelRTCStore.getChatOpen(obj.chatChannelId);
-          const tmp8 = type === tmp3(1094).ChannelTypes.GUILD_STAGE_VOICE && chatOpen;
-          const openModalKey = tmp3(4417).getOpenModalKey();
+          const chatOpen = ChannelRTCStore.getChatOpen(applyArgumentsResult.chatChannelId);
+          const tmp8 = type === ChannelTypes.ChannelTypes.GUILD_STAGE_VOICE && chatOpen;
+          const openModalKey = NavigationRouteUtils.getOpenModalKey();
           const _HermesInternal = HermesInternal;
           if (null != openModalKey) {
-            if (openModalKey !== "voice-channel-" + obj.chatChannelId) {
+            if (openModalKey !== "voice-channel-" + applyArgumentsResult.chatChannelId) {
               log();
               return false;
             }
           }
-          if (obj.isSearchShowing()) {
+          if (applyArgumentsResult.isSearchShowing()) {
             log();
             return false;
           } else {
             if (null == AlertStore.getAlert()) {
-              const useAlertStore = tmp3(4906).useAlertStore;
+              const useAlertStore = useAlertStore2.useAlertStore;
               if (useAlertStore.getState().alerts.length <= 0) {
-                const tmp14 = type === tmp3(1094).ChannelTypes.GUILD_VOICE && chatOpen;
+                const tmp14 = type === ChannelTypes.ChannelTypes.GUILD_VOICE && chatOpen;
                 let result = null != type;
                 if (result) {
                   result = isTextChannel(type);
                 }
                 const state1 = VoicePanelStore.getState();
                 if (result) {
-                  result = obj.isOnChannelNavigationRoute();
+                  result = applyArgumentsResult.isOnChannelNavigationRoute();
                 }
                 if (result) {
                   result = !isAnyVoicePanelOpenResult;
@@ -283,14 +280,14 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
                 if (!result) {
                   result = tmp14;
                 }
-                log(obj.chatChannelId);
+                log(applyArgumentsResult.chatChannelId);
                 return result;
               }
             }
             log();
             return false;
           }
-          const tmp3Result = tmp3(4417);
+          const tmp3Result = NavigationRouteUtils;
         }
       }
     };
@@ -327,10 +324,10 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     };
     applyArgumentsResult.refreshImpressions = function refreshImpressions() {
       if (applyArgumentsResult.isChatViewable) {
-        const result = obj.updateImpressionsForChatBecameViewable();
+        const result = applyArgumentsResult.updateImpressionsForChatBecameViewable();
       } else {
         log();
-        obj.stopMany();
+        applyArgumentsResult.stopMany();
       }
     };
     applyArgumentsResult.checkChatViewable = function checkChatViewable() {
@@ -338,8 +335,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       let flag = isChatViewable !== applyArgumentsResult.isChatViewable;
       if (flag) {
         log();
-        obj.isChatViewable = isChatViewable;
-        obj.refreshImpressions();
+        applyArgumentsResult.isChatViewable = isChatViewable;
+        applyArgumentsResult.refreshImpressions();
         flag = true;
       }
       return flag;
@@ -348,16 +345,16 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const result = applyArgumentsResult.isOnChannelNavigationRoute();
       if (result !== applyArgumentsResult.wasOnChannelNavigationRoute) {
         log();
-        obj.checkChatViewable();
-        obj.wasOnChannelNavigationRoute = result;
+        applyArgumentsResult.checkChatViewable();
+        applyArgumentsResult.wasOnChannelNavigationRoute = result;
       }
     };
     applyArgumentsResult.checkSearchShowing = function checkSearchShowing() {
       const isSearchShowingResult = applyArgumentsResult.isSearchShowing();
       if (isSearchShowingResult !== applyArgumentsResult.wasSearchShowing) {
         log();
-        obj.checkChatViewable();
-        obj.wasSearchShowing = isSearchShowingResult;
+        applyArgumentsResult.checkChatViewable();
+        applyArgumentsResult.wasSearchShowing = isSearchShowingResult;
       }
     };
     applyArgumentsResult.onChannelChanged = function onChannelChanged(channelId) {
@@ -372,9 +369,9 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     applyArgumentsResult.checkOpenModalKey = function checkOpenModalKey() {
       const openModalKey = NavigationRouteUtils.getOpenModalKey();
       if (openModalKey !== applyArgumentsResult.previouslyOpenModalKey) {
-        log(obj2.previouslyOpenModalKey);
-        obj2.checkChatViewable();
-        obj2.previouslyOpenModalKey = openModalKey;
+        log(applyArgumentsResult.previouslyOpenModalKey);
+        applyArgumentsResult.checkChatViewable();
+        applyArgumentsResult.previouslyOpenModalKey = openModalKey;
       }
     };
     applyArgumentsResult.handleQuestStoreChanged = function handleQuestStoreChanged() {
@@ -386,22 +383,21 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp4 = nextResult;
-        let obj2 = applyArgumentsResult;
         let parseCacheKeyResult = applyArgumentsResult.parseCacheKey(nextResult);
         let tmp7 = parseCacheKeyResult;
         if (set.has(parseCacheKeyResult.questId)) {
           value = quests.get(tmp7.questId);
           let tmp10 = value;
-          let tmp12 = obj2.questStatuses[tmp7.questId];
+          let tmp12 = applyArgumentsResult.questStatuses[tmp7.questId];
           let questStatus = null;
           if (null != value) {
             let obj3 = AnalyticsTypes;
             questStatus = obj3.getQuestStatus(tmp10);
           }
           if (questStatus !== tmp12) {
-            obj2.questStatuses[tmp7.questId] = tmp17;
-            if (obj2.isChatViewable) {
-              let impressionCache2 = obj2.impressionCache;
+            applyArgumentsResult.questStatuses[tmp7.questId] = tmp17;
+            if (applyArgumentsResult.isChatViewable) {
+              let impressionCache2 = applyArgumentsResult.impressionCache;
               value = impressionCache2.get(tmp4);
               let obj4 = value;
               let isRunning;
@@ -412,12 +408,12 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
                 if (null != tmp10) {
                   let cloneResult = obj4.clone({ triggeredByStatusChange: true });
                   let startResult = cloneResult.start();
-                  let impressionCache3 = obj2.impressionCache;
+                  let impressionCache3 = applyArgumentsResult.impressionCache;
                   let result = impressionCache3.set(tmp4, cloneResult);
                 } else {
                   let obj = { key: null, shouldDelete: true };
                   obj.key = tmp4;
-                  let stopOneResult = obj2.stopOne(obj);
+                  let stopOneResult = applyArgumentsResult.stopOne(obj);
                 }
               }
             }
@@ -425,12 +421,13 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         }
         continue;
       }
+      set = new Set(quests.keys());
     };
     applyArgumentsResult.handleSelectedChannelStoreChanged = function handleSelectedChannelStoreChanged() {
       log();
       const channelId = SelectedChannelStore.getChannelId();
       if (channelId !== applyArgumentsResult.chatChannelId) {
-        const channel = ChannelStore.getChannel(obj.chatChannelId);
+        const channel = ChannelStore.getChannel(applyArgumentsResult.chatChannelId);
         let type;
         if (channel != null) {
           type = channel.type;
@@ -445,10 +442,10 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
           hasItem = items.includes(type1);
         }
         if (!tmp9) {
-          log(obj.chatChannelId);
-          obj.onChannelChanged(channelId);
+          log(applyArgumentsResult.chatChannelId);
+          applyArgumentsResult.onChannelChanged(channelId);
         }
-        tmp9 = null != obj.chatChannelId && hasItem;
+        tmp9 = null != applyArgumentsResult.chatChannelId && hasItem;
       }
     };
     applyArgumentsResult.handleActionSheetStoreChanged = function handleActionSheetStoreChanged() {
@@ -456,8 +453,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const isOpenResult = ActionSheetStore.isOpen();
       if (isOpenResult !== applyArgumentsResult.wasActionSheetOpen) {
         log();
-        obj.checkChatViewable();
-        obj.wasActionSheetOpen = isOpenResult;
+        applyArgumentsResult.checkChatViewable();
+        applyArgumentsResult.wasActionSheetOpen = isOpenResult;
       }
     };
     applyArgumentsResult.handleAppStateStoreChanged = function handleAppStateStoreChanged() {
@@ -466,8 +463,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const tmp4 = state === ConstantsIOS.AppStates.ACTIVE;
       if (applyArgumentsResult.wasAppActive !== tmp4) {
         log();
-        obj.checkChatViewable();
-        obj.wasAppActive = tmp4;
+        applyArgumentsResult.checkChatViewable();
+        applyArgumentsResult.wasAppActive = tmp4;
       }
     };
     applyArgumentsResult.handleVoicePanelStoreChanged = function handleVoicePanelStoreChanged() {
@@ -476,8 +473,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const isAnyVoicePanelOpenResult = state.isAnyVoicePanelOpen();
       if (isAnyVoicePanelOpenResult !== applyArgumentsResult.wasAnyVoicePanelOpen) {
         log();
-        obj2.checkChatViewable();
-        obj2.wasAnyVoicePanelOpen = isAnyVoicePanelOpenResult;
+        applyArgumentsResult.checkChatViewable();
+        applyArgumentsResult.wasAnyVoicePanelOpen = isAnyVoicePanelOpenResult;
       }
     };
     applyArgumentsResult.handleChannelDetailsStoreChanged = function handleChannelDetailsStoreChanged() {
@@ -504,28 +501,27 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
             type1 = tmp7.type;
           }
           if (items1.includes(type1)) {
-            let obj2 = applyArgumentsResult;
             let channelsWithChatOpen = applyArgumentsResult.channelsWithChatOpen;
             let hasItem = channelsWithChatOpen.has(tmp4);
             let hasItem1 = openChatChannelIds.has(tmp4);
             if (hasItem !== hasItem1) {
               if (tmp14) {
-                if (tmp4 !== obj2.chatChannelId) {
-                  let onChannelChangedResult = obj2.onChannelChanged(nextResult);
+                if (tmp4 !== applyArgumentsResult.chatChannelId) {
+                  let onChannelChangedResult = applyArgumentsResult.onChannelChanged(nextResult);
                   iter.return();
                   break;
                 }
                 break;
               }
               if (!hasItem1) {
-                if (obj2.previousChatChannelId !== obj2.chatChannelId) {
-                  let onChannelChangedResult1 = obj2.onChannelChanged(obj2.previousChatChannelId);
+                if (applyArgumentsResult.previousChatChannelId !== applyArgumentsResult.chatChannelId) {
+                  let onChannelChangedResult1 = applyArgumentsResult.onChannelChanged(applyArgumentsResult.previousChatChannelId);
                   iter.return();
                   break;
                 }
                 break;
               }
-              let checkChatViewableResult = obj2.checkChatViewable();
+              let checkChatViewableResult = applyArgumentsResult.checkChatViewable();
               iter.return();
               break;
             }
@@ -538,6 +534,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         }
         continue;
       }
+      const set = new Set(items);
     };
     applyArgumentsResult.handleNavigationStateChanged = function handleNavigationStateChanged() {
       log();
@@ -552,8 +549,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       }
       if (tmp !== applyArgumentsResult.wasAlertOpen) {
         log();
-        obj.checkChatViewable();
-        obj.wasAlertOpen = tmp;
+        applyArgumentsResult.checkChatViewable();
+        applyArgumentsResult.wasAlertOpen = tmp;
       }
     };
     applyArgumentsResult.unsubscribeFromVoicePanelStore = function unsubscribeFromVoicePanelStore() {

@@ -110,14 +110,13 @@ export default function UserSettingsDebugLogs() {
     items[2] = str;
     obj.children = items;
     const items1 = [React5(Text_Text.Text, obj), ];
-    obj = { style: tmp3.code, variant: "text-sm/normal", children: null };
+    obj = { style: closure_0.code, variant: "text-sm/normal", children: null };
     const date = new Date(item.time);
-    const tmp2 = timestampProducer;
     const items2 = [React6(Text_Text.Text, { style: closure_0.code, variant: "text-sm/normal", color: "text-brand", children: "[" + item.category + "]: " }), item.message];
     obj.children = items2;
     items1[1] = React5(Text_Text.Text, obj);
     obj.children = items1;
-    return React5(tmp2, obj, item.index);
+    return React5(timestampProducer, obj, item.index);
   }, items2);
   const obj2 = { size: "md", placeholder: "Filter (regex)", onChange: tmp4Result[1], defaultValue: first1, trailingIcon: require("FiltersHorizontalIcon").FiltersHorizontalIcon, trailingPressableProps: null };
   const obj3 = { accessibilityLabel: null, onPress: null };

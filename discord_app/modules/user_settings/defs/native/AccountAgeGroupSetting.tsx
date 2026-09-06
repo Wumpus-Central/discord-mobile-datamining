@@ -38,7 +38,7 @@ const obj1 = {
     obj = { style: tmp.trailing, children: null };
     let tmp8 = shouldShowTinyBroncoAccountStatus;
     if (shouldShowTinyBroncoAccountStatus) {
-      obj = { dismissibleContent: tmp2(1943).DismissibleContent.TINY_BRONCO_SETTINGS, containerStyle: tmp.badge, noGradient: true };
+      obj = { dismissibleContent: dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS, containerStyle: tmp.badge, noGradient: true };
       tmp8 = React4(DismissiblePremiumNewBadgeDefault, obj);
     }
     const items = [tmp8, React4(TableRow.TableRow.TrailingText, { text: ageGroupValueLabel })];

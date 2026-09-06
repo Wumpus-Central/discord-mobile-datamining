@@ -16,11 +16,11 @@ function fileTypesFormattedStringHelper(arr, locale) {
       const items = [];
       if (arr.includes("image")) {
         const intl = util.intl;
-        items.push(intl.string(util.t["0r2WwT"]));
+        arr = items.push(intl.string(util.t["0r2WwT"]));
       }
       if (arr.includes("video")) {
         const intl2 = util.intl;
-        items.push(intl2.string(util.t["al+5qH"]));
+        arr = items.push(intl2.string(util.t["al+5qH"]));
       }
       if (arr.includes("audio")) {
         const intl3 = util.intl;
@@ -127,22 +127,22 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
   let items = [fileTypes];
   const memo = noop.useMemo(() => {
     if (null != closure_0) {
-      if (0 !== arr.length) {
-        const found = arr.filter((item) => item.startsWith("."));
+      if (0 !== closure_0.length) {
+        const found = closure_0.filter((item) => item.startsWith("."));
         const mapped = found.map((arr) => arr.slice(1));
-        if (arr.includes("image")) {
+        if (closure_0.includes("image")) {
           const push = mapped.push;
           const items = [];
           HermesBuiltin.arraySpread(closure_6, 0);
           HermesBuiltin.apply(items, mapped);
         }
-        if (arr.includes("video")) {
+        if (closure_0.includes("video")) {
           const push2 = mapped.push;
           const items1 = [];
           HermesBuiltin.arraySpread(closure_7, 0);
           HermesBuiltin.apply(items1, mapped);
         }
-        if (arr.includes("audio")) {
+        if (closure_0.includes("audio")) {
           const push3 = mapped.push;
           const items2 = [];
           HermesBuiltin.arraySpread(closure_8, 0);

@@ -69,7 +69,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     if (0 < categories.length) {
       while (categories[num].type !== EmojiCategoryTypes.UNICODE) {
         num = num + 1;
-        arr = arr2;
+        arr = categories;
       }
       let obj = { sections: null, firstUnicodeCategory: null, firstUnicodeCategoryIndex: null };
       const items = [categories.length];
@@ -206,8 +206,8 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     if (!isSearching) {
       if (ref3.current) {
         if (null != ref2.current) {
-          const current = tmp2.current;
-          tmp2.current = undefined;
+          const current = ref2.current;
+          ref2.current = undefined;
           tmp.current = false;
           const result = categoryIndexActive.set(current);
           const current2 = emojiPickerListRef.current;

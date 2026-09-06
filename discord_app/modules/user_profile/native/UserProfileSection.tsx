@@ -3,7 +3,10 @@
 // Module 11582 (UserProfileSection)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4271 */;
+import ColorUtils from "ColorUtils" /* 4409 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useProfileThemeValues from "useProfileThemeValues" /* 7184 */;
+import FormDivider from "FormDivider" /* 8599 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,8 +35,8 @@ export default function UserProfileSection(title) {
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
-      let borderColor = tmp3(4409).hexOpacityToRgba(tmp3(8599).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
-      const tmp3Result = tmp3(4409);
+      let borderColor = ColorUtils.hexOpacityToRgba(FormDivider.DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
+      const tmp3Result = ColorUtils;
     }
     obj.borderColor = borderColor;
     obj = { style: null };
@@ -45,11 +48,11 @@ export default function UserProfileSection(title) {
       obj1 = { style: tmp2.titleContainer, children: null };
       const obj2 = { style: tmp2.title, children: null };
       const obj3 = { variant: "eyebrow", accessibilityRole: "header", children: title };
-      const items1 = [React3(tmp3(4556).Text, obj3), headerIcon];
+      const items1 = [React3(Text_Text.Text, obj3), headerIcon];
       obj2.children = items1;
-      const items2 = [tmp8(tmp9, obj2), trailingIcon];
+      const items2 = [React4(View, obj2), trailingIcon];
       obj1.children = items2;
-      tmp8Result = tmp8(tmp9, obj1);
+      tmp8Result = React4(View, obj1);
     }
     const items3 = [tmp8Result, ];
     let tmp16 = null;

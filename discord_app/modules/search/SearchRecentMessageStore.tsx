@@ -47,13 +47,14 @@ const searchRecentMessageStore = new SearchRecentMessageStore(DispatcherDefault,
           const hasItem = set.has(messageRecord.author.id);
           let tmp4 = !hasItem;
           if (!hasItem) {
-            tmp4 = obj2.size < 15;
+            tmp4 = set.size < 15;
           }
           if (tmp4) {
-            obj2.add(messageRecord.author.id);
+            set.add(messageRecord.author.id);
             closure_1_1.push(messageRecord.author.id);
             _true = true;
           }
+          const obj = _true(items[0]);
         });
       });
       if (c0) {

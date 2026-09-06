@@ -166,15 +166,15 @@ function calculatePIPPositionFromVelocity(arg0) {
         const _Math8 = Math;
         const _Math9 = Math;
         rect.left = Math.min(Math.max(diff4, 0), diff1);
-        if (typeof tmp18 === "function") {
+        if (typeof clamp === "function") {
           const _Math10 = Math;
           const _Math11 = Math;
           rect.right = Math.min(Math.max(tmp19, 0), diff1);
-          if (typeof tmp18 === "function") {
+          if (typeof clamp === "function") {
             const _Math12 = Math;
             const _Math13 = Math;
             rect.top = Math.min(Math.max(diff5, 0), diff3);
-            if (typeof tmp18 === "function") {
+            if (typeof clamp === "function") {
               const _Math14 = Math;
               const _Math15 = Math;
               rect.bottom = Math.min(Math.max(tmp20, 0), diff3);
@@ -376,12 +376,11 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
     if (!showSecondaryPIP.showSecondaryPIP) {
       const activityParticipants = ChannelRTCStore.getActivityParticipants(channelId);
       for (const item10060 of activityParticipants) {
-        let tmp17 = item10060;
         let participants = item10060.participants;
         if (participants.some((item) => isActivityParticipantCurrentUserCurrentSession.isActivityParticipantCurrentUserCurrentSession(item))) {
-          if (!blockList.has(tmp17.id)) {
+          if (!blockList.has(item10060.id)) {
             let obj1 = { id: null, type: null };
-            ({ id: obj5.id, type: obj5.type } = tmp17);
+            ({ id: obj5.id, type: obj5.type } = item10060);
             obj3.return();
             return obj1;
           }
@@ -392,11 +391,10 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   }
   const streamParticipants = ChannelRTCStore.getStreamParticipants(channelId);
   for (const item10083 of streamParticipants) {
-    let tmp22 = item10083;
     if (!blockList.has(item10083.id)) {
-      if (null != ApplicationStreamingStore.getActiveStreamForUser(tmp22.user.id, tmp22.stream.guildId)) {
+      if (null != ApplicationStreamingStore.getActiveStreamForUser(item10083.user.id, item10083.stream.guildId)) {
         let obj2 = { id: null, type: null };
-        ({ id: obj7.id, type: obj7.type } = tmp22);
+        ({ id: obj7.id, type: obj7.type } = item10083);
         obj5.return();
         return obj2;
       }
@@ -426,14 +424,14 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
             return { id: null, type: null };
           }
         }
-      } else if (tmp31.ACTIVITY === type) {
+      } else if (ParticipantTypes.ACTIVITY === type) {
         const participants2 = participant2.participants;
         if (participants2.some((item) => isActivityParticipantCurrentUserCurrentSession.isActivityParticipantCurrentUserCurrentSession(item))) {
           const obj5 = { id: null, type: null };
           ({ id: obj9.id, type: obj9.type } = participant2);
           return obj5;
         }
-      } else if (tmp31.USER === type) {
+      } else if (ParticipantTypes.USER === type) {
         ({ id: obj19.id, type: obj19.type } = participant2);
         return { id: null, type: null };
       }
@@ -451,12 +449,11 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   }
   const videoParticipants = ChannelRTCStore.getVideoParticipants(channelId);
   for (const item10162 of videoParticipants) {
-    let tmp40 = item10162;
     if (!blockList.has(item10162.id)) {
       let obj16 = participantHasVideo;
-      if (obj16.canRenderParticipantVideo(tmp40)) {
+      if (obj16.canRenderParticipantVideo(item10162)) {
         let obj8 = { id: null, type: null };
-        ({ id: obj17.id, type: obj17.type } = tmp40);
+        ({ id: obj17.id, type: obj17.type } = item10162);
         obj15.return();
         return obj8;
       }
@@ -505,10 +502,9 @@ export const getPIPMode = function getPIPMode(connected) {
             } else {
               const videoParticipants = ChannelRTCStore.getVideoParticipants(channelId);
               for (const item10032 of videoParticipants) {
-                let tmp12 = item10032;
                 if (item10032.id !== AuthenticationStore.getId()) {
                   let obj2 = participantHasVideo;
-                  if (obj2.canRenderParticipantVideo(tmp12)) {
+                  if (obj2.canRenderParticipantVideo(item10032)) {
                     obj3.return();
                     return constants2.IN_PANEL;
                   }

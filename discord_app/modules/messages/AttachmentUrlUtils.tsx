@@ -200,12 +200,12 @@ function embedHasExpiredAttachmentUrl(image) {
     const images = image.images;
     let someResult;
     if (images != null) {
-      someResult = images.some(tmp);
+      someResult = images.some(isEmbedMediaExpiredAttachment);
     }
     tmpResult = someResult;
   }
   if (!tmpResult) {
-    tmpResult = tmp(image.video);
+    tmpResult = isEmbedMediaExpiredAttachment(image.video);
   }
   return tmpResult;
 }
@@ -217,86 +217,90 @@ let closure_13 = async function _refreshAttachmentUrl() {
   obj1.attachment_urls = items;
   request.body = obj1;
   await HTTP.post(request);
-  return arg1.body.refreshed_urls[0].refreshed;
+  return value.body.refreshed_urls[0].refreshed;
 };
-let closure_14 = async function _maybeRefreshAttachmentUrl(arg0, value) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_14 = async function _maybeRefreshAttachmentUrl() {
+  c3 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp2;
+            closure_130_0 = value;
+            closure_130_1 = undefined;
+            const toURLSafeResult = URLUtilsDefault.toURLSafe(value);
+            if (null == toURLSafeResult) {
+              c4 = 3;
+              const obj1 = { value, done: true };
+              return obj1;
+            } else if (shouldRefreshAttachmentUrl(toURLSafeResult)) {
+              c3 = 1;
+              c4 = 1;
+              const obj2 = {
+                value: (function refreshAttachmentUrl() {
+                            const self = this;
+                            const apply = closure_1_13.apply;
+                            if (typeof apply === "unknown") {
+                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                            } else {
+                              applyArgumentsResult = apply(self, arguments);
+                            }
+                            return applyArgumentsResult;
+                          })(value),
+                done: false
+              };
+              return obj2;
+            } else {
+              c4 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            }
+          }
+        } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_130_1 = value;
+          value = closure_130_1;
+          if (closure_130_1 == null) {
+            value = closure_130_0;
+          }
+          c4 = 3;
           obj = { value, done: true };
           return obj;
-        } else {
-          closure_2 = tmp2;
-          closure_130_0 = closure_0;
-          closure_130_1 = undefined;
-          const toURLSafeResult = URLUtilsDefault.toURLSafe(closure_0);
-          if (null == toURLSafeResult) {
-            c4 = 3;
-            const obj1 = { value: tmp17, done: true };
-            return obj1;
-          } else if (shouldRefreshAttachmentUrl(toURLSafeResult)) {
-            c3 = 1;
-            c4 = 1;
-            const obj2 = {
-              value: (function refreshAttachmentUrl() {
-                          const self = this;
-                          const apply = closure_1_13.apply;
-                          if (typeof apply === "unknown") {
-                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                          } else {
-                            applyArgumentsResult = apply(self, arguments);
-                          }
-                          return applyArgumentsResult;
-                        })(tmp17),
-              done: false
-            };
-            return obj2;
-          } else {
-            c4 = 3;
-            const obj3 = { value: tmp17, done: true };
-            return obj3;
-          }
         }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
-      } else {
-        closure_130_1 = value;
-        value = closure_130_1;
-        if (closure_130_1 == null) {
-          value = closure_130_0;
-        }
-        c4 = 3;
-        obj = { value, done: true };
-        return obj;
+      } catch (tmp12) {
+        c4 = tmp;
+        throw tmp12;
       }
-    } catch (tmp12) {
-      c4 = tmp;
-      throw tmp12;
     }
-  }
+  })();
 };
 const ATTACHMENT_PATH_PREFIXES = fn(5010).ATTACHMENT_PATH_PREFIXES;
 const Endpoints = fn(1074).Endpoints;

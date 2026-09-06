@@ -5,7 +5,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = fn;
-let closure_8 = async function _navigateToGameAnnouncement(arg0, value) {
+let closure_8 = async function _navigateToGameAnnouncement(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

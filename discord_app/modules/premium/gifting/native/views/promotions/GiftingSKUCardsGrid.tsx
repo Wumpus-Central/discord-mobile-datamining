@@ -2,8 +2,12 @@
 
 // Module 11041 (GiftingSKUCardsGrid)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8795 */;
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8810 */;
 import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8824 */;
 import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11042 */;
@@ -68,10 +72,10 @@ let closure_10 = noop.memo((rewardSkuId) => {
     obj.style = items2;
     if (isNameplateRecord(first)) {
       obj1 = { item: first, animate: isSelected };
-      let tmp7Result = tmp7(NameplateCardPreviewDefault, obj1);
+      let tmp7Result = React5(NameplateCardPreviewDefault, obj1);
     } else if (isAvatarDecorationRecord(first)) {
       obj2 = { item: first, size: 100, animate: isSelected, avatarSource: tmp6 };
-      tmp7Result = tmp7(AvatarDecorationSampleV2Default, obj2);
+      tmp7Result = React5(AvatarDecorationSampleV2Default, obj2);
     }
     obj.children = tmp7Result;
     const items3 = [React5(View, obj), , ];
@@ -79,27 +83,27 @@ let closure_10 = noop.memo((rewardSkuId) => {
     if (claimed) {
       const obj3 = { style: tmp.checkmarkContainer, children: null };
       const obj4 = { size: "lg", style: tmp.checkmark };
-      obj3.children = tmp7(tmp2(8795).CheckmarkLargeBoldIcon, obj4);
-      tmp7Result = tmp7(tmp8, obj3);
+      obj3.children = React5(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, obj4);
+      tmp7Result = React5(View, obj3);
     }
     items3[1] = tmp7Result;
     const obj5 = { style: tmp.textContainer, children: null };
     const obj6 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: product.name };
-    const items4 = [React5(tmp2(4556).Text, obj6), ];
-    const intl = tmp2(1114).intl;
+    const items4 = [React5(Text_Text.Text, obj6), ];
+    const intl = util.intl;
     const string = intl.string;
-    const t = tmp2(1114).t;
+    const t = util.t;
     if (claimed) {
       let stringResult = string(t["6cfuDj"]);
     } else {
       stringResult = string(t.QQsaCc);
     }
     const obj7 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: stringResult };
-    items4[1] = React5(tmp2(4556).Text, obj7);
+    items4[1] = React5(Text_Text.Text, obj7);
     obj5.children = items4;
     items3[2] = React6(View, obj5);
     obj.children = items3;
-    return React6(tmp2(5123).PressableOpacity, obj);
+    return React6(Pressables.PressableOpacity, obj);
   }
 });
 createStyles = fn(4560);

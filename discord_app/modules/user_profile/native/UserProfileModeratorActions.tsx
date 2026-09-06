@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
@@ -24,7 +25,6 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-const StageChannelPermissions = tmp(1965);
 require = fn;
 function ModeratorActionRow(isDestructive) {
   ({ label, sublabel } = isDestructive);
@@ -64,7 +64,7 @@ export default function UserProfileModeratorActions(user) {
   canMoveMembers = undefined;
   let channels;
   GuildMemberFlags = undefined;
-  let tmp = closure_16();
+  const tmp = closure_16();
   const tmp2 = user;
   const tmp3 = showUserProfile;
   let obj = user(showUserProfile[14]);
@@ -116,27 +116,27 @@ export default function UserProfileModeratorActions(user) {
     obj.canBanUser = GuildMemberUtils.canBanMember(user, stateFromStores);
     let canManageUserResult = null != stateFromStores;
     if (canManageUserResult) {
-      canManageUserResult = PermissionStore.canManageUser(constants.MANAGE_NICKNAMES, tmp3, tmp4);
+      canManageUserResult = PermissionStore.canManageUser(constants.MANAGE_NICKNAMES, user, stateFromStores);
     }
     obj.canChangeNick = canManageUserResult;
-    let canManageUserResult1 = null != tmp4;
+    let canManageUserResult1 = null != stateFromStores;
     if (canManageUserResult1) {
-      canManageUserResult1 = PermissionStore.canManageUser(constants.MANAGE_ROLES, tmp3, tmp4);
+      canManageUserResult1 = PermissionStore.canManageUser(constants.MANAGE_ROLES, user, stateFromStores);
     }
     obj.canManageUserRoles = canManageUserResult1;
-    let canResult = null != tmp4;
+    let canResult = null != stateFromStores;
     if (canResult) {
-      canResult = PermissionStore.can(constants.MANAGE_ROLES, tmp4);
+      canResult = PermissionStore.can(constants.MANAGE_ROLES, stateFromStores);
     }
     obj.canManageGuildRoles = canResult;
-    let canManageUserResult2 = null != tmp4;
+    let canManageUserResult2 = null != stateFromStores;
     if (canManageUserResult2) {
-      canManageUserResult2 = PermissionStore.canManageUser(constants.MANAGE_GUILD, tmp3, tmp4);
+      canManageUserResult2 = PermissionStore.canManageUser(constants.MANAGE_GUILD, user, stateFromStores);
     }
     obj.canManageGuild = canManageUserResult2;
-    let canManageUserResult3 = null != tmp4;
+    let canManageUserResult3 = null != stateFromStores;
     if (canManageUserResult3) {
-      canManageUserResult3 = PermissionStore.canManageUser(constants.MODERATE_MEMBERS, tmp3, tmp4);
+      canManageUserResult3 = PermissionStore.canManageUser(constants.MODERATE_MEMBERS, user, stateFromStores);
     }
     obj.canModerateMembers = canManageUserResult3;
     obj.canMoveMembers = PermissionStore.can(constants.MOVE_MEMBERS, voiceChannel);
@@ -159,9 +159,11 @@ export default function UserProfileModeratorActions(user) {
   if (!canModerateMembers) {
     canModerateMembers = canManageUserRoles;
   }
-  const tmp16 = guildId(tmp3[22])(voiceChannel);
+  const tmp13 = closure_10;
+  const tmp15 = guildId(showUserProfile[21])(guildId, user.id);
+  const tmp6 = stateFromStores1;
   let id;
-  let tmp4Result = tmp4(tmp3[23]);
+  let tmp4Result = guildId(tmp3[23]);
   if (voiceChannel != null) {
     id = voiceChannel.id;
   }
@@ -193,7 +195,7 @@ export default function UserProfileModeratorActions(user) {
     return StageChannelRoleStore.getPermissionsForUser(user.id, id).speaker;
   });
   tmp2Result = tmp2(tmp3[17]);
-  const items6 = [voiceState, stateFromStores3, stateFromStores1, closure_10];
+  const items6 = [voiceState, stateFromStores3, tmp6, tmp13];
   channels = tmp2Result.useStateFromStoresArray(items6, () => {
     if (canMoveMembers) {
       if (null != voiceChannel) {
@@ -546,7 +548,7 @@ export default function UserProfileModeratorActions(user) {
             let tmp87 = null;
             if (0 !== items7.length) {
               obj7 = { title: null, style: null, titleStyle: null, children: null };
-              tmp4Result = tmp4(tmp3[55]);
+              tmp4Result = guildId(tmp3[55]);
               const intl17 = tmp2(tmp3[26]).intl;
               obj7.title = intl17.string(tmp2(tmp3[26]).t["EApw/R"]);
               const items8 = [user.style, tmp.cardContainer];
@@ -649,4 +651,5 @@ export default function UserProfileModeratorActions(user) {
       }} />);
     }
   }
+  tmp16 = guildId(tmp3[22])(voiceChannel);
 };

@@ -56,7 +56,7 @@ function useGetVisibleContent(found1, stateFromStores, GUILD_HEADER_TOOLTIPS, la
         let tmp6 = groupName;
         let tmp7 = version;
         let tmp8 = snowflakeId;
-        let obj = { content_type: dismissible_content.DismissibleContent[tmp], group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
+        let obj = { content_type: dismissible_content.DismissibleContent[closure_0], group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
         if (groupName == null) {
           tmp6 = null;
         }
@@ -77,7 +77,7 @@ function useGetVisibleContent(found1, stateFromStores, GUILD_HEADER_TOOLTIPS, la
       }
       const obj3 = DismissibleContentUtils;
       obj = { groupName, guildId: ref.current, version, snowflakeId };
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(tmp, obj, first, closure_6);
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(closure_0, obj, first, closure_6);
       return () => {
         if (null != found1) {
           const obj = { content: tmp, groupName };
@@ -225,7 +225,6 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
     return tmp2;
   }).lastDismissedVersion;
   let obj = require("initialize");
-  const obj2 = UserSettingsProtoStore;
   const tmp = _require;
   const tmp2 = stateFromStores;
   const items1 = [SelectedGuildStore];
@@ -234,7 +233,7 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
   let tmp4 = null;
   if (null != COLLECTIBLES_SHOP_ENTRY_MARKETING) {
     let result = tmp(tmp2[13]).disableNewUserDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING);
-    if (obj2.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+    if (UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
       let tmp9 = null;
       if (!result) {
         if (null == lastDismissedVersion) {
@@ -343,7 +342,6 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
     return tmp2;
   }).lastDismissedObjectId;
   let obj = require("initialize");
-  const obj2 = UserSettingsProtoStore;
   const tmp = _require;
   const items1 = [SelectedGuildStore];
   stateFromStores = require("initialize").useStateFromStores(items1, () => guildId.getGuildId());
@@ -351,14 +349,14 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
   let tmp4 = null;
   if (null != prop) {
     let result = tmp(tmp2[13]).disableNewUserDismissibleContent(prop);
-    if (obj2.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+    if (UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
       let tmp10 = null;
       if (!result) {
         if (null == lastDismissedObjectId) {
           tmp10 = prop;
         } else {
+          require("SnowflakeUtils");
           tmp10 = null;
-          const obj6 = require("SnowflakeUtils");
         }
       }
       closure_3 = tmp10;
@@ -421,6 +419,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
         if (null == lastDismissedObjectId) {
           tmp13 = prop;
         } else {
+          SnowflakeUtilsDefault;
           tmp13 = null;
         }
       }
@@ -448,7 +447,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
   items1[1] = noop.useCallback((dismissAction, forceTrack) => {
     if (null != closure_3) {
       const obj = { dismissAction, groupName, guildId, forceTrack };
-      const result = obj.UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(tmp, closure_0, guildId, obj);
+      const result = obj.UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(closure_3, closure_0, guildId, obj);
     }
   }, items2);
   return items1;
@@ -488,9 +487,9 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   let found1 = null;
   if (UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
     const found = newUserDismissibleContent.find((item) => {
-      let tmp2 = null == stateFromStores || null == tmp[item];
+      let tmp2 = null == stateFromStores || null == stateFromStores[item];
       if (!tmp2) {
-        tmp2 = false === tmp[item].dismissed;
+        tmp2 = false === stateFromStores[item].dismissed;
       }
       return tmp2;
     });

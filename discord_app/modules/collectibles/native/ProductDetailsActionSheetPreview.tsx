@@ -35,12 +35,12 @@ export default function ProductDetailsActionSheetPreview(onBundleActiveItemChang
   };
   if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
     obj = { product, width: tmp3, handlePreviewPress, onTrackPress, onActiveItemChange: onBundleActiveItemChange.onBundleActiveItemChange };
-    let tmp7Result = tmp7(BundleProductDetailsActionSheetPreviewDefault, obj);
+    let tmp7Result = jsx(BundleProductDetailsActionSheetPreviewDefault, { product, width: tmp3, handlePreviewPress, onTrackPress, onActiveItemChange: onBundleActiveItemChange.onBundleActiveItemChange });
   } else {
     obj = { style: tmp.previewDivider, children: null };
     const obj1 = { product, width: tmp3, handlePreviewPress, onTrackPress };
-    obj.children = tmp7(IndividualProductPreview.IndividualProductPreview, obj1);
-    tmp7Result = tmp7(tmp8, obj);
+    obj.children = jsx(IndividualProductPreview.IndividualProductPreview, { product, width: tmp3, handlePreviewPress, onTrackPress });
+    tmp7Result = <View style={tmp.previewDivider}>{null}</View>;
   }
   obj.children = tmp7Result;
   return <View style={tmp.previewContainer} onLayout={React4((nativeEvent) => {

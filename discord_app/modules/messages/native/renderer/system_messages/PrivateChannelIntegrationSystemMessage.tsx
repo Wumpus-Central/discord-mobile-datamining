@@ -5,6 +5,7 @@ import Constants from "Constants" /* 1074 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 7996 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;
@@ -24,11 +25,11 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     obj = { action: "bindUserMenu", userId: application.bot.id, messageChannelId: message.channel_id, medium: true };
   }
   if (type === MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) {
-    let tmpResult = tmp(7996);
+    let tmpResult = PrivateChannelIntegrationSystemMessageUtils;
     obj = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
     let privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj);
   } else {
-    tmpResult = tmp(7996);
+    tmpResult = PrivateChannelIntegrationSystemMessageUtils;
     const obj1 = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
     privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj1);
   }

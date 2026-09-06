@@ -2,6 +2,8 @@
 
 // Module 16995 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 563 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import GuildChannelUserListDefault from "GuildChannelUserList" /* 11588 */;
 import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12186 */;
 import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 16686 */;
@@ -65,9 +67,9 @@ export default noop.memo(function LaunchPadMembers() {
   } else {
     const obj5 = { style: tmp.emptyWrapper, children: null };
     const obj6 = { style: tmp.emptyText, variant: "text-md/semibold", children: null };
-    const intl = tmp2(1114).intl;
-    obj6.children = intl.string(tmp2(1114).t["+7wtJq"]);
-    obj5.children = jsx(tmp2(4556).Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
+    const intl = util.intl;
+    obj6.children = intl.string(util.t["+7wtJq"]);
+    obj5.children = jsx(Text_Text.Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
     tmp8 = <View style={tmp.emptyWrapper}>{null}</View>;
   }
   return tmp8;

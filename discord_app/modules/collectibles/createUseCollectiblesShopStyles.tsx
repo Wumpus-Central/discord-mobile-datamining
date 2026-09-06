@@ -3,6 +3,7 @@
 // Module 11080 (createUseCollectiblesShopStyles)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import tinycolorDefault from "tinycolor" /* 7552 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8229 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
@@ -48,7 +49,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
                 const tertiary = obj.backgroundColors.tertiary;
                 ({ h: h3, s: s3, l: l3 } = tertiary.toHsl());
                 const obj4 = { h: h3, s: s3 * stateFromStores, l: l3 };
-                tmp26 = tmp24(7552)(obj4);
+                tmp26 = tinycolorDefault(obj4);
                 const toHslResult2 = tertiary.toHsl();
               }
               obj1.tertiary = tmp26;
@@ -99,7 +100,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
             const obj12 = { primary: buttonColors[0], secondary: buttonColors[1], text: null };
             [obj32, obj33] = buttonColors;
             const toRgbResult = obj32.toRgb();
-            let tmpResult = tmp(8229);
+            let tmpResult = UserProfileGradientUtils;
             const items1 = [, , ];
             ({ r: arr9[0], g: arr9[1], b: arr9[2] } = toRgbResult);
             const items2 = [, , ];
@@ -108,12 +109,12 @@ export default function createUseCollectiblesShopStyles(arg0) {
             [tmp44, tmp45, tmp46] = _slicedToArray(tmpResult.getValueInColorGradientByPercentage(items1, items2, 50), 3);
             const obj13 = { r: tmp44, g: tmp45, b: tmp46 };
             const tmp43 = _slicedToArray(tmpResult.getValueInColorGradientByPercentage(items1, items2, 50), 3);
-            obj12.text = tinycolorDefault(obj13).isLight() ? tmp39.dark : tmp39.light;
+            obj12.text = tinycolorDefault(obj13).isLight() ? closure_0.dark : closure_0.light;
             const obj36 = tinycolorDefault(obj13);
           }
           const obj14 = { primary: buttonColors[0], secondary: buttonColors[0], text: null };
           const first = buttonColors[0];
-          obj14.text = first.isLight() ? tmp39.dark : tmp39.light;
+          obj14.text = first.isLight() ? closure_0.dark : closure_0.light;
         }
       } else {
         if (1 !== backgroundColors.length) {
@@ -126,7 +127,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
           obj15.tertiary = tmp4;
           [obj2, obj3] = backgroundColors;
           const toRgbResult2 = obj1.toRgb();
-          tmpResult = tmp(8229);
+          tmpResult = UserProfileGradientUtils;
           const items3 = [, , ];
           ({ r: arr2[0], g: arr2[1], b: arr2[2] } = toRgbResult2);
           const items4 = [, , ];
@@ -144,18 +145,18 @@ export default function createUseCollectiblesShopStyles(arg0) {
           ({ r: arr4[0], g: arr4[1], b: arr4[2] } = toRgbResult4);
           const items6 = [, , ];
           ({ r: arr5[0], g: arr5[1], b: arr5[2] } = toRgbResult5);
-          const tmpResult1 = tmp(8229);
-          [tmp16, tmp17, tmp18] = _slicedToArray(tmp(8229).getValueInColorGradientByPercentage(items5, items6, 50), 3);
+          const tmpResult1 = UserProfileGradientUtils;
+          [tmp16, tmp17, tmp18] = _slicedToArray(UserProfileGradientUtils.getValueInColorGradientByPercentage(items5, items6, 50), 3);
           const obj17 = { r: tmp16, g: tmp17, b: tmp18 };
           obj10 = tinycolorDefault(obj17);
-          obj15.label = obj10.isLight() ? tmp39.dark : tmp39.light;
-          const tmp15 = _slicedToArray(tmp(8229).getValueInColorGradientByPercentage(items5, items6, 50), 3);
+          obj15.label = obj10.isLight() ? closure_0.dark : closure_0.light;
+          const tmp15 = _slicedToArray(UserProfileGradientUtils.getValueInColorGradientByPercentage(items5, items6, 50), 3);
         }
         const obj18 = { primary: backgroundColors[0], secondary: backgroundColors[0], border: null, label: null };
         const first1 = backgroundColors[0];
         obj18.border = first1.setAlpha(0.4);
         const first2 = backgroundColors[0];
-        obj18.label = first2.isLight() ? tmp39.dark : tmp39.light;
+        obj18.label = first2.isLight() ? closure_0.dark : closure_0.light;
       }
     }
   };

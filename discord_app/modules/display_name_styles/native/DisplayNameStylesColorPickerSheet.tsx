@@ -39,7 +39,7 @@ export default function DisplayNameStylesColorPickerSheet(selectedColor) {
   selectedColor = selectedColor.selectedColor;
   const selectedEffectId = selectedColor.selectedEffectId;
   const onSelectColor = selectedColor.onSelectColor;
-  let tmp = closure_11();
+  const tmp = closure_11();
   _slicedToArray = tmp;
   let obj = selectedColor(onSelectColor[8]);
   const tmp5 = selectedEffectId(onSelectColor[9])()[selectedEffectId];
@@ -100,7 +100,7 @@ export default function DisplayNameStylesColorPickerSheet(selectedColor) {
   obj1.trailing = closure_9(color, obj2);
   obj.children = closure_9(selectedColor(onSelectColor[15]).BottomSheetTitleHeader, obj1);
   obj.header = closure_9(color, obj);
-  const obj4 = { style: tmp.container, children: null };
+  let obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.contentContainer, children: null };
   const obj6 = { style: tmp.presetGrid, children: null };
   let obj9 = selectedEffectId(onSelectColor[19]);
@@ -123,11 +123,9 @@ export default function DisplayNameStylesColorPickerSheet(selectedColor) {
         items[1] = obj;
         items[2] = item === first && presetColor.presetColorSelected;
         obj.style = items;
-        const tmp = React7;
-        const tmp2 = timestampProducer;
         const tmp6 = item === first && presetColor.presetColorSelected;
         obj.accessibilityLabel = utils_ColorUtils.int2hex(item);
-        return tmp(tmp2, obj, 6 * closure_0 + index);
+        return React7(timestampProducer, obj, 6 * closure_0 + index);
       })
     }, index);
   });
@@ -140,8 +138,8 @@ export default function DisplayNameStylesColorPickerSheet(selectedColor) {
     const intl3 = tmp2(tmp3[16]).intl;
     obj9.text = intl3.string(selectedEffectId(tmp3[17]).gIeJTK);
     obj9.onPress = callback;
-    obj8.children = tmp12(tmp2(tmp3[18]).Button, obj9);
-    tmp12Result = tmp12(tmp13, obj8);
+    obj8.children = closure_9(tmp2(tmp3[18]).Button, obj9);
+    tmp12Result = closure_9(tmp13, obj8);
   }
   const items6 = [tmp12Result, ];
   const obj10 = { style: tmp.button, children: null };

@@ -7,16 +7,16 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");
 
-export default function useIsAppDM(arg0) {
-  _require = arg0;
+export default function useIsAppDM(channel) {
+  _require = channel;
   const items = [UserStore];
   return require("useStateFromStores").useStateFromStores(items, () => {
-    let tmp = null != closure_0 && obj.isDM();
+    let tmp = null != dM && dM.isDM();
     if (tmp) {
-      tmp = 1 === obj.recipients.length;
+      tmp = 1 === dM.recipients.length;
     }
     if (tmp) {
-      const user = UserStore.getUser(obj.recipients[0]);
+      const user = UserStore.getUser(dM.recipients[0]);
       let bot;
       if (user != null) {
         bot = user.bot;

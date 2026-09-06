@@ -1,8 +1,10 @@
 // === Module 16001: useOrientationLock ===
 
 // Module 16001 (useOrientationLock)
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import DeviceUtils from "DeviceUtils" /* 4539 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
+import DeviceOrientation from "DeviceOrientation" /* 8332 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +19,7 @@ export default function usePortraitOrientationOnly() {
     const isIpadOSResult = DeviceUtils.isIpadOS();
     let tmp4 = !isIpadOSResult;
     if (!isIpadOSResult) {
-      let tmpResult = tmp(1608);
+      let tmpResult = MetaQuestUtils;
       tmp4 = !tmpResult.isMetaQuest();
     }
     if (tmp4) {
@@ -25,7 +27,7 @@ export default function usePortraitOrientationOnly() {
     }
     closure_0 = tmp4;
     if (tmp4) {
-      tmpResult = tmp(8332);
+      tmpResult = DeviceOrientation;
       tmpResult.lockOrientation("PORTRAIT", false);
     }
     return () => {

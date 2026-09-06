@@ -72,7 +72,6 @@ export default function useChannelNoticeRows(id) {
   closure_129_1 = hasAlreadyLinked;
   ({ connectionApp, canStartAuthorization, startAuthorization } = tmp12);
   const obj5 = require("useSelectedDismissibleContent");
-  const tmp8 = constants2;
   const tmp9 = currentUser;
   const defaultAuthorizationNotifiers = require("useDefaultAuthorizationNotifiers").useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked);
   if (fetched) {
@@ -102,7 +101,7 @@ export default function useChannelNoticeRows(id) {
   }
   const tmpResult2 = require("useSelectedDismissibleContent");
   const items8 = [id, hasAlreadyLinked];
-  [tmp15, tmp16] = tmp9(require("useSelectedDismissibleContent").useSelectedSingleUseGuildDismissibleContent(items7, id, tmp8.CHANNEL_NOTICES, true), 2);
+  [tmp15, tmp16] = tmp9(require("useSelectedDismissibleContent").useSelectedSingleUseGuildDismissibleContent(items7, id, constants2.CHANNEL_NOTICES, true), 2);
   const effect = stateFromStores1.useEffect(() => {
     if (id) {
       const obj = { dismissAction: constants.INDIRECT_ACTION, guildId, groupName: constants2.CHANNEL_NOTICES };
@@ -115,18 +114,18 @@ export default function useChannelNoticeRows(id) {
   obj.rows = stateFromStores1.useMemo(() => {
     const items = [constants.SPACER];
     if (closure_6) {
-      items.push(tmp.GAME_CLAIM);
+      items.push(constants.GAME_CLAIM);
     }
     if (closure_7) {
-      items.push(tmp.APPLICATION_ACCOUNT_LINK);
+      items.push(constants.APPLICATION_ACCOUNT_LINK);
     }
     if (stateFromStores) {
-      items.push(tmp.GUILD_PROGRESS);
+      items.push(constants.GUILD_PROGRESS);
     } else if (stateFromStores1) {
-      items.push(tmp.MFA_WARNING);
+      items.push(constants.MFA_WARNING);
     }
     if (guildHasLiveChannelNotice) {
-      items.push(tmp.LIVE_CHANNEL_NOTICE);
+      items.push(constants.LIVE_CHANNEL_NOTICE);
     }
     return items;
   }, items9);

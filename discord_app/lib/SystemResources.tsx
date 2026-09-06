@@ -83,7 +83,7 @@ prototype["takeSample"] = function takeSample() {
   }
 };
 prototype["getCurrentBattery"] = function getCurrentBattery() {
-  return (async (arg0, value) => {
+  return (async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -147,7 +147,7 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
 };
 prototype["setLastBattery"] = function setLastBattery() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -199,7 +199,7 @@ prototype["setLastBattery"] = function setLastBattery() {
 };
 prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

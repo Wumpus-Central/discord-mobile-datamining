@@ -31,8 +31,8 @@ export default {
         if (connected.isConnected()) {
           const result = GuildStore.addConditionalChangeListener(() => {
             if (null != GuildStore.getGuild(body.id)) {
-              transitionToGuild.transitionToGuild(tmp.id);
-              body(tmp);
+              transitionToGuild.transitionToGuild(body.id);
+              body(body);
               return false;
             }
           });

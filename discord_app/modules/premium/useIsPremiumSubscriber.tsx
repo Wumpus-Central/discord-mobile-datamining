@@ -9,7 +9,7 @@ const PremiumTypes = fn(1373).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/useIsPremiumSubscriber.tsx");
 
-export const useIsPremiumSubscriber = function useIsPremiumSubscriber(TIER_2) {
+export const useIsPremiumSubscriber = function useIsPremiumSubscriber() {
   if (TIER_2 === undefined) {
     TIER_2 = PremiumTypes.TIER_2;
   }

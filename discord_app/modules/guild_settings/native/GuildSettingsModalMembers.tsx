@@ -84,7 +84,7 @@ let closure_20 = noop.memo((guild) => {
     let tmp12Result = null;
     if (mapped.length > 0) {
       obj1 = { style: tmp.roleList, pointerEvents: "none", children: mapped };
-      tmp12Result = tmp12(View, obj1);
+      tmp12Result = closure_15(View, obj1);
     }
     obj.subLabel = tmp12Result;
     obj.disabled = tmp5;
@@ -172,12 +172,12 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
     function guildRoleIsFiltered(roles) {
       let tmp2 = null != stateFromStores1;
       if (tmp2) {
-        tmp2 = !guildId(guild[25]).isEveryoneRoleId(closure_1_0, tmp);
+        tmp2 = !guildId(guild[25]).isEveryoneRoleId(closure_1_0, stateFromStores1);
         const obj = guildId(guild[25]);
       }
       if (tmp2) {
         roles = roles.roles;
-        tmp2 = -1 === roles.indexOf(tmp);
+        tmp2 = -1 === roles.indexOf(stateFromStores1);
       }
       return tmp2;
     }
@@ -297,7 +297,7 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
       first3.destroy();
     };
   }, items11);
-  let tmp23 = guildLoaded(sortedGuildRoles.useState(""), 2);
+  const tmp23 = guildLoaded(sortedGuildRoles.useState(""), 2);
   const first4 = tmp23[0];
   closure_19 = tmp23[1];
   const items12 = [guildLoaded, guildId, first3];

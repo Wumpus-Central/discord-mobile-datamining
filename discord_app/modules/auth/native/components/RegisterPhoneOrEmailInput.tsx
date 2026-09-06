@@ -42,7 +42,7 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   callback = obj2.useCallback((arg0) => {
     if (null != closure_7[arg0]) {
       const obj = {};
-      const merged = Object.assign(tmp3);
+      const merged = Object.assign(closure_7);
       delete tmp2[tmp];
       hasOwnProperty(obj);
     }
@@ -65,8 +65,8 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   const items4 = [inputMode, loginEmail, loginPhone];
   const layoutEffect = obj2.useLayoutEffect(() => {
     if (ref.current !== inputMode) {
-      ref.current = tmp;
-      if (tmp === PhoneOrEmailUtils.PhoneOrEmailSelectorForceMode.PHONE) {
+      ref.current = inputMode;
+      if (inputMode === PhoneOrEmailUtils.PhoneOrEmailSelectorForceMode.PHONE) {
         const current2 = ref.current;
         if (current2 != null) {
           current2.setText(loginPhone);

@@ -196,7 +196,8 @@ prototype["timeAsync"] = function timeAsync(emoji, name, callback) {
     self.mark(closure_0, "Start " + closure_1);
     const _Date2 = Date;
     closure_128_0 = Date.now();
-    closure_128_1 = await v1();
+    await v1();
+    closure_128_1 = value;
     const _Date = Date;
     closure_128_2 = Date.now() - closure_128_0;
     const _HermesInternal = HermesInternal;

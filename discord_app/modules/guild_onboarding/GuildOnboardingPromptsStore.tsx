@@ -376,22 +376,22 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
         obj = {};
         closure_129_2 = obj;
         const _Object = Object;
-        const keys = Object.keys(tmp3[guildId]);
+        const keys = Object.keys(dependencyMap2[guildId]);
         const item = keys.forEach((item) => {
           if (!options_seen.includes(item)) {
             if (dependencyMap[prompts_seen][item]) {
-              obj[item] = true;
+              options_seen[item] = true;
             }
           }
-          let hasItem = obj.includes(item);
+          let hasItem = options_seen.includes(item);
           if (hasItem) {
             hasItem = false === dependencyMap[prompts_seen][item];
           }
           if (hasItem) {
-            obj[item] = false;
+            options_seen[item] = false;
           }
         });
-        tmp3[guildId] = obj;
+        dependencyMap2[guildId] = obj;
         const found = responses.filter((item) => {
           let tmp = null == obj[item];
           if (!tmp) {
@@ -444,7 +444,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
           _modDef12.pull(dependencyMap[guildId].responses, optionId);
         }
         if (null == dependencyMap2[guildId]) {
-          tmp15[guildId] = {};
+          dependencyMap2[guildId] = {};
         }
         dependencyMap2[guildId][optionId] = selected;
         if (null != removedOptionIds) {
@@ -454,7 +454,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
           });
         }
         obj = {};
-        const merged = Object.assign(tmp15[guildId]);
+        const merged = Object.assign(dependencyMap2[guildId]);
         dependencyMap2[guildId] = obj;
         flag = true;
       }
@@ -471,22 +471,22 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
     if (null != dependencyMap2[guildId]) {
       obj = {};
       const _Object = Object;
-      const keys = Object.keys(tmp[guildId]);
+      const keys = Object.keys(dependencyMap2[guildId]);
       const item = keys.forEach((item) => {
         if (!options_seen.includes(item)) {
           if (dependencyMap[prompts_seen][item]) {
-            obj[item] = true;
+            options_seen[item] = true;
           }
         }
-        let hasItem = obj.includes(item);
+        let hasItem = options_seen.includes(item);
         if (hasItem) {
           hasItem = false === dependencyMap[prompts_seen][item];
         }
         if (hasItem) {
-          obj[item] = false;
+          options_seen[item] = false;
         }
       });
-      tmp[guildId] = obj;
+      dependencyMap2[guildId] = obj;
       found = options.filter((item) => {
         let tmp = null == obj[item];
         if (!tmp) {

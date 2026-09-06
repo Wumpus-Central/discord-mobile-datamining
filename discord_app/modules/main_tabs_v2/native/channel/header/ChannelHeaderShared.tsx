@@ -80,7 +80,7 @@ function ChannelTitle(guildId) {
   tmp5Result = null != subtitle;
   if (tmp5Result) {
     const obj3 = { style: tmp.subTitleContainer, children: subtitle };
-    tmp5Result = tmp5(tmp3, obj3);
+    tmp5Result = tmp5(View, obj3);
   }
   items1[1] = tmp5Result;
   obj.children = items1;
@@ -112,8 +112,8 @@ function ChannelIconRaw(IconComponent) {
     obj = { size: token, color: "icon-strong", style: { marginEnd: 4 } };
     let tmp6 = React6(IconComponent, obj);
   } else {
-    obj = { size: tmp(1178).Icon.Sizes.SMALL_20, source: IconComponent.icon, color: tmp4.guildChannelIcon.tintColor };
-    tmp6 = React6(tmp(1178).Icon, obj);
+    obj = { size: native.Icon.Sizes.SMALL_20, source: IconComponent.icon, color: tmp4.guildChannelIcon.tintColor };
+    tmp6 = React6(native.Icon, obj);
   }
   return tmp6;
 }
@@ -136,7 +136,7 @@ function MemberCountText(arg0) {
   const children = [React6(GuildActionSheetMemberCountDefault, obj), ];
   let tmp4Result = null;
   if (withSeparator) {
-    tmp4Result = tmp4(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });
+    tmp4Result = React6(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });
   }
   children[1] = tmp4Result;
   return React7(closure_1_10, { children });
@@ -212,7 +212,7 @@ export const renderChannelIcon = function renderChannelIcon(stateFromStores, sta
   obj = { icon: channelIconWithGuild, IconComponent: utils_ChannelUtils.getChannelIconComponent(stateFromStores, obj) };
   return React6(ChannelIconRaw, obj);
 };
-export const renderMemberCountText = function renderMemberCountText(online, length, flag, leadingAccessoryWidth) {
+export const renderMemberCountText = function renderMemberCountText(online, length) {
   if (flag === undefined) {
     flag = false;
   }

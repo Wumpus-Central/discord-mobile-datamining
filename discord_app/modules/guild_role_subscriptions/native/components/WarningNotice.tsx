@@ -49,8 +49,8 @@ export default function WarningNotice(arg0) {
   if (tmp4Result) {
     const obj2 = { style: tmp.actionButtonWrapper, children: null };
     const obj3 = { onPress: onClick, disabled, loading: submitting, text: ctaLabel, grow: true };
-    obj2.children = tmp4(components_Button_Button.Button, obj3);
-    tmp4Result = tmp4(tmp3, obj2);
+    obj2.children = React4(components_Button_Button.Button, obj3);
+    tmp4Result = React4(View, obj2);
   }
   items3[1] = tmp4Result;
   obj.children = items3;

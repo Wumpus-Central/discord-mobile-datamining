@@ -2,6 +2,7 @@
 
 // Module 5058 (MemberVerificationUtils)
 import Constants from "Constants" /* 1074 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
 import MemberVerificationConstants from "MemberVerificationConstants" /* 5059 */;
 import size from "module_2" /* 2 */;
@@ -17,13 +18,13 @@ export const isValidFormResponse = function isValidFormResponse(required) {
       return false;
     } else {
       if (MemberVerificationTypes.VerificationFormFieldTypes.TERMS !== field_type) {
-        if (tmp4(4384).VerificationFormFieldTypes.VERIFICATION !== field_type) {
-          if (tmp4(4384).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
-            if (tmp4(4384).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
-              if (tmp4(4384).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+        if (MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION !== field_type) {
+          if (MemberVerificationTypes.VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
+            if (MemberVerificationTypes.VerificationFormFieldTypes.PARAGRAPH !== field_type) {
+              if (MemberVerificationTypes.VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
                 return typeof response === "number";
               } else {
-                return tmp4(1369).assertNever(field_type);
+                return GlobalUtils.assertNever(field_type);
               }
             }
           }

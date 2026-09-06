@@ -30,9 +30,9 @@ export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSound
   tmpResult = tmp(tmp2[6]);
   const items2 = [stateFromStores1];
   stateFromStores2 = tmpResult.useStateFromStores(items2, () => {
-    let canResult = null == closure_0 || null == tmp.guild_id;
+    let canResult = null == guild_id || null == guild_id.guild_id;
     if (!canResult) {
-      canResult = PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, tmp);
+      canResult = PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);
     }
     return canResult;
   });
@@ -41,9 +41,9 @@ export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSound
     if (obj.canUseSoundboardEverywhere(stateFromStores)) {
       if (stateFromStores2) {
         if ("" !== guild_id) {
-          let found = arr2.filter((item) => item !== guild_id);
+          let found = stateFromStores1.filter((item) => item !== guild_id);
         } else {
-          found = arr2;
+          found = stateFromStores1;
         }
         if ("" !== guild_id) {
           found.unshift(guild_id);

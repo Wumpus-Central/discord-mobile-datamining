@@ -121,7 +121,7 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
     }
   })();
 };
-let closure_6 = async function _cancelGetAttachmentFile(arg0, value) {
+let closure_6 = async function _cancelGetAttachmentFile(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

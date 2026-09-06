@@ -12,7 +12,7 @@ const AppStates = fn(1074).AppStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx");
 
-export const useDefaultAuthorizationNotifiers = function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked, value) {
+export const useDefaultAuthorizationNotifiers = function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked) {
   _require = startAuthorization;
   closure_1 = hasAlreadyLinked;
   let obj = value;

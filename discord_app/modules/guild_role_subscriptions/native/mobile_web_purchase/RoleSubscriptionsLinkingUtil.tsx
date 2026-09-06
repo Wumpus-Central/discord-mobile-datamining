@@ -14,7 +14,7 @@ function performRoleSubscriptionUpsellRedirect() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _performRoleSubscriptionUpsellRedirect(arg0, value) {
+let closure_8 = async function _performRoleSubscriptionUpsellRedirect(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -97,7 +97,7 @@ let closure_8 = async function _performRoleSubscriptionUpsellRedirect(arg0, valu
     }
   }
 };
-let closure_9 = async function _performRoleSubscriptionTeamCreationRedirect(arg0, value) {
+let closure_9 = async function _performRoleSubscriptionTeamCreationRedirect() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -144,7 +144,7 @@ let closure_9 = async function _performRoleSubscriptionTeamCreationRedirect(arg0
     }
   }
 };
-let closure_10 = async function _performRoleSubscriptionEditPayoutRedirect(arg0, value) {
+let closure_10 = async function _performRoleSubscriptionEditPayoutRedirect(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -201,7 +201,7 @@ function performDeveloperPortalRedirectWithTokenHandoff() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(arg0, value) {
+let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

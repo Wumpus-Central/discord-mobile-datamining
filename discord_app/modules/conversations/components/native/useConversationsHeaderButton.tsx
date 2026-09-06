@@ -33,7 +33,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
     }
     return applyArgumentsResult;
   };
-  _require = conversationBackoffRef(function*(arg0, value) {
+  _require = conversationBackoffRef(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -10,6 +10,7 @@ import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import parseURLDefault from "parseURL" /* 4540 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
 import MessageManagerDefault from "MessageManager" /* 9941 */;
 import _modDef11253 from "module_11253" /* 11253 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -41,7 +42,7 @@ function waitForDataOrConnection() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _waitForDataOrConnection(arg0, value) {
+let closure_22 = async function _waitForDataOrConnection(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -122,7 +123,7 @@ function waitForNavigationReady() {
   }
   return applyArgumentsResult;
 }
-let closure_24 = async function _waitForNavigationReady(arg0, value) {
+let closure_24 = async function _waitForNavigationReady() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -193,7 +194,7 @@ function _connectToStage() {
   }
   return applyArgumentsResult;
 }
-let closure_26 = async function _connectToStage2(arg0, arg1) {
+let closure_26 = async function _connectToStage2(arg0) {
   closure_3 = tmp3;
   closure_130_0 = closure_0;
   closure_130_1 = closure_1;
@@ -205,16 +206,16 @@ let closure_26 = async function _connectToStage2(arg0, arg1) {
     c7 = 3;
   } else if (arg0 === 1) {
     c7 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_130_2 = arg1;
+    closure_130_2 = value;
     closure_131_0(closure_131_3[17]).navigateToStage(closure_130_2, null);
     c5 = 0;
     closure_131_0(closure_131_3[17]);
   }
-  return arg1;
+  return value;
 };
-let closure_27 = async function _handleStageNotification(arg0, value) {
+let closure_27 = async function _handleStageNotification(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -261,7 +262,7 @@ let closure_27 = async function _handleStageNotification(arg0, value) {
     }
   }
 };
-let closure_28 = async function _handleGuildEventNotification(arg0, value) {
+let closure_28 = async function _handleGuildEventNotification(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -294,7 +295,7 @@ let closure_28 = async function _handleGuildEventNotification(arg0, value) {
           const _Number = Number;
           const NumberResult = Number(_require.guild_scheduled_event_entity_type);
           if (constants.STAGE_INSTANCE === NumberResult) {
-            const channel_id2 = tmp42.channel_id;
+            const channel_id2 = _require.channel_id;
             if (null == channel_id2) {
               onStageConnectionError();
               c4 = 3;
@@ -304,11 +305,11 @@ let closure_28 = async function _handleGuildEventNotification(arg0, value) {
             } else {
               c3 = 2;
               c4 = 1;
-              const obj2 = { value: _connectToStage(tmp42.guild_id, channel_id2), done: false };
+              const obj2 = { value: _connectToStage(_require.guild_id, channel_id2), done: false };
               return obj2;
             }
-          } else if (tmp45.VOICE === NumberResult) {
-            const channel_id = tmp42.channel_id;
+          } else if (constants.VOICE === NumberResult) {
+            const channel_id = _require.channel_id;
             closure_129_0 = channel_id;
             if (null == channel_id) {
               (function onVoiceConnectionError() {
@@ -329,10 +330,10 @@ let closure_28 = async function _handleGuildEventNotification(arg0, value) {
               const obj4 = { value: waitForConnection(), done: false };
               return obj4;
             }
-          } else if (tmp45.EXTERNAL === NumberResult) {
-            closure_129_1 = tmp42.guild_scheduled_event_id;
+          } else if (constants.EXTERNAL === NumberResult) {
+            closure_129_1 = _require.guild_scheduled_event_id;
             let obj6 = require("transitionToGuild");
-            obj6.transitionToGuild(tmp42.guild_id);
+            obj6.transitionToGuild(_require.guild_id);
             c3 = 1;
             c4 = 1;
             const obj5 = { value: waitForConnection(), done: false };
@@ -377,7 +378,7 @@ let closure_28 = async function _handleGuildEventNotification(arg0, value) {
     }
   }
 };
-let closure_29 = async function _handleRelationshipAddNotification(arg0, value) {
+let closure_29 = async function _handleRelationshipAddNotification(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -471,7 +472,7 @@ let closure_29 = async function _handleRelationshipAddNotification(arg0, value) 
     }
   }
 };
-let closure_30 = async function _handleCallRingNotification(arg0, value) {
+let closure_30 = async function _handleCallRingNotification(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -523,7 +524,7 @@ let closure_30 = async function _handleCallRingNotification(arg0, value) {
     }
   }
 };
-let closure_31 = async function _handleCallConnectNotification(arg0, value) {
+let closure_31 = async function _handleCallConnectNotification(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -612,7 +613,7 @@ let closure_31 = async function _handleCallConnectNotification(arg0, value) {
     }
   }
 };
-let closure_32 = async function _handleFriendSuggestionCreateNotification(arg0, value) {
+let closure_32 = async function _handleFriendSuggestionCreateNotification(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -688,7 +689,7 @@ let closure_32 = async function _handleFriendSuggestionCreateNotification(arg0, 
     }
   }
 };
-let closure_33 = async function _maybeAckNotificationCenter(arg0, value) {
+let closure_33 = async function _maybeAckNotificationCenter(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -720,16 +721,16 @@ let closure_33 = async function _maybeAckNotificationCenter(arg0, value) {
           closure_129_2 = undefined;
           let prop = null;
           if ("notification_center_id" in _require) {
-            prop = tmp37.notification_center_id;
+            prop = _require.notification_center_id;
           }
           closure_129_1 = prop;
           let since = null;
           if ("since" in _require) {
-            since = tmp37.since;
+            since = _require.since;
           }
           if ("RELATIONSHIP_ADD" === _require.type) {
             const _Number = Number;
-            if (Number(tmp37.rel_type) === constants.PENDING_INCOMING) {
+            if (Number(_require.rel_type) === constants.PENDING_INCOMING) {
               if (null != since) {
                 c3 = 1;
                 c4 = 1;
@@ -818,7 +819,7 @@ function receiveNotification_(data) {
               let tmpResult = tmp(11627);
               tmpResult.receivedNotification(payload.messageId, payload.channelId, tracking_type);
             }
-            let tmp80Result = tmp80(9941);
+            let tmp80Result = MessageManagerDefault;
             obj = { guildId: null, channelId: null, messageId: null, isPreload: true };
             ({ guildId: obj8.guildId, channelId: obj8.channelId, messageId: obj8.messageId } = payload);
             const messages1 = tmp80Result.fetchMessages(obj);
@@ -829,7 +830,7 @@ function receiveNotification_(data) {
             if (payload.type === tmp(1093).LinkingTypes.ICYMI) {
               if (null != data.channel_id) {
                 if (null != data.message_id) {
-                  tmp80Result = tmp80(8351);
+                  tmp80Result = ICYMIActionCreatorsDefault;
                   const forNotification = tmp80Result.fetchForNotification(data.channel_id, data.message_id);
                   flag = false;
                   flag2 = false;
@@ -859,10 +860,10 @@ function receiveNotification_(data) {
                   obj2.emoji_name = data.status_emoji_name;
                   obj2.emoji_animated = data.status_emoji_animated;
                   obj1.data = obj2;
-                  const forStatusNotification = tmp80(8351).fetchForStatusNotification(obj1);
+                  const forStatusNotification = ICYMIActionCreatorsDefault.fetchForStatusNotification(obj1);
                   flag = false;
                   flag2 = false;
-                  const tmp80Result1 = tmp80(8351);
+                  const tmp80Result1 = ICYMIActionCreatorsDefault;
                 }
               }
             }
@@ -3174,7 +3175,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, ComponentActions: closure_12, RelationshipTypes: map1, Routes: closure_14 } = Constants);
 const StreamTypes = fn(4602).StreamTypes;
 let closure_16 = fn(1963).GuildScheduledEventEntityTypes;
-let closure_17 = fn(12414).MultiAccountSwitchLocation;
+const constants = fn(12414).MultiAccountSwitchLocation;
 const logger = new LoggerDefault("receiveNotification");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/push_notifications/native/receiveNotification.tsx");
@@ -3186,17 +3187,16 @@ export default function receiveNotification(getData, arg1) {
     data(7475).trackAppOpened("notification");
     data = getData.getData();
     const obj3 = data(7475);
-    const tmp11 = importDefault;
     const _HermesInternal = HermesInternal;
     AppStartPerformanceDefault.mark("\u2757", "Receive notification " + data.type);
     if (null != data.receiving_user_id) {
       if (null != AuthenticationStore.getId()) {
-        if (data.receiving_user_id !== obj.getId()) {
+        if (data.receiving_user_id !== AuthenticationStore.getId()) {
           tmp7(7476);
           tmp7(5277);
           tmp7(13629);
           let receiving_user_id = data.receiving_user_id;
-          receiving_user_id = tmp7(12417).switchAccount(receiving_user_id, false, arg1 ? tmp5.PUSH_NOTIFICATION_INITIAL : tmp5.PUSH_NOTIFICATION);
+          receiving_user_id = tmp7(12417).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
           receiving_user_id.then(() => {
             const Emitter = initializeDefault.Emitter;
             Emitter.batched(() => receiveNotification_(data));
@@ -3204,9 +3204,8 @@ export default function receiveNotification(getData, arg1) {
           const tmp7Result2 = tmp7(12417);
         }
       }
-      obj = AuthenticationStore;
     }
-    let Emitter = tmp11(504).Emitter;
+    let Emitter = initializeDefault.Emitter;
     return Emitter.batched(() => receiveNotification_(data));
   }
 };

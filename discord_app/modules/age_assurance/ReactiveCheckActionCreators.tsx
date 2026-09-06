@@ -5,7 +5,7 @@ import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _fetchReactiveCheckResult(arg0, value) {
+let closure_5 = async function _fetchReactiveCheckResult() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -74,7 +74,7 @@ let closure_5 = async function _fetchReactiveCheckResult(arg0, value) {
     }
   }
 };
-let closure_6 = async function _resetAgeVerification(arg0, value) {
+let closure_6 = async function _resetAgeVerification() {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -47,7 +47,7 @@ export default function AddToWishlistItemCard(sku) {
   ({ id: arr2[2], productLine: arr2[3] } = sku);
   items1[4] = wishlistId;
   items1[5] = analyticsLocations;
-  const callback1 = wishlistAnalyticsContext.useCallback(merged(function*(arg0, value) {
+  const callback1 = wishlistAnalyticsContext.useCallback(merged(function*() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -76,13 +76,13 @@ export default function AddToWishlistItemCard(sku) {
           } else {
             let surface;
             if (wishlistAnalyticsContext != null) {
-              surface = tmp28.surface;
+              surface = wishlistAnalyticsContext.surface;
             }
             if (null != surface) {
               let obj1 = { sku_id: sku.id, wishlist_id: wishlistId, wishlist_owner_id: null, surface: null, position_in_section: null, item_source: null, click_type: "add_to_wishlist", product_line: null, impression_session_id: null, location_stack: null };
-              ({ wishlistOwnerId: obj9.wishlist_owner_id, surface: obj9.surface, positionInSection: obj9.position_in_section, itemSource: obj9.item_source } = tmp28);
+              ({ wishlistOwnerId: obj9.wishlist_owner_id, surface: obj9.surface, positionInSection: obj9.position_in_section, itemSource: obj9.item_source } = wishlistAnalyticsContext);
               obj1.product_line = sku.productLine;
-              ({ impressionSessionId: obj9.impression_session_id, analyticsLocations: obj9.location_stack } = tmp28);
+              ({ impressionSessionId: obj9.impression_session_id, analyticsLocations: obj9.location_stack } = wishlistAnalyticsContext);
               v3(tmp36[11]).track(closure_1_7.WISHLIST_ITEM_CLICKED, obj1);
               const obj8 = v3(tmp36[11]);
             }

@@ -75,10 +75,10 @@ function BountiesModalContentInner(bounty) {
   const memo3 = noop.useMemo(() => {
     const bottomContainer = closure_2.bottomContainer;
     if (memo.isFullWidth) {
-      const items = [bottomContainer, tmp2.bottomContainerFullWidth];
+      const items = [bottomContainer, closure_2.bottomContainerFullWidth];
       let items1 = items;
     } else {
-      items1 = [bottomContainer, tmp2.bottomContainerNotFullWidth, ];
+      items1 = [bottomContainer, closure_2.bottomContainerNotFullWidth, ];
       const obj = { left: null, width: null };
       ({ left: obj.left, width: obj.width } = memo);
       items1[2] = obj;
@@ -116,11 +116,11 @@ function BountiesModalContentInner(bounty) {
         bounty(tmp20[18]);
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         c3 = 0;
       }
-      return arg1;
+      return value;
     }), items5);
     tmp9Result = tmp9(15021);
     obj = { bountyId: bounty.id, sourceQuestContent, rewardDurationMs: result, initialPlaybackTimeSec: null, initialMaxVideoProgressSec: null, initialVideoDurationSec: null, wasPreloaded: false, startupPath: "carousel", verticalScrollingPosition: null };
@@ -229,7 +229,7 @@ function BountiesModalContentInner(bounty) {
     let rect = { left: null, right: null, bottom: true, style: null, pointerEvents: "box-none", children: null };
     ({ isFullWidth: obj16.left, isFullWidth: obj16.right } = memo);
     rect.style = memo3;
-    const obj6 = { bounty, visible: isEndCardVisible, sourceQuestContent, onClose: callback3 };
+    let obj6 = { bounty, visible: isEndCardVisible, sourceQuestContent, onClose: callback3 };
     rect.children = videoDuration(tmp2(15045), obj6);
     items9[2] = videoDuration(tmp9(7123).SafeAreaPaddingView, rect);
     obj2.children = items9;
@@ -269,16 +269,16 @@ export default function BountiesModalContent(arg0) {
     obj = { theme: ThemeTypes.DARKER, children: null };
     obj = {
       adContentId: found.id,
-      adCreativeType: tmp(tmp2[21]).AdCreativeType.BOUNTY,
-      questContent: tmp(tmp2[23]).QuestContent.VIDEO_MODAL_MOBILE,
+      adCreativeType: require("AdCreativeType").AdCreativeType.BOUNTY,
+      questContent: require("QuestContent").QuestContent.VIDEO_MODAL_MOBILE,
       sourceQuestContent,
       overrideVisibility: true,
       children() {
           return closure_2_10(BountiesModalContentInner, { bounty: found, sourceQuestContent });
         }
     };
-    obj.children = closure_10(tmp(tmp2[27]).BillableAdPlacementImpressionTrackerNative, obj);
-    tmp4 = closure_10(tmp(tmp2[33]).ThemeContextProvider, obj);
+    obj.children = closure_10(require("QuestContentImpressionTracker").BillableAdPlacementImpressionTrackerNative, obj);
+    tmp4 = closure_10(require("native").ThemeContextProvider, obj);
   }
   return tmp4;
 };

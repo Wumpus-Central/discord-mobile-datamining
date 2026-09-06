@@ -4,12 +4,21 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import BottomSheetModal from "BottomSheetModal" /* 6627 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
+import SettingsIcon from "SettingsIcon" /* 7380 */;
+import RowButton from "RowButton" /* 8595 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8625 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9738 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9751 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10032 */;
 import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11608 */;
 import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11610 */;
 import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11612 */;
@@ -82,25 +91,25 @@ export default function ChannelMembersActionSheet(arg0) {
       if (null != sortedGuildRoles) {
         const canResult = PermissionStore.can(constants2.MANAGE_ROLES, stateFromStores);
         c5 = canResult;
-        let tmp5Result = tmp5(9738);
+        let tmp5Result = ChannelPermissionsUtils;
         const existingRolesRows = tmp5Result.getExistingRolesRows(guild, sortedGuildRoles, stateFromStores, stateFromStores.accessPermissions);
-        tmp5Result = tmp5(9738);
+        tmp5Result = ChannelPermissionsUtils;
         obj = { appChannelBotUserId: tmp11 };
         const items5 = [];
         obj = { title: null, data: null };
         const existingMembersRows = tmp5Result.getExistingMembersRows(stateFromStoresArray, stateFromStores, guild, stateFromStores.accessPermissions, obj);
-        const intl4 = tmp5(1114).intl;
-        obj.title = intl4.string(tmp5(1114).t["LPJmL/"]);
+        const intl4 = util.intl;
+        obj.title = intl4.string(util.t["LPJmL/"]);
         obj.data = existingRolesRows;
         items5.push(obj);
         obj1 = { title: null, data: null };
-        const intl5 = tmp5(1114).intl;
-        obj1.title = intl5.string(tmp5(1114).t["9Oq93m"]);
+        const intl5 = util.intl;
+        obj1.title = intl5.string(util.t["9Oq93m"]);
         obj1.data = existingMembersRows;
         items5.push(obj1);
         obj2 = { title: null, subtitle: null, trailing: null };
-        const intl6 = tmp5(1114).intl;
-        obj2.title = intl6.string(tmp5(1114).t.ES4CC6);
+        const intl6 = util.intl;
+        obj2.title = intl6.string(util.t.ES4CC6);
         const _HermesInternal = HermesInternal;
         obj2.subtitle = "#" + tmp9;
         let tmp32Result = canResult;
@@ -115,31 +124,31 @@ export default function ChannelMembersActionSheet(arg0) {
             accessibilityLabel: null,
             children: null
           };
-          let intl = tmp5(1114).intl;
-          obj3.accessibilityLabel = intl.string(tmp5(1114).t.XPDhcc);
-          obj3.children = tmp32(tmp5(7380).SettingsIcon, {});
-          tmp32Result = tmp32(tmp5(5123).PressableOpacity, obj3);
+          let intl = util.intl;
+          obj3.accessibilityLabel = intl.string(util.t.XPDhcc);
+          obj3.children = closure_11(SettingsIcon.SettingsIcon, {});
+          tmp32Result = closure_11(Pressables.PressableOpacity, obj3);
         }
         const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
         obj2.trailing = tmp32Result;
-        obj4.header = closure_11(tmp5(7149).BottomSheetTitleHeader, obj2);
+        obj4.header = closure_11(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
         const obj5 = { style: tmp.container, children: null };
         if (canResult) {
           const obj6 = { label: null, onPress: null, icon: null };
-          const intl3 = tmp5(1114).intl;
-          obj6.label = intl3.string(tmp5(1114).t.dMJ3Y6);
+          const intl3 = util.intl;
+          obj6.label = intl3.string(util.t.dMJ3Y6);
           obj6.onPress = function onPress() {
             return channel_permissions_ChannelPermissionsUtils.openAddMembersActionSheet(stateFromStores);
           };
-          obj6.icon = tmp32(tmp5(10032).GroupPlusIcon, {});
-          tmp32Result = tmp32(tmp5(8595).RowButton, obj6);
+          obj6.icon = closure_11(GroupPlusIcon.GroupPlusIcon, {});
+          tmp32Result = closure_11(RowButton.RowButton, obj6);
         } else {
           const obj7 = { style: tmp.warning, children: null };
-          const obj8 = { messageType: tmp5(1178).HelpMessageTypes.INFO, children: null };
-          const intl2 = tmp5(1114).intl;
-          obj8.children = intl2.string(tmp5(1114).t.VOuiSj);
-          obj7.children = tmp32(tmp5(1178).HelpMessage, obj8);
-          tmp32Result = tmp32(tmp14, obj7);
+          const obj8 = { messageType: native.HelpMessageTypes.INFO, children: null };
+          const intl2 = util.intl;
+          obj8.children = intl2.string(util.t.VOuiSj);
+          obj7.children = closure_11(native.HelpMessage, obj8);
+          tmp32Result = closure_11(tmp14, obj7);
         }
         const items6 = [tmp32Result, ];
         const obj9 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, stickySectionHeadersEnabled: false };
@@ -159,10 +168,10 @@ export default function ChannelMembersActionSheet(arg0) {
           return closure_2_11(Text_Text.Text, obj);
         };
         obj9.sections = items5;
-        items6[1] = closure_11(tmp5(6627).BottomSheetSectionList, obj9);
+        items6[1] = closure_11(BottomSheetModal.BottomSheetSectionList, obj9);
         obj5.children = items6;
         obj4.children = closure_12(stateFromStores, obj5);
-        return closure_11(tmp5(7150).BottomSheet, obj4);
+        return closure_11(Sheet_BottomSheet.BottomSheet, obj4);
       }
     }
   }

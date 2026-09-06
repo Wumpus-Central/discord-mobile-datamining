@@ -35,7 +35,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
   }, []);
   const items = [guildId, joinRequestId, interviewChannelId, onError, submitting, userId];
   obj = { approveRequest: null, rejectRequest: null, submitting: null, handleOpenInterview: null };
-  const callback1 = joinRequestId.useCallback(guildId(function*(arg0, value) {
+  const callback1 = joinRequestId.useCallback(guildId(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -164,7 +164,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
     }
   }), items);
   const items1 = [guildId, joinRequestId, onError, submitting, userId];
-  obj.approveRequest = joinRequestId.useCallback(guildId(function*(arg0, value) {
+  obj.approveRequest = joinRequestId.useCallback(guildId(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -197,10 +197,10 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
                     closure_7(true);
                     c3 = 2;
                     const obj5 = tmp42(tmp44[10]);
-                    tmp42 = tmp62;
+                    tmp42 = userId;
                     c4 = 3;
                     c5 = 1;
-                    const obj1 = { value: obj5.updateGuildJoinRequest(tmp32, tmp62, tmp33, tmp4(tmp44[11]).GuildJoinRequestApplicationStatuses.APPROVED), done: false };
+                    const obj1 = { value: obj5.updateGuildJoinRequest(guildId, userId, joinRequestId, tmp4(tmp44[11]).GuildJoinRequestApplicationStatuses.APPROVED), done: false };
                     return obj1;
                   }
                 }

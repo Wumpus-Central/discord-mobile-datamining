@@ -48,10 +48,10 @@ export default function ActivityEmoji(emoji) {
   const memo = noop.useMemo(() => {
     let id;
     if (emoji != null) {
-      id = tmp.id;
+      id = emoji.id;
     }
     if (null != id) {
-      const obj = { id: tmp.id, size: 48, animated };
+      const obj = { id: emoji.id, size: 48, animated };
       return obj.getEmojiURL(obj);
     }
   }, items);

@@ -31,7 +31,7 @@ export default function StartStageChannelEventActionSheet(channel) {
   value = undefined;
   dependencyMap = undefined;
   c4 = undefined;
-  _slicedToArray = async function _handleSave(noop, value) {
+  _slicedToArray = async function _handleSave(noop) {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -65,16 +65,16 @@ export default function StartStageChannelEventActionSheet(channel) {
               const result = obj3.dismissGlobalKeyboard();
               dependencyMap = 1;
               if (null != stateFromStores) {
-                let tmp33Result = tmp33(8398);
+                let tmp33Result = tmp45(8398);
                 c4 = 3;
                 c5 = 1;
-                let obj1 = { value: tmp33Result.editStage(channel, tmp53, constants.GUILD_ONLY), done: false };
+                let obj1 = { value: tmp33Result.editStage(channel, importAll, constants.GUILD_ONLY), done: false };
                 return obj1;
               } else {
-                tmp33Result = tmp33(8398);
+                tmp33Result = tmp45(8398);
                 c4 = 2;
                 c5 = 1;
-                const obj2 = { value: tmp33Result.startStage(channel, tmp53, constants.GUILD_ONLY, false), done: false };
+                const obj2 = { value: tmp33Result.startStage(channel, importAll, constants.GUILD_ONLY, false), done: false };
                 return obj2;
               }
             }
@@ -212,7 +212,7 @@ export default function StartStageChannelEventActionSheet(channel) {
   let tmp15Result = null;
   if (null != obj2) {
     const obj5 = { style: tmp.error, variant: "text-xs/medium", color: "text-feedback-critical", children: obj2.getAnyErrorMessage() };
-    tmp15Result = tmp15(tmp2(4556).Text, obj5);
+    tmp15Result = closure_13(tmp2(4556).Text, obj5);
   }
   items2[3] = tmp15Result;
   const obj6 = { style: tmp.startButton, children: null };
@@ -230,7 +230,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     const obj8 = { accessible: false, style: tmp.buttonSubtitle, variant: "text-xs/medium", color: "text-default", children: null };
     const intl10 = tmp2(1114).intl;
     obj8.children = intl10.string(tmp2(1114).t.gR66jX);
-    tmp15Result = tmp15(tmp2(4556).Text, obj8);
+    tmp15Result = closure_13(tmp2(4556).Text, obj8);
   }
   const obj4 = {
     onConfirmPress() {

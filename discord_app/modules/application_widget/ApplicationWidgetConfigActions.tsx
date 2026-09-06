@@ -32,7 +32,7 @@ function fetchFeaturedWidgetConfigsFromApi() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi(arg0, value) {
+let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -122,7 +122,7 @@ function fetchDeveloperWidgetConfigsFromApi() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _fetchDeveloperWidgetConfigsFromApi(arg0, value) {
+let closure_13 = async function _fetchDeveloperWidgetConfigsFromApi() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -195,11 +195,11 @@ let closure_13 = async function _fetchDeveloperWidgetConfigsFromApi(arg0, value)
     }
   }
 };
-let closure_15 = async function _fetchWidgetConfigsFromApi(applicationId) {
+let closure_15 = async function _fetchWidgetConfigsFromApi() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

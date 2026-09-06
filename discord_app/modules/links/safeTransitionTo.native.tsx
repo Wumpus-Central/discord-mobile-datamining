@@ -9,7 +9,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
-let closure_6 = async function _safeTransitionTo(arg0, value) {
+let closure_6 = async function _safeTransitionTo(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -46,12 +46,12 @@ let closure_6 = async function _safeTransitionTo(arg0, value) {
             const channelId = tryParseDiceRollLinkResult.channelId;
             ({ guildId, diceCount, diceSides } = tryParseDiceRollLinkResult);
             DiceRollActionCreators.startDiceRoll(channelId, diceCount, diceSides);
-            router_utils.transitionTo(Routes.CHANNEL(guildId, channelId), tmp82);
+            router_utils.transitionTo(Routes.CHANNEL(guildId, channelId), closure_1);
             c6 = 3;
             const obj1 = { value: undefined, done: true };
             return obj1;
           } else {
-            const tryParseChannelPathResult = LinkUtils.tryParseChannelPath(tmp81);
+            const tryParseChannelPathResult = LinkUtils.tryParseChannelPath(closure_0);
             closure_131_2 = tryParseChannelPathResult;
             if (null != tryParseChannelPathResult) {
               c5 = 1;
@@ -60,8 +60,6 @@ let closure_6 = async function _safeTransitionTo(arg0, value) {
               return obj2;
             }
           }
-          tmp81 = closure_0;
-          tmp82 = closure_1;
         }
       } else {
         if (1 === tmp5) {

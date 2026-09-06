@@ -32,10 +32,10 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
     const t = util.t;
     if (closure_1) {
       let stringResult = string(t["7AWk50"]);
-      let tmp10 = tmp6;
+      let tmp10 = require;
     } else {
       stringResult = string(t["EZgS+9"]);
-      tmp10 = tmp6;
+      tmp10 = require;
     }
     obj = { text: stringResult, accessibilityHint: null, inCall: false };
     const intl2 = tmp10(1114).intl;
@@ -51,7 +51,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
   }, items1);
   obj = { text: stateFromStoresObject.text, inCall: stateFromStoresObject.inCall, accessibilityHint: stateFromStoresObject.accessibilityHint, handlePress: null };
   const items2 = [arg0, arg1, arg2];
-  obj.handlePress = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  obj.handlePress = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

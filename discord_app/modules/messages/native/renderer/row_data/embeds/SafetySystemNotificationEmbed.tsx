@@ -3,7 +3,9 @@
 // Module 13246 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
 import _modDef4153 from "module_4153" /* 4153 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7946 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8418 */;
 import size from "module_2" /* 2 */;
 
@@ -34,12 +36,12 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (null != parseMessageForPropsResult.ctas) {
               let mapCtaToNativeDataResult;
               if (null != parseMessageForPropsResult.ctas[0]) {
-                let tmp6Result = tmp6(8418);
+                let tmp6Result = SafetyHubUtils;
                 mapCtaToNativeDataResult = tmp6Result.mapCtaToNativeData(parseMessageForPropsResult.ctas[0], parseMessageForPropsResult.learn_more_link, parseMessageForPropsResult.classification_id);
               }
               let mapCtaToNativeDataResult1;
               if (null != parseMessageForPropsResult.ctas[1]) {
-                tmp6Result = tmp6(8418);
+                tmp6Result = SafetyHubUtils;
                 mapCtaToNativeDataResult1 = tmp6Result.mapCtaToNativeData(parseMessageForPropsResult.ctas[1], parseMessageForPropsResult.learn_more_link, parseMessageForPropsResult.classification_id);
               }
               tmp9 = mapCtaToNativeDataResult1;
@@ -49,17 +51,17 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (str == null) {
               str = "";
             }
-            obj = { titleText: str, titleIcon: tmp6(7946).getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8589 : 5036))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
-            const intl = tmp6(1114).intl;
+            obj = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8589 : 5036))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
+            const intl = util.intl;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {
               num = 0;
             }
             obj = { daysAgo: null };
-            const tmp6Result1 = tmp6(7946);
+            const tmp6Result1 = renderer_EmbedUtils;
             const obj7 = _modDef4153();
             obj.daysAgo = obj7.diff(_modDef4153.unix(num), "days");
-            obj.subtitleText = intl.formatToPlainString(tmp6(1114).t.eevFb6, obj);
+            obj.subtitleText = intl.formatToPlainString(util.t.eevFb6, obj);
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {
               str4 = "";

@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useFontScale from "useFontScale" /* 4982 */;
 import Pressables from "Pressables" /* 5123 */;
 import Badge from "Badge" /* 7869 */;
@@ -105,18 +106,18 @@ export default function IconActionButton(variant) {
   const items1 = [React4(closure_7, { IconComponent, color, source }), , , ];
   if (tmp10Result) {
     obj = { variant: "text-sm/bold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
-    tmp10Result = tmp10(tmp2(4556).Text, obj);
+    tmp10Result = React4(Text_Text.Text, obj);
   }
   items1[1] = tmp10Result;
   tmp10Result = null;
   if (num > 0) {
     obj = { style: tmp.countStyle, value: num };
-    tmp10Result = tmp10(tmp2(1178).Badge, obj);
+    tmp10Result = React4(native.Badge, obj);
   }
   items1[2] = tmp10Result;
   if (badge) {
     const obj1 = { badgePosition };
-    badge = tmp10(ButtonBadge, obj1);
+    badge = React4(ButtonBadge, obj1);
   }
   items1[3] = badge;
   obj.children = items1;

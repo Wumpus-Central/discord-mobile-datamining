@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import EmojiPickerListRow from "EmojiPickerListRow" /* 10310 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10328 */;
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12426 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,7 +42,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       if (locked) {
         let openEmojiActionSheet = noop;
       } else {
-        openEmojiActionSheet = tmp2(10328).openEmojiActionSheet;
+        openEmojiActionSheet = openEmojiActionSheet2.openEmojiActionSheet;
       }
       obj.onLongPressEmoji = openEmojiActionSheet;
       obj.animateEmoji = !reducedMotion;
@@ -71,12 +72,12 @@ const __initData = { code: "function EmojiSuggestionBarSmallTsx1(){const{interpo
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarSmall.tsx");
 
-export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, ref) => {
+export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, arg1) => {
   anchorTop = anchorTop.anchorTop;
   const onOccupiedHeightChange = anchorTop.onOccupiedHeightChange;
   let unlockedEmojis;
   let merged = Object.assign(anchorTop, Object.assign({ anchorTop: 0, onOccupiedHeightChange: 0 }));
-  const emojiSuggestionBarState = anchorTop(unlockedEmojis[5]).useEmojiSuggestionBarState(merged, anchorTop(unlockedEmojis[5]).MAX_SUGGESTIONS_LARGE, ref);
+  const emojiSuggestionBarState = anchorTop(unlockedEmojis[5]).useEmojiSuggestionBarState(merged, anchorTop(unlockedEmojis[5]).MAX_SUGGESTIONS_LARGE, arg1);
   unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
   const lockedEmojis = emojiSuggestionBarState.lockedEmojis;
   const reducedMotion = emojiSuggestionBarState.reducedMotion;
@@ -88,14 +89,14 @@ export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, ref) => {
     const obj = { displayEmojis: EmojiSuggestionBarUtils.sortEmojisForDisplay(unlockedEmojis, lockedEmojis.slice(0, 2), 3), reducedMotion, handlePress, handlePressEmojiUnavailable };
     return obj;
   }, items);
-  const renderItem = lockedEmojis.useCallback((arg0, arg1, transitionState, cleanUp) => {
+  const renderItem = lockedEmojis.useCallback((key, arg1, transitionState, cleanUp) => {
     const obj = {};
     const merged = Object.assign(arg1);
     obj.anchorTop = anchorTop;
     obj.onOccupiedHeightChange = onOccupiedHeightChange;
     obj.transitionState = transitionState;
     obj.cleanUp = cleanUp;
-    return <EmojiSuggestionBarSmallAnimated key={arg0} />;
+    return <EmojiSuggestionBarSmallAnimated key={key} />;
   }, items1);
   return reducedMotion(anchorTop(unlockedEmojis[9]).TransitionItem, { item, renderItem });
 });

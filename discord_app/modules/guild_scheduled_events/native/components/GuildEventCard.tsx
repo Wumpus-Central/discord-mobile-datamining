@@ -17,7 +17,7 @@ function GuildEventCardControls(onCloseAction) {
   let tmp6Result = primaryActionButtonType === GuildEventCardComponents.PrimaryActionType.START;
   if (tmp6Result) {
     obj = { event };
-    tmp6Result = tmp6(tmp2(9772).GuildEventCardRSVPAction, obj);
+    tmp6Result = React5(GuildEventCardComponents.GuildEventCardRSVPAction, obj);
   }
   items[1] = tmp6Result;
   items[2] = React5(GuildEventCardComponents.GuildEventShareAction, { event });
@@ -79,14 +79,14 @@ export default noop.memo((event) => {
   }
   if (hasItem) {
     obj = { noBackground: true, onConfirmPress: onCloseAction, channelId: channel_id };
-    hasItem = tmp6(require("StageChannelAgeVerificationNotice"), obj);
+    hasItem = closure_7(require("StageChannelAgeVerificationNotice"), obj);
   }
   items2[2] = hasItem;
   items2[3] = closure_7(event(channel_id[8]).GuildEventSimpleLocation, { event });
   let tmp6Result = null;
   if (!hideControls) {
     const obj1 = { event, onCloseAction, isConnected: stateFromStores };
-    tmp6Result = tmp6(GuildEventCardControls, obj1);
+    tmp6Result = closure_7(GuildEventCardControls, obj1);
   }
   items2[4] = tmp6Result;
   tmp6Result = null != result;
@@ -103,7 +103,7 @@ export default noop.memo((event) => {
           return tmpResult;
         }
     };
-    tmp6Result = tmp6(require("GuildEventRecurrences"), obj2);
+    tmp6Result = closure_7(require("GuildEventRecurrences"), obj2);
   }
   items2[5] = tmp6Result;
   obj.children = closure_8(View, { children: items2 });

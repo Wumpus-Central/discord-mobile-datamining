@@ -1,7 +1,10 @@
 // === Module 16756: PortalKeyboardRenderer ===
 
 // Module 16756 (PortalKeyboardRenderer)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import native from "native" /* 4271 */;
+import useKeyboardType from "useKeyboardType" /* 4427 */;
 import PortalKeyboardUIStore3 from "PortalKeyboardUIStore" /* 4428 */;
 import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 16757 */;
 import noop from "module_19" /* 19 */;
@@ -13,21 +16,21 @@ function transitionGroupGetItemKey(id) {
 }
 const jsx = fn(21).jsx;
 let closure_6 = [];
-function transitionGroupRenderItem(arg0, item, state, cleanUp) {
+function transitionGroupRenderItem(key, item, state, cleanUp) {
   let isAndroidResult = state === native.TransitionStates.YEETED;
   if (isAndroidResult) {
-    let tmpResult = tmp(4427);
+    let tmpResult = useKeyboardType;
     const keyboardType = tmpResult.getKeyboardType();
-    isAndroidResult = keyboardType === tmp(1609).KeyboardTypes.SYSTEM;
+    isAndroidResult = keyboardType === KeyboardTypes.KeyboardTypes.SYSTEM;
   }
   if (isAndroidResult) {
-    tmpResult = tmp(1115);
+    tmpResult = PlatformUtils;
     isAndroidResult = tmpResult.isAndroid();
   }
   let tmp5 = null;
   if (!isAndroidResult) {
     const obj = { item, state, cleanUp };
-    tmp5 = jsx(PortalKeyboardRendererComponentDefault, { item, state, cleanUp }, arg0);
+    tmp5 = jsx(PortalKeyboardRendererComponentDefault, { item, state, cleanUp }, key);
   }
   return tmp5;
 }
@@ -53,6 +56,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
         const result = closure_0(4428).closePortalKeyboardIfUnhandled();
         const tmpResult = closure_0(4428);
       }
+      tmp6 = null != field && tmp5 !== field.type;
     });
     return () => {
       closure_0();
@@ -65,34 +69,36 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
       field = PortalKeyboardUIStore.getField("keyboard");
       let tmp4 = null != field;
       if (tmp4) {
-        tmp4 = field.channelId !== tmp(tmp2[10]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+        tmp4 = field.channelId !== rootNavigationRef(dependencyMap[10]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
       }
       if (tmp4) {
-        let tmpResult = tmp(tmp2[11]);
+        let tmpResult = rootNavigationRef(dependencyMap[11]);
         tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
       }
       if (tmp4) {
-        tmpResult = tmp(tmp2[4]);
+        tmpResult = rootNavigationRef(dependencyMap[4]);
         const keyboardType = tmpResult.getKeyboardType();
-        if (keyboardType !== tmp(tmp2[5]).KeyboardTypes.SYSTEM) {
-          const obj = { type: tmp(tmp2[5]).KeyboardTypes.SYSTEM };
-          tmp(tmp2[12]).setKeyboardType(obj);
-          const tmpResult1 = tmp(tmp2[12]);
+        if (keyboardType !== rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM) {
+          const obj = { type: rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM };
+          rootNavigationRef(dependencyMap[12]).setKeyboardType(obj);
+          const tmpResult1 = rootNavigationRef(dependencyMap[12]);
         }
-        const result = tmp(tmp2[8]).closePortalKeyboardIfUnhandled();
-        const tmpResult2 = tmp(tmp2[8]);
+        const result = rootNavigationRef(dependencyMap[8]).closePortalKeyboardIfUnhandled();
+        const tmpResult2 = rootNavigationRef(dependencyMap[8]);
       }
     }
     if (obj.isAndroid()) {
-      rootNavigationRef = rootNavigationRef(dependencyMap[9]).getRootNavigationRef();
+      const rootNavigationRef = tmp(dependencyMap[9]).getRootNavigationRef();
       if (null != rootNavigationRef) {
         rootNavigationRef.addListener("state", onNavigationStateChange);
         return () => {
           rootNavigationRef.removeListener("state", onNavigationStateChange);
         };
       }
-      let tmpResult = rootNavigationRef(dependencyMap[9]);
+      let tmpResult = tmp(dependencyMap[9]);
     }
+    obj = rootNavigationRef(dependencyMap[6]);
+    tmp = rootNavigationRef;
   }, []);
   let PortalKeyboardUIStore = id(4428).PortalKeyboardUIStore;
   let field = PortalKeyboardUIStore.useField("keyboard");
@@ -118,10 +124,10 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
   const tmp11 = jsx(id(4271).TransitionGroup, { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem });
   if (flag) {
     obj = { children: tmp11 };
-    let tmp10Result = tmp10(tmp5(4431).PortalKeyboard, obj);
+    let tmp10Result = jsx(tmp5(4431).PortalKeyboard, { children: tmp11 });
   } else {
     const obj1 = { value: true, children: tmp11 };
-    tmp10Result = tmp10(tmp5(10322).PortalKeyboardInModalContext.Provider, obj1);
+    tmp10Result = jsx(tmp5(10322).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
   }
   return tmp10Result;
 };

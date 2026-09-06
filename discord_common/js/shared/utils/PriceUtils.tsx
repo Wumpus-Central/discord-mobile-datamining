@@ -23,19 +23,19 @@ obj = { [fn(4778).CountryCodes.AD]: CurrencyCodes.EUR, [fn(4778).CountryCodes.AE
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/PriceUtils.tsx");
 
-export const formatPrice = (arg0, currency, arg2) => {
-  obj = arg3;
-  if (arg3 === undefined) {
+export const formatPrice = (result, currency, localeOverride) => {
+  obj = localeOverride;
+  if (localeOverride === undefined) {
     obj = {};
   }
   if (currency === CurrencyCodes.DISCORD_ORB) {
-    return arg0.toString();
+    return result.toString();
   } else {
     const convertToMajorUnits = obj.convertToMajorUnits;
     const _Intl = Intl;
     obj = { style: "currency", currency };
     const merged = Object.assign(_objectWithoutProperties(obj, closure_2));
-    let toNumberResult = arg0;
+    let toNumberResult = result;
     if (tmp) {
       if (typeof convertToMajorCurrencyUnits === "function") {
         if (null == obj[currency]) {
@@ -44,7 +44,7 @@ export const formatPrice = (arg0, currency, arg2) => {
           const error = new Error("Unexpected currency " + currency);
           throw error;
         } else {
-          const obj4 = new addDefault(arg0);
+          const obj4 = new addDefault(result);
           toNumberResult = obj4.dividedBy(10 ** tmp11).toNumber();
           const dividedByResult = obj4.dividedBy(10 ** tmp11);
         }
@@ -52,16 +52,16 @@ export const formatPrice = (arg0, currency, arg2) => {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    return Intl.NumberFormat(arg2, obj).format(toNumberResult);
+    return Intl.NumberFormat(localeOverride, obj).format(toNumberResult);
   }
 };
 export const CurrencyExponents = obj;
 export { convertToMajorCurrencyUnits };
-export const convertToMinorCurrencyUnits = (arg0, arg1) => {
-  if (null == obj[arg1]) {
+export const convertToMinorCurrencyUnits = (arg0, currencyCode) => {
+  if (null == obj[currencyCode]) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Unexpected currency " + arg1);
+    const error = new Error("Unexpected currency " + currencyCode);
     throw error;
   } else {
     obj = new addDefault(arg0);

@@ -2,6 +2,7 @@
 
 // Module 8711 (ObscuredSurface)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 5081 */;
 import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8712 */;
@@ -35,14 +36,14 @@ export default function ObscuredSurface(obscured) {
     const obj3 = { size: "lg", color: nativeDefault.colors.TEXT_DEFAULT };
     const items1 = [React4(ImageWarningIcon.ImageWarningIcon, obj3), , ];
     if (heading == null) {
-      const intl = tmp4(1114).intl;
-      heading = intl.string(tmp4(1114).t.xC8Saf);
+      const intl = util.intl;
+      heading = intl.string(util.t.xC8Saf);
     }
     const obj4 = { variant: "heading-md/semibold", color: "text-strong", children: heading };
     items1[1] = React4(Text_Text.Text, obj4);
     if (description == null) {
-      const intl2 = tmp4(1114).intl;
-      description = intl2.string(tmp4(1114).t["0fc/DG"]);
+      const intl2 = util.intl;
+      description = intl2.string(util.t["0fc/DG"]);
     }
     const obj5 = { variant: "text-sm/normal", color: "text-muted", children: description };
     items1[2] = React4(Text_Text.Text, obj5);
@@ -50,7 +51,7 @@ export default function ObscuredSurface(obscured) {
     items[2] = hasOwnProperty(View, obj2);
     obj.children = items;
     obj.children = hasOwnProperty(View, obj);
-    tmp3Result = tmp3(ObscuredSurfaceContext.ObscuredSurfaceContext.Provider, obj);
+    tmp3Result = React4(ObscuredSurfaceContext.ObscuredSurfaceContext.Provider, obj);
   }
   return tmp3Result;
 };

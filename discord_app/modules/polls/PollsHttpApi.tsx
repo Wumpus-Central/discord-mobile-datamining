@@ -4,7 +4,7 @@
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_4 = async function _submitPollVote(arg0, value) {
+let closure_4 = async function _submitPollVote(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -87,7 +87,7 @@ let closure_4 = async function _submitPollVote(arg0, value) {
     }
   }
 };
-let closure_5 = async function _endPollEarly(arg0, value) {
+let closure_5 = async function _endPollEarly(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

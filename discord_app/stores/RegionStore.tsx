@@ -15,7 +15,7 @@ const prototype = RegionStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(GuildStore);
 };
-prototype["getOptimalRegion"] = function getOptimalRegion(guildId) {
+prototype["getOptimalRegion"] = function getOptimalRegion() {
   let tmp = guildId;
   if (guildId === undefined) {
     tmp = null;
@@ -31,7 +31,7 @@ prototype["getOptimalRegion"] = function getOptimalRegion(guildId) {
   }
   return tmp2;
 };
-prototype["getOptimalRegionId"] = function getOptimalRegionId(guildId) {
+prototype["getOptimalRegionId"] = function getOptimalRegionId() {
   let tmp = guildId;
   if (guildId === undefined) {
     tmp = null;
@@ -43,7 +43,7 @@ prototype["getOptimalRegionId"] = function getOptimalRegionId(guildId) {
   }
   return id;
 };
-prototype["getRandomRegion"] = function getRandomRegion(guildId) {
+prototype["getRandomRegion"] = function getRandomRegion() {
   let tmp = guildId;
   if (guildId === undefined) {
     tmp = null;
@@ -55,7 +55,7 @@ prototype["getRandomRegion"] = function getRandomRegion(guildId) {
   }
   return sampleResult;
 };
-prototype["getRandomRegionId"] = function getRandomRegionId(guildId) {
+prototype["getRandomRegionId"] = function getRandomRegionId() {
   let tmp = guildId;
   if (guildId === undefined) {
     tmp = null;

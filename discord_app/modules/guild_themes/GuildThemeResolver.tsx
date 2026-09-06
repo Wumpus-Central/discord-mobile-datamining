@@ -55,7 +55,7 @@ function resolveSavedActiveGuildTheme(stateFromStores) {
   }
   return tmp2;
 }
-function useActiveGuildThemeForGuildId(context, useActiveGuildTheme) {
+function useActiveGuildThemeForGuildId(context) {
   _require = context;
   let str = useActiveGuildTheme;
   if (useActiveGuildTheme === undefined) {
@@ -78,11 +78,11 @@ function useActiveGuildThemeForGuildId(context, useActiveGuildTheme) {
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     if (null != closure_0) {
       if (serverThemeUserEnabled) {
-        const guild = GuildStore.getGuild(tmp);
+        const guild = GuildStore.getGuild(closure_0);
         if (null != guild) {
           const features = guild.features;
           if (features.has(GuildFeatures.GUILD_THEME)) {
-            let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(tmp);
+            let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(closure_0);
             if (undefined === guildTheme) {
               guildTheme = guild.guildTheme;
             }
@@ -113,8 +113,8 @@ function useActiveGuildThemeForGuildId(context, useActiveGuildTheme) {
   return stateFromStores.useMemo(() => {
     if (undefined !== stateFromStores) {
       let tmp7 = null;
-      if (null != tmp) {
-        const customUserThemeSettings = tmp.customUserThemeSettings;
+      if (null != stateFromStores) {
+        const customUserThemeSettings = stateFromStores.customUserThemeSettings;
         let colors;
         if (customUserThemeSettings != null) {
           colors = customUserThemeSettings.colors;
@@ -133,7 +133,7 @@ function useActiveGuildThemeForGuildId(context, useActiveGuildTheme) {
         }
         tmp7 = tmp9;
         if (null == tmp9) {
-          const guildThemePreset = GuildThemePresets.getGuildThemePreset(tmp.presetId);
+          const guildThemePreset = GuildThemePresets.getGuildThemePreset(stateFromStores.presetId);
           let tmp13 = null;
           if (null != guildThemePreset) {
             obj = { type: "preset", preset: guildThemePreset };
@@ -224,7 +224,7 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
   return null != tmp;
 };
 export { resolveSavedActiveGuildTheme };
-export const useEnabledGuildThemeForGuildId = function useEnabledGuildThemeForGuildId(guildId, GuildThemeNuxTrigger) {
+export const useEnabledGuildThemeForGuildId = function useEnabledGuildThemeForGuildId(guildId) {
   let str = GuildThemeNuxTrigger;
   if (GuildThemeNuxTrigger === undefined) {
     str = "useEnabledGuildThemeForGuildId";
@@ -237,11 +237,11 @@ export const useEnabledGuildThemeForGuildId = function useEnabledGuildThemeForGu
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       if (serverThemeUserEnabled) {
-        const guild = GuildStore.getGuild(tmp);
+        const guild = GuildStore.getGuild(closure_0);
         if (null != guild) {
           const features = guild.features;
           if (features.has(GuildFeatures.GUILD_THEME)) {
-            let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(tmp);
+            let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(closure_0);
             if (undefined === guildTheme) {
               guildTheme = guild.guildTheme;
             }
@@ -256,7 +256,7 @@ export const useEnabledGuildThemeForGuildId = function useEnabledGuildThemeForGu
   const items2 = [stateFromStores];
   return stateFromStores.useMemo(() => resolveSavedActiveGuildTheme(stateFromStores), items2);
 };
-export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuildId(guildId, GuildPowerupsConstants) {
+export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuildId(guildId) {
   let str = GuildPowerupsConstants;
   if (GuildPowerupsConstants === undefined) {
     str = "getActiveGuildThemeForGuildId";
@@ -268,7 +268,7 @@ export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuil
         const features = guild.features;
         if (features.has(GuildFeatures.GUILD_THEME)) {
           const guildThemeSourcePreference = UserSettingsProtoStore.resolveGuildThemeSourcePreference(guildId);
-          if (guildThemeSourcePreference === tmp8(4491).GuildThemeSourcePreference.PERSONAL) {
+          if (guildThemeSourcePreference === Client.GuildThemeSourcePreference.PERSONAL) {
             return null;
           } else {
             let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(guildId);
@@ -282,7 +282,6 @@ export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuil
       return null;
     }
     obj = ServerThemeUserExperiment;
-    tmp8 = require;
   }
   return null;
 };
@@ -300,7 +299,7 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
         if (features.has(GuildFeatures.GUILD_THEME)) {
           const guildThemeSourcePreference = UserSettingsProtoStore.resolveGuildThemeSourcePreference(guildId);
           tmp11Result = null;
-          if (guildThemeSourcePreference !== tmp3(4491).GuildThemeSourcePreference.PERSONAL) {
+          if (guildThemeSourcePreference !== Client.GuildThemeSourcePreference.PERSONAL) {
             let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(guildId);
             if (undefined === guildTheme) {
               guildTheme = guild.guildTheme;
@@ -311,7 +310,6 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
       }
     }
     obj = ServerThemeUserExperiment;
-    tmp3 = require;
   }
   return tmp11Result;
 };

@@ -17,10 +17,9 @@ function getPurchaseToken() {
     }
   }
   const v4Result = v1.v4();
-  const Storage2 = tmp(510).Storage;
-  const tmp3 = purchase_token;
+  const Storage2 = Storage3.Storage;
   const tmpResult = v1;
-  const result = Storage2.set(tmp3, { purchaseToken: v4Result, expires: Date.now() + closure_4 });
+  const result = Storage2.set(purchase_token, { purchaseToken: v4Result, expires: Date.now() + closure_4 });
   return v4Result;
 }
 let closure_6 = async function _getPurchaseTokenHash() {
@@ -29,7 +28,8 @@ let closure_6 = async function _getPurchaseTokenHash() {
   const parts = getPurchaseToken().split("");
   const uint8Array = new Uint8Array(parts.map((item) => item.charCodeAt(0)));
   const _window = window;
-  closure_129_0 = await subtle.digest({ name: "SHA-256" }, uint8Array);
+  await subtle.digest({ name: "SHA-256" }, uint8Array);
+  closure_129_0 = value;
   const _btoa = btoa;
   const _String = String;
   closure_0 = 0;

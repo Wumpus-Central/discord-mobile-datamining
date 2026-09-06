@@ -5,7 +5,7 @@ import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _addRestrictedScheduleRule(arg0, body) {
+let closure_5 = async function _addRestrictedScheduleRule(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -21,7 +21,7 @@ let closure_5 = async function _addRestrictedScheduleRule(arg0, body) {
     return body2;
   })();
 };
-let closure_6 = async function _updateRestrictedScheduleRule(arg0, arg1, body) {
+let closure_6 = async function _updateRestrictedScheduleRule(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   c5 = 0;
@@ -38,7 +38,7 @@ let closure_6 = async function _updateRestrictedScheduleRule(arg0, arg1, body) {
     return body2;
   })();
 };
-let closure_7 = async function _deleteRestrictedScheduleRule(arg0, value) {
+let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

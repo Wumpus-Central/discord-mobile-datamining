@@ -9,7 +9,7 @@ import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = fn;
-let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0, value) {
+let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

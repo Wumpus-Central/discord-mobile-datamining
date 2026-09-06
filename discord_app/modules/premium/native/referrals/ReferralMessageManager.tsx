@@ -15,15 +15,14 @@ function handleReferralMessages(type) {
     if (null != type.content) {
       if (obj3.isProbablyAValidSnowflake(type.content)) {
         const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
-        const tmp9Result = tmp9(11);
+        const tmp9Result = SnowflakeUtilsDefault;
         if (tmp6) {
           const userOffer = UserOfferActionCreators.fetchUserOffer("ReferralMessageManager");
           const tmpResult = UserOfferActionCreators;
         }
-        tmp6 = null == premiumTypeSubscription && UserOfferStore.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
+        tmp6 = null == premiumTypeSubscription && UserOfferStore.shouldFetchReferralOffer(SnowflakeUtilsDefault.extractTimestamp(type.content));
       }
       obj3 = SnowflakeUtilsDefault;
-      tmp9 = importDefault;
     }
   }
 }

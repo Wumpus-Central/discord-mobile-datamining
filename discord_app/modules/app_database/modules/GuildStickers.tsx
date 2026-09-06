@@ -40,7 +40,8 @@ prototype["getAsync"] = function getAsync(arg0) {
     const _performance2 = performance;
     closure_128_0 = performance.now();
     tmp2(tmp5[2]);
-    closure_128_1 = await tmp2(tmp5[2]).stickers(tmp2).getMapEntries();
+    await tmp2(tmp5[2]).stickers(tmp2).getMapEntries();
+    closure_128_1 = value;
     const _performance = performance;
     closure_128_2 = performance.now();
     const _HermesInternal = HermesInternal;

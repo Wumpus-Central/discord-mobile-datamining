@@ -77,7 +77,7 @@ export default function UserSettingsVoiceInputOptions() {
       const obj = { autoThreshold };
       return obj.setMode(inputMode, obj);
     };
-    const items2 = [tmp5(tmp(7201).TableSwitchRow, obj3), ];
+    const items2 = [closure_6(tmp(7201).TableSwitchRow, obj3), ];
     const obj4 = { label: null, subLabel: null };
     const intl6 = tmp(1114).intl;
     obj4.label = intl6.string(tmp(1114).t["o+2oMK"]);
@@ -90,11 +90,11 @@ export default function UserSettingsVoiceInputOptions() {
           return obj.setMode(inputMode, obj);
         }
     };
-    obj5.children = tmp5(VoiceSensitivityDefault, obj6);
-    obj4.subLabel = tmp5(View, obj5);
-    items2[1] = tmp5(tmp(5605).TableRow, obj4);
+    obj5.children = closure_6(VoiceSensitivityDefault, obj6);
+    obj4.subLabel = closure_6(View, obj5);
+    items2[1] = closure_6(tmp(5605).TableRow, obj4);
     obj2.children = items2;
-    tmp4Result = tmp4(closure_7, obj2);
+    tmp4Result = closure_8(closure_7, obj2);
   }
   items1[1] = tmp4Result;
   obj.children = items1;

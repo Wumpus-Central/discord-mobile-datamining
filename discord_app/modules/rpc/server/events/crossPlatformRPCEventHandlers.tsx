@@ -4,6 +4,7 @@
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import AgeGateUtils from "AgeGateUtils" /* 4771 */;
 import RPCErrorDefault from "RPCError" /* 9554 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
 import RPCHelpers from "RPCHelpers" /* 9559 */;
@@ -43,10 +44,9 @@ function messageEvents(args) {
         tmp3 = new tmp3(obj, "Invalid nsfw channel id: " + channel.id);
         throw tmp3;
       }
-      tmp13Result = tmp13(4771);
+      tmp13Result = AgeGateUtils;
     }
     obj4 = RPCHelpers;
-    tmp13 = require;
   }
   obj = { errorCode: constants2.INVALID_CHANNEL };
   let tmp11 = RPCErrorDefault;

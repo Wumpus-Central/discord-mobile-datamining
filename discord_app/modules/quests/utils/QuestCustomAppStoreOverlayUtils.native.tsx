@@ -3,30 +3,31 @@
 // Module 15018 (QuestCustomAppStoreOverlayUtils)
 import apexExperiment from "apexExperiment" /* 11489 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 11496 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11498 */;
 import size from "module_2" /* 2 */;
 
 function fetchCustomAppStoreOverlayContent(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
-    let tmpResult = tmp(11496);
+    let tmpResult = QuestPlatformUtils;
     enabled = null != tmpResult.getInlineStoreParamsFromCta(cta);
   }
   let inlineStoreParamsFromCta = null;
   if (enabled) {
-    tmpResult = tmp(11496);
+    tmpResult = QuestPlatformUtils;
     inlineStoreParamsFromCta = tmpResult.getInlineStoreParamsFromCta(cta);
   }
   if (null == inlineStoreParamsFromCta) {
     let resolved = Promise.resolve(null);
   } else {
-    const tmpResult1 = tmp(11498);
-    let url = tmp(11496).getDirectAppStoreLinkFromCta(cta);
+    const tmpResult1 = AppStoreOverlayContent;
+    let url = QuestPlatformUtils.getDirectAppStoreLinkFromCta(cta);
     if (url == null) {
       url = cta.url;
     }
     resolved = tmpResult1.getAppStoreOverlayContent(inlineStoreParamsFromCta, url);
-    const tmpResult2 = tmp(11496);
+    const tmpResult2 = QuestPlatformUtils;
   }
   return resolved;
 }

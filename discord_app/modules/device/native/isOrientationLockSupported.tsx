@@ -1,6 +1,7 @@
 // === Module 9472: isOrientationLockSupported ===
 
 // Module 9472 (isOrientationLockSupported)
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import DeviceUtils from "DeviceUtils" /* 4539 */;
 import size from "module_2" /* 2 */;
 
@@ -10,11 +11,11 @@ export default function isOrientationLockSupported() {
   const isIpadOSResult = DeviceUtils.isIpadOS();
   let result = !isIpadOSResult;
   if (!isIpadOSResult) {
-    let tmpResult = tmp(1608);
+    let tmpResult = MetaQuestUtils;
     result = !tmpResult.isMetaQuest();
   }
   if (result) {
-    tmpResult = tmp(4539);
+    tmpResult = DeviceUtils;
     result = tmpResult.isOrientationLockSupported();
   }
   return result;

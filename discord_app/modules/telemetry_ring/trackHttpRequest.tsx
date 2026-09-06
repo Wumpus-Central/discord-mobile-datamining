@@ -3,6 +3,7 @@
 // Module 17283 (trackHttpRequest)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import HttpRequestSampleExperiment from "HttpRequestSampleExperiment" /* 17284 */;
 import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 17285 */;
 import size from "module_2" /* 2 */;
 
@@ -27,4 +28,5 @@ export default function trackHttpRequest(url) {
     AnalyticsUtilsDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
     const tmp3Result = AnalyticsUtilsDefault;
   }
+  obj2 = HttpRequestSampleExperiment;
 };

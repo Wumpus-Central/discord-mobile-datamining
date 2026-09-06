@@ -45,7 +45,7 @@ export default function UserProfileVoiceActivityIcon(channel) {
       } else if (channel.isNSFW()) {
         const obj1 = {};
         const merged3 = Object.assign(merged);
-        tmp8Result = tmp8(tmp2(5099).VoiceWarningIcon, obj1);
+        tmp8Result = jsx(tmp2(5099).VoiceWarningIcon, {});
       } else {
         if (tmp6) {
           let VoiceNormalIcon = tmp2(5098).VoiceLockIcon;
@@ -54,7 +54,7 @@ export default function UserProfileVoiceActivityIcon(channel) {
         }
         const obj2 = {};
         const merged4 = Object.assign(merged);
-        tmp8Result = tmp8(VoiceNormalIcon, obj2);
+        tmp8Result = <VoiceNormalIcon />;
       }
     }
   }

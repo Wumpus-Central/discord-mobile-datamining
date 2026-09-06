@@ -9,6 +9,7 @@ import usePipVideoOrStream from "usePipVideoOrStream" /* 9490 */;
 import VoicePanelUtils from "VoicePanelUtils" /* 9681 */;
 import AccessibilityManagerDefault from "AccessibilityManager" /* 14434 */;
 import KeyCommandsView from "KeyCommandsView" /* 14575 */;
+import NativeKeyCommandsModuleDefault from "NativeKeyCommandsModule" /* 14580 */;
 import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 16909 */;
 import BurstReactionAnimationContainerDefault from "BurstReactionAnimationContainer" /* 16912 */;
 import NativeMenuPresenterDefault from "NativeMenuPresenter" /* 16913 */;
@@ -61,13 +62,12 @@ export const useAppKeyCommands = function useAppKeyCommands() {
   const memo = noop.useMemo(() => {
     let obj = PlatformUtils;
     if (obj.isAndroid()) {
-      let keyModifierCommand = require("NativeKeyCommandsModule").getConstants().keyModifierCommand;
-      const obj2 = require("NativeKeyCommandsModule");
+      let keyModifierCommand = NativeKeyCommandsModuleDefault.getConstants().keyModifierCommand;
     } else {
       keyModifierCommand = KeyCommandsView.KeyCommandsView.keyModifierCommand;
     }
     obj = { input: "k", modifierFlags: keyModifierCommand, eventName: "keyCommandShowQuickSwitcher", discoverabilityTitle: null, onKeyCommand: null };
-    const intl = tmp(tmp2[12]).intl;
+    const intl = util.intl;
     obj.discoverabilityTitle = intl.string(util.t.yYsRlD);
     obj.onKeyCommand = function onKeyCommand() {
       closure_1_1(closure_1_2[13])();

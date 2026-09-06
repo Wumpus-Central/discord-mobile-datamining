@@ -44,6 +44,7 @@ prototype["logSinks"] = function logSinks() {
     arr = items.push("[Stream:" + first + ", Locks:[" + arr.join(",") + "]]");
     continue;
   }
+  tmp = this.activeSinks[Symbol.iterator]();
 };
 prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(dependencyMap, arg1, arg2) {
   const self = this;
@@ -77,10 +78,9 @@ prototype["clearLock"] = function clearLock(dependencyMap) {
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, obj] = tmp4;
-    let obj2 = obj;
     if (obj.has(dependencyMap)) {
-      let deleteResult = obj2.delete(dependencyMap);
-      if (0 === obj2.size) {
+      let deleteResult = obj.delete(dependencyMap);
+      if (0 === obj.size) {
         let setActiveResult = self.setActive(tmp5, false, self.sourceId(dependencyMap));
         let activeSinks = self.activeSinks;
         let deleteResult1 = activeSinks.delete(tmp5);
@@ -88,6 +88,7 @@ prototype["clearLock"] = function clearLock(dependencyMap) {
     }
     continue;
   }
+  tmp = this.activeSinks[Symbol.iterator]();
 };
 prototype["setActive"] = function setActive(arg0, arg1, arg2) {
   closure_0 = arg0;

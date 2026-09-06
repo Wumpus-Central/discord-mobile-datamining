@@ -1,6 +1,8 @@
 // === Module 14481: links ===
 
 // Module 14481 (links)
+import openUserSettings from "openUserSettings" /* 7382 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8856 */;
 import RPCErrorDefault from "RPCError" /* 9554 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
 import RPCHelpers from "RPCHelpers" /* 9559 */;
@@ -9,8 +11,6 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 
-const openUserSettings = tmp(7382);
-const ApplicationFlagUtils = tmp(8856);
 require = fn;
 let Constants = fn(4465);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
@@ -33,7 +33,7 @@ obj = {
   handler(socket) {
     socket = socket.socket;
     const url = socket.args.url;
-    return (async (arg0, value) => {
+    return (async () => {
       if (application === 2) {
         application = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -65,15 +65,15 @@ obj = {
               const obj18 = tmp5(tmp75[7]);
               let internalDeepLink = null;
               if (null != obj19.tryValidateEmbeddedAppFrame(socket)) {
-                let tmp85Result = tmp85(tmp75[9]);
+                let tmp85Result = tmp5(tmp75[9]);
                 internalDeepLink = tmp85Result.resolveInternalDeepLink(url);
               }
               if (null != internalDeepLink) {
-                if (tmp85(tmp75[10]).isPlatformEmbedded) {
+                if (tmp5(tmp75[10]).isPlatformEmbedded) {
                   let obj5 = tmp3(tmp75[11]);
                   obj5.focus(null, true);
                 }
-                tmp85Result = tmp85(tmp75[9]);
+                tmp85Result = tmp5(tmp75[9]);
                 if (tmp85Result.openInternalDeepLink(internalDeepLink)) {
                   const application3 = socket.application;
                   let id;
@@ -98,7 +98,7 @@ obj = {
                 if (tmp85Result1.shouldOpenActivityInPopoutWindow()) {
                   ACTIVITY_POPOUT = constants.ACTIVITY_POPOUT;
                 }
-                tmp85Result1 = tmp85(tmp75[13]);
+                tmp85Result1 = tmp5(tmp75[13]);
                 tmp3(tmp75[11]).focus(ACTIVITY_POPOUT, true);
                 const obj9 = tmp3(tmp75[11]);
               }
@@ -171,6 +171,7 @@ obj = {
                     }
                     url(1242).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url, opened: true });
                     closure_0({ opened: true });
+                    const obj = url(1242);
                   },
                   onCancel() {
                     let obj = url(1242);
@@ -245,7 +246,7 @@ let obj1 = {
       if (tmpResult.hasApplicationFlag(socket.application, constants.EMBEDDED)) {
         const promise = new Promise((arg0) => {
           closure_0 = arg0;
-          const obj = {
+          let obj = {
             applicationId,
             customId,
             linkId,
@@ -256,6 +257,7 @@ let obj1 = {
                 tmp2 = stateFromStores;
               }
               closure_0({ success: tmp2, didCopyLink, didSendMessage: stateFromStores });
+              const obj = { success: tmp2, didCopyLink, didSendMessage: stateFromStores };
             }
           };
           const result = obj.openActivityShareLinkModal(obj);

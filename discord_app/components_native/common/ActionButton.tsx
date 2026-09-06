@@ -17,8 +17,8 @@ export default function ActionButton(style) {
     str = "active";
   }
   let obj = { style: style.styles, children: null };
-  obj = { icon: jsx(style.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" }), onPress: null, accessibilityLabel: null, variant: str, size: "sm" };
+  obj = { icon: <style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />, onPress: null, accessibilityLabel: null, variant: str, size: "sm" };
   ({ onPress: obj3.onPress, accessibilityLabel: obj3.accessibilityLabel } = style);
-  obj.children = jsx(IconButton.IconButton, { icon: jsx(style.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" }), onPress: null, accessibilityLabel: null, variant: str, size: "sm" });
-  return <View icon={jsx(arg0.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" })} onPress={null} accessibilityLabel={null} variant={str} size="sm" />;
+  obj.children = jsx(IconButton.IconButton, { icon: <style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />, onPress: null, accessibilityLabel: null, variant: str, size: "sm" });
+  return <View icon={<style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />} onPress={null} accessibilityLabel={null} variant={str} size="sm" />;
 };

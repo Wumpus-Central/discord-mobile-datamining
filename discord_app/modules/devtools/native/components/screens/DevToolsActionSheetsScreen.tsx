@@ -48,7 +48,7 @@ function ActionSheetSelector(arg0) {
       ({ label: obj.label, description: obj.subLabel } = type);
       let tmpResult;
       if (closure_0 === type.type) {
-        tmpResult = tmp(CheckmarkLargeIcon.CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
+        tmpResult = closure_1_7(CheckmarkLargeIcon.CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
       }
       obj.trailing = tmpResult;
       obj.start = 0 === index;

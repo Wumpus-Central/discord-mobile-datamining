@@ -2,6 +2,7 @@
 
 // Module 9540 (confirmActivityChangeAlert)
 import util from "util" /* 1114 */;
+import StringUtils from "StringUtils" /* 1925 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
@@ -32,16 +33,17 @@ export default function confirmActivityChangeModal(name, channel, onConfirm, onC
     name = name.name;
   }
   if (name == null) {
-    const intl5 = tmp6(1114).intl;
-    name = intl5.string(tmp6(1114).t.G99XFs);
+    const intl5 = util.intl;
+    name = intl5.string(util.t.G99XFs);
   }
   obj = { currentApplicationName: name, currentApplicationChannelName: null };
   const obj2 = AlertActionCreatorsDefault;
   if (tmp6Result.isNullOrEmpty(str)) {
-    const intl6 = tmp6(1114).intl;
-    str = intl6.string(tmp6(1114).t.OGUjmt);
+    const intl6 = util.intl;
+    str = intl6.string(util.t.OGUjmt);
   }
   obj.currentApplicationChannelName = str;
   obj.body = intl4.format(util.t["5/Xort"], obj);
   obj2.show(obj);
+  tmp6Result = StringUtils;
 };

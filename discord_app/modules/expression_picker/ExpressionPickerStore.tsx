@@ -86,6 +86,7 @@ export const toggleExpressionPicker = function toggleExpressionPicker(activeView
   _require = activeView;
   dependencyMap = activeViewType;
   require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ activeView, activeViewType, activeChannelId, lastActiveView: withEqualityFnResult.getState().activeView }));
+  const obj2 = require("ReactBatchUpdates");
 };
 export const setExpressionPickerView = function setExpressionPickerView(activeView) {
   _require = activeView;

@@ -22,23 +22,23 @@ export default noop.memo(function InviteButton(onPress) {
   const intl = util.intl;
   intl.string(util.t.jYnGPG);
   if (InviteSendStates.SENDING === sendState) {
-    const intl5 = tmp2(1114).intl;
-    let stringResult1 = intl5.string(tmp2(1114).t.jYnGPG);
+    const intl5 = util.intl;
+    let stringResult1 = intl5.string(util.t.jYnGPG);
     disabled = false;
     let flag = true;
-  } else if (tmp5.SENT === sendState) {
-    const intl4 = tmp2(1114).intl;
-    stringResult1 = intl4.string(tmp2(1114).t.dVT149);
+  } else if (InviteSendStates.SENT === sendState) {
+    const intl4 = util.intl;
+    stringResult1 = intl4.string(util.t.dVT149);
     disabled = true;
     flag = false;
-  } else if (tmp5.ERROR === sendState) {
-    const intl3 = tmp2(1114).intl;
-    stringResult1 = intl3.string(tmp2(1114).t.wNcfpX);
+  } else if (InviteSendStates.ERROR === sendState) {
+    const intl3 = util.intl;
+    stringResult1 = intl3.string(util.t.wNcfpX);
     disabled = false;
     flag = false;
   } else {
-    const intl2 = tmp2(1114).intl;
-    stringResult1 = intl2.string(tmp2(1114).t.jYnGPG);
+    const intl2 = util.intl;
+    stringResult1 = intl2.string(util.t.jYnGPG);
     flag = false;
   }
   let obj = { style: closure_5().buttonWrapper, children: null };
@@ -48,5 +48,5 @@ export default noop.memo(function InviteButton(onPress) {
   }
   obj.disabled = disabled;
   obj.children = jsx(components_Button_Button.Button, { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true });
-  return <View accessibilityRole="none" size="sm" variant="secondary" text={stringResult1} onPress={arg0.onPressSend} disabled={null} grow />;
+  return <View accessibilityRole="none" size="sm" variant="secondary" text={stringResult1} onPress={onPress.onPressSend} disabled={null} grow />;
 });

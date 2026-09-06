@@ -3,6 +3,7 @@
 // Module 11012 (OrbCheckoutAmountTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import OrbsIcon from "OrbsIcon" /* 8837 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -25,12 +26,12 @@ export default function OrbCheckoutAmountTag(orbAmount) {
   obj = { size: "custom", color: "icon-strong", style: tmp.orbsIcon };
   const items = [React3(OrbsIcon.OrbsIcon, obj), ];
   if (null == orbAmount) {
-    const intl2 = tmp5(1114).intl;
-    let stringResult = intl2.string(tmp5(1114).t.pfChQr);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.pfChQr);
   } else {
-    const intl = tmp5(1114).intl;
+    const intl = util.intl;
     obj = { orbAmount };
-    stringResult = intl.formatToPlainString(tmp5(1114).t.W4DfeF, obj);
+    stringResult = intl.formatToPlainString(util.t.W4DfeF, obj);
   }
   const obj1 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
   let str = "--";

@@ -106,7 +106,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
           tmp2 = closure_9;
         }
         if (!tmp2) {
-          const result = _location.trackExperimentExposure(tmp, logger, _location.location, closure_2_5, revision, trackedVariantId, closure_1);
+          const result = _location.trackExperimentExposure(closure_3, logger, _location.location, closure_2_5, revision, trackedVariantId, closure_1);
         }
       }, items2);
       if (null != variantId) {
@@ -186,12 +186,13 @@ export default function createApexExperimentCommon(definition, registerExperimen
         tmp14 = null != tmp12;
       }
       if (tmp14) {
-        const result = obj2.trackExperimentExposure(tmp7, tmp5, location.location, tmp2, revision, trackedVariantId, tmp3);
+        const result = evaluationAndAssignment.trackExperimentExposure(tmp7, logger, location.location, closure_1_5, revision, trackedVariantId, tmp3);
       }
       if (null != variantId) {
         return tmp12;
       }
       tmp12 = closure_1_7;
+      const tmp6 = _slicedToArray(evaluationAndAssignment.getEvaluationAndAssignment(closure_1_5, tmp3, logger, tmpResult), 2);
     }
   };
 };

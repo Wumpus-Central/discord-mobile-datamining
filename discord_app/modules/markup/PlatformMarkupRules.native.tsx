@@ -2,6 +2,7 @@
 
 // Module 5027 (PlatformMarkupRules)
 import _mod17 from "module_17" /* 17 */;
+import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
@@ -194,8 +195,8 @@ obj.gameMention = {
       gameName = gameMentionData.gameName;
     }
     if (gameName == null) {
-      const intl = tmp2(1114).intl;
-      gameName = intl.string(tmp2(1114).t["11pdXZ"]);
+      const intl = util.intl;
+      gameName = intl.string(util.t["11pdXZ"]);
     }
     obj.displayName = gameName;
     return obj;
@@ -397,8 +398,8 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
     gameName = gameMentionData.gameName;
   }
   if (gameName == null) {
-    const intl = tmp(1114).intl;
-    gameName = intl.string(tmp(1114).t["11pdXZ"]);
+    const intl = util.intl;
+    gameName = intl.string(util.t["11pdXZ"]);
   }
   obj.displayName = gameName;
   return obj;

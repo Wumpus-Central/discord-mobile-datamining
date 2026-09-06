@@ -90,10 +90,8 @@ FetchState = {
   USER_AUTHORIZED_APPS_REQUEST_CANCELLED: function handleUserAuthorizedAppsRequestCancelled(arg0) {
     let flag = false;
     for (const item10008 of tmp) {
-      let obj = map1;
-      let tmp2 = item10008;
-      if (map1.get(item10008) === obj.FETCHING) {
-        let deleteResult = obj.delete(tmp2);
+      if (map1.get(item10008) === map1.FETCHING) {
+        let deleteResult = map1.delete(item10008);
         flag = true;
       }
       continue;
@@ -112,7 +110,7 @@ FetchState = {
   USER_AUTHORIZED_APPS_UPDATE: function handleAuthorizedAppsUpdate(isFullFetch) {
     const FETCHED = obj.FETCHED;
     if (isFullFetch.isFullFetch) {
-      tmp(FETCHED);
+      updateFetchStates(FETCHED);
       const _Map = Map;
       const _Object3 = Object;
       const entries = Object.entries(isFullFetch.tokens);
@@ -120,7 +118,7 @@ FetchState = {
       recomputeFromAppTokens();
     } else {
       const _Object = Object;
-      tmp(FETCHED, Object.keys(isFullFetch.tokens));
+      updateFetchStates(FETCHED, Object.keys(isFullFetch.tokens));
       const _Object2 = Object;
       const entries1 = Object.entries(isFullFetch.tokens);
       const tmp5 = entries1[Symbol.iterator]();

@@ -31,17 +31,17 @@ function SharedUser(user) {
   if (tmp6) {
     const obj1 = { children: null };
     const obj2 = { variant: "text-md/medium", color: "text-muted", style: tmp.recipientDisplayName, children: name };
-    const items2 = [tmp9(tmp5(4556).Text, obj2), ];
+    const items2 = [closure_5(tmp5(4556).Text, obj2), ];
     const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp5(1114).intl;
     const obj4 = { userName: name };
     obj3.children = intl.format(tmp5(1114).t.RO3T4B, obj4);
-    items2[1] = tmp9(tmp5(4556).Text, obj3);
+    items2[1] = closure_5(tmp5(4556).Text, obj3);
     obj1.children = items2;
-    let tmp9Result = tmp7(closure_6, obj1);
+    let tmp9Result = closure_7(closure_6, obj1);
   } else {
     const obj5 = { variant: "text-md/medium", color: "text-strong", style: tmp.recipientDisplayName, children: name };
-    tmp9Result = tmp9(tmp5(4556).Text, obj5);
+    tmp9Result = closure_5(tmp5(4556).Text, obj5);
   }
   items1[1] = tmp9Result;
   const obj6 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };

@@ -43,8 +43,8 @@ export const useCommunicationDisabledCountdownCleanup = function useCommunicatio
           return () => {
             if (null != ref.current) {
               const _clearTimeout = clearTimeout;
-              clearTimeout(tmp.current);
-              tmp.current = null;
+              clearTimeout(ref.current);
+              ref.current = null;
             }
           };
         }

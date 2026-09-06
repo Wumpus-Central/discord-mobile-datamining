@@ -10,10 +10,12 @@ import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
 import ChatInputUtils from "ChatInputUtils" /* 4425 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import useAlertStore from "useAlertStore" /* 4906 */;
 import AlertModal from "AlertModal" /* 4910 */;
 import TextInput from "TextInput" /* 6606 */;
 import PollsUtils from "PollsUtils" /* 7761 */;
 import ScheduledMessageTypes from "ScheduledMessageTypes" /* 7847 */;
+import PollsIcon from "PollsIcon" /* 10638 */;
 import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12197 */;
 import _modDef12199 from "module_12199" /* 12199 */;
 import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 12211 */;
@@ -114,12 +116,12 @@ let closure_14 = noop.forwardRef((error, ref) => {
   obj.label = intl.string(util.t.WBiKnI);
   let formatToPlainStringResult;
   if (tmp) {
-    const intl2 = tmp3(1114).intl;
+    const intl2 = util.intl;
     obj = { errorMessage: error };
-    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1114).t.jnq5Ho, obj);
+    formatToPlainStringResult = intl2.formatToPlainString(util.t.jnq5Ho, obj);
   }
   obj.accessibilityHint = formatToPlainStringResult;
-  const intl3 = tmp3(1114).intl;
+  const intl3 = util.intl;
   obj.placeholder = intl3.string(util.t["/uQqJW"]);
   obj.onChange = onChange;
   let str = "default";
@@ -179,9 +181,9 @@ export default function PollCreation(channel) {
     let obj = PollCreationModalActionCreators;
     obj.closeCreatePollModal();
     if (null == arg0) {
-      obj = { key: "POLL_CREATED_SUCCESS", IconComponent: tmp(10638).PollsIcon, content: null };
-      const intl = tmp(1114).intl;
-      obj.content = intl.string(tmp(1114).t.OPsckI);
+      obj = { key: "POLL_CREATED_SUCCESS", IconComponent: PollsIcon.PollsIcon, content: null };
+      const intl = util.intl;
+      obj.content = intl.string(util.t.OPsckI);
       ToastActionCreatorsDefault.open(obj);
     }
   }, []);
@@ -206,15 +208,15 @@ export default function PollCreation(channel) {
     let obj = PollsUtils;
     if (obj.isPollCreationEmpty(c4, answers)) {
       closure_18();
-      const AccessibilityAnnouncer = tmp(4272).AccessibilityAnnouncer;
-      const intl = tmp(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(tmp(1114).t["+G3oRq"]));
+      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+      const intl = util.intl;
+      AccessibilityAnnouncer.announce(intl.string(util.t["+G3oRq"]));
       let flag = false;
     } else {
       obj = { onConfirm: handleCancelClose };
-      tmp(4906).openAlert("poll-creation-unsaved-changes", React7(UnsavedChangesAlertModal, obj));
+      useAlertStore.openAlert("poll-creation-unsaved-changes", React7(UnsavedChangesAlertModal, obj));
       flag = true;
-      const tmpResult = tmp(4906);
+      const tmpResult = useAlertStore;
     }
     return flag;
   });
@@ -250,13 +252,13 @@ export default function PollCreation(channel) {
     let obj = PollsUtils;
     if (obj.isPollCreationEmpty(c4, answers)) {
       closure_18();
-      let tmpResult = tmp(12197);
+      let tmpResult = PollCreationModalActionCreators;
       tmpResult.closeCreatePollModal();
-      const AccessibilityAnnouncer = tmp(4272).AccessibilityAnnouncer;
-      const intl = tmp(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(tmp(1114).t["+G3oRq"]));
+      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+      const intl = util.intl;
+      AccessibilityAnnouncer.announce(intl.string(util.t["+G3oRq"]));
     } else {
-      tmpResult = tmp(4906);
+      tmpResult = useAlertStore;
       obj = { onConfirm: handleCancelClose };
       tmpResult.openAlert("poll-creation-unsaved-changes", React7(UnsavedChangesAlertModal, obj));
     }

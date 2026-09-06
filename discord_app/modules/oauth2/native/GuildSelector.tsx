@@ -28,7 +28,7 @@ export default function GuildSelector(disabled) {
   ({ error, selectedGuildId } = disabled);
   const onGuildChange = disabled.onGuildChange;
   const guilds = disabled.guilds;
-  const tmp = createStyles();
+  let tmp = createStyles();
   const items = [guilds, onGuildChange, selectedGuildId];
   const callback = noop.useCallback(() => {
     const obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
@@ -42,6 +42,7 @@ export default function GuildSelector(disabled) {
     };
     obj.selectedItem = selectedGuildId;
     obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), GuildSelector, obj);
+    const tmp = asyncRequireImpl(9426, dependencyMap.paths);
   }, items);
   let found = guilds.find((id) => id.id === selectedGuildId);
   let obj = { style: tmp.selectorGroup, children: null };
@@ -54,7 +55,7 @@ export default function GuildSelector(disabled) {
     tmp6Result = null;
     if ("" !== error) {
       obj = { style: tmp.error, children: error };
-      tmp6Result = tmp6(tmp7(1178).LegacyText, obj);
+      tmp6Result = closure_7(selectedGuildId(1178).LegacyText, obj);
     }
   }
   items1[1] = tmp6Result;
@@ -63,12 +64,12 @@ export default function GuildSelector(disabled) {
     name = found.name;
   }
   if (name == null) {
-    const intl2 = tmp7(1114).intl;
-    name = intl2.string(tmp7(1114).t.oM4E1A);
+    const intl2 = selectedGuildId(1114).intl;
+    name = intl2.string(selectedGuildId(1114).t.oM4E1A);
   }
   items1[2] = closure_7(selectedGuildId(8593).FormRow, { label: name, disabled: disabled.disabled, trailing: closure_7(selectedGuildId(8593).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
   const obj2 = { style: tmp.label, children: null };
-  const intl3 = tmp7(1114).intl;
+  const intl3 = selectedGuildId(1114).intl;
   obj2.children = intl3.format(selectedGuildId(1114).t.t9Jm9o, {});
   items1[3] = closure_7(selectedGuildId(1178).LegacyText, obj2);
   obj.children = items1;

@@ -35,7 +35,10 @@ export const getProfileTheme = function getProfileTheme(tmp4Result1) {
 export const getValueInColorGradientByPercentage = function getValueInColorGradientByPercentage(items, items1, arg2) {
   const result = arg2 / 100;
   const diff = 1 - result;
-  items = [Math.round(items[0] * diff + items1[0] * result), Math.round(items[1] * diff + items1[1] * result), Math.round(items[2] * diff + items1[2] * result)];
+  items = [, , ];
+  items[0] = Math.round(items[0] * diff + items1[0] * result);
+  items[1] = Math.round(items[1] * diff + items1[1] * result);
+  items[2] = Math.round(items[2] * diff + items1[2] * result);
   return items;
 };
 export const calculateOverlayedColor = function calculateOverlayedColor(secondaryColor, overlay) {

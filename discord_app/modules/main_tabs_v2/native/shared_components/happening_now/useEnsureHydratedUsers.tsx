@@ -13,7 +13,8 @@ export const useEnsureHydratedUsers = function useEnsureHydratedUsers(guild_id, 
   _require = guild_id;
   dependencyMap = items1;
   const items = [guild_id, items1];
-  items1 = [guild_id, items1];
+  items1 = [guild_id, ];
+  items1[1] = items1;
   const memo = noop.useMemo(() => {
     if (0 === items1.length) {
       let obj = {};

@@ -85,7 +85,7 @@ function buildModerationLabel(arr) {
   }
   return str5;
 }
-function processHydratedMessages(channelId, conversationId, messages, fullyHydrated, messageReferences) {
+function processHydratedMessages(channelId, conversationId, messages, fullyHydrated) {
   let items = messageReferences;
   if (messageReferences === undefined) {
     items = [];
@@ -119,14 +119,13 @@ function processHydratedMessages(channelId, conversationId, messages, fullyHydra
         value.hydratedMessages = items1;
         value.fullyHydrated = fullyHydrated;
         for (const item10044 of items) {
-          let tmp21 = item10044;
           let messageMetadataByMessageId3 = peekResult.messageMetadataByMessageId;
           if (null == messageMetadataByMessageId3.get(item10044.id)) {
             let messageMetadataByMessageId4 = peekResult.messageMetadataByMessageId;
             obj = { conversationId: null, moderationLabel: null, message: null };
             let obj4 = MessageRecordUtils;
-            obj.message = obj4.createMessageRecord(tmp21);
-            let result1 = messageMetadataByMessageId4.set(tmp21.id, obj);
+            obj.message = obj4.createMessageRecord(item10044);
+            let result1 = messageMetadataByMessageId4.set(item10044.id, obj);
           }
           continue;
         }
@@ -195,7 +194,6 @@ function handleRelationshipUpdate() {
     const item = prop.forEach((message, index) => {
       if (null != message.message) {
         const isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(message.message);
-        const isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(message.message);
         if (message.message.blocked !== isBlockedForMessageResult) {
           c0 = true;
           message = message.message;
@@ -223,6 +221,7 @@ function handleRelationshipUpdate() {
             }
           }
         }
+        isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(message.message);
       }
     });
   });
@@ -627,11 +626,11 @@ obj = {
           let substr = arr5;
           if (arr5.length > closure_11) {
             if ("after" === direction) {
-              substr = arr5.slice(arr5.length - tmp28);
+              substr = arr5.slice(arr5.length - closure_11);
               tmp29 = timestamp;
               tmp30 = null;
             } else if (tmp26) {
-              substr = arr5.slice(0, tmp28);
+              substr = arr5.slice(0, closure_11);
               tmp29 = null;
               tmp30 = timestamp1;
             } else {
@@ -655,15 +654,15 @@ obj = {
                 tmp33 = null;
               }
               let tmp34 = timestamp;
-              if (tmp32 + tmp28 < arr5.length) {
+              if (tmp32 + closure_11 < arr5.length) {
                 tmp34 = null;
               }
-              substr = arr5.slice(tmp32, tmp32 + tmp28);
+              substr = arr5.slice(tmp32, tmp32 + closure_11);
               tmp29 = tmp34;
               tmp30 = tmp33;
             }
           }
-          let tmp35 = (function buildChannelData(channelId, substr, peekResult) {
+          const tmp35 = (function buildChannelData(channelId, substr, peekResult) {
             let guildId;
             if (peekResult != null) {
               guildId = peekResult.guildId;
@@ -746,25 +745,23 @@ obj = {
                 map2 = new Map();
                 let flaggedMessageDetails = tmp10.moderation.flaggedMessageDetails;
                 for (const item10083 of flaggedMessageDetails) {
-                  let tmp31 = item10083;
                   value = map2.get(item10083.messageId);
                   let arr = value;
                   if (null != value) {
-                    arr = arr.push(tmp31);
+                    arr = arr.push(item10083);
                   } else {
-                    let items = [tmp31];
-                    let result1 = map2.set(tmp31.messageId, items);
+                    let items = [item10083];
+                    let result1 = map2.set(item10083.messageId, items);
                   }
                   continue;
                 }
               }
               let messageIds = tmp10.messageIds;
               for (const item10107 of messageIds) {
-                let tmp43 = item10107;
                 let value1;
                 if (arg2 != null) {
                   let messageMetadataByMessageId = arg2.messageMetadataByMessageId;
-                  value1 = messageMetadataByMessageId.get(tmp43);
+                  value1 = messageMetadataByMessageId.get(item10107);
                 }
                 let tmp46 = value1;
                 let tmp54Result = null;
@@ -778,18 +775,17 @@ obj = {
                 }
                 if (hasItem) {
                   let flaggedMessageIds = tmp10.moderation.flaggedMessageIds;
-                  hasItem = flaggedMessageIds.includes(tmp43);
+                  hasItem = flaggedMessageIds.includes(item10107);
                 }
                 if (hasItem) {
                   hasItem = null != map2;
                 }
                 if (hasItem) {
-                  let tmp54 = buildModerationLabel;
-                  value2 = map2.get(tmp43);
+                  value2 = map2.get(item10107);
                   if (value2 == null) {
                     value2 = [];
                   }
-                  tmp54Result = tmp54(value2);
+                  tmp54Result = buildModerationLabel(value2);
                 }
                 obj = { conversationId: null, moderationLabel: null, message: null };
                 obj.conversationId = tmp10.id;
@@ -809,7 +805,7 @@ obj = {
                   message = null;
                 }
                 obj.message = message;
-                let result2 = map1.set(tmp43, obj);
+                let result2 = map1.set(item10107, obj);
                 let message_id;
                 if (tmp46 != null) {
                   message = tmp46.message;
@@ -893,7 +889,7 @@ obj = {
             const _Object = tmp15.Object;
             _Object.assign(peekResult, tmp35);
           } else {
-            let result = obj2.set(channelId, tmp35);
+            let result = navigation.set(channelId, tmp35);
           }
           tmp15 = rawConversations;
           rawConversations[Symbol.iterator]();
@@ -910,7 +906,6 @@ obj = {
         }
         tmp20 = found.some((id) => !set.has(id.id)) || null == anchor;
       }
-      obj2 = navigation;
     } else {
       return false;
     }

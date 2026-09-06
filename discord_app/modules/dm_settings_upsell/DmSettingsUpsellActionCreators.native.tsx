@@ -4,6 +4,7 @@
 import Storage3 from "Storage" /* 510 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 17344 */;
 import DmSettingsUpsellConstants from "DmSettingsUpsellConstants" /* 17342 */;
 import size from "module_2" /* 2 */;
 
@@ -17,12 +18,13 @@ export default {
     const timestamp = Date.now();
     if (null != value) {
       if (timestamp - value <= React4) {
-        tmp(17344).trackEvent(tmp(17344).DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
-        const tmpResult = tmp(17344);
+        DmSettingsUpsellUtils.trackEvent(DmSettingsUpsellUtils.DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
+        const tmpResult = DmSettingsUpsellUtils;
       }
     }
     ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17343, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
-    const Storage2 = tmp(510).Storage;
+    const Storage2 = Storage3.Storage;
     const result = Storage2.set(React3, timestamp);
+    const obj = { guildId };
   }
 };

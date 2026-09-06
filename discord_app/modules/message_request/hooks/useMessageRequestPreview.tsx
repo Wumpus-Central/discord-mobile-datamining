@@ -19,7 +19,7 @@ function loadMessageRequestData() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _loadMessageRequestData(arg0, value) {
+let closure_11 = async function _loadMessageRequestData() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -94,7 +94,7 @@ function loadMessageRequestDataHelper() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _loadMessageRequestDataHelper(arg0, value) {
+let closure_13 = async function _loadMessageRequestDataHelper() {
   if (c11 === 2) {
     c11 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -130,8 +130,7 @@ let closure_13 = async function _loadMessageRequestDataHelper(arg0, value) {
           closure_134_0 = substr;
           c9 = 2;
           let HTTP = HTTPUtils.HTTP;
-          let request = { url: null, query: null, rejectWithError: true };
-          request.url = constants.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA;
+          let request = { url: constants.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA, query: null, rejectWithError: true };
           let obj1 = { channel_ids: substr };
           request.query = obj1;
           c10 = 3;
@@ -141,7 +140,6 @@ let closure_13 = async function _loadMessageRequestDataHelper(arg0, value) {
         }
       } else if (1 === tmp4) {
         c9 = 0;
-        let tmp43 = closure_1_8;
         closure_1 = closure_134_0;
         _require = closure_134_0[Symbol.iterator]();
         while (_require !== undefined) {
@@ -150,7 +148,7 @@ let closure_13 = async function _loadMessageRequestDataHelper(arg0, value) {
           c9 = 0;
           continue;
         }
-        throw tmp43;
+        throw closure_1_8;
       } else {
         if (2 === tmp4) {
           closure_135_1(closure_135_2[8]);

@@ -1,6 +1,7 @@
 // === Module 4713: useChannelName ===
 
 // Module 4713 (useChannelName)
+import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,7 +10,7 @@ import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-function computeChannelName(channel, UserStore, RelationshipStore, flag, arg4) {
+function computeChannelName(channel, UserStore, RelationshipStore) {
   if (flag === undefined) {
     flag = false;
   }
@@ -54,7 +55,7 @@ function computeChannelName(channel, UserStore, RelationshipStore, flag, arg4) {
           globalName = first.globalName;
         }
       }
-    } else if (tmp3.GROUP_DM === type) {
+    } else if (constants.GROUP_DM === type) {
       if ("" !== str) {
         return str;
       } else {
@@ -78,12 +79,12 @@ function computeChannelName(channel, UserStore, RelationshipStore, flag, arg4) {
         }
       }
     } else {
-      if (tmp3.GUILD_ANNOUNCEMENT !== type) {
-        if (tmp3.GUILD_TEXT !== type) {
-          if (tmp3.GUILD_FORUM !== type) {
-            if (tmp3.GUILD_MEDIA !== type) {
-              if (tmp3.GUILD_APP !== type) {
-                if (tmp3.GUILD_CATEGORY === type) {
+      if (constants.GUILD_ANNOUNCEMENT !== type) {
+        if (constants.GUILD_TEXT !== type) {
+          if (constants.GUILD_FORUM !== type) {
+            if (constants.GUILD_MEDIA !== type) {
+              if (constants.GUILD_APP !== type) {
+                if (constants.GUILD_CATEGORY === type) {
                   if (channel.id === closure_8) {
                     const intl = require("util").intl;
                     let stringResult = intl.string(require("util").t.GSfOoo);
@@ -97,16 +98,16 @@ function computeChannelName(channel, UserStore, RelationshipStore, flag, arg4) {
                   }
                   return stringResult;
                 } else {
-                  if (tmp3.PUBLIC_THREAD !== type) {
-                    if (tmp3.PRIVATE_THREAD !== type) {
-                      if (tmp3.ANNOUNCEMENT_THREAD !== type) {
-                        if (tmp3.MEDIA_THREAD !== type) {
-                          if (tmp3.GUILD_VOICE !== type) {
-                            if (tmp3.GUILD_STAGE_VOICE !== type) {
-                              if (tmp3.GUILD_STORE !== type) {
-                                if (tmp3.GUILD_DIRECTORY !== type) {
-                                  if (tmp3.GUILD_SPACE !== type) {
-                                    const UNKNOWN = tmp3.UNKNOWN;
+                  if (constants.PUBLIC_THREAD !== type) {
+                    if (constants.PRIVATE_THREAD !== type) {
+                      if (constants.ANNOUNCEMENT_THREAD !== type) {
+                        if (constants.MEDIA_THREAD !== type) {
+                          if (constants.GUILD_VOICE !== type) {
+                            if (constants.GUILD_STAGE_VOICE !== type) {
+                              if (constants.GUILD_STORE !== type) {
+                                if (constants.GUILD_DIRECTORY !== type) {
+                                  if (constants.GUILD_SPACE !== type) {
+                                    const UNKNOWN = constants.UNKNOWN;
                                   }
                                 }
                               }
@@ -162,7 +163,7 @@ export default function useChannelName(arg0) {
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      tmp2 = computeChannelName(tmp, UserStore, RelationshipStore, flag);
+      tmp2 = computeChannelName(closure_0, UserStore, RelationshipStore, flag);
     }
     return tmp2;
   });
@@ -231,11 +232,10 @@ export const useComputedGroupDmName = function useComputedGroupDmName(stateFromS
         if (mapped1.length > 0) {
           let joined = mapped1.join(", ");
         } else {
-          const intl = tmp3(1114).intl;
-          obj = { name: UserUtilsDefault.getName(obj2.getCurrentUser()) };
-          joined = intl.formatToPlainString(tmp3(1114).t["9Uk8PF"], obj);
+          const intl = util.intl;
+          obj = { name: UserUtilsDefault.getName(UserStore.getCurrentUser()) };
+          joined = intl.formatToPlainString(util.t["9Uk8PF"], obj);
         }
-        obj2 = UserStore;
       }
     }
     return tmp;
@@ -258,5 +258,6 @@ export const escapeChannelName = function escapeChannelName(channelName) {
   return channelName.replace(/\\/g, "\\\\").replace(/"/g, "\\\"");
 };
 export const unescapeChannelName = function unescapeChannelName(str) {
-  return str.replace(/\\"/g, "\"").replace(/\\\\/g, "\\");
+  str = str.replace(/\\"/g, "\"");
+  return str.replace(/\\\\/g, "\\");
 };

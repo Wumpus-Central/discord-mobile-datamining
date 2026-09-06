@@ -2,7 +2,11 @@
 
 // Module 10857 (SelectedUserField)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import CircleXIcon from "CircleXIcon" /* 6616 */;
 import InputFieldContainer from "InputFieldContainer" /* 6621 */;
 import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7051 */;
 import noop from "module_19" /* 19 */;
@@ -43,33 +47,33 @@ export default function SelectedUserField(onPress) {
   obj = { style: items, onPress: onPress.onPress, accessibilityRole: "button", accessibilityLabel: null, children: null };
   items[1] = openerWithClearButton;
   if (null != selectedUser) {
-    const intl3 = tmp4(1114).intl;
+    const intl3 = util.intl;
     let obj3 = UserUtilsDefault;
     const _HermesInternal2 = HermesInternal;
-    let combined = "" + intl3.string(tmp4(1114).t.xFn72s) + ", " + obj3.getName(selectedUser);
-    const stringResult = intl3.string(tmp4(1114).t.xFn72s);
+    let combined = "" + intl3.string(util.t.xFn72s) + ", " + obj3.getName(selectedUser);
+    const stringResult = intl3.string(util.t.xFn72s);
   } else {
-    const intl = tmp4(1114).intl;
-    const intl2 = tmp4(1114).intl;
+    const intl = util.intl;
+    const intl2 = util.intl;
     const _HermesInternal = HermesInternal;
-    combined = "" + intl.string(tmp4(1114).t.xFn72s) + ", " + intl2.string(tmp4(1114).t.R0vK0N);
-    const stringResult1 = intl.string(tmp4(1114).t.xFn72s);
+    combined = "" + intl.string(util.t.xFn72s) + ", " + intl2.string(util.t.R0vK0N);
+    const stringResult1 = intl.string(util.t.xFn72s);
   }
   obj.accessibilityLabel = combined;
   const items1 = [hasOwnProperty(MagnifyingGlassIcon.MagnifyingGlassIcon, { style: tmp.searchIcon, size: "xs", color: "interactive-text-default" }), ];
   if (null != selectedUser) {
     const obj2 = { style: tmp.userPill, children: null };
-    obj3 = { user: selectedUser, guildId: "Array", size: tmp4(1178).AvatarSizes.XSMALL_20 };
-    const items2 = [tmp2(tmp4(1178).Avatar, obj3), ];
+    obj3 = { user: selectedUser, guildId: "Array", size: native.AvatarSizes.XSMALL_20 };
+    const items2 = [hasOwnProperty(native.Avatar, obj3), ];
     const obj4 = { variant: "text-md/medium", style: tmp.userPillText, children: UserUtilsDefault.getName(selectedUser) };
-    items2[1] = tmp2(tmp4(4556).Text, obj4);
+    items2[1] = hasOwnProperty(Text_Text.Text, obj4);
     obj2.children = items2;
-    let tmp2Result = tmp6(tmp3, obj2);
+    let tmp2Result = timestampProducer(React4, obj2);
   } else {
     const obj5 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.userPillText, children: null };
-    const intl4 = tmp4(1114).intl;
-    obj5.children = intl4.string(tmp4(1114).t.R0vK0N);
-    tmp2Result = tmp2(tmp4(4556).Text, obj5);
+    const intl4 = util.intl;
+    obj5.children = intl4.string(util.t.R0vK0N);
+    tmp2Result = hasOwnProperty(Text_Text.Text, obj5);
   }
   items1[1] = tmp2Result;
   obj.children = items1;
@@ -85,11 +89,11 @@ export default function SelectedUserField(onPress) {
       accessibilityLabel: null,
       children: null
     };
-    const intl5 = tmp4(1114).intl;
+    const intl5 = util.intl;
     const obj7 = { text: UserUtilsDefault.getName(selectedUser) };
-    obj6.accessibilityLabel = intl5.formatToPlainString(tmp4(1114).t["0Vb9FQ"], obj7);
-    obj6.children = tmp2(tmp4(6616).CircleXIcon, { size: "xs" });
-    tmp2Result = tmp2(tmp7, obj6);
+    obj6.accessibilityLabel = intl5.formatToPlainString(util.t["0Vb9FQ"], obj7);
+    obj6.children = hasOwnProperty(CircleXIcon.CircleXIcon, { size: "xs" });
+    tmp2Result = hasOwnProperty(React3, obj6);
   }
   items3[1] = tmp2Result;
   obj.children = items3;

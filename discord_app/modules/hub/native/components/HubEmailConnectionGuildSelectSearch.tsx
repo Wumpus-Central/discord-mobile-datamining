@@ -74,7 +74,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   obj = { style: tmp.fauxHeader, children: null };
   obj1 = { placeholder: null, onChange: null, onClose: null };
   const tmp6 = _slicedToArray(noop.useState(false), 2);
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj1.placeholder = intl.string(util.t.nL2wKD);
   obj1.onChange = tmp4[1];
   obj1.onClose = function onClose() {
@@ -89,8 +89,8 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
       let tmp2 = null;
       if (null != anyErrorMessage) {
         tmp2 = null;
-        if ("" !== tmp) {
-          const obj = { style: error.error, children: tmp };
+        if ("" !== anyErrorMessage) {
+          const obj = { style: error.error, children: anyErrorMessage };
           tmp2 = closure_2_10(native.LegacyText, obj);
         }
       }
@@ -100,7 +100,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
       item = item.item;
       const id = item.id;
       return closure_1_10(require("HubEmailConnectionGuildSelect").HubEmailConnectionGuildSelectRow, {
-        signup: closure_3(function*(arg0, value) {
+        signup: closure_3(function*() {
           if (v3 === 2) {
             v3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");

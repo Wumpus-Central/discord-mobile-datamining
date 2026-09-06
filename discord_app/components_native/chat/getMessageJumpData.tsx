@@ -3,13 +3,13 @@
 // Module 11525 (getMessageJumpData)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1877 */;
 import Client from "Client" /* 4491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
 import UserStore from "UserStore" /* 1371 */;
 
-const useSystemKeyboardHeight = tmp(1877);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/chat/getMessageJumpData.tsx");
@@ -18,7 +18,6 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
   messages = messages.messages;
   const lastResult = messages.last();
   messages2 = messages2.messages;
-  const lastResult1 = messages2.last();
   const currentUser = UserStore.getCurrentUser();
   const ANIMATED = Client.JumpType.ANIMATED;
   let tmp7 = tmp6;
@@ -33,11 +32,11 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
   if (null != messages.jumpTargetId) {
     if (tmp7) {
       ({ channelId, jumpTargetId } = messages);
-      const firstResult = messages.first();
       if (channelId !== jumpTargetId) {
         ({ jumpTargetId: jumpTargetId2, jumpType } = messages);
       }
-      jumpTargetId2 = firstResult.id;
+      jumpTargetId2 = messages.first().id;
+      const firstResult = messages.first();
     }
   }
   if (!isAtBottom.isAtBottom) {
@@ -85,6 +84,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
       }
     }
   }
+  lastResult1 = messages2.last();
   const tmp4Result = PlatformUtils;
   flag = false;
   tmp12 = ANIMATED;
@@ -96,6 +96,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
     tmp12 = ANIMATED;
     tmp13 = null;
   }
+  tmp14 = PlatformUtils.isAndroid() && messages2.androidKeyboardHeight < messages.androidKeyboardHeight && null != messages.replyingMessageId;
 };
 export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroidKeyboardHeight() {
   let num = 0;
@@ -103,13 +104,13 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
     num = useSystemKeyboardHeight.getSystemKeyboardHeight();
     const tmpResult = useSystemKeyboardHeight;
   }
-  const obj = noop;
   obj2 = PlatformUtils;
   [tmp4, require] = _slicedToArray(noop.useState(num), 2);
-  const effect = obj.useEffect(() => subscribeToKeyboardUIStore((keyboardHeight) => {
+  const effect = noop.useEffect(() => subscribeToKeyboardUIStore((keyboardHeight) => {
     if (obj.isAndroid()) {
       closure_1_0(keyboardHeight.keyboardHeight);
     }
+    obj = PlatformUtils;
   }), []);
   return tmp4;
 };

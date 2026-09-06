@@ -84,6 +84,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
     if (!tmp) {
       const appliedGuildBoostsForGuild = BoostingActionCreators.fetchAppliedGuildBoostsForGuild(closure_0, { includeEnded: true });
     }
+    tmp = stateFromStores === memo1 && stateFromStores1;
   }, items10);
   return memo;
 };

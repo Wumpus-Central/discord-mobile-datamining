@@ -37,15 +37,15 @@ function GameProfileShopCarouselContent(trackAction) {
     obj = { style: tmp.container, children: null };
     obj = { style: tmp.header, children: null };
     obj1 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(1114).intl;
-    obj1.children = intl.string(tmp2(1114).t["5DYPT8"]);
-    const items2 = [closure_6(tmp2(4556).Text, obj1), ];
+    const intl = closeModal(1114).intl;
+    obj1.children = intl.string(closeModal(1114).t["5DYPT8"]);
+    const items2 = [closure_6(closeModal(4556).Text, obj1), ];
     obj2 = { text: null, variant: "tertiary", size: "sm", icon: null, iconPosition: "end", onPress: null };
-    const intl2 = tmp2(1114).intl;
-    obj2.text = intl2.string(tmp2(1114).t.budhsM);
-    obj2.icon = closure_6(tmp2(7209).ChevronSmallRightIcon, { size: "sm" });
+    const intl2 = closeModal(1114).intl;
+    obj2.text = intl2.string(closeModal(1114).t.budhsM);
+    obj2.icon = closure_6(closeModal(7209).ChevronSmallRightIcon, { size: "sm" });
     obj2.onPress = tmp6;
-    items2[1] = closure_6(tmp2(4975).Button, obj2);
+    items2[1] = closure_6(closeModal(4975).Button, obj2);
     obj.children = items2;
     const items3 = [closure_7(View, obj), ];
     const obj3 = {
@@ -77,9 +77,9 @@ function GameProfileShopCarouselContent(trackAction) {
       ListHeaderComponent: HorizontalSpacing,
       ListFooterComponent: HorizontalSpacing,
       decelerationRate: "fast",
-      snapToInterval: tmp2(8764).COLLECTIBLES_SHOP_CARD_WIDTH + tmp2(8764).COLLECTIBLES_SHOP_CARD_GAP
+      snapToInterval: closeModal(8764).COLLECTIBLES_SHOP_CARD_WIDTH + closeModal(8764).COLLECTIBLES_SHOP_CARD_GAP
     };
-    items3[1] = closure_6(tmp2(8874).FlashList, obj3, collectionId);
+    items3[1] = closure_6(closeModal(8874).FlashList, obj3, collectionId);
     obj.children = items3;
     tmp7 = closure_7(View, obj);
   }

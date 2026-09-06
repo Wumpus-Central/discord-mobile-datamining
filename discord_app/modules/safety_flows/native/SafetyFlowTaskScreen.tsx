@@ -5,6 +5,8 @@ import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import ModalScreen from "ModalScreen" /* 8421 */;
 import ModalContent from "ModalContent" /* 8422 */;
+import ModalActionButton from "ModalActionButton" /* 10996 */;
+import ModalFooter from "ModalFooter" /* 11926 */;
 import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17874 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,7 +42,7 @@ export default function SafetyFlowTaskScreen(action) {
   let tmp7Result = null != subtitle;
   if (tmp7Result) {
     obj = { variant: "text-md/medium", color: subtitleColor, style: tmp2.header, children: subtitle };
-    tmp7Result = tmp7(tmp4(4556).Text, obj);
+    tmp7Result = React3(Text_Text.Text, obj);
   }
   obj = { children: null };
   items[2] = tmp7Result;
@@ -49,18 +51,18 @@ export default function SafetyFlowTaskScreen(action) {
   children = [React4(ModalContent.ModalContent, obj), ];
   if (undefined === footer) {
     if (withLogout) {
-      withLogout = tmp7(LogOutDisclaimerDefault, {});
+      withLogout = React3(LogOutDisclaimerDefault, {});
     }
     const items3 = [withLogout, ];
     tmp7Result = null != action;
     if (tmp7Result) {
       const obj1 = { variant: "primary", text: action, onPress: onAction, loading: submitting };
-      tmp7Result = tmp7(tmp4(10996).ModalActionButton, obj1);
+      tmp7Result = React3(ModalActionButton.ModalActionButton, obj1);
     }
     const obj2 = { children: null };
     items3[1] = tmp7Result;
     obj2.children = items3;
-    footer = tmp3(tmp4(11926).ModalFooter, obj2);
+    footer = React4(ModalFooter.ModalFooter, obj2);
   }
   children[1] = footer;
   return React4(ModalScreen.ModalScreen, { children });

@@ -72,14 +72,13 @@ function updateFriendAnniversaries() {
         }
         if (0 !== closure_11.length) {
           if (obj4.getFriendAnniversaryGateConfig({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" }).enabled) {
-            const sorted = obj3.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
+            const sorted = closure_11.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
             categorizeTopAffinityFriendAnniversaries();
           } else {
             resetFriendAnniversaries();
           }
           obj4 = FriendAnniversaryGate;
         }
-        obj3 = closure_11;
       }
     }
   } else {
@@ -122,8 +121,8 @@ function generateFriendAnniversaries(c15) {
               closure_14[item] = obj;
             }
           });
-          const sorted = obj.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8079).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
+          const sorted = closure_11.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
+          const result = highestAffinity(8079).categorizeFriendAnniversariesByAffinity(closure_11, (userId) => {
             const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -139,6 +138,7 @@ function generateFriendAnniversaries(c15) {
       sampleSizeResult = _modDef12.sampleSize(found, c15);
     }
   }
+  obj2 = set2(8080);
 }
 const Consents = fn(1074).Consents;
 let closure_10 = { messageGiftIntentLastShownMap: {}, lastShownFriendsListGiftIntents: [], friendsTabBadgeLastDismissedTime: null, lastKnownGiftIntentDismissedAtMs: 0 };

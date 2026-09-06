@@ -174,9 +174,9 @@ prototype["render"] = function render() {
     items2[2] = React7(Text_Text.Text, obj7);
     if (tmp17Result) {
       const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl5 = tmp18(1114).intl;
-      obj8.children = intl5.string(tmp18(1114).t.o3kmm3);
-      tmp17Result = tmp17(tmp18(4556).Text, obj8);
+      const intl5 = util.intl;
+      obj8.children = intl5.string(util.t.o3kmm3);
+      tmp17Result = React7(Text_Text.Text, obj8);
     }
     items2[3] = tmp17Result;
     items2[4] = tmp;

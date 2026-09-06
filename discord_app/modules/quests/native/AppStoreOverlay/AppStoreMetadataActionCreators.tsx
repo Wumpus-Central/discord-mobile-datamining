@@ -33,7 +33,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
   const storeAppId = os.storeAppId;
   const combined = "" + os + "#" + storeAppId;
   if (map.has(combined)) {
-    value = obj.get(combined);
+    value = map.get(combined);
     if (value == null) {
       value = null;
     }
@@ -50,7 +50,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
           return Promise.reject(value1.error);
         }
       }
-      const tmp7 = (async (arg0, value) => {
+      const tmp7 = (async () => {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -148,10 +148,8 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
           }
         }
       })();
-      let result = obj2.set(combined, tmp7);
+      let result = map1.set(combined, tmp7);
       return tmp7;
     }
-    obj2 = map1;
   }
-  obj = map;
 };

@@ -24,11 +24,11 @@ function MaybeClearBuildOverride() {
       c4 = 3;
     } else if (arg0 === 1) {
       c4 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       c3 = 0;
     }
-    return arg1;
+    return value;
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _require = tmp[1];
@@ -144,7 +144,7 @@ prototype["render"] = function render() {
     obj = { style: tmp.buttons, children: null };
     const items1 = [React7(MaybeClearBuildOverride, {}), ];
     const obj1 = { text: null, onPress: null };
-    const intl3 = tmp3(1114).intl;
+    const intl3 = util.intl;
     obj1.text = intl3.string(util.t["4n8OJn"]);
     obj1.onPress = self.handleReload;
     items1[1] = React7(components_Button_Button.Button, obj1);
@@ -152,7 +152,7 @@ prototype["render"] = function render() {
     items[1] = closure_1_10(React5, obj);
     items[2] = null;
     obj.children = items;
-    let children = tmp2(native.EmptyState, obj);
+    let children = closure_1_10(native.EmptyState, obj);
   } else {
     children = self.props.children;
   }

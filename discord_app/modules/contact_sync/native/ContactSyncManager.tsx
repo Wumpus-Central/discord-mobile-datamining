@@ -9,7 +9,7 @@ import UserStore from "UserStore" /* 1371 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
 require = fn;
-let closure_11 = async function _requestAndSyncContacts(arg0, value) {
+let closure_11 = async function _requestAndSyncContacts() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -136,7 +136,7 @@ let prototype = function ContactSyncLifecycleManager() {
     if (null != currentUser.getCurrentUser()) {
       localAccount = localAccount.getLocalAccount(constants.CONTACTS);
       if (obj.isContactSyncEnabled(localAccount)) {
-        const result = tmp4(tmp5[7]).checkContactPermissions();
+        const result = applyArgumentsResult(dependencyMap[7]).checkContactPermissions();
         result.then((result) => {
           if (result === constants.AUTHORIZED) {
             closure_1_0(dependencyMap[9]).runAfterInteractions(() => (function requestAndSyncContacts() {
@@ -152,11 +152,9 @@ let prototype = function ContactSyncLifecycleManager() {
             const obj = closure_1_0(dependencyMap[9]);
           }
         });
-        const tmp4Result = tmp4(tmp5[7]);
+        const tmp4Result = applyArgumentsResult(dependencyMap[7]);
       }
       obj = applyArgumentsResult(dependencyMap[7]);
-      tmp4 = applyArgumentsResult;
-      tmp5 = dependencyMap;
     }
   };
   return applyArgumentsResult;

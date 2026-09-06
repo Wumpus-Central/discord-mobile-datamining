@@ -38,14 +38,13 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(guild_id, author) {
   const items1 = [];
   const items2 = [];
   for (const item10035 of set) {
-    let tmp5 = item10035;
     if (null != item10035) {
-      let user = UserStore.getUser(tmp5);
+      let user = UserStore.getUser(item10035);
       let tmp10 = arg0;
       if (arg0 == null) {
         tmp10 = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      let trueMember = GuildMemberStore.getTrueMember(tmp10, tmp5);
+      let trueMember = GuildMemberStore.getTrueMember(tmp10, item10035);
       if (null != user) {
         let arr = items2.push(user);
       }

@@ -53,8 +53,8 @@ export default function DevToolsShopScreen() {
     subLabelLineClamp: 1,
     trailing: hasOwnProperty(FormSwitch.FormSwitch, {
       value: stateFromStores,
-      onValueChange(arg0) {
-        return DevSettingsActions.toggle("shop_disable_cache", arg0);
+      onValueChange(flag) {
+        return DevSettingsActions.toggle("shop_disable_cache", flag);
       }
     })
   };
@@ -65,8 +65,8 @@ export default function DevToolsShopScreen() {
     subLabelLineClamp: 1,
     trailing: hasOwnProperty(FormSwitch.FormSwitch, {
       value: stateFromStores1,
-      onValueChange(arg0) {
-        return DevSettingsActions.toggle("shop_include_unpublished", arg0);
+      onValueChange(flag) {
+        return DevSettingsActions.toggle("shop_include_unpublished", flag);
       }
     })
   };
@@ -78,8 +78,8 @@ export default function DevToolsShopScreen() {
     subLabelLineClamp: 1,
     trailing: hasOwnProperty(FormSwitch.FormSwitch, {
       value: stateFromStores2,
-      onValueChange(arg0) {
-        return DevSettingsActions.toggle("shop_show_debug_overlay", arg0);
+      onValueChange(flag) {
+        return DevSettingsActions.toggle("shop_show_debug_overlay", flag);
       }
     })
   };
@@ -90,8 +90,8 @@ export default function DevToolsShopScreen() {
     subLabelLineClamp: 1,
     trailing: hasOwnProperty(FormSwitch.FormSwitch, {
       value: stateFromStores3,
-      onValueChange(arg0) {
-        return DevSettingsActions.toggle("bypass_google_sku_sync", arg0);
+      onValueChange(flag) {
+        return DevSettingsActions.toggle("bypass_google_sku_sync", flag);
       }
     })
   };

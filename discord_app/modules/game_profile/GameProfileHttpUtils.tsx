@@ -11,11 +11,11 @@ import LocaleStore from "LocaleStore" /* 2025 */;
 import GameProfileStore from "GameProfileStore" /* 8682 */;
 
 require = fn;
-let closure_8 = async function _getShopCollection(collectionId) {
+let closure_8 = async function _getShopCollection() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_2 = tmp3;
     closure_129_0 = collectionId;
     DispatcherDefault.dispatch({ type: "GAME_PROFILE_GET_SHOP_COLLECTION_START", collectionId });
@@ -39,7 +39,7 @@ let closure_8 = async function _getShopCollection(collectionId) {
     return value;
   })();
 };
-let closure_9 = async function _fetchSimilarGames(arg0, value) {
+let closure_9 = async function _fetchSimilarGames(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -107,7 +107,7 @@ let closure_9 = async function _fetchSimilarGames(arg0, value) {
     }
   }
 };
-let closure_10 = async function _getGameAnnouncements(gameId, arg1) {
+let closure_10 = async function _getGameAnnouncements() {
   closure_1 = arg1;
   c8 = 0;
   c9 = 0;
@@ -119,11 +119,11 @@ let closure_10 = async function _getGameAnnouncements(gameId, arg1) {
     let obj1 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_START", gameId };
     DispatcherDefault.dispatch(obj1);
     if (closure_1 != null) {
-      const limit = tmp43.limit;
+      const limit = closure_1.limit;
     }
     const obj2 = {};
     if (null != limit) {
-      obj2.limit = tmp43.limit;
+      obj2.limit = closure_1.limit;
     }
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.GAME_ANNOUNCEMENTS(gameId), query: obj2, rejectWithError: false };
@@ -172,8 +172,8 @@ const initialize = {
     }
     return combined;
   },
-  get(arg0) {
-    let similarGames = GameProfileStore.getSimilarGames(arg0);
+  get(gameId) {
+    let similarGames = GameProfileStore.getSimilarGames(gameId);
     if (similarGames == null) {
       similarGames = null;
     }

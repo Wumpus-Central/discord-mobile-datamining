@@ -14,5 +14,5 @@ export const RedesignCompat = function RedesignCompat(children) {
   if (enabled == null) {
     enabled = true;
   }
-  return <context.Provider value={enabled}>{arg0.children}</context.Provider>;
+  return <context.Provider value={enabled}>{children.children}</context.Provider>;
 };

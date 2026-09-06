@@ -3,9 +3,9 @@
 // Module 15965 (getDeviceCountry)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1117 */;
 import size from "module_2" /* 2 */;
 
-const NativeDeviceLocaleModule = tmp(1117);
 const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 

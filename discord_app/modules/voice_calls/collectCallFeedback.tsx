@@ -3,6 +3,8 @@
 // Module 13626 (collectCallFeedback)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9097 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 9100 */;
 import VideoBackgroundStore from "VideoBackgroundStore" /* 9096 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -48,7 +50,7 @@ export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
         if (VideoBackgroundStore.hasUsedBackgroundInCall) {
           obj = {};
           const merged1 = Object.assign(obj);
-          let tmp5Result = tmp5(9100);
+          let tmp5Result = LastUsedVideoBackgroundOption;
           const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(UserStore.getCurrentUser());
           const videoDevices = MediaEngineStore.getVideoDevices();
           const tmp22 = videoDevices[MediaEngineStore.getVideoDeviceId(MediaEngineStore)];
@@ -57,11 +59,11 @@ export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
             name = tmp22.name;
           }
           obj1 = { video_device_name: name, video_hardware_scaling_enabled: MediaEngineStore.getHardwareEncoding(), video_effect_type: null, video_effect_detail: null };
-          tmp5Result = tmp5(9097);
+          tmp5Result = VideoBackgroundUtils;
           obj1.video_effect_type = tmp5Result.getEffectAnalyticsType(lastUsedVideoBackgroundOption);
-          obj1.video_effect_detail = tmp5(9097).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
+          obj1.video_effect_detail = VideoBackgroundUtils.getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
           const merged2 = Object.assign(obj1);
-          const tmp5Result1 = tmp5(9097);
+          const tmp5Result1 = VideoBackgroundUtils;
           const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: obj };
           DispatcherDefault.dispatch(obj2);
         } else {

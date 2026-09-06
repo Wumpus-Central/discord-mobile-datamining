@@ -23,12 +23,12 @@ export default function PremiumGuildSubscribeModal(arg0) {
   let first;
   let tmp = useInitialValueDefault(() => {
     const items = [];
-    if (null != closure_1_0) {
+    if (null != guildId) {
       let arr1 = guildBoostSlots;
       if (null != guildBoostSlots) {
         if (arr1.length > 0) {
           let obj = { name: constants.CONFIRMATION, params: null };
-          obj = { guildId: tmp, guildBoostSlots: arr1, intent, onResult };
+          obj = { guildId, guildBoostSlots: arr1, intent, onResult };
           obj.params = obj;
           items.push(obj);
         }
@@ -45,17 +45,17 @@ export default function PremiumGuildSubscribeModal(arg0) {
         const obj4 = {
           headerLeft: NavigatorHeader.getHeaderCloseButton(actions_BoostingActionCreators.closeApplyBoostModal),
           headerRight() {
-                let obj = closure_1_0(4411);
+                let obj = guildId(4411);
                 if (obj.isThemeDark(theme.theme)) {
-                  let tmp4Result = tmp4(7378);
+                  let tmp4Result = guildBoostSlots(7378);
                 } else {
-                  tmp4Result = tmp4(7379);
+                  tmp4Result = guildBoostSlots(7379);
                 }
-                obj = { source: tmp4Result, IconComponent: tmp2(7380).SettingsIcon, accessibilityLabel: null, accessibilityHint: null, onPress: null };
-                const intl = tmp2(1114).intl;
-                obj.accessibilityLabel = intl.string(closure_1_0(1114).t["3D5yo/"]);
-                const intl2 = tmp2(1114).intl;
-                obj.accessibilityHint = intl2.string(closure_1_0(1114).t["+CbP2v"]);
+                obj = { source: tmp4Result, IconComponent: guildId(7380).SettingsIcon, accessibilityLabel: null, accessibilityHint: null, onPress: null };
+                const intl = guildId(1114).intl;
+                obj.accessibilityLabel = intl.string(guildId(1114).t["3D5yo/"]);
+                const intl2 = guildId(1114).intl;
+                obj.accessibilityHint = intl2.string(guildId(1114).t["+CbP2v"]);
                 obj.onPress = function onPress() {
                   closure_1_0(6995);
                   let obj = { destinationPane: constants.GUILD_BOOSTING };
@@ -65,20 +65,20 @@ export default function PremiumGuildSubscribeModal(arg0) {
                   obj = { screen: constants.GUILD_BOOSTING };
                   closure_1_0(7382).openUserSettings(obj);
                 };
-                return closure_1_8(closure_1_0(7377).HeaderActionButton, obj);
+                return closure_1_8(guildId(7377).HeaderActionButton, obj);
               },
           headerTitle(children) {
                 children = children.children;
                 let obj = { title: null, subtitle: null };
-                const intl = closure_1_0(1114).intl;
-                obj.title = intl.string(closure_1_0(1114).t.VJEVbu);
+                const intl = guildId(1114).intl;
+                obj.title = intl.string(guildId(1114).t.VJEVbu);
                 let tmpResult = null;
                 if (children.length > 0) {
                   obj = { children };
-                  tmpResult = tmp(closure_1_0(1178).LegacyText, obj);
+                  tmpResult = closure_1_8(guildId(1178).LegacyText, obj);
                 }
                 obj.subtitle = tmpResult;
-                return closure_1_8(closure_1_0(5624).NavigatorHeader, obj);
+                return closure_1_8(guildId(5624).NavigatorHeader, obj);
               },
           render(arg0) {
                 const merged = Object.assign(arg0);
@@ -99,9 +99,9 @@ export default function PremiumGuildSubscribeModal(arg0) {
         return obj1;
       }
     }
-    if (null != closure_1_0) {
+    if (null != guildId) {
       const obj6 = { name: constants.OVERVIEW, params: null };
-      const obj7 = { guildId: tmp, guildBoostSlots, intent, onResult };
+      const obj7 = { guildId, guildBoostSlots, intent, onResult };
       obj6.params = obj7;
       items.push(obj6);
     } else {

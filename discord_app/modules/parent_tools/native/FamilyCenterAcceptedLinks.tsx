@@ -2,6 +2,7 @@
 
 // Module 14915 (FamilyCenterAcceptedLinks)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import Text_Text from "Text/Text" /* 4556 */;
@@ -9,6 +10,7 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import useUserLinks from "useUserLinks" /* 8645 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
 import useAgeSpecificText from "useAgeSpecificText" /* 11919 */;
+import FamilyCenterEmptyDefault from "FamilyCenterEmpty" /* 14916 */;
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14918 */;
 import _modDef14923 from "module_14923" /* 14923 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +37,7 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     const obj1 = { size: str(1178).Icon.Sizes.SMALL, disableColor: true, source: _modDef14923 };
     obj.children = closure_6(str(1178).Icon, obj1);
     obj.actions = closure_6(str(5123).PressableOpacity, obj);
-    tmp4Result = tmp4(FamilyCenterLinkRowDefault, obj);
+    tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj);
   }
   return tmp4Result;
 }
@@ -65,21 +67,21 @@ export default function FamilyCenterAcceptedLinks() {
   const activeLinkUsers = obj.useActiveLinkUsers();
   obj = { count: activeLinkUsers.length, max: useIsInAdultAgeGroupDefault() ? React4 : hasOwnProperty };
   const tmp4 = useIsInAdultAgeGroupDefault();
-  const intl = tmp5(1114).intl;
+  const intl = util.intl;
   const tmp5Result = useAgeSpecificText;
-  const intl2 = tmp5(1114).intl;
+  const intl2 = util.intl;
   obj = { style: tmp.container, children: null };
-  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(_modDef2396["+tnO34"], obj), intl2.formatToPlainString(tmp2(2396)["pu6/U0"], obj));
+  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(_modDef2396["+tnO34"], obj), intl2.formatToPlainString(_modDef2396["pu6/U0"], obj));
   const items = [timestampProducer(Text_Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
   const obj2 = { style: tmp.content, children: null };
   if (0 === activeLinkUsers.length) {
     const obj3 = { style: tmp.empty, children: null };
     const obj4 = { text: null };
-    const intl3 = tmp5(1114).intl;
-    obj4.text = intl3.string(tmp2(2396).C4ScLD);
-    obj3.children = tmp10(tmp2(14916), obj4);
-    let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14916);
+    const intl3 = util.intl;
+    obj4.text = intl3.string(_modDef2396.C4ScLD);
+    obj3.children = timestampProducer(FamilyCenterEmptyDefault, obj4);
+    let mapped = timestampProducer(View, obj3);
+    const tmp2Result = FamilyCenterEmptyDefault;
   } else {
     mapped = activeLinkUsers.map((otherUser) => closure_1_6(FamilyCenterAcceptedLinkRow, { otherUser }, "accepted-" + otherUser.id));
   }

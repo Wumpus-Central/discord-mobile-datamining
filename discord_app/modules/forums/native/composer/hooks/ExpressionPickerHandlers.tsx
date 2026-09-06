@@ -65,11 +65,11 @@ export const usePressGIFHandler = function usePressGIFHandler(selection) {
     }
     const substr1 = draftContent.substring(start);
     if (substr.endsWith(" ")) {
-      tmp4(substr + url + substr1);
+      handleTextChange(substr + url + substr1);
       let length = substr + url.length;
     } else {
       const _HermesInternal = HermesInternal;
-      tmp4(substr + " " + url + substr1);
+      handleTextChange(substr + " " + url + substr1);
       const _HermesInternal2 = HermesInternal;
       length = substr + " " + url.length;
     }

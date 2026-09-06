@@ -4,6 +4,8 @@
 import nativeDefault from "native" /* 576 */;
 import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 5516 */;
 import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 12164 */;
+import AppLauncherAutocompleteOptionDefault from "AppLauncherAutocompleteOption" /* 12170 */;
+import AppLauncherTextInputOptionDefault from "AppLauncherTextInputOption" /* 12172 */;
 import AppLauncherAttachmentOptionDefault from "AppLauncherAttachmentOption" /* 12175 */;
 import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 12177 */;
 import AppLauncherMentionableOptionDefault from "AppLauncherMentionableOption" /* 12178 */;
@@ -91,11 +93,11 @@ export default function AppLauncherCommandOption(option) {
                 let obj = { type: "userMention", userId: mentionable.result.user.id };
                 const items = [obj];
                 View(name, items);
-              } else if (tmp4(12180).MentionableItemTypes.ROLE === type) {
+              } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.ROLE === type) {
                 obj = { type: "roleMention", roleId: mentionable.result.id };
                 const items1 = [obj];
                 View(name, items1);
-              } else if (tmp4(12180).MentionableItemTypes.GLOBAL === type) {
+              } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.GLOBAL === type) {
                 const result = mentionable.result;
                 if (result.text === obj4.MENTION_EVERYONE().text) {
                   const items2 = [{ type: "textMention", text: "@everyone" }];
@@ -262,7 +264,7 @@ export default function AppLauncherCommandOption(option) {
   } else if (name.autocomplete) {
     const obj8 = { style: tmp.option, channel, option: name, activeCommand: command, optionValues, initialValue: null, autoFocus: null, onSelect: null, onOpenAutocompleteSheet: null, onDismissAutocompleteSheet: null, hasError: null };
     let first6;
-    let tmp64Result = tmp64(12170);
+    let tmp64Result = AppLauncherAutocompleteOptionDefault;
     if (optionValues.current[name.name] != tmp44) {
       first6 = tmp52[0];
     }
@@ -292,7 +294,7 @@ export default function AppLauncherCommandOption(option) {
   } else {
     const obj9 = { style: tmp.option, option: name, guildId: channel.guild_id, initialValue: null, onEndEditing: null, onChangeText: null, onFocus: null, autoFocus: null, hasError: null, onPressIn: null };
     let first7;
-    tmp64Result = tmp64(12172);
+    tmp64Result = AppLauncherTextInputOptionDefault;
     if (optionValues.current[name.name] != tmp44) {
       first7 = tmp46[0];
     }

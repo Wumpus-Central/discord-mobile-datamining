@@ -27,7 +27,7 @@ export default function HubEmailConnectionPinVerify(email) {
   email = email.email;
   ({ guildId: importDefault, onClose } = email);
   _slicedToArray = undefined;
-  asyncGeneratorStep = async function _handleCodeEntered(arg0, arg1) {
+  asyncGeneratorStep = async function _handleCodeEntered(arg0) {
     await closure_1(tmp3[12]).verifyCode(closure_0, closure_2_1, email);
     if (1 === tmp7) {
       c4 = 0;
@@ -37,7 +37,7 @@ export default function HubEmailConnectionPinVerify(email) {
       c6 = 3;
     } else if (arg0 === 1) {
       c6 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       const guild2 = guild.getGuild(closure_130_1);
       if (null != guild2) {
@@ -47,7 +47,7 @@ export default function HubEmailConnectionPinVerify(email) {
       }
       c4 = 0;
     }
-    return arg1;
+    return value;
   };
   const tmp = closure_11();
   const items = [onClose];
@@ -82,15 +82,14 @@ export default function HubEmailConnectionPinVerify(email) {
       obj1 = closure_129_0;
     } else if (arg0 === 1) {
       c6 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       const intl = email(tmp3[13]).intl;
       presentResendToast(intl.string(email(tmp3[13]).t["2bO4dz"]));
       c4 = 0;
     }
-    return arg1;
+    return value;
   }), 1000);
-  const tmp3 = onClose;
   [obj2, c3] = _slicedToArray(noop.useState(null), 2);
   obj = { style: tmp.container, children: null };
   obj = { source: require("module_12740") };
@@ -109,8 +108,6 @@ export default function HubEmailConnectionPinVerify(email) {
   items1[3] = closure_9(email(onClose[18]).Text, obj3);
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   const tmp7 = email;
-  const tmp8 = closure_10;
-  const tmp9 = closure_6;
   items1[4] = closure_9(email(onClose[19]).CodeBlocks, {
     hasError: false,
     count: 8,
@@ -129,7 +126,7 @@ export default function HubEmailConnectionPinVerify(email) {
   let tmp6Result = null != obj1;
   if (tmp6Result) {
     const obj5 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: obj1.getAnyErrorMessage() };
-    tmp6Result = tmp6(tmp7(tmp3[18]).Text, obj5);
+    tmp6Result = closure_9(tmp7(onClose[18]).Text, obj5);
   }
   const obj4 = {
     hasError: false,
@@ -148,5 +145,5 @@ export default function HubEmailConnectionPinVerify(email) {
   };
   items1[5] = tmp6Result;
   obj.children = items1;
-  return closure_9(email(onClose[16]).HubEmailConnectionScreen, { children: tmp8(tmp9, obj) });
+  return closure_9(email(onClose[16]).HubEmailConnectionScreen, { children: closure_10(closure_6, obj) });
 };

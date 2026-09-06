@@ -133,15 +133,15 @@ export default function GuildDirectorySearch(channel) {
         }
       }
     };
-    obj.children = tmp8(require("SearchBarNav"), obj1);
-    const items2 = [tmp8(tmp4(tmp5[19]).FauxHeader, obj), tmp9];
+    obj.children = closure_12(tmp7(tmp5[20]), obj1);
+    const items2 = [closure_12(tmp4(tmp5[19]).FauxHeader, obj), tmp9];
     obj.children = items2;
     return closure_13(closure_6, obj);
   } else {
     if (0 === searchResults.length) {
       if (!searchFetching) {
         let obj2 = { channel };
-        let tmp8Result = tmp8(EmptyState, obj2);
+        let tmp8Result = closure_12(EmptyState, obj2);
       }
     }
     const obj3 = {
@@ -175,6 +175,7 @@ export default function GuildDirectorySearch(channel) {
     bottom = bottom + 16;
     memo.paddingBottom = bottom;
     obj3.contentContainerStyle = memo;
-    tmp8Result = tmp8(closure_8, obj3);
+    tmp8Result = closure_12(closure_8, obj3);
   }
+  tmp7 = importDefault;
 };

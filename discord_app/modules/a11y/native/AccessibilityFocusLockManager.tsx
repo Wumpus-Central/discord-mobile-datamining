@@ -22,11 +22,7 @@ class AccessibilityFocusLockManager extends tmp3 {
   }
 }
 const prototype = AccessibilityFocusLockManager.prototype;
-prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusLock(arg0) {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = false;
-  }
+prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusLock() {
   const self = this;
   let tmp;
   clearTimeout(this._focusLockEnabledDelayTimeoutId);
@@ -80,10 +76,9 @@ prototype["enableAccessibilityFocusLock"] = function enableAccessibilityFocusLoc
   const nextResult = iter.next();
   while (iter !== undefined) {
     for (const item10024 of nextResult) {
-      let tmp7 = item10024;
       if (arg0.includes(item10024)) {
         let _HermesInternal = HermesInternal;
-        let errorResult1 = logger.error("Duplicate target view nativeID " + tmp7 + " already accessibility focus locked.");
+        let errorResult1 = logger.error("Duplicate target view nativeID " + item10024 + " already accessibility focus locked.");
       }
       continue;
     }

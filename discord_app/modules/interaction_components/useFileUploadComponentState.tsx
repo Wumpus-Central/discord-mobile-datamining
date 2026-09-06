@@ -22,7 +22,7 @@ export const useFileUploadComponentState = function useFileUploadComponentState(
   uploadIds = uploads.useMemo(() => {
     let type;
     if (state != null) {
-      type = tmp.type;
+      type = state.type;
     }
     return type === Server.ComponentType.FILE_UPLOAD ? state.uploadIds : [];
   }, items);

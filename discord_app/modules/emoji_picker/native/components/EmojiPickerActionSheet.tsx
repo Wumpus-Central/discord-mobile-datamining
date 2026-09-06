@@ -77,8 +77,8 @@ export default function EmojiPickerActionSheet(onClose) {
     bottom = bottom2;
   }
   const sum = bottom + handleTextChange;
-  const sum1 = sum + tmp10(tmp3[9]).space.PX_16;
-  let tmp10Result = tmp10(tmp3[16]);
+  const sum1 = sum + onPressEmoji(tmp3[9]).space.PX_16;
+  let tmp10Result = onPressEmoji(tmp3[16]);
   const tmp14 = onPressEmoji(pickerIntention[18])(channel, sharedValue, pickerIntention, bypassPremiumEmojiEntitlement);
   handleTextChange = tmp14.handleTextChange;
   let items = [onClose];
@@ -186,11 +186,12 @@ export default function EmojiPickerActionSheet(onClose) {
       const obj1 = {
         onPress() {
             if (obj.isPremium(currentUser.getCurrentUser())) {
-              const result = tmp(tmp2[29]).triggerHapticFeedback(onPressEmoji(tmp2[30]).IMPACT_LIGHT);
-              const ReactionTypes = tmp(tmp2[10]).ReactionTypes;
+              const result = onClose(pickerIntention[29]).triggerHapticFeedback(onPressEmoji(pickerIntention[30]).IMPACT_LIGHT);
+              const ReactionTypes = onClose(pickerIntention[10]).ReactionTypes;
               closure_1_5(closure_1_6 ? ReactionTypes.NORMAL : ReactionTypes.BURST);
+              const tmpResult = onClose(pickerIntention[29]);
             } else {
-              return onPressEmoji(tmp2[19]).openLazy(tmp(tmp2[28])(tmp2[27], tmp2.paths), "SuperReactionUpsellActionSheet");
+              return onPressEmoji(pickerIntention[19]).openLazy(onClose(pickerIntention[28])(pickerIntention[27], pickerIntention.paths), "SuperReactionUpsellActionSheet");
             }
             obj = onClose(pickerIntention[26]);
           },
@@ -205,20 +206,20 @@ export default function EmojiPickerActionSheet(onClose) {
     return closure_2_11(View, obj);
   }, items4);
   if (tmp6) {
-    const items5 = [tmp.burstReaction.borderColor, tmp10(tmp3[9]).unsafe_rawColors.TRANSPARENT];
+    const items5 = [tmp.burstReaction.borderColor, onPressEmoji(tmp3[9]).unsafe_rawColors.TRANSPARENT];
     let items6 = items5;
   } else {
-    items6 = [tmp10(tmp3[9]).unsafe_rawColors.TRANSPARENT, tmp10(tmp3[9]).unsafe_rawColors.TRANSPARENT];
+    items6 = [onPressEmoji(tmp3[9]).unsafe_rawColors.TRANSPARENT, onPressEmoji(tmp3[9]).unsafe_rawColors.TRANSPARENT];
   }
   let tmp2Result = tmp2(tmp3[11]);
   const sharedValue1 = tmp2Result.useSharedValue(-1);
   const ref1 = obj.useRef(null);
-  obj = { value: tmp10Result(tmp10(tmp3[17]).EMOJI_PICKER).analyticsLocations, children: null };
+  obj = { value: tmp10Result(onPressEmoji(tmp3[17]).EMOJI_PICKER).analyticsLocations, children: null };
   tmp2Result = tmp2(tmp3[15]);
   let isIOSResult = tmp2Result.isIOS();
   if (isIOSResult) {
     obj = { portalHostName: EmojiPickerActionSheet, animatedSheetIndex: sharedValue1, followSystemKeyboard: true };
-    isIOSResult = ref2(tmp10(tmp3[31]), obj);
+    isIOSResult = ref2(onPressEmoji(tmp3[31]), obj);
   }
   const items7 = [isIOSResult, ];
   obj1 = { backgroundStyles: tmp.background, ref: ref1, scrollable: true, header: memo2, footer: null, startExpanded: null, onDismiss: null, animatedIndex: null, onExpand: null, borderGradient: null, contentStyles: null, children: null };
@@ -237,7 +238,7 @@ export default function EmojiPickerActionSheet(onClose) {
   const items8 = [tmp.content, { marginBottom: sum }];
   obj1.contentStyles = items8;
   obj3 = { bottomSheetIndex: sharedValue1, onPressEmoji: callback1, onLongPressEmoji: null, emojiPickerListRef: null, categories: null, categoryIndexActive: null, emojis: null, emojiPickerIntention: null, channel: null, guildId: null, searchQueryRef: null, insetBottom: null, analyticsObject: null, messageId: null, bypassPremiumEmojiEntitlement: null };
-  tmp10Result = tmp10(tmp3[34]);
+  tmp10Result = onPressEmoji(tmp3[34]);
   obj3.onLongPressEmoji = onClose(pickerIntention[35]).openEmojiActionSheet;
   obj3.emojiPickerListRef = ref;
   obj3.categories = emojiCategories;

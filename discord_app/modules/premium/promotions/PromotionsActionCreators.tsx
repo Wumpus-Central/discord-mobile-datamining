@@ -22,7 +22,7 @@ function fetchActivePromotions() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _fetchActivePromotions(arg0, value) {
+let closure_11 = async function _fetchActivePromotions() {
   closure_2 = tmp3;
   locale = locale.locale;
   let obj1 = { type: "ACTIVE_PROMOTIONS_FETCH", locale };
@@ -102,7 +102,7 @@ function fetchActiveBogoPromotion() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _fetchActiveBogoPromotion(arg0, value) {
+let closure_12 = async function _fetchActiveBogoPromotion() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -198,16 +198,16 @@ let closure_13 = async function _fetchClaimedOutboundPromotionCodes() {
     c4 = 3;
   } else if (arg0 === 1) {
     c4 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    const body = arg1.body;
+    const body = value.body;
     closure_128_0 = body.map(closure_129_0(closure_129_2[13]).claimedOutboundPromotionCodeFromServer);
     obj3 = { type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: closure_128_0 };
     closure_129_1(closure_129_2[7]).dispatch(obj3);
     c2 = 0;
     closure_129_1(closure_129_2[7]);
   }
-  return arg1;
+  return value;
 };
 function addClaimedOutboundPromotionCode(claimedOutboundPromotionCode) {
   const obj = { type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode };

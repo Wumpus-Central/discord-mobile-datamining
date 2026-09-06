@@ -24,10 +24,9 @@ export default function useResolveGame(arg0) {
     if (null == gameId) {
       let canonicalGameId = null;
       if (null != getOrFetchApplication) {
-        canonicalGameId = obj.getCanonicalGameId();
+        canonicalGameId = getOrFetchApplication.getCanonicalGameId();
       }
       tmp = canonicalGameId;
-      obj = getOrFetchApplication;
     }
     return tmp;
   }, items);

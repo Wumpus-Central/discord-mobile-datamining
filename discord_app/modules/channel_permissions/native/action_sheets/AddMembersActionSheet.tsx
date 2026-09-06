@@ -298,35 +298,35 @@ class AddMembersBody {
         obj.item = item;
         obj.guildId = item.id;
         obj.onPress = function onPress() {
-          closure_0 = item;
+          const row = item;
           if (item.rowType !== constants.EMPTY_STATE) {
             importAll((arg0) => {
               let obj = {};
               const merged = Object.assign(arg0);
-              const combined = "" + closure_0.rowType + ":" + closure_0.id;
+              const combined = "" + row.rowType + ":" + row.id;
               if (combined in obj) {
                 delete tmp[tmp2];
               } else {
-                const rowType = tmp4.rowType;
+                const rowType = row.rowType;
                 if (constants.ROLE !== rowType) {
-                  if (tmp6.ADMINISTRATOR !== rowType) {
-                    user = user.getUser(tmp4.id);
+                  if (constants.ADMINISTRATOR !== rowType) {
+                    user = user.getUser(row.id);
                     if (null != user) {
-                      obj = { text: tmp4.name, icon: null };
+                      obj = { text: row.name, icon: null };
                       obj = { user, guildId: item.id, avatarStyle: sectionRowWrapper.tagAvatar, style: sectionRowWrapper.tagAvatar };
                       obj.icon = closure_3_17(guild(closure_3[21]).Avatar, obj);
                       let tmp7 = obj;
                     }
                   }
                   if (null != tmp7) {
-                    const obj1 = { display: tmp7, row: tmp4 };
+                    const obj1 = { display: tmp7, row };
                     obj[combined] = obj1;
                   }
                 }
-                const obj2 = { text: tmp4.name, icon: null };
+                const obj2 = { text: row.name, icon: null };
                 const obj3 = { style: null };
                 const items = [sectionRowWrapper.tagRoleColor, ];
-                const obj4 = { backgroundColor: tmp4.colorString };
+                const obj4 = { backgroundColor: row.colorString };
                 items[1] = obj4;
                 obj3.style = items;
                 obj2.icon = closure_3_17(c8, obj3);
@@ -403,7 +403,7 @@ export default function AddMembersActionSheet(channel) {
       c5 = 3;
     } else if (arg0 === 1) {
       c5 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       const result = channel(4258).memberOrRoleAddedToast(closure_128_2, closure_128_1);
       channel(4258);
@@ -411,7 +411,7 @@ export default function AddMembersActionSheet(channel) {
       dependencyMap = 0;
       tmp3(4527);
     }
-    return arg1;
+    return value;
   };
   const tmp2 = _slicedToArray(noop.useState({}), 2);
   const pendingAdditions = tmp2[0];
@@ -448,13 +448,13 @@ export default function AddMembersActionSheet(channel) {
         let obj4 = obj;
       }
       const obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
-      obj.trailing = tmp11(tmp12, obj4);
-      obj1.header = tmp11(tmp4(7149).BottomSheetTitleHeader, obj);
+      obj.trailing = closure_17(tmp12, obj4);
+      obj1.header = closure_17(tmp4(7149).BottomSheetTitleHeader, obj);
       let obj2 = { style: tmp.container, children: null };
       const obj3 = { channel, guild: stateFromStores, permission: channel.accessPermissions, pendingAdditions, setPendingAdditions: tmp2[1], inActionSheet: true };
-      obj2.children = tmp11(AddMembersBody, obj3);
-      obj1.children = tmp11(closure_8, obj2);
-      return tmp11(tmp4(7150).BottomSheet, obj1);
+      obj2.children = closure_17(AddMembersBody, obj3);
+      obj1.children = closure_17(closure_8, obj2);
+      return closure_17(tmp4(7150).BottomSheet, obj1);
     }
     obj4 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1114).intl;
@@ -476,5 +476,6 @@ export default function AddMembersActionSheet(channel) {
     obj4.variant = str2;
     obj4.disabled = tmp10;
   }
+  tmp = closure_21();
 };
 export { AddMembersBody };

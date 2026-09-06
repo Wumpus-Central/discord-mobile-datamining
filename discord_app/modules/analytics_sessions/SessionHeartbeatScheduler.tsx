@@ -2,6 +2,7 @@
 
 // Module 7461 (SessionHeartbeatScheduler)
 import LoggerDefault from "Logger" /* 3 */;
+import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
@@ -18,7 +19,6 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import IdleStore from "IdleStore" /* 5410 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
-const initializeDefault = tmp(504);
 require = fn;
 function trackHeartbeat() {
   const self = this;
@@ -30,7 +30,7 @@ function trackHeartbeat() {
   }
   return applyArgumentsResult;
 }
-let closure_26 = async function _trackHeartbeat(arg0, value) {
+let closure_26 = async function _trackHeartbeat() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -205,6 +205,7 @@ function scheduleHeartbeatTracking() {
     obj2 = { active: items1.length > 0, ver: 31, reasons: items1 };
     const result = socket.handleActiveStateChange(obj2);
   }
+  tmp4 = null != token && closure_23;
 }
 function validateClientSession(version) {
   let tmp = null;
@@ -212,11 +213,10 @@ function validateClientSession(version) {
     let tmp4 = version;
     if (version.version !== SessionUtils.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7471).CLIENT_SESSION_STORAGE_VERSION);
+      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + SessionUtils.CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
     }
     tmp = tmp4;
-    tmp2 = require;
   }
   return tmp;
 }
@@ -230,7 +230,7 @@ function forceDispatchSessionIdUpdate() {
   }
   return applyArgumentsResult;
 }
-let closure_31 = async function _forceDispatchSessionIdUpdate(arg0, value) {
+let closure_31 = async function _forceDispatchSessionIdUpdate() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -355,7 +355,7 @@ function getSession() {
   }
   return applyArgumentsResult;
 }
-let closure_39 = async function _getSession(arg0, value) {
+let closure_39 = async function _getSession() {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -381,7 +381,7 @@ let closure_39 = async function _getSession(arg0, value) {
           return obj;
         } else {
           closure_3 = tmp3;
-          closure_2 = tmp7;
+          dependencyMap = tmp7;
           closure_130_0 = undefined;
           let flag = closure_0;
           if (closure_0 === undefined) {
@@ -453,17 +453,18 @@ let closure_39 = async function _getSession(arg0, value) {
               closure_131_18 = 0;
             }
             session2.lastUsedTimestamp = closure_130_1;
-            (function maybeFlushSessionToStorage(arg0) {
+            (function maybeFlushSessionToStorage(session2) {
               monotonicNowMsResult = closure_1_0(dependencyMap[10]).monotonicNowMs();
               if (monotonicNowMsResult - monotonicNowMsResult >= closure_1_12) {
                 try {
                   const Storage = closure_1_0(dependencyMap[16]).Storage;
-                  const result = Storage.set(closure_1_13, arg0);
+                  const result = Storage.set(closure_1_13, session2);
                 } catch (tmp9) {
                   closure_1_1(tmp2[11]).captureException(tmp9);
                   const obj2 = closure_1_1(tmp2[11]);
                 }
               }
+              obj = closure_1_0(dependencyMap[10]);
             })(session2);
           } else {
             let isSessionExpiredResult1 = null != tmp30;
@@ -573,9 +574,9 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     let tmp7 = null;
     if (null != value) {
       let tmp8 = value;
-      if (value.version !== tmp2(7471).CLIENT_SESSION_STORAGE_VERSION) {
+      if (value.version !== SessionUtils.CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7471).CLIENT_SESSION_STORAGE_VERSION);
+        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + SessionUtils.CLIENT_SESSION_STORAGE_VERSION);
         tmp8 = null;
       }
       tmp7 = tmp8;

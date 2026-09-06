@@ -94,7 +94,7 @@ function ChildItem(child) {
   }
   if (stateFromStores) {
     const obj3 = { style: tmp.debugText, variant: "text-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = tmp9(tmp5(4556).Text, obj3);
+    stateFromStores = closure_16(tmp5(4556).Text, obj3);
   }
   items1[1] = stateFromStores;
   obj1.children = items1;
@@ -288,8 +288,8 @@ export default function NodeView(node) {
     }
     if (is_auto_submit) {
       closure_15(true);
-      const obj = { nodeRef: tmp.id, destination: null };
-      const items = ["", tmp.id];
+      const obj = { nodeRef: node.id, destination: null };
+      const items = ["", node.id];
       obj.destination = items;
       onSubmit(obj);
     }
@@ -314,7 +314,7 @@ export default function NodeView(node) {
         }
       }
       if (reportType.name === MenuTypes.ReportNames.MESSAGE) {
-        let obj = { message_id: tmp4.record.id, content_type: tmp4.name, report_sub_type: tmp2.report_type, current_node: node.id, next_node: tmp2.id };
+        let obj = { message_id: reportType.record.id, content_type: reportType.name, report_sub_type: tmp2.report_type, current_node: node.id, next_node: tmp2.id };
         obj.trackWithMetadata(constants.IAR_NAVIGATE, obj);
       }
       obj = { node: tmp2, history: null };

@@ -5,7 +5,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 const require = fn;
-function canRenderParticipantVideo(participant, MediaEngineStore) {
+function canRenderParticipantVideo(participant) {
   let obj = MediaEngineStore;
   if (MediaEngineStore === undefined) {
     obj = MediaEngineStore;

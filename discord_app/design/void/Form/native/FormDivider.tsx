@@ -3,6 +3,7 @@
 // Module 8599 (FormDivider)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4271 */;
+import ColorUtils from "ColorUtils" /* 4409 */;
 import RedesignCompat from "RedesignCompat" /* 5686 */;
 import useProfileThemeValues from "useProfileThemeValues" /* 7184 */;
 import noop from "module_19" /* 19 */;
@@ -40,9 +41,9 @@ export default function Divider(arg0) {
   const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme);
   let tmp7 = null;
   if (tmp6) {
-    obj = { backgroundColor: tmp2(4409).hexOpacityToRgba(createStyles[theme], profileThemeValues.dividerOpacity) };
+    obj = { backgroundColor: ColorUtils.hexOpacityToRgba(createStyles[theme], profileThemeValues.dividerOpacity) };
     tmp7 = obj;
-    const tmp2Result = tmp2(4409);
+    const tmp2Result = ColorUtils;
   }
   let tmp10Result = null;
   if (!noop.useContext(RedesignCompat.RedesignCompatContext)) {

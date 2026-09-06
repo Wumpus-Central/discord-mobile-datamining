@@ -84,7 +84,7 @@ function GuildSearchAndInvite(guildId) {
     obj = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: tmp4(tmp3[25]), onPress: tmp5, text: null, maxFontSizeMultiplier: 2 };
     let intl2 = tmp2(tmp3[22]).intl;
     obj.text = intl2.string(tmp2(tmp3[22]).t["5h0QOP"]);
-    const items2 = [tmp11(tmp2(tmp3[24]).Button, obj), memo, tmp8];
+    const items2 = [closure_12(tmp2(tmp3[24]).Button, obj), memo, tmp8];
     obj.children = items2;
     let tmp14 = obj;
   } else {
@@ -92,15 +92,15 @@ function GuildSearchAndInvite(guildId) {
     const items3 = [tmp.search, pressableStyles];
     obj1.style = items3;
     obj2 = { onPress: tmp5, onPressIn, onPressOut };
-    obj1.children = tmp11(tmp2(tmp3[27]).SearchButtonContent, obj2);
-    const items4 = [tmp11(tmp4(tmp3[26]).View, obj1), ];
+    obj1.children = closure_12(tmp2(tmp3[27]).SearchButtonContent, obj2);
+    const items4 = [closure_12(tmp4(tmp3[26]).View, obj1), ];
     let tmp11Result = null;
     if (canInvite) {
       const obj3 = { variant: "tertiary", icon: tmp4(tmp3[21]), onPress: onInvitePress, onPressDisabled: handleInviteDisabledPress, accessibilityLabel: null, disabled: null };
       let intl = tmp2(tmp3[22]).intl;
       obj3.accessibilityLabel = intl.string(tmp2(tmp3[22]).t.VINpSK);
       obj3.disabled = invitesDisabled;
-      tmp11Result = tmp11(tmp2(tmp3[20]).IconButton, obj3);
+      tmp11Result = closure_12(tmp2(tmp3[20]).IconButton, obj3);
     }
     items4[1] = tmp11Result;
     obj.children = items4;
@@ -119,10 +119,10 @@ let closure_14 = createStyles.createStyles((arg0) => {
   let obj = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: SEARCH_BAR_MARGIN_BOTTOM, flexDirection: "row", gap: null };
   let num = 10;
   if (arg0) {
-    num = tmp(576).space.PX_12;
+    num = nativeDefault.space.PX_12;
   }
   obj = { container: obj, search: { flex: 1 }, badge: null, gap: num };
-  const size = { position: "absolute", right: 0, top: 0, width: 8, height: 8, borderRadius: tmp(576).radii.round, backgroundColor: tmp(576).colors.BACKGROUND_BRAND };
+  const size = { position: "absolute", right: 0, top: 0, width: 8, height: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
   obj.badge = size;
   return obj;
 });

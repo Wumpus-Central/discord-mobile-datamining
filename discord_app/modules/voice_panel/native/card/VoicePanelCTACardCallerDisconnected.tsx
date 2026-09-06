@@ -74,7 +74,7 @@ export default noop.memo(function VoicePanelCTACardCallerDisconnected() {
     }
     const obj3 = { source: tmp19, style: tmp3.avatar };
     obj1.children = closure_8(tmp(tmp2[12]), obj3);
-    tmp16Result = tmp16(tmpResult1, obj1);
+    tmp16Result = closure_8(tmpResult1, obj1);
     const tmpResult2 = tmp(tmp2[12]);
   }
   const items2 = [tmp16Result, ];
@@ -92,7 +92,7 @@ export default noop.memo(function VoicePanelCTACardCallerDisconnected() {
     ({ avatar: arr5[0], disconnectedAvatar: arr5[1] } = tmp3);
     obj6.style = items3;
     obj4.children = closure_8(tmp(tmp2[12]), obj6);
-    tmp21Result = tmp21(tmpResult3, obj4);
+    tmp21Result = closure_8(tmpResult3, obj4);
     const tmpResult4 = tmp(tmp2[12]);
   }
   items2[1] = tmp21Result;

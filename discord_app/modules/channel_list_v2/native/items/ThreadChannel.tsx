@@ -48,7 +48,7 @@ function ThreadChannel(channel) {
     const obj = { user: UserStore.getUser(ownerId), parentChannel: ChannelStore.getChannel(parent_id), voiceStates: SortedVoiceStateStore.getVoiceStatesForChannel(channel), hasVideo: VoiceStateStore.hasVideo(channel.id), isLocked: !PermissionStore.can(Permissions.CONNECT, channel), muted: isMutedResult, unread: null, mentionCount: null, isMentionLowImportance: null, selectedVoiceChannelId: null };
     let hasUnreadResult = !isMutedResult;
     if (!isMutedResult) {
-      hasUnreadResult = ReadStateStore.hasUnread(tmp);
+      hasUnreadResult = ReadStateStore.hasUnread(id);
     }
     obj.unread = hasUnreadResult;
     obj.mentionCount = ReadStateStore.getMentionCount(id);
@@ -117,8 +117,8 @@ function ThreadChannel(channel) {
     if (channel.isForumPost()) {
       if (null != user) {
         if (null != parentChannel) {
-          if (obj.isForumLikeChannel()) {
-            showLongPressForumPostActionSheetDefault(tmp, obj);
+          if (parentChannel.isForumLikeChannel()) {
+            showLongPressForumPostActionSheetDefault(channel, parentChannel);
           }
         }
       }
@@ -131,7 +131,7 @@ function ThreadChannel(channel) {
   let tmp14Result = unread;
   if (unread) {
     obj2 = { style: tmp.unreadIcon };
-    tmp14Result = tmp14(tmp15, obj2);
+    tmp14Result = closure_17(tmp15, obj2);
   }
   obj1.children = tmp14Result;
   const items5 = [closure_17(id, obj1), , ];
@@ -150,22 +150,22 @@ function ThreadChannel(channel) {
     tmp14Result = null;
     if (tmp9) {
       const obj5 = { userCount: num, video: hasVideo, channel };
-      tmp14Result = tmp14(tmp4(obj[26]).ConnectedUserLimit, obj5);
+      tmp14Result = closure_17(tmp4(obj[26]).ConnectedUserLimit, obj5);
     }
     let tmp14Result1 = tmp14Result;
   } else {
     const obj6 = { value: mentionCount, isMentionLowImportance };
-    tmp14Result1 = tmp14(tmp4(obj[27]).Badge, obj6);
+    tmp14Result1 = closure_17(tmp4(obj[27]).Badge, obj6);
   }
   obj4.channelInfo = tmp14Result1;
   if (0 === voiceStates.length) {
     const obj7 = { children: null };
     obj4.children = null;
-    items5[2] = tmp14(tmp8Result, obj4);
+    items5[2] = closure_17(tmp8Result, obj4);
     obj.children = items5;
-    items4[2] = tmp12(tmp15, obj);
+    items4[2] = closure_18(tmp15, obj);
     obj7.children = items4;
-    return tmp12(closure_19, obj7);
+    return closure_18(closure_19, obj7);
   } else {
     if (selectedVoiceChannelId !== channel.threadId) {
       if (1 !== voiceStates.length) {
@@ -179,14 +179,15 @@ function ThreadChannel(channel) {
         obj9.voiceStates = obj10;
         obj8.users = tmp4(obj[30]).computeSummarizedVoiceUsers(obj9);
         obj8.guildId = channel.guild_id;
-        let tmp14Result2 = tmp14(tmp8Result, obj8);
+        let tmp14Result2 = closure_17(tmp8Result, obj8);
         const tmp4Result = tmp4(obj[30]);
       }
     }
     tmp8 = tmp8(obj[28]);
     obj = { channel, collapsed: false, voiceStates };
-    tmp14Result2 = tmp14(tmp8, obj);
+    tmp14Result2 = closure_17(tmp8, obj);
   }
+  tmp9 = threadIndex(obj[20])({ channel, locked: isLocked, video: hasVideo, selected });
 }
 const View = fn(17).View;
 const RedesignChannelListConstants = fn(10118);

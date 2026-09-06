@@ -27,7 +27,7 @@ function getValidOrderedFilterTokens(type, items) {
   const items3 = [tmp];
   [tmp13] = items3;
   if (!tmp13.hidePersonalInformation) {
-    items1.push(tmp11.FILTER_MENTIONS);
+    items1.push(constants.FILTER_MENTIONS);
   }
   items1.push(constants.FILTER_ON);
   items1.push(constants.FILTER_BEFORE);

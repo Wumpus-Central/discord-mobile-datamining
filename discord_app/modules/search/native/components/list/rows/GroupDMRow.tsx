@@ -2,6 +2,7 @@
 
 // Module 16653 (rows/GroupDMRow)
 import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
 import useRecipientsLabel from "useRecipientsLabel" /* 10911 */;
@@ -28,7 +29,7 @@ export default function GroupDMRow(channel) {
   let tmp3Result;
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
-    tmp3Result = tmp3(tmp5(4556).Text, obj);
+    tmp3Result = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel });
   }
   let str2 = str;
   if (str == null) {

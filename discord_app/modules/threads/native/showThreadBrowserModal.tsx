@@ -17,4 +17,5 @@ export default function showThreadBrowserModal(id) {
     obj = { channelId: id.id, initialRouteName: constants.THREADS };
     rootNavigationRef.navigate("sidebar", obj);
   }
+  tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
 };

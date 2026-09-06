@@ -55,14 +55,15 @@ export default {
       const intl = util.intl;
       let stringResult = intl.string(util.t["5LO/Ss"]);
       if (null != closure_0) {
-        const intl2 = tmp(1114).intl;
-        stringResult = intl2.string(tmp(1114).t.rJfW6S);
+        const intl2 = util.intl;
+        stringResult = intl2.string(util.t.rJfW6S);
       }
       if (403 === status.status) {
-        const intl3 = tmp(1114).intl;
-        stringResult = intl3.formatToMarkdownString(tmp(1114).t.Izf9jO, {});
+        const intl3 = util.intl;
+        stringResult = intl3.formatToMarkdownString(util.t.Izf9jO, {});
       }
       DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_FAILURE", error: stringResult });
     });
+    const patchResult = HTTP.patch(request);
   }
 };

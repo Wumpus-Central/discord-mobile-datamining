@@ -2,6 +2,7 @@
 
 // Module 11497 (AppStoreOverlayTelemetryManager)
 import Constants from "Constants" /* 1074 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 import size from "module_2" /* 2 */;
@@ -29,9 +30,9 @@ AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function han
   } else {
     let flag = null != _null;
     if (flag) {
-      if (state !== tmp(1093).AppStates.ACTIVE) {
+      if (state !== ConstantsIOS.AppStates.ACTIVE) {
         flag = false;
-        if (state === tmp(1093).AppStates.BACKGROUND) {
+        if (state === ConstantsIOS.AppStates.BACKGROUND) {
           _null.trackOverlayEvent(AnalyticEvents.QUEST_APP_STORE_OVERLAY_BACKGROUNDED);
           const _Date = Date;
           c4 = Date.now();

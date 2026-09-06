@@ -42,10 +42,11 @@ export default function useStableSafeAreaInsets() {
       const tmp4Result = appEntryKey(1611);
     }
     closure_1_1(stableSafeAreaInsets);
+    obj = appEntryKey(1115);
   }, appEntryKey), items);
   return tmp2[0];
 };
-export const getStableSafeAreaInsets = function getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY) {
+export const getStableSafeAreaInsets = function getStableSafeAreaInsets() {
   if (DEFAULT_APP_ENTRY_KEY === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }

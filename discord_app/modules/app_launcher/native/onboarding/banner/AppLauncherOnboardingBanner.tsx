@@ -17,9 +17,9 @@ export default function AppLauncherOnboardingBanner(arg0) {
   if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
     let obj = { context };
     return jsx(ActivitiesBannerDefault, { context });
-  } else if (tmp(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
+  } else if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
     return jsx(AppsBannerDefault, {});
-  } else if (tmp(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
+  } else if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
     obj = { context };
     return jsx(BotsBannerDefault, { context });
   } else {

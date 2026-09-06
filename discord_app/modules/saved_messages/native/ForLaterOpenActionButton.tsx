@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
 import useThemeDefault from "useTheme" /* 4495 */;
+import ClockIcon from "ClockIcon" /* 4523 */;
 import ButtonHooks from "ButtonHooks" /* 4981 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7850 */;
@@ -11,6 +12,7 @@ import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
 import showForLaterModal from "showForLaterModal" /* 7859 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 7860 */;
 import ClipViewDefault from "ClipView" /* 8813 */;
+import BookmarkIcon2 from "BookmarkIcon" /* 11707 */;
 import noop from "module_19" /* 19 */;
 import SavedMessagesStore from "SavedMessagesStore" /* 11660 */;
 
@@ -23,9 +25,9 @@ function BadgedIcon(arg0) {
   let obj1 = ButtonHooks;
   const iconSizeStyles = obj1.useIconSizeStyles("sm", true, 2);
   if (type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER) {
-    let BookmarkIcon = tmp4(4523).ClockIcon;
+    let BookmarkIcon = ClockIcon.ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11707).BookmarkIcon;
+    BookmarkIcon = BookmarkIcon2.BookmarkIcon;
   }
   obj = { style: null, children: null };
   const items = [tmp6.container, iconSizeStyles];
@@ -36,16 +38,16 @@ function BadgedIcon(arg0) {
     const items1 = [point];
     obj1.cutouts = items1;
     const obj2 = { size: "sm", color: token };
-    obj1.children = tmp8(BookmarkIcon, obj2);
-    const items2 = [tmp8(ClipViewDefault, obj1), ];
+    obj1.children = timestampProducer(BookmarkIcon, obj2);
+    const items2 = [timestampProducer(ClipViewDefault, obj1), ];
     const obj3 = { style: tmp6.dot };
-    items2[1] = tmp8(tmp9, obj3);
+    items2[1] = timestampProducer(View, obj3);
     obj.children = items2;
-    let tmp8Result = React5(tmp9, obj);
+    let tmp8Result = React5(View, obj);
     const tmpResult = ClipViewDefault;
   } else {
     const obj4 = { size: "sm", color: token };
-    tmp8Result = tmp8(BookmarkIcon, obj4);
+    tmp8Result = timestampProducer(BookmarkIcon, obj4);
   }
   obj.children = tmp8Result;
   return timestampProducer(View, obj);
@@ -89,9 +91,7 @@ export default noop.forwardRef((type, ref) => {
   }, items2);
   obj = { type, showRedDot: null };
   const obj3 = type(stateFromStores1[15]);
-  const tmp8 = View;
-  const tmp9 = BadgedIcon;
-  obj1 = { variant: "tertiary", size: "sm", icon: tmp7(tmp9, obj), onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
+  obj1 = { variant: "tertiary", size: "sm", icon: closure_6(BadgedIcon, obj), onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
   obj.showRedDot = type === type(stateFromStores1[11]).SavedMessageSortTypes.REMINDER && stateFromStores;
   const intl = tmp(tmp2[21]).intl;
   if (type === type(stateFromStores1[11]).SavedMessageSortTypes.REMINDER) {
@@ -101,5 +101,5 @@ export default noop.forwardRef((type, ref) => {
   }
   obj1.accessibilityLabel = intl.string(aUXxzT);
   obj.children = closure_6(type(stateFromStores1[20]).IconButton, obj1);
-  return closure_6(tmp8, obj);
+  return closure_6(View, obj);
 });

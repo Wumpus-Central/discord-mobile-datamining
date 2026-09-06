@@ -67,14 +67,14 @@ export default function useHappeningNowData(has, guildId) {
         if (stateFromStores1) {
           if (stateFromStores) {
             if (isFocused) {
-              const activeChannelsFetchStatus = ActiveChannelsStore.getActiveChannelsFetchStatus(tmp);
+              const activeChannelsFetchStatus = ActiveChannelsStore.getActiveChannelsFetchStatus(guildId);
               let tmp7 = null == activeChannelsFetchStatus || null == activeChannelsFetchStatus.fetchedAt;
               if (!tmp7) {
                 const _Date = Date;
                 tmp7 = Date.now() - activeChannelsFetchStatus.fetchedAt > 300000;
               }
               if (tmp7) {
-                const activeChannels = ActiveChannelsActionCreators.fetchActiveChannels(tmp);
+                const activeChannels = ActiveChannelsActionCreators.fetchActiveChannels(guildId);
               }
             }
           }
@@ -132,11 +132,10 @@ export default function useHappeningNowData(has, guildId) {
     }
     if (tmp) {
       GuildSubscriptionsActionCreators.subscribeGuild(guildId);
-      const tmp8 = guildId;
       GuildSubscriptionsActionCreators.subscribeChannel(guildId, stateFromStores3.id, GuildChannelSubscriptions.DEFAULT_RANGES);
       if (tmp14) {
-        tmp6(7312).subscribeChannel(tmp8, tmp12, tmp6(7286).DEFAULT_RANGES);
-        const tmp6Result = tmp6(7312);
+        GuildSubscriptionsActionCreators.subscribeChannel(guildId, firstGloballyViewbleGuildChannelId, GuildChannelSubscriptions.DEFAULT_RANGES);
+        const tmp6Result = GuildSubscriptionsActionCreators;
       }
       tmp14 = null != firstGloballyViewbleGuildChannelId && firstGloballyViewbleGuildChannelId !== stateFromStores3.id;
     }
@@ -311,7 +310,7 @@ export default function useHappeningNowData(has, guildId) {
                           });
                           closure_1_4[channel.id] = found.map((activity) => ({ kind: "embedded-activity", userId, voiceState, guildId: set1, activity }));
                         } else {
-                          let tmp3Result = tmp3(tmp4[33]);
+                          let tmp3Result = tmp3(withoutUserCards[33]);
                           const result = tmp3Result.findActivityWithMostNonBlockedOrIgnoredParticipants(embeddedActivitiesForChannel);
                           if (null !== result) {
                             obj1 = { kind: "embedded-activity", userId, voiceState: channelId, guildId: tmp33, activity: result };
@@ -340,7 +339,7 @@ export default function useHappeningNowData(has, guildId) {
             }
           }
           if (null != type) {
-            tmp3Result = tmp3(tmp4[34]);
+            tmp3Result = tmp3(withoutUserCards[34]);
             if (tmp3Result.isActivityPermanentCustomStatus(tmp5)) {
               if (hasItem3) {
                 obj3 = { kind: "activity", userId, guildId, activity: tmp5 };
@@ -353,7 +352,7 @@ export default function useHappeningNowData(has, guildId) {
                   closure_1_7[userId] = obj4;
                 }
               } else if (hasItem4) {
-                let tmp17 = guildId(tmp4[36])(tmp5, constants.EMBEDDED);
+                let tmp17 = guildId(withoutUserCards[36])(tmp5, constants.EMBEDDED);
                 if (tmp17) {
                   voiceStateForSession = voiceStateForSession.getVoiceStateForSession(userId, tmp5.session_id);
                   let channelId1;
@@ -372,7 +371,7 @@ export default function useHappeningNowData(has, guildId) {
                   closure_1_6[userId] = obj5;
                 }
               }
-              tmp3Result1 = tmp3(tmp4[35]);
+              tmp3Result1 = tmp3(withoutUserCards[35]);
             }
           } else if (hasItem5) {
             const status = stateFromStoresArray1.getStatus(userId, guildId);
@@ -495,7 +494,7 @@ export default function useHappeningNowData(has, guildId) {
   const effect4 = obj.useEffect(() => {
     if (guildId !== ref.current.guildId) {
       const obj = { guildId: tmp, hasComputed: false };
-      tmp2.current = obj;
+      ref.current = obj;
     }
     if (ref.current.hasComputed) {
       if (closure_20) {
@@ -523,11 +522,11 @@ export default function useHappeningNowData(has, guildId) {
   const callback5 = obj.useCallback(() => {
     if (-1 !== isFocused.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
+      clearTimeout(isFocused.current);
     }
     if (withoutUserCards) {
       const _setTimeout = setTimeout;
-      tmp.current = setTimeout(() => {
+      isFocused.current = setTimeout(() => {
         const userStoreVersion = callback3.getUserStoreVersion();
         const sum = userStoreVersion + callback1.getPrivateChannelsVersion();
         let num = -1;

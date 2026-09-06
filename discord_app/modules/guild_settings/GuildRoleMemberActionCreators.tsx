@@ -8,11 +8,11 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7128 */;
 
 const require = fn;
-let closure_6 = async function _fetchMemberCountsFromBackend(guildId) {
+let closure_6 = async function _fetchMemberCountsFromBackend() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_2 = tmp3;
     closure_129_0 = guildId;
     DispatcherDefault.dispatch({ type: "GUILD_ROLE_MEMBER_COUNT_FETCH_START", guildId });
@@ -35,7 +35,7 @@ let closure_6 = async function _fetchMemberCountsFromBackend(guildId) {
     return value;
   })();
 };
-let closure_7 = async function _fetchMemberCounts(arg0, value) {
+let closure_7 = async function _fetchMemberCounts(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -59,26 +59,23 @@ let closure_7 = async function _fetchMemberCounts(arg0, value) {
           c1 = 3;
           obj = { value, done: true };
           return obj;
-        } else {
-          if (GuildRoleMemberCountStore.shouldFetch(closure_0)) {
-            c2 = 1;
-            c1 = 1;
-            const obj1 = {
-              value: (function fetchMemberCountsFromBackend() {
-                          const self = this;
-                          const apply = closure_1_6.apply;
-                          if (typeof apply === "unknown") {
-                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                          } else {
-                            applyArgumentsResult = apply(self, arguments);
-                          }
-                          return applyArgumentsResult;
-                        })(tmp5),
-              done: false
-            };
-            return obj1;
-          }
-          tmp5 = closure_0;
+        } else if (GuildRoleMemberCountStore.shouldFetch(closure_0)) {
+          c2 = 1;
+          c1 = 1;
+          const obj1 = {
+            value: (function fetchMemberCountsFromBackend() {
+                      const self = this;
+                      const apply = closure_1_6.apply;
+                      if (typeof apply === "unknown") {
+                        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                      } else {
+                        applyArgumentsResult = apply(self, arguments);
+                      }
+                      return applyArgumentsResult;
+                    })(closure_0),
+            done: false
+          };
+          return obj1;
         }
       } else if (arg0 === 1) {
         c1 = 3;
@@ -132,4 +129,5 @@ export const requestMembersForRole = function requestMembersForRole(guildId, rol
     const membersById = GuildActionCreatorsDefault.requestMembersById(closure_0, body.body, false);
     return body.body.length;
   });
+  const obj2 = require("HTTPUtils");
 };

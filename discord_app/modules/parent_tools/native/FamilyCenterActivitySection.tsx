@@ -2,6 +2,7 @@
 
 // Module 14899 (FamilyCenterActivitySection)
 import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7593 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
 import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14894 */;
@@ -40,11 +41,11 @@ function FamilyCenterActivitySectionHeader(displayType) {
       tmp10 = sectionDescriptionResult;
     }
     obj = { variant: "text-sm/semibold", style: tmp.header, children: sectionHeaderResult };
-    const items = [React7(tmp3(4556).Text, obj), ];
+    const items = [React7(Text_Text.Text, obj), ];
     let tmp14Result = null;
     if (null !== tmp10) {
       obj = { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: tmp10 };
-      tmp14Result = React7(tmp3(4556).Text, obj);
+      tmp14Result = React7(Text_Text.Text, obj);
     }
     const obj1 = { children: null };
     items[1] = tmp14Result;
@@ -102,7 +103,7 @@ export default function FamilyCenterActivitySection(displayType) {
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj.children = items1;
-      return tmp15(tmp16, obj);
+      return closure_10(closure_6, obj);
     } else {
       obj2 = { style: loadMoreButton.loadMoreContainer, children: null };
       if (familyCenterActions.isMoreLoading) {
@@ -110,17 +111,16 @@ export default function FamilyCenterActivitySection(displayType) {
         const obj4 = { style: null, animating: true, color: "#fff", size: "small" };
         loadMoreButton = loadMoreButton.loadMoreButton;
         obj4.style = loadMoreButton;
-        obj3.children = tmp17(closure_5, obj4);
-        let tmp17Result = tmp17(tmp16, obj3);
+        obj3.children = closure_9(closure_5, obj4);
+        let tmp17Result = closure_9(closure_6, obj3);
       } else {
         const obj5 = { style: loadMoreButton.loadMore, accessibilityLabel: formatToPlainStringResult, accessibilityRole: "button", onPress: tmp7, children: null };
         const obj6 = { style: loadMoreButton.loadMoreButton, variant: "text-xs/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
-        obj5.children = tmp17(tmp(4556).Text, obj6);
-        tmp17Result = tmp17(tmp(5123).PressableOpacity, obj5);
+        obj5.children = closure_9(tmp(4556).Text, obj6);
+        tmp17Result = closure_9(tmp(5123).PressableOpacity, obj5);
       }
       obj2.children = tmp17Result;
-      tmp17Result = tmp17(tmp16, obj2);
+      tmp17Result = closure_9(closure_6, obj2);
     }
-    tmp15 = closure_10;
   }
 };

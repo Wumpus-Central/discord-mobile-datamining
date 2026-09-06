@@ -1,6 +1,7 @@
 // === Module 7186: RoleIconUtils ===
 
 // Module 7186 (RoleIconUtils)
+import util from "util" /* 1114 */;
 import guild_boosting_RoleIconUtils from "guild_boosting/RoleIconUtils" /* 7187 */;
 import RoleIconDefault from "RoleIcon" /* 7188 */;
 import noop from "module_19" /* 19 */;
@@ -41,7 +42,7 @@ export const useRoleIcon = function useRoleIcon(guildId) {
       if (null != roleId) {
         let obj = guild_boosting_RoleIconUtils;
         if (obj.canGuildUseRoleIcons(tmp, role)) {
-          let roleIconData = tmp3(7187).getRoleIconData(tmp5);
+          let roleIconData = guild_boosting_RoleIconUtils.getRoleIconData(role);
           if (roleIconData == null) {
             roleIconData = {};
           }
@@ -53,19 +54,17 @@ export const useRoleIcon = function useRoleIcon(guildId) {
           }
           obj = { source: tmp6, unicodeEmoji, name: null, size: null };
           let str;
-          const tmp3Result = tmp3(7187);
-          const tmp7 = jsx;
-          if (tmp5 != null) {
-            str = tmp5.name;
+          const tmp3Result = guild_boosting_RoleIconUtils;
+          if (role != null) {
+            str = role.name;
           }
           if (str == null) {
             str = "";
           }
           obj.name = str;
           obj.size = num;
-          return tmp7(RoleIconDefault, obj);
+          return jsx(RoleIconDefault, { source: tmp6, unicodeEmoji, name: null, size: null });
         }
-        tmp3 = require;
       }
     }
   }, items2);
@@ -79,7 +78,7 @@ export const getRoleIcon = function getRoleIcon(roleId) {
       if (null != role) {
         let obj = guild_boosting_RoleIconUtils;
         if (obj.canGuildUseRoleIcons(guild, role)) {
-          let roleIconData = tmp4(7187).getRoleIconData(role);
+          let roleIconData = guild_boosting_RoleIconUtils.getRoleIconData(role);
           if (roleIconData == null) {
             roleIconData = {};
           }
@@ -96,9 +95,9 @@ export const getRoleIcon = function getRoleIcon(roleId) {
             surrogates1 = unicodeEmoji.surrogates;
           }
           obj.unicodeEmoji = surrogates1;
-          const intl = tmp4(1114).intl;
+          const intl = util.intl;
           obj = { name: role.name };
-          obj.alt = intl.formatToPlainString(tmp4(1114).t["9+YWrE"], obj);
+          obj.alt = intl.formatToPlainString(util.t["9+YWrE"], obj);
           return obj;
         }
       }

@@ -237,13 +237,13 @@ export const getDefaultTriggerMetadataForTriggerType = function getDefaultTrigge
     obj = { allowList: [], presets: [] };
     return obj;
   } else {
-    if (tmp3.USER_PROFILE !== triggerType) {
-      if (tmp3.KEYWORD !== triggerType) {
-        if (tmp3.MENTION_SPAM === triggerType) {
+    if (AutomodTriggerType.USER_PROFILE !== triggerType) {
+      if (AutomodTriggerType.KEYWORD !== triggerType) {
+        if (AutomodTriggerType.MENTION_SPAM === triggerType) {
           obj = { mentionTotalLimit, mentionRaidProtectionEnabled: tmp2 };
           return obj;
-        } else if (tmp3.ML_SPAM !== triggerType) {
-          const SERVER_POLICY = tmp3.SERVER_POLICY;
+        } else if (AutomodTriggerType.ML_SPAM !== triggerType) {
+          const SERVER_POLICY = AutomodTriggerType.SERVER_POLICY;
         }
       }
     }

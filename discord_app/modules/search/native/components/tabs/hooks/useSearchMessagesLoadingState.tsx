@@ -27,7 +27,7 @@ export const useSearchMessagesLoadingState = function useSearchMessagesLoadingSt
     }
     obj = { isFirstPageLoading: tmp5, isNextPageLoading: isFetching, placeholderCount: null };
     if (!isInitialFetchComplete) {
-      let num = Math.max(closure_2, closure_4[tmp2]);
+      let num = Math.max(closure_2, closure_4[dependencyMap]);
     } else {
       num = 0;
     }

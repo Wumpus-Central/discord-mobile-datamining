@@ -114,7 +114,7 @@ prototype["process"] = function process(arg0) {
     });
   }
 };
-prototype["_processEnd"] = function _processEnd(didTimeout) {
+prototype["_processEnd"] = function _processEnd() {
   let flag = didTimeout;
   if (didTimeout === undefined) {
     flag = false;

@@ -4,6 +4,7 @@
 import BadgeId from "BadgeId" /* 8184 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8197 */;
 import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 16949 */;
+import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 16951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
@@ -12,7 +13,6 @@ import PromotionsStore from "PromotionsStore" /* 10665 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
 
-const useGiftingPromotionAssetsReadyDefault = tmp4(16951);
 require = fn;
 const PlatformTypes = fn(1074).PlatformTypes;
 const PremiumConstants = fn(1373);
@@ -107,7 +107,7 @@ export const useMainViewTooltipActionSheetMap = function useMainViewTooltipActio
   });
   const GiftPromotionReminderExperiment = tmp(10741).GiftPromotionReminderExperiment;
   const tmpResult6 = isEligibleToShowGiftingBadgeCoachmark(504);
-  isEligibleToShowGiftingBadgeCoachmark = isEligibleToShowGiftingBadgeCoachmark(13571).useIsEligibleToShowGiftingBadgeCoachmark({ platform: "native", location: tmp5 });
+  isEligibleToShowGiftingBadgeCoachmark = isEligibleToShowGiftingBadgeCoachmark(13571).useIsEligibleToShowGiftingBadgeCoachmark({ platform: "native", location: MainViewTooltipActionSheets });
   const items6 = [isEligibleToShowGiftingBadgeCoachmark];
   const effect = noop.useEffect(() => {
     if (isEligibleToShowGiftingBadgeCoachmark) {
@@ -145,7 +145,6 @@ export const useMainViewTooltipActionSheetMap = function useMainViewTooltipActio
   const items8 = [, ];
   ({ LEAGUE_OF_LEGENDS: arr9[0], RIOT_GAMES: arr9[1] } = PlatformTypes);
   const isEligibleForBogoPromotion = isEligibleToShowGiftingBadgeCoachmark(13467).useIsEligibleForBogoPromotion();
-  const tmp27 = PlatformTypes;
   const tmpResult13 = isEligibleToShowGiftingBadgeCoachmark(13467);
   const shouldShowConnectionDeprecationBottomSheet = isEligibleToShowGiftingBadgeCoachmark(16940).useShouldShowConnectionDeprecationBottomSheet({ deprecatedPlatformTypes: items8 });
   const tmpResult14 = isEligibleToShowGiftingBadgeCoachmark(16940);
@@ -154,7 +153,7 @@ export const useMainViewTooltipActionSheetMap = function useMainViewTooltipActio
   obj.deprecatedPlatformTypes = items9;
   const shouldShowConnectionDeprecationBottomSheet1 = isEligibleToShowGiftingBadgeCoachmark(16940).useShouldShowConnectionDeprecationBottomSheet(obj);
   const tmpResult15 = isEligibleToShowGiftingBadgeCoachmark(16940);
-  const isDisplayNameStylesFlywheelSettersEnabled = isEligibleToShowGiftingBadgeCoachmark(9177).useIsDisplayNameStylesFlywheelSettersEnabled(tmp5);
+  const isDisplayNameStylesFlywheelSettersEnabled = isEligibleToShowGiftingBadgeCoachmark(9177).useIsDisplayNameStylesFlywheelSettersEnabled(MainViewTooltipActionSheets);
   isEligibleToShowGiftingBadgeCoachmark(11967);
   obj1 = {};
   if (stateFromStores) {
@@ -189,7 +188,7 @@ export const useMainViewTooltipActionSheetMap = function useMainViewTooltipActio
       hasItem = null == premiumTrialOffer.expiresAt;
     }
     if (hasItem) {
-      hasItem = !PremiumTrialOfferActionSheetKillSwitchExperiment.useConfig({ location: tmp5 }).enabled;
+      hasItem = !PremiumTrialOfferActionSheetKillSwitchExperiment.useConfig({ location: MainViewTooltipActionSheets }).enabled;
     }
     if (hasItem) {
       hasItem = set.has(premiumTrialOffer.trialId);
@@ -274,7 +273,7 @@ export const useMainViewTooltipActionSheetMap = function useMainViewTooltipActio
       enabled = isDismissed;
     }
     if (enabled) {
-      enabled = GiftPromotionReminderExperiment.useConfig({ location: tmp5 }).enabled;
+      enabled = GiftPromotionReminderExperiment.useConfig({ location: MainViewTooltipActionSheets }).enabled;
     }
     if (enabled) {
       enabled = null != stateFromStores4;
@@ -305,11 +304,11 @@ export const useMainViewTooltipActionSheetMap = function useMainViewTooltipActio
     obj1[tmp(1943).DismissibleContent.RIOT_CONNECTION_DEPRECATION_DISABLE] = obj22;
     const obj24 = { isEligible: shouldShowConnectionDeprecationBottomSheet1, actionSheetProperties: null };
     const obj25 = { platformTypes: null };
-    const items10 = [tmp27.BATTLENET];
+    const items10 = [PlatformTypes.BATTLENET];
     obj25.platformTypes = items10;
     obj24.actionSheetProperties = obj25;
     obj1[tmp(1943).DismissibleContent.BATTLENET_CONNECTION_DEPRECATION_DISABLE] = obj24;
-    const obj26 = { isEligible: tmpResult11.useProfileFramesMarketing(tmp5).isAnnouncementEligible, actionSheetProperties: {} };
+    const obj26 = { isEligible: tmpResult11.useProfileFramesMarketing(MainViewTooltipActionSheets).isAnnouncementEligible, actionSheetProperties: {} };
     obj1[tmp(1943).DismissibleContent.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT] = obj26;
     const obj27 = { isEligible: tmp32, actionSheetProperties: {} };
     obj1[tmp(1943).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_COACHMARK] = obj27;

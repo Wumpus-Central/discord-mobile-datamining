@@ -43,7 +43,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
     return items;
   }, items2);
   require("useMountEffect")(() => {
-    (async (arg0, value) => {
+    (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

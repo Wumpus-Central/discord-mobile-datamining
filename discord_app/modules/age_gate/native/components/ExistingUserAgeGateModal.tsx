@@ -37,12 +37,12 @@ export default function ExistingUserAgeGateModal(source) {
   const items1 = [source];
   obj.screens = noop.useMemo(() => {
     if (constants.NSFW_SERVER_INVITE !== source) {
-      if (tmp2.NSFW_SERVER_INVITE_EMBED !== tmp) {
-        if (tmp2.JOIN_LARGE_GUILD_UNDERAGE !== tmp) {
-          if (tmp2.ACCESS_LARGE_GUILD_UNDERAGE !== tmp) {
-            if (tmp2.LARGE_GUILD !== tmp) {
-              if (tmp2.NSFW_SERVER !== tmp) {
-                if (tmp2.NSFW_CHANNEL === tmp) {
+      if (constants.NSFW_SERVER_INVITE_EMBED !== source) {
+        if (constants.JOIN_LARGE_GUILD_UNDERAGE !== source) {
+          if (constants.ACCESS_LARGE_GUILD_UNDERAGE !== source) {
+            if (constants.LARGE_GUILD !== source) {
+              if (constants.NSFW_SERVER !== source) {
+                if (constants.NSFW_CHANNEL === source) {
                   let fn = () => {
                     const guildId = SelectedGuildStore.getGuildId();
                     if (null != guildId) {
@@ -50,15 +50,16 @@ export default function ExistingUserAgeGateModal(source) {
                       const obj = closure_1(5520);
                     }
                     source(7211).closeAgeGateModal(closure_0);
+                    const obj2 = source(7211);
                   };
-                } else if (tmp2.NSFW_VOICE_CHANNEL === tmp) {
+                } else if (constants.NSFW_VOICE_CHANNEL === source) {
                   fn = () => {
                     let obj = closure_1(4763);
                     obj.popAll();
                     obj = { source, action: constants.AGE_GATE_CLOSE };
                     closure_1(1242).track(constants3.AGE_GATE_ACTION, obj);
                   };
-                } else if (tmp2.FAMILY_CENTER === tmp) {
+                } else if (constants.FAMILY_CENTER === source) {
                   fn = () => {
                     source(7211).closeAgeGateModal(closure_0);
                   };
@@ -76,6 +77,7 @@ export default function ExistingUserAgeGateModal(source) {
           source(7211).closeAgeGateModal(closure_0);
           const obj2 = source(7211);
           closure_1(4763).popAll();
+          const obj3 = closure_1(4763);
         };
       }
       if (fn == null) {
@@ -146,7 +148,7 @@ export default function ExistingUserAgeGateModal(source) {
           }
       };
       obj[NSFWGateGuild.Blocked] = obj2;
-      const obj3 = { headerTitle: renderHeaderTitle, headerLeft: null, render: null };
+      let obj3 = { headerTitle: renderHeaderTitle, headerLeft: null, render: null };
       obj3.headerLeft = NavigatorHeader.getHeaderBackButton(fn);
       obj3.render = function render() {
         return closure_1_9(ref(10295), { onClose });

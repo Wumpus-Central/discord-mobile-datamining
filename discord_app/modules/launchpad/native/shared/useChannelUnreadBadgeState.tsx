@@ -19,7 +19,7 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
     const obj = { ackMessageId: ReadStateStore.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
     let hasUnreadResult = !dependencyMap;
     if (!dependencyMap) {
-      hasUnreadResult = obj2.hasUnread(tmp.id);
+      hasUnreadResult = ReadStateStore.hasUnread(user.id);
     }
     obj.unread = hasUnreadResult;
     obj.mentionCount = ReadStateStore.getMentionCount(user.id);
@@ -51,7 +51,7 @@ export const useBaseChannelUnreadBadgeState = function useBaseChannelUnreadBadge
     const obj = { ackMessageId: ReadStateStore.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
     let hasUnreadResult = !dependencyMap;
     if (!dependencyMap) {
-      hasUnreadResult = obj2.hasUnread(tmp.id);
+      hasUnreadResult = ReadStateStore.hasUnread(user.id);
     }
     obj.unread = hasUnreadResult;
     obj.mentionCount = ReadStateStore.getMentionCount(user.id);

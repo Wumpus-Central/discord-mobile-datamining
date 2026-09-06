@@ -81,9 +81,9 @@ function SubscriptionAndBillingInfo(subscription) {
   let items = [IAPStore];
   const stateFromStores = obj4.useStateFromStores(items, () => {
     if (subscription.isOnPlatformMatchingExternalPaymentGateway) {
-      if (null != tmp.paymentGatewayPlanId) {
-        if ("" !== tmp.paymentGatewayPlanId) {
-          return IAPStore.getProduct(tmp.paymentGatewayPlanId);
+      if (null != subscription.paymentGatewayPlanId) {
+        if ("" !== subscription.paymentGatewayPlanId) {
+          return IAPStore.getProduct(subscription.paymentGatewayPlanId);
         }
       }
       const _Error = Error;
@@ -119,7 +119,7 @@ function SubscriptionAndBillingInfo(subscription) {
     if (tmp2) {
       closure_5("in_mobile_web");
     }
-    let tmp8 = "in_mobile_web" === tmp;
+    let tmp8 = "in_mobile_web" === first2;
     if (tmp8) {
       tmp8 = stateFromStores3 === ConstantsIOS.AppStates.ACTIVE;
     }
@@ -133,6 +133,8 @@ function SubscriptionAndBillingInfo(subscription) {
     if (!tmp20) {
       closure_5(null);
     }
+    tmp17 = "start_fetching_update" === first2 && stateFromStores2;
+    tmp20 = "fetching_update" !== first2 || stateFromStores2;
   }, items4);
   const tmp18 = analyticsLocations(tmp3[33])(() => subscription(stateFromStores2[34]).getNewAnalyticsLoadId());
   const loadId = tmp18;
@@ -188,9 +190,9 @@ function SubscriptionAndBillingInfo(subscription) {
     }
     obj1.price = formatRateResult;
     const planDescription = tmp2(tmp3[37]).getPlanDescription(obj1);
-    if (statusFromInvoice !== tmp7.CANCELED) {
-      if (statusFromInvoice !== tmp7.PAUSE_PENDING) {
-        if (statusFromInvoice !== tmp7.PAST_DUE) {
+    if (statusFromInvoice !== constants2.CANCELED) {
+      if (statusFromInvoice !== constants2.PAUSE_PENDING) {
+        if (statusFromInvoice !== constants2.PAST_DUE) {
           if (null != subscription.renewalMutations) {
             const _Date = Date;
             const date = new Date(subscription.currentPeriodEnd);
@@ -211,30 +213,30 @@ function SubscriptionAndBillingInfo(subscription) {
               }
               obj5 = { planName: displayName, date: result };
               obj4.children = intl6.format(tmp43, obj5);
-              items6[1] = tmp42(tmp4(tmp3[23]).Text, obj4);
+              items6[1] = closure_29(tmp4(tmp3[23]).Text, obj4);
               obj3.children = items6;
-              const items7 = [tmp40(tmp41, obj3), , ];
+              const items7 = [closure_30(tmp41, obj3), , ];
               obj6 = { premiumType: closure_27.TIER_2, hideButton: true, isPremiumGroup, premiumGroupRole };
-              items7[1] = tmp42(tmp2(tmp3[50]), obj6);
+              items7[1] = closure_29(tmp2(tmp3[50]), obj6);
               const obj7 = { style: tmp.extraInfoContainer, children: null };
               const obj8 = { variant: "eyebrow", color: "text-default", accessibilityRole: "header", children: null };
               const intl7 = tmp4(tmp3[24]).intl;
               obj8.children = intl7.string(tmp4(tmp3[24]).t.YCrcPL);
-              const items8 = [tmp42(tmp4(tmp3[23]).Text, obj8), ];
+              const items8 = [closure_29(tmp4(tmp3[23]).Text, obj8), ];
               const obj9 = { style: tmp.extraInfoTextContainer, children: null };
               const obj10 = { variant: "text-sm/medium", color: "text-default", children: null };
               const intl8 = tmp4(tmp3[24]).intl;
               obj10.children = intl8.string(tmp4(tmp3[24]).t["MTG+3O"]);
-              const items9 = [tmp42(tmp4(tmp3[23]).Text, obj10), , ];
+              const items9 = [closure_29(tmp4(tmp3[23]).Text, obj10), , ];
               const obj11 = { variant: "text-sm/medium", color: "text-default", children: tmp4(tmp3[47]).getBillingInformationStringNative(subscription, first, first1) };
-              items9[1] = tmp42(tmp4(tmp3[23]).Text, obj11);
+              items9[1] = closure_29(tmp4(tmp3[23]).Text, obj11);
               items9[2] = null != memo && memo;
               obj9.children = items9;
-              items8[1] = tmp40(tmp41, obj9);
+              items8[1] = closure_30(tmp41, obj9);
               obj7.children = items8;
-              items7[2] = tmp40(tmp41, obj7);
+              items7[2] = closure_30(tmp41, obj7);
               obj2.children = items7;
-              return tmp40(tmp41, obj2);
+              return closure_30(tmp41, obj2);
             }
             displayName = tmp4(tmp3[37]).getExternalPlanDisplayName(subscription.renewalMutations);
             const tmp4Result6 = tmp4(tmp3[37]);
@@ -323,7 +325,7 @@ function SubscriptionAndBillingInfo(subscription) {
       const obj34 = { size: "sm", variant: "secondary", text: null, onPress: null, loading: null, disabled: null };
       const intl9 = tmp4(tmp3[24]).intl;
       obj34.text = intl9.string(tmp4(tmp3[24]).t.lTCb0c);
-      obj34.onPress = asyncGeneratorStep(async (arg0, value) => {
+      obj34.onPress = asyncGeneratorStep(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -388,8 +390,8 @@ function SubscriptionAndBillingInfo(subscription) {
       });
       obj34.loading = tmp21;
       obj34.disabled = tmp21;
-      obj33.children = tmp50(tmp4(tmp3[45]).Button, obj34);
-      isOnPlatformMatchingExternalPaymentGateway = tmp50(tmp48, obj33);
+      obj33.children = closure_29(tmp4(tmp3[45]).Button, obj34);
+      isOnPlatformMatchingExternalPaymentGateway = closure_29(tmp48, obj33);
     }
     items18[1] = isOnPlatformMatchingExternalPaymentGateway;
     obj27.children = items18;
@@ -464,72 +466,73 @@ function FractionalPremiumCredits(durationText) {
   if (hasUnactivatedUnits) {
     if (fractionalPremiumInfo.fractionalState === constants4.NONE) {
       const obj12 = { variant: "text-sm/medium", children: unactivatedHoursString };
-      let tmp8Result = tmp8(tmp9(4556).Text, obj12);
+      let tmp8Result = __initData7(Text_Text.Text, obj12);
     }
     items4[1] = tmp8Result;
     obj10.children = items4;
-    items3[1] = tmp2(tmp3, obj10);
+    items3[1] = __initData8(React6, obj10);
     obj4.children = items3;
-    const items5 = [tmp2(Card.Card, obj4), , ];
+    const items5 = [__initData8(Card.Card, obj4), , ];
     const obj13 = { style: tmp.dividerContainer, children: null };
     const obj14 = { style: tmp.divider };
-    obj13.children = tmp8(tmp3, obj14);
-    items5[1] = tmp8(tmp3, obj13);
+    obj13.children = __initData7(React6, obj14);
+    items5[1] = __initData7(React6, obj13);
     const obj15 = { start: false, end: true, style: tmp.fpRowEnd, variant: "secondary", children: null };
     const obj16 = { style: tmp.fpRowContent, children: null };
     if (hasUnactivatedUnits) {
       if (fractionalPremiumInfo.fractionalState === constants4.NONE) {
         const obj17 = { variant: "text-md/semibold", children: null };
-        const intl6 = tmp9(1114).intl;
-        obj17.children = intl6.string(tmp9(1114).t["hT6i/0"]);
-        const items6 = [tmp8(tmp9(4556).Text, obj17), ];
+        const intl6 = util.intl;
+        obj17.children = intl6.string(util.t["hT6i/0"]);
+        const items6 = [__initData7(Text_Text.Text, obj17), ];
         tmp8Result = undefined !== activationDate;
         if (tmp8Result) {
           const obj18 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-          const intl7 = tmp9(1114).intl;
+          const intl7 = util.intl;
           const obj19 = { activateDate: activationDate };
-          obj18.children = intl7.format(tmp9(1114).t["0Vwb/l"], obj19);
-          tmp8Result = tmp8(tmp9(4556).Text, obj18);
+          obj18.children = intl7.format(util.t["0Vwb/l"], obj19);
+          tmp8Result = __initData7(Text_Text.Text, obj18);
         }
         const obj20 = { children: null };
         items6[1] = tmp8Result;
         obj20.children = items6;
-        let tmp8Result2 = tmp2(tmp3, obj20);
+        let tmp8Result2 = __initData8(React6, obj20);
       }
       const items7 = [tmp8Result2, ];
       if (hasUnactivatedUnits) {
         if (fractionalPremiumInfo.fractionalState === constants4.NONE) {
           const obj21 = { style: tmp.fpUnactivatedHoursPill, children: null };
           const obj22 = { variant: "text-sm/medium", style: tmp.fpTimeRemainingText, children: unactivatedHoursString };
-          obj21.children = tmp8(tmp9(4556).Text, obj22);
-          let tmp8Result1 = tmp8(tmp3, obj21);
+          obj21.children = __initData7(Text_Text.Text, obj22);
+          let tmp8Result1 = __initData7(React6, obj21);
         }
         const obj23 = { children: null };
         items7[1] = tmp8Result1;
         obj16.children = items7;
-        obj15.children = tmp2(tmp3, obj16);
-        items5[2] = tmp8(tmp14, obj15);
+        obj15.children = __initData8(React6, obj16);
+        items5[2] = __initData7(tmp14, obj15);
         obj23.children = items5;
-        items1[2] = tmp2(tmp3, obj23);
+        items1[2] = __initData8(React6, obj23);
         obj.children = items1;
-        items[1] = tmp2(tmp3, obj);
+        items[1] = __initData8(React6, obj);
         obj.children = items;
-        return tmp2(tmp3, obj);
+        return __initData8(React6, obj);
       }
       const obj24 = { style: tmp.fpTimeRemainingPill, children: null };
       const obj25 = { variant: "text-sm/medium", style: tmp.fpTimeRemainingText, children: durationText.durationText };
-      obj24.children = tmp8(tmp9(4556).Text, obj25);
-      tmp8Result1 = tmp8(tmp3, obj24);
+      obj24.children = __initData7(Text_Text.Text, obj25);
+      tmp8Result1 = __initData7(React6, obj24);
     }
     const obj26 = { variant: "text-md/semibold", style: tmp.fpTimeRemaining, children: null };
-    const intl5 = tmp9(1114).intl;
-    obj26.children = intl5.string(tmp9(1114).t["3G0CTC"]);
-    tmp8Result2 = tmp8(tmp9(4556).Text, obj26);
+    const intl5 = util.intl;
+    obj26.children = intl5.string(util.t["3G0CTC"]);
+    tmp8Result2 = __initData7(Text_Text.Text, obj26);
   }
   const obj27 = { variant: "text-sm/medium", style: tmp.fpUnitsStatusText, children: null };
-  const intl4 = tmp9(1114).intl;
+  const intl4 = util.intl;
   obj27.children = intl4.string(util.t["B66Z+f"]);
-  tmp8Result = tmp8(tmp9(4556).Text, obj27);
+  tmp8Result = __initData7(Text_Text.Text, obj27);
+  const obj9 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8051, size: native.IconSizes.LARGE };
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, ImageBackground: closure_7, View: closure_8, ScrollView: closure_9, ActivityIndicator: c10 } = get_ActivityIndicator);
@@ -646,6 +649,7 @@ export default function PremiumManagePlan() {
       const premiumSubscriptionPlans = navigation(7257).fetchPremiumSubscriptionPlans();
       const obj3 = navigation(7257);
     }
+    tmp5 = SubscriptionPlanStore.isLoadedForPremiumSKUs() || SubscriptionPlanStore.isFetchingForPremiumSKUs();
   });
   let obj7 = navigation(8065);
   let isInReverseTrial = obj7.useIsInReverseTrial();
@@ -727,12 +731,12 @@ export default function PremiumManagePlan() {
   let tmp29Result = tmp23;
   if (tmp23) {
     obj2 = { subscription: tmp10, fractionalPremiumInfo: tmp12, isPremiumGroup: result, premiumGroupRole };
-    tmp29Result = tmp29(SubscriptionAndBillingInfo, obj2);
+    tmp29Result = closure_29(SubscriptionAndBillingInfo, obj2);
   }
   const items9 = [tmp29Result, , , , , , ];
   if (isInReverseTrial) {
     obj3 = { premiumType: closure_27.TIER_2, forFractionalPremium: true, hideButton: true };
-    isInReverseTrial = tmp29(tmp2(9363), obj3);
+    isInReverseTrial = closure_29(tmp2(9363), obj3);
   }
   items9[1] = isInReverseTrial;
   tmp29Result = result;
@@ -741,12 +745,12 @@ export default function PremiumManagePlan() {
   }
   if (tmp29Result) {
     obj4 = { premiumType: closure_27.TIER_2, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole };
-    tmp29Result = tmp29(tmp2(9363), obj4);
+    tmp29Result = closure_29(tmp2(9363), obj4);
   }
   items9[2] = tmp29Result;
   if (tmp29Result1) {
-    obj5 = { fractionalPremiumInfo: tmp12, showPremiumFeaturesCard: tmp12.fractionalState === tmp18.FP_ONLY, hasUnactivatedUnits: tmp17, unactivatedHoursString: unactivatedFractionalPremiumDurationString, activationDate: currentPeriodEnd, durationText: tmp15Result };
-    tmp29Result1 = tmp29(FractionalPremiumCredits, obj5);
+    obj5 = { fractionalPremiumInfo: tmp12, showPremiumFeaturesCard: tmp12.fractionalState === constants4.FP_ONLY, hasUnactivatedUnits: tmp17, unactivatedHoursString: unactivatedFractionalPremiumDurationString, activationDate: currentPeriodEnd, durationText: tmp15Result };
+    tmp29Result1 = closure_29(FractionalPremiumCredits, obj5);
   }
   items9[3] = tmp29Result1;
   if (tmp27Result) {
@@ -762,18 +766,18 @@ export default function PremiumManagePlan() {
           obj = { destinationPane: constants3.GUILD_BOOSTING };
           const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj);
           if (null != found) {
-            arr.navigate(tmp2.GUILD_BOOSTING, undefined, { pop: true });
+            arr.navigate(constants3.GUILD_BOOSTING, undefined, { pop: true });
           } else {
-            arr = arr.push(tmp2.GUILD_BOOSTING);
+            arr = arr.push(constants3.GUILD_BOOSTING);
           }
         },
       subscription: tmp10
     };
-    const items10 = [tmp29(tmp2(13309), obj7), ];
+    const items10 = [closure_29(tmp2(13309), obj7), ];
     obj8 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = tmp29(tmp2(13346), obj8);
+    items10[1] = closure_29(tmp2(13346), obj8);
     obj6.children = items10;
-    tmp27Result = tmp27(tmp28, obj6);
+    tmp27Result = closure_30(closure_8, obj6);
   }
   items9[4] = tmp27Result;
   const obj9 = { style: tmp.accountCredit, creditListContainerStyle: tmp.accountCreditList, currentSubscription: tmp10, entitlements: stateFromStores2, hasPremiumGroup: null };
@@ -786,7 +790,6 @@ export default function PremiumManagePlan() {
   items9[5] = closure_29(tmp2Result, obj9);
   const obj10 = { style: tmp.featuresTable, variant: "nitro_home", titleOverride: null, isFractionalOnly: null, isPremiumGroup: null, premiumGroupRole: null };
   tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13461).CountDownMessageTypes.SHORT_TIME);
-  const tmp31 = closure_9;
   const intl = tmp4(1114).intl;
   obj10.titleOverride = intl.string(navigation(1114).t.QXx2gs);
   obj10.isFractionalOnly = tmp12.fractionalState === constants4.FP_ONLY;
@@ -796,7 +799,7 @@ export default function PremiumManagePlan() {
   obj1.children = items9;
   items8[1] = closure_30(closure_8, obj1);
   obj.children = items8;
-  items6[1] = closure_30(tmp31, obj);
+  items6[1] = closure_30(closure_9, obj);
   obj.children = items6;
   return closure_30(closure_8, obj);
 };

@@ -15,13 +15,13 @@ export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEve
   if (!obj2.areDatesIdentical(baseScheduleForRecurrence.startDate, startDate.startDate)) {
     startDate = startDate.startDate;
   }
-  let tmpResult = tmp(9665);
+  let tmpResult = ScheduleUtils;
   let endDate = null;
   if (!tmpResult.areDatesIdentical(baseScheduleForRecurrence.endDate, startDate.endDate)) {
     endDate = startDate.endDate;
   }
   if (null != event_exception_id) {
-    tmpResult = tmp(9665);
+    tmpResult = ScheduleUtils;
     const result = tmpResult.areSchedulesIdentical(startDate, baseScheduleForRecurrence);
     const obj5 = GuildScheduledEventsActionCreatorsDefault;
     if (result) {

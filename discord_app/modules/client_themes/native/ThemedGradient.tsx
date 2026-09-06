@@ -1,20 +1,23 @@
 // === Module 5125: ThemedGradient ===
 
 // Module 5125 (ThemedGradient)
+import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4378 */;
+import ColorUtils from "ColorUtils" /* 4409 */;
 import utils_ColorDefault from "utils/Color" /* 4410 */;
 import shared from "shared" /* 4411 */;
 import GuildThemePresets from "GuildThemePresets" /* 4414 */;
 import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4416 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4494 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4379 */;
 
-const ColorUtils = tmp5(4409);
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
   ({ mixAmount, theme } = mixColorOverride);
@@ -67,10 +70,10 @@ function getMixedGradientColor(mixColorOverride) {
   } else if (null != mixAmount1.light) {
     num3 = 1 - mixAmount1.light;
   }
-  let tmp12Result = tmp12(4409);
+  let tmp12Result = ColorUtils;
   obj6 = shared;
   ({ r, g, b } = tmp12Result.hexToRgb(mixColorOverride.color));
-  tmp12Result = tmp12(4409);
+  tmp12Result = ColorUtils;
   const hexToRgbResult = tmp12Result.hexToRgb(mixColorOverride.color);
   const tmp15 = new utils_ColorDefault(r, g, b, num3);
   return tmp12Result.mixColors(mixColorOverride, new utils_ColorDefault(r, g, b, num3)).toHexString();
@@ -86,7 +89,6 @@ function GradientBase(angleCenter) {
   ({ width, height } = useWindowDimensionsDefault());
   let obj = { colors, locations, angle, angleCenter, useAngle: true, style: null };
   const tmp2 = useWindowDimensionsDefault();
-  const tmp3 = timestampProducer;
   if (wide) {
     obj = { width };
     wide = obj;
@@ -104,7 +106,7 @@ function GradientBase(angleCenter) {
   items[3] = absolute;
   items[4] = angleCenter.componentStyles;
   obj.style = items;
-  return tmp3(LinearGradientDefault, obj);
+  return timestampProducer(LinearGradientDefault, obj);
 }
 class Gradient {
   constructor(arg0) {
@@ -232,7 +234,7 @@ function CustomThemesGradient(arg0) {
       if (null == tmp2) {
         const diff = 1 - result;
         let sum = num + 0.2 * diff;
-        const isThemeDarkResult = shared.isThemeDark(tmp3);
+        const isThemeDarkResult = shared.isThemeDark(noop);
         if (isThemeDarkResult) {
           sum = num + 0.25 * diff;
         }
@@ -264,10 +266,10 @@ function CustomThemesGradient(arg0) {
       } else if (null != obj.light) {
         num = 1 - obj.light;
       }
-      let tmp14Result = tmp14(4409);
+      let tmp14Result = ColorUtils;
       obj3 = shared;
       ({ r, g, b } = tmp14Result.hexToRgb(item));
-      tmp14Result = tmp14(4409);
+      tmp14Result = ColorUtils;
       const hexToRgbResult = tmp14Result.hexToRgb(item);
       const tmp17 = new utils_ColorDefault(r, g, b, num);
       const mixColorsResult = tmp14Result.mixColors(tmp2, new utils_ColorDefault(r, g, b, num));
@@ -287,12 +289,12 @@ function CustomThemesGradient(arg0) {
   reduced = arr2.reduce((arr, item) => {
     if (typeof item === "string") {
       if (regex.test(item)) {
-        arr.push(item);
+        arr = arr.push(item);
         return arr;
       }
     }
     try {
-      arr.push(reduced(dependencyMap[14])(item).hex("rgb"));
+      arr = arr.push(reduced(dependencyMap[14])(item).hex("rgb"));
       return arr;
     } catch (err) {
     }
@@ -400,15 +402,15 @@ export default function ThemedGradient(overlayOpacity) {
   const tmp8 = obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.BLACK : unsafe_rawColors.WHITE;
   const withOverlay = merged.withOverlay;
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
-  let tmp6Result = tmp6(563);
+  let tmp6Result = useStateFromStores;
   const items = [ClientThemesBackgroundStore];
   const preset = tmp6Result.useStateFromStoresObject(items, () => ({ preset: gradientPreset.gradientPreset })).preset;
   const tmp10 = useRoutedActiveGuildThemeDefault();
-  tmp6Result = tmp6(4494);
+  tmp6Result = useCustomThemeDisplaySettings;
   const customThemeDisplaySettings = tmp6Result.useCustomThemeDisplaySettings();
   if (null != gradientOverride) {
     if (tmp12) {
-      if (gradientOverride.type === tmp6(1231).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      if (gradientOverride.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
         obj = {};
         const merged1 = Object.assign(merged);
         const merged2 = Object.assign(gradientOverride.customThemeSettings);
@@ -420,18 +422,18 @@ export default function ThemedGradient(overlayOpacity) {
           const items1 = [tmp59, ];
           const obj1 = { style: null };
           const items2 = [tmp2.softenGradient, ];
-          const obj2 = { backgroundColor: tmp6(4409).hexWithOpacity(tmp8, num) };
+          const obj2 = { backgroundColor: ColorUtils.hexWithOpacity(tmp8, num) };
           items2[1] = obj2;
           obj1.style = items2;
           items1[1] = timestampProducer(View, obj1);
           obj.children = items1;
           tmp60 = React5(View, obj);
-          const tmp6Result1 = tmp6(4409);
+          const tmp6Result1 = ColorUtils;
         }
         return tmp60;
       }
     }
-    if (gradientOverride.type === tmp6(1231).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+    if (gradientOverride.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
       const obj3 = {};
       const merged3 = Object.assign(merged);
       obj3.gradient = gradientOverride;
@@ -442,13 +444,13 @@ export default function ThemedGradient(overlayOpacity) {
         const items3 = [tmp48, ];
         const obj5 = { style: null };
         const items4 = [tmp2.softenGradient, ];
-        const obj6 = { backgroundColor: tmp6(4409).hexWithOpacity(tmp8, num) };
+        const obj6 = { backgroundColor: ColorUtils.hexWithOpacity(tmp8, num) };
         items4[1] = obj6;
         obj5.style = items4;
         items3[1] = timestampProducer(View, obj5);
         obj4.children = items3;
         tmp49 = React5(View, obj4);
-        const tmp6Result2 = tmp6(4409);
+        const tmp6Result2 = ColorUtils;
       }
       return tmp49;
     }
@@ -465,16 +467,15 @@ export default function ThemedGradient(overlayOpacity) {
       const items5 = [tmp39, ];
       const obj9 = { style: null };
       const items6 = [tmp2.softenGradient, ];
-      const obj10 = { backgroundColor: tmp6(4409).hexWithOpacity(tmp8, num) };
+      const obj10 = { backgroundColor: ColorUtils.hexWithOpacity(tmp8, num) };
       items6[1] = obj10;
       obj9.style = items6;
-      items5[1] = tmp34(View, obj9);
+      items5[1] = timestampProducer(View, obj9);
       obj8.children = items5;
       tmp40 = React5(View, obj8);
-      const tmp6Result3 = tmp6(4409);
+      const tmp6Result3 = ColorUtils;
     }
     let tmp13 = tmp40;
-    tmp34 = timestampProducer;
   } else {
     if (tmp12) {
       if (tmp12) {
@@ -489,16 +490,15 @@ export default function ThemedGradient(overlayOpacity) {
           const items7 = [tmp30, ];
           const obj13 = { style: null };
           const items8 = [tmp2.softenGradient, ];
-          const obj14 = { backgroundColor: tmp6(4409).hexWithOpacity(tmp8, num) };
+          const obj14 = { backgroundColor: ColorUtils.hexWithOpacity(tmp8, num) };
           items8[1] = obj14;
           obj13.style = items8;
-          items7[1] = tmp23(View, obj13);
+          items7[1] = timestampProducer(View, obj13);
           obj12.children = items7;
           tmp31 = React5(View, obj12);
-          const tmp6Result4 = tmp6(4409);
+          const tmp6Result4 = ColorUtils;
         }
         tmp13 = tmp31;
-        tmp23 = timestampProducer;
       }
     }
     tmp13 = null;
@@ -513,16 +513,15 @@ export default function ThemedGradient(overlayOpacity) {
         const items9 = [tmp19, ];
         const obj17 = { style: null };
         const items10 = [tmp2.softenGradient, ];
-        const obj18 = { backgroundColor: tmp6(4409).hexWithOpacity(tmp8, num) };
+        const obj18 = { backgroundColor: ColorUtils.hexWithOpacity(tmp8, num) };
         items10[1] = obj18;
         obj17.style = items10;
-        items9[1] = tmp14(View, obj17);
+        items9[1] = timestampProducer(View, obj17);
         obj16.children = items9;
         tmp20 = React5(View, obj16);
-        const tmp6Result5 = tmp6(4409);
+        const tmp6Result5 = ColorUtils;
       }
       tmp13 = tmp20;
-      tmp14 = timestampProducer;
     }
   }
   return tmp13;
@@ -532,12 +531,12 @@ export const validateColors = function validateColors(arr) {
   return arr.reduce((arr, item) => {
     if (typeof item === "string") {
       if (regex.test(item)) {
-        arr.push(item);
+        arr = arr.push(item);
         return arr;
       }
     }
     try {
-      arr.push(reduced(dependencyMap[14])(item).hex("rgb"));
+      arr = arr.push(reduced(dependencyMap[14])(item).hex("rgb"));
       return arr;
     } catch (err) {
     }

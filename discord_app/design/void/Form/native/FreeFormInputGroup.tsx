@@ -2,7 +2,10 @@
 
 // Module 6605 (FreeFormInputGroup)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import RedesignCompat from "RedesignCompat" /* 5686 */;
+import TextInput from "TextInput" /* 6606 */;
 import FreeFormLabelDefault from "FreeFormLabel" /* 6938 */;
 import FreeFormTextInputDefault from "FreeFormTextInput" /* 6939 */;
 import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6941 */;
@@ -44,8 +47,8 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
   const id = noop.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);
-    obj = { containerStyle: style, value, label, errorMessage: error, description: hint, placeholder, onChange: onChangeText, isClearable: clearButtonVisibility !== tmp8(1178).ClearButtonVisibility.WITH_CONTENT, keyboardType: str, secureTextEntry: isAndroidResult, autoCapitalize: merged.autoCapitalize };
-    return hasOwnProperty(tmp8(6606).TextInput, obj);
+    obj = { containerStyle: style, value, label, errorMessage: error, description: hint, placeholder, onChange: onChangeText, isClearable: clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT, keyboardType: str, secureTextEntry: isAndroidResult, autoCapitalize: merged.autoCapitalize };
+    return hasOwnProperty(TextInput.TextInput, obj);
   } else {
     obj = { style, children: null };
     let tmp14 = null;
@@ -57,12 +60,10 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
     const obj2 = {};
     const merged1 = Object.assign(merged);
     if (accessibilityLabel == null) {
-      if (null == label) {
-        const tmp23 = label;
-      } else {
-        const tmp8Result = tmp8(1115);
+      if (null != label) {
+        PlatformUtils;
       }
-      accessibilityLabel = tmp23;
+      accessibilityLabel = label;
     }
     obj2.accessibilityLabel = accessibilityLabel;
     obj2.accessibilityLabelledBy = id;
@@ -77,13 +78,13 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
     let tmp17Result = null;
     if (null != error) {
       const obj3 = { style: tmp2.error, children: error };
-      tmp17Result = tmp17(FreeFormErrorLabelDefault, obj3);
+      tmp17Result = hasOwnProperty(FreeFormErrorLabelDefault, obj3);
     }
     items[2] = tmp17Result;
     tmp17Result = null;
     if (null != hint) {
       const obj4 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
-      tmp17Result = tmp17(tmp8(4556).Text, obj4);
+      tmp17Result = hasOwnProperty(Text_Text.Text, obj4);
     }
     items[3] = tmp17Result;
     obj.children = items;

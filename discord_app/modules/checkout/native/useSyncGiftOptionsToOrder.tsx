@@ -53,18 +53,18 @@ export default function useSyncGiftOptionsToOrder(arg0, current) {
         ref3.current = 0;
       }
       if (!ref3.current) {
-        if (ref.current !== tmp5) {
+        if (ref.current !== current) {
           if (null != ref8.current) {
             const _clearTimeout = clearTimeout;
-            clearTimeout(tmp15.current);
-            tmp15.current = null;
+            clearTimeout(ref8.current);
+            ref8.current = null;
           }
           tmp11.current = true;
-          tmp9.current = tmp5;
+          ref7.current = current;
           closure_0(current[3]);
           let obj = { orderId: id, giftInfo: null, expectedRevision: null };
           obj = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
-          ({ recipient_id: obj3.recipient_id, gift_style: obj3.gift_style, emoji_id: obj3.emoji_id, emoji_name: obj3.emoji_name, sound_id: obj3.sound_id, reward_sku_ids: obj3.reward_sku_ids, custom_message: obj3.custom_message_contents } = tmp5);
+          ({ recipient_id: obj3.recipient_id, gift_style: obj3.gift_style, emoji_id: obj3.emoji_id, emoji_name: obj3.emoji_name, sound_id: obj3.sound_id, reward_sku_ids: obj3.reward_sku_ids, custom_message: obj3.custom_message_contents } = current);
           obj.giftInfo = obj;
           obj.expectedRevision = ref4.current;
           const updateOrderResult = obj.updateOrder(obj);
@@ -88,9 +88,9 @@ export default function useSyncGiftOptionsToOrder(arg0, current) {
             if (ref.current !== ref2.current) {
               if (0 === ref3.current) {
                 closure_1_11((arg0) => arg0 + 1);
-              } else if (tmp3.current < 3) {
+              } else if (ref3.current < 3) {
                 const _setTimeout = setTimeout;
-                ref8.current = setTimeout(() => closure_1_11((arg0) => arg0 + 1), 500 * 2 ** (tmp3.current - 1));
+                ref8.current = setTimeout(() => closure_1_11((arg0) => arg0 + 1), 500 * 2 ** (ref3.current - 1));
               } else {
                 callback(false);
               }
@@ -113,7 +113,6 @@ export default function useSyncGiftOptionsToOrder(arg0, current) {
           callback(true);
         }
       }
-      tmp9 = ref7;
     } else {
       callback(true);
     }

@@ -2,10 +2,14 @@
 
 // Module 13074 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import XSmallIcon from "XSmallIcon" /* 5680 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7388 */;
 import useUserIsTeen from "useUserIsTeen" /* 8644 */;
 import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13075 */;
@@ -68,31 +72,31 @@ export default function UserProfilePrivacyNotice() {
   if (tmp9 !== dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE) {
     return null;
   } else {
-    if (tmp2(1187).ProfileVisibility.FRIENDS_ONLY === setting1) {
-      let dqQ7AN = tmp2(1114).t["0UBDvq"];
-    } else if (tmp2(1187).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === setting1) {
-      dqQ7AN = tmp2(1114).t["9AvQO/"];
+    if (preloaded_user_settings.ProfileVisibility.FRIENDS_ONLY === setting1) {
+      let dqQ7AN = util.t["0UBDvq"];
+    } else if (preloaded_user_settings.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === setting1) {
+      dqQ7AN = util.t["9AvQO/"];
     } else {
-      const FRIENDS_AND_ALL_GUILDS = tmp2(1187).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
-      dqQ7AN = tmp2(1114).t.dqQ7AN;
+      const FRIENDS_AND_ALL_GUILDS = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
+      dqQ7AN = util.t.dqQ7AN;
     }
     obj = { style: tmp.container, children: null };
-    obj = { style: tmp.icon, children: closure_7(tmp2(4515).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }) };
+    obj = { style: tmp.icon, children: closure_7(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }) };
     const items1 = [closure_7(View, obj), , ];
     obj1 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj2 = { privacySettingsLink: callback };
     obj1.children = intl.format(dqQ7AN, obj2);
-    items1[1] = closure_7(tmp2(4556).Text, obj1);
+    items1[1] = closure_7(Text_Text.Text, obj1);
     const obj3 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    const intl2 = tmp2(1114).intl;
-    obj3.accessibilityLabel = intl2.string(tmp2(1114).t.WAI6xu);
+    const intl2 = util.intl;
+    obj3.accessibilityLabel = intl2.string(util.t.WAI6xu);
     obj3.onPress = function onPress() {
       return require(ContentDismissActionType.USER_DISMISS);
     };
     obj3.style = tmp.closeButton;
-    obj3.children = closure_7(tmp2(5680).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
-    items1[2] = closure_7(tmp2(5123).PressableOpacity, obj3);
+    obj3.children = closure_7(XSmallIcon.XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+    items1[2] = closure_7(Pressables.PressableOpacity, obj3);
     obj.children = items1;
     return closure_8(View, obj);
   }

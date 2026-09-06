@@ -45,7 +45,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
   function submitSelection() {
     return require("ActionSheetActionCreators").hideActionSheet();
   }
-  const intl = tmp4(1114).intl;
+  const intl = util.intl;
   obj.placeholder = intl.string(util.t["ZImm/x"]);
   callback = obj.useCallback((query) => {
     if (0 === query.length) {
@@ -58,7 +58,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
           const obj = { type: closure_1_0(4792).SelectOptionType.GUILD, value: null, label: null, guild: null };
           ({ id: obj.value, name: obj.label } = guild);
           obj.guild = guild;
-          arr.push(obj);
+          arr = arr.push(obj);
         }
         return arr;
       }, array);
@@ -93,18 +93,18 @@ export default function GuildSelectComponentActionSheet(arg0) {
     },
     iconContainerStyle: tmp.iconContainer,
     renderDescription(guild) {
-      const hasAvatarForGuildResult = closure_1_1.hasAvatarForGuild(guild.guild.id);
+      const hasAvatarForGuildResult = user.hasAvatarForGuild(guild.guild.id);
       let obj = NicknameUtilsDefault;
-      let username = obj.getNickname(guild.guild.id, undefined, closure_1_1);
+      let username = obj.getNickname(guild.guild.id, undefined, user);
       obj = { style: guildIdentity.guildIdentity, children: null };
       let tmp8 = hasAvatarForGuildResult;
       if (hasAvatarForGuildResult) {
-        obj = { size: native.AvatarSizes.SIZE_16, style: tmp7.avatar, user: tmp, guildId: guild.guild.id, animate: true };
+        obj = { size: native.AvatarSizes.SIZE_16, style: tmp7.avatar, user, guildId: guild.guild.id, animate: true };
         tmp8 = React6(native.Avatar, obj);
       }
       const items = [tmp8, ];
       if (username == null) {
-        username = tmp.username;
+        username = user.username;
       }
       items[1] = React6(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: username });
       obj.children = items;

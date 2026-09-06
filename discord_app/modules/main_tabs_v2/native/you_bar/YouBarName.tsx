@@ -31,7 +31,7 @@ function Username(userId) {
   let tmp7Result = null;
   if (isYouBarGuildTagEnabled) {
     const obj1 = { userId, disabledTooltip: true, containerStyles: tmp.guildTag };
-    tmp7Result = tmp7(GuildTagDefault, obj1);
+    tmp7Result = closure_1_12(GuildTagDefault, obj1);
   }
   items1[1] = tmp7Result;
   items1[2] = closure_1_12(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs", color: "mobile-text-heading-primary" });
@@ -93,7 +93,7 @@ export default noop.memo(function YouName(username) {
   obj = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     obj1 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = tmp11(require("ActivityStatus"), obj1);
+    let tmp9Result = closure_12(require("ActivityStatus"), obj1);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -102,7 +102,7 @@ export default noop.memo(function YouName(username) {
     let tmp11Result = null;
     if (null != emoji) {
       obj2 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result = tmp11(require("ActivityEmoji"), obj2);
+      tmp11Result = closure_12(require("ActivityEmoji"), obj2);
     }
     const items3 = [tmp11Result, ];
     obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };
@@ -113,9 +113,9 @@ export default noop.memo(function YouName(username) {
     }
     const obj4 = { children: null };
     obj3.children = humanizeStatusResult;
-    items3[1] = tmp11(tmp2(tmp3[26]).Text, obj3);
+    items3[1] = closure_12(tmp2(tmp3[26]).Text, obj3);
     obj4.children = items3;
-    tmp9Result = tmp9(closure_14, obj4);
+    tmp9Result = closure_13(closure_14, obj4);
   }
   obj.children = tmp9Result;
   items2[1] = closure_12(View, obj);

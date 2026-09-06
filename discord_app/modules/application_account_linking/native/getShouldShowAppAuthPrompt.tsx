@@ -42,8 +42,8 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
           response = AuthorizedAppsActionCreatorsDefault.fetch(items);
           let flag2 = false;
         } else {
-          flag2 = !(obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId));
-          const tmp6 = obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId);
+          flag2 = !(AuthorizedAppsStore.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != AuthorizedAppsStore.getNewestTokenForApplication(parentId));
+          const tmp6 = AuthorizedAppsStore.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != AuthorizedAppsStore.getNewestTokenForApplication(parentId);
         }
       } else {
         return false;

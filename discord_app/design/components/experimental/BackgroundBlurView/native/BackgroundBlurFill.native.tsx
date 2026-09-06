@@ -76,7 +76,7 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
   }
   const items1 = [blurTheme];
   if (tintColor == null) {
-    tintColor = obj2.useMemo(() => "light" === blurTheme ? closure_6 : closure_8, items1);
+    tintColor = noop.useMemo(() => "light" === blurTheme ? closure_6 : closure_8, items1);
   }
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(nativeDefault.colors.BACKGROUND_SCRIM, blurTheme);
@@ -85,15 +85,13 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
   const items2 = [StyleSheet.absoluteFill, style];
   obj.style = items2;
   let tmp6 = null != animatedProps;
-  obj2 = noop;
-  const tmp4 = jsx;
   tmpResult = blurTheme(4262);
   if (tmp6) {
     obj = { animatedProps };
     tmp6 = obj;
   }
   const merged = Object.assign(tmp6);
-  return tmp4(VisualEffectViewAnimatedDefault, obj);
+  return jsx(VisualEffectViewAnimatedDefault, { blurTheme, blurStyle, blurAmount, tintColor, android_fallbackColor, android_blurTargetViewNativeId, style: null });
 };
 export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(style) {
   ({ blurTheme, pressed } = style);

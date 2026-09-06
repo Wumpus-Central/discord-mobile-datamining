@@ -43,7 +43,7 @@ function getIndexKey(type) {
     return "application" === type ? type.applicationId : undefined;
   }
 }
-function updateIndex(target, arg1, flag) {
+function updateIndex(target, arg1) {
   if (flag === undefined) {
     flag = false;
   }
@@ -73,11 +73,11 @@ function updateIndex(target, arg1, flag) {
     tmp3 = obj;
   }
   if (undefined !== tmp3) {
-    tmp.indices[applicationId] = tmp3;
+    applicationCommandIndexStore.indices[applicationId] = tmp3;
     if ("application" === target.type) {
-      const applicationIndices = tmp.applicationIndices;
+      const applicationIndices = applicationCommandIndexStore.applicationIndices;
       const result = applicationIndices.set(applicationId, tmp3);
-      tmp.applicationIndicesVersion = tmp.applicationIndicesVersion + 1;
+      applicationCommandIndexStore.applicationIndicesVersion = applicationCommandIndexStore.applicationIndicesVersion + 1;
     }
   }
   return applicationCommandIndexStore.indices[applicationId];
@@ -93,7 +93,7 @@ function handleReset() {
   }
   applicationCommandIndexStore.indices = {};
 }
-let closure_32 = async function _getOrFetchApplicationCommandIndexForTarget(arg0, value) {
+let closure_32 = async function _getOrFetchApplicationCommandIndexForTarget(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -130,7 +130,7 @@ let closure_32 = async function _getOrFetchApplicationCommandIndexForTarget(arg0
           if (shouldFetch(closure_1)) {
             c6 = 1;
             c7 = 1;
-            const obj1 = { value: updateIndexAndFetchApplicationCommandIndex(tmp31), done: false };
+            const obj1 = { value: updateIndexAndFetchApplicationCommandIndex(closure_0), done: false };
             return obj1;
           } else if (tmp23.fetchState.fetching) {
             c6 = 2;
@@ -142,7 +142,6 @@ let closure_32 = async function _getOrFetchApplicationCommandIndexForTarget(arg0
             const obj3 = { value: tmp23, done: true };
             return obj3;
           }
-          tmp31 = closure_0;
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -193,7 +192,7 @@ function updateIndexAndFetchApplicationCommandIndex() {
   }
   return applyArgumentsResult;
 }
-let closure_34 = async function _updateIndexAndFetchApplicationCommandIndex(arg0, value) {
+let closure_34 = async function _updateIndexAndFetchApplicationCommandIndex(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -249,7 +248,7 @@ let closure_34 = async function _updateIndexAndFetchApplicationCommandIndex(arg0
     }
   }
 };
-function handleFetchSuccess(arg0, flag) {
+function handleFetchSuccess(arg0) {
   if (flag === undefined) {
     flag = false;
   }
@@ -307,7 +306,7 @@ function handleFetchSuccess(arg0, flag) {
     }
     if (tmp32) {
       const items = [];
-      HermesBuiltin.arraySpread(set, 0);
+      HermesBuiltin.arraySpread(tmp64, 0);
       const membersById = GuildActionCreatorsDefault.requestMembersById(target.guildId, items);
     }
     const application_commands = index.application_commands;
@@ -370,6 +369,9 @@ function handleFetchSuccess(arg0, flag) {
     obj2.result = obj3;
     obj2.fetchState = { fetching: false };
     updateIndex(target, obj2, flag);
+    const obj6 = id(7521);
+    tmp32 = "guild" === target.type && set.size > 0;
+    tmp64 = set;
   }
 }
 function updateGuildBotMembers(guildId, members) {
@@ -489,14 +491,14 @@ function useQueryState(type, commandTypes, allowFetch) {
             }
             let fetching2 = !tmp33;
             if (version !== stateFromStoresObject.serverVersion) {
-              fetching2 = tmp27.fetchState.fetching;
+              fetching2 = stateFromStoresObject.fetchState.fetching;
             }
             let tmp34 = !fetching2;
             if (!fetching2) {
-              let tmp35 = null == tmp27.fetchState.retryAfter;
+              let tmp35 = null == stateFromStoresObject.fetchState.retryAfter;
               if (!tmp35) {
                 const _Date2 = Date;
-                tmp35 = Date.now() >= tmp27.fetchState.retryAfter;
+                tmp35 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
               }
               tmp34 = tmp35;
             }
@@ -523,14 +525,14 @@ function useQueryState(type, commandTypes, allowFetch) {
           }
           let fetching = !tmp4;
           if (version1 !== stateFromStoresObject.serverVersion) {
-            fetching = tmp.fetchState.fetching;
+            fetching = stateFromStoresObject.fetchState.fetching;
           }
           let tmp5 = !fetching;
           if (!fetching) {
-            let tmp6 = null == tmp.fetchState.retryAfter;
+            let tmp6 = null == stateFromStoresObject.fetchState.retryAfter;
             if (!tmp6) {
               const _Date = Date;
-              tmp6 = Date.now() >= tmp.fetchState.retryAfter;
+              tmp6 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
             }
             tmp5 = tmp6;
           }
@@ -566,14 +568,14 @@ function useQueryState(type, commandTypes, allowFetch) {
         }
         let fetching = !tmp5;
         if (version !== allowApplicationCommands.serverVersion) {
-          fetching = tmp2.fetchState.fetching;
+          fetching = allowApplicationCommands.fetchState.fetching;
         }
         let tmp6 = !fetching;
         if (!fetching) {
-          let tmp7 = null == tmp2.fetchState.retryAfter;
+          let tmp7 = null == allowApplicationCommands.fetchState.retryAfter;
           if (!tmp7) {
             const _Date = Date;
-            tmp7 = Date.now() >= tmp2.fetchState.retryAfter;
+            tmp7 = Date.now() >= allowApplicationCommands.fetchState.retryAfter;
           }
           tmp6 = tmp7;
         }
@@ -617,14 +619,14 @@ function useQueryState(type, commandTypes, allowFetch) {
         }
         let fetching = !tmp5;
         if (version !== allowApplicationCommands.serverVersion) {
-          fetching = tmp2.fetchState.fetching;
+          fetching = allowApplicationCommands.fetchState.fetching;
         }
         let tmp6 = !fetching;
         if (!fetching) {
-          let tmp7 = null == tmp2.fetchState.retryAfter;
+          let tmp7 = null == allowApplicationCommands.fetchState.retryAfter;
           if (!tmp7) {
             const _Date = Date;
-            tmp7 = Date.now() >= tmp2.fetchState.retryAfter;
+            tmp7 = Date.now() >= allowApplicationCommands.fetchState.retryAfter;
           }
           tmp6 = tmp7;
         }
@@ -892,7 +894,7 @@ function queryIndex(allowApplicationCommands) {
     }
     const guild = GuildStore.getGuild(guild_id);
     if (tmp96) {
-      const FrecencyUserSettingsActionCreators2 = tmp89(1940).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators2 = NONE(1940).FrecencyUserSettingsActionCreators;
       const ifNecessary1 = FrecencyUserSettingsActionCreators2.loadIfNecessary();
     }
     let tmp98;
@@ -1029,7 +1031,7 @@ function queryIndexSection(descriptor, builtInCommands, isGuildInstalled, arg3, 
                   hasItem = toLocaleLowerCaseResult1.includes(query);
                 }
                 if (!hasItem) {
-                  if (require("fuzzysearch")(query, toLocaleLowerCaseResult)) {
+                  if (fuzzysearchDefault(query, toLocaleLowerCaseResult)) {
                     SECTION_DESCRIPTION_CONTAINS = constants.SECTION_NAME_FUZZY_MATCHES;
                   }
                 }
@@ -1053,7 +1055,7 @@ function queryIndexSection(descriptor, builtInCommands, isGuildInstalled, arg3, 
     }
     obj = { section: descriptor, data: arr2 };
     let tmp36 = obj;
-    tmp39 = scoreMethod !== ApplicationCommandQueryTypes.ScoreMethod.NONE && scoreMethod !== tmp27(9298).ScoreMethod.APPLICATION_ONLY;
+    tmp39 = scoreMethod !== ApplicationCommandQueryTypes.ScoreMethod.NONE && scoreMethod !== ApplicationCommandQueryTypes.ScoreMethod.APPLICATION_ONLY;
   } else {
     tmp36 = null;
   }
@@ -1253,7 +1255,6 @@ function scoreCommand(untranslatedName, arg1, arg2, arg3) {
             const untranslatedDescription = untranslatedName.untranslatedDescription;
             const toLocaleLowerCaseResult = untranslatedDescription.toLocaleLowerCase();
             const displayDescription = untranslatedName.displayDescription;
-            const toLocaleLowerCaseResult1 = displayDescription.toLocaleLowerCase();
             if (!toLocaleLowerCaseResult.includes(arg1)) {
               if (!toLocaleLowerCaseResult1.includes(arg1)) {
                 if (!fuzzysearchDefault(arg1, str)) {
@@ -1264,8 +1265,6 @@ function scoreCommand(untranslatedName, arg1, arg2, arg3) {
                     }
                     for (const item10132 of options1) {
                       ({ serverLocalizedName: serverLocalizedName2, name: name2 } = item10132);
-                      if (!fuzzysearchDefault(arg1, name2)) {
-                      }
                       obj12.return();
                       return constants4.OPTION_NAME_FUZZY_MATCHES;
                     }
@@ -1327,8 +1326,8 @@ prototype["initialize"] = function initialize() {
       handleReset();
       const _Intl = Intl;
       const collator = new Intl.Collator(locale, { sensitivity: "accent", numeric: true });
-      tmp.collator = collator;
-      tmp.oldLocale = locale;
+      oldLocale.collator = collator;
+      oldLocale.oldLocale = locale;
     }
   });
 };
@@ -1518,7 +1517,7 @@ prototype["query"] = function query(withAffinitySuggestions, commandTypes, appli
           tmp36 = tmp37;
         }
         if (tmp36) {
-          let tmp8Result = tmp8(9294);
+          let tmp8Result = ApplicationCommandIndexActionCreators;
           const applicationCommandIndex = tmp8Result.requestApplicationCommandIndex({ type: "user" });
           flag5 = true;
         }
@@ -1544,7 +1543,7 @@ prototype["query"] = function query(withAffinitySuggestions, commandTypes, appli
           tmp42 = null != applicationId.applicationId;
         }
         if (tmp42) {
-          tmp8Result = tmp8(9294);
+          tmp8Result = ApplicationCommandIndexActionCreators;
           obj = { type: "application", applicationId: applicationId.applicationId };
           const applicationCommandIndex1 = tmp8Result.requestApplicationCommandIndex(obj);
           flag5 = true;
@@ -1581,17 +1580,17 @@ prototype["query"] = function query(withAffinitySuggestions, commandTypes, appli
         if (tmp29) {
           if (null == guild_id.guild_id) {
             obj1 = { type: "channel", channelId: guild_id.id };
-            const applicationCommandIndex2 = tmp8(9294).requestApplicationCommandIndex(obj1);
+            const applicationCommandIndex2 = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj1);
             flag6 = true;
-            const tmp8Result1 = tmp8(9294);
+            const tmp8Result1 = ApplicationCommandIndexActionCreators;
           }
         }
         obj2 = { type: "guild", guildId: null };
         guild_id = guild_id.guild_id;
         obj2.guildId = guild_id;
-        const applicationCommandIndex3 = tmp8(9294).requestApplicationCommandIndex(obj2);
+        const applicationCommandIndex3 = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj2);
         flag6 = true;
-        const tmp8Result2 = tmp8(9294);
+        const tmp8Result2 = ApplicationCommandIndexActionCreators;
       }
     }
     const obj3 = { permissionContext, text: commandTypes.text, allowApplicationCommands: false !== commandTypes.applicationCommands, builtIns: commandTypes.builtIns, scoreMethod: null, allowEmptySections: null, contextState: null, userState: null, applicationStates: null, sortOptions: null, singleApplicationId: null, installOnDemand: null };
@@ -1782,8 +1781,7 @@ obj = {
           continue;
         } else {
           obj = { type: "channel", channelId: dMFromUserId };
-          obj = { serverVersion: null };
-          obj.serverVersion = SymbolResult;
+          obj = { serverVersion: SymbolResult };
           let tmp7 = updateIndex(obj, obj);
           continue;
         }
@@ -1881,14 +1879,14 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
             }
             let fetching2 = !tmp33;
             if (version !== stateFromStoresObject.serverVersion) {
-              fetching2 = tmp27.fetchState.fetching;
+              fetching2 = stateFromStoresObject.fetchState.fetching;
             }
             let tmp34 = !fetching2;
             if (!fetching2) {
-              let tmp35 = null == tmp27.fetchState.retryAfter;
+              let tmp35 = null == stateFromStoresObject.fetchState.retryAfter;
               if (!tmp35) {
                 const _Date2 = Date;
-                tmp35 = Date.now() >= tmp27.fetchState.retryAfter;
+                tmp35 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
               }
               tmp34 = tmp35;
             }
@@ -1915,14 +1913,14 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
           }
           let fetching = !tmp4;
           if (version1 !== stateFromStoresObject.serverVersion) {
-            fetching = tmp.fetchState.fetching;
+            fetching = stateFromStoresObject.fetchState.fetching;
           }
           let tmp5 = !fetching;
           if (!fetching) {
-            let tmp6 = null == tmp.fetchState.retryAfter;
+            let tmp6 = null == stateFromStoresObject.fetchState.retryAfter;
             if (!tmp6) {
               const _Date = Date;
-              tmp6 = Date.now() >= tmp.fetchState.retryAfter;
+              tmp6 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
             }
             tmp5 = tmp6;
           }
@@ -1970,14 +1968,14 @@ export const useGuildIndexState = function useGuildIndexState(guildId, arg1) {
         }
         let fetching = !tmp14;
         if (version !== stateFromStoresObject.serverVersion) {
-          fetching = tmp8.fetchState.fetching;
+          fetching = stateFromStoresObject.fetchState.fetching;
         }
         let tmp15 = !fetching;
         if (!fetching) {
-          let tmp16 = null == tmp8.fetchState.retryAfter;
+          let tmp16 = null == stateFromStoresObject.fetchState.retryAfter;
           if (!tmp16) {
             const _Date = Date;
-            tmp16 = Date.now() >= tmp8.fetchState.retryAfter;
+            tmp16 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
           }
           tmp15 = tmp16;
         }
@@ -2011,14 +2009,14 @@ export const useUserIndexState = function useUserIndexState(arg0, arg1) {
         }
         let fetching = !tmp5;
         if (version !== allowApplicationCommands.serverVersion) {
-          fetching = tmp2.fetchState.fetching;
+          fetching = allowApplicationCommands.fetchState.fetching;
         }
         let tmp6 = !fetching;
         if (!fetching) {
-          let tmp7 = null == tmp2.fetchState.retryAfter;
+          let tmp7 = null == allowApplicationCommands.fetchState.retryAfter;
           if (!tmp7) {
             const _Date = Date;
-            tmp7 = Date.now() >= tmp2.fetchState.retryAfter;
+            tmp7 = Date.now() >= allowApplicationCommands.fetchState.retryAfter;
           }
           tmp6 = tmp7;
         }
@@ -2063,13 +2061,13 @@ export const useDiscoveryState = function useDiscoveryState(type, guild, command
         });
         const spliceResult = sorted.splice(0, value2);
         if (0 === spliceResult.length) {
-          let obj = { descriptors, commands: tmp5, sectionedCommands, loading };
+          let obj = { descriptors, commands, sectionedCommands, loading };
         } else {
           obj = { descriptors: null, commands: null, sectionedCommands: null, loading: null };
           const items = [ApplicationCommandBuiltIns.BUILT_IN_SECTIONS[constants.FRECENCY]];
           HermesBuiltin.arraySpread(descriptors, 1);
           obj.descriptors = items;
-          obj.commands = spliceResult.concat(tmp5);
+          obj.commands = spliceResult.concat(commands);
           obj = { section: ApplicationCommandBuiltIns.BUILT_IN_SECTIONS[constants.FRECENCY], data: spliceResult };
           const items1 = [obj];
           HermesBuiltin.arraySpread(sectionedCommands, 1);

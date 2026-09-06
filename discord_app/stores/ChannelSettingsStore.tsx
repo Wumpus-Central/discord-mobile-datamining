@@ -115,10 +115,9 @@ function _syncChannelUpdate(id) {
         flag = false;
         if (null != channel) {
           closure_5 = channel;
-          let channel2 = obj2.getChannel(channel.parent_id);
+          let channel2 = ChannelStore.getChannel(channel.parent_id);
           flag = true;
         }
-        obj2 = ChannelStore;
       } else {
         const channel1 = ChannelStore.getChannel(id);
         flag = false;
@@ -128,11 +127,10 @@ function _syncChannelUpdate(id) {
           if (null != channel) {
             const result = channel.set("permissionOverwrites", closure_5.permissionOverwrites);
             channel = result.set("availableTags", closure_5.availableTags);
-            channel2 = obj3.getChannel(channel.parent_id);
+            channel2 = ChannelStore.getChannel(channel.parent_id);
             flag = true;
           }
         }
-        obj3 = ChannelStore;
       }
     }
   }
@@ -260,11 +258,11 @@ invites = {
       channel2 = obj.getChannel(channel.parent_id);
       overwriteId = channel.getGuildId();
       if (channel.isModeratorReportChannel()) {
-        OVERVIEW = tmp10.PERMISSIONS;
-        let tmp11 = tmp10;
+        OVERVIEW = constants.PERMISSIONS;
+        let tmp11 = constants;
       } else {
-        OVERVIEW = tmp10.OVERVIEW;
-        tmp11 = tmp10;
+        OVERVIEW = constants.OVERVIEW;
+        tmp11 = constants;
       }
       closure_19 = {};
       let tmp12 = OVERVIEW;

@@ -6,8 +6,8 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 
-export const generateBoxShadowStyle = (arg0) => {
-  ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = arg0);
+export const generateBoxShadowStyle = (EIGHT_DP_ELEVATION_SHADOW_PARAMS) => {
+  ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = EIGHT_DP_ELEVATION_SHADOW_PARAMS);
   let obj = PlatformUtils;
   if (obj.isAndroid()) {
     obj = { elevation, shadowColor: shadowColorAndroid };

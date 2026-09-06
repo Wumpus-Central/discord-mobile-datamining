@@ -1,6 +1,7 @@
 // === Module 14593: ProfilePendingImageUtils ===
 
 // Module 14593 (ProfilePendingImageUtils)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6989 */;
 import size from "module_2" /* 2 */;
 
@@ -15,13 +16,14 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
   if (ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET === NEW_ASSET) {
     let obj = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset: "Array", originalMd5 };
     return obj;
-  } else if (tmp3(6989).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (ProfilePendingImageTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
     obj = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset, originalMd5 };
     return obj;
-  } else if (tmp3(6989).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
     const obj1 = { assetOrigin: NEW_ASSET, imageUri, description: "Array", originalAsset };
     return obj1;
   } else {
-    tmp3(1369).assertNever(NEW_ASSET);
+    GlobalUtils.assertNever(NEW_ASSET);
+    const tmp3Result = GlobalUtils;
   }
 };

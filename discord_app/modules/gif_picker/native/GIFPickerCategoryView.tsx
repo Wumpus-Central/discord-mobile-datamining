@@ -6,6 +6,8 @@ import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import useAccessibilityPressDefault from "useAccessibilityPress" /* 9759 */;
+import StarIcon from "StarIcon" /* 10235 */;
+import AnalyticsIcon from "AnalyticsIcon" /* 10384 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,13 +57,13 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   const items1 = [React5(FastImageDefault, obj), React5(React4, { style: tmp.gifOverlay }), ];
   const obj2 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
-    const obj3 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
-    let tmp10Result = tmp10(tmp3(10384).AnalyticsIcon, obj3);
+    const obj3 = { size: "sm", style: tmp.categoryNameIcon, color: nativeDefault.colors.WHITE };
+    let tmp10Result = React5(AnalyticsIcon.AnalyticsIcon, obj3);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
-      const obj4 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
-      tmp10Result = tmp10(tmp3(10235).StarIcon, obj4);
+      const obj4 = { size: "sm", style: tmp.categoryNameIcon, color: nativeDefault.colors.WHITE };
+      tmp10Result = React5(StarIcon.StarIcon, obj4);
     }
   }
   const items2 = [tmp10Result, React5(Text_Text.Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];

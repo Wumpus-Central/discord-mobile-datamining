@@ -14,12 +14,11 @@ export default function useGetThreadDraftSettings(arg0) {
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      let threadSettings = DraftStore.getThreadSettings(tmp);
+      let threadSettings = DraftStore.getThreadSettings(closure_0);
       if (threadSettings == null) {
-        threadSettings = obj.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(tmp));
+        threadSettings = DraftStore.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(closure_0));
       }
       tmp2 = threadSettings;
-      obj = DraftStore;
     }
     return tmp2;
   });
@@ -30,12 +29,11 @@ export const useHasThreadDraft = function useHasThreadDraft(arg0) {
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let threadSettings = DraftStore.getThreadSettings(tmp);
+      let threadSettings = DraftStore.getThreadSettings(closure_0);
       if (threadSettings == null) {
-        threadSettings = obj.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(tmp));
+        threadSettings = DraftStore.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(closure_0));
       }
       tmp2 = null != threadSettings;
-      obj = DraftStore;
     }
     return tmp2;
   });

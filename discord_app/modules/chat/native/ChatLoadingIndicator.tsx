@@ -97,7 +97,7 @@ let closure_18 = noop.memo(() => {
     obj = { variant: "text-md/normal", color: "text-muted", children: null };
     const items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
     obj.children = items2;
-    tmp4Result = tmp4(tmp(4556).Text, obj);
+    tmp4Result = closure_1_14(Text_Text.Text, obj);
   }
   items1[4] = tmp4Result;
   const items3 = [closure_1_14(__initData, { children: items1 }), "\n", , , , , ];
@@ -118,7 +118,7 @@ let closure_18 = noop.memo(() => {
     const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj2.children = items5;
-    tmp4Result = tmp4(tmp(4556).Text, obj2);
+    tmp4Result = closure_1_14(Text_Text.Text, obj2);
   }
   items4[4] = tmp4Result;
   items3[2] = closure_1_14(__initData, { children: items4 });
@@ -140,7 +140,7 @@ let closure_18 = noop.memo(() => {
     const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj4.children = items7;
-    tmp4Result1 = tmp4(tmp(4556).Text, obj4);
+    tmp4Result1 = closure_1_14(Text_Text.Text, obj4);
   }
   items6[4] = tmp4Result1;
   items3[4] = closure_1_14(__initData, { children: items6 });

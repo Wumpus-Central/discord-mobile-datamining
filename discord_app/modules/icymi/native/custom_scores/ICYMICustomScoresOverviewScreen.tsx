@@ -54,14 +54,14 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
       obj.label = guild.name;
       let tmpResult;
       if (null != closure_3[guild.id]) {
-        const tmp2Result = tmp2(tmp3[13]);
-        if (numberToCustomScoreResult === tmp2(tmp3[13]).ICYMICustomScore.MUTED) {
+        const tmp2Result = navigation(stateFromStores1[13]);
+        if (numberToCustomScoreResult === navigation(stateFromStores1[13]).ICYMICustomScore.MUTED) {
           obj = { text: null };
-          const intl = tmp2(tmp3[14]).intl;
-          obj.text = intl.string(tmp2(tmp3[14]).t.lhPHmz);
-          tmpResult = tmp(tmp2(tmp3[11]).TableRow.TrailingText, obj);
+          const intl = navigation(stateFromStores1[14]).intl;
+          obj.text = intl.string(navigation(stateFromStores1[14]).t.lhPHmz);
+          tmpResult = jsx(navigation(stateFromStores1[11]).TableRow.TrailingText, { text: null });
         }
-        numberToCustomScoreResult = tmp2(tmp3[13]).numberToCustomScore(tmp4[guild.id]);
+        numberToCustomScoreResult = navigation(stateFromStores1[13]).numberToCustomScore(tmp4[guild.id]);
       }
       obj.trailing = tmpResult;
       return jsx(navigation(stateFromStores1[11]).TableRow, { guild }, guild.id);
@@ -84,14 +84,14 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
       obj.label = guild.name;
       let tmpResult;
       if (null != closure_3[guild.id]) {
-        const tmp2Result = tmp2(tmp3[13]);
-        if (numberToCustomScoreResult === tmp2(tmp3[13]).ICYMICustomScore.MUTED) {
+        const tmp2Result = navigation(stateFromStores1[13]);
+        if (numberToCustomScoreResult === navigation(stateFromStores1[13]).ICYMICustomScore.MUTED) {
           obj = { text: null };
-          const intl = tmp2(tmp3[14]).intl;
-          obj.text = intl.string(tmp2(tmp3[14]).t.lhPHmz);
-          tmpResult = tmp(tmp2(tmp3[11]).TableRow.TrailingText, obj);
+          const intl = navigation(stateFromStores1[14]).intl;
+          obj.text = intl.string(navigation(stateFromStores1[14]).t.lhPHmz);
+          tmpResult = jsx(navigation(stateFromStores1[11]).TableRow.TrailingText, { text: null });
         }
-        numberToCustomScoreResult = tmp2(tmp3[13]).numberToCustomScore(tmp4[guild.id]);
+        numberToCustomScoreResult = navigation(stateFromStores1[13]).numberToCustomScore(tmp4[guild.id]);
       }
       obj.trailing = tmpResult;
       return jsx(navigation(stateFromStores1[11]).TableRow, { guild }, guild.id);
@@ -112,14 +112,14 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
     obj.label = guild.name;
     let tmpResult;
     if (null != closure_3[guild.id]) {
-      const tmp2Result = tmp2(tmp3[13]);
-      if (numberToCustomScoreResult === tmp2(tmp3[13]).ICYMICustomScore.MUTED) {
+      const tmp2Result = navigation(stateFromStores1[13]);
+      if (numberToCustomScoreResult === navigation(stateFromStores1[13]).ICYMICustomScore.MUTED) {
         obj = { text: null };
-        const intl = tmp2(tmp3[14]).intl;
-        obj.text = intl.string(tmp2(tmp3[14]).t.lhPHmz);
-        tmpResult = tmp(tmp2(tmp3[11]).TableRow.TrailingText, obj);
+        const intl = navigation(stateFromStores1[14]).intl;
+        obj.text = intl.string(navigation(stateFromStores1[14]).t.lhPHmz);
+        tmpResult = jsx(navigation(stateFromStores1[11]).TableRow.TrailingText, { text: null });
       }
-      numberToCustomScoreResult = tmp2(tmp3[13]).numberToCustomScore(tmp4[guild.id]);
+      numberToCustomScoreResult = navigation(stateFromStores1[13]).numberToCustomScore(tmp4[guild.id]);
     }
     obj.trailing = tmpResult;
     return jsx(navigation(stateFromStores1[11]).TableRow, { guild }, guild.id);

@@ -44,8 +44,8 @@ export default function BoostingCountDownPill(style) {
   if (!isInReverseTrial) {
     obj = { style: tmp.fpDurationPill, children: null };
     const obj1 = { variant: "text-sm/bold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
-    obj.children = tmp2(Text_Text.Text, obj1);
-    tmp2Result = tmp2(tmp6, obj);
+    obj.children = hasOwnProperty(Text_Text.Text, obj1);
+    tmp2Result = hasOwnProperty(React4, obj);
   }
   const items1 = [tmp2Result, ];
   const obj2 = { style: tmp.fpUnavailable, children: null };
@@ -54,7 +54,7 @@ export default function BoostingCountDownPill(style) {
     prop = tmp.fpUnavailableTextNoCountdown;
   }
   const obj3 = { variant: "text-md/normal", color: "interactive-text-active", style: prop, children: null };
-  const intl = tmp10(1114).intl;
+  const intl = util.intl;
   obj3.children = intl.string(util.t["5nrJDO"]);
   obj2.children = hasOwnProperty(Text_Text.Text, obj3);
   items1[1] = hasOwnProperty(React4, obj2);

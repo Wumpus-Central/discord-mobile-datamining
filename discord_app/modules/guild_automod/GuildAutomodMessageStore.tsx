@@ -43,6 +43,8 @@ function handleLoadMessages(messages) {
         if (someResult) {
           if (null == acc) {
             const id = type.id;
+          } else {
+            SnowflakeUtilsDefault;
           }
           tmp3 = id;
         }
@@ -51,9 +53,9 @@ function handleLoadMessages(messages) {
         return acc;
       }
     }, lastIncidentAlertMessage[guildId]);
-    let flag = null != reduced && tmp2[guildId] !== reduced;
+    let flag = null != reduced && lastIncidentAlertMessage[guildId] !== reduced;
     if (flag) {
-      tmp2[guildId] = reduced;
+      lastIncidentAlertMessage[guildId] = reduced;
       flag = true;
     }
     return flag;
@@ -128,16 +130,15 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(DispatcherDefault,
       return false;
     } else {
       const messageRecord = MessageRecordUtils.createMessageRecord(message);
-      const tmp = require;
       let result = AutomodMessageUtils.isAutomodMessageRecord(messageRecord);
       if (result) {
-        let flag = tmp(7508).isAutomodNotification(messageRecord);
+        let flag = AutomodMessageUtils.isAutomodNotification(messageRecord);
         if (flag) {
           closure_11[guildId] = messageRecord.id;
           flag = true;
         }
         result = flag;
-        const tmpResult = tmp(7508);
+        const tmpResult = AutomodMessageUtils;
       }
       return result;
     }

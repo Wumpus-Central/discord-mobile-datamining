@@ -31,29 +31,29 @@ function WordTopic(categoryid) {
   ({ selected, handlePress: importDefault } = categoryid);
   if (GuildPrimaryCategory.GAMING === categoryid) {
     let tmp2 = closure_1_10(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.ENTERTAINMENT === categoryid) {
+  } else if (GuildPrimaryCategory.ENTERTAINMENT === categoryid) {
     tmp2 = closure_1_10(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.GENERAL_CHATTING === categoryid) {
+  } else if (GuildPrimaryCategory.GENERAL_CHATTING === categoryid) {
     tmp2 = closure_1_10(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.SCIENCE_AND_TECH === categoryid) {
+  } else if (GuildPrimaryCategory.SCIENCE_AND_TECH === categoryid) {
     tmp2 = closure_1_10(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.MUSIC === categoryid) {
+  } else if (GuildPrimaryCategory.MUSIC === categoryid) {
     tmp2 = closure_1_10(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.EDUCATION === categoryid) {
+  } else if (GuildPrimaryCategory.EDUCATION === categoryid) {
     tmp2 = closure_1_10(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.CREATIVE_ARTS === categoryid) {
+  } else if (GuildPrimaryCategory.CREATIVE_ARTS === categoryid) {
     tmp2 = closure_1_10(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.FINANCE === categoryid) {
+  } else if (GuildPrimaryCategory.FINANCE === categoryid) {
     tmp2 = closure_1_10(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.BOTS === categoryid) {
+  } else if (GuildPrimaryCategory.BOTS === categoryid) {
     tmp2 = closure_1_10(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.SPORTS === categoryid) {
+  } else if (GuildPrimaryCategory.SPORTS === categoryid) {
     tmp2 = closure_1_10(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.TRAVEL_AND_FOOD === categoryid) {
+  } else if (GuildPrimaryCategory.TRAVEL_AND_FOOD === categoryid) {
     tmp2 = closure_1_10(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.FASHION_AND_BEAUTY === categoryid) {
+  } else if (GuildPrimaryCategory.FASHION_AND_BEAUTY === categoryid) {
     tmp2 = closure_1_10(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.FITNESS_AND_HEALTH === categoryid) {
+  } else if (GuildPrimaryCategory.FITNESS_AND_HEALTH === categoryid) {
     tmp2 = closure_1_10(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
     tmp2 = closure_1_10(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
@@ -112,7 +112,7 @@ export default function ICYMITopicsScreen() {
   let obj = first(1483);
   const navigation = obj.useNavigation();
   const items = [navigation, first];
-  const callback = noop.useCallback(navigation(function*(arg0, value) {
+  const callback = noop.useCallback(navigation(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -198,16 +198,17 @@ export default function ICYMITopicsScreen() {
     const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
     const result = ICYMIAnalytics.trackFeedOnboardingCategoryToggled({ categoryId, toggled: !first.has(categoryId) });
     if (first.has(categoryId)) {
-      tmp2((items) => {
+      closure_1((items) => {
         items.delete(closure_0);
         return new Set(items);
       });
     } else {
-      tmp2((add) => {
+      closure_1((add) => {
         add.add(closure_0);
         return new Set(add);
       });
     }
+    const obj = { categoryId, toggled: !first.has(categoryId) };
   }, items2);
   obj = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1114).intl;
@@ -222,9 +223,6 @@ export default function ICYMITopicsScreen() {
   let obj2 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: { bottom: 72 + bottom }, children: null };
   let obj3 = { bottom: 72 + bottom };
   const set = new Set();
-  const tmp10 = closure_12;
-  const tmp11 = closure_11;
-  const tmp13 = closure_6;
   obj2.children = closure_10(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => closure_2_10(WordTopic, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress }, categoryId.categoryId)) });
   children[3] = closure_10(closure_7, obj2);
   let tmp12Result = first.size > 0;
@@ -237,9 +235,9 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1114).intl;
     obj7.text = intl3.string(tmp7(1114).t.PDTjLN);
     obj7.onPress = callback;
-    obj5.children = tmp12(tmp7(4975).Button, obj7);
-    tmp12Result = tmp12(tmp13, obj5);
+    obj5.children = closure_10(tmp7(4975).Button, obj7);
+    tmp12Result = closure_10(closure_6, obj5);
   }
   children[4] = tmp12Result;
-  return tmp10(tmp11, { children });
+  return closure_12(closure_11, { children });
 };

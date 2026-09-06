@@ -47,10 +47,10 @@ function BountiesCtaDescription(arg0) {
   const t = util.t;
   if (isEmptyOrCompleted) {
     let AZGGo1 = t.q4wlOE;
-    let tmp5 = tmp2;
+    let tmp5 = require;
   } else {
     AZGGo1 = t.AZGGo1;
-    tmp5 = tmp2;
+    tmp5 = require;
   }
   let str = "text-subtle";
   if (inlineLearnMore) {
@@ -78,6 +78,7 @@ function BountiesCtaDescription(arg0) {
   const items1 = [tmp7, " ", formatResult];
   obj2.children = items1;
   tmp11 = closure_1_12(tmp5(4556).Text, obj2);
+  tmp = closure_17();
 }
 function BountiesCtaHeaderInner(bounties) {
   bounties = bounties.bounties;
@@ -126,13 +127,13 @@ function BountiesCtaHeaderInner(bounties) {
     obj1 = { style: null, children: null };
     items4[1] = headerRoundedBottom3;
     obj1.style = items4;
-    const items5 = [tmp12(StarfieldBackground, {}), , , ];
+    const items5 = [closure_11(StarfieldBackground, {}), , , ];
     obj2 = { style: tmp.headerTitleSection, children: null };
     const obj3 = { style: tmp.headerHeadingGroup, children: null };
     let tmp12Result = stateFromStores;
     if (stateFromStores) {
       ({ newPillInline: obj14.containerStyle, newPillText: obj14.textStyle } = tmp);
-      tmp12Result = tmp12(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
+      tmp12Result = closure_11(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj4 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
     const items6 = [tmp12Result, ];
@@ -140,14 +141,14 @@ function BountiesCtaHeaderInner(bounties) {
     const obj6 = { variant: "text-lg/semibold", color: "text-strong", children: null };
     const intl2 = tmp4(1114).intl;
     obj6.children = intl2.string(tmp4(1114).t.qetVDw);
-    const items7 = [tmp12(tmp4(4556).Text, obj6), ];
+    const items7 = [closure_11(tmp4(4556).Text, obj6), ];
     const obj7 = { isEmptyOrCompleted: flag, inlineLearnMore: true };
-    items7[1] = tmp12(BountiesCtaDescription, obj7);
+    items7[1] = closure_11(BountiesCtaDescription, obj7);
     obj5.children = items7;
-    items6[1] = tmp10(tmp11, obj5);
+    items6[1] = closure_12(closure_5, obj5);
     obj3.children = items6;
-    obj2.children = tmp10(tmp11, obj3);
-    items5[1] = tmp12(tmp11, obj2);
+    obj2.children = closure_12(closure_5, obj3);
+    items5[1] = closure_11(closure_5, obj2);
     items5[2] = replaceHeaderMediaWith;
     tmp12Result = tmp12Result3;
     if (!flag) {
@@ -156,12 +157,12 @@ function BountiesCtaHeaderInner(bounties) {
     if (tmp12Result) {
       const obj8 = { style: tmp.headerReplaceMediaCta, children: null };
       const obj9 = { variant: bountiesEntryPointButtonVariant, onPress: callback };
-      obj8.children = tmp12(StartEarningOrbsButton, obj9);
-      tmp12Result = tmp12(tmp11, obj8);
+      obj8.children = closure_11(StartEarningOrbsButton, obj9);
+      tmp12Result = closure_11(closure_5, obj8);
     }
     items5[3] = tmp12Result;
     obj1.children = items5;
-    tmp10Result = tmp10(tmp11, obj1);
+    tmp10Result = closure_12(closure_5, obj1);
   } else {
     const obj10 = { uri: _modDef15083, style: null, children: null };
     const items8 = [tmp.header, , ];
@@ -179,7 +180,7 @@ function BountiesCtaHeaderInner(bounties) {
     let tmp12Result1 = stateFromStores;
     if (stateFromStores) {
       ({ newPill: obj6.containerStyle, newPillText: obj6.textStyle } = tmp);
-      tmp12Result1 = tmp12(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
+      tmp12Result1 = closure_11(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj11 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
     const items9 = [tmp12Result1, ];
@@ -194,37 +195,37 @@ function BountiesCtaHeaderInner(bounties) {
     const obj13 = { variant: "text-lg/semibold", color: "text-strong", children: null };
     const intl = tmp4(1114).intl;
     obj13.children = intl.string(tmp4(1114).t.qetVDw);
-    const items11 = [tmp12(tmp4(4556).Text, obj13), , ];
+    const items11 = [closure_11(tmp4(4556).Text, obj13), , ];
     const obj14 = { isEmptyOrCompleted: flag };
-    items11[1] = tmp12(BountiesCtaDescription, obj14);
+    items11[1] = closure_11(BountiesCtaDescription, obj14);
     let tmp12Result2 = tmp12Result3;
     if (!flag) {
       tmp12Result2 = tmp13;
     }
     if (tmp12Result2) {
       const obj15 = { variant: bountiesEntryPointButtonVariant, onPress: callback };
-      tmp12Result2 = tmp12(StartEarningOrbsButton, obj15);
+      tmp12Result2 = closure_11(StartEarningOrbsButton, obj15);
     }
     items11[2] = tmp12Result2;
     obj12.children = items11;
-    items9[1] = tmp10(tmp11, obj12);
+    items9[1] = closure_12(closure_5, obj12);
     obj10.children = items9;
-    tmp10Result = tmp10(BountiesBannerBackgroundDefault, obj10);
+    tmp10Result = closure_12(BountiesBannerBackgroundDefault, obj10);
   }
   obj.children = tmp10Result;
   const items12 = [closure_11(closure_5, obj), ];
   if (tmp10Result) {
     const obj16 = { style: tmp.footerClip, children: null };
-    const items13 = [tmp12(StarfieldBackground, {}), footer, ];
+    const items13 = [closure_11(StarfieldBackground, {}), footer, ];
     if (!flag) {
       const obj17 = { style: tmp.footerCta, children: null };
       const obj18 = { variant: bountiesEntryPointButtonVariant, onPress: callback };
-      obj17.children = tmp12(StartEarningOrbsButton, obj18);
-      tmp12Result3 = tmp12(tmp11, obj17);
+      obj17.children = closure_11(StartEarningOrbsButton, obj18);
+      tmp12Result3 = closure_11(closure_5, obj17);
     }
     items13[2] = tmp12Result3;
     obj16.children = items13;
-    tmp10Result = tmp10(tmp11, obj16);
+    tmp10Result = closure_12(closure_5, obj16);
   }
   items12[1] = tmp10Result;
   obj.children = items12;
@@ -297,7 +298,7 @@ export default noop.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
       obj = {};
       let merged = Object.assign(isEmptyOrCompleted);
       obj.containerRef = containerRef;
-      let tmp9Result = tmp9(BountiesCtaHeaderInner, obj);
+      let tmp9Result = closure_11(BountiesCtaHeaderInner, obj);
     } else {
       const obj1 = {
         adContentId,
@@ -313,7 +314,7 @@ export default noop.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
               return closure_2_11(BountiesCtaHeaderInner, obj);
             }
       };
-      tmp9Result = tmp9(tmp7(11778).QuestContentImpressionTrackerNative, obj1);
+      tmp9Result = closure_11(tmp7(11778).QuestContentImpressionTrackerNative, obj1);
     }
     obj.children = tmp9Result;
     return closure_11(require("native").ThemeContextProvider, obj);

@@ -25,17 +25,17 @@ export const useBadBundleFilter = function useBadBundleFilter() {
         found = arr.filter((product) => {
           let obj = canUseShopDiscountsResult(8842);
           if (obj2.isBundleProduct(product)) {
-            let tmpResult = tmp(7554);
+            let tmpResult = canUseShopDiscountsResult(7554);
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
-                tmpResult = tmp(7553);
+                tmpResult = canUseShopDiscountsResult(7553);
                 if (tmpResult.isOrbsExclusiveProduct(product)) {
                   obj = { product, hasShopDiscount };
-                  return null != tmp(7553).getProductOrbPrice(obj);
+                  return null != canUseShopDiscountsResult(7553).getProductOrbPrice(obj);
                 } else {
-                  const defaultPriceSetAssignmentPurchaseType = tmp(7554).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult2 = tmp(7554);
-                  let result = tmp(7554).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7554).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                  const tmpResult2 = canUseShopDiscountsResult(7554);
+                  let result = canUseShopDiscountsResult(7554).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                   if (null != result) {
                     if (0 !== result.amount) {
                       let num2 = 0;

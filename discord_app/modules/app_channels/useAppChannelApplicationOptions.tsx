@@ -21,7 +21,7 @@ const EmbeddedSurfaceType = fn(9511).EmbeddedSurfaceType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
 
-export const useAppChannelApplicationOptions = function useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId, disabled) {
+export const useAppChannelApplicationOptions = function useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId) {
   let flag = disabled;
   if (disabled === undefined) {
     flag = false;

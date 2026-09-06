@@ -3,6 +3,7 @@
 // Module 17531 (AssetChooser)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import Pressables from "Pressables" /* 5123 */;
 import _modDef17532 from "module_17532" /* 17532 */;
 import _modDef17533 from "module_17533" /* 17533 */;
@@ -31,7 +32,7 @@ class AssetChooser extends PureComponent {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     closure_129_0 = applyArgumentsResult;
-    applyArgumentsResult.handleChooseAsset = closure_3(async (arg0, value) => {
+    applyArgumentsResult.handleChooseAsset = closure_3(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -137,8 +138,8 @@ prototype["render"] = function render() {
   if (!disabled) {
     obj = { style: tmp.uploadIconWrapper, children: null };
     const obj1 = { style: tmp.uploadIcon, source: _modDef17533 };
-    obj.children = tmp5(hasOwnProperty, obj1);
-    tmp5Result = tmp5(React4, obj);
+    obj.children = React7(hasOwnProperty, obj1);
+    tmp5Result = React7(React4, obj);
   }
   obj.children = tmp5Result;
   obj.children = React7(timestampProducer, obj);
@@ -149,10 +150,10 @@ prototype["render"] = function render() {
     if (!disabled) {
       const obj2 = { accessibilityRole: "button", onPress: this.handleRemoveAsset, children: null };
       const obj3 = { style: tmp.remove, children: null };
-      const intl2 = tmp6(1114).intl;
-      obj3.children = intl2.string(tmp6(1114).t.N86XcP);
-      obj2.children = tmp5(tmp6(1178).LegacyText, obj3);
-      tmp5Result = tmp5(React5, obj2);
+      const intl2 = util.intl;
+      obj3.children = intl2.string(util.t.N86XcP);
+      obj2.children = React7(native.LegacyText, obj3);
+      tmp5Result = React7(React5, obj2);
     }
   }
   children[1] = tmp5Result;

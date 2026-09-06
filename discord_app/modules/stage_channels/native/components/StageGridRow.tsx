@@ -3,6 +3,9 @@
 // Module 10055 (StageGridRow)
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5126 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
+import SpeakerTileDefault from "SpeakerTile" /* 10046 */;
+import StageTileTypes from "StageTileTypes" /* 10047 */;
+import MediaTileDefault from "MediaTile" /* 10056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,11 +27,11 @@ export default noop.memo((row) => {
     num = participants.length;
   }
   if (1 === num) {
-    THIRD = tmp2(10047).StageTileSize.FULL;
+    THIRD = StageTileTypes.StageTileSize.FULL;
   } else if (2 === num) {
-    THIRD = tmp2(10047).StageTileSize.HALF;
+    THIRD = StageTileTypes.StageTileSize.HALF;
   } else {
-    THIRD = tmp2(10047).StageTileSize.THIRD;
+    THIRD = StageTileTypes.StageTileSize.THIRD;
   }
   const items = [tmp.container, ];
   if (containerLandscape) {
@@ -53,13 +56,13 @@ export default noop.memo((row) => {
       if (flag) {
         let obj = { participant: type, size: THIRD, channel };
         const _HermesInternal2 = HermesInternal;
-        let tmp6Result = tmp6(10056);
-        let tmp5Result = tmp5(tmp6Result, obj, "stage-media-participant-" + type.id);
+        let tmp6Result = MediaTileDefault;
+        let tmp5Result = <tmp6Result key={"stage-media-participant-" + type.id} participant={type} size={THIRD} channel={channel} />;
       } else {
         obj = { channel, participant: type, size: THIRD };
         const _HermesInternal = HermesInternal;
-        tmp6Result = tmp6(10046);
-        tmp5Result = tmp5(tmp6Result, obj, "stage-user-participant-" + type.id);
+        tmp6Result = SpeakerTileDefault;
+        tmp5Result = <tmp6Result key={"stage-user-participant-" + type.id} channel={channel} participant={type} size={THIRD} />;
       }
       return tmp5Result;
     })
@@ -82,13 +85,13 @@ export default noop.memo((row) => {
     if (flag) {
       let obj = { participant: type, size: THIRD, channel };
       const _HermesInternal2 = HermesInternal;
-      let tmp6Result = tmp6(10056);
-      let tmp5Result = tmp5(tmp6Result, obj, "stage-media-participant-" + type.id);
+      let tmp6Result = MediaTileDefault;
+      let tmp5Result = <tmp6Result key={"stage-media-participant-" + type.id} participant={type} size={THIRD} channel={channel} />;
     } else {
       obj = { channel, participant: type, size: THIRD };
       const _HermesInternal = HermesInternal;
-      tmp6Result = tmp6(10046);
-      tmp5Result = tmp5(tmp6Result, obj, "stage-user-participant-" + type.id);
+      tmp6Result = SpeakerTileDefault;
+      tmp5Result = <tmp6Result key={"stage-user-participant-" + type.id} channel={channel} participant={type} size={THIRD} />;
     }
     return tmp5Result;
   })}</View>;

@@ -1,6 +1,7 @@
 // === Module 10002: ChannelCallMicButton ===
 
 // Module 10002 (ChannelCallMicButton)
+import nativeDefault from "native" /* 576 */;
 import useMuteStatesDefault from "useMuteStates" /* 7345 */;
 import CallBarActionAll from "CallBarAction" /* 9497 */;
 import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 10004 */;
@@ -40,7 +41,7 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
   obj.lottieComponent = memo;
   let RED_400;
   if (mute) {
-    RED_400 = tmp(576).unsafe_rawColors.RED_400;
+    RED_400 = nativeDefault.unsafe_rawColors.RED_400;
   }
   obj.tintColor = RED_400;
   return jsx(CallBarActionAll.ToggledActionButton, { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null });

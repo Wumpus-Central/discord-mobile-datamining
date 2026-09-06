@@ -33,7 +33,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
     closure_2(arg0);
   }, []);
   const items = [parentId, first];
-  const callback1 = noop.useCallback(height(function*(arg0, value) {
+  const callback1 = noop.useCallback(height(function*() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

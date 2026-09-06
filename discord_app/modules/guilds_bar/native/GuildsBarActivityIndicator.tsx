@@ -2,6 +2,7 @@
 
 // Module 16333 (GuildsBarActivityIndicator)
 import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
 import useToken from "useToken" /* 4262 */;
 import _modDef5033 from "module_5033" /* 5033 */;
 import StageIcon from "StageIcon" /* 5097 */;
@@ -19,7 +20,6 @@ import _modDef16335 from "module_16335" /* 16335 */;
 import _modDef16336 from "module_16336" /* 16336 */;
 import noop from "module_19" /* 19 */;
 
-const native = tmp(1178);
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
@@ -69,30 +69,28 @@ const memoResult = noop.memo((arg0) => {
   obj.style = items;
   const items1 = [activityIcon.activityIconWrapper, ];
   let prop = null;
-  const tmp5 = NativeViewDefault;
   if (isCurrentUserConnected) {
     prop = activityIcon.activityIconWrapperActive;
   }
   obj = { style: items1, children: null };
   items1[1] = prop;
   if (null != IconComponent) {
-    tmp3(576).colors;
     const colors = { color: null, size: "xxs", style: null };
     colors.color = isCurrentUserConnected ? colors.WHITE : colors.ICON_DEFAULT;
     activityIcon = activityIcon.activityIcon;
     colors.style = activityIcon;
-    tmp4(IconComponent, colors);
+    <IconComponent color={null} size="xxs" style={null} />;
     const tmp8 = isCurrentUserConnected ? colors.WHITE : colors.ICON_DEFAULT;
   } else {
     const obj1 = { source, color: null, style: null };
     if (isCurrentUserConnected) {
-      WHITE = tmp3(576).unsafe_rawColors.WHITE;
+      WHITE = nativeDefault.unsafe_rawColors.WHITE;
     }
     obj1.color = WHITE;
     obj1.style = activityIcon.activityIcon;
-    obj.children = tmp4(native.Icon, obj1);
-    obj.children = tmp4(tmp6, obj);
-    return tmp4(tmp5, obj);
+    obj.children = jsx(native.Icon, { source, color: null, style: null });
+    obj.children = <tmp6 {...obj} />;
+    return <tmp5 {...obj} />;
   }
 });
 const metroRequire = memoResult;
@@ -119,12 +117,12 @@ export default noop.memo(function GuildsBarGuildActivityIndicator(arg0) {
   const memo = noop.useMemo(() => {
     let icon;
     if (closure_1 != null) {
-      icon = tmp.icon;
+      icon = closure_1.icon;
     }
     const obj = { IconComponent: icon, source: null, isCurrentUserConnected: null };
     let source;
     if (closure_1 != null) {
-      source = tmp.source;
+      source = closure_1.source;
     }
     if (source == null) {
       source = null;
@@ -162,12 +160,12 @@ export const useActivityIndicatorState = function useActivityIndicatorState(guil
   return noop.useMemo(() => {
     let icon;
     if (closure_1 != null) {
-      icon = tmp.icon;
+      icon = closure_1.icon;
     }
     const obj = { IconComponent: icon, source: null, isCurrentUserConnected: null };
     let source;
     if (closure_1 != null) {
-      source = tmp.source;
+      source = closure_1.source;
     }
     if (source == null) {
       source = null;

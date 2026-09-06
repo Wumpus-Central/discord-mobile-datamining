@@ -66,7 +66,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/native/ScheduleDowntimeScreen.tsx");
 
 export default function ScheduleDowntimeScreen() {
-  closure_20 = async function _handleSubmit(arg0, value) {
+  closure_20 = async function _handleSubmit() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -104,20 +104,20 @@ export default function ScheduleDowntimeScreen() {
             if (timestampProducer) {
               let ruleId;
               if (rule != null) {
-                ruleId = tmp34.ruleId;
+                ruleId = rule.ruleId;
               }
               if (null != ruleId) {
-                let tmp27Result = tmp27(tmp28[22]);
+                let tmp27Result = tmp3(tmp36[22]);
                 c1 = 3;
                 c4 = 1;
-                const obj2 = { value: tmp27Result.updateRestrictedScheduleRule(tmp45, tmp34.ruleId, obj1), done: false };
+                const obj2 = { value: tmp27Result.updateRestrictedScheduleRule(teenId, rule.ruleId, obj1), done: false };
                 return obj2;
               }
             }
-            tmp27Result = tmp27(tmp28[22]);
+            tmp27Result = tmp3(tmp36[22]);
             c1 = 2;
             c4 = 1;
-            obj3 = { value: tmp27Result.addRestrictedScheduleRule(tmp45, obj1), done: false };
+            obj3 = { value: tmp27Result.addRestrictedScheduleRule(teenId, obj1), done: false };
             return obj3;
           } else {
             c4 = 3;
@@ -286,7 +286,7 @@ export default function ScheduleDowntimeScreen() {
   }
   items3[1] = ruleId1;
   items3[2] = stackNavigation;
-  const callback = obj2.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = obj2.useCallback(asyncGeneratorStep(async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -315,7 +315,7 @@ export default function ScheduleDowntimeScreen() {
             if (null != teenId) {
               let ruleId;
               if (rule != null) {
-                ruleId = tmp28.ruleId;
+                ruleId = rule.ruleId;
               }
               if (null != ruleId) {
                 closure_17(true);
@@ -324,7 +324,7 @@ export default function ScheduleDowntimeScreen() {
                 c2 = 2;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1.value = obj1.deleteRestrictedScheduleRule(teenId, tmp28.ruleId);
+                obj1.value = obj1.deleteRestrictedScheduleRule(teenId, rule.ruleId);
                 return obj1;
               }
             }
@@ -393,7 +393,7 @@ export default function ScheduleDowntimeScreen() {
   }, items4);
   tmp2Result = tmp2(stringResult[19]);
   const timeToMinutesResult = tmp2Result.timeToMinutes(first1);
-  const tmp33 = asyncGeneratorStep(async (arg0, value) => {
+  const tmp33 = asyncGeneratorStep(async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -422,7 +422,7 @@ export default function ScheduleDowntimeScreen() {
             if (null != teenId) {
               let ruleId;
               if (rule != null) {
-                ruleId = tmp28.ruleId;
+                ruleId = rule.ruleId;
               }
               if (null != ruleId) {
                 closure_17(true);
@@ -431,7 +431,7 @@ export default function ScheduleDowntimeScreen() {
                 c2 = 2;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1.value = obj1.deleteRestrictedScheduleRule(teenId, tmp28.ruleId);
+                obj1.value = obj1.deleteRestrictedScheduleRule(teenId, rule.ruleId);
                 return obj1;
               }
             }
@@ -603,9 +603,9 @@ export default function ScheduleDowntimeScreen() {
           closure_15((items) => {
             const set = new Set(items);
             if (set.has(closure_0)) {
-              set.delete(tmp);
+              set.delete(closure_0);
             } else {
-              set.add(tmp);
+              set.add(closure_0);
             }
             return set;
           });

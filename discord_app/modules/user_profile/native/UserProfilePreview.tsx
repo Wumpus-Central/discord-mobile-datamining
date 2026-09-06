@@ -27,10 +27,10 @@ let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   const colors = nativeDefault.colors;
   if (arg1) {
     let BACKGROUND_SURFACE_HIGH = colors.BORDER_MUTED;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   obj.borderColor = BACKGROUND_SURFACE_HIGH;
   obj.borderRadius = tmp4(576).radii.lg;
@@ -75,7 +75,7 @@ export default function UserProfilePreview(hideFrame) {
   let obj1 = guildId(set[12]);
   const customStatusActivity = obj1.useCustomStatusActivity();
   let tmp27Result = null != customStatusActivity && !compact;
-  let tmpResult = tmp(tmp2[13]);
+  let tmpResult = guildId(tmp2[13]);
   const userProfileColors = tmpResult.useUserProfileColors({ theme, primaryColor, secondaryColor });
   ({ containerBackground, gradientFallbackBackground, avatarBackground } = userProfileColors);
   if (undefined !== profileEffectOverride) {
@@ -87,7 +87,7 @@ export default function UserProfilePreview(hideFrame) {
   if (undefined !== displayNameStylesOverride) {
     pendingDisplayNameStyles = displayNameStylesOverride;
   }
-  tmpResult = tmp(tmp2[14]);
+  tmpResult = guildId(tmp2[14]);
   obj = { pendingValue: pendingProfileEffect, userValue: null, guildValue: null, guildId: null };
   let profileEffect;
   if (tmp5 != null) {
@@ -121,8 +121,8 @@ export default function UserProfilePreview(hideFrame) {
     }
     obj.guildValue = profileFrame1;
     obj.guildId = guildId;
-    profilePreviewValue = tmp(tmp2[14]).getProfilePreviewValue(obj);
-    const tmpResult1 = tmp(tmp2[14]);
+    profilePreviewValue = guildId(tmp2[14]).getProfilePreviewValue(obj);
+    const tmpResult1 = guildId(tmp2[14]);
   }
   let skuId;
   let tmp4Result = tmp4(tmp2[15]);
@@ -148,8 +148,8 @@ export default function UserProfilePreview(hideFrame) {
   }, []);
   const memo = noop.useMemo(() => {
     if (null != closure_1) {
-      const layers = tmp.layers;
-      ({ overflowTop, overflowBottom, overflowHorizontal } = scaleProfileFrameDefault(tmp, first.width));
+      const layers = closure_1.layers;
+      ({ overflowTop, overflowBottom, overflowHorizontal } = scaleProfileFrameDefault(closure_1, first.width));
       let num = 0;
       if (layers.some((type) => {
         let tmp = "staple" === type.type;
@@ -161,7 +161,7 @@ export default function UserProfilePreview(hideFrame) {
         num = overflowTop;
       }
       const obj = { marginTop: num, marginBottom: null, marginHorizontal: null };
-      const layers2 = tmp.layers;
+      const layers2 = closure_1.layers;
       let num2 = 0;
       if (layers2.some((type) => {
         let tmp = "staple" === type.type;
@@ -186,9 +186,9 @@ export default function UserProfilePreview(hideFrame) {
   if (tmp27Result) {
     const obj5 = { frame: tmp4ResultResult, filterLayer, profileThemeType: constants.PREVIEW, frameOrder: null, containerWidth: null, containerHeight: null };
     tmp4Result = tmp4(tmp2[20]);
-    obj5.frameOrder = tmp(tmp2[21]).ProfileFrameLayerOrder.BACK;
+    obj5.frameOrder = guildId(tmp2[21]).ProfileFrameLayerOrder.BACK;
     ({ width: obj13.containerWidth, height: obj13.containerHeight } = first);
-    tmp27Result = tmp27(tmp4Result, obj5);
+    tmp27Result = closure_9(tmp4Result, obj5);
   }
   const items4 = [tmp27Result, , ];
   const obj6 = { onLayout: callback, style: tmp8.profileContentContainer, children: null };
@@ -224,7 +224,7 @@ export default function UserProfilePreview(hideFrame) {
   if (tmp27Result) {
     const obj11 = { customStatusActivity, themeType: constants.PREVIEW, hasCustomProfileTheme: tmp7, style: null, emojiOnlyStyle: null };
     ({ customStatusBubble: obj19.style, emojiOnlyCustomStatusBubble: obj19.emojiOnlyStyle } = tmp9);
-    tmp27Result = tmp27(tmp4(tmp2[26]), obj11);
+    tmp27Result = closure_9(tmp4(tmp2[26]), obj11);
   }
   const items8 = [tmp27Result, , ];
   const obj12 = { user, themeType: constants.PREVIEW, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, showBadgeToastOnPress: false, pendingDisplayNameStyles: null, guildId: null };
@@ -248,12 +248,12 @@ export default function UserProfilePreview(hideFrame) {
   items8[1] = closure_9(require("UserProfilePrimaryInfo"), obj12);
   let tmp27Result1 = !compact;
   if (!compact) {
-    const obj13 = { userId: user.id, displayProfile: tmp5, themeType: tmp42.PREVIEW, style: null, bioLineClamp: 1 };
+    const obj13 = { userId: user.id, displayProfile: tmp5, themeType: constants.PREVIEW, style: null, bioLineClamp: 1 };
     const items9 = [tmp9.card, tmp8.aboutMeCard, ];
     const obj14 = { backgroundColor: containerBackground };
     items9[2] = obj14;
     obj13.style = items9;
-    tmp27Result1 = tmp27(tmp4(tmp2[28]), obj13);
+    tmp27Result1 = closure_9(tmp4(tmp2[28]), obj13);
   }
   items8[2] = tmp27Result1;
   obj9.children = items8;
@@ -263,19 +263,19 @@ export default function UserProfilePreview(hideFrame) {
   if (null == str) {
     items5[2] = tmp45;
     obj6.children = items5;
-    items4[1] = tmp29(tmp28, obj6);
+    items4[1] = closure_10(View, obj6);
     let tmp27Result2 = null != tmp4ResultResult;
     if (tmp27Result2) {
-      const obj15 = { frame: tmp4ResultResult, filterLayer, profileThemeType: tmp42.PREVIEW, frameOrder: tmp(tmp2[21]).ProfileFrameLayerOrder.FRONT, containerWidth: null, containerHeight: null };
+      const obj15 = { frame: tmp4ResultResult, filterLayer, profileThemeType: constants.PREVIEW, frameOrder: guildId(tmp2[21]).ProfileFrameLayerOrder.FRONT, containerWidth: null, containerHeight: null };
       ({ width: obj24.containerWidth, height: obj24.containerHeight } = first);
-      tmp27Result2 = tmp27(tmp4(tmp2[20]), obj15);
+      tmp27Result2 = closure_9(tmp4(tmp2[20]), obj15);
       const tmp4Result4 = tmp4(tmp2[20]);
     }
     items4[2] = tmp27Result2;
     obj4.children = items4;
-    obj3.children = tmp29(tmp28, obj4);
-    obj2.children = tmp27(tmp28, obj3);
-    return tmp27(tmp(tmp2[19]).ThemeContextProvider, obj2);
+    obj3.children = closure_10(View, obj4);
+    obj2.children = closure_9(View, obj3);
+    return closure_9(guildId(tmp2[19]).ThemeContextProvider, obj2);
   } else {
     const obj16 = { skuId: str.skuId, style: tmp8.profileEffect };
     if (null != profileEffectRestartKey) {
@@ -285,7 +285,8 @@ export default function UserProfilePreview(hideFrame) {
     } else {
       skuId = `-`.skuId;
     }
-    tmp27(tmp4(tmp2[29]), obj16, skuId);
+    closure_9(tmp4(tmp2[29]), obj16, skuId);
     const tmp4Result5 = tmp4(tmp2[29]);
   }
+  const tmp4Result3 = require("UserProfilePrimaryInfo");
 };

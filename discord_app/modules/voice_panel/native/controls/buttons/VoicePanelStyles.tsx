@@ -19,7 +19,7 @@ let closure_3 = createStyles.createStyles((arg0) => {
   obj.iconFillRed = { color: nativeDefault.unsafe_rawColors.RED_400 };
   const obj2 = { color: nativeDefault.unsafe_rawColors.RED_400 };
   obj.iconFillSelected = { color: nativeDefault.colors.BLACK };
-  const colors2 = tmp(576).colors;
+  const colors2 = nativeDefault.colors;
   obj.iconBadgeIndicator = { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.WHITE };
   return obj;
 });

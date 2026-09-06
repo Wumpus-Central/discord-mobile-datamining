@@ -21,7 +21,7 @@ function MessageStandardEmojiActionSheet(emojiNode) {
     children: null
   };
   obj = { style: closure_6().contentWrapper, children: jsx(StandardEmojiContentDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) };
-  obj.children = <View style={closure_6().contentWrapper}>{jsx(StandardEmojiContentDefault, { emojiNode: arg0.emojiNode, nonce: v4Result })}</View>;
+  obj.children = <View style={closure_6().contentWrapper}>{jsx(StandardEmojiContentDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result })}</View>;
   return jsx(require("Sheet/BottomSheet").BottomSheet, { style: closure_6().contentWrapper, children: jsx(StandardEmojiContentDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) });
 }
 function MessageCustomEmojiActionSheet(emojiNode) {
@@ -76,10 +76,10 @@ export default function MessageEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   if ("surrogate" in emojiNode) {
     let obj = { emojiNode };
-    let tmpResult = tmp(MessageStandardEmojiActionSheet, obj);
+    let tmpResult = <MessageStandardEmojiActionSheet emojiNode={emojiNode} />;
   } else {
     obj = { emojiNode };
-    tmpResult = tmp(MessageCustomEmojiActionSheet, obj);
+    tmpResult = <MessageCustomEmojiActionSheet emojiNode={emojiNode} />;
   }
   return tmpResult;
 };

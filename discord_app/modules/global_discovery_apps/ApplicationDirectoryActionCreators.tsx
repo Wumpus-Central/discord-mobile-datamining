@@ -18,116 +18,120 @@ import ApplicationDirectorySimilarApplicationsStore from "ApplicationDirectorySi
 import MyGuildApplicationsStore from "MyGuildApplicationsStore" /* 12075 */;
 
 require = fn;
-let closure_20 = async function _getEmbedApplication(arg0, value) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_20 = async function _getEmbedApplication() {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = closure_0;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          let body;
-          const _Date = Date;
-          const timestamp = Date.now();
-          value = map.get(closure_0);
-          c1 = value;
-          if (value == null) {
-            c1 = 0;
-          }
-          let obj5 = applicationFetchState;
-          if (applicationFetchState.getApplicationFetchState(closure_0) !== constants.FETCHING) {
-            if (!obj5.isInvalidApplication(tmp33)) {
-              if (timestamp >= tmp21 + collapsedCategories) {
-                const result = obj10.set(tmp33, timestamp);
-                const obj1 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: tmp33 };
-                DispatcherDefault.dispatch(obj1);
-                const tmp44 = new BackoffDefault(1000, 5000);
-                closure_130_1 = tmp44;
-                function interceptResponse(status, arg1) {
-                  closure_0 = arg1;
-                  let flag = 429 === status.status;
-                  if (flag) {
-                    flag = closure_1.fails < 10;
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = applicationId;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            let body;
+            const _Date = Date;
+            const timestamp = Date.now();
+            value = map.get(applicationId);
+            c1 = value;
+            if (value == null) {
+              c1 = 0;
+            }
+            let obj5 = applicationFetchState;
+            if (applicationFetchState.getApplicationFetchState(applicationId) !== constants.FETCHING) {
+              if (!obj5.isInvalidApplication(applicationId)) {
+                if (timestamp >= tmp21 + closure_2_18) {
+                  const result = map.set(applicationId, timestamp);
+                  const obj1 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId };
+                  DispatcherDefault.dispatch(obj1);
+                  const tmp44 = new BackoffDefault(1000, 5000);
+                  closure_130_1 = tmp44;
+                  function interceptResponse(status, arg1) {
+                    closure_0 = arg1;
+                    let flag = 429 === status.status;
+                    if (flag) {
+                      flag = closure_1.fails < 10;
+                    }
+                    if (flag) {
+                      closure_1.fail(() => {
+                        closure_0(undefined, closure_2_2);
+                      });
+                      flag = true;
+                    }
+                    return flag;
                   }
-                  if (flag) {
-                    closure_1.fail(() => {
-                      closure_0(undefined, closure_2_2);
-                    });
-                    flag = true;
-                  }
-                  return flag;
+                  closure_130_2 = interceptResponse;
+                  c5 = 1;
+                  const HTTP = HTTPUtils.HTTP;
+                  const obj2 = { url: Endpoints.APPLICATION_DIRECTORY_EMBED_APPLICATION(applicationId), backoff: tmp44, retries: 10, interceptResponse, rejectWithError: null };
+                  obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
+                  c6 = 2;
+                  c7 = 1;
+                  let obj3 = { value: HTTP.get(obj2), done: false };
+                  return obj3;
                 }
-                closure_130_2 = interceptResponse;
-                c5 = 1;
-                const HTTP = HTTPUtils.HTTP;
-                const obj2 = { url: Endpoints.APPLICATION_DIRECTORY_EMBED_APPLICATION(tmp33), backoff: tmp44, retries: 10, interceptResponse, rejectWithError: null };
-                obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
-                c6 = 2;
-                c7 = 1;
-                let obj3 = { value: HTTP.get(obj2), done: false };
-                return obj3;
               }
             }
+            tmp21 = c1;
           }
-          obj10 = map;
-          tmp21 = c1;
-        }
-      } else {
-        if (1 === tmp7) {
+        } else {
+          if (1 === tmp7) {
+            c5 = 0;
+            obj3 = closure_131_1(closure_131_2[11]);
+            const obj4 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE", applicationId: closure_130_0, isInvalidApplication: true };
+            obj3.dispatch(obj4);
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            body = value.body;
+            obj = closure_131_1(closure_131_2[11]);
+            obj5 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS", application: body };
+            obj.dispatch(obj5);
+            c5 = 0;
+          }
           c5 = 0;
-          obj3 = closure_131_1(closure_131_2[11]);
-          const obj4 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE", applicationId: closure_130_0, isInvalidApplication: true };
-          obj3.dispatch(obj4);
-        } else if (arg0 === 1) {
           c7 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          body = value.body;
-          obj = closure_131_1(closure_131_2[11]);
-          obj5 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS", application: body };
-          obj.dispatch(obj5);
-          c5 = 0;
+          const obj6 = { value, done: true };
+          return obj6;
         }
-        c5 = 0;
         c7 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
-      }
-      c7 = 3;
-    } catch (tmp24) {
-      closure_4 = tmp24;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp24;
-      } else {
-        c6 = tmp;
+      } catch (tmp24) {
+        closure_4 = tmp24;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp24;
+        } else {
+          c6 = tmp;
+        }
       }
     }
-  }
+  })();
 };
-let closure_21 = async function _getApplication(arg0, value) {
+let closure_21 = async function _getApplication(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -242,7 +246,7 @@ let closure_21 = async function _getApplication(arg0, value) {
     }
   }
 };
-let closure_22 = async function _getCategories(arg0, value) {
+let closure_22 = async function _getCategories() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -306,7 +310,7 @@ let closure_22 = async function _getCategories(arg0, value) {
     }
   }
 };
-let closure_23 = async function _getSimilarApplications(arg0, value) {
+let closure_23 = async function _getSimilarApplications(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -421,7 +425,7 @@ let closure_23 = async function _getSimilarApplications(arg0, value) {
     }
   }
 };
-let closure_24 = async function _search(arg0, value) {
+let closure_24 = async function _search(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -572,7 +576,7 @@ let closure_24 = async function _search(arg0, value) {
     }
   }
 };
-let closure_25 = async function _fetchCollections(arg0, value) {
+let closure_25 = async function _fetchCollections() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -716,7 +720,7 @@ let closure_25 = async function _fetchCollections(arg0, value) {
     }
   }
 };
-let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds(arg0, value) {
+let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

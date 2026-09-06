@@ -47,7 +47,6 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = activeSubscription(1114).intl;
   const formatResult = obj2.format("MMMM Do");
-  const tmp8 = View;
   const items2 = [intl2.format(activeSubscription(1114).t.Zmtrs2, { activeListingName: first, changeToListingName: _slicedToArray(obj1.useName(changeToListingId), 1)[0], billingEndDate: obj2.format("MMMM Do"), emphasisHook }), "\n\n", ];
   const intl3 = activeSubscription(1114).intl;
   items2[2] = intl3.format(activeSubscription(1114).t.KIiWca, { emphasisHook });
@@ -56,7 +55,7 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   let tmp7Result = null;
   if (activeSubscription.status !== SubscriptionStatusTypes.CANCELED) {
     const obj5 = { children: null };
-    const items3 = [tmp5(tmp6(1178).Spacer, { size: 16 }), ];
+    const items3 = [closure_7(tmp6(1178).Spacer, { size: 16 }), ];
     const obj6 = { text: null, onPress: null };
     const intl4 = tmp6(1114).intl;
     obj6.text = intl4.string(tmp6(1114).t.UwHVxr);
@@ -65,13 +64,13 @@ export default function ChangeSubscriptionCard(activeSubscription) {
       obj.pushLazy(asyncRequireImpl(16549, dependencyMap.paths), obj);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    items3[1] = tmp5(tmp6(16541).ArrowButton, obj6);
+    items3[1] = closure_7(tmp6(16541).ArrowButton, obj6);
     obj5.children = items3;
-    tmp7Result = tmp7(closure_9, obj5);
+    tmp7Result = closure_8(closure_9, obj5);
   }
   const obj3 = { activeListingName: first, changeToListingName: _slicedToArray(obj1.useName(changeToListingId), 1)[0], billingEndDate: obj2.format("MMMM Do"), emphasisHook };
   const obj4 = { emphasisHook };
   items1[3] = tmp7Result;
   obj.children = items1;
-  return closure_7(activeSubscription(7150).BottomSheet, { startExpanded: true, children: closure_8(tmp8, obj) });
+  return closure_7(activeSubscription(7150).BottomSheet, { startExpanded: true, children: closure_8(View, obj) });
 };

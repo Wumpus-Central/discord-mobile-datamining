@@ -42,7 +42,7 @@ function ProductPreview(arg0) {
   let obj = CollectiblesProductUtils;
   const productType = obj.getProductType(product);
   if (productType !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
-    if (productType !== tmp2(1889).CollectiblesItemType.PROFILE_FRAME) {
+    if (productType !== CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME) {
       let str = "75%";
     }
     const items = [tmp.overlayContainer, , ];
@@ -89,30 +89,30 @@ function ProductPreviewInner(arg0) {
     obj.style = tmp.externalProductImage;
     return closure_7(FastImageDefault, obj);
   } else {
-    const ALL = tmp2(1077).FractionalPremiumSKUsSets.ALL;
+    const ALL = cardWidth(1077).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let size = { skuId: product.skuId, width: tmp2(8846).FRACTIONAL_NITRO_COIN_SIZE.CARD, height: tmp2(8846).FRACTIONAL_NITRO_COIN_SIZE.CARD };
-      return closure_7(tmp2(8846).FractionalNitroCoinIllustration, size);
+      let size = { skuId: product.skuId, width: cardWidth(8846).FRACTIONAL_NITRO_COIN_SIZE.CARD, height: cardWidth(8846).FRACTIONAL_NITRO_COIN_SIZE.CARD };
+      return closure_7(cardWidth(8846).FractionalNitroCoinIllustration, size);
     } else {
       const first = _slicedToArray(product.items, 1)[0];
       let type;
       if (first != null) {
         type = first.type;
       }
-      if (tmp2(1889).CollectiblesItemType.AVATAR_DECORATION === type) {
+      if (cardWidth(1889).CollectiblesItemType.AVATAR_DECORATION === type) {
         const obj2 = { item: first, size: 100 };
         return closure_7(AvatarDecorationSampleV2Default, obj2);
-      } else if (tmp2(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
+      } else if (cardWidth(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
         const obj3 = { style: tmp.profileEffectContainer, children: null };
         const obj4 = { item: first, hideBackground: true };
         obj3.children = closure_7(ProfileEffectSampleV2Default, obj4);
         return closure_7(closure_5, obj3);
-      } else if (tmp2(1889).CollectiblesItemType.PROFILE_FRAME === type) {
+      } else if (cardWidth(1889).CollectiblesItemType.PROFILE_FRAME === type) {
         const obj5 = { style: tmp.profileFrameContainer, children: null };
-        const obj6 = { profileFrame: first, previewWidth: tmp2(8764).COLLECTIBLES_SHOP_CARD_WIDTH - nativeDefault.space.PX_32, previewHeight, profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+        const obj6 = { profileFrame: first, previewWidth: cardWidth(8764).COLLECTIBLES_SHOP_CARD_WIDTH - nativeDefault.space.PX_32, previewHeight, profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
         obj5.children = closure_7(ProfileFrameSamplePreviewDefault, obj6);
         return closure_7(closure_5, obj5);
-      } else if (tmp2(1889).CollectiblesItemType.NAMEPLATE === type) {
+      } else if (cardWidth(1889).CollectiblesItemType.NAMEPLATE === type) {
         const obj7 = { item: first };
         return closure_7(NameplateCardPreviewDefault, obj7);
       } else {
@@ -180,14 +180,14 @@ export default noop.memo(function AssetTileV2(arg0) {
   const items = [React5(ProductPreview, obj), , ];
   let tmp4Result = isPurchased;
   if (isPurchased) {
-    tmp4Result = tmp4(PurchasedAssetOverlay, {});
+    tmp4Result = React5(PurchasedAssetOverlay, {});
   }
   items[1] = tmp4Result;
   if (isDisabled) {
     isDisabled = !isPurchased;
   }
   if (isDisabled) {
-    isDisabled = tmp4(DisabledAssetOverlay, {});
+    isDisabled = React5(DisabledAssetOverlay, {});
   }
   items[2] = isDisabled;
   obj.children = items;

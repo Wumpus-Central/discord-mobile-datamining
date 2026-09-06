@@ -29,7 +29,7 @@ function Row(arg0) {
   }
   obj.disabled = tmp7;
   obj.onPress = onPress;
-  obj = { size: tmp2(1178).Icon.Sizes.MEDIUM, source: icon };
+  obj = { size: native.Icon.Sizes.MEDIUM, source: icon };
   const items = [hasOwnProperty(native.Icon, obj), , ];
   const items1 = [tmp.rowLabel, ];
   let rowLabelSelected = selected;

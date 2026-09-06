@@ -3,6 +3,8 @@
 // Module 7602 (MonitoringAgent)
 import Constants from "Constants" /* 1074 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 7603 */;
+import ReleaseChannels from "ReleaseChannels" /* 7604 */;
 import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 7605 */;
 import MonitoringAgentUtils from "MonitoringAgentUtils" /* 7606 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
@@ -47,10 +49,10 @@ prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUN
       tags.push(item);
     });
   }
-  let tmpResult = tmp(1115);
+  let tmpResult = PlatformUtils;
   let str = "web";
   if (!tmpResult.isWeb()) {
-    tmpResult = tmp(1115);
+    tmpResult = PlatformUtils;
     const platformName = tmpResult.getPlatformName();
     let tmp6 = null;
     if (set.has(platformName)) {
@@ -63,10 +65,10 @@ prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUN
     const _HermesInternal = HermesInternal;
     tags1.push("platform:" + str);
   }
-  const CurrentReleaseChannel = tmp(7603).CurrentReleaseChannel;
+  const CurrentReleaseChannel = ReleaseChannelUtils.CurrentReleaseChannel;
   let tmp9 = null;
   if (null != CurrentReleaseChannel) {
-    const ALL = tmp(7604).ReleaseChannelsSets.ALL;
+    const ALL = ReleaseChannels.ReleaseChannelsSets.ALL;
     tmp9 = null;
     if (ALL.has(CurrentReleaseChannel)) {
       tmp9 = CurrentReleaseChannel;
@@ -124,8 +126,8 @@ prototype["_flush"] = function _flush() {
     HTTP.post(request).catch(() => {
       if (self._metrics.length + items.length < 100) {
         items = [];
-        HermesBuiltin.arraySpread(tmp2, HermesBuiltin.arraySpread(tmp._metrics, 0));
-        tmp._metrics = items;
+        HermesBuiltin.arraySpread(tmp2, HermesBuiltin.arraySpread(self._metrics, 0));
+        self._metrics = items;
       }
     });
     const postResult = HTTP.post(request);

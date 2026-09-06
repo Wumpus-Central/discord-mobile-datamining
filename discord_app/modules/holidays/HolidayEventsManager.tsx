@@ -39,20 +39,21 @@ prototype["updateSoundpack"] = function updateSoundpack() {
   let isEligibleResult = HolidayEventsUtilsDefault.isEligible();
   if (isEligibleResult) {
     if (isEligibleResult) {
-      isEligibleResult = null != tmp3(17381).soundpack;
+      isEligibleResult = null != HolidayEventsConfigDefault.soundpack;
     }
     if (isEligibleResult) {
       isEligibleResult = name !== lastSoundpackExperimentId;
     }
     if (isEligibleResult) {
-      isEligibleResult = soundpack !== tmp3(17381).soundpack;
+      isEligibleResult = soundpack !== HolidayEventsConfigDefault.soundpack;
     }
     if (isEligibleResult) {
-      SoundpackActions.setSoundpack(tmp3(17381).soundpack, name);
+      SoundpackActions.setSoundpack(HolidayEventsConfigDefault.soundpack, name);
     }
   } else {
     SoundpackActions.setSoundpack(Soundpacks.CLASSIC, null);
   }
+  const tmp3Result = HolidayEventsUtilsDefault;
 };
 prototype["updateRingtone"] = function updateRingtone() {
   if (obj.isEligible()) {
@@ -64,6 +65,7 @@ prototype["updateRingtone"] = function updateRingtone() {
   } else {
     setIncomingRingtone.setIncomingRingtone("call_ringing", "call_ringing.mp3");
   }
+  obj = HolidayEventsUtilsDefault;
 };
 const holidayEventsManager = new HolidayEventsManager();
 const size = fn(2);

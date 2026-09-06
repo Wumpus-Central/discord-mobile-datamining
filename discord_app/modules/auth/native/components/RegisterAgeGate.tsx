@@ -160,7 +160,7 @@ export default function RegisterAgeGate() {
     tmp26Result = null;
     if ("" !== message) {
       const obj7 = { children: message };
-      tmp26Result = tmp26(tmp18(tmp3[26]), obj7);
+      tmp26Result = closure_12(tmp18(tmp3[26]), obj7);
     }
   }
   items3[3] = tmp26Result;
@@ -170,7 +170,6 @@ export default function RegisterAgeGate() {
   const obj8 = { modal: true, open: tmp14, title: null, mode: "date", theme: null, date: null, maximumDate: null, minimumDate: null, onConfirm: null, onDateChange: null, onCancel: null, buttonColor: null };
   const tmp18Result1 = context(birthday[24]);
   const tmp23 = !tmp22;
-  const tmp25 = closure_14;
   const tmp9 = null != consent && consent;
   const intl7 = tmp2(tmp3[21]).intl;
   obj8.title = intl7.string(require("util").t.xNpFJ6);
@@ -201,5 +200,5 @@ export default function RegisterAgeGate() {
   obj8.buttonColor = tmp.datePickerButton.color;
   items4[1] = closure_12(tmp18Result2, obj8);
   obj9.children = items4;
-  return closure_13(tmp25, obj9);
+  return closure_13(closure_14, obj9);
 };

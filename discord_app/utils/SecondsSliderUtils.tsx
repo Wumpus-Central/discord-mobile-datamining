@@ -7,7 +7,7 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/SecondsSliderUtils.tsx");
 
-export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPerUser, arg1, intl) {
+export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPerUser, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;

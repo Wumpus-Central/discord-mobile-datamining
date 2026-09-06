@@ -1,6 +1,7 @@
 // === Module 17375: GuildRoomSpatialAudioManager ===
 
 // Module 17375 (GuildRoomSpatialAudioManager)
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4760 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
 import GuildRoomSpatialAudio from "GuildRoomSpatialAudio" /* 17376 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -13,7 +14,6 @@ import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 import GuildRoomStore from "GuildRoomStore" /* 4718 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-const GuildRoomsExperiment = tmp(4760);
 require = fn;
 class GuildRoomSpatialAudioManager extends tmp2 {
   constructor() {
@@ -102,6 +102,7 @@ prototype["apply"] = function apply() {
               let setUserPositionResult = setUserPosition.setUserPosition(tmp6, obj.livingRoomWorldPointToMediaEnginePoint(tmp7));
               continue;
             }
+            tmp2 = entries[Symbol.iterator]();
           });
           const obj3 = require("GuildRoomSpatialAudio");
         }

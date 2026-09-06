@@ -13,5 +13,6 @@ export const closeConversationsAndJumpToMessage = function closeConversationsAnd
     rootNavigationRef.goBack();
   }
   transitionToChannel.transitionToMessage(channelId, id, { navigationReplace: true });
+  const tmpResult = transitionToChannel;
 };
 export const ConversationNavigatorScreens = { LIST: "conversation_list", FOCUS: "conversation_focus" };

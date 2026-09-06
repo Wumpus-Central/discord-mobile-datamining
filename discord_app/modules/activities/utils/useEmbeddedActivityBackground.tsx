@@ -51,10 +51,9 @@ export default function useEmbeddedActivityBackground(applicationId) {
         while (obj !== undefined) {
           let tmp5 = _slicedToArray(tmp3, 2);
           [r10020, tmp6] = tmp5;
-          let tmp7 = tmp6;
           if (null != tmp6) {
-            if ("" !== tmp7.id) {
-              if (current.includes(tmp7.name)) {
+            if ("" !== tmp6.id) {
+              if (current.includes(tmp6.name)) {
                 let tmp12 = c2(tmp6.id);
                 obj.return();
               }

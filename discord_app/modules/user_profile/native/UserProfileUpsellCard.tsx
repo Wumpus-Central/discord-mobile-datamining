@@ -43,11 +43,11 @@ export default function UserProfileUpsellCard(headerText) {
   if (null != headerText) {
     obj = { style: tmp.titleContainer, children: null };
     const obj1 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const items3 = [tmp2(tmp3(8662).NitroWheelIcon, obj1), ];
+    const items3 = [closure_6(tmp3(8662).NitroWheelIcon, obj1), ];
     const obj2 = { variant: "heading-sm/bold", children: headerText };
-    items3[1] = tmp2(tmp3(4556).Text, obj2);
+    items3[1] = closure_6(tmp3(4556).Text, obj2);
     obj.children = items3;
-    tmp6Result = tmp6(closure_3, obj);
+    tmp6Result = closure_7(closure_3, obj);
   }
   const items4 = [tmp6Result, children, ];
   const obj3 = {

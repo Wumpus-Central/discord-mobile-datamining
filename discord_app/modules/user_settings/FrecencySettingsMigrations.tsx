@@ -1,6 +1,7 @@
 // === Module 14456: FrecencySettingsMigrations ===
 
 // Module 14456 (FrecencySettingsMigrations)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
@@ -47,12 +48,12 @@ function readFavoriteGIFs(arg0) {
         let obj = FavoriteGIF.create();
         format = format.format;
         if (constants.IMAGE === format) {
-          let NONE = tmp(1222).GIFType.IMAGE;
+          let NONE = frecency_user_settings.GIFType.IMAGE;
         } else if (tmp4.VIDEO === format) {
-          NONE = tmp(1222).GIFType.VIDEO;
+          NONE = frecency_user_settings.GIFType.VIDEO;
         } else {
           const format2 = format.format;
-          NONE = tmp(1222).GIFType.NONE;
+          NONE = frecency_user_settings.GIFType.NONE;
         }
         obj.format = NONE;
         ({ src: tmp3.src, width: tmp3.width, height: tmp3.height } = format);
@@ -130,12 +131,12 @@ let items = [
         if (state.favorites.length > 0) {
           const FavoriteStickers = frecency_user_settings.FavoriteStickers;
           favoriteStickers.favoriteStickers = FavoriteStickers.create();
-          let tmpResult = tmp(12);
+          let tmpResult = _modDef12;
           favoriteStickers.favoriteStickers.stickerIds = tmpResult.uniq(state.favorites).slice(0, React3);
           flag = true;
           const uniqResult = tmpResult.uniq(state.favorites);
         }
-        tmpResult = tmp(12);
+        tmpResult = _modDef12;
         if (tmpResult.size(state.usageHistory) > 0) {
           const StickerFrecency = frecency_user_settings.StickerFrecency;
           favoriteStickers.stickerFrecency = StickerFrecency.create();
@@ -173,12 +174,12 @@ let items = [
         if (tmp3) {
           const FavoriteEmojis = frecency_user_settings.FavoriteEmojis;
           favoriteEmojis.favoriteEmojis = FavoriteEmojis.create();
-          let tmpResult = tmp(12);
+          let tmpResult = _modDef12;
           favoriteEmojis.favoriteEmojis.emojis = tmpResult.uniq(state.favorites).slice(0, React3);
           flag = true;
           const uniqResult = tmpResult.uniq(state.favorites);
         }
-        tmpResult = tmp(12);
+        tmpResult = _modDef12;
         if (tmpResult.size(state.usageHistory) > 0) {
           const EmojiFrecency = frecency_user_settings.EmojiFrecency;
           favoriteEmojis.emojiFrecency = EmojiFrecency.create();
@@ -304,12 +305,12 @@ let items = [
       if (null == state) {
         return false;
       } else {
-        let tmpResult = tmp(12);
+        let tmpResult = _modDef12;
         let flag = false;
         if (tmpResult.size(state.favoriteSounds) > 0) {
           const FavoriteSoundboardSounds = frecency_user_settings.FavoriteSoundboardSounds;
           arg0.favoriteSoundboardSounds = FavoriteSoundboardSounds.create();
-          tmpResult = tmp(11);
+          tmpResult = SnowflakeUtilsDefault;
           const keys = tmpResult.keys(state.favoriteSounds);
           let item = keys.forEach((item) => {
             item = new Set(state.favoriteSounds[item]).forEach((item) => {
@@ -375,12 +376,11 @@ let items = [
           const EmojiFrecency2 = frecency_user_settings.EmojiFrecency;
           EmojiFrecency2.mergePartial(obj, emojiFrecency.emojiFrecency);
           if (null != emojiFrecency.emojiReactionFrecency) {
-            const EmojiFrecency3 = tmp3(1222).EmojiFrecency;
+            const EmojiFrecency3 = frecency_user_settings.EmojiFrecency;
             EmojiFrecency3.mergePartial(obj, emojiFrecency.emojiReactionFrecency);
           }
           emojiFrecency.emojiReactionFrecency = obj;
           flag = true;
-          tmp3 = require;
         }
         return flag;
       }
@@ -412,14 +412,13 @@ let items = [
                   tmp9.src = "https:" + tmp9.src;
                   flag = true;
                 }
-                let tmp3 = require;
                 let isMatch = tmp9.format !== frecency_user_settings.GIFType.IMAGE;
                 if (isMatch) {
                   let obj = /\.(webp|avif|gif)(\?|$)/i;
                   isMatch = obj.test(tmp9.src);
                 }
                 if (isMatch) {
-                  tmp9.format = tmp3(1222).GIFType.IMAGE;
+                  tmp9.format = frecency_user_settings.GIFType.IMAGE;
                   flag = true;
                 }
                 flag3 = flag;

@@ -69,12 +69,12 @@ export default {
           if (null != data) {
             data = nativeEvent.nativeEvent.data;
             if (data !== SharedCaptchaUtils.CaptchaError.CANCEL) {
-              if (data !== tmp17(11277).CaptchaError.ERROR) {
-                if (data !== tmp17(11277).CaptchaError.EXPIRED) {
-                  const HCAPTCHA2 = tmp17(1326).CaptchaTypes.HCAPTCHA;
+              if (data !== SharedCaptchaUtils.CaptchaError.ERROR) {
+                if (data !== SharedCaptchaUtils.CaptchaError.EXPIRED) {
+                  const HCAPTCHA2 = V8APIError.CaptchaTypes.HCAPTCHA;
                   let obj = { captcha_event_name: "verify", captcha_service: HCAPTCHA2, sitekey, captcha_flow_key: v4Result };
                   AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj);
-                  obj = { name: tmp17(7607).MetricEvents.CAPTCHA_EVENT, tags: null };
+                  obj = { name: MetricEvents.MetricEvents.CAPTCHA_EVENT, tags: null };
                   const _HermesInternal3 = HermesInternal;
                   const items = ["event_name:" + "verify", ];
                   const _HermesInternal4 = HermesInternal;
@@ -85,7 +85,7 @@ export default {
                 }
               }
             }
-            const HCAPTCHA = tmp17(1326).CaptchaTypes.HCAPTCHA;
+            const HCAPTCHA = V8APIError.CaptchaTypes.HCAPTCHA;
             obj = AnalyticsUtilsDefault;
             const obj1 = { captcha_event_name: data, captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
             obj.track(constants.CAPTCHA_EVENT, obj1);
@@ -175,12 +175,12 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
       if (null != nativeEvent.nativeEvent.data) {
         const data = nativeEvent.nativeEvent.data;
         if (data !== SharedCaptchaUtils.CaptchaError.CANCEL) {
-          if (data !== tmp10(11277).CaptchaError.ERROR) {
-            if (data !== tmp10(11277).CaptchaError.EXPIRED) {
-              const HCAPTCHA2 = tmp10(1326).CaptchaTypes.HCAPTCHA;
+          if (data !== SharedCaptchaUtils.CaptchaError.ERROR) {
+            if (data !== SharedCaptchaUtils.CaptchaError.EXPIRED) {
+              const HCAPTCHA2 = V8APIError.CaptchaTypes.HCAPTCHA;
               let obj = { captcha_event_name: "verify", captcha_service: HCAPTCHA2, sitekey: siteKey, captcha_flow_key };
               AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj);
-              obj = { name: tmp10(7607).MetricEvents.CAPTCHA_EVENT, tags: null };
+              obj = { name: MetricEvents.MetricEvents.CAPTCHA_EVENT, tags: null };
               const _HermesInternal3 = HermesInternal;
               const items = ["event_name:" + "verify", ];
               const _HermesInternal4 = HermesInternal;
@@ -191,7 +191,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
             }
           }
         }
-        const HCAPTCHA = tmp10(1326).CaptchaTypes.HCAPTCHA;
+        const HCAPTCHA = V8APIError.CaptchaTypes.HCAPTCHA;
         obj = AnalyticsUtilsDefault;
         const obj1 = { captcha_event_name: data, captcha_service: HCAPTCHA, sitekey: siteKey, captcha_flow_key };
         obj.track(constants.CAPTCHA_EVENT, obj1);
@@ -219,12 +219,12 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
       if (null != nativeEvent.nativeEvent.data) {
         const data = nativeEvent.nativeEvent.data;
         if (data !== SharedCaptchaUtils.CaptchaError.CANCEL) {
-          if (data !== tmp10(11277).CaptchaError.ERROR) {
-            if (data !== tmp10(11277).CaptchaError.EXPIRED) {
-              const HCAPTCHA2 = tmp10(1326).CaptchaTypes.HCAPTCHA;
+          if (data !== SharedCaptchaUtils.CaptchaError.ERROR) {
+            if (data !== SharedCaptchaUtils.CaptchaError.EXPIRED) {
+              const HCAPTCHA2 = V8APIError.CaptchaTypes.HCAPTCHA;
               let obj = { captcha_event_name: "verify", captcha_service: HCAPTCHA2, sitekey: siteKey, captcha_flow_key };
               AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj);
-              obj = { name: tmp10(7607).MetricEvents.CAPTCHA_EVENT, tags: null };
+              obj = { name: MetricEvents.MetricEvents.CAPTCHA_EVENT, tags: null };
               const _HermesInternal3 = HermesInternal;
               const items = ["event_name:" + "verify", ];
               const _HermesInternal4 = HermesInternal;
@@ -235,7 +235,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
             }
           }
         }
-        const HCAPTCHA = tmp10(1326).CaptchaTypes.HCAPTCHA;
+        const HCAPTCHA = V8APIError.CaptchaTypes.HCAPTCHA;
         obj = AnalyticsUtilsDefault;
         const obj1 = { captcha_event_name: data, captcha_service: HCAPTCHA, sitekey: siteKey, captcha_flow_key };
         obj.track(constants.CAPTCHA_EVENT, obj1);

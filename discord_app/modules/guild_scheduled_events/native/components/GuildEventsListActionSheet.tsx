@@ -16,20 +16,20 @@ function GuildEventsListHeader(arg0) {
   let tmp3Result = useCanCreateAnEventDefault(guild.id);
   importDefault = tmp3Result;
   if (eventCount > 0) {
-    const intl2 = tmp4(1114).intl;
+    const intl2 = guild(1114).intl;
     let obj = { count: eventCount };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp4(1114).t.p1zLAf, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(guild(1114).t.p1zLAf, obj);
   } else {
-    const intl = tmp4(1114).intl;
-    formatToPlainStringResult = intl.string(tmp4(1114).t.tlopTM);
+    const intl = guild(1114).intl;
+    formatToPlainStringResult = intl.string(guild(1114).t.tlopTM);
   }
   obj = { title: formatToPlainStringResult, trailing: null };
   if (tmp3Result) {
     obj = { accessibilityLabel: null, label: null, onPress: null };
-    const intl3 = tmp4(1114).intl;
-    obj.accessibilityLabel = intl3.string(tmp4(1114).t["60lJ0C"]);
-    const intl4 = tmp4(1114).intl;
-    obj.label = intl4.string(tmp4(1114).t.NzROFF);
+    const intl3 = guild(1114).intl;
+    obj.accessibilityLabel = intl3.string(guild(1114).t["60lJ0C"]);
+    const intl4 = guild(1114).intl;
+    obj.label = intl4.string(guild(1114).t.NzROFF);
     obj.onPress = function onPress() {
       if (closure_1) {
         let obj = GuildScheduledEventModalActionCreators;
@@ -42,7 +42,7 @@ function GuildEventsListHeader(arg0) {
         const result1 = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(guild, obj);
       }
     };
-    tmp3Result = tmp3(tmp4(9718).ActionSheetHeaderPressableText, obj);
+    tmp3Result = jsx(guild(9718).ActionSheetHeaderPressableText, { accessibilityLabel: null, label: null, onPress: null });
   }
   obj.trailing = tmp3Result;
   return jsx(guild(7149).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });

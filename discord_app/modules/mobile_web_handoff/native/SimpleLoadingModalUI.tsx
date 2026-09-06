@@ -65,8 +65,8 @@ export default function SimpleLoadingModal(operation) {
     callback();
   }, items1);
   const items2 = [callback, I];
-  const callback2 = onRejected.useCallback((arg0) => {
-    onRejected(arg0);
+  const callback2 = onRejected.useCallback((_55) => {
+    onRejected(_55);
     callback();
   }, items2);
   const items3 = [operation, callback1, callback2];

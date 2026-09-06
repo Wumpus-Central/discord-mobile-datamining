@@ -51,18 +51,19 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   const items3 = [memo, stateFromStores, memo1];
   const memo2 = memo.useMemo(() => {
     if (memo1 != null) {
-      const item = arr.forEach((id) => {
+      const item = memo1.forEach((id) => {
         let obj = closure_1(stateFromStores[5]);
         if (null == closure_1_2.getEntry(id.application.id)) {
           obj = { timestamp: extractTimestampResult };
           closure_1_2.track(id.application.id, obj);
         }
+        extractTimestampResult = obj.extractTimestamp(id.id);
       });
     }
     stateFromStores.compute();
     let mapped;
     if (memo1 != null) {
-      mapped = arr.map((application) => found(stateFromStores[6]).getApplicationCommandSection(application.application, true));
+      mapped = memo1.map((application) => found(stateFromStores[6]).getApplicationCommandSection(application.application, true));
     }
     if (mapped == null) {
       mapped = [];

@@ -69,7 +69,7 @@ export default function UserProfileNote(style) {
   obj.titleIcon = <PaperPlusIcon size="xs" color="interactive-text-default" />;
   if (tmp6Result) {
     const obj2 = { variant: "text-md/normal", color: "text-default", children: note };
-    tmp6Result = tmp6(tmp2(tmp3[12]).Text, obj2);
+    tmp6Result = jsx(tmp2(tmp3[12]).Text, { variant: "text-md/normal", color: "text-default", children: note });
   }
   obj.children = tmp6Result;
   obj.children = jsx(onBack(trackUserProfileAction[11]), { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null });

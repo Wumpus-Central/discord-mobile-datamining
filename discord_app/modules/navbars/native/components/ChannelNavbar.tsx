@@ -10,6 +10,7 @@ import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 438
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useChannelName from "useChannelName" /* 4713 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import Pressables from "Pressables" /* 5123 */;
 import isStreamingDefault from "isStreaming" /* 8259 */;
 import ActivityStatusDefault from "ActivityStatus" /* 10876 */;
@@ -172,12 +173,12 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   }
   let channelIcon = null;
   if (null != stateFromStores) {
-    let tmp2Result = tmp2(5028);
+    let tmp2Result = utils_ChannelUtils;
     channelIcon = tmp2Result.getChannelIcon(stateFromStores);
   }
   let channelName = null;
   if (null != stateFromStores) {
-    tmp2Result = tmp2(4713);
+    tmp2Result = useChannelName;
     channelName = tmp2Result.computeChannelName(stateFromStores, UserStore, RelationshipStore);
   }
   let isDMResult;
@@ -191,7 +192,7 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
     const isSystemDMResult = stateFromStores.isSystemDM();
     if (!isSystemDMResult) {
       obj = { userId: recipientId, style: tmp.status };
-      tmp16Result = tmp16(ConnectedStatus, obj);
+      tmp16Result = closure_16(ConnectedStatus, obj);
     }
     const obj1 = { userId: recipientId, guildId: stateFromStores.guild_id };
     obj2 = { onPressTitle, children: null };
@@ -223,8 +224,8 @@ export const ChannelTitle = noop.memo((threadDraft) => {
     let channel = null;
     if (channelId !== StaticChannelRoute.GUILD_HOME) {
       channel = null;
-      if (tmp !== StaticChannelRoute.MEMBER_SAFETY) {
-        channel = ChannelStore.getChannel(tmp);
+      if (channelId !== StaticChannelRoute.MEMBER_SAFETY) {
+        channel = ChannelStore.getChannel(channelId);
       }
     }
     return channel;
@@ -243,18 +244,18 @@ export const ChannelTitle = noop.memo((threadDraft) => {
   const items4 = [stateFromStores1, threadDraft];
   const stateFromStores3 = obj4.useStateFromStores(items3, () => {
     if (null != threadDraft) {
-      if (null != tmp.parentChannelId) {
-        let channel = ChannelStore.getChannel(tmp.parentChannelId);
+      if (null != threadDraft.parentChannelId) {
+        let channel = ChannelStore.getChannel(threadDraft.parentChannelId);
       }
       return channel;
     }
     channel = null;
     if (null != stateFromStores1) {
       channel = null;
-      if (null != tmp2.parent_id) {
+      if (null != stateFromStores1.parent_id) {
         channel = null;
-        if (THREAD_CHANNEL_TYPES.has(tmp2.type)) {
-          channel = ChannelStore.getChannel(tmp2.parent_id);
+        if (THREAD_CHANNEL_TYPES.has(stateFromStores1.type)) {
+          channel = ChannelStore.getChannel(stateFromStores1.parent_id);
         }
       }
     }
@@ -272,26 +273,26 @@ export const ChannelTitle = noop.memo((threadDraft) => {
   if (selectedSpecialNavigationPath === channelId(stateFromStores1[21]).SpecialNavigationPath.FRIENDS) {
     obj = { style, children: null };
     obj = { title: null };
-    const intl9 = tmp2(tmp3[17]).intl;
-    obj.title = intl9.string(tmp2(tmp3[17]).t.TdEu5X);
+    const intl9 = channelId(tmp3[17]).intl;
+    obj.title = intl9.string(channelId(tmp3[17]).t.TdEu5X);
     obj.children = closure_16(ChannelTitleContent, obj);
     return closure_16(ChannelTitleWrapper, obj);
   } else if (channelId === StaticChannelRoute.GUILD_HOME) {
-    obj1 = { size: tmp2(tmp3[23]).Icon.Sizes.CUSTOM, source: tmp8(tmp3[24]), style: tmp.homeIcon };
+    obj1 = { size: channelId(tmp3[23]).Icon.Sizes.CUSTOM, source: tmp8(tmp3[24]), style: tmp.homeIcon };
     const obj2 = { onPressTitle, style, children: null };
     obj3 = { title: null, icon: null };
-    const intl8 = tmp2(tmp3[17]).intl;
-    obj3.title = intl8.string(tmp2(tmp3[17]).t.Ym2Ri6);
-    obj3.icon = closure_16(tmp2(tmp3[23]).Icon, obj1);
+    const intl8 = channelId(tmp3[17]).intl;
+    obj3.title = intl8.string(channelId(tmp3[17]).t.Ym2Ri6);
+    obj3.icon = closure_16(channelId(tmp3[23]).Icon, obj1);
     obj2.children = closure_16(ChannelTitleContent, obj3);
     return closure_16(ChannelTitleWrapper, obj2);
   } else if (channelId === tmp62.MEMBER_SAFETY) {
-    obj4 = { size: tmp2(tmp3[23]).Icon.Sizes.CUSTOM, source: tmp8(tmp3[25]), style: tmp.homeIcon };
+    obj4 = { size: channelId(tmp3[23]).Icon.Sizes.CUSTOM, source: tmp8(tmp3[25]), style: tmp.homeIcon };
     obj5 = { onPressTitle, style, children: null };
     const obj6 = { title: null, icon: null };
-    const intl7 = tmp2(tmp3[17]).intl;
-    obj6.title = intl7.string(tmp2(tmp3[17]).t["9Oq93m"]);
-    obj6.icon = closure_16(tmp2(tmp3[23]).Icon, obj4);
+    const intl7 = channelId(tmp3[17]).intl;
+    obj6.title = intl7.string(channelId(tmp3[17]).t["9Oq93m"]);
+    obj6.icon = closure_16(channelId(tmp3[23]).Icon, obj4);
     obj5.children = closure_16(ChannelTitleContent, obj6);
     return closure_16(ChannelTitleWrapper, obj5);
   } else if (tmp9) {
@@ -301,8 +302,8 @@ export const ChannelTitle = noop.memo((threadDraft) => {
     obj7.style = tmp.premiumIcon;
     const obj8 = { style, children: null };
     const obj9 = { title: null, icon: null };
-    const intl6 = tmp2(tmp3[17]).intl;
-    obj9.title = intl6.string(tmp2(tmp3[17]).t["KzCF/6"]);
+    const intl6 = channelId(tmp3[17]).intl;
+    obj9.title = intl6.string(channelId(tmp3[17]).t["KzCF/6"]);
     obj9.icon = closure_16(tmp8Result, obj7);
     obj8.children = closure_16(ChannelTitleContent, obj9);
     return closure_16(ChannelTitleWrapper, obj8);
@@ -317,31 +318,31 @@ export const ChannelTitle = noop.memo((threadDraft) => {
           if (threadDraft.name.length > 0) {
             let name = threadDraft.name;
           }
-          let tmp2Result = tmp2(tmp3[18]);
-          const threadChannelIcon = tmp2Result.getThreadChannelIcon(threadDraft.isPrivate ? tmp13.PRIVATE_THREAD : tmp13.PUBLIC_THREAD);
-          const intl3 = tmp2(tmp3[17]).intl;
+          let tmp2Result = channelId(tmp3[18]);
+          const threadChannelIcon = tmp2Result.getThreadChannelIcon(threadDraft.isPrivate ? constants.PRIVATE_THREAD : constants.PUBLIC_THREAD);
+          const intl3 = channelId(tmp3[17]).intl;
           const obj10 = { channelName: name };
           const obj11 = { style, children: null };
-          const obj12 = { title: name, accessibleTitle: intl3.formatToPlainString(tmp2(tmp3[17]).t["OkzL+Q"], obj10), icon: threadChannelIcon, subTitle: null };
+          const obj12 = { title: name, accessibleTitle: intl3.formatToPlainString(channelId(tmp3[17]).t["OkzL+Q"], obj10), icon: threadChannelIcon, subTitle: null };
           let tmp15Result = null != stateFromStores3;
           if (tmp15Result) {
             const obj13 = { parentChannel: stateFromStores3 };
-            tmp15Result = tmp15(ParentChannelSubTitle, obj13);
+            tmp15Result = closure_16(ParentChannelSubTitle, obj13);
           }
           obj12.subTitle = tmp15Result;
           obj11.children = closure_16(ChannelTitleContent, obj12);
           return closure_16(ChannelTitleWrapper, obj11);
         }
-        const intl2 = tmp2(tmp3[17]).intl;
-        name = intl2.string(tmp2(tmp3[17]).t["4WNcpu"]);
+        const intl2 = channelId(tmp3[17]).intl;
+        name = intl2.string(channelId(tmp3[17]).t["4WNcpu"]);
       }
     }
-    tmp2Result = tmp2(tmp3[28]);
+    tmp2Result = channelId(tmp3[28]);
     if (tmp2Result.shouldNSFWGateGuild(threadDraft.guildId)) {
       const obj14 = { style, children: null };
       const obj15 = { title: null };
-      const intl5 = tmp2(tmp3[17]).intl;
-      obj15.title = intl5.string(tmp2(tmp3[17]).t.HbPHt1);
+      const intl5 = channelId(tmp3[17]).intl;
+      obj15.title = intl5.string(channelId(tmp3[17]).t.HbPHt1);
       obj14.children = closure_16(ChannelTitleContent, obj15);
       return closure_16(ChannelTitleWrapper, obj14);
     } else if (null == stateFromStores1) {
@@ -350,9 +351,9 @@ export const ChannelTitle = noop.memo((threadDraft) => {
       obj16.children = closure_16(ChannelTitleContent, obj17);
       return closure_16(ChannelTitleWrapper, obj16);
     } else {
-      const channelName = tmp2(tmp3[19]).computeChannelName(stateFromStores1, UserStore, RelationshipStore);
-      const tmp2Result1 = tmp2(tmp3[19]);
-      const channelIconWithGuild = tmp2(tmp3[18]).getChannelIconWithGuild(stateFromStores1, stateFromStores2);
+      const channelName = channelId(tmp3[19]).computeChannelName(stateFromStores1, UserStore, RelationshipStore);
+      const tmp2Result1 = channelId(tmp3[19]);
+      const channelIconWithGuild = channelId(tmp3[18]).getChannelIconWithGuild(stateFromStores1, stateFromStores2);
       if (stateFromStores1.isDM()) {
         const recipientId = stateFromStores1.getRecipientId();
         const obj18 = { userId: recipientId, style: tmp.navbarTitlePrimaryText };
@@ -360,7 +361,7 @@ export const ChannelTitle = noop.memo((threadDraft) => {
         const isSystemDMResult = stateFromStores1.isSystemDM();
         if (!isSystemDMResult) {
           const obj19 = { userId: recipientId, style: tmp.status };
-          tmp31Result = tmp31(ConnectedStatus, obj19);
+          tmp31Result = closure_16(ConnectedStatus, obj19);
         }
         const obj20 = { userId: recipientId, guildId: null };
         let guild_id;
@@ -374,9 +375,9 @@ export const ChannelTitle = noop.memo((threadDraft) => {
         obj21.children = closure_16(ChannelTitleContent, obj22);
         return closure_16(ChannelTitleWrapper, obj21);
       } else {
-        const intl4 = tmp2(tmp3[17]).intl;
+        const intl4 = channelId(tmp3[17]).intl;
         const formatToPlainString = intl4.formatToPlainString;
-        const t2 = tmp2(tmp3[17]).t;
+        const t2 = channelId(tmp3[17]).t;
         if (isThreadResult) {
           const obj23 = { channelName };
           const obj24 = { onPressTitle, style, children: null };
@@ -384,7 +385,7 @@ export const ChannelTitle = noop.memo((threadDraft) => {
           let tmp24Result = null != stateFromStores3;
           if (tmp24Result) {
             const obj26 = { parentChannel: stateFromStores3 };
-            tmp24Result = tmp24(ParentChannelSubTitle, obj26);
+            tmp24Result = closure_16(ParentChannelSubTitle, obj26);
           }
           obj25.subTitle = tmp24Result;
           obj24.children = closure_16(ChannelTitleContent, obj25);
@@ -398,7 +399,7 @@ export const ChannelTitle = noop.memo((threadDraft) => {
         }
         isThreadResult = stateFromStores1.isThread();
       }
-      const tmp2Result2 = tmp2(tmp3[18]);
+      const tmp2Result2 = channelId(tmp3[18]);
     }
   }
   tmp9 = threadDraft(stateFromStores1[22])();
@@ -447,7 +448,7 @@ export const ChannelButtons = function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = tmp3(closure_1(10625), obj);
+        tmp3Result = closure_16(closure_1(10625), obj);
         const tmp4Result = closure_1(10625);
       }
       children[1] = tmp3Result;

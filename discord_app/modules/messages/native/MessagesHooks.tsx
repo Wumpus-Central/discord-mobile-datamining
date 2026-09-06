@@ -2,10 +2,12 @@
 
 // Module 11476 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
+import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7163 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
 import messages_MessagesUtils from "messages/MessagesUtils" /* 11252 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11477 */;
 import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11478 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -29,6 +31,7 @@ export const useMessageAuthorActivities = function useMessageAuthorActivities(ar
       if (tmp) {
         obj[author.author.id] = null;
       }
+      tmp = null != author.author && null != author.activity;
     });
     return obj;
   }, items);
@@ -45,6 +48,7 @@ export const useFetchMessageApplications = function useFetchMessageApplications(
       if (tmp) {
         set.add(applicationId.applicationId);
       }
+      tmp = null != applicationId.applicationId && null == applicationId.application;
     });
     return Array.from(set);
   }, items);
@@ -53,12 +57,13 @@ export const useFetchMessageApplications = function useFetchMessageApplications(
   const effect = noop.useEffect(() => {
     if (!obj.areArraysShallowEqual(memo, ref.current)) {
       const obj2 = ApplicationActionCreatorsDefault;
-      const found = _modDef12(tmp3).filter(GlobalUtils.isNotNullish);
-      const arr = _modDef12(tmp3);
+      const found = _modDef12(memo).filter(GlobalUtils.isNotNullish);
+      const arr = _modDef12(memo);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
-      ref.current = tmp3;
+      ref.current = memo;
       const iter = found.uniq();
     }
+    obj = discord_common_shallowEqual;
   }, items1);
 };
 export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChannelInviteStartTimes(stateFromStores4) {
@@ -96,7 +101,6 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.guild) {
-        let tmp4 = require;
         let obj = InviteTypeUtils;
         if (obj.isVoiceChannelInvite(tmp3)) {
           let id = tmp3.guild.id;
@@ -106,7 +110,7 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
             result = VoiceChannelStartTimeStore.hasRequestedStartTimes(tmp8);
           }
           if (!result) {
-            let tmp4Result = tmp4(11477);
+            let tmp4Result = ChannelInfoActionCreators;
             let channelInfo = tmp4Result.fetchChannelInfo(tmp8);
           }
         }

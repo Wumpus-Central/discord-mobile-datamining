@@ -1,6 +1,8 @@
 // === Module 12262: ChatInputAccessibilityDivider ===
 
 // Module 12262 (ChatInputAccessibilityDivider)
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4962 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,13 +20,13 @@ export const ChatInputAccessibilityDivider = noop.memo(() => {
     tmp3 = null;
     if (!tmpResult.isAndroid()) {
       obj = { nativeID: "chat-input-accessibility-divider", accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null };
-      const intl = tmp(1114).intl;
-      obj.accessibilityLabel = intl.string(tmp(1114).t["uKZtC/"]);
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t["uKZtC/"]);
       const items = [absoluteFill.absoluteFill, { height: 1 }];
       obj.style = items;
       tmp3 = <React3 nativeID="chat-input-accessibility-divider" accessible accessibilityLabel={null} accessibilityRole="header" style={null} />;
     }
-    tmpResult = tmp(1115);
+    tmpResult = PlatformUtils;
   }
   return tmp3;
 });

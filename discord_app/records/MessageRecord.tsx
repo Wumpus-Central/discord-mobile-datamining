@@ -4,6 +4,7 @@
 import FlagUtils from "FlagUtils" /* 1384 */;
 import ReactionUtils from "ReactionUtils" /* 4211 */;
 import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7763 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9245 */;
 import Record from "Record" /* 1386 */;
 
@@ -84,8 +85,8 @@ class MinimalMessageRecord extends tmp2 {
     return tmp2;
   }
 }
-MinimalMessageRecord.prototype["hasFlag"] = function hasFlag(arg0) {
-  return FlagUtils.hasFlag(this.flags, arg0);
+MinimalMessageRecord.prototype["hasFlag"] = function hasFlag(IS_ANIMATED) {
+  return FlagUtils.hasFlag(this.flags, IS_ANIMATED);
 };
 class MessageRecord extends MinimalMessageRecord {
   constructor(arg0) {
@@ -197,8 +198,8 @@ prototype["userHasReactedWithEmoji"] = function userHasReactedWithEmoji(arg0, ar
         me = emoji.me;
       }
       if (!me) {
-        let me_burst = !tmp;
-        if (!tmp) {
+        let me_burst = !closure_1;
+        if (!closure_1) {
           me_burst = emoji.me_burst;
         }
         me = me_burst;
@@ -267,7 +268,7 @@ prototype["addReaction"] = function addReaction(emoji) {
           return emoji;
         }
       }
-      if (NORMAL === tmp(7763).ReactionTypes.BURST) {
+      if (NORMAL === MessageReactionsTypes.ReactionTypes.BURST) {
         if (flag) {
           if (emoji.me_burst) {
             return emoji;
@@ -280,7 +281,7 @@ prototype["addReaction"] = function addReaction(emoji) {
           }
           obj = {};
           const merged = Object.assign(emoji);
-          obj.me_burst = tmp28 || emoji.me_burst;
+          obj.me_burst = flag || emoji.me_burst;
           obj.burst_count = sum;
           obj = {};
           const merged1 = Object.assign(emoji.count_details);
@@ -290,8 +291,7 @@ prototype["addReaction"] = function addReaction(emoji) {
           tmp3 = obj;
         }
         burst_colors = colors;
-        tmp28 = flag;
-      } else if (tmp12 === tmp(7763).ReactionTypes.VOTE) {
+      } else if (NORMAL === MessageReactionsTypes.ReactionTypes.VOTE) {
         const count_details2 = emoji.count_details;
         let num7;
         if (count_details2 != null) {
@@ -330,7 +330,6 @@ prototype["addReaction"] = function addReaction(emoji) {
         obj3.me = flag || emoji.me;
         tmp3 = obj3;
       }
-      tmp12 = NORMAL;
     }
     return tmp3;
   });
@@ -376,7 +375,7 @@ prototype["removeReaction"] = function removeReaction(arg0) {
     if (!obj.emojiEquals(emoji.emoji, closure_0)) {
       return merged1;
     } else {
-      if (NORMAL === tmp2(7763).ReactionTypes.BURST) {
+      if (NORMAL === MessageReactionsTypes.ReactionTypes.BURST) {
         if (flag) {
           if (!merged1.me_burst) {
             let burst_count = merged1.burst_count;
@@ -384,8 +383,8 @@ prototype["removeReaction"] = function removeReaction(arg0) {
           obj = {};
           const merged = Object.assign(merged1);
           obj.burst_count = burst_count;
-          let me_burst = !tmp19;
-          if (!tmp19) {
+          let me_burst = !flag;
+          if (!flag) {
             me_burst = merged1.me_burst;
           }
           obj.me_burst = me_burst;
@@ -397,7 +396,7 @@ prototype["removeReaction"] = function removeReaction(arg0) {
           closure_3 = index;
         }
         burst_count = merged1.burst_count - 1;
-      } else if (tmp4 !== tmp2(7763).ReactionTypes.VOTE) {
+      } else if (NORMAL !== MessageReactionsTypes.ReactionTypes.VOTE) {
         if (flag) {
           if (!merged1.me) {
             let count = merged1.count;
@@ -405,8 +404,8 @@ prototype["removeReaction"] = function removeReaction(arg0) {
           obj1 = {};
           const merged2 = Object.assign(merged1);
           obj1.count = count;
-          let me = !tmp5;
-          if (!tmp5) {
+          let me = !flag;
+          if (!flag) {
             me = merged1.me;
           }
           obj1.me = me;
@@ -436,13 +435,12 @@ prototype["removeReaction"] = function removeReaction(arg0) {
       const merged5 = Object.assign(merged1.count_details);
       obj4.vote = diff;
       obj3.count_details = obj4;
-      let me_vote = !tmp12;
+      let me_vote = !flag;
       if (!flag) {
         me_vote = merged1.me_vote;
       }
       obj3.me_vote = me_vote;
       obj1 = obj3;
-      tmp4 = NORMAL;
     }
   });
   let obj = mapped[closure_3];

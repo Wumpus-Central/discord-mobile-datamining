@@ -2,6 +2,9 @@
 
 // Module 17393 (TextInputActionComponent)
 import Server from "Server" /* 1894 */;
+import Input from "Input" /* 6607 */;
+import TextField from "TextField" /* 6613 */;
+import TextAreaField from "TextAreaField" /* 7086 */;
 import ComponentStateContext from "ComponentStateContext" /* 8112 */;
 import InteractionModalUtils from "InteractionModalUtils" /* 17390 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -33,7 +36,7 @@ export default noop.memo((type) => {
   const state = noop.useState(() => {
     type = undefined;
     if (_slicedToArray != null) {
-      type = iter.type;
+      type = _slicedToArray.type;
     }
     return type === type ? _slicedToArray.value : value;
   });
@@ -48,16 +51,16 @@ export default noop.memo((type) => {
   if (Server.TextInputComponentStyle.SMALL === style) {
     const obj1 = {};
     const merged = Object.assign(obj);
-    let tmp7 = jsx(tmp(6613).TextField, {});
-  } else if (tmp(1894).TextInputComponentStyle.PARAGRAPH === style) {
+    let tmp7 = jsx(TextField.TextField, {});
+  } else if (Server.TextInputComponentStyle.PARAGRAPH === style) {
     const obj2 = {};
     const merged1 = Object.assign(obj);
-    tmp7 = jsx(tmp(7086).TextAreaField, {});
+    tmp7 = jsx(TextAreaField.TextAreaField, {});
   }
   let tmp16 = tmp7;
   if (null != label) {
     obj3 = { label, required, errorMessage: error, children: tmp7 };
-    tmp16 = jsx(tmp(6607).Input, { label, required, errorMessage: error, children: tmp7 });
+    tmp16 = jsx(Input.Input, { label, required, errorMessage: error, children: tmp7 });
   }
   return tmp16;
 });

@@ -9,7 +9,7 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/getVolumeForSound.tsx");
 
-export default function getVolumeForSound(arg0, USER) {
+export default function getVolumeForSound(arg0) {
   let tmp = USER;
   if (USER === undefined) {
     const SoundboardSettings = UserSettings.SoundboardSettings;

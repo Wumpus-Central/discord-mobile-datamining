@@ -94,24 +94,24 @@ export default function VideoEmptyState(style) {
   let tmp34 = null != errorCode;
   if (tmp34) {
     const obj5 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: null };
-    const intl3 = tmp28(1114).intl;
+    const intl3 = stream(1114).intl;
     obj6 = { errorCode };
-    obj5.children = intl3.formatToPlainString(tmp28(1114).t.ejOT95, obj6);
-    tmp34 = closure_5(tmp28(4556).Text, obj5);
+    obj5.children = intl3.formatToPlainString(stream(1114).t.ejOT95, obj6);
+    tmp34 = closure_5(stream(4556).Text, obj5);
   }
   items5[1] = tmp34;
   let tmp36 = !removeCloseButton;
   if (!removeCloseButton) {
     obj7 = { style: tmp2.buttonWrapper, children: null };
     obj8 = { pillStyle: tmp2.buttonPill, variant: "secondary-overlay", text: null, onPress: null };
-    const intl4 = tmp28(1114).intl;
-    obj8.text = intl4.string(tmp28(1114).t["4EGMWL"]);
+    const intl4 = stream(1114).intl;
+    obj8.text = intl4.string(stream(1114).t["4EGMWL"]);
     obj8.onPress = function onPress() {
       obj = StreamActionCreators;
       obj.stopStream(StreamKeyUtils.encodeStreamKey(stream));
     };
-    obj7.children = closure_5(tmp28(4976).BaseTextButton, obj8);
-    tmp36 = closure_5(tmp32, obj7);
+    obj7.children = closure_5(stream(4976).BaseTextButton, obj8);
+    tmp36 = closure_5(View, obj7);
   }
   items5[2] = tmp36;
   obj4.children = items5;

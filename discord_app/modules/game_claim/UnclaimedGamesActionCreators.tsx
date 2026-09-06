@@ -18,7 +18,7 @@ function fetchUnclaimedGames() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _fetchUnclaimedGames(arg0, value) {
+let closure_8 = async function _fetchUnclaimedGames() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -123,7 +123,7 @@ export const useUnclaimedGameIdsForGuild = function useUnclaimedGameIdsForGuild(
   }
   return tmp;
 };
-export const useHasUnclaimedGames = function useHasUnclaimedGames(id, gameClaimCoachmarkEnabled) {
+export const useHasUnclaimedGames = function useHasUnclaimedGames(id) {
   let flag = gameClaimCoachmarkEnabled;
   if (gameClaimCoachmarkEnabled === undefined) {
     flag = true;

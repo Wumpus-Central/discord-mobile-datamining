@@ -27,26 +27,26 @@ function RestrictedUser(guildId) {
   const avatarSource = user.getAvatarSource(guildId.guildId);
   const intl = util.intl;
   if (speaker) {
-    const intl3 = tmp2(1114).intl;
-    let stringResult = intl3.string(tmp2(1114).t.LqMmG2);
+    const intl3 = util.intl;
+    let stringResult = intl3.string(util.t.LqMmG2);
   } else {
     stringResult = tmp7;
     if (stateFromStores) {
-      const intl2 = tmp2(1114).intl;
-      stringResult = intl2.string(tmp2(1114).t.GMZqSi);
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.GMZqSi);
     }
   }
   obj = { style: tmp.userContainer, children: null };
   obj = { style: tmp.avatarContainer, children: null };
-  obj1 = { source: avatarSource, size: tmp2(1178).AvatarSizes.REFRESH_MEDIUM_32, style: tmp.avatar };
+  obj1 = { source: avatarSource, size: native.AvatarSizes.REFRESH_MEDIUM_32, style: tmp.avatar };
   const items2 = [closure_9(native.CutoutableAvatarImage, obj1), ];
   if (speaker) {
     const obj2 = { style: null, children: null };
     const items3 = [tmp.iconContainer];
     obj2.style = items3;
     const obj3 = { style: tmp.icon, source: user(8619), color: user(576).unsafe_rawColors.WHITE };
-    obj2.children = tmp11(tmp2(1178).Icon, obj3);
-    speaker = tmp11(tmp10, obj2);
+    obj2.children = closure_9(native.Icon, obj3);
+    speaker = closure_9(View, obj2);
   }
   items2[1] = speaker;
   obj.children = items2;
@@ -61,16 +61,16 @@ function RestrictedUser(guildId) {
     const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
     const items6 = ["#", participant.user.discriminator];
     obj6.children = items6;
-    tmp9Result = tmp9(tmp2(4556).Text, obj6);
+    tmp9Result = closure_10(Text_Text.Text, obj6);
   }
   items5[1] = tmp9Result;
   obj4.children = items5;
   const items7 = [closure_10(View, obj4), ];
   const obj7 = { style: tmp.flex, children: null };
   const obj8 = { style: stateFromStores1 ? tmp.blocked : tmp.ignored, children: null };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = util.intl;
   const string = intl4.string;
-  const t = tmp2(1114).t;
+  const t = util.t;
   if (stateFromStores1) {
     let stringResult1 = string(t["4bDptI"]);
   } else {

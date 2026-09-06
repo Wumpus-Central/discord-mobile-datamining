@@ -5,6 +5,8 @@ import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
+import TableRow from "TableRow" /* 5605 */;
+import FormRadio from "FormRadio" /* 5689 */;
 import AppIconTypes from "AppIconTypes" /* 9324 */;
 import AppIconDefault from "AppIcon" /* 15523 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -80,9 +82,10 @@ export default function AppIconRow(arg0) {
         tmp10Result = null;
       }
       obj.trailing = tmp10Result;
-      tmp10Result = tmp10(tmp3(5605).TableRow, obj, id);
+      tmp10Result = jsx(TableRow.TableRow, obj, id);
     }
     const obj1 = { selected: tmp7 };
-    tmp10Result = tmp10(tmp3(5689).FormRadio, obj1);
+    tmp10Result = jsx(FormRadio.FormRadio, { selected: tmp7 });
   }
+  const tmp3Result = useA11yRolesNative;
 };

@@ -15,15 +15,15 @@ function discardIfCurrent(arg0, arg1) {
     map.delete(arg0);
   }
 }
-function endImpressionToken(arg0) {
-  if (null != arg0) {
-    IosAttributionNativeModule.endImpression(arg0).catch(() => {
+function endImpressionToken(token) {
+  if (null != token) {
+    IosAttributionNativeModule.endImpression(token).catch(() => {
 
     });
-    const endImpressionResult = IosAttributionNativeModule.endImpression(arg0);
+    const endImpressionResult = IosAttributionNativeModule.endImpression(token);
   }
 }
-let closure_9 = async function _startNativeImpression(arg0, value) {
+let closure_9 = async function _startNativeImpression(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -173,7 +173,7 @@ let closure_9 = async function _startNativeImpression(arg0, value) {
     }
   }
 };
-let closure_10 = async function _getImpressionToken(arg0, value) {
+let closure_10 = async function _getImpressionToken(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -190,7 +190,6 @@ let closure_10 = async function _getImpressionToken(arg0, value) {
     try {
       c4 = 2;
       if (0 === num6) {
-        num6 = 1;
         if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -207,9 +206,9 @@ let closure_10 = async function _getImpressionToken(arg0, value) {
           closure_129_1 = value;
           if (null == value) {
             const _HermesInternal2 = HermesInternal;
-            logger.warn("No tracked impression for " + tmp56 + " at click time; store sheet will be unattributed");
+            logger.warn("No tracked impression for " + closure_0 + " at click time; store sheet will be unattributed");
             const obj5 = IosAttributionMetrics;
-            const result = obj5.trackIosAttributionClick(IosAttributionMetrics.IosAttributionClickResult.NO_IMPRESSION, IosAttributionNativeModule.getActiveIosAttributionFramework(), tmp56);
+            const result = obj5.trackIosAttributionClick(IosAttributionMetrics.IosAttributionClickResult.NO_IMPRESSION, IosAttributionNativeModule.getActiveIosAttributionFramework(), closure_0);
             c4 = 3;
           }
           c4 = num6;
@@ -245,7 +244,7 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
   let impressionId = arg0;
   c3 = 0;
   c4 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -369,7 +368,7 @@ export const registerViewThroughImpression = function registerViewThroughImpress
     return applyArgumentsResult;
   })({ impressionId, metadataSealed: metadataSealed.metadataSealed, framework, impression }).catch(() => {
     if (map.get(impressionId) === map) {
-      obj.delete(impressionId);
+      map.delete(impressionId);
     }
   });
 };
@@ -383,10 +382,10 @@ export const getStoreKitCredential = function getStoreKitCredential() {
   }
   return applyArgumentsResult;
 };
-export const endImpression = function endImpression(arg0) {
-  value = map.get(arg0);
+export const endImpression = function endImpression(id) {
+  value = map.get(id);
   if (null != value) {
-    map.delete(arg0);
+    map.delete(id);
     const signAbort = value.signAbort;
     signAbort.abort();
     const token = value.token;

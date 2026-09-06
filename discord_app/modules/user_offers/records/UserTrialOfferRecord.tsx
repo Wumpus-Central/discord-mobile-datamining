@@ -65,7 +65,7 @@ UserTrialOfferRecord["createFromServer"] = function createFromServer(expires_at)
     const tmp10 = new.target;
   }
   if (typeof UserTrialOfferRecord === "function") {
-    const tmp17 = new UserTrialOfferRecord(tmp4, _Date2, tmp10, tmp, new.target, id, user_id, trial_id, date, referrer_id, referrer);
+    const tmp17 = new UserTrialOfferRecord(tmp4, _Date2, tmp10, UserTrialOfferRecord, new.target, id, user_id, trial_id, date, referrer_id, referrer);
     tmp17.id = id;
     tmp17.userId = user_id;
     tmp17.trialId = trial_id;

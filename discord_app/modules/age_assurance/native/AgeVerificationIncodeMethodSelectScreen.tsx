@@ -26,7 +26,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   const tmp = _slicedToArray(noop.useState(false), 2);
   [tmp4, c3] = _slicedToArray(noop.useState(false), 2);
   const tmp5 = closure_11();
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -127,23 +127,23 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   const ModalContent = require("ModalContent").ModalContent;
   obj = { children: null };
   if (tmp2) {
-    obj = { align: "center", justify: "center", spacing: 16, style: tmp5.loadingContainer, children: tmp6(tmp7(5577).ActivityIndicator, { size: "large" }) };
-    obj.children = tmp6(tmp7(4973).Stack, obj);
-    obj.children = tmp6(ModalContent, obj);
+    obj = { align: "center", justify: "center", spacing: 16, style: tmp5.loadingContainer, children: closure_9(tmp7(5577).ActivityIndicator, { size: "large" }) };
+    obj.children = closure_9(tmp7(4973).Stack, obj);
+    obj.children = closure_9(ModalContent, obj);
     let tmp11 = obj;
   } else {
     let obj1 = { align: "stretch", spacing: 24, style: tmp5.container, children: null };
     let obj2 = { align: "center", justify: "center", spacing: 16, children: null };
-    const items1 = [tmp6(tmp7(5692).ShieldSpotIllustration, { height: 100, width: 177 }), ];
+    const items1 = [closure_9(tmp7(5692).ShieldSpotIllustration, { height: 100, width: 177 }), ];
     let obj3 = { align: "center", justify: "center", spacing: 8, children: null };
     const obj4 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.header, children: null };
     const intl = tmp7(1114).intl;
     obj4.children = intl.string(trustedOrigin(2946).eZvwAe);
-    const items2 = [tmp6(tmp7(4556).Text, obj4), ];
+    const items2 = [closure_9(tmp7(4556).Text, obj4), ];
     const obj5 = { variant: "text-md/medium", color: "text-strong", style: tmp5.header, children: null };
     const intl2 = tmp7(1114).intl;
     obj5.children = intl2.string(trustedOrigin(2946)["5yWXmT"]);
-    items2[1] = tmp6(tmp7(4556).Text, obj5);
+    items2[1] = closure_9(tmp7(4556).Text, obj5);
     obj3.children = items2;
     items1[1] = closure_10(tmp7(4973).Stack, obj3);
     obj2.children = items1;
@@ -152,7 +152,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
       const obj6 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp5.header, children: null };
       const intl3 = tmp7(1114).intl;
       obj6.children = intl3.string(tmp7(1114).t.c6kn6F);
-      tmp6Result = tmp6(tmp7(4556).Text, obj6);
+      tmp6Result = closure_9(tmp7(4556).Text, obj6);
     }
     items3[1] = tmp6Result;
     const obj7 = { hasIcons: false, children: null };
@@ -164,7 +164,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj8.onPress = function onPress() {
       closure_4(VerificationMethod.FACIAL_AGE_ESTIMATION);
     };
-    const items4 = [tmp6(tmp7(5605).TableRow, obj8), ];
+    const items4 = [closure_9(tmp7(5605).TableRow, obj8), ];
     const obj9 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl6 = tmp7(1114).intl;
     obj9.label = intl6.string(trustedOrigin(2946)["NeVlw/"]);
@@ -173,12 +173,12 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj9.onPress = function onPress() {
       closure_4(VerificationMethod.ID_VERIFICATION);
     };
-    items4[1] = tmp6(tmp7(5605).TableRow, obj9);
+    items4[1] = closure_9(tmp7(5605).TableRow, obj9);
     obj7.children = items4;
     items3[2] = closure_10(tmp7(5687).TableRowGroup, obj7);
     obj1.children = items3;
     obj.children = closure_10(tmp7(4973).Stack, obj1);
-    obj.children = tmp6(ModalContent, obj);
+    obj.children = closure_9(ModalContent, obj);
     tmp11 = obj;
   }
   return closure_9(require("ModalScreen").ModalScreen, tmp11);

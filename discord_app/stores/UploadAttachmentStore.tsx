@@ -189,6 +189,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     }
     const result = value1.set(draftType, items);
     const result1 = obj.set(channelId, value1);
+    const arr2 = require("module_12");
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
     ({ channelId, id: require, filename: importDefault, description: dependencyMap, spoiler: DraftType, thumbnail: MAX_UPLOAD_COUNT, draftType } = arg0);

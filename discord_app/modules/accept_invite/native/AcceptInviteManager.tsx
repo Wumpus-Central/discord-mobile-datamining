@@ -2,6 +2,7 @@
 
 // Module 17301 (AcceptInviteManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import router_utils from "router_utils" /* 1100 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
@@ -41,9 +42,9 @@ let prototype = function AcceptInviteManager() {
     code = code.code;
     ({ deeplinkAttemptId, invite_instance_id } = code);
     if (AuthenticationStore.isAuthenticated()) {
-      obj._handleInvite(code, deeplinkAttemptId, invite_instance_id);
+      applyArgumentsResult._handleInvite(code, deeplinkAttemptId, invite_instance_id);
     } else {
-      obj._deferredCode = code;
+      applyArgumentsResult._deferredCode = code;
     }
   };
   applyArgumentsResult._handleClearInvite = function _handleClearInvite() {
@@ -53,8 +54,8 @@ let prototype = function AcceptInviteManager() {
   };
   applyArgumentsResult._handleShowDeferredInvite = function _handleShowDeferredInvite() {
     if (null != applyArgumentsResult._deferredCode) {
-      obj._handleInvite(obj._deferredCode);
-      obj._deferredCode = null;
+      applyArgumentsResult._handleInvite(applyArgumentsResult._deferredCode);
+      applyArgumentsResult._deferredCode = null;
     }
   };
   applyArgumentsResult._handleInvite = function _handleInvite(_deferredCode, deeplinkAttemptId, invite_instance_id) {
@@ -108,17 +109,17 @@ let prototype = function AcceptInviteManager() {
                       if (roles == null) {
                         roles = [];
                       }
-                      const set = new Set(roles);
                       roles = invite.roles;
                       flag2 = false;
+                      const set = new Set(roles);
                     }
                   }
                   let flag3 = PermissionStore.can(constants2.VIEW_CHANNEL, ChannelStore.getChannel(target_channel_id));
                   if (flag3) {
                     const target_message_id = invite.target_message_id;
-                    tmp39(1100).transitionTo(closure_3_12.CHANNEL(id, target_channel_id, target_message_id), { navigationReplace: true, openChannel: true });
+                    router_utils.transitionTo(closure_3_12.CHANNEL(id, target_channel_id, target_message_id), { navigationReplace: true, openChannel: true });
                     flag3 = true;
-                    const tmp39Result = tmp39(1100);
+                    const tmp39Result = router_utils;
                   }
                   flag2 = flag3;
                 }
@@ -126,7 +127,6 @@ let prototype = function AcceptInviteManager() {
             }
           }
           obj9 = InviteTypeUtils;
-          tmp39 = require;
         }
         if (flag2) {
           DispatcherDefault.wait(() => set(8738).clearDisplayedInvite());

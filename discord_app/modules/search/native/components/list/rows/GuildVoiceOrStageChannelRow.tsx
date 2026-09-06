@@ -263,8 +263,8 @@ function GuildVoiceChannelExtras(arg0) {
   if (tmp5Result) {
     obj = { style: tmp.users, children: null };
     obj = { users, max: 5, guildId: channel.guild_id, layout, audienceCount: tmp4 };
-    obj.children = tmp5(guild_channels_VoiceOrStageSummaryRowDefault, obj);
-    tmp5Result = tmp5(tmp6, obj);
+    obj.children = jsx(guild_channels_VoiceOrStageSummaryRowDefault, { users, max: 5, guildId: channel.guild_id, layout, audienceCount: tmp4 });
+    tmp5Result = <View users={users} max={5} guildId={channel.guild_id} layout={layout} audienceCount={tmp4} />;
   }
   obj.children = tmp5Result;
   return <View style={tmp.subtitle}>{null}</View>;
@@ -294,8 +294,8 @@ export default noop.memo(function GuildVoiceChannelRow(channel) {
   if (null == trailing) {
     obj = { style: tmp.trailing, children: null };
     obj = { channel, voiceStates };
-    obj.children = tmp4(renderChannelBadge.VocalChannelJoinButton, obj);
-    trailing = tmp4(View, obj);
+    obj.children = jsx(renderChannelBadge.VocalChannelJoinButton, { channel, voiceStates });
+    trailing = <View channel={channel} voiceStates={voiceStates} />;
   }
   obj.trailing = trailing;
   obj.extras = <GuildVoiceChannelExtras channel={channel} voiceStates={voiceStates} users={mapped} />;

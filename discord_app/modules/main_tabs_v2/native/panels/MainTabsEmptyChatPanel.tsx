@@ -4,9 +4,9 @@
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import useDrawerWidth from "useDrawerWidth" /* 11528 */;
+import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 16735 */;
 import noop from "module_19" /* 19 */;
 
-const FavoritesEmptyStateDefault = tmp3(16735);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);

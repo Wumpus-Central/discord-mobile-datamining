@@ -10,13 +10,13 @@ const MAX_TIMEOUT_MS = fn(1074).MAX_TIMEOUT_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useHasExpiredShopBlocks.tsx");
 
-export const useHasExpiredShopBlocks = (arg0, arg1, arg2) => {
+export const useHasExpiredShopBlocks = (arg0, flag2, flag) => {
   closure_0 = arg0;
-  closure_1 = arg1;
-  _slicedToArray = arg2;
-  const tmp = _slicedToArray(closure_4(false), 2);
+  closure_1 = flag2;
+  _slicedToArray = flag;
+  let tmp = _slicedToArray(closure_4(false), 2);
   closure_3 = tmp[1];
-  const items = [arg1, arg2, arg0];
+  const items = [flag2, flag, arg0];
   closure_3(() => {
     let time1 = null;
     const item = time1.forEach((type) => {
@@ -29,7 +29,7 @@ export const useHasExpiredShopBlocks = (arg0, arg1, arg2) => {
         time1 = time;
       } else {
         time1 = null;
-        if (type.type === time1(dependencyMap[3]).ShopBlockType.COUNTDOWN_TIMER) {
+        if (type.type === tmp(dependencyMap[3]).ShopBlockType.COUNTDOWN_TIMER) {
           const endTime = type.endTime;
           time1 = endTime.getTime();
         }
@@ -42,6 +42,7 @@ export const useHasExpiredShopBlocks = (arg0, arg1, arg2) => {
         }
         tmp5 = tmp6;
       }
+      tmp = time1;
     });
     if (!dependencyMap) {
       if (!closure_2) {

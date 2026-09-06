@@ -19,9 +19,9 @@ export default function useGetExpiringGuildPowerups(arg0) {
     if (null == stateFromStores) {
       return [];
     } else {
-      const allPowerups = tmp.allPowerups;
+      const allPowerups = stateFromStores.allPowerups;
       const _Object = Object;
-      const expiringGuildEntitlements = getExpiringGuildEntitlements.getExpiringGuildEntitlements(Object.values(tmp.unlockedPowerups));
+      const expiringGuildEntitlements = getExpiringGuildEntitlements.getExpiringGuildEntitlements(Object.values(stateFromStores.unlockedPowerups));
       const mapped = expiringGuildEntitlements.map((item) => allPowerups[item.sku_id]);
       return mapped.filter(GlobalUtils.isNotNullish);
     }

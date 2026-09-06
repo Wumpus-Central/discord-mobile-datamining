@@ -69,7 +69,7 @@ function LinkInner(target) {
       let obj = AnalyticsUtilsDefault;
       let date;
       if (changelog != null) {
-        date = tmp3.date;
+        date = changelog.date;
       }
       if (date == null) {
         const _Date = Date;
@@ -78,7 +78,7 @@ function LinkInner(target) {
       }
       let num;
       if (changelog != null) {
-        num = tmp3.revision;
+        num = changelog.revision;
       }
       if (num == null) {
         num = 1;

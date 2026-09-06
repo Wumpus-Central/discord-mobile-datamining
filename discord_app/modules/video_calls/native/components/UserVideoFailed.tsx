@@ -7,8 +7,10 @@ import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
 import AVError from "AVError" /* 9110 */;
+import StreamFailed from "StreamFailed" /* 9601 */;
 import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9612 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4560 */;
@@ -37,26 +39,26 @@ export default function UserVideoFailed(arg0) {
   let tmp9 = !removeSplashImage;
   if (!removeSplashImage) {
     obj = { style: tmp2.placeholderImage };
-    tmp9 = closure_5(tmp3(9601).StreamFailed, obj);
+    tmp9 = closure_5(StreamFailed.StreamFailed, obj);
   }
   const obj1 = { children: null };
   const items1 = [tmp9, ];
   const obj2 = { variant: "text-md/semibold", color: "text-strong", children: null };
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj2.children = intl.string(util.t["z+mxvo"]);
   items1[1] = closure_5(Text_Text.Text, obj2);
   obj1.children = items1;
   const items2 = [closure_7(closure_6, obj1), , ];
   const obj3 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: null };
-  const intl2 = tmp3(1114).intl;
+  const intl2 = util.intl;
   obj3.children = intl2.formatToPlainString(util.t.ejOT95, { errorCode: obj.getErrorInfo(avError).errorCode });
   items2[1] = closure_5(Text_Text.Text, obj3);
   const obj4 = { style: tmp2.button, children: null };
   let tmp11Result = !removeRetryButton;
   if (!removeRetryButton) {
     const obj5 = { variant: "secondary", text: null, onPress: null };
-    const intl3 = tmp3(1114).intl;
-    obj5.text = intl3.string(tmp3(1114).t["hxmQ/e"]);
+    const intl3 = util.intl;
+    obj5.text = intl3.string(util.t["hxmQ/e"]);
     obj5.onPress = function onPress() {
       const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, closure_1_0);
       AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, VideoToggleState.DISABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
@@ -64,7 +66,7 @@ export default function UserVideoFailed(arg0) {
         AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
       }, 1000);
     };
-    tmp11Result = tmp11(tmp3(4975).Button, obj5);
+    tmp11Result = closure_5(components_Button_Button.Button, obj5);
   }
   obj4.children = tmp11Result;
   items2[2] = closure_5(View, obj4);

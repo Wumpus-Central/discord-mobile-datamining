@@ -77,15 +77,15 @@ export const createFetchStore = function createFetchStore(ApplicationStore, init
     retryableErrors = map;
   }
   ({ staleAfter: HTTPResponseError, failureStaleAfter: areStatesEqual } = initialize);
-  getUseStoreState = function getUseStoreState(arg0) {
-    if (null == arg0) {
+  getUseStoreState = function getUseStoreState(queryId) {
+    if (null == queryId) {
       return closure_13;
     } else {
       let obj = map;
-      value = map.get(arg0);
+      value = map.get(queryId);
       if (null == value) {
         obj = _mod560.create(() => ({ isLoading: false, error: null, backoff: closure_1_7(), lastSuccessAt: null, failureLockedUntil: null }));
-        const result = obj.set(arg0, obj);
+        const result = obj.set(queryId, obj);
         value = obj;
       }
       return value;
@@ -106,7 +106,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, init
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    let iter = (async (arg0, value) => {
+    let iter = (async (arg0) => {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -388,11 +388,10 @@ export const createFetchStore = function createFetchStore(ApplicationStore, init
       value = map.get(tmp9);
       if (null == value) {
         obj = ApplicationStore(560).create(() => ({ isLoading: false, error: null, backoff: closure_1_7(), lastSuccessAt: null, failureLockedUntil: null }));
-        const result1 = obj2.set(tmp9, obj);
+        const result1 = map.set(tmp9, obj);
         value = obj;
         const obj3 = ApplicationStore(560);
       }
-      obj2 = map;
     }
     c2 = value;
     const items2 = [args];
@@ -494,11 +493,10 @@ export const createFetchStore = function createFetchStore(ApplicationStore, init
           value = closure_1_11.get(tmp);
           if (null == value) {
             obj = closure_0(dependencyMap[5]).create(() => ({ isLoading: false, error: null, backoff: closure_1_7(), lastSuccessAt: null, failureLockedUntil: null }));
-            const result = obj2.set(tmp, obj);
+            const result = closure_1_11.set(tmp, obj);
             value = obj;
             const obj3 = closure_0(dependencyMap[5]);
           }
-          obj2 = closure_1_11;
         }
         obj.useStoreState = value;
         return closure_1_13(obj);

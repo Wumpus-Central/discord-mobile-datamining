@@ -35,13 +35,12 @@ prototype["getSaveablePendingWidgets"] = function getSaveablePendingWidgets() {
       if (!isUpdatable.isUpdatable()) {
         let found;
         if (_null2 != null) {
-          found = arr.find((getUniqueKey) => {
+          found = _null2.find((getUniqueKey) => {
             const uniqueKey = getUniqueKey.getUniqueKey();
             return uniqueKey === isUpdatable.getUniqueKey();
           });
         }
         tmp = found;
-        arr = _null2;
       }
       return tmp;
     });

@@ -26,11 +26,10 @@ export default function useCreateSubscriptionParams(arg0, arg1) {
           obj = { planId: tmp.id, quantity: 1 };
           const items = [obj];
           obj.items = items;
-          ({ country: obj.countryCode, currency: obj.currency } = tmp3);
+          ({ country: obj.countryCode, currency: obj.currency } = closure_1);
           tmp2 = obj;
         }
       }
-      tmp3 = closure_1;
     }
     return tmp2;
   }, items);

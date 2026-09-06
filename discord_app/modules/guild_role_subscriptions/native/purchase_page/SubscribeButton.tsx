@@ -85,7 +85,7 @@ export default function SubscribeButton(listingId) {
   const tmp9Result = _slicedToArray(noop.useState(false), 2);
   closure_129_1 = tmp9Result[1];
   const items3 = [createSubscription];
-  callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

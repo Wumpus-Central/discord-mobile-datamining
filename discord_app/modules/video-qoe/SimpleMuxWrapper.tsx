@@ -47,11 +47,10 @@ prototype["endSession"] = function endSession() {
   if (this.isMonitoring) {
     try {
       if (typeof UDefault.destroyMonitor === "function") {
-        tmp(15140).destroyMonitor(self.videoElement);
-        const tmpResult = tmp(15140);
+        UDefault.destroyMonitor(self.videoElement);
+        const tmpResult = UDefault;
       }
       self.isMonitoring = false;
-      tmp = importDefault;
     } catch (tmp3) {
       logger.error("Error ending Mux session", tmp3);
     }
@@ -62,11 +61,10 @@ prototype["destroy"] = function destroy() {
   if (this.isMonitoring) {
     try {
       if (typeof UDefault.destroyMonitor === "function") {
-        tmp(15140).destroyMonitor(self.videoElement);
-        const tmpResult = tmp(15140);
+        UDefault.destroyMonitor(self.videoElement);
+        const tmpResult = UDefault;
       }
       self.isMonitoring = false;
-      tmp = importDefault;
     } catch (tmp3) {
       logger.error("Error destroying Mux monitor", tmp3);
     }

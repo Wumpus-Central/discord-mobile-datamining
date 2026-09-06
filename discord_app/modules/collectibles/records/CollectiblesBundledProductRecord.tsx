@@ -10,7 +10,7 @@ const prototype = function CollectiblesBundledProductRecord(arg0) {
 prototype["fromServer"] = function fromServer(arg0) {
   ({ prices, type, premium_type, name, sku_id, summary } = arg0);
   if (typeof prototype === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(prototype.prototype);
     obj.prices = tmp2;
     obj.type = type;
     obj.premiumType = premium_type;
@@ -21,7 +21,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = prototype;
 };
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesBundledProductRecord.tsx");
 

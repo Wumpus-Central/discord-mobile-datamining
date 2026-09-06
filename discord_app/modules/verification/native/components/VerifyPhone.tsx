@@ -26,7 +26,7 @@ export default function VerifyPhone(phone) {
   asyncGeneratorStep = tmp[1];
   const tmp2 = _slicedToArray(onCodeEntered.useState(false), 2);
   _slicedToArray = tmp2[1];
-  asyncGeneratorStep(async (arg0, value) => {
+  asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -125,7 +125,7 @@ export default function VerifyPhone(phone) {
     }
     return applyArgumentsResult;
   }, items);
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

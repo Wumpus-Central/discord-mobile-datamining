@@ -5,6 +5,7 @@ import util from "util" /* 1114 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4189 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import spring from "spring" /* 4974 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 9504 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 9507 */;
@@ -21,7 +22,7 @@ import VoicePanelStore from "VoicePanelStore" /* 4768 */;
 
 require = fn;
 function VoicePanelPIP() {
-  const tmp = handleSecondaryPIPTap();
+  let tmp = handleSecondaryPIPTap();
   _require = tmp;
   let obj = stateFromStores2;
   const context = stateFromStores2.useContext(setMode(hideControls[13]));
@@ -195,7 +196,7 @@ function VoicePanelPIP() {
         point = { x: null, y: null };
         point.x = point.x - value.absoluteX;
         point.y = point.y - value.absoluteY;
-        setMode(first[19])(obj, point);
+        setMode(first[19])(initialGestureOffset, point);
       } else {
         let tmp4 = allTouches.state === closure_0(first[18]).State.BEGAN;
         if (tmp4) {
@@ -210,13 +211,12 @@ function VoicePanelPIP() {
         if (tmp4) {
           const point1 = { x: 0, y: 0, absoluteX: null, absoluteY: null, pressed: true, active: true };
           ({ x: obj2.absoluteX, y: obj2.absoluteY } = point);
-          const result = obj.set(point1);
-          setMode(tmp3[19])(wrapperOffset, { gestureActive: true, x: 0, y: 0 });
+          const result = initialGestureOffset.set(point1);
+          setMode(first[19])(wrapperOffset, { gestureActive: true, x: 0, y: 0 });
           activate.activate();
-          tmp2(tmp3[15]).runOnJS(setMode(tmp3[20]))();
-          const tmp2Result = tmp2(tmp3[15]);
+          closure_0(first[15]).runOnJS(setMode(first[20]))();
+          const tmp2Result = closure_0(first[15]);
         }
-        tmp2 = closure_0;
       }
     };
     const onTouchesUpResult = result.onTouchesDown(fn).onTouchesUp(fn2);
@@ -350,6 +350,7 @@ function VoicePanelPIP() {
     if (!tmp) {
       closure_4(true);
     }
+    tmp = null == pIPState.mode || first;
   }, items8);
   let tmp5Result = tmp5(tmp3[15]);
   class Z {
@@ -438,10 +439,10 @@ function VoicePanelPIP() {
     obj7.style = items16;
     const tmp2Result1 = tmp2(tmp3[28]);
     obj7.layout = tmp5(tmp3[16]).layoutTransition;
-    obj7.children = tmp38(tmp2(tmp3[29]), {});
-    obj6.children = tmp38(tmp2(tmp3[28]), obj7);
-    obj5.children = tmp38(tmp5(tmp3[18]).GestureDetector, obj6);
-    tmp38Result = tmp38(tmp2Result1, obj5);
+    obj7.children = closure_16(tmp2(tmp3[29]), {});
+    obj6.children = closure_16(tmp2(tmp3[28]), obj7);
+    obj5.children = closure_16(tmp5(tmp3[18]).GestureDetector, obj6);
+    tmp38Result = closure_16(tmp2Result1, obj5);
     const tmp2Result2 = tmp2(tmp3[28]);
   }
   const items17 = [tmp38Result, ];
@@ -456,11 +457,11 @@ function VoicePanelPIP() {
     obj10 = { gesture: memo3, children: null };
     const obj11 = { style: callback1.absoluteFill, children: null };
     const tmp2Result4 = tmp2(tmp3[28]);
-    obj11.children = tmp38(tmp2(tmp3[31]), {});
-    obj10.children = tmp38(tmp2(tmp3[30]), obj11);
-    obj9.children = tmp38(tmp5(tmp3[18]).GestureDetector, obj10);
-    obj8.children = tmp38(tmp2Result4, obj9);
-    tmp38Result = tmp38(tmp2Result3, obj8);
+    obj11.children = closure_16(tmp2(tmp3[31]), {});
+    obj10.children = closure_16(tmp2(tmp3[30]), obj11);
+    obj9.children = closure_16(tmp5(tmp3[18]).GestureDetector, obj10);
+    obj8.children = closure_16(tmp2Result4, obj9);
+    tmp38Result = closure_16(tmp2Result3, obj8);
     const tmp2Result5 = tmp2(tmp3[30]);
   }
   items17[1] = tmp38Result;
@@ -471,8 +472,8 @@ function VoicePanelPIP() {
   if (null != pIPState.mode || hideControls) {
     tmp38Result1 = null;
     if (pushToTalk) {
-      const obj12 = { pointerEvents: "box-none", style: memo6, layout: tmp5(tmp3[16]).layoutTransition, children: tmp38(tmp2(tmp3[32]), {}) };
-      tmp38Result1 = tmp38(tmp2(tmp3[28]), obj12);
+      const obj12 = { pointerEvents: "box-none", style: memo6, layout: tmp5(tmp3[16]).layoutTransition, children: closure_16(tmp2(tmp3[32]), {}) };
+      tmp38Result1 = closure_16(tmp2(tmp3[28]), obj12);
       const tmp2Result6 = tmp2(tmp3[28]);
     }
   }
@@ -507,17 +508,17 @@ createStyles.gap = SECONDARY_PIP_TOP_MARGIN;
 obj.multiPipContainer = createStyles;
 obj.pushToTalkContainer = { position: "absolute", top: 0, left: 0, right: 0 };
 let closure_18 = createStyles.createStyles(obj);
-function getTouchesCentroid(arg0) {
+function getTouchesCentroid(allTouches) {
   let num = 0;
   let num2 = 0;
-  const iter = arg0[Symbol.iterator]();
+  const iter = allTouches[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     num = num + nextResult.absoluteX;
     num2 = num2 + nextResult.absoluteY;
     continue;
   }
-  const point = { x: num / arg0.length, y: num2 / arg0.length };
+  const point = { x: num / allTouches.length, y: num2 / allTouches.length };
   return point;
 }
 getTouchesCentroid.__closure = {};
@@ -561,8 +562,8 @@ let closure_35 = noop.memo((transitionState) => {
   fireCleanup = obj.useCallback(() => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
     transitionCleanUp();
   }, items);
@@ -574,8 +575,8 @@ let closure_35 = noop.memo((transitionState) => {
       return () => {
         if (null != ref.current) {
           const _clearTimeout = clearTimeout;
-          clearTimeout(tmp.current);
-          tmp.current = null;
+          clearTimeout(ref.current);
+          ref.current = null;
         }
       };
     }

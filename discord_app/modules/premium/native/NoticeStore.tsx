@@ -48,20 +48,19 @@ function updateNotice() {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    let tmp4 = NoticeTypes;
     if (nextResult === NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING) {
       items = [PremiumSubscriptionSKUs.TIER_2];
       if (UserOfferStore.getAlmostExpiringTrialOffersForReminder(items).length > 0) {
-        if (!isNoticeDismissed(tmp4.PREMIUM_TIER_2_TRIAL_ENDING)) {
+        if (!isNoticeDismissed(NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING)) {
           c6 = tmp3;
           iter.return();
           break;
         }
       }
-    } else if (tmp3 === tmp4.PREMIUM_TIER_0_TRIAL_ENDING) {
+    } else if (tmp3 === NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING) {
       let items1 = [PremiumSubscriptionSKUs.TIER_0];
       if (UserOfferStore.getAlmostExpiringTrialOffersForReminder(items1).length > 0) {
-        if (!isNoticeDismissed(tmp4.PREMIUM_TIER_0_TRIAL_ENDING)) {
+        if (!isNoticeDismissed(NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING)) {
           c6 = tmp3;
           iter.return();
           break;

@@ -35,8 +35,8 @@ export default function _default(arg0) {
     closure_11.current = 0;
     if (null != ref6.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = undefined;
+      clearTimeout(ref6.current);
+      ref6.current = undefined;
     }
   }, []);
   const stop = allowableMinInterval.useCallback(() => {
@@ -48,14 +48,14 @@ export default function _default(arg0) {
   const callback2 = allowableMinInterval.useCallback((current) => {
     if (ticking.current) {
       if (null == ref3.current) {
-        tmp2.current = current;
+        ref3.current = current;
       }
       if (null == ref4.current) {
-        tmp4.current = current;
+        ref4.current = current;
       }
-      const diff = current - tmp4.current;
+      const diff = current - ref4.current;
       num = allowableMinInterval;
-      const diff1 = current - tmp2.current;
+      const diff1 = current - ref3.current;
       if (allowableMinInterval == null) {
         num = 120;
       }
@@ -63,27 +63,26 @@ export default function _default(arg0) {
         ref5.current = ref5.current + 1;
         if (null != ref6.current) {
           const _clearTimeout = clearTimeout;
-          clearTimeout(tmp22.current);
+          clearTimeout(ref6.current);
         }
         const _setTimeout = setTimeout;
         ref6.current = setTimeout(callback, num2);
         if (null != droppedFramesCallbackThreshold) {
-          if (tmp21.current > tmp12) {
+          if (ref5.current > tmp12) {
             _modDef38(null != droppedFramesCallback, "useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit");
             if (droppedFramesCallback()) {
-              tmp21.current = 0;
+              ref5.current = 0;
             }
           }
         }
       }
       ref3.current = current;
-      if (diff >= tmp8.current - 3) {
-        tmp4.current = current;
+      if (diff >= ref.current - 3) {
+        ref4.current = current;
         closure_0(diff);
       }
       const _requestAnimationFrame = requestAnimationFrame;
       closure_7.current = requestAnimationFrame(callback2);
-      tmp8 = ref;
     }
   }, items);
   const items1 = [callback2];

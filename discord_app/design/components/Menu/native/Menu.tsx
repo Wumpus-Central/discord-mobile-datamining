@@ -2,7 +2,9 @@
 
 // Module 14130 (Menu)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 4971 */;
@@ -64,15 +66,16 @@ export const Menu = function Menu(toggleButtonRef) {
   function openMenuCallback() {
     let obj = PlatformUtils;
     if (obj.isAndroid()) {
-      const AccessibilityAnnouncer = tmp(4272).AccessibilityAnnouncer;
-      const intl = tmp(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(tmp(1114).t.ZqK0uI));
+      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+      const intl = util.intl;
+      AccessibilityAnnouncer.announce(intl.string(util.t.ZqK0uI));
     }
     obj = { ref };
     const result = setAccessibilityFocus.setAccessibilityFocus(obj);
+    const tmpResult = setAccessibilityFocus;
   }
   ({ style, children } = toggleButtonRef);
-  let tmp = closure_10();
+  const tmp = closure_10();
   enabled = size2.useContext(toggleButtonRef(enabled[9]).AccessibilityPreferencesContext).reducedMotion.enabled;
   const rect = offsetAnimated(enabled[10])();
   let size = offsetAnimated(enabled[11])();
@@ -88,14 +91,14 @@ export const Menu = function Menu(toggleButtonRef) {
   const layoutEffect = size2.useLayoutEffect(() => {
     let current;
     if (toggleButtonRef != null) {
-      current = tmp.current;
+      current = toggleButtonRef.current;
     }
     let tmp3 = null != current;
     if (tmp3) {
       tmp3 = null == size2;
     }
     if (tmp3) {
-      ReanimatedRexport.runOnUI(measureButtonRef)(tmp, closure_5);
+      ReanimatedRexport.runOnUI(measureButtonRef)(toggleButtonRef, closure_5);
     }
   }, items);
   if (onClose == null) {
@@ -321,7 +324,7 @@ export const Menu = function Menu(toggleButtonRef) {
   const items3 = [tmp.menu, boxShadowStyle, tmp6Result[0], animatedStyle, style];
   obj2.style = items3;
   let obj3 = { children: null };
-  let obj4 = { value: { menuClose: handleClose, menuDismiss: handleDismiss }, children: null };
+  const obj4 = { value: { menuClose: handleClose, menuDismiss: handleDismiss }, children: null };
   const Children = size2.Children;
   obj4.children = Children.map(children, (icon, arg1) => {
     let cloneElementResult = icon;

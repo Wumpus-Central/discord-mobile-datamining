@@ -109,7 +109,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
       }
     };
     tmp11.updateOffscreenUsers = function updateOffscreenUsers() {
-      const connection = closure_0.connection;
+      connection = closure_0.connection;
       let activeOutputSinkTrackingEnabled;
       if (connection != null) {
         activeOutputSinkTrackingEnabled = connection.getActiveOutputSinkTrackingEnabled();
@@ -124,7 +124,6 @@ class RTCMediaSinkWantsManager extends tmp2 {
           let tmp19 = _slicedToArray(tmp16, 2);
           [tmp20, tmp21] = tmp19;
           if (null != tmp21) {
-            let obj2 = closure_0;
             let connection2 = closure_0.connection;
             let hasActiveVideoOutputSink;
             if (connection2 != null) {
@@ -132,17 +131,17 @@ class RTCMediaSinkWantsManager extends tmp2 {
             }
             if (hasActiveVideoOutputSink) {
               delete tmp3[tmp2];
-              let offscreenDisabledUsers = obj2.offscreenDisabledUsers;
+              let offscreenDisabledUsers = closure_0.offscreenDisabledUsers;
               delete tmp[tmp2];
             } else if (null == tmp26[tmp20]) {
-              obj2.offscreenUsers[tmp20] = timestamp;
-              let addLruResult = obj2.addLru(tmp20, timestamp, items);
-            } else if (!obj2.offscreenDisabledUsers[tmp20]) {
-              let diff = timestamp - obj2.offscreenUsers[tmp20];
-              if (diff >= obj2.getOffscreenTimeoutMs()) {
-                obj2.offscreenDisabledUsers[tmp20] = true;
+              closure_0.offscreenUsers[tmp20] = timestamp;
+              let addLruResult = closure_0.addLru(tmp20, timestamp, items);
+            } else if (!closure_0.offscreenDisabledUsers[tmp20]) {
+              let diff = timestamp - closure_0.offscreenUsers[tmp20];
+              if (diff >= closure_0.getOffscreenTimeoutMs()) {
+                closure_0.offscreenDisabledUsers[tmp20] = true;
               } else {
-                let addLruResult1 = obj2.addLru(tmp20, timestamp, items);
+                let addLruResult1 = closure_0.addLru(tmp20, timestamp, items);
               }
             }
           }
@@ -206,40 +205,38 @@ class RTCMediaSinkWantsManager extends tmp2 {
         let arr2 = tmp25[1];
         let items1 = [];
         let flag = false;
-        let obj6 = closure_0;
         let num = closure_0.streamPixelCounts[closure_0.streamIds[first]];
         if (num == null) {
           num = 0;
         }
-        let wantsLevel1 = obj6.getWantsLevel(num);
+        let wantsLevel1 = closure_0.getWantsLevel(num);
         let ssrc = arr2[0].ssrc;
-        if (obj6.shouldReceiveFromUser(tmp27)) {
-          let tmp37 = tmp27 === obj6.selectedParticipantId;
+        if (closure_0.shouldReceiveFromUser(tmp27)) {
+          let tmp37 = tmp27 === closure_0.selectedParticipantId;
           if (tmp37) {
             tmp37 = wantsLevel !== c7;
           }
           if (tmp37) {
-            tmp37 = !obj6.pipOpen;
+            tmp37 = !closure_0.pipOpen;
           }
           let tmp41 = tmp37;
           if (arr2.length > 1) {
             for (const item10121 of arr2) {
-              let tmp51 = item10121;
               if (item10121.quality === c7) {
-                let ssrc2 = tmp51.ssrc;
+                let ssrc2 = item10121.ssrc;
                 if (tmp41) {
                   tmp5[ssrc2] = tmp53;
-                  ssrc = tmp51.ssrc;
+                  ssrc = item10121.ssrc;
                 } else {
                   tmp5[ssrc2] = 0;
                 }
               } else if (tmp41) {
-                tmp5[tmp51.ssrc] = 0;
+                tmp5[item10121.ssrc] = 0;
               } else {
                 if (isDesktopResult) {
-                  tmp5[tmp51.ssrc] = wantsLevel1;
+                  tmp5[item10121.ssrc] = wantsLevel1;
                 }
-                ssrc = tmp51.ssrc;
+                ssrc = item10121.ssrc;
               }
               continue;
             }
@@ -249,24 +246,23 @@ class RTCMediaSinkWantsManager extends tmp2 {
                 let items2 = [ssrc];
                 items1 = items2;
                 for (const item10152 of arr2) {
-                  let tmp68 = item10152;
                   let tmp70 = item10152.ssrc !== ssrc;
                   if (tmp70) {
-                    tmp70 = closure_0.framesReceived[tmp68.ssrc];
+                    tmp70 = closure_0.framesReceived[item10152.ssrc];
                   }
                   if (!tmp70) {
                     continue;
                   } else {
-                    if (tmp68.quality === c7) {
-                      tmp5[tmp68.ssrc] = tmp76;
+                    if (item10152.quality === c7) {
+                      tmp5[item10152.ssrc] = tmp76;
                     } else {
                       let tmp78 = wantsLevel;
                       if (isDesktopResult) {
                         tmp78 = wantsLevel1;
                       }
-                      tmp5[tmp68.ssrc] = tmp78;
+                      tmp5[item10152.ssrc] = tmp78;
                     }
-                    let arr = items1.push(tmp68.ssrc);
+                    let arr = items1.push(item10152.ssrc);
                   }
                 }
               }
@@ -282,23 +278,21 @@ class RTCMediaSinkWantsManager extends tmp2 {
             continue;
           }
         }
-        let tmp85 = closure_0;
         let simulcastOverrideQuality = closure_0.getSimulcastOverrideQuality(tmp27);
         if (simulcastOverrideQuality === SimulcastOverrideQuality.HIGH) {
           tmp5[ssrc] = c7;
         } else if (tmp88 === tmp89.LOW) {
           tmp5[ssrc] = 50;
         }
-        let tmp96 = tmp85.supportsSeamless && flag;
+        let tmp96 = closure_0.supportsSeamless && flag;
         if (!tmp96) {
           let items3 = [ssrc];
           items1 = items3;
         }
         for (const item10201 of arr2) {
-          let tmp100 = item10201;
           if (!items1.includes(item10201.ssrc)) {
             let framesReceived = closure_0.framesReceived;
-            let ssrc3 = tmp100.ssrc;
+            let ssrc3 = item10201.ssrc;
             delete tmp2[tmp];
           }
           continue;
@@ -326,7 +320,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
       for (const item10265 of entries1) {
         let tmp131 = _slicedToArray(item10265, 2);
         [tmp132, tmp133] = tmp131;
-        let connection = closure_0.connection;
+        connection = closure_0.connection;
         let localMute;
         if (connection != null) {
           localMute = connection.getLocalMute(tmp132);
@@ -338,11 +332,11 @@ class RTCMediaSinkWantsManager extends tmp2 {
       }
       let isEqualResult = null == closure_0.connection;
       if (!isEqualResult) {
-        isEqualResult = _modDef12.isEqual(obj7.latestWants, tmp5);
+        isEqualResult = _modDef12.isEqual(closure_0.latestWants, tmp5);
       }
       if (!isEqualResult) {
-        obj7.latestWants = tmp5;
-        obj7.emit(obj.Update, tmp5);
+        closure_0.latestWants = tmp5;
+        closure_0.emit(obj.Update, tmp5);
       }
       return tmp5;
     };
@@ -385,7 +379,7 @@ prototype["updateCallUserIds"] = function updateCallUserIds(_userIds) {
 };
 prototype["shouldReceiveFromUser"] = function shouldReceiveFromUser(arg0) {
   const self = this;
-  const connection = this.connection;
+  connection = this.connection;
   let localVideoDisabled;
   if (connection != null) {
     localVideoDisabled = connection.getLocalVideoDisabled(arg0);
@@ -450,7 +444,7 @@ prototype["setConnection"] = function setConnection(c3, arg1) {
     flag = true;
   }
   const self = this;
-  const connection = this.connection;
+  connection = this.connection;
   if (connection != null) {
     connection.removeListener(BaseConnectionEvent.BaseConnectionEvent.LocalVideoDisabled, self.handleLocalVideoDisabled);
   }
@@ -462,7 +456,7 @@ prototype["setConnection"] = function setConnection(c3, arg1) {
   if (connection3 != null) {
     connection3.removeListener(BaseConnectionEvent.BaseConnectionEvent.ActiveSinksChange, self.delayedUpdate);
   }
-  self.connection = c3;
+  self.connection = connection;
   const connection4 = self.connection;
   if (connection4 != null) {
     connection4.addListener(BaseConnectionEvent.BaseConnectionEvent.LocalVideoDisabled, self.handleLocalVideoDisabled);
@@ -576,7 +570,7 @@ prototype["reset"] = function reset() {
     obj = { any };
   }
   self.latestWants = obj;
-  const WindowVisibilityVideoManager = tmp3(9609).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = WindowVisibilityVideoManager2.WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(WindowVisibilityVideoManager2.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
 };
 prototype["setSelectedParticipant"] = function setSelectedParticipant(selectedParticipantId) {
@@ -644,7 +638,7 @@ prototype["getVideoParticipantCount"] = function getVideoParticipantCount() {
   const keys = Object.keys(this.videoSsrcs);
   const iter = keys[Symbol.iterator]();
   while (iter !== undefined) {
-    let connection = this.connection;
+    connection = this.connection;
     let localVideoDisabled;
     if (connection != null) {
       localVideoDisabled = connection.getLocalVideoDisabled(tmp3);

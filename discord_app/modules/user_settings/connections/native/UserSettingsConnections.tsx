@@ -62,10 +62,10 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   const items4 = [selectedPlatformType];
   const effect2 = authorizedAppsFetchState.useEffect(() => {
     if (null != selectedPlatformType) {
-      if (-1 === tmp) {
+      if (-1 === selectedPlatformType) {
         ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14957, dependencyMap.paths), "AddConnection");
       } else {
-        const obj = { platformType: tmp, location: AnalyticsLocations.USER_SETTINGS };
+        const obj = { platformType: selectedPlatformType, location: AnalyticsLocations.USER_SETTINGS };
         authorizeConnectionDefault(obj);
       }
     }

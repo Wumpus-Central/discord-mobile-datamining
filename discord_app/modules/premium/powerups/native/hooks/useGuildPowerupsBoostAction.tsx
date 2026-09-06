@@ -25,7 +25,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
   const handleMobileWebRedirectCheckout = tmp.handleMobileWebRedirectCheckout;
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   let items = [arg1, arg2, arg0, arg4, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout, analyticsLocations];
-  return shouldUseMobileWebRedirectCheckout.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  return shouldUseMobileWebRedirectCheckout.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -54,8 +54,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
             let availableGuildBoostSlots;
             let tmp15 = null;
             if (null != tmp2) {
-              tmp15 = closure_2;
-              if (closure_2 > 0) {
+              tmp15 = dependencyMap;
+              if (dependencyMap > 0) {
                 if (!handleMobileWebRedirectCheckout.hasFetched) {
                   let obj1 = tmp2(7419);
                   const items = [obj1.init(), ];

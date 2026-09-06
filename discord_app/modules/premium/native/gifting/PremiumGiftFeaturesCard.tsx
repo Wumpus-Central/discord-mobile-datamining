@@ -10,6 +10,7 @@ import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import TextStylesDefault from "TextStyles" /* 5524 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8833 */;
 import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9370 */;
 import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9382 */;
 import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9384 */;
@@ -30,22 +31,21 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   const themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(config.avatarAsset, true);
   obj = { style: closure_14(config.isLargeSize).promotionDetailsContainer, colors: [4294967102, 4294967053], children: null };
   const tmp = closure_14(config.isLargeSize);
-  const tmp6 = React7;
   obj = { imageUrl: themeAndReducedMotionAwareAssetUrl, title: null, subtitle: null, subtitleColor: "text-default", shouldAnimate: null };
   const tmp7 = LinearGradientDefault;
   let obj3 = StringUtils;
   if (obj3.isNullOrEmpty(config.header)) {
-    const intl = tmp2(1114).intl;
-    let header = intl.string(tmp2(1114).t.OEtqpm);
+    const intl = util.intl;
+    let header = intl.string(util.t.OEtqpm);
   } else {
     header = config.header;
   }
   obj.title = header;
   const tmp8 = PremiumGiftPromotionDetailsDefault;
   if (tmp2Result.isNullOrEmpty(config.mobileBody)) {
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     const obj1 = { availableCount: numClaimableRewards };
-    let mobileBody = intl2.formatToPlainString(tmp2(1114).t["2h5M+X"], obj1);
+    let mobileBody = intl2.formatToPlainString(util.t["2h5M+X"], obj1);
   } else {
     mobileBody = config.mobileBody;
   }
@@ -54,12 +54,12 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   obj.shouldAnimate = isSelected;
   const items = [React6(tmp8, obj), ];
   obj3 = { variant: "primary-overlay", text: null, onPress: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj3.text = intl3.string(util.t.Ve9Ge6);
   obj3.onPress = onPress;
   items[1] = React6(components_Button_Button.Button, obj3);
   obj.children = items;
-  obj2.children = tmp6(tmp7, obj);
+  obj2.children = React7(tmp7, obj);
   return React6(native.ThemeContextProvider, obj2);
 }
 const View = fn(17).View;
@@ -163,19 +163,18 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   const items2 = [tmp6.card, style];
   obj.style = items2;
   const tmp10 = usePremiumProductPricingStringDefault(premiumType, constants.YEAR);
-  const tmp14 = React7;
   const merged1 = Object.assign(merged);
   const items3 = [React6(PremiumFeaturesWumpusDefault, { premiumType }), React6(PremiumFeaturesLogoDefault, { style: tmp6.logo, premiumType }), , , , , ];
   obj2 = { style: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
   const items4 = [tmp6.pricing, obj6[str]];
   obj2.style = items4;
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj2.children = intl.format(util.t.Ob6fwp, { monthlyPrice: tmp9, yearlyPrice: tmp10 });
   items3[2] = React6(Text_Text.Text, obj2);
   const obj3 = { style: null, variant: "heading-sm/bold", color: "text-overlay-light", children: null };
   const items5 = [tmp6.featureTitle, obj2[str]];
   obj3.style = items5;
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj3.children = intl2.string(util.t.JgsVht);
   items3[3] = React6(Text_Text.Text, obj3);
   items3[4] = React6(PremiumFeatureListDefault, { style: tmp6.features, features: tmp8, iconStyle: tmp6.featureIcon, labelStyle: tmp6.featureText, rowStyle: obj[str] });
@@ -184,24 +183,27 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
     if (null != stateFromStores) {
       if (premiumType === hasOwnProperty.TIER_2) {
         const obj5 = { config: stateFromStores, numClaimableRewards: claimableRewards.length, isLargeSize: tmp5, isSelected, onPress };
-        let tmp12Result = tmp12(PremiumGiftPlanSelectPromotionDetails, obj5);
+        let tmp12Result = React6(PremiumGiftPlanSelectPromotionDetails, obj5);
       }
       items3[6] = tmp12Result;
       obj.children = items3;
-      obj.children = tmp14(tmp7Result, obj);
-      return tmp12(tmp13, obj);
+      obj.children = React7(tmp7Result, obj);
+      return React6(View, obj);
     }
   }
   obj6 = { style: null, children: null };
   const items6 = [tmp6.button, obj10[str]];
   obj6.style = items6;
   if (premiumType === hasOwnProperty.TIER_0) {
-    const intl4 = tmp2(1114).intl;
-    let stringResult = intl4.string(tmp2(1114).t.rk4Uu8);
+    const intl4 = util.intl;
+    let stringResult = intl4.string(util.t.rk4Uu8);
   } else {
-    const intl3 = tmp2(1114).intl;
-    stringResult = intl3.string(tmp2(1114).t.Ve9Ge6);
+    const intl3 = util.intl;
+    stringResult = intl3.string(util.t.Ve9Ge6);
   }
   obj6.children = React6(components_Button_Button.Button, { variant: "primary-overlay", text: stringResult, onPress });
-  tmp12Result = tmp12(tmp13, obj6);
+  tmp12Result = React6(View, obj6);
+  const obj1 = { style: tmp6.logo, premiumType };
+  const obj4 = { style: tmp6.features, features: tmp8, iconStyle: tmp6.featureIcon, labelStyle: tmp6.featureText, rowStyle: obj[str] };
+  tmp7Result = PremiumFeaturesBackgroundDefault;
 });

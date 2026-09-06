@@ -47,6 +47,7 @@ class GiftCodeRow extends PureComponent {
         obj.url = GiftCodeUtils.getGiftCodeURL(giftCode.code);
         obj2.showShareActionSheet(obj, AnalyticsSections.GIFT_CODE_ROW);
       }
+      tmp = null != giftCode && null != sku;
     };
     return applyArgumentsResult;
   }
@@ -113,7 +114,7 @@ prototype["render"] = function render() {
       return timestampProducer(React4, obj, arg1);
     };
     obj6.children = intl2.format(tmp6(tmp7[13]).t.b1BfWD, obj7);
-    tmp5Result = tmp5(tmp6(tmp7[11]).Text, obj6);
+    tmp5Result = closure_6(tmp6(tmp7[11]).Text, obj6);
   }
   obj5.children = tmp5Result;
   items3[1] = closure_6(closure_3, obj5);

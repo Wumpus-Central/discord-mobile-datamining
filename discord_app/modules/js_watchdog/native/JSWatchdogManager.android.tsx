@@ -55,7 +55,7 @@ prototype["ping"] = function ping() {
     flag = false;
   }
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -195,7 +195,7 @@ prototype["ping"] = function ping() {
 };
 prototype["startWatchdog"] = function startWatchdog() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -290,7 +290,7 @@ prototype["reportStall"] = function reportStall(stallTime, arg1, is_previous, _a
 };
 prototype["getCurrentSessionId"] = function getCurrentSessionId() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

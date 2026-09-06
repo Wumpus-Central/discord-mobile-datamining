@@ -29,10 +29,10 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
     items = [_location];
   }
   analyticsLocations = skuId(onAddSuccess[4])(items).analyticsLocations;
-  let tmp3Result = tmp3(tmp[6]);
+  let tmp3Result = require("initialize");
   const items1 = [analyticsLocations];
   stateFromStores = tmp3Result.useStateFromStores(items1, () => UserProfileStore.getFirstWishlistId(require));
-  tmp3Result = tmp3(tmp[7]);
+  tmp3Result = require("useWishlistHooks");
   isSkuInWishlist = tmp3Result.useIsSkuInWishlist(stateFromStores, skuId);
   const tmp2 = skuId(onAddSuccess[4]);
   [tmp7, c8] = onError(skipAddAnnouncement.useState(null), 2);
@@ -51,7 +51,7 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
   obj = {
     isWishlisted: isSkuInWishlist,
     isBusy,
-    handleToggle: obj4.useCallback(onRemoveSuccess(function*(arg0, value) {
+    handleToggle: obj4.useCallback(onRemoveSuccess(function*() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

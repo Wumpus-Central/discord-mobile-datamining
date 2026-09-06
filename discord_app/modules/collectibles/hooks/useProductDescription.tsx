@@ -6,7 +6,7 @@ import util from "util" /* 1114 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import size from "module_2" /* 2 */;
 
-function getBundleDescription(bundledProducts, flag) {
+function getBundleDescription(bundledProducts) {
   if (flag === undefined) {
     flag = false;
   }
@@ -27,24 +27,19 @@ function getBundleDescription(bundledProducts, flag) {
     const items = [];
     let flag2 = false;
     for (const item10012 of bundledProducts1) {
-      let tmp4 = item10012;
       let type = item10012.type;
-      let tmp6 = require;
       if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-        let intl2 = tmp6(1114).intl;
-        obj = { itemName: null };
-        obj.itemName = tmp4.name;
-        let arr = items.push(intl2.formatToPlainString(tmp6(1114).t.Ntv9Jt, obj));
-      } else if (tmp6(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
-        let intl = tmp6(1114).intl;
-        obj = { itemName: null };
-        obj.itemName = tmp4.name;
-        arr = items.push(intl.formatToPlainString(tmp6(1114).t["3Y8q7a"], obj));
-      } else if (tmp6(1889).CollectiblesItemType.NAMEPLATE === type) {
-        let intl6 = tmp6(1114).intl;
-        let obj1 = { itemName: null };
-        obj1.itemName = tmp4.name;
-        let arr1 = items.push(intl6.formatToPlainString(tmp6(1114).t["2keXky"], obj1));
+        let intl2 = util.intl;
+        obj = { itemName: item10012.name };
+        let arr = items.push(intl2.formatToPlainString(util.t.Ntv9Jt, obj));
+      } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
+        let intl = util.intl;
+        obj = { itemName: item10012.name };
+        arr = items.push(intl.formatToPlainString(util.t["3Y8q7a"], obj));
+      } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
+        let intl6 = util.intl;
+        let obj1 = { itemName: item10012.name };
+        let arr1 = items.push(intl6.formatToPlainString(util.t["2keXky"], obj1));
         flag2 = true;
       }
       continue;
@@ -67,29 +62,28 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
 
 export const useProductDescription = function useProductDescription(product) {
-  closure_0 = product;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   const items = [product, flag];
   return useMemo(() => {
-    if (null != closure_0) {
-      if (null != tmp.summary) {
-        if ("" !== tmp.summary) {
-          if (tmp.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
-            const summary = tmp.summary;
+    if (null != product) {
+      if (null != product.summary) {
+        if ("" !== product.summary) {
+          if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
+            const summary = product.summary;
             if (summary.includes("{joinedItems}")) {
-              return tmp.summary.replace("{joinedItems}", getBundleDescription(tmp, flag));
+              return product.summary.replace("{joinedItems}", getBundleDescription(product, flag));
             }
           }
-          return tmp.summary;
+          return product.summary;
         }
       }
     }
     let type;
-    if (closure_0 != null) {
-      type = tmp.type;
+    if (product != null) {
+      type = product.type;
     }
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
       const intl4 = util.intl;
@@ -104,7 +98,7 @@ export const useProductDescription = function useProductDescription(product) {
       const intl = util.intl;
       return intl.string(util.t.fWzWPp);
     } else if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
-      return getBundleDescription(tmp, flag);
+      return getBundleDescription(product, flag);
     } else {
       return "";
     }

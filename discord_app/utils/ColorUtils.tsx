@@ -14,10 +14,10 @@ function hexToRgba(PRIMARY_760) {
   obj = { r: tmp[0], g: tmp[1], b: tmp[2], a: tmp[3] };
   return obj;
 }
-function rgbToHslObject(arg0, arg1, arg2) {
-  const result = arg0 / 255;
-  let result1 = arg1 / 255;
-  let num = arg2 / 255;
+function rgbToHslObject(items, items2, items3) {
+  const result = items / 255;
+  let result1 = items2 / 255;
+  let num = items3 / 255;
   const bound = Math.min(result, result1, num);
   const bound1 = Math.max(result, result1, num);
   const diff = bound1 - bound;
@@ -430,12 +430,12 @@ export { rgbToHslObject };
 export const hslToString = function hslToString(arg0, arg1, arg2) {
   return "hsl(" + arg0 + ", " + arg1 + "%, " + arg2 + "%)";
 };
-export const rgbToHsl = function rgbToHsl(arg0, arg1, arg2) {
-  const tmp = rgbToHslObject(arg0, arg1, arg2);
+export const rgbToHsl = function rgbToHsl(items, items2, items3) {
+  const tmp = rgbToHslObject(items, items2, items3);
   return "hsl(" + tmp.h + ", " + tmp.s + "%, " + tmp.l + "%)";
 };
-export const rgbToHex = function rgbToHex(arg0, arg1, arg2) {
-  let str = 16777216 + (arg0 << 16) + (arg1 << 8) + arg2;
+export const rgbToHex = function rgbToHex(hsvToRgbWorkletResult, hsvToRgbWorkletResult2, hsvToRgbWorkletResult3) {
+  let str = 16777216 + (hsvToRgbWorkletResult << 16) + (hsvToRgbWorkletResult2 << 8) + hsvToRgbWorkletResult3;
   str = str.toString(16);
   return "#" + str.slice(1);
 };

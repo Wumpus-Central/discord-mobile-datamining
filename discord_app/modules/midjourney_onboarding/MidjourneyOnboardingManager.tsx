@@ -16,7 +16,7 @@ class MidjourneyOnboardingManager extends tmp2 {
 }
 MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
-  return (async (arg0, value) => {
+  return (async () => {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -44,13 +44,12 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
             if (obj6.isEligibleForMidjourneyRedirect(channel)) {
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = { value: tmp21(13859).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
+              const obj1 = { value: tmp2(13859).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
               return obj1;
             } else {
               dependencyMap = 3;
             }
             obj6 = tmp2(13859);
-            tmp21 = tmp2;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;

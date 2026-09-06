@@ -19,5 +19,5 @@ export const useEditStateContext = function useEditStateContext() {
   }
 };
 export const EditStateContextProvider = function EditStateContextProvider(children) {
-  return <redux.Provider value={Object.assign(arg0, Object.assign({ children: 0 }))}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={Object.assign(children, Object.assign({ children: 0 }))}>{children.children}</redux.Provider>;
 };

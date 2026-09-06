@@ -5,9 +5,10 @@ import DurationsDefault from "Durations" /* 1090 */;
 import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10915 */;
 import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10972 */;
 import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 11395 */;
+import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 11396 */;
+import InappropriateConversationUtils from "InappropriateConversationUtils" /* 11397 */;
 import size from "module_2" /* 2 */;
 
-const InappropriateConversationUtils = tmp(11397);
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
 const HOUR = DurationsDefault.Millis.HOUR;
 let closure_4 = 12 * DurationsDefault.Millis.HOUR;
@@ -57,4 +58,5 @@ export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButt
       tmpResult = InappropriateConversationUtils;
     }
   }
+  obj3 = useShouldShowInitialSafetyToolsButtonTooltip;
 };

@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import useAvatarColor from "useAvatarColor" /* 8132 */;
+import useHeroColors from "useHeroColors" /* 8133 */;
 import ColorUtils from "ColorUtils" /* 4409 */;
 import size from "module_2" /* 2 */;
 
@@ -17,19 +18,19 @@ export const getAppGradientColors = function getAppGradientColors(appIconSrc) {
     return tmp;
   } else {
     if (obj5.hasFetchedColors(appIconSrc)) {
-      let tmp6Result = tmp6(8133);
+      let tmp6Result = useHeroColors;
       const heroColors = tmp6Result.getHeroColors(appIconSrc);
       ({ primaryColor, secondaryColor } = heroColors);
       let tmp5 = tmp;
       if (false === tmp4) {
-        tmp6Result = tmp6(4409);
-        items = [tmp6Result.hexToRgba(primaryColor), tmp6(4409).hexToRgba(secondaryColor)];
+        tmp6Result = ColorUtils;
+        items = [tmp6Result.hexToRgba(primaryColor), ColorUtils.hexToRgba(secondaryColor)];
         tmp5 = items;
-        const tmp6Result1 = tmp6(4409);
+        const tmp6Result1 = ColorUtils;
       }
       return tmp5;
     } else {
-      tmp6(8132).maybeFetchColors(appIconSrc);
+      useAvatarColor.maybeFetchColors(appIconSrc);
       return tmp;
     }
     obj5 = useAvatarColor;

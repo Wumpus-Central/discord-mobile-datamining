@@ -11,7 +11,8 @@ const result = size.fileFinishedImporting("modules/user_profile/utils/parseProvi
 export default function parseProviderRouteHeadlessSessionId(str) {
   if (null != str) {
     if (str.startsWith(c3)) {
-      const first = _slicedToArray(str.slice(2).split(","), 1)[0];
+      str = str.slice(2);
+      const first = _slicedToArray(str.split(","), 1)[0];
       if (null != first) {
         if (0 !== first.length) {
           value = PlatformsDefault.get(first);

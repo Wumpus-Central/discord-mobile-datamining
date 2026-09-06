@@ -35,7 +35,7 @@ AvailablePlanRecord["createFromServer"] = function createFromServer(discount) {
     discount = null;
   }
   if (typeof AvailablePlanRecord === "function") {
-    const tmp7 = new AvailablePlanRecord(tmp, tmp2, new.target, id, quantity, price, total, add_on_plans);
+    const tmp7 = new AvailablePlanRecord(tmp, AvailablePlanRecord, new.target, id, quantity, price, total, add_on_plans);
     tmp7.id = id;
     tmp7.quantity = quantity;
     tmp7.price = price;
@@ -194,7 +194,7 @@ CheckoutContextRecord["createFromOrder"] = function createFromOrder(checkout_con
     }
     let mapped = available_plans.map(AvailablePlanRecord.createFromServer);
     if (typeof CheckoutContextRecord === "function") {
-      const tmp11 = new CheckoutContextRecord(tmp, available_plans, tmp4, new.target, payment_sources, country, allowed_currencies, mapped);
+      const tmp11 = new CheckoutContextRecord(tmp, available_plans, CheckoutContextRecord, new.target, payment_sources, country, allowed_currencies, mapped);
       if (payment_sources == null) {
         payment_sources = [];
       }

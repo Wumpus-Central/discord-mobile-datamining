@@ -14,7 +14,7 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
   const providerConnection = obj.useProviderConnection(provider_id);
   const startConnection = providerConnection.startConnection;
   ({ loading, hasConnection, canConnect, account } = providerConnection);
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

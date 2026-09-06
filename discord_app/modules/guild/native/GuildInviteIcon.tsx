@@ -3,7 +3,9 @@
 // Module 12659 (GuildInviteIcon)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import StringUtils from "StringUtils" /* 1925 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import StylesheetUtils from "StylesheetUtils" /* 12660 */;
 import noop from "module_19" /* 19 */;
@@ -45,7 +47,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     obj1.source = guildIconSource;
     return jsx(FastImageDefault, { accessibilityRole: "image", accessibilityLabel: formatToPlainStringResult, style: null, source: null });
   } else {
-    const acronym = tmp2(1925).getAcronym(guild.name);
+    const acronym = StringUtils.getAcronym(guild.name);
     let num = closure_5[acronym.length - 1];
     if (num == null) {
       num = 10;
@@ -63,7 +65,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     items2[1] = obj4;
     obj3.style = items2;
     obj3.children = acronym;
-    obj2.children = jsx(tmp2(1178).LegacyText, { numberOfLines: 1, style: null, children: null });
+    obj2.children = jsx(native.LegacyText, { numberOfLines: 1, style: null, children: null });
     return <View accessible accessibilityRole="image" accessibilityLabel={formatToPlainStringResult} style={null}>{null}</View>;
   }
 };

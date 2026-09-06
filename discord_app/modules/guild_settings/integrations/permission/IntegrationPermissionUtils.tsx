@@ -12,9 +12,8 @@ function commandPermissions(arg0, items) {
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    let tmp8 = tmp7;
     if (items.includes(tmp7.type)) {
-      obj[tmp6] = tmp8;
+      obj[tmp6] = tmp7;
     }
     continue;
   }

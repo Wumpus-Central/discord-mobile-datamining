@@ -25,7 +25,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
   let first1;
   noop = undefined;
   c6 = undefined;
-  closure_7 = async function _handleSubmit(arg0, value) {
+  closure_7 = async function _handleSubmit() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -125,13 +125,13 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
   [obj3, c6] = first1(obj1.useState(null), 2);
   obj = { style: tmp.container, children: null };
   obj = { label: null, description: null, value: null, onChange: null, placeholder: null, maxLength: 200, status: null, errorMessage: null, submitBehavior: "blurAndSubmit", returnKeyType: "done" };
-  const intl = tmp2(tmp3[11]).intl;
+  const intl = require("util").intl;
   obj.label = intl.string(require("util").t.FFFAGt);
-  const intl2 = tmp2(tmp3[11]).intl;
+  const intl2 = require("util").intl;
   obj.description = intl2.string(require("util").t["/zbXqm"]);
   obj.value = first1;
   obj.onChange = tmp6Result[1];
-  const intl3 = tmp2(tmp3[11]).intl;
+  const intl3 = require("util").intl;
   obj.placeholder = intl3.string(require("util").t.VzuITC);
   let str2 = "default";
   if (null != obj2) {
@@ -145,7 +145,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
   obj.errorMessage = anyErrorMessage;
   const items1 = [closure_11(require("TextArea").TextArea, obj), , ];
   obj1 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
-  const intl4 = tmp2(tmp3[11]).intl;
+  const intl4 = require("util").intl;
   obj1.title = intl4.string(require("util").t.Olo8FB);
   obj1.defaultValue = defaultValue;
   obj1.onChange = function onChange(arg0) {

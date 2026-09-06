@@ -36,9 +36,9 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
   if (displayType === TeenActionDisplayType.TOTAL_VOICE_MINUTES) {
     let tmpResult = tmp(7593);
     return tmpResult.formatTotalTime(num);
-  } else if (displayType === tmp3.PURCHASES) {
-    const totalSpendAmount = obj2.getTotalSpendAmount();
-    const totalSpendCurrency = obj2.getTotalSpendCurrency();
+  } else if (displayType === TeenActionDisplayType.PURCHASES) {
+    const totalSpendAmount = FamilyCenterStore.getTotalSpendAmount();
+    const totalSpendCurrency = FamilyCenterStore.getTotalSpendCurrency();
     let result = num;
     if (null != totalSpendAmount) {
       result = num;
@@ -48,8 +48,8 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
       }
     }
     return result;
-  } else if (displayType === tmp3.GIFTS) {
-    const totalGiftValue = obj2.getTotalGiftValue();
+  } else if (displayType === TeenActionDisplayType.GIFTS) {
+    const totalGiftValue = FamilyCenterStore.getTotalGiftValue();
     let result1 = num;
     if (null != totalGiftValue) {
       result1 = tmp(7234).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);

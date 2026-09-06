@@ -2,11 +2,16 @@
 
 // Module 17079 (SoundboardSoundPickerCategories)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import ClockIcon from "ClockIcon" /* 4523 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
 import SoundboardTypes from "SoundboardTypes" /* 5020 */;
+import LockIcon from "LockIcon" /* 5095 */;
 import Pressables from "Pressables" /* 5123 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
+import TrophyIcon from "TrophyIcon" /* 8717 */;
 import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9965 */;
 import _modDef10391 from "module_10391" /* 10391 */;
 import _modDef17077 from "module_17077" /* 17077 */;
@@ -28,28 +33,28 @@ function SoundCategoryItem(style) {
     let tmp14Result = closure_1_10(GuildIconDefault, obj);
     let tmp6 = null;
     let tmp7 = null;
-  } else if (tmp2(5020).SoundboardSoundGridSectionType.FAVORITES === type) {
-    const intl4 = tmp2(1114).intl;
-    name = intl4.string(tmp2(1114).t.y3LQCG);
+  } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
+    const intl4 = util.intl;
+    name = intl4.string(util.t.y3LQCG);
     tmp6 = _modDef10391;
     tmp7 = null;
     tmp14Result = null;
-  } else if (tmp2(5020).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
-    const intl3 = tmp2(1114).intl;
-    name = intl3.string(tmp2(1114).t["+cGVV6"]);
+  } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+    const intl3 = util.intl;
+    name = intl3.string(util.t["+cGVV6"]);
     obj = { style: tmp.keyboardItem };
-    tmp7 = closure_1_10(tmp2(4523).ClockIcon, obj);
+    tmp7 = closure_1_10(ClockIcon.ClockIcon, obj);
     tmp6 = null;
     tmp14Result = null;
-  } else if (tmp2(5020).SoundboardSoundGridSectionType.DEFAULTS === type) {
-    const intl2 = tmp2(1114).intl;
-    name = intl2.string(tmp2(1114).t.Rtvk9X);
+  } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
+    const intl2 = util.intl;
+    name = intl2.string(util.t.Rtvk9X);
     tmp6 = _modDef17077;
     tmp7 = null;
     tmp14Result = null;
-  } else if (tmp2(5020).SoundboardSoundGridSectionType.SEARCH === type) {
-    const intl = tmp2(1114).intl;
-    name = intl.string(tmp2(1114).t.sKt3xS);
+  } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
+    const intl = util.intl;
+    name = intl.string(util.t.sKt3xS);
     tmp6 = _modDef17077;
     tmp7 = null;
     tmp14Result = null;
@@ -58,12 +63,12 @@ function SoundCategoryItem(style) {
     tmp7 = null;
     tmp14Result = null;
     name = null;
-    if (tmp2(5020).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
-      const intl5 = tmp2(1114).intl;
+    if (SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+      const intl5 = util.intl;
       obj = { guildName: category.categoryInfo.guild.name };
-      name = intl5.formatToPlainString(tmp2(1114).t.GXs41w, obj);
+      name = intl5.formatToPlainString(util.t.GXs41w, obj);
       const obj1 = { style: tmp.keyboardItem };
-      tmp7 = closure_1_10(tmp2(8717).TrophyIcon, obj1);
+      tmp7 = closure_1_10(TrophyIcon.TrophyIcon, obj1);
       tmp6 = null;
       tmp14Result = null;
     }
@@ -84,14 +89,14 @@ function SoundCategoryItem(style) {
   }
   if (tmp14Result == null) {
     const obj4 = { style: tmp.keyboardItem, source: tmp6 };
-    tmp14Result = tmp14(tmp2(1178).Icon, obj4);
+    tmp14Result = closure_1_10(native.Icon, obj4);
   }
   const items1 = [tmp14Result, ];
   if (locked) {
     const obj5 = { style: tmp.lockContainer, children: null };
     const obj6 = { style: tmp.lock };
-    obj5.children = tmp14(tmp2(5095).LockIcon, obj6);
-    locked = tmp14(tmp16, obj5);
+    obj5.children = closure_1_10(LockIcon.LockIcon, obj6);
+    locked = closure_1_10(hasOwnProperty, obj5);
   }
   items1[1] = locked;
   obj3.children = items1;
@@ -177,10 +182,10 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
     setImmediate(() => {
       let current;
       if (listRef != null) {
-        current = tmp.current;
+        current = listRef.current;
       }
       if (null != current) {
-        current = tmp.current;
+        current = listRef.current;
         const obj = { section, item: 0 };
         current.scrollToLocation(obj);
         const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);

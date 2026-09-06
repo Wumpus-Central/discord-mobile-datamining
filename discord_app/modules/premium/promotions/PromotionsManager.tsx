@@ -3,6 +3,7 @@
 // Module 17469 (PromotionsManager)
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
 import PromotionsActionCreators from "PromotionsActionCreators" /* 13353 */;
+import PremiumBogoPromotionUtilsCommon from "PremiumBogoPromotionUtilsCommon" /* 13467 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -44,7 +45,7 @@ class PromotionsManager extends tmp2 {
     applyArgumentsResult.stores = result1.set(closure_7, onPromotionsFetchSettled.bind(applyArgumentsResult));
     applyArgumentsResult.lastSubscriptionStateSignature = null;
     applyArgumentsResult.hasPendingSubscriptionRefetch = false;
-    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(async (arg0, value) => {
+    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -71,7 +72,7 @@ class PromotionsManager extends tmp2 {
             } else {
               currentUser = currentUser.getCurrentUser();
               if (!obj6.isPremiumExactly(currentUser, TIER_2.TIER_2)) {
-                let obj1 = require("PremiumBogoPromotionUtilsCommon");
+                let obj1 = PremiumBogoPromotionUtilsCommon;
                 c1 = 1;
                 c0 = 1;
                 obj1 = { value: null, done: false };
@@ -79,7 +80,6 @@ class PromotionsManager extends tmp2 {
                 return obj1;
               }
               obj6 = PremiumUtilsDefault;
-              tmp14 = dependencyMap;
             }
           } else if (arg0 === 1) {
             c0 = 3;
@@ -116,7 +116,7 @@ prototype["onLocaleChanged"] = function onLocaleChanged() {
 };
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

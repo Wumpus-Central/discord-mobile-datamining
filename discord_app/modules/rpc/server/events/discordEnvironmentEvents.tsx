@@ -1,6 +1,7 @@
 // === Module 14522: discordEnvironmentEvents ===
 
 // Module 14522 (discordEnvironmentEvents)
+import _modDef12 from "module_12" /* 12 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
@@ -52,6 +53,7 @@ let obj = {
               closure_1 = tmp2;
               closure_1_0(tmp2);
             }
+            obj2 = _modDef12;
           });
         });
       }
@@ -110,6 +112,7 @@ export const createDiscordEnvironmentEvents = function createDiscordEnvironmentE
                 closure_1 = tmp2;
                 closure_1_0(tmp2);
               }
+              obj2 = _modDef12;
             });
           });
         }

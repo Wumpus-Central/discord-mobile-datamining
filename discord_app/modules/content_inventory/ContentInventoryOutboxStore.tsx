@@ -27,8 +27,8 @@ prototype["getMatchingOutboxEntry"] = function getMatchingOutboxEntry(activity) 
 prototype["getUserOutbox"] = function getUserOutbox(id) {
   return map.get(id);
 };
-prototype["isFetchingUserOutbox"] = function isFetchingUserOutbox(arg0) {
-  return set.has(arg0);
+prototype["isFetchingUserOutbox"] = function isFetchingUserOutbox(require) {
+  return set.has(require);
 };
 Object.defineProperty(prototype, "deleteOutboxEntryError", {
   get: function deleteOutboxEntryError() {

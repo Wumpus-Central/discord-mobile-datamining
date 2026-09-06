@@ -31,11 +31,11 @@ export default function IgnoreUserElement(user) {
   const memo = stateFromStores.useMemo(() => {
     let guild_id;
     if (stateFromStores != null) {
-      guild_id = tmp.guild_id;
+      guild_id = stateFromStores.guild_id;
     }
     let id;
     if (stateFromStores != null) {
-      id = tmp.id;
+      id = stateFromStores.id;
     }
     return NicknameUtilsDefault.getName(guild_id, id, user);
   }, items4);
@@ -57,7 +57,7 @@ export default function IgnoreUserElement(user) {
     obj.disabled = isIgnored;
     obj.onPress = tmp6;
     obj.icon = jsx(tmp(tmp2[11]).EyeSlashIcon, {});
-    tmp8Result = tmp8(channelId(tmp2[9]), obj);
+    tmp8Result = jsx(channelId(tmp2[9]), { username: memo });
     const tmp10 = channelId(tmp2[9]);
   }
   return tmp8Result;

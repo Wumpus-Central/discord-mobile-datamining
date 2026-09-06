@@ -26,7 +26,7 @@ export const getVRStatusContainerRect = function getVRStatusContainerRect(items)
 };
 export const getStatusTypingDimensions = function getStatusTypingDimensions(items) {
   if (constants.SMALL !== items) {
-    if (tmp.XSMALL !== items) {
+    if (constants.XSMALL !== items) {
       let num = 6;
       let num2 = 28;
     }

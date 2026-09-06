@@ -29,7 +29,7 @@ class UserSearchItems {
 }
 const prototype = UserSearchItems.prototype;
 prototype["getAll"] = function getAll() {
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -121,9 +121,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     if (null != user) {
       let obj5 = UserSearchUtils;
       let names = obj5.getNames(tmp6);
-      obj = { id: tmp3, type: null, user: null, names: null, nick: null, affinity: null };
-      obj.type = RelationshipTypes.FRIEND;
-      obj.user = tmp6;
+      obj = { id: tmp3, type: RelationshipTypes.FRIEND, user: tmp6, names: null, nick: null, affinity: null };
       ({ names: obj6.names, nick: obj6.nick } = names);
       let userAffinity = UserAffinitiesV2Store.getUserAffinity(tmp3);
       let num;
@@ -142,17 +140,14 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
   const values = gameRelationships.values();
   const found = values.filter((type) => type.type === constants.FRIEND);
   for (const item10033 of found) {
-    let tmp8 = item10033;
     let user1 = UserStore.getUser(item10033.id);
     let tmp11 = user1;
     if (null != user1) {
       let obj7 = UserSearchUtils;
       let names1 = obj7.getNames(tmp11);
-      obj = { id: tmp8.id, type: null, user: null, names: null, nick: null, affinity: null };
-      obj.type = RelationshipTypes.FRIEND;
-      obj.user = tmp11;
+      obj = { id: item10033.id, type: RelationshipTypes.FRIEND, user: tmp11, names: null, nick: null, affinity: null };
       ({ names: obj8.names, nick: obj8.nick } = names1);
-      let userAffinity1 = UserAffinitiesV2Store.getUserAffinity(tmp8.id);
+      let userAffinity1 = UserAffinitiesV2Store.getUserAffinity(item10033.id);
       let num2;
       if (userAffinity1 != null) {
         num2 = userAffinity1.communicationProbability;
@@ -161,7 +156,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
         num2 = 0;
       }
       obj.affinity = num2;
-      obj[tmp8.id] = obj;
+      obj[item10033.id] = obj;
     }
     continue;
   }

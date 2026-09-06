@@ -39,6 +39,7 @@ export default function GuildStageChannelSelection(channel) {
         closure_1_1(found);
       }
       onChangeChannel(handleSelectChannel[8]).hideActionSheet();
+      const obj = onChangeChannel(handleSelectChannel[8]);
     };
     let id;
     if (channel != null) {
@@ -47,8 +48,8 @@ export default function GuildStageChannelSelection(channel) {
     obj.selectedItem = id;
     obj2.openLazy(asyncRequireImpl(9426, dependencyMap.paths), "SelectUpdatesChannel", obj);
   }
-  function renderChannelHook(children, arg1) {
-    return jsx(channel(handleSelectChannel[12]).Text, { variant: "text-sm/bold", color: "mobile-text-heading-primary", children }, arg1);
+  function renderChannelHook(children, key) {
+    return jsx(channel(handleSelectChannel[12]).Text, { variant: "text-sm/bold", color: "mobile-text-heading-primary", children }, key);
   }
   let obj = channel(handleSelectChannel[5]);
   const channelsUserCanStartStageIn = obj.useChannelsUserCanStartStageIn(channel.guild);
@@ -61,8 +62,8 @@ export default function GuildStageChannelSelection(channel) {
     obj = {
       stageName: tmp3,
       stageHook: renderChannelHook,
-      changeHook(children, arg1) {
-          return jsx(Text_Text.Text, { onPress: handleSelectChannel, variant: "text-xs/medium", color: "text-link", children }, arg1);
+      changeHook(children, key) {
+          return jsx(Text_Text.Text, { onPress: handleSelectChannel, variant: "text-xs/medium", color: "text-link", children }, key);
         }
     };
     obj.children = format(t.AkzLcV, obj);

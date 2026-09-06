@@ -145,7 +145,7 @@ export default function SearchableUserList(selectedUserIds) {
     props.handleMessage = handleMessage;
     let flag;
     if (disabledUserIds != null) {
-      flag = obj2.includes(user.id);
+      flag = disabledUserIds.includes(user.id);
     }
     if (flag == null) {
       flag = false;
@@ -157,8 +157,8 @@ export default function SearchableUserList(selectedUserIds) {
     }
     if (!flag2) {
       let hasItem;
-      if (obj2 != null) {
-        hasItem = obj2.includes(user.id);
+      if (disabledUserIds != null) {
+        hasItem = disabledUserIds.includes(user.id);
       }
       flag2 = hasItem;
     }
@@ -203,8 +203,8 @@ export default function SearchableUserList(selectedUserIds) {
   }
   if (someResult) {
     obj = { ref, sections: memo1, getItemProps: callback2, getSectionProps: callback1, renderListHeader: renderHeader, listHeaderSize: headerSize, insetEnd, onContentLengthChange, onLayout, onScroll, disableStickySections, disableThemedGradient };
-    let tmp22Result = tmp22(tmp15(tmp7[14]).UsersFastList, obj);
-    let tmp29 = tmp22;
+    let tmp22Result = closure_8(tmp15(tmp7[14]).UsersFastList, obj);
+    let tmp29 = closure_8;
   } else {
     const obj1 = { style: null, children: null };
     if (tmp21) {
@@ -231,12 +231,12 @@ export default function SearchableUserList(selectedUserIds) {
         prop2 = tmp4.searchBarRowContainer;
       }
       obj3.style = prop2;
-      obj2.children = tmp22(tmp15(tmp7[13]).UserFlashListActions, obj3);
-      obj1.children = tmp22(tmp6Result, obj2);
+      obj2.children = closure_8(tmp15(tmp7[13]).UserFlashListActions, obj3);
+      obj1.children = closure_8(tmp6Result, obj2);
       tmp26 = obj1;
     }
-    tmp22Result = tmp22(closure_5, tmp26);
-    tmp29 = tmp22;
+    tmp22Result = closure_8(closure_5, tmp26);
+    tmp29 = closure_8;
   }
   let tmp29Result = !disableGradient;
   if (!disableGradient) {

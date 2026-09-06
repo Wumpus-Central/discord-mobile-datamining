@@ -97,7 +97,7 @@ export const FormSwitch = function FormSwitch(onValueChange) {
     if (first) {
       num = token;
     }
-    obj = { left: obj.withSpring(num, tmp(4978).SUBTLE_SPRING, "animate-always"), backgroundColor: spring.withSpring(first ? token2 : token1, springPresets.SUBTLE_SPRING, "animate-always") };
+    obj = { left: obj.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"), backgroundColor: spring.withSpring(first ? token2 : token1, springPresets.SUBTLE_SPRING, "animate-always") };
     return obj;
   };
   obj = { withSpring: require("spring").withSpring, checked, knobCheckedLeft: token, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING, knobSelectedBackgroundColor: token2, knobBackgroundColor: token1 };

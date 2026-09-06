@@ -2,6 +2,7 @@
 
 // Module 5578 (KeyboardAwareView)
 import useKeyboardDuration from "useKeyboardDuration" /* 5580 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5581 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
@@ -47,11 +48,11 @@ export default noop.memo(function KeyboardAwareView(style) {
   const effect = obj.useEffect(() => subscribeToKeyboardUIStore(() => {
     let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
     if (0 === systemKeyboardHeight) {
-      let tmp2Result = tmp2(tmp3[6]);
+      let tmp2Result = style(flag[6]);
       const keyboardType = tmp2Result.getKeyboardType();
       num = 0;
-      if (keyboardType !== tmp2(tmp3[7]).KeyboardTypes.SYSTEM) {
-        tmp2Result = tmp2(tmp3[8]);
+      if (keyboardType !== style(flag[7]).KeyboardTypes.SYSTEM) {
+        tmp2Result = style(flag[8]);
         num = tmp2Result.getCustomKeyboardHeight();
       }
       systemKeyboardHeight = num;
@@ -61,6 +62,7 @@ export default noop.memo(function KeyboardAwareView(style) {
       ref.current = bound;
       closure_1_5(bound);
     }
+    const obj = style(flag[5]);
   }), items);
   ref = obj.useRef(false);
   const items1 = [flag, marginBottom];
@@ -72,10 +74,9 @@ export default noop.memo(function KeyboardAwareView(style) {
         tmp5 = keyboardDuration > 0;
       }
       if (tmp5) {
-        const result = tmp2(5581).DeprecatedLayoutAnimationKeyboard(keyboardDuration);
-        const tmp2Result = tmp2(5581);
+        const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimationKeyboard(keyboardDuration);
+        const tmp2Result = DeprecatedLayoutAnimation;
       }
-      tmp2 = require;
     } else {
       tmp.current = true;
     }

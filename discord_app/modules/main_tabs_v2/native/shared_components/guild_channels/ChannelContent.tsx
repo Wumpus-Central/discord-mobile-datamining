@@ -1,7 +1,10 @@
 // === Module 16660: ChannelContent ===
 
 // Module 16660 (ChannelContent)
+import Text_Text from "Text/Text" /* 4556 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
+import LockIcon from "LockIcon" /* 5095 */;
+import WarningIcon from "WarningIcon" /* 8588 */;
 import ChannelListLayout from "ChannelListLayout" /* 10121 */;
 import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16118 */;
 import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 16661 */;
@@ -71,21 +74,21 @@ function ChannelContentComponent(arg0) {
     obj4.style = items2;
     if (tmp10Result) {
       const obj6 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
-      tmp10Result = tmp10(tmp2(5095).LockIcon, obj6);
+      tmp10Result = timestampProducer(LockIcon.LockIcon, obj6);
     }
     const items3 = [tmp10Result, , ];
     if (isNSFWResult) {
       const obj7 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
-      isNSFWResult = tmp10(tmp2(8588).WarningIcon, obj7);
+      isNSFWResult = timestampProducer(WarningIcon.WarningIcon, obj7);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {
       const obj8 = { locked: needSubscriptionToAccess, isInMainTabsExperiment: true };
-      isSubscriptionGated = tmp10(GuildRoleSubscriptionGatedChannelIconDefault, obj8);
+      isSubscriptionGated = timestampProducer(GuildRoleSubscriptionGatedChannelIconDefault, obj8);
     }
     items3[2] = isSubscriptionGated;
     obj4.children = items3;
-    tmp12Result = tmp12(tmp11, obj4);
+    tmp12Result = React5(View, obj4);
   }
   items1[1] = tmp12Result;
   obj2.children = items1;
@@ -106,7 +109,7 @@ function ChannelContentComponent(arg0) {
     items5[1] = obj11;
     obj9.style = items5;
     obj9.children = subtitle;
-    tmp10Result = tmp10(tmp11, obj9);
+    tmp10Result = timestampProducer(View, obj9);
   }
   items4[1] = tmp10Result;
   obj1.children = items4;
@@ -115,7 +118,7 @@ function ChannelContentComponent(arg0) {
   let tmp10Result1 = obj14;
   if (obj14) {
     const obj13 = { variant: "text-xs/medium", color: "text-muted", style: { marginLeft: "auto" }, maxFontSizeMultiplier: 1.75, children: lastMessageTimestampString };
-    tmp10Result1 = tmp10(tmp2(4556).Text, obj13);
+    tmp10Result1 = timestampProducer(Text_Text.Text, obj13);
   }
   const items7 = [tmp10Result1, , ];
   const items8 = [{ alignItems: "center", paddingLeft: 4 }, ];
@@ -126,7 +129,7 @@ function ChannelContentComponent(arg0) {
   items7[1] = timestampProducer(View, { style: items8, children: mentionBadge });
   if (tmp10Result2) {
     const obj15 = { style: { flex: 1 } };
-    tmp10Result2 = tmp10(tmp11, obj15);
+    tmp10Result2 = timestampProducer(View, obj15);
   }
   items7[2] = tmp10Result2;
   obj12.children = items7;

@@ -1,6 +1,8 @@
 // === Module 8011: NewThreadSystemMessage ===
 
 // Module 8011 (NewThreadSystemMessage)
+import util from "util" /* 1114 */;
+import useChannelName from "useChannelName" /* 4713 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
@@ -22,11 +24,11 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     channel_id = messageReference.channel_id;
   }
   const channel = ChannelStore.getChannel(channel_id);
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
   if (null != channel) {
-    let content = tmp(4713).computeChannelName(channel, UserStore, RelationshipStore);
-    const tmpResult = tmp(4713);
+    let content = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+    const tmpResult = useChannelName;
   } else {
     content = message.content;
   }
@@ -36,7 +38,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   if (messageReference2 != null) {
     channel_id1 = messageReference2.channel_id;
   }
-  obj = { content: intl.formatToParts(tmp(1114).t.veX9jq, obj), threadOnClick: { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true } };
+  obj = { content: intl.formatToParts(util.t.veX9jq, obj), threadOnClick: { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true } };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj;
 };

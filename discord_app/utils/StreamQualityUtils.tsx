@@ -129,15 +129,15 @@ export const useMaxQuality = function useMaxQuality(participant) {
         FIXED = ResolutionTypes.FIXED;
       }
       size.type = FIXED;
-      tmp7Result = getReportedStreamResolutionDefault("useMaxQuality", tmp8, size, tmp7Result.fps);
+      tmp7Result = getReportedStreamResolutionDefault("useMaxQuality", stateFromStores1, size, tmp7Result.fps);
       obj.maxResolution = tmp7Result;
     } else {
       let tmp3 = null;
-      if (null != tmp.maxResolution) {
+      if (null != participant.maxResolution) {
         tmp3 = null;
-        if (null != tmp.maxFrameRate) {
+        if (null != participant.maxFrameRate) {
           obj = { maxFrameRate: null, maxResolution: null };
-          ({ maxFrameRate: obj.maxFrameRate, maxResolution: obj.maxResolution } = tmp);
+          ({ maxFrameRate: obj.maxFrameRate, maxResolution: obj.maxResolution } = participant);
           tmp3 = obj;
         }
       }

@@ -41,6 +41,7 @@ export const getClipAttachmentPOVWindow = function getClipAttachmentPOVWindow(ne
       }
     }
   }
+  hasFlagResult = obj.hasFlag(num, MessageAttachmentFlags.IS_CLIP);
 };
 export const getClipPOVOverlapMilliseconds = function getClipPOVOverlapMilliseconds(applicationId, applicationId2) {
   if (applicationId.applicationId === applicationId2.applicationId) {

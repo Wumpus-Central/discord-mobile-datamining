@@ -35,9 +35,9 @@ prototype["flushRequests"] = function flushRequests(fn) {
     let _pendingRequests = self._pendingRequests;
     const item = _pendingRequests.forEach((item) => {
       if (!self._guildMemberExists(item)) {
-        const _unacknowledgedRequests = tmp._unacknowledgedRequests;
+        const _unacknowledgedRequests = self._unacknowledgedRequests;
         _unacknowledgedRequests.add(item);
-        const _sentRequests = tmp._sentRequests;
+        const _sentRequests = self._sentRequests;
         _sentRequests.add(item);
         items.push(item);
       }
@@ -56,10 +56,10 @@ prototype["requestUnacknowledged"] = function requestUnacknowledged() {
     const prop = self._unacknowledgedRequests;
     const item = prop.forEach((item) => {
       if (self._guildMemberExists(item)) {
-        const _unacknowledgedRequests = tmp._unacknowledgedRequests;
+        const _unacknowledgedRequests = self._unacknowledgedRequests;
         _unacknowledgedRequests.delete(item);
       } else {
-        const _pendingRequests = tmp._pendingRequests;
+        const _pendingRequests = self._pendingRequests;
         _pendingRequests.add(item);
       }
     });

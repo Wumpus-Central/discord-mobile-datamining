@@ -102,7 +102,7 @@ function ActivityInVoice(participantId) {
         }
         return tmp;
       }, 500);
-      let ComponentDispatch = tmp(tmp2[23]).ComponentDispatch;
+      let ComponentDispatch = participantId(_undefined[23]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.VOICE_PANEL_PIP_CONTENT_READY, handleVideoReady);
       return () => {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
@@ -110,8 +110,6 @@ function ActivityInVoice(participantId) {
         clearTimeout(closure_0);
       };
     }
-    tmp = participantId;
-    tmp2 = _undefined;
   }, items);
   let items10 = layoutManager;
   let tmp5 = channelId;
@@ -147,9 +145,9 @@ function ActivityInVoice(participantId) {
   handleTargetAspectRatioParams = obj.useCallback((width) => {
     if (constants4.LANDSCAPE === stateFromStores1) {
       layoutManager.setTargetDimensions(stateFromStores, 16, 9);
-    } else if (tmp3.PORTRAIT === tmp2) {
+    } else if (constants4.PORTRAIT === stateFromStores1) {
       layoutManager.setTargetDimensions(stateFromStores, 9, 16);
-    } else if (tmp3.UNLOCKED === tmp2) {
+    } else if (constants4.UNLOCKED === stateFromStores1) {
       let num2 = 9;
       if (tmp) {
         num2 = 16;
@@ -230,6 +228,7 @@ function ActivityInVoice(participantId) {
     const obj2 = { participantId: AuthenticationStore.getId() };
     tmp19 = closure_22(User, obj2);
   }
+  const tmp3Result2 = participantId(items10[18]);
 }
 function User(participantId) {
   participantId = participantId.participantId;
@@ -266,7 +265,7 @@ function User(participantId) {
         }
         return tmp;
       }, 500);
-      let ComponentDispatch = tmp(tmp2[23]).ComponentDispatch;
+      let ComponentDispatch = participantId(_undefined[23]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.VOICE_PANEL_PIP_CONTENT_READY, handleVideoReady);
       return () => {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
@@ -274,8 +273,6 @@ function User(participantId) {
         clearTimeout(closure_0);
       };
     }
-    tmp = participantId;
-    tmp2 = _undefined;
   }, items);
   let tmp5 = transitionState === participantId(4271).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
   dependencyMap = tmp5;
@@ -471,7 +468,7 @@ function User(participantId) {
         userAvatarDecoration = stateFromStores.userAvatarDecoration;
       }
       obj6.avatarDecoration = userAvatarDecoration;
-      tmp35Result = tmp35(tmp3(1178).Avatar, obj6);
+      tmp35Result = closure_22(tmp3(1178).Avatar, obj6);
       const tmp3Result6 = tmp3(8826);
     }
     obj5.children = tmp35Result;
@@ -484,8 +481,8 @@ function User(participantId) {
       if (consumedRequestToRespondToSeriousThermalState) {
         const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
         const obj9 = { style: tmp.thermalAlertIcon, source: tmp6(9625), color: tmp.thermalAlertIcon.color };
-        obj8.children = tmp35(tmp3(1178).Icon, obj9);
-        tmp35Result = tmp35(tmp6(5589), obj8);
+        obj8.children = closure_22(tmp3(1178).Icon, obj9);
+        tmp35Result = closure_22(tmp6(5589), obj8);
         const tmp6Result2 = tmp6(5589);
       }
     }
@@ -556,7 +553,7 @@ function Stream(participantId) {
         }
         return tmp;
       }, 500);
-      let ComponentDispatch = tmp(tmp2[23]).ComponentDispatch;
+      let ComponentDispatch = participantId(_undefined[23]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.VOICE_PANEL_PIP_CONTENT_READY, handleVideoReady);
       return () => {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
@@ -564,8 +561,6 @@ function Stream(participantId) {
         clearTimeout(closure_0);
       };
     }
-    tmp = participantId;
-    tmp2 = _undefined;
   }, items);
   const context = obj1.useContext(mode(12272));
   ({ channelId: c2, layoutManager } = context);
@@ -626,14 +621,13 @@ function Stream(participantId) {
         tmp3 = height === ref2.current;
       }
       if (!tmp3) {
-        tmp12.current = width;
+        ref.current = width;
         ref2.current = height;
         if (mode === VoicePanelPIPModes.IN_APP) {
           const size = { width: width * c5, height: height * c5 };
           VideoActionCreators.updateVideoSize(tmp, size, 1);
         }
       }
-      tmp12 = ref;
     }
   }, items4);
   callback2 = obj1.useCallback((arg0) => {
@@ -675,11 +669,11 @@ function Stream(participantId) {
   } else if (tmp15) {
     obj1 = { style: tmp5, participantId, children: null };
     const obj2 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, style: tmp.video, onSize: callback, onLayout: callback1 };
-    obj1.children = tmp18(VideoStream, obj2);
-    tmp18Result = tmp18(AnimatedVideoWrapper, obj1);
+    obj1.children = closure_22(VideoStream, obj2);
+    tmp18Result = closure_22(AnimatedVideoWrapper, obj1);
   } else {
     const obj3 = { participantId };
-    tmp18Result = tmp18(User, obj3);
+    tmp18Result = closure_22(User, obj3);
   }
   return tmp18Result;
 }
@@ -697,13 +691,13 @@ function renderFocusedParticipant(arg0, id, transitionState, transitionCleanUp) 
       const obj1 = {};
       const merged = Object.assign(obj);
       return __initData2(ActivityInVoice, obj1, arg0);
-    } else if (tmp18.STREAM === type) {
+    } else if (constants5.STREAM === type) {
       const obj2 = {};
       const merged1 = Object.assign(obj);
       return __initData2(Stream, obj2, arg0);
     } else {
-      if (tmp18.USER !== type) {
-        const HIDDEN_STREAM = tmp18.HIDDEN_STREAM;
+      if (constants5.USER !== type) {
+        const HIDDEN_STREAM = constants5.HIDDEN_STREAM;
       }
       obj = {};
       const merged2 = Object.assign(obj);

@@ -81,7 +81,7 @@ let closure_16 = noop.forwardRef((headerTextStyle, ref) => {
     a11yMessage = validationState.a11yMessage;
   }
   obj.accessibilityHint = a11yMessage;
-  const intl3 = tmp10(1114).intl;
+  const intl3 = util.intl;
   obj.placeholder = intl3.string(util.t.qRaqel);
   obj.placeholderTextColor = tmp3.placeholderText.color;
   obj.onChange = onChangeText;
@@ -99,7 +99,7 @@ let closure_16 = noop.forwardRef((headerTextStyle, ref) => {
   let tmp9Result = null;
   if (null != message) {
     const obj1 = { errorMessage: message };
-    tmp9Result = tmp9(ErrorMessage, obj1);
+    tmp9Result = React7(ErrorMessage, obj1);
   }
   items1[2] = tmp9Result;
   obj.children = items1;
@@ -277,11 +277,11 @@ export default noop.forwardRef((arg0, ref) => {
   const effect1 = noop.useEffect(() => {
     let tmp2 = first1.status === constants.ERROR;
     if (tmp2) {
-      tmp2 = null != tmp.a11yMessage;
+      tmp2 = null != first1.a11yMessage;
     }
     if (tmp2) {
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(tmp.a11yMessage);
+      AccessibilityAnnouncer.announce(first1.a11yMessage);
     }
   }, items3);
   obj = { style: null, children: null };
@@ -312,18 +312,18 @@ export default noop.forwardRef((arg0, ref) => {
     obj1 = { children: null };
     items5[1] = enabled;
     obj.children = items5;
-    const items6 = [tmp14(tmp16, obj), , ];
+    const items6 = [closure_10(tmp16, obj), , ];
     let obj2 = { style: tmp.redesignGrow };
-    items6[1] = tmp17(tmp16, obj2);
+    items6[1] = closure_9(tmp16, obj2);
     const obj3 = { size: "lg", text: null, disabled: null, onPress: null, loading: null, grow: false };
     const intl3 = sourcePage(1114).intl;
     obj3.text = intl3.string(sourcePage(1114).t["PMsq/b"]);
     obj3.disabled = str.trim().length <= 0;
     obj3.onPress = handleSubmitEditing;
-    obj3.loading = first1.status === tmp4.LOADING;
-    items6[2] = tmp17(sourcePage(4975).Button, obj3);
+    obj3.loading = first1.status === constants2.LOADING;
+    items6[2] = closure_9(sourcePage(4975).Button, obj3);
     obj1.children = items6;
-    return tmp14(closure_11, obj1);
+    return closure_10(closure_11, obj1);
   } else {
     let obj4 = { style: tmp.friendMessageContainer, children: null };
     let obj5 = { style: null, variant: "text-sm/semibold", color: "text-muted", children: null };
@@ -333,26 +333,27 @@ export default noop.forwardRef((arg0, ref) => {
     obj5.style = items7;
     let intl = sourcePage(1114).intl;
     obj5.children = intl.string(sourcePage(1114).t.Yi6Mpu);
-    const items8 = [tmp17(sourcePage(4556).Text, obj5), , ];
+    const items8 = [closure_9(sourcePage(4556).Text, obj5), , ];
     const obj6 = { returnKeyType: "done", submitBehavior: "submit", value: first2, maxLength: 120, onSubmitEditing: handleSubmitEditing, onChange: callback1, status: null };
     let str2;
     if (first1.field === constants3.MESSAGE) {
-      if (first1.status === tmp4.ERROR) {
+      if (first1.status === constants2.ERROR) {
         str2 = "error";
       }
     }
     obj6.status = str2;
-    items8[1] = tmp17(sourcePage(7085).TextArea, obj6);
-    if (first1.status !== tmp4.ERROR) {
+    items8[1] = closure_9(sourcePage(7085).TextArea, obj6);
+    if (first1.status !== constants2.ERROR) {
       const obj7 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
-      let intl2 = tmp18(1114).intl;
-      obj7.children = intl2.string(tmp18(1114).t.UtfQNw);
-      let tmp17Result = tmp17(tmp18(4556).Text, obj7);
+      let intl2 = sourcePage(1114).intl;
+      obj7.children = intl2.string(sourcePage(1114).t.UtfQNw);
+      let tmp17Result = closure_9(sourcePage(4556).Text, obj7);
       items8[2] = tmp17Result;
       obj4.children = items8;
-      tmp14(tmp16, obj4);
+      closure_10(tmp16, obj4);
     }
     const obj8 = { errorMessage: first1.message };
-    tmp17Result = tmp17(ErrorMessage, obj8);
+    tmp17Result = closure_9(ErrorMessage, obj8);
   }
+  str = textState.validatedText;
 });

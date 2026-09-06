@@ -2,11 +2,13 @@
 
 // Module 14901 (FamilyCenterActivityPurchaseRow)
 import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import PriceUtils from "PriceUtils" /* 7234 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8173 */;
 import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14902 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 14903 */;
 import noop from "module_19" /* 19 */;
 
-const FamilyCenterActivityItemPreviewDefault = tmp2(14903);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -43,14 +45,14 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     return null;
   } else {
     let combined = displayName;
-    const tmp5Result = tmp5(7234);
+    const tmp5Result = PriceUtils;
     if (null != typeName) {
       const _HermesInternal = HermesInternal;
       combined = "" + displayName + " \u2022 " + typeName;
     }
     obj = { style: tmp.container, children: null };
     obj = { displayName, product: null, isSubscription: null, subscriptionPlanId: null };
-    const formatPriceResult = tmp5(7234).formatPrice(total, currency);
+    const formatPriceResult = PriceUtils.formatPrice(total, currency);
     if (product == null) {
       product = null;
     }
@@ -60,9 +62,9 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     const items = [React4(FamilyCenterActivityItemPreviewDefault, obj), ];
     const obj1 = { style: tmp.textContainer, children: null };
     const obj2 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: combined };
-    const items1 = [React4(tmp5(4556).Text, obj2), ];
+    const items1 = [React4(Text_Text.Text, obj2), ];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: formatPriceResult };
-    items1[1] = React4(tmp5(4556).Text, obj3);
+    items1[1] = React4(Text_Text.Text, obj3);
     obj1.children = items1;
     items[1] = hasOwnProperty(View, obj1);
     obj.children = items;

@@ -18,7 +18,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
   closure_1 = groupListingId;
   importAll = editStateId;
   dependencyMap = arg3;
-  closure_14 = async function _handleArchiveOrDelete(arg0, value) {
+  closure_14 = async function _handleArchiveOrDelete() {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -69,12 +69,12 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
                 if (closure_128_11) {
                   v2 = 3;
                   c2 = 1;
-                  const obj4 = { value: closure_128_8(closure_128_0, tmp14, closure_128_2), done: false };
+                  const obj4 = { value: closure_128_8(closure_128_0, closure_128_1, closure_128_2), done: false };
                   return obj4;
                 } else {
                   v2 = 2;
                   c2 = 1;
-                  const obj5 = { value: closure_128_9(closure_128_0, tmp14, closure_128_2), done: false };
+                  const obj5 = { value: closure_128_9(closure_128_0, closure_128_1, closure_128_2), done: false };
                   return obj5;
                 }
               }

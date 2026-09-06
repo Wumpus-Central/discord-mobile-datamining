@@ -28,7 +28,7 @@ export default function TextLineElement(element) {
   const sms = data.sms;
   const sms_body = data.sms_body;
   c2 = undefined;
-  dependencyMap = async function _handleOpenSms(arg0, value) {
+  dependencyMap = async function _handleOpenSms() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -55,7 +55,7 @@ export default function TextLineElement(element) {
           } else {
             closure_0 = tmp2;
             closure_128_0 = undefined;
-            const tmp15 = (function buildSmsUrl(arg0, arg1) {
+            const tmp15 = (function buildSmsUrl(sms, sms_body) {
               let str = "?";
               if (obj.isIOS()) {
                 let str2 = "&";
@@ -63,14 +63,14 @@ export default function TextLineElement(element) {
                   str2 = ";";
                 }
                 str = str2;
-                tmpResult = closure_1_0(closure_1_3[10]);
+                tmpResult = closure_1_0(dependencyMap[10]);
               }
               let str3 = "";
-              const combined = "sms:" + arg0;
-              if (null != arg1) {
+              const combined = "sms:" + sms;
+              if (null != sms_body) {
                 const _encodeURIComponent = encodeURIComponent;
                 const _HermesInternal = HermesInternal;
-                str3 = "" + str + "body=" + encodeURIComponent(arg1);
+                str3 = "" + str + "body=" + encodeURIComponent(sms_body);
               }
               return combined + str3;
             })(sms, sms_body);

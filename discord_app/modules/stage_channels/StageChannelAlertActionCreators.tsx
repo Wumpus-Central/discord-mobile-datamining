@@ -6,6 +6,6 @@ import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");
 
-export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(arg0) {
-  const result = StageChannelActionCreatorExtrasAll.openStageChannelAudienceNoticeModal(arg0);
+export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
+  const result = StageChannelActionCreatorExtrasAll.openStageChannelAudienceNoticeModal(channelId);
 };

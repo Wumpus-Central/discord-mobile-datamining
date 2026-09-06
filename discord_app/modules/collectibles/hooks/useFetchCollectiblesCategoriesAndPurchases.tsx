@@ -8,7 +8,7 @@ import ExperimentStore from "ExperimentStore" /* 4476 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
 
 require = fn;
-function useFetchPurchases(flag) {
+function useFetchPurchases() {
   if (flag === undefined) {
     flag = false;
   }
@@ -119,7 +119,7 @@ export { useFetchPurchases };
 export const useGetOrFetchPurchases = function useGetOrFetchPurchases() {
   return useFetchPurchases(true);
 };
-export const useGetOrFetchPurchase = function useGetOrFetchPurchase(selectedGiftingPromotionReward, flag) {
+export const useGetOrFetchPurchase = function useGetOrFetchPurchase(selectedGiftingPromotionReward) {
   if (flag === undefined) {
     flag = true;
   }
@@ -130,9 +130,9 @@ export const useGetOrFetchPurchase = function useGetOrFetchPurchase(selectedGift
   }
   return value;
 };
-export const useGetOrFetchCollectiblesCategoriesAndPurchases = function useGetOrFetchCollectiblesCategoriesAndPurchases(arg0) {
-  let obj = arg0;
-  if (arg0 == null) {
+export const useGetOrFetchCollectiblesCategoriesAndPurchases = function useGetOrFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
+  let obj = paymentGateway;
+  if (paymentGateway == null) {
     obj = {};
   }
   obj = {};

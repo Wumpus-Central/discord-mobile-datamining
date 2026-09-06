@@ -1,10 +1,14 @@
 // === Module 4708: MediaPostEmbedUtils ===
 
 // Module 4708 (MediaPostEmbedUtils)
+import util from "util" /* 1114 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import findCodedLinks from "findCodedLinks" /* 4543 */;
 import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 4709 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
+import useChannelName from "useChannelName" /* 4713 */;
+import LinkUtils from "LinkUtils" /* 4714 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -29,9 +33,9 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (!canAccess) {
       has_media_attachment = mediaPostEmbedData.has_media_attachment;
     }
-    const intl = tmp17(1114).intl;
+    const intl = util.intl;
     const string = intl.string;
-    const t = tmp17(1114).t;
+    const t = util.t;
     if (canAccess) {
       let stringResult = string(t.UsZEBI);
     } else {
@@ -65,7 +69,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (flag) {
       flag = !has_media_attachment;
     }
-    let tmp17Result = tmp17(1384);
+    let tmp17Result = FlagUtils;
     const thumbnail2 = mediaPostEmbedData.thumbnail;
     let num2;
     if (thumbnail2 != null) {
@@ -82,8 +86,8 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     obj = { title: str, subtitle: mediaPostEmbedData.description, ctaText: stringResult, coverImage: thumbnailImage, coverImageOverlayText: null, parentChannelId: null, threadId: null, postThread: null, messageId: null, canAccess: null, guildId: null, guildName: null, authorId: null, authorName: null, channelName: null, avatarUrl: null, shouldShowBlurredThumbnailImage: null, shouldContainMediaWithBackground: null, shouldSpoiler: null, obscureAwaitingScan: false, flags: null, contentScanVersion: null };
     let stringResult1;
     if (has_media_attachment) {
-      const intl2 = tmp17(1114).intl;
-      stringResult1 = intl2.string(tmp17(1114).t.Yonlia);
+      const intl2 = util.intl;
+      stringResult1 = intl2.string(util.t.Yonlia);
     }
     obj.coverImageOverlayText = stringResult1;
     ({ parent_channel_id: obj5.parentChannelId, channel_id: obj5.threadId } = mediaPostEmbedData);
@@ -107,7 +111,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     obj.authorName = name;
     let channelName;
     if (null != parentChannel) {
-      tmp17Result = tmp17(4713);
+      tmp17Result = useChannelName;
       channelName = tmp17Result.computeChannelName(parentChannel, UserStore, RelationshipStore);
     }
     obj.channelName = channelName;
@@ -124,10 +128,10 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
   if (null != url) {
     const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmp2Result = tmp2(4543);
+      let tmp2Result = findCodedLinks;
       const result = tmp2Result.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmp2Result = tmp2(4714);
+        tmp2Result = LinkUtils;
         tryParseChannelPathResult = tmp2Result.tryParseChannelPath(result);
       }
     }
@@ -146,10 +150,10 @@ export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPat
   if (null != url) {
     const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmpResult = tmp(4543);
+      let tmpResult = findCodedLinks;
       const result = tmpResult.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmpResult = tmp(4714);
+        tmpResult = LinkUtils;
         return tmpResult.tryParseChannelPath(result);
       }
     }

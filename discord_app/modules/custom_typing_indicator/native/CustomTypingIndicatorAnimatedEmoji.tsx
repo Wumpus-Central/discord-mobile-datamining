@@ -2,6 +2,8 @@
 
 // Module 11982 (CustomTypingIndicatorAnimatedEmoji)
 import user from "user" /* 1379 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import timing from "timing" /* 4561 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
@@ -67,43 +69,42 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
     if (!enabled) {
       if (animation !== user.TypingIndicatorAnimation.UNSPECIFIED) {
         if (stateFromStores) {
-          const result3 = index * c8;
-          const result4 = c8 * (emojiCount - 1);
-          if (tmp5(1379).TypingIndicatorAnimation.PULSE === tmp4) {
-            tmp5(4296);
-            const tmp5Result = tmp5(4296);
-            const tmp5Result1 = tmp5(4296);
-            obj = { duration: tmp8 };
-            const tmp5Result2 = tmp5(4561);
-            const withTimingResult = tmp5(4561).withTiming(1.16, obj);
-            obj = { duration: tmp8 };
-            const tmp5Result3 = tmp5(4561);
-            const withTimingResult1 = tmp5(4561).withTiming(1, obj);
+          const result3 = index * duration;
+          const result4 = duration * (emojiCount - 1);
+          if (user.TypingIndicatorAnimation.PULSE === animation) {
+            const tmp5Result = ReanimatedRexport;
+            const tmp5Result1 = ReanimatedRexport;
+            obj = { duration };
+            const tmp5Result2 = timing;
+            const withTimingResult = timing.withTiming(1.16, obj);
+            obj = { duration };
+            const tmp5Result3 = timing;
+            const withTimingResult1 = timing.withTiming(1, obj);
             obj1 = { duration: result4 };
-            const result5 = obj.set(tmp5Result.withDelay(result3, tmp5Result.withRepeat(tmp5Result1.withSequence(withTimingResult, withTimingResult1, tmp5(4561).withTiming(1, obj1)), -1)));
-            const tmp5Result4 = tmp5(4561);
-          } else if (tmp5(1379).TypingIndicatorAnimation.RING === tmp4) {
-            const tmp5Result5 = tmp5(4296);
-            const tmp5Result6 = tmp5(4296);
+            const result5 = obj.set(tmp5Result.withDelay(result3, tmp5Result.withRepeat(tmp5Result1.withSequence(withTimingResult, withTimingResult1, timing.withTiming(1, obj1)), -1)));
+            const tmp5Result4 = timing;
+          } else if (user.TypingIndicatorAnimation.RING === animation) {
+            const tmp5Result5 = ReanimatedRexport;
+            const tmp5Result6 = ReanimatedRexport;
             const _Math = Math;
             obj2 = { duration: 1600, easing: null };
             const result6 = 2 * Math.PI;
-            obj2.easing = tmp5(4296).Easing.linear;
-            const result7 = obj1.set(tmp5Result5.withDelay(result3, tmp5Result6.withRepeat(tmp5(4561).withTiming(result6, obj2), -1)));
-            const tmp5Result7 = tmp5(4561);
-          } else if (tmp5(1379).TypingIndicatorAnimation.WAVE === tmp4) {
-            const tmp5Result8 = tmp5(4296);
-            const tmp5Result9 = tmp5(4296);
-            const tmp5Result10 = tmp5(4296);
-            const obj3 = { duration: tmp8 };
-            const tmp5Result11 = tmp5(4561);
-            const withTimingResult2 = tmp5(4561).withTiming(-0.12 * num, obj3);
-            const obj4 = { duration: tmp8 };
-            const tmp5Result12 = tmp5(4561);
-            const withTimingResult3 = tmp5(4561).withTiming(0, obj4);
+            obj2.easing = ReanimatedRexport.Easing.linear;
+            const result7 = obj1.set(tmp5Result5.withDelay(result3, tmp5Result6.withRepeat(timing.withTiming(result6, obj2), -1)));
+            const tmp5Result7 = timing;
+          } else if (user.TypingIndicatorAnimation.WAVE === animation) {
+            const tmp5Result8 = ReanimatedRexport;
+            const tmp5Result9 = ReanimatedRexport;
+            const tmp5Result10 = ReanimatedRexport;
+            const obj3 = { duration };
+            const tmp5Result11 = timing;
+            const withTimingResult2 = timing.withTiming(-0.12 * num, obj3);
+            const obj4 = { duration };
+            const tmp5Result12 = timing;
+            const withTimingResult3 = timing.withTiming(0, obj4);
             const obj5 = { duration: result4 };
-            const result8 = obj2.set(tmp5Result8.withDelay(result3, tmp5Result9.withRepeat(tmp5Result10.withSequence(withTimingResult2, withTimingResult3, tmp5(4561).withTiming(0, obj5)), -1)));
-            const tmp5Result13 = tmp5(4561);
+            const result8 = obj2.set(tmp5Result8.withDelay(result3, tmp5Result9.withRepeat(tmp5Result10.withSequence(withTimingResult2, withTimingResult3, timing.withTiming(0, obj5)), -1)));
+            const tmp5Result13 = timing;
           }
           return () => {
             index(num[8]).cancelAnimation(sharedValue);

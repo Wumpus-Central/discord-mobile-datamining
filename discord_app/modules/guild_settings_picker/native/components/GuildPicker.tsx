@@ -19,7 +19,6 @@ export default function GuildPicker(isGuildIncluded) {
   ({ options: c2, selectedGuild } = onChange(13895)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId }));
   let name;
   const tmp2 = onChange(13895)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
-  const tmp3 = jsx;
   if (selectedGuild != null) {
     name = selectedGuild.name;
   }
@@ -47,5 +46,26 @@ export default function GuildPicker(isGuildIncluded) {
   };
   let intl = guildId(1114).intl;
   obj.placeholder = intl.string(guildId(1114).t.etZ9tX);
-  return tmp3(onChange(13896), obj);
+  return jsx(onChange(13896), {
+    label: name,
+    onPress() {
+      const obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const intl = util.intl;
+      obj.title = intl.string(util.t.etZ9tX);
+      obj.items = items;
+      obj.onItemSelect = function onItemSelect(arg0) {
+        if (null != arg0) {
+          if (onChange != null) {
+            tmp(arg0);
+          }
+        }
+        setImmediate(() => {
+          closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_4);
+        });
+      };
+      obj.selectedItem = guildId;
+      obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), GuildPicker, obj);
+    },
+    placeholder: null
+  });
 };

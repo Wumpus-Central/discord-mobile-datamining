@@ -50,7 +50,7 @@ export default function useBatchUpdateChannelSettings(guildId) {
       let obj1 = guildId(11555);
       if (obj1.hasNotSetUpChannelOptIn(guildId)) {
         if (channelId === channel) {
-          let tmp8Result = tmp8(11555);
+          let tmp8Result = guildId(11555);
           obj = { include: null };
           const _Set2 = Set;
           const items = [channelId];
@@ -58,7 +58,7 @@ export default function useBatchUpdateChannelSettings(guildId) {
           obj.include = set;
           const result = tmp8Result.optIntoAllChannelsForExistingMember(guildId, obj);
         } else {
-          tmp8Result = tmp8(11555);
+          tmp8Result = guildId(11555);
           obj = { exclude: null };
           const _Set = Set;
           const items1 = [channelId];
@@ -67,7 +67,7 @@ export default function useBatchUpdateChannelSettings(guildId) {
           const result1 = tmp8Result.optIntoAllChannelsForExistingMember(guildId, obj);
         }
       } else {
-        const tmp8Result1 = tmp8(7113);
+        const tmp8Result1 = guildId(7113);
         obj1 = { section: constants.CHANNEL_BROWSER };
         const result2 = tmp8Result1.updateOptInChannelsImmediate(guildId, channelId, !isChannelOptedInResult, obj1);
       }

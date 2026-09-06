@@ -9,14 +9,14 @@ import RegistrationUtils from "RegistrationUtils" /* 15954 */;
 import RegistrationConstants from "RegistrationConstants" /* 15947 */;
 import size from "module_2" /* 2 */;
 
-function getRedirectStepForErrorKey(arg0) {
-  if ("email" !== arg0) {
-    if ("phoneToken" !== arg0) {
-      if ("global_name" === arg0) {
+function getRedirectStepForErrorKey(item10023) {
+  if ("email" !== item10023) {
+    if ("phoneToken" !== item10023) {
+      if ("global_name" === item10023) {
         return ConstantsIOS.AuthStates.REGISTER_DISPLAY_NAME;
       } else {
-        if ("username" !== arg0) {
-          if ("password" !== arg0) {
+        if ("username" !== item10023) {
+          if ("password" !== item10023) {
             return null;
           }
         }
@@ -43,10 +43,9 @@ export default function handleRegisterErrorRedirection(navigate, fn, code, step)
           items = [];
         }
         for (const item10023 of items) {
-          let tmp9 = item10023;
           let tmp13 = getErrorDefault(item10023, arg2);
           if (null != tmp13) {
-            let tmp17 = getRedirectStepForErrorKey(tmp9);
+            let tmp17 = getRedirectStepForErrorKey(item10023);
             let tmp18 = tmp17;
             if (null != tmp17) {
               let obj = { step: null, actionType: null, details: null };
@@ -72,8 +71,10 @@ export default function handleRegisterErrorRedirection(navigate, fn, code, step)
         obj.details = items2;
         fn(obj);
       }
+      tmp29 = null != code.error_code && null != code.message;
     }
   }
   fn({ step: constants.AGE_GATE_UNDERAGE, actionType: constants2.VIEWED });
   navigate.push(ConstantsIOS.AuthStates.AGE_GATE_UNDERAGE, { fromRegister: true, disableSwipe: true });
+  const obj1 = { step: constants.AGE_GATE_UNDERAGE, actionType: constants2.VIEWED };
 };

@@ -97,10 +97,10 @@ export default noop.memo(function YouBarBackground(barWidth) {
   }
   if (isLargeAvatar) {
     obj = { barWidth, backgroundColor: token, avatarSize };
-    let tmp2Result = tmp2(YouBarMaskedBackground, obj);
+    let tmp2Result = timestampProducer(YouBarMaskedBackground, obj);
   } else {
     obj = { barWidth, backgroundColor: token };
-    tmp2Result = tmp2(YouBarAnimatedBackground, obj);
+    tmp2Result = timestampProducer(YouBarAnimatedBackground, obj);
   }
   return tmp2Result;
 });

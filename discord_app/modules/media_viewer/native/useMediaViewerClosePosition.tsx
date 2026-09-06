@@ -27,9 +27,9 @@ export default function useMediaViewerClosePosition(index) {
   const tmp2 = windowWidth(noop.useState(() => {
     const tmp3 = sources[index.get(index)];
     if (null != tmp3) {
-      let obj = getMediaViewerStateForScreenDefault(windowWidth, tmp2, tmp3);
+      let obj = getMediaViewerStateForScreenDefault(windowWidth, windowHeight, tmp3);
     } else {
-      obj = { height: tmp2 };
+      obj = { height: windowHeight };
     }
     return (windowHeight + obj.height) / 2;
   }), 2);
@@ -40,9 +40,9 @@ export default function useMediaViewerClosePosition(index) {
       closure_4();
     }
     if (null != sources[arg0]) {
-      let obj = getMediaViewerStateForScreenDefault(tmp5, tmp6, tmp);
+      let obj = getMediaViewerStateForScreenDefault(tmp5, windowHeight, tmp);
     } else {
-      obj = { height: tmp6 };
+      obj = { height: windowHeight };
     }
     closure_5((windowHeight + obj.height) / 2);
   }, items);

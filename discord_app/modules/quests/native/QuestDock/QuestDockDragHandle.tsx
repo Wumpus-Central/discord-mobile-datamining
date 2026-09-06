@@ -71,7 +71,7 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
       let num3 = 0;
       if (obj.get() !== QuestDockMode.CLOSED) {
         num3 = 0;
-        if (obj.get() !== tmp3.SOFT_DISMISSED) {
+        if (obj.get() !== QuestDockMode.SOFT_DISMISSED) {
           num3 = -4;
         }
       }
@@ -141,7 +141,6 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   const tmp12 = windowDimensions;
   const obj4 = { style: animatedStyle1, layout: null, children: null };
   const tmp13 = windowDimensions(7073);
-  const tmp14 = closure_8;
   obj4.layout = activeQuestDockMode(15094).dimensionsLayoutTransition;
   obj5 = { style: null, children: null };
   const items1 = [tmp.dragHandleOverlay, animatedStyle3];
@@ -164,6 +163,6 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   obj6.children = closure_7(tmp2(7154).ActionSheetHeaderBar, { variant: "default" });
   items2[1] = closure_7(tmp12(7073), obj6);
   obj4.children = items2;
-  obj3.children = tmp14(tmp15, obj4);
+  obj3.children = closure_8(tmp15, obj4);
   return closure_7(tmp13, obj3);
 });

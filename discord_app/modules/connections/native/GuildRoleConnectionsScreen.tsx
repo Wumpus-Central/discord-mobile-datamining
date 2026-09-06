@@ -166,12 +166,12 @@ export default function GuildRoleConnectionsScreen(guildId) {
               const items = [closure_2.verifiedRole, , ];
               let verifiedRoleHasRole = null;
               if (hasItem) {
-                verifiedRoleHasRole = tmp.verifiedRoleHasRole;
+                verifiedRoleHasRole = closure_2.verifiedRoleHasRole;
               }
               items[1] = verifiedRoleHasRole;
               let verifiedRolePressed = null;
               if (pressed.pressed) {
-                verifiedRolePressed = tmp.verifiedRolePressed;
+                verifiedRolePressed = closure_2.verifiedRolePressed;
               }
               items[2] = verifiedRolePressed;
               return items;
@@ -179,7 +179,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
             onPress() {
               if (hasItem) {
                 id = tmp;
-                closure_1 = tmp2;
+                closure_1 = guildId;
                 const _HermesInternal = HermesInternal;
                 obj4 = ActionSheetActionCreatorsDefault;
                 let obj = {
@@ -193,7 +193,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
                 const tmp20 = asyncRequireImpl(11572, dependencyMap.paths);
               } else {
                 const tmp9 = asyncRequireImpl(11562, dependencyMap.paths);
-                obj = { role: tmp, guildId: tmp2, onCloseModal };
+                obj = { role: tmp, guildId, onCloseModal };
                 obj.openLazy(tmp9, GuildRoleConnectionsModalActionCreators.makeGuildRoleConnectionsConnectAccountsActionSheetKey(tmp.id), obj);
               }
             },

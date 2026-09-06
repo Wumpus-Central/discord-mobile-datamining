@@ -3,6 +3,7 @@
 // Module 1940 (UserSettingsProtoActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
+import DurationsDefault from "Durations" /* 1090 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +35,7 @@ let closure_14 = async function _updateRecurringDismissibleContentState() {
     const merged1 = Object.assign(closure_1);
     recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0] = {};
   }, constants.INFREQUENT_USER_ACTION);
-  return arg1;
+  return value;
 };
 let closure_15 = async function _updateGuildDismissedContent() {
   closure_1 = closure_2;
@@ -43,7 +44,7 @@ let closure_15 = async function _updateGuildDismissedContent() {
     const merged1 = Object.assign(closure_1);
     guildDismissibleContentStates.guildDismissibleContentStates[closure_0] = {};
   }, constants.INFREQUENT_USER_ACTION);
-  return arg1;
+  return value;
 };
 const UserSettingsConstants = fn(1084);
 const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;
@@ -74,7 +75,7 @@ class UserSettingsProtoActionCreators {
     obj.beforeSendCallbacks = [];
     obj.lastSendTime = 0;
     closure_0 = obj;
-    obj.persistChanges = closure_3(async (arg0, value) => {
+    obj.persistChanges = closure_3(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -240,7 +241,7 @@ prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_US
   closure_2 = INFREQUENT_USER_ACTION;
   asyncGeneratorStep = onSaveFailed;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -320,8 +321,8 @@ prototype["markDirty"] = function markDirty(proto, dispatch) {
       obj = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, partial: true, local: true };
       obj = { type: self.type, proto };
       obj.settings = obj;
-      tmp(573).dispatch(obj);
-      const tmpResult = tmp(573);
+      Dispatcher.dispatch(obj);
+      const tmpResult = Dispatcher;
     }
     let num = dispatch.delaySeconds;
     if (num == null) {
@@ -333,14 +334,14 @@ prototype["markDirty"] = function markDirty(proto, dispatch) {
       obj.timeout = undefined;
     }
     if (null == obj.timeout) {
-      const result = num * tmp(1090).Millis.SECOND;
+      const result = num * DurationsDefault.Millis.SECOND;
       let sum = result;
       if (dispatch.jitter) {
         const _Math = Math;
         const _Math2 = Math;
         const _Math3 = Math;
         const random = Math.random();
-        sum = result + Math.floor(random * Math.min(result, 30 * tmp(1090).Millis.SECOND));
+        sum = result + Math.floor(random * Math.min(result, 30 * DurationsDefault.Millis.SECOND));
       }
       const logger = self.logger;
       logger.log("Scheduling save from markDirty");
@@ -370,6 +371,7 @@ prototype["markDirty"] = function markDirty(proto, dispatch) {
       const obj5 = obj(1223);
     }
     self.dispatchChanges(obj);
+    tmp9 = null != obj.timeout && num < editInfo.timeoutDelay && !editInfo.rateLimited;
   } else {
     const _Error = Error;
     throw Error("Cannot edit user settings proto because we have not yet loaded the stored version from the DB");
@@ -404,7 +406,7 @@ prototype["loadIfUncached"] = function loadIfUncached(FRECENCY_AND_FAVORITES_SET
 prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
   closure_0 = arg0;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -569,7 +571,7 @@ function setGuildThemeSourcePreferenceOverride(id, arg1) {
 obj = Object.create(UserSettingsProtoActionCreators.prototype);
 obj.beforeSendCallbacks = [];
 obj.lastSendTime = 0;
-obj.persistChanges = asyncGeneratorStep(async (arg0, value) => {
+obj.persistChanges = asyncGeneratorStep(async () => {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -721,7 +723,7 @@ obj.logger = new LoggerDefault(obj.ProtoClass.typeName);
 obj = Object.create(UserSettingsProtoActionCreators.prototype);
 obj.beforeSendCallbacks = [];
 obj.lastSendTime = 0;
-obj.persistChanges = asyncGeneratorStep(async (arg0, value) => {
+obj.persistChanges = asyncGeneratorStep(async () => {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -945,10 +947,10 @@ export const addDismissedContent = function addDismissedContent(CHANNEL_NOTICE_I
     if (obj.hasBit(dismissedContents.dismissedContents, closure_0)) {
       return false;
     } else {
-      dismissedContents.dismissedContents = tmp(1942).addBit(dismissedContents.dismissedContents, tmp3);
+      dismissedContents.dismissedContents = tmp(1942).addBit(dismissedContents.dismissedContents, closure_0);
+      const tmpResult = tmp(1942);
     }
     tmp = obj;
-    tmp3 = closure_0;
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export { updateRecurringDismissibleContentState };
@@ -967,12 +969,12 @@ export const removeDismissedContent = function removeDismissedContent(DOUBLE_TAP
   return obj.updateAsync("userContent", async (dismissedContents) => {
     obj = obj(1942);
     if (obj.hasBit(dismissedContents.dismissedContents, closure_0)) {
-      dismissedContents.dismissedContents = tmp(1942).removeBit(dismissedContents.dismissedContents, tmp3);
+      dismissedContents.dismissedContents = tmp(1942).removeBit(dismissedContents.dismissedContents, closure_0);
+      const tmpResult = tmp(1942);
     } else {
       return false;
     }
     tmp = obj;
-    tmp3 = closure_0;
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const removeDismissedRecurringContent = function removeDismissedRecurringContent(GUILD_POWERUP_NOTIFICATION) {
@@ -984,14 +986,13 @@ export const clearGuildDismissedContents = function clearGuildDismissedContents(
       const _Object = Object;
       const values = Object.values(guilds.guilds);
       for (const item10013 of values) {
-        let tmp5 = item10013;
         if (null != item10013) {
-          tmp5.guildDismissibleContentStates = {};
+          item10013.guildDismissibleContentStates = {};
           let _Uint8Array = Uint8Array;
           let tmp7 = new.target;
           let tmp8 = new.target;
           let uint8Array = new Uint8Array();
-          tmp5.dismissedGuildContent = uint8Array;
+          item10013.dismissedGuildContent = uint8Array;
         }
         continue;
       }
@@ -1010,16 +1011,13 @@ export const checkAllDismissedContents = function checkAllDismissedContents() {
   return obj.updateAsync("userContent", async (recurringDismissibleContentStates) => {
     let uint8Array = new Uint8Array();
     for (const item10020 of tmp2) {
-      let tmp3 = item10020;
-      let tmp5 = closure_1_0;
-      let tmp7 = dependencyMap;
       obj = closure_1_0(dependencyMap[19]);
       if (obj.isSingleUseDismissibleContent(item10020)) {
-        let tmp5Result = tmp5(tmp7[16]);
-        uint8Array = tmp5Result.addBit(uint8Array, tmp3);
+        let tmp5Result = closure_1_0(dependencyMap[16]);
+        uint8Array = tmp5Result.addBit(uint8Array, item10020);
       } else {
-        tmp5Result = tmp5(tmp7[20]);
-        arg0.recurringDismissibleContentStates[tmp3] = tmp5Result.getDismissedRecurringDismissibleContentState(tmp3);
+        tmp5Result = closure_1_0(dependencyMap[20]);
+        arg0.recurringDismissibleContentStates[item10020] = tmp5Result.getDismissedRecurringDismissibleContentState(item10020);
       }
       continue;
     }

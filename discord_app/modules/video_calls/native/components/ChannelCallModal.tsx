@@ -74,6 +74,7 @@ let closure_18 = noop.memo((arg0) => {
         if (!obj3.isModalOpen(closure_1_31)) {
           closure_1_8();
         }
+        obj3 = channel(4417);
       };
     }
   }, items);
@@ -173,25 +174,25 @@ let closure_30 = noop.memo((channelId) => {
     value = sharedValue2.get();
     let tmp3 = sharedValue.get() === -width;
     if (!tmp3) {
-      tmp3 = 0 === obj.get();
+      tmp3 = 0 === sharedValue.get();
     }
     value = derivedValue.get();
     const value1 = derivedValue.get();
     if (!value) {
       if (tmp3) {
-        return obj.get() === -tmp2 ? tmp5.OPEN : tmp5.CLOSED;
+        return sharedValue.get() === -width ? VoiceChatDrawerState.OPEN : VoiceChatDrawerState.CLOSED;
       }
     }
     if (value !== VoiceChatDrawerState.OPEN) {
       let OPENING = null;
       if (value1 === VoiceChatDrawerState.CLOSED) {
         OPENING = null;
-        if (obj.get() < 0) {
-          OPENING = tmp5.OPENING;
+        if (sharedValue.get() < 0) {
+          OPENING = VoiceChatDrawerState.OPENING;
         }
       }
     }
-    OPENING = tmp5.CLOSING;
+    OPENING = VoiceChatDrawerState.CLOSING;
   }
   __closure = { isSwipeToChatInProgress: sharedValue2, translateX: sharedValue, width, voiceChatDrawerState: derivedValue, VoiceChatDrawerState };
   ae.__closure = __closure;
@@ -208,10 +209,9 @@ let closure_30 = noop.memo((channelId) => {
     if (tmp2) {
       ReanimatedRexport.runOnJS(closure_2_10)(channelId, arg0);
       if (arg0 === VoiceChatDrawerState.OPEN) {
-        tmp4(4296).runOnJS(tmp4(12782).transitionToVoiceRoute)(guildId, tmp7);
-        const tmp4Result = tmp4(4296);
+        ReanimatedRexport.runOnJS(RouteManagerUtils.transitionToVoiceRoute)(guildId, channelId);
+        const tmp4Result = ReanimatedRexport;
       }
-      tmp7 = channelId;
     }
   }
   const tmp10Result = guildId(ref[23]);

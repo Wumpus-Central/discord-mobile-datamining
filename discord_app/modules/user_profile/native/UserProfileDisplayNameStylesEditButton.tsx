@@ -119,16 +119,16 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
     let tmp3Result = null;
     if (null != closure_6) {
       let colors;
-      if (tmp != null) {
-        colors = tmp.colors;
+      if (closure_6 != null) {
+        colors = closure_6.colors;
       }
       if (colors == null) {
         colors = [];
       }
       const obj = { colors, effectId: null };
       let effectId;
-      if (tmp != null) {
-        effectId = tmp.effectId;
+      if (closure_6 != null) {
+        effectId = closure_6.effectId;
       }
       obj.effectId = effectId;
       tmp3Result = jsx(DisplayNameStylesColorSwatchDefault, { colors, effectId: null });

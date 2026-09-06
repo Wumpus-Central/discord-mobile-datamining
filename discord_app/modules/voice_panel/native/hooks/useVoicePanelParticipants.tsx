@@ -73,9 +73,7 @@ export default function useVoicePanelCards(arg0, arg1) {
       let items1 = [];
       const tmp18 = items[Symbol.iterator]();
       while (tmp18 !== undefined) {
-        let obj = { type: null, id: null };
-        obj.type = constants.PARTICIPANT;
-        obj.id = tmp20.id;
+        let obj = { type: constants.PARTICIPANT, id: tmp20.id };
         let tmp25 = getMemoizedParticipant(obj, first);
         if (flag) {
           if (tmp25.id === id) {

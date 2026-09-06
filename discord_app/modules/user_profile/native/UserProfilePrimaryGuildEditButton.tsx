@@ -121,7 +121,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     let tmp23Result = null;
     if (null != stateFromStores) {
       obj1 = { guild: stateFromStores, size: tmp6(tmp7[17]).GuildIconSizes.LARGE };
-      tmp23Result = tmp23(userAvailableGuildsWithTags(tmp7[17]), obj1);
+      tmp23Result = jsx(userAvailableGuildsWithTags(tmp7[17]), { guild: stateFromStores, size: tmp6(tmp7[17]).GuildIconSizes.LARGE });
       const tmp26 = userAvailableGuildsWithTags(tmp7[17]);
     }
     obj.leading = tmp23Result;
@@ -135,7 +135,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
       obj2.guildTag = tag;
       obj2.guildBadge = guildTagBadgeUrl;
       obj2.badgeSize = GuildTagBadgeSize.SIZE_16;
-      tmp23Result = tmp23(tmp6(tmp7[18]).BaseGuildTagChiplet, obj2);
+      tmp23Result = jsx(tmp6(tmp7[18]).BaseGuildTagChiplet, { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "text-md/semibold", textColor: "text-default" });
     }
     obj.trailing = tmp23Result;
     obj.disabled = disabled;

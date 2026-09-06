@@ -2,6 +2,7 @@
 
 // Module 17350 (feedback/FeedbackManager)
 import _mod12 from "module_12" /* 12 */;
+import Storage2 from "Storage" /* 510 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import SearchResultsFeedbackExperiment from "SearchResultsFeedbackExperiment" /* 17352 */;
 import HotspotStore from "hotspot/HotspotStore" /* 7214 */;
@@ -71,7 +72,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
   }
   let tmp7;
   if (!isNaNResult) {
-    const Storage = tmp(510).Storage;
+    const Storage = Storage2.Storage;
     value = Storage.get(storageKey.storageKey);
     c1 = value;
     isNaNResult = null == value;
@@ -82,7 +83,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     isNaNResult = Number.isNaN(tmp7);
   }
   if (!isNaNResult) {
-    const InAppFeedbackStates2 = tmp(1935).InAppFeedbackStates;
+    const InAppFeedbackStates2 = UserSettings.InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
       let obj = {};
       const merged = Object.assign(arg0);
@@ -130,11 +131,10 @@ FeedbackConfig.feedbackType = FeedbackType.VOICE;
 let items = [
   function voiceEligibilityCheck() {
     if (RTCConnectionStore.getWasEverRtcConnected()) {
-      return obj.getWasEverMultiParticipant();
+      return RTCConnectionStore.getWasEverMultiParticipant();
     } else {
       return true;
     }
-    obj = RTCConnectionStore;
   }
 ];
 FeedbackConfig.eligibilityChecks = items;
@@ -179,7 +179,7 @@ class FeedbackManager extends tmp7 {
     obj = closure_0(closure_1[7]);
     applyArgumentsResult.showFeedbackModalDebounced = obj.debounce((fn, fn2) => {
       if (null != applyArgumentsResult.feedbackTypeToShow) {
-        const feedbackTypeToShow = tmp.feedbackTypeToShow;
+        const feedbackTypeToShow = applyArgumentsResult.feedbackTypeToShow;
         const InAppFeedbackStates = UserSettings.InAppFeedbackStates;
         InAppFeedbackStates.updateSetting((arg0) => {
           let obj = {};
@@ -190,7 +190,7 @@ class FeedbackManager extends tmp7 {
           obj[feedbackTypeToShow] = obj;
           return obj;
         });
-        tmp.feedbackTypeToShow = null;
+        applyArgumentsResult.feedbackTypeToShow = null;
         fn();
       } else if (fn2 != null) {
         fn2();
@@ -218,6 +218,7 @@ FeedbackManager.prototype["possiblyShowFeedbackModal"] = function possiblyShowFe
     self.feedbackTypeToShow = ACTIVITY;
     const result = self.showFeedbackModalDebounced(arg1, fn);
   }
+  tmp3 = items.every((fn) => fn(feedbackConfig)) && eligibilityChecks.every((fn) => fn(feedbackConfig));
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/feedback/FeedbackManager.tsx");

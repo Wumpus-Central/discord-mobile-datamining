@@ -2,6 +2,7 @@
 
 // Module 9192 (guild_profile/GuildProfileUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import tinycolorDefault from "tinycolor" /* 7552 */;
 import useAvatarColor from "useAvatarColor" /* 8132 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -55,15 +56,15 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         [tmp4, tmp5, tmp6] = _slicedToArray(first, 3);
         obj = { r: tmp4, g: tmp5, b: tmp6 };
         const tmp3 = _slicedToArray(first, 3);
-        const obj2 = tmp8(7552)(obj);
+        const obj2 = tinycolorDefault(obj);
         let num2 = 1;
-        ({ h, s, l } = tmp8(7552)(obj).toHsl());
+        ({ h, s, l } = tinycolorDefault(obj).toHsl());
         if (AccessibilityStore.desaturateUserColors) {
           num2 = AccessibilityStore.saturation;
         }
         obj = { h, s: s * num2, l };
-        const toHslResult = tmp8(7552)(obj).toHsl();
-        return tmp8(7552)(obj).toHexString();
+        const toHslResult = tinycolorDefault(obj).toHsl();
+        return tinycolorDefault(obj).toHexString();
       } else {
         return null;
       }

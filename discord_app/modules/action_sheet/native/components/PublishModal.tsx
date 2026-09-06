@@ -51,10 +51,10 @@ export default function PublishModal(channelId) {
         num2 = 0;
       }
       const obj1 = { numGuildsFollowing: num2 };
-      obj.children = intl.format(tmp11(1114).t.GCGrNP, obj1);
+      obj.children = intl.format(util.t.GCGrNP, obj1);
       let tmp12 = obj;
     } else {
-      obj.children = intl.string(tmp11(1114).t["8FpqOs"]);
+      obj.children = intl.string(util.t["8FpqOs"]);
       tmp12 = obj;
     }
     obj.children = jsx(native.LegacyText, tmp12);

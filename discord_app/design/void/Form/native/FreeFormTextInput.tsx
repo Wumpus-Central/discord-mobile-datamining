@@ -41,7 +41,7 @@ const obj4 = { color: nativeDefault.colors.TEXT_MUTED };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/void/Form/native/FreeFormTextInput.tsx");
 
-export default noop.forwardRef((editable, ref) => {
+export default noop.forwardRef((editable, arg1) => {
   ({ renderLeadingComponent, renderTrailingComponent, onChangeText } = editable);
   ({ onFocus: importDefault, onBlur: dependencyMap, value, onPress } = editable);
   let flag = editable.editable;
@@ -59,17 +59,17 @@ export default noop.forwardRef((editable, ref) => {
   }
   const merged = Object.assign(editable, Object.assign({ style: 0, error: 0, renderLeadingComponent: 0, renderTrailingComponent: 0, onChangeText: 0, onFocus: 0, accessibilityRole: 0, onBlur: 0, value: 0, onPress: 0, editable: 0, accessibilityLabel: 0, accessibilityHint: 0, forceAccessibleContainer: 0, clearButtonVisibility: 0 }));
   const tmp4 = closure_9();
-  ref = noop.useRef(null);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ref.current);
+  const ref = noop.useRef(null);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current);
   let flag2 = true;
   if (native.ClearButtonVisibility.ALWAYS !== WITH_CONTENT) {
-    if (tmp7(1178).ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
+    if (native.ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
       let tmp9 = null != value;
       if (tmp9) {
         tmp9 = "" !== value;
       }
       flag2 = tmp9;
-    } else if (tmp7(1178).ClearButtonVisibility.NEVER === WITH_CONTENT) {
+    } else if (native.ClearButtonVisibility.NEVER === WITH_CONTENT) {
       flag2 = false;
     }
   }
@@ -193,7 +193,7 @@ export default noop.forwardRef((editable, ref) => {
           return tmpResult;
         }
     };
-    tmp15Result = tmp15(ClearButton, obj2);
+    tmp15Result = React5(ClearButton, obj2);
   }
   items1[3] = tmp15Result;
   obj.children = items1;

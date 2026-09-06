@@ -116,7 +116,7 @@ export const MAX_TOTAL_ATTACHMENT_SIZE_MB = 500;
 export const getMaxTotalAttachmentSize = function getMaxTotalAttachmentSize(location) {
   return NitroFileUploadExperiments.getNitroFileUploadRolloutConfig({ location: location.location }).enabled ? c4 : c3;
 };
-export const getAttachmentPayload = function getAttachmentPayload(id, index, name) {
+export const getAttachmentPayload = function getAttachmentPayload(id) {
   let tmp = index;
   if (index === undefined) {
     tmp = null;
@@ -212,8 +212,8 @@ export const getFileContentLength = function getFileContentLength(arg0) {
     xMLHttpRequest.open("HEAD", closure_0, true);
     xMLHttpRequest.onload = () => {
       if (xMLHttpRequest.status >= 200) {
-        if (obj.status < 300) {
-          const responseHeader = obj.getResponseHeader("Content-Length");
+        if (xMLHttpRequest.status < 300) {
+          const responseHeader = xMLHttpRequest.getResponseHeader("Content-Length");
           if (null != responseHeader) {
             if ("" !== responseHeader) {
               const _parseInt = parseInt;
@@ -225,7 +225,7 @@ export const getFileContentLength = function getFileContentLength(arg0) {
           onerror(error);
         }
       }
-      const error1 = new Error("HTTP request failed with status code " + obj.status);
+      const error1 = new Error("HTTP request failed with status code " + xMLHttpRequest.status);
       onerror(error1);
     };
     xMLHttpRequest.onerror = onerror;

@@ -1,7 +1,9 @@
 // === Module 11760: getRemoteJoinableActivityPlatform ===
 
 // Module 11760 (getRemoteJoinableActivityPlatform)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11462 */;
 import ConnectedAppsStore from "ConnectedAppsStore" /* 7108 */;
 import SessionsStore from "SessionsStore" /* 4578 */;
 
@@ -25,17 +27,17 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         const remoteApplicationActivity = SessionsStore.getRemoteApplicationActivity(application_id);
         let tmp4 = null;
         if (null != remoteApplicationActivity) {
-          let tmp11Result = tmp11(11462);
+          let tmp11Result = ActivityFlagUtils;
           tmp4 = null;
           if (!tmp11Result.isContextlessEmbeddedActivity(remoteApplicationActivity)) {
             if (null == remoteApplicationActivity.application_id) {
-              tmp11Result = tmp11(1384);
+              tmp11Result = FlagUtils;
               let num2 = remoteApplicationActivity.flags;
               if (num2 == null) {
                 num2 = 0;
               }
               let tmp9 = null;
-              if (tmp11Result.hasFlag(num2, tmp.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
+              if (tmp11Result.hasFlag(num2, constants.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
                 let platform = remoteApplicationActivity.platform;
                 if (platform == null) {
                   platform = null;
@@ -50,14 +52,14 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
                 if (tmp11Result1.isAndroid()) {
                   let isIOSResult = platform === constants2.ANDROID;
                 } else {
-                  isIOSResult = tmp11(1116).isIOS();
+                  isIOSResult = utils_PlatformUtils.isIOS();
                   if (isIOSResult) {
                     isIOSResult = platform === constants2.IOS;
                   }
-                  const tmp11Result2 = tmp11(1116);
+                  const tmp11Result2 = utils_PlatformUtils;
                 }
                 tmp4 = null;
-                tmp11Result1 = tmp11(1116);
+                tmp11Result1 = utils_PlatformUtils;
               }
             }
           }
@@ -65,7 +67,6 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         return tmp4;
       }
       obj5 = FlagUtils;
-      tmp = constants;
     }
     return null;
   }

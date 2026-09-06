@@ -4,6 +4,8 @@
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4561 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
+import native from "native" /* 8902 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9119 */;
 import useStableParticipant from "useStableParticipant" /* 17104 */;
 import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17106 */;
 import noop from "module_19" /* 19 */;
@@ -29,17 +31,14 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp9 = nextResult;
-    let tmp11 = require;
     if (nextResult.type === useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.USER_VIDEO_ICON) {
       obj = { blurTheme: "dark", style: tmp.floatingIconWrapper, children: null };
       obj = { style: tmp.floatingIcon, state: null };
       obj.state = tmp9.videoIconState;
-      obj.children = jsx(tmp11(9119).VideoIcon, { style: tmp.floatingIcon, state: null });
-      let arr = items.push(jsx(tmp11(8902).BackgroundBlurView, { style: tmp.floatingIcon, state: null }, "video"));
+      obj.children = jsx(VoiceStateIcons.VideoIcon, { style: tmp.floatingIcon, state: null });
+      let arr = items.push(jsx(native.BackgroundBlurView, { style: tmp.floatingIcon, state: null }, "video"));
     }
-    if (tmp9.type === tmp11(17106).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON) {
-      let tmp35 = jsx;
-      let tmp36 = jsx;
+    if (tmp9.type === useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON) {
       let items1 = [tmp.floatingIconWrapper, ];
       let leftMargin;
       if (tmp9.withLeftMargin) {
@@ -50,8 +49,8 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       obj1.style = items1;
       let obj2 = { style: tmp.floatingIcon, state: null };
       obj2.state = tmp9.muteDeafenIconState;
-      obj1.children = tmp36(tmp11(9119).MuteDeafenIcon, obj2);
-      arr = items.push(tmp35(tmp11(8902).BackgroundBlurView, obj1, "mute-deafen"));
+      obj1.children = jsx(VoiceStateIcons.MuteDeafenIcon, { style: tmp.floatingIcon, state: null });
+      arr = items.push(jsx(native.BackgroundBlurView, { blurTheme: "dark", style: null, children: null }, "mute-deafen"));
     }
     continue;
   }

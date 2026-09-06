@@ -65,9 +65,9 @@ export const estimateAttachmentWidth = function estimateAttachmentWidth(arg0, ar
   }
   return num;
 };
-export const renderInputAttachment = function renderInputAttachment(arg0, leadingText, text) {
-  if (null != arg0) {
-    let tmp2 = jsx(arg0, { size: "xs", color: "input-icon-default" });
+export const renderInputAttachment = function renderInputAttachment(BaseIconImage, leadingText, text) {
+  if (null != BaseIconImage) {
+    let tmp2 = <BaseIconImage size="xs" color="input-icon-default" />;
   } else {
     tmp2 = null;
     if (null != leadingText) {

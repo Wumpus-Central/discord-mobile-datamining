@@ -65,7 +65,7 @@ export default function FriendRequestNote(styles) {
         }
         obj = { style: hidden, children: null };
         obj1 = { accessible: tmp7, accessibilityElementsHidden: !tmp7, accessibilityLabel: str, variant: "redesign/message-preview/normal", children: note };
-        obj.children = closure_8(tmp2(tmp3[11]).Text, obj1);
+        obj.children = closure_8(require("Text/Text").Text, obj1);
         const items3 = [closure_8(closure_5, obj), ];
         let tmp15Result = null;
         if (!tmp7) {
@@ -78,11 +78,11 @@ export default function FriendRequestNote(styles) {
           const obj3 = { style: null, children: null };
           items4[1] = tmp12;
           obj3.style = items4;
-          const obj4 = { icon: tmp15(tmp2(tmp3[13]).EyeIcon, { size: "sm" }), variant: "secondary", size: "sm", onPress: callback, text: null };
-          const intl = tmp2(tmp3[14]).intl;
-          obj4.text = intl.string(tmp2(tmp3[14]).t.sB0q4C);
-          obj3.children = tmp15(tmp2(tmp3[12]).Button, obj4);
-          tmp15Result = tmp15(tmp16, obj3);
+          const obj4 = { icon: closure_8(require("EyeIcon").EyeIcon, { size: "sm" }), variant: "secondary", size: "sm", onPress: callback, text: null };
+          const intl = require("util").intl;
+          obj4.text = intl.string(require("util").t.sB0q4C);
+          obj3.children = closure_8(require("components/Button/Button").Button, obj4);
+          tmp15Result = closure_8(closure_5, obj3);
         }
         items3[1] = tmp15Result;
         obj.children = items3;

@@ -8,6 +8,8 @@ import UserSettings from "UserSettings" /* 1935 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
+import UserUtils from "UserUtils" /* 4404 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4408 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
@@ -61,11 +63,11 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = tmp(4407);
+    let tmpResult = require("isPerModeThemingActive");
     result = tmpResult.isPerModeThemingActive();
   }
   if (!result) {
-    tmpResult = tmp(4408);
+    tmpResult = ThemeActionCreators;
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
@@ -235,10 +237,9 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(DispatcherDe
               c15 = true;
             }
           }
-          tmp6Result = tmp6(4404);
+          tmp6Result = UserUtils;
         }
         obj2 = DismissibleContentUnsafeUtils;
-        tmp6 = require;
       }
     }
   },

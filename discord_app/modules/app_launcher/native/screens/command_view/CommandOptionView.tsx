@@ -3,6 +3,7 @@
 // Module 12160 (CommandOptionView)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import _modDef10415 from "module_10415" /* 10415 */;
 import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 12163 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -71,7 +72,7 @@ export default function CommandOptionView(option) {
     let tmp17Result = hasItem1;
     if (hasItem1) {
       const obj4 = { style: tmp.labelText, variant: "text-sm/semibold", color: "text-subtle", children: option.displayName };
-      tmp17Result = tmp17(tmp2(4556).Text, obj4);
+      tmp17Result = closure_5(tmp2(4556).Text, obj4);
     }
     const items2 = [tmp17Result, , , ];
     const obj5 = {
@@ -100,12 +101,12 @@ export default function CommandOptionView(option) {
     items2[2] = closure_5(tmp2(4556).Text, obj6);
     if (hasItem) {
       const obj7 = { collapsable: false, entering: reduceMotionResult1, exiting: reduceMotionResult, style: tmp.optionErrorContainer, children: null };
-      const obj8 = { style: tmp.optionErrorIcon, source: tmp18(10415), size: tmp2(1178).IconSizes.REFRESH_SMALL_16 };
-      const items3 = [tmp17(tmp2(1178).Icon, obj8), ];
+      const obj8 = { style: tmp.optionErrorIcon, source: _modDef10415, size: tmp2(1178).IconSizes.REFRESH_SMALL_16 };
+      const items3 = [closure_5(tmp2(1178).Icon, obj8), ];
       const obj9 = { variant: "text-xs/medium", color: "text-feedback-critical", children: optionValidationResults[option.name].error };
-      items3[1] = tmp17(tmp2(4556).Text, obj9);
+      items3[1] = closure_5(tmp2(4556).Text, obj9);
       obj7.children = items3;
-      hasItem = tmp19(tmp18(4296).View, obj7);
+      hasItem = closure_6(ReanimatedRexportDefault.View, obj7);
     }
     items2[3] = hasItem;
     obj3.children = items2;

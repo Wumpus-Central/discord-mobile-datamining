@@ -6,7 +6,10 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useMountEffectDefault from "useMountEffect" /* 4992 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7475 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8362 */;
+import ShareScreenDefault from "ShareScreen" /* 13900 */;
 import AccessibilityManagerDefault from "AccessibilityManager" /* 14434 */;
+import ToastContainerDefault from "ToastContainer" /* 16954 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -86,9 +89,9 @@ export default function AppShare(targetUserId) {
     let obj = AnalyticsUtilsDefault;
     let tmp2 = null != targetUserId.text;
     if (tmp2) {
-      tmp2 = tmp.text.length > 0;
+      tmp2 = targetUserId.text.length > 0;
     }
-    obj = { has_content: tmp2, has_attachment: tmp.attachments.length > 0 };
+    obj = { has_content: tmp2, has_attachment: targetUserId.attachments.length > 0 };
     obj.track(AnalyticEvents.EXTERNAL_SHARE_OPENED, obj);
   }, items4);
   useMountEffectDefault(() => {
@@ -104,22 +107,22 @@ export default function AppShare(targetUserId) {
   });
   obj = { appEntryKey: share, children: null };
   if (first) {
-    obj = { appEntryKey: tmp18, sharedContent: targetUserId, onClose: null };
-    const tmp14Result = tmp14(13900);
+    obj = { appEntryKey: share, sharedContent: targetUserId, onClose: null };
+    const tmp14Result = ShareScreenDefault;
     if (tmp9Result.isMetaQuest()) {
-      exitApp = tmp14(8362).close;
+      exitApp = NativeShareManagerModuleDefault.close;
     } else {
       exitApp = exitApp.exitApp;
     }
     obj.onClose = exitApp;
-    tmp19(tmp14Result, obj);
+    closure_10(tmp14Result, obj);
     tmp9Result = tmp9(1608);
   } else {
-    const items5 = [tmp19(tmp9(7039).SceneLoadingIndicator, {}), , , ];
-    obj1 = { appEntryKey: tmp18 };
-    items5[1] = tmp19(tmp9(16908).ActionSheetContainer, obj1);
-    items5[2] = tmp19(tmp14(16954), {});
-    items5[3] = tmp19(tmp9(4910).AlertModalContainer, {});
+    const items5 = [closure_10(tmp9(7039).SceneLoadingIndicator, {}), , , ];
+    obj1 = { appEntryKey: share };
+    items5[1] = closure_10(tmp9(16908).ActionSheetContainer, obj1);
+    items5[2] = closure_10(ToastContainerDefault, {});
+    items5[3] = closure_10(tmp9(4910).AlertModalContainer, {});
     obj.children = items5;
     return closure_11(tmp17, obj);
   }

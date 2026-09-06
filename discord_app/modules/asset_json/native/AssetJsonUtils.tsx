@@ -44,7 +44,7 @@ function loadJsonAsset() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _loadJsonAsset(arg0, value) {
+let closure_8 = async function _loadJsonAsset(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

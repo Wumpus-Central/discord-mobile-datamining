@@ -1,10 +1,10 @@
 // === Module 8086: ApplicationCommandUserAppUtils ===
 
 // Module 8086 (ApplicationCommandUserAppUtils)
+import util from "util" /* 1114 */;
 import EphemeralMessageReason from "EphemeralMessageReason" /* 8087 */;
 import size from "module_2" /* 2 */;
 
-const util = tmp(1114);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 
 export const getEphemeralReasonMessage = function getEphemeralReasonMessage(ephemerality_reason1) {

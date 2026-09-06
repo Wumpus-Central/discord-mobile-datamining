@@ -24,7 +24,7 @@ let closure_9 = {
       twoFriends1 = onDataBindingChange.twoFriends;
     }
     const booleanBinding1 = BaseRive.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -34,7 +34,7 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["Avatar01/ShadowVisibility"];
@@ -407,7 +407,7 @@ let closure_9 = {
       twoFriends1 = onDataBindingChange.twoFriends;
     }
     const booleanBinding1 = BaseRive.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -417,7 +417,7 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["Avatar01/ShadowVisibility"];
@@ -789,7 +789,7 @@ let closure_9 = {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
     const numberBinding = BaseRive.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let StrokeVisibility;
     if (dataBinding != null) {
       StrokeVisibility = dataBinding.StrokeVisibility;
@@ -799,7 +799,7 @@ let closure_9 = {
       StrokeVisibility1 = onDataBindingChange.StrokeVisibility;
     }
     const numberBinding1 = tmpResult.useNumberBinding("StrokeVisibility", instance, StrokeVisibility, StrokeVisibility1, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let UsernameVisibility;
     if (dataBinding != null) {
       UsernameVisibility = dataBinding.UsernameVisibility;
@@ -861,7 +861,7 @@ let closure_9 = {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
     const numberBinding = BaseRive.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let StrokeVisibility;
     if (dataBinding != null) {
       StrokeVisibility = dataBinding.StrokeVisibility;
@@ -871,7 +871,7 @@ let closure_9 = {
       StrokeVisibility1 = onDataBindingChange.StrokeVisibility;
     }
     const numberBinding1 = tmpResult.useNumberBinding("StrokeVisibility", instance, StrokeVisibility, StrokeVisibility1, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let UsernameVisibility;
     if (dataBinding != null) {
       UsernameVisibility = dataBinding.UsernameVisibility;
@@ -934,7 +934,7 @@ let closure_9 = {
       twoFriends1 = onDataBindingChange.twoFriends;
     }
     const booleanBinding1 = BaseRive.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -944,7 +944,7 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["Avatar01/ShadowVisibility"];
@@ -1342,6 +1342,6 @@ export const CheckpointFriendsRive = noop.forwardRef(function CheckpointFriendsR
   let obj = { fallback: fallback.fallback, children: null };
   obj = { ref };
   const merged = Object.assign(fallback);
-  obj.children = <closure_10 ref={arg1} />;
+  obj.children = <closure_10 ref={ref} />;
   return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
 });

@@ -4,6 +4,7 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -161,6 +162,7 @@ const categoryCollapseStore = new CategoryCollapseStore(DispatcherDefault, {
       }
       continue;
     }
+    const set = new Set(mapped.filter(GlobalUtils.isNotNullish));
   },
   CATEGORY_COLLAPSE: function handleCategoryCollapse(id) {
     id = id.id;
@@ -220,6 +222,7 @@ const categoryCollapseStore = new CategoryCollapseStore(DispatcherDefault, {
           dependencyMap[channel.id] = true;
         }
       });
+      const arr = GuildChannelStore.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY];
     }
     obj = FavoritesUtils;
   },
@@ -231,6 +234,7 @@ const categoryCollapseStore = new CategoryCollapseStore(DispatcherDefault, {
       const item = GuildChannelStore.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY].forEach((item) => {
         delete tmp2[tmp];
       });
+      const arr = GuildChannelStore.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY];
     }
     obj = FavoritesUtils;
   },

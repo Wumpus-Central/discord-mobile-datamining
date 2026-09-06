@@ -31,7 +31,7 @@ let closure_17 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
   let guildStageVoice = arg0;
   c2 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -62,12 +62,12 @@ let closure_17 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
             if (isGuildStageVoiceResult) {
               c2 = 2;
               c3 = 1;
-              const obj1 = { value: tmp21(tmp20[13], tmp20.paths), done: false };
+              const obj1 = { value: tmp21(dependencyMap[13], dependencyMap.paths), done: false };
               return obj1;
             } else {
               c2 = 1;
               c3 = 1;
-              const obj2 = { value: tmp21(tmp20[15], tmp20.paths), done: false };
+              const obj2 = { value: tmp21(dependencyMap[15], dependencyMap.paths), done: false };
               return obj2;
             }
             isGuildStageVoiceResult = guildStageVoice.isGuildStageVoice();
@@ -144,7 +144,7 @@ let closure_20 = noop.memo(function UnmemoedVoiceOrStageChannelBase(channel) {
     let guildId = arg0;
     c2 = 0;
     c3 = 0;
-    return (async (arg0, value) => {
+    return (async (arg0) => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -227,7 +227,7 @@ let closure_20 = noop.memo(function UnmemoedVoiceOrStageChannelBase(channel) {
   const items1 = [channel, callback];
   obj.onPress = noop.useCallback(() => {
     if (null != channel.guild_id) {
-      transitionToGuild.transitionToGuild(tmp.guild_id);
+      transitionToGuild.transitionToGuild(channel.guild_id);
     }
     hideLaunchPadDefault();
     subtitle(channel);
@@ -261,13 +261,13 @@ let closure_20 = noop.memo(function UnmemoedVoiceOrStageChannelBase(channel) {
   const items6 = [isConnectedToVoiceChannel, subtitle];
   ({ isSubscriptionGated, needSubscriptionToAccess } = subtitle(5007)(channel.id));
   const effect = obj5.useEffect(() => {
-    let tmp2 = null != subtitle && typeof tmp !== "string";
+    let tmp2 = null != subtitle && typeof subtitle !== "string";
     if (tmp2) {
-      tmp2 = "voice" === tmp.type;
+      tmp2 = "voice" === subtitle.type;
     }
     if (tmp2) {
       const messagePreviewASTCache = MessagePreviewMarkup.messagePreviewASTCache;
-      messagePreviewASTCache.del(tmp.text);
+      messagePreviewASTCache.del(subtitle.text);
     }
   }, items6);
   let tmpResult = tmp(16978);
@@ -342,6 +342,7 @@ let closure_20 = noop.memo(function UnmemoedVoiceOrStageChannelBase(channel) {
     obj12.limit = userLimit;
     formatToPlainStringResult = intl2.formatToPlainString(tmp5(1114).t.rhh6Ev, obj12);
   }
+  const tmp20 = subtitle(5007)(channel.id);
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/shared/VoiceOrStageChannel.tsx");

@@ -6,8 +6,10 @@ import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import _modDef5597 from "module_5597" /* 5597 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
+import TableRowIcon from "TableRowIcon" /* 5611 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8015 */;
 import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8017 */;
 import InstantInvite from "InstantInvite" /* 10932 */;
@@ -151,12 +153,11 @@ function GuildSettingsModalInstantInvites(invites) {
         obj = { guild, analyticsData: null };
         obj.analyticsData = obj;
         ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11829, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj);
-        tmp3(false);
+        closure_7(false);
       } catch (tmp17) {
         tmp2(false);
         throw tmp17;
       }
-      tmp3 = closure_7;
     }
   }, items4);
   const items5 = [hasItem, callback1, invitesDisabledLoading];

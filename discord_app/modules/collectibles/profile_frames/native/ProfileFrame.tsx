@@ -29,12 +29,12 @@ function ProfileFrameLayer(skuId) {
       let obj = {};
       const merged = Object.assign(rect);
       let tmp12;
-      if ("top" === tmp2.anchor) {
+      if ("top" === layer.anchor) {
         tmp12 = -overflowTop;
       }
       obj.top = tmp12;
       let tmp14;
-      if ("bottom" === tmp2.anchor) {
+      if ("bottom" === layer.anchor) {
         tmp14 = -overflowBottom;
       }
       obj.bottom = tmp14;
@@ -43,9 +43,9 @@ function ProfileFrameLayer(skuId) {
       obj = {};
       const merged1 = Object.assign(rect);
       let str2 = "center";
-      if ("center" !== tmp2.anchor) {
+      if ("center" !== layer.anchor) {
         let str3 = "flex-end";
-        if ("top" === tmp2.anchor) {
+        if ("top" === layer.anchor) {
           str3 = "flex-start";
         }
         str2 = str3;
@@ -81,9 +81,9 @@ function ProfileFrameLayer(skuId) {
               obj.style = items1;
               const _Array = Array;
               obj = { length: Math.ceil(containerHeight / imageHeight) };
-              obj.children = Array.from(obj, (arg0, arg1) => {
+              obj.children = Array.from(obj, (arg0, key) => {
                 const size = { source: { uri: assetUrl }, resizeMode: "cover", width, height: imageHeight };
-                return jsx(FastImageDefault, { source: { uri: assetUrl }, resizeMode: "cover", width, height: imageHeight }, arg1);
+                return jsx(FastImageDefault, { source: { uri: assetUrl }, resizeMode: "cover", width, height: imageHeight }, key);
               });
               return <overflowHorizontal length={Math.ceil(containerHeight / imageHeight)} />;
             }
@@ -145,8 +145,8 @@ function LiveProfileFrame(frame) {
   if (0 !== memo.length) {
     if (0 !== containerWidth) {
       ({ overflowTop: c6, overflowBottom: c7, overflowHorizontal: c8 } = frame(containerWidth[9])(frame, containerWidth));
-      const obj = { style: tmp.container, children: memo.map((layer) => <ProfileFrameLayer key={arg0.id} skuId={frame.skuId} layer={arg0} overflowTop={overflowTop} overflowBottom={overflowBottom} overflowHorizontal={overflowHorizontal} containerWidth={containerWidth} containerHeight={containerHeight} />) };
-      return <profileThemeType style={tmp.container}>{memo.map((layer) => <ProfileFrameLayer key={arg0.id} skuId={frame.skuId} layer={arg0} overflowTop={overflowTop} overflowBottom={overflowBottom} overflowHorizontal={overflowHorizontal} containerWidth={containerWidth} containerHeight={containerHeight} />)}</profileThemeType>;
+      const obj = { style: tmp.container, children: memo.map((layer) => <ProfileFrameLayer key={layer.id} skuId={frame.skuId} layer={layer} overflowTop={overflowTop} overflowBottom={overflowBottom} overflowHorizontal={overflowHorizontal} containerWidth={containerWidth} containerHeight={containerHeight} />) };
+      return <profileThemeType style={tmp.container}>{memo.map((layer) => <ProfileFrameLayer key={layer.id} skuId={frame.skuId} layer={layer} overflowTop={overflowTop} overflowBottom={overflowBottom} overflowHorizontal={overflowHorizontal} containerWidth={containerWidth} containerHeight={containerHeight} />)}</profileThemeType>;
     }
   }
   return null;

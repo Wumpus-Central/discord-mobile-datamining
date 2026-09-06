@@ -63,12 +63,13 @@ function StepNode(isCurrent) {
     obj.style = items1;
     if (isCurrent) {
       let obj1 = { variant: "heading-deprecated-12/extrabold", color: "interactive-text-active", children: label };
-      isCurrent = tmp7(tmp2(tmp3[8]).Text, obj1);
+      isCurrent = jsx(tmp2(tmp3[8]).Text, { variant: "heading-deprecated-12/extrabold", color: "interactive-text-active", children: label });
     }
     obj.children = isCurrent;
     return jsx(sharedValue(tmp3[6]).View, { style: null, children: null });
   }
   filledNode = tmp.filledNode;
+  const tmp2Result = isCurrent(num2[6]);
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -99,12 +100,8 @@ export default function StepsIndicator(current) {
       if (0 < total) {
         do {
           sum = num + 1;
-          let obj = { useReducedMotion: null, isCurrent: null, isDone: null, label: null };
-          obj.useReducedMotion = stateFromStores;
-          obj.isCurrent = sum === current;
-          obj.isDone = sum < current;
-          obj.label = sum;
-          let arr = items.push(<StepNode key={num} useReducedMotion={null} isCurrent={null} isDone={null} label={null} />);
+          let obj = { useReducedMotion: stateFromStores, isCurrent: sum === current, isDone: sum < current, label: sum };
+          let arr = items.push(<StepNode key={num} useReducedMotion={stateFromStores} isCurrent={sum === current} isDone={sum < current} label={sum} />);
           num = sum;
         } while (sum < total);
       }
@@ -120,12 +117,8 @@ export default function StepsIndicator(current) {
     if (0 < total) {
       do {
         sum = num + 1;
-        let obj = { useReducedMotion: null, isCurrent: null, isDone: null, label: null };
-        obj.useReducedMotion = stateFromStores;
-        obj.isCurrent = sum === current;
-        obj.isDone = sum < current;
-        obj.label = sum;
-        let arr = items.push(<StepNode key={num} useReducedMotion={null} isCurrent={null} isDone={null} label={null} />);
+        let obj = { useReducedMotion: stateFromStores, isCurrent: sum === current, isDone: sum < current, label: sum };
+        let arr = items.push(<StepNode key={num} useReducedMotion={stateFromStores} isCurrent={sum === current} isDone={sum < current} label={sum} />);
         num = sum;
       } while (sum < total);
     }

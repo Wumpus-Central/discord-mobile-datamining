@@ -6,6 +6,7 @@ import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import useChatLayoutDefault from "useChatLayout" /* 4420 */;
 import common_NotificationsDefault from "common/Notifications" /* 10078 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 11323 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4200 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -53,7 +54,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   if (isStageChannel) {
     tmp5 = channelId(9583)(stateFromStoresObject.voiceChannelId);
   }
-  let tmpResult = tmp(504);
+  let tmpResult = initialize;
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
   const stateFromStores = tmpResult.useStateFromStores(items1, () => {
@@ -92,7 +93,7 @@ export const ChannelContainer = function ChannelContainer(children) {
       const result = obj.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, obj);
     }
   }, items2);
-  tmpResult = tmp(11323);
+  tmpResult = useChannelStylesShared;
   const channelStyles = tmpResult.useChannelStyles();
   obj = { style: channelStyles.scene, children: null };
   obj = { style: channelStyles.flex, children: null };
@@ -105,13 +106,13 @@ export const ChannelContainer = function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj1 = { channel };
-      tmp15 = closure_10(tmp4(11324), obj1);
+      tmp15 = closure_10(channelId(11324), obj1);
     }
   }
   const items3 = [tmp15, children.children, ];
   if (tmp5) {
     const obj2 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(tmp4(9695), obj2);
+    tmp5 = closure_10(channelId(9695), obj2);
   }
   items3[2] = tmp5;
   obj.children = items3;

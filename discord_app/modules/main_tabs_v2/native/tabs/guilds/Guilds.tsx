@@ -5,12 +5,12 @@ import native from "native" /* 4271 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4413 */;
 import QuestsEligibility from "QuestsEligibility" /* 11484 */;
 import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15099 */;
+import QuestDockDefault from "QuestDock" /* 15183 */;
 import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16014 */;
 import MainChannelsDefault from "MainChannels" /* 16015 */;
 import YouBarDefault from "YouBar" /* 16362 */;
 import noop from "module_19" /* 19 */;
 
-const QuestDockDefault = tmp3(15183);
 require = fn;
 const YouBarNavigatorScreens = fn(11084).YouBarNavigatorScreens;
 const jsxProd = fn(21);
@@ -26,7 +26,7 @@ export default noop.memo(function GuildsOnly() {
   obj = { gradient: tmp4, children: null };
   const items = [React4(MainChannelsDefault, {}), React4(YouBarDefault, {}), ];
   if (isEligibleForQuests) {
-    isEligibleForQuests = tmp6(QuestDockDefault, {});
+    isEligibleForQuests = React4(QuestDockDefault, {});
   }
   items[2] = isEligibleForQuests;
   obj.children = hasOwnProperty(QuestDockExternalCoordinationContext.QuestDockExternalCoordinationContextProvider, { children: items });

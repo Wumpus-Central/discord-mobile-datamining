@@ -28,9 +28,9 @@ const recentlyActiveCollapseStore = new RecentlyActiveCollapseStore(DispatcherDe
   SET_RECENTLY_ACTIVE_COLLAPSED: function handleSetRecentlyActiveCollapsed(guildId) {
     guildId = guildId.guildId;
     if (guildId.collapsed) {
-      obj.add(guildId);
+      set.add(guildId);
     } else {
-      obj.delete(guildId);
+      set.delete(guildId);
     }
   }
 });

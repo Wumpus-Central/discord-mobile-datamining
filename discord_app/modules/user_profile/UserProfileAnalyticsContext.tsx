@@ -38,23 +38,23 @@ export const UserProfileAnalyticsProvider = (children) => {
       tmp3 = null != openedAt;
     }
     if (tmp3) {
-      tmp2.current = timestamp - openedAt;
+      ref.current = timestamp - openedAt;
     }
     if (isLoaded) {
       ({ analyticsLocations, value } = ref.current);
       let obj = { action: "VIEW", analyticsLocations };
       const merged = Object.assign(value);
       const result = obj.trackUserProfileAction(obj);
-      obj = { profileUi: "USER_PROFILE", timeToInteractiveMs: tmp2.current, timeToLoadMs: null, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
+      obj = { profileUi: "USER_PROFILE", timeToInteractiveMs: ref.current, timeToLoadMs: null, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
       let diff;
       if (null != openedAt) {
-        diff = timestamp - tmp13;
+        diff = timestamp - openedAt;
       }
       obj.timeToLoadMs = diff;
       let diff1;
       if (null != importDefault) {
         if (null != dependencyMap) {
-          diff1 = dependencyMap - tmp15;
+          diff1 = dependencyMap - importDefault;
         }
       }
       obj.timeToFetchMs = diff1;
@@ -110,7 +110,7 @@ export const useUserProfileAnalyticsContext = function useUserProfileAnalyticsCo
   obj.trackUserProfileAction = noop.useCallback((arg0) => {
     if (null != context) {
       const obj = { analyticsLocations };
-      const merged = Object.assign(tmp);
+      const merged = Object.assign(context);
       const merged1 = Object.assign(arg0);
       const result = obj.trackUserProfileAction(obj);
     }
@@ -119,7 +119,7 @@ export const useUserProfileAnalyticsContext = function useUserProfileAnalyticsCo
   obj.trackUserProfileEditAction = noop.useCallback((arg0) => {
     if (null != context) {
       const obj = { analyticsLocations };
-      const merged = Object.assign(tmp);
+      const merged = Object.assign(context);
       const merged1 = Object.assign(arg0);
       const result = obj.trackUserProfileEditAction(obj);
     }
@@ -128,7 +128,7 @@ export const useUserProfileAnalyticsContext = function useUserProfileAnalyticsCo
   obj.trackUserProfileEditSaved = noop.useCallback((arg0) => {
     if (null != context) {
       const obj = { analyticsLocations };
-      const merged = Object.assign(tmp);
+      const merged = Object.assign(context);
       const merged1 = Object.assign(arg0);
       const result = obj.trackUserProfileEditSaved(obj);
     }
@@ -137,7 +137,7 @@ export const useUserProfileAnalyticsContext = function useUserProfileAnalyticsCo
   obj.trackUserProfileWishlistAction = noop.useCallback((arg0) => {
     if (null != context) {
       const obj = { analyticsLocations };
-      const merged = Object.assign(tmp);
+      const merged = Object.assign(context);
       const merged1 = Object.assign(arg0);
       const result = obj.trackUserProfileWishlistAction(obj);
     }

@@ -1,6 +1,7 @@
 // === Module 17499: FavoriteManager ===
 
 // Module 17499 (FavoriteManager)
+import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import FavoritesActionCreators from "FavoritesActionCreators" /* 10223 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
@@ -20,12 +21,14 @@ function handleCategoryCollapseAll(guildId) {
     const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(true);
     const tmpResult = FavoritesActionCreators;
   }
+  obj = FavoritesUtils;
 }
 function handleCategoryExpandAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
     const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(false);
     const tmpResult = FavoritesActionCreators;
   }
+  obj = FavoritesUtils;
 }
 function handleLogout() {
   React4(React3);
@@ -37,6 +40,7 @@ function handleThreadMembersUpdate(addedMembers) {
     const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(addedMembers.id);
     result.catch(NOOP);
   }
+  tmp2 = null != id && null != addedMembers && addedMembers.some((userId) => userId.userId === id);
 }
 function handleThreadCreate(channel) {
   channel = channel.channel;

@@ -67,7 +67,7 @@ export const sortEntries = function sortEntries(entries, memo1) {
       if (id2 != null) {
         id1 = id2.id;
       }
-      if (null == tmp[id1]) {
+      if (null == memo1[id1]) {
         return -1;
       }
     }
@@ -80,7 +80,7 @@ export const sortEntries = function sortEntries(entries, memo1) {
       if (id2 != null) {
         id3 = id2.id;
       }
-      if (null != tmp[id3]) {
+      if (null != memo1[id3]) {
         return 1;
       }
     }

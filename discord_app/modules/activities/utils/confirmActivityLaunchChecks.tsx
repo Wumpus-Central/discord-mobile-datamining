@@ -16,7 +16,7 @@ function getOrFetchApplicationForLaunch() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _getOrFetchApplicationForLaunch(arg0, value) {
+let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -119,7 +119,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0, value) {
     }
   }
 };
-let closure_9 = async function _confirmActivityChange(arg0, value) {
+let closure_9 = async function _confirmActivityChange(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -186,10 +186,11 @@ let closure_9 = async function _confirmActivityChange(arg0, value) {
                 }
               }
               fn(true);
+              const obj2 = closure_1_0(4189);
             });
             c2 = 2;
             c3 = 1;
-            const obj2 = { value: promise, done: false };
+            let obj2 = { value: promise, done: false };
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -212,7 +213,7 @@ let closure_9 = async function _confirmActivityChange(arg0, value) {
     }
   }
 };
-let closure_10 = async function _confirmActivityAgeGate(arg0, value) {
+let closure_10 = async function _confirmActivityAgeGate(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -355,7 +356,7 @@ let closure_10 = async function _confirmActivityAgeGate(arg0, value) {
     }
   }
 };
-let closure_11 = async function _confirmExternalAppLaunch(arg0, value) {
+let closure_11 = async function _confirmExternalAppLaunch(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -484,7 +485,7 @@ let closure_12 = async function _confirmActivityLaunchChecks() {
   closure_1 = tmp2;
   closure_129_0 = closure_0;
   ({ currentEmbeddedApplication: obj7.currentEmbeddedApplication, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: obj7.shouldClosePopoutOnLeaveCurrentEmbeddedApplication, onConfirmActivityLaunchChecksAlertOpen: obj7.onConfirmActivityLaunchChecksAlertOpen } = closure_0);
-  closure_129_1 = await (function confirmActivityChange() {
+  await (function confirmActivityChange() {
     const self = this;
     const apply = closure_1_9.apply;
     if (typeof apply === "unknown") {
@@ -494,10 +495,11 @@ let closure_12 = async function _confirmActivityLaunchChecks() {
     }
     return applyArgumentsResult;
   })({ currentEmbeddedApplication: null, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: null, onConfirmActivityLaunchChecksAlertOpen: null });
+  closure_129_1 = value;
   if (!closure_129_1) {
     return false;
   }
-  closure_129_2 = await (function confirmActivityAgeGate() {
+  await (function confirmActivityAgeGate() {
     const self = this;
     const apply = closure_1_10.apply;
     if (typeof apply === "unknown") {
@@ -507,10 +509,11 @@ let closure_12 = async function _confirmActivityLaunchChecks() {
     }
     return applyArgumentsResult;
   })(closure_129_0);
+  closure_129_2 = value;
   if (!closure_129_2) {
     return false;
   }
-  closure_129_3 = await (function confirmExternalAppLaunch() {
+  await (function confirmExternalAppLaunch() {
     const self = this;
     const apply = closure_1_11.apply;
     if (typeof apply === "unknown") {
@@ -520,6 +523,7 @@ let closure_12 = async function _confirmActivityLaunchChecks() {
     }
     return applyArgumentsResult;
   })(closure_129_0);
+  closure_129_3 = value;
   return closure_129_3;
 };
 const ApplicationFlags = fn(1074).ApplicationFlags;

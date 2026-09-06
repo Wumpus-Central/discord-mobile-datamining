@@ -84,13 +84,12 @@ prototype["getSharedProjects"] = function getSharedProjects(guildId) {
   const items = [];
   const values = map.values();
   for (const item10010 of values) {
-    let tmp2 = item10010;
     let tmp4 = isProjectOwner(item10010);
     if (!tmp4) {
-      tmp4 = tmp2.guild_id !== arg0;
+      tmp4 = item10010.guild_id !== arg0;
     }
     if (!tmp4) {
-      let arr = items.push(tmp2);
+      let arr = items.push(item10010);
     }
     continue;
   }
@@ -223,7 +222,6 @@ obj = {
     while (tmp2 !== undefined) {
       let tmp5 = _slicedToArray(tmp3, 2);
       [tmp6, tmp8] = tmp5;
-      let tmp7 = tmp6;
       if (!set.has(tmp6)) {
         let tmp11 = isProjectOwner(tmp8);
         if (!tmp11) {
@@ -234,7 +232,7 @@ obj = {
           tmp11 = tmp12;
         }
         if (tmp11) {
-          let deleteResult = map.delete(tmp7);
+          let deleteResult = map.delete(tmp6);
         }
       }
       continue;
@@ -249,9 +247,8 @@ obj = {
     (function pruneProjectScopedState() {
       const keys = set2.keys();
       for (const item10009 of keys) {
-        let tmp2 = item10009;
         if (!set.has(item10009)) {
-          let deleteResult = set2.delete(tmp2);
+          let deleteResult = set2.delete(item10009);
         }
         continue;
       }
@@ -263,8 +260,10 @@ obj = {
         }
         continue;
       }
+      tmp8 = set3[Symbol.iterator]();
     })();
-    obj = { type: "success", fetchedAt: Date.now() };
+    { type: "success", fetchedAt: Date.now() };
+    tmp2 = map[Symbol.iterator]();
   },
   VIBEGRATIONS_PROJECTS_FETCH_FAIL: function handleProjectsFetchFail() {
     obj = { type: "error", fetchedAt: Date.now() };
@@ -292,6 +291,7 @@ obj = {
       }
       continue;
     }
+    tmp10 = map2[Symbol.iterator]();
   },
   VIBEGRATIONS_PROJECT_SELECT: function handleProjectSelect(arg0) {
     ({ guildId, projectId } = arg0);
@@ -302,9 +302,9 @@ obj = {
     if (value === projectId) {
       return false;
     } else if (null == projectId) {
-      obj.delete(guildId);
+      map2.delete(guildId);
     } else {
-      const result = obj.set(guildId, projectId);
+      const result = map2.set(guildId, projectId);
     }
   },
   VIBEGRATIONS_TRACE_REPLAY_STARTING: function handleTraceReplayStarting(projectId) {
@@ -317,6 +317,7 @@ obj = {
     set = new Set(value.map((kind) => "" + kind.kind + ":" + kind.id));
     obj.touched = new Set();
     const result = map9.set(projectId, obj);
+    const set1 = new Set();
   },
   VIBEGRATIONS_HISTORY_LOAD_SETTLE: function handleHistoryLoadSettle(arg0) {
     ({ projectId, scope } = arg0);
@@ -334,7 +335,7 @@ obj = {
       if (null != value) {
         value = map6.get(projectId);
         if (null != value) {
-          const result = obj3.set(projectId, value.filter((kind) => {
+          const result = map6.set(projectId, value.filter((kind) => {
             const snapshot = _undefined.snapshot;
             const hasItem = snapshot.has("" + kind.kind + ":" + kind.id);
             let hasItem1 = !hasItem;
@@ -346,18 +347,16 @@ obj = {
             return hasItem1;
           }));
         }
-        obj3 = map6;
       }
       obj = { status: "loaded", truncated, count };
       let value1 = map8.get(projectId);
       if (null == value1) {
         const _Map2 = Map;
         map = new Map();
-        const result1 = obj5.set(projectId, map);
+        const result1 = map8.set(projectId, map);
         value1 = map;
       }
       const result2 = value1.set(scope, obj);
-      obj5 = map8;
     } else {
       value2 = map8.get(projectId);
       let value3;
@@ -380,11 +379,11 @@ obj = {
         num = 0;
       }
       obj.count = num;
-      let value4 = obj7.get(projectId);
+      let value4 = map8.get(projectId);
       if (null == value4) {
         const _Map = Map;
         map1 = new Map();
-        const result3 = obj7.set(projectId, map1);
+        const result3 = map8.set(projectId, map1);
         value4 = map1;
       }
       const result4 = value4.set(scope, obj);
@@ -437,9 +436,8 @@ obj = {
     if (num3 >= num) {
       return false;
     } else {
-      const result = obj.set(projectId, num);
+      const result = map5.set(projectId, num);
     }
-    obj = map5;
   },
   VIBEGRATIONS_TOOL_CALL_APPEND: function handleToolCallAppend(arg0) {
     ({ projectId, toolCall } = arg0);
@@ -619,7 +617,7 @@ obj = {
         if (null == value3) {
           const _Map = Map;
           map = new Map();
-          const result = obj26.set(projectId, map);
+          const result = map7.set(projectId, map);
           value3 = map;
         }
         const result1 = value3.set(entry_id2, tmp56);
@@ -633,7 +631,6 @@ obj = {
           }
           const iter = value3.keys();
         }
-        obj26 = map7;
       }
       if (null == tmp11) {
         const combined = value2.concat(obj);
@@ -752,7 +749,7 @@ obj = {
         if (null == value3) {
           const _Map = Map;
           map = new Map();
-          const result = obj11.set(projectId, map);
+          const result = map7.set(projectId, map);
           value3 = map;
         }
         const result1 = value3.set(entry_id2, tmp32);
@@ -766,7 +763,6 @@ obj = {
           }
           const iter = value3.keys();
         }
-        obj11 = map7;
       }
       if (null == tmp11) {
         const combined = value2.concat(obj);

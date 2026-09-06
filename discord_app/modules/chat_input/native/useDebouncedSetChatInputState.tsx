@@ -13,8 +13,8 @@ export default function useDebouncedSetChatInputState(arg0, arg1) {
   const callback = noop.useCallback(() => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
   }, []);
   const items = [callback];
@@ -28,12 +28,12 @@ export default function useDebouncedSetChatInputState(arg0, arg1) {
       focused((focused) => {
         let tmp2 = focused;
         if (focused.focused === focused.focused) {
-          tmp2 = tmp;
-          if (focused.text === tmp.text) {
-            tmp2 = tmp;
-            if (focused.selectionStart === tmp.selectionStart) {
-              tmp2 = tmp;
-              if (focused.selectionEnd === tmp.selectionEnd) {
+          tmp2 = focused;
+          if (focused.text === focused.text) {
+            tmp2 = focused;
+            if (focused.selectionStart === focused.selectionStart) {
+              tmp2 = focused;
+              if (focused.selectionEnd === focused.selectionEnd) {
                 tmp2 = focused;
               }
             }

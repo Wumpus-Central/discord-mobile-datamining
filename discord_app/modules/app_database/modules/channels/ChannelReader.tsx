@@ -26,7 +26,8 @@ prototype["getAsync"] = function getAsync(arg0, arg1) {
     const _performance2 = performance;
     closure_128_0 = performance.now();
     tmp2(tmp5[2]);
-    closure_128_1 = await tmp2(tmp5[2]).channels(tmp2).getMany(tmp5);
+    await tmp2(tmp5[2]).channels(tmp2).getMany(tmp5);
+    closure_128_1 = value;
     const _performance = performance;
     closure_128_2 = performance.now() - closure_128_0;
     const _HermesInternal = HermesInternal;
@@ -35,7 +36,7 @@ prototype["getAsync"] = function getAsync(arg0, arg1) {
   })();
 };
 prototype["getGuildIds"] = function getGuildIds() {
-  return (async (arg0, value) => {
+  return (async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -54,8 +54,8 @@ prototype["getLocalAccount"] = function getLocalAccount(CONTACTS) {
 prototype["isSuggestedAccountType"] = function isSuggestedAccountType(arg0) {
   return closure_10[arg0] || false;
 };
-prototype["addPendingAuthorizedState"] = function addPendingAuthorizedState(arg0) {
-  set1.add(arg0);
+prototype["addPendingAuthorizedState"] = function addPendingAuthorizedState(state) {
+  set1.add(state);
 };
 prototype["deletePendingAuthorizedState"] = function deletePendingAuthorizedState(arg0) {
   set1.delete(arg0);

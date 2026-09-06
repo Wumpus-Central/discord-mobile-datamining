@@ -24,5 +24,5 @@ export const ModalScreen = function ModalScreen(children) {
     backgroundColor = tmp.container.backgroundColor;
   }
   style[1] = { backgroundColor, paddingLeft: insets.left, paddingRight: insets.right, paddingBottom: insets.bottom };
-  return <View style={style}>{arg0.children}</View>;
+  return <View style={style}>{children.children}</View>;
 };

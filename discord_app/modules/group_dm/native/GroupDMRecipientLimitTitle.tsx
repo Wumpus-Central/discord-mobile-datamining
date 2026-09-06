@@ -5,7 +5,9 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useToken from "useToken" /* 4262 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11591 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,7 +59,7 @@ export default function GroupDMRecipientLimitTitle(arg0) {
       str2 = "text-feedback-critical";
     }
   }
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   const formatToPlainStringResult = intl.formatToPlainString(util.t["9EQix0"], { numMembers: memberCount, maxMemberLimit: recipientLimit });
   obj = { lineClamp: 1, variant: token, color: "mobile-text-heading-primary", style: tmp.title, maxFontSizeMultiplier: 2, children: title };
   const items = [timestampProducer(Text_Text.Text, obj), ];
@@ -68,7 +70,7 @@ export default function GroupDMRecipientLimitTitle(arg0) {
       token2 = token1;
     }
     obj1 = { size: "xxs", color: token2, style: tmp.nitroWheelIcon, accessible: false };
-    tmp15Result = tmp15(tmp2(8662).NitroWheelIcon, obj1);
+    tmp15Result = timestampProducer(NitroWheelIcon.NitroWheelIcon, obj1);
   }
   obj2 = { children: null };
   const items1 = [tmp15Result, ];
@@ -82,14 +84,14 @@ export default function GroupDMRecipientLimitTitle(arg0) {
     const obj4 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
     const _HermesInternal = HermesInternal;
     obj4.accessibilityLabel = "" + title + ", " + formatToPlainStringResult;
-    const rect = { top: tmp5(576).space.PX_8, bottom: tmp5(576).space.PX_8, left: tmp5(576).space.PX_16, right: tmp5(576).space.PX_16 };
+    const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };
     obj4.hitSlop = rect;
-    obj4.onPress = tmp5(12188);
+    obj4.onPress = openGroupDMNitroCapInfoActionSheetDefault;
     obj4.children = tmp13Result;
-    tmp15Result = tmp15(React3, obj4);
+    tmp15Result = timestampProducer(React3, obj4);
   } else {
     const obj5 = { accessible: true, accessibilityRole: "header", children: tmp13Result };
-    tmp15Result = tmp15(tmp16, obj5);
+    tmp15Result = timestampProducer(React4, obj5);
   }
   return tmp15Result;
 };

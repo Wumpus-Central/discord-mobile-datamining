@@ -45,9 +45,9 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
             }
             let tmp6 = !tmp3;
             if (!tmp3) {
-              let hasItem = category.category !== tmp(tmp2[1]).ThirdPartyGameApplicationWebsiteCategory.STEAM;
+              let hasItem = category.category !== steamWebsiteUrl(id1[1]).ThirdPartyGameApplicationWebsiteCategory.STEAM;
               if (!hasItem) {
-                hasItem = closure_1_4 !== tmp(tmp2[4]).SteamReleaseStatus.RETIRED_ABANDONED;
+                hasItem = closure_1_4 !== steamWebsiteUrl(id1[4]).SteamReleaseStatus.RETIRED_ABANDONED;
               }
               if (hasItem) {
                 hasItem = items.includes(category.category);

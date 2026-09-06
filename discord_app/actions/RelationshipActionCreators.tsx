@@ -12,6 +12,7 @@ import ContextMenuActionCreators from "ContextMenuActionCreators" /* 5553 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8404 */;
 import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 9044 */;
 import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 9045 */;
+import FriendsUtils from "FriendsUtils" /* 9046 */;
 import ClearAllIncomingRequestsConfirmationModalDefault from "ClearAllIncomingRequestsConfirmationModal" /* 9047 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -60,22 +61,22 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
         if (num !== tmp2.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
           if (SHOW_ALWAYS === obj.SHOW_ALWAYS) {
             if (null != userTag) {
-              let tmp18Result = tmp18(9046);
+              let tmp18Result = FriendsUtils;
               if (!num) {
                 num = 0;
               }
               let humanizeAbortCodeResult = tmp18Result.humanizeAbortCode(num, userTag);
             } else {
-              const intl = tmp18(1114).intl;
-              humanizeAbortCodeResult = intl.string(tmp18(1114).t.paDJBM);
+              const intl = util.intl;
+              humanizeAbortCodeResult = intl.string(util.t.paDJBM);
             }
             const obj1 = { title: null, body: null, confirmText: null };
-            const intl2 = tmp18(1114).intl;
-            obj1.title = intl2.string(tmp18(1114).t["6moJ8s"]);
+            const intl2 = util.intl;
+            obj1.title = intl2.string(util.t["6moJ8s"]);
             obj1.body = humanizeAbortCodeResult;
-            const intl3 = tmp18(1114).intl;
-            obj1.confirmText = intl3.string(tmp18(1114).t.BddRzS);
-            tmp18Result = tmp18(5553);
+            const intl3 = util.intl;
+            obj1.confirmText = intl3.string(util.t.BddRzS);
+            tmp18Result = ContextMenuActionCreators;
             tmp18Result.closeContextMenu();
             AlertActionCreatorsDefault.show(obj1);
           }
@@ -114,7 +115,7 @@ obj = {
   },
   addRelationship(arg0, arg1) {
     ({ userId, captchaPayload } = arg0);
-    _require = arg1;
+    const _require = arg1;
     let SHOW_ALWAYS = arg2;
     ({ context, type, fromFriendSuggestion, confirmStrangerRequest } = arg0);
     if (arg2 === undefined) {
@@ -175,7 +176,7 @@ obj = {
     });
   },
   removeRelationship(userId, context, arg2) {
-    _require = arg2;
+    const _require = arg2;
     const HTTP = require("HTTPUtils").HTTP;
     obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     const obj2 = require("HTTPUtils");
@@ -192,7 +193,7 @@ obj = {
   },
   updateRelationship(userId, c0) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: timestampProducer.USER_RELATIONSHIP(userId), body: { nickname: c0 }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: timestampProducer.USER_RELATIONSHIP(userId), body: { nickname }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.patch(request);
   },
   fetchRelationships() {
@@ -239,7 +240,7 @@ obj = {
     });
   },
   ignoreUser(id, IGNORE_CONFIRMATION_ACTION_SHEET, channelId) {
-    _require = id;
+    const _require = id;
     const HTTP = require("HTTPUtils").HTTP;
     obj = { url: closure_6.IGNORE_USER(id), context: null, rejectWithError: null };
     obj = { location: IGNORE_CONFIRMATION_ACTION_SHEET };
@@ -263,7 +264,7 @@ obj = {
     });
   },
   unignoreUser(id, newestAnalyticsLocation, id2) {
-    _require = id;
+    const _require = id;
     const HTTP = require("HTTPUtils").HTTP;
     obj = { url: closure_6.IGNORE_USER(id), context: null, rejectWithError: null };
     obj = { location: newestAnalyticsLocation };

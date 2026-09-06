@@ -47,11 +47,11 @@ export default function UserProfileCard(arg0) {
       items1[1] = hasOwnProperty(Text_Text.Text, obj1);
       items1[2] = titleIcon;
       obj.children = items1;
-      tmp3Result = tmp3(tmp4, obj);
+      tmp3Result = timestampProducer(View, obj);
     }
     const items2 = [tmp3Result, trailingAction];
     obj.children = items2;
-    tmp3Result = tmp3(tmp4, obj);
+    tmp3Result = timestampProducer(View, obj);
   }
   const items3 = [tmp3Result, children];
   obj.children = items3;
@@ -83,11 +83,11 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   tmp6Result = null != hint;
   if (tmp6Result) {
     const obj2 = { size, color: str };
-    tmp6Result = tmp6(hint, obj2);
+    tmp6Result = hasOwnProperty(hint, obj2);
   }
   items[2] = tmp6Result;
   if (tmp6Result) {
-    tmp6Result = tmp6(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
+    tmp6Result = hasOwnProperty(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
   }
   items[3] = tmp6Result;
   obj.children = items;
@@ -95,7 +95,7 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   let tmp6Result1 = null != sublabel;
   if (tmp6Result1) {
     const obj3 = { style: tmp.rowSublabel, children: sublabel };
-    tmp6Result1 = tmp6(tmp5, obj3);
+    tmp6Result1 = hasOwnProperty(View, obj3);
   }
   items1[1] = tmp6Result1;
   obj.children = items1;

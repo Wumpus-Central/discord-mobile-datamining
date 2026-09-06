@@ -2,6 +2,8 @@
 
 // Module 16325 (TypingSubtitle)
 import Text_Text from "Text/Text" /* 4556 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
+import TextIcon from "TextIcon" /* 5080 */;
 import useSubtitleStyles from "useSubtitleStyles" /* 16324 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,11 +21,11 @@ export default function TypingSubtitle(arg0) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(5028).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(5028);
+    channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = utils_ChannelUtils;
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(5080).TextIcon;
+    channelIconComponentWithGuild = TextIcon.TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;
@@ -38,7 +40,7 @@ export default function TypingSubtitle(arg0) {
     const obj2 = { variant: "text-xs/medium", children: null };
     const items1 = [channelName, "  \u00B7  "];
     obj2.children = items1;
-    tmp5Result = tmp5(tmp(4556).Text, obj2);
+    tmp5Result = React4(Text_Text.Text, obj2);
   }
   const items2 = [tmp5Result, text];
   obj1.children = items2;

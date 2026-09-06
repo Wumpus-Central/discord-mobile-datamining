@@ -46,9 +46,9 @@ export default function ComponentProfiler(arg0) {
       if (!(arg0 in dependencyMap)) {
         if (typeof StatCollector === "function") {
           const obj = { mount: Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null }), update: null, nestedUpdate: null };
-          if (typeof tmp4 === "function") {
+          if (typeof StatCollector === "function") {
             obj.update = Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null });
-            if (typeof tmp4 === "function") {
+            if (typeof StatCollector === "function") {
               obj.nestedUpdate = Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null });
               tmp3[arg0] = obj;
             } else {

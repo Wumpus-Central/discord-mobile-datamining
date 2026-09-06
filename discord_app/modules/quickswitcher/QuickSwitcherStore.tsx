@@ -40,7 +40,7 @@ function generateResultFromId(found) {
     return null;
   } else {
     if (tmp3) {
-      if (tmp2.type !== tmp7(9835).AutocompleterResultTypes.USER) {
+      if (tmp2.type !== sortByMatchScore.AutocompleterResultTypes.USER) {
         return null;
       }
     } else if (null != queryMode) {
@@ -56,18 +56,18 @@ function generateInitialResults() {
   const guildId = SelectedGuildStore.getGuildId();
   channelId = SelectedChannelStore.getChannelId();
   if (channelId(set[15]).AutocompleterResultTypes.USER_GLOBAL !== queryMode) {
-    if (tmp4(tmp5[15]).AutocompleterResultTypes.USER !== tmp3) {
-      if (tmp4(tmp5[15]).AutocompleterResultTypes.APPLICATION === tmp3) {
+    if (tmp4(tmp5[15]).AutocompleterResultTypes.USER !== queryMode) {
+      if (tmp4(tmp5[15]).AutocompleterResultTypes.APPLICATION === queryMode) {
         return require("AutocompleteUtils").queryApplications({ query: "", limit: 100, fuzzy: true });
-      } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GAME_PROFILE === tmp3) {
+      } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GAME_PROFILE === queryMode) {
         return [];
-      } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GUILD === tmp3) {
+      } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GUILD === queryMode) {
         return require("AutocompleteUtils").queryGuilds({ query: "", limit: 100, fuzzy: true });
-      } else if (tmp4(tmp5[15]).AutocompleterResultTypes.TEXT_CHANNEL === tmp3) {
+      } else if (tmp4(tmp5[15]).AutocompleterResultTypes.TEXT_CHANNEL === queryMode) {
         obj = { query: "", guildId: null, limit: 100, fuzzy: true, allowEmptyQueries: true };
         obj.guildId = obj.getGuildId();
         return require("AutocompleteUtils").queryChannels(obj);
-      } else if (tmp4(tmp5[15]).AutocompleterResultTypes.VOICE_CHANNEL === tmp3) {
+      } else if (tmp4(tmp5[15]).AutocompleterResultTypes.VOICE_CHANNEL === queryMode) {
         obj = { query: "", guildId: null, limit: 100, fuzzy: true, filter: null, type: null, allowEmptyQueries: true };
         obj.guildId = obj.getGuildId();
         obj.filter = function filter() {
@@ -116,7 +116,7 @@ function generateInitialResults() {
               if (null != tmp3) {
                 if (tmp8) {
                   tmp5 = tmp3;
-                  if (tmp3.type !== tmp7(tmp2[15]).AutocompleterResultTypes.USER) {
+                  if (tmp3.type !== tmp7(set[15]).AutocompleterResultTypes.USER) {
                     tmp5 = null;
                   }
                 } else {
@@ -128,7 +128,7 @@ function generateInitialResults() {
                     }
                   }
                 }
-                tmp8 = queryMode === channelId(tmp2[15]).AutocompleterResultTypes.USER || queryMode === channelId(tmp2[15]).AutocompleterResultTypes.USER_GLOBAL;
+                tmp8 = queryMode === channelId(set[15]).AutocompleterResultTypes.USER || queryMode === channelId(set[15]).AutocompleterResultTypes.USER_GLOBAL;
               }
               if (null != tmp5) {
                 const obj = { record: tmp5, channelId };
@@ -223,7 +223,7 @@ function generateInitialResults() {
             if (null != tmp2) {
               if (tmp6) {
                 tmp3 = tmp2;
-                if (tmp2.type !== tmp5(tmp[15]).AutocompleterResultTypes.USER) {
+                if (tmp2.type !== channelId(set[15]).AutocompleterResultTypes.USER) {
                   tmp3 = null;
                 }
               } else {
@@ -235,7 +235,7 @@ function generateInitialResults() {
                   }
                 }
               }
-              tmp6 = queryMode === channelId(tmp[15]).AutocompleterResultTypes.USER || queryMode === channelId(tmp[15]).AutocompleterResultTypes.USER_GLOBAL;
+              tmp6 = queryMode === channelId(set[15]).AutocompleterResultTypes.USER || queryMode === channelId(set[15]).AutocompleterResultTypes.USER_GLOBAL;
             }
             return tmp3;
           });
@@ -247,15 +247,13 @@ function generateInitialResults() {
               let tmp14 = createAutocompleterResultForChannelIdDefault(key10004);
               let tmp5 = null;
               if (null != tmp14) {
-                let tmp2 = require;
-                let tmp = queryMode;
                 let tmp3 = queryMode === sortByMatchScore.AutocompleterResultTypes.USER;
                 if (!tmp3) {
-                  tmp3 = tmp === tmp2(9835).AutocompleterResultTypes.USER_GLOBAL;
+                  tmp3 = queryMode === sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL;
                 }
                 if (tmp3) {
                   tmp5 = tmp14;
-                  if (tmp14.type !== tmp2(9835).AutocompleterResultTypes.USER) {
+                  if (tmp14.type !== sortByMatchScore.AutocompleterResultTypes.USER) {
                     tmp5 = null;
                   }
                 } else {
@@ -334,7 +332,7 @@ function handleQuickSwitcherShow(arg0) {
       num = 100;
     }
     const obj = { frecencyBoosters: true, blacklist: set, allowSnowflake: true };
-    tmp13 = new tmp13(tmp14, items1, num, obj, 100);
+    tmp13 = new tmp13(handleUserSearchUpdate, items1, num, obj, 100);
   }
   _null = tmp13;
   c28 = null;
@@ -370,28 +368,28 @@ function handleUserSearchUpdate(arr, str) {
   if (!flag) {
     let DOWN = require;
     if (sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL !== queryMode) {
-      if (DOWN(9835).AutocompleterResultTypes.USER !== tmp7) {
-        if (DOWN(9835).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
+      if (DOWN(9835).AutocompleterResultTypes.USER !== queryMode) {
+        if (DOWN(9835).AutocompleterResultTypes.TEXT_CHANNEL === queryMode) {
           const intl5 = DOWN(1114).intl;
           arr = arr.unshift(DOWN(9835).createHeaderResult(intl5.string(DOWN(1114).t.W26k4V)));
           let items = arr;
           const DOWNResult = DOWN(9835);
-        } else if (DOWN(9835).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
+        } else if (DOWN(9835).AutocompleterResultTypes.VOICE_CHANNEL === queryMode) {
           const intl4 = DOWN(1114).intl;
           arr = arr.unshift(DOWN(9835).createHeaderResult(intl4.string(DOWN(1114).t.zUoI5C)));
           items = arr;
           const DOWNResult1 = DOWN(9835);
-        } else if (DOWN(9835).AutocompleterResultTypes.GUILD === tmp7) {
+        } else if (DOWN(9835).AutocompleterResultTypes.GUILD === queryMode) {
           const intl3 = DOWN(1114).intl;
           arr.unshift(DOWN(9835).createHeaderResult(intl3.string(DOWN(1114).t.olADPs)));
           items = arr;
           const DOWNResult2 = DOWN(9835);
-        } else if (DOWN(9835).AutocompleterResultTypes.APPLICATION === tmp7) {
+        } else if (DOWN(9835).AutocompleterResultTypes.APPLICATION === queryMode) {
           const intl2 = DOWN(1114).intl;
           arr.unshift(DOWN(9835).createHeaderResult(intl2.string(DOWN(1114).t.VwK1ld)));
           items = arr;
           const DOWNResult3 = DOWN(9835);
-        } else if (DOWN(9835).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
+        } else if (DOWN(9835).AutocompleterResultTypes.GAME_PROFILE === queryMode) {
           const intl = DOWN(1114).intl;
           arr.unshift(DOWN(9835).createHeaderResult(intl.string(DOWN(1114).t.gEp2SG)));
           items = arr;
@@ -585,13 +583,13 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(DispatcherDefault, {
           let tmp6 = require;
         } else {
           if (tmp2) {
-            const items1 = [tmp31(9835).AutocompleterResultTypes.USER];
+            const items1 = [sortByMatchScore.AutocompleterResultTypes.USER];
             setResultTypes(items1);
-            tmp6 = tmp31;
+            tmp6 = require;
           } else {
             const items2 = [queryMode];
             setResultTypes(items2);
-            tmp6 = tmp31;
+            tmp6 = require;
           }
           tmp2 = queryMode === sortByMatchScore.AutocompleterResultTypes.USER || queryMode === sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL;
         }

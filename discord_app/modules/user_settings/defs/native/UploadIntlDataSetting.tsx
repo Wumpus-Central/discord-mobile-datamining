@@ -7,7 +7,7 @@ import _mod1154 from "module_1154" /* 1154 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_10 = async function _serializeIntlData(arg0, value) {
+let closure_10 = async function _serializeIntlData() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -121,7 +121,7 @@ let closure_10 = async function _serializeIntlData(arg0, value) {
     }
   }
 };
-let closure_11 = async function _handleUploadIntlDataSettingPress(arg0, value) {
+let closure_11 = async function _handleUploadIntlDataSettingPress() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -155,9 +155,9 @@ let closure_11 = async function _handleUploadIntlDataSettingPress(arg0, value) {
             closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
           })();
           if (obj11.isIOS()) {
-            let ANDROID_APP = tmp51.IOS_APP;
+            let ANDROID_APP = constants.IOS_APP;
           } else {
-            ANDROID_APP = tmp51.ANDROID_APP;
+            ANDROID_APP = constants.ANDROID_APP;
           }
           closure_128_0 = ANDROID_APP;
           c3 = 2;

@@ -5,10 +5,12 @@ import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
-import ClipViewDefault from "ClipView" /* 8813 */;
+import ClipView from "ClipView" /* 8813 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
+
+const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
@@ -74,10 +76,10 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     num4 = 1;
   }
   sharedValue = obj1.useSharedValue(num4);
-  let tmp6Result = tmp6(tmp7[10]);
+  let tmp6Result = require("useStateFromStores");
   let items = [closure_6];
   const stateFromStores = tmp6Result.useStateFromStores(items, () => closure_6.locale);
-  tmp6Result = tmp6(tmp7[9]);
+  tmp6Result = require("ReanimatedRexport");
   class V {
     constructor() {
       obj = { opacity: null, width: null };
@@ -88,7 +90,7 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
       return obj;
     }
   }
-  obj = { interpolate: tmp6(tmp7[9]).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+  obj = { interpolate: require("ReanimatedRexport").interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
   V.__closure = obj;
   V.__workletHash = 14140918847743;
   V.__initData = __initData;
@@ -129,11 +131,11 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     obj = { style: shiftedAvatar, children: null };
     if (index !== diff) {
       obj = { cutouts: null, children: null };
-      const point = { shape: tmp3(8813).CutoutShape.Circle, x: tmp3(1178).AVATAR_SIZE_MAP[tmp5] - num3 - num2, y: -num2, size: tmp3(1178).AVATAR_SIZE_MAP[tmp5] + 2 * num2 };
+      const point = { shape: ClipView.CutoutShape.Circle, x: native.AVATAR_SIZE_MAP[XSMALL_20] - num3 - num2, y: -num2, size: native.AVATAR_SIZE_MAP[XSMALL_20] + 2 * num2 };
       const items = [point];
       obj.cutouts = items;
       obj.children = tmp6;
-      let tmp2Result = tmp2(ClipViewDefault, obj);
+      let tmp2Result = React6(ClipViewDefault, obj);
     } else {
       tmp2Result = tmp6;
       if (!isStage) {
@@ -175,7 +177,7 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
       return obj;
     }
   }
-  obj = { isStage, extraUsers: diff, avatars: mapped, AVATAR_SIZE_MAP: tmp6(tmp7[8]).AVATAR_SIZE_MAP, avatarSize: XSMALL_20, avatarOverlap: num3, withSpring: tmp6(tmp7[11]).withSpring, SPRING_CONFIG };
+  obj = { isStage, extraUsers: diff, avatars: mapped, AVATAR_SIZE_MAP: require("native").AVATAR_SIZE_MAP, avatarSize: XSMALL_20, avatarOverlap: num3, withSpring: require("spring").withSpring, SPRING_CONFIG };
   H.__closure = obj;
   H.__workletHash = 5027466437777;
   H.__initData = __initData2;
@@ -188,12 +190,12 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     const items3 = [tmp3.avatars, animatedStyle1];
     obj2.style = items3;
     obj2.children = mapped;
-    const items4 = [sharedValue(isTyping(tmp7[9]).View, obj2), ];
-    const obj3 = { color: "text-default", variant: "text-xs/semibold", children: tmp6(tmp7[14]).humanizeValue(userCount, stateFromStores) };
-    items4[1] = sharedValue(tmp6(tmp7[13]).Text, obj3);
+    const items4 = [sharedValue(isTyping(isStage[9]).View, obj2), ];
+    const obj3 = { color: "text-default", variant: "text-xs/semibold", children: require("NumberUtils").humanizeValue(userCount, stateFromStores) };
+    items4[1] = sharedValue(require("Text/Text").Text, obj3);
     obj1.children = items4;
     let tmp20 = obj1;
-    const tmp6Result2 = tmp6(tmp7[14]);
+    const tmp6Result2 = require("NumberUtils");
   } else {
     const items5 = [tmp3.avatarStack, style];
     obj1.style = items5;
@@ -206,15 +208,15 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     if (diff > 0) {
       const obj6 = { style: tmp3.userCounter, children: null };
       const obj7 = { color: "text-default", variant: "text-xxs/semibold", allowFontScaling: false, children: null };
-      const items8 = ["+", tmp6(tmp7[14]).humanizeValue(diff, stateFromStores)];
+      const items8 = ["+", require("NumberUtils").humanizeValue(diff, stateFromStores)];
       obj7.children = items8;
-      obj6.children = tmp15(tmp6(tmp7[13]).Text, obj7);
+      obj6.children = tmp15(require("Text/Text").Text, obj7);
       tmp18Result = tmp18(tmp16, obj6);
-      const tmp6Result3 = tmp6(tmp7[14]);
+      const tmp6Result3 = require("NumberUtils");
     }
     items7[1] = tmp18Result;
     obj4.children = items7;
-    const items9 = [tmp15(isTyping(tmp7[9]).View, obj4), ];
+    const items9 = [tmp15(isTyping(isStage[9]).View, obj4), ];
     if (!tmp18Result) {
       tmp18Result = isTyping;
     }
@@ -223,8 +225,8 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
       const items10 = [tmp3.ellipsisWrapper, animatedStyle];
       obj8.style = items10;
       const obj9 = { style: tmp3.ellipsisBorder };
-      obj8.children = tmp18(tmp6(tmp7[15]).TypingIndicator, obj9);
-      tmp18Result = tmp18(tmp17(tmp7[9]).View, obj8);
+      obj8.children = tmp18(require("typing_indicators/TypingIndicator").TypingIndicator, obj9);
+      tmp18Result = tmp18(tmp17(isStage[9]).View, obj8);
     }
     items9[1] = tmp18Result;
     obj1.children = items9;

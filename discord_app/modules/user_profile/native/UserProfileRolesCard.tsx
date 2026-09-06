@@ -65,12 +65,12 @@ class RoleItem {
           colorString = role.colorString;
         }
         obj.roleColor = colorString;
-        let tmp3Result = tmp3(VerifiedRoleIconDefault, obj);
-        let tmp8 = tmp3;
+        let tmp3Result = React7(VerifiedRoleIconDefault, obj);
+        let tmp8 = React7;
       } else {
         obj = { color: colorString };
-        tmp3Result = tmp3(RoleDot, obj);
-        tmp8 = tmp3;
+        tmp3Result = React7(RoleDot, obj);
+        tmp8 = React7;
       }
       obj = { children: null };
       const items = [tmp3Result, tmp8(Text_Text.Text, { variant: "text-xs/medium", children: name }), roleIcon];

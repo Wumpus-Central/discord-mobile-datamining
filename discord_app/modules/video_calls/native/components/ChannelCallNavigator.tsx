@@ -116,7 +116,7 @@ function CallWithVoiceChat(channel) {
   let tmp18Result = null;
   if (tmp11[0]) {
     const obj6 = { channel };
-    tmp18Result = tmp18(tmp2(10076), obj6);
+    tmp18Result = closure_12(tmp2(10076), obj6);
   }
   obj5.children = tmp18Result;
   items3[1] = closure_12(closure_6, obj5);
@@ -158,7 +158,7 @@ function MainCallScreen(channel) {
       }
       return applyArgumentsResult;
     }
-    closure_3 = async function _showOAuth2Modal(arg0, value) {
+    closure_3 = async function _showOAuth2Modal(arg0) {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -244,11 +244,11 @@ function MainCallScreen(channel) {
     tmp14Result = null;
     if (channel.isGuildStageVoice()) {
       let obj2 = { channel };
-      tmp14Result = tmp14(id(9659), obj2);
+      tmp14Result = closure_12(id(9659), obj2);
     }
     obj1.children = tmp14Result;
-    tmp14Result = tmp14(closure_6, obj1);
-    tmp11 = tmp14;
+    tmp14Result = closure_12(closure_6, obj1);
+    tmp11 = closure_12;
   }
   tmp = closure_14();
   const tmp21 = id(4413)();

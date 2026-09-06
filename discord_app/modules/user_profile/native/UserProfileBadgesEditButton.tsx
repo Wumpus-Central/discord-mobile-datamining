@@ -138,7 +138,7 @@ export default function UserProfileBadgesEditButton(arg0) {
         const obj8 = { variant: "text-md/normal", color: "mobile-text-heading-primary", style: tmp.overflowCount, children: null };
         const _HermesInternal = HermesInternal;
         obj8.children = "+" + diff;
-        tmp15Result = tmp15(tmp2(4556).Text, obj8);
+        tmp15Result = closure_8(tmp2(4556).Text, obj8);
       }
       items3[1] = tmp15Result;
       obj7.children = items3;

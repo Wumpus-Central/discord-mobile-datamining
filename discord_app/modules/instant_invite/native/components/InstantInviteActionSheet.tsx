@@ -18,19 +18,17 @@ import PermissionStore from "PermissionStore" /* 4199 */;
 
 require = fn;
 function Loading() {
-  let tmp2;
   const tmp = closure_16();
   const items = [];
   let num = 0;
   do {
-    tmp2 = map1;
     let obj = { row: num };
     let arr = items.push(map1(UserPlaceholderRowDefault, obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };
   obj = { style: tmp.placeholderHeader };
-  const items1 = [tmp2(hasOwnProperty, obj), tmp2(hasOwnProperty, { style: tmp.placeholderLabel }), items];
+  const items1 = [map1(hasOwnProperty, obj), map1(hasOwnProperty, { style: tmp.placeholderLabel }), items];
   obj.children = items1;
   return __initData(closure_1_14, obj);
 }
@@ -79,8 +77,8 @@ export default function InstantInviteActionSheet(channel) {
       return code;
     } else {
       if (channel.isGuildStageVoice()) {
-        if (!PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, tmp16)) {
-          const stageInstanceByChannel = StageInstanceStore.getStageInstanceByChannel(tmp16.id);
+        if (!PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
+          const stageInstanceByChannel = StageInstanceStore.getStageInstanceByChannel(channel.id);
           let invite_code;
           if (stageInstanceByChannel != null) {
             invite_code = stageInstanceByChannel.invite_code;
@@ -91,9 +89,9 @@ export default function InstantInviteActionSheet(channel) {
         }
       }
       if (null != vanityURLCode) {
-        let inviteKeyFromExtraData = tmp6;
+        let inviteKeyFromExtraData = vanityURLCode;
         if (null != _slicedToArray) {
-          let obj = { baseCode: tmp6, guildScheduledEventId: tmp12 };
+          let obj = { baseCode: vanityURLCode, guildScheduledEventId: tmp12 };
           inviteKeyFromExtraData = InviteCodeUtils.generateInviteKeyFromExtraData(obj);
         }
         return inviteKeyFromExtraData;
@@ -158,7 +156,6 @@ export default function InstantInviteActionSheet(channel) {
   const callback4 = code.useCallback(() => instant_invite_InstantInviteUtils.handleOpenShareSheet(stateFromStores, channel, str, source), items8);
   const callback5 = code.useCallback(() => instant_invite_InstantInviteUtils.handlePressSettings(channel), items9);
   const tmp5 = source(vanityURLCode[16]);
-  const tmp6 = _slicedToArray;
   ({ rows, isFetchingRows } = source(vanityURLCode[25])(channel, source, EMBEDDED_APPLICATION, targetApplicationId));
   let tmp20 = null == stateFromStores;
   if (!tmp20) {
@@ -172,7 +169,7 @@ export default function InstantInviteActionSheet(channel) {
   if (tmp22) {
     tmp22 = !isFetchingRows;
   }
-  const first = tmp6(obj3.useState(tmp22), 1)[0];
+  const first = _slicedToArray(obj3.useState(tmp22), 1)[0];
   obj = { value: analyticsLocations, children: null };
   let tmp25 = null != stateFromStores1;
   if (!tmp25) {
@@ -196,22 +193,22 @@ export default function InstantInviteActionSheet(channel) {
   } else {
     const intl = tmp7(tmp3[28]).intl;
     let obj2 = { title: intl.string(tmp7(tmp3[28]).t["f1+QIK"]) };
-    obj.header = tmp24(tmp26, obj2);
+    obj.header = closure_13(tmp26, obj2);
     if (null != stateFromStores1) {
       obj3 = { style: tmp.errorEmptyState, Illustration: tmp7(tmp3[30]).AppCrash, title: stateFromStores1 };
-      let tmp29Result = tmp24(tmp7(tmp3[29]).EmptyState, obj3);
+      let tmp29Result = closure_13(tmp7(tmp3[29]).EmptyState, obj3);
     } else if (tmp20) {
-      tmp29Result = tmp24(Loading, {});
+      tmp29Result = closure_13(Loading, {});
     } else if (first) {
       const obj4 = { contentContainerStyle: null, children: null };
       const obj5 = { paddingBottom: source(vanityURLCode[13])().bottom + 16 };
       obj4.contentContainerStyle = obj5;
       const obj6 = { link: tmp10, onCopy: callback3, onShare: callback4, onPressSettings: callback5 };
-      obj4.children = tmp24(tmp2(tmp3[31]), obj6);
-      tmp29Result = tmp24(stateFromStores, obj4);
+      obj4.children = closure_13(tmp2(tmp3[31]), obj6);
+      tmp29Result = closure_13(stateFromStores, obj4);
     } else {
       const obj7 = { contentContainerStyle: tmp.shareApps, onItemPressed: callback1 };
-      const items10 = [tmp24(tmp2(tmp3[32]), obj7), ];
+      const items10 = [closure_13(tmp2(tmp3[32]), obj7), ];
       const obj8 = { style: tmp.searchAndShareContainer, children: null };
       const obj9 = { size: "md", isRound: true, onChange: tmp7(tmp3[34]).searchInviteSuggestions, placeholder: null };
       if (null != targetApplicationId) {
@@ -228,11 +225,11 @@ export default function InstantInviteActionSheet(channel) {
         stringResult = intl4.formatToPlainString(tmp7(tmp3[28]).t["1UgGdm"], obj10);
       }
       obj9.placeholder = stringResult;
-      const items11 = [tmp24(tmp7(tmp3[33]).SearchField, obj9), ];
+      const items11 = [closure_13(tmp7(tmp3[33]).SearchField, obj9), ];
       let tmp24Result = null == vanityURLCode;
       if (tmp24Result) {
         const obj11 = { style: tmp.inviteAgeText, channel, canEditInvite: null == code };
-        tmp24Result = tmp24(tmp2(tmp3[35]), obj11);
+        tmp24Result = closure_13(tmp2(tmp3[35]), obj11);
       }
       const obj12 = { children: null };
       items11[1] = tmp24Result;
@@ -245,13 +242,14 @@ export default function InstantInviteActionSheet(channel) {
       obj13.source = source;
       obj13.onPressAvatar = callback;
       obj13.onInviteSent = callback2;
-      items12[1] = tmp24(tmp2(tmp3[36]), obj13);
+      items12[1] = closure_13(tmp2(tmp3[36]), obj13);
       obj14.children = items12;
-      tmp29Result = tmp29(closure_14, obj14);
+      tmp29Result = closure_15(closure_14, obj14);
       const tmp2Result = tmp2(tmp3[36]);
     }
     obj.children = tmp29Result;
-    obj.children = tmp24(tmp7(tmp3[26]).BottomSheet, obj);
-    return tmp24(tmp7(tmp3[14]).AnalyticsLocationProvider, obj);
+    obj.children = closure_13(tmp7(tmp3[26]).BottomSheet, obj);
+    return closure_13(tmp7(tmp3[14]).AnalyticsLocationProvider, obj);
   }
+  const tmp19 = source(vanityURLCode[25])(channel, source, EMBEDDED_APPLICATION, targetApplicationId);
 };

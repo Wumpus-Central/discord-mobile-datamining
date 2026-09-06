@@ -3,6 +3,7 @@
 // Module 7301 (SensitiveMediaGoreRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettings from "UserSettings" /* 1935 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5423 */;
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7299 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -33,10 +34,10 @@ function resolveGoreSettingWithDefaults(isFriend) {
     }
     if (isDm) {
       if (!flag) {
-        let BLUR2 = tmp4(1187).ExplicitContentRedaction.BLOCK;
+        let BLUR2 = preloaded_user_settings.ExplicitContentRedaction.BLOCK;
       }
     }
-    ExplicitContentRedaction = tmp4(1187).ExplicitContentRedaction;
+    ExplicitContentRedaction = preloaded_user_settings.ExplicitContentRedaction;
     BLUR2 = ExplicitContentRedaction.BLUR;
   } else {
     let nsfwAllowed;
@@ -48,15 +49,11 @@ function resolveGoreSettingWithDefaults(isFriend) {
       if (isDm === undefined) {
         flag5 = false;
       }
-      let flag6 = flag;
-      if (flag === undefined) {
-        flag6 = false;
-      }
       if (!flag5) {
-        const ExplicitContentRedaction3 = tmp4(1187).ExplicitContentRedaction;
+        const ExplicitContentRedaction3 = preloaded_user_settings.ExplicitContentRedaction;
         let BLUR = flag5 ? ExplicitContentRedaction3.BLOCK : ExplicitContentRedaction3.BLUR;
       }
-      BLUR = tmp4(1187).ExplicitContentRedaction.BLUR;
+      BLUR = preloaded_user_settings.ExplicitContentRedaction.BLUR;
     } else {
       let flag3 = isDm;
       if (isDm === undefined) {
@@ -68,14 +65,15 @@ function resolveGoreSettingWithDefaults(isFriend) {
       }
       if (flag3) {
         if (flag4) {
-          let SHOW = tmp4(1187).ExplicitContentRedaction.SHOW;
+          let SHOW = preloaded_user_settings.ExplicitContentRedaction.SHOW;
         }
         return SHOW;
       }
-      const ExplicitContentRedaction2 = tmp4(1187).ExplicitContentRedaction;
+      const ExplicitContentRedaction2 = preloaded_user_settings.ExplicitContentRedaction;
       SHOW = flag3 ? ExplicitContentRedaction2.BLOCK : ExplicitContentRedaction2.SHOW;
     }
   }
+  obj = RegionalFeatureConfigUtils;
 }
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const size = fn(2);
@@ -130,7 +128,7 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   if (setting != null) {
     goreContentGuilds = setting.goreContentGuilds;
   }
-  let obj = { goreContentGuilds: tmp4({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
+  let obj = { goreContentGuilds: resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
   let prop;
   if (setting != null) {
     prop = setting.goreContentNonFriendDm;

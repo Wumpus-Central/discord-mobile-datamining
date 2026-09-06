@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
-import CircleWithCutoutUtilsDefault from "CircleWithCutoutUtils" /* 9499 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 9499 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -216,10 +216,10 @@ export const NotifiedActionButton = function NotifiedActionButton(isMentioned) {
     items[1] = notificationAreaMentioned;
     obj.style = items;
     const obj1 = { style: tmp2.notificationText, variant: "text-xs/semibold", color: "text-overlay-light", children: isMentioned.notifications };
-    obj.children = tmp3(Text_Text.Text, obj1);
-    obj.children = tmp3(tmp4, obj);
-    obj.children = tmp3(ActionButton, obj);
-    return tmp3(tmp4, obj);
+    obj.children = React5(Text_Text.Text, obj1);
+    obj.children = React5(hasOwnProperty, obj);
+    obj.children = React5(ActionButton, obj);
+    return React5(hasOwnProperty, obj);
   }
   notificationAreaMentioned = tmp2.notificationAreaMentioned;
 };

@@ -67,14 +67,13 @@ export const isUnusableRoleSubscriptionEmoji = function isUnusableRoleSubscripti
           const roles2 = customEmojiFromJoinedGuild.roles;
           let userIsAdmin = guildId === customEmojiFromJoinedGuild.guildId;
           if (userIsAdmin) {
-            userIsAdmin = obj.getUserIsAdmin(customEmojiFromJoinedGuild.guildId);
+            userIsAdmin = SubscriptionRoleStore.getUserIsAdmin(customEmojiFromJoinedGuild.guildId);
           }
           if (!someResult) {
             if (!userIsAdmin) {
               return true;
             }
           }
-          obj = SubscriptionRoleStore;
           someResult = roles2.some((item) => set.has(item));
         }
         return false;

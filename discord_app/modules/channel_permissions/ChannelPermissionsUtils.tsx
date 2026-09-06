@@ -58,11 +58,11 @@ function getMemberRowData(id, id2, appChannelBotUserId) {
     let MEMBER = RowType.APP_CHANNEL_APP;
     let tmp3 = RowType;
   } else if (isGuildOwner(id2, id)) {
-    MEMBER = tmp2.OWNER;
-    tmp3 = tmp2;
+    MEMBER = RowType.OWNER;
+    tmp3 = RowType;
   } else {
-    MEMBER = tmp2.MEMBER;
-    tmp3 = tmp2;
+    MEMBER = RowType.MEMBER;
+    tmp3 = RowType;
   }
   const obj = { rowType: MEMBER, name: null, username: null, id: null, avatarURL: null, bot: null, verifiedBot: null, disabled: null, key: null };
   let nick = GuildMemberStore.getNick(id2.id, id.id);
@@ -111,8 +111,8 @@ export const getNoRolesRow = function getNoRolesRow() {
 export const isEveryoneRoleId = function isEveryoneRoleId(guildId, id) {
   return SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId) === id;
 };
-export const getRolesRows = function getRolesRows(guild, stateFromStores, channel, permission, filterByQuery) {
-  closure_0 = channel;
+export const getRolesRows = function getRolesRows(guild, stateFromStores, channel, permission) {
+  const permissionOverwrites = channel;
   closure_1 = permission;
   let fn = filterByQuery;
   if (filterByQuery === undefined) {
@@ -136,24 +136,23 @@ export const getRolesRows = function getRolesRows(guild, stateFromStores, channe
       let id2 = UserStore.getCurrentUser();
       let flag = false;
       if (null != id2) {
-        if (null != tmp3) {
+        if (null != permissionOverwrites) {
           let tmp8 = null == tmp7;
           if (!tmp8) {
-            tmp8 = !BigFlagUtilsAll.has(tmp7.allow, tmp4);
+            tmp8 = !BigFlagUtilsAll.has(tmp7.allow, closure_1);
           }
           flag = tmp8;
         }
       }
       id2 = id2.id;
       flag = id2 !== id;
-      tmp4 = closure_1;
     }
   });
   const sorted = found.sort(sortRoles);
   return sorted.map((item) => getRoleRowData(item));
 };
-export const getRolesRowsWithPermissionDisabled = function getRolesRowsWithPermissionDisabled(guild, stateFromStores, channel, permission, filterByQuery) {
-  closure_0 = channel;
+export const getRolesRowsWithPermissionDisabled = function getRolesRowsWithPermissionDisabled(guild, stateFromStores, channel, permission) {
+  const permissionOverwrites = channel;
   closure_1 = permission;
   let fn = filterByQuery;
   if (filterByQuery === undefined) {
@@ -177,17 +176,16 @@ export const getRolesRowsWithPermissionDisabled = function getRolesRowsWithPermi
       let id2 = UserStore.getCurrentUser();
       let flag = false;
       if (null != id2) {
-        if (null != tmp3) {
+        if (null != permissionOverwrites) {
           let tmp8 = null == tmp7;
           if (!tmp8) {
-            tmp8 = !BigFlagUtilsAll.has(tmp7.allow, tmp4);
+            tmp8 = !BigFlagUtilsAll.has(tmp7.allow, closure_1);
           }
           flag = tmp8;
         }
       }
       id2 = id2.id;
       flag = id2 !== id;
-      tmp4 = closure_1;
     }
   });
   const sorted = found.sort(sortRoles);
@@ -204,20 +202,20 @@ export const getExistingRoles = function getExistingRoles(guild, sortedRoles, ch
       const currentUser = UserStore.getCurrentUser();
       let flag = false;
       if (null != currentUser) {
-        if (null == tmp2) {
+        if (null == permissionOverwrites) {
           flag = currentUser.id !== id;
         } else {
-          let tmp8 = tmp2.permissionOverwrites[id];
+          let tmp8 = permissionOverwrites.permissionOverwrites[id];
           let tmp9;
-          if (tmp4 != null) {
-            tmp9 = tmp4[id];
+          if (dependencyMap != null) {
+            tmp9 = dependencyMap[id];
           }
           if (null != tmp9) {
-            tmp8 = tmp4[id];
+            tmp8 = dependencyMap[id];
           }
           let tmp10 = null == tmp8;
           if (!tmp10) {
-            tmp10 = !BigFlagUtilsAll.has(tmp8.allow, tmp3);
+            tmp10 = !BigFlagUtilsAll.has(tmp8.allow, closure_1);
           }
           flag = tmp10;
         }
@@ -227,7 +225,6 @@ export const getExistingRoles = function getExistingRoles(guild, sortedRoles, ch
         tmp13 = !React5(id);
       }
       tmp = tmp13;
-      tmp3 = closure_1;
     }
     return tmp;
   });
@@ -243,20 +240,20 @@ export const getAllExistingRolesWithPermission = function getAllExistingRolesWit
       const currentUser = UserStore.getCurrentUser();
       let flag = false;
       if (null != currentUser) {
-        if (null == tmp2) {
+        if (null == MODERATE_STAGE_CHANNEL_PERMISSIONS) {
           flag = currentUser.id !== id;
         } else {
-          let tmp8 = tmp2.permissionOverwrites[id];
+          let tmp8 = MODERATE_STAGE_CHANNEL_PERMISSIONS.permissionOverwrites[id];
           let tmp9;
-          if (tmp4 != null) {
-            tmp9 = tmp4[id];
+          if (dependencyMap != null) {
+            tmp9 = dependencyMap[id];
           }
           if (null != tmp9) {
-            tmp8 = tmp4[id];
+            tmp8 = dependencyMap[id];
           }
           let tmp10 = null == tmp8;
           if (!tmp10) {
-            tmp10 = !BigFlagUtilsAll.has(tmp8.allow, tmp3);
+            tmp10 = !BigFlagUtilsAll.has(tmp8.allow, importDefault);
           }
           flag = tmp10;
         }
@@ -266,7 +263,6 @@ export const getAllExistingRolesWithPermission = function getAllExistingRolesWit
         tmp13 = !React5(id);
       }
       hasItem = tmp13;
-      tmp3 = importDefault;
     }
     if (!hasItem) {
       const obj2 = BigFlagUtilsAll;
@@ -282,7 +278,7 @@ export const getAllExistingRolesWithPermission = function getAllExistingRolesWit
 export const getExistingRolesRows = function getExistingRolesRows(guild, sortedGuildRoles, channel, accessPermissions, arg4) {
   _require = channel;
   closure_1 = accessPermissions;
-  closure_2 = arg4;
+  dependencyMap = arg4;
   const found = sortedGuildRoles.filter((id) => {
     let tmp = timestampProducer(id, constants.ADMINISTRATOR);
     if (!tmp) {
@@ -290,20 +286,20 @@ export const getExistingRolesRows = function getExistingRolesRows(guild, sortedG
       const currentUser = UserStore.getCurrentUser();
       let flag = false;
       if (null != currentUser) {
-        if (null == tmp2) {
+        if (null == permissionOverwrites) {
           flag = currentUser.id !== id;
         } else {
-          let tmp8 = tmp2.permissionOverwrites[id];
+          let tmp8 = permissionOverwrites.permissionOverwrites[id];
           let tmp9;
-          if (tmp4 != null) {
-            tmp9 = tmp4[id];
+          if (dependencyMap != null) {
+            tmp9 = dependencyMap[id];
           }
           if (null != tmp9) {
-            tmp8 = tmp4[id];
+            tmp8 = dependencyMap[id];
           }
           let tmp10 = null == tmp8;
           if (!tmp10) {
-            tmp10 = !BigFlagUtilsAll.has(tmp8.allow, tmp3);
+            tmp10 = !BigFlagUtilsAll.has(tmp8.allow, closure_1);
           }
           flag = tmp10;
         }
@@ -313,7 +309,6 @@ export const getExistingRolesRows = function getExistingRolesRows(guild, sortedG
         tmp13 = !React5(id);
       }
       tmp = tmp13;
-      tmp3 = closure_1;
     }
     return tmp;
   });
@@ -344,20 +339,20 @@ export const getExistingRolesRowWithPermissionDisabled = function getExistingRol
       const currentUser = UserStore.getCurrentUser();
       let flag = false;
       if (null != currentUser) {
-        if (null == tmp2) {
+        if (null == MODERATE_STAGE_CHANNEL_PERMISSIONS) {
           flag = currentUser.id !== id;
         } else {
-          let tmp8 = tmp2.permissionOverwrites[id];
+          let tmp8 = MODERATE_STAGE_CHANNEL_PERMISSIONS.permissionOverwrites[id];
           let tmp9;
-          if (tmp4 != null) {
-            tmp9 = tmp4[id];
+          if (dependencyMap != null) {
+            tmp9 = dependencyMap[id];
           }
           if (null != tmp9) {
-            tmp8 = tmp4[id];
+            tmp8 = dependencyMap[id];
           }
           let tmp10 = null == tmp8;
           if (!tmp10) {
-            tmp10 = !BigFlagUtilsAll.has(tmp8.allow, tmp3);
+            tmp10 = !BigFlagUtilsAll.has(tmp8.allow, importDefault);
           }
           flag = tmp10;
         }
@@ -367,7 +362,6 @@ export const getExistingRolesRowWithPermissionDisabled = function getExistingRol
         tmp13 = !React5(id);
       }
       hasItem = tmp13;
-      tmp3 = importDefault;
     }
     if (!hasItem) {
       const obj2 = BigFlagUtilsAll;
@@ -428,17 +422,16 @@ export const getMembersRows = function getMembersRows(stateFromStoresArray, chan
       let id2 = UserStore.getCurrentUser();
       let flag = false;
       if (null != id2) {
-        if (null != tmp4) {
+        if (null != permissionOverwrites) {
           let tmp9 = null == tmp8;
           if (!tmp9) {
-            tmp9 = !BigFlagUtilsAll.has(tmp8.allow, tmp5);
+            tmp9 = !BigFlagUtilsAll.has(tmp8.allow, closure_2);
           }
           flag = tmp9;
         }
       }
       id2 = id2.id;
       flag = id2 !== id;
-      tmp5 = closure_2;
     }
   });
   const mapped1 = found1.map((item) => getMemberRowData(item, closure_1, appChannelBotUserId));
@@ -456,16 +449,16 @@ export const getExistingMembers = function getExistingMembers(memberIds, channel
     const currentUser = UserStore.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
-      if (null == tmp) {
+      if (null == guild) {
         flag = currentUser.id !== id;
       } else {
-        let tmp5 = tmp.permissionOverwrites[id];
+        let tmp5 = guild.permissionOverwrites[id];
         let tmp6;
-        if (tmp3 != null) {
-          tmp6 = tmp3[id];
+        if (dependencyMap != null) {
+          tmp6 = dependencyMap[id];
         }
         if (null != tmp6) {
-          tmp5 = tmp3[id];
+          tmp5 = dependencyMap[id];
         }
         let tmp7 = null == tmp5;
         if (!tmp7) {
@@ -499,16 +492,16 @@ export const getExistingMembersRows = function getExistingMembersRows(memberIds,
     const currentUser = UserStore.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
-      if (null == tmp) {
+      if (null == guild) {
         flag = currentUser.id !== id;
       } else {
-        let tmp5 = tmp.permissionOverwrites[id];
+        let tmp5 = guild.permissionOverwrites[id];
         let tmp6;
-        if (tmp3 != null) {
-          tmp6 = tmp3[id];
+        if (dependencyMap != null) {
+          tmp6 = dependencyMap[id];
         }
         if (null != tmp6) {
-          tmp5 = tmp3[id];
+          tmp5 = dependencyMap[id];
         }
         let tmp7 = null == tmp5;
         if (!tmp7) {
@@ -530,29 +523,29 @@ export const getRowTypeLabel = function getRowTypeLabel(rowType, arg1) {
   if (RowType.ROLE === rowType) {
     const intl7 = util.intl;
     return intl7.string(util.t.ZxoFOG);
-  } else if (tmp.OWNER === rowType) {
+  } else if (RowType.OWNER === rowType) {
     const intl6 = util.intl;
     return intl6.string(util.t.NWhYJg);
-  } else if (tmp.ADMINISTRATOR === rowType) {
+  } else if (RowType.ADMINISTRATOR === rowType) {
     const intl5 = util.intl;
     return intl5.string(util.t["dwlcc+"]);
-  } else if (tmp.MEMBER === rowType) {
+  } else if (RowType.MEMBER === rowType) {
     let stringResult = null;
     if (arg1) {
       const intl4 = util.intl;
       stringResult = intl4.string(util.t.UAJxZi);
     }
     return stringResult;
-  } else if (tmp.APP_CHANNEL_APP === rowType) {
+  } else if (RowType.APP_CHANNEL_APP === rowType) {
     const intl3 = util.intl;
     return intl3.string(util.t["z2/ML4"]);
-  } else if (tmp.USER === rowType) {
+  } else if (RowType.USER === rowType) {
     const intl2 = util.intl;
     return intl2.string(util.t.KD6OJJ);
-  } else if (tmp.GUILD === rowType) {
+  } else if (RowType.GUILD === rowType) {
     const intl = util.intl;
     return intl.string(util.t["5qyruI"]);
-  } else if (tmp.EMPTY_STATE === rowType) {
+  } else if (RowType.EMPTY_STATE === rowType) {
     return null;
   }
 };
@@ -560,20 +553,20 @@ export const getRemoveTooltipHint = function getRemoveTooltipHint(arg0) {
   if (RowType.ROLE === arg0) {
     const intl5 = util.intl;
     return intl5.string(util.t["Gzc/a8"]);
-  } else if (tmp.OWNER === arg0) {
+  } else if (RowType.OWNER === arg0) {
     const intl4 = util.intl;
     return intl4.string(util.t.icuNBM);
-  } else if (tmp.ADMINISTRATOR === arg0) {
+  } else if (RowType.ADMINISTRATOR === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t.eTmN5a);
-  } else if (tmp.MEMBER === arg0) {
+  } else if (RowType.MEMBER === arg0) {
     const intl2 = util.intl;
     return intl2.string(util.t["Gzc/a8"]);
-  } else if (tmp.APP_CHANNEL_APP === arg0) {
+  } else if (RowType.APP_CHANNEL_APP === arg0) {
     const intl = util.intl;
     return intl.string(util.t.v05vEp);
   } else {
-    const EMPTY_STATE = tmp.EMPTY_STATE;
+    const EMPTY_STATE = RowType.EMPTY_STATE;
     return null;
   }
 };
@@ -593,7 +586,7 @@ export const flipEveryonePermission = function flipEveryonePermission(guild_id, 
   }
   return obj;
 };
-export const toggleChannelEveryonePermission = function toggleChannelEveryonePermission(guild_id, arg1, arg2) {
+export const toggleChannelEveryonePermission = function toggleChannelEveryonePermission(guild_id, MODERATE_STAGE_CHANNEL_PERMISSIONS, arg2) {
   let everyoneOverwrite = guild_id.permissionOverwrites[guild_id.guild_id];
   if (null == everyoneOverwrite) {
     let obj = PermissionUtilsAll;
@@ -601,10 +594,10 @@ export const toggleChannelEveryonePermission = function toggleChannelEveryonePer
   }
   obj = {};
   const merged = Object.assign(everyoneOverwrite);
-  obj.deny = BigFlagUtilsAll.remove(obj.deny, arg1);
-  obj.allow = BigFlagUtilsAll.remove(obj.allow, arg1);
+  obj.deny = BigFlagUtilsAll.remove(obj.deny, MODERATE_STAGE_CHANNEL_PERMISSIONS);
+  obj.allow = BigFlagUtilsAll.remove(obj.allow, MODERATE_STAGE_CHANNEL_PERMISSIONS);
   if (!arg2) {
-    obj.deny = BigFlagUtilsAll.add(obj.deny, arg1);
+    obj.deny = BigFlagUtilsAll.add(obj.deny, MODERATE_STAGE_CHANNEL_PERMISSIONS);
     const tmp5Result = BigFlagUtilsAll;
   }
   ChannelSettingsPermissionsActionCreators.updatePermission(guild_id, obj.id, obj.allow, obj.deny);
@@ -657,13 +650,13 @@ export const canCreatePrivateChannel = function canCreatePrivateChannel(first1, 
   let tmp2 = canResult;
   if (first1 !== constants2.GUILD_TEXT) {
     tmp2 = canResult;
-    if (first1 !== tmp.GUILD_ANNOUNCEMENT) {
+    if (first1 !== constants2.GUILD_ANNOUNCEMENT) {
       tmp2 = canResult;
-      if (first1 !== tmp.GUILD_APP) {
+      if (first1 !== constants2.GUILD_APP) {
         const tmp4 = isGuildVocalChannelType(first1);
         let tmp5 = !tmp4;
         if (!tmp4) {
-          tmp5 = first1 !== tmp.GUILD_CATEGORY;
+          tmp5 = first1 !== constants2.GUILD_CATEGORY;
         }
         if (!tmp5) {
           let tmp6 = canResult;
@@ -680,12 +673,12 @@ export const canCreatePrivateChannel = function canCreatePrivateChannel(first1, 
 };
 export const getPrivateChannelHintText = function getPrivateChannelHintText(first1) {
   if (constants2.GUILD_TEXT !== first1) {
-    if (tmp.GUILD_ANNOUNCEMENT !== first1) {
-      if (tmp.GUILD_APP !== first1) {
-        if (tmp.GUILD_VOICE === first1) {
+    if (constants2.GUILD_ANNOUNCEMENT !== first1) {
+      if (constants2.GUILD_APP !== first1) {
+        if (constants2.GUILD_VOICE === first1) {
           const intl2 = util.intl;
           return intl2.format(util.t.iZAMty, {});
-        } else if (tmp.GUILD_CATEGORY === first1) {
+        } else if (constants2.GUILD_CATEGORY === first1) {
           const intl = util.intl;
           return intl.format(util.t.PhnARV, {});
         } else {

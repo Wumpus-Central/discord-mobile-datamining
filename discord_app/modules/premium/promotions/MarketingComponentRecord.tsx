@@ -56,7 +56,7 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     tmp17 = endDate;
   }
   if (typeof MarketingComponentRecord === "function") {
-    const tmp21 = new MarketingComponentRecord(tmp4, tmp, tmp14, b64ToProto, tmp13, new.target, id, component_type, b64ToProtoResult, promotion_id, date, date1);
+    const tmp21 = new MarketingComponentRecord(tmp4, tmp, tmp14, b64ToProto, MarketingComponentRecord, new.target, id, component_type, b64ToProtoResult, promotion_id, date, date1);
     tmp21.id = id;
     tmp21.componentType = component_type;
     tmp21.properties = b64ToProtoResult;

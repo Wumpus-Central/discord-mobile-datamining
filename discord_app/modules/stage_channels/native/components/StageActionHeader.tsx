@@ -9,12 +9,16 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4767 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8394 */;
+import _modDef8619 from "module_8619" /* 8619 */;
+import _modDef8622 from "module_8622" /* 8622 */;
 import StatusBarDefault from "StatusBar" /* 9481 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9820 */;
 import StageMusicActionCreators from "StageMusicActionCreators" /* 9913 */;
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9924 */;
 import _modDef10028 from "module_10028" /* 10028 */;
+import _modDef10029 from "module_10029" /* 10029 */;
 import _modDef10030 from "module_10030" /* 10030 */;
 import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10033 */;
 import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 10034 */;
@@ -303,12 +307,12 @@ export default noop.memo((onOpenRTCDebugOverlay) => {
   const items = [closure_1_12(HideStageChannelCallIcon, { channel, fullscreenStream }), closure_1_12(StageChannelCallHeader, { channel }), , , , , ];
   if (speaker) {
     obj = { channelId: channel.id };
-    speaker = tmp7(MusicMuteButton, obj);
+    speaker = closure_1_12(MusicMuteButton, obj);
   }
   items[2] = speaker;
   if (fullscreenStream) {
     obj = { channel };
-    fullscreenStream = tmp7(ChannelCallHeaderButtons.GridButton, obj);
+    fullscreenStream = closure_1_12(ChannelCallHeaderButtons.GridButton, obj);
   }
   items[3] = fullscreenStream;
   items[4] = closure_1_12(ChannelCallHeaderButtons.CameraButton, {});

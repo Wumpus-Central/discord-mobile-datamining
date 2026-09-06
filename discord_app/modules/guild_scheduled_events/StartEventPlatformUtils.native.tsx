@@ -3,6 +3,7 @@
 // Module 9812 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1100 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8393 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -10,7 +11,7 @@ import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
 
 require = fn;
-let closure_10 = async function _navigateToEvent(arg0, value) {
+let closure_10 = async function _navigateToEvent(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -40,10 +41,10 @@ let closure_10 = async function _navigateToEvent(arg0, value) {
           let tmp27 = closure_1;
           closure_130_0 = closure_1;
           closure_130_1 = undefined;
-          ({ entity_type, guild_id } = closure_0);
+          ({ entity_type, guild_id } = _require);
           if (constants.STAGE_INSTANCE === entity_type) {
             const channelId = RTCConnectionStore.getChannelId();
-            const channel = ChannelStore.getChannel(tmp52.channel_id);
+            const channel = ChannelStore.getChannel(_require.channel_id);
             closure_130_1 = channel;
             _modDef38(null != channel, "could not find channel");
             if (channelId !== channel.id) {
@@ -53,19 +54,18 @@ let closure_10 = async function _navigateToEvent(arg0, value) {
               return obj1;
             }
           } else {
-            if (tmp53.VOICE === entity_type) {
+            if (constants.VOICE === entity_type) {
               const channelId1 = RTCConnectionStore.getChannelId();
-              const channel1 = ChannelStore.getChannel(tmp52.channel_id);
+              const channel1 = ChannelStore.getChannel(_require.channel_id);
               _modDef38(null != channel1, "could not find channel");
               if (channelId1 !== channel1.id) {
-                const voiceChannel = tmp21(5411).selectVoiceChannel(channel1.id);
-                const tmp21Result = tmp21(5411);
+                const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel1.id);
+                const tmp21Result = SelectedChannelActionCreatorsDefault;
               }
               if (tmp27 != null) {
                 tmp27 = tmp27();
               }
-              tmp21 = importDefault;
-            } else if (tmp53.EXTERNAL === entity_type) {
+            } else if (constants.EXTERNAL === entity_type) {
               if (guildId.getGuildId() !== guild_id) {
                 let obj5 = router_utils;
                 obj5.transitionTo(Routes.CHANNEL(guild_id));

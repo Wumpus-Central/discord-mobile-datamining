@@ -34,14 +34,14 @@ function IncomingRequestRow(user) {
   const memo = onAcceptIncomingRequest.useMemo(() => {
     let obj = { name: null, label: null };
     if (accepted) {
-      obj.name = tmp.WAVE;
+      obj.name = stateFromStores1.WAVE;
       const intl = util.intl;
       obj = { username: UserUtilsDefault.getName(user) };
       obj.label = intl.formatToPlainString(util.t.m0zYbV, obj);
       const items = [obj];
       let items1 = items;
     } else {
-      obj.name = tmp.ACCEPT;
+      obj.name = stateFromStores1.ACCEPT;
       obj.label = acceptRequestAccessibilityLabel;
       items1 = [obj, ];
       obj = { name: stateFromStores1.DECLINE, label: ignoreRequestAccessibilityLabel };
@@ -56,11 +56,11 @@ function IncomingRequestRow(user) {
       onAcceptIncomingRequest(user.id, applicationId);
       let obj = { userId: user.id, applicationId };
       return AddFriendsScreenUtils.acceptIncomingRequest(obj);
-    } else if (tmp.DECLINE === actionName) {
+    } else if (stateFromStores1.DECLINE === actionName) {
       onDeclineIncomingRequest(user.id, applicationId);
       obj = { userId: user.id, applicationId };
       return AddFriendsScreenUtils.dismissIncomingRequest(obj);
-    } else if (tmp.WAVE === actionName) {
+    } else if (stateFromStores1.WAVE === actionName) {
       obj = AddFriendsScreenUtils;
       return obj.sendWave(user.id, true, "Incoming Friend Request");
     }
@@ -72,8 +72,8 @@ function IncomingRequestRow(user) {
   const items5 = [stateFromStores1, applicationId, userTag];
   const memo1 = onAcceptIncomingRequest.useMemo(() => {
     if (null != stateFromStores1) {
-      const obj = { application: tmp, textVariant: "text-xs/medium", iconSize: 12 };
-      let str = jsx(ApplicationIconAndNameDefault, { application: tmp, textVariant: "text-xs/medium", iconSize: 12 }, tmp.id);
+      const obj = { application: stateFromStores1, textVariant: "text-xs/medium", iconSize: 12 };
+      let str = jsx(ApplicationIconAndNameDefault, { application: stateFromStores1, textVariant: "text-xs/medium", iconSize: 12 }, stateFromStores1.id);
     } else {
       str = "";
       if (null == applicationId) {
@@ -159,7 +159,7 @@ export const ConnectedIncomingGameFriendRequestRow = function ConnectedIncomingG
   if (null != stateFromStores) {
     obj = { user: applicationId.user, application: stateFromStores };
     const merged1 = Object.assign(merged);
-    tmp = <IncomingGameFriendRequestRow user={arg0.user} application={stateFromStores} />;
+    tmp = <IncomingGameFriendRequestRow user={applicationId.user} application={stateFromStores} />;
   }
   return tmp;
 };

@@ -5,6 +5,8 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef1332 from "module_1332" /* 1332 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
+import useChannelName from "useChannelName" /* 4713 */;
+import StageMediaHooks from "StageMediaHooks" /* 5417 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
 import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10892 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -49,7 +51,7 @@ function handleUpdateActivity() {
               if (id === result) {
                 tmp15 = timestamps;
               }
-              const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(channel.id, tmp12(5425).StageChannelParticipantNamedIndex.SPEAKER);
+              const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(channel.id, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
               const length = mutableParticipants.filter((type) => type.type === StageChannelParticipants.StageChannelParticipantTypes.STREAM).length;
               const diff = mutableParticipants.length - length;
               let size;
@@ -70,11 +72,11 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = tmp12(4713);
+                let tmp12Result = useChannelName;
                 topic = tmp12Result.computeChannelName(channel, UserStore, RelationshipStore);
               }
               timestamps.name = topic;
-              tmp12Result = tmp12(5417);
+              tmp12Result = StageMediaHooks;
               timestamps.type = tmp12Result.getStageHasMedia(channel.id) ? map1.WATCHING : map1.LISTENING;
               let start;
               if (tmp15 != null) {

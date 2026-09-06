@@ -2,7 +2,10 @@
 
 // Module 7875 (ChannelActions)
 import nativeDefault from "native" /* 576 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import ChatInputUtils from "ChatInputUtils" /* 4425 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4767 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
 import VibegrationsUtils from "VibegrationsUtils" /* 7247 */;
@@ -10,6 +13,8 @@ import PhoneCallIcon from "PhoneCallIcon" /* 7880 */;
 import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7882 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 7898 */;
 import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10963 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11466 */;
+import useSearchContext from "useSearchContext" /* 12299 */;
 import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12300 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12358 */;
 import IconActionButtonDefault from "IconActionButton" /* 13253 */;
@@ -160,8 +165,8 @@ function ChannelActionButtons(channel) {
       obj3.accessibilityLabel = intl5.string(tmp5(tmp3[27]).t["5h0QOP"]);
       items1.push(obj3);
     } else {
-      if (tmp24.GUILD_FORUM !== type) {
-        if (tmp24.GUILD_MEDIA !== type) {
+      if (constants.GUILD_FORUM !== type) {
+        if (constants.GUILD_MEDIA !== type) {
           if (null != conversationsHeaderButton) {
             items1.push(conversationsHeaderButton);
           }
@@ -173,33 +178,35 @@ function ChannelActionButtons(channel) {
                       closure_8(channel.id, true, "initial");
                       let obj1 = PlatformUtils;
                       if (obj1.isIOS()) {
-                        let tmp2Result = tmp2(4425);
+                        let tmp2Result = ChatInputUtils;
                         const chatInputRef = tmp2Result.getChatInputRef(obj.id, screenIndex);
                         if (chatInputRef != null) {
                           chatInputRef.blur();
                         }
                       }
                       const guildId = obj.getGuildId();
-                      tmp2Result = tmp2(12299);
+                      tmp2Result = useSearchContext;
                       const channelDetailsSearchContext = tmp2Result.getChannelDetailsSearchContext(obj.id, guildId, obj.isThread());
                       const isThreadResult = obj.isThread();
                       obj = { searchContext: channelDetailsSearchContext, searchLocation: constants.CHANNEL_HEADER };
                       search_tracking_TrackingDefault.trackSearchOpened(obj);
                       if (tmp2Result1.isSwipeToMemberListEnabled()) {
-                        const ComponentDispatch = tmp2(1109).ComponentDispatch;
+                        const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
                         obj = { source: "channel-header-search", channelId: null, screenIndex: null };
                         obj.channelId = obj.id;
                         obj.screenIndex = screenIndex;
                         ComponentDispatch.dispatch(constants3.SHOW_CHANNEL_DETAILS, obj);
                       } else {
-                        const rootNavigationRef = tmp2(4418).getRootNavigationRef();
+                        const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
                         if (null != rootNavigationRef) {
                           if (rootNavigationRef.isReady()) {
                             obj1 = { channelId: obj.id, search: true, source: "channel-header-search" };
                             rootNavigationRef.navigate("sidebar", obj1);
                           }
                         }
+                        const tmp2Result2 = RootNavigationRef;
                       }
+                      tmp2Result1 = SwipeToMemberListUtils;
                     },
             accessibilityLabel: null
           };
@@ -417,16 +424,16 @@ export default function ChannelActions(channelId) {
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId };
-    let tmp4Result = tmp4(channelId(13257).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = jsx(channelId(13257).ForumChannelCloseSearchButton, { channelId });
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
         obj1 = { channelId, screenIndex, showCreateThread };
-        tmp4Result = tmp4(WrappedChannelNavButtons, obj1);
+        tmp4Result = <WrappedChannelNavButtons channelId={channelId} screenIndex={screenIndex} showCreateThread={showCreateThread} />;
       }
     }
     const obj2 = { channelId, screenIndex };
-    tmp4Result = tmp4(PrivateChannelButtonsDefault, obj2);
+    tmp4Result = jsx(PrivateChannelButtonsDefault, { channelId, screenIndex });
   }
   obj.children = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

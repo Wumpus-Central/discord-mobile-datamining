@@ -34,7 +34,7 @@ export default function ShareScreenModal(text) {
   noop = tmp[1];
   let items = [shareId, attachmentManifest];
   const effect = noop.useEffect(() => {
-    closure_0 = async function _fetchAttachments(arg0, value) {
+    closure_0 = async function _fetchAttachments() {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -121,7 +121,7 @@ export default function ShareScreenModal(text) {
   closure_7 = tmp6[1];
   const items2 = [channelId, stateFromStores];
   const effect1 = noop.useEffect(() => {
-    closure_0 = async function _fetchChannel(arg0, value) {
+    closure_0 = async function _fetchChannel() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -215,29 +215,29 @@ export default function ShareScreenModal(text) {
     }
     obj.attachments = items;
     if (null != first1) {
-      if (tmp.type !== ChannelTypes.ChannelTypes.DM) {
+      if (first1.type !== ChannelTypes.ChannelTypes.DM) {
         obj.targetChannelId = channelId;
       } else {
-        let isArray = tmp;
-        if (tmp) {
-          isArray = "recipients" in tmp;
+        let isArray = first1;
+        if (first1) {
+          isArray = "recipients" in first1;
         }
         if (isArray) {
           const _Array = Array;
-          isArray = Array.isArray(tmp.recipients);
+          isArray = Array.isArray(first1.recipients);
         }
         if (isArray) {
-          obj.targetUserId = tmp.recipients[0];
+          obj.targetUserId = first1.recipients[0];
         } else {
-          let tmp4 = tmp;
-          if (tmp) {
-            tmp4 = "recipient" in tmp;
+          let tmp4 = first1;
+          if (first1) {
+            tmp4 = "recipient" in first1;
           }
           if (tmp4) {
-            tmp4 = "id" in tmp.recipient;
+            tmp4 = "id" in first1.recipient;
           }
           if (tmp4) {
-            const recipient = tmp.recipient;
+            const recipient = first1.recipient;
             let id;
             if (recipient != null) {
               id = recipient.id;

@@ -79,9 +79,9 @@ function resolvePlaintextInlineVoid(text, id, id2, forceIncludeExternalGuilds) {
               if (tmp4) {
                 username = username.username;
                 if (flag) {
-                  let startsWithResult = username === tmp2;
+                  let startsWithResult = username === first;
                 } else {
-                  startsWithResult = username.startsWith(tmp2);
+                  startsWithResult = username.startsWith(first);
                 }
                 if (startsWithResult) {
                   if (str == null) {
@@ -163,7 +163,7 @@ function resolvePlaintextInlineVoid(text, id, id2, forceIncludeExternalGuilds) {
     return null;
   }
 }
-function matchesUser(arg0, arg1, username, requireExact) {
+function matchesUser(arg0, arg1, username) {
   let flag = requireExact.requireExact;
   if (flag === undefined) {
     flag = false;

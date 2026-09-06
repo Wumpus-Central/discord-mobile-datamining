@@ -5,7 +5,7 @@ import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_6 = async function _uploadRtcLogFiles(arg0, value) {
+let closure_6 = async function _uploadRtcLogFiles(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

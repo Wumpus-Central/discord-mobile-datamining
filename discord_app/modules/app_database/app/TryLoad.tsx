@@ -5,7 +5,7 @@ import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_4 = async function _tryLoadAsync(arg0, value) {
+let closure_4 = async function _tryLoadAsync(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -69,7 +69,7 @@ let closure_4 = async function _tryLoadAsync(arg0, value) {
     }
   }
 };
-let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0, value) {
+let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

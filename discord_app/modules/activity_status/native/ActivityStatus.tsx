@@ -43,7 +43,7 @@ export default function ActivityStatus(guildId) {
   const memo = noop.useMemo(() => {
     let found;
     if (stateFromStores1 != null) {
-      found = arr.find((type) => type.type === constants.CUSTOM_STATUS);
+      found = stateFromStores1.find((type) => type.type === constants.CUSTOM_STATUS);
     }
     if (null == found) {
       return null;
@@ -66,7 +66,6 @@ export default function ActivityStatus(guildId) {
       }
       return tmp4;
     }
-    arr = stateFromStores1;
   }, items2);
   let obj2 = userId(10880);
   let state;

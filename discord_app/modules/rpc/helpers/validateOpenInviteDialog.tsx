@@ -44,13 +44,13 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const obj9 = getCurrentEmbeddedActivityChannelDefault();
       if (null == obj9) {
         const obj3 = { errorCode: RPCErrors.INVALID_CHANNEL };
-        const tmp21 = new tmp48(9554)(obj3, "Invalid channel");
+        const tmp21 = new RPCErrorDefault(obj3, "Invalid channel");
         throw tmp21;
       } else {
         const guild = GuildStore.getGuild(obj9.getGuildId());
         if (null == guild) {
           const obj4 = { errorCode: RPCErrors.INVALID_CHANNEL };
-          let tmp48Result = tmp48(9554);
+          let tmp48Result = RPCErrorDefault;
           const _HermesInternal2 = HermesInternal;
           tmp48Result = new tmp48Result(obj4, "Invalid guild " + obj9.getGuildId());
           throw tmp48Result;
@@ -61,7 +61,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
           } else {
             obj = { errorCode: RPCErrors.INVALID_PERMISSIONS };
             const _HermesInternal = HermesInternal;
-            let tmp = tmp48(9554);
+            let tmp = RPCErrorDefault;
             tmp = new tmp(obj, "No invite permissions for " + obj9.id);
             throw tmp;
           }

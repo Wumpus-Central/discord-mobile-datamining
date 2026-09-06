@@ -138,7 +138,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
   }
   return obj;
 };
-export const getManageResourcePermissions = function getManageResourcePermissions(guild, c6, UserStore) {
+export const getManageResourcePermissions = function getManageResourcePermissions(guild) {
   let obj = c6;
   if (c6 === undefined) {
     obj = PermissionStore;

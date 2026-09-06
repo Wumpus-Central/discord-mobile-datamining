@@ -3,10 +3,10 @@
 // Module 17475 (FriendsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
+import router_utils from "router_utils" /* 1100 */;
+import trackFriendListClickedDefault from "trackFriendListClicked" /* 16752 */;
 import size from "module_2" /* 2 */;
 
-const router_utils = tmp(1100);
-const trackFriendListClickedDefault = tmp5(16752);
 const Routes = Constants.Routes;
 const result = size.fileFinishedImporting("actions/FriendsActionCreators.tsx");
 

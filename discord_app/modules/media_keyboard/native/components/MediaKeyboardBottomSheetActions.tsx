@@ -27,7 +27,7 @@ let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj = { paddingVertical: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_MARGIN_HORIZONTAL, marginBottom: null, borderRadius: null, backgroundColor: null, paddingHorizontal: null, borderWidth: null };
   let obj3 = PlatformUtils;
   if (obj3.isIOS()) {
-    PX_24 = tmp3(576).space.PX_24;
+    PX_24 = nativeDefault.space.PX_24;
   }
   let tmp5 = arg2;
   obj.marginBottom = PX_24;
@@ -38,15 +38,14 @@ let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj.backgroundColor = tmp5;
   obj.paddingHorizontal = nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL;
   obj.borderWidth = nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_WIDTH;
-  const merged1 = Object.assign(tmp3(576).shadows.SHADOW_HIGH);
+  const merged1 = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
   obj.borderColor = nativeDefault.colors.BORDER_MUTED;
   obj.container = obj;
   obj.buttonsContainer = { gap: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_GAP, alignItems: "stretch", flexDirection: "row", marginHorizontal: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL };
   const obj1 = { gap: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_GAP, alignItems: "stretch", flexDirection: "row", marginHorizontal: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL };
-  const tmp = absoluteFillObject;
   obj.button = { flexBasis: 64, minHeight: 48, flexGrow: 1, justifyContent: "center", flexDirection: "column", alignItems: "center", padding: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_PADDING, borderRadius: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_BORDER_RADIUS, gap: 4 };
   obj3 = {};
-  const merged2 = Object.assign(tmp.absoluteFillObject);
+  const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj3.color = nativeDefault.colors.BACKGROUND_BASE_LOW;
   obj.gradient = obj3;
   return obj;

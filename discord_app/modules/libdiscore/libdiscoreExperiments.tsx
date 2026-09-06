@@ -37,14 +37,13 @@ prototype["getCachedConfig"] = function getCachedConfig() {
   const self = this;
   if (this.cachedConfig === closure_6) {
     if (obj.isLibdiscoreInitialized()) {
-      const experimentCacher = tmp(1351).getExperimentCacher();
+      const experimentCacher = js_shim_shim.getExperimentCacher();
       self.cachedConfig = experimentCacher.getConfig(self.id);
-      const tmpResult = tmp(1351);
+      const tmpResult = js_shim_shim;
     } else {
       self.cachedConfig = undefined;
     }
     obj = js_shim_shim;
-    tmp = require;
   }
   return self.cachedConfig;
 };
@@ -253,4 +252,5 @@ export const clearLibdiscoreExperimentCache = function clearLibdiscoreExperiment
     experimentCacher.clearCache();
     const tmpResult = js_shim_shim;
   }
+  obj = js_shim_shim;
 };

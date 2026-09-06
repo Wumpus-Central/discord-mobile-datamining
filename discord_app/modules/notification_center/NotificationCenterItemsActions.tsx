@@ -11,7 +11,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7639 */;
 
 require = fn;
-let closure_6 = async function _fetchNotificationCenterItems(arg0, value) {
+let closure_6 = async function _fetchNotificationCenterItems(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -163,7 +163,7 @@ function markNotificationCenterRemoteItemAcked() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _markNotificationCenterRemoteItemAcked(arg0, arg1) {
+let closure_8 = async function _markNotificationCenterRemoteItemAcked(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   let obj1 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
@@ -182,13 +182,13 @@ let closure_8 = async function _markNotificationCenterRemoteItemAcked(arg0, arg1
     c6 = 3;
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     c4 = 0;
   }
-  return arg1;
+  return value;
 };
-let closure_9 = async function _bulkMarkNotificationCenterItemsAcked(arg0, arg1) {
+let closure_9 = async function _bulkMarkNotificationCenterItemsAcked(arg0) {
   closure_2 = tmp3;
   const mapped = _require.map((id) => id.id);
   closure_129_0 = mapped;
@@ -213,18 +213,18 @@ let closure_9 = async function _bulkMarkNotificationCenterItemsAcked(arg0, arg1)
     c6 = 3;
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     c4 = 0;
   }
-  return arg1;
+  return value;
 };
 let closure_10 = async function _deleteNotificationCenterItem(arg0) {
   let user = arg0;
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

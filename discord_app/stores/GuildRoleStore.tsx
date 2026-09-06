@@ -147,9 +147,8 @@ const guildRoleStore = new GuildRoleStore({
     }
     const partitionKeys = getPartitionKeys.getPartitionKeys();
     for (const item10028 of partitionKeys) {
-      let tmp3 = item10028;
       if (!set.has(item10028)) {
-        let removePartitionResult = arg1.removePartition(tmp3);
+        let removePartitionResult = arg1.removePartition(item10028);
       }
       continue;
     }

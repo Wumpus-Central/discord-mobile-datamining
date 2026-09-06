@@ -22,19 +22,19 @@ export default function HubSidebarProgressOverview(guild) {
   } else {
     const size = hubProgressBarCompletedSteps.size;
     const hubProgressTitleForStep = tmp(12669).getHubProgressTitleForStep(nextHubProgressStep);
-    if (size < closure_4) {
+    if (size < total) {
       const intl2 = tmp(1114).intl;
       obj = { number: null, total: null };
       const _HermesInternal = HermesInternal;
       obj.number = "" + size;
-      obj.total = tmp11;
+      obj.total = total;
       let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["9j7xDu"], obj);
     } else {
       const intl = tmp(1114).intl;
       formatToPlainStringResult = intl.string(tmp(1114).t["+Gyklt"]);
     }
     const _Math = Math;
-    const bound = Math.max(tmp(12474).MIN_PROGRESS_PERCENT, 100 * size / tmp11);
+    const bound = Math.max(tmp(12474).MIN_PROGRESS_PERCENT, 100 * size / total);
     obj = {
       onPress() {
           const obj = { guild, analyticsSource: "Channels Sidebar" };

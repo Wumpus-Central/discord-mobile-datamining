@@ -10,6 +10,7 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7539 */;
 import LayerActionCreators from "LayerActionCreators" /* 7587 */;
 import useUserLinks from "useUserLinks" /* 8645 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14911 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -123,7 +124,7 @@ function FamilyCenterSettingsTeenControls() {
   if (isFamilyCenterV3Enabled) {
     const obj4 = { style: tmp.controlsGroup, children: null };
     const obj5 = { cap: spendingLimitFromUserSettings };
-    const items2 = [tmp10(SpendingLimitRow, obj5), ];
+    const items2 = [closure_7(SpendingLimitRow, obj5), ];
     const obj6 = { label: null, subLabel: null, trailing: null, onPress: null, arrow: null };
     const intl3 = tmp2(tmp3[8]).intl;
     obj6.label = intl3.string(tmp7(tmp3[9])["1Op+NP"]);
@@ -138,10 +139,10 @@ function FamilyCenterSettingsTeenControls() {
     const obj7 = { hasIcons: false, children: null };
     obj6.onPress = fn;
     obj6.arrow = rules.length > 0;
-    items2[1] = tmp10(tmp2(tmp3[14]).TableRow, obj6);
+    items2[1] = closure_7(tmp2(tmp3[14]).TableRow, obj6);
     obj7.children = items2;
-    obj4.children = tmp9(tmp2(tmp3[21]).TableRowGroup, obj7);
-    isFamilyCenterV3Enabled = tmp10(View, obj4);
+    obj4.children = closure_8(tmp2(tmp3[21]).TableRowGroup, obj7);
+    isFamilyCenterV3Enabled = closure_7(View, obj4);
   }
   items1[1] = isFamilyCenterV3Enabled;
   const obj8 = { text: null, onPress: null, shrink: true, grow: false, variant: "secondary", size: "sm" };
@@ -191,11 +192,12 @@ function FamilyCenterSettingsParentalControls() {
   const effect = rules.useEffect(() => {
     let id;
     if (selectedTeenUser != null) {
-      id = tmp.id;
+      id = selectedTeenUser.id;
     }
     if (tmp3) {
-      const teenSettingsAndConsents = FamilyCenterActionCreatorsDefault.fetchTeenSettingsAndConsents(tmp.id);
+      const teenSettingsAndConsents = FamilyCenterActionCreatorsDefault.fetchTeenSettingsAndConsents(selectedTeenUser.id);
     }
+    tmp3 = null != id && shouldLoadSettingsForSelectedTeenUser;
   }, items);
   ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(14910)(rules));
   obj = { style: tmp.parentalControlsContainer, children: null };
@@ -232,7 +234,7 @@ function FamilyCenterSettingsParentalControls() {
   }
   if (tmp15Result) {
     const obj5 = { cap: controlledSetting, teenId: selectedTeenUser.id };
-    tmp15Result = tmp15(SpendingLimitRow, obj5);
+    tmp15Result = closure_7(SpendingLimitRow, obj5);
   }
   items2[2] = tmp15Result;
   tmp15Result = isFamilyCenterV3Enabled;
@@ -262,7 +264,7 @@ function FamilyCenterSettingsParentalControls() {
       obj.autoOpenCreate = tmp2;
       navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
     };
-    tmp15Result = tmp15(tmp2(5605).TableRow, obj6);
+    tmp15Result = closure_7(tmp2(5605).TableRow, obj6);
   }
   items2[3] = tmp15Result;
   obj2.children = closure_8(selectedTeenUser(5687).TableRowGroup, { hasIcons: false, children: items2 });
@@ -300,4 +302,5 @@ export default function FamilyCenterSettingsControls() {
     obj = { children: React5(tmp ? FamilyCenterSettingsTeenControls : FamilyCenterSettingsParentalControls, {}) };
     React5(View, obj);
   }
+  tmp = useUserIsTeenAgeGroupDefault();
 };

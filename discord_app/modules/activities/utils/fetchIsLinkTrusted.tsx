@@ -5,7 +5,7 @@ import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_4 = async function _fetchIsLinkTrusted(arg0, value) {
+let closure_4 = async function _fetchIsLinkTrusted(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

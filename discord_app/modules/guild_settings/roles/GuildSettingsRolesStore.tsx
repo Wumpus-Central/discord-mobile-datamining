@@ -84,11 +84,14 @@ function handleInit() {
       }
       const obj4 = { currentStyle: GRADIENT, styleColors };
       const result = map2.set(colors.id, obj4);
+      const obj1 = { primary_color: null, secondary_color: null, tertiary_color: null };
+      const obj2 = { primary_color: null, secondary_color: null, tertiary_color: null };
     } else if (null != colors.colors.tertiary_color) {
       GRADIENT = tmp.HOLOGRAPHIC;
     } else if (null != colors.colors.secondary_color) {
       GRADIENT = tmp.GRADIENT;
     }
+    tmp2 = null != colors.colors && styleColors.getHasEnhancedRoleColorsForRole(id, colors);
   });
   c27 = false;
   if (flag) {
@@ -169,11 +172,14 @@ function syncGuildChanges(guildId) {
             }
             const obj4 = { currentStyle: GRADIENT, styleColors };
             const result = map2.set(colors.id, obj4);
+            const obj1 = { primary_color: null, secondary_color: null, tertiary_color: null };
+            const obj2 = { primary_color: null, secondary_color: null, tertiary_color: null };
           } else if (null != colors.colors.tertiary_color) {
             GRADIENT = tmp.HOLOGRAPHIC;
           } else if (null != colors.colors.secondary_color) {
             GRADIENT = tmp.GRADIENT;
           }
+          tmp2 = null != colors.colors && styleColors.getHasEnhancedRoleColorsForRole(id, colors);
         });
         const item3 = map.forEach((item, index) => {
           const result = map2.set(index, item);
@@ -251,6 +257,7 @@ let closure_33 = apply.debounce(() => {
       }
       c0 = true;
     }
+    obj = apply;
   });
   if (c0) {
     guildSettingsRolesStore.emitChange();
@@ -727,11 +734,14 @@ RoleColorsStyle = {
             }
             const obj4 = { currentStyle: GRADIENT, styleColors };
             const result = map2.set(colors.id, obj4);
+            const obj1 = { primary_color: null, secondary_color: null, tertiary_color: null };
+            const obj2 = { primary_color: null, secondary_color: null, tertiary_color: null };
           } else if (null != colors.colors.tertiary_color) {
             GRADIENT = tmp.HOLOGRAPHIC;
           } else if (null != colors.colors.secondary_color) {
             GRADIENT = tmp.GRADIENT;
           }
+          tmp2 = null != colors.colors && styleColors.getHasEnhancedRoleColorsForRole(id, colors);
         });
       }
     }
@@ -899,11 +909,14 @@ RoleColorsStyle = {
         }
         const obj4 = { currentStyle: GRADIENT, styleColors };
         const result = map2.set(colors.id, obj4);
+        const obj1 = { primary_color: null, secondary_color: null, tertiary_color: null };
+        const obj2 = { primary_color: null, secondary_color: null, tertiary_color: null };
       } else if (null != colors.colors.tertiary_color) {
         GRADIENT = tmp.HOLOGRAPHIC;
       } else if (null != colors.colors.secondary_color) {
         GRADIENT = tmp.GRADIENT;
       }
+      tmp2 = null != colors.colors && styleColors.getHasEnhancedRoleColorsForRole(id, colors);
     });
   },
   GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE: function handleRoleStyleUpdate(arg0) {
@@ -917,7 +930,7 @@ RoleColorsStyle = {
         return false;
       } else {
         obj = { currentStyle, styleColors: value.styleColors };
-        const result = obj3.set(id, obj);
+        const result = map2.set(id, obj);
         const result1 = EnhancedRoleColorUtils.extractColorStringsFromServerColors(tmp19);
         primary_color = tmp19.primary_color;
         obj = { color: primary_color, colors: value.styleColors[currentStyle], colorString: result1.primaryColor, colorStrings: result1 };
@@ -935,7 +948,6 @@ RoleColorsStyle = {
         }
         return false;
       }
-      obj3 = map2;
     }
   },
   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function handleFetchRoleConnectionConfigurations(arg0) {
@@ -949,14 +961,13 @@ RoleColorsStyle = {
         return false;
       } else {
         const result = map1.set(found.id, roleConnectionConfigurations);
-        const result1 = obj.set(found.id, roleConnectionConfigurations);
+        const result1 = map.set(found.id, roleConnectionConfigurations);
         set.delete(found.id);
         if (0 === set.size) {
           c27 = false;
         }
         closure_33();
       }
-      obj = map;
       obj2 = apply;
     }
   },

@@ -12,8 +12,8 @@ import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
 require = fn;
 const Endpoints = fn(1074).Endpoints;
-const constants = fn(4212).NotificationSettingsUpdateType;
-let closure_7 = fn(1084).ChannelNotificationSettingsFlags;
+fn(4212).NotificationSettingsUpdateType;
+const constants = fn(1084).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
 
@@ -104,19 +104,21 @@ export default {
   },
   setForumThreadsCreated(channel, arg1) {
     if (arg1) {
-      let NEW_FORUM_THREADS_OFF = tmp.NEW_FORUM_THREADS_ON;
-      let tmp2 = tmp;
+      let NEW_FORUM_THREADS_OFF = constants.NEW_FORUM_THREADS_ON;
+      let tmp2 = constants;
     } else {
-      NEW_FORUM_THREADS_OFF = tmp.NEW_FORUM_THREADS_OFF;
-      tmp2 = tmp;
+      NEW_FORUM_THREADS_OFF = constants.NEW_FORUM_THREADS_OFF;
+      tmp2 = constants;
     }
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = this.updateChannelOverrideSettings(channel.guild_id, channel.id, { flags: UserGuildSettingsStore.getChannelFlags(channel) & ~(arg1 ? tmp2.NEW_FORUM_THREADS_OFF : tmp2.NEW_FORUM_THREADS_ON) | NEW_FORUM_THREADS_OFF }, NotificationLabel.forumThreadsCreated(arg1));
+    const obj = { flags: UserGuildSettingsStore.getChannelFlags(channel) & ~(arg1 ? tmp2.NEW_FORUM_THREADS_OFF : tmp2.NEW_FORUM_THREADS_ON) | NEW_FORUM_THREADS_OFF };
+    const tmp3 = arg1 ? tmp2.NEW_FORUM_THREADS_OFF : tmp2.NEW_FORUM_THREADS_ON;
   },
   setAccountFlag(arg0, arg1) {
     closure_0 = arg0;
     closure_1 = arg1;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

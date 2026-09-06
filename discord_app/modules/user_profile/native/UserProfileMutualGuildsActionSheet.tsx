@@ -31,11 +31,11 @@ export default function UserProfileMutualGuildsActionSheet(user) {
   let obj = { scrollable: true, title: onPressMutualGuild(12603)(length), children: null };
   obj = { style: tmp.container, children: null };
   if (null == mutualGuilds) {
-    obj = { style: tmp.loadingState, children: tmp3(closure_4, {}) };
-    let tmp3Result = tmp3(tmp7, obj);
+    obj = { style: tmp.loadingState, children: <closure_4 /> };
+    let tmp3Result = <closure_3 style={tmp.loadingState}><closure_4 /></closure_3>;
   } else if (0 === mutualGuilds.length) {
-    const obj1 = { style: tmp.emptyState, children: tmp3(user(12604).NoMutualServers, {}) };
-    tmp3Result = tmp3(tmp7, obj1);
+    const obj1 = { style: tmp.emptyState, children: jsx(user(12604).NoMutualServers, {}) };
+    tmp3Result = <closure_3 style={tmp.emptyState}>{jsx(user(12604).NoMutualServers, {})}</closure_3>;
   } else {
     const obj2 = {
       data: mutualGuilds,
@@ -56,7 +56,25 @@ export default function UserProfileMutualGuildsActionSheet(user) {
           });
         }
     };
-    tmp3Result = tmp3(user(11151).UserProfileStackedActionSheetList, obj2);
+    tmp3Result = jsx(user(11151).UserProfileStackedActionSheetList, {
+      data: mutualGuilds,
+      keyExtractor(guild) {
+          return guild.guild.id;
+        },
+      renderItem(item) {
+          item = item.item;
+          ({ start, end } = item);
+          return jsx(user(dependencyMap[9]).MutualGuildRow, {
+            user: item,
+            mutualGuild: item,
+            onPress() {
+              return onPressMutualGuild(item.guild.id);
+            },
+            start,
+            end
+          });
+        }
+    });
   }
   obj.children = tmp3Result;
   obj.children = <closure_3 style={tmp.container}>{null}</closure_3>;

@@ -106,6 +106,7 @@ class EventTracker {
           if (tmp) {
             closure_2_9.error("Failed to log log existing network usage events", obj.existingEvents, error);
           }
+          tmp = 429 === error.status || false;
         });
         const nextPromise = result.then(() => {
           closure_2_9.fileOnly("Successfully logged existing network usage events", obj.existingEvents);
@@ -144,7 +145,7 @@ prototype["handleAppStateChange"] = function handleAppStateChange(arg0) {
 };
 prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -212,7 +213,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
 };
 prototype["track"] = function track() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -243,14 +244,14 @@ prototype["track"] = function track() {
             if (self.didEverTrack) {
               c3 = 3;
             } else {
-              obj5.didEverTrack = true;
+              self.didEverTrack = true;
               const _clearTimeout = clearTimeout;
-              clearTimeout(obj5.trackTimeout);
+              clearTimeout(self.trackTimeout);
               const _clearInterval = clearInterval;
-              clearInterval(obj5.flushStorageInterval);
+              clearInterval(self.flushStorageInterval);
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: obj5.getQueuedEvent(), done: false };
+              const obj1 = { value: self.getQueuedEvent(), done: false };
               return obj1;
             }
           }
@@ -271,6 +272,7 @@ prototype["track"] = function track() {
             const existingEvents = closure_0.existingEvents;
             existingEvents.push(closure_1_0[0]);
             const result = closure_0.writeExistingEventStorage();
+            tmp = 429 === error.status || false;
           });
           const nextPromise = result.then(() => {
             closure_3_9.fileOnly("Successfully tracked latest network usage", closure_1_0);
@@ -291,9 +293,11 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
   return (async () => {
     closure_4 = tmp2;
     updateNetworkUsage();
-    closure_132_0 = await NativeTTIManagerModuleDefault.getAppFirstVisibleTimestamp();
+    await NativeTTIManagerModuleDefault.getAppFirstVisibleTimestamp();
+    closure_132_0 = value;
     NativeTTIManagerModuleDefault;
-    closure_132_1 = await closure_133_0(closure_133_2[14]).getSession();
+    await closure_133_0(closure_133_2[14]).getSession();
+    closure_132_1 = value;
     const obj5 = { type: closure_133_8.APP_NETWORK_USAGE, properties: null };
     const obj6 = {};
     const merged = Object.assign(closure_133_0(closure_133_2[15]).getDeviceMetadata());

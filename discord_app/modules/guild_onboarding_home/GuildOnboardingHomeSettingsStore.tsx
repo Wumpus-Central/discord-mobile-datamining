@@ -60,8 +60,8 @@ prototype["getNewMemberActions"] = function getNewMemberActions(guildId) {
         }
         tmp = null;
         if (!tmp10) {
-          tmp5[guildId] = newMemberActions1;
-          tmp = tmp5[guildId];
+          dependencyMap2[guildId] = newMemberActions1;
+          tmp = dependencyMap2[guildId];
         }
         tmp10 = tmp == newMemberActions1;
       }

@@ -28,7 +28,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.isOrbsExclusive = is_orbs_exclusive;
   obj.createdAt = new Date(created_at);
   const date = new Date(created_at);
-  const tmp2 = prototype;
   obj.updatedAt = new Date(updated_at);
   let date2;
   if (null != unpublished_at) {
@@ -63,7 +62,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   }
   obj.heroLogoDisplayConfig = fromServerResult2;
   ({ hero_url: obj2.heroUrl, hero_rive_url: obj2.heroRiveUrl, hero_animated_url: obj2.heroAnimatedUrl, hero_logo_url: obj2.heroLogoUrl, hero_banner_url: obj2.heroBannerUrl, hero_banner_animated_url: obj2.heroBannerAnimatedUrl, catalog_banner_url: obj2.catalogBannerUrl, catalog_banner_rive_url: obj2.catalogBannerRiveUrl, catalog_banner_animated_url: obj2.catalogBannerAnimatedUrl, featured_block_url: obj2.featuredBlockUrl, logo_url: obj2.logoUrl, pdp_bg_url: obj2.pdpBgUrl, wide_banner_url: obj2.wideBannerUrl, wide_banner_animated_url: obj2.wideBannerAnimatedUrl, mobile_hero_url: obj2.mobileHeroUrl, mobile_hero_animated_url: obj2.mobileHeroAnimatedUrl, mobile_banner_url: obj2.mobileBannerUrl, mobile_bg_url: obj2.mobileBgUrl, shop_button_bg_hover_url: obj2.shopButtonBgHoverUrl, upsell_banner_popout_url: obj2.upsellBannerPopoutUrl, upsell_banner_url: obj2.upsellBannerUrl, hero_block_title: obj2.heroBlockTitle, featured_block_body: obj2.featuredBlockBody, mobile_hero_block_title: obj2.mobileHeroBlockTitle, mobile_products_title: obj2.mobileProductsTitle, mobile_summary: obj2.mobileSummary, wide_banner_title: obj2.wideBannerTitle, wide_banner_body: obj2.wideBannerBody } = collectibles);
-  return new tmp2(obj);
+  return new prototype(obj);
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/records/StorefrontCollectionRecord.tsx");

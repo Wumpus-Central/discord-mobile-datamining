@@ -5,7 +5,7 @@ import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_4 = async function _testCaptcha(decider, options) {
+let closure_4 = async function _testCaptcha() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {

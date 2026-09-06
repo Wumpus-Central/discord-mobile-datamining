@@ -3,6 +3,7 @@
 // Module 8869 (useProductDisableState)
 import initialize from "initialize" /* 504 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
+import util from "util" /* 1114 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
 require = fn;
@@ -25,8 +26,8 @@ export const useProductDisableState = function useProductDisableState(skuId) {
     obj = { isDisabled: stateFromStores, disabledReason: null };
     let stringResult = null;
     if (stateFromStores) {
-      const intl = tmp(1114).intl;
-      stringResult = intl.string(tmp(1114).t.NbveHD);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.NbveHD);
     }
     obj.disabledReason = stringResult;
   } else {

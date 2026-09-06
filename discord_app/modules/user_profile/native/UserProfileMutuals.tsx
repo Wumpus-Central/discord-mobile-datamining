@@ -80,7 +80,7 @@ export default function UserProfileMutuals(user) {
       const obj2 = { variant, color, children: tmp5(12609)(mutualFriends.length) };
       items[1] = closure_6(tmp2(4556).Text, obj2);
       obj.children = items;
-      tmp9Result = tmp9(tmp2(5123).PressableOpacity, obj);
+      tmp9Result = closure_7(tmp2(5123).PressableOpacity, obj);
     }
     const items1 = [tmp9Result, , ];
     let tmp15 = tmp7;
@@ -141,7 +141,7 @@ export default function UserProfileMutuals(user) {
       const obj6 = { variant, color, children: tmp5(12603)(mutualGuilds.length) };
       items2[1] = closure_6(tmp2(4556).Text, obj6);
       obj4.children = items2;
-      tmp9Result = tmp9(tmp2(5123).PressableOpacity, obj4);
+      tmp9Result = closure_7(tmp2(5123).PressableOpacity, obj4);
     }
     items1[2] = tmp9Result;
     obj.children = items1;

@@ -182,6 +182,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
                 } else {
                   obj = channel(channel[17]);
                   channel(channel[17]).batchChannelUpdate(tmp, closure_1_7).then(() => closure_1_2.pop());
+                  const batchChannelUpdateResult = channel(channel[17]).batchChannelUpdate(tmp, closure_1_7);
                 }
               };
               obj.onCancel = saveUpdates;
@@ -195,7 +196,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
           throw error;
         } else {
           GuildActionCreatorsDefault.batchChannelUpdate(tmp24, result).then(() => closure_1_2.pop());
-          const batchChannelUpdateResult = GuildActionCreatorsDefault.batchChannelUpdate(tmp24, result);
+          let batchChannelUpdateResult = GuildActionCreatorsDefault.batchChannelUpdate(tmp24, result);
         }
       });
     }
@@ -245,8 +246,8 @@ prototype["render"] = function render() {
   if (null != category) {
     let name = category.name;
   } else {
-    const intl2 = tmp4(1114).intl;
-    name = intl2.string(tmp4(1114).t.GSfOoo);
+    const intl2 = util.intl;
+    name = intl2.string(util.t.GSfOoo);
   }
   obj = { variant: "text-md/medium", color: "text-muted", children: intl.formatToPlainString(util.t.OqccVl, { categoryName: name }) };
   const items = [map1(Text_Text.Text, obj), , ];
@@ -263,8 +264,8 @@ prototype["render"] = function render() {
                   return self.handleSetCategory(first.id);
                 }
         };
-        obj1.children = tmp3(tmp4(5605).TableRow, obj2, first.id);
-        tmp3Result = tmp3(tmp4(5687).TableRowGroup, obj1);
+        obj1.children = map1(TableRow.TableRow, obj2, first.id);
+        tmp3Result = map1(TableRowGroup.TableRowGroup, obj1);
       }
     }
   }

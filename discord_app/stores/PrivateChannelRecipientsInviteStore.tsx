@@ -68,15 +68,13 @@ function performQuery() {
           if (!user.isProvisional) {
             if (user.bot) {
               if (user.isStaff()) {
-                let isStaffResult;
                 if (obj1 != null) {
-                  isStaffResult = obj2.isStaff();
+                  obj1.isStaff();
                 }
-                obj2 = obj1;
               }
             }
             const obj = { user, comparator: UserUtilsDefault.getName(user) };
-            arr.push(obj);
+            arr = arr.push(obj);
             return arr;
           }
         }
@@ -286,7 +284,6 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
       row = 0;
       closure_18 = [];
       const _Set = Set;
-      set = new Set();
       c20 = false;
       channelId = tmp;
       return performQuery();

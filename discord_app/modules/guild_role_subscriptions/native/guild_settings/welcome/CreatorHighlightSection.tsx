@@ -60,7 +60,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     let tmp9Result = null != subscriberCount;
     if (tmp9Result) {
       const obj5 = { subscriberCount, style: tmp.serverSubscriberCount };
-      tmp9Result = tmp9(GuildServerSubscriberCount, obj5);
+      tmp9Result = closure_6(GuildServerSubscriberCount, obj5);
     }
     items2[1] = tmp9Result;
     obj3.children = items2;
@@ -88,7 +88,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       const obj10 = { style: tmp.premiumEmojisTitle, variant: "text-xs/semibold", color: "text-default", children: null };
       const intl3 = tmp10(1114).intl;
       obj10.children = intl3.string(tmp10(1114).t.wg53L8);
-      const items4 = [tmp9(tmp10(4556).Text, obj10), ];
+      const items4 = [closure_6(tmp10(4556).Text, obj10), ];
       const obj11 = { style: null, children: null };
       const items5 = [, ];
       ({ horizontalContainer: arr6[0], emojiContainer: arr6[1] } = tmp);
@@ -108,13 +108,13 @@ function CreatorGuildCard(highlightedCreatorGuild) {
         const obj12 = { style: tmp.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: null };
         const _HermesInternal = HermesInternal;
         obj12.children = "+" + notShownEmojiCount;
-        tmp9Result = tmp9(tmp10(4556).Text, obj12);
+        tmp9Result = closure_6(tmp10(4556).Text, obj12);
       }
       items6[1] = tmp9Result;
       obj11.children = items6;
-      items4[1] = tmp7(tmp8, obj11);
+      items4[1] = closure_7(closure_4, obj11);
       obj9.children = items4;
-      tmp7Result = tmp7(tmp8, obj9);
+      tmp7Result = closure_7(closure_4, obj9);
     }
     items3[3] = tmp7Result;
     const obj13 = { style: tmp.viewServerButtonContainer, children: null };

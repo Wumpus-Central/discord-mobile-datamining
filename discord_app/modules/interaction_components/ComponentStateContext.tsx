@@ -3,6 +3,7 @@
 // Module 8112 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Server from "Server" /* 1894 */;
+import InteractionTypes from "InteractionTypes" /* 4790 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 4792 */;
 import useMountEffectDefault from "useMountEffect" /* 4992 */;
 import InteractionUtils from "InteractionUtils" /* 8116 */;
@@ -20,15 +21,15 @@ require = fn;
 function isInteractionComponent(type) {
   type = type.type;
   if (Server.ComponentType.BUTTON === type) {
-    return type.style !== tmp(1894).ButtonStyle.LINK;
+    return type.style !== Server.ButtonStyle.LINK;
   } else {
-    if (tmp(1894).ComponentType.STRING_SELECT !== type) {
-      if (tmp(1894).ComponentType.USER_SELECT !== type) {
-        if (tmp(1894).ComponentType.ROLE_SELECT !== type) {
-          if (tmp(1894).ComponentType.MENTIONABLE_SELECT !== type) {
-            if (tmp(1894).ComponentType.CHANNEL_SELECT !== type) {
-              if (tmp(1894).ComponentType.ACTION_ROW !== type) {
-                const TEXT_INPUT = tmp(1894).ComponentType.TEXT_INPUT;
+    if (Server.ComponentType.STRING_SELECT !== type) {
+      if (Server.ComponentType.USER_SELECT !== type) {
+        if (Server.ComponentType.ROLE_SELECT !== type) {
+          if (Server.ComponentType.MENTIONABLE_SELECT !== type) {
+            if (Server.ComponentType.CHANNEL_SELECT !== type) {
+              if (Server.ComponentType.ACTION_ROW !== type) {
+                const TEXT_INPUT = Server.ComponentType.TEXT_INPUT;
               }
               return false;
             }
@@ -39,7 +40,7 @@ function isInteractionComponent(type) {
     return true;
   }
 }
-function getActionComponentState(interaction, id, shouldDisableInteractiveComponents) {
+function getActionComponentState(interaction, id) {
   let flag = shouldDisableInteractiveComponents;
   if (shouldDisableInteractiveComponents === undefined) {
     flag = false;
@@ -47,7 +48,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
   let LOADING = InteractionComponentTypes.ActionComponentState.NORMAL;
   let tmp3 = null != interaction;
   if (tmp3) {
-    tmp3 = interaction.state !== tmp(4790).InteractionState.FAILED;
+    tmp3 = interaction.state !== InteractionTypes.InteractionState.FAILED;
   }
   let DISABLED = LOADING;
   if (!tmp3) {
@@ -55,16 +56,16 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
       flag = isInteractionComponent(id);
     }
     if (flag) {
-      DISABLED = tmp(4792).ActionComponentState.DISABLED;
+      DISABLED = InteractionComponentTypes.ActionComponentState.DISABLED;
     }
     return DISABLED;
   } else {
-    if (interaction.data.interactionType !== tmp(1894).InteractionTypes.MESSAGE_COMPONENT) {
+    if (interaction.data.interactionType !== Server.InteractionTypes.MESSAGE_COMPONENT) {
       if (isInteractionComponent(id)) {
-        LOADING = tmp(4792).ActionComponentState.DISABLED;
+        LOADING = InteractionComponentTypes.ActionComponentState.DISABLED;
       }
     }
-    LOADING = tmp(4792).ActionComponentState.LOADING;
+    LOADING = InteractionComponentTypes.ActionComponentState.LOADING;
   }
 }
 function useShouldDisableInteractiveComponents(channel_id) {
@@ -74,11 +75,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   const stateFromStores = channel(504).useStateFromStores(items, () => {
     let guild_id;
     if (channel != null) {
-      guild_id = tmp.guild_id;
+      guild_id = channel.guild_id;
     }
     let canChatInGuildResult = null == guild_id;
     if (!canChatInGuildResult) {
-      canChatInGuildResult = GuildVerificationStore.canChatInGuild(tmp.guild_id);
+      canChatInGuildResult = GuildVerificationStore.canChatInGuild(channel.guild_id);
     }
     return canChatInGuildResult;
   }, items1);
@@ -88,11 +89,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   const stateFromStores1 = channel(504).useStateFromStores(items2, () => {
     let guild_id;
     if (channel != null) {
-      guild_id = tmp.guild_id;
+      guild_id = channel.guild_id;
     }
     let isLurkingResult = null != guild_id;
     if (isLurkingResult) {
-      isLurkingResult = LurkingStore.isLurking(tmp.guild_id);
+      isLurkingResult = LurkingStore.isLurking(channel.guild_id);
     }
     return isLurkingResult;
   }, items3);
@@ -102,15 +103,15 @@ function useShouldDisableInteractiveComponents(channel_id) {
     const currentUser = UserStore.getCurrentUser();
     let guild_id;
     if (channel != null) {
-      guild_id = tmp2.guild_id;
+      guild_id = channel.guild_id;
     }
     let flag = null;
     if (null != guild_id) {
       flag = null;
       if (null != currentUser) {
         let guild_id1;
-        if (tmp2 != null) {
-          guild_id1 = tmp2.guild_id;
+        if (channel != null) {
+          guild_id1 = channel.guild_id;
         }
         const member = GuildMemberStore.getMember(guild_id1, currentUser.id);
         let isPending;
@@ -372,9 +373,9 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
       };
       return obj;
     } else if (null != modal) {
-      obj = { useComponentState: useComponentStateForModal.bind(null, tmp18), channelId: null, containerId: null, modal: null, validators: null, validationErrors: null, setValidationErrors: null, getParents: null };
-      ({ channelId: obj2.channelId, customId: obj2.containerId } = tmp18);
-      obj.modal = tmp18;
+      obj = { useComponentState: useComponentStateForModal.bind(null, modal), channelId: null, containerId: null, modal: null, validators: null, validationErrors: null, setValidationErrors: null, getParents: null };
+      ({ channelId: obj2.channelId, customId: obj2.containerId } = modal);
+      obj.modal = modal;
       obj.validators = validators;
       obj.validationErrors = validationErrors;
       obj.setValidationErrors = setValidationErrors;
@@ -390,8 +391,8 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
         throw error;
       };
       const _HermesInternal = HermesInternal;
-      obj.containerId = "app-widget-" + tmp19.applicationId;
-      obj.applicationWidget = tmp19;
+      obj.containerId = "app-widget-" + applicationWidget.applicationId;
+      obj.applicationWidget = applicationWidget;
       obj.validators = validators;
       obj.validationErrors = validationErrors;
       obj.setValidationErrors = setValidationErrors;
@@ -405,7 +406,7 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
       let error = new Error("ComponentStateContextProvider requires at least one of message, modal, or applicationWidget");
       throw error;
     }
-  }, items)}>{arg0.children}</redux.Provider>;
+  }, items)}>{children.children}</redux.Provider>;
 };
 export const useComponentState = function useComponentState(type, arg1) {
   const context = noop.useContext(closure_18);

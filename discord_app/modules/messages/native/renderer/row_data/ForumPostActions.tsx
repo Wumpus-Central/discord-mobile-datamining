@@ -3,7 +3,9 @@
 // Module 7948 (ForumPostActions)
 import Constants from "Constants" /* 1074 */;
 import ReactionUtils from "ReactionUtils" /* 4211 */;
+import _modDef4512 from "module_4512" /* 4512 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7946 */;
+import _modDef7949 from "module_7949" /* 7949 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -72,13 +74,13 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
   const getAssetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed;
   if (isFollowing) {
-    let assetUriForEmbed = getAssetUriForEmbed(tmp4(4512));
-    let tmp6 = tmp4;
-    let tmp8 = tmp;
+    let assetUriForEmbed = getAssetUriForEmbed(_modDef4512);
+    let tmp6 = importDefault;
+    let tmp8 = require;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(tmp4(7949));
-    tmp6 = tmp4;
-    tmp8 = tmp;
+    assetUriForEmbed = getAssetUriForEmbed(_modDef7949);
+    tmp6 = importDefault;
+    tmp8 = require;
   }
   if (null != assetUriForEmbed) {
     let tmp8Result = tmp8(7946);

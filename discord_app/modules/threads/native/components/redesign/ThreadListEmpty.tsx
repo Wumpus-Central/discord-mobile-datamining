@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import _modDef12238 from "module_12238" /* 12238 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,9 +42,9 @@ export default noop.memo((onCreateThreadPress) => {
   let tmp4Result = null != onCreateThreadPress;
   if (tmp4Result) {
     const obj3 = { onPress: onCreateThreadPress, text: null };
-    const intl3 = tmp5(1114).intl;
-    obj3.text = intl3.string(tmp5(1114).t.rBIGBL);
-    tmp4Result = React4(tmp5(4975).Button, obj3);
+    const intl3 = util.intl;
+    obj3.text = intl3.string(util.t.rBIGBL);
+    tmp4Result = React4(components_Button_Button.Button, obj3);
   }
   items[3] = tmp4Result;
   obj.children = items;

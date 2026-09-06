@@ -159,7 +159,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
     }
   }
   if (typeof prototype === "function") {
-    const tmp36 = new prototype(tmp16, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, _Date2, _Date, tmp8, new.target, id, application_id, name, display_name, reward_type, reward_status);
+    const tmp36 = new prototype(tmp16, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, _Date2, _Date, prototype, new.target, id, application_id, name, display_name, reward_type, reward_status);
     tmp36.id = id;
     tmp36.applicationId = application_id;
     tmp36.name = name;

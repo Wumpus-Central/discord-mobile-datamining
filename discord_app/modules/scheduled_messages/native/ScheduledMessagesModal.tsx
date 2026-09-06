@@ -86,14 +86,14 @@ function ScheduledMessagesPage(handleScroll) {
     let tmp22Result = null;
     if (scheduledMessagesLimit.isUpgradable) {
       obj2 = { isAtLimit: tmp11 };
-      tmp22Result = tmp22(ScheduledMessageNitroUpsellBar, obj2);
+      tmp22Result = closure_10(ScheduledMessageNitroUpsellBar, obj2);
     }
     obj3 = { children: null };
     items5[1] = tmp22Result;
     obj3.children = items5;
     closure_11(closure_12, obj3);
-    tmp22 = closure_10;
   }
+  const obj5 = require("ScheduledMessageUtils");
 }
 function ScheduledMessageNitroUpsellBar(isAtLimit) {
   isAtLimit = isAtLimit.isAtLimit;
@@ -104,7 +104,6 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
   let obj1 = PremiumUtils;
   const premiumTypeDisplayName = obj1.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const tmp2 = usePremiumFeatureUpsellGetNitroDefault(useTier0UpsellContent, onViewAllPerks, AnalyticsPages.PREMIUM_UPSELL_SCHEDULED_MESSAGES, undefined, items);
-  const tmp4 = closure_1_10;
   const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
   const t = util.t;
@@ -122,7 +121,7 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
   }
   obj1.onPress = tmp8;
   obj1.loading = loading;
-  return tmp4(NitroLimitUpsellBarDefault, obj1);
+  return closure_1_10(NitroLimitUpsellBarDefault, obj1);
 }
 const View = fn(17).View;
 const AnalyticsPages = fn(1074).AnalyticsPages;
@@ -189,8 +188,6 @@ export default function ScheduledMessagesModal() {
   }
   obj.headerStatusBarHeight = num + sharedValue(576).space.PX_8;
   obj5 = PlatformUtils;
-  const tmp10 = View;
-  const tmp9 = closure_11;
   obj.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4763).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
   const items1 = [closure_10(_mod5631.Header, obj), , ];
@@ -200,5 +197,5 @@ export default function ScheduledMessagesModal() {
   items1[1] = closure_10(sharedValue(4296).View, obj1);
   items1[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
   obj.children = items1;
-  return tmp9(tmp10, obj);
+  return closure_11(View, obj);
 };

@@ -10,7 +10,7 @@ let closure_5 = async function _fetchUserEntitlements(arg0) {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -46,17 +46,17 @@ let closure_5 = async function _fetchUserEntitlements(arg0) {
               flag = false;
             }
             closure_129_0 = flag;
-            let flag2 = tmp40.withApplication;
+            let flag2 = withSku.withApplication;
             if (flag2 === undefined) {
               flag2 = false;
             }
             closure_129_1 = flag2;
-            let flag3 = tmp40.excludeEnded;
+            let flag3 = withSku.excludeEnded;
             if (flag3 === undefined) {
               flag3 = true;
             }
             closure_129_2 = flag3;
-            entitlementType = tmp40.entitlementType;
+            entitlementType = withSku.entitlementType;
             closure_129_4 = undefined;
             c5 = 1;
             c6 = 1;
@@ -128,15 +128,15 @@ let closure_6 = async function _fetchGiftableEntitlements() {
     c5 = 3;
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_128_0 = arg1;
+    closure_128_0 = value;
     obj3 = { type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS", entitlements: closure_128_0.body };
     closure_129_1(closure_129_2[2]).dispatch(obj3);
     c3 = 0;
     closure_129_1(closure_129_2[2]);
   }
-  return arg1;
+  return value;
 };
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

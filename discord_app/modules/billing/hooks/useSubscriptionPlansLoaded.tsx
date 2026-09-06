@@ -7,7 +7,7 @@ import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4223 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
 const require = fn;
-function getSubscriptionPlansLoaded(items, items2) {
+function getSubscriptionPlansLoaded() {
   let tmp = items;
   if (items === undefined) {
     items = [];

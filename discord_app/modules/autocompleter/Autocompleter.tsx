@@ -2,6 +2,7 @@
 
 // Module 9836 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
+import URLUtilsDefault from "URLUtils" /* 1365 */;
 import StringUtils from "StringUtils" /* 1925 */;
 import _modDef4257 from "module_4257" /* 4257 */;
 import findCodedLinks from "findCodedLinks" /* 4543 */;
@@ -64,7 +65,7 @@ class Autocompleter {
     obj.parseUserResults = function parseUserResults(results) {
       results = results.results;
       if (obj._include(AutocompleterResultTypes.USER)) {
-        obj._userResults = [];
+        tmp2._userResults = [];
         const iter = results[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
@@ -72,13 +73,11 @@ class Autocompleter {
           let user = UserStore.getUser(nextResult.id);
           if (null != user) {
             let _userResults = obj._userResults;
-            obj = { type: null, record: null, score: null, comparator: null };
-            obj.type = AutocompleterResultTypes.USER;
+            obj = { type: AutocompleterResultTypes.USER, record: null, score: null, comparator: null };
             obj.record = tmp11;
             let obj2 = AutocompleteUtils;
             obj.score = obj2.calculateScore(score);
-            let tmp19 = comparator;
-            obj.comparator = tmp19;
+            obj.comparator = comparator;
             let arr = _userResults.push(obj);
           }
           continue;
@@ -96,6 +95,7 @@ class Autocompleter {
         }
         obj.updateAllResults();
       }
+      tmp2 = obj;
     };
     obj.updateAllResults = function updateAllResults() {
       clearTimeout(obj._asyncTimeout);
@@ -301,11 +301,11 @@ prototype["search"] = function search(query, arg1) {
       self._inAppNavigations = self.queryInAppNavigations(closure_1, self._limit);
       if (self._isAsyncSearch()) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(obj._asyncTimeout);
+        clearTimeout(self._asyncTimeout);
         const _setTimeout = setTimeout;
-        obj._asyncTimeout = setTimeout(obj.updateAllResults, 300);
-      } else if (!obj._include(AutocompleterResultTypes.USER)) {
-        obj.updateAllResults();
+        self._asyncTimeout = setTimeout(self.updateAllResults, 300);
+      } else if (!self._include(AutocompleterResultTypes.USER)) {
+        self.updateAllResults();
       }
     });
   }
@@ -420,7 +420,7 @@ prototype["queryUsers"] = function queryUsers(query, arg1, limit) {
     if (self._include(AutocompleterResultTypes.USER)) {
       options = self.options;
       const userFilters = options.userFilters;
-      const tmp2 = getAutocompleterBoosterMap(tmp25.USER, self.options);
+      const tmp2 = getAutocompleterBoosterMap(AutocompleterResultTypes.USER, self.options);
       let thread;
       if (userFilters != null) {
         thread = userFilters.thread;
@@ -439,26 +439,24 @@ prototype["queryUsers"] = function queryUsers(query, arg1, limit) {
           let tmp30 = memberListSections[key10017];
           let userIds = tmp30.userIds;
           for (const item10019 of userIds) {
-            let tmp7 = item10019;
             let friends;
             if (userFilters != null) {
               friends = userFilters.friends;
             }
             if (friends) {
-              friends = !RelationshipStore.isFriend(tmp7);
+              friends = !RelationshipStore.isFriend(item10019);
             }
             if (!friends) {
               let _userBlacklist = self._userBlacklist;
               let hasItem;
               if (_userBlacklist != null) {
-                hasItem = _userBlacklist.includes(tmp7);
+                hasItem = _userBlacklist.includes(item10019);
               }
               friends = hasItem;
             }
             if (!friends) {
-              obj = { userId: null, nick: null };
-              obj.userId = tmp7;
-              let tmp14 = tmp30.usersById[tmp7];
+              obj = { userId: item10019, nick: null };
+              let tmp14 = tmp30.usersById[item10019];
               let displayName;
               if (tmp14 != null) {
                 displayName = tmp14.displayName;
@@ -473,7 +471,6 @@ prototype["queryUsers"] = function queryUsers(query, arg1, limit) {
         self._userResults = AutocompleteUtilsDefault.queryUsers(obj);
       }
     }
-    tmp25 = AutocompleterResultTypes;
   }
 };
 prototype["queryGroupDMs"] = function queryGroupDMs(query, limit) {
@@ -545,8 +542,8 @@ prototype["queryLink"] = function queryLink(query) {
       type = findCodedLinkResult.type;
     }
     if (type === CodedLink.CodedLinkType.INVITE) {
-      obj = { type: tmp.LINK, record: LinkRecord.fromInviteCode(findCodedLinkResult.code), score: null };
-      let tmp3Result = tmp3(5442);
+      obj = { type: AutocompleterResultTypes.LINK, record: LinkRecord.fromInviteCode(findCodedLinkResult.code), score: null };
+      let tmp3Result = AutocompleteUtils;
       obj.score = tmp3Result.calculateScore(11);
       const items = [obj];
       return items;
@@ -560,7 +557,7 @@ prototype["queryLink"] = function queryLink(query) {
         if (undefined !== hostname) {
           str = hostname;
         }
-        let tmp17Result = tmp17(1365);
+        let tmp17Result = URLUtilsDefault;
         let isDiscordHostnameResult = tmp17Result.isDiscordHostname(str);
         if (!isDiscordHostnameResult) {
           const _window = window;
@@ -568,10 +565,10 @@ prototype["queryLink"] = function queryLink(query) {
         }
         if (null !== pathname) {
           if (isDiscordHostnameResult) {
-            tmp17Result = tmp17(1365);
+            tmp17Result = URLUtilsDefault;
             if (tmp17Result.isAppRoute(pathname)) {
-              obj = { type: tmp.LINK, record: LinkRecord.fromPath(pathname), score: null };
-              tmp3Result = tmp3(5442);
+              obj = { type: AutocompleterResultTypes.LINK, record: LinkRecord.fromPath(pathname), score: null };
+              tmp3Result = AutocompleteUtils;
               obj.score = tmp3Result.calculateScore(11);
               const items1 = [obj];
               let items2 = items1;

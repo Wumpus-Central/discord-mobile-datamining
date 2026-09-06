@@ -43,7 +43,7 @@ class Spoiler extends PureComponent {
 }
 Spoiler.prototype["render"] = function render() {
   const self = this;
-  let tmp = closure_6(this.context);
+  const tmp = closure_6(this.context);
   _require = tmp;
   const revealed = this.state.revealed;
   const children = this.props.children;
@@ -57,7 +57,7 @@ Spoiler.prototype["render"] = function render() {
   if (0 === Children.count(children)) {
     return null;
   } else {
-    Children = tmp4.Children;
+    Children = noop.Children;
     let mapped = Children.map(children, (type) => {
       let map = noop;
       if (!noop.isValidElement(type)) {
@@ -90,7 +90,7 @@ Spoiler.prototype["render"] = function render() {
                   flattenResult = closure_2_4.flatten(style);
                 }
                 const obj = { children: null, style: null, onPress: "Array" };
-                ({ Children, cloneElement } = tmp);
+                ({ Children, cloneElement } = validElement);
                 obj.children = Children.map(props.props.children, (props) => {
                   if (validElement.isValidElement(props)) {
                     const style = props.props.style;
@@ -100,7 +100,7 @@ Spoiler.prototype["render"] = function render() {
                       flattenResult = closure_2_4.flatten(style);
                     }
                     const obj = { children: null, style: null, onPress: "Array" };
-                    ({ Children, cloneElement } = tmp);
+                    ({ Children, cloneElement } = validElement);
                     obj.children = Children.map(props.props.children, (props) => {
                       if (validElement.isValidElement(props)) {
                         const style = props.props.style;
@@ -110,7 +110,7 @@ Spoiler.prototype["render"] = function render() {
                           flattenResult = closure_2_4.flatten(style);
                         }
                         const obj = { children: null, style: null, onPress: "Array" };
-                        ({ Children, cloneElement } = tmp);
+                        ({ Children, cloneElement } = validElement);
                         obj.children = Children.map(props.props.children, () => { ... });
                         const items = [flattenResult, spoiler.spoiler];
                         obj.style = items;
@@ -118,7 +118,6 @@ Spoiler.prototype["render"] = function render() {
                       } else {
                         return props;
                       }
-                      tmp = validElement;
                     });
                     const items = [flattenResult, spoiler.spoiler];
                     obj.style = items;
@@ -126,7 +125,6 @@ Spoiler.prototype["render"] = function render() {
                   } else {
                     return props;
                   }
-                  tmp = validElement;
                 });
                 const items = [flattenResult, spoiler.spoiler];
                 obj.style = items;
@@ -134,7 +132,6 @@ Spoiler.prototype["render"] = function render() {
               } else {
                 return props;
               }
-              tmp = validElement;
             });
           }
         }
@@ -156,7 +153,6 @@ Spoiler.prototype["render"] = function render() {
     obj.children = mapped;
     return jsx(require("native").LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
-  tmp4 = noop;
 };
 Spoiler.contextType = fn(4271).ThemeContext;
 size = fn(2);

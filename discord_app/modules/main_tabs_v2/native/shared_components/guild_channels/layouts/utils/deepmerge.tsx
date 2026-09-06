@@ -25,13 +25,13 @@ function merge() {
               if (merge.options.mergeArrays) {
                 const _Array3 = tmp.Array;
                 tmp = new.target;
-                const set = new tmp.Set(tmp2[item].concat(tmp3[item]));
+                const set = new tmp.Set(acc[item].concat(tmp3[item]));
                 tmp3 = set;
                 let fromResult = _Array3.from(set);
               } else {
                 fromResult = tmp3[item];
               }
-              tmp2[item] = fromResult;
+              acc[item] = fromResult;
             }
           }
           let flag = false;
@@ -72,9 +72,8 @@ function merge() {
               }
             }
             if (flag2) {
-              tmp2[item] = merge(tmp2[item], tmp7[item]);
+              acc[item] = merge(acc[item], item[item]);
             }
-            tmp7 = item;
           }
           acc[item] = item[item];
         }

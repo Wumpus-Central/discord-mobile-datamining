@@ -80,7 +80,7 @@ export default noop.memo((style) => {
       const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted(obj);
     } else if ("onCurrentTime" === type) {
       if (controls != null) {
-        const props = tmp.props;
+        const props = controls.props;
         if (props != null) {
           const onCurrentSecond = props.onCurrentSecond;
           if (onCurrentSecond != null) {
@@ -89,7 +89,7 @@ export default noop.memo((style) => {
         }
       }
       if (controls != null) {
-        const props3 = tmp.props;
+        const props3 = controls.props;
         if (props3 != null) {
           const onDuration = props3.onDuration;
           if (onDuration != null) {
@@ -106,7 +106,7 @@ export default noop.memo((style) => {
   const effect = source.useEffect(() => {
     let current;
     if (ref != null) {
-      current = tmp.current;
+      current = ref.current;
     }
     let tmp3 = null != current;
     if (tmp3) {
@@ -124,13 +124,13 @@ export default noop.memo((style) => {
         const _JSON = JSON;
         let obj = { "x-tiktok-player": true };
         const merged = Object.assign({ type: "play" });
-        current = tmp.current;
+        current = ref.current;
         if (current != null) {
           const _HermesInternal = HermesInternal;
           current.injectJavaScript("\n    window.postMessage(" + tmp18 + ", '*')\n  ");
         }
       }
-      let tmp20 = tmp7;
+      let tmp20 = visible;
       if (visible) {
         tmp20 = !closure_6;
       }
@@ -138,13 +138,13 @@ export default noop.memo((style) => {
         const _JSON2 = JSON;
         obj = { "x-tiktok-player": true };
         const merged1 = Object.assign({ type: "play" });
-        const current2 = tmp.current;
+        const current2 = ref.current;
         if (current2 != null) {
           const _HermesInternal2 = HermesInternal;
           current2.injectJavaScript("\n    window.postMessage(" + tmp25 + ", '*')\n  ");
         }
       }
-      let tmp27 = !tmp7;
+      let tmp27 = !visible;
       if (!visible) {
         tmp27 = closure_6;
       }
@@ -152,7 +152,7 @@ export default noop.memo((style) => {
         const _JSON3 = JSON;
         obj = { "x-tiktok-player": true };
         const merged2 = Object.assign({ type: "pause" });
-        const current3 = tmp.current;
+        const current3 = ref.current;
         if (current3 != null) {
           const _HermesInternal3 = HermesInternal;
           current3.injectJavaScript("\n    window.postMessage(" + tmp31 + ", '*')\n  ");
@@ -161,14 +161,14 @@ export default noop.memo((style) => {
       if (first === MediaModalWebView.PlayerState.ENDED) {
         const _JSON6 = JSON;
         const merged3 = Object.assign({ type: "seekTo", value: 0 });
-        const current6 = tmp.current;
+        const current6 = ref.current;
         if (current6 != null) {
           const _HermesInternal4 = HermesInternal;
           current6.injectJavaScript("\n    window.postMessage(" + tmp51 + ", '*')\n  ");
         }
         const _JSON4 = JSON;
         const merged4 = Object.assign({ type: "play" });
-        const current4 = tmp.current;
+        const current4 = ref.current;
         if (current4 != null) {
           const _HermesInternal5 = HermesInternal;
           current4.injectJavaScript("\n    window.postMessage(" + tmp39 + ", '*')\n  ");
@@ -183,7 +183,7 @@ export default noop.memo((style) => {
       const obj3 = { type: str11 };
       const _JSON5 = JSON;
       const merged5 = Object.assign(obj3);
-      const current5 = tmp.current;
+      const current5 = ref.current;
       if (current5 != null) {
         const _HermesInternal6 = HermesInternal;
         current5.injectJavaScript("\n    window.postMessage(" + tmp46 + ", '*')\n  ");

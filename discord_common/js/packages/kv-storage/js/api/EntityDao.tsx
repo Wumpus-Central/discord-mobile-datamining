@@ -114,13 +114,12 @@ prototype["transaction"] = function transaction(arg0, arg1) {
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
   if (typeof EntityDaoTransaction === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(EntityDaoTransaction.prototype);
     obj.transaction = tmp2;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = EntityDaoTransaction;
 };
 prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0) {
   const table = this.table;
@@ -148,13 +147,12 @@ const prototype2 = EntityDaoTransaction.prototype;
 EntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
   const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
   if (typeof EntityDaoTransaction === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(EntityDaoTransaction.prototype);
     obj.transaction = tableTransaction;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = EntityDaoTransaction;
 };
 prototype2["put"] = function put(arg0) {
   let Replace = arg1;

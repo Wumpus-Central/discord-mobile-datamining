@@ -36,6 +36,6 @@ export default function AppIcon(size) {
   const items = [tmp.container, { width: num, height: num, borderWidth: num2 }, size.style];
   obj.style = items;
   obj = { style: tmp.image, source: getIconById(size.id).iconSource };
-  obj.children = <React3 style={tmp.image} source={getIconById(arg0.id).iconSource} />;
-  return <React4 style={tmp.image} source={getIconById(arg0.id).iconSource} />;
+  obj.children = <React3 style={tmp.image} source={getIconById(size.id).iconSource} />;
+  return <React4 style={tmp.image} source={getIconById(size.id).iconSource} />;
 };

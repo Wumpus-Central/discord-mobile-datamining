@@ -4,11 +4,11 @@
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15482 */;
 import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15480 */;
 import SettingBuilders from "SettingBuilders" /* 11468 */;
 import size from "module_2" /* 2 */;
 
-const SettingsNotificationUtils = tmp2(15482);
 ({ useAndroidNotificationLightsEnabled: c2, setAndroidNotificationLightsEnabled } = AndroidNotificationSettingsStore);
 const toggle = SettingBuilders.createToggle({
   useTitle() {

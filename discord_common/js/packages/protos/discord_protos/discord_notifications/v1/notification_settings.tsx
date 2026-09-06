@@ -1033,7 +1033,7 @@ const items6 = [
   },
   { no: 4, name: "collapsed", kind: "scalar", T: 8 }
 ];
-let tmp12 = new "internalBinaryRead"("discord_protos.discord_notifications.v1.ChannelNotificationSettings", items6, tmp4, GuildNotificationSettings$Type, "create", ChannelNotificationSettings$Type, "internalBinaryRead", items6, new.target, undefined, tmp, fn, dependencyMap, new.target, tmp6, t);
+const tmp12 = new "internalBinaryRead"("discord_protos.discord_notifications.v1.ChannelNotificationSettings", items6, tmp4, GuildNotificationSettings$Type, "create", ChannelNotificationSettings$Type, "internalBinaryRead", items6, new.target, undefined, tmp, fn, dependencyMap, new.target, tmp6, t);
 let closure_8 = tmp12;
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_notifications/v1/notification_settings.tsx");

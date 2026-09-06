@@ -15,8 +15,8 @@ let closure_6 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/useOpenPremiumMarketingPayment.tsx");
 
-export default function useOpenPremiumMarketingPayment(arg0) {
-  const analyticsLocations = premiumTrialOffer(premiumTrialOfferPremiumType[3])(arg0).analyticsLocations;
+export default function useOpenPremiumMarketingPayment(PREMIUM_MARKETING_FOOTER) {
+  const analyticsLocations = premiumTrialOffer(premiumTrialOfferPremiumType[3])(PREMIUM_MARKETING_FOOTER).analyticsLocations;
   let obj = analyticsLocations(premiumTrialOfferPremiumType[4]);
   premiumTrialOffer = obj.usePremiumTrialOffer();
   premiumTrialOfferPremiumType = analyticsLocations(premiumTrialOfferPremiumType[5]).usePremiumTrialOfferPremiumType();
@@ -78,7 +78,7 @@ export default function useOpenPremiumMarketingPayment(arg0) {
       let obj = PremiumUtils;
       let interval;
       if (premiumTrialOffer != null) {
-        const subscriptionTrial = tmp3.subscriptionTrial;
+        const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
         if (subscriptionTrial != null) {
           interval = subscriptionTrial.interval;
         }
@@ -86,7 +86,7 @@ export default function useOpenPremiumMarketingPayment(arg0) {
       obj = { intervalType: interval, intervalCount: null };
       let intervalCount;
       if (premiumTrialOffer != null) {
-        const subscriptionTrial2 = tmp3.subscriptionTrial;
+        const subscriptionTrial2 = premiumTrialOffer.subscriptionTrial;
         if (subscriptionTrial2 != null) {
           intervalCount = subscriptionTrial2.intervalCount;
         }

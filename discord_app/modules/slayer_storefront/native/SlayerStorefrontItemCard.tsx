@@ -69,9 +69,9 @@ export default function SlayerStorefrontItemCard(sku) {
         obj2.source = obj3;
         cardImage = cardImage.cardImage;
         obj2.style = cardImage;
-        tmp7Result = tmp7(bound(tmp7Result[8]), obj2);
+        tmp7Result = jsx(bound(tmp7Result[8]), { source: null, style: null });
         obj.children = tmp7Result;
-        tmp7Result = tmp7(closure_4, obj);
+        tmp7Result = <closure_4 source={null} style={null}>{null}</closure_4>;
         const tmp11 = bound(tmp7Result[8]);
       } else {
         const obj4 = { colors: tmp5, start: { x: 0, y: 0 }, end: { x: 1, y: 1 }, style: cardImage.cardImageBackground, children: null };
@@ -81,8 +81,8 @@ export default function SlayerStorefrontItemCard(sku) {
         obj6.uri = str.toString();
         obj5.source = obj6;
         obj5.style = cardImage.cardImage;
-        obj4.children = tmp7(bound(tmp7Result[8]), obj5);
-        tmp7Result = tmp7(tmp15, obj4);
+        obj4.children = jsx(bound(tmp7Result[8]), { source: null, style: null });
+        tmp7Result = <tmp15 colors={tmp5} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={cardImage.cardImageBackground}>{null}</tmp15>;
         const tmp16 = bound(tmp7Result[8]);
       }
       obj.children = tmp7Result;

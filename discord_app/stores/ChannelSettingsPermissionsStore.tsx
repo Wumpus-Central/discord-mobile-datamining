@@ -273,9 +273,9 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(Disp
   },
   CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function handleSaveSuccess(silent) {
     if (silent.silent) {
-      CLOSED = tmp.OPEN;
+      CLOSED = FormStates.OPEN;
     } else {
-      CLOSED = tmp.CLOSED;
+      CLOSED = FormStates.CLOSED;
       init();
     }
   },

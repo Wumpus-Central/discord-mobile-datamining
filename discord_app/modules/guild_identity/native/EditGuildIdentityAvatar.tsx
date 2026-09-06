@@ -2,6 +2,8 @@
 
 // Module 14653 (EditGuildIdentityAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -38,8 +40,8 @@ export default function EditGuildIdentityAvatar(userId) {
     let member = null;
     if (null != stateFromStores) {
       let id;
-      if (tmp != null) {
-        id = tmp.id;
+      if (stateFromStores != null) {
+        id = stateFromStores.id;
       }
       member = GuildMemberStore.getMember(guildId, id);
     }
@@ -100,7 +102,7 @@ export default function EditGuildIdentityAvatar(userId) {
     let tmp20Result = !disabled;
     if (!disabled) {
       obj1 = { style: tmp.editAvatarIcon };
-      tmp20Result = tmp20(tmp6(tmp3[25]), obj1);
+      tmp20Result = closure_10(tmp6(tmp3[25]), obj1);
     }
     items3[1] = tmp20Result;
     obj.children = items3;

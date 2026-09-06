@@ -145,7 +145,7 @@ export default function ForumGuidelinesActionSheet(channel) {
     const obj6 = { color: tmp.editIcon.color, size: "xs" };
     items6[1] = tmp21(tmp2(tmp3[23]).PencilIcon, obj6);
     obj4.children = items6;
-    tmp19Result = tmp19(tmp2(tmp3[21]).PressableOpacity, obj4);
+    tmp19Result = closure_8(tmp2(tmp3[21]).PressableOpacity, obj4);
   }
   const items7 = [tmp19Result, , ];
   const obj7 = { IconComponent: null };

@@ -46,10 +46,10 @@ let prototype = function MemberVerificationApplicationManager() {
           }
           if (null !== lastSeen) {
             actions_AlertActionCreatorsDefault.close();
-            tmp17.isShowingAlert = false;
+            applyArgumentsResult.isShowingAlert = false;
           }
         }
-        let tmp6 = tmp17.isShowingAlert || null == request;
+        let tmp6 = applyArgumentsResult.isShowingAlert || null == request;
         if (!tmp6) {
           let lastSeen1;
           if (request != null) {
@@ -61,7 +61,7 @@ let prototype = function MemberVerificationApplicationManager() {
           let result = MemberVerificationAlertActionCreators.openMemberVerificationSuccessAlert(guildId, () => {
             const result = GuildJoinRequestActionCreatorsDefault.ackUserGuildJoinRequest(guildId, request.joinRequestId);
           });
-          tmp17.isShowingAlert = true;
+          applyArgumentsResult.isShowingAlert = true;
           const tmp3Result = MemberVerificationAlertActionCreators;
         }
       }

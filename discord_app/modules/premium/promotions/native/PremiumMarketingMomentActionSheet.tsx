@@ -108,14 +108,14 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
     size.src = { videoURI: null, uri: null };
     size.style = tmp.video;
     size.paused = stateFromStores;
-    let tmp14Result = tmp14(tmp5(tmp3[18]), size);
+    let tmp14Result = closure_8(tmp5(tmp3[18]), size);
     const obj4 = { videoURI: null, uri: null };
   } else {
     const obj5 = { source: null, style: null, resizeMode: "contain" };
     const obj6 = { uri: bottomSheetData.assetUrl };
     obj5.source = obj6;
     obj5.style = tmp.image;
-    tmp14Result = tmp14(tmp5(tmp3[19]), obj5);
+    tmp14Result = closure_8(tmp5(tmp3[19]), obj5);
   }
   const items5 = [tmp14Result, , , ];
   const obj7 = { style: null, color: "mobile-text-heading-primary", variant: "heading-lg/extrabold", children: bottomSheetData.header };
@@ -137,7 +137,7 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
         },
       children: helpArticleLinkProps.linkText
     };
-    tmp14Result = tmp14(tmp2(tmp3[20]).Text, obj9);
+    tmp14Result = closure_8(tmp2(tmp3[20]).Text, obj9);
   }
   items8[2] = tmp14Result;
   obj8.children = items8;

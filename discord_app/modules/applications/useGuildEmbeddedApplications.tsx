@@ -31,7 +31,7 @@ const initialize = {
   },
   load: null
 };
-let closure_3 = asyncGeneratorStep(async (arg0, value, arg2) => {
+let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -94,7 +94,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGuildEmbeddedApplications.tsx");
 
 export const useGuildEmbeddedApplications = function useGuildEmbeddedApplications(APP_CHANNEL, guildId, channelId) {
-  let tmp = closure_6(APP_CHANNEL, guildId, channelId);
+  const tmp = closure_6(APP_CHANNEL, guildId, channelId);
   const data = tmp.data;
   const error = tmp.error;
   const isLoading = tmp.isLoading;
@@ -113,10 +113,9 @@ export const useGuildEmbeddedApplications = function useGuildEmbeddedApplication
         current = null == error;
       }
       if (current) {
-        tmp.current = false;
+        ref.current = false;
         refetch();
       }
-      tmp = ref;
     }
   }, items);
   return tmp;

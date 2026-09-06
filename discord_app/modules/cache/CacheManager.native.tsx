@@ -6,11 +6,11 @@ import DurationsDefault from "Durations" /* 1090 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import KvCacheVersionDefault from "KvCacheVersion" /* 7654 */;
+import CacheActionCreators from "CacheActionCreators" /* 15570 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
 import CacheStore from "CacheStore" /* 7476 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-const CacheActionCreators = tmp(15570);
 require = fn;
 let closure_5 = new LoggerDefault("CacheStore");
 let closure_6 = 15 * DurationsDefault.Millis.MINUTE;

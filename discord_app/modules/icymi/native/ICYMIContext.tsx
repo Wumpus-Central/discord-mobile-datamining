@@ -20,5 +20,5 @@ export const useICYMIContextConstructor = function useICYMIContextConstructor() 
 export const ICYMIContextProvider = function ICYMIContextProvider(children) {
   const bound = Math.min(useWindowDimensionsDefault().width, 480);
   const PX_16 = nativeDefault.space.PX_16;
-  return <context.Provider value={{ width: bound, margin: PX_16, inset: PX_16 + 38 }}>{arg0.children}</context.Provider>;
+  return <context.Provider value={{ width: bound, margin: PX_16, inset: PX_16 + 38 }}>{children.children}</context.Provider>;
 };

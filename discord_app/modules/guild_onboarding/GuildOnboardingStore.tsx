@@ -65,7 +65,7 @@ GuildOnboardingStatus = {
     if (dependencyMap[guildId] !== obj.STARTED) {
       return false;
     } else {
-      dependencyMap[guildId] = tmp ? tmp2.READY : tmp2.NOT_APPLICABLE;
+      dependencyMap[guildId] = tmp ? obj.READY : obj.NOT_APPLICABLE;
     }
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function handlePromptsFetchFailure(guildId) {

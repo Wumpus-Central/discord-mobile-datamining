@@ -4,6 +4,7 @@
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ValidationUtilsDefault from "ValidationUtils" /* 8376 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -19,9 +20,9 @@ function validateDiscordTag(substr) {
       }
       obj.discrim_len = str2.length;
       obj.username_len = tmp4[0].length;
-      let tmp5Result = tmp5(8376);
+      let tmp5Result = ValidationUtilsDefault;
       obj.is_email_like = tmp5Result.isEmail(substr);
-      tmp5Result = tmp5(8376);
+      tmp5Result = ValidationUtilsDefault;
       obj.is_invite_like = tmp5Result.isInvite(substr);
       obj.is_num_only = re6.test(substr);
       obj.track(constants2.FRIEND_REQUEST_FAILED, obj);
@@ -38,26 +39,26 @@ function humanizeAbortCode(arg0, substr) {
     const intl7 = util.intl;
     const obj = { discordTag: substr };
     return intl7.format(util.t.Oxe6Ur, obj);
-  } else if (tmp.TOO_MANY_FRIENDS === arg0) {
+  } else if (constants.TOO_MANY_FRIENDS === arg0) {
     const intl6 = util.intl;
     return intl6.string(util.t.tnBalD);
-  } else if (tmp.RELATIONSHIP_ALREADY_FRIENDS === arg0) {
+  } else if (constants.RELATIONSHIP_ALREADY_FRIENDS === arg0) {
     const intl5 = util.intl;
     return intl5.string(util.t.VNLneq);
   } else {
-    if (tmp.USER_QUARANTINED !== arg0) {
-      if (tmp.USER_FRIEND_REQUEST_LIMITED_ACCESS !== arg0) {
-        if (tmp.TOO_MANY_BLOCKED_USERS === arg0) {
+    if (constants.USER_QUARANTINED !== arg0) {
+      if (constants.USER_FRIEND_REQUEST_LIMITED_ACCESS !== arg0) {
+        if (constants.TOO_MANY_BLOCKED_USERS === arg0) {
           const intl3 = util.intl;
           return intl3.string(util.t.sIGo1i);
-        } else if (tmp.TOO_MANY_PENDING_OUTGOING === arg0) {
+        } else if (constants.TOO_MANY_PENDING_OUTGOING === arg0) {
           const intl2 = util.intl;
           return intl2.string(util.t.k1K15p);
         } else {
-          if (tmp.RELATIONSHIP_INCOMING_BLOCKED !== arg0) {
-            if (tmp.RELATIONSHIP_INVALID_SELF !== arg0) {
-              if (tmp.RELATIONSHIP_INVALUD_USER_BOT !== arg0) {
-                const RELATIONSHIP_INVALID_DISCORD_TAG = tmp.RELATIONSHIP_INVALID_DISCORD_TAG;
+          if (constants.RELATIONSHIP_INCOMING_BLOCKED !== arg0) {
+            if (constants.RELATIONSHIP_INVALID_SELF !== arg0) {
+              if (constants.RELATIONSHIP_INVALUD_USER_BOT !== arg0) {
+                const RELATIONSHIP_INVALID_DISCORD_TAG = constants.RELATIONSHIP_INVALID_DISCORD_TAG;
               }
             }
           }

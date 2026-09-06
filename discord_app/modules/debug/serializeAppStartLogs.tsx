@@ -54,7 +54,7 @@ export default function serializeAppStartLogs(arg0) {
       tmp = timestamp;
     }
     const substr = logs.slice();
-    const set = new Set(nativeLogs.map(getDisplayName));
+    new Set(nativeLogs.map(getDisplayName));
     let prefix = "";
     closure_5 = [];
     item = nativeLogs.forEach((tag) => {

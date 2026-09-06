@@ -33,6 +33,7 @@ export const deserializeChannelEntries = function deserializeChannelEntries(guil
     let tmp7 = deserializeChannels(tmp4[1]);
     continue;
   }
+  tmp = guildChannels[Symbol.iterator]();
 };
 export const deserializeChannel = function deserializeChannel(permissionOverwrites_) {
   permissionOverwrites_ = permissionOverwrites_.permissionOverwrites_;

@@ -35,7 +35,7 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
       tmp39 = obj;
     }
     return tmp39;
-  } else if (tmp.ACTIVITY_LAYOUT_MODE_UPDATE === arg1) {
+  } else if (RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE === arg1) {
     const application2 = application.application;
     let id1;
     if (application2 != null) {
@@ -51,7 +51,7 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
       tmp34 = obj;
     }
     return tmp34;
-  } else if (tmp.FRAME_LAYOUT_MODE_UPDATE === arg1) {
+  } else if (RPCEvents.FRAME_LAYOUT_MODE_UPDATE === arg1) {
     if (application.source.type !== TransportTypes.POST_MESSAGE) {
       return null;
     } else {
@@ -63,7 +63,7 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
       }
       return tmp28;
     }
-  } else if (tmp.THERMAL_STATE_UPDATE === arg1) {
+  } else if (RPCEvents.THERMAL_STATE_UPDATE === arg1) {
     const thermalState = useThermalState.getThermalState();
     let tmp23 = null;
     if (thermalState !== useThermalState.ThermalStates.UNHANDLED) {
@@ -71,14 +71,14 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
       tmp23 = obj2;
     }
     return tmp23;
-  } else if (tmp.ORIENTATION_UPDATE === arg1) {
+  } else if (RPCEvents.ORIENTATION_UPDATE === arg1) {
     const obj3 = { screen_orientation: null };
     obj3.screen_orientation = obj3.getIsScreenLandscape() ? React6.LANDSCAPE : React6.PORTRAIT;
     return obj3;
-  } else if (tmp.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === arg1) {
+  } else if (RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === arg1) {
     obj2 = activityInstanceConnectedParticipants;
     return obj2.activityInstanceConnectedParticipants();
-  } else if (tmp.QUEST_ENROLLMENT_STATUS_UPDATE === arg1) {
+  } else if (RPCEvents.QUEST_ENROLLMENT_STATUS_UPDATE === arg1) {
     quest_id = quest_id.quest_id;
     if (quest_id) {
       const quest = QuestStore.getQuest(quest_id);

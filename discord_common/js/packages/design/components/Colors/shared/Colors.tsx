@@ -27,7 +27,7 @@ export const getContrastingColor = function getContrastingColor(memo, arg1) {
     base = memo;
   }
   const tmp4Result = _modDef672(base);
-  let obj3 = tmp2(672)(memo);
+  let obj3 = _modDef672(memo);
   const luminanceResult = tmp4Result.luminance();
   let contrastResult = _modDef672.contrast(tmp4Result, obj3);
   let num2 = 99;
@@ -67,6 +67,7 @@ export const getContrastingColor = function getContrastingColor(memo, arg1) {
     let str6 = ", ";
     return "rgba(" + tmp16[0] + ", " + tmp16[1] + ", " + tmp16[2] + ", " + tmp16[3] + ")";
   }
+  const tmp2Result = _modDef672;
 };
 export const darkenColor = function darkenColor(contrastingColor, arg1) {
   const obj = _modDef672(contrastingColor);
@@ -79,7 +80,7 @@ export const brightenColor = function brightenColor(profilePrimaryColor, arg1) {
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 };
 export const setColorOpacity = function setColorOpacity(white, alphaResult) {
-  const obj = _modDef672(white);
-  const tmp = _slicedToArray(_modDef672(white).alpha(alphaResult).rgba(), 4);
+  alphaResult = _modDef672(white).alpha(alphaResult);
+  const tmp = _slicedToArray(alphaResult.rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 };

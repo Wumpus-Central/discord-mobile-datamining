@@ -2,6 +2,7 @@
 
 // Module 12261 (ChatInputScrimGradient)
 import nativeDefault from "native" /* 576 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import useToken from "useToken" /* 4262 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4378 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
@@ -33,12 +34,12 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
   if (scrimBase == null) {
     scrimBase = token;
   }
-  let tmpResult = tmp(1091);
+  let tmpResult = utils_ColorUtils;
   let hex2rgbResult = tmpResult.hex2rgb(scrimBase, 1);
   if (hex2rgbResult == null) {
     hex2rgbResult = scrimBase;
   }
-  tmpResult = tmp(1091);
+  tmpResult = utils_ColorUtils;
   let str = tmpResult.hex2rgb(scrimBase, 0);
   if (str == null) {
     str = "transparent";

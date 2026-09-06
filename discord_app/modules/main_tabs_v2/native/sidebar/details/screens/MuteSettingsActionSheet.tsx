@@ -60,17 +60,15 @@ export default function MuteSettings(guildId) {
       obj.children = closure_9(guildId(onOptionPress[12]).TableRow, obj);
       const items5 = [closure_9(guildId(onOptionPress[11]).TableRowGroup, obj), ];
       let obj3 = { muteConfig, type: null };
-      const tmp10 = closure_11;
-      const tmp11 = closure_10;
       const tmp20 = channelId(onOptionPress[16]);
       guildId(onOptionPress[16]).MuteSettingType;
       const isPrivateResult = channel.isPrivate();
       const MuteSettingType = { children: null };
       obj3.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
-      obj3 = tmp12(tmp20, obj3);
+      obj3 = closure_9(tmp20, obj3);
       items5[1] = obj3;
       MuteSettingType.children = items5;
-      tmp10(tmp11, MuteSettingType);
+      closure_11(closure_10, MuteSettingType);
       const tmp22 = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
     }
   }
@@ -88,10 +86,9 @@ export default function MuteSettings(guildId) {
       }, label);
     })
   };
-  const tmp8 = closure_9;
   const obj5 = { children: null };
   const items6 = [
-    tmp8(guildId(onOptionPress[18]).BottomSheetTitleHeader, { title: memo1, subtitle: memo2 }),
+    closure_9(guildId(onOptionPress[18]).BottomSheetTitleHeader, { title: memo1, subtitle: memo2 }),
     closure_9(guildId(onOptionPress[11]).TableRowGroup, {
       hasIcons: false,
       children: muteOptions.map((item) => {
@@ -136,16 +133,16 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
     obj2.children = intl3.format(util.t.nRwUIL, obj3);
     tmp3 = React7(Text_Text.Text, obj2);
   } else {
-    if (guildMessageNotifications !== tmp2.ALL_MESSAGES) {
+    if (guildMessageNotifications !== UserNotificationSettings.ALL_MESSAGES) {
       tmp3 = null;
     }
     obj = dependencyMap;
-    if (guildMessageNotifications === tmp2.ALL_MESSAGES) {
-      const intl2 = tmp5(1114).intl;
-      let stringResult = intl2.string(tmp5(1114).t.mUbulW);
+    if (guildMessageNotifications === UserNotificationSettings.ALL_MESSAGES) {
+      const intl2 = util.intl;
+      let stringResult = intl2.string(util.t.mUbulW);
     } else {
-      const intl = tmp5(1114).intl;
-      stringResult = intl.string(tmp5(1114).t.GGAdHV);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.GGAdHV);
     }
     obj = { variant: "text-sm/medium", color: "text-default", children: stringResult };
     React7(Text_Text.Text, obj);

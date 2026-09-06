@@ -28,7 +28,7 @@ export default {
     DispatcherDefault.dispatch(element);
     return tmp;
   },
-  pushLazy(promise, merged, c3, navigationParams) {
+  pushLazy(promise, merged) {
     const self = this;
     importDefault = promise;
     dependencyMap = merged;
@@ -49,11 +49,11 @@ export default {
         nextPromise.then((result) => self.push(result, closure_2, closure_3, closure_0));
       }
     }
-    const obj = require("RootNavigationRef");
-    return new Promise((arg0) => {
+    promise = new Promise((arg0) => {
       closure_0 = arg0;
       return promise(merged[6]).enqueue(() => closure_0(self.pushLazy(closure_1, closure_2, closure_3, closure_0)));
     });
+    return promise;
   },
   updateAnimation(key, SLIDE_IN_OUT) {
     const element = { type: "MODAL_UPDATE", key, props: {}, partial: true, animation: SLIDE_IN_OUT };
@@ -65,8 +65,8 @@ export default {
   },
   popWithKey(c3, onExited) {
     let obj = NavigationRouteUtils;
-    obj.popModal(c3, onExited);
-    obj = { type: "MODAL_POP", key: c3, onExited };
+    obj.popModal(key, onExited);
+    obj = { type: "MODAL_POP", key, onExited };
     DispatcherDefault.dispatch(obj);
   },
   popAboveKey(voiceChannelKey) {

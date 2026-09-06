@@ -117,7 +117,7 @@ function MediaKeyboardImage(draftType) {
       obj1 = { source: numItemsPerRow(tmp3[19]), disableColor: false, color: tmp.checkIcon.color, style: tmp.checkIcon };
       obj.children = closure_9(tmp2(tmp3[9]).Icon, obj1);
       const items3 = [index, numItemsPerRow, totalNumItems];
-      let obj2 = { accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: null, onPress: null, onLongPress: null, disabled: null, style: null, children: null };
+      const obj2 = { accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: null, onPress: null, onLongPress: null, disabled: null, style: null, children: null };
       const obj3 = { selected: tmp5 };
       obj2.accessibilityState = obj3;
       obj2.onPress = tmp7;
@@ -129,7 +129,7 @@ function MediaKeyboardImage(draftType) {
         let num = 0;
         if (0 !== totalNumItems) {
           const _Math = Math;
-          num = Math.floor((tmp - 1) / numItemsPerRow);
+          num = Math.floor((totalNumItems - 1) / numItemsPerRow);
         }
         let num3 = 4;
         let num4 = 4;
@@ -139,9 +139,9 @@ function MediaKeyboardImage(draftType) {
         }
         const obj = { borderTopLeftRadius: num4, borderTopRightRadius: null, borderBottomLeftRadius: null, borderBottomRightRadius: null, marginLeft: null };
         if (totalNumItems >= numItemsPerRow) {
-          let tmp7 = tmp4 === tmp5 - 1;
+          let tmp7 = index === numItemsPerRow - 1;
         } else {
-          tmp7 = tmp4 === tmp - 1;
+          tmp7 = index === totalNumItems - 1;
         }
         let num7 = num3;
         if (tmp7) {
@@ -151,7 +151,7 @@ function MediaKeyboardImage(draftType) {
         let num8 = num3;
         if (rounded === num) {
           num8 = num3;
-          if (tmp4 % tmp5 == 0) {
+          if (index % numItemsPerRow == 0) {
             num8 = 16;
           }
         }
@@ -160,7 +160,7 @@ function MediaKeyboardImage(draftType) {
           let num9 = 16;
         } else {
           num9 = num3;
-          if (tmp % tmp5 != 0) {
+          if (totalNumItems % numItemsPerRow != 0) {
             num9 = num3;
           }
         }
@@ -196,7 +196,7 @@ function MediaKeyboardImage(draftType) {
         const size3 = { height: size, width: size };
         items7[1] = size3;
         obj5.style = items7;
-        tmp18Result = tmp18(onLongPressItem, obj5);
+        tmp18Result = closure_9(onLongPressItem, obj5);
       }
       items6[2] = tmp18Result;
       let tmp27 = null;
@@ -282,7 +282,7 @@ function MediaKeyboardSpecialButton(arg0) {
     let num = 0;
     if (0 !== totalNumItems) {
       const _Math = Math;
-      num = Math.floor((tmp - 1) / numItemsPerRow);
+      num = Math.floor((totalNumItems - 1) / numItemsPerRow);
     }
     let num3 = 4;
     let num4 = 4;
@@ -292,9 +292,9 @@ function MediaKeyboardSpecialButton(arg0) {
     }
     const obj = { borderTopLeftRadius: num4, borderTopRightRadius: null, borderBottomLeftRadius: null, borderBottomRightRadius: null, marginLeft: null };
     if (totalNumItems >= numItemsPerRow) {
-      let tmp7 = tmp4 === tmp5 - 1;
+      let tmp7 = index === numItemsPerRow - 1;
     } else {
-      tmp7 = tmp4 === tmp - 1;
+      tmp7 = index === totalNumItems - 1;
     }
     let num7 = num3;
     if (tmp7) {
@@ -304,7 +304,7 @@ function MediaKeyboardSpecialButton(arg0) {
     let num8 = num3;
     if (rounded === num) {
       num8 = num3;
-      if (tmp4 % tmp5 == 0) {
+      if (index % numItemsPerRow == 0) {
         num8 = 16;
       }
     }
@@ -313,7 +313,7 @@ function MediaKeyboardSpecialButton(arg0) {
       let num9 = 16;
     } else {
       num9 = num3;
-      if (tmp % tmp5 != 0) {
+      if (totalNumItems % numItemsPerRow != 0) {
         num9 = num3;
       }
     }

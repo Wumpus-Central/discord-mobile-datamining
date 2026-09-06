@@ -63,15 +63,15 @@ function PendingSpamMessageRequestRow(isLastRow) {
   }
   obj = { onPress: handleSelectRow, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, style: null, children: null };
   obj = { name: constants.ACCEPT_SPAM_MESSAGE, label: null };
-  let intl = tmp2(tmp3[6]).intl;
+  let intl = require("util").intl;
   obj.label = intl.string(require("util").t.apePSa);
   const items1 = [obj, , ];
   obj1 = { name: constants.IGNORE_SPAM_MESSAGE, label: null };
-  const intl2 = tmp2(tmp3[6]).intl;
+  const intl2 = require("util").intl;
   obj1.label = intl2.string(require("util").t.MWOV9D);
   items1[1] = obj1;
   const obj2 = { name: constants.PREVIEW_SPAM_MESSAGE, label: null };
-  const intl3 = tmp2(tmp3[6]).intl;
+  const intl3 = require("util").intl;
   obj2.label = intl3.string(require("util").t.I6PFLB);
   items1[2] = obj2;
   obj.accessibilityActions = items1;
@@ -79,9 +79,9 @@ function PendingSpamMessageRequestRow(isLastRow) {
     const actionName = nativeEvent.nativeEvent.actionName;
     if (constants.ACCEPT_SPAM_MESSAGE === actionName) {
       _undefined2(channel, closure_5);
-    } else if (tmp.IGNORE_SPAM_MESSAGE === actionName) {
+    } else if (constants.IGNORE_SPAM_MESSAGE === actionName) {
       _undefined(channel.id);
-    } else if (tmp.PREVIEW_SPAM_MESSAGE === actionName) {
+    } else if (constants.PREVIEW_SPAM_MESSAGE === actionName) {
       const obj = { is_spam: true, channel_id: channel.id, other_user_id: str.id };
       obj.track(AnalyticEvents.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
       require();
@@ -91,7 +91,7 @@ function PendingSpamMessageRequestRow(isLastRow) {
   const obj3 = { style: tmp.rowContainer, children: null };
   const items2 = [closure_8(hasSingleMessageRequest(str[15]), { channel: messageRequest.channel, otherUser: messageRequest.user }), ];
   const obj5 = { style: tmp.actionContainer, children: null };
-  const intl4 = tmp2(tmp3[6]).intl;
+  const intl4 = require("util").intl;
   str = undefined;
   if (str != null) {
     str = str.toString();
@@ -107,12 +107,12 @@ function PendingSpamMessageRequestRow(isLastRow) {
   if (!isAcceptLoading) {
     if (!isUserProfileLoading) {
       if (!isOptimisticAccepted) {
-        const obj7 = { size: tmp2(tmp3[16]).Icon.Sizes.SMALL, disableColor: true, source: tmp11(tmp3[17]) };
-        let tmp10Result = tmp10(tmp2(tmp3[16]).Icon, obj7);
+        const obj7 = { size: require("native").Icon.Sizes.SMALL, disableColor: true, source: hasSingleMessageRequest(tmp3[17]) };
+        let tmp10Result = closure_8(require("native").Icon, obj7);
       }
       obj6.children = tmp10Result;
-      const items4 = [tmp10(tmp2(tmp3[14]).PressableOpacity, obj6), ];
-      const intl5 = tmp2(tmp3[6]).intl;
+      const items4 = [closure_8(require("Pressables").PressableOpacity, obj6), ];
+      const intl5 = require("util").intl;
       let str1;
       if (str != null) {
         str1 = str.toString();
@@ -122,34 +122,36 @@ function PendingSpamMessageRequestRow(isLastRow) {
       function handleRejectMessageRequest() {
         _undefined(channel.id);
       }
-      obj8.accessibilityLabel = intl5.formatToPlainString(tmp2(tmp3[6]).t["C9Xe6+"], obj9);
+      obj8.accessibilityLabel = intl5.formatToPlainString(require("util").t["C9Xe6+"], obj9);
       obj8.onPress = handleRejectMessageRequest;
       obj8.disabled = tmp7;
       obj8.style = tmp.actionButton;
       if (!isRejectLoading) {
         if (!isOptimisticRejected) {
-          const obj10 = { size: tmp2(tmp3[16]).Icon.Sizes.SMALL, disableColor: true, source: tmp11(tmp3[18]) };
-          tmp10Result = tmp10(tmp2(tmp3[16]).Icon, obj10);
+          const obj10 = { size: require("native").Icon.Sizes.SMALL, disableColor: true, source: hasSingleMessageRequest(tmp3[18]) };
+          tmp10Result = closure_8(require("native").Icon, obj10);
         }
         obj8.children = tmp10Result;
-        items4[1] = tmp10(tmp2(tmp3[14]).PressableOpacity, obj8);
+        items4[1] = closure_8(require("Pressables").PressableOpacity, obj8);
         obj5.children = items4;
-        items2[1] = tmp8(tmp9, obj5);
+        items2[1] = closure_9(tmp9, obj5);
         obj3.children = items2;
-        const items5 = [tmp8(tmp9, obj3), ];
+        const items5 = [closure_9(tmp9, obj3), ];
         let tmp10Result1 = null;
         if (!isLastRow.isLastRow) {
-          tmp10Result1 = tmp10(tmp2(tmp3[19]).FormDivider, { iconPush: true, outer: true });
+          tmp10Result1 = closure_8(require("Form").FormDivider, { iconPush: true, outer: true });
         }
         items5[1] = tmp10Result1;
         obj.children = items5;
-        return tmp8(tmp2(tmp3[14]).PressableOpacity, obj);
+        return closure_9(require("Pressables").PressableOpacity, obj);
       }
       const obj11 = { style: tmp.activityIndicator };
-      tmp10Result = tmp10(id, obj11);
+      tmp10Result = closure_8(id, obj11);
     }
   }
-  tmp10Result = tmp10(id, { style: tmp.activityIndicator });
+  tmp10Result = closure_8(id, { style: tmp.activityIndicator });
+  const obj12 = { style: tmp.activityIndicator };
+  const obj4 = { channel: messageRequest.channel, otherUser: messageRequest.user };
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);

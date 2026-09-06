@@ -142,15 +142,15 @@ export const getRecurrenceOptions = function getRecurrenceOptions(startDate) {
       isStaffResult = currentUser.isStaff();
     }
     if (isStaffResult) {
-      const obj6 = { id: "weekendOnly", value: tmp3.WEEKEND_ONLY, label: null };
-      const intl8 = tmp4(1114).intl;
-      obj6.label = intl8.string(tmp4(1114).t.hRpynV);
+      const obj6 = { id: "weekendOnly", value: RecurrenceOptions.WEEKEND_ONLY, label: null };
+      const intl8 = util.intl;
+      obj6.label = intl8.string(util.t.hRpynV);
       items.push(obj6);
     }
   } else {
-    const obj7 = { id: "weekdayOnly", value: tmp3.WEEKDAY_ONLY, label: null };
-    const intl7 = tmp4(1114).intl;
-    obj7.label = intl7.string(tmp4(1114).t["jYR/MY"]);
+    const obj7 = { id: "weekdayOnly", value: RecurrenceOptions.WEEKDAY_ONLY, label: null };
+    const intl7 = util.intl;
+    obj7.label = intl7.string(util.t["jYR/MY"]);
     items.push(obj7);
   }
   return items;
@@ -192,7 +192,7 @@ export const getEventTimeData = function getEventTimeData(scheduled_start_time, 
   const obj2 = _modDef4153(scheduled_start_time);
   if (null != toISOStringResult1) {
     if ("" !== toISOStringResult1) {
-      const obj3 = tmp3(4153)(toISOStringResult1);
+      const obj3 = _modDef4153(toISOStringResult1);
     }
   }
   let isSameResult = null != toISOStringResult1;
@@ -203,7 +203,7 @@ export const getEventTimeData = function getEventTimeData(scheduled_start_time, 
   const result = obj4.differenceInCalendarDays(obj2.toDate(), obj.toDate());
   if (result <= 1) {
     if (result >= 0) {
-      let tmp6Result = tmp6(4242);
+      let tmp6Result = DateUtils;
       let str3 = "nextDay";
       if (result < 1) {
         str3 = "sameDay";
@@ -215,15 +215,15 @@ export const getEventTimeData = function getEventTimeData(scheduled_start_time, 
     if (null == obj3) {
       obj.endDateTimeString = undefined;
       obj.currentOrPastEvent = obj2 <= obj;
-      obj.upcomingEvent = obj2 <= tmp3(4153)().add(1, "hour");
-      const obj10 = tmp3(4153)();
-      obj.withinStartWindow = obj2 <= tmp3(4153)().add(15, "minute");
+      obj.upcomingEvent = obj2 <= _modDef4153().add(1, "hour");
+      const obj10 = _modDef4153();
+      obj.withinStartWindow = obj2 <= _modDef4153().add(15, "minute");
       obj.diffMinutes = obj2.diff(obj, "minutes");
       return obj;
     } else if (isSameResult) {
       let formatResult = obj3.format("LT");
     } else {
-      tmp6Result = tmp6(4242);
+      tmp6Result = DateUtils;
       value = obj3.get("years");
       let str6 = "ddd MMM Do, YYYY \u00B7 LT";
       if (value === obj.get("years")) {
@@ -239,6 +239,7 @@ export const getEventTimeData = function getEventTimeData(scheduled_start_time, 
     str4 = "ddd MMM Do \u00B7 LT";
   }
   dateFormatResult = DateUtils.dateFormat(obj2, str4);
+  const tmp6Result1 = DateUtils;
 };
 export const convertJSDayToRRuleDay = function convertJSDayToRRuleDay(arg0) {
   const weekday = new m.Weekday(items6[arg0]);
@@ -251,10 +252,9 @@ export const getBaseScheduleForRecurrence = function getBaseScheduleForRecurrenc
     const obj = { startDate: _modDef4153(scheduled_start_time), endDate: "a" };
     tmp = obj;
     if (null != scheduled_end_time) {
-      obj.endDate = tmp2(4153)(scheduled_end_time);
+      obj.endDate = _modDef4153(scheduled_end_time);
       tmp = obj;
     }
-    tmp2 = importDefault;
   }
   const tmp4 = _modDef4153;
   const startDate = tmp4(SnowflakeUtilsDefault.extractTimestamp(nextRecurrenceIdInEvent));
@@ -299,10 +299,9 @@ export const getScheduleFromEventData = function getScheduleFromEventData(arg0) 
     const obj = { startDate: _modDef4153(scheduledStartTime), endDate: "a" };
     tmp = obj;
     if (null != scheduledEndTime) {
-      obj.endDate = tmp2(4153)(scheduledEndTime);
+      obj.endDate = _modDef4153(scheduledEndTime);
       tmp = obj;
     }
-    tmp2 = importDefault;
   }
   return tmp;
 };
@@ -313,10 +312,9 @@ export const getScheduleFromEvent = function getScheduleFromEvent(arg0) {
     const obj = { startDate: _modDef4153(scheduled_start_time), endDate: "a" };
     tmp = obj;
     if (null != scheduled_end_time) {
-      obj.endDate = tmp2(4153)(scheduled_end_time);
+      obj.endDate = _modDef4153(scheduled_end_time);
       tmp = obj;
     }
-    tmp2 = importDefault;
   }
   return tmp;
 };
@@ -381,6 +379,7 @@ export const generateNextRecurrences = function generateNextRecurrences(length, 
   if (arg3 === undefined) {
     flag = false;
   }
+  date = new Date();
   let date1 = date;
   if (date <= date) {
     const _Date = Date;
@@ -445,13 +444,12 @@ export const isValidRecurrence = function isValidRecurrence(start, arg1) {
             if (m.RRule.WEEKLY === frequency) {
               const uTCDay = date.getUTCDay();
               return uTCDay === date1.getUTCDay();
-            } else if (tmp(9667).RRule.YEARLY === frequency) {
+            } else if (m.RRule.YEARLY === frequency) {
               const uTCDate = date.getUTCDate();
               return uTCDate === date1.getUTCDate();
             } else {
               return true;
             }
-            tmp = require;
           }
         }
       }
@@ -473,29 +471,29 @@ export const recurrenceOptionToRecurrenceRule = function recurrenceOptionToRecur
   toDateResult2.setMilliseconds(0);
   let rRule = null;
   if (RecurrenceOptions.NONE !== c7) {
-    if (tmp8.WEEKLY === c7) {
-      let obj = { dtstart: toDateResult2, freq: tmp4(9667).RRule.WEEKLY };
-      rRule = new tmp4(9667).RRule(obj);
-    } else if (tmp8.BIWEEKLY === c7) {
-      obj = { dtstart: toDateResult2, freq: tmp4(9667).RRule.WEEKLY, interval: 2 };
-      rRule = new tmp4(9667).RRule(obj);
-    } else if (tmp8.MONTHLY === c7) {
-      const obj1 = { dtstart: toDateResult2, freq: tmp4(9667).RRule.MONTHLY, byweekday: null };
+    if (RecurrenceOptions.WEEKLY === c7) {
+      let obj = { dtstart: toDateResult2, freq: m.RRule.WEEKLY };
+      rRule = new m.RRule(obj);
+    } else if (RecurrenceOptions.BIWEEKLY === c7) {
+      obj = { dtstart: toDateResult2, freq: m.RRule.WEEKLY, interval: 2 };
+      rRule = new m.RRule(obj);
+    } else if (RecurrenceOptions.MONTHLY === c7) {
+      const obj1 = { dtstart: toDateResult2, freq: m.RRule.MONTHLY, byweekday: null };
       items = [weekday.nth(rounded)];
       obj1.byweekday = items;
-      rRule = new tmp4(9667).RRule(obj1);
-    } else if (tmp8.YEARLY === c7) {
-      const obj2 = { dtstart: toDateResult2, freq: tmp4(9667).RRule.YEARLY };
-      rRule = new tmp4(9667).RRule(obj2);
-    } else if (tmp8.DAILY === c7) {
-      const obj3 = { dtstart: toDateResult2, freq: tmp4(9667).RRule.DAILY };
-      rRule = new tmp4(9667).RRule(obj3);
-    } else if (tmp8.WEEKDAY_ONLY === c7) {
-      const obj4 = { dtstart: toDateResult2, freq: tmp4(9667).RRule.DAILY, byweekday: tmp };
-      rRule = new tmp4(9667).RRule(obj4);
-    } else if (tmp8.WEEKEND_ONLY === c7) {
-      const obj5 = { dtstart: toDateResult2, freq: tmp4(9667).RRule.DAILY, byweekday: tmp2 };
-      rRule = new tmp4(9667).RRule(obj5);
+      rRule = new m.RRule(obj1);
+    } else if (RecurrenceOptions.YEARLY === c7) {
+      const obj2 = { dtstart: toDateResult2, freq: m.RRule.YEARLY };
+      rRule = new m.RRule(obj2);
+    } else if (RecurrenceOptions.DAILY === c7) {
+      const obj3 = { dtstart: toDateResult2, freq: m.RRule.DAILY };
+      rRule = new m.RRule(obj3);
+    } else if (RecurrenceOptions.WEEKDAY_ONLY === c7) {
+      const obj4 = { dtstart: toDateResult2, freq: m.RRule.DAILY, byweekday: tmp };
+      rRule = new m.RRule(obj4);
+    } else if (RecurrenceOptions.WEEKEND_ONLY === c7) {
+      const obj5 = { dtstart: toDateResult2, freq: m.RRule.DAILY, byweekday: tmp2 };
+      rRule = new m.RRule(obj5);
     }
   }
   if (null == rRule) {
@@ -544,19 +542,19 @@ export const recurrenceRuleToOption = function recurrenceRuleToOption(startDate,
         return NONE;
       }
       NONE = RecurrenceOptions.NONE;
-    } else if (tmp14(9667).RRule.YEARLY === freq) {
+    } else if (m.RRule.YEARLY === freq) {
       return RecurrenceOptions.YEARLY;
-    } else if (tmp14(9667).RRule.MONTHLY === freq) {
+    } else if (m.RRule.MONTHLY === freq) {
       return RecurrenceOptions.MONTHLY;
-    } else if (tmp14(9667).RRule.DAILY === freq) {
+    } else if (m.RRule.DAILY === freq) {
       if (null != tmp13.options.byweekday) {
         if (0 !== tmp13.options.byweekday.length) {
-          let tmp14Result = tmp14(12);
+          let tmp14Result = _mod12;
           if (tmp14Result.isEqual(tmp13.options.byweekday, getValidWeekdays(startDate))) {
             let DAILY = RecurrenceOptions.WEEKDAY_ONLY;
           } else {
-            tmp14Result = tmp14(12);
-            DAILY = tmp14Result.isEqual(tmp13.options.byweekday, getValidWeekends(startDate)) ? tmp3.WEEKEND_ONLY : tmp3.NONE;
+            tmp14Result = _mod12;
+            DAILY = tmp14Result.isEqual(tmp13.options.byweekday, getValidWeekends(startDate)) ? RecurrenceOptions.WEEKEND_ONLY : RecurrenceOptions.NONE;
           }
         }
         return DAILY;

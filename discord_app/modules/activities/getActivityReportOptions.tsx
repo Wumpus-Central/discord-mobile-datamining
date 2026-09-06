@@ -19,14 +19,14 @@ export default function getActivityReportOptions(arg0) {
   let t = util.t;
   if (arg0) {
     let stringResult = string(t.uaiF6B);
-    let tmp6 = tmp2;
+    let tmp6 = require;
   } else {
     stringResult = string(t.aO6OMZ);
-    tmp6 = tmp2;
+    tmp6 = require;
   }
   obj.label = stringResult;
   const items = [obj, , , , ];
-  obj = { value: tmp.LAGGING, label: null };
+  obj = { value: ActivityFeedbackReasons.LAGGING, label: null };
   const intl2 = tmp6(1114).intl;
   const string2 = intl2.string;
   const t2 = tmp6(1114).t;
@@ -37,7 +37,7 @@ export default function getActivityReportOptions(arg0) {
   }
   obj.label = string2Result;
   items[1] = obj;
-  obj = { value: tmp.CONFUSING, label: null };
+  obj = { value: ActivityFeedbackReasons.CONFUSING, label: null };
   const intl3 = tmp6(1114).intl;
   const string3 = intl3.string;
   const t3 = tmp6(1114).t;
@@ -66,7 +66,7 @@ export default function getActivityReportOptions(arg0) {
   if (!flag) {
     return items;
   } else {
-    let obj3 = { value: tmp.ADS, label: null };
+    let obj3 = { value: ActivityFeedbackReasons.ADS, label: null };
     const intl6 = tmp6(1114).intl;
     const string5 = intl6.string;
     t = tmp6(1114).t;

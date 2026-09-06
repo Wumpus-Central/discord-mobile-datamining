@@ -41,10 +41,10 @@ export const ActionSheetDragHandle = noop.memo((accessibilityLabel) => {
     obj = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
     obj.style = items1;
-    let tmp4Result = tmp4(ReanimatedRexportDefault.View, obj);
+    let tmp4Result = jsx(ReanimatedRexportDefault.View, { style: null });
   } else {
     const obj1 = { style: tmp3.bar };
-    tmp4Result = tmp4(tmp7, obj1);
+    tmp4Result = <React4 style={tmp3.bar} />;
   }
   obj.children = tmp4Result;
   obj.children = <React4 style={tmp3.handle}>{null}</React4>;

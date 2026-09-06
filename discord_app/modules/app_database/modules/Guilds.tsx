@@ -61,7 +61,8 @@ prototype["getAsync"] = function getAsync(arg0) {
     const _performance2 = performance;
     closure_128_0 = performance.now();
     tmp2(dependencyMap[7]);
-    closure_128_1 = await tmp2(c2[7]).guilds(tmp2).getMany();
+    await tmp2(c2[7]).guilds(tmp2).getMany();
+    closure_128_1 = value;
     const _performance = performance;
     closure_128_2 = performance.now();
     const _HermesInternal = HermesInternal;
@@ -69,12 +70,12 @@ prototype["getAsync"] = function getAsync(arg0) {
     return closure_128_1;
   })();
 };
-prototype["getOneAsync"] = function getOneAsync(arg0, arg1) {
+prototype["getOneAsync"] = function getOneAsync(arg0, dependencyMap) {
   closure_0 = arg0;
-  closure_1 = arg1;
+  closure_1 = dependencyMap;
   return (async () => {
     await v3(closure_1_2[7]).guilds(closure_0).get(closure_1);
-    return arg1;
+    return value;
   })();
 };
 prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {

@@ -21,16 +21,15 @@ function getSavedBadgeSettings() {
       const items = [];
       const _Set = Set;
       const set = new Set();
-      const badges = obj4.getBadges(id);
+      const badges = BadgeDirectoryStore.getBadges(id);
       for (const item10020 of badges) {
-        let tmp10 = item10020;
         let obj2 = BadgeUtils;
         if (!obj2.isPinnedBadge(item10020.badge_id)) {
-          if (tmp10.owned) {
-            if (tmp10.hidden) {
-              let addResult = set.add(tmp10.badge_id);
+          if (item10020.owned) {
+            if (item10020.hidden) {
+              let addResult = set.add(item10020.badge_id);
             } else {
-              let arr = items.push(tmp10.badge_id);
+              let arr = items.push(item10020.badge_id);
             }
           }
         }
@@ -39,7 +38,6 @@ function getSavedBadgeSettings() {
       const obj = { displayOrder: items, hiddenBadges: set };
       return obj;
     }
-    obj4 = BadgeDirectoryStore;
   }
   return null;
 }
@@ -83,7 +81,6 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
     const _Map = Map;
     const map = new Map();
     for (const item10027 of found) {
-      let tmp11 = item10027;
       let tmp12 = set;
       let obj = set(8193);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
@@ -92,20 +89,19 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
         let tmp12Result = tmp12(11199);
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           if (!map.has(tmp15)) {
-            let result = map.set(tmp15, tmp11);
+            let result = map.set(tmp15, item10027);
           }
           continue;
         }
       }
-      let arr = items2.push(tmp11);
+      let arr = items2.push(item10027);
     }
     const items3 = [];
     for (const item10058 of pendingBadgeDisplayOrder) {
-      let tmp25 = item10058;
       value = map.get(item10058);
       if (null != value) {
         arr = items3.push(tmp27);
-        let deleteResult = map.delete(tmp25);
+        let deleteResult = map.delete(item10058);
       }
       continue;
     }
@@ -256,22 +252,20 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     const _Map = Map;
     const map = new Map();
     for (const item10026 of mapped) {
-      let tmp11 = item10026;
       let obj = set(11199);
       if (obj.isPinnedBadge(item10026.badge_id)) {
-        let arr = items1.push(tmp11);
+        let arr = items1.push(item10026);
       } else {
-        let result = map.set(tmp11.badge_id, tmp11);
+        let result = map.set(item10026.badge_id, item10026);
       }
       continue;
     }
     const items2 = [];
     for (const item10048 of pendingBadgeDisplayOrder) {
-      let tmp20 = item10048;
       value = map.get(item10048);
       if (null != value) {
         arr = items2.push(tmp22);
-        let deleteResult = map.delete(tmp20);
+        let deleteResult = map.delete(item10048);
       }
       continue;
     }
@@ -287,13 +281,12 @@ export const getPendingProfileBadges = function getPendingProfileBadges(arr, arr
     return applyPendingBadgeSettingsToProfileBadges(arr, arg2);
   } else {
     const _Set = Set;
-    const set = new Set(arr.map((id) => set(set2[5]).resolveProfileBadgeId(id.id)));
     const _Set2 = Set;
-    const set1 = new Set(pendingBadgeHiddenBadges);
+    const set = new Set(arr.map((id) => set(set2[5]).resolveProfileBadgeId(id.id)));
     if (pendingBadgeDisplayOrder == null) {
       pendingBadgeDisplayOrder = [];
     }
-    const set2 = new Set(pendingBadgeDisplayOrder);
+    const set1 = new Set(pendingBadgeHiddenBadges);
     const found = arr2.filter((owned) => {
       owned = owned.owned;
       if (owned) {

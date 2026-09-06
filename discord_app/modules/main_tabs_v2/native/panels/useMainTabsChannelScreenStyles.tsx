@@ -31,10 +31,9 @@ export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenS
     if (!value) {
       let tmp3 = 0 !== translateX.get();
       if (tmp3) {
-        tmp3 = obj2.get() !== closure_2;
+        tmp3 = translateX.get() !== closure_2;
       }
       value = tmp3;
-      obj2 = translateX;
     }
     obj = { transform: null, shadowOpacity: null, elevation: null, opacity: null };
     obj = { translateX: translateX.get() };

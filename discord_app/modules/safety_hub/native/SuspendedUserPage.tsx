@@ -3,10 +3,13 @@
 // Module 16907 (SuspendedUserPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import LinkingDefault from "Linking" /* 4255 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
 import _modDef6992 from "module_6992" /* 6992 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
+import IconButton from "IconButton" /* 8097 */;
 import SafetyHubPageDefault from "SafetyHubPage" /* 14768 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8430 */;
@@ -38,13 +41,13 @@ export default function SuspendedUserSafetyHubPage() {
   if (tmp6Result) {
     obj = { style: tmp.header, children: null };
     const obj1 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
-    const intl = tmp2(1114).intl;
-    obj1.accessibilityLabel = intl.string(tmp2(1114).t.cpT0Cq);
+    const intl = util.intl;
+    obj1.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj1.onPress = function onPress() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
     obj1.icon = _modDef6992;
-    const items1 = [tmp5(tmp2(8097).IconButton, obj1), ];
+    const items1 = [React5(IconButton.IconButton, obj1), ];
     const obj2 = {
       style: tmp.text,
       onPress() {
@@ -54,16 +57,16 @@ export default function SuspendedUserSafetyHubPage() {
       color: "control-critical-primary-text-default",
       children: null
     };
-    const intl2 = tmp2(1114).intl;
-    const items2 = [intl2.string(tmp2(1114).t["MG+Bzb"]), " ", ];
+    const intl2 = util.intl;
+    const items2 = [intl2.string(util.t["MG+Bzb"]), " ", ];
     const obj3 = { style: tmp.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
-    const intl3 = tmp2(1114).intl;
-    obj3.children = intl3.string(tmp2(1114).t["9JceHN"]);
-    items2[2] = tmp5(tmp2(4556).Text, obj3);
+    const intl3 = util.intl;
+    obj3.children = intl3.string(util.t["9JceHN"]);
+    items2[2] = React5(Text_Text.Text, obj3);
     obj2.children = items2;
-    items1[1] = tmp6(tmp2(4556).Text, obj2);
+    items1[1] = React6(Text_Text.Text, obj2);
     obj.children = items1;
-    tmp6Result = tmp6(tmp7, obj);
+    tmp6Result = React6(View, obj);
   }
   const rect = { top: true, right: true, left: true, children: null };
   const items3 = [tmp6Result, React5(SafetyHubPageDefault, { visible: true })];

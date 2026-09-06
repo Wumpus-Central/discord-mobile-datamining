@@ -88,13 +88,12 @@ function useNullableMessageAuthor(message) {
     if (null != id) {
       let isPrivateResult;
       if (stateFromStores != null) {
-        isPrivateResult = obj.isPrivate();
+        isPrivateResult = stateFromStores.isPrivate();
       }
       nickname = null;
       if (isPrivateResult) {
         nickname = RelationshipStore.getNickname(tmp);
       }
-      obj = stateFromStores;
     }
     return nickname;
   });
@@ -152,14 +151,13 @@ function useNullableUserAuthor(author, channel) {
     let nickname = null;
     if (null != id) {
       let isPrivateResult;
-      if (closure_0 != null) {
-        isPrivateResult = obj.isPrivate();
+      if (_private != null) {
+        isPrivateResult = _private.isPrivate();
       }
       nickname = null;
       if (isPrivateResult) {
         nickname = RelationshipStore.getNickname(tmp);
       }
-      obj = closure_0;
     }
     return nickname;
   });

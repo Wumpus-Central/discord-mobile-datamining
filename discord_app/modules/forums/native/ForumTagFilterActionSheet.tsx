@@ -92,7 +92,7 @@ export default function ForumPostTagsActionSheet(channel) {
     closure_0 = emojiId;
     let obj = { icon: null, label: null, accessibilityLabel: null, checked: null, onPress: null };
     obj = { emojiId: emojiId.emojiId, emojiName: emojiId.emojiName };
-    obj.icon = <EmojiIcon emojiId={arg0.emojiId} emojiName={arg0.emojiName} />;
+    obj.icon = <EmojiIcon emojiId={emojiId.emojiId} emojiName={emojiId.emojiName} />;
     obj.label = emojiId.name;
     const intl = channel(first[11]).intl;
     obj = { tagName: emojiId.name };

@@ -13,7 +13,7 @@ export const useCollapsibleFloatingActionButtonState = function useCollapsibleFl
   const obj = { collapseText: ReanimatedRexport.useSharedValue(0) };
   return obj;
 };
-export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState, UNDETERMINED) {
+export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState) {
   const collapseText = collapsibleFloatingActionButtonState.collapseText;
   let num = UNDETERMINED;
   if (UNDETERMINED === undefined) {

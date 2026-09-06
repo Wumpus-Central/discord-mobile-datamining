@@ -59,7 +59,7 @@ export default function GuildPowerupsWarning(warnings) {
     items[3] = mapped;
     obj.children = items;
     obj.children = closure_5(View, obj);
-    tmp10Result = tmp10(tmp11, obj);
+    tmp10Result = closure_4(View, obj);
   }
   return tmp10Result;
 };

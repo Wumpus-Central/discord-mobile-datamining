@@ -63,7 +63,7 @@ class MessagePreviewManager extends tmp3 {
     };
     obj = closure_1(closure_2[10]);
     closure_129_0 = applyArgumentsResult;
-    applyArgumentsResult.remoteTick = obj.debounce(closure_4(async (arg0, value) => {
+    applyArgumentsResult.remoteTick = obj.debounce(closure_4(async () => {
       if (c8 === 2) {
         c8 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -114,39 +114,36 @@ class MessagePreviewManager extends tmp3 {
                 c8 = 3;
                 let obj1 = { value, done: true };
                 return obj1;
-              } else {
-                let tmp49 = closure_132_0;
-                if (connected.isConnected()) {
-                  if (!tmp49.remoteTicking) {
-                    if (closure_131_0 <= 5) {
-                      closure_132_0.tickQueued = false;
-                      c6 = 1;
-                      closure_132_0.remoteTicking = true;
-                      let remote = closure_132_0.remote;
-                      closure_1 = remote[Symbol.iterator]();
-                      if (closure_1 === undefined) {
-                        let cleanupResult = closure_132_0.cleanup();
-                        closure_132_0.remoteTicking = false;
-                        c6 = 0;
+              } else if (connected.isConnected()) {
+                if (!closure_132_0.remoteTicking) {
+                  if (closure_131_0 <= 5) {
+                    closure_132_0.tickQueued = false;
+                    c6 = 1;
+                    closure_132_0.remoteTicking = true;
+                    let remote = closure_132_0.remote;
+                    closure_1 = remote[Symbol.iterator]();
+                    if (closure_1 === undefined) {
+                      let cleanupResult = closure_132_0.cleanup();
+                      closure_132_0.remoteTicking = false;
+                      c6 = 0;
+                    } else {
+                      c6 = 2;
+                      closure_131_1 = tmp25;
+                      closure_131_2 = closure_3(closure_131_1, 2);
+                      closure_131_3 = closure_131_2[0];
+                      closure_131_4 = closure_131_2[1];
+                      if (null == closure_131_3) {
+                        let dms = closure_132_0.fetchDms(closure_131_4);
                       } else {
-                        c6 = 2;
-                        closure_131_1 = tmp25;
-                        closure_131_2 = closure_3(closure_131_1, 2);
-                        closure_131_3 = closure_131_2[0];
-                        closure_131_4 = closure_131_2[1];
-                        if (null == closure_131_3) {
-                          let dms = closure_132_0.fetchDms(closure_131_4);
-                        } else {
-                          let guilds = closure_132_0.fetchGuilds(closure_131_3, closure_131_4);
-                        }
-                        c7 = 4;
-                        c8 = 1;
+                        let guilds = closure_132_0.fetchGuilds(closure_131_3, closure_131_4);
                       }
+                      c7 = 4;
+                      c8 = 1;
                     }
                   }
-                } else {
-                  tmp49.tickQueued = true;
                 }
+              } else {
+                closure_132_0.tickQueued = true;
               }
             } else if (2 === tmp4) {
               c6 = 0;
@@ -206,7 +203,7 @@ prototype["addWant"] = function addWant(arg0) {
 prototype["fetchLocal"] = function fetchLocal(guild_id) {
   closure_0 = guild_id;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -337,7 +334,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
   if (0 === nextWantsResult.length) {
     let resolved = Promise.resolve();
   } else {
-    resolved = nextWants.try(nextWantsResult, asyncGeneratorStep(async (arg0, value) => {
+    resolved = nextWants.try(nextWantsResult, asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -430,6 +427,7 @@ prototype["cleanup"] = function cleanup() {
     }
     continue;
   }
+  tmp = this.remote[Symbol.iterator]();
 };
 prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSupplemental() {
   const result = this.handleConnectionResumed(false);

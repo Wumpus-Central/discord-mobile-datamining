@@ -134,7 +134,6 @@ export default function UserProfileApplicationWidgetCard(userId) {
     accessibilityLabel: null,
     children: null
   };
-  const tmp29 = closure_10;
   const tmp2Result1 = userId(8926);
   obj6.accessibilityLabel = userId(7624).getWidgetTitle(widget);
   const items4 = [tmp17, ];
@@ -151,12 +150,12 @@ export default function UserProfileApplicationWidgetCard(userId) {
   if (null != tmp15) {
     if (tmp2(8924).ApplicationWidgetLayoutName.WIDGET_TOP_HERO === layout) {
       const obj8 = { header: tmp31, topConfig: tmp15, resolveFieldValue: result, numberFormat: memo };
-      tmp30Result = tmp30(tmp9(8925), obj8);
+      tmp30Result = closure_9(tmp9(8925), obj8);
     } else {
       tmp30Result = null;
       if (tmp2(8924).ApplicationWidgetLayoutName.WIDGET_TOP_CONTAINED === layout) {
         const obj9 = { header: tmp31, topConfig: tmp15, resolveFieldValue: result, numberFormat: memo };
-        tmp30Result = tmp30(tmp9(9017), obj9);
+        tmp30Result = closure_9(tmp9(9017), obj9);
       }
     }
   }
@@ -167,15 +166,15 @@ export default function UserProfileApplicationWidgetCard(userId) {
   if (null != tmp16) {
     if (tmp2(8924).ApplicationWidgetLayoutName.WIDGET_BOTTOM_STATS === layout2) {
       const obj10 = { bottomConfig: tmp16, resolveFieldValue: result, numberFormat: memo };
-      tmp30Result = tmp30(tmp9(9018), obj10);
+      tmp30Result = closure_9(tmp9(9018), obj10);
     } else if (tmp2(8924).ApplicationWidgetLayoutName.WIDGET_BOTTOM_PROGRESS === layout2) {
       const obj11 = { bottomConfig: tmp16, resolveFieldValue: result };
-      tmp30Result = tmp30(tmp9(9019), obj11);
+      tmp30Result = closure_9(tmp9(9019), obj11);
     } else {
       tmp30Result = null;
       if (tmp2(8924).ApplicationWidgetLayoutName.WIDGET_BOTTOM_COLLECTION === layout2) {
         const obj12 = { bottomConfig: tmp16, resolveFieldValue: result };
-        tmp30Result = tmp30(tmp9(9020), obj12);
+        tmp30Result = closure_9(tmp9(9020), obj12);
       }
     }
   }
@@ -187,10 +186,10 @@ export default function UserProfileApplicationWidgetCard(userId) {
       const items5 = [tmp30Result, , ];
       const obj14 = { style: tmp.divider };
       tmp9Result = tmp9(7207);
-      items5[1] = tmp30(closure_6, obj14);
+      items5[1] = closure_9(closure_6, obj14);
       items5[2] = tmp30Result;
       obj13.children = items5;
-      tmp29Result = tmp29(tmp9Result, obj13);
+      tmp29Result = closure_10(tmp9Result, obj13);
     }
   }
   return tmp29Result;

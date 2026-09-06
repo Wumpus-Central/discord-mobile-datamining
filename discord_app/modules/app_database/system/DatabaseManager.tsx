@@ -15,7 +15,7 @@ require = fn;
 function databaseName(arg0) {
   return "@account." + arg0;
 }
-let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0, value) {
+let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -259,7 +259,7 @@ prototype["handleAuthenticationStoreChanged"] = function handleAuthenticationSto
 function carefullySpeculativelyOpen(userId) {
   closure_0 = userId;
   let self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

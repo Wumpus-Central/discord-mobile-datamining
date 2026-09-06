@@ -27,7 +27,7 @@ export default function MemberVerificationForm(guild) {
   c8 = undefined;
   c9 = undefined;
   let memo1;
-  closure_11 = async function _handleSubmit(arg0, value) {
+  closure_11 = async function _handleSubmit() {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -115,12 +115,11 @@ export default function MemberVerificationForm(guild) {
                 let message = closure_129_1.message;
               }
             }
-            tmp22(message);
+            closure_130_9(message);
             closure_130_8(false);
           }
           let intl = guild(tmp3[9]).intl;
           message = intl.string(guild(tmp3[9]).t.PD09Sl);
-          tmp22 = closure_130_9;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -269,7 +268,7 @@ export default function MemberVerificationForm(guild) {
     memo1 = obj3.useMemo(() => {
       let someResult;
       if (first != null) {
-        someResult = obj.some((item) => !guild(onClose[15]).isValidFormResponse(item));
+        someResult = first.some((item) => !guild(onClose[15]).isValidFormResponse(item));
       }
       if (someResult) {
         return true;
@@ -280,10 +279,10 @@ export default function MemberVerificationForm(guild) {
         if (VerificationLevels.VERY_HIGH === verificationLevel) {
           return !userVerificationState[MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE];
         } else {
-          if (tmp4.HIGH !== verificationLevel) {
-            if (tmp4.MEDIUM !== verificationLevel) {
-              if (tmp4.LOW !== verificationLevel) {
-                const NONE = tmp4.NONE;
+          if (VerificationLevels.HIGH !== verificationLevel) {
+            if (VerificationLevels.MEDIUM !== verificationLevel) {
+              if (VerificationLevels.LOW !== verificationLevel) {
+                const NONE = VerificationLevels.NONE;
                 return false;
               }
             }
@@ -291,12 +290,11 @@ export default function MemberVerificationForm(guild) {
           const tmp8 = userVerificationState[MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL];
           let tmp9 = !tmp8;
           if (!tmp8) {
-            tmp9 = !userVerificationState[tmp6(undefined, 4384).UserVerificationFieldPlatforms.PHONE];
+            tmp9 = !userVerificationState[MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE];
           }
           return tmp9;
         }
       }
-      obj = first;
     }, items7);
     if (null == formFields) {
       return null;
@@ -308,28 +306,28 @@ export default function MemberVerificationForm(guild) {
         onChange: function handleFormChange(arg0, response) {
               if (null != first) {
                 const items = [];
-                let arraySpreadResult = HermesBuiltin.arraySpread(arr.slice(0, arg0), 0);
+                let arraySpreadResult = HermesBuiltin.arraySpread(first.slice(0, arg0), 0);
                 const obj = {};
                 const merged = Object.assign(tmp3);
                 obj.response = response;
                 items[arraySpreadResult] = obj;
-                arraySpreadResult = HermesBuiltin.arraySpread(arr.slice(arg0 + 1), arraySpreadResult + 1);
+                arraySpreadResult = HermesBuiltin.arraySpread(first.slice(arg0 + 1), arraySpreadResult + 1);
                 ref(items);
               }
             },
         verification: userVerificationState
       };
-      const items8 = [memo1(tmp5(tmp3[17]), obj), , ];
+      const items8 = [memo1(require("MemberVerificationFormRenderer"), obj), , ];
       let tmp32Result = null;
       if (null != tmp26) {
         obj1 = { style: tmp.error, children: tmp26 };
-        tmp32Result = tmp32(tmp5(tmp3[18]), obj1);
+        tmp32Result = tmp32(require("FreeFormErrorLabel"), obj1);
       }
       items8[1] = tmp32Result;
       obj2 = { style: tmp.submitButton, children: null };
       obj3 = { variant: "primary", size: "md", grow: true, text: null, loading: null, disabled: null, onPress: null };
-      let intl = tmp2(tmp3[9]).intl;
-      obj3.text = intl.string(tmp2(tmp3[9]).t["r8/DT+"]);
+      let intl = tmp2(onClose[9]).intl;
+      obj3.text = intl.string(tmp2(onClose[9]).t["r8/DT+"]);
       obj3.loading = tmp24;
       obj3.disabled = tmp24;
       obj3.onPress = function handleSubmit() {
@@ -342,7 +340,7 @@ export default function MemberVerificationForm(guild) {
         }
         return applyArgumentsResult;
       };
-      obj2.children = memo1(tmp2(tmp3[19]).Button, obj3);
+      obj2.children = memo1(tmp2(onClose[19]).Button, obj3);
       items8[2] = memo1(closure_6, obj2);
       obj.children = items8;
       return closure_11(closure_6, obj);

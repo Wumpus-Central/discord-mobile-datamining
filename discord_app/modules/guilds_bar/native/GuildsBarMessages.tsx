@@ -42,7 +42,7 @@ export default noop.memo(function GuildsBarMessages() {
   obj = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "CATEGORY_COLLAPSE_ALL", externalChildren: null, expandedChildren: false, children: false };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.label = intl.string(util.t.YUU0RF);
   obj.externalChildren = badge;
   obj.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});

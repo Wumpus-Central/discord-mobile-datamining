@@ -87,12 +87,12 @@ export default function ChannelPrompt(guildId) {
       c5 = 3;
     } else if (arg0 === 1) {
       c5 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       closure_129_4();
       c3 = 0;
     }
-    return arg1;
+    return value;
   }), items2);
   let tmp14Result = null;
   if (null != stateFromStores) {
@@ -149,13 +149,13 @@ export default function ChannelPrompt(guildId) {
         anyErrorMessage = obj1.getAnyErrorMessage();
       }
       obj9.children = anyErrorMessage;
-      tmp14Result = tmp14(tmp17(tmp3[21]), obj9);
+      tmp14Result = closure_10(tmp17(tmp3[21]), obj9);
       const tmp17Result1 = tmp17(tmp3[21]);
     }
     items3[6] = tmp14Result;
     obj.children = items3;
     obj.children = closure_11(c6, obj);
-    tmp14Result = tmp14(tmp2(tmp3[15]).SafeAreaPaddingView, obj);
+    tmp14Result = closure_10(tmp2(tmp3[15]).SafeAreaPaddingView, obj);
     const tmp18 = hasBack(tmp3[16]);
   }
   return tmp14Result;

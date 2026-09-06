@@ -33,7 +33,7 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
-  let tmp = closure_11();
+  const tmp = closure_11();
   let obj = giftCodeRecord(10699);
   const nativeGiftContext = obj.useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
@@ -56,10 +56,9 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   const callback = noop.useCallback(() => {
     value = SKUStore.get(giftCodeRecord.skuId);
     if (null != value) {
-      GiftCodeUtils.trackGiftCodeCopy(tmp, value);
+      GiftCodeUtils.trackGiftCodeCopy(giftCodeRecord, value);
     }
     ClipboardUtils.copy(giftCodeURL);
-    tmp = giftCodeRecord;
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
   obj.children = closure_8(giftCodeURL(10830), { giftStyle });

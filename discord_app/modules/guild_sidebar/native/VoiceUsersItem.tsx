@@ -22,5 +22,5 @@ export default function VoiceUsersItem(children) {
     voiceStatesCollapsed = tmp.voiceStatesCollapsed;
   }
   style[1] = voiceStatesCollapsed;
-  return <View style={style}>{arg0.children}</View>;
+  return <View style={style}>{children.children}</View>;
 };

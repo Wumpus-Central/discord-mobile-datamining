@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroU
 
 export const GroupDMNitroAcquisitionStrategy = obj;
 export const GroupDMNitroUpsellRoute = obj;
-export const getGroupDMNitroAudience = function getGroupDMNitroAudience(premiumType, flag) {
+export const getGroupDMNitroAudience = function getGroupDMNitroAudience(premiumType) {
   if (flag === undefined) {
     flag = false;
   }

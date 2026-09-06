@@ -3,6 +3,8 @@
 // Module 14693 (SettingRendererUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1074 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6625 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
@@ -23,9 +25,9 @@ export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
   function goToScreen() {
     let obj = useKeyboardIsOpen;
     if (obj.getKeyboardIsOpen()) {
-      let tmpResult = tmp(1115);
+      let tmpResult = PlatformUtils;
       if (tmpResult.isIOS()) {
-        tmpResult = tmp(1874);
+        tmpResult = KeyboardManagerUtils;
         let result = tmpResult.dismissGlobalKeyboard();
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => {
@@ -45,6 +47,7 @@ export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
     obj.source = obj;
     const result1 = UserSettingsUtils.trackUserSettingsPaneViewed(obj);
     navigation.navigate(closure_1_1.route);
+    const tmpResult1 = UserSettingsUtils;
   }
   let preNavigationActionResult;
   if (preNavigationAction != null) {
@@ -69,12 +72,11 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
       if (null != cachedSettingTitle) {
         items = [tmp, ];
         const items1 = [cachedSettingTitle];
-        HermesBuiltin.arraySpread(tmp3(14582).getCachedSettingSearchTerms(tmp), 1);
+        HermesBuiltin.arraySpread(SettingHookHarness.getCachedSettingSearchTerms(tmp), 1);
         items[1] = items1;
         items.push(items);
-        const tmp3Result = tmp3(14582);
+        const tmp3Result = SettingHookHarness;
       }
-      tmp3 = require;
     }
   });
   return items;
@@ -89,9 +91,8 @@ export const getSettingScreens = function getSettingScreens() {
       if (!set.has(tmp2.screen.route)) {
         items = [tmp, tmp2.screen];
         items.push(items);
-        obj.add(tmp2.screen.route);
+        set.add(tmp2.screen.route);
       }
-      obj = set;
     }
   });
   return items;
@@ -126,11 +127,9 @@ export const toSettingListItems = function toSettingListItems(node, field) {
         items.push({ type: constants.SECTION_ROW, setting, settingData: SettingsRendererConfig.SETTING_RENDERER_CONFIG[setting], start: 0 === index, end: index === found.length - 1 });
       });
       if (null != settings.subLabel) {
-        obj = { type: tmp.SECTION_FOOTER, label: settings.subLabel };
-        arr3.push(obj);
+        obj = { type: constants.SECTION_FOOTER, label: settings.subLabel };
+        items.push(obj);
       }
-      arr3 = items;
-      tmp = constants;
     }
   });
   return items;
@@ -169,9 +168,9 @@ export const getSettingListSearchResultItems = function getSettingListSearchResu
       let IconComponent = null;
       if (constants2.RADIO !== type) {
         IconComponent = null;
-        if (tmp13.VOLUME_SLIDER !== type) {
+        if (constants2.VOLUME_SLIDER !== type) {
           IconComponent = null;
-          if (tmp13.SLIDER !== type) {
+          if (constants2.SLIDER !== type) {
             IconComponent = tmp12.IconComponent;
           }
         }
@@ -257,22 +256,21 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
           setting = setting.setting;
           let nearestRouteAncestorDataOrSelf = items(map1[10]).SETTING_RENDERER_CONFIG[setting];
           if (null != nearestRouteAncestorDataOrSelf.parent) {
-            let obj = map(tmp2[11]);
+            let obj = map(map1[11]);
             let highestLevelAncestor = obj.getHighestLevelAncestor(setting);
-            nearestRouteAncestorDataOrSelf = map(tmp2[11]).getNearestRouteAncestorDataOrSelf(setting);
-            const obj2 = map(tmp2[11]);
+            nearestRouteAncestorDataOrSelf = map(map1[11]).getNearestRouteAncestorDataOrSelf(setting);
+            const obj2 = map(map1[11]);
           } else {
             highestLevelAncestor = setting;
           }
           obj = { type: total.SETTING_SEARCH_RESULT, settingData: nearestRouteAncestorDataOrSelf, title: null, IconComponent: null, breadcrumbs: null, setting: null, index: null, total: null };
           const cachedSettingTitle = items(map1[8]).getCachedSettingTitle(setting);
-          const tmp8 = map;
           const tmpResult = items(map1[8]);
           map(map1[9])(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
           obj.title = cachedSettingTitle;
           let tmp12;
           if (0 === index) {
-            const tmp13 = tmp(tmp2[10]).SETTING_RENDERER_CONFIG[highestLevelAncestor];
+            const tmp13 = items(map1[10]).SETTING_RENDERER_CONFIG[highestLevelAncestor];
             const type = tmp13.type;
             let IconComponent = null;
             if (index.RADIO !== type) {
@@ -289,20 +287,21 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
           obj.IconComponent = tmp12;
           const tmp10 = null != cachedSettingTitle;
           const tmp9 = map(map1[9]);
-          obj.breadcrumbs = tmp8(map1[11]).getBreadcrumbs(setting);
+          obj.breadcrumbs = map(map1[11]).getBreadcrumbs(setting);
           obj.setting = setting;
           obj.index = index;
           obj.total = total;
           index = index + 1;
           item.push(obj);
+          const tmp8Result = map(map1[11]);
         });
       }
     });
     return items;
   }
 };
-export const getInitialScrollIndex = function getInitialScrollIndex(arg0, findLastIndex) {
-  closure_0 = arg0;
+export const getInitialScrollIndex = function getInitialScrollIndex(current, findLastIndex) {
+  closure_0 = current;
   const findLastIndexResult = findLastIndex.findLastIndex((type) => {
     let tmp = type.type === constants.SECTION_ROW;
     if (tmp) {

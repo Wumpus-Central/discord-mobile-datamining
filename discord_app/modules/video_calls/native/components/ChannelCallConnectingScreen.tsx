@@ -12,6 +12,8 @@ import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
 import beginConsoleTransfer from "beginConsoleTransfer" /* 9447 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9820 */;
 import UserSettingsVoiceDefault from "UserSettingsVoice" /* 9979 */;
+import VoiceChatHeaderIconDefault from "VoiceChatHeaderIcon" /* 10000 */;
+import _modDef10001 from "module_10001" /* 10001 */;
 import ChannelCallMicButton from "ChannelCallMicButton" /* 10002 */;
 import coercePlatformTypeToConsoleType from "coercePlatformTypeToConsoleType" /* 10009 */;
 import noop from "module_19" /* 19 */;
@@ -157,12 +159,12 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   const items = [closure_12(View, { style: { width: 4 } }), , , ];
   let tmp9Result = null;
   if (null != fn) {
-    obj = { source: tmp2(10001), onPress: fn, accessibilityLabel: null };
+    obj = { source: _modDef10001, onPress: fn, accessibilityLabel: null };
     const intl = tmp5(1114).intl;
     obj = { channelName: tmp4 };
     obj.accessibilityLabel = intl.formatToPlainString(tmp5(1114).t["dHHb/2"], obj);
-    tmp9Result = tmp9(tmp2(10000), obj);
-    const tmp2Result = tmp2(10000);
+    tmp9Result = closure_12(VoiceChatHeaderIconDefault, obj);
+    const tmp2Result = VoiceChatHeaderIconDefault;
   }
   const obj1 = { children: null };
   items[1] = tmp9Result;

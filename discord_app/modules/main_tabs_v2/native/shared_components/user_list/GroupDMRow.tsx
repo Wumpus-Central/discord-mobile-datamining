@@ -2,7 +2,10 @@
 
 // Module 10909 (GroupDMRow)
 import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
+import TableRow from "TableRow" /* 5605 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
 import useRecipientsLabel from "useRecipientsLabel" /* 10911 */;
 import noop from "module_19" /* 19 */;
@@ -45,7 +48,7 @@ export default function GroupDMRow(channel) {
   let tmp5Result;
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
-    tmp5Result = tmp5(tmp7(4556).Text, obj);
+    tmp5Result = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel });
   }
   obj.subLabel = tmp5Result;
   obj.icon = jsx(GroupDMAvatarDefault, {});
@@ -60,11 +63,11 @@ export default function GroupDMRow(channel) {
     obj1 = {};
     const merged2 = Object.assign(obj);
     obj1.checked = flag;
-    tmp5Result = tmp5(tmp7(5604).TableCheckboxRow, obj1);
+    tmp5Result = jsx(TableCheckboxRow.TableCheckboxRow, {});
   } else {
     const obj2 = {};
     const merged3 = Object.assign(obj);
-    tmp5Result = tmp5(tmp7(5605).TableRow, obj2);
+    tmp5Result = jsx(TableRow.TableRow, {});
   }
   return tmp5Result;
 };

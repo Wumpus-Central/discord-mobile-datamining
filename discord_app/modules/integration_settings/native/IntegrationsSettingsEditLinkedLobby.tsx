@@ -85,7 +85,7 @@ export default function EditLinkedLobby(channel) {
       return null;
     } else {
       const _Date = Date;
-      const date = new Date(tmp);
+      const date = new Date(linked_at);
       if (null != stateFromStores) {
         const intl2 = util.intl;
         let obj = {
@@ -128,7 +128,7 @@ export default function EditLinkedLobby(channel) {
       const obj8 = { variant: "text-sm/medium", color: "text-subtle", children: memo };
       items5[1] = tmp19(tmp(tmp2[16]).Text, obj8);
       obj6.children = items5;
-      tmp20Result = tmp20(closure_7, obj6);
+      tmp20Result = closure_8(closure_7, obj6);
     }
     items4[2] = tmp20Result;
     obj2.children = items4;

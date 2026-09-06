@@ -167,41 +167,41 @@ export const MediaViewerItem = noop.memo((index) => {
     }
     obj5 = PlatformUtils2;
     const maxDistanceResult = numberOfTapsResult.maxDistance(num2);
-    const Gesture2 = tmp(6655).Gesture;
+    const Gesture2 = LegacyBaseButton.Gesture;
     const onStartResult = numberOfTapsResult.maxDistance(num2).onStart(callback5);
     const TapResult1 = Gesture2.Tap();
     const runOnJSResult1 = Gesture2.Tap().runOnJS(true);
     const enabledResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo);
-    let tmpResult = tmp(1115);
+    let tmpResult = PlatformUtils2;
     let num3 = num;
     if (tmpResult.isAndroid()) {
       num3 = 20;
     }
     const numberOfTapsResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo).numberOfTaps(1);
     const maxDistanceResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo).numberOfTaps(1).maxDistance(num3);
-    const Gesture3 = tmp(6655).Gesture;
+    const Gesture3 = LegacyBaseButton.Gesture;
     const onStartResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo).numberOfTaps(1).maxDistance(num3).onStart(callback4);
     const TapResult2 = Gesture3.Tap();
-    let tmp6 = tmp3;
+    let tmp6 = memo;
     if (memo) {
       tmp6 = !obscure;
     }
     const runOnJSResult2 = Gesture3.Tap().runOnJS(true);
     const enabledResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6);
-    tmpResult = tmp(1115);
+    tmpResult = PlatformUtils2;
     if (tmpResult.isAndroid()) {
       num = 20;
     }
     const numberOfTapsResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1);
     const maxDistanceResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num);
-    const Gesture4 = tmp(6655).Gesture;
+    const Gesture4 = LegacyBaseButton.Gesture;
     const onStartResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num).onStart(callback6);
-    const Gesture5 = tmp(6655).Gesture;
+    const Gesture5 = LegacyBaseButton.Gesture;
     const ExclusiveResult = Gesture4.Exclusive(Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num).onStart(callback6), onStartResult, onStartResult1);
     const LongPressResult = Gesture5.LongPress();
     const runOnJSResult3 = Gesture5.LongPress().runOnJS(true);
     const enabledResult3 = Gesture5.LongPress().runOnJS(true).enabled(!memo);
-    const Gesture6 = tmp(6655).Gesture;
+    const Gesture6 = LegacyBaseButton.Gesture;
     return Gesture6.Simultaneous(ExclusiveResult, Gesture5.LongPress().runOnJS(true).enabled(!memo).onStart(callback3), panGesture);
   }, items7);
   obj.useRef(false);

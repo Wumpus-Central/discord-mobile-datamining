@@ -39,10 +39,10 @@ function WarningBox(application) {
         name1 = application.name;
       }
       obj.applicationName = name1;
-      obj.children = intl.formatToPlainString(tmp6(1114).t["EgCl+Q"], obj);
+      obj.children = intl.formatToPlainString(util.t["EgCl+Q"], obj);
       tmp7 = obj;
     } else {
-      obj.children = intl.format(tmp6(1114).t["3T0cpx"], {});
+      obj.children = intl.format(util.t["3T0cpx"], {});
       tmp7 = obj;
     }
     React4(InfoBoxDefault, tmp7);

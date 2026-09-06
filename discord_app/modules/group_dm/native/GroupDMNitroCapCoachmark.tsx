@@ -91,6 +91,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
     }, items1);
     const coachmark = tmp3(11127).useCoachmark(ref, memo);
     obj = { ref, collapsable: false, children: channelId.children };
-    return <closure_5 ref={ref} collapsable={false}>{arg0.children}</closure_5>;
+    return <closure_5 ref={ref} collapsable={false}>{channelId.children}</closure_5>;
   }
+  obj4 = _location(11594);
 };

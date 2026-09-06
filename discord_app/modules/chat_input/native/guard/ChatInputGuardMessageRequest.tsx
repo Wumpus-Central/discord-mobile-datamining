@@ -15,7 +15,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   channel = channel.channel;
   dependencyMap = undefined;
   c3 = undefined;
-  closure_4 = async function _onAcceptClick(arg0, value) {
+  closure_4 = async function _onAcceptClick(arg0) {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -66,7 +66,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
       }
     }
   };
-  closure_5 = async function _onRejectClick(arg0, value) {
+  closure_5 = async function _onRejectClick(arg0) {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

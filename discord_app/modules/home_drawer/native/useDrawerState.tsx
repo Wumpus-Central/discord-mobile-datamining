@@ -9,7 +9,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
 
-export const useDrawerOpen = function useDrawerOpen(enableHome) {
+export const useDrawerOpen = function useDrawerOpen() {
   let flag = enableHome;
   if (enableHome === undefined) {
     flag = true;
@@ -75,6 +75,7 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
         }
         closure_1_2(true === drawerOpen);
       }
+      const obj = flag(navigation[3]);
     }
     if (handleStateChange) {
       navigation.addListener("state", handleStateChange);

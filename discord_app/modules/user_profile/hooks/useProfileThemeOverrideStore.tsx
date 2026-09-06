@@ -73,15 +73,16 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       tmp5 = null;
     }
     if (themeType !== ThemeTypes.DARK) {
-      let isThemeLightResult = themeType === tmp11.DARK;
+      let isThemeLightResult = themeType === ThemeTypes.DARK;
       if (isThemeLightResult) {
         isThemeLightResult = shared.isThemeLight(tmp3);
       }
       let DARKER = themeType;
       if (isThemeLightResult) {
-        DARKER = tmp11.DARKER;
+        DARKER = ThemeTypes.DARKER;
       }
     } else {
+      shared;
       DARKER = tmp3;
     }
     obj = { theme: DARKER, primaryColor: tmp5, secondaryColor: tmp4 };

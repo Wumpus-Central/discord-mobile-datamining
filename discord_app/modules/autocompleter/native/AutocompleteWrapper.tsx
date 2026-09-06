@@ -6,6 +6,7 @@ import PlatformUtils from "PlatformUtils" /* 1115 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import Server from "Server" /* 1894 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import TimestampUtils from "TimestampUtils" /* 5022 */;
 import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 5516 */;
 import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7038 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
@@ -70,7 +71,7 @@ let closure_33 = createStyles.createStyles((borderRadius, borderWidth, borderTop
   return obj;
 });
 let closure_35 = { resultCount: 0, stickerResults: [], nonStickerResults: [], hasStickerResults: false, hasNonStickerResults: false };
-const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
+const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
   _require = analyticsLocations;
   const channel = analyticsLocations.channel;
@@ -171,7 +172,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
               if ("gameMentionInput" === result1) {
                 if (setting1) {
                   if (null == anchor) {
-                    let tmp33Result = tmp33(10262);
+                    let tmp33Result = autocompleter_AutocompleteUtils;
                     if (tmp33Result.isSpaceJustTypedAtCaret(text, selectionEnd, tmp, tmp2)) {
                       const current2 = chatInputRef.current;
                       current2.insertText(__initData2, result.tokenStart, false, undefined, tmp2);
@@ -182,7 +183,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
               } else if ("timestampMentionInput" === result1) {
                 if (enabled) {
                   if (null == anchor2) {
-                    tmp33Result = tmp33(10262);
+                    tmp33Result = autocompleter_AutocompleteUtils;
                     if (tmp33Result.isSpaceJustTypedAtCaret(text, selectionEnd, tmp, tmp2)) {
                       const current = chatInputRef.current;
                       current.insertText(__initData3, result.tokenStart, false, undefined, tmp2);
@@ -218,7 +219,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
   }, []);
   const setData = channel(canMentionEveryone[36])(tmp18[1], 16).setData;
   const items5 = [setData];
-  const imperativeHandle = onChangeAutoCompleteVisibility.useImperativeHandle(ref, () => ({ setChatInputHeight, setData }), items5);
+  const imperativeHandle = onChangeAutoCompleteVisibility.useImperativeHandle(arg1, () => ({ setChatInputHeight, setData }), items5);
   const items6 = [selectionStart, selectionEnd, text, activeCommand, optionStates, activeOption, canMentionEveryone, commandsDisabled, memo, stateFromStores, stateFromStores1, setting1, anchor, anchor2];
   const memo1 = onChangeAutoCompleteVisibility.useMemo(() => {
     canMentionEveryone = selectionStart;
@@ -226,16 +227,16 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
       if (0 !== str.trim().length) {
         if (null != activeOption) {
           let obj1 = analyticsLocations(canMentionEveryone[37]);
-          let applicationCommandOptionQueryOptions = obj1.getApplicationCommandOptionQueryOptions(tmp78);
+          let applicationCommandOptionQueryOptions = obj1.getApplicationCommandOptionQueryOptions(activeOption);
         } else {
           applicationCommandOptionQueryOptions = { canMentionEveryone, canMentionHere: canMentionEveryone, canMentionChannels: true, canMentionUsers: true, canMentionRoles: true, canMentionAnyGuildUser: false, canMentionNonMentionableRoles: false, canMentionOtherGlobals: true };
         }
         let tmp5;
         if (null != activeOption) {
-          tmp5 = optionStates[tmp78.name];
+          tmp5 = optionStates[activeOption.name];
         }
         if (null != activeCommand) {
-          if (null != tmp78) {
+          if (null != activeOption) {
             if (null != tmp5) {
               let num = tmp5.location;
               if (num == null) {
@@ -246,13 +247,13 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
                 num2 = 0;
               }
               let substr;
-              if (tmp >= num + num2) {
-                substr = str.substring(num + num2, tmp);
+              if (selectionStart >= num + num2) {
+                substr = str.substring(num + num2, selectionStart);
               }
               query = substr;
-              if (null == tmp78.choices) {
-                if (!tmp78.autocomplete) {
-                  const type = tmp78.type;
+              if (null == activeOption.choices) {
+                if (!activeOption.autocomplete) {
+                  const type = activeOption.type;
                   if (analyticsLocations(canMentionEveryone[38]).ApplicationCommandOptionType.BOOLEAN === type) {
                     let prefix = "";
                     let CHOICES = selectionEnd.CHOICES;
@@ -262,7 +263,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
                   } else if (analyticsLocations(canMentionEveryone[38]).ApplicationCommandOptionType.CHANNEL === type) {
                     prefix = context;
                     CHOICES = selectionEnd.CHANNELS;
-                    const channelTypes = tmp78.channelTypes;
+                    const channelTypes = activeOption.channelTypes;
                     flag = true;
                     str2 = context;
                   } else {
@@ -309,7 +310,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
                     }
                   });
                   optionValues = { query: tmp71, autocompleteType: CHOICES, autocompleteSelectionStart: num + num2, queryOptions: null, showOptionValuesPicker: null };
-                  obj1 = { activeCommand: tmp7, optionValues, isActiveApplicationCommand: flag, option: tmp78, choices, channelTypes };
+                  obj1 = { activeCommand, optionValues, isActiveApplicationCommand: flag, option: activeOption, choices, channelTypes };
                   const merged = Object.assign(applicationCommandOptionQueryOptions);
                   optionValues.queryOptions = obj1;
                   optionValues.showOptionValuesPicker = flag;
@@ -318,7 +319,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
               }
               prefix = "";
               CHOICES = selectionEnd.CHOICES;
-              choices = tmp78.choices;
+              choices = activeOption.choices;
               flag = true;
               str2 = "";
             }
@@ -326,7 +327,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
         }
         if (setting1) {
           if (null != anchor) {
-            let obj2 = { query: str.slice(tmp24 + text.length, selectionEnd).toLowerCase(), autocompleteType: selectionEnd.GAME_MENTIONS, autocompleteSelectionStart: tmp24, queryOptions: null };
+            let obj2 = { query: str.slice(anchor + text.length, selectionEnd).toLowerCase(), autocompleteType: selectionEnd.GAME_MENTIONS, autocompleteSelectionStart: anchor, queryOptions: null };
             let obj3 = {};
             const merged1 = Object.assign(applicationCommandOptionQueryOptions);
             obj2.queryOptions = obj3;
@@ -334,8 +335,8 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
           }
         }
         if (null != anchor2) {
-          if (null == tmp7) {
-            let obj4 = { query: str.slice(tmp25 + selectionStart.length, selectionEnd), autocompleteType: selectionEnd.TIMESTAMPS, autocompleteSelectionStart: tmp25, queryOptions: null };
+          if (null == activeCommand) {
+            let obj4 = { query: str.slice(anchor2 + selectionStart.length, selectionEnd), autocompleteType: selectionEnd.TIMESTAMPS, autocompleteSelectionStart: anchor2, queryOptions: null };
             let obj5 = {};
             const merged2 = Object.assign(applicationCommandOptionQueryOptions);
             obj4.queryOptions = obj5;
@@ -354,7 +355,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
           }
           sum = num3 + num4;
         }
-        let tmp29 = tmp;
+        let tmp29 = selectionStart;
         while (true) {
           obj2 = analyticsLocations(canMentionEveryone[39]);
           let arr = text;
@@ -413,10 +414,9 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
                   matchesResult = undefined !== query;
                 }
                 if (matchesResult) {
-                  matchesResult = obj.matches(tmp6, query, diff);
+                  matchesResult = obj.matches(prefix, query, diff);
                 }
                 tmp = matchesResult;
-                tmp6 = prefix;
               }
               return tmp;
             });
@@ -610,22 +610,22 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
     let tmp4 = autocompleteType === AutocompleteTypes.SLASHES;
     if (ref.current) {
       if (!tmp4) {
-        tmp4 = tmp2 === tmp3.SLASHES_DISCOVERY;
+        tmp4 = autocompleteType === AutocompleteTypes.SLASHES_DISCOVERY;
       }
       if (!tmp4) {
         tmp4 = null != activeCommand;
       }
-      tmp.current = tmp4;
+      ref.current = tmp4;
     } else {
       let tmp5 = tmp4;
       if (!tmp4) {
-        tmp5 = tmp2 === tmp3.SLASHES_DISCOVERY;
+        tmp5 = autocompleteType === AutocompleteTypes.SLASHES_DISCOVERY;
       }
       if (!tmp5) {
         tmp5 = null != activeCommand;
       }
-      tmp.current = tmp5;
-      if (tmp.current) {
+      ref.current = tmp5;
+      if (ref.current) {
         AppAnalyticsUtils.trackWithMetadata(constants2.APPLICATION_COMMAND_TOP_OF_FUNNEL, { location: "slash_ui" });
       }
     }
@@ -652,13 +652,12 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
         const obj = {};
         const merged = Object.assign(callback1());
         let tmp17;
-        if (tmp8 === AutocompleteTypes.MENTIONS) {
+        if (autocompleteType === AutocompleteTypes.MENTIONS) {
           tmp17 = setting1;
         }
         obj.gameMentionsAvailable = tmp17;
-        const result = obj.iOSTrackAutocompleteOpen(tmp8, tmp7, obj);
+        const result = obj.iOSTrackAutocompleteOpen(autocompleteType, channel, obj);
       }
-      tmp7 = channel;
     } else {
       ref2.current = null;
     }
@@ -676,12 +675,12 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
     } else {
       sum2 = sum1;
       if (autocompleteType !== AutocompleteTypes.EMOJIS_AND_STICKERS) {
-        if (tmp4 === tmp5.GAME_MENTIONS) {
-          let sum3 = tmp2 + closure_44;
-        } else if (tmp4 === tmp5.TIMESTAMPS) {
-          sum3 = tmp2 + timestampSearchHeaderHeight;
+        if (autocompleteType === AutocompleteTypes.GAME_MENTIONS) {
+          let sum3 = c31 + closure_44;
+        } else if (autocompleteType === AutocompleteTypes.TIMESTAMPS) {
+          sum3 = c31 + timestampSearchHeaderHeight;
         } else {
-          sum3 = tmp2;
+          sum3 = c31;
         }
       }
     }
@@ -710,14 +709,13 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
         sum2 = sum + (sum1 + Autocomplete.AUTOCOMPLETE_STICKER_NODE_SIZE + 12);
       }
       if (tmp18) {
-        tmp18 = tmp15;
+        tmp18 = hasNonStickerResults;
       }
       let sum3 = sum2;
       if (tmp18) {
         sum3 = sum2 + hairlineWidth;
       }
       let num2 = sum3;
-      tmp15 = hasNonStickerResults;
     } else {
       if (tmp3) {
         let num6 = first3;
@@ -727,33 +725,33 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
         num2 = num6;
       } else {
         num2 = 0;
-        if (null != tmp) {
+        if (null != autocompleteType) {
           let num3 = 0;
           if (resultCount > 0) {
             let tmp6 = first2;
             if (first2 == null) {
               let num4 = 0;
-              if (0 !== tmp5) {
+              if (0 !== resultCount) {
                 if (context) {
-                  num4 = tmp5 * token + (tmp5 - 1) * hairlineWidth;
+                  num4 = resultCount * token + (resultCount - 1) * hairlineWidth;
                 }
               }
               tmp6 = num4;
             }
             num3 = tmp6;
           }
-          if (tmp === tmp2.GAME_MENTIONS) {
+          if (autocompleteType === AutocompleteTypes.GAME_MENTIONS) {
             let sum4 = num3 + closure_44;
           } else {
             sum4 = num3;
-            if (tmp === tmp2.TIMESTAMPS) {
+            if (autocompleteType === AutocompleteTypes.TIMESTAMPS) {
               sum4 = num3 + timestampSearchHeaderHeight;
             }
           }
           num2 = sum4;
         }
       }
-      tmp3 = tmp === tmp2.SLASHES || tmp === tmp2.SLASHES_DISCOVERY;
+      tmp3 = autocompleteType === AutocompleteTypes.SLASHES || autocompleteType === AutocompleteTypes.SLASHES_DISCOVERY;
     }
     let num12 = 0;
     if (memo2) {
@@ -807,14 +805,14 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
   tmpResult4 = require("PlatformUtils");
   callback2 = obj4.useCallback((type, tokenStart, arg2) => {
     if (type.type !== constants.EMOJI_PREMIUM_UPSELL) {
-      if (type.type === tmp.GLOBAL) {
+      if (type.type === constants.GLOBAL) {
         if ("gameMentionInput" === type.inlineAutocompleteType) {
           const current5 = chatInputRef.current;
           current5.insertText(__initData2, tokenStart, false);
           beginSearch(tokenStart);
         }
       }
-      if (type.type === tmp.GLOBAL) {
+      if (type.type === constants.GLOBAL) {
         if ("timestampMentionInput" === type.inlineAutocompleteType) {
           const current4 = chatInputRef.current;
           current4.insertText(__initData3, tokenStart, false);
@@ -825,7 +823,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
       const current = chatInputRef.current;
       const applicationCommandManager = current.getApplicationCommandManager();
       let tmp13;
-      if (type.type === tmp.GAME_MENTION) {
+      if (type.type === constants.GAME_MENTION) {
         if (applicationCommandManager != null) {
           applicationCommandManager.addGameMention(type.game);
         }
@@ -842,11 +840,11 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
       }
       let tmp18 = autocompleteResultText;
       let tmp19 = tmp13;
-      if (type.type === tmp.TIMESTAMP_MENTION) {
+      if (type.type === constants.TIMESTAMP_MENTION) {
         tmp18 = autocompleteResultText;
         tmp19 = tmp13;
         if (null != applicationCommandManager) {
-          const result = tmp8(5022).formatTimestampMention(type.mention);
+          const result = TimestampUtils.formatTimestampMention(type.mention);
           tmp18 = autocompleteResultText;
           tmp19 = tmp13;
           if (null != result) {
@@ -855,23 +853,21 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
             tmp18 = addTimestampMentionResult;
             tmp19 = items1;
           }
-          const tmp8Result = tmp8(5022);
+          const tmp8Result = TimestampUtils;
         }
       }
       let result1;
       if (applicationCommandManager != null) {
-        result1 = applicationCommandManager.setAutoCompleteResult(tmp10.id, tmp18, arg2, type);
+        result1 = applicationCommandManager.setAutoCompleteResult(channel.id, tmp18, arg2, type);
       }
       if (!result1) {
-        const current2 = tmp12.current;
-        current2.insertText(tmp18, tokenStart, type.type !== tmp.STICKER, tmp19);
-        if (type.type === tmp.STICKER) {
-          const current3 = tmp12.current;
+        const current2 = chatInputRef.current;
+        current2.insertText(tmp18, tokenStart, type.type !== constants.STICKER, tmp19);
+        if (type.type === constants.STICKER) {
+          const current3 = chatInputRef.current;
           current3.handleSelectSticker(type.sticker, tokenStart);
         }
       }
-      tmp10 = channel;
-      tmp8 = require;
     } else {
       const obj = { initialUpsellKey: constants3.EMOJI_AUTOCOMPLETE, analyticsLocations };
       const result2 = obj.handleShowUpsellAlert(obj);
@@ -905,16 +901,16 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
   callback4 = obj4.useCallback((type) => {
     if (type.type === constants.GLOBAL) {
       if ("gameMentionInput" === type.inlineAutocompleteType) {
-        type = tmp.GAME_MENTION;
+        type = constants.GAME_MENTION;
       }
       const obj = { selectionType: type, stickerId: null, gameId: null };
       let id = null;
-      if (type.type === tmp.STICKER) {
+      if (type.type === constants.STICKER) {
         id = type.sticker.id;
       }
       obj.stickerId = id;
       let id1 = null;
-      if (type.type === tmp.GAME_MENTION) {
+      if (type.type === constants.GAME_MENTION) {
         id1 = type.game.id;
       }
       obj.gameId = id1;
@@ -928,7 +924,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
     }
     if (type.type === constants.GLOBAL) {
       if ("timestampMentionInput" === type.inlineAutocompleteType) {
-        type = tmp.TIMESTAMP_MENTION;
+        type = constants.TIMESTAMP_MENTION;
       }
     }
     type = type.type;
@@ -948,14 +944,14 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
         return callback4(item);
       };
       return setting1(channel(canMentionEveryone[19]).User, obj);
-    } else if (tmp.GLOBAL === type) {
+    } else if (scaledTextLineHeight.GLOBAL === type) {
       obj = {};
       const merged1 = Object.assign(item);
       obj.onPress = function onPress() {
         return callback4(item);
       };
       return setting1(channel(canMentionEveryone[19]).Global, obj);
-    } else if (tmp.ROLE === type) {
+    } else if (scaledTextLineHeight.ROLE === type) {
       const obj1 = {};
       const merged2 = Object.assign(item);
       obj1.onPress = function onPress() {
@@ -967,37 +963,37 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
       }
       obj1.showDescription = tmp65;
       return setting1(channel(canMentionEveryone[19]).Role, obj1);
-    } else if (tmp.CHANNEL === type) {
+    } else if (scaledTextLineHeight.CHANNEL === type) {
       const obj2 = {};
       const merged3 = Object.assign(item);
       obj2.onPress = function onPress() {
         return callback4(item);
       };
       return setting1(channel(canMentionEveryone[19]).Channel, obj2);
-    } else if (tmp.EMOJI === type) {
+    } else if (scaledTextLineHeight.EMOJI === type) {
       const obj3 = {};
       const merged4 = Object.assign(item);
       obj3.onPress = function onPress() {
         return callback4(item);
       };
       return setting1(channel(canMentionEveryone[19]).Emoji, obj3);
-    } else if (tmp.EMOJI_PREMIUM_UPSELL === type) {
+    } else if (scaledTextLineHeight.EMOJI_PREMIUM_UPSELL === type) {
       const obj4 = {};
       const merged5 = Object.assign(item);
       obj4.onPress = function onPress() {
         return callback4(item);
       };
       return setting1(channel(canMentionEveryone[19]).EmojiPremiumUpsell, obj4);
-    } else if (tmp.CHOICE === type) {
+    } else if (scaledTextLineHeight.CHOICE === type) {
       const obj5 = {};
       const merged6 = Object.assign(item);
       obj5.onPress = function onPress() {
         return callback4(item);
       };
       return setting1(channel(canMentionEveryone[19]).Choice, obj5);
-    } else if (tmp.CHOICE_LOADING === type) {
+    } else if (scaledTextLineHeight.CHOICE_LOADING === type) {
       return setting1(channel(canMentionEveryone[19]).ChoiceLoading, {});
-    } else if (tmp.STICKER === type) {
+    } else if (scaledTextLineHeight.STICKER === type) {
       const obj6 = {};
       const merged7 = Object.assign(item);
       obj6.onPress = function onPress() {
@@ -1009,21 +1005,21 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
       obj6.isInteracting = first4 === item.sticker.id;
       const _HermesInternal = HermesInternal;
       return setting1(channel(canMentionEveryone[19]).Sticker, obj6, "" + item.sticker.id + "-" + first4 === item.sticker.id);
-    } else if (tmp.GAME_MENTION === type) {
+    } else if (scaledTextLineHeight.GAME_MENTION === type) {
       const obj7 = {};
       const merged8 = Object.assign(item);
       obj7.onPress = function onPress() {
         return callback4(item);
       };
       return setting1(channel(canMentionEveryone[19]).Game, obj7);
-    } else if (tmp.TIMESTAMP_MENTION === type) {
+    } else if (scaledTextLineHeight.TIMESTAMP_MENTION === type) {
       const obj8 = {};
       const merged9 = Object.assign(item);
       obj8.onPress = function onPress() {
         return callback4(item);
       };
       return setting1(channel(canMentionEveryone[19]).Timestamp, obj8);
-    } else if (tmp.LABEL === type) {
+    } else if (scaledTextLineHeight.LABEL === type) {
       obj = {};
       const merged10 = Object.assign(item);
       return setting1(channel(canMentionEveryone[19]).Label, obj);
@@ -1050,6 +1046,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
                 num = 0;
               }
               callback2({ command, section, type: constants.SLASH, visualSection, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.DISCOVERY }, num);
+              const obj = { command, section, type: constants.SLASH, visualSection, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.DISCOVERY };
             },
         onHeightChange: tmp64,
         canOnlyUseTextCommands
@@ -1071,6 +1068,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
           num = 0;
         }
         callback2({ command: commands, section: found, type: constants.SLASH, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.DISCOVERY, query }, num);
+        const obj = { command: commands, section: found, type: constants.SLASH, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.DISCOVERY, query };
       };
       obj2.style = items25;
       obj2.ItemSeparatorComponent = tmp(tmp2[33]).getItemSeparator;

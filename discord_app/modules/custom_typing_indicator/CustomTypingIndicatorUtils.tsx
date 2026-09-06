@@ -118,8 +118,7 @@ export const getViewableCustomTypingIndicatorConfig = function getViewableCustom
             channel = ChannelStore.getChannel(channel.parent_id);
           }
         }
-        obj = { user, context: null };
-        obj.context = channel;
+        obj = { user, context: channel };
         let tmp7 = customTypingIndicatorConfig;
         if (!obj.has(obj2.computePermissions(obj), Permissions.USE_EXTERNAL_EMOJIS)) {
           obj = {};
@@ -141,13 +140,13 @@ export const useCurrentCustomTypingIndicatorConfig = function useCurrentCustomTy
   items1 = [isTryItOut];
   return require("initialize").useStateFromStores(items, () => {
     if (closure_0) {
-      let EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2 = obj.getTryItOutChanges().tryItOutCustomTypingIndicatorStyle;
+      let EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2 = UserProfileSettingsStore.getTryItOutChanges().tryItOutCustomTypingIndicatorStyle;
       if (EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2 == null) {
         EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2 = CustomTypingIndicatorTypes.EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG;
       }
       return EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2;
     } else {
-      let EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG = obj.getPendingChanges().pendingCustomTypingIndicatorStyle;
+      let EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG = UserProfileSettingsStore.getPendingChanges().pendingCustomTypingIndicatorStyle;
       if (undefined !== EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG) {
         if (EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG == null) {
           EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG = CustomTypingIndicatorTypes.EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG;

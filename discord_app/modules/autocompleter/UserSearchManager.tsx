@@ -49,9 +49,9 @@ function getTransformedUser(user) {
         }
       }
       obj.isProvisional = isProvisional;
-      if (obj5.isFriend(user.id)) {
+      if (RelationshipStore.isFriend(user.id)) {
         obj.isFriend = true;
-        obj.friendNickname = obj5.getNickname(user.id);
+        obj.friendNickname = RelationshipStore.getNickname(user.id);
       }
       if (user instanceof UserRecord) {
         let isStaffResult = user.isStaff();
@@ -256,6 +256,7 @@ prototype["clearQuery"] = function clearQuery() {
     const obj = { uuid: self._uuid, type: constants.QUERY_CLEAR };
     _worker.postMessage(obj);
   }
+  tmp = null != this._worker && self._subscribed;
 };
 prototype["setQuery"] = function setQuery(query) {
   ({ boosters, boosterFallback } = query);
@@ -522,7 +523,6 @@ class UserSearchManager extends tmp2 {
           let obj3 = SnowflakeUtilsDefault;
           let keys1 = obj3.keys(tmp8);
           for (const item10043 of keys1) {
-            let tmp10 = item10043;
             value = map.get(item10043);
             let tmp12 = value;
             let tmp14 = tmp8[item10043];
@@ -535,7 +535,7 @@ class UserSearchManager extends tmp2 {
             }
             if (tmp15) {
               let tmp22 = setNick(tmp12, tmp6, tmp14.nick);
-              let result1 = map.set(tmp10, tmp12);
+              let result1 = map.set(item10043, tmp12);
             }
             continue;
           }
@@ -834,10 +834,9 @@ class UserSearchManager extends tmp2 {
                 tmp3 = nick;
               }
             }
-            tmp.nicknames[tmp2] = tmp3;
+            tmp.nicknames[closure_1_0] = tmp3;
           }
           items.push(tmp);
-          tmp2 = closure_1_0;
         }
       });
       applyArgumentsResult.updateUsers(items, "guild_scheduled_event_users_fetch_success");
@@ -871,7 +870,6 @@ prototype2["updateUsers"] = function updateUsers(arr, action) {
   if (null != _worker) {
     const found = arr.filter(GlobalUtils.isNotNullish);
     for (const item10007 of found) {
-      let tmp2 = item10007;
       let id;
       if (item10007 != null) {
         id = item10007.id;
@@ -879,31 +877,30 @@ prototype2["updateUsers"] = function updateUsers(arr, action) {
       if (null == id) {
         let obj3 = SentryUtilsDefault;
         let obj = { action: arg1, userFields: null };
-        obj = { userIsNull: null, idIsNull: true, usernameIsNull: null, isBot: null, isFriend: null, isProvisional: null, globalNameIsNull: null, usersArrayLength: null };
-        obj.userIsNull = null == tmp2;
+        obj = { userIsNull: null == item10007, idIsNull: true, usernameIsNull: null, isBot: null, isFriend: null, isProvisional: null, globalNameIsNull: null, usersArrayLength: null };
         let username;
-        if (tmp2 != null) {
-          username = tmp2.username;
+        if (item10007 != null) {
+          username = item10007.username;
         }
         obj.usernameIsNull = null == username;
         let isBot;
-        if (tmp2 != null) {
-          isBot = tmp2.isBot;
+        if (item10007 != null) {
+          isBot = item10007.isBot;
         }
         obj.isBot = isBot;
         let isFriend;
-        if (tmp2 != null) {
-          isFriend = tmp2.isFriend;
+        if (item10007 != null) {
+          isFriend = item10007.isFriend;
         }
         obj.isFriend = isFriend;
         let isProvisional;
-        if (tmp2 != null) {
-          isProvisional = tmp2.isProvisional;
+        if (item10007 != null) {
+          isProvisional = item10007.isProvisional;
         }
         obj.isProvisional = isProvisional;
         let globalName;
-        if (tmp2 != null) {
-          globalName = tmp2.globalName;
+        if (item10007 != null) {
+          globalName = item10007.globalName;
         }
         obj = { category: "debug", message: "User missing id", data: null, globalNameIsNull: null == globalName, usersArrayLength: found.length };
         obj.userFields = obj;
@@ -916,7 +913,7 @@ prototype2["updateUsers"] = function updateUsers(arr, action) {
     _worker.postMessage(action);
   }
 };
-prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResults, _limit) {
+prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResults) {
   let num = _limit;
   if (_limit === undefined) {
     num = 10;

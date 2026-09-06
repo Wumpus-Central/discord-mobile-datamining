@@ -2,6 +2,7 @@
 
 // Module 15037 (BountiesScrollIndicatorOverlay)
 import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -137,13 +138,13 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
     }
     if (!isEndCardVisible) {
       if (enabled) {
-        let timingStandard = tmp(4564).timingSlow;
+        let timingStandard = timingPresets.timingSlow;
       }
       obj = { opacity: null };
       obj.opacity = obj.withTiming(num, timingStandard);
       return obj;
     }
-    timingStandard = tmp(4564).timingStandard;
+    timingStandard = timingPresets.timingStandard;
   };
   obj = { withTiming: enabled(visible[8]).withTiming, visible, isEndCardVisible, enabled, timingStandard: enabled(visible[4]).timingStandard, timingSlow: enabled(visible[4]).timingSlow };
   fn.__closure = obj;

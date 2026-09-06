@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/urlPartToSetti
 export default function urlPartToSettingsEnum(arg0, str) {
   let formatted;
   if (str != null) {
-    const str2 = str.replace(/-/g, "_");
+    const str2 = "_".replace(/-/g, "_");
     if (str2 != null) {
       formatted = str2.toUpperCase();
     }

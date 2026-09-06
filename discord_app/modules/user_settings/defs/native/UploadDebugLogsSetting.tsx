@@ -7,7 +7,7 @@ import DebugUploadManager from "DebugUploadManager" /* 10188 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_8 = async function _handleUploadDebugLogSettingPress(arg0, value) {
+let closure_8 = async function _handleUploadDebugLogSettingPress() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

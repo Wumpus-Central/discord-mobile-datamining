@@ -31,7 +31,7 @@ export default function ClipboardCopyInput(arg0) {
   closure_3 = tmp5;
   const items1 = [stateFromStores, tmp5, ref(stateFromStores[8])(onChangeCode)];
   const effect = noop.useEffect(() => {
-    closure_0 = async function _run(arg0, value) {
+    closure_0 = async function _run() {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

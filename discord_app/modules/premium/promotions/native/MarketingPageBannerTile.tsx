@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9970 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -72,7 +73,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     const obj5 = { uri: bannerFields.assetUrl };
     obj4.source = obj5;
     obj4.style = tmp.image;
-    tmp12Result = tmp12(closure_3, obj4);
+    tmp12Result = closure_5(closure_3, obj4);
   }
   const items2 = [tmp12Result, closure_5(helpArticleLinkProps(4556).Text, { color: "mobile-text-heading-primary", variant: "text-lg/bold", children: bannerFields.header }), , ];
   const obj7 = { color: "mobile-text-heading-primary", variant: "text-sm/medium", style: tmp.bodyText, children: null };
@@ -88,7 +89,7 @@ export default function MarketingPageBannerTile(bannerFields) {
         },
       children: helpArticleLinkProps.linkText
     };
-    tmp12Result = tmp12(tmp4(4556).Text, obj8);
+    tmp12Result = closure_5(tmp4(4556).Text, obj8);
   }
   items3[2] = tmp12Result;
   obj7.children = items3;
@@ -97,8 +98,8 @@ export default function MarketingPageBannerTile(bannerFields) {
   if (tmp12Result1) {
     const obj9 = { style: tmp.ctaButton, children: null };
     const obj10 = { text: bannerFields.button.copy, onPress: buttonActionHandler };
-    obj9.children = tmp12(tmp2(9970), obj10);
-    tmp12Result1 = tmp12(tmp13, obj9);
+    obj9.children = closure_5(NitroUpsellButtonDefault, obj10);
+    tmp12Result1 = closure_5(closure_4, obj9);
   }
   items2[3] = tmp12Result1;
   obj3.children = items2;

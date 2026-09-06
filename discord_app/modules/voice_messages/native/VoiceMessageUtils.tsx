@@ -13,7 +13,7 @@ import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-let closure_22 = async function _startAudioRecording(arg0, value) {
+let closure_22 = async function _startAudioRecording(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -128,7 +128,7 @@ function stopAndGetAudioRecording() {
     });
   });
 }
-let closure_25 = async function _endAudioRecording(arg0, value) {
+let closure_25 = async function _endAudioRecording() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -204,7 +204,7 @@ function stopAndCacheAudioRecording() {
   }
   return applyArgumentsResult;
 }
-let closure_27 = async function _stopAndCacheAudioRecording(arg0, value) {
+let closure_27 = async function _stopAndCacheAudioRecording() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

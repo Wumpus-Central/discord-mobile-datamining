@@ -20,7 +20,7 @@ function AddFriendModalScene(onSkip) {
   let contactSyncAccount;
   _slicedToArray = undefined;
   let navigation;
-  let tmp = closure_12();
+  const tmp = closure_12();
   let obj = onSkip(contactSyncAccount[10]);
   contactSyncAccount = obj.useContactSyncAccount();
   let obj1 = onSkip(contactSyncAccount[10]);
@@ -30,14 +30,13 @@ function AddFriendModalScene(onSkip) {
     const result = ContactSyncUtils.checkContactPermissions();
     result.then((result) => {
       const obj = onSkip(contactSyncAccount[13]);
-      const tmp2 = onSkip;
-      const tmp3 = contactSyncAccount;
       let tmp5 = result === constants2.NOT_DETERMINED || onSkip(contactSyncAccount[13]).isAndroid() && result === constants2.UNAUTHORIZED;
       if (!tmp5) {
-        tmp5 = !tmp2(tmp3[10]).isContactSyncEnabled(closure_1_2);
-        const tmp2Result = tmp2(tmp3[10]);
+        tmp5 = !onSkip(contactSyncAccount[10]).isContactSyncEnabled(closure_1_2);
+        const tmp2Result = onSkip(contactSyncAccount[10]);
       }
       closure_1_3(tmp5);
+      const tmp4 = onSkip(contactSyncAccount[13]).isAndroid() && result === constants2.UNAUTHORIZED;
     });
   });
   let obj2 = onSkip(contactSyncAccount[14]);
@@ -62,6 +61,7 @@ function AddFriendModalScene(onSkip) {
     const obj2 = sourceMetadata(contactSyncAccount[12]);
     const formatToPlainStringResult = intl.formatToPlainString(onSkip(contactSyncAccount[17]).t["6E9a1J"], { url: "https://discord.com/", username: userTag });
     onSkip(contactSyncAccount[18]).showShareActionSheet({ message: formatToPlainStringResult }, "Add Friend Modal");
+    const obj3 = onSkip(contactSyncAccount[18]);
   }, []);
   const items1 = [callback, callback1, navigation];
   const layoutEffect = navigation.useLayoutEffect(() => {
@@ -87,7 +87,7 @@ function AddFriendModalScene(onSkip) {
   obj1 = { style: tmp.input, autoFocusInput: false };
   items2[2] = closure_10(sourceMetadata(contactSyncAccount[23]), obj1);
   obj2 = { style: tmp.otherOptionsContainer, children: null };
-  const obj3 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
+  let obj3 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = onSkip(contactSyncAccount[17]).intl;
   obj3.children = intl3.string(onSkip(contactSyncAccount[17]).t.dukg0Z);
   const items3 = [closure_10(onSkip(contactSyncAccount[22]).Text, obj3), ];

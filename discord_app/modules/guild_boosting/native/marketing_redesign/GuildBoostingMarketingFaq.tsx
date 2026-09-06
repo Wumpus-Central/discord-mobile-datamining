@@ -187,7 +187,7 @@ export default function GuildBoostingMarketingFaq() {
       const items3 = [closure_1_8(closure_0(5123).PressableOpacity, obj), ];
       if (tmp) {
         const obj2 = { style: tmp4.answer, color: "interactive-text-active", variant: "text-sm/normal", children: getQuestion.getAnswer() };
-        tmp = tmp7(tmp5(4556).Text, obj2);
+        tmp = closure_1_7(tmp5(4556).Text, obj2);
       }
       items3[1] = tmp;
       obj.children = items3;

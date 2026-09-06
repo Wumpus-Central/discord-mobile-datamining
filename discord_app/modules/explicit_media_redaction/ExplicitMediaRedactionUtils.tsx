@@ -8,6 +8,7 @@ import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5423 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 5424 */;
 import SelfModUtils from "SelfModUtils" /* 7291 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 7296 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
 import MetricEvents from "MetricEvents" /* 7607 */;
 import ExplicitMediaManager from "ExplicitMediaManager" /* 7608 */;
@@ -15,7 +16,6 @@ import DevSettingsStore from "DevSettingsStore" /* 4559 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import ExplicitMediaStore from "ExplicitMediaStore" /* 7293 */;
 
-const ObscureMediaModels = tmp(7296);
 require = fn;
 const ExplicitMediaRedactionConstants = fn(7601);
 ({ EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire, EXPLICIT_MEDIA_MIN_WIDTH: closure_7 } = ExplicitMediaRedactionConstants);
@@ -29,12 +29,12 @@ export const redactionSettingToRenderedString = function redactionSettingToRende
       const intl = util.intl;
       return intl.string(util.t["5k5OFp"]);
     };
-  } else if (tmp(1187).ExplicitContentRedaction.BLUR === prop) {
+  } else if (preloaded_user_settings.ExplicitContentRedaction.BLUR === prop) {
     return () => {
       const intl = util.intl;
       return intl.string(util.t.S49Uad);
     };
-  } else if (tmp(1187).ExplicitContentRedaction.BLOCK === prop) {
+  } else if (preloaded_user_settings.ExplicitContentRedaction.BLOCK === prop) {
     return () => {
       const intl = util.intl;
       return intl.string(util.t["D/157Y"]);
@@ -115,10 +115,10 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj.scan_timeout_duration = ExplicitMediaManager.MESSAGE_SCAN_TIMEOUT;
         obj.attachment_ids_v2 = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        let tmp3Result = tmp3(7602);
+        let tmp3Result = MonitoringAgentDefault;
         obj = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, tags: ["metricVersion:1"] };
         tmp3Result.increment(obj);
-        tmp3Result = tmp3(7602);
+        tmp3Result = MonitoringAgentDefault;
         const obj1 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION };
         let num4;
         if (attachmentIds != null) {
@@ -165,10 +165,9 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     const sum = numOfAttachmentsPendingScan + numOfEmbedsPendingScan;
     if (sum > 0) {
       obj = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 };
-      tmp10(7602).distribution(obj, sum);
-      const tmp10Result = tmp10(7602);
+      MonitoringAgentDefault.distribution(obj, sum);
+      const tmp10Result = MonitoringAgentDefault;
     }
-    tmp10 = importDefault;
   }
 };
 export const trackRedactableMessageLoaded = function trackRedactableMessageLoaded(arg0) {
@@ -206,6 +205,8 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
       obj.track(AnalyticEvents.REDACTABLE_MESSAGE_LOADED, obj);
     }
   }
+  tmp2 = numOfGoreAttachments > 0 || numOfGoreEmbeds > 0;
+  tmp3 = numOfSelfHarmAttachments > 0 || numOfSelfHarmEmbeds > 0;
 };
 export const trackExplicitMediaScanComplete = function trackExplicitMediaScanComplete(channelId) {
   channelId = channelId.channelId;

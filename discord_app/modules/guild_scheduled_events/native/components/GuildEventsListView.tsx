@@ -30,11 +30,11 @@ export default function GuildEventsListView(lastAckedId) {
   if (0 === events.length) {
     obj = { children: null };
     obj = { onClose: onCloseAction, guild };
-    obj.children = jsx(tmp(tmp2[6]), { onClose: onCloseAction, guild });
-    return jsx(guild(tmp2[5]).BottomSheetView, { onClose: onCloseAction, guild });
+    obj.children = jsx(require("GuildEventsNoContent"), { onClose: onCloseAction, guild });
+    return jsx(guild(onCloseAction[5]).BottomSheetView, { onClose: onCloseAction, guild });
   } else {
     if (lastAckedId.inActionSheet) {
-      let BottomSheetFlatList = guild(tmp2[5]).BottomSheetFlatList;
+      let BottomSheetFlatList = guild(onCloseAction[5]).BottomSheetFlatList;
     } else {
       BottomSheetFlatList = closure_4;
     }
@@ -58,7 +58,7 @@ export default function GuildEventsListView(lastAckedId) {
     obj.ListEmptyComponent = function ListEmptyComponent() {
       return jsx(GuildEventsNoContentDefault, { onClose: onCloseAction, guild });
     };
-    const obj1 = { paddingBottom: tmp(tmp2[3]).space.PX_16 + tmp3 };
+    const obj1 = { paddingBottom: require("native").space.PX_16 + tmp3 };
     obj.contentContainerStyle = obj1;
     return <BottomSheetFlatList data={events} style={null} keyExtractor={null} renderItem={null} ItemSeparatorComponent={null} initialNumToRender={5} ListEmptyComponent={null} contentContainerStyle={null} />;
   }

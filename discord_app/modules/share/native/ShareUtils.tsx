@@ -6,7 +6,7 @@ import _modDef11253 from "module_11253" /* 11253 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_6 = async function _sendShareMessage(arg0, value) {
+let closure_6 = async function _sendShareMessage(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

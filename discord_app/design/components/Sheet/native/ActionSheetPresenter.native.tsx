@@ -10,7 +10,7 @@ const require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const NOOP = fn(1074).NOOP;
 const jsx = fn(21).jsx;
-let closure_9 = noop.forwardRef((sheetKey, ref) => {
+let closure_9 = noop.forwardRef((sheetKey, arg1) => {
   sheetKey = sheetKey.sheetKey;
   _slicedToArray = undefined;
   let registerDismissHandler;
@@ -29,7 +29,7 @@ let closure_9 = noop.forwardRef((sheetKey, ref) => {
   }, []);
   let obj = { type: sheetKey(1250).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
   transitionState(8768)(obj);
-  const imperativeHandle = registerDismissHandler.useImperativeHandle(ref, () => ({
+  const imperativeHandle = registerDismissHandler.useImperativeHandle(arg1, () => ({
     componentDidEnter() {
       closure_1_2("visible");
     },
@@ -74,7 +74,7 @@ export const ActionSheetPresenter = function ActionSheetPresenter(appEntryKey) {
   const items1 = [ActionSheetStore];
   const stateFromStoresArray = obj.useStateFromStoresArray(items1, () => stack.getStack(), []);
   const found = stateFromStoresArray.filter((appEntryKey) => appEntryKey.appEntryKey === appEntryKey);
-  const mapped = found.map((content) => <closure_1_9 key={arg0.key} sheetKey={arg0.key} content={arg0.content} impressionName={arg0.impressionName} impressionProperties={arg0.impressionProperties} zIndex={arg0.zIndex} />);
+  const mapped = found.map((content) => <closure_1_9 key={content.key} sheetKey={content.key} content={content.content} impressionName={content.impressionName} impressionProperties={content.impressionProperties} zIndex={content.zIndex} />);
   obj = { style: StyleSheet.absoluteFill, component: appEntryKey(4911).TransitionGroupOverlayView, children: mapped };
   return jsx(appEntryKey(12423).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(4911).TransitionGroupOverlayView, children: mapped });
 };

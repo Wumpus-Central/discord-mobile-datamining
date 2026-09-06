@@ -22,9 +22,9 @@ class GuildMemberSearchManager {
     obj.results = [];
     obj.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr, arg1) {
       if (arg1 === obj.searchQueryString) {
-        tmp.isFetching = false;
+        obj.isFetching = false;
         let items = [];
-        const channel = ChannelStore.getChannel(tmp.targetChannelId);
+        const channel = ChannelStore.getChannel(obj.targetChannelId);
         const item = arr.forEach((type) => {
           if (type.type === obj(dependencyMap[2]).AutocompleterResultTypes.USER) {
             if (null != closure_1) {
@@ -33,11 +33,11 @@ class GuildMemberSearchManager {
             items.push(type);
           }
         });
-        tmp.results = items;
-        if (tmp.searchQueryString.length > 0) {
-          tmp.count = items.length;
+        obj.results = items;
+        if (obj.searchQueryString.length > 0) {
+          obj.count = items.length;
         } else {
-          tmp.count = null;
+          obj.count = null;
         }
         items = searchGuildMemberTabStoreImpl;
         searchGuildMemberTabStoreImpl.emitChange();
@@ -65,9 +65,9 @@ prototype["teardown"] = function teardown() {
 prototype["search"] = function search(arg0, targetChannelId, str) {
   this.targetChannelId = targetChannelId;
   this.isFetching = true;
-  const trimmed = str.toLowerCase().trim();
-  this.searchQueryString = trimmed;
   str = str.toLowerCase();
+  const trimmed = str.trim();
+  this.searchQueryString = trimmed;
   const members = GuildUtilsDefault.requestMembers(arg0, trimmed, 50);
   const autocompleter = this.autocompleter;
   autocompleter.search(trimmed);
@@ -139,9 +139,9 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(Dispatch
         userFilters.results = [];
         userFilters.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr, arg1) {
           if (arg1 === obj.searchQueryString) {
-            tmp.isFetching = false;
+            obj.isFetching = false;
             let items = [];
-            const channel = ChannelStore.getChannel(tmp.targetChannelId);
+            const channel = ChannelStore.getChannel(obj.targetChannelId);
             const item = arr.forEach((type) => {
               if (type.type === obj(dependencyMap[2]).AutocompleterResultTypes.USER) {
                 if (null != closure_1) {
@@ -150,11 +150,11 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(Dispatch
                 items.push(type);
               }
             });
-            tmp.results = items;
-            if (tmp.searchQueryString.length > 0) {
-              tmp.count = items.length;
+            obj.results = items;
+            if (obj.searchQueryString.length > 0) {
+              obj.count = items.length;
             } else {
-              tmp.count = null;
+              obj.count = null;
             }
             items = searchGuildMemberTabStoreImpl;
             searchGuildMemberTabStoreImpl.emitChange();

@@ -1,6 +1,7 @@
 // === Module 10360: EmojiPickerCategoriesUnicodeShortcutItem ===
 
 // Module 10360 (EmojiPickerCategoriesUnicodeShortcutItem)
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -45,12 +46,11 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
           num = EXPRESSION_FOOTER_HEIGHT;
         }
         const diff = end.end - num;
-        tmp2(4296).runOnJS(closure_5)(result > diff);
-        const tmp2Result = tmp2(4296);
+        ReanimatedRexport.runOnJS(closure_5)(result > diff);
+        const tmp2Result = ReanimatedRexport;
       }
       obj = cheapWorkletShallowEqual;
       tmp = current;
-      tmp2 = require;
     }
   };
   let obj = { cheapWorkletShallowEqual: blockRef(categoryIndex[7]).cheapWorkletShallowEqual, categoryIndex, EXPRESSION_FOOTER_HEIGHT, unicodeShortcutVisible, runOnJS: blockRef(categoryIndex[6]).runOnJS, setUnicodeShortcutVisible: tmp3 };

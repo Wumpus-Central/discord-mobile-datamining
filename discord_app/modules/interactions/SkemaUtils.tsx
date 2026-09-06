@@ -20,11 +20,10 @@ function getFirstSkemaFieldError(errors, arg1) {
       if (null != tmp9) {
         if (typeof tmp9 === "object") {
           let tmp13 = arg1;
-          let tmp14 = getFirstSkemaFieldError;
           if (arg1 == null) {
             tmp13 = first;
           }
-          let tmp14Result = tmp14(tmp9, tmp13);
+          let tmp14Result = getFirstSkemaFieldError(tmp9, tmp13);
           obj.return();
           return tmp14Result;
         }

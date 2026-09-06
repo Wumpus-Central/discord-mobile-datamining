@@ -4,6 +4,7 @@
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4767 */;
 import StageVoicePanelExperiment from "StageVoicePanelExperiment" /* 4769 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
 import useIsOnStartStageScreenStore from "useIsOnStartStageScreenStore" /* 8395 */;
@@ -42,16 +43,15 @@ export const openStageChannel = function openStageChannel(isGuildStageVoice) {
   if (isGuildStageVoice.isGuildStageVoice()) {
     let obj = StageVoicePanelExperiment;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
-      let tmpResult = tmp(4767);
+      let tmpResult = PrivateChannelCallUtils;
       tmpResult.openGuildVoiceModal(isGuildStageVoice);
     } else {
       obj = { channel: isGuildStageVoice };
       const obj2 = ModalActionCreatorsDefault;
-      tmpResult = tmp(4767);
-      obj2.pushLazy(tmp(1896)(9466, tmp2.paths), obj, tmpResult.getVoiceChannelKey(isGuildStageVoice.id));
-      const tmp4 = tmp(1896)(9466, tmp2.paths);
+      tmpResult = PrivateChannelCallUtils;
+      obj2.pushLazy(asyncRequireImpl(9466, dependencyMap.paths), obj, tmpResult.getVoiceChannelKey(isGuildStageVoice.id));
+      const tmp4 = asyncRequireImpl(9466, dependencyMap.paths);
     }
-    tmp2 = dependencyMap;
   }
 };
 export const showPlatformUserProfile = function showPlatformUserProfile(arg0) {
@@ -71,16 +71,15 @@ export const navigateToStage = function navigateToStage(id, arg1) {
   if (id.isGuildStageVoice()) {
     let obj = StageVoicePanelExperiment;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
-      let tmp3Result = tmp3(4767);
+      let tmp3Result = PrivateChannelCallUtils;
       tmp3Result.openGuildVoiceModal(id);
     } else {
       obj = { channel: id };
       const obj2 = ModalActionCreatorsDefault;
-      tmp3Result = tmp3(4767);
-      obj2.pushLazy(tmp3(1896)(9466, tmp4.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
-      const tmp6 = tmp3(1896)(9466, tmp4.paths);
+      tmp3Result = PrivateChannelCallUtils;
+      obj2.pushLazy(asyncRequireImpl(9466, dependencyMap.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
+      const tmp6 = asyncRequireImpl(9466, dependencyMap.paths);
     }
-    tmp4 = dependencyMap;
   }
 };
 export function showChannelChangeConfirmationAlert() {

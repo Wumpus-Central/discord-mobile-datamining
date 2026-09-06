@@ -72,6 +72,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
       if (obj.has(Steps.COMPLETED)) {
         items.push(item);
       }
+      obj = dependencyMap[item];
     });
     const item1 = items.forEach((item) => {
       const DISMISSED = constants.DISMISSED;
@@ -100,6 +101,7 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
     if (!obj.has(Steps.COMPLETED)) {
       dependencyMap[guildId].delete(Steps.DISMISSED);
     }
+    obj = dependencyMap[guildId];
   },
   GUILD_PROGRESS_COMPLETED_SEEN: function handleCompletedSeen(guildId) {
     guildId = guildId.guildId;

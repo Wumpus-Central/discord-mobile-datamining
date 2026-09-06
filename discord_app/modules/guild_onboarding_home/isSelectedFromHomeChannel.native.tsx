@@ -33,12 +33,11 @@ export default function isSelectedFromHomeChannel(id) {
               while (true) {
                 let tmp4 = state.routes[index];
                 if (null != tmp4) {
-                  let tmp6 = require;
                   let obj3 = NavigationRouteUtils;
                   let coerceChannelRouteResult = obj3.coerceChannelRoute(tmp4);
                   if (null != coerceChannelRouteResult) {
                     if (coerceChannelRouteResult.params.channelId === id.id) {
-                      let tmp6Result = tmp6(4417);
+                      let tmp6Result = NavigationRouteUtils;
                       coerceChannelRouteResult1 = tmp6Result.coerceChannelRoute(state.routes[index - 1]);
                       if (null != coerceChannelRouteResult1) {
                         break;

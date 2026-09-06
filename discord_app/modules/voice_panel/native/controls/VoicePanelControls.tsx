@@ -18,7 +18,9 @@ import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17054 */;
 import useControlsLockDefault from "useControlsLock" /* 17095 */;
 import useDrawerToggleDefault from "useDrawerToggle" /* 17170 */;
 import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17171 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17172 */;
 import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17173 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17177 */;
 import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17179 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -85,16 +87,16 @@ let closure_37 = noop.memo((controlsSpecs) => {
   const items1 = [isConnectingToConsole, tmp4];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (isConnectingToConsole) {
-      obj.lock();
+      closure_4.lock();
     } else {
-      obj.unlock();
+      closure_4.unlock();
     }
   }, items1);
   let tmp11;
   if (shouldShowFloatingCTA) {
     tmp11 = memo;
   }
-  obj = { item: tmp11, renderItem: tmp(17177).renderVoicePanelFloatingCTA };
+  obj = { item: tmp11, renderItem: VoicePanelFloatingCTAContainer.renderVoicePanelFloatingCTA };
   const items2 = [collapsedCategories(native.TransitionItem, obj), ];
   let tmp12;
   if (tmp5.isConnectingOrConnectedToConsole) {
@@ -149,10 +151,10 @@ let closure_39 = noop.memo(function VoicePanelButtonsInner(sharedTab) {
       }
       obj.opacity = spring.withSpring(num4, MODE_CHANGE_PHYSICS);
       obj = { translateY: null };
-      let tmp6Result = tmp6(4974);
+      let tmp6Result = spring;
       obj.translateY = tmp6Result.withSpring(num, MODE_CHANGE_PHYSICS);
       const items = [obj, ];
-      tmp6Result = tmp6(4974);
+      tmp6Result = spring;
       let num5 = 1;
       if ("settings" !== obj1.get()) {
         num5 = 1;
@@ -298,13 +300,13 @@ export default noop.memo(function VoicePanelControls(gestureState) {
       num = token;
     }
     const size = { borderBottomRightRadius: obj.withSpring(num, BORDER_RADIUS_PHYSICS), borderBottomLeftRadius: null, height: null, width: null, marginLeft: null, transform: null };
-    let tmpResult = tmp(4974);
+    let tmpResult = spring;
     let num2 = 0;
     if (!sharedValue1.get().drawerMode) {
       num2 = token;
     }
     size.borderBottomLeftRadius = tmpResult.withSpring(num2, BORDER_RADIUS_PHYSICS);
-    tmpResult = tmp(4974);
+    tmpResult = spring;
     size.height = tmpResult.withSpring(sharedValue1.get().height, closure_2_10);
     size.width = spring.withSpring(sharedValue1.get().width, MODE_CHANGE_PHYSICS);
     const tmpResult1 = spring;
@@ -313,15 +315,14 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     obj = { translateX: null };
     obj.translateX = spring.withSpring(sharedValue1.get().x, React5);
     const items = [obj, ];
-    const tmp5 = React5;
     const tmpResult3 = spring;
     if (sharedValue1.get().hidden) {
-      const sum = obj2.get().height + CALL_TILE_GUTTER;
+      const sum = sharedValue1.get().height + CALL_TILE_GUTTER;
       let y = sum + touchMoveCount.get();
     } else {
-      y = obj2.get().y;
+      y = sharedValue1.get().y;
     }
-    obj = { translateY: spring.withSpring(y, tmp5) };
+    obj = { translateY: spring.withSpring(y, React5) };
     items[1] = obj;
     size.transform = items;
     return size;
@@ -414,14 +415,14 @@ export default noop.memo(function VoicePanelControls(gestureState) {
               num2 = 0;
             }
             ({ absoluteY, absoluteX } = state.changedTouches[0]);
-            const diff = obj5.get().absoluteY - absoluteY;
-            let tmp15 = obj.get().mode === tmp4.DRAWER && value;
+            const diff = callback.get().absoluteY - absoluteY;
+            let tmp15 = obj.get().mode === edgeGutter.DRAWER && value;
             if (tmp15) {
               tmp15 = diff >= 0 || num2 > 0;
               const tmp16 = diff >= 0 || num2 > 0;
             }
             if (!tmp15) {
-              if (obj.get().mode !== tmp4.FLOATING_DEFAULT) {
+              if (obj.get().mode !== edgeGutter.FLOATING_DEFAULT) {
                 const _Math = Math;
                 const _Math2 = Math;
                 const absolute = Math.abs(diff);
@@ -429,18 +430,18 @@ export default noop.memo(function VoicePanelControls(gestureState) {
                   fail.fail();
                 }
               }
-              const point = { absoluteX, absoluteY, x: closure_1_2.get().x, y: closure_1_2.get().y, height: closure_1_2.get().height, isDrawer: obj.get().mode === tmp4.DRAWER, active: true, drawerTransitionHeight, interFloatingTransitionHeight };
-              const result1 = obj5.set(point);
-              let tmp23 = obj.get().mode !== tmp4.DRAWER;
+              const point = { absoluteX, absoluteY, x: closure_1_2.get().x, y: closure_1_2.get().y, height: closure_1_2.get().height, isDrawer: obj.get().mode === edgeGutter.DRAWER, active: true, drawerTransitionHeight, interFloatingTransitionHeight };
+              const result1 = callback.set(point);
+              let tmp23 = obj.get().mode !== edgeGutter.DRAWER;
               if (tmp23) {
                 tmp23 = "settings" !== closure_1_0;
               }
               if (tmp23) {
                 obj = { tab: "settings", source: null, disableControlsUpdate: true };
-                const tmpResult = tmp(tmp2[15]);
-                obj.source = tmp(tmp2[20]).VoicePanelTabAnalyticsSources.GESTURE;
-                tmp(tmp2[15]).runOnJS(controlsSpecs)(obj);
-                const runOnJSResult = tmp(tmp2[15]).runOnJS(controlsSpecs);
+                const tmpResult = gestureState(channelId[15]);
+                obj.source = gestureState(channelId[20]).VoicePanelTabAnalyticsSources.GESTURE;
+                gestureState(channelId[15]).runOnJS(controlsSpecs)(obj);
+                const runOnJSResult = gestureState(channelId[15]).runOnJS(controlsSpecs);
               }
               const result2 = scrollLock.set(true);
               fail.activate();
@@ -560,6 +561,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
       const result1 = scrollLock.set(false);
       const result2 = sharedValue1.set(false);
       gestureState(channelId[15]).runOnJS(gestureLock.unlock)(FLOATING_DEFAULT);
+      const obj2 = gestureState(channelId[15]);
     };
     const onTouchesCancelledResult = onChangeResult.onTouchesCancelled(fn4);
     fn5.__closure = { wrapperSpecs: channelId, wrapperDimensions, calculateVoicePanelHeaderSpecs: calculateVoicePanelHeaderSpecsDefault, safeArea: sharedValue, edgeGutter, controlsSpecs: setControlsMode, VoicePanelControlsModes, gestureSpecs, scrollLock, isDragScrolling: sharedValue1, runOnJS: ReanimatedRexport.runOnJS, gestureLock };
@@ -624,66 +626,68 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   fn3.__initData = __initData3;
   let fn4 = function s(safeAreaState, currentControlsMode) {
     let obj = cheapWorkletShallowEqual;
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, currentControlsMode)) {
+    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp3)) {
       ({ currentControlsMode, mode, windowWidth, controlsHeightValue, safeArea } = safeAreaState);
       if (constants.DISMISSED !== mode) {
-        if (tmp5.PIP !== mode) {
-          const PANEL = tmp5.PANEL;
+        if (constants.PIP !== mode) {
+          const PANEL = constants.PANEL;
           if (VoicePanelControlsModes.RESET === currentControlsMode) {
-            let tmpResult = tmp(4296);
+            let tmpResult = ReanimatedRexport;
             currentControlsMode = undefined;
             if (currentControlsMode != null) {
               currentControlsMode = currentControlsMode.currentControlsMode;
             }
             if (currentControlsMode == null) {
-              currentControlsMode = tmp25.FLOATING_DEFAULT;
+              currentControlsMode = VoicePanelControlsModes.FLOATING_DEFAULT;
             }
             obj = { mode: currentControlsMode };
             tmpResult.runOnJS(closure_6)(obj);
-          } else if (tmp25.HIDDEN === currentControlsMode) {
+            const runOnJSResult = tmpResult.runOnJS(closure_6);
+          } else if (VoicePanelControlsModes.HIDDEN === currentControlsMode) {
             if (isScreenReaderEnabled) {
               obj = {};
-              const merged = Object.assign(obj7.get());
+              const merged = Object.assign(gestureState.get());
               obj.hidden = false;
-              const result = obj7.set(obj);
-            } else if (!obj7.get().hidden) {
+              const result = gestureState.set(obj);
+            } else if (!gestureState.get().hidden) {
               const obj1 = {};
-              const merged1 = Object.assign(obj7.get());
+              const merged1 = Object.assign(gestureState.get());
               obj1.hidden = true;
-              const result1 = obj7.set(obj1);
+              const result1 = gestureState.set(obj1);
             }
-          } else if (tmp25.FLOATING_DEFAULT === currentControlsMode) {
+          } else if (VoicePanelControlsModes.FLOATING_DEFAULT === currentControlsMode) {
             const size = { x: 0, y: null, width: null, height: null, drawerMode: false, hidden: false };
             const _Math = Math;
             size.y = -1 * Math.max(safeArea.bottom, EDGE_GUTTER);
-            tmpResult = tmp(12279);
+            tmpResult = VoicePanelControlsUtils;
             size.width = tmpResult.getControlsDefaultWidth(windowWidth, safeArea.left, safeArea.right);
             size.height = controlsHeightValue;
             const result2 = gestureState.set(size);
-          } else if (tmp25.DRAWER === currentControlsMode) {
-            const drawerSpec = tmp(17172).getDrawerSpec(tmp4, safeArea.top);
+          } else if (VoicePanelControlsModes.DRAWER === currentControlsMode) {
+            const drawerSpec = VoicePanelControlUtils.getDrawerSpec(tmp4, safeArea.top);
             ({ minHeight, maxHeight } = drawerSpec);
             if (gestureState.get().height <= controlsHeightValue) {
               minHeight = maxHeight;
             } else if (null != currentControlsMode) {
-              const tmpResult2 = tmp(17172);
+              VoicePanelControlUtils;
             }
             const size1 = { x: 0, y: 0, width: null, height: null, drawerMode: true, hidden: false };
-            const tmpResult1 = tmp(17172);
-            size1.width = tmp(12279).getControlsDrawerOpenWidth(windowWidth, safeArea.left, safeArea.right);
+            const tmpResult1 = VoicePanelControlUtils;
+            size1.width = VoicePanelControlsUtils.getControlsDrawerOpenWidth(windowWidth, safeArea.left, safeArea.right);
             size1.height = minHeight;
-            const result3 = obj15.set(size1);
-            const tmpResult3 = tmp(12279);
+            const result3 = gestureState.set(size1);
+            const tmpResult3 = VoicePanelControlsUtils;
           }
         }
       }
       if (!gestureState.get().hidden) {
         const obj2 = {};
-        const merged2 = Object.assign(obj12.get());
+        const merged2 = Object.assign(gestureState.get());
         obj2.hidden = true;
-        const result4 = obj12.set(obj2);
+        const result4 = gestureState.set(obj2);
       }
     }
+    tmp3 = currentControlsMode;
   };
   obj1 = { cheapWorkletShallowEqual: gestureState(channelId[26]).cheapWorkletShallowEqual, VoicePanelModes: token, wrapperSpecs: sharedValue1, VoicePanelControlsModes, runOnJS: gestureState(channelId[15]).runOnJS, setControlsMode: setControlsMode2, isScreenReaderEnabled: isScreenReaderEnabled1, EDGE_GUTTER, getControlsDefaultWidth: gestureState(channelId[22]).getControlsDefaultWidth, getDrawerSpec: gestureState(channelId[27]).getDrawerSpec, getControlsDrawerOpenWidth: gestureState(channelId[22]).getControlsDrawerOpenWidth };
   fn4.__closure = obj1;
@@ -789,7 +793,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   let tmp44Result = null;
   if (!tmpResult.isMetaQuest()) {
     const obj10 = { openTab };
-    tmp44Result = tmp44(closure_25, obj10);
+    tmp44Result = closure_18(closure_25, obj10);
   }
   items8[2] = tmp44Result;
   obj7.children = items8;

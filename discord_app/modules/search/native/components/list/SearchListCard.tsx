@@ -39,11 +39,11 @@ function SearchListPrivateChannel(channel) {
     obj = { style: tmp.gdmIcon, children: null };
     obj = { channel, size: native.AvatarSizes.SIZE_16 };
     obj.children = hasOwnProperty(GroupDMAvatarDefault, obj);
-    const items = [hasOwnProperty(tmp6, obj), ];
+    const items = [hasOwnProperty(View, obj), ];
     const obj1 = { style: tmp.channelName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp4 };
     items[1] = hasOwnProperty(Text_Text.Text, obj1);
     obj.children = items;
-    let tmp5Result = tmp5(tmp6, obj);
+    let tmp5Result = timestampProducer(View, obj);
     const tmp2Result = GroupDMAvatarDefault;
   } else {
     obj.style = tmp.privateChannelIcon;
@@ -54,7 +54,7 @@ function SearchListPrivateChannel(channel) {
     obj3.children = intl.string(util.t.ACgJhM);
     items1[1] = hasOwnProperty(Text_Text.Text, obj3);
     obj.children = items1;
-    tmp5Result = tmp5(tmp6, obj);
+    tmp5Result = timestampProducer(View, obj);
   }
   return tmp5Result;
 }

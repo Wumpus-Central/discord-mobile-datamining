@@ -84,7 +84,7 @@ export default function updateRules(paragraph) {
   const obj2 = {};
   const merged4 = Object.assign(paragraph.link);
   obj2.react = function react(node, output, state) {
-    return <I18nLink key={arg2.key} node={arg0} output={arg1} state={arg2} />;
+    return <I18nLink key={state.key} node={node} output={output} state={state} />;
   };
   paragraph.link = obj2;
   return paragraph;

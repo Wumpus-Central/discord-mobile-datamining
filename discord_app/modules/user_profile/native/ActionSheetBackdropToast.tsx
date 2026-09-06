@@ -66,13 +66,13 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   }, items);
   const fn = function x() {
     if (closure_7) {
-      if (tmp) {
+      if (isExpanded) {
         let sum = c2 + 24;
       } else {
         sum = c1 + 24;
       }
     } else {
-      if (tmp) {
+      if (isExpanded) {
         let sum1 = c2 + 24;
       } else {
         sum1 = closure_5 * c2 + 46;

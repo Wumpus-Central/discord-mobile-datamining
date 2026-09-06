@@ -23,13 +23,13 @@ export const SafeAreaReporter = function SafeAreaReporter() {
     closure_1 = appEntryKey;
     ReactBatchUpdates.batchUpdates(() => {
       if (obj.isMetaQuest()) {
-        let META_QUEST_SAFE_AREA_INSETS = tmp3(tmp4[4]).META_QUEST_SAFE_AREA_INSETS;
+        let META_QUEST_SAFE_AREA_INSETS = closure_0(ref[4]).META_QUEST_SAFE_AREA_INSETS;
       } else {
         META_QUEST_SAFE_AREA_INSETS = tmp;
         if (tmp3Result.isAndroid()) {
-          safeAreaInsets = closure_1(tmp4[6]).getState().byAppEntry[tmp2].safeAreaInsets;
-          const obj3 = closure_1(tmp4[6]);
-          let rect = closure_1(tmp4[7]).getStableSafeAreaInsets(tmp2);
+          safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
+          const obj3 = closure_1(ref[6]);
+          let rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
           let tmp7 = tmp;
           if (null != rect) {
             if (rect.bottom === safeAreaInsets.bottom) {
@@ -43,9 +43,9 @@ export const SafeAreaReporter = function SafeAreaReporter() {
             safeAreaInsets = rect;
           }
           META_QUEST_SAFE_AREA_INSETS = tmp7;
-          const obj4 = closure_1(tmp4[7]);
+          const obj4 = closure_1(ref[7]);
         }
-        tmp3Result = tmp3(tmp4[5]);
+        tmp3Result = closure_0(ref[5]);
       }
       obj = closure_0(ref[3]);
       closure_1(ref[6]).setState((byAppEntry) => {
@@ -61,6 +61,7 @@ export const SafeAreaReporter = function SafeAreaReporter() {
         }
         return tmp3;
       });
+      const obj6 = closure_1(ref[6]);
     });
   }, items);
   dependencyMap = noop.useRef(false);
@@ -74,13 +75,13 @@ export const SafeAreaReporter = function SafeAreaReporter() {
         closure_1 = appEntryKey;
         ReactBatchUpdates.batchUpdates(() => {
           if (obj.isMetaQuest()) {
-            let META_QUEST_SAFE_AREA_INSETS = tmp3(tmp4[4]).META_QUEST_SAFE_AREA_INSETS;
+            let META_QUEST_SAFE_AREA_INSETS = closure_0(ref[4]).META_QUEST_SAFE_AREA_INSETS;
           } else {
             META_QUEST_SAFE_AREA_INSETS = tmp;
             if (tmp3Result.isAndroid()) {
-              safeAreaInsets = closure_1(tmp4[6]).getState().byAppEntry[tmp2].safeAreaInsets;
-              const obj3 = closure_1(tmp4[6]);
-              let rect = closure_1(tmp4[7]).getStableSafeAreaInsets(tmp2);
+              safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
+              const obj3 = closure_1(ref[6]);
+              let rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
               let tmp7 = tmp;
               if (null != rect) {
                 if (rect.bottom === safeAreaInsets.bottom) {
@@ -94,9 +95,9 @@ export const SafeAreaReporter = function SafeAreaReporter() {
                 safeAreaInsets = rect;
               }
               META_QUEST_SAFE_AREA_INSETS = tmp7;
-              const obj4 = closure_1(tmp4[7]);
+              const obj4 = closure_1(ref[7]);
             }
-            tmp3Result = tmp3(tmp4[5]);
+            tmp3Result = closure_0(ref[5]);
           }
           obj = closure_0(ref[3]);
           closure_1(ref[6]).setState((byAppEntry) => {
@@ -112,6 +113,7 @@ export const SafeAreaReporter = function SafeAreaReporter() {
             }
             return tmp3;
           });
+          const obj6 = closure_1(ref[6]);
         });
       }
     }, items1)
@@ -123,13 +125,13 @@ export const SafeAreaReporter = function SafeAreaReporter() {
       closure_1 = appEntryKey;
       ReactBatchUpdates.batchUpdates(() => {
         if (obj.isMetaQuest()) {
-          let META_QUEST_SAFE_AREA_INSETS = tmp3(tmp4[4]).META_QUEST_SAFE_AREA_INSETS;
+          let META_QUEST_SAFE_AREA_INSETS = closure_0(ref[4]).META_QUEST_SAFE_AREA_INSETS;
         } else {
           META_QUEST_SAFE_AREA_INSETS = tmp;
           if (tmp3Result.isAndroid()) {
-            safeAreaInsets = closure_1(tmp4[6]).getState().byAppEntry[tmp2].safeAreaInsets;
-            const obj3 = closure_1(tmp4[6]);
-            let rect = closure_1(tmp4[7]).getStableSafeAreaInsets(tmp2);
+            safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
+            const obj3 = closure_1(ref[6]);
+            let rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
             let tmp7 = tmp;
             if (null != rect) {
               if (rect.bottom === safeAreaInsets.bottom) {
@@ -143,9 +145,9 @@ export const SafeAreaReporter = function SafeAreaReporter() {
               safeAreaInsets = rect;
             }
             META_QUEST_SAFE_AREA_INSETS = tmp7;
-            const obj4 = closure_1(tmp4[7]);
+            const obj4 = closure_1(ref[7]);
           }
-          tmp3Result = tmp3(tmp4[5]);
+          tmp3Result = closure_0(ref[5]);
         }
         obj = closure_0(ref[3]);
         closure_1(ref[6]).setState((byAppEntry) => {
@@ -161,6 +163,7 @@ export const SafeAreaReporter = function SafeAreaReporter() {
           }
           return tmp3;
         });
+        const obj6 = closure_1(ref[6]);
       });
     }
   }, items1)} />;

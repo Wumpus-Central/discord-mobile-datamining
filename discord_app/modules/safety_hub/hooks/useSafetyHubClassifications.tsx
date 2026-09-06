@@ -68,6 +68,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     obj.violationType = ViolationType.USER;
     return obj;
   }
+  obj5 = require("SafetyHubUtils");
 };
 export const useActiveSafetyHubClassifications = function useActiveSafetyHubClassifications() {
   const items = [SafetyHubStore];

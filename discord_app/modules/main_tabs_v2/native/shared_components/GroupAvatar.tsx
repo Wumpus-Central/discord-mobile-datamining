@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import timing from "timing" /* 4561 */;
+import spring from "spring" /* 4974 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
 import noop from "module_19" /* 19 */;
@@ -59,22 +60,22 @@ function AnimatedContainer(children) {
     if (stateFromStores) {
       let withSpringResult = sharedValue2.get();
     } else {
-      let tmpResult = tmp(4974);
+      let tmpResult = spring;
       withSpringResult = tmpResult.withSpring(sharedValue2.get(), closure_11);
     }
     const items = [{ translateX: withSpringResult }, , ];
     if (stateFromStores) {
       value = sharedValue1.get();
     } else {
-      tmpResult = tmp(4974);
+      tmpResult = spring;
       value = tmpResult.withSpring(sharedValue1.get(), closure_11);
     }
     items[1] = { translateY: value };
     if (stateFromStores) {
       let value1 = sharedValue3.get();
     } else {
-      value1 = tmp(4974).withSpring(sharedValue3.get(), closure_10);
-      const tmpResult1 = tmp(4974);
+      value1 = spring.withSpring(sharedValue3.get(), closure_10);
+      const tmpResult1 = spring;
     }
     items[2] = { scale: value1 };
     obj.transform = items;
@@ -177,7 +178,6 @@ export default function GroupAvatar(users) {
   const guildId = users.guildId;
   let ref;
   noop = undefined;
-  let animateOnMount;
   const tmp = closure_12();
   let obj = users(ref[6]);
   const themeContext = obj.useThemeContext();
@@ -191,7 +191,7 @@ export default function GroupAvatar(users) {
   noop = users.length > 4;
   const diff = users.length - 3;
   c4 = diff;
-  animateOnMount = guildId(ref[7])(ref);
+  const animateOnMount = guildId(ref[7])(ref);
   obj = { style: tmp.groupContainer, children: null };
   const items = [tmp.shadowContainer, ];
   const mapped = items1[Math.max(Math, 0, Math.min(Math, items1.length - 1, users.length - 1))].map((item, index) => {
@@ -205,12 +205,10 @@ export default function GroupAvatar(users) {
       if (!closure_3) {
         obj = { guildId, user: tmp };
         let tmp13 = timestampProducer(GroupMemberAvatar, obj);
-        tmp3(tmp4, obj, tmp13);
+        <AnimatedContainer guildId={guildId} user={tmp}>{tmp13}</AnimatedContainer>;
       }
       obj = { count };
       tmp13 = timestampProducer(GroupMemberCount, obj);
-      tmp3 = createElement;
-      tmp4 = AnimatedContainer;
     }
   });
   if (null == primaryColor) {

@@ -2,10 +2,12 @@
 
 // Module 7000 (Navigator)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import SentryInitUtils from "SentryInitUtils" /* 1233 */;
 import Link from "Link" /* 1484 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7001 */;
+import StackNavigator from "StackNavigator" /* 7002 */;
 import NavigatorScreen from "NavigatorScreen" /* 7035 */;
 import useNavigationTheme from "useNavigationTheme" /* 7041 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -119,8 +121,8 @@ function NavigationStack(screens) {
       if (headerBackTitle == null) {
         let stringResult;
         if (1 === routes.length) {
-          const intl = tmp3(1114).intl;
-          stringResult = intl.string(tmp3(1114).t["13/7kX"]);
+          const intl = util.intl;
+          stringResult = intl.string(util.t["13/7kX"]);
         }
         tmp5 = stringResult;
       }
@@ -145,13 +147,13 @@ function NavigationStack(screens) {
           return obj;
         };
       } else {
-        fn2 = tmp3(7002).CardStyleInterpolators.forHorizontalIOS;
+        fn2 = StackNavigator.CardStyleInterpolators.forHorizontalIOS;
       }
       obj.cardStyleInterpolator = fn2;
       if (disableHeaderAnimation) {
-        let fn3 = tmp3(7002).HeaderStyleInterpolators.forNoAnimation;
-      } else if (tmp2) {
-        fn3 = tmp3(7002).HeaderStyleInterpolators.forFade;
+        let fn3 = StackNavigator.HeaderStyleInterpolators.forNoAnimation;
+      } else if (navigatorShouldCrossfade) {
+        fn3 = StackNavigator.HeaderStyleInterpolators.forFade;
       } else {
         fn3 = (arg0) => {
           ({ current, next, layouts, direction } = arg0);
@@ -274,8 +276,8 @@ let closure_7 = createStyles.createStyles(createStyles);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
 
-export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDateLabel, items) {
-  return noop.useMemo(getNextRenewalDateLabel, items);
+export const useNavigatorScreens = function useNavigatorScreens(arg0, items) {
+  return noop.useMemo(arg0, items);
 };
 export const useAccessibilityNativeStackOptions = function useAccessibilityNativeStackOptions() {
   const navigatorShouldCrossfade = useNavigatorShouldCrossfade.useNavigatorShouldCrossfade();

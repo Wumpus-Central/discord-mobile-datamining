@@ -58,12 +58,12 @@ export default function AppLauncherAttachmentOption(option) {
   const effect2 = stateFromStores.useEffect(() => {
     let filename;
     if (stateFromStores != null) {
-      filename = tmp.filename;
+      filename = stateFromStores.filename;
     }
     if (null != filename) {
       const current = ref.current;
       if (current != null) {
-        current(tmp.filename);
+        current(stateFromStores.filename);
       }
     }
   }, items2);
@@ -85,13 +85,14 @@ export default function AppLauncherAttachmentOption(option) {
     if (stateFromStores.item.platform === tmp2(tmp3[15]).UploadPlatform.REACT_NATIVE) {
       const obj1 = { uri: stateFromStores.item.uri, isImage: null, isVideo: null };
       ({ isImage: obj6.isImage, isVideo: obj6.isVideo } = stateFromStores);
-      let tmp12Result = tmp12(AttachmentPreviewAppLauncher, obj1);
+      let tmp12Result = <AttachmentPreviewAppLauncher uri={stateFromStores.item.uri} isImage={null} isVideo={null} />;
     }
     obj.leading = tmp12Result;
     obj.onPress = onPress;
     obj.autoFocus = autoFocus;
-    return tmp12(tmp13, obj);
+    return <tmp13 {...obj} />;
   }
-  tmp13 = channel(onSelectAttachment[13]);
-  tmp12Result = tmp12(ref, { style: tmp.imageIconWrapper, children: jsx(option(onSelectAttachment[16]).ImageFileIcon, { size: "sm", color: "interactive-text-default" }) });
+  const tmp13 = channel(onSelectAttachment[13]);
+  tmp12Result = <ref style={tmp.imageIconWrapper}>{jsx(option(onSelectAttachment[16]).ImageFileIcon, { size: "sm", color: "interactive-text-default" })}</ref>;
+  const obj2 = { style: tmp.imageIconWrapper, children: jsx(option(onSelectAttachment[16]).ImageFileIcon, { size: "sm", color: "interactive-text-default" }) };
 };

@@ -3,25 +3,28 @@
 // Module 10121 (ChannelListLayout)
 import UserSettings from "UserSettings" /* 1935 */;
 import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 7879 */;
+import CozyDrawer from "CozyDrawer" /* 10122 */;
+import Compact from "Compact" /* 10124 */;
+import Cozy from "Cozy" /* 10125 */;
 import size from "module_2" /* 2 */;
 
-function getLayoutStyles(layout, launchpad) {
+function getLayoutStyles(layout) {
   let flag = launchpad;
   if (launchpad === undefined) {
     flag = false;
   }
   if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER === layout) {
-    return tmp(10122).CHANNEL_LIST_STYLES_COZY_DRAWER;
-  } else if (tmp(7879).ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
-    return tmp(10122).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
-  } else if (tmp(7879).ChannelListLayoutTypes.COMPACT === layout) {
-    let tmpResult = tmp(10124);
+    return CozyDrawer.CHANNEL_LIST_STYLES_COZY_DRAWER;
+  } else if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
+    return CozyDrawer.CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
+  } else if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT === layout) {
+    let tmpResult = Compact;
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COMPACT_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COMPACT;
   } else {
-    if (tmp(7879).ChannelListLayoutTypes.MINIMAL !== layout) {
-      const COZY = tmp(7879).ChannelListLayoutTypes.COZY;
+    if (ChannelListLayoutTypes2.ChannelListLayoutTypes.MINIMAL !== layout) {
+      const COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
     }
-    tmpResult = tmp(10125);
+    tmpResult = Cozy;
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COZY;
   }
 }
@@ -45,20 +48,20 @@ export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) 
   if (panelVariant) {
     let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
   } else if (setting === ChannelListLayoutTypes.COMPACT) {
-    COZY = tmp(7879).ChannelListLayoutTypes.COMPACT;
+    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
   } else {
-    COZY = tmp(7879).ChannelListLayoutTypes.COZY;
+    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
   }
   return COZY;
 };
-export const getScaledChannelRowHeight = function getScaledChannelRowHeight(arg0, layout) {
-  let flag = arg2;
-  if (arg2 === undefined) {
+export const getScaledChannelRowHeight = function getScaledChannelRowHeight(fontScale, layout) {
+  let flag = isThreadResult;
+  if (isThreadResult === undefined) {
     flag = false;
   }
   const tmp = getLayoutStyles(layout);
   const container = tmp.container;
-  const bound = Math.max(Math.max(arg0, 1) * (tmp.channelName.height + (tmp.messagePreview.margin.marginTop + tmp.messagePreview.height)), tmp.icon.wrapper.size);
+  const bound = Math.max(Math.max(fontScale, 1) * (tmp.channelName.height + (tmp.messagePreview.margin.marginTop + tmp.messagePreview.height)), tmp.icon.wrapper.size);
   if (flag) {
     let paddingVertical = container.paddingThread.paddingVertical;
   } else {

@@ -10,6 +10,8 @@ import ToastUtils from "ToastUtils" /* 4258 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ChannelUtils from "ChannelUtils" /* 4705 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7765 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7777 */;
 import showShareActionSheet from "showShareActionSheet" /* 8361 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -64,13 +66,13 @@ export default function SummaryActionSheet(summary) {
     obj.hideActionSheet();
     let guild_id;
     if (channel != null) {
-      guild_id = tmp4.guild_id;
+      guild_id = channel.guild_id;
     }
     if (null != guild_id) {
       let guild_id1;
       const tmpResult = ActionSheetActionCreatorsDefault;
-      if (tmp4 != null) {
-        guild_id1 = tmp4.guild_id;
+      if (channel != null) {
+        guild_id1 = channel.guild_id;
       }
       obj = { guildId: guild_id1 };
       tmpResult.openLazy(asyncRequireImpl(11625, dependencyMap.paths), "GuildHighlightsNotifications", obj);
@@ -85,7 +87,7 @@ export default function SummaryActionSheet(summary) {
       const intl2 = util.intl;
       obj = { topic: summary.topic, url: null };
       const obj4 = ChannelUtils;
-      obj.url = obj4.getChannelPermalink(tmp3.guild_id, tmp3.id, summary.startId, summary.id);
+      obj.url = obj4.getChannelPermalink(channel.guild_id, channel.id, summary.startId, summary.id);
       const formatToPlainStringResult = intl2.formatToPlainString(util.t.I3yTDn, obj);
       obj = { message: formatToPlainStringResult, subject: summary.topic };
       showShareActionSheet.showShareActionSheet(obj, constants.SUMMARY_ACTION_SHEET);
@@ -100,19 +102,18 @@ export default function SummaryActionSheet(summary) {
     obj.hideActionSheet();
     if (null != channel) {
       if (null != message) {
-        let tmpResult = tmp(7765);
-        const result = tmpResult.openThreadCreationForMobile(tmp4, summary.startId, constants.SUMMARY_ACTION_SHEET);
-        tmpResult = tmp(7777);
+        let tmpResult = ThreadActionCreatorsDefault;
+        const result = tmpResult.openThreadCreationForMobile(channel, summary.startId, constants.SUMMARY_ACTION_SHEET);
+        tmpResult = DraftActionCreatorsDefault;
         obj = { name: summary.topic };
-        tmpResult.changeThreadSettings(tmp4.id, obj);
+        tmpResult.changeThreadSettings(channel.id, obj);
         const obj6 = NavigationRouteUtils;
-        const tmp11 = require;
-        if (!obj6.navigateToCreateThread(tmp4.guild_id, tmpResult1.castMessageIdAsChannelId(tmp5.id))) {
-          const tmp11Result = tmp11(1100);
-          tmp11Result.transitionToGuild(tmp4.guild_id, tmp(11).castMessageIdAsChannelId(tmp5.id));
-          const tmpResult2 = tmp(11);
+        if (!obj6.navigateToCreateThread(channel.guild_id, tmpResult1.castMessageIdAsChannelId(message.id))) {
+          const tmp11Result = router_utils;
+          tmp11Result.transitionToGuild(channel.guild_id, SnowflakeUtilsDefault.castMessageIdAsChannelId(message.id));
+          const tmpResult2 = SnowflakeUtilsDefault;
         }
-        tmpResult1 = tmp(11);
+        tmpResult1 = SnowflakeUtilsDefault;
       }
     }
     const intl = util.intl;
@@ -160,7 +161,7 @@ export default function SummaryActionSheet(summary) {
     obj8.label = intl2.string(tmp16(tmp17[15]).t.rBIGBL);
     obj8.iconSource = tmp20(tmp17[29]);
     obj8.onPress = callback2;
-    canStartPublicThread = tmp15(tmp16(tmp17[27]).SummaryActionSheetButton, obj8);
+    canStartPublicThread = closure_10(tmp16(tmp17[27]).SummaryActionSheetButton, obj8);
   }
   items8[1] = canStartPublicThread;
   if (hasFlagResult) {
@@ -169,7 +170,7 @@ export default function SummaryActionSheet(summary) {
     obj9.label = intl3.string(tmp16(tmp17[15]).t["39d0Wj"]);
     obj9.iconSource = tmp20(tmp17[29]);
     obj9.onPress = callback3;
-    hasFlagResult = tmp15(tmp16(tmp17[27]).SummaryActionSheetButton, obj9);
+    hasFlagResult = closure_10(tmp16(tmp17[27]).SummaryActionSheetButton, obj9);
   }
   const obj10 = { bottom: true, children: null };
   items8[2] = hasFlagResult;

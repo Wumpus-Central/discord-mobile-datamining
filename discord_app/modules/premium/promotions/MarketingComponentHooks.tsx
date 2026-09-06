@@ -2,10 +2,10 @@
 
 // Module 10753 (MarketingComponentHooks)
 import initialize from "initialize" /* 504 */;
+import themes from "themes" /* 4269 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-const themes = tmp3(4269);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");

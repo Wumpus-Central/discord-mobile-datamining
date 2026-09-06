@@ -1,9 +1,11 @@
 // === Module 17760: GuildRoleSubscriptionBenefitPreview ===
 
 // Module 17760 (GuildRoleSubscriptionBenefitPreview)
+import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import _modDef9939 from "module_9939" /* 9939 */;
 import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 15233 */;
 import EmojiIconDefault from "EmojiIcon" /* 15240 */;
@@ -62,22 +64,22 @@ function ChannelBenefitRow(benefit) {
   const channelWithTemplateFallback = obj.useChannelWithTemplateFallback(benefit.ref_id);
   let channelIcon = null;
   if (null != channelWithTemplateFallback) {
-    channelIcon = tmp2(5028).getChannelIcon(channelWithTemplateFallback);
-    const tmp2Result = tmp2(5028);
+    channelIcon = utils_ChannelUtils.getChannelIcon(channelWithTemplateFallback);
+    const tmp2Result = utils_ChannelUtils;
   }
   if (null == channelWithTemplateFallback) {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    obj.children = "[" + intl.string(tmp2(1114).t.bz1PZX) + "]";
-    let tmp9 = hasOwnProperty(tmp2(4556).Text, obj);
+    obj.children = "[" + intl.string(util.t.bz1PZX) + "]";
+    let tmp9 = hasOwnProperty(Text_Text.Text, obj);
   } else {
     obj = { benefit, guildId, isInteractive, children: null };
     const obj1 = { style: tmp.channelRow, children: null };
-    const obj2 = { style: tmp.channelIcon, size: tmp2(1178).Icon.Sizes.CUSTOM, source: channelIcon };
-    const items = [hasOwnProperty(tmp2(1178).Icon, obj2), ];
+    const obj2 = { style: tmp.channelIcon, size: native.Icon.Sizes.CUSTOM, source: channelIcon };
+    const items = [hasOwnProperty(native.Icon, obj2), ];
     const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp5 };
-    items[1] = hasOwnProperty(tmp2(4556).Text, obj3);
+    items[1] = hasOwnProperty(Text_Text.Text, obj3);
     obj1.children = items;
     obj.children = timestampProducer(View, obj1);
     tmp9 = hasOwnProperty(DescriptiveBenefitRow, obj);

@@ -8,6 +8,7 @@ import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /*
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 1944 */;
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1948 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 1955 */;
 import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4402 */;
 import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10237 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -15,7 +16,6 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 1947 */;
 
-const VersionedDismissibleContentUtils = tmp(1955);
 require = fn;
 function addVersionedDismissedContent(GUILD_POWERUP_NOTIFICATION, versionedDismissibleContentCurrentVersion, nextNumTimesDismissed) {
   const obj = { lastDismissedVersion: versionedDismissibleContentCurrentVersion, lastDismissedAtMs: Date.now().toString(), lastDismissedObjectId: "0", numTimesDismissed: nextNumTimesDismissed };
@@ -29,13 +29,13 @@ function addSnowflakeBoundDismissedContent(GUILD_POWERUP_NOTIFICATION, lastDismi
   const obj = { lastDismissedVersion: 0, lastDismissedAtMs: Date.now().toString(), lastDismissedObjectId, numTimesDismissed: nextNumTimesDismissed1 };
   return obj.updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, obj);
 }
-function markDismissibleContentAsDismissedPreProcessing(arg0, forceTrack) {
+function markDismissibleContentAsDismissedPreProcessing(dismissibleContent, forceTrack) {
   if (tmp) {
-    trackDismissibleContentDismissed(arg0, forceTrack);
+    trackDismissibleContentDismissed(dismissibleContent, forceTrack);
   }
-  tmp = closure_1_10(arg0) || forceTrack.forceTrack;
+  tmp = closure_1_10(dismissibleContent) || forceTrack.forceTrack;
   const guildId = forceTrack.guildId;
-  DismissibleContentFrameworkActionCreators.handleDCDismissed(arg0, guildId);
+  DismissibleContentFrameworkActionCreators.handleDCDismissed(dismissibleContent, guildId);
 }
 function markDismissibleContentAsDismissedPostProcessing(content, groupName) {
   const obj = { content, groupName: null };
@@ -45,8 +45,9 @@ function markDismissibleContentAsDismissedPostProcessing(content, groupName) {
   }
   obj.groupName = groupName;
   React7(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
+  const tmp = !DismissibleContentFrameworkStore.hasUserHitDCCap();
 }
-let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(arg0, value) {
+let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -124,7 +125,7 @@ function markVersionedDismissibleContentAsDismissed() {
   }
   return applyArgumentsResult;
 }
-let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0, value) {
+let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -177,7 +178,7 @@ let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0
     }
   }
 };
-let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed(arg0, snowflakeId, arg2) {
+let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed(arg0) {
   closure_0 = arg0;
   closure_2 = arg2;
   c5 = 0;
@@ -239,7 +240,7 @@ let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed
     }
   })();
 };
-let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(arg0, value) {
+let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -292,9 +293,9 @@ let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(
     }
   }
 };
-function trackDismissibleContentShown(WISHLIST_MOBILE_NUX_ACTION_SHEET, groupName, arg2) {
-  let tmp = arg2;
-  if (arg2 === undefined) {
+function trackDismissibleContentShown(WISHLIST_MOBILE_NUX_ACTION_SHEET, groupName) {
+  let tmp = found;
+  if (found === undefined) {
     tmp = null;
   }
   [tmp3, tmp4] = _slicedToArray(closure_1_11(), 2);
@@ -332,9 +333,10 @@ function trackDismissibleContentShown(WISHLIST_MOBILE_NUX_ACTION_SHEET, groupNam
   }
   obj.snowflake_id = snowflakeId;
   obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, obj);
+  const tmp2 = _slicedToArray(closure_1_11(), 2);
 }
-function trackDismissibleContentDismissed(arg0, guildId) {
-  const renderedAtTimestamp = DismissibleContentFrameworkStore.getRenderedAtTimestamp(arg0);
+function trackDismissibleContentDismissed(dismissibleContent, guildId) {
+  const renderedAtTimestamp = DismissibleContentFrameworkStore.getRenderedAtTimestamp(dismissibleContent);
   const date = new Date();
   let diff = null;
   if (null != renderedAtTimestamp) {
@@ -348,7 +350,7 @@ function trackDismissibleContentDismissed(arg0, guildId) {
     const guildDismissedContentState = UserSettingsProtoStore.getGuildDismissedContentState(guildId.guildId);
     let tmp9;
     if (guildDismissedContentState != null) {
-      tmp9 = guildDismissedContentState[arg0];
+      tmp9 = guildDismissedContentState[dismissibleContent];
     }
     let num2;
     if (tmp9 != null) {
@@ -369,7 +371,7 @@ function trackDismissibleContentDismissed(arg0, guildId) {
       const userContent = UserSettingsProtoStore.settings.userContent;
       let tmp6;
       if (userContent != null) {
-        tmp6 = userContent.recurringDismissibleContentStates[arg0];
+        tmp6 = userContent.recurringDismissibleContentStates[dismissibleContent];
       }
       let num;
       if (tmp6 != null) {
@@ -381,7 +383,7 @@ function trackDismissibleContentDismissed(arg0, guildId) {
       numTimesDismissed = num + 1;
     }
   }
-  obj = { type: dismissible_content.DismissibleContent[arg0], action: null, content_count: null, group_name: null, bypass_fatigue: null, guild_id: null, shown_duration: null, version: null, num_times_dismissed: null, snowflake_id: null };
+  obj = { type: dismissible_content.DismissibleContent[dismissibleContent], action: null, content_count: null, group_name: null, bypass_fatigue: null, guild_id: null, shown_duration: null, version: null, num_times_dismissed: null, snowflake_id: null };
   let dismissAction;
   if (guildId != null) {
     dismissAction = guildId.dismissAction;
@@ -397,7 +399,7 @@ function trackDismissibleContentDismissed(arg0, guildId) {
   }
   obj.group_name = groupName;
   const CONTENT_TYPES_WITH_BYPASS_FATIGUE = DismissibleContentFatigueConfig.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
-  obj.bypass_fatigue = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
+  obj.bypass_fatigue = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(dismissibleContent);
   let guildId1;
   if (guildId != null) {
     guildId1 = guildId.guildId;
@@ -438,13 +440,13 @@ export const getDismissedRecurringDismissibleContentState = function getDismisse
   let obj = DismissibleContentTypes;
   let num = 0;
   if (obj.isVersionedDismissibleContent(id)) {
-    let tmp2Result = tmp2(1955);
+    let tmp2Result = VersionedDismissibleContentUtils;
     num = tmp2Result.getVersionedDismissibleContentCurrentVersion(id);
   }
   obj = { lastDismissedVersion: num, lastDismissedAtMs: null, lastDismissedObjectId: null, numTimesDismissed: null };
   const date = new Date();
   obj.lastDismissedAtMs = new Date().getTime().toString();
-  tmp2Result = tmp2(1944);
+  tmp2Result = DismissibleContentTypes;
   let str2 = "0";
   if (tmp2Result.isSnowflakeBoundDismissibleContent(id)) {
     const _Date = Date;
@@ -624,22 +626,21 @@ export const UNSAFE_isSingleUseGuildDismissibleContentDismissed = function UNSAF
   }
   obj = NewUserDismissibleContentRegistry;
 };
-export const useIsSingleUseGuildDismissibleContentDismissed = function useIsSingleUseGuildDismissibleContentDismissed(dismissibleContent, arg1) {
+export const useIsSingleUseGuildDismissibleContentDismissed = function useIsSingleUseGuildDismissibleContentDismissed(dismissibleContent, guildId) {
   _require = dismissibleContent;
-  closure_1 = arg1;
+  closure_1 = guildId;
   const items = [UserSettingsProtoStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let flag2 = true;
-      if (!obj.disableNewUserDismissibleContent(tmp)) {
-        const guildDismissedContentState = UserSettingsProtoStore.getGuildDismissedContentState(tmp3);
-        flag2 = null != guildDismissedContentState && null != guildDismissedContentState[tmp] && true === guildDismissedContentState[tmp].dismissed;
-        const tmp8 = null != guildDismissedContentState && null != guildDismissedContentState[tmp] && true === guildDismissedContentState[tmp].dismissed;
+      if (!obj.disableNewUserDismissibleContent(closure_0)) {
+        const guildDismissedContentState = UserSettingsProtoStore.getGuildDismissedContentState(closure_1);
+        flag2 = null != guildDismissedContentState && null != guildDismissedContentState[closure_0] && true === guildDismissedContentState[closure_0].dismissed;
+        const tmp8 = null != guildDismissedContentState && null != guildDismissedContentState[closure_0] && true === guildDismissedContentState[closure_0].dismissed;
       }
       tmp2 = flag2;
       obj = NewUserDismissibleContentRegistry;
-      tmp3 = closure_1;
     }
     return tmp2;
   });
@@ -719,15 +720,15 @@ export const requestMarkDismissibleContentAsShown = function requestMarkDismissi
       groupName = guildId.groupName;
     }
     obj.groupName = groupName;
-    obj.onAdded = function onAdded(arg0) {
+    obj.onAdded = function onAdded(found) {
       guildId = undefined;
-      if (closure_1 != null) {
-        guildId = tmp2.guildId;
+      if (guildId != null) {
+        guildId = guildId.guildId;
       }
       DismissibleContentFrameworkActionCreators.handleDCShownToUser(closure_0, guildId);
-      trackDismissibleContentShown(closure_0, closure_1, arg0);
-      if (closure_1 != null) {
-        const onShown = tmp2.onShown;
+      trackDismissibleContentShown(closure_0, guildId, found);
+      if (guildId != null) {
+        const onShown = guildId.onShown;
         if (onShown != null) {
           onShown();
         }

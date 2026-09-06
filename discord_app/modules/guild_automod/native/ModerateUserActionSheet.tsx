@@ -47,28 +47,28 @@ export default noop.memo((user) => {
     let canKickMemberResult = null != guild;
     if (canKickMemberResult) {
       let obj = GuildMemberUtils;
-      canKickMemberResult = obj.canKickMember(user, tmp);
+      canKickMemberResult = obj.canKickMember(user, guild);
     }
     obj = { canKickUser: canKickMemberResult, canBanUser: null, canChangeNick: null, canManageRoles: null, canModerateMembers: null };
-    let canBanMemberResult = null != tmp;
+    let canBanMemberResult = null != guild;
     if (canBanMemberResult) {
-      canBanMemberResult = GuildMemberUtils.canBanMember(user, tmp);
+      canBanMemberResult = GuildMemberUtils.canBanMember(user, guild);
     }
     obj.canBanUser = canBanMemberResult;
-    let canManageUserResult = null != tmp;
+    let canManageUserResult = null != guild;
     if (canManageUserResult) {
-      canManageUserResult = PermissionStore.canManageUser(Permissions.MANAGE_NICKNAMES, user, tmp);
+      canManageUserResult = PermissionStore.canManageUser(Permissions.MANAGE_NICKNAMES, user, guild);
     }
     obj.canChangeNick = canManageUserResult;
-    let canResult = null != tmp;
+    let canResult = null != guild;
     if (canResult) {
-      canResult = PermissionStore.can(Permissions.MANAGE_ROLES, tmp);
+      canResult = PermissionStore.can(Permissions.MANAGE_ROLES, guild);
     }
     obj.canManageRoles = canResult;
-    let result = null != tmp;
+    let result = null != guild;
     if (result) {
       const items = [UserStore, GuildStore, PermissionStore];
-      result = useCanToggleCommunicationDisableOnUser.canToggleCommunicationDisableOnUser(tmp.id, user.id, items);
+      result = useCanToggleCommunicationDisableOnUser.canToggleCommunicationDisableOnUser(guild.id, user.id, items);
     }
     obj.canModerateMembers = result;
     return obj;
@@ -153,7 +153,7 @@ export default noop.memo((user) => {
               const result1 = obj.openDisableCommunication(obj);
             }
           };
-          t = items4.push(tmp15(tmp2(tmp3[13]).ActionSheetRow, obj1));
+          t = items4.push(closure_9(tmp2(tmp3[13]).ActionSheetRow, obj1));
         }
       }
       if (tmp17) {

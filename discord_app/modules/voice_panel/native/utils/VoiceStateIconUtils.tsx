@@ -84,7 +84,7 @@ export const useStableVideoState = function useStableVideoState(arg0, arg1) {
   const items1 = [arg1, arg0];
   return require("initialize").useStateFromStoresObject(items, () => {
     if (null != closure_0) {
-      const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
+      const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
     }
     if (null != closure_0) {
       if (null != voiceState) {
@@ -112,7 +112,7 @@ export const useVideoIconState = function useVideoIconState(id, guildId) {
   const items1 = [guildId, id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     if (null != closure_0) {
-      const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
+      const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
     }
     if (null != closure_0) {
       if (null != voiceState) {

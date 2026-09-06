@@ -186,8 +186,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
             }
             channel = channel.getChannel(tmp4);
             if (null != channel) {
-              obj = { type: null, item: null, isSuggested: true };
-              obj.type = constants.CHANNEL;
+              obj = { type: constants.CHANNEL, item: null, isSuggested: true };
               obj.item = tmp8;
               let arr = rows.push(obj);
               counts.numChannels = counts.numChannels + 1;
@@ -226,9 +225,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
               }
               if (!tmp12) {
                 let addResult = shownUserIds.add(tmp11.id);
-                obj = { type: null, item: null, isSuggested: true };
-                obj.type = constants.FRIEND;
-                obj.item = tmp11;
+                obj = { type: constants.FRIEND, item: tmp11, isSuggested: true };
                 let arr = rows.push(obj);
                 counts.numFriends = counts.numFriends + 1;
               }
@@ -266,8 +263,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
               tmp11 = isGuildMember(tmp, tmp10.id);
             }
             if (!tmp11) {
-              obj = { type: null, item: null, isSuggested: false };
-              obj.type = constants.FRIEND;
+              obj = { type: constants.FRIEND, item: null, isSuggested: false };
               obj.item = tmp10;
               let arr = rows.push(obj);
               counts.numFriends = counts.numFriends + 1;
@@ -308,10 +304,9 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       if (null != suggestedUserIds) {
         items = [];
         for (const item10012 of suggestedUserIds) {
-          let tmp3 = item10012;
           if (!omitUserIds.has(item10012)) {
-            if (!shownUserIds.has(tmp3)) {
-              let user = authStore.getUser(tmp3);
+            if (!shownUserIds.has(item10012)) {
+              let user = authStore.getUser(item10012);
               if (null != user) {
                 let arr = items.push(tmp8);
               }
@@ -414,10 +409,9 @@ export const groupInviteSuggestions = function groupInviteSuggestions(arg0, depe
   while (iter !== undefined) {
     let tmp2 = nextResult;
     let type = nextResult.type;
-    let tmp3 = obj;
     if (obj.FRIEND !== type) {
-      if (tmp3.DM !== type) {
-        if (tmp3.CHANNEL === type) {
+      if (obj.DM !== type) {
+        if (obj.CHANNEL === type) {
           let arr = items1.push(tmp2);
         }
       }
@@ -493,10 +487,10 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
   if (minutes === type) {
     const intl4 = util.intl;
     if (tmp2) {
-      let stringResult = intl4.string(tmp13(1114).t["/WbTXD"]);
+      let stringResult = intl4.string(util.t["/WbTXD"]);
     } else {
       obj = { numUses: parsed };
-      stringResult = intl4.formatToPlainString(tmp13(1114).t.eDRWJK, obj);
+      stringResult = intl4.formatToPlainString(util.t.eDRWJK, obj);
     }
     return stringResult;
   } else if (hours === type) {
@@ -526,10 +520,10 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
   } else if (never === type) {
     const intl = util.intl;
     if (tmp2) {
-      let stringResult1 = intl.string(tmp4(1114).t.QrHBnC);
+      let stringResult1 = intl.string(util.t.QrHBnC);
     } else {
       obj = { numUses: parsed };
-      stringResult1 = intl.formatToPlainString(tmp4(1114).t.yJnTxI, obj);
+      stringResult1 = intl.formatToPlainString(util.t.yJnTxI, obj);
     }
     return stringResult1;
   } else {

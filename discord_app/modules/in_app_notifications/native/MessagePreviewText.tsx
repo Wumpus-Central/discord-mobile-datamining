@@ -2,14 +2,19 @@
 
 // Module 10107 (MessagePreviewText)
 import nativeDefault from "native" /* 576 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
+import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useMessageAuthor from "useMessageAuthor" /* 4793 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
 import InAppNotificationUtils from "InAppNotificationUtils" /* 10094 */;
 import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10108 */;
 import ChannelRowPreview from "ChannelRowPreview" /* 10109 */;
 import usePreviewableMedia from "usePreviewableMedia" /* 10131 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 10139 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10140 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -83,7 +88,7 @@ function EmbedCard(embed) {
     obj = { backgroundColor: color };
     items[1] = obj;
     obj.style = items;
-    tmp7 = React6(tmp6, obj);
+    tmp7 = React6(View, obj);
   }
   const items1 = [tmp7, , ];
   const obj1 = { style: tmp.embedTextContainer, children: null };
@@ -168,10 +173,10 @@ export default function MessagePreviewText(message) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(10139);
+  let tmpResult = usePreviewableMediaText;
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(10140);
+  tmpResult = useGetInitialMessagePreview;
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = noop.useMemo(() => {
@@ -180,7 +185,7 @@ export default function MessagePreviewText(message) {
   }, items);
   if (memo.length > 0) {
     const first = memo[0];
-    if (first.type === tmp(1095).MessageEmbedTypes.GIFV) {
+    if (first.type === MessageEmbedTypes.MessageEmbedTypes.GIFV) {
       if (null != text) {
         obj = { text };
         let tmp43 = React6(SystemMessageText, obj);
@@ -197,16 +202,16 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(10131).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === usePreviewableMedia.PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
-        const intl4 = tmp(1114).intl;
+        const intl4 = util.intl;
         const obj3 = { username: nullableMessageAuthor.nick };
-        let formatResult = intl4.format(tmp(1114).t.sLDHDi, obj3);
+        let formatResult = intl4.format(util.t.sLDHDi, obj3);
       } else {
-        const intl3 = tmp(1114).intl;
-        formatResult = intl3.string(tmp(1114).t["9ddYKt"]);
+        const intl3 = util.intl;
+        formatResult = intl3.string(util.t["9ddYKt"]);
       }
       const obj4 = { text: formatResult };
       return React6(SystemMessageText, obj4);
@@ -216,10 +221,10 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       const channel = ChannelStore.getChannel(message.channel_id);
-      tmp(10094);
+      InAppNotificationUtils;
       if (null != channel) {
-        const obj6 = { channel, message, color: "text-default", layout: tmp(7879).ChannelListLayoutTypes.COZY, variant: tmp24, muted: false, lineClamp };
-        return React6(tmp(10109).ChannelRowPreview, obj6);
+        const obj6 = { channel, message, color: "text-default", layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COZY, variant: tmp24, muted: false, lineClamp };
+        return React6(ChannelRowPreview.ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: getInitialMessagePreview, lineClamp, maxHeight };
@@ -232,7 +237,7 @@ export default function MessagePreviewText(message) {
         let tmp17Result = null !== secondaryText;
         if (tmp17Result) {
           const obj9 = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp, children: secondaryText };
-          tmp17Result = React6(tmp(4556).Text, obj9);
+          tmp17Result = React6(Text_Text.Text, obj9);
         }
         const obj10 = { children: null };
         items2[1] = tmp17Result;
@@ -242,18 +247,18 @@ export default function MessagePreviewText(message) {
     }
     if (null != message.poll) {
       if (null != nullableMessageAuthor) {
-        const intl2 = tmp(1114).intl;
+        const intl2 = util.intl;
         const obj11 = { username: nullableMessageAuthor.nick };
-        let formatResult1 = intl2.format(tmp(1114).t["1wtRlq"], obj11);
+        let formatResult1 = intl2.format(util.t["1wtRlq"], obj11);
       } else {
-        const intl = tmp(1114).intl;
-        formatResult1 = intl.string(tmp(1114).t.n3shVJ);
+        const intl = util.intl;
+        formatResult1 = intl.string(util.t.n3shVJ);
       }
       const obj12 = { children: null };
       const obj13 = { text: formatResult1 };
       const items3 = [React6(SystemMessageText, obj13), ];
       const obj14 = { variant: "redesign/message-preview/medium", color: "text-default", lineClamp, children: message.poll.question.text };
-      items3[1] = React6(tmp(4556).Text, obj14);
+      items3[1] = React6(Text_Text.Text, obj14);
       obj12.children = items3;
       return React7(View, obj12);
     } else {

@@ -4,6 +4,8 @@
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
+import _modDef8811 from "module_8811" /* 8811 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8812 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,11 +42,11 @@ export default function AvatarDecorationSampleV2(arg0) {
   let obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = tmp2(8811);
+    avatarSource = _modDef8811;
   }
   obj = { children: null, source: avatarSource };
   const items1 = [hasOwnProperty(React3, obj), ];
-  obj = { style: tmp.avatarDecoration, accessibilityLabel: item.label, children: tmp8(tmp2(8812), { avatarDecoration: item, size, animate }) };
+  obj = { style: tmp.avatarDecoration, accessibilityLabel: item.label, children: hasOwnProperty(CutoutableAvatarDecorationDefault, { avatarDecoration: item, size, animate }) };
   items1[1] = hasOwnProperty(React4, obj);
   obj.children = items1;
   return React5(timestampProducer, obj);

@@ -11,7 +11,7 @@ const PremiumConstants = fn(1373);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
 
-export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRemaining(flag) {
+export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRemaining() {
   if (flag === undefined) {
     flag = false;
   }
@@ -55,4 +55,5 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
       const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
+  const obj3 = flag(8059);
 };

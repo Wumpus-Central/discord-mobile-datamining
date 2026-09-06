@@ -7,9 +7,9 @@ import reanimated_AccessibilityPreferencesSharedValue from "reanimated/Accessibi
 import size from "module_2" /* 2 */;
 
 const CONFIG_NEVER_ANIMATE = ReanimatedConstants.CONFIG_NEVER_ANIMATE;
-function withSpring(value, SUBTLE_SPRING, fn, fn2) {
-  let str = fn;
-  if (fn === undefined) {
+function withSpring(value, SUBTLE_SPRING, arg2) {
+  let str = arg2;
+  if (arg2 === undefined) {
     str = "respect-motion-settings";
   }
   const accessibilityPreferencesSharedValue = reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
@@ -22,14 +22,14 @@ function withSpring(value, SUBTLE_SPRING, fn, fn2) {
       }
       obj = {};
       const merged = Object.assign(obj);
-      obj.reduceMotion = tmp(4296).ReduceMotion.Never;
+      obj.reduceMotion = ReanimatedRexport.ReduceMotion.Never;
       tmp7 = obj;
     }
     let tmp5 = tmp7;
   } else {
     tmp5 = CONFIG_NEVER_ANIMATE;
   }
-  return ReanimatedRexport.withSpring(value, tmp5, fn2);
+  return ReanimatedRexport.withSpring(value, tmp5, fn);
 }
 withSpring.__closure = { accessibilityPreferencesSharedValue: reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE, ReduceMotion: ReanimatedRexport.ReduceMotion, REAwithSpring: ReanimatedRexport.withSpring };
 withSpring.__workletHash = 14783154107972;

@@ -38,8 +38,8 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
           title = sourcePowerup.title;
         }
         if (title == null) {
-          const intl3 = tmp9(1114).intl;
-          title = intl3.string(tmp9(1114).t.BfF6ED);
+          const intl3 = util.intl;
+          title = intl3.string(util.t.BfF6ED);
         }
         const obj1 = { type: "active", statusText: null };
         const obj2 = { perkName: title };

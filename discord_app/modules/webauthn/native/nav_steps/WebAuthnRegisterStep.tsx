@@ -93,7 +93,7 @@ export default function WebAuthnRegisterStep() {
   let tmp19Result = "" !== tmp10;
   if (tmp19Result) {
     obj1 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp10 };
-    tmp19Result = tmp19(tmp(4556).Text, obj1);
+    tmp19Result = closure_7(tmp(4556).Text, obj1);
   }
   items3[2] = tmp19Result;
   obj.children = items3;
@@ -101,7 +101,7 @@ export default function WebAuthnRegisterStep() {
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj2 = { authenticatorSelection, registering: tmp7, onChange: tmp5Result[1] };
-    shouldDisplayAndroidFidoSelector = tmp19(AndroidPasskeyRadioGroup, obj2);
+    shouldDisplayAndroidFidoSelector = closure_7(AndroidPasskeyRadioGroup, obj2);
   }
   items4[1] = shouldDisplayAndroidFidoSelector;
   const intl2 = tmp(1114).intl;

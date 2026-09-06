@@ -12,7 +12,7 @@ import UserRecord from "UserRecord" /* 1385 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-let closure_9 = async function _fetchProfile(arg0, value) {
+let closure_9 = async function _fetchProfile(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -172,7 +172,7 @@ let closure_9 = async function _fetchProfile(arg0, value) {
     }
   }
 };
-let closure_10 = async function _fetchMutualFriends(userId, signal) {
+let closure_10 = async function _fetchMutualFriends() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
@@ -303,27 +303,27 @@ export const acceptAgreements = function acceptAgreements() {
   request.rejectWithError = HTTPUtils.rejectWithMigratedError();
   return obj.patch(request).then(() => true, () => false);
 };
-export const setFlag = function setFlag(arg0, arg1) {
+export const setFlag = function setFlag(HAS_UNREAD_URGENT_MESSAGES, arg1) {
   const currentUser = UserStore.getCurrentUser();
   _modDef38(null != currentUser, "setFlag: user cannot be undefined");
   const flags = currentUser.flags;
   if (arg1) {
-    let tmp4 = flags | arg0;
+    let tmp4 = flags | HAS_UNREAD_URGENT_MESSAGES;
   } else {
-    tmp4 = flags & ~arg0;
+    tmp4 = flags & ~HAS_UNREAD_URGENT_MESSAGES;
   }
   const HTTP = HTTPUtils.HTTP;
   const request = { url: Endpoints.ME, oldFormErrors: true, body: { flags: tmp4 }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.patch(request);
 };
-export const getUser = function getUser(arg0) {
-  _require = arg0;
-  const user = UserStore.getUser(arg0);
+export const getUser = function getUser(userId) {
+  _require = userId;
+  const user = UserStore.getUser(userId);
   if (null != user) {
     let resolved = Promise.resolve(user);
   } else {
     const HTTP = require("HTTPUtils").HTTP;
-    let obj = { url: Endpoints.USER(arg0), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    let obj = { url: Endpoints.USER(userId), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     value = HTTP.get(obj);
     resolved = value.then((body) => {
       const obj = { type: "USER_UPDATE", user: body.body };

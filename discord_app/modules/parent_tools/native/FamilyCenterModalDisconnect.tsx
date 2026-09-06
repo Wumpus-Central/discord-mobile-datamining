@@ -99,7 +99,7 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   let tmp28Result = requiresParentalConsent;
   if (requiresParentalConsent) {
     obj3 = { style: tmp.warning, text: ageSpecificText1 };
-    tmp28Result = tmp28(tmp3(14874), obj3);
+    tmp28Result = closure_6(tmp3(14874), obj3);
   }
   obj4 = { children: null };
   items4[1] = tmp28Result;

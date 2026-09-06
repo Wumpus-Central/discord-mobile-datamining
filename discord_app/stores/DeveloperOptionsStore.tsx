@@ -30,6 +30,7 @@ function refreshSourceMapCookie() {
     }
     timeout = null;
     const result = closure_0(refreshSourceMapCookie[5]).setDeveloperOptionSettings({ sourceMapsEnabled: false });
+    obj = closure_0(refreshSourceMapCookie[5]);
   }, () => {
     const timeout = setTimeout(dependencyMap, Backoff.fail());
   });

@@ -14,7 +14,7 @@ let obj = {
   sendForward(messageRecord, alsoForwardToChannelId, arg2) {
     closure_0 = messageRecord;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -47,8 +47,8 @@ let obj = {
               closure_128_0 = channel;
               const channel1 = ChannelStore.getChannel(tmp2.channel_id);
               let prop;
-              if (closure_2 != null) {
-                prop = tmp73.isICYMIGameContentForwarding;
+              if (dependencyMap != null) {
+                prop = dependencyMap.isICYMIGameContentForwarding;
               }
               if (prop) {
                 let guild_id = tmp2(8348).GAME_CONTENT_GUILD_ID;
@@ -69,27 +69,27 @@ let obj = {
               } else {
                 const parsed = alsoForwardToChannelId(7682).parse(channel, "");
                 let obj1 = { guild_id, channel_id: null, message_id: null, type: null, forward_only: null };
-                ({ channel_id: obj16.channel_id, id: obj16.message_id } = tmp71);
+                ({ channel_id: obj16.channel_id, id: obj16.message_id } = tmp2);
                 obj1.type = tmp2(1096).MessageReferenceTypes.FORWARD;
                 let onlyAttachmentIds;
-                if (tmp73 != null) {
-                  onlyAttachmentIds = tmp73.onlyAttachmentIds;
+                if (dependencyMap != null) {
+                  onlyAttachmentIds = dependencyMap.onlyAttachmentIds;
                 }
                 if (null != onlyAttachmentIds) {
                   let obj2 = { attachment_ids: null, embed_indices: null };
-                  ({ onlyAttachmentIds: obj8.attachment_ids, onlyEmbedIndices: obj8.embed_indices } = tmp73);
+                  ({ onlyAttachmentIds: obj8.attachment_ids, onlyEmbedIndices: obj8.embed_indices } = dependencyMap);
                   const tmp34 = obj2;
                 } else {
                   let onlyEmbedIndices;
-                  if (tmp73 != null) {
-                    onlyEmbedIndices = tmp73.onlyEmbedIndices;
+                  if (dependencyMap != null) {
+                    onlyEmbedIndices = dependencyMap.onlyEmbedIndices;
                   }
                 }
                 obj1.forward_only = tmp34;
                 closure_128_1 = 0;
                 let withMessage;
-                if (tmp73 != null) {
-                  withMessage = tmp73.withMessage;
+                if (dependencyMap != null) {
+                  withMessage = dependencyMap.withMessage;
                 }
                 closure_128_2 = withMessage;
                 let num9 = 0;
@@ -111,7 +111,6 @@ let obj = {
                 const obj4 = { value: obj10.sendMessage(channel.id, parsed, false, obj3), done: false };
                 return obj4;
               }
-              tmp71 = tmp2;
             }
           } else {
             if (1 === tmp5) {
@@ -160,8 +159,8 @@ let obj = {
       }
     })();
   },
-  sendForwards(arg0, arr, arg2) {
-    closure_0 = arg0;
+  sendForwards(message, arr, arg2) {
+    closure_0 = message;
     importDefault = arg2;
     return allSettledDefault(arr.map((item) => obj.sendForward(closure_0, item, closure_1)));
   }

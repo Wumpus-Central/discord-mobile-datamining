@@ -19,7 +19,7 @@ function shouldFetchStorefrontPromotions(arg0) {
   } else if ("loading" === fetchState) {
     return false;
   } else {
-    const fetchedAt = obj.getFetchedAt(arg0);
+    const fetchedAt = StorefrontPromotionStore.getFetchedAt(arg0);
     if (null == fetchedAt) {
       return true;
     } else {
@@ -27,9 +27,8 @@ function shouldFetchStorefrontPromotions(arg0) {
       return Date.now() - fetchedAt > ("error" === fetchState ? closure_9 : MINUTE);
     }
   }
-  obj = StorefrontPromotionStore;
 }
-let closure_12 = async function _maybeFetchStorefrontPromotions(arg0, value) {
+let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -88,7 +87,7 @@ function fetchStorefrontPromotions() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _fetchStorefrontPromotions(arg0, value) {
+let closure_14 = async function _fetchStorefrontPromotions(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -120,13 +119,13 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0, value) {
           if (0 !== length.length) {
             c3 = 1;
             let obj5 = DispatcherDefault;
-            const obj1 = { type: "STOREFRONT_PROMOTIONS_FETCH_START", applicationIds: tmp39 };
+            const obj1 = { type: "STOREFRONT_PROMOTIONS_FETCH_START", applicationIds: length };
             obj5.dispatch(obj1);
             promotionIdOverride = promotionIdOverride.getPromotionIdOverride();
             const HTTP = HTTPUtils.HTTP;
             let get = HTTP.get;
             const request = { url: constants.STOREFRONT_PROMOTIONS, query: null, rejectWithError: true };
-            const obj2 = { application_ids: tmp39 };
+            const obj2 = { application_ids: length };
             if (null != promotionIdOverride) {
               let obj3 = { promotion_id_override: promotionIdOverride };
               let obj4 = obj3;
@@ -211,7 +210,7 @@ function fetchStorefrontPrices() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _fetchStorefrontPrices(arg0, value) {
+let closure_18 = async function _fetchStorefrontPrices(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

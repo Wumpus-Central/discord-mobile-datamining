@@ -30,23 +30,23 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   let items = [quest, tmp2];
   const effect = noop.useEffect(() => {
     const questAsset = AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.VIDEO_PLAYER_TRANSCRIPT, undefined, true);
-    let tmp6 = null == closure_1 || tmp5.questId !== tmp3.id;
+    let tmp6 = null == closure_1 || closure_1.questId !== quest.id;
     if (!tmp6) {
-      tmp6 = tmp5.fetchStatus === constants.NONE;
+      tmp6 = closure_1.fetchStatus === constants.NONE;
     }
     if (!tmp6) {
-      let tmp9 = tmp5.fetchStatus === constants.SUCCESS;
+      let tmp9 = closure_1.fetchStatus === constants.SUCCESS;
       if (tmp9) {
         let url;
         if (questAsset != null) {
           url = questAsset.url;
         }
-        tmp9 = url !== tmp5.url;
+        tmp9 = url !== closure_1.url;
       }
       tmp6 = tmp9;
     }
     if (tmp6) {
-      const videoTranscript = QuestActionCreators.fetchVideoTranscript(tmp3, true);
+      const videoTranscript = QuestActionCreators.fetchVideoTranscript(quest, true);
       const tmpResult = QuestActionCreators;
     }
   }, items);
@@ -58,12 +58,12 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   const memo = noop.useMemo(() => {
     let text;
     if (closure_1 != null) {
-      text = tmp.text;
+      text = closure_1.text;
     }
     if (null == text) {
       let items = [];
     } else {
-      const parts = tmp.text.split("\n");
+      const parts = closure_1.text.split("\n");
       const mapped = parts.map((item) => item.trim());
       items = mapped.filter((item) => item.length > 0);
     }
@@ -83,7 +83,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   let tmp7Result = fetchStatus === constants.FETCHING;
   if (tmp7Result) {
     const obj2 = { style: tmp.loadingSpinner, size: "large" };
-    tmp7Result = tmp7(ActivityIndicator, obj2);
+    tmp7Result = closure_7(ActivityIndicator, obj2);
   }
   const items2 = [tmp7Result, memo.length > 0 && memo.map((children, index) => closure_1_7(quest(dependencyMap[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, index))];
   obj1.children = items2;

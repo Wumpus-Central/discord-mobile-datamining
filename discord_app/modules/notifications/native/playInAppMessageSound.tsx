@@ -2,6 +2,7 @@
 
 // Module 10103 (playInAppMessageSound)
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import SoundUtils from "SoundUtils" /* 9902 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 10081 */;
 
 require = fn;
@@ -20,14 +21,12 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
           const _Date = Date;
           timestamp = Date.now();
           if (timestamp - timestamp >= 1000) {
-            tmp8(9902).playSound(tmp3, 0.4);
-            const tmp8Result = tmp8(9902);
+            SoundUtils.playSound(message1, 0.4);
+            const tmp8Result = SoundUtils;
           }
         }
-        tmp3 = message1;
       }
     }
     obj2 = MetaQuestUtils;
-    tmp8 = require;
   }
 };

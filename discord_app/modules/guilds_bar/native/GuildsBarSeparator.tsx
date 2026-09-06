@@ -4,11 +4,11 @@
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import NativeViewDefault from "NativeView" /* 5589 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7073 */;
 import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16022 */;
 import noop from "module_19" /* 19 */;
 
-const NativeViewDefault = tmp2(5589);
 require = fn;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
@@ -49,10 +49,10 @@ export default noop.memo(function GuildsBarSeparator() {
   const tmp4 = closure_4(token);
   if (obj2.useIsHomeDrawerEnabled()) {
     obj = { guildItemSize: token };
-    let tmp5Result = tmp5(GuildsBarHomeDrawerSeparator, obj);
+    let tmp5Result = <GuildsBarHomeDrawerSeparator guildItemSize={token} />;
   } else {
     obj = { style: tmp4.separator };
-    tmp5Result = tmp5(NativeViewDefault, obj);
+    tmp5Result = jsx(NativeViewDefault, { style: tmp4.separator });
   }
   return tmp5Result;
 });

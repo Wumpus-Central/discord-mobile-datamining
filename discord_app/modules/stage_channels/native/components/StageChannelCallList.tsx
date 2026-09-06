@@ -3,9 +3,11 @@
 // Module 10044 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
 import SpeakerTile from "SpeakerTile" /* 10046 */;
 import StageSectionHeaderDefault from "StageSectionHeader" /* 10053 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10054 */;
 import StageGridRowDefault from "StageGridRow" /* 10055 */;
 import AudienceGridRowDefault from "AudienceGridRow" /* 10067 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -44,7 +46,7 @@ let closure_12 = noop.memo((channel) => {
       num = 1;
     }
     const items = [Math.max(num, 1), , ];
-    let num2 = tmp[tmp2.SPEAKER];
+    let num2 = listSections[stageParticipantsCount.SPEAKER];
     if (num2 == null) {
       num2 = 1;
     }
@@ -59,13 +61,13 @@ let closure_12 = noop.memo((channel) => {
   const callback = noop.useCallback((arg0) => {
     if (stageParticipantsCount.STREAM === arg0) {
       return 0;
-    } else if (tmp.SPEAKER === arg0) {
+    } else if (stageParticipantsCount.SPEAKER === arg0) {
       let num4 = 48;
       if (0 === actualStageSpeakerCount) {
         num4 = 0;
       }
       return num4;
-    } else if (tmp.AUDIENCE === arg0) {
+    } else if (stageParticipantsCount.AUDIENCE === arg0) {
       let num2 = 48;
       if (0 === stageParticipantsCount) {
         num2 = 0;
@@ -91,7 +93,7 @@ let closure_12 = noop.memo((channel) => {
           sum = SpeakerTile.SPEAKER_TILE_HEIGHTS.FULL + 8 + num;
         }
         return sum;
-      } else if (tmp2.SPEAKER === arg0) {
+      } else if (stageParticipantsCount.SPEAKER === arg0) {
         if (null == rowsBySection[arg0][arg1]) {
           return num;
         } else {
@@ -110,7 +112,7 @@ let closure_12 = noop.memo((channel) => {
           }
           return sum2;
         }
-      } else if (tmp2.AUDIENCE === arg0) {
+      } else if (stageParticipantsCount.AUDIENCE === arg0) {
         let sum3 = num;
         if (!first) {
           sum3 = 102 + num;
@@ -130,7 +132,7 @@ let closure_12 = noop.memo((channel) => {
   const callback2 = noop.useCallback((arg0) => {
     if (stageParticipantsCount.STREAM === arg0) {
       return null;
-    } else if (tmp.AUDIENCE === arg0) {
+    } else if (stageParticipantsCount.AUDIENCE === arg0) {
       let tmp13 = null;
       if (0 !== stageParticipantsCount) {
         cutout = { label: null, count: null, onToggleCollapse: null, collapsed: null };
@@ -144,7 +146,7 @@ let closure_12 = noop.memo((channel) => {
         tmp13 = React6(StageSectionHeaderDefault, cutout);
       }
       return tmp13;
-    } else if (tmp.SPEAKER === arg0) {
+    } else if (stageParticipantsCount.SPEAKER === arg0) {
       let tmp21Result = null;
       if (0 !== actualStageSpeakerCount) {
         cutout = { label: null, count: null, onToggleCollapse: null, collapsed: null, children: null };
@@ -157,15 +159,13 @@ let closure_12 = noop.memo((channel) => {
         cutout.collapsed = first1;
         tmp21Result = undefined;
         if (first1) {
-          cutout = { users: mapped, max: 10, avatarSize: tmp25(1178).AvatarSizes.XSMALL_20, cutout: null };
+          cutout = { users: mapped, max: 10, avatarSize: native.AvatarSizes.XSMALL_20, cutout: null };
           cutout.cutout = cutout;
-          tmp21Result = tmp21(tmp22(10054), cutout);
-          const tmp22Result = tmp22(10054);
+          tmp21Result = React6(UserSummaryItemDefault, cutout);
+          const tmp22Result = UserSummaryItemDefault;
         }
         cutout.children = tmp21Result;
-        tmp21Result = tmp21(StageSectionHeaderDefault, cutout);
-        tmp22 = importDefault;
-        tmp25 = require;
+        tmp21Result = React6(StageSectionHeaderDefault, cutout);
       }
       return tmp21Result;
     } else {
@@ -203,15 +203,15 @@ let closure_12 = noop.memo((channel) => {
       return tmp;
     } else if (stageParticipantsCount.STREAM === arg0) {
       let obj = { children: null };
-      obj = { channel, participants: tmp3[arg0][row], row };
+      obj = { channel, participants: rowsBySection[arg0][row], row };
       obj.children = React6(StageGridRowDefault, obj);
       const _HermesInternal3 = HermesInternal;
       return React6(noop.Fragment, obj, "stream-" + arg0 + "-" + row);
-    } else if (tmp31.SPEAKER === arg0) {
+    } else if (stageParticipantsCount.SPEAKER === arg0) {
       const items = [tmp, ];
       let tmp19 = !first1;
       if (!first1) {
-        const obj1 = { channel, participants: tmp3[arg0][row], row };
+        const obj1 = { channel, participants: rowsBySection[arg0][row], row };
         tmp19 = React6(StageGridRowDefault, obj1);
       }
       const obj2 = { children: null };
@@ -219,11 +219,11 @@ let closure_12 = noop.memo((channel) => {
       obj2.children = items;
       const _HermesInternal2 = HermesInternal;
       return React7(noop.Fragment, obj2, "speaker-" + arg0 + "-" + row);
-    } else if (tmp31.AUDIENCE === arg0) {
+    } else if (stageParticipantsCount.AUDIENCE === arg0) {
       const items1 = [tmp, ];
       let tmp10 = !first;
       if (!first) {
-        obj = { channel, participants: tmp3[arg0][row] };
+        obj = { channel, participants: rowsBySection[arg0][row] };
         tmp10 = React6(AudienceGridRowDefault, obj);
       }
       const obj3 = { children: null };
@@ -295,7 +295,7 @@ export default function StageChannelCallList(channel) {
     if (isScreenLandscape) {
       const _Math = Math;
       const _Math2 = Math;
-      num = Math.max(3, Math.floor(width / tmp2(10046).LANDSCAPE_MAX_TILE_WIDTH));
+      num = Math.max(3, Math.floor(width / SpeakerTile.LANDSCAPE_MAX_TILE_WIDTH));
     }
     const obj = {};
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER] = num;

@@ -44,10 +44,10 @@ const memoResult = noop.memo((size) => {
   obj.children = substr.map((item, index) => {
     if (item === useProfileEffectSections.NONE_ITEM) {
       let obj = { size, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return timestampProducer(tmp(13171).EditCollectiblesListItemNone, obj, "none");
-    } else if (item === tmp(14628).SHOP_ITEM) {
+      return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj, "none");
+    } else if (item === useProfileEffectSections.SHOP_ITEM) {
       obj = { size, analyticsSource: AnalyticsLocationDefault.EDIT_PROFILE_EFFECT_SHEET };
-      return timestampProducer(tmp(13171).EditCollectiblesListItemShop, obj, "shop");
+      return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj, "shop");
     } else if (isProfileEffectRecord(item)) {
       const obj1 = { item, isSelected: closure_1_0 === item.skuId, setSelectedProfileEffect, isTryItOut, size };
       return timestampProducer(memoResult1, obj1, item.skuId);
@@ -89,17 +89,17 @@ const memoResult1 = noop.memo((isSelected) => {
   const memo = noop.useMemo(() => {
     let thumbnailPreviewSrc;
     if (closure_2 != null) {
-      thumbnailPreviewSrc = tmp.thumbnailPreviewSrc;
+      thumbnailPreviewSrc = closure_2.thumbnailPreviewSrc;
     }
     if (null == thumbnailPreviewSrc) {
       let thumbnailPreviewSrc1;
-      if (tmp != null) {
-        thumbnailPreviewSrc1 = tmp.thumbnailPreviewSrc;
+      if (closure_2 != null) {
+        thumbnailPreviewSrc1 = closure_2.thumbnailPreviewSrc;
       }
       let combined = thumbnailPreviewSrc1;
     } else {
       const _HermesInternal = HermesInternal;
-      combined = "" + tmp.thumbnailPreviewSrc + "?width=100&height=195";
+      combined = "" + closure_2.thumbnailPreviewSrc + "?width=100&height=195";
     }
     return combined;
   }, items1);

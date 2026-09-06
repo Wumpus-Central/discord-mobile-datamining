@@ -50,4 +50,5 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
     setThemeFlagResult1 = tmp(4271).setThemeFlag(0, tmp(4271).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
     const tmpResult2 = tmp(4271);
   }
+  const obj3 = manaTypeConsolidationExperiment(14570);
 };

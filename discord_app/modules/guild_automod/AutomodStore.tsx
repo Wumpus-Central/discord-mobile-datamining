@@ -90,7 +90,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     },
     syncRules: null
   };
-  closure_2 = asyncGeneratorStep(async (arg0, value) => {
+  closure_2 = asyncGeneratorStep(async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -130,7 +130,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
               return timestamp - num > 20000;
             })(closure_0)) {
               const _Date = Date;
-              c7[tmp40] = Date.now();
+              c7[closure_0] = Date.now();
               c4 = 1;
               function convertToRulesByTriggerType(arr) {
                 const obj = { [closure_1_5.KEYWORD]: [], [closure_1_5.ML_SPAM]: [], [closure_1_5.DEFAULT_KEYWORD_LIST]: [], [closure_1_5.MENTION_SPAM]: [], [closure_1_5.USER_PROFILE]: [], [closure_1_5.SERVER_POLICY]: [] };
@@ -144,7 +144,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
               }
               c6 = 2;
               c7 = 1;
-              const obj1 = { value: closure_0(convertToRulesByTriggerType[8]).fetchAutomodRules(tmp40), done: false };
+              const obj1 = { value: closure_0(convertToRulesByTriggerType[8]).fetchAutomodRules(closure_0), done: false };
               return obj1;
             }
           }
@@ -232,7 +232,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
   closure_3 = tmp4;
   const items = [tmp[0], ];
   const items1 = [arg0, tmp2[1], first];
-  items[1] = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  items[1] = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -312,7 +312,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
   asyncGeneratorStep = tmp4;
   let items = [tmp[0], ];
   const items1 = [arg0, tmp2[1], first];
-  items[1] = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  items[1] = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -381,7 +381,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
   _require = tmp6;
   const items2 = [arg0, tmp5[1]];
   const effect = noop.useEffect(() => {
-    (async (arg0, value) => {
+    (async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

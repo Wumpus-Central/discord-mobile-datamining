@@ -41,7 +41,7 @@ function EmojiGallery(arg0) {
     const items1 = ["+", diff];
     obj.children = items1;
     obj.children = closure_9(Text_Text.Text, obj);
-    tmp3Result = tmp3(tmp4, obj, "andMore");
+    tmp3Result = closure_8(closure_6, obj, "andMore");
   }
   items[tmp7] = tmp3Result;
   obj.children = closure_8(LayoutUtils.GappedList, { gap: 18, children: items });
@@ -62,7 +62,7 @@ function BenefitShowCase(arg0) {
     obj = { variant: "text-sm/medium", color: "interactive-text-default", children: description };
     items1[1] = React6(Text_Text.Text, obj);
     obj.children = items1;
-    tmpResult = tmp(closure_1_10, obj);
+    tmpResult = React7(closure_1_10, obj);
   }
   children[1] = tmpResult;
   return React7(timestampProducer, { children });
@@ -158,7 +158,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   const items2 = [closure_9(closure_6, obj), closure_8(listingId(1178).Spacer, { size: 16 }), closure_8(guildId(16547), { listingId }), ];
   let tmp8Result2 = length > 0 || size > 0 || length2 > 0;
   if (tmp8Result2) {
-    const items3 = [tmp10(tmp4(1178).Spacer, { size: 24 }), , ];
+    const items3 = [closure_8(tmp4(1178).Spacer, { size: 24 }), , ];
     obj3 = { style: tmp.contentContainer, children: null };
     obj4 = {
       renderGap() {
@@ -173,16 +173,16 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       const intl = tmp4(1114).intl;
       obj6.title = intl.string(tmp4(1114).t.ebOU2b);
       obj6.count = size;
-      const items4 = [tmp10(ContentHeader, obj6), tmp10(tmp4(1178).Spacer, { size: 8 }), , ];
+      const items4 = [closure_8(ContentHeader, obj6), closure_8(tmp4(1178).Spacer, { size: 8 }), , ];
       const obj7 = { emojiIds: null, guildId: null, maxEmojis: 5 };
       const items5 = [];
       HermesBuiltin.arraySpread(first, 0);
       obj7.emojiIds = items5;
       obj7.guildId = guildId;
-      items4[2] = tmp10(EmojiGallery, obj7);
-      items4[3] = tmp10(tmp4(1178).Spacer, { size: 4 });
+      items4[2] = closure_8(EmojiGallery, obj7);
+      items4[3] = closure_8(tmp4(1178).Spacer, { size: 4 });
       obj5.children = items4;
-      tmp8Result = tmp8(tmp9, obj5);
+      tmp8Result = closure_9(closure_6, obj5);
     }
     const items6 = [tmp8Result, , ];
     tmp8Result = null;
@@ -193,12 +193,12 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       const obj10 = { numChannels: length };
       obj9.title = intl2.formatToPlainString(tmp4(1114).t.y7dUrm, obj10);
       obj9.count = length;
-      const items7 = [tmp10(ContentHeader, obj9), tmp10(tmp4(1178).Spacer, { size: 12 }), , ];
+      const items7 = [closure_8(ContentHeader, obj9), closure_8(tmp4(1178).Spacer, { size: 12 }), , ];
       ({ ref_id: obj19.channelId, description: obj19.description } = first3);
-      items7[2] = tmp10(ChannelBenefitShowCase, { channelId: null, description: null });
-      items7[3] = tmp10(tmp4(1178).Spacer, { size: 6 });
+      items7[2] = closure_8(ChannelBenefitShowCase, { channelId: null, description: null });
+      items7[3] = closure_8(tmp4(1178).Spacer, { size: 6 });
       obj8.children = items7;
-      tmp8Result = tmp8(tmp9, obj8);
+      tmp8Result = closure_9(closure_6, obj8);
       const obj11 = { channelId: null, description: null };
     }
     items6[1] = tmp8Result;
@@ -210,28 +210,28 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       const obj14 = { numBenefits: length2 };
       obj13.title = intl3.formatToPlainString(tmp4(1114).t.MR7oOF, obj14);
       obj13.count = length2;
-      const items8 = [tmp10(ContentHeader, obj13), tmp10(tmp4(1178).Spacer, { size: 12 }), , ];
+      const items8 = [closure_8(ContentHeader, obj13), closure_8(tmp4(1178).Spacer, { size: 12 }), , ];
       ({ name: obj23.title, description: obj23.description } = first4);
-      items8[2] = tmp10(BenefitShowCase, { title: null, description: null });
-      items8[3] = tmp10(tmp4(1178).Spacer, { size: 6 });
+      items8[2] = closure_8(BenefitShowCase, { title: null, description: null });
+      items8[3] = closure_8(tmp4(1178).Spacer, { size: 6 });
       obj12.children = items8;
-      tmp8Result1 = tmp8(tmp9, obj12);
+      tmp8Result1 = closure_9(closure_6, obj12);
       const obj15 = { title: null, description: null };
     }
     const obj16 = { children: null };
     items6[2] = tmp8Result1;
     obj4.children = items6;
-    obj3.children = tmp8(tmp4(10346).GappedList, obj4);
-    items3[1] = tmp10(tmp9, obj3);
+    obj3.children = closure_9(tmp4(10346).GappedList, obj4);
+    items3[1] = closure_8(closure_6, obj3);
     const obj17 = {
       onPress() {
           const obj = { listingId, guildId };
           obj.openLazy(asyncRequireImpl(16546, dependencyMap.paths), "PurchaseCard:" + listingId, obj);
         }
     };
-    items3[2] = tmp10(ShowAllButton, obj17);
+    items3[2] = closure_8(ShowAllButton, obj17);
     obj16.children = items3;
-    tmp8Result2 = tmp8(closure_10, obj16);
+    tmp8Result2 = closure_9(closure_10, obj16);
   }
   items2[3] = tmp8Result2;
   obj.children = items2;

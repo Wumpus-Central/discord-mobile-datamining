@@ -17,8 +17,8 @@ export default function useHasAllocateBoostPermission(arg0) {
     let canResult = null;
     if (null != guild) {
       canResult = null;
-      if (null != obj.getGuildPermissions(guild)) {
-        canResult = obj.can(Permissions.ADMINISTRATOR, guild);
+      if (null != PermissionStore.getGuildPermissions(guild)) {
+        canResult = PermissionStore.can(Permissions.ADMINISTRATOR, guild);
       }
     }
     return canResult;

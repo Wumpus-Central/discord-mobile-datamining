@@ -26,14 +26,14 @@ export const getVoiceChannelErrorContext = function getVoiceChannelErrorContext(
     name = tmp4.name;
   }
   obj = { videoDeviceName: name, audioInputDeviceName: null, audioOutputDeviceName: null };
-  const inputDevices = obj3.getInputDevices();
+  const inputDevices = MediaEngineStore.getInputDevices();
   const tmp7 = inputDevices[MediaEngineStore.getInputDeviceId(MediaEngineStore)];
   let name1;
   if (tmp7 != null) {
     name1 = tmp7.name;
   }
   obj.audioInputDeviceName = name1;
-  const outputDevices = obj3.getOutputDevices();
+  const outputDevices = MediaEngineStore.getOutputDevices();
   const tmp10 = outputDevices[MediaEngineStore.getOutputDeviceId(MediaEngineStore)];
   let name2;
   if (tmp10 != null) {
@@ -68,14 +68,14 @@ export const getStreamErrorContext = function getStreamErrorContext(streamKey) {
     name = tmp7.name;
   }
   obj = { videoDeviceName: name, audioInputDeviceName: null, audioOutputDeviceName: null };
-  const inputDevices = obj4.getInputDevices();
+  const inputDevices = MediaEngineStore.getInputDevices();
   const tmp10 = inputDevices[MediaEngineStore.getInputDeviceId(MediaEngineStore)];
   let name1;
   if (tmp10 != null) {
     name1 = tmp10.name;
   }
   obj.audioInputDeviceName = name1;
-  const outputDevices = obj4.getOutputDevices();
+  const outputDevices = MediaEngineStore.getOutputDevices();
   const tmp13 = outputDevices[MediaEngineStore.getOutputDeviceId(MediaEngineStore)];
   let name2;
   if (tmp13 != null) {

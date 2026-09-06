@@ -2,6 +2,7 @@
 
 // Module 4698 (getFrontierTuningConfigIfEligible)
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
+import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 4699 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = fn;
@@ -21,14 +22,13 @@ export default function getFrontierTuningConfigIfEligible(location, currentUser,
         let obj = PremiumUtilsDefault;
         if (!obj.canStreamQuality(PremiumUtilsDefault.StreamQuality.MID, currentUser)) {
           obj = { location, guildId };
-          const config = tmp3(4699).getConfig(obj);
+          const config = FrontierTuningExperimentDefault.getConfig(obj);
           let tmp6 = null;
           if (null != config.maxBitrate) {
             tmp6 = config;
           }
           return tmp6;
         }
-        tmp3 = importDefault;
       }
       return null;
     }

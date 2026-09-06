@@ -67,11 +67,11 @@ function handleFormInit(location) {
       }
     }
     if (null != section) {
-      obj = { key: "landing", name: tmp16.LANDING };
+      obj = { key: "landing", name: constants.LANDING };
       const items = [obj];
-      if (section === tmp16.TAG_CUSTOMIZE) {
+      if (section === constants.TAG_CUSTOMIZE) {
         obj = { key: null, name: null };
-        ({ TAG: obj2.key, TAG: obj2.name } = tmp16);
+        ({ TAG: obj2.key, TAG: obj2.name } = constants);
         items.push(obj);
       }
       const obj1 = { key: section, name: section };
@@ -194,11 +194,11 @@ prototype["hasChanges"] = function hasChanges() {
   const isEqualResult = obj.isEqual(closure_7, guild);
   let widgetHasChangesResult = !isEqualResult;
   if (isEqualResult) {
-    let tmpResult = tmp(12);
+    let tmpResult = _modDef12;
     widgetHasChangesResult = !tmpResult.isEqual(obj, obj);
   }
   if (!widgetHasChangesResult) {
-    tmpResult = tmp(12);
+    tmpResult = _modDef12;
     widgetHasChangesResult = !tmpResult.isEqual(obj, profile);
   }
   if (!widgetHasChangesResult) {
@@ -322,11 +322,10 @@ obj = {
       const _Object = Object;
       const keys = Object.keys(closure_34);
       for (const item10007 of keys) {
-        let tmp4 = item10007;
         if (arg0.hasOwnProperty(item10007)) {
-          let tmp7 = arg0[closure_34[tmp4]];
+          let tmp7 = arg0[closure_34[item10007]];
           if (null != tmp7) {
-            closure_44[tmp4] = tmp8;
+            closure_44[item10007] = tmp8;
           } else {
             delete tmp2[tmp];
           }
@@ -351,13 +350,12 @@ obj = {
           const item = closure_32.forEach((item) => {
             if (null != obj) {
               if (closure_0.hasOwnProperty(item)) {
-                if (undefined !== tmp2[item]) {
+                if (undefined !== closure_0[item]) {
                   obj = {};
                   const merged = Object.assign(obj);
                   obj[item] = tmp3;
                 }
               }
-              tmp2 = closure_0;
             }
           });
         }
@@ -415,14 +413,14 @@ obj = {
     } else {
       ({ section: c3, subsection: c4 } = section);
       if (c3 !== constants.INSTANT_INVITES) {
-        if (c3 !== tmp27.INVITES) {
-          if (c3 !== tmp27.INTEGRATIONS) {
-            if (c3 !== tmp27.ROLES) {
-              if (c3 === tmp27.MEMBERS) {
+        if (c3 !== constants.INVITES) {
+          if (c3 !== constants.INTEGRATIONS) {
+            if (c3 !== constants.ROLES) {
+              if (c3 === constants.MEMBERS) {
                 c10 = getGuildEveryoneRoleId(guild);
-              } else if (c3 === tmp27.VANITY_URL) {
+              } else if (c3 === constants.VANITY_URL) {
                 const vanityUrl = GuildSettingsVanityURLActionCreators.fetchVanityUrl(guild.id);
-              } else if (c3 === tmp27.SAFETY) {
+              } else if (c3 === constants.SAFETY) {
                 if (null == c4) {
                   let SAFETY_OVERVIEW = constants2.SAFETY_OVERVIEW;
                 } else {
@@ -667,7 +665,7 @@ obj = {
           profile = GuildProfileStore.getProfile(guild.id);
           let result = c3 === constants.PROFILE;
           if (!result) {
-            result = c3 === tmp23.TAG;
+            result = c3 === constants.TAG;
           }
           if (!result) {
             obj = guild(obj[12]);

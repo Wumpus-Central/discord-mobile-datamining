@@ -99,8 +99,8 @@ class AddMembersBody {
       return obj;
     });
     obj2.onChangeText = function onChangeText(str) {
-      const formatted = str.trim().toLowerCase();
       str = str.trim();
+      const formatted = str.toLowerCase();
       members = GuildUtilsDefault.requestMembers(id.id, formatted, GuildSettingsRolesUtils.ADD_MEMBER_QUERY_LIMIT);
       closure_7(formatted);
     };

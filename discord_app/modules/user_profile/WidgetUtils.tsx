@@ -1,8 +1,12 @@
 // === Module 7624: WidgetUtils ===
 
 // Module 7624 (WidgetUtils)
+import util from "util" /* 1114 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import GameWidgetLimits from "GameWidgetLimits" /* 5110 */;
 import utils from "utils" /* 5112 */;
+import useGame2 from "useGame" /* 7309 */;
 import WidgetType from "WidgetType" /* 7622 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7623 */;
 import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 7628 */;
@@ -47,7 +51,7 @@ function findGameWidget(widgetType) {
 function replaceWidgetInList(clipsGalleryWidget) {
   let uniqueKey = clipsGalleryWidget;
   if (WidgetStore.hasPendingChanges()) {
-    let pendingWidgets = obj.getPendingWidgets();
+    let pendingWidgets = WidgetStore.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
     }
@@ -80,7 +84,6 @@ function replaceWidgetInList(clipsGalleryWidget) {
     items1[findIndexResult] = clipsGalleryWidget;
     return items1;
   }
-  obj = WidgetStore;
 }
 const UserProfileWidgetConstants = fn(7626);
 ({ WIDGET_TITLES_BY_TYPE: closure_7, WIDGETS_SUPPORTING_COMMENT: closure_8, WIDGETS_SUPPORTING_TAGS: closure_9 } = UserProfileWidgetConstants);
@@ -96,12 +99,12 @@ export const getGameWidgetSubtitle = function getGameWidgetSubtitle(games, showE
   if (showEditingControls.showEditingControls) {
     if (games.games.length > 0) {
       if (1 === GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE[games.type]) {
-        const intl2 = tmp(1114).intl;
-        let stringResult = intl2.string(tmp(1114).t.wiXdEa);
+        const intl2 = util.intl;
+        let stringResult = intl2.string(util.t.wiXdEa);
       } else {
-        const intl = tmp(1114).intl;
-        const obj = { numGames: tmp(5110).GAME_WIDGET_LIMITS_BY_TYPE[games.type] };
-        stringResult = intl.format(tmp(1114).t["zR1+0/"], obj);
+        const intl = util.intl;
+        const obj = { numGames: GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE[games.type] };
+        stringResult = intl.format(util.t["zR1+0/"], obj);
       }
       return stringResult;
     }
@@ -171,12 +174,12 @@ export const addWidgetToPending = function addWidgetToPending(type) {
     return uniqueKey === type.getUniqueKey();
   })) {
     if (type.type === WidgetType.WidgetType.PERSONAL) {
-      let tmp16Result = tmp16(4380);
+      let tmp16Result = DismissibleContentUnsafeUtils;
       obj = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result = tmp16Result.UNSAFE_markDismissibleContentAsDismissed(tmp16(1943).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj);
-      tmp16Result = tmp16(4380);
+      const result = tmp16Result.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj);
+      tmp16Result = DismissibleContentUnsafeUtils;
       obj = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result1 = tmp16Result.UNSAFE_markDismissibleContentAsDismissed(tmp16(1943).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj);
+      const result1 = tmp16Result.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj);
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);
@@ -356,7 +359,7 @@ export const updateClipTagsInClipsGalleryWidget = function updateClipTagsInClips
   closure_1 = arg1;
   if (arg1.length <= GameWidgetLimits.USER_WIDGET_GAME_TAGS_MAX_LENGTH) {
     if (WidgetStore.hasPendingChanges()) {
-      let pendingWidgets = obj3.getPendingWidgets();
+      let pendingWidgets = WidgetStore.getPendingWidgets();
       if (pendingWidgets == null) {
         pendingWidgets = [];
       }
@@ -399,7 +402,6 @@ export const updateClipTagsInClipsGalleryWidget = function updateClipTagsInClips
       const clipsGalleryWidget = new UserProfileClipsGalleryWidgetTypes.ClipsGalleryWidget(obj);
       WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
     }
-    obj3 = WidgetStore;
   }
 };
 export const removeTagFromClip = function removeTagFromClip(arg0, arg1) {
@@ -487,11 +489,10 @@ export const removeTagFromClip = function removeTagFromClip(arg0, arg1) {
             }
             return tmp;
           });
-          const clipsGalleryWidget = new tmp10(7629).ClipsGalleryWidget(obj);
+          const clipsGalleryWidget = new UserProfileClipsGalleryWidgetTypes.ClipsGalleryWidget(obj);
           WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
         }
       }
-      tmp10 = require;
     }
   }
 };
@@ -532,7 +533,7 @@ export const removeClipFromClipsGalleryWidget = function removeClipFromClipsGall
 };
 export const updatePersonalWidget = function updatePersonalWidget(fn) {
   if (WidgetStore.hasPendingChanges()) {
-    let pendingWidgets = obj.getPendingWidgets();
+    let pendingWidgets = WidgetStore.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
     }
@@ -558,7 +559,6 @@ export const updatePersonalWidget = function updatePersonalWidget(fn) {
   if (found == null) {
     found = UserProfilePersonalWidget.createDefaultPersonalWidget();
   }
-  obj = WidgetStore;
   const tmpResult = replaceWidgetInList(fn(found));
   WidgetActionCreatorsDefault.setPendingWidgets(tmpResult);
 };
@@ -628,13 +628,12 @@ export const removeTagFromGame = function removeTagFromGame(widgetType, arg1, ar
                 obj = {};
                 const merged1 = Object.assign(tmpResult);
                 obj.games = mapped;
-                const baseGameWidget = new tmp4(7623).BaseGameWidget(obj);
+                const baseGameWidget = new UserProfileGameWidgetTypes.BaseGameWidget(obj);
                 const tmp22 = replaceWidgetInList(baseGameWidget);
                 WidgetActionCreatorsDefault.setPendingWidgets(tmp22);
               }
             }
           }
-          tmp4 = require;
         }
       }
     }
@@ -677,7 +676,7 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   }
   const tmp = findGameWidget(widgetType);
   if (widgetType in GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE) {
-    const num = tmp2(5110).GAME_WIDGET_LIMITS_BY_TYPE[widgetType];
+    GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE[widgetType];
   }
   if (null != tmp) {
     const games = tmp.games;
@@ -713,17 +712,17 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   obj = {};
   const merged = Object.assign(tmp8);
   obj.games = items1;
-  const baseGameWidget = new tmp2(7623).BaseGameWidget(obj);
+  const baseGameWidget = new UserProfileGameWidgetTypes.BaseGameWidget(obj);
   const tmp7Result = replaceWidgetInList(baseGameWidget);
   WidgetActionCreatorsDefault.setPendingWidgets(tmp7Result);
-  const useGame = tmp2(7309).useGame;
+  const useGame = useGame2.useGame;
   const items2 = [game.gameId];
   const many = useGame.fetchMany(items2);
 };
 export const reorderWidgets = function reorderWidgets(arg0, arg1) {
   if (arg0 !== arg1) {
     if (WidgetStore.hasPendingChanges()) {
-      let pendingWidgets = obj2.getPendingWidgets();
+      let pendingWidgets = WidgetStore.getPendingWidgets();
       if (pendingWidgets == null) {
         pendingWidgets = [];
       }
@@ -754,7 +753,6 @@ export const reorderWidgets = function reorderWidgets(arg0, arg1) {
         }
       }
     }
-    obj2 = WidgetStore;
   }
 };
 export const reorderGamesInWidget = function reorderGamesInWidget(widgetType, arg1, arg2) {
@@ -811,9 +809,9 @@ export const areWidgetGamesEqual = function areWidgetGamesEqual(games, games2, t
     c0 = undefined;
     let flag = false;
     if (gameId.gameId === games2[index].gameId) {
-      if (!React6.includes(tmp2)) {
+      if (!React6.includes(closure_1)) {
         flag = true;
-        if (React7.includes(tmp2)) {
+        if (React7.includes(closure_1)) {
           const tags = gameId.tags;
           let tmp10 = null;
           if (null != tags) {

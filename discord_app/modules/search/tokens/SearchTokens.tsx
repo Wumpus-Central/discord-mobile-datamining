@@ -106,7 +106,7 @@ function isValidUserAutocomplete(token) {
     }
   }
 }
-function dateValidator(getFullMatch, arg1) {
+function dateValidator(getFullMatch, after) {
   const str = getFullMatch.getFullMatch();
   const formatted = getFullMatch.getFullMatch().trim().toLowerCase();
   const tmp2 = getShortcuts()[formatted];
@@ -117,21 +117,21 @@ function dateValidator(getFullMatch, arg1) {
     const _Set3 = Set;
     const set = new Set(_modDef4153.months().map((item) => item.toLowerCase()));
     if (set.has(formatted)) {
-      const localResult = tmp32(4153)(formatted, "MMMM").local();
+      const localResult = _modDef4153(formatted, "MMMM").local();
       const items = [localResult, ];
-      const obj17 = tmp32(4153)(formatted, "MMMM");
+      const obj17 = _modDef4153(formatted, "MMMM");
       items[1] = localResult.clone().add(1, "month");
       const cloneResult = localResult.clone();
       [obj9, obj10] = _slicedToArray(items, 2);
       const tmp21 = _slicedToArray(items, 2);
     } else {
       const _Set = Set;
-      let tmp32Result = tmp32(4153);
+      let tmp32Result = _modDef4153;
       const set1 = new Set(tmp32Result.weekdays().map((item) => item.toLowerCase()));
       if (set1.has(formatted)) {
-        const localResult1 = tmp32(4153)(formatted, "dddd").local();
+        const localResult1 = _modDef4153(formatted, "dddd").local();
         const items1 = [localResult1, ];
-        const obj14 = tmp32(4153)(formatted, "dddd");
+        const obj14 = _modDef4153(formatted, "dddd");
         items1[1] = localResult1.clone().add(1, "day");
         const cloneResult1 = localResult1.clone();
         [obj9, obj10] = _slicedToArray(items1, 2);
@@ -141,20 +141,20 @@ function dateValidator(getFullMatch, arg1) {
         const date = new Date();
         const _Set2 = Set;
         const fullYear = date.getFullYear();
-        tmp32Result = tmp32(12);
+        tmp32Result = _modDef12;
         const set2 = new Set(tmp32Result.range(2015, fullYear + 1).map((item) => item.toString()));
         if (set2.has(formatted)) {
-          const localResult2 = tmp32(4153)(formatted, "YYYY").local();
+          const localResult2 = _modDef4153(formatted, "YYYY").local();
           const items2 = [localResult2, ];
-          const obj11 = tmp32(4153)(formatted, "YYYY");
+          const obj11 = _modDef4153(formatted, "YYYY");
           items2[1] = localResult2.clone().add(1, "year");
           const cloneResult2 = localResult2.clone();
           [obj9, obj10] = _slicedToArray(items2, 2);
           const tmp17 = _slicedToArray(items2, 2);
         } else {
-          const localResult3 = tmp32(4153)(formatted, value2).local();
+          const localResult3 = _modDef4153(formatted, value2).local();
           const items3 = [localResult3, ];
-          const obj6 = tmp32(4153)(formatted, value2);
+          const obj6 = _modDef4153(formatted, value2);
           items3[1] = localResult3.clone().add(1, "day");
           const cloneResult3 = localResult3.clone();
           [obj9, obj10] = _slicedToArray(items3, 2);
@@ -175,10 +175,10 @@ function dateValidator(getFullMatch, arg1) {
   if (!tmp25) {
     let tmp27 = obj9;
     let tmp28 = null;
-    if ("before" !== arg1) {
+    if ("before" !== after) {
       tmp27 = obj10;
       tmp28 = obj9;
-      if ("after" === arg1) {
+      if ("after" === after) {
         tmp27 = null;
         tmp28 = obj10;
       }
@@ -366,15 +366,15 @@ function getUserAutocompletions(tokens) {
   obj.boosters = obj1.getBoosterMap(items2(currentUser1[19]).AutocompleterResultTypes.USER);
   type = searchContext.type;
   if (constants.GUILD !== type) {
-    if (tmp3.GUILD_CHANNEL !== type) {
-      if (tmp3.THREAD !== type) {
-        if (tmp3.CHANNEL === type) {
+    if (constants.GUILD_CHANNEL !== type) {
+      if (constants.THREAD !== type) {
+        if (constants.CHANNEL === type) {
           obj = {};
           const merged = Object.assign(obj);
           obj.channelId = searchContext.channelId;
           let queryChannelUsersResult = set1(tmp2[18]).queryChannelUsers(obj);
           const obj7 = set1(tmp2[18]);
-        } else if (tmp3.DMS === type) {
+        } else if (constants.DMS === type) {
           if (tokens == null) {
             tokens = [];
           }
@@ -534,6 +534,7 @@ function getUserAutocompletions(tokens) {
     queryChannelUsersResult = set1(tmp2[18]).queryGuildUsers(obj3);
     const obj13 = set1(tmp2[18]);
   }
+  const str = query.trim();
 }
 function getChannelAutocompletions(arg0) {
   ({ query, searchContext, maxResults } = arg0);
@@ -853,8 +854,8 @@ function makeSearchTokenConfigs(arg0) {
     follows: null,
     componentType: obj.ANSWER,
     mutable: true,
-    validator(arg0) {
-      return dateValidator(arg0, "before");
+    validator(getFullMatch) {
+      return dateValidator(getFullMatch, "before");
     }
   };
   const items8 = [SearchTokenTypes.FILTER_BEFORE];
@@ -865,8 +866,8 @@ function makeSearchTokenConfigs(arg0) {
     follows: null,
     componentType: obj.ANSWER,
     mutable: true,
-    validator(arg0) {
-      return dateValidator(arg0, "on");
+    validator(getFullMatch) {
+      return dateValidator(getFullMatch, "on");
     }
   };
   const items9 = [SearchTokenTypes.FILTER_ON];
@@ -877,8 +878,8 @@ function makeSearchTokenConfigs(arg0) {
     follows: null,
     componentType: obj.ANSWER,
     mutable: true,
-    validator(arg0) {
-      return dateValidator(arg0, "after");
+    validator(getFullMatch) {
+      return dateValidator(getFullMatch, "after");
     }
   };
   const items10 = [SearchTokenTypes.FILTER_AFTER];
@@ -1065,9 +1066,9 @@ export const isMeAutcompleteAnswer = function isMeAutcompleteAnswer(str) {
   if (0 === str.length) {
     return false;
   } else {
-    const replaced = str.toLowerCase().replace(/^@/, "");
-    const intl = util.intl;
     str = str.toLowerCase();
+    const replaced = str.replace(/^@/, "");
+    const intl = util.intl;
     let startsWithResult = intl.string(util.t.Qf3ptv).startsWith(replaced);
     if (!startsWithResult) {
       const substr = text.substring(1);
@@ -1084,19 +1085,19 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
     const items = ["filter:" + trimmed, trimmed];
     const token = new QueryTokenizer.Token(items, tmp);
     if (SearchTokenTypes.ANSWER_HAS === tmp) {
-      let tmp7Result = tmp7(12344);
+      let tmp7Result = SearchTokensUtils;
       return tmp7Result.validateForMapWithNegation("has", getHasMap(), token);
-    } else if (tmp15.ANSWER_AUTHOR_TYPE === tmp) {
-      tmp7Result = tmp7(12344);
+    } else if (SearchTokenTypes.ANSWER_AUTHOR_TYPE === tmp) {
+      tmp7Result = SearchTokensUtils;
       obj = {};
-      const intl = tmp7(1114).intl;
-      obj[intl.string(tmp7(1114).t.tPZo4p)] = "user";
-      const intl2 = tmp7(1114).intl;
-      obj[intl2.string(tmp7(1114).t.JL7sRS)] = "bot";
-      const intl3 = tmp7(1114).intl;
-      obj[intl3.string(tmp7(1114).t.WjkIKU)] = "webhook";
+      const intl = util.intl;
+      obj[intl.string(util.t.tPZo4p)] = "user";
+      const intl2 = util.intl;
+      obj[intl2.string(util.t.JL7sRS)] = "bot";
+      const intl3 = util.intl;
+      obj[intl3.string(util.t.WjkIKU)] = "webhook";
       return tmp7Result.validateForMapWithNegation("author_type", obj, token);
-    } else if (tmp15.ANSWER_PINNED === tmp) {
+    } else if (SearchTokenTypes.ANSWER_PINNED === tmp) {
       const match = token.getMatch(1);
       if ("true" === match) {
         token.setData("pinned", true);

@@ -51,73 +51,25 @@ export const createNativeStore = function createNativeStore(arg0) {
       }
       return applyArgumentsResult;
     }
-    analyticsFields = async function _runPatchOrderLineItems(arg0, value) {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+    analyticsFields = async function _runPatchOrderLineItems() {
+      c4 = 0;
+      c5 = 0;
+      return (async (arg0, value) => {
+        closure_3 = tmp5;
+        closure_2 = tmp2;
+        const orderRecord = closure_2_1().orderRecord;
+        if (null == orderRecord) {
+          const _Error = Error;
+          const error = new Error("Patch being called in a missing order state");
+          throw error;
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_3 = tmp5;
-              closure_2 = tmp2;
-              closure_130_0 = undefined;
-              const orderRecord = checkoutInitParameters().orderRecord;
-              if (null == orderRecord) {
-                const _Error = Error;
-                const error = new Error("Patch being called in a missing order state");
-                throw error;
-              } else {
-                let obj3 = require("payments/OrderActionCreators");
-                const obj1 = { orderId: null, expectedRevision: null, orderLineItems: null, externalGatewayFacet: null };
-                ({ id: obj5.orderId, revision: obj5.expectedRevision } = orderRecord);
-                obj1.orderLineItems = tmp24;
-                obj1.externalGatewayFacet = tmp25;
-                c4 = 1;
-                c5 = 1;
-                const obj2 = { value: obj3.patchOrder(obj1), done: false };
-                return obj2;
-              }
-              tmp24 = closure_0;
-              tmp25 = closure_1;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_130_0 = value;
-            obj = { orderRecord: orderRequired.createFromServer(closure_130_0) };
-            closure_131_0(obj);
-            c5 = 3;
-            const obj4 = { value: closure_130_0, done: true };
-            return obj4;
-          }
-        } catch (tmp19) {
-          c5 = tmp;
-          throw tmp19;
-        }
-      }
+        ({ id: obj5.orderId, revision: obj5.expectedRevision } = orderRecord);
+        await closure_2_0(runPatchOrderLineItems[7]).patchOrder({ orderId: null, expectedRevision: null, orderLineItems, externalGatewayFacet });
+        closure_130_0 = value;
+        closure_2_0(runPatchOrderLineItems[7]);
+        closure_131_0({ orderRecord: closure_2_5.createFromServer(closure_130_0) });
+        return closure_130_0;
+      })();
     };
     function runRecreateOrder() {
       const self = this;
@@ -129,90 +81,95 @@ export const createNativeStore = function createNativeStore(arg0) {
       }
       return applyArgumentsResult;
     }
-    orderRequired = async function _runRecreateOrder(arg0, value) {
-      if (paymentGateway === 2) {
-        paymentGateway = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+    orderRequired = async function _runRecreateOrder(arg0) {
+      let country = arg0;
+      c3 = 0;
+      c4 = 0;
+      return (async (arg0) => {
+        if (paymentGateway === 2) {
+          paymentGateway = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            let obj = { value, done: true };
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          paymentGateway = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
+          try {
+            paymentGateway = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                paymentGateway = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                paymentGateway = 3;
+                obj = { value, done: true };
+                return obj;
+              } else {
+                closure_2 = tmp2;
+                closure_129_0 = undefined;
+                const orderRecord = closure_2_1().orderRecord;
+                if (null != orderRecord) {
+                  const orderLineItems = orderRecord.orderLineItems;
+                  const mapped = orderLineItems.map((sku_id) => ({ sku_id: sku_id.sku_id, quantity: sku_id.quantity, purchase_type: sku_id.purchase_type, subscription_plan_id: sku_id.subscription_plan_id }));
+                  let obj2 = closure_2_1(runPatchOrderLineItems[8]);
+                  let tmp15;
+                  if (obj2.some(mapped, (subscription_plan_id) => null != subscription_plan_id.subscription_plan_id)) {
+                    const obj1 = { subscription_preview: null };
+                    obj2 = { currency: null, country_code: null };
+                    ({ currency: obj5.currency, country: obj5.country_code } = country);
+                    obj1.subscription_preview = obj2;
+                    if (null != tmp5.activeSubscription) {
+                      obj1.subscription_id = tmp5.activeSubscription.id;
+                    }
+                    let tmp19 = null != closure_1_7;
+                    if (tmp19) {
+                      tmp19 = null != closure_1_7.subscription_preview.subscription_trial_id;
+                    }
+                    tmp15 = obj1;
+                    if (tmp19) {
+                      obj1.subscription_preview.subscription_trial_id = closure_1_7.subscription_preview.subscription_trial_id;
+                      tmp15 = obj1;
+                    }
+                  }
+                  let tmp20;
+                  if (null != orderRecord.externalGatewayFacet) {
+                    const obj3 = { line_items: null };
+                    const line_items = orderRecord.externalGatewayFacet.line_items;
+                    obj3.line_items = line_items.map((external_product_id) => ({ external_product_id: external_product_id.external_product_id }));
+                    tmp20 = obj3;
+                  }
+                  let obj6 = closure_2_0(runPatchOrderLineItems[7]);
+                  const obj4 = { orderLineItems: mapped, paymentGateway, isGift: tmp5.isGift, subscriptionFacet: tmp15, externalGatewayFacet: tmp20, countryCode: country.country };
+                  c3 = 1;
+                  paymentGateway = 1;
+                  const obj5 = { value: obj6.createOrder(obj4), done: false };
+                  return obj5;
+                } else {
+                  paymentGateway = 3;
+                }
+              }
+            } else if (arg0 === 1) {
               paymentGateway = 3;
               throw value;
-            } else if (arg0 === 2) {
-              paymentGateway = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_2 = tmp2;
-              closure_129_0 = undefined;
-              const orderRecord = checkoutInitParameters().orderRecord;
-              if (null != orderRecord) {
-                const orderLineItems = orderRecord.orderLineItems;
-                const mapped = orderLineItems.map((sku_id) => ({ sku_id: sku_id.sku_id, quantity: sku_id.quantity, purchase_type: sku_id.purchase_type, subscription_plan_id: sku_id.subscription_plan_id }));
-                let obj2 = checkoutInitParameters(runPatchOrderLineItems[8]);
-                let tmp15;
-                if (obj2.some(mapped, (subscription_plan_id) => null != subscription_plan_id.subscription_plan_id)) {
-                  const obj1 = { subscription_preview: null };
-                  obj2 = { currency: null, country_code: null };
-                  ({ currency: obj5.currency, country: obj5.country_code } = tmp29);
-                  obj1.subscription_preview = obj2;
-                  if (null != tmp5.activeSubscription) {
-                    obj1.subscription_id = tmp5.activeSubscription.id;
-                  }
-                  let tmp19 = null != closure_1_7;
-                  if (tmp19) {
-                    tmp19 = null != tmp18.subscription_preview.subscription_trial_id;
-                  }
-                  tmp15 = obj1;
-                  if (tmp19) {
-                    obj1.subscription_preview.subscription_trial_id = tmp18.subscription_preview.subscription_trial_id;
-                    tmp15 = obj1;
-                  }
-                }
-                let tmp20;
-                if (null != orderRecord.externalGatewayFacet) {
-                  const obj3 = { line_items: null };
-                  const line_items = orderRecord.externalGatewayFacet.line_items;
-                  obj3.line_items = line_items.map((external_product_id) => ({ external_product_id: external_product_id.external_product_id }));
-                  tmp20 = obj3;
-                }
-                let obj6 = require("payments/OrderActionCreators");
-                const obj4 = { orderLineItems: mapped, paymentGateway, isGift: tmp5.isGift, subscriptionFacet: tmp15, externalGatewayFacet: tmp20, countryCode: tmp29.country };
-                c3 = 1;
-                paymentGateway = 1;
-                const obj5 = { value: obj6.createOrder(obj4), done: false };
-                return obj5;
-              } else {
-                paymentGateway = 3;
-              }
+            } else if (arg0 !== 2) {
+              closure_129_0 = value;
+              obj = { orderRecord: closure_2_5.createFromServer(closure_129_0) };
+              closure_130_0(obj);
             }
-          } else if (arg0 === 1) {
             paymentGateway = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_0 = value;
-            obj = { orderRecord: orderRequired.createFromServer(closure_129_0) };
-            closure_130_0(obj);
+            obj6 = { value, done: true };
+            return obj6;
+          } catch (tmp24) {
+            paymentGateway = tmp;
+            throw tmp24;
           }
-          paymentGateway = 3;
-          obj6 = { value, done: true };
-          return obj6;
-        } catch (tmp24) {
-          paymentGateway = tmp;
-          throw tmp24;
         }
-      }
+      })();
     };
     let fromServer = null;
     if (null != closure_0) {
@@ -248,7 +205,7 @@ export const createNativeStore = function createNativeStore(arg0) {
       setCheckoutFailed: null,
       onOrderRetryCancellation: null
     };
-    closure_7 = analyticsFields(function*(arg0, value) {
+    closure_7 = analyticsFields(function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -362,7 +319,7 @@ export const createNativeStore = function createNativeStore(arg0) {
       }
       return applyArgumentsResult;
     };
-    onOrderRetryCancellation = analyticsFields(function*(arg0, value) {
+    onOrderRetryCancellation = analyticsFields(function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

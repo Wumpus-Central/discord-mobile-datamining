@@ -41,7 +41,7 @@ function SingleCodeInput(loading) {
   const items = [closure_7(NUMERIC(code[7]).TextInput, obj), ];
   obj = { style: tmp2.singleInputButton, children: null };
   const obj1 = { loading: flag, variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
-  const intl2 = tmp6(tmp7[8]).intl;
+  const intl2 = tmp6(code[8]).intl;
   obj1.text = intl2.string(NUMERIC(code[8]).t["13ofGu"]);
   obj1.onPress = function handlePressSubmit() {
     return importDefault(code);
@@ -114,13 +114,13 @@ export default function CodeField(disableKeyboardAvoidingView) {
   if (disableKeyboardAvoidingView.disableKeyboardAvoidingView) {
     obj = {};
     const merged = Object.assign(disableKeyboardAvoidingView);
-    let tmp2Result = tmp2(CodeFieldInner, obj);
+    let tmp2Result = React5(CodeFieldInner, obj);
   } else {
     obj = { style: tmp.viewWrapper, children: null };
     obj = {};
     const merged1 = Object.assign(disableKeyboardAvoidingView);
-    obj.children = tmp2(CodeFieldInner, obj);
-    tmp2Result = tmp2(KeyboardAwareViewDefault, obj);
+    obj.children = React5(CodeFieldInner, obj);
+    tmp2Result = React5(KeyboardAwareViewDefault, obj);
   }
   return tmp2Result;
 };
@@ -158,10 +158,8 @@ export const CodeBlocks = function CodeBlocks(onCodeEntered) {
       obj = { style: tmp3.spacer };
       let arr = items1.push(React5(hasOwnProperty, obj, "spacer"));
     }
-    let tmp12 = React5;
     let items2 = [tmp3.inputWrapper, ];
     let inputWrapperError = null;
-    let tmp13 = hasOwnProperty;
     if (tmp) {
       inputWrapperError = tmp3.inputWrapperError;
     }
@@ -200,7 +198,7 @@ export const CodeBlocks = function CodeBlocks(onCodeEntered) {
       } else if ("" === dependencyMap[tmp]) {
         const diff = tmp - 1;
         const items = [];
-        HermesBuiltin.arraySpread(tmp2, 0);
+        HermesBuiltin.arraySpread(dependencyMap, 0);
         items[diff] = "";
         _slicedToArray(items);
         if (noop.current[diff] != null) {
@@ -214,22 +212,21 @@ export const CodeBlocks = function CodeBlocks(onCodeEntered) {
         str = arr.slice(1);
       }
       const str2 = str.replace("-", "");
-      const tmp = num2;
-      const tmp2 = dependencyMap;
       const str4 = str.replace("-", "").trim().toUpperCase();
       let parts = str4.split("");
       if ("" === str4) {
         parts = [""];
       }
       const items = [...tmp2];
-      const items1 = [tmp, 1, ...parts];
+      const items1 = [num2, 1, ...parts];
       items.splice.apply(items1);
       _slicedToArray(items.slice(0, importDefault));
+      const str3 = str.replace("-", "").trim();
     };
     let obj2 = { start: first[num2].length, end: first[num2].length };
     obj1.selection = obj2;
-    obj.children = tmp12(native.TextInput, obj1);
-    arr = items1.push(tmp12(tmp13, obj, num2));
+    obj.children = React5(native.TextInput, obj1);
+    arr = items1.push(React5(hasOwnProperty, obj, num2));
   }
   return React5(hasOwnProperty, { style: tmp3.codeContainer, children: items1 });
 };

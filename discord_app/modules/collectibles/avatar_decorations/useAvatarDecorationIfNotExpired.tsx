@@ -2,6 +2,7 @@
 
 // Module 8258 (useAvatarDecorationIfNotExpired)
 import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1881 */;
+import Timers from "Timers" /* 4447 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,17 +20,17 @@ export default function useAvatarDecorationIfNotExpired(arg0) {
   const items = [arg0];
   const effect = noop.useEffect(() => {
     function maybeScheduleExpirationCheck() {
-      if (null != closure_0) {
-        if ("expiresAt" in tmp) {
-          if (null != tmp.expiresAt) {
-            const result = AvatarDecorationUtils.isAvatarDecorationExpired(tmp);
+      if (null != maybeScheduleExpirationCheck) {
+        if ("expiresAt" in maybeScheduleExpirationCheck) {
+          if (null != maybeScheduleExpirationCheck.expiresAt) {
+            const result = AvatarDecorationUtils.isAvatarDecorationExpired(maybeScheduleExpirationCheck);
             closure_2(result);
             const _Date = Date;
-            const result1 = 1000 * tmp.expiresAt;
+            const result1 = 1000 * maybeScheduleExpirationCheck.expiresAt;
             const diff = result1 - Date.now();
             if (!result) {
               if (0 < diff) {
-                const timeout = new tmp3(4447).Timeout();
+                const timeout = new Timers.Timeout();
                 const _Math = Math;
                 timeout.start(Math.min(MAX_TIMEOUT_MS, diff), () => {
                   maybeScheduleExpirationCheck();
@@ -37,7 +38,6 @@ export default function useAvatarDecorationIfNotExpired(arg0) {
                 closure_3.current = timeout;
               }
             }
-            tmp3 = require;
           }
         }
       }

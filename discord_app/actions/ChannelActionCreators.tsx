@@ -4,9 +4,11 @@
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import shared from "shared" /* 4411 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import transitionToChannel from "transitionToChannel" /* 4571 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import isChangelogChannelDefault from "isChangelogChannel" /* 8374 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -15,7 +17,6 @@ import ChangelogStore from "ChangelogStore" /* 4574 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;
 
-const transitionToChannel = tmp5(4571);
 require = fn;
 let closure_6 = fn(1961).createChannelRecordFromServer;
 const Constants = fn(1074);
@@ -38,7 +39,7 @@ export default {
       navigateToChannel = true;
     }
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -75,9 +76,9 @@ export default {
                     recipientId = _openCachedDMChannelResult.getRecipientId();
                   }
                   if (typeof call === "unknown") {
-                    tmp4(tmp5, true, recipientId);
+                    tmp4(closure_1_2, true, recipientId);
                   } else {
-                    call(id, tmp5, true, recipientId);
+                    call(id, closure_1_2, true, recipientId);
                   }
                 }
               }
@@ -158,7 +159,7 @@ export default {
       navigateToChannel = true;
     }
     const self = this;
-    return self(function*(arg0, value) {
+    return self(function*() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -244,7 +245,7 @@ export default {
       }
     })();
   },
-  _openCachedDMChannel(id, fn, navigateToChannel) {
+  _openCachedDMChannel(id, fn) {
     let flag = navigateToChannel;
     if (navigateToChannel === undefined) {
       flag = true;
@@ -262,15 +263,14 @@ export default {
           fn();
         }
         if (null != obj2.getRootNavigationRef()) {
-          tmp6(4571).transitionToChannel(channel.id, { navigationReplace: true });
+          transitionToChannel.transitionToChannel(channel.id, { navigationReplace: true });
           tmp3 = channel;
-          const tmp6Result = tmp6(4571);
+          const tmp6Result = transitionToChannel;
         } else {
           const privateChannel = SelectedChannelActionCreatorsDefault.selectPrivateChannel(channel.id);
           tmp3 = channel;
         }
         obj2 = RootNavigationRef;
-        tmp6 = require;
       }
     }
     return tmp3;
@@ -283,7 +283,8 @@ export default {
       const request = { url: constants.USER_CHANNELS, body: { recipients: self._getRecipients(tmp2) }, oldFormErrors: true, rejectWithError: null };
       self._getRecipients(tmp2);
       request.rejectWithError = tmp2(1272).rejectWithMigratedError();
-      closure_128_0 = await HTTP.post(request);
+      await HTTP.post(request);
+      closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
       { recipients: self._getRecipients(tmp2) };
       tmp5(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -293,7 +294,7 @@ export default {
   getOrEnsurePrivateChannel(id) {
     closure_0 = id;
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -322,10 +323,9 @@ export default {
               if (null == dMFromUserId) {
                 c1 = 1;
                 c0 = 1;
-                const obj1 = { value: self.ensurePrivateChannel(tmp7), done: false };
+                const obj1 = { value: self.ensurePrivateChannel(closure_0), done: false };
                 return obj1;
               }
-              tmp7 = closure_0;
             }
           } else if (arg0 === 1) {
             c0 = 3;
@@ -352,19 +352,20 @@ export default {
     closure_0 = arr;
     return (async () => {
       const HTTP = tmp5(1272).HTTP;
-      closure_128_0 = await HTTP.get({ url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true });
+      await HTTP.get({ url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true });
+      closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
       { url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true };
       tmp2(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
       return closure_128_1.id;
     })();
   },
-  _getRecipients(arg0) {
-    if (null != arg0) {
+  _getRecipients(_require) {
+    if (null != _require) {
       const _Array = Array;
-      let tmp2 = arg0;
-      if (!Array.isArray(arg0)) {
-        const items = [arg0];
+      let tmp2 = _require;
+      if (!Array.isArray(_require)) {
+        const items = [_require];
         tmp2 = items;
       }
       let items1 = tmp2;
@@ -395,11 +396,11 @@ export default {
       flag2 = false;
     }
     if (isChangelogChannelDefault(id)) {
-      let tmpResult = tmp(1242);
+      let tmpResult = AnalyticsUtilsDefault;
       let obj = { last_changelog_id: ChangelogStore.latestChangelogId(), unread_count: ReadStateStore.getUnreadCount(id) };
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
-    tmpResult = tmp(573);
+    tmpResult = DispatcherDefault;
     obj = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
     tmpResult.dispatch(obj);
     if (flag) {
@@ -430,7 +431,8 @@ export default {
       const body = tmp2;
       const HTTP = tmp5(1272).HTTP;
       const request = { url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
-      closure_128_0 = await HTTP.put(request);
+      await HTTP.put(request);
+      closure_128_0 = value;
       body(573).dispatch({ type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS", channelId: closure_129_0, overwrite: closure_129_1 });
       return closure_128_0;
     })();
@@ -440,7 +442,8 @@ export default {
     closure_1 = id;
     return (async () => {
       const HTTP = tmp5(1272).HTTP;
-      closure_128_0 = await HTTP.del({ url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() });
+      await HTTP.del({ url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() });
+      closure_128_0 = value;
       { url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
       tmp2(573).dispatch({ type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS", channelId: closure_129_0, overwriteId: closure_129_1 });
       return closure_128_0;
@@ -475,13 +478,12 @@ export default {
       return closure_1;
     });
   },
-  addRecipients(id, arg1, arg2, arg3) {
+  addRecipients(id, length, arg2, arg3) {
     const self = this;
-    closure_1 = arg1;
     closure_0 = arg2;
-    return this.addRecipient(id, arg1[0], arg2, arg3).then((result) => {
+    return this.addRecipient(id, length[0], arg2, arg3).then((result) => {
       closure_0 = result;
-      const substr = closure_1.slice(1);
+      const substr = length.slice(1);
       return Promise.all(substr.map((item) => self.addRecipient(closure_0, item, closure_0))).then(() => closure_0);
     });
   },
@@ -504,7 +506,8 @@ export default {
       const request = { url: closure_1_11.CHANNEL(tmp2), body: null, oldFormErrors: true, rejectWithError: true };
       let obj1 = { name };
       request.body = obj1;
-      closure_128_1 = await HTTP.patch(request);
+      await HTTP.patch(request);
+      closure_128_1 = value;
       if (channel2 != null) {
         const guildId = channel2.getGuildId();
       }
@@ -525,11 +528,11 @@ export default {
       return closure_128_1;
     })();
   },
-  setIcon(arg0, arg1, arg2) {
-    closure_0 = arg0;
+  setIcon(channelId, arg1, arg2) {
+    closure_0 = channelId;
     closure_1 = arg1;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -669,7 +672,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -841,9 +844,9 @@ export default {
       obj.dispatch(obj);
     });
   },
-  createTextChannel(arg0, arg1, parent_id, formatToPlainStringResult) {
-    closure_0 = arg0;
-    closure_1 = arg1;
+  createTextChannel(guildId, topic, parent_id, formatToPlainStringResult) {
+    closure_0 = guildId;
+    closure_1 = topic;
     closure_2 = parent_id;
     closure_3 = formatToPlainStringResult;
     return (async () => {
@@ -857,7 +860,8 @@ export default {
       }
       const HTTP = tmp5(parent_id[8]).HTTP;
       const request = { url: closure_1_11.GUILD_CHANNELS(tmp5), body: obj1, oldFormErrors: true, rejectWithError: tmp5(parent_id[8]).rejectWithMigratedError() };
-      closure_128_0 = await HTTP.post(request);
+      await HTTP.post(request);
+      closure_128_0 = value;
       tmp5(parent_id[8]);
       const result = name(parent_id[19]).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
@@ -868,7 +872,7 @@ export default {
     return (async () => {
       const HTTP = v3(dependencyMap[8]).HTTP;
       await HTTP.get({ url: closure_1_11.CHANNEL(closure_0), rejectWithError: true });
-      return arg1.body;
+      return value.body;
     })();
   },
   openChannel(arg0) {
@@ -877,7 +881,8 @@ export default {
     return (async () => {
       await self.fetchChannel(closure_0);
       c2 = 0;
-      closure_128_0 = await "HermesInternal";
+      await "HermesInternal";
+      closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0);
       tmp3(c2[13]).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
       c2 = 0;

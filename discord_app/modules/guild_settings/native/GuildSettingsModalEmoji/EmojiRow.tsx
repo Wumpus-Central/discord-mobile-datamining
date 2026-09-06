@@ -3,6 +3,7 @@
 // Module 17564 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 576 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4962 */;
 import EmojiActionCreators from "EmojiActionCreators" /* 10336 */;
 import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 17565 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -83,6 +84,7 @@ export const EmojiRow = function EmojiRow(guildId) {
     } else {
       closure_5(true);
     }
+    obj = useIsScreenReaderEnabled;
   }, items2);
   const callback2 = noop.useCallback(() => {
     callback();
@@ -113,7 +115,7 @@ export const EmojiRow = function EmojiRow(guildId) {
   let tmp12Result = null;
   if (null != nickname) {
     obj6 = { numberOfLines: 1, style: tmp.username, children: nickname };
-    tmp12Result = tmp12(tmp5(tmp6[15]).LegacyText, obj6);
+    tmp12Result = closure_9(tmp5(tmp6[15]).LegacyText, obj6);
   }
   const items4 = [tmp12Result, ];
   const obj7 = { numberOfLines: 1, style: tmp.username, children: emoji(onSelectRolesForEmoji[21]).getUserTag(emoji.user) };
@@ -126,8 +128,8 @@ export const EmojiRow = function EmojiRow(guildId) {
   if (!flag) {
     const obj9 = { style: tmp.overflowIcon, onPress, hitSlop: 8, children: null };
     const obj10 = { source: tmp13(tmp6[23]), size: tmp5(tmp6[15]).IconSizes.REFRESH_SMALL_16 };
-    obj9.children = tmp12(tmp5(tmp6[15]).Icon, obj10);
-    tmp12Result = tmp12(tmp5(tmp6[22]).PressableOpacity, obj9);
+    obj9.children = closure_9(tmp5(tmp6[15]).Icon, obj10);
+    tmp12Result = closure_9(tmp5(tmp6[22]).PressableOpacity, obj9);
   }
   items5[2] = tmp12Result;
   obj4.children = items5;
@@ -151,8 +153,8 @@ export const EmojiRow = function EmojiRow(guildId) {
       obj12.style = items6;
       obj12.onChangeText = updateName;
       obj12.value = children;
-      obj11.children = tmp12(tmp5(tmp6[15]).TextInput, obj12);
-      let tmp12Result1 = tmp12(tmp16, obj11);
+      obj11.children = closure_9(tmp5(tmp6[15]).TextInput, obj12);
+      let tmp12Result1 = closure_9(tmp16, obj11);
     }
     obj.label = tmp12Result1;
     obj.disabled = flag;
@@ -160,10 +162,15 @@ export const EmojiRow = function EmojiRow(guildId) {
     obj.onLongPress = callback2;
     obj.start = start;
     obj.end = end;
-    return tmp12(guildId(onSelectRolesForEmoji[16]).TableRow, obj);
+    return closure_9(guildId(onSelectRolesForEmoji[16]).TableRow, obj);
   }
   const obj13 = { style: tmp.nameContainer, children: null };
   const items7 = [closure_9(guildId(onSelectRolesForEmoji[14]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" }), closure_9(guildId(onSelectRolesForEmoji[14]).Text, { lineClamp: 1, style: tmp.emojiText, variant: "text-md/medium", color: "mobile-text-heading-primary", children }), closure_9(guildId(onSelectRolesForEmoji[14]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" })];
   obj13.children = items7;
-  tmp12Result1 = tmp15(tmp16, obj13);
+  tmp12Result1 = closure_10(tmp16, obj13);
+  const obj14 = { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" };
+  const obj15 = { lineClamp: 1, style: tmp.emojiText, variant: "text-md/medium", color: "mobile-text-heading-primary", children };
+  const obj16 = { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" };
+  let obj3 = { id: emoji.id, animated: emoji.animated, size: 48 };
+  const tmp13Result = emoji(onSelectRolesForEmoji[21]);
 };

@@ -2,6 +2,7 @@
 
 // Module 15155 (useVideoQuestClickCtaAndMaybeCloseModal)
 import URLUtilsDefault from "URLUtils" /* 1365 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 11295 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 11496 */;
 import noop from "module_19" /* 19 */;
@@ -22,8 +23,8 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestCli
       onClose();
     }
     obj2 = QuestCopyUtils;
-    const tmp3 = quest;
-    obj = { content, ctaContent: tmp2(7728).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
-    QuestPlatformUtils.openGameLinkDirectly(tmp3, obj);
+    obj = { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
+    QuestPlatformUtils.openGameLinkDirectly(quest, obj);
+    const tmp2Result = QuestPlatformUtils;
   }, items);
 };

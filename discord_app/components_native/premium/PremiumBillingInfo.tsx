@@ -2,10 +2,15 @@
 
 // Module 13346 (PremiumBillingInfo)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import PremiumUtils from "PremiumUtils" /* 4218 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 4231 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 7404 */;
 import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13343 */;
+import BillingInformation from "BillingInformation" /* 13347 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -61,22 +66,22 @@ export default function PremiumBillingInfo(subscription) {
   if (null == first) {
     return null;
   } else {
-    let tmp2Result = tmp2(7404);
+    let tmp2Result = PremiumManagementUtils;
     const externalManagementMessage = tmp2Result.getExternalManagementMessage(subscription, { shouldAllowExternalManagement: true });
     obj = { style: subscription.style, children: null };
     const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
-    const intl = tmp2(1114).intl;
-    obj1.children = intl.string(tmp2(1114).t.Sb6wI1);
-    const items = [timestampProducer(tmp2(4556).Text, obj1), , ];
+    const intl = util.intl;
+    obj1.children = intl.string(util.t.Sb6wI1);
+    const items = [timestampProducer(Text_Text.Text, obj1), , ];
     const obj2 = { style: tmp.billingContainer, children: null };
     const obj3 = { variant: "text-md/semibold", children: null };
-    const intl2 = tmp2(1114).intl;
-    obj3.children = intl2.string(tmp2(1114).t.KXQjfc);
-    const items1 = [timestampProducer(tmp2(4556).Text, obj3), , ];
+    const intl2 = util.intl;
+    obj3.children = intl2.string(util.t.KXQjfc);
+    const items1 = [timestampProducer(Text_Text.Text, obj3), , ];
     const obj4 = { style: tmp.billingRenewalInfo, variant: "text-sm/medium", children: null };
-    tmp2Result = tmp2(13347);
+    tmp2Result = BillingInformation;
     obj4.children = tmp2Result.getBillingInformationStringNative(subscription, first, tmp6);
-    items1[1] = timestampProducer(tmp2(4556).Text, obj4);
+    items1[1] = timestampProducer(Text_Text.Text, obj4);
     const obj5 = { style: tmp.billingManageGoogle, subscription };
     items1[2] = timestampProducer(GoogleManagementLink, obj5);
     obj2.children = items1;
@@ -84,7 +89,7 @@ export default function PremiumBillingInfo(subscription) {
     let tmp11Result = null;
     if (null != externalManagementMessage) {
       const obj6 = { style: tmp.externalSubtext, variant: "text-sm/medium", children: externalManagementMessage };
-      tmp11Result = timestampProducer(tmp2(4556).Text, obj6);
+      tmp11Result = timestampProducer(Text_Text.Text, obj6);
     }
     items[2] = tmp11Result;
     obj.children = items;

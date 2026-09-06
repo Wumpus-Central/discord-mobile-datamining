@@ -46,9 +46,9 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
     sum = date.getTime() + REQUEST_DATA_LIMIT_MS;
   }
   dependencyMap = sum;
-  _slicedToArray = obj4.useRef(null);
+  _slicedToArray = noop.useRef(null);
   const items2 = [sum];
-  const effect = obj4.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const diff = sum - Date.now();
     if (diff > 0) {
       const _setTimeout = setTimeout;
@@ -79,4 +79,5 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   } else {
     return { allowed: false, reason: "not_verified" };
   }
+  const tmp2 = _slicedToArray(noop.useState(() => Date.now()), 2);
 };

@@ -2,6 +2,7 @@
 
 // Module 13138 (IndividualProductPreview)
 import nativeDefault from "native" /* 576 */;
+import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
@@ -9,6 +10,8 @@ import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11108 
 import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11219 */;
 import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13139 */;
 import NameplateProductPreviewDefault from "NameplateProductPreview" /* 13140 */;
+import FractionalNitroPreview from "FractionalNitroPreview" /* 13141 */;
+import OrbBadgePreview from "OrbBadgePreview" /* 13144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -99,23 +102,23 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
   if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
     let obj = { product };
     return React5(NameplatePreview, obj);
-  } else if (tmp(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
     obj = { profileEffect: product.items[0], width, handlePreviewPress, onTrackPress };
     return React5(ProfileEffectPreview, obj);
-  } else if (tmp(1889).CollectiblesItemType.PROFILE_FRAME === type) {
+  } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
     const obj1 = { profileFrame: product.items[0], width, handlePreviewPress, onTrackPress };
     return React5(ProfileFramePreview, obj1);
-  } else if (tmp(1889).CollectiblesItemType.AVATAR_DECORATION === type) {
+  } else if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     obj = { product, handlePreviewPress, onTrackPress };
     return React5(AvatarDecorationPreview, obj);
-  } else if (tmp(1889).CollectiblesItemType.EXTERNAL_SKU === type) {
-    const ALL = tmp(1077).FractionalPremiumSKUsSets.ALL;
+  } else if (CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU === type) {
+    const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let tmp5 = React5(tmp(13141).FractionalNitroPreview, {});
+      let tmp5 = React5(FractionalNitroPreview.FractionalNitroPreview, {});
     } else {
       tmp5 = null;
       if (product.skuId === constants.ORB_PROFILE_BADGE) {
-        tmp5 = React5(tmp(13144).OrbBadgePreview, {});
+        tmp5 = React5(OrbBadgePreview.OrbBadgePreview, {});
       }
     }
     return tmp5;

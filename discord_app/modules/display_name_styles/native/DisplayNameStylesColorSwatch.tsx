@@ -4,13 +4,13 @@
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import GummyStripesDefault from "GummyStripes" /* 14617 */;
 import createStyles from "createStyles" /* 4560 */;
 import size from "module_2" /* 2 */;
 
-const utils_ColorUtils = tmp2(1091);
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
 let obj = { colorSwatch: null, gummySwatch: null };

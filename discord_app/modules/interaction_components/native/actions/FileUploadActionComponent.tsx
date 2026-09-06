@@ -54,8 +54,8 @@ function File(upload) {
   obj.icon = React7(AttachmentPreviewDefault, size);
   let filename = upload.filename;
   if (filename == null) {
-    const intl = tmp3(1114).intl;
-    filename = intl.string(tmp3(1114).t.ZMirp0);
+    const intl = util.intl;
+    filename = intl.string(util.t.ZMirp0);
   }
   obj.label = filename;
   const obj1 = {
@@ -67,7 +67,7 @@ function File(upload) {
     },
     accessibilityLabel: null
   };
-  const intl2 = tmp3(1114).intl;
+  const intl2 = util.intl;
   obj1.accessibilityLabel = intl2.string(util.t.N86XcP);
   obj.trailing = React7(IconButton.IconButton, obj1);
   return React7(TableRow.TableRow, obj);
@@ -129,7 +129,7 @@ export default function FileUploadActionComponent(maxValues) {
     tmp17 = first;
   }
   channelId(customId[18])(null != tmp17, "FileUploadActionComponent must be used within a label Component");
-  _require = stateFromStores(function*(arg0, value) {
+  _require = stateFromStores(function*(arg0) {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -155,13 +155,12 @@ export default function FileUploadActionComponent(maxValues) {
             return obj;
           } else {
             closure_3 = tmp2;
-            let arr = closure_0;
             closure_131_0 = closure_0;
             closure_131_1 = undefined;
             closure_131_2 = undefined;
             closure_131_3 = undefined;
             if (0 !== closure_0.length) {
-              if (uploadIds.length + arr.length > closure_0) {
+              if (uploadIds.length + closure_0.length > closure_0) {
                 let obj6 = channelId(customId[25]);
                 let obj1 = { title: null, body: null };
                 let intl = closure_0(customId[11]).intl;
@@ -173,7 +172,7 @@ export default function FileUploadActionComponent(maxValues) {
                 let obj3 = { value: obj6.show(obj1), done: true };
                 return obj3;
               } else {
-                channelId = arr[Symbol.iterator]();
+                channelId = closure_0[Symbol.iterator]();
               }
             }
             c8 = 3;
@@ -273,12 +272,12 @@ export default function FileUploadActionComponent(maxValues) {
     };
     let result = InteractionModal(customId[30]).dismissGlobalKeyboard();
     if (mediaFilesAllowed) {
-      let tmp4Result = tmp4(tmp5[29]);
+      let tmp4Result = tmp4(customId[29]);
       obj = {
         channel: stateFromStores,
         draftType: InteractionModal,
         extensions: allowedExtensions,
-        uploadLimit: InteractionModal,
+        uploadLimit: tmp3,
         disableWhenReachedLimit: true,
         includedUploadIds: uploadIds,
         onAttachPress() {
@@ -305,6 +304,7 @@ export default function FileUploadActionComponent(maxValues) {
               callback(items);
               const tmpResult = InteractionModal(customId[31]);
             }
+            obj = InteractionModal(customId[29]);
           },
         onViewAll() {
             obj = {};
@@ -318,16 +318,18 @@ export default function FileUploadActionComponent(maxValues) {
             obj = { onDismissKeyboard: InteractionModal(10636).hideMediaKeyboardActionSheet, onRestoreKeyboard };
             const result = obj.handleLimitedPickerDialog(obj);
           },
-        onClose: tmp4(tmp5[29]).hideMediaKeyboardActionSheet,
-        onBack: tmp4(tmp5[29]).hideMediaKeyboardActionSheet
+        onClose: tmp4(customId[29]).hideMediaKeyboardActionSheet,
+        onBack: tmp4(customId[29]).hideMediaKeyboardActionSheet
       };
       const result1 = tmp4Result.showMediaKeyboardActionSheet(obj);
     } else {
-      tmp4Result = tmp4(tmp5[31]);
+      tmp4Result = tmp4(customId[31]);
       obj = {};
       let merged = Object.assign(obj);
       tmp4Result.handleAttachFile(obj);
     }
+    const obj2 = InteractionModal(customId[30]);
+    tmp3 = InteractionModal;
   }, items3);
   if (1 === maxValues) {
     if (1 === currentUploads.length) {
@@ -354,4 +356,5 @@ export default function FileUploadActionComponent(maxValues) {
   items4[1] = tmp25Result;
   obj.children = items4;
   tmp22Result = setUploadIds(tmp(tmp2[33]).Stack, obj);
+  const tmpResult4 = require("useFileUploadComponentState");
 };

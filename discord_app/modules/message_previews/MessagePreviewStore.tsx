@@ -265,9 +265,8 @@ prototype["handleMessagePreviewsLoaded"] = function handleMessagePreviewsLoaded(
   closure_7.verbose("adding remote previews (guildId: " + guildId.guildId + ", messages: " + guildId.messages.length + ")");
   const dataResult = this.data(guildId.guildId);
   for (const item10024 of tmp2) {
-    let tmp3 = item10024;
     if (!dataResult.isLatest(item10024.channel_id, self.generation)) {
-      let putResult = dataResult.put(tmp3.channel_id, tmp3, self.generation);
+      let putResult = dataResult.put(item10024.channel_id, item10024, self.generation);
     }
     continue;
   }
@@ -278,13 +277,13 @@ prototype["handleMessagePreviewsLocallyLoaded"] = function handleMessagePreviews
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp8] = tmp5;
-    let tmp7 = tmp6;
     if (!dataResult.has(tmp6)) {
-      let putResult = dataResult.put(tmp7, tmp8, c6);
+      let putResult = dataResult.put(tmp6, tmp8, c6);
     }
     continue;
   }
   dataResult.localNeeded = false;
+  tmp2 = guildId.messages[Symbol.iterator]();
 };
 function handleLogout() {
   const guilds = this.guilds;
@@ -368,7 +367,7 @@ let obj = {
     return closure_0.handleThreadListSync(arg0);
   }
 };
-let tmp3 = new LoggerDefault("MessagePreviewStore");
+const tmp3 = new LoggerDefault("MessagePreviewStore");
 object.guilds = new Map();
 object.generation = 0;
 const size = fn(2);

@@ -11,9 +11,9 @@ let result = size.fileFinishedImporting("modules/channel/native/ScreenIndexFroze
 
 export const freezeScreenIndex = function freezeScreenIndex(shouldFreeze, arg1) {
   if (shouldFreeze) {
-    obj.add(arg1);
+    set.add(arg1);
   } else {
-    obj.delete(arg1);
+    set.delete(arg1);
   }
   const item = set1.forEach((fn) => fn());
 };

@@ -3,6 +3,7 @@
 // Module 13978 (RowGroup)
 import nativeDefault from "native" /* 576 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,13 +27,12 @@ export const RowGroup = function RowGroup(children) {
     let tmp7 = null != title;
     if (tmp7) {
       obj = { title };
-      tmp7 = React3(tmp5(5687).TableRowGroupTitle, obj);
+      tmp7 = React3(TableRowGroup.TableRowGroupTitle, obj);
     }
     obj = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];
     obj.children = items;
-    tmp2Result = tmp2(Stack_Stack.Stack, obj);
-    tmp5 = require;
+    tmp2Result = React4(Stack_Stack.Stack, obj);
   }
   const items1 = [tmp2Result, React3(View, { style: tmp.content, children: children.children })];
   obj.children = items1;

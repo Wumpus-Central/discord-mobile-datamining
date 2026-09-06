@@ -199,7 +199,7 @@ obj = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-let closure_3 = asyncGeneratorStep(async (arg0, value) => {
+let closure_3 = asyncGeneratorStep(async (arg0) => {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

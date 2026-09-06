@@ -1,6 +1,9 @@
 // === Module 12084: HeroMedia ===
 
 // Module 12084 (HeroMedia)
+import initialize from "initialize" /* 504 */;
+import util from "util" /* 1114 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7168 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9652 */;
 import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11216 */;
 import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12058 */;
@@ -29,10 +32,10 @@ export default function HeroMedia(arg0) {
   }
   const rounded = Math.floor(9 * contentWidth2 / 16);
   const tmp7 = useEmbeddedActivityBackgroundDefault({ applicationId, size: contentWidth2, names: ["embedded_cover"] });
-  let tmp2Result = tmp2(504);
+  let tmp2Result = initialize;
   const items = [AccessibilityStore];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
-  tmp2Result = tmp2(7168);
+  tmp2Result = useGetOrFetchApplications;
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
   let prop;
   if (getOrFetchApplication != null) {
@@ -60,7 +63,7 @@ export default function HeroMedia(arg0) {
         size.height = rounded;
         size.width = contentWidth2;
         size.poster = tmp7.url;
-        const intl = tmp2(1114).intl;
+        const intl = util.intl;
         let str3;
         if (getOrFetchApplication != null) {
           str3 = getOrFetchApplication.name;
@@ -69,7 +72,7 @@ export default function HeroMedia(arg0) {
           str3 = "";
         }
         obj = { applicationName: str3 };
-        size.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t["Af+EQD"], obj);
+        size.accessibilityLabel = intl.formatToPlainString(util.t["Af+EQD"], obj);
         const items1 = [tmp.mediaBackground, , ];
         const obj1 = { maxHeight: rounded };
         items1[1] = obj1;
@@ -84,14 +87,13 @@ export default function HeroMedia(arg0) {
         items1[2] = tmp14;
         size.style = items1;
         size.videoStyle = tmp.mediaBackground;
-        tmp15Result = tmp15(tmp16, size);
+        tmp15Result = <tmp16 {...size} />;
       }
       let str2 = tmp7.url;
       if (str2 == null) {
         str2 = "";
       }
       obj4 = { uri: str2 };
-      tmp15 = jsx;
     }
   }
   return tmp15Result;

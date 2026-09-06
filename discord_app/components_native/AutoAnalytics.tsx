@@ -8,6 +8,7 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7775 */;
 import GuildThemeAnalyticsUtils from "GuildThemeAnalyticsUtils" /* 16737 */;
 import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 16738 */;
+import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 16739 */;
 import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 16740 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
@@ -49,11 +50,9 @@ prototype["componentDidMount"] = function componentDidMount() {
     trackChannelOpenedClickstreamDefault(obj);
     if (tmp) {
       const obj1 = { channel_is_nsfw: tmp2 };
-      tmp18(4740).trackWithMetadata(tmp17.TEXT_IN_VOICE_OPENED, obj1);
-      const tmp18Result = tmp18(4740);
+      AppAnalyticsUtils.trackWithMetadata(constants.TEXT_IN_VOICE_OPENED, obj1);
+      const tmp18Result = AppAnalyticsUtils;
     }
-    tmp17 = constants;
-    tmp18 = require;
   }
   if (null != selectedGuildId) {
     if (isMemberPending) {
@@ -72,10 +71,9 @@ prototype["componentDidMount"] = function componentDidMount() {
     obj5 = { guildId: selectedGuildId };
     trackGuildViewedClickstreamDefault(obj5);
     if (obj8.isFavoritesGuildId(selectedGuildId)) {
-      tmp14(16739)();
+      trackFavoritesGuildViewedDefault();
     }
     obj8 = FavoritesUtils;
-    tmp14 = importDefault;
   }
 };
 prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
@@ -202,11 +200,9 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
     trackChannelOpenedClickstreamDefault(obj3);
     if (isTextInVoice) {
       obj4 = { channel_is_nsfw: isNSFWChannel };
-      tmp44(4740).trackWithMetadata(tmp43.TEXT_IN_VOICE_OPENED, obj4);
-      const tmp44Result = tmp44(4740);
+      AppAnalyticsUtils.trackWithMetadata(constants.TEXT_IN_VOICE_OPENED, obj4);
+      const tmp44Result = AppAnalyticsUtils;
     }
-    tmp43 = constants;
-    tmp44 = require;
   }
   if (isTextInVoice) {
     isTextInVoice = !voiceChannelId.isTextInVoice;
@@ -231,9 +227,8 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       self._trackWithMetadata(constants.GUILD_VIEWED, obj8);
       obj9 = { guildId: selectedGuildId };
       trackGuildViewedClickstreamDefault(obj9);
-      const tmp68 = importDefault;
       if (obj21.isFavoritesGuildId(selectedGuildId)) {
-        tmp68(16739)();
+        trackFavoritesGuildViewedDefault();
       }
       obj21 = FavoritesUtils;
     }
@@ -243,7 +238,7 @@ prototype["getGameMetadata"] = function getGameMetadata() {
   const props = this.props;
   return { game_platform: props.gamePlatform, game_name: props.gameName, game_id: props.gameId };
 };
-prototype["_trackWithMetadata"] = function _trackWithMetadata(CHANNEL_OPENED, fileSizeLimitEventProperties) {
+prototype["_trackWithMetadata"] = function _trackWithMetadata(CHANNEL_OPENED) {
   let obj = fileSizeLimitEventProperties;
   if (fileSizeLimitEventProperties === undefined) {
     obj = {};
@@ -256,11 +251,10 @@ prototype["_trackWithMetadata"] = function _trackWithMetadata(CHANNEL_OPENED, fi
       obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(self.collectDefaultAnalyticsMetadata(tmp, tmp2));
-      tmp3(1242).track(CHANNEL_OPENED, obj);
-      const tmp3Result = tmp3(1242);
+      AnalyticsUtilsDefault.track(CHANNEL_OPENED, obj);
+      const tmp3Result = AnalyticsUtilsDefault;
     }
     obj2 = AnalyticsUtilsDefault;
-    tmp3 = importDefault;
   }
 };
 prototype["collectDefaultAnalyticsMetadata"] = function collectDefaultAnalyticsMetadata(guild_id, channel_static_route) {

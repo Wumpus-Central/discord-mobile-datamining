@@ -7,7 +7,7 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 function handleConnectionOpen(unavailableGuilds) {
-  set = new Set(unavailableGuilds.unavailableGuilds);
+  new Set(unavailableGuilds.unavailableGuilds);
   if (unavailableGuilds.unavailableGuilds.length > 0) {
     const _HermesInternal = HermesInternal;
     logger.warn("" + unavailableGuilds.unavailableGuilds.length + " guilds are unavailable on connection open: " + unavailableGuilds.unavailableGuilds);
@@ -23,7 +23,7 @@ function handleGuild(guild) {
   }
 }
 const logger = new LoggerDefault("GuildAvailabilityStore");
-let set = new Set();
+const set = new Set();
 const Store = initializeDefault.Store;
 class GuildAvailabilityStore extends Store {
 }
@@ -72,6 +72,7 @@ const guildAvailabilityStore = new GuildAvailabilityStore(DispatcherDefault, {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild has gone unavailable: " + guildId.guildId + " (" + str + ")");
       set.add(guildId.guildId);
+      tmp4 = null != guild && null != guild.name;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {

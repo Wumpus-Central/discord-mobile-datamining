@@ -18,10 +18,12 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
   const items = [NoticeStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => noticeType.getNoticeType());
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
+  let num = 0;
   if (null != premiumTrialOffer) {
+    num = 0;
     if (null != premiumTrialOffer.expiresAt) {
       const expiresAt = premiumTrialOffer.expiresAt;
-      const num = expiresAt.getTime();
+      num = expiresAt.getTime();
     }
   }
   let tmp5 = null != premiumTrialOffer;
@@ -59,4 +61,5 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
       TIER_0 = PremiumSubscriptionSKUs.TIER_0;
     }
   }
+  tmp3Result = useCountdownDefault(num, closure_6);
 };

@@ -29,15 +29,15 @@ function GraceOption(option) {
 }
 function ForceSyncIcon(isSyncing) {
   if (isSyncing.isSyncing) {
-    let tmp2Result = tmp2(React4, { animating: true, size: "small" });
+    let tmp2Result = React5(React4, { animating: true, size: "small" });
   } else {
     let obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t["+Josox"]);
     obj.onPress = tmp;
     obj = { source: _modDef17597 };
-    obj.children = tmp2(TableRow.TableRow.Icon, obj);
-    tmp2Result = tmp2(Pressables.PressableOpacity, obj);
+    obj.children = React5(TableRow.TableRow.Icon, obj);
+    tmp2Result = React5(Pressables.PressableOpacity, obj);
   }
   return tmp2Result;
 }

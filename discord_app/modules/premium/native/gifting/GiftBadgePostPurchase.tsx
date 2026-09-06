@@ -13,6 +13,7 @@ import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 
 import Text_Text from "Text/Text" /* 4556 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import BadgeId from "BadgeId" /* 8184 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
 import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11031 */;
 import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11032 */;
 import noop from "module_19" /* 19 */;
@@ -80,7 +81,7 @@ function LevelUpScreen(arg0) {
   let tmp7Result = null != newTier.simple_icon_url;
   if (tmp7Result) {
     const obj1 = { icon: newTier.simple_icon_url, size: 140 };
-    tmp7Result = tmp7(tmp(10749), obj1);
+    tmp7Result = closure_1_10(GiftingBadgeIconDefault, obj1);
   }
   obj.children = tmp7Result;
   const items = [closure_1_10(View, obj), ];
@@ -101,15 +102,15 @@ function LevelUpScreen(arg0) {
   }
   if (tmp7Result) {
     const obj6 = { variant: "text-md/normal", color: "text-subtle", style: tmp3.centerText, children: null };
-    const intl2 = tmp9(1114).intl;
+    const intl2 = util.intl;
     const obj7 = { count: giftsToNextTier, nextTierName: null };
     let str2 = nextTier.name;
     if (str2 == null) {
       str2 = "";
     }
     obj7.nextTierName = str2;
-    obj6.children = intl2.format(tmp(2492)["6QVlxw"], obj7);
-    tmp7Result = tmp7(tmp9(4556).Text, obj6);
+    obj6.children = intl2.format(_modDef2492["6QVlxw"], obj7);
+    tmp7Result = closure_1_10(Text_Text.Text, obj6);
   }
   items2[1] = tmp7Result;
   obj4.children = items2;
@@ -188,7 +189,7 @@ export default function GiftBadgePostPurchase(arg0) {
       return tmp11Result;
     }
     if (1 === tmp10) {
-      const intl2 = tmp2(1114).intl;
+      const intl2 = util.intl;
       let str2;
       if (tmp8 != null) {
         str2 = tmp8.name;
@@ -199,9 +200,9 @@ export default function GiftBadgePostPurchase(arg0) {
       obj = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
       const obj1 = { nextTier: str2 };
       obj.title = intl2.formatToPlainString(_modDef2492.KjdBPz, obj1);
-      const intl3 = tmp2(1114).intl;
+      const intl3 = util.intl;
       obj.description = intl3.string(_modDef2492.oqDrEM);
-      const intl4 = tmp2(1114).intl;
+      const intl4 = util.intl;
       obj.progressBarTitle = intl4.string(_modDef2492["Ka5s+Q"]);
       obj.progress = sum;
       obj.currentTier = tmp26;
@@ -210,9 +211,9 @@ export default function GiftBadgePostPurchase(arg0) {
       let obj2 = obj;
     } else {
       obj2 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
-      const intl5 = tmp2(1114).intl;
+      const intl5 = util.intl;
       obj2.title = intl5.string(_modDef2492["/rBQud"]);
-      const intl6 = tmp2(1114).intl;
+      const intl6 = util.intl;
       obj2.description = intl6.string(_modDef2492.DDQMlx);
       let name;
       if (tmp24 != null) {
@@ -220,20 +221,19 @@ export default function GiftBadgePostPurchase(arg0) {
       }
       let str = "";
       if (null != name) {
-        const intl = tmp2(1114).intl;
+        const intl = util.intl;
         let name1;
         if (tmp24 != null) {
           name1 = tmp24.name;
         }
         const obj3 = { tierName: name1 };
-        str = intl.formatToPlainString(tmp27(2492).bwyQt8, obj3);
+        str = intl.formatToPlainString(_modDef2492.bwyQt8, obj3);
       }
       obj2.progressBarTitle = str;
       obj2.progress = sum;
       obj2.currentTier = tmp26;
       obj2.nextTier = tmp8;
       obj2.onSendGift = onSendGift;
-      tmp27 = importDefault;
     }
     tmp11Result = closure_1_10(InProgressScreen, obj2);
   }

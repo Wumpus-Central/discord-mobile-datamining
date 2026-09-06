@@ -22,10 +22,10 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.container = obj;
   let num2 = 0;
   if (arg0) {
-    num2 = tmp3(576).radii.sm;
+    num2 = nativeDefault.radii.sm;
   }
   obj.nameplate = { borderRadius: num2 };
-  obj = { borderRadius: tmp3(576).radii.round, marginRight: tmp3(576).space.PX_8 };
+  obj = { borderRadius: nativeDefault.radii.round, marginRight: nativeDefault.space.PX_8 };
   obj.avatar = obj;
   obj.content = { flex: 1, paddingRight: nativeDefault.space.PX_40 };
   return obj;
@@ -108,15 +108,15 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   obj3 = { style: tmp.content, children: null };
   let tmp19Result = null != tmp15;
   if (tmp19Result) {
-    obj4 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: tmp4(10900).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
-    tmp19Result = tmp19(tmp7(10899), obj4);
+    obj4 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: user(10900).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
+    tmp19Result = closure_7(tmp7(10899), obj4);
     const tmp7Result = tmp7(10899);
   }
   const items4 = [tmp19Result, ];
   tmp19Result = null == tmp15;
   if (tmp19Result) {
     const obj5 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: pendingGlobalName };
-    tmp19Result = tmp19(tmp4(4556).Text, obj5);
+    tmp19Result = closure_7(user(4556).Text, obj5);
   }
   items4[1] = tmp19Result;
   obj3.children = items4;

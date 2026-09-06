@@ -68,7 +68,7 @@ export default function _default(block) {
   const items3 = [block.name, preferVCPrice];
   const callback = collectiblesAnalyticsContext.useCallback(() => {
     if (null != stateFromStores) {
-      if (tmp.isOrbsExclusive) {
+      if (stateFromStores.isOrbsExclusive) {
         let obj = { analyticsLocations: null, analyticsSource: null, screen: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
         obj.analyticsLocations = items;
@@ -76,7 +76,7 @@ export default function _default(block) {
         obj.screen = constants.ORBS;
         const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj);
       } else {
-        obj = { category: tmp, analyticsContext: collectiblesAnalyticsContext };
+        obj = { category: stateFromStores, analyticsContext: collectiblesAnalyticsContext };
         navigation.navigate(UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, obj);
       }
     }
@@ -109,7 +109,7 @@ export default function _default(block) {
       obj1 = { style: tmp.backgroundImage, source: null };
       obj2 = { uri: block.mobileBackgroundImage };
       obj1.source = obj2;
-      tmp14Result = tmp14(stateFromStores, obj1);
+      tmp14Result = closure_9(stateFromStores, obj1);
     }
     const items5 = [tmp14Result, , ];
     obj3 = { style: tmp.header, children: null };
@@ -136,7 +136,7 @@ export default function _default(block) {
       const intl = tmp2(tmp3[20]).intl;
       obj7.text = intl.string(tmp2(tmp3[20]).t.xFcotU);
       obj7.onPress = callback;
-      tmp14Result = tmp14(tmp2(tmp3[19]).Button, obj7);
+      tmp14Result = closure_9(tmp2(tmp3[19]).Button, obj7);
     }
     items6[1] = tmp14Result;
     obj3.children = items6;

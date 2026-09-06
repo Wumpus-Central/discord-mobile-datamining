@@ -22,7 +22,7 @@ export const useCommandContext = function useCommandContext(context) {
     if ("contextless" === type.type) {
       let obj = { channel: "hash", guild: "call" };
     } else {
-      obj = { channel: tmp.channel, guild: GuildStore.getGuild(tmp.channel.guild_id) };
+      obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
     }
     return obj;
   }, items);

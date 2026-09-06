@@ -2,6 +2,7 @@
 
 // Module 11550 (CustomizeCommunity)
 import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import useThemeDefault from "useTheme" /* 4495 */;
@@ -56,7 +57,7 @@ function PromptTitle(item) {
   let tmp3Result = null;
   if (item.required) {
     obj = { variant: "text-md/bold", color: "text-feedback-critical", children: [" ", "*"] };
-    tmp3Result = tmp3(Text_Text.Text, obj);
+    tmp3Result = closure_1_17(Text_Text.Text, obj);
   }
   items[1] = tmp3Result;
   obj.children = closure_1_17(Text_Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items });
@@ -105,13 +106,12 @@ function PromptHelpText(arg0) {
     }
   };
   const tmp = closure_19();
-  const tmp2 = require;
   ({ helpText, helpTextAdditional } = require("usePromptHelpText")(obj));
   if ("" !== helpText) {
     obj = { style: tmp.helpText, variant: "text-xs/medium", color: "text-default", children: null };
     const items3 = [helpText, " ", helpTextAdditional];
     obj.children = items3;
-    let tmp9 = closure_17(tmp2(tmp3[22]).Text, obj);
+    let tmp9 = closure_17(require("Text/Text").Text, obj);
   } else {
     tmp9 = null;
   }
@@ -193,8 +193,8 @@ function DropdownOption(option) {
       const obj2 = { id: null, animated: null, size: null };
       ({ id: obj6.id, animated: obj6.animated } = stateFromStores);
       obj2.size = EMOJI_URL_BASE_SIZE;
-      emojiURL = tmp11(1396).getEmojiURL(obj2);
-      const tmp11Result = tmp11(1396);
+      emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
+      const tmp11Result = AvatarUtilsDefault;
     }
     obj1.src = emojiURL;
     const emoji3 = option.emoji;
@@ -207,8 +207,7 @@ function DropdownOption(option) {
     }
     obj1.name = str;
     obj.children = closure_16(EmojiDefault, obj1);
-    tmp10Result = tmp10(tmp9, obj);
-    tmp11 = importDefault;
+    tmp10Result = closure_16(closure_4, obj);
   }
   const items1 = [tmp10Result, closure_16(option(4556).Text, { variant: "text-md/semibold", children: option.title })];
   obj.children = items1;
@@ -233,11 +232,11 @@ function DropdownPrompt(guildId) {
   let obj2 = guildId(isNew[36]);
   const fn = function c() {
     if (isNew) {
-      let combined = concat(tmp, "FF");
-      let tmp3 = tmp;
+      let combined = concat(token, "FF");
+      let tmp3 = token;
     } else {
-      combined = concat(tmp, "00");
-      tmp3 = tmp;
+      combined = concat(token, "00");
+      tmp3 = token;
     }
     let obj = { borderColor: null };
     const obj2 = ReanimatedRexport;
@@ -303,7 +302,7 @@ function DropdownPrompt(guildId) {
     let obj3 = { style: tmp.emptyDropdownText, variant: "text-sm/normal", color: "text-muted", children: null };
     const intl2 = tmp2(tmp3[21]).intl;
     obj3.children = intl2.string(tmp2(tmp3[21]).t.GmSvdA);
-    tmp10Result = tmp10(tmp2(tmp3[22]).Text, obj3);
+    tmp10Result = closure_16(tmp2(tmp3[22]).Text, obj3);
   }
   const items4 = [tmp10Result, found.map((option) => closure_1_16(DropdownOption, { option }, option.id)), ];
   const obj4 = { style: tmp.dropdownIconContainer, children: closure_16(handleSelectOption, { style: tmp.dropdownIcon, source: _prompt(isNew[43]) }) };
@@ -327,11 +326,11 @@ function MultipleChoicePrompt(guildId) {
   const token = obj1.useToken(_prompt(isNew[13]).colors.BACKGROUND_BRAND);
   const fn = function p() {
     if (isNew) {
-      let combined = concat(tmp, "FF");
-      let tmp3 = tmp;
+      let combined = concat(token, "FF");
+      let tmp3 = token;
     } else {
-      combined = concat(tmp, "00");
-      tmp3 = tmp;
+      combined = concat(token, "00");
+      tmp3 = token;
     }
     let obj = { borderColor: null };
     const obj2 = ReanimatedRexport;
@@ -475,11 +474,11 @@ export default function CustomizeCommunity(guildId) {
   const effect = noop.useEffect(() => {
     let tmp2 = null != guildId;
     if (tmp2) {
-      tmp2 = GuildOnboardingPromptsStore.shouldFetchPrompts(tmp) || stateFromStores;
-      const tmp4 = GuildOnboardingPromptsStore.shouldFetchPrompts(tmp) || stateFromStores;
+      tmp2 = GuildOnboardingPromptsStore.shouldFetchPrompts(guildId) || stateFromStores;
+      const tmp4 = GuildOnboardingPromptsStore.shouldFetchPrompts(guildId) || stateFromStores;
     }
     if (tmp2) {
-      const onboardingPrompts = GuildOnboardingPromptsActionCreators.fetchOnboardingPrompts(tmp);
+      const onboardingPrompts = GuildOnboardingPromptsActionCreators.fetchOnboardingPrompts(guildId);
     }
   }, items2);
   const items3 = [guildId];
@@ -521,7 +520,7 @@ export default function CustomizeCommunity(guildId) {
       const obj7 = { style: tmp.sectionSeparator };
       items5[3] = closure_16(closure_4, obj7);
       obj4.children = items5;
-      tmp24Result = tmp24(closure_18, obj4);
+      tmp24Result = closure_17(closure_18, obj4);
     }
     const items6 = [tmp24Result, , ];
     tmp24Result = onboardingPrompts.length > 0;
@@ -537,13 +536,13 @@ export default function CustomizeCommunity(guildId) {
       items7[1] = closure_16(tmp4(4556).Text, obj10);
       items7[2] = onboardingPrompts.map(callback);
       obj8.children = items7;
-      tmp24Result = tmp24(closure_18, obj8);
+      tmp24Result = closure_17(closure_18, obj8);
     }
     items6[1] = tmp24Result;
     const obj11 = { guildId };
     items6[2] = closure_16(ConnectionsPrompt, obj11);
     obj2.children = items6;
-    tmp24Result1 = tmp24(closure_6, obj2);
+    tmp24Result1 = closure_17(closure_6, obj2);
   }
   return tmp24Result1;
 };

@@ -60,11 +60,11 @@ export default function RemediatedUserNotice(user) {
       };
       items3[2] = intl3.format(tmp4(1114).t.PrtAqy, obj3);
       obj1.children = items3;
-      isIgnored = tmp8(closure_7, obj1);
+      isIgnored = closure_8(closure_7, obj1);
     }
     items2[1] = isIgnored;
     obj.children = items2;
-    let tmp8Result = tmp8(View, obj);
+    let tmp8Result = closure_8(View, obj);
   } else {
     tmp8Result = null;
     if (isIgnored) {

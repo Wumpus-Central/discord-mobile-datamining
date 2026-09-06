@@ -4,6 +4,7 @@
 import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12003 */;
 import ForumPostUsername from "ForumPostUsername" /* 12005 */;
 import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12014 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 12015 */;
 import ForumPostTitleDefault from "ForumPostTitle" /* 12016 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +31,7 @@ export default function ForumPostGridHeader(arg0) {
   }
   const items = [hasFlagResult, timestampProducer(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), timestampProducer(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
   if (isNew) {
-    isNew = tmp8(tmp10(12015), {});
+    isNew = timestampProducer(ForumPostNewTagDefault, {});
   }
   items[3] = isNew;
   obj.children = items;

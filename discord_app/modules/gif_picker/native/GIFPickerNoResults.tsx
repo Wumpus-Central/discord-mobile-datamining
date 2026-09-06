@@ -2,7 +2,9 @@
 
 // Module 10377 (GIFPickerNoResults)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
+import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 10283 */;
 import SearchEmpty from "SearchEmpty" /* 10317 */;
 import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 10321 */;
@@ -31,15 +33,15 @@ export default noop.memo(function GIFPickerNoResults(inActionSheet) {
   let obj = SearchEmpty;
   const searchEmptySource = obj.useSearchEmptySource();
   if (inActionSheet.categoryType === GIFPickerResultTypes.FAVORITES) {
-    const intl2 = tmp4(1114).intl;
-    let stringResult = intl2.string(tmp4(1114).t.ZH4o6l);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.ZH4o6l);
   } else {
-    const intl = tmp4(1114).intl;
-    stringResult = intl.string(tmp4(1114).t["5dX4UM"]);
+    const intl = util.intl;
+    stringResult = intl.string(util.t["5dX4UM"]);
   }
   const modalDismissGuardRefreshControl = useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp4(6627).BottomSheetScrollView;
+    let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }

@@ -12,6 +12,7 @@ import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8060 */;
 import PromotionsHooks from "PromotionsHooks" /* 13468 */;
 import BogoPromotionExperiment from "BogoPromotionExperiment" /* 13469 */;
 import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 13470 */;
+import BOGOPromotionMarketingMaterialsExperiments from "BOGOPromotionMarketingMaterialsExperiments" /* 13471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;
@@ -52,6 +53,7 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
       }
     }
     if (null != premiumSubscription) {
+      premiumSubscription.hasPremiumAtLeast(closure_1_10.TIER_2);
       let hasActiveTrial;
       const currentUser = UserStore.getCurrentUser();
       if (premiumSubscription != null) {
@@ -59,10 +61,8 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
       }
       let isPremiumExactlyResult = hasActiveTrial;
       if (isPremiumExactlyResult) {
-        isPremiumExactlyResult = PremiumUtilsDefault.isPremiumExactly(currentUser, tmp22.TIER_0);
+        isPremiumExactlyResult = PremiumUtilsDefault.isPremiumExactly(currentUser, closure_1_10.TIER_0);
       }
-      const hasPremiumAtLeastResult = premiumSubscription.hasPremiumAtLeast(closure_1_10.TIER_2);
-      tmp22 = closure_1_10;
       let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
         isAndroidResult = premiumSubscription.paymentGateway !== constants.GOOGLE;
@@ -89,7 +89,7 @@ function isEligibleForBOGOPromotion() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _isEligibleForBOGOPromotion(arg0, value) {
+let closure_15 = async function _isEligibleForBOGOPromotion() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -232,7 +232,7 @@ let closure_15 = async function _isEligibleForBOGOPromotion(arg0, value) {
     }
   }
 };
-let closure_16 = async function _maybeFetchActiveBogoPromotion(arg0, value) {
+let closure_16 = async function _maybeFetchActiveBogoPromotion() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -345,13 +345,13 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     num2 = valueOfResult - timestamp;
   }
   useScheduledForcedUpdateDefault({ delay: num2 });
-  const isMobile = tmp(4801).isMobile;
+  const isMobile = shared_PlatformUtils.isMobile;
   let isAndroidResult = !isMobile;
   if (isMobile) {
-    let tmpResult = tmp(1115);
+    let tmpResult = PlatformUtils;
     isAndroidResult = tmpResult.isAndroid();
   }
-  tmpResult = tmp(13471);
+  tmpResult = BOGOPromotionMarketingMaterialsExperiments;
   let bogoMarketingMaterialsEnabled = tmpResult.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");
   let tmp16 = !tmp10;
   if (timestamp <= valueOfResult) {

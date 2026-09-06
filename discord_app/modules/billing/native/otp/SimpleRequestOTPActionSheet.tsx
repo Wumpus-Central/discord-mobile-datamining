@@ -21,7 +21,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   noop = undefined;
   let memo1;
   closure_8 = undefined;
-  closure_9 = async function _submitGiftPurchase(arg0, value) {
+  closure_9 = async function _submitGiftPurchase() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -48,7 +48,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
           } else {
             closure_0 = tmp7;
             c3 = 1;
-            if (null == noop) {
+            if (null == _undefined) {
               logger.error("Cannot proceed with purchase: collectibleProduct is undefined");
               tmp3(tmp33[19]).show({ title: "Product Not Found", body: "The product information could not be loaded. Please try again." });
               c3 = 0;
@@ -56,7 +56,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
               let obj1 = { value: undefined, done: true };
               return obj1;
             } else {
-              if (null != tmp42.googleSkuIds) {
+              if (null != _undefined.googleSkuIds) {
                 if (0 !== length.length) {
                   c4 = 2;
                   c5 = 1;
@@ -65,7 +65,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
                 }
               }
               const _HermesInternal2 = HermesInternal;
-              logger.error("No Google SKU IDs available for product " + tmp42.skuId);
+              logger.error("No Google SKU IDs available for product " + _undefined.skuId);
               let obj4 = tmp3(tmp33[19]);
               obj4.show({ title: "Product Not Available", body: "This product is not available for purchase on Google Play." });
               c3 = 0;
@@ -139,20 +139,20 @@ function GiftPurchaseSKUView(selectedSkuId) {
   }, items1);
   const items2 = [product, currentUser, selectedSkuId];
   const memo = noop.useMemo(() => {
-    if (null != c5) {
-      if (null != tmp.googleSkuIds) {
-        const googleSkuIds = tmp.googleSkuIds;
+    if (null != _undefined) {
+      if (null != _undefined.googleSkuIds) {
+        const googleSkuIds = _undefined.googleSkuIds;
         if (obj.isPremium(currentUser, PremiumTypes.TIER_2)) {
-          let tmp2 = googleSkuIds[tmp10.MOBILE_PREMIUM_TIER_2];
+          let tmp2 = googleSkuIds[closure_9.MOBILE_PREMIUM_TIER_2];
         } else {
-          tmp2 = googleSkuIds[tmp10.MOBILE];
+          tmp2 = googleSkuIds[closure_9.MOBILE];
         }
         if (null == tmp2) {
           const items = [tmp2];
           let values = items;
         } else {
           const _Object = Object;
-          values = Object.values(tmp.googleSkuIds);
+          values = Object.values(_undefined.googleSkuIds);
         }
         return values;
       }
@@ -167,7 +167,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   }, items3);
   const items4 = [memo, first, memo1];
   const effect1 = noop.useEffect(() => {
-    closure_0 = async function _loadGoogleSkus(arg0, value) {
+    closure_0 = async function _loadGoogleSkus() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -278,8 +278,8 @@ function GiftPurchaseSKUView(selectedSkuId) {
     if (null == c5) {
       let items = ["Loading...", "Loading..."];
     } else {
-      items = [CollectiblesUtils.getFormattedPriceForCollectiblesProduct(tmp, true, true), ];
-      items[1] = CollectiblesUtils.getFormattedPriceForCollectiblesProduct(tmp, false, true);
+      items = [CollectiblesUtils.getFormattedPriceForCollectiblesProduct(c5, true, true), ];
+      items[1] = CollectiblesUtils.getFormattedPriceForCollectiblesProduct(c5, false, true);
     }
     return items;
   }, items5), 2);
@@ -378,7 +378,7 @@ function SimpleRequestOTPActionSheet(giftMessage) {
   obj3.children = items1;
   items[1] = closure_11(require("Text/Text").Text, obj3);
   obj2.children = items;
-  tmp6Result = tmp6(View, obj2);
+  tmp6Result = closure_11(View, obj2);
 }
 const View = fn(17).View;
 let closure_9 = fn(1074).PriceSetAssignmentPurchaseTypes;

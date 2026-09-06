@@ -1,6 +1,7 @@
 // === Module 4767: PrivateChannelCallUtils ===
 
 // Module 4767 (PrivateChannelCallUtils)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
@@ -12,6 +13,7 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7038 */;
 import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8394 */;
+import VoicePanelUtils from "VoicePanelUtils" /* 9681 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4251 */;
@@ -26,21 +28,20 @@ function openChannelCallModal(channel) {
   let obj = AgeGateUtils;
   if (!obj.maybeOpenAgeGateForVoiceChannel(channel.id)) {
     const result = ChannelRTCActionCreatorsDefault.rebuildRTCActiveChannels();
-    const tmp3 = importDefault;
     if (tmpResult.isVoicePanelEnabled(channel)) {
       const state = VoicePanelStore.getState();
       state.openChannel(channel.id);
-      const ComponentDispatch = tmp(1109).ComponentDispatch;
+      const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
       obj = { channelId: channel.id };
       ComponentDispatch.dispatch(constants2.VOICE_PANEL_OPEN, obj);
     } else {
       obj = { channel };
       const _HermesInternal = HermesInternal;
-      const tmp3Result = tmp3(4763);
-      tmp3Result.pushLazy(tmp(1896)(9466, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
-      const tmp5 = tmp(1896)(9466, dependencyMap.paths);
+      const tmp3Result = ModalActionCreatorsDefault;
+      tmp3Result.pushLazy(asyncRequireImpl(9466, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
+      const tmp5 = asyncRequireImpl(9466, dependencyMap.paths);
     }
-    tmpResult = tmp(9681);
+    tmpResult = VoicePanelUtils;
   }
 }
 function monkeyPatchCall() {
@@ -51,10 +52,9 @@ function monkeyPatchCall() {
       const combined = "" + closure_1_17 + "-" + channel.id;
       ModalActionCreatorsDefault.popWithKey(combined, undefined);
       if (key.getKey() === combined) {
-        tmp5(4527).hideActionSheet();
-        const tmp5Result = tmp5(4527);
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        const tmp5Result = ActionSheetActionCreatorsDefault;
       }
-      tmp5 = importDefault;
     }
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(null);
     const timerId = setTimeout(arg0, 500);
@@ -67,7 +67,7 @@ function guardPrivateCallForChannel(id, fn) {
     if (channel.type !== constants.GUILD_VOICE) {
       if (null != id) {
         if (id.id !== channel.id) {
-          _require = asyncGeneratorStep(async (arg0, value) => {
+          _require = asyncGeneratorStep(async () => {
             if (c2 === 2) {
               c2 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -160,6 +160,7 @@ export const maybeShowAgeGateModal = function maybeShowAgeGateModal(channelId) {
     }, 150);
     const tmpResult = RunAfterInteractionsUtils;
   }
+  obj = AgeGateUtils;
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(channel) {
   const obj = { channel };
@@ -193,12 +194,12 @@ export const showGuardCallAlert = function showGuardCallAlert(arg0) {
   obj.show(obj);
 };
 export { guardPrivateCallForChannel };
-export const handleJoinCall = function handleJoinCall(channel, flag) {
+export const handleJoinCall = function handleJoinCall(channel) {
   closure_0 = channel;
   if (flag === undefined) {
     flag = false;
   }
-  closure_2 = async function _onConfirm(arg0, value) {
+  closure_2 = async function _onConfirm() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -261,12 +262,12 @@ export const handleJoinCall = function handleJoinCall(channel, flag) {
     return applyArgumentsResult;
   });
 };
-export const handleStartCall = function handleStartCall(channel, flag) {
+export const handleStartCall = function handleStartCall(channel) {
   _require = channel;
   if (flag === undefined) {
     flag = false;
   }
-  dependencyMap = async function _onConfirm2(arg0, value) {
+  dependencyMap = async function _onConfirm2() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -332,9 +333,9 @@ export const handleStartCall = function handleStartCall(channel, flag) {
         }
         let tmp25Result = closure_128_1;
         if (typeof call === "unknown") {
-          tmp25Result = tmp25(tmp27, tmp28, tmp25Result);
+          tmp25Result = tmp25(closure_129_1, tmp28, tmp25Result);
         } else {
-          call(id, tmp27, tmp28, tmp25Result);
+          call(id, closure_129_1, tmp28, tmp25Result);
         }
         c3 = 3;
       } catch (tmp36) {
@@ -377,7 +378,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
   if (arg1 === undefined) {
     flag = false;
   }
-  closure_2 = async function _onConfirm3(arg0, value) {
+  closure_2 = async function _onConfirm3() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -424,9 +425,9 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
         const call = tmp11.call;
         id = closure_128_0.id;
         if (typeof call === "unknown") {
-          tmp11(tmp13, true);
+          tmp11(closure_128_1, true);
         } else {
-          call(id, tmp13, true);
+          call(id, closure_128_1, true);
         }
         dependencyMap = 3;
       } catch (tmp18) {
@@ -452,7 +453,7 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
   if (arg1 === undefined) {
     flag = false;
   }
-  closure_2 = async function _onConfirm4(arg0, value) {
+  closure_2 = async function _onConfirm4() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -520,6 +521,7 @@ export const openGuildVoiceModal = function openGuildVoiceModal(channel, newestA
   if (!obj.isModalOpen(combined)) {
     openChannelCallModal(channel);
   }
+  obj = NavigationRouteUtils;
 };
 export const navigateToVoiceChannel = function navigateToVoiceChannel(channel, LiveActivity) {
   if (channel.isPrivate()) {

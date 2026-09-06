@@ -20,7 +20,7 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
   const loading = tmp[0];
   asyncGeneratorStep = tmp[1];
   const items = [guildId, joinSource, loading];
-  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

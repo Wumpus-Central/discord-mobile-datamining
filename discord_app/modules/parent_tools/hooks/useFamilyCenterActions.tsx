@@ -55,7 +55,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     tmp17 = first3;
   }
   first3 = tmp17;
-  asyncGeneratorStep(async (arg0, value) => {
+  asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -139,7 +139,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
   });
   const items = [tmp17, onError, onSuccess];
-  const callback = obj2.useCallback(function() {
+  const callback = noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -149,7 +149,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
     return applyArgumentsResult;
   }, items);
-  asyncGeneratorStep(async (arg0, value) => {
+  asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -233,7 +233,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
   });
   const items1 = [tmp17, onError, onSuccess];
-  const callback1 = obj2.useCallback(function() {
+  const callback1 = noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -243,7 +243,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
     return applyArgumentsResult;
   }, items1);
-  asyncGeneratorStep(async (arg0, value) => {
+  asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -328,7 +328,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
   });
   const items2 = [tmp17, onError, onSuccess];
-  const callback2 = obj2.useCallback(function() {
+  const callback2 = noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -338,7 +338,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
     return applyArgumentsResult;
   }, items2);
-  asyncGeneratorStep(async (arg0, value) => {
+  asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -423,7 +423,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
   });
   const items3 = [tmp17, onError, onSuccess];
-  const callback3 = obj2.useCallback(function() {
+  const callback3 = noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -434,7 +434,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     return applyArgumentsResult;
   }, items3);
   const items4 = [isGetLinkCodeLoading, onError, onSuccess];
-  const callback4 = obj2.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback4 = noop.useCallback(asyncGeneratorStep(async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -517,7 +517,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       }
     }
   }), items4);
-  asyncGeneratorStep(async (arg0, value) => {
+  asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -602,7 +602,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
   });
   const items5 = [first2, onError, onSuccess];
-  const callback5 = obj2.useCallback(function() {
+  const callback5 = noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -612,7 +612,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
     return applyArgumentsResult;
   }, items5);
-  asyncGeneratorStep(async (arg0, value) => {
+  asyncGeneratorStep(async (arg0, arg1) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -697,7 +697,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
   });
   const items6 = [first1, onError, onSuccess];
-  const callback6 = obj2.useCallback(function() {
+  const callback6 = noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -707,7 +707,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
     return applyArgumentsResult;
   }, items6);
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -747,7 +747,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
                   c5 = 3;
                   c6 = 1;
                   obj1 = { value: null, done: false };
-                  obj1.value = obj1.fetchMoreTeenActivity(selectedTeenId, tmp51, startId, actionsForDisplayType[actionsForDisplayType.length - 1].event_id);
+                  obj1.value = obj1.fetchMoreTeenActivity(selectedTeenId, closure_0, startId, actionsForDisplayType[actionsForDisplayType.length - 1].event_id);
                   return obj1;
                 }
               }
@@ -803,7 +803,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     selectTeenUser: callback5,
     getLinkCode: callback4,
     requestLink: callback6,
-    loadMore: obj2.useCallback(function() {
+    loadMore: noop.useCallback(function() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

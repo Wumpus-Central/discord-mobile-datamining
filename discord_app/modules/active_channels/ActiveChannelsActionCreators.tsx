@@ -4,7 +4,7 @@
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_5 = async function _fetchActiveChannels(arg0, value) {
+let closure_5 = async function _fetchActiveChannels(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

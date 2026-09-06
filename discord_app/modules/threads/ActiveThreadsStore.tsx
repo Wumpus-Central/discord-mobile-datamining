@@ -32,6 +32,7 @@ function handleThreadCreateOrUpdate(channel) {
       obj[channel.id] = { id: null, parentId: null };
       obj[channel.parent_id] = obj;
       dependencyMap[channel.guild_id] = obj;
+      const obj1 = { id: null, parentId: null };
     }
   } else {
     return false;

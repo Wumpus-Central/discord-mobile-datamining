@@ -101,7 +101,7 @@ function handleChanged(type) {
     }
   }
 }
-function deleteDraft(arg0, arg1) {
+function deleteDraft(first1, ChannelMessage, arg2) {
   let id = arg2;
   if (arg2 === undefined) {
     id = AuthenticationStore.getId();
@@ -115,13 +115,14 @@ function deleteDraft(arg0, arg1) {
       dependencyMap[id] = obj;
       tmp8 = obj;
     }
-    if (null == tmp8[arg0]) {
+    if (null == tmp8[first1]) {
       return false;
     } else {
       delete tmp4[tmp3];
       if (obj2.isEmpty(tmp11)) {
         delete tmp2[tmp];
       }
+      obj2 = _modDef12;
     }
   }
 }
@@ -150,7 +151,7 @@ prototype["initialize"] = function initialize(arg0) {
   }
   closure_9 = obj;
   (function pruneEmptyDrafts() {
-    const entries = SnowflakeUtilsDefault.entries(closure_1_9);
+    const entries = SnowflakeUtilsDefault.entries(dependencyMap);
     while (tmp2 !== undefined) {
       let tmp5 = _slicedToArray(tmp3, 2);
       let first = tmp5[0];
@@ -175,6 +176,7 @@ prototype["initialize"] = function initialize(arg0) {
       }
       continue;
     }
+    tmp2 = entries[Symbol.iterator]();
   })();
   this.waitFor(AuthenticationStore, ChannelStore, GuildAvailabilityStore);
 };
@@ -479,7 +481,7 @@ DraftType = {
               }
               if (null != tmp15[channel.parent_id]) {
                 delete tmp7[tmp6];
-                let tmp26Result = tmp26(12);
+                let tmp26Result = _modDef12;
                 if (tmp26Result.isEmpty(tmp17)) {
                   delete tmp4[tmp5];
                 }
@@ -496,7 +498,7 @@ DraftType = {
               }
               if (null != tmp20[channel.parent_id]) {
                 delete tmp3[tmp4];
-                tmp26Result = tmp26(12);
+                tmp26Result = _modDef12;
                 if (tmp26Result.isEmpty(tmp22)) {
                   delete tmp[tmp2];
                 }

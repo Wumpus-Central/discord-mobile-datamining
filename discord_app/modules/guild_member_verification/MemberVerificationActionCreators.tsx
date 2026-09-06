@@ -18,7 +18,7 @@ let closure_10 = async function _fetchVerificationForm() {
   closure_131_0 = closure_0;
   let inviteKeyForGuildId2 = closure_1;
   if (closure_1 == null) {
-    inviteKeyForGuildId2 = inviteKeyForGuildId.getInviteKeyForGuildId(tmp62);
+    inviteKeyForGuildId2 = inviteKeyForGuildId.getInviteKeyForGuildId(closure_0);
   }
   currentUser = currentUser.getCurrentUser();
   if (currentUser != null) {
@@ -39,7 +39,8 @@ let closure_10 = async function _fetchVerificationForm() {
   closure_132_1(closure_132_2[8]);
   const obj3 = { type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: closure_131_0 };
   obj3.dispatch(obj3);
-  closure_131_1 = await "HermesInternal";
+  await "HermesInternal";
+  closure_131_1 = value;
   if (null == closure_131_1.body) {
     throw closure_131_1;
   }
@@ -56,7 +57,7 @@ let closure_10 = async function _fetchVerificationForm() {
   closure_132_1(closure_132_2[8]).dispatch(obj5);
   return body;
 };
-let closure_11 = async function _updateVerificationForm(arg0, form_fields, enabled, bulk_action) {
+let closure_11 = async function _updateVerificationForm(arg0) {
   closure_0 = arg0;
   c6 = 0;
   c7 = 0;
@@ -123,7 +124,7 @@ let closure_11 = async function _updateVerificationForm(arg0, form_fields, enabl
     }
   })();
 };
-let closure_12 = async function _updateVerificationFormDescription(arg0, description) {
+let closure_12 = async function _updateVerificationFormDescription(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -190,7 +191,7 @@ let closure_12 = async function _updateVerificationFormDescription(arg0, descrip
     }
   })();
 };
-let closure_13 = async function _enableVerificationForm(arg0, enabled) {
+let closure_13 = async function _enableVerificationForm(arg0) {
   closure_0 = arg0;
   c3 = 0;
   c2 = 0;
@@ -247,7 +248,7 @@ let closure_13 = async function _enableVerificationForm(arg0, enabled) {
     }
   })();
 };
-let closure_14 = async function _submitVerificationForm(arg0, value) {
+let closure_14 = async function _submitVerificationForm(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

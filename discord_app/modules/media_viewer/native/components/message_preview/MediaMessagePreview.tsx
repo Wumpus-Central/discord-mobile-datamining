@@ -3,6 +3,7 @@
 // Module 12973 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 7764 */;
 import RowGeneratorDefault from "RowGenerator" /* 7932 */;
@@ -160,9 +161,9 @@ export default function MediaMessagePreview(channelId) {
     message.reactionsTheme = reactionsTheme;
     if (!full) {
       const obj = { numberOfLines: 3, expandable: true, seeMoreLabel: null, seeMoreLabelColor: null, outAnimationDuration: null, outAnimation: "fade" };
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj.seeMoreLabel = " " + intl.string(tmp(1114).t["7qbp3B"]);
+      obj.seeMoreLabel = " " + intl.string(util.t["7qbp3B"]);
       obj.seeMoreLabelColor = seeMoreLabelColor;
       const _Math = Math;
       obj.outAnimationDuration = Math.min(0.25 * animationDriver.get(), 0.1);
@@ -175,12 +176,12 @@ export default function MediaMessagePreview(channelId) {
   stateFromStores1 = obj1.useStateFromStores(items2, () => {
     if (null != channelId) {
       if (null != messageId) {
-        let message = MessageStore.getMessage(tmp, tmp2);
+        let message = MessageStore.getMessage(tmp, messageId);
         if (message == null) {
-          message = MessagePreviewStore.getMessage(tmp2);
+          message = MessagePreviewStore.getMessage(messageId);
         }
         if (message == null) {
-          const message1 = ForumPostMessagesStore.getMessage(SnowflakeUtilsDefault.castMessageIdAsChannelId(tmp2));
+          const message1 = ForumPostMessagesStore.getMessage(SnowflakeUtilsDefault.castMessageIdAsChannelId(messageId));
           let firstMessage;
           if (message1 != null) {
             firstMessage = message1.firstMessage;
@@ -188,7 +189,7 @@ export default function MediaMessagePreview(channelId) {
           message = firstMessage;
         }
         if (message == null) {
-          message = SearchMessageStore.getMessage(tmp2);
+          message = SearchMessageStore.getMessage(messageId);
         }
         return message;
       }
@@ -242,7 +243,7 @@ export default function MediaMessagePreview(channelId) {
           obj.emoji = reaction.emoji;
           tmp6 = obj;
         }
-        const result = obj.handleAddOrRemoveReaction(tmp5, channel, tmp6, isBurst, ReactionActionCreators.ReactionLocations.MOBILE_MEDIA_VIEWER);
+        const result = obj.handleAddOrRemoveReaction(messageId, channel, tmp6, isBurst, ReactionActionCreators.ReactionLocations.MOBILE_MEDIA_VIEWER);
       }
     }
   }, items7);

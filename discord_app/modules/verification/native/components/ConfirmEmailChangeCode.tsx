@@ -33,7 +33,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   obj = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
   closure_129_0 = asyncGeneratorStep(async (arg0) => {
     await closure_0(c2[7]).confirmEmailChange(closure_0);
-    return arg1;
+    return value;
   });
   obj.onFormSubmit = function() {
     const self = this;
@@ -46,7 +46,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     return applyArgumentsResult;
   };
   obj.onSuccess = callback;
-  obj.onResend = asyncGeneratorStep(async (arg0, value) => {
+  obj.onResend = asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

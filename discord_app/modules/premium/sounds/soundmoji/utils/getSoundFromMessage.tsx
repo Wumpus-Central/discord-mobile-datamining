@@ -53,11 +53,10 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
           while (obj !== undefined) {
             let message = tmp2.message;
             let soundboardSounds;
-            let tmp3 = getSoundFromSounds;
             if (message != null) {
               soundboardSounds = message.soundboardSounds;
             }
-            let tmp3Result = tmp3(soundboardSounds, arg1);
+            let tmp3Result = getSoundFromSounds(soundboardSounds, arg1);
             if (null != tmp3Result) {
               let tmp = tmp3Result;
               obj.return();
@@ -81,9 +80,8 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
         if (guild_id == null) {
           guild_id = DEFAULT_SOUND_GUILD_ID;
         }
-        return tmp3(5020).soundboardSoundFromAPI(found1, guild_id);
+        return SoundboardTypes.soundboardSoundFromAPI(found1, guild_id);
       }
-      tmp3 = require;
     }
   }
 };

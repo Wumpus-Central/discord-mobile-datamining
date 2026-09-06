@@ -1,6 +1,7 @@
 // === Module 11871: AutomodQuarantineUtils ===
 
 // Module 11871 (AutomodQuarantineUtils)
+import util from "util" /* 1114 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4205 */;
 import openUserSettings2 from "openUserSettings" /* 7382 */;
 import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9210 */;
@@ -54,28 +55,27 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
         const automodQuarantinedProfileFlags = AutomodPermissionUtils.getAutomodQuarantinedProfileFlags(flags);
         if (0 !== automodQuarantinedProfileFlags.size) {
           if (!automodQuarantinedProfileFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
-            if (automodQuarantinedProfileFlags.has(tmp9.AUTOMOD_QUARANTINED_BIO)) {
-              const intl3 = tmp7(1114).intl;
-              const items = [intl3.string(tmp7(1114).t.dZh1vz)];
+            if (automodQuarantinedProfileFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_BIO)) {
+              const intl3 = util.intl;
+              const items = [intl3.string(util.t.dZh1vz)];
               obj.bio = items;
             }
           } else {
             if (null == closure_0) {
-              const intl2 = tmp7(1114).intl;
+              const intl2 = util.intl;
               let str = guild.name;
               if (str == null) {
                 str = "";
               }
               obj = { guildName: str };
-              guild = [intl2.formatToPlainString(tmp7(1114).t.WBUh3O, obj)];
+              guild = [intl2.formatToPlainString(util.t.WBUh3O, obj)];
               let items1 = guild;
             } else {
-              const intl = tmp7(1114).intl;
-              items1 = [intl.string(tmp7(1114).t.EPZCrM)];
+              const intl = util.intl;
+              items1 = [intl.string(util.t.EPZCrM)];
             }
             obj.nick = items1;
           }
-          tmp9 = GuildMemberFlags;
         }
         return obj;
       }

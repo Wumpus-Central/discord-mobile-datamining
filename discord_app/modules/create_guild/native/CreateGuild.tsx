@@ -87,7 +87,7 @@ export default function CreateGuild(arg0) {
     const obj4 = { onValueChange: onStaffOnlyChange, value: guild.staffOnly, start: true, end: true, label: "Staff Only", subLabel: null };
     const intl4 = tmp4(1114).intl;
     obj4.subLabel = intl4.string(tmp4(1114).t.edQ5va);
-    tmp9Result = tmp9(tmp4(7201).TableSwitchRow, obj4);
+    tmp9Result = closure_7(tmp4(7201).TableSwitchRow, obj4);
   }
   items1[4] = tmp9Result;
   const obj5 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -126,7 +126,7 @@ export default function CreateGuild(arg0) {
           message2 = error.message;
         }
         const obj8 = { children: message2 };
-        tmp9Result = tmp9(ref(6941), obj8);
+        tmp9Result = closure_7(ref(6941), obj8);
         const tmp12Result = ref(6941);
       }
     }

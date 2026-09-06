@@ -178,13 +178,13 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
               tmp20Result = null != store_page_trailer_url;
             }
             if (tmp20Result) {
-              const items5 = [tmp22(tmp5(tmp3[11]).Spacer, { size: 24 }), ];
+              const items5 = [closure_14(tmp5(tmp3[11]).Spacer, { size: 24 }), ];
               const obj9 = { style: tmp.socialContainer, children: null };
               if (hasItem) {
                 const obj10 = { iconSource: tmp2(tmp3[27]), text: null };
                 const intl4 = tmp5(tmp3[10]).intl;
                 obj10.text = intl4.string(tmp5(tmp3[10]).t["2MhjUV"]);
-                hasItem = tmp22(SocialBadge, obj10);
+                hasItem = closure_14(SocialBadge, obj10);
               }
               const items6 = [hasItem, ];
               let tmp22Result = null != store_page_trailer_url;
@@ -195,16 +195,16 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
                 obj11.onPress = function onPress() {
                   return LinkingDefault.openURL(store_page_trailer_url);
                 };
-                tmp22Result = tmp22(SocialBadge, obj11);
+                tmp22Result = closure_14(SocialBadge, obj11);
               }
               const obj12 = { children: null };
               const obj13 = { gap: 8, children: null };
               items6[1] = tmp22Result;
               obj13.children = items6;
-              obj9.children = tmp20(tmp5(tmp3[26]).GappedList, obj13);
-              items5[1] = tmp22(tmp23, obj9);
+              obj9.children = closure_15(tmp5(tmp3[26]).GappedList, obj13);
+              items5[1] = closure_14(closure_6, obj9);
               obj12.children = items5;
-              tmp20Result = tmp20(closure_16, obj12);
+              tmp20Result = closure_15(closure_16, obj12);
             }
             items4[4] = tmp20Result;
             items4[5] = closure_14(tmp5(tmp3[11]).Spacer, { size: 16 });

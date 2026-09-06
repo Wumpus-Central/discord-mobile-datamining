@@ -17,8 +17,8 @@ export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoice
     const remoteSessionId = GameConsoleStore.getRemoteSessionId();
     if (null != VoiceStateStore.getVoiceStateForSession(AuthenticationStore.getId(), remoteSessionId)) {
       return false;
-    } else if (obj.isCurrentClientInVoiceChannel()) {
-      if (obj.isInChannel(id.id)) {
+    } else if (VoiceStateStore.isCurrentClientInVoiceChannel()) {
+      if (VoiceStateStore.isInChannel(id.id)) {
         return false;
       } else {
         const guild = GuildStore.getGuild(id.getGuildId());
@@ -26,7 +26,7 @@ export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoice
         if (guild != null) {
           afkChannelId = guild.afkChannelId;
         }
-        return null == afkChannelId || !obj.isInChannel(guild.afkChannelId);
+        return null == afkChannelId || !VoiceStateStore.isInChannel(guild.afkChannelId);
       }
     } else {
       return false;

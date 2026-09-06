@@ -95,7 +95,7 @@ export default function useMobilePurchaseSKU(skuId) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (async (arg0, value) => {
+    return (async (arg0) => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -209,7 +209,7 @@ export default function useMobilePurchaseSKU(skuId) {
     };
   }, items4);
   const items5 = [skuId, platformSkuId, tmp8, flag2, handlePremiumPurchase, onPurchaseComplete, onPurchaseError, freePurchaseCallback, analyticsLoadId, analyticsLocations, analyticsData, giftParams, callback2, flag, tmp4, tmp5, tmp6, orderId];
-  return analyticsData.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  return analyticsData.useCallback(asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

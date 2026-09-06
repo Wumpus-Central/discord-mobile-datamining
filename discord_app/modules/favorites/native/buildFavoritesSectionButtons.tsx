@@ -2,6 +2,7 @@
 
 // Module 10222 (buildFavoritesSectionButtons)
 import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef3225 from "module_3225" /* 3225 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -12,7 +13,7 @@ import StarOutlineIcon from "StarOutlineIcon" /* 10241 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _addChannelToFavorites(arg0, value) {
+let closure_5 = async function _addChannelToFavorites(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -65,7 +66,7 @@ let closure_5 = async function _addChannelToFavorites(arg0, value) {
     }
   }
 };
-let closure_6 = async function _removeChannelFromFavorites(arg0, value) {
+let closure_6 = async function _removeChannelFromFavorites(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -160,8 +161,8 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
         obj.IconComponent = StarOutlineIcon.StarOutlineIcon;
         let tmp15;
         if (tmp5) {
-          const obj1 = { size: tmp12(1178).BetaSizes.SMALL };
-          tmp15 = jsx(tmp12(1178).BetaTag, { size: tmp12(1178).BetaSizes.SMALL });
+          const obj1 = { size: native.BetaSizes.SMALL };
+          tmp15 = jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
         }
         obj.trailing = tmp15;
         obj.onPress = function onPress() {

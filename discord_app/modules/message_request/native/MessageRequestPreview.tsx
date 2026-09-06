@@ -38,12 +38,12 @@ export default noop.memo(function MessageRequestPreview(channel) {
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let isBlockedForMessageResult = null != message;
     if (isBlockedForMessageResult) {
-      isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(tmp);
+      isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(message);
     }
     const obj = { isBlocked: isBlockedForMessageResult, isIgnored: null };
-    let isIgnoredForMessageResult = null != tmp;
+    let isIgnoredForMessageResult = null != message;
     if (isIgnoredForMessageResult) {
-      isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(tmp);
+      isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(message);
     }
     obj.isIgnored = isIgnoredForMessageResult;
     return obj;
@@ -104,22 +104,19 @@ export default noop.memo(function MessageRequestPreview(channel) {
         } else if (null != message.interaction) {
           const intl4 = tmp2(1114).intl;
           stringResult1 = intl4.string(tmp2(1114).t["2v7kfl"]);
+        } else if (message.hasFlag(constants2.IS_VOICE_MESSAGE)) {
+          const intl3 = tmp2(1114).intl;
+          stringResult1 = intl3.string(tmp2(1114).t["6bhHrc"]);
         } else {
-          if (message.hasFlag(constants2.IS_VOICE_MESSAGE)) {
-            const intl3 = tmp2(1114).intl;
-            stringResult1 = intl3.string(tmp2(1114).t["6bhHrc"]);
+          const intl2 = tmp2(1114).intl;
+          const string = intl2.string;
+          const t = tmp2(1114).t;
+          if (hasFlagResult) {
+            stringResult1 = string(t.Xxm5i3);
           } else {
-            const intl2 = tmp2(1114).intl;
-            const string = intl2.string;
-            const t = tmp2(1114).t;
-            if (hasFlagResult) {
-              stringResult1 = string(t.Xxm5i3);
-            } else {
-              stringResult1 = string(t.LoMGlg);
-            }
-            hasFlagResult = message.hasFlag(tmp15.IS_COMPONENTS_V2);
+            stringResult1 = string(t.LoMGlg);
           }
-          tmp15 = constants2;
+          hasFlagResult = message.hasFlag(constants2.IS_COMPONENTS_V2);
         }
         stringResult = stringResult1;
         flag = false;
@@ -132,5 +129,5 @@ export default noop.memo(function MessageRequestPreview(channel) {
     }
   }
   obj = { style: channel.style, children: jsx(channel(1178).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
-  return <View style={arg0.style}>{jsx(channel(1178).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
+  return <View style={channel.style}>{jsx(channel(1178).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
 });

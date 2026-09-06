@@ -31,4 +31,5 @@ export default function _default(shopBlock) {
   obj.body = intl.string(util.t.eAn6z2);
   obj.children = jsx(native.EmptyState, { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null });
   tmp6 = <View style={{ marginTop: 42 }} Illustration={generated_NoResults.NoResults} body={null} />;
+  const tmp = closure_6();
 };

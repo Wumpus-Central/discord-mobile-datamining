@@ -62,6 +62,8 @@ export default function GuildProfileHeader(icon) {
       obj = { key: "guild-badge-tooltip", content: tooltipSubtitle };
       ToastActionCreatorsDefault.open(obj);
     }
+    const tmp4 = getBadgeTooltip(BadgeCategory.getBadgeCategory(guildTraits), guildTraits.visibility);
+    tmp5 = null == tooltipTitle && null == tooltipSubtitle;
   }, items1);
   let obj4 = profile(stateFromStores1[9]);
   const items2 = [GuildMemberStore, AuthenticationStore];
@@ -86,7 +88,7 @@ export default function GuildProfileHeader(icon) {
   }, items4);
   obj1 = { icon: icon.guildIconSource, size: null, animate: true, value: null, selected: false };
   let fromGuildProfileResult = obj3.fromGuildProfile(profile);
-  const tmp5 = id;
+  let tmp5 = id;
   obj1.size = profile(stateFromStores1[18]).GuildIconSizes.XXLARGE;
   obj1.value = profile.name;
   obj.children = closure_9(id(stateFromStores1[18]), obj1);

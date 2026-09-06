@@ -61,7 +61,7 @@ export default function NewTermsModal() {
   importDefault = tmp5[1];
   let obj = memo(5630);
   obj.useNavigatorBackPressHandler(memo(4972).BackPressHandler.minimize);
-  dependencyMap = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  dependencyMap = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

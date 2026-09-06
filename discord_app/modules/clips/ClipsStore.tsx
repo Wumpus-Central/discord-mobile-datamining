@@ -17,7 +17,7 @@ import RunningGameStore from "RunningGameStore" /* 1915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-let closure_39 = async function _migrateDefaultStorage(arg0, value) {
+let closure_39 = async function _migrateDefaultStorage() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -108,24 +108,23 @@ let closure_39 = async function _migrateDefaultStorage(arg0, value) {
     }
   }
 };
-function recordPOVMatches(arg0, arg1) {
+function recordPOVMatches(found, found2) {
   let flag = false;
-  const iter = arg0[Symbol.iterator]();
+  const iter = found[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
     obj = clipPOVOverlap;
     let clipAttachmentPOVWindow = obj.getClipAttachmentPOVWindow(nextResult);
     if (null != clipAttachmentPOVWindow) {
-      let iter2 = arg1[Symbol.iterator]();
+      let iter2 = found2[Symbol.iterator]();
       let nextResult1 = iter2.next();
       while (iter2 !== undefined) {
         let tmp12 = nextResult1;
-        let tmp14 = require;
         let obj2 = clipPOVOverlap;
         let clipAttachmentPOVWindow1 = obj2.getClipAttachmentPOVWindow(nextResult1);
         if (null != clipAttachmentPOVWindow1) {
-          let tmp14Result = tmp14(13991);
+          let tmp14Result = clipPOVOverlap;
           if (null != tmp14Result.getClipPOVOverlapMilliseconds(tmp8, tmp18)) {
             let items = map.get(tmp2.id);
             if (items == null) {
@@ -165,7 +164,7 @@ function trackClipMessage(message) {
     } else if (map1.has(message.id)) {
       return false;
     } else {
-      const result = obj2.set(message.id, found);
+      const result = map1.set(message.id, found);
       const message_reference = message.message_reference;
       let message_id;
       if (message_reference != null) {
@@ -195,7 +194,7 @@ function trackClipMessage(message) {
       }
       let flag3 = false;
       if (null != message_id1) {
-        let items = obj2.get(message_id1);
+        let items = map1.get(message_id1);
         if (items == null) {
           items = [];
         }
@@ -862,6 +861,7 @@ obj = {
       obj.clipsSettings.clipsEnabled = true;
     }
     obj.hardwareClassificationForDecoupled = classification;
+    tmp2 = obj.hardwareClassification === constants2.MEETS_AUTO_ENABLE && tmp !== constants2.MEETS_AUTO_ENABLE;
   },
   CLIPS_INIT: function handleClipsInit(applicationName) {
     c29 = null;
@@ -880,7 +880,7 @@ obj = {
     educationType = educationType.educationType;
     if (_Error.Error === educationType) {
       c29 = null;
-    } else if (tmp.Disabled === educationType) {
+    } else if (_Error.Disabled === educationType) {
       const _Date = Date;
       obj.clipsEducationState.dismissedAt = Date.now();
       obj.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0;

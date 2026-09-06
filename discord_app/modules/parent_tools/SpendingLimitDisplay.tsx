@@ -2,8 +2,10 @@
 
 // Module 14909 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
+import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import PriceUtils from "PriceUtils" /* 7234 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 7235 */;
 import SpendingLimitUtils from "SpendingLimitUtils" /* 14827 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
@@ -22,17 +24,17 @@ function getSpendingLimitDisplayState(amount, arg1) {
       let obj = { kind: "spent", monthlyText: formatRateResult };
       return obj;
     } else {
-      let num = tmp5(7235).CurrencyExponents[amount.currency];
+      let num = utils_PriceUtils.CurrencyExponents[amount.currency];
       if (num == null) {
         num = 2;
       }
       const diff = amount.amount - arg1;
       if (diff <= 10 * 10 ** num) {
         obj = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
-        const intl = tmp5(1114).intl;
-        const obj1 = { amount: tmp5(7234).formatPrice(diff, currency) };
+        const intl = util.intl;
+        const obj1 = { amount: PriceUtils.formatPrice(diff, currency) };
         obj.remainingText = intl.formatToPlainString(_modDef2396["+Q+bU1"], obj1);
-        const tmp5Result = tmp5(7234);
+        const tmp5Result = PriceUtils;
       } else {
         obj = { kind: "on", monthlyText: formatRateResult };
       }

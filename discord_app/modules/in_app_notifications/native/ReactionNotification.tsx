@@ -16,6 +16,7 @@ import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
 import InAppNotificationUtils from "InAppNotificationUtils" /* 10094 */;
 import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10096 */;
 import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10108 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10109 */;
 import usePreviewableMedia from "usePreviewableMedia" /* 10131 */;
 import ForumPostReactionButton from "ForumPostReactionButton" /* 10218 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
@@ -37,7 +38,7 @@ function ReactionNotificationBody(arg0) {
   let tmp8Result = null;
   if (null != secondaryText) {
     obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp, children: secondaryText };
-    tmp8Result = tmp8(tmp2(4556).Text, obj);
+    tmp8Result = closure_1_10(Text_Text.Text, obj);
   }
   children[1] = tmp8Result;
   tmp8Result = null;
@@ -45,7 +46,7 @@ function ReactionNotificationBody(arg0) {
     tmp8Result = null;
     if (null != messagePreview) {
       const obj1 = { message: messagePreview, lineClamp: 1, maxHeight, textColor: "text-subtle", gradientStyles, gradientColors };
-      tmp8Result = tmp8(tmp2(10109).NativeChannelRowPreview, obj1);
+      tmp8Result = closure_1_10(ChannelRowPreview.NativeChannelRowPreview, obj1);
     }
   }
   children[2] = tmp8Result;
@@ -77,35 +78,35 @@ function ReactionNotificationBodyWrapper(arg0) {
   const emojiHook = noop.useCallback(() => {
     let name;
     if (reaction != null) {
-      name = tmp.emoji.name;
+      name = reaction.emoji.name;
     }
     if (null == name) {
       return null;
     } else {
       let name1;
-      if (tmp != null) {
-        name1 = tmp.emoji.name;
+      if (reaction != null) {
+        name1 = reaction.emoji.name;
       }
       if (null != name1) {
         let id;
-        if (tmp != null) {
-          id = tmp.emoji.id;
+        if (reaction != null) {
+          id = reaction.emoji.id;
         }
         if (null == id) {
-          let obj = { style: italic.italic, variant: "text-sm/normal", children: tmp.emoji.name };
-          return closure_2_10(Text_Text.Text, obj, tmp.emoji.name);
+          let obj = { style: italic.italic, variant: "text-sm/normal", children: reaction.emoji.name };
+          return closure_2_10(Text_Text.Text, obj, reaction.emoji.name);
         }
       }
       let id1;
-      if (tmp != null) {
-        id1 = tmp.emoji.id;
+      if (reaction != null) {
+        id1 = reaction.emoji.id;
       }
       let emojiURL;
       if (null != id1) {
-        obj = { id: tmp.emoji.id, animated: null, size: null };
+        obj = { id: reaction.emoji.id, animated: null, size: null };
         let animated = setting;
         if (setting) {
-          animated = tmp.emoji.animated;
+          animated = reaction.emoji.animated;
         }
         obj.animated = animated;
         obj.size = ForumPostReactionButton.DEFAULT_EMOJI_SIZE;
@@ -114,7 +115,7 @@ function ReactionNotificationBodyWrapper(arg0) {
       const obj1 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
       ({ textEmoji: obj3.textEmojiStyle, imageEmoji: obj3.fastImageStyle } = italic);
       obj1.src = emojiURL;
-      obj1.name = tmp.emoji.name;
+      obj1.name = reaction.emoji.name;
       return closure_2_10(EmojiDefault, obj1);
     }
   }, items);
@@ -122,8 +123,8 @@ function ReactionNotificationBodyWrapper(arg0) {
   const memo = noop.useMemo(() => {
     if (0 !== previewableMedia.length) {
       if (!closure_2) {
-        if (1 === arr.length) {
-          const first = arr[0];
+        if (1 === previewableMedia.length) {
+          const first = previewableMedia[0];
           const type = first.type;
           if (usePreviewableMedia.PreviewableMediaTypes.IMAGE === type) {
             let obj = { text: null, secondaryText: null };
@@ -184,10 +185,10 @@ function ReactionNotificationBodyWrapper(arg0) {
           return obj15;
         } else {
           const intl = util.intl;
-          obj = { emojiHook, count: arr.length };
-          const everyResult = arr.every((type) => type.type === message(closure_1_2[11]).PreviewableMediaTypes.FILE);
+          obj = { emojiHook, count: previewableMedia.length };
+          const everyResult = previewableMedia.every((type) => type.type === message(closure_1_2[11]).PreviewableMediaTypes.FILE);
           const intl2 = util.intl;
-          const obj17 = { emojiHook, count: arr.length };
+          const obj17 = { emojiHook, count: previewableMedia.length };
           let formatResult1 = intl2.format(util.t.UNRyki, obj17);
           if (everyResult) {
             formatResult1 = formatResult;
@@ -262,6 +263,7 @@ function ReactorNotificationIcon(notification) {
     obj = { guild, size: GuildIcon.GuildIconSizes.NORMAL, style: tmp.guildIcon };
     tmp8Result = closure_1_10(GuildIconDefault, obj);
   }
+  tmp = closure_13();
 }
 const View = fn(17).View;
 const InAppNotificationConstants = fn(10095);

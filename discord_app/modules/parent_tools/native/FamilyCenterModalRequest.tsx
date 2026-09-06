@@ -15,11 +15,13 @@ import components_Button_Button from "components/Button/Button" /* 4975 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5577 */;
 import NavigatorHeader2 from "NavigatorHeader" /* 5624 */;
 import native2 from "native" /* 5692 */;
+import _modDef6992 from "module_6992" /* 6992 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7539 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7593 */;
 import ModalScreen from "ModalScreen" /* 8421 */;
 import ModalContent from "ModalContent" /* 8422 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
+import _modDef11564 from "module_11564" /* 11564 */;
 import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 11915 */;
 import ModalFooter from "ModalFooter" /* 11926 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -347,7 +349,7 @@ function FamilyCenterPrereqLoading(arg0) {
   let obj = useNavigation;
   dependencyMap = obj.useNavigation();
   const effect = noop.useEffect(() => {
-    closure_1 = async function _runPrereq(arg0, value) {
+    closure_1 = async function _runPrereq() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

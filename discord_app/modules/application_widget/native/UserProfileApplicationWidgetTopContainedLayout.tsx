@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8926 */;
 import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9013 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9014 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,11 +56,11 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
     obj3 = { uri: fieldValue.media.url };
     obj2.source = obj3;
     obj2.style = tmp.image;
-    obj1.children = tmp12(React2, obj2);
-    let tmp12Result = tmp12(tmp11, obj1);
+    obj1.children = React4(React2, obj2);
+    let tmp12Result = React4(React3, obj1);
   } else {
     const obj4 = { style: tmp.imageSkeleton };
-    tmp12Result = tmp12(tmp2(9014).ImageSkeleton, obj4);
+    tmp12Result = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj4);
   }
   const obj5 = { children: null };
   items3[1] = tmp12Result;

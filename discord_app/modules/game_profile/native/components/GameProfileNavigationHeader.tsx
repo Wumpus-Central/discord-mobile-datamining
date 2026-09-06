@@ -82,10 +82,9 @@ export default function GameProfileNavigationHeader(game) {
         if (AvatarUtils.SUPPORTS_WEBP) {
           str2 = "webp";
         }
-        iconURL1 = obj2.getIconURL(32, str2);
+        iconURL1 = application.getIconURL(32, str2);
       }
       iconURL = iconURL1;
-      obj2 = application;
     }
     if (iconURL == null) {
       iconURL = null;
@@ -111,10 +110,10 @@ export default function GameProfileNavigationHeader(game) {
     let tmp15Result = null != memo;
     if (tmp15Result) {
       const obj1 = { source: null, style: null };
-      let obj2 = { uri: memo };
+      const obj2 = { uri: memo };
       obj1.source = obj2;
       obj1.style = tmp.icon;
-      tmp15Result = tmp15(closure_4, obj1);
+      tmp15Result = closure_7(closure_4, obj1);
     }
     const items3 = [tmp15Result, , ];
     const obj3 = { style: tmp.titleContainer, children: null };
@@ -128,15 +127,15 @@ export default function GameProfileNavigationHeader(game) {
     if (tmp13Result) {
       const obj5 = { style: tmp.rankPillContainer, children: null };
       const obj6 = { rank: game.l30Rank, compact: true };
-      const items5 = [tmp15(application(8716), obj6), ];
+      const items5 = [closure_7(application(8716), obj6), ];
       const obj7 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj7.style = items6;
       const obj8 = { rank: game.l30Rank };
-      obj7.children = tmp15(application(8716), obj8);
-      items5[1] = tmp15(application(4296).View, obj7);
+      obj7.children = closure_7(application(8716), obj8);
+      items5[1] = closure_7(application(4296).View, obj7);
       obj5.children = items5;
-      tmp13Result = tmp13(tmp14, obj5);
+      tmp13Result = closure_8(closure_5, obj5);
     }
     items4[1] = tmp13Result;
     obj3.children = items4;
@@ -147,13 +146,13 @@ export default function GameProfileNavigationHeader(game) {
       const items7 = [tmp.headerRight, animatedStyle];
       obj9.style = items7;
       obj9.children = headerRight();
-      tmp15Result = tmp15(application(4296).View, obj9);
+      tmp15Result = closure_7(application(4296).View, obj9);
     }
     items3[2] = tmp15Result;
     obj.children = items3;
     items2[1] = closure_8(closure_5, obj);
     obj.children = items2;
-    tmp13Result = tmp13(tmp14, obj);
+    tmp13Result = closure_8(closure_5, obj);
   }
   return tmp13Result;
 };

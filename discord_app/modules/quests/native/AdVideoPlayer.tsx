@@ -189,7 +189,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
   if (videoRef == null) {
     videoRef = onLoad.useRef(null);
   }
-  let tmp3 = onLoadStart(obj.useState(num), 2);
+  const tmp3 = onLoadStart(obj.useState(num), 2);
   first = tmp3[0];
   closure_17 = tmp3[1];
   obj = {};
@@ -349,27 +349,27 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     seekToStart() {
       if (first2 !== onBuffer(flag2[10]).PlayerState.ERRORED) {
         callback4(0);
-        if (first2 === tmp2(tmp3[10]).PlayerState.ENDED) {
-          callback(tmp2(tmp3[10]).PlayerState.PLAYING);
+        if (first2 === onBuffer(flag2[10]).PlayerState.ENDED) {
+          callback(onBuffer(flag2[10]).PlayerState.PLAYING);
           if (onResumePlayback != null) {
-            tmp8(tmp2(tmp3[10]).PlaybackTriggerSource.IMPERATIVE_API);
+            tmp8(onBuffer(flag2[10]).PlaybackTriggerSource.IMPERATIVE_API);
           }
         }
       }
     },
     play() {
       if (first2 === onBuffer(flag2[10]).PlayerState.PAUSED) {
-        callback(tmp(tmp2[10]).PlayerState.PLAYING);
+        callback(onBuffer(flag2[10]).PlayerState.PLAYING);
         if (onResumePlayback != null) {
-          tmp5(tmp(tmp2[10]).PlaybackTriggerSource.IMPERATIVE_API);
+          tmp5(onBuffer(flag2[10]).PlaybackTriggerSource.IMPERATIVE_API);
         }
       }
     },
     pause() {
       if (first2 === onBuffer(flag2[10]).PlayerState.PLAYING) {
-        callback(tmp(tmp2[10]).PlayerState.PAUSED);
+        callback(onBuffer(flag2[10]).PlayerState.PAUSED);
         if (onPausePlayback != null) {
-          tmp5(tmp(tmp2[10]).PlaybackTriggerSource.IMPERATIVE_API);
+          tmp5(onBuffer(flag2[10]).PlaybackTriggerSource.IMPERATIVE_API);
         }
       }
     }
@@ -408,25 +408,25 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
       flag = true;
     }
     if (first2 !== AdsVideoTypes.PlayerState.ERRORED) {
-      if (tmp !== tmp2(15015).PlayerState.PAUSED) {
-        if (tmp !== tmp2(15015).PlayerState.LOADING) {
-          if (tmp === tmp2(15015).PlayerState.PLAYING) {
-            callback(tmp2(15015).PlayerState.PAUSED);
+      if (first2 !== AdsVideoTypes.PlayerState.PAUSED) {
+        if (first2 !== AdsVideoTypes.PlayerState.LOADING) {
+          if (first2 === AdsVideoTypes.PlayerState.PLAYING) {
+            callback(AdsVideoTypes.PlayerState.PAUSED);
             if (onPausePlayback != null) {
-              tmp16(tmp2(15015).PlaybackTriggerSource.USER_INTERACTION);
+              tmp16(AdsVideoTypes.PlaybackTriggerSource.USER_INTERACTION);
             }
           }
         }
       }
-      callback(tmp2(15015).PlayerState.PLAYING);
+      callback(AdsVideoTypes.PlayerState.PLAYING);
       if (onResumePlayback != null) {
-        tmp6(tmp2(15015).PlaybackTriggerSource.USER_INTERACTION);
+        tmp6(AdsVideoTypes.PlaybackTriggerSource.USER_INTERACTION);
       }
     }
     callback4(0);
     callback(AdsVideoTypes.PlayerState.PLAYING);
     if (onResumePlayback != null) {
-      tmp11(tmp2(15015).PlaybackTriggerSource.USER_INTERACTION);
+      tmp11(AdsVideoTypes.PlaybackTriggerSource.USER_INTERACTION);
     }
   }, items6);
   const items7 = [callback6];
@@ -437,9 +437,9 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     closure_37.current = false;
     if (first2 === AdsVideoTypes.PlayerState.PLAYING) {
       closure_37.current = true;
-      callback(tmp2(15015).PlayerState.PAUSED);
+      callback(AdsVideoTypes.PlayerState.PAUSED);
       if (onPausePlayback != null) {
-        tmp6(tmp2(15015).PlaybackTriggerSource.SYSTEM_INITIATED);
+        tmp6(AdsVideoTypes.PlaybackTriggerSource.SYSTEM_INITIATED);
       }
     }
   }, items8);
@@ -448,9 +448,9 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     if (ref5.current) {
       tmp.current = false;
       if (first2 !== AdsVideoTypes.PlayerState.ERRORED) {
-        callback(tmp3(15015).PlayerState.PLAYING);
+        callback(AdsVideoTypes.PlayerState.PLAYING);
         if (onResumePlayback != null) {
-          tmp7(tmp3(15015).PlaybackTriggerSource.SYSTEM_INITIATED);
+          tmp7(AdsVideoTypes.PlaybackTriggerSource.SYSTEM_INITIATED);
         }
       }
     }
@@ -485,8 +485,8 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     if (null != videoRef.current) {
       closure_24.current = null;
       if (first > 0) {
-        const result = sharedValue1.set(currentTime.currentTime / tmp4);
-        callback2(currentTime.currentTime, tmp4);
+        const result = sharedValue1.set(currentTime.currentTime / first);
+        callback2(currentTime.currentTime, first);
       }
       if (onSeek != null) {
         const obj = {};
@@ -638,10 +638,9 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
       }
     } else {
       if (first2 !== AdsVideoTypes.PlayerState.LOADING) {
-        const tmp2Result = tmp2(1115);
+        PlatformUtils;
       }
       callback17(true);
-      tmp2 = require;
     }
   }, items22);
   const items24 = [callback17];
@@ -649,11 +648,13 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     if (obj.isIOS()) {
       callback17(true);
     }
+    obj = PlatformUtils;
   }, items23);
   const callback20 = obj.useCallback(() => {
     if (obj.isIOS()) {
       callback17(false);
     }
+    obj = PlatformUtils;
   }, items24);
   rect = require("useSafeAreaInsets")();
   let tmp63 = isFullscreen;

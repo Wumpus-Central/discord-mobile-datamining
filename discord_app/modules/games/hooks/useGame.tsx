@@ -15,23 +15,20 @@ const initialize = {
   get(gameId) {
     if (null == gameId) {
       return null;
+    } else if (GameStore.hasNoData(gameId)) {
+      let NO_DATA = require("initialize").NO_DATA;
     } else {
-      if (GameStore.hasNoData(gameId)) {
-        let NO_DATA = require("initialize").NO_DATA;
-      } else {
-        NO_DATA = obj.getGame(gameId);
-        if (NO_DATA == null) {
-          NO_DATA = null;
-        }
+      NO_DATA = GameStore.getGame(gameId);
+      if (NO_DATA == null) {
+        NO_DATA = null;
       }
-      obj = GameStore;
     }
   },
   load: null,
   getIsLoading: null,
   getError: null
 };
-let closure_2 = asyncGeneratorStep(async (arg0, value) => {
+let closure_2 = asyncGeneratorStep(async (arg0) => {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

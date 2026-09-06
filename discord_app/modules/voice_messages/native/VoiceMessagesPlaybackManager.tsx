@@ -2,6 +2,7 @@
 
 // Module 14542 (VoiceMessagesPlaybackManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4908 */;
 import NativeAudioPlayerModuleDefault from "NativeAudioPlayerModule" /* 14543 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
@@ -42,6 +43,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           DCDAudioPlayerManager.pauseCurrentPlayer(false);
         }
       }
+      obj = applyArgumentsResult(1115);
     };
     applyArgumentsResult.handleAppStateChanged = function handleAppStateChanged(state) {
       state = state.state;
@@ -50,7 +52,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
         applyArgumentsResult.appState = state;
         if ("active" === state) {
           if ("active" !== appState) {
-            let tmpResult = tmp(1115);
+            let tmpResult = PlatformUtils;
             if (tmpResult.isAndroid()) {
               const result = NativeAudioPlayerModuleDefault.maybePlayCurrentPlayer();
             } else {
@@ -62,7 +64,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           }
         }
         if (tmp4) {
-          tmpResult = tmp(1115);
+          tmpResult = PlatformUtils;
           if (tmpResult.isAndroid()) {
             NativeAudioPlayerModuleDefault.pauseCurrentPlayer(true);
           } else {
@@ -74,6 +76,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
         }
         tmp4 = "active" !== state && "active" === appState;
       }
+      obj = PlatformUtils;
     };
     return applyArgumentsResult;
   }
@@ -107,6 +110,7 @@ export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
       DCDAudioPlayerManager.pauseCurrentPlayer(arg0);
     }
   }
+  obj = PlatformUtils;
 };
 export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
   if (obj.isAndroid()) {
@@ -117,6 +121,7 @@ export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
       const result1 = DCDAudioPlayerManager.maybePlayCurrentPlayer();
     }
   }
+  obj = PlatformUtils;
 };
 export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) {
   if (obj.isAndroid()) {
@@ -127,4 +132,5 @@ export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) 
       const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
     }
   }
+  obj = PlatformUtils;
 };

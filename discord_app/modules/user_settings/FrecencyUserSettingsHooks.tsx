@@ -9,7 +9,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/FrecencyUserSettingsHooks.tsx");
 
-export const useFrecencySettings = function useFrecencySettings(flag) {
+export const useFrecencySettings = function useFrecencySettings() {
   if (flag === undefined) {
     flag = true;
   }

@@ -7,6 +7,7 @@ import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
 import BaseTextButton from "BaseTextButton" /* 4976 */;
 import _modDef5033 from "module_5033" /* 5033 */;
+import _modDef5037 from "module_5037" /* 5037 */;
 import _modDef7142 from "module_7142" /* 7142 */;
 import native from "native" /* 8902 */;
 import ShieldLockIcon from "ShieldLockIcon" /* 9212 */;
@@ -20,7 +21,6 @@ import ApplicationStore from "ApplicationStore" /* 4788 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
-const _modDef5037 = tmp5(5037);
 require = fn;
 function ChannelButtonIcons() {
   let obj = { style: closure_11().channelButtons, children: null };
@@ -48,9 +48,9 @@ function ChannelButton(channelId) {
   }
   obj.text = str;
   if (isCallSecureFramesVerified) {
-    let tmp3Result = tmp5(ChannelButtonIcons, {});
+    let tmp3Result = closure_9(ChannelButtonIcons, {});
   } else {
-    tmp3Result = tmp3(7142);
+    tmp3Result = _modDef7142;
   }
   obj.icon = tmp3Result;
   obj.iconOpticalOffsetMargin = -nativeDefault.space.PX_4;
@@ -176,10 +176,10 @@ export default noop.memo(function VoicePanelTitleButton() {
     if (tmp3.type === ParticipantTypes.STREAM) {
       obj = { participant: tmp3, onPress };
       return closure_9(StreamButton, obj);
-    } else if (tmp3.type === tmp5.ACTIVITY) {
+    } else if (tmp3.type === ParticipantTypes.ACTIVITY) {
       obj = { participant: tmp3, onPress };
       return closure_9(ActivityButton, obj);
-    } else if (tmp3.type === tmp5.USER) {
+    } else if (tmp3.type === ParticipantTypes.USER) {
       const obj1 = { participant: tmp3, onPress };
       return closure_9(UserButton, obj1);
     }

@@ -489,7 +489,8 @@ let closure_14 = asyncGeneratorStep(async (arg0, arg1) => {
       c3 = "";
     }
     closure_132_3 = c3;
-    closure_132_4 = await closure_133_0(closure_133_2[17]).createThread(channel2, closure_132_2, closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD, closure_133_0(closure_133_2[19]).getAutoArchiveDuration(channel2, null), "Slash Command");
+    await closure_133_0(closure_133_2[17]).createThread(channel2, closure_132_2, closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD, closure_133_0(closure_133_2[19]).getAutoArchiveDuration(channel2, null), "Slash Command");
+    closure_132_4 = value;
     closure_133_0(closure_133_2[19]);
     const id = closure_132_4.id;
     closure_133_1(closure_133_2[20]).sendMessage(id, closure_133_1(closure_133_2[21]).parse(closure_132_4, closure_132_3), true, { location: closure_133_12.THREAD_CREATION });
@@ -572,7 +573,7 @@ obj18.execute = function execute(arr, guild) {
   guild = guild.guild;
   const channel = guild.channel;
   let str;
-  closure_4 = async function _handler(arg0, value) {
+  closure_4 = async function _handler() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -818,7 +819,7 @@ obj21.execute = function execute(arr, guild) {
   guild = guild.guild;
   const channel = guild.channel;
   let str;
-  closure_4 = async function _handler2(arg0, value) {
+  closure_4 = async function _handler2() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1026,7 +1027,7 @@ obj25.execute = function execute(arr, guild) {
   guild = guild.guild;
   const channel = guild.channel;
   c3 = undefined;
-  closure_4 = async function _handler3(arg0, value) {
+  closure_4 = async function _handler3() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1067,14 +1068,14 @@ obj25.execute = function execute(arr, guild) {
                 if (tmp8Result == null) {
                   var2 = "";
                 }
-                user = user.getUser(asyncGeneratorStep);
+                user = user.getUser(userId);
                 closure_130_1 = user;
                 if (null == user) {
                   const _Error = Error;
                   const error = new Error();
                   throw error;
                 } else {
-                  const obj1 = { guildId: tmp40.id, userId: tmp15, communicationDisabledUntilTimestamp: null, duration: null, reason: null };
+                  const obj1 = { guildId: tmp40.id, userId, communicationDisabledUntilTimestamp: null, duration: null, reason: null };
                   const obj8 = var2(tmp2[22]);
                   const obj10 = var2(tmp2[26])();
                   obj1.communicationDisabledUntilTimestamp = var2(tmp2[26])().add(tmp11, "s").toISOString();
@@ -1086,7 +1087,6 @@ obj25.execute = function execute(arr, guild) {
                   return obj2;
                 }
                 tmp13 = var2;
-                tmp15 = asyncGeneratorStep;
               }
             }
             c5 = 3;
@@ -1212,7 +1212,7 @@ obj29.execute = function execute(arr, channel) {
   let message = channel;
   c1 = undefined;
   let str2;
-  closure_3 = async function _handler4(arg0, value) {
+  closure_3 = async function _handler4() {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

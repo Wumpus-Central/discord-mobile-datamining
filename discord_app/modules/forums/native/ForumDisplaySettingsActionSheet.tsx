@@ -42,22 +42,22 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
   let obj2 = channelId(sortOrder[10]);
   const unmountEffect = obj2.useUnmountEffect(() => {
     if (null != stateFromStores) {
-      if (sortOrder !== c5) {
+      if (sortOrder !== sortOrder) {
         let obj = { guildId: null, channelId: null, sortOrder: null };
-        ({ guild_id: obj2.guildId, id: obj2.channelId } = tmp);
-        obj.sortOrder = tmp17;
+        ({ guild_id: obj2.guildId, id: obj2.channelId } = stateFromStores);
+        obj.sortOrder = sortOrder;
         const result = obj.trackForumSortOrderUpdated(obj);
       }
-      if (layoutType !== c7) {
+      if (layoutType !== forumLayout) {
         obj = { guildId: null, channelId: null, forumLayout: null };
-        ({ guild_id: obj4.guildId, id: obj4.channelId } = tmp);
-        obj.forumLayout = tmp6;
+        ({ guild_id: obj4.guildId, id: obj4.channelId } = stateFromStores);
+        obj.forumLayout = forumLayout;
         const result1 = tracking_Tracking.trackForumLayoutUpdated(obj);
       }
       const state = closure_4.getState();
-      state.setLayoutType(channelId, c7);
+      state.setLayoutType(channelId, forumLayout);
       const state1 = closure_4.getState();
-      state1.setSortOrder(channelId, c5);
+      state1.setSortOrder(channelId, sortOrder);
       const state2 = closure_4.getState();
       state2.setTagSetting(channelId, c9);
     }

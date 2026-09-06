@@ -101,21 +101,21 @@ function BurstReactionAnimationContainerInner() {
             ref.current = false;
           }
         };
-        tmpResult = tmp(first(7826), obj3);
+        tmpResult = closure_1_8(first(7826), obj3);
       }
       obj2.children = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj2);
-      let tmp6Result = markAsDismissed.visibleContent === tmp2(1943).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+      let tmp6Result = markAsDismissed.visibleContent === closure_0(1943).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
         const obj4 = { children: null };
         const obj5 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
-        const intl = tmp2(1114).intl;
-        obj5.children = intl.string(tmp2(1114).t.QpPMih);
-        const items2 = [tmp(tmp2(4556).Text, obj5), ];
+        const intl = closure_0(1114).intl;
+        obj5.children = intl.string(closure_0(1114).t.QpPMih);
+        const items2 = [closure_1_8(closure_0(4556).Text, obj5), ];
         const obj6 = { style: tmp4.dismissTextBackground };
-        items2[1] = tmp(tmp8, obj6);
+        items2[1] = closure_1_8(handleComponentFinish, obj6);
         obj4.children = items2;
-        tmp6Result = tmp6(closure_1_9, obj4);
+        tmp6Result = closure_1_10(closure_1_9, obj4);
       }
       items1[2] = tmp6Result;
       obj.children = items1;

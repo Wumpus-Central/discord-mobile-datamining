@@ -5,10 +5,10 @@ import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import _mod5631 from "module_5631" /* 5631 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 6945 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
 import noop from "module_19" /* 19 */;
 
-const useIsWindowLarge = tmp5(6945);
 require = fn;
 const jsx = fn(21).jsx;
 fn(4560);
@@ -40,13 +40,24 @@ export default function SearchableDestinationListHeader(arg0) {
     headerStatusBarHeight: null
   };
   ({ headerLeftContainer: obj.headerLeftContainerStyle, headerRightContainer: obj.headerRightContainerStyle } = tmp);
-  const tmp4 = jsx;
   if (!obj3.isIOS()) {
     let num = useSafeAreaInsetsDefault().top;
   } else {
+    useIsWindowLarge;
     num = 0;
-    const tmp5Result = useIsWindowLarge;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  return tmp4(_mod5631.Header, obj);
+  return jsx(_mod5631.Header, {
+    headerStyle: tmp.header,
+    title,
+    headerTitle(children) {
+      return jsx(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle, subtitleColor, variant: "redesign/heading-18/bold" });
+    },
+    headerTitleAlign: "center",
+    headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
+    headerRight,
+    headerLeftContainerStyle: null,
+    headerRightContainerStyle: null,
+    headerStatusBarHeight: null
+  });
 };

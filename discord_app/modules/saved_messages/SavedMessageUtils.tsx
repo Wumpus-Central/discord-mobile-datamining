@@ -50,11 +50,11 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
               type = type.type;
             }
             if (type === constants.UNKNOWN) {
-              if (null == tmp42.saveData.guildId) {
+              if (null == closure_0.saveData.guildId) {
                 c5 = 1;
                 c6 = 2;
                 c7 = 1;
-                let obj1 = { value: ChannelActionCreatorsDefault.fetchChannel(tmp42.saveData.channelId), done: false };
+                let obj1 = { value: ChannelActionCreatorsDefault.fetchChannel(closure_0.saveData.channelId), done: false };
                 return obj1;
               }
             }
@@ -168,7 +168,7 @@ export const useSavedMessageChannel = function useSavedMessageChannel(savedMessa
     if (null == stateFromStores) {
       let tmp9;
       if (null != savedMessage.message) {
-        const obj = { id: tmp10.saveData.channelId, guild_id: tmp10.saveData.guildId, type: constants.UNKNOWN, name: null };
+        const obj = { id: savedMessage.saveData.channelId, guild_id: savedMessage.saveData.guildId, type: constants.UNKNOWN, name: null };
         const intl = util.intl;
         obj.name = intl.string(util.t.J90oLW);
         tmp9 = new UnknownChannelRecord(obj);

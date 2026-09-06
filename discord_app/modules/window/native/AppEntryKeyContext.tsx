@@ -21,6 +21,7 @@ export const useAppEntryKey = function useAppEntryKey() {
       c4 = true;
       logger.warn("AppEntryKey context was not provided; falling back to default entry key \"main\".");
     }
+    tmp = undefined !== context || c4;
   }, items);
   if (context == null) {
     context = main;

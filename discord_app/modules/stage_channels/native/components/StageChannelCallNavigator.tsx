@@ -189,8 +189,8 @@ export default function StageChannelCallNavigator(channel) {
     const obj3 = { children: null };
     const tmp10Result = tmp10(tmp2[21]);
     const obj4 = { channel, selectedParticipant: tmp11 };
-    obj3.children = tmp18(tmp(tmp2[22]).ChannelCallSingleController, obj4);
-    const items3 = [tmp18(tmp10Result, obj3), , ];
+    obj3.children = closure_8(tmp(tmp2[22]).ChannelCallSingleController, obj4);
+    const items3 = [closure_8(tmp10Result, obj3), , ];
     const obj5 = { header: null };
     const obj6 = {
       channel,
@@ -199,21 +199,21 @@ export default function StageChannelCallNavigator(channel) {
           return _undefined(true);
         }
     };
-    obj5.header = tmp18(tmp10(tmp2[24]), obj6);
+    obj5.header = closure_8(tmp10(tmp2[24]), obj6);
     const merged = Object.assign(obj);
-    items3[1] = tmp18(tmp10(tmp2[23]), obj5);
+    items3[1] = closure_8(tmp10(tmp2[23]), obj5);
     if (tmp18Result) {
       const obj7 = {
         onClose() {
               return _undefined(false);
             }
       };
-      tmp18Result = tmp18(tmp10(tmp2[25]), obj7);
+      tmp18Result = closure_8(tmp10(tmp2[25]), obj7);
     }
     items3[2] = tmp18Result;
     obj2.children = items3;
     obj1.children = closure_9(tmp10Result, obj2);
-    tmp18Result = tmp18(ref, obj1);
+    tmp18Result = closure_8(ref, obj1);
     const tmp10Result1 = tmp10(tmp2[23]);
   } else {
     if (first) {
@@ -229,13 +229,13 @@ export default function StageChannelCallNavigator(channel) {
       tmp10Result2 = tmp10(tmp2[26]);
     }
     const obj8 = { channel };
-    const items4 = [tmp18(tmp10Result2, obj8), ];
+    const items4 = [closure_8(tmp10Result2, obj8), ];
     const obj9 = { header: null };
     const obj10 = { channel };
-    obj9.header = tmp18(tmp10(first ? tmp2[27] : tmp2[24]), obj10);
+    obj9.header = closure_8(tmp10(first ? tmp2[27] : tmp2[24]), obj10);
     const merged1 = Object.assign(obj);
     const obj11 = { channel };
-    const items5 = [tmp18(tmp10(tmp2[28]), obj11), ];
+    const items5 = [closure_8(tmp10(tmp2[28]), obj11), ];
     if (isModerator) {
       isModerator = !_slicedToArray(noop.useState(isLive), 1)[0];
     }
@@ -244,14 +244,14 @@ export default function StageChannelCallNavigator(channel) {
     }
     if (isModerator) {
       const obj12 = { channel };
-      isModerator = tmp18(StagePromptWrapper, obj12);
+      isModerator = closure_8(StagePromptWrapper, obj12);
     }
     const obj13 = { children: null };
     items5[1] = isModerator;
     obj9.children = items5;
     items4[1] = closure_9(tmp10(tmp2[23]), obj9);
     obj13.children = items4;
-    tmp18Result = tmp35(closure_10, obj13);
+    tmp18Result = closure_9(closure_10, obj13);
     const tmp10Result3 = tmp10(tmp2[23]);
   }
   obj.children = tmp18Result;

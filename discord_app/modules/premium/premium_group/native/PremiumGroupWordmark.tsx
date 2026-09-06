@@ -3,10 +3,11 @@
 // Module 9381 (PremiumGroupWordmark)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
-import inlineStylesDefault from "inlineStyles" /* 8453 */;
+import inlineStyles from "inlineStyles" /* 8453 */;
 import noop from "module_19" /* 19 */;
 
-const inlineStyles = tmp2(8453);
+const inlineStylesDefault = inlineStyles;
+
 require = fn;
 const jsx = fn(21).jsx;
 let size = fn(2);

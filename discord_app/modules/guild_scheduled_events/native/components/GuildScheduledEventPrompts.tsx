@@ -2,6 +2,8 @@
 
 // Module 9697 (GuildScheduledEventPrompts)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Form from "Form" /* 8593 */;
 import useManageResourcePermissions from "useManageResourcePermissions" /* 9671 */;
 import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9698 */;
 import noop from "module_19" /* 19 */;
@@ -40,11 +42,11 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
     };
     ({ iconStyle: obj2.iconStyle, iconContainerStyle: obj2.iconContainerStyle } = tmp);
     obj.completed = isLive.isLive;
-    const intl = tmp2(1114).intl;
-    obj.title = intl.string(tmp2(1114).t["60lJ0C"]);
-    const intl2 = tmp2(1114).intl;
-    obj.subtitle = intl2.string(tmp2(1114).t["EYn7/y"]);
-    tmp4 = jsx(tmp2(8593).FormCTA, {
+    const intl = util.intl;
+    obj.title = intl.string(util.t["60lJ0C"]);
+    const intl2 = util.intl;
+    obj.subtitle = intl2.string(util.t["EYn7/y"]);
+    tmp4 = jsx(Form.FormCTA, {
       style: tmp.actionBarCTAContainer,
       onPress() {
           const obj = { channel };

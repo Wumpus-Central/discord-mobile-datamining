@@ -4,10 +4,14 @@
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useToken from "useToken" /* 4262 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useFontScale from "useFontScale" /* 4982 */;
+import TableRowDivider from "TableRowDivider" /* 5602 */;
 import TableRowGroupContext from "TableRowGroupContext" /* 5606 */;
 import Card from "Card" /* 5607 */;
+import TableRowArrow from "TableRowArrow" /* 5612 */;
 import TableRowTrailingText from "TableRowTrailingText" /* 5614 */;
+import DragIcon from "DragIcon" /* 5615 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -231,7 +235,7 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   }
   obj = { row: null, iconContainer: null, trailing: null, content: null, labels: null, trailingText: null, dragHandle: null, opacity: num, borderRadius: nativeDefault.radii.md };
   obj.row = obj;
-  obj = { minWidth: tmp(576).modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: tmp(576).modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
+  obj = { minWidth: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: nativeDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
   obj.iconContainer = obj;
   obj.trailing = { marginStart: 18 };
   let str = "row";

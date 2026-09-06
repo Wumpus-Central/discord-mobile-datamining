@@ -53,7 +53,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   obj = { style: tmp.info, children: null };
   const obj1 = { source: _modDef16926, style: tmp.image };
   const items2 = [closure_8(closure_4, obj1), , ];
-  const obj2 = { style: tmp.titleContainer, children: null };
+  let obj2 = { style: tmp.titleContainer, children: null };
   const isPremiumResult = obj1.isPremium(stateFromStores);
   const items3 = [closure_8(markAsDismissed(1178).Icon, { source: _modDef9963, size: markAsDismissed(1178).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
   const obj4 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };

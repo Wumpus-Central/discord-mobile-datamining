@@ -89,7 +89,7 @@ export default function LaunchPadContainer(children) {
   let items1 = [closure_6(updaters(4296).View, obj3), ];
   if (tmp4 !== constants.DISABLED) {
     let obj4 = { launchPadType: tmp4, gestureState, launchPadShown, launchPadSharedState, launchPadPullTabState, updaters };
-    const tmp10Result = tmp10(updaters(16964), obj4);
+    const tmp10Result = closure_6(updaters(16964), obj4);
   }
   items1[1] = tmp10Result;
   obj2.children = items1;

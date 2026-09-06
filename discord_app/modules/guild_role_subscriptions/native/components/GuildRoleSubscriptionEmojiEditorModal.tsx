@@ -45,7 +45,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
     }
     return applyArgumentsResult;
   }
-  closure_11 = async function _handleSave(stateFromStores, arg1) {
+  closure_11 = async function _handleSave(stateFromStores) {
     closure_0 = tmp3;
     await onSave(first);
     if (1 === tmp7) {
@@ -53,12 +53,12 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
       c4 = 3;
     } else if (stateFromStores === 1) {
       c4 = 3;
-      throw arg1;
+      throw value;
     } else if (stateFromStores !== 2) {
       closure_128_2();
       c3 = 0;
     }
-    return arg1;
+    return value;
   };
   ({ initialTierEmojiIds, listingId } = guildId);
   let tmp = closure_12();
@@ -146,13 +146,13 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
           obj = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
           const intl = util.intl;
           obj.children = intl.string(util.t["1GlN06"]);
-          const items1 = [tmp3(Text_Text.Text, obj), ];
+          const items1 = [React7(Text_Text.Text, obj), ];
           const obj1 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
           const intl2 = util.intl;
           obj1.children = intl2.string(util.t.J0XdJ4);
-          items1[1] = tmp3(Text_Text.Text, obj1);
+          items1[1] = React7(Text_Text.Text, obj1);
           obj.children = items1;
-          tmpResult = tmp(tmp2, obj);
+          tmpResult = closure_3_11(closure_3_10, obj);
         }
         children[1] = tmpResult;
         return closure_3_11(closure_3_10, { children });

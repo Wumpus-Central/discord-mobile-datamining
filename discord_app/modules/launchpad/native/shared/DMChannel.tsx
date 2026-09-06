@@ -63,8 +63,8 @@ export default noop.memo(function DMChannel(navigationReplace) {
   obj1.unreadBadge = jsx(flag(16981), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
-    const obj3 = { channel, message: tmp7, color: str, muted, layout: tmp5(7879).ChannelListLayoutTypes.COMPACT };
-    tmp11Result = tmp11(tmp5(10109).ChannelRowPreview, obj3);
+    const obj3 = { channel, message: tmp7, color: str, muted, layout: channel(7879).ChannelListLayoutTypes.COMPACT };
+    tmp11Result = jsx(channel(10109).ChannelRowPreview, { channel, message: tmp7, color: str, muted, layout: channel(7879).ChannelListLayoutTypes.COMPACT });
   }
   obj1.subtitle = tmp11Result;
   obj1.latestMessageTimestamp = extractTimestampResult;

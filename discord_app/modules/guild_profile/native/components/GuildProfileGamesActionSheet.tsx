@@ -49,7 +49,7 @@ export default function GuildProfileGamesActionSheet(profile) {
   obj = { children: null };
   obj1 = { style: closure_7().container, children: null };
   const tmp = closure_7();
-  obj1.children = jsx(id(5687).TableRowGroup, { title: str, hasIcons: true, children: allGuildProfileGames.map((game) => <GuildProfileGameRow key={arg0.id} game={arg0} activityLevel={gameActivity[arg0.id]} />) });
+  obj1.children = jsx(id(5687).TableRowGroup, { title: str, hasIcons: true, children: allGuildProfileGames.map((game) => <GuildProfileGameRow key={game.id} game={game} activityLevel={gameActivity[game.id]} />) });
   obj.children = <View style={closure_7().container}>{null}</View>;
   obj.children = jsx(id(6627).BottomSheetScrollView, { children: null });
   return jsx(id(7150).BottomSheet, { children: null });

@@ -20,7 +20,7 @@ function pickImage() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _pickImage(size, arg1) {
+let closure_11 = async function _pickImage() {
   closure_1 = arg1;
   c3 = 0;
   c4 = 0;
@@ -101,20 +101,20 @@ class ImagePickerIcon {
     memo = closure_4.useMemo(() => {
       let uri;
       if (image != null) {
-        uri = tmp.uri;
+        uri = image.uri;
       }
       if (null != uri) {
-        uri = tmp.uri;
+        uri = image.uri;
         if (!uri.startsWith("data:")) {
           if (null != size) {
             const obj = ImageLoaderUtils;
             const _HermesInternal = HermesInternal;
-            let uri2 = tmp.uri + "?size=" + obj.getBestMediaProxySize(tmp3 * ImageLoaderUtils.getDevicePixelRatio());
-            tmp.uri = uri2;
+            let uri2 = image.uri + "?size=" + obj.getBestMediaProxySize(tmp3 * ImageLoaderUtils.getDevicePixelRatio());
+            image.uri = uri2;
           }
           return uri2;
         }
-        uri2 = tmp.uri;
+        uri2 = image.uri;
       }
     }, items);
     tmp5 = jsxs;

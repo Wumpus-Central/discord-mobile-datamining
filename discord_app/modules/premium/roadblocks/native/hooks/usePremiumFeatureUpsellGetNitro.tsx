@@ -41,7 +41,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
       tmp3 = 0 === Object.keys(premiumTypeSubscription).length;
     }
     let obj = UserOfferStore;
-    const isFetchingOfferResult = obj.isFetchingOffer();
+    const tmp5 = UserOfferStore.hasFetchedOffer() && !obj.hasAnyUnexpiredOffer();
     if (result) {
       if (tmp3) {
         if (tmp5) {
@@ -91,7 +91,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
       }
     }
     closure_1();
-    tmp5 = UserOfferStore.hasFetchedOffer() && !obj.hasAnyUnexpiredOffer();
+    isFetchingOfferResult = obj.isFetchingOffer();
     const bestActiveInput = ChatInputUtils.getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();

@@ -24,8 +24,7 @@ export default function Timestamp(node) {
     style = node.style;
   }
   const tmp2 = useFormattedTimestampDefault(node);
-  const tmp3 = jsx;
-  return tmp3(node(1178).LegacyText, {
+  return jsx(node(1178).LegacyText, {
     style,
     onPress() {
       const obj = { key: "TIMESTAMP", content: node.full };

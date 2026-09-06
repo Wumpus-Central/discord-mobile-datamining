@@ -3,6 +3,7 @@
 // Module 9204 (GuildProfileCTA)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5527 */;
 import GuildProfileTypes from "GuildProfileTypes" /* 5550 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5569 */;
 import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7341 */;
@@ -23,7 +24,7 @@ export default function GuildProfileCTA(profile) {
   let validInviteKey;
   constants = undefined;
   ({ context, inviteKey } = profile);
-  let tmp2 = guildId(validInviteKey[4])(profile, context, inviteKey);
+  const tmp2 = guildId(validInviteKey[4])(profile, context, inviteKey);
   guildId = tmp2.guildId;
   validInviteKey = tmp2.validInviteKey;
   const ctaType = tmp2.ctaType;
@@ -60,15 +61,15 @@ export default function GuildProfileCTA(profile) {
       applicationStatus = applicationStatus.applicationStatus;
     }
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-      let tmp2Result = tmp2(5527);
+      let tmp2Result = MemberVerificationAlertActionCreators;
       const result = tmp2Result.openMemberVerificationPendingAlert(guildId);
-    } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-      tmp2Result = tmp2(5527);
+    } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+      tmp2Result = MemberVerificationAlertActionCreators;
       const obj = { guildId, canWithdraw: true };
       const result1 = tmp2Result.openMemberVerificationRejectedAlert(obj);
-    } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
-      const result2 = tmp2(5527).openMemberVerificationIncompleteAlert(guildId);
-      const tmp2Result1 = tmp2(5527);
+    } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
+      const result2 = MemberVerificationAlertActionCreators.openMemberVerificationIncompleteAlert(guildId);
+      const tmp2Result1 = MemberVerificationAlertActionCreators;
     }
   }, items2);
   const items4 = [guildId];
@@ -79,8 +80,8 @@ export default function GuildProfileCTA(profile) {
         callback1();
       }
     }
-    const tmp2 = guildId;
-    const result = MemberVerificationModalActionCreators.openMemberVerificationModal(tmp2);
+    const result = MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
+    const tmp4Result = MemberVerificationModalActionCreators;
   }, items3);
   const callback4 = obj1.useCallback(() => {
     let obj = ActionSheetActionCreatorsDefault;

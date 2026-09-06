@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import timing from "timing" /* 4561 */;
 import GuildIcon from "GuildIcon" /* 5584 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
 import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8359 */;
 import ClipViewDefault from "ClipView" /* 8813 */;
@@ -33,12 +34,12 @@ function SelectedServerIcon(guild) {
   items[2] = null == guild && guild.index >= 3 && tmp.noServerExtraContainer;
   if (null != guild) {
     obj = { style: tmp.guildIconBorder, guild, size: GuildIcon.GuildIconSizes.LARGE };
-    let tmp3Result = tmp3(GuildIconDefault, obj);
+    let tmp3Result = closure_1_12(GuildIconDefault, obj);
   } else {
     tmp3Result = null;
     if (tmp2) {
       obj = { size: "md", color: nativeDefault.colors.ICON_MUTED };
-      tmp3Result = tmp3(ServerIcon.ServerIcon, obj);
+      tmp3Result = closure_1_12(ServerIcon.ServerIcon, obj);
     }
   }
   obj.children = tmp3Result;
@@ -63,12 +64,12 @@ function SelectedServersRow(selectedGuilds) {
     if (first < selectedGuilds.length) {
       const current = ref.current;
       if (current != null) {
-        const obj = { animated: true, section: 0, item: arr.length };
+        const obj = { animated: true, section: 0, item: selectedGuilds.length };
         current.scrollToLocation(obj);
       }
-      closure_2(arr.length);
-    } else if (tmp !== arr.length) {
-      closure_2(arr.length);
+      closure_2(selectedGuilds.length);
+    } else if (tmp !== selectedGuilds.length) {
+      closure_2(selectedGuilds.length);
     }
   }, items1);
   selectedGuilds(4296);
@@ -79,13 +80,13 @@ function SelectedServersRow(selectedGuilds) {
       num = 1;
     }
     obj = { opacity: obj.withTiming(num), height: null, marginTop: null };
-    let tmpResult = tmp(4561);
+    let tmpResult = timing;
     let num2 = 0;
     if (selectedGuilds.length > 0) {
       num2 = c15;
     }
     obj.height = tmpResult.withTiming(num2);
-    tmpResult = tmp(4561);
+    tmpResult = timing;
     let num3 = 0;
     if (selectedGuilds.length > 0) {
       num3 = nativeDefault.space.PX_24;
@@ -104,7 +105,6 @@ function SelectedServersRow(selectedGuilds) {
   const obj1 = { ref, sections: null, insetStart: null, insetEnd: null, renderItem: null, estimatedListSize: "windowSize", itemSize: null, horizontal: true, listId: "selected-servers-list", showsHorizontalScrollIndicator: false };
   let num = 3;
   const tmp = closure_16();
-  const tmp8 = v50;
   if (selectedGuilds.length >= 3) {
     num = selectedGuilds.length + 1;
   }
@@ -113,7 +113,7 @@ function SelectedServersRow(selectedGuilds) {
   obj1.insetStart = first(576).space.PX_24;
   obj1.insetEnd = first(576).space.PX_12;
   obj1.renderItem = callback;
-  obj1.itemSize = tmp8 + first(576).space.PX_12;
+  obj1.itemSize = v50 + first(576).space.PX_12;
   obj.children = closure_12(first(7055), obj1);
   return closure_12(first(4296).View, obj);
 }
@@ -142,13 +142,13 @@ function CutoutGuildBanner(guild) {
   obj.cutouts = items1;
   if (null != guild.banner) {
     obj1 = { style: tmp.bannerImage, source: animatableSourceWithFallback, resizeMode: "cover" };
-    let tmp11Result = tmp11(tmp12(5587), obj1);
+    let tmp11Result = closure_12(FastImageDefault, obj1);
   } else {
     const obj2 = { style: null };
     const items2 = [, ];
     ({ bannerImage: arr3[0], emptyBanner: arr3[1] } = tmp);
     obj2.style = items2;
-    tmp11Result = tmp11(tmp10, obj2);
+    tmp11Result = closure_12(closure_6, obj2);
   }
   obj.children = tmp11Result;
   const items3 = [closure_12(ClipViewDefault, obj), ];
@@ -156,12 +156,11 @@ function CutoutGuildBanner(guild) {
   const items4 = [, ];
   ({ guildIcon: arr5[0], guildIconBorder: arr5[1] } = tmp);
   obj3.style = items4;
-  const tmp9 = closure_13;
   obj3.size = guild(5584).GuildIconSizes.LARGE;
   obj3.animate = !stateFromStores;
   items3[1] = closure_12(GuildIconDefault, obj3);
   obj.children = items3;
-  return tmp9(closure_6, obj);
+  return closure_13(closure_6, obj);
 }
 function FeaturedServer(guild) {
   guild = guild.guild;
@@ -183,7 +182,7 @@ function FeaturedServer(guild) {
   let tmp7Result;
   if (selected) {
     const obj5 = { size: "sm", color: handlePress(576).colors.CONTROL_CONNECTED_TEXT_DEFAULT };
-    tmp7Result = tmp7(tmp2(4520).CircleCheckIcon, obj5);
+    tmp7Result = closure_12(tmp2(4520).CircleCheckIcon, obj5);
   }
   obj4.icon = tmp7Result;
   if (stateFromStores) {
@@ -197,12 +196,12 @@ function FeaturedServer(guild) {
         str = "active";
       }
       obj4.variant = str;
-      obj3.children = tmp7(guild(4975).Button, obj4);
-      items3[2] = tmp7(tmp8, obj3);
+      obj3.children = closure_12(guild(4975).Button, obj4);
+      items3[2] = closure_12(closure_6, obj3);
       obj.children = items3;
-      items2[1] = tmp6(tmp8, obj);
+      items2[1] = closure_13(closure_6, obj);
       obj.children = items2;
-      return tmp6(guild(5123).PressableHighlight, obj);
+      return closure_13(guild(5123).PressableHighlight, obj);
     }
   }
   const intl2 = tmp2(1114).intl;
@@ -214,6 +213,8 @@ function FeaturedServer(guild) {
   } else {
     string(t.XqMe3N);
   }
+  const obj1 = { maxFontSizeMultiplier: 1, style: tmp.featuredServerTitle, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guild.name };
+  const obj2 = { maxFontSizeMultiplier: 1, lineClamp: 2, variant: "text-xs/normal", color: "text-default", children: guild.description };
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
@@ -293,13 +294,13 @@ export default function ICYMIJoinGuildsScreen() {
     const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
     const result = ICYMIAnalytics.trackFeedOnboardingGuildToggled({ guildId: guildId.id, toggled: !first.has(guildId.id) });
     if (first.has(guildId.id)) {
-      tmp2((items) => {
+      closure_4((items) => {
         items.delete(guildId.id);
         return new Set(items);
       });
       closure_5((arr) => arr.filter((id) => id.id !== id.id));
     } else {
-      tmp2((add) => {
+      closure_4((add) => {
         add.add(guildId.id);
         return new Set(add);
       });
@@ -309,13 +310,14 @@ export default function ICYMIJoinGuildsScreen() {
         return items;
       });
     }
+    const obj = { guildId: guildId.id, toggled: !first.has(guildId.id) };
   }, items3);
   const tmp13 = _slicedToArray(noop.useState(false), 2);
   const first2 = tmp13[0];
   closure_10 = tmp13[1];
   const items4 = [extraData];
   const items5 = [stateFromStoresArray1, stateFromStores, first1, stateFromStoresArray.length];
-  const callback1 = noop.useCallback(extraData(function*(arg0, value) {
+  const callback1 = noop.useCallback(extraData(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -455,8 +457,8 @@ export default function ICYMIJoinGuildsScreen() {
     const intl3 = tmp3(tmp2[24]).intl;
     obj7.text = intl3.string(tmp3(tmp2[24]).t.K50GHd);
     obj7.onPress = callback1;
-    obj5.children = tmp20(tmp3(tmp2[22]).Button, obj7);
-    tmp20Result = tmp20(first1, obj5);
+    obj5.children = closure_12(tmp3(tmp2[22]).Button, obj7);
+    tmp20Result = closure_12(first1, obj5);
   }
   children[5] = tmp20Result;
   return closure_13(closure_14, { children });

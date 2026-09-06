@@ -2,7 +2,10 @@
 
 // Module 11151 (UserProfileStackedActionSheet)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5628 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import Form from "Form" /* 8593 */;
 import noop from "module_19" /* 19 */;
@@ -41,16 +44,16 @@ export default function UserProfileStackedActionSheet(onBack) {
   items[1] = { justifyContent: str };
   if (tmp4Result) {
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = tmp5(1114).intl;
-    obj.accessibilityLabel = intl.string(tmp5(1114).t["13/7kX"]);
+    const intl = util.intl;
+    obj.accessibilityLabel = intl.string(util.t["13/7kX"]);
     obj.onPress = onBack;
-    obj.children = tmp4(tmp5(5628).ArrowLargeLeftIcon, { size: "md" });
-    tmp4Result = tmp4(tmp5(5123).PressableOpacity, obj);
+    obj.children = React4(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" });
+    tmp4Result = React4(Pressables.PressableOpacity, obj);
   }
   const items1 = [tmp4Result, React4(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
   if (tmp4Result) {
     const obj1 = { style: tmp2.headerSpacer };
-    tmp4Result = tmp4(tmp9, obj1);
+    tmp4Result = React4(View, obj1);
   }
   items1[2] = tmp4Result;
   obj.children = items1;

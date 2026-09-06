@@ -82,10 +82,10 @@ function transitionTo(CHANNELResult, guildScheduledEvent1) {
       tmp24 = _location2.hash === str12;
     }
     if (tmp24) {
-      const replaced = str7.replace(obj);
+      const replaced = _extends.replace(obj);
       c3 = source;
     } else if (null != guildScheduledEvent1) {
-      str7.push(obj);
+      _extends.push(obj);
     }
     _extends.push(CHANNELResult);
   }
@@ -170,31 +170,31 @@ export const getFingerprintLocation = function getFingerprintLocation(arg0) {
   }
   if (ACCOUNT_REVERT.startsWith(hasOwnProperty.LOGIN)) {
     ACCOUNT_REVERT = constants.LOGIN;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REGISTER)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REGISTER)) {
     ACCOUNT_REVERT = constants.REGISTER;
-  } else if (ACCOUNT_REVERT.startsWith(obj.INVITE(""))) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.INVITE(""))) {
     ACCOUNT_REVERT = constants.INVITE;
-  } else if (ACCOUNT_REVERT.startsWith(obj.VERIFY)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.VERIFY)) {
     ACCOUNT_REVERT = constants.VERIFY;
-  } else if (ACCOUNT_REVERT.startsWith(obj.DISABLE_EMAIL_NOTIFICATIONS)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.DISABLE_EMAIL_NOTIFICATIONS)) {
     ACCOUNT_REVERT = constants.DISABLE_EMAIL_NOTIFICATIONS;
-  } else if (ACCOUNT_REVERT.startsWith(obj.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) {
     ACCOUNT_REVERT = constants.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REJECT_IP)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REJECT_IP)) {
     ACCOUNT_REVERT = constants.REJECT_IP;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REJECT_MFA)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REJECT_MFA)) {
     ACCOUNT_REVERT = constants.REJECT_MFA;
-  } else if (ACCOUNT_REVERT.startsWith(obj.AUTHORIZE_IP)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.AUTHORIZE_IP)) {
     ACCOUNT_REVERT = constants.AUTHORIZE_IP;
-  } else if (ACCOUNT_REVERT.startsWith(obj.AUTHORIZE_PAYMENT)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.AUTHORIZE_PAYMENT)) {
     ACCOUNT_REVERT = constants.AUTHORIZE_PAYMENT;
-  } else if (ACCOUNT_REVERT.startsWith(obj.RESET)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.RESET)) {
     ACCOUNT_REVERT = constants.RESET;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REPORT)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REPORT)) {
     ACCOUNT_REVERT = constants.REPORT;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REPORT_SECOND_LOOK)) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.REPORT_SECOND_LOOK)) {
     ACCOUNT_REVERT = constants.REPORT_SECOND_LOOK;
-  } else if (ACCOUNT_REVERT.startsWith(obj.ACCOUNT_REVERT(""))) {
+  } else if (ACCOUNT_REVERT.startsWith(hasOwnProperty.ACCOUNT_REVERT(""))) {
     ACCOUNT_REVERT = constants.ACCOUNT_REVERT;
   }
   return ACCOUNT_REVERT;
@@ -208,6 +208,7 @@ export const back = function back() {
     c3 = null;
     _extends.goBack();
   }
+  hasSubscribersResult = ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };
 export const forward = function forward() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
@@ -215,4 +216,5 @@ export const forward = function forward() {
     c3 = null;
     _extends.goForward();
   }
+  hasSubscribersResult = ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };

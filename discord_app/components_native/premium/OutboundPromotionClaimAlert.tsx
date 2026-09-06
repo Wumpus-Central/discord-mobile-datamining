@@ -110,17 +110,17 @@ export default function OutboundPromotionClaimAlert(onCancel) {
           _undefined(true);
         }
     };
-    t = tmp16(Text(tmp5[13]).Button, obj11);
+    t = closure_9(Text(tmp5[13]).Button, obj11);
     obj10.children = t;
-    obj10 = tmp16(tmp15, obj10);
+    obj10 = closure_9(tmp15, obj10);
     items3[1] = obj10;
     obj6.children = items3;
     items2[1] = closure_10(closure_6, obj6);
     Text = Text(tmp5[11]).Text;
-    obj6 = tmp16(Text, { variant: "text-sm/medium", color: "text-muted", children: "This code is included in your confirmation email" });
+    obj6 = closure_9(Text, { variant: "text-sm/medium", color: "text-muted", children: "This code is included in your confirmation email" });
     items2[2] = obj6;
     obj3.children = items2;
-    obj3 = tmp14(tmp15, obj3);
+    obj3 = closure_10(tmp15, obj3);
     items1[3] = obj3;
     obj.children = items1;
     closure_10(closure_6, obj);
@@ -173,4 +173,5 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     obj16.children = tmp13;
     return closure_9(tmp4(tmp5[16]), obj16);
   }
+  const tmp9 = onClaim(code[7]);
 };

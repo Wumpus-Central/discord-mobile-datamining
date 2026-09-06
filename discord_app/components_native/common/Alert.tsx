@@ -49,9 +49,9 @@ class Alert extends PureComponent {
     applyArgumentsResult.focusTimeout = timeout1;
     applyArgumentsResult.handleConfirm = function handleConfirm() {
       if (!applyArgumentsResult.state.confirming) {
-        ({ onClose, onConfirm, autoCloseOnConfirm } = obj.props);
-        obj.setState({ confirming: true });
-        const timeout = obj.timeout;
+        ({ onClose, onConfirm, autoCloseOnConfirm } = applyArgumentsResult.props);
+        applyArgumentsResult.setState({ confirming: true });
+        const timeout = applyArgumentsResult.timeout;
         timeout.start(500, () => {
           state.setState({ confirming: false });
         });
@@ -135,7 +135,7 @@ prototype["renderHeader"] = function renderHeader() {
       obj = { style: tmp.divider };
       items[1] = React5(hasOwnProperty, obj);
       obj.children = items;
-      tmp3Result = React6(tmp4, obj);
+      tmp3Result = React6(hasOwnProperty, obj);
     }
   }
   return tmp3Result;
@@ -156,7 +156,7 @@ prototype["renderBody"] = function renderBody() {
     }
     obj.children = renderContentResult;
     obj.children = React5(Text_Text.Text, obj);
-    tmp5Result = tmp5(timestampProducer, obj);
+    tmp5Result = React5(timestampProducer, obj);
   }
   const obj1 = { children: null };
   const items = [tmp5Result, props.children];
@@ -198,15 +198,15 @@ prototype["renderButtons"] = function renderButtons() {
       let str = "active";
       if (native.ButtonColors.GREEN !== confirmColor) {
         str = "destructive";
-        if (tmp21(1178).ButtonColors.RED !== confirmColor) {
+        if (native.ButtonColors.RED !== confirmColor) {
           str = "secondary";
-          if (tmp21(1178).ButtonColors.GREY !== confirmColor) {
+          if (native.ButtonColors.GREY !== confirmColor) {
             str = "secondary";
-            if (tmp21(1178).ButtonColors.LIGHTGREY !== confirmColor) {
+            if (native.ButtonColors.LIGHTGREY !== confirmColor) {
               str = "secondary";
-              if (tmp21(1178).ButtonColors.TRANSPARENT !== confirmColor) {
+              if (native.ButtonColors.TRANSPARENT !== confirmColor) {
                 str = "primary";
-                if (tmp21(1178).ButtonColors.WHITE === confirmColor) {
+                if (native.ButtonColors.WHITE === confirmColor) {
                   str = "primary-overlay";
                 }
               }
@@ -302,13 +302,13 @@ export default memoResult;
 export const getAlertButtonVariant = function getAlertButtonVariant(confirmColor) {
   if (native.ButtonColors.GREEN === confirmColor) {
     return "active";
-  } else if (tmp(1178).ButtonColors.RED === confirmColor) {
+  } else if (native.ButtonColors.RED === confirmColor) {
     return "destructive";
   } else {
-    if (tmp(1178).ButtonColors.GREY !== confirmColor) {
-      if (tmp(1178).ButtonColors.LIGHTGREY !== confirmColor) {
-        if (tmp(1178).ButtonColors.TRANSPARENT !== confirmColor) {
-          if (tmp(1178).ButtonColors.WHITE === confirmColor) {
+    if (native.ButtonColors.GREY !== confirmColor) {
+      if (native.ButtonColors.LIGHTGREY !== confirmColor) {
+        if (native.ButtonColors.TRANSPARENT !== confirmColor) {
+          if (native.ButtonColors.WHITE === confirmColor) {
             return "primary-overlay";
           } else {
             return "primary";

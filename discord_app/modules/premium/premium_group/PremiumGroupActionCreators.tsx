@@ -8,7 +8,7 @@ import UserRecord from "UserRecord" /* 1385 */;
 import SubscriptionGroupMemberRecord from "SubscriptionGroupMemberRecord" /* 13491 */;
 
 require = fn;
-let closure_7 = async function _fetchPremiumGroupMembership(arg0, value) {
+let closure_7 = async function _fetchPremiumGroupMembership() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -88,9 +88,8 @@ let closure_7 = async function _fetchPremiumGroupMembership(arg0, value) {
     }
   }
 };
-let closure_8 = async function _fetchEligibleUsers(arg0, index, arg2, arg3) {
+let closure_8 = async function _fetchEligibleUsers(arg0) {
   closure_0 = arg0;
-  closure_2 = arg2;
   closure_3 = arg3;
   c8 = 0;
   c9 = 0;
@@ -124,7 +123,7 @@ let closure_8 = async function _fetchEligibleUsers(arg0, index, arg2, arg3) {
     return obj;
   })();
 };
-let closure_9 = async function _inviteUsersToSubscriptionGroup(arg0, user_ids) {
+let closure_9 = async function _inviteUsersToSubscriptionGroup(arg0) {
   closure_0 = arg0;
   c6 = 0;
   c7 = 0;
@@ -205,7 +204,7 @@ let closure_9 = async function _inviteUsersToSubscriptionGroup(arg0, user_ids) {
     }
   })();
 };
-let closure_10 = async function _removeUserFromSubscriptionGroup(arg0, value) {
+let closure_10 = async function _removeUserFromSubscriptionGroup(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -280,7 +279,7 @@ let closure_10 = async function _removeUserFromSubscriptionGroup(arg0, value) {
     }
   }
 };
-let closure_11 = async function _fetchSubscriptionGroupMembers(arg0, value) {
+let closure_11 = async function _fetchSubscriptionGroupMembers(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -362,7 +361,7 @@ let closure_11 = async function _fetchSubscriptionGroupMembers(arg0, value) {
     }
   }
 };
-let closure_12 = async function _acceptSubscriptionGroupInvite(arg0, arg1, subscriptionGroupMemberId) {
+let closure_12 = async function _acceptSubscriptionGroupInvite(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   c7 = 0;
@@ -446,7 +445,7 @@ let closure_12 = async function _acceptSubscriptionGroupInvite(arg0, arg1, subsc
     }
   })();
 };
-let closure_13 = async function _removeSubscriptionGroupInvite(arg0, arg1, subscriptionGroupMemberId) {
+let closure_13 = async function _removeSubscriptionGroupInvite(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   c7 = 0;
@@ -550,21 +549,21 @@ let closure_14 = async function _fetchPremiumGroupInvites() {
     c5 = 3;
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    const body = arg1.body;
+    const body = value.body;
     obj3 = { type: "PREMIUM_GROUP_INVITES_FETCH_SUCCESS", invites: body };
     closure_129_1(closure_129_2[4]).dispatch(obj3);
     c3 = 0;
     closure_129_1(closure_129_2[4]);
   }
-  return arg1;
+  return value;
 };
-let closure_15 = async function _fetchPremiumGroupInvite(subscriptionGroupMemberId) {
+let closure_15 = async function _fetchPremiumGroupInvite() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_3 = tmp3;
     closure_130_0 = subscriptionGroupMemberId;
     DispatcherDefault.dispatch({ type: "PREMIUM_GROUP_INVITE_FETCH_START", subscriptionGroupMemberId });

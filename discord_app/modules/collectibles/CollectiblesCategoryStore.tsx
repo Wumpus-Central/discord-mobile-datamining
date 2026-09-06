@@ -227,7 +227,6 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
             return items;
           }));
           const _Date = Date;
-          const date = new Date();
           const item = closure_14.forEach((unpublishedAt, index) => {
             const hasItem = map.has(index);
             let tmp2 = !hasItem;
@@ -243,6 +242,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
             }
           });
           updateCategoriesAndProducts(map);
+          const date = new Date();
         }
       }
       obj = _mod12;
@@ -281,16 +281,15 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
             }));
             bundledProducts = product.bundledProducts;
             for (const item10012 of bundledProducts) {
-              let tmp3 = item10012;
               value = map.get(item10012.skuId);
               let tmp6 = null != value;
               let tmp5 = value;
               if (tmp6) {
                 let _Object = Object;
-                tmp6 = 0 === Object.keys(tmp3.prices).length;
+                tmp6 = 0 === Object.keys(item10012.prices).length;
               }
               if (tmp6) {
-                tmp3.prices = tmp5;
+                item10012.prices = tmp5;
               }
               continue;
             }

@@ -27,32 +27,32 @@ class AppAnalyticsManager extends tmp3 {
     applyArgumentsResult._handleRTCConnectionStoreChanged = function _handleRTCConnectionStoreChanged() {
       const channelId = RTCConnectionStore.getChannelId();
       if (applyArgumentsResult._voiceChannelId !== channelId) {
-        obj._voiceChannelId = channelId;
+        applyArgumentsResult._voiceChannelId = channelId;
         if (null != channelId) {
-          if (null == obj._reportInterval) {
+          if (null == applyArgumentsResult._reportInterval) {
             const interval = new Timers.Interval();
-            obj._reportInterval = interval;
-            const _reportInterval = obj._reportInterval;
+            applyArgumentsResult._reportInterval = interval;
+            const _reportInterval = applyArgumentsResult._reportInterval;
             _reportInterval.start(MINUTE, () => {
               closure_1_0._trackStartSpeaking();
               closure_1_0._trackStartListening();
             });
           }
         } else {
-          obj._reset();
+          applyArgumentsResult._reset();
         }
       }
     };
     applyArgumentsResult._handleSpeakingStoreChanged = function _handleSpeakingStoreChanged() {
       const result = SpeakingStore.isCurrentUserSpeaking();
       if (applyArgumentsResult._currentUserSpeaking !== result) {
-        obj2._currentUserSpeaking = result;
-        obj2._trackStartSpeaking();
+        applyArgumentsResult._currentUserSpeaking = result;
+        applyArgumentsResult._trackStartSpeaking();
       }
       const isAnyoneElseSpeakingResult = SpeakingStore.isAnyoneElseSpeaking();
       if (applyArgumentsResult._anyoneElseSpeaking !== isAnyoneElseSpeakingResult) {
-        obj2._anyoneElseSpeaking = isAnyoneElseSpeakingResult;
-        obj2._trackStartListening();
+        applyArgumentsResult._anyoneElseSpeaking = isAnyoneElseSpeakingResult;
+        applyArgumentsResult._trackStartListening();
       }
     };
     return applyArgumentsResult;

@@ -31,13 +31,13 @@ obj.onApply = function onApply() {
   const obj = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
   if (goreContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.goreContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
+    obj.goreContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (goreContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.goreContentFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
+    obj.goreContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (goreContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.goreContentNonFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
+    obj.goreContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   return obj.updateGoreContentSetting(obj);
 };

@@ -4,6 +4,7 @@
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import useChatLayout from "useChatLayout" /* 4420 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9568 */;
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16005 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -50,11 +51,11 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
     if (arg0 !== arg1) {
       value = highestFullyRenderedScreenIndex.get();
       if (arg0) {
-        if (value >= tmp2) {
-          const result = obj.set(tmp2 - 1);
+        if (value >= index) {
+          const result = highestFullyRenderedScreenIndex.set(index - 1);
         }
-      } else if (value < tmp2) {
-        const result1 = obj.set(tmp2);
+      } else if (value < index) {
+        const result1 = highestFullyRenderedScreenIndex.set(index);
       }
     }
   };
@@ -92,7 +93,6 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
   const items1 = [mainTabsChannelScreenStyles, , ];
   let tmp13 = null;
   const obj5 = index(translateX[15]);
-  const tmp11 = closure_16;
   if (null != containerWidth) {
     obj = { width: containerWidth };
     tmp13 = obj;
@@ -120,7 +120,7 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
   obj1.children = closure_15(closure_7, obj2);
   const items2 = [closure_15(tmp5(translateX[18]).Freeze, obj1), focusChatPressableComponent];
   obj.children = items2;
-  return tmp11(highestFullyRenderedScreenIndex(translateX[17]), obj);
+  return closure_16(highestFullyRenderedScreenIndex(translateX[17]), obj);
 });
 const __initData4 = { code: "function MainTabsChannelScreenStackTsx4(){const{translateX}=this.__closure;return translateX.get()===0;}" };
 const __initData5 = { code: "function MainTabsChannelScreenStackTsx5(isFullyOpen,prev){const{index,mainTabsDisallowGesture}=this.__closure;if(isFullyOpen===prev)return;if(index!==1)return;mainTabsDisallowGesture.set(isFullyOpen);}" };
@@ -171,11 +171,11 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
     if (arg0 !== arg1) {
       value = highestFullyRenderedScreenIndex.get();
       if (arg0) {
-        if (value >= tmp2) {
-          const result = obj.set(tmp2 - 1);
+        if (value >= index) {
+          const result = highestFullyRenderedScreenIndex.set(index - 1);
         }
-      } else if (value < tmp2) {
-        const result1 = obj.set(tmp2);
+      } else if (value < index) {
+        const result1 = highestFullyRenderedScreenIndex.set(index);
       }
     }
   };
@@ -263,7 +263,7 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
   }
   obj3 = { style: items2, accessibilityElementsHidden: !isActive, importantForAccessibility: "no-hide-descendants", children: null };
   items2[1] = prop;
-  obj4 = { freeze, children: tmp17(tmp(tmp2[19]), { guildId, channelId, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index }) };
+  obj4 = { freeze, children: closure_15(tmp(tmp2[19]), { guildId, channelId, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index }) };
   obj3.children = closure_15(tmp5(translateX[18]).Freeze, obj4);
   obj2.children = closure_15(highestFullyRenderedScreenIndex(translateX[17]), obj3);
   obj1.children = closure_15(index(translateX[23]).MainTabsChannelScreenStackContext.Provider, obj2);
@@ -448,30 +448,29 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
   const effect3 = obj.useEffect(() => {
     let type;
     if (first != null) {
-      type = tmp.type;
+      type = first.type;
     }
     let tmp3 = null != type;
     if (tmp3) {
-      tmp3 = ref2.current !== tmp.type;
+      tmp3 = ref2.current !== first.type;
     }
     if (tmp3) {
-      ref2.current = tmp.type;
-      if (tmp.channelId === ref.current) {
-        let isChatLockedOpen = tmp.type !== useChannelScreensFromNavigation.ChannelScreenType.DEFAULT;
+      ref2.current = first.type;
+      if (first.channelId === ref.current) {
+        let isChatLockedOpen = first.type !== useChannelScreensFromNavigation.ChannelScreenType.DEFAULT;
         if (!isChatLockedOpen) {
-          isChatLockedOpen = tmp7(4420).getChatLayout().isChatLockedOpen;
-          const tmp7Result = tmp7(4420);
+          isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
+          const tmp7Result = useChatLayout;
         }
         if (!isChatLockedOpen) {
           let obj = { type: "TRY_ACK", location: null, channelId: null };
           obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SELECT_SAME_CHANNEL_DISPATCH, objectType: constants.ACK_AUTOMATIC };
           obj.location = obj;
-          obj.channelId = tmp.channelId;
+          obj.channelId = first.channelId;
           DispatcherDefault.dispatch(obj);
         }
-        tmp7 = require;
       } else {
-        tmp6.current = tmp.channelId;
+        tmp6.current = first.channelId;
       }
     }
   }, items5);
@@ -485,7 +484,7 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
     obj2.children = closure_15(tmp5(tmp[16]).TransitionGroup, obj3);
     obj1.children = closure_15(tmp5(tmp[16]).ThemeContextProvider, obj2);
     obj.children = closure_15(firstScreenWidth, obj1);
-    let tmp23Result = tmp23(tmp5(tmp[18]).Freeze, obj);
+    let tmp23Result = closure_15(tmp5(tmp[18]).Freeze, obj);
     const tmp26 = !screenStackActive;
   } else {
     let showCreateThread;

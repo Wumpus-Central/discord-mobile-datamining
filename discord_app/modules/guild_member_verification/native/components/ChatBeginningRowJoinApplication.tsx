@@ -3,6 +3,7 @@
 // Module 12631 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 576 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -60,7 +61,7 @@ export default function ChatBeginningRowJoinRequest(channelId) {
         obj2 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: joinRequestGuild.name };
         items2[1] = closure_7(tmp5(tmp3[12]).Text, obj2);
         obj.children = items2;
-        tmp10Result = tmp10(tmp12, obj);
+        tmp10Result = closure_8(View, obj);
         const tmp2Result = joinRequest(tmp3[11]);
       }
       const items3 = [tmp10Result, , ];
@@ -84,9 +85,9 @@ export default function ChatBeginningRowJoinRequest(channelId) {
           obj = { style: closure_0.divider };
           const items = [React5(View, obj), , ];
           obj = { style: closure_0.formQuestion, variant: "text-xs/semibold", color: "text-muted", children: field_type.label };
-          items[1] = React5(tmp(4556).Text, obj);
+          items[1] = React5(Text_Text.Text, obj);
           const obj1 = { variant: "text-md/medium", color: "text-strong", children: response };
-          items[2] = React5(tmp(4556).Text, obj1);
+          items[2] = React5(Text_Text.Text, obj1);
           obj.children = items;
           const _HermesInternal = HermesInternal;
           return React6(View, obj, "form-response-" + index);
@@ -109,12 +110,12 @@ export default function ChatBeginningRowJoinRequest(channelId) {
         obj7.text = intl3.string(tmp5(tmp3[13]).t.hDtbsz);
         items5[1] = closure_7(tmp5(tmp3[16]).Button, obj7);
         obj5.children = items5;
-        stateFromStores1 = tmp10(tmp5(tmp3[15]).ButtonGroup, obj5);
+        stateFromStores1 = closure_8(tmp5(tmp3[15]).ButtonGroup, obj5);
       }
       const obj8 = { children: null };
       items4[1] = stateFromStores1;
       obj8.children = items4;
-      tmp10Result = tmp10(closure_9, obj8);
+      tmp10Result = closure_8(closure_9, obj8);
     }
   }
   return tmp10Result;

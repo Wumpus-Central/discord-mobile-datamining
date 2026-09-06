@@ -160,9 +160,9 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       const item = skuIds.forEach((item) => {
         if (null == acc[item]) {
           const items = [closure_1];
-          tmp[item] = items;
+          acc[item] = items;
         } else {
-          let arr = tmp[item];
+          let arr = acc[item];
           arr = arr.push(closure_1);
         }
       });

@@ -28,20 +28,22 @@ function handleOneRecipientInDM() {
   }
   return applyArgumentsResult;
 }
-let closure_21 = async function _handleOneRecipientInDM(arg0, onBeforeTransition) {
+let closure_21 = async function _handleOneRecipientInDM(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
   return (async (arg0, value) => {
     closure_2 = tmp2;
     closure_130_0 = closure_0;
-    closure_130_1 = await ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: [], location: "New Group DM", onBeforeTransition });
+    await ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: [], location: "New Group DM", onBeforeTransition });
+    closure_130_1 = value;
     ChannelActionCreatorsDefault;
-    closure_130_1 = await closure_131_1(closure_131_2[13]).addRecipients(closure_130_1, closure_130_0, undefined);
+    await closure_131_1(closure_131_2[13]).addRecipients(closure_130_1, closure_130_0, undefined);
+    closure_130_1 = value;
     return value;
   })();
 };
-let closure_22 = async function _handleInviteUsers(arg0, value) {
+let closure_22 = async function _handleInviteUsers(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -114,7 +116,7 @@ let closure_22 = async function _handleInviteUsers(arg0, value) {
               if (closure_132_10.getChannelId() === closure_131_0.id) {
                 if (closure_131_0.isDM()) {
                   let obj10 = closure_132_0(closure_132_2[14]);
-                  obj10.showGuardCallAlert(closure_132_4(async (arg0, value) => {
+                  obj10.showGuardCallAlert(closure_132_4(async () => {
                     if (dependencyMap === 2) {
                       dependencyMap = 3;
                       throw new TypeError("Generator functions may not be called on executing generators");
@@ -143,13 +145,13 @@ let closure_22 = async function _handleInviteUsers(arg0, value) {
                             if (1 === length.length) {
                               v3 = 2;
                               dependencyMap = 1;
-                              const obj1 = { value: closure_1_20(tmp32, closure_2_2), done: false };
+                              const obj1 = { value: closure_1_20(length, closure_2_2), done: false };
                               return obj1;
                             } else {
                               let obj5 = v3(4573);
                               v3 = 1;
                               dependencyMap = 1;
-                              let obj2 = { value: obj5.addRecipients(id.id, tmp32, undefined, closure_2_2), done: false };
+                              let obj2 = { value: obj5.addRecipients(id.id, length, undefined, closure_2_2), done: false };
                               return obj2;
                             }
                           }
@@ -368,8 +370,8 @@ export default function NewGroupDMScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   let enabled = config.enabled;
   if (enabled) {
-    enabled = tmp2(tmp3[21]).isGroupDMNitroUpsellAudience(tmp28);
-    const tmp2Result = tmp2(tmp3[21]);
+    enabled = tmp2(locationPage[21]).isGroupDMNitroUpsellAudience(tmp28);
+    const tmp2Result = tmp2(locationPage[21]);
   }
   const items4 = [locationPage];
   const effect = obj3.useEffect(() => {
@@ -379,7 +381,7 @@ export default function NewGroupDMScreen(navigation) {
     obj.track(constants.OPEN_POPOUT, obj);
   }, items4);
   const items5 = [stateFromStores, navigation, memo, selectedUserIds, first2];
-  callback1 = obj3.useCallback(stateFromStores(function*(arg0, value) {
+  callback1 = obj3.useCallback(stateFromStores(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -521,7 +523,7 @@ export default function NewGroupDMScreen(navigation) {
       formatToPlainStringResult = intl3.formatToPlainString(options(locationPage[24]).t.YUhnoy, obj);
     }
     closure_1 = formatToPlainStringResult;
-    closure_2 = tmp6 ? closure_21 : disabled;
+    closure_2 = c20 ? closure_21 : disabled;
     options.setOptions({
       title: "" + stringResult + " (" + formatToPlainStringResult + ")",
       headerTitle: c20 ? (() => closure_3_17(GroupDMRecipientLimitTitleDefault, { title: stringResult, memberCount, recipientLimit })) : ((arg0) => {
@@ -559,7 +561,7 @@ export default function NewGroupDMScreen(navigation) {
             obj = {};
             const renderHeaderTextButton = getRenderHeaderTextButton(string(t.OYkgVk), asyncGeneratorStep(async () => {
               await closure_1_23();
-              return arg1;
+              return value;
             }));
             const merged = Object.assign(arg0);
             let tmp25 = disabled;
@@ -580,7 +582,7 @@ export default function NewGroupDMScreen(navigation) {
             const obj1 = {};
             const renderHeaderTextButton1 = getRenderHeaderTextButton(string(t.CumH4u), asyncGeneratorStep(async () => {
               await closure_1_23();
-              return arg1;
+              return value;
             }));
             const merged1 = Object.assign(arg0);
             obj1.disabled = disabled;
@@ -591,6 +593,75 @@ export default function NewGroupDMScreen(navigation) {
         return result;
       }
     });
+    let obj1 = {
+      title: "" + stringResult + " (" + formatToPlainStringResult + ")",
+      headerTitle: c20 ? (() => closure_3_17(GroupDMRecipientLimitTitleDefault, { title: stringResult, memberCount, recipientLimit })) : ((arg0) => {
+        if (arg0 == null) {
+          throw new TypeError("Cannot destructure 'undefined' or 'null'.");
+        } else {
+          const merged = Object.assign(arg0, undefined);
+          const obj = {};
+          const merged1 = Object.assign(merged);
+          obj.title = stringResult;
+          obj.subtitle = formatToPlainStringResult;
+          let str = "mobile-text-heading-primary";
+          if (closure_2) {
+            str = "text-feedback-critical";
+          }
+          obj.color = str;
+          return closure_3_17(HeaderShared.GenericHeaderTitle, obj);
+        }
+      }),
+      headerRight(arg0) {
+        if (first1) {
+          let obj = { color: button.button.color, size: "small" };
+          let result = closure_3_17(timestampProducer, obj);
+        } else {
+          obj = stateFromStores;
+          let isGroupDMResult;
+          if (stateFromStores != null) {
+            isGroupDMResult = obj.isGroupDM();
+          }
+          const getRenderHeaderTextButton = HeaderShared.getRenderHeaderTextButton;
+          const intl = util.intl;
+          const string = intl.string;
+          const t = util.t;
+          if (isGroupDMResult) {
+            obj = {};
+            const renderHeaderTextButton = getRenderHeaderTextButton(string(t.OYkgVk), asyncGeneratorStep(async () => {
+              await closure_1_23();
+              return value;
+            }));
+            const merged = Object.assign(arg0);
+            let tmp25 = disabled;
+            if (!disabled) {
+              let isGroupDMResult1;
+              if (obj != null) {
+                isGroupDMResult1 = obj.isGroupDM();
+              }
+              if (isGroupDMResult1) {
+                isGroupDMResult1 = first.length <= 0;
+              }
+              tmp25 = isGroupDMResult1;
+            }
+            obj.disabled = tmp25;
+            result = renderHeaderTextButton(obj);
+            stringResult = string(t.OYkgVk);
+          } else {
+            const obj1 = {};
+            const renderHeaderTextButton1 = getRenderHeaderTextButton(string(t.CumH4u), asyncGeneratorStep(async () => {
+              await closure_1_23();
+              return value;
+            }));
+            const merged1 = Object.assign(arg0);
+            obj1.disabled = disabled;
+            result = renderHeaderTextButton1(obj1);
+            const stringResult1 = string(t.CumH4u);
+          }
+        }
+        return result;
+      }
+    };
   }, items6);
   const items7 = [memo, tmp22, result, enabled, callback];
   const callback2 = obj3.useCallback((id) => {
@@ -669,7 +740,7 @@ export default function NewGroupDMScreen(navigation) {
   if (isGroupDMResult) {
     obj = { style: tmp.instantInviteView, children: null };
     let obj1 = { onItemPressed: null };
-    _require = tmp30(function*(arg0, value) {
+    _require = tmp30(function*(arg0) {
       if (channel === 2) {
         channel = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -744,18 +815,18 @@ export default function NewGroupDMScreen(navigation) {
       }
       return applyArgumentsResult;
     };
-    obj.children = c17(tmp13(tmp3[30]), obj1);
+    obj.children = c17(require("InstantInviteShareApps"), obj1);
     isGroupDMResult = c17(tmp41, obj);
-    const tmp13Result = tmp13(tmp3[30]);
+    const tmp13Result = require("InstantInviteShareApps");
   }
   const items11 = [isGroupDMResult, , , ];
   let tmp45 = null;
   if (flag) {
     obj2 = { style: tmp.nameInputContainer, children: null };
     obj3 = { style: tmp.nameInput, value: first2, onChangeText: tmp11[1], placeholder: null };
-    let intl = tmp2(tmp3[24]).intl;
-    obj3.placeholder = intl.string(tmp2(tmp3[24]).t.KSVhrX);
-    obj2.children = c17(tmp2(tmp3[33]).TextInput, obj3);
+    let intl = tmp2(locationPage[24]).intl;
+    obj3.placeholder = intl.string(tmp2(locationPage[24]).t.KSVhrX);
+    obj2.children = c17(tmp2(locationPage[33]).TextInput, obj3);
     tmp45 = c17(tmp41, obj2);
   }
   items11[1] = tmp45;

@@ -6,6 +6,7 @@ import router_utils from "router_utils" /* 1100 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 5075 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import BaseChannelItem from "BaseChannelItem" /* 12379 */;
 import _modDef16117 from "module_16117" /* 16117 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -58,9 +59,8 @@ function ChannelIcon(arg0) {
       const channelIconSource = obj.getChannelIconSource(obj);
       if (null != channelIconSource) {
         const obj1 = { style: tmp.groupDmAvatar, source: channelIconSource };
-        return map1(tmp5(5587), obj1);
+        return map1(FastImageDefault, obj1);
       }
-      tmp5 = importDefault;
     }
     if (tmp2) {
       let tmp12 = _modDef16117;
@@ -153,7 +153,7 @@ export default noop.memo((channel) => {
     let tmp10 = null;
     if (isSubscriptionGated) {
       obj = { locked: needSubscriptionToAccess };
-      tmp10 = closure_13(tmp3(tmp4[22]), obj);
+      tmp10 = closure_13(require("GuildRoleSubscriptionGatedChannelIcon"), obj);
     }
     items[1] = tmp10;
     obj.children = items;

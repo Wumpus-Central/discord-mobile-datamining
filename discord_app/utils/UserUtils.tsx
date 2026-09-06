@@ -177,29 +177,29 @@ function humanizeStatus(DND, arg1) {
       stringResult = string(t.WbGtnH);
     }
     return stringResult;
-  } else if (tmp3.OFFLINE === DND) {
+  } else if (constants.OFFLINE === DND) {
     const intl5 = util.intl;
     return intl5.string(util.t.Vv0abJ);
-  } else if (tmp3.IDLE === DND) {
+  } else if (constants.IDLE === DND) {
     const intl4 = util.intl;
     return intl4.string(util.t.qWbtVU);
-  } else if (tmp3.DND === DND) {
+  } else if (constants.DND === DND) {
     const intl3 = util.intl;
     return intl3.string(util.t.jaNpQH);
-  } else if (tmp3.INVISIBLE === DND) {
+  } else if (constants.INVISIBLE === DND) {
     const intl2 = util.intl;
     return intl2.string(util.t.bg24HO);
-  } else if (tmp3.STREAMING === DND) {
+  } else if (constants.STREAMING === DND) {
     const intl = util.intl;
     return intl.string(util.t.XKYej5);
   } else {
-    const UNKNOWN = tmp3.UNKNOWN;
+    const UNKNOWN = constants.UNKNOWN;
     return null;
   }
   tmp = undefined !== isMobile && isMobile;
   tmp2 = undefined !== isVR && isVR;
 }
-function presentUserTag(username, identifiable, arg2) {
+function presentUserTag(username, identifiable, hidePersonalInformation) {
   if (null == username) {
     const intl = util.intl;
     return intl.string(util.t.sKdZ6U);
@@ -212,7 +212,7 @@ function presentUserTag(username, identifiable, arg2) {
     if (tmp) {
       let flag = false;
       if ("always" !== identifiable.identifiable) {
-        flag = arg2;
+        flag = hidePersonalInformation;
         if ("never" === identifiable.identifiable) {
           flag = true;
         }
@@ -269,10 +269,10 @@ function useDirectMessageRecipient(arg0) {
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       let user = null;
-      if (obj.isPrivate()) {
+      if (closure_0.isPrivate()) {
         user = null;
-        if (obj.isDM()) {
-          user = UserStore.getUser(obj.getRecipientId());
+        if (closure_0.isDM()) {
+          user = UserStore.getUser(closure_0.getRecipientId());
         }
       }
       return user;

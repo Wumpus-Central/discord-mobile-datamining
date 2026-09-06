@@ -361,6 +361,7 @@ obj = {
       obj.error = error;
     }
     dependencyMap3[channelId] = obj;
+    const sortByResult = obj.sortBy(mapped, (startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId));
   },
   REQUEST_CHANNEL_SUMMARIES(requestedAt) {
     obj = dependencyMap3[requestedAt.channelId];
@@ -406,9 +407,8 @@ obj = {
     if (null != tmp3) {
       if (obj.channelId === channelId.channelId) {
         if (null != obj.summaryId) {
-          findIndexResult = undefined;
           if (dependencyMap2[obj.channelId] != null) {
-            findIndexResult = obj2.findIndex((id) => {
+            obj2.findIndex((id) => {
               summaryId = undefined;
               if (summaryId != null) {
                 summaryId = summaryId.summaryId;
@@ -437,13 +437,11 @@ obj = {
                 return id.id === summaryId;
               });
             }
-            let findIndexResult1 = findIndexResult;
           }
         }
       }
-      findIndexResult1 = undefined;
       if (dependencyMap2[channelId] != null) {
-        findIndexResult1 = obj.findIndex((endId) => {
+        obj.findIndex((endId) => {
           ({ topVisibleMessage, bottomVisibleMessage } = closure_0);
           let tmp = null == topVisibleMessage;
           if (!tmp) {
@@ -626,6 +624,7 @@ obj = {
     obj.fetching = flag;
     obj.lastReceivedAt = timestamp;
     dependencyMap3[channel_id] = obj;
+    const iter2 = combined.sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId)).takeRight(75).uniqBy("id").reverse();
   },
   CLEAR_CONVERSATION_SUMMARIES() {
     closure_18 = {};

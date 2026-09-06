@@ -10,7 +10,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/phone/native/PhoneOrEmailInput.tsx");
 
-export default noop.forwardRef((onChange, ref) => {
+export default noop.forwardRef((onChange, arg1) => {
   onChange = onChange.onChange;
   ({ alpha2, countryCode } = onChange);
   const onPressCountrySelector = onChange.onPressCountrySelector;
@@ -19,8 +19,8 @@ export default noop.forwardRef((onChange, ref) => {
   noop = undefined;
   let obj = noop;
   [tmp3, c4] = forceMode(noop.useState(""), 2);
-  ref = noop.useRef(null);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const ref = noop.useRef(null);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     blur() {
       const current = ref.current;
       let blurResult;

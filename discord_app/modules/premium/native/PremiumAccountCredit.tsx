@@ -1,8 +1,10 @@
 // === Module 13348: PremiumAccountCredit ===
 
 // Module 13348 (PremiumAccountCredit)
+import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import _modDef3063 from "module_3063" /* 3063 */;
 import PremiumUtils from "PremiumUtils" /* 4218 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import GameIcon from "GameIcon" /* 7172 */;
@@ -23,8 +25,8 @@ function AccountCreditTier(arg0) {
   let obj2 = PremiumUtilsDefault;
   const tierDisplayNameByPlanId = obj2.getTierDisplayNameByPlanId(planId);
   if (hasPremiumGroup) {
-    const intl3 = tmp2(1114).intl;
-    let stringResult = intl3.string(tmp4(3063)["5asczk"]);
+    const intl3 = util.intl;
+    let stringResult = intl3.string(_modDef3063["5asczk"]);
   } else {
     if (null != currentSubscription) {
       if (currentSubscription.planId === planId) {
@@ -33,22 +35,22 @@ function AccountCreditTier(arg0) {
             const _Date2 = Date;
             let date = new Date(currentSubscription.pauseEndsAt);
           }
-          let num = tmp2(4218).extendDateWithUnconsumedFractionalPremium(date, unconsumedFractionalPremiumUnits);
-          const intl2 = tmp2(1114).intl;
+          let num = PremiumUtils.extendDateWithUnconsumedFractionalPremium(date, unconsumedFractionalPremiumUnits);
+          const intl2 = util.intl;
           if (num == null) {
             num = 0;
           }
           obj = { date: num };
-          stringResult = intl2.formatToPlainString(tmp2(1114).t["5CNRRA"], obj);
-          const tmp2Result = tmp2(4218);
+          stringResult = intl2.formatToPlainString(util.t["5CNRRA"], obj);
+          const tmp2Result = PremiumUtils;
         }
         const _Date = Date;
         date = new Date(currentSubscription.currentPeriodEnd);
       }
     }
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { planName: tierDisplayNameByPlanId };
-    stringResult = intl.formatToPlainString(tmp2(1114).t.eNXZ5O, obj);
+    stringResult = intl.formatToPlainString(util.t.eNXZ5O, obj);
   }
   const items = [tmp.creditItem, ];
   let divider = null;
@@ -61,19 +63,19 @@ function AccountCreditTier(arg0) {
   const items1 = [timestampProducer(GameIconDefault, obj2), , ];
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.headerText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = util.intl;
   obj4.children = intl4.format(util.t.LzobT9, { planName: tierDisplayNameByPlanId });
   const items2 = [timestampProducer(Text_Text.Text, obj4), ];
   let tmp21Result = !tmp17;
   if (!(null != currentSubscription && currentSubscription.isPurchasedExternally)) {
     const obj5 = { style: tmp.subText, variant: "text-xs/medium", color: "text-default", children: stringResult };
-    tmp21Result = tmp21(tmp2(4556).Text, obj5);
+    tmp21Result = timestampProducer(Text_Text.Text, obj5);
   }
   items2[1] = tmp21Result;
   obj3.children = items2;
   items1[1] = React5(View, obj3);
   const obj6 = { style: tmp.timeText, variant: "text-md/medium", color: "text-default", children: null };
-  const intl5 = tmp2(1114).intl;
+  const intl5 = util.intl;
   obj6.children = intl5.format(util.t["ess/xl"], { count: months });
   items1[2] = timestampProducer(Text_Text.Text, obj6);
   obj1.children = items1;
@@ -110,8 +112,8 @@ export default function PremiumAccountCredit(currentSubscription) {
   if (null != entitlements) {
     if (obj8.hasAccountCredit(entitlements)) {
       const _Array = Array;
-      const tmp11Result = tmp11(12);
-      const found = tmp11(12)(Array.from(entitlements)).filter((subscriptionPlanId) => {
+      const tmp11Result = _modDef12;
+      const found = _modDef12(Array.from(entitlements)).filter((subscriptionPlanId) => {
         let tmp = null != subscriptionPlanId.subscriptionPlanId;
         if (tmp) {
           tmp = null != subscriptionPlanId.parentId;
@@ -121,7 +123,7 @@ export default function PremiumAccountCredit(currentSubscription) {
         }
         return tmp;
       });
-      const tmp11ResultResult = tmp11(12)(Array.from(entitlements));
+      const tmp11ResultResult = _modDef12(Array.from(entitlements));
       const valueResult = found.groupBy((subscriptionPlanId) => subscriptionPlanId.subscriptionPlanId).value();
       c3 = valueResult;
       obj = { style, children: null };
@@ -158,7 +160,6 @@ export default function PremiumAccountCredit(currentSubscription) {
       return closure_7(c3, obj);
     }
     obj8 = PremiumUtilsDefault;
-    tmp11 = importDefault;
   }
   return null;
 };

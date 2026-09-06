@@ -10,20 +10,20 @@ import size from "module_2" /* 2 */;
 function getScreenshakeLocationName(arg0) {
   if (constants.CHAT_INPUT === arg0) {
     return "chat_input";
-  } else if (tmp.MENTION === arg0) {
+  } else if (constants.MENTION === arg0) {
     return "mention";
-  } else if (tmp.VOICE_USER === arg0) {
+  } else if (constants.VOICE_USER === arg0) {
     return "voice_user";
   }
 }
 function getConfettiLocationName(arg0) {
   if (constants2.CHAT_INPUT === arg0) {
     return "chat_input";
-  } else if (tmp.MEMBER_USER === arg0) {
+  } else if (constants2.MEMBER_USER === arg0) {
     return "member_user";
-  } else if (tmp.REACTION === arg0) {
+  } else if (constants2.REACTION === arg0) {
     return "reaction";
-  } else if (tmp.CALL_TILE === arg0) {
+  } else if (constants2.CALL_TILE === arg0) {
     return "call_tile";
   }
 }

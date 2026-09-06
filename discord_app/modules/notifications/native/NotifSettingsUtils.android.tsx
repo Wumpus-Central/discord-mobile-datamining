@@ -13,7 +13,7 @@ function inferImportanceFromBehavior(visibility) {
       if ("hidden" === visibility.visibility) {
         let HIGH = constants.MIN;
       } else {
-        HIGH = visibility.sound ? tmp2.DEFAULT : tmp2.LOW;
+        HIGH = visibility.sound ? constants.DEFAULT : constants.LOW;
       }
     }
     return HIGH;
@@ -47,7 +47,7 @@ function formatSetting(item10022, importance) {
         if ("hidden" === behavior.visibility) {
           let HIGH = constants.MIN;
         } else {
-          HIGH = behavior.sound ? tmp.DEFAULT : tmp.LOW;
+          HIGH = behavior.sound ? constants.DEFAULT : constants.LOW;
         }
       }
     }

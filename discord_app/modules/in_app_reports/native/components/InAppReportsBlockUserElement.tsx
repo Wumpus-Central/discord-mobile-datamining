@@ -31,11 +31,11 @@ export default function BlockUserElement(user) {
   const memo = stateFromStores1.useMemo(() => {
     let guild_id;
     if (stateFromStores1 != null) {
-      guild_id = tmp.guild_id;
+      guild_id = stateFromStores1.guild_id;
     }
     let id;
     if (stateFromStores1 != null) {
-      id = tmp.id;
+      id = stateFromStores1.id;
     }
     return NicknameUtilsDefault.getName(guild_id, id, user);
   }, items4);

@@ -3,6 +3,7 @@
 // Module 11530 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1894 */;
+import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8129 */;
 import useAvatarColor from "useAvatarColor" /* 8132 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -14,7 +15,7 @@ function fetchColors(play) {
   closure_0 = play;
   return promiseDeduper1.one(play, () => useAvatarColor.maybeFetchColors(closure_0));
 }
-let closure_12 = async function _fetchApplicationParts(arg0, value) {
+let closure_12 = async function _fetchApplicationParts(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -101,7 +102,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
   let author_id = arg0;
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -131,7 +132,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
             let obj1 = {
               value: (function fetchUser(author_id) {
                         closure_0 = author_id;
-                        return closure_8.one(author_id, closure_4(function*(arg0, value) {
+                        return closure_8.one(author_id, closure_4(function*() {
                           if (v3 === 2) {
                             v3 = 3;
                             throw new TypeError("Generator functions may not be called on executing generators");
@@ -207,7 +208,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
   let extra = arg0;
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -232,11 +233,11 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
             obj = { value, done: true };
             return obj;
           } else if ("application_id" in extra.extra) {
-            if ("media_assets_large_image" in tmp16.extra) {
+            if ("media_assets_large_image" in extra.extra) {
               let obj1 = require("ApplicationAssetUtils");
               const items = [, ];
               ({ LARGE: arr[0], LARGE: arr[1] } = ImageSizes);
-              const assetImage = obj1.getAssetImage(tmp16.extra.application_id, tmp16.extra.media_assets_large_image, items);
+              const assetImage = obj1.getAssetImage(extra.extra.application_id, extra.extra.media_assets_large_image, items);
               if (null != assetImage) {
                 c2 = 1;
                 c1 = 1;
@@ -262,7 +263,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
     }
   })();
 };
-let closure_15 = async function _fetchListenedContentParts(arg0, value) {
+let closure_15 = async function _fetchListenedContentParts(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -311,7 +312,7 @@ let closure_15 = async function _fetchListenedContentParts(arg0, value) {
     }
   }
 };
-let closure_16 = async function _fetchTopArtistContentParts(arg0, value) {
+let closure_16 = async function _fetchTopArtistContentParts(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -366,7 +367,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
   c10 = 0;
   c11 = 0;
   c8 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c11 === 2) {
       c11 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -394,7 +395,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
             closure_7 = tmp5;
             closure_135_2 = undefined;
             closure_135_0 = [];
-            closure_135_1 = async function _loop(arg0, value) {
+            closure_135_1 = async function _loop() {
               if (v3 === 2) {
                 v3 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -421,7 +422,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                     if (components.type === v3(closure_1_2[11]).ComponentType.CONTENT_INVENTORY_ENTRY) {
                       closure_1 = function _fetchEntryParts() {
                         const self = this;
-                        const tmp = closure_2_4(function*(arg0, value) {
+                        const tmp = closure_2_4(function*() {
                           if (c0 === 2) {
                             c0 = 3;
                             throw new TypeError("Generator functions may not be called on executing generators");
@@ -671,9 +672,8 @@ function isMessageRenderable(message) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    let tmp3 = require;
     if (nextResult.type === Server.ComponentType.CONTENT_INVENTORY_ENTRY) {
-      let tmp3Result = tmp3(8129);
+      let tmp3Result = transformContentInventoryEntryMessageComponent;
       let obj = { component: null, message: null };
       obj = { contentInventoryEntry: null };
       obj.contentInventoryEntry = tmp2.contentInventoryEntry;
@@ -711,7 +711,7 @@ export default function useLoadMessageContentEntries(arg0) {
   closure_6 = tmp7[1];
   let obj = require("useAvatarColor");
   const colorStore = obj.useColorStore((palette) => palette.palette);
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0, arg1) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -741,16 +741,16 @@ export default function useLoadMessageContentEntries(arg0) {
             closure_130_1 = closure_1;
             if (0 !== closure_1.components.length) {
               const current7 = closure_1.current;
-              if (!current7.has(tmp49)) {
+              if (!current7.has(closure_0)) {
                 const current5 = closure_1.current;
-                const result = current5.set(tmp49, "loading");
+                const result = current5.set(closure_0, "loading");
                 tmp42((arg0) => {
                   const items = [];
                   items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_0;
                   return new Set(items);
                 });
                 const current6 = tmp5.current;
-                const result1 = current6.set(tmp49, tmp50);
+                const result1 = current6.set(closure_0, closure_1);
                 c5 = 1;
                 v2 = 2;
                 c7 = 1;
@@ -764,7 +764,7 @@ export default function useLoadMessageContentEntries(arg0) {
                                   applyArgumentsResult = apply(self, arguments);
                                 }
                                 return applyArgumentsResult;
-                              })(tmp50),
+                              })(closure_1),
                   done: false
                 };
                 return obj1;

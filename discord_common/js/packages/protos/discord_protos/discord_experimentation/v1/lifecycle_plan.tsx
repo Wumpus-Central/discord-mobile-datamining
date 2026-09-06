@@ -128,7 +128,7 @@ let items = [
     }
   }
 ];
-let tmp8 = new "CANCELED"("discord_protos.discord_experimentation.v1.LifecyclePlan", items, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2);
+const tmp8 = new "CANCELED"("discord_protos.discord_experimentation.v1.LifecyclePlan", items, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2);
 const MessageType2 = fn(1188).MessageType;
 class MeasurementPlan$Type extends MessageType2 {
   constructor() {
@@ -555,7 +555,7 @@ const obj5 = {
   }
 };
 items3[4] = obj5;
-let tmp11 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.RampStep", items3, tmp6, RolloutPlan$Type, "create", RampStep$Type, "internalBinaryRead", items3, new.target, undefined, tmp, fn, dependencyMap, obj, obj, new.target, tmp8, tmp3, measurementPlanType, exports, obj5);
+const tmp11 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.RampStep", items3, tmp6, RolloutPlan$Type, "create", RampStep$Type, "internalBinaryRead", items3, new.target, undefined, tmp, fn, dependencyMap, obj, obj, new.target, tmp8, tmp3, measurementPlanType, exports, obj5);
 let closure_7 = tmp11;
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/lifecycle_plan.tsx");

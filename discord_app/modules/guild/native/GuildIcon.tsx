@@ -152,15 +152,15 @@ export default noop.memo(function GuildIconInner(guild) {
     if (null != obj) {
       if (null != obj.icon) {
         if (obj instanceof textStyle) {
-          let iconSource = obj.getIconSource(dependencyMap[tmp], tmp2);
+          let iconSource = obj.getIconSource(dependencyMap[size], flag);
         } else {
-          iconSource = preloadAnimation(obj, dependencyMap[tmp], tmp2);
+          iconSource = preloadAnimation(obj, dependencyMap[size], flag);
         }
       }
     }
     let tmp4 = null;
     if (null != icon) {
-      obj = { uri: tmp3 };
+      obj = { uri: icon };
       tmp4 = obj;
     }
     obj = tmp4;

@@ -4,12 +4,12 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Pressables from "Pressables" /* 5123 */;
+import FormInputDefault from "FormInput" /* 8601 */;
 import ReactionIcon from "ReactionIcon" /* 8757 */;
 import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9304 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const FormInputDefault = tmp2(8601);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -68,8 +68,6 @@ export default function ShareChatInput(onFocus) {
   items2[1] = focused;
   obj = { ref: inputRef, maxLength: tmp4, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, onSubmitEditing: null, onSelectionChange: null, style: null, value: null, onChange: null, onFocus: null, onBlur: null, multiline: true, showBorder: false, showTopContainer: false, textAlignVertical: "center", inputTextStyle: null, editable: null };
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-  const tmp8 = React5;
-  const tmp9 = View;
   const intl = util.intl;
   obj.placeholder = intl.string(util.t.ZroO3G);
   obj.placeholderTextColor = tmp.inputPlaceholder.color;
@@ -94,5 +92,5 @@ export default function ShareChatInput(onFocus) {
   obj.children = timestampProducer(ReactionIcon.ReactionIcon, { size: "md" });
   items3[1] = timestampProducer(Pressables.PressableOpacity, obj);
   obj.children = items3;
-  return tmp8(tmp9, obj);
+  return React5(View, obj);
 };

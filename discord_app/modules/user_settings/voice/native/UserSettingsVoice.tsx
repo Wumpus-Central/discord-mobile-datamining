@@ -8,6 +8,7 @@ import TableRowGroup from "TableRowGroup" /* 5687 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
 import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9982 */;
 import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 9983 */;
+import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 9985 */;
 import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 9989 */;
 import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 9990 */;
 import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 9992 */;
@@ -31,11 +32,11 @@ export default function UserSettingsVoice() {
   obj = { style: tmp.container, children: null };
   const items = [timestampProducer(UserSettingsVoiceInputOptionsDefault, {}), , , , , , ];
   if (nonContextualStreamOutputPresent) {
-    nonContextualStreamOutputPresent = tmp4(tmp2(9985), {});
+    nonContextualStreamOutputPresent = timestampProducer(UserSettingsVoiceOutputOptionsDefault, {});
   }
   items[1] = nonContextualStreamOutputPresent;
   obj = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
-  const intl = tmp7(1114).intl;
+  const intl = util.intl;
   obj.children = intl.format(util.t["V+B3FH"], { guideURL });
   items[2] = timestampProducer(Text_Text.Text, obj);
   items[3] = timestampProducer(UserSettingsSoundboardVolumeDefault, {});

@@ -186,7 +186,7 @@ export default function BlockedUserInGdmActionSheet(channelId) {
       }
       const obj1 = { icon: null, label: null };
       obj.guildId = guild_id;
-      obj1.icon = tmp6(UserCalloutAvatars, obj);
+      obj1.icon = closure_11(UserCalloutAvatars, obj);
       let obj2 = { calledOutUserIds: substr, totalUsers: items2.length, channelId, guildId: null };
       let guild_id1;
       if (channel != null) {
@@ -199,16 +199,16 @@ export default function BlockedUserInGdmActionSheet(channelId) {
     let obj3 = { startExpanded: true, children: null };
     const obj4 = { style: tmp.container, children: null };
     const obj5 = { source: blockedUserIds(tmp8[21]), style: tmp.headerImage };
-    const items3 = [tmp6(closure_4, obj5), , , ];
+    const items3 = [closure_11(closure_4, obj5), , , ];
     const obj6 = { children: null };
     const obj7 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     const intl3 = tmp7(tmp8[11]).intl;
     obj7.children = intl3.string(tmp7(tmp8[11]).t["mwJJ+f"]);
-    const items4 = [tmp6(tmp7(tmp8[9]).Text, obj7), ];
+    const items4 = [closure_11(tmp7(tmp8[9]).Text, obj7), ];
     const obj8 = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: null };
     const obj9 = { numOfBlockedUsers: blockedUserIds.length, numOfIgnoredUsers: ignoredUserIds.length };
-    obj8.children = tmp6(BlockedUserInGDMDescription, obj9);
-    items4[1] = tmp6(tmp7(tmp8[9]).Text, obj8);
+    obj8.children = closure_11(BlockedUserInGDMDescription, obj9);
+    items4[1] = closure_11(tmp7(tmp8[9]).Text, obj8);
     obj6.children = items4;
     items3[1] = closure_13(closure_5, obj6);
     const obj10 = { style: tmp.tableGroup, children: null };
@@ -223,8 +223,8 @@ export default function BlockedUserInGdmActionSheet(channelId) {
           return closure_2_11(TableRow.TableRow, obj, index);
         })
     };
-    obj10.children = tmp6(tmp7(tmp8[22]).TableRowGroup, obj11);
-    items3[2] = tmp6(closure_5, obj10);
+    obj10.children = closure_11(tmp7(tmp8[22]).TableRowGroup, obj11);
+    items3[2] = closure_11(closure_5, obj10);
     const obj12 = { style: tmp.buttons, children: null };
     const obj13 = {
       size: "lg",
@@ -240,7 +240,7 @@ export default function BlockedUserInGdmActionSheet(channelId) {
     };
     const intl4 = tmp7(tmp8[11]).intl;
     obj13.text = intl4.string(tmp7(tmp8[11]).t.I4q1kA);
-    const items5 = [tmp6(tmp7(tmp8[24]).Button, obj13), ];
+    const items5 = [closure_11(tmp7(tmp8[24]).Button, obj13), ];
     const obj14 = {
       size: "lg",
       variant: "secondary",
@@ -255,12 +255,12 @@ export default function BlockedUserInGdmActionSheet(channelId) {
     };
     const intl5 = tmp7(tmp8[11]).intl;
     obj14.text = intl5.string(tmp7(tmp8[11]).t.DRJhmT);
-    items5[1] = tmp6(tmp7(tmp8[24]).Button, obj14);
+    items5[1] = closure_11(tmp7(tmp8[24]).Button, obj14);
     obj12.children = items5;
     items3[3] = closure_13(closure_5, obj12);
     obj4.children = items3;
     obj3.children = closure_13(closure_5, obj4);
-    return tmp6(tmp7(tmp8[20]).ActionSheet, obj3);
+    return closure_11(tmp7(tmp8[20]).ActionSheet, obj3);
   }
   const items6 = [];
   if (blockedUserIds.length > 0) {
@@ -285,5 +285,7 @@ export default function BlockedUserInGdmActionSheet(channelId) {
   obj17.guildId = guild_id3;
   obj16.label = getUserCalloutRowText(obj17);
   items1.unshift(obj16);
+  const tmp16 = blockedUserIds.length > 0 ? blockedUserIds.length : ignoredUserIds.length;
+  tmp5 = ignoredUserIds.length > 0;
 };
 export { getUserCalloutRowText };

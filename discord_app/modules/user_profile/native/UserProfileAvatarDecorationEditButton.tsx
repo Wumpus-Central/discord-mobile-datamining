@@ -47,14 +47,14 @@ export default function UserProfileAvatarDecorationEditButton(user) {
   obj.guildValue = avatarDecoration;
   obj.guildId = guildId;
   const tmp7Result = guildId(isTryItOut[9])(obj1.getProfilePreviewValue(obj));
-  let tmp3Result = tmp3(tmp4[11]);
+  let tmp3Result = tmp3(isTryItOut[11]);
   let skuId;
   if (tmp7Result != null) {
     skuId = tmp7Result.skuId;
   }
   const fetchCollectiblesProduct = tmp3Result.useFetchCollectiblesProduct(skuId);
   ({ product, isFetching } = fetchCollectiblesProduct);
-  tmp3Result = tmp3(tmp4[10]);
+  tmp3Result = tmp3(isTryItOut[10]);
   userAvatarDecoration = tmp3Result.useUserAvatarDecoration({ user, guildId });
   if (undefined !== pendingAvatarDecoration) {
     userAvatarDecoration = pendingAvatarDecoration;
@@ -69,44 +69,44 @@ export default function UserProfileAvatarDecorationEditButton(user) {
     name = product.name;
   }
   if (name == null) {
-    const intl = tmp3(tmp4[13]).intl;
-    name = intl.string(tmp3(tmp4[13]).t.PoWNfe);
+    const intl = tmp3(isTryItOut[13]).intl;
+    name = intl.string(tmp3(isTryItOut[13]).t.PoWNfe);
   }
   let formatToPlainStringResult = name;
   if (null != guildId) {
     formatToPlainStringResult = name;
     if (null == userAvatarDecoration) {
-      const intl2 = tmp3(tmp4[13]).intl;
+      const intl2 = tmp3(isTryItOut[13]).intl;
       obj = { label: name };
-      formatToPlainStringResult = intl2.formatToPlainString(tmp3(tmp4[13]).t.ep5D4i, obj);
+      formatToPlainStringResult = intl2.formatToPlainString(tmp3(isTryItOut[13]).t.ep5D4i, obj);
     }
   }
   if (isFetching) {
     obj1 = { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true };
-    const intl4 = tmp3(tmp4[13]).intl;
-    obj1.label = intl4.string(tmp3(tmp4[13]).t["7v0T9P"]);
-    const intl5 = tmp3(tmp4[13]).intl;
-    obj1.buttonText = intl5.string(tmp3(tmp4[13]).t.MKDeyL);
+    const intl4 = tmp3(isTryItOut[13]).intl;
+    obj1.label = intl4.string(tmp3(isTryItOut[13]).t["7v0T9P"]);
+    const intl5 = tmp3(isTryItOut[13]).intl;
+    obj1.buttonText = intl5.string(tmp3(isTryItOut[13]).t.MKDeyL);
     obj1.onPress = NOOP;
-    obj1.leading = tmp16(userAvatarDecoration, { animating: true, size: "large" });
+    obj1.leading = <userAvatarDecoration animating size="large" />;
     let obj2 = obj1;
   } else {
     obj2 = { label: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null };
-    const intl3 = tmp3(tmp4[13]).intl;
-    obj2.label = intl3.string(tmp3(tmp4[13]).t["7v0T9P"]);
+    const intl3 = tmp3(isTryItOut[13]).intl;
+    obj2.label = intl3.string(tmp3(isTryItOut[13]).t["7v0T9P"]);
     obj2.buttonText = formatToPlainStringResult;
     const obj3 = { text: formatToPlainStringResult };
     obj2.accessibilityValue = obj3;
     obj2.onPress = callback;
     if (null != product) {
       const obj4 = { style: tmp.previewContainer, children: null };
-      const obj5 = { avatarDecoration: tmp7Result, size: COLLECTIBLES_PREVIEW_SIZE - 2 * tmp6(tmp4[7]).space.PX_4, animate: false };
-      obj4.children = tmp16(tmp6(tmp4[15]), obj5);
-      let tmp16Result = tmp16(closure_5, obj4);
-      const tmp6Result = tmp6(tmp4[15]);
+      const obj5 = { avatarDecoration: tmp7Result, size: COLLECTIBLES_PREVIEW_SIZE - 2 * tmp6(isTryItOut[7]).space.PX_4, animate: false };
+      obj4.children = jsx(tmp6(isTryItOut[15]), { avatarDecoration: tmp7Result, size: COLLECTIBLES_PREVIEW_SIZE - 2 * tmp6(isTryItOut[7]).space.PX_4, animate: false });
+      let tmp16Result = <closure_5 style={tmp.previewContainer}>{null}</closure_5>;
+      const tmp6Result = tmp6(isTryItOut[15]);
     } else {
-      const obj6 = { source: tmp6(tmp4[17]), style: tmp.noneIcon };
-      tmp16Result = tmp16(tmp3(tmp4[16]).Icon, obj6);
+      const obj6 = { source: tmp6(isTryItOut[17]), style: tmp.noneIcon };
+      tmp16Result = jsx(tmp3(isTryItOut[16]).Icon, { source: tmp6(isTryItOut[17]), style: tmp.noneIcon });
     }
     obj2.leading = tmp16Result;
   }

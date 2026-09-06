@@ -33,12 +33,12 @@ export const useFavoritesMenuItemPopoverDismissibleContent = function useFavorit
     if (set) {
       if (tmp4) {
         if (!isFavoritesGuildSelected) {
-          if (first === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM) {
-            let items = [tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+          if (first === dismissible_content.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM) {
+            let items = [dismissible_content.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
           }
           obj = { shouldShowPopover: null, markPopoverAsDismissed: null };
           [tmp11, tmp12] = _slicedToArray(tmp8(items), 2);
-          obj.shouldShowPopover = tmp11 === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          obj.shouldShowPopover = tmp11 === dismissible_content.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           obj.markPopoverAsDismissed = tmp12;
           return obj;
         }
@@ -73,10 +73,10 @@ export const useFavoritesBetaTagDismissibleContent = function useFavoritesBetaTa
   useSelectedDismissibleContent;
   if (obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium) {
     if (arg0) {
-      const items = [tmp(1943).DismissibleContent.FAVORITES_GUILD_NEW_BADGE];
+      const items = [dismissible_content.DismissibleContent.FAVORITES_GUILD_NEW_BADGE];
     }
     [tmp9, require] = _slicedToArray(tmp4([]), 2);
-    const tmp10 = tmp9 === tmp(1943).DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
+    const tmp10 = tmp9 === dismissible_content.DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
     closure_1 = tmp10;
     obj = {
       shouldShowBetaTag: tmp10,

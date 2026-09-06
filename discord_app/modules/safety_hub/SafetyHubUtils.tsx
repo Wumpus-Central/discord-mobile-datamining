@@ -21,18 +21,18 @@ function parseMessageEmbedForProps(fields) {
       str = "";
     }
     const obj = { header: str, icon: reduced[constants3.ICON_TYPE], body: null, ctas: null, timestamp: null, theme: null, learn_more_link: null, classification_id: null };
-    let str2 = reduced[tmp2.BODY];
+    let str2 = reduced[constants3.BODY];
     if (str2 == null) {
       str2 = "";
     }
     obj.body = str2;
-    let str3 = reduced[tmp2.CTAS];
+    let str3 = reduced[constants3.CTAS];
     if (str3 == null) {
       str3 = "";
     }
     const parts = str3.split(",");
     obj.ctas = parts.filter((item) => "" !== item);
-    let num = reduced[tmp2.TIMESTAMP];
+    let num = reduced[constants3.TIMESTAMP];
     if (num == null) {
       num = 0;
     }
@@ -57,8 +57,8 @@ export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachmen
   if (obj.isImageFile(filename.filename)) {
     let num = constants5.IS_SPOILER;
   } else {
+    MediaFormatTesters;
     num = 0;
-    const tmpResult = MediaFormatTesters;
   }
   return num;
 };
@@ -72,18 +72,18 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
     let obj = { text: null, type: null, key: null };
     const intl2 = util.intl;
     obj.text = intl2.string(util.t["8/GdRB"]);
-    obj.type = tmp.LEARN_MORE_LINK;
+    obj.type = constants2.LEARN_MORE_LINK;
     if (learn_more_link == null) {
       str2 = "";
     }
     obj.key = str2;
     return obj;
-  } else if (tmp.POLICY_VIOLATION_DETAIL === arg0) {
+  } else if (constants2.POLICY_VIOLATION_DETAIL === arg0) {
     let str = classification_id;
     obj = { text: null, type: null, key: null };
     const intl = util.intl;
     obj.text = intl.string(util.t.QsqdXC);
-    obj.type = tmp.POLICY_VIOLATION_DETAIL;
+    obj.type = constants2.POLICY_VIOLATION_DETAIL;
     if (classification_id == null) {
       str = "";
     }

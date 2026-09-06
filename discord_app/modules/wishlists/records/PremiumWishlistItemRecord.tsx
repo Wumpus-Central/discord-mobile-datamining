@@ -24,14 +24,13 @@ prototype["fromServer"] = function fromServer(sku) {
     const merged = Object.assign(sku);
     obj.sku = fromServer;
     if (typeof prototype === "function") {
-      const tmp11 = new prototype(obj, sku, tmp2, new.target);
+      const tmp11 = new prototype(obj, sku, prototype, new.target);
       tmp11.skuProductLine = SKUProductLines.PREMIUM;
       tmp11.sku = obj.sku;
       return tmp11;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    tmp2 = prototype;
   }
 };
 prototype["fromSKU"] = function fromSKU(id) {
@@ -42,8 +41,8 @@ prototype["fromSKU"] = function fromSKU(id) {
     obj.sku_name = name;
     obj.sku = id;
     if (typeof prototype === "function") {
-      const tmp9 = new prototype(obj, name, tmp2, new.target, tmp3);
-      tmp9.skuProductLine = tmp3.PREMIUM;
+      const tmp9 = new prototype(obj, name, tmp2, new.target, SKUProductLines);
+      tmp9.skuProductLine = SKUProductLines.PREMIUM;
       tmp9.sku = obj.sku;
       tmp = tmp9;
     } else {

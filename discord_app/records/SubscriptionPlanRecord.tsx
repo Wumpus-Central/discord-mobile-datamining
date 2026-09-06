@@ -60,10 +60,10 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
   get: function premiumSubscriptionType() {
     const skuId = this.skuId;
     if (constants.LEGACY !== skuId) {
-      if (tmp.TIER_2 !== skuId) {
-        if (tmp.TIER_1 === skuId) {
+      if (constants.TIER_2 !== skuId) {
+        if (constants.TIER_1 === skuId) {
           return framebus.TIER_1;
-        } else if (tmp.TIER_0 === skuId) {
+        } else if (constants.TIER_0 === skuId) {
           return framebus.TIER_0;
         } else {
           return null;

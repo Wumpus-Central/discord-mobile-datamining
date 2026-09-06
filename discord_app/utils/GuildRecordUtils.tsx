@@ -172,7 +172,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   } else {
     tmp35 = null;
     if (null != theme) {
-      let tmp8Result = tmp8(1978);
+      let tmp8Result = guildThemeSerialization;
       let fromServerGuildThemeResult = tmp8Result.fromServerGuildTheme(theme);
       if (fromServerGuildThemeResult == null) {
         fromServerGuildThemeResult = { enabled: false, themeSettings: null };
@@ -215,7 +215,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
     prop4 = null;
   }
   obj.officialMessageColor = prop4;
-  tmp8Result = tmp8(1977);
+  tmp8Result = guildIncidentsSerialization;
   obj.incidentsData = tmp8Result.fromServerGuildIncidentsData(properties.incidents_data);
   return timestampProducer(React6, guildTheme, obj);
 }

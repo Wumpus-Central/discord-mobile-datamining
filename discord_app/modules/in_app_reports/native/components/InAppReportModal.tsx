@@ -3,7 +3,7 @@
 // Module 8634 (InAppReportModal)
 import util from "util" /* 1114 */;
 import Navigator from "Navigator" /* 7000 */;
-import HeaderActionButton from "HeaderActionButton" /* 7377 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 7377 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7593 */;
 import showReportModal from "showReportModal" /* 8631 */;
 import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8633 */;
@@ -30,8 +30,8 @@ export default function InAppReportModal(arg0) {
   c13 = undefined;
   c14 = undefined;
   c15 = undefined;
-  function addOnCloseCallback(arg0) {
-    closure_0 = arg0;
+  function addOnCloseCallback(HeaderActionButton) {
+    closure_0 = HeaderActionButton;
     _undefined3((arg0) => {
       const items = [];
       items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
@@ -40,30 +40,28 @@ export default function InAppReportModal(arg0) {
   }
   function closeModal() {
     const result = in_app_reports_ReportUtils.trackCloseReportModalAnalytics(closure_1_0, c12, first);
-    const tmp3 = closure_1_0;
-    const tmp4 = first;
     showReportModal.hideReportModal();
     const item = _undefined2.forEach((fn) => fn());
     if (asyncGeneratorStep) {
-      const result1 = in_app_reports_ReportUtils.showInAppReportsFeedbackModal(tmp3, tmp4);
+      const result1 = in_app_reports_ReportUtils.showInAppReportsFeedbackModal(closure_1_0, first);
       const tmpResult = in_app_reports_ReportUtils;
     }
   }
   ({ nodes: c4, root_node_id: c5, success_node_id: c6, fail_node_id: c7 } = menu);
-  let tmp = _slicedToArray(noop.useState(undefined), 2);
+  const tmp = _slicedToArray(noop.useState(undefined), 2);
   const first = tmp[0];
   closure_9 = tmp[1];
   [c10, c11] = _slicedToArray(noop.useState(undefined), 2);
-  let tmp3 = _slicedToArray(noop.useState(undefined), 2);
+  const tmp3 = _slicedToArray(noop.useState(undefined), 2);
   [c12, c13] = _slicedToArray(noop.useState([]), 2);
-  let tmp4 = _slicedToArray(noop.useState([]), 2);
+  const tmp4 = _slicedToArray(noop.useState([]), 2);
   [c14, c15] = _slicedToArray(noop.useState([]), 2);
   menu(4992)(() => {
     const orFetchLinkedUsers = FamilyCenterUtils.getOrFetchLinkedUsers();
   });
   let items = [closeModal, first];
   const memo = noop.useMemo(() => {
-    let nodeMap = async function _onSubmit(arg0, value) {
+    let nodeMap = async function _onSubmit(arg0) {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -183,7 +181,7 @@ export default function InAppReportModal(arg0) {
             const obj = { source: menu(6992), onPress, accessibilityLabel: null };
             const intl = util.intl;
             obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-            return addOnCloseCallback(HeaderActionButton.HeaderActionButton, obj);
+            return addOnCloseCallback(HeaderActionButton2.HeaderActionButton, obj);
           },
         headerTitle() {
             return null;

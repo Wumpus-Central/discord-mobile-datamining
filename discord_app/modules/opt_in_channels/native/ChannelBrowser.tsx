@@ -76,14 +76,14 @@ let closure_17 = noop.memo((channel) => {
     ({ accessibilityRole: obj5.accessibilityRole, accessibilityState: obj5.accessibilityState } = checkboxA11yNative);
     const obj2 = { style: tmp.selectAllCheckbox, children: null };
     const obj3 = { checked: stateFromStores };
-    obj2.children = tmp8(tmp4(5617).FormCheckbox, obj3);
-    const items2 = [tmp8(View, obj2), ];
+    obj2.children = closure_12(tmp4(5617).FormCheckbox, obj3);
+    const items2 = [closure_12(View, obj2), ];
     const obj4 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1114).intl;
     obj4.children = intl.string(tmp4(1114).t.mSQwnW);
-    items2[1] = tmp8(tmp4(4556).Text, obj4);
+    items2[1] = closure_12(tmp4(4556).Text, obj4);
     obj1.children = items2;
-    tmp10Result = tmp10(View, obj1);
+    tmp10Result = closure_13(View, obj1);
   }
   items1[1] = tmp10Result;
   obj.children = closure_13(closure_14, { children: items1 });
@@ -116,7 +116,7 @@ let closure_18 = noop.memo((channel) => {
   const stateFromStores2 = obj3.useStateFromStores(items3, () => {
     let isChannelOptedInResult = null != channel.parent_id;
     if (isChannelOptedInResult) {
-      isChannelOptedInResult = UserGuildSettingsStore.isChannelOptedIn(tmp.guild_id, tmp.parent_id);
+      isChannelOptedInResult = UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.parent_id);
     }
     return isChannelOptedInResult;
   });
@@ -175,8 +175,8 @@ let closure_18 = noop.memo((channel) => {
       const intl = tmp4(tmp5[24]).intl;
       obj7.text = intl.string(tmp4(tmp5[24]).t.y2b7CA);
       obj7.textStyle = tmp.newBadge;
-      obj5.children = tmp18(tmp4(tmp5[37]).TextBadge, obj7);
-      stateFromStores1 = tmp18(tmp20, obj5);
+      obj5.children = closure_12(tmp4(tmp5[37]).TextBadge, obj7);
+      stateFromStores1 = closure_12(View, obj5);
     }
     items5[1] = stateFromStores1;
     obj2.children = items5;
@@ -213,8 +213,8 @@ export default function ChannelBrowser(guildId) {
   let onChannelClick;
   let stateFromStores;
   let filterCategoriesByQuery;
-  let tmp = closure_15();
-  let tmp2 = stateFromStores(filterCategoriesByQuery.useState(""), 2);
+  const tmp = closure_15();
+  const tmp2 = stateFromStores(filterCategoriesByQuery.useState(""), 2);
   importDefault = tmp2[1];
   onChannelClick = require("useBatchUpdateChannelSettings")(guildId).onChannelClick;
   let obj = guildId(onChannelClick[15]);
@@ -244,12 +244,11 @@ export default function ChannelBrowser(guildId) {
           obj = { isSection: false, section, row: num, channel: null, isLast: null };
           let tmp3 = filterCategoriesByQuery[channel.id][num];
           channel = undefined;
-          let tmp2 = filterCategoriesByQuery;
           if (tmp3 != null) {
             channel = tmp3.channel;
           }
           obj.channel = channel;
-          obj.isLast = num >= tmp2[channel.id].length - 1;
+          obj.isLast = num >= filterCategoriesByQuery[channel.id].length - 1;
           let arr = items.push(obj);
         }
       }
@@ -273,10 +272,10 @@ export default function ChannelBrowser(guildId) {
     } else if (tmp) {
       let obj = { channel: id, onChannelClick };
       id = id.id;
-      let tmp4Result = tmp4(closure_17, obj, id);
+      let tmp4Result = closure_2_12(closure_17, obj, id);
     } else {
       obj = { channel: id, guild: stateFromStores, isFirst: 0 === tmp2, isLast: tmp3, forceChecked: result1, onChannelClick };
-      tmp4Result = tmp4(closure_18, obj, id.id);
+      tmp4Result = closure_2_12(closure_18, obj, id.id);
     }
   }, items4);
   obj1 = {
@@ -304,29 +303,29 @@ export default function ChannelBrowser(guildId) {
     const intl = tmp5(tmp4[24]).intl;
     obj3.accessibilityLabel = intl.string(tmp5(tmp4[24]).t.cpT0Cq);
     obj3.style = tmp.nuxCloseContainer;
-    obj3.children = tmp18(tmp5(tmp4[25]).CircleXIcon, {});
-    const items6 = [tmp18(tmp5(tmp4[23]).PressableOpacity, obj3), , ];
+    obj3.children = closure_12(tmp5(tmp4[25]).CircleXIcon, {});
+    const items6 = [closure_12(tmp5(tmp4[23]).PressableOpacity, obj3), , ];
     obj4 = { source: tmp3(tmp4[27]) };
-    items6[1] = tmp18(tmp3(tmp4[26]), obj4);
+    items6[1] = closure_12(tmp3(tmp4[26]), obj4);
     obj5 = { style: tmp.nuxHeader, children: null };
     obj6 = { style: tmp.nuxHeaderText, children: null };
     const obj7 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp5(tmp4[24]).intl;
     obj7.children = intl2.string(tmp5(tmp4[24]).t.utqWEC);
-    obj6.children = tmp18(tmp5(tmp4[28]).Text, obj7);
-    const items7 = [tmp18(tmp17, obj6), , ];
+    obj6.children = closure_12(tmp5(tmp4[28]).Text, obj7);
+    const items7 = [closure_12(tmp17, obj6), , ];
     const obj8 = { variant: "text-sm/normal", color: "text-default", style: tmp.nuxBody, children: null };
     const intl3 = tmp5(tmp4[24]).intl;
     obj8.children = intl3.string(tmp5(tmp4[24]).t["+9etcM"]);
-    items7[1] = tmp18(tmp5(tmp4[28]).Text, obj8);
+    items7[1] = closure_12(tmp5(tmp4[28]).Text, obj8);
     const obj9 = { variant: "text-sm/normal", color: "text-default", style: tmp.nuxBody, children: null };
     const intl4 = tmp5(tmp4[24]).intl;
     obj9.children = intl4.format(tmp5(tmp4[24]).t.Z0axjk, {});
-    items7[2] = tmp18(tmp5(tmp4[28]).Text, obj9);
+    items7[2] = closure_12(tmp5(tmp4[28]).Text, obj9);
     obj5.children = items7;
-    items6[2] = tmp16(tmp17, obj5);
+    items6[2] = closure_13(tmp17, obj5);
     obj2.children = items6;
-    tmp16Result = tmp16(tmp5(tmp4[22]).Card, obj2);
+    tmp16Result = closure_13(tmp5(tmp4[22]).Card, obj2);
     const tmp3Result = tmp3(tmp4[26]);
   }
   const obj10 = { ListHeaderComponent: tmp16Result, accessibilityLabel: null, renderItem: null, data: null, contentContainerStyle: null, keyExtractor: null };

@@ -5,9 +5,9 @@ import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import useToken from "useToken" /* 4262 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import noop from "module_19" /* 19 */;
 
-const LinearGradientDefault = tmp4(4987);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);

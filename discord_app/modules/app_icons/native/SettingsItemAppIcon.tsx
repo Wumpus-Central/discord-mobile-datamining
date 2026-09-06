@@ -3,11 +3,11 @@
 // Module 15522 (SettingsItemAppIcon)
 import nativeDefault from "native" /* 576 */;
 import AppIconTypes from "AppIconTypes" /* 9324 */;
+import ClydeIcon from "ClydeIcon" /* 10818 */;
 import AppIconUtils from "AppIconUtils" /* 13363 */;
 import AppIconDefault from "AppIcon" /* 15523 */;
 import noop from "module_19" /* 19 */;
 
-const ClydeIcon = tmp4(10818);
 require = fn;
 const getIconById = fn(9323).getIconById;
 const jsx = fn(21).jsx;
@@ -35,4 +35,5 @@ export default function SettingsItemAppIcon(color) {
     return tmp11;
   }
   tmp11 = jsx(ClydeIcon.ClydeIcon, { color: INTERACTIVE_ICON_DEFAULT });
+  tmp7 = getIconById(currentAppIcon);
 };

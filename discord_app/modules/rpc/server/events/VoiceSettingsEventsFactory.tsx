@@ -9,9 +9,9 @@ import size from "module_2" /* 2 */;
 const RPCEvents = Constants2.RPCEvents;
 const result = size.fileFinishedImporting("modules/rpc/server/events/VoiceSettingsEventsFactory.tsx");
 
-export default function createVoiceSettingsEventHandlers(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
+export default function createVoiceSettingsEventHandlers(getDeprecatedVoiceSettings, getVoiceSettings) {
+  _require = getDeprecatedVoiceSettings;
+  closure_1 = getVoiceSettings;
   let obj = {};
   obj = { scope: null, handler: null };
   obj = {};
@@ -21,7 +21,7 @@ export default function createVoiceSettingsEventHandlers(arg0, arg1) {
   obj.handler = function handler() {
     return (arg0) => {
       ({ prevState, dispatch } = arg0);
-      const tmp = closure_1_0();
+      const tmp = getDeprecatedVoiceSettings();
       if (!obj.isEqual(tmp, prevState)) {
         dispatch(tmp);
       }

@@ -53,10 +53,9 @@ export const parseBioReactWithCachedAST = function parseBioReactWithCachedAST(de
     value = closure_3.get(description);
     if (null == value) {
       const tmp4 = closure_6(description, true);
-      const result = obj.set(description, tmp4);
+      const result = closure_3.set(description, tmp4);
       value = tmp4;
     }
-    obj = closure_3;
     const obj2 = _modDef4257;
     return obj2.reactFor(_modDef4257.ruleOutput(importDefaultResultResult, "react"))(value);
   }

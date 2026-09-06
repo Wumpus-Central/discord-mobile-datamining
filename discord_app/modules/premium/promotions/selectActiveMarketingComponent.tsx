@@ -60,11 +60,9 @@ function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
 }
 const result = size.fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
 
-export default function selectActiveMarketingComponent(arr, arg1) {
-  closure_0 = arg1;
-  let fn = arg2;
+export default function selectActiveMarketingComponent(arr, date, arg2) {
   if (arg2 === undefined) {
-    fn = function f() {
+    const fn = function f() {
       return true;
     };
   }
@@ -72,13 +70,13 @@ export default function selectActiveMarketingComponent(arr, arg1) {
     ({ effectiveStartDate, effectiveEndDate } = isTimed);
     let tmp = null != effectiveStartDate;
     if (tmp) {
-      const time = obj.getTime();
+      const time = date.getTime();
       tmp = time < effectiveStartDate.getTime();
     }
     if (!tmp) {
       let tmp3 = null != effectiveEndDate;
       if (tmp3) {
-        const time1 = obj.getTime();
+        const time1 = date.getTime();
         tmp3 = time1 > effectiveEndDate.getTime();
       }
       tmp = tmp3;

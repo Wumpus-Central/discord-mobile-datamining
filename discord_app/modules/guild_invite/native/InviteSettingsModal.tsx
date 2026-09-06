@@ -49,7 +49,7 @@ function AdvancedInstantInviteScreen() {
   const tmp10 = !tmp2Result.isEqual(settings, inviteSettings);
   dependencyMap = tmp10;
   const items1 = [channel];
-  const effect = obj3.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null == channel) {
       const guildId = CreateInviteModalStore.getGuildId();
       let invitableChannelForGuild = null;
@@ -76,7 +76,7 @@ function AdvancedInstantInviteScreen() {
     channel(573).wait(channel(9826).resetSettings);
   });
   const items2 = [channel];
-  callback = obj3.useCallback(() => {
+  callback = noop.useCallback(() => {
     if (null != channel) {
       if (PermissionStore.can(constants2.CREATE_INSTANT_INVITE, tmp)) {
         const invite = CreateInviteModalActionCreatorsDefault.createInvite("IOS Regenerate");
@@ -92,7 +92,7 @@ function AdvancedInstantInviteScreen() {
     obj.show(obj);
   }, items2);
   const items3 = [navigation, tmp10, callback];
-  const effect1 = obj3.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     navigation.setOptions({
       headerRight() {
         let tmp;
@@ -106,27 +106,27 @@ function AdvancedInstantInviteScreen() {
       }
     });
   }, items3);
-  const callback1 = obj3.useCallback((maxUses) => {
+  const callback1 = noop.useCallback((maxUses) => {
     channel(9826);
     const obj = { maxUses };
     obj.updateSettings(obj);
   }, []);
-  const callback2 = obj3.useCallback((maxAge) => {
+  const callback2 = noop.useCallback((maxAge) => {
     channel(9826);
     const obj = { maxAge };
     obj.updateSettings(obj);
   }, []);
-  const callback3 = obj3.useCallback((temporary) => {
+  const callback3 = noop.useCallback((temporary) => {
     channel(9826);
     const obj = { temporary };
     obj.updateSettings(obj);
   }, []);
-  const callback4 = obj3.useCallback((flags) => {
+  const callback4 = noop.useCallback((flags) => {
     channel(9826);
     const obj = { flags };
     obj.updateSettings(obj);
   }, []);
-  const callback5 = obj3.useCallback((roleIds) => {
+  const callback5 = noop.useCallback((roleIds) => {
     channel(9826);
     const obj = { roleIds };
     obj.updateSettings(obj);

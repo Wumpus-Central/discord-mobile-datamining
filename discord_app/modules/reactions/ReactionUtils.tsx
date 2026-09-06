@@ -36,10 +36,10 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
   } else {
     if (me) {
       let PirBBE = t.CLuzw5;
-      let tmp5 = tmp;
+      let tmp5 = require;
     } else {
       PirBBE = t.PirBBE;
-      tmp5 = tmp;
+      tmp5 = require;
     }
     const intl = tmp5(1114).intl;
     const obj = { reactions: count, emojiName: null };
@@ -128,7 +128,7 @@ export const getBurstAnalyticsSection = function getBurstAnalyticsSection(isThre
   } else if (isThread.isForumPost()) {
     FORUM_CHANNEL_TEXT_AREA = constants.FORUM_CHANNEL_TEXT_AREA;
   } else {
-    FORUM_CHANNEL_TEXT_AREA = isThread.isGuildVocal() ? tmp.TEXT_IN_VOICE : tmp.CHANNEL_TEXT_AREA;
+    FORUM_CHANNEL_TEXT_AREA = isThread.isGuildVocal() ? constants.TEXT_IN_VOICE : constants.CHANNEL_TEXT_AREA;
   }
   return FORUM_CHANNEL_TEXT_AREA;
 };

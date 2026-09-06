@@ -54,6 +54,7 @@ function scheduleNextNotification() {
       timeout = null;
     }
   }
+  obj = found(7855);
 }
 let c4 = null;
 let prototype = function MessageRemindersNotificationManager() {

@@ -15,8 +15,8 @@ function showRequestFailedAlert(arg0) {
   const intl = util.intl;
   obj.title = intl.string(util.t["328j/I"]);
   if (null == anyErrorMessage) {
-    const intl2 = tmp(1114).intl;
-    anyErrorMessage = intl2.string(tmp(1114).t.fEptJP);
+    const intl2 = util.intl;
+    anyErrorMessage = intl2.string(util.t.fEptJP);
   }
   obj.body = anyErrorMessage;
   AlertActionCreatorsDefault.show(obj);
@@ -31,7 +31,7 @@ function deleteGameRelationship() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _deleteGameRelationship(arg0, value) {
+let closure_8 = async function _deleteGameRelationship(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -176,8 +176,8 @@ export default {
       const intl = onSuccess(1114).intl;
       obj.title = intl.string(onSuccess(1114).t["328j/I"]);
       if (null == anyErrorMessage) {
-        const intl2 = tmp(1114).intl;
-        anyErrorMessage = intl2.string(tmp(1114).t.fEptJP);
+        const intl2 = onSuccess(1114).intl;
+        anyErrorMessage = intl2.string(onSuccess(1114).t.fEptJP);
       }
       obj.body = anyErrorMessage;
       AlertActionCreatorsDefault.show(obj);

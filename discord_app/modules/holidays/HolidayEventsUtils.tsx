@@ -19,10 +19,10 @@ export default {
     let tmp6 = null;
     if (tmp5) {
       tmp6 = null;
-      if (null != tmp(17381).soundpack) {
+      if (null != HolidayEventsConfigDefault.soundpack) {
         tmp6 = null;
-        if (null != tmp(17381).soundpackLabel) {
-          obj = { soundpack: tmp(17381).soundpack, soundpackLabel: tmp(17381).soundpackLabel };
+        if (null != HolidayEventsConfigDefault.soundpackLabel) {
+          obj = { soundpack: HolidayEventsConfigDefault.soundpack, soundpackLabel: HolidayEventsConfigDefault.soundpackLabel };
           tmp6 = obj;
         }
       }
@@ -38,7 +38,7 @@ export default {
     const timestamp = Date.now();
     let appSpinnerSources = null;
     if (tmp4) {
-      appSpinnerSources = tmp2(17381).appSpinnerSources;
+      appSpinnerSources = HolidayEventsConfigDefault.appSpinnerSources;
     }
     return appSpinnerSources;
   },
@@ -46,13 +46,13 @@ export default {
     const timestamp = Date.now();
     let tmp5 = null;
     if (tmp4) {
-      const getLoadingTips = tmp2(17381).getLoadingTips;
+      const getLoadingTips = HolidayEventsConfigDefault.getLoadingTips;
       let loadingTips;
       if (getLoadingTips != null) {
         loadingTips = getLoadingTips();
       }
       tmp5 = loadingTips;
-      const tmp2Result = tmp2(17381);
+      const tmp2Result = HolidayEventsConfigDefault;
     }
     return tmp5;
   },
@@ -62,8 +62,8 @@ export default {
     let soundpack = null;
     if (tmp5) {
       soundpack = null;
-      if (null != tmp(17381).soundpack) {
-        soundpack = tmp(17381).soundpack;
+      if (null != HolidayEventsConfigDefault.soundpack) {
+        soundpack = HolidayEventsConfigDefault.soundpack;
       }
     }
     return soundpack;

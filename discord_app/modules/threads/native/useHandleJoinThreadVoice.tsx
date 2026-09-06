@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/threads/native/useHandleJoinT
 
 export default function useHandleJoinThreadVoice(arg0) {
   closure_0 = arg0;
-  return asyncGeneratorStep(async (arg0, value) => {
+  return asyncGeneratorStep(async () => {
     guildId = guildId.getGuildId();
     closure_128_0 = guildId;
     if (null != guildId) {

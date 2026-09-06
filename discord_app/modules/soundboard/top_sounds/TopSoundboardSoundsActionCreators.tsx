@@ -54,7 +54,7 @@ export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildI
   if (!obj.isPseudoGuildId(guildId)) {
     obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId };
     DispatcherDefault.dispatch(obj);
-    const HTTP = require("HTTPUtils").HTTP;
+    const HTTP = tmp(1272).HTTP;
     obj = { url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(guildId), oldFormErrors: true, rejectWithError: true };
     value = HTTP.get(obj);
     value.then((body) => {
@@ -68,4 +68,5 @@ export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildI
       return obj.dispatch(obj);
     });
   }
+  tmp = _require;
 };

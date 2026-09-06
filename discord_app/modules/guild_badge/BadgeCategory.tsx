@@ -27,7 +27,7 @@ export const getBadgeCategory = function getBadgeCategory(guildTraits) {
           DISCOVERABLE = obj.DISCOVERABLE;
         }
       }
-      DISCOVERABLE = guildTraits.community ? tmp3.COMMUNITY : tmp3.NONE;
+      DISCOVERABLE = guildTraits.community ? obj.COMMUNITY : obj.NONE;
     }
   }
   return DISCOVERABLE;

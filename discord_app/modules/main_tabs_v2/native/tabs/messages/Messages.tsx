@@ -3,6 +3,9 @@
 // Module 16019 (messages/Messages)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5581 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7475 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -46,22 +49,22 @@ export default noop.memo(function Messages(style) {
     if (null != dataKey) {
       if (!obj7.isAndroid()) {
         if (!AccessibilityStore.useReducedMotion) {
-          let tmp5Result = tmp5(4418);
+          let tmp5Result = RootNavigationRef;
           const rootNavigationRef = tmp5Result.getRootNavigationRef();
           let tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
           if (tmp2) {
-            tmp5Result = tmp5(4417);
-            const rootNavigationRef1 = tmp5(4418).getRootNavigationRef();
+            tmp5Result = NavigationRouteUtils;
+            const rootNavigationRef1 = RootNavigationRef.getRootNavigationRef();
             let currentRoute;
             if (rootNavigationRef1 != null) {
               currentRoute = rootNavigationRef1.getCurrentRoute();
             }
             tmp2 = null != tmp5Result.coerceGuildsRoute(currentRoute);
-            const tmp5Result1 = tmp5(4418);
+            const tmp5Result1 = RootNavigationRef;
           }
           if (tmp2) {
-            const result = tmp5(5581).DeprecatedLayoutAnimation();
-            const tmp5Result2 = tmp5(5581);
+            const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
+            const tmp5Result2 = DeprecatedLayoutAnimation;
           }
         }
       }
@@ -108,7 +111,7 @@ export default noop.memo(function Messages(style) {
   obj2 = { backgroundColor: dataKey(sections[25]).colors.PANEL_BG, children: null };
   const items1 = [closure_6(dataKey(sections[26]), { height: headerSize, scrollPosition: sharedValue }), , ];
   if (tmp9.showFullscreenEmptyState) {
-    let tmp20Result = tmp20(tmp(tmp2[27]), {});
+    let tmp20Result = closure_6(tmp(tmp2[27]), {});
   } else {
     if ("legend" === list) {
       let tmp23 = tmp2[28];
@@ -117,7 +120,7 @@ export default noop.memo(function Messages(style) {
     }
     obj3 = { ref };
     const merged = Object.assign(obj);
-    tmp20Result = tmp20(tmp(tmp23), obj3);
+    tmp20Result = closure_6(tmp(tmp23), obj3);
     const tmpResult = tmp(tmp23);
   }
   items1[1] = tmp20Result;

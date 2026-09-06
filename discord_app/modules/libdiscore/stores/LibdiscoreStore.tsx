@@ -164,7 +164,7 @@ prototype3["intoKV"] = function intoKV(arg0) {
   }
   if (typeof KVDatabase === "function") {
     const self = this;
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(KVDatabase.prototype);
     obj.kkvDatabase = this;
     obj.partition = str;
     return obj;
@@ -286,7 +286,7 @@ prototype3["memoizedPartition"] = function memoizedPartition(fn, arg1) {
       const call = hasOwnProperty.call;
       if (!(typeof call === "unknown" ? hasOwnProperty(closure_2) : call(memoized, closure_2))) {
         const tmp6 = closure_1(arg0, tmp.root);
-        memoized[tmp2] = tmp6;
+        memoized[closure_2] = tmp6;
         tmp3 = tmp6;
       }
       return tmp3;
@@ -314,7 +314,7 @@ prototype3["memoizedSinglePartition"] = function memoizedSinglePartition(partiti
       const call = hasOwnProperty.call;
       if (!(typeof call === "unknown" ? hasOwnProperty(closure_3) : call(memoized, closure_3))) {
         const tmp6 = closure_2(tmp.root);
-        memoized[tmp2] = tmp6;
+        memoized[closure_3] = tmp6;
         tmp3 = tmp6;
       }
       return tmp3;
@@ -332,7 +332,7 @@ prototype3["memoized"] = function memoized(arg0) {
     const call = hasOwnProperty.call;
     if (!(typeof call === "unknown" ? hasOwnProperty(closure_0) : call(memoized, closure_0))) {
       const tmp5 = closure_1(self.state.root);
-      memoized[tmp2] = tmp5;
+      memoized[closure_0] = tmp5;
       tmp3 = tmp5;
     }
     return tmp3;
@@ -555,7 +555,7 @@ class LibdiscoreStore extends Store {
         closure_0 = arg0[key10008];
         fn = (arg0) => {
           if (require.wrappedState == null) {
-            obj.wrappedState = obj.stateWrapper();
+            require.wrappedState = require.stateWrapper();
           }
           closure_0(arg0, require.wrappedState);
           if (require._nextVersion === require._nextVersion) {
@@ -626,7 +626,7 @@ prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
   this.addChangeListener(() => {
     const shadowDatabases = self.shadowDatabases;
     if (null != shadowDatabases) {
-      if (!tmp.dualReadValidationDisabled) {
+      if (!self.dualReadValidationDisabled) {
         for (const key10013 in tmp.state.databases) {
           let obj2 = _self;
           let obj3 = _self.state.databases[key10013];
@@ -642,7 +642,7 @@ prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
             let _HermesInternal = HermesInternal;
             let result = obj.runDualReadValidation("" + obj2.getName() + ":" + key10013, "Kkv", (fn) => {
               const keys = Object.keys(closure_0);
-              const keys1 = Object.keys(closure_1);
+              const keys1 = Object.keys(dependencyMap);
               const iter = keys[Symbol.iterator]();
               const nextResult = iter.next();
               while (iter !== undefined) {
@@ -650,19 +650,16 @@ prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
                 let _Object = Object;
                 hasOwnProperty = Object.prototype.hasOwnProperty;
                 let call = hasOwnProperty.call;
-                let tmp7 = closure_1;
                 let tmp4 = nextResult;
-                let tmp8 = closure_1;
-                if (typeof call === "unknown" ? hasOwnProperty(nextResult) : call(tmp7, nextResult)) {
-                  let tmp14 = tmp8[tmp4];
+                if (typeof call === "unknown" ? hasOwnProperty(nextResult) : call(dependencyMap, nextResult)) {
+                  let tmp14 = dependencyMap[tmp4];
                   let tmp15 = tmp14;
-                  let tmp17 = closure_2;
                   let tmp18 = tmp6.derived.memoized[closure_2];
                   if (null == tmp18) {
                     let tmp25 = fn(tmp6, tmp15);
                     obj = {};
-                    tmp6.derived.memoized[tmp17] = obj;
-                    tmp15.derived.memoized[tmp17] = obj;
+                    tmp6.derived.memoized[closure_2] = obj;
+                    tmp15.derived.memoized[closure_2] = obj;
                   }
                 } else {
                   let tmp11 = fn(tmp6, obj);
@@ -672,15 +669,13 @@ prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
               for (const item10064 of keys1) {
                 let _Object2 = Object;
                 let call2 = hasOwnProperty2.call;
-                let tmp27 = closure_0;
-                let tmp26 = item10064;
                 if (typeof call2 === "unknown") {
                   let hasOwnProperty2Result = hasOwnProperty2(item10064);
                 } else {
-                  hasOwnProperty2Result = call2(tmp27, item10064);
+                  hasOwnProperty2Result = call2(closure_0, item10064);
                 }
                 if (!hasOwnProperty2Result) {
-                  let tmp33 = arg0(obj, closure_1[tmp26]);
+                  let tmp33 = arg0(obj, dependencyMap[item10064]);
                 }
                 continue;
               }
@@ -710,7 +705,7 @@ prototype4["addKKVDatabase"] = function addKKVDatabase(guildStickers, createGuil
     const result = recordCreators.set(guildStickers, tmp6);
     if (null != self.shadowDatabases) {
       const nextVersion = self.nextVersion;
-      if (typeof tmp === "function") {
+      if (typeof KKVDatabase === "function") {
         const merged1 = Object.assign({ secondaryIndexes: null });
         merged1[0] = [];
         merged1.nextVersion = tmp8;
@@ -729,7 +724,6 @@ prototype4["addKKVDatabase"] = function addKKVDatabase(guildStickers, createGuil
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = KKVDatabase;
 };
 prototype4["addKVDatabase"] = function addKVDatabase(guilds, createGuildRecordFromRust) {
   const self = this;
@@ -748,7 +742,7 @@ prototype4["addKVDatabase"] = function addKVDatabase(guilds, createGuildRecordFr
     const result = recordCreators.set(guilds, tmp7);
     if (null != self.shadowDatabases) {
       const nextVersion = self.nextVersion;
-      if (typeof tmp === "function") {
+      if (typeof KKVDatabase === "function") {
         const merged1 = Object.assign({ secondaryIndexes: null });
         merged1[0] = [];
         merged1.nextVersion = tmp9;
@@ -767,7 +761,6 @@ prototype4["addKVDatabase"] = function addKVDatabase(guilds, createGuildRecordFr
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = KKVDatabase;
 };
 prototype4["applyChanges"] = function applyChanges(databaseChanges) {
   const self = this;

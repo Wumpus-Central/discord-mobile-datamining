@@ -3,10 +3,10 @@
 // Module 15038 (BountiesScrollIndicatorAnimation)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
+import native from "native" /* 4271 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const native = tmp2(4271);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -31,5 +31,5 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
   obj = { style: tmp.container, children: null };
   obj = { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } };
   obj.children = jsx(native.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } }, tmp6);
-  return <View stateMachine="State Machine 1" fit="contain" dataBinding={{ color: token, startAnimation: !arg0.isFadingInContent }} />;
+  return <View stateMachine="State Machine 1" fit="contain" dataBinding={{ color: token, startAnimation: !startAnimation.isFadingInContent }} />;
 };

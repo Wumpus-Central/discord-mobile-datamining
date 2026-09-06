@@ -5,6 +5,7 @@ import Constants from "Constants" /* 1074 */;
 import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 7250 */;
 import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7253 */;
 import GuildProductsEligibility from "GuildProductsEligibility" /* 7258 */;
+import useGuildShopPreviewVisible from "useGuildShopPreviewVisible" /* 7263 */;
 import size from "module_2" /* 2 */;
 
 const GuildFeatures = Constants.GuildFeatures;
@@ -16,13 +17,13 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
     id = id.id;
   }
   const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(id);
-  let tmpResult = tmp(7250);
+  let tmpResult = useRoleSubscriptionsVisibleInGuild;
   let id1;
   if (id != null) {
     id1 = id.id;
   }
   const roleSubscriptionsVisibleInGuild = tmpResult.useRoleSubscriptionsVisibleInGuild(id1);
-  tmpResult = tmp(7263);
+  tmpResult = useGuildShopPreviewVisible;
   const guildShopPreviewVisible = tmpResult.useGuildShopPreviewVisible(id);
   let id2;
   if (id != null) {
@@ -31,7 +32,7 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
   const shouldHideGuildPurchaseEntryPoints = CreatorMonetizationRestrictionsHooks.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
   return false;
 };
-export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, arg1) {
+export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, unsafeMutableRoles) {
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -41,6 +42,6 @@ export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, 
   if (id != null) {
     id1 = id.id;
   }
-  const result1 = useRoleSubscriptionsVisibleInGuild.areRoleSubscriptionsVisibleInGuild(id1, arg1);
+  const result1 = useRoleSubscriptionsVisibleInGuild.areRoleSubscriptionsVisibleInGuild(id1, unsafeMutableRoles);
   return false;
 };

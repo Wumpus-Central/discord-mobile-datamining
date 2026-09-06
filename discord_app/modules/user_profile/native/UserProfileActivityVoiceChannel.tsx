@@ -64,9 +64,9 @@ export default function UserProfileActivityVoiceChannel(guild) {
     let tmp2Result = tmp2(tmp3[15]);
     obj2.size = tmp4(tmp3[15]).GuildIconSizes.XXSMALL;
     obj2.guild = guild;
-    obj.children = tmp10(tmp2Result, obj2);
-    let tmp10Result = tmp10(tmp9, obj);
-    let tmp13 = tmp10;
+    obj.children = closure_6(tmp2Result, obj2);
+    let tmp10Result = closure_6(tmp9, obj);
+    let tmp13 = closure_6;
   } else {
     const obj3 = {
       accessibilityRole: "button",
@@ -89,9 +89,9 @@ export default function UserProfileActivityVoiceChannel(guild) {
     tmp2Result = tmp2(tmp3[15]);
     obj4.size = tmp4(tmp3[15]).GuildIconSizes.XXSMALL;
     obj4.guild = guild;
-    obj3.children = tmp10(tmp2Result, obj4);
-    tmp10Result = tmp10(tmp4(tmp3[16]).PressableOpacity, obj3);
-    tmp13 = tmp10;
+    obj3.children = closure_6(tmp2Result, obj4);
+    tmp10Result = closure_6(tmp4(tmp3[16]).PressableOpacity, obj3);
+    tmp13 = closure_6;
   }
   const items2 = [tmp10Result, tmp13(guild(onAction[18]).ChevronSmallRightIcon, { size: "xxs", color: "text-default" }), , ];
   if (stateFromStores) {
@@ -109,14 +109,14 @@ export default function UserProfileActivityVoiceChannel(guild) {
     const obj7 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
     items3[1] = tmp13(tmp4(tmp3[19]).Text, obj7);
     obj5.children = items3;
-    let tmp8Result = tmp8(tmp4(tmp3[16]).PressableOpacity, obj5);
+    let tmp8Result = closure_7(tmp4(tmp3[16]).PressableOpacity, obj5);
   } else {
     const obj8 = { style: tmp.channelButton, children: null };
     const items4 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" }), ];
     const obj9 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
     items4[1] = tmp13(tmp4(tmp3[19]).Text, obj9);
     obj8.children = items4;
-    tmp8Result = tmp8(tmp9, obj8);
+    tmp8Result = closure_7(tmp9, obj8);
   }
   items2[2] = tmp8Result;
   const obj10 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };

@@ -4,6 +4,8 @@
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
 import SKUPreview from "SKUPreview" /* 8772 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -36,10 +38,10 @@ export default function WishlistNUXAddedItemActionSheet(product) {
   memo = noop.useMemo(() => {
     if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
       let obj = { type: "bundle", items: null, previewAssets: null };
-      ({ items: obj2.items, previewAssets: obj2.previewAssets } = tmp);
+      ({ items: obj2.items, previewAssets: obj2.previewAssets } = product);
       return obj;
     } else {
-      const first = _slicedToArray(tmp.items, 1)[0];
+      const first = _slicedToArray(product.items, 1)[0];
       let tmp5;
       if (null != first) {
         obj = { type: "single", item: first };
@@ -58,11 +60,11 @@ export default function WishlistNUXAddedItemActionSheet(product) {
     obj.hideAllActionSheets();
     if (null != stateFromStores) {
       obj = { userId: tmp4.id, sourceAnalyticsLocations: null, initialSection: null };
-      const items = [tmp(7182).COLLECTIBLES_SHOP];
+      const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
       obj.sourceAnalyticsLocations = items;
       obj.initialSection = UserProfileSections.WISHLIST;
-      tmp(8179)(obj);
-      const tmpResult = tmp(8179);
+      showUserProfileActionSheetDefault(obj);
+      const tmpResult = showUserProfileActionSheetDefault;
     }
   }, items2);
   const callback2 = noop.useCallback(() => {

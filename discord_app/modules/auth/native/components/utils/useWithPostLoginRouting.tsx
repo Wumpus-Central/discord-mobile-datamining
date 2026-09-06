@@ -23,16 +23,16 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
   const items1 = [arg0, handleLogin, loginStatus, first];
   const effect = noop.useEffect(() => {
     if (dependencyMap !== constants.LOGGING_IN) {
-      if (tmp !== tmp2.FORGOT_PASSWORD) {
+      if (tmp !== constants.FORGOT_PASSWORD) {
         closure_3(loginStatus);
       }
     }
     if (constants.MFA_STEP === loginStatus) {
       closure_0.push(constants2.MFA);
     } else {
-      if (tmp2.ACCOUNT_SCHEDULED_FOR_DELETION !== tmp6) {
-        if (tmp2.ACCOUNT_DISABLED !== tmp6) {
-          if (tmp2.LOGIN_AGE_GATE === tmp6) {
+      if (constants.ACCOUNT_SCHEDULED_FOR_DELETION !== loginStatus) {
+        if (constants.ACCOUNT_DISABLED !== loginStatus) {
+          if (constants.LOGIN_AGE_GATE === loginStatus) {
             closure_0.push(constants2.AGE_GATE_UNDERAGE, { existingUser: true });
           }
         }
@@ -54,7 +54,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
         handleLogin(dependencyMap[8]).loginReset();
       };
       let replaced = closure_0.replace(constants2.VERIFY_PHONE, obj);
-    } else if (tmp2.PHONE_IP_AUTHORIZATION === tmp6) {
+    } else if (constants.PHONE_IP_AUTHORIZATION === loginStatus) {
       const credentials = authStore.getCredentials();
       ({ login: closure_0, password: closure_1 } = credentials);
       obj = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
@@ -63,7 +63,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
       const intl4 = closure_0(first[6]).intl;
       obj.description = intl4.string(closure_0(first[6]).t["0/ALaJ"]);
       obj.phone = authStore.getCredentials().login;
-      dependencyMap = closure_3(function*(arg0, value) {
+      dependencyMap = closure_3(function*(arg0) {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -135,10 +135,10 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
         if (arg0) {
           let tmp6 = null != handleLogin;
           if (tmp6) {
-            tmp6 = "" !== tmp4;
+            tmp6 = "" !== handleLogin;
           }
           if (tmp6) {
-            closure_1(closure_1_0, tmp4);
+            closure_1(closure_1_0, handleLogin);
           }
         } else {
           AuthenticationActionCreatorsDefault.loginReset();

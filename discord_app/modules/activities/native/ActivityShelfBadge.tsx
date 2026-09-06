@@ -2,7 +2,9 @@
 
 // Module 12086 (ActivityShelfBadge)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import Server from "Server" /* 1894 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,21 +36,21 @@ export default function ActivityShelfBadge(arg0) {
     ({ newBadge: arr[1], elevationShadow: arr[2] } = tmp);
     obj.style = items;
     obj = { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };
-    const intl = tmp2(1114).intl;
-    obj.children = intl.string(tmp2(1114).t.y2b7CA);
-    obj.children = jsx(tmp2(4556).Text, { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null });
+    const intl = util.intl;
+    obj.children = intl.string(util.t.y2b7CA);
+    obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null });
     let tmp6 = <View variant="text-xs/semibold" style={tmp.badgeText} color="text-overlay-light">{null}</View>;
   } else {
     tmp6 = null;
-    if (labelType === tmp2(1894).EmbeddedActivityLabelTypes.UPDATED) {
+    if (labelType === Server.EmbeddedActivityLabelTypes.UPDATED) {
       obj = { style: null, children: null };
       const items1 = [replacementStyles, , ];
       ({ updatedBadge: arr2[1], elevationShadow: arr2[2] } = tmp);
       obj.style = items1;
       const obj1 = { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };
-      const intl2 = tmp2(1114).intl;
-      obj1.children = intl2.string(tmp2(1114).t["/qdhkk"]);
-      obj.children = jsx(tmp2(4556).Text, { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null });
+      const intl2 = util.intl;
+      obj1.children = intl2.string(util.t["/qdhkk"]);
+      obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null });
       tmp6 = <View style={null}>{null}</View>;
     }
   }

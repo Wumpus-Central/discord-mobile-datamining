@@ -6,7 +6,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-let closure_6 = async function _adoptGuildIdentity(identity_guild_id, identity_enabled) {
+let closure_6 = async function _adoptGuildIdentity() {
   c6 = 0;
   c7 = 0;
   c5 = 0;

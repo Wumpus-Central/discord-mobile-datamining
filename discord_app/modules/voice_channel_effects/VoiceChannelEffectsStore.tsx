@@ -83,6 +83,7 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(DispatcherDefault,
       items[HermesBuiltin.arraySpread(items, 0)] = obj;
       closure_10();
     }
+    tmp = null != emoji && null != animationType;
   },
   VOICE_CHANNEL_EFFECT_SENT_LOCAL: function handleVoiceChannelEffectSentLocal() {
     date = new Date();

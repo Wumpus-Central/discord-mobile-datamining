@@ -61,20 +61,20 @@ export default function GameProfileLinkAccount(trackAction) {
             if (null != iconSource) {
               const obj2 = { style: tmp.cardImagesContainer, children: null };
               const obj3 = { source: iconSource, style: tmp.cardImageApplication };
-              const items3 = [tmp13(analyticsLocations(tmp3[11]), obj3), , ];
+              const items3 = [closure_6(analyticsLocations(tmp3[11]), obj3), , ];
               const obj4 = { style: tmp.ellipseGroup, children: null };
               const obj5 = { style: tmp.ellipse };
-              const items4 = [tmp13(tmp12, obj5), , ];
+              const items4 = [closure_6(View, obj5), , ];
               const obj6 = { style: tmp.ellipse };
-              items4[1] = tmp13(tmp12, obj6);
+              items4[1] = closure_6(View, obj6);
               const obj7 = { style: tmp.ellipse };
-              items4[2] = tmp13(tmp12, obj7);
+              items4[2] = closure_6(View, obj7);
               obj4.children = items4;
-              items3[1] = tmp11(tmp12, obj4);
+              items3[1] = closure_7(View, obj4);
               const obj8 = { size: tmp5(tmp3[12]).AvatarSizes.LARGE_48, user: stateFromStores, guildId: "Array" };
-              items3[2] = tmp13(tmp5(tmp3[12]).Avatar, obj8);
+              items3[2] = closure_6(tmp5(tmp3[12]).Avatar, obj8);
               obj2.children = items3;
-              tmp11Result = tmp11(tmp12, obj2);
+              tmp11Result = closure_7(View, obj2);
             }
             const items5 = [tmp11Result, , ];
             const obj9 = { style: tmp.cardContent, children: null };

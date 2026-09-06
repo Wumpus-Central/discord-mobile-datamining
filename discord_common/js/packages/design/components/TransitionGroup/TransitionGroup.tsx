@@ -44,7 +44,7 @@ class TransitionGroup {
       const set = new Set(keys);
       const map = new Map(ref2.current);
       function _loop() {
-        const tmp2 = getItemKey(closure_2);
+        const tmp2 = getItemKey(item);
         closure_0 = tmp2;
         let obj = map;
         value = map.get(tmp2);
@@ -77,9 +77,9 @@ class TransitionGroup {
               }
             }
           }
-          obj = { item: tmp, children: renderItem(tmp2, tmp, MOUNTED, _cleanUp2), state: MOUNTED, cleanUp: _cleanUp2, renderItem };
+          obj = { item, children: renderItem(tmp2, item, MOUNTED, _cleanUp2), state: MOUNTED, cleanUp: _cleanUp2, renderItem };
         } else {
-          if (value.item === tmp) {
+          if (value.item === item) {
             if (value.renderItem === renderItem) {
               let tmp6 = value;
             }
@@ -91,36 +91,34 @@ class TransitionGroup {
           } else {
             state = value.state;
           }
-          obj = { item: tmp, children: renderItem(tmp2, tmp, state, value.cleanUp), state, cleanUp: value.cleanUp, renderItem };
+          obj = { item, children: renderItem(tmp2, item, state, value.cleanUp), state, cleanUp: value.cleanUp, renderItem };
           tmp6 = obj;
         }
       }
       const iter = set[Symbol.iterator]();
       while (iter !== undefined) {
-        closure_2 = iter.next();
+        let item = iter.next();
         let _loopResult = _loop();
         continue;
       }
       for (const item10035 of set) {
-        let tmp7 = item10035;
         value = map.get(item10035);
         let tmp9 = value;
         if (null != value) {
-          let tmp25 = lazyCleanUpDelay;
           if (tmp9.state === lazyCleanUpDelay.YEETED) {
             if (tmp9.renderItem === map) {
-              let result = map.set(tmp7, tmp9);
+              let result = map.set(item10035, tmp9);
             }
           }
           let obj = { item: tmp9.item, children: null, state: null, cleanUp: null, renderItem: null };
-          obj.children = map(tmp7, tmp9.item, tmp25.YEETED, tmp9.cleanUp);
-          obj.state = tmp25.YEETED;
+          obj.children = map(item10035, tmp9.item, lazyCleanUpDelay.YEETED, tmp9.cleanUp);
+          obj.state = lazyCleanUpDelay.YEETED;
           obj.cleanUp = tmp9.cleanUp;
           obj.renderItem = map;
           if (null != obj.children) {
-            let result1 = map.set(tmp7, tmp18);
+            let result1 = map.set(item10035, tmp18);
           } else {
-            let deleteResult = map.delete(tmp7);
+            let deleteResult = map.delete(item10035);
           }
         }
         continue;
@@ -176,5 +174,5 @@ export const TransitionItem = function TransitionItem(renderItem) {
       items1 = [];
     }
     return items1;
-  }, items)} renderItem={arg0.renderItem} getItemKey={getSingleItemKey} />;
+  }, items)} renderItem={renderItem.renderItem} getItemKey={getSingleItemKey} />;
 };

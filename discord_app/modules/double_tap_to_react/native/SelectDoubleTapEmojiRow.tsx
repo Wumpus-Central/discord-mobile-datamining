@@ -200,25 +200,25 @@ export default noop.memo((selectedEmoji) => {
     const obj4 = { children: null };
     obj2.src = url;
     obj2 = [, ];
-    obj2[0] = tmp7(emojiURL, obj2);
+    obj2[0] = closure_9(emojiURL, obj2);
     const obj5 = { style: selectedCustomReactionIcon.customReactionOverlay, children: null };
     ReactionIcon = ReactionIcon(tmp[19]).ReactionIcon;
     const obj6 = { color: selectedCustomReactionIcon.selectedCustomReactionIcon.color, style: null };
     selectedCustomReactionIcon = selectedCustomReactionIcon.selectedCustomReactionIcon;
     obj6.style = selectedCustomReactionIcon;
-    tmp = tmp7(ReactionIcon, obj6);
+    tmp = closure_9(ReactionIcon, obj6);
     obj5.children = tmp;
-    emojiURL = tmp7(tmp6, obj5);
+    emojiURL = closure_9(tmp6, obj5);
     obj2[1] = emojiURL;
     obj4.children = obj2;
-    tmp5(closure_10, obj4);
-    const tmp7Result = tmp7(emojiURL, obj2);
+    closure_11(closure_10, obj4);
+    const tmp7Result = closure_9(emojiURL, obj2);
   } else {
     const obj7 = { color: selectedCustomReactionIcon.chooseEmojiButton.color };
-    obj1.children = tmp7(ReactionIcon(tmp[19]).ReactionIcon, obj7);
-    obj.children = tmp7(tmp6, obj1);
-    items5[1] = tmp7(selectedEmoji(substr[10]).PressableOpacity, obj);
+    obj1.children = closure_9(ReactionIcon(tmp[19]).ReactionIcon, obj7);
+    obj.children = closure_9(tmp6, obj1);
+    items5[1] = closure_9(selectedEmoji(substr[10]).PressableOpacity, obj);
     obj.children = items5;
-    return tmp5(tmp6, obj);
+    return closure_11(tmp6, obj);
   }
 });

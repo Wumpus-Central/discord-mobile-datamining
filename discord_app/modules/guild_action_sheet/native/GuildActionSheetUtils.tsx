@@ -16,8 +16,8 @@ export const useGuildActionSheetPermissions = function useGuildActionSheetPermis
     if (null == closure_0) {
       let obj = { canAccessSettings: false, canEditNickname: false, canManageChannels: false };
     } else {
-      obj = { canAccessSettings: PermissionStore.canAccessGuildSettings(tmp), canEditNickname: PermissionStore.can(Permissions.CHANGE_NICKNAME, tmp) || PermissionStore.can(Permissions.MANAGE_NICKNAMES, tmp), canManageChannels: PermissionStore.can(Permissions.MANAGE_CHANNELS, tmp) };
-      const tmp3 = PermissionStore.can(Permissions.CHANGE_NICKNAME, tmp) || PermissionStore.can(Permissions.MANAGE_NICKNAMES, tmp);
+      obj = { canAccessSettings: PermissionStore.canAccessGuildSettings(closure_0), canEditNickname: PermissionStore.can(Permissions.CHANGE_NICKNAME, closure_0) || PermissionStore.can(Permissions.MANAGE_NICKNAMES, closure_0), canManageChannels: PermissionStore.can(Permissions.MANAGE_CHANNELS, closure_0) };
+      const tmp3 = PermissionStore.can(Permissions.CHANGE_NICKNAME, closure_0) || PermissionStore.can(Permissions.MANAGE_NICKNAMES, closure_0);
     }
     return obj;
   }, items1);

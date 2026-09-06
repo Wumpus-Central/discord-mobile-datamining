@@ -46,8 +46,8 @@ export const useTextFieldState = function useTextFieldState(onClear) {
   };
   return obj;
 };
-export const useTextField = function useTextField(onClear, ref) {
-  ref = callback1.useRef(null);
+export const useTextField = function useTextField(onClear, arg1) {
+  const ref = callback1.useRef(null);
   onClear = ref;
   const items = [ref, onClear.onClear];
   let state = {};
@@ -101,7 +101,7 @@ export const useTextField = function useTextField(onClear, ref) {
     hasValue: first.length > 0
   };
   const items3 = [ref, state];
-  const imperativeHandle = state.useImperativeHandle(ref, () => ({
+  const imperativeHandle = state.useImperativeHandle(arg1, () => ({
     blur() {
       const current = onClear.current;
       if (current != null) {

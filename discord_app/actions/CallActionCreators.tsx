@@ -39,10 +39,10 @@ export default {
           }
           const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(closure_1, closure_2);
           if (ringable) {
-            self.ring(tmp2);
+            self.ring(closure_1);
           }
           if (closure_5 != null) {
-            closure_5(tmp2);
+            closure_5(closure_1);
           }
         }, () => {
           let obj = AnalyticsUtilsDefault;
@@ -56,9 +56,9 @@ export default {
             str = user.username;
           }
           obj.body = intl2.format(util.t.IdKo2z, { username: str });
-          const intl3 = tmp3(1114).intl;
+          const intl3 = util.intl;
           obj.confirmText = intl3.string(util.t["PMsq/b"]);
-          const intl4 = tmp3(1114).intl;
+          const intl4 = util.intl;
           obj.cancelText = intl4.string(util.t.BddRzS);
           obj.onConfirm = function onConfirm() {
             closure_1(closure_2[9]);
@@ -86,7 +86,7 @@ export default {
       const CALLABLE = constants2.CALLABLE;
       const result = obj.canRingUsersInChannel(channel);
       if (result) {
-        const HTTP = tmp3(1272).HTTP;
+        const HTTP = HTTPUtils.HTTP;
         const request = { url: timestampProducer.CALL_RING(channelId), body: null, oldFormErrors: true, rejectWithError: true };
         obj = { recipients: items, analytics_location: gdm_invite };
         request.body = obj;
@@ -95,11 +95,11 @@ export default {
           obj = { type: "GUILD_LOCAL_RING_START", ringing: items, guildId: channel.guild_id };
           DispatcherDefault.dispatch(obj);
         }
+        tmp14 = channel.type === constants3.GUILD_VOICE && null != items;
       } else if (tmp7) {
         const obj1 = { type: "CALL_ENQUEUE_RING", channelId, recipients: items };
         obj1.dispatch(obj1);
       }
-      tmp3 = require;
     }
   },
   stopRinging(channelId, items) {

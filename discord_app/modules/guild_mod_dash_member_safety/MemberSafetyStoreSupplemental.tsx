@@ -16,7 +16,7 @@ export const hasMemberSupplemental = function hasMemberSupplemental(arg0, arg1) 
 };
 export const getMemberSupplementalByGuildId = function getMemberSupplementalByGuildId(guildId) {
   if (null == dependencyMap[guildId]) {
-    tmp[guildId] = {};
+    dependencyMap[guildId] = {};
   }
   return dependencyMap[guildId];
 };
@@ -25,9 +25,9 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
     return false;
   } else {
     if (null == dependencyMap[guildId]) {
-      tmp2[guildId] = {};
+      dependencyMap[guildId] = {};
     }
-    closure_0 = tmp2[guildId];
+    closure_0 = dependencyMap[guildId];
     const item = memberSupplementals.forEach((joinSourceType) => {
       joinSourceType = joinSourceType.joinSourceType;
       if (joinSourceType == null) {

@@ -6,6 +6,8 @@ import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import useThemeDefault from "useTheme" /* 4495 */;
+import _modDef11436 from "module_11436" /* 11436 */;
+import _modDef11437 from "module_11437" /* 11437 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,21 +36,17 @@ export default function BlockedPaymentsCountryDisplay() {
   const intl2 = util.intl;
   const obj1 = { helpdeskArticle: null };
   const tmp4 = useThemeDefault();
-  const tmp5 = React5;
-  const tmp6 = React3;
-  const tmp7 = timestampProducer;
   obj1.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.BLOCKED_PAYMENTS);
   obj.children = intl2.format(util.t.IHxEJU, obj1);
   items[1] = timestampProducer(native.LegacyText, obj);
   const obj2 = { style: tmp.image, source: null };
-  const tmp8 = React4;
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(11436);
+    let tmp2Result = _modDef11436;
   } else {
-    tmp2Result = tmp2(11437);
+    tmp2Result = _modDef11437;
   }
   obj2.source = tmp2Result;
-  items[2] = tmp7(tmp8, obj2);
+  items[2] = timestampProducer(React4, obj2);
   obj.children = items;
-  return tmp5(tmp6, obj);
+  return React5(React3, obj);
 };

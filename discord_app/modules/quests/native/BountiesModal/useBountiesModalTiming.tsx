@@ -170,6 +170,6 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   if (isCompleted) {
     isCompleted = !tmp23;
   }
-  obj = { isCtaVisible: isCompleted, isEndCardVisible: tmp5, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback4, handleVideoResumed: callback5, handleReplay: callback2, showEndCard: callback3, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp9, maxVideoProgressSeconds: tmp11, videoDuration: tmp13 };
+  obj = { isCtaVisible: isCompleted, isEndCardVisible: tmp5, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback4, handleVideoResumed: callback5, handleReplay: callback2, showEndCard: callback3, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp7, maxVideoProgressSeconds: tmp11, videoDuration: tmp13 };
   return obj;
 };

@@ -156,7 +156,7 @@ function buildCommand(arg0) {
                       ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
                     }
                     if (choices.type !== closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.STRING) {
-                      if (choices.type === tmp4(tmp5[6]).ApplicationCommandOptionType.ATTACHMENT) {
+                      if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.ATTACHMENT) {
                         if ("file_types" in choices) {
                           let obj1 = {};
                           let merged3 = Object.assign(obj);
@@ -194,7 +194,7 @@ function buildCommand(arg0) {
                   ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
                 }
                 if (choices.type !== closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.STRING) {
-                  if (choices.type === tmp4(tmp5[6]).ApplicationCommandOptionType.ATTACHMENT) {
+                  if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.ATTACHMENT) {
                     if ("file_types" in choices) {
                       let obj1 = {};
                       let merged3 = Object.assign(obj);
@@ -232,7 +232,7 @@ function buildCommand(arg0) {
               ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
             }
             if (choices.type !== closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.STRING) {
-              if (choices.type === tmp4(tmp5[6]).ApplicationCommandOptionType.ATTACHMENT) {
+              if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.ATTACHMENT) {
                 if ("file_types" in choices) {
                   let obj1 = {};
                   let merged3 = Object.assign(obj);
@@ -270,7 +270,7 @@ function buildCommand(arg0) {
           ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
         }
         if (choices.type !== closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.STRING) {
-          if (choices.type === tmp4(tmp5[6]).ApplicationCommandOptionType.ATTACHMENT) {
+          if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.ATTACHMENT) {
             if ("file_types" in choices) {
               let obj1 = {};
               let merged3 = Object.assign(obj);
@@ -325,15 +325,12 @@ function buildSubCommands(arg0) {
     let obj = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
     const items = [buildCommand(obj)];
     return items;
-  } else {
-    if (command.type !== Server.ApplicationCommandOptionType.SUB_COMMAND) {
-      if (command.type !== tmp(1894).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
-        obj = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
-        const items1 = [buildCommand(obj)];
-        return items1;
-      }
+  } else if (command.type !== Server.ApplicationCommandOptionType.SUB_COMMAND) {
+    if (command.type !== Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+      obj = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
+      const items1 = [buildCommand(obj)];
+      return items1;
     }
-    tmp = require;
   }
   const items2 = [];
   if (null == command.options) {
@@ -345,12 +342,10 @@ function buildSubCommands(arg0) {
       let push = items2.push;
       obj = { rootCommand, command: found[num3], applicationId, subCommandPath: null, useKeyedPermissions: null };
       let items3 = subCommandPath;
-      let tmp6 = buildSubCommands;
       if (subCommandPath == null) {
         items3 = [];
       }
-      let obj1 = { name: found[num3].name, type: null, displayName: null };
-      obj1.type = Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP;
+      let obj1 = { name: found[num3].name, type: Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP, displayName: null };
       let name = found[num3].name_localized;
       if (name == null) {
         name = found[num3].name;
@@ -360,7 +355,7 @@ function buildSubCommands(arg0) {
       obj.subCommandPath = items3.concat(items4);
       obj.useKeyedPermissions = useKeyedPermissions;
       let items5 = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(tmp6(obj), 0);
+      let arraySpreadResult = HermesBuiltin.arraySpread(buildSubCommands(obj), 0);
       let applyResult = HermesBuiltin.apply(items5, items2);
     }
     const options1 = command.options;
@@ -368,12 +363,10 @@ function buildSubCommands(arg0) {
     for (let num4 = 0; num4 < found1.length; num4 = num4 + 1) {
       let obj2 = { rootCommand, command: found1[num4], applicationId, subCommandPath: null, useKeyedPermissions: null };
       let items6 = subCommandPath;
-      let tmp16 = buildCommand;
       if (subCommandPath == null) {
         items6 = [];
       }
-      let obj3 = { name: found1[num4].name, type: null, displayName: null };
-      obj3.type = Server.ApplicationCommandOptionType.SUB_COMMAND;
+      let obj3 = { name: found1[num4].name, type: Server.ApplicationCommandOptionType.SUB_COMMAND, displayName: null };
       let name2 = found1[num4].name_localized;
       if (name2 == null) {
         name2 = found1[num4].name;
@@ -382,7 +375,7 @@ function buildSubCommands(arg0) {
       let items7 = [obj3];
       obj2.subCommandPath = items6.concat(items7);
       obj2.useKeyedPermissions = useKeyedPermissions;
-      let arr = items2.push(tmp16(obj2));
+      let arr = items2.push(buildCommand(obj2));
     }
     if (tmp21) {
       const obj4 = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
@@ -447,7 +440,7 @@ export const applicationPermissionsList = function applicationPermissionsList(ar
       if (null != applicationCommandPermissions.applicationCommandPermissions) {
         const obj = { id: null, permissions: null };
         ({ id: obj.id, applicationCommandPermissions: obj.permissions } = applicationCommandPermissions);
-        arr.push(obj);
+        arr = arr.push(obj);
       }
       return arr;
     }, []);
@@ -479,11 +472,11 @@ export const getMatchingGroupCommands = function getMatchingGroupCommands(contex
 export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(activeOption) {
   let tmp3 = activeOption.type === Server.ApplicationCommandOptionType.USER;
   if (!tmp3) {
-    tmp3 = activeOption.type === tmp(1894).ApplicationCommandOptionType.MENTIONABLE;
+    tmp3 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
-  let tmp4 = activeOption.type === tmp(1894).ApplicationCommandOptionType.ROLE;
+  let tmp4 = activeOption.type === Server.ApplicationCommandOptionType.ROLE;
   if (!tmp4) {
-    tmp4 = activeOption.type === tmp(1894).ApplicationCommandOptionType.MENTIONABLE;
+    tmp4 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
   const tmp5 = activeOption.type === Server.ApplicationCommandOptionType.STRING;
   let tmp6 = tmp5;

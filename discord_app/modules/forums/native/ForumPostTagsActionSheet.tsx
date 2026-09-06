@@ -95,7 +95,7 @@ export default function ForumPostTagsActionSheet(thread) {
     }),
 
   ];
-  const obj2 = { style: tmp3.saveButton, children: null };
+  let obj2 = { style: tmp3.saveButton, children: null };
   const obj3 = { text: null, onPress: null };
   const intl3 = tmp4(1114).intl;
   obj3.text = intl3.string(thread(1114).t["R3BPH+"]);
@@ -103,7 +103,7 @@ export default function ForumPostTagsActionSheet(thread) {
     Array.from(first);
     if (null != dependencyMap) {
       const items = [];
-      HermesBuiltin.arraySpread(tmp, 0);
+      HermesBuiltin.arraySpread(first, 0);
       tmp4(items);
     } else if (null != thread) {
       ForumActionCreatorsDefault.updateForumPostTags(tmp5.id, tmp3);

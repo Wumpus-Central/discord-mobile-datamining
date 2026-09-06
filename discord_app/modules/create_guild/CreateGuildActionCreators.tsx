@@ -6,10 +6,8 @@ import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4753 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _createGuildFromTemplate(name, icon, arg2, arg3, arg4) {
-  closure_2 = arg2;
-  closure_3 = arg3;
-  closure_4 = arg4;
+let closure_5 = async function _createGuildFromTemplate() {
+  let id = arg2;
   c9 = 0;
   c10 = 0;
   c8 = 0;

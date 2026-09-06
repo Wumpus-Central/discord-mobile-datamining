@@ -5,7 +5,7 @@ import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_5 = async function _getDeviceState(arg0, value) {
+let closure_5 = async function _getDeviceState() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

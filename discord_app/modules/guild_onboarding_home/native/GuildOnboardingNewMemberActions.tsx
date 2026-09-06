@@ -206,20 +206,20 @@ export default function GuildOnboardingNewMemberActions(guildId) {
           obj2 = { onPress: tmp10, style: tmp.actionContainer, children: null };
           obj3 = { style: tmp.emojiPlaceholder, children: null };
           const obj4 = { size: tmp2(tmp3[22]).Icon.Sizes.REFRESH_SMALL_16, source: stateFromStores1(tmp3[29]) };
-          obj3.children = tmp17(tmp2(tmp3[22]).Icon, obj4);
-          const items7 = [tmp17(tmp16, obj3), ];
+          obj3.children = closure_15(tmp2(tmp3[22]).Icon, obj4);
+          const items7 = [closure_15(View, obj3), ];
           const obj5 = { style: tmp.channelNameContainer, children: null };
           const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
           const intl = tmp2(tmp3[25]).intl;
           obj6.children = intl.string(tmp2(tmp3[25]).t["K/i3iQ"]);
-          obj5.children = tmp17(tmp2(tmp3[21]).Text, obj6);
-          items7[1] = tmp17(tmp16, obj5);
+          obj5.children = closure_15(tmp2(tmp3[21]).Text, obj6);
+          items7[1] = closure_15(View, obj5);
           obj2.children = items7;
-          tmp15Result = tmp15(tmp2(tmp3[24]).PressableOpacity, obj2);
+          tmp15Result = closure_16(tmp2(tmp3[24]).PressableOpacity, obj2);
         }
         items6[2] = tmp15Result;
         obj.children = items6;
-        tmp15Result = tmp15(tmp16, obj);
+        tmp15Result = closure_16(View, obj);
       }
     }
   }

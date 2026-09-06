@@ -4,10 +4,10 @@
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 6625 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9964 */;
 import noop from "module_19" /* 19 */;
 
-const EntitlementFeatureNames = tmp4(7853);
-const PremiumFeatureUpsellDefault = tmp(9964);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

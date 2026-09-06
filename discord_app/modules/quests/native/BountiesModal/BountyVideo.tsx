@@ -113,8 +113,8 @@ export const BountyVideo = function BountyVideo(bounty) {
   const effect = obj2.useEffect(() => () => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
   }, items1);
   const items2 = [first, sharedValue];
@@ -126,8 +126,8 @@ export const BountyVideo = function BountyVideo(bounty) {
   callback = obj2.useCallback(() => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
     closure_12(true);
   }, []);
@@ -139,7 +139,7 @@ export const BountyVideo = function BountyVideo(bounty) {
     }
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp3.current);
+      clearTimeout(ref.current);
     }
     ref.current = setTimeout(() => {
       closure_1_12(true);

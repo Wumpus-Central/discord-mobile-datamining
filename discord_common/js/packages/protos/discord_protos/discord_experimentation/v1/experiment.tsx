@@ -649,7 +649,7 @@ let items = [
   { no: 2, name: "linked_id", kind: "scalar", T: 6 },
   { no: 3, name: "shared_control", kind: "scalar", T: 8 }
 ];
-let tmp8 = new "DEFAULT"("discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings", items, tmp5, tmp4, "create", tmp3, "internalBinaryRead", "internalBinaryWrite", tmp2, Experiment_NumberLineSettings$Type, tmp, fn, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, "DEFAULT", items, new.target, exports);
+const tmp8 = new "DEFAULT"("discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings", items, tmp5, tmp4, "create", tmp3, "internalBinaryRead", "internalBinaryWrite", tmp2, Experiment_NumberLineSettings$Type, tmp, fn, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, "DEFAULT", items, new.target, exports);
 let closure_15 = tmp8;
 const MessageType3 = fn(1188).MessageType;
 class Variation$Type extends MessageType3 {
@@ -1073,7 +1073,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(enableDecisionL
 const items3 = [{ no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 }, { no: 2, name: "metrics_sample_rate", kind: "scalar", T: 1 }, { no: 3, name: "log_context_on_failure", kind: "scalar", T: 8 }, { no: 4, name: "log_raw_headers", kind: "scalar", T: 8 }, { no: 5, name: "tag_filter_metrics", kind: "scalar", T: 8 }, ];
 const obj13 = { no: 6, name: "decision_log_sample_rate", kind: "scalar", T: 1 };
 items3[5] = obj13;
-let tmp11 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.DebugConfig", items3, tmp5, Bucket$Type, "create", DebugConfig$Type, "internalBinaryRead", items3, new.target, undefined, tmp, fn, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, tmp2, variationType, exports, obj13, undefined, 8, 7);
+const tmp11 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.DebugConfig", items3, tmp5, Bucket$Type, "create", DebugConfig$Type, "internalBinaryRead", items3, new.target, undefined, tmp, fn, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, tmp2, variationType, exports, obj13, undefined, 8, 7);
 let closure_18 = tmp11;
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx");

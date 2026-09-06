@@ -2,11 +2,15 @@
 
 // Module 13218 (GuildTemplateEmbed)
 import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7326 */;
 import Constants from "Constants" /* 7736 */;
 import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7936 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
+import _modDef11808 from "module_11808" /* 11808 */;
+import _modDef11809 from "module_11809" /* 11809 */;
+import _modDef13219 from "module_13219" /* 13219 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7457 */;
 import size from "module_2" /* 2 */;
 
@@ -15,8 +19,8 @@ const GuildTemplateStates = GuildTemplatesConstants.GuildTemplateStates;
 const InviteTypes = Constants.InviteTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx");
 
-export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, arg1) {
-  ({ colors, baseColors } = getEmbedThemeColorsDefault(arg1));
+export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, theme) {
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(theme));
   const guildTemplate = GuildTemplateStore.getGuildTemplate(code);
   if (null == guildTemplate) {
     return null;
@@ -34,14 +38,14 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     const intl = util.intl;
     obj.headerText = intl.string(util.t.C7ZRNw).toUpperCase();
     let obj1 = RowGeneratorStyleSheet;
-    obj.titleColor = obj1.processColorOrThrow(tmp(576).unsafe_rawColors.RED_400);
+    obj.titleColor = obj1.processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
     const intl2 = util.intl;
     obj.titleText = intl2.string(util.t.A6MwXE);
     const str = intl.string(util.t.C7ZRNw);
-    if (obj3.isThemeDark(arg1)) {
-      let tmpResult = tmp(11808);
+    if (obj3.isThemeDark(theme)) {
+      let tmpResult = _modDef11808;
     } else {
-      tmpResult = tmp(11809);
+      tmpResult = _modDef11809;
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -60,7 +64,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj1.titleColor = colors.titleColor;
     obj1.subtitle = formatToPlainStringResult;
     obj1.subtitleColor = colors.subtitleColor;
-    obj1.thumbnailUrl = Image.resolveAssetSource(tmp(13219)).uri;
+    obj1.thumbnailUrl = Image.resolveAssetSource(_modDef13219).uri;
     ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
     const intl6 = util.intl;
     obj1.acceptLabelText = intl6.string(util.t["a3Gl+e"]);
@@ -68,5 +72,5 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj1.type = InviteTypes.GUILD;
     return obj1;
   }
-  const tmp3 = getEmbedThemeColorsDefault(arg1);
+  const tmp3 = getEmbedThemeColorsDefault(theme);
 };

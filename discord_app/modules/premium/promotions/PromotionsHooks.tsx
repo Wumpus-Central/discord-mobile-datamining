@@ -24,7 +24,7 @@ function useEligibleActiveOutboundPromotions(arg0) {
   const obj2 = flag(stateFromStores[4]);
   const items1 = [PromotionsStore];
   stateFromStores = flag(stateFromStores[4]).useStateFromStores(items1, () => PromotionsStore.consumedInboundPromotionId);
-  let obj3 = flag(stateFromStores[4]);
+  const obj3 = flag(stateFromStores[4]);
   const items2 = [PromotionsStore];
   const stateFromStores1 = flag(stateFromStores[4]).useStateFromStores(items2, () => PromotionsStore.claimedOutboundPromotionCodes);
   const items3 = [stateFromStoresArray, stateFromStores, stateFromStores1, flag];
@@ -39,21 +39,19 @@ function useEligibleActiveOutboundPromotions(arg0) {
       if (tmp) {
         let result = PromotionUtils.shouldShowOutboundPromotionOnPlatform(id);
         if (result) {
-          result = tmp2(13355).isDedicatedSurfacePromotion(id);
+          result = PromotionUtils.isDedicatedSurfacePromotion(id);
           flag = !result;
           if (!result) {
             flag = true;
             if (set != null) {
-              const hasItem = obj3.has(id.id);
+              const hasItem = set.has(id.id);
               flag = true;
             }
-            obj3 = set;
           }
           result = flag;
-          const tmp2Result = tmp2(13355);
+          const tmp2Result = PromotionUtils;
         }
         tmp = result;
-        tmp2 = require;
       }
       return tmp;
     });

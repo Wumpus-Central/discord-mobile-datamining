@@ -6,6 +6,7 @@ import router_utilsAll from "router_utils" /* 1100 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5527 */;
 import MemberVerificationModalDefault from "MemberVerificationModal" /* 5571 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5577 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5578 */;
@@ -56,11 +57,11 @@ function ExistingJoinRequestHandler(guildId) {
     }
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
       onClose();
-      let tmp2Result = tmp2(5527);
+      let tmp2Result = MemberVerificationAlertActionCreators;
       const result = tmp2Result.openMemberVerificationPendingAlert(guildId);
-    } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+    } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
       onClose();
-      tmp2Result = tmp2(5527);
+      tmp2Result = MemberVerificationAlertActionCreators;
       const obj = { guildId, canWithdraw: true };
       const result1 = tmp2Result.openMemberVerificationRejectedAlert(obj);
     }

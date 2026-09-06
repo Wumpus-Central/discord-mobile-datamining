@@ -4,7 +4,9 @@
 import nativeDefault from "native" /* 576 */;
 import DateUtils from "DateUtils" /* 4242 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import CircleXIcon from "CircleXIcon" /* 6616 */;
 import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16578 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,10 +15,10 @@ function ApplicationStatusIcon(status) {
   status = status.status;
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === status) {
     let obj = { size: "sm", color: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: nativeDefault.colors.STATUS_POSITIVE_TEXT };
-    return timestampProducer(tmp(4520).CircleCheckIcon, obj);
-  } else if (tmp(4384).GuildJoinRequestApplicationStatuses.REJECTED === status) {
+    return timestampProducer(CircleCheckIcon.CircleCheckIcon, obj);
+  } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === status) {
     obj = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, secondaryColor: nativeDefault.colors.WHITE };
-    return timestampProducer(tmp(6616).CircleXIcon, obj);
+    return timestampProducer(CircleXIcon.CircleXIcon, obj);
   } else {
     return null;
   }

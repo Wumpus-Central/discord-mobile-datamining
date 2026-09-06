@@ -4,6 +4,8 @@
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
 import DisplayNameFont from "DisplayNameFont" /* 1391 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8164 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8167 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,21 +27,21 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
     if (hasChanges) {
       let tmp4 = selectedEffectId === DisplayNameEffect.DisplayNameEffect.SOLID;
       if (tmp4) {
-        tmp4 = arr.length > 0;
+        tmp4 = selectedColors.length > 0;
       }
       if (tmp4) {
-        tmp4 = arr[0] === defaultColor;
+        tmp4 = selectedColors[0] === defaultColor;
       }
-      let items = arr;
+      let items = selectedColors;
       if (tmp4) {
         items = [];
       }
       let obj = { fontId: selectedFontId, effectId: selectedEffectId, colors: items };
       if (isTryItOut) {
-        let tmp2Result = tmp2(8167);
+        let tmp2Result = UserProfileActionCreators;
         const result = tmp2Result.setTryItOutDisplayNameStyles(obj);
       } else {
-        tmp2Result = tmp2(8164);
+        tmp2Result = UserProfileSettingsActionCreators;
         obj = { guildId, displayNameStyles: null };
         obj.displayNameStyles = obj;
         tmp2Result.setPendingChanges(obj);

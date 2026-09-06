@@ -59,7 +59,7 @@ class RTCLatencyTestManager extends tmp3 {
           const rounded = Math.floor(SECOND + Math.random() * closure_7);
           if (null != applyArgumentsResult.refetchTimeout) {
             const _clearTimeout = clearTimeout;
-            clearTimeout(tmp4.refetchTimeout);
+            clearTimeout(applyArgumentsResult.refetchTimeout);
           }
           const _setTimeout = setTimeout;
           applyArgumentsResult.refetchTimeout = setTimeout(applyArgumentsResult._fetchAndScheduleRefetch, rounded);

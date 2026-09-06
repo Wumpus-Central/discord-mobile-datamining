@@ -51,7 +51,7 @@ export default function SoundmojiActionSheet(guildId) {
         str = "";
       }
       obj.name = str;
-      tmp4Result = tmp4(channelId(tmp6[8]), obj);
+      tmp4Result = closure_5(channelId(tmp6[8]), obj);
       const tmp11 = channelId(tmp6[8]);
     }
     const items1 = [tmp4Result, ];
@@ -66,7 +66,7 @@ export default function SoundmojiActionSheet(guildId) {
     items1[1] = closure_6(View, obj1);
     obj.children = items1;
     obj.children = closure_6(View, obj);
-    tmp4Result = tmp4(guildId(messageId[7]).BottomSheet, obj);
+    tmp4Result = closure_5(guildId(messageId[7]).BottomSheet, obj);
   }
   return tmp4Result;
 };

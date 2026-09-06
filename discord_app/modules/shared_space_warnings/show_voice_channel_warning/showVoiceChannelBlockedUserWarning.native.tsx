@@ -2,6 +2,8 @@
 
 // Module 13739 (showVoiceChannelBlockedUserWarning)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 
@@ -16,14 +18,14 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
   const state = AppStateStore.getState();
   if (state === ConstantsIOS.AppStates.ACTIVE) {
     hasOwnProperty();
-    let obj = { channelId, blockedUserId: items1, impressionName: tmp2(1250).ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING, impressionProperties: null };
+    let obj = { channelId, blockedUserId: items1, impressionName: discord_common_AnalyticsUtils.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING, impressionProperties: null };
     obj = { channel_id: channelId, blocked_user_ids: null, warning_surface: null };
     const items = [items1];
     obj.blocked_user_ids = items;
     obj.warning_surface = constants.POST_JOIN_SHEET;
     obj.impressionProperties = obj;
-    obj.openLazy(tmp2(1896)(13740, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
-    const tmp11 = tmp2(1896)(13740, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(13740, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
+    const tmp11 = asyncRequireImpl(13740, dependencyMap.paths);
   } else {
     React4();
   }

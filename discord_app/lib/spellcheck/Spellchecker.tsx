@@ -15,8 +15,9 @@ require = fn;
 let closure_10 = async function _install() {
   closure_2 = tmp2;
   closure_1 = tmp3;
-  closure_0 = await availableDictionaries.getAvailableDictionaries();
-  if (arg1 == null) {
+  await availableDictionaries.getAvailableDictionaries();
+  closure_0 = value;
+  if (value == null) {
     closure_0 = [];
   }
   closure_129_0 = closure_0;
@@ -260,26 +261,26 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
       logger.info("setSpellCheckerLanguages unavailable, falling back to single-locale: " + mapped1[0]);
       self.applyLocale(mapped1[0]);
     } else {
-      const result = obj.setSpellCheckerLanguages(mapped1);
+      const result = spellCheck.setSpellCheckerLanguages(mapped1);
       if (result != null) {
         result.then((result) => {
           const info = logger.info;
           if (result) {
             const _HermesInternal2 = HermesInternal;
-            info("Spellcheck languages: " + obj.join(", "), "(applied)");
+            info("Spellcheck languages: " + mapped1.join(", "), "(applied)");
           } else {
             const _HermesInternal = HermesInternal;
-            info("Failed to set spellcheck languages, falling back to single-locale: " + obj[0]);
-            self.applyLocale(obj[0]);
+            info("Failed to set spellcheck languages, falling back to single-locale: " + mapped1[0]);
+            self.applyLocale(mapped1[0]);
           }
         });
       }
     }
-    obj = spellCheck;
   } else {
     let _HermesInternal = HermesInternal;
     logger.info("No spellcheck languages resolved from candidates: " + items.join(", "));
   }
+  const set = new Set(mapped.filter(mapped1(1369).isNotNullish));
 };
 prototype["buildLanguageIndex"] = function buildLanguageIndex(items) {
   const obj = {};
@@ -297,9 +298,9 @@ let closure_9 = apply.debounce((detectLanguage, hasAttribute) => {
   let textContent = null;
   if (null != hasAttribute) {
     if (!obj.isElement(hasAttribute, globalThis.HTMLInputElement)) {
-      let tmp2Result = tmp2(1928);
+      let tmp2Result = DOMUtils;
       if (!tmp2Result.isElement(hasAttribute, globalThis.HTMLTextAreaElement)) {
-        tmp2Result = tmp2(1928);
+        tmp2Result = DOMUtils;
         if (tmp2Result.isElement(hasAttribute)) {
           if (hasAttribute.hasAttribute("contenteditable")) {
             textContent = hasAttribute.textContent;

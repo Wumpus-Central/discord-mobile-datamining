@@ -1,8 +1,11 @@
 // === Module 10733: GiftingPromotionUtils ===
 
 // Module 10733 (GiftingPromotionUtils)
+import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import PremiumGiftingGogoPromotionExperiment2 from "PremiumGiftingGogoPromotionExperiment" /* 10740 */;
 import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10741 */;
+import MarketingComponentType from "MarketingComponentType" /* 10742 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PromotionsStore from "PromotionsStore" /* 10665 */;
@@ -30,14 +33,13 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
           if (null == fetchPurchasesError) {
-            let found = arr.filter((item) => null == purchases.get(item));
+            let found = stateFromStoresArray.filter((item) => null == purchases.get(item));
           } else {
             found = [];
           }
           dependencyMap(found);
           tmp.current = true;
         }
-        arr = stateFromStoresArray;
       }
     }
   }, items1);
@@ -194,27 +196,26 @@ export const combinePromotionStyles = function combinePromotionStyles(background
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
   const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
-    if (null == PromotionsStore.getMarketingComponentByType(tmp(10742).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
+    if (null == PromotionsStore.getMarketingComponentByType(MarketingComponentType.MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
       return false;
     } else {
-      const giftPromotion = obj.getGiftPromotion();
+      const giftPromotion = PromotionsStore.getGiftPromotion();
       let id;
       if (giftPromotion != null) {
         id = giftPromotion.id;
       }
       let tmp5 = null != id;
       if (tmp5) {
-        let tmpResult = tmp(4380);
-        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1943).DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
+        let tmpResult = DismissibleContentUnsafeUtils;
+        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
         if (isDismissed) {
-          tmpResult = tmp(4380);
-          isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1943).DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
+          tmpResult = DismissibleContentUnsafeUtils;
+          isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
         }
         tmp5 = isDismissed;
       }
       return tmp5;
     }
-    obj = PromotionsStore;
   } else {
     return false;
   }

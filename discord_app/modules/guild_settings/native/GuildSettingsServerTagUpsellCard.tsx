@@ -6,6 +6,7 @@ import Powerups from "Powerups" /* 4453 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12488 */;
 import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12520 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12523 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4449 */;
 
@@ -64,7 +65,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   let tmp10Result = null != tmp6;
   if (tmp10Result) {
     const obj5 = { imageUrl: tmp6, style: tmp.powerupImage };
-    tmp10Result = tmp10(tmp5(12523), obj5);
+    tmp10Result = closure_6(GuildPowerupsImageDefault, obj5);
   }
   obj4.children = tmp10Result;
   const items5 = [closure_6(closure_4, obj4), , ];

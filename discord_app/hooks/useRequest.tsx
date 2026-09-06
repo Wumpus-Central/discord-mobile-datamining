@@ -9,20 +9,20 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useRequest.tsx");
 
-export default function useRequest(arg0) {
-  closure_0 = arg0;
+export default function useRequest(archiveSubscriptionListing) {
+  closure_0 = archiveSubscriptionListing;
   const tmp = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp[1];
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_2 = tmp2[1];
-  let items = [arg0];
+  let items = [archiveSubscriptionListing];
   const items1 = [
     noop.useCallback(asyncGeneratorStep(async () => {
       closure_0 = [...arguments];
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      const iter = (async (arg0, value) => {
+      const iter = (async (arg0) => {
         if (c6 === 2) {
           c6 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

@@ -32,4 +32,5 @@ export default function ForLaterNitroUpsellBar(isReminder) {
     const obj1 = { text: formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj), isAtLimit, onPress: callback };
     return <tmp3 text={formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj)} isAtLimit={isAtLimit} onPress={callback} />;
   }
+  const tmp3 = analyticsLocations(12221);
 };

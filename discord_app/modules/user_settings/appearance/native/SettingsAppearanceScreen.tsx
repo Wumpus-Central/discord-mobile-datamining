@@ -1,7 +1,9 @@
 // === Module 15262: SettingsAppearanceScreen ===
 
 // Module 15262 (SettingsAppearanceScreen)
+import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import HeaderShared from "HeaderShared" /* 7863 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4379 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
@@ -48,15 +50,15 @@ export default noop.memo(() => {
     let obj = PlatformUtils;
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
-        if (tmp3.persistedIsClassicChatFontScaleEnabled === tmp3.isClassicChatFontScaleEnabled) {
+        if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
           nativeStackNavigation.setOptions({ headerRight: "Array" });
         }
       }
       obj = { headerRight: null };
-      const intl = tmp(1114).intl;
-      obj.headerRight = tmp(7863).getRenderHeaderTextButton(intl.string(tmp(1114).t["R3BPH+"]), () => nativeStackNavigation(10120).setCustomFontScale(closure_1_0.fontScale, closure_1_0.isClassicChatFontScaleEnabled));
+      const intl = util.intl;
+      obj.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () => nativeStackNavigation(10120).setCustomFontScale(closure_1_0.fontScale, closure_1_0.isClassicChatFontScaleEnabled));
       nativeStackNavigation.setOptions(obj);
-      const tmpResult = tmp(7863);
+      const tmpResult = HeaderShared;
     }
   }, items1);
   const effect1 = noop.useEffect(() => () => {

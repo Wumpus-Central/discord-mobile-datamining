@@ -26,7 +26,7 @@ function handleSyncedStoresUpdate() {
       prop = voiceAndVideo.videoBackgroundFilterDesktop;
     }
     const videoBackgroundOptionFromProto = VideoBackgroundUtils.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-    let isVideoEnabledResult = null != obj.getVoiceChannelId();
+    let isVideoEnabledResult = null != SelectedChannelStore.getVoiceChannelId();
     if (isVideoEnabledResult) {
       isVideoEnabledResult = MediaEngineStore.isVideoEnabled();
     }
@@ -38,7 +38,7 @@ function handleSyncedStoresUpdate() {
   if (flag2) {
     c8 = true;
   }
-  voiceChannelId = obj.getVoiceChannelId();
+  voiceChannelId = SelectedChannelStore.getVoiceChannelId();
 }
 let c6 = false;
 let c7 = null;

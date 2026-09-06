@@ -81,12 +81,12 @@ export default function GameIcon(arg0) {
       if (style) {
         const obj5 = { style: fireIcon.gameIconMask, children: null };
         const obj6 = { style: fireIcon.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_330 };
-        obj5.children = tmp16(FireIcon2.FireIcon, obj6);
-        tmp16Result = tmp16(tmp15, obj5);
+        obj5.children = timestampProducer(FireIcon2.FireIcon, obj6);
+        tmp16Result = timestampProducer(React4, obj5);
       }
       items3[1] = tmp16Result;
       obj3.children = items3;
-      tmp14Result = React5(tmp15, obj3);
+      tmp14Result = React5(React4, obj3);
     }
   }
 };

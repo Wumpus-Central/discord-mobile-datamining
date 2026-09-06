@@ -4,6 +4,8 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
+import utils from "utils" /* 8135 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8341 */;
 import ICYMITypes from "ICYMITypes" /* 8348 */;
 import ICYMIUtils from "ICYMIUtils" /* 8350 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -168,15 +170,15 @@ function reload(arg0) {
       if (tmp4) {
         let tmp7 = tmp;
         if (!tmp) {
-          tmp7 = !tmp2(8350).isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-          const tmp2Result = tmp2(8350);
+          tmp7 = !ICYMIUtils.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+          const tmp2Result = ICYMIUtils;
         }
         tmp6 = tmp7;
       }
       if (tmp6) {
         set1.push(id);
       } else {
-        if (id.type === tmp2(8348).ICYMIItemTypes.MESSAGE) {
+        if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
           if (id.data.has_mention) {
             dependencyMap.push(id);
           }
@@ -201,21 +203,18 @@ function reload(arg0) {
         guildScheduledEventsForGuild = guildScheduledEventsForGuild.getGuildScheduledEventsForGuild(tmp3);
         let num = 0;
         for (const item10031 of guildScheduledEventsForGuild) {
-          let tmp12 = item10031;
           if (!closure_7(item10031)) {
-            let tmp23 = found1;
-            if (closure_6(tmp12, 2 * items2(found1[17]).Seconds.DAY)) {
-              if (null == dependencyMap[tmp12.id]) {
-                obj = { id: tmp12.id, type: null, score: 10, event_id: null };
-                obj.type = items1(tmp23[19]).ICYMIItemTypes.GUILD_EVENT;
-                obj.event_id = tmp12.id;
-                dependencyMap[tmp12.id] = obj;
+            if (closure_6(item10031, 2 * items2(found1[17]).Seconds.DAY)) {
+              if (null == dependencyMap[item10031.id]) {
+                obj = { id: item10031.id, type: null, score: 10, event_id: null };
+                obj.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
+                obj.event_id = item10031.id;
+                dependencyMap[item10031.id] = obj;
               }
-              obj = { id: null, type: null, score: 10, data: null };
-              obj.id = tmp12.id;
-              obj.type = items1(tmp23[19]).ICYMIItemTypes.GUILD_EVENT;
+              obj = { id: item10031.id, type: null, score: 10, data: null };
+              obj.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
               let obj1 = { guild_id: null, event_id: null, channel_id: null };
-              ({ guild_id: obj4.guild_id, id: obj4.event_id, channel_id } = tmp12);
+              ({ guild_id: obj4.guild_id, id: obj4.event_id, channel_id } = item10031);
               obj1.channel_id = channel_id;
               obj.data = obj1;
               let arr = items.push(obj);
@@ -278,25 +277,25 @@ function reload(arg0) {
   const item1 = entries.forEach((content) => {
     obj = ACTIVITY;
     if (!ACTIVITY.has(content.content.id)) {
-      let tmpResult = tmp(8135);
+      let tmpResult = utils;
       if (!tmpResult.isEntryExpired(content.content)) {
-        tmpResult = tmp(8341);
+        tmpResult = ContentInventoryTypes;
         if (tmpResult.isGamingLikeEntry(content.content)) {
           if (null == dependencyMap[content.content.author_id]) {
             const _Set = Set;
             set = new Set();
-            tmp3[content.content.author_id] = set;
+            dependencyMap[content.content.author_id] = set;
           }
           if (!obj4.has(content.content.extra.application_id)) {
-            tmp3[content.content.author_id].add(content.content.extra.application_id);
+            dependencyMap[content.content.author_id].add(content.content.extra.application_id);
           }
           obj4 = dependencyMap[content.content.author_id];
         }
         if (null == dependencyMap[content.content.id]) {
-          obj = { id: content.content.id, type: tmp(8348).ICYMIItemTypes.ACTIVITY, score: 15, activity: content.content };
+          obj = { id: content.content.id, type: ICYMITypes.ICYMIItemTypes.ACTIVITY, score: 15, activity: content.content };
           dependencyMap[content.content.id] = obj;
         }
-        obj = { id: content.content.id, type: tmp(8348).ICYMIItemTypes.ACTIVITY, score: 15, data: null };
+        obj = { id: content.content.id, type: ICYMITypes.ICYMIItemTypes.ACTIVITY, score: 15, data: null };
         const obj1 = { user_id: content.content.author_id, content_id: content.content.id };
         obj.data = obj1;
         obj.add(content.content.id);
@@ -355,6 +354,7 @@ function reload(arg0) {
   const items7 = [...found1];
   ACTIVITY(found1[18]).hydrateItems(items7, 0, ACTIVITY(found1[19]).ICYMI_PAGE_SIZE);
   c51 = false;
+  const tmp7Result = ACTIVITY(found1[18]);
 }
 function getNewUnreadItems(arr9, channelId) {
   items = [];
@@ -362,14 +362,13 @@ function getNewUnreadItems(arr9, channelId) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    let tmp3 = require;
     if (nextResult.type !== ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS) {
       if (!set.has(tmp2.id)) {
         let tmp7 = null == ICYMIUnreadStateStore.getReadTimestamp(tmp2.id);
         if (tmp7) {
-          let tmp9 = tmp2.type !== tmp3(8348).ICYMIItemTypes.MESSAGE;
+          let tmp9 = tmp2.type !== ICYMITypes.ICYMIItemTypes.MESSAGE;
           if (!tmp9) {
-            let tmp3Result = tmp3(8350);
+            let tmp3Result = ICYMIUtils;
             let result = tmp3Result.isItemUnreadInChannel(tmp2.data.channel_id, tmp2.data.message_id);
             if (result) {
               result = tmp2.data.channel_id !== channelId;
@@ -542,15 +541,15 @@ function handleAck(channelId) {
     if (tmp4) {
       let tmp7 = tmp;
       if (!tmp) {
-        tmp7 = !tmp2(8350).isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-        const tmp2Result = tmp2(8350);
+        tmp7 = !ICYMIUtils.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+        const tmp2Result = ICYMIUtils;
       }
       tmp6 = tmp7;
     }
     if (tmp6) {
       set1.push(id);
     } else {
-      if (id.type === tmp2(8348).ICYMIItemTypes.MESSAGE) {
+      if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
         if (id.data.has_mention) {
           dependencyMap.push(id);
         }
@@ -560,7 +559,7 @@ function handleAck(channelId) {
   });
   const items5 = [...items3];
   const items6 = [items5, items2.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-  const arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
+  const tmp4 = _slicedToArray(items6, 2);
   if (c41) {
     let tmp15 = tmp2;
     if (tmp2) {
@@ -576,11 +575,10 @@ function handleAck(channelId) {
       if (diff > 6 * items(items1[17]).Millis.HOUR) {
         const _Set = Set;
         set = new Set(items1.map((id) => id.id));
-        const substr = arr9.slice(0, 20);
+        const substr = closure_30.slice(0, 20);
         flag = substr.filter((id) => set1.has(id.id)).length >= 3;
       }
       tmp5 = flag;
-      arr9 = closure_30;
     }
   }
   flag = tmp5;
@@ -593,6 +591,7 @@ function handleAck(channelId) {
     const items7 = [];
     HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(items7, 0));
   }
+  arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
 let GuildScheduledEventStore = fn(7526);
 ({ eventScheduledToStartWithin: metroRequire, isGuildEventEnded: closure_7, isGuildScheduledEventActive: closure_8 } = GuildScheduledEventStore);
@@ -894,15 +893,15 @@ obj = {
             if (tmp4) {
               let tmp7 = tmp;
               if (!tmp) {
-                tmp7 = !tmp2(8350).isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-                const tmp2Result = tmp2(8350);
+                tmp7 = !ICYMIUtils.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+                const tmp2Result = ICYMIUtils;
               }
               tmp6 = tmp7;
             }
             if (tmp6) {
               set1.push(id);
             } else {
-              if (id.type === tmp2(8348).ICYMIItemTypes.MESSAGE) {
+              if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
                 if (id.data.has_mention) {
                   dependencyMap.push(id);
                 }
@@ -1005,15 +1004,15 @@ obj = {
       if (tmp4) {
         let tmp7 = tmp;
         if (!tmp) {
-          tmp7 = !tmp2(8350).isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-          const tmp2Result = tmp2(8350);
+          tmp7 = !ICYMIUtils.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+          const tmp2Result = ICYMIUtils;
         }
         tmp6 = tmp7;
       }
       if (tmp6) {
         set1.push(id);
       } else {
-        if (id.type === tmp2(8348).ICYMIItemTypes.MESSAGE) {
+        if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
           if (id.data.has_mention) {
             dependencyMap.push(id);
           }
@@ -1025,7 +1024,7 @@ obj = {
     const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
     set = new Set(set1(8348).SUPPORTED_ITEM_TYPES);
     [arr9, arr10] = _slicedToArray(items5, 2);
-    const arr11 = getNewUnreadItems(arr9);
+    let tmp6 = _slicedToArray(items5, 2);
     if (c41) {
       if (0 !== c38) {
         if (!isInitialLoad) {
@@ -1080,6 +1079,7 @@ obj = {
       arr13 = closure_30;
     }
     hasNewContent = false;
+    arr11 = getNewUnreadItems(arr9);
   },
   LOAD_ICYMI_HYDRATED: function handleLoadHydratedItems(arg0) {
     ({ messageItems, activityItems, requestMessageItems, requestActivityItems, startingIndex, endingIndex } = arg0);
@@ -1145,12 +1145,11 @@ obj = {
       let _Object = Object;
       let keys = Object.keys(nextResult.custom_channel_scores);
       for (const item10028 of keys) {
-        let tmp9 = item10028;
         if (null == obj[tmp2.guild_id]) {
           obj[tmp2.guild_id] = {};
         }
-        obj[tmp2.guild_id][tmp9] = tmp2.custom_channel_scores[tmp9];
-        let tmp18 = maybeFilterChannelItems(tmp9, tmp2.custom_channel_scores[tmp9]);
+        obj[tmp2.guild_id][item10028] = tmp2.custom_channel_scores[item10028];
+        let tmp18 = maybeFilterChannelItems(item10028, tmp2.custom_channel_scores[item10028]);
         continue;
       }
       continue;
@@ -1178,7 +1177,7 @@ obj = {
       const item = channelScores.forEach((item) => {
         ({ channelId, score } = item);
         if (null == obj[guildId]) {
-          obj[tmp] = {};
+          obj[guildId] = {};
         }
         obj[guildId][channelId] = score;
         maybeFilterChannelItems(channelId, score);

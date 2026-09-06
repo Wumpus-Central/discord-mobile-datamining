@@ -50,14 +50,14 @@ export default function Tooltip(arrowHeight) {
     if (obj.LEFT === LEFT) {
       obj = { alignSelf: "flex-start", left: num2 };
       return obj;
-    } else if (tmp2.CENTER === tmp) {
+    } else if (tmp2.CENTER === LEFT) {
       return { alignSelf: "center" };
-    } else if (tmp2.RIGHT === tmp) {
+    } else if (tmp2.RIGHT === LEFT) {
       obj = { alignSelf: "flex-end", right: num2 };
       return obj;
     } else {
       obj = GlobalUtils;
-      obj.assertNever(tmp);
+      obj.assertNever(LEFT);
     }
   }, items);
   obj = { style, children: null };
@@ -70,7 +70,7 @@ export default function Tooltip(arrowHeight) {
     items1[2] = memo;
     items1[3] = arrowStyle;
     obj.style = items1;
-    tmp8 = closure_4(tmp6, obj);
+    tmp8 = closure_4(View, obj);
   }
   const items2 = [tmp8, , ];
   const obj1 = { onLayout: arrowHeight.onLayout, style: null, children: null };
@@ -103,7 +103,7 @@ export default function Tooltip(arrowHeight) {
     items6[2] = memo;
     items6[3] = arrowStyle;
     obj4.style = items6;
-    tmp18 = closure_4(tmp6, obj4);
+    tmp18 = closure_4(View, obj4);
   }
   items2[2] = tmp18;
   obj.children = items2;

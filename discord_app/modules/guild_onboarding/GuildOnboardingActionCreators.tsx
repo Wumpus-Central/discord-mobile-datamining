@@ -1,6 +1,7 @@
 // === Module 7105: GuildOnboardingActionCreators ===
 
 // Module 7105 (GuildOnboardingActionCreators)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -15,7 +16,6 @@ import UserStore from "UserStore" /* 1371 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7100 */;
 import apply from "module_12" /* 12 */;
 
-const SnowflakeUtilsDefault = tmp12(11);
 require = fn;
 function _updateOnboardingResponses(guildId, arg1) {
   _require = guildId;
@@ -236,6 +236,7 @@ obj.completeOnboarding = function completeOnboarding(guildId, prompts) {
     }
     const tmp2Result7 = tmp2(5552);
   }
+  const tmp12Result = SnowflakeUtilsDefault;
 };
 obj.onboardExistingMember = function onboardExistingMember(id, set) {
   set = new Set(set);
@@ -263,7 +264,7 @@ obj.setUserOnboardingStep = function setUserOnboardingStep(guildId, step) {
 };
 obj.resetOnboarding = function resetOnboarding(arg0) {
   closure_0 = arg0;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

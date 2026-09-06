@@ -2,9 +2,9 @@
 
 // Module 4711 (WebViewWebmSupportTest)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import DeviceUtils from "DeviceUtils" /* 4539 */;
 import size from "module_2" /* 2 */;
 
-const DeviceUtils = tmp(4539);
 const ARM64_ = "ARM64_";
 const result = size.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
 

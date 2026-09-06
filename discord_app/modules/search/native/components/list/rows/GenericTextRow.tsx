@@ -22,7 +22,7 @@ export default noop.memo(function GenericTextRow(text) {
   const tmp = closure_6();
   const items = [onPress, text];
   let obj = { style: tmp.title, children: null };
-  onPress = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  onPress = noop.useCallback(asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -74,7 +74,7 @@ export default noop.memo(function GenericTextRow(text) {
   const label = <View lineClamp={1} variant="text-md/medium" color="mobile-text-heading-primary" style={tmp.container}>{text}</View>;
   icon = null != icon;
   if (icon) {
-    icon = tmp3(icon, { size: "sm", color: "mobile-text-heading-primary" });
+    icon = <icon size="sm" color="mobile-text-heading-primary" />;
   }
   return jsx(SearchListRow.SearchListRow, { icon, label, onPress, trailing, accessibilityActions, onAccessibilityAction });
 });

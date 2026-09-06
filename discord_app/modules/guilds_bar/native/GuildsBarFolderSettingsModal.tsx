@@ -143,9 +143,9 @@ export default function GuildFolderSettingsModal(folderId) {
     obj.title = intl.string(util.t.Dx7im5);
     obj.headerLeft = NavigatorHeader.getHeaderCloseButton(callback1);
     if (closure_5) {
-      const intl2 = tmp3(1114).intl;
-      let fn = tmp3(5624).getHeaderTextButton(intl2.string(tmp3(1114).t["R3BPH+"]), callback);
-      const tmp3Result = tmp3(5624);
+      const intl2 = util.intl;
+      let fn = NavigatorHeader.getHeaderTextButton(intl2.string(util.t["R3BPH+"]), callback);
+      const tmp3Result = NavigatorHeader;
     } else {
       fn = () => null;
     }

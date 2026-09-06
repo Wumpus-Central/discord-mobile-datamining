@@ -101,7 +101,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
           formatResult = intl2.format(tmp4(1114).t.WFMtg1, obj2);
         } else {
           const intl = tmp4(1114).intl;
-          const obj3 = { minutes: null, trialPeriod: null, termsUrl: null };
+          let obj3 = { minutes: null, trialPeriod: null, termsUrl: null };
           const _Math = Math;
           obj3.minutes = Math.max(time.minutes, 1);
           obj3.trialPeriod = result;
@@ -146,12 +146,12 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
           obj.style = items;
           if (React7.PREMIUM_TIER_0_TRIAL_ENDING === stateFromStores) {
             let PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_0;
-          } else if (tmp4.PREMIUM_TIER_2_TRIAL_ENDING === tmp3) {
+          } else if (tmp4.PREMIUM_TIER_2_TRIAL_ENDING === stateFromStores) {
             PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_2_TRI_COLOR;
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error = new Error("Unsupported notice type: " + tmp3);
+            const error = new Error("Unsupported notice type: " + stateFromStores);
             throw error;
           }
           obj.colors = PREMIUM_TIER_2_TRI_COLOR;

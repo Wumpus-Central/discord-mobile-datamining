@@ -1,6 +1,8 @@
 // === Module 12942: CustomActivityLinkRecord ===
 
 // Module 12942 (CustomActivityLinkRecord)
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8139 */;
+import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 12940 */;
 import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 12943 */;
 import size from "module_2" /* 2 */;
 
@@ -36,10 +38,10 @@ class CustomActivityLinkRecord {
 CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   const self = this;
   if (this.type === utils_CustomActivityLinkUtils.CustomLinkType.MANAGED) {
-    let tmpResult = tmp(8139);
+    let tmpResult = ApplicationAssetUtils;
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
-  } else if (self.type === tmp(12943).CustomLinkType.QUICK) {
-    tmpResult = tmp(12940);
+  } else if (self.type === utils_CustomActivityLinkUtils.CustomLinkType.QUICK) {
+    tmpResult = CustomActivityLinkUtils;
     assetImage = tmpResult.getQuickLinkImage(self.assetPath);
   }
   return assetImage;

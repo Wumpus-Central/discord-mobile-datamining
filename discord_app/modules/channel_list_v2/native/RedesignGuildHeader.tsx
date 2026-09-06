@@ -4,11 +4,13 @@
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
+import useToken from "useToken" /* 4262 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4297 */;
 import shared from "shared" /* 4411 */;
 import spring from "spring" /* 4974 */;
 import springPresets from "springPresets" /* 4978 */;
+import ButtonConstants from "ButtonConstants" /* 4980 */;
 import useFontScale from "useFontScale" /* 4982 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5125 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7873 */;
@@ -169,7 +171,7 @@ function ReanimatedGuildBanner(guild) {
     obj4.style = items6;
     items5[1] = closure_13(tmp(tmp2[20]).View, obj4);
     if (tmp17Result) {
-      tmp17Result = tmp17(tmp(tmp2[32]), {});
+      tmp17Result = closure_13(tmp(tmp2[32]), {});
     }
     items5[2] = tmp17Result;
     obj2.children = items5;
@@ -245,15 +247,15 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   if (isThemeDarkResult) {
     num = 1;
   }
-  let tmp7Result = tmp7(4262);
+  let tmp7Result = useToken;
   let num2 = 0;
-  const token = tmp7Result.useToken(tmp(576).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
+  const token = tmp7Result.useToken(nativeDefault.modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
   if (!isFavoritesGuildIdResult) {
-    num2 = tmp7(4980).SMALL_BUTTON_HEIGHT + closure_1_11;
+    num2 = ButtonConstants.SMALL_BUTTON_HEIGHT + closure_1_11;
   }
   let num3 = 0;
   if (tmp11) {
-    num3 = 8 + tmp7(4980).MEDIUM_BUTTON_HEIGHT + 8;
+    num3 = 8 + ButtonConstants.MEDIUM_BUTTON_HEIGHT + 8;
   }
   let num5 = 16;
   if (isFavoritesGuildIdResult) {
@@ -261,13 +263,13 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   }
   let num6 = 0;
   if (tmp9) {
-    tmp7Result = tmp7(10119);
+    tmp7Result = useScaledTextLineHeight;
     num6 = tmp7Result.scaleTextLineHeight(token, fontScale);
   }
   let bound = scaleTextLineHeightResult;
   if (isFavoritesGuildIdResult) {
     const _Math = Math;
-    bound = Math.max(scaleTextLineHeightResult, tmp7(4980).SMALL_BUTTON_HEIGHT);
+    bound = Math.max(scaleTextLineHeightResult, ButtonConstants.SMALL_BUTTON_HEIGHT);
   }
   return roundToNearestPixelDefault(16 + bound + num6 + num2 + num3 + num5 + num);
 };

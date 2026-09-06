@@ -59,28 +59,28 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
   const items = [];
   if (null != onMoveUp) {
     obj = { name: "moveup", label: null };
-    let intl = tmp5(tmp2[11]).intl;
-    obj.label = intl.string(tmp5(tmp2[11]).t.Yl8E4h);
+    let intl = tmp5(onMoveUp[11]).intl;
+    obj.label = intl.string(tmp5(onMoveUp[11]).t.Yl8E4h);
     items.push(obj);
   }
   if (null != onMoveDown) {
     let obj1 = { name: "movedown", label: null };
-    let intl2 = tmp5(tmp2[11]).intl;
-    obj1.label = intl2.string(tmp5(tmp2[11]).t["5PbXSy"]);
+    let intl2 = tmp5(onMoveUp[11]).intl;
+    obj1.label = intl2.string(tmp5(onMoveUp[11]).t["5PbXSy"]);
     items.push(obj1);
   }
   const items1 = [onMoveUp, onMoveDown];
   if (sorting) {
     if (!locked) {
       const obj2 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, delayLongPress: 100, activeOpacity: 0.8, hitSlop: null };
-      let intl3 = tmp5(tmp2[11]).intl;
+      let intl3 = tmp5(onMoveUp[11]).intl;
       const obj3 = { name: role.name };
-      obj2.accessibilityLabel = intl3.formatToPlainString(tmp5(tmp2[11]).t.Zazao2, obj3);
-      let intl4 = tmp5(tmp2[11]).intl;
-      obj2.accessibilityHint = intl4.string(tmp5(tmp2[11]).t.BGMUFB);
+      obj2.accessibilityLabel = intl3.formatToPlainString(tmp5(onMoveUp[11]).t.Zazao2, obj3);
+      let intl4 = tmp5(onMoveUp[11]).intl;
+      obj2.accessibilityHint = intl4.string(tmp5(onMoveUp[11]).t.BGMUFB);
       obj2.accessibilityActions = items;
       obj2.onAccessibilityAction = tmp11;
-      obj2.hitSlop = tmp(tmp2[6]).space.PX_4;
+      obj2.hitSlop = require("native").space.PX_4;
       const merged = Object.assign(sortHandlers);
       const items2 = [tmp4.dragHandlePressable, ];
       let style;
@@ -94,11 +94,11 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
       let tmp17 = obj2;
       if (!tmp16) {
         const obj4 = { icon: null, accessibilityLabel: null, size: "sm", variant: "destructive", onPress: null };
-        const obj5 = { size: "xs", color: tmp(tmp2[6]).colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT };
-        obj4.icon = closure_7(tmp5(tmp2[16]).TrashIcon, obj5);
-        const intl5 = tmp5(tmp2[11]).intl;
+        const obj5 = { size: "xs", color: require("native").colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT };
+        obj4.icon = closure_7(tmp5(onMoveUp[16]).TrashIcon, obj5);
+        const intl5 = tmp5(onMoveUp[11]).intl;
         const obj6 = { name: role.name };
-        obj4.accessibilityLabel = intl5.formatToPlainString(tmp5(tmp2[11]).t.FiMFTZ, obj6);
+        obj4.accessibilityLabel = intl5.formatToPlainString(tmp5(onMoveUp[11]).t.FiMFTZ, obj6);
         obj4.onPress = function handleDeleteRow() {
           require("actions/AlertActionCreators");
           let obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
@@ -111,7 +111,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
           obj.cancelText = intl3.string(role(onMoveUp[11]).t.gm1Vej);
           const intl4 = role(onMoveUp[11]).intl;
           obj.confirmText = intl4.string(role(onMoveUp[11]).t.p89ACt);
-          name = onMoveDown(function*(arg0, value) {
+          name = onMoveDown(function*() {
             if (c2 === 2) {
               c2 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -175,7 +175,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
         flag = false;
         flag2 = true;
         tmp17 = obj2;
-        const tmp18 = closure_7(tmp5(tmp2[15]).IconButton, obj4);
+        const tmp18 = closure_7(tmp5(onMoveUp[15]).IconButton, obj4);
       }
       tmp16 = role.managed && !tmp8;
     }
@@ -199,7 +199,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
       obj7.trailing = tmp18;
       obj7.arrow = flag;
       if (isEveryoneRole) {
-        const obj8 = { style: tmp4.everyone, children: tmp31(tmp5(tmp2[23]).GroupIcon, {}) };
+        const obj8 = { style: tmp4.everyone, children: closure_7(tmp5(onMoveUp[23]).GroupIcon, {}) };
         let obj9 = obj8;
       } else {
         obj9 = { children: roleIcon };
@@ -207,7 +207,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
       obj7.icon = closure_7(closure_5, obj9);
       const obj10 = { style: tmp4.row, children: null };
       const obj11 = { lineClamp: 1, style: tmp4.label, variant, color: "interactive-text-active", children: role.name };
-      const items3 = [closure_7(tmp5(tmp2[7]).Text, obj11), , ];
+      const items3 = [closure_7(tmp5(onMoveUp[7]).Text, obj11), , ];
       const tags2 = role.tags;
       let prop;
       if (tags2 != null) {
@@ -215,33 +215,33 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
       }
       let tmp31Result = null;
       if (null != prop) {
-        const obj12 = { size: tmp5(tmp2[24]).Icon.Sizes.REFRESH_SMALL_16, source: tmp(tmp2[25]), "aria-label": null, style: null };
-        const intl6 = tmp5(tmp2[11]).intl;
-        obj12["aria-label"] = intl6.string(tmp5(tmp2[11]).t.a2Ak8b);
+        const obj12 = { size: tmp5(onMoveUp[24]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_10302"), "aria-label": null, style: null };
+        const intl6 = tmp5(onMoveUp[11]).intl;
+        obj12["aria-label"] = intl6.string(tmp5(onMoveUp[11]).t.a2Ak8b);
         obj12.style = tmp4.sparkleIcon;
-        tmp31Result = tmp31(tmp5(tmp2[24]).Icon, obj12);
+        tmp31Result = closure_7(tmp5(onMoveUp[24]).Icon, obj12);
       }
       items3[1] = tmp31Result;
       tmp31Result = null;
       if (locked) {
-        tmp31Result = tmp31(tmp5(tmp2[26]).LockIcon, { size: "xxs", color: "icon-subtle" });
+        tmp31Result = closure_7(tmp5(onMoveUp[26]).LockIcon, { size: "xxs", color: "icon-subtle" });
       }
       items3[2] = tmp31Result;
       obj10.children = items3;
       obj7.label = closure_8(closure_5, obj10);
-      const intl7 = tmp5(tmp2[11]).intl;
+      const intl7 = tmp5(onMoveUp[11]).intl;
       if (isEveryoneRole) {
-        let stringResult = intl7.string(tmp5(tmp2[11]).t["72gF3G"]);
+        let stringResult = intl7.string(tmp5(onMoveUp[11]).t["72gF3G"]);
       } else {
         const obj13 = { count: null };
         const _HermesInternal = HermesInternal;
         obj13.count = "" + numMembers;
-        stringResult = intl7.formatToPlainString(tmp5(tmp2[11]).t.AWmdd9, obj13);
+        stringResult = intl7.formatToPlainString(tmp5(onMoveUp[11]).t.AWmdd9, obj13);
       }
       obj7.subLabel = stringResult;
       obj7.start = isFirstRole;
       obj7.end = isLastRole;
-      return closure_7(tmp5(tmp2[22]).TableRow, obj7);
+      return closure_7(tmp5(onMoveUp[22]).TableRow, obj7);
     } else {
       const tags3 = role.tags;
       let guild_connections1;
@@ -250,7 +250,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
       }
       if (null === guild_connections1) {
         const obj14 = { size: 32, guildId, role };
-        let tmp22Result = closure_7(tmp(tmp2[17]), obj14);
+        let tmp22Result = closure_7(require("VerifiedRoleIcon"), obj14);
       } else {
         if (tmp3) {
           if (null != role.colors) {
@@ -258,17 +258,17 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
               const obj15 = { style: tmp4.container, children: null };
               const obj16 = { colors: null, start: null, end: null, style: null };
               const items4 = [role.colors.primary_color, role.colors.secondary_color, role.colors.tertiary_color];
-              const found = items4.filter(tmp5(tmp2[19]).isNotNullish);
+              const found = items4.filter(tmp5(onMoveUp[19]).isNotNullish);
               obj16.colors = found.map((item) => role(onMoveUp[20]).int2hex(item));
               obj16.start = { x: 0, y: 0 };
               obj16.end = { x: 1, y: 0 };
               obj16.style = tmp4.gradient;
-              const items5 = [closure_7(tmp(tmp2[18]), obj16), ];
+              const items5 = [closure_7(require("LinearGradient"), obj16), ];
               const obj17 = { size: "md", style: tmp4.image };
-              items5[1] = closure_7(tmp5(tmp2[21]).ShieldUserIcon, obj17);
+              items5[1] = closure_7(tmp5(onMoveUp[21]).ShieldUserIcon, obj17);
               obj15.children = items5;
               tmp22Result = closure_8(closure_5, obj15);
-              const tmpResult = tmp(tmp2[18]);
+              const tmpResult = require("LinearGradient");
             }
           }
         }
@@ -278,8 +278,8 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
         items6[1] = obj19;
         obj18.style = items6;
         const obj20 = { size: "md", style: tmp4.image };
-        obj18.children = closure_7(tmp5(tmp2[21]).ShieldUserIcon, obj20);
-        tmp22Result = tmp22(closure_5, obj18);
+        obj18.children = closure_7(tmp5(onMoveUp[21]).ShieldUserIcon, obj20);
+        tmp22Result = closure_7(closure_5, obj18);
       }
     }
   }
@@ -289,4 +289,5 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
     flag = true;
     flag2 = false;
   }
+  tmp3 = require("useHasEnhancedRoleColors")(guildId.guildId, null);
 });

@@ -33,5 +33,5 @@ export const BaseIconImage = function BaseIconImage(size) {
   const obj1 = { fadeDuration: 0, source: size.source, resizeMode, style: null, accessible, accessibilityLabel };
   const items = [closure_4[str], tmp3, style];
   obj1.style = items;
-  return <Image fadeDuration={0} source={arg0.source} resizeMode={resizeMode} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} />;
+  return <Image fadeDuration={0} source={size.source} resizeMode={resizeMode} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} />;
 };

@@ -60,14 +60,14 @@ obj[obj.EXPLICIT] = {
       }
       let obj = {};
       obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = prop;
-      const ExplicitContentSettings = tmp12(1935).ExplicitContentSettings;
+      const ExplicitContentSettings = UserSettings.ExplicitContentSettings;
       const setting1 = ExplicitContentSettings.getSetting();
       let prop1;
       if (setting1 != null) {
         prop1 = setting1.explicitContentFriendDm;
       }
       obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = prop1;
-      const ExplicitContentSettings2 = tmp12(1935).ExplicitContentSettings;
+      const ExplicitContentSettings2 = UserSettings.ExplicitContentSettings;
       const setting2 = ExplicitContentSettings2.getSetting();
       let prop2;
       if (setting2 != null) {
@@ -78,19 +78,19 @@ obj[obj.EXPLICIT] = {
     }
     let tmp9;
     if (tmp != null) {
-      tmp9 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.GUILD];
+      tmp9 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD];
     }
     obj = { [closure_1_0(closure_1_1[3]).ContentHarmTypeChannel.GUILD]: SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({ setting: tmp9 }) };
-    let tmp7Result = tmp7(7298);
+    let tmp7Result = SensitiveMediaExplicitRedactionSettingsUtils;
     let tmp10;
     if (tmp != null) {
-      tmp10 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.FRIEND_DM];
+      tmp10 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM];
     }
     obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
-    tmp7Result = tmp7(7298);
+    tmp7Result = SensitiveMediaExplicitRedactionSettingsUtils;
     let tmp11;
     if (tmp != null) {
-      tmp11 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.NON_FRIEND_DM];
+      tmp11 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM];
     }
     obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp11, isDm: true });
     return obj;
@@ -141,14 +141,14 @@ const obj1 = {
       }
       let obj = {};
       obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = prop;
-      const ExplicitContentSettings = tmp12(1935).ExplicitContentSettings;
+      const ExplicitContentSettings = UserSettings.ExplicitContentSettings;
       const setting1 = ExplicitContentSettings.getSetting();
       let prop1;
       if (setting1 != null) {
         prop1 = setting1.explicitContentFriendDm;
       }
       obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = prop1;
-      const ExplicitContentSettings2 = tmp12(1935).ExplicitContentSettings;
+      const ExplicitContentSettings2 = UserSettings.ExplicitContentSettings;
       const setting2 = ExplicitContentSettings2.getSetting();
       let prop2;
       if (setting2 != null) {
@@ -159,19 +159,19 @@ const obj1 = {
     }
     let tmp9;
     if (tmp != null) {
-      tmp9 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.GUILD];
+      tmp9 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD];
     }
     obj = { [closure_1_0(closure_1_1[3]).ContentHarmTypeChannel.GUILD]: SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({ setting: tmp9 }) };
-    let tmp7Result = tmp7(7298);
+    let tmp7Result = SensitiveMediaExplicitRedactionSettingsUtils;
     let tmp10;
     if (tmp != null) {
-      tmp10 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.FRIEND_DM];
+      tmp10 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM];
     }
     obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
-    tmp7Result = tmp7(7298);
+    tmp7Result = SensitiveMediaExplicitRedactionSettingsUtils;
     let tmp11;
     if (tmp != null) {
-      tmp11 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.NON_FRIEND_DM];
+      tmp11 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM];
     }
     obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp11, isDm: true });
     return obj;
@@ -222,14 +222,14 @@ obj[obj.GORE] = {
       }
       let obj = {};
       obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
-      const GoreContentSettings = tmp12(1935).GoreContentSettings;
+      const GoreContentSettings = UserSettings.GoreContentSettings;
       const setting1 = GoreContentSettings.getSetting();
       let goreContentFriendDm;
       if (setting1 != null) {
         goreContentFriendDm = setting1.goreContentFriendDm;
       }
       obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
-      const GoreContentSettings2 = tmp12(1935).GoreContentSettings;
+      const GoreContentSettings2 = UserSettings.GoreContentSettings;
       const setting2 = GoreContentSettings2.getSetting();
       let prop;
       if (setting2 != null) {
@@ -240,19 +240,19 @@ obj[obj.GORE] = {
     }
     let tmp9;
     if (tmp != null) {
-      tmp9 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.GUILD];
+      tmp9 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD];
     }
     obj = { [closure_1_0(closure_1_1[3]).ContentHarmTypeChannel.GUILD]: SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({ setting: tmp9 }) };
-    let tmp7Result = tmp7(7301);
+    let tmp7Result = SensitiveMediaGoreRedactionSettingsUtils;
     let tmp10;
     if (tmp != null) {
-      tmp10 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.FRIEND_DM];
+      tmp10 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM];
     }
     obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
-    tmp7Result = tmp7(7301);
+    tmp7Result = SensitiveMediaGoreRedactionSettingsUtils;
     let tmp11;
     if (tmp != null) {
-      tmp11 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.NON_FRIEND_DM];
+      tmp11 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM];
     }
     obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp11, isDm: true });
     return obj;
@@ -303,14 +303,14 @@ const obj2 = {
       }
       let obj = {};
       obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
-      const GoreContentSettings = tmp12(1935).GoreContentSettings;
+      const GoreContentSettings = UserSettings.GoreContentSettings;
       const setting1 = GoreContentSettings.getSetting();
       let goreContentFriendDm;
       if (setting1 != null) {
         goreContentFriendDm = setting1.goreContentFriendDm;
       }
       obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
-      const GoreContentSettings2 = tmp12(1935).GoreContentSettings;
+      const GoreContentSettings2 = UserSettings.GoreContentSettings;
       const setting2 = GoreContentSettings2.getSetting();
       let prop;
       if (setting2 != null) {
@@ -321,19 +321,19 @@ const obj2 = {
     }
     let tmp9;
     if (tmp != null) {
-      tmp9 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.GUILD];
+      tmp9 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD];
     }
     obj = { [closure_1_0(closure_1_1[3]).ContentHarmTypeChannel.GUILD]: SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({ setting: tmp9 }) };
-    let tmp7Result = tmp7(7301);
+    let tmp7Result = SensitiveMediaGoreRedactionSettingsUtils;
     let tmp10;
     if (tmp != null) {
-      tmp10 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.FRIEND_DM];
+      tmp10 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM];
     }
     obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
-    tmp7Result = tmp7(7301);
+    tmp7Result = SensitiveMediaGoreRedactionSettingsUtils;
     let tmp11;
     if (tmp != null) {
-      tmp11 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.NON_FRIEND_DM];
+      tmp11 = tmp[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM];
     }
     obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp11, isDm: true });
     return obj;

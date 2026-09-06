@@ -50,14 +50,13 @@ function checkNodeAndIterate(arg0) {
           }
           obj = { node: node.children[num4], section: tmp4, item: null, direction: null, selectedGuildId: null };
           let tmp6;
-          let tmp5 = checkNodeAndIterate;
           if (null != section) {
             tmp6 = num4;
           }
           obj.item = tmp6;
           obj.direction = direction;
           obj.selectedGuildId = selectedGuildId;
-          tmp5Result = tmp5(obj);
+          tmp5Result = checkNodeAndIterate(obj);
           if (null != tmp5Result) {
             break;
           } else {
@@ -80,11 +79,11 @@ function checkNodeAndIterate(arg0) {
     }
   }
 }
-function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, arg3, arg4) {
+function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top2, mobileQuestDockHeight) {
   const guildsTree = SortedGuildStore.getGuildsTree();
   const root = guildsTree.root;
   ({ scrollPosValue, getSectionItemFromPosition } = scrollPosValue);
-  const item = getSectionItemFromPosition(scrollPosValue.get() + arg4).item;
+  const item = getSectionItemFromPosition(scrollPosValue.get() + mobileQuestDockHeight).item;
   let layoutStart;
   if (item != null) {
     layoutStart = item.layoutStart;
@@ -97,13 +96,12 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, arg
   section = -1;
   item2 = -1;
   let flag = false;
-  const diff = scrollPosValue3.get() + scrollPosValue.containerSize - arg3 - (closure_1_12 + map1);
+  const diff = scrollPosValue3.get() + scrollPosValue.containerSize - top2 - (closure_1_12 + map1);
   const iter = scrollPosValue.state.items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp4 = nextResult;
     if (nextResult.layoutStart >= layoutStart) {
-      let tmp41 = require;
       if (tmp4.type === FastList.FastListItemTypes.ITEM) {
         if (tmp4.layoutStart > diff) {
           iter.return();
@@ -121,7 +119,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, arg
               ({ section, item: item2 } = tmp4);
             }
             let type = tmp4.type;
-            if (tmp41(7072).FastListItemTypes.SECTION === type) {
+            if (FastList.FastListItemTypes.SECTION === type) {
               let node = guildsTree.getNode(tmp4.recyclerKey);
               let element = node;
               if (null != node) {
@@ -145,7 +143,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, arg
               }
               continue;
             } else {
-              if (tmp41(7072).FastListItemTypes.ITEM === type) {
+              if (FastList.FastListItemTypes.ITEM === type) {
                 let node1 = guildsTree.getNode(tmp4.recyclerKey);
                 let tmp12 = node1;
                 if (null != node1) {
@@ -260,18 +258,19 @@ export default noop.memo(function GuildsBarUnreadBars(fastList) {
     if (guildId == null) {
       guildId = null;
     }
-    closure_0 = findFirstOrLastMentionedItem(closure_1_0, paddingStart.getPrivateChannelMentionCount() > 0, guildId, top2, mobileQuestDockHeight);
+    const afterItem = findFirstOrLastMentionedItem(closure_1_0, paddingStart.getPrivateChannelMentionCount() > 0, guildId, top2, mobileQuestDockHeight);
     youBarTotalHeight((afterItem) => {
-      if (afterItem === closure_0) {
+      if (afterItem === afterItem) {
         let tmp4 = afterItem;
       } else {
-        tmp4 = tmp;
-        if (top2(mobileQuestDockHeight[15])(afterItem.afterItem, tmp.afterItem)) {
-          tmp4 = tmp;
+        tmp4 = afterItem;
+        if (top2(mobileQuestDockHeight[15])(afterItem.afterItem, afterItem.afterItem)) {
+          tmp4 = afterItem;
         }
       }
       return tmp4;
     });
+    const tmp3 = paddingStart.getPrivateChannelMentionCount() > 0;
   }, 100), items);
   const items1 = [memo];
   const effect = memo.useEffect(() => {
@@ -284,7 +283,7 @@ export default noop.memo(function GuildsBarUnreadBars(fastList) {
   }, items1);
   const scrollPosValue = fastList.scrollPosValue;
   const tmp = top2;
-  let tmp2 = mobileQuestDockHeight;
+  const tmp2 = mobileQuestDockHeight;
   let tmp4 = youBarTotalHeight(memo.useState(() => {
     let guildId = SelectedGuildStore.getGuildId();
     if (guildId == null) {

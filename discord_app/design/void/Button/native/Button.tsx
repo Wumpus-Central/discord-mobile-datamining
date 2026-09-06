@@ -201,10 +201,10 @@ class Button {
     memo = text.useMemo(() => {
       if (flag3) {
         let obj = { color: shared.isThemeDark(theme) ? WHITE : PRIMARY_500 };
-        tmp(React4, obj);
+        React6(React4, obj);
       } else {
         obj = { color: BRAND, look: FILLED, size: MEDIUM, disabled: flag2, style: textStyle, children: text };
-        return tmp(ButtonText, obj);
+        return React6(ButtonText, obj);
       }
     }, items);
     items2 = [, , , , , , , ];
@@ -515,13 +515,13 @@ export { ButtonText };
 export const getRedesignVariant = function getRedesignVariant(color) {
   if (obj40.GREEN === color) {
     return "active";
-  } else if (tmp.RED === color) {
+  } else if (obj40.RED === color) {
     return "destructive";
   } else {
-    if (tmp.GREY !== color) {
-      if (tmp.LIGHTGREY !== color) {
-        if (tmp.TRANSPARENT !== color) {
-          if (tmp.WHITE === color) {
+    if (obj40.GREY !== color) {
+      if (obj40.LIGHTGREY !== color) {
+        if (obj40.TRANSPARENT !== color) {
+          if (obj40.WHITE === color) {
             return "primary-overlay";
           } else {
             return "primary";
@@ -535,7 +535,7 @@ export const getRedesignVariant = function getRedesignVariant(color) {
 export const getRedesignSize = function getRedesignSize(arg0) {
   if (obj41.LARGE === arg0) {
     return "lg";
-  } else if (tmp.MEDIUM === arg0) {
+  } else if (obj41.MEDIUM === arg0) {
     return "md";
   } else {
     return "sm";

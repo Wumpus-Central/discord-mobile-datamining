@@ -27,22 +27,23 @@ let prototype = function RedesignNewUserManager() {
     const nextOnboardingStep = applyArgumentsResult(dependencyMap[4]).getNextOnboardingStep(false, -1, -1);
     nextOnboardingStep.then((result) => {
       ({ lastShownStepIndex, onboardingStepIndex } = result);
-      let obj = closure_1_0(closure_1_2[4]);
+      let obj = closure_1_0(paths[4]);
       const keyForOnboardingStep = obj.getKeyForOnboardingStep(onboardingStepIndex);
       if (null != keyForOnboardingStep) {
-        const obj3 = closure_1_1(tmp2[5]);
-        const tmp11 = tmp(tmp2[7])(tmp2[6], tmp2.paths);
+        const obj3 = closure_1_1(paths[5]);
+        const tmp11 = closure_1_0(paths[7])(paths[6], paths.paths);
         obj = { initialRouteName: keyForOnboardingStep, initialOnboardingStepIndex: onboardingStepIndex };
-        const NEW_USER_MODAL_KEY = tmp(tmp2[8]).NEW_USER_MODAL_KEY;
+        const NEW_USER_MODAL_KEY = closure_1_0(paths[8]).NEW_USER_MODAL_KEY;
         let str = "card";
         if (tmpResult.isAndroid()) {
           str = "transparentModal";
         }
         obj = { fullScreenGestureEnabled: false, presentation: str, animation: "slide_from_bottom" };
         obj3.pushLazy(tmp11, obj, NEW_USER_MODAL_KEY, obj);
-        tmpResult = tmp(tmp2[9]);
+        tmpResult = closure_1_0(paths[9]);
       }
     });
+    let tmpResult = applyArgumentsResult(dependencyMap[4]);
   };
   applyArgumentsResult.handleOnboardingStart = function handleOnboardingStart() {
     applyArgumentsResult.startOnboarding();

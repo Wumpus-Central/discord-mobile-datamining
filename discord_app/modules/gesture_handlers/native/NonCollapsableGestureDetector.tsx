@@ -17,6 +17,6 @@ export const NonCollapsableGestureDetector = function NonCollapsableGestureDetec
   let obj = {};
   const merged = Object.assign(_objectWithoutProperties(children, closure_2));
   obj = { style, collapsable: false, children: children.children };
-  obj.children = <View style={style} collapsable={false}>{arg0.children}</View>;
+  obj.children = <View style={style} collapsable={false}>{children.children}</View>;
   return jsx(LegacyBaseButton.GestureDetector, { style, collapsable: false, children: children.children });
 };

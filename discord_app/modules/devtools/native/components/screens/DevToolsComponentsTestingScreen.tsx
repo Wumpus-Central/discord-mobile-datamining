@@ -37,12 +37,12 @@ function Select(children) {
   if (obj.type === Server.ComponentType.STRING_SELECT) {
     obj = {};
     const merged1 = Object.assign(obj);
-    let tmp7Result = tmp7(StringSelectActionComponentDefault, obj);
+    let tmp7Result = React5(StringSelectActionComponentDefault, obj);
   } else {
     obj1 = {};
     const merged2 = Object.assign(obj);
     obj1.type = obj.type;
-    tmp7Result = tmp7(SearchableSelectActionComponentDefault, obj1);
+    tmp7Result = React5(SearchableSelectActionComponentDefault, obj1);
   }
   items[1] = tmp7Result;
   type = undefined;
@@ -59,9 +59,9 @@ function Select(children) {
     state = { variant: "text-md/normal", children: null };
     const items1 = ["Selected values: ", mapped.join(", ")];
     state.children = items1;
-    tmp6(tmp4(4556).Text, state);
+    React6(Text_Text.Text, state);
   } else {
-    items[2] = tmp7(tmp4(4556).Text, { variant: "text-md/normal", children: "Nothing selected" });
+    items[2] = React5(Text_Text.Text, { variant: "text-md/normal", children: "Nothing selected" });
     let str3 = "off";
     if (tmp2) {
       str3 = "on";
@@ -72,10 +72,11 @@ function Select(children) {
     obj2.onPress = function onPress() {
       return _undefined((arg0) => !arg0);
     };
-    items[3] = tmp7(tmp4(4975).Button, obj2);
+    items[3] = React5(components_Button_Button.Button, obj2);
     obj.children = items;
-    return tmp6(Card.Card, obj);
+    return React6(Card.Card, obj);
   }
+  const tmp = _slicedToArray(noop.useState(false), 2);
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);

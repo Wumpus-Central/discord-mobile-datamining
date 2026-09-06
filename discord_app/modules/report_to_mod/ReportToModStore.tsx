@@ -83,7 +83,7 @@ const reportToModStore = new ReportToModStore(DispatcherDefault, {
     if (null == closure_3.reportedMessages[channelId]) {
       const _Set = Set;
       const set = new Set();
-      tmp.reportedMessages[channelId] = set;
+      closure_3.reportedMessages[channelId] = set;
     }
     closure_3.reportedMessages[channelId].add(channelId.messageId);
   },

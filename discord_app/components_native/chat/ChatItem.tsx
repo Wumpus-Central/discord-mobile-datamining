@@ -7,6 +7,8 @@ import MessageTypes2 from "MessageTypes" /* 1089 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
 import RowGeneratorTypes from "RowGeneratorTypes" /* 8126 */;
 import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 8653 */;
+import MessageViewNativeComponent from "MessageViewNativeComponent" /* 8654 */;
+import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 8655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -24,15 +26,15 @@ function DCDChatItem(message) {
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       obj = {};
       const merged2 = Object.assign(merged);
-      tmp3Result = closure_1_10(tmp21(8654).default, obj);
+      tmp3Result = closure_1_10(MessageViewNativeComponent.default, obj);
     } else if (isSystemMessageDefault(message)) {
       const obj1 = {};
       const merged3 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8655).default, obj1);
+      tmp3Result = closure_1_10(SystemMessageViewNativeComponent.default, obj1);
     } else {
       obj = {};
       const merged4 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8654).default, obj);
+      tmp3Result = closure_1_10(MessageViewNativeComponent.default, obj);
     }
   }
   return tmp3Result;
@@ -131,8 +133,8 @@ export default function _default(rowGenerator) {
       const height = nativeEvent.nativeEvent.layout.height;
       if (height > 0) {
         if (null != messageSizeCacheRef) {
-          if (tmp.current[message.id] !== height) {
-            tmp.current[tmp3.id] = height;
+          if (messageSizeCacheRef.current[message.id] !== height) {
+            messageSizeCacheRef.current[tmp3.id] = height;
           }
         }
         _undefined(height);
@@ -158,7 +160,7 @@ export default function _default(rowGenerator) {
     obj = { style: tmp17.offset, onLayout: callback1, children: null };
     obj = { message, row: memo.row, style: tmp17.itemRow };
     obj.children = rawRow(DCDChatItem, obj);
-    let tmp9Result = tmp9(tmp10[16]);
+    let tmp9Result = tmp9(modifyRow[16]);
     token = tmp9Result.useToken(backgroundColor);
     const items4 = [gradientColors, token];
     const obj1 = { style: null, onLayout: null, pointerEvents: null, children: null };
@@ -187,15 +189,16 @@ export default function _default(rowGenerator) {
       const obj3 = { colors: memo2, style: null };
       const items7 = [tmp17.gradient, rowGenerator.gradientStyles];
       obj3.style = items7;
-      tmp24Result = rawRow(message(tmp10[18]), obj3);
+      tmp24Result = rawRow(message(modifyRow[18]), obj3);
     }
     items6[1] = tmp24Result;
     obj1.children = items6;
     return token(gradientColors, obj1);
   } else {
-    tmp9Result = tmp9(tmp10[14]);
+    tmp9Result = tmp9(modifyRow[14]);
     tmp9Result.isAndroid() ? PX_4 - 2 : PX_4;
   }
+  const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 };
 export const DCDMessageView = fn(8654).default;
 export const DCDSystemMessageView = fn(8655).default;

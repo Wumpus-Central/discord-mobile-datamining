@@ -11,6 +11,7 @@ import TryLoad from "TryLoad" /* 2006 */;
 import modules_MessagesDefault from "modules/Messages" /* 7477 */;
 import timeRequireDefault from "timeRequire" /* 7492 */;
 import NonGuildVersionsDefault from "NonGuildVersions" /* 7656 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7668 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
@@ -33,7 +34,7 @@ function handleClearCaches(type) {
     c14 = true;
   }
 }
-let closure_20 = async function _loadChannelHistory(arg0, value) {
+let closure_20 = async function _loadChannelHistory(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -69,11 +70,11 @@ let closure_20 = async function _loadChannelHistory(arg0, value) {
           const nowResult = performance.now();
           closure_131_2 = nowResult;
           if (null != closure_0) {
-            if (null != tmp51) {
+            if (null != closure_2) {
               let obj4 = modules_MessagesDefault;
               c5 = 1;
               c6 = 1;
-              const obj1 = { value: obj4.startupLoad(tmp49, tmp50, tmp51, React7), done: false };
+              const obj1 = { value: obj4.startupLoad(closure_0, closure_1, closure_2, React7), done: false };
               return obj1;
             }
           }
@@ -114,7 +115,7 @@ let closure_20 = async function _loadChannelHistory(arg0, value) {
     }
   }
 };
-let closure_21 = async function _loadEarlyCache(arg0, value) {
+let closure_21 = async function _loadEarlyCache(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -402,7 +403,7 @@ let closure_21 = async function _loadEarlyCache(arg0, value) {
     }
   }
 };
-let closure_23 = async function _loadInitialGuilds(arg0, value) {
+let closure_23 = async function _loadInitialGuilds(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -430,7 +431,7 @@ let closure_23 = async function _loadInitialGuilds(arg0, value) {
           closure_5 = tmp2;
           closure_4 = tmp5;
           closure_132_0 = closure_0;
-          closure_132_1 = closure_1;
+          closure_132_1 = importDefault;
           closure_132_2 = undefined;
           closure_132_3 = undefined;
           if (null == closure_0) {
@@ -438,11 +439,11 @@ let closure_23 = async function _loadInitialGuilds(arg0, value) {
             let obj1 = { value: [], done: true };
             return obj1;
           } else {
-            const page = tmp35.page;
+            const page = importDefault.page;
             if ("private-channels" !== page) {
               if ("guild-channels" !== page) {
                 if ("other" === page) {
-                  if ("@me" === tmp35.guildId) {
+                  if ("@me" === importDefault.guildId) {
                     c22 = true;
                   }
                 }
@@ -529,7 +530,7 @@ let closure_23 = async function _loadInitialGuilds(arg0, value) {
     }
   }
 };
-let closure_24 = async function _loadInitialGuildChannels(arg0, value) {
+let closure_24 = async function _loadInitialGuildChannels(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -626,7 +627,7 @@ let closure_24 = async function _loadInitialGuildChannels(arg0, value) {
     }
   }
 };
-let closure_25 = async function _loadLateLazyCache(arg0, value) {
+let closure_25 = async function _loadLateLazyCache(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -782,7 +783,7 @@ let closure_25 = async function _loadLateLazyCache(arg0, value) {
               }
               c6 = 3;
               c7 = 1;
-              const obj5 = { value: obj1.waitSafelyForPostTTI(num4), done: false };
+              let obj5 = { value: obj1.waitSafelyForPostTTI(num4), done: false };
               return obj5;
             }
           }
@@ -803,6 +804,7 @@ let closure_25 = async function _loadLateLazyCache(arg0, value) {
             closure_1(initialGuildId[23]).dispatch({ type: "CLEAR_CACHES", reason: "database:not_ok" });
             const obj10 = closure_1(initialGuildId[23]);
             closure_1(initialGuildId[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+            const obj11 = closure_1(initialGuildId[23]);
           } else {
             if (null != guilds) {
               if (null != closure_1_8) {
@@ -813,11 +815,13 @@ let closure_25 = async function _loadLateLazyCache(arg0, value) {
                     closure_1(initialGuildId[23]).dispatch({ type: "CLEAR_CACHES", reason: "database:versionless" });
                     const obj6 = closure_1(initialGuildId[23]);
                     closure_1(initialGuildId[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                    const obj7 = closure_1(initialGuildId[23]);
                   }
                   if (closure_2_18) {
                     closure_1(initialGuildId[21])("already_connected");
                     closure_2_13.log("Skipping lazy cache; already connected.");
                     closure_1(initialGuildId[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                    const obj5 = closure_1(initialGuildId[23]);
                   } else {
                     closure_1_10.addAnalytics({ hadCacheAtStartup: true });
                     let obj = { type: "CACHE_LOADED_LAZY", guilds, guildChannels, basicGuildChannels: closure_1_8.channels, initialGuildId };
@@ -872,6 +876,7 @@ let closure_25 = async function _loadLateLazyCache(arg0, value) {
                     closure_2_13.verbose("lazy_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: " + closure_1_1 + "\n          initial_guild: " + initialGuildId + "\n          database: " + null != closure_1_0 + "\n            ok: " + closure_1_6 + "\n            name: " + name + "\n        data:\n          database:\n            guilds: " + guilds.length + "\n            basic_channels:\n              total: " + reduced1 + " (" + closure_1_8.channels.length + " guilds)\n              stale: " + diff + " (" + closure_1_8.stale.length + " guilds" + str3 + ")\n              unstale: " + reduced2 + "\n            full_channels (guilds_with_stale_basic_channels):\n              total: " + reduced + " (" + guildChannels.length + " guilds)\n      )");
                     obj = { guilds: guilds.length, privateChannels, basicChannels: reduced1, basicChannelsStale: diff, fullChannels: reduced, fullChannelGuilds: guildChannels.length };
                     closure_1(initialGuildId[12]).setLazyCacheInfo(obj);
+                    const tmp10Result = closure_1(initialGuildId[12]);
                   }
                 }
               }
@@ -882,6 +887,7 @@ let closure_25 = async function _loadLateLazyCache(arg0, value) {
             closure_1(initialGuildId[23]).dispatch({ type: "CLEAR_CACHES", reason: "database:load_failed" });
             const obj8 = closure_1(initialGuildId[23]);
             closure_1(initialGuildId[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+            const obj9 = closure_1(initialGuildId[23]);
           }
         });
         c7 = 3;
@@ -985,11 +991,12 @@ prototype["canWriteCaches"] = function canWriteCaches(arg0) {
     closure_13.log("Not writing cache because not authenticated");
     return false;
   }
+  obj = AuthenticationUtils;
 };
 prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

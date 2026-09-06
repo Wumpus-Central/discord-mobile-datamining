@@ -24,7 +24,7 @@ prototype["fromPath"] = function fromPath(pathname) {
 prototype["fromInviteCode"] = function fromInviteCode(code) {
   const combined = "invite:" + code;
   if (typeof prototype === "function") {
-    const tmp8 = new prototype(tmp, tmp2, new.target, combined);
+    const tmp8 = new prototype(tmp, prototype, new.target, combined);
     tmp8.id = combined;
     tmp8.path = tmp4;
     tmp8.inviteCode = code;
@@ -32,7 +32,6 @@ prototype["fromInviteCode"] = function fromInviteCode(code) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp2 = prototype;
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("records/LinkRecord.tsx");

@@ -52,7 +52,7 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
           current.play();
         }
       } else {
-        closure_4(tmp.current);
+        closure_4(useReducedMotion.current);
       }
     }
   }, items1);
@@ -81,7 +81,7 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
       tmp2 = null !== closure_10;
     }
     if (tmp2) {
-      tmp2 = tmp !== closure_10;
+      tmp2 = balance !== closure_10;
     }
     if (tmp2) {
       tmp2 = first1;
@@ -90,7 +90,7 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
       tmp2 = !stateFromStores;
     }
     if (tmp2) {
-      callback2(tmp - closure_10);
+      callback2(balance - closure_10);
     }
   }, items3);
   return { onValueChange, onValueReached, showInitialRenderedBalance, currentAnimationType, lottieRef };

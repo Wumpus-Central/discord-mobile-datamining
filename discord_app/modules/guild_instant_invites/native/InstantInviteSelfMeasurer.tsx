@@ -37,10 +37,10 @@ export default noop.memo(function InstantInviteSelfMeasurer(type) {
   obj.style = items1;
   if ("invite" === item.type) {
     obj = { invite: item.data };
-    let tmp2Result = tmp2(InstantInviteDefault, obj);
+    let tmp2Result = jsx(InstantInviteDefault, { invite: item.data });
   } else {
     obj = { channel: item.data };
-    tmp2Result = tmp2(InstantInvite.LinkedChannelInvite, obj);
+    tmp2Result = jsx(InstantInvite.LinkedChannelInvite, { channel: item.data });
   }
   obj.children = tmp2Result;
   return <View style={null} onLayout={noop.useCallback((nativeEvent) => {

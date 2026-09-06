@@ -38,10 +38,10 @@ export const isStaffEnv = function isStaffEnv(currentUser) {
       str = tmp;
     }
   }
-  let tmp4 = str === tmp2.DEVELOPMENT;
+  let tmp4 = str === Environments.DEVELOPMENT;
   if (!tmp4) {
     const _window = window;
-    tmp4 = window.GLOBAL_ENV.RELEASE_CHANNEL === tmp2.STAGING;
+    tmp4 = window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING;
   }
   if (!tmp4) {
     let tmp8 = null != currentUser;
@@ -61,10 +61,10 @@ export const isStaffEnvRawData = function isStaffEnvRawData(flags) {
       str = tmp;
     }
   }
-  let tmp4 = str !== tmp2.DEVELOPMENT;
+  let tmp4 = str !== Environments.DEVELOPMENT;
   if (tmp4) {
     const _window = window;
-    tmp4 = window.GLOBAL_ENV.RELEASE_CHANNEL !== tmp2.STAGING;
+    tmp4 = window.GLOBAL_ENV.RELEASE_CHANNEL !== Environments.STAGING;
   }
   let tmp6 = !tmp4;
   if (tmp4) {

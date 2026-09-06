@@ -26,12 +26,12 @@ class SpotifyTrack extends PureComponent {
       React4.canOpenURL("" + timestampProducer + ":").then((result) => {
         const TRACK = constants.TRACK;
         if (result) {
-          let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(TRACK, tmp, true, "mobile")).catch(() => {
+          let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(TRACK, sync_id, true, "mobile")).catch(() => {
 
           });
-          const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(TRACK, tmp, true, "mobile"));
+          const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(TRACK, sync_id, true, "mobile"));
         } else {
-          catchPromise = LinkingDefault.openURL(closure_2_7.WEB_OPEN(TRACK, tmp, "mobile"));
+          catchPromise = LinkingDefault.openURL(closure_2_7.WEB_OPEN(TRACK, sync_id, "mobile"));
         }
         return catchPromise;
       }).catch(() => {
@@ -92,19 +92,17 @@ prototype["renderLink"] = function renderLink(children, index, arg2) {
   const self = this;
   closure_1 = index;
   const onPress = this.props.onPress;
-  children = [
-    React7(native.LegacyText, {
-      onPress() {
-        if (onPress != null) {
-          tmp();
-        }
-        const result = self.handleOpenSpotifyArtist(closure_1);
-      },
-      suppressHighlighting: true,
-      children
-    }),
-
-  ];
+  children = [, ];
+  children[0] = React7(native.LegacyText, {
+    onPress() {
+      if (onPress != null) {
+        tmp();
+      }
+      const result = self.handleOpenSpotifyArtist(closure_1);
+    },
+    suppressHighlighting: true,
+    children
+  });
   let str = ", ";
   if (arg2) {
     str = "";
@@ -182,12 +180,12 @@ export const openTrack = function openTrack(findActivityResult) {
   closure_4.canOpenURL("" + closure_6 + ":").then((result) => {
     const TRACK = constants.TRACK;
     if (result) {
-      let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(TRACK, tmp, true, "mobile")).catch(() => {
+      let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(TRACK, sync_id, true, "mobile")).catch(() => {
 
       });
-      const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(TRACK, tmp, true, "mobile"));
+      const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(TRACK, sync_id, true, "mobile"));
     } else {
-      catchPromise = LinkingDefault.openURL(closure_2_7.WEB_OPEN(TRACK, tmp, "mobile"));
+      catchPromise = LinkingDefault.openURL(closure_2_7.WEB_OPEN(TRACK, sync_id, "mobile"));
     }
     return catchPromise;
   }).catch(() => {

@@ -9,7 +9,7 @@ let closure_6 = async function _addOrUpdateSavedMessage(arg0) {
   let displayToast = arg0;
   c3 = 0;
   c4 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -81,11 +81,11 @@ let closure_6 = async function _addOrUpdateSavedMessage(arg0) {
                   closure_0 = tmp5;
                   let obj = closure_0(7855);
                   if (obj.isForLaterLimitUpgradable("addOrUpdateSavedMessage")) {
-                    let tmp8Result = tmp8(11706);
-                    const items = [tmp8(7182).FOR_LATER_ROADBLOCK];
+                    let tmp8Result = closure_1(11706);
+                    const items = [closure_1(7182).FOR_LATER_ROADBLOCK];
                     tmp8Result(tmp5, items);
                   } else {
-                    tmp8Result = tmp8(4904);
+                    tmp8Result = closure_1(4904);
                     obj = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
                     const intl2 = tmp6(1114).intl;
                     obj.title = intl2.string(tmp6(1114).t.mlbiZW);
@@ -177,14 +177,14 @@ let closure_7 = async function _removeSavedMessage() {
       }
     }
     if (message == null) {
-      const intl = tmp2(1114).intl;
-      message = intl.string(tmp2(1114).t.R0RpRX);
+      const intl = closure_1_0(1114).intl;
+      message = intl.string(closure_1_0(1114).t.R0RpRX);
     }
     obj.content = message;
     obj.open(obj);
     return null;
   });
-  if (null != arg1) {
+  if (null != value) {
     if (closure_129_0) {
       if (null == closure_129_2.dueAt) {
         if (!closure_129_1) {

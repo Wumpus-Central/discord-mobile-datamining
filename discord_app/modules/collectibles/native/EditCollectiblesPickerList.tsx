@@ -14,7 +14,7 @@ let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }
 obj = { paddingHorizontal: fn(13170).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 };
 obj.header = obj;
 let closure_7 = createStyles.createStyles(obj);
-let closure_8 = noop.memo((children) => <hasOwnProperty style={closure_7().header}>{jsx(Text_Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: arg0.header })}</hasOwnProperty>);
+let closure_8 = noop.memo((children) => <hasOwnProperty style={closure_7().header}>{jsx(Text_Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: children.header })}</hasOwnProperty>);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
 
@@ -73,7 +73,7 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
   obj = { style: null, children: null };
   if (flag) {
     obj.style = tmp.loadingContainer;
-    obj.children = tmp12(c4, { animating: true, size: "large" });
+    obj.children = <c4 animating size="large" />;
     let tmp17 = obj;
   } else {
     obj.style = tmp.list;
@@ -83,7 +83,7 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
     }
     obj.contentContainerStyle = listContent;
     obj.onLayout = callback;
-    obj.children = tmp12(sections(selectedSkuId[8]).BottomSheetFlashList, obj);
+    obj.children = jsx(sections(selectedSkuId[8]).BottomSheetFlashList, { data: memo, renderItem: callback1, getItemType: callback2, keyExtractor: tmp11, extraData: selectedSkuId, contentContainerStyle: null, onLayout: null, keyboardShouldPersistTaps: "always" });
     tmp17 = obj;
   }
   return <num {...tmp17} />;

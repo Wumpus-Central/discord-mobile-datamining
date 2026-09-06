@@ -70,17 +70,17 @@ export default noop.memo(function ExpressionPicker(expressionType) {
     } else if (expressionPickerViewType === constants.EMOJI) {
       obj = { intention: EmojiIntention.CHAT };
       trackOnEmojiPickerOpenedDefault(obj);
-      tmp.current = true;
+      ref.current = true;
     } else {
       obj = AppAnalyticsUtilsDefault;
       const obj1 = { tab: tmp2, badged: false };
       obj.trackWithMetadata(AnalyticEvents.EXPRESSION_PICKER_OPENED, obj1);
-      tmp.current = true;
+      ref.current = true;
     }
   }, items2);
   let tmp12 = expressionPickerViewType === constants.EMOJI;
   if (!tmp12) {
-    tmp12 = expressionPickerViewType === tmp11.STICKER;
+    tmp12 = expressionPickerViewType === constants.STICKER;
   }
   const tmp10 = require("useExpressionPickerInsets");
   const tmp10Result = require("useExpressionPickerInsets")({ hasCategories: tmp12 });
@@ -98,7 +98,6 @@ export default noop.memo(function ExpressionPicker(expressionType) {
   }
   const obj3 = { style: items3, children: null };
   items3[1] = tmp16;
-  const tmp14 = closure_10;
   tmp7Result = channel(expressionPickerViewType[16]);
   const items4 = [closure_9(View, { style: inPortalKeyboard ? tmp.segmentedControl : tmp.segmentedControlUnpadded, children: closure_9(channel(expressionPickerViewType[17]).SegmentedControl, { state: segmentedControlState }) }), ];
   const obj5 = { style: null, children: null };
@@ -106,23 +105,23 @@ export default noop.memo(function ExpressionPicker(expressionType) {
   obj5.style = items5;
   if (expressionPickerViewType === constants.EMOJI) {
     const obj6 = { bottomSheetIndex, bottomSheetRef, channel, onPressEmoji, onBackspace, inPortalKeyboard };
-    let tmp17Result = tmp17(tmp2(tmp3[18]), obj6);
-  } else if (expressionPickerViewType === tmp11.GIF) {
+    let tmp17Result = closure_9(tmp2(tmp3[18]), obj6);
+  } else if (expressionPickerViewType === constants.GIF) {
     const obj7 = { bottomSheetRef, channelId: null, guildId: null, hideFavorites: null, initialQuery: null, onPressGIF: null };
     ({ id: obj11.channelId, guild_id: obj11.guildId } = channel);
     obj7.hideFavorites = flag;
     obj7.initialQuery = initialGifQuery;
     obj7.onPressGIF = onPressGIF;
-    tmp17Result = tmp17(tmp2(tmp3[19]), obj7);
+    tmp17Result = closure_9(tmp2(tmp3[19]), obj7);
   } else {
     tmp17Result = null;
-    if (expressionPickerViewType === tmp11.STICKER) {
+    if (expressionPickerViewType === constants.STICKER) {
       const obj8 = { bottomSheetRef, bottomSheetIndex, channel, onPressSticker, stickerFormats, inPortalKeyboard };
-      tmp17Result = tmp17(tmp2(tmp3[20]), obj8);
+      tmp17Result = closure_9(tmp2(tmp3[20]), obj8);
     }
   }
   obj5.children = tmp17Result;
   items4[1] = closure_9(View, obj5);
   obj3.children = items4;
-  return tmp14(View, obj3);
+  return closure_10(View, obj3);
 });

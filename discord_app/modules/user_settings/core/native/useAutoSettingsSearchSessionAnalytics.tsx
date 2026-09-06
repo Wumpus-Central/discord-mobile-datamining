@@ -39,7 +39,7 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
     if (tmp3) {
       SettingSearchSessionAnalyticsManagerDefault.initialize();
     }
-    let tmp8 = !tmp2;
+    let tmp8 = !stateFromStores;
     if (!stateFromStores) {
       tmp8 = closure_1;
     }

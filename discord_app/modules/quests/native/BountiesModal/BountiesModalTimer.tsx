@@ -179,10 +179,9 @@ export default function BountiesModalTimer(arg0) {
   obj6 = { style: null, children: null };
   const items5 = [tmp.checkmarkLayer, animatedStyle1];
   obj6.style = items5;
-  const tmp15 = closure_6;
   const tmp18 = require("inlineStyles");
   obj6.children = ref(require("CheckmarkSmallBoldIcon").CheckmarkSmallBoldIcon, { size: "custom", color: require("native").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, style: tmp.checkmarkIcon });
   items3[3] = ref(require("ReanimatedRexport").View, obj6);
   obj.children = items3;
-  return tmp15(sharedValue2, obj);
+  return closure_6(sharedValue2, obj);
 };

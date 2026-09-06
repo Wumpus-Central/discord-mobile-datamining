@@ -33,11 +33,11 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
     max = 5;
   }
   ({ guildId: importDefault, audienceCount } = arg0);
-  let tmp3 = getLayoutStylesDefault();
+  const tmp3 = getLayoutStylesDefault();
   dependencyMap = tmp3;
   const size = tmp3.voiceOrStageSummaryRow.size;
   closure_3 = Math.max(users.length - max, 0);
-  let tmp4 = closure_6(size);
+  const tmp4 = closure_6(size);
   closure_4 = tmp4;
   let obj = { style: null, children: null };
   let items = [tmp4.container, ];
@@ -97,7 +97,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
     let obj3 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(max(4556).Text, obj3);
     obj1.children = items4;
-    obj.children = tmp5(tmp6, obj1);
+    obj.children = closure_5(tmp6, obj1);
     tmp8Result = tmp8(tmp6, obj);
     const tmp9 = users.length > 0 && { marginLeft: -12 };
   }

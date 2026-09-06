@@ -2,6 +2,7 @@
 
 // Module 16988 (ChannelSubtitle)
 import Text_Text from "Text/Text" /* 4556 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10116 */;
 import getChannelSubtitleData from "getChannelSubtitleData" /* 16226 */;
 import getLayoutStylesDefault from "getLayoutStyles" /* 16977 */;
 import noop from "module_19" /* 19 */;
@@ -31,8 +32,8 @@ function ChannelSubtitle(arg0) {
       str = "text-muted";
     }
     obj.color = str;
-    obj.children = tmp(10116).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4556).Text, { content: channelSubtitleData.subtitle, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
+    obj.children = MessagePreviewMarkup.renderMessagePreviewMarkup(obj);
+    return jsx(Text_Text.Text, { content: channelSubtitleData.subtitle, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
   }
 }
 const SUBTITLE_OPACITY_NORMAL = fn(10118).SUBTITLE_OPACITY_NORMAL;

@@ -61,14 +61,14 @@ export default {
       flag2 = false;
     }
     const self = this;
-    return flag2(function*(arg0, value) {
+    return flag2(function*() {
       if (null != changelog.getChangelog(closure_0, tmp3)) {
         return null;
       }
       if (flag) {
-        let MOBILE = tmp47.DESKTOP;
+        let MOBILE = constants.DESKTOP;
       } else {
-        MOBILE = tmp47.MOBILE;
+        MOBILE = constants.MOBILE;
       }
       let str = "";
       if (!flag2) {

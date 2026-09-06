@@ -70,9 +70,7 @@ function PremiumRewardGlowGradient(arg0) {
   obj.style = items1;
   const items2 = [tmp.glow, ];
   let glowLight = !isThemeDarkResult;
-  const tmp10 = hasOwnProperty;
   const tmp7 = useThemeDefault();
-  const tmp9 = React5;
   if (!isThemeDarkResult) {
     glowLight = tmp.glowLight;
   }
@@ -84,7 +82,7 @@ function PremiumRewardGlowGradient(arg0) {
   obj.children = timestampProducer(LinearGradientDefault, obj2);
   const items3 = [timestampProducer(_modDef5664, obj), children];
   obj.children = items3;
-  return tmp9(tmp10, obj);
+  return React5(hasOwnProperty, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);

@@ -45,12 +45,14 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
               if (inviter != null) {
                 username = inviter.username;
               }
-              obj = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: tmp(9566) };
+              obj = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef9566 };
               obj.open(obj);
               DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
+              const tmpResult = DispatcherDefault;
             }
       };
       const result = obj.acceptInviteAndTransitionToInviteChannel(obj);
     }
   }
+  tmp = null == invite.channel && null == invite.guild && null != invite.inviter;
 };

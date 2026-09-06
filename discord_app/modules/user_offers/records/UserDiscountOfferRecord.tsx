@@ -49,7 +49,7 @@ UserDiscountOfferRecord["createFromServer"] = function createFromServer(discount
     date2 = new Date(discount.expires_at);
   }
   if (typeof UserDiscountOfferRecord === "function") {
-    const tmp17 = new UserDiscountOfferRecord(tmp5, _Date2, _Date, tmp, new.target, id, discount_id, fromServer, user_id, date);
+    const tmp17 = new UserDiscountOfferRecord(tmp5, _Date2, _Date, UserDiscountOfferRecord, new.target, id, discount_id, fromServer, user_id, date);
     tmp17.id = id;
     tmp17.discountId = discount_id;
     tmp17.discount = fromServer;

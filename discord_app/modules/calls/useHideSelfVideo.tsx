@@ -12,23 +12,23 @@ const Constants = fn(4585);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");
 
-export default function useHideSelfVideo(arg0) {
+export default function useHideSelfVideo(id) {
   let DEFAULT = arg1;
   if (arg1 === undefined) {
     DEFAULT = constants.DEFAULT;
   }
   const items = [AuthenticationStore];
   const stateFromStores = DEFAULT(504).useStateFromStores(items, () => id.getId());
-  const obj = DEFAULT(504);
+  let obj = DEFAULT(504);
   const items1 = [MediaEngineStore];
   const stateFromStores1 = DEFAULT(504).useStateFromStores(items1, () => MediaEngineStore.supports(constants.DISABLE_VIDEO));
   const obj2 = DEFAULT(504);
   const items2 = [MediaEngineStore];
   const items3 = [stateFromStores, DEFAULT];
-  let tmp5 = null == arg0;
+  let tmp5 = null == id;
   const stateFromStores2 = DEFAULT(504).useStateFromStores(items2, () => MediaEngineStore.isLocalVideoDisabled(stateFromStores, DEFAULT), items3);
   if (!tmp5) {
-    tmp5 = arg0 === stateFromStores;
+    tmp5 = id === stateFromStores;
   }
   if (tmp5) {
     tmp5 = stateFromStores1;
@@ -38,6 +38,7 @@ export default function useHideSelfVideo(arg0) {
     stateFromStores2,
     (arg0) => {
       AudioActionCreatorsDefault.setDisableLocalVideo(stateFromStores, arg0 ? VideoToggleState.DISABLED : VideoToggleState.MANUAL_ENABLED, DEFAULT);
+      const tmp2 = arg0 ? VideoToggleState.DISABLED : VideoToggleState.MANUAL_ENABLED;
     }
   ];
   return items4;

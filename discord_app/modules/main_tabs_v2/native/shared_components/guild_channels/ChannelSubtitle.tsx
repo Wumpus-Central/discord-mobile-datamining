@@ -2,6 +2,7 @@
 
 // Module 16656 (guild_channels/ChannelSubtitle)
 import Text_Text from "Text/Text" /* 4556 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10116 */;
 import ChannelListLayout from "ChannelListLayout" /* 10121 */;
 import getChannelSubtitleData from "getChannelSubtitleData" /* 16226 */;
 import noop from "module_19" /* 19 */;
@@ -26,8 +27,8 @@ function ChannelSubtitle(arg0) {
     obj.guildId = guildId;
     obj.layout = layout;
     obj.disableAnimatedEmoji = !("voice" === channelSubtitleData.type && connected);
-    obj.children = tmp(10116).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4556).Text, { content: channelSubtitleData.subtitle, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
+    obj.children = MessagePreviewMarkup.renderMessagePreviewMarkup(obj);
+    return jsx(Text_Text.Text, { content: channelSubtitleData.subtitle, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
   }
 }
 const jsx = fn(21).jsx;

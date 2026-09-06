@@ -17,8 +17,9 @@ function openGuildEventDetails(arg0) {
   }
   obj.recurrenceId = recurrenceId;
   obj.openLazy(asyncRequireImpl(9790, dependencyMap.paths), closure_5, obj, "stack");
+  const tmp3 = asyncRequireImpl(9790, dependencyMap.paths);
 }
-let closure_7 = async function _transitionToEventDetailsFromInvite(arg0, value) {
+let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

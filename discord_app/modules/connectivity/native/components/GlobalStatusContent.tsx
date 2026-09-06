@@ -2,9 +2,13 @@
 
 // Module 9685 (GlobalStatusContent)
 import nativeDefault from "native" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9215 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9466 */;
+import StatusBarDefault from "StatusBar" /* 9481 */;
 import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9583 */;
 import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9678 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9686 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -37,7 +41,7 @@ export default function ConnectivityGlobalStatusContent() {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let channelId;
     if (closure_0 != null) {
-      channelId = tmp2.channelId;
+      channelId = closure_0.channelId;
     }
     if (channelId == null) {
       channelId = RTCConnectionStore.getChannelId();
@@ -55,7 +59,7 @@ export default function ConnectivityGlobalStatusContent() {
     let str;
     const guild = GuildStore.getGuild(guildId1);
     if (closure_0 != null) {
-      str = tmp2.sessionId;
+      str = closure_0.sessionId;
     }
     if (str == null) {
       str = "";
@@ -99,7 +103,7 @@ export default function ConnectivityGlobalStatusContent() {
   tmp5Result = tmp5(5126);
   let isScreenLandscape = tmp5Result.useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4417).isModalOpen(tmp2(9466));
+    isScreenLandscape = tmp5(4417).isModalOpen(ChannelCallModalDefault);
     const tmp5Result1 = tmp5(4417);
   }
   if (isScreenLandscape) {
@@ -108,7 +112,7 @@ export default function ConnectivityGlobalStatusContent() {
   }
   let num = 0;
   if (!isScreenLandscape) {
-    num = tmp2(1611)().top;
+    num = useSafeAreaInsetsDefault().top;
   }
   obj = { style: null, children: null };
   const items2 = [tmp14 ? tmp.bg : tmp.bgNeutral, tmp.container, ];
@@ -116,13 +120,13 @@ export default function ConnectivityGlobalStatusContent() {
   items2[2] = obj;
   obj.style = items2;
   if (isScreenLandscape) {
-    isScreenLandscape = closure_10(tmp2(9481), { hidden: true });
+    isScreenLandscape = closure_10(StatusBarDefault, { hidden: true });
   }
   const items3 = [isScreenLandscape, ];
   let tmp19 = null;
   if (isGuildStageVoiceResult) {
     const obj1 = { channel, guild, hasRTCConnectivity: tmp12, isDarkTheme: isThemeDarkResult, rtcConnectionState, remotePlatform };
-    tmp19 = closure_10(tmp2(9686), obj1);
+    tmp19 = closure_10(GlobalStageChannelStatusDefault, obj1);
   }
   items3[1] = tmp19;
   obj.children = items3;

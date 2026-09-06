@@ -2,9 +2,9 @@
 
 // Module 13207 (createActivityMessageEmbed)
 import createAppMessageEmbed from "createAppMessageEmbed" /* 11940 */;
+import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 12940 */;
 import size from "module_2" /* 2 */;
 
-const CustomActivityLinkUtils = tmp(12940);
 const result = size.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {

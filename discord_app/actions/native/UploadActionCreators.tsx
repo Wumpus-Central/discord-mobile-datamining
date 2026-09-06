@@ -22,11 +22,10 @@ export default {
       if ("" === DraftStore.getDraft(messageForFile.channel_id, DraftType.ChannelMessage)) {
         obj = { type: "DRAFT_SAVE", channelId: null, draft: null, draftType: null };
         ({ channel_id: obj4.channelId, content: obj4.draft } = messageForFile);
-        obj.draftType = tmp6.ChannelMessage;
+        obj.draftType = DraftType.ChannelMessage;
         DispatcherDefault.dispatch(obj);
         const tmpResult = DispatcherDefault;
       }
-      tmp6 = DraftType;
     }
   },
   cancelUploadItem(found, itemId) {

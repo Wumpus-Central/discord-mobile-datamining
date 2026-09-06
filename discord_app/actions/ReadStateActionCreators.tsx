@@ -1,13 +1,14 @@
 // === Module 7110: ReadStateActionCreators ===
 
 // Module 7110 (ReadStateActionCreators)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5506 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7111 */;
 import UserStore from "UserStore" /* 1371 */;
 
-function ack(channelId, location, arg2, arg3, messageId) {
+function ack(channelId, location, arg2, arg3) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -69,16 +70,15 @@ export const ackChannel = function ackChannel(channel, location) {
   } else {
     const id = channel.id;
     if (channel.isForumLikeChannel()) {
-      tmp(11);
       const _Date = Date;
-      const tmpResult = tmp(573);
+      const tmpResult = DispatcherDefault;
       let obj = { type: "CHANNEL_ACK", channelId: id, messageId: tmpResult.fromTimestamp(Date.now()), immediate: true, force: true, context: CURRENT_APP_CONTEXT, location };
       tmpResult.dispatch(obj);
       const fromTimestampResult = tmpResult.fromTimestamp(Date.now());
     } else {
       obj = { type: "CHANNEL_ACK", channelId: id, messageId: "y", immediate: true, force: true, context: CURRENT_APP_CONTEXT, location };
-      tmp(573).dispatch(obj);
-      const tmpResult1 = tmp(573);
+      DispatcherDefault.dispatch(obj);
+      const tmpResult1 = DispatcherDefault;
     }
   }
 };

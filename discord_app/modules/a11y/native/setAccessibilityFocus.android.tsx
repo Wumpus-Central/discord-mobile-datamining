@@ -7,8 +7,8 @@ import size from "module_2" /* 2 */;
 ({ AccessibilityInfo: closure_0, findNodeHandle: closure_1 } = get_ActivityIndicator);
 let result = size.fileFinishedImporting("modules/a11y/native/setAccessibilityFocus.android.tsx");
 
-export const setAccessibilityFocus = function setAccessibilityFocus(arg0) {
-  ({ ref, delay } = arg0);
+export const setAccessibilityFocus = function setAccessibilityFocus(__closure) {
+  ({ ref, delay } = __closure);
   if (delay === undefined) {
     delay = 0;
   }

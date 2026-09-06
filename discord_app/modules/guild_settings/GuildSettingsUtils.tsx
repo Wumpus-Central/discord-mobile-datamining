@@ -18,9 +18,8 @@ export const getPowerfulPermissionTitles = function getPowerfulPermissionTitles(
   const items = [];
   PermissionSpecUtilsDefault;
   for (const item10015 of closure_1_5) {
-    let str = item10015;
     if (hasPermission(arg1, item10015)) {
-      let arr = items.push(tmp2[str.toString(str)].title);
+      let arr = items.push(tmp2[item10015.toString(item10015)].title);
     }
     continue;
   }

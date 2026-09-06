@@ -2,6 +2,7 @@
 
 // Module 14544 (ICYMIManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
 import ICYMIExperiment from "ICYMIExperiment" /* 8352 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
@@ -52,13 +53,17 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               clearTimeout(timeout);
             }
             timeout = setTimeout(() => { ... }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
+            let obj = closure_1_1(closure_1_2[0]);
           }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
+          let obj = closure_1_1(closure_1_2[0]);
         }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
+        let obj = closure_1_1(closure_1_2[0]);
       }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
-    }, 15 * tmp2(1090).Millis.MINUTE);
-    let tmp2Result = tmp2(8351);
+      let obj = closure_1_1(closure_1_2[0]);
+    }, 15 * DurationsDefault.Millis.MINUTE);
+    let tmp2Result = ICYMIActionCreatorsDefault;
     const guildChannelScores = tmp2Result.getGuildChannelScores();
-    tmp2Result = tmp2(8351);
+    tmp2Result = ICYMIActionCreatorsDefault;
     const recommendedGuilds = tmp2Result.getRecommendedGuilds();
   }
 };

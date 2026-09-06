@@ -21,13 +21,13 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     obj = { hasIcons: true, children: null };
     obj = { label: tmp3.label, icon: null, onPress: null };
     const obj1 = { IconComponent: tmp4(10951).PlusLargeIcon };
-    obj.icon = tmp7(tmp4(7200).ActionSheetRow.Icon, obj1);
+    obj.icon = closure_5(tmp4(7200).ActionSheetRow.Icon, obj1);
     obj.onPress = function onPress() {
       closure_2.perform();
       onClose();
     };
-    obj.children = tmp7(tmp4(7200).ActionSheetRow, obj);
-    tmp7Result = tmp7(tmp4(7200).ActionSheetRow.Group, obj);
+    obj.children = closure_5(tmp4(7200).ActionSheetRow, obj);
+    tmp7Result = closure_5(tmp4(7200).ActionSheetRow.Group, obj);
   }
   const items = [tmp7Result, , ];
   const obj2 = { hasIcons: true, children: null };
@@ -35,7 +35,6 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   const intl = tmp4(1114).intl;
   obj3.label = intl.string(category(1114).t.zdPFs9);
   const tmp2 = onClose(4713)(category, true);
-  const tmp6 = closure_6;
   obj3.icon = closure_5(category(7200).ActionSheetRow.Icon, { IconComponent: category(7380).SettingsIcon });
   obj3.onPress = function onPress() {
     openFavoritesGuildCategorySettingsModalDefault(category.id);
@@ -50,18 +49,18 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     const intl2 = tmp4(1114).intl;
     obj6.label = intl2.string(tmp4(1114).t["2visC6"]);
     const obj7 = { IconComponent: tmp4(10629).IdIcon };
-    obj6.icon = tmp7(tmp4(7200).ActionSheetRow.Icon, obj7);
+    obj6.icon = closure_5(tmp4(7200).ActionSheetRow.Icon, obj7);
     obj6.onPress = function onPress() {
       ClipboardUtils.copy(category.id);
       ToastUtils.presentIdCopied();
       onClose();
     };
-    obj5.children = tmp7(tmp4(7200).ActionSheetRow, obj6);
-    tmp7Result = tmp7(tmp4(7200).ActionSheetRow.Group, obj5);
+    obj5.children = closure_5(tmp4(7200).ActionSheetRow, obj6);
+    tmp7Result = closure_5(tmp4(7200).ActionSheetRow.Group, obj5);
   }
   items[2] = tmp7Result;
   obj.children = items;
-  return tmp6(category(7198).ActionSheet, obj);
+  return closure_6(category(7198).ActionSheet, obj);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

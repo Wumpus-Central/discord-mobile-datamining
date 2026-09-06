@@ -3,12 +3,12 @@
 // Module 12280 (VoicePanelControlsDrawerTitle)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7073 */;
 import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 12281 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp2(4556);
-const ReanimatedNativeViewDefault = tmp7(7073);
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
@@ -55,7 +55,6 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   obj = { style: null, children: null };
   const items = [tmp.titleWrapper, style];
   obj.style = items;
-  const tmp6 = hasOwnProperty;
   const tmp8 = NativeViewDefault;
   if (shown == null) {
     shown = sharedValue;
@@ -68,5 +67,5 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   obj1.children = React4(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: children.title });
   items1[1] = React4(ReanimatedNativeViewDefault, obj1);
   obj.children = items1;
-  return tmp6(tmp8, obj);
+  return hasOwnProperty(tmp8, obj);
 });

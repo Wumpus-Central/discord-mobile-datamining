@@ -8,9 +8,12 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
 import MetricEvents from "MetricEvents" /* 7607 */;
 import SafetyHubModels from "SafetyHubModels" /* 8420 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11883 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11885 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import SafetyHubStore from "SafetyHubStore" /* 8430 */;
@@ -32,8 +35,8 @@ function ClassificationHeader(classificationTypeText) {
     let tmp3 = null;
     if (null != guildMetadata) {
       let member_type;
-      if (tmp2 != tmp3) {
-        member_type = tmp2.member_type;
+      if (guildMetadata != tmp3) {
+        member_type = guildMetadata.member_type;
       }
       let X1ngSd = require;
       name = dependencyMap;
@@ -42,10 +45,10 @@ function ClassificationHeader(classificationTypeText) {
         X1ngSd = X1ngSd(1114).t.X1ngSd;
         name = {};
         const merged = Object.assign(name);
-        tmp3 = tmp2 == tmp3;
+        tmp3 = guildMetadata == tmp3;
         name = undefined;
         if (!tmp3) {
-          name = tmp2.name;
+          name = guildMetadata.name;
         }
         name.guildName = name;
         let formatResult = intl3.format(X1ngSd, name);
@@ -54,8 +57,8 @@ function ClassificationHeader(classificationTypeText) {
         const obj = {};
         const merged1 = Object.assign(name);
         name = undefined;
-        if (tmp2 != tmp3) {
-          name = tmp2.name;
+        if (guildMetadata != tmp3) {
+          name = guildMetadata.name;
         }
         obj.guildName = name;
         formatResult = intl2.format(X1ngSd(1114).t.rmpEPD, obj);
@@ -79,9 +82,9 @@ function ClassificationActionsTaken(arg0) {
   if (0 !== found.length) {
     obj = { style: tmp4.sectionContainer, children: null };
     obj = { variant: "eyebrow", color: "text-muted", children: null };
-    const intl = tmp(1114).intl;
-    obj.children = intl.string(tmp(1114).t["O2nYk+"]);
-    const items1 = [map1(tmp(4556).Text, obj), ];
+    const intl = util.intl;
+    obj.children = intl.string(util.t["O2nYk+"]);
+    const items1 = [map1(Text_Text.Text, obj), ];
     const obj1 = { style: null, children: null };
     const items2 = [tmp4.actionsTaken];
     obj1.style = items2;
@@ -90,21 +93,20 @@ function ClassificationActionsTaken(arg0) {
     if (null != classificationExpiration) {
       const obj2 = { style: tmp4.classificationActionDescription, children: null };
       const obj3 = { variant: "text-xs/normal", children: [" ", "\u2022"] };
-      const items4 = [tmp6(tmp(4556).Text, obj3), ];
+      const items4 = [closure_1_14(Text_Text.Text, obj3), ];
       const obj4 = { variant: "text-xs/normal", children: null };
-      const intl2 = tmp(1114).intl;
+      const intl2 = util.intl;
       const obj5 = { expirationDate: classificationExpiration.toLocaleDateString(stateFromStores, { dateStyle: "medium" }) };
-      obj4.children = intl2.format(tmp(1114).t.TByIjT, obj5);
-      items4[1] = tmp8(tmp(4556).Text, obj4);
+      obj4.children = intl2.format(util.t.TByIjT, obj5);
+      items4[1] = map1(Text_Text.Text, obj4);
       obj2.children = items4;
-      tmp6Result = tmp6(tmp7, obj2, "expiration");
+      tmp6Result = closure_1_14(React4, obj2, "expiration");
     }
     items3[1] = tmp6Result;
     obj1.children = items3;
     items1[1] = closure_1_14(React4, obj1);
     obj.children = items1;
-    tmp6Result = tmp6(tmp7, obj);
-    tmp8 = map1;
+    tmp6Result = closure_1_14(React4, obj);
   } else {
     tmp6Result = null;
   }
@@ -198,10 +200,10 @@ function LetUsKnow(arg0) {
 function AppealFooter(hasBeenAppealed) {
   let obj = { style: closure_16().letUsKnowContainer, children: null };
   if (hasBeenAppealed.hasBeenAppealed) {
-    let tmpResult = tmp(AppealStatus, {});
+    let tmpResult = map1(AppealStatus, {});
   } else {
     obj = { onPressLetUsKnow: hasBeenAppealed.onPressLetUsKnow };
-    tmpResult = tmp(LetUsKnow, obj);
+    tmpResult = map1(LetUsKnow, obj);
   }
   obj.children = tmpResult;
   return map1(React4, obj);
@@ -349,13 +351,13 @@ export default function ConnectedClassificationDetail(classificationId) {
   current = { style: tmp4.root, children: null };
   obj1 = { style: tmp4.container, bottom: true, children: null };
   if (null == classification) {
-    let tmp29Result = tmp15(isAppealEligible, { size: "large" });
+    let tmp29Result = closure_13(isAppealEligible, { size: "large" });
   } else {
     const obj2 = { style: null, children: null };
     const items2 = [tmp4.classificationDetailContainer];
     obj2.style = items2;
     ({ description: obj17.classificationTypeText, guild_metadata: obj17.guildMetadata } = classification);
-    const items3 = [tmp15(ClassificationHeader, { classificationTypeText: null, guildMetadata: null }), , , , ];
+    const items3 = [closure_13(ClassificationHeader, { classificationTypeText: null, guildMetadata: null }), , , , ];
     let flagged_content1 = classification.flagged_content;
     if (flagged_content1 == null) {
       flagged_content1 = [];
@@ -373,56 +375,55 @@ export default function ConnectedClassificationDetail(classificationId) {
       ({ isDsaEligible: obj2.is_dsa_eligible, violationType: obj2.violation_type } = safetyHubClassification);
       obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj);
       if (hasItem1) {
-        let tmpResult = tmp(11883);
-        tmpResult.openV2(tmp3, onClose);
+        let tmpResult = AutomatedUnderageAppealModalActionCreatorsDefault;
+        tmpResult.openV2(classificationId, onClose);
       } else if (hasItem) {
-        tmpResult = tmp(11883);
-        tmpResult.open(tmp3, onClose);
+        tmpResult = AutomatedUnderageAppealModalActionCreatorsDefault;
+        tmpResult.open(classificationId, onClose);
       } else if (isAppealEligible) {
         obj = { name: MetricEvents.MetricEvents.APPEAL_INGESTION_VIEW };
-        tmp(7602).increment(obj);
-        const tmpResult1 = tmp(7602);
-        const obj1 = { classificationId: tmp3 };
-        tmp(11885).open(obj1);
-        const tmpResult2 = tmp(11885);
+        MonitoringAgentDefault.increment(obj);
+        const tmpResult1 = MonitoringAgentDefault;
+        const obj1 = { classificationId };
+        AppealIngestionModalActionCreatorsDefault.open(obj1);
+        const tmpResult2 = AppealIngestionModalActionCreatorsDefault;
       } else {
-        tmp(4255).openURL(constants.APPEALS_LINK);
-        const tmpResult3 = tmp(4255);
+        LinkingDefault.openURL(constants.APPEALS_LINK);
+        const tmpResult3 = LinkingDefault;
       }
     }
     const obj4 = { flaggedContent: flagged_content1 };
-    items3[1] = tmp15(source(tmp2[27]), obj4);
+    items3[1] = closure_13(source(tmp2[27]), obj4);
     const obj5 = { actions: classification.actions, classificationExpiration: null };
     const obj3 = { classificationTypeText: null, guildMetadata: null };
-    const tmp29 = closure_14;
     const tmp30 = classification;
     const tmp33 = source(tmp2[27]);
     obj5.classificationExpiration = tmp(tmp2[28]).getClassificationExpiration(classification);
-    items3[2] = tmp15(ClassificationActionsTaken, obj5);
+    items3[2] = closure_13(ClassificationActionsTaken, obj5);
     const obj6 = { appealLink: null, communityGuidelinesLink: null, tosLink: null, classificationTypeText: null, policyExplainerLink: null, hidePolicyCard: null, appealComponent: null };
     ({ APPEALS_LINK: obj12.appealLink, COMMUNITY_GUIDELINES: obj12.communityGuidelinesLink, TOS_LINK: obj12.tosLink } = ref);
     ({ description: obj12.classificationTypeText, explainer_link: obj12.policyExplainerLink } = classification);
     obj6.hidePolicyCard = hasItem1;
     if (hasItem1) {
       const obj7 = { onPressLetUsKnow };
-      let tmp15Result = tmp15(ExpressiveModalV2AppealFooter, obj7);
+      let tmp15Result = closure_13(ExpressiveModalV2AppealFooter, obj7);
     } else {
       const obj8 = { hasBeenAppealed: null != classification.appeal_status, onPressLetUsKnow };
-      tmp15Result = tmp15(AppealFooter, obj8);
+      tmp15Result = closure_13(AppealFooter, obj8);
     }
     obj6.appealComponent = tmp15Result;
-    items3[3] = tmp15(ClassificationGuidance, obj6);
+    items3[3] = closure_13(ClassificationGuidance, obj6);
     let tmp15Result1 = !hasItem1;
     if (!hasItem1) {
       const obj9 = { onClose };
-      tmp15Result1 = tmp15(ClassificationDetailFooter, obj9);
+      tmp15Result1 = closure_13(ClassificationDetailFooter, obj9);
     }
     items3[4] = tmp15Result1;
     obj2.children = items3;
-    tmp29Result = tmp29(tmp30, obj2);
+    tmp29Result = closure_14(tmp30, obj2);
     let tmpResult1 = tmp(tmp2[28]);
   }
   obj1.children = tmp29Result;
   current.children = closure_13(classificationId(onClose[26]).SafeAreaPaddingView, obj1);
-  tmp15Result2 = tmp15(is_violative_content_shown, current);
+  tmp15Result2 = closure_13(is_violative_content_shown, current);
 };

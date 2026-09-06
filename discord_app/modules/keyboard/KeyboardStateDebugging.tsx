@@ -58,6 +58,7 @@ export default {
     if (!obj.isIOS()) {
       logger.info("KeyboardController keyboardWillHide.");
     }
+    obj = utils_PlatformUtils;
   },
   keyboardControllerKeyboardDidHide() {
     let flag = arg0;
@@ -88,5 +89,6 @@ export default {
     if (!obj.isIOS()) {
       logger.warn("Marking potential bad state from user, check logs above.");
     }
+    obj = utils_PlatformUtils;
   }
 };

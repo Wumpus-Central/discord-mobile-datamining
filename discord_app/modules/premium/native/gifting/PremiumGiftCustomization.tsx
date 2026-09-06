@@ -73,13 +73,13 @@ export default function PremiumGiftCustomization() {
     obj2 = { style: tmp4.senderHeaderTitle, variant: "text-md/semibold", children: null };
     const intl3 = tmp(tmp2[10]).intl;
     obj2.children = intl3.string(tmp(tmp2[10]).t.NlkxGS);
-    const items3 = [tmp15(tmp(tmp2[13]).Text, obj2), , ];
+    const items3 = [closure_8(tmp(tmp2[13]).Text, obj2), , ];
     obj3 = { user: recipientUser };
-    items3[1] = tmp15(tmp17(tmp2[14]), obj3);
+    items3[1] = closure_8(tmp17(tmp2[14]), obj3);
     const obj4 = { onFocusMessage: callback, setMessagePosition: tmp7[1] };
-    items3[2] = tmp15(tmp17(tmp2[15]), obj4);
+    items3[2] = closure_8(tmp17(tmp2[15]), obj4);
     obj1.children = items3;
-    tmp13Result = tmp13(closure_9, obj1);
+    tmp13Result = closure_10(closure_9, obj1);
   }
   items2[2] = tmp13Result;
   obj.children = closure_10(closure_5, { children: items2 });

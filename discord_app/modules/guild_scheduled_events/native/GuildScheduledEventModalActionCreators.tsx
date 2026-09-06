@@ -15,6 +15,7 @@ import _modDef9625 from "module_9625" /* 9625 */;
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9703 */;
 import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 9706 */;
 import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 9773 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9820 */;
 import restoreEventRecurrenceDefault from "restoreEventRecurrence" /* 9897 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -44,7 +45,7 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
     ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9725, dependencyMap.paths), obj, closure_13);
   }
 }
-let closure_21 = async function _transitionToEventDetailsFromInvite(arg0, value) {
+let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -134,9 +135,9 @@ export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActi
   const obj = { eventId, guildId, recurrenceId };
   obj.openAlert("DeleteEventAlert", jsx(noop.lazy(() => event(paths[14])(paths[19], paths.paths)), { eventId, guildId, recurrenceId }));
 };
-export const updateRsvp = function updateRsvp(arg0, arg1, arg2, arg3) {
+export const updateRsvp = function updateRsvp(id, arg1, dependencyMap, arg3) {
   closure_0 = arg3;
-  GuildScheduledEventsActionCreatorsDefault.updateRsvp(arg0, arg1, arg2, arg3, (arg0) => {
+  GuildScheduledEventsActionCreatorsDefault.updateRsvp(id, arg1, dependencyMap, arg3, (arg0) => {
     let tmp2 = tmp;
     if (null == arg0) {
       tmp2 = closure_0 === constants.INTERESTED;
@@ -148,9 +149,9 @@ export const updateRsvp = function updateRsvp(arg0, arg1, arg2, arg3) {
         str = "ERROR_OCCURRED_TRY_AGAIN";
       }
       openResult = { key: str, content: null, icon: null };
-      const intl = id(tmp6[23]).intl;
+      const intl = id(dependencyMap[23]).intl;
       const string = intl.string;
-      const t = id(tmp6[23]).t;
+      const t = id(dependencyMap[23]).t;
       if (tmp) {
         let stringResult = string(t.fEptJP);
       } else {
@@ -169,7 +170,7 @@ export const handleGuildScheduledEventRsvp = function handleGuildScheduledEventR
   require("GuildEventRsvpUtils");
   const obj = {
     eventId: id,
-    recurrenceId: c1,
+    recurrenceId: importDefault,
     guildId: guild_id,
     updateRsvp(arg0, arg1, arg2, arg3) {
       closure_0 = arg3;
@@ -185,9 +186,9 @@ export const handleGuildScheduledEventRsvp = function handleGuildScheduledEventR
             str = "ERROR_OCCURRED_TRY_AGAIN";
           }
           openResult = { key: str, content: null, icon: null };
-          const intl = id(tmp6[23]).intl;
+          const intl = id(dependencyMap[23]).intl;
           const string = intl.string;
-          const t = id(tmp6[23]).t;
+          const t = id(dependencyMap[23]).t;
           if (tmp) {
             let stringResult = string(t.fEptJP);
           } else {
@@ -208,7 +209,7 @@ export const handleGuildScheduledEventRsvp = function handleGuildScheduledEventR
   };
   obj.handleRsvp(obj);
 };
-export const openShareEvent = function openShareEvent(event, arg1) {
+export const openShareEvent = function openShareEvent(event, id) {
   let channel = ChannelStore.getChannel(event.channel_id);
   if (channel == null) {
     channel = GuildChannelStore.getDefaultChannel(event.guild_id);
@@ -224,25 +225,25 @@ export const openShareEvent = function openShareEvent(event, arg1) {
       if (null != vanityURLCode) {
         if ("" !== guild.vanityURLCode) {
           if (!PermissionStore.can(constants2.CREATE_INSTANT_INVITE, channel)) {
-            let tmp7Result = tmp7(9820);
+            let tmp7Result = instant_invite_InstantInviteUtils;
             let obj = { guildScheduledEventId: event.id, stackingBehavior: "stack" };
             const result1 = tmp7Result.showVanityUrlInviteActionSheet(guild, channel, constants.GUILD_SCHEDULED_EVENT, obj);
           }
         }
       }
-      tmp7Result = tmp7(9820);
+      tmp7Result = instant_invite_InstantInviteUtils;
       obj = { createInvite: result, guildScheduledEventId: event.id, stackingBehavior: "stack", source: constants.GUILD_SCHEDULED_EVENT };
       const result2 = tmp7Result.showInstantInviteActionSheet(channel, obj);
     } else {
-      let tmp11 = null != arg1;
+      let tmp11 = null != id;
       if (tmp11) {
-        tmp11 = "" !== arg1;
+        tmp11 = "" !== id;
       }
       if (tmp11) {
-        tmp7(7190).copy(arg1);
-        const tmp7Result1 = tmp7(7190);
-        tmp7(4258).presentLinkCopied();
-        const tmp7Result2 = tmp7(4258);
+        ClipboardUtils.copy(id);
+        const tmp7Result1 = ClipboardUtils;
+        ToastUtils.presentLinkCopied();
+        const tmp7Result2 = ToastUtils;
       }
     }
   } else {
@@ -318,9 +319,9 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                         str = "ERROR_OCCURRED_TRY_AGAIN";
                       }
                       openResult = { key: str, content: null, icon: null };
-                      const intl = id(tmp6[23]).intl;
+                      const intl = id(dependencyMap[23]).intl;
                       const string = intl.string;
-                      const t = id(tmp6[23]).t;
+                      const t = id(dependencyMap[23]).t;
                       if (tmp) {
                         let stringResult = string(t.fEptJP);
                       } else {
@@ -529,6 +530,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
       }
       const obj12 = { key: "GuildEvent", stackingBehavior: "stack", options: items, hasIcons: false };
       const result1 = tmp3(tmp4[42]).showSimpleActionSheet(obj12);
+      const tmp3Result1 = tmp3(tmp4[42]);
     }
   }
   if (null != tmp7) {

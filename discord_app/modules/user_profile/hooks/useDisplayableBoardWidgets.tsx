@@ -1,6 +1,8 @@
 // === Module 9032: useDisplayableBoardWidgets ===
 
 // Module 9032 (useDisplayableBoardWidgets)
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7623 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7630 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7633 */;
 import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 9034 */;
 import noop from "module_19" /* 19 */;
@@ -9,14 +11,14 @@ require = fn;
 function isNonEmptyBoardWidget(games) {
   let tmp3 = games instanceof UserProfileApplicationWidgetTypes.ApplicationWidget;
   if (!tmp3) {
-    let tmp4 = games instanceof tmp(7630).UserProfilePersonalWidget;
+    let tmp4 = games instanceof UserProfilePersonalWidget.UserProfilePersonalWidget;
     if (!tmp4) {
-      let isGameWidgetResult = tmp(7623).isGameWidget(games);
+      let isGameWidgetResult = UserProfileGameWidgetTypes.isGameWidget(games);
       if (isGameWidgetResult) {
         isGameWidgetResult = games.games.length > 0;
       }
       tmp4 = isGameWidgetResult;
-      const tmpResult = tmp(7623);
+      const tmpResult = UserProfileGameWidgetTypes;
     }
     tmp3 = tmp4;
   }

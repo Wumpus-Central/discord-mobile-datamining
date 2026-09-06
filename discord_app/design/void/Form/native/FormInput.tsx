@@ -24,7 +24,7 @@ let closure_5 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormInput.tsx");
 
-export default noop.forwardRef((helpText, ref) => {
+export default noop.forwardRef((helpText, arg1) => {
   ({ onChange, keyboardAppearance, value, title } = helpText);
   ({ keyboardType, style, inputTextStyle } = helpText);
   if (title === undefined) {
@@ -77,7 +77,7 @@ export default noop.forwardRef((helpText, ref) => {
   }
   let onEndEditing = Object.assign(helpText, Object.assign({ onChange: 0, keyboardAppearance: 0, keyboardType: 0, style: 0, inputTextStyle: 0, value: 0, title: 0, helpText: 0, error: 0, placeholder: 0, secureTextEntry: 0, disabled: 0, multiline: 0, autoFocus: 0, numberOfLines: 0, clearButtonVisibility: 0, autoCapitalize: 0, autoCorrect: 0, showBorder: 0, showCharactersRemaining: 0, enableAndroidSanitizedInputWorkaround: 0, allowRedesignTextInput: 0 }));
   closure_0 = undefined;
-  ref = undefined;
+  let ref;
   let ref1;
   let color = closure_5();
   let TextArea = require;
@@ -98,12 +98,12 @@ export default noop.forwardRef((helpText, ref) => {
     if (!flag6) {
       let str2 = keyboardType;
     } else {
+      PlatformUtils;
       str2 = "visible-password";
-      const TextAreaResult1 = PlatformUtils;
     }
-    ref = obj4.useRef(null);
-    ref1 = obj4.useRef(null);
-    const imperativeHandle = obj4.useImperativeHandle(ref, () => ({
+    ref = noop.useRef(null);
+    ref1 = noop.useRef(null);
+    const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
       isFocused() {
         const current = closure_1_0 ? ref : ref1.current;
         let isFocusedResult;
@@ -178,10 +178,10 @@ export default noop.forwardRef((helpText, ref) => {
         obj.onEndEditing = onEndEditing;
         obj.value = value;
         obj.errorMessage = error;
-        let tmp14Result = tmp14(TextArea, obj);
+        let tmp14Result = <TextArea ref={ref} returnKeyType="default" onChange={onChange} keyboardAppearance={keyboardAppearance} keyboardType={str2} placeholderTextColor={null} placeholder={null} secureTextEntry={null} isDisabled={null} autoFocus={null} autoCapitalize={null} autoCorrect={null} maxLength={null} onEndEditing={null} value={null} errorMessage={null} />;
       } else {
         obj = { ref, returnKeyType: "done", onChange, keyboardAppearance, keyboardType: str2, placeholderTextColor: color.placeholderText.color, placeholder, secureTextEntry: tmp9, isDisabled: flag2, autoFocus: flag4, autoCapitalize, autoCorrect, onEndEditing: onEndEditing.onEndEditing, value, errorMessage: error };
-        tmp14Result = tmp14(TextInput.TextInput, obj);
+        tmp14Result = jsx(TextInput.TextInput, { ref, returnKeyType: "done", onChange, keyboardAppearance, keyboardType: str2, placeholderTextColor: color.placeholderText.color, placeholder, secureTextEntry: tmp9, isDisabled: flag2, autoFocus: flag4, autoCapitalize, autoCorrect, onEndEditing: onEndEditing.onEndEditing, value, errorMessage: error });
       }
     } else {
       const obj1 = { ref: ref1, inputTextColor: color.inputText.color, multiline: flag3, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null };
@@ -227,7 +227,7 @@ export default noop.forwardRef((helpText, ref) => {
       }
       obj1.clearButtonVisibility = clearButtonVisibility;
       const merged = Object.assign(onEndEditing);
-      return tmp14(native.InputView, obj1);
+      return jsx(native.InputView, { ref: ref1, inputTextColor: color.inputText.color, multiline: flag3, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null });
     }
   } else {
     shared.isThemeDark(tmp4) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;

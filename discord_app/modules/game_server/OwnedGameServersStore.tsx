@@ -17,16 +17,16 @@ function handleGameServerUpsert(gameServer) {
       mapped = closure_1.map((id) => {
         let tmp2 = id;
         if (id.id === gameServer.id) {
-          let tmp4 = tmp;
-          if (null == tmp.subscription_id) {
+          let tmp4 = gameServer;
+          if (null == gameServer.subscription_id) {
             let subscription_id;
             if (id != null) {
               subscription_id = id.subscription_id;
             }
-            tmp4 = tmp;
+            tmp4 = gameServer;
             if (null != subscription_id) {
               const obj = {};
-              const merged = Object.assign(tmp);
+              const merged = Object.assign(gameServer);
               obj.subscription_id = id.subscription_id;
               tmp4 = obj;
             }

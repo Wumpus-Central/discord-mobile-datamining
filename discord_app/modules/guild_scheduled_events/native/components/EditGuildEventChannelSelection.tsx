@@ -35,7 +35,7 @@ export default function EditGuildEventChannelSelection(guild) {
   ({ channelType, channel } = guild);
   const guildEventId = guild.guildEventId;
   ({ recurrenceId: dependencyMap, onChangeChannel: View } = guild);
-  let tmp = closure_13();
+  const tmp = closure_13();
   let obj = guild(6621);
   const inputStyles = obj.useInputStyles({ hasLeadingIcon: true });
   closure_5 = tmp5;
@@ -55,7 +55,7 @@ export default function EditGuildEventChannelSelection(guild) {
     let tmp2Result = tmp2(5028);
     let channelIcon = tmp2Result.getChannelIcon(channel);
   } else {
-    channelIcon = tmp6(9714);
+    channelIcon = channel(9714);
   }
   if (null != channel) {
     tmp2Result = tmp2(5028);
@@ -126,6 +126,7 @@ export default function EditGuildEventChannelSelection(guild) {
           closure_1_4(found);
         }
         channel(4527).hideActionSheet();
+        const obj = channel(4527);
       },
       selectedItem: null,
       hasIcons: false
@@ -136,13 +137,14 @@ export default function EditGuildEventChannelSelection(guild) {
     }
     obj.selectedItem = id;
     obj3.openLazy(asyncRequireImpl(9426, dependencyMap.paths), "SelectUpdatesChannel", obj);
+    const tmp9 = asyncRequireImpl(9426, dependencyMap.paths);
   };
   if (null != LocationIcon) {
     obj2 = { style: tmp.channelIcon };
-    let tmp12Result = tmp12(LocationIcon, obj2);
+    let tmp12Result = closure_11(LocationIcon, obj2);
   } else {
     obj3 = { source: channelIcon, style: tmp.channelIcon };
-    tmp12Result = tmp12(tmp2(1178).Icon, obj3);
+    tmp12Result = closure_11(tmp2(1178).Icon, obj3);
   }
   const items6 = [tmp12Result, , ];
   obj4 = { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 };

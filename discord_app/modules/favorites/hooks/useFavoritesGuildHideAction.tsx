@@ -2,6 +2,7 @@
 
 // Module 16138 (useFavoritesGuildHideAction)
 import router_utils from "router_utils" /* 1100 */;
+import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import _modDef3225 from "module_3225" /* 3225 */;
 import FavoritesActionCreators from "FavoritesActionCreators" /* 10223 */;
 import noop from "module_19" /* 19 */;
@@ -24,6 +25,7 @@ export default function useFavoritesGuildHideAction() {
     if (obj2.isFavoritesGuildId(SelectedGuildStore.getGuildId())) {
       router_utils.transitionTo(Routes.ME);
     }
+    obj2 = FavoritesUtils;
   }, items);
   const intl = hasAccess(1114).intl;
   if (hasAccess) {

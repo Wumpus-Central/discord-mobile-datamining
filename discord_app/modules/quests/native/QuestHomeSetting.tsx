@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestHomeSetting.tsx");
 
 export default function QuestHomeSetting() {
-  let tmp = closure_9();
+  const tmp = closure_9();
   [tmp3, tmp4] = _slicedToArray(noop.useState(() => {
     let SUGGESTED = QuestHomeNavigationStore.getField("sort");
     if (null == SUGGESTED) {

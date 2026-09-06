@@ -19,14 +19,14 @@ export const useAccountLinkStepTracking = function useAccountLinkStepTracking(CR
       index = index.index;
       const obj = { location_stack: tmp3, previous_step: null, current_step: null, platform_type: null };
       let tmp7;
-      if (null != tmp.current) {
-        tmp7 = index.routeNames[tmp.current];
+      if (null != ref.current) {
+        tmp7 = index.routeNames[ref.current];
       }
       obj.previous_step = tmp7;
       obj.current_step = index.routeNames[index];
       obj.platform_type = tmp2;
       obj.track(AnalyticEvents.ACCOUNT_LINK_STEP, obj);
-      tmp.current = index;
+      ref.current = index;
     }
   }, items);
   const effect = noop.useEffect(() => {
@@ -34,7 +34,7 @@ export const useAccountLinkStepTracking = function useAccountLinkStepTracking(CR
     const obj = { location_stack, previous_step: null, current_step: null, platform_type: null };
     let tmp3;
     if (null != ref.current) {
-      tmp3 = items[tmp.current];
+      tmp3 = items[ref.current];
     }
     obj.previous_step = tmp3;
     obj.current_step = items[0];

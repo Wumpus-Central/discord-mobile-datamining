@@ -114,6 +114,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
     const _HermesInternal = HermesInternal;
     logger.error("existingErrors is not a Map: " + activeErrors1 + " type: " + typeof call === "unknown" ? toString() : call(activeErrors1));
   }
+  nextResult = iter.next();
 };
 prototype["handleReportAVError"] = function handleReportAVError(arg0) {
   ({ error, context } = arg0);

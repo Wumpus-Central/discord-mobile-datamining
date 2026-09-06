@@ -5,6 +5,7 @@ import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import v1 from "v1" /* 1256 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import spring from "spring" /* 4974 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import ClipView from "ClipView" /* 8813 */;
 import getChannelIcon from "getChannelIcon" /* 13030 */;
@@ -39,25 +40,25 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
   const fn = function h() {
     let size = cutout;
     if (cutout.shape === ClipView.CutoutShape.RoundedRect) {
-      size = { shape: tmp(8813).CutoutShape.RoundedRect, x: null, y: null, width: null, height: null, cornerRadius: null };
-      let tmpResult = tmp(4974);
+      size = { shape: ClipView.CutoutShape.RoundedRect, x: null, y: null, width: null, height: null, cornerRadius: null };
+      let tmpResult = spring;
       size.x = tmpResult.withSpring(size.x, CHANNEL_SPRING_CONFIG);
-      tmpResult = tmp(4974);
+      tmpResult = spring;
       size.y = tmpResult.withSpring(size.y, CHANNEL_SPRING_CONFIG);
-      size.width = tmp(4974).withSpring(size.width, CHANNEL_SPRING_CONFIG);
-      const tmpResult1 = tmp(4974);
-      size.height = tmp(4974).withSpring(size.height, CHANNEL_SPRING_CONFIG);
-      const tmpResult2 = tmp(4974);
-      size.cornerRadius = tmp(4974).withSpring(size.cornerRadius, CHANNEL_SPRING_CONFIG);
+      size.width = spring.withSpring(size.width, CHANNEL_SPRING_CONFIG);
+      const tmpResult1 = spring;
+      size.height = spring.withSpring(size.height, CHANNEL_SPRING_CONFIG);
+      const tmpResult2 = spring;
+      size.cornerRadius = spring.withSpring(size.cornerRadius, CHANNEL_SPRING_CONFIG);
       let point = size;
-      const tmpResult3 = tmp(4974);
+      const tmpResult3 = spring;
     } else {
-      point = { shape: tmp(8813).CutoutShape.Circle, x: tmp(4974).withSpring(size.x, CHANNEL_SPRING_CONFIG), y: null, size: null };
-      const tmpResult4 = tmp(4974);
-      point.y = tmp(4974).withSpring(size.y, CHANNEL_SPRING_CONFIG);
-      const tmpResult5 = tmp(4974);
-      point.size = tmp(4974).withSpring(size.size, CHANNEL_SPRING_CONFIG);
-      const tmpResult6 = tmp(4974);
+      point = { shape: ClipView.CutoutShape.Circle, x: spring.withSpring(size.x, CHANNEL_SPRING_CONFIG), y: null, size: null };
+      const tmpResult4 = spring;
+      point.y = spring.withSpring(size.y, CHANNEL_SPRING_CONFIG);
+      const tmpResult5 = spring;
+      point.size = spring.withSpring(size.size, CHANNEL_SPRING_CONFIG);
+      const tmpResult6 = spring;
     }
     obj = { cutouts: null };
     const items = [point];
@@ -154,8 +155,8 @@ function CutoutAvatarImage(arg0) {
       const size3 = { height: "100%", width: "100%", children: null };
       items1[2] = null;
       size3.children = items1;
-      obj1.children = tmp16(tmp9Result, size3);
-      return tmp10(tmp15, obj1);
+      obj1.children = React6(tmp9Result, size3);
+      return tmp10(hasOwnProperty, obj1);
     } else if (CIRCULAR === tmp4.CIRCULAR) {
       Circle = inlineStyles.Circle;
       style = { cx: result, cy: result, r: result, fill: "none", mask: null, stroke: null, strokeWidth: null };
@@ -173,7 +174,6 @@ function CutoutAvatarImage(arg0) {
       size4.strokeWidth = cutout.border.width;
       tmp10Result = tmp10(inlineStyles.Rect, size4);
     }
-    tmp15 = hasOwnProperty;
     tmp9Result = inlineStylesDefault;
   }
   const size5 = { x: "0", y: "0", height: "100%", width: "100%", href: getReactNativeSVGImageSourceDefault(source), mask: "url(#" + v4Result + ")" };

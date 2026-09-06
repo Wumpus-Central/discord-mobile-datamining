@@ -51,6 +51,7 @@ export const fetchLogs = function fetchLogs(guildId, userId, targetId, action) {
       }, () => DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }));
     }
   }
+  tmp = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
 };
 export const fetchNextLogPage = function fetchNextLogPage(guildId) {
   let flag = arg1;
@@ -60,7 +61,7 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
   if (GuildSettingsAuditLogStore.hasOlderLogs) {
     if (!tmp2) {
       if (null != guildId) {
-        const logs = tmp.logs;
+        const logs = GuildSettingsAuditLogStore.logs;
         let id = null;
         if (null != logs[logs.length - 1]) {
           id = tmp10.id;
@@ -74,7 +75,7 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
         }, () => DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_NEXT_PAGE_FAIL" }));
       }
     }
-    tmp2 = tmp.isLoading || tmp.isLoadingNextPage;
+    tmp2 = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
   }
 };
 export const filterByAction = function filterByAction(navigation, guildId) {
@@ -98,6 +99,7 @@ export const filterByAction = function filterByAction(navigation, guildId) {
       return nextPromise;
     }
   }
+  tmp2 = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
 };
 export const filterByUserId = function filterByUserId(id, guildId) {
   if (!tmp2) {
@@ -120,6 +122,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
       return nextPromise;
     }
   }
+  tmp2 = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
 };
 export const filterByTargetId = function filterByTargetId(targetId, arg1) {
   if (!tmp2) {
@@ -142,4 +145,5 @@ export const filterByTargetId = function filterByTargetId(targetId, arg1) {
       return nextPromise;
     }
   }
+  tmp2 = GuildSettingsAuditLogStore.isLoading || GuildSettingsAuditLogStore.isLoadingNextPage;
 };

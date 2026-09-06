@@ -3,6 +3,7 @@
 // Module 8822 (ProfileFrameSamplePreview)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8207 */;
 import ProfileFrameDefault from "ProfileFrame" /* 8221 */;
 import scaleProfileFrameDefault from "scaleProfileFrame" /* 8224 */;
@@ -45,8 +46,6 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   obj = { style: { position: "absolute", top: -overflowTop, bottom: -overflowBottom, left: -overflowHorizontal, right: -overflowHorizontal }, maskElement: null, children: null };
   const obj1 = { style: absoluteFill.absoluteFill, children: null };
   const obj2 = { style: { position: "absolute", top: 0, left: 0, right: 0, height: overflowTop, backgroundColor: "black" } };
-  const tmp10 = filterLayer;
-  const tmp11 = UserProfileThemeTypes;
   const items = [timestampProducer(React4, obj2), timestampProducer(React4, { style: { position: "absolute", bottom: 0, left: 0, right: 0, height: overflowBottom, backgroundColor: "black" } }), timestampProducer(React4, { style: { position: "absolute", top: overflowTop, bottom: overflowBottom, left: 0, width: overflowHorizontal, backgroundColor: "black" } }), timestampProducer(React4, { style: { position: "absolute", top: overflowTop, bottom: overflowBottom, right: 0, width: overflowHorizontal, backgroundColor: "black" } }), timestampProducer(React4, { style: { position: "absolute", top: overflowTop - xs, left: overflowHorizontal - xs, width: 2 * xs, height: 2 * xs, borderRadius: xs, backgroundColor: "black" } }), timestampProducer(React4, { style: { position: "absolute", top: overflowTop - xs, right: overflowHorizontal - xs, width: 2 * xs, height: 2 * xs, borderRadius: xs, backgroundColor: "black" } }), timestampProducer(React4, { style: { position: "absolute", bottom: overflowBottom - xs, left: overflowHorizontal - xs, width: 2 * xs, height: 2 * xs, borderRadius: xs, backgroundColor: "black" } }), timestampProducer(React4, { style: { position: "absolute", bottom: overflowBottom - xs, right: overflowHorizontal - xs, width: 2 * xs, height: 2 * xs, borderRadius: xs, backgroundColor: "black" } })];
   obj1.children = items;
   obj.maskElement = React5(React4, obj1);
@@ -68,14 +67,14 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   items3[1] = tmp16;
   const obj14 = { source: null, style: null, resizeMode: "cover" };
   const obj15 = { uri: null };
-  let tmp3Result = tmp3(5587);
+  let tmp3Result = FastImageDefault;
   obj15.uri = _modDef8823;
   obj14.source = obj15;
   obj14.style = tmp.sampleProfile;
   obj13.children = timestampProducer(tmp3Result, obj14);
   items2[1] = timestampProducer(React4, obj13);
-  const obj16 = { frame: profileFrame, filterLayer: tmp10, profileThemeType: tmp11.PREVIEW, frameOrder: null, containerWidth: null, containerHeight: null };
-  tmp3Result = tmp3(8221);
+  const obj16 = { frame: profileFrame, filterLayer, profileThemeType: UserProfileThemeTypes.PREVIEW, frameOrder: null, containerWidth: null, containerHeight: null };
+  tmp3Result = ProfileFrameDefault;
   obj16.frameOrder = ProfileFrameLayerOrder.ProfileFrameLayerOrder.FRONT;
   obj16.containerWidth = result;
   obj16.containerHeight = previewHeight - overflowTop - overflowBottom;

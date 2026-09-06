@@ -31,7 +31,7 @@ export default function ApplicationCommandList(channel) {
     item = item.item;
     let found;
     if (item.inputType === channel(commands[7]).ApplicationCommandInputType.PLACEHOLDER) {
-      return jsx(onPressCommandItem(tmp[8]), {});
+      return jsx(onPressCommandItem(commands[8]), {});
     } else {
       found = undefined;
       if (sections != null) {
@@ -46,7 +46,7 @@ export default function ApplicationCommandList(channel) {
         guildId: item.guild_id,
         highlighted: 0 === item.index
       };
-      return jsx(onPressCommandItem(tmp[9]), {
+      return jsx(onPressCommandItem(commands[9]), {
         command: item,
         section: found,
         onPress() {

@@ -38,32 +38,31 @@ export default {
                       let resolved = Promise.resolve();
                       let nextPromise = resolved.then(() => { ... });
                     } else {
-                      nextPromise = closure_2_5.get(tmp);
+                      nextPromise = closure_2_5.get(closure_1_0);
                       if (null == nextPromise) {
-                        obj = { type: "GUILD_TEMPLATE_RESOLVE", code: tmp };
-                        closure_2_1(tmp3[1]).dispatch(obj);
-                        let HTTP = closure_2_0(tmp3[2]).HTTP;
-                        obj = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(tmp), oldFormErrors: true, rejectWithError: true };
+                        obj = { type: "GUILD_TEMPLATE_RESOLVE", code: closure_1_0 };
+                        closure_2_1(closure_2_2[1]).dispatch(obj);
+                        let HTTP = closure_2_0(closure_2_2[2]).HTTP;
+                        obj = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
                         let value = HTTP.get(obj);
-                        let tmp2Result = closure_2_1(tmp3[1]);
+                        let tmp2Result = closure_2_1(closure_2_2[1]);
                         let cleanupPromise = value.then(() => { ... }, () => { ... }).finally(() => { ... });
-                        let result = obj2.set(tmp, cleanupPromise);
+                        let result = closure_2_5.set(closure_1_0, cleanupPromise);
                         nextPromise = cleanupPromise;
                         let nextPromise1 = value.then(() => { ... }, () => { ... });
                       }
-                      obj2 = closure_2_5;
                     }
                     return nextPromise;
                   });
                 } else {
-                  nextPromise = closure_2_5.get(tmp);
+                  nextPromise = closure_2_5.get(closure_1_0);
                   if (null == nextPromise) {
-                    obj = { type: "GUILD_TEMPLATE_RESOLVE", code: tmp };
-                    closure_2_1(tmp3[1]).dispatch(obj);
-                    let HTTP = closure_2_0(tmp3[2]).HTTP;
-                    obj = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(tmp), oldFormErrors: true, rejectWithError: true };
+                    obj = { type: "GUILD_TEMPLATE_RESOLVE", code: closure_1_0 };
+                    closure_2_1(closure_2_2[1]).dispatch(obj);
+                    let HTTP = closure_2_0(closure_2_2[2]).HTTP;
+                    obj = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
                     let value = HTTP.get(obj);
-                    let tmp2Result = closure_2_1(tmp3[1]);
+                    let tmp2Result = closure_2_1(closure_2_2[1]);
                     let cleanupPromise = value.then((body) => {
                       body = body.body;
                       closure_2_1(closure_2_2[3]);
@@ -83,7 +82,7 @@ export default {
                     }).finally(() => {
                       closure_2_5.delete(closure_0);
                     });
-                    let result = obj2.set(tmp, cleanupPromise);
+                    let result = closure_2_5.set(closure_1_0, cleanupPromise);
                     nextPromise = cleanupPromise;
                     let nextPromise1 = value.then((body) => {
                       body = body.body;
@@ -103,19 +102,18 @@ export default {
                       return { guildTemplate: null, code };
                     });
                   }
-                  obj2 = closure_2_5;
                 }
                 return nextPromise;
               });
             } else {
-              nextPromise = closure_2_5.get(tmp);
+              nextPromise = closure_2_5.get(closure_1_0);
               if (null == nextPromise) {
-                obj = { type: "GUILD_TEMPLATE_RESOLVE", code: tmp };
-                closure_2_1(tmp3[1]).dispatch(obj);
-                let HTTP = closure_2_0(tmp3[2]).HTTP;
-                obj = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(tmp), oldFormErrors: true, rejectWithError: true };
+                obj = { type: "GUILD_TEMPLATE_RESOLVE", code: closure_1_0 };
+                closure_2_1(closure_2_2[1]).dispatch(obj);
+                let HTTP = closure_2_0(closure_2_2[2]).HTTP;
+                obj = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
                 let value = HTTP.get(obj);
-                let tmp2Result = closure_2_1(tmp3[1]);
+                let tmp2Result = closure_2_1(closure_2_2[1]);
                 let cleanupPromise = value.then((body) => {
                   body = body.body;
                   closure_2_1(closure_2_2[3]);
@@ -135,7 +133,7 @@ export default {
                 }).finally(() => {
                   closure_2_5.delete(closure_0);
                 });
-                let result = obj2.set(tmp, cleanupPromise);
+                let result = closure_2_5.set(closure_1_0, cleanupPromise);
                 nextPromise = cleanupPromise;
                 let nextPromise1 = value.then((body) => {
                   body = body.body;
@@ -155,19 +153,18 @@ export default {
                   return { guildTemplate: null, code };
                 });
               }
-              obj2 = closure_2_5;
             }
             return nextPromise;
           });
         } else {
-          nextPromise = closure_2_5.get(tmp);
+          nextPromise = closure_2_5.get(closure_1_0);
           if (null == nextPromise) {
-            obj = { type: "GUILD_TEMPLATE_RESOLVE", code: tmp };
-            closure_2_1(tmp3[1]).dispatch(obj);
-            let HTTP = closure_2_0(tmp3[2]).HTTP;
-            obj = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(tmp), oldFormErrors: true, rejectWithError: true };
+            obj = { type: "GUILD_TEMPLATE_RESOLVE", code: closure_1_0 };
+            closure_2_1(closure_2_2[1]).dispatch(obj);
+            let HTTP = closure_2_0(closure_2_2[2]).HTTP;
+            obj = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
             let value = HTTP.get(obj);
-            let tmp2Result = closure_2_1(tmp3[1]);
+            let tmp2Result = closure_2_1(closure_2_2[1]);
             let cleanupPromise = value.then((body) => {
               body = body.body;
               closure_2_1(closure_2_2[3]);
@@ -187,7 +184,7 @@ export default {
             }).finally(() => {
               closure_2_5.delete(closure_0);
             });
-            let result = obj2.set(tmp, cleanupPromise);
+            let result = closure_2_5.set(closure_1_0, cleanupPromise);
             nextPromise = cleanupPromise;
             let nextPromise1 = value.then((body) => {
               body = body.body;
@@ -207,7 +204,6 @@ export default {
               return { guildTemplate: null, code };
             });
           }
-          obj2 = closure_2_5;
         }
         return nextPromise;
       });
@@ -241,10 +237,9 @@ export default {
         }).finally(() => {
           closure_2_5.delete(closure_0);
         });
-        const result = obj2.set(code, cleanupPromise);
+        const result = map.set(code, cleanupPromise);
         return cleanupPromise;
       }
-      obj2 = map;
     }
   },
   loadTemplatesForGuild(arg0) {

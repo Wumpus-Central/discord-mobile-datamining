@@ -66,7 +66,7 @@ function ConversationListItemBase(conversation) {
   const items6 = [closure_9(View, obj), , ];
   const obj4 = { style: tmp.previews, children: null };
   if (null == memo1) {
-    let mapped = tmp11(tmp4(tmp2[18]), {});
+    let mapped = closure_8(tmp4(tmp2[18]), {});
   } else {
     mapped = memo1.map((blocked) => {
       if (!blocked.blocked) {

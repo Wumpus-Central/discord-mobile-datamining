@@ -7,7 +7,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-function shouldShowMembershipVerificationGate(guildId, items) {
+function shouldShowMembershipVerificationGate(guildId) {
   let tmp = items;
   if (items === undefined) {
     items = [GuildStore, UserStore, GuildMemberStore];

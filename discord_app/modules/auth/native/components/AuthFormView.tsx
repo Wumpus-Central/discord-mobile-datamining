@@ -4,6 +4,9 @@
 import nativeDefault from "native" /* 576 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
 import WideAuthScrollContext from "WideAuthScrollContext" /* 6973 */;
+import AuthHeaderDefault from "AuthHeader" /* 6974 */;
+import BackgroundImageDefault from "BackgroundImage" /* 6975 */;
+import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 6978 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,9 +52,9 @@ let closure_8 = createStyles.createStyles((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
 
-export default function AuthFormView(arg0) {
-  ({ children, headerText, subHeader, contentStyle } = arg0);
-  ({ backgroundImageSource, backgroundImageCover } = arg0);
+export default function AuthFormView(previousRegistrationTransitionStep) {
+  ({ children, headerText, subHeader, contentStyle } = previousRegistrationTransitionStep);
+  ({ backgroundImageSource, backgroundImageCover } = previousRegistrationTransitionStep);
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = closure_8(tmp3);
   closure_0 = noop.useContext(WideAuthScrollContext.WideAuthScrollContext);
@@ -74,7 +77,7 @@ export default function AuthFormView(arg0) {
     let tmp15 = null;
     if (null != headerText) {
       obj = { children: headerText };
-      tmp15 = timestampProducer(tmp(6974), obj);
+      tmp15 = timestampProducer(AuthHeaderDefault, obj);
     }
     const items1 = [tmp15, , ];
     let tmp17 = null;
@@ -85,14 +88,14 @@ export default function AuthFormView(arg0) {
     items1[1] = tmp17;
     items1[2] = children;
     obj.children = items1;
-    let tmp5Result = tmp5(hasOwnProperty, obj);
+    let tmp5Result = React5(hasOwnProperty, obj);
   } else {
     obj = { style: null, children: null };
     const items2 = [, ];
     ({ container: arr[0], flex: arr[1] } = tmp4);
     obj.style = items2;
     const obj2 = { backgroundImageSource, backgroundImageCover };
-    const items3 = [timestampProducer(tmp(6975), obj2), timestampProducer(tmp(6978), {}), ];
+    const items3 = [timestampProducer(BackgroundImageDefault, obj2), timestampProducer(AuthNavbarPlaceholderDefault, {}), ];
     const obj3 = { contentInset: { top: 0 }, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, style: tmp4.flex, contentContainerStyle: null, children: null };
     const items4 = [, , ];
     ({ content: arr3[0], flex: arr3[1] } = tmp4);
@@ -101,20 +104,20 @@ export default function AuthFormView(arg0) {
     let tmp7Result = null;
     if (null != headerText) {
       const obj4 = { children: headerText };
-      tmp7Result = tmp7(tmp(6974), obj4);
+      tmp7Result = timestampProducer(AuthHeaderDefault, obj4);
     }
     const items5 = [tmp7Result, , ];
     tmp7Result = null;
     if (null != subHeader) {
       const obj5 = { style: tmp4.subHeader, children: subHeader };
-      tmp7Result = tmp7(tmp6, obj5);
+      tmp7Result = timestampProducer(React4, obj5);
     }
     items5[1] = tmp7Result;
     items5[2] = children;
     obj3.children = items5;
-    items3[2] = tmp5(hasOwnProperty, obj3);
+    items3[2] = React5(hasOwnProperty, obj3);
     obj.children = items3;
-    tmp5Result = tmp5(tmp6, obj);
+    tmp5Result = React5(React4, obj);
   }
   return tmp5Result;
 };

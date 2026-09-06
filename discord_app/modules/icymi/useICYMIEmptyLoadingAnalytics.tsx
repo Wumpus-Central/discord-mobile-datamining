@@ -17,16 +17,16 @@ export const useICYMIEmptyLoadingAnalytics = function useICYMIEmptyLoadingAnalyt
     if (closure_1) {
       if (closure_0) {
         const _Date = Date;
-        tmp2.current = Date.now();
+        ref.current = Date.now();
         const ICYMIAnalytics = ICYMIAnalytics3.ICYMIAnalytics;
         const result = ICYMIAnalytics.trackFeedEmptyLoadingSeen();
-      } else if (null != tmp2.current) {
+      } else if (null != ref.current) {
         const _Date2 = Date;
-        const diff = Date.now() - tmp2.current;
+        const diff = Date.now() - ref.current;
         const ICYMIAnalytics2 = ICYMIAnalytics3.ICYMIAnalytics;
         const obj = { dwellTimeMs: diff };
         const result1 = ICYMIAnalytics2.trackFeedEmptyLoadingComplete(obj);
-        tmp2.current = null;
+        ref.current = null;
       }
     }
   }, items);
@@ -35,11 +35,11 @@ export const useICYMIEmptyLoadingAnalytics = function useICYMIEmptyLoadingAnalyt
     if (!closure_1) {
       if (null != ref.current) {
         const _Date = Date;
-        const diff = Date.now() - tmp.current;
+        const diff = Date.now() - ref.current;
         const ICYMIAnalytics = ICYMIAnalytics3.ICYMIAnalytics;
         const obj = { dwellTimeMs: diff };
         const result = ICYMIAnalytics.trackFeedEmptyLoadingAbandoned(obj);
-        tmp.current = null;
+        ref.current = null;
       }
     }
   }, items1);

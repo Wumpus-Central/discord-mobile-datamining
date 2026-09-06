@@ -45,10 +45,10 @@ function QuestActivityButtonInner(quest) {
       enrolledAt = userStatus.enrolledAt;
     }
     if (null == enrolledAt) {
-      let obj = { questId: tmp.id };
+      let obj = { questId: quest.id };
       ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17033, dependencyMap.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     } else {
-      obj = { questId: tmp.id };
+      obj = { questId: quest.id };
       obj.openLazy(asyncRequireImpl(17034, dependencyMap.paths), "QuestProgressBottomSheet", obj);
     }
   }, items1);
@@ -231,7 +231,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
   const effect = memo.useEffect(() => {
     let tmp2 = null == memo;
     if (!tmp2) {
-      const userStatus = tmp.userStatus;
+      const userStatus = memo.userStatus;
       let enrolledAt;
       if (userStatus != null) {
         enrolledAt = userStatus.enrolledAt;
@@ -245,7 +245,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
       tmp2 = stateFromStores2;
     }
     if (!tmp2) {
-      const obj = { questId: tmp.id };
+      const obj = { questId: memo.id };
       obj.pushLazy(asyncRequireImpl(17033, dependencyMap.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     }
   }, items4);

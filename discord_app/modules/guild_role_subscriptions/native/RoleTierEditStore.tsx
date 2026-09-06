@@ -85,14 +85,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
         priceTiers(1249);
       } else if (arg0 === 1) {
         c4 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         priceTiers(1249).batchUpdates(() => priceTiers({ priceTiers, priceTierState: constants.IDLE }));
         c2 = 0;
         priceTiers(1249);
       }
-      return arg1;
+      return value;
     })();
   };
   obj.reset = function reset() {

@@ -237,4 +237,5 @@ export const getInitialGuildEventData = function getInitialGuildEventData(initia
       obj.entityType = constants.VOICE;
     }
   }
+  tmp26 = null == obj.channelId && null != targetChannel;
 };

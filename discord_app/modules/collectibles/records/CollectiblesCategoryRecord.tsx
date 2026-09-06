@@ -39,7 +39,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     const fromServerResult = CollectiblesProductRecord.fromServer(item);
     const type = fromServerResult.type;
     if (tmp4) {
-      arr.push(fromServerResult);
+      arr = arr.push(fromServerResult);
     }
     return arr;
   }, []);
@@ -62,9 +62,8 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.mobileBannerUrl = mobile_banner_url;
   obj.mobileBgUrl = mobile_bg_url;
   obj.heroLogoDisplayConfig = CollectiblesUtils.getAssetDisplayConfig(hero_logo_display_config);
-  const tmp2 = prototype;
   obj.heroBannerDisplayConfig = CollectiblesUtils.getAssetDisplayConfig(hero_banner_display_config);
-  return new tmp2(obj);
+  return new prototype(obj);
 };
 prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionRecord(id) {
   const obj = { storeListingId: id.id, skuId: id.id, name: id.name, summary: id.description, unpublishedAt: id.unpublishedAt, isOrbsExclusive: id.isOrbsExclusive, styles: id.styles, products: null, heroRanking: id.heroRanking, heroBannerUrl: id.heroBannerUrl, heroBannerAnimatedUrl: id.heroBannerAnimatedUrl, heroRiveUrl: id.heroRiveUrl, heroLogoUrl: id.heroLogoUrl, catalogBannerUrl: id.catalogBannerUrl, catalogBannerAnimatedUrl: id.catalogBannerAnimatedUrl, catalogBannerRiveUrl: id.catalogBannerRiveUrl, featuredBlockUrl: id.featuredBlockUrl, logoUrl: id.logoUrl, pdpBgUrl: id.pdpBgUrl, mobileBannerUrl: id.mobileBannerUrl, mobileBgUrl: id.mobileBgUrl, heroLogoDisplayConfig: id.heroLogoDisplayConfig, heroBannerDisplayConfig: id.heroDisplayConfig };
@@ -74,7 +73,7 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     if (null != result) {
       const type = result.type;
       if (tmp4) {
-        arr.push(result);
+        arr = arr.push(result);
       }
       tmp4 = type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP || type === CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
     }

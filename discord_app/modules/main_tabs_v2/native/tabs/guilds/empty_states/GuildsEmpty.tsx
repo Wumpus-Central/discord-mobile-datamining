@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
+import getInitialNavigationState from "getInitialNavigationState" /* 4419 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
@@ -130,35 +131,33 @@ export default noop.memo(function GuildsEmpty(arg0) {
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
       if (null != navigation) {
-        if (tmp !== closure_2_11) {
-          if (!obj3.isFavoritesGuildId(tmp)) {
-            if (tmp !== closure_2_12) {
-              let guild = GuildStore.getGuild(tmp);
+        if (selectedGuildId !== closure_2_11) {
+          if (!obj3.isFavoritesGuildId(selectedGuildId)) {
+            if (selectedGuildId !== closure_2_12) {
+              let guild = GuildStore.getGuild(selectedGuildId);
               if (guild == null) {
-                guild = obj4.getGuild(SelectedGuildStore.getGuildId());
+                guild = GuildStore.getGuild(SelectedGuildStore.getGuildId());
               }
               if (guild == null) {
-                guild = obj4.getGuild(SelectedGuildStore.getLastSelectedGuildId());
+                guild = GuildStore.getGuild(SelectedGuildStore.getLastSelectedGuildId());
               }
               if (guild == null) {
-                const guilds = obj4.getGuilds();
-                guild = guilds[obj4.getGuildIds(obj4)[0]];
+                const guilds = GuildStore.getGuilds();
+                guild = guilds[GuildStore.getGuildIds(GuildStore)[0]];
               }
               if (null != guild) {
-                closure_0 = _slicedToArray(tmp10(4419).getInitialGuildState(guild.id, undefined, false), 2)[1];
-                obj2.dispatch(() => {
+                closure_0 = _slicedToArray(getInitialNavigationState.getInitialGuildState(guild.id, undefined, false), 2)[1];
+                navigation.dispatch(() => {
                   const CommonActions = navigation(dependencyMap[16]).CommonActions;
                   return CommonActions.reset(closure_0);
                 });
-                const tmp10Result = tmp10(4419);
+                const tmp10Result = getInitialNavigationState;
               }
             }
           }
           obj3 = FavoritesUtils;
-          tmp10 = require;
         }
       }
-      obj2 = navigation;
     }
   }, items1);
   let tmp2Result = tmp2(5126);
@@ -170,7 +169,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
     const items2 = [tmp.header, style];
     obj.style = items2;
     obj1 = { style: tmp.headerTitle, children: null };
-    let obj2 = { style: tmp.headerInner, children: null };
+    const obj2 = { style: tmp.headerInner, children: null };
     let obj3 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl = tmp2(1114).intl;
     obj3.children = intl.string(tmp2(1114).t["7hB4kg"]);

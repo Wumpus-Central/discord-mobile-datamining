@@ -75,11 +75,11 @@ prototype["getSkuAssets"] = function getSkuAssets() {
 prototype["getStorefrontMetadata"] = function getStorefrontMetadata(arg0) {
   return obj[arg0];
 };
-prototype["getStorefrontEntries"] = function getStorefrontEntries(arg0) {
-  return obj[arg0];
+prototype["getStorefrontEntries"] = function getStorefrontEntries(applicationId) {
+  return obj[applicationId];
 };
-prototype["getStorefrontById"] = function getStorefrontById(arg0) {
-  return obj[arg0];
+prototype["getStorefrontById"] = function getStorefrontById(storefrontId) {
+  return obj[storefrontId];
 };
 prototype["getPreviewStorefrontId"] = function getPreviewStorefrontId(arg0) {
   let tmp = obj[arg0];
@@ -261,6 +261,8 @@ obj = {
     obj8 = {};
     const merged5 = Object.assign(obj9);
     obj9 = {};
+    const obj1 = {};
+    const obj2 = {};
   },
   SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: function handleSocialLayerStorefrontLoadSuccess(arg0) {
     ({ guildOrApplicationId, storefront } = arg0);

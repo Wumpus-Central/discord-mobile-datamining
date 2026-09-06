@@ -11,10 +11,10 @@ function parseServerPerkConfigKind(kind) {
   if (null != kind.kind) {
     const type = kind.kind.type;
     if (types.PerkConfigType.INCREASED_FILE_UPLOAD_SIZE === type) {
-      let obj = { type: tmp(1378).PerkConfigType.INCREASED_FILE_UPLOAD_SIZE, maxSize: kind.kind.max_size };
+      let obj = { type: types.PerkConfigType.INCREASED_FILE_UPLOAD_SIZE, maxSize: kind.kind.max_size };
       return obj;
-    } else if (tmp(1378).PerkConfigType.INCREASED_GUILD_LIMIT === type) {
-      obj = { type: tmp(1378).PerkConfigType.INCREASED_GUILD_LIMIT, maxGuilds: kind.kind.max_guilds };
+    } else if (types.PerkConfigType.INCREASED_GUILD_LIMIT === type) {
+      obj = { type: types.PerkConfigType.INCREASED_GUILD_LIMIT, maxGuilds: kind.kind.max_guilds };
       return obj;
     }
   }
@@ -66,8 +66,7 @@ export const parseServerPerks = function parseServerPerks(perks) {
     while (tmp11 !== undefined) {
       let tmp5 = _slicedToArray(tmp2, 2);
       let tmp6 = tmp5[1];
-      obj = { source: tmp6.source, kind: null };
-      obj.kind = parseServerPerkConfigKind(tmp6);
+      obj = { source: tmp6.source, kind: parseServerPerkConfigKind(tmp6) };
       obj[tmp5[0]] = obj;
       continue;
     }

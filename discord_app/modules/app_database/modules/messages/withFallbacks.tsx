@@ -44,21 +44,19 @@ export const withFallbacks = function withFallbacks(global, arg1) {
       let guildIds = iter.next().guildIds;
       for (const item10013 of guildIds) {
         let _Object = Object;
-        let tmp5 = item10013;
         let values = Object.values(ChannelStore.getMutableBasicGuildChannelsForGuild(item10013));
         for (const item10025 of values) {
-          let tmp10 = item10025;
           let isReadableChannelResult = isSaveableChannel(item10025);
           if (isReadableChannelResult) {
             let obj3 = isReadableChannel;
-            isReadableChannelResult = obj3.isReadableChannel(tmp10);
+            isReadableChannelResult = obj3.isReadableChannel(item10025);
           }
           if (isReadableChannelResult) {
             let obj4 = isLimitedChannel;
-            isReadableChannelResult = !obj4.isLimitedChannel(tmp10);
+            isReadableChannelResult = !obj4.isLimitedChannel(item10025);
           }
           if (isReadableChannelResult) {
-            let tmp22 = addFallback(tmp5, tmp10, extendedMemoryLru);
+            let tmp22 = addFallback(item10013, item10025, extendedMemoryLru);
           }
           if (extendedMemoryLru.totalLength >= diff) {
             let tmp24 = mergeInto(extendedMemoryLru, arg0);

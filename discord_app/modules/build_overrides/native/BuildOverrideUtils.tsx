@@ -21,7 +21,7 @@ function setBuildOverride() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _setBuildOverride(arg0, value) {
+let closure_8 = async function _setBuildOverride(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -92,7 +92,7 @@ function clearBuildOverride() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _clearBuildOverride(arg0, value) {
+let closure_10 = async function _clearBuildOverride() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -150,7 +150,7 @@ let closure_10 = async function _clearBuildOverride(arg0, value) {
     }
   }
 };
-let closure_11 = async function _toggleOverride(arg0, value) {
+let closure_11 = async function _toggleOverride(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -185,7 +185,7 @@ let closure_11 = async function _toggleOverride(arg0, value) {
               id = tmp18.id;
             }
           }
-          const buildOverride = currentBuildOverride.getBuildOverride(tmp36);
+          const buildOverride = currentBuildOverride.getBuildOverride(closure_0);
           const override = buildOverride.override;
           let id1;
           if (override != null) {
@@ -199,7 +199,7 @@ let closure_11 = async function _toggleOverride(arg0, value) {
           if (id === id1) {
             clearBuildOverride();
           } else if (null != buildOverride.payload) {
-            if (obj10.isManualBuildOverrideLink(tmp36)) {
+            if (obj10.isManualBuildOverrideLink(closure_0)) {
               if (null != id1) {
                 setBuildOverrideForBranch(id1);
                 c4 = 3;
@@ -237,7 +237,7 @@ let closure_11 = async function _toggleOverride(arg0, value) {
     }
   }
 };
-let closure_12 = async function _setBuildOverrideFromLink(arg0, value) {
+let closure_12 = async function _setBuildOverrideFromLink(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

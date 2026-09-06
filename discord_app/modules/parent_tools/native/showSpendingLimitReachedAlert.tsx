@@ -1,6 +1,7 @@
 // === Module 10705: showSpendingLimitReachedAlert ===
 
 // Module 10705 (showSpendingLimitReachedAlert)
+import BillingError from "BillingError" /* 4240 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4461 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
@@ -12,9 +13,9 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/showSpend
 export const isSpendingLimitError = function isSpendingLimitError(billingError) {
   let tmp3 = billingError instanceof V6OrEarlierAPIError.BillingError;
   if (tmp3) {
-    let tmp4 = billingError.code === tmp(4240).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED;
+    let tmp4 = billingError.code === BillingError.ErrorCodes.BILLING_SPENDING_LIMIT_REACHED;
     if (!tmp4) {
-      tmp4 = billingError.code === tmp(4240).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED;
+      tmp4 = billingError.code === BillingError.ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED;
     }
     tmp3 = tmp4;
   }

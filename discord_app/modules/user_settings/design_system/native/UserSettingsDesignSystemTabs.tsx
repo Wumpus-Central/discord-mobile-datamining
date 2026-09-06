@@ -22,17 +22,17 @@ const result = size.fileFinishedImporting("modules/user_settings/design_system/n
 export default function UserSettingsDesignSystemTabs() {
   const tmp = _slicedToArray(noop.useState(0), 2);
   _require = tmp[1];
-  let tmp2 = _slicedToArray(noop.useState(3), 2);
+  const tmp2 = _slicedToArray(noop.useState(3), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];
-  let tmp4 = _slicedToArray(noop.useState(true), 2);
+  const tmp4 = _slicedToArray(noop.useState(true), 2);
   const first1 = tmp4[0];
   [tmp7, tmp8] = _slicedToArray(noop.useState(false), 2);
-  let tmp9 = _slicedToArray(noop.useState(false), 2);
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
   const first2 = tmp9[0];
   closure_129_0 = first;
   closure_129_1 = tmp7;
-  let tmp6 = _slicedToArray(noop.useState(false), 2);
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
   const tmp12 = closure_9();
   closure_129_2 = tmp12;
   let items = [first, tmp12.item, tmp7];
@@ -55,8 +55,7 @@ export default function UserSettingsDesignSystemTabs() {
         obj.count = rounded;
         let _HermesInternal2 = HermesInternal;
         obj.id = "item-" + sum;
-        obj = { style: null, children: null };
-        obj.style = closure_2.item;
+        obj = { style: closure_2.item, children: null };
         obj = { variant: "heading-xxl/bold", children: null };
         let items1 = ["Item ", sum];
         obj.children = items1;
@@ -83,7 +82,7 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp20Result = first2;
   if (first2) {
     obj = { state: segmentedControlState, colors: items1 };
-    tmp20Result = tmp20(first(12759), obj);
+    tmp20Result = closure_8(first(12759), obj);
   }
   obj1 = { children: null };
   obj2 = { spacing: 24, children: null };

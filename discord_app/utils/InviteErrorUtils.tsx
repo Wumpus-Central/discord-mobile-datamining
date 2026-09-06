@@ -33,21 +33,21 @@ export const getDescriptiveInviteError = function getDescriptiveInviteError(code
     }
     tmp14 = React5;
     obj5 = PremiumUtilsDefault;
-  } else if (tmp.GUILD_AT_CAPACITY === code) {
+  } else if (constants.GUILD_AT_CAPACITY === code) {
     const obj1 = { title: null, description: null };
     const intl5 = util.intl;
     obj1.title = intl5.string(util.t.ZZlox4);
     const intl6 = util.intl;
     obj1.description = intl6.string(util.t.ZUEGFn);
     return obj1;
-  } else if (tmp.GUILD_JOIN_INVITE_LIMITED_ACCESS === code) {
+  } else if (constants.GUILD_JOIN_INVITE_LIMITED_ACCESS === code) {
     const obj2 = { title: null, description: null };
     const intl3 = util.intl;
     obj2.title = intl3.string(util.t.kJwpBW);
     const intl4 = util.intl;
     obj2.description = intl4.string(util.t.ZUEGFn);
     return obj2;
-  } else if (tmp.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED === code) {
+  } else if (constants.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED === code) {
     obj = { title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["u/xsK9"]);
@@ -62,16 +62,16 @@ export const getInviteError = function getInviteError(arg0) {
   if (constants.TOO_MANY_USER_GUILDS === arg0) {
     const intl6 = util.intl;
     return intl6.string(util.t.iLyuDO);
-  } else if (tmp.GUILD_AT_CAPACITY === arg0) {
+  } else if (constants.GUILD_AT_CAPACITY === arg0) {
     const intl5 = util.intl;
     return intl5.string(util.t.M6unNJ);
-  } else if (tmp.INVALID_COUNTRY_CODE === arg0) {
+  } else if (constants.INVALID_COUNTRY_CODE === arg0) {
     const intl4 = util.intl;
     return intl4.string(util.t.sRJGR1);
-  } else if (tmp.INVALID_CANNOT_FRIEND_SELF === arg0) {
+  } else if (constants.INVALID_CANNOT_FRIEND_SELF === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t["mY2R+F"]);
-  } else if (tmp.INVITES_DISABLED === arg0) {
+  } else if (constants.INVITES_DISABLED === arg0) {
     const intl2 = util.intl;
     const obj = { articleLink: HelpdeskUtilsDefault.getArticleURL(constants2.INVITE_DISABLED) };
     return intl2.format(util.t.RXSeLl, obj);

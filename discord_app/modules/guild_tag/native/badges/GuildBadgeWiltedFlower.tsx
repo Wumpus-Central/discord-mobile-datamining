@@ -42,7 +42,7 @@ export const GuildBadgeWiltedFlower = function GuildBadgeWiltedFlower(width) {
     tmp9 = secondaryColorsTransformed[1];
   }
   if (tmp9 == null) {
-    tmp9 = tmp4[1];
+    tmp9 = secondaryBaseColors[1];
   }
   items = [React2(inlineStyles.Path, { d: "M2 12h1v1h1v1h1v-1h1v1h1v1H3v-1H2v-1H1V10h1v2Zm3 1h-1v-1h1v1ZM11 2H6v1h-1v1h-1v8h-1V3h1V2h1V1h6v1Z", fill: tmp9 }), React2(inlineStyles.Path, { d: "M2 10H1v-1h1v1ZM8 10h-1v-1h1v1ZM9 7h-1V4h1v3ZM10 4h-1v-1h1v1Z", fill: "white" }), React2(inlineStyles.Path, { d: "M8 11h-1v-1h1v1ZM9 10h-1v-1h1v1ZM14 10h-2v-1h2v1ZM10 9h-1v-1h1v1ZM12 9h-1v-1h1v1ZM11 8h-1v-2h1v2ZM12 6h-1V3h1v3Z", fill: primaryColorsTransformed[0] }), React2(inlineStyles.Path, { d: "M11 9h1v1h-1v1H8v-1h1v-1h1v-1h1v1Z", fill: primaryColorsTransformed[1] }), React2(inlineStyles.Path, { d: "M14 10v-1h1v2H12v-1h2ZM11 6h-1v2h-1v1h-1v-2h1V4h1v-1h1v3ZM13 4h1v5h-2v-1h-1v-2h1V3h1v1Z", fill: primaryColorsTransformed[2] }), , , ];
   let first;
@@ -50,7 +50,7 @@ export const GuildBadgeWiltedFlower = function GuildBadgeWiltedFlower(width) {
     first = secondaryColorsTransformed[0];
   }
   if (first == null) {
-    first = tmp4[0];
+    first = secondaryBaseColors[0];
   }
   items[5] = React2(inlineStyles.Path, { d: "M5 14h-1v-1h1v1ZM4 13h-1v-1h1v1ZM3 12H2v-1h1v1ZM12 3H9V2h3v1Z", fill: first });
   items[6] = React2(inlineStyles.Path, { d: "M2 14h1v1h4v-1h1v2H2v-1H1v-2h1v1Z", fill: "black" });

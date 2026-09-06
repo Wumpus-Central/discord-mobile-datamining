@@ -39,15 +39,15 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
       }
       obj = { date: null };
       const _Intl2 = Intl;
-      const dateTimeFormat = new Intl.DateTimeFormat(tmp8(1114).intl.currentLocale, { month: "short", day: "numeric" });
-      let tmp8Result = tmp8(3796);
+      const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
+      let tmp8Result = _mod3796;
       obj.date = dateTimeFormat.format(tmp8Result.parseISO(claimedAt));
       let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj);
     } else {
       const obj1 = { date: null };
       const _Intl = Intl;
-      const dateTimeFormat1 = new Intl.DateTimeFormat(tmp8(1114).intl.currentLocale, { month: "short", day: "numeric" });
-      tmp8Result = tmp8(3796);
+      const dateTimeFormat1 = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
+      tmp8Result = _mod3796;
       obj1.date = dateTimeFormat1.format(tmp8Result.parseISO(offeredAt));
       formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj1);
     }

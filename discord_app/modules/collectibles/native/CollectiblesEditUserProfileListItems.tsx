@@ -14,6 +14,7 @@ import Pressables from "Pressables" /* 5123 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8173 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 8832 */;
 import _modDef13172 from "module_13172" /* 13172 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -131,14 +132,14 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
   const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj1 = PremiumUtilsDefault;
-  const canUseCollectiblesResult = obj1.canUseCollectibles(stateFromStores);
+  obj1.canUseCollectibles(stateFromStores);
   ({ purchase, product } = useCollectiblesDataDefault(skuId));
   const tmp7 = useCollectiblesDataDefault(skuId);
   const isProductNewResult = CollectiblesUtils.isProductNew(skuId);
   let result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
   if (!result) {
-    result = tmp3(7554).isPremiumCollectiblesPurchase(purchase);
-    const tmp3Result = tmp3(7554);
+    result = CollectiblesUtils.isPremiumCollectiblesPurchase(purchase);
+    const tmp3Result = CollectiblesUtils;
   }
   obj = { isSelected };
   const merged1 = Object.assign(merged);
@@ -146,7 +147,7 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
   if (null == purchase) {
     if (!result) {
       obj = { style: tmp2.lockIcon, isNew: isProductNewResult };
-      let tmp14 = React5(tmp3(8832).LockBadge, obj);
+      let tmp14 = React5(CollectiblesBadges.LockBadge, obj);
     }
     items1[1] = tmp14;
     obj.children = items1;
@@ -158,7 +159,7 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
     if (!isTryItOut) {
       if (null == purchase) {
         obj1 = { style: tmp2.lockIcon, isNew: isProductNewResult };
-        tmp15 = React5(tmp3(8832).PremiumBadge, obj1);
+        tmp15 = React5(CollectiblesBadges.PremiumBadge, obj1);
       } else {
         tmp15 = null;
       }

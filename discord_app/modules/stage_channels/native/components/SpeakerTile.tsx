@@ -97,7 +97,7 @@ export default noop.memo((channel) => {
         const obj8 = { userId: user.id, channelId: channel.id };
         items6[2] = closure_7(tmp4(tmp3[18]).ModeratorStatus, obj8);
         obj4.children = items6;
-        const items7 = [tmp10(View, obj4), ];
+        const items7 = [closure_8(View, obj4), ];
         const obj9 = { style: tmp.nameplateContainer, children: null };
         if (tmp10Result) {
           const items8 = [tmp.restricted, ];
@@ -110,24 +110,24 @@ export default noop.memo((channel) => {
           obj10.style = items8;
           if (blocked) {
             const obj11 = { source: tmp2(tmp3[19]), size: tmp4(tmp3[17]).Icon.Sizes.EXTRA_SMALL, color: tmp2(tmp3[6]).unsafe_rawColors.RED_400 };
-            blocked = tmp13(tmp4(tmp3[17]).Icon, obj11);
+            blocked = closure_7(tmp4(tmp3[17]).Icon, obj11);
           }
           const items9 = [blocked, ];
           if (ignored) {
             const obj12 = { source: tmp2(tmp3[20]), size: tmp4(tmp3[17]).Icon.Sizes.EXTRA_SMALL };
-            ignored = tmp13(tmp4(tmp3[17]).Icon, obj12);
+            ignored = closure_7(tmp4(tmp3[17]).Icon, obj12);
           }
           items9[1] = ignored;
           obj10.children = items9;
-          tmp10Result = tmp10(tmp12, obj10);
+          tmp10Result = closure_8(View, obj10);
         }
         const items10 = [tmp10Result, ];
         const obj13 = { lineClamp: 1, style: tmp.nameplateText, variant: "text-sm/medium", color: "text-overlay-light", children: tmp9 };
         items10[1] = closure_7(tmp4(tmp3[21]).Text, obj13);
         obj9.children = items10;
-        items7[1] = tmp10(View, obj9);
+        items7[1] = closure_8(View, obj9);
         obj.children = items7;
-        return tmp10(tmp4(tmp3[14]).PressableOpacity, obj);
+        return closure_8(tmp4(tmp3[14]).PressableOpacity, obj);
       }
     }
   }

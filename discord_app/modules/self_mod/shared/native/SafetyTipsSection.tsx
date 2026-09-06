@@ -28,7 +28,7 @@ export default function SafetyTipsContainer(children) {
     obj = { style: tmp.text, variant: "heading-xl/semibold", children: null };
     const intl = tmp3(1114).intl;
     obj.children = intl.string(tmp3(1114).t.eAbVfS);
-    showHeader = tmp5(tmp3(4556).Text, obj);
+    showHeader = closure_4(tmp3(4556).Text, obj);
   }
   obj = { spacing: 16, children: null };
   const obj1 = { spacing: 8, align: "center", justify: "center", children: null };

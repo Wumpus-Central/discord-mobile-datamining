@@ -2,6 +2,8 @@
 
 // Module 8351 (ICYMIActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import UserSettings from "UserSettings" /* 1935 */;
 import ICYMIUtils from "ICYMIUtils" /* 8350 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -14,7 +16,7 @@ export default {
   fetchPopularGuildsFromCategories(stateFromStoresArray1, sum) {
     closure_0 = stateFromStoresArray1;
     closure_1 = sum;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -93,7 +95,7 @@ export default {
       obj = {};
     }
     ({ isInitialLoad: require, isReloading: importDefault, forceRefresh: dependencyMap } = obj);
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -128,7 +130,7 @@ export default {
                 c3 = 1;
                 const _Date = Date;
                 closure_128_0 = Date.now();
-                const HTTP = tmp41(tmp24[2]).HTTP;
+                const HTTP = tmp5(tmp24[2]).HTTP;
                 const request = { url: constants.GRAVITY_ITEMS_DEHYDRATED, query: null, rejectWithError: false };
                 const obj1 = { refresh };
                 request.query = obj1;
@@ -138,7 +140,6 @@ export default {
                 return obj2;
               }
               obj13 = tmp5(tmp24[5]);
-              tmp41 = tmp5;
             }
           } else {
             if (1 === tmp8) {
@@ -188,7 +189,7 @@ export default {
   },
   gravityJoinGuild(items, icymi_info_modal) {
     closure_1 = icymi_info_modal;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -265,7 +266,7 @@ export default {
   fetchForNotification(channel_id, message_id) {
     closure_0 = channel_id;
     closure_1 = message_id;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -357,11 +358,11 @@ export default {
       DispatcherDefault.dispatch(obj);
     }
   },
-  fetchHydrated(arg0, arg1, arg2) {
+  fetchHydrated(arg0, dependencyMap2, arg2) {
     closure_0 = arg0;
-    closure_1 = arg1;
+    closure_1 = dependencyMap2;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -455,7 +456,7 @@ export default {
     })();
   },
   getGuildChannelScores() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -485,7 +486,7 @@ export default {
               closure_128_0 = undefined;
               if (obj9.icymiEnabled("guildChannelScores")) {
                 c3 = 1;
-                const HTTP = tmp31(1272).HTTP;
+                const HTTP = HTTPUtils.HTTP;
                 const obj1 = { url: constants.GRAVITY_CUSTOM_SCORES, rejectWithError: false };
                 c4 = 2;
                 c5 = 1;
@@ -493,7 +494,6 @@ export default {
                 return obj2;
               }
               obj9 = ICYMIUtils;
-              tmp31 = require;
             }
           } else {
             if (1 === tmp7) {
@@ -530,7 +530,7 @@ export default {
     })();
   },
   getRecommendedGuilds() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -560,7 +560,7 @@ export default {
               closure_128_0 = undefined;
               if (obj9.icymiEnabled("recommendedGuilds")) {
                 c3 = 1;
-                const HTTP = tmp31(1272).HTTP;
+                const HTTP = HTTPUtils.HTTP;
                 const obj1 = { url: constants.GRAVITY_RECOMMENDED_GUILDS, rejectWithError: false };
                 c4 = 2;
                 c5 = 1;
@@ -568,7 +568,6 @@ export default {
                 return obj2;
               }
               obj9 = ICYMIUtils;
-              tmp31 = require;
             }
           } else {
             if (1 === tmp7) {
@@ -605,7 +604,7 @@ export default {
     })();
   },
   getMediaForCurrentStatus() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -635,13 +634,13 @@ export default {
               closure_128_0 = undefined;
               closure_128_1 = undefined;
               if (obj9.icymiEnabled("mediaForCurrentStatus")) {
-                const CustomStatusSetting = tmp37(1935).CustomStatusSetting;
+                const CustomStatusSetting = UserSettings.CustomStatusSetting;
                 const setting = CustomStatusSetting.getSetting();
                 closure_128_0 = setting;
                 if (null != setting) {
                   if (null != setting.createdAtMs) {
                     c3 = 1;
-                    const HTTP = tmp37(1272).HTTP;
+                    const HTTP = HTTPUtils.HTTP;
                     const obj1 = { url: constants.GRAVITY_ATTACHMENTS, rejectWithError: false };
                     c4 = 2;
                     c5 = 1;

@@ -54,7 +54,7 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
   }
   if (tmp8 == null) {
     const _Object = Object;
-    values = Object.values(tmp5);
+    values = Object.values(UserSettingsPath);
     let tmp9;
     if (values.includes(str5)) {
       tmp9 = obj[str5];
@@ -63,7 +63,6 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
   }
   obj = { target: tmp8, path: joined, params: null };
   const str = path.split("?")[0];
-  tmp5 = UserSettingsPath;
   if (search == null) {
     const _location = location;
     search = location.search;

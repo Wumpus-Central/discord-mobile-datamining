@@ -131,9 +131,9 @@ export default function useSpeakerTooltips(targetRef, memo) {
   const items3 = [memo1.visible || memo2.visible, tmp16];
   const effect = obj2.useEffect(() => {
     if (closure_10) {
-      obj.lock(VoicePanelControlsModes.FLOATING_DEFAULT);
+      closure_8.lock(VoicePanelControlsModes.FLOATING_DEFAULT);
     } else {
-      obj.unlock();
+      closure_8.unlock();
     }
   }, items3);
   memo2 = memo1;

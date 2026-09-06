@@ -38,9 +38,9 @@ function OverrideOption(type) {
     }
     let iconWrapper = styles;
     if (PermissionUtils.DENY !== type) {
-      if (tmp3(4204).ALLOW === tmp2) {
+      if (PermissionUtils.ALLOW === type) {
         let tmp5 = items ? iconWrapper.allowSelected : iconWrapper.allowActive;
-      } else if (tmp3(4204).PASSTHROUGH === tmp2) {
+      } else if (PermissionUtils.PASSTHROUGH === type) {
         tmp5 = items ? iconWrapper.passthroughSelected : iconWrapper.passthroughActive;
       }
       items = [tmp5, ];
@@ -53,24 +53,24 @@ function OverrideOption(type) {
     obj = { size: "sm", style: styles.icon, color: null };
     const colors2 = selected(tmp2[3]).colors;
     obj.color = selected ? colors2.WHITE : colors2.ICON_FEEDBACK_CRITICAL;
-    let tmp4Result = tmp4(tmp(tmp2[7]).DenyIcon, obj);
+    let tmp4Result = jsx(tmp(tmp2[7]).DenyIcon, { size: "sm", style: styles.icon, color: null });
   } else {
     if (tmp(tmp2[5]).ALLOW === type) {
       const obj1 = { size: "sm", style: styles.icon, color: null };
       const colors = selected(tmp2[3]).colors;
       obj1.color = selected ? colors.WHITE : colors.ICON_FEEDBACK_POSITIVE;
-      tmp4Result = tmp4(tmp(tmp2[8]).CheckmarkLargeBoldIcon, obj1);
+      tmp4Result = jsx(tmp(tmp2[8]).CheckmarkLargeBoldIcon, { size: "sm", style: styles.icon, color: null });
     } else {
       tmp4Result = null;
       if (tmp(tmp2[5]).PASSTHROUGH === type) {
         const obj2 = { size: "sm", style: styles.icon, color: null };
         const colors3 = selected(tmp2[3]).colors;
         obj2.color = selected ? colors3.WHITE : colors3.INTERACTIVE_TEXT_DEFAULT;
-        tmp4Result = tmp4(tmp(tmp2[9]).SlashIcon, obj2);
+        tmp4Result = jsx(tmp(tmp2[9]).SlashIcon, { size: "sm", style: styles.icon, color: null });
       }
     }
     obj.children = tmp4Result;
-    return tmp4(closure_3, obj);
+    return <closure_3 {...obj} />;
   }
 }
 get_ActivityIndicator = fn(17);
@@ -127,7 +127,7 @@ export default noop.memo(function ChannelSettingsPermissionsOverrideCheckbox(per
   obj.accessibilityLabel = permissionTitle;
   obj.children = items.map((type, index) => {
     permissionTitle = type;
-    return <OverrideOption key={"checkbox-" + arg1} permissionTitle={permissionTitle} type={arg0} selected={closure_1 === arg0} styles={styles} onPress={function onPress() {
+    return <OverrideOption key={"checkbox-" + index} permissionTitle={permissionTitle} type={type} selected={closure_1 === type} styles={styles} onPress={function onPress() {
       let tmp2 = null != onValueChange;
       if (tmp2) {
         tmp2 = importDefault !== closure_0;

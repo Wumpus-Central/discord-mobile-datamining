@@ -58,21 +58,21 @@ export default function TermsFieldList(rules) {
       const items = [termsContainer.termsContainer, , ];
       let firstItem = null;
       if (0 === index) {
-        firstItem = tmp4.firstItem;
+        firstItem = termsContainer.firstItem;
       }
       items[1] = firstItem;
       let lastItem = null;
       if (index === rules.length - 1) {
-        lastItem = tmp4.lastItem;
+        lastItem = termsContainer.lastItem;
       }
       let obj = { style: items, children: null };
       items[2] = lastItem;
-      obj = { rule, rowNumber: index + 1, rowCount: arr2.length, rulesChannelId };
+      obj = { rule, rowNumber: index + 1, rowCount: rules.length, rulesChannelId };
       obj.children = hasOwnProperty(TermsFieldListItem, obj);
       const children = [hasOwnProperty(View, obj), ];
       let tmp2Result = null;
       if (index !== rules.length - 1) {
-        tmp2Result = tmp2(TableRowDivider.TableRowDivider, {});
+        tmp2Result = hasOwnProperty(TableRowDivider.TableRowDivider, {});
       }
       children[1] = tmp2Result;
       return timestampProducer(noop.Fragment, { children }, "term-" + rule + "-" + index);

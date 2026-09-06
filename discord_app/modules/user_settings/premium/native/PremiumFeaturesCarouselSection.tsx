@@ -152,6 +152,7 @@ function PremiumFeaturesCarousel(arg0) {
   }
   tmp19 = closure_10(closure_5, { style: tmp.carousel, contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 }, horizontal: true, showsHorizontalScrollIndicator: false, decelerationRate: "fast", snapToOffsets: mapped.map((item, index) => index * c4), scrollEventThrottle: 100, onScroll: callback, children: mapped });
   tmp17 = closure_10;
+  const obj2 = { style: tmp.carousel, contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 }, horizontal: true, showsHorizontalScrollIndicator: false, decelerationRate: "fast", snapToOffsets: mapped.map((item, index) => index * c4), scrollEventThrottle: 100, onScroll: callback, children: mapped };
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
@@ -170,7 +171,7 @@ createStyles.carousel = { flex: 1, minHeight: 262 };
 createStyles.indicators = { marginBottom: -nativeDefault.space.PX_48 };
 let closure_14 = createStyles.createStyles(createStyles);
 fn(4560);
-const obj2 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
+let obj2 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
 let obj1 = { marginBottom: -nativeDefault.space.PX_48 };
 obj2.card = { flex: 1, alignSelf: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.image = { alignSelf: "center" };

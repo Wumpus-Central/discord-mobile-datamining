@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
+import BaseTextButton from "BaseTextButton" /* 4976 */;
 import springPresets from "springPresets" /* 4978 */;
 import ButtonConstants2 from "ButtonConstants" /* 4980 */;
 import FloatingActionButton from "FloatingActionButton" /* 8909 */;
@@ -66,11 +67,11 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   }
   const items = [styles.button, ];
   if (positionRight == null) {
-    positionRight = tmp3(8909).DEFAULT_POSITION_OFFSET;
+    positionRight = FloatingActionButton.DEFAULT_POSITION_OFFSET;
   }
   const rect = { position: "absolute", right: positionRight, bottom: null };
   if (positionBottom == null) {
-    positionBottom = tmp3(8909).DEFAULT_POSITION_OFFSET;
+    positionBottom = FloatingActionButton.DEFAULT_POSITION_OFFSET;
   }
   rect.bottom = positionBottom;
   items[1] = rect;
@@ -92,7 +93,7 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
     obj1.icon = cloneElementResult;
     obj1.style = items;
     obj1.pillStyle = tmp2.textButtonPill;
-    tmp12 = jsx(tmp3(4976).BaseTextButton, {});
+    tmp12 = jsx(BaseTextButton.BaseTextButton, {});
   }
   return tmp12;
 };

@@ -3,6 +3,7 @@
 // Module 8154 (createMessageFailedEmbed)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
+import FileUtils from "FileUtils" /* 5134 */;
 import RowGeneratorConstants from "RowGeneratorConstants" /* 7933 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7946 */;
 import _modDef8155 from "module_8155" /* 8155 */;
@@ -33,12 +34,11 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       let str = "";
       if (0 !== uploaderFile.currentSize) {
         const _HermesInternal = HermesInternal;
-        str = " (" + tmp6(5134).sizeString(uploaderFile.currentSize) + ")";
-        const tmp6Result = tmp6(5134);
+        str = " (" + FileUtils.sizeString(uploaderFile.currentSize) + ")";
+        const tmp6Result = FileUtils;
       }
       obj.attachmentsSize = "" + str;
       obj.bodyTextColor = colors.embedBodyTextColor;
-      tmp6 = require;
     }
   } else {
     obj = { type: MessageEmbedTypes.TEXT, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null };

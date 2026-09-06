@@ -15,7 +15,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(id) {
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.e6RscS);
   obj.action = function action() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (guildFolderById === 2) {
         guildFolderById = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -73,7 +73,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(id) {
   const intl2 = require("util").intl;
   obj.label = intl2.string(require("util").t.Dx7im5);
   obj.action = function action() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

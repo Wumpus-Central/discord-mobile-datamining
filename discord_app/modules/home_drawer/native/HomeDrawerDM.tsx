@@ -5,7 +5,9 @@ import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4423 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 9059 */;
 import ChannelRowPreview from "ChannelRowPreview" /* 10109 */;
+import BellZIcon from "BellZIcon" /* 13287 */;
 import useMessagePreviewsDefault from "useMessagePreviews" /* 15317 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
@@ -25,8 +27,8 @@ function HomeDrawerDMExpandedChildren(channel) {
   const stateFromStores = channel(504).useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != channel) {
-      if (isMultiUserDM(tmp.type)) {
-        let channelName = useChannelName.computeChannelName(tmp, UserStore, RelationshipStore);
+      if (isMultiUserDM(channel.type)) {
+        let channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
       } else {
         channelName = null;
       }
@@ -45,15 +47,15 @@ function HomeDrawerDMExpandedChildren(channel) {
     if (null == stateFromStores1) {
       let obj = { isMuted: false, isTemporary: false };
     } else {
-      let tmp2 = null == tmp.end_time;
+      let tmp2 = null == stateFromStores1.end_time;
       if (!tmp2) {
         const _Date = Date;
-        const date = new Date(tmp.end_time);
+        const date = new Date(stateFromStores1.end_time);
         const _Date2 = Date;
         const date1 = new Date();
         tmp2 = date > date1;
       }
-      obj = { isMuted: tmp2, isTemporary: null != tmp.end_time };
+      obj = { isMuted: tmp2, isTemporary: null != stateFromStores1.end_time };
     }
     return obj;
   }, items3);
@@ -63,19 +65,19 @@ function HomeDrawerDMExpandedChildren(channel) {
   const title = stateFromStores.useMemo(() => {
     let isMuted;
     if (memo != null) {
-      isMuted = tmp.isMuted;
+      isMuted = memo.isMuted;
     }
     if (isMuted) {
       let isTemporary;
-      if (tmp != null) {
-        isTemporary = tmp.isTemporary;
+      if (memo != null) {
+        isTemporary = memo.isTemporary;
       }
       let tmp5Result = dependencyMap;
       if (isTemporary) {
-        tmp5Result = tmp5(13287);
+        tmp5Result = BellZIcon;
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp5(9059).BellSlashIcon;
+        BellSlashIcon = BellSlashIcon2.BellSlashIcon;
       }
     } else {
       let obj = { style: closure_1.title, children: null };

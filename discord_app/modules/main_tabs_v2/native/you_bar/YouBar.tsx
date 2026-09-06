@@ -5,12 +5,14 @@ import _mod12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
 import spring from "spring" /* 4974 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
+import transitionToGuild from "transitionToGuild" /* 7342 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
 import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11218 */;
 import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 16395 */;
@@ -45,7 +47,7 @@ let closure_23 = { code: "function YouBarTsx2(_,success){const{runOnJS,handleNav
 let closure_24 = { code: "function YouBarTsx3(_,manager){const{startingTranslateX,translateX}=this.__closure;if(Math.abs(startingTranslateX.get()-translateX.get())>=10){manager.fail();}}" };
 let closure_25 = { code: "function YouBarTsx4(){const{startingTranslateX,translateX}=this.__closure;startingTranslateX.set(translateX.get());}" };
 let closure_26 = noop.memo(() => {
-  let tmp = closure_21();
+  const tmp = closure_21();
   let obj = isMobileQuestDockRenderedBase(15091);
   const mobileQuestDock = obj.useMobileQuestDock();
   let obj1 = isMobileQuestDockRenderedBase(15091);
@@ -70,7 +72,6 @@ let closure_26 = noop.memo(() => {
   const tmp4Result1 = isMobileQuestDockRenderedBase(4296);
   let fn = function r() {
     let obj = { marginBottom: spring.withSpring(youBarBottomMargin + connectionBannerHeight, map1), transform: null };
-    const tmp = map1;
     let num = 1;
     if (sharedValue.get()) {
       num = 1;
@@ -78,7 +79,7 @@ let closure_26 = noop.memo(() => {
         num = 0.98;
       }
     }
-    obj = { scale: spring.withSpring(num, tmp) };
+    obj = { scale: spring.withSpring(num, map1) };
     const items = [obj];
     obj.transform = items;
     return obj;
@@ -119,7 +120,7 @@ let closure_26 = noop.memo(() => {
     if (null != rootNavigationRef) {
       function checkYouScreenPresence() {
         if (null != rootNavigationRef) {
-          const state = obj.getState();
+          const state = rootNavigationRef.getState();
           let tmp3 = null != state;
           if (tmp3) {
             let name;
@@ -146,13 +147,13 @@ let closure_26 = noop.memo(() => {
           }
           if (!someResult) {
             if (null != ref.current) {
-              if ("press" === tmp9.current) {
+              if ("press" === ref.current) {
                 const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.SOFT);
-                obj.navigate("you");
+                rootNavigationRef.navigate("you");
               } else {
-                GlobalUtils.assertNever(tmp9.current);
+                GlobalUtils.assertNever(ref.current);
               }
-              tmp9.current = null;
+              ref.current = null;
             }
           }
         }
@@ -167,7 +168,7 @@ let closure_26 = noop.memo(() => {
   }, []);
   const items3 = [sharedValue];
   const memo1 = sharedValue.useMemo(() => _mod12.debounce(() => {
-    const rootNavigationRef = isMobileQuestDockRenderedBase(closure_2[27]).getRootNavigationRef();
+    const rootNavigationRef = isMobileQuestDockRenderedBase(dependencyMap[27]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       const state = rootNavigationRef.getState();
       let someResult;
@@ -182,15 +183,16 @@ let closure_26 = noop.memo(() => {
       }
     }
     if (null != rootNavigationRef) {
-      const result = tmp(tmp2[28]).triggerHapticFeedback(tmp(tmp2[28]).HapticFeedbackTypes.SOFT);
+      const result = isMobileQuestDockRenderedBase(dependencyMap[28]).triggerHapticFeedback(isMobileQuestDockRenderedBase(dependencyMap[28]).HapticFeedbackTypes.SOFT);
       rootNavigationRef.navigate("you");
       const result1 = sharedValue.set(false);
-      const tmpResult = tmp(tmp2[28]);
+      const tmpResult = isMobileQuestDockRenderedBase(dependencyMap[28]);
     }
+    const obj = isMobileQuestDockRenderedBase(dependencyMap[27]);
   }, 500, { leading: true, trailing: false }), items3);
   const items4 = [sharedValue];
   const items5 = [sharedValue];
-  const callback = sharedValue.useCallback(youBarBottomMargin(function*(arg0, value) {
+  const callback = sharedValue.useCallback(youBarBottomMargin(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -253,8 +255,8 @@ let closure_26 = noop.memo(() => {
   callback3 = sharedValue.useCallback(() => {
     const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(getNavigatorCurrentRouteDefault());
     if (null != coerceGuildsRouteResult) {
-      let tmpResult = tmp(4528);
-      const result = tmpResult.triggerHapticFeedback(tmp(4528).HapticFeedbackTypes.SOFT);
+      let tmpResult = HapticUtils;
+      const result = tmpResult.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.SOFT);
       const params = coerceGuildsRouteResult.params;
       let guildId;
       if (params != null) {
@@ -263,15 +265,15 @@ let closure_26 = noop.memo(() => {
       if (guildId === ME) {
         const lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
         if (null != lastSelectedGuildId) {
-          tmpResult = tmp(7342);
+          tmpResult = transitionToGuild;
           tmpResult.transitionToGuild(lastSelectedGuildId);
         }
       } else {
-        if (ref2.current === tmp(1943).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK) {
+        if (ref2.current === dismissible_content.DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK) {
           ref.current(ContentDismissActionType.TAKE_ACTION);
         }
-        tmp(7342).transitionToGuild(tmp5);
-        const tmpResult1 = tmp(7342);
+        transitionToGuild.transitionToGuild(tmp5);
+        const tmpResult1 = transitionToGuild;
       }
     }
   }, []);
@@ -350,7 +352,7 @@ let closure_26 = noop.memo(() => {
   let tmp40Result = tmp22;
   if (null != nameplate) {
     obj1 = { nameplate, barWidth: tmp10, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp37 };
-    tmp40Result = tmp40(tmp2(16384), obj1);
+    tmp40Result = closure_19(tmp2(16384), obj1);
   }
   items10[1] = tmp40Result;
   obj2 = { gesture: memo3, children: null };
@@ -371,7 +373,7 @@ let closure_26 = noop.memo(() => {
   tmp40Result = null;
   if (iCYMIEnabled) {
     const obj5 = { hasNameplate: tmp22 };
-    tmp40Result = tmp40(tmp2(16390), obj5);
+    tmp40Result = closure_19(tmp2(16390), obj5);
   }
   const items11 = [tmp40Result, closure_19(youBarHorizontalMargin(16393), { hasNameplate: null != nameplate })];
   obj4.children = items11;

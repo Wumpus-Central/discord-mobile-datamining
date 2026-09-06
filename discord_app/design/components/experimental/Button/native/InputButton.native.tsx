@@ -85,4 +85,5 @@ export const InputButton = noop.forwardRef((size, ref) => {
     obj3.textElement = <Text style={null} numberOfLines={1} maxFontSizeMultiplier={null}>{null}</Text>;
     return jsx(BaseTextButton.BaseTextButton, {});
   }
+  const tmp = undefined !== isRound && isRound;
 });

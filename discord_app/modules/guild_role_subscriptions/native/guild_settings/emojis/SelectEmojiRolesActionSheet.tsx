@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Pressables from "Pressables" /* 5123 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
 import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15212 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -76,22 +77,22 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   obj = { style: items, children: null };
   items[1] = saveButtonDisabled;
   if (null == emoji) {
-    const intl2 = tmp5(1114).intl;
-    let stringResult = intl2.string(tmp5(1114).t["3UB9ad"]);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t["3UB9ad"]);
   } else {
-    let intl = tmp5(1114).intl;
-    stringResult = intl.string(tmp5(1114).t["R3BPH+"]);
+    let intl = util.intl;
+    stringResult = intl.string(util.t["R3BPH+"]);
   }
   obj.children = stringResult;
   obj.children = closure_6(native.LegacyText, obj);
-  let tmp7Result = tmp7(Pressables.PressableOpacity, obj);
+  let tmp7Result = closure_6(Pressables.PressableOpacity, obj);
   let obj1 = { title: null, subtitle: null, trailing: null };
-  const intl3 = tmp5(1114).intl;
+  const intl3 = util.intl;
   obj1.title = intl3.string(util.t.JPU0EF);
-  const intl4 = tmp5(1114).intl;
+  const intl4 = util.intl;
   obj1.subtitle = intl4.string(util.t.MZusPv);
   obj1.trailing = tmp7Result;
-  tmp7Result = tmp7(tmp5(7149).BottomSheetTitleHeader, obj1);
+  tmp7Result = closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj1);
   let obj2 = { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: null };
   const obj3 = {
     inActionSheet: true,
@@ -106,12 +107,12 @@ export default function SelectEmojiRolesActionSheet(arg0) {
       const items = [closure_1_6(require("Text/Text").Text, obj), ];
       let archived = tmp.archived;
       if (archived) {
-        obj = { style: tmp9.archivedBadge, children: null };
-        const obj1 = { style: tmp9.archivedBadgeText, variant: "text-xs/bold", color: "text-overlay-light", children: null };
-        const intl = tmp6(tmp7[12]).intl;
-        obj1.children = intl.string(tmp6(tmp7[12]).t.HRtfn9);
-        obj.children = tmp5(tmp6(tmp7[17]).Text, obj1);
-        archived = tmp5(tmp8, obj);
+        obj = { style: closure_2.archivedBadge, children: null };
+        const obj1 = { style: closure_2.archivedBadgeText, variant: "text-xs/bold", color: "text-overlay-light", children: null };
+        const intl = require("util").intl;
+        obj1.children = intl.string(require("util").t.HRtfn9);
+        obj.children = closure_1_6(require("Text/Text").Text, obj1);
+        archived = closure_1_6(subscriptionListingsForGuild, obj);
       }
       const obj2 = {
         label: closure_1_7(subscriptionListingsForGuild, obj),
@@ -120,9 +121,9 @@ export default function SelectEmojiRolesActionSheet(arg0) {
           return closure_4((has) => {
             const set = new Set(has);
             if (has.has(role_id)) {
-              set.delete(tmp);
+              set.delete(role_id);
             } else {
-              set.add(tmp);
+              set.add(role_id);
             }
             return set;
           });
@@ -134,8 +135,8 @@ export default function SelectEmojiRolesActionSheet(arg0) {
       const children = [closure_1_6(require("Form").FormRow, obj2), ];
       let tmp5Result = !tmp10;
       if (arg1 !== diff) {
-        const obj4 = { style: tmp9.divider };
-        tmp5Result = tmp5(tmp6(tmp7[16]).FormDivider, obj4);
+        const obj4 = { style: closure_2.divider };
+        tmp5Result = closure_1_6(require("Form").FormDivider, obj4);
       }
       children[1] = tmp5Result;
       return closure_1_7(closure_1_8, { children });

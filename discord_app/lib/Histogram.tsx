@@ -17,7 +17,7 @@ const prototype = Histogram.prototype;
 prototype["getSamples"] = function getSamples() {
   return this.samples;
 };
-prototype["addSample"] = function addSample(currentCPUUsagePercent, diff) {
+prototype["addSample"] = function addSample(currentCPUUsagePercent) {
   let num = diff;
   if (diff === undefined) {
     num = 1;
@@ -55,7 +55,7 @@ prototype["addSamples"] = function addSamples(prop3) {
   const digest2 = this.digest;
   digest2.check_continuous();
 };
-prototype["getReport"] = function getReport(items) {
+prototype["getReport"] = function getReport() {
   const self = this;
   if (items === undefined) {
     items = [25, 50, 75, 90, 95];

@@ -18,51 +18,51 @@ require = fn;
 function renderComponents(components) {
   return components.map((item, index) => renderComponent(item, index.toString()));
 }
-function renderComponent(component, arg1) {
+function renderComponent(component, key) {
   const type = component.type;
   if (Server.ComponentType.ACTION_ROW === type) {
     let obj = {};
     const merged = Object.assign(component);
     obj.renderComponents = renderComponents;
-    return jsx(ActionRowLayoutComponentDefault, {}, arg1);
-  } else if (tmp(1894).ComponentType.STRING_SELECT === type) {
+    return jsx(ActionRowLayoutComponentDefault, {}, key);
+  } else if (Server.ComponentType.STRING_SELECT === type) {
     obj = {};
     const merged1 = Object.assign(component);
-    return jsx(StringSelectActionComponentDefault, {}, arg1);
-  } else if (tmp(1894).ComponentType.TEXT_INPUT === type) {
+    return jsx(StringSelectActionComponentDefault, {}, key);
+  } else if (Server.ComponentType.TEXT_INPUT === type) {
     const obj1 = {};
     const merged2 = Object.assign(component);
-    return jsx(TextInputActionComponentDefault, {}, arg1);
+    return jsx(TextInputActionComponentDefault, {}, key);
   } else {
-    if (tmp(1894).ComponentType.USER_SELECT !== type) {
-      if (tmp(1894).ComponentType.ROLE_SELECT !== type) {
-        if (tmp(1894).ComponentType.MENTIONABLE_SELECT !== type) {
-          if (tmp(1894).ComponentType.CHANNEL_SELECT !== type) {
-            if (tmp(1894).ComponentType.TEXT_DISPLAY === type) {
+    if (Server.ComponentType.USER_SELECT !== type) {
+      if (Server.ComponentType.ROLE_SELECT !== type) {
+        if (Server.ComponentType.MENTIONABLE_SELECT !== type) {
+          if (Server.ComponentType.CHANNEL_SELECT !== type) {
+            if (Server.ComponentType.TEXT_DISPLAY === type) {
               const obj2 = {};
               const merged3 = Object.assign(component);
-              return jsx(TextDisplayComponentDefault, {}, arg1);
-            } else if (tmp(1894).ComponentType.LABEL === type) {
+              return jsx(TextDisplayComponentDefault, {}, key);
+            } else if (Server.ComponentType.LABEL === type) {
               const obj3 = {};
               const merged4 = Object.assign(component);
               obj3.renderComponent = renderComponent;
-              return jsx(LabelLayoutComponentDefault, {}, arg1);
-            } else if (tmp(1894).ComponentType.FILE_UPLOAD === type) {
+              return jsx(LabelLayoutComponentDefault, {}, key);
+            } else if (Server.ComponentType.FILE_UPLOAD === type) {
               const obj4 = {};
               const merged5 = Object.assign(component);
-              return jsx(FileUploadActionComponentDefault, {}, arg1);
-            } else if (tmp(1894).ComponentType.RADIO_GROUP === type) {
+              return jsx(FileUploadActionComponentDefault, {}, key);
+            } else if (Server.ComponentType.RADIO_GROUP === type) {
               const obj5 = {};
               const merged6 = Object.assign(component);
-              return jsx(RadioGroupActionComponentDefault, {}, arg1);
-            } else if (tmp(1894).ComponentType.CHECKBOX_GROUP === type) {
+              return jsx(RadioGroupActionComponentDefault, {}, key);
+            } else if (Server.ComponentType.CHECKBOX_GROUP === type) {
               const obj6 = {};
               const merged7 = Object.assign(component);
-              return jsx(CheckboxGroupActionComponentDefault, {}, arg1);
-            } else if (tmp(1894).ComponentType.CHECKBOX === type) {
+              return jsx(CheckboxGroupActionComponentDefault, {}, key);
+            } else if (Server.ComponentType.CHECKBOX === type) {
               obj = {};
               const merged8 = Object.assign(component);
-              return jsx(CheckboxActionComponentDefault, {}, arg1);
+              return jsx(CheckboxActionComponentDefault, {}, key);
             }
           }
         }
@@ -70,7 +70,7 @@ function renderComponent(component, arg1) {
     }
     const obj7 = {};
     const merged9 = Object.assign(component);
-    return jsx(SearchableSelectActionComponentDefault, {}, arg1);
+    return jsx(SearchableSelectActionComponentDefault, {}, key);
   }
 }
 const jsx = fn(21).jsx;

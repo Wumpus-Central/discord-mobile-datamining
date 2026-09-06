@@ -29,13 +29,13 @@ export default function SettingsOverviewScreen() {
     obj.settings = items.filter(GlobalUtils.isNotNullish);
     const items1 = [obj, , , , , , , , , ];
     obj = { label: null, settings: null };
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     obj.label = intl2.string(util.t["SuS+RB"]);
     const items2 = [, , , , , , , ];
     ({ COLLECTIBLES_SHOP: arr3[0], QUEST_HOME: arr3[1] } = MobileUserSettings);
     let PREMIUM1 = null;
     if (hasPremiumSubscriptionToDisplay) {
-      PREMIUM1 = tmp6.PREMIUM;
+      PREMIUM1 = MobileUserSettings.PREMIUM;
     }
     const obj1 = { sections: null };
     items2[2] = PREMIUM1;
@@ -43,7 +43,7 @@ export default function SettingsOverviewScreen() {
     obj.settings = items2.filter(GlobalUtils.isNotNullish);
     items1[1] = obj;
     const obj2 = { label: null, settings: null };
-    const intl3 = tmp(1114).intl;
+    const intl3 = util.intl;
     obj2.label = intl3.string(util.t.f2n1TP);
     const items3 = [, , , , , , , , , , ];
     ({ VOICE: arr4[0], APPEARANCE: arr4[1], ACCESSIBILITY: arr4[2], LANGUAGE: arr4[3], CHAT: arr4[4], TYPING_INDICATOR: arr4[5], WEB_BROWSER: arr4[6], NOTIFICATIONS: arr4[7] } = MobileUserSettings);
@@ -52,14 +52,14 @@ export default function SettingsOverviewScreen() {
     obj2.settings = items3.filter(GlobalUtils.isNotNullish);
     items1[2] = obj2;
     const obj3 = { label: null, settings: null };
-    const intl4 = tmp(1114).intl;
+    const intl4 = util.intl;
     obj3.label = intl4.string(util.t["Yl/Riu"]);
     const items4 = [, , ];
     ({ SUPPORT: arr5[0], UPLOAD_DEBUG_LOGS: arr5[1], ACKNOWLEDGEMENTS: arr5[2] } = MobileUserSettings);
     obj3.settings = items4;
     items1[3] = obj3;
     const obj4 = { label: null, settings: null };
-    const intl5 = tmp(1114).intl;
+    const intl5 = util.intl;
     obj4.label = intl5.string(util.t.LRmNAl);
     const items5 = [MobileUserSettings.CHANGE_LOG];
     obj4.settings = items5;
@@ -69,14 +69,14 @@ export default function SettingsOverviewScreen() {
     obj5.settings = items6;
     items1[5] = obj5;
     const obj6 = { label: null, settings: null };
-    const intl6 = tmp(1114).intl;
+    const intl6 = util.intl;
     obj6.label = intl6.string(util.t.CbItOL);
     const items7 = [, , , , , , ];
     ({ APP_VERSION: arr8[0], DEVICE_INFO: arr8[1], COPY_CLIENT_INFO: arr8[2], VIEW_DEBUG_LOGS: arr8[3], CACHE_ACTIONS: arr8[4], REACT_COMPILER: arr8[5], UPLOAD_INTL_DATA: arr8[6] } = MobileUserSettings);
     obj6.settings = items7;
     items1[6] = obj6;
     const obj7 = { label: null, settings: null };
-    const intl7 = tmp(1114).intl;
+    const intl7 = util.intl;
     obj7.label = intl7.string(util.t["/tZh0A"]);
     const items8 = [, ];
     ({ BUG_REPORTER: arr9[0], CREATE_BUG_REPORT: arr9[1] } = MobileUserSettings);

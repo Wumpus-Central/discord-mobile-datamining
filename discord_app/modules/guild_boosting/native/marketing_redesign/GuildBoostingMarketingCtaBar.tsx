@@ -146,12 +146,11 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const items5 = [closure_12(isVisible(13576), { guild }), , , ];
   const obj5 = { style: tmp.headerContent, children: null };
   obj6 = { style: tmp.heading, color: "text-overlay-light", variant: "display-sm", children: null };
-  const intl = tmp7(1114).intl;
+  const intl = guild(1114).intl;
   obj6.children = intl.string(guild(1114).t["AF+Tyh"]);
   const items6 = [closure_12(guild(4556).Heading, obj6), , , , ];
   obj7 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
   const isPremiumResult = obj7.isPremium(stateFromStores);
-  const tmp23 = closure_13;
   obj7.size = guild(5584).GuildIconSizes.LARGE;
   items6[1] = closure_12(isVisible(5584), obj7);
   const obj8 = {
@@ -170,7 +169,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const tmp4Result1 = isVisible(5584);
   const items9 = [closure_12(guild(1178).Icon, { style: tmp.guildBoostCountIcon, source: isVisible(13502), color: isVisible(576).unsafe_rawColors.GUILD_BOOSTING_PINK, size: guild(1178).Icon.Sizes.SMALL }), ];
   const obj13 = { style: tmp.guildBoostCount, accessibilityRole: "header", variant: "text-sm/bold", color: "text-overlay-light", children: null };
-  const intl2 = tmp7(1114).intl;
+  const intl2 = guild(1114).intl;
   obj13.children = intl2.format(guild(1114).t["pob/cL"], { subscriptions: isVisible(4469)(premiumGroupRole.guild.id).total });
   items9[1] = closure_12(guild(4556).Text, obj13);
   obj11.children = items9;
@@ -182,7 +181,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const items12 = [, ];
   ({ guildBoostCount: arr13[0], guildBoostCurrentUserCount: arr13[1] } = tmp);
   obj15.style = items12;
-  const intl3 = tmp7(1114).intl;
+  const intl3 = guild(1114).intl;
   obj15.children = intl3.format(guild(1114).t.xXb78j, { numSubscriptions: memo });
   obj14.children = closure_12(guild(4556).Text, obj15);
   items10[1] = closure_12(isVisible(4296).View, obj14);
@@ -209,8 +208,8 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   obj19.style = items15;
   if (isPremiumResult) {
     const obj20 = { variant: "secondary", text: null, onPress: null, icon: null, grow: true };
-    const intl5 = tmp7(1114).intl;
-    obj20.text = intl5.string(tmp7(1114).t["8MYSQw"]);
+    const intl5 = guild(1114).intl;
+    obj20.text = intl5.string(guild(1114).t["8MYSQw"]);
     obj20.onPress = function onPress() {
       let obj = actions_BoostingActionCreators;
       obj.closeApplyBoostModal();
@@ -219,13 +218,13 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
       obj.analyticsLocation = obj;
       utils_openGiftModal.openGiftModal(obj);
     };
-    const obj21 = { size: tmp7(1178).Icon.Sizes.SMALL, source: tmp4(13581), style: tmp.giftIcon };
-    obj20.icon = tmp25(tmp7(1178).Icon, obj21);
+    const obj21 = { size: guild(1178).Icon.Sizes.SMALL, source: tmp4(13581), style: tmp.giftIcon };
+    obj20.icon = closure_12(guild(1178).Icon, obj21);
     let obj22 = obj20;
   } else {
     obj22 = { variant: "secondary", text: null, onPress: null, grow: true };
-    const intl4 = tmp7(1114).intl;
-    obj22.text = intl4.string(tmp7(1114).t.pj0XBN);
+    const intl4 = guild(1114).intl;
+    obj22.text = intl4.string(guild(1114).t.pj0XBN);
     obj22.onPress = function onPress() {
       let obj = { analyticsLocation: null, analyticsLocations };
       obj = { page: constants2.PREMIUM_GUILD_USER_MODAL, section: constants3.HEADER, object: constants.BUTTON_CTA };
@@ -237,5 +236,5 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   obj19.children = closure_12(guild(4975).Button, obj22);
   items14[1] = closure_12(memo, obj19);
   obj23.children = items14;
-  return tmp23(memo, obj23);
+  return closure_13(memo, obj23);
 };

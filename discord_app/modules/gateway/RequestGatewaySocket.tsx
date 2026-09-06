@@ -11,17 +11,17 @@ function setRequestedBy(arg0) {
   if (num == null) {
     num = 0;
   }
-  const result = obj.set(arg0, num + 1);
+  const result = map.set(arg0, num + 1);
   const combined = "BRIDGE:" + arg0;
-  let num2 = obj.get(combined);
+  let num2 = map.get(combined);
   if (num2 == null) {
     num2 = 0;
   }
   const diff = num2 - 1;
   if (diff <= 0) {
-    obj.delete(combined);
+    map.delete(combined);
   } else {
-    const result1 = obj.set(combined, diff);
+    const result1 = map.set(combined, diff);
   }
 }
 function stopRequest(arg0) {
@@ -32,12 +32,12 @@ function stopRequest(arg0) {
   }
   const diff = num - 1;
   if (diff <= 0) {
-    obj.delete(arg0);
+    map.delete(arg0);
   } else {
-    const result = obj.set(arg0, diff);
+    const result = map.set(arg0, diff);
   }
 }
-let closure_10 = async function _withRequest(arg0, value) {
+let closure_10 = async function _withRequest(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -138,23 +138,24 @@ export const startBridgeTo = function startBridgeTo(arg0) {
   combined(7472).requestSafeIdleCallback(() => {
     let obj = map;
     if (map.has(combined)) {
-      obj = { bridge_token: tmp, cleared_after: null };
+      obj = { bridge_token: combined, cleared_after: null };
       const _performance = performance;
       obj.cleared_after = performance.now() - closure_1;
       AnalyticsUtilsDefault.track(AnalyticEvents.GATEWAY_BRIDGE_TIMEOUT, obj);
     }
     c6 = false;
-    let num = obj.get(tmp);
+    let num = obj.get(combined);
     if (num == null) {
       num = 0;
     }
     const diff = num - 1;
     if (diff <= 0) {
-      obj.delete(tmp);
+      obj.delete(combined);
     } else {
-      const result = obj.set(tmp, diff);
+      const result = obj.set(combined, diff);
     }
   }, { timeout: 5000 });
+  let obj2 = combined(7472);
 };
 export { stopRequest };
 export const withRequest = function withRequest() {

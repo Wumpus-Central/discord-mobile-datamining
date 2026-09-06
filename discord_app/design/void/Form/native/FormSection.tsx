@@ -2,7 +2,9 @@
 
 // Module 8602 (FormSection)
 import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import RedesignCompat from "RedesignCompat" /* 5686 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
 import FormRowDefault from "FormRow" /* 7137 */;
 import FormDividerDefault from "FormDivider" /* 8599 */;
 import FormTitleDefault from "FormTitle" /* 8603 */;
@@ -73,12 +75,12 @@ export default function FormSection(arg0) {
     }
     obj1.hasTrailingText = flag;
     obj1.children = found;
-    obj.children = timestampProducer(tmp3(5687).TableRowGroup, obj1);
+    obj.children = timestampProducer(TableRowGroup.TableRowGroup, obj1);
     const items = [timestampProducer(React4, obj), ];
     let tmp20Result = null;
     if (null != hint) {
       const obj2 = { style: { marginTop: 8 }, children: hint };
-      tmp20Result = tmp20(tmp19, obj2);
+      tmp20Result = timestampProducer(React4, obj2);
     }
     items[1] = tmp20Result;
     obj.children = items;
@@ -106,12 +108,12 @@ export default function FormSection(arg0) {
     if (null != tmp6) {
       if (TitleStyleType.DEFAULT === titleStyleType) {
         titledSectionNoBorderOrMargin = tmp2.titledSectionHeader;
-      } else if (tmp12.ANDROID_NO_BORDER === titleStyleType) {
-        titledSectionNoBorderOrMargin = tmp3(1115).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
-        const tmp3Result = tmp3(1115);
+      } else if (TitleStyleType.ANDROID_NO_BORDER === titleStyleType) {
+        titledSectionNoBorderOrMargin = PlatformUtils.isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
+        const tmp3Result = PlatformUtils;
       } else {
         titledSectionNoBorderOrMargin = emptySectionHeader;
-        if (tmp12.NO_BORDER_OR_MARGIN === titleStyleType) {
+        if (TitleStyleType.NO_BORDER_OR_MARGIN === titleStyleType) {
           titledSectionNoBorderOrMargin = tmp2.titledSectionNoBorderOrMargin;
         }
       }

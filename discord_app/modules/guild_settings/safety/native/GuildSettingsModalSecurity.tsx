@@ -98,7 +98,7 @@ export default function GuildSettingsModalSecurity(guildId) {
     const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1114).intl;
     obj4.children = intl3.string(tmp2(1114).t["KG1V/E"]);
-    tmp17Result = tmp17(tmp2(4556).Text, obj4);
+    tmp17Result = closure_12(tmp2(4556).Text, obj4);
   }
   const obj5 = { children: null };
   items4[2] = tmp17Result;

@@ -24,7 +24,7 @@ export default function useIsConnectedToVoiceChannel(arg0) {
     } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
       return true;
     } else {
-      const state = obj.getState();
+      const state = RTCConnectionStore.getState();
       if (RTCConnectionStates.DISCONNECTED !== state) {
         if (RTCConnectionStates.NO_ROUTE !== state) {
           return true;
@@ -32,6 +32,5 @@ export default function useIsConnectedToVoiceChannel(arg0) {
       }
       return false;
     }
-    obj = RTCConnectionStore;
   });
 };

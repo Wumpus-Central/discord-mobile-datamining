@@ -34,19 +34,19 @@ Database["open"] = function open(arg0, arg1) {
     closure_0 = Database;
     const Host = closure_0(c2[1]).Host;
     await Host.open(closure_0, closure_1);
-    return new closure_0(arg1);
+    return new closure_0(value);
   })();
 };
 Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
   const Host = Host2.Host;
   const openSyncUnsafeResult = Host.openSyncUnsafe(arg0, arg1);
   if (typeof Database === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(Database.prototype);
     obj.raw = openSyncUnsafeResult;
     obj.name = openSyncUnsafeResult.name;
-    obj.lastState = tmp2(1993).DatabaseState.Open;
+    obj.lastState = TableId.DatabaseState.Open;
     obj.handle = openSyncUnsafeResult.handle;
-    const Runtime = tmp2(1996).Runtime;
+    const Runtime = Runtime2.Runtime;
     obj.databaseStateCallback = Runtime.addDatabaseStateCallback((arg0, lastState) => {
       if (obj.handle === arg0) {
         tmp.lastState = lastState;
@@ -56,7 +56,6 @@ Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = Database;
 };
 Database["delete"] = function delete(arg0) {
   const Host = Host2.Host;
@@ -84,11 +83,10 @@ prototype["disable"] = function disable(reason) {
   }
   return resolved;
 };
-prototype["execute"] = function execute(table, arg1) {
+prototype["execute"] = function execute(table, type) {
   const self = this;
   importDefault = table;
-  let type = arg1;
-  _require = arg1;
+  _require = type;
   if (null == this.raw) {
     const _Error = Error;
     const _HermesInternal2 = HermesInternal;
@@ -123,7 +121,7 @@ prototype["execute"] = function execute(table, arg1) {
       const _HermesInternal = HermesInternal;
       function callback() {
         const Runtime = Runtime2.Runtime;
-        let type = closure_0;
+        type = closure_0;
         if (closure_0 == null) {
           type = closure_1.type;
         }
@@ -189,7 +187,7 @@ prototype["instantaneousState"] = function instantaneousState() {
 };
 prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -213,23 +211,20 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
             c2 = 3;
             obj = { value, done: true };
             return obj;
+          } else if (null == self.raw) {
+            const Closed = self(c2[2]).DatabaseState.Closed;
+            c2 = 3;
           } else {
-            const obj5 = self;
-            if (null == self.raw) {
-              const Closed = obj5(c2[2]).DatabaseState.Closed;
-              c2 = 3;
-            } else {
-              c1 = 1;
-              c2 = 1;
-              const obj1 = { value: obj5.execute({ type: "db.state" }), done: false };
-              return obj1;
-            }
+            c1 = 1;
+            c2 = 1;
+            const obj1 = { value: self.execute({ type: "db.state" }), done: false };
+            return obj1;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          obj5.lastState = value;
+          self.lastState = value;
         }
         c2 = 3;
         obj = { value, done: true };

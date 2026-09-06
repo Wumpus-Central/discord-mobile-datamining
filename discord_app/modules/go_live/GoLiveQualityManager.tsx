@@ -87,11 +87,11 @@ prototype["request"] = function request(arg0, arr) {
     const pixelCounts = arg0;
     const item = arr.forEach((item) => {
       if (null == pixelCounts.pixelCounts) {
-        tmp.pixelCounts = {};
+        pixelCounts.pixelCounts = {};
       }
       if (pixelCounts[item] > 0) {
         const _Math = Math;
-        tmp.pixelCounts[item] = Math.floor(self.resolutionWidth * self.resolutionHeight * self.zoom * self.zoom);
+        pixelCounts.pixelCounts[item] = Math.floor(self.resolutionWidth * self.resolutionHeight * self.zoom * self.zoom);
       }
     });
     self.emit(obj.RequestedSSRCsUpdate, self.userId, self.audioSSRC, arr);

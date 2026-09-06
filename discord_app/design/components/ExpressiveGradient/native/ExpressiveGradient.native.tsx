@@ -69,11 +69,11 @@ export const ExpressiveGradient = function ExpressiveGradient(color) {
   }
   obj1 = { style: items1, children: null };
   items1[1] = tmp13;
-  obj2 = { style: tmp12.absoluteFillObject, colors: null, start, end, pointerEvents: "none" };
+  obj2 = { style: React4.absoluteFillObject, colors: null, start, end, pointerEvents: "none" };
   const items2 = [token, token1];
   obj2.colors = items2;
   const items3 = [hasOwnProperty(LinearGradientDefault, obj2), ];
-  obj3 = { style: tmp12.absoluteFillObject, colors: null, start: start2, end: end2, pointerEvents: "none" };
+  obj3 = { style: React4.absoluteFillObject, colors: null, start: start2, end: end2, pointerEvents: "none" };
   const items4 = [obj3.alpha(0).css(), token2];
   obj3.colors = items4;
   items3[1] = hasOwnProperty(LinearGradientDefault, obj3);

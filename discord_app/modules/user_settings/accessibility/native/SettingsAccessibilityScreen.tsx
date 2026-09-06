@@ -126,7 +126,6 @@ export default function SettingsAccessibilityScreen() {
         closure_0.push(constants.APPEARANCE);
       }
     };
-    const tmp6 = stateFromStores;
     const tmp9 = null != gifAutoPlayOverrideReason && getSettingsOverrideReasonDefault(gifAutoPlayOverrideReason);
     obj13.subLabel = null != animateEmojiOverrideReason && getSettingsOverrideReasonDefault(animateEmojiOverrideReason);
     items1[10] = obj13;
@@ -140,12 +139,12 @@ export default function SettingsAccessibilityScreen() {
     const items13 = [, ];
     ({ YOU_BAR_NAMEPLATE_ACCESSIBILITY: arr14[0], YOU_BAR_AVATAR_DECO_ACCESSSIBILITY: arr14[1] } = MobileUserSettings);
     obj15.settings = items13;
-    const intl12 = tmp(1114).intl;
+    const intl12 = util.intl;
     obj15.label = intl12.string(util.t.Loi61N);
-    const intl13 = tmp(1114).intl;
-    const t = tmp(1114).t;
+    const intl13 = util.intl;
+    const t = util.t;
     const obj16 = { sections: null };
-    obj15.subLabel = intl13.string(tmp6 ? t["SZC/D5"] : t.c7VVKU);
+    obj15.subLabel = intl13.string(stateFromStores ? t["SZC/D5"] : t.c7VVKU);
     items1[12] = obj15;
     obj16.sections = items1.filter((item) => null != item);
     return obj.createList(obj16);

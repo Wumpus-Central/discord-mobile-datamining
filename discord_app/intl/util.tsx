@@ -66,8 +66,8 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
   }
   const arr = require("module_1177");
 };
-export const useSyncMessages = function useSyncMessages(arg0, arg1) {
+export const useSyncMessages = function useSyncMessages(arg0, PlatformUtils) {
   closure_0 = arg0;
-  const currentLocale = arg1;
+  const currentLocale = PlatformUtils;
   const syncExternalStore = noop.useSyncExternalStore((arg0) => closure_0.onChange(arg0), () => closure_0.isLocaleLoaded(currentLocale.currentLocale));
 };

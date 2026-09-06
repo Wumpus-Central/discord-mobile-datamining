@@ -90,4 +90,5 @@ export default function useManageSubscriptionCardData(currentPeriodEnd) {
     obj.isTrial = currentPeriodEnd.hasActiveTrial;
     const obj8 = tmp9(tmp2[5])(currentPeriodEnd.createdAt);
   }
+  const obj5 = require("GuildRoleSubscriptionsHooks");
 };

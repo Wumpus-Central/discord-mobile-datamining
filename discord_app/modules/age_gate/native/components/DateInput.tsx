@@ -12,10 +12,10 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_gate/native/components/DateInput.tsx");
 
-export default noop.forwardRef((date, ref) => {
+export default noop.forwardRef((date, arg1) => {
   date = date.date;
   ({ onChangeDate: importDefault, label } = date);
-  ref = undefined;
+  let ref;
   function updateDate(arg0) {
     importDefault(arg0);
     const current = ref.current;
@@ -31,7 +31,7 @@ export default noop.forwardRef((date, ref) => {
       toDateResult = date.toDate();
     }
     if (toDateResult == null) {
-      const obj4 = tmp2(4153)();
+      const obj4 = _modDef4153();
       const result = obj4.set("year", obj4.year() - 10);
       toDateResult = obj4.toDate();
     }
@@ -43,10 +43,11 @@ export default noop.forwardRef((date, ref) => {
     const result2 = obj6.set("year", obj6.year() - 100);
     obj.minimumDate = obj6.toDate();
     obj.openLazy(asyncRequireImpl(9717, dependencyMap.paths), "DatePicker", obj);
+    const tmp4 = asyncRequireImpl(9717, dependencyMap.paths);
   }
   ({ style, error } = date);
   ref = ref.useRef(null);
-  const imperativeHandle = ref.useImperativeHandle(ref, () => ({
+  const imperativeHandle = ref.useImperativeHandle(arg1, () => ({
     focus() {
       openDatePicker();
     }
@@ -57,7 +58,7 @@ export default noop.forwardRef((date, ref) => {
   }
   let obj = require("module_4153")();
   let result = obj.set("year", obj.year() - 10);
-  const tmp4 = label;
+  let tmp4 = label;
   const tmp5 = require("module_4153");
   const formatResult1 = require("module_4153")(obj.toDate()).format("L");
   obj = { style, ref, value: null, placeholder: null, returnKeyType: "next", textContentType: "none", autoCapitalize: "none", clearButtonVisibility: null, editable: false, forceAccessibleContainer: true, accessibilityLabel: null, onPress: null, label: null, error: null };

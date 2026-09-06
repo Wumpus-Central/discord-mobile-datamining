@@ -1,10 +1,16 @@
 // === Module 13263: ChannelHeader ===
 
 // Module 13263 (ChannelHeader)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import ChatInputUtils from "ChatInputUtils" /* 4425 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11466 */;
 import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13264 */;
 import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13265 */;
 import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13266 */;
+import ForumChannelHeaderDefault from "ForumChannelHeader" /* 13273 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13275 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -57,7 +63,7 @@ export default function ChannelHeader(channelId) {
       if (isForumLikeChannelResult) {
         obj = { channelId, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, searchPlaceholder: null };
         let guild_id;
-        let tmp9Result = tmp9(13273);
+        let tmp9Result = ForumChannelHeaderDefault;
         if (stateFromStores != null) {
           guild_id = stateFromStores.guild_id;
         }
@@ -72,11 +78,11 @@ export default function ChannelHeader(channelId) {
           stringResult = intl.string(tmp(1114).t["L9fR+P"]);
         }
         obj.searchPlaceholder = stringResult;
-        tmp8Result = tmp8(tmp9Result, obj);
+        tmp8Result = <tmp9Result channelId={channelId} guildId={null} pressable={null} isGuildMemberCountVisible={null} isNavigationScreen={null} screenIndex={null} searchPlaceholder={null} />;
       } else {
         const obj1 = { channelId, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, showCreateThread: null };
         let guild_id1;
-        tmp9Result = tmp9(13275);
+        tmp9Result = GuildChannelHeaderDefault;
         if (stateFromStores != null) {
           guild_id1 = stateFromStores.guild_id;
         }
@@ -86,7 +92,7 @@ export default function ChannelHeader(channelId) {
         obj1.isNavigationScreen = isNavigationScreen;
         obj1.screenIndex = screenIndex;
         obj1.showCreateThread = flag2;
-        tmp8Result = tmp8(tmp9Result, obj1);
+        tmp8Result = <tmp9Result channelId={channelId} guildId={null} pressable={null} isGuildMemberCountVisible={null} isNavigationScreen={null} screenIndex={null} showCreateThread={null} />;
       }
     }
   }
@@ -95,19 +101,19 @@ export default function ChannelHeader(channelId) {
 export const navigateToChannelDetails = function navigateToChannelDetails(channelId, screenIndex, source) {
   let obj = PlatformUtils;
   if (obj.isIOS()) {
-    let tmpResult = tmp(4425);
+    let tmpResult = ChatInputUtils;
     const chatInputRef = tmpResult.getChatInputRef(channelId, screenIndex);
     if (chatInputRef != null) {
       chatInputRef.blur();
     }
   }
-  tmpResult = tmp(11466);
+  tmpResult = SwipeToMemberListUtils;
   if (tmpResult.isSwipeToMemberListEnabled()) {
-    const ComponentDispatch = tmp(1109).ComponentDispatch;
+    const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
     obj = { source, channelId, screenIndex };
     ComponentDispatch.dispatch(ComponentActions.SHOW_CHANNEL_DETAILS, obj);
   } else {
-    const rootNavigationRef = tmp(4418).getRootNavigationRef();
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     let isReadyResult;
     if (rootNavigationRef != null) {
       isReadyResult = rootNavigationRef.isReady();
@@ -116,6 +122,6 @@ export const navigateToChannelDetails = function navigateToChannelDetails(channe
       obj = { channelId, source };
       rootNavigationRef.navigate("sidebar", obj);
     }
-    const tmpResult1 = tmp(4418);
+    const tmpResult1 = RootNavigationRef;
   }
 };

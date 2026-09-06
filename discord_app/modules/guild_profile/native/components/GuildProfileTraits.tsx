@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import EmojiDefault from "Emoji" /* 7130 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,9 +20,8 @@ function TraitEmoji(emoji) {
       ({ id: obj2.id, animated: obj2.animated } = emoji);
       emojiURL = obj.getEmojiURL(obj);
     }
-    const tmp5 = importDefault;
     obj = { src: emojiURL, name: EmojiUtilsDefault.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates, fastImageStyle: tmp.emojiImage };
-    return hasOwnProperty(tmp5(7130), obj);
+    return hasOwnProperty(EmojiDefault, obj);
   }
 }
 function GuildProfileTraitView(trait) {

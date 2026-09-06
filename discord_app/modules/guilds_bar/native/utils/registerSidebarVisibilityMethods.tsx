@@ -19,9 +19,9 @@ export const registerGuildVisibilityMethod = function registerGuildVisibilityMet
       if (null == current) {
         return [];
       } else {
-        const items = obj.getItems();
-        const scrollPosition = obj.getScrollPosition();
-        const containerSize = obj.containerSize;
+        const items = current.getItems();
+        const scrollPosition = current.getScrollPosition();
+        const containerSize = current.containerSize;
         const guilds = GuildStore.getGuilds();
         const node = SortedGuildStore.getGuildsTree();
         const _Set = Set;

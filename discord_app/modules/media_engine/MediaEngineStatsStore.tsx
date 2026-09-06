@@ -8,7 +8,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4599 */;
 
 require = fn;
-function updateAveragedStatsHelper(minVersion, arg1, arg2, arr, arr2) {
+function updateAveragedStatsHelper(minVersion, arr, arg2, arr, arr2) {
   let tmp = arg2;
   const found = arr.find((type) => "video" === type.type);
   if (null == arg2) {
@@ -71,7 +71,7 @@ function updateAveragedStatsHelper(minVersion, arg1, arg2, arr, arr2) {
       found1 = arr2.find((type) => "video" === type.type);
     }
     if (null != found1) {
-      if (arg1 >= tmp.minVersion) {
+      if (arr >= tmp.minVersion) {
         tmp.numDatapoints = tmp.numDatapoints - 1;
         if ("packetsSent" in found1) {
           let num11 = found1.packetsSent;
@@ -152,23 +152,21 @@ function updateAveragedStats(arg0, arg1, version, version2) {
   arg0[arg1][id] = updateAveragedStatsHelper(version.version, num, arg0[arg1][id], version.stats.rtp.outbound, outbound);
   const keys = Object.keys(version.stats.rtp.inbound);
   for (const item10043 of keys) {
-    let tmp5 = item10043;
     version = arg2.version;
     let num2;
-    let tmp6 = updateAveragedStatsHelper;
     if (arg3 != null) {
       num2 = arg3.version;
     }
     if (num2 == null) {
       num2 = 0;
     }
-    let tmp8 = arg0[arg1][tmp5];
-    let tmp9 = arg2.stats.rtp.inbound[tmp5];
+    let tmp8 = arg0[arg1][item10043];
+    let tmp9 = arg2.stats.rtp.inbound[item10043];
     let tmp10;
     if (arg3 != null) {
-      tmp10 = arg3.stats.rtp.inbound[tmp5];
+      tmp10 = arg3.stats.rtp.inbound[item10043];
     }
-    arg0[arg1][item10043] = tmp6(version, num2, tmp8, tmp9, tmp10);
+    arg0[arg1][item10043] = updateAveragedStatsHelper(version, num2, tmp8, tmp9, tmp10);
     continue;
   }
 }
@@ -261,24 +259,21 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(DispatcherDefault, {
       let tmp3 = prop;
       if (0 !== prop.length) {
         {}[tmp3] = tmp2;
-        let tmp28 = closure_4;
-        if (!(tmp3 in closure_4)) {
-          tmp28[tmp3] = [];
+        if (!(tmp3 in dependencyMap)) {
+          dependencyMap[tmp3] = [];
         }
-        let arr2 = tmp28[tmp3];
+        let arr2 = dependencyMap[tmp3];
         arr2.push(tmp2);
         let arr;
-        if (tmp28[tmp3].length > 30) {
-          let arr3 = tmp28[tmp3];
+        if (dependencyMap[tmp3].length > 30) {
+          let arr3 = dependencyMap[tmp3];
           arr = arr3.shift();
         }
-        let tmp10 = updateAveragedStats;
-        let tmp11 = closure_6;
         let tmp12 = prop;
         let tmp13 = nextResult;
         let tmp15 = getStatsHistoryAtIndex(tmp3, 15);
-        tmp10(tmp11, tmp12, tmp13, tmp15);
-        let tmp10Result = tmp10(closure_5, tmp3, tmp2, arr);
+        updateAveragedStats(closure_6, tmp12, tmp13, tmp15);
+        let tmp10Result = updateAveragedStats(closure_5, tmp3, tmp2, arr);
       }
       continue;
     }

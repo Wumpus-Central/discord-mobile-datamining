@@ -1,6 +1,7 @@
 // === Module 12049: ActivitiesBanner ===
 
 // Module 12049 (ActivitiesBanner)
+import util from "util" /* 1114 */;
 import useActivityApplications from "useActivityApplications" /* 12038 */;
 import BannerBaseDefault from "BannerBase" /* 12061 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -19,9 +20,9 @@ export default function ActivitiesBanner(context) {
     tmp6Result = null;
     if (null != tmp5) {
       obj = { image: tmp8, text: null };
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       const obj1 = { activityName: tmp4.name };
-      obj.text = intl.formatToPlainString(tmp(1114).t.zHMWuV, obj1);
+      obj.text = intl.formatToPlainString(util.t.zHMWuV, obj1);
       tmp6Result = jsx(BannerBaseDefault, { image: tmp8, text: null });
       const tmp7Result = BannerBaseDefault;
     }

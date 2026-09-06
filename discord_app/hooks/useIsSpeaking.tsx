@@ -48,7 +48,7 @@ export default function useIsSpeaking(checkSoundboardSounds) {
     }
     flag2 = mute;
   }
-  let tmpResult = tmp(tmp2[4]);
+  let tmpResult = require("initialize");
   const items1 = [flag2];
   let stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
     let isSpeakingResult = SpeakingStore.isSpeaking(require, context);
@@ -57,7 +57,7 @@ export default function useIsSpeaking(checkSoundboardSounds) {
     }
     return isSpeakingResult;
   });
-  tmpResult = tmp(tmp2[4]);
+  tmpResult = require("initialize");
   const items2 = [flag2];
   const stateFromStores2 = tmpResult.useStateFromStores(items2, () => SpeakingStore.isSoundSharing(require) && checkSoundSharing);
   const obj = require("initialize");

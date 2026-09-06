@@ -2,7 +2,9 @@
 
 // Module 10984 (SearchableDestinationList)
 import nativeDefault from "native" /* 576 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
 import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7038 */;
+import UserSearchUtils from "UserSearchUtils" /* 7661 */;
 import sortByMatchScore from "sortByMatchScore" /* 9835 */;
 import formatResults from "formatResults" /* 10981 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10993 */;
@@ -185,8 +187,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   const callback5 = obj.useCallback((arg0, arg1) => {
     ({ type, record } = results[arg1]);
     if (type !== sortByMatchScore.AutocompleterResultTypes.HEADER) {
-      tmp2(10981);
-      const tmp2Result = tmp2(10981);
+      const tmp2Result = formatResults;
       const destinationKeyResult = tmp2Result.destinationKey(tmp2Result.getDestinationIdFromResult(tmp));
       let tmp6;
       if (getRowIsUnavailable != null) {
@@ -224,23 +225,23 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
       }
       obj.subLabelLineClamp = tmp14;
       obj.start = 0 === arg1;
-      obj.end = arg1 === arr.length - 1;
+      obj.end = arg1 === results.length - 1;
       let tmp16;
       if (disableLongPress) {
         obj = { onLongPress: NOOP };
         tmp16 = obj;
       }
       const merged = Object.assign(tmp16);
-      if (tmp2(9835).AutocompleterResultTypes.USER === type) {
+      if (sortByMatchScore.AutocompleterResultTypes.USER === type) {
         const element = { type: "user", props: null };
         const obj1 = {};
         const merged1 = Object.assign(obj);
         obj1.user = record;
-        obj1.type = tmp2(7661).getRelationshipType(record.id);
+        obj1.type = UserSearchUtils.getRelationshipType(record.id);
         obj1.onPress = callback3;
         element.props = obj1;
         return element;
-      } else if (tmp2(9835).AutocompleterResultTypes.GROUP_DM === type) {
+      } else if (sortByMatchScore.AutocompleterResultTypes.GROUP_DM === type) {
         const element1 = { type: "gdm", props: null };
         const obj2 = {};
         const merged2 = Object.assign(obj);
@@ -249,9 +250,9 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
         element1.props = obj2;
         return element1;
       } else {
-        if (tmp2(9835).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-          if (tmp2(9835).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-            return tmp2(1369).assertNever(type);
+        if (sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+          if (sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+            return GlobalUtils.assertNever(type);
           }
         }
         const element2 = { type: "channel", props: null };
@@ -263,7 +264,6 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
         return element2;
       }
     }
-    arr = results;
   }, items8);
   ref1 = obj.useRef(null);
   const tmp27 = getRowIsUnavailable(onSelectedDestinationChange[14])();

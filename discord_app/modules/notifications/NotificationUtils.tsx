@@ -64,7 +64,7 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
     }
     let hasFlagResult = FlagUtilsAll.hasFlag(num, constants.UNREADS_ALL_MESSAGES);
     if (!hasFlagResult) {
-      let num2 = tmp[item].flags;
+      let num2 = dependencyMap[item].flags;
       if (num2 == null) {
         num2 = 0;
       }
@@ -88,7 +88,7 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
       const ignoreMute = tmp6.ignoreMute;
       let isMuted = !ignoreMute;
       if (!ignoreMute) {
-        isMuted = MuteTimers.computeIsMuted(tmp[item]);
+        isMuted = MuteTimers.computeIsMuted(dependencyMap[item]);
       }
       tmp7 = isMuted;
     }

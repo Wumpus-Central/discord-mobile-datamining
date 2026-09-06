@@ -6,6 +6,8 @@ import ToastUtils from "ToastUtils" /* 4258 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
 import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7764 */;
+import StarIcon from "StarIcon" /* 10235 */;
+import StarOutlineIcon2 from "StarOutlineIcon" /* 10241 */;
 import EmojiActionCreators from "EmojiActionCreators" /* 10336 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -90,16 +92,16 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     const obj = {};
     const merged = Object.assign(starIcon.starIcon);
     if (arg0) {
-      const merged1 = Object.assign(tmp.starIconSelected);
+      const merged1 = Object.assign(starIcon.starIconSelected);
       let style = obj;
     } else {
-      const merged2 = Object.assign(tmp.starIconUnselected);
+      const merged2 = Object.assign(starIcon.starIconUnselected);
       style = obj;
     }
     if (arg0) {
-      let StarOutlineIcon = tmp9(10235).StarIcon;
+      let StarOutlineIcon = StarIcon.StarIcon;
     } else {
-      StarOutlineIcon = tmp9(10241).StarOutlineIcon;
+      StarOutlineIcon = StarOutlineIcon2.StarOutlineIcon;
     }
     return React7(StarOutlineIcon, { style });
   }, items4);
@@ -123,7 +125,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       }
       const obj5 = EmojiActionCreators;
       if (isFavoriteEmoji) {
-        obj5.unfavoriteEmoji(tmp2);
+        obj5.unfavoriteEmoji(stateFromStores1);
         let obj = {
           key: "EMOJI_UNFAVORITED",
           icon() {
@@ -133,7 +135,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
         };
         ToastActionCreatorsDefault.open(obj);
       } else {
-        obj5.favoriteEmoji(tmp2);
+        obj5.favoriteEmoji(stateFromStores1);
         obj = {
           key: "EMOJI_FAVORITED",
           icon() {
@@ -200,7 +202,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       const intl2 = tmp3(tmp4[17]).intl;
       obj4.label = intl2.string(tmp3(tmp4[17]).t.Ap2oVy);
       obj4.onPress = callback3;
-      tmp21Result = tmp21(tmp3(tmp4[26]).TableRow, obj4);
+      tmp21Result = closure_9(tmp3(tmp4[26]).TableRow, obj4);
     }
     items12[1] = tmp21Result;
     if (tidaWebformEnabled) {
@@ -217,7 +219,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       const intl3 = tmp3(tmp4[17]).intl;
       obj5.label = intl3.string(tmp3(tmp4[17]).t.cIoudn);
       obj5.onPress = callback4;
-      tidaWebformEnabled = tmp21(tmp3(tmp4[26]).TableRow, obj5);
+      tidaWebformEnabled = closure_9(tmp3(tmp4[26]).TableRow, obj5);
     }
     items12[2] = tidaWebformEnabled;
     if (canRemoveReactions) {
@@ -225,17 +227,17 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       const obj7 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
       const intl4 = tmp3(tmp4[17]).intl;
       obj7.children = intl4.string(tmp3(tmp4[17]).t["zx/e4P"]);
-      obj6.label = tmp21(tmp3(tmp4[16]).Text, obj7);
+      obj6.label = closure_9(tmp3(tmp4[16]).Text, obj7);
       obj6.onPress = callback5;
-      canRemoveReactions = tmp21(tmp3(tmp4[26]).TableRow, obj6);
+      canRemoveReactions = closure_9(tmp3(tmp4[26]).TableRow, obj6);
     }
     const obj8 = { children: null };
     const obj9 = { hasIcons: false, children: null };
     items12[3] = canRemoveReactions;
     obj9.children = items12;
-    items11[1] = tmp19(tmp3(tmp4[25]).TableRowGroup, obj9);
+    items11[1] = closure_10(tmp3(tmp4[25]).TableRowGroup, obj9);
     obj8.children = items11;
-    return tmp19(tmp3(tmp4[23]).ActionSheet, obj8);
+    return closure_10(tmp3(tmp4[23]).ActionSheet, obj8);
   } else {
     let intl = tmp3(tmp4[17]).intl;
     let string = intl.string;
@@ -246,6 +248,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       stringResult = string(t.nNsr67);
     }
     t = { label: stringResult, onPress: callback2 };
-    tmp21Result = tmp21(tmp3(tmp4[26]).TableRow, t);
+    tmp21Result = closure_9(tmp3(tmp4[26]).TableRow, t);
   }
+  const tmp12 = reaction.burst_count > 0 ? reaction.burst_count : reaction.count;
 };

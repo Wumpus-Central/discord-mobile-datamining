@@ -12,7 +12,7 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
   c4 = 0;
   c5 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -50,7 +50,7 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              let obj1 = { value: getCachedOrFetchActivityApplicationForLaunchDefault(tmp26.targetApplicationId, tmp26.channelId), done: false };
+              let obj1 = { value: getCachedOrFetchActivityApplicationForLaunchDefault(targetApplicationId.targetApplicationId, targetApplicationId.channelId), done: false };
               return obj1;
             }
           }
@@ -105,7 +105,7 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
     }
   })();
 };
-let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg0, value) {
+let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

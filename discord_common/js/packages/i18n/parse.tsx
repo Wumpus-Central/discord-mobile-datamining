@@ -77,12 +77,11 @@ prototype["getContext"] = function getContext(arg0) {
       [tmp10, tmp12] = tmp9;
       let message = this.message;
       let _HermesInternal = HermesInternal;
-      let tmp11 = tmp10;
       if (message.includes("!!{" + tmp10 + "}!!")) {
         let sum = num + 1;
         num = sum;
         obj[sum] = tmp12;
-        arg0[tmp11] = sum;
+        arg0[tmp10] = sum;
       }
       continue;
     }
@@ -135,7 +134,7 @@ export const getMessage = function getMessage(str, arg1) {
       closure_0 = _modDef4257.parserFor(markdownRules.rules);
       f119279 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
     }
-    const str2 = str.replace(/^\n+|\n+$/g, "");
+    const str2 = "".replace(/^\n+|\n+$/g, "");
     const isMatch = regex.test(str2);
     const isMatch1 = regex2.test(str2);
     if (isMatch) {

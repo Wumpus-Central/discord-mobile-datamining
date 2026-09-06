@@ -9,6 +9,7 @@ import Stack_Stack from "Stack/Stack" /* 4973 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import native from "native" /* 5692 */;
 import FavoritesHooks from "FavoritesHooks" /* 10224 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 12753 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,15 +49,15 @@ export default function FavoritesEmptyState() {
   items[1] = timestampProducer(Stack_Stack.Stack, obj);
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
-    const intl4 = tmp2(1114).intl;
-    obj3.text = intl4.string(tmp9(3225)["6kk0gM"]);
-    obj3.icon = tmp8(tmp2(12753).PlusMediumIcon, {});
+    const intl4 = util.intl;
+    obj3.text = intl4.string(_modDef3225["6kk0gM"]);
+    obj3.icon = hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {});
     obj3.onPress = callback;
     let obj4 = obj3;
   } else {
     obj4 = { variant: "primary", text: null, onPress: null };
-    const intl3 = tmp2(1114).intl;
-    obj4.text = intl3.string(tmp9(3225).yYVbdv);
+    const intl3 = util.intl;
+    obj4.text = intl3.string(_modDef3225.yYVbdv);
     obj4.onPress = callback1;
   }
   items[2] = hasOwnProperty(components_Button_Button.Button, obj4);

@@ -67,7 +67,7 @@ let closure_13 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   obj.leftAlign = { justifyContent: "flex-start" };
   const obj1 = { paddingVertical: gap.margin + nativeDefault.space.PX_12 };
   obj.uploadContainer = { marginHorizontal: gap.margin, marginBottom: gap.margin, alignItems: "center", justifyContent: "center", minHeight: nativeDefault.space.PX_48, width: "100%", borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_4, flexDirection: "row" };
-  const size2 = { alignItems: "center", justifyContent: "center", borderRadius: tmp3(576).radii.md, height: 28, width: 40 };
+  const size2 = { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.md, height: 28, width: 40 };
   obj.buttonIcon = size2;
   return obj;
 });
@@ -91,14 +91,14 @@ export default function GravityCustomStatusEntryRow(id) {
     backgroundColor = gradientBottom.backgroundColor;
   }
   if (backgroundColor == null) {
-    backgroundColor = userId(tmp3[6]).colors.CARD_BACKGROUND_DEFAULT;
+    backgroundColor = userId(renderForScreenshot[6]).colors.CARD_BACKGROUND_DEFAULT;
   }
   const tmp5Result = closure_12(backgroundColor);
   closure_5 = tmp5Result;
-  let tmp2Result = tmp2(tmp3[14]);
+  let tmp2Result = tmp2(renderForScreenshot[14]);
   const hexWithOpacityResult = tmp2Result.hexWithOpacity(tmp5Result.background.backgroundColor, 0.6);
   c6 = hexWithOpacityResult;
-  tmp2Result = tmp2(tmp3[15]);
+  tmp2Result = tmp2(renderForScreenshot[15]);
   let items = [c6];
   let str;
   const stateFromStores = tmp2Result.useStateFromStores(items, () => UserStore.getUser(userId));
@@ -126,14 +126,13 @@ export default function GravityCustomStatusEntryRow(id) {
   const tmp2Result1 = id(renderForScreenshot[17]);
   const gameMentionsAsPlainText = id(renderForScreenshot[18]).useGameMentionsAsPlainText(customStatusExtra.status);
   if (null != obj.id) {
-    let tmp14Result = tmp14(tmp3[19]);
+    let tmp14Result = tmp14(renderForScreenshot[19]);
     let num3 = 40;
     if (tmp2Result3.isAndroid()) {
       num3 = 36;
     }
     obj = { lineHeight: num3, fontSize: 36, marginTop: null };
-    const tmp20 = closure_8;
-    tmp2Result3 = tmp2(tmp3[20]);
+    tmp2Result3 = tmp2(renderForScreenshot[20]);
     let num4 = 4;
     if (tmp2Result4.isAndroid()) {
       num4 = 0;
@@ -147,8 +146,8 @@ export default function GravityCustomStatusEntryRow(id) {
     }
     obj1.animate = flag;
     obj1.emoji = obj;
-    let tmp20Result = tmp20(tmp14Result, obj1);
-    tmp2Result4 = tmp2(tmp3[20]);
+    let tmp20Result = closure_8(tmp14Result, obj1);
+    tmp2Result4 = tmp2(renderForScreenshot[20]);
   } else {
     tmp20Result = null;
   }
@@ -184,8 +183,8 @@ export default function GravityCustomStatusEntryRow(id) {
   } else {
     let tmp27 = "otherUserStatus" === variant.kind;
     if (tmp27) {
-      tmp14Result = tmp14(tmp3[26]);
-      tmp27 = tmp14Result.age(id) < 30 * tmp14(tmp3[27]).Millis.MINUTE;
+      tmp14Result = tmp14(renderForScreenshot[26]);
+      tmp27 = tmp14Result.age(id) < 30 * tmp14(renderForScreenshot[27]).Millis.MINUTE;
       const ageResult = tmp14Result.age(id);
     }
     const element = { contentId: id, userId, type: "hotwheels_custom_status", renderForScreenshot, title: null, subtitle: null, highlight: null, children: null };
@@ -196,30 +195,30 @@ export default function GravityCustomStatusEntryRow(id) {
       tmp32 = obj3;
     }
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp32, children: null };
-    const tmp14Result1 = tmp14(tmp3[28]);
-    obj4.children = tmp14(tmp3[29]).getName(stateFromStores1);
-    const items6 = [closure_8(tmp2(tmp3[11]).Text, obj4), ];
+    const tmp14Result1 = tmp14(renderForScreenshot[28]);
+    obj4.children = tmp14(renderForScreenshot[29]).getName(stateFromStores1);
+    const items6 = [closure_8(tmp2(renderForScreenshot[11]).Text, obj4), ];
     const obj5 = { style: tmp.timestamp, children: null };
     let tmp31Result = hasStatus;
     if (hasStatus) {
       const obj6 = { lineClamp: 1, variant: "text-sm/normal", color: "text-muted", children: null };
-      const tmp2Result7 = tmp2(tmp3[30]);
-      obj6.children = tmp2Result7.getRelativeTimestamp(tmp14(tmp3[26]).extractTimestamp(id));
-      tmp31Result = tmp31(tmp2(tmp3[11]).Text, obj6);
-      const tmp14Result3 = tmp14(tmp3[26]);
+      const tmp2Result7 = tmp2(renderForScreenshot[30]);
+      obj6.children = tmp2Result7.getRelativeTimestamp(tmp14(renderForScreenshot[26]).extractTimestamp(id));
+      tmp31Result = closure_8(tmp2(renderForScreenshot[11]).Text, obj6);
+      const tmp14Result3 = tmp14(renderForScreenshot[26]);
     }
     const items7 = [tmp31Result, , ];
     tmp31Result = null;
     if (tmp27) {
-      tmp31Result = tmp31(tmp14(tmp3[31]), {});
+      tmp31Result = closure_8(tmp14(renderForScreenshot[31]), {});
     }
     items7[1] = tmp31Result;
     let tmp31Result1 = null;
     if (tmp27) {
       const obj7 = { lineClamp: 1, variant: "text-sm/medium", color: "text-brand", children: null };
-      const intl = tmp2(tmp3[12]).intl;
-      obj7.children = intl.string(tmp2(tmp3[12]).t.tWnHcL);
-      tmp31Result1 = tmp31(tmp2(tmp3[11]).Text, obj7);
+      const intl = tmp2(renderForScreenshot[12]).intl;
+      obj7.children = intl.string(tmp2(renderForScreenshot[12]).t.tWnHcL);
+      tmp31Result1 = closure_8(tmp2(renderForScreenshot[11]).Text, obj7);
     }
     items7[2] = tmp31Result1;
     obj5.children = items7;
@@ -229,9 +228,9 @@ export default function GravityCustomStatusEntryRow(id) {
     let tmp31Result2 = null;
     if ("otherUserStatus" === variant.kind) {
       const obj8 = { variant: "text-sm/normal", lineClamp: 1, color: "text-default", children: null };
-      const intl2 = tmp2(tmp3[12]).intl;
-      obj8.children = intl2.string(tmp2(tmp3[12]).t.fxOLPR);
-      tmp31Result2 = tmp31(tmp2(tmp3[11]).Text, obj8);
+      const intl2 = tmp2(renderForScreenshot[12]).intl;
+      obj8.children = intl2.string(tmp2(renderForScreenshot[12]).t.fxOLPR);
+      tmp31Result2 = closure_8(tmp2(renderForScreenshot[11]).Text, obj8);
     }
     element.subtitle = tmp31Result2;
     element.highlight = stateFromStores2;
@@ -239,25 +238,25 @@ export default function GravityCustomStatusEntryRow(id) {
     const obj10 = { style: null };
     const items8 = [tmp.middleBubble, tmp5Result.background];
     obj10.style = items8;
-    const tmp14Result2 = tmp14(tmp3[29]);
+    const tmp14Result2 = tmp14(renderForScreenshot[29]);
     const items9 = [closure_8(closure_5, obj10), ];
     const obj11 = { style: null };
     const items10 = [tmp.bottomBubble, tmp5Result.background];
     obj11.style = items10;
     items9[1] = closure_8(closure_5, obj11);
     obj9.children = items9;
-    const items11 = [closure_9(tmp14(tmp3[32]), obj9), ];
+    const items11 = [closure_9(tmp14(renderForScreenshot[32]), obj9), ];
     const obj12 = { style: tmp.cardContainer, children: null };
-    const tmp14Result4 = tmp14(tmp3[32]);
+    const tmp14Result4 = tmp14(renderForScreenshot[32]);
     if (renderForScreenshot) {
       let items12 = [];
     } else {
-      size = { shape: tmp2(tmp3[32]).CutoutShape.RoundedRect, x: null, y: null, width: 46, height: 34, cornerRadius: null };
-      size.x = size.width - tmp14(tmp3[6]).space.PX_16 - 40 - 3;
+      size = { shape: tmp2(renderForScreenshot[32]).CutoutShape.RoundedRect, x: null, y: null, width: 46, height: 34, cornerRadius: null };
+      size.x = size.width - tmp14(renderForScreenshot[6]).space.PX_16 - 40 - 3;
       size.y = size.height - 14 - 3;
-      size.cornerRadius = tmp14(tmp3[6]).radii.md + 3;
+      size.cornerRadius = tmp14(renderForScreenshot[6]).radii.md + 3;
       items12 = [size, ];
-      const size1 = { shape: tmp2(tmp3[32]).CutoutShape.RoundedRect, x: size.width - tmp14(tmp3[6]).space.PX_16 - 86 - PX_8, y: size.height - 14 - 3, width: 46, height: 34, cornerRadius: tmp14(tmp3[6]).radii.md + 3 };
+      const size1 = { shape: tmp2(renderForScreenshot[32]).CutoutShape.RoundedRect, x: size.width - tmp14(renderForScreenshot[6]).space.PX_16 - 86 - PX_8, y: size.height - 14 - 3, width: 46, height: 34, cornerRadius: tmp14(renderForScreenshot[6]).radii.md + 3 };
       items12[1] = size1;
     }
     const obj13 = { cutouts: items12, children: null };
@@ -284,27 +283,27 @@ export default function GravityCustomStatusEntryRow(id) {
     const items15 = [tmp20Result, , ];
     if (tmp31Result3) {
       const obj16 = { style: tmp.emojiText, variant: "text-md/normal", children: gameMentionsAsPlainText };
-      tmp31Result3 = tmp31(tmp2(tmp3[11]).Text, obj16);
+      tmp31Result3 = closure_8(tmp2(renderForScreenshot[11]).Text, obj16);
     }
     items15[1] = tmp31Result3;
     let tmp31Result4 = !hasStatus;
     if (!hasStatus) {
       const obj17 = { variant: "text-md/normal", children: null };
-      const intl3 = tmp2(tmp3[12]).intl;
-      obj17.children = intl3.string(tmp2(tmp3[12]).t["6ojWO0"]);
-      tmp31Result4 = tmp31(tmp2(tmp3[11]).Text, obj17);
+      const intl3 = tmp2(renderForScreenshot[12]).intl;
+      obj17.children = intl3.string(tmp2(renderForScreenshot[12]).t["6ojWO0"]);
+      tmp31Result4 = closure_8(tmp2(renderForScreenshot[11]).Text, obj17);
     }
     items15[2] = tmp31Result4;
     obj15.children = items15;
     const items16 = [closure_9(closure_5, obj15), ];
     let tmp31Result5 = !hasStatus;
     if (!hasStatus) {
-      tmp31Result5 = tmp31(UploadPlaceholder, {});
+      tmp31Result5 = closure_8(UploadPlaceholder, {});
     }
     items16[1] = tmp31Result5;
     obj14.children = items16;
-    obj13.children = closure_9(tmp2(tmp3[21]).PressableHighlight, obj14);
-    const items17 = [closure_8(tmp14(tmp3[32]), obj13), tmp25];
+    obj13.children = closure_9(tmp2(renderForScreenshot[21]).PressableHighlight, obj14);
+    const items17 = [closure_8(tmp14(renderForScreenshot[32]), obj13), tmp25];
     obj12.children = items17;
     items11[1] = closure_9(closure_5, obj12);
     element.children = items11;

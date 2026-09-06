@@ -30,7 +30,7 @@ function fetchOnboardingPrompts(guildId) {
     return arg0;
   });
 }
-let closure_14 = async function _maybeFetchOnboardingPrompts(arg0, value) {
+let closure_14 = async function _maybeFetchOnboardingPrompts(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -70,19 +70,19 @@ let closure_14 = async function _maybeFetchOnboardingPrompts(arg0, value) {
           num2 = flags;
           const hasFlagResult = require("FlagUtils").hasFlag(num2, constants2.COMPLETED_ONBOARDING);
           closure_130_1 = hasFlagResult;
-          guild = guild.getGuild(tmp48);
+          guild = guild.getGuild(closure_0);
           if (null != guild) {
             const features = guild.features;
             if (features.has(constants.GUILD_ONBOARDING)) {
-              const onboardingPrompts = GuildOnboardingPromptsStore.getOnboardingPrompts(tmp48);
+              const onboardingPrompts = GuildOnboardingPromptsStore.getOnboardingPrompts(closure_0);
               if (!shouldFetchPromptsResult) {
                 if (onboardingPrompts.length > num2) {
                   if (onboardingPrompts.every((inOnboarding) => !inOnboarding.inOnboarding)) {
-                    _trackOnboardingDirectJoin(tmp48);
+                    _trackOnboardingDirectJoin(closure_0);
                     const resolved = Promise.resolve();
                   } else {
                     if (!hasFlagResult) {
-                      startOnboarding(tmp48);
+                      startOnboarding(closure_0);
                     }
                     const resolved1 = Promise.resolve();
                   }
@@ -91,7 +91,7 @@ let closure_14 = async function _maybeFetchOnboardingPrompts(arg0, value) {
               }
               c4 = 1;
               c5 = 1;
-              const obj1 = { value: fetchOnboardingPrompts(tmp48), done: false };
+              const obj1 = { value: fetchOnboardingPrompts(closure_0), done: false };
               return obj1;
             }
           }

@@ -20,7 +20,7 @@ function renderTooltipItem(arg0, arg1) {
   if (null != arg0) {
     obj = {};
     const merged = Object.assign(arg0);
-    tmpResult = tmp(Tooltip.Tooltip, obj);
+    tmpResult = jsx(Tooltip.Tooltip, {});
   }
   obj.children = tmpResult;
   return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "box-none", children: null });

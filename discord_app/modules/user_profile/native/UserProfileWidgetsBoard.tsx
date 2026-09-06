@@ -11,6 +11,7 @@ import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard"
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8675 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
 import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8920 */;
+import QuoteIcon from "QuoteIcon" /* 8921 */;
 import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 8923 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,10 +25,10 @@ function WidgetRenderer(arg0) {
     let tmp3Result = closure_1_10(UserProfileApplicationWidgetCardDefault, obj);
   } else if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
     obj = { userId, widget, cardStyle };
-    tmp3Result = tmp3(UserProfilePersonalWidgetCardDefault, obj);
+    tmp3Result = closure_1_10(UserProfilePersonalWidgetCardDefault, obj);
   } else {
     obj = { userId, widget, cardStyle };
-    tmp3Result = tmp3(memoResult, obj);
+    tmp3Result = closure_1_10(memoResult, obj);
   }
   return tmp3Result;
 }
@@ -198,11 +199,11 @@ let closure_17 = noop.memo((game) => {
   if (!isNullOrEmptyResult) {
     const obj4 = { style: tmp.comment, children: null };
     const obj5 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    const items3 = [tmp10(tmp6(8921).QuoteIcon, obj5), ];
+    const items3 = [closure_1_10(QuoteIcon.QuoteIcon, obj5), ];
     const obj6 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: tmp.commentText, children: game.comment };
-    items3[1] = tmp10(tmp6(4556).Text, obj6);
+    items3[1] = closure_1_10(Text_Text.Text, obj6);
     obj4.children = items3;
-    tmp8Result = tmp8(tmp9, obj4);
+    tmp8Result = closure_1_11(React5, obj4);
   }
   items2[1] = tmp8Result;
   items2[2] = closure_1_10(closure_16, { tags: game.tags });
@@ -343,7 +344,7 @@ const memoResult = noop.memo((style) => {
       const obj1 = { children: null };
       items2[1] = tmp23;
       obj1.children = items2;
-      tmp13Result = tmp24(tmp25, obj1);
+      tmp13Result = closure_11(closure_12, obj1);
     } else {
       const obj2 = {
         style: tmp.viewMore,
@@ -362,11 +363,9 @@ const memoResult = noop.memo((style) => {
         stringResult = intl2.formatToPlainString(tmp2(tmp3[19]).t.zr0Y5R, obj3);
       }
       const obj4 = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
-      obj2.children = tmp26(tmp2(tmp3[12]).Text, obj4);
-      tmp26(closure_6, obj2);
+      obj2.children = closure_10(tmp2(tmp3[12]).Text, obj4);
+      closure_10(closure_6, obj2);
     }
-    tmp24 = closure_11;
-    tmp25 = closure_12;
   } else {
     if (tmp2(tmp3[18]).WidgetType.WANT_TO_PLAY_GAMES !== type) {
       if (tmp2(tmp3[18]).WidgetType.PLAYED_GAMES !== type) {
@@ -388,7 +387,7 @@ const memoResult = noop.memo((style) => {
       const obj6 = { children: null };
       items3[1] = tmp12;
       obj6.children = items3;
-      tmp13Result = tmp13(tmp14, obj6);
+      tmp13Result = closure_11(closure_12, obj6);
     } else {
       const obj7 = {
         style: tmp.viewMore,
@@ -407,11 +406,9 @@ const memoResult = noop.memo((style) => {
         stringResult1 = intl.formatToPlainString(tmp2(tmp3[19]).t.zr0Y5R, obj8);
       }
       const obj9 = { variant: "text-sm/medium", color: "text-muted", children: stringResult1 };
-      obj7.children = tmp15(tmp2(tmp3[12]).Text, obj9);
-      tmp15(closure_6, obj7);
+      obj7.children = closure_10(tmp2(tmp3[12]).Text, obj9);
+      closure_10(closure_6, obj7);
     }
-    tmp13 = closure_11;
-    tmp14 = closure_12;
   }
   const obj10 = { style: style.cardStyle, title: null, trailingAction: null, children: null };
   const tmp7 = _slicedToArray(noop.useState(0), 2);
@@ -423,7 +420,7 @@ const memoResult = noop.memo((style) => {
   }
   if (tmp36Result) {
     const obj11 = { userId, widget };
-    tmp36Result = tmp36(tmp9(tmp3[22]), obj11);
+    tmp36Result = closure_10(tmp9(tmp3[22]), obj11);
   }
   obj10.trailingAction = tmp36Result;
   obj10.children = closure_10(closure_7, {

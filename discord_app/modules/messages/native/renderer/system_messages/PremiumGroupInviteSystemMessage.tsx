@@ -2,13 +2,13 @@
 
 // Module 8046 (PremiumGroupInviteSystemMessage)
 import nativeDefault from "native" /* 576 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7946 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
 import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 8047 */;
 import _modDef8051 from "module_8051" /* 8051 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
-const renderer_EmbedUtils = tmp3(7946);
 require = fn;
 fn(4560);
 const createStyles = { iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG };

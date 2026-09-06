@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 4271 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import GifTagDefault from "GifTag" /* 8255 */;
 import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 8659 */;
@@ -45,10 +46,10 @@ function PersonalWidgetShowMoreButton() {
     accessibilityState: { expanded: isExpanded },
     children: null
   };
-  const intl = tmp(1114).intl;
-  let t = tmp(1114).t;
+  const intl = util.intl;
+  let t = util.t;
   obj = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) };
-  t = tmp5(tmp(4556).Text, obj);
+  t = closure_1_10(Text_Text.Text, obj);
   obj.children = t;
   closure_1_10(hasOwnProperty, obj);
 }
@@ -74,15 +75,15 @@ function useWidgetImage(userId, image, disableInteraction) {
   const items = [userId, tmp4, first];
   const memo = obj.useMemo(() => {
     let tmp2 = null;
-    if (null != closure_3) {
+    if (null != image) {
       let obj = WidgetAssetUtils;
-      let isAnimated = tmp.isAnimated;
+      let isAnimated = image.isAnimated;
       if (isAnimated) {
         isAnimated = first;
       }
       obj = { uri: null };
       obj = { animated: isAnimated };
-      obj.uri = obj.getWidgetAssetURL(closure_0, tmp.fileId, obj);
+      obj.uri = obj.getWidgetAssetURL(closure_0, image.fileId, obj);
       tmp2 = obj;
     }
     return tmp2;
@@ -138,11 +139,11 @@ function CoverSection(section) {
     const obj2 = { style: tmp.coverContainer, children: null };
     if (canToggleAnimation) {
       const obj3 = { style: timestampProducer.absoluteFill, onPress: toggleAnimation, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      const intl = tmp25(1114).intl;
-      obj3.accessibilityLabel = intl.string(tmp25(1114).t.MxXgrL);
+      const intl = util.intl;
+      obj3.accessibilityLabel = intl.string(util.t.MxXgrL);
       const obj4 = { source, style: timestampProducer.absoluteFill, resizeMode: "cover" };
-      obj3.children = tmp24(FastImageDefault, obj4);
-      let tmp24Result = tmp24(hasOwnProperty, obj3);
+      obj3.children = closure_1_10(FastImageDefault, obj4);
+      let tmp24Result = closure_1_10(hasOwnProperty, obj3);
       let tmp15 = timestampProducer;
       let tmp14 = importDefault;
     } else {
@@ -150,14 +151,14 @@ function CoverSection(section) {
       const obj5 = { source, style: null, resizeMode: "cover" };
       tmp15 = timestampProducer;
       obj5.style = timestampProducer.absoluteFill;
-      tmp24Result = tmp24(FastImageDefault, obj5);
+      tmp24Result = closure_1_10(FastImageDefault, obj5);
     }
     const items2 = [tmp24Result, , , ];
     tmp24Result = null;
     if (null != source) {
       if ("" !== section.title) {
         const obj6 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result = tmp24(tmp14(4987), obj6);
+        tmp24Result = closure_1_10(tmp14(4987), obj6);
       } else {
         tmp24Result = null;
       }
@@ -167,12 +168,12 @@ function CoverSection(section) {
     let tmp24Result1 = null;
     if (showGifTag) {
       const obj7 = { style: tmp.gifTag };
-      tmp24Result1 = tmp24(tmp14(8255), obj7);
+      tmp24Result1 = closure_1_10(tmp14(8255), obj7);
     }
     items2[3] = tmp24Result1;
     obj2.children = items2;
-    obj1.children = tmp3(tmp4, obj2);
-    tmp24Result2 = tmp24(native.ThemeContextProvider, obj1);
+    obj1.children = closure_1_11(React5, obj2);
+    tmp24Result2 = closure_1_10(native.ThemeContextProvider, obj1);
   }
   return tmp24Result2;
 }
@@ -204,7 +205,7 @@ function FieldRow(field) {
       }
       items[1] = tmp13;
       obj.children = items;
-      tmp7Result = tmp7(hasOwnProperty, obj);
+      tmp7Result = closure_1_11(hasOwnProperty, obj);
     }
   }
   const items1 = [tmp7Result, ];
@@ -257,7 +258,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   }
   if (tmp4Result) {
     obj = { userId, widget };
-    tmp4Result = tmp4(tmp5(8663), obj);
+    tmp4Result = closure_10(tmp5(8663), obj);
   }
   obj.trailingAction = tmp4Result;
   const obj1 = { style: tmp.sectionsContainer, children: null };
@@ -279,7 +280,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   ];
   tmp4Result = null;
   if (!disableInteraction) {
-    tmp4Result = tmp4(PersonalWidgetShowMoreButton, {});
+    tmp4Result = closure_10(PersonalWidgetShowMoreButton, {});
   }
   items1[1] = tmp4Result;
   obj1.children = items1;

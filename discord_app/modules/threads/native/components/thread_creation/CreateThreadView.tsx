@@ -45,18 +45,18 @@ function CreateThreadViewInner(screenIndex) {
       let obj = { channel_id: closure_0.id, guild_id: null, original_message_id: null, action: "thread" };
       guild_id = undefined;
       if (closure_0 != null) {
-        guild_id = tmp23.guild_id;
+        guild_id = closure_0.guild_id;
       }
       obj.guild_id = guild_id;
       obj.original_message_id = tmp.parentMessageId;
       obj = AppAnalyticsUtils;
       let guild_id1;
       if (closure_0 != null) {
-        guild_id1 = tmp23.guild_id;
+        guild_id1 = closure_0.guild_id;
       }
       const merged = Object.assign(obj.collectGuildAnalyticsMetadata(guild_id1));
       const obj6 = AnalyticsUtilsDefault;
-      const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(tmp23));
+      const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(closure_0));
       obj6.track(constants.MESSAGE_SHORTCUT_ACTION_SENT, obj);
     }
     if (null != asyncGeneratorStep) {
@@ -249,8 +249,8 @@ function CreateThreadViewInner(screenIndex) {
             obj.changeThreadSettings(parentChannelId, obj);
           }
         };
-        obj7.children = tmp22(tmp2(7201).TableSwitchRow, obj8);
-        tmp22Result = tmp22(tmp23, obj7);
+        obj7.children = closure_13(tmp2(7201).TableSwitchRow, obj8);
+        tmp22Result = closure_13(closure_6, obj7);
         const tmp2Result = tmp2(9305);
       }
     }
@@ -262,11 +262,11 @@ function CreateThreadViewInner(screenIndex) {
   if (null != threadSettingsDraft.parentMessageId) {
     const obj9 = { style: tmp.parentMessageContainer, children: null };
     const obj10 = { style: tmp.border };
-    const items8 = [tmp22(tmp23, obj10), ];
+    const items8 = [closure_13(closure_6, obj10), ];
     const obj11 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-    items8[1] = tmp22(tmp2(16622).ThreadCreationStarterMessage, obj11);
+    items8[1] = closure_13(tmp2(16622).ThreadCreationStarterMessage, obj11);
     obj9.children = items8;
-    tmp21Result = tmp21(tmp23, obj9);
+    tmp21Result = closure_14(closure_6, obj9);
   }
   items7[1] = tmp21Result;
   obj4.children = items7;
@@ -276,8 +276,8 @@ function CreateThreadViewInner(screenIndex) {
   if (parentChannel.rateLimitPerUser > 0) {
     const obj12 = { style: tmp.typingWrapper, children: null };
     const obj13 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj12.children = tmp22(tmp11(11983), obj13);
-    tmp22Result = tmp22(tmp23, obj12);
+    obj12.children = closure_13(tmp11(11983), obj13);
+    tmp22Result = closure_13(closure_6, obj12);
   }
   items5[2] = tmp22Result;
   items5[3] = closure_13(parentChannel(11958), { ref, channel: parentChannel, onJumpToPresent, screenIndex: screenIndex.screenIndex, secondaryTextFieldRef: ref1, threadCreationCallback: callback1 });

@@ -11,7 +11,6 @@ function handleFetchEmbeddedActivityShelfSuccess(assets) {
   const merged = Object.assign(obj);
   for (const key10012 in assets) {
     obj[key10012] = obj.FETCH_SUCCESS;
-    let tmp4 = closure_4;
     let obj4 = _modDef12;
     let keyByResult = obj4.keyBy(assets[key10012], "name");
     if (keyByResult == null) {
@@ -20,7 +19,7 @@ function handleFetchEmbeddedActivityShelfSuccess(assets) {
     obj = { assets: keyByResult, lastUpdated: null };
     let _Date = Date;
     obj.lastUpdated = Date.now();
-    tmp4[key10012] = obj;
+    closure_4[key10012] = obj;
     continue;
   }
 }

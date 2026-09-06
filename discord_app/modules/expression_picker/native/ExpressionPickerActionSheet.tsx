@@ -2,6 +2,7 @@
 
 // Module 10272 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -9,7 +10,10 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import useKeyboardType from "useKeyboardType" /* 4427 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import NavigatorConstants from "NavigatorConstants" /* 5682 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import KeyboardUtils from "KeyboardUtils" /* 10274 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 10275 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 10276 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -35,10 +39,10 @@ export default function ExpressionPickerActionSheet(arg0) {
   const diff = height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   let tmp15Result = null;
   if (undefined !== stateFromStores) {
-    let isIOSResult = tmp2(1115).isIOS();
+    let isIOSResult = PlatformUtils.isIOS();
     if (isIOSResult) {
       obj = { animatedSheetIndex: sharedValue, followSystemKeyboard: true };
-      isIOSResult = closure_7(tmp7(10275), obj);
+      isIOSResult = closure_7(PortalKeyboardFooterIOSDefault, obj);
     }
     obj = { children: null };
     const items1 = [isIOSResult, ];
@@ -69,11 +73,11 @@ export default function ExpressionPickerActionSheet(arg0) {
       stickerFormats: STICKER_FORMATS,
       height: diff
     };
-    obj1.children = closure_7(tmp7(10276), obj2);
-    items1[1] = closure_7(tmp2(7150).BottomSheet, obj1);
+    obj1.children = closure_7(ExpressionPickerDefault, obj2);
+    items1[1] = closure_7(Sheet_BottomSheet.BottomSheet, obj1);
     obj.children = items1;
     tmp15Result = closure_9(closure_8, obj);
-    const tmp2Result = tmp2(1115);
+    const tmp2Result = PlatformUtils;
   }
   return tmp15Result;
 };

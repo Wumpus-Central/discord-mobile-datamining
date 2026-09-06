@@ -41,10 +41,10 @@ function useCanUnarchiveThread(channel) {
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = PermissionStore.can(constants.SEND_MESSAGES_IN_THREADS, tmp);
+      canResult = PermissionStore.can(constants.SEND_MESSAGES_IN_THREADS, closure_0);
     }
     if (canResult) {
-      canResult = PermissionStore.can(constants.SEND_MESSAGES, tmp);
+      canResult = PermissionStore.can(constants.SEND_MESSAGES, closure_0);
     }
     return canResult;
   });
@@ -53,13 +53,13 @@ function useCanUnarchiveThread(channel) {
   const items2 = [channel];
   closure_129_0 = channel;
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
-    channel = null;
-    if (null != closure_0) {
-      channel = ChannelStore.getChannel(tmp.parent_id);
+    let channel = null;
+    if (null != parent_id) {
+      channel = ChannelStore.getChannel(parent_id.parent_id);
     }
     let canResult = null != channel;
     if (canResult) {
-      canResult = PermissionStore.can(constants.SEND_MESSAGES_IN_THREADS, tmp);
+      canResult = PermissionStore.can(constants.SEND_MESSAGES_IN_THREADS, parent_id);
     }
     if (canResult) {
       canResult = PermissionStore.can(constants.SEND_MESSAGES, channel);
@@ -98,7 +98,7 @@ function useCanUnarchiveThread(channel) {
 function canUnarchiveThread(parent_id) {
   let canResult = null != parent_id;
   if (canResult) {
-    canResult = obj.can(constants.SEND_MESSAGES_IN_THREADS, parent_id);
+    canResult = PermissionStore.can(constants.SEND_MESSAGES_IN_THREADS, parent_id);
   }
   let channel = null;
   if (null != parent_id) {
@@ -106,7 +106,7 @@ function canUnarchiveThread(parent_id) {
   }
   let canResult1 = null != channel;
   if (canResult1) {
-    canResult1 = obj.can(constants.SEND_MESSAGES_IN_THREADS, channel);
+    canResult1 = PermissionStore.can(constants.SEND_MESSAGES_IN_THREADS, channel);
   }
   if (canResult) {
     canResult = canResult1;

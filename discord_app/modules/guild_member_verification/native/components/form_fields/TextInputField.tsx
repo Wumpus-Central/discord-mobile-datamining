@@ -24,7 +24,7 @@ export default function TextInputField(field) {
     str = "";
   }
   obj.value = str;
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.placeholder = intl.string(util.t["Sqn+Wh"]);
   obj.onChange = field.onChange;
   obj.children = jsx(TextInput.TextInput, { label: jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength: MAX_TEXT_RESPONSE_LENGTH, value: null, placeholder: null, onChange: null });

@@ -205,8 +205,8 @@ const poggermodeStore = new PoggermodeStore(DispatcherDefault, {
         }
         const _HermesInternal = HermesInternal;
         value = secondaryIndexMap.get("" + str + "-" + message.channelId);
-        if (tmp.screenshakeEnabled) {
-          if (tmp.screenshakeEnabledLocations[constants.MENTION]) {
+        if (PoggermodeSettingsStore.screenshakeEnabled) {
+          if (PoggermodeSettingsStore.screenshakeEnabledLocations[constants.MENTION]) {
             if (null != mentions) {
               if (null != mentions.find((id) => id.id === id)) {
                 if (null != value) {

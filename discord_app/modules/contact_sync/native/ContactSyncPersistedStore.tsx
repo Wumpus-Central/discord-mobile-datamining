@@ -47,6 +47,7 @@ Storage2.asyncGet("ContactSyncDMListCTADismissed", async (arg0) => {
     const obj = { dmListCTADismissed };
     return obj.setState(obj);
   });
+  const tmpResult = require("ReactBatchUpdates");
 });
 const Storage3 = Storage4.Storage;
 Storage3.asyncGet("ContactSyncUpsellCTADismissed", async (upsellCTADismissed) => {
@@ -82,7 +83,7 @@ export const deleteStoredContacts = function deleteStoredContacts() {
   if (str == null) {
     str = "";
   }
-  const Storage2 = tmp(510).Storage;
+  const Storage2 = Storage4.Storage;
   Storage2.remove(V2_DCD_CONTACTS_STORAGE_KEY);
   ReactBatchUpdates.batchUpdates(() => {
     state.setState((arg0) => {

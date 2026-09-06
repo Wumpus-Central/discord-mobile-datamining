@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 function DemoModal() {
-  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

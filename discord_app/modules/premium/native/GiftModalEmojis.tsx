@@ -28,7 +28,6 @@ export default function _default(emojiName) {
       let obj = { src, name: emojiName, style: null, forceTextEmoji: true };
       const rect = { position: "absolute", top: null, left: null, transform: null };
       const tmp = _slicedToArray(item, 3);
-      const tmp5 = jsx;
       rect.top = "" + tmp2 + "%";
       rect.left = "" + tmp3 + "%";
       obj = { rotate: "" + tmp4 + "deg" };
@@ -41,7 +40,7 @@ export default function _default(emojiName) {
       items[1] = { scale: num };
       rect.transform = items;
       obj.style = rect;
-      return tmp5(EmojiDefault, obj, "" + index + "-" + emojiName);
+      return jsx(EmojiDefault, { rotate: "" + tmp4 + "deg" }, "" + index + "-" + emojiName);
     })
   };
   return <View style={closure_6().emojisContainer}>{items.map((item, index) => {
@@ -49,7 +48,6 @@ export default function _default(emojiName) {
     let obj = { src, name: emojiName, style: null, forceTextEmoji: true };
     const rect = { position: "absolute", top: null, left: null, transform: null };
     const tmp = _slicedToArray(item, 3);
-    const tmp5 = jsx;
     rect.top = "" + tmp2 + "%";
     rect.left = "" + tmp3 + "%";
     obj = { rotate: "" + tmp4 + "deg" };
@@ -62,6 +60,6 @@ export default function _default(emojiName) {
     items[1] = { scale: num };
     rect.transform = items;
     obj.style = rect;
-    return tmp5(EmojiDefault, obj, "" + index + "-" + emojiName);
+    return jsx(EmojiDefault, { rotate: "" + tmp4 + "deg" }, "" + index + "-" + emojiName);
   })}</View>;
 };

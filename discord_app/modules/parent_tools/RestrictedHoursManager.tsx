@@ -2,8 +2,11 @@
 
 // Module 17298 (RestrictedHoursManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import FamilyCenterModels from "FamilyCenterModels" /* 1394 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import FamilyCenterV3Experiment from "FamilyCenterV3Experiment" /* 7594 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10083 */;
 import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17293 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 10081 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -51,13 +54,12 @@ function scheduleUpcomingWarning() {
       const combined = "" + tmp7.rule.ruleId + ":" + tmp7.startAtMs;
       if (combined !== c9) {
         ({ startAtMs, rule } = tmp7);
-        const intl = tmp5(1114).intl;
+        const intl = util.intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        tmp5(10083);
-        const items = [tmp5(1394).JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
+        const items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const stringResult = intl.string(_modDef2396["0JlDg0"]);
-        const tmp5Result = tmp5(10083);
+        const tmp5Result = FamilyCenterRestrictedHoursUtils;
         const _HermesInternal2 = HermesInternal;
         const formatDaysResult = tmp5Result.formatDays(items);
         const trimmed = "" + tmp5Result.formatDays(items) + " " + tmp5Result.getScheduleRuleDateRange(rule).trim();

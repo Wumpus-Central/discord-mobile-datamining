@@ -2,6 +2,7 @@
 
 // Module 11424 (Messages)
 import _modDef12 from "module_12" /* 12 */;
+import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7163 */;
 import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10987 */;
@@ -71,7 +72,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_65, jsxs: closure_66 } = jsxProd);
 const forwardRefResult = noop.forwardRef((channel, ref) => {
   channel = channel.channel;
-  const tmp = channel;
+  let tmp = channel;
   const tmp2 = id;
   let obj = channel(id[57]);
   let items = [MessageStore];
@@ -119,6 +120,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
       if (tmp) {
         obj[author.author.id] = null;
       }
+      tmp = null != author.author && null != author.activity;
     });
     return obj;
   }, items5);
@@ -141,6 +143,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
       if (tmp) {
         set.add(applicationId.applicationId);
       }
+      tmp = null != applicationId.applicationId && null == applicationId.application;
     });
     if (null != stateFromStores) {
       set.add(tmp2);
@@ -153,21 +156,20 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   const effect = obj6.useEffect(() => {
     if (!obj.areArraysShallowEqual(id, guildId.current)) {
       const obj2 = ApplicationActionCreatorsDefault;
-      const found = _modDef12(tmp3).filter(GlobalUtils.isNotNullish);
-      const arr = _modDef12(tmp3);
+      const found = _modDef12(id).filter(GlobalUtils.isNotNullish);
+      const arr = _modDef12(id);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
-      guildId.current = tmp3;
+      guildId.current = id;
       const iter = found.uniq();
     }
+    obj = discord_common_shallowEqual;
   }, items9);
-  const tmp19 = PresenceStore;
   const tmp25 = guildId;
   const tmpResult2 = tmp(tmp2[57]);
   [tmp27, r10127] = guildId(stateFromStores(tmp2[64])(stateFromStores, channel), 2);
   const tmp26 = guildId(stateFromStores(tmp2[64])(stateFromStores, channel), 2);
   const items10 = [InviteStore];
   const stateFromStores4 = tmp(tmp2[57]).useStateFromStores(items10, () => InviteStore.getInvites(), []);
-  const tmp28 = InviteStore;
   const tmpResult3 = tmp(tmp2[57]);
   const fetchVoiceChannelInviteStartTimes = tmp(tmp2[65]).useFetchVoiceChannelInviteStartTimes(stateFromStores4);
   const tmpResult4 = tmp(tmp2[65]);
@@ -192,7 +194,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     return mapped.filter(GlobalUtils.isNotNullish);
   }, items16);
   const tmpResult9 = tmp(tmp2[57]);
-  const items17 = [closure_6, tmp19];
+  const items17 = [closure_6, PresenceStore];
   const stateFromStoresArray4 = tmp(tmp2[57]).useStateFromStoresArray(items17, () => {
     const items = [];
     const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(id);
@@ -240,16 +242,15 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     while (tmp2 !== undefined) {
       let tmp5 = guildId(tmp3, 2);
       [r10016, tmp6] = tmp5;
-      let tmp7 = tmp6;
       let isLaunching = tmp6.isLaunching;
       if (isLaunching) {
-        isLaunching = null != tmp7.componentId;
+        isLaunching = null != tmp6.componentId;
       }
       if (isLaunching) {
-        isLaunching = tmp7.componentId.length > 0;
+        isLaunching = tmp6.componentId.length > 0;
       }
       if (isLaunching) {
-        let arr = items.push(tmp7.componentId);
+        let arr = items.push(tmp6.componentId);
       }
       continue;
     }
@@ -323,13 +324,11 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   const items33 = [PermissionStore];
   const items34 = [channel];
   const stateFromStores13 = tmp(tmp2[57]).useStateFromStores(items33, () => PermissionStore.can(constants2.SEND_MESSAGES, channel), items34);
-  const tmp52 = PermissionStore;
   const tmpResult25 = tmp(tmp2[57]);
   const tmp54 = stateFromStores(tmp2[70])(id);
   const items35 = [VoiceStateStore];
   const items36 = [stateFromStores2];
   const stateFromStores14 = tmp(tmp2[57]).useStateFromStores(items35, () => VoiceStateStore.getUserVoiceChannelId(closure_2_60, stateFromStores2), items36);
-  const tmp55 = VoiceStateStore;
   const tmpResult26 = tmp(tmp2[57]);
   const items37 = [RTCConnectionStore];
   const stateFromStores15 = tmp(tmp2[57]).useStateFromStores(items37, () => channelId.getChannelId(), []);
@@ -341,9 +340,9 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     let message = null;
     if (THREADS.has(channel.type)) {
       message = null;
-      if (null != tmp.parent_id) {
+      if (null != channel.parent_id) {
         const obj = { channel_id: null, message_id: null, guild_id: null };
-        ({ parent_id: obj.channel_id, id: obj.message_id, guild_id: obj.guild_id } = tmp);
+        ({ parent_id: obj.channel_id, id: obj.message_id, guild_id: obj.guild_id } = channel);
         message = ReferencedMessageStore.getMessageByReference(obj).message;
       }
     }
@@ -415,8 +414,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   const stateFromStoresObject5 = tmp(tmp2[57]).useStateFromStoresObject(items56, () => {
     if (null != guildId) {
       if (null != stateFromStores) {
-        let obj = {};
-        const item = arr.forEach((item) => {
+        const item = stateFromStores.forEach((item) => {
           obj = messages_MessagesUtils;
           const messageAuthorMemberUserIds = obj.getMessageAuthorMemberUserIds(item);
           const iter = messageAuthorMemberUserIds[Symbol.iterator]();
@@ -430,14 +428,13 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
             continue;
           }
         });
-        return obj;
+        return {};
       }
-      arr = stateFromStores;
     }
     return {};
   }, items57);
   const tmpResult43 = tmp(tmp2[57]);
-  const items58 = [tmp52];
+  const items58 = [PermissionStore];
   const stateFromStores25 = tmp(tmp2[57]).useStateFromStores(items58, () => PermissionStore.can(constants2.MODERATE_MEMBERS, stateFromStores1));
   const tmpResult44 = tmp(tmp2[57]);
   id = undefined;
@@ -488,13 +485,13 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     const ready = stateFromStores.ready;
     let hasMoreAfter = !ready;
     if (ready) {
-      hasMoreAfter = 0 !== arr.length;
+      hasMoreAfter = 0 !== stateFromStores.length;
     }
     if (!hasMoreAfter) {
-      hasMoreAfter = arr.hasMoreBefore;
+      hasMoreAfter = stateFromStores.hasMoreBefore;
     }
     if (!hasMoreAfter) {
-      hasMoreAfter = arr.hasMoreAfter;
+      hasMoreAfter = stateFromStores.hasMoreAfter;
     }
     if (!hasMoreAfter) {
       const obj = DimensionActionCreatorsDefault;
@@ -568,7 +565,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   const items74 = [EmojiStore];
   const stateFromStores36 = tmp(tmp2[57]).useStateFromStores(items74, () => EmojiStore.getGuildEmoji(guildId));
   const tmpResult67 = tmp(tmp2[57]);
-  const items75 = [tmp55];
+  const items75 = [VoiceStateStore];
   const items76 = [guildId];
   const stateFromStores37 = tmp(tmp2[57]).useStateFromStores(items75, () => {
     if (null == guildId) {
@@ -579,7 +576,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
   }, items76);
   const tmpResult68 = tmp(tmp2[57]);
-  const items77 = [SortedVoiceStateStore, VoiceChannelStartTimeStore, tmp28, ChannelStore];
+  const items77 = [SortedVoiceStateStore, VoiceChannelStartTimeStore, InviteStore, ChannelStore];
   const stateFromStoresObject6 = tmp(tmp2[57]).useStateFromStoresObject(items77, () => {
     const obj = {};
     const invites = InviteStore.getInvites();

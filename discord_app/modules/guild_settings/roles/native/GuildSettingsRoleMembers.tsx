@@ -116,13 +116,13 @@ export default function GuildSettingsRoleMembers(guild) {
     obj.userId = item.user.id;
     let tmpResult = null;
     if (!locked) {
-      obj = { icon: tmp(guild(tmp2[23]).CircleXIcon, {}), accessibilityLabel: null, accessibilityRole: "button", onPress: null, variant: "icon-only" };
-      const intl = guild(tmp2[10]).intl;
-      obj.accessibilityLabel = intl.string(guild(tmp2[10]).t["7sFNfW"]);
+      obj = { icon: closure_1_8(guild(locked[23]).CircleXIcon, {}), accessibilityLabel: null, accessibilityRole: "button", onPress: null, variant: "icon-only" };
+      const intl = guild(locked[10]).intl;
+      obj.accessibilityLabel = intl.string(guild(locked[10]).t["7sFNfW"]);
       obj.onPress = function onPress() {
         return callback(item, item.roles);
       };
-      tmpResult = tmp(guild(tmp2[22]).IconButton, obj);
+      tmpResult = closure_1_8(guild(locked[22]).IconButton, obj);
     }
     obj.trailing = tmpResult;
     return closure_1_8(role(locked[21]), obj, item.id);
@@ -135,13 +135,13 @@ export default function GuildSettingsRoleMembers(guild) {
   if (tmp9) {
     const obj3 = { style: tmp.missingMembers, children: null };
     obj4 = { color: role(tmp6[7]).colors.TEXT_LINK, size: "md" };
-    const items6 = [tmp14(tmp5(tmp6[25]).CircleInformationIcon, obj4), ];
+    const items6 = [closure_8(tmp5(tmp6[25]).CircleInformationIcon, obj4), ];
     const obj5 = { style: tmp.missingMembersText, variant: "text-sm/medium", children: null };
     let intl = tmp5(tmp6[10]).intl;
     obj5.children = intl.string(tmp5(tmp6[10]).t.RQxHZ8);
-    items6[1] = tmp14(tmp5(tmp6[26]).Text, obj5);
+    items6[1] = closure_8(tmp5(tmp6[26]).Text, obj5);
     obj3.children = items6;
-    tmp12Result = tmp12(tmp13, obj3);
+    tmp12Result = closure_9(tmp13, obj3);
   }
   const items7 = [tmp12Result, , ];
   let tmp14Result = null;
@@ -149,10 +149,10 @@ export default function GuildSettingsRoleMembers(guild) {
     const obj6 = { arrow: true, label: null, icon: null, onPress: null, start: true, end: null };
     let intl2 = tmp5(tmp6[10]).intl;
     obj6.label = intl2.string(tmp5(tmp6[10]).t.ZYOK46);
-    obj6.icon = tmp14(tmp5(tmp6[28]).CirclePlusIcon, { size: "md" });
+    obj6.icon = closure_8(tmp5(tmp6[28]).CirclePlusIcon, { size: "md" });
     obj6.onPress = callback1;
     obj6.end = 0 === found.length;
-    tmp14Result = tmp14(tmp5(tmp6[27]).TableRow, obj6);
+    tmp14Result = closure_8(tmp5(tmp6[27]).TableRow, obj6);
   }
   items7[1] = tmp14Result;
   items7[2] = found.map((item, index) => closure_6({ item, index }));

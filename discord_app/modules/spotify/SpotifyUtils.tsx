@@ -19,7 +19,7 @@ function asString(str) {
     throw error;
   }
 }
-let closure_13 = async function _getSpotifyMetadataFromActivity(arg0, value) {
+let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

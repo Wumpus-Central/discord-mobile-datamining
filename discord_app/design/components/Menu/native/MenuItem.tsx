@@ -55,7 +55,7 @@ export const MenuItem = noop.forwardRef((action, ref) => {
   let tmp7Result = label;
   if (typeof label === "string") {
     obj = { text: label, style: tmp.formLabel };
-    tmp7Result = tmp7(FormLabelDefault, obj);
+    tmp7Result = jsx(FormLabelDefault, { text: label, style: tmp.formLabel });
   }
   obj.label = tmp7Result;
   obj.onPress = function onPress() {

@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
   _require = arg0;
-  const obj = require("module_1244");
+  let obj = require("module_1244");
   dependencyMap = obj.createWithEqualityFn(require("module_4430").subscribeWithSelector((arg0, arg1, arg2) => {
     closure_0 = arg0;
     return closure_0((arg0) => {
@@ -60,6 +60,7 @@ export const createZustandStore = function createZustandStore(arg0) {
       if (typeof setState === "function") {
         const initialState = state.getInitialState();
         initialState(state[2]).batchUpdates(() => state.setState(closure_0));
+        const obj = initialState(state[2]);
       } else {
         throw new TypeError("Trying to call a non-function");
       }

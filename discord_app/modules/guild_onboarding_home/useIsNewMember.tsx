@@ -17,10 +17,10 @@ export default function useIsNewMember(arg0) {
   return require("initialize").useStateFromStores(items, () => {
     let flag = true;
     if (!ImpersonateStore.isFullServerPreview(closure_0)) {
-      const selfMember = obj.getSelfMember(tmp);
+      const selfMember = GuildMemberStore.getSelfMember(closure_0);
       flag = false;
       if (null != selfMember) {
-        const selfMemberJoinedAt = obj.getSelfMemberJoinedAt(tmp);
+        const selfMemberJoinedAt = GuildMemberStore.getSelfMemberJoinedAt(closure_0);
         let tmp4 = null != selfMemberJoinedAt;
         if (tmp4) {
           let num = selfMember.flags;
@@ -46,10 +46,10 @@ export default function useIsNewMember(arg0) {
 export const getIsNewMember = function getIsNewMember(id) {
   let flag = true;
   if (!ImpersonateStore.isFullServerPreview(id)) {
-    const selfMember = obj.getSelfMember(id);
+    const selfMember = GuildMemberStore.getSelfMember(id);
     flag = false;
     if (null != selfMember) {
-      const selfMemberJoinedAt = obj.getSelfMemberJoinedAt(id);
+      const selfMemberJoinedAt = GuildMemberStore.getSelfMemberJoinedAt(id);
       let tmp3 = null != selfMemberJoinedAt;
       if (tmp3) {
         let num = selfMember.flags;

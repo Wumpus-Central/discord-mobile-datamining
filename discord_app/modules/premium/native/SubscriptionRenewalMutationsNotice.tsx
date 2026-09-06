@@ -44,4 +44,5 @@ export default function SubscriptionRenewalMutationsNotice(arg0) {
     return timestampProducer(View, obj);
   }
   displayName = PremiumUtils.getExternalPlanDisplayName(renewalMutations);
+  const tmp5Result = PremiumUtils;
 };

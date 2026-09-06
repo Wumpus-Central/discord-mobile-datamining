@@ -6,6 +6,7 @@ import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import StickersUtils from "StickersUtils" /* 4899 */;
+import Pressables from "Pressables" /* 5123 */;
 import _modDef10397 from "module_10397" /* 10397 */;
 import _modDef10398 from "module_10398" /* 10398 */;
 import StickerPackBannerDefault from "StickerPackBanner" /* 10399 */;
@@ -55,9 +56,9 @@ export default noop.memo((withDescription) => {
   let result = obj3.isStickerPackAnimated(stickerPack);
   if (result) {
     const obj1 = { style: tmp.iconContainer, children: null };
-    const obj2 = { source: _modDef10397, style: tmp.animatedIcon, size: tmp6(1178).Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
-    obj1.children = tmp4(tmp6(1178).Icon, obj2);
-    result = tmp4(tmp5, obj1);
+    const obj2 = { source: _modDef10397, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
+    obj1.children = React4(native.Icon, obj2);
+    result = React4(View, obj1);
   }
   items[1] = result;
   obj3 = { style: tmp.iconContainer, children: React4(native.Icon, { source: _modDef10398, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color }) };
@@ -70,12 +71,12 @@ export default noop.memo((withDescription) => {
   }
   if (flag) {
     const obj5 = { variant: "text-sm/medium", children: stickerPack.description };
-    flag = tmp4(tmp6(4556).Text, obj5);
+    flag = React4(Text_Text.Text, obj5);
   }
   const obj6 = { children: null };
   items1[1] = flag;
   const obj7 = { lineClamp: 1, variant: "text-xs/medium", color: "text-default", children: null };
-  const intl = tmp6(1114).intl;
+  const intl = util.intl;
   obj7.children = intl.format(util.t["0S3JpO"], { numStickers: stickerPack.stickers.length });
   items1[2] = React4(Text_Text.Text, obj7);
   obj6.children = items1;
@@ -83,7 +84,7 @@ export default noop.memo((withDescription) => {
   if (withBanner) {
     const obj9 = { stickerPack, containerStyle: null, style: null };
     ({ bannerContainer: obj13.containerStyle, banner: obj13.style } = tmp);
-    withBanner = tmp4(StickerPackBannerDefault, obj9);
+    withBanner = React4(StickerPackBannerDefault, obj9);
   }
   const children = [withBanner, ];
   if (null != onPress) {
@@ -92,13 +93,13 @@ export default noop.memo((withDescription) => {
     obj10.style = items3;
     obj10.onPress = onPress;
     obj10.children = tmp2Result;
-    let tmp4Result = tmp4(tmp6(5123).PressableOpacity, obj10);
+    let tmp4Result = React4(Pressables.PressableOpacity, obj10);
   } else {
     const obj11 = { style: null, children: null };
     const items4 = [tmp.section, style];
     obj11.style = items4;
     obj11.children = tmp2Result;
-    tmp4Result = tmp4(tmp5, obj11);
+    tmp4Result = React4(View, obj11);
   }
   children[1] = tmp4Result;
   return hasOwnProperty(timestampProducer, { children });

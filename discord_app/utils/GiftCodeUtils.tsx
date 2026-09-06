@@ -14,7 +14,7 @@ import UserStore from "UserStore" /* 1371 */;
 import RegexUtils from "RegexUtils" /* 4547 */;
 
 require = fn;
-let closure_18 = async function _resolveGiftCode(arg0, value) {
+let closure_18 = async function _resolveGiftCode(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -118,16 +118,16 @@ function getGiftCodeRedeemError(error, currentUser) {
   if (constants2.INVALID_GIFT_SELF_REDEMPTION === code) {
     const intl11 = util.intl;
     return intl11.string(util.t.wa9h7F);
-  } else if (tmp.INVALID_GIFT_REDEMPTION_EXHAUSTED === code) {
+  } else if (constants2.INVALID_GIFT_REDEMPTION_EXHAUSTED === code) {
     const intl10 = util.intl;
     return intl10.string(util.t.Iw2TUW);
-  } else if (tmp.INVALID_GIFT_REDEMPTION_OWNED === code) {
+  } else if (constants2.INVALID_GIFT_REDEMPTION_OWNED === code) {
     const intl9 = util.intl;
     return intl9.string(util.t.mdLtb5);
-  } else if (tmp.UNKNOWN_GIFT_CODE === code) {
+  } else if (constants2.UNKNOWN_GIFT_CODE === code) {
     const intl8 = util.intl;
     return intl8.string(util.t.roztIr);
-  } else if (tmp.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE === code) {
+  } else if (constants2.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE === code) {
     const intl6 = util.intl;
     let obj = PremiumUtils;
     const intl7 = util.intl;
@@ -140,16 +140,16 @@ function getGiftCodeRedeemError(error, currentUser) {
     }
     obj = { planName: stringResult };
     return intl6.formatToPlainString(util.t["4YTHKw"], obj);
-  } else if (tmp.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED === code) {
+  } else if (constants2.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED === code) {
     const intl5 = util.intl;
     return intl5.string(util.t["9i1J30"]);
-  } else if (tmp.INVALID_GIFT_REDEMPTION_INVOICE_OPEN === code) {
+  } else if (constants2.INVALID_GIFT_REDEMPTION_INVOICE_OPEN === code) {
     const intl4 = util.intl;
     return intl4.string(util.t["U26WX+"]);
-  } else if (tmp.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED === code) {
+  } else if (constants2.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED === code) {
     const intl3 = util.intl;
     return intl3.string(util.t.ypuSd8);
-  } else if (tmp.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE === code) {
+  } else if (constants2.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE === code) {
     const intl2 = util.intl;
     return intl2.string(util.t.mXMmWE);
   } else {
@@ -218,7 +218,7 @@ export const shouldShowCustomGiftExperience = function shouldShowCustomGiftExper
   DEFAULT = obj.DEFAULT;
   tmp5 = obj;
 };
-export const makeComboId = function makeComboId(skuId, subscriptionPlanId, giftStyle) {
+export const makeComboId = function makeComboId(skuId) {
   let str = subscriptionPlanId;
   if (subscriptionPlanId === undefined) {
     str = null;
@@ -301,7 +301,7 @@ export const findGiftCodes = function findGiftCodes(content) {
     return Array.from(set);
   }
 };
-export const getGiftCodeURL = function getGiftCodeURL(code) {
+export const getGiftCodeURL = function getGiftCodeURL() {
   let str = code;
   if (code === undefined) {
     str = "";
@@ -362,23 +362,23 @@ export const getHeaderText = function getHeaderText(arg0, isSubscription, name) 
   if (constants3.ERROR === arg0) {
     const intl2 = util.intl;
     return intl2.formatToMarkdownString(util.t.JUvC0s, {});
-  } else if (tmp.SUCCESS === arg0) {
+  } else if (constants3.SUCCESS === arg0) {
     const intl = util.intl;
     if (isSubscription.isSubscription) {
       let obj = { skuName: name.name };
-      let formatToPlainStringResult = intl.formatToPlainString(tmp3(1114).t["1C2BG/"], obj);
+      let formatToPlainStringResult = intl.formatToPlainString(util.t["1C2BG/"], obj);
     } else {
-      formatToPlainStringResult = intl.string(tmp3(1114).t["+BNMcF"]);
+      formatToPlainStringResult = intl.string(util.t["+BNMcF"]);
     }
     return formatToPlainStringResult;
   } else {
-    const CONFIRM = tmp.CONFIRM;
+    const CONFIRM = constants3.CONFIRM;
     const intl3 = util.intl;
     if (isSubscription.isSubscription) {
       obj = { skuName: name.name };
-      let formatToPlainStringResult1 = intl3.formatToPlainString(tmp10(1114).t["2VN4N9"], obj);
+      let formatToPlainStringResult1 = intl3.formatToPlainString(util.t["2VN4N9"], obj);
     } else {
-      formatToPlainStringResult1 = intl3.string(tmp10(1114).t.RmamAI);
+      formatToPlainStringResult1 = intl3.string(util.t.RmamAI);
     }
     return formatToPlainStringResult1;
   }
@@ -388,14 +388,14 @@ export const getButtonText = function getButtonText(arg0, giftStyle, isCustomGif
   if (constants3.ERROR === arg0) {
     const intl6 = util.intl;
     return intl6.string(util.t.w19zb6);
-  } else if (tmp.SUCCESS === arg0) {
+  } else if (constants3.SUCCESS === arg0) {
     const intl5 = util.intl;
     return intl5.string(util.t.zW87EM);
-  } else if (tmp.OPEN === arg0) {
+  } else if (constants3.OPEN === arg0) {
     const intl4 = util.intl;
     return intl4.string(util.t.F8ktci);
   } else {
-    const CONFIRM = tmp.CONFIRM;
+    const CONFIRM = constants3.CONFIRM;
     if (null != isCustomGift) {
       if (isCustomGift) {
         const intl3 = util.intl;
@@ -566,7 +566,7 @@ export const getBodyText = function getBodyText(arg0) {
       formatResult = tmp22;
     }
     return formatResult;
-  } else if (tmp.SUCCESS === step) {
+  } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
       const match = subscriptionPlan(4745).match(subscriptionPlan);
       obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
@@ -631,7 +631,7 @@ export const getBodyText = function getBodyText(arg0) {
     }
     return otherwiseResult;
   } else {
-    const CONFIRM = tmp.CONFIRM;
+    const CONFIRM = constants3.CONFIRM;
     if (null != subscriptionPlan) {
       if (subscriptionPlan.interval === constants6.MONTH) {
         let d8rUdy = subscriptionPlan(1114).t.P9eTKt;
@@ -685,8 +685,8 @@ export const firstLibraryApplicationForGiftCode = function firstLibraryApplicati
   return first;
 };
 export const processGiftCodeInput = function processGiftCodeInput(str) {
-  const parts = str.trim().split("/");
   str = str.trim();
+  const parts = str.split("/");
   const match = parts.pop().match(regExp2);
   if (null == match) {
     return null;

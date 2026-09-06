@@ -4,6 +4,7 @@
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
+import StringUtils from "StringUtils" /* 1925 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
 import DefaultChannelUtils from "DefaultChannelUtils" /* 7102 */;
@@ -34,8 +35,8 @@ function isChattableChannel(channel) {
   }
   return tmp;
 }
-function getFlattenedDefaultChannels(arg0, arr, arg2, fn) {
-  fn = arg2;
+function getFlattenedDefaultChannels(arg0, arr, arg2) {
+  let fn = arg2;
   if (arg2 === undefined) {
     fn = function u(arg0) {
       return arg0;
@@ -170,7 +171,8 @@ export const showRulesInOnboarding = function showRulesInOnboarding(stateFromSto
   return tmp4;
 };
 export const getChannelCoverageForOnboarding = function getChannelCoverageForOnboarding(guildId, arr, defaultChannelIds) {
-  const mapped = GuildChannelStore.getChannels(guildId)[closure_7].map((channel) => channel.channel);
+  arr = GuildChannelStore.getChannels(guildId)[closure_7];
+  const mapped = arr.map((channel) => channel.channel);
   const set = new Set();
   const item = arr.forEach((options) => {
     options = options.options;
@@ -220,9 +222,9 @@ export const getChannelCoverageForOnboarding = function getChannelCoverageForOnb
 export const useChannelCoverageForOnboarding = function useChannelCoverageForOnboarding(arg0, arr, arr2) {
   _require = arg0;
   const items = [GuildChannelStore];
-  const obj = require("initialize");
-  const mapped = require("initialize").useStateFromStores(items, () => GuildChannelStore.getChannels(closure_0))[closure_7].map((channel) => channel.channel);
   arr2 = require("initialize").useStateFromStores(items, () => GuildChannelStore.getChannels(closure_0))[closure_7];
+  const mapped = arr2.map((channel) => channel.channel);
+  const obj = require("initialize");
   closure_129_0 = new Set();
   let item = arr.forEach((options) => {
     options = options.options;
@@ -389,7 +391,7 @@ export const getChattableDefaultChannels = function getChattableDefaultChannels(
             tmp3 = canChannelBeDefaultResult;
           } else {
             const isForumChannelResult = channel.isForumChannel();
-            const canEveryoneRole = require("PermissionUtils").canEveryoneRole;
+            const canEveryoneRole = PermissionUtilsAll.canEveryoneRole;
             let SEND_MESSAGES_IN_THREADS = constants2;
             if (isForumChannelResult) {
               SEND_MESSAGES_IN_THREADS = SEND_MESSAGES_IN_THREADS.SEND_MESSAGES_IN_THREADS;
@@ -397,10 +399,8 @@ export const getChattableDefaultChannels = function getChattableDefaultChannels(
             } else {
               canEveryoneRoleResult = canEveryoneRole(SEND_MESSAGES_IN_THREADS.SEND_MESSAGES, channel);
             }
-            const tmp9 = require("PermissionUtils");
           }
           const obj = require("DefaultChannelUtils");
-          tmp5 = dependencyMap;
         }
         return tmp3;
       });
@@ -423,7 +423,6 @@ export const useChattableDefaultChannels = function useChattableDefaultChannels(
       let obj = DefaultChannelUtils;
       let canChannelBeDefaultResult = obj.canChannelBeDefault(nextResult.channel.guild_id, nextResult.channel.id);
       if (canChannelBeDefaultResult) {
-        let obj2 = set;
         let hasItem = set.has(tmp2.channel.id);
         if (hasItem) {
           let channel = tmp2.channel;
@@ -437,7 +436,7 @@ export const useChattableDefaultChannels = function useChattableDefaultChannels(
             hasItem1 = null != tmp2.channel.parent_id;
           }
           if (hasItem1) {
-            hasItem1 = obj2.has(tmp2.channel.parent_id);
+            hasItem1 = set.has(tmp2.channel.parent_id);
           }
           hasItem = hasItem1;
         }
@@ -488,6 +487,7 @@ export const getProviderConnectionState = function getProviderConnectionState(st
       }
       notConnected.push(provider_id);
     }
+    obj = StringUtils;
   });
   return { connected, notConnected };
 };
@@ -515,6 +515,7 @@ export const getApplicationConnectionState = function getApplicationConnectionSt
       }
       notConnected.push(application_id);
     }
+    obj = StringUtils;
   });
   return { connected, notConnected };
 };

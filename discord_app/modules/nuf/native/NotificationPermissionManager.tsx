@@ -43,7 +43,8 @@ let closure_20 = async function _shouldShowPrompt() {
   closure_1 = tmp3;
   closure_129_0 = closure_0;
   const NativePermissionManager = NativeModules.NativePermissionManager;
-  closure_129_1 = await NativePermissionManager.getNotificationAuthorizationStatus();
+  await NativePermissionManager.getNotificationAuthorizationStatus();
+  closure_129_1 = value;
   let tmp11 = closure_129_1 === closure_130_16.UNDETERMINED;
   if (!tmp11) {
     tmp11 = closure_129_1 === closure_130_16.PROVISIONAL;
@@ -69,7 +70,7 @@ let closure_22 = async function _shouldShowReactivationPrompt() {
   closure_129_0 = closure_0;
   const NativePermissionManager = NativeModules.NativePermissionManager;
   await NativePermissionManager.getNotificationAuthorizationStatus();
-  let tmp9 = arg1 === closure_130_16.DENIED;
+  let tmp9 = value === closure_130_16.DENIED;
   if (tmp9) {
     tmp9 = closure_130_18(closure_129_0, 1);
   }
@@ -103,7 +104,7 @@ function _logNotificationPermissionStatus() {
   }
   return applyArgumentsResult;
 }
-let closure_26 = async function _logNotificationPermissionStatus2(arg0, value) {
+let closure_26 = async function _logNotificationPermissionStatus2() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -203,7 +204,7 @@ class NotificationPermissionManager extends tmp4 {
           }
     };
     closure_129_0 = applyArgumentsResult;
-    applyArgumentsResult.handleConnectionOpen = closure_3(async (arg0, value) => {
+    applyArgumentsResult.handleConnectionOpen = closure_3(async () => {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -265,7 +266,7 @@ class NotificationPermissionManager extends tmp4 {
         }
       }
     });
-    closure_130_0 = closure_3(async (arg0, value) => {
+    closure_130_0 = closure_3(async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -370,7 +371,7 @@ class NotificationPermissionManager extends tmp4 {
       const invite = arg0;
       c4 = 0;
       c5 = 0;
-      const iter = (async (arg0, value) => {
+      const iter = (async (arg0) => {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -486,7 +487,7 @@ class NotificationPermissionManager extends tmp4 {
       const relationship = arg0;
       c3 = 0;
       c4 = 0;
-      const iter = (async (arg0, value) => {
+      const iter = (async (arg0) => {
         if (1 === tmp5) {
           if (arg0 === 1) {
             c4 = 3;
@@ -550,7 +551,7 @@ class NotificationPermissionManager extends tmp4 {
     };
     closure_133_0 = undefined;
     closure_133_1 = applyArgumentsResult;
-    closure_133_0 = closure_3(async (arg0, value) => {
+    closure_133_0 = closure_3(async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -653,7 +654,7 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    applyArgumentsResult._handleNotificationAuthorizationStatusUpdate = closure_3(async (arg0, value) => {
+    applyArgumentsResult._handleNotificationAuthorizationStatusUpdate = closure_3(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

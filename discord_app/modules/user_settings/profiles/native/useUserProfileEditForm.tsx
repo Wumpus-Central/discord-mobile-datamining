@@ -30,7 +30,7 @@ export default function useUserProfileEditForm() {
   });
   const effect = noop.useEffect(() => () => stateFromStores(573).wait(pendingChanges(6984).resetAllPending), []);
   const items2 = [stateFromStores, pendingChanges];
-  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -422,7 +422,7 @@ export default function useUserProfileEditForm() {
     errors,
     isSubmitting: stateFromStores,
     handleSubmit: callback,
-    handleSubmitAvatarDecoration: noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+    handleSubmitAvatarDecoration: noop.useCallback(asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

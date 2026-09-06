@@ -12,7 +12,7 @@ let prototype = function VideoBackgroundManager() {
   applyArgumentsResult._handleSelectVoiceChannel = function _handleSelectVoiceChannel(channelId) {
     channelId = channelId.channelId;
     if (applyArgumentsResult.previousSelectedVoiceChannelId !== channelId) {
-      tmp.cachedDominantColors = {};
+      applyArgumentsResult.cachedDominantColors = {};
     }
     applyArgumentsResult.previousSelectedVoiceChannelId = channelId;
   };

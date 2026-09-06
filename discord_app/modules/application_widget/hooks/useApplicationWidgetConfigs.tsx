@@ -47,7 +47,7 @@ export default function useApplicationWidgetConfigs(arg0) {
   const items5 = [stateFromStores1, stateFromStores, stateFromStoresArray, setting];
   const effect2 = stateFromStores.useEffect(() => {
     if (stateFromStores !== FetchState.NOT_FETCHED) {
-      if (tmp !== tmp2.FETCHING) {
+      if (tmp !== FetchState.FETCHING) {
         if (!setting) {
           for (const item10012 of stateFromStoresArray) {
             let obj = ApplicationWidgetConfigActions;

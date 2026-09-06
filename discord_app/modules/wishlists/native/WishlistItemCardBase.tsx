@@ -3,10 +3,14 @@
 // Module 8773 (WishlistItemCardBase)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import useToken from "useToken" /* 4262 */;
 import native from "native" /* 4271 */;
+import LockIcon from "LockIcon" /* 5095 */;
 import useUserProfileColors from "useUserProfileColors" /* 8238 */;
+import useWishlistHooks from "useWishlistHooks" /* 8776 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8795 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -92,27 +96,27 @@ export default function WishlistItemCardBase(username) {
     obj = { width: size, aspectRatio: 1 };
   }
   items[2] = obj;
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   const formatToPlainStringResult = intl.formatToPlainString(util.t.p3RmJF, { username: username.recipientName });
   const items1 = [accessibilityLabel, , ];
   if (obj4.OWNED === overlay) {
-    const intl3 = tmp2(1114).intl;
-    let stringResult = intl3.string(tmp2(1114).t["6cfuDj"]);
+    const intl3 = util.intl;
+    let stringResult = intl3.string(util.t["6cfuDj"]);
   } else {
     stringResult = null;
     if (tmp7.LOCKED === overlay) {
-      const intl2 = tmp2(1114).intl;
-      stringResult = intl2.string(tmp2(1114).t.wu4gyV);
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.wu4gyV);
     }
   }
-  let tmp14Result1 = source === tmp2(8776).WishlistItemSource.WISHLIST;
+  let tmp14Result1 = source === useWishlistHooks.WishlistItemSource.WISHLIST;
   items1[1] = stringResult;
   let tmp10 = null;
   if (tmp14Result1) {
     tmp10 = formatToPlainStringResult;
   }
   items1[2] = tmp10;
-  const found = items1.filter(tmp2(1369).isNotNullish);
+  const found = items1.filter(GlobalUtils.isNotNullish);
   const joined = found.join(", ");
   const items2 = [tmp.previewWrap, ];
   let dimmedPreview = overlay === tmp7.OWNED;
@@ -125,22 +129,22 @@ export default function WishlistItemCardBase(username) {
   let tmp14Result = overlay === tmp7.OWNED;
   if (tmp14Result) {
     obj1 = { style: tmp.overlayContainer, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-    obj2 = { color: tmp5(576).colors.WHITE, size: "custom", style: { width: 40, height: 40 } };
-    obj1.children = tmp14(tmp2(8795).CheckmarkLargeBoldIcon, obj2);
-    tmp14Result = tmp14(tmp15, obj1);
+    obj2 = { color: nativeDefault.colors.WHITE, size: "custom", style: { width: 40, height: 40 } };
+    obj1.children = hasOwnProperty(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, obj2);
+    tmp14Result = hasOwnProperty(React4, obj1);
   }
   items3[1] = tmp14Result;
   tmp14Result = overlay === tmp7.LOCKED;
   if (tmp14Result) {
     const obj3 = { style: tmp.lockBadge, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-    obj4 = { color: tmp5(576).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, size: "custom", style: { width: 18, height: 18 } };
-    obj3.children = tmp14(tmp2(5095).LockIcon, obj4);
-    tmp14Result = tmp14(tmp15, obj3);
+    obj4 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, size: "custom", style: { width: 18, height: 18 } };
+    obj3.children = hasOwnProperty(LockIcon.LockIcon, obj4);
+    tmp14Result = hasOwnProperty(React4, obj3);
   }
   items3[2] = tmp14Result;
   if (tmp14Result1) {
     const obj5 = { toastText: formatToPlainStringResult };
-    tmp14Result1 = tmp14(SourceIcon, obj5);
+    tmp14Result1 = hasOwnProperty(SourceIcon, obj5);
   }
   items3[3] = tmp14Result1;
   const tmp12Result = React5(timestampProducer, { children: items3 });
@@ -158,7 +162,7 @@ export default function WishlistItemCardBase(username) {
     }
     obj6.importantForAccessibility = str3;
     obj6.children = tmp12Result;
-    return tmp14(tmp15, obj6);
+    return hasOwnProperty(React4, obj6);
   } else {
     const obj7 = { accessibilityRole: "button", accessibilityLabel: joined, style: items, onPress, accessibilityElementsHidden: accessibilityHidden, importantForAccessibility: null, children: null };
     let str = "auto";
@@ -167,7 +171,7 @@ export default function WishlistItemCardBase(username) {
     }
     obj7.importantForAccessibility = str;
     obj7.children = tmp12Result;
-    return tmp14(React3, obj7);
+    return hasOwnProperty(React3, obj7);
   }
 };
 export const DEFAULT_ITEM_SIZE = 170;

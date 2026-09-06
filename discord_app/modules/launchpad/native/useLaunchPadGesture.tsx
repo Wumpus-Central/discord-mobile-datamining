@@ -42,7 +42,7 @@ export default function useLaunchPadGesture(launchPadType) {
     const Gesture = LegacyBaseButton.Gesture;
     let tmp6 = !isModalOpen;
     if (!isModalOpen) {
-      tmp6 = tmp !== tmp2.DISABLED;
+      tmp6 = launchPadType !== constants.DISABLED;
     }
     const PanResult = Gesture.Pan();
     const enabledResult = Gesture.Pan().enabled(tmp6);
@@ -168,7 +168,7 @@ export default function useLaunchPadGesture(launchPadType) {
         return;
       }
     }
-    obj = { gestureState, State: tmp4(6655).State, getWindowDimensionsWorklet: tmp4(12033).getWindowDimensionsWorklet, launchPadType: tmp, LaunchPadTypes: tmp2, LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE, LAUNCH_PAD_PULL_TAB_WIDTH, LAUNCH_PAD_PULL_TAB_HIT_SLOP, launchPadPullTabState, LAUNCH_PAD_PULL_TAB_HEIGHT, updaters, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR, launchPadSharedState, MANUAL_ACTIVATION_THRESHOLD: 3 };
+    obj = { gestureState, State: LegacyBaseButton.State, getWindowDimensionsWorklet: useWindowDimensionsSharedValue.getWindowDimensionsWorklet, launchPadType, LaunchPadTypes: constants, LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE, LAUNCH_PAD_PULL_TAB_WIDTH, LAUNCH_PAD_PULL_TAB_HIT_SLOP, launchPadPullTabState, LAUNCH_PAD_PULL_TAB_HEIGHT, updaters, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR, launchPadSharedState, MANUAL_ACTIVATION_THRESHOLD: 3 };
     X.__closure = obj;
     X.__workletHash = 17469318427529;
     X.__initData = __initData5;

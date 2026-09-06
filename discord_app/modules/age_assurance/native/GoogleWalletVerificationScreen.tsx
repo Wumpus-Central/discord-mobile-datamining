@@ -37,7 +37,7 @@ export default function GoogleWalletVerificationScreen(onClose) {
     navigation.goBack();
   }, items1);
   const items2 = [callback1, callback];
-  const callback2 = callback.useCallback(navigation(function*(arg0, value) {
+  const callback2 = callback.useCallback(navigation(function*() {
     yield closure_0(tmp51[7]).requestGoogleWalletVerification();
     if (1 === tmp7) {
       c3 = 0;

@@ -91,7 +91,7 @@ const inviteStore = new InviteStore(DispatcherDefault, {
         prop = null;
       }
       arg0.approximate_member_count = prop;
-      let prop1 = tmp.invite.approximate_presence_count;
+      let prop1 = code.invite.approximate_presence_count;
       if (prop1 == null) {
         prop1 = null;
       }
@@ -141,7 +141,7 @@ const inviteStore = new InviteStore(DispatcherDefault, {
         prop = null;
       }
       arg0.approximate_member_count = prop;
-      let prop1 = tmp.invite.approximate_presence_count;
+      let prop1 = invite.invite.approximate_presence_count;
       if (prop1 == null) {
         prop1 = null;
       }

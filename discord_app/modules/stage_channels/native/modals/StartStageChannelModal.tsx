@@ -7,6 +7,7 @@ import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import Pressables from "Pressables" /* 5123 */;
 import GuildIcon from "GuildIcon" /* 5584 */;
@@ -131,7 +132,7 @@ let obj5 = { marginBottom: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/modals/StartStageChannelModal.tsx");
 
-export default noop.forwardRef((channel, ref) => {
+export default noop.forwardRef((channel, arg1) => {
   ({ guild, onStageStarted: require, onClose: importDefault } = channel);
   channel = undefined;
   let first1;
@@ -144,9 +145,9 @@ export default noop.forwardRef((channel, ref) => {
   let first3;
   closure_12 = undefined;
   constants = undefined;
-  ref = undefined;
+  let ref;
   c16 = undefined;
-  onConfirmPress = async function _handleSave(arg0, value) {
+  onConfirmPress = async function _handleSave() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -184,13 +185,13 @@ export default noop.forwardRef((channel, ref) => {
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  let obj1 = { value: tmp66(8398).editStage(channel, tmp75, tmp47), done: false };
+                  let obj1 = { value: tmp66(8398).editStage(channel, first1, first2), done: false };
                   return obj1;
                 } else {
                   const obj5 = tmp66(8398);
                   c4 = 2;
                   c5 = 1;
-                  const obj2 = { value: obj5.startStage(channel, tmp75, tmp47, first3), done: false };
+                  const obj2 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
                   return obj2;
                 }
               }
@@ -258,7 +259,7 @@ export default noop.forwardRef((channel, ref) => {
   };
   let tmp = c16();
   let current = first2;
-  const imperativeHandle = first2.useImperativeHandle(ref, () => ({
+  const imperativeHandle = first2.useImperativeHandle(arg1, () => ({
     renderRightButton: function RightButton() {
       const obj = { style: c16().closeButtonContainer, accessibilityRole: "button", accessibilityLabel: null, source: null, onPress: null, disableColor: true };
       const tmp = c16();
@@ -355,21 +356,21 @@ export default noop.forwardRef((channel, ref) => {
   const items3 = [current(HeaderIcon, { guild }), , ];
   let obj1 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   if (null == memo) {
-    const intl2 = tmp16(tmp17[13]).intl;
-    let stringResult = intl2.string(tmp16(tmp17[13]).t.DDF0cJ);
+    const intl2 = require("util").intl;
+    let stringResult = intl2.string(require("util").t.DDF0cJ);
   } else {
-    let intl = tmp16(tmp17[13]).intl;
-    stringResult = intl.string(tmp16(tmp17[13]).t["5BKP4y"]);
+    let intl = require("util").intl;
+    stringResult = intl.string(require("util").t["5BKP4y"]);
   }
   obj1.children = stringResult;
   items3[1] = current(require("Text/Text").Text, obj1);
   obj2 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   if (null == memo) {
-    const intl4 = tmp16(tmp17[13]).intl;
-    let stringResult1 = intl4.string(tmp16(tmp17[13]).t.bqQIwa);
+    const intl4 = require("util").intl;
+    let stringResult1 = intl4.string(require("util").t.bqQIwa);
   } else {
-    const intl3 = tmp16(tmp17[13]).intl;
-    stringResult1 = intl3.string(tmp16(tmp17[13]).t["I+9bLx"]);
+    const intl3 = require("util").intl;
+    stringResult1 = intl3.string(require("util").t["I+9bLx"]);
   }
   obj2.children = stringResult1;
   items3[2] = current(require("Text/Text").Text, obj2);
@@ -385,12 +386,12 @@ export default noop.forwardRef((channel, ref) => {
   obj3.contentContainerStyle = items4;
   const items5 = [tmp29Result, , , , , , , , ];
   const obj4 = { children: null };
-  let tmp26Result = tmp26(tmp17[31]);
-  const intl5 = tmp16(tmp17[13]).intl;
+  let tmp26Result = require("FormHeader");
+  const intl5 = require("util").intl;
   obj4.children = intl5.string(require("util").t["5FPBOB"]);
   items5[1] = current(tmp26Result, obj4);
   let obj5 = { style: tmp.textInput, showBorder: false, showTopContainer: false, multiline: false, maxLength: canSendStageStartNotification, value: first1, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
-  const intl6 = tmp16(tmp17[13]).intl;
+  const intl6 = require("util").intl;
   obj5.placeholder = intl6.string(require("util").t.ZwWruY);
   obj5.onChange = tmp3Result[1];
   obj5.clearButtonVisibility = require("native").ClearButtonVisibility.WITH_CONTENT;
@@ -398,13 +399,13 @@ export default noop.forwardRef((channel, ref) => {
   let tmp31Result = null != helpText;
   if (tmp31Result) {
     const obj6 = { style: tmp.optionExplanation, variant: "text-xs/medium", color: "text-default", children: helpText };
-    tmp31Result = tmp31(tmp16(tmp17[21]).Text, obj6);
+    tmp31Result = tmp31(require("Text/Text").Text, obj6);
   }
   items5[3] = tmp31Result;
   tmp31Result = null != guild;
   if (tmp31Result) {
     const obj7 = { guild, channel, onChangeChannel: tmp4[1] };
-    tmp31Result = tmp31(tmp26(tmp17[32]), obj7);
+    tmp31Result = tmp31(require("GuildStageChannelSelection"), obj7);
   }
   items5[4] = tmp31Result;
   let tmp31Result1 = null;
@@ -423,16 +424,16 @@ export default noop.forwardRef((channel, ref) => {
   let tmp31Result2 = null;
   if (null != obj1) {
     const obj10 = { style: tmp.error, variant: "text-xs/medium", color: "text-feedback-critical", children: obj1.getAnyErrorMessage() };
-    tmp31Result2 = tmp31(tmp16(tmp17[21]).Text, obj10);
+    tmp31Result2 = tmp31(require("Text/Text").Text, obj10);
   }
   items5[7] = tmp31Result2;
   const obj11 = { style: tmp.startButton, children: null };
   if (null == memo) {
-    const intl8 = tmp16(tmp17[13]).intl;
-    let stringResult2 = intl8.string(tmp16(tmp17[13]).t.s8mM8A);
+    const intl8 = require("util").intl;
+    let stringResult2 = intl8.string(require("util").t.s8mM8A);
   } else {
-    const intl7 = tmp16(tmp17[13]).intl;
-    stringResult2 = intl7.string(tmp16(tmp17[13]).t.K344S7);
+    const intl7 = require("util").intl;
+    stringResult2 = intl7.string(require("util").t.K344S7);
   }
   obj11.children = current(require("components/Button/Button").Button, {
     text: stringResult2,
@@ -457,11 +458,11 @@ export default noop.forwardRef((channel, ref) => {
     const rect = { top: true, bottom: true, style: tmp.container, children: null };
     const obj13 = { style: tmp.keyboardAwareView, children: null };
     const obj14 = { guild };
-    tmp26Result = tmp26(tmp17[36]);
+    tmp26Result = require("KeyboardAwareView");
     const items6 = [tmp31(NavigationBar, obj14), tmp29Result];
     obj13.children = items6;
     rect.children = tmp29(tmp26Result, obj13);
-    tmp31Result3 = tmp31(tmp16(tmp17[35]).SafeAreaPaddingView, rect);
+    tmp31Result3 = tmp31(require("common/SafeAreaView").SafeAreaPaddingView, rect);
   }
   return tmp31Result3;
 });

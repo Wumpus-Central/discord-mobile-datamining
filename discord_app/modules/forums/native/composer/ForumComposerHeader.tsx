@@ -5,6 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
+import BookCheckIcon from "BookCheckIcon" /* 5075 */;
 import ForumIcon from "ForumIcon" /* 5088 */;
 import Pressables from "Pressables" /* 5123 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
@@ -52,8 +53,8 @@ export default function ForumComposerHeader(height) {
   const items1 = [hasOwnProperty(ForumIcon.ForumIcon, { size: "sm" }), ];
   const obj1 = { style: tmp.headerBarText, children: null };
   if ("" === title) {
-    const intl2 = tmp7(1114).intl;
-    title = intl2.string(tmp7(1114).t["7EjFCk"]);
+    const intl2 = util.intl;
+    title = intl2.string(util.t["7EjFCk"]);
   }
   const items2 = [hasOwnProperty(Text_Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: useChannelNameDefault(channel) })];
   obj1.children = items2;
@@ -67,12 +68,12 @@ export default function ForumComposerHeader(height) {
   let tmp6Result = null;
   if (length > 0) {
     const obj2 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, children: null };
-    const intl3 = tmp7(1114).intl;
-    obj2.accessibilityLabel = intl3.string(tmp7(1114).t.yR6HwZ);
+    const intl3 = util.intl;
+    obj2.accessibilityLabel = intl3.string(util.t.yR6HwZ);
     obj2.style = tmp.button;
     obj2.onPress = onGuidelinesPress;
-    obj2.children = tmp6(tmp7(5075).BookCheckIcon, {});
-    tmp6Result = tmp6(tmp7(5123).PressableOpacity, obj2);
+    obj2.children = hasOwnProperty(BookCheckIcon.BookCheckIcon, {});
+    tmp6Result = hasOwnProperty(Pressables.PressableOpacity, obj2);
   }
   items[2] = tmp6Result;
   items[3] = hasOwnProperty(React4, { style: tmp.headerBarSeparator });

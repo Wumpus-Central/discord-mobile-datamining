@@ -5,6 +5,9 @@ import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import KvCacheVersionConstants from "KvCacheVersionConstants" /* 499 */;
+import discord_common_AnalyticsUtilsAll from "discord_common/AnalyticsUtils" /* 1250 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7757 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13637 */;
 import checkEnv from "checkEnv" /* 16 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
@@ -139,7 +142,7 @@ export const identifyWebSocket = function identifyWebSocket() {
           state.userId = tmp8;
           let derivedQosData = null;
           if (null != measureResult.userId) {
-            let tmpResult = tmp(tmp2[8]);
+            let tmpResult = NativeFastConnectModuleDefault;
             derivedQosData = tmpResult.getDerivedQosData(str2);
           }
           let prop = measureResult.analyticsInstallation;
@@ -155,11 +158,11 @@ export const identifyWebSocket = function identifyWebSocket() {
           logger.info("prepareIdentify: app state: ", AppState.currentState, "qosTokenPresent: ", qosTokenFromDerivedData.length > 0);
           let d = { token, properties: null, capabilities: null, client_state: null, qos_token: null };
           d = {};
-          let obj4 = require("discord_common/AnalyticsUtils");
+          let obj4 = discord_common_AnalyticsUtilsAll;
           const merged = Object.assign(obj4.getSuperProperties());
           d.client_app_state = AppState.currentState;
           d.is_fast_connect = true;
-          let obj5 = require("RequestGatewaySocket");
+          let obj5 = RequestGatewaySocketAll;
           d.gateway_connect_reasons = obj5.describeConnectionReasons();
           if (null != prop) {
             obj1 = { installation_id: prop };
@@ -169,7 +172,7 @@ export const identifyWebSocket = function identifyWebSocket() {
           }
           const merged1 = Object.assign(obj2);
           d.properties = d;
-          let tmp11Result = tmp11(tmp2[7]);
+          let tmp11Result = require("GatewayCapabilities");
           const obj3 = { useChannelObfuscation: flag };
           d.capabilities = tmp11Result.getClientCapabilities(obj3);
           obj4 = { guild_versions: {} };
@@ -178,7 +181,7 @@ export const identifyWebSocket = function identifyWebSocket() {
           const _JSON = JSON;
           obj5 = { op: 2, d };
           const json = JSON.stringify(obj5);
-          tmpResult = tmp(tmp2[8]);
+          tmpResult = NativeFastConnectModuleDefault;
           str = undefined;
           if (measureResult.userId != null) {
             str = str2.toString();
@@ -188,7 +191,7 @@ export const identifyWebSocket = function identifyWebSocket() {
           }
           const _parseFloat = parseFloat;
           const parsed = parseFloat(_ws.ws._socketId);
-          tmp11Result = tmp11(tmp2[9]);
+          tmp11Result = require("isCacheEnabled");
           let tmp25;
           if (tmp11Result.isCacheEnabled()) {
             tmp25 = closure_1_6;

@@ -92,7 +92,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
       }
       obj.latestVersion = num;
       obj.children = content;
-      let tmp15Result = tmp15(tmp(10625).SelectedVersionedDismissibleContent, obj);
+      let tmp15Result = closure_6(tmp(10625).SelectedVersionedDismissibleContent, obj);
     } else {
       let type2;
       if (stateFromStores != null) {
@@ -108,7 +108,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
           let items2 = items1;
         }
         const obj1 = { contentTypes: items2, children: content };
-        tmp15Result = tmp15(tmp7, obj1);
+        tmp15Result = closure_6(tmp7, obj1);
       }
       items2 = [];
       tmp7 = shopButtonRef(10625);

@@ -377,8 +377,8 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
         }
         let isEqualResult = flag === closure_5.originalEnabled;
         if (isEqualResult) {
-          isEqualResult = tmp7(12).isEqual(themeSettings, closure_5.original);
-          const tmp7Result = tmp7(12);
+          isEqualResult = _mod12.isEqual(themeSettings, closure_5.original);
+          const tmp7Result = _mod12;
         }
         let flag2 = isEqualResult;
         if (flag2) {
@@ -394,7 +394,6 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
           }
         }
         tmp6 = flag2;
-        tmp7 = require;
       }
       tmp5 = tmp6;
     }

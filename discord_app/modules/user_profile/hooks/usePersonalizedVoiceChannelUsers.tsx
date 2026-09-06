@@ -31,7 +31,7 @@ export default function usePersonalizedVoiceChannelUsers(arg0) {
   const items5 = [stateFromStores1, stateFromStores, stateFromStoresArray];
   return require("initialize").useStateFromStoresArray(items4, () => {
     if (stateFromStores1) {
-      let sorted = obj.sort((arg0, arg1) => {
+      let sorted = stateFromStoresArray.sort((arg0, arg1) => {
         value = stateFromStores.get(arg1);
         let num;
         if (value != null) {
@@ -51,7 +51,7 @@ export default function usePersonalizedVoiceChannelUsers(arg0) {
         return num - num2;
       });
     } else {
-      sorted = obj;
+      sorted = stateFromStoresArray;
     }
     const mapped = sorted.map((item) => user.getUser(item));
     return mapped.filter((item) => null != item);

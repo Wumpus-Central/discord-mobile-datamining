@@ -5,8 +5,8 @@ import _modDef4257 from "module_4257" /* 4257 */;
 import MarkupASTUtils from "MarkupASTUtils" /* 7989 */;
 import size from "module_2" /* 2 */;
 
-function saferParse(fn, arg1, inline, arg3, arg4) {
-  let text = arg1;
+function saferParse(fn, value, inline, arg3, arg4) {
+  let text = value;
   let tmp6 = arg3;
   if (arg3 === undefined) {
     tmp6 = null;
@@ -38,9 +38,9 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/markup/
 export default {
   astParserFor(importDefaultResultResult) {
     closure_0 = _modDef4257.parserFor(importDefaultResultResult);
-    return (arg0, inline, inline) => {
-      let str = arg0;
-      if (arg0 === undefined) {
+    return () => {
+      let str = value;
+      if (value === undefined) {
         str = "";
       }
       let obj = inline;
@@ -60,9 +60,9 @@ export default {
     closure_0 = _modDef4257.parserFor(importDefaultResultResult);
     const obj2 = _modDef4257;
     importDefault = obj2.reactFor(_modDef4257.ruleOutput(importDefaultResultResult, "react"));
-    return (arg0, arg1, inline) => {
-      let str = arg0;
-      if (arg0 === undefined) {
+    return () => {
+      let str = value;
+      if (value === undefined) {
         str = "";
       }
       let flag = arg1;

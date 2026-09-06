@@ -86,10 +86,10 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 obj = {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
-                                  if (null != c0) {
-                                    const obj = { loadId: tmp.loadId };
-                                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
-                                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
+                                  if (null != _null) {
+                                    const obj = { loadId: _null.loadId };
+                                    const tmp4 = null != _null.onSuccessCallback ? _null.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
+                                    const tmp5 = null != _null.onFailureCallback ? _null.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
                                     const result = obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
                                   }
                                 },
@@ -102,10 +102,10 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 jsx(tmp13(7408).LinkButton, {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
-                                  if (null != c0) {
-                                    const obj = { loadId: tmp.loadId };
-                                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
-                                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
+                                  if (null != _null) {
+                                    const obj = { loadId: _null.loadId };
+                                    const tmp4 = null != _null.onSuccessCallback ? _null.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
+                                    const tmp5 = null != _null.onFailureCallback ? _null.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
                                     const result = obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
                                   }
                                 },
@@ -114,10 +114,10 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 });
               } else {
                 function manageExternalNitroSubscription() {
-                  if (null != c0) {
-                    const obj = { loadId: tmp.loadId };
-                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
-                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
+                  if (null != _null) {
+                    const obj = { loadId: _null.loadId };
+                    const tmp4 = null != _null.onSuccessCallback ? _null.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
+                    const tmp5 = null != _null.onFailureCallback ? _null.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
                     return obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
                   }
                 }

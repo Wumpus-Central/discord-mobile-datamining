@@ -250,8 +250,8 @@ export default function ChatInputGuardWrapper(channel) {
                     } else {
                       obj17 = { type: "simple-action", message: formatResult };
                     }
-                    tmp21Result = tmp27(tmp7(tmp3[33]), obj17);
-                    tmp23 = tmp27;
+                    tmp21Result = jsx(tmp7(tmp3[33]), obj17);
+                    tmp23 = jsx;
                     const tmp7Result6 = tmp7(tmp3[33]);
                   }
                 }
@@ -268,13 +268,13 @@ export default function ChatInputGuardWrapper(channel) {
                           obj18.buttonPrimaryOnPress = function handleCreateThread() {
                             const result = navigateToThreadCreation.navigateToThreadCreation(channel, "chat input guard");
                           };
-                          tmp21Result = tmp21(tmp7(tmp3[33]), obj18);
-                          tmp23 = tmp21;
+                          tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+                          tmp23 = jsx;
                           const tmp7Result7 = tmp7(tmp3[33]);
                         } else {
                           const obj19 = { guildId, channel };
-                          tmp21Result = tmp21(tmp7(tmp3[45]), obj19);
-                          tmp23 = tmp21;
+                          tmp21Result = jsx(tmp7(tmp3[45]), { guildId, channel });
+                          tmp23 = jsx;
                         }
                       }
                     }

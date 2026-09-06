@@ -8,6 +8,10 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 4766 */;
+import openUserSettings from "openUserSettings" /* 7382 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7539 */;
 import noop from "module_19" /* 19 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
@@ -82,26 +86,25 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       }
       return tmp;
     })) {
-      let tmp2Result = tmp2(7539);
+      let tmp2Result = FamilyCenterActionCreatorsDefault;
       const tab = tmp2Result.selectTab(constants.REQUESTS);
       const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
           obj = { screen: constants3.FAMILY_CENTER };
-          tmp9(7382).openUserSettings(obj);
-          const tmp9Result = tmp9(7382);
+          openUserSettings.openUserSettings(obj);
+          const tmp9Result = openUserSettings;
         }
       }
-      tmp2Result = tmp2(4766);
+      tmp2Result = ModalDispatchQueueDefault;
       tmp2Result.enqueue(() => {
         daysRemaining(callback[10]);
         const obj = { screen: constants3.FAMILY_CENTER };
         return obj.openUserSettings(obj);
       });
-      tmp9 = require;
     } else {
-      tmp2(4763).pushLazy(asyncRequireImpl(17463, dependencyMap.paths));
-      const tmp2Result1 = tmp2(4763);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17463, dependencyMap.paths));
+      const tmp2Result1 = ModalActionCreatorsDefault;
     }
   }, items2);
   const intl = daysRemaining(callback[15]).intl;

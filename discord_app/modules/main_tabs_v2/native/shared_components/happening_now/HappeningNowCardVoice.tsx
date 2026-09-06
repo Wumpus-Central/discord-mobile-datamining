@@ -113,7 +113,7 @@ export default noop.memo((guildId) => {
     obj3.children = items4;
     items3[1] = closure_11(View, obj3);
     obj.children = items3;
-    tmp11Result = tmp11(index(tmp3[13]), obj);
+    tmp11Result = closure_11(index(tmp3[13]), obj);
     const tmp13 = index(tmp3[13]);
   }
   return tmp11Result;

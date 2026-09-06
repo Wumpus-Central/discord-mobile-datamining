@@ -26,9 +26,9 @@ let SettingBuilders = {
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
     if (arg0) {
-      let tmp3 = tmp;
+      let tmp3 = React3;
     } else {
-      tmp3 = tmp & ~constants.NO_RELATION;
+      tmp3 = React3 & ~constants.NO_RELATION;
     }
     FriendSourceFlagsSetting.updateSetting(tmp3);
   },

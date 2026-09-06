@@ -1,6 +1,8 @@
 // === Module 9461: getXboxURIForChannel ===
 
 // Module 9461 (getXboxURIForChannel)
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -29,8 +31,8 @@ export default function getXboxURIForChannel(channelId, arg1) {
     name = guild.name;
   }
   if (name == null) {
-    const intl = tmp5(1114).intl;
-    name = intl.string(tmp5(1114).t.LJpTRF);
+    const intl = util.intl;
+    name = intl.string(util.t.LJpTRF);
   }
   obj.guildName = name;
   obj.muted = MediaEngineStore.isSelfMute();
@@ -38,10 +40,10 @@ export default function getXboxURIForChannel(channelId, arg1) {
   obj.nonce = nonce;
   const str = timestampProducer(obj);
   if (forQRCode) {
-    const aPIBaseURL = tmp5(1272).getAPIBaseURL();
+    const aPIBaseURL = HTTPUtils.getAPIBaseURL();
     const _HermesInternal2 = HermesInternal;
     let combined = "" + aPIBaseURL + constants.XBOX_HANDOFF + "?" + str.toString();
-    const tmp5Result = tmp5(1272);
+    const tmp5Result = HTTPUtils;
   } else {
     const _HermesInternal = HermesInternal;
     combined = "" + React5 + "?" + str.toString();

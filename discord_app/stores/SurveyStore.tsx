@@ -104,10 +104,9 @@ function setSurvey(survey) {
               }
             }
           }
-          let tmp24 = constants3;
           if (!guild_requirements.includes(constants3.IS_COMMUNITY)) {
-            if (!guild_requirements.includes(tmp24.IS_HUB)) {
-              if (!guild_requirements.includes(tmp24.GUILD_PERMISSIONS)) {
+            if (!guild_requirements.includes(constants3.IS_HUB)) {
+              if (!guild_requirements.includes(constants3.GUILD_PERMISSIONS)) {
                 currentUser = currentUser.getCurrentUser();
                 let id;
                 if (currentUser != null) {
@@ -115,9 +114,8 @@ function setSurvey(survey) {
                 }
                 let tmp44 = id === tmp14.ownerId;
                 let canResult = PermissionStore.can(constants2.ADMINISTRATOR, tmp14);
-                let tmp49 = constants3;
                 if (!guild_requirements.includes(constants3.IS_OWNER)) {
-                  if (!guild_requirements.includes(tmp49.IS_ADMIN)) {
+                  if (!guild_requirements.includes(constants3.IS_ADMIN)) {
                     if (obj == null) {
                       obj = {};
                     }
@@ -129,7 +127,7 @@ function setSurvey(survey) {
                     if (tmp57) {
                       tmp57 = tmp56 === tmp14.id;
                     }
-                    if (!guild_requirements.includes(tmp49.IS_VIEWING)) {
+                    if (!guild_requirements.includes(constants3.IS_VIEWING)) {
                       if (!hasItem) {
                         iter.return();
                         return true;
@@ -142,9 +140,8 @@ function setSurvey(survey) {
               } else {
                 let flag5 = false;
                 for (const item10086 of guild_permissions) {
-                  let tmp32 = item10086;
                   let deserializer = BigFlagUtilsAll;
-                  if (PermissionStore.can(deserializer.deserialize(tmp32), tmp14)) {
+                  if (PermissionStore.can(deserializer.deserialize(item10086), tmp14)) {
                     flag5 = true;
                     obj3.return();
                     break;
@@ -252,10 +249,9 @@ function handleSelectedGuildChange() {
               }
             }
           }
-          let tmp24 = constants3;
           if (!guild_requirements.includes(constants3.IS_COMMUNITY)) {
-            if (!guild_requirements.includes(tmp24.IS_HUB)) {
-              if (!guild_requirements.includes(tmp24.GUILD_PERMISSIONS)) {
+            if (!guild_requirements.includes(constants3.IS_HUB)) {
+              if (!guild_requirements.includes(constants3.GUILD_PERMISSIONS)) {
                 currentUser = currentUser.getCurrentUser();
                 let id;
                 if (currentUser != null) {
@@ -263,9 +259,8 @@ function handleSelectedGuildChange() {
                 }
                 let tmp44 = id === tmp14.ownerId;
                 let canResult = PermissionStore.can(constants2.ADMINISTRATOR, tmp14);
-                let tmp49 = constants3;
                 if (!guild_requirements.includes(constants3.IS_OWNER)) {
-                  if (!guild_requirements.includes(tmp49.IS_ADMIN)) {
+                  if (!guild_requirements.includes(constants3.IS_ADMIN)) {
                     if (obj == null) {
                       obj = {};
                     }
@@ -277,7 +272,7 @@ function handleSelectedGuildChange() {
                     if (tmp57) {
                       tmp57 = tmp56 === tmp14.id;
                     }
-                    if (!guild_requirements.includes(tmp49.IS_VIEWING)) {
+                    if (!guild_requirements.includes(constants3.IS_VIEWING)) {
                       if (!hasItem) {
                         iter.return();
                         return true;
@@ -290,9 +285,8 @@ function handleSelectedGuildChange() {
               } else {
                 let flag5 = false;
                 for (const item10086 of guild_permissions) {
-                  let tmp32 = item10086;
                   let deserializer = BigFlagUtilsAll;
-                  if (PermissionStore.can(deserializer.deserialize(tmp32), tmp14)) {
+                  if (PermissionStore.can(deserializer.deserialize(item10086), tmp14)) {
                     flag5 = true;
                     obj3.return();
                     break;
@@ -384,10 +378,9 @@ function handleSelectedGuildChange() {
               }
             }
           }
-          let tmp24 = constants3;
           if (!guild_requirements.includes(constants3.IS_COMMUNITY)) {
-            if (!guild_requirements.includes(tmp24.IS_HUB)) {
-              if (!guild_requirements.includes(tmp24.GUILD_PERMISSIONS)) {
+            if (!guild_requirements.includes(constants3.IS_HUB)) {
+              if (!guild_requirements.includes(constants3.GUILD_PERMISSIONS)) {
                 currentUser = currentUser.getCurrentUser();
                 let id;
                 if (currentUser != null) {
@@ -395,9 +388,8 @@ function handleSelectedGuildChange() {
                 }
                 let tmp44 = id === tmp14.ownerId;
                 let canResult = PermissionStore.can(constants2.ADMINISTRATOR, tmp14);
-                let tmp49 = constants3;
                 if (!guild_requirements.includes(constants3.IS_OWNER)) {
-                  if (!guild_requirements.includes(tmp49.IS_ADMIN)) {
+                  if (!guild_requirements.includes(constants3.IS_ADMIN)) {
                     if (obj == null) {
                       obj = {};
                     }
@@ -409,7 +401,7 @@ function handleSelectedGuildChange() {
                     if (tmp57) {
                       tmp57 = tmp56 === tmp14.id;
                     }
-                    if (!guild_requirements.includes(tmp49.IS_VIEWING)) {
+                    if (!guild_requirements.includes(constants3.IS_VIEWING)) {
                       if (!hasItem) {
                         iter.return();
                         return true;
@@ -422,9 +414,8 @@ function handleSelectedGuildChange() {
               } else {
                 let flag5 = false;
                 for (const item10086 of guild_permissions) {
-                  let tmp32 = item10086;
                   let deserializer = BigFlagUtilsAll;
-                  if (PermissionStore.can(deserializer.deserialize(tmp32), tmp14)) {
+                  if (PermissionStore.can(deserializer.deserialize(item10086), tmp14)) {
                     flag5 = true;
                     obj3.return();
                     break;

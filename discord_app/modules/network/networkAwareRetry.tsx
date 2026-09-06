@@ -5,7 +5,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = fn;
-let closure_5 = async function _networkAwareRetry(arg0, value) {
+let closure_5 = async function _networkAwareRetry(arg0) {
   if (1 === tmp7) {
     if (arg0 === 1) {
       c7 = 3;

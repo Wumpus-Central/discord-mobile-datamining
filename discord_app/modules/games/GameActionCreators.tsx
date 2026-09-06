@@ -15,11 +15,11 @@ function requestGames() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = async function _requestGames(game_ids) {
+let closure_7 = async function _requestGames() {
   c4 = 0;
   c5 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_2 = tmp3;
     closure_129_0 = game_ids;
     const HTTP = closure_2_0(dependencyMap[3]).HTTP;
@@ -43,7 +43,7 @@ let closure_7 = async function _requestGames(game_ids) {
     return value;
   })();
 };
-let closure_9 = async function _fetchGamesWithSupplementalData(arg0, value) {
+let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -90,7 +90,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0, value) {
   }
 };
 const Endpoints = fn(1074).Endpoints;
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (v3 === 2) {
     v3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

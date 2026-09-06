@@ -28,13 +28,11 @@ export default noop.memo(function GuildInviteRow(arg0) {
   });
   let obj = { importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
   obj = { guild, size: null };
-  let tmp2 = jsx;
   const tmp3 = guild;
   const tmp4 = jsx(require("InviteButton"), { sendState: tmp, onPressSend: handlePress });
   obj.size = require("GuildIcon").GuildIconSizes.SMALL;
   obj.children = jsx(require("GuildIcon"), { guild, size: null });
   const tmp5 = require("GuildIcon");
-  const tmp6 = require;
   obj = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = require("util").intl;
   obj.children = intl.format(require("util").t.zRl6XR, { count: row.memberCount });
@@ -45,5 +43,5 @@ export default noop.memo(function GuildInviteRow(arg0) {
     tmp9 = tmp === InviteSendStates.SENT;
   }
   const tmp8 = jsx(require("Text/Text").Text, { variant: "text-xs/medium", color: "text-default", children: null });
-  return tmp2(tmp6(tmp3[10]).TableRow, { icon: tmp7, label: guild.name, trailing: tmp4, subLabel: jsx(require("Text/Text").Text, { variant: "text-xs/medium", color: "text-default", children: null }), onPress: handlePress, disabled: tmp9, accessibilityState: { disabled: tmp9 }, start, end });
+  return jsx(require("TableRow").TableRow, { icon: tmp7, label: guild.name, trailing: tmp4, subLabel: jsx(require("Text/Text").Text, { variant: "text-xs/medium", color: "text-default", children: null }), onPress: handlePress, disabled: tmp9, accessibilityState: { disabled: tmp9 }, start, end });
 });

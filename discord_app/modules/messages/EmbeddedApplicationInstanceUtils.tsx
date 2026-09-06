@@ -13,10 +13,10 @@ function getJoinOrStartButtonState(channel) {
   const t = util.t;
   if (null == embeddedActivity) {
     let stringResult = string(t.RscU7I);
-    let tmp6 = tmp2;
+    let tmp6 = require;
   } else {
     stringResult = string(t.sqe0hj);
-    tmp6 = tmp2;
+    tmp6 = require;
   }
   obj.text = stringResult;
   const result = tmp6(9546).isActivitiesInTextEnabled(channel.channel);

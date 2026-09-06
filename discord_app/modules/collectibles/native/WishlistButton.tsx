@@ -242,7 +242,7 @@ class WishlistButtonBase {
             const items = [closure_6.button, closure_8, , , , ];
             let midnight = closure_7;
             if (closure_7) {
-              midnight = tmp.midnight;
+              midnight = closure_6.midnight;
             }
             items[2] = midnight;
             if (pressed) {
@@ -253,7 +253,7 @@ class WishlistButtonBase {
             }
             items[3] = pressed;
             if (disabled) {
-              disabled = tmp.disabled;
+              disabled = closure_6.disabled;
             }
             items[4] = disabled;
             items[5] = _slicedToArray;

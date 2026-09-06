@@ -6,6 +6,7 @@ import useAnalyticsLocations from "useAnalyticsLocations" /* 7162 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import GameProfileHeaderDefault from "GameProfileHeader" /* 8714 */;
 import GameProfileMediaDefault from "GameProfileMedia" /* 8718 */;
+import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 8721 */;
 import GameProfileReviewsDefault from "GameProfileReviews" /* 8722 */;
 import GameProfileSummaryDefault from "GameProfileSummary" /* 8732 */;
 import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 8733 */;
@@ -75,8 +76,8 @@ export default function GameProfileView(arg0) {
       children: null
     };
     const obj2 = { game, websiteButtons, trackAction };
-    obj1.children = tmp5(tmp2(8721), obj2);
-    tmp5Result = tmp5(tmp7, obj1);
+    obj1.children = hasOwnProperty(GameProfileStoreLinksDefault, obj2);
+    tmp5Result = hasOwnProperty(View, obj1);
   }
   items2[1] = tmp5Result;
   items2[2] = hasOwnProperty(GameProfileReviewsDefault, { game, trackAction });

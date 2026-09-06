@@ -100,8 +100,8 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   [tmp17, tmp18] = _slicedToArray(fingerprintUserKey.useMemo(() => SecureFramesUtils.getUserVerifyStateText(memo, name), items5), 2);
   const effect1 = fingerprintUserKey.useEffect(() => {
     if (constants.OTHER_USER_ALREADY_VERIFIED !== memo) {
-      if (constants.MATCH !== tmp) {
-        const obj = { channelId, userId, reason: tmp, keyVersion };
+      if (constants.MATCH !== memo) {
+        const obj = { channelId, userId, reason: memo, keyVersion };
         const result = obj.trackE2EEUserVerificationFailed(obj);
       }
     }
@@ -128,7 +128,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     }
     if (tmp2) {
       let obj = SecureFramesUtils;
-      obj.addVerification(userId, fingerprintUserKey, isOtherUserKeyPersistent, tmp, AnalyticsLocations.DEEP_LINK);
+      obj.addVerification(userId, fingerprintUserKey, isOtherUserKeyPersistent, channelId, AnalyticsLocations.DEEP_LINK);
       ActionSheetActionCreatorsDefault.hideActionSheet();
       obj = { key, iconColor: "text-feedback-positive", IconComponent: CircleCheckIcon.CircleCheckIcon, content: null };
       const intl = util.intl;
@@ -150,7 +150,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     obj4 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: tmp18 };
     items9[2] = tmp23(tmp2(tmp3[29]).Text, obj4);
     obj5 = { style: tmp.helpMessage, userId, userKey: fingerprintUserKey };
-    items9[3] = tmp23(channelId(tmp3[30]), obj5);
+    items9[3] = tmp23(tmp14(tmp3[30]), obj5);
     obj6 = { spacing: 12, style: tmp.buttons, children: null };
     obj7 = { variant: "primary", onPress: callback1, text: null, disabled: null };
     let intl = tmp2(tmp3[25]).intl;
@@ -165,10 +165,12 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     obj8.text = intl2.string(tmp2(tmp3[25]).t["ETE/oC"]);
     items10[1] = tmp23(tmp2(tmp3[32]).Button, obj8);
     obj6.children = items10;
-    items9[4] = tmp24(tmp2(tmp3[31]).Stack, obj6);
+    items9[4] = closure_14(tmp2(tmp3[31]).Stack, obj6);
     obj1.children = items9;
-    obj.children = tmp24(tmp25, obj1);
+    obj.children = closure_14(tmp25, obj1);
     return tmp23(userId(fingerprint[26]).BottomSheet, obj);
   }
   memo1 = tmp23(fingerprint2, {});
+  tmp14 = channelId;
+  const tmp16 = _slicedToArray(fingerprintUserKey.useMemo(() => SecureFramesUtils.getUserVerifyStateText(memo, name), items5), 2);
 };

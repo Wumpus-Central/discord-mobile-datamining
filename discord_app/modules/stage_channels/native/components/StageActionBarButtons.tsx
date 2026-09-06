@@ -18,6 +18,7 @@ import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators"
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
 import Form from "Form" /* 8593 */;
 import _modDef8615 from "module_8615" /* 8615 */;
+import CallsUtils from "CallsUtils" /* 9082 */;
 import CallBarActionAll from "CallBarAction" /* 9497 */;
 import useStageChannelConnectAction from "useStageChannelConnectAction" /* 9674 */;
 import _modDef9900 from "module_9900" /* 9900 */;
@@ -233,6 +234,7 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
     obj.isSmallSize = isSmallSize;
     closure_12(CallBarActionAll.ActionButton, obj);
   }
+  obj2 = stateFromStores(9901);
 };
 export const DisconnectStageButton = function DisconnectStageButton(channel) {
   channel = channel.channel;
@@ -243,11 +245,11 @@ export const DisconnectStageButton = function DisconnectStageButton(channel) {
   obj.IconComponent = channel(9073).DoorExitIcon;
   obj.onPress = function onPress() {
     if (shouldShowEndStageModalDefault(channel)) {
-      let tmp3Result = tmp3(8394);
-      tmp3Result.openEndStageModal(tmp2);
+      let tmp3Result = StageChannelActionCreatorExtras;
+      tmp3Result.openEndStageModal(channel);
     } else {
-      tmp3Result = tmp3(9082);
-      tmp3Result.handleDisconnect(tmp2);
+      tmp3Result = CallsUtils;
+      tmp3Result.handleDisconnect(channel);
     }
   };
   obj.isSmallSize = channel.isSmallSize;

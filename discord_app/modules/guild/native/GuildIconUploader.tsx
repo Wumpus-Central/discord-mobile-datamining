@@ -6,6 +6,8 @@ import util from "util" /* 1114 */;
 import shared from "shared" /* 4411 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
+import _modDef11799 from "module_11799" /* 11799 */;
+import _modDef11800 from "module_11800" /* 11800 */;
 import _modDef11801 from "module_11801" /* 11801 */;
 import _modDef11802 from "module_11802" /* 11802 */;
 import noop from "module_19" /* 19 */;
@@ -51,21 +53,19 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1.style = items1;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = tmp13(11799);
+      let tmp13Result = _modDef11799;
     } else {
-      tmp13Result = tmp13(11800);
+      tmp13Result = _modDef11800;
     }
     obj = { source: tmp13Result };
     const items2 = [timestampProducer(React4, obj), ];
     const obj2 = { style: tmp.emptyGuildIconText, variant: "text-xs/bold", color: "text-default", children: null };
-    const intl = tmp10(1114).intl;
+    const intl = util.intl;
     obj6 = shared;
-    const tmp6 = React5;
-    const tmp7 = React3;
     obj2.children = intl.string(util.t["3UB9ad"]).toUpperCase();
     items2[1] = timestampProducer(Text_Text.Text, obj2);
     obj1.children = items2;
-    tmp6Result = tmp6(tmp7, obj1);
+    tmp6Result = React5(React3, obj1);
     const str = intl.string(util.t["3UB9ad"]);
   }
   return tmp6Result;
@@ -87,12 +87,12 @@ prototype["renderUpload"] = function renderUpload() {
     items1[1] = obj3;
     obj2.style = items1;
     obj2.source = _modDef11801;
-    obj1.children = tmp2(React4, obj2);
-    obj.children = tmp2(tmp3, obj1);
+    obj1.children = timestampProducer(React4, obj2);
+    obj.children = timestampProducer(React3, obj1);
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
     const obj4 = { source: _modDef11802 };
-    obj.children = tmp2(React4, obj4);
+    obj.children = timestampProducer(React4, obj4);
   }
   return timestampProducer(React3, obj);
 };
@@ -101,11 +101,11 @@ prototype["render"] = function render() {
   const tmp = closure_8(this.context);
   ({ style, onPress, icon } = this.props);
   if (null != icon) {
-    const intl2 = tmp3(1114).intl;
-    let stringResult = intl2.string(tmp3(1114).t.VATxfe);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.VATxfe);
   } else {
-    const intl = tmp3(1114).intl;
-    stringResult = intl.string(tmp3(1114).t["MsUY/S"]);
+    const intl = util.intl;
+    stringResult = intl.string(util.t["MsUY/S"]);
   }
   let obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress, children: null };
   obj = { style: null, children: null };

@@ -54,25 +54,25 @@ export default function CreationIntent(arg0) {
     if (constants2.NUF === trigger) {
       let obj3 = NewUserAnalyticsUtils;
       obj3.trackNUFStep(constants3.STEP_CREATION_INTENT, constants3.STEP_GUILD_CREATE, { skip: false });
-      let tmpResult = tmp(1242);
+      let tmpResult = AnalyticsUtilsDefault;
       let id;
-      if (tmp5 != null) {
-        id = tmp5.id;
+      if (guildTemplate != null) {
+        id = guildTemplate.id;
       }
       const obj1 = { guild_template_name: id };
-      tmpResult.track(tmp3.CREATE_GUILD_VIEWED, obj1);
+      tmpResult.track(constants4.CREATE_GUILD_VIEWED, obj1);
     } else if (tmp8.IN_APP === tmp7) {
-      tmpResult = tmp(1242);
+      tmpResult = AnalyticsUtilsDefault;
       const obj2 = { type: "Create Guild Step 2", location_section: constants5.CREATE_JOIN_GUILD_MODAL };
-      tmpResult.track(tmp3.OPEN_MODAL, obj2);
+      tmpResult.track(constants4.OPEN_MODAL, obj2);
       obj3 = { location_section: constants5.CREATE_JOIN_GUILD_MODAL, guild_template_name: null };
       let id1;
-      if (tmp5 != null) {
-        id1 = tmp5.id;
+      if (guildTemplate != null) {
+        id1 = guildTemplate.id;
       }
       obj3.guild_template_name = id1;
-      tmp(1242).track(tmp3.CREATE_GUILD_VIEWED, obj3);
-      const tmpResult1 = tmp(1242);
+      AnalyticsUtilsDefault.track(constants4.CREATE_GUILD_VIEWED, obj3);
+      const tmpResult1 = AnalyticsUtilsDefault;
     }
   }
   let tmp = closure_13();
@@ -120,47 +120,47 @@ export default function CreationIntent(arg0) {
   const tmp14 = native;
   if (closure_14) {
     obj5.Icon = tmp14.ChairIllocon;
-    const intl5 = tmp2(1114).intl;
-    obj5.message = intl5.string(tmp2(1114).t.uE7zcu);
+    const intl5 = util.intl;
+    obj5.message = intl5.string(util.t.uE7zcu);
     obj5.onPress = function onPress() {
       onPress(false);
     };
-    const items4 = [tmp8(tmp13, obj5), ];
+    const items4 = [closure_11(tmp13, obj5), ];
     const obj6 = { Icon: null, message: null, onPress: null };
-    let tmp12Result = tmp12(12324);
-    obj6.Icon = tmp2(5692).WorldIllocon;
-    const intl6 = tmp2(1114).intl;
-    obj6.message = intl6.string(tmp2(1114).t.h9Q1lG);
+    let tmp12Result = trigger(12324);
+    obj6.Icon = native.WorldIllocon;
+    const intl6 = util.intl;
+    obj6.message = intl6.string(util.t.h9Q1lG);
     obj6.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = tmp8(tmp12Result, obj6);
+    items4[1] = closure_11(tmp12Result, obj6);
     obj4.children = items4;
     let tmp16 = obj4;
   } else {
     obj5.Icon = tmp14.WorldIllocon;
-    const intl3 = tmp2(1114).intl;
-    obj5.message = intl3.string(tmp2(1114).t.h9Q1lG);
+    const intl3 = util.intl;
+    obj5.message = intl3.string(util.t.h9Q1lG);
     obj5.onPress = function onPress() {
       onPress(true);
     };
-    const items5 = [tmp8(tmp13, obj5), ];
+    const items5 = [closure_11(tmp13, obj5), ];
     const obj7 = { Icon: null, message: null, onPress: null };
-    tmp12Result = tmp12(12324);
-    obj7.Icon = tmp2(5692).ChairIllocon;
-    const intl4 = tmp2(1114).intl;
-    obj7.message = intl4.string(tmp2(1114).t.uE7zcu);
+    tmp12Result = trigger(12324);
+    obj7.Icon = native.ChairIllocon;
+    const intl4 = util.intl;
+    obj7.message = intl4.string(util.t.uE7zcu);
     obj7.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = tmp8(tmp12Result, obj7);
+    items5[1] = closure_11(tmp12Result, obj7);
     obj4.children = items5;
     tmp16 = obj4;
   }
   obj3.children = closure_12(TableRowGroup.TableRowGroup, tmp16);
   items3[1] = closure_11(ref, obj3);
   const obj8 = { style: tmp.skipDescription, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl7 = tmp2(1114).intl;
+  const intl7 = util.intl;
   obj8.children = intl7.format(util.t["SMc+Gz"], {
     onSkip() {
       onPress(null);

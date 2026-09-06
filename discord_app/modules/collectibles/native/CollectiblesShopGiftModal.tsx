@@ -20,11 +20,11 @@ function CollectiblesShopGiftModalContent(product) {
   const GiftACOMOrderExperiment = require("ACOMExperiments").GiftACOMOrderExperiment;
   let obj = require("PlatformUtils");
   if (obj.isIOS()) {
-    let GOOGLE = tmp3.APPLE_ADVANCED_COMMERCE;
-    let tmp4 = tmp3;
+    let GOOGLE = PaymentGateways.APPLE_ADVANCED_COMMERCE;
+    let tmp4 = PaymentGateways;
   } else {
-    GOOGLE = tmp3.GOOGLE;
-    tmp4 = tmp3;
+    GOOGLE = PaymentGateways.GOOGLE;
+    tmp4 = PaymentGateways;
   }
   let tmp5 = GOOGLE === tmp4.APPLE_ADVANCED_COMMERCE && GiftACOMOrderExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
   if (!tmp5) {
@@ -104,14 +104,15 @@ export default function CollectiblesShopGiftModal(skuId) {
   } else {
     if (tmpResult.isCollectibleGiftingSupported()) {
       obj = { product: stateFromStores, analyticsLocations: tmp6(items3).analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin, validateRecipient: tmp9 };
-      let tmp10Result = tmp10(CollectiblesShopGiftModalContent, obj);
+      let tmp10Result = <CollectiblesShopGiftModalContent product={stateFromStores} analyticsLocations={tmp6(items3).analyticsLocations} lockedRecipientUser={lockedRecipientUser} onGiftModalDismiss={onGiftModalDismiss} giftingOrigin={giftingOrigin} validateRecipient={tmp9} />;
     } else {
       obj = { onDismiss: onGiftModalDismiss, title: null };
       const intl = tmp(tmp2[24]).intl;
       obj.title = intl.string(tmp(tmp2[24]).t["JCFN/y"]);
-      tmp10Result = tmp10(tmp5(tmp2[23]), obj);
+      tmp10Result = jsx(tmp5(tmp2[23]), { onDismiss: onGiftModalDismiss, title: null });
       const tmp5Result = tmp5(tmp2[23]);
     }
     tmpResult = tmp(tmp2[7]);
   }
+  const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
 };

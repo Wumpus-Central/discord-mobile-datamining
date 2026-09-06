@@ -4,13 +4,14 @@
 import Constants from "Constants" /* 1074 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 4231 */;
+import PriceUtils from "PriceUtils" /* 7234 */;
 import IAPStoreDefault from "IAPStore" /* 7237 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import types from "types" /* 8196 */;
 import _modDef8849 from "module_8849" /* 8849 */;
 import size from "module_2" /* 2 */;
 
-const CollectiblesUtils = tmp(7554);
 function hasAtLeastOneGPlaySynced(nextResult) {
   const products = nextResult.products;
   return products.filter((variants) => {
@@ -32,15 +33,15 @@ function hasAtLeastOneGPlaySynced(nextResult) {
                   if (googleSkuIds != null) {
                     tmp4 = googleSkuIds[closure_1_3.MOBILE];
                   }
-                  const product = closure_1_1(tmp[3]).getProduct(tmp4);
-                  const obj2 = closure_1_1(tmp[3]);
+                  const product = closure_1_1(dependencyMap[3]).getProduct(tmp4);
+                  const obj2 = closure_1_1(dependencyMap[3]);
                   const googleSkuIds2 = variants.googleSkuIds;
                   let tmp7;
                   if (googleSkuIds2 != null) {
                     tmp7 = googleSkuIds2[closure_1_3.MOBILE_PREMIUM_TIER_2];
                   }
-                  everyResult = null != product && null != closure_1_1(tmp[3]).getProduct(tmp7);
-                  const tmp2Result = closure_1_1(tmp[3]);
+                  everyResult = null != product && null != closure_1_1(dependencyMap[3]).getProduct(tmp7);
+                  const tmp2Result = closure_1_1(dependencyMap[3]);
                 }
                 return everyResult;
               });
@@ -50,15 +51,15 @@ function hasAtLeastOneGPlaySynced(nextResult) {
               if (googleSkuIds != null) {
                 tmp4 = googleSkuIds[closure_1_3.MOBILE];
               }
-              const product = closure_1_1(tmp[3]).getProduct(tmp4);
-              const obj2 = closure_1_1(tmp[3]);
+              const product = closure_1_1(dependencyMap[3]).getProduct(tmp4);
+              const obj2 = closure_1_1(dependencyMap[3]);
               const googleSkuIds2 = variants.googleSkuIds;
               let tmp7;
               if (googleSkuIds2 != null) {
                 tmp7 = googleSkuIds2[closure_1_3.MOBILE_PREMIUM_TIER_2];
               }
-              everyResult = null != product && null != closure_1_1(tmp[3]).getProduct(tmp7);
-              const tmp2Result = closure_1_1(tmp[3]);
+              everyResult = null != product && null != closure_1_1(dependencyMap[3]).getProduct(tmp7);
+              const tmp2Result = closure_1_1(dependencyMap[3]);
             }
             return everyResult;
           });
@@ -68,15 +69,15 @@ function hasAtLeastOneGPlaySynced(nextResult) {
           if (googleSkuIds != null) {
             tmp4 = googleSkuIds[closure_1_3.MOBILE];
           }
-          const product = closure_1_1(tmp[3]).getProduct(tmp4);
-          const obj2 = closure_1_1(tmp[3]);
+          const product = closure_1_1(dependencyMap[3]).getProduct(tmp4);
+          const obj2 = closure_1_1(dependencyMap[3]);
           const googleSkuIds2 = variants.googleSkuIds;
           let tmp7;
           if (googleSkuIds2 != null) {
             tmp7 = googleSkuIds2[closure_1_3.MOBILE_PREMIUM_TIER_2];
           }
-          everyResult = null != product && null != closure_1_1(tmp[3]).getProduct(tmp7);
-          const tmp2Result = closure_1_1(tmp[3]);
+          everyResult = null != product && null != closure_1_1(dependencyMap[3]).getProduct(tmp7);
+          const tmp2Result = closure_1_1(dependencyMap[3]);
         }
         return everyResult;
       });
@@ -86,15 +87,14 @@ function hasAtLeastOneGPlaySynced(nextResult) {
       if (googleSkuIds != null) {
         tmp4 = googleSkuIds[closure_1_3.MOBILE];
       }
-      let product = require("IAPStore").getProduct(tmp4);
-      let obj2 = require("IAPStore");
+      let product = IAPStoreDefault.getProduct(tmp4);
       let googleSkuIds2 = variants.googleSkuIds;
       let tmp7;
       if (googleSkuIds2 != null) {
         tmp7 = googleSkuIds2[closure_1_3.MOBILE_PREMIUM_TIER_2];
       }
-      everyResult = null != product && null != require("IAPStore").getProduct(tmp7);
-      let tmp2Result = require("IAPStore");
+      everyResult = null != product && null != IAPStoreDefault.getProduct(tmp7);
+      let tmp2Result = IAPStoreDefault;
     }
     return everyResult;
   }).length > 0;
@@ -102,20 +102,20 @@ function hasAtLeastOneGPlaySynced(nextResult) {
 let closure_3 = Constants.PriceSetAssignmentPurchaseTypes;
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesUtils.tsx");
 
-export const getFormattedPriceForCollectiblesProduct = function getFormattedPriceForCollectiblesProduct(googleSkuIds, arg1, arg2) {
+export const getFormattedPriceForCollectiblesProduct = function getFormattedPriceForCollectiblesProduct(googleSkuIds, hasShopDiscount, arg2) {
   if (arg2) {
-    if (arg1) {
-      let MOBILE = tmp.MOBILE_PREMIUM_TIER_2;
+    if (hasShopDiscount) {
+      let MOBILE = closure_3.MOBILE_PREMIUM_TIER_2;
     } else {
-      MOBILE = tmp.MOBILE;
+      MOBILE = closure_3.MOBILE;
     }
   } else {
-    if (arg1) {
-      let DEFAULT = tmp.PREMIUM_TIER_2;
-      let tmp2 = tmp;
+    if (hasShopDiscount) {
+      let DEFAULT = closure_3.PREMIUM_TIER_2;
+      let tmp2 = closure_3;
     } else {
-      DEFAULT = tmp.DEFAULT;
-      tmp2 = tmp;
+      DEFAULT = closure_3.DEFAULT;
+      tmp2 = closure_3;
     }
     let obj = BillingPlatformUtils;
     if (obj.isGooglePlayBillingSupported()) {
@@ -137,7 +137,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
         result = null;
       }
     } else {
-      let tmp7Result = tmp7(7554);
+      let tmp7Result = CollectiblesUtils;
       result = tmp7Result.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
     }
     if (null == result) {
@@ -145,23 +145,23 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
     } else if (null != result.priceString) {
       let priceString = result.priceString;
     } else {
-      tmp7Result = tmp7(7234);
+      tmp7Result = PriceUtils;
       priceString = tmp7Result.formatPrice(result.amount, result.currency);
     }
   }
 };
-export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(googleSkuIds, arg1) {
+export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType) {
   let obj = BillingPlatformUtils;
   if (obj.isGooglePlayBillingSupported()) {
-    if (arg1 !== closure_3.MOBILE) {
-      if (arg1 !== closure_3.MOBILE_PREMIUM_TIER_2) {
+    if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE) {
+      if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE_PREMIUM_TIER_2) {
         return null;
       }
     }
     googleSkuIds = googleSkuIds.googleSkuIds;
     let tmp5;
     if (googleSkuIds != null) {
-      tmp5 = googleSkuIds[arg1];
+      tmp5 = googleSkuIds[defaultPriceSetAssignmentPurchaseType];
     }
     const product = IAPStoreDefault.getProduct(tmp5);
     let tmp7;
@@ -172,7 +172,7 @@ export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(
     }
     return tmp7;
   } else {
-    return CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, arg1);
+    return CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType);
   }
 };
 export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(product, stateFromStores) {
@@ -183,7 +183,7 @@ export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(prod
     const googleSkuIds = product.googleSkuIds;
     let tmp5;
     if (googleSkuIds != null) {
-      tmp5 = googleSkuIds[obj.canUseShopDiscounts(obj, stateFromStores) ? tmp3.MOBILE_PREMIUM_TIER_2 : tmp3.MOBILE];
+      tmp5 = googleSkuIds[obj.canUseShopDiscounts(obj, stateFromStores) ? closure_3.MOBILE_PREMIUM_TIER_2 : closure_3.MOBILE];
     }
     if (tmp5 == null) {
       tmp5 = null;
@@ -213,15 +213,15 @@ export const isGPlaySynced = function isGPlaySynced(variants) {
                     if (googleSkuIds != null) {
                       tmp4 = googleSkuIds[closure_1_3.MOBILE];
                     }
-                    const product = closure_1_1(tmp[3]).getProduct(tmp4);
-                    const obj2 = closure_1_1(tmp[3]);
+                    const product = closure_1_1(dependencyMap[3]).getProduct(tmp4);
+                    const obj2 = closure_1_1(dependencyMap[3]);
                     const googleSkuIds2 = variants.googleSkuIds;
                     let tmp7;
                     if (googleSkuIds2 != null) {
                       tmp7 = googleSkuIds2[closure_1_3.MOBILE_PREMIUM_TIER_2];
                     }
-                    everyResult = null != product && null != closure_1_1(tmp[3]).getProduct(tmp7);
-                    const tmp2Result = closure_1_1(tmp[3]);
+                    everyResult = null != product && null != closure_1_1(dependencyMap[3]).getProduct(tmp7);
+                    const tmp2Result = closure_1_1(dependencyMap[3]);
                   }
                   return everyResult;
                 });
@@ -231,15 +231,15 @@ export const isGPlaySynced = function isGPlaySynced(variants) {
                 if (googleSkuIds != null) {
                   tmp4 = googleSkuIds[closure_1_3.MOBILE];
                 }
-                const product = closure_1_1(tmp[3]).getProduct(tmp4);
-                const obj2 = closure_1_1(tmp[3]);
+                const product = closure_1_1(dependencyMap[3]).getProduct(tmp4);
+                const obj2 = closure_1_1(dependencyMap[3]);
                 const googleSkuIds2 = variants.googleSkuIds;
                 let tmp7;
                 if (googleSkuIds2 != null) {
                   tmp7 = googleSkuIds2[closure_1_3.MOBILE_PREMIUM_TIER_2];
                 }
-                everyResult = null != product && null != closure_1_1(tmp[3]).getProduct(tmp7);
-                const tmp2Result = closure_1_1(tmp[3]);
+                everyResult = null != product && null != closure_1_1(dependencyMap[3]).getProduct(tmp7);
+                const tmp2Result = closure_1_1(dependencyMap[3]);
               }
               return everyResult;
             });
@@ -249,15 +249,15 @@ export const isGPlaySynced = function isGPlaySynced(variants) {
             if (googleSkuIds != null) {
               tmp4 = googleSkuIds[closure_1_3.MOBILE];
             }
-            const product = closure_1_1(tmp[3]).getProduct(tmp4);
-            const obj2 = closure_1_1(tmp[3]);
+            const product = closure_1_1(dependencyMap[3]).getProduct(tmp4);
+            const obj2 = closure_1_1(dependencyMap[3]);
             const googleSkuIds2 = variants.googleSkuIds;
             let tmp7;
             if (googleSkuIds2 != null) {
               tmp7 = googleSkuIds2[closure_1_3.MOBILE_PREMIUM_TIER_2];
             }
-            everyResult = null != product && null != closure_1_1(tmp[3]).getProduct(tmp7);
-            const tmp2Result = closure_1_1(tmp[3]);
+            everyResult = null != product && null != closure_1_1(dependencyMap[3]).getProduct(tmp7);
+            const tmp2Result = closure_1_1(dependencyMap[3]);
           }
           return everyResult;
         });
@@ -267,15 +267,15 @@ export const isGPlaySynced = function isGPlaySynced(variants) {
         if (googleSkuIds != null) {
           tmp4 = googleSkuIds[closure_1_3.MOBILE];
         }
-        const product = closure_1_1(tmp[3]).getProduct(tmp4);
-        const obj2 = closure_1_1(tmp[3]);
+        const product = closure_1_1(dependencyMap[3]).getProduct(tmp4);
+        const obj2 = closure_1_1(dependencyMap[3]);
         const googleSkuIds2 = variants.googleSkuIds;
         let tmp7;
         if (googleSkuIds2 != null) {
           tmp7 = googleSkuIds2[closure_1_3.MOBILE_PREMIUM_TIER_2];
         }
-        everyResult = null != product && null != closure_1_1(tmp[3]).getProduct(tmp7);
-        const tmp2Result = closure_1_1(tmp[3]);
+        everyResult = null != product && null != closure_1_1(dependencyMap[3]).getProduct(tmp7);
+        const tmp2Result = closure_1_1(dependencyMap[3]);
       }
       return everyResult;
     });

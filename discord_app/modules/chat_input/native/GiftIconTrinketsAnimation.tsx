@@ -3,12 +3,13 @@
 // Module 12250 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
+import StringUtils from "StringUtils" /* 1925 */;
 import useToken from "useToken" /* 4262 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
 const PlatformUtils = APNGPlayer(1115);
-const FastImageDefault = tmp(5587);
 const APNGPlayer2 = APNGPlayer(8808);
 require = fn;
 const View = fn(17).View;
@@ -34,17 +35,18 @@ export const GiftIconTrinketsAnimation = noop.memo((trinketsAnimationUrl) => {
     if (APNGPlayerResult.isAndroid()) {
       APNGPlayer = APNGPlayer2.APNGPlayer;
       obj = { url: trinketsAnimationUrl, autoplay: !stateFromStores, style: trinketsRefresh };
-      let tmp4Result = tmp4(APNGPlayer, obj);
+      let tmp4Result = <APNGPlayer url={trinketsAnimationUrl} autoplay={!stateFromStores} style={trinketsRefresh} />;
     } else {
       obj = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
       obj1 = { uri: trinketsAnimationUrl };
       obj.source = obj1;
       obj.style = trinketsRefresh;
       obj.enableAnimation = !stateFromStores;
-      tmp4Result = tmp4(FastImageDefault, obj);
+      tmp4Result = jsx(FastImageDefault, { source: null, style: null, resizeMode: "contain", enableAnimation: null });
     }
     obj.children = tmp4Result;
-    tmp4Result = tmp4(View, obj);
+    tmp4Result = <View style={tmp2.containerRefresh} pointerEvents="none">{null}</View>;
     APNGPlayerResult = PlatformUtils;
   }
+  obj4 = StringUtils;
 });

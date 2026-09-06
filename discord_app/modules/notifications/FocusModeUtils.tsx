@@ -4,9 +4,9 @@
 import wrappers from "wrappers" /* 1218 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
 
+const AlertActionCreatorsDefault = tmp5(4904);
 require = fn;
 const constants = fn(4212).NotificationSettingsUpdateType;
 const Constants = fn(1074);

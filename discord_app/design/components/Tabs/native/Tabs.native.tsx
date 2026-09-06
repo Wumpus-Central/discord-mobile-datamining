@@ -32,9 +32,9 @@ let closure_11 = createStyles.createStyles((gap, arg1) => {
   const size = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: nativeDefault.space.PX_16 };
   obj.indicatorContainer = size;
   if ("gradient-background" === arg1) {
-    let TEXT_BRAND = tmp(576).colors.TEXT_STRONG;
+    let TEXT_BRAND = nativeDefault.colors.TEXT_STRONG;
   } else {
-    TEXT_BRAND = tmp(576).colors.TEXT_BRAND;
+    TEXT_BRAND = nativeDefault.colors.TEXT_BRAND;
   }
   obj.indicator = { height: 2, backgroundColor: TEXT_BRAND, borderTopStartRadius: nativeDefault.radii.xs, borderTopEndRadius: nativeDefault.radii.xs };
   return obj;
@@ -142,14 +142,14 @@ export const Tabs = function Tabs(state) {
     if (pressedIndex.get() < 0) {
       if (scrollOverflow.get() < 0) {
         const obj4 = ReanimatedRexport2;
-        const interpolateResult = obj4.interpolate(obj3.get(), [-50, 0], [0.9, 1], "clamp");
+        const interpolateResult = obj4.interpolate(scrollOverflow.get(), [-50, 0], [0.9, 1], "clamp");
         let sum = value + -derivedValue1.get() * (1 - interpolateResult) / 2;
         num = interpolateResult;
       } else {
         sum = value;
-        if (obj3.get() > 0) {
+        if (scrollOverflow.get() > 0) {
           const obj11 = ReanimatedRexport2;
-          const interpolateResult1 = obj11.interpolate(obj3.get(), [50, 0], [0.9, 1], "clamp");
+          const interpolateResult1 = obj11.interpolate(scrollOverflow.get(), [50, 0], [0.9, 1], "clamp");
           sum = value + derivedValue1.get() * (1 - interpolateResult1) / 2;
           num = interpolateResult1;
         }

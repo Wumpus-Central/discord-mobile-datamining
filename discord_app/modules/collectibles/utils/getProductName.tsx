@@ -16,9 +16,9 @@ export const getCardProductName = function getCardProductName(product) {
       if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
         str2 = "";
         if (product.items.length > 0) {
-          const intl2 = tmp3(1114).intl;
+          const intl2 = util.intl;
           let obj = { count: product.items.length, productName: "" };
-          str2 = intl2.format(tmp3(1114).t.UTc0ny, obj);
+          str2 = intl2.format(util.t.UTc0ny, obj);
         }
       }
     }
@@ -45,10 +45,10 @@ export const getProductName = function getProductName(product) {
     if ("baseVariantName" in product) {
       if (null != product.baseVariantName) {
         if (product.variantLabel !== tmp3) {
-          const intl = tmp(1114).intl;
+          const intl = util.intl;
           const obj = { baseVariantName: null, variantLabel: null };
           ({ baseVariantName: obj.baseVariantName, variantLabel: obj.variantLabel } = product);
-          let name = intl.formatToPlainString(tmp(1114).t.BZN5k2, obj);
+          let name = intl.formatToPlainString(util.t.BZN5k2, obj);
         }
         return name;
       }
@@ -63,10 +63,10 @@ export const getPurchasedProductName = function getPurchasedProductName(baseVari
     const string = util.intl.string;
     if (null != baseVariantName.baseVariantName) {
       if (baseVariantName.variantLabel !== tmp3) {
-        const intl = tmp(1114).intl;
+        const intl = util.intl;
         const obj = { baseVariantName: null, variantLabel: null };
         ({ baseVariantName: obj.baseVariantName, variantLabel: obj.variantLabel } = baseVariantName);
-        let name = intl.formatToPlainString(tmp(1114).t.BZN5k2, obj);
+        let name = intl.formatToPlainString(util.t.BZN5k2, obj);
       }
       return name;
     }
@@ -78,21 +78,21 @@ export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(pr
     let obj1 = CollectiblesProductUtils;
     const productType = obj1.getProductType(product);
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === productType) {
-      const intl5 = tmp3(1114).intl;
+      const intl5 = util.intl;
       let obj = { product: "" };
-      return intl5.formatToPlainString(tmp3(1114).t.lvBzLi, obj);
-    } else if (tmp3(1889).CollectiblesItemType.PROFILE_EFFECT === productType) {
-      const intl4 = tmp3(1114).intl;
+      return intl5.formatToPlainString(util.t.lvBzLi, obj);
+    } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === productType) {
+      const intl4 = util.intl;
       obj = { product: "" };
-      return intl4.formatToPlainString(tmp3(1114).t.eR7moP, obj);
-    } else if (tmp3(1889).CollectiblesItemType.NAMEPLATE === productType) {
-      const intl3 = tmp3(1114).intl;
+      return intl4.formatToPlainString(util.t.eR7moP, obj);
+    } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === productType) {
+      const intl3 = util.intl;
       obj1 = { product: "" };
-      return intl3.formatToPlainString(tmp3(1114).t.YFOwHj, obj1);
-    } else if (tmp3(1889).CollectiblesItemType.PROFILE_FRAME === productType) {
-      const intl2 = tmp3(1114).intl;
+      return intl3.formatToPlainString(util.t.YFOwHj, obj1);
+    } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === productType) {
+      const intl2 = util.intl;
       const obj2 = { product: "" };
-      return intl2.formatToPlainString(tmp3(1114).t.vov8LX, obj2);
+      return intl2.formatToPlainString(util.t.vov8LX, obj2);
     } else {
       return "";
     }

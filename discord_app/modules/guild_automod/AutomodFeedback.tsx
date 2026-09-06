@@ -26,11 +26,11 @@ export const RaidAlertType = { JOIN_RAID: "JOIN_RAID", MENTION_RAID: "MENTION_RA
 export const RaidResolutionType = obj;
 export const getMostImportantRaidResolutionType = function getMostImportantRaidResolutionType(c3) {
   if (c3.includes(obj.LEGITIMATE_ACTIVITY)) {
-    let DM_SPAM = tmp.LEGITIMATE_ACTIVITY;
-  } else if (c3.includes(tmp.DM_SPAM)) {
-    DM_SPAM = tmp.DM_SPAM;
+    let DM_SPAM = obj.LEGITIMATE_ACTIVITY;
+  } else if (c3.includes(obj.DM_SPAM)) {
+    DM_SPAM = obj.DM_SPAM;
   } else {
-    DM_SPAM = c3.includes(tmp.JOIN_RAID) ? tmp.JOIN_RAID : tmp.OTHER;
+    DM_SPAM = c3.includes(obj.JOIN_RAID) ? obj.JOIN_RAID : obj.OTHER;
   }
   return DM_SPAM;
 };

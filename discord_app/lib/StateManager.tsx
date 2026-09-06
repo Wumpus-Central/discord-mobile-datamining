@@ -53,10 +53,9 @@ prototype["update"] = function update() {
     const _Object = Object;
     const keys = Object.keys(nextState);
     for (const item10021 of keys) {
-      let tmp8 = item10021;
       let dirty = self.dirty;
       if (!dirty) {
-        dirty = !_modDef1332(self.state[tmp8], nextState[tmp8]);
+        dirty = !_modDef1332(self.state[item10021], nextState[item10021]);
       }
       self.dirty = dirty;
       continue;

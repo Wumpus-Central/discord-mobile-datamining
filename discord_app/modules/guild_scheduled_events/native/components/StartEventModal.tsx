@@ -91,7 +91,7 @@ export default function StartEventModal(event) {
       onCloseActionSheet(flag);
     }
   }
-  closure_8 = async function _handleStart(arg0, value) {
+  closure_8 = async function _handleStart() {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -177,7 +177,7 @@ export default function StartEventModal(event) {
   let hasItem = set.has(event.entity_type);
   if (hasItem) {
     obj2 = { channelId: event.channel_id };
-    hasItem = tmp13(onCloseActionSheet(tmp3[22]), obj2);
+    hasItem = closure_12(onCloseActionSheet(tmp3[22]), obj2);
   }
   const items6 = [hasItem, , ];
   let tmp13Result = null;
@@ -188,14 +188,14 @@ export default function StartEventModal(event) {
           closure_5((arg0) => !arg0);
         }
     };
-    tmp13Result = tmp13(tmp2(tmp3[23]).NotificationToggle, obj3);
+    tmp13Result = closure_12(tmp2(tmp3[23]).NotificationToggle, obj3);
   }
   items6[1] = tmp13Result;
   const obj4 = { style: tmp.buttonContainer, children: null };
   tmp13Result = null;
   if (null != error) {
     const obj5 = { variant: "text-sm/medium", color: "text-feedback-critical", children: error.getAnyErrorMessage() };
-    tmp13Result = tmp13(tmp2(tmp3[16]).Text, obj5);
+    tmp13Result = closure_12(tmp2(tmp3[16]).Text, obj5);
   }
   const items7 = [tmp13Result, ];
   const obj6 = { variant: "active", text: null, onPress: null, disabled: null, loading: null };

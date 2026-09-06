@@ -1,6 +1,9 @@
 // === Module 9749: CreateChannelTypeDescription ===
 
 // Module 9749 (CreateChannelTypeDescription)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import GuildProfileVisibility from "GuildProfileVisibility" /* 5551 */;
 import useGuildProfile from "useGuildProfile" /* 9187 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +23,7 @@ export default function CreateChannelTypeDescription(guildId) {
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   let hasItem = null != guildProfile;
   if (hasItem) {
-    const VISIBLE = tmp(5551).GuildProfileVisibilitySets.VISIBLE;
+    const VISIBLE = GuildProfileVisibility.GuildProfileVisibilitySets.VISIBLE;
     hasItem = VISIBLE.has(guildProfile.visibility);
   }
   let tmp6 = !tmp5;
@@ -38,9 +41,9 @@ export default function CreateChannelTypeDescription(guildId) {
   if (tmp6) {
     obj = { children: null };
     obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
-    const intl = tmp(1114).intl;
-    obj.children = intl.string(tmp(1114).t["2Ab4Id"]);
-    obj.children = jsx(tmp(4556).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
+    const intl = util.intl;
+    obj.children = intl.string(util.t["2Ab4Id"]);
+    obj.children = jsx(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
     tmp9 = <View variant="text-sm/normal" color="text-subtle">{null}</View>;
   }
   return tmp9;

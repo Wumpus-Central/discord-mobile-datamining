@@ -56,7 +56,7 @@ function PressableBase(androidRippleConfig) {
           }
         }
         obj = {};
-        const merged = Object.assign(tmp2);
+        const merged = Object.assign(androidRippleConfig);
         obj.cornerRadius = tmp4;
         return getThemedRippleConfig(obj);
       }
@@ -83,7 +83,7 @@ function PressableBase(androidRippleConfig) {
         }
       }
       obj = {};
-      const merged = Object.assign(tmp2);
+      const merged = Object.assign(androidRippleConfig);
       obj.cornerRadius = tmp4;
       return getThemedRippleConfig(obj);
     }
@@ -104,7 +104,7 @@ const forwardRefResult = noop.forwardRef((activeOpacity, innerRef) => {
     num = 0.2;
   }
   const merged = Object.assign(Object.assign(activeOpacity, Object.assign({ activeOpacity: 0 })));
-  return <PressableBase innerRef={arg1} type="opacity" activeOpacity={num} />;
+  return <PressableBase innerRef={innerRef} type="opacity" activeOpacity={num} />;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Pressables/native/Pressables.tsx");
@@ -112,5 +112,5 @@ const result = size.fileFinishedImporting("design/void/Pressables/native/Pressab
 export const PressableOpacity = forwardRefResult;
 export const PressableHighlight = noop.forwardRef((underlayColor, innerRef) => {
   const merged = Object.assign(Object.assign(underlayColor, Object.assign({ underlayColor: 0 })));
-  return <PressableBase innerRef={arg1} type="highlight" underlayColor={arg0.underlayColor} />;
+  return <PressableBase innerRef={innerRef} type="highlight" underlayColor={underlayColor.underlayColor} />;
 });

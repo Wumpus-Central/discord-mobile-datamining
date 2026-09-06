@@ -92,7 +92,6 @@ export default noop.memo(function GuildsBarEmptyNUX() {
   const obj6 = { style: tmp5.root, children: null };
   const items5 = [closure_13(closure_4, obj1), ];
   let tmp15Result = null;
-  const tmp14 = closure_13;
   const tmp16 = closure_13(closure_4, obj1);
   const tmp3 = sharedValue;
   if (token2.useContext(stateFromStores(token1[14]).HomeDrawerStateContext).enableHome) {
@@ -104,12 +103,12 @@ export default noop.memo(function GuildsBarEmptyNUX() {
     const obj9 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
     const intl2 = tmp(tmp2[16]).intl;
     obj9.children = intl2.string(tmp(tmp2[16]).t["3S2xmm"]);
-    obj8.title = tmp15(tmp(tmp2[21]).Text, obj9);
-    obj7.children = tmp15(tmp(tmp2[20]).HomeDrawerSharedItem, obj8);
-    tmp15Result = tmp15(tmp3(tmp2[19]), obj7);
+    obj8.title = closure_12(tmp(tmp2[21]).Text, obj9);
+    obj7.children = closure_12(tmp(tmp2[20]).HomeDrawerSharedItem, obj8);
+    tmp15Result = closure_12(tmp3(tmp2[19]), obj7);
     const tmp3Result = tmp3(tmp2[19]);
   }
   items5[1] = tmp15Result;
   obj6.children = items5;
-  return tmp14(sharedValue(token1[19]), obj6);
+  return closure_13(sharedValue(token1[19]), obj6);
 });

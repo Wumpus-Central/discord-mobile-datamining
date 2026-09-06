@@ -23,5 +23,5 @@ export default function MessagesHeaderItem(animatedStyles) {
   const intl = util.intl;
   obj.children = intl.string(util.t.OIgYlQ);
   obj.children = jsx(Text_Text.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null });
-  return <View animated style={arg0.animatedStyles.textNormal} variant="text-lg/bold">{null}</View>;
+  return <View animated style={animatedStyles.animatedStyles.textNormal} variant="text-lg/bold">{null}</View>;
 };

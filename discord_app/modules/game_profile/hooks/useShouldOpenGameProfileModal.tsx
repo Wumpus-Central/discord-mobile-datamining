@@ -58,12 +58,12 @@ export default function useShouldOpenGameProfileModal(applicationId) {
         let tmp11 = items;
       } else {
         const items1 = [];
-        if (obj3.hasFlag(tmp8.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
+        if (obj3.hasFlag(gameRecord.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
           items1.push(obj.Disabled);
         }
         obj3 = FlagUtilsAll;
         tmp11 = items1;
-        if (tmp19Result.isAgeRestrictedContentClassification(tmp8.contentClassification)) {
+        if (tmp19Result.isAgeRestrictedContentClassification(gameRecord.contentClassification)) {
           items1.push(obj.NSFW);
           tmp11 = items1;
         }
@@ -81,7 +81,7 @@ export default function useShouldOpenGameProfileModal(applicationId) {
   return { shouldOpenGameProfile, gameId: gameId.gameId };
 };
 export { RejectionReason };
-export const trackEntryPoint = function trackEntryPoint(game_profile_available, id, items, CallTile) {
+export const trackEntryPoint = function trackEntryPoint(game_profile_available, id) {
   if (items === undefined) {
     items = [];
   }

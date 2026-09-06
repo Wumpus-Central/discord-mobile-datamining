@@ -17,6 +17,7 @@ import MobilePhoneIcon from "MobilePhoneIcon" /* 6960 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
 import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 9953 */;
+import SpeedometerIcon from "SpeedometerIcon" /* 9959 */;
 import ImageSparkleIcon from "ImageSparkleIcon" /* 9961 */;
 import _modDef9963 from "module_9963" /* 9963 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -153,6 +154,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
           }
         }
       }
+      const tmp3 = _slicedToArray(items, 2);
     }, items4);
     obj = { value: analyticsLocations, children: null };
     obj = { bottom: true, style: tmp9.wrapper, children: null };
@@ -194,25 +196,25 @@ export default noop.memo(function MobileGoLiveActionSheet() {
           let str = "";
           let str2 = "";
           if (null != maxSettingsForPreset) {
-            const intl2 = tmp2(1114).intl;
-            str2 = intl2.formatToPlainString(tmp8(2234).ibH7vy, maxSettingsForPreset);
+            const intl2 = util.intl;
+            str2 = intl2.formatToPlainString(_modDef2234.ibH7vy, maxSettingsForPreset);
           }
           obj1 = { [closure_2_11.PRESET_MOBILE_DEFAULT]: obj };
           obj.subLabel = str2;
-          obj2 = { icon: tmp(tmp2(9959).SpeedometerIcon, {}), label: null, subLabel: null };
-          const intl3 = tmp2(1114).intl;
+          obj2 = { icon: closure_2_14(SpeedometerIcon.SpeedometerIcon, {}), label: null, subLabel: null };
+          const intl3 = util.intl;
           obj2.label = intl3.string(_modDef2234["5eO4/m"]);
           let formatToPlainStringResult = str;
           if (null != maxSettingsForPreset1) {
-            const intl4 = tmp2(1114).intl;
-            formatToPlainStringResult = intl4.formatToPlainString(tmp8(2234).fN0UQY, maxSettingsForPreset1);
+            const intl4 = util.intl;
+            formatToPlainStringResult = intl4.formatToPlainString(_modDef2234.fN0UQY, maxSettingsForPreset1);
           }
           obj2.subLabel = formatToPlainStringResult;
           obj1[ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE] = obj2;
           const obj3 = { icon: closure_2_14(ImageSparkleIcon.ImageSparkleIcon, {}), label: null, subLabel: null };
           const obj4 = { style: currentUserActiveStream.highQualityLabel, children: null };
           const obj5 = { variant: "text-md/semibold", color: "text-strong", children: null };
-          const intl5 = tmp2(1114).intl;
+          const intl5 = util.intl;
           obj5.children = intl5.string(_modDef2234.nMcXo1);
           const items = [closure_2_14(Text_Text.Text, obj5), ];
           const tmp8Result = NativeViewDefault;
@@ -220,8 +222,8 @@ export default noop.memo(function MobileGoLiveActionSheet() {
           obj4.children = items;
           obj3.label = __initData(tmp8Result, obj4);
           if (null != maxSettingsForPreset2) {
-            const intl6 = tmp2(1114).intl;
-            str = intl6.formatToPlainString(tmp8(2234).q4gYBi, maxSettingsForPreset2);
+            const intl6 = util.intl;
+            str = intl6.formatToPlainString(_modDef2234.q4gYBi, maxSettingsForPreset2);
           }
           obj3.subLabel = str;
           obj1[ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY] = obj3;
@@ -238,8 +240,8 @@ export default noop.memo(function MobileGoLiveActionSheet() {
       let obj5 = { style: tmp9.section, children: null };
       tmp7Result = tmp7(tmp2[32]);
       const obj6 = { featureName: tmp(tmp2[45]).EntitlementFeatureNames.STREAM_HIGH_QUALITY, shouldShow: sharedValue };
-      obj5.children = tmp18(tmp7(tmp2[44]), obj6);
-      tmp18Result = tmp18(tmp7Result, obj5);
+      obj5.children = closure_14(tmp7(tmp2[44]), obj6);
+      tmp18Result = closure_14(tmp7Result, obj5);
       const tmp7Result1 = tmp7(tmp2[44]);
     }
     items5[2] = tmp18Result;
@@ -254,13 +256,12 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         const obj = { initialUpsellKey: ConstantsIOS.UpsellTypes.STREAM_HIGH_QUALITY, analyticsLocations };
         const result = obj.handleShowUpsellAlert(obj);
       };
-      obj7.children = tmp18(tmp7(tmp2[46]), obj8);
-      tmp18Result = tmp18(tmp7Result2, obj7);
+      obj7.children = closure_14(tmp7(tmp2[46]), obj8);
+      tmp18Result = closure_14(tmp7Result2, obj7);
       const tmp7Result3 = tmp7(tmp2[46]);
     }
     items5[3] = tmp18Result;
     const obj9 = { style: tmp9.section, children: null };
-    const tmp19 = closure_15;
     let tmpResult = tmp(tmp2[24]);
     const obj10 = { title: null, hasIcons: false, children: null };
     let intl4 = tmp(tmp2[28]).intl;
@@ -303,12 +304,13 @@ export default noop.memo(function MobileGoLiveActionSheet() {
     obj12.children = closure_14(tmp(tmp2[48]).Button, obj14);
     items5[5] = closure_14(tmp7(tmp2[32]), obj12);
     obj.children = items5;
-    obj16.children = tmp19(tmp(tmp2[38]).SafeAreaPaddingView, obj);
+    obj16.children = closure_15(tmp(tmp2[38]).SafeAreaPaddingView, obj);
     obj15.children = closure_14(tmp(tmp2[37]).BottomSheetScrollView, obj16);
     obj.children = closure_14(tmp(tmp2[36]).BottomSheet, obj15);
     return closure_14(tmp(tmp2[22]).AnalyticsLocationProvider, obj);
   }
   preset = tmp10.PRESET_MOBILE_DEFAULT;
+  const tmp8 = guildPremiumTier(callback[22]);
 });
 export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(location_stack) {
   let obj = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET, impressionProperties: null };

@@ -3,7 +3,7 @@
 // Module 1083 (utils/PathUtils)
 import size from "module_2" /* 2 */;
 
-function getAuthenticationPath(login, arg1, flag, arg3) {
+function getAuthenticationPath(login, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = null;
@@ -53,7 +53,7 @@ UnescapedPathParam.prototype["toString"] = function toString() {
 };
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/PathUtils.tsx");
 
-export const getLoginPath = function getLoginPath(arg0, flag) {
+export const getLoginPath = function getLoginPath(arg0) {
   if (flag === undefined) {
     flag = true;
   }
@@ -72,10 +72,10 @@ export const wrapPaths = function wrapPaths(frozen, arg1) {
   function _loop() {
     closure_0 = tmp2;
     if (typeof closure_0[closure_3] !== "function") {
-      obj[tmp] = tmp2;
+      obj[closure_3] = tmp2;
       return 1;
     } else {
-      obj[tmp] = () => {
+      obj[closure_3] = () => {
         const items = [...arguments];
         closure_0 = closure_1;
         return closure_0(...items.map((item) => {

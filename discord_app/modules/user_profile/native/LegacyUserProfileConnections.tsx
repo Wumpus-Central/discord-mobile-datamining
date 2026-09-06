@@ -356,13 +356,13 @@ class ConnectedApplicationUserRoleAccount {
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
               obj = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "Array" };
-              const tmp12 = new UserRecord(tmp4.application.bot);
+              const tmp12 = new UserRecord(applicationRoleConnection.application.bot);
               obj.user = tmp12;
               obj.size = native.AvatarSizes.SIZE_16;
               tmp5 = closure_2_14(native.Avatar, obj);
             }
             const items = [tmp5, ];
-            obj = { variant: "text-xs/normal", color: "text-default", children: tmp4.application.name };
+            obj = { variant: "text-xs/normal", color: "text-default", children: applicationRoleConnection.application.name };
             items[1] = closure_2_14(Text_Text.Text, obj);
             obj.children = items;
             return __initData(hasOwnProperty, obj);

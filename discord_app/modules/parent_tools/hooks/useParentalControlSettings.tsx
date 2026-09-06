@@ -1,10 +1,13 @@
 // === Module 14824: useParentalControlSettings ===
 
 // Module 14824 (useParentalControlSettings)
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7301 */;
 import useUserLinks from "useUserLinks" /* 8645 */;
 import useSelectedTeen from "useSelectedTeen" /* 8647 */;
 import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14825 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14828 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7540 */;
@@ -25,7 +28,7 @@ export const useParentalControlledExplicitContentSettings = function useParental
   const controlledSetting = ParentalControlledExplicitContent.useControlledSetting(id);
   let tmp6 = null;
   if (null != selectedTeen) {
-    let tmpResult = tmp(14828);
+    let tmpResult = FamilyCenterControlledSettingsUtils;
     let id1;
     if (selectedTeen != null) {
       id1 = selectedTeen.id;
@@ -37,7 +40,7 @@ export const useParentalControlledExplicitContentSettings = function useParental
     }
     obj = { explicitContentNonFriendDm: null, explicitContentFriendDm: null, explicitContentGuilds: null, setting: prop };
     obj.explicitContentNonFriendDm = tmpResult.resolveExplicitContentSettingWithDefaultsForTeen(obj);
-    tmpResult = tmp(14828);
+    tmpResult = FamilyCenterControlledSettingsUtils;
     let id2;
     if (selectedTeen != null) {
       id2 = selectedTeen.id;
@@ -49,7 +52,7 @@ export const useParentalControlledExplicitContentSettings = function useParental
     }
     obj1.setting = prop1;
     obj.explicitContentFriendDm = tmpResult.resolveExplicitContentSettingWithDefaultsForTeen(obj1);
-    obj.explicitContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
+    obj.explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
     tmp6 = obj;
   }
   return tmp6;
@@ -70,18 +73,18 @@ export const useParentalControlledGoreContentSettings = function useParentalCont
       controlledSetting = {};
     }
     ({ goreContentNonFriendDm, goreContentFriendDm } = controlledSetting);
-    let tmpResult = tmp(14828);
+    let tmpResult = FamilyCenterControlledSettingsUtils;
     if (!tmpResult.isSetAndNotDefault(goreContentNonFriendDm)) {
-      tmpResult = tmp(7301);
+      tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
       goreContentNonFriendDm = tmpResult.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
     }
     obj = { goreContentNonFriendDm, goreContentFriendDm: null, goreContentGuilds: null };
     if (!tmpResult1.isSetAndNotDefault(goreContentFriendDm)) {
-      goreContentFriendDm = tmp(7301).resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
-      const tmpResult2 = tmp(7301);
+      goreContentFriendDm = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
+      const tmpResult2 = SensitiveMediaGoreRedactionSettingsUtils;
     }
     obj.goreContentFriendDm = goreContentFriendDm;
-    obj.goreContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
+    obj.goreContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
     return obj;
   }
 };
@@ -130,7 +133,7 @@ export const useParentalControlledConsent = function useParentalControlledConsen
   let obj2 = require("initialize");
   const selectedTeenId = require("useSelectedTeen").useSelectedTeenId();
   closure_129_1 = selectedTeenId;
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -155,13 +158,13 @@ export const useParentalControlledConsent = function useParentalControlledConsen
             obj = { value, done: true };
             return obj;
           } else if (null != tmp3) {
-            if (tmp27) {
+            if (closure_0) {
               const items = [closure_0];
               let items1 = items;
             } else {
               items1 = [];
             }
-            if (tmp27) {
+            if (closure_0) {
               let items2 = [];
             } else {
               items2 = [closure_0];

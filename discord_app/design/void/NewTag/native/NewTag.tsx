@@ -60,9 +60,9 @@ export default function NewTag(color) {
     obj2.style = items2;
     const intl2 = util.intl;
     obj2.children = intl2.string(util.t.y2b7CA);
-    obj1.children = tmp7(Text_Text.Text, obj2);
-    obj.children = tmp7(React3, obj1);
-    let tmp7Result = tmp7(LinearGradientDefault, obj);
+    obj1.children = jsx(Text_Text.Text, { variant, color: str });
+    obj.children = <React3 style={null}>{null}</React3>;
+    let tmp7Result = jsx(LinearGradientDefault, { borderRadius: sm, marginLeft: nativeDefault.space.PX_4 });
   } else {
     obj = { style: null, children: null };
     const items3 = [tmp6.tagContainer, containerStyle];
@@ -73,8 +73,8 @@ export default function NewTag(color) {
     obj3.style = items4;
     const intl = util.intl;
     obj3.children = intl.string(util.t.y2b7CA);
-    obj.children = tmp7(Text_Text.Text, obj3);
-    tmp7Result = tmp7(React3, obj);
+    obj.children = jsx(Text_Text.Text, { variant, color: str });
+    tmp7Result = <React3 style={null}>{null}</React3>;
   }
   return tmp7Result;
 };

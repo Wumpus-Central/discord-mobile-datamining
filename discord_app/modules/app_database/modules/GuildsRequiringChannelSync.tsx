@@ -105,11 +105,10 @@ prototype["detectRoleVisibilityChanges"] = function detectRoleVisibilityChanges(
       let obj2 = PremiumRoleUtils;
       isSubscriptionRoleResult = obj2.isSubscriptionRoleAvailableForPurchase(tmp18);
     }
-    let tmp6 = require;
     let obj3 = PremiumRoleUtils;
     let isSubscriptionRoleResult1 = obj3.isSubscriptionRole(tmp17);
     if (isSubscriptionRoleResult1) {
-      let tmp6Result = tmp6(4190);
+      let tmp6Result = PremiumRoleUtils;
       isSubscriptionRoleResult1 = tmp6Result.isSubscriptionRoleAvailableForPurchase(tmp17);
     }
     if (!isSubscriptionRoleResult) {
@@ -276,11 +275,11 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
       let MemberRoles = closure_17.Unknown;
       let flag = userBecameGuildOwnerResult;
       if (userBecameGuildOwnerResult) {
-        MemberRoles = tmp2.OwnershipChange;
+        MemberRoles = closure_17.OwnershipChange;
         flag = userBecameGuildOwnerResult;
       }
     } else {
-      MemberRoles = tmp2.NewGuild;
+      MemberRoles = closure_17.NewGuild;
       flag = true;
     }
     let tmp10 = null;
@@ -302,7 +301,7 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
       }
       ({ rolesAreDifferent, allRoleIds } = self.processMemberRoleIds(null != selfMember ? selfMember.roles : [], roles));
       if (rolesAreDifferent) {
-        MemberRoles = tmp2.MemberRoles;
+        MemberRoles = closure_17.MemberRoles;
       }
       tmp10 = null;
       tmp11 = MemberRoles;
@@ -374,7 +373,7 @@ prototype["unmarkGuildForResync"] = function unmarkGuildForResync(id, database) 
   const result = DatabaseDaosDefault.guildsRequiringChannelSyncTransaction(database);
   result.delete(id);
 };
-prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleChannelWithHiddenParent(id, channels, deleted_channel_ids) {
+prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleChannelWithHiddenParent(id, channels) {
   let items = deleted_channel_ids;
   if (deleted_channel_ids === undefined) {
     items = [];
@@ -462,7 +461,7 @@ prototype["backgroundSyncGuildHasObfuscatedChannels"] = function backgroundSyncG
   const self = this;
   return this.guildHasStoredObfuscatedChannels(data_mode.id, items) || self.anyChannelsObfuscated(channels);
 };
-prototype["guildHasStoredObfuscatedChannels"] = function guildHasStoredObfuscatedChannels(id, items) {
+prototype["guildHasStoredObfuscatedChannels"] = function guildHasStoredObfuscatedChannels(id) {
   if (items === undefined) {
     items = [];
   }

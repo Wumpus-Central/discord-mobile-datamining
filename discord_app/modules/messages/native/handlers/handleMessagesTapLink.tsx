@@ -10,10 +10,12 @@ import ChannelConstants from "ChannelConstants" /* 1964 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import parseURLDefault from "parseURL" /* 4540 */;
 import StreamActionCreators from "StreamActionCreators" /* 4702 */;
+import useMessageAuthor from "useMessageAuthor" /* 4793 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import PushNotificationConstants from "PushNotificationConstants" /* 6596 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
 import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 7992 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8370 */;
@@ -23,6 +25,7 @@ import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9290 
 import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 10919 */;
 import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 11544 */;
 import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 11614 */;
+import handleAcceptEventInstantInviteDefault from "handleAcceptEventInstantInvite" /* 11615 */;
 import openPinnedMessagesDefault from "openPinnedMessages" /* 11617 */;
 import GuildAutomodMessageActionCreators from "GuildAutomodMessageActionCreators" /* 11618 */;
 import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11619 */;
@@ -59,19 +62,17 @@ function handleMessagesTapURLLink(data, channelId) {
             const invite = InviteStore.getInvite(payload.inviteCode);
             let num = null == invite;
             if (!num) {
-              num = !tmp2(7735).isGuildScheduledEventInviteEmbed(invite);
-              const tmp2Result = tmp2(7735);
+              num = !InviteTypeUtils.isGuildScheduledEventInviteEmbed(invite);
+              const tmp2Result = InviteTypeUtils;
             }
             if (!num) {
-              tmp4(11615)(invite);
+              handleAcceptEventInstantInviteDefault(invite);
               num = 0;
             }
             flag2 = !num;
           }
         }
-        tmp4 = importDefault;
       }
-      tmp2 = require;
     }
     if (!flag2) {
       const payload2 = parseURLDefault(data.url).payload;
@@ -103,15 +104,14 @@ function handleMessagesTapURLLink(data, channelId) {
       const obj1 = { href: data.url, trusted: null, messageId: null, channelId: null };
       let isLinkTrustedResult = null != data.node;
       if (isLinkTrustedResult) {
-        isLinkTrustedResult = tmp19(11614).isLinkTrusted(data.node);
-        const tmp19Result = tmp19(11614);
+        isLinkTrustedResult = MarkupReactLinkUtils.isLinkTrusted(data.node);
+        const tmp19Result = MarkupReactLinkUtils;
       }
       obj1.trusted = isLinkTrustedResult;
       obj1.messageId = data.messageId;
       obj1.channelId = channelId;
       MaskedLinkUtils.handleClick(obj1);
       flag = true;
-      tmp19 = require;
     }
   }
   return flag;
@@ -133,7 +133,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
     if (messageChannel != null) {
       id = messageChannel.id;
     }
-    if (!tmp5(data, id)) {
+    if (!handleMessagesTapURLLink(data, id)) {
       if (null != data.action) {
         switch (data.action) {
           case "bindUserMenu":
@@ -222,7 +222,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                           if (chatInputRef != null) {
                             const current4 = chatInputRef.current;
                             if (current4 != null) {
-                              let obj4 = { type: tmp111(1609).KeyboardTypes.APP_LAUNCHER, context: null };
+                              let obj4 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
                               let obj5 = { initialRouteName: AppLauncherRouteName.APPLICATION_VIEW, initiallyExpanded: true, application: tmp119.descriptor.application, installOnDemand: null };
                               const isGuildInstalled = tmp119.isGuildInstalled;
                               let tmp66 = !isGuildInstalled;
@@ -237,7 +237,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                         } else if (chatInputRef != null) {
                           const current3 = chatInputRef.current;
                           if (current3 != null) {
-                            let obj6 = { type: tmp111(1609).KeyboardTypes.APP_LAUNCHER, context: null };
+                            let obj6 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
                             const obj7 = { initialRouteName: AppLauncherRouteName.APPLICATION_VIEW, initiallyExpanded: true, applicationId: message.applicationId, installOnDemand: true };
                             obj6.context = obj7;
                             current3.openCustomKeyboard(obj6);
@@ -253,7 +253,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                     if (null != author) {
                       const obj8 = { author: null, channelId: null, chatInputRef: null, messageId: null, user: null, applicationUser: null, guildId: null, messageType: null };
                       const tmp114 = showExecutedApplicationCommandPopoutDefault;
-                      obj8.author = tmp111(4793).getUserAuthor(message.interaction.user, messageChannel);
+                      obj8.author = useMessageAuthor.getUserAuthor(message.interaction.user, messageChannel);
                       obj8.channelId = data.messageChannelId;
                       obj8.chatInputRef = chatInputRef;
                       obj8.messageId = data.messageId;
@@ -269,7 +269,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                       obj8.guildId = guildId;
                       obj8.messageType = data.messageType;
                       tmp114(obj8);
-                      const tmp111Result = tmp111(4793);
+                      const tmp111Result = useMessageAuthor;
                     }
                   }
                   obj24 = ApplicationInteractionInfoUtils;
@@ -340,7 +340,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                 }
                 obj14 = { summary_id: str2 };
                 const result4 = obj2.openGuildHighlightNotificationForPush(guild_id1, message2, notificationType, MESSAGE_EMBED, obj14);
-              } else if (tmp103.TOP_MESSAGE_PUSH === notificationType2) {
+              } else if (NotificationTypes.TOP_MESSAGE_PUSH === notificationType2) {
                 obj1 = GuildHighlightsNotificationsActionCreators;
                 const result5 = obj1.openGuildHighlightNotificationForPush(guild_id1, data.message, data.notificationType, constants.MESSAGE_EMBED);
               } else {
@@ -348,7 +348,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                 const obj15 = { location: constants.MESSAGE_EMBED, messageId: data.message.id, notificationType: null };
                 let TOP_MESSAGE_PUSH = data.notificationType;
                 if (TOP_MESSAGE_PUSH == null) {
-                  TOP_MESSAGE_PUSH = tmp103.TOP_MESSAGE_PUSH;
+                  TOP_MESSAGE_PUSH = NotificationTypes.TOP_MESSAGE_PUSH;
                 }
                 obj15.notificationType = TOP_MESSAGE_PUSH;
                 ActionSheetActionCreatorsDefault.openLazy(tmp106, "NotificationSurvey", obj15);
@@ -370,7 +370,6 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
         }
       }
     }
-    tmp5 = handleMessagesTapURLLink;
   } else {
     obj = isAlertOrActionSheetOpen;
   }

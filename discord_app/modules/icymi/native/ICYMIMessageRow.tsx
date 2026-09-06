@@ -49,12 +49,12 @@ class MessageRowContent {
     memo = closure_3.useMemo(() => {
       let tmp2 = 1 !== message.embeds.length;
       if (!tmp2) {
-        tmp2 = tmp.attachments.length > 0;
+        tmp2 = message.attachments.length > 0;
       }
       let tmp3 = !tmp2;
       if (!tmp2) {
-        tmp3 = tmp.embeds[0].type === constants.GIFV && tmp.embeds[0].url === tmp.content;
-        const tmp5 = tmp.embeds[0].type === constants.GIFV && tmp.embeds[0].url === tmp.content;
+        tmp3 = message.embeds[0].type === constants.GIFV && message.embeds[0].url === message.content;
+        const tmp5 = message.embeds[0].type === constants.GIFV && message.embeds[0].url === message.content;
       }
       return tmp3;
     }, items1);
@@ -207,7 +207,7 @@ const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) =>
   if (obj2.isAndroid()) {
     num = -2;
   }
-  obj = { marginTop: num, borderRadius: tmp(576).radii.md, gap: 0 };
+  obj = { marginTop: num, borderRadius: nativeDefault.radii.md, gap: 0 };
   obj.messagePreview = obj;
   obj.replyPreview = { gap: nativeDefault.space.PX_8, marginHorizontal: paddingLeft.margin, padding: PX_12, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, maxHeight: 132 };
   obj2 = { flexDirection: "row", gap: PX_8, overflow: "hidden" };
@@ -235,12 +235,12 @@ let closure_21 = noop.memo((message) => {
   const effect = noop.useEffect(() => {
     let id;
     if (guild != null) {
-      id = tmp.id;
+      id = guild.id;
     }
     if (null != id) {
       let id1;
-      if (tmp != null) {
-        id1 = tmp.id;
+      if (guild != null) {
+        id1 = guild.id;
       }
       const membersById = GuildActionCreatorsDefault.requestMembersById(id1, message.author.id);
     }
@@ -307,7 +307,7 @@ let closure_21 = noop.memo((message) => {
   let tmp20Result = null;
   if (null != iCYMIMessage) {
     let obj2 = { message: iCYMIMessage, channel, guild };
-    tmp20Result = tmp20(ReplyMessageContent, obj2);
+    tmp20Result = closure_14(ReplyMessageContent, obj2);
   }
   items5[2] = tmp20Result;
   obj.children = items5;

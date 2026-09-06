@@ -119,7 +119,7 @@ export default noop.memo(function SettingsAppearanceChannelListPreviewNitroUpsel
     if (null != arg0) {
       obj = {};
       const merged = Object.assign(arg0);
-      tmpResult = tmp(SettingsAppearanceChannelListPreviewNitroUpsellComponent, obj);
+      tmpResult = closure_1_10(SettingsAppearanceChannelListPreviewNitroUpsellComponent, obj);
     }
     obj.children = tmpResult;
     return closure_1_10(ReanimatedRexport.View, obj);

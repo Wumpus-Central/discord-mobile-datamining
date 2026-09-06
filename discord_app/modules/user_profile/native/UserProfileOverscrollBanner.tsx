@@ -24,11 +24,10 @@ export default function UserProfileOverscrollBanner(arg0) {
   obj = {};
   const merged1 = Object.assign(merged);
   const items1 = [React4(UserProfileBannerDefault, obj), ];
-  const tmp3 = React4;
   let tmp3Result = PlatformUtils.isIOS() && showBlur;
   if (tmp3Result) {
     const obj1 = { animatedProps: blurAnimatedProps, style: StyleSheet.absoluteFillObject };
-    tmp3Result = tmp3(VisualEffectViewThemed, obj1);
+    tmp3Result = React4(VisualEffectViewThemed, obj1);
   }
   items1[1] = tmp3Result;
   obj.children = items1;

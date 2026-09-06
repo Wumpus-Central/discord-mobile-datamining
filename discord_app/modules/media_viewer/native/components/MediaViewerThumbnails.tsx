@@ -5,6 +5,7 @@ import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useToken from "useToken" /* 4262 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4297 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 4965 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12964 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -22,15 +23,14 @@ function ObscuredView(source) {
       obj = { style: null, children: null };
       const items = [absoluteFill.absoluteFill, tmp5];
       obj.style = items;
-      const tmp11 = absoluteFill;
-      const tmp7Result = tmp7(4965);
+      const tmp7Result = VisualEffectViewDefault;
       let str = "light";
       if (tmpResult.isAndroid()) {
         str = "dark";
       }
-      obj = { blurTheme: str, style: tmp11.absoluteFill, android_fallbackColor: tmp8 };
+      obj = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
       obj.children = React6(tmp7Result, obj);
-      tmp10Result = tmp10(tmp7(4296).View, obj);
+      tmp10Result = React6(ReanimatedRexportDefault.View, obj);
       tmpResult = PlatformUtils;
     } else {
       tmp10Result = null;
@@ -95,17 +95,13 @@ export default function MediaViewerThumbnails(syncer) {
   ({ ref, headerBufferSize, footerBufferSize, onScroll, screenWidth, itemSize } = thumbnailsProps);
   const memo = headerBufferStyle.useMemo(() => {
     const items = [];
-    let num = 0;
-    if (0 < thumbnailScrollPositions.length) {
-      do {
-        let push = items.push;
-        if (variableWidthThumbnailsEnabled) {
-          let arr = push(thumbnailScrollPositions[num].scrollStart);
-        } else {
-          arr = push(num * React5);
-        }
-        num = num + 1;
-      } while (num < thumbnailScrollPositions.length);
+    for (let num = 0; num < thumbnailScrollPositions.length; num = num + 1) {
+      let push = items.push;
+      if (variableWidthThumbnailsEnabled) {
+        let arr = push(thumbnailScrollPositions[num].scrollStart);
+      } else {
+        arr = push(num * React5);
+      }
     }
     return items;
   }, items);
@@ -118,7 +114,7 @@ export default function MediaViewerThumbnails(syncer) {
     const items = [sources.length];
     return items;
   }, items2);
-  let tmp = closure_11();
+  const tmp = closure_11();
   const fn = function n() {
     return { scrollEnabled: scrollEnabled.get() };
   };

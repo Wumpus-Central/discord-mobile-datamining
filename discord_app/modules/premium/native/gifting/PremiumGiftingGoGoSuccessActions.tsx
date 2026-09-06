@@ -136,4 +136,5 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   const intl4 = tmp2(tmp3[19]).intl;
   obj3.text = intl4.string(onClose(navigation[19]).t.fYfGgK);
   obj3.onPress = callback2;
+  const obj5 = prePurchaseGiftingBadgeProgress(navigation[12]);
 };

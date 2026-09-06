@@ -37,7 +37,7 @@ function ExampleButton(arg0) {
     if (enableLoadingState) {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
+        clearTimeout(ref.current);
       }
       closure_2(true);
       const _setTimeout = setTimeout;
@@ -90,7 +90,7 @@ function ExampleIconButton(arg0) {
     if (enableLoadingState) {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
+        clearTimeout(ref.current);
       }
       _undefined(true);
       const _setTimeout = setTimeout;
@@ -118,7 +118,7 @@ function ExampleIconButton(arg0) {
     obj.label = str2;
     obj.loading = tmp5;
     obj.variant = variant;
-    obj.icon = tmp(7381);
+    obj.icon = _modDef7381;
   } else {
     obj = {
       disabled: showDisabled,
@@ -139,7 +139,7 @@ function ExampleIconButton(arg0) {
     obj.loading = tmp5;
     obj.variant = variant;
     obj.size = tmp3.buttonSize;
-    obj.icon = tmp(7381);
+    obj.icon = _modDef7381;
   }
   return React7(IconButton.IconButton, obj);
 }
@@ -159,7 +159,7 @@ function ExampleImageButton(arg0) {
     if (enableLoadingState) {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
+        clearTimeout(ref.current);
       }
       _undefined(true);
       const _setTimeout = setTimeout;

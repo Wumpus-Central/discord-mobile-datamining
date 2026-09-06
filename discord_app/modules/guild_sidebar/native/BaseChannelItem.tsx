@@ -111,7 +111,7 @@ export default function BaseChannelItem(mode) {
       const items = [channel.channel, , ];
       let rowPaddingNoIcon = hideIcon;
       if (hideIcon) {
-        rowPaddingNoIcon = tmp.rowPaddingNoIcon;
+        rowPaddingNoIcon = channel.rowPaddingNoIcon;
       }
       items[1] = rowPaddingNoIcon;
       items[2] = mode === createStyles.SELECTED && channel.rowSelected;
@@ -136,9 +136,9 @@ export default function BaseChannelItem(mode) {
     }
     obj = {};
     const merged1 = Object.assign(merged);
-    const items2 = [tmp3(tmp4, obj), children];
+    const items2 = [closure_9(tmp4, obj), children];
     obj.children = items2;
-    return tmp3(AnimatedPressableHighlight, obj);
+    return closure_9(AnimatedPressableHighlight, obj);
   } else {
     obj = { style: tmp2.unreadIndicator, unread, resolvedUnreadSetting: null };
     if (mode === createStyles.UNREAD_LESS_IMPORTANT) {
@@ -197,6 +197,7 @@ export const BaseChannelIcon = function BaseChannelIcon(arg0) {
     }
     items.push(channelIconUnread);
   }
+  tmp4 = mode === createStyles.SELECTED;
 };
 export const useChannelNameTextProps = function useChannelNameTextProps(channelMode) {
   if (channelMode !== createStyles.UNREAD_IMPORTANT) {
@@ -205,9 +206,9 @@ export const useChannelNameTextProps = function useChannelNameTextProps(channelM
 };
 export const getChannelSubtitleTextProps = function getChannelSubtitleTextProps(channelMode) {
   if (channelMode !== createStyles.UNREAD_IMPORTANT) {
-    if (channelMode !== tmp.RELEVANT) {
-      if (channelMode !== tmp.SELECTED) {
-        const MUTED = tmp.MUTED;
+    if (channelMode !== createStyles.RELEVANT) {
+      if (channelMode !== createStyles.SELECTED) {
+        const MUTED = createStyles.MUTED;
         let obj = { variant, color: "text-muted" };
       }
       return obj;
@@ -221,13 +222,13 @@ export const BaseChannelName = function BaseChannelName(mode) {
   const tmp = closure_10(mode);
   let obj = { style: tmp.channelNameContainer, children: null };
   if (mode !== createStyles.UNREAD_IMPORTANT) {
-    if (mode !== tmp6.RELEVANT) {
-      if (mode === tmp6.UNREAD_LESS_IMPORTANT) {
+    if (mode !== createStyles.RELEVANT) {
+      if (mode === createStyles.UNREAD_LESS_IMPORTANT) {
         obj = { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
-      } else if (mode === tmp6.MUTED) {
+      } else if (mode === createStyles.MUTED) {
         obj = { variant: "text-md/medium", color: "text-muted" };
       } else {
-        obj = mode === tmp6.SELECTED ? { variant: "text-md/medium", color: "redesign-channel-name-text" } : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
+        obj = mode === createStyles.SELECTED ? { variant: "text-md/medium", color: "redesign-channel-name-text" } : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
       }
     }
     obj = { experimental_useNativeText: true };
@@ -236,9 +237,9 @@ export const BaseChannelName = function BaseChannelName(mode) {
     const items = [tmp.channelName, textStyle];
     obj.style = items;
     obj.children = name;
-    const items1 = [tmp4(tmp5, obj), ];
+    const items1 = [React6(tmp5, obj), ];
     const obj1 = { mode, subtitle };
-    items1[1] = tmp4(BaseChannelSubtitle, obj1);
+    items1[1] = React6(BaseChannelSubtitle, obj1);
     obj.children = items1;
     return React7(View, obj);
   }

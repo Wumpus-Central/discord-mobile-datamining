@@ -44,11 +44,11 @@ class EarnedDecisionRoundtripTracker {
   }
 }
 const prototype = EarnedDecisionRoundtripTracker.prototype;
-prototype["recordEarnedRequestAttempt"] = function recordEarnedRequestAttempt(arg0, callerSource) {
+prototype["recordEarnedRequestAttempt"] = function recordEarnedRequestAttempt(content, callerSource) {
   const self = this;
-  closure_0 = arg0;
+  closure_0 = content;
   let pendingRequests = this.pendingRequests;
-  const result = pendingRequests.set(arg0, { initialSendTimestamp: Date.now(), endpoint: "/quests/earned-decision", apiResponseTimestamp: null, wasSuccessful: false, callerSource, requestId: null, fetchedAt: null });
+  const result = pendingRequests.set(content, { initialSendTimestamp: Date.now(), endpoint: "/quests/earned-decision", apiResponseTimestamp: null, wasSuccessful: false, callerSource, requestId: null, fetchedAt: null });
   const timerId = setTimeout(() => {
     const pendingRequests = self.pendingRequests;
     value = pendingRequests.get(closure_0);

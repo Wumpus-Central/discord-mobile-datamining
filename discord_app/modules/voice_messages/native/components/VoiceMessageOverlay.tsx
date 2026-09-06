@@ -414,9 +414,9 @@ let closure_44 = noop.memo((channelId) => {
       const result = ref.set(obj.withTiming(1, obj));
       const _performance = performance;
       if (performance.now() - _undefined.current < 500) {
-        obj = { easing: tmp2(4296).Easing.quad, duration: 250 };
-        const result1 = sharedValue.set(tmp2(4561).withTiming(1, obj));
-        const tmp2Result = tmp2(4561);
+        obj = { easing: ReanimatedRexport2.Easing.quad, duration: 250 };
+        const result1 = sharedValue.set(timing.withTiming(1, obj));
+        const tmp2Result = timing;
       }
     }
   }, items2);
@@ -497,8 +497,7 @@ let closure_44 = noop.memo((channelId) => {
   obj2 = { style: tmp5.voiceChatContainer, children: null };
   obj3 = { isRecording: tmp7, initialAnimation: sharedValue, leftAccessory: null, rightAccessory: null };
   const tmp14 = _slicedToArray(ref.useState(VoiceMessageAnimationState.SENDING), 2);
-  const tmp24 = closure_15;
-  const tmp26 = closure_5;
+  const tmp3 = voiceMessageAnimationState;
   obj4 = { icon: voiceMessageAnimationState(sharedValue[36]), variant: null, size: "sm", maxFontSizeMultiplier: 2, accessibilityLabel: null, onPressIn: null, onPress: null };
   let str = "tertiary";
   if (tmp15 === VoiceMessageAnimationState.CANCELLING) {
@@ -516,10 +515,10 @@ let closure_44 = noop.memo((channelId) => {
   };
   obj3.leftAccessory = closure_13(channelId(sharedValue[35]).IconButton, obj4);
   const obj5 = { ref, active: null, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null };
-  let tmp29 = tmp15 === tmp13.SENDING;
+  let tmp29 = tmp15 === VoiceMessageAnimationState.SENDING;
   const tmp27 = voiceMessageAnimationState(sharedValue[34]);
   if (!tmp29) {
-    tmp29 = tmp15 === tmp13.LOCKED;
+    tmp29 = tmp15 === VoiceMessageAnimationState.LOCKED;
   }
   obj5.active = tmp29;
   ({ floatingSendButton: obj14.style, floatingSendButtonActive: obj14.activeStyle, floatingSendButtonIconActive: obj14.activeIconStyle } = tmp5);
@@ -535,18 +534,19 @@ let closure_44 = noop.memo((channelId) => {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
       ComponentDispatch.dispatchKeyed(ComponentActionsKeyed.VOICE_MESSAGE_SEND, channelId, { isCancelling: false });
     };
-    obj3.rightAccessory = tmp25(tmp3Result, obj5);
-    obj2.children = tmp25(tmp27, obj3);
-    obj1.children = tmp25(voiceMessageAnimationState(sharedValue[10]).View, obj2);
-    items6[2] = tmp25(tmp26, obj1);
+    obj3.rightAccessory = closure_13(tmp3Result, obj5);
+    obj2.children = closure_13(tmp27, obj3);
+    obj1.children = closure_13(voiceMessageAnimationState(sharedValue[10]).View, obj2);
+    items6[2] = closure_13(closure_5, obj1);
     obj.children = items6;
-    const items7 = [tmp23(voiceMessageAnimationState(sharedValue[10]).View, obj), ];
+    const items7 = [closure_14(voiceMessageAnimationState(sharedValue[10]).View, obj), ];
     obj7 = { safeAreaBottom: bottom, initialAnimation: sharedValue, voiceMessageAnimationState };
-    items7[1] = tmp25(LockPill, obj7);
+    items7[1] = closure_13(LockPill, obj7);
     obj6.children = items7;
-    return tmp23(tmp24, obj6);
+    return closure_14(closure_15, obj6);
   }
   SendMessageIcon = tmp(tmp2[39]).SendMessageIcon;
+  tmp3Result = tmp3(sharedValue[38]);
 });
 const memoResult = noop.memo((opacity) => {
   const radius = opacity.radius;
@@ -565,13 +565,12 @@ const memoResult = noop.memo((opacity) => {
     if (!stateFromStores) {
       let num2;
       if (closure_4 != null) {
-        num2 = obj.get();
+        num2 = closure_4.get();
       }
       if (num2 == null) {
         num2 = 0;
       }
       num = num2;
-      obj = closure_4;
     }
     return num;
   };

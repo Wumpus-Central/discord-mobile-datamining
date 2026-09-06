@@ -2,6 +2,9 @@
 
 // Module 14912 (FamilyCenterRequestsPage)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
 import useUserLinks from "useUserLinks" /* 8645 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
@@ -13,21 +16,20 @@ import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 1491
 import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 14924 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef2396 = tmp5(2396);
 require = fn;
 function FamilyCenterMaxConnectionsBlurb() {
   let obj = useUserLinks;
   const hasMaxConnections = obj.useHasMaxConnections();
   const tmp = closure_10();
   useAgeSpecificText;
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   intl.formatToPlainString(_modDef2396["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? hasOwnProperty : timestampProducer });
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   let tmp10 = null;
   if (hasMaxConnections) {
     obj = { style: tmp.container, children: null };
     obj = { variant: "text-xxs/medium", color: "text-muted", children: tmp9 };
-    obj.children = React6(tmp2(4556).Text, obj);
+    obj.children = React6(Text_Text.Text, obj);
     tmp10 = React6(React3, obj);
   }
   return tmp10;
@@ -38,12 +40,12 @@ function FamilyCenterHelpLineInfo() {
   const shouldShowHelplineLink = obj.useShouldShowHelplineLink();
   useHelpLineVisibility;
   if (shouldShowHelplineLink) {
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     let formatResult = intl2.format(_modDef2396["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (tmp6) {
-      const intl = tmp2(1114).intl;
+      const intl = util.intl;
       obj = { helpLink: THROUGHLINE_URL };
       formatResult = intl.format(_modDef2396["6tsC8u"], obj);
     }
@@ -52,11 +54,11 @@ function FamilyCenterHelpLineInfo() {
   if (null != formatResult) {
     obj = { style: tmp.container, children: null };
     const obj1 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: null };
-    const intl3 = tmp2(1114).intl;
+    const intl3 = util.intl;
     obj1.children = intl3.string(_modDef2396["7/tVhv"]);
-    const items = [React6(tmp2(4556).Text, obj1), ];
+    const items = [React6(Text_Text.Text, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
-    items[1] = React6(tmp2(4556).Text, obj2);
+    items[1] = React6(Text_Text.Text, obj2);
     obj.children = items;
     tmp11 = React7(React3, obj);
   }

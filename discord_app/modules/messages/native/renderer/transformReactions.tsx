@@ -1,11 +1,13 @@
 // === Module 7956: transformReactions ===
 
 // Module 7956 (transformReactions)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ReactionUtils from "ReactionUtils" /* 4211 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
 import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 7951 */;
+import EmojiColorUtils from "EmojiColorUtils" /* 7957 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
@@ -64,9 +66,9 @@ export default function transformReactions(arg0) {
       const _Array = Array;
       if (Array.isArray(obj1.burst_colors)) {
         if (obj1.burst_colors.length > 0) {
-          obj3 = { colors: obj1.burst_colors, shouldProcessMobileColors: tmp8(1115).isIOS() };
-          obj1.themedBurstColors = tmp8(7957).buildPlatformedThemedEmojiColorPalette(obj3);
-          const tmp8Result = tmp8(1115);
+          obj3 = { colors: obj1.burst_colors, shouldProcessMobileColors: PlatformUtils.isIOS() };
+          obj1.themedBurstColors = EmojiColorUtils.buildPlatformedThemedEmojiColorPalette(obj3);
+          const tmp8Result = PlatformUtils;
         }
       }
       return obj1;

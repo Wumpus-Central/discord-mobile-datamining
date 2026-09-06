@@ -9,20 +9,20 @@ const require = fn;
 let closure_5 = async function _getApplicationSubscriptionGroupListingsForApplication() {
   const HTTP = require("HTTPUtils").HTTP;
   await HTTP.get({ url: Endpoints.APPLICATION_SUBSCRIPTION_GROUP_LISTING(closure_0, closure_1), rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
-  return arg1.body;
+  return value.body;
 };
 let closure_6 = async function _getEntitlementsForGuild() {
   const HTTP = require("HTTPUtils").HTTP;
   const request = { url: Endpoints.GUILD_ENTITLEMENTS(closure_0), query: { with_sku: true, with_application: true }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
   await HTTP.get(request);
-  return arg1.body;
+  return value.body;
 };
 let closure_7 = async function _getSubscriptionGroupForSubscriptionPlan() {
   const HTTP = require("HTTPUtils").HTTP;
   await HTTP.get({ url: Endpoints.SUBSCRIPTION_PLAN_GROUP_LISTING(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
-  return arg1.body;
+  return value.body;
 };
-let closure_8 = async function _fetchEligibleApplicationSubscriptionGuilds(application_id, sku_id) {
+let closure_8 = async function _fetchEligibleApplicationSubscriptionGuilds() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {

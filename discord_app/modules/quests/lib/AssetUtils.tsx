@@ -16,7 +16,7 @@ import _modDef11298 from "module_11298" /* 11298 */;
 import QuestConstants from "QuestConstants" /* 5444 */;
 import size from "module_2" /* 2 */;
 
-function resolveAsset(id, questBarHeroVideo, arg2) {
+function resolveAsset(id, questBarHeroVideo, theme) {
   if (questBarHeroVideo.startsWith("blob:")) {
     const parts = questBarHeroVideo.split("?", 1);
     let atResult = parts.at(0);
@@ -28,17 +28,17 @@ function resolveAsset(id, questBarHeroVideo, arg2) {
     const _HermesInternal3 = HermesInternal;
     combined = "" + React3 + questBarHeroVideo;
   } else {
-    let theme;
-    if (arg2 != null) {
-      theme = arg2.theme;
+    theme = undefined;
+    if (theme != null) {
+      theme = theme.theme;
     }
     let str3 = "";
     if (null != theme) {
       const _HermesInternal = HermesInternal;
-      str3 = "/" + arg2.theme;
+      str3 = "/" + theme.theme;
     }
     const _HermesInternal2 = HermesInternal;
-    combined = "" + tmp + id + str3 + "/" + questBarHeroVideo;
+    combined = "" + React4 + id + str3 + "/" + questBarHeroVideo;
   }
   const tmp16 = getMimetype(questBarHeroVideo);
   const obj = { url: combined, mimetype: tmp16, isAnimated: null };
@@ -113,7 +113,7 @@ function getMimetype(questBarHeroVideo) {
     }
   }
 }
-function getAssetUrlWithMediaProxyQueryParams(assetUrl, size) {
+function getAssetUrlWithMediaProxyQueryParams(assetUrl) {
   if (size === undefined) {
     size = {};
   }
@@ -349,11 +349,6 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
       return null;
     }
   }
-  let tmp32;
-  if (flag2) {
-    tmp32 = DARK;
-  }
-  const tmp31Result = resolveAsset(quest.id, asset, { theme: tmp32 });
   if (!flag) {
     let tmp34 = tmp31Result;
   } else {
@@ -370,7 +365,7 @@ export const buildUrl = function buildUrl(arg0, str, theme) {
     }
     return atResult;
   } else {
-    if (str.includes("/")) {
+    if ("/".includes("/")) {
       const _HermesInternal3 = HermesInternal;
       let combined = "" + React3 + str;
     } else {
@@ -384,7 +379,7 @@ export const buildUrl = function buildUrl(arg0, str, theme) {
         str3 = "/" + theme.theme;
       }
       const _HermesInternal2 = HermesInternal;
-      combined = "" + tmp + arg0 + str3 + "/" + str;
+      combined = "" + React4 + arg0 + str3 + "/" + str;
     }
     return combined;
   }

@@ -68,13 +68,13 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   let tmp6Result = null != title;
   if (tmp6Result) {
     obj = { title };
-    tmp6Result = tmp6(TableRowGroupTitle, obj);
+    tmp6Result = closure_5(TableRowGroupTitle, obj);
   }
   let items = [tmp6Result, , , ];
   tmp6Result = null != description;
   if (tmp6Result) {
     const obj1 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.description, children: description };
-    tmp6Result = tmp6(tmp2(4556).Text, obj1);
+    tmp6Result = closure_5(Text_Text.Text, obj1);
   }
   items[1] = tmp6Result;
   const items1 = [tmp.content, ];
@@ -87,7 +87,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   let tmp6Result1 = null != helperText;
   if (tmp6Result1) {
     const obj2 = { variant: token, color: "text-muted", style: tmp.helperText, children: helperText };
-    tmp6Result1 = tmp6(tmp2(4556).Text, obj2);
+    tmp6Result1 = closure_5(Text_Text.Text, obj2);
   }
   items[3] = tmp6Result1;
   obj.children = items;

@@ -3,6 +3,7 @@
 // Module 13145 (ProductDetailsActionSheetInfo)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
@@ -31,19 +32,19 @@ function ProductPurchaseStatus(product) {
   const productPurchaseState = obj1.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl2 = tmp(1114).intl;
-    obj.children = intl2.string(tmp(1114).t["6cfuDj"]);
-    let children = tmp6(tmp(4556).Text, obj);
+    const intl2 = util.intl;
+    obj.children = intl2.string(util.t["6cfuDj"]);
+    let children = React4(Text_Text.Text, obj);
   } else if (tmp5) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl = tmp(1114).intl;
-    obj.children = intl.string(tmp(1114).t.BEjTij);
-    children = tmp6(tmp(4556).Text, obj);
+    const intl = util.intl;
+    obj.children = intl.string(util.t.BEjTij);
+    children = React4(Text_Text.Text, obj);
   } else {
     children = !result;
     if (!result) {
       obj1 = { product, onTrackPress: product.onTrackPress };
-      children = tmp6(InlinePriceTagDefault, obj1);
+      children = React4(InlinePriceTagDefault, obj1);
     }
   }
   return React4(View, { children });

@@ -26,17 +26,17 @@ export default function CreateGuildModal(channel) {
   let items = [channel, initialState];
   const memo = isWindowSmall.useMemo(() => {
     if (initialState === constants.JOIN_SERVER) {
-      let param = { name: tmp.JOIN_SERVER, param: null };
-      param = { initialRoute: tmp.JOIN_SERVER };
+      let param = { name: constants.JOIN_SERVER, param: null };
+      param = { initialRoute: constants.JOIN_SERVER };
       param.param = param;
       const items = [param];
       let items2 = items;
     } else if (null == channel) {
-      const obj1 = { name: tmp.GUILD_TEMPLATES };
+      const obj1 = { name: constants.GUILD_TEMPLATES };
       const items1 = [obj1];
       items2 = items1;
     } else {
-      param = { name: tmp.GUILD_INVITE, param: null };
+      param = { name: constants.GUILD_INVITE, param: null };
       const obj2 = { channel: tmp2, onClose: CreateGuildModalActionCreatorsDefault.closeCreateGuildModal };
       param.param = obj2;
       items2 = [param];
@@ -126,12 +126,11 @@ export default function CreateGuildModal(channel) {
           onClose() {
             const result = initialState(onSuccess[9]).transitionToGuildSync(guildId);
             obj = initialState(onSuccess[9]);
-            const tmp = guildId;
-            const tmp2 = closure_1;
             const result1 = initialState(onSuccess[10]).closeCreateGuildModal();
             if (null != closure_1) {
-              tmp2(tmp);
+              closure_1(guildId);
             }
+            const obj2 = initialState(onSuccess[10]);
           }
         });
       }

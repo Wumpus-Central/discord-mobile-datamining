@@ -31,11 +31,10 @@ function clearUser(arg0, arg1) {
         if (!tmp12) {
           delete tmp[tmp2];
           let tmp16 = tmp4;
-          let tmp15 = makeTimeoutKey;
           if (tmp4 == null) {
             tmp16 = nextResult;
           }
-          let tmp15Result = tmp15(tmp16, arg0);
+          let tmp15Result = makeTimeoutKey(tmp16, arg0);
           delete tmp3[tmp2];
         }
         continue;
@@ -76,7 +75,7 @@ prototype["getStreamId"] = function getStreamId(arg0, arg1) {
   }
   return streamId;
 };
-prototype["getUserStreamData"] = function getUserStreamData(userId, guildId, STREAM) {
+prototype["getUserStreamData"] = function getUserStreamData(userId, guildId) {
   let DEFAULT = STREAM;
   if (STREAM === undefined) {
     DEFAULT = MediaEngineContextTypes.DEFAULT;

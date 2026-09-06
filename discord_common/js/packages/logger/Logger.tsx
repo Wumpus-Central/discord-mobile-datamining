@@ -132,7 +132,8 @@ class Logger {
       closure_130_0 = closure_0;
       const _Date2 = Date;
       closure_130_1 = Date.now();
-      closure_130_2 = await closure_1();
+      await closure_1();
+      closure_130_2 = value;
       const _Date = Date;
       closure_131_1.log(closure_130_0, Date.now() - closure_130_1 + "ms");
       return closure_130_2;

@@ -34,7 +34,7 @@ class ChatViewPopups {
                 }
           };
           GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj);
-          tmp.current = true;
+          ref.current = true;
         } else if (showWelcomeModal) {
           obj = {
             guildId,
@@ -44,7 +44,7 @@ class ChatViewPopups {
                 }
           };
           const result = obj.openWelcomeActionSheet(obj);
-          tmp.current = true;
+          ref.current = true;
         }
       }
     }, items);

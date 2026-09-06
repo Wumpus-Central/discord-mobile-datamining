@@ -21,7 +21,7 @@ export function createUseAnimatedScrollLock(arg0, arg1, token, sharedValue1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const IS_ANDROID = token;
-  return (A) => {
+  return () => {
     let obj = A;
     if (A === undefined) {
       obj = {};
@@ -115,14 +115,14 @@ export function createUseAnimatedScrollLock(arg0, arg1, token, sharedValue1) {
         const result = animatedRef.set(num6);
       } else {
         if (onScrollHandlerWorkletized.get()) {
-          if (!obj7.get()) {
-            const result1 = obj7.set(true);
+          if (!onScrollHandlerWorkletized.get()) {
+            const result1 = onScrollHandlerWorkletized.set(true);
           }
           const obj = ReanimatedRexport;
           obj.scrollTo(animatedRef, 0, 0, false);
-          const result2 = obj6.set(0);
+          const result2 = animatedRef.set(0);
         } else {
-          const result3 = obj6.set(y);
+          const result3 = animatedRef.set(y);
         }
         const tmp23 = y < animatedRef.get();
       }

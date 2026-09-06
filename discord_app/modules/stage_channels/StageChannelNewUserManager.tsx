@@ -2,6 +2,7 @@
 
 // Module 12928 (StageChannelNewUserManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import StageChannelAlertActionCreatorsAll from "StageChannelAlertActionCreators" /* 12929 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 5421 */;
@@ -27,14 +28,11 @@ class StageChannelNewUserManager extends tmp2 {
                 isAudienceMemberResult = audienceMember.isAudienceMember(channelId.userId, voiceChannelId);
               }
               if (isAudienceMemberResult) {
-                const Storage = tmp11(tmp12[6]).Storage;
-                const result = Storage.set(tmp13, true);
-                const result1 = require("StageChannelAlertActionCreators").openStageChannelAudienceNoticeModal(voiceChannelId);
-                const obj = require("StageChannelAlertActionCreators");
+                const Storage = applyArgumentsResult(dependencyMap[6]).Storage;
+                const result = Storage.set(closure_2_7, true);
+                const result1 = StageChannelAlertActionCreatorsAll.openStageChannelAudienceNoticeModal(voiceChannelId);
               }
             }
-            tmp11 = applyArgumentsResult;
-            tmp13 = closure_2_7;
           }
         }
       });

@@ -18,94 +18,46 @@ import SortedGuildStore from "SortedGuildStore" /* 5438 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-let closure_16 = async function _sendGuildInvite(arg0, value) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_4 = tmp3;
-          closure_3 = tmp7;
-          closure_131_0 = closure_0;
-          closure_131_1 = closure_1;
-          closure_131_2 = dependencyMap;
-          closure_131_3 = undefined;
-          c5 = 1;
-          setSendState(closure_0, closure_1, constants.SENDING);
-          const AccessibilityAnnouncer2 = require("AccessibilityAnnouncer").AccessibilityAnnouncer;
-          const intl2 = require("util").intl;
-          AccessibilityAnnouncer2.announce(intl2.string(require("util").t.kC3ZRG));
-          defaultChannel = defaultChannel.getDefaultChannel(closure_1, true, constants2.CREATE_INSTANT_INVITE);
-          if (null == defaultChannel) {
-            const _Error = Error;
-            throw Error();
-          } else {
-            const obj1 = { max_uses: InstantInviteUtilsDefault.INVITE_OPTIONS_ONCE.value, max_age: InstantInviteUtilsDefault.INVITE_OPTIONS_7_DAYS.value, unique: true };
-            c6 = 2;
-            c7 = 1;
-            const obj2 = { value: InstantInviteActionCreatorsDefault.createInvite(defaultChannel.id, obj1, tmp44), done: false };
-            return obj2;
-          }
-          tmp44 = dependencyMap;
-        }
-      } else {
-        if (1 === tmp7) {
-          c5 = 0;
-          closure_132_12(closure_131_0, closure_131_1, closure_132_13.ERROR);
-          let AccessibilityAnnouncer = closure_132_0(closure_132_2[18]).AccessibilityAnnouncer;
-          let intl = closure_132_0(closure_132_2[19]).intl;
-          AccessibilityAnnouncer.announce(intl.string(closure_132_0(closure_132_2[19]).t.fEptJP));
-          c7 = 3;
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_131_3 = value;
-          let obj4 = closure_132_1(closure_132_2[22]);
-          const obj3 = { inviteKey: closure_131_3.code, type: closure_132_0(closure_132_2[22]).InvitePropertiesType.USER, user: closure_132_11.getUser(closure_131_0), location: closure_131_2, inviteAnalyticsMetadata: null };
-          obj4 = { source: closure_131_2 };
-          obj3.inviteAnalyticsMetadata = obj4;
-          obj4.enqueue(obj3, () => {
-            closure_2_12(closure_1_0, closure_1_1, constants.SENT);
-            const AccessibilityAnnouncer = closure_0(4272).AccessibilityAnnouncer;
-            const intl = closure_0(1114).intl;
-            AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t.PuLLzP));
-          });
-          c5 = 0;
-        }
-        c5 = 0;
-        c7 = 3;
-        obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp22) {
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp22;
-      } else {
-        c6 = tmp;
-      }
-    }
+let closure_16 = async function _sendGuildInvite(arg0) {
+  closure_4 = tmp3;
+  closure_131_0 = closure_0;
+  closure_131_1 = closure_1;
+  closure_131_2 = dependencyMap;
+  setSendState(closure_0, closure_1, constants.SENDING);
+  const AccessibilityAnnouncer2 = require("AccessibilityAnnouncer").AccessibilityAnnouncer;
+  const intl2 = require("util").intl;
+  AccessibilityAnnouncer2.announce(intl2.string(require("util").t.kC3ZRG));
+  defaultChannel = defaultChannel.getDefaultChannel(closure_1, true, constants2.CREATE_INSTANT_INVITE);
+  if (null == defaultChannel) {
+    const _Error = Error;
+    throw Error();
   }
+  await InstantInviteActionCreatorsDefault.createInvite(defaultChannel.id, { max_uses: InstantInviteUtilsDefault.INVITE_OPTIONS_ONCE.value, max_age: InstantInviteUtilsDefault.INVITE_OPTIONS_7_DAYS.value, unique: true }, dependencyMap);
+  if (1 === tmp7) {
+    c5 = 0;
+    closure_132_12(closure_131_0, closure_131_1, closure_132_13.ERROR);
+    let AccessibilityAnnouncer = closure_132_0(closure_132_2[18]).AccessibilityAnnouncer;
+    let intl = closure_132_0(closure_132_2[19]).intl;
+    AccessibilityAnnouncer.announce(intl.string(closure_132_0(closure_132_2[19]).t.fEptJP));
+    c7 = 3;
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    closure_131_3 = value;
+    closure_132_1(closure_132_2[22]);
+    const obj3 = { inviteKey: closure_131_3.code, type: closure_132_0(closure_132_2[22]).InvitePropertiesType.USER, user: closure_132_11.getUser(closure_131_0), location: closure_131_2, inviteAnalyticsMetadata: null };
+    const obj4 = { source: closure_131_2 };
+    obj3.inviteAnalyticsMetadata = obj4;
+    obj4.enqueue(obj3, () => {
+      closure_2_12(closure_1_0, closure_1_1, constants.SENT);
+      const AccessibilityAnnouncer = closure_0(4272).AccessibilityAnnouncer;
+      const intl = closure_0(1114).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t.PuLLzP));
+    });
+    c5 = 0;
+  }
+  return value;
 };
 const setSendState = fn(13099).setSendState;
 const InviteSendStates = fn(7736).InviteSendStates;
@@ -151,9 +103,9 @@ export const useServerInviteRows = function useServerInviteRows(id, query) {
           canResult = null != vanityURLCode.vanityURLCode;
         }
         if (canResult) {
-          let tmp7Result = null == closure_1;
+          let tmp7Result = null == items1;
           if (!tmp7Result) {
-            const formatted = str2.toLowerCase();
+            const formatted = items1.toLowerCase();
             tmp7Result = fuzzysearchDefault(formatted, str.toLowerCase());
           }
           if (tmp7Result) {
@@ -177,7 +129,6 @@ export const useServerInviteRows = function useServerInviteRows(id, query) {
             }
           }
           str = vanityURLCode.name;
-          str2 = closure_1;
         }
       });
       const items3 = [items1, items2];

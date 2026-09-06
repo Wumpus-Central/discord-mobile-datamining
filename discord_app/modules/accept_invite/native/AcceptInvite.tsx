@@ -3,11 +3,13 @@
 // Module 12717 (AcceptInvite)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useToken from "useToken" /* 4262 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5581 */;
 import Card from "Card" /* 5607 */;
+import _modDef12726 from "module_12726" /* 12726 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,15 +32,15 @@ function getInviteState(invite) {
       if (!tmp2) {
         state = invite.state;
         if (InviteStates.RESOLVED !== state) {
-          if (tmp4.ACCEPTED !== state) {
-            if (tmp4.EXPIRED !== state) {
-              if (tmp4.BANNED !== state) {
-                if (tmp4.ERROR !== state) {
-                  if (tmp4.RESOLVING !== state) {
-                    if (tmp4.APP_NOT_OPENED !== state) {
-                      if (tmp4.APP_OPENED !== state) {
-                        if (tmp4.APP_OPENING !== state) {
-                          if (tmp4.ACCEPTING !== state) {
+          if (InviteStates.ACCEPTED !== state) {
+            if (InviteStates.EXPIRED !== state) {
+              if (InviteStates.BANNED !== state) {
+                if (InviteStates.ERROR !== state) {
+                  if (InviteStates.RESOLVING !== state) {
+                    if (InviteStates.APP_NOT_OPENED !== state) {
+                      if (InviteStates.APP_OPENED !== state) {
+                        if (InviteStates.APP_OPENING !== state) {
+                          if (InviteStates.ACCEPTING !== state) {
                             GlobalUtils.assertNever(state);
                           }
                         }
@@ -126,14 +128,14 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = tmp3(12726);
+    let guildSplashSource = _modDef12726;
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);
     let obj3 = ImageLoaderUtils;
     obj.size = width * obj3.getDevicePixelRatio();
-    guildSplashSource = tmp3(1396).getGuildSplashSource(obj);
-    const tmp3Result = tmp3(1396);
+    guildSplashSource = AvatarUtilsDefault.getGuildSplashSource(obj);
+    const tmp3Result = AvatarUtilsDefault;
   }
   obj = { style: null, children: null };
   const items = [tmp2.parentContainer, { height, width }];

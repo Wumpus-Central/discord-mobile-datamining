@@ -37,7 +37,7 @@ export default {
         return obj;
       }
       await PlayAgeSignals.getAgeSignals();
-      return toAppStoreAgeCheck(arg1);
+      return toAppStoreAgeCheck(value);
     })();
   }
 };

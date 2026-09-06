@@ -50,8 +50,8 @@ export default function BetaTag(gradient) {
     obj.style = items1;
     const intl2 = util.intl;
     obj.children = intl2.string(util.t.oW0eUd);
-    obj.children = tmp3(Text_Text.Text, obj);
-    let tmp3Result = tmp3(LinearGradientDefault, obj);
+    obj.children = jsx(Text_Text.Text, { variant: str, color: "text-overlay-light", style: null, children: null });
+    let tmp3Result = jsx(LinearGradientDefault, { variant: str, color: "text-overlay-light", style: null, children: null });
   } else {
     obj = { style: null, children: null };
     const items2 = [tmp2.container, style];
@@ -61,8 +61,8 @@ export default function BetaTag(gradient) {
     obj1.style = items3;
     const intl = util.intl;
     obj1.children = intl.string(util.t.oW0eUd);
-    obj.children = tmp3(Text_Text.Text, obj1);
-    tmp3Result = tmp3(View, obj);
+    obj.children = jsx(Text_Text.Text, { variant: str, color: "text-overlay-light", style: null, children: null });
+    tmp3Result = <View style={null}>{null}</View>;
   }
   return tmp3Result;
 };

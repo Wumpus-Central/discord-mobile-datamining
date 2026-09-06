@@ -273,18 +273,18 @@ export const isSocialLayerUmbrellaScope = function isSocialLayerUmbrellaScope(it
 };
 export const getSecurityMessage = function getSecurityMessage(scopes) {
   if (!scopes.includes(OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE)) {
-    if (!scopes.includes(tmp(8339).OAuth2Scopes.SDK_SOCIAL_LAYER)) {
-      if (!scopes.includes(tmp(8339).OAuth2Scopes.MESSAGES_READ)) {
-        if (!scopes.includes(tmp(8339).OAuth2Scopes.DM_CHANNELS_MESSAGES_READ)) {
-          const intl = tmp(1114).intl;
-          let formatResult = intl.format(tmp(1114).t["TeL+Ct"], {});
+    if (!scopes.includes(OAuth2Scopes.OAuth2Scopes.SDK_SOCIAL_LAYER)) {
+      if (!scopes.includes(OAuth2Scopes.OAuth2Scopes.MESSAGES_READ)) {
+        if (!scopes.includes(OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_MESSAGES_READ)) {
+          const intl = util.intl;
+          let formatResult = intl.format(util.t["TeL+Ct"], {});
         }
       }
-      const intl2 = tmp(1114).intl;
-      formatResult = intl2.format(tmp(1114).t.Soy7jJ, {});
+      const intl2 = util.intl;
+      formatResult = intl2.format(util.t.Soy7jJ, {});
     }
     return formatResult;
   }
-  const intl3 = tmp(1114).intl;
-  formatResult = intl3.format(tmp(1114).t.o0GMBD, {});
+  const intl3 = util.intl;
+  formatResult = intl3.format(util.t.o0GMBD, {});
 };

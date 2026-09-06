@@ -14,6 +14,7 @@ import GameAnalyticsUtils from "GameAnalyticsUtils" /* 4689 */;
 import getSoundshareAnalyticsContextDefault from "getSoundshareAnalyticsContext" /* 4695 */;
 import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 4696 */;
 import getStreamSourceMetadataDefault from "getStreamSourceMetadata" /* 4700 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7672 */;
 import ClipsStore from "ClipsStore" /* 1914 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4606 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -179,11 +180,9 @@ prototype["initializeEvents"] = function initializeEvents() {
     obj.streamKey = self.streamKey;
     obj.dispatch(obj);
     if (state === constants2.RTC_CONNECTED) {
-      const _connection8 = tmp4._connection;
+      const _connection8 = self._connection;
       if (_connection8 != null) {
-        _connection8.on(BaseConnectionEvent.BaseConnectionEvent.ScreenshareFinish, (screenshare_frames, videohook_frames, hybrid_dxgi_frames, hybrid_gdi_frames, hybrid_videohook_frames, hybrid_graphics_capture_frames, hybrid_capture_method_switches, hybrid_gdi_bitblt_frames, hybrid_gdi_printwindow_frames, hybrid_graphics_capture_frames_unique, hybrid_dxgi_frames_unique, hybrid_videohook_frames_unique, hybrid_gdi_bitblt_frames_unique, hybrid_gdi_printwindow_frames_unique, skip_history_json, quartz_frames, desktop_capturer_type, activity, go_live_camera_frames, screencapturekit_frames, hdr_frames_capable, hdr_frames, target_window_elevated, arg23, arg24, videohook_backend) => {
-          closure_23 = arg23;
-          closure_24 = arg24;
+        _connection8.on(BaseConnectionEvent.BaseConnectionEvent.ScreenshareFinish, (screenshare_frames, videohook_frames, hybrid_dxgi_frames, hybrid_gdi_frames, hybrid_videohook_frames, hybrid_graphics_capture_frames, hybrid_capture_method_switches, hybrid_gdi_bitblt_frames, hybrid_gdi_printwindow_frames, hybrid_graphics_capture_frames_unique, hybrid_dxgi_frames_unique, hybrid_videohook_frames_unique, hybrid_gdi_bitblt_frames_unique, hybrid_gdi_printwindow_frames_unique, skip_history_json, quartz_frames, desktop_capturer_type, activity, go_live_camera_frames, screencapturekit_frames, hdr_frames_capable, hdr_frames, target_window_elevated, pipewire_frames, x11_frames, videohook_backend) => {
           let analyticsContext = videohook_frames.analyticsContext;
           videohook_frames.screenshareFinishedCount = videohook_frames.screenshareFinishedCount + 1;
           const streamApplicationFromHistory = analyticsContext.getStreamApplicationFromHistory(videohook_frames.screenshareFinishedCount);
@@ -248,14 +247,14 @@ prototype["initializeEvents"] = function initializeEvents() {
             if (num14 == null) {
               num14 = 0;
             }
-            let num15 = closure_24;
+            let num15 = x11_frames;
             const sum7 = sum6 + num14;
-            if (closure_24 == null) {
+            if (x11_frames == null) {
               num15 = 0;
             }
-            let num16 = closure_23;
+            let num16 = pipewire_frames;
             const sum8 = sum7 + num15;
-            if (closure_23 == null) {
+            if (pipewire_frames == null) {
               num16 = 0;
             }
             obj.total_frames = sum8 + num16;
@@ -299,19 +298,18 @@ prototype["initializeEvents"] = function initializeEvents() {
             obj.hdr_frames_capable = hdr_frames_capable;
             obj.hdr_frames = hdr_frames;
             const obj2 = self(1242);
-            const tmp12 = closure_24;
-            const tmp14 = closure_23;
             obj.discord_is_elevated = self(4554).getDiscordIsElevated();
             obj.target_window_elevated = target_window_elevated;
-            obj.pipewire_frames = tmp14;
-            obj.x11_frames = tmp12;
+            obj.pipewire_frames = pipewire_frames;
+            obj.x11_frames = x11_frames;
             obj.videohook_backend = videohook_backend;
             const merged = Object.assign(tmp);
             obj2.track(constants.SCREENSHARE_FINISHED, obj);
+            const tmp2Result = self(4554);
           });
         });
       }
-      const _connection = tmp4._connection;
+      const _connection = self._connection;
       if (_connection != null) {
         _connection.on(BaseConnectionEvent.BaseConnectionEvent.SoundshareAttached, () => {
           const goLiveSource = MediaEngineStore.getGoLiveSource();
@@ -333,7 +331,7 @@ prototype["initializeEvents"] = function initializeEvents() {
           }
         });
       }
-      const _connection2 = tmp4._connection;
+      const _connection2 = self._connection;
       if (_connection2 != null) {
         _connection2.on(BaseConnectionEvent.BaseConnectionEvent.SoundshareFailed, (arg0) => {
           ({ failureCode, failureReason, willRetry } = arg0);
@@ -345,7 +343,7 @@ prototype["initializeEvents"] = function initializeEvents() {
           const result = self.reportSoundshareFailure(desktopSource, failureCode, failureReason, willRetry);
         });
       }
-      const _connection3 = tmp4._connection;
+      const _connection3 = self._connection;
       if (_connection3 != null) {
         _connection3.on(BaseConnectionEvent.BaseConnectionEvent.SoundshareSpeaking, () => {
           const goLiveSource = MediaEngineStore.getGoLiveSource();
@@ -356,7 +354,6 @@ prototype["initializeEvents"] = function initializeEvents() {
           if (null != desktopSource) {
             let desktopSource1;
             const obj3 = self(1242);
-            const tmp13 = self;
             if (goLiveSource != null) {
               desktopSource1 = goLiveSource.desktopSource;
             }
@@ -365,14 +362,14 @@ prototype["initializeEvents"] = function initializeEvents() {
             const merged1 = Object.assign(closure_1_1.getSoundshareAnalyticsProperties());
             obj3.track(constants.SOUNDSHARE_TRANSMITTING, obj);
             if (null != hookError.getHookError(constants2.SOUND)) {
-              tmp13(573).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" });
-              const tmp13Result = tmp13(573);
+              self(573).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" });
+              const tmp13Result = self(573);
             }
             const tmp16 = self(4695);
           }
         });
       }
-      const _connection4 = tmp4._connection;
+      const _connection4 = self._connection;
       if (_connection4 != null) {
         _connection4.on(BaseConnectionEvent.BaseConnectionEvent.SoundshareTrace, (type) => {
           const goLiveSource = MediaEngineStore.getGoLiveSource();
@@ -422,7 +419,7 @@ prototype["initializeEvents"] = function initializeEvents() {
           }
         });
       }
-      const _connection5 = tmp4._connection;
+      const _connection5 = self._connection;
       if (_connection5 != null) {
         _connection5.on(BaseConnectionEvent.BaseConnectionEvent.FirstFrameStats, (remoteVideoStreamCreatedTimestamp) => {
           let obj = closure_1_1;
@@ -504,7 +501,7 @@ prototype["initializeEvents"] = function initializeEvents() {
           }
         });
       }
-      const _connection6 = tmp4._connection;
+      const _connection6 = self._connection;
       if (_connection6 != null) {
         _connection6.on(BaseConnectionEvent.BaseConnectionEvent.FirstFrameEncryptedStats, (videoReceiversSetTimestamp) => {
           const streamAnalyticsProperties = closure_1_1.getStreamAnalyticsProperties();
@@ -558,7 +555,7 @@ prototype["initializeEvents"] = function initializeEvents() {
           obj.track(constants.STREAMER_FIRST_FRAME_ENCRYPTED, obj);
         });
       }
-      const _connection7 = tmp4._connection;
+      const _connection7 = self._connection;
       if (_connection7 != null) {
         _connection7.on(BaseConnectionEvent.BaseConnectionEvent.Destroy, () => {
           const errorTimer = self.errorTimer;
@@ -578,11 +575,11 @@ prototype["initializeEvents"] = function initializeEvents() {
     }
     if (tmp2) {
       if (!tmp6) {
-        obj2.trackVideoStartStats();
+        self.trackVideoStartStats();
         c0 = true;
       }
-      obj2.updateVideoStreamId(arg3, arg4);
-      tmp6 = null == obj2.getMediaSessionId() || c0;
+      self.updateVideoStreamId(arg3, arg4);
+      tmp6 = null == self.getMediaSessionId() || c0;
     }
   });
   this.on(require("RTCConnectionEvent").RTCConnectionEvent.VideoSourceQualityChanged, (guildId, channelId, senderUserId, arg3, maxFrameRate, context) => {
@@ -635,6 +632,7 @@ prototype["reportSoundshareFailure"] = function reportSoundshareFailure(desktopS
     const merged1 = Object.assign(self.getSoundshareAnalyticsProperties());
     AnalyticsUtilsDefault.track(constants.SOUNDSHARE_FAILED, obj);
   }
+  tmp8 = null == code || tmp6;
 };
 prototype["getStreamAnalyticsProperties"] = function getStreamAnalyticsProperties() {
   const self = this;
@@ -739,7 +737,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(reason) {
         obj.hardware_enabled = MediaEngineStore.getHardwareEncoding();
         let tmp = null;
         if (self.isOwner) {
-          tmp = tmp4(7672)();
+          tmp = getMediaPerformanceClassDefault();
         }
         obj.device_performance_class = tmp;
         obj.soundshare_experimental = MediaEngineStore.getExperimentalSoundshare();
@@ -780,11 +778,10 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(reason) {
         obj.hardware_enabled = MediaEngineStore.getHardwareEncoding();
         let tmp2 = null;
         if (self.isOwner) {
-          tmp2 = tmp4(7672)();
+          tmp2 = getMediaPerformanceClassDefault();
         }
         obj.device_performance_class = tmp2;
         obj.track(constants.VIDEO_STREAM_ENDED, obj);
-        tmp4 = importDefault;
       }
     });
     const _default = obj2(4701).default;

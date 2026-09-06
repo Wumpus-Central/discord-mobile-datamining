@@ -176,9 +176,7 @@ prototype["getLastActionMetrics"] = function getLastActionMetrics(arg0) {
   for (const item10009 of tmp) {
     let traces = item10009.traces;
     for (const item10016 of traces) {
-      let items = [item10016.name, , ];
-      items[1] = tmp2.name;
-      items[2] = item10016.time;
+      let items = [item10016.name, tmp2.name, item10016.time];
       obj[item10016.name] = items;
       continue;
     }

@@ -22,7 +22,7 @@ function fetchCurrentAppIcon() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _fetchCurrentAppIcon(arg0, value) {
+let closure_15 = async function _fetchCurrentAppIcon() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -93,7 +93,7 @@ let closure_15 = async function _fetchCurrentAppIcon(arg0, value) {
     }
   }
 };
-let closure_16 = async function _setAppIcon(arg0, arg1) {
+let closure_16 = async function _setAppIcon(arg0) {
   closure_3 = tmp3;
   closure_2 = tmp5;
   closure_130_0 = closure_0;
@@ -116,7 +116,7 @@ let closure_16 = async function _setAppIcon(arg0, arg1) {
     closure_131_1(closure_131_2[14]);
   } else if (arg0 === 1) {
     c7 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     closure_131_1(closure_131_2[12]).dispatch({ type: "APP_ICON_UPDATED" });
     closure_131_1(closure_131_2[12]);
@@ -130,7 +130,7 @@ let closure_16 = async function _setAppIcon(arg0, arg1) {
     c5 = 0;
     closure_131_1(closure_131_2[13]);
   }
-  return arg1;
+  return value;
 };
 const AppIconConstants = fn(9323);
 ({ getDefaultIcon: metroRequire, getOfficialAlternateIcons: closure_7, getLimitedAlternateIcons: closure_8 } = AppIconConstants);
@@ -147,7 +147,7 @@ if (PlatformUtils.isAndroid()) {
 function useCurrentAppIcon() {
   const tmp = _slicedToArray(noop.useState(require("AppIconTypes").FreemiumAppIconIds.DEFAULT), 2);
   _require = tmp[1];
-  importDefault = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  importDefault = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -226,7 +226,7 @@ export const setAppIcon = function setAppIcon() {
 export const useAppIcons = function useAppIcons() {
   const currentAppIcon = _slicedToArray(noop.useState(AppIconTypes.FreemiumAppIconIds.DEFAULT), 2);
   closure_129_0 = currentAppIcon[1];
-  closure_129_1 = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  closure_129_1 = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -306,9 +306,9 @@ export const useAppIcons = function useAppIcons() {
       closure_1(tmp3[14]);
     } else if (arg0 === 1) {
       v3 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
-      closure_129_0 = arg1.map((id) => id.id);
+      closure_129_0 = value.map((id) => id.id);
       closure_129_1 = closure_1_7().filter((id) => closure_1_0.includes(id.id));
       closure_1_7();
       closure_129_2 = closure_1_8().filter((id) => closure_1_0.includes(id.id));
@@ -321,7 +321,7 @@ export const useAppIcons = function useAppIcons() {
       c4 = 0;
       closure_1_8();
     }
-    return arg1;
+    return value;
   }), []);
   useMountEffectDefault(() => {
     closure_2();

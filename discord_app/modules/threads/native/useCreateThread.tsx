@@ -76,7 +76,8 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
           const tmp10 = analyticsLocations(9310);
         }
       });
-      closure_129_4 = await obj7.uploadFiles(guildId);
+      await obj7.uploadFiles(guildId);
+      closure_129_4 = value;
       return { uploaderFile: closure_129_1._file, files: closure_129_4 };
     })();
   });

@@ -32,7 +32,7 @@ function getChannelKey(arg0) {
   return arg0;
 }
 function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
-  return <VoicePanel key={arg1} channelId={arg1} transitionState={arg2} transitionCleanUp={arg3} />;
+  return <VoicePanel key={channelId} channelId={channelId} transitionState={transitionState} transitionCleanUp={transitionCleanUp} />;
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

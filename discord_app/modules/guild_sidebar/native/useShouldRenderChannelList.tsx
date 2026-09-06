@@ -47,6 +47,7 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
         c7 = true;
         handleGatewayChange(true);
       }
+      const obj2 = first(handleGatewayChange[6]);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(handleGatewayChange);

@@ -19,7 +19,7 @@ function getEmojiSourceData() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _getEmojiSourceData(arg0, arg1) {
+let closure_8 = async function _getEmojiSourceData(arg0) {
   closure_2 = tmp3;
   closure_129_0 = null;
   const HTTP = HTTPUtils.HTTP;
@@ -29,9 +29,9 @@ let closure_8 = async function _getEmojiSourceData(arg0, arg1) {
     c5 = 3;
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    const body = arg1.body;
+    const body = value.body;
     let type;
     if (body != null) {
       type = body.type;
@@ -51,7 +51,7 @@ let closure_8 = async function _getEmojiSourceData(arg0, arg1) {
     }
     c3 = 0;
   }
-  return arg1;
+  return value;
 };
 const Constants = fn(1074);
 ({ Endpoints: closure_4, GuildFeatures: hasOwnProperty } = Constants);
@@ -73,7 +73,7 @@ prototype["getIconURL"] = function getIconURL(size) {
   const obj = { id: this.id, size, icon: this.icon, canAnimate: flag };
   return obj.getGuildIconURL(obj);
 };
-prototype["getIconSource"] = function getIconSource(size, flag) {
+prototype["getIconSource"] = function getIconSource(size) {
   const self = this;
   if (flag === undefined) {
     flag = false;
@@ -95,7 +95,8 @@ ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiI
   return (async () => {
     closure_1 = tmp5;
     closure_0 = tmp2;
-    closure_128_0 = await closure_1_7(closure_0);
+    await closure_1_7(closure_0);
+    closure_128_0 = value;
     let guild = null;
     if (null != closure_128_0) {
       let type;
@@ -166,9 +167,9 @@ ExpressionSourceGuildRecord["createFromGuildType"] = function createFromGuildTyp
     return guild;
   } else {
     if (obj2.isGuildRecord(guild)) {
-      let fromGuildRecord = obj.createFromGuildRecord(guild);
+      let fromGuildRecord = ExpressionSourceGuildRecord.createFromGuildRecord(guild);
     } else {
-      fromGuildRecord = obj.createFromDiscoverableGuild(guild);
+      fromGuildRecord = ExpressionSourceGuildRecord.createFromDiscoverableGuild(guild);
     }
     obj2 = GuildRecordUtils;
   }
@@ -190,7 +191,7 @@ prototype2["createFromServer"] = function createFromServer(arg0) {
     throw new TypeError("Trying to call a non-function");
   }
 };
-let size = fn(2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/records/ExpressionSourceRecord.tsx");
 
 export { EmojiSourceDataTypes };

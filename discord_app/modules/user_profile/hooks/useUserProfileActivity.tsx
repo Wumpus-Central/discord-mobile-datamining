@@ -49,7 +49,7 @@ export default function useUserProfileActivity(arg0) {
         if (isEntryLiveResult) {
           return !isEntryLiveResult;
         } else {
-          let tmpResult = tmp(tmp2[9]);
+          let tmpResult = tmp(stateFromStores2[9]);
           if (tmpResult.isListenedSessionEntry(length)) {
             length = length.extra.entries.length;
             let tmp6 = length > 0;
@@ -66,7 +66,7 @@ export default function useUserProfileActivity(arg0) {
             }
             let result = tmp6;
           } else {
-            tmpResult = tmp(tmp2[9]);
+            tmpResult = tmp(stateFromStores2[9]);
             if (tmpResult.isWatchedMediaEntry(length)) {
               result = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
@@ -77,11 +77,12 @@ export default function useUserProfileActivity(arg0) {
                 return result;
               });
             } else {
-              result = tmp(tmp2[9]).isRecentActivityEntry(length);
-              const tmpResult1 = tmp(tmp2[9]);
+              result = tmp(stateFromStores2[9]).isRecentActivityEntry(length);
+              const tmpResult1 = tmp(stateFromStores2[9]);
             }
           }
         }
+        let obj = userProfileLiveActivities(stateFromStores2[8]);
       });
     }
     if (0 === userProfileLiveActivities.length) {

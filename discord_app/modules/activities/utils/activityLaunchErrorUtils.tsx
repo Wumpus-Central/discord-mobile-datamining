@@ -11,7 +11,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8855 */;
 
 require = fn;
-let closure_8 = async function _getActivityLaunchErrorInfo(arg0, value) {
+let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -38,7 +38,7 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0, value) {
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
-          closure_131_0 = closure_0;
+          closure_131_0 = _require;
           closure_131_1 = closure_1;
           let ClientError2;
           let detailCode;
@@ -46,9 +46,9 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0, value) {
           closure_131_5 = undefined;
           const intl9 = util.intl;
           closure_131_5 = intl9.string(util.t["IOy+I5"]);
-          if (closure_0 instanceof EmbeddedActivityClientErrorDefault) {
+          if (_require instanceof EmbeddedActivityClientErrorDefault) {
             ClientError2 = ClientError.ClientError;
-            reason2 = tmp83.reason;
+            reason2 = _require.reason;
             fetchState = fetchState.getFetchState();
             const DeveloperMode = UserSettings.DeveloperMode;
             let setting = DeveloperMode.getSetting();
@@ -61,37 +61,37 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0, value) {
               let obj1 = { value: EmbeddedActivitiesActionCreators.fetchDeveloperApplications(), done: false };
               return obj1;
             }
-          } else if (tmp83 instanceof InteractionCallbackErrorDefault) {
-            ClientError2 = tmp8.CallbackError;
-            reason2 = tmp83.reason;
+          } else if (_require instanceof InteractionCallbackErrorDefault) {
+            ClientError2 = ClientError.CallbackError;
+            reason2 = _require.reason;
             obj1 = InteractionUtils;
-            const result = obj1.interactionCallbackErrorReason(tmp83.reason, tmp84);
+            const result = obj1.interactionCallbackErrorReason(_require.reason, closure_1);
             closure_2 = result;
             if (result == null) {
               closure_2 = closure_131_5;
             }
             closure_131_5 = closure_2;
           } else {
-            ClientError2 = tmp8.ApiError;
-            ({ status: closure_131_3, code: closure_131_4, code } = tmp83);
+            ClientError2 = ClientError.ApiError;
+            ({ status: closure_131_3, code: closure_131_4, code } = _require);
             if (constants2.INVALID_ACTIVITY_LAUNCH_NO_ACCESS === code) {
               const intl6 = util.intl;
               closure_131_5 = intl6.string(util.t.GyzcrS);
-            } else if (tmp9.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER === code) {
+            } else if (constants2.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER === code) {
               const intl5 = util.intl;
               closure_131_5 = intl5.string(util.t.zxv7EF);
-            } else if (tmp9.INVALID_PERMISSIONS === code) {
+            } else if (constants2.INVALID_PERMISSIONS === code) {
               const intl4 = util.intl;
               closure_131_5 = intl4.string(util.t.hHGrWz);
-            } else if (tmp9.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL === code) {
+            } else if (constants2.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL === code) {
               const intl3 = util.intl;
               closure_131_5 = intl3.string(util.t.j29zCr);
             } else {
-              if (tmp9.INVALID_ACTIVITY_LAUNCH_AGE_GATED === code) {
+              if (constants2.INVALID_ACTIVITY_LAUNCH_AGE_GATED === code) {
                 const intl2 = util.intl;
                 closure_131_5 = intl2.string(util.t["4WuFRE"]);
-              } else if (tmp9.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE !== code) {
-                if (tmp9.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM === code) {
+              } else if (constants2.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE !== code) {
+                if (constants2.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM === code) {
                   const intl10 = util.intl;
                   closure_131_5 = intl10.string(util.t.uGDCcw);
                 }
@@ -102,7 +102,6 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0, value) {
           }
           const obj2 = { message: closure_131_5, errorType: ClientError2, errorStatus: detailCode, errorCode: reason2 };
           c6 = 3;
-          tmp84 = closure_1;
         }
       } else if (arg0 === 1) {
         c6 = 3;

@@ -42,9 +42,9 @@ export default noop.memo(noop.forwardRef((arg0, ref) => {
   if (showRedDot) {
     obj = { children: null };
     obj = { cutouts: items, children: tmp3 };
-    items = [tmp2(ClipViewDefault, obj), ];
+    items = [React4(ClipViewDefault, obj), ];
     const obj1 = { style: tmp.dot };
-    items[1] = tmp2(View, obj1);
+    items[1] = React4(View, obj1);
     obj.children = items;
     tmp4 = hasOwnProperty(View, obj);
   }

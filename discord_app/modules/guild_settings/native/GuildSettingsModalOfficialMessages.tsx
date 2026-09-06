@@ -2,6 +2,7 @@
 
 // Module 17790 (GuildSettingsModalOfficialMessages)
 import nativeDefault from "native" /* 576 */;
+import _modDef672 from "module_672" /* 672 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -35,7 +36,7 @@ function MessagePreview(theme) {
   }
   let obj = GuildOfficialMessageUtils;
   const accessibleGuildOfficialTextColor = obj.getAccessibleGuildOfficialTextColor(selectedColor, semanticColor, num);
-  let obj2 = tmp3(672)(selectedColor);
+  let obj2 = _modDef672(selectedColor);
   const hexResult = accessibleGuildOfficialTextColor.hex();
   const alphaResult = obj2.alpha(closure_1_10);
   obj = { style: null, pointerEvents: "none", children: null };

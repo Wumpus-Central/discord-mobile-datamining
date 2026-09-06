@@ -3,8 +3,10 @@
 // Module 10908 (UserNameplateRow)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
+import TableRowDivider from "TableRowDivider" /* 5602 */;
 import TableRow from "TableRow" /* 5605 */;
 import TableRowGroupContext from "TableRowGroupContext" /* 5606 */;
+import Card from "Card" /* 5607 */;
 import NameplateDefault from "Nameplate" /* 8818 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -77,15 +79,15 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   const merged1 = Object.assign(merged);
   const items2 = [hasOwnProperty(NameplateDefault, { nameplate, isPressed: tmp7[0], invertPressOpacity: true, fullOpacity: isPreviewRow, animate: isPreviewRow }), hasOwnProperty(TableRow.TableRowInner, { height: "100%", label, subLabel, icon, trailing, arrow, disabled: flag, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps })];
   obj.children = items2;
-  let tmp12Result = tmp12(tmp3(5607).Card, obj);
+  let tmp12Result = timestampProducer(Card.Card, obj);
   if (!context) {
     if (!tmp6) {
       obj = { children: null };
       const items3 = [tmp12Result, ];
       const obj1 = { adjustSpacingForIcon: null != icon };
-      items3[1] = tmp15(tmp3(5602).TableRowDivider, obj1);
+      items3[1] = hasOwnProperty(TableRowDivider.TableRowDivider, obj1);
       obj.children = items3;
-      tmp12Result = tmp12(React5, obj);
+      tmp12Result = timestampProducer(React5, obj);
     }
   }
   return tmp12Result;

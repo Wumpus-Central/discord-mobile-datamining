@@ -6,7 +6,9 @@ import util from "util" /* 1114 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import FastImageDefault from "FastImage" /* 5587 */;
+import PriceUtils from "PriceUtils" /* 7234 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15231 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,21 +28,20 @@ function PriceOptionRow(selected) {
   obj = { style: items, accessibilityRole, accessibilityState, onPress, children: null };
   items[1] = containerSelected;
   obj = { style: tmp.rowStatusIcon, source: null };
-  const tmp5 = closure_1_10;
   const tmp7 = TouchableHitBoxDefault;
   obj.source = importDefault(selected ? 17692 : 16563);
   const items1 = [React7(FastImageDefault, obj), ];
   const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   const obj2 = { price: null, interval: null };
-  let tmp2Result = tmp2(7234);
+  let tmp2Result = PriceUtils;
   obj2.price = tmp2Result.formatPrice(price, CurrencyCodes.USD);
-  tmp2Result = tmp2(15231);
+  tmp2Result = GuildRoleSubscriptionTypeUtils;
   obj2.interval = tmp2Result.formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
   obj1.children = intl.format(util.t.CgmBaG, obj2);
   items1[1] = React7(Text_Text.Text, obj1);
   obj.children = items1;
-  return tmp5(tmp7, obj);
+  return closure_1_10(tmp7, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);

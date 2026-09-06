@@ -82,10 +82,9 @@ const paymentSourceStore = new PaymentSourceStore(DispatcherDefault, {
     closure_1 = {};
     let id = null;
     for (const item10009 of paymentSources) {
-      let tmp = item10009;
       closure_1[item10009.id] = PaymentSourceRecord.createFromServer(item10009);
       if (item10009.default) {
-        id = tmp.id;
+        id = item10009.id;
       }
       continue;
     }

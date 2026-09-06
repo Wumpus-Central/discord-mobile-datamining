@@ -2,8 +2,11 @@
 
 // Module 8043 (ChannelLinkedToLobbySystemMessage)
 import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7953 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 
 require = fn;
@@ -27,16 +30,16 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, applicationName: null, applicationNameOnClick: null, urlOnClick: null };
     obj = { message, author: messageAuthorWithProcessedColor, roleStyle };
-    obj.usernameOnClick = tmp(7962)(obj);
+    obj.usernameOnClick = formatUsernameOnClickDefault(obj);
     obj.applicationName = application.name;
     const obj1 = { linkColor: tmp3.defaultUsernameColor, medium: true };
     obj.applicationNameOnClick = obj1;
-    const obj2 = { action: "bindOpenUrl", url: tmp(2024).getArticleURL(HelpdeskArticles.LINKED_LOBBIES), linkColor: tmp3.linkColor, medium: true };
+    const obj2 = { action: "bindOpenUrl", url: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.LINKED_LOBBIES), linkColor: tmp3.linkColor, medium: true };
     obj.urlOnClick = obj2;
     const obj3 = { content: null };
     const intl = util.intl;
     obj3.content = intl.formatToParts(util.t.gZfhOw, obj);
-    const merged = Object.assign(tmp(7964)(message));
+    const merged = Object.assign(createCommonMessageDefault(message));
     return obj3;
   }
 };

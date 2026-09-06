@@ -207,7 +207,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
         const tmp32 = new AuditLogChange(constants3.PRUNE_DELETE_DAYS, null, num2);
         let arr1 = items.push(tmp32);
       }
-      let tmp35 = id.action_type === tmp25.AUTO_MODERATION_BLOCK_MESSAGE;
+      let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
       if (tmp35) {
         const options = id.options;
         let prop;
@@ -220,7 +220,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
         const tmp42 = new AuditLogChange(constants3.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, id.options.auto_moderation_rule_name);
         items.push(tmp42);
       }
-      let tmp45 = id.action_type === tmp25.VOICE_CHANNEL_STATUS_CREATE;
+      let tmp45 = id.action_type === AuditLogActions.VOICE_CHANNEL_STATUS_CREATE;
       if (tmp45) {
         const options2 = id.options;
         let status;
@@ -405,7 +405,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           const tmp32 = new AuditLogChange(constants3.PRUNE_DELETE_DAYS, null, num2);
           let arr1 = items.push(tmp32);
         }
-        let tmp35 = id.action_type === tmp25.AUTO_MODERATION_BLOCK_MESSAGE;
+        let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
         if (tmp35) {
           const options = id.options;
           let prop;
@@ -418,7 +418,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           const tmp42 = new AuditLogChange(constants3.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, id.options.auto_moderation_rule_name);
           items.push(tmp42);
         }
-        let tmp45 = id.action_type === tmp25.VOICE_CHANNEL_STATUS_CREATE;
+        let tmp45 = id.action_type === AuditLogActions.VOICE_CHANNEL_STATUS_CREATE;
         if (tmp45) {
           const options2 = id.options;
           let status;
@@ -577,6 +577,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
       });
       const arr = require("module_12")(members);
       closure_19 = found.map((userId) => userId.userId).value();
+      const iter = found.map((userId) => userId.userId);
     }
   },
   GUILD_SETTINGS_INIT: function handleSettingsInit(guildId) {

@@ -21,7 +21,7 @@ prototype["createFromServer"] = function createFromServer(user) {
   user = user.user;
   obj.user = new UserRecord(user);
   if (typeof prototype === "function") {
-    const tmp7 = new prototype(user, user, tmp2);
+    const tmp7 = new prototype(user, user, UserRecord);
     ({ id: tmp7.id, name: tmp7.name, type: tmp7.type, user: tmp7.user, name_localized } = obj);
     if (name_localized == null) {
       name_localized = obj.name;
@@ -31,7 +31,6 @@ prototype["createFromServer"] = function createFromServer(user) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp2 = UserRecord;
   const tmp3 = new UserRecord(user);
 };
 const size = fn(2);

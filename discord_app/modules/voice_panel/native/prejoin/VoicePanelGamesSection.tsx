@@ -2,15 +2,16 @@
 
 // Module 17161 (VoicePanelGamesSection)
 import util from "util" /* 1114 */;
+import TableRow from "TableRow" /* 5605 */;
 import useGame from "useGame" /* 7309 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8675 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
 import FormComponents from "FormComponents" /* 9118 */;
 import VoiceChannelGamesExperimentDefault from "VoiceChannelGamesExperiment" /* 9178 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 9183 */;
 import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17162 */;
 import noop from "module_19" /* 19 */;
 
-const GameActivityIconDefault = tmp3(9183);
 require = fn;
 function GameRow(gameId) {
   gameId = gameId.gameId;
@@ -25,8 +26,8 @@ function GameRow(gameId) {
     if ("" !== data.name) {
       let name = data.name;
     } else {
-      const intl = tmp(1114).intl;
-      name = intl.string(tmp(1114).t.GIWFlF);
+      const intl = util.intl;
+      name = intl.string(util.t.GIWFlF);
     }
     obj = { game: data, size: 32, fallback: "placeholder" };
     const tmp7 = jsx(GameActivityIconDefault, { game: data, size: 32, fallback: "placeholder" });
@@ -44,11 +45,11 @@ function GameRow(gameId) {
         accessibilityRole: "button",
         accessibilityLabel: null
       };
-      const intl2 = tmp(1114).intl;
+      const intl2 = util.intl;
       const obj3 = { gameName: name };
-      obj2.accessibilityLabel = intl2.formatToPlainString(tmp(1114).t["9sZWVp"], obj3);
+      obj2.accessibilityLabel = intl2.formatToPlainString(util.t["9sZWVp"], obj3);
     }
-    return jsx(tmp(5605).TableRow, obj2);
+    return jsx(TableRow.TableRow, obj2);
   }
 }
 const jsx = fn(21).jsx;
@@ -66,7 +67,7 @@ export default noop.memo(function VoicePanelGamesSection(arg0) {
       const obj = { title: null, hasIcons: true, children: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.crRMpG);
-      obj.children = arr.map((gameId) => <GameRow key={arg0} gameId={arg0} />);
+      obj.children = arr.map((gameId) => <GameRow key={gameId} gameId={gameId} />);
       tmp3 = jsx(FormComponents.VoicePanelFormSection, { title: null, hasIcons: true, children: null });
     }
   }

@@ -6,6 +6,7 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
 import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 15290 */;
 import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 15291 */;
 import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 15292 */;
+import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 15298 */;
 import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 15301 */;
 import noop from "module_19" /* 19 */;
 
@@ -69,10 +70,10 @@ export default function ChannelListPreview(useGradientBackground) {
   let tmp7 = null;
   if (useGradientBackground) {
     obj = { style: tmp.channelPreviewGradient, children: null };
-    obj = { themes, themeIndex, isDimmed: false, backgroundToken: tmp4(576).colors.BACKGROUND_BASE_LOW };
-    obj.children = closure_5(tmp4(15298), obj);
+    obj = { themes, themeIndex, isDimmed: false, backgroundToken: nativeDefault.colors.BACKGROUND_BASE_LOW };
+    obj.children = closure_5(SettingsAppearanceGradientBackgroundDefault, obj);
     tmp7 = closure_5(closure_4, obj);
-    const tmp4Result = tmp4(15298);
+    const tmp4Result = SettingsAppearanceGradientBackgroundDefault;
   }
   const items2 = [tmp7, , ];
   const obj1 = {

@@ -1,6 +1,7 @@
 // === Module 10280: trackOnEmojiPickerOpened ===
 
 // Module 10280 (trackOnEmojiPickerOpened)
+import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
 import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 10281 */;
 import useEmojiHotrail from "useEmojiHotrail" /* 10282 */;
@@ -75,7 +76,7 @@ function trackOnEmojiPickerOpened(current) {
       }
       return animated;
     }).length,
-    num_custom_expressions_favorites: prop.filter(tmp11(4217).isCustomEmoji).length,
+    num_custom_expressions_favorites: prop.filter(EmojiUtilsDefault.isCustomEmoji).length,
     num_standard_expressions_favorites: prop.filter((id) => null == id.id).length,
     num_expressions_frecent: substr1.length,
     num_animated_expressions_frecent: substr1.filter((animated) => {
@@ -85,7 +86,7 @@ function trackOnEmojiPickerOpened(current) {
       }
       return animated;
     }).length,
-    num_custom_expressions_frecent: substr1.filter(tmp11(4217).isCustomEmoji).length,
+    num_custom_expressions_frecent: substr1.filter(EmojiUtilsDefault.isCustomEmoji).length,
     num_standard_expressions_frecent: substr1.filter((id) => null == id.id).length,
     num_current_guild_expressions: guildEmoji.length,
     num_custom_expressions_total: customEmoji.size,
@@ -94,7 +95,7 @@ function trackOnEmojiPickerOpened(current) {
     num_expressions_newly_added: visibleNewlyAddedEmojis.length,
     num_animated_expressions_newly_added: visibleNewlyAddedEmojis.filter((animated) => animated.animated).length
   };
-  let tmp14 = intention === tmp2.REACTION;
+  let tmp14 = intention === EmojiIntention.REACTION;
   if (tmp14) {
     obj = { is_burst: isBurstReaction };
     tmp14 = obj;
@@ -115,8 +116,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx");
 
 export default trackOnEmojiPickerOpened;
-export const useTrackOnEmojiPickerOpenedForReactions = function useTrackOnEmojiPickerOpenedForReactions(set) {
-  noop.useRef(set);
+export const useTrackOnEmojiPickerOpenedForReactions = function useTrackOnEmojiPickerOpenedForReactions(arg0) {
+  noop.useRef(arg0);
   const effect = noop.useEffect(() => {
     if (ref.current.intention === EmojiIntention.REACTION) {
       trackOnEmojiPickerOpened(tmp.current);

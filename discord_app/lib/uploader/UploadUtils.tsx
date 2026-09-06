@@ -4,6 +4,7 @@
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import js_shim_shim from "js_shim/shim" /* 1351 */;
 import Upload from "Upload" /* 5128 */;
+import AttachmentFile from "AttachmentFile" /* 5137 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
@@ -118,11 +119,11 @@ export const canUploadNatively = function canUploadNatively(platform) {
     fileIsInAppDirResult = null != platform.uri;
   }
   if (fileIsInAppDirResult) {
-    let tmpResult = tmp(5137);
+    let tmpResult = AttachmentFile;
     fileIsInAppDirResult = tmpResult.fileIsInAppDir(platform.uri);
   }
   if (fileIsInAppDirResult) {
-    tmpResult = tmp(1351);
+    tmpResult = js_shim_shim;
     fileIsInAppDirResult = tmpResult.isLibdiscoreInitialized();
   }
   return fileIsInAppDirResult;

@@ -4,10 +4,13 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import timing from "timing" /* 4561 */;
 import Pressables from "Pressables" /* 5123 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import _modDef11804 from "module_11804" /* 11804 */;
 import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 12285 */;
 import _modDef12286 from "module_12286" /* 12286 */;
@@ -69,24 +72,23 @@ function ChannelActionEmoji(emoji) {
   if (null != stateFromStores) {
     obj = { style: tmp.emoji, source: null, resizeMode: "contain" };
     const obj1 = { uri: null };
-    tmp5(5587);
-    const tmp5Result = tmp5(1396);
+    const tmp5Result = AvatarUtilsDefault;
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj10.id, animated: obj10.animated } = stateFromStores);
     obj2.size = EMOJI_URL_BASE_SIZE;
     obj1.uri = tmp5Result.getEmojiURL(obj2);
     obj.source = obj1;
-    let tmp2Result = tmp2(tmp5Result, obj);
+    let tmp2Result = closure_12(tmp5Result, obj);
   } else {
     tmp2Result = tmp6;
     if (null != name) {
-      const tmp5Result1 = tmp5(4213);
+      const tmp5Result1 = UnicodeEmojisDefault;
       tmp2Result = tmp6;
       if (null != tmp5Result1.getByName(tmp5Result2.convertSurrogateToName(name, false))) {
         const obj3 = { style: tmp.textEmoji, variant: "heading-lg/normal", children: name };
-        tmp2Result = tmp2(tmp3(4556).Text, obj3);
+        tmp2Result = closure_12(tmp3(4556).Text, obj3);
       }
-      tmp5Result2 = tmp5(4213);
+      tmp5Result2 = UnicodeEmojisDefault;
     }
   }
   return tmp2Result;
@@ -238,10 +240,10 @@ function MemberActionChatInputBanner(channel) {
       let tmp3Result = null;
       if (null != channelAction) {
         let obj = { style: closure_1.container, children: null };
-        obj = { emoji: tmp.emoji };
+        obj = { emoji: channelAction.emoji };
         const items = [closure_2_12(ChannelActionEmoji, obj), , ];
         obj = { style: closure_1.text, children: null };
-        const obj1 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: closure_1.wrap, children: tmp.title };
+        const obj1 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: closure_1.wrap, children: channelAction.title };
         const items1 = [closure_2_12(Text_Text.Text, obj1), ];
         const obj2 = { variant: "text-xxs/normal", color: "text-muted", children: null };
         const intl = util.intl;
@@ -251,13 +253,12 @@ function MemberActionChatInputBanner(channel) {
         items[1] = map1(View, obj);
         let tmp6Result = completed;
         if (completed) {
-          const obj3 = { disableColor: true, size: tmp8(1178).Icon.Sizes.MEDIUM, source: _modDef12289 };
-          tmp6Result = tmp6(tmp8(1178).Icon, obj3);
+          const obj3 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef12289 };
+          tmp6Result = closure_2_12(native.Icon, obj3);
         }
         items[2] = tmp6Result;
         obj.children = items;
         tmp3Result = map1(View, obj);
-        tmp6 = closure_2_12;
       }
       return tmp3Result;
     }
@@ -286,15 +287,15 @@ function MemberActionChatInputBanner(channel) {
             obj.onPress = function onPress() {
               return channel(channelAction[27]).transitionTo(closure_10.CHANNEL(guild_id.guild_id, channelId.channelId));
             };
-            obj = { emoji: tmp.emoji };
+            obj = { emoji: nextMemberAction.emoji };
             const items = [closure_2_12(ChannelActionEmoji, obj), , ];
             obj = { style: closure_1.text, children: null };
             const obj1 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: closure_1.wrap, children: null };
             const intl2 = util.intl;
-            const obj2 = { step: tmp.title };
+            const obj2 = { step: nextMemberAction.title };
             obj1.children = intl2.format(util.t["/beONw"], obj2);
             const items1 = [closure_2_12(Text_Text.Text, obj1), ];
-            const obj3 = { action: tmp };
+            const obj3 = { action: nextMemberAction };
             items1[1] = closure_2_12(ActionChannelInfo, obj3);
             obj.children = items1;
             items[1] = map1(View, obj);
@@ -316,7 +317,7 @@ function MemberActionChatInputBanner(channel) {
         obj5.children = renderNextAction();
         items6[1] = tmp30(require("ReanimatedRexport").View, obj5);
         obj3.children = items6;
-        tmp28Result = tmp28(tmp29, obj3);
+        tmp28Result = closure_13(closure_14, obj3);
       }
     }
     const obj6 = { children: null };

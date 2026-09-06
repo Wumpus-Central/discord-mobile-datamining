@@ -62,7 +62,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
         obj.preferVCPrice = preferVCPrice;
         obj.disableBundleStaticBackground = disableBundleStaticBackground;
         obj.muteBundleStaticBackground = muteBundleStaticBackground;
-        return <ShopCardGridItem key={arg0.skuId} product={arg0} index={closure_0 * columns + arg1} cardWidth={cardWidth} unpublishedAt={null} preferVCPrice={null} disableBundleStaticBackground={null} muteBundleStaticBackground={null} />;
+        return <ShopCardGridItem key={product.skuId} product={product} index={closure_0 * columns + index} cardWidth={cardWidth} unpublishedAt={null} preferVCPrice={null} disableBundleStaticBackground={null} muteBundleStaticBackground={null} />;
       })
     }, index);
   });

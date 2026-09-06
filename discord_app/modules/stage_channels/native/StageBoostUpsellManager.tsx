@@ -1,8 +1,11 @@
 // === Module 17485: StageBoostUpsellManager ===
 
 // Module 17485 (StageBoostUpsellManager)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import StageMediaHooks from "StageMediaHooks" /* 5417 */;
+import useChannelVideoLimit from "useChannelVideoLimit" /* 9088 */;
 import ActionSheetStore from "ActionSheetStore" /* 4251 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
@@ -43,15 +46,14 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
           let obj = StageMediaHooks;
           if (obj.getStageHasMedia(channel.id)) {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
-              if (PermissionStore.can(tmp5(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
+              if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(tmp5(1896)(5430, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5430, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj);
                 c8 = true;
               }
             }
-            tmp5Result = tmp5(9088);
+            tmp5Result = useChannelVideoLimit;
           }
-          tmp6 = dependencyMap;
         }
       }
     }

@@ -50,14 +50,14 @@ function GlobalStatusIndicatorWrapper(onPress) {
   onPress = stateFromStores1.useCallback(() => {
     if (null != stateFromStores1) {
       if (null != openVoice) {
-        if (ChannelRTCStore.getChatOpen(tmp.id)) {
+        if (ChannelRTCStore.getChatOpen(stateFromStores1.id)) {
           tmp2();
         }
         if (onPress != null) {
           tmp8();
         }
       }
-      const result = PrivateChannelCallUtils.navigateToVoiceChannel(tmp, "RTC Panel");
+      const result = PrivateChannelCallUtils.navigateToVoiceChannel(stateFromStores1, "RTC Panel");
     }
   }, items4);
   closure_6 = stateFromStores1.useRef(onPress);
@@ -87,7 +87,7 @@ function GlobalStatusIndicatorWrapper(onPress) {
   }
   obj.accessibilityHint = stringResult;
   obj.onPress = onPress;
-  obj = { children: tmp12(tmp(tmp2[13]), {}) };
+  obj = { children: closure_12(tmp(tmp2[13]), {}) };
   obj.children = closure_12(openVoice, obj);
   return closure_12(closure_6, obj);
 }
@@ -141,7 +141,7 @@ export default function GlobalStatusIndicator(children) {
     let tmp3Result = null;
     if (isVisible) {
       obj = { onPress };
-      tmp3Result = tmp3(GlobalStatusIndicatorWrapper, obj);
+      tmp3Result = closure_2_12(GlobalStatusIndicatorWrapper, obj);
     }
     children[1] = tmp3Result;
     return closure_2_14(map1, { children });

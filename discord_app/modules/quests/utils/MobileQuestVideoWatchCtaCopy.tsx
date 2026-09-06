@@ -20,8 +20,7 @@ function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
     truncate = truncate.truncate;
   }
   if (truncate >= num) {
-    const intl2 = tmp(1114).intl;
-    tmp(1114).t;
+    const intl2 = util.intl;
     let t = { count: null };
     const _Math = Math;
     num = truncate / num;
@@ -29,8 +28,8 @@ function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
     intl2.formatToPlainString(tmp4 ? t.XTdnRd : t.PHhTXX, t);
     const tmp5 = tmp4 ? t.XTdnRd : t.PHhTXX;
   } else {
-    const intl = tmp(1114).intl;
-    t = tmp(1114).t;
+    const intl = util.intl;
+    t = util.t;
     obj = { count: truncate };
     return intl.formatToPlainString(tmp4 ? t["spl/XS"] : t.rUfeQx, obj);
   }
@@ -60,13 +59,13 @@ export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWat
   ({ minutes, seconds } = remainingTaskTime);
   if (minutes > 0) {
     if (seconds > 0) {
-      const intl3 = tmp2(1114).intl;
+      const intl3 = util.intl;
       const time = { minutes, seconds };
-      let formatToPlainStringResult = intl3.formatToPlainString(tmp2(1114).t["lW/66D"], time);
+      let formatToPlainStringResult = intl3.formatToPlainString(util.t["lW/66D"], time);
     }
-    const intl4 = tmp2(1114).intl;
+    const intl4 = util.intl;
     const formatToPlainString = intl4.formatToPlainString;
-    const t = tmp2(1114).t;
+    const t = util.t;
     if (tmp) {
       obj = { remainTime: formatToPlainStringResult };
       let formatToPlainStringResult1 = formatToPlainString(t["ch+yrN"], obj);
@@ -77,12 +76,13 @@ export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWat
     return formatToPlainStringResult1;
   }
   if (minutes > 0) {
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     const obj1 = { count: minutes };
-    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t["SxnF/O"], obj1);
+    formatToPlainStringResult = intl2.formatToPlainString(util.t["SxnF/O"], obj1);
   } else {
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     const obj2 = { count: seconds };
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t["0BZpdi"], obj2);
+    formatToPlainStringResult = intl.formatToPlainString(util.t["0BZpdi"], obj2);
   }
+  tmp = questTaskDetails.percentComplete > 0;
 };

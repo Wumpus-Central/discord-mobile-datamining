@@ -2,6 +2,7 @@
 
 // Module 10400 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import StickersUtils from "StickersUtils" /* 4899 */;
 import noop from "module_19" /* 19 */;
@@ -80,8 +81,8 @@ export const doesStickerPackHavePopoutInformation = function doesStickerPackHave
   let obj = StickersUtils;
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
-    const intl = tmp(1114).intl;
-    obj.description = intl.string(tmp(1114).t.W11rMa);
+    const intl = util.intl;
+    obj.description = intl.string(util.t.W11rMa);
     items.push(obj);
   }
   return items.length > 0;

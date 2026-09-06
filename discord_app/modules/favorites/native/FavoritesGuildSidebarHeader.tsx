@@ -3,26 +3,32 @@
 // Module 16278 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef3225 from "module_3225" /* 3225 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import ChatIcon from "ChatIcon" /* 5071 */;
 import TextIcon from "TextIcon" /* 5080 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
+import FavoritesHooks from "FavoritesHooks" /* 10224 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10227 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10976 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function EmptyBody() {
   const callback = noop.useCallback(() => {
     if (obj.getFavoritesAccess().hasAccess) {
-      tmp3(tmp2[7])({ source: "favorites_empty_sidebar" });
+      openFavoritesGuildAddChannelModalDefault({ source: "favorites_empty_sidebar" });
     } else {
-      const tmp3Result = tmp3(tmp2[8]);
-      tmp3Result.openLazy(tmp(tmp2[10])(tmp2[9], tmp2.paths), tmp(tmp2[11]).FAVORITES_UPSELL_SHEET_KEY, { source: "favorites_empty_sidebar" });
-      const tmp4 = tmp(tmp2[10])(tmp2[9], tmp2.paths);
+      const tmp3Result = ActionSheetActionCreatorsDefault;
+      tmp3Result.openLazy(asyncRequireImpl(dependencyMap[9], dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "favorites_empty_sidebar" });
+      const tmp4 = asyncRequireImpl(dependencyMap[9], dependencyMap.paths);
     }
+    obj = FavoritesHooks;
   }, []);
-  const obj = { variant: "text-sm/medium", color: "text-muted", children: null };
+  let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.format(_modDef3225.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
@@ -95,9 +101,9 @@ export default function FavoritesGuildSidebarHeader() {
     tmp7 = timestampProducer(View, obj);
   }
   const items = [tmp7, , ];
-  obj = { spacing: tmp6(576).space.PX_8, style: tmp.copy, children: null };
+  obj = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
   const obj1 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp4(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.string(_modDef3225["1n0TGE"]);
   const items1 = [timestampProducer(Text_Text.Heading, obj1), timestampProducer(EmptyBody, {})];
   obj.children = items1;
@@ -106,9 +112,9 @@ export default function FavoritesGuildSidebarHeader() {
   if (!tmp2) {
     const obj2 = { children: null };
     const obj3 = { style: tmp.divider };
-    const items2 = [tmp10(View, obj3), tmp10(PlaceholderRows, {})];
+    const items2 = [timestampProducer(View, obj3), timestampProducer(PlaceholderRows, {})];
     obj2.children = items2;
-    tmp3Result = tmp3(React6, obj2);
+    tmp3Result = React5(React6, obj2);
   }
   items[2] = tmp3Result;
   obj.children = items;

@@ -8,14 +8,14 @@ import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 
 require = fn;
-function getNickname(id, arg1, id) {
+function getNickname(id, channelId, id) {
   if (null == id) {
     return null;
   } else if (null != id) {
     return GuildMemberStore.getNick(id, id.id);
   } else {
-    if (null != arg1) {
-      const channel = ChannelStore.getChannel(arg1);
+    if (null != channelId) {
+      const channel = ChannelStore.getChannel(channelId);
       let isPrivateResult;
       if (channel != null) {
         isPrivateResult = channel.isPrivate();
@@ -57,10 +57,10 @@ function getName(id, arg1, id) {
   }
   return stringResult;
 }
-function useName(arg0, arg1, arg2) {
-  _require = arg0;
-  closure_1 = arg1;
-  dependencyMap = arg2;
+function useName(guildId, channelId, user) {
+  _require = guildId;
+  closure_1 = channelId;
+  dependencyMap = user;
   const items = [GuildMemberStore, ChannelStore, RelationshipStore];
   return require("initialize").useStateFromStores(items, () => getName(closure_0, closure_1, closure_2));
 }

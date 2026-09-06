@@ -6,6 +6,8 @@ import _modDef4153 from "module_4153" /* 4153 */;
 import DateUtils from "DateUtils" /* 4242 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useChannelName from "useChannelName" /* 4713 */;
+import TextIcon2 from "TextIcon" /* 5080 */;
+import ForumIcon from "ForumIcon" /* 5088 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10913 */;
 import GuildIconWithChannelType from "GuildIconWithChannelType" /* 10999 */;
 import noop from "module_19" /* 19 */;
@@ -117,7 +119,7 @@ export default noop.memo(function ChannelRow(channel) {
       return subLabel;
     } else {
       if (!channel.isThread()) {
-        if (!obj8.isForumPost()) {
+        if (!channel.isForumPost()) {
           let name;
           if (stateFromStores != null) {
             name = stateFromStores.name;
@@ -126,9 +128,9 @@ export default noop.memo(function ChannelRow(channel) {
         }
       }
       if (channel.isForumPost()) {
-        let TextIcon = tmp3(5088).ForumIcon;
+        let TextIcon = ForumIcon.ForumIcon;
       } else {
-        TextIcon = tmp3(5080).TextIcon;
+        TextIcon = TextIcon2.TextIcon;
       }
       let obj = { style: closure_7.subLabel, children: null };
       obj = { color: nativeDefault.colors.TEXT_SUBTLE, style: closure_7.subLabelIcon };
@@ -139,11 +141,11 @@ export default noop.memo(function ChannelRow(channel) {
       if (null != stateFromStores2) {
         const obj1 = { children: null };
         const obj2 = { style: closure_7.subLabelSeparator, variant: "text-xs/medium", color: "text-subtle", children: "\u2022" };
-        const items1 = [tmp8(Text_Text.Text, obj2), ];
+        const items1 = [closure_2_12(Text_Text.Text, obj2), ];
         const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef4153(tmp14)) };
-        items1[1] = tmp8(Text_Text.Text, obj3);
+        items1[1] = closure_2_12(Text_Text.Text, obj3);
         obj1.children = items1;
-        tmp5Result = tmp5(map1, obj1);
+        tmp5Result = closure_2_14(map1, obj1);
       }
       items[2] = tmp5Result;
       obj.children = items;
@@ -175,13 +177,13 @@ export default noop.memo(function ChannelRow(channel) {
     const merged2 = Object.assign(obj);
     obj.height = "100%";
     obj.checked = flag;
-    let tmp17Result = tmp17(tmp4(tmp5[21]).TableCheckboxRow, obj);
+    let tmp17Result = closure_12(tmp4(tmp5[21]).TableCheckboxRow, obj);
   } else {
     obj1 = {};
     const merged3 = Object.assign(obj);
     obj1.height = "100%";
     obj1.trailing = memo3;
-    tmp17Result = tmp17(tmp4(tmp5[22]).TableRow, obj1);
+    tmp17Result = closure_12(tmp4(tmp5[22]).TableRow, obj1);
   }
   return tmp17Result;
 });

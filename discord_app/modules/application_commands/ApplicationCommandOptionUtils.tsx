@@ -101,8 +101,7 @@ export const getBoolean = function getBoolean(arg0, arg1) {
 export const getOptionalBoolean = function getOptionalBoolean(arg0, arg1) {
   let tmp = null;
   if (null != arg0[arg1]) {
-    const arr = arg0[arg1];
-    if (null == arr) {
+    if (null == arg0[arg1]) {
       let items = [];
     } else {
       items = arr.filter((type, index) => {
@@ -159,8 +158,7 @@ export const getChannelId = function getChannelId(arg0, arg1) {
 export const getOptionalChannelId = function getOptionalChannelId(arg0, arg1) {
   let channelId = null;
   if (null != arg0[arg1]) {
-    const arr = arg0[arg1];
-    if (null == arr) {
+    if (null == arg0[arg1]) {
       let items = [];
     } else {
       items = arr.filter((type, index) => {
@@ -217,8 +215,7 @@ export const getUserId = function getUserId(arg0, arg1) {
 export const getOptionalUserId = function getOptionalUserId(arg0, arg1) {
   let userId = null;
   if (null != arg0[arg1]) {
-    const arr = arg0[arg1];
-    if (null == arr) {
+    if (null == arg0[arg1]) {
       let items = [];
     } else {
       items = arr.filter((type, index) => {
@@ -275,8 +272,7 @@ export const getRoleId = function getRoleId(arg0, arg1) {
 export const getOptionalRoleId = function getOptionalRoleId(arg0, arg1) {
   let roleId = null;
   if (null != arg0[arg1]) {
-    const arr = arg0[arg1];
-    if (null == arr) {
+    if (null == arg0[arg1]) {
       let items = [];
     } else {
       items = arr.filter((type, index) => {
@@ -316,13 +312,12 @@ export const normalizeNumericString = function normalizeNumericString(locale, tr
     global = locale;
     let prop = numberParts.numberParts[locale];
     if (prop == null) {
-      prop = tmp12(9413).numberParts["en-US"];
+      prop = numberParts.numberParts["en-US"];
     }
     const _RegExp = RegExp;
     ({ group, decimal } = prop);
     regExp = new RegExp(RegexUtilsDefault.escape(group), "g");
     const _RegExp2 = RegExp;
-    tmp12 = require;
     regExp1 = new RegExp(RegexUtilsDefault.escape(decimal), "g");
   }
   return trimmed.replace(regExp, "").replace(regExp1, ".");

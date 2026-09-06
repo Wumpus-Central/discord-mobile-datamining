@@ -501,15 +501,15 @@ const result = size.fileFinishedImporting("modules/go_live/StreamSettingsConstan
 export const ApplicationStreamResolutions = obj;
 export const getApplicationResolution = function getApplicationResolution(arg0) {
   if (obj.RESOLUTION_480 === arg0) {
-    return tmp.RESOLUTION_480;
-  } else if (tmp.RESOLUTION_720 === arg0) {
-    return tmp.RESOLUTION_720;
-  } else if (tmp.RESOLUTION_1080 === arg0) {
-    return tmp.RESOLUTION_1080;
-  } else if (tmp.RESOLUTION_1440 === arg0) {
-    return tmp.RESOLUTION_1440;
-  } else if (tmp.RESOLUTION_SOURCE === arg0) {
-    return tmp.RESOLUTION_SOURCE;
+    return obj.RESOLUTION_480;
+  } else if (obj.RESOLUTION_720 === arg0) {
+    return obj.RESOLUTION_720;
+  } else if (obj.RESOLUTION_1080 === arg0) {
+    return obj.RESOLUTION_1080;
+  } else if (obj.RESOLUTION_1440 === arg0) {
+    return obj.RESOLUTION_1440;
+  } else if (obj.RESOLUTION_SOURCE === arg0) {
+    return obj.RESOLUTION_SOURCE;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -521,13 +521,13 @@ export const ApplicationStreamFPS = obj;
 export const ApplicationStreamPresets = obj;
 export const getApplicationFramerate = function getApplicationFramerate(arg0) {
   if (obj.FPS_5 === arg0) {
-    return tmp.FPS_5;
-  } else if (tmp.FPS_15 === arg0) {
-    return tmp.FPS_15;
-  } else if (tmp.FPS_30 === arg0) {
-    return tmp.FPS_30;
-  } else if (tmp.FPS_60 === arg0) {
-    return tmp.FPS_60;
+    return obj.FPS_5;
+  } else if (obj.FPS_15 === arg0) {
+    return obj.FPS_15;
+  } else if (obj.FPS_30 === arg0) {
+    return obj.FPS_30;
+  } else if (obj.FPS_60 === arg0) {
+    return obj.FPS_60;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;

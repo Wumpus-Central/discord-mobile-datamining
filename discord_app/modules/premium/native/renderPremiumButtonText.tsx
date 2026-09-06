@@ -37,8 +37,8 @@ function PremiumText(basePlanId) {
     if (null != combined) {
       const obj2 = { style: tmp.discount, children: null };
       const obj3 = { style, numberOfLines: 1, children: combined };
-      obj2.children = tmp16(native.LegacyText, obj3);
-      tmp16Result = tmp16(tmp15, obj2);
+      obj2.children = React5(native.LegacyText, obj3);
+      tmp16Result = React5(View, obj2);
     }
     items[1] = tmp16Result;
     obj.children = items;

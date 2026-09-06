@@ -80,8 +80,8 @@ export const useWishlistBannerConfig = function useWishlistBannerConfig(totalUno
     } else if (tmp > 0) {
       SHOP_ONLY = obj.MIXED;
     } else {
-      if (arr.length > 0) {
-        if (arr.every((item) => {
+      if (displayItems.length > 0) {
+        if (displayItems.every((item) => {
           ({ sku, source } = item);
           let isGameItemSKUResult = source === totalUnownedWishlistItemCount(wishlistInDmLength[2]).WishlistItemSource.POPULAR;
           if (isGameItemSKUResult) {

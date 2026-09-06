@@ -487,7 +487,7 @@ function walkAst(content, fn) {
     }
   }
 }
-function flattenAst(isSlate, content, content) {
+function flattenAst(isSlate, content) {
   closure_0 = isSlate;
   let tmp3 = content;
   if (content === undefined) {
@@ -574,12 +574,12 @@ function constrainAst(content, arg1) {
     obj = { limit: 200, hasBailedAst: false };
   }
   if (Array.isArray(content)) {
-    const num = 0;
-    if (0 < content.length) {
+    if (0 < length) {
       ast = constrainAst(content[num], obj).ast;
       obj.hasBailedAst = true;
       content.length = num;
     }
+    length = content.length;
   } else if ("text" !== content.type) {
     obj.limit = obj.limit - 1;
     if (obj.limit <= 0) {

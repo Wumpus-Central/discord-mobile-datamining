@@ -87,11 +87,11 @@ prototype["markFailed"] = function markFailed(arg0) {
     continue;
   }
 };
-prototype["try"] = function try(nextWantsResult, arg1) {
+prototype["try"] = function try(nextWantsResult, string) {
   closure_0 = nextWantsResult;
-  closure_1 = arg1;
+  closure_1 = string;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

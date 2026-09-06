@@ -259,7 +259,7 @@ global = function getAccessibilityFeatures() {
 AnalyticsUtils = fn(1250);
 let closure_22 = AnalyticsUtils.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 let c24 = false;
-let closure_25 = {};
+const dependencyMap = {};
 AnalyticsUtils = fn(1250);
 obj10 = {
   throttlePeriod: 900000,
@@ -673,11 +673,11 @@ obj60.track = function track(arg0, arg1) {
   if (c24) {
     if (null != arg1) {
       const _Array = Array;
-      if (Array.isArray(closure_25[arg0])) {
-        tmp3[arg0].push(arg1);
+      if (Array.isArray(dependencyMap[arg0])) {
+        dependencyMap[arg0].push(arg1);
       } else {
         const items = [arg1];
-        tmp3[arg0] = items;
+        dependencyMap[arg0] = items;
       }
     }
   }

@@ -2,10 +2,14 @@
 
 // Module 16015 (MainChannels)
 import nativeDefault from "native" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import useChatLayoutDefault from "useChatLayout" /* 4420 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4423 */;
 import useRefValueDefault from "useRefValue" /* 5586 */;
 import StartupProfiler from "StartupProfiler" /* 11533 */;
 import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16016 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 16017 */;
 import NativeFreezeScreens from "NativeFreezeScreens" /* 16018 */;
 import messages_MessagesDefault from "messages/Messages" /* 16019 */;
 import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16022 */;
@@ -40,8 +44,8 @@ function LeftPanelContent(panelStyles) {
   if (tmp8) {
     tmp11 = current;
   }
-  isChatBesideChannelList = tmp10(4420)().isChatBesideChannelList;
-  top = tmp10(1611)().top;
+  isChatBesideChannelList = useChatLayoutDefault().isChatBesideChannelList;
+  top = useSafeAreaInsetsDefault().top;
   const items1 = [tmp, top];
   const memo = obj1.useMemo(() => {
     const items = [first.sideContainer, { marginTop: top }];
@@ -57,7 +61,7 @@ function LeftPanelContent(panelStyles) {
     items[1] = sideTablet;
     return items;
   }, items2);
-  const sum = DM_WIDTH + tmp10(16017)();
+  const sum = DM_WIDTH + useChannelListWidthDefault();
   let num = 0;
   if (tmp8) {
     num = 1;
@@ -76,13 +80,13 @@ function LeftPanelContent(panelStyles) {
   const items5 = [React7(HomePanelContent.HomePanelContent, {}), ];
   if (null == panelStyles) {
     obj1 = { style: memo, pointerEvents: "box-none", nativeID: "messages-parent-view", children: tmp15Result };
-    let tmp16Result = tmp16(tmp18, obj1);
+    let tmp16Result = React7(hasOwnProperty, obj1);
   } else {
     const obj2 = { style: null, pointerEvents: "box-none", nativeID: "messages-parent-view", children: null };
     const items6 = [memo, panelStyles];
     obj2.style = items6;
     obj2.children = tmp15Result;
-    tmp16Result = tmp16(tmp10(4296).View, obj2);
+    tmp16Result = React7(ReanimatedRexportDefault.View, obj2);
   }
   items5[1] = tmp16Result;
   obj.children = items5;
@@ -116,10 +120,10 @@ let closure_11 = createStyles.createStyles(obj);
 let closure_14 = noop.memo(function LeftMenuTabsInner() {
   const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
   if (MobileHomeDrawerExperiment.useConfig({ location: "gesture" }).enableHome) {
-    let tmp2Result = tmp2(LeftPanelHomeDrawerContainer, {});
+    let tmp2Result = React7(LeftPanelHomeDrawerContainer, {});
   } else {
-    const obj = { style: tmp.fill, children: tmp2(LeftPanelContent, {}) };
-    tmp2Result = tmp2(hasOwnProperty, obj);
+    const obj = { style: tmp.fill, children: React7(LeftPanelContent, {}) };
+    tmp2Result = React7(hasOwnProperty, obj);
   }
   return tmp2Result;
 });

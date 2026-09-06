@@ -24,7 +24,7 @@ function ContactSyncNameInputScreen() {
     }
     return applyArgumentsResult;
   }
-  dependencyMap = async function _onNext(arg0, arg1) {
+  dependencyMap = async function _onNext(arg0) {
     _require(true);
     await tmp3(12684).updateName(closure_0);
     if (1 === tmp7) {
@@ -39,13 +39,13 @@ function ContactSyncNameInputScreen() {
       tmp3(4259);
     } else if (arg0 === 1) {
       c4 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       closure_129_0(false);
       onClose();
       c3 = 0;
     }
-    return arg1;
+    return value;
   };
   let obj = require("ContactSyncUtils");
   const contactSyncAccount = obj.useContactSyncAccount();
@@ -77,7 +77,7 @@ function ContactSyncNameInputScreen() {
     loading: tmp3[0],
     initialName: null
   });
-  return <tmp5 onNext={onNext} onRemoveName={function onRemoveName() {
+  return <View onNext={onNext} onRemoveName={function onRemoveName() {
     return onNext(null);
   }} loading={tmp3[0]} initialName={null} />;
 }

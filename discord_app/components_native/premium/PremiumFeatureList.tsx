@@ -45,10 +45,10 @@ export default function PremiumFeatureList(style) {
       let tmp3 = null;
       if (null != closure_1_0) {
         tmp3 = null;
-        if ("" !== tmp2) {
+        if ("" !== closure_1_0) {
           tmp3 = null;
           if (color.renderSeparatorBelow) {
-            tmp3 = tmp2;
+            tmp3 = closure_1_0;
           }
         }
       }

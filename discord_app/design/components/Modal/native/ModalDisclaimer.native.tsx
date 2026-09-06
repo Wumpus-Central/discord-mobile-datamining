@@ -17,5 +17,5 @@ export const ModalDisclaimer = function ModalDisclaimer(children) {
   let obj = { style: tmp.container, children: null };
   obj = { variant: "text-xs/medium", color: "text-muted", style: tmp.disclaimer, children: children.children };
   obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", style: tmp.disclaimer, children: children.children });
-  return <View variant="text-xs/medium" color="text-muted" style={tmp.disclaimer}>{arg0.children}</View>;
+  return <View variant="text-xs/medium" color="text-muted" style={tmp.disclaimer}>{children.children}</View>;
 };

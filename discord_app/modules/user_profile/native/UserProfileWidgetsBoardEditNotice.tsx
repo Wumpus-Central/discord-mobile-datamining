@@ -2,7 +2,12 @@
 
 // Module 13064 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import XSmallIcon from "XSmallIcon" /* 5680 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8241 */;
 import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10625 */;
 import noop from "module_19" /* 19 */;
@@ -38,21 +43,21 @@ export default function UserProfileWidgetsBoardEditNotice() {
       obj.style = items;
       obj = { style: closure_0.icon, children: null };
       obj = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-      obj.children = hasOwnProperty(tmp(4515).CircleInformationIcon, obj);
+      obj.children = hasOwnProperty(CircleInformationIcon.CircleInformationIcon, obj);
       const items1 = [hasOwnProperty(View, obj), , ];
       const obj1 = { style: closure_0.text, variant: "text-sm/medium", color: "text-strong", children: null };
-      const intl = tmp(1114).intl;
-      obj1.children = intl.string(tmp(1114).t.kv8ULD);
-      items1[1] = hasOwnProperty(tmp(4556).Text, obj1);
+      const intl = util.intl;
+      obj1.children = intl.string(util.t.kv8ULD);
+      items1[1] = hasOwnProperty(Text_Text.Text, obj1);
       const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-      const intl2 = tmp(1114).intl;
-      obj2.accessibilityLabel = intl2.string(tmp(1114).t.WAI6xu);
+      const intl2 = util.intl;
+      obj2.accessibilityLabel = intl2.string(util.t.WAI6xu);
       obj2.onPress = function onPress() {
         return markAsDismissed(constants.USER_DISMISS);
       };
       obj2.style = closure_0.closeButton;
-      obj2.children = hasOwnProperty(tmp(5680).XSmallIcon, { size: "sm" });
-      items1[2] = hasOwnProperty(tmp(5123).PressableOpacity, obj2);
+      obj2.children = hasOwnProperty(XSmallIcon.XSmallIcon, { size: "sm" });
+      items1[2] = hasOwnProperty(Pressables.PressableOpacity, obj2);
       obj.children = items1;
       tmp3 = timestampProducer(View, obj);
     }

@@ -7,7 +7,6 @@ import ExperimentStore from "ExperimentStore" /* 4476 */;
 
 require = fn;
 function parseRegisteredExperiments(stateFromStoresObject) {
-  let obj = {};
   function _loop(type) {
     obj = { system: ExperimentManager.ExperimentSystem.LEGACY, kind: null, name: null, title: null, variants: null };
     let str = "guild";
@@ -46,7 +45,7 @@ function parseRegisteredExperiments(stateFromStoresObject) {
     let _loopResult = _loop(tmp5[1]);
     continue;
   }
-  return obj;
+  return {};
 }
 function getLegacyOverridesInfo(stateFromStoresObject1) {
   let obj = {};

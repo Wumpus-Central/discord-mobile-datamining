@@ -7,7 +7,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
 require = fn;
-let closure_4 = async function _saveGuildThemeNuxPreference(arg0, value) {
+let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -84,9 +84,9 @@ let result = size.fileFinishedImporting("modules/guild_themes/GuildThemeNuxUtils
 export const getInitialGuildThemeNuxSelection = function getInitialGuildThemeNuxSelection() {
   const defaultGuildThemePreference = UserSettingsProtoStore.getDefaultGuildThemePreference();
   if (defaultGuildThemePreference === Client.GuildThemeSourcePreference.PERSONAL) {
-    let GUILD = tmp2(4491).GuildThemeSourcePreference.PERSONAL;
+    let GUILD = Client.GuildThemeSourcePreference.PERSONAL;
   } else {
-    GUILD = tmp2(4491).GuildThemeSourcePreference.GUILD;
+    GUILD = Client.GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
 };

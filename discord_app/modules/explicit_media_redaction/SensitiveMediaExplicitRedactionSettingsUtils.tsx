@@ -35,10 +35,10 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
     if (isDm) {
       if (!flag) {
-        let BLUR2 = tmp4(1187).ExplicitContentRedaction.BLOCK;
+        let BLUR2 = preloaded_user_settings.ExplicitContentRedaction.BLOCK;
       }
     }
-    ExplicitContentRedaction = tmp4(1187).ExplicitContentRedaction;
+    ExplicitContentRedaction = preloaded_user_settings.ExplicitContentRedaction;
     BLUR2 = ExplicitContentRedaction.BLUR;
   } else {
     let nsfwAllowed;
@@ -55,9 +55,9 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag6 = false;
       }
       if (!flag5) {
-        const BLUR = tmp4(1187).ExplicitContentRedaction.BLUR;
+        const BLUR = preloaded_user_settings.ExplicitContentRedaction.BLUR;
       }
-      const ExplicitContentFilter2 = tmp4(1935).ExplicitContentFilter;
+      const ExplicitContentFilter2 = UserSettings.ExplicitContentFilter;
       setting = ExplicitContentFilter2.getSetting();
     } else {
       let flag3 = isDm;
@@ -69,7 +69,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag4 = false;
       }
       if (flag3) {
-        const ExplicitContentFilter = tmp4(1935).ExplicitContentFilter;
+        const ExplicitContentFilter = UserSettings.ExplicitContentFilter;
         const setting1 = ExplicitContentFilter.getSetting();
         if (flag4) {
           let SHOW = obj[setting1];
@@ -77,7 +77,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
           SHOW = obj[setting1];
         }
       } else {
-        SHOW = tmp4(1187).ExplicitContentRedaction.SHOW;
+        SHOW = preloaded_user_settings.ExplicitContentRedaction.SHOW;
       }
       return SHOW;
     }
@@ -139,7 +139,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     flag2 = false;
   }
   if (flag) {
-    const ExplicitContentFilter = tmp(1935).ExplicitContentFilter;
+    const ExplicitContentFilter = UserSettings.ExplicitContentFilter;
     const setting = ExplicitContentFilter.getSetting();
     if (flag2) {
       let tmp5 = obj[setting];
@@ -148,7 +148,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     }
     return tmp5;
   } else {
-    return tmp(1187).ExplicitContentRedaction.BLUR;
+    return preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
 };
 export const getExplicitContentSettingOrDefault = function getExplicitContentSettingOrDefault(arg0) {
@@ -181,7 +181,7 @@ export const updateExplicitContentSetting = function updateExplicitContentSettin
   if (setting != null) {
     prop = setting.explicitContentGuilds;
   }
-  obj = { explicitContentGuilds: tmp4({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
+  obj = { explicitContentGuilds: resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
   let prop1;
   if (setting != null) {
     prop1 = setting.explicitContentNonFriendDm;
@@ -210,12 +210,12 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
     }
     obj = { setting: prop };
     let prop1;
-    let tmp10Result = tmp10(obj);
+    let tmp10Result = resolveExplicitContentSettingWithDefaults(obj);
     if (setting != null) {
       prop1 = setting.explicitContentNonFriendDm;
     }
     obj = { setting: prop1, isDm: true };
-    tmp10Result = tmp10(obj);
+    tmp10Result = resolveExplicitContentSettingWithDefaults(obj);
     let prop2;
     if (setting != null) {
       prop2 = setting.explicitContentFriendDm;

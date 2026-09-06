@@ -7,6 +7,7 @@ import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import _modDef2722 from "module_2722" /* 2722 */;
 import PushNotificationDefault from "PushNotification" /* 9687 */;
 import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12412 */;
@@ -53,11 +54,10 @@ class NotificationTokenManager extends tmp2 {
 
         });
         if (NativeModules.PushNotificationAndroid) {
-          const PushNotificationAndroid = tmp5.PushNotificationAndroid;
+          const PushNotificationAndroid = NativeModules.PushNotificationAndroid;
           const result1 = PushNotificationAndroid.onRegisterNotificationToken();
         }
         const stringResult1 = intl2.string(util.t.TXNS7S);
-        tmp5 = NativeModules;
         PushNotificationActionCreatorsDefault.registerDevice(tmp.token);
       }
     };
@@ -70,9 +70,9 @@ class NotificationTokenManager extends tmp2 {
     applyArgumentsResult.handleSyncNoMultiAccountOnPostConnectionOpen = function handleSyncNoMultiAccountOnPostConnectionOpen() {
       if (null != applyArgumentsResult.postConnectionOpenTimeoutID) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(obj.postConnectionOpenTimeoutID);
-        obj.postConnectionOpenTimeoutID = null;
-        const result = obj.handleSyncNoMultiAccount();
+        clearTimeout(applyArgumentsResult.postConnectionOpenTimeoutID);
+        applyArgumentsResult.postConnectionOpenTimeoutID = null;
+        const result = applyArgumentsResult.handleSyncNoMultiAccount();
       }
     };
     applyArgumentsResult.handleSyncNoMultiAccount = function handleSyncNoMultiAccount() {
@@ -249,20 +249,19 @@ prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNo
       }
       if (null != prop) {
         const _Set = Set;
-        const set = new Set(NOTIF_SETTINGS.map((string_id) => string_id.string_id));
-        const found = prop().filter((importance) => {
+        const propResult = prop();
+        const found = propResult.filter((importance) => {
           let hasItem = 0 === importance.importance;
           if (hasItem) {
             hasItem = set.has(importance.channelId);
           }
           return hasItem;
         });
-        const propResult = prop();
+        const set = new Set(NOTIF_SETTINGS.map((string_id) => string_id.string_id));
         obj = { disabled_channels: found.map((channelId) => channelId.channelId) };
-        tmp4(1242).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj);
-        const tmp4Result = tmp4(1242);
+        AnalyticsUtilsDefault.track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj);
+        const tmp4Result = AnalyticsUtilsDefault;
       }
-      tmp4 = importDefault;
     }
   }
 };

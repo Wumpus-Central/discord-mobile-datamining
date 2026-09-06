@@ -20,20 +20,20 @@ function AnimatedEllipsisDot(disableScale) {
   const sharedValue1 = disableScale(sequenceStartDelay[6]).useSharedValue(0.75);
   let items = [delay, sequenceStartDelay, sequenceEndDelay, disableScale, sharedValue, sharedValue1];
   const effect = sequenceEndDelay.useEffect(() => {
-    function animateValue(sharedValue, value, value) {
+    function animateValue(sharedValue, arg1, arg2) {
       const obj = disableScale(sequenceStartDelay[6]);
       const obj2 = disableScale(sequenceStartDelay[6]);
       const obj3 = disableScale(sequenceStartDelay[6]);
       const obj4 = disableScale(sequenceStartDelay[7]);
-      const withDelayResult = obj3.withDelay(closure_1_2, disableScale(sequenceStartDelay[7]).withTiming(value, { duration: 0 }));
+      const withDelayResult = obj3.withDelay(closure_1_2, disableScale(sequenceStartDelay[7]).withTiming(arg1, { duration: 0 }));
       const obj5 = disableScale(sequenceStartDelay[6]);
       const obj6 = disableScale(sequenceStartDelay[6]);
       const obj7 = disableScale(sequenceStartDelay[7]);
-      const withTimingResult = disableScale(sequenceStartDelay[7]).withTiming(value, { duration: 350 });
+      const withTimingResult = disableScale(sequenceStartDelay[7]).withTiming(arg2, { duration: 350 });
       const obj8 = disableScale(sequenceStartDelay[7]);
-      const withDelayResult1 = obj5.withDelay(delay, obj6.withSequence(withTimingResult, disableScale(sequenceStartDelay[7]).withTiming(value, { duration: 350 })));
+      const withDelayResult1 = obj5.withDelay(delay, obj6.withSequence(withTimingResult, disableScale(sequenceStartDelay[7]).withTiming(arg1, { duration: 350 })));
       const obj9 = disableScale(sequenceStartDelay[6]);
-      const result = sharedValue.set(obj.withRepeat(obj2.withSequence(withDelayResult, withDelayResult1, obj9.withDelay(sequenceEndDelay, disableScale(sequenceStartDelay[7]).withTiming(value, { duration: 0 }))), -1));
+      const result = sharedValue.set(obj.withRepeat(obj2.withSequence(withDelayResult, withDelayResult1, obj9.withDelay(sequenceEndDelay, disableScale(sequenceStartDelay[7]).withTiming(arg1, { duration: 0 }))), -1));
     }
     animateValue.__closure = { withRepeat: ReanimatedRexport.withRepeat, withSequence: ReanimatedRexport.withSequence, withDelay: ReanimatedRexport.withDelay, sequenceStartDelay, withTiming: timing.withTiming, delay, animationTimeMs: 350, sequenceEndDelay };
     animateValue.__workletHash = 13305770376274;
@@ -103,6 +103,6 @@ export default noop.memo(function Ellipsis(style) {
   const items1 = [closure_9().typingIndicator, style.style];
   obj.style = items1;
   const items2 = [0, 1, 2];
-  obj.children = items2.map((item, index, arg2) => <closure_2 key={arg0} delay={arg0 * c7} sequenceStartDelay={sequenceStartDelay} sequenceEndDelay={sequenceStartDelay + c7 * (arg2.length - 1 - arg0)} dotStyle={dotStyle} disableScale={disableScale} />);
+  obj.children = items2.map((item, index, arg2) => <closure_2 key={item} delay={item * c7} sequenceStartDelay={sequenceStartDelay} sequenceEndDelay={sequenceStartDelay + c7 * (arg2.length - 1 - item)} dotStyle={dotStyle} disableScale={disableScale} />);
   return <View style={null} collapsable={false}>{null}</View>;
 });

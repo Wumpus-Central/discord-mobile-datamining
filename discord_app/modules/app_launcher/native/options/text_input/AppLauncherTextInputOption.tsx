@@ -38,8 +38,8 @@ export default function AppLauncherTextInputOption(guildId) {
     let str = "";
     if (null != dependencyMap) {
       str = "";
-      if ("text" === tmp.type) {
-        str = tmp.text;
+      if ("text" === dependencyMap.type) {
+        str = dependencyMap.text;
       }
     }
     return str;
@@ -61,7 +61,7 @@ export default function AppLauncherTextInputOption(guildId) {
     const substr = first.substring(0, ref.current.start);
     let start = ref.current.end;
     if (start == null) {
-      start = tmp2.current.start;
+      start = ref.current.start;
     }
     const substr1 = first.substring(start);
     if (null == id.id) {
@@ -70,7 +70,7 @@ export default function AppLauncherTextInputOption(guildId) {
         let length = substr + id.surrogates.length;
       }
       const obj = { start: length, end: length };
-      tmp2.current = obj;
+      ref.current = obj;
       const current = ref.current;
       if (current != null) {
         current.focus();

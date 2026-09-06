@@ -70,11 +70,11 @@ class QuestDecisionRoundtripTracker {
   }
 }
 const prototype = QuestDecisionRoundtripTracker.prototype;
-prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource, arg2) {
+prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource) {
   const self = this;
   closure_0 = endpoint;
-  let tmp = arg2;
-  if (arg2 === undefined) {
+  let tmp = placement;
+  if (placement === undefined) {
     tmp = null;
   }
   let tmp2 = null;
@@ -97,6 +97,7 @@ prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endp
       pendingRequests2.delete(closure_0);
     }
   }, 30000);
+  const obj = { initialSendTimestamp: Date.now(), endpoint, apiResponseTimestamp: null, wasSuccessful: false, callerSource, adRequestId: null, previousAdDecision: tmp2, placement: tmp };
 };
 prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiResponse(arg0, adRequestId) {
   adRequestId = adRequestId.adRequestId;
@@ -135,8 +136,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str4 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type) {
           str4 = "bounty";
-          if (tmp8(5451).AdCreativeType.BOUNTY !== type) {
-            if (tmp8(5451).AdCreativeType.QUEST_HOME_HERO === type) {
+          if (AdCreativeType.AdCreativeType.BOUNTY !== type) {
+            if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type) {
               str4 = "quest_home_hero";
             }
           }
@@ -153,8 +154,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str7 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type2) {
           str7 = "bounty";
-          if (tmp10(5451).AdCreativeType.BOUNTY !== type2) {
-            if (tmp10(5451).AdCreativeType.QUEST_HOME_HERO === type2) {
+          if (AdCreativeType.AdCreativeType.BOUNTY !== type2) {
+            if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type2) {
               str7 = "quest_home_hero";
             }
           }

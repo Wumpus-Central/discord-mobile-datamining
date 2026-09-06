@@ -4,6 +4,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7497 */;
 import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7501 */;
 import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 7502 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -16,7 +17,7 @@ require = fn;
 function getMemberSafetyPageStore(guildId) {
   if (null == dependencyMap[guildId]) {
     const tmp6 = new closure_8(guildId);
-    tmp[guildId] = tmp6;
+    dependencyMap[guildId] = tmp6;
   }
   return dependencyMap[guildId];
 }
@@ -27,7 +28,7 @@ function handleGuildRoleUpdateOrDelete(guildId) {
   guildId = guildId.guildId;
   if (null == dependencyMap[guildId]) {
     const tmp6 = new closure_8(guildId);
-    tmp[guildId] = tmp6;
+    dependencyMap[guildId] = tmp6;
   }
   let flag = false;
   if ("GUILD_ROLE_DELETE" === guildId.type) {
@@ -39,7 +40,7 @@ function handleGuildRoleMemberUpdate(guildId) {
   guildId = guildId.guildId;
   if (null == dependencyMap[guildId]) {
     const tmp6 = new closure_8(guildId);
-    tmp[guildId] = tmp6;
+    dependencyMap[guildId] = tmp6;
   }
   const items = [guildId.userId];
   return dependencyMap[guildId].updateMembersByMemberIds(items);
@@ -58,28 +59,28 @@ prototype["initialize"] = function initialize() {
 prototype["isInitialized"] = function isInitialized(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].isInitialized;
 };
 prototype["getMembersByGuildId"] = function getMembersByGuildId(arg0, CURRENT_GUILD_MEMBER) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].getMembersByIndex(CURRENT_GUILD_MEMBER);
 };
 prototype["getMembersCountByGuildId"] = function getMembersCountByGuildId(arg0, searchIndex) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].countMembersByIndex(searchIndex);
 };
 prototype["getEstimatedMemberSearchCountByGuildId"] = function getEstimatedMemberSearchCountByGuildId(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   ({ searchChunkSize, countMembersByIndex } = dependencyMap[arg0]);
   let totalResultsCount = obj.getTotalResultsCount();
@@ -91,77 +92,77 @@ prototype["getEstimatedMemberSearchCountByGuildId"] = function getEstimatedMembe
 prototype["getKnownMemberSearchCountByGuildId"] = function getKnownMemberSearchCountByGuildId(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].countMembersByIndex(dependencyMap[arg0].getSearchIndex());
 };
 prototype["getCurrentMemberSearchResultsByGuildId"] = function getCurrentMemberSearchResultsByGuildId(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].getMembersByIndex(dependencyMap[arg0].getSearchIndex());
 };
 prototype["getSearchStateByGuildId"] = function getSearchStateByGuildId(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].getSearchState();
 };
 prototype["hasDefaultSearchStateByGuildId"] = function hasDefaultSearchStateByGuildId(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].hasDefaultSearchState();
 };
 prototype["getPagedMembersByGuildId"] = function getPagedMembersByGuildId(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].getPaginatedMembers();
 };
 prototype["getPaginationStateByGuildId"] = function getPaginationStateByGuildId(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].getPaginationState();
 };
 prototype["getElasticSearchPaginationByGuildId"] = function getElasticSearchPaginationByGuildId(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].getElasticSearchPagination();
 };
 prototype["getEnhancedMember"] = function getEnhancedMember(arg0, arg1) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].getMember(arg1);
 };
 prototype["getNewMemberTimestamp"] = function getNewMemberTimestamp(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].getNewMemberTimestamp();
 };
 prototype["getLastRefreshTimestamp"] = function getLastRefreshTimestamp(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].lastRefreshTimestamp;
 };
 prototype["getLastCursorTimestamp"] = function getLastCursorTimestamp(arg0) {
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
-    tmp[arg0] = tmp6;
+    dependencyMap[arg0] = tmp6;
   }
   return dependencyMap[arg0].lastCursorTimestamp;
 };
@@ -172,14 +173,13 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       c10 = false;
     } else {
       for (const key10005 in closure_11) {
-        let tmp12 = dependencyMap;
         if (null == dependencyMap[key10005]) {
           let tmp4 = new.target;
           let tmp5 = new.target;
           let tmp7 = new closure_8(tmp11);
-          tmp12[key10005] = tmp7;
+          dependencyMap[key10005] = tmp7;
         }
-        let obj = tmp12[key10005];
+        let obj = dependencyMap[key10005];
         let resetResult = obj.reset(true);
         continue;
       }
@@ -190,9 +190,10 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       id = id.id;
       if (null == dependencyMap[id]) {
         const tmp6 = new closure_8(id);
-        tmp[id] = tmp6;
+        dependencyMap[id] = tmp6;
       }
       closure_0 = dependencyMap[id].updateServerMembers(id.members) || closure_0;
+      const tmp8 = dependencyMap[id].updateServerMembers(id.members) || closure_0;
     });
     return closure_0;
   },
@@ -204,7 +205,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       let items;
       if (null == dependencyMap[id]) {
         const tmp6 = new closure_8(id);
-        tmp[id] = tmp6;
+        dependencyMap[id] = tmp6;
       }
       items = [];
       if (activity_instances != null) {
@@ -213,13 +214,15 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
           if (participants != null) {
             const item = participants.forEach((member) => {
               if (obj.isNotNullish(member.member)) {
-                items.push(member.member);
+                closure_1_0.push(member.member);
               }
+              obj = items(closure_2_2[7]);
             });
           }
         });
       }
       closure_0 = dependencyMap[id].updateServerMembers(items) || closure_0;
+      const tmp9 = dependencyMap[id].updateServerMembers(items) || closure_0;
     });
     return closure_0;
   },
@@ -231,9 +234,8 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
         const obj = getMemberSafetyPageStore(guildId);
         const items = [];
         for (const item10014 of members) {
-          let tmp4 = item10014;
           if (null == obj.getMember(item10014.userId)) {
-            let arr = items.push(tmp4);
+            let arr = items.push(item10014);
           }
           continue;
         }
@@ -250,9 +252,10 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       [tmp, tmp2] = item;
       if (null == dependencyMap[tmp]) {
         const tmp8 = new closure_8(tmp);
-        tmp3[tmp] = tmp8;
+        dependencyMap[tmp] = tmp8;
       }
       closure_0 = dependencyMap[tmp].updateClientMembers(Object.values(tmp2)) || closure_0;
+      const tmp10 = dependencyMap[tmp].updateClientMembers(Object.values(tmp2)) || closure_0;
     });
     return closure_0;
   },
@@ -262,7 +265,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     if (updateServerMembersResult) {
       if (null == dependencyMap[guildId]) {
         const tmp8 = new closure_8(guildId);
-        tmp2[guildId] = tmp8;
+        dependencyMap[guildId] = tmp8;
       }
       updateServerMembersResult = dependencyMap[guildId].updateServerMembers(members);
     }
@@ -273,16 +276,16 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     const id = guild.id;
     if (null == dependencyMap[id]) {
       const tmp6 = new closure_8(id);
-      tmp[id] = tmp6;
+      dependencyMap[id] = tmp6;
     }
     const id2 = guild.id;
-    let flag = tmp[id].isInitialized;
+    let flag = dependencyMap[id].isInitialized;
     if (flag === undefined) {
       flag = false;
     }
     if (null == dependencyMap[id2]) {
       const tmp12 = new closure_8(id2);
-      tmp[id2] = tmp12;
+      dependencyMap[id2] = tmp12;
     }
     dependencyMap[id2].reset(flag);
   },
@@ -290,7 +293,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     const id = guild.guild.id;
     if (null == dependencyMap[id]) {
       const tmp6 = new closure_8(id);
-      tmp[id] = tmp6;
+      dependencyMap[id] = tmp6;
     }
     dependencyMap[id].reset(false);
   },
@@ -313,7 +316,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     const id = AuthenticationStore.getId();
     if (null == dependencyMap[guildId]) {
       const tmp7 = new closure_8(guildId);
-      tmp2[guildId] = tmp7;
+      dependencyMap[guildId] = tmp7;
     }
     const items = [id];
     return dependencyMap[guildId].updateMembersByMemberIds(items);
@@ -322,7 +325,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
-      tmp[guildId] = tmp6;
+      dependencyMap[guildId] = tmp6;
     }
     return dependencyMap[guildId].removeMember(guildId.user.id);
   },
@@ -332,7 +335,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
-      tmp[guildId] = tmp6;
+      dependencyMap[guildId] = tmp6;
     }
     const items = [guildId.guildMember.user.id];
     return dependencyMap[guildId].updateMembersByMemberIds(items);
@@ -345,11 +348,11 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       if (0 !== members.length) {
         if (null == dependencyMap[guildId]) {
           const tmp6 = new closure_8(guildId);
-          tmp[guildId] = tmp6;
+          dependencyMap[guildId] = tmp6;
         }
         return dependencyMap[guildId].updateMembersByMemberIds(members.reduce((arr, member) => {
           if (null != member.member) {
-            arr.push(member.member.user.id);
+            arr = arr.push(member.member.user.id);
           }
           return arr;
         }, []));
@@ -363,10 +366,10 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       if (0 !== addedMembers.length) {
         if (null == dependencyMap[guildId]) {
           const tmp6 = new closure_8(guildId);
-          tmp[guildId] = tmp6;
+          dependencyMap[guildId] = tmp6;
         }
         return dependencyMap[guildId].updateMembersByMemberIds(addedMembers.reduce((arr, userId) => {
-          arr.push(userId.userId);
+          arr = arr.push(userId.userId);
           return arr;
         }, []));
       }
@@ -379,10 +382,10 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       if (0 !== members.length) {
         if (null == dependencyMap[guildId]) {
           const tmp6 = new closure_8(guildId);
-          tmp[guildId] = tmp6;
+          dependencyMap[guildId] = tmp6;
         }
         return dependencyMap[guildId].updateMembersByMemberIds(members.reduce((arr, userId) => {
-          arr.push(userId.userId);
+          arr = arr.push(userId.userId);
           return arr;
         }, []));
       }
@@ -397,11 +400,11 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     } else {
       if (null == dependencyMap[guildId]) {
         const tmp7 = new closure_8(guildId);
-        tmp[guildId] = tmp7;
+        dependencyMap[guildId] = tmp7;
       }
       return dependencyMap[guildId].updateMembersByMemberIds(values.reduce((arr, owner) => {
         if (null != owner.owner) {
-          arr.push(owner.owner.user.id);
+          arr = arr.push(owner.owner.user.id);
         }
         return arr;
       }, []));
@@ -411,7 +414,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
-      tmp[guildId] = tmp6;
+      dependencyMap[guildId] = tmp6;
     }
     return dependencyMap[guildId].initialize();
   },
@@ -419,7 +422,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
-      tmp[guildId] = tmp6;
+      dependencyMap[guildId] = tmp6;
     }
     return dependencyMap[guildId].refreshNewMembersAndSearchResults();
   },
@@ -427,7 +430,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
-      tmp[guildId] = tmp6;
+      dependencyMap[guildId] = tmp6;
     }
     return _slicedToArray(dependencyMap[guildId].updatePaginationState(guildId.pagination), 1)[0];
   },
@@ -435,7 +438,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
-      tmp[guildId] = tmp6;
+      dependencyMap[guildId] = tmp6;
     }
     return dependencyMap[guildId].updatePaginationToken(guildId.continuationToken);
   },
@@ -443,7 +446,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
-      tmp[guildId] = tmp6;
+      dependencyMap[guildId] = tmp6;
     }
     return dependencyMap[guildId].updateSearchState(guildId.searchState);
   },
@@ -453,7 +456,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     if (result) {
       if (null == dependencyMap[guildId]) {
         const tmp8 = new closure_8(guildId);
-        tmp2[guildId] = tmp8;
+        dependencyMap[guildId] = tmp8;
       }
       const result1 = dependencyMap[guildId].updateMembersByMemberIds(memberSupplementals.map((userId) => userId.userId));
     }
@@ -463,9 +466,9 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     ({ guildId, members } = totalResultsCount);
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
-      tmp[guildId] = tmp6;
+      dependencyMap[guildId] = tmp6;
     }
-    let obj = tmp[guildId];
+    let obj = dependencyMap[guildId];
     const reduced = members.reduce((memberIds, member) => {
       const user = member.member.user;
       memberIds = memberIds.memberIds;
@@ -488,7 +491,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       tmp14 = members[members.length - 1];
     }
     obj = { totalResultsCount: totalResultsCount.total_result_count, elasticSearchCursor: null };
-    let tmp9Result = tmp9(7497);
+    let tmp9Result = MemberSafetyElasticSearchQueryTypes;
     let joined_at;
     if (first != null) {
       const member = first.member;
@@ -509,7 +512,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     }
     obj1 = { before: tmp9Result.createMemberSearchCursor(obj), after: null };
     obj.userId = id;
-    tmp9Result = tmp9(7497);
+    tmp9Result = MemberSafetyElasticSearchQueryTypes;
     let joined_at1;
     if (tmp14 != null) {
       const member3 = tmp14.member;
@@ -543,7 +546,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
-      tmp[guildId] = tmp6;
+      dependencyMap[guildId] = tmp6;
     }
     return dependencyMap[guildId].updateMembersByMemberIds(guildId.userIds);
   }

@@ -44,7 +44,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -387,7 +387,7 @@ let closure_37 = async function _handleDowngradeCommand(arg0) {
   let downgradeCommand = arg0;
   c3 = 0;
   c4 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (1 === tmp4) {
       if (arg0 === 1) {
         c4 = 3;
@@ -433,7 +433,7 @@ let closure_37 = async function _handleDowngradeCommand(arg0) {
   iter.next();
   return iter;
 };
-let closure_38 = async function _executePendingDowngrade(arg0, value) {
+let closure_38 = async function _executePendingDowngrade() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -564,7 +564,7 @@ function fetchAndAlertActiveSubscription() {
   }
   return applyArgumentsResult;
 }
-let closure_41 = async function _fetchAndAlertActiveSubscription(arg0, value) {
+let closure_41 = async function _fetchAndAlertActiveSubscription() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -659,7 +659,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -781,22 +781,18 @@ giftInfoOptionsCache = {
   terminate() {
     BillingManager.close();
     if (closure_26 != null) {
-      obj.remove();
+      closure_26.remove();
     }
     if (closure_27 != null) {
-      obj2.remove();
+      closure_27.remove();
     }
     if (closure_28 != null) {
-      obj3.remove();
+      closure_28.remove();
     }
     if (closure_29 != null) {
-      obj4.remove();
+      closure_29.remove();
     }
     DispatcherDefault.unsubscribe("APP_STATE_UPDATE", handleAppStateUpdated);
-    obj = closure_26;
-    obj2 = closure_27;
-    obj3 = closure_28;
-    obj4 = closure_29;
     DispatcherDefault.unsubscribe("CONNECTION_OPEN", handleConnectionOpen);
   }
 };

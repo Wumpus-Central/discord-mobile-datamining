@@ -26,8 +26,6 @@ export const useBackspaceHandler = function useBackspaceHandler(selection) {
       }
       while (true) {
         if (start >= num) {
-          let obj = re1;
-          let str = draftContent;
           if (re1.test(draftContent.substring(start - num, start))) {
             let sum = num + 1;
             num2 = num;
@@ -36,7 +34,7 @@ export const useBackspaceHandler = function useBackspaceHandler(selection) {
             } else {
               let sum1 = sum;
               num2 = num;
-              if (!obj.test(str.substring(start - num - 1, start))) {
+              if (!re1.test(draftContent.substring(start - num - 1, start))) {
                 break;
               } else {
                 num = sum1;

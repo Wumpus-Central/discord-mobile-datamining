@@ -9,10 +9,10 @@ import size from "module_2" /* 2 */;
 let obj = { damping: 30, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 obj = { duration: 500, easing: native.STANDARD_EASING };
 const __initData = { code: "function getSortedByMeasure_PanGestureAnimationsTsx2(array,measure){const sorted=new Array(...array).sort(function(left,right){const al=Math.abs(left-measure);const ar=Math.abs(right-measure);return al<ar?-1:al>ar?1:0;});return sorted;}" };
-function getNearestValue(value, arg1, arg2) {
-  closure_0 = arg1;
-  let num = arg2;
-  if (arg2 === undefined) {
+function getNearestValue(value, translate) {
+  closure_0 = translate;
+  let num = sharedValue1;
+  if (sharedValue1 === undefined) {
     num = 0;
   }
   let num2 = -1;
@@ -43,9 +43,9 @@ function getNearestValue(value, arg1, arg2) {
   getSortedByMeasure.__workletHash = 9192847351523;
   getSortedByMeasure.__initData = __initData;
   if (0 === value.length) {
-    return arg1;
+    return translate;
   } else {
-    closure_0 = arg1;
+    closure_0 = translate;
     const _Array = Array;
     const items = [];
     HermesBuiltin.arraySpread(value, 0);

@@ -6,7 +6,9 @@ import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import PremiumUtils from "PremiumUtils" /* 4218 */;
+import LinkingDefault from "Linking" /* 4255 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
 import Pressables from "Pressables" /* 5123 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import _modDef9711 from "module_9711" /* 9711 */;
@@ -51,7 +53,7 @@ function HeaderStatus(arg0) {
     }
     obj = { variant: "text-xs/semibold", color: str2, children: str };
     obj.children = closure_1_11(Text_Text.Text, obj);
-    tmp9Result = tmp9(View, obj);
+    tmp9Result = closure_1_11(View, obj);
   }
   return tmp9Result;
 }
@@ -70,8 +72,8 @@ function Header(arg0) {
     name = guild.name;
   }
   if (name == null) {
-    const intl = tmp3(1114).intl;
-    name = intl.string(tmp3(1114).t["He+cmd"]);
+    const intl = util.intl;
+    name = intl.string(util.t["He+cmd"]);
   }
   items2[2] = closure_1_11(Text_Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: name });
   obj.children = items2;
@@ -97,7 +99,7 @@ function CardBody(isTrial) {
   const guildId = isTrial.guildId;
   _slicedToArray = undefined;
   let analyticsLocations;
-  closure_7 = async function _handleResubscribe(arg0, value) {
+  closure_7 = async function _handleResubscribe() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -226,9 +228,9 @@ function CardBody(isTrial) {
     obj2.children = intl.string(isTrial(1114).t.eaqlau);
     items[2] = closure_11(isTrial(4556).Text, obj2);
     obj1.children = items;
-    const items1 = [tmp7(tmp8, obj1), closure_11(isTrial(1178).Spacer, { size: 12 })];
+    const items1 = [closure_12(tmp8, obj1), closure_11(isTrial(1178).Spacer, { size: 12 })];
     obj.children = items1;
-    tmp7Result = tmp7(closure_13, obj);
+    tmp7Result = closure_12(closure_13, obj);
   }
   const items2 = [tmp7Result, , , , ];
   let obj3 = { title: null, icon: null, onPressIcon: null, children: null };
@@ -274,11 +276,11 @@ function CardBody(isTrial) {
   obj9.text = intl5.string(isTrial(1114).t["7spYft"]);
   obj9.onPress = function handleUpdatePaymentMethod() {
     if (null != subscription) {
-      if (tmp.isPurchasedViaAppleGeneric) {
-        let tmp14Result = tmp14(4255);
-        tmp14Result.openURL(PremiumUtils.getExternalSubscriptionMethodUrl(tmp.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
+      if (subscription.isPurchasedViaAppleGeneric) {
+        let tmp14Result = LinkingDefault;
+        tmp14Result.openURL(PremiumUtils.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
       } else {
-        tmp14Result = tmp14(4905);
+        tmp14Result = actions_AlertActionCreatorsDefault;
         const obj = { body: null, confirmText: null, isDismissable: true };
         const intl = util.intl;
         obj.body = intl.string(util.t.fmm9jo);
@@ -313,15 +315,15 @@ function CardBody(isTrial) {
       return applyArgumentsResult;
     };
     obj12.loading = tmp6;
-    obj11.children = tmp13(tmp2(10301), obj12);
-    let tmp13Result = tmp13(tmp8, obj11);
+    obj11.children = closure_11(tmp2(10301), obj12);
+    let tmp13Result = closure_11(tmp8, obj11);
     const tmp2Result4 = tmp2(10301);
   } else {
     const obj13 = { text: null, onPress: null };
     const intl7 = tmp15(1114).intl;
     obj13.text = intl7.string(tmp15(1114).t.Dx0lF7);
     obj13.onPress = onCancelSubscription;
-    tmp13Result = tmp13(tmp2(15221), obj13);
+    tmp13Result = closure_11(tmp2(15221), obj13);
     const tmp2Result5 = tmp2(15221);
   }
   items4[2] = tmp13Result;
@@ -392,7 +394,7 @@ export default function ManageSubscriptionCard(subscription) {
         obj.onToggleExpanded = handleToggleExpanded;
         const items = [closure_11(Header, obj), ];
         if (expanded) {
-          const items1 = [tmp6(Separator, {}), ];
+          const items1 = [closure_11(Separator, {}), ];
           const obj1 = {};
           const merged = Object.assign(subscriptionInfo);
           let id;
@@ -410,13 +412,13 @@ export default function ManageSubscriptionCard(subscription) {
               }
             });
           };
-          items1[1] = tmp6(CardBody, obj1);
+          items1[1] = closure_11(CardBody, obj1);
           obj2.children = items1;
-          expanded = tmp4(closure_13, obj2);
+          expanded = closure_12(closure_13, obj2);
         }
         items[1] = expanded;
         obj.children = items;
-        tmp4Result = tmp4(View, obj);
+        tmp4Result = closure_12(View, obj);
       }
     }
   }

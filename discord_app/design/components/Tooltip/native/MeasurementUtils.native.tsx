@@ -13,7 +13,7 @@ function retryMeasurements() {
   }
   return applyArgumentsResult;
 }
-let closure_4 = async function _retryMeasurements(arg0, value) {
+let closure_4 = async function _retryMeasurements(arg0) {
   if (c10 === 2) {
     c10 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -87,6 +87,7 @@ let closure_4 = async function _retryMeasurements(arg0, value) {
                               const size = { x, y, width, height };
                               closure_0(size);
                             }
+                            tmp5 = closure_1();
                           });
                         }
                         ref = arg0;

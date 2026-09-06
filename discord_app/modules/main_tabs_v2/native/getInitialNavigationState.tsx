@@ -13,7 +13,7 @@ import DefaultRouteStore from "DefaultRouteStore" /* 4385 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;
-function getInitialGuildState(guildId, channelId, flag, flag2) {
+function getInitialGuildState(guildId, channelId, flag) {
   flag = flag2;
   if (flag2 === undefined) {
     flag = false;
@@ -66,6 +66,9 @@ function getInitialGuildState(guildId, channelId, flag, flag2) {
   obj8.routes = items7;
   items4[1] = obj8;
   items = items4;
+  const obj11 = { name: "guilds", params: { guildId, channelId, drawerOpen: flag } };
+  const obj13 = { routes: items6, index: items6.length - 1 };
+  const tmp3 = isChatLockedOpen && null != channelId;
 }
 function computeInitialNavigationStateWithoutLogging() {
   if (null != AuthenticationStore.getToken()) {
@@ -81,10 +84,10 @@ function computeInitialNavigationStateWithoutLogging() {
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       obj = { path: null };
-      const RouteParam3 = tmp(4399).RouteParam;
-      const tmpResult = tmp(4386);
-      const RouteParam4 = tmp(4399).RouteParam;
-      obj.path = obj5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
+      const RouteParam3 = RouteUtils.RouteParam;
+      const tmpResult = matchPathCompat;
+      const RouteParam4 = RouteUtils.RouteParam;
+      obj.path = React5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
       let matchPathResult1 = tmpResult.matchPath(DefaultRouteStore.lastNonVoiceRoute, obj);
       let flag = false;
       const guildIdResult1 = RouteParam3.guildId();
@@ -135,7 +138,6 @@ function computeInitialNavigationStateWithoutLogging() {
       return items2;
     }
     const guildIdResult = RouteParam.guildId();
-    obj5 = React5;
   } else {
     const items3 = [{ page: "other" }, ];
     obj = { routes: null, index: 0 };

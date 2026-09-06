@@ -13,8 +13,8 @@ let closure_6 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileD
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
 
-export default function useDisplayProfile(arg0, arg1) {
-  _require = arg0;
+export default function useDisplayProfile(id, arg1) {
+  _require = id;
   closure_1 = arg1;
   const items = [UserStore, UserProfileStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -23,9 +23,9 @@ export default function useDisplayProfile(arg0, arg1) {
       const items = [UserStore, UserProfileStore];
       [obj, obj2] = items;
       let tmp6 = null;
-      if (null !== tmp) {
-        const user = obj.getUser(tmp);
-        const userProfile = obj2.getUserProfile(tmp);
+      if (null !== closure_0) {
+        const user = obj.getUser(closure_0);
+        const userProfile = obj2.getUserProfile(closure_0);
         let tmp10 = null;
         if (null != user) {
           tmp10 = null;
@@ -55,9 +55,9 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
       const items = [UserStore, UserProfileStore];
       [obj, obj2] = items;
       let tmp6 = null;
-      if (null !== tmp) {
-        const user = obj.getUser(tmp);
-        const userProfile = obj2.getUserProfile(tmp);
+      if (null !== closure_0) {
+        const user = obj.getUser(closure_0);
+        const userProfile = obj2.getUserProfile(closure_0);
         let tmp10 = null;
         if (null != user) {
           tmp10 = null;

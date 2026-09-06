@@ -17,17 +17,17 @@ Object.defineProperty(UploadVoiceDebugLogsError.prototype, "displayMessage", {
     if (obj.NO_FILE === code) {
       const intl5 = require("util").intl;
       return intl5.string(require("util").t.dDMp2Z);
-    } else if (tmp.PROGRESS === code) {
+    } else if (obj.PROGRESS === code) {
       const intl4 = require("util").intl;
       return intl4.string(require("util").t.XBxyvo);
-    } else if (tmp.UPLOAD === code) {
+    } else if (obj.UPLOAD === code) {
       const intl3 = require("util").intl;
       return intl3.string(require("util").t["6b6rwk"]);
-    } else if (tmp.READ === code) {
+    } else if (obj.READ === code) {
       const intl2 = require("util").intl;
       return intl2.string(require("util").t.VUc3ti);
     } else {
-      const GENERAL = tmp.GENERAL;
+      const GENERAL = obj.GENERAL;
       const intl = require("util").intl;
       return intl.string(require("util").t.VzHcSm);
     }

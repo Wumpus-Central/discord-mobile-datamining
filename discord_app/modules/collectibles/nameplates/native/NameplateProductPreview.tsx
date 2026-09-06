@@ -2,8 +2,10 @@
 
 // Module 13140 (NameplateProductPreview)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import utils from "utils" /* 1886 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import TableRow from "TableRow" /* 5605 */;
 import useShopProductItems from "useShopProductItems" /* 8171 */;
@@ -90,17 +92,17 @@ export default function NameplateProductPreview(product) {
   let tmp7 = null;
   if (null != nameplateData) {
     obj = { style: tmp.container, pointerEvents: "box-none", accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { a11y_text: nameplateData.imgAlt };
-    obj.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t.YJig7C, obj);
+    obj.accessibilityLabel = intl.formatToPlainString(util.t.YJig7C, obj);
     obj1 = { style: tmp.memberListContainer, children: null };
     obj2 = { user: nameplateSampleUsers.mallow, end: true };
     const items = [timestampProducer(PlaceholderUser, obj2), , , , , , ];
     const obj3 = { maxFontSizeMultiplier: 2, variant: "text-sm/semibold", accessibilityRole: "header", color: "interactive-text-default", style: tmp.memberListTitle, children: null };
-    const intl2 = tmp2(1114).intl;
-    const items1 = [intl2.string(tmp2(1114).t["yzW/fZ"]), " \u2014 3"];
+    const intl2 = util.intl;
+    const items1 = [intl2.string(util.t["yzW/fZ"]), " \u2014 3"];
     obj3.children = items1;
-    items[1] = React5(tmp2(4556).Text, obj3);
+    items[1] = React5(Text_Text.Text, obj3);
     const obj4 = { user: nameplateSampleUsers.phibi, start: true };
     items[2] = timestampProducer(PlaceholderUser, obj4);
     const obj5 = { previewNameplate: nameplateData, previewAvatarDecoration: firstAvatarDecoration };
@@ -108,10 +110,10 @@ export default function NameplateProductPreview(product) {
     const obj6 = { user: nameplateSampleUsers.locke, end: true };
     items[4] = timestampProducer(PlaceholderUser, obj6);
     const obj7 = { maxFontSizeMultiplier: 2, variant: "text-sm/semibold", accessibilityRole: "header", color: "interactive-text-default", style: tmp.memberListTitle, children: null };
-    const intl3 = tmp2(1114).intl;
-    const items2 = [intl3.string(tmp2(1114).t["NG43/6"]), " \u2014 12"];
+    const intl3 = util.intl;
+    const items2 = [intl3.string(util.t["NG43/6"]), " \u2014 12"];
     obj7.children = items2;
-    items[5] = React5(tmp2(4556).Text, obj7);
+    items[5] = React5(Text_Text.Text, obj7);
     const obj8 = { user: nameplateSampleUsers.boom, start: true };
     items[6] = timestampProducer(PlaceholderUser, obj8);
     obj1.children = items;

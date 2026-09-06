@@ -47,9 +47,6 @@ function ArchiveOrDeleteTierSection() {
   obj1 = { style: tmp.actionButton, children: null };
   obj2 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const tmp4 = useArchiveOrDeleteDefault(guildId, groupListingId, editStateId, navigation);
-  const tmp5 = value2;
-  const tmp6 = __initData;
-  const tmp8 = timestampProducer;
   obj2.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17775 });
   obj2.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
@@ -63,9 +60,9 @@ function ArchiveOrDeleteTierSection() {
   obj2.disabled = tmp9;
   obj2.text = buttonText;
   obj1.children = closure_1_14(components_Button_Button.Button, obj2);
-  items[2] = closure_1_14(tmp8, obj1);
+  items[2] = closure_1_14(timestampProducer, obj1);
   obj4.children = items;
-  return tmp5(tmp6, obj4);
+  return value2(__initData, obj4);
 }
 function TabContent(selectedTab) {
   selectedTab = selectedTab.selectedTab;
@@ -77,12 +74,12 @@ function TabContent(selectedTab) {
     obj.children = items;
     obj.children = value2(common_SafeAreaView.SafeAreaPaddingView, obj);
     return closure_1_14(React5, obj);
-  } else if (tmp2.DESIGN === selectedTab) {
+  } else if (GuildRoleSubscriptionsTierScenes.DESIGN === selectedTab) {
     obj = { style: tmp.tabContent, children: null };
     const obj1 = { bottom: true, children: closure_1_14(GuildRoleSubscriptionTierDesignModal.GuildRoleSubscriptionTierDesignTab, {}) };
     obj.children = closure_1_14(common_SafeAreaView.SafeAreaPaddingView, obj1);
     return closure_1_14(React5, obj);
-  } else if (tmp2.BENEFITS === selectedTab) {
+  } else if (GuildRoleSubscriptionsTierScenes.BENEFITS === selectedTab) {
     return closure_1_14(GuildRoleSubscriptionTierBenefitsModal.GuildRoleSubscriptionTierBenefitsTab, {});
   } else {
     const _Error = Error;
@@ -115,7 +112,7 @@ let closure_19 = items.reduce((acc, item, index) => {
   acc[item] = index;
   return acc;
 }, {});
-let closure_22 = fn(19).forwardRef((arg0, ref) => {
+let closure_22 = fn(19).forwardRef((arg0, arg1) => {
   let Spacer = require;
   let tmp = dependencyMap;
   let obj = EditStateContextProvider;
@@ -126,7 +123,7 @@ let closure_22 = fn(19).forwardRef((arg0, ref) => {
   ({ error, publishSubscriptionListing: importAll, clearError: dependencyMap, submitting } = publishSubscriptionListing);
   const subscriptionListing = GuildRoleSubscriptionsHooks.useSubscriptionListing(editStateContext.editStateId);
   const roleSubscriptionSettingsDisabled = RoleSubscriptionSettingsDisabledContext.useRoleSubscriptionSettingsDisabled();
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({ dismissError }));
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({ dismissError }));
   let tmp7 = null;
   if (null != groupListingId) {
     tmp7 = null;
@@ -229,8 +226,8 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
     if (null != error) {
       let anyErrorMessage = error.getAnyErrorMessage();
       if (anyErrorMessage == null) {
-        const intl = tmp(1114).intl;
-        anyErrorMessage = intl.string(tmp(1114).t.R0RpRX);
+        const intl = util.intl;
+        anyErrorMessage = intl.string(util.t.R0RpRX);
       }
       ToastUtils.presentError(anyErrorMessage);
     }

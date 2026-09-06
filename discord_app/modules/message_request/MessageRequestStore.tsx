@@ -52,6 +52,7 @@ function handleChannelUpdates(arg0) {
     let tmp4 = processChannel(tmp2);
     continue;
   }
+  tmp = arg0.channels[Symbol.iterator]();
 }
 function handleChannelDelete(channel) {
   channel = channel.channel;

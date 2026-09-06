@@ -25,9 +25,9 @@ export default function _default(markAsDismissed) {
   analyticsLocations = userTrialOffer(analyticsLocations[5])(userTrialOffer(analyticsLocations[6]).PREMIUM_TRIAL_OFFER_ACTION_SHEET).analyticsLocations;
   const effect = noop.useEffect(() => {
     if (null != userTrialOffer) {
-      const obj = { location: analyticsLocations, trial_id: tmp.trialId };
+      const obj = { location: analyticsLocations, trial_id: userTrialOffer.trialId };
       obj.track(AnalyticEvents.PREMIUM_TRIAL_OFFER_ACTION_SHEET_VIEWED, obj);
-      const result = UserTrialActionCreatorsDefault.acknowledgeUserTrialOffer(tmp);
+      const result = UserTrialActionCreatorsDefault.acknowledgeUserTrialOffer(userTrialOffer);
     }
   }, []);
   const items = [userTrialOffer, markAsDismissed];

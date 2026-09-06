@@ -45,8 +45,8 @@ prototype["usernameSuggestionLoading"] = function usernameSuggestionLoading() {
 prototype["isCurrentUsernameInvalid"] = function isCurrentUsernameInvalid() {
   return obj.currentUsernameInvalid;
 };
-prototype["wasRegistrationSuggestionFetched"] = function wasRegistrationSuggestionFetched(arg0) {
-  return obj.suggestions.registration.source === arg0 && obj.suggestions.registration.fetched;
+prototype["wasRegistrationSuggestionFetched"] = function wasRegistrationSuggestionFetched(globalName) {
+  return obj.suggestions.registration.source === globalName && obj.suggestions.registration.fetched;
 };
 prototype["wasSuggestionsFetched"] = function wasSuggestionsFetched() {
   return obj.suggestions.migration.fetched;

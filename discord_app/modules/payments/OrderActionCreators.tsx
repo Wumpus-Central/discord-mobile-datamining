@@ -7,7 +7,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import BillingError from "BillingError" /* 4240 */;
 
 require = fn;
-let closure_6 = async function _signOrder(arg0, value) {
+let closure_6 = async function _signOrder(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -125,7 +125,7 @@ let closure_6 = async function _signOrder(arg0, value) {
     }
   }
 };
-let closure_7 = async function _getOrder(arg0, value) {
+let closure_7 = async function _getOrder(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -212,7 +212,7 @@ function fetchOrderEntitlements() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _fetchOrderEntitlements(arg0, value) {
+let closure_9 = async function _fetchOrderEntitlements(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -281,7 +281,7 @@ let closure_9 = async function _fetchOrderEntitlements(arg0, value) {
     }
   }
 };
-let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0, value) {
+let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -328,7 +328,7 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0, value) {
             return obj2;
           } else {
             closure_135_1 = value;
-            closure_135_2 = async function _loop(arg0, value) {
+            closure_135_2 = async function _loop(arg0) {
               if (c3 === 2) {
                 c3 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");

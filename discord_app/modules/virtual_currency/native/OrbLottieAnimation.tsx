@@ -3,13 +3,15 @@
 // Module 11093 (OrbLottieAnimation)
 import shared from "shared" /* 4411 */;
 import useTheme from "useTheme" /* 4495 */;
+import SpendEarnOrbsLightThemeLottie from "SpendEarnOrbsLightThemeLottie" /* 11094 */;
+import SpendEarnOrbsLottie2 from "SpendEarnOrbsLottie" /* 11096 */;
 import "module_19";
 
 require = fn;
 const noop = fn(19);
 ({ useRef: c3, useEffect: closure_4, forwardRef } = noop);
 const jsx = fn(21).jsx;
-const forwardRefResult = forwardRef((animationType, ref) => {
+const forwardRefResult = forwardRef((animationType, arg1) => {
   animationType = animationType.animationType;
   const theme = useTheme.useTheme();
   const tmp5 = React3(null);
@@ -22,7 +24,7 @@ const forwardRefResult = forwardRef((animationType, ref) => {
       }
     }
   }, items);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     play() {
       const current = ref.current;
       let playResult;
@@ -33,9 +35,9 @@ const forwardRefResult = forwardRef((animationType, ref) => {
     }
   }));
   if (isThemeLightResult) {
-    let SpendEarnOrbsLottie = tmp(11094).SpendEarnOrbsLightThemeLottie;
+    let SpendEarnOrbsLottie = SpendEarnOrbsLightThemeLottie.SpendEarnOrbsLightThemeLottie;
   } else {
-    SpendEarnOrbsLottie = tmp(11096).SpendEarnOrbsLottie;
+    SpendEarnOrbsLottie = SpendEarnOrbsLottie2.SpendEarnOrbsLottie;
   }
   const size = { ref: tmp5, size: "custom", width: 60, height: 60, opacity: 0.8, animation: null, useLottieDefaultColors: true };
   let str = "spend";

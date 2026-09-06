@@ -27,8 +27,8 @@ export const useRivePlayback = function useRivePlayback(riveViewRef, isReady) {
   const callback = noop.useCallback(() => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
   }, []);
   const items = [callback, riveViewRef];
@@ -70,11 +70,10 @@ export const useRivePlayback = function useRivePlayback(riveViewRef, isReady) {
             }
           }
           if (riveViewRef != null) {
-            obj.playIfNeeded();
+            riveViewRef.playIfNeeded();
           }
           closure_1_4.current = true;
           callback2();
-          obj = riveViewRef;
         }
       });
     }

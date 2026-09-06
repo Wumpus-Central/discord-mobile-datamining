@@ -21,17 +21,21 @@ function ChannelRow(channel) {
   const onChannelSelected = channel.onChannelSelected;
   let selected = channel.selected;
   const tmp = closure_14();
-  const tmp4 = onChannelSelected(4713)(channel);
   const items = [onChannelSelected, channel];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onChannelSelected(channel);
   }, items);
-  let obj = { style: tmp.channelRow, onPress: callback, accessible: true, accessibilityLabel: tmp4, channel, selected, disableHighlightOnPress: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS };
+  let obj = { style: tmp.channelRow, onPress: callback, accessible: true, accessibilityLabel: null, channel: null, selected: null, disableHighlightOnPress: true, resolvedUnreadSetting: null };
+  const tmp4 = onChannelSelected(4713)(channel);
+  obj.accessibilityLabel = tmp4;
+  obj.channel = channel;
+  obj.selected = selected;
+  obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
   const children = [closure_11(onChannelSelected(16116), obj), ];
   if (selected) {
     obj = { style: tmp.selectedIcon, source: tmp2(17692) };
-    selected = tmp8(tmp2(5587), obj);
+    selected = closure_11(tmp2(5587), obj);
     const tmp2Result = tmp2(5587);
   }
   children[1] = selected;
@@ -84,18 +88,17 @@ export default function ChannelSelectorActionSheet(guildId) {
     while (iter !== undefined) {
       let tmp2 = categories[iter.next().channel.id];
       for (const item10020 of tmp2) {
-        let tmp5 = item10020;
         let canResult = PermissionStore.can(constants.VIEW_CHANNEL, item10020.channel);
         if (canResult) {
           let hasItem = "" === first;
           if (!hasItem) {
-            let name = tmp5.channel.name;
+            let name = item10020.channel.name;
             hasItem = name.includes(tmp9);
           }
           canResult = hasItem;
         }
         if (canResult) {
-          let arr = items.push(tmp5.channel);
+          let arr = items.push(item10020.channel);
         }
         continue;
       }
@@ -143,6 +146,7 @@ export default function ChannelSelectorActionSheet(guildId) {
             if (null != channel) {
               closure_1_1(channel);
             }
+            const obj = onChannelSelected(dependencyMap[27]);
           };
           obj2.pushLazy(asyncRequireImpl(9732, dependencyMap.paths), obj, CreateChannelModalActionCreatorsDefault.CREATE_CHANNEL_MODAL_KEY);
         },
@@ -153,13 +157,13 @@ export default function ChannelSelectorActionSheet(guildId) {
       str = str.toString();
     }
     const obj4 = { color: str, source: _modDef13605 };
-    const items3 = [tmp8(tmp5(1178).Icon, obj4), ];
+    const items3 = [closure_11(tmp5(1178).Icon, obj4), ];
     const obj5 = { style: tmp.createChannelLabel, variant: "text-md/medium", color: "text-link", children: null };
     const intl3 = tmp5(1114).intl;
     obj5.children = intl3.string(tmp5(1114).t.d7AN7W);
-    items3[1] = tmp8(tmp5(4556).Text, obj5);
+    items3[1] = closure_11(tmp5(4556).Text, obj5);
     obj3.children = items3;
-    tmp9Result = tmp9(tmp5(5123).PressableOpacity, obj3);
+    tmp9Result = closure_13(tmp5(5123).PressableOpacity, obj3);
   }
   items2[2] = tmp9Result;
   obj.header = closure_13(closure_12, { children: items2 });

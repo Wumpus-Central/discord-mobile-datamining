@@ -65,14 +65,14 @@ function SimilarGameCard(game) {
     obj2.source = obj3;
     const items2 = [tmp.coverArt, size];
     obj2.style = items2;
-    let tmp8Result = tmp8(closure_4, obj2);
+    let tmp8Result = closure_7(closure_4, obj2);
   } else {
     const obj4 = { style: null, children: null };
     const items3 = [tmp.coverArtFallback, size];
     obj4.style = items3;
     const obj5 = { variant: "text-xs/medium", color: "text-overlay-light", lineClamp: 3, children: game.name };
-    obj4.children = tmp8(game(shouldOpenGameProfile[9]).Text, obj5);
-    tmp8Result = tmp8(closure_6, obj4);
+    obj4.children = closure_7(game(shouldOpenGameProfile[9]).Text, obj5);
+    tmp8Result = closure_7(closure_6, obj4);
   }
   obj.children = tmp8Result;
   return closure_7(closure_5, obj);

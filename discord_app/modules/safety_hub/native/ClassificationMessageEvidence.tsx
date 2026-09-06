@@ -69,7 +69,6 @@ export default function ClassificationEvidence(arg0) {
       obj.size = 0;
       obj.proxy_url = filename.url;
       const obj2 = ref(8418);
-      const tmp2 = ref;
       if (obj3.isImageFile(filename.filename)) {
         obj = {};
         const merged1 = Object.assign(obj);
@@ -101,7 +100,7 @@ export default function ClassificationEvidence(arg0) {
           obj.filename = filename;
           tmp4 = obj;
         }
-        tmp2Result = tmp2(4710);
+        tmp2Result = ref(4710);
       }
       return tmp4;
     });
@@ -117,10 +116,9 @@ export default function ClassificationEvidence(arg0) {
         url = uri.url;
       }
       size.videoURI = url;
-      obj2 = ref(closure_2[16]);
-      const tmp3 = attachments;
+      obj2 = ref(dependencyMap[16]);
       let tmp5;
-      if (tmpResult.isVideoFile(tmp3.attachments[mediaIndex].filename)) {
+      if (tmpResult.isVideoFile(attachments.attachments[mediaIndex].filename)) {
         const size1 = { width, height, uri: uri.uri };
         tmp5 = size1;
       }

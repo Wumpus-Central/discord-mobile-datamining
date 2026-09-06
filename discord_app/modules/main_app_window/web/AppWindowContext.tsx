@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const jsx = fn(21).jsx;
 let componentDispatcher = new fn(1109).ComponentDispatcher();
-const obj = { appContext: fn(1074).AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
+let obj = { appContext: fn(1074).AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
 const WindowIdUtils = fn(5555);
 obj.windowId = WindowIdUtils.getMainWindowId();
 const context = noop.createContext(obj);

@@ -2,6 +2,7 @@
 
 // Module 14440 (BackPressManager)
 import _mod17 from "module_17" /* 17 */;
+import KeyboardUIStore from "KeyboardUIStore" /* 1481 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import useKeyboardType from "useKeyboardType" /* 4427 */;
 import ContextMenuState from "ContextMenuState" /* 8667 */;
@@ -14,10 +15,10 @@ function handleBackPress() {
   const keyboardType = useKeyboardType.getKeyboardType();
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
-    obj = { type: tmp(1609).KeyboardTypes.SYSTEM };
-    tmp(1481).setKeyboardType(obj);
+    obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
+    KeyboardUIStore.setKeyboardType(obj);
     flag = true;
-    const tmpResult = tmp(1481);
+    const tmpResult = KeyboardUIStore;
   }
   return flag;
 }

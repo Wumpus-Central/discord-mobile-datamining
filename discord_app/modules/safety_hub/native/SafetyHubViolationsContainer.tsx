@@ -11,7 +11,9 @@ import SafetyHubUtils from "SafetyHubUtils" /* 8418 */;
 import SafetyHubModels from "SafetyHubModels" /* 8420 */;
 import WarningIcon from "WarningIcon" /* 8588 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 11153 */;
 import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11880 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 13573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8430 */;
@@ -33,9 +35,9 @@ function SafetyHubViolationsHeader(count) {
   const obj1 = { style: null, children: null };
   const items3 = [tmp.headerTextContainer];
   obj1.style = items3;
-  const intl = tmp7(1114).intl;
+  const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp7(1114).t;
+  const t = util.t;
   if ("active" === status) {
     const obj2 = { count: str.toString() };
     let formatToPlainStringResult = formatToPlainString(t.IeV2oY, obj2);
@@ -44,9 +46,9 @@ function SafetyHubViolationsHeader(count) {
     formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj3);
   }
   const items4 = [closure_1_11(Text_Text.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
-  const intl2 = tmp7(1114).intl;
+  const intl2 = util.intl;
   const string = intl2.string;
-  const t2 = tmp7(1114).t;
+  const t2 = util.t;
   if ("active" === status) {
     let stringResult = string(t2.XJ2YVR);
   } else {
@@ -56,9 +58,9 @@ function SafetyHubViolationsHeader(count) {
   obj1.children = items4;
   items2[1] = closure_1_12(timestampProducer, obj1);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(13573).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = ChevronSmallUpIcon.ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(11153).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = ChevronSmallDownIcon2.ChevronSmallDownIcon;
   }
   const obj4 = { size: "md", style: null };
   const items5 = [tmp.chevron];
@@ -130,8 +132,8 @@ function ClassificationDetail(classification) {
     let tmp4 = null;
     if (null != guild_metadata) {
       let member_type;
-      if (tmp3 != tmp4) {
-        member_type = tmp3.member_type;
+      if (guild_metadata != tmp4) {
+        member_type = guild_metadata.member_type;
       }
       let Lb0HVv = require;
       name = dependencyMap;
@@ -140,10 +142,10 @@ function ClassificationDetail(classification) {
         Lb0HVv = Lb0HVv(1114).t.Lb0HVv;
         name = {};
         const merged = Object.assign(name);
-        tmp4 = tmp3 == tmp4;
+        tmp4 = guild_metadata == tmp4;
         name = undefined;
         if (!tmp4) {
-          name = tmp3.name;
+          name = guild_metadata.name;
         }
         name.guildName = name;
         let formatResult = intl3.format(Lb0HVv, name);
@@ -151,8 +153,8 @@ function ClassificationDetail(classification) {
         const intl2 = Lb0HVv(1114).intl;
         const obj = { classification_type: tmp2, classificationHook: hook, guildName: null };
         name = undefined;
-        if (tmp3 != tmp4) {
-          name = tmp3.name;
+        if (guild_metadata != tmp4) {
+          name = guild_metadata.name;
         }
         obj.guildName = name;
         formatResult = intl2.format(Lb0HVv(1114).t.rmpEPD, obj);
@@ -180,10 +182,10 @@ function ClassificationDetail(classification) {
   const extractTimestampResult = obj.extractTimestamp(id);
   const tmp5 = id;
   if (isNewClassification) {
-    let tmp8Result = tmp8(NewBadge, {});
+    let tmp8Result = closure_11(NewBadge, {});
   } else {
     const obj2 = { timestamp: extractTimestampResult };
-    tmp8Result = tmp8(RelativeIncidentTime, obj2);
+    tmp8Result = closure_11(RelativeIncidentTime, obj2);
   }
   const items3 = [tmp8Result, closure_11(tmp5(guild_metadata[11]).Text, { variant: "heading-md/normal", children: memo })];
   obj1.children = items3;

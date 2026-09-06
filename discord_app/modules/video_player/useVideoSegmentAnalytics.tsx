@@ -68,19 +68,18 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
         const timestamp = Date.now();
         let tmp3 = timestamp - ref2.current < emitIntervalMs;
         if (!tmp3) {
-          tmp3 = tmp - tmp11.segmentStartSec < minSegmentDurationMs / 1000;
+          tmp3 = tmp - first.segmentStartSec < minSegmentDurationMs / 1000;
         }
         if (!tmp3) {
           let obj = {};
-          const merged = Object.assign(tmp11);
+          const merged = Object.assign(first);
           obj.endTimeMs = timestamp;
           obj.segmentEndSec = tmp;
           closure_15(obj);
           obj = { startTimeMs: timestamp, endTimeMs: timestamp, segmentStartSec: tmp, segmentEndSec: tmp };
           closure_5(obj);
-          tmp14.current = timestamp;
+          ref2.current = timestamp;
         }
-        tmp14 = ref2;
       }
     }
   }, items2);
@@ -112,8 +111,8 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
         return () => {
           if (null != ref.current) {
             const _clearInterval = clearInterval;
-            clearInterval(tmp.current);
-            tmp.current = null;
+            clearInterval(ref.current);
+            ref.current = null;
           }
         };
       }
@@ -122,9 +121,9 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
     if (null != first) {
       if (null != tmp3) {
         const _Date = Date;
-        if (tmp3 - tmp4.segmentStartSec > 0.2) {
+        if (tmp3 - first.segmentStartSec > 0.2) {
           const obj = {};
-          const merged = Object.assign(tmp4);
+          const merged = Object.assign(first);
           obj.endTimeMs = tmp6;
           obj.segmentEndSec = tmp3;
           closure_15(obj);
@@ -135,19 +134,19 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
     ref3.current = false;
     if (null != ref.current) {
       let _clearInterval = clearInterval;
-      clearInterval(tmp13.current);
-      tmp13.current = null;
+      clearInterval(ref.current);
+      ref.current = null;
     }
   }, items4);
   const items5 = [first, tmp9, getCurrentVideoTime];
-  let tmp14 = closure_5(() => {
+  const tmp14 = closure_5(() => {
     const tmp = getCurrentVideoTime();
     if (null != first) {
       if (null != tmp) {
         const _Date = Date;
-        if (tmp - tmp2.segmentStartSec > 0.2) {
+        if (tmp - first.segmentStartSec > 0.2) {
           const obj = {};
-          const merged = Object.assign(tmp2);
+          const merged = Object.assign(first);
           obj.endTimeMs = tmp4;
           obj.segmentEndSec = tmp;
           closure_15(obj);
@@ -163,7 +162,7 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
     handlePlayerStateChange: closure_5((arg0) => {
       if (DiscordVideoPlayerTypes.VideoPlayerState.PLAYING === arg0) {
         closure_7(true);
-      } else if (tmp(7706).VideoPlayerState.PAUSED === arg0) {
+      } else if (DiscordVideoPlayerTypes.VideoPlayerState.PAUSED === arg0) {
         ref4.current();
         closure_7(false);
       }

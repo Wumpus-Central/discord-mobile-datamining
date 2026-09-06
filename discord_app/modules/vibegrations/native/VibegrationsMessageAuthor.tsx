@@ -28,7 +28,7 @@ export default function VibegrationsMessageAuthor(userId) {
   const stateFromStores = obj.useStateFromStores(items1, () => {
     let user = null;
     if (null != userId) {
-      user = UserStore.getUser(tmp);
+      user = UserStore.getUser(userId);
     }
     return vibegrationsMessageAuthors.resolveMessageAuthor(userId, user, UserStore.getCurrentUser());
   }, items2);

@@ -54,7 +54,7 @@ export default function NewUserPermissionsOnboarding(showSkip) {
   const obj5 = { style: items2, children: null };
   items2[1] = primaryButtonContainer;
   const obj6 = { variant: "primary", size: "md", text: null, onPress: null, loading: null, grow: true };
-  const intl = tmp6(1114).intl;
+  const intl = util.intl;
   obj6.text = intl.string(util.t["2nYlT2"]);
   obj6.onPress = onAllow;
   obj6.loading = loading;
@@ -63,11 +63,11 @@ export default function NewUserPermissionsOnboarding(showSkip) {
   if (flag) {
     const obj7 = { style: tmp.buttonWrapper, children: null };
     const obj8 = { variant: "secondary", text: null, onPress: null, grow: true };
-    const intl2 = tmp6(1114).intl;
-    obj8.text = intl2.string(tmp6(1114).t["5Wxrcd"]);
+    const intl2 = util.intl;
+    obj8.text = intl2.string(util.t["5Wxrcd"]);
     obj8.onPress = onDontAllow;
-    obj7.children = tmp4(tmp6(4975).Button, obj8);
-    flag = tmp4(tmp5, obj7);
+    obj7.children = React4(components_Button_Button.Button, obj8);
+    flag = React4(React2, obj7);
   }
   const obj9 = { children: null };
   items1[3] = flag;

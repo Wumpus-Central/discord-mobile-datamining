@@ -35,7 +35,7 @@ export default function ContextMenuCommandItem(item) {
   items[1] = name;
   const memo = noop.useMemo(() => {
     const type = item.type;
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     let name;
     if (section != null) {
       name = section.name;
@@ -48,7 +48,7 @@ export default function ContextMenuCommandItem(item) {
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {
     obj = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-    tmp8Result = tmp8(section(5587), obj);
+    tmp8Result = jsx(section(5587), { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
   obj.icon = tmp8Result;
   obj.trailing = jsx(item(4505).SendMessageIcon, {});
@@ -98,7 +98,7 @@ export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(sect
   let tmp4Result = null != applicationCommandsIconSource;
   if (tmp4Result) {
     obj = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-    tmp4Result = tmp4(FastImageDefault, obj);
+    tmp4Result = jsx(FastImageDefault, { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
   obj.icon = tmp4Result;
   obj.start = start;

@@ -25,25 +25,25 @@ let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/c
 
 export default noop.memo((channel) => {
   channel = channel.channel;
-  let first;
+  let event;
   let nextRecurrenceIdInEvent;
   let tmp = closure_9();
-  let obj = channel(first[7]);
+  let obj = channel(event[7]);
   const activeEvent = obj.useActiveEvent(channel.id);
-  let obj1 = channel(first[7]);
+  let obj1 = channel(event[7]);
   const imminentUpcomingGuildEvents = obj1.useImminentUpcomingGuildEvents(channel.id);
-  let obj2 = channel(first[8]);
+  let obj2 = channel(event[8]);
   const items = [SelectedChannelStore];
   let tmp7 = activeEvent;
   const stateFromStores = obj2.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   if (activeEvent == null) {
-    first = undefined;
+    event = undefined;
     if (imminentUpcomingGuildEvents != null) {
-      first = imminentUpcomingGuildEvents[0];
+      event = imminentUpcomingGuildEvents[0];
     }
-    tmp7 = first;
+    tmp7 = event;
   }
-  first = tmp7;
+  event = tmp7;
   tmp2(tmp3[9]);
   const tmp2Result = tmp2(tmp3[10]);
   nextRecurrenceIdInEvent = tmp2Result.getNextRecurrenceIdInEvent(tmp7);
@@ -82,8 +82,8 @@ export default noop.memo((channel) => {
       const intl = tmp2(tmp3[18]).intl;
       obj3.text = intl.string(tmp2(tmp3[18]).t.cK1GGY);
       obj3.onPress = callback;
-      obj2.children = tmp18(tmp2(tmp3[17]).Button, obj3);
-      tmp18Result = tmp18(View, obj2);
+      obj2.children = closure_7(tmp2(tmp3[17]).Button, obj3);
+      tmp18Result = closure_7(View, obj2);
     }
     items2[2] = tmp18Result;
     obj.children = items2;

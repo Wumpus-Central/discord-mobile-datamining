@@ -7,7 +7,7 @@ import LocaleStore from "LocaleStore" /* 2025 */;
 import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16470 */;
 
 const require = fn;
-let closure_7 = async function _maybeFetchGuildDiscoveryCategories(arg0, value) {
+let closure_7 = async function _maybeFetchGuildDiscoveryCategories() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -78,12 +78,12 @@ let closure_8 = async function _fetchMetadataForGuild() {
   { url: Endpoints.GUILD_DISCOVERY_METADATA(closure_0), oldFormErrors: true, rejectWithError: true };
   closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL" });
   await "HermesInternal";
-  const body = arg1.body;
+  const body = value.body;
   closure_129_2 = { primaryCategoryId: body.primary_category_id, secondaryCategoryIds: body.category_ids, keywords: body.keywords, emojiDiscoverabilityEnabled: body.emoji_discoverability_enabled, partnerActionedTimestamp: body.partner_actioned_timestamp, partnerApplicationTimestamp: body.partner_application_timestamp, isPublished: body.is_published, reasonsToJoin: body.reasons_to_join, socialLinks: body.social_links, about: body.about };
   closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: closure_129_0, metadata: closure_129_2 });
   return closure_129_2;
 };
-let closure_9 = async function _fetchSlugForGuild(arg0, arg1) {
+let closure_9 = async function _fetchSlugForGuild(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   const HTTP = require("HTTPUtils").HTTP;
@@ -96,16 +96,16 @@ let closure_9 = async function _fetchSlugForGuild(arg0, arg1) {
     c5 = 3;
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    const slug = arg1.body.slug;
+    const slug = value.body.slug;
     closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS", slug });
     c3 = 0;
     closure_130_1(closure_130_2[5]);
   }
-  return arg1;
+  return value;
 };
-let closure_10 = async function _saveGuildMetadata(arg0, value) {
+let closure_10 = async function _saveGuildMetadata(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

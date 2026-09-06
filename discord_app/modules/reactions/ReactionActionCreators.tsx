@@ -91,13 +91,13 @@ function makeURL(type) {
   if (null == userId) {
     let REACTIONSResult = closure_1_10.REACTIONS(channelId, messageId, name);
   } else if (useTypeEndpoint) {
-    REACTIONSResult = obj.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
+    REACTIONSResult = closure_1_10.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
   } else {
-    REACTIONSResult = obj.REACTION(channelId, messageId, name, userId);
+    REACTIONSResult = closure_1_10.REACTION(channelId, messageId, name, userId);
   }
   return REACTIONSResult;
 }
-let closure_15 = async function _getReactors(arg0, value) {
+let closure_15 = async function _getReactors(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -207,7 +207,7 @@ function addReaction() {
   }
   return applyArgumentsResult;
 }
-let closure_17 = async function _addReaction(arg0, value) {
+let closure_17 = async function _addReaction(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -396,26 +396,26 @@ let closure_17 = async function _addReaction(arg0, value) {
               colors = [];
             }
             obj.colors = colors;
-            const ReactionTypes = closure_0(tmp6[10]).ReactionTypes;
+            const ReactionTypes = closure_0(user[10]).ReactionTypes;
             if (obj.burst) {
               let NORMAL = ReactionTypes.BURST;
-              let tmp10 = tmp9;
+              let tmp10 = closure_0;
             } else {
               NORMAL = ReactionTypes.NORMAL;
-              tmp10 = tmp9;
+              tmp10 = closure_0;
             }
             obj.reactionType = NORMAL;
             obj2.dispatch(obj);
-            const AccessibilityAnnouncer = tmp10(tmp6[15]).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = tmp10(user[15]).AccessibilityAnnouncer;
             const announce = AccessibilityAnnouncer.announce;
-            const intl = tmp10(tmp6[7]).intl;
+            const intl = tmp10(user[7]).intl;
             const formatToPlainString = intl.formatToPlainString;
-            const t = tmp10(tmp6[7]).t;
+            const t = tmp10(user[7]).t;
             if (burst) {
-              const obj1 = { name: tmp3.name };
+              const obj1 = { name: emoji.name };
               announce(formatToPlainString(t.fJeu87, obj1));
             } else {
-              obj2 = { name: tmp3.name };
+              obj2 = { name: emoji.name };
               announce(formatToPlainString(t["UUn5V+"], obj2));
             }
           }
@@ -612,7 +612,7 @@ function removeReaction() {
   }
   return applyArgumentsResult;
 }
-let closure_23 = async function _removeReaction(arg0, value) {
+let closure_23 = async function _removeReaction(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -736,7 +736,7 @@ let closure_23 = async function _removeReaction(arg0, value) {
           }
         });
         ReactionTypes = del.catch((() => {
-          closure_0 = closure_1_3(function*(arg0, value) {
+          closure_0 = closure_1_3(function*(arg0) {
             if (userId === 2) {
               userId = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -837,7 +837,7 @@ function getOptimisticEmojiColors() {
   }
   return applyArgumentsResult;
 }
-let closure_25 = async function _getOptimisticEmojiColors(arg0, value) {
+let closure_25 = async function _getOptimisticEmojiColors(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

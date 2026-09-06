@@ -2,9 +2,13 @@
 
 // Module 13385 (BuyNitroPerkDetails)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4527 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import PromoSheet from "PromoSheet" /* 10230 */;
 import useBuyNitroPlanSelection from "useBuyNitroPlanSelection" /* 13358 */;
+import BuyNitroPlanPriceDetailsDefault from "BuyNitroPlanPriceDetails" /* 13386 */;
 import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13387 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +30,7 @@ let closure_8 = noop.memo((perk) => {
   let tmp6Result = null;
   if (null != detail) {
     obj = { title: perk.label, description: null, illustration: null, actions: null };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj.description = intl.string(detail.description);
     obj = { source: detail.image, style: tmp.illustration, resizeMode: "contain" };
     obj.illustration = React4(Image, obj);
@@ -34,7 +38,7 @@ let closure_8 = noop.memo((perk) => {
     tmp6Result = null != buyNitroPlanSelection.selection.item;
     if (tmp6Result) {
       const obj2 = { planSelection: buyNitroPlanSelection, item: buyNitroPlanSelection.selection.item, centered: true };
-      tmp6Result = tmp6(tmp9(13386), obj2);
+      tmp6Result = React4(BuyNitroPlanPriceDetailsDefault, obj2);
     }
     const items = [tmp6Result, ];
     const obj3 = {
@@ -50,8 +54,8 @@ let closure_8 = noop.memo((perk) => {
     };
     items[1] = React4(BuyNitroPurchaseButtonDefault, obj3);
     obj1.children = items;
-    obj.actions = hasOwnProperty(tmp2(4973).Stack, obj1);
-    tmp6Result = tmp6(tmp2(10230).PromoSheet, obj);
+    obj.actions = hasOwnProperty(Stack_Stack.Stack, obj1);
+    tmp6Result = React4(PromoSheet.PromoSheet, obj);
     const tmp9Result = BuyNitroPurchaseButtonDefault;
   }
   return tmp6Result;

@@ -70,15 +70,15 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
       size = { badge: badge.kind, width: 21, height: 21 };
       return closure_1_7(guildId(13915).GuildBadge, size, badge.kind);
     });
-    const items2 = [tmp8(closure_5, obj2), , ];
+    const items2 = [closure_7(closure_5, obj2), , ];
     const obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };
     const intl3 = tmp7(1114).intl;
     obj3.children = intl3.string(tmp7(1114).t.U5p3GZ);
-    items2[1] = tmp8(tmp7(4556).Text, obj3);
+    items2[1] = closure_7(tmp7(4556).Text, obj3);
     const obj4 = { size: "md", color: nativeDefault.colors.ICON_SUBTLE };
-    items2[2] = tmp8(tmp7(7209).ChevronSmallRightIcon, obj4);
+    items2[2] = closure_7(tmp7(7209).ChevronSmallRightIcon, obj4);
     obj1.children = items2;
-    tmp6Result = tmp6(closure_4, obj1);
+    tmp6Result = closure_8(closure_4, obj1);
   }
   items1[2] = tmp6Result;
   obj.children = items1;

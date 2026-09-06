@@ -2,6 +2,10 @@
 
 // Module 6981 (useSafeAreaInsetsKeyboardAware)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import KeyboardTypes from "KeyboardTypes" /* 1609 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1877 */;
+import useKeyboardType from "useKeyboardType" /* 4427 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5579 */;
 import useKeyboardDuration from "useKeyboardDuration" /* 5580 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5581 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -45,27 +49,27 @@ export default function useSafeAreaInsetsKeyboardAware() {
         return 0;
       }
     }
-    let tmpResult = tmp(1115);
+    let tmpResult = PlatformUtils;
     if (tmpResult.isAndroid()) {
       if (!flag2) {
         return 0;
       }
     }
-    tmpResult = tmp(1877);
+    tmpResult = useSystemKeyboardHeight;
     obj = { appEntryKey };
     let systemKeyboardHeight = tmpResult.getSystemKeyboardHeight(obj);
     if (0 === systemKeyboardHeight) {
-      const keyboardType = tmp(4427).getKeyboardType(tmp5);
+      const keyboardType = useKeyboardType.getKeyboardType(appEntryKey);
       let num3 = 0;
-      if (keyboardType !== tmp(1609).KeyboardTypes.SYSTEM) {
+      if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
         num3 = 0;
         if (flag3) {
-          num3 = tmp(5579).getCustomKeyboardHeight(tmp5);
-          const tmpResult2 = tmp(5579);
+          num3 = useCustomKeyboardHeight.getCustomKeyboardHeight(appEntryKey);
+          const tmpResult2 = useCustomKeyboardHeight;
         }
       }
       systemKeyboardHeight = num3;
-      const tmpResult1 = tmp(4427);
+      const tmpResult1 = useKeyboardType;
     }
     return systemKeyboardHeight;
   }, items);

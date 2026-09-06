@@ -93,7 +93,7 @@ export default function FadeOutLottieAnimation(onComplete) {
     };
     const merged1 = Object.assign(merged);
     obj.children = jsx(isAnimationComplete(5529), { style: tmp2.content, speed: null, onAnimationFinish: null });
-    let tmp14Result = tmp14(isAnimationComplete(4296).View, obj);
+    let tmp14Result = jsx(isAnimationComplete(4296).View, { style: tmp12, children: null });
     const tmp16 = isAnimationComplete(5529);
   } else {
     tmp14Result = null;

@@ -77,12 +77,12 @@ export default {
       };
       request.rejectWithError = email(guild_id[5]).rejectWithMigratedError();
       await allow_multiple_guilds(guild_id[2]).post(request);
-      return arg1.body;
+      return value.body;
     })();
   },
   verify(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -165,11 +165,11 @@ export default {
       }
     })();
   },
-  verifyCode(arg0, arg1, arg2) {
+  verifyCode(arg0, arg1, email) {
     closure_0 = arg0;
     closure_1 = arg1;
-    closure_2 = arg2;
-    return (async (arg0, value) => {
+    closure_2 = email;
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

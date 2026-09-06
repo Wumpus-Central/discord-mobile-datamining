@@ -54,17 +54,17 @@ export const useAPNGPlayerControls = function useAPNGPlayerControls(ref) {
     }
   }), items);
 };
-export const APNGPlayer = noop.forwardRef((onLoad, ref) => {
+export const APNGPlayer = noop.forwardRef((onLoad, arg1) => {
   onLoad = onLoad.onLoad;
   const merged = Object.assign(onLoad, Object.assign({ onLoad: 0 }));
-  ref = noop.useRef(null);
+  const ref = noop.useRef(null);
   const items = [onLoad];
   const callback = noop.useCallback((nativeEvent) => {
     if (onLoad != null) {
       tmp(nativeEvent.nativeEvent.url);
     }
   }, items);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     play() {
       if (null != ref.current) {
         const Commands = onLoad(8809).Commands;
@@ -80,9 +80,9 @@ export const APNGPlayer = noop.forwardRef((onLoad, ref) => {
     stop() {
       if (null != ref.current) {
         const Commands = onLoad(8809).Commands;
-        Commands.seek(tmp.current, 0);
+        Commands.seek(ref.current, 0);
         const Commands2 = onLoad(8809).Commands;
-        Commands2.pause(tmp.current);
+        Commands2.pause(ref.current);
       }
     },
     seek(arg0) {

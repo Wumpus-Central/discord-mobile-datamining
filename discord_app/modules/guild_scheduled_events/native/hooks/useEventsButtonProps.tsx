@@ -3,7 +3,9 @@
 // Module 12374 (useEventsButtonProps)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5569 */;
 import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 9662 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9698 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
@@ -27,11 +29,11 @@ export default function useEventsButtonProps(id) {
   const items4 = [id.id];
   const handlePress = noop.useCallback(() => {
     if (obj.shouldShowMembershipVerificationGate(user.id)) {
-      let tmpResult = tmp(5569);
-      let result = tmpResult.openMemberVerificationModal(tmp3.id);
+      let tmpResult = MemberVerificationModalActionCreators;
+      let result = tmpResult.openMemberVerificationModal(user.id);
     } else {
-      tmpResult = tmp(9698);
-      result = tmpResult.openGuildEventListActionSheet(tmp3);
+      tmpResult = GuildScheduledEventModalActionCreators;
+      result = tmpResult.openGuildEventListActionSheet(user);
     }
     return result;
   }, items3);

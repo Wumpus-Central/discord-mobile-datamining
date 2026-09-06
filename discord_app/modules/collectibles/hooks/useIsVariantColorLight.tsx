@@ -13,8 +13,7 @@ export default function useIsVariantColorLight(variantValue) {
   return noop.useMemo(() => {
     let isValidHexResult = utils_ColorUtils.isValidHex(variantValue.variantValue);
     if (isValidHexResult) {
-      tmp(1091);
-      const tmpResult = tmp(1091);
+      const tmpResult = utils_ColorUtils;
       isValidHexResult = tmpResult.getDarkness(tmpResult.hex2int(variantValue.variantValue)) < 0.3;
     }
     return isValidHexResult;

@@ -41,7 +41,7 @@ function ConnectedAcceptGuildTemplate(code) {
     createServer: null
   };
   let obj2 = name(5519);
-  obj.chooseIcon = first1(function*(arg0, value) {
+  obj.chooseIcon = first1(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

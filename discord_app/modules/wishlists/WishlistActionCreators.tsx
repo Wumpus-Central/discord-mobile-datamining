@@ -80,9 +80,9 @@ export default {
         stateFromStores(tmp3[13]);
       } else if (arg0 === 1) {
         c6 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_129_0 = arg1;
+        closure_129_0 = value;
         const body = closure_129_0.body;
         let wishlist_items;
         if (body != null) {
@@ -99,13 +99,13 @@ export default {
         obj1.dispatch({ type: "WISHLIST_FETCH_SUCCESS", wishlistId: closure_130_0, wishlistData: closure_129_2, updatedAt: closure_130_1 });
         c4 = 0;
       }
-      return arg1;
+      return value;
     })();
   },
   addSkuToWishlist(id, analyticsLocations) {
     closure_0 = id;
     closure_1 = analyticsLocations;
-    return (async (arg0, value) => {
+    return (async () => {
       if (currentUser === 2) {
         currentUser = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -236,7 +236,7 @@ export default {
     closure_0 = wishlistId;
     closure_1 = skuId;
     closure_2 = analyticsLocations;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -335,7 +335,7 @@ export default {
   },
   updateWishlistVisibility(wishlistId, arg1) {
     closure_1 = arg1;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -465,9 +465,9 @@ export default {
         if (2 === tmp7) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            const body = arg1.body;
+            const body = value.body;
             maybeDispatchAdditionalActions(body);
             closure_128_1 = WishlistRecord.fromServer(body);
             obj5 = { type: "WISHLIST_REORDER_SUCCESS", wishlistId: closure_129_0, wishlistData: closure_128_1 };
@@ -485,10 +485,10 @@ export default {
         }
         c3 = 0;
       }
-      return arg1;
+      return value;
     })();
   },
-  fetchWishlistRecommendations(memo3, userIdsAndWishlistIds, stateFromStores) {
+  fetchWishlistRecommendations(memo3, userIdsAndWishlistIds) {
     closure_0 = memo3;
     closure_1 = userIdsAndWishlistIds;
     let flag = arg3;
@@ -514,21 +514,21 @@ export default {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        const body = arg1.body;
+        const body = value.body;
         (function maybeDispatchAdditionalActionsForRecommendation(skus) {
-          let obj = closure_1_1(closure_1_2[9]);
+          let obj = closure_1_1(dependencyMap[9]);
           obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: skus.skus });
           ({ storefront_pricing, skus } = skus);
           if (null != storefront_pricing) {
             obj = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
             obj = { type: "skus", skuIds: skus.map((id) => id.id) };
             obj.priceId = obj;
-            const tmpResult = closure_1_1(tmp2[9]);
-            obj.data = closure_1_0(tmp2[10]).transformStorefrontPricesServer(storefront_pricing);
+            const tmpResult = closure_1_1(dependencyMap[9]);
+            obj.data = closure_1_0(dependencyMap[10]).transformStorefrontPricesServer(storefront_pricing);
             tmpResult.dispatch(obj);
-            const obj5 = closure_1_0(tmp2[10]);
+            const obj5 = closure_1_0(dependencyMap[10]);
           }
         })(body);
         closure_128_1 = WishlistRecommendationRecord.fromServer(body);
@@ -536,7 +536,7 @@ export default {
         c3 = 0;
         tmp3(tmp21[9]);
       }
-      return arg1;
+      return value;
     })();
   }
 };

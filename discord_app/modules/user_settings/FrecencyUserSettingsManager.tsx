@@ -55,7 +55,7 @@ function saveProtos() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _saveProtos(arg0, value) {
+let closure_22 = async function _saveProtos(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -100,7 +100,7 @@ let closure_22 = async function _saveProtos(arg0, value) {
             if (!hasPendingUsageResult) {
               let hasPendingUsageResult1 = FrecencyStore.hasPendingUsage();
               if (hasPendingUsageResult1) {
-                hasPendingUsageResult1 = !tmp30;
+                hasPendingUsageResult1 = !closure_0;
               }
               hasPendingUsageResult = hasPendingUsageResult1;
             }
@@ -114,7 +114,6 @@ let closure_22 = async function _saveProtos(arg0, value) {
               return obj1;
             }
           }
-          tmp30 = closure_0;
         }
       } else if (arg0 === 1) {
         c4 = 3;
@@ -217,8 +216,8 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
         emojiFrecency.emojiFrecency = EmojiFrecency.create();
         const EmojiFrecency2 = frecency_user_settings.EmojiFrecency;
         emojiFrecency.emojiReactionFrecency = EmojiFrecency2.create();
-        emojiFrecency.emojiFrecency.emojis = user_settings_UserSettingsUtils.serializeUsageHistory(tmp.emojiFrecencyWithoutFetchingLatest.usageHistory, 100);
-        emojiFrecency.emojiReactionFrecency.emojis = user_settings_UserSettingsUtils.serializeUsageHistory(tmp.emojiReactionFrecencyWithoutFetchingLatest.usageHistory, 100);
+        emojiFrecency.emojiFrecency.emojis = user_settings_UserSettingsUtils.serializeUsageHistory(EmojiStore.emojiFrecencyWithoutFetchingLatest.usageHistory, 100);
+        emojiFrecency.emojiReactionFrecency.emojis = user_settings_UserSettingsUtils.serializeUsageHistory(EmojiStore.emojiReactionFrecencyWithoutFetchingLatest.usageHistory, 100);
       }
     }
   };

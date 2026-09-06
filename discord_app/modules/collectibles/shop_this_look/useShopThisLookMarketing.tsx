@@ -21,4 +21,5 @@ export const useShopThisLookMarketing = function useShopThisLookMarketing(id, gu
     obj = { isVisible: null != tmp8[0], markAsDismissed: tmp8[1] };
     return obj;
   }
+  tmp3 = obj.useEquippedCollectibleSkuIds(id, guildId).length > 0;
 };

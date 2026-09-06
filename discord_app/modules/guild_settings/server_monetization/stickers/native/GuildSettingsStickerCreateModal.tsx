@@ -19,9 +19,9 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   const tmp3 = c3;
   const intl = util.intl;
   if (null != stickerId) {
-    let tdhW5b = tmp5(1114).t.tdhW5b;
+    let tdhW5b = util.t.tdhW5b;
   } else {
-    tdhW5b = tmp5(1114).t["3DzNjU"];
+    tdhW5b = util.t["3DzNjU"];
   }
   const tmp4 = stickerId(10924);
   return tmp3(tmp4, {

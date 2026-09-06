@@ -122,6 +122,7 @@ function computeThreadIds(record, activeJoinedRelevantThreads, selectedChannel, 
   } else {
     return [];
   }
+  tmp4 = null != arr && arr.isThread() && arr.parent_id === record.id;
 }
 function shouldAlwaysShowInRecents(self, selectedChannel) {
   selectedChannel = selectedChannel.selectedChannel;
@@ -184,14 +185,13 @@ function shouldShowInRecents(guild, record, initializationData) {
         return true;
       } else {
         for (const key10048 in tmp[arg1.id]) {
-          let obj4 = ReadStateStore;
           if (ReadStateStore.getMentionCount(key10048) > 0) {
             let flag5 = true;
             return true;
-          } else if (obj4.hasUnread(key10048)) {
+          } else if (ReadStateStore.hasUnread(key10048)) {
             let flag4 = true;
             return true;
-          } else if (!obj4.hasRecentlyVisitedAndRead(key10048)) {
+          } else if (!ReadStateStore.hasRecentlyVisitedAndRead(key10048)) {
             continue;
           } else {
             let flag3 = true;
@@ -572,12 +572,11 @@ prototype["getRows"] = function getRows() {
       let sum = num + 1;
       num = sum;
       item10007.position = sum;
-      let tmp2 = item10007;
       let shownChannelIds = item10007.getShownChannelIds();
       for (const item10018 of shownChannelIds) {
         let sum1 = num + 1;
         num = sum1;
-        tmp2.channels[item10018].position = sum1;
+        item10007.channels[item10018].position = sum1;
         continue;
       }
       continue;
@@ -661,9 +660,8 @@ prototype["getFirstVoiceChannel"] = function getFirstVoiceChannel(arg0) {
       } else {
         const sortedNamedCategories = self.getSortedNamedCategories();
         for (const item10009 of sortedNamedCategories) {
-          let obj2 = item10009;
           if (null != item10009.getFirstVoiceChannel(arg0)) {
-            self.firstVoiceChannel = obj2.getFirstVoiceChannel(arg0);
+            self.firstVoiceChannel = item10009.getFirstVoiceChannel(arg0);
             obj.return();
             break;
           }
@@ -1093,19 +1091,18 @@ prototype2["getFirstVoiceChannel"] = function getFirstVoiceChannel(arg0) {
   const self = this;
   const shownChannelIds = this.getShownChannelIds();
   for (const item10009 of shownChannelIds) {
-    let tmp2 = item10009;
     if (arg0) {
-      let record = self.channels[tmp2].record;
+      let record = self.channels[item10009].record;
       if (record.isGuildStageVoice()) {
         obj.return();
         return self.channels[item10009];
       }
     }
     if (!arg0) {
-      let record2 = self.channels[tmp2].record;
+      let record2 = self.channels[item10009].record;
       if (record2.isGuildVocal()) {
         obj.return();
-        return self.channels[tmp2];
+        return self.channels[item10009];
       }
     }
     continue;
@@ -1240,6 +1237,7 @@ prototype4["updateChannel"] = function updateChannel(id, arg1) {
     self.invalidate();
     flag = true;
   }
+  tmp6 = id.id === suggestedChannelId && !isFavoriteResult;
 };
 prototype4["getFirstVoiceChannel"] = function getFirstVoiceChannel() {
   return null;
@@ -1330,7 +1328,7 @@ prototype5["getShownChannelIds"] = function getShownChannelIds() {
   if (null != this.shownChannelIds) {
     return self.shownChannelIds;
   } else {
-    closure_0 = self.isCollapsed ? tmp4.Show : tmp4.WouldShowIfUncollapsed;
+    closure_0 = self.isCollapsed ? closure_35.Show : closure_35.WouldShowIfUncollapsed;
     if (self.enabled) {
       const found = _modDef12(self.channels).filter((renderLevel) => renderLevel.renderLevel >= closure_0);
       const mapped = found.map((item) => {
@@ -1916,7 +1914,7 @@ FavoritesChannelListChannel.prototype["computeState"] = function computeState(ar
   ({ selectedChannel, selectedVoiceChannelId } = arg0);
   let obj = { renderLevel: null, threadIds: null };
   if (PermissionStore.can(Permissions.VIEW_CHANNEL, this.record)) {
-    obj.renderLevel = tmp.Show;
+    obj.renderLevel = closure_35.Show;
     const record = self.record;
     obj = arg0.activeJoinedRelevantThreads[self.id];
     if (obj == null) {
@@ -1925,7 +1923,7 @@ FavoritesChannelListChannel.prototype["computeState"] = function computeState(ar
     obj.threadIds = computeThreadIds(record, obj, selectedChannel, selectedVoiceChannelId, false);
     let tmp2 = obj;
   } else {
-    obj.renderLevel = tmp.CannotShow;
+    obj.renderLevel = closure_35.CannotShow;
     obj.threadIds = [];
     tmp2 = obj;
   }
@@ -2027,21 +2025,21 @@ const prototype11 = VoiceChannelListChannel.prototype;
 prototype11["getRenderLevel"] = function getRenderLevel(renderLevel) {
   const self = this;
   if (PermissionStore.can(Permissions.VIEW_CHANNEL, this.record)) {
-    if (renderLevel !== tmp.Show) {
-      if (renderLevel !== tmp.WouldShowIfUncollapsed) {
+    if (renderLevel !== closure_35.Show) {
+      if (renderLevel !== closure_35.WouldShowIfUncollapsed) {
         const favoriteChannelIds = this.category.guild.favoriteChannelIds;
         if (!favoriteChannelIds.has(self.record.id)) {
           if (self.category.isCollapsed) {
-            _modDef12.some(VoiceStateStore.getVoiceStatesForChannel(self.record.id)) ? tmp.Show : tmp.WouldShowIfUncollapsed;
+            _modDef12.some(VoiceStateStore.getVoiceStatesForChannel(self.record.id)) ? closure_35.Show : closure_35.WouldShowIfUncollapsed;
           } else {
-            let CannotShow = tmp.Show;
+            let CannotShow = closure_35.Show;
           }
         }
       }
     }
-    CannotShow = tmp.CannotShow;
+    CannotShow = closure_35.CannotShow;
   } else {
-    return tmp.CannotShow;
+    return closure_35.CannotShow;
   }
 };
 const set1 = new Set(Object.values(ChannelListGuildActionRow));

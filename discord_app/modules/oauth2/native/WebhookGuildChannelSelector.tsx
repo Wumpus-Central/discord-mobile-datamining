@@ -45,13 +45,13 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
   const callback = noop.useCallback(() => {
     let tmp2 = null != first;
     if (tmp2) {
-      tmp2 = tmp.guildId === selectedGuildId;
+      tmp2 = first.guildId === selectedGuildId;
     }
     if (tmp2) {
       let obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
       const intl = util.intl;
       obj.title = intl.string(util.t["Re/64R"]);
-      const channels = tmp.channels;
+      const channels = first.channels;
       obj.items = channels.map((id) => {
         const obj = { label: selectedGuildId(4713).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8), value: id.id };
         return obj;
@@ -66,7 +66,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
     }
   }, items);
   const effect = noop.useEffect(() => {
-    closure_0 = async function _updateChannels(arg0, value) {
+    closure_0 = async function _updateChannels(arg0) {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -177,7 +177,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       tmp10Result = null;
       if ("" !== error) {
         obj = { style: tmp.error, children: error };
-        tmp10Result = tmp10(tmp11(tmp12[17]).LegacyText, obj);
+        tmp10Result = closure_10(tmp11(tmp12[17]).LegacyText, obj);
       }
     }
     items3[1] = tmp10Result;

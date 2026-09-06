@@ -4,6 +4,7 @@
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
@@ -18,8 +19,8 @@ import UserSettingSearchStore from "UserSettingSearchStore" /* 14691 */;
 require = fn;
 function SettingHeaderBadge(badge) {
   if (badge.badge.badgeType === SettingRendererTypes.SettingsBadgeType.BETA) {
-    const obj = { size: tmp(1178).BetaSizes.SMALL };
-    return closure_1_10(tmp(1178).BetaTag, obj);
+    const obj = { size: native.BetaSizes.SMALL };
+    return closure_1_10(native.BetaTag, obj);
   }
 }
 function LeftAlignedHeaderTitle(children) {

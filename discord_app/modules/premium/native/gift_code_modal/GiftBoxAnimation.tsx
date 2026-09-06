@@ -2,11 +2,11 @@
 
 // Module 11448 (GiftBoxAnimation)
 import initialize from "initialize" /* 504 */;
+import _mod4745 from "module_4745" /* 4745 */;
 import LottieAnimationViewDefault from "LottieAnimationView" /* 5529 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-const _mod4745 = tmp(4745);
 require = fn;
 const PremiumGiftStyles = fn(1373).PremiumGiftStyles;
 const jsx = fn(21).jsx;

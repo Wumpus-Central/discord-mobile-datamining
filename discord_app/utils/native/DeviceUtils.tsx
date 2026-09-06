@@ -2,6 +2,7 @@
 
 // Module 4539 (DeviceUtils)
 import _mod17 from "module_17" /* 17 */;
+import Storage3 from "Storage" /* 510 */;
 import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1343 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import size from "module_2" /* 2 */;
@@ -79,14 +80,14 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
   if (obj.isAndroid()) {
     let tmp5 = null == mediaPerformanceClass2;
     if (tmp5) {
-      const Storage = tmp(510).Storage;
+      const Storage = Storage3.Storage;
       value = Storage.get(mediaPerformanceClass);
       mediaPerformanceClass2 = value;
       tmp5 = null == value;
     }
     if (tmp5) {
       mediaPerformanceClass2 = NativeDeviceModuleDefault.getMediaPerformanceClass();
-      const Storage2 = tmp(510).Storage;
+      const Storage2 = Storage3.Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
     }
     tmp3 = mediaPerformanceClass2;

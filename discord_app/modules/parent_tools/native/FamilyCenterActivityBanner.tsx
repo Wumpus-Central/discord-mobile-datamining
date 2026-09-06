@@ -8,9 +8,9 @@ import Text_Text from "Text/Text" /* 4556 */;
 import useUserLinks from "useUserLinks" /* 8645 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
 import useAgeSpecificText from "useAgeSpecificText" /* 11919 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14876 */;
 import noop from "module_19" /* 19 */;
 
-const FamilyCenterBannerButton = tmp2(14876);
 require = fn;
 function FamilyCenterActivityBannerButton() {
   let obj = useUserLinks;
@@ -24,9 +24,9 @@ function FamilyCenterActivityBannerButton() {
     }
     obj = { style: tmp.container, children: null };
     let tmp7Result = FamilyCenterBannerButton;
-    tmp7Result = tmp7(tmp5 ? tmp7Result.FamilyCenterParentQRCodeButton : tmp7Result.FamilyCenterTeenQRCodeButton, {});
+    tmp7Result = hasOwnProperty(tmp5 ? tmp7Result.FamilyCenterParentQRCodeButton : tmp7Result.FamilyCenterTeenQRCodeButton, {});
     obj.children = tmp7Result;
-    tmp7Result = tmp7(React3, obj);
+    tmp7Result = hasOwnProperty(React3, obj);
   }
   return tmp6;
 }
@@ -54,7 +54,6 @@ export default function FamilyCenterActivityBanner() {
   const hasMaxConnections = obj.useHasMaxConnections();
   let obj1 = useAgeSpecificText;
   const intl = util.intl;
-  const tmp = importDefault;
   const tmp3 = useIsInAdultAgeGroupDefault();
   const intl2 = util.intl;
   const ageSpecificText = obj1.useAgeSpecificText(intl.string(_modDef2396["T7GyW+"]), intl2.string(_modDef2396.goKE2b));
@@ -65,7 +64,7 @@ export default function FamilyCenterActivityBanner() {
   obj = { style: tmp4.container, children: null };
   obj = { source: null, style: null };
   const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(_modDef2396.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2396.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
-  obj.source = tmp(tmp3 ? 14883 : 14884);
+  obj.source = importDefault(tmp3 ? 14883 : 14884);
   obj.style = tmp4.art;
   const items = [hasOwnProperty(React4, obj), , , ];
   obj1 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };
@@ -74,7 +73,7 @@ export default function FamilyCenterActivityBanner() {
   items[2] = hasOwnProperty(Text_Text.Text, obj2);
   let tmp13Result = null;
   if (!hasMaxConnections) {
-    tmp13Result = tmp13(FamilyCenterActivityBannerButton, {});
+    tmp13Result = hasOwnProperty(FamilyCenterActivityBannerButton, {});
   }
   items[3] = tmp13Result;
   obj.children = items;

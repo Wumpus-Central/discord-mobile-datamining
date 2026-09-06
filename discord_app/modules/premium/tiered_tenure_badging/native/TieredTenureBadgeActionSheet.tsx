@@ -2,11 +2,15 @@
 
 // Module 11157 (TieredTenureBadgeActionSheet)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7634 */;
 import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8179 */;
 import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11158 */;
+import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11183 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -19,9 +23,9 @@ function TieredTenureBadgeItem(arg0) {
   if (mobileTenureBadgeImages != null) {
     const small = mobileTenureBadgeImages.small;
   }
-  let tmp2Result = tmp2(7634);
+  let tmp2Result = TieredTenureBadgeUtils;
   const tieredTenureBadgeData = tmp2Result.getTieredTenureBadgeData(badge);
-  tmp2Result = tmp2(11183);
+  tmp2Result = useTenureBadgeRequirementString;
   if (tieredTenureBadgeData != null) {
     const tenureReqNumMonths = tieredTenureBadgeData.tenureReqNumMonths;
   }
@@ -38,28 +42,27 @@ function TieredTenureBadgeItem(arg0) {
     obj = { resizeMode: "contain", source: small };
     const items1 = [closure_1_10(FastImageDefault, obj), , , ];
     const obj1 = { style: tmp.badgeName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj1.children = intl.string(tieredTenureBadgeData.nameUnformatted);
-    items1[1] = closure_1_10(tmp2(4556).Text, obj1);
+    items1[1] = closure_1_10(Text_Text.Text, obj1);
     const obj2 = { style: tmp.badgeRequirement, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: tmp7 };
-    items1[2] = closure_1_10(tmp2(4556).Text, obj2);
+    items1[2] = closure_1_10(Text_Text.Text, obj2);
     if (isUsersBadge) {
       isUsersBadge = null != premiumSince;
     }
     if (isUsersBadge) {
       const obj3 = { style: tmp.badgePremiumSince, variant: "text-xs/normal", color: "text-muted", children: null };
-      const intl2 = tmp2(1114).intl;
+      const intl2 = util.intl;
       const obj4 = { date: null };
       const _Date = Date;
       const date = new Date(premiumSince);
       obj4.date = date;
-      obj3.children = intl2.formatToPlainString(tmp2(1114).t.Hu4jfi, obj4);
-      isUsersBadge = tmp11(tmp2(4556).Text, obj3);
+      obj3.children = intl2.formatToPlainString(util.t.Hu4jfi, obj4);
+      isUsersBadge = closure_1_10(Text_Text.Text, obj3);
     }
     items1[3] = isUsersBadge;
     obj.children = items1;
     tmp9Result = closure_1_11(View, obj);
-    tmp11 = closure_1_10;
   }
   return tmp9Result;
 }
@@ -186,7 +189,7 @@ export default function TieredTenureBadgeActionSheet(userId) {
     const intl4 = tmp2(tmp3[13]).intl;
     obj6.text = intl4.string(tmp2(tmp3[13]).t.hvVgAZ);
     obj6.onPress = callback;
-    obj5.children = tmp20(tmp10Result, obj6);
+    obj5.children = closure_10(tmp10Result, obj6);
   } else {
     const obj7 = { loading, text: null, onPress: null };
     const intl3 = tmp2(tmp3[13]).intl;
@@ -199,7 +202,7 @@ export default function TieredTenureBadgeActionSheet(userId) {
     }
     obj7.text = string2Result;
     obj7.onPress = onPress;
-    obj5.children = tmp20(tmp10Result, obj7);
+    obj5.children = closure_10(tmp10Result, obj7);
   }
   const tmp18Result = closure_11(View, obj1);
   let tmp28;

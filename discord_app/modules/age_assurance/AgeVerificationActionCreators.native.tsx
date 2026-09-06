@@ -28,9 +28,6 @@ function openIncodeAgeVerificationModal(arg0) {
       const uRL = new URL("https:" + WEBAPP_ENDPOINT);
       const hostname = uRL.hostname;
       if ("localhost" !== hostname) {
-        if ("127.0.0.1" !== hostname) {
-          const obj = /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/;
-        }
         const _HermesInternal = HermesInternal;
         combined = "" + str3 + WEBAPP_ENDPOINT + closure_10;
       }
@@ -39,7 +36,7 @@ function openIncodeAgeVerificationModal(arg0) {
   }
   let flag = null != combined;
   if (flag) {
-    (async (arg0, value) => {
+    (async () => {
       closure_0 = tmp3;
       await tmp3(5139).requestPermission(constants.CAMERA, { showAuthorizationError: true });
       if (1 === tmp7) {
@@ -63,7 +60,7 @@ function openIncodeAgeVerificationModal(arg0) {
           return {
             value: tmp3(4763).pushLazy(v3(async () => {
                   await tmp2(paths[10])(paths[9], paths.paths);
-                  closure_128_0 = arg1.default;
+                  closure_128_0 = value.default;
                   return () => closure_3_13(closure_1_0, { webviewUrl, onClose, onComplete });
                 }), {}, closure_1_5),
             done: false
@@ -150,7 +147,7 @@ function showAgeVerification(onClose) {
     if (flag) {
       webviewUrl(tmp3[8]).pushLazy(asyncGeneratorStep(async () => {
         await tmp2(paths[10])(paths[20], paths.paths);
-        closure_128_0 = arg1.default;
+        closure_128_0 = value.default;
         return () => {
           merged = Object.assign(c2);
           return <closure_1_0 webviewUrl={webviewUrl} onClose={onClose} />;
@@ -212,17 +209,19 @@ export default {
         };
         if (!openIncodeAgeVerificationModal(obj)) {
           obj = { type: "CLOSE_AGE_VERIFICATION_MODAL", status: prop };
-          onClose(573).dispatch(obj);
+          tmp16(573).dispatch(obj);
           if (onClose != null) {
             onClose();
           }
-          const tmp16Result = onClose(573);
+          const tmp16Result = tmp16(573);
         }
+        const obj9 = onClose(573);
+        tmp16 = onClose;
       } else {
         if (tmpResult3.isExpressiveModalV2Enabled(entryPoint)) {
           onClose(4763).pushLazy(prop(function*() {
             yield tmp2(paths[10])(paths[25], paths.paths);
-            closure_128_0 = arg1.default;
+            closure_128_0 = value.default;
             return () => <closure_1_0 entryPoint={entryPoint} onClose={function onClose() {
               let tmp;
               if (closure_1_1 != null) {
@@ -237,7 +236,7 @@ export default {
           const tmpResult4 = tmp(8575);
           onClose(4763).pushLazy(prop(function*() {
             yield tmp2(paths[10])(paths[27], paths.paths);
-            closure_128_0 = arg1.default;
+            closure_128_0 = value.default;
             return () => <closure_1_0 entryPoint={entryPoint} isRetry={isRetry} useEmbeddedMethods={useEmbeddedMethods} />;
           }), {}, closure_6);
           const obj7 = onClose(4763);

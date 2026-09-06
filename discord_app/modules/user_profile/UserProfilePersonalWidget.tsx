@@ -244,15 +244,12 @@ prototype["isEqual"] = function isEqual(header) {
             sum = sum + 1;
             num2 = sum;
             flag = true;
-          } else if (tmp16(7631).PersonalWidgetSectionType.FIELDS !== type) {
+          } else if (PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS !== type) {
             flag = false;
           }
-          tmp16 = require;
         }
-        let flag2 = false;
         if (image2.fields.length === image.fields.length) {
           let num = 0;
-          flag2 = true;
           if (0 < image2.fields.length) {
             while (true) {
               let tmp6 = image2.fields[num];
@@ -264,7 +261,7 @@ prototype["isEqual"] = function isEqual(header) {
               if (tmp8) {
                 tmp8 = _modDef1332(tmp6.image, tmp7.image);
               }
-              flag2 = false;
+              let flag2 = false;
               if (!tmp8) {
                 break;
               } else {
@@ -313,7 +310,7 @@ export const createDefaultPersonalWidget = function createDefaultPersonalWidget(
   obj.sections = items;
   if (typeof UserProfilePersonalWidget === "function") {
     ({ sections, id, header } = obj);
-    obj = Object.create(tmp.prototype);
+    obj = Object.create(UserProfilePersonalWidget.prototype);
     obj.id = id;
     obj.type = WidgetType.WidgetType.PERSONAL;
     obj.header = header;
@@ -325,7 +322,6 @@ export const createDefaultPersonalWidget = function createDefaultPersonalWidget(
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = UserProfilePersonalWidget;
 };
 export const isPersonalWidgetNew = function isPersonalWidgetNew() {
   return !DismissibleContentUnsafeUtils.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE);

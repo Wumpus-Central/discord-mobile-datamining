@@ -5,9 +5,9 @@ import native from "native" /* 4264 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import TableRow from "TableRow" /* 5605 */;
+import FormCheckbox from "FormCheckbox" /* 5617 */;
 import noop from "module_19" /* 19 */;
 
-const FormCheckbox = tmp2(5617);
 require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);

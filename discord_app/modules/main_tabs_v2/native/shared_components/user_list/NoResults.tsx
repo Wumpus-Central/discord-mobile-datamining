@@ -40,7 +40,7 @@ export default function NoResults(illustration) {
   let tmp5 = null != illustration;
   if (tmp5) {
     obj = { style: tmp.image, children: React4(illustration, {}) };
-    tmp5 = React4(tmp4, obj);
+    tmp5 = React4(React2, obj);
   }
   const items2 = [tmp5, ];
   const obj1 = { style: tmp.textContainer, children: null };

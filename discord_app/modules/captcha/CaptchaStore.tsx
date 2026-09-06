@@ -28,14 +28,14 @@ export const incrementCaptchaServeVolume = function incrementCaptchaServeVolume(
         obj = {};
         const merged = Object.assign(sum.captchaServeVolume);
         if (tmp3) {
-          sum = sum.captchaServeVolume[tmp2] + 1;
-          obj[tmp2] = sum;
+          sum = sum.captchaServeVolume[closure_1_0] + 1;
+          obj[closure_1_0] = sum;
           obj.captchaServeVolume = obj;
         } else {
-          obj[tmp2] = 1;
+          obj[closure_1_0] = 1;
           obj.captchaServeVolume = obj;
         }
-        tmp3 = tmp2 in sum.captchaServeVolume;
+        tmp3 = closure_1_0 in sum.captchaServeVolume;
       }
     });
   });
@@ -45,8 +45,7 @@ export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    let obj = { name: null, tags: null };
-    obj.name = MetricEvents.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION;
+    let obj = { name: MetricEvents.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION, tags: null };
     let _HermesInternal = HermesInternal;
     let items = ["user_flow:" + tmp6];
     obj.tags = items;

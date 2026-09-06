@@ -12,10 +12,9 @@ const jsxProd = fn(21);
 let height = Dimensions.get("window").height;
 let c10 = -5;
 let closure_11 = { x: 0, y: 0 };
-let closure_12 = noop.memo((set) => {
-  let current = set;
-  ({ hovering, rowData, active, renderActiveDivider, hideContent, renderRow, onPressOut } = set);
-  closure_1 = noop.useRef(set);
+let closure_12 = noop.memo((current) => {
+  ({ hovering, rowData, active, renderActiveDivider, hideContent, renderRow, onPressOut } = current);
+  closure_1 = noop.useRef(current);
   noop.useRef(null);
   const ref = noop.useRef(null);
   const effect = noop.useEffect(() => {
@@ -290,16 +289,16 @@ class SortableListView extends Component {
     };
     tmp2.scrollAnimation = function scrollAnimation() {
       if (closure_0._isMounted) {
-        if (null != obj.state.active) {
-          if (null == obj.moveY) {
+        if (null != closure_0.state.active) {
+          if (null == closure_0.moveY) {
             const _requestAnimationFrame2 = requestAnimationFrame;
-            return requestAnimationFrame(obj.scrollAnimation);
+            return requestAnimationFrame(closure_0.scrollAnimation);
           } else {
-            const diff = obj.moveY - obj.wrapperLayout.pageY;
-            const sum = obj.scrollContainerHeight - obj.listLayout.height + 2 * obj.state.active.layout.frameHeight;
-            const scrollValue = obj.scrollValue;
+            const diff = closure_0.moveY - closure_0.wrapperLayout.pageY;
+            const sum = closure_0.scrollContainerHeight - closure_0.listLayout.height + 2 * closure_0.state.active.layout.frameHeight;
+            const scrollValue = closure_0.scrollValue;
             let tmp2 = diff < 80;
-            const diff1 = obj.listLayout.height - 80;
+            const diff1 = closure_0.listLayout.height - 80;
             if (tmp2) {
               tmp2 = scrollValue > 0;
             }
@@ -316,21 +315,21 @@ class SortableListView extends Component {
             if (diff > diff1) {
               sum1 = num2;
               if (scrollValue < sum) {
-                sum1 = scrollValue + 20 * (1 - (obj.listLayout.height - diff) / 80);
+                sum1 = scrollValue + 20 * (1 - (closure_0.listLayout.height - diff) / 80);
                 if (sum1 > sum) {
                   sum1 = sum;
                 }
               }
             }
             if (null !== sum1) {
-              obj.scrollValue = sum1;
-              const scrollResponder = obj.scrollResponder;
-              const point = { y: obj.scrollValue, x: 0, animated: false };
+              closure_0.scrollValue = sum1;
+              const scrollResponder = closure_0.scrollResponder;
+              const point = { y: closure_0.scrollValue, x: 0, animated: false };
               scrollResponder.scrollTo(point);
             }
-            obj.checkTargetElement();
+            closure_0.checkTargetElement();
             const _requestAnimationFrame = requestAnimationFrame;
-            const animationFrame = requestAnimationFrame(obj.scrollAnimation);
+            const animationFrame = requestAnimationFrame(closure_0.scrollAnimation);
           }
         }
       }
@@ -338,13 +337,13 @@ class SortableListView extends Component {
     tmp2._updateLayoutMap = function _updateLayoutMap(arg0, arg1) {
       let tmp2 = null == closure_0.firstRowY;
       if (!tmp2) {
-        tmp2 = 0 === tmp.firstRowY;
+        tmp2 = 0 === closure_0.firstRowY;
       }
       if (!tmp2) {
-        tmp2 = arg1.y < tmp.firstRowY;
+        tmp2 = arg1.y < closure_0.firstRowY;
       }
       if (tmp2) {
-        tmp.firstRowY = arg1.y;
+        closure_0.firstRowY = arg1.y;
       }
       closure_0.layoutMap[arg0] = arg1;
     };
@@ -465,7 +464,7 @@ prototype["componentDidMount"] = function componentDidMount() {
       scrollResponder = current.getScrollResponder();
     }
     self.scrollResponder = scrollResponder;
-    const current2 = tmp._wrapperRef.current;
+    const current2 = self._wrapperRef.current;
     if (current2 != null) {
       current2.measure((frameX, frameY, frameWidth, frameHeight, pageX, pageY) => {
         self.wrapperLayout = { frameX, frameY, frameWidth, frameHeight, pageX, pageY };

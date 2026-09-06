@@ -5,6 +5,8 @@ import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Pressables from "Pressables" /* 5123 */;
+import _modDef10060 from "module_10060" /* 10060 */;
+import _modDef10061 from "module_10061" /* 10061 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10062 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -34,9 +36,9 @@ DefaultFallback.prototype["render"] = function render() {
   let obj = { style: tmp.wrapper, children: null };
   obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = tmp6(10060);
+    let tmp6Result = _modDef10060;
   } else {
-    tmp6Result = tmp6(10061);
+    tmp6Result = _modDef10061;
   }
   obj.source = tmp6Result;
   obj.children = timestampProducer(React3, obj);

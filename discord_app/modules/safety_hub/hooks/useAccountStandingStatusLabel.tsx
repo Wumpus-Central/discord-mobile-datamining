@@ -5,6 +5,7 @@ import util from "util" /* 1114 */;
 import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 11882 */;
 import useSafetyHubInitialized from "useSafetyHubInitialized" /* 11910 */;
 import useSafetyHubFetchError from "useSafetyHubFetchError" /* 14765 */;
+import SafetyHubAccountStandingLabels from "SafetyHubAccountStandingLabels" /* 14766 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
@@ -21,12 +22,12 @@ export const useAccountStandingStatusLabel = function useAccountStandingStatusLa
           return arg0;
         }
     };
-    let formatToPlainStringResult = intl.formatToPlainString(tmp(14766).ACCOUNT_STANDING_SHORT_STATUS[safetyHubAccountStanding.state], obj);
+    let formatToPlainStringResult = intl.formatToPlainString(SafetyHubAccountStandingLabels.ACCOUNT_STANDING_SHORT_STATUS[safetyHubAccountStanding.state], obj);
   } else {
     if (null != safetyHubFetchError) {
-      let ZTNur7 = tmp(1114).t.TDRvqs;
+      let ZTNur7 = util.t.TDRvqs;
     } else {
-      ZTNur7 = tmp(1114).t.ZTNur7;
+      ZTNur7 = util.t.ZTNur7;
     }
     formatToPlainStringResult = intl.string(ZTNur7);
   }

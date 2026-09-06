@@ -66,12 +66,12 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
     const obj14 = { children: null };
     const obj15 = { id: memo, cx: 0.75, cy: 0.5, r: 1, fx: 0.75, fy: 0.5, children: null };
     const obj16 = { stopColor: primaryColorsTransformed[1], offset: "30%" };
-    items1 = [tmp9(tmp3(8453).Stop, obj16), ];
+    items1 = [React3(inlineStyles.Stop, obj16), ];
     const obj17 = { stopColor: secondaryColorsTransformed[1], offset: "70%" };
-    items1[1] = tmp9(tmp3(8453).Stop, obj17);
+    items1[1] = React3(inlineStyles.Stop, obj17);
     obj15.children = items1;
-    obj14.children = tmp7(tmp3(8453).RadialGradient, obj15);
-    tmp9Result = tmp9(tmp3(8453).Defs, obj14);
+    obj14.children = React4(inlineStyles.RadialGradient, obj15);
+    tmp9Result = React3(inlineStyles.Defs, obj14);
   }
   items[20] = tmp9Result;
   obj.children = items;

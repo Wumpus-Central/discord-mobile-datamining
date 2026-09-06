@@ -3,6 +3,7 @@
 // Module 11311 (GuestUtils)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import GuildMemberConstants from "GuildMemberConstants" /* 4187 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8392 */;
 import size from "module_2" /* 2 */;
 
 const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
@@ -29,8 +30,8 @@ export default {
         if (num2 == null) {
           num2 = 0;
         }
-        hasFlagResult1 = tmp2(1384).hasFlag(num2, tmp2(8392).GuildInviteFlags.IS_GUEST_INVITE);
-        const tmp2Result = tmp2(1384);
+        hasFlagResult1 = FlagUtils.hasFlag(num2, GuildInviteFlags.GuildInviteFlags.IS_GUEST_INVITE);
+        const tmp2Result = FlagUtils;
       }
       tmp = hasFlagResult1;
     }

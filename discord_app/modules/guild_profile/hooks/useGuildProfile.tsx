@@ -18,7 +18,7 @@ export const useGuildProfile = function useGuildProfile(guildId) {
   obj = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildProfileStore.getFetchStatus(closure_0));
   const items2 = [guildId];
-  obj.fetchGuildProfile = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  obj.fetchGuildProfile = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -40,6 +40,7 @@ class ForumPostAnalyticsManager extends tmp2 {
         if (null != forumPostReadStatesById) {
           readStateSnapshots.readStateSnapshots[item] = forumPostReadStatesById;
         }
+        const obj = applyArgumentsResult(dependencyMap[5]);
       });
     };
     applyArgumentsResult.getReadStateSnapshotAnalytics = function getReadStateSnapshotAnalytics(id) {

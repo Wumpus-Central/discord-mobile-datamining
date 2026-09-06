@@ -59,14 +59,14 @@ function transformSKUToCollectiblesItem(productLine) {
           const tmp28 = new AvatarDecorationRecord(obj1);
           obj.item = tmp28;
           return obj;
-        } else if (tmp4(1889).CollectiblesItemType.NAMEPLATE === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
           const obj2 = { type: "single", item: null };
           const obj3 = { skuId: productLine.id, type: null, asset: null, label: null, palette: null };
           ({ type: obj6.type, asset: obj6.asset, label: obj6.label, palette: obj6.palette } = item);
           const tmp22 = new NameplateRecord(obj3);
           obj2.item = tmp22;
           return obj2;
-        } else if (tmp4(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
           const obj4 = { skuId: productLine.id, type: null, title: null, description: null, thumbnailPreviewSrc: null, reducedMotionSrc: null, effects: null, accessibilityLabel: null, animationType: null, staticFrameSrc: null };
           ({ type: obj3.type, title: obj3.title, description: obj3.description, thumbnailPreviewSrc: obj3.thumbnailPreviewSrc, reducedMotionSrc: obj3.reducedMotionSrc, effects } = item);
           let tmp12 = ProfileEffectRecord;
@@ -79,7 +79,7 @@ function transformSKUToCollectiblesItem(productLine) {
           tmp12 = new tmp12(obj4);
           obj5.item = tmp12;
           return obj5;
-        } else if (tmp4(1889).CollectiblesItemType.PROFILE_FRAME === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
           obj = { type: "single", item: null };
           const obj6 = { skuId: productLine.id, type: null, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
           ({ type: obj2.type, label: obj2.label, layers: obj2.layers, innerWidth: obj2.innerWidth, overflowTop: obj2.overflowTop, overflowBottom: obj2.overflowBottom, overflowHorizontal: obj2.overflowHorizontal } = item);
@@ -99,12 +99,12 @@ export const createCollectiblesItemsFromServerResponse = function createCollecti
     items = arr.reduce((arr, type) => {
       type = type.type;
       if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-        arr.push(AvatarDecorationRecord.fromServer(type));
-      } else if (tmp(tmp2[6]).CollectiblesItemType.NAMEPLATE === type) {
-        arr.push(NameplateRecord.fromServer(type));
-      } else if (tmp(tmp2[6]).CollectiblesItemType.PROFILE_EFFECT === type) {
+        arr = arr.push(AvatarDecorationRecord.fromServer(type));
+      } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
+        arr = arr.push(NameplateRecord.fromServer(type));
+      } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
         arr.push(ProfileEffectRecord.fromServer(type));
-      } else if (tmp(tmp2[6]).CollectiblesItemType.PROFILE_FRAME === type) {
+      } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
         arr.push(ProfileFrameRecord.fromServer(type));
       } else {
         arr.push(UnknownCollectiblesItemRecord.fromServer(type));

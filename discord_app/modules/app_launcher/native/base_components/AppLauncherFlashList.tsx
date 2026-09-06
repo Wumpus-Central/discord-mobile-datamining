@@ -9,8 +9,7 @@ const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
 let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
   let obj = simultaneousHandlers(11215);
-  simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
-  const items = [simultaneousHandlers];
+  const items = [simultaneousHandlers.simultaneousHandlers];
   let memo = noop.useMemo(() => {
     if (null == simultaneousHandlers) {
       let forwardRefResult = ScrollView;
@@ -23,13 +22,13 @@ let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
         let obj = { gesture: memo, children: null };
         obj = { ref };
         const merged = Object.assign(arg0);
-        obj.children = <ScrollView ref={arg1} />;
+        obj.children = <ScrollView ref={ref} />;
         return jsx(simultaneousHandlers(dependencyMap[3]).GestureDetector, { ref });
       });
     }
     return forwardRefResult;
   }, items);
-  if (obj.useAppLauncherContext().entrypoint === simultaneousHandlers(9409).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === simultaneousHandlers.simultaneousHandlers(9409).AppLauncherEntrypoint.VOICE) {
     obj = { renderScrollComponent: memo, ListHeaderComponent: null, onScroll: null, contentContainerStyle: null, scrollIndicatorInsets: null, renderItem: null, getItemType: null, data: null, automaticallyAdjustsScrollIndicatorInsets: null, keyboardDismissMode: null, keyboardShouldPersistTaps: null, showsVerticalScrollIndicator: null, onViewableItemsChanged: null, viewabilityConfigCallbackPairs: null, animatedProps: null, overScrollMode: "never", ref: null };
     ({ ListHeaderComponent: obj2.ListHeaderComponent, animatedOnScroll: obj2.onScroll, contentContainerStyle: obj2.contentContainerStyle, scrollIndicatorInsets: obj2.scrollIndicatorInsets, renderItem: obj2.renderItem, getItemType: obj2.getItemType, data: obj2.data, automaticallyAdjustsScrollIndicatorInsets: obj2.automaticallyAdjustsScrollIndicatorInsets, keyboardDismissMode: obj2.keyboardDismissMode, keyboardShouldPersistTaps: obj2.keyboardShouldPersistTaps, showsVerticalScrollIndicator: obj2.showsVerticalScrollIndicator, onViewableItemsChanged: obj2.onViewableItemsChanged, viewabilityConfigCallbackPairs: obj2.viewabilityConfigCallbackPairs, animatedProps: obj2.animatedProps } = simultaneousHandlers);
     obj.ref = ref;

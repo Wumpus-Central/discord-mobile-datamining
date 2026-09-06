@@ -3,7 +3,13 @@
 // Module 16190 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import ButtonConstants from "ButtonConstants" /* 4980 */;
+import Pressables from "Pressables" /* 5123 */;
+import Card from "Card" /* 5607 */;
+import XSmallIcon from "XSmallIcon" /* 5680 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8580 */;
 import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8920 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
 import GameClaimCardStack from "GameClaimCardStack" /* 16191 */;
@@ -11,7 +17,8 @@ import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16192
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
-const GameClaimCardStackDefault = tmp5(16191);
+const GameClaimCardStackDefault = GameClaimCardStack;
+
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
@@ -45,16 +52,16 @@ export default noop.memo((arg0) => {
   if (first == null) {
     first = null;
   }
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   const coverImageUrl = useGameNameAndCoverImageDefault(first, intl.string(util.t.VQq92a)).coverImageUrl;
   if (null == coverImageUrl) {
     return null;
   } else {
     const features = guild.features;
     const hasItem = features.has(constants.VERIFIED);
-    const intl4 = tmp2(1114).intl;
+    const intl4 = util.intl;
     const string = intl4.string;
-    const t = tmp2(1114).t;
+    const t = util.t;
     if (hasItem) {
       let stringResult = string(t.uUARXe);
     } else {
@@ -67,28 +74,28 @@ export default noop.memo((arg0) => {
           return require(ContentDismissActionType.USER_DISMISS);
         },
       style: tmp.closeButton,
-      children: closure_8(tmp2(5680).XSmallIcon, { size: "sm", color: "text-default" })
+      children: closure_8(XSmallIcon.XSmallIcon, { size: "sm", color: "text-default" })
     };
-    const items = [closure_8(tmp2(5123).PressableOpacity, obj), , , , ];
+    const items = [closure_8(Pressables.PressableOpacity, obj), , , , ];
     let obj1 = { imageSrc: coverImageUrl };
     items[1] = closure_8(GameClaimCardStackDefault, obj1);
     const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp.centeredText, children: null };
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     const obj3 = { gameName: tmp8 };
-    obj2.children = intl2.format(tmp2(1114).t.Q11WTQ, obj3);
-    items[2] = closure_8(tmp2(4556).Text, obj2);
+    obj2.children = intl2.format(util.t.Q11WTQ, obj3);
+    items[2] = closure_8(Text_Text.Text, obj2);
     const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", style: null, children: null };
     const items1 = [, ];
     ({ body: arr2[0], centeredText: arr2[1] } = tmp);
     obj4.style = items1;
     obj4.children = stringResult;
-    items[3] = closure_8(tmp2(4556).Text, obj4);
+    items[3] = closure_8(Text_Text.Text, obj4);
     const obj5 = { style: tmp.cta, children: null };
     const obj6 = { variant: "primary", size: "sm", text: null, icon: null, iconPosition: "end", onPress: null };
-    const intl3 = tmp2(1114).intl;
-    obj6.text = intl3.string(tmp2(1114).t["2u6ZlY"]);
-    obj6.icon = closure_8(tmp2(8580).LinkExternalSmallIcon, { size: "xs", color: "white" });
-    obj6.onPress = asyncGeneratorStep(async (arg0, value) => {
+    const intl3 = util.intl;
+    obj6.text = intl3.string(util.t["2u6ZlY"]);
+    obj6.icon = closure_8(LinkExternalSmallIcon.LinkExternalSmallIcon, { size: "xs", color: "white" });
+    obj6.onPress = asyncGeneratorStep(async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -138,10 +145,10 @@ export default noop.memo((arg0) => {
         }
       }
     });
-    obj5.children = closure_8(tmp2(4975).Button, obj6);
+    obj5.children = closure_8(components_Button_Button.Button, obj6);
     items[4] = closure_8(View, obj5);
     obj.children = items;
-    return closure_9(tmp2(5607).Card, obj);
+    return closure_9(Card.Card, obj);
   }
   const tmp6Result = useGameNameAndCoverImageDefault(first, intl.string(util.t.VQq92a));
 });

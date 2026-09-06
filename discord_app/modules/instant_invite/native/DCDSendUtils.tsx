@@ -1,6 +1,7 @@
 // === Module 4693: DCDSendUtils ===
 
 // Module 4693 (DCDSendUtils)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import NativeIntentsModuleDefault from "NativeIntentsModule" /* 4694 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
@@ -23,6 +24,7 @@ export const sendSMS = function sendSMS(body, recipients) {
     const DCDSend = React4.DCDSend;
     DCDSend.sendSMS(body, recipients);
   }
+  obj = PlatformUtils;
 };
 export const sendMail = function sendMail(subject, subject) {
   if (obj.isAndroid()) {
@@ -43,6 +45,7 @@ export const sendMail = function sendMail(subject, subject) {
     const DCDSend = React4.DCDSend;
     DCDSend.sendMail(subject, subject);
   }
+  obj = PlatformUtils;
 };
 export const canSendSMS = function canSendSMS() {
   if (obj.isAndroid()) {
@@ -82,4 +85,5 @@ export const canOpenUrlScheme = function canOpenUrlScheme(roblox) {
     });
     return promise;
   }
+  obj = require("PlatformUtils");
 };

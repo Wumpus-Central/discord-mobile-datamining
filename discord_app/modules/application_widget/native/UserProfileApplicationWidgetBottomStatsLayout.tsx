@@ -41,11 +41,11 @@ export default function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
           obj = { variant: "text-xs/normal", color: "text-muted", children: null };
           iter = iter.label.text;
           obj.children = iter;
-          let tmp5Result = tmp5(Text, obj);
+          let tmp5Result = React3(Text, obj);
         } else {
           tmp5Result = null;
           if ("skeleton" === iter.label.status) {
-            tmp5Result = tmp5(Text(9014).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+            tmp5Result = React3(Text(9014).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
           }
         }
         items[1] = tmp5Result;

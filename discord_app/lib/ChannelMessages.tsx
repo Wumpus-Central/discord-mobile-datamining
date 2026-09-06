@@ -143,7 +143,7 @@ prototype["forEach"] = function forEach(arg0, arg1) {
   const _messages = this._messages;
   const item = _messages.forEach(arg0, arg1);
 };
-prototype["cache"] = function cache(_array, arg1) {
+prototype["cache"] = function cache(arg0) {
   const self = this;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -152,14 +152,14 @@ prototype["cache"] = function cache(_array, arg1) {
   if (0 === self.length) {
     self._wasAtEdge = flag;
   }
-  if (self._messages.length + _array.length > timestampProducer) {
+  if (self._messages.length + arg0.length > timestampProducer) {
     self._wasAtEdge = false;
-    if (_array.length > tmp) {
-      const slice = _array.slice;
+    if (arg0.length > timestampProducer) {
+      const slice = arg0.slice;
       if (self._isCacheBefore) {
-        self._messages = slice(_array.length - tmp);
+        self._messages = slice(arg0.length - timestampProducer);
       } else {
-        self._messages = slice(0, tmp);
+        self._messages = slice(0, timestampProducer);
       }
       self._map = {};
       const _messages = self._messages;
@@ -168,7 +168,7 @@ prototype["cache"] = function cache(_array, arg1) {
         return id;
       });
     } else {
-      const diff = tmp - _array.length;
+      const diff = timestampProducer - arg0.length;
       const _messages1 = self._messages;
       const slice2 = _messages1.slice;
       if (self._isCacheBefore) {
@@ -181,10 +181,10 @@ prototype["cache"] = function cache(_array, arg1) {
   }
   const items = [];
   if (self._isCacheBefore) {
-    HermesBuiltin.arraySpread(_array, HermesBuiltin.arraySpread(self._messages, 0));
+    HermesBuiltin.arraySpread(arg0, HermesBuiltin.arraySpread(self._messages, 0));
     let tmp7 = items;
   } else {
-    HermesBuiltin.arraySpread(self._messages, HermesBuiltin.arraySpread(_array, 0));
+    HermesBuiltin.arraySpread(self._messages, HermesBuiltin.arraySpread(arg0, 0));
     tmp7 = items;
   }
   self._messages = tmp7;
@@ -273,19 +273,19 @@ ChannelMessages["hasPresent"] = function hasPresent(arg0) {
 ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
   let tmp2 = ChannelMessages._channelMessages[channelId];
   if (null == tmp2) {
-    if (typeof tmp === "function") {
+    if (typeof ChannelMessages === "function") {
       const merged = Object.assign({ ready: false, cached: false, jumpType: null, jumpTargetId: null, jumpTargetOffset: 0, jumpSequenceId: 1, jumped: false, jumpedToPresent: false, jumpFlash: true, jumpReturnTargetId: null, onJumpComplete: null, focusTargetId: null, focusSequenceId: 1, initialScrollSequenceId: 0, suppressRowAnimationSequenceId: 0, hasMoreBefore: true, hasMoreAfter: false, loadingMore: false, revealedMessageId: null, hasFetched: false, error: false, _array: null, _before: null, _after: null, _map: null });
       merged[2] = Client.JumpType.ANIMATED;
       merged[21] = [];
       if (typeof MessageCache === "function") {
-        let obj = Object.create(tmp6.prototype);
+        let obj = Object.create(MessageCache.prototype);
         obj._messages = [];
         obj._map = {};
         obj._wasAtEdge = false;
         obj._isCacheBefore = true;
         merged[22] = obj;
-        if (typeof tmp6 === "function") {
-          obj = Object.create(tmp6.prototype);
+        if (typeof MessageCache === "function") {
+          obj = Object.create(MessageCache.prototype);
           obj._messages = [];
           obj._map = {};
           obj._wasAtEdge = false;
@@ -293,7 +293,7 @@ ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
           merged[23] = obj;
           merged[24] = {};
           merged.channelId = channelId;
-          tmp._channelMessages[channelId] = merged;
+          ChannelMessages._channelMessages[channelId] = merged;
           tmp2 = merged;
         } else {
           throw new TypeError("Trying to call a non-function");
@@ -323,7 +323,7 @@ ChannelMessages["clearCache"] = function clearCache(arg0) {
 ChannelMessages["commit"] = function commit(channelId) {
   ChannelMessages._channelMessages[channelId.channelId] = channelId;
 };
-prototype2["mutate"] = function mutate(ready, flag) {
+prototype2["mutate"] = function mutate(ready) {
   if (flag === undefined) {
     flag = false;
   }
@@ -333,14 +333,14 @@ prototype2["mutate"] = function mutate(ready, flag) {
     merged[2] = Client.JumpType.ANIMATED;
     merged[21] = [];
     if (typeof MessageCache === "function") {
-      let obj = Object.create(tmp5.prototype);
+      let obj = Object.create(MessageCache.prototype);
       obj._messages = [];
       obj._map = {};
       obj._wasAtEdge = false;
       obj._isCacheBefore = true;
       merged[22] = obj;
-      if (typeof tmp5 === "function") {
-        obj = Object.create(tmp5.prototype);
+      if (typeof MessageCache === "function") {
+        obj = Object.create(MessageCache.prototype);
         obj._messages = [];
         obj._map = {};
         obj._wasAtEdge = false;
@@ -508,11 +508,11 @@ prototype2["findOldest"] = function findOldest(isTermsFormField) {
   const self = this;
   let found = _modDef12.find(this._before._messages, isTermsFormField);
   if (found == null) {
-    let tmpResult = tmp(12);
+    let tmpResult = _modDef12;
     found = tmpResult.find(self._array, isTermsFormField);
   }
   if (found == null) {
-    tmpResult = tmp(12);
+    tmpResult = _modDef12;
     found = tmpResult.find(self._after._messages, isTermsFormField);
   }
   return found;
@@ -521,11 +521,11 @@ prototype2["findNewest"] = function findNewest(arg0) {
   const self = this;
   let findLastResult = _modDef12.findLast(this._after._messages, arg0);
   if (findLastResult == null) {
-    let tmpResult = tmp(12);
+    let tmpResult = _modDef12;
     findLastResult = tmpResult.findLast(self._array, arg0);
   }
   if (findLastResult == null) {
-    tmpResult = tmp(12);
+    tmpResult = _modDef12;
     findLastResult = tmpResult.findLast(self._before._messages, arg0);
   }
   return findLastResult;
@@ -887,7 +887,7 @@ prototype2["merge"] = function merge(arg0) {
     _merge._merge(closure_0, flag, flag2);
   }, true);
 };
-prototype2["_merge"] = function _merge(arr, flag, flag2) {
+prototype2["_merge"] = function _merge(arr) {
   const self = this;
   if (flag === undefined) {
     flag = false;
@@ -920,7 +920,7 @@ prototype2["_merge"] = function _merge(arr, flag, flag2) {
     const obj = flag ? self._before : self._after;
   }
 };
-prototype2["mergeDelta"] = function mergeDelta(new_messages, modified_messages, deleted_message_ids) {
+prototype2["mergeDelta"] = function mergeDelta() {
   let items = new_messages;
   if (new_messages === undefined) {
     items = [];
@@ -967,12 +967,12 @@ prototype2["reset"] = function reset(_array) {
     _after.clear();
   });
 };
-prototype2["truncateTop"] = function truncateTop(arg0, flag) {
+prototype2["truncateTop"] = function truncateTop(React5) {
   if (flag === undefined) {
     flag = true;
   }
   const self = this;
-  const diff = this._array.length - arg0;
+  const diff = this._array.length - React5;
   c0 = diff;
   let self2 = this;
   if (diff > 0) {
@@ -997,7 +997,7 @@ prototype2["truncateTop"] = function truncateTop(arg0, flag) {
   }
   return self2;
 };
-prototype2["truncateBottom"] = function truncateBottom(arg0) {
+prototype2["truncateBottom"] = function truncateBottom(React5) {
   return this;
 };
 prototype2["jumpToPresent"] = function jumpToPresent(arg0) {
@@ -1153,9 +1153,9 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
             _map._map[messageRecord1.id] = messageRecord1;
             if (null != _map._map[messageRecord1.id]) {
               ({ _array: _array2, _array } = _map);
-              _array[_array2.indexOf(tmp2)] = tmp;
+              _array[_array2.indexOf(tmp2)] = messageRecord1;
             } else {
-              SortedArrayUtilsAll.insert(_map._array, tmp, (id, id2) => closure_1_1(closure_1_3[5]).compare(id.id, id2.id));
+              SortedArrayUtilsAll.insert(_map._array, messageRecord1, (id, id2) => closure_1_1(closure_1_3[5]).compare(id.id, id2.id));
             }
           }, true);
         }
@@ -1444,6 +1444,8 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
   }
   logger.info("loadComplete: resetting state for channelId=" + self.channelId + ", sending.length=" + found.length);
   mergeResult = resetResult;
+  const iter = reversed.map((item) => MessageRecordUtils.createMessageRecord(item));
+  tmp4 = found.length > 0 || found1.length > 0;
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;

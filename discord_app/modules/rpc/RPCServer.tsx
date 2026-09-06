@@ -73,21 +73,20 @@ prototype["handleDisconnect"] = function handleDisconnect(abortController, arg1)
   sockets.delete(abortController);
   this.onDisconnect(abortController, arg1);
 };
-prototype["handleRequest"] = function handleRequest(arg0, arg1) {
-  closure_1 = arg0;
+prototype["handleRequest"] = function handleRequest(socket, arg1) {
   closure_2 = arg1;
   let self = this;
   const promise = new Promise((fn) => {
     if (null != closure_2.nonce) {
-      if ("" !== tmp.nonce) {
-        const cmd = tmp.cmd;
+      if ("" !== closure_2.nonce) {
+        const cmd = closure_2.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: constants4.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
           let tmp15 = RPCErrorDefault;
-          tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
+          tmp15 = new tmp15(obj, "Invalid command: " + closure_2.cmd);
           throw tmp15;
-        } else if (validateScopeDefault(closure_1.authorization.scopes, tmp25.scope)) {
+        } else if (validateScopeDefault(socket.authorization.scopes, tmp25.scope)) {
           obj = { command: cmd, scope: null, application_id: null, socket_scope: null };
           if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
@@ -96,13 +95,14 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             scope = tmp25.scope;
           }
           obj.scope = scope;
-          obj.application_id = tmp28.application.id;
-          obj.socket_scope = tmp28.authorization.scopes.toString();
-          tmp29(1242).track(constants.RPC_COMMAND_SENT, obj);
+          obj.application_id = socket.application.id;
+          obj.socket_scope = socket.authorization.scopes.toString();
+          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj);
           fn(tmp25);
+          const tmp29Result = AnalyticsUtilsDefault;
         } else {
           obj = { errorCode: constants4.INVALID_PERMISSIONS };
-          const tmp6 = new tmp29(9554)(obj, "Not authenticated or invalid scope");
+          const tmp6 = new RPCErrorDefault(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
@@ -111,15 +111,15 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
   });
   const nextPromise = new Promise((fn) => {
     if (null != closure_2.nonce) {
-      if ("" !== tmp.nonce) {
-        const cmd = tmp.cmd;
+      if ("" !== closure_2.nonce) {
+        const cmd = closure_2.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: constants4.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
           let tmp15 = RPCErrorDefault;
-          tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
+          tmp15 = new tmp15(obj, "Invalid command: " + closure_2.cmd);
           throw tmp15;
-        } else if (validateScopeDefault(closure_1.authorization.scopes, tmp25.scope)) {
+        } else if (validateScopeDefault(socket.authorization.scopes, tmp25.scope)) {
           obj = { command: cmd, scope: null, application_id: null, socket_scope: null };
           if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
@@ -128,20 +128,21 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             scope = tmp25.scope;
           }
           obj.scope = scope;
-          obj.application_id = tmp28.application.id;
-          obj.socket_scope = tmp28.authorization.scopes.toString();
-          tmp29(1242).track(constants.RPC_COMMAND_SENT, obj);
+          obj.application_id = socket.application.id;
+          obj.socket_scope = socket.authorization.scopes.toString();
+          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj);
           fn(tmp25);
+          const tmp29Result = AnalyticsUtilsDefault;
         } else {
           obj = { errorCode: constants4.INVALID_PERMISSIONS };
-          const tmp6 = new tmp29(9554)(obj, "Not authenticated or invalid scope");
+          const tmp6 = new RPCErrorDefault(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
     throw new RPCErrorDefault({ errorCode: constants4.INVALID_PAYLOAD }, "Payload requires a nonce");
   }).then((result) => {
-    closure_0 = self(function*(arg0, value) {
+    closure_0 = self(function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -219,15 +220,15 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
   });
   const nextPromise1 = new Promise((fn) => {
     if (null != closure_2.nonce) {
-      if ("" !== tmp.nonce) {
-        const cmd = tmp.cmd;
+      if ("" !== closure_2.nonce) {
+        const cmd = closure_2.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: constants4.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
           let tmp15 = RPCErrorDefault;
-          tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
+          tmp15 = new tmp15(obj, "Invalid command: " + closure_2.cmd);
           throw tmp15;
-        } else if (validateScopeDefault(closure_1.authorization.scopes, tmp25.scope)) {
+        } else if (validateScopeDefault(socket.authorization.scopes, tmp25.scope)) {
           obj = { command: cmd, scope: null, application_id: null, socket_scope: null };
           if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
@@ -236,20 +237,21 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             scope = tmp25.scope;
           }
           obj.scope = scope;
-          obj.application_id = tmp28.application.id;
-          obj.socket_scope = tmp28.authorization.scopes.toString();
-          tmp29(1242).track(constants.RPC_COMMAND_SENT, obj);
+          obj.application_id = socket.application.id;
+          obj.socket_scope = socket.authorization.scopes.toString();
+          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj);
           fn(tmp25);
+          const tmp29Result = AnalyticsUtilsDefault;
         } else {
           obj = { errorCode: constants4.INVALID_PERMISSIONS };
-          const tmp6 = new tmp29(9554)(obj, "Not authenticated or invalid scope");
+          const tmp6 = new RPCErrorDefault(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
     throw new RPCErrorDefault({ errorCode: constants4.INVALID_PAYLOAD }, "Payload requires a nonce");
   }).then((result) => {
-    closure_0 = self(function*(arg0, value) {
+    closure_0 = self(function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -325,8 +327,8 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       return applyArgumentsResult;
     });
   }).then((handler) => {
-    if (closure_1.source.type === TransportTypes.POST_MESSAGE) {
-      let obj = { cmd: closure_2.cmd, iframeId: tmp.source.iframeId, args: null };
+    if (socket.source.type === TransportTypes.POST_MESSAGE) {
+      let obj = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
       let args = closure_2.args;
       if (args == null) {
         args = {};
@@ -337,7 +339,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         return interceptRpcCommandResult.result;
       }
     }
-    obj = { socket: tmp, server: self, cmd: closure_2.cmd, evt: closure_2.evt, nonce: closure_2.nonce, args: null, isSocketConnected: null, signal: null };
+    obj = { socket, server: self, cmd: closure_2.cmd, evt: closure_2.evt, nonce: closure_2.nonce, args: null, isSocketConnected: null, signal: null };
     let args1 = closure_2.args;
     if (args1 == null) {
       args1 = {};
@@ -345,22 +347,22 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
     obj.args = args1;
     obj.isSocketConnected = function isSocketConnected() {
       sockets = sockets.sockets;
-      return sockets.has(closure_1_1);
+      return sockets.has(socket);
     };
-    obj.signal = closure_1.abortController.signal;
+    obj.signal = socket.abortController.signal;
     return handler.handler(obj);
   });
   new Promise((fn) => {
     if (null != closure_2.nonce) {
-      if ("" !== tmp.nonce) {
-        const cmd = tmp.cmd;
+      if ("" !== closure_2.nonce) {
+        const cmd = closure_2.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: constants4.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
           let tmp15 = RPCErrorDefault;
-          tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
+          tmp15 = new tmp15(obj, "Invalid command: " + closure_2.cmd);
           throw tmp15;
-        } else if (validateScopeDefault(closure_1.authorization.scopes, tmp25.scope)) {
+        } else if (validateScopeDefault(socket.authorization.scopes, tmp25.scope)) {
           obj = { command: cmd, scope: null, application_id: null, socket_scope: null };
           if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
@@ -369,20 +371,21 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             scope = tmp25.scope;
           }
           obj.scope = scope;
-          obj.application_id = tmp28.application.id;
-          obj.socket_scope = tmp28.authorization.scopes.toString();
-          tmp29(1242).track(constants.RPC_COMMAND_SENT, obj);
+          obj.application_id = socket.application.id;
+          obj.socket_scope = socket.authorization.scopes.toString();
+          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj);
           fn(tmp25);
+          const tmp29Result = AnalyticsUtilsDefault;
         } else {
           obj = { errorCode: constants4.INVALID_PERMISSIONS };
-          const tmp6 = new tmp29(9554)(obj, "Not authenticated or invalid scope");
+          const tmp6 = new RPCErrorDefault(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
     throw new RPCErrorDefault({ errorCode: constants4.INVALID_PAYLOAD }, "Payload requires a nonce");
   }).then((result) => {
-    closure_0 = self(function*(arg0, value) {
+    closure_0 = self(function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -458,8 +461,8 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       return applyArgumentsResult;
     });
   }).then((handler) => {
-    if (closure_1.source.type === TransportTypes.POST_MESSAGE) {
-      let obj = { cmd: closure_2.cmd, iframeId: tmp.source.iframeId, args: null };
+    if (socket.source.type === TransportTypes.POST_MESSAGE) {
+      let obj = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
       let args = closure_2.args;
       if (args == null) {
         args = {};
@@ -470,7 +473,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         return interceptRpcCommandResult.result;
       }
     }
-    obj = { socket: tmp, server: self, cmd: closure_2.cmd, evt: closure_2.evt, nonce: closure_2.nonce, args: null, isSocketConnected: null, signal: null };
+    obj = { socket, server: self, cmd: closure_2.cmd, evt: closure_2.evt, nonce: closure_2.nonce, args: null, isSocketConnected: null, signal: null };
     let args1 = closure_2.args;
     if (args1 == null) {
       args1 = {};
@@ -478,9 +481,9 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
     obj.args = args1;
     obj.isSocketConnected = function isSocketConnected() {
       sockets = sockets.sockets;
-      return sockets.has(closure_1_1);
+      return sockets.has(socket);
     };
-    obj.signal = closure_1.abortController.signal;
+    obj.signal = socket.abortController.signal;
     return handler.handler(obj);
   }).then((result) => self.dispatch(closure_1, closure_2.nonce, closure_2.cmd, null, result)).catch((error) => self.error(closure_1, closure_2.nonce, closure_2.cmd, error.code, error.message));
 };
@@ -659,7 +662,7 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
     const item = subscriptions.forEach((evt) => {
       if (evt.evt === closure_1) {
         if (typeof closure_2 !== "function") {
-          if (typeof tmp12 !== "object") {
+          if (typeof closure_2 !== "object") {
             let tmp4Result = closure_0;
             if (typeof closure_0 === "function") {
               tmp4Result = tmp4(evt);
@@ -670,6 +673,8 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
             if (args == null) {
               args = {};
             }
+            _modDef12;
+            _modDef12;
             const _Object = Object;
           }
         }

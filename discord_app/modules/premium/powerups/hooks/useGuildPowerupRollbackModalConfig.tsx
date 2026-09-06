@@ -49,17 +49,17 @@ export default function useGuildPowerupRollbackModalConfig(guildId, location) {
     shouldShow: flag,
     modalConfig: flag.useMemo(() => {
       if (flag) {
-        if (null != closure_1) {
+        if (null != title) {
           if (null != storeRemovalDate) {
             const tmp6 = getGuildPowerupFormattedDateStringDefault(tmp3);
             let obj = { dismissibleContent: dismissible_content.DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_MODAL, header: null, bodies: null, hasCancelButton: false };
             const intl = util.intl;
             obj = { dateString: tmp6 };
             const _HermesInternal = HermesInternal;
-            obj.header = "" + tmp.title + " " + intl.formatToPlainString(_modDef2428["6e2ry1"], obj);
+            obj.header = "" + title.title + " " + intl.formatToPlainString(_modDef2428["6e2ry1"], obj);
             const intl2 = util.intl;
             obj = { startDate: tmp6, endDate: tmp6, perkName: null, boostCount: null };
-            ({ title: obj3.perkName, cost: obj3.boostCount } = tmp);
+            ({ title: obj3.perkName, cost: obj3.boostCount } = title);
             const items = [intl2.formatToPlainString(_modDef2428.jd8fki, obj)];
             obj.bodies = items;
             return obj;

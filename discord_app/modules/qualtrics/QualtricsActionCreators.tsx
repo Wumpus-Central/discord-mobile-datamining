@@ -18,7 +18,7 @@ function fetchSurveyDetails() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _fetchSurveyDetails(arg0, value) {
+let closure_11 = async function _fetchSurveyDetails(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -101,7 +101,7 @@ function submitSurveyResponse() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _submitSurveyResponse(arg0, value) {
+let closure_12 = async function _submitSurveyResponse(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -151,7 +151,6 @@ let closure_12 = async function _submitSurveyResponse(arg0, value) {
                 let tmp9 = survey.Questions[first];
                 let tmp10 = tmp9;
                 if (null != tmp9) {
-                  let tmp45 = constants2;
                   if (tmp10.QuestionType === constants2.MULTIPLE_CHOICE) {
                     if (tmp10.Selector === constants.MULTIPLE_ANSWER) {
                       obj[tmp8] = str.split(",");
@@ -161,7 +160,7 @@ let closure_12 = async function _submitSurveyResponse(arg0, value) {
                       }
                     }
                   }
-                  if (tmp10.QuestionType === tmp45.MULTIPLE_CHOICE) {
+                  if (tmp10.QuestionType === constants2.MULTIPLE_CHOICE) {
                     if (tmp10.Selector === constants.SINGLE_ANSWER) {
                       if (str.includes(":TEXT:")) {
                         let first1 = str.split(":TEXT:", 2)[0];
@@ -182,7 +181,7 @@ let closure_12 = async function _submitSurveyResponse(arg0, value) {
                       }
                     }
                   }
-                  if (tmp10.QuestionType === tmp45.TEXT_ENTRY) {
+                  if (tmp10.QuestionType === constants2.TEXT_ENTRY) {
                     let _HermesInternal = HermesInternal;
                     obj["" + tmp8 + "_TEXT"] = str;
                   } else {
@@ -221,7 +220,7 @@ let closure_12 = async function _submitSurveyResponse(arg0, value) {
             c6 = 1;
             value = {};
             const HTTP = HTTPUtils.HTTP;
-            const request = { url: Endpoints.EMBEDDED_SURVEY_RESPONSE(tmp29), body: null, rejectWithError: true };
+            const request = { url: Endpoints.EMBEDDED_SURVEY_RESPONSE(closure_0), body: null, rejectWithError: true };
             let obj2 = { values_json: null };
             const _JSON = JSON;
             obj2.values_json = JSON.stringify(tmp19);
@@ -276,40 +275,45 @@ function fireSurveyAction() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _fireSurveyAction(arg0, arg1) {
-  closure_4 = tmp3;
-  closure_3 = tmp5;
-  actionTriggeredSurveyOverride = actionTriggeredSurveyOverride.getActionTriggeredSurveyOverride();
-  dependencyMap = actionTriggeredSurveyOverride;
-  if (actionTriggeredSurveyOverride == null) {
-    dependencyMap = undefined;
-  }
-  const obj1 = { action_type: _require };
-  if (null != closure_1) {
-    obj1.metadata = tmp27;
-  }
-  const HTTP = HTTPUtils.HTTP;
-  const request = { url: constants.EMBEDDED_SURVEY_ACTION, query: { force_survey_id: dependencyMap }, body: obj1, rejectWithError: true };
-  await HTTP.post(request);
-  if (1 === tmp8) {
-    c5 = 0;
-  } else if (arg0 === 1) {
-    c7 = 3;
-    throw arg1;
-  } else if (arg0 !== 2) {
-    closure_131_0 = arg1;
-    let survey;
-    if (closure_131_0 != null) {
-      const body = closure_131_0.body;
-      if (body != null) {
-        survey = body.survey;
-      }
+let closure_13 = async function _fireSurveyAction() {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    closure_4 = tmp3;
+    closure_3 = tmp5;
+    actionTriggeredSurveyOverride = actionTriggeredSurveyOverride.getActionTriggeredSurveyOverride();
+    force_survey_id = actionTriggeredSurveyOverride;
+    if (actionTriggeredSurveyOverride == null) {
+      force_survey_id = undefined;
     }
-    closure_132_1(closure_132_2[8]).dispatch({ type: "SURVEY_FETCHED", survey, isActionTriggered: true });
-    c5 = 0;
-    closure_132_1(closure_132_2[8]);
-  }
-  return arg1;
+    const obj1 = { action_type };
+    if (null != metadata) {
+      obj1.metadata = metadata;
+    }
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: constants.EMBEDDED_SURVEY_ACTION, query: { force_survey_id }, body: obj1, rejectWithError: true };
+    await HTTP.post(request);
+    if (1 === tmp8) {
+      c5 = 0;
+    } else if (arg0 === 1) {
+      c7 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_131_0 = value;
+      let survey;
+      if (closure_131_0 != null) {
+        const body = closure_131_0.body;
+        if (body != null) {
+          survey = body.survey;
+        }
+      }
+      closure_132_1(closure_132_2[8]).dispatch({ type: "SURVEY_FETCHED", survey, isActionTriggered: true });
+      c5 = 0;
+      closure_132_1(closure_132_2[8]);
+    }
+    return value;
+  })();
 };
 const useQualtricsResponseStore = fn(4754).useQualtricsResponseStore;
 const QualtricsConstants = fn(4756);

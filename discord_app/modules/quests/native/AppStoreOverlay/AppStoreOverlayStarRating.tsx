@@ -17,12 +17,12 @@ function FractionalStar(fillAmount) {
   if (tmp4Result) {
     obj = { style: null, children: null };
     const items1 = [tmp.starFillMask, ];
-    const obj1 = { width: tmp7(576).space.PX_10 * fillAmount };
+    const obj1 = { width: nativeDefault.space.PX_10 * fillAmount };
     items1[1] = obj1;
     obj.style = items1;
-    const obj2 = { size: "custom", color: tmp7(576).colors.TEXT_MUTED, style: tmp.starIcon };
-    obj.children = tmp4(StarIcon.StarIcon, obj2);
-    tmp4Result = tmp4(tmp3, obj);
+    const obj2 = { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp.starIcon };
+    obj.children = React4(StarIcon.StarIcon, obj2);
+    tmp4Result = React4(View, obj);
   }
   items[1] = tmp4Result;
   obj.children = items;

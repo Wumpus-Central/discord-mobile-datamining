@@ -48,7 +48,7 @@ export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackg
     if (null == closure_0) {
       return null;
     } else {
-      const syncedClientTheme = ThemeStore.getSyncedClientTheme(tmp);
+      const syncedClientTheme = ThemeStore.getSyncedClientTheme(closure_0);
       let prop;
       if (syncedClientTheme != null) {
         prop = syncedClientTheme.customUserThemeSettings;
@@ -57,7 +57,7 @@ export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackg
       if (null != prop) {
         tmp3 = null;
         if (0 !== prop.colors.length) {
-          const obj = { type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT, getName: getCustomThemesName, theme: ThemeStore.themePreferenceForSystemTheme(tmp), customThemeSettings: prop };
+          const obj = { type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT, getName: getCustomThemesName, theme: ThemeStore.themePreferenceForSystemTheme(closure_0), customThemeSettings: prop };
           tmp3 = obj;
         }
       }
@@ -109,7 +109,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
       if (null == closure_0) {
         return null;
       } else {
-        const syncedClientTheme = ThemeStore.getSyncedClientTheme(tmp);
+        const syncedClientTheme = ThemeStore.getSyncedClientTheme(closure_0);
         let prop;
         if (syncedClientTheme != null) {
           prop = syncedClientTheme.customUserThemeSettings;
@@ -118,7 +118,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
         if (null != prop) {
           tmp3 = null;
           if (0 !== prop.colors.length) {
-            const obj = { type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT, getName: getCustomThemesName, theme: ThemeStore.themePreferenceForSystemTheme(tmp), customThemeSettings: prop };
+            const obj = { type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT, getName: getCustomThemesName, theme: ThemeStore.themePreferenceForSystemTheme(closure_0), customThemeSettings: prop };
             tmp3 = obj;
           }
         }

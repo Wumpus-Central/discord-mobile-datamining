@@ -56,11 +56,11 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
       }
       if (tmp) {
         if ("" !== first) {
-          if (null != str) {
+          if (null != first) {
             const obj = require("useChannelName");
             const formatted = require("useChannelName").computeChannelName(channel, UserStore, RelationshipStore).toLowerCase();
             const str3 = require("useChannelName").computeChannelName(channel, UserStore, RelationshipStore);
-            return navigation(stateFromStores[15])(str.toLowerCase(), formatted);
+            return navigation(stateFromStores[15])(first.toLowerCase(), formatted);
           }
         }
         return tmp;
@@ -109,7 +109,6 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.searchContainer, children: null };
   const tmp10 = navigation(stateFromStores[18])();
-  const tmp5 = navigation;
   const obj1 = { placeholder: null, onChange: null };
   let intl = require("util").intl;
   obj1.placeholder = intl.string(require("util").t["5h0QOP"]);
@@ -117,15 +116,15 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
   obj.children = closure_12(require("SearchField").SearchField, obj1);
   const items4 = [closure_12(View, obj), ];
   if (0 === channels.length) {
-    const obj2 = { Illustration: tmp2(tmp3[25]).NoResults, title: null, body: null };
-    let intl2 = tmp2(tmp3[16]).intl;
-    obj2.title = intl2.string(tmp2(tmp3[16]).t.wM7uRI);
-    const intl3 = tmp2(tmp3[16]).intl;
-    obj2.body = intl3.string(tmp2(tmp3[16]).t.f5cMAg);
-    let tmp15Result = tmp15(tmp2(tmp3[24]).EmptyState, obj2);
+    const obj2 = { Illustration: require("generated/NoResults").NoResults, title: null, body: null };
+    let intl2 = require("util").intl;
+    obj2.title = intl2.string(require("util").t.wM7uRI);
+    const intl3 = require("util").intl;
+    obj2.body = intl3.string(require("util").t.f5cMAg);
+    let tmp15Result = closure_12(require("native").EmptyState, obj2);
   } else {
     let obj3 = { sections: memo.sections, renderItem: callback, itemSize: tmp10, insetEnd: navigation(stateFromStores[12])().insets.bottom, estimatedListSize: "windowSize", placeholderConfig: tmp12, wrapChildren: true };
-    tmp15Result = tmp15(tmp5(tmp3[26]), obj3);
+    tmp15Result = closure_12(navigation(tmp3[26]), obj3);
   }
   items4[1] = tmp15Result;
   obj.children = items4;

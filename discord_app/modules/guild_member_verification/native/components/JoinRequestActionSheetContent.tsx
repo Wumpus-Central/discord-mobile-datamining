@@ -6,8 +6,11 @@ import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import DateUtils from "DateUtils" /* 4242 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import CircleXIcon from "CircleXIcon" /* 6616 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
+import HourglassIcon from "HourglassIcon" /* 9030 */;
 import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16578 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -86,13 +89,13 @@ let closure_12 = noop.memo((user) => {
   if (null != user) {
     obj = { children: null };
     obj = { user, displayProfile, bannerHeight: tmp4 };
-    const items1 = [closure_8(tmp(8246), obj), ];
+    const items1 = [closure_8(joinRequest(8246), obj), ];
     const obj1 = { children: null };
     const obj2 = { user, disableStatus: true, backgroundColor: avatarBackground, statusStyle: null, onPress: null };
     const obj3 = { backgroundColor: statusBackground };
     obj2.statusStyle = obj3;
     obj2.onPress = tmp8;
-    const items2 = [closure_8(tmp(8256), obj2), ];
+    const items2 = [closure_8(joinRequest(8256), obj2), ];
     const obj4 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: null, children: null };
     const items3 = [, , ];
     ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp3);
@@ -103,15 +106,15 @@ let closure_12 = noop.memo((user) => {
     const obj7 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
     const items4 = [closure_8(user(13060).PrimaryInfo, obj7), ];
     const obj8 = { user };
-    items4[1] = closure_8(tmp(13117), obj8);
+    items4[1] = closure_8(joinRequest(13117), obj8);
     obj6.children = items4;
     obj4.children = closure_9(View, obj6);
-    items2[1] = closure_8(tmp(11111), obj4);
+    items2[1] = closure_8(joinRequest(11111), obj4);
     obj1.children = items2;
     items1[1] = closure_9(View, obj1);
     obj.children = items1;
     tmp9 = closure_9(closure_10, obj);
-    const tmpResult = tmp(11111);
+    const tmpResult = joinRequest(11111);
   }
   return tmp9;
 });
@@ -124,18 +127,18 @@ let closure_14 = noop.memo((joinRequest) => {
       let obj = { style: tmp.statusContainer, children: null };
       obj = { style: tmp.statusRow, children: null };
       const obj1 = { size: "lg", color: nativeDefault.colors.STATUS_WARNING };
-      const items = [React6(tmp2(9030).HourglassIcon, obj1), ];
+      const items = [React6(HourglassIcon.HourglassIcon, obj1), ];
       const obj2 = { children: null };
       const obj3 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-      const intl6 = tmp2(1114).intl;
-      obj3.children = intl6.string(tmp2(1114).t["Vr+7eO"]);
-      obj2.children = React6(tmp2(4556).Text, obj3);
+      const intl6 = util.intl;
+      obj3.children = intl6.string(util.t["Vr+7eO"]);
+      obj2.children = React6(Text_Text.Text, obj3);
       items[1] = React6(View, obj2);
       obj.children = items;
       const items1 = [React7(View, obj), ];
       const obj4 = { joinRequest, label: null };
-      const intl7 = tmp2(1114).intl;
-      obj4.label = intl7.string(tmp2(1114).t.rcqdhN);
+      const intl7 = util.intl;
+      obj4.label = intl7.string(util.t.rcqdhN);
       items1[1] = React6(OpenInterviewButton, obj4);
       obj.children = items1;
       return React7(View, obj);
@@ -145,35 +148,35 @@ let closure_14 = noop.memo((joinRequest) => {
     const obj5 = { style: tmp.statusContainer, children: null };
     const obj6 = { style: tmp.statusRow, children: null };
     const obj7 = { size: "lg", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, secondaryColor: nativeDefault.colors.WHITE };
-    const items2 = [React6(tmp2(6616).CircleXIcon, obj7), ];
+    const items2 = [React6(CircleXIcon.CircleXIcon, obj7), ];
     const obj8 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-    const intl3 = tmp2(1114).intl;
-    obj8.children = intl3.string(tmp2(1114).t.bSZkla);
-    const items3 = [React6(tmp2(4556).Text, obj8), , ];
+    const intl3 = util.intl;
+    obj8.children = intl3.string(util.t.bSZkla);
+    const items3 = [React6(Text_Text.Text, obj8), , ];
     let tmp18Result = null;
     if (null != actionedByUser) {
       tmp18Result = null;
       if (null != actionedAt) {
         const obj9 = { style: tmp.actionedInfo, children: null };
-        const intl4 = tmp2(1114).intl;
+        const intl4 = util.intl;
         let username2 = actionedByUser.global_name;
         if (username2 == null) {
           username2 = actionedByUser.username;
         }
         const obj10 = { variant: "text-sm/normal", color: "text-default", children: null };
         const obj11 = { username: username2 };
-        obj10.children = intl4.formatToPlainString(tmp2(1114).t.qnimbL, obj11);
-        const items4 = [tmp20(tmp2(4556).Text, obj10), , ];
+        obj10.children = intl4.formatToPlainString(util.t.qnimbL, obj11);
+        const items4 = [React6(Text_Text.Text, obj10), , ];
         const obj12 = { style: tmp.dot };
-        items4[1] = tmp20(tmp19, obj12);
+        items4[1] = React6(View, obj12);
         const obj13 = { variant: "text-sm/normal", color: "text-default", children: null };
-        let tmp2Result = tmp2(4242);
+        let tmp2Result = DateUtils;
         const _Date2 = Date;
         const date = new Date(SnowflakeUtilsDefault.extractTimestamp(actionedAt));
         obj13.children = tmp2Result.dateFormat(date, "LL");
-        items4[2] = tmp20(tmp2(4556).Text, obj13);
+        items4[2] = React6(Text_Text.Text, obj13);
         obj9.children = items4;
-        tmp18Result = tmp18(tmp19, obj9);
+        tmp18Result = React7(View, obj9);
         const tmp21Result = SnowflakeUtilsDefault;
       }
     }
@@ -181,10 +184,10 @@ let closure_14 = noop.memo((joinRequest) => {
     let tmp20Result = null != rejectionReason;
     if (tmp20Result) {
       const obj14 = { variant: "text-sm/normal", color: "text-default", children: null };
-      const intl5 = tmp2(1114).intl;
+      const intl5 = util.intl;
       const obj15 = { rejectionReason };
-      obj14.children = intl5.formatToPlainString(tmp2(1114).t.fU5PPM, obj15);
-      tmp20Result = tmp20(tmp2(4556).Text, obj14);
+      obj14.children = intl5.formatToPlainString(util.t.fU5PPM, obj15);
+      tmp20Result = React6(Text_Text.Text, obj14);
     }
     const obj16 = { children: null };
     items3[2] = tmp20Result;
@@ -196,39 +199,39 @@ let closure_14 = noop.memo((joinRequest) => {
     items5[1] = React6(OpenInterviewButton, obj17);
     obj5.children = items5;
     return React7(View, obj5);
-  } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
+  } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
     obj = { style: tmp.statusContainer, children: null };
     const obj18 = { style: tmp.statusRow, children: null };
     const obj19 = { size: "lg", color: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: nativeDefault.colors.STATUS_POSITIVE_TEXT };
-    const items6 = [React6(tmp2(4520).CircleCheckIcon, obj19), ];
+    const items6 = [React6(CircleCheckIcon.CircleCheckIcon, obj19), ];
     const obj20 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(1114).intl;
-    obj20.children = intl.string(tmp2(1114).t.aURgY2);
-    const items7 = [React6(tmp2(4556).Text, obj20), ];
+    const intl = util.intl;
+    obj20.children = intl.string(util.t.aURgY2);
+    const items7 = [React6(Text_Text.Text, obj20), ];
     let tmp6Result = null;
     if (null != actionedByUser) {
       tmp6Result = null;
       if (null != actionedAt) {
         const obj21 = { style: tmp.actionedInfo, children: null };
-        const intl2 = tmp2(1114).intl;
+        const intl2 = util.intl;
         let username = actionedByUser.global_name;
         if (username == null) {
           username = actionedByUser.username;
         }
         const obj22 = { variant: "text-sm/normal", color: "text-default", children: null };
         const obj23 = { username };
-        obj22.children = intl2.formatToPlainString(tmp2(1114).t.qnimbL, obj23);
-        const items8 = [tmp8(tmp2(4556).Text, obj22), , ];
+        obj22.children = intl2.formatToPlainString(util.t.qnimbL, obj23);
+        const items8 = [React6(Text_Text.Text, obj22), , ];
         const obj24 = { style: tmp.dot };
-        items8[1] = tmp8(tmp7, obj24);
+        items8[1] = React6(View, obj24);
         const obj25 = { variant: "text-sm/normal", color: "text-default", children: null };
-        tmp2Result = tmp2(4242);
+        tmp2Result = DateUtils;
         const _Date = Date;
         const date1 = new Date(SnowflakeUtilsDefault.extractTimestamp(actionedAt));
         obj25.children = tmp2Result.dateFormat(date1, "LL");
-        items8[2] = tmp8(tmp2(4556).Text, obj25);
+        items8[2] = React6(Text_Text.Text, obj25);
         obj21.children = items8;
-        tmp6Result = tmp6(tmp7, obj21);
+        tmp6Result = React7(View, obj21);
         const tmp9Result = SnowflakeUtilsDefault;
       }
     }
@@ -273,12 +276,12 @@ let closure_15 = noop.memo((joinRequest) => {
   if (tmp6Result) {
     const obj3 = { variant: "secondary", icon: null, label: null, onPress: null, disabled: null };
     const obj4 = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "lg" };
-    obj3.icon = tmp6(tmp2(5071).ChatIcon, obj4);
+    obj3.icon = closure_8(tmp2(5071).ChatIcon, obj4);
     const intl3 = tmp2(1114).intl;
     obj3.label = intl3.string(tmp2(1114).t.KQeYoC);
     obj3.onPress = handleOpenInterview;
     obj3.disabled = submitting;
-    tmp6Result = tmp6(tmp2(8097).IconButton, obj3);
+    tmp6Result = closure_8(tmp2(8097).IconButton, obj3);
   }
   children[2] = tmp6Result;
   return closure_9(joinRequest(5433).ButtonGroup, { direction: "horizontal", align: "flex-start", justify: "space-evenly", children });
@@ -298,14 +301,14 @@ let closure_16 = noop.memo((arg0) => {
     items[2] = formResponseMargin;
     obj.style = items;
     obj = { variant: "text-md/medium", color: "text-default", children: field.label };
-    const items1 = [React6(tmp2(4556).Text, obj), ];
+    const items1 = [React6(Text_Text.Text, obj), ];
     const obj1 = { size: "sm", color: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: nativeDefault.colors.STATUS_POSITIVE_TEXT };
-    items1[1] = React6(tmp2(4520).CircleCheckIcon, obj1);
+    items1[1] = React6(CircleCheckIcon.CircleCheckIcon, obj1);
     obj.children = items1;
     return React7(View, obj);
-  } else if (tmp2(4384).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+  } else if (MemberVerificationTypes.VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
     const obj2 = { style: tmp.formQuestion, variant: "text-sm/semibold", color: "text-subtle", children: field.label };
-    const items2 = [React6(tmp2(4556).Text, obj2), ];
+    const items2 = [React6(Text_Text.Text, obj2), ];
     const items3 = [tmp.formResponse, ];
     let formResponseMargin1 = null;
     if (!isLastField) {
@@ -320,13 +323,13 @@ let closure_16 = noop.memo((arg0) => {
     }
     const obj4 = { children: null };
     const obj5 = { variant: "text-md/medium", color: "text-default", children: tmp10 };
-    obj3.children = React6(tmp2(4556).Text, obj5);
+    obj3.children = React6(Text_Text.Text, obj5);
     items2[1] = React6(View, obj3);
     obj4.children = items2;
     return React7(View, obj4);
   } else {
     const obj6 = { style: tmp.formQuestion, variant: "text-sm/semibold", color: "text-subtle", children: field.label };
-    const items4 = [React6(tmp2(4556).Text, obj6), ];
+    const items4 = [React6(Text_Text.Text, obj6), ];
     const items5 = [tmp.formResponse, ];
     let formResponseMargin2 = null;
     if (!isLastField) {
@@ -337,7 +340,7 @@ let closure_16 = noop.memo((arg0) => {
     items5[1] = formResponseMargin2;
     obj7.style = items5;
     const obj8 = { variant: "text-md/medium", color: "text-default", children: field.response };
-    obj7.children = React6(tmp2(4556).Text, obj8);
+    obj7.children = React6(Text_Text.Text, obj8);
     items4[1] = React6(View, obj7);
     obj.children = items4;
     return React7(View, obj);
@@ -410,17 +413,17 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
     let tmp8Result = null != joinRequest.interviewChannelId;
     if (tmp8Result) {
       obj = { joinRequest };
-      tmp8Result = tmp8(closure_14, obj);
+      tmp8Result = closure_8(closure_14, obj);
     }
     obj = { children: null };
     const items2 = [tmp8Result, ];
     const obj1 = { joinRequest };
-    items2[1] = tmp8(closure_15, obj1);
+    items2[1] = closure_8(closure_15, obj1);
     obj.children = items2;
-    tmp8Result = tmp6(closure_10, obj);
+    tmp8Result = closure_9(closure_10, obj);
   } else {
     const obj2 = { joinRequest };
-    tmp8Result = tmp8(closure_14, obj2);
+    tmp8Result = closure_8(closure_14, obj2);
   }
   items1[1] = tmp8Result;
   const obj3 = { style: closure_11().responsesContainer, children: null };

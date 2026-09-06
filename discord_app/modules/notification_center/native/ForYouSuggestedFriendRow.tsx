@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import ChannelListLayout from "ChannelListLayout" /* 10121 */;
 import noop from "module_19" /* 19 */;
@@ -104,7 +105,6 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj4 = { style: tmp4.textContainer, children: null };
       const obj5 = { lineClamp: 1, variant: layoutStyles.channelName.text.variant, color: "text-default", style: tmp4.nameText, children: friendSuggestionName };
       const items6 = [closure_9(tmp(4556).Text, obj5), ];
-      const tmp20 = closure_11;
       const tmpResult3 = tmp(16441);
       let num3 = 0;
       if (tmpResult4.isAndroid()) {
@@ -148,13 +148,13 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       items5[2] = closure_9(tmp(16443).ContactSuggestionActions, obj9);
       obj10.children = items5;
       const obj11 = { layout: messagesTabLayout, fontScale, panelVariant };
-      obj.children = tmpResult3.renderChannelWrapper(closure_10(tmp20, obj10), obj11);
+      obj.children = tmpResult3.renderChannelWrapper(closure_10(closure_11, obj10), obj11);
       const obj12 = { layout: messagesTabLayout, panelVariant };
       return tmpResult2.renderChannelPressableWrapper(closure_9(tmp(5123).PressableHighlight, obj), obj12);
     }
-    let tmp5Result = tmp5(4404);
+    let tmp5Result = UserUtilsDefault;
     formatToPlainStringResult = tmp5Result.getName(suggestedFriend.user);
   }
-  tmp5Result = tmp5(4404);
+  tmp5Result = UserUtilsDefault;
   friendSuggestionName = tmp5Result.getName(suggestedFriend.user);
 };

@@ -3,8 +3,10 @@
 // Module 15741 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
 import _modDef4153 from "module_4153" /* 4153 */;
+import DownloadIcon from "DownloadIcon" /* 4509 */;
 import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13906 */;
 import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14842 */;
+import RefreshIcon2 from "RefreshIcon" /* 15158 */;
 import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14394 */;
 
 require = fn;
@@ -18,9 +20,9 @@ let SettingBuilders = {
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [MobileNativeUpdateStore];
     if (obj.useStateFromStores(items, () => null !== MobileNativeUpdateStore.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = tmp(4509).DownloadIcon;
+      let RefreshIcon = DownloadIcon.DownloadIcon;
     } else {
-      RefreshIcon = tmp(15158).RefreshIcon;
+      RefreshIcon = RefreshIcon2.RefreshIcon;
     }
     return <RefreshIcon />;
   },

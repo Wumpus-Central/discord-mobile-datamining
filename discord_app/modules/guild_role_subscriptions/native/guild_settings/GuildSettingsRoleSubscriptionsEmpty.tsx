@@ -3,6 +3,7 @@
 // Module 17678 (GuildSettingsRoleSubscriptionsEmpty)
 import useNavigation from "useNavigation" /* 1483 */;
 import PlaceholderDefault from "Placeholder" /* 17680 */;
+import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 17681 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -12,14 +13,14 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   let obj = useNavigation;
   const str = obj.useNavigation();
   if (tmp3.loading) {
-    let tmp7 = jsx(tmp2(17680), {});
+    let tmp7 = jsx(PlaceholderDefault, {});
   } else {
     const features = guild.features;
     if (!features.has(constants.CREATOR_MONETIZABLE)) {
       const features2 = guild.features;
-      if (!features2.has(tmp5.CREATOR_MONETIZABLE_PROVISIONAL)) {
+      if (!features2.has(constants.CREATOR_MONETIZABLE_PROVISIONAL)) {
         obj = { guild };
-        tmp7 = jsx(tmp2(17681), { guild });
+        tmp7 = jsx(GuildSettingsRoleSubscriptionWelcomeViewDefault, { guild });
       }
     }
     if (null == tmp4) {
@@ -29,7 +30,6 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
       const replaced1 = str.replace(constants2.ROLE_SUBSCRIPTIONS_TIERS);
       tmp7 = null;
     }
-    tmp5 = constants;
   }
   return tmp7;
 }

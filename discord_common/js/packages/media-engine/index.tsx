@@ -25,8 +25,8 @@ export const determineMediaEngine = function determineMediaEngine() {
     if (constants.NATIVE === item) {
       let _default = destroy.default;
     } else {
-      if (tmp.WEBRTC !== item) {
-        const DUMMY = tmp.DUMMY;
+      if (constants.WEBRTC !== item) {
+        const DUMMY = constants.DUMMY;
       }
       _default = MediaEngineDummy.default;
     }
@@ -41,8 +41,8 @@ export const initializeMediaEngine = function initializeMediaEngine(BaseConnecti
   if (constants.NATIVE === BaseConnectionEvent) {
     let _default = destroy.default;
   } else {
-    if (tmp.WEBRTC !== BaseConnectionEvent) {
-      const DUMMY = tmp.DUMMY;
+    if (constants.WEBRTC !== BaseConnectionEvent) {
+      const DUMMY = constants.DUMMY;
     }
     _default = MediaEngineDummy.default;
   }

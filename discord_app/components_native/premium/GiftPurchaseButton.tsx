@@ -53,7 +53,8 @@ export default function GiftPurchaseButton(style) {
   obj = { style: style.style, children: null };
   const callback = analyticsLocations.useCallback(productIdForGift(function*() {
     let obj1 = { planId, recipientUserId, productId: productIdForGift };
-    closure_128_0 = yield createOrReuseGiftOrder(obj1);
+    yield createOrReuseGiftOrder(obj1);
+    closure_128_0 = value;
     const premiumTypeFromPlanId = planId(4218).getPremiumTypeFromPlanId(closure_129_0);
     const premiumType = premiumTypeFromPlanId.premiumType;
     const planInterval = premiumTypeFromPlanId.planInterval;
@@ -69,5 +70,5 @@ export default function GiftPurchaseButton(style) {
   }), items3);
   obj1 = { textElement: analyticsLocation(tmp2[18])({ style: obj, basePlanId: planId, isCurrentPlan: tmp11, isGift: true, product: stateFromStores2 }), variant: str, size: "sm", onPress: callback, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true };
   obj.children = jsx(planId(recipientUserId[17]).BaseTextButton, { textElement: analyticsLocation(tmp2[18])({ style: obj, basePlanId: planId, isCurrentPlan: tmp11, isGift: true, product: stateFromStores2 }), variant: str, size: "sm", onPress: callback, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true });
-  return <createOrReuseGiftOrder style={arg0.style}>{null}</createOrReuseGiftOrder>;
+  return <createOrReuseGiftOrder style={style.style}>{null}</createOrReuseGiftOrder>;
 };

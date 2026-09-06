@@ -13,7 +13,7 @@ function CaptchaTestScreen(arg0) {
   if (arg0 == null) {
     throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
-    _slicedToArray = async function _sendCaptchaRequest(noop, value) {
+    _slicedToArray = async function _sendCaptchaRequest(noop) {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -114,7 +114,7 @@ function CaptchaTestScreen(arg0) {
     let tmp11Result = value === value(first1[8]).CaptchaDeciderType.HCAPTCHA_RQDATA;
     if (tmp11Result) {
       obj = { children: null };
-      const items2 = [tmp13(tmp14(tmp15[10]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: "Difficulty" }), ];
+      const items2 = [closure_7(tmp14(tmp15[10]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: "Difficulty" }), ];
       let obj3 = {
         withSpacing: true,
         value: first1,
@@ -125,9 +125,9 @@ function CaptchaTestScreen(arg0) {
               }
             }
       };
-      items2[1] = tmp13(tmp14(tmp15[11]).RadioGroup, obj3);
+      items2[1] = closure_7(tmp14(tmp15[11]).RadioGroup, obj3);
       obj.children = items2;
-      tmp11Result = tmp11(tmp12, obj);
+      tmp11Result = closure_8(View, obj);
     }
     items1[1] = tmp11Result;
     obj.children = items1;

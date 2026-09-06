@@ -7,6 +7,8 @@ import useAlertStore from "useAlertStore" /* 4906 */;
 import StreamPermissionUtils from "StreamPermissionUtils" /* 7726 */;
 import CallsUtils from "CallsUtils" /* 9082 */;
 import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9585 */;
+import VideoIcon from "VideoIcon" /* 10110 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 13046 */;
 import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13262 */;
 import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17197 */;
 import noop from "module_19" /* 19 */;
@@ -27,9 +29,9 @@ function VideoButtonRive(arg0) {
   }
   obj.defaultViewModelInstance = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(10110).VideoIcon;
+    let VideoSlashIcon = VideoIcon.VideoIcon;
   } else {
-    VideoSlashIcon = tmp3(13046).VideoSlashIcon;
+    VideoSlashIcon = VideoSlashIcon2.VideoSlashIcon;
   }
   obj.fallback = <VideoSlashIcon color={color} />;
   obj.children = jsx(native.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });
@@ -105,9 +107,10 @@ export default function VideoButton(arg0) {
     element.style = stateFromStores1 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     if (!videoEnabled) {
       obj = { color: voicePanelButtonStyles.iconFill.color };
-      memo = tmp12(tmp3(tmp2[21]).VideoDenyIcon, obj);
+      memo = jsx(tmp3(tmp2[21]).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
     }
     element.children = memo;
     return jsx(tmp(tmp2[20]), { onPress: tmp9, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
   }
+  let obj5 = channelId(stateFromStores1[11]);
 };

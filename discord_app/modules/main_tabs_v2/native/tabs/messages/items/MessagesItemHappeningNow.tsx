@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/mess
 export default noop.memo(function MessagesItemHappeningNow(listRef) {
   let obj = { backgroundColor: null, children: null };
   obj = { style: closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef }) };
-  obj.children = <View style={closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{jsx(HappeningNowDefault, { cards: set, listRef: arg0.listRef })}</View>;
+  obj.children = <View style={closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef })}</View>;
   return jsx(CutoutBackgroundContext.CutoutBackgroundProvider, { style: closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef }) });
 });
 export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight() {

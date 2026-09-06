@@ -55,13 +55,12 @@ export const useHandleUseNow = function useHandleUseNow(product) {
       const set = new Set();
       const items = product.items;
       for (const item10023 of items) {
-        let tmp9 = item10023;
         if (set.has(item10023.type)) {
           obj2.return();
           let flag = false;
           return false;
         } else {
-          let addResult = set.add(tmp9.type);
+          let addResult = set.add(item10023.type);
           continue;
         }
       }
@@ -70,7 +69,7 @@ export const useHandleUseNow = function useHandleUseNow(product) {
   })(product), items);
   obj = { handleUseNow: null, isApplying: tmp[0], canUseNow: memo };
   const items1 = [memo, firstAvatarDecoration, firstProfileEffect, firstNameplate, firstProfileFrame, onSuccess, stringResult, onError];
-  obj.handleUseNow = obj.useCallback(onError(function*(arg0, value) {
+  obj.handleUseNow = obj.useCallback(onError(function*() {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -131,7 +130,7 @@ export const useHandleUseNow = function useHandleUseNow(product) {
                 }
               }
               let obj5 = pendingProfileEffect(pendingProfileFrame[7]);
-              pendingProfileEffect = tmp21;
+              pendingProfileEffect = firstProfileEffect;
               if (firstProfileEffect == null) {
                 pendingProfileEffect = undefined;
               }

@@ -54,19 +54,20 @@ function ConnectGuardianShareScreen() {
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
       const obj5 = { shareActions: "full", linkCode: stateFromStores, expiresAt: stateFromStores1, onRefresh: getLinkCode };
-      let tmp11Result = tmp11(tmp2(14881).ConnectGuardianCard, obj5);
+      let tmp11Result = closure_6(tmp2(14881).ConnectGuardianCard, obj5);
     }
     const obj6 = { children: null };
     const obj7 = { children: null };
     items4[1] = tmp11Result;
     obj3.children = items4;
-    items3[1] = tmp12(getLinkCode(4973).Stack, obj3);
+    items3[1] = closure_7(getLinkCode(4973).Stack, obj3);
     obj.children = items3;
-    obj7.children = tmp12(getLinkCode(4973).Stack, obj);
-    obj6.children = tmp11(getLinkCode(8422).ModalContent, obj7);
-    return tmp11(getLinkCode(8421).ModalScreen, obj6);
+    obj7.children = closure_7(getLinkCode(4973).Stack, obj);
+    obj6.children = closure_6(getLinkCode(8422).ModalContent, obj7);
+    return closure_6(getLinkCode(8421).ModalScreen, obj6);
   }
-  tmp11Result = tmp11(View, { style: tmp.loading, children: closure_6(getLinkCode(5577).ActivityIndicator, {}) });
+  tmp11Result = closure_6(View, { style: tmp.loading, children: closure_6(getLinkCode(5577).ActivityIndicator, {}) });
+  const obj8 = { style: tmp.loading, children: closure_6(getLinkCode(5577).ActivityIndicator, {}) };
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

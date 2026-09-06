@@ -4,6 +4,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import FunctionUtils from "FunctionUtils" /* 1933 */;
 import ImpersonateTypes from "ImpersonateTypes" /* 2020 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
@@ -146,8 +147,8 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
   } else {
     const type = tmp6.type;
     if (ImpersonateTypes.ImpersonateType.ROLES !== type) {
-      if (tmp7(2020).ImpersonateType.SERVER_SHOP !== type) {
-        if (tmp7(2020).ImpersonateType.NEW_MEMBER === type) {
+      if (ImpersonateTypes.ImpersonateType.SERVER_SHOP !== type) {
+        if (ImpersonateTypes.ImpersonateType.NEW_MEMBER === type) {
           return GuildSettingsSections.ONBOARDING;
         } else {
           return GuildSettingsSections.ROLES;
@@ -204,10 +205,11 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
                 num = 0;
               }
               if (obj.hasFlag(num, constants.OPT_IN_ENABLED)) {
-                obj2.add(item);
+                optInChannels.add(item);
               } else {
-                obj2.delete(item);
+                optInChannels.delete(item);
               }
+              obj = FlagUtilsAll;
             });
             tmp6.optInChannels = optInChannels;
             return true;

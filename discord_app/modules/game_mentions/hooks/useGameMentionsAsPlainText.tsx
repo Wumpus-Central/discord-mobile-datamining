@@ -36,16 +36,16 @@ export const useGameMentionsAsPlainText = function useGameMentionsAsPlainText(st
         return str.replace(timestampProducer, (arg0, gameId) => {
           game = game.getGame(gameId);
           if (obj.isGameProfileObscured(game, nsfwAllowed)) {
-            const intl2 = tmp2(tmp3[8]).intl;
-            let stringResult = intl2.string(tmp2(tmp3[8]).t["11pdXZ"]);
+            const intl2 = nsfwAllowed(memo[8]).intl;
+            let stringResult = intl2.string(nsfwAllowed(memo[8]).t["11pdXZ"]);
           } else {
             stringResult = undefined;
             if (game != null) {
               stringResult = game.name;
             }
             if (stringResult == null) {
-              const intl = tmp2(tmp3[8]).intl;
-              stringResult = intl.string(tmp2(tmp3[8]).t["11pdXZ"]);
+              const intl = nsfwAllowed(memo[8]).intl;
+              stringResult = intl.string(nsfwAllowed(memo[8]).t["11pdXZ"]);
             }
           }
           return stringResult;

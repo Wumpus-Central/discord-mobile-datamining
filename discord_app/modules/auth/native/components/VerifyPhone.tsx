@@ -77,15 +77,15 @@ export default function VerifyPhone(phone) {
       v3 = 3;
     } else if (arg0 === 1) {
       v3 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
-      const token = arg1.token;
+      const token = value.token;
       closure_1_7.current = true;
       onPhoneTokenReceived(token);
       v0 = 0;
     }
     v0 = 0;
-    return arg1;
+    return value;
   });
   const items1 = [phone, onPhoneTokenReceived, context];
   const onCodeEntered = noop.useCallback(function() {
@@ -98,7 +98,7 @@ export default function VerifyPhone(phone) {
     }
     return applyArgumentsResult;
   }, items1);
-  _require = onBail(function*(arg0, value) {
+  _require = onBail(function*(arg0) {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

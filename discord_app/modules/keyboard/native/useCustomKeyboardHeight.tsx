@@ -11,7 +11,7 @@ export default function useCustomKeyboardHeight() {
   closure_0 = AppEntryKeyContext.useAppEntryKey();
   return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
 };
-export const getCustomKeyboardHeight = function getCustomKeyboardHeight(appEntryKey) {
+export const getCustomKeyboardHeight = function getCustomKeyboardHeight() {
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;

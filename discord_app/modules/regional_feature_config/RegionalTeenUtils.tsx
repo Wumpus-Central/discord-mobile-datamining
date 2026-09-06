@@ -51,14 +51,13 @@ export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
       userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
     }
   }, items1);
-  let obj = set;
   const obj2 = stateFromStores(504);
   let userIsTeen = stateFromStores(8644).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
   if (userIsTeen) {
-    userIsTeen = obj.has(stateFromStores.alpha2);
+    userIsTeen = set.has(stateFromStores.alpha2);
   }
   return userIsTeen;
 };

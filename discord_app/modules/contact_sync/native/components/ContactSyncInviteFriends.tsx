@@ -4,13 +4,13 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import showShareActionSheet from "showShareActionSheet" /* 8361 */;
 import _modDef12701 from "module_12701" /* 12701 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
-const UserUtilsDefault = tmp(4404);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
@@ -26,7 +26,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncInviteFriends.tsx");
 
 export default function ContactSyncInviteFriends() {
-  let tmp = closure_10();
+  const tmp = closure_10();
   let obj = require("initialize");
   const items = [UserStore];
   _require = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -58,8 +58,8 @@ export default function ContactSyncInviteFriends() {
       const tmpResult = UserUtilsDefault;
     }
     const formatToPlainStringResult = intl.formatToPlainString(util.t["6E9a1J"], { url: "https://discord.com/", username: str });
-    const tmp3 = constants2;
-    showShareActionSheet.showShareActionSheet({ message: formatToPlainStringResult }, tmp3.CONTACT_SYNC_MODAL);
+    showShareActionSheet.showShareActionSheet({ message: formatToPlainStringResult }, constants2.CONTACT_SYNC_MODAL);
+    const tmp5Result = showShareActionSheet;
   };
   obj4.children = closure_7(require("components/Button/Button").Button, obj5);
   items2[1] = closure_7(View, obj4);

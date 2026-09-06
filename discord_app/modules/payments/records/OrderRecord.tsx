@@ -43,7 +43,7 @@ BillingFacetRecord["createFromOrder"] = function createFromOrder(billing_facet) 
     }
     let invoiceFromOrder = BaseInvoiceRecord.createInvoiceFromOrder(billing_facet);
     if (typeof BillingFacetRecord === "function") {
-      const tmp11 = new BillingFacetRecord(tmp, billing_facet, tmp3, new.target, payment_gateway, payment_source_id, currency, invoiceFromOrder);
+      const tmp11 = new BillingFacetRecord(tmp, billing_facet, BillingFacetRecord, new.target, payment_gateway, payment_source_id, currency, invoiceFromOrder);
       tmp11.paymentGateway = payment_gateway;
       if (payment_source_id == null) {
         payment_source_id = null;

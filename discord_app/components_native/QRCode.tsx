@@ -2,13 +2,13 @@
 
 // Module 9864 (components_native/QRCode)
 import nativeDefault from "native" /* 576 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 4965 */;
 import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8245 */;
 import QRCodeDefault from "QRCode" /* 9865 */;
 import _mod9879 from "module_9879" /* 9879 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const VisualEffectViewDefault = tmp7(4965);
 require = fn;
 let closure_3 = ["style", "text", "blur", "accessibilityLabel"];
 get_ActivityIndicator = fn(17);
@@ -41,16 +41,15 @@ QRCode.prototype["render"] = function render() {
   obj = { style: { position: "relative", width: tmp2.size, height: tmp2.size }, children: null };
   obj = { value: text, level: "M" };
   const tmp = closure_10(this.context);
-  const tmp6 = React7;
   const merged = Object.assign(tmp2);
   const items1 = [React6(QRCodeDefault, obj), ];
   if (blur) {
     obj1 = { style: React5.absoluteFill, blurTheme: "dark" };
-    tmp3Result = tmp3(VisualEffectViewDefault, obj1);
+    tmp3Result = React6(VisualEffectViewDefault, obj1);
   }
   items1[1] = tmp3Result;
   obj.children = items1;
-  obj.children = tmp6(hasOwnProperty, obj);
+  obj.children = React7(hasOwnProperty, obj);
   return React6(hasOwnProperty, obj);
 };
 QRCode.contextType = fn(4271).ThemeContext;

@@ -1,13 +1,14 @@
 // === Module 5011: getSoundmojiASTFromString ===
 
 // Module 5011 (getSoundmojiASTFromString)
+import AvatarUtils from "AvatarUtils" /* 1396 */;
 import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5017 */;
 import isSoundValidDefault from "isSoundValid" /* 5018 */;
+import getSoundFromMessageDefault from "getSoundFromMessage" /* 5019 */;
 import getSoundStringDefault from "getSoundString" /* 5021 */;
 import SoundboardStore from "SoundboardStore" /* 5012 */;
 import MessageStore from "MessageStore" /* 4781 */;
 
-const AvatarUtils = tmp3(1396);
 require = fn;
 const MessageStates = fn(1074).MessageStates;
 const size = fn(2);
@@ -22,7 +23,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     const tmp9 = isSoundValidDefault(soundById, guildId.guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = tmp8(5019)(channelId, messageId, tmp2, soundboardSounds);
+        const tmp16 = getSoundFromMessageDefault(channelId, messageId, tmp2, soundboardSounds);
         tmp5 = tmp16;
         if (tmp9) {
           tmp5 = tmp16;
@@ -47,7 +48,6 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
       }
       tmp5 = tmp11;
     }
-    tmp8 = importDefault;
   }
   if (null == tmp5) {
     obj = { type: "text", content: getSoundStringDefault(tmp, tmp2) };
@@ -98,7 +98,7 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
     const tmp9 = isSoundValidDefault(soundById, guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = tmp8(5019)(channelId, messageId, soundId, arg4);
+        const tmp16 = getSoundFromMessageDefault(channelId, messageId, soundId, arg4);
         if (tmp9) {
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);
@@ -121,6 +121,6 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
       }
       return tmp11;
     }
-    tmp8 = importDefault;
   }
+  obj = SoundmojiRenderingExperiment;
 };

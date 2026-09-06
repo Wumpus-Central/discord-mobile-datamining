@@ -20,7 +20,7 @@ function getDeliveredNotifications() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _getDeliveredNotifications(arg0, value) {
+let closure_11 = async function _getDeliveredNotifications() {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -50,12 +50,11 @@ let closure_11 = async function _getDeliveredNotifications(arg0, value) {
           if (obj1.shouldClearChannelNotificationsOnAppForeground({ location: "getDeliveredNotifications" })) {
             c1 = 1;
             c2 = 1;
-            obj1 = { value: require("PushNotification").getDeliveredNotifications(), done: false };
+            obj1 = { value: PushNotificationDefault.getDeliveredNotifications(), done: false };
             return obj1;
           } else {
             c2 = 3;
           }
-          tmp8 = dependencyMap;
         }
       } else if (arg0 === 1) {
         c2 = 3;
@@ -82,7 +81,7 @@ function updateAndClearStaleNotifications() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _updateAndClearStaleNotifications(arg0, value) {
+let closure_13 = async function _updateAndClearStaleNotifications() {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -167,6 +166,7 @@ let closure_13 = async function _updateAndClearStaleNotifications(arg0, value) {
               const obj2 = closure_1_1(dependencyMap[7]);
             }
           }
+          obj = closure_1_0(dependencyMap[6]);
         })();
         c2 = 3;
         return { value: "HermesInternal", done: null };
@@ -194,9 +194,10 @@ let prototype = function NativeNotificationsManager() {
         const result1 = DCDNotificationManager.clearNotificationsForChannel(channelId);
       }
     }
+    obj = applyArgumentsResult(1115);
   };
   require = applyArgumentsResult;
-  applyArgumentsResult.handlePostConnectionOpen = asyncGeneratorStep(async (arg0, value) => {
+  applyArgumentsResult.handlePostConnectionOpen = asyncGeneratorStep(async () => {
     if (logger === 2) {
       logger = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -251,7 +252,7 @@ let prototype = function NativeNotificationsManager() {
             closure_131_9 = moveAndReadData;
             closure_131_10 = function _moveAndReadData() {
               const self = this;
-              const tmp = closure_3(function*(arg0, value) {
+              const tmp = closure_3(function*(arg0, arg1) {
                 closure_130_0 = closure_0;
                 closure_130_1 = closure_1;
                 yield closure_0(tmp2[11]).removeFile(closure_2_0, closure_1);
@@ -390,7 +391,7 @@ let prototype = function NativeNotificationsManager() {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  const obj12 = applyArgumentsResult(1115);
+                  applyArgumentsResult(1115);
                 }
               } else if (arg0 === 1) {
                 logger = 3;
@@ -440,6 +441,7 @@ let prototype = function NativeNotificationsManager() {
         const result1 = setShowFullscreenCallUI(true);
       }
     }
+    obj = applyArgumentsResult(1115);
   };
   applyArgumentsResult.updateAndClearStaleNotifications = function updateAndClearStaleNotifications() {
     updateAndClearStaleNotifications();

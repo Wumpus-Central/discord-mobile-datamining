@@ -84,11 +84,10 @@ export const updateSmallSuggestionBarHeight = function updateSmallSuggestionBarH
     } else {
       const _Map = Map;
       const map = new Map(smallSuggestionBarHeight.smallSuggestionBarHeight);
-      const result = map.set(tmp, tmp2);
+      const result = map.set(closure_0, tmp2);
       obj = { smallSuggestionBarHeight: map };
       return obj;
     }
-    tmp = closure_0;
   });
 };
 export const useSmallSuggestionBarHeight = function useSmallSuggestionBarHeight(arg0) {
@@ -123,11 +122,10 @@ export const updateIsAtBottom = function updateIsAtBottom(arg0, arg1) {
     } else {
       const _Map = Map;
       const map = new Map(isAtBottom.isAtBottom);
-      const result = map.set(tmp, tmp2);
+      const result = map.set(closure_0, tmp2);
       obj = { isAtBottom: map };
       return obj;
     }
-    tmp = closure_0;
   });
 };
 export const useChatIsAtBottom = function useChatIsAtBottom(arg0) {
@@ -145,7 +143,7 @@ export const useBestActiveChatInputContainerHeight = function useBestActiveChatI
   return obj((chatInputContainerHeight) => {
     const highestActiveScreenIndex = ChatInputUtils.getHighestActiveScreenIndex();
     if (null == highestActiveScreenIndex) {
-      const Storage2 = tmp(tmp2[0]).Storage;
+      const Storage2 = Storage3.Storage;
       let num4 = Storage2.get(closure_1_2, 0);
       if (num4 == null) {
         num4 = 0;
@@ -155,7 +153,7 @@ export const useBestActiveChatInputContainerHeight = function useBestActiveChatI
       chatInputContainerHeight = chatInputContainerHeight.chatInputContainerHeight;
       value = chatInputContainerHeight.get(highestActiveScreenIndex);
       if (value == null) {
-        const Storage = tmp(tmp2[0]).Storage;
+        const Storage = Storage3.Storage;
         let num2 = Storage.get(closure_1_2, 0);
         if (num2 == null) {
           num2 = 0;

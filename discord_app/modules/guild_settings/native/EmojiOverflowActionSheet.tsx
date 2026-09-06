@@ -51,12 +51,12 @@ export default function EmojiOverflowActionSheet(emoji) {
   items2[1] = closure_6(emoji(onSelectRolesForEmoji[9]).TableRow, obj5);
   let tmp5Result = null;
   if (null != onSelectRolesForEmoji) {
-    const obj7 = { icon: tmp5(tmp3(tmp4[13]).PencilIcon, {}), label: null, onPress: null };
+    const obj7 = { icon: closure_6(tmp3(onSelectRolesForEmoji[13]).PencilIcon, {}), label: null, onPress: null };
     const obj8 = { variant: "text-md/semibold", children: null };
-    const intl3 = tmp3(tmp4[11]).intl;
-    obj8.children = intl3.string(tmp3(tmp4[11]).t["+riKdA"]);
-    obj7.label = tmp5(tmp3(tmp4[7]).Text, obj8);
-    obj7.onPress = asyncGeneratorStep(async (arg0, value) => {
+    const intl3 = tmp3(onSelectRolesForEmoji[11]).intl;
+    obj8.children = intl3.string(tmp3(onSelectRolesForEmoji[11]).t["+riKdA"]);
+    obj7.label = closure_6(tmp3(onSelectRolesForEmoji[7]).Text, obj8);
+    obj7.onPress = asyncGeneratorStep(async () => {
       await onSelectRolesForEmoji(emoji);
       if (1 === tmp7) {
         c4 = 0;
@@ -96,14 +96,14 @@ export default function EmojiOverflowActionSheet(emoji) {
       }
       return value;
     });
-    tmp5Result = tmp5(tmp3(tmp4[9]).TableRow, obj7);
+    tmp5Result = closure_6(tmp3(onSelectRolesForEmoji[9]).TableRow, obj7);
   }
   const obj9 = { children: null };
   const obj10 = { hasIcons: true, children: null };
   items2[2] = tmp5Result;
   const obj11 = { icon: closure_6(emoji(onSelectRolesForEmoji[16]).XSmallIcon, {}), label: null, onPress: null };
   const obj12 = { variant: "text-md/semibold", children: null };
-  const intl4 = tmp3(tmp4[11]).intl;
+  const intl4 = tmp3(onSelectRolesForEmoji[11]).intl;
   obj12.children = intl4.string(emoji(onSelectRolesForEmoji[11]).t["ETE/oC"]);
   obj11.label = closure_6(emoji(onSelectRolesForEmoji[7]).Text, obj12);
   obj11.onPress = onClose;

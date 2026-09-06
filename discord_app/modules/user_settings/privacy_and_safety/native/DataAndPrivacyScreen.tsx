@@ -85,6 +85,7 @@ export default function DataAndPrivacySettings() {
       const obj = stackNavigation(14855);
     }
     const harvestStatus = stackNavigation(14858).fetchHarvestStatus();
+    const obj2 = stackNavigation(14858);
   }, []);
   const items8 = [stackNavigation, items1];
   obj12 = { children: null };

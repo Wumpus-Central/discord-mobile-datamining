@@ -28,12 +28,12 @@ function headerTitle() {
 function getNextAuthState(WELCOME) {
   const index = items.indexOf(WELCOME);
   if (-1 !== index) {
-    if (index !== arr.length - 1) {
-      return arr[index + 1];
+    if (index !== items.length - 1) {
+      return items[index + 1];
     }
   }
 }
-let closure_19 = async function _handleNextOrSubmitRegistration(arg0, value) {
+let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -61,14 +61,14 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0, value) {
           React7();
           const tmp22 = getNextAuthState(closure_0);
           if (null != tmp22) {
-            const obj1 = { step: closure_2_10(tmp17), toStep: closure_2_10(tmp22), actionType: constants.SUCCESS };
-            tmp18(obj1);
+            const obj1 = { step: closure_2_10(closure_0), toStep: closure_2_10(tmp22), actionType: constants.SUCCESS };
+            dependencyMap(obj1);
             const StackActions = Link.StackActions;
-            obj6.dispatch(StackActions.push(tmp22));
+            importDefault.dispatch(StackActions.push(tmp22));
           } else {
             c4 = 1;
             c3 = 1;
-            const obj2 = { value: handleRegistrationSubmit(tmp17, obj6, tmp18), done: false };
+            const obj2 = { value: handleRegistrationSubmit(closure_0, importDefault, dependencyMap), done: false };
             return obj2;
           }
         }
@@ -98,7 +98,7 @@ function handleRegistrationSubmit() {
   }
   return applyArgumentsResult;
 }
-let closure_21 = async function _handleRegistrationSubmit(arg0, arg1) {
+let closure_21 = async function _handleRegistrationSubmit(arg0) {
   closure_4 = tmp3;
   closure_131_0 = closure_0;
   closure_131_1 = closure_1;
@@ -140,14 +140,14 @@ let closure_21 = async function _handleRegistrationSubmit(arg0, arg1) {
     }
   } else if (arg0 === 1) {
     c8 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     obj3 = { step: closure_132_10(closure_131_0), actionType: closure_132_13.SUCCESS, overrideRegistrationOptions: closure_131_3 };
     closure_131_2(obj3);
     closure_131_2({ step: closure_132_11.REGISTER, actionType: closure_132_13.SUCCESS, overrideRegistrationOptions: closure_131_3 });
     c6 = 0;
   }
-  return arg1;
+  return value;
 };
 const usePromoEmailConsentStore = fn(6594).usePromoEmailConsentStore;
 const RegistrationUIStore = fn(15946);
@@ -414,20 +414,19 @@ export const getPreviousRegistrationTransitionStep = function getPreviousRegistr
   let tmp3;
   if (-1 !== index) {
     if (0 !== index) {
-      tmp3 = tmp[index - 1];
+      tmp3 = items[index - 1];
     }
   }
   if (null != tmp3) {
     return closure_1_10(tmp3);
   }
-  tmp = items;
 };
 export const getNextRegistrationTransitionStep = function getNextRegistrationTransitionStep(arg0) {
   const index = items.indexOf(arg0);
   let tmp2;
   if (-1 !== index) {
-    if (index !== arr.length - 1) {
-      tmp2 = arr[index + 1];
+    if (index !== items.length - 1) {
+      tmp2 = items[index + 1];
     }
   }
   if (null != tmp2) {

@@ -3,6 +3,7 @@
 // Module 12018 (ForumPostMessageCount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import ChatIcon from "ChatIcon" /* 5071 */;
 import ForumHooks from "ForumHooks" /* 7885 */;
 import AnimatedCounterDefault from "AnimatedCounter" /* 11316 */;
@@ -49,7 +50,7 @@ export default function ForumPostMessageCount(hasUnreads) {
   obj = { style: null, accessibilityLabel: null, children: null };
   const items = [tmp.container, containerStyle];
   obj.style = items;
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.formatToPlainString(util.t["8M0DrB"], { count: messageCountText });
   obj = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
   let str2 = "icon-muted";
@@ -60,20 +61,20 @@ export default function ForumPostMessageCount(hasUnreads) {
   const items1 = [React4(ChatIcon.ChatIcon, obj), , ];
   if (isMaxMessageCount) {
     const obj1 = { variant: "text-sm/semibold", color: str, children: messageCountText };
-    let tmp7Result = tmp7(tmp2(4556).Text, obj1);
+    let tmp7Result = React4(Text_Text.Text, obj1);
   } else {
     const obj2 = { count: messageCount, textVariant: "text-sm/semibold", textColor: str, animate: false };
-    tmp7Result = tmp7(AnimatedCounterDefault, obj2);
+    tmp7Result = React4(AnimatedCounterDefault, obj2);
   }
   items1[1] = tmp7Result;
   let tmp5Result = null != unreadCount;
   if (tmp5Result) {
     const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.messageUnreadCount, children: null };
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     const obj4 = { count: unreadCount };
-    const items2 = ["(", intl2.format(tmp2(1114).t.z3PEth, obj4), ")"];
+    const items2 = ["(", intl2.format(util.t.z3PEth, obj4), ")"];
     obj3.children = items2;
-    tmp5Result = tmp5(tmp2(4556).Text, obj3);
+    tmp5Result = hasOwnProperty(Text_Text.Text, obj3);
   }
   items1[2] = tmp5Result;
   obj.children = items1;

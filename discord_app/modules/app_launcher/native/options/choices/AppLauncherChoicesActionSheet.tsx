@@ -16,11 +16,11 @@ function FlashListWrapper(scrollable) {
   if (scrollable.scrollable) {
     let obj = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
-    let tmp2Result = tmp2(tmp3.BottomSheetFlashList, obj);
+    let tmp2Result = React5(tmp3.BottomSheetFlashList, obj);
   } else {
     obj = { scrollEnabled: false };
     const merged2 = Object.assign(merged);
-    tmp2Result = tmp2(tmp3.FlashList, obj);
+    tmp2Result = React5(tmp3.FlashList, obj);
   }
   return tmp2Result;
 }
@@ -91,11 +91,11 @@ export default function AppLauncherChoicesActionSheet(option) {
     const items = [closure_2.listItemContainer, , ];
     let firstItem = 0 === index;
     if (firstItem) {
-      firstItem = tmp4.firstItem;
+      firstItem = closure_2.firstItem;
     }
     items[1] = firstItem;
     if (lastItem) {
-      lastItem = tmp4.lastItem;
+      lastItem = closure_2.lastItem;
     }
     let obj = { style: items, children: null };
     items[2] = lastItem;

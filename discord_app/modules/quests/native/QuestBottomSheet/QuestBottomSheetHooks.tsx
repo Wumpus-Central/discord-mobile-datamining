@@ -2,7 +2,13 @@
 
 // Module 15123 (QuestBottomSheetHooks)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import QuestTypes from "QuestTypes" /* 5447 */;
+import AdCreativeType from "AdCreativeType" /* 5451 */;
+import AnalyticsActions from "AnalyticsActions" /* 7718 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
 import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11192 */;
+import captureAdUserAction2 from "captureAdUserAction" /* 11193 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11197 */;
 import openVideoQuestModalDefault from "openVideoQuestModal" /* 15124 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -34,41 +40,42 @@ export const useWatchTaskPressHandler = function useWatchTaskPressHandler(questI
     let obj = { questId, questContentPosition: null, sourceQuestContent: null };
     let questContentPosition;
     if (questImpression != null) {
-      questContentPosition = obj2.getQuestContentPosition();
+      questContentPosition = questImpression.getQuestContentPosition();
     }
     obj.questContentPosition = questContentPosition;
     obj.sourceQuestContent = sourceQuestContent;
     openVideoQuestModalDefault(obj);
     if (obj3.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_watch_task")) {
-      let tmp8Result = tmp8(11193);
-      obj = { type: tmp8(11197).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp8(5451).AdCreativeType.QUEST, adCreativeId: tmp4, questContentCTA: tmp8(7728).QuestContentCTA.WATCH_VIDEO, surfaceId: tmp8(5447).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: tmp6, impressionId: null, questContentPosition: null };
+      let tmp8Result = captureAdUserAction2;
+      obj = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: questId, questContentCTA: AnalyticsTypes.QuestContentCTA.WATCH_VIDEO, surfaceId: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent, impressionId: null, questContentPosition: null };
       let id;
-      if (obj2 != null) {
-        id = obj2.getId();
+      if (questImpression != null) {
+        id = questImpression.getId();
       }
       obj.impressionId = id;
       let questContentPosition1;
-      if (obj2 != null) {
-        questContentPosition1 = obj2.getQuestContentPosition();
+      if (questImpression != null) {
+        questContentPosition1 = questImpression.getQuestContentPosition();
       }
       obj.questContentPosition = questContentPosition1;
       tmp8Result.captureAdUserAction(obj);
     } else {
-      tmp8Result = tmp8(7718);
-      obj = { questId: tmp4, questContent: tmp8(5447).QuestContent.QUEST_BOTTOM_SHEET, questContentCTA: tmp8(7728).QuestContentCTA.WATCH_VIDEO, questContentPosition: null, impressionId: null, sourceQuestContent: null };
+      tmp8Result = AnalyticsActions;
+      obj = { questId, questContent: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET, questContentCTA: AnalyticsTypes.QuestContentCTA.WATCH_VIDEO, questContentPosition: null, impressionId: null, sourceQuestContent: null };
       let questContentPosition2;
-      if (obj2 != null) {
-        questContentPosition2 = obj2.getQuestContentPosition();
+      if (questImpression != null) {
+        questContentPosition2 = questImpression.getQuestContentPosition();
       }
       obj.questContentPosition = questContentPosition2;
       let id1;
-      if (obj2 != null) {
-        id1 = obj2.getId();
+      if (questImpression != null) {
+        id1 = questImpression.getId();
       }
       obj.impressionId = id1;
-      obj.sourceQuestContent = tmp6;
+      obj.sourceQuestContent = sourceQuestContent;
       const result = tmp8Result.trackQuestContentClicked(obj);
     }
+    obj3 = AdAnalyticsInterfaceExperiment;
   }, items1);
 };
 export const useMobileActivityPressHandler = function useMobileActivityPressHandler(questId) {
@@ -89,7 +96,7 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
   }, items);
   questImpression = questId(launchMobileActivity[6]).useQuestImpression();
   const items1 = [questId, callback, launchMobileActivity, questImpression, sourceQuestContent];
-  return questImpression.useCallback(callback(function*(arg0, value) {
+  return questImpression.useCallback(callback(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -134,18 +141,16 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             let obj3 = { type: tmp4(11197).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(5451).AdCreativeType.QUEST, adCreativeId: closure_128_0, questContentCTA: tmp4(7728).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: tmp4(5447).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: closure_128_1, impressionId: null, questContentPosition: null };
             let id;
             if (closure_128_4 != null) {
-              id = obj6.getId();
+              id = closure_128_4.getId();
             }
             obj3.impressionId = id;
             let questContentPosition;
             if (closure_128_4 != null) {
-              questContentPosition = obj7.getQuestContentPosition();
+              questContentPosition = closure_128_4.getQuestContentPosition();
             }
             obj3.questContentPosition = questContentPosition;
             captureAdUserAction(obj3);
             const captureAdUserActionResult = captureAdUserAction(11193);
-            obj6 = closure_128_4;
-            obj7 = closure_128_4;
           } else {
             const obj4 = { questId: closure_128_0, questContent: tmp4(5447).QuestContent.QUEST_BOTTOM_SHEET, questContentCTA: tmp4(7728).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, questContentPosition: null, impressionId: null, sourceQuestContent: null };
             obj2 = closure_128_4;

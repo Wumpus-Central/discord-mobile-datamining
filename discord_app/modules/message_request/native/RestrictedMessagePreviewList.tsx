@@ -105,8 +105,8 @@ export default function RestrictedMessagePreviewList(channelId) {
     if (tmp6Result) {
       const obj1 = { style: closure_1.hiddenMedia, children: null };
       const obj2 = { count: tmp };
-      obj1.children = tmp6(HiddenMedia, obj2);
-      tmp6Result = tmp6(memo, obj1);
+      obj1.children = arr5(HiddenMedia, obj2);
+      tmp6Result = arr5(memo, obj1);
     }
     children[1] = tmp6Result;
     return closure_1_7(closure_1_8, { children });
@@ -164,15 +164,15 @@ export default function RestrictedMessagePreviewList(channelId) {
         if (tmp6Result) {
           obj = { style: closure_1.dateDivider, children: null };
           obj = { style: closure_1.dividerLine };
-          const items = [timestampProducer(tmp7, obj), , ];
+          const items = [timestampProducer(View, obj), , ];
           const obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
           let obj4 = DateUtils;
           obj1.children = obj4.dateFormat(message.timestamp, "LL");
           items[1] = timestampProducer(Text_Text.Text, obj1);
           const obj2 = { style: closure_1.dividerLine };
-          items[2] = timestampProducer(tmp7, obj2);
+          items[2] = timestampProducer(View, obj2);
           obj.children = items;
-          tmp6Result = tmp6(tmp7, obj);
+          tmp6Result = React5(View, obj);
         }
         const items1 = [tmp6Result, ];
         if ("message" === type.type) {

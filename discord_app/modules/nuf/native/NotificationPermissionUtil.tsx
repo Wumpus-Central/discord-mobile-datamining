@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12409 */;
 
 require = fn;
-let closure_11 = async function _requestPushNotificationPermission(arg0, value) {
+let closure_11 = async function _requestPushNotificationPermission(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -82,7 +82,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0, value) 
     }
   }
 };
-let closure_12 = async function _enableProvisionalPushNotification(arg0, value) {
+let closure_12 = async function _enableProvisionalPushNotification() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -170,7 +170,7 @@ export const requestPushNotificationPermission = function requestPushNotificatio
 export const useShowReactivationPrompt = function useShowReactivationPrompt() {
   [tmp2, require] = _slicedToArray(noop.useState(false), 2);
   const effect = noop.useEffect(() => {
-    closure_0 = async function _shouldShowReactivationPrompts(arg0, value) {
+    closure_0 = async function _shouldShowReactivationPrompts() {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -276,7 +276,6 @@ export const useShouldShowPushNotificationNudgeByPromptType = function useShould
   const isTeenInStrictCountry = RegionalTeenUtils.useIsTeenInStrictCountry();
   const items = [PushNotificationPermissionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => state.authorizationStatus);
-  const tmp4 = PushNotificationPermissionStore;
   [tmp7, require] = _slicedToArray(noop.useState(false), 2);
   const effect = noop.useEffect(() => {
     const NativePermissionManager = NativeModules.NativePermissionManager;
@@ -300,7 +299,7 @@ export const useShouldShowPushNotificationNudgeByPromptType = function useShould
     hasItem = items1.includes(stateFromStores);
   }
   const tmp6 = _slicedToArray(noop.useState(false), 2);
-  const items2 = [tmp4];
+  const items2 = [PushNotificationPermissionStore];
   const stateFromStores1 = initialize.useStateFromStores(items2, () => state.getState().eligiblePromptTypes);
   if (hasItem) {
     hasItem = stateFromStores1.has(CHANNEL_BANNER);

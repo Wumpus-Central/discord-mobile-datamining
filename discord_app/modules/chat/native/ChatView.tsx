@@ -11,7 +11,10 @@ import ChatViewWrapperDefault from "ChatViewWrapper" /* 11349 */;
 import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11362 */;
 import MessagesDefault from "Messages" /* 11424 */;
 import ChatInputDefault from "ChatInput" /* 11958 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 12267 */;
 import ChatBeginningRowDefault from "ChatBeginningRow" /* 12468 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12637 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 12638 */;
 import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12642 */;
 import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12645 */;
 import noop from "module_19" /* 19 */;
@@ -172,14 +175,10 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
       obj = { channel, ref, scrollToNewMessages };
       obj.stickyHeader = React7(ChatViewStickyHeaderDefault, obj);
       obj = { alwaysRespectKeyboard: flag, channel, screenIndex, chatInputRef, HACK_fixModalInteraction, isResourceChannel, onPressKey, onScroll, ref, style: setInterstitial.chat, visibleMessagesWindowHandler, children: null };
-      const tmp2 = closure_2_11;
       const tmp5 = ChatViewWrapperDefault;
-      const tmp8 = channel;
       const items = [React7(ChatInputDefault, { ref: chatInputRef, channel, isResourceChannel, screenIndex, secondaryTextFieldRef, setNoExtractUI, onJumpToPresent }), ];
       const obj2 = { channelId, guildId: null, shouldRender: null };
       const obj1 = { ref: chatInputRef, channel, isResourceChannel, screenIndex, secondaryTextFieldRef, setNoExtractUI, onJumpToPresent };
-      const tmp11 = ref;
-      const tmp12 = onJumpToPresent;
       const tmp9 = MessagesDefault;
       obj2.guildId = channel.getGuildId();
       obj2.shouldRender = shouldRender;
@@ -189,27 +188,27 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
       let obj5 = PlatformUtils;
       let tmp7Result = null;
       if (!obj5.isAndroid()) {
-        const obj3 = { channelId: tmp8.id, messagesRef: tmp11 };
-        tmp7Result = tmp7(tmp3(12637), obj3);
+        const obj3 = { channelId: channel.id, messagesRef: ref };
+        tmp7Result = React7(PortalKeyboardInlineComponentDefault, obj3);
       }
       items1[1] = tmp7Result;
       tmp7Result = null;
       if (c15) {
-        const obj4 = { screenIndex: tmp10 };
-        tmp7Result = tmp7(tmp3(12638), obj4);
+        const obj4 = { screenIndex };
+        tmp7Result = React7(ChatPlaceholderDefault, obj4);
       }
       items1[2] = tmp7Result;
       let tmp7Result1 = null;
       if (tmp14Result.isAndroid()) {
-        obj5 = { channelId: tmp6, screenIndex: tmp10, onJumpToPresent: tmp12 };
-        tmp7Result1 = tmp7(tmp3(12267), obj5);
+        obj5 = { channelId, screenIndex, onJumpToPresent };
+        tmp7Result1 = React7(JumpToPresentButtonDefault, obj5);
       }
       const obj6 = { children: null };
       items1[3] = tmp7Result1;
       obj.children = items1;
       const items2 = [closure_2_10(tmp5, obj), React7(ChannelSafeAreaBottomDefault, { channelId }), React7(VoiceMessageOverlayDefault, { channelId })];
       obj6.children = items2;
-      return closure_2_10(tmp2, obj6);
+      return closure_2_10(closure_2_11, obj6);
     }
     if (channelIsLoading) {
       if (!GatewayConnectionStore.isConnected()) {

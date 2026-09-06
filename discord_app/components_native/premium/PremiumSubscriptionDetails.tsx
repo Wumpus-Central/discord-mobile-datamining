@@ -2,7 +2,9 @@
 
 // Module 13309 (PremiumSubscriptionDetails)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7409 */;
@@ -42,6 +44,8 @@ import _modDef13332 from "module_13332" /* 13332 */;
 import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 13333 */;
 import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 13334 */;
 import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13343 */;
+import SubscriptionRenewalMutationsNoticeDefault from "SubscriptionRenewalMutationsNotice" /* 13344 */;
+import SubscriptionAccountHoldNoticeDefault from "SubscriptionAccountHoldNotice" /* 13345 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -59,7 +63,7 @@ function handleCancelSubscription() {
   }
   return applyArgumentsResult;
 }
-let closure_29 = async function _handleCancelSubscription(subscription, analyticsLocations, fromStep) {
+let closure_29 = async function _handleCancelSubscription() {
   c4 = 0;
   c3 = 0;
   return (async (arg0, value, arg2) => {
@@ -91,22 +95,22 @@ let closure_29 = async function _handleCancelSubscription(subscription, analytic
             const result = require("PremiumAnalyticsUtils").trackPremiumSubscriptionCancellationFlowStep(obj1);
             let isPurchasedViaApple;
             if (subscription != null) {
-              isPurchasedViaApple = tmp14.isPurchasedViaApple;
+              isPurchasedViaApple = subscription.isPurchasedViaApple;
             }
             if (isPurchasedViaApple) {
-              let tmp17Result = tmp17(11047);
+              let tmp17Result = require("IAPUtils");
               c4 = 1;
               c3 = 1;
               const obj2 = { value: tmp17Result.manageSubscription(), done: false };
               return obj2;
             } else {
               let isPurchasedViaGoogle;
-              if (tmp14 != null) {
-                isPurchasedViaGoogle = tmp14.isPurchasedViaGoogle;
+              if (subscription != null) {
+                isPurchasedViaGoogle = subscription.isPurchasedViaGoogle;
               }
               if (isPurchasedViaGoogle) {
-                tmp17Result = tmp17(4218);
-                closure_2_8.openURL(tmp17Result.getExternalSubscriptionMethodUrl(tmp14.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
+                tmp17Result = require("PremiumUtils");
+                closure_2_8.openURL(tmp17Result.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
               }
             }
             const obj7 = require("PremiumAnalyticsUtils");
@@ -209,7 +213,7 @@ let closure_32 = async function _onResubscribeClick(arg0) {
   let isACOM = arg0;
   c2 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -239,20 +243,20 @@ let closure_32 = async function _onResubscribeClick(arg0) {
               const obj1 = { requestIdentifier: null, subscriptionId: null };
               const obj9 = require("BillingActionCreators");
               obj1.requestIdentifier = require("v1").v4();
-              obj1.subscriptionId = tmp24.id;
+              obj1.subscriptionId = isACOM.id;
               c2 = 1;
               c3 = 1;
               let obj2 = { value: obj9.resubscribeGenericSubscription(obj1, true), done: false };
               return obj2;
-            } else if (tmp24.isPurchasedViaApple) {
+            } else if (isACOM.isPurchasedViaApple) {
               let obj6 = require("IAPUtils");
               c2 = 3;
               c3 = 1;
               obj3 = { value: obj6.manageSubscription(), done: false };
               return obj3;
-            } else if (tmp24.isPurchasedViaGoogle) {
+            } else if (isACOM.isPurchasedViaGoogle) {
               let obj5 = require("PremiumUtils");
-              closure_2_8.openURL(obj5.getExternalSubscriptionMethodUrl(tmp24.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
+              closure_2_8.openURL(obj5.getExternalSubscriptionMethodUrl(isACOM.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
             }
           }
         } else if (1 === tmp5) {
@@ -321,12 +325,12 @@ class PremiumSubscriptionHeader {
     items1[0] = closure_11;
     stateFromStores1 = obj3.useStateFromStores(items1, () => {
       if (subscription.isOnPlatformMatchingExternalPaymentGateway) {
-        if (tmp.isACOM) {
+        if (subscription.isACOM) {
           return null;
         } else {
-          if (null != tmp.paymentGatewayPlanId) {
-            if ("" !== tmp.paymentGatewayPlanId) {
-              return IAPStore.getProduct(tmp.paymentGatewayPlanId);
+          if (null != subscription.paymentGatewayPlanId) {
+            if ("" !== subscription.paymentGatewayPlanId) {
+              return IAPStore.getProduct(subscription.paymentGatewayPlanId);
             }
           }
           const _Error = Error;
@@ -447,7 +451,7 @@ class PremiumSubscriptionHeader {
         obj9.style = tmp.buttonWrapper;
         obj10 = { onPress: null, variant: "primary-overlay", text: null, size: "sm", disabled: null, loading: null };
         tmp32 = closure_4;
-        obj10.onPress = closure_4(async (arg0, value) => {
+        obj10.onPress = closure_4(async () => {
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -548,10 +552,10 @@ class PremiumSubscriptionHeader {
           let obj = PremiumAnalyticsUtils;
           const result = obj.trackPremiumSubscriptionCancellationStarted(subscription, analyticsLocations);
           if (obj2.isBoostOnlySubscription(subscription)) {
-            let tmp6ResultResult = handleCancelSubscription(tmp, analyticsLocations);
+            let tmp6ResultResult = handleCancelSubscription(subscription, analyticsLocations);
           } else {
             obj = {
-              subscription: tmp,
+              subscription,
               mode: PremiumPlanWhatYouLoseActionSheet.WhatYouLoseMode.CANCEL,
               onContinue(arg0) {
                   return handleCancelSubscription(closure_0, closure_1, arg0);
@@ -705,30 +709,30 @@ export default function PremiumSubscriptionDetails(subscription) {
   if (null != first) {
     obj = { style, children: null };
     const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
-    const intl = tmp4(1114).intl;
-    obj1.children = intl.string(tmp4(1114).t.ITurwY);
-    const items = [collapsedCategories(tmp4(4556).Text, obj1), , , , ];
+    const intl = util.intl;
+    obj1.children = intl.string(util.t.ITurwY);
+    const items = [collapsedCategories(Text_Text.Text, obj1), , , , ];
     let tmp9Result = null != subscription.renewalMutations;
     if (tmp9Result) {
       tmp9Result = subscription.status !== constants4.CANCELED;
     }
     if (tmp9Result) {
       const obj2 = { subscription, renewalMutations: subscription.renewalMutations };
-      tmp9Result = tmp9(tmp2(13344), obj2);
+      tmp9Result = collapsedCategories(SubscriptionRenewalMutationsNoticeDefault, obj2);
     }
     items[1] = tmp9Result;
     tmp9Result = subscription.status === constants4.ACCOUNT_HOLD;
     if (tmp9Result) {
       obj3 = { subscription };
-      tmp9Result = tmp9(tmp2(13345), obj3);
+      tmp9Result = collapsedCategories(SubscriptionAccountHoldNoticeDefault, obj3);
     }
     items[2] = tmp9Result;
     obj4 = { subscription, renewalInvoicePreview: first, onClickManagePremiumGuild };
     items[3] = collapsedCategories(PremiumSubscriptionHeader, obj4);
     const obj5 = { style: tmp.desktopSubtext, variant: "text-sm/medium", children: null };
-    const intl2 = tmp4(1114).intl;
-    obj5.children = intl2.string(tmp4(1114).t["MTG+3O"]);
-    items[4] = collapsedCategories(tmp4(4556).Text, obj5);
+    const intl2 = util.intl;
+    obj5.children = intl2.string(util.t["MTG+3O"]);
+    items[4] = collapsedCategories(Text_Text.Text, obj5);
     obj.children = items;
     tmp7Result = closure_1_19(React7, obj);
   }

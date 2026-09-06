@@ -1,13 +1,13 @@
 // === Module 16338: getGuildsBarGuildAccessibilityActions ===
 
 // Module 16338 (getGuildsBarGuildAccessibilityActions)
+import shared from "shared" /* 4411 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
 import UserSettingsActionCreators from "UserSettingsActionCreators" /* 9358 */;
 import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 16339 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SortedGuildStore from "SortedGuildStore" /* 5438 */;
 
-const shared = tmp4(4411);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx");
@@ -24,7 +24,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
   }
   let items = [];
   let formatToPlainStringResult = dependencyMap;
-  let tmp3 = getGuildBarNeighborsDefault(arg0);
+  const tmp3 = getGuildBarNeighborsDefault(arg0);
   if (null == tmp3) {
     return items;
   } else {
@@ -43,11 +43,10 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
       obj.action = function action() {
         const items = [closure_0];
         const guildFolderLocal = GuildActionCreatorsDefault.createGuildFolderLocal(items, "");
-        const tmp3 = closure_1;
         UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
         if (null != closure_1) {
           const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-          AccessibilityAnnouncer.announce(tmp3);
+          AccessibilityAnnouncer.announce(closure_1);
         }
       };
       items.push(obj);
@@ -76,13 +75,12 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               }
               if (null != node) {
                 const tmp3Result = GuildActionCreatorsDefault;
-                tmp3Result.moveById(tmp, node.id, true, true);
+                tmp3Result.moveById(closure_0, node.id, true, true);
                 UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
-                if (null != tmp2) {
-                  const AccessibilityAnnouncer = tmp10(4411).AccessibilityAnnouncer;
-                  AccessibilityAnnouncer.announce(tmp2);
+                if (null != closure_1) {
+                  const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+                  AccessibilityAnnouncer.announce(closure_1);
                 }
-                tmp10 = require;
               }
             }
           };
@@ -106,7 +104,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               }
               if (null != node) {
                 const tmp2Result = GuildActionCreatorsDefault;
-                tmp2Result.moveById(tmp, node.id, false, false);
+                tmp2Result.moveById(closure_0, node.id, false, false);
                 UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
               }
             }
@@ -130,7 +128,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
             }
             if (null != node) {
               const tmp2Result = GuildActionCreatorsDefault;
-              tmp2Result.moveById(tmp, node.id, false, false);
+              tmp2Result.moveById(closure_0, node.id, false, false);
               UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
             }
           }
@@ -162,13 +160,12 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               }
               if (null != node) {
                 const tmp3Result = GuildActionCreatorsDefault;
-                tmp3Result.moveById(tmp, node.id, true, true);
+                tmp3Result.moveById(closure_0, node.id, true, true);
                 UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
-                if (null != tmp2) {
-                  const AccessibilityAnnouncer = tmp10(4411).AccessibilityAnnouncer;
-                  AccessibilityAnnouncer.announce(tmp2);
+                if (null != closure_1) {
+                  const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+                  AccessibilityAnnouncer.announce(closure_1);
                 }
-                tmp10 = require;
               }
             }
           };
@@ -192,7 +189,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               }
               if (null != node) {
                 const tmp2Result = GuildActionCreatorsDefault;
-                tmp2Result.moveById(tmp, node.id, true, false);
+                tmp2Result.moveById(closure_0, node.id, true, false);
                 UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
               }
             }
@@ -216,7 +213,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
             }
             if (null != node) {
               const tmp2Result = GuildActionCreatorsDefault;
-              tmp2Result.moveById(tmp, node.id, true, false);
+              tmp2Result.moveById(closure_0, node.id, true, false);
               UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
             }
           }
@@ -243,13 +240,12 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
             const containingFolder = tmp5.containingFolder;
             if (null != containingFolder) {
               const tmp3Result = GuildActionCreatorsDefault;
-              tmp3Result.moveById(tmp, containingFolder.id, false, false);
+              tmp3Result.moveById(closure_0, containingFolder.id, false, false);
               UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
-              if (null != tmp2) {
-                const AccessibilityAnnouncer = tmp9(4411).AccessibilityAnnouncer;
-                AccessibilityAnnouncer.announce(tmp2);
+              if (null != closure_2) {
+                const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+                AccessibilityAnnouncer.announce(closure_2);
               }
-              tmp9 = require;
             }
           }
         };
@@ -268,13 +264,12 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
             const containingFolder = tmp5.containingFolder;
             if (null != containingFolder) {
               const tmp3Result = GuildActionCreatorsDefault;
-              tmp3Result.moveById(tmp, containingFolder.id, true, false);
+              tmp3Result.moveById(closure_0, containingFolder.id, true, false);
               UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
-              if (null != tmp2) {
-                const AccessibilityAnnouncer = tmp9(4411).AccessibilityAnnouncer;
-                AccessibilityAnnouncer.announce(tmp2);
+              if (null != closure_2) {
+                const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+                AccessibilityAnnouncer.announce(closure_2);
               }
-              tmp9 = require;
             }
           }
         };

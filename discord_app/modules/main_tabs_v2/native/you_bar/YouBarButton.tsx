@@ -52,9 +52,9 @@ class YouBarButtonIcon {
       const result = 2 * sum;
       let sum1 = result;
       if (null != View) {
-        sum1 = tmp4 + 2 * tmp;
+        sum1 = tmp4 + 2 * hitSlop;
       }
-      size = { shape: ClipView.CutoutShape.RoundedRect, x: size2 - (result - tmp) + badgeSize, y: size2 - (result - tmp) + num3, width: sum1, height: result, cornerRadius: Math.min(sum, size2 / 2, sum1 / 2) };
+      size = { shape: ClipView.CutoutShape.RoundedRect, x: size2 - (result - hitSlop) + badgeSize, y: size2 - (result - hitSlop) + num3, width: sum1, height: result, cornerRadius: Math.min(sum, size2 / 2, sum1 / 2) };
       return size;
     }, items);
     badgeSize = memo;

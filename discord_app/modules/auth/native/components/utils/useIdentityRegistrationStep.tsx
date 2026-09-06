@@ -43,7 +43,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, value) {
+    return (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

@@ -17,7 +17,7 @@ export default function useAnnounceAsyncCompletion() {
     }
     ref.current = null;
   }, []);
-  return noop.useCallback((intl, polite) => {
+  return noop.useCallback((intl) => {
     let str = polite;
     if (polite === undefined) {
       str = "assertive";
@@ -58,5 +58,6 @@ export default function useAnnounceAsyncCompletion() {
       return resolved;
     }
     resolved = Promise.resolve();
+    obj = intl(1115);
   }, []);
 };

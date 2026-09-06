@@ -24,7 +24,7 @@ class UploaderBase extends EventEmitter {
     tmp3._handleStart = function _handleStart(_cancel) {
       closure_0._cancel = _cancel;
       if (!closure_0.alreadyStarted) {
-        obj.emit("start", obj._file);
+        closure_0.emit("start", closure_0._file);
       }
       closure_0.alreadyStarted = true;
     };
@@ -64,12 +64,12 @@ class UploaderBase extends EventEmitter {
       ({ code, reason, body } = arg0);
       const result = closure_0.clearProcessingMessageInterval();
       if (!closure_0._aborted) {
-        obj._errored = true;
+        closure_0._errored = true;
         const _JSON = JSON;
         const _HermesInternal = HermesInternal;
-        logger.log("_handleError: " + code + " (" + JSON.stringify(reason) + ") for " + obj.id);
-        obj.emit("error", obj._file, code, body, reason);
-        obj.removeAllListeners();
+        logger.log("_handleError: " + code + " (" + JSON.stringify(reason) + ") for " + closure_0.id);
+        closure_0.emit("error", closure_0._file, code, body, reason);
+        closure_0.removeAllListeners();
       }
     };
     tmp3._handleComplete = function _handleComplete(arg0) {
@@ -97,7 +97,7 @@ prototype["_fileSize"] = function _fileSize() {
 };
 prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c9 === 2) {
       c9 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -318,7 +318,7 @@ prototype["cancel"] = function cancel() {
 };
 prototype["cancelItem"] = function cancelItem(itemId) {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

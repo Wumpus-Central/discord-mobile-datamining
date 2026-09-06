@@ -229,8 +229,7 @@ export const useDiscovery = function useDiscovery(options) {
     }
     items = [];
     for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-      section = { type: tmp, inputType: null, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
-      section.inputType = ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER;
+      section = { type: tmp, inputType: ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
       let _HermesInternal = HermesInternal;
       section.id = "placeholder-" + num2;
       section.section = section;
@@ -258,14 +257,14 @@ export const useDiscovery = function useDiscovery(options) {
       if (!loading) {
         return obj;
       } else {
-        commandsByActiveSection = arr[0];
+        commandsByActiveSection = sectionedCommands[0];
         if (null != commandsByActiveSection) {
           obj = { section: commandsByActiveSection.section, data: null };
           items = [];
           HermesBuiltin.arraySpread(memo, HermesBuiltin.arraySpread(commandsByActiveSection.data, 0));
           obj.data = items;
           commandsByActiveSection = [obj];
-          HermesBuiltin.arraySpread(arr.slice(1), 1);
+          HermesBuiltin.arraySpread(sectionedCommands.slice(1), 1);
           obj.commandsByActiveSection = commandsByActiveSection;
           let tmp7 = memo;
         } else {
@@ -279,11 +278,11 @@ export const useDiscovery = function useDiscovery(options) {
           obj.commandsByActiveSection = items2;
         }
         const items3 = [];
-        HermesBuiltin.arraySpread(tmp7, HermesBuiltin.arraySpread(tmp, 0));
+        HermesBuiltin.arraySpread(tmp7, HermesBuiltin.arraySpread(commands, 0));
         obj.commands = items3;
       }
     } else {
-      const found = arr.find((section) => section.section.id === first);
+      const found = sectionedCommands.find((section) => section.section.id === first);
       if (null != found) {
         const items4 = [found.section];
         let items5 = items4;
@@ -314,8 +313,7 @@ export const executeQuery = function executeQuery(withAffinitySuggestions, comma
   }
   items = [];
   for (let num3 = 0; num3 < num; num3 = num3 + 1) {
-    section = { type: tmp3, inputType: null, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
-    section.inputType = ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER;
+    section = { type: tmp3, inputType: ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
     let _HermesInternal = HermesInternal;
     section.id = "placeholder-" + num3;
     section.section = section;
@@ -344,7 +342,7 @@ export const useQuery = function useQuery(arg0, commandTypes, placeholderCount) 
   let obj = {};
   const merged = Object.assign(placeholderCount);
   obj.allowFetch = true;
-  let tmp2 = closure_8(arg0, commandTypes, obj);
+  const tmp2 = closure_8(arg0, commandTypes, obj);
   const descriptors = tmp2.descriptors;
   const commands = tmp2.commands;
   const loading = tmp2.loading;
@@ -356,8 +354,7 @@ export const useQuery = function useQuery(arg0, commandTypes, placeholderCount) 
     }
     items = [];
     for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-      section = { type: tmp, inputType: null, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
-      section.inputType = ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER;
+      section = { type: tmp, inputType: ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
       let _HermesInternal = HermesInternal;
       section.id = "placeholder-" + num2;
       section.section = section;
@@ -369,10 +366,10 @@ export const useQuery = function useQuery(arg0, commandTypes, placeholderCount) 
   return loading.useMemo(() => {
     if (loading) {
       items = [];
-      HermesBuiltin.arraySpread(memo, HermesBuiltin.arraySpread(tmp2, 0));
+      HermesBuiltin.arraySpread(memo, HermesBuiltin.arraySpread(commands, 0));
       let tmp3 = items;
     } else {
-      tmp3 = tmp2;
+      tmp3 = commands;
     }
     const obj = { commands: tmp3, sections: null, scrollDown: null };
     if (loading) {
@@ -630,23 +627,23 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
       if (null != allowedForUser.guild_id) {
         let permissions;
         if (sectionDescriptor != null) {
-          permissions = tmp3.permissions;
+          permissions = sectionDescriptor.permissions;
         }
         allowedForUser = null;
         if (null != permissions) {
           let obj = commands(sectionDescriptor[13]);
-          allowedForUser = obj.computeAllowedForUser(tmp3.permissions, tmp.guild_id, permissionContext.userId, permissionContext.roleIds, permissionContext.isImpersonating);
+          allowedForUser = obj.computeAllowedForUser(sectionDescriptor.permissions, tmp.guild_id, permissionContext.userId, permissionContext.roleIds, permissionContext.isImpersonating);
         }
       }
       allowedForChannel = null;
       if (null != allowedForUser.guild_id) {
         let permissions1;
         if (sectionDescriptor != null) {
-          permissions1 = tmp10.permissions;
+          permissions1 = sectionDescriptor.permissions;
         }
         allowedForChannel = null;
         if (null != permissions1) {
-          allowedForChannel = commands(sectionDescriptor[13]).computeAllowedForChannel(tmp10.permissions, tmp, tmp.guild_id);
+          allowedForChannel = commands(sectionDescriptor[13]).computeAllowedForChannel(sectionDescriptor.permissions, tmp, tmp.guild_id);
           const obj2 = commands(sectionDescriptor[13]);
         }
       }

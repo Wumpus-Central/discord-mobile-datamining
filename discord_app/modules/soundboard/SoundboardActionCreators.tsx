@@ -25,16 +25,16 @@ let closure_11 = async function _fetchDefaultSoundsFromApi2() {
     const obj4 = closure_129_0(closure_129_2[8]);
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    const body = arg1.body;
+    const body = value.body;
     closure_128_0 = body.map((item) => closure_1_0(closure_1_2[6]).soundboardSoundFromAPI(item, closure_1_5));
     obj3 = { type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", soundboardSounds: closure_128_0 };
     closure_129_1(closure_129_2[7]).dispatch(obj3);
     c3 = 0;
     closure_129_1(closure_129_2[7]);
   }
-  return arg1;
+  return value;
 };
 function _maybeFetchDefaultSounds() {
   if (SoundboardStore.shouldFetchDefaultSounds()) {
@@ -84,38 +84,44 @@ function _maybeFetchGuildSoundboardSounds() {
     return promise;
   }
 }
-let closure_14 = async function _maybeFetchSoundboardSounds() {
-  closure_3 = tmp3;
-  closure_2 = tmp2;
-  const _performance2 = performance;
-  closure_130_0 = performance.now();
-  let tmp19 = !c10;
-  if (!c10) {
-    let disableAnalytics;
-    if (tmp29 != null) {
-      disableAnalytics = tmp29.disableAnalytics;
+let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
+  let disableAnalytics = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0) => {
+    closure_3 = tmp3;
+    closure_2 = tmp2;
+    const _performance2 = performance;
+    closure_130_0 = performance.now();
+    let tmp19 = !c10;
+    if (!c10) {
+      disableAnalytics = undefined;
+      if (disableAnalytics != null) {
+        disableAnalytics = disableAnalytics.disableAnalytics;
+      }
+      c1 = disableAnalytics;
+      if (disableAnalytics == null) {
+        c1 = false;
+      }
+      tmp19 = !c1;
     }
-    c1 = disableAnalytics;
-    if (disableAnalytics == null) {
-      c1 = false;
+    closure_130_1 = tmp19;
+    if (tmp19) {
+      c10 = true;
     }
-    tmp19 = !c1;
-  }
-  closure_130_1 = tmp19;
-  if (tmp19) {
-    c10 = true;
-  }
-  const items = [_maybeFetchDefaultSounds(), _maybeFetchGuildSoundboardSounds()];
-  closure_130_2 = await Promise.all(items);
-  if (closure_130_1) {
-    const _performance = performance;
-    closure_130_3 = performance.now();
-    closure_131_1(closure_131_2[11]).track(closure_131_7.EXPRESSION_PICKER_SOUNDBOARD_SOUNDS_LOADED, { elapsed_ms: closure_130_3 - closure_130_0 });
-    closure_131_1(closure_131_2[11]);
-  }
-  return closure_130_2;
+    const items = [_maybeFetchDefaultSounds(), _maybeFetchGuildSoundboardSounds()];
+    await Promise.all(items);
+    closure_130_2 = value;
+    if (closure_130_1) {
+      const _performance = performance;
+      closure_130_3 = performance.now();
+      closure_131_1(closure_131_2[11]).track(closure_131_7.EXPRESSION_PICKER_SOUNDBOARD_SOUNDS_LOADED, { elapsed_ms: closure_130_3 - closure_130_0 });
+      closure_131_1(closure_131_2[11]);
+    }
+    return closure_130_2;
+  })();
 };
-let closure_15 = async function _uploadSound(arg0, value) {
+let closure_15 = async function _uploadSound(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -193,7 +199,7 @@ let closure_15 = async function _uploadSound(arg0, value) {
     }
   }
 };
-let closure_16 = async function _updateSound(arg0, value) {
+let closure_16 = async function _updateSound(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -271,7 +277,7 @@ let closure_16 = async function _updateSound(arg0, value) {
     }
   }
 };
-let closure_17 = async function _deleteSound(arg0, value) {
+let closure_17 = async function _deleteSound(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -320,7 +326,7 @@ let closure_17 = async function _deleteSound(arg0, value) {
     }
   }
 };
-let closure_18 = async function _fetchSoundGuildData(arg0, value) {
+let closure_18 = async function _fetchSoundGuildData(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -462,9 +468,8 @@ export const addFavoriteSound = function addFavoriteSound(soundId) {
       flag = !hasItem;
       if (!hasItem) {
         soundIds = soundIds.soundIds;
-        soundIds.push(tmp4);
+        soundIds.push(closure_0);
       }
-      tmp4 = closure_0;
     }
     return flag;
   }, constants.INFREQUENT_USER_ACTION);

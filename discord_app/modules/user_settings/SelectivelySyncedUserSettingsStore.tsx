@@ -56,19 +56,19 @@ const items = [
     if (obj == null) {
       obj = {};
     }
-    const Storage2 = tmp(510).Storage;
+    const Storage2 = Storage4.Storage;
     value = Storage2.get("UserSettingsStore");
     if (value == null) {
       value = {};
     }
-    const Storage3 = tmp(510).Storage;
+    const Storage3 = Storage4.Storage;
     Storage3.remove("UserSettingsSync");
     obj = {};
     if (false === obj[UserSettingsSections.TEXT]) {
       const obj1 = { shouldSync: false, settings: _modDef12.pick(value, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay", "defaultReactionEmoji"]) };
       obj.text = obj1;
     }
-    if (false === obj[tmp4.APPEARANCE]) {
+    if (false === obj[UserSettingsSections.APPEARANCE]) {
       const obj2 = { shouldSync: false, settings: _modDef12.pick(value, ["theme", "clientThemeSettings", "developerMode"]) };
       obj.appearance = obj2;
     }

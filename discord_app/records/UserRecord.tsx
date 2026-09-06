@@ -279,10 +279,10 @@ class UserRecord extends tmp2 {
             value() {
                   let hasFlagResult = closure_0.hasFlag(constants.STAFF);
                   if (!hasFlagResult) {
-                    hasFlagResult = obj.hasFlag(tmp.COLLABORATOR);
+                    hasFlagResult = closure_0.hasFlag(constants.COLLABORATOR);
                   }
                   if (!hasFlagResult) {
-                    hasFlagResult = obj.hasFlag(tmp.RESTRICTED_COLLABORATOR);
+                    hasFlagResult = closure_0.hasFlag(constants.RESTRICTED_COLLABORATOR);
                   }
                   return hasFlagResult;
                 }
@@ -315,7 +315,7 @@ prototype["hasVerifiedEmailOrPhone"] = function hasVerifiedEmailOrPhone() {
   }
   return tmp;
 };
-prototype["getAvatarURL"] = function getAvatarURL(guildId, size, flag, SUPPORTS_WEBP) {
+prototype["getAvatarURL"] = function getAvatarURL(guildId, size) {
   if (flag === undefined) {
     flag = false;
   }
@@ -363,7 +363,7 @@ prototype["removeGuildAvatarHash"] = function removeGuildAvatarHash(guildId) {
     return self.merge(obj);
   }
 };
-prototype["getAvatarSource"] = function getAvatarSource(guildId, flag, size) {
+prototype["getAvatarSource"] = function getAvatarSource(guildId) {
   const self = this;
   importDefault = guildId;
   if (flag === undefined) {
@@ -404,8 +404,8 @@ Object.defineProperty(prototype, "tag", {
 prototype["hasPurchasedFlag"] = function hasPurchasedFlag(PREMIUM_TIER_2) {
   return FlagUtils.hasFlag(this.purchasedFlags, PREMIUM_TIER_2);
 };
-prototype["hasPremiumUsageFlag"] = function hasPremiumUsageFlag(arg0) {
-  return FlagUtils.hasFlag(this.premiumUsageFlags, arg0);
+prototype["hasPremiumUsageFlag"] = function hasPremiumUsageFlag(IS_ANIMATED) {
+  return FlagUtils.hasFlag(this.premiumUsageFlags, IS_ANIMATED);
 };
 prototype["hasHadSKU"] = function hasHadSKU(arg0) {
   let hasPurchasedFlagResult = null != tmp;
@@ -425,9 +425,9 @@ prototype["hasHadPremium"] = function hasHadPremium(arg0) {
   const hasPurchasedFlagResult2 = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_2);
   if (React7.TIER_0 === tmp) {
     return hasPurchasedFlagResult;
-  } else if (tmp5.TIER_1 === tmp) {
+  } else if (React7.TIER_1 === tmp) {
     return hasPurchasedFlagResult1;
-  } else if (tmp5.TIER_2 === tmp) {
+  } else if (React7.TIER_2 === tmp) {
     return hasPurchasedFlagResult2;
   } else {
     let tmp6 = hasPurchasedFlagResult;
@@ -509,14 +509,14 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    let tmp6 = prop === tmp(1379).PremiumSubscriptionType.NONE_UNSPECIFIED;
+    let tmp6 = prop === require("user").PremiumSubscriptionType.NONE_UNSPECIFIED;
     if (!tmp6) {
       const premiumState2 = self.premiumState;
       let prop1;
       if (premiumState2 != null) {
         prop1 = premiumState2.premiumSubscriptionType;
       }
-      tmp6 = prop1 === tmp(1379).PremiumSubscriptionType.BOOST_ONLY;
+      tmp6 = prop1 === require("user").PremiumSubscriptionType.BOOST_ONLY;
     }
     isPremiumResult = tmp6;
   }
@@ -526,7 +526,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState3 != null) {
       premiumSource = premiumState3.premiumSource;
     }
-    isPremiumResult = premiumSource === tmp(1379).PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === require("user").PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -539,10 +539,10 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === tmp(1379).PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === require("user").PremiumSource.FRACTIONAL_NITRO;
   }
   if (isPremiumResult) {
-    isPremiumResult = self.premiumState.premiumSubscriptionType !== tmp(1379).PremiumSubscriptionType.TIER_2;
+    isPremiumResult = self.premiumState.premiumSubscriptionType !== require("user").PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
@@ -660,7 +660,7 @@ Object.defineProperty(prototype, "premiumGroupRole", {
   set: undefined
 });
 const userRecord = new UserRecord({ id: "0" });
-let size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("records/UserRecord.tsx");
 
 export default UserRecord;

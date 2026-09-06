@@ -9,12 +9,12 @@ import size from "module_2" /* 2 */;
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx");
 
-export default function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
-  _require = arg0;
-  closure_1 = arg1;
-  dependencyMap = arg2;
+export default function useGuildScheduledEventUserCount(guild_id, id, recurrenceId) {
+  _require = guild_id;
+  closure_1 = id;
+  dependencyMap = recurrenceId;
   let items = [GuildScheduledEventStore];
-  let items1 = [arg1, arg0, arg2];
+  let items1 = [id, guild_id, recurrenceId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildScheduledEventStore.getUserCount(closure_1, closure_2));
   useEffect(() => {
     let tmp2 = null != closure_0;

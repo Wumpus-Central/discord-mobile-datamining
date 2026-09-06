@@ -44,7 +44,7 @@ function NotificationSettingsMessageUnread(onPress) {
   items2[1] = React4(Text_Text.Text, obj6);
   const obj7 = { onPress: onPress.onCustomize, children: null };
   const obj8 = { variant: "text-sm/semibold", style: tmp.cta, color: "text-brand", children: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   const items3 = [intl3.string(util.t.yxiV9W), " "];
   obj8.children = items3;
   obj7.children = hasOwnProperty(Text_Text.Text, obj8);

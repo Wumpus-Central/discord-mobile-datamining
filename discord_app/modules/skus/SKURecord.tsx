@@ -58,7 +58,6 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   ({ preorder_approximate_release_date: obj.preorderApproximateReleaseDate, summary: obj.summary } = id);
   obj.features = new Set(id.features);
   set = new Set(id.features);
-  const tmp = SKURecord;
   obj.genres = new Set(id.genres);
   ({ dependent_sku_id: obj.dependentSkuId, manifests: obj.manifests, available_regions: obj.availableRegions, access_type: obj.accessType, system_requirements: obj.systemRequirements, content_rating: obj.contentRating, content_rating_agency: obj.contentRatingAgency, legal_notice: obj.legalNotice } = id);
   let tmp14 = null;
@@ -127,7 +126,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
     tmp17 = obj;
   }
   obj.previewAssetPaths = tmp17;
-  return new tmp(obj);
+  return new SKURecord(obj);
 };
 Object.defineProperty(prototype, "supportedOperatingSystems", {
   get: function supportedOperatingSystems() {
@@ -276,13 +275,11 @@ prototype["isPremiumPerk"] = function isPremiumPerk() {
   if (premium) {
     let hasFlagResult = require("FlagUtils").hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp(1384).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
-      const tmpResult = tmp(1384);
+      hasFlagResult = require("FlagUtils").hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
+      const tmpResult = require("FlagUtils");
     }
     premium = hasFlagResult;
     const obj = require("FlagUtils");
-    tmp = require;
-    tmp3 = constants2;
   }
   return premium;
 };

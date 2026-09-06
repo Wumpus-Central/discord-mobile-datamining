@@ -32,11 +32,11 @@ export const AVErrorNoAudioInputDetectedDefinition = {
       if (null != RTCConnectionStore.getMediaSessionId()) {
         if (!MediaEngineStore.getInputDetectedThisConnection()) {
           if (RTCConnectionStore.getState() === constants2.RTC_CONNECTED) {
-            if (obj5.getSettings().mode === constants.VOICE_ACTIVITY) {
-              if (obj5.getSettings().silenceWarning) {
-                if (false === obj5.getInputDetected()) {
+            if (MediaEngineStore.getSettings().mode === constants.VOICE_ACTIVITY) {
+              if (MediaEngineStore.getSettings().silenceWarning) {
+                if (false === MediaEngineStore.getInputDetected()) {
                   if (!isGuildStageVoiceResult) {
-                    if (!obj5.isSelfMute()) {
+                    if (!MediaEngineStore.isSelfMute()) {
                       const obj = { type: AVError.AVError.NO_AUDIO_INPUT_DETECTED };
                       const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
                       const items = [obj];

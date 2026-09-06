@@ -16,7 +16,7 @@ function maybeFetchCollectiblesForInvoices() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0, value) {
+let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -86,7 +86,7 @@ function maybeFetchCollectiblesForGifts() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0, value) {
+let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -141,7 +141,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0, value) {
     }
   }
 };
-let closure_12 = async function _updateLinkForUserId(linked_user_id, link_status) {
+let closure_12 = async function _updateLinkForUserId() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {
@@ -205,10 +205,10 @@ let closure_12 = async function _updateLinkForUserId(linked_user_id, link_status
     }
   })();
 };
-let closure_13 = async function _removeLinkForUserId(linked_user_id) {
+let closure_13 = async function _removeLinkForUserId() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -271,7 +271,7 @@ let closure_13 = async function _removeLinkForUserId(linked_user_id) {
     }
   })();
 };
-let closure_14 = async function _getLinkCodeForCurrentUser(arg0, value) {
+let closure_14 = async function _getLinkCodeForCurrentUser() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -329,7 +329,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser(arg0, value) {
     }
   }
 };
-let closure_15 = async function _shareIarWithParents(arg0, value) {
+let closure_15 = async function _shareIarWithParents() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -386,7 +386,7 @@ let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterAction
 
 export default {
   initialPageLoad() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (c15 === 2) {
         c15 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -625,7 +625,7 @@ export default {
       closure_0 = tmp5;
       const HTTP = require("HTTPUtils").HTTP;
       await HTTP.get({ url: constants.FAMILY_CENTER_LINKED_USERS, rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
-      const body = arg1.body;
+      const body = value.body;
       closure_128_1 = { linkedUsers: body.linked_users, users: body.users };
       const merged = Object.assign(closure_128_1);
       closure_129_1(closure_129_2[5]).dispatch({ type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" });
@@ -639,7 +639,7 @@ export default {
       const HTTP = teen_id(dependencyMap[6]).HTTP;
       const request = { url: constants.FAMILY_CENTER_CONNECTION_PREREQUISITES, query: { teen_id, link_code }, rejectWithError: true };
       await HTTP.get(request);
-      return arg1.body;
+      return value.body;
     })();
   },
   setPendingConnection(match, match2) {
@@ -658,7 +658,7 @@ export default {
       const HTTP = recipient_id(1272).HTTP;
       const request = { url: constants.FAMILY_CENTER_LINKED_USERS, body: { recipient_id, code }, rejectWithError: recipient_id(1272).rejectWithMigratedError() };
       await HTTP.post(request);
-      const body = arg1.body;
+      const body = value.body;
       closure_128_1 = { linkedUsers: body.linked_users, users: body.users };
       const merged = Object.assign(closure_128_1);
       code(573).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" });
@@ -667,7 +667,7 @@ export default {
   },
   fetchTeenActivity(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c11 === 2) {
         c11 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -852,7 +852,7 @@ export default {
     return (async () => {
       const HTTP = topUserActivities(totalSpendAmount[6]).HTTP;
       await HTTP.get({ url: tmp2.FAMILY_CENTER_TEEN_ACTIVITY_MORE(topUserActivities, topGuildActivities, closure_2, closure_3), rejectWithError: topUserActivities(totalSpendAmount[6]).rejectWithMigratedError() });
-      const teen_audit_log = arg1.body.teen_audit_log;
+      const teen_audit_log = value.body.teen_audit_log;
       const obj4 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
       const top_user_activities = teen_audit_log.top_user_activities;
       topUserActivities = top_user_activities;
@@ -929,7 +929,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -959,18 +959,18 @@ export default {
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
-                tmp13 = settings[tmp36];
+                tmp13 = settings[tmp2];
               }
-              let tmp33Result = tmp33(1941);
-              const modifiedProto = tmp33Result.createModifiedProto(tmp13, closure_2, protoFieldClass, tmp33(1187).PreloadedUserSettings, tmp36);
+              let tmp33Result = tmp5(1941);
+              const modifiedProto = tmp33Result.createModifiedProto(tmp13, closure_2, protoFieldClass, tmp5(1187).PreloadedUserSettings, tmp2);
               if (null != modifiedProto) {
-                const HTTP = tmp33(1272).HTTP;
+                const HTTP = tmp5(1272).HTTP;
                 const request = { url: closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(tmp5), body: null, rejectWithError: null };
                 const obj1 = { settings: null };
-                tmp33Result = tmp33(1223);
-                obj1.settings = tmp33Result.protoToB64(tmp33(1187).PreloadedUserSettings, modifiedProto);
+                tmp33Result = tmp5(1223);
+                obj1.settings = tmp33Result.protoToB64(tmp5(1187).PreloadedUserSettings, modifiedProto);
                 request.body = obj1;
-                request.rejectWithError = tmp33(1272).rejectWithMigratedError();
+                request.rejectWithError = tmp5(1272).rejectWithMigratedError();
                 dependencyMap = 1;
                 c3 = 1;
                 const obj2 = { value: HTTP.patch(request), done: false };

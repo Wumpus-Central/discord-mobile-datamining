@@ -65,11 +65,11 @@ export default noop.memo(function MediaModalLoader(onLoad) {
       if (onLoadStart != null) {
         tmp9();
       }
-    } else if (tmp2.Error === tmp) {
+    } else if (closure_10.Error === first) {
       if (onError != null) {
         tmp6();
       }
-    } else if (tmp2.Loaded === tmp) {
+    } else if (closure_10.Loaded === first) {
       if (onLoad != null) {
         tmp3();
       }
@@ -110,20 +110,20 @@ export default noop.memo(function MediaModalLoader(onLoad) {
         const _Math = Math;
         const items4 = [Math.round(tmp8), "%"];
         obj.children = items4;
-        tmp28Result = tmp28(onLoadStart(onError[6]).Text, obj);
+        tmp28Result = closure_8(onLoadStart(onError[6]).Text, obj);
       }
       const items5 = [tmp28Result, ];
       const obj3 = { color: "white", style: tmp2.loaderIndicator, size: "large" };
-      items5[1] = tmp29(closure_6, obj3);
+      items5[1] = closure_7(closure_6, obj3);
       obj2.children = items5;
-      tmp28Result = tmp28(c5, obj2);
+      tmp28Result = closure_8(c5, obj2);
     }
     const obj4 = { children: null };
     items2[1] = tmp28Result;
     const obj5 = { style, index: num, source };
     items2[2] = closure_7(onLoad(onError[8]), obj5);
     obj4.children = items2;
-    tmp28Result1 = tmp28(noop.Fragment, obj4);
+    tmp28Result1 = closure_8(noop.Fragment, obj4);
   }
   return tmp28Result1;
 });

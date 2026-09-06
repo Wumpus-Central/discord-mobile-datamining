@@ -28,7 +28,7 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let isLurkingResult = null != guildId;
     if (isLurkingResult) {
-      isLurkingResult = LurkingStore.isLurking(tmp);
+      isLurkingResult = LurkingStore.isLurking(guildId);
     }
     return { isLurking: isLurkingResult, lurkingSource: LurkingStore.getLurkingSourceForGuild(guildId) };
   }, items1);
@@ -61,10 +61,9 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
         }
       }
       const result1 = GuildDiscoveryUtilsAll.trackGuildJoinClicked(tmp);
-      const tmp3 = constants2;
       let obj = { cta_type: TextAreaCta.JOIN_GUILD };
       AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj);
-      obj = { source: tmp3.CHAT_INPUT_BLOCKER };
+      obj = { source: constants2.CHAT_INPUT_BLOCKER };
       GuildActionCreatorsDefault.joinGuild(tmp, obj);
     }
   }, items3);

@@ -41,7 +41,7 @@ export const QuestDockGestureContextProvider = noop.memo(function QuestDockGestu
   const sharedValue1 = obj5.useSharedValue(size1);
   const obj7 = sharedValue(sharedValue2[9]);
   const obj8 = sharedValue(sharedValue2[7]);
-  sharedValue2 = obj8.useSharedValue(sharedValue(sharedValue2[9]).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt) ? tmp6.SOFT_DISMISSED : tmp6.COLLAPSED);
+  sharedValue2 = obj8.useSharedValue(sharedValue(sharedValue2[9]).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt) ? QuestDockMode.SOFT_DISMISSED : QuestDockMode.COLLAPSED);
   const obj9 = sharedValue(sharedValue2[9]);
   sharedValue3 = tmp(tmp2[7]).useSharedValue(closure_7);
   const items = [sharedValue];
@@ -52,5 +52,5 @@ export const QuestDockGestureContextProvider = noop.memo(function QuestDockGestu
   }), items);
   const items1 = [sharedValue, sharedValue1, sharedValue2, sharedValue3];
   obj = { value: obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1), children: children.children };
-  return <context.Provider value={obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1)}>{arg0.children}</context.Provider>;
+  return <context.Provider value={obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1)}>{children.children}</context.Provider>;
 });

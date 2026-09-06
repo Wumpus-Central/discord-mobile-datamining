@@ -36,7 +36,7 @@ export default function VoiceActivityStatus(hideText) {
       obj = { children: null };
       items1[1] = tmp9;
       obj.children = items1;
-      let tmp3Result = tmp3(tmp4, obj);
+      let tmp3Result = hasOwnProperty(React4, obj);
     } else {
       if (!channel.isDM()) {
         if (!channel.isGroupDM()) {
@@ -47,10 +47,10 @@ export default function VoiceActivityStatus(hideText) {
           const t = util.t;
           if (isGuildStageVoiceResult) {
             obj.children = string(t.QygGCN);
-            let tmp11Result = tmp11(tmp14, obj);
+            let tmp11Result = React3(tmp14, obj);
           } else {
             obj.children = string(t.msxteM);
-            tmp11Result = tmp11(tmp14, obj);
+            tmp11Result = React3(tmp14, obj);
           }
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
@@ -61,8 +61,6 @@ export default function VoiceActivityStatus(hideText) {
       obj1.children = maxFontSizeMultiplier.string(util.t["9FaEzi"]);
       tmp11Result = React3(ActivityStatusTextDefault, obj1);
     }
-    tmp3 = hasOwnProperty;
-    tmp4 = React4;
   } else {
     tmp3Result = null;
   }

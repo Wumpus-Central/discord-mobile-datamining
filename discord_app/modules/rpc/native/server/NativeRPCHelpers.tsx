@@ -52,11 +52,10 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
               c5 = 1;
               c6 = 1;
               obj3 = { value: null, done: false };
-              obj3.value = obj3.processSocketThrottlers(tmp32, tmp30.transport !== tmp2.POST_MESSAGE, tmp30.abortController.signal);
+              obj3.value = obj3.processSocketThrottlers(dependencyMap, closure_0.transport !== tmp2.POST_MESSAGE, closure_0.abortController.signal);
               return obj3;
             }
             const obj10 = closure_0(9559);
-            tmp32 = dependencyMap;
           }
         } else if (arg0 === 1) {
           c6 = 3;

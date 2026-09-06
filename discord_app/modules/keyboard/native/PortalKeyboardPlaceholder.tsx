@@ -39,32 +39,32 @@ let closure_6 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   container.borderTopColor = nativeDefault.colors.BORDER_SUBTLE;
   let BORDER_SUBTLE;
   if (arg3) {
-    BORDER_SUBTLE = tmp7(576).colors.BORDER_SUBTLE;
+    BORDER_SUBTLE = nativeDefault.colors.BORDER_SUBTLE;
   }
   container.borderRightColor = BORDER_SUBTLE;
   let hairlineWidth;
   if (arg3) {
-    hairlineWidth = tmp6.hairlineWidth;
+    hairlineWidth = React4.hairlineWidth;
   }
   container.borderRightWidth = hairlineWidth;
   let BORDER_SUBTLE1;
   if (arg3) {
-    BORDER_SUBTLE1 = tmp7(576).colors.BORDER_SUBTLE;
+    BORDER_SUBTLE1 = nativeDefault.colors.BORDER_SUBTLE;
   }
   container.borderLeftColor = BORDER_SUBTLE1;
   let hairlineWidth1;
   if (arg3) {
-    hairlineWidth1 = tmp6.hairlineWidth;
+    hairlineWidth1 = React4.hairlineWidth;
   }
   container.borderLeftWidth = hairlineWidth1;
-  const APP_LAUNCHER = tmp(1609).KeyboardTypes.APP_LAUNCHER;
+  const APP_LAUNCHER = KeyboardTypes.KeyboardTypes.APP_LAUNCHER;
   container.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOW;
-  let tmpResult = tmp(1115);
+  let tmpResult = PlatformUtils;
   if (tmpResult.isIOS()) {
     const tmp12 = arg1;
   }
   container.width = tmp12;
-  tmpResult = tmp(1115);
+  tmpResult = PlatformUtils;
   if (tmpResult.isIOS()) {
     const tmp13 = arg2;
   }
@@ -88,8 +88,8 @@ export const PORTAL_KEYBOARD_PLACEHOLDER_INSTANCE = jsx(function PortalKeyboardP
       tmp6 = <PortalKeyboardPlaceholderInner keyboardType={tmp2} />;
     }
   } else {
+    PlatformUtils;
     tmp6 = null;
-    const tmp5Result = PlatformUtils;
   }
   return tmp6;
 }, {});

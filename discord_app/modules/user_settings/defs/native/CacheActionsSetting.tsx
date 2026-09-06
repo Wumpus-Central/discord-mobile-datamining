@@ -37,7 +37,7 @@ function CacheActionsActionSheet() {
   let obj1 = { icon: hasOwnProperty(FileUpIcon.FileUpIcon, {}), label: null, onPress: null };
   const intl2 = util.intl;
   obj1.label = intl2.string(util.t["/GUaXh"]);
-  obj1.onPress = asyncGeneratorStep(async (arg0, value) => {
+  obj1.onPress = asyncGeneratorStep(async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -93,7 +93,8 @@ export default {
         obj1.authorization = "";
       }
       const request = { url: constants.VERIFY_PHONE, headers: obj1, body: { phone, code }, oldFormErrors: true, trackedActionData: { event: phone(1250).NetworkActionNames.USER_VERIFY_PHONE }, rejectWithError: phone(1272).rejectWithMigratedError() };
-      closure_128_0 = yield code(4753).post(request);
+      yield code(4753).post(request);
+      closure_128_0 = value;
       if (closure_129_2) {
         code(573).dispatch({ type: "MODAL_POP", key });
         code(573);

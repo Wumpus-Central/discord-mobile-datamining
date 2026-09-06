@@ -4,9 +4,9 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4783 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
-const MessageRecordUtils = tmp(4783);
 require = fn;
 function dropChannelIfEmpty(channelId, value) {
   if (0 === value.size) {
@@ -17,9 +17,8 @@ function clearAll() {
   if (0 === map.size) {
     return false;
   } else {
-    obj.clear();
+    map.clear();
   }
-  obj = map;
 }
 const MessageFlags = fn(1074).MessageFlags;
 let closure_4 = [];
@@ -55,7 +54,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(DispatcherDefault, {
       if (null == value) {
         const _Map = Map;
         map = new Map();
-        const result = map.set(channelId, map);
+        const result = obj2.set(channelId, map);
         value = map;
       }
       const result1 = value.set(message.id, MessageRecordUtils.createMessageRecord(message));
@@ -69,6 +68,8 @@ const ephemeralMessageStore = new EphemeralMessageStore(DispatcherDefault, {
         }
         const iter = value.keys();
       }
+      obj2 = map;
+      const tmpResult = MessageRecordUtils;
     } else {
       return false;
     }
@@ -129,11 +130,10 @@ const ephemeralMessageStore = new EphemeralMessageStore(DispatcherDefault, {
   CLEAR_MESSAGES: function handleClearMessages(channelId) {
     channelId = channelId.channelId;
     if (map.has(channelId)) {
-      obj.delete(channelId);
+      map.delete(channelId);
     } else {
       return false;
     }
-    obj = map;
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     if (!map.delete(channel.channel.id)) {
@@ -150,7 +150,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(DispatcherDefault, {
       return false;
     } else {
       let flag = false;
-      const keys = obj.keys();
+      const keys = map.keys();
       const iter = keys[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -163,7 +163,6 @@ const ephemeralMessageStore = new EphemeralMessageStore(DispatcherDefault, {
       }
       return flag && undefined;
     }
-    obj = map;
   },
   CACHE_LOADED: clearAll,
   CONNECTION_OPEN: clearAll,

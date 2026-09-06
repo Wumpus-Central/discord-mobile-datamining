@@ -4,6 +4,7 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import EmojiDefault from "Emoji" /* 7130 */;
 import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10628 */;
@@ -57,14 +58,14 @@ class AppliedForumTag {
             }
             if (tmp11Result) {
               obj = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
-              ({ textEmoji: obj3.textEmojiStyle, emoji: obj3.fastImageStyle } = tmp4);
+              ({ textEmoji: obj3.textEmojiStyle, emoji: obj3.fastImageStyle } = container);
               let emojiURL;
               if (null != closure_5) {
                 const obj1 = { id: null, animated: null, size: null };
-                ({ id: obj5.id, animated: obj5.animated } = tmp14);
+                ({ id: obj5.id, animated: obj5.animated } = closure_5);
                 obj1.size = EMOJI_URL_BASE_SIZE;
-                emojiURL = tmp12(1396).getEmojiURL(obj1);
-                const tmp12Result = tmp12(1396);
+                emojiURL = AvatarUtilsDefault.getEmojiURL(obj1);
+                const tmp12Result = AvatarUtilsDefault;
               }
               obj.src = emojiURL;
               if (str == null) {
@@ -72,8 +73,6 @@ class AppliedForumTag {
               }
               obj.name = str;
               tmp11Result = timestampProducer(EmojiDefault, obj);
-              tmp12 = importDefault;
-              tmp14 = closure_5;
             }
             const items1 = [tmp11Result, timestampProducer(Text_Text.Text, { lineClamp: 1, style: container.tagName, variant: "text-xs/semibold", color: str, children: tagName })];
             obj.children = items1;

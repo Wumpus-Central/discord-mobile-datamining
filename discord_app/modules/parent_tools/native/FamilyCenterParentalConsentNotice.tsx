@@ -37,8 +37,8 @@ export default function FamilyCenterParentalConsentNotice() {
   if (isParentalConsentBannerActive) {
     if (null != daysRemaining) {
       if (daysRemaining >= 0) {
-        function learnMoreHook(children, arg1) {
-          return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: link.link, accessibilityRole: "link", onPress, children }, arg1);
+        function learnMoreHook(children, key) {
+          return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: link.link, accessibilityRole: "link", onPress, children }, key);
         }
         obj = { style: tmp.container, text: null };
         if (0 === daysRemaining) {

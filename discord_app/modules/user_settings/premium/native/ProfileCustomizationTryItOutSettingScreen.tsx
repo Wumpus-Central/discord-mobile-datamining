@@ -43,7 +43,7 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
   const items1 = [stateFromStores];
   const effect = pendingAvatarDecoration.useEffect(() => {
     if (null != stateFromStores) {
-      maybeFetchUserProfileDefault(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+      maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
     }
   }, items1);
   const items2 = [pendingAvatarDecoration, setPendingAvatarDecoration, categories];
@@ -86,4 +86,5 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
     obj.children = <setPendingAvatarDecoration style={tmp.container}>{null}</setPendingAvatarDecoration>;
     tmp18 = jsx(sourceAnalyticsLocations(tmp3[8]).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
   }
+  const tmp4Result = stateFromStores(categories[8])(stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM);
 };

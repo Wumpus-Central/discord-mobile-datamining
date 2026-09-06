@@ -2,6 +2,8 @@
 
 // Module 12244 (AppLauncherButtonIcon)
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
+import AppsIcon from "AppsIcon" /* 5106 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10951 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,11 +25,11 @@ export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
     obj.transform = items1;
     items[1] = obj;
     obj.style = items;
-    let tmp4Result = tmp4(tmp6(10951).PlusLargeIcon, obj);
+    let tmp4Result = jsx(PlusLargeIcon.PlusLargeIcon, { transform: null });
   } else {
     const obj1 = { style };
     const merged2 = Object.assign(merged);
-    tmp4Result = tmp4(tmp6(5106).AppsIcon, obj1);
+    tmp4Result = jsx(AppsIcon.AppsIcon, { style });
   }
   obj.children = tmp4Result;
   return <View style={{ overflow: "hidden" }}>{null}</View>;

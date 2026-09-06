@@ -15,7 +15,7 @@ class WebAuthnSignalManager extends tmp2 {
 const prototype = WebAuthnSignalManager.prototype;
 prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(credential) {
   credential = credential.credential;
-  return (async (arg0, value) => {
+  return (async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -67,7 +67,7 @@ prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(cred
 };
 prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredentialsLoaded(credentials) {
   credentials = credentials.credentials;
-  return (async (arg0, value) => {
+  return (async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -120,7 +120,7 @@ prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredential
 };
 prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
   user = user.user;
-  return (async (arg0, value) => {
+  return (async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

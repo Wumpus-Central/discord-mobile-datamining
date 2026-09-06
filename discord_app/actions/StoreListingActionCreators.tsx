@@ -73,9 +73,9 @@ export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
   DispatcherDefault.dispatch(obj);
   const tmp7 = _require;
   if (result) {
-    let STORE_LISTINGS_SKUResult = obj5.STORE_LISTINGS_SKU(skuId);
+    let STORE_LISTINGS_SKUResult = Endpoints.STORE_LISTINGS_SKU(skuId);
   } else {
-    STORE_LISTINGS_SKUResult = obj5.STORE_PUBLISHED_LISTINGS_SKU(skuId);
+    STORE_LISTINGS_SKUResult = Endpoints.STORE_PUBLISHED_LISTINGS_SKU(skuId);
   }
   obj = { url: STORE_LISTINGS_SKUResult, rejectWithError: null };
   const obj4 = require("StoreUtils");

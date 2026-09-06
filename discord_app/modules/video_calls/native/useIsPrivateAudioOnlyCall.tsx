@@ -36,16 +36,16 @@ export default function useIsPrivateAudioOnlyCall(id) {
   return require("initialize").useStateFromStores(items2, () => {
     let isPrivateResult = _private.isPrivate();
     if (isPrivateResult) {
-      isPrivateResult = !VoiceStateStore.hasVideo(tmp.id);
+      isPrivateResult = !VoiceStateStore.hasVideo(_private.id);
     }
     if (isPrivateResult) {
       isPrivateResult = !closure_1;
     }
     if (isPrivateResult) {
-      isPrivateResult = 0 === ApplicationStreamingStore.getAllApplicationStreamsForChannel(tmp.id).length;
+      isPrivateResult = 0 === ApplicationStreamingStore.getAllApplicationStreamsForChannel(_private.id).length;
     }
     if (isPrivateResult) {
-      isPrivateResult = 0 === ApplicationStreamingStore.getAllActiveStreamsForChannel(tmp.id).length;
+      isPrivateResult = 0 === ApplicationStreamingStore.getAllActiveStreamsForChannel(_private.id).length;
     }
     if (isPrivateResult) {
       isPrivateResult = !MediaEngineStore.isVideoEnabled();

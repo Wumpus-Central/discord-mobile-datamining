@@ -68,7 +68,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
       obj.text = intl8.format(util.t.wFWO6D, {});
       items[1] = obj;
       return items;
-    } else if (tmp2.TIER_1 === tmp) {
+    } else if (PremiumTypes.TIER_1 === premiumTypeFromSubscription) {
       const obj1 = { imageSource: whatYouLoseProfileTier1Source, text: null };
       const intl4 = util.intl;
       obj1.text = intl4.format(util.t.xCaYwE, {});
@@ -82,7 +82,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
       obj3.text = intl6.format(util.t.K4Hv69, {});
       items1[2] = obj3;
       return items1;
-    } else if (tmp2.TIER_2 === tmp) {
+    } else if (PremiumTypes.TIER_2 === premiumTypeFromSubscription) {
       obj = { imageSource: _modDef13342, text: null };
       const intl = util.intl;
       obj.text = intl.format(util.t["gpqr+n"], {});
@@ -104,27 +104,27 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
   obj = { style: tmp.body, children: null };
   obj = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
   if (mode === obj4.CANCEL) {
-    let intl2 = tmp2(tmp3[13]).intl;
-    let stringResult = intl2.string(tmp2(tmp3[13]).t.PWq8TL);
+    let intl2 = require("util").intl;
+    let stringResult = intl2.string(require("util").t.PWq8TL);
   } else {
-    let intl = tmp2(tmp3[13]).intl;
-    stringResult = intl.string(tmp2(tmp3[13]).t["7VcWW0"]);
+    let intl = require("util").intl;
+    stringResult = intl.string(require("util").t["7VcWW0"]);
   }
   obj.children = stringResult;
   let items2 = [closure_6(require("Text/Text").Text, obj), , ];
   obj1 = { variant: "text-md/medium", style: tmp.subtitle, children: null };
   if (mode === obj4.CANCEL) {
-    let intl4 = tmp2(tmp3[13]).intl;
+    let intl4 = require("util").intl;
     let obj2 = { subscriptionName: null };
-    let tmp2Result = tmp2(tmp3[8]);
+    let tmp2Result = require("PremiumUtils");
     obj2.subscriptionName = tmp2Result.getPremiumTypeDisplayName(premiumTypeFromSubscription, true);
-    let formatResult = intl4.format(tmp2(tmp3[13]).t.jh5mUz, obj2);
+    let formatResult = intl4.format(require("util").t.jh5mUz, obj2);
   } else {
-    let intl3 = tmp2(tmp3[13]).intl;
+    let intl3 = require("util").intl;
     let obj3 = { subscriptionName: null };
-    tmp2Result = tmp2(tmp3[8]);
+    tmp2Result = require("PremiumUtils");
     obj3.subscriptionName = tmp2Result.getPremiumTypeDisplayName(premiumTypeFromSubscription, true);
-    formatResult = intl3.format(tmp2(tmp3[13]).t.Qk34Ik, obj3);
+    formatResult = intl3.format(require("util").t.Qk34Ik, obj3);
   }
   obj4 = { children: null };
   obj1.children = formatResult;
@@ -138,7 +138,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
   let obj5 = { style: tmp.footer, children: null };
   const obj6 = { style: tmp.button, children: null };
   const obj7 = { text: null, grow: true, onPress: null };
-  let intl5 = tmp2(tmp3[13]).intl;
+  let intl5 = require("util").intl;
   obj7.text = intl5.string(require("util").t["3PatSz"]);
   obj7.onPress = function onPress() {
     closure_1_0(PremiumAnalyticsUtils.STEP_ANALYTICS_NAMES[PremiumAnalyticsUtils.CancellationFlowSteps.WHAT_YOU_LOSE]);
@@ -156,7 +156,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
     },
     children: null
   };
-  let intl6 = tmp2(tmp3[13]).intl;
+  let intl6 = require("util").intl;
   obj8.children = intl6.string(require("util").t.rzVN6j);
   items3[1] = closure_6(require("Text/Text").Text, obj8);
   obj5.children = items3;

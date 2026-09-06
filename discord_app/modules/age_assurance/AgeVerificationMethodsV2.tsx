@@ -59,7 +59,7 @@ let closure_6 = async function _fetchAgeVerificationMethodsV() {
   _require = mapMethodsV2Response;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: Endpoints.AGE_VERIFICATION_METHODS_V2, rejectWithError: true });
-  return _require(arg1.body);
+  return _require(value.body);
 };
 let closure_7 = async function _fetchAgeVerificationMethodsV2SuspendedUser() {
   _require = mapMethodsV2Response;
@@ -67,7 +67,7 @@ let closure_7 = async function _fetchAgeVerificationMethodsV2SuspendedUser() {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: Endpoints.AGE_VERIFICATION_SUSPENDED_METHODS_V2, body: { token: suspendedUserToken }, rejectWithError: true };
   await HTTP.post(request);
-  return _require(arg1.body);
+  return _require(value.body);
 };
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

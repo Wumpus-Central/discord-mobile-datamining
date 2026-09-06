@@ -1,9 +1,12 @@
 // === Module 12766: ForumChannelEmptyState ===
 
 // Module 12766 (ForumChannelEmptyState)
+import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import shared from "shared" /* 4411 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import _modDef12767 from "module_12767" /* 12767 */;
+import _modDef12768 from "module_12768" /* 12768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,26 +32,26 @@ export default noop.memo((topViewHeight) => {
   obj.style = items;
   let obj2 = shared;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = tmp4(12767);
+    let tmp4Result = _modDef12767;
   } else {
-    tmp4Result = tmp4(12768);
+    tmp4Result = _modDef12768;
   }
   obj = { source: tmp4Result, style: tmp.image };
   const items1 = [hasOwnProperty(React4, obj), , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   if (tagFilter.size > 0) {
     obj2 = { numTags: tagFilter.size };
-    let formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.lvPci0, obj2);
+    let formatToPlainStringResult = intl.formatToPlainString(util.t.lvPci0, obj2);
   } else {
-    formatToPlainStringResult = intl.string(tmp2(1114).t.PwTMG0);
+    formatToPlainStringResult = intl.string(util.t.PwTMG0);
   }
   obj1.children = formatToPlainStringResult;
   items1[1] = hasOwnProperty(Text_Text.Text, obj1);
   const obj3 = { style: tmp.subtext, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   const formatToPlainString = intl2.formatToPlainString;
-  const t = tmp2(1114).t;
+  const t = util.t;
   if (tagFilter.size > 0) {
     const obj4 = { numTags: tagFilter.size };
     let formatToPlainStringResult1 = formatToPlainString(t.AAeye1, obj4);

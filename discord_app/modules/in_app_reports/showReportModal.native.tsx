@@ -5,7 +5,7 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_5 = async function _showReportModal(arg0, value) {
+let closure_5 = async function _showReportModal(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

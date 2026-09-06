@@ -20,9 +20,9 @@ class VideoStreamStats {
     obj._automaticQualityChanges = 0;
     obj._incrementLayout = function _incrementLayout(_lastLayout, arg1) {
       if (null == obj._layoutBuckets[_lastLayout]) {
-        tmp._layoutBuckets[_lastLayout] = 0;
+        obj._layoutBuckets[_lastLayout] = 0;
       }
-      const _layoutBuckets = tmp._layoutBuckets;
+      const _layoutBuckets = obj._layoutBuckets;
       _layoutBuckets[_lastLayout] = _layoutBuckets[_lastLayout] + arg1;
     };
     obj._sampleStats = function _sampleStats() {

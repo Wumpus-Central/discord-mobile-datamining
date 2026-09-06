@@ -33,11 +33,11 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
   analyticsLocations2 = tmp3(items2).analyticsLocations;
   let obj1 = skuId(applicationId[7]);
   if (obj1.isIOS()) {
-    let GOOGLE = tmp5.APPLE_ADVANCED_COMMERCE;
-    let APPLE_ADVANCED_COMMERCE = tmp5;
+    let GOOGLE = constants.APPLE_ADVANCED_COMMERCE;
+    let APPLE_ADVANCED_COMMERCE = constants;
   } else {
-    GOOGLE = tmp5.GOOGLE;
-    APPLE_ADVANCED_COMMERCE = tmp5;
+    GOOGLE = constants.GOOGLE;
+    APPLE_ADVANCED_COMMERCE = constants;
   }
   const GiftACOMOrderExperiment = productLine(tmp[8]).GiftACOMOrderExperiment;
   let enabled = GiftACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontGiftModal" }).enabled;
@@ -92,17 +92,20 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
         ({ isPurchaseDisabled, giftOptions } = arg0);
         return jsx(SocialLayerStorefrontGiftPurchaseSectionDefault, { skuId, sku: applicationId, isPurchaseDisabled, giftOptions, giftingOrigin, analyticsLocations: analyticsLocations2 });
       };
-      tmp = tmp7(tmp2, obj1);
+      tmp = <tmp2 skuId={skuId} analyticsLocations={analyticsLocations2} lockedRecipientUser={skuId.lockedRecipientUser} onGiftModalDismiss={onGiftModalDismiss} giftingOrigin={giftingOrigin} validateRecipient={function validateRecipient() {
+        return Promise.resolve(true);
+      }} renderProductDetails={null} renderPurchaseSection={null} />;
       obj.children = tmp;
-      obj.children = tmp7(tmp2Result, obj, skuId);
-      let tmp7Result = tmp7(productLine(tmp[15]).NativePaymentContextProvider, obj);
+      obj.children = <tmp2Result key={skuId} paymentGateway={GOOGLE} orderRequired={null} skuIds={null} isGift activeSubscription={null} onOrderRetryCancellation={null} checkoutAnalyticsFields={null} analyticsInitialStep="gift_customization">{null}</tmp2Result>;
+      let tmp7Result = jsx(productLine(tmp[15]).NativePaymentContextProvider, { paymentGateway: GOOGLE, orderRequired: null, skuIds: null, isGift: true, activeSubscription: null, onOrderRetryCancellation: null, checkoutAnalyticsFields: null, analyticsInitialStep: "gift_customization", children: null });
     } else {
       const obj2 = { onDismiss: onGiftModalDismiss, title: null };
       tmp2Result = tmp2(tmp[13]);
       const intl = productLine(tmp[14]).intl;
       obj2.title = intl.string(productLine(tmp[14]).t["JCFN/y"]);
-      tmp7Result = tmp7(tmp2Result, obj2);
+      tmp7Result = <tmp2Result onDismiss={onGiftModalDismiss} title={null} />;
     }
     productLineResult = productLine(tmp[12]);
   }
+  const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
 };

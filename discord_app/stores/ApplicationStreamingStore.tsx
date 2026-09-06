@@ -314,7 +314,7 @@ prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
       }
       let flag = true;
       if (!tmp10) {
-        const basicChannel1 = obj.getBasicChannel(tmp5.channelId);
+        const basicChannel1 = ChannelStore.getBasicChannel(tmp5.channelId);
         let first = null != basicChannel1;
         if (first) {
           const obj2 = StreamPermissionUtils;
@@ -327,7 +327,6 @@ prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
         tmp23 = tmp5;
       }
       tmp7 = tmp23;
-      obj = ChannelStore;
     }
     return tmp7;
   } else {
@@ -597,7 +596,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
           } else {
             CALL = constants.CALL;
           }
-          const obj = { streamType: CALL, ownerId: userId, guildId, channelId, discoverable: tmp3 };
+          let obj = { streamType: CALL, ownerId: userId, guildId, channelId, discoverable: tmp3 };
           if (null == dependencyMap[obj.ownerId]) {
             dependencyMap[obj.ownerId] = {};
           }
@@ -749,28 +748,28 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
     } else {
       let FAILED = constants.ENDED;
       if (unavailable.unavailable) {
-        FAILED = tmp22.RECONNECTING;
-      } else if (reason === tmp3.UNAUTHORIZED) {
-        FAILED = tmp22.FAILED;
-      } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
+        FAILED = constants.RECONNECTING;
+      } else if (reason === constants3.UNAUTHORIZED) {
+        FAILED = constants.FAILED;
+      } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         let obj = StreamKeyUtils;
         guildId = obj.decodeStreamKey(streamKey).guildId;
         asyncRequireImpl(13830, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
-        FAILED = tmp22.ENDED;
+        FAILED = constants.ENDED;
         const promise = asyncRequireImpl(13830, dependencyMap.paths);
       } else {
         if (tmp9) {
-          FAILED = tmp22.FAILED;
+          FAILED = constants.FAILED;
         }
-        tmp9 = value.state === tmp22.FAILED && reason === tmp3.USER_REQUESTED;
+        tmp9 = value.state === constants.FAILED && reason === constants3.USER_REQUESTED;
       }
       obj = {};
       const merged = Object.assign(value);
       obj.state = FAILED;
       const result1 = map.set(streamKey, obj);
-      let tmp18 = FAILED === tmp22.ENDED;
+      let tmp18 = FAILED === constants.ENDED;
       if (tmp18) {
         tmp18 = id !== streamKey;
       }
@@ -816,6 +815,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
           closure_1 = map1.delete(index) || closure_1;
           const tmp2 = map1.delete(index) || closure_1;
         }
+        obj = StreamKeyUtils;
       });
       return closure_1;
     }
@@ -831,16 +831,16 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
       value = map.get(streamKey);
       if (null != value) {
         if (value.state !== constants.ENDED) {
-          if (value.state === tmp10.FAILED) {
+          if (value.state === constants.FAILED) {
             if (value.ownerId === AuthenticationStore.getId()) {
               return false;
             }
           }
           let ACTIVE = value.state;
           if (constants2.DISCONNECTED === state) {
-            ACTIVE = tmp10.RECONNECTING;
+            ACTIVE = constants.RECONNECTING;
           } else if (tmp2.RTC_CONNECTED === state) {
-            ACTIVE = tmp10.ACTIVE;
+            ACTIVE = constants.ACTIVE;
           }
           if (ACTIVE === value.state) {
             return false;
@@ -877,6 +877,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
     if (isStreamKeyResult) {
       closure_25[id.channelId] = false;
     }
+    const arr = Array.from(map.values());
   },
   CONNECTION_OPEN: reset,
   CONNECTION_CLOSED: reset,

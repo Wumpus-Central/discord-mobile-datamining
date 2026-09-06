@@ -2,7 +2,9 @@
 
 // Module 11806 (ExperimentEmbedPlatformUtils)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ExperimentManager from "ExperimentManager" /* 4481 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 7890 */;
 import useLegacyExperiments from "useLegacyExperiments" /* 11480 */;
 import useApexExperiments from "useApexExperiments" /* 11481 */;
 import size from "module_2" /* 2 */;
@@ -32,18 +34,18 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
         if (tmp6 == null) {
           tmp6 = null;
         }
-        let tmpResult = tmp(7890);
+        let tmpResult = ExperimentEmbedUtils;
         const experimentBuckets = tmpResult.getExperimentBuckets(tmp5);
         const iter = experimentBuckets.find((value) => value.value === closure_0);
         if (null != iter) {
           if (null != tmp6) {
             if (tmp6.variantId === iter.value) {
-              tmpResult = tmp(4481);
+              tmpResult = ExperimentManager;
               tmpResult.overrideBucket(tmp5.system, experimentFromEmbedURL, null);
             }
           }
-          tmp(4481).overrideBucket(tmp5.system, experimentFromEmbedURL, iter.value);
-          const tmpResult1 = tmp(4481);
+          ExperimentManager.overrideBucket(tmp5.system, experimentFromEmbedURL, iter.value);
+          const tmpResult1 = ExperimentManager;
         }
       }
     }

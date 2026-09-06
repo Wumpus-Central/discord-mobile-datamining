@@ -68,10 +68,10 @@ export default {
             obj = {
               onConfirm() {
                         if (null != applicationId) {
-                          let obj = { userId: tmp, applicationId: tmp2 };
+                          let obj = { userId, applicationId: tmp2 };
                           const result = GameRelationshipActionCreatorsDefault.acceptGameFriendRequest(obj);
                         } else {
-                          obj = { userId: tmp, confirmStrangerRequest: true, context: null };
+                          obj = { userId, confirmStrangerRequest: true, context: null };
                           const obj1 = { location: tmp3 };
                           obj.context = obj1;
                           obj.acceptFriendRequest(obj);
@@ -170,8 +170,8 @@ export default {
                 }
               }
               if (!flag) {
-                if (tmp != null) {
-                  tmp();
+                if (onConfirm != null) {
+                  onConfirm();
                 }
               }
             });
@@ -235,8 +235,8 @@ export default {
                 }
               }
               if (!flag) {
-                if (tmp != null) {
-                  tmp();
+                if (onConfirm != null) {
+                  onConfirm();
                 }
               }
             }).catch((error) => {
@@ -360,8 +360,8 @@ export default {
                 }
               }
               if (!flag) {
-                if (tmp != null) {
-                  tmp();
+                if (onConfirm != null) {
+                  onConfirm();
                 }
               }
             }).catch((error) => {

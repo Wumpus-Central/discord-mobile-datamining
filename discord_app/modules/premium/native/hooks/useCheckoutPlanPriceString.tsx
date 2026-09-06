@@ -19,16 +19,15 @@ export const useCheckoutPlan = function useCheckoutPlan(arg0) {
   obj = { plan: null, useOrderPricing: tmp3 };
   const items = [tmp2, arg0, tmp3];
   obj.plan = noop.useMemo(() => {
-    let availablePlanForItems = null;
+    availablePlanForItems = null;
     if (closure_2) {
       availablePlanForItems = null;
-      if (null != closure_1) {
+      if (null != availablePlanForItems) {
         availablePlanForItems = null;
         if (null != closure_0) {
-          availablePlanForItems = obj.getAvailablePlanForItems(PremiumBundledPlansUtils.getSubscriptionItemsForProduct(tmp2));
+          availablePlanForItems = availablePlanForItems.getAvailablePlanForItems(PremiumBundledPlansUtils.getSubscriptionItemsForProduct(tmp2));
         }
       }
-      obj = closure_1;
     }
     return availablePlanForItems;
   }, items);
@@ -42,16 +41,15 @@ export const useCheckoutPlanDiscountPrices = function useCheckoutPlanDiscountPri
   discountedPriceString = tmp3;
   const items = [tmp2, productId, tmp3];
   memo = discountedPriceString.useMemo(() => {
-    let availablePlanForItems = null;
+    availablePlanForItems = null;
     if (closure_2) {
       availablePlanForItems = null;
-      if (null != closure_1) {
+      if (null != availablePlanForItems) {
         availablePlanForItems = null;
         if (null != closure_0) {
-          availablePlanForItems = obj.getAvailablePlanForItems(PremiumBundledPlansUtils.getSubscriptionItemsForProduct(tmp2));
+          availablePlanForItems = availablePlanForItems.getAvailablePlanForItems(PremiumBundledPlansUtils.getSubscriptionItemsForProduct(tmp2));
         }
       }
-      obj = closure_1;
     }
     return availablePlanForItems;
   }, items);
@@ -64,10 +62,10 @@ export const useCheckoutPlanDiscountPrices = function useCheckoutPlanDiscountPri
       if (null == memo) {
         return null;
       } else {
-        discountedPriceString = obj2.getDiscountedPriceString();
+        discountedPriceString = memo.getDiscountedPriceString();
         let tmp7 = null;
         if (null != discountedPriceString) {
-          let obj = { discountedPrice: discountedPriceString, regularPrice: obj2.getRegularPriceString() };
+          let obj = { discountedPrice: discountedPriceString, regularPrice: memo.getRegularPriceString() };
           tmp7 = obj;
         }
         return tmp7;
@@ -101,16 +99,15 @@ export const useCheckoutPlanPriceString = function useCheckoutPlanPriceString(pr
   noop = tmp4;
   const items = [tmp3, productId, tmp4];
   const memo = noop.useMemo(() => {
-    let availablePlanForItems = null;
+    availablePlanForItems = null;
     if (closure_2) {
       availablePlanForItems = null;
-      if (null != closure_1) {
+      if (null != availablePlanForItems) {
         availablePlanForItems = null;
         if (null != closure_0) {
-          availablePlanForItems = obj.getAvailablePlanForItems(PremiumBundledPlansUtils.getSubscriptionItemsForProduct(tmp2));
+          availablePlanForItems = availablePlanForItems.getAvailablePlanForItems(PremiumBundledPlansUtils.getSubscriptionItemsForProduct(tmp2));
         }
       }
-      obj = closure_1;
     }
     return availablePlanForItems;
   }, items);

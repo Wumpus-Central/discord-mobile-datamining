@@ -6,7 +6,7 @@ import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 
 const require = fn;
-let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0, value) {
+let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -116,11 +116,10 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0, value) 
                 if (null != closure_2_3) {
                   closure_0(closure_1[7]);
                   const obj = { application_id, location: null, section_name: null, source: null };
-                  ({ location: obj2.location, sectionName: obj2.section_name, entrypoint: obj2.source } = tmp3);
+                  ({ location: obj2.location, sectionName: obj2.section_name, entrypoint: obj2.source } = closure_2_3);
                   obj.trackWithMetadata(closure_3_5.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, obj);
                 }
                 closure_0({ isAuthorized: true });
-                tmp3 = closure_2_3;
               } else {
                 closure_0({ isAuthorized: false });
               }

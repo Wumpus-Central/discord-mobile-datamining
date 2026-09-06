@@ -145,7 +145,7 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
       const items = [closure_1.pressable, ];
       let selected = isEqualResult;
       if (isEqualResult) {
-        selected = tmp6.selected;
+        selected = closure_1.selected;
       }
       obj = {
         style: items,

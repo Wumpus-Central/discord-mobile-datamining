@@ -12,7 +12,7 @@ const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
 
-export default function createAutocompleterResultForChannelId(arg0, arg1, UserStore, RelationshipStore) {
+export default function createAutocompleterResultForChannelId(arg0, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = ChannelStore;
@@ -39,12 +39,12 @@ export default function createAutocompleterResultForChannelId(arg0, arg1, UserSt
         tmp6 = obj;
       }
       return tmp6;
-    } else if (tmp11.GROUP_DM === type) {
+    } else if (ChannelTypes.GROUP_DM === type) {
       obj = { type: AutocompleterResultTypes.GROUP_DM, record: channel, score: 0, comparator: channelName };
       return obj;
     } else {
-      if (tmp11.GUILD_VOICE !== type) {
-        if (tmp11.GUILD_STAGE_VOICE !== type) {
+      if (ChannelTypes.GUILD_VOICE !== type) {
+        if (ChannelTypes.GUILD_STAGE_VOICE !== type) {
           obj1 = { type: AutocompleterResultTypes.TEXT_CHANNEL, record: channel, score: 0, comparator: channelName };
           return obj1;
         }

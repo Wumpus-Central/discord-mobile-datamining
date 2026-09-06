@@ -1,8 +1,10 @@
 // === Module 14177: AvatarDuoPile ===
 
 // Module 14177 (AvatarDuoPile)
+import _mod12 from "module_12" /* 12 */;
 import ClipView from "ClipView" /* 8813 */;
 import Pile from "Pile" /* 11000 */;
+import ListUtils from "ListUtils" /* 12619 */;
 import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13028 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,15 +19,15 @@ export const AvatarDuoPile = function AvatarDuoPile(size) {
   if ("aria-label" in merged) {
     let prop = merged["aria-label"];
   } else {
-    let tmp3Result = tmp3(12619);
+    let tmp3Result = ListUtils;
     prop = tmp3Result.getListSummaryLabel(merged.names);
   }
   const obj = { "aria-label": prop, shape: ClipView.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null };
-  tmp3Result = tmp3(12);
+  tmp3Result = _mod12;
   if (tmp3Result.isArray(size)) {
     let mapped = size.map((item) => CutoutableAvatarImage.AVATAR_SIZE_MAP[item]);
   } else {
-    mapped = tmp3(13028).AVATAR_SIZE_MAP[size];
+    mapped = CutoutableAvatarImage.AVATAR_SIZE_MAP[size];
   }
   obj.size = mapped;
   obj.children = size.children;

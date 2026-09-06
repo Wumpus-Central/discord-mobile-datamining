@@ -11,6 +11,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527
 import HapticUtils from "HapticUtils" /* 4528 */;
 import spring from "spring" /* 4974 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8164 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8167 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -122,7 +123,7 @@ let result = size.fileFinishedImporting("modules/display_name_styles/native/Disp
 
 export default function DisplayNameStylesEditScreen() {
   let tmp = onSelectColor();
-  const tmp3 = isTryItOut;
+  let tmp3 = isTryItOut;
   let obj = navigation(isTryItOut[11]);
   const route = obj.useRoute();
   let obj1 = navigation(isTryItOut[11]);
@@ -236,20 +237,20 @@ export default function DisplayNameStylesEditScreen() {
     const memo1 = obj7.useMemo(() => {
       let fontId;
       if (closure_5 != null) {
-        fontId = tmp2.fontId;
+        fontId = closure_5.fontId;
       }
       let tmp4 = first !== fontId;
       if (!tmp4) {
         let effectId;
-        if (tmp2 != null) {
-          effectId = tmp2.effectId;
+        if (closure_5 != null) {
+          effectId = closure_5.effectId;
         }
         tmp4 = first1 !== effectId;
       }
       if (!tmp4) {
         colors = undefined;
-        if (tmp2 != null) {
-          colors = tmp2.colors;
+        if (closure_5 != null) {
+          colors = closure_5.colors;
         }
         if (colors == null) {
           colors = [];
@@ -302,10 +303,10 @@ export default function DisplayNameStylesEditScreen() {
     const callback2 = obj7.useCallback(() => {
       const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
       if (isTryItOut) {
-        let tmpResult = tmp(8167);
+        let tmpResult = UserProfileActionCreators;
         const result1 = tmpResult.setTryItOutDisplayNameStyles(null);
       } else {
-        tmpResult = tmp(8164);
+        tmpResult = UserProfileSettingsActionCreators;
         tmpResult.setPendingChanges({ displayNameStyles: null });
       }
       AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_REMOVED);
@@ -346,6 +347,7 @@ export default function DisplayNameStylesEditScreen() {
       }
       obj = { userId: id, selectedEffectId: first1, onSelectEffect };
       obj.openLazy(asyncRequireImpl(15343, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", obj);
+      const tmp3 = asyncRequireImpl(15343, dependencyMap.paths);
     }, items7);
     const callback6 = obj7.useCallback(() => {
       if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -355,22 +357,22 @@ export default function DisplayNameStylesEditScreen() {
               return callback(navigation(isTryItOut[8]).DisplayNameEffect.GUMMY, arg0);
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(tmp2(1896)(15344, tmp3.paths), "DisplayNameStylesGummyColorPickerSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15344, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj);
       } else {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-        const tmp2Result = tmp2(1896);
+        const tmp2Result = asyncRequireImpl;
         if (closure_10) {
           obj = {
             selectedColors: memo,
-            selectedEffectId: tmp,
+            selectedEffectId: first1,
             onSelectColors(arg0) {
                   return callback(first1, arg0);
                 }
           };
-          openLazy(tmp2Result(15349, tmp3.paths), "DisplayNameStylesGradientPickerSheet", obj);
+          openLazy(tmp2Result(15349, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj);
         } else {
-          obj = { selectedColor: first3, selectedEffectId: tmp, onSelectColor };
-          openLazy(tmp2Result(15352, tmp3.paths), "DisplayNameStylesColorPickerSheet", obj);
+          obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
+          openLazy(tmp2Result(15352, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
       }
     }, items8);
@@ -381,7 +383,7 @@ export default function DisplayNameStylesEditScreen() {
       obj1 = { theme: tmp14, children: null };
       let obj2 = { value: { overrideSettings: true }, children: null };
       let obj3 = { style: tmp.container, children: null };
-      const obj4 = {};
+      let obj4 = {};
       let merged = Object.assign(tmp.contentContainer);
       let num = 0;
       if (memo1) {

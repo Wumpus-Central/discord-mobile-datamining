@@ -26,6 +26,7 @@ function fadeIn() {
     if (tmp9) {
       undefined();
     }
+    tmp9 = 0 === rounded1 && false;
   }, 100);
 }
 function handlePauseMusic() {
@@ -49,10 +50,10 @@ function handlePauseMusic() {
     clearInterval(c5);
     let tmp10 = 0 === rounded1;
     if (tmp10) {
-      tmp10 = null != tmp;
+      tmp10 = null != closure_0;
     }
     if (tmp10) {
-      tmp();
+      closure_0();
     }
   }, 100);
 }
@@ -77,10 +78,10 @@ function handleStopMusic() {
     clearInterval(c5);
     let tmp10 = 0 === rounded1;
     if (tmp10) {
-      tmp10 = null != tmp;
+      tmp10 = null != closure_0;
     }
     if (tmp10) {
-      tmp();
+      closure_0();
     }
   }, 100);
 }

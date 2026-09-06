@@ -18,7 +18,7 @@ function getSafetyHubData() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _getSafetyHubData(arg0, value) {
+let closure_11 = async function _getSafetyHubData() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -188,10 +188,10 @@ let closure_11 = async function _getSafetyHubData(arg0, value) {
     }
   }
 };
-let closure_12 = async function _getSafetyHubDataForClassification(classificationId) {
+let closure_12 = async function _getSafetyHubDataForClassification() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -345,24 +345,86 @@ let closure_12 = async function _getSafetyHubDataForClassification(classificatio
     }
   })();
 };
-let closure_13 = async function _requestReview(arg0, value) {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_13 = async function _requestReview(arg0) {
+  closure_0 = arg0;
+  closure_2 = arg2;
+  c4 = 0;
+  c3 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
+      try {
+        c3 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            suspendedUserToken = suspendedUserToken.getSuspendedUserToken();
+            if (null != suspendedUserToken) {
+              let result = Endpoints.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(classificationId);
+            } else {
+              result = Endpoints.SAFETY_HUB_REQUEST_REVIEW(classificationId);
+            }
+            if (null != suspendedUserToken) {
+              const HTTP2 = HTTPUtils.HTTP;
+              const request = { url: result, body: null, rejectWithError: null };
+              const obj1 = { signal, user_input: dependencyMap, token: suspendedUserToken };
+              request.body = obj1;
+              result = HTTPUtils.rejectWithMigratedError();
+              request.rejectWithError = result;
+              let putResult = HTTP2.put(request);
+            } else {
+              const HTTP = HTTPUtils.HTTP;
+              const request1 = { url: result, body: null, rejectWithError: null };
+              const obj2 = { signal, user_input: dependencyMap };
+              request1.body = obj2;
+              request1.rejectWithError = HTTPUtils.rejectWithMigratedError();
+              putResult = HTTP.put(request1);
+            }
+            DispatcherDefault.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" });
+            putResult.then(() => {
+              closure_1(573);
+              const obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId };
+              obj.dispatch(obj);
+            }).catch((error) => {
+              let str;
+              if (error != null) {
+                const body = error.body;
+                if (body != null) {
+                  str = body.message;
+                }
+              }
+              if (str == null) {
+                str = "Unknown error";
+              }
+              signal(573).dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE", error: str });
+              throw error;
+            });
+            c4 = 1;
+            c3 = 1;
+            const nextPromise = putResult.then(() => {
+              closure_1(573);
+              const obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId };
+              obj.dispatch(obj);
+            });
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
@@ -370,76 +432,20 @@ let closure_13 = async function _requestReview(arg0, value) {
           obj = { value, done: true };
           return obj;
         } else {
-          suspendedUserToken = suspendedUserToken.getSuspendedUserToken();
-          if (null != suspendedUserToken) {
-            let result = Endpoints.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(tmp20);
-          } else {
-            result = Endpoints.SAFETY_HUB_REQUEST_REVIEW(tmp20);
-          }
-          if (null != suspendedUserToken) {
-            const HTTP2 = HTTPUtils.HTTP;
-            const request = { url: result, body: null, rejectWithError: null };
-            const obj1 = { signal: tmp21, user_input: tmp22, token: suspendedUserToken };
-            request.body = obj1;
-            result = HTTPUtils.rejectWithMigratedError();
-            request.rejectWithError = result;
-            let putResult = HTTP2.put(request);
-          } else {
-            const HTTP = HTTPUtils.HTTP;
-            const request1 = { url: result, body: null, rejectWithError: null };
-            const obj2 = { signal: tmp21, user_input: tmp22 };
-            request1.body = obj2;
-            request1.rejectWithError = HTTPUtils.rejectWithMigratedError();
-            putResult = HTTP.put(request1);
-          }
-          DispatcherDefault.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" });
-          putResult.then(() => {
-            closure_1(573);
-            const obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId };
-            obj.dispatch(obj);
-          }).catch((error) => {
-            let str;
-            if (error != null) {
-              const body = error.body;
-              if (body != null) {
-                str = body.message;
-              }
-            }
-            if (str == null) {
-              str = "Unknown error";
-            }
-            closure_1_1(573).dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE", error: str });
-            throw error;
-          });
-          c4 = 1;
-          c3 = 1;
-          const nextPromise = putResult.then(() => {
-            closure_1(573);
-            const obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId };
-            obj.dispatch(obj);
-          });
+          c3 = 3;
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        obj = { value, done: true };
-        return obj;
-      } else {
-        c3 = 3;
-        return { value: "HermesInternal", done: null };
+      } catch (tmp15) {
+        c3 = tmp;
+        throw tmp15;
       }
-    } catch (tmp15) {
-      c3 = tmp;
-      throw tmp15;
     }
-  }
+  })();
 };
-let closure_14 = async function _requestSuspendedUserAgeVerification(from_classification_id) {
+let closure_14 = async function _requestSuspendedUserAgeVerification() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -523,7 +529,7 @@ function checkSuspendedUserAgeVerification() {
   }
   return applyArgumentsResult;
 }
-let closure_16 = async function _checkSuspendedUserAgeVerification(arg0, value) {
+let closure_16 = async function _checkSuspendedUserAgeVerification() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -571,6 +577,7 @@ let closure_16 = async function _checkSuspendedUserAgeVerification(arg0, value) 
                         const timerId = setTimeout(() => closure_1_15(), closure_2_6);
                       }
                       c1(dependencyMap[5]).dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", success });
+                      const obj = c1(dependencyMap[5]);
                     }).catch((error) => {
                       let str;
                       if (error != null) {
@@ -615,10 +622,10 @@ function checkSuspendedUserAgeVerificationV2() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _checkSuspendedUserAgeVerificationV(requested_at) {
+let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -664,7 +671,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV(requested_at
                           let obj = { type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS_V2", status };
                           c1(573).dispatch(obj);
                           const obj2 = c1(573);
-                          tmp10 = status !== tmp.UNBANNED && status !== tmp.VERIFIED_OTHER_VIOLATIONS_REMAIN;
+                          tmp10 = status !== constants.UNBANNED && status !== constants.VERIFIED_OTHER_VIOLATIONS_REMAIN;
                         } else if (closure_1 < closure_2_7) {
                           const _setTimeout = setTimeout;
                           const timerId = setTimeout(() => closure_2_17(closure_1_0), closure_2_6);

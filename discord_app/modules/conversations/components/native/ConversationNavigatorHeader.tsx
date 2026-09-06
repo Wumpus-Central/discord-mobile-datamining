@@ -32,9 +32,9 @@ export default function ConversationNavigatorHeader(channelId) {
   const items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = useChannelNameDefault(stateFromStores, true);
-  obj = { style: closure_6(flag).container, children: null };
-  obj = { title: channelId.title, subtitle: tmp3, variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj.children = jsx(channelId(7863).GenericHeaderTitle, { title: channelId.title, subtitle: tmp3, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
-  return <View title={arg0.title} subtitle={tmp3} variant="heading-lg/semibold" subtitleColor="text-muted" />;
+  const tmp = closure_6(flag);
+  obj = { style: tmp.container, children: null };
+  obj = { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" };
+  obj.children = jsx(channelId(7863).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  return <View title={channelId.title} subtitle={useChannelNameDefault(stateFromStores, true)} variant="heading-lg/semibold" subtitleColor="text-muted" />;
 };

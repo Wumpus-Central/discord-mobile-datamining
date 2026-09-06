@@ -9,6 +9,9 @@ import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
 import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17025 */;
 import InviteActivityButtonDefault from "InviteActivityButton" /* 17026 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17030 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 17031 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17036 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -167,7 +170,7 @@ let closure_19 = noop.memo(function ActivityPanelHeaderContentInner(wrapperOffse
   if (first != null) {
     id = first.id;
   }
-  let tmp8Result = tmp8(InviteActivityButtonDefault, { applicationId: id });
+  let tmp8Result = closure_1_12(InviteActivityButtonDefault, { applicationId: id });
   obj = { hasConnectedActivity: null != stateFromStores, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
   const items2 = [tmp7.buttonContainer, ];
   let prop;
@@ -177,7 +180,7 @@ let closure_19 = noop.memo(function ActivityPanelHeaderContentInner(wrapperOffse
   obj = { style: items2, children: null };
   items2[1] = prop;
   let tmp17;
-  let tmp5Result = tmp5(17030);
+  let tmp5Result = MinimizeActivityButtonDefault;
   if (!landscape) {
     let name;
     if (first != null) {
@@ -189,7 +192,7 @@ let closure_19 = noop.memo(function ActivityPanelHeaderContentInner(wrapperOffse
   tmp8Result = null != applicationId;
   if (tmp8Result) {
     obj1 = { applicationId };
-    tmp8Result = tmp8(tmp5(17031), obj1);
+    tmp8Result = closure_1_12(QuestActivityButtonDefault, obj1);
   }
   items3[1] = tmp8Result;
   let tmp20 = null;
@@ -204,7 +207,7 @@ let closure_19 = noop.memo(function ActivityPanelHeaderContentInner(wrapperOffse
     tmp21 = tmp8Result;
   }
   items4[1] = tmp21;
-  tmp5Result = tmp5(17036);
+  tmp5Result = LeaveActivityButtonDefault;
   items4[2] = closure_1_12(tmp5Result, { selfEmbeddedActivity: stateFromStores, setMode });
   obj.children = items4;
   return map1(BaseActivityPanelContent, obj);

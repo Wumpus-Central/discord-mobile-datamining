@@ -27,7 +27,7 @@ function addEntitlement(entitlement) {
     if (null == dependencyMap4[entitlement.subscription_id]) {
       const _Set3 = Set;
       const set2 = new Set();
-      tmp13[entitlement.subscription_id] = set2;
+      dependencyMap4[entitlement.subscription_id] = set2;
     }
     dependencyMap4[entitlement.subscription_id].add(entitlement.id);
   }
@@ -42,6 +42,7 @@ function handlePurchaseSuccess(arg0) {
     let tmp4 = addEntitlement(tmp2);
     continue;
   }
+  tmp = arg0.entitlements[Symbol.iterator]();
 }
 function handleEntitlementUpdate(entitlement) {
   addEntitlement(entitlement.entitlement);
@@ -166,7 +167,7 @@ prototype["getForSubscription"] = function getForSubscription(arg0) {
     return set;
   }
 };
-prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id, item) {
+prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id) {
   let tmp = item;
   if (item === undefined) {
     tmp = null;
@@ -242,6 +243,7 @@ prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
       if (!tmp4) {
         items.push(endsAt);
       }
+      tmp3 = endsAt.sourceType === constants.REVERSE_TRIAL && flag2;
     });
   }
   return items;
@@ -266,6 +268,7 @@ prototype["getUnactivatedFractionalPremiumUnits"] = function getUnactivatedFract
       if (tmp) {
         items.push(skuId);
       }
+      tmp = ACTIVE_FRACTIONAL_PREMIUM_SKUS.has(skuId.skuId) && !skuId.consumed;
     });
   }
   return items;
@@ -350,6 +353,7 @@ const entitlementStore = new EntitlementStore(DispatcherDefault, {
       let tmp4 = addEntitlement(tmp2);
       continue;
     }
+    tmp = excludeEnded.entitlements[Symbol.iterator]();
   },
   ENTITLEMENTS_FETCH_FOR_USER_FAIL: function handleUserEntitlementsFail() {
     c14 = false;

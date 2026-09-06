@@ -1,6 +1,9 @@
 // === Module 13571: GiftingBadgesUtils ===
 
 // Module 13571 (GiftingBadgesUtils)
+import initialize from "initialize" /* 504 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
 import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10743 */;
 import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 13572 */;
@@ -68,7 +71,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     tmp4 = enabled2;
   }
-  let tmpResult = tmp(504);
+  let tmpResult = initialize;
   const items = [UserStore];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -81,8 +84,8 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  tmpResult = tmp(4380);
-  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1943).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  tmpResult = DismissibleContentUnsafeUtils;
+  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(dismissible_content.DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (tmp4) {
     tmp4 = stateFromStores;
   }

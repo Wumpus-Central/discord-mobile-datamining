@@ -103,7 +103,7 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
       }
     },
     location: constants.GUILD_ROLE_TEMPLATE_POPOUT,
-    guildId: arg0.guildId
+    guildId: guildId.guildId
   })}</View>;
   return jsx(ActionSheet.ActionSheet, {
     style: tmp.templateContainer,

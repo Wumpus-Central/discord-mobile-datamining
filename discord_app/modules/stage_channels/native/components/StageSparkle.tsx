@@ -20,11 +20,11 @@ function StageSparkleInner(style) {
   obj = { style: tmp3.iconContainer, children: null };
   if (null != IconComponent) {
     obj = { size: "lg", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-    let tmp6Result = tmp6(IconComponent, obj);
+    let tmp6Result = React4(IconComponent, obj);
     let tmp10 = importDefault;
   } else {
     const obj1 = { source: icon, style: tmp3.iconStyle };
-    tmp6Result = tmp6(FastImageDefault, obj1);
+    tmp6Result = React4(FastImageDefault, obj1);
     tmp10 = importDefault;
   }
   obj.children = tmp6Result;

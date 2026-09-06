@@ -9,92 +9,35 @@ import UserRecord from "UserRecord" /* 1385 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;
-let closure_11 = async function _fetchReferralEligibleUsers(index, searchQuery, arg2) {
+let closure_11 = async function _fetchReferralEligibleUsers() {
   closure_2 = arg2;
   c6 = 0;
   c7 = 0;
   return (async (arg0, value, arg2) => {
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c7 = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            c5 = 0;
-            closure_4 = tmp2;
-            closure_132_0 = undefined;
-            let body;
-            let users;
-            let next_index;
-            closure_132_4 = undefined;
-            const _JSON = JSON;
-            const obj1 = { index, searchQuery };
-            const json = JSON.stringify(obj1);
-            closure_132_0 = json;
-            if (map.has(json)) {
-              c7 = 3;
-              const obj2 = { value: map.get(json), done: true };
-              return obj2;
-            } else {
-              const HTTP = HTTPUtils.HTTP;
-              const request = { url: constants.GET_REFERRAL_ELIGIBLE_USERS, body: null, oldFormErrors: true, rejectWithError: false };
-              const obj3 = { index: tmp27, limit: null, search_query: null };
-              limit = tmp29;
-              if (tmp29 == null) {
-                limit = 10;
-              }
-              obj3.limit = limit;
-              obj3.search_query = tmp28;
-              request.body = obj3;
-              c6 = 1;
-              c7 = 1;
-              const obj4 = { value: HTTP.post(request), done: false };
-              return obj4;
-            }
-            tmp27 = index;
-            tmp28 = searchQuery;
-          }
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          body = value.body;
-          users = body.users;
-          next_index = body.next_index;
-          const obj6 = { users: users.map((item) => new closure_1_5(item)), nextIndex: next_index };
-          closure_132_4 = obj6;
-          const result = closure_133_10.set(closure_132_0, closure_132_4);
-          c7 = 3;
-          obj = { value: closure_132_4, done: true };
-          return obj;
-        }
-      } catch (tmp12) {
-        c7 = tmp;
-        throw tmp12;
-      }
+    closure_4 = tmp2;
+    const _JSON = JSON;
+    const json = JSON.stringify({ index, searchQuery });
+    closure_132_0 = json;
+    if (map.has(json)) {
+      return map.get(json);
     }
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: constants.GET_REFERRAL_ELIGIBLE_USERS, body: null, oldFormErrors: true, rejectWithError: false };
+    const obj3 = { index, limit: null, search_query: null };
+    limit = closure_2;
+    if (closure_2 == null) {
+      limit = 10;
+    }
+    obj3.limit = limit;
+    obj3.search_query = searchQuery;
+    request.body = obj3;
+    await HTTP.post(request);
+    const body = value.body;
+    const users = body.users;
+    const next_index = body.next_index;
+    closure_132_4 = { users: users.map((item) => new closure_1_5(item)), nextIndex: next_index };
+    const result = closure_133_10.set(closure_132_0, closure_132_4);
+    return closure_132_4;
   })();
 };
 let closure_12 = async function _createReferralTrials(arg0) {
@@ -102,7 +45,7 @@ let closure_12 = async function _createReferralTrials(arg0) {
   c7 = 0;
   c8 = 0;
   c6 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -214,7 +157,8 @@ let closure_13 = async function _createReferralTrial() {
       closure_130_1(closure_130_2[8]);
     }
   }
-  closure_129_0 = await "HermesInternal";
+  await "HermesInternal";
+  closure_129_0 = value;
   let fromServer = null;
   if (null != closure_129_0.body) {
     fromServer = closure_130_4.createFromServer(closure_129_0.body);
@@ -234,7 +178,8 @@ let closure_14 = async function _resolveReferralTrialOffer() {
   await HTTP.get({ url: constants.REFERRAL_OFFER_ID_RESOLVE(closure_0), oldFormErrors: true, rejectWithError: false });
   let obj5 = closure_131_1(closure_131_2[6]);
   obj5.dispatch({ type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: closure_130_0 });
-  closure_130_1 = await "HermesInternal";
+  await "HermesInternal";
+  closure_130_1 = value;
   let fromServer = null;
   if (null != closure_130_1.body) {
     fromServer = closure_131_4.createFromServer(closure_130_1.body);
@@ -359,6 +304,7 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
       obj.reminder_state_id = reminder_state_id;
       obj2.dispatch(obj);
     }
+    obj2 = DispatcherDefault;
   }, (status) => {
     status = undefined;
     if (status != null) {

@@ -60,7 +60,7 @@ export default function GiftingBadgeLevelUpProgress(style) {
   let tmp11Result = null != newTier.simple_icon_url;
   if (tmp11Result) {
     const obj4 = { icon: newTier.simple_icon_url, size: 24 };
-    tmp11Result = tmp11(GiftingBadgeIconDefault, obj4);
+    tmp11Result = hasOwnProperty(GiftingBadgeIconDefault, obj4);
   }
   items1[2] = tmp11Result;
   obj.children = items1;

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/icymi/useICYMIReloadHandler.t
 export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
   closure_0 = showDot;
   const items = [showDot];
-  return noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+  return noop.useCallback(asyncGeneratorStep(async () => {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

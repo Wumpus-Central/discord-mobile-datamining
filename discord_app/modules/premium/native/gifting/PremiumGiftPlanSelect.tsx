@@ -39,16 +39,16 @@ let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const space = nativeDefault.space;
   const alphaResult = obj5.alpha(0.8);
   obj.title = { textAlign: "center", marginTop: arg2 ? space.PX_16 : space.PX_12, marginHorizontal: nativeDefault.space.PX_24 };
-  const space2 = tmp(576).space;
+  const space2 = nativeDefault.space;
   const obj2 = { textAlign: "center", marginTop: arg2 ? space.PX_16 : space.PX_12, marginHorizontal: nativeDefault.space.PX_24 };
   obj.description = { textAlign: "center", marginTop: arg2 ? space2.PX_16 : space2.PX_12, marginHorizontal: nativeDefault.space.PX_24 };
-  const space3 = tmp(576).space;
+  const space3 = nativeDefault.space;
   obj.carousel = { marginTop: arg2 ? space3.PX_16 : space3.PX_32 };
   const obj3 = { textAlign: "center", marginTop: arg2 ? space2.PX_16 : space2.PX_12, marginHorizontal: nativeDefault.space.PX_24 };
   obj.dmGiftingContent = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_48 };
   obj.loadingContainer = { flex: 1, alignItems: "center", justifyContent: "center" };
   obj.closeButtonContainer = { position: "absolute", top: 0, left: 0, zIndex: 1 };
-  obj5 = { padding: tmp(576).space.PX_16 };
+  obj5 = { padding: nativeDefault.space.PX_16 };
   obj.closeButton = obj5;
   obj.closeButtonIcon = { width: 24, height: 24, tintColor: "white" };
   const obj4 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_48 };
@@ -248,9 +248,8 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       num = 1;
     }
     obj = { opacity: timing.withTiming(num, obj), transform: null };
-    const obj3 = sharedValue;
     let num2 = 100;
-    if (obj3.get()) {
+    if (sharedValue.get()) {
       num2 = 0;
     }
     obj = { translateY: timing.withTiming(num2, obj) };
@@ -455,10 +454,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const obj28 = { horizontal: true, showsHorizontalScrollIndicator: false, style: tmp13.carousel, contentContainerStyle: null, children: null };
         const obj29 = { gap: tmp38, paddingHorizontal: tmp38 };
         obj28.contentContainerStyle = obj29;
-        obj28.children = arr12.map((item, index) => {
-          str = "default";
-          return callback2(str, { forScreenReader: true })({ item, index });
-        });
+        obj28.children = arr12.map((item, index) => callback2("default", { forScreenReader: true })({ item, index }));
         tmp47Result = tmp47(tmp52, obj28);
       } else {
         const size1 = { style: null, data: null, renderItem: null, width: null, height: null, onConfigurePanGesture: null, loop: false, scrollAnimationDuration: 200, customAnimation: null, mode: "parallax", modeConfig: null, onSnapToItem: null };

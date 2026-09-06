@@ -42,10 +42,9 @@ export default function useThermalState() {
       } else {
         UNHANDLED = obj.UNHANDLED;
       }
-      tmp11Result = tmp11(1115);
+      tmp11Result = PlatformUtils;
     }
     obj3 = PlatformUtils;
-    tmp11 = require;
   }
   return UNHANDLED;
 };
@@ -84,10 +83,9 @@ export const getThermalState = function getThermalState() {
       } else {
         UNHANDLED = obj.UNHANDLED;
       }
-      tmp11Result = tmp11(1115);
+      tmp11Result = PlatformUtils;
     }
     obj3 = PlatformUtils;
-    tmp11 = require;
   }
   return UNHANDLED;
 };

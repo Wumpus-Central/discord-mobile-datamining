@@ -178,6 +178,7 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(DispatcherDefa
       let tmp7 = storeMessagePreview(tmp5, null);
       continue;
     }
+    tmp4 = Array.from(set)[Symbol.iterator]();
   },
   LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: function handleLoadMessageRequestsSupplementalDataError(requestedChannelIds) {
     requestedChannelIds = requestedChannelIds.requestedChannelIds;

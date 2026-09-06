@@ -6,6 +6,7 @@ import PlatformUtils from "PlatformUtils" /* 1115 */;
 import ChatInputUtils from "ChatInputUtils" /* 4425 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
+import spring from "spring" /* 4974 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12338 */;
 import SearchActionCreatorsDefault from "SearchActionCreators" /* 12347 */;
 import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12361 */;
@@ -125,8 +126,8 @@ export default noop.memo(function ChannelDetails(channelId) {
             current.blur();
           }
           if (!SearchQueryStore.isInitialSearchQuery(channelDetailsSearchContext)) {
-            SearchPlatformActionCreatorsDefault.updateSearchQuery(tmp4, (reset) => reset.reset());
-            const initialMessages = SearchPlatformUtilsDefault.fetchInitialMessages(tmp4);
+            SearchPlatformActionCreatorsDefault.updateSearchQuery(channelDetailsSearchContext, (reset) => reset.reset());
+            const initialMessages = SearchPlatformUtilsDefault.fetchInitialMessages(channelDetailsSearchContext);
           }
         }
       }
@@ -145,9 +146,8 @@ export default noop.memo(function ChannelDetails(channelId) {
         tmp3 = Math.abs(height - value) < 0.001;
       }
       if (!tmp3) {
-        const result = obj.set(height);
+        const result = sharedValue.set(height);
       }
-      obj = sharedValue;
     }
   }, items4);
   const objResult2 = obj(tmp2[23]);
@@ -275,10 +275,10 @@ export default noop.memo(function ChannelDetails(channelId) {
       }
       items12[2] = tmp25Result;
       obj8.children = items12;
-      obj7.children = tmp26(tmp7(tmp2[23]).View, obj8);
+      obj7.children = closure_12(tmp7(tmp2[23]).View, obj8);
       items11[1] = tmp25(tmp7(tmp2[23]).View, obj7);
       obj3[1] = items11;
-      const items13 = [tmp26(tmp27, obj3), ];
+      const items13 = [closure_12(tmp27, obj3), ];
       const obj12 = { freeze: !isShowing, children: null };
       const obj13 = { style: tmp.search, collapsable: false, children: null };
       const obj14 = { searchContext: channelDetailsSearchContext, width: componentWidth };
@@ -293,4 +293,5 @@ export default noop.memo(function ChannelDetails(channelId) {
     obj.children = obj1;
     sharedValue(obj(tmp2[12]).AnalyticsLocationProvider, obj);
   }
+  const objResult3 = obj(tmp2[23]);
 });

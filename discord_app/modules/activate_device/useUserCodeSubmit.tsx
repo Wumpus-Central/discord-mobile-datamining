@@ -56,14 +56,14 @@ export const useUserCodeSubmit = function useUserCodeSubmit(arr, onUserCodeAccep
       c5 = 3;
     } else if (arg0 === 1) {
       c5 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
-      closure_128_0 = arg1;
+      closure_128_0 = value;
       closure_129_3(false);
       closure_129_1({ userCode: closure_129_0, clientId: closure_128_0.body.client_id, scopes: closure_128_0.body.scopes, twoWayLinkCode: closure_128_0.body.two_way_link_code });
       c3 = 0;
     }
-    return arg1;
+    return value;
   }), items);
   const items1 = [arr, manualSubmit];
   const effect = noop.useEffect(() => {

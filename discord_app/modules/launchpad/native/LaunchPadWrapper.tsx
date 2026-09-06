@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import HapticUtils from "HapticUtils" /* 4528 */;
 import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 16962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -66,8 +67,8 @@ export default function LaunchPadWrapper(launchPadType) {
       if (!isModalOpen) {
         const result = LaunchPadPullTabCache.setLaunchPadPullTabExclusionRect();
         if (closure_3) {
-          const result1 = tmp2(4528).triggerHapticFeedback(tmp2(4528).HapticFeedbackTypes.IMPACT_LIGHT);
-          const tmp2Result = tmp2(4528);
+          const result1 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+          const tmp2Result = HapticUtils;
         }
       }
     }
@@ -113,7 +114,7 @@ export default function LaunchPadWrapper(launchPadType) {
     tmp20Result = null;
     if (!isModalOpen) {
       obj = { gestureState, launchPadSharedState, launchPadPullTabState: launchPadType.launchPadPullTabState, updaters };
-      tmp20Result = tmp20(tmp5(tmp3[19]), obj);
+      tmp20Result = closure_12(updaters(tmp3[19]), obj);
     }
   }
   items6[1] = tmp20Result;
@@ -123,7 +124,7 @@ export default function LaunchPadWrapper(launchPadType) {
   if (tmp7) {
     str2 = "yes";
   }
-  const obj3 = { importantForAccessibility: str2, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null };
+  let obj3 = { importantForAccessibility: str2, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null };
   const intl = tmp2(tmp3[21]).intl;
   obj3.accessibilityLabel = intl.string(launchPadType(isModalOpen[21]).t.WAI6xu);
   obj3.onPress = onPress;

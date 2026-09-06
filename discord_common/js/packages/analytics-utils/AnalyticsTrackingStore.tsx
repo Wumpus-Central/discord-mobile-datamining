@@ -64,22 +64,22 @@ function defaultGetSessionId() {
 let result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
 
 export const AnalyticsActionHandlers = obj;
-export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
-  ({ dispatcher, actionHandler, getFingerprint: require, getSessionId } = getLaunchSignature);
+export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
+  ({ dispatcher, actionHandler, getFingerprint: require, getSessionId } = AnalyticsUtils);
   if (getSessionId === undefined) {
     getSessionId = defaultGetSessionId;
   }
-  ({ TRACKING_URL: dependencyMap, drainTimeoutOverride, waitFor: closure_3, scheduleWhenIdle } = getLaunchSignature);
+  ({ TRACKING_URL: dependencyMap, drainTimeoutOverride, waitFor: closure_3, scheduleWhenIdle } = AnalyticsUtils);
   if (scheduleWhenIdle === undefined) {
     scheduleWhenIdle = fn;
   }
-  fn = getLaunchSignature.getLaunchSignature;
+  fn = AnalyticsUtils.getLaunchSignature;
   if (fn === undefined) {
     fn = function z() {
       return null;
     };
   }
-  ({ submitEvents: logger, sendUnloadRequest: closure_7 } = getLaunchSignature);
+  ({ submitEvents: logger, sendUnloadRequest: closure_7 } = AnalyticsUtils);
   function scheduleDrain(shouldFlushOnNextTick) {
     let flag = shouldFlushOnNextTick.shouldFlushOnNextTick;
     if (flag === undefined) {
@@ -322,9 +322,8 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
           const _Math = Math;
           const _Math2 = Math;
           const _Math3 = Math;
-          obj = { type: "timeout", id: null };
           const _setTimeout = setTimeout;
-          obj.id = setTimeout(() => {
+          { type: "timeout", id: null }.id = setTimeout(() => {
             closure_2_12();
             if (typeof closure_1_0 === "function") {
               let result = 0.1 * closure_3_8;
@@ -353,6 +352,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
               throw new TypeError("Trying to call a non-function");
             }
           }, Math.max(c8 + (Math.floor(Math.random() * result * 2) - result), c9));
+          obj = { type: "timeout", id: null };
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -444,6 +444,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
           }, tmp4);
           continue;
         }
+        tmp3 = dependencyMap[Symbol.iterator]();
       };
       return applyArgumentsResult;
     }
@@ -453,7 +454,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
       const self = this;
       const waitFor = this.waitFor;
       const items = [];
-      HermesBuiltin.arraySpread(tmp, 0);
+      HermesBuiltin.arraySpread(constants, 0);
       const self2 = this;
       HermesBuiltin.apply(items, this);
     }

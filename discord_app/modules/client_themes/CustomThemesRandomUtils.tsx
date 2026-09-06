@@ -62,26 +62,29 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
         if (constants.ANALOGOUS === items1) {
           return (function generateAnalogousColors(items, value, value1, value2) {
             obj = closure_1_0(672);
-            items = [closure_1_0(672).hsl(value2 - 30, value, value1).hex(), items, ];
+            items = [closure_1_0(672).hsl(value2 - 30, value, value1).hex(), , ];
+            items[1] = items;
             const hslResult = closure_1_0(672).hsl(value2 - 30, value, value1);
             const obj3 = closure_1_0(672);
             items[2] = closure_1_0(672).hsl(value2 + 30, value, value1).hex();
             return items;
           })(items, value, value1, value);
-        } else if (tmp8.COMPLEMENTARY === items1) {
+        } else if (constants.COMPLEMENTARY === items1) {
           return (function generateComplementaryColors(items, value, value1, value2) {
             obj = closure_1_0(672);
             const hexResult = closure_1_0(672).hsl((value2 + 180) % 360, value, value1).hex();
-            items = [items, , ];
+            items = [, , ];
+            items[0] = items;
             const hslResult = closure_1_0(672).hsl((value2 + 180) % 360, value, value1);
             const obj3 = closure_1_0(672);
             items[1] = closure_1_0(672).mix(items, hexResult, 0.5).hex();
             items[2] = hexResult;
             return items;
           })(items, value, value1, value);
-        } else if (tmp8.SPLIT_COMPLEMENTARY === items1) {
+        } else if (constants.SPLIT_COMPLEMENTARY === items1) {
           return (function generateSplitComplementaryColors(items, value, value1, value2) {
-            items = [items, , ];
+            items = [, , ];
+            items[0] = items;
             obj = closure_1_0(672);
             items[1] = closure_1_0(672).hsl((value2 + 150) % 360, value, value1).hex();
             const hslResult = closure_1_0(672).hsl((value2 + 150) % 360, value, value1);
@@ -89,9 +92,10 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
             items[2] = closure_1_0(672).hsl((value2 + 210) % 360, value, value1).hex();
             return items;
           })(items, value, value1, value);
-        } else if (tmp8.TRIADIC === items1) {
+        } else if (constants.TRIADIC === items1) {
           return (function generateTriadicColors(items, value, value1, value2) {
-            items = [items, , ];
+            items = [, , ];
+            items[0] = items;
             obj = closure_1_0(672);
             items[1] = closure_1_0(672).hsl((value2 + 120) % 360, value, value1).hex();
             const hslResult = closure_1_0(672).hsl((value2 + 120) % 360, value, value1);
@@ -100,7 +104,8 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
             return items;
           })(items, value, value1, value);
         } else {
-          items = [items];
+          items = [];
+          items[0] = items;
           return items;
         }
       } catch (err) {

@@ -8,6 +8,8 @@ import Text_Text from "Text/Text" /* 4556 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
+import _modDef11454 from "module_11454" /* 11454 */;
+import _modDef11455 from "module_11455" /* 11455 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,13 +36,13 @@ export default function GiftCodeRedeemError(children) {
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = tmp9(11454);
+    let tmp9Result = _modDef11454;
   } else {
-    tmp9Result = tmp9(11455);
+    tmp9Result = _modDef11455;
   }
   const items = [timestampProducer(React3, { source: tmp9Result }), , ];
   const obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.formatToMarkdownString(util.t.JUvC0s, {});
   items[1] = timestampProducer(Text_Text.Text, obj1);
   items[2] = timestampProducer(Text_Text.Text, { variant: "text-lg/medium", style: tmp.message, children: children.message });
@@ -48,7 +50,7 @@ export default function GiftCodeRedeemError(children) {
   const items1 = [React5(hasOwnProperty, obj), ];
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { text: null, size: "md", onPress: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj4.text = intl2.string(util.t.cpT0Cq);
   obj4.onPress = function onPress() {
     return ModalActionCreatorsDefault.pop();

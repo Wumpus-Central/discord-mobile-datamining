@@ -38,7 +38,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               set.add(guild_id);
               BasicChannelCacheStore.restored(guild_id);
               const _HermesInternal3 = HermesInternal;
-              obj3.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
+              closure_17.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
             } else {
               [arr, tmp41] = _slicedToArray(result, 2);
               tmp4(2008)(arr);
@@ -52,9 +52,8 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               tmp4(10).mark("\u2757", "loaded guild channels (guild: " + guild_id + ")", tmp41);
               for (const item10037 of arr) {
                 let _Object = Object;
-                let tmp15 = item10037;
                 if (!Object.hasOwn(closure_19, item10037.id)) {
-                  let tmp20 = setGuildChannel(closure_12(tmp15));
+                  let tmp20 = setGuildChannel(closure_12(item10037));
                 }
                 continue;
               }
@@ -62,7 +61,6 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               closure_17.verbose("hydration complete (guild: " + guild_id + ", channels: " + arr.length + ", guilds_loaded: " + closure_34 + ")");
               const tmp4Result = tmp4(10);
             }
-            obj3 = closure_17;
             const obj4 = require("TryLoad");
           }
         }
@@ -436,7 +434,6 @@ function handleSearchMessagesSuccess(data) {
     const item1 = threads.forEach(addThreadIfMissing);
     const item2 = channels.forEach((id) => {
       const obj = closure_1_7(id);
-      const tmp = null != closure_1_39(id.id);
       if (!obj.isPrivate()) {
         if (!tmp) {
           closure_1_40(obj);
@@ -444,6 +441,7 @@ function handleSearchMessagesSuccess(data) {
       } else {
         closure_1_32[obj.id] = obj;
       }
+      tmp = null != closure_1_39(id.id);
     });
   });
 }
@@ -503,7 +501,7 @@ const ChannelTypes = fn(1074).ChannelTypes;
 let closure_17 = new LoggerDefault("ChannelStore");
 let closure_18 = {};
 let dependencyMap2 = {};
-let dependencyMap3 = {};
+const dependencyMap3 = {};
 const dependencyMap4 = {};
 let c22 = null;
 const dependencyMap5 = {};
@@ -549,7 +547,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_31;
-      return tmp(2006).tryLoadOrResetCacheGatewayAsync("loadChannels", asyncGeneratorStep(async (arg0, value) => {
+      return tmp(2006).tryLoadOrResetCacheGatewayAsync("loadChannels", asyncGeneratorStep(async () => {
         if (c7 === 2) {
           c7 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -942,6 +940,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       }
       continue;
     }
+    tmp = guilds.guildChannels[Symbol.iterator]();
   },
   CACHE_LOADED: function handleCacheLoaded(guilds) {
     closure_33 = Math.max(closure_33, guilds.guilds.length);
@@ -1028,6 +1027,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
         setChannel(item);
       });
     }
+    tmp2 = channels2[Symbol.iterator]();
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function handleConnectionOpenSupplemental(lazyPrivateChannels) {
     lazyPrivateChannels = lazyPrivateChannels.lazyPrivateChannels;
@@ -1040,7 +1040,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(arg0) {
     closure_25 = {};
     closure_19 = {};
-    dependencyMap3 = {};
+    closure_20 = {};
     closure_24 = {};
     closure_23 = {};
     closure_27 = {};
@@ -1055,7 +1055,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       let tmp4 = nextResult;
       if ("partial" === nextResult.dataMode) {
         let arr = _modDef12;
-        let item1 = arr.forEach(dependencyMap3[tmp4.id], setGuildChannel);
+        let item1 = arr.forEach(tmp[tmp4.id], setGuildChannel);
         let _HermesInternal = HermesInternal;
         let fileOnlyResult = closure_17.fileOnly("Restoring guild channels for " + tmp4.id + " #:" + guildChannelCount(tmp4.id));
       }
@@ -1063,6 +1063,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       continue;
     }
     handleFavoritesUpdate();
+    tmp = closure_20;
   },
   CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: function handlePutOverwriteSuccess(overwrite) {
     overwrite = overwrite.overwrite;
@@ -1108,9 +1109,8 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       let restoredResult = BasicChannelCacheStore.restored(guildId);
       for (const item10033 of channels) {
         let _Object = Object;
-        let tmp13 = item10033;
         if (!Object.hasOwn(closure_19, item10033.id)) {
-          let tmp18 = setGuildChannel(closure_1_12(tmp13));
+          let tmp18 = setGuildChannel(closure_1_12(item10033));
         }
         continue;
       }
@@ -1141,6 +1141,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       let tmp7 = setChannel(obj.deserializeChannel(closure_1_12(tmp2)));
       continue;
     }
+    tmp = arg0.channels[Symbol.iterator]();
   },
   SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,

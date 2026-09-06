@@ -127,13 +127,12 @@ prototype["transaction"] = function transaction(arg0, arg1) {
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
   if (typeof MessageDaoTransaction === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(MessageDaoTransaction.prototype);
     obj.transaction = tmp2;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = MessageDaoTransaction;
 };
 let MessageDaoTransaction;
 class MessageDaoTransaction {
@@ -156,13 +155,12 @@ MessageDaoTransaction["fromTableTransaction"] = function fromTableTransaction(tr
 MessageDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
   const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
   if (typeof MessageDaoTransaction === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(MessageDaoTransaction.prototype);
     obj.transaction = tableTransaction;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = MessageDaoTransaction;
 };
 prototype2["put"] = function put(arg0, arg1, data) {
   let Replace = arg3;

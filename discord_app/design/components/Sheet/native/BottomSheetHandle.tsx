@@ -6,10 +6,10 @@ import noop from "module_19" /* 19 */;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");
 
-export const useBottomSheetImperativeHandle = function useBottomSheetImperativeHandle(ref, ref) {
+export const useBottomSheetImperativeHandle = function useBottomSheetImperativeHandle(arg0, ref) {
   closure_0 = ref;
   const items = [ref];
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg0, () => ({
     expandActionSheet() {
       const current = ref.current;
       if (current != null) {

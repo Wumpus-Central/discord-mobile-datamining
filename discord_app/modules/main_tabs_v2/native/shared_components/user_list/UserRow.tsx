@@ -8,9 +8,10 @@ import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import utils_StringUtils from "utils/StringUtils" /* 1926 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
-import UserUtilsDefault from "UserUtils" /* 4404 */;
+import UserUtils from "UserUtils" /* 4404 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4511 */;
 import XLargeIcon from "XLargeIcon" /* 4513 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import ChatIcon from "ChatIcon" /* 5071 */;
@@ -31,6 +32,8 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import PresenceStore from "PresenceStore" /* 4600 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 
+const UserUtilsDefault = UserUtils;
+
 require = fn;
 function UserRowSubLabel(arg0) {
   ({ user, type, applicationId: require } = arg0);
@@ -40,17 +43,17 @@ function UserRowSubLabel(arg0) {
   const items = [ApplicationStore];
   const stateFromStores = obj.useStateFromStores(items, () => ApplicationStore.getApplication(require));
   if (type !== constants.PENDING_INCOMING) {
-    if (type !== tmp3.SUGGESTION) {
-      if (type !== tmp3.PENDING_OUTGOING) {
+    if (type !== constants.SUGGESTION) {
+      if (type !== constants.PENDING_OUTGOING) {
         obj = { userId: user.id, guildId, textStyle: gameIcon.activityText, animate };
         return closure_14(ActivityStatusDefault, obj);
       }
     }
   }
   if (!isGameRelationship) {
-    obj = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp(4404).getUserTag(user) };
-    closure_14(tmp(4556).Text, obj);
-    const tmpResult = tmp(4404);
+    obj = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: UserUtils.getUserTag(user) };
+    closure_14(Text_Text.Text, obj);
+    const tmpResult = UserUtils;
   }
   if (null == stateFromStores) {
     const obj1 = { style: null };
@@ -66,9 +69,9 @@ function UserRowSubLabel(arg0) {
     }
     const obj4 = { uri: str };
     obj3.source = obj4;
-    const items1 = [closure_14(tmp(1178).Icon, obj3, stateFromStores.id), ];
+    const items1 = [closure_14(native.Icon, obj3, stateFromStores.id), ];
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: stateFromStores.name };
-    items1[1] = closure_14(tmp(4556).Text, obj5);
+    items1[1] = closure_14(Text_Text.Text, obj5);
     obj2.children = items1;
     closure_15(View, obj2);
   }
@@ -264,7 +267,7 @@ export default noop.memo(function UserRow(type) {
         items1[1] = closure_2_14(ActionButtonDefault, obj7);
         obj4.children = items1;
         let tmp8 = __initData(View, obj4);
-      } else if (tmp32.PENDING_OUTGOING === tmp31) {
+      } else if (constants.PENDING_OUTGOING === type) {
         const obj9 = { name: closure_17.CANCEL, label: null };
         const intl4 = util.intl;
         const obj10 = { name: null };
@@ -302,7 +305,7 @@ export default noop.memo(function UserRow(type) {
         obj12.accessibilityLabel = intl5.formatToPlainString(util.t.JFJ8Cg, obj13);
         obj11.children = closure_2_14(ActionButtonDefault, obj12);
         tmp8 = closure_2_14(View, obj11);
-      } else if (tmp32.SUGGESTION === tmp31) {
+      } else if (constants.SUGGESTION === type) {
         obj = { name: closure_17.ACCEPT_SUGGESTION, label: null };
         const intl = util.intl;
         obj.label = intl.string(util.t["ed99+i"]);
@@ -328,7 +331,7 @@ export default noop.memo(function UserRow(type) {
         obj15.children = closure_2_14(View, obj16);
         tmp8 = closure_2_14(View, obj15);
       } else {
-        const FRIEND = tmp32.FRIEND;
+        const FRIEND = constants.FRIEND;
         obj18 = { name: closure_17.CALL, label: null };
         const intl10 = util.intl;
         const obj19 = { name: UserUtilsDefault.getName(user) };
@@ -409,13 +412,14 @@ export default noop.memo(function UserRow(type) {
           const tmpResult = user(4573);
         }
       });
-    } else if (tmp.MESSAGE === actionName) {
+      const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
+    } else if (closure_17.MESSAGE === actionName) {
       let tmp33Result;
       if (handleMessage != null) {
         tmp33Result = tmp33(user);
       }
       return tmp33Result;
-    } else if (tmp.ACCEPT === actionName) {
+    } else if (closure_17.ACCEPT === actionName) {
       closure_0 = applicationId;
       let obj = {
         userId: user.id,
@@ -433,27 +437,27 @@ export default noop.memo(function UserRow(type) {
       };
       const result = PeopleUtilsDefault.maybeConfirmFriendRequestAccept(obj);
     } else {
-      if (tmp.DECLINE !== actionName) {
-        if (tmp.CANCEL !== actionName) {
-          if (tmp.ACCEPT_SUGGESTION === actionName) {
+      if (closure_17.DECLINE !== actionName) {
+        if (closure_17.CANCEL !== actionName) {
+          if (closure_17.ACCEPT_SUGGESTION === actionName) {
             obj = { userId: user.id, context: null, type: "HermesInternal", fromFriendSuggestion: null };
             const obj1 = { location: Friends_v2 };
             obj.context = obj1;
             obj1.addRelationship(obj);
             const result1 = ToastUtils.presentAddedFriendToast();
-          } else if (tmp.IGNORE_SUGGESTION === actionName) {
+          } else if (closure_17.IGNORE_SUGGESTION === actionName) {
             obj = FriendSuggestionActionCreatorsDefault;
             obj.ignore(user.id);
           }
         }
       }
       if (null != applicationId) {
-        const obj2 = { userId: tmp13.id, applicationId: tmp14 };
+        const obj2 = { userId: user.id, applicationId: tmp14 };
         const result2 = GameRelationshipActionCreatorsDefault.cancelGameFriendRequest(obj2);
         const result3 = ToastUtils.presentGameFriendRequestIgnoredToast();
       } else {
         const obj3 = { location: Friends_v2 };
-        RelationshipActionCreatorsDefault.cancelFriendRequest(tmp13.id, obj3);
+        RelationshipActionCreatorsDefault.cancelFriendRequest(user.id, obj3);
         const result4 = ToastUtils.presentFriendRequestIgnoredToast();
       }
     }

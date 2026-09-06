@@ -67,7 +67,7 @@ export default noop.memo(function QuestDockInsetHeaderBody(showBonusOrbsGradient
   let tmp8Result = null != premiumRewardPerkPill;
   if (tmp8Result) {
     const obj4 = { style: tmp.premiumRewardPerkPill, children: premiumRewardPerkPill };
-    tmp8Result = tmp8(tmp7, obj4);
+    tmp8Result = hasOwnProperty(View, obj4);
   }
   const items3 = [tmp8Result, , ];
   const tmp6 = PremiumRewardGradientDefault;

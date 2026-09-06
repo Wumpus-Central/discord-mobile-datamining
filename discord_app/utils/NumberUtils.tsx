@@ -59,12 +59,12 @@ export const parseInteger = function parseInteger(discriminator, arg1) {
     return parsed;
   }
 };
-export const formatPercent = function formatPercent(arg0, arg1) {
+export const formatPercent = function formatPercent(locale, percentComplete, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
   obj = { style: "percent", minimumFractionDigits: 0 };
   const merged = Object.assign(obj);
-  return Intl.NumberFormat(arg0, obj).format(arg1);
+  return Intl.NumberFormat(locale, obj).format(percentComplete);
 };

@@ -1,12 +1,15 @@
 // === Module 16994: LaunchPadSearchResultUser ===
 
 // Module 16994 (LaunchPadSearchResultUser)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import isStreamingDefault from "isStreaming" /* 8259 */;
 import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16343 */;
 import getLayoutStylesDefault from "getLayoutStyles" /* 16977 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 16978 */;
 import renderChannelWrapperDefault from "renderChannelWrapper" /* 16979 */;
 import UnreadBadgeDefault from "UnreadBadge" /* 16981 */;
 import renderChannelContentDefault from "renderChannelContent" /* 16982 */;
@@ -62,7 +65,7 @@ function UserResult(user) {
   let extractTimestampResult;
   ({ isMobileOnline, isVROnline, activities } = stateFromStoresObject);
   if (null != lastMessage) {
-    let tmp2Result = tmp2(11);
+    let tmp2Result = SnowflakeUtilsDefault;
     extractTimestampResult = tmp2Result.extractTimestamp(lastMessage.id);
   }
   let relativeTimestamp = null;
@@ -77,7 +80,7 @@ function UserResult(user) {
       str = "text-default";
     }
   }
-  tmp2Result = tmp2(16978);
+  tmp2Result = renderChannelPressableWrapperDefault;
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: null, children: null };
   const items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj.style = items4;
@@ -106,33 +109,30 @@ function UserResult(user) {
   obj1.animate = tmp21;
   obj1.typing = flag2;
   items5[1] = closure_12(user(1178).Avatar, obj1);
-  const tmp16 = closure_14;
-  const tmp17 = closure_13;
-  const tmp18 = UnreadSetting;
   const tmp2Result1 = renderChannelWrapperDefault;
   if (comparator == null) {
-    comparator = tmp2(4404).getUserTag(user);
-    const tmp2Result3 = tmp2(4404);
+    comparator = UserUtilsDefault.getUserTag(user);
+    const tmp2Result3 = UserUtilsDefault;
   }
   obj2 = { name: comparator, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, mentionCount: null, mentionBadge: null };
   let tmp14Result;
   if (null != lastMessage) {
     if (null != channel) {
       obj3 = { channel, message: lastMessage, color: str, muted: flag, layout: tmp6(7879).ChannelListLayoutTypes.COMPACT };
-      tmp14Result = tmp14(tmp6(10109).ChannelRowPreview, obj3);
+      tmp14Result = closure_12(tmp6(10109).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
   obj2.subtitle = tmp14Result;
   obj2.unread = unread;
-  obj2.resolvedUnreadSetting = tmp18.ALL_MESSAGES;
+  obj2.resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;
   obj2.muted = flag;
   obj2.lastMessageTimestampString = relativeTimestamp;
   obj2.mentionCount = num;
   obj2.mentionBadge = shared_renderChannelBadgeDefault({ mentionCount: num, locale: stateFromStores });
   items5[2] = renderChannelContentDefault(obj2);
   obj4.children = items5;
-  obj.children = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
+  obj.children = tmp2Result1(closure_14(closure_13, obj4), { fontScale });
   return tmp2Result(closure_12(user(5123).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {

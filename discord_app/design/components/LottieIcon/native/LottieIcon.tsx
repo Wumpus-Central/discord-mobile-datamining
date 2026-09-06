@@ -3,6 +3,7 @@
 // Module 9948 (LottieIcon)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4279 */;
 import _modDef5530 from "module_5530" /* 5530 */;
 import IconSize from "IconSize" /* 6620 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +14,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
 
-export const LottieIcon = noop.forwardRef((color, ref) => {
+export const LottieIcon = noop.forwardRef((color, arg1) => {
   ({ animation: require, size } = color);
   if (size === undefined) {
     size = "md";
@@ -29,7 +30,7 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
   ({ markers, layers } = color);
   const autoPlay = color.autoPlay;
   let sum1;
-  ref = undefined;
+  let ref;
   let enabled;
   let token;
   let callback;
@@ -57,7 +58,7 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
   sum1 = num2 + num3;
   let obj = noop;
   ref = noop.useRef(null);
-  enabled = noop.useContext(tmp3(4279).AccessibilityPreferencesContext).reducedMotion.enabled;
+  enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled;
   let tmp12 = tmp5;
   if ("custom" === size) {
     tmp12 = width;
@@ -99,7 +100,7 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
     }
   }, items1);
   const items2 = [callback];
-  const imperativeHandle = obj.useImperativeHandle(ref, () => ({
+  const imperativeHandle = obj.useImperativeHandle(arg1, () => ({
     play() {
       return callback();
     }
@@ -127,5 +128,5 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
   const items4 = [size, { opacity: num }];
   obj.style = items4;
   obj.children = jsx(_modDef5530, { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
-  return <tmp19 ref={ref} source={arg0.dotLottie} colorFilters={null} hardwareAccelerationAndroid loop={false} onAnimationLoaded={null} resizeMode="cover" style={null} />;
+  return <View ref={ref} source={color.dotLottie} colorFilters={null} hardwareAccelerationAndroid loop={false} onAnimationLoaded={null} resizeMode="cover" style={null} />;
 });

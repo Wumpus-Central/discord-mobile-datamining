@@ -42,6 +42,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
     self._timeoutId = null;
     self.sendReport("background");
   }
+  tmp3 = state !== constants.BACKGROUND || self._isScheduledReportSent;
 };
 prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSupplemental() {
   const self = this;

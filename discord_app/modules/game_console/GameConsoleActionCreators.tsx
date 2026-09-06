@@ -76,11 +76,11 @@ let closure_11 = async function _disconnectRemote() {
     closure_128_1(closure_128_2[7]);
   } else if (arg0 === 1) {
     c4 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     c3 = 0;
   }
-  return arg1;
+  return value;
 };
 function getConnectNonce() {
   const self = this;
@@ -92,7 +92,7 @@ function getConnectNonce() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _getConnectNonce(arg0, value) {
+let closure_13 = async function _getConnectNonce() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -168,15 +168,15 @@ let closure_13 = async function _getConnectNonce(arg0, value) {
     }
   }
 };
-function cancelConnectRequest(arg0) {
+function cancelConnectRequest(nonce) {
   const HTTP = HTTPUtils.HTTP;
-  return HTTP.del({ url: React6.CONNECT_REQUEST(arg0), rejectWithError: false });
+  return HTTP.del({ url: React6.CONNECT_REQUEST(nonce), rejectWithError: false });
 }
-let closure_15 = async function _fetchDevices(platform) {
+let closure_15 = async function _fetchDevices() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -254,7 +254,7 @@ let closure_15 = async function _fetchDevices(platform) {
     }
   })();
 };
-let closure_16 = async function _sendConnectVoiceCommand(platform, arg1, arg2, nonce) {
+let closure_16 = async function _sendConnectVoiceCommand() {
   closure_1 = arg1;
   closure_2 = arg2;
   c8 = 0;
@@ -354,7 +354,7 @@ function cancelCommand() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _cancelCommand(platform, deviceId, commandId) {
+let closure_18 = async function _cancelCommand() {
   c7 = 0;
   c8 = 0;
   c6 = 0;
@@ -433,7 +433,7 @@ let closure_18 = async function _cancelCommand(platform, deviceId, commandId) {
     }
   })();
 };
-let closure_19 = async function _transferToPlayStation(arg0, value) {
+let closure_19 = async function _transferToPlayStation(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

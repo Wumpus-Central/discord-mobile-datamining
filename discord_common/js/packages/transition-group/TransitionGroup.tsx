@@ -161,7 +161,7 @@ prototype["_enqueueTransitions"] = function _enqueueTransitions(children, childM
     continue;
   }
 };
-prototype["_perform"] = function _perform(key10008, componentWillAppear, componentDidAppear, flag) {
+prototype["_perform"] = function _perform(key10008, componentWillAppear, componentDidAppear) {
   const self = this;
   closure_1 = key10008;
   closure_2 = componentDidAppear;
@@ -179,7 +179,7 @@ prototype["_perform"] = function _perform(key10008, componentWillAppear, compone
   }
   self._handleDonePerform(key10008, componentDidAppear, flag);
 };
-prototype["_handleDonePerform"] = function _handleDonePerform(key10008, componentDidAppear, flag) {
+prototype["_handleDonePerform"] = function _handleDonePerform(key10008, componentDidAppear) {
   _require = key10008;
   if (flag === undefined) {
     flag = false;
@@ -220,7 +220,6 @@ prototype["performLeave"] = function performLeave(key10008) {
   this._perform(key10008, "componentWillLeave", "componentDidLeave", true);
 };
 prototype["render"] = function render() {
-  const key10011 = this;
   const props = this.props;
   const childFactory = props.childFactory;
   const children = this.state.children;

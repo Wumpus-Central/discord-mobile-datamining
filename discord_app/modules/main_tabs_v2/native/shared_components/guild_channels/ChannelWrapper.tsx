@@ -49,5 +49,5 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
   }
   obj = { style: items, children };
   items[2] = paddingThread;
-  return <View style={items}>{arg0}</View>;
+  return <View style={items}>{children}</View>;
 };

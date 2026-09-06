@@ -9,8 +9,8 @@ const result = size.fileFinishedImporting("modules/game_console/activityPlatform
 
 export default function activityPlatformToConnectedAccountType(arg0) {
   if (PS4.PS4 !== arg0) {
-    if (tmp.PS5 !== arg0) {
-      if (tmp.XBOX === arg0) {
+    if (PS4.PS5 !== arg0) {
+      if (PS4.XBOX === arg0) {
         return constants.XBOX;
       }
     }

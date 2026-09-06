@@ -47,14 +47,14 @@ export default function CollectiblesWishlistItemCard(sku) {
   const obj2 = sku(size[5]);
   let tmp2 = sku;
   const tmp3 = size;
-  const tmp8 = jsx;
   const merged1 = Object.assign(merged);
   if (!flag) {
     if (!stateFromStores) {
       let OWNED = merged.overlay;
     }
     obj.overlay = OWNED;
-    return tmp8(tmp9, obj);
+    return <tmp9 {...obj} />;
   }
   OWNED = tmp2(tmp3[7]).WishlistItemCardOverlay.OWNED;
+  const tmp9 = wishlistOwnerId(size[7]);
 };

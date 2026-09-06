@@ -68,10 +68,10 @@ const items = [
       } else {
         num3 = 8;
         if (1 === dayResult) {
-          const obj2 = tmp(4153)();
-          const startOfResult = tmp(4153)().startOf("day");
+          const obj2 = _modDef4153();
+          _modDef4153().startOf("day").add(9, "hours");
           num3 = 8;
-          const addResult = tmp(4153)().startOf("day").add(9, "hours");
+          const startOfResult = _modDef4153().startOf("day");
         }
       }
       const obj = _modDef4153();

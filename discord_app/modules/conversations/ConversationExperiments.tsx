@@ -81,11 +81,11 @@ export const isTopicalNavEnabled = function isTopicalNavEnabled(guildId, fetch_c
         let enabled2 = null != guild1;
         if (enabled2) {
           const features2 = guild1.features;
-          enabled2 = !features2.has(tmp10.SUMMARIES_ENABLED_GA);
+          enabled2 = !features2.has(GuildFeatures.SUMMARIES_ENABLED_GA);
         }
         if (enabled2) {
           const features3 = guild1.features;
-          enabled2 = features3.has(tmp10.CONVERSATIONS_EXTRACTION_PROCESSING);
+          enabled2 = features3.has(GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING);
         }
         if (enabled2) {
           obj = { guildId, location: fetch_channel_conversations };
@@ -135,7 +135,7 @@ export const useIsTopicalNavEnabled = function useIsTopicalNavEnabled(guild_id, 
     str = "";
   }
   obj = { guildId: str, location: channel_header };
-  const CONVERSATIONS_EXTRACTION_PROCESSING2 = tmp.CONVERSATIONS_EXTRACTION_PROCESSING;
+  const CONVERSATIONS_EXTRACTION_PROCESSING2 = GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING;
   closure_129_0 = guild_id;
   closure_129_1 = CONVERSATIONS_EXTRACTION_PROCESSING2;
   let tmp2Result = tmp2(tmp3[3]);
@@ -157,7 +157,7 @@ export const useIsTopicalNavEnabled = function useIsTopicalNavEnabled(guild_id, 
     }
     return tmp2;
   }, items3);
-  const SUMMARIES_ENABLED_GA = tmp.SUMMARIES_ENABLED_GA;
+  const SUMMARIES_ENABLED_GA = GuildFeatures.SUMMARIES_ENABLED_GA;
   closure_130_0 = guild_id;
   closure_130_1 = SUMMARIES_ENABLED_GA;
   tmp2Result = tmp2(tmp3[3]);

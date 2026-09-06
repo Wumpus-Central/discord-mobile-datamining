@@ -150,25 +150,25 @@ prototype["render"] = function render() {
   let obj = { style: tmp.container, children: null };
   ({ passwordLabel, newPasswordLabel } = props);
   if (hasBannerText) {
-    obj = { style: tmp.unverifiedWrapper, children: tmp2(UserSettingsAccountUnverifiedHeaderDefault, {}) };
-    hasBannerText = tmp2(tmp5, obj);
+    obj = { style: tmp.unverifiedWrapper, children: closure_1_12(UserSettingsAccountUnverifiedHeaderDefault, {}) };
+    hasBannerText = closure_1_12(hasOwnProperty, obj);
   }
   const items = [hasBannerText, , , ];
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     obj = { style: tmp.header, children: null };
     const obj1 = { source: _modDef14778, style: tmp.image };
-    const items1 = [tmp2(React4, obj1), , ];
+    const items1 = [closure_1_12(React4, obj1), , ];
     const obj2 = { style: tmp.requiredActionsTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
     obj2.children = intl.string(util.t.geta79);
-    items1[1] = tmp2(Text_Text.Text, obj2);
+    items1[1] = closure_1_12(Text_Text.Text, obj2);
     const obj3 = { style: tmp.requiredActionsSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
     const intl2 = util.intl;
     obj3.children = intl2.string(util.t["37iHbZ"]);
-    items1[2] = tmp2(Text_Text.Text, obj3);
+    items1[2] = closure_1_12(Text_Text.Text, obj3);
     obj.children = items1;
-    tmp4Result = tmp4(tmp5, obj);
+    tmp4Result = map1(hasOwnProperty, obj);
   }
   items[1] = tmp4Result;
   tmp4Result = !showForcedPasswordUpdate;
@@ -177,13 +177,13 @@ prototype["render"] = function render() {
     const obj5 = { style: tmp.requiredActionsTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl3 = util.intl;
     obj5.children = intl3.string(util.t.geta79);
-    const items2 = [tmp2(Text_Text.Text, obj5), ];
+    const items2 = [closure_1_12(Text_Text.Text, obj5), ];
     const obj6 = { style: tmp.requiredActionsSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
     const intl4 = util.intl;
     obj6.children = intl4.string(util.t.x5tG4V);
-    items2[1] = tmp2(Text_Text.Text, obj6);
+    items2[1] = closure_1_12(Text_Text.Text, obj6);
     obj4.children = items2;
-    tmp4Result = tmp4(tmp5, obj4);
+    tmp4Result = map1(hasOwnProperty, obj4);
   }
   items[2] = tmp4Result;
   const items3 = [closure_1_12(TextInput.TextInput, { label: passwordLabel, secureTextEntry: true, errorMessage: self.getError("password"), onChange: self.handlePasswordChange, value: password, onSubmitEditing: self.canSubmit() ? self.handleSubmit : self.handleFocusNewPassword, returnKeyType: "next", autoComplete: "current-password", required: true }), , ];
@@ -195,7 +195,7 @@ prototype["render"] = function render() {
   obj8.onSubmitEditing = handleSubmit;
   items3[1] = closure_1_12(TextInput.TextInput, obj8);
   const obj9 = { text: null, onPress: null, loading: null, disabled: null };
-  const intl5 = tmp16(1114).intl;
+  const intl5 = util.intl;
   obj9.text = intl5.string(util.t["FRep5/"]);
   obj9.onPress = self.handleSubmit;
   obj9.loading = submitting;
@@ -258,9 +258,9 @@ export default function EditPasswordWrapper() {
       flag = false;
     }
     obj.verified = flag;
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj.passwordLabel = intl.string(util.t.WBqMRQ);
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     obj.newPasswordLabel = intl2.string(util.t["8dM4FO"]);
     if (result) {
       result = flag;

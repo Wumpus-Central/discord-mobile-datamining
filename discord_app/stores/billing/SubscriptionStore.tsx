@@ -127,7 +127,7 @@ prototype["getPremiumTypeSubscription"] = function getPremiumTypeSubscription(ar
   }
   return tmp4;
 };
-prototype["getSubscriptions"] = function getSubscriptions(arg0) {
+prototype["getSubscriptions"] = function getSubscriptions() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -197,7 +197,7 @@ prototype["getPremiumGroupSubscription"] = function getPremiumGroupSubscription(
       if (keys !== undefined) {
         tmp3 = null;
         while (keys[tmp] !== undefined) {
-          let tmp11 = tmp4[tmp8];
+          let tmp11 = obj[tmp8];
           tmp3 = null;
           if (tmp11.userId !== AuthenticationStore.getId()) {
             break;
@@ -238,7 +238,7 @@ obj = {
           obj[fromServer.id] = fromServer;
           let tmp3 = fromServer.type === constants2.GUILD;
           if (tmp3) {
-            tmp3 = fromServer.status !== tmp12.ENDED;
+            tmp3 = fromServer.status !== constants.ENDED;
           }
           if (tmp3) {
             items.push(fromServer);
@@ -246,7 +246,7 @@ obj = {
           if (tmp6) {
             items1.push(fromServer);
           }
-          tmp6 = fromServer.type === constants2.APPLICATION && fromServer.status !== tmp12.ENDED;
+          tmp6 = fromServer.type === constants2.APPLICATION && fromServer.status !== constants.ENDED;
         }
       }
     });
@@ -277,12 +277,12 @@ obj = {
           const findIndexResult = _null.findIndex((id) => id.id === fromServer.id);
           if (-1 === findIndexResult) {
             let items = [fromServer];
-            HermesBuiltin.arraySpread(tmp21, 1);
+            HermesBuiltin.arraySpread(_null, 1);
             let tmp27 = items;
           } else {
             items = [];
-            HermesBuiltin.arraySpread(tmp21, 0);
-            if (fromServer.status === tmp36.UNPAID) {
+            HermesBuiltin.arraySpread(_null, 0);
+            if (fromServer.status === constants.UNPAID) {
               items.splice(findIndexResult, 1);
               tmp27 = items;
             }
@@ -300,7 +300,7 @@ obj = {
         } else {
           items1 = [];
           HermesBuiltin.arraySpread(tmp8, 0);
-          if (fromServer.status === tmp36.UNPAID) {
+          if (fromServer.status === constants.UNPAID) {
             items1.splice(findIndexResult1, 1);
             tmp14 = items1;
           }

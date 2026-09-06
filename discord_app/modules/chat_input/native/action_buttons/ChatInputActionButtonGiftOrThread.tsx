@@ -4,11 +4,13 @@
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
 import native from "native" /* 4271 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12239 */;
 import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12246 */;
+import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift" /* 12248 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, cleanup) {
+function renderChatInputActionButtonGiftAndThread(key, styleButton, state, cleanup) {
   ({ accessible, onPress } = styleButton);
   styleButton = styleButton.styleButton;
   ({ canStartThreads, channel, shouldShowThread, styleButtonWrapper } = styleButton);
@@ -23,14 +25,14 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
       return onPress(arg0, ChatInputActionType.THREAD);
     };
     obj.style = styleButton;
-    let tmpResult = tmp(tmp2(12239), obj);
-    const tmp2Result = tmp2(12239);
+    let tmpResult = jsx(ChatInputActionButtonDefault, { accessible, accessibilityLabel: null, disabled: null, IconComponent: null, onPress: null, style: null });
+    const tmp2Result = ChatInputActionButtonDefault;
   } else {
     obj = { accessible, channel, onPress, style: styleButtonWrapper, styleButton };
-    tmpResult = tmp(tmp2(12248), obj);
+    tmpResult = jsx(ChatInputActionButtonGiftDefault, { accessible, channel, onPress, style: styleButtonWrapper, styleButton });
   }
   obj.children = tmpResult;
-  return jsx(ChatInputActionButtonTransitionItemDefault, { cleanup, state, children: null }, arg0);
+  return jsx(ChatInputActionButtonTransitionItemDefault, { cleanup, state, children: null }, key);
 }
 function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   let str = "gift";

@@ -2,6 +2,8 @@
 
 // Module 13163 (UnlockWithNitroButton)
 import initialize from "initialize" /* 504 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import BaseTextButton from "BaseTextButton" /* 4976 */;
 import ProductIds from "ProductIds" /* 7240 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
@@ -33,13 +35,13 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   });
   importDefault = useOpenNitroSubscribeActionSheetDefault();
   if (text == null) {
-    const intl = tmp(1114).intl;
-    text = intl.string(tmp(1114).t.sEAnVH);
+    const intl = util.intl;
+    text = intl.string(util.t.sEAnVH);
   }
   let tmp4Result;
   if (flag) {
     obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
-    tmp4Result = tmp4(tmp(4556).Text, obj);
+    tmp4Result = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text });
   }
   obj = { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null };
   let tmp6;

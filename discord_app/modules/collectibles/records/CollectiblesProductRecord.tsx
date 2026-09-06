@@ -60,15 +60,13 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.badgeOverride = badge_override;
   obj.hideBadge = hide_badge;
   obj.isFirstParty = is_first_party;
-  if (typeof tmp3 === "function") {
-    tmp4 = new tmp4(obj, fromServerResult, merged, this, tmp7);
+  if (typeof CollectiblesProductRecord === "function") {
+    tmp4 = new tmp4(obj, fromServerResult, merged, this, React6);
     ({ summary: tmp17.summary, type: tmp17.type, premiumType: tmp17.premiumType, items: tmp17.items, categorySkuId: tmp17.categorySkuId, isCategoryReward: tmp17.isCategoryReward, prices: tmp17.prices, bundledProducts: tmp17.bundledProducts, previewAssets: tmp17.previewAssets, googleSkuIds: tmp17.googleSkuIds, variants: tmp17.variants, eligibleOffers: tmp17.eligibleOffers, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge, isFirstParty: tmp17.isFirstParty, baseVariantName: tmp17.baseVariantName, variantLabel: tmp17.variantLabel } = obj);
     return tmp4;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp3 = CollectiblesProductRecord;
-  tmp7 = React6;
 };
 CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefrontProductRecord(skus, arg1) {
   _require = skus;
@@ -223,14 +221,13 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               obj.googleSkuIds = googleSkuIds;
               obj.eligibleOffers = tenantMetadata.eligibleOffers;
               obj.isFirstParty = collectibles.isFirstParty;
-              if (typeof tmp5 === "function") {
+              if (typeof prototype === "function") {
                 const tmp16 = new prototype(obj, tmp, premiumType, items, premiumType, item);
                 ({ baseVariantName: tmp16.baseVariantName, baseVariantSkuId: tmp16.baseVariantSkuId, variantLabel: tmp16.variantLabel, variantValue: tmp16.variantValue } = obj);
                 return tmp16;
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-              tmp5 = prototype;
             }
           });
           found1 = str3.filter((item) => null != item);
@@ -273,15 +270,13 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
           found2 = mapped.filter((item) => null != item);
         }
         obj.bundledProducts = found2;
-        if (typeof tmp11 === "function") {
-          const tmp26 = new CollectiblesProductRecord(obj, tmp, premiumType, items, tmp15, type, str3);
+        if (typeof CollectiblesProductRecord === "function") {
+          const tmp26 = new CollectiblesProductRecord(obj, tmp, premiumType, items, closure_7, type, str3);
           ({ summary: tmp26.summary, type: tmp26.type, premiumType: tmp26.premiumType, items: tmp26.items, categorySkuId: tmp26.categorySkuId, isCategoryReward: tmp26.isCategoryReward, prices: tmp26.prices, bundledProducts: tmp26.bundledProducts, previewAssets: tmp26.previewAssets, googleSkuIds: tmp26.googleSkuIds, variants: tmp26.variants, eligibleOffers: tmp26.eligibleOffers, badgeOverride: tmp26.badgeOverride, hideBadge: tmp26.hideBadge, isFirstParty: tmp26.isFirstParty, baseVariantName: tmp26.baseVariantName, variantLabel: tmp26.variantLabel } = obj);
           return tmp26;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        tmp11 = CollectiblesProductRecord;
-        tmp15 = closure_7;
       }
       type = collectibles.type;
     }

@@ -6,28 +6,28 @@ import size from "module_2" /* 2 */;
 let closure_0 = {};
 const result = size.fileFinishedImporting("../discord_common/js/packages/shallow-equal/shallowEqual.tsx");
 
-export default function shallowEqual(arg0, arg1, arr) {
+export default function shallowEqual(activeMediaPlayerSource, _require, arr) {
   let tmp = arg3;
   if (arg3 === undefined) {
     tmp = closure_0;
   }
   ({ shouldWarnLargeObjects, logCallback } = tmp);
-  if (arg0 === arg1) {
+  if (activeMediaPlayerSource === _require) {
     return true;
   } else {
-    if (undefined !== arg0) {
-      if (undefined !== arg1) {
+    if (undefined !== activeMediaPlayerSource) {
+      if (undefined !== _require) {
         const _Object = Object;
-        const keys = Object.keys(arg0);
+        const keys = Object.keys(activeMediaPlayerSource);
         const _Object2 = Object;
-        if (keys.length !== Object.keys(arg1).length) {
+        if (keys.length !== Object.keys(_require).length) {
           return false;
         } else {
           let num = 0;
           if (0 < keys.length) {
             while (true) {
               let tmp4 = keys[num];
-              if (arg0[tmp4] !== arg1[tmp4]) {
+              if (activeMediaPlayerSource[tmp4] !== _require[tmp4]) {
                 if (null == arr) {
                   break;
                 } else if (!arr.includes(tmp4)) {

@@ -128,14 +128,13 @@ class RPCServerManager {
         obj = { channel_id: tmp, message: RPCHelpers.transformInternalTextMessage(tmp2), icon_url: null, title: null, body: null };
         let remoteIconURL = null;
         if (null != icon) {
-          remoteIconURL = tmp8(9559).getRemoteIconURL(icon);
-          const tmp8Result = tmp8(9559);
+          remoteIconURL = RPCHelpers.getRemoteIconURL(icon);
+          const tmp8Result = RPCHelpers;
         }
         obj.icon_url = remoteIconURL;
         obj.title = tmp3;
         obj.body = tmp4;
         const result = rpcServer.dispatchToSubscriptions(constants3.NOTIFICATION_CREATE, {}, obj);
-        tmp8 = require;
       }
     };
     obj.handleActivityJoin = function handleActivityJoin(applicationId) {
@@ -245,7 +244,7 @@ class RPCServerManager {
               }
               const user = UserStore.getUser(id);
               if (null != user) {
-                const currentUser = obj2.getCurrentUser();
+                const currentUser = UserStore.getCurrentUser();
                 if (null != currentUser) {
                   if (user.id !== currentUser.id) {
                     if (activity.type === constants.JOIN_REQUEST) {
@@ -258,11 +257,11 @@ class RPCServerManager {
                         if (applicationActivity.party.id === activity.party_id) {
                           application_id = applicationActivity.application_id;
                           type = activity.type;
-                          if (tmp13.JOIN === type) {
+                          if (constants.JOIN === type) {
                             const rpcServer = tmp.rpcServer;
                             obj = { user: transformUserDefault(user), activity: applicationActivity, type: activity.type, channel_id: channelId, message_id: message.id };
                             const result = rpcServer.dispatchToSubscriptions(constants3.ACTIVITY_INVITE, (socket) => socket.socket.application.id === application_id, obj);
-                          } else if (tmp13.JOIN_REQUEST === type) {
+                          } else if (constants.JOIN_REQUEST === type) {
                             const rpcServer2 = tmp.rpcServer;
                             obj = { user: transformUserDefault(user), activity: applicationActivity, type: activity.type, channel_id: channelId, message_id: message.id };
                             const result1 = rpcServer2.dispatchToSubscriptions(constants3.ACTIVITY_JOIN_REQUEST, (socket) => socket.socket.application.id === application_id, obj);
@@ -273,7 +272,6 @@ class RPCServerManager {
                   }
                 }
               }
-              obj2 = UserStore;
             }
           }
         }
@@ -296,10 +294,11 @@ class RPCServerManager {
         tmp3 = null != guild;
       }
       if (tmp3) {
-        const rpcServer = obj.rpcServer;
+        const rpcServer = tmp2.rpcServer;
         obj = { id, name: guild.name };
         const result = rpcServer.dispatchToSubscriptions(constants3.GUILD_CREATE, {}, obj);
       }
+      tmp2 = obj;
     };
     obj.handleChannelCreate = function handleChannelCreate(arg0) {
       if (0 !== obj.rpcServer.subscriptions.length) {
@@ -371,7 +370,7 @@ class RPCServerManager {
           if (relationshipType === constants2.NONE) {
             return 0;
           } else {
-            const user = authStore.getUser(tmp);
+            const user = authStore.getUser(item10023);
             if (null == user) {
               return 0;
             } else {
@@ -381,7 +380,6 @@ class RPCServerManager {
               const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => closure_0(dependencyMap[24]).transformApplicationRelationship(closure_0, socket.socket.application.id));
             }
           }
-          tmp = item10023;
         }
         const values = set.values();
         for (const item10023 of values) {
@@ -512,6 +510,7 @@ prototype["loadServer"] = function loadServer() {
     let setEventHandlerResult = rpcServer3.setEventHandler(tmp12[0], tmp12[1]);
     continue;
   }
+  tmp5 = entries[Symbol.iterator]();
 };
 prototype["init"] = function init() {
   const self = this;

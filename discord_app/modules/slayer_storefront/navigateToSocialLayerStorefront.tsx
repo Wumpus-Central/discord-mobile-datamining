@@ -19,7 +19,7 @@ function navigateToSocialLayerStorefrontWithGuildPreview() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(arg0, value) {
+let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

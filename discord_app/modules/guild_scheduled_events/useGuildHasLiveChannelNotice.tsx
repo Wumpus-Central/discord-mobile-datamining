@@ -56,6 +56,7 @@ export const useGuildHasLiveChannelNotice = function useGuildHasLiveChannelNotic
   if (null == guildActiveEvent) {
     return null != stateFromStores && !isStageNoticeHidden;
   }
+  const obj3 = channel(guildActiveEvent[11]);
 };
 export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeInfo(id) {
   activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(stateFromStores2[13]).useActiveEventOrStageInstanceChannel(id);
@@ -130,4 +131,6 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
   if (tmp10) {
     flag = stateFromStores2;
   }
+  const obj5 = activeEventOrStageInstanceChannel(stateFromStores2[14]);
+  tmp10 = null != activeEventOrStageInstanceChannel && null != guildActiveEvent;
 };

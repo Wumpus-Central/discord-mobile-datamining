@@ -58,7 +58,6 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   ({ gift_style, guild_id, deleted } = user);
   if (null != user.sku) {
     const fromServer = SKURecord.createFromServer(user.sku);
-    const tmp19 = SKURecord;
   }
   let source_type = user.source_type;
   if (source_type == null) {
@@ -69,7 +68,7 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
     fulfillment_status = null;
   }
   if (typeof EntitlementRecord === "function") {
-    const tmp26 = new EntitlementRecord(tmp4, tmp19, tmp, new.target, id, sku_id, application_id, tmp2, user_id, gifter_user_id, type, branches, date, date1, subscription_id, id, parent_id, consumed, gift_code_batch_id, gift_style, guild_id, deleted, source_type);
+    const tmp26 = new EntitlementRecord(tmp4, SKURecord, EntitlementRecord, new.target, id, sku_id, application_id, tmp2, user_id, gifter_user_id, type, branches, date, date1, subscription_id, id, parent_id, consumed, gift_code_batch_id, gift_style, guild_id, deleted, source_type);
     tmp26.id = id;
     tmp26.skuId = sku_id;
     tmp26.applicationId = application_id;

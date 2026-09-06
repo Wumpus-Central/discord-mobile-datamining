@@ -1,7 +1,9 @@
 // === Module 13162: useCanGiftProduct ===
 
 // Module 13162 (useCanGiftProduct)
+import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4231 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
@@ -24,10 +26,10 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = result2;
   }
   if (!result) {
-    result = product.type === tmp(1889).CollectiblesItemType.EXTERNAL_SKU;
+    result = product.type === CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
-    let tmpResult = tmp(7554);
+    let tmpResult = CollectiblesUtils;
     let currency;
     if (result3 != null) {
       currency = result3.currency;
@@ -35,7 +37,7 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = tmpResult.shouldHideGiftingForCurrency(currency);
   }
   if (!result) {
-    tmpResult = tmp(4231);
+    tmpResult = BillingPlatformUtils;
     result = !tmpResult.isCollectibleGiftingSupported();
   }
   return !result;

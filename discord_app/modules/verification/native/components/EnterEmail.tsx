@@ -53,7 +53,7 @@ export default function EnterEmail(isChangeEmail) {
   const items2 = [navigation, stateFromStores, tmp8[1], value, emailToken, callback, isChangeEmail, changeEmailReason];
   const callback1 = emailToken.useCallback(() => {
     let obj = { onSubmit: null, onSuccess: null, hideUnverifiedBanner: true };
-    closure_0 = first(function*(arg0, value) {
+    closure_0 = first(function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -177,7 +177,7 @@ export default function EnterEmail(isChangeEmail) {
     items3[3] = closure_14(tmp2(tmp3[18]).Button, obj5);
     obj.children = items3;
     obj.children = closure_15(callback, obj);
-    tmp13Result = tmp13(closure_8, obj);
+    tmp13Result = closure_14(closure_8, obj);
     const tmp20 = changeEmailReason(tmp3[17]);
   }
   return tmp13Result;

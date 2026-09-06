@@ -60,11 +60,11 @@ export const BaseIconButton = noop.forwardRef((variant, ref) => {
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(4980).SMALL_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = ButtonConstants.SMALL_BUTTON_HEIGHT;
   } else if ("md" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(4980).MEDIUM_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = ButtonConstants.MEDIUM_BUTTON_HEIGHT;
   }
-  const bound = Math.max((tmp4(4980).MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
+  const bound = Math.max((ButtonConstants.MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
   obj = {};
   const merged = Object.assign(variant);
   obj.ref = ref;
@@ -87,7 +87,7 @@ export const BaseIconButton = noop.forwardRef((variant, ref) => {
     obj1 = { source: icon, style: null };
     const items2 = [iconTintStyles, iconSizeStyles];
     obj1.style = items2;
-    tmp10Result = tmp10(Icon, obj1);
+    tmp10Result = <Icon source={icon} style={null} />;
   }
   obj.children = tmp10Result;
   obj.children = jsx(ButtonPill.ButtonPill, { style: null, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });

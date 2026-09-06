@@ -49,7 +49,6 @@ export default function FormChannelPicker(channelId) {
   obj.style = items2;
   let tmp10 = null;
   const tmp3 = require("FormStyles")();
-  const tmp8 = closure_5;
   if (null != stateFromStores) {
     let TextIcon = tmp5(tmp2[11]).getChannelIconComponent(stateFromStores);
     if (TextIcon == null) {
@@ -74,5 +73,5 @@ export default function FormChannelPicker(channelId) {
   const tmpResult = require("TouchableHitBox");
   items3[2] = closure_4(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: require("module_9939") });
   obj.children = items3;
-  return tmp8(tmpResult, obj);
+  return closure_5(tmpResult, obj);
 };

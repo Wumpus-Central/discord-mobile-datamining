@@ -52,7 +52,7 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     return obj;
   }, items1);
   obj = { cancelText: null, onClose: null, renderConfirmButton: null, children: null };
-  let intl = tmp4(tmp2[5]).intl;
+  let intl = require("util").intl;
   obj.cancelText = intl.string(require("util").t.cpT0Cq);
   obj.onClose = onClose;
   obj.renderConfirmButton = function renderConfirmButton() {

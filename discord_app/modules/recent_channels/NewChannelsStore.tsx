@@ -85,7 +85,7 @@ function initializeNewChannels(guildId) {
     if (null != joinedAt) {
       const _Set2 = Set;
       set = new Set();
-      tmp[guildId] = set;
+      dependencyMap[guildId] = set;
       const _Date2 = Date;
       const date = new Date(joinedAt);
       const time = date.getTime();
@@ -110,7 +110,7 @@ function initializeNewChannels(guildId) {
           }
           return tmp4;
         }));
-        tmp[guildId] = set1;
+        dependencyMap[guildId] = set1;
         let _Date = Date;
         closure_17[guildId] = Date.now();
       }
@@ -275,7 +275,7 @@ const newChannelsStore = new NewChannelsStore(DispatcherDefault, {
     }
     if (true === hasItem) {
       if (!set1.has(guild.id)) {
-        obj2.add(guild.id);
+        set1.add(guild.id);
         const guild1 = GuildStore.getGuild(guild.id);
         const _Set = Set;
         set = new Set();
@@ -297,7 +297,6 @@ const newChannelsStore = new NewChannelsStore(DispatcherDefault, {
         closure_17[guild.id] = Date.now();
         return true;
       }
-      obj2 = set1;
     }
     if (true !== hasItem) {
       set1.delete(guild.id);

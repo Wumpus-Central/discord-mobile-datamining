@@ -71,22 +71,22 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   const memo1 = obj2.useMemo(() => {
     let redemptionLink;
     if (memo != null) {
-      redemptionLink = tmp.redemptionLink;
+      redemptionLink = memo.redemptionLink;
     }
     if (null != redemptionLink) {
-      if ("" !== tmp.redemptionLink) {
+      if ("" !== memo.redemptionLink) {
         let code;
         if (rewardCode != null) {
-          code = tmp3.code;
+          code = rewardCode.code;
         }
         if (null != code) {
-          if ("" !== tmp3.code) {
+          if ("" !== rewardCode.code) {
             const _encodeURIComponent = encodeURIComponent;
-            redemptionLink = tmp.redemptionLink.replace(REWARD_CODE_PLACEHOLDER, encodeURIComponent(tmp3.code));
+            redemptionLink = memo.redemptionLink.replace(REWARD_CODE_PLACEHOLDER, encodeURIComponent(rewardCode.code));
           }
           return redemptionLink;
         }
-        redemptionLink = tmp.redemptionLink;
+        redemptionLink = memo.redemptionLink;
       }
     }
   }, items3);
@@ -128,7 +128,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   let tmp16Result = null != rewardCode && null != rewardCodeRedemptionInstructions;
   if (tmp16Result) {
     obj3 = { style: tmp3.redemptionInstructions, variant: "text-md/normal", color: "text-default", children: tmp(tmp2[21]).parse(rewardCodeRedemptionInstructions, true, { allowLinks: true }) };
-    tmp16Result = tmp16(tmp4(tmp2[20]).Text, obj3);
+    tmp16Result = closure_8(tmp4(tmp2[20]).Text, obj3);
     const tmpResult = tmp(tmp2[21]);
   }
   const items5 = [tmp16Result, ];
@@ -149,7 +149,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   tmp16Result = null != code3;
   if (tmp16Result) {
     const obj6 = { IconComponent: tmp4(tmp2[16]).CopyIcon };
-    tmp16Result = tmp16(tmp4(tmp2[23]).TableRow.Icon, obj6);
+    tmp16Result = closure_8(tmp4(tmp2[23]).TableRow.Icon, obj6);
   }
   obj5.trailing = tmp16Result;
   let code4;
@@ -172,7 +172,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   let tmp16Result1 = null == code5;
   if (tmp16Result1) {
     const obj8 = { style: tmp3.claimingIndicator, size: 24 };
-    tmp16Result1 = tmp16(memo, obj8);
+    tmp16Result1 = closure_8(memo, obj8);
   }
   const obj9 = { children: null };
   items6[1] = tmp16Result1;
@@ -187,14 +187,15 @@ function QuestRewardCodeClaimBottomSheet(quest) {
       let stringResult = intl3.string(tmp4(tmp2[11]).t["+zx47d"]);
     }
     obj11.text = stringResult;
-    obj10.children = tmp16(tmp30, obj11);
-    items7[1] = tmp16(tmp18, obj10);
+    obj10.children = closure_8(tmp30, obj11);
+    items7[1] = closure_8(closure_5, obj10);
     obj2.children = items7;
-    obj.children = tmp17(tmp18, obj2);
-    return tmp16(tmp4(tmp2[18]).BottomSheet, obj);
+    obj.children = closure_9(closure_5, obj2);
+    return closure_8(tmp4(tmp2[18]).BottomSheet, obj);
   }
   const intl2 = tmp4(tmp2[11]).intl;
   stringResult = intl2.string(tmp4(tmp2[11]).t["23SS+z"]);
+  const obj7 = { hasIcons: false, children: closure_8(quest(hasError[23]).TableRow, obj5) };
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);

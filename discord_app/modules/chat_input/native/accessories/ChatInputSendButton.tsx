@@ -2,8 +2,13 @@
 
 // Module 12254 (ChatInputSendButton)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useToken from "useToken" /* 4262 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import SendMessageIcon from "SendMessageIcon" /* 4505 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12239 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12246 */;
+import VoiceMessageButtonDefault from "VoiceMessageButton" /* 12255 */;
 import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 12259 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,11 +18,11 @@ import SlowmodeStore from "SlowmodeStore" /* 7687 */;
 require = fn;
 function renderChatInputSendButton(type, arg1, state, cleanup) {
   const merged = Object.assign(arg1);
-  return <closure_12 key={arg0} type={arg0} state={arg2} cleanup={arg3} />;
+  return <closure_12 key={type} type={type} state={state} cleanup={cleanup} />;
 }
 function getChatInputSendButtonItemKey(sendVoiceMessageEnabled) {
   if (!sendVoiceMessageEnabled.sendVoiceMessageEnabled) {
-    return tmp ? tmp2.BUTTON_SEND : tmp2.BUTTON_SEND_DISABLED;
+    return tmp ? constants.BUTTON_SEND : constants.BUTTON_SEND_DISABLED;
   }
 }
 function FloatingSlot(arg0) {
@@ -55,25 +60,25 @@ let closure_12 = noop.memo((type) => {
     num = closure_8;
   }
   obj = { cleanup, state, withBounce, bounceEnterDelayMs: num, children: null };
-  let tmp3Result = tmp3(12246);
+  let tmp3Result = ChatInputActionButtonTransitionItemDefault;
   if (type === constants.BUTTON_SEND_VOICE_MESSAGE || type === constants.BUTTON_SEND_VOICE_MESSAGE_DISABLED) {
     obj = { disabled: isOnCooldown, channelId };
-    let tmp7Result = tmp7(tmp3(12255), obj);
+    let tmp7Result = jsx(VoiceMessageButtonDefault, { disabled: isOnCooldown, channelId });
   } else {
     obj1 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
     ({ button: obj4.style, buttonActive: obj4.activeStyle, iconActive: obj4.activeIconStyle } = tmp5);
-    tmp3Result = tmp3(12239);
-    obj1.IconComponent = tmp(4505).SendMessageIcon;
-    const intl = tmp(1114).intl;
-    obj1.accessibilityLabel = intl.string(tmp(1114).t.TXNS7S);
+    tmp3Result = ChatInputActionButtonDefault;
+    obj1.IconComponent = SendMessageIcon.SendMessageIcon;
+    const intl = util.intl;
+    obj1.accessibilityLabel = intl.string(util.t.TXNS7S);
     obj1.onPress = onSendMessage;
     obj1.disabled = !sendEnabled;
-    tmp7Result = tmp7(tmp3Result, obj1);
+    tmp7Result = <tmp3Result active style={null} activeStyle={null} activeIconStyle={null} IconComponent={null} accessibilityLabel={null} onPress={null} disabled={null} />;
   }
   obj.children = tmp7Result;
   return <tmp3Result cleanup={cleanup} state={state} withBounce={withBounce} bounceEnterDelayMs={num}>{null}</tmp3Result>;
 });
-const forwardRefResult = noop.forwardRef((channel, ref) => {
+const forwardRefResult = noop.forwardRef((channel, arg1) => {
   channel = channel.channel;
   ({ canSendVoiceMessage, onSendMessage } = channel);
   let flag = channel.requireTextContent;
@@ -122,7 +127,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     const items = [{ channelId: channel.id, isOnCooldown: stateFromStores1, onSendMessage, sendEnabled, sendVoiceMessageEnabled: canSendVoiceMessage, withBounce: true }];
     return items;
   }, items3);
-  const imperativeHandle = obj5.useImperativeHandle(ref, () => ({ setHasText }));
+  const imperativeHandle = obj5.useImperativeHandle(arg1, () => ({ setHasText }));
   if (stateFromStores) {
     const result = 2 * token2;
     obj = { style: null, children: null };
@@ -130,7 +135,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     obj.style = size;
     if (canSendVoiceMessage) {
       obj = { disabled: stateFromStores1, channelId: channel.id };
-      let tmp15Result = tmp15(tmp3(12255), obj);
+      let tmp15Result = jsx(onSendMessage(12255), { disabled: stateFromStores1, channelId: channel.id });
     } else {
       obj1 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
       ({ button: obj11.style, buttonActive: obj11.activeStyle, iconActive: obj11.activeIconStyle } = tmp7);
@@ -139,15 +144,15 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
       obj1.accessibilityLabel = intl.string(tmp(1114).t.TXNS7S);
       obj1.onPress = onSendMessage;
       obj1.disabled = !tmp12;
-      tmp15Result = tmp15(tmp3(12239), obj1);
-      const tmp3Result = tmp3(12239);
+      tmp15Result = jsx(onSendMessage(12239), { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null });
+      const tmp3Result = onSendMessage(12239);
     }
     obj.children = tmp15Result;
-    return tmp15(canSendVoiceMessage, obj);
+    return <canSendVoiceMessage style={null}>{null}</canSendVoiceMessage>;
   } else {
     obj2 = { items: memo, renderItem: renderChatInputSendButton, getItemKey: getChatInputSendButtonItemKey };
-    obj3 = { buttonWidth: token, buttonHeight: token1, buttonMargin: token2, sendVoiceMessageEnabled: canSendVoiceMessage, children: tmp15(tmp(4271).TransitionGroup, obj2) };
-    return tmp15(FloatingSlot, obj3);
+    obj3 = { buttonWidth: token, buttonHeight: token1, buttonMargin: token2, sendVoiceMessageEnabled: canSendVoiceMessage, children: jsx(tmp(4271).TransitionGroup, { items: memo, renderItem: renderChatInputSendButton, getItemKey: getChatInputSendButtonItemKey }) };
+    return <FloatingSlot buttonWidth={token} buttonHeight={token1} buttonMargin={token2} sendVoiceMessageEnabled={canSendVoiceMessage}>{jsx(tmp(4271).TransitionGroup, { items: memo, renderItem: renderChatInputSendButton, getItemKey: getChatInputSendButtonItemKey })}</FloatingSlot>;
   }
   const obj6 = channel(504);
 });

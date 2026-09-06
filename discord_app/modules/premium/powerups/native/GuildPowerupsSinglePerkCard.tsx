@@ -23,7 +23,6 @@ export default function GuildPowerupsSinglePerkCard(badge) {
   const tmp2 = useGuildPowerupRollbackEnabledDefault(guildId, powerup, "GuildPowerupsSinglePerkCard");
   obj = { title: powerup.title, description: powerup.description, cost: powerup.cost, imageUrl: null, status: null, onPress: null, badge: null };
   const tmp4 = useGuildPowerupOnShowMoreDefault(guildId, powerup);
-  const tmp5 = jsx;
   if (str == null) {
     str = "";
   }
@@ -31,5 +30,5 @@ export default function GuildPowerupsSinglePerkCard(badge) {
   obj.status = calculatePowerupCardStatus;
   obj.onPress = tmp4;
   obj.badge = badge.badge;
-  return tmp5(GuildPowerupsPerkCardDefault, obj);
+  return jsx(GuildPowerupsPerkCardDefault, { title: powerup.title, description: powerup.description, cost: powerup.cost, imageUrl: null, status: null, onPress: null, badge: null });
 };

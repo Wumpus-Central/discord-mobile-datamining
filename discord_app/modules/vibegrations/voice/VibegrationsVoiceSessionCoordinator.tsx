@@ -31,24 +31,23 @@ class VibegrationsVoiceSessionCoordinator {
       const sessions = obj.sessions;
       const items = [...sessions.values()];
       for (const item10014 of items) {
-        let tmp = item10014;
         if (!item10014.pooled) {
-          item10014.pooled = FrameVisibilityStore.isFramePooled(tmp.frameId);
+          item10014.pooled = FrameVisibilityStore.isFramePooled(item10014.frameId);
         }
-        if (tmp.pooled) {
-          if (!FrameVisibilityStore.isFramePooled(tmp.frameId)) {
-            let releaseSessionResult = obj.releaseSession(tmp);
+        if (item10014.pooled) {
+          if (!FrameVisibilityStore.isFramePooled(item10014.frameId)) {
+            let releaseSessionResult = obj.releaseSession(item10014);
           }
           continue;
         }
-        let tmp12 = !FrameVisibilityStore.isFrameVisible(tmp.frameId);
+        let tmp12 = !FrameVisibilityStore.isFrameVisible(item10014.frameId);
         let tmp13 = tmp12;
-        if (tmp.backgrounded !== tmp12) {
-          tmp.backgrounded = tmp13;
+        if (item10014.backgrounded !== tmp12) {
+          item10014.backgrounded = tmp13;
           if (!tmp13) {
             let sum = obj.focusSequence + 1;
             obj.focusSequence = sum;
-            tmp.focusSequence = sum;
+            item10014.focusSequence = sum;
           }
         }
       }
@@ -152,7 +151,7 @@ prototype["start"] = function start(id) {
         const sessions = self.sessions;
         const result = sessions.set(frameId, obj);
         if (self.unsubscribeFrameLifecycle == null) {
-          self.unsubscribeFrameLifecycle = obj4.subscribe(self.handleFrameLifecycleChange);
+          self.unsubscribeFrameLifecycle = FrameVisibilityStore.subscribe(self.handleFrameLifecycleChange);
         }
         return obj;
       } else {
@@ -161,7 +160,6 @@ prototype["start"] = function start(id) {
         throw tmp19;
       }
       const obj3 = size(1256);
-      obj4 = FrameVisibilityStore;
     }
   }
   const obj1 = { errorCode: RPCErrors.INVALID_CHANNEL };
@@ -209,7 +207,7 @@ prototype["retireSpatialClaim"] = function retireSpatialClaim(validateSessionRes
   }
   self.syncSpatialHolder();
 };
-prototype["syncSpatialHolder"] = function syncSpatialHolder(validateSessionResult) {
+prototype["syncSpatialHolder"] = function syncSpatialHolder() {
   const self = this;
   let tmp = validateSessionResult;
   if (validateSessionResult === undefined) {
@@ -251,15 +249,14 @@ prototype["pickFocusedSpatialSession"] = function pickFocusedSpatialSession() {
   const sessions = this.sessions;
   const values = sessions.values();
   for (const item10011 of values) {
-    let tmp3 = item10011;
     let spatialEnabled = item10011.spatialEnabled;
     if (spatialEnabled) {
-      spatialEnabled = !tmp3.backgrounded;
+      spatialEnabled = !item10011.backgrounded;
     }
     if (spatialEnabled) {
       let tmp6 = null == tmp;
       if (!tmp6) {
-        tmp6 = tmp3.focusSequence > tmp.focusSequence;
+        tmp6 = item10011.focusSequence > tmp.focusSequence;
       }
       spatialEnabled = tmp6;
     }
@@ -283,7 +280,6 @@ prototype["update"] = function update(id, id, arg2, arr) {
       importDefault = self.getParticipantIds(validateSessionResult.channelId);
       dependencyMap = AuthenticationStore.getId();
       const _Set = Set;
-      const set = new Set();
       validateSessionResult.sources = arr.map((user_id) => {
         user_id = user_id.user_id;
         if (user_id !== closure_2) {
@@ -304,6 +300,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
       if (self.spatialHolder === validateSessionResult) {
         self.scheduleApply(validateSessionResult);
       }
+      const set = new Set();
     }
   } else {
     obj = { errorCode: RPCErrors.INVALID_COMMAND };
@@ -476,9 +473,9 @@ prototype["scheduleApply"] = function scheduleApply(validateSessionResult) {
     validateSessionResult.updateTimer = setTimeout(() => {
       closure_0.updateTimer = null;
       if (self.spatialHolder === closure_0) {
-        if (!obj.applySources(tmp)) {
-          obj.demoteFromSpatial(tmp);
-          obj.syncSpatialHolder();
+        if (!self.applySources(closure_0)) {
+          self.demoteFromSpatial(closure_0);
+          self.syncSpatialHolder();
         }
       }
     }, 50);
@@ -612,24 +609,23 @@ size.handleFrameLifecycleChange = function handleFrameLifecycleChange() {
   const sessions = obj.sessions;
   const items = [...sessions.values()];
   for (const item10014 of items) {
-    let tmp = item10014;
     if (!item10014.pooled) {
-      item10014.pooled = FrameVisibilityStore.isFramePooled(tmp.frameId);
+      item10014.pooled = FrameVisibilityStore.isFramePooled(item10014.frameId);
     }
-    if (tmp.pooled) {
-      if (!FrameVisibilityStore.isFramePooled(tmp.frameId)) {
-        let releaseSessionResult = obj.releaseSession(tmp);
+    if (item10014.pooled) {
+      if (!FrameVisibilityStore.isFramePooled(item10014.frameId)) {
+        let releaseSessionResult = obj.releaseSession(item10014);
       }
       continue;
     }
-    let tmp12 = !FrameVisibilityStore.isFrameVisible(tmp.frameId);
+    let tmp12 = !FrameVisibilityStore.isFrameVisible(item10014.frameId);
     let tmp13 = tmp12;
-    if (tmp.backgrounded !== tmp12) {
-      tmp.backgrounded = tmp13;
+    if (item10014.backgrounded !== tmp12) {
+      item10014.backgrounded = tmp13;
       if (!tmp13) {
         let sum = obj.focusSequence + 1;
         obj.focusSequence = sum;
-        tmp.focusSequence = sum;
+        item10014.focusSequence = sum;
       }
     }
   }

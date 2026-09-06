@@ -250,7 +250,7 @@ class RadioGroup {
               tmp2Result = null;
               if (flag5) {
                 obj = { style: divider.divider };
-                tmp2Result = tmp2(View, obj);
+                tmp2Result = timestampProducer(View, obj);
               }
             }
             children[1] = tmp2Result;

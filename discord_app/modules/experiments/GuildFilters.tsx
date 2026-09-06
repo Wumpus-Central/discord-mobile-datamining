@@ -10,16 +10,16 @@ import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MurmurHashV3 from "MurmurHashV3" /* 1241 */;
 
-function isInRange(memberCount, arg1, arg2) {
+function isInRange(memberCount, importDefault, dependencyMap) {
   try {
     const obj = IntegerDefault(memberCount);
     let tmp6 = null;
-    if (null != arg1) {
-      tmp6 = tmp3(14)(arg1);
+    if (null != importDefault) {
+      tmp6 = IntegerDefault(importDefault);
     }
     let tmp9 = null;
-    if (null != arg2) {
-      tmp9 = tmp3(14)(arg2);
+    if (null != dependencyMap) {
+      tmp9 = IntegerDefault(dependencyMap);
     }
     let tmp12 = null == tmp6;
     if (!tmp12) {
@@ -43,12 +43,11 @@ function getRangeData(arg0) {
   while (tmp3 !== undefined) {
     let tmp6 = _slicedToArray(tmp4, 2);
     [tmp7, tmp8] = tmp6;
-    let tmp9 = importDefault;
     let obj = MurmurHashV3;
     if (obj.v3("min_id") === tmp7) {
       min = tmp8;
     } else {
-      let tmp9Result = tmp9(1241);
+      let tmp9Result = MurmurHashV3;
       if (tmp9Result.v3("max_id") === tmp7) {
         max = tmp8;
       }

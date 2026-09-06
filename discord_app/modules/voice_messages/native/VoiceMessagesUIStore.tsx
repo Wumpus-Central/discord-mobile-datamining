@@ -71,6 +71,7 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
     obj = { waveformVersion: waveformVersion + 1 };
     obj.setState(obj);
   });
+  const obj2 = waveformVersion(1249);
 };
 export const showVoiceMessagesTooltip = function showVoiceMessagesTooltip() {
   ReactBatchUpdates.batchUpdates(() => {

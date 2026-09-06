@@ -28,22 +28,21 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   const obj2 = require("useUserCommunicationDisabled");
   const items = [PermissionStore];
   let stateFromStores = tmp(504).useStateFromStores(items, () => {
-    let tmp = null != closure_0;
+    let tmp = null != channel;
     if (tmp) {
-      tmp = null != closure_1;
+      tmp = null != message;
     }
     if (tmp) {
-      if (obj.isPrivate()) {
-        let hasItem = !obj.isSystemDM();
+      if (channel.isPrivate()) {
+        let hasItem = !channel.isSystemDM();
       } else {
-        hasItem = obj2.can(Permissions.SEND_MESSAGES, obj) && obj2.can(Permissions.READ_MESSAGE_HISTORY, obj);
+        hasItem = PermissionStore.can(Permissions.SEND_MESSAGES, channel) && PermissionStore.can(Permissions.READ_MESSAGE_HISTORY, channel);
       }
       if (hasItem) {
         const REPLYABLE = MessageTypes.MessageTypesSets.REPLYABLE;
-        hasItem = REPLYABLE.has(tmp3.type);
+        hasItem = REPLYABLE.has(message.type);
       }
       tmp = hasItem;
-      tmp3 = closure_1;
     }
     return tmp;
   });
@@ -75,10 +74,10 @@ export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
   if (isPrivate.isPrivate()) {
     let hasItem = !isPrivate.isSystemDM();
   } else {
-    hasItem = obj2.can(Permissions.SEND_MESSAGES, isPrivate) && obj2.can(Permissions.READ_MESSAGE_HISTORY, isPrivate);
+    hasItem = PermissionStore.can(Permissions.SEND_MESSAGES, isPrivate) && PermissionStore.can(Permissions.READ_MESSAGE_HISTORY, isPrivate);
   }
   if (hasItem) {
-    const REPLYABLE = tmp(1089).MessageTypesSets.REPLYABLE;
+    const REPLYABLE = MessageTypes.MessageTypesSets.REPLYABLE;
     hasItem = REPLYABLE.has(type.type);
   }
   const currentUser = UserStore.getCurrentUser();

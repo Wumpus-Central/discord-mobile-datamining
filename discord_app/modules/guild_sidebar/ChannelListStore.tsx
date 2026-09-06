@@ -316,16 +316,15 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
     const iter = arg0.voiceStates[Symbol.iterator]();
     while (iter !== undefined) {
       ({ channelId, oldChannelId } = nextResult);
-      let tmp2 = oldChannelId;
       let hasItem = null == oldChannelId;
       if (!hasItem) {
-        hasItem = set.has(tmp2);
+        hasItem = set.has(oldChannelId);
       }
       if (!hasItem) {
-        if (closure_20.nonPositionalChannelIdUpdate(tmp2)) {
+        if (closure_20.nonPositionalChannelIdUpdate(oldChannelId)) {
           flag = true;
         }
-        let addResult = set.add(tmp2);
+        let addResult = set.add(oldChannelId);
       }
       let hasItem1 = null == channelId;
       if (!hasItem1) {

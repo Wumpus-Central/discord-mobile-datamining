@@ -35,13 +35,13 @@ function computeLayoutForState(value) {
     ChannelStore = obj.isTextInputValueEmpty(searchContext);
     closure_4 = obj.hasUserAddedTags(searchContext);
     closure_5 = obj.isTagsEmpty(searchContext);
-    const searchResultsQuery = obj.getSearchResultsQuery(searchContext);
     const queryString = obj.getQueryString(searchContext);
     if (isInitialSearchQueryResult) {
       let arr = closure_10[searchContext.type];
     } else {
       arr = closure_11[searchContext.type];
     }
+    const searchResultsQuery = obj.getSearchResultsQuery(searchContext);
     const channel = ChannelStore.getChannel(require("SearchUtils").getChannelIdFromSearchContext(searchContext));
     let flag;
     if (channel != null) {
@@ -66,9 +66,9 @@ function computeLayoutForState(value) {
         }
         return tmp4;
       } else {
-        if (tmp.RECENT !== item) {
-          if (tmp.GUILD_CHANNELS !== item) {
-            if (tmp.PEOPLE !== item) {
+        if (constants.RECENT !== item) {
+          if (constants.GUILD_CHANNELS !== item) {
+            if (constants.PEOPLE !== item) {
               return true;
             }
           }
@@ -81,9 +81,9 @@ function computeLayoutForState(value) {
     const reduced = found.reduce((acc, item) => {
       if (constants.MEMBERS === item) {
         acc[item] = SearchMemberTabStore.getCount(closure_8);
-      } else if (tmp.GUILD_CHANNELS === item) {
+      } else if (constants.GUILD_CHANNELS === item) {
         acc[item] = SearchGuildChannelTabStore.getCount(closure_8);
-      } else if (tmp.PEOPLE === item) {
+      } else if (constants.PEOPLE === item) {
         acc[item] = SearchPeopleTabStore.getCount(closure_8);
       } else {
         acc[item] = SearchMessageStore.getTotalCount(SearchUtils.getSearchTabFetchId(searchContext, item, searchResultsQuery));

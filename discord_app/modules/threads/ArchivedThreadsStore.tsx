@@ -56,7 +56,7 @@ function resortListState(value) {
           if (true !== someResult) {
             return false;
           }
-        } else if (tmp20(1968).ThreadSearchTagSetting.MATCH_ALL === tmp19) {
+        } else if (ThreadSearchTagSetting.ThreadSearchTagSetting.MATCH_ALL === dependencyMap) {
           const values = size.values();
           const iter = values[Symbol.iterator]();
           while (iter !== undefined) {
@@ -73,8 +73,6 @@ function resortListState(value) {
           }
           const nextResult = iter.next();
         }
-        tmp19 = dependencyMap;
-        tmp20 = require;
       }
       if (_slicedToArray) {
         if (null != c4) {
@@ -107,6 +105,7 @@ function resortListState(value) {
     const mapped = sorted.map((id) => id.id);
     const tmp7Result = _modDef12(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
+    let iter = mapped.reverse();
   } else if (sortOrder === sortOrder(1966).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = ReadStateStore.lastMessageId(id);
@@ -347,6 +346,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(DispatcherDefault, {
         value.nextOffset = tagFilter.offset + 25;
         value.loading = false;
         value.isInitialLoad = false;
+        tmp9 = null != channel && channel.isForumLikeChannel();
       }
     } else if (1 === iter.size) {
       iter = iter.values();

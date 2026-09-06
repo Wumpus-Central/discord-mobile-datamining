@@ -98,7 +98,6 @@ export default function FinishingTouchesScreen() {
     }
   }, []);
   const tmp11 = _slicedToArray(obj.useState(!closure_11.some((item) => PermissionUtilsAll.canEveryone(item, guild))), 2);
-  const tmp8 = constants2;
   const tmp19 = defaultMessageNotifications(17666)();
   const enableCommunitySharedStyles = guild(17665).useEnableCommunitySharedStyles();
   obj = { headerRef: ref, currentStep: tmp2(17663).EnableCommunityModalSteps.STEP_3, onSuccess: callback1, disableNextStep: !first1, buttonText: null, children: null };
@@ -136,7 +135,7 @@ export default function FinishingTouchesScreen() {
     prop2 = guild.defaultMessageNotifications;
   }
   const obj9 = { hasIcons: false, children: null };
-  obj7.value = prop2 === tmp8.ONLY_MENTIONS;
+  obj7.value = prop2 === constants2.ONLY_MENTIONS;
   obj7.disabled = defaultMessageNotifications === constants2.ONLY_MENTIONS;
   obj7.onValueChange = callback;
   obj6.children = closure_16(guild(7201).TableSwitchRow, obj7);

@@ -93,7 +93,7 @@ export default function DevToolsDismissableContentsScreen() {
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
   let obj = ref(9931);
-  let tmp2 = useSafeAreaInsetsDefault();
+  const tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(initialSearchQuery.useState(() => {
@@ -104,8 +104,8 @@ export default function DevToolsDismissableContentsScreen() {
     return str;
   }), 1)[0];
   const tmp7 = _slicedToArray(initialSearchQuery.useState(() => {
-    let str = closure_1_2;
-    if (closure_1_2 == null) {
+    let str = dependencyMap;
+    if (dependencyMap == null) {
       str = "";
     }
     const items = [];
@@ -140,7 +140,7 @@ export default function DevToolsDismissableContentsScreen() {
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
   let tmp4 = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  let tmp9 = _slicedToArray(ref(15011).useForceBountiesSwipeUpNux(), 2);
+  const tmp9 = _slicedToArray(ref(15011).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
   closure_10 = tmp11;
   const items1 = [tmp9[1]];
@@ -162,13 +162,11 @@ export default function DevToolsDismissableContentsScreen() {
   }, []);
   const items2 = [tmp5, callback1];
   const callback2 = initialSearchQuery.useCallback((str) => {
-    let tmp5;
-    tmp5(str);
+    dependencyMap(str);
     const items = [];
     for (const key10015 in dismissible_content.DismissibleContent) {
       let isNaNResult = tmp3;
       if (!tmp3) {
-        tmp5 = dependencyMap;
         let tmp6 = fuzzysearchDefault;
         let formatted = arg0.toLowerCase();
         isNaNResult = tmp6(formatted, key10015.toLowerCase());

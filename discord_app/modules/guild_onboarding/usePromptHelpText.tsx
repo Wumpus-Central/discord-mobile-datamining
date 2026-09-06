@@ -50,20 +50,20 @@ export default function usePromptHelpText(arg0) {
   }
   let str = "";
   if (!singleSelect) {
-    const intl = tmp2(1114).intl;
-    str = intl.string(tmp2(1114).t.JshhEl);
+    const intl = selectedRoleIds(1114).intl;
+    str = intl.string(selectedRoleIds(1114).t.JshhEl);
   }
   if (0 === stateFromStoresArray1.length) {
     if (mapped.length > 0) {
       let str6 = "";
       if (0 !== mapped.length) {
-        const intl4 = tmp2(1114).intl;
+        const intl4 = selectedRoleIds(1114).intl;
         obj = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
         const _Math3 = Math;
         obj.extraCount = Math.max(mapped.length - 2, 0);
         [obj6.role1, obj6.role2] = mapped;
         obj.itemHook = itemHook;
-        str6 = intl4.format(tmp2(1114).t.Kj5GIT, obj);
+        str6 = intl4.format(selectedRoleIds(1114).t.Kj5GIT, obj);
       }
       str = str6;
       let str2 = "";
@@ -75,25 +75,25 @@ export default function usePromptHelpText(arg0) {
   if (stateFromStoresArray1.length > 0) {
     let str3 = "";
     if (0 !== stateFromStoresArray1.length) {
-      const intl2 = tmp2(1114).intl;
+      const intl2 = selectedRoleIds(1114).intl;
       obj1 = { count: stateFromStoresArray1.length, extraCount: null, channel1: null, channel2: null, itemHook: null };
       const _Math = Math;
       obj1.extraCount = Math.max(stateFromStoresArray1.length - 2, 0);
       [obj4.channel1, obj4.channel2] = stateFromStoresArray1;
       obj1.itemHook = itemHook;
-      str3 = intl2.format(tmp2(1114).t.Rj841R, obj1);
+      str3 = intl2.format(selectedRoleIds(1114).t.Rj841R, obj1);
     }
     let str4 = "";
     if (mapped.length > 0) {
       let str5 = "";
       if (0 !== mapped.length) {
-        const intl3 = tmp2(1114).intl;
+        const intl3 = selectedRoleIds(1114).intl;
         const obj2 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
         const _Math2 = Math;
         obj2.extraCount = Math.max(mapped.length - 2, 0);
         [obj5.role1, obj5.role2] = mapped;
         obj2.itemHook = itemHook;
-        str5 = intl3.format(tmp2(1114).t.cJZxWf, obj2);
+        str5 = intl3.format(selectedRoleIds(1114).t.cJZxWf, obj2);
       }
       str4 = str5;
     }
@@ -139,35 +139,35 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
   }
   let str = "";
   if (!singleSelect) {
-    const intl = tmp2(1114).intl;
-    str = intl.string(tmp2(1114).t.JshhEl);
+    const intl = selectedRoleIds(1114).intl;
+    str = intl.string(selectedRoleIds(1114).t.JshhEl);
   }
   if (0 === stateFromStoresArray1.length) {
     if (mapped.length > 0) {
-      const intl4 = tmp2(1114).intl;
+      const intl4 = selectedRoleIds(1114).intl;
       obj = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
       const _Math4 = Math;
       obj.extraCount = Math.max(mapped.length - 2, 0);
       [obj5.role1, obj5.role2] = mapped;
       obj.itemHook = itemHook;
-      str = intl4.format(tmp2(1114).t.vdtNYa, obj);
+      str = intl4.format(selectedRoleIds(1114).t.vdtNYa, obj);
     }
     obj = { helpText: str, helpTextAdditional: "" };
     return obj;
   }
   if (stateFromStoresArray1.length > 0) {
     if (0 === mapped.length) {
-      const intl3 = tmp2(1114).intl;
+      const intl3 = selectedRoleIds(1114).intl;
       obj1 = { count: stateFromStoresArray1.length, extraCount: null, channel1: null, channel2: null, itemHook: null };
       const _Math3 = Math;
       obj1.extraCount = Math.max(stateFromStoresArray1.length - 2, 0);
       [obj4.channel1, obj4.channel2] = stateFromStoresArray1;
       obj1.itemHook = itemHook;
-      str = intl3.format(tmp2(1114).t.ZKywGU, obj1);
+      str = intl3.format(selectedRoleIds(1114).t.ZKywGU, obj1);
     }
   }
   if (tmp5) {
-    const intl2 = tmp2(1114).intl;
+    const intl2 = selectedRoleIds(1114).intl;
     const obj2 = { channelCount: stateFromStoresArray1.length, extraChannelCount: null, channel1: null, channel2: null, itemHook: null, roleCount: null, extraRoleCount: null, role1: null, role2: null };
     const _Math = Math;
     obj2.extraChannelCount = Math.max(stateFromStoresArray1.length - 2, 0);
@@ -177,6 +177,7 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
     const _Math2 = Math;
     obj2.extraRoleCount = Math.max(mapped.length - 2, 0);
     [obj3.role1, obj3.role2] = mapped;
-    str = intl2.format(tmp2(1114).t.WewRHM, obj2);
+    str = intl2.format(selectedRoleIds(1114).t.WewRHM, obj2);
   }
+  tmp5 = stateFromStoresArray1.length > 0 && mapped.length > 0;
 };

@@ -2,6 +2,7 @@
 
 // Module 17006 (ActivityPanelContainer)
 import initialize from "initialize" /* 504 */;
+import ChannelTypes from "ChannelTypes" /* 1094 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4189 */;
 import ActivityPanelControllerDefault from "ActivityPanelController" /* 17007 */;
 import ActivityPanelUIDefault from "ActivityPanelUI" /* 17016 */;
@@ -33,7 +34,7 @@ export default noop.memo(function ActivityPanelContainer() {
         if (channel != null) {
           type = channel.type;
         }
-        let tmp4 = type === tmp8(tmp9[7]).ChannelTypes.GUILD_TEXT;
+        let tmp4 = type === ChannelTypes.ChannelTypes.GUILD_TEXT;
         if (!tmp4) {
           let isPrivateResult;
           if (channel != null) {
@@ -47,8 +48,6 @@ export default noop.memo(function ActivityPanelContainer() {
         }
         return tmp4;
       }
-      tmp8 = require;
-      tmp9 = dependencyMap;
     }
   }, [])) {
     obj = { children: jsx(ActivityPanelUIDefault, {}) };

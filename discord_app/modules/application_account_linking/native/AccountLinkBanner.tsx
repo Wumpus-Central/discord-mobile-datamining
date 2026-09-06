@@ -30,9 +30,9 @@ function AccountLinkLargeBanner(arg0) {
           return require(ContentDismissActionType.USER_DISMISS);
         },
       style: tmp.closeButton,
-      children: closure_6(tmp2(tmp3[15]).XSmallIcon, { size: "sm", color: "text-muted" })
+      children: closure_6(require("XSmallIcon").XSmallIcon, { size: "sm", color: "text-muted" })
     };
-    const items1 = [closure_6(tmp2(tmp3[14]).PressableOpacity, obj), , , , ];
+    const items1 = [closure_6(require("Pressables").PressableOpacity, obj), , , , ];
     const obj1 = { style: tmp.imagesContainer, children: null };
     const obj2 = { game: application, size: NORMAL };
     const items2 = [closure_6(require("GameIcon"), obj2), , ];
@@ -45,32 +45,32 @@ function AccountLinkLargeBanner(arg0) {
     items3[2] = closure_6(View, obj6);
     obj3.children = items3;
     items2[1] = closure_7(View, obj3);
-    const obj7 = { user: stateFromStores, size: tmp2(tmp3[16]).AvatarSizes.LARGE_48, guildId: "Array" };
-    items2[2] = closure_6(tmp2(tmp3[16]).Avatar, obj7);
+    const obj7 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "Array" };
+    items2[2] = closure_6(require("native").Avatar, obj7);
     obj1.children = items2;
     items1[1] = closure_7(View, obj1);
     const obj8 = { variant, color: "mobile-text-heading-primary", style: tmp.title, children: null };
-    const intl = tmp2(tmp3[18]).intl;
+    const intl = require("util").intl;
     const obj9 = { gameName: application.name };
-    obj8.children = intl.formatToPlainString(tmp2(tmp3[18]).t["3gpxqO"], obj9);
-    items1[2] = closure_6(tmp2(tmp3[17]).Text, obj8);
+    obj8.children = intl.formatToPlainString(require("util").t["3gpxqO"], obj9);
+    items1[2] = closure_6(require("Text/Text").Text, obj8);
     const obj10 = { variant: variant2, color: "text-muted", style: tmp.body, children: null };
-    const intl2 = tmp2(tmp3[18]).intl;
+    const intl2 = require("util").intl;
     const obj11 = { rewardName: reward_name };
-    obj10.children = intl2.formatToPlainString(tmp2(tmp3[18]).t.vxvKMm, obj11);
-    items1[3] = closure_6(tmp2(tmp3[17]).Text, obj10);
+    obj10.children = intl2.formatToPlainString(require("util").t.vxvKMm, obj11);
+    items1[3] = closure_6(require("Text/Text").Text, obj10);
     const obj12 = { style: tmp.ctaContainer, children: null };
     const obj13 = { variant: "secondary", size: "md", text: null, onPress: null, icon: null };
-    const intl3 = tmp2(tmp3[18]).intl;
-    obj13.text = intl3.string(tmp2(tmp3[18]).t["0mvtKL"]);
+    const intl3 = require("util").intl;
+    obj13.text = intl3.string(require("util").t["0mvtKL"]);
     obj13.onPress = function onPress() {
       importDefault({ analyticsLocations });
     };
-    obj13.icon = closure_6(tmp2(tmp3[20]).ExperimentalGameControllerLinkIcon, { size: "sm" });
-    obj12.children = closure_6(tmp2(tmp3[19]).Button, obj13);
+    obj13.icon = closure_6(require("ExperimentalGameControllerLinkIcon").ExperimentalGameControllerLinkIcon, { size: "sm" });
+    obj12.children = closure_6(require("components/Button/Button").Button, obj13);
     items1[4] = closure_6(View, obj12);
     obj.children = items1;
-    tmp8 = closure_7(tmp2(tmp3[13]).Card, obj);
+    tmp8 = closure_7(require("Card").Card, obj);
   }
   return tmp8;
 }

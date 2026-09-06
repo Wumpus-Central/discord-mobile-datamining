@@ -10,6 +10,7 @@ import CodedLink from "CodedLink" /* 4548 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
 import QuestContent from "QuestContent" /* 5449 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7244 */;
+import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7691 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8378 */;
 import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10797 */;
 import QuestUtils from "QuestUtils" /* 11767 */;
@@ -298,12 +299,12 @@ export default function getOnClick(url) {
       }
       const code = _undefined.code;
       if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE) {
-        if (_undefined.type !== tmp3(4548).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
-          let result = tmp3(7691).parseStorefrontSkuCodedLink(code);
+        if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
+          let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
             result = { applicationId: "hash", skuId: "call" };
           }
-          const tmp3Result = tmp3(7691);
+          const tmp3Result = storefrontMessageEmbedCodedLink;
         }
         ({ applicationId, skuId } = result);
         const guildId = SelectedGuildStore.getGuildId();
@@ -344,21 +345,15 @@ export default function getOnClick(url) {
             let searchParams2 = uRL.searchParams;
             const searchParams3 = uRL.searchParams;
             value = searchParams2.get("link_id");
-            const customActivityLinkParams = tmp7(tmp6[31]).getCustomActivityLinkParams(code, value, searchParams3.get("custom_id"));
-            url = pathname((applicationId) => {
-              c3 = 0;
-              c4 = 0;
-              const iter = (function*(arg0) {
-                yield applicationId(paths[32]).runPrimaryAppCommandOrJoinEmbeddedActivity({ channelId, applicationId, isStart: null == closure_1_5, embeddedActivitiesManager, customId, referrerId, analyticsLocations: uRL });
-                yield "HermesInternal";
-                closure_1 = tmp2;
-                customId = applicationId.customId;
-                return "PX_16";
-              })();
-              iter.next();
-              return iter;
+            const customActivityLinkParams = tmp7(paths[31]).getCustomActivityLinkParams(code, value, searchParams3.get("custom_id"));
+            url = pathname(function*(applicationId) {
+              yield applicationId(paths[32]).runPrimaryAppCommandOrJoinEmbeddedActivity({ channelId, applicationId, isStart: null == closure_1_5, embeddedActivitiesManager, customId, referrerId, analyticsLocations: uRL });
+              yield "HermesInternal";
+              closure_1 = tmp2;
+              customId = applicationId.customId;
+              return "PX_16";
             });
-            const tmp7Result = tmp7(tmp6[31]);
+            const tmp7Result = tmp7(paths[31]);
             customActivityLinkParams.then(function() {
               const self = this;
               const apply = closure_0.apply;
@@ -395,11 +390,11 @@ export default function getOnClick(url) {
           let flag = null != id;
           if (flag) {
             obj = { recipientIds: id };
-            const tmp5Result = tmp5(tmp6[33]);
+            const tmp5Result = analyticsLocations(paths[33]);
             url = pathname((targetApplicationId) => {
               c3 = 0;
               c4 = 0;
-              return (function*(arg0, value) {
+              return (function*(arg0) {
                 if (c4 === 2) {
                   c4 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");
@@ -456,8 +451,8 @@ export default function getOnClick(url) {
                 }
               })();
             });
-            const openPrivateChannelResult = tmp5(tmp6[33]).openPrivateChannel(obj);
-            tmp5(tmp6[33]).openPrivateChannel(obj).then(function() {
+            const openPrivateChannelResult = analyticsLocations(paths[33]).openPrivateChannel(obj);
+            analyticsLocations(paths[33]).openPrivateChannel(obj).then(function() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -470,7 +465,7 @@ export default function getOnClick(url) {
 
             });
             flag = true;
-            const nextPromise1 = tmp5(tmp6[33]).openPrivateChannel(obj).then(function() {
+            const nextPromise1 = analyticsLocations(paths[33]).openPrivateChannel(obj).then(function() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -483,7 +478,6 @@ export default function getOnClick(url) {
           }
           return flag;
         }
-        tmp5 = analyticsLocations;
         tmp7 = url;
       };
     }
@@ -589,7 +583,8 @@ export default function getOnClick(url) {
             obj.initialProductSkuId = tmp9;
             const result = openCollectiblesShopMobile.openCollectiblesShopMobile(obj);
           }
-          ORBS = tmp4 ? tmp6.SHOP_ALL : tmp6.FEATURED_PAGE;
+          ORBS = tmp4 ? constants2.SHOP_ALL : constants2.FEATURED_PAGE;
+          const tmp = _slicedToArray(code.code.split("-"), 2);
         });
         return true;
       };
@@ -601,14 +596,14 @@ export default function getOnClick(url) {
   }
   ({ host, hostname, pathname } = toURLSafeResult);
   ({ search, hash } = toURLSafeResult);
-  let tmp5Result = tmp5(1365);
+  let tmp5Result = URLUtilsDefault;
   let tmp6 = hostname;
   if (hostname == null) {
     tmp6 = null;
   }
   let isDiscordHostnameResult = tmp5Result.isDiscordHostname(tmp6);
   if (!isDiscordHostnameResult) {
-    tmp5Result = tmp5(1365);
+    tmp5Result = URLUtilsDefault;
     if (host == null) {
       host = null;
     }
@@ -648,7 +643,7 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp5Result1 = tmp5(1365);
+      tmp5Result1 = URLUtilsDefault;
     }
   }
   if (null != findCodedLinkResult) {

@@ -63,7 +63,7 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
       items2[1] = closure_9(tmp9(4296).View, obj1);
       obj.children = items2;
     }
-    return tmp11(tmp12, obj);
+    return tmp11(View, obj);
   }
   obj3 = { style: null, children: null };
   const items4 = [tmp.youButton];
@@ -75,4 +75,6 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
   items5[1] = closure_9(sharedValue(4296).View, obj4);
   obj3.children = items5;
   obj = obj3;
+  const obj5 = { style: tmp.placeholder };
+  const tmp2Result = require("ReanimatedRexport");
 });

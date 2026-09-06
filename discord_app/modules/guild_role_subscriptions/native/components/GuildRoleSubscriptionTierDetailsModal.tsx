@@ -6,13 +6,17 @@ import native from "native" /* 1178 */;
 import Form from "Form" /* 8593 */;
 import FormHeaderDefault from "FormHeader" /* 9816 */;
 import FormStylesDefault from "FormStyles" /* 13898 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15212 */;
 import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15227 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17724 */;
 import FormImagePicker from "FormImagePicker" /* 17730 */;
 import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17733 */;
 import EditStateContextProvider from "EditStateContextProvider" /* 17741 */;
 import FormPriceTierDefault from "FormPriceTier" /* 17770 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
 function Content() {
@@ -36,23 +40,23 @@ function Content() {
     obj = { uri: tmp10 };
     tmp17 = obj;
   }
-  let tmp4Result = tmp4(15212);
+  let tmp4Result = GuildRoleSubscriptionsHooks;
   const subscriptionListing = tmp4Result.useSubscriptionListing(editStateId);
   let published;
   if (subscriptionListing != null) {
     published = subscriptionListing.published;
   }
   let tmp20 = true === published;
-  tmp4Result = tmp4(17724);
+  tmp4Result = RoleSubscriptionSettingsDisabledContext;
   const roleSubscriptionSettingsDisabled = tmp4Result.useRoleSubscriptionSettingsDisabled();
   obj = { style: tmp3.header, children: null };
-  let tmpResult = tmp(9816);
-  const intl = tmp4(1114).intl;
+  let tmpResult = FormHeaderDefault;
+  const intl = util.intl;
   obj.children = intl.string(util.t["6XpbbR"]);
   const items = [React7(tmpResult, obj), , , , , , , ];
   obj1 = { description: null, image: null, imageUploadSize: null, previewShape: null, setImage: null, disabled: null };
-  tmpResult = tmp(17730);
-  const intl2 = tmp4(1114).intl;
+  tmpResult = FormImagePickerDefault;
+  const intl2 = util.intl;
   obj1.description = intl2.string(util.t.pNZfgG);
   obj1.image = tmp17;
   obj1.imageUploadSize = UPLOAD_MEDIUM_SIZE;
@@ -64,14 +68,11 @@ function Content() {
   items[1] = React7(tmpResult, obj1);
   obj2 = { style: tmp3.header, children: null };
   const tmp14 = _slicedToArray(obj4.useDescription(editStateId), 2);
-  const tmp22 = closure_1_11;
-  const tmp23 = closure_1_10;
-  const tmp24 = React7;
-  const intl3 = tmp4(1114).intl;
+  const intl3 = util.intl;
   obj2.children = intl3.string(util.t.rJ6Oad);
   items[2] = React7(FormHeaderDefault, obj2);
   obj3 = { style: tmp3.textInput, showTopContainer: false, multiline: false, maxLength: maxLength2, value: tmp7, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null, disabled: null };
-  const intl4 = tmp4(1114).intl;
+  const intl4 = util.intl;
   obj3.placeholder = intl4.string(util.t["i4/g+E"]);
   obj3.onChange = tmp8;
   obj3.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
@@ -79,18 +80,18 @@ function Content() {
   items[3] = React7(Form.FormInput, obj3);
   obj4 = { style: tmp3.header, children: null };
   const tmpResult1 = FormHeaderDefault;
-  const intl5 = tmp4(1114).intl;
+  const intl5 = util.intl;
   obj4.children = intl5.string(util.t["74JctW"]);
   items[4] = React7(FormHeaderDefault, obj4);
   const obj5 = { style: tmp3.textInput, showTopContainer: false, multiline: true, maxLength, numberOfLines: 3, value: tmp15, placeholder: null, onChange: null, disabled: null };
-  const intl6 = tmp4(1114).intl;
+  const intl6 = util.intl;
   obj5.placeholder = intl6.string(util.t["3YHwoG"]);
   obj5.onChange = tmp16;
   obj5.disabled = roleSubscriptionSettingsDisabled;
   items[5] = React7(Form.FormInput, obj5);
   const obj6 = { style: tmp3.header, children: null };
   const tmpResult2 = FormHeaderDefault;
-  const intl7 = tmp4(1114).intl;
+  const intl7 = util.intl;
   obj6.children = intl7.string(util.t.CrRVAx);
   items[6] = React7(FormHeaderDefault, obj6);
   const tmpResult3 = FormHeaderDefault;
@@ -99,9 +100,9 @@ function Content() {
   }
   const obj7 = { disabled: tmp20, guildId: editStateContext.guildId, price: tmp12, onChange: tmp13 };
   const obj8 = { children: null };
-  items[7] = tmp24(FormPriceTierDefault, obj7);
+  items[7] = React7(FormPriceTierDefault, obj7);
   obj8.children = items;
-  return tmp22(tmp23, obj8);
+  return closure_1_11(closure_1_10, obj8);
 }
 const GuildRoleSubscriptionsConstants = fn(15205);
 ({ GuildRoleSubscriptionsTierScenes: hasOwnProperty, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
@@ -130,9 +131,9 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   }
   obj = { title: null, description: null, canProceedToNextStep: null, nextStep: null, scrollable: false };
   obj5 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.title = intl.string(util.t.o3pHas);
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj.description = intl2.string(util.t.oOOME5);
   obj.canProceedToNextStep = tmp3;
   obj.nextStep = constants.CHANNEL_BENEFITS;

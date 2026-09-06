@@ -3093,8 +3093,8 @@ function LinkParsedGridItem(author) {
         if ("channelMention" !== type.type) {
           if (null != type.content) {
             let content = type.content;
-            author = tmp;
-            closure_1 = tmp2;
+            author = linkIndex;
+            closure_1 = closure_11;
             let _Array = Array;
             if (Array.isArray(content)) {
               let item1 = content.forEach((type) => {
@@ -3843,25 +3843,25 @@ function LinkParsedGridItem(author) {
               if ("link" !== content.type) {
                 if ("channelMention" !== content.type) {
                   if (null != content.content) {
-                    getLinkNodeAtIndex(content.content, tmp, tmp2);
+                    getLinkNodeAtIndex(content.content, linkIndex, closure_11);
                   }
                 }
               }
-              if (0 === tmp) {
-                tmp2(content);
+              if (0 === linkIndex) {
+                closure_11(content);
               } else {
-                getLinkNodeAtIndex(content, tmp - 1, tmp2);
+                getLinkNodeAtIndex(content, linkIndex - 1, closure_11);
               }
             }
           }
         }
       }
-      if (0 === tmp) {
-        tmp2(type);
+      if (0 === linkIndex) {
+        closure_11(type);
       } else {
-        let diff = tmp - 1;
+        let diff = linkIndex - 1;
         author = diff;
-        closure_1 = tmp2;
+        closure_1 = closure_11;
         let _Array2 = Array;
         if (Array.isArray(type)) {
           let item2 = type.forEach((type) => {
@@ -4610,14 +4610,14 @@ function LinkParsedGridItem(author) {
           if ("link" !== type.type) {
             if ("channelMention" !== type.type) {
               if (null != type.content) {
-                getLinkNodeAtIndex(type.content, diff, tmp2);
+                getLinkNodeAtIndex(type.content, diff, closure_11);
               }
             }
           }
           if (0 === diff) {
-            tmp2(type);
+            closure_11(type);
           } else {
-            getLinkNodeAtIndex(type, diff - 1, tmp2);
+            getLinkNodeAtIndex(type, diff - 1, closure_11);
           }
         }
       }
@@ -4641,10 +4641,10 @@ function LinkParsedGridItem(author) {
   let target;
   const memo1 = onPressSearchLink.useMemo(() => {
     if (null != first) {
-      if ("link" === tmp.type) {
-        if (null != tmp.target) {
-          if ("" !== tmp.target) {
-            let obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: tmp.target };
+      if ("link" === first.type) {
+        if (null != first.target) {
+          if ("" !== first.target) {
+            let obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: first.target };
             return closure_2_11(Text_Text.Text, obj);
           }
         }
@@ -4652,11 +4652,11 @@ function LinkParsedGridItem(author) {
     }
     if (null != first) {
       let type;
-      if (tmp != null) {
-        type = tmp.type;
+      if (first != null) {
+        type = first.type;
       }
       if ("channelMention" === type) {
-        obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: tmp.originalLink };
+        obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: first.originalLink };
         return closure_2_11(Text_Text.Text, obj);
       }
     }
@@ -4678,12 +4678,12 @@ function LinkParsedGridItem(author) {
   const memo2 = onPressSearchLink.useMemo(() => {
     let type;
     if (first != null) {
-      type = tmp.type;
+      type = first.type;
     }
     if ("channelMention" === type) {
       return closure_2_11(ChatIcon.ChatIcon, { size: "lg" });
     } else if ("link" === type) {
-      return closure_2_11(SearchPlatformUtils.getUrlIcon(tmp.target), { size: "lg" });
+      return closure_2_11(SearchPlatformUtils.getUrlIcon(first.target), { size: "lg" });
     } else {
       return closure_2_11(LinkIcon.LinkIcon, { size: "lg" });
     }
@@ -4694,11 +4694,11 @@ function LinkParsedGridItem(author) {
     if (null == first) {
       let obj = { channelId, messageId };
       onPress(obj);
-    } else if ("link" === tmp.type) {
-      obj = { url: tmp.target, trusted: MarkupReactLinkUtils.isLinkTrusted(tmp), messageId, channelId };
+    } else if ("link" === first.type) {
+      obj = { url: first.target, trusted: MarkupReactLinkUtils.isLinkTrusted(first), messageId, channelId };
       onPressSearchLink(obj);
-    } else if ("channelMention" === tmp.type) {
-      channelId = tmp.channelId;
+    } else if ("channelMention" === first.type) {
+      channelId = first.channelId;
       const channel = ChannelStore.getChannel(channelId);
       let isGuildVocalResult;
       if (channel != null) {
@@ -4708,7 +4708,7 @@ function LinkParsedGridItem(author) {
         const obj1 = { channelId, messageId, mentionedChannelId: channelId };
         onPressGuildVoiceChannelMention(obj1);
       } else {
-        obj = { url: tmp.originalLink, trusted: true, messageId, channelId };
+        obj = { url: first.originalLink, trusted: true, messageId, channelId };
         onPressSearchLink(obj);
       }
     }

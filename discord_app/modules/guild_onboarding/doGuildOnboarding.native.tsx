@@ -19,7 +19,7 @@ let closure_13 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
   c5 = 0;
   c6 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     let obj8 = closure_131_1(closure_131_2[7]);
     obj8.hideActionSheet();
     closure_131_1(closure_131_2[8]).popAll();
@@ -103,7 +103,7 @@ let closure_13 = async function _doGuildOnboarding(arg0) {
   iter.next();
   return iter;
 };
-let closure_14 = async function _fetchLandingAsset(arg0, value) {
+let closure_14 = async function _fetchLandingAsset(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -194,10 +194,10 @@ let closure_14 = async function _fetchLandingAsset(arg0, value) {
     }
   }
 };
-function openAndWaitForOnboarding(arg0) {
-  _require = arg0;
-  closure_129_0 = arg0;
-  const result = require("doGuildOnboardingHelpers").waitForOnboardingCompletion(arg0);
+function openAndWaitForOnboarding(guildId) {
+  _require = guildId;
+  closure_129_0 = guildId;
+  const result = require("doGuildOnboardingHelpers").waitForOnboardingCompletion(guildId);
   result.then(() => {
     if (null != dependencyMap[closure_0]) {
       tmp4();
@@ -207,16 +207,16 @@ function openAndWaitForOnboarding(arg0) {
   });
   let obj = require("doGuildOnboardingHelpers");
   return new Promise((arg0) => {
-    if (null == dependencyMap[closure_0]) {
-      tmp[tmp2] = arg0;
+    if (null == dependencyMap[guildId]) {
+      tmp[guildId] = arg0;
     }
     let obj = {
-      guildId: tmp2,
+      guildId,
       backShouldLeaveGuild: true,
       onFinish() {
 
       },
-      landingAnimation: closure_12[tmp2],
+      landingAnimation: closure_12[guildId],
       isFirstOpen: true
     };
     obj.pushLazy(asyncRequireImpl(7121, dependencyMap.paths), obj, closure_7).then(() => {
@@ -225,6 +225,7 @@ function openAndWaitForOnboarding(arg0) {
         const obj = closure_0(dependencyMap[18]);
       }
     });
+    const pushLazyResult = obj.pushLazy(asyncRequireImpl(7121, dependencyMap.paths), obj, closure_7);
   });
 }
 const NativeModules = fn(17).NativeModules;

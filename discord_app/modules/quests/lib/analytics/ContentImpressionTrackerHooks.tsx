@@ -27,10 +27,10 @@ export const useAdContentImpressionTrackerProps = function useAdContentImpressio
       let items1 = items;
     } else if (null != questOrQuests) {
       const _Array = Array;
-      if (Array.isArray(arr)) {
-        let mapped = arr.map((id) => id.id);
+      if (Array.isArray(questOrQuests)) {
+        let mapped = questOrQuests.map((id) => id.id);
       } else {
-        mapped = [arr.id];
+        mapped = [questOrQuests.id];
       }
     } else {
       items1 = [];

@@ -5,7 +5,7 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import CacheStore from "CacheStore" /* 7476 */;
 
-let closure_5 = async function _writeCaches(arg0, value) {
+let closure_5 = async function _writeCaches() {
   if (1 === tmp5) {
     if (arg0 === 1) {
       c4 = 3;

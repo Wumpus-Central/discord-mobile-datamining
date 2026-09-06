@@ -642,16 +642,15 @@ prototype["getTotalGiftValue"] = function getTotalGiftValue() {
   let flag = false;
   const values = Object.values(closure_30);
   for (const item10014 of values) {
-    let tmp3 = item10014;
     if (null != item10014.price) {
       if (null != currency) {
-        if (tmp3.price.currency !== currency) {
+        if (item10014.price.currency !== currency) {
           obj.return();
           return null;
         }
       }
-      currency = tmp3.price.currency;
-      num = num + tmp3.price.amount;
+      currency = item10014.price.currency;
+      num = num + item10014.price.amount;
       flag = true;
     }
     continue;

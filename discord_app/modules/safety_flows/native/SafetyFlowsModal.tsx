@@ -101,14 +101,14 @@ export default function SafetyFlowsModal(initialRouteName) {
   const memo = noop.useMemo(() => {
     let flow_context;
     if (first != null) {
-      flow_context = tmp.flow_context;
+      flow_context = first.flow_context;
     }
     if (null == flow_context) {
       return [];
     } else {
-      const tasks = tmp.flow_context.tasks;
+      const tasks = first.flow_context.tasks;
       if (1 !== tasks.length) {
-        const tasks1 = tmp.flow_context.tasks;
+        const tasks1 = first.flow_context.tasks;
         const mapped = tasks1.map((task_type) => task(dependencyMap[15]).getScreensForTaskType(task_type.task_type));
         const found = mapped.filter((item) => null != item);
         let flatResult = found.flat();

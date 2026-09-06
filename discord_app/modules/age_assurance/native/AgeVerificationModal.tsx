@@ -2,9 +2,10 @@
 
 // Module 8428 (AgeVerificationModal)
 import nativeDefault from "native" /* 576 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import noop from "module_19" /* 19 */;
 
-const require = fn;
+require = fn;
 function AgeVerifyScreen(uri) {
   const onComplete = uri.onComplete;
   const onClose = uri.onClose;
@@ -22,6 +23,7 @@ function AgeVerifyScreen(uri) {
     if (obj.isModalOpen(closure_4)) {
       callback();
     }
+    obj = NavigationRouteUtils;
   }, items1);
   const watchAgeVerificationStatusChange = onComplete(isSuspendedUser[5]).useWatchAgeVerificationStatusChange(callback1);
   const items2 = [callback, isSuspendedUser];

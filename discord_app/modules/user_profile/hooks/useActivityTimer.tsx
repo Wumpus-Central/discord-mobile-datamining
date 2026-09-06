@@ -29,12 +29,12 @@ export default function useActivityTimer(start) {
   const bound = Math.max(Math.min(diff1 / DurationsDefault.Millis.SECOND, result), 0);
   return { elapsed: bound, duration: result, percentage: Math.max(Math.min(bound / result, 1), 0) };
 };
-export const formatTime = function formatTime(arg0) {
-  const rounded = Math.floor(arg0);
+export const formatTime = function formatTime(duration) {
+  const rounded = Math.floor(duration);
   const result = rounded % DurationsDefault.Seconds.MINUTE;
-  const rounded1 = Math.floor(arg0 / DurationsDefault.Seconds.MINUTE);
+  const rounded1 = Math.floor(duration / DurationsDefault.Seconds.MINUTE);
   const result1 = rounded1 % DurationsDefault.Seconds.MINUTE;
-  const rounded2 = Math.floor(arg0 / DurationsDefault.Seconds.HOUR);
+  const rounded2 = Math.floor(duration / DurationsDefault.Seconds.HOUR);
   if (0 === rounded2) {
     const _String4 = String;
     const _String5 = String;

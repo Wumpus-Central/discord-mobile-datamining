@@ -28,4 +28,5 @@ export const openUserSettings = (screen, fn) => {
       fn();
     }
   }
+  tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
 };

@@ -2,12 +2,12 @@
 
 // Module 12574 (GuildPowerupsGameServerCard)
 import nativeDefault from "native" /* 576 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12571 */;
 import useGameServerPerkDefault from "useGameServerPerk" /* 12576 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import GameServerStore from "GameServerStore" /* 4470 */;
 
-const GuildPowerupsPerkCardDefault = tmp5(12571);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

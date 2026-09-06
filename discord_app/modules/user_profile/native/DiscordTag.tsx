@@ -40,12 +40,11 @@ export default function DiscordTag(arg0) {
         const obj1 = { variant: "text-md/semibold", color: "text-muted", style: discriminatorStyle, children: null };
         const items1 = ["#", user.discriminator];
         obj1.children = items1;
-        tmp2Result = tmp2(tmp4(4556).Text, obj1);
+        tmp2Result = hasOwnProperty(Text_Text.Text, obj1);
       }
       items[1] = tmp2Result;
       obj.children = items;
-      tmp2Result = tmp2(Text_Text.Text, obj);
-      tmp4 = require;
+      tmp2Result = hasOwnProperty(Text_Text.Text, obj);
     }
   }
   const items2 = [tmp2Result, ];

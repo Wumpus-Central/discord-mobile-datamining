@@ -5,11 +5,13 @@ import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
@@ -26,10 +28,14 @@ import FrecencySection from "FrecencySection" /* 12052 */;
 import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12056 */;
 import ApplicationDirectoryActionCreators from "ApplicationDirectoryActionCreators" /* 12071 */;
 import HeroMedia from "HeroMedia" /* 12084 */;
+import BrokenImageDefault from "BrokenImage" /* 12085 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12086 */;
 import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12088 */;
 import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 12099 */;
+import ExpandableList from "ExpandableList" /* 12108 */;
 import InThisServerSection from "InThisServerSection" /* 12110 */;
 import ApplicationDirectoryCollectionType from "ApplicationDirectoryCollectionType" /* 12123 */;
+import ApplicationCollectionFlags from "ApplicationCollectionFlags" /* 12126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -108,16 +114,16 @@ class BaseAppRow {
       let obj = AppLauncherUtils;
       let FAKE_BUILT_IN_APP = application;
       if (application == null) {
-        FAKE_BUILT_IN_APP = tmp(9289).FAKE_BUILT_IN_APP;
+        FAKE_BUILT_IN_APP = AppLauncherUtils.FAKE_BUILT_IN_APP;
       }
       const sectionDescription = obj.getSectionDescription(FAKE_BUILT_IN_APP);
       let result = null;
       if (null != sectionDescription) {
         result = null;
         if ("" !== sectionDescription) {
-          obj = { content: sectionDescription, muted: false, layout: tmp(7879).ChannelListLayoutTypes.COMPACT, color: "text-muted" };
-          result = tmp(10116).renderMessagePreviewMarkup(obj);
-          const tmpResult = tmp(10116);
+          obj = { content: sectionDescription, muted: false, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT, color: "text-muted" };
+          result = MessagePreviewMarkup.renderMessagePreviewMarkup(obj);
+          const tmpResult = MessagePreviewMarkup;
         }
       }
       return result;
@@ -209,8 +215,8 @@ function ActivityItemTuple(arg0) {
     const obj1 = { style: tmp.activityItemTupleShelfItemContainer, children: null };
     const obj2 = { context, sectionName, onPress, usesHandleActivityItemSelected, onActivityItemSelected, shelfItem: shelfItem2, entrypoint, imageWidth: null, imageHeight: null };
     ({ width: obj5.imageWidth, height: obj5.imageHeight } = size);
-    obj1.children = tmp4(ActivityItem, obj2);
-    tmp4Result = tmp4(tmp3, obj1);
+    obj1.children = closure_19(ActivityItem, obj2);
+    tmp4Result = closure_19(closure_6, obj1);
   }
   items2[1] = tmp4Result;
   obj.children = items2;
@@ -383,7 +389,7 @@ function RecommendationItem(onPress) {
     first = tmp5[0];
   }
   if (first) {
-    let tmp13 = closure_1_19(tmp7(12085), {});
+    let tmp13 = closure_1_19(BrokenImageDefault, {});
   } else {
     tmp13 = null;
     if (!tmp12) {
@@ -397,7 +403,7 @@ function RecommendationItem(onPress) {
       };
       obj2 = { uri: tmp8Result.url };
       obj1.source = obj2;
-      tmp13 = closure_1_19(tmp7(5587), obj1);
+      tmp13 = closure_1_19(FastImageDefault, obj1);
     }
   }
   const obj3 = { style: tmp.activityItemContainer, onPress: callback, children: null };
@@ -415,10 +421,10 @@ function RecommendationItem(onPress) {
   const items2 = [tmp13, ];
   if (isEmbeddedAppResult) {
     const obj5 = { labelType: null };
-    const tmp7Result = tmp7(12086);
-    obj5.labelType = tmp2(9289).getShelfBadgeTypeIfActive(application);
+    const tmp7Result = ActivityShelfBadgeDefault;
+    obj5.labelType = AppLauncherUtils.getShelfBadgeTypeIfActive(application);
     isEmbeddedAppResult = closure_1_19(tmp7Result, obj5);
-    const tmp2Result = tmp2(9289);
+    const tmp2Result = AppLauncherUtils;
   }
   items2[1] = isEmbeddedAppResult;
   obj4.children = items2;
@@ -447,7 +453,7 @@ function RecommendationSectionHeader(arg0) {
   style[1] = obj;
   return closure_1_19(Text_Text.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style, children });
 }
-function getRecommendationItemsWithViewAll(found1, in_this_server, stringResult, IN_THIS_SERVER_ITEM_MAX) {
+function getRecommendationItemsWithViewAll(found1, in_this_server, stringResult) {
   _require = in_this_server;
   let COLLAPSED_LIST_ITEM_MAX = IN_THIS_SERVER_ITEM_MAX;
   if (IN_THIS_SERVER_ITEM_MAX === undefined) {
@@ -660,11 +666,11 @@ export default function AppLauncherHomeScreen(route) {
   closure_129_3 = tmp4ResultResult;
   let tmp19 = entrypoint === context(handleViewableItemsChanged[42]).AppLauncherEntrypoint.VOICE;
   closure_129_4 = tmp19;
-  let tmp20 = initialSearchQuery(handleViewableItemsChanged[76])({ context, onlyActivityApps: tmp19 });
+  const tmp20 = initialSearchQuery(handleViewableItemsChanged[76])({ context, onlyActivityApps: tmp19 });
   ({ frecencyCommands, frecentApps } = tmp20);
   closure_129_5 = frecentApps;
   ({ sectionDescriptors, loading } = tmp20);
-  let tmp21 = entrypoint === context(handleViewableItemsChanged[42]).AppLauncherEntrypoint.TEXT;
+  const tmp21 = entrypoint === context(handleViewableItemsChanged[42]).AppLauncherEntrypoint.TEXT;
   closure_129_6 = tmp21;
   const appsInThisServer = tmp4(tmp2[77])({ context }).appsInThisServer;
   closure_129_7 = appsInThisServer;
@@ -747,17 +753,12 @@ export default function AppLauncherHomeScreen(route) {
     if (0 !== handleViewableItemsChanged.length) {
       if (initialSearchQuery === AppLauncherTypes.AppLauncherEntrypoint.VOICE) {
         const items = [];
-        let tmp8 = tmp15;
+        let tmp8 = require;
         let num = 0;
         if (0 < arr.length - 1) {
           do {
             let sum = num + 1;
-            let obj = { type: null, shelfItem1: null, shelfItem2: null, sectionName: "activities", shelfItem1SectionPosition: null, shelfItem2SectionPosition: null, sectionOverallPosition: 0, isLastTuple: false };
-            obj.type = AppLauncherHomeTypes.AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
-            obj.shelfItem1 = handleViewableItemsChanged[num];
-            obj.shelfItem2 = handleViewableItemsChanged[sum];
-            obj.shelfItem1SectionPosition = num;
-            obj.shelfItem2SectionPosition = sum;
+            let obj = { type: AppLauncherHomeTypes.AppLauncherHomeListItemType.SHELF_ITEM_TUPLE, shelfItem1: handleViewableItemsChanged[num], shelfItem2: handleViewableItemsChanged[sum], sectionName: "activities", shelfItem1SectionPosition: num, shelfItem2SectionPosition: sum, sectionOverallPosition: 0, isLastTuple: false };
             arr = items.push(obj);
             num = num + 2;
             tmp8 = require;
@@ -784,7 +785,6 @@ export default function AppLauncherHomeScreen(route) {
         HermesBuiltin.arraySpread(items, 1);
         return items1;
       }
-      tmp15 = require;
     }
     return [];
   }, items12);
@@ -837,14 +837,14 @@ export default function AppLauncherHomeScreen(route) {
   const stateFromStores2 = context(handleViewableItemsChanged[28]).useStateFromStores(items14, () => {
     let tmp2 = "channel" === context.type;
     if (tmp2) {
-      const channel = tmp.channel;
+      const channel = context.channel;
       let isDMResult = channel.isDM();
       if (!isDMResult) {
-        const channel2 = tmp.channel;
+        const channel2 = context.channel;
         isDMResult = channel2.isMultiUserDM();
       }
       if (!isDMResult) {
-        isDMResult = PermissionStore.can(constants2.USE_APPLICATION_COMMANDS, tmp.channel);
+        isDMResult = PermissionStore.can(constants2.USE_APPLICATION_COMMANDS, context.channel);
       }
       tmp2 = isDMResult;
     }
@@ -894,7 +894,6 @@ export default function AppLauncherHomeScreen(route) {
       return items;
     } else {
       const _Set = Set;
-      const set = new Set();
       let item = onActivityItemSelected.forEach((application_directory_collection_items) => {
         const prop = application_directory_collection_items.application_directory_collection_items;
         const item = prop.forEach((type) => {
@@ -925,8 +924,8 @@ export default function AppLauncherHomeScreen(route) {
         if (type === ApplicationDirectoryCollectionType.ApplicationDirectoryCollectionType.BANNER_CARDS) {
           const _Math = Math;
           let obj = { type: null, section: null, sectionName: null, numItems: null, numVisibleItems: null };
-          const bound = Math.min(length, tmp(12108).COLLAPSED_LIST_ITEM_MAX);
-          obj.type = tmp(12088).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER;
+          const bound = Math.min(length, ExpandableList.COLLAPSED_LIST_ITEM_MAX);
+          obj.type = AppLauncherHomeTypes.AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER;
           ({ title: obj.section, title: obj.sectionName } = title);
           obj.numItems = application_directory_collection_items.length;
           obj.numVisibleItems = bound;
@@ -935,27 +934,24 @@ export default function AppLauncherHomeScreen(route) {
             if (type.type === found1(9417).ApplicationDirectoryCollectionItemType.APPLICATION) {
               let collectionItemAssetUrl;
               if (tmp4) {
-                let tmpResult = tmp(12124);
+                let tmpResult = found1(12124);
                 let obj = { itemId: null, hash: null };
                 ({ id: obj2.itemId, image_hash: obj2.hash } = type);
                 collectionItemAssetUrl = tmpResult.getCollectionItemAssetUrl(obj);
               }
               obj = { application: type.application, showsPromoted: null, overrideImageUrl: null, sectionPosition: null };
-              tmpResult = tmp(1384);
-              obj.showsPromoted = tmpResult.hasFlag(type.flags, tmp(12125).ApplicationCollectionItemFlags.PROMOTED);
+              tmpResult = found1(1384);
+              obj.showsPromoted = tmpResult.hasFlag(type.flags, found1(12125).ApplicationCollectionItemFlags.PROMOTED);
               obj.overrideImageUrl = collectionItemAssetUrl;
               obj.sectionPosition = sectionPosition;
               return obj;
             }
           });
-          const found = mapped.filter(tmp(1369).isNotNullish);
+          const found = mapped.filter(GlobalUtils.isNotNullish);
           let num3 = 0;
           if (0 < found.length) {
             do {
-              obj = { type: null, sectionName: null, sectionOverallPosition: null, items: null, isLastTuple: null };
-              obj.type = AppLauncherHomeTypes.AppLauncherHomeListItemType.RECOMMENDATION_TUPLE;
-              obj.sectionName = title.title;
-              obj.sectionOverallPosition = sectionOverallPosition;
+              obj = { type: AppLauncherHomeTypes.AppLauncherHomeListItemType.RECOMMENDATION_TUPLE, sectionName: title.title, sectionOverallPosition, items: null, isLastTuple: null };
               sum = num3 + navigation;
               obj.items = found.slice(num3, sum);
               obj.isLastTuple = sum >= found.length;
@@ -964,16 +960,16 @@ export default function AppLauncherHomeScreen(route) {
               length2 = found.length;
             } while (sum < length2);
           }
-        } else if (type === tmp(12123).ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
+        } else if (type === ApplicationDirectoryCollectionType.ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
           const prop = title.application_directory_collection_items;
           const mapped1 = prop.map((type) => {
             if (type.type === found1(9417).ApplicationDirectoryCollectionItemType.APPLICATION) {
-              const obj = { application: type.application, showsPromoted: tmp(1384).hasFlag(type.flags, tmp(12125).ApplicationCollectionItemFlags.PROMOTED) };
+              const obj = { application: type.application, showsPromoted: found1(1384).hasFlag(type.flags, found1(12125).ApplicationCollectionItemFlags.PROMOTED) };
               return obj;
             }
           });
-          const found1 = mapped1.filter(tmp(1369).isNotNullish);
-          if (tmpResult.hasFlag(title.flags, tmp(12126).ApplicationCollectionFlags.APPENDS_REMAINING_ACTIVITIES)) {
+          const found1 = mapped1.filter(GlobalUtils.isNotNullish);
+          if (tmpResult.hasFlag(title.flags, ApplicationCollectionFlags.ApplicationCollectionFlags.APPENDS_REMAINING_ACTIVITIES)) {
             const item = frecencyCommands.forEach((application) => {
               found1.push({ application: application.application, showsPromoted: false });
             });
@@ -982,7 +978,7 @@ export default function AppLauncherHomeScreen(route) {
           items = [];
           HermesBuiltin.arraySpread(getRecommendationItemsWithViewAll(found1, title.title, title.title, undefined, sectionOverallPosition), 0);
           HermesBuiltin.apply(items, items);
-          tmpResult = tmp(1384);
+          tmpResult = FlagUtils;
         }
       });
     }
@@ -1012,8 +1008,9 @@ export default function AppLauncherHomeScreen(route) {
     if (!isEmbeddedAppResult) {
       tmp4 = null != sectionDescriptors.find((id) => id.id === application.id);
     }
-    obj = { location: tmp(7523).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, application, navigation, context, installOnDemand: !tmp4, sectionName: application.sectionName, entrypoint };
+    obj = { location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, application, navigation, context, installOnDemand: !tmp4, sectionName: application.sectionName, entrypoint };
     const result = AppLauncherNativeUtils.handleApplicationSelected(obj);
+    const tmpResult = AppLauncherNativeUtils;
   }, items18);
   const tmpResult2 = context(handleViewableItemsChanged[28]);
   clickOnHomeActivityOpensAppDetails = context(handleViewableItemsChanged[44]).useClickOnHomeActivityOpensAppDetails();
@@ -1026,8 +1023,8 @@ export default function AppLauncherHomeScreen(route) {
       let obj = { isFirstRow: 0 === index, isLastRow: index === memo8.length - 1, style: null };
       obj = { height };
       obj.style = obj;
-      return memo(initialSearchQuery(tmp2[46]), obj);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.SECTION_HEADER === type) {
+      return memo(initialSearchQuery(handleViewableItemsChanged[46]), obj);
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.SECTION_HEADER === type) {
       const items = [closure_5.sectionHeader, ];
       let obj1 = null;
       if (0 !== index) {
@@ -1037,8 +1034,8 @@ export default function AppLauncherHomeScreen(route) {
       items[1] = obj1;
       obj2.style = items;
       obj2.children = item.section;
-      return memo(tmp(tmp2[16]).Text, obj2);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.SHELF_ITEM === type) {
+      return memo(context(handleViewableItemsChanged[16]).Text, obj2);
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.SHELF_ITEM === type) {
       const obj3 = {
         section: item.section,
         onPress(shelfData) {
@@ -1049,10 +1046,10 @@ export default function AppLauncherHomeScreen(route) {
       };
       ({ isFirstRow: obj10.isFirstRow, isLastRow: obj10.isLastRow } = item);
       return memo(pinnedSearchBarBottomBorder, obj3, item.section.application.id);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE === type) {
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE === type) {
       const obj4 = {
         context: item,
-        sectionName: tmp(tmp2[42]).AppLauncherSectionName.ACTIVITIES,
+        sectionName: context(handleViewableItemsChanged[42]).AppLauncherSectionName.ACTIVITIES,
         onPress(shelfData) {
             const obj = { shelfData, sectionName: item.sectionName, navigates: null };
             let tmp2 = clickOnHomeActivityOpensAppDetails;
@@ -1072,7 +1069,7 @@ export default function AppLauncherHomeScreen(route) {
       };
       let tmp31 = !clickOnHomeActivityOpensAppDetails;
       if (!clickOnHomeActivityOpensAppDetails) {
-        tmp31 = entrypoint === tmp(tmp2[42]).AppLauncherEntrypoint.VOICE;
+        tmp31 = entrypoint === context(handleViewableItemsChanged[42]).AppLauncherEntrypoint.VOICE;
       }
       obj4.usesHandleActivityItemSelected = tmp31;
       obj4.onActivityItemSelected = onActivityItemSelected;
@@ -1080,7 +1077,7 @@ export default function AppLauncherHomeScreen(route) {
       obj4.entrypoint = entrypoint;
       obj4.containerWidth = width;
       return memo(ref1, obj4, item.shelfItem1.application.id);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.RECOMMENDATION_TUPLE === type) {
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.RECOMMENDATION_TUPLE === type) {
       const obj5 = {
         context: item,
         sectionName: item.sectionName,
@@ -1096,7 +1093,7 @@ export default function AppLauncherHomeScreen(route) {
       obj5.entrypoint = entrypoint;
       obj5.containerWidth = width;
       return memo(c32, obj5);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.APP === type) {
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.APP === type) {
       const obj6 = {
         section: item.section,
         onPress() {
@@ -1110,10 +1107,10 @@ export default function AppLauncherHomeScreen(route) {
       const obj7 = { height };
       obj6.style = obj7;
       return memo(closure_28, obj6, item.section.id);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER === type) {
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER === type) {
       const obj8 = { index, children: item.section };
       return memo(trackAppLauncherHomeItemImpression, obj8);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD === type) {
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD === type) {
       const obj9 = { application: item.item.application, isFirst: null, isLast: null, onPress: null, isLandscape: null, showsPromoted: null, overrideImageUrl: null };
       ({ isFirst: obj4.isFirst, isLast: obj4.isLast } = item);
       obj9.onPress = function onPress() {
@@ -1121,16 +1118,16 @@ export default function AppLauncherHomeScreen(route) {
       };
       obj9.isLandscape = isLandscape;
       ({ showsPromoted: obj4.showsPromoted, overrideImageUrl: obj4.overrideImageUrl } = item);
-      return memo(initialSearchQuery(tmp2[47]), obj9);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.RECOMMENDATION_APP === type) {
+      return memo(initialSearchQuery(handleViewableItemsChanged[47]), obj9);
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.RECOMMENDATION_APP === type) {
       const obj10 = { application: null, isFirstRow: null, isLastRow: null, onPress: null, showsPromoted: null };
       ({ application: obj3.application, isFirstRow: obj3.isFirstRow, isLastRow: obj3.isLastRow } = item);
       obj10.onPress = function onPress() {
         return callback3({ application: item.application, sectionName: item.sectionName });
       };
       obj10.showsPromoted = item.showsPromoted;
-      return memo(initialSearchQuery(tmp2[48]), obj10, item.application.id);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.VIEW_ALL === type) {
+      return memo(initialSearchQuery(handleViewableItemsChanged[48]), obj10, item.application.id);
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.VIEW_ALL === type) {
       const obj11 = {
         title: item.title,
         onPress() {
@@ -1140,12 +1137,12 @@ export default function AppLauncherHomeScreen(route) {
             const result = obj.handleViewAllSelected(obj);
           }
       };
-      return memo(initialSearchQuery(tmp2[49]), obj11);
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.DIVIDER_ITEM === type) {
+      return memo(initialSearchQuery(handleViewableItemsChanged[49]), obj11);
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.DIVIDER_ITEM === type) {
       return memo(callback6, {});
-    } else if (tmp(tmp2[45]).AppLauncherHomeListItemType.LEARN_MORE === type) {
+    } else if (context(handleViewableItemsChanged[45]).AppLauncherHomeListItemType.LEARN_MORE === type) {
       obj = { visible: closure_4.valueOf() };
-      return memo(initialSearchQuery(tmp2[52]), obj);
+      return memo(initialSearchQuery(handleViewableItemsChanged[52]), obj);
     } else {
       return null;
     }
@@ -1182,6 +1179,7 @@ export default function AppLauncherHomeScreen(route) {
       }
     }, 100);
     memo9(arg0);
+    const obj = context(handleViewableItemsChanged[55]);
   }, items21);
   obj2.useRef(callback5);
   const items22 = [callback5];
@@ -1205,13 +1203,13 @@ export default function AppLauncherHomeScreen(route) {
     if (null != initialSearchQuery) {
       const current = ref1.current;
       if (current != null) {
-        current.setText(tmp);
+        current.setText(initialSearchQuery);
       }
       const current2 = ref1.current;
       if (current2 != null) {
         current2.focus();
       }
-      ref2.current(tmp);
+      ref2.current(initialSearchQuery);
     }
   }, items24);
   let sum = initialSearchQuery(handleViewableItemsChanged[36])().bottom + callback2;
@@ -1335,14 +1333,14 @@ export default function AppLauncherHomeScreen(route) {
           obj.commands = frecencyCommands;
           obj.sectionDescriptors = sectionDescriptors;
           if (entrypoint === AppLauncherTypes.AppLauncherEntrypoint.VOICE) {
-            const intl3 = tmp(1114).intl;
-            let stringResult = intl3.string(tmp(1114).t["2pFD8L"]);
-          } else if (sectionItemType === tmp(12052).SectionItemType.COMMANDS) {
-            const intl2 = tmp(1114).intl;
-            stringResult = intl2.string(tmp(1114).t.V3Sq95);
+            const intl3 = util.intl;
+            let stringResult = intl3.string(util.t["2pFD8L"]);
+          } else if (sectionItemType === FrecencySection.SectionItemType.COMMANDS) {
+            const intl2 = util.intl;
+            stringResult = intl2.string(util.t.V3Sq95);
           } else {
-            const intl = tmp(1114).intl;
-            stringResult = intl.string(tmp(1114).t.SCViVk);
+            const intl = util.intl;
+            stringResult = intl.string(util.t.SCViVk);
           }
           obj.title = stringResult;
           const result = obj.handleViewAllSelected(obj);

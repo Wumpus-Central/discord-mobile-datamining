@@ -60,7 +60,7 @@ export default function MemberVerificationAlertRejected(guildId) {
   items5[1] = isPending;
   items5[2] = onClose;
   let name;
-  const callback = noop.useCallback(stateFromStores2(function*(arg0, value) {
+  const callback = noop.useCallback(stateFromStores2(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -155,7 +155,7 @@ export default function MemberVerificationAlertRejected(guildId) {
     }
   }
   let obj1 = {};
-  const tmp11 = stateFromStores2(function*(arg0, value) {
+  const tmp11 = stateFromStores2(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -239,7 +239,7 @@ export default function MemberVerificationAlertRejected(guildId) {
     const intl4 = tmp2(tmp3[11]).intl;
     obj2.text = intl4.string(tmp2(tmp3[11]).t.rpFCLs);
     obj2.onPress = callback;
-    let tmp17Result = tmp17(tmp2(tmp3[14]).Button, obj2);
+    let tmp17Result = closure_8(tmp2(tmp3[14]).Button, obj2);
   } else {
     tmp17Result = null;
   }

@@ -58,14 +58,14 @@ function convertGameRecordToGame(id) {
 function addGameIdToNameCache(id, arg1) {
   value = map.get(arg1);
   if (undefined === value) {
-    const result = obj.set(arg1, id);
+    const result = map.set(arg1, id);
   } else {
     const _Array = Array;
     if (Array.isArray(value)) {
       value.push(id);
     } else {
       const items = [value, id];
-      const result1 = obj.set(arg1, items);
+      const result1 = map.set(arg1, items);
     }
   }
 }
@@ -88,6 +88,7 @@ function addDetectableGame(id) {
       continue;
     }
   }
+  obj = PlatformUtils;
 }
 const createExecutable = ApplicationRecord.createExecutable;
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -641,6 +642,7 @@ obj = {
       let tmp7 = addDetectableGame(tmp5);
       continue;
     }
+    tmp4 = arg0.detectableApplications[Symbol.iterator]();
   },
   GAMES_DATABASE_FETCH: function handleApplicationsFetch() {
     c13 = true;
@@ -667,6 +669,7 @@ obj = {
     c13 = undefined;
     closure_14 = Date.now();
     c15 = true;
+    tmp9 = games[Symbol.iterator]();
   },
   GAMES_BLOCKLIST_FETCH: function handleGamesBlocklistFetch() {
     c17 = true;

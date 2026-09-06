@@ -51,6 +51,7 @@ class PostMessageTransport extends EventEmitter {
       if (null != first) {
         map.delete(first);
       }
+      const arr = Array.from(map.entries());
     };
     tmp4.handleIFrameMount = function handleIFrameMount(id) {
       set.add(id.id);
@@ -85,6 +86,8 @@ class PostMessageTransport extends EventEmitter {
         closure_0.disconnectSocket(tmp4, obj, true);
         obj.delete(tmp3);
       }
+      const tmp2 = _slicedToArray(found, 2);
+      tmp5 = null != tmp4 && null != tmp3;
     };
     tmp4.handleMessage = function handleMessage(arg0, iframeId, arg2) {
       value = map.get(iframeId.iframeId);
@@ -332,7 +335,7 @@ class PostMessageTransport extends EventEmitter {
     };
     closure_130_0 = undefined;
     closure_130_1 = tmp4;
-    closure_130_0 = closure_3(async (arg0, value) => {
+    closure_130_0 = closure_3(async (arg0, arg1) => {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -438,30 +441,30 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
     if (RPCOpcodesDefault.HANDSHAKE === tmp5) {
       if (null != value) {
         let obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp35 = new tmp7(9554)(obj, "Already connected");
+        const tmp35 = new RPCErrorDefault(obj, "Already connected");
         throw tmp35;
       } else {
         return self.handleHandshake(iframeId, tmp6, arg3);
       }
-    } else if (tmp7(9553).FRAME === tmp5) {
+    } else if (RPCOpcodesDefault.FRAME === tmp5) {
       if (null == value) {
         obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp27 = new tmp7(9554)(obj, "Not connected");
+        const tmp27 = new RPCErrorDefault(obj, "Not connected");
         throw tmp27;
       } else {
         return self.handleFrame(iframeId, value, tmp6);
       }
-    } else if (tmp7(9553).CLOSE === tmp5) {
+    } else if (RPCOpcodesDefault.CLOSE === tmp5) {
       if (null == value) {
         const obj1 = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp20 = new tmp7(9554)(obj1, "Not connected");
+        const tmp20 = new RPCErrorDefault(obj1, "Not connected");
         throw tmp20;
       } else {
         return self.handleClose(value, tmp6);
       }
     } else {
       obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
-      const tmp13 = new tmp7(9554)(obj, "Invalid opcode");
+      const tmp13 = new RPCErrorDefault(obj, "Invalid opcode");
       throw tmp13;
     }
     const tmp4 = _slicedToArray(arg2, 2);

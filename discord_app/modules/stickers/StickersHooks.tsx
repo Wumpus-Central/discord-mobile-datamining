@@ -42,13 +42,11 @@ function useStickerPackCategories(channel) {
         const isGuildStickerResult = channel(packs[13]).isGuildSticker(item);
         let result = !isGuildStickerResult;
         if (isGuildStickerResult) {
-          result = tmp2(tmp3[13]).isAvailableGuildSticker(item);
-          const tmp2Result = tmp2(tmp3[13]);
+          result = channel(packs[13]).isAvailableGuildSticker(item);
+          const tmp2Result = channel(packs[13]);
         }
         tmp = result;
         const obj = channel(packs[13]);
-        tmp2 = channel;
-        tmp3 = packs;
       }
       return tmp;
     });
@@ -90,7 +88,6 @@ function useStickerPackCategories(channel) {
     const iter = packs[Symbol.iterator]();
     while (iter !== undefined) {
       ({ name, id } = nextResult);
-      let tmp3 = id;
       value = stateFromStoresArray.get(id);
       let arr1 = value;
       let tmp6 = null != value;
@@ -98,10 +95,7 @@ function useStickerPackCategories(channel) {
         tmp6 = 0 !== arr1.length;
       }
       if (tmp6) {
-        let obj = { type: null, id: null, name: null, stickers: null };
-        obj.type = StickersTypes.StickerCategoryTypes.GUILD;
-        obj.id = tmp3;
-        obj.name = name;
+        let obj = { type: StickersTypes.StickerCategoryTypes.GUILD, id, name, stickers: null };
         obj.stickers = arr1;
         let arr = items.push(obj);
       }
@@ -157,15 +151,15 @@ function useStickerPackCategories(channel) {
             flag = false;
           }
           if (flag) {
-            let tmpResult = tmp(tmp2[20]);
+            let tmpResult = tmp(packs[20]);
             const stickerSendability = tmpResult.getStickerSendability(guild_id, stateFromStores, channel);
-            flag = stickerSendability !== tmp(tmp2[20]).StickerSendability.NONSENDABLE;
+            flag = stickerSendability !== tmp(packs[20]).StickerSendability.NONSENDABLE;
           }
           let someResult = flag;
         } else {
-          tmpResult = tmp(tmp2[13]);
+          tmpResult = tmp(packs[13]);
           if (tmpResult.isStandardSticker(guild_id)) {
-            someResult = packs.some((id) => id.id === guild_id.pack_id);
+            someResult = closure_1_2.some((id) => id.id === guild_id.pack_id);
           }
         }
         return someResult;
@@ -247,7 +241,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         if (obj.isGuildSticker(sendable[0])) {
           guild = stickersCategories.getGuild(sendable[0].guild_id);
         }
-        let tmpResult = tmp(tmp2[14]);
+        let tmpResult = collapsedStickersCategories(tmp2[14]);
         guildId = guildId.getGuildId();
         let canCreateExpressions = null != guild;
         const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(5268).StickerCategoryTypes.FAVORITE);
@@ -258,7 +252,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
           canCreateExpressions = tmpResult.getManageResourcePermissions(guild).canCreateExpressions;
         }
         if (canCreateExpressions) {
-          tmpResult = tmp(tmp2[16]);
+          tmpResult = collapsedStickersCategories(tmp2[16]);
           canCreateExpressions = sendable.length < tmpResult.getTotalStickerCountForTier(guild.premiumTier);
         }
         let sum = length;
@@ -318,6 +312,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
           rowIndex = rowIndex + 1;
         }
         gridSectionIndex = gridSectionIndex + 1;
+        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(5268).StickerCategoryTypes.RECENT);
       }
       if (null == items) {
         const iter = stickersCategories[Symbol.iterator]();
@@ -391,13 +386,11 @@ export const useFavoriteStickers = function useFavoriteStickers() {
         const isGuildStickerResult = channel(packs[13]).isGuildSticker(item);
         let result = !isGuildStickerResult;
         if (isGuildStickerResult) {
-          result = tmp2(tmp3[13]).isAvailableGuildSticker(item);
-          const tmp2Result = tmp2(tmp3[13]);
+          result = channel(packs[13]).isAvailableGuildSticker(item);
+          const tmp2Result = channel(packs[13]);
         }
         tmp = result;
         const obj = channel(packs[13]);
-        tmp2 = channel;
-        tmp3 = packs;
       }
       return tmp;
     });
@@ -482,7 +475,7 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
   });
   const items1 = [flag];
   const effect1 = obj2.useEffect(() => {
-    (async (arg0, value) => {
+    (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

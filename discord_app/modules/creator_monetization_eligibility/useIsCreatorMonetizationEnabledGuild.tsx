@@ -20,10 +20,10 @@ export default function useIsCreatorMonetizationEnabledGuild(arg0) {
       let tmp5 = !hasItem;
       if (!hasItem) {
         const features2 = guild.features;
-        let hasItem1 = features2.has(tmp3.CREATOR_MONETIZABLE);
+        let hasItem1 = features2.has(GuildFeatures.CREATOR_MONETIZABLE);
         if (!hasItem1) {
           const features3 = guild.features;
-          hasItem1 = features3.has(tmp3.CREATOR_MONETIZABLE_PROVISIONAL);
+          hasItem1 = features3.has(GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
         }
         tmp5 = hasItem1;
       }
@@ -38,10 +38,10 @@ export const isCreatorMonetizationEnabledGuild = function isCreatorMonetizationE
   let tmp3 = !hasItem;
   if (!hasItem) {
     const features2 = guild.features;
-    let hasItem1 = features2.has(tmp.CREATOR_MONETIZABLE);
+    let hasItem1 = features2.has(GuildFeatures.CREATOR_MONETIZABLE);
     if (!hasItem1) {
       const features3 = guild.features;
-      hasItem1 = features3.has(tmp.CREATOR_MONETIZABLE_PROVISIONAL);
+      hasItem1 = features3.has(GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
     }
     tmp3 = hasItem1;
   }

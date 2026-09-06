@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import themes from "themes" /* 4269 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import IconDefault from "Icon" /* 4977 */;
+import Icon from "Icon" /* 4977 */;
 import useStartAuthorizeDefault from "useStartAuthorize" /* 7165 */;
 import GameIcon from "GameIcon" /* 7172 */;
 import AccountLinkManager from "AccountLinkManager" /* 16941 */;
@@ -13,9 +13,9 @@ import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
 
+const IconDefault = Icon;
 const GameIconDefault = GameIcon;
 
-const Icon = tmp2(4977);
 require = fn;
 function ConnectionIcon(arg0) {
   ({ platform, theme } = arg0);
@@ -38,7 +38,7 @@ function ApplicationIcon(application) {
   let tmpResult = null;
   if (null != application) {
     obj = { game: application, size: GameIcon.GameIconSizes.NORMAL };
-    tmpResult = tmp(GameIconDefault, obj);
+    tmpResult = React6(GameIconDefault, obj);
   }
   obj.children = tmpResult;
   return React6(View, obj);
@@ -79,7 +79,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
   });
   value = null;
   if (null != stateFromStores) {
-    let tmp4Result = tmp4(tmp3[11]);
+    let tmp4Result = markAsDismissed(tmp3[11]);
     value = tmp4Result.get(stateFromStores);
   }
   replacedBy = undefined;
@@ -91,9 +91,9 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
   }
   const items1 = [onSuccess];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => ApplicationStore.getApplication(replacedBy));
-  startAuthorization = tmp4(tmp3[12])(stateFromStores1).startAuthorization;
-  tmp4Result = tmp4(tmp3[13]);
-  analyticsLocations = tmp4Result(tmp4(tmp3[14]).ACTION_SHEET).analyticsLocations;
+  startAuthorization = markAsDismissed(tmp3[12])(stateFromStores1).startAuthorization;
+  tmp4Result = markAsDismissed(tmp3[13]);
+  analyticsLocations = tmp4Result(markAsDismissed(tmp3[14]).ACTION_SHEET).analyticsLocations;
   const items2 = [replacedBy];
   onSuccess = startAuthorization.useCallback(() => {
     const obj = {
@@ -110,7 +110,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       obj = {
         startExpanded: true,
         contentStyles: tmp.content,
-        header: closure_8(tmp2(tmp3[19]).BottomSheetTitleHeader, { title: null }),
+        header: closure_8(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: null }),
         onDismiss() {
               return markAsDismissed(ContentDismissActionType.DISMISS);
             },
@@ -123,18 +123,18 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       const obj3 = { theme, platform: value };
       const items4 = [closure_8(ConnectionIcon, obj3), , ];
       const obj4 = { theme };
-      items4[1] = closure_8(tmp2(tmp3[22]).UnionIcon, obj4);
+      items4[1] = closure_8(require("RobloxConnectionCoachmark").UnionIcon, obj4);
       const obj5 = { application: stateFromStores1 };
       items4[2] = closure_8(ApplicationIcon, obj5);
       obj2.children = items4;
-      const items5 = [closure_9(tmp2(tmp3[21]).Stack, obj2), , ];
+      const items5 = [closure_9(require("Stack/Stack").Stack, obj2), , ];
       const obj6 = { justify: "center", children: null };
       const obj7 = { variant: "heading-xl/bold", style: tmp.text, children: null };
-      const intl = tmp2(tmp3[24]).intl;
-      obj7.children = intl.string(tmp4(tmp3[25]).vycLU2);
-      const items6 = [closure_8(tmp2(tmp3[23]).Text, obj7), ];
+      const intl = require("util").intl;
+      obj7.children = intl.string(markAsDismissed(tmp3[25]).vycLU2);
+      const items6 = [closure_8(require("Text/Text").Text, obj7), ];
       const obj8 = { variant: "text-md/medium", style: tmp.text, children: null };
-      const intl2 = tmp2(tmp3[24]).intl;
+      const intl2 = require("util").intl;
       const obj9 = {
         connectionName: value.name,
         orbCount: 200,
@@ -142,33 +142,33 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
               return closure_1_8(require("OrbsIcon").OrbsIcon, { size: "xs", color: markAsDismissed(replacedBy[7]).colors.TEXT_STRONG });
             }
       };
-      obj8.children = intl2.format(tmp4(tmp3[25]).qV9zT6, obj9);
-      items6[1] = closure_8(tmp2(tmp3[23]).Text, obj8);
+      obj8.children = intl2.format(markAsDismissed(tmp3[25]).qV9zT6, obj9);
+      items6[1] = closure_8(require("Text/Text").Text, obj8);
       obj6.children = items6;
-      items5[1] = closure_9(tmp2(tmp3[21]).Stack, obj6);
+      items5[1] = closure_9(require("Stack/Stack").Stack, obj6);
       const obj10 = { children: null };
       const obj11 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
-      const intl3 = tmp2(tmp3[24]).intl;
-      obj11.text = intl3.string(tmp4(tmp3[25]).ZeOhh9);
-      const obj12 = { size: "sm", color: tmp4(tmp3[7]).colors.WHITE };
-      obj11.icon = closure_8(tmp2(tmp3[28]).WindowLaunchIcon, obj12);
+      const intl3 = require("util").intl;
+      obj11.text = intl3.string(markAsDismissed(tmp3[25]).ZeOhh9);
+      const obj12 = { size: "sm", color: markAsDismissed(tmp3[7]).colors.WHITE };
+      obj11.icon = closure_8(require("WindowLaunchIcon").WindowLaunchIcon, obj12);
       obj11.onPress = tmp11;
-      const items7 = [closure_8(tmp2(tmp3[27]).Button, obj11), ];
+      const items7 = [closure_8(require("components/Button/Button").Button, obj11), ];
       const obj13 = { text: null, variant: "secondary", size: "lg", onPress: null };
-      const intl4 = tmp2(tmp3[24]).intl;
-      obj13.text = intl4.string(tmp2(tmp3[24]).t.TulDPl);
+      const intl4 = require("util").intl;
+      obj13.text = intl4.string(require("util").t.TulDPl);
       obj13.onPress = function onPress() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         if (markAsDismissed != null) {
           tmp2(ContentDismissActionType.DISMISS);
         }
       };
-      items7[1] = closure_8(tmp2(tmp3[27]).Button, obj13);
+      items7[1] = closure_8(require("components/Button/Button").Button, obj13);
       obj10.children = items7;
-      items5[2] = closure_9(tmp2(tmp3[21]).Stack, obj10);
+      items5[2] = closure_9(require("Stack/Stack").Stack, obj10);
       obj.children = items5;
-      obj.children = closure_9(tmp2(tmp3[21]).Stack, obj);
-      return closure_8(tmp2(tmp3[20]).BottomSheet, obj);
+      obj.children = closure_9(require("Stack/Stack").Stack, obj);
+      return closure_8(require("Sheet/BottomSheet").BottomSheet, obj);
     }
   }
   return false;

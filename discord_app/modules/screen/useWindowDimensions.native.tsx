@@ -25,10 +25,10 @@ export default function useWindowDimensions() {
   const items = [flag, appEntryKey];
   return DimensionsStore(noop.useMemo(() => {
     if (flag) {
-      closure_0 = tmp;
+      closure_0 = appEntryKey;
       let fn = (arg0) => arg0.byAppEntry[closure_0].windowDimensionsIgnoringKeyboard;
     } else {
-      closure_0 = tmp;
+      closure_0 = appEntryKey;
       fn = (arg0) => arg0.byAppEntry[closure_0].windowDimensions;
     }
     return fn;

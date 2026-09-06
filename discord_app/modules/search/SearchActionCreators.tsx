@@ -2,11 +2,11 @@
 
 // Module 12347 (SearchActionCreators)
 import _modDef12 from "module_12" /* 12 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
 import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12348 */;
 import size from "module_2" /* 2 */;
 
-const DispatcherDefault = tmp10(573);
 let result = size.fileFinishedImporting("modules/search/SearchActionCreators.tsx");
 
 export default {
@@ -46,7 +46,7 @@ export default {
     obj.trackExactTotalHits = trackExactTotalHits;
     obj1 = obj7.create(obj);
     if (onFetchStart != null) {
-      let obj2 = { searchContext, searchQueryString, searchQuery: obj };
+      const obj2 = { searchContext, searchQueryString, searchQuery: obj };
       onFetchStart(obj2);
     }
     mapped = searchTabs.map((item) => importDefault(item));
@@ -65,6 +65,7 @@ export default {
           if (null == cursor) {
             let tmp6 = cursor;
           } else {
+            _modDef12;
             tmp6 = null;
           }
           obj.cursor = tmp6;
@@ -171,6 +172,7 @@ export default {
       obj.ids = items;
       obj.dispatch(obj);
     });
+    const tmp9Result = tmp9(573);
   },
   clearSearchRecentMessages() {
     DispatcherDefault.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });

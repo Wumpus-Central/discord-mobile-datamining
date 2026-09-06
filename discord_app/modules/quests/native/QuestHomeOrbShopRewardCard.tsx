@@ -83,7 +83,7 @@ export default function QuestHomeOrbShopRewardCard(product) {
     let tmp19Result = !flag;
     if (!flag) {
       obj1 = { product, collectibleProductState: null, hidePrice: true };
-      tmp19Result = tmp19(tmp10(tmp7[19]), obj1);
+      tmp19Result = closure_7(tmp10(tmp7[19]), obj1);
     }
     obj2 = { children: null };
     items4[1] = tmp19Result;
@@ -101,10 +101,10 @@ export default function QuestHomeOrbShopRewardCard(product) {
         accessibilityLabel: productName,
         children: tmp17Result
       };
-      tmp19Result = tmp19(tmp6(tmp7[20]).PressableOpacity, obj3);
+      tmp19Result = closure_7(tmp6(tmp7[20]).PressableOpacity, obj3);
     } else {
       obj4 = { style: items3, accessible: true, accessibilityRole: "text", accessibilityLabel: productName, children: tmp17Result };
-      tmp19Result = tmp19(collectiblesAnalyticsContext, obj4);
+      tmp19Result = closure_7(collectiblesAnalyticsContext, obj4);
     }
     return tmp19Result;
   }

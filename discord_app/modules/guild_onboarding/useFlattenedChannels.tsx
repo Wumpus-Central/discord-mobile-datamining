@@ -6,7 +6,7 @@ import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
-function getFlattenedChannels(guildId, set, found, flag) {
+function getFlattenedChannels(guildId, set, found) {
   _require = set;
   importDefault = found;
   if (flag === undefined) {
@@ -52,7 +52,7 @@ function getFlattenedChannels(guildId, set, found, flag) {
     if (!flag) {
       found2.push(iter3);
     }
-    if (iter3.has(iter3.id)) {
+    if (set.has(iter3.id)) {
       found = channel[iter3.id];
     } else {
       found = closure_1.filter((parent_id) => parent_id.parent_id === iter3.id);
@@ -72,6 +72,7 @@ function getFlattenedChannels(guildId, set, found, flag) {
       })
     ];
     found2.push.apply(items);
+    set = iter3;
   }
   const iter3 = valueResult[Symbol.iterator]();
   while (iter3 !== undefined) {

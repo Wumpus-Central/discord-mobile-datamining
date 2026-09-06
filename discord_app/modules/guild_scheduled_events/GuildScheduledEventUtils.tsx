@@ -1,6 +1,7 @@
 // === Module 9664: GuildScheduledEventUtils ===
 
 // Module 9664 (GuildScheduledEventUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef4153 from "module_4153" /* 4153 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
 import size from "module_2" /* 2 */;
@@ -14,7 +15,7 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
   const diff = time - React4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
-      const obj4 = tmp(4153)(arg1);
+      const obj4 = _modDef4153(arg1);
       const isBetweenResult = obj4.isBetween(diff, time);
       let EVENT_STARTING_SOON;
       if (!isBetweenResult) {
@@ -28,7 +29,7 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
     }
   } else {
     let tmp5 = arg2;
-    const extractTimestampResult = tmp(11).extractTimestamp(guildScheduledEvent.id);
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(guildScheduledEvent.id);
     if (arg2 == null) {
       tmp5 = extractTimestampResult;
     }
@@ -39,6 +40,7 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
         }
       }
     }
+    const tmpResult = SnowflakeUtilsDefault;
   }
   const date = new Date(guildScheduledEvent.scheduled_start_time);
 };

@@ -53,9 +53,8 @@ function handleConnectionOpenOrResumed(type) {
       if (!tmp) {
         closure_20.clearWithoutFlushing(item, c0);
         if (c1) {
-          obj[item] = obj2.get(item);
+          obj[item] = closure_20.get(item);
         }
-        obj2 = closure_20;
       }
     });
     let obj1 = set(12);
@@ -106,9 +105,11 @@ function handleConnectionOpenOrResumed(type) {
   });
   if (!obj8.isEmpty(subscriptions)) {
     obj1 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions };
-    set(573).dispatch(obj1);
-    const tmp18Result = set(573);
+    tmp18(573).dispatch(obj1);
+    const tmp18Result = tmp18(573);
   }
+  obj8 = set(12);
+  tmp18 = set;
 }
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);
@@ -266,9 +267,8 @@ const guildSubscriptionsStore = new GuildSubscriptionsStore(DispatcherDefault, {
       if (!tmp) {
         closure_20.clearWithoutFlushing(item, c0);
         if (c1) {
-          obj[item] = obj2.get(item);
+          obj[item] = closure_20.get(item);
         }
-        obj2 = closure_20;
       }
     });
     if (!obj2.isEmpty(subscriptions)) {
@@ -306,17 +306,19 @@ const guildSubscriptionsStore = new GuildSubscriptionsStore(DispatcherDefault, {
         if (!tmp) {
           closure_20.clearWithoutFlushing(item, c0);
           if (c1) {
-            obj[item] = obj2.get(item);
+            obj[item] = closure_20.get(item);
           }
-          obj2 = closure_20;
         }
       });
       if (!obj2.isEmpty(subscriptions)) {
         subscriptions = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: null };
         subscriptions.subscriptions = subscriptions;
-        require("Dispatcher").dispatch(subscriptions);
-        const tmp3Result = require("Dispatcher");
+        tmp3(tmp4[17]).dispatch(subscriptions);
+        const tmp3Result = tmp3(tmp4[17]);
       }
+      obj2 = require("module_12");
+      tmp3 = importDefault;
+      tmp4 = subscriptions;
     } else {
       return false;
     }

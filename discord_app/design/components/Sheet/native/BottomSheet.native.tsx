@@ -2,10 +2,13 @@
 
 // Module 7150 (Sheet/BottomSheet)
 import nativeDefault from "native" /* 576 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4962 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import NavigatorConstants from "NavigatorConstants" /* 5682 */;
 import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 import NavScrim from "NavScrim" /* 7040 */;
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7154 */;
@@ -51,12 +54,12 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.wrapperWithBorder = obj;
   let tmp4;
   if (arg0) {
-    tmp4 = tmp;
+    tmp4 = borderTopRightRadius;
   }
   const obj1 = { borderTopLeftRadius: tmp4, borderTopRightRadius: null, overflow: null, marginBottom: null, flex: 1 };
   let tmp5;
   if (arg0) {
-    tmp5 = tmp;
+    tmp5 = borderTopRightRadius;
   }
   obj1.borderTopRightRadius = tmp5;
   let str;
@@ -135,7 +138,7 @@ let closure_19 = noop.forwardRef((windowDimensions, ref) => {
     obj.enableDynamicSizing = true;
     obj.snapPoints = tmp9[0];
     if (maxDynamicContentSize == null) {
-      maxDynamicContentSize = height - tmp4(5682).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+      maxDynamicContentSize = height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
     }
     obj.maxDynamicContentSize = maxDynamicContentSize;
     obj.ref = ref;
@@ -143,7 +146,7 @@ let closure_19 = noop.forwardRef((windowDimensions, ref) => {
     obj = { bounces: false, keyboardShouldPersistTaps, style: scrollViewStyle, children: null };
     obj1 = { onLayout: callback, style: wrapperStyle, children };
     obj.children = value2(timestampProducer, obj1);
-    obj.children = value2(tmp4(6627).BottomSheetScrollView, obj);
+    obj.children = value2(BottomSheetModal.BottomSheetScrollView, obj);
     return value2(BottomSheetModalDefault, obj);
   }
   items = [];
@@ -168,7 +171,7 @@ let closure_20 = noop.forwardRef((windowDimensions, ref) => {
     maxHeight = contentHeight;
   }
   if (maxHeight == null) {
-    maxHeight = height - tmp5(5682).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+    maxHeight = height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   }
   let items = [hasEverExpanded, isScreenReaderEnabled, maxHeight, startHeight];
   const memo = noop.useMemo(() => {
@@ -204,7 +207,7 @@ let closure_20 = noop.forwardRef((windowDimensions, ref) => {
   }, items1);
   const tmp11 = value2(timestampProducer, obj);
   obj = {};
-  let tmp3Result = tmp3(6627);
+  let tmp3Result = BottomSheetModalDefault;
   const merged1 = Object.assign(merged);
   obj.ref = ref;
   obj.enableDynamicSizing = false;
@@ -214,9 +217,9 @@ let closure_20 = noop.forwardRef((windowDimensions, ref) => {
   let tmp10Result = tmp11;
   if (null != borderGradient) {
     const obj1 = { style: tmp2.gradient, start: null, end: null, colors: null, children: null };
-    tmp3Result = tmp3(4987);
-    obj1.start = tmp5(1093).VerticalGradient.START;
-    obj1.end = tmp5(1093).VerticalGradient.END;
+    tmp3Result = LinearGradientDefault;
+    obj1.start = ConstantsIOS.VerticalGradient.START;
+    obj1.end = ConstantsIOS.VerticalGradient.END;
     obj1.colors = borderGradient;
     obj1.children = tmp11;
     tmp10Result = value2(tmp3Result, obj1);
@@ -231,7 +234,7 @@ const __initData3 = { code: "function BottomSheetNativeTsx3(isVisuallyClosed){co
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheet.native.tsx");
 
-export const BottomSheet = noop.forwardRef((scrollable, ref) => {
+export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
   let flag = scrollable.scrollable;
   if (flag === undefined) {
     flag = false;
@@ -266,13 +269,13 @@ export const BottomSheet = noop.forwardRef((scrollable, ref) => {
   const tmp7 = footer(onExpand.useState(startExpanded), 2);
   closure_11 = tmp7[1];
   closure_12 = onExpand.useRef(false);
-  ref = onExpand.useRef(true);
+  const ref = onExpand.useRef(true);
   let items = [onDismiss, registerDismissHandler];
   const layoutEffect = obj.useLayoutEffect(() => {
     registerDismissHandler(onDismiss);
   }, items);
   let tmp8Result = tmp8(tmp3[17]);
-  const bottomSheetImperativeHandle = tmp8Result.useBottomSheetImperativeHandle(ref, ref);
+  const bottomSheetImperativeHandle = tmp8Result.useBottomSheetImperativeHandle(arg1, ref);
   let items1 = [transitionState, close];
   const effect = obj.useEffect(() => {
     let current = "exiting" !== transitionState;
@@ -391,7 +394,7 @@ export const BottomSheet = noop.forwardRef((scrollable, ref) => {
     const merged = Object.assign(arg0);
     let tmpResult = footer;
     if (footer == null) {
-      tmpResult = tmp(NavScrim.NavScrim, {});
+      tmpResult = value2(NavScrim.NavScrim, {});
     }
     obj.children = tmpResult;
     return value2(BottomSheetModal.BottomSheetFooter, obj);
@@ -405,8 +408,9 @@ export const BottomSheet = noop.forwardRef((scrollable, ref) => {
   const backgroundComponent = merged.backgroundComponent;
   if (backgroundComponent != null) {
     obj = { ref, accessible: null, accessibilityRole: "none", accessibilityLabel: "", startHeight: null, contentHeight: null, maxHeight: null, containerHeight: null, startExpanded: null, hasEverExpanded: null, windowDimensions: null, wrapperStyle: null, onExpand: null, enablePanDownToClose: true, containerStyle: null, backgroundStyle: null, topInset: null, keyboardBehavior: null, keyboardBlurBehavior: "restore", keyboardShouldPersistTaps: null, animationConfigs: null, overrideReduceMotion: null, handleIndicatorStyle: null, handleComponent: null, backdropComponent: null, backgroundComponent: null, renderFooter: null, animatedIndex: null, onAnimate: null, onClose: null, borderGradient: null, extraContent: null, children: null };
+    const tmp8Result4 = tmp8(tmp3[7]);
     const isIOSResult = tmp8(tmp3[7]).isIOS();
-    obj.accessible = !isIOSResult;
+    obj.accessible = !tmp8(tmp3[7]).isIOS();
     obj.startHeight = startHeight;
     obj.contentHeight = contentHeight;
     obj.maxHeight = maxHeight;
@@ -452,7 +456,7 @@ export const BottomSheet = noop.forwardRef((scrollable, ref) => {
     let tmp26Result = null != header;
     if (tmp26Result) {
       const obj2 = { style: tmp5.header, children: header };
-      tmp26Result = tmp26(tmp31, obj2);
+      tmp26Result = closure_16(tmp31, obj2);
     }
     const obj3 = { children: null };
     const items11 = [tmp26Result, ];
@@ -464,7 +468,7 @@ export const BottomSheet = noop.forwardRef((scrollable, ref) => {
     obj1.children = items11;
     obj3.children = closure_17(transitionState, obj1);
     obj.children = closure_16(tmp8(tmp3[24]).LayerScope, obj3);
-    tmp26Result = tmp26(tmp23, obj);
+    tmp26Result = closure_16(tmp23, obj);
     let tmp26Result1 = tmp26Result;
     if (showGradient) {
       let tmp35 = tmp24;
@@ -472,8 +476,10 @@ export const BottomSheet = noop.forwardRef((scrollable, ref) => {
         tmp35 = null;
       }
       const obj5 = { gradient: tmp35, children: tmp26Result };
-      tmp26Result1 = tmp26(tmp8(tmp3[25]).ThemeContextProvider, obj5);
+      tmp26Result1 = closure_16(tmp8(tmp3[25]).ThemeContextProvider, obj5);
     }
     return tmp26Result1;
   }
+  tmp23 = flag ? closure_20 : closure_19;
+  const tmp8Result3 = backdropOpacity(dismissAccessibilityLabel[14]);
 });

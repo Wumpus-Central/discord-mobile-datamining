@@ -33,7 +33,7 @@ export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, c
       obj.type = obj.HEADER;
       const intl = tmp12(1114).intl;
       obj.header = intl.string(tmp12(1114).t.CbaapP);
-      items.push(obj);
+      arr = items.push(obj);
       combined = items.concat(rankByDateAddedResult.map((entry) => ({ type: constants.ENTRY, entry })));
     }
     const found = arr.filter((guildId) => !set.has(guildId.guildId));
@@ -45,7 +45,7 @@ export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, c
       obj.type = obj.HEADER;
       const intl2 = tmp12(1114).intl;
       obj.header = intl2.string(tmp12(1114).t.wxbhEe);
-      combined.push(obj);
+      arr = combined.push(obj);
       combined1 = combined.concat(result.map((entry) => ({ type: constants.ENTRY, entry })));
     }
     return combined1;

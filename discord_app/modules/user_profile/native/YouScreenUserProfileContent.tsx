@@ -12,9 +12,11 @@ import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11207 */;
 import UserProfileActivityDefault from "UserProfileActivity" /* 12998 */;
 import UserProfileNoteDefault from "UserProfileNote" /* 13051 */;
 import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13064 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 13073 */;
 import UserProfileConnections from "UserProfileConnections" /* 13079 */;
 import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13084 */;
 import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13090 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15695 */;
 import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16369 */;
 import you_tracking_Tracking from "you/tracking/Tracking" /* 16793 */;
 import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 16804 */;
@@ -260,13 +262,13 @@ export default function YouScreenUserProfileContent(user) {
     let tmp3Result = !shouldShowExpiringTrialOfferCard;
     if (!shouldShowExpiringTrialOfferCard) {
       const obj1 = { navigateToPremium, navigateToShop, hasCustomProfileTheme };
-      tmp3Result = tmp3(tmp4(13073), obj1);
+      tmp3Result = map1(UserProfileDismissibleUpsellsDefault, obj1);
     }
     items2[1] = tmp3Result;
     tmp3Result = enabled;
     if (enabled) {
       const obj2 = { style: items };
-      tmp3Result = tmp3(tmp4(15695), obj2);
+      tmp3Result = map1(BalanceWidgetMenuDefault, obj2);
     }
     items2[2] = tmp3Result;
     items2[3] = map1(UserProfileActivityDefault, { user, currentUser: user, style: items });
@@ -287,7 +289,7 @@ export default function YouScreenUserProfileContent(user) {
       let tmp4 = map1;
     } else {
       tmp4 = map1;
-      obj = { wishlistId: tmp3, containerWidth: null, isVisible: null };
+      obj = { wishlistId: stateFromStores1, containerWidth: null, isVisible: null };
       let tmp8;
       if (first > 0) {
         tmp8 = first;
@@ -297,7 +299,7 @@ export default function YouScreenUserProfileContent(user) {
       tmp4Result = tmp4(UserProfileWishlistGridDefault, obj);
     }
     const items = [tmp4Result, ];
-    obj = { userId: user.id, wishlistId: tmp3, containerWidth: null };
+    obj = { userId: user.id, wishlistId: stateFromStores1, containerWidth: null };
     let tmp15;
     if (first > 0) {
       tmp15 = first;
@@ -323,8 +325,8 @@ export default function YouScreenUserProfileContent(user) {
     const items = [obj];
     if (closure_17) {
       obj = { id: "board", label: null, page: null };
-      const intl2 = tmp(1114).intl;
-      obj.label = intl2.string(tmp(1114).t.laViwx);
+      const intl2 = util.intl;
+      obj.label = intl2.string(util.t.laViwx);
       const obj1 = {
         scrollEnabled: false,
         onContentSizeChange(arg0, arg1) {
@@ -333,12 +335,12 @@ export default function YouScreenUserProfileContent(user) {
         children: null
       };
       const obj2 = { userId: user.id, activeSection: activeProfileTabSection, containerBackground, containerBorderColor };
-      obj1.children = tmp3(YouScreenWidgetsBoardContainer, obj2);
-      obj.page = tmp3(tmp4, obj1, boardTabIndex);
+      obj1.children = map1(YouScreenWidgetsBoardContainer, obj2);
+      obj.page = map1(hasOwnProperty, obj1, boardTabIndex);
       items.push(obj);
     }
     const obj3 = { id: "wishlist", label: null, page: null };
-    const intl3 = tmp(1114).intl;
+    const intl3 = util.intl;
     obj3.label = intl3.string(util.t["7lZ31J"]);
     obj3.page = map1(hasOwnProperty, {
       scrollEnabled: false,

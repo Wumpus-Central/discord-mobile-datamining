@@ -21,7 +21,7 @@ ScheduleRuleRecord["fromServer"] = function fromServer(end_time) {
   end_time = end_time.end_time;
   ({ days, enabled } = end_time);
   if (typeof ScheduleRuleRecord === "function") {
-    const tmp6 = new ScheduleRuleRecord(tmp, tmp2, new.target, rule_id, label, start_time, end_time, days, enabled);
+    const tmp6 = new ScheduleRuleRecord(tmp, ScheduleRuleRecord, new.target, rule_id, label, start_time, end_time, days, enabled);
     tmp6.ruleId = rule_id;
     tmp6.label = label;
     tmp6.startTime = start_time;
@@ -66,7 +66,7 @@ prototype["isActiveAt"] = function isActiveAt(arg0, c1) {
           }
           if (sum > sum1) {
             if (arg0 === user.DayOfWeek.MONDAY) {
-              let SUNDAY = tmp6(1379).DayOfWeek.SUNDAY;
+              let SUNDAY = user.DayOfWeek.SUNDAY;
             } else {
               SUNDAY = arg0 - 1;
             }
@@ -76,7 +76,6 @@ prototype["isActiveAt"] = function isActiveAt(arg0, c1) {
                 return true;
               }
             }
-            tmp6 = require;
           }
           return false;
         }
@@ -114,13 +113,12 @@ RestrictedScheduleRecord["fromServer"] = function fromServer(rules) {
   let tmp2 = null;
   if (null != rules) {
     if (typeof RestrictedScheduleRecord === "function") {
-      const tmp10 = new RestrictedScheduleRecord(tmp, rules.rules, tmp3, new.target);
+      const tmp10 = new RestrictedScheduleRecord(tmp, rules.rules, RestrictedScheduleRecord, new.target);
       tmp10.rules = tmp5;
       tmp2 = tmp10;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    tmp3 = RestrictedScheduleRecord;
   }
   return tmp2;
 };
@@ -128,17 +126,16 @@ RestrictedScheduleRecord["fromCache"] = function fromCache(rules) {
   let tmp2 = null;
   if (null != rules) {
     if (typeof RestrictedScheduleRecord === "function") {
-      const tmp10 = new RestrictedScheduleRecord(tmp, rules.rules, tmp3, new.target);
+      const tmp10 = new RestrictedScheduleRecord(tmp, rules.rules, RestrictedScheduleRecord, new.target);
       tmp10.rules = tmp5;
       tmp2 = tmp10;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    tmp3 = RestrictedScheduleRecord;
   }
   return tmp2;
 };
-prototype2["isInRestrictedHours"] = function isInRestrictedHours(date) {
+prototype2["isInRestrictedHours"] = function isInRestrictedHours() {
   if (date === undefined) {
     const _Date = Date;
     date = new Date();
@@ -155,7 +152,7 @@ prototype2["isInRestrictedHours"] = function isInRestrictedHours(date) {
     return rules.some((isActiveAt) => isActiveAt.isActiveAt(closure_0, closure_1));
   }
 };
-prototype2["getNextStartInfo"] = function getNextStartInfo(date) {
+prototype2["getNextStartInfo"] = function getNextStartInfo() {
   if (date === undefined) {
     const _Date = Date;
     date = new Date();
@@ -275,18 +272,18 @@ export const ensureRestrictedScheduleRecord = function ensureRestrictedScheduleR
     } else {
       let length = restrictedSchedule.rules.length;
       if (0 === length) {
-        if (typeof obj === "function") {
+        if (typeof RestrictedScheduleRecord === "function") {
           const items = [];
-          const tmp8 = new RestrictedScheduleRecord(tmp, obj, new.target, items, RestrictedScheduleRecord, length, tmp3);
+          const tmp8 = new RestrictedScheduleRecord(tmp, RestrictedScheduleRecord, new.target, items, RestrictedScheduleRecord, length, tmp3);
           tmp8.rules = items;
           length = tmp8;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
       } else if ("ruleId" in restrictedSchedule.rules[0]) {
-        length = obj.fromCache(restrictedSchedule);
+        length = RestrictedScheduleRecord.fromCache(restrictedSchedule);
       } else {
-        length = obj.fromServer(restrictedSchedule);
+        length = RestrictedScheduleRecord.fromServer(restrictedSchedule);
       }
       tmp3 = length;
     }

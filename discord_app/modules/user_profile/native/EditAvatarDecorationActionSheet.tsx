@@ -32,7 +32,6 @@ function EditAvatarDecorationInner(pendingAvatarSrc) {
     }
     return member;
   });
-  const tmp5 = setSelectedAvatarDecoration;
   const tmp6 = setSelectedAvatarDecoration(guildId[24])();
   obj = { pendingValue: selectedAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
@@ -60,8 +59,6 @@ function EditAvatarDecorationInner(pendingAvatarSrc) {
   obj = { user, previewSkuId: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
   let skuId1;
   const obj4 = user(guildId[25]);
-  const tmp12 = closure_11;
-  const tmp13 = closure_12;
   if (profilePreviewValue != null) {
     skuId1 = profilePreviewValue.skuId;
   }
@@ -70,7 +67,7 @@ function EditAvatarDecorationInner(pendingAvatarSrc) {
   obj.nitroJoinCTA = intl.string(user(guildId[20]).t.FyBDiY);
   const intl2 = tmp(tmp2[20]).intl;
   obj.nitroUpgradeCTA = intl2.string(user(guildId[20]).t.e1UiOa);
-  items3[1] = closure_10(tmp5(guildId[27]), obj);
+  items3[1] = closure_10(setSelectedAvatarDecoration(guildId[27]), obj);
   obj1 = { sections: tmp6, selectedSkuId: null, renderRow: null, isFetching: null };
   let skuId2;
   if (selectedAvatarDecoration != null) {
@@ -82,7 +79,7 @@ function EditAvatarDecorationInner(pendingAvatarSrc) {
   obj1.isFetching = stateFromStores;
   items3[2] = closure_10(user(guildId[28]).EditCollectiblesPickerList, obj1);
   obj2.children = items3;
-  return tmp12(tmp13, obj2);
+  return closure_11(closure_12, obj2);
 }
 function AvatarDecorationSectionPreview(previewSkuId) {
   ({ user, guildId, pendingAvatarSrc } = previewSkuId);
@@ -124,12 +121,10 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   obj.accessibilityLabel = formatToPlainStringResult;
   obj = { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo, size: null };
   const tmp = closure_13();
-  const tmp6 = closure_11;
-  const tmp7 = View;
   obj.size = tmp10(1178).AvatarSizes.EDIT_AVATAR_DECORATION;
   const items1 = [closure_10(purchase(8257), obj), closure_10(purchase(13176), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
   obj.children = items1;
-  return tmp6(tmp7, obj);
+  return closure_11(View, obj);
 }
 const View = fn(17).View;
 const isAvatarDecorationRecord = fn(7547).isAvatarDecorationRecord;
@@ -194,7 +189,6 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   const items2 = [closure_11(View, obj2), ];
   const obj5 = { user, currentSkuId: null, selectedSkuId: null, isTryItOut: null, onApply: null, analyticsLocations: null, analyticsSource: null };
   let skuId;
-  const tmp13 = closure_11;
   const tmp9 = selectedAvatarDecoration(7162);
   if (currentAvatarDecoration != null) {
     skuId = currentAvatarDecoration.skuId;
@@ -212,7 +206,7 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   obj5.analyticsSource = selectedAvatarDecoration(7182).EDIT_AVATAR_DECORATION_SHEET;
   items2[1] = closure_10(selectedAvatarDecoration(8172), obj5);
   obj1.children = items2;
-  obj.children = tmp13(setPendingAvatarDecoration(7150).BottomSheet, obj1);
+  obj.children = closure_11(setPendingAvatarDecoration(7150).BottomSheet, obj1);
   obj6.children = closure_10(setPendingAvatarDecoration(7162).AnalyticsLocationProvider, obj);
   return closure_10(setPendingAvatarDecoration(4271).ThemeContextProvider, obj6);
 };

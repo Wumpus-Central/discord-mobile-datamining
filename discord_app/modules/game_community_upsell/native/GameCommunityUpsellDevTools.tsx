@@ -52,7 +52,7 @@ function MultiGuildDevTools() {
   obj = { style: tmp.scrollView, children: null };
   obj1 = { style: tmp.section, children: null };
   if (0 === mapped.length) {
-    mapped = tmp10(tmp2(tmp3[12]).TableRow, { label: "No games configured", subLabel: "MULTI_GUILD_GAME_CONFIGS is empty", disabled: true });
+    mapped = closure_7(tmp2(tmp3[12]).TableRow, { label: "No games configured", subLabel: "MULTI_GUILD_GAME_CONFIGS is empty", disabled: true });
   } else {
     mapped = mapped.map((detectableAppName) => {
       const obj = { label: detectableAppName.detectableAppName, subLabel: null, disabled: true };
@@ -77,7 +77,6 @@ function MultiGuildDevTools() {
   const obj3 = { title: "Store State", hasIcons: false, children: null };
   const items3 = [closure_7(require("TableRow").TableRow, { label: "Presentable Guilds", subLabel: String(guildsCount), disabled: true }), , ];
   const obj4 = { label: "Presentable Guilds", subLabel: String(guildsCount), disabled: true };
-  const tmp13 = closure_4;
   items3[1] = closure_7(require("TableRow").TableRow, { label: "Dismissed Guilds", subLabel: String(dismissedCount), disabled: true });
   items3[2] = closure_7(require("TableRow").TableRow, { label: "Last Fetched", subLabel: str, disabled: true });
   obj3.children = items3;
@@ -141,7 +140,7 @@ function MultiGuildDevTools() {
   obj6.children = closure_8(require("TableRowGroup").TableRowGroup, obj7);
   items2[2] = closure_7(closure_3, obj6);
   obj.children = items2;
-  obj.children = closure_8(tmp13, obj);
+  obj.children = closure_8(closure_4, obj);
   return closure_7(closure_3, obj);
 }
 get_ActivityIndicator = fn(17);

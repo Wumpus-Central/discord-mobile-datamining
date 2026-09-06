@@ -16,7 +16,7 @@ require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
   return { code: code.code, userId: code.user_id, claimedAt: code.claimed_at, promotion: PromotionRecord.createFromServer(code.promotion) };
 }
-let closure_12 = async function _claimOutboundPromotion(arg0, value) {
+let closure_12 = async function _claimOutboundPromotion(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -82,9 +82,9 @@ let closure_12 = async function _claimOutboundPromotion(arg0, value) {
         closure_131_4 = value;
         body = closure_131_4.body;
         if (obj9.isIOS()) {
-          let ANDROID = tmp38.IOS;
+          let ANDROID = closure_132_10.IOS;
         } else {
-          ANDROID = tmp38.ANDROID;
+          ANDROID = closure_132_10.ANDROID;
         }
         closure_131_6 = ANDROID;
         obj = closure_132_1(closure_132_2[10]);

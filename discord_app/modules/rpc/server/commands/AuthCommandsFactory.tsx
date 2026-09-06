@@ -23,7 +23,7 @@ function authorizeWithPrompt() {
   }
   return applyArgumentsResult;
 }
-let closure_19 = async function _authorizeWithPrompt(arg0, value) {
+let closure_19 = async function _authorizeWithPrompt(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -144,13 +144,13 @@ let closure_19 = async function _authorizeWithPrompt(arg0, value) {
                   closure_135_19 = Number(closure_135_13);
                 } else {
                   closure_135_32 = function isUserInstallable(integrationTypesConfig) {
-                    let hasApplicationFlagResult = closure_1_0(closure_1_3[11]).hasApplicationFlag(integrationTypesConfig, constants.EMBEDDED);
+                    let hasApplicationFlagResult = closure_1_0(dependencyMap[11]).hasApplicationFlag(integrationTypesConfig, constants.EMBEDDED);
                     if (hasApplicationFlagResult) {
                       let tmp5;
                       if (integrationTypesConfig != null) {
                         integrationTypesConfig = integrationTypesConfig.integrationTypesConfig;
                         if (integrationTypesConfig != null) {
-                          tmp5 = integrationTypesConfig[tmp(undefined, tmp2[12]).ApplicationIntegrationType.USER_INSTALL];
+                          tmp5 = integrationTypesConfig[closure_1_0(undefined, dependencyMap[12]).ApplicationIntegrationType.USER_INSTALL];
                         }
                       }
                       hasApplicationFlagResult = null != tmp5;
@@ -351,9 +351,9 @@ let closure_19 = async function _authorizeWithPrompt(arg0, value) {
     }
   }
 };
-function authenticate(authorization, arg1) {
+function authenticate(authorization, access_token) {
   _require = authorization;
-  importDefault = arg1;
+  importDefault = access_token;
   if (authorization.authorization.accessToken) {
     let obj = { errorCode: constants2.INVALID_COMMAND };
     const tmp19 = new RPCErrorDefault(obj, "Already authenticated");
@@ -368,7 +368,7 @@ function authenticate(authorization, arg1) {
     obj = { url: OAUTH2_CURRENT_AUTH.OAUTH2_CURRENT_AUTH, headers: null, oldFormErrors: true, rejectWithError: false };
     let obj1 = { Authorization: null };
     const _HermesInternal = HermesInternal;
-    obj1.Authorization = "Bearer " + arg1;
+    obj1.Authorization = "Bearer " + access_token;
     obj.headers = obj1;
     value = HTTP.get(obj);
     return value.then((body) => {
@@ -385,14 +385,14 @@ function authenticate(authorization, arg1) {
           if (user) {
             if (currentUser.id === user.id) {
               const items = [];
-              items[HermesBuiltin.arraySpread(scopes, HermesBuiltin.arraySpread(tmp.authorization.scopes, 0))] = closure_2_10;
-              tmp.authorization.scopes = items;
-              tmp.authorization.accessToken = access_token;
+              items[HermesBuiltin.arraySpread(scopes, HermesBuiltin.arraySpread(authorization.authorization.scopes, 0))] = closure_2_10;
+              authorization.authorization.scopes = items;
+              authorization.authorization.accessToken = access_token;
               const _Date = Date;
               const date = new Date(expires);
-              tmp.authorization.expires = date;
+              authorization.authorization.expires = date;
               obj = { type: "RPC_APP_AUTHENTICATED", socketId: null, application: null };
-              ({ id: obj4.socketId, application: obj4.application } = tmp);
+              ({ id: obj4.socketId, application: obj4.application } = authorization);
               DispatcherDefault.dispatch(obj);
               const obj1 = {};
               const merged = Object.assign(body.body);
@@ -477,7 +477,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                 let Storage2 = Storage3.Storage;
                 let result = Storage2.set(CachedTokens, obj);
                 if (typeof _authorize === "function") {
-                  obj = { client_id: tmp3, scope: IDENTIFY, response_type: "token", signal, isSocketRpcPrivateScope: false };
+                  obj = { client_id: id, scope: IDENTIFY, response_type: "token", signal, isSocketRpcPrivateScope: false };
                   return authorizeWithPrompt(obj, closure_0, closure_1).then((result) => {
                     if (null == result) {
                       let obj = { errorCode: constants2.UNKNOWN_ERROR };
@@ -517,7 +517,6 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp3 = id;
               });
               const promise2 = authenticate(socket, accessToken);
             } else {

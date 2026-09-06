@@ -41,7 +41,7 @@ export const FormCheckbox = function FormCheckbox(checked) {
     } else {
       borderColor = unselected.borderColor;
     }
-    obj = { borderColor: obj.withSpring(borderColor, tmp(4978).SUBTLE_SPRING, "animate-always"), backgroundColor: null };
+    obj = { borderColor: obj.withSpring(borderColor, springPresets.SUBTLE_SPRING, "animate-always"), backgroundColor: null };
     if (checked) {
       let backgroundColor = selected.backgroundColor;
     } else {
@@ -68,12 +68,12 @@ export const FormCheckbox = function FormCheckbox(checked) {
     if (selected) {
       num2 = 1;
     }
-    obj = { opacity: obj.withSpring(num2, tmp(4978).SUBTLE_SPRING, "animate-always"), transform: null };
+    obj = { opacity: obj.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always"), transform: null };
     let num3 = 1;
     if (!selected) {
       num3 = num;
     }
-    obj = { scale: spring.withSpring(num3, tmp(4978).SUBTLE_SPRING) };
+    obj = { scale: spring.withSpring(num3, springPresets.SUBTLE_SPRING) };
     const items = [obj];
     obj.transform = items;
     return obj;

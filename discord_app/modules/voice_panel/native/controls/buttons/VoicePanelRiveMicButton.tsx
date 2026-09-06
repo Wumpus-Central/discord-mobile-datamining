@@ -2,6 +2,8 @@
 
 // Module 10004 (VoicePanelRiveMicButton)
 import native from "native" /* 4271 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9127 */;
+import MicrophoneIcon2 from "MicrophoneIcon" /* 10005 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,9 +22,9 @@ export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
   }
   obj.defaultViewModelInstance = str;
   if (muted) {
-    let MicrophoneIcon = tmp3(9127).MicrophoneSlashIcon;
+    let MicrophoneIcon = MicrophoneSlashIcon.MicrophoneSlashIcon;
   } else {
-    MicrophoneIcon = tmp3(10005).MicrophoneIcon;
+    MicrophoneIcon = MicrophoneIcon2.MicrophoneIcon;
   }
   obj.fallback = <MicrophoneIcon color={color} />;
   obj.children = jsx(native.MicrophoneRive, { dataBinding: { fill: color, on: !muted }, defaultViewModelInstance: null, fallback: null });

@@ -22,15 +22,15 @@ export default {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         obj3 = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: closure_128_0.body };
         closure_129_1(closure_129_2[3]).dispatch(obj3);
         c3 = 0;
         closure_129_1(closure_129_2[3]);
       }
-      return arg1;
+      return value;
     })();
   },
   ignore(id) {

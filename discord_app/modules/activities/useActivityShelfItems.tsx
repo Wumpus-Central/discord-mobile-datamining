@@ -29,24 +29,22 @@ export default function useActivityShelfItems(enableFilter) {
         let hasItem = "" === filter;
         if (!hasItem) {
           const formatted = application.application.name.toLowerCase();
-          hasItem = formatted.includes(str.toLowerCase());
+          hasItem = formatted.includes(filter.toLowerCase());
         }
         tmp = hasItem;
-        str = filter;
       }
       return tmp;
     }
     const items = [...developerActivityShelfItems];
     const found = items.filter(shouldKeepShelfItem);
     for (const item10023 of closure_2) {
-      let tmp = item10023;
       let hasItem = set.has(item10023.application.id);
       let shouldKeepShelfItemResult = !hasItem;
       if (!hasItem) {
-        shouldKeepShelfItemResult = shouldKeepShelfItem(tmp);
+        shouldKeepShelfItemResult = shouldKeepShelfItem(item10023);
       }
       if (shouldKeepShelfItemResult) {
-        let arr = found.push(tmp);
+        let arr = found.push(item10023);
       }
       continue;
     }

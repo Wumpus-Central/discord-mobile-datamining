@@ -86,7 +86,7 @@ function ReactActionSheetBase(content) {
       }, 500);
     }, []);
     let items = [content.id, str, first1, sendMessage];
-    const callback = obj.useCallback(asyncGeneratorStep(async (arg0, value) => {
+    const callback = obj.useCallback(asyncGeneratorStep(async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -144,7 +144,7 @@ function ReactActionSheetBase(content) {
       const user = arg0;
       c2 = 0;
       c3 = 0;
-      return (async (arg0, value) => {
+      return (async (arg0) => {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -358,6 +358,7 @@ function ReactActionSheetBase(content) {
   const intl3 = tmp5(tmp6[7]).intl;
   stringResult1 = intl3.string(tmp5(tmp6[7]).t.XC5YE5);
   str = "hotwheels_gaming_activity";
+  stringResult = intl.string(require("util").t["5IEsGx"]);
 }
 const View = fn(17).View;
 const ACTION_SHEET_MAX_WIDTH = fn(7151).ACTION_SHEET_MAX_WIDTH;
@@ -408,11 +409,11 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
   if (isForward) {
     let obj = { username };
     let formatToPlainStringResult = formatToPlainString(t.S5JNyW, obj);
-    let tmp5 = tmp;
+    let tmp5 = require;
   } else {
     obj = { username };
     formatToPlainStringResult = formatToPlainString(t.XPQgL2, obj);
-    tmp5 = tmp;
+    tmp5 = require;
   }
   const items = [];
   items.push("> -# *" + formatToPlainStringResult + "*");

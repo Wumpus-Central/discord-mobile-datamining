@@ -16,14 +16,14 @@ export const useExperimentAssignment = function useExperimentAssignment(experime
   const items = [ExperimentStore, ApexExperimentStore];
   return require("initialize").useStateFromStores(items, () => {
     if (experiment.system === ExperimentManager.ExperimentSystem.LEGACY) {
-      const userExperimentDescriptor = ExperimentStore.getUserExperimentDescriptor(tmp.name);
+      const userExperimentDescriptor = ExperimentStore.getUserExperimentDescriptor(experiment.name);
       let bucket;
       if (userExperimentDescriptor != null) {
         bucket = userExperimentDescriptor.bucket;
       }
       let variantId = bucket;
     } else {
-      const assignment = ApexExperimentStore.getAssignment(tmp.kind, closure_1, tmp.name);
+      const assignment = ApexExperimentStore.getAssignment(experiment.kind, closure_1, experiment.name);
       if (assignment != null) {
         variantId = assignment.variantId;
       }
@@ -46,6 +46,7 @@ export const getExperimentServerAssignment = function getExperimentServerAssignm
   } else {
     loadedUserExperiment = obj2.getServerAssignment(name.kind, id, name.name);
   }
+  const tmp4 = _slicedToArray(tmp, 2);
 };
 export const useExperimentServerAssignment = function useExperimentServerAssignment(experiment, maybeExtractIdResult) {
   _require = experiment;
@@ -63,5 +64,6 @@ export const useExperimentServerAssignment = function useExperimentServerAssignm
     } else {
       loadedUserExperiment = obj2.getServerAssignment(name.kind, closure_1, name.name);
     }
+    const tmp2 = _slicedToArray(items, 2);
   });
 };

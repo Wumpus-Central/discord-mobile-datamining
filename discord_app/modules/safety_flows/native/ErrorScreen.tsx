@@ -20,7 +20,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_flows/native/ErrorScreen.tsx");
 
 export default function ErrorScreen() {
-  dependencyMap = async function _handleRetry(arg0, value) {
+  dependencyMap = async function _handleRetry() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

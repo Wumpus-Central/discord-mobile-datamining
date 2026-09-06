@@ -1,8 +1,13 @@
 // === Module 17691: EligibilityChecklist ===
 
 // Module 17691 (EligibilityChecklist)
+import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import FastImageDefault from "FastImage" /* 5587 */;
+import FormSeparatorDefault from "FormSeparator" /* 15217 */;
+import _modDef17692 from "module_17692" /* 17692 */;
+import _modDef17693 from "module_17693" /* 17693 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,9 +23,9 @@ function EligibilityChecklistRow(item) {
   items[1] = eligibleRow;
   obj = { style: tmp.rowStatusIcon, source: null };
   if (item.checked) {
-    let tmp6Result = tmp6(17692);
+    let tmp6Result = _modDef17692;
   } else {
-    tmp6Result = tmp6(17693);
+    tmp6Result = _modDef17693;
   }
   obj.source = tmp6Result;
   const items1 = [React4(FastImageDefault, obj), ];
@@ -30,8 +35,8 @@ function EligibilityChecklistRow(item) {
   if (tmp5Result) {
     const obj3 = { style: tmp.actionButtonWrapper, children: null };
     ({ actionLabel: obj7.text, actionHandler: obj7.onPress } = item);
-    obj3.children = tmp5(tmp10(4975).Button, { text: null, onPress: null, grow: true });
-    tmp5Result = tmp5(tmp4, obj3);
+    obj3.children = React4(components_Button_Button.Button, { text: null, onPress: null, grow: true });
+    tmp5Result = React4(View, obj3);
     const obj4 = { text: null, onPress: null, grow: true };
   }
   items2[2] = tmp5Result;
@@ -40,10 +45,10 @@ function EligibilityChecklistRow(item) {
   obj.children = items1;
   const children = [hasOwnProperty(View, obj), ];
   if (item.isLast) {
-    tmp5Result = tmp5(tmp10(1178).Spacer, { size: 16 });
+    tmp5Result = React4(native.Spacer, { size: 16 });
   } else {
     const obj5 = { style: tmp.divider };
-    tmp5Result = tmp5(tmp6(15217), obj5);
+    tmp5Result = React4(FormSeparatorDefault, obj5);
   }
   children[1] = tmp5Result;
   return hasOwnProperty(timestampProducer, { children });

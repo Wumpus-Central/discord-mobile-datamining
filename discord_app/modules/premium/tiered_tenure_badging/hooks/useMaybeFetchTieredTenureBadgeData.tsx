@@ -17,11 +17,12 @@ export const useMaybeFetchTieredTenureBadgeData = function useMaybeFetchTieredTe
   importDefault = require("useIsPremiumSubscriber").useIsPremiumSubscriber(PremiumTypes.TIER_2);
   useMountEffectDefault(() => {
     let id;
-    if (closure_0 != null) {
-      id = tmp.id;
+    if (user != null) {
+      id = user.id;
     }
     if (tmp3) {
-      maybeFetchUserProfileDefault(tmp.id);
+      maybeFetchUserProfileDefault(user.id);
     }
+    tmp3 = null != id && closure_1;
   });
 };

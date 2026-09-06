@@ -33,20 +33,18 @@ function EffectTile(arg0) {
   items[1] = selected;
   const obj1 = { userId, userName: stringResult, effectDisplayType: null, pendingDisplayNameStyles: null, style: null, variant: "text-md/semibold" };
   const tmp2Result = useDisplayNameStylesEffectConfigs;
-  const tmp8 = timestampProducer;
-  const tmp9 = React6;
   obj1.effectDisplayType = types.EffectDisplayType.STATIC;
   obj1.pendingDisplayNameStyles = displayNameStylesEffectConfig.previewStyles;
   obj1.style = tmp.effectName;
   const items1 = [React5(UsernameWithEffectsDefault, obj1), ];
   if (showNewDot) {
     const obj2 = { style: tmp.tileNewDot, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-    showNewDot = tmp7(tmp10, obj2);
+    showNewDot = React5(hasOwnProperty, obj2);
   }
   items1[1] = showNewDot;
   obj.children = items1;
-  obj.children = tmp9(hasOwnProperty, obj);
-  return React5(tmp8, obj, effectId);
+  obj.children = React6(hasOwnProperty, obj);
+  return React5(timestampProducer, obj, effectId);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);

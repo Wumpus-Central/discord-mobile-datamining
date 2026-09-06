@@ -186,7 +186,7 @@ let obj7 = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx");
 
-export const SearchLocalAndGlobalContentView = noop.forwardRef((context, ref) => {
+export const SearchLocalAndGlobalContentView = noop.forwardRef((context, arg1) => {
   context = context.context;
   _require = context;
   const onScroll = context.onScroll;
@@ -210,7 +210,7 @@ export const SearchLocalAndGlobalContentView = noop.forwardRef((context, ref) =>
   const tmp7 = _slicedToArray(noop.useState(""), 2);
   const query = tmp7[0];
   const setQuery = tmp7[1];
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({ setQuery }));
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({ setQuery }));
   let obj1 = require("ActivitiesInTextUtils");
   let id;
   if ("channel" === context.type) {
@@ -264,7 +264,7 @@ export const SearchLocalAndGlobalContentView = noop.forwardRef((context, ref) =>
   const items5 = [applicationResults, applicationResults2, loading, fetchState];
   memo1 = obj.useMemo(() => {
     const mapped = applicationResults.map((application) => ({ type: constants.LOCAL_APPLICATION, application }));
-    const set = new Set(applicationResults.map((id) => id.id));
+    new Set(applicationResults.map((id) => id.id));
     let items = applicationResults2;
     if (applicationResults2 == null) {
       items = [];
@@ -322,8 +322,8 @@ export const SearchLocalAndGlobalContentView = noop.forwardRef((context, ref) =>
       style.style = style;
       return applicationResults(onScroll(entrypoint[26]), style);
     } else {
-      if (tmp.LOCAL_APPLICATION !== type) {
-        if (tmp.GLOBAL_APPLICATION !== type) {
+      if (fetchNextPage.LOCAL_APPLICATION !== type) {
+        if (fetchNextPage.GLOBAL_APPLICATION !== type) {
           return null;
         }
       }

@@ -3,6 +3,7 @@
 // Module 14126 (EmptyState)
 import nativeDefault from "native" /* 576 */;
 import shared from "shared" /* 4411 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,11 +33,11 @@ export default function EmptyState(Illustration) {
   } else {
     tmp8Result = null;
     if (tmp6) {
-      obj = { resizeMode: "contain", source: tmp2(4411).isThemeLight(tmp5) ? Illustration.lightSource : Illustration.darkSource, style: null };
+      obj = { resizeMode: "contain", source: shared.isThemeLight(tmp5) ? Illustration.lightSource : Illustration.darkSource, style: null };
       const items1 = [tmp.emptyImage, Illustration.imageStyle];
       obj.style = items1;
       tmp8Result = React4(React3, obj);
-      const tmp2Result = tmp2(4411);
+      const tmp2Result = shared;
     }
     tmp6 = null != Illustration.lightSource && null != Illustration.darkSource;
   }
@@ -52,7 +53,7 @@ export default function EmptyState(Illustration) {
     const items4 = [tmp.emptyTitle, tmp11];
     obj2.style = items4;
     obj2.children = title;
-    tmp14 = React4(tmp2(4556).Text, obj2);
+    tmp14 = React4(Text_Text.Text, obj2);
   }
   items3[1] = tmp14;
   let tmp16 = null;
@@ -61,7 +62,7 @@ export default function EmptyState(Illustration) {
     const items5 = [tmp.emptyBody, bodyStyle];
     obj3.style = items5;
     obj3.children = body;
-    tmp16 = React4(tmp2(4556).Text, obj3);
+    tmp16 = React4(Text_Text.Text, obj3);
   }
   items3[2] = tmp16;
   items3[3] = children;

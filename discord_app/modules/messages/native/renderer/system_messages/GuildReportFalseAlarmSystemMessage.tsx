@@ -2,6 +2,7 @@
 
 // Module 8040 (GuildReportFalseAlarmSystemMessage)
 import util from "util" /* 1114 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
 import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7953 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
@@ -33,8 +34,7 @@ export const createGuildReportFalseAlarmSystemMessage = function createGuildRepo
     automodUsernameColor = null;
   }
   obj.usernameColor = automodUsernameColor;
-  tmp4(1399);
-  const tmp4Result = tmp4(1396);
+  const tmp4Result = AvatarUtils;
   const tmp7 = getTagPropertiesDefault({ message, channel, isSystemDM: true, colors: tmp2 });
   obj.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp7);

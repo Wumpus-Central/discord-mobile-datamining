@@ -1,7 +1,9 @@
 // === Module 15476: SelectWebBrowserSetting ===
 
 // Module 15476 (SelectWebBrowserSetting)
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import BrowserManager from "BrowserManager" /* 4525 */;
 import SettingsConstants from "SettingsConstants" /* 7975 */;
 import SettingBuilders from "SettingBuilders" /* 11468 */;
@@ -15,33 +17,33 @@ function useWebBrowserSettingOptions() {
   let obj1 = BrowserManager;
   if (obj1.useBrowserManagerSupportsInAppBrowser()) {
     obj = { label: null, value: null };
-    const intl = tmp(1114).intl;
-    obj.label = intl.string(tmp(1114).t.YayR6P);
-    obj.value = tmp(1093).WebBrowserType.IN_APP;
+    const intl = util.intl;
+    obj.label = intl.string(util.t.YayR6P);
+    obj.value = ConstantsIOS.WebBrowserType.IN_APP;
     items.push(obj);
   }
-  let tmpResult = tmp(1115);
+  let tmpResult = PlatformUtils;
   if (!tmpResult.isAndroid()) {
     obj = { label: null, value: null };
-    const intl2 = tmp(1114).intl;
-    obj.label = intl2.string(tmp(1114).t.kEfv89);
-    obj.value = tmp(1093).WebBrowserType.SAFARI;
+    const intl2 = util.intl;
+    obj.label = intl2.string(util.t.kEfv89);
+    obj.value = ConstantsIOS.WebBrowserType.SAFARI;
     items.push(obj);
   }
   if (!browserManagerIsChromeInstalled) {
     return items;
   } else {
-    tmpResult = tmp(1115);
-    const intl3 = tmp(1114).intl;
+    tmpResult = PlatformUtils;
+    const intl3 = util.intl;
     const string = intl3.string;
-    let t = tmp(1114).t;
+    let t = util.t;
     if (isAndroidResult) {
       let stringResult = string(t.kEfv89);
     } else {
       stringResult = string(t.FfjVVt);
     }
     obj1 = { label: stringResult, value: null };
-    CHROME = tmp(1093).WebBrowserType.CHROME;
+    CHROME = ConstantsIOS.WebBrowserType.CHROME;
     obj1.value = CHROME;
     t = items.push(obj1);
     isAndroidResult = tmpResult.isAndroid();

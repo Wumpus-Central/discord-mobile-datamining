@@ -5,6 +5,7 @@ import util from "util" /* 1114 */;
 import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10892 */;
 import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 13015 */;
 import getActivityPlatformDefault from "getActivityPlatform" /* 13016 */;
+import getActivityPlatformDisplayNameDefault from "getActivityPlatformDisplayName" /* 13019 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -140,15 +141,15 @@ export default function getActivityHeader(session_id) {
   }
   if (null != tmp3) {
     type = session_id.type;
-    if (tmp5.PLAYING === type) {
+    if (constants.PLAYING === type) {
       let Dzgz4u = util.t.A17aM8;
-    } else if (tmp5.WATCHING === type) {
+    } else if (constants.WATCHING === type) {
       Dzgz4u = util.t.ENbTKQ;
-    } else if (tmp5.LISTENING === type) {
+    } else if (constants.LISTENING === type) {
       Dzgz4u = util.t.EcHzWI;
-    } else if (tmp5.COMPETING === type) {
+    } else if (constants.COMPETING === type) {
       Dzgz4u = util.t.ikpHeS;
-    } else if (tmp5.STREAMING === type) {
+    } else if (constants.STREAMING === type) {
       Dzgz4u = util.t.Dzgz4u;
     }
     if (undefined !== Dzgz4u) {
@@ -160,7 +161,7 @@ export default function getActivityHeader(session_id) {
       obj11.platformLabel = str;
       return obj11;
     }
-    tmp35 = tmp(13019)(tmp3, session_id);
+    tmp35 = getActivityPlatformDisplayNameDefault(tmp3, session_id);
   }
   if (session_id.type === constants.PLAYING) {
     const obj13 = { text: null, platformIcon: null, platformLabel: null };
@@ -169,7 +170,7 @@ export default function getActivityHeader(session_id) {
     obj13.platformIcon = icon;
     obj13.platformLabel = str;
     obj = obj13;
-  } else if (session_id.type === tmp5.STREAMING) {
+  } else if (session_id.type === constants.STREAMING) {
     const obj14 = { text: null, platformIcon: null, platformLabel: null };
     const intl8 = util.intl;
     obj14.text = intl8.string(util.t["Jpkr/q"]);
@@ -179,64 +180,64 @@ export default function getActivityHeader(session_id) {
   } else {
     if (obj29.isStageActivity(session_id)) {
       const obj15 = { text: null };
-      const intl7 = tmp37(1114).intl;
+      const intl7 = util.intl;
       const obj16 = { name: session_id.name };
-      obj15.text = intl7.formatToPlainString(tmp37(1114).t.pW3Ip3, obj16);
+      obj15.text = intl7.formatToPlainString(util.t.pW3Ip3, obj16);
       obj = obj15;
     } else {
-      if (session_id.type === tmp5.LISTENING) {
+      if (session_id.type === constants.LISTENING) {
         if (null != session_id.details) {
           const obj17 = { text: null, platformIcon: null, platformLabel: null };
-          const intl6 = tmp37(1114).intl;
+          const intl6 = util.intl;
           const obj18 = { name: session_id.name };
-          obj17.text = intl6.formatToPlainString(tmp37(1114).t["b+lA5+"], obj18);
+          obj17.text = intl6.formatToPlainString(util.t["b+lA5+"], obj18);
           obj17.platformIcon = icon;
           obj17.platformLabel = str;
           obj = obj17;
         }
       }
-      if (session_id.type === tmp5.LISTENING) {
+      if (session_id.type === constants.LISTENING) {
         const obj19 = { text: null, platformIcon: null, platformLabel: null };
-        const intl5 = tmp37(1114).intl;
-        obj19.text = intl5.string(tmp37(1114).t.dBISa6);
+        const intl5 = util.intl;
+        obj19.text = intl5.string(util.t.dBISa6);
         obj19.platformIcon = icon;
         obj19.platformLabel = str;
         obj = obj19;
       } else {
-        if (session_id.type === tmp5.WATCHING) {
+        if (session_id.type === constants.WATCHING) {
           if (null != session_id.details) {
             const obj20 = { text: null, platformIcon: null, platformLabel: null };
-            const intl4 = tmp37(1114).intl;
+            const intl4 = util.intl;
             const obj21 = { name: session_id.name };
-            obj20.text = intl4.formatToPlainString(tmp37(1114).t.mqdfDc, obj21);
+            obj20.text = intl4.formatToPlainString(util.t.mqdfDc, obj21);
             obj20.platformIcon = icon;
             obj20.platformLabel = str;
             obj = obj20;
           }
         }
-        if (session_id.type === tmp5.WATCHING) {
+        if (session_id.type === constants.WATCHING) {
           const obj22 = { text: null, platformIcon: null, platformLabel: null };
-          const intl3 = tmp37(1114).intl;
-          obj22.text = intl3.string(tmp37(1114).t.GpNXjC);
+          const intl3 = util.intl;
+          obj22.text = intl3.string(util.t.GpNXjC);
           obj22.platformIcon = icon;
           obj22.platformLabel = str;
           obj = obj22;
         } else {
-          if (session_id.type === tmp5.COMPETING) {
+          if (session_id.type === constants.COMPETING) {
             if (null != session_id.details) {
               const obj23 = { text: null, platformIcon: null, platformLabel: null };
-              const intl2 = tmp37(1114).intl;
+              const intl2 = util.intl;
               const obj24 = { name: session_id.name };
-              obj23.text = intl2.formatToPlainString(tmp37(1114).t.oHF7Ch, obj24);
+              obj23.text = intl2.formatToPlainString(util.t.oHF7Ch, obj24);
               obj23.platformIcon = icon;
               obj23.platformLabel = str;
               obj = obj23;
             }
           }
-          if (session_id.type === tmp5.COMPETING) {
+          if (session_id.type === constants.COMPETING) {
             const obj25 = { text: null, platformIcon: null, platformLabel: null };
-            const intl = tmp37(1114).intl;
-            obj25.text = intl.string(tmp37(1114).t.OzCsIA);
+            const intl = util.intl;
+            obj25.text = intl.string(util.t.OzCsIA);
             obj25.platformIcon = icon;
             obj25.platformLabel = str;
             obj = obj25;

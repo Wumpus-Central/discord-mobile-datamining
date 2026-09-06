@@ -18,10 +18,10 @@ obj.useScreenStyles = createStyles.createStyles((arg0) => {
   const space = nativeDefault.space;
   if (arg0) {
     let PX_16 = space.PX_24;
-    let tmp6 = tmp5;
+    let tmp6 = importDefault;
   } else {
     PX_16 = space.PX_16;
-    tmp6 = tmp5;
+    tmp6 = importDefault;
   }
   obj.marginLeft = PX_16;
   const space2 = tmp6(576).space;

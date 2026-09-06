@@ -66,6 +66,6 @@ export default function CarouselPagination(currentIndex) {
   const obj = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const items = [closure_5().container, containerStyle];
   obj.style = items;
-  obj.children = Array.from({ length: numberOfItems }, (arg0, arg1) => <closure_8 key={arg1} active={arg1 === currentIndex} />);
+  obj.children = Array.from({ length: numberOfItems }, (arg0, key) => <closure_8 key={key} active={key === currentIndex} />);
   return <View style={null} accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">{null}</View>;
 };

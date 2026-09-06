@@ -9,7 +9,7 @@ function setFindYourFriendsDeletionIsLoading(isLoading) {
   _require = isLoading;
   require("ReactBatchUpdates").batchUpdates(() => state.setState({ isLoading }));
 }
-let closure_8 = async function _onFindYourFriendsDeletionPress(arg0, value) {
+let closure_8 = async function _onFindYourFriendsDeletionPress() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

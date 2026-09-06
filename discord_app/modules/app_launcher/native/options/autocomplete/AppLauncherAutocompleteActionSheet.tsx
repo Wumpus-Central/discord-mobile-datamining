@@ -28,17 +28,17 @@ function Item(arg0) {
   }
   let tmp4 = item.type === AutoCompleteResultTypes.CHOICE;
   if (!tmp4) {
-    tmp4 = item.type === tmp3.CHOICE_LOADING;
+    tmp4 = item.type === AutoCompleteResultTypes.CHOICE_LOADING;
   }
   if (!tmp4) {
-    tmp4 = item.type === tmp3.LABEL;
+    tmp4 = item.type === AutoCompleteResultTypes.LABEL;
   }
   _modDef38(tmp4, "Invalid autocomplete result type");
   closure_3 = closure_12();
   noop = noop.useMemo(() => 100 * Math.random() + 50, []);
   const match = _mod4745.match(item);
-  let obj = { type: tmp3.CHOICE };
-  obj = { type: tmp3.LABEL };
+  let obj = { type: AutoCompleteResultTypes.CHOICE };
+  obj = { type: AutoCompleteResultTypes.LABEL };
   const withResult = match.with(obj, (children) => {
     const choice = children;
     let obj = {
@@ -201,7 +201,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
     if (null != autocompleteResults) {
       const push2 = items.push;
       const items2 = [];
-      HermesBuiltin.arraySpread(arr2.map((choice) => ({ type: constants.CHOICE, choice })), 0);
+      HermesBuiltin.arraySpread(autocompleteResults.map((choice) => ({ type: constants.CHOICE, choice })), 0);
       HermesBuiltin.apply(items2, items);
     }
   }, items2);
@@ -225,7 +225,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   const callback1 = obj.useCallback(() => {
     if ("" !== first) {
       if (onChoiceSelect != null) {
-        const obj = { name: tmp, value: tmp, displayName: tmp };
+        const obj = { name: first, value: first, displayName: first };
         tmp2(obj);
       }
       ActionSheetActionCreatorsDefault.hideActionSheet();

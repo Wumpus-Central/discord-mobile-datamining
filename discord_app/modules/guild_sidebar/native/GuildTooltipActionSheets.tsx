@@ -5,6 +5,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10625 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 10626 */;
 import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 16252 */;
 import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 16253 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -63,17 +64,17 @@ class GuildTooltipActionSheets {
             ({ visibleContent, markAsDismissed } = arg0);
             if (dismissible_content.DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL === visibleContent) {
               let obj = { markAsDismissed, importer: GuildRoleSubscriptionsUpsellActionSheetImporter, actionSheetKey: GuildTooltipActionSheet, guildId: id };
-              return jsx(tmp(10626).DismissibleActionSheet, { markAsDismissed, importer: GuildRoleSubscriptionsUpsellActionSheetImporter, actionSheetKey: GuildTooltipActionSheet, guildId: id });
-            } else if (tmp(1943).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL === visibleContent) {
+              return jsx(DismissibleActionSheet.DismissibleActionSheet, { markAsDismissed, importer: GuildRoleSubscriptionsUpsellActionSheetImporter, actionSheetKey: GuildTooltipActionSheet, guildId: id });
+            } else if (dismissible_content.DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL === visibleContent) {
               obj = { markAsDismissed, importer: GuildRoleSubscriptionsIAPUpsellActionSheetImporter, actionSheetKey: GuildTooltipActionSheet, guildId: id };
-              return jsx(tmp(10626).DismissibleActionSheet, { markAsDismissed, importer: GuildRoleSubscriptionsIAPUpsellActionSheetImporter, actionSheetKey: GuildTooltipActionSheet, guildId: id });
-            } else if (tmp(1943).DismissibleContent.CREATOR_MONETIZATION_ONBOARDING_V2_UPSELL === visibleContent) {
+              return jsx(DismissibleActionSheet.DismissibleActionSheet, { markAsDismissed, importer: GuildRoleSubscriptionsIAPUpsellActionSheetImporter, actionSheetKey: GuildTooltipActionSheet, guildId: id });
+            } else if (dismissible_content.DismissibleContent.CREATOR_MONETIZATION_ONBOARDING_V2_UPSELL === visibleContent) {
               const obj1 = { markAsDismissed, importer: CreatorMonetizationOnboardingV2UpsellActionSheetImporter, actionSheetKey: GuildTooltipActionSheet, guildId: id };
-              return jsx(tmp(10626).DismissibleActionSheet, { markAsDismissed, importer: CreatorMonetizationOnboardingV2UpsellActionSheetImporter, actionSheetKey: GuildTooltipActionSheet, guildId: id });
-            } else if (tmp(1943).DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL === visibleContent) {
+              return jsx(DismissibleActionSheet.DismissibleActionSheet, { markAsDismissed, importer: CreatorMonetizationOnboardingV2UpsellActionSheetImporter, actionSheetKey: GuildTooltipActionSheet, guildId: id });
+            } else if (dismissible_content.DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL === visibleContent) {
               const obj2 = { actionSheetKey: GuildTooltipActionSheet, importer: TierTemplatesUpsellActionSheetImporter, markAsDismissed, guildId: id };
-              return jsx(tmp(10626).DismissibleActionSheet, { actionSheetKey: GuildTooltipActionSheet, importer: TierTemplatesUpsellActionSheetImporter, markAsDismissed, guildId: id });
-            } else if (tmp(1943).DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER === visibleContent) {
+              return jsx(DismissibleActionSheet.DismissibleActionSheet, { actionSheetKey: GuildTooltipActionSheet, importer: TierTemplatesUpsellActionSheetImporter, markAsDismissed, guildId: id });
+            } else if (dismissible_content.DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER === visibleContent) {
               obj = {
                 markAsDismissed(arg0) {
                     return markAsDismissed(arg0);
@@ -81,7 +82,7 @@ class GuildTooltipActionSheets {
                 actionSheetKey: GuildTooltipActionSheet,
                 importer: NUFChannelsActionSheetImporter
               };
-              return jsx(tmp(10626).DismissibleActionSheet, {
+              return jsx(DismissibleActionSheet.DismissibleActionSheet, {
                 markAsDismissed(arg0) {
                     return markAsDismissed(arg0);
                   },

@@ -19,11 +19,11 @@ export const ErrorText = function ErrorText(children) {
   const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== nodeText;
     }
     if (tmp2) {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(tmp);
+      AccessibilityAnnouncer.announce(nodeText);
     }
   }, items);
   obj = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };

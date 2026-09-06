@@ -125,14 +125,16 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
         }
       });
       if (obj2.isEmpty(self._subscriptions[arg1])) {
-        const _subscriptions = obj._subscriptions;
+        const _subscriptions = self._subscriptions;
         delete tmp[tmp2];
       }
       self._onChange(arg1, self.get(arg1));
+      obj2 = _modDef12;
     });
     self._unsubscriptions = {};
     const tmpResult = _modDef12;
   }
+  obj = _modDef12;
 };
 
 export default GuildMemberSubscriptions;

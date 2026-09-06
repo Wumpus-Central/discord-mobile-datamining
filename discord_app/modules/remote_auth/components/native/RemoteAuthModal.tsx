@@ -15,12 +15,12 @@ import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndic
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5581 */;
 import _modDef13862 from "module_13862" /* 13862 */;
 import _modDef13864 from "module_13864" /* 13864 */;
+import _modDef13865 from "module_13865" /* 13865 */;
 import _modDef13866 from "module_13866" /* 13866 */;
 import _modDef13867 from "module_13867" /* 13867 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef13865 = tmp7(13865);
 require = fn;
 function RemoteAuthBody(remoteAuthFingerprint) {
   remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
@@ -44,7 +44,7 @@ function RemoteAuthBody(remoteAuthFingerprint) {
   }, items);
   if (constants.LOADING === tmp3) {
     return closure_9(RemoteAuthLoading, {});
-  } else if (tmp.LOADED === tmp3) {
+  } else if (constants.LOADED === tmp3) {
     if (null == tmp5) {
       let tmp13 = closure_9(RemoteAuthNotFound, {});
     } else {
@@ -58,10 +58,10 @@ function RemoteAuthBody(remoteAuthFingerprint) {
       tmp13 = closure_9(RemoteAuthLogin, obj);
     }
     return tmp13;
-  } else if (tmp.SUCCEEDED === tmp3) {
+  } else if (constants.SUCCEEDED === tmp3) {
     return closure_9(RemoteAuthLoginSucceeded, {});
   } else {
-    const NOT_FOUND = tmp.NOT_FOUND;
+    const NOT_FOUND = constants.NOT_FOUND;
     return closure_9(RemoteAuthNotFound, {});
   }
   const tmp4 = _slicedToArray(noop.useState(null), 2);

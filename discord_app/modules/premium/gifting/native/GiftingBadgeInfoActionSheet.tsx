@@ -2,6 +2,7 @@
 
 // Module 10748 (GiftingBadgeInfoActionSheet)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import _modDef2492 from "module_2492" /* 2492 */;
 import Text_Text from "Text/Text" /* 4556 */;
@@ -91,16 +92,16 @@ export default function GiftingBadgeInfoActionSheet() {
           obj = { style: tmp6.iconWrapper, children: null };
           obj = { icon: simple_icon_url, size: 58 };
           obj.children = React7(GiftingBadgeIconDefault, obj);
-          tmp7 = React7(tmp5, obj);
+          tmp7 = React7(View, obj);
         }
         const items = [tmp7, React7(Text_Text.Text, { variant: "text-lg/semibold", color: "text-strong", children: children.name }), ];
         let tmp11Result = null != tmp3;
         if (tmp11Result) {
           const obj2 = { variant: "text-md/normal", color: "text-subtle", children: null };
-          const intl = tmp12(1114).intl;
+          const intl = util.intl;
           const obj3 = { count: tmp3 };
           obj2.children = intl.formatToPlainString(_modDef2492.qvx9E4, obj3);
-          tmp11Result = React7(tmp12(4556).Text, obj2);
+          tmp11Result = React7(Text_Text.Text, obj2);
         }
         items[2] = tmp11Result;
         obj.children = items;

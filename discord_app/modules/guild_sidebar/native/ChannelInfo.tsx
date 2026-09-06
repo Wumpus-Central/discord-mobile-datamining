@@ -4,7 +4,10 @@
 import StageMediaHooks from "StageMediaHooks" /* 5417 */;
 import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12059 */;
 import Badges from "Badges" /* 13008 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16118 */;
 import showChannelBadgeDefault from "showChannelBadge" /* 16228 */;
+import ChannelBadgeDefault from "ChannelBadge" /* 16229 */;
+import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 16232 */;
 import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 16233 */;
 import noop from "module_19" /* 19 */;
 import NewChannelsStore from "NewChannelsStore" /* 7532 */;
@@ -23,9 +26,9 @@ function LimitAndDurationInfo(channel) {
     let isGuildStageVoiceResult = channel.isGuildStageVoice();
     if (isGuildStageVoiceResult) {
       let obj = StageMediaHooks;
-      isGuildStageVoiceResult = obj.getStageHasMedia(tmp.id);
+      isGuildStageVoiceResult = obj.getStageHasMedia(channel.id);
     }
-    obj = { isLocked: !PermissionStore.can(constants2.CONNECT, tmp), hasVideo: VoiceStateStore.hasVideo(channel.id), hasMedia: isGuildStageVoiceResult };
+    obj = { isLocked: !PermissionStore.can(constants2.CONNECT, channel), hasVideo: VoiceStateStore.hasVideo(channel.id), hasMedia: isGuildStageVoiceResult };
     return obj;
   });
   ({ hasVideo, hasMedia } = stateFromStoresObject);
@@ -43,10 +46,10 @@ function LimitAndDurationInfo(channel) {
     }
     obj.video = hasVideo;
     obj.channel = channel;
-    let tmp6Result = tmp6(channel(16119).ConnectedUserLimit, obj);
+    let tmp6Result = jsx(channel(16119).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
   } else {
     const obj1 = { channel };
-    tmp6Result = tmp6(DurationInfo, obj1);
+    tmp6Result = <DurationInfo channel={channel} />;
   }
   return tmp6Result;
 }
@@ -90,8 +93,8 @@ export default function ChannelInfo(channel) {
     }
     obj.postsWithUnreadsCount = tmp18;
     obj.muted = muted;
-    let tmp11Result = jsx(tmp4(16229), { mentionCount: mentionsCount, isMentionLowImportance: stateFromStoresObject.isMentionLowImportance, isNewChannel, postsWithUnreadsCount: null, muted: null });
-    const tmp4Result = tmp4(16229);
+    let tmp11Result = jsx(ChannelBadgeDefault, { mentionCount: mentionsCount, isMentionLowImportance: stateFromStoresObject.isMentionLowImportance, isNewChannel, postsWithUnreadsCount: null, muted: null });
+    const tmp4Result = ChannelBadgeDefault;
   } else {
     if (null != isChannelCollapsed) {
       if (isChannelCollapsed) {
@@ -113,7 +116,7 @@ export default function ChannelInfo(channel) {
         tmpResult = tmp(16231);
         if (tmpResult.showChannelItemEmbeddedActivities(tmp5)) {
           obj = { embeddedApps: tmp5, muted };
-          tmp11Result = jsx(tmp4(16232), { embeddedApps: tmp5, muted });
+          tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });
         }
       }
     }
@@ -121,7 +124,7 @@ export default function ChannelInfo(channel) {
       if (null != needSubscriptionToAccess) {
         if (isSubscriptionGated) {
           obj1 = { locked: needSubscriptionToAccess };
-          tmp11Result = jsx(tmp4(16118), { locked: needSubscriptionToAccess });
+          tmp11Result = jsx(GuildRoleSubscriptionGatedChannelIconDefault, { locked: needSubscriptionToAccess });
         }
       }
     }

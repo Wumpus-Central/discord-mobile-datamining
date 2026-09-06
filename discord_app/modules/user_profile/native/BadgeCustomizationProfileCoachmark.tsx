@@ -2,6 +2,7 @@
 
 // Module 16802 (BadgeCustomizationProfileCoachmark)
 import util from "util" /* 1114 */;
+import native from "native" /* 4271 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -25,14 +26,14 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
     const t = util.t;
     obj.description = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
     obj.visible = visible;
-    obj = { type: "rive", rive: tmp(4271).BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
+    obj = { type: "rive", rive: native.BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
     obj = { dataBinding: { on: visible } };
     obj.riveProps = obj;
     obj.graphic = obj;
     obj.onDismiss = function onDismiss() {
       return markAsDismissed(constants.USER_DISMISS);
     };
-    const intl3 = tmp(1114).intl;
+    const intl3 = util.intl;
     obj.buttonLabel = intl3.string(util.t["4P5I8V"]);
     obj.onButtonPress = function onButtonPress() {
       markAsDismissed(constants.TAKE_ACTION);

@@ -95,7 +95,7 @@ export default function ActivityShareLinkModal(applicationId) {
   first3 = onShare(customId(linkId[16])(items5), 1)[0];
   const items6 = [first3, first, first2, message, onShare, first1];
   const items7 = [first2];
-  const callback2 = stateFromStores.useCallback(message(function*(arg0, value) {
+  const callback2 = stateFromStores.useCallback(message(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -139,7 +139,7 @@ export default function ActivityShareLinkModal(applicationId) {
           closure_128_1 = tmp2(14487).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
           closure_129_6(true);
           const item = closure_128_0.forEach((() => {
-            closure_0 = closure_1_3(function*(arg0, value) {
+            closure_0 = closure_1_3(function*(arg0) {
               if (c1 === 2) {
                 c1 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -172,7 +172,7 @@ export default function ActivityShareLinkModal(applicationId) {
                         c2 = 1;
                         c1 = 1;
                         obj2 = { value: null, done: false };
-                        obj2.value = obj1.sendMessage(tmp17, obj2.parse(channel, c1), false, obj1);
+                        obj2.value = obj1.sendMessage(closure_0, obj2.parse(channel, c1), false, obj1);
                         return obj2;
                       }
                     }

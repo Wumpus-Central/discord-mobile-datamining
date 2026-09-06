@@ -50,6 +50,6 @@ export default noop.memo((guildId) => {
   } else {
     stringResult = string(t.Q2gPWl);
   }
-  obj = { text: stringResult, icon: tmp5(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" };
-  return jsx(guildId(section[6]).Button, { text: stringResult, icon: tmp5(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" });
+  obj = { text: stringResult, icon: jsx(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" };
+  return jsx(guildId(section[6]).Button, { text: stringResult, icon: jsx(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" });
 });

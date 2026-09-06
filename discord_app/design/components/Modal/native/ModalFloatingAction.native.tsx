@@ -68,7 +68,6 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   }
   obj.pointerEvents = str;
   const obj1 = { colors: null, locations: null, style: null };
-  const tmp10 = closure_7;
   const tmp3Result = isVisible(sharedValue[4]);
   const tmp6Result = floatingBackgroundColor(sharedValue[9]);
   const obj6 = floatingBackgroundColor(sharedValue[10])(floatingBackgroundColor);
@@ -82,7 +81,7 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   obj2.variant = "primary";
   items3[1] = closure_6(isVisible(sharedValue[11]).ModalActionButton, obj2);
   obj.children = items3;
-  return tmp10(floatingBackgroundColor(sharedValue[4]).View, obj);
+  return closure_7(floatingBackgroundColor(sharedValue[4]).View, obj);
 };
 export const ModalFloatingActionSpacer = function ModalFloatingActionSpacer() {
   return timestampProducer(hasOwnProperty, { style: closure_8().spacer });

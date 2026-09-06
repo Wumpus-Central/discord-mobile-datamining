@@ -3,6 +3,7 @@
 // Module 17214 (ChannelCallUtils)
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
@@ -91,10 +92,11 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
     if (videoStats == null) {
       videoStats = {};
     }
-    obj = { media_session_id: obj2.getMediaSessionId(encodeStreamKeyResult), rtc_connection_id: obj2.getRtcConnectionId(encodeStreamKeyResult), stream_region: obj2.getRegion(encodeStreamKeyResult), max_viewers: obj2.getMaxViewers(encodeStreamKeyResult) };
+    obj = { media_session_id: StreamRTCConnectionStore.getMediaSessionId(encodeStreamKeyResult), rtc_connection_id: StreamRTCConnectionStore.getRtcConnectionId(encodeStreamKeyResult), stream_region: StreamRTCConnectionStore.getRegion(encodeStreamKeyResult), max_viewers: StreamRTCConnectionStore.getMaxViewers(encodeStreamKeyResult) };
     const merged = Object.assign(videoStats);
     const obj5 = ActionSheetActionCreatorsDefault;
     obj5.openLazy(asyncRequireImpl(17217, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, { stream, analyticsData: obj });
+    const tmp6 = asyncRequireImpl(17217, dependencyMap.paths);
   };
   return obj;
 };
@@ -154,14 +156,13 @@ export const shareActivityLogs = function shareActivityLogs() {
     const json = obj.stringify(items);
     if ("" === json) {
       obj = { key: "EMBEDDED_ACTIVITIES_SHARE_EMPTY_LOGS_ERROR_MESSAGE", content: null };
-      const intl = tmp(tmp2[4]).intl;
-      obj.content = intl.string(tmp(tmp2[4]).t["i+9VWy"]);
-      require("ToastActionCreators").open(obj);
-      const obj4 = require("ToastActionCreators");
+      const intl = require("util").intl;
+      obj.content = intl.string(require("util").t["i+9VWy"]);
+      ToastActionCreatorsDefault.open(obj);
     } else {
       obj = { message: json };
-      tmp(tmp2[21]).showShareActionSheet(obj, "Activity Logs");
-      const tmpResult = tmp(tmp2[21]);
+      require("showShareActionSheet").showShareActionSheet(obj, "Activity Logs");
+      const tmpResult = require("showShareActionSheet");
     }
   };
   return obj;

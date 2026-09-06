@@ -17,7 +17,7 @@ let closure_9 = 0;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/FastestList.android.tsx");
 
-export default noop.forwardRef(function FastestList(estimatedListSize, ref) {
+export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
   let current = estimatedListSize;
   const enabled = estimatedListSize.enabled;
   let tmp = undefined === enabled;
@@ -66,7 +66,7 @@ export default noop.forwardRef(function FastestList(estimatedListSize, ref) {
   }
   const showsVerticalScrollIndicator = estimatedListSize.showsVerticalScrollIndicator;
   ({ style, wrapChildren } = estimatedListSize);
-  ref = listId.useRef(null);
+  const ref = listId.useRef(null);
   const ref1 = listId.useRef(null);
   const ref2 = listId.useRef(estimatedListSize);
   const items = [estimatedListSize];
@@ -74,7 +74,7 @@ export default noop.forwardRef(function FastestList(estimatedListSize, ref) {
     ref2.current = current;
   }, items);
   ({ style: style2, marginEnd, marginStart } = num(num2[6])({ style }));
-  const imperativeHandle = listId.useImperativeHandle(ref, () => ({
+  const imperativeHandle = listId.useImperativeHandle(arg1, () => ({
     scrollToTop() {
       let flag = arg0;
       if (arg0 === undefined) {

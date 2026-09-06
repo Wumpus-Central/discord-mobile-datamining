@@ -2,11 +2,11 @@
 
 // Module 9661 (ModeratorStartStageView)
 import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 9670 */;
+import StageViewWithPromptsDefault from "StageViewWithPrompts" /* 9675 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
-const StageViewWithPromptsDefault = tmp5(9675);
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -40,20 +40,20 @@ export default function ModeratorStartStageView(channel) {
       tmp10Result = null;
       if (null != first) {
         obj = { channel, event: first, isLive, guild: stateFromStores, recurrenceId: nextRecurrenceIdInEvent };
-        tmp10Result = tmp10(tmp(9697).StartEventPrompt, obj);
+        tmp10Result = closure_5(tmp(9697).StartEventPrompt, obj);
       }
     }
     const items2 = [tmp10Result, , , ];
     tmp10Result = null;
     if (useCurrentUserStageRolesDefault(channel.id, true).moderator) {
       obj1 = { channel, isLive };
-      tmp10Result = tmp10(tmp(9898).StartStagePrompt, obj1);
+      tmp10Result = closure_5(tmp(9898).StartStagePrompt, obj1);
     }
     items2[1] = tmp10Result;
     let tmp10Result1 = null;
     if (tmp7) {
       obj2 = { channel, isLive, guild: stateFromStores };
-      tmp10Result1 = tmp10(tmp(9697).ScheduleEventPrompt, obj2);
+      tmp10Result1 = closure_5(tmp(9697).ScheduleEventPrompt, obj2);
     }
     obj3 = { children: null };
     items2[2] = tmp10Result1;
@@ -61,7 +61,7 @@ export default function ModeratorStartStageView(channel) {
     items2[3] = closure_5(tmp(9898).ContinueToStagePrompt, obj4);
     obj3.children = items2;
     obj.children = closure_7(closure_6, obj3);
-    tmp10Result2 = tmp10(StageViewWithPromptsDefault, obj);
+    tmp10Result2 = closure_5(StageViewWithPromptsDefault, obj);
     const tmp5Result = StageViewWithPromptsDefault;
   }
   return tmp10Result2;

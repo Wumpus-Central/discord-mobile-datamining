@@ -51,7 +51,7 @@ prototype["isPng8"] = function isPng8() {
 };
 prototype["hasSrgbIccProfile"] = function hasSrgbIccProfile() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

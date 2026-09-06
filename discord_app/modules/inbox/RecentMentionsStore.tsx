@@ -9,6 +9,7 @@ import AgeGateUtils from "AgeGateUtils" /* 4771 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 4783 */;
 import isMessageMentioned from "isMessageMentioned" /* 4798 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
+import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7638 */;
 import MessageRecord from "MessageRecord" /* 4210 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -48,7 +49,7 @@ function hasMentionNotificationEnabled(channel_id) {
           const result = obj.resolvedMessageNotifications(basicChannel);
           if (constants3.ALL_MESSAGES === result) {
             return true;
-          } else if (tmp5.ONLY_MENTIONS === result) {
+          } else if (constants3.ONLY_MENTIONS === result) {
             const result1 = obj.isSuppressEveryoneEnabled(basicChannel.guild_id);
             const result2 = obj.isSuppressRolesEnabled(basicChannel.guild_id);
             const currentUser = UserStore.getCurrentUser();
@@ -59,7 +60,7 @@ function hasMentionNotificationEnabled(channel_id) {
             }
             return tmp10;
           } else {
-            const NO_MESSAGES = tmp5.NO_MESSAGES;
+            const NO_MESSAGES = constants3.NO_MESSAGES;
             return false;
           }
         }
@@ -69,7 +70,7 @@ function hasMentionNotificationEnabled(channel_id) {
   }
   return false;
 }
-function parseMessage(message, channelId) {
+function parseMessage(message) {
   let channel_id = channelId;
   if (channelId === undefined) {
     channel_id = null;
@@ -94,7 +95,7 @@ function parseMessage(message, channelId) {
       }
       const id = AuthenticationStore.getId();
       if (!RelationshipStore.isBlockedOrIgnoredForMessage(message)) {
-        if (!tmp2(7638)(message, id)) {
+        if (!shouldRemoveSelfMentionDefault(message, id)) {
           let tmp12 = message;
           if (!(message instanceof MessageRecord)) {
             message = MessageStore.getMessage(message.channel_id, message.id);
@@ -105,15 +106,15 @@ function parseMessage(message, channelId) {
           }
           let obj = { message: tmp12, userId: id, suppressEveryone: !closure_23.everyoneFilter, suppressRoles: !closure_23.roleFilter };
           let tmp20 = null;
-          if (tmp2(4798)(obj)) {
+          if (isMessageMentionedDefault(obj)) {
             let tmp2ResultResult = c26;
             if (c26) {
               tmp2ResultResult = ReadStateStore.ackMessageId(channel.id) !== tmp12.id;
             }
             if (tmp2ResultResult) {
               obj = { message: tmp12, userId: id, suppressEveryone: UserGuildSettingsStore.isSuppressEveryoneEnabled(channel.getGuildId()), suppressRoles: UserGuildSettingsStore.isSuppressRolesEnabled(channel.getGuildId()) };
-              tmp2ResultResult = tmp2(4798)(obj);
-              const tmp2Result = tmp2(4798);
+              tmp2ResultResult = isMessageMentionedDefault(obj);
+              const tmp2Result = isMessageMentionedDefault;
             }
             tmp20 = tmp12;
             if (tmp2ResultResult) {
@@ -156,6 +157,7 @@ function deleteMessage(arg0) {
       });
     }
     substr = _modDef12.filter(substr, (id) => id.id !== id);
+    const tmp7Result = _modDef12;
   }
 }
 function handleMessageDelete(id) {
@@ -489,6 +491,7 @@ obj = {
     if (substr.length > substr.length) {
       c22 = true;
     }
+    const obj = { deletedMessages: substr.slice(size) };
   },
   CHANNEL_SELECT: function handleChannelSelect() {
     if (closure_23.guildFilter !== RecentMentionsFilters.THIS_SERVER) {

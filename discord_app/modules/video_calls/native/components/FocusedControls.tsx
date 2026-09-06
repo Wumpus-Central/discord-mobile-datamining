@@ -112,7 +112,7 @@ export default noop.memo((disableGradient) => {
   if (!reveal) {
     reveal = isScreenReaderEnabled;
   }
-  let tmpResult = tmp(4296);
+  let tmpResult = ReanimatedRexport;
   class D {
     constructor() {
       num = 0;
@@ -127,7 +127,7 @@ export default noop.memo((disableGradient) => {
   D.__workletHash = 14833624951450;
   D.__initData = __initData3;
   derivedValue = tmpResult.useDerivedValue(D);
-  tmpResult = tmp(4296);
+  tmpResult = ReanimatedRexport;
   class F {
     constructor() {
       num = 0;
@@ -146,7 +146,7 @@ export default noop.memo((disableGradient) => {
     obj.opacity = timing.withTiming(derivedValue1.get(), obj);
     return obj;
   };
-  __closure = { withTiming: tmp(4561).withTiming, top: derivedValue, TIMING_CONFIG: __closure, revealOpacity: derivedValue1 };
+  __closure = { withTiming: timing.withTiming, top: derivedValue, TIMING_CONFIG: __closure, revealOpacity: derivedValue1 };
   fn.__closure = __closure;
   fn.__workletHash = 8532538341439;
   fn.__initData = __initData5;
@@ -179,12 +179,12 @@ export default noop.memo((disableGradient) => {
               obj = { channel_id: require.id, guild_id: require.guild_id, application_id: null, activity_session_id: null, location_stack: null };
               let applicationId;
               if (closure_7 != null) {
-                applicationId = tmp.applicationId;
+                applicationId = closure_7.applicationId;
               }
               obj.application_id = applicationId;
               let compositeInstanceId;
               if (closure_7 != null) {
-                compositeInstanceId = tmp.compositeInstanceId;
+                compositeInstanceId = closure_7.compositeInstanceId;
               }
               obj.activity_session_id = compositeInstanceId;
               obj.location_stack = analyticsLocations;

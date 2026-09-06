@@ -6,8 +6,10 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import useMuteStates from "useMuteStates" /* 7345 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9125 */;
 import MediaEngineActionCreators from "MediaEngineActionCreators" /* 9696 */;
 import VoiceActionUtils from "VoiceActionUtils" /* 10003 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 10004 */;
 import useDeafStates from "useDeafStates" /* 10018 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -73,7 +75,7 @@ export const PTTButton = function PTTButton(arg0) {
       tmp11 = isStaffResult;
     }
     if (tmp11) {
-      const current2 = tmp9.current;
+      const current2 = dominantMuteState.current;
       let selfMute1;
       if (current2 != null) {
         selfMute1 = current2.selfMute;
@@ -128,8 +130,8 @@ export const PTTButton = function PTTButton(arg0) {
   const items5 = [tmp11, sharedValue];
   callback1 = obj.useCallback(() => {
     if (closure_4.current.active) {
-      tmp.current.active = false;
-      tmp.current.dragging = false;
+      closure_4.current.active = false;
+      closure_4.current.dragging = false;
       MediaEngineActionCreators.setPushToTalkState(false);
       closure_3.unlock();
       const result = sharedValue.set(false);
@@ -181,8 +183,6 @@ export const PTTButton = function PTTButton(arg0) {
   obj = { gesture: memo, children: null };
   const element = { onPressIn, onPressOut: callback2, props, pressed: sharedValue, accessibilityLabel: null, style: null, children: null };
   const obj3 = require("initialize");
-  const tmp19 = closure_15;
-  const tmp20 = closure_14;
   const intl = tmp6(tmp3[25]).intl;
   element.accessibilityLabel = intl.string(require("util").t.Q8gkVL);
   element.style = tmp5 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
@@ -202,7 +202,7 @@ export const PTTButton = function PTTButton(arg0) {
   obj1.children = intl2.string(require("util").t.Q8gkVL);
   items10[1] = closure_13(require("Text/Text").Text, obj1);
   obj.children = items10;
-  return tmp19(tmp20, obj);
+  return closure_15(closure_14, obj);
 };
 export const MicButton = function MicButton(arg0) {
   let mute;
@@ -237,7 +237,7 @@ export const MicButton = function MicButton(arg0) {
       tmp11 = isStaffResult;
     }
     if (tmp11) {
-      const current2 = tmp9.current;
+      const current2 = dominantMuteState.current;
       let selfMute1;
       if (current2 != null) {
         selfMute1 = current2.selfMute;
@@ -255,21 +255,20 @@ export const MicButton = function MicButton(arg0) {
   const memo = noop.useMemo(() => {
     if (dominantMuteState === VoiceActionUtils.DominantMuteState.SERVER_MUTE) {
       let obj = { color: voicePanelButtonStyles.iconFillRed.color };
-      let tmp3Result = map1(tmp(9125).MicrophoneDenyIcon, obj);
+      let tmp3Result = map1(MicrophoneDenyIcon.MicrophoneDenyIcon, obj);
     } else {
       if (mute) {
-        let color = tmp5.iconFillRed.color;
+        let color = voicePanelButtonStyles.iconFillRed.color;
       } else {
-        color = tmp5.iconFill.color;
+        color = voicePanelButtonStyles.iconFill.color;
       }
       obj = { color, muted: mute };
-      tmp3Result = map1(tmp(10004).VoicePanelRiveMicButton, obj);
+      tmp3Result = map1(VoicePanelRiveMicButton.VoicePanelRiveMicButton, obj);
     }
     return tmp3Result;
   }, items2);
   const element = { props, onPress: stateFromStoresObject.onPress, accessibilityLabel: null, style: null, children: null };
   let obj2 = mute(voicePanelButtonStyles[23]);
-  let tmp4 = closure_13;
   const intl = mute(voicePanelButtonStyles[25]).intl;
   const string = intl.string;
   const t = mute(voicePanelButtonStyles[25]).t;
@@ -281,5 +280,5 @@ export const MicButton = function MicButton(arg0) {
   element.accessibilityLabel = stringResult;
   element.style = mute ? voicePanelButtonStyles.iconBgVoiceMuted : voicePanelButtonStyles.iconBg;
   element.children = memo;
-  return tmp4(dominantMuteState(voicePanelButtonStyles[24]), element);
+  return closure_13(dominantMuteState(voicePanelButtonStyles[24]), element);
 };

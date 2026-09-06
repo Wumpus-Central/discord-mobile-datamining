@@ -22,18 +22,18 @@ export const useIsUserSecureFramesVerified = function useIsUserSecureFramesVerif
   return userId(userKey[6]).useStateFromStores(items, () => {
     if (null != userId) {
       if (isSecureFramesUIEnabled) {
-        if (RTCConnectionStore.isUserConnected(tmp)) {
-          if (AuthenticationStore.getId() !== tmp) {
+        if (RTCConnectionStore.isUserConnected(userId)) {
+          if (AuthenticationStore.getId() !== userId) {
             if (undefined === userKey) {
-              return SecureFramesVerifiedStore.isUserVerified(tmp);
-            } else if (null === tmp4) {
+              return SecureFramesVerifiedStore.isUserVerified(userId);
+            } else if (null === userKey) {
               return false;
             } else {
               const _Uint8Array = Uint8Array;
-              const uint8Array = new Uint8Array(tmp4);
-              let isKeyVerifiedResult = VerifiedKeyStore.isKeyVerified(tmp, uint8Array);
+              const uint8Array = new Uint8Array(userKey);
+              let isKeyVerifiedResult = VerifiedKeyStore.isKeyVerified(userId, uint8Array);
               if (!isKeyVerifiedResult) {
-                isKeyVerifiedResult = TransientKeyStore.isKeyVerified(tmp, uint8Array);
+                isKeyVerifiedResult = TransientKeyStore.isKeyVerified(userId, uint8Array);
               }
               return isKeyVerifiedResult;
             }
@@ -60,9 +60,9 @@ export const useIsStreamSecureFramesVerified = function useIsStreamSecureFramesV
           return false;
         } else {
           const id = AuthenticationStore.getId();
-          let isStreamVerifiedResult = StreamKeyUtils.decodeStreamKey(tmp2).ownerId !== id;
+          let isStreamVerifiedResult = StreamKeyUtils.decodeStreamKey(streamKey).ownerId !== id;
           if (isStreamVerifiedResult) {
-            isStreamVerifiedResult = SecureFramesVerifiedStore.isStreamVerified(tmp2);
+            isStreamVerifiedResult = SecureFramesVerifiedStore.isStreamVerified(streamKey);
           }
           return isStreamVerifiedResult;
         }

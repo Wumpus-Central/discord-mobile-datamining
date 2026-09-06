@@ -2,6 +2,7 @@
 
 // Module 15714 (SearchableSelectActionComponent)
 import Server from "Server" /* 1894 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8120 */;
 import noop from "module_19" /* 19 */;
@@ -103,22 +104,23 @@ export default function SearchableSelectActionComponent(defaultValues) {
         if (defaultValues.type === Server.ComponentType.CHANNEL_SELECT) {
           const _HermesInternal2 = HermesInternal;
           const obj3 = ActionSheetActionCreatorsDefault;
-          obj = { selectionActionComponent: tmp };
+          obj = { selectionActionComponent: defaultValues };
           const combined = "ChannelSelectComponentActionSheet:" + customId;
           const merged = Object.assign(obj);
-          obj3.openLazy(tmp2(1896)(11827, tmp3.paths), combined, obj);
-          const tmp14 = tmp2(1896)(11827, tmp3.paths);
+          obj3.openLazy(asyncRequireImpl(11827, dependencyMap.paths), combined, obj);
+          const tmp14 = asyncRequireImpl(11827, dependencyMap.paths);
         } else {
           const _HermesInternal = HermesInternal;
-          obj = { selectionActionComponent: tmp };
+          obj = { selectionActionComponent: defaultValues };
           const combined1 = "MentionableSelectComponentActionSheet:" + customId;
           const merged1 = Object.assign(obj);
-          obj.openLazy(tmp2(1896)(11823, tmp3.paths), combined1, obj);
-          const tmp5 = tmp2(1896)(11823, tmp3.paths);
+          obj.openLazy(asyncRequireImpl(11823, dependencyMap.paths), combined1, obj);
+          const tmp5 = asyncRequireImpl(11823, dependencyMap.paths);
         }
       };
       return <tmp4Result model={null} onTap={null} />;
     }
   }
   memo = state.selectedOptions;
+  let tmp5 = guild_id(customId[5]);
 };

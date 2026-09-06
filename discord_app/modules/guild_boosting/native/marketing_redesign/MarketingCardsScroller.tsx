@@ -29,7 +29,7 @@ let closure_12 = createStyles.createStyles(obj);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx");
 
-export const MarketingCardsScroller = noop.forwardRef((initialIndex, ref) => {
+export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
   function handleScrollEnd(nativeEvent) {
     closure_7(Math.max(0, Math.min(itemCount - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / sum))));
     if (obj.isIOS()) {
@@ -59,7 +59,7 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, ref) => {
   noop.useRef(null);
   const sum = cardWidth + cardMarginRight;
   noop = sum;
-  ref = noop.useRef(Math.max(0, Math.min(itemCount - 1, num)) * sum);
+  const ref = noop.useRef(Math.max(0, Math.min(itemCount - 1, num)) * sum);
   let tmp4 = ref(noop.useState(() => Math.max(0, Math.min(itemCount - 1, num))), 2);
   const first = tmp4[0];
   closure_7 = tmp4[1];
@@ -120,7 +120,7 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, ref) => {
     }
   }, items3);
   const items4 = [scrollToIndex];
-  const imperativeHandle = obj.useImperativeHandle(ref, () => ({ scrollToIndex }), items4);
+  const imperativeHandle = obj.useImperativeHandle(arg1, () => ({ scrollToIndex }), items4);
   const items5 = [tmp25Result, tmp25Result];
   obj = { style: null, children: null };
   const items6 = [initialIndex.style, tmp.wrapper];
@@ -218,8 +218,8 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, ref) => {
     ({ navigationButton: arr10[0], navigationButtonPrevious: arr10[1] } = tmp);
     obj1.style = items8;
     obj2 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
-    obj1.children = tmp25(tmp10(tmp11[13]).ChevronLargeLeftIcon, obj2);
-    tmp25Result = tmp25(tmp10(tmp11[12]).PressableOpacity, obj1);
+    obj1.children = closure_8(tmp10(tmp11[13]).ChevronLargeLeftIcon, obj2);
+    tmp25Result = closure_8(tmp10(tmp11[12]).PressableOpacity, obj1);
   }
   items7[1] = tmp25Result;
   if (tmp25Result) {
@@ -236,8 +236,8 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, ref) => {
     ({ navigationButton: arr11[0], navigationButtonNext: arr11[1] } = tmp);
     obj3.style = items9;
     const obj4 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
-    obj3.children = tmp25(tmp10(tmp11[14]).ChevronLargeRightIcon, obj4);
-    tmp25Result = tmp25(tmp10(tmp11[12]).PressableOpacity, obj3);
+    obj3.children = closure_8(tmp10(tmp11[14]).ChevronLargeRightIcon, obj4);
+    tmp25Result = closure_8(tmp10(tmp11[12]).PressableOpacity, obj3);
   }
   items7[2] = tmp25Result;
   obj.children = items7;

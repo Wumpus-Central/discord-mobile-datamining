@@ -2,6 +2,7 @@
 
 // Module 8363 (ShowShareActionSheetUtils)
 import Constants from "Constants" /* 1074 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import FileExtensionUtils from "FileExtensionUtils" /* 5568 */;
@@ -28,13 +29,13 @@ export const getMediaShareParams = function getMediaShareParams(source) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
         if (obj11.isDiscordDirectAssetUrl(source.shareURI)) {
-          let tmpResult = tmp(1115);
+          let tmpResult = PlatformUtils;
           if (tmpResult.isAndroid()) {
             obj = { presentDelayMs };
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            tmpResult = tmp(5568);
+            tmpResult = FileExtensionUtils;
             const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
             obj = { mediaFallbackUrl: videoURI, mediaStagingOptions: null };
             let tmp11;
@@ -46,7 +47,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
             obj.mediaStagingOptions = tmp11;
             return obj;
           } else {
-            const decideFileExtensionResult1 = tmp(5568).decideFileExtension(source.uri, contentType, true);
+            const decideFileExtensionResult1 = FileExtensionUtils.decideFileExtension(source.uri, contentType, true);
             const obj2 = { mediaFallbackUrl: source.shareURI, mediaStagingOptions: null };
             let tmp6;
             if (null != decideFileExtensionResult1) {

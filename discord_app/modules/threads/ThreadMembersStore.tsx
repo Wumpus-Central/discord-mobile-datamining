@@ -78,14 +78,10 @@ function handleSearchMessagesSuccess(data) {
     item = messages.forEach((arr) => {
       const item = arr.forEach((thread) => {
         thread = thread.thread;
-        flag = false;
         if (null != thread) {
-          flag = false;
           if (!(thread.id in closure_2_4)) {
             channel = channel.getChannel(thread.id);
-            flag = false;
             if (null != channel) {
-              flag = true;
               if (set.has(channel.type)) {
                 if (!(channel.id in closure_2_4)) {
                   const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
@@ -104,10 +100,8 @@ function handleSearchMessagesSuccess(data) {
                 if (null != channel.memberCount) {
                   tmp8.memberCount = channel.memberCount;
                 }
-                flag = true;
                 if (null != channel.memberIdsPreview) {
                   tmp8.memberIdsPreview = channel.memberIdsPreview;
-                  flag = true;
                 }
               }
             }
@@ -116,14 +110,10 @@ function handleSearchMessagesSuccess(data) {
       });
     });
     const item1 = threads.forEach((id) => {
-      flag = false;
       if (null != id) {
-        flag = false;
         if (!(id.id in dependencyMap)) {
           channel = channel.getChannel(id.id);
-          flag = false;
           if (null != channel) {
-            flag = true;
             if (set.has(channel.type)) {
               if (!(channel.id in dependencyMap)) {
                 const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
@@ -142,10 +132,8 @@ function handleSearchMessagesSuccess(data) {
               if (null != channel.memberCount) {
                 tmp8.memberCount = channel.memberCount;
               }
-              flag = true;
               if (null != channel.memberIdsPreview) {
                 tmp8.memberIdsPreview = channel.memberIdsPreview;
-                flag = true;
               }
             }
           }

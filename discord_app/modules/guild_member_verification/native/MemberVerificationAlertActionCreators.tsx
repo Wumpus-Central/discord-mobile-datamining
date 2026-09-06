@@ -1,6 +1,7 @@
 // === Module 5527: MemberVerificationAlertActionCreators ===
 
 // Module 5527 (MemberVerificationAlertActionCreators)
+import util from "util" /* 1114 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
@@ -100,8 +101,8 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
   };
   if (canWithdraw.canWithdraw) {
     let obj = { text: null, variant: "destructive", onPress: null };
-    const intl2 = tmp2(1114).intl;
-    obj.text = intl2.string(tmp2(1114).t.g9tK0o);
+    const intl2 = util.intl;
+    obj.text = intl2.string(util.t.g9tK0o);
     obj.onPress = function onPress() {
       if (typeof fn === "function") {
         let obj = onClose(paths[3]);
@@ -136,8 +137,8 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
     };
   } else {
     obj = { text: null, onPress: null };
-    const intl = tmp2(1114).intl;
-    obj.text = intl.string(tmp2(1114).t.BddRzS);
+    const intl = util.intl;
+    obj.text = intl.string(util.t.BddRzS);
     obj.onPress = onPress;
   }
   dependencyMap = jsx(components_Button_Button.Button, obj);
@@ -165,6 +166,7 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
     }
   };
   onClose(4905).openLazy(obj);
+  let obj4 = onClose(4905);
 };
 export const openMemberVerificationUpdateAlert = function openMemberVerificationUpdateAlert() {
   let obj = KeyboardManagerUtilsAll;

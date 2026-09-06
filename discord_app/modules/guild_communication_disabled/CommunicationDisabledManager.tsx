@@ -74,6 +74,7 @@ prototype["_initialize"] = function _initialize() {
       if (!obj.isCommunicationDisabled(communicationDisabledUserMap[item])) {
         clearGuildMemberTimeout(tmp, tmp2);
       }
+      obj = CommunicationDisabledUtils;
     });
   }, 10000);
 };

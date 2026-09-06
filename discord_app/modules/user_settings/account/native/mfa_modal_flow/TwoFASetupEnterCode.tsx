@@ -16,11 +16,11 @@ let closure_9 = createStyles.createStyles({ container: { flex: 1, justifyContent
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
 
-export default function TwoFASetupEnterCode(set) {
-  _require = set;
+export default function TwoFASetupEnterCode(current) {
+  _require = current;
   let obj = require("TwoFASetupStyles");
   const twoFASetupStyles = obj.useTwoFASetupStyles();
-  importDefault = ref.useRef(set);
+  importDefault = ref.useRef(current);
   const effect = ref.useEffect(() => {
     closure_1.current = current;
   });

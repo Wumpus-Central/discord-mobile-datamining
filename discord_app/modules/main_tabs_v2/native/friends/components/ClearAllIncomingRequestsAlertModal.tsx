@@ -18,7 +18,7 @@ function handleConfirm() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = async function _handleConfirm(arg0, value) {
+let closure_7 = async function _handleConfirm() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

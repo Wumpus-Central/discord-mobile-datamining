@@ -61,12 +61,12 @@ export default function ChannelRowItem(isUnread) {
     const items2 = [avatar1, avatar2];
     obj1.sources = items2;
     obj1.size = native2.AvatarSizes.LARGE_48;
-    let tmp5Result = tmp5(GroupDMAvatar.FacepileGroupDMAvatar, obj1);
+    let tmp5Result = React4(GroupDMAvatar.FacepileGroupDMAvatar, obj1);
     let tmp6 = require;
   } else {
     tmp6 = require;
     const obj2 = { status, source: avatar1, cutout: obj3, size: native2.AvatarSizes.LARGE_48 };
-    tmp5Result = tmp5(native2.Avatar, obj2);
+    tmp5Result = React4(native2.Avatar, obj2);
   }
   obj.children = tmp5Result;
   items1[1] = React4(View, obj);
@@ -78,14 +78,16 @@ export default function ChannelRowItem(isUnread) {
   if (null == preview) {
     items4[1] = null;
     obj3.children = items4;
-    items1[2] = tmp3(tmp4, obj3);
+    items1[2] = hasOwnProperty(View, obj3);
     obj.children = items1;
-    return tmp3(tmp4, obj);
+    return hasOwnProperty(View, obj);
   } else {
     animatedStyles = { animated: true, style: null, variant: "redesign/message-preview/medium", lineClamp: 1, children: null };
     animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles.children = preview;
-    tmp5Result = tmp5(tmp6(4556).Text, animatedStyles);
+    tmp5Result = React4(tmp6(4556).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
+  const obj5 = { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title };
+  const obj6 = { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp };
 };

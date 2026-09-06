@@ -2,8 +2,12 @@
 
 // Module 17198 (VoicePanelSoundboardButton)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import NativeViewDefault from "NativeView" /* 5589 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12272 */;
+import SoundboardIcon from "SoundboardIcon" /* 12528 */;
 import VoicePanelStyles from "VoicePanelStyles" /* 17184 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17185 */;
 import useSoundboardConfig from "useSoundboardConfig" /* 17199 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,27 +32,26 @@ export default function SoundboardButton(arg0) {
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
   ({ disabled, handlePress, disabledAccessibilityHint, visible } = useSoundboardConfigDefault(noop.useContext(VoicePanelStateContextDefault).channelId, useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
   if (disabled) {
-    let color = tmp(576).colors.ICON_MUTED;
+    let color = nativeDefault.colors.ICON_MUTED;
   } else {
     color = voicePanelButtonStyles.iconFill.color;
   }
   let tmp8 = null;
   if (visible) {
     const element = { onPress: handlePress, disabled, props, accessibilityLabel: null, accessibilityHint: null, children: null };
-    tmp(17185);
-    const intl = tmp4(1114).intl;
-    element.accessibilityLabel = intl.string(tmp4(1114).t["6EJvHt"]);
+    const intl = util.intl;
+    element.accessibilityLabel = intl.string(util.t["6EJvHt"]);
     element.accessibilityHint = disabledAccessibilityHint;
     obj = { style: null };
     const items = [tmp3.circle, ];
     obj = { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor };
     items[1] = obj;
     obj.style = items;
-    const items1 = [React4(tmp(5589), obj), ];
+    const items1 = [React4(NativeViewDefault, obj), ];
     const obj1 = { style: tmp3.iconContainer, children: null };
-    const tmpResult = tmp(5589);
+    const tmpResult = NativeViewDefault;
     const obj2 = { color };
-    obj1.children = React4(tmp4(12528).SoundboardIcon, obj2);
+    obj1.children = React4(SoundboardIcon.SoundboardIcon, obj2);
     items1[1] = React4(tmpResult, obj1);
     element.children = items1;
     tmp8 = hasOwnProperty(tmpResult, element);

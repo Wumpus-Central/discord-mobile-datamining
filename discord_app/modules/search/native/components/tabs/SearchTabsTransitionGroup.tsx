@@ -127,8 +127,8 @@ function AnimatedTabs(state) {
   obj.children = context(state(cleanUp[9]).Tabs, obj1);
   return context(transitionState(cleanUp[4]).View, obj);
 }
-function renderItem(arg0, state, transitionState, cleanUp) {
-  return <AnimatedTabs key={arg0} state={arg1} transitionState={arg2} cleanUp={arg3} />;
+function renderItem(key, state, transitionState, cleanUp) {
+  return <AnimatedTabs key={key} state={state} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 const jsx = fn(21).jsx;
 const __initData = { code: "function SearchTabsTransitionGroupTsx1(){const{withSpring,opacity,springStandard,transitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();}}),position:opacity.get()===1?'relative':'absolute'};}" };

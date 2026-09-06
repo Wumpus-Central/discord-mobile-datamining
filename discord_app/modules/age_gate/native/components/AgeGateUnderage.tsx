@@ -98,15 +98,15 @@ export default function AgeGateUnderage(onClose) {
     const obj4 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
     const intl4 = tmp5(tmp2[10]).intl;
     obj4.children = intl4.format(tmp5(tmp2[10]).t["3axQdB"], { days: 30 });
-    const items2 = [tmp14(tmp5(tmp2[15]).Text, obj4), ];
+    const items2 = [closure_6(tmp5(tmp2[15]).Text, obj4), ];
     const obj5 = { style: tmp4.buttonWrapper, children: null };
     const obj6 = { onPress: onClose, text: null, grow: true };
     const intl5 = tmp5(tmp2[10]).intl;
     obj6.text = intl5.string(tmp5(tmp2[10]).t.JhDw5o);
-    obj5.children = tmp14(tmp5(tmp2[17]).Button, obj6);
-    items2[1] = tmp14(tmp11, obj5);
+    obj5.children = closure_6(tmp5(tmp2[17]).Button, obj6);
+    items2[1] = closure_6(View, obj5);
     obj3.children = items2;
-    tmp10Result = tmp10(closure_7, obj3);
+    tmp10Result = closure_8(closure_7, obj3);
   }
   items1[5] = tmp10Result;
   obj.children = items1;

@@ -2,10 +2,15 @@
 
 // Module 13765 (VoiceActionSheet)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 4965 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 13766 */;
 import NUFChannelsManagerDefault from "NUFChannelsManager" /* 13767 */;
+import NUFVoiceChannelsTemplateDefault from "NUFVoiceChannelsTemplate" /* 13777 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13780 */;
+import VoiceEmptyStateDefault from "VoiceEmptyState" /* 13781 */;
+import VoiceMemberListDefault from "VoiceMemberList" /* 13784 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4584 */;
 
@@ -44,15 +49,15 @@ export default function VoiceActionSheet(channel) {
   if (obj1.requiresVoiceChannelsOnboard()) {
     obj = { children: null };
     obj = { channel };
-    obj.children = closure_6(tmp2(13777), obj);
+    obj.children = closure_6(NUFVoiceChannelsTemplateDefault, obj);
     let children = closure_6(tmp5(7198).ActionSheet, obj);
     let tmp8 = closure_6;
   } else if (stateFromStores) {
     obj1 = { children: null };
     const obj2 = { channel };
-    const items2 = [closure_6(tmp2(13780), obj2), ];
+    const items2 = [closure_6(GuildEventVoiceBannerDefault, obj2), ];
     let obj3 = { channel };
-    items2[1] = closure_6(tmp2(13781), obj3);
+    items2[1] = closure_6(VoiceEmptyStateDefault, obj3);
     obj1.children = items2;
     children = closure_7(tmp5(7198).ActionSheet, obj1);
     tmp8 = closure_6;
@@ -61,9 +66,9 @@ export default function VoiceActionSheet(channel) {
     const obj4 = { scrollable: true, startExpanded: true, children: null };
     const obj5 = { style: tmp.container, children: null };
     const obj6 = { blurTheme: "dark", style: tmp.visualEffectView };
-    const items3 = [closure_6(tmp2(4965), obj6), ];
+    const items3 = [closure_6(VisualEffectViewDefault, obj6), ];
     const obj7 = { channel };
-    items3[1] = closure_6(tmp2(13784), obj7);
+    items3[1] = closure_6(VoiceMemberListDefault, obj7);
     obj5.children = items3;
     obj4.children = closure_7(closure_4, obj5);
     children = closure_6(tmp5(7198).ActionSheet, obj4);

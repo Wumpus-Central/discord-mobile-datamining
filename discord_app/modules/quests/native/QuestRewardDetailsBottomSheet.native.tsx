@@ -2,6 +2,7 @@
 
 // Module 11769 (QuestRewardDetailsBottomSheet)
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 7708 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 11290 */;
@@ -20,12 +21,12 @@ function QuestRewardDetailsBottomSheet(quest) {
   const memo1 = noop.useMemo(() => {
     const type = QuestRewardUtils.getQuestPrimaryReward(quest).type;
     if (QuestRewardTypes.QuestRewardTypes.COLLECTIBLE === type) {
-      const intl2 = tmp(1114).intl;
-      const t = tmp(1114).t;
+      const intl2 = util.intl;
+      const t = util.t;
       return intl2.string(memo ? t["66YyBJ"] : t.ABD2CN);
-    } else if (tmp(7708).QuestRewardTypes.FRACTIONAL_PREMIUM === type) {
-      const intl = tmp(1114).intl;
-      return intl.string(tmp(1114).t.maMtqM);
+    } else if (QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM === type) {
+      const intl = util.intl;
+      return intl.string(util.t.maMtqM);
     } else {
       return null;
     }
@@ -51,11 +52,11 @@ function QuestRewardDetailsBottomSheet(quest) {
   if (tmp9Result) {
     const obj3 = { children: null };
     const obj4 = { style: tmp.separator };
-    const items6 = [tmp8(View, obj4), ];
+    const items6 = [closure_6(View, obj4), ];
     const obj5 = { variant: "text-md/normal", color: "text-subtle", children: memo1 };
-    items6[1] = tmp8(quest(4556).Text, obj5);
+    items6[1] = closure_6(quest(4556).Text, obj5);
     obj3.children = items6;
-    tmp9Result = tmp9(closure_8, obj3);
+    tmp9Result = closure_7(closure_8, obj3);
   }
   items5[1] = tmp9Result;
   obj.children = items5;

@@ -23,7 +23,7 @@ export default function useFetchShareEmbed(arg0) {
   const effect = noop.useEffect(() => {
     dependencyMap = function _unfurl() {
       const self = this;
-      const tmp = asyncGeneratorStep(async (arg0, value) => {
+      const tmp = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

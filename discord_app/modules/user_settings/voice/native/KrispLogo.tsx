@@ -8,6 +8,8 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import shared from "shared" /* 4411 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import _modDef9998 from "module_9998" /* 9998 */;
+import _modDef9999 from "module_9999" /* 9999 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
@@ -40,21 +42,21 @@ export default function KrispLogo() {
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   let obj1 = shared;
   if (obj1.isThemeLight(stateFromStores)) {
-    let tmp4Result = tmp4(9998);
+    let tmp4Result = _modDef9998;
   } else {
-    tmp4Result = tmp4(9999);
+    tmp4Result = _modDef9999;
   }
   obj = { style: closure_13.detailsView, children: null };
   obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.vFiCSx);
   const items1 = [closure_1_11(React3, obj), ];
   obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj1.accessibilityLabel = intl2.string(util.t.hvVgAZ);
   obj1.onPress = handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
-  const intl3 = tmp(1114).intl;
+  const intl3 = util.intl;
   obj2.children = intl3.string(util.t.hvVgAZ);
   obj1.children = closure_1_11(Text_Text.Text, obj2);
   items1[1] = closure_1_11(hasOwnProperty, obj1);

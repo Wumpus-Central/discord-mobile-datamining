@@ -6,7 +6,7 @@ import transferToXboxDefault from "transferToXbox" /* 9460 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _beginConsoleTransfer(arg0, value) {
+let closure_5 = async function _beginConsoleTransfer(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -40,13 +40,11 @@ let closure_5 = async function _beginConsoleTransfer(arg0, value) {
           if (set.has(closure_1)) {
             c4 = 1;
             c5 = 1;
-            let obj1 = { value: GameConsoleActionCreators.fetchDevices(tmp43), done: false };
+            let obj1 = { value: GameConsoleActionCreators.fetchDevices(closure_1), done: false };
             return obj1;
           } else {
-            transferToXboxDefault(tmp42);
+            transferToXboxDefault(closure_0);
           }
-          tmp42 = closure_0;
-          tmp43 = closure_1;
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

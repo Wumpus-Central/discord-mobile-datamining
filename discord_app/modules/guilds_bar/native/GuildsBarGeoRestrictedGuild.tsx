@@ -5,11 +5,14 @@ import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import GuildIcon from "GuildIcon" /* 5584 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16294 */;
 import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16297 */;
 import HomeDrawerGuildRowDefault from "HomeDrawerGuildRow" /* 16316 */;
 import GuildsBarGeoRestrictedBadgeDefault from "GuildsBarGeoRestrictedBadge" /* 16347 */;
 import noop from "module_19" /* 19 */;
+
+const GuildIconDefault = GuildIcon;
 
 require = fn;
 const GUILD_ITEM_BADGE_SIZE = fn(16285).GUILD_ITEM_BADGE_SIZE;
@@ -63,11 +66,11 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   obj.expandedChildren = jsx(HomeDrawerGuildRowDefault, { guildId: restrictedGuild.id });
   if (null != animatableSourceWithFallback) {
     const obj2 = { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 };
-    let tmp8Result = tmp8(tmp9(5587), obj2);
+    let tmp8Result = jsx(FastImageDefault, { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 });
   } else {
     const obj3 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(5584).GuildIconSizes.LARGE };
-    tmp8Result = tmp8(tmp9(5584), obj3);
-    const tmp9Result = tmp9(5584);
+    tmp8Result = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(5584).GuildIconSizes.LARGE });
+    const tmp9Result = GuildIconDefault;
   }
   obj.children = tmp8Result;
   return jsx(GuildsBarAnimatedItemWrapperDefault, { style: tmp.geoRestrictedBadge });

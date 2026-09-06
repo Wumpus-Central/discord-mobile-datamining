@@ -30,13 +30,13 @@ export const getSearchTokenLabel = function getSearchTokenLabel(type, item) {
   if (constants.FILTER_FROM === item) {
     const intl9 = util.intl;
     return intl9.string(util.t["6iuVMn"]);
-  } else if (tmp.FILTER_HAS === item) {
+  } else if (constants.FILTER_HAS === item) {
     const intl8 = util.intl;
     return intl8.string(util.t.DMAzx8);
-  } else if (tmp.FILTER_MENTIONS === item) {
+  } else if (constants.FILTER_MENTIONS === item) {
     const intl7 = util.intl;
     return intl7.string(util.t.CMKzQx);
-  } else if (tmp.FILTER_IN === item) {
+  } else if (constants.FILTER_IN === item) {
     if (type.type === constants2.DMS) {
       const intl6 = util.intl;
       let stringResult = intl6.string(util.t["8Fmo42"]);
@@ -45,16 +45,16 @@ export const getSearchTokenLabel = function getSearchTokenLabel(type, item) {
       stringResult = intl5.string(util.t.cdPmq8);
     }
     return stringResult;
-  } else if (tmp.FILTER_ON === item) {
+  } else if (constants.FILTER_ON === item) {
     const intl4 = util.intl;
     return intl4.string(util.t.h4qGfp);
-  } else if (tmp.FILTER_BEFORE === item) {
+  } else if (constants.FILTER_BEFORE === item) {
     const intl3 = util.intl;
     return intl3.string(util.t.c9qSBR);
-  } else if (tmp.FILTER_AFTER === item) {
+  } else if (constants.FILTER_AFTER === item) {
     const intl2 = util.intl;
     return intl2.string(util.t.hcMwDW);
-  } else if (tmp.FILTER_AUTHOR_TYPE === item) {
+  } else if (constants.FILTER_AUTHOR_TYPE === item) {
     const intl = util.intl;
     return intl.string(util.t.C4r6xL);
   } else {
@@ -68,25 +68,25 @@ export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchToke
   if (constants.FILTER_FROM === searchTokenType) {
     const intl8 = util.intl;
     return intl8.string(util.t.kkGlww);
-  } else if (tmp.FILTER_HAS === searchTokenType) {
+  } else if (constants.FILTER_HAS === searchTokenType) {
     const intl7 = util.intl;
     return intl7.string(util.t.gUfZa2);
-  } else if (tmp.FILTER_IN === searchTokenType) {
+  } else if (constants.FILTER_IN === searchTokenType) {
     const intl6 = util.intl;
     return intl6.string(util.t.qDUdlT);
-  } else if (tmp.FILTER_MENTIONS === searchTokenType) {
+  } else if (constants.FILTER_MENTIONS === searchTokenType) {
     const intl5 = util.intl;
     return intl5.string(util.t.ILtwK5);
-  } else if (tmp.FILTER_ON === searchTokenType) {
+  } else if (constants.FILTER_ON === searchTokenType) {
     const intl4 = util.intl;
     return intl4.string(util.t.t8bWvr);
-  } else if (tmp.FILTER_BEFORE === searchTokenType) {
+  } else if (constants.FILTER_BEFORE === searchTokenType) {
     const intl3 = util.intl;
     return intl3.string(util.t.YEN3uU);
-  } else if (tmp.FILTER_AFTER === searchTokenType) {
+  } else if (constants.FILTER_AFTER === searchTokenType) {
     const intl2 = util.intl;
     return intl2.string(util.t.hwbB7s);
-  } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
+  } else if (constants.FILTER_AUTHOR_TYPE === searchTokenType) {
     const intl = util.intl;
     return intl.string(util.t.tJPdhZ);
   } else {
@@ -99,19 +99,19 @@ export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchToke
 export const getSearchTokenIcon = function getSearchTokenIcon(searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
     return UserIcon.UserIcon;
-  } else if (tmp.FILTER_HAS === searchTokenType) {
+  } else if (constants.FILTER_HAS === searchTokenType) {
     return AttachmentIcon.AttachmentIcon;
-  } else if (tmp.FILTER_IN === searchTokenType) {
+  } else if (constants.FILTER_IN === searchTokenType) {
     return ChannelListMagnifyingGlassIcon.ChannelListMagnifyingGlassIcon;
-  } else if (tmp.FILTER_MENTIONS === searchTokenType) {
+  } else if (constants.FILTER_MENTIONS === searchTokenType) {
     return AtIcon.AtIcon;
-  } else if (tmp.FILTER_ON === searchTokenType) {
+  } else if (constants.FILTER_ON === searchTokenType) {
     return CalendarIcon.CalendarIcon;
-  } else if (tmp.FILTER_BEFORE === searchTokenType) {
+  } else if (constants.FILTER_BEFORE === searchTokenType) {
     return CalendarMinusIcon.CalendarMinusIcon;
-  } else if (tmp.FILTER_AFTER === searchTokenType) {
+  } else if (constants.FILTER_AFTER === searchTokenType) {
     return CalendarPlusIcon.CalendarPlusIcon;
-  } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
+  } else if (constants.FILTER_AUTHOR_TYPE === searchTokenType) {
     return RobotIcon.RobotIcon;
   } else {
     const _Error = Error;
@@ -125,13 +125,13 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
   closure_1 = token;
   closure_2 = CONTEXT_MENU;
   if (constants.FILTER_FROM !== token) {
-    if (tmp.FILTER_IN !== token) {
-      if (tmp.FILTER_HAS !== token) {
-        if (tmp.FILTER_MENTIONS !== token) {
-          if (tmp.FILTER_AUTHOR_TYPE !== token) {
-            if (tmp.FILTER_ON !== token) {
-              if (tmp.FILTER_BEFORE !== token) {
-                if (tmp.FILTER_AFTER !== token) {
+    if (constants.FILTER_IN !== token) {
+      if (constants.FILTER_HAS !== token) {
+        if (constants.FILTER_MENTIONS !== token) {
+          if (constants.FILTER_AUTHOR_TYPE !== token) {
+            if (constants.FILTER_ON !== token) {
+              if (constants.FILTER_BEFORE !== token) {
+                if (constants.FILTER_AFTER !== token) {
                   const _Error = Error;
                   const _HermesInternal = HermesInternal;
                   const error = new Error("[getSearchTokenPressHandler] Unhandled search token type: " + token);
@@ -152,18 +152,18 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
                       }
                       setTextInputValue.removePrefixTags();
                       const obj = { type: constants.COMPLETE, text: null, searchTokenType: null, location: null };
-                      let tmp7 = closure_1(closure_2[12])[searchTokenType];
+                      let tmp7 = closure_1(dependencyMap[12])[searchTokenType];
                       if (null == tmp7) {
-                        const result = closure_0(tmp6[12]).rebuildSearchTokenConfigs();
-                        tmp7 = closure_1(tmp6[12])[str];
-                        const obj2 = closure_0(tmp6[12]);
+                        const result = closure_0(dependencyMap[12]).rebuildSearchTokenConfigs();
+                        tmp7 = closure_1(dependencyMap[12])[searchTokenType];
+                        const obj2 = closure_0(dependencyMap[12]);
                       }
                       let key;
                       if (tmp7 != null) {
                         key = tmp7.key;
                       }
                       if (key == null) {
-                        key = str.toString();
+                        key = searchTokenType.toString();
                       }
                       obj.text = "" + key + " " + closure_0;
                       obj.searchTokenType = searchTokenType;
@@ -186,25 +186,25 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
   }
   return () => {
     const searchTokenType = _location;
-    _location = closure_2;
+    _location = dependencyMap;
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchTokenType, (saveDraftTextInputValue) => {
       if (_location === constants2.CONTEXT_MENU) {
         const result = saveDraftTextInputValue.saveDraftTextInputValue();
       }
       saveDraftTextInputValue.setTextInputValue(closure_2_3);
       const obj = { type: constants.PREFIX, searchTokenType, location: _location, text: null };
-      let tmp6 = _location(closure_2[12])[searchTokenType];
+      let tmp6 = _location(dependencyMap[12])[searchTokenType];
       if (null == tmp6) {
-        const result1 = searchTokenType(tmp5[12]).rebuildSearchTokenConfigs();
-        tmp6 = _location(tmp5[12])[str];
-        const obj2 = searchTokenType(tmp5[12]);
+        const result1 = searchTokenType(dependencyMap[12]).rebuildSearchTokenConfigs();
+        tmp6 = _location(dependencyMap[12])[searchTokenType];
+        const obj2 = searchTokenType(dependencyMap[12]);
       }
       let key;
       if (tmp6 != null) {
         key = tmp6.key;
       }
       if (key == null) {
-        key = str.toString();
+        key = searchTokenType.toString();
       }
       obj.text = key;
       saveDraftTextInputValue.addTag(obj);

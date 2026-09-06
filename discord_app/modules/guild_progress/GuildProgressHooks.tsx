@@ -30,17 +30,17 @@ export const usePermissions = function usePermissions(channel, guild) {
     const obj = { canInvite: canViewInviteModal.canViewInviteModal(PermissionStore, closure_1, closure_0), canManageGuild: null, canMessage: null, canCreateChannel: null };
     let canResult = null != closure_1;
     if (canResult) {
-      canResult = obj3.can(constants.MANAGE_GUILD, tmp);
+      canResult = PermissionStore.can(constants.MANAGE_GUILD, closure_1);
     }
     obj.canManageGuild = canResult;
-    let canResult1 = null != tmp2;
+    let canResult1 = null != closure_0;
     if (canResult1) {
-      canResult1 = obj3.can(constants.SEND_MESSAGES, tmp2);
+      canResult1 = PermissionStore.can(constants.SEND_MESSAGES, closure_0);
     }
     obj.canMessage = canResult1;
-    let canResult2 = null != tmp;
+    let canResult2 = null != closure_1;
     if (canResult2) {
-      canResult2 = obj3.can(constants.MANAGE_CHANNELS, tmp);
+      canResult2 = PermissionStore.can(constants.MANAGE_CHANNELS, closure_1);
     }
     obj.canCreateChannel = canResult2;
     return obj;

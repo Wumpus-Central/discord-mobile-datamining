@@ -9,7 +9,7 @@ import moment from "moment" /* 4151 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _setAppLocale(arg0, value) {
+let closure_5 = async function _setAppLocale(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -44,7 +44,7 @@ let closure_5 = async function _setAppLocale(arg0, value) {
           const intl = util.intl;
           intl.setLocale(closure_0);
           items.push();
-          items.push(asyncGeneratorStep(async (arg0, value) => {
+          items.push(asyncGeneratorStep(async () => {
             if (dependencyMap === 2) {
               dependencyMap = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -164,7 +164,7 @@ let closure_5 = async function _setAppLocale(arg0, value) {
     }
   }
 };
-let closure_6 = async function _loadDateFnsLocale(arg0, value) {
+let closure_6 = async function _loadDateFnsLocale(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -201,10 +201,9 @@ let closure_6 = async function _loadDateFnsLocale(arg0, value) {
             const obj1 = { value: tmp20(), done: false };
             return obj1;
           } else {
-            state.setLocaleData(require("module_2027"));
+            state.setLocaleData(_modDef2027);
             c3 = 3;
           }
-          tmp19 = dependencyMap;
         }
       } else if (arg0 === 1) {
         c3 = 3;
@@ -222,7 +221,7 @@ let closure_6 = async function _loadDateFnsLocale(arg0, value) {
     }
   }
 };
-let closure_7 = async function _loadFormatJsLocale(arg0, value) {
+let closure_7 = async function _loadFormatJsLocale(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -271,7 +270,7 @@ let closure_7 = async function _loadFormatJsLocale(arg0, value) {
     }
   }
 };
-let closure_8 = async function _setMomentLocale(arg0, value) {
+let closure_8 = async function _setMomentLocale(arg0) {
   let length;
   if (c4 === 2) {
     c4 = 3;
@@ -381,6 +380,7 @@ export const subscribeToIntlLoadingSuccess = function subscribeToIntlLoadingSucc
     if (tmp) {
       closure_0(inProgressLocale2.inProgressLocale);
     }
+    tmp = null != inProgressLocale2.inProgressLocale && null == inProgressLocale.inProgressLocale && null == inProgressLocale.error;
   });
 };
 export const setAppLocale = function setAppLocale() {

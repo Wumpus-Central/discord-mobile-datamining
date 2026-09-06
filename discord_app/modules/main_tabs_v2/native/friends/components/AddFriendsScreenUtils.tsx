@@ -7,7 +7,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = fn;
-let closure_7 = async function _sendWave(arg0, value) {
+let closure_7 = async function _sendWave(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

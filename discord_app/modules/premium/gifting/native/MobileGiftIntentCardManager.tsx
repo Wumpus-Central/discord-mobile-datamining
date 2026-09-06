@@ -35,7 +35,7 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
             const userAffinity = self.getUserAffinity(found);
             tmpResult = tmp(8768);
             let obj = { name: tmp(1250).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION, type: tmp(1250).ImpressionTypes.VIEW, properties: null };
-            obj = { gift_intent_type: tmp6.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
+            obj = { gift_intent_type: constants2.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
             let dmProbability;
             if (userAffinity != null) {
               dmProbability = userAffinity.dmProbability;
@@ -45,15 +45,13 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
             obj.properties = obj;
             tmpResult.trackImpression(obj);
           }
-          tmp6 = constants2;
         } else {
-          obj5.whenReady(id, () => {
+          MessageStore.whenReady(id, () => {
             if (SelectedChannelStore.getChannelId() === closure_1) {
               self.maybeSendCard(tmp, closure_0);
             }
           });
         }
-        obj5 = MessageStore;
       }
     }
   }
@@ -64,7 +62,6 @@ prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedCh
   if (null != channel) {
     if (self.isChannelEligible(channel)) {
       const _Set = Set;
-      const set = new Set(channel.recipients);
       const friendAnniversaries = PremiumGiftingIntentStore.getFriendAnniversaries();
       const found = friendAnniversaries.find((item) => set.has(item));
       if (null != found) {
@@ -73,6 +70,7 @@ prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedCh
         });
         delayedCall.delay();
       }
+      const set = new Set(channel.recipients);
     }
   }
 };

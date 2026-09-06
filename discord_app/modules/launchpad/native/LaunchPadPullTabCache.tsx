@@ -3,6 +3,7 @@
 // Module 16962 (LaunchPadPullTabCache)
 import Storage2 from "Storage" /* 510 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import useWindowDimensions from "useWindowDimensions" /* 1477 */;
 import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5148 */;
 import LaunchPadConstants from "LaunchPadConstants" /* 11464 */;
 import size from "module_2" /* 2 */;
@@ -18,9 +19,9 @@ function setLaunchPadPullTabExclusionRect(arg0) {
     tmp = value;
   }
   if (obj.isAndroid()) {
-    let tmp7Result = tmp7(1477);
+    let tmp7Result = useWindowDimensions;
     const diff = tmp7Result.getWindowDimensions().width - hasOwnProperty;
-    tmp7Result = tmp7(1477);
+    tmp7Result = useWindowDimensions;
     const width = tmp7Result.getWindowDimensions().width;
     const sum = tmp + React3;
     let left;
@@ -56,6 +57,7 @@ function setLaunchPadPullTabExclusionRect(arg0) {
       const result = NativeDeviceSettingsModuleDefault.setSystemGestureExclusionRects(items);
     }
   }
+  obj = PlatformUtils;
 }
 ({ LAUNCH_PAD_PULL_TAB_HEIGHT: c3, LAUNCH_PAD_PULL_TAB_INITIAL_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_WIDTH: hasOwnProperty } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY = "LAUNCH_PAD_PULL_TAB_POSITION_CACHE_KEY";

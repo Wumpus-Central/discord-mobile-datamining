@@ -7,10 +7,9 @@ import noop from "module_19" /* 19 */;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipAspectRatioUpdater.native.tsx");
 
-export default function useExternalPipAspectRatioUpdater(arg0, arg1, set) {
+export default function useExternalPipAspectRatioUpdater(arg0, arg1, current) {
   closure_0 = arg1;
-  const current = set;
-  noop = noop.useRef(set);
+  noop = noop.useRef(current);
   const insertionEffect = noop.useInsertionEffect(() => {
     closure_2.current = current;
   });

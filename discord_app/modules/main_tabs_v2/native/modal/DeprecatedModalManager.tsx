@@ -25,8 +25,8 @@ function handlePushedModal(modal) {
 function handlePoppedModal() {
   NavigationRouteUtils.popModal();
 }
-function pushFirstOpenModal(arg0, arg1) {
-  const iter = arg0[Symbol.iterator]();
+function pushFirstOpenModal(items, requiredAction) {
+  const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let key = nextResult;
@@ -34,7 +34,7 @@ function pushFirstOpenModal(arg0, arg1) {
     if (nextResult != null) {
       let isOpen = nextResult.isOpen;
       if (isOpen != null) {
-        isOpenResult = isOpen(APP, arg1);
+        isOpenResult = isOpen(APP, requiredAction);
       }
     }
     let component = key.getComponent();
@@ -111,17 +111,15 @@ let prototype = function DeprecatedModalManager() {
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(USER_REQUIRED_ACTION_UPDATE)) {
-          let tmp5Result = tmp5(4417);
-          tmp5Result.popModal(tmp7);
+          let tmp5Result = NavigationRouteUtils;
+          tmp5Result.popModal(USER_REQUIRED_ACTION_UPDATE);
         }
-        tmp5Result = tmp5(4417);
+        tmp5Result = NavigationRouteUtils;
         if (tmp5Result.isModalOpen(EMAIL_VERIFICATION_MODAL_OPEN)) {
-          tmp5(4417).popModal(tmp9);
-          const tmp5Result1 = tmp5(4417);
+          NavigationRouteUtils.popModal(EMAIL_VERIFICATION_MODAL_OPEN);
+          const tmp5Result1 = NavigationRouteUtils;
         }
         obj = NavigationRouteUtils;
-        tmp7 = USER_REQUIRED_ACTION_UPDATE;
-        tmp9 = EMAIL_VERIFICATION_MODAL_OPEN;
       } else {
         const items = [closure_1_17, closure_1_15];
         pushFirstOpenModal(items, requiredAction.requiredAction);

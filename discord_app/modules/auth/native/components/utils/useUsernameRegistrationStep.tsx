@@ -2,7 +2,9 @@
 
 // Module 15971 (useUsernameRegistrationStep)
 import util from "util" /* 1114 */;
+import Link from "Link" /* 1484 */;
 import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14706 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14709 */;
@@ -51,18 +53,18 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       context(obj);
     }
     if (arg0) {
-      let tmp3Result = tmp3(15945);
+      let tmp3Result = RegistrationStepsUtils;
       const result = tmp3Result.handleRegistrationSubmit(closure_0, navigation, context);
     } else {
       obj = { step: React5(closure_0), toStep: null, actionType: null };
-      tmp3Result = tmp3(15945);
+      tmp3Result = RegistrationStepsUtils;
       obj.toStep = tmp3Result.getNextRegistrationTransitionStep(closure_0);
       obj.actionType = constants.SUCCESS;
       context(obj);
-      const nextAuthState = tmp3(15945).getNextAuthState(closure_0);
-      const StackActions = tmp3(1484).StackActions;
+      const nextAuthState = RegistrationStepsUtils.getNextAuthState(closure_0);
+      const StackActions = Link.StackActions;
       navigation.dispatch(StackActions.push(nextAuthState));
-      const tmp3Result1 = tmp3(15945);
+      const tmp3Result1 = RegistrationStepsUtils;
     }
   }, items);
   const items2 = [username, , ];
@@ -101,11 +103,11 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
         if ("" !== tmp) {
           let type;
           if (obj != null) {
-            type = tmp2.type;
+            type = obj.type;
           }
           let message = null;
           if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
-            message = tmp2.message;
+            message = obj.message;
           }
         }
         return message;

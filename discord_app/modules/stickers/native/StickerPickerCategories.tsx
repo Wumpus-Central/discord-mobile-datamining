@@ -48,14 +48,14 @@ let closure_17 = noop.memo((category) => {
   const callback = noop.useCallback(() => {
     let tmp4 = category.type !== StickersTypes.StickerCategoryTypes.PACK;
     if (tmp4) {
-      tmp4 = tmp.type !== StickersTypes.StickerCategoryTypes.GUILD;
+      tmp4 = category.type !== StickersTypes.StickerCategoryTypes.GUILD;
     }
     if (!tmp4) {
       let obj = { location: null, tab: null, sticker_pack_id: null, guild_id: null };
       obj = { page: constants2.EXPRESSION_PICKER };
       obj.location = obj;
       obj.tab = ExpressionPickerViewType.STICKER;
-      obj.sticker_pack_id = tmp.id;
+      obj.sticker_pack_id = category.id;
       let id;
       if (guild != null) {
         id = guild.id;
@@ -81,11 +81,11 @@ let closure_17 = noop.memo((category) => {
   items1[1] = isActive ? tmp.activeItem : tmp.fadedItem;
   if (null != category.icon) {
     const obj1 = { style: tmp.guildIcon, disableColor: category.type === tmp2(tmp3[12]).StickerCategoryTypes.PACK, source: tmp2(tmp3[16]).makeSource(category.icon) };
-    let tmp9Result = tmp9(tmp2(tmp3[15]).Icon, obj1);
+    let tmp9Result = closure_14(tmp2(tmp3[15]).Icon, obj1);
     const tmp2Result = tmp2(tmp3[16]);
   } else if (category.type === tmp2(tmp3[12]).StickerCategoryTypes.GUILD) {
     const obj2 = { guild, loadingStyle: tmp.guildItemPlaceholder, size: tmp2(tmp3[17]).GuildIconSizes.XSMALL, style: tmp.guildIcon };
-    tmp9Result = tmp9(onPressCategory(tmp3[17]), obj2);
+    tmp9Result = closure_14(onPressCategory(tmp3[17]), obj2);
     const tmp17 = onPressCategory(tmp3[17]);
   } else {
     if ("previewSticker" in category) {
@@ -98,7 +98,7 @@ let closure_17 = noop.memo((category) => {
       }
       obj3.animated = shouldAnimateStickerResult;
       obj3.size = CATEGORY_ICON_SIZE;
-      tmp9Result = tmp9(tmp13, obj3);
+      tmp9Result = closure_14(tmp13, obj3);
     }
     previewSticker = category.stickers[0];
   }
@@ -121,7 +121,7 @@ export default function _default(categories) {
     const items = [categories.length];
     return items;
   }, items);
-  let tmp4 = ref(first.useState(null), 2);
+  const tmp4 = ref(first.useState(null), 2);
   first = tmp4[0];
   closure_5 = tmp4[1];
   let tmp6 = ref(first.useState(false), 2);
@@ -141,16 +141,15 @@ export default function _default(categories) {
     if (null != closure_2.current) {
       if (null != ref.current) {
         const result = categoryIndex * EXPRESSION_FOOTER_HEIGHT;
-        let tmp6 = result > tmp.current.end;
+        let tmp6 = result > closure_2.current.end;
         if (!tmp6) {
-          tmp6 = result < tmp.current.start;
+          tmp6 = result < closure_2.current.start;
         }
         if (tmp6) {
           const current = tmp2.current;
-          const obj = { section: 0, item: tmp3, animated: false };
+          const obj = { section: 0, item: categoryIndex, animated: false };
           current.scrollToLocation(obj);
         }
-        tmp3 = categoryIndex;
       }
     }
   }, items2);
@@ -199,7 +198,6 @@ export default function _default(categories) {
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
   const tmp19 = categoryIndex(10358)();
-  const tmp20 = closure_15;
   obj = { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list };
   const items9 = [closure_14(categoryIndex(7055), obj), ];
   let tmp22Result = null != first && first1;
@@ -212,11 +210,11 @@ export default function _default(categories) {
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj1.style = items10;
     const obj2 = { style: tmp.guildIcon, source: tmp17(10420) };
-    obj1.children = tmp22(categories(1178).Icon, obj2);
-    obj.children = tmp22(closure_5, obj1);
-    tmp22Result = tmp22(categories(5123).PressableOpacity, obj);
+    obj1.children = closure_14(categories(1178).Icon, obj2);
+    obj.children = closure_14(closure_5, obj1);
+    tmp22Result = closure_14(categories(5123).PressableOpacity, obj);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return tmp20(categoryIndex(10359), obj);
+  return closure_15(categoryIndex(10359), obj);
 };

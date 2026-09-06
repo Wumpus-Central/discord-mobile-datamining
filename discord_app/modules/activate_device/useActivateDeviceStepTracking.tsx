@@ -17,21 +17,21 @@ export const useActivateDeviceStepTracking = function useActivateDeviceStepTrack
   importDefault = tmp;
   const items = [tmp, arg0];
   const effect = noop.useEffect(() => {
-    if (closure_0 !== closure_1) {
-      let tmp3 = "user-code-input" !== tmp.type;
+    if (closure_0 !== type) {
+      let tmp3 = "user-code-input" !== closure_0.type;
       if (tmp3) {
-        tmp3 = "handoff" !== tmp.type;
+        tmp3 = "handoff" !== closure_0.type;
       }
       let result = null;
       if (tmp3) {
         let obj = ActivateDeviceUtils;
-        result = obj.clientIdToActivateDevicePlatform(tmp.userCodeData.clientId);
+        result = obj.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
       }
-      let type;
-      if (tmp2 != null) {
-        type = tmp2.type;
+      type = undefined;
+      if (type != null) {
+        type = type.type;
       }
-      obj = { previous_step: type, current_step: tmp.type, platform_type: result };
+      obj = { previous_step: type, current_step: closure_0.type, platform_type: result };
       AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj);
     }
   }, items);

@@ -14,15 +14,15 @@ export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPos
   return require("useStateFromStores").useStateFromStores([], () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      const channel_id = tmp.channel_id;
+      const channel_id = closure_0.channel_id;
       let flag = false;
-      if (tmp.id === obj.castChannelIdAsMessageId(channel_id)) {
+      if (closure_0.id === obj.castChannelIdAsMessageId(channel_id)) {
         const channel = ChannelStore.getChannel(channel_id);
         flag = false;
         if (null != channel) {
           flag = false;
           if (channel.isForumPost()) {
-            const channel1 = obj2.getChannel(channel.parent_id);
+            const channel1 = ChannelStore.getChannel(channel.parent_id);
             let isMediaChannelResult;
             if (channel1 != null) {
               isMediaChannelResult = channel1.isMediaChannel();
@@ -30,7 +30,6 @@ export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPos
             flag = true === isMediaChannelResult;
           }
         }
-        obj2 = ChannelStore;
       }
       tmp2 = flag;
       obj = SnowflakeUtilsDefault;
@@ -49,7 +48,7 @@ export const isFirstMessageInMediaPost = function isFirstMessageInMediaPost(chan
       if (null != channel) {
         flag = false;
         if (channel.isForumPost()) {
-          const channel1 = obj2.getChannel(channel.parent_id);
+          const channel1 = ChannelStore.getChannel(channel.parent_id);
           let isMediaChannelResult;
           if (channel1 != null) {
             isMediaChannelResult = channel1.isMediaChannel();
@@ -57,7 +56,6 @@ export const isFirstMessageInMediaPost = function isFirstMessageInMediaPost(chan
           flag = true === isMediaChannelResult;
         }
       }
-      obj2 = ChannelStore;
     }
     tmp = flag;
     obj = SnowflakeUtilsDefault;

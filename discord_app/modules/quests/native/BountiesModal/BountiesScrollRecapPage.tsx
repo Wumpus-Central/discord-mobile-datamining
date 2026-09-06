@@ -9,6 +9,7 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import common_Video from "common/Video" /* 8307 */;
+import APNGPlayer from "APNGPlayer" /* 8808 */;
 import OrbsIcon from "OrbsIcon" /* 8837 */;
 import _modDef15050 from "module_15050" /* 15050 */;
 import _modDef15051 from "module_15051" /* 15051 */;
@@ -23,15 +24,15 @@ function BountiesRecapOrbsBackground(arg0) {
   if (obj.isAndroid()) {
     obj = { style, needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, pointerEvents: "none", children: null };
     obj = { url: _modDef15050, style: React3.absoluteFillObject, autoplay: !reducedMotion };
-    obj.children = tmp3(tmp(8808).APNGPlayer, obj);
-    let tmp3Result = tmp3(React4, obj);
+    obj.children = timestampProducer(APNGPlayer.APNGPlayer, obj);
+    let tmp3Result = timestampProducer(React4, obj);
   } else {
     const obj1 = { source: null, style: null, resizeMode: "contain", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
     const obj2 = { uri: _modDef15051 };
     obj1.source = obj2;
     obj1.style = style;
     obj1.paused = reducedMotion;
-    tmp3Result = tmp3(tmp(8307).VideoComponent, obj1);
+    tmp3Result = timestampProducer(common_Video.VideoComponent, obj1);
   }
   return tmp3Result;
 }

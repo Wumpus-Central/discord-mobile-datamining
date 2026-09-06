@@ -15,18 +15,17 @@ export default function useTrackCreateGuildViewed(arg0) {
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = tmp.state !== GuildTemplateStates.RESOLVING;
+      tmp2 = closure_0.state !== GuildTemplateStates.RESOLVING;
     }
     if (tmp2) {
       let current = ref.current;
-      if (!current.includes(tmp.code)) {
-        current = tmp4.current;
-        current.push(tmp.code);
+      if (!current.includes(closure_0.code)) {
+        current = ref.current;
+        current.push(closure_0.code);
         const obj = { guild_template_code: null, guild_template_name: null, guild_template_description: null, guild_template_guild_id: null };
-        ({ code: obj2.guild_template_code, name: obj2.guild_template_name, description: obj2.guild_template_description, sourceGuildId: obj2.guild_template_guild_id } = tmp);
+        ({ code: obj2.guild_template_code, name: obj2.guild_template_name, description: obj2.guild_template_description, sourceGuildId: obj2.guild_template_guild_id } = closure_0);
         obj.track(AnalyticEvents.CREATE_GUILD_VIEWED, obj);
       }
-      tmp4 = ref;
     }
   });
 };

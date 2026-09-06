@@ -24,7 +24,7 @@ let closure_9 = {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
     const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -34,7 +34,7 @@ let closure_9 = {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
     const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;
@@ -58,7 +58,7 @@ let closure_9 = {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
     const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -68,7 +68,7 @@ let closure_9 = {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
     const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;
@@ -117,6 +117,6 @@ export const CheckpointIntroRive = noop.forwardRef(function CheckpointIntroRiveW
   let obj = { fallback: fallback.fallback, children: null };
   obj = { ref };
   const merged = Object.assign(fallback);
-  obj.children = <closure_10 ref={arg1} />;
+  obj.children = <closure_10 ref={ref} />;
   return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
 });

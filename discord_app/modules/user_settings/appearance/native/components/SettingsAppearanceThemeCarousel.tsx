@@ -88,24 +88,24 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       isSelected: index === currentThemeIndex,
       onPress() {
         if (null != ref.current) {
-          const current = tmp.current;
+          const current = ref.current;
           const currentIndex = current.getCurrentIndex();
           if (currentIndex === index) {
-            return onThemeSelected(tmp3);
+            return onThemeSelected(index);
           } else {
-            if (currentIndex !== tmp3) {
+            if (currentIndex !== index) {
               if (0 === currentIndex) {
-                let obj = { count: tmp3 };
-                return tmp.current.next(obj);
+                let obj = { count: index };
+                return ref.current.next(obj);
               } else {
-                const current2 = tmp.current;
-                obj = { index: tmp3, animated: true };
+                const current2 = ref.current;
+                obj = { index, animated: true };
                 current2.scrollTo(obj);
               }
             }
-            const current3 = tmp.current;
+            const current3 = ref.current;
             if (current3 != null) {
-              obj = { index: tmp3, animated: true };
+              obj = { index, animated: true };
               current3.scrollTo(obj);
             }
           }
@@ -155,7 +155,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     if (!tmp2(tmp3[16]).isThumbstickScrollDevice) {
       obj3 = { children: null };
       const obj4 = { pointerEvents: "none", style: tmp.selectionBorder };
-      const items5 = [tmp17(tmp12, obj4), ];
+      const items5 = [tmp17(closure_4, obj4), ];
       const size = { ref, data: themes, renderItem: callback, style: null, width: null, height: null, loop: false, pagingEnabled: true, defaultIndex: null, onSnapToItem: null, scrollAnimationDuration: 200, onProgressChange: null };
       const obj5 = { width: deviceWidth, justifyContent: "center", alignItems: "center", marginLeft: ref.THEME_ITEM_HORIZONTAL_MARGIN };
       size.style = obj5;
@@ -189,7 +189,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       let tmp17Result = tmp11(sharedValue, obj3);
     }
     const obj6 = { children: tmp17Result };
-    tmp17Result = tmp17(tmp12, obj6);
+    tmp17Result = tmp17(closure_4, obj6);
     const obj7 = { animated: true, style: null, variant: "text-sm/medium", children: null };
     const items6 = [animatedStyles.headerSecondary, tmp.textCentered];
     obj7.style = items6;
@@ -204,7 +204,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       const obj9 = { style: tmp.labelGroup, children: null };
       const items8 = [tmp18, tmp17(tmp24, obj7)];
       obj9.children = items8;
-      items7[1] = tmp11(tmp12, obj9);
+      items7[1] = tmp11(closure_4, obj9);
       obj8.children = items7;
       const obj10 = { style: tmp.container, children: null };
       const obj11 = { style: tmp.floatingNuxContainer, children: null };
@@ -226,9 +226,9 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       items11[1] = tmp17(tmp2(tmp3[15]).Text, obj14);
       obj12.children = items11;
       obj11.children = tmp11(currentThemeIndex(tmp3[4]).View, obj12);
-      const items13 = [tmp17(tmp12, obj11), tmp11(sharedValue, obj8)];
+      const items13 = [tmp17(closure_4, obj11), tmp11(sharedValue, obj8)];
       obj10.children = items13;
-      return tmp11(tmp12, obj10);
+      return tmp11(closure_4, obj10);
     }
     const intl = tmp2(tmp3[19]).intl;
     const string = intl.string;
@@ -258,4 +258,23 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       return ref(closure_1_4, obj, "theme-" + index);
     })
   });
+  const obj15 = {
+    horizontal: true,
+    style: tmp.a11yThemeListScroll,
+    contentContainerStyle: tmp.a11yThemeList,
+    children: themes.map((themePreset, index) => {
+      let obj = { children: null };
+      closure_0 = index;
+      obj = {
+        themePreset,
+        isPreview,
+        isSelected: index === currentThemeIndex,
+        onPress() {
+          return onThemeSelected(closure_0);
+        }
+      };
+      obj.children = ref(currentThemeIndex(isPreview[10]), obj);
+      return ref(closure_1_4, obj, "theme-" + index);
+    })
+  };
 };

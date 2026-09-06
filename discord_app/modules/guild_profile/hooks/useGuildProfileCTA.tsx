@@ -81,7 +81,7 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
   const validInviteKey = stateFromStoresObject.validInviteKey;
   const isBypassInvite = stateFromStoresObject.isBypassInvite;
   const inviteRoles = stateFromStoresObject.inviteRoles;
-  let tmp6 = usePendingFolderGuildIdsDefault();
+  const tmp6 = usePendingFolderGuildIdsDefault();
   closure_12 = tmp6;
   const items8 = [stateFromStores3, tmp6, id, features, validInviteKey, , , , , , , ];
   ({ visibility: arr9[5], tag: arr9[6] } = id);
@@ -94,9 +94,9 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
     guildId: id,
     ctaType: id.useMemo(() => {
       if (stateFromStores3) {
-        if (closure_1 === obj.INVITE) {
+        if (closure_1 === features.INVITE) {
           if (null != inviteRoles) {
-            if (arr2.length > 0) {
+            if (inviteRoles.length > 0) {
               if (null != stateFromStores2) {
                 const member = GuildMemberStore.getMember(id, tmp24.id);
                 let roles;
@@ -106,10 +106,10 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
                 if (roles == null) {
                   roles = [];
                 }
-                const set = new Set(roles);
-                if (arr2.some((id) => !set.has(id.id))) {
-                  return obj.ACCEPT_ROLES;
+                if (inviteRoles.some((id) => !set.has(id.id))) {
+                  return features.ACCEPT_ROLES;
                 }
+                const set = new Set(roles);
               }
             }
           }
@@ -130,52 +130,50 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
           }
           tmp38 = true === identityEnabled;
         }
-        if (tmp22 !== tmp23.INVITE) {
+        if (closure_1 !== features.INVITE) {
           if (null != id.tag) {
             if (!tmp38) {
               if (null != stateFromStores1) {
                 if (obj2.guildSupportsTags(tmp41)) {
-                  let IS_MEMBER = obj.ADOPT_TAG;
+                  let IS_MEMBER = features.ADOPT_TAG;
                 }
                 return IS_MEMBER;
               }
             }
           }
         }
-        IS_MEMBER = obj.IS_MEMBER;
-        tmp22 = closure_1;
-        tmp23 = obj;
+        IS_MEMBER = features.IS_MEMBER;
       } else {
         if (closure_12.includes(id)) {
-          let APPLY_TO_JOIN = obj.HAS_APPLICATION;
+          let APPLY_TO_JOIN = features.HAS_APPLICATION;
         } else {
           let hasItem;
           if (features != null) {
-            hasItem = obj.includes(constants2.MEMBER_VERIFICATION_GATE_ENABLED);
+            hasItem = features.includes(constants2.MEMBER_VERIFICATION_GATE_ENABLED);
           }
           if (hasItem) {
             let hasItem1;
-            if (obj != null) {
-              hasItem1 = obj.includes(constants2.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+            if (features != null) {
+              hasItem1 = features.includes(constants2.MEMBER_VERIFICATION_MANUAL_APPROVAL);
             }
             if (hasItem1) {
               if (null != validInviteKey) {
                 if (!isBypassInvite) {
-                  APPLY_TO_JOIN = obj.APPLY_TO_JOIN;
+                  APPLY_TO_JOIN = features.APPLY_TO_JOIN;
                 }
               }
             }
           }
           if (null != validInviteKey) {
-            let JOIN_VIA_INVITE = obj.JOIN_VIA_INVITE;
+            let JOIN_VIA_INVITE = features.JOIN_VIA_INVITE;
           } else {
             let hasItem2;
-            if (obj != null) {
-              hasItem2 = obj.includes(constants2.DISCOVERABLE);
+            if (features != null) {
+              hasItem2 = features.includes(constants2.DISCOVERABLE);
             }
             JOIN_VIA_INVITE = null;
             if (hasItem2) {
-              JOIN_VIA_INVITE = obj.LURK_DISCOVERABLE;
+              JOIN_VIA_INVITE = features.LURK_DISCOVERABLE;
             }
           }
         }
@@ -244,11 +242,11 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
           if (roles1 == null) {
             roles1 = [];
           }
-          const set = new Set(roles1);
           roles = invite.roles;
           if (roles.some((id) => !set.has(id.id))) {
             return obj.ACCEPT_ROLES;
           }
+          const set = new Set(roles1);
         }
       }
     }

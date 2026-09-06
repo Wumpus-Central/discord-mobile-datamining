@@ -54,16 +54,14 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   let fromServer1 = null;
   if (null != user.subscription_trial) {
     fromServer1 = SubscriptionTrialRecord.createFromServer(user.subscription_trial);
-    const tmp12 = SubscriptionTrialRecord;
   }
   const promotion = user.promotion;
   let fromServer2 = null;
   if (null != promotion) {
     fromServer2 = PromotionRecord.createFromServer(user.promotion);
-    const tmp13 = PromotionRecord;
   }
   if (typeof GiftCodeRecord === "function") {
-    const tmp18 = new GiftCodeRecord(tmp, tmp12, tmp13, promotion, tmp2, new.target, id, code, sku_id, application_id, uses, max_uses, tmp5, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches);
+    const tmp18 = new GiftCodeRecord(tmp, SubscriptionTrialRecord, PromotionRecord, promotion, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp5, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches);
     tmp18.userId = id;
     tmp18.code = code;
     tmp18.skuId = sku_id;

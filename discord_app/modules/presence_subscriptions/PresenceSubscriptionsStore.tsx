@@ -28,6 +28,7 @@ const delayedCall = new fn(4447).DelayedCall(3000, function flush() {
   if (0 !== items.length) {
     ActivitiesActionCreatorsDefault.subscribeActivities(items);
   }
+  tmp4 = entries[Symbol.iterator]();
 });
 const Store = initializeDefault.Store;
 class PresenceSubscriptionsStore extends Store {
@@ -89,12 +90,11 @@ const presenceSubscriptionsStore = new PresenceSubscriptionsStore(DispatcherDefa
         const _HermesInternal = HermesInternal;
         const _Date2 = Date;
         const combined1 = "" + applicationId + ":" + partyId;
-        const obj = { userId, applicationId, partyId, messageId, channelId, expiresAt: tmp5 + Date.now() };
+        const obj = { userId, applicationId, partyId, messageId, channelId, expiresAt: INVITE_EXPIRATION_MS + Date.now() };
         closure_6[combined1] = obj;
         delayedCall.delay();
         return true;
       }
-      tmp5 = INVITE_EXPIRATION_MS;
     }
   },
   CONNECTION_OPEN: handleConnectionOpenOrResumed,

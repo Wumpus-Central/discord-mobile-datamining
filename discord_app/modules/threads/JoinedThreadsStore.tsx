@@ -31,7 +31,7 @@ function storeThread(channel) {
       const set = new Set(set2);
       set2 = set;
       set.add(id);
-      if (obj2.setTimer(id, tmp10.muteConfig, () => {
+      if (navigation.setTimer(id, tmp10.muteConfig, () => {
         dependencyMap[id].muted = false;
         set = new Set(set);
         set.delete(id);
@@ -48,7 +48,6 @@ function storeThread(channel) {
       set2 = new Set(set2);
       set2.delete(id);
     }
-    obj2 = navigation;
   }
 }
 function handleThreadListSyncOrSearchFinish(guildId) {
@@ -82,6 +81,7 @@ function handleThreadListSyncOrSearchFinish(guildId) {
         set2 = new Set(set2);
         set2.delete(id);
       }
+      const date = new Date(id.joinTimestamp);
     });
   }
 }
@@ -118,6 +118,7 @@ function handleSearchMessagesSuccess(guildId) {
           set2 = new Set(set2);
           set2.delete(id);
         }
+        const date = new Date(id.joinTimestamp);
       });
     });
   }
@@ -198,6 +199,7 @@ obj = {
     if (threads != null) {
       const item = threads.forEach(storeThread);
     }
+    const iter = obj.reject((guildId) => guildId.guildId === id).keyBy("threadId");
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
@@ -320,7 +322,7 @@ obj = {
             set2 = set;
             set.add(id);
             muteConfig = muteConfig.muteConfig;
-            if (obj6.setTimer(id, muteConfig, () => {
+            if (closure_5.setTimer(id, muteConfig, () => {
               dependencyMap[id].muted = false;
               set = new Set(set);
               set.delete(id);
@@ -338,7 +340,6 @@ obj = {
             set2.delete(id);
           }
           c1 = true;
-          obj6 = closure_5;
         }
       });
     }

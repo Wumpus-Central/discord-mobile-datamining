@@ -130,20 +130,20 @@ export default function UserSettingsText() {
   let tmp18Result = !result;
   if (!result) {
     const obj11 = { style: tmp5.nitroUpsell, children: null };
-    const obj12 = { source: videoUploadQuality(tmp2[19]), size: tmp(tmp2[18]).Icon.Sizes.SMALL, style: tmp5.nitroIcon };
-    const items9 = [tmp16(tmp(tmp2[18]).Icon, obj12), ];
+    const obj12 = { source: videoUploadQuality(tmp2[19]), size: require("native").Icon.Sizes.SMALL, style: tmp5.nitroIcon };
+    const items9 = [closure_12(require("native").Icon, obj12), ];
     const obj13 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
-    const intl12 = tmp(tmp2[21]).intl;
+    const intl12 = require("util").intl;
     const obj14 = {
       onClick() {
           UserSettingsModalActionCreatorsDefault.setSection(constants3.PREMIUM);
           closure_4.push(constants3.PREMIUM, { isFromTextSection: true });
         }
     };
-    obj13.children = intl12.format(tmp(tmp2[21]).t.uW1zul, obj14);
-    items9[1] = tmp16(tmp(tmp2[20]).Text, obj13);
+    obj13.children = intl12.format(require("util").t.uW1zul, obj14);
+    items9[1] = closure_12(require("Text/Text").Text, obj13);
     obj11.children = items9;
-    tmp18Result = tmp18(tmp17, obj11);
+    tmp18Result = closure_13(tmp17, obj11);
   }
   const obj15 = { children: null };
   items8[1] = tmp18Result;
@@ -158,44 +158,44 @@ export default function UserSettingsText() {
   }
   items6[1] = closure_13(setting4, { children: items8 });
   const obj16 = { title: null, description: null, hasIcons: false, children: null };
-  const intl13 = tmp(tmp2[21]).intl;
+  const intl13 = require("util").intl;
   obj16.title = intl13.string(require("util").t.fyG8t2);
-  const intl14 = tmp(tmp2[21]).intl;
+  const intl14 = require("util").intl;
   obj16.description = intl14.string(require("util").t["wC0+Ph"]);
   const obj17 = { label: null, value: null, onValueChange: null };
-  const intl15 = tmp(tmp2[21]).intl;
+  const intl15 = require("util").intl;
   obj17.label = intl15.string(require("util").t.ix8XIj);
   obj17.value = dataSavingMode;
   obj17.onValueChange = toggleDataSavingMode;
   obj16.children = closure_12(require("TableSwitchRow").TableSwitchRow, obj17);
   items6[2] = closure_12(require("TableRowGroup").TableRowGroup, obj16);
   const obj18 = { title: null, hasIcons: false, children: null };
-  const intl16 = tmp(tmp2[21]).intl;
+  const intl16 = require("util").intl;
   obj18.title = intl16.string(require("util").t.PWZOn4);
   const obj19 = { label: null, value: null, onValueChange: null };
-  const intl17 = tmp(tmp2[21]).intl;
+  const intl17 = require("util").intl;
   obj19.label = intl17.string(require("util").t["5bK9vw"]);
   obj19.value = setting2;
   obj19.onValueChange = require("UserSettings").RenderEmbeds.updateSetting;
   obj18.children = closure_12(require("TableSwitchRow").TableSwitchRow, obj19);
   items6[3] = closure_12(require("TableRowGroup").TableRowGroup, obj18);
   const obj20 = { title: null, hasIcons: false, children: null };
-  const intl18 = tmp(tmp2[21]).intl;
+  const intl18 = require("util").intl;
   obj20.title = intl18.string(require("util").t.sMOuuS);
   const obj21 = { label: null, value: null, onValueChange: null };
-  const intl19 = tmp(tmp2[21]).intl;
+  const intl19 = require("util").intl;
   obj21.label = intl19.string(require("util").t["zge/fP"]);
   obj21.value = setting3;
   obj21.onValueChange = require("UserSettings").RenderReactions.updateSetting;
   obj20.children = closure_12(require("TableSwitchRow").TableSwitchRow, obj21);
   items6[4] = closure_12(require("TableRowGroup").TableRowGroup, obj20);
   const obj22 = { title: null, description: null, hasIcons: false, children: null };
-  const intl20 = tmp(tmp2[21]).intl;
+  const intl20 = require("util").intl;
   obj22.title = intl20.string(require("util").t.BkuOO6);
-  const intl21 = tmp(tmp2[21]).intl;
+  const intl21 = require("util").intl;
   obj22.description = intl21.string(require("util").t.p4IKE9);
   const obj23 = { label: null, value: null, onValueChange: null };
-  const intl22 = tmp(tmp2[21]).intl;
+  const intl22 = require("util").intl;
   obj23.label = intl22.string(require("util").t["3340dY"]);
   obj23.value = false !== stateFromStores2;
   obj23.onValueChange = handleSync;

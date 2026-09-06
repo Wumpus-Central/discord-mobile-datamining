@@ -43,7 +43,7 @@ prototype["update"] = function update(current) {
     history.push(obj);
   }
 };
-prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats(nowResult) {
+prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats() {
   if (nowResult === undefined) {
     let obj = TimeUtils;
     nowResult = obj.now();

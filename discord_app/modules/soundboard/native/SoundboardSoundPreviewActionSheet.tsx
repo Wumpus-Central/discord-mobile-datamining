@@ -114,10 +114,10 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
   const items9 = [id, sound, tmp12];
   const callback2 = obj2.useCallback(() => {
     if (stateFromStores1) {
-      let tmpResult = tmp(7338);
+      let tmpResult = SoundboardActionCreators;
       tmpResult.removeFavoriteSound(sound.soundId);
     } else {
-      tmpResult = tmp(7344);
+      tmpResult = SoundboardUtils;
       let obj = { sound, location: null };
       obj = { object: constants2.SOUNDBOARD_SOUND };
       obj.location = obj;
@@ -168,13 +168,13 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
   }
   obj.text = stringResult;
   obj.onPress = callback2;
-  let tmp17Result = tmp17(tmp(stringResult1[18]).Button, obj);
+  let tmp17Result = closure_12(tmp(stringResult1[18]).Button, obj);
   if (tmp12) {
     obj1 = { style: primaryIcon.star };
-    tmp17Result = tmp17(tmp(stringResult1[22]).WaveformIcon, obj1);
+    tmp17Result = closure_12(tmp(stringResult1[22]).WaveformIcon, obj1);
   } else {
     obj2 = { style: primaryIcon.star, source: sound(stringResult1[23]) };
-    tmp17Result = tmp17(onLockedPress, obj2);
+    tmp17Result = closure_12(onLockedPress, obj2);
   }
   obj3 = { variant: "secondary", icon: tmp17Result, text: null, onPress: null };
   const intl2 = tmp(stringResult1[21]).intl;
@@ -228,7 +228,7 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
     const obj12 = { style: null };
     primaryIcon = primaryIcon.primaryIcon;
     obj12.style = primaryIcon;
-    obj11.icon = tmp17(PlayIcon, obj12);
+    obj11.icon = closure_12(PlayIcon, obj12);
     const intl4 = tmp(stringResult1[21]).intl;
     stringResult1 = intl4.string(tmp(stringResult1[21]).t.RscU7I);
     obj11.text = stringResult1;
@@ -236,17 +236,19 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
     obj11.accessibilityHint = soundboardSoundLock.lockedAccessibilityHint;
     obj11.onPress = callback4;
     obj11.onPressDisabled = callback1;
-    Button = tmp17(Button, obj11);
+    Button = closure_12(Button, obj11);
     const items16 = [Button, tmp17Result1, tmp17Result];
     obj10.children = items16;
   } else {
     const items17 = [tmp17Result, tmp17Result1];
     obj10.children = items17;
     const obj13 = { children: null };
-    obj9.children = tmp24(tmp29, obj10);
-    items15[1] = tmp17(tmp25, obj9);
+    obj9.children = closure_13(tmp29, obj10);
+    items15[1] = closure_12(tmp25, obj9);
     obj13.children = items15;
-    obj4.children = tmp24(tmp25, obj13);
-    return tmp17(tmp(stringResult1[24]).ActionSheet, obj4);
+    obj4.children = closure_13(tmp25, obj13);
+    return closure_12(tmp(stringResult1[24]).ActionSheet, obj4);
   }
+  const obj8 = { style: primaryIcon.text, variant: "heading-lg/extrabold", children: sound.name };
+  const tmp28 = sound(stringResult1[25]);
 };

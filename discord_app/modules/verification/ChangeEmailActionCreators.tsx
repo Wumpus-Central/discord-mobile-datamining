@@ -6,10 +6,10 @@ import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4753 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _confirmEmailChange(code) {
+let closure_5 = async function _confirmEmailChange() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     const request = { url: constants.USER_EMAIL_VERIFY_CODE, body: { code }, trackedActionData: { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE }, rejectWithError: false };
     await TrackedHTTPUtilsDefault.post(request);
     return value.body;

@@ -47,13 +47,13 @@ let prototype = function FeedbackManager() {
           }
           analyticsData = { media_session_id: videoStats.getMediaSessionId(tmp3), rtc_connection_id: videoStats.getRtcConnectionId(tmp3), stream_region: videoStats.getRegion(tmp3), max_viewers: videoStats.getMaxViewers(tmp3) };
           const merged = Object.assign(videoStats);
-          closure_2 = tmp(tmp2[8])(tmp2[7], tmp2.paths);
-          tmp(tmp2[9]).runAfterInteractions(() => {
+          closure_2 = tmp(dependencyMap[8])(dependencyMap[7], dependencyMap.paths);
+          tmp(dependencyMap[9]).runAfterInteractions(() => {
             analyticsData = ActionSheetActionCreatorsDefault;
             analyticsData = { stream: decodeStreamKeyResult, analyticsData };
             analyticsData.openLazy(closure_2, "StreamFeedback" + streamKey, analyticsData);
           });
-          const tmpResult = tmp(tmp2[9]);
+          const tmpResult = tmp(dependencyMap[9]);
         }
       });
     }
@@ -74,6 +74,7 @@ let prototype = function FeedbackManager() {
         });
       });
     }
+    tmp2 = null != application && applicationId.showFeedback;
   };
   applyArgumentsResult.handleShowVoiceFeedback = function handleShowVoiceFeedback(analyticsData) {
     analyticsData = analyticsData.analyticsData;

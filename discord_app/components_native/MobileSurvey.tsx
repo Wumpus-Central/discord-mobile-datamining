@@ -26,7 +26,7 @@ export default function MobileSurvey() {
   const items1 = [stateFromStores];
   const effect = noop.useEffect(() => {
     if (null != stateFromStores) {
-      closure_0 = async function _setSurveySeen(arg0, value) {
+      closure_0 = async function _setSurveySeen() {
         if (c0 === 2) {
           c0 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

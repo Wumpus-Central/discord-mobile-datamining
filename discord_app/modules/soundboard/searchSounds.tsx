@@ -28,12 +28,11 @@ export { trackSearchResultViewed };
 export const searchSounds = function searchSounds(arg0, availableSounds, stateFromStores, channel, arg4) {
   closure_0 = arg0;
   closure_1 = stateFromStores;
-  closure_2 = channel;
   closure_3 = arg4;
   dependencyMap = availableSounds.reduce((acc, name) => {
-    let id;
-    if (closure_2 != null) {
-      id = tmp3.id;
+    id = undefined;
+    if (id != null) {
+      id = id.id;
     }
     closure_6(closure_3, id);
     const toLocaleLowerCaseResult = closure_0.toLocaleLowerCase();
@@ -99,7 +98,7 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result1 = sum6 > 0;
     if (0 < sum6) {
-      result1 = SoundboardUtils.canUseSoundboardSound(closure_1, name, tmp3);
+      result1 = SoundboardUtils.canUseSoundboardSound(closure_1, name, id);
     }
     let sum7 = sum6;
     if (result1) {

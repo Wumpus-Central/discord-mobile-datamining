@@ -9,6 +9,7 @@ import GuildIconDefault from "GuildIcon" /* 5584 */;
 import Card from "Card" /* 5607 */;
 import ClipView from "ClipView" /* 8813 */;
 import Pile from "Pile" /* 11000 */;
+import ListUtils from "ListUtils" /* 12619 */;
 import AvatarDuoPile from "AvatarDuoPile" /* 14177 */;
 import noop from "module_19" /* 19 */;
 
@@ -189,16 +190,16 @@ export default function UserSettingsDesignSystemPile() {
     items[3] = str2;
     items1 = [closure_1_6(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: items }), , ];
     obj = { "aria-label": null, shape: null, size: 48, gap: 2, depthX: null, depthY: null, children: null };
-    let tmp4Result = tmp4(12619);
+    let tmp4Result = ListUtils;
     obj["aria-label"] = tmp4Result.getListSummaryLabel(names, utils_AvatarUtils.DEFAULT_AVATARS.length);
     obj.shape = ClipView.CutoutShape.Circle;
     obj.depthX = tmp;
     obj.depthY = tmp2;
-    const DEFAULT_AVATARS = tmp4(1399).DEFAULT_AVATARS;
+    const DEFAULT_AVATARS = utils_AvatarUtils.DEFAULT_AVATARS;
     obj.children = DEFAULT_AVATARS.map((source, index) => closure_1_5(closure_1_0(1178).Avatar, { source, size: closure_1_0(1178).AvatarSizes.LARGE_48 }, index));
     items1[1] = closure_1_5(Pile.Pile, obj);
     obj = { "aria-label": null, shape: null, size: 48, gap: 2, depthX: null, depthY: null, children: null };
-    tmp4Result = tmp4(12619);
+    tmp4Result = ListUtils;
     obj["aria-label"] = tmp4Result.getListSummaryLabel(names2, names2.length);
     obj.shape = ClipView.CutoutShape.RoundedRect;
     obj.depthX = tmp;

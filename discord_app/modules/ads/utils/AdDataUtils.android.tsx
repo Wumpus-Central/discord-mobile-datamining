@@ -26,10 +26,11 @@ export const getAdUser = function getAdUser(questContentName) {
               c1 = true;
               const _clearTimeout = clearTimeout;
               clearTimeout(closure_2);
-              obj.removeChangeListener(handleUpdate);
+              AdUserStore.removeChangeListener(handleUpdate);
               closure_0(tmp2);
             }
           }
+          tmp = null != AdUserStore.adUser || AdUserStore.hasFetchFailed;
         }
         c1 = false;
         const timeout = setTimeout(() => {
@@ -55,8 +56,9 @@ export const useAdUser = function useAdUser(profile_badge) {
   const effect = noop.useEffect(() => {
     function handleStoreChange() {
       if (tmp2) {
-        dependencyMap(tmp.adUser);
+        dependencyMap(AdUserStore.adUser);
       }
+      tmp2 = null != AdUserStore.adUser || AdUserStore.hasFetchFailed;
     }
     let hasFetchFailed = null != AdUserStore.adUser;
     if (!hasFetchFailed) {

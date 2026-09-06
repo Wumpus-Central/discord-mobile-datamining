@@ -19,14 +19,14 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(customUs
   const result = obj.setShouldSyncAppearanceSettings(false);
   let obj1 = ThemeStore;
   if (null == ThemeStore.getSyncedClientTheme(constants.LIGHT)) {
-    if (null == obj1.getSyncedClientTheme(tmp3.DARK)) {
+    if (null == obj1.getSyncedClientTheme(constants.DARK)) {
       const theme = obj1.theme;
       let customThemeBaseTheme = theme;
       if (null != customUserThemeSettings) {
         let obj2 = ClientThemesUtils;
         customThemeBaseTheme = obj2.getCustomThemeBaseTheme(theme);
       }
-      const tmp8 = shared.isThemeDark(customThemeBaseTheme) ? tmp3.DARK : tmp3.LIGHT;
+      const tmp8 = shared.isThemeDark(customThemeBaseTheme) ? constants.DARK : constants.LIGHT;
       if (!ClientThemesBackgroundStore.isPreview) {
         const gradientPreset = ClientThemesBackgroundStore.gradientPreset;
         let id;
@@ -34,22 +34,22 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(customUs
           id = gradientPreset.id;
         }
       }
-      let tmp6Result = tmp6(4408);
+      let tmp6Result = ThemeActionCreators;
       obj = {};
       obj[tmp8] = customThemeBaseTheme;
       const result1 = tmp6Result.updateThemePreferences(obj);
       if (null != customUserThemeSettings) {
-        tmp6Result = tmp6(4408);
+        tmp6Result = ThemeActionCreators;
         obj = { customUserThemeSettings };
         const result2 = tmp6Result.updateSyncedClientTheme(tmp8, obj);
       } else if (null != tmp9) {
         obj1 = { backgroundGradientPresetId: tmp9 };
-        const result3 = tmp6(4408).updateSyncedClientTheme(tmp8, obj1);
-        const tmp6Result1 = tmp6(4408);
+        const result3 = ThemeActionCreators.updateSyncedClientTheme(tmp8, obj1);
+        const tmp6Result1 = ThemeActionCreators;
       } else {
         obj2 = { theme: customThemeBaseTheme };
-        const result4 = tmp6(4408).updateSyncedClientTheme(tmp8, obj2);
-        const tmp6Result2 = tmp6(4408);
+        const result4 = ThemeActionCreators.updateSyncedClientTheme(tmp8, obj2);
+        const tmp6Result2 = ThemeActionCreators;
       }
     }
   }

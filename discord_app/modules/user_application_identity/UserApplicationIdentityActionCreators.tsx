@@ -11,7 +11,7 @@ let obj = {
   fetchUserApplicationIdentitiesWithProfiles(arg0, arg1) {
     closure_0 = arg0;
     closure_1 = arg1;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -88,7 +88,7 @@ let obj = {
     closure_0 = application_id;
     closure_1 = provider_issued_user_id;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

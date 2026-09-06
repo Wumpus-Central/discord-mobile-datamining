@@ -18,4 +18,5 @@ export default function jumpToReferencedMessage(messageReference) {
     obj.returnMessageId = messageReference.id;
     obj.jumpToMessage(obj);
   }
+  tmp2 = null != channel_id && null != messageReference.message_id;
 };

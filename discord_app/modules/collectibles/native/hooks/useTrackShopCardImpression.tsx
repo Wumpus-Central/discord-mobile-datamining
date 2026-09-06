@@ -2,6 +2,8 @@
 
 // Module 8766 (useTrackShopCardImpression)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import useTrackImpression from "useTrackImpression" /* 8768 */;
 import noop from "module_19" /* 19 */;
 
@@ -53,23 +55,23 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
     obj = { sku_id: selectedProduct.skuId, card_id: null, shop_session_id: null, position_in_section: null, product_sku_ids: null, location_stack: null, discount_source: null };
     let cardId;
     if (collectiblesAnalyticsContext != null) {
-      cardId = tmp3.cardId;
+      cardId = collectiblesAnalyticsContext.cardId;
     }
     obj.card_id = cardId;
     let sessionId;
     if (collectiblesAnalyticsContext != null) {
-      sessionId = tmp3.sessionId;
+      sessionId = collectiblesAnalyticsContext.sessionId;
     }
     obj.shop_session_id = sessionId;
     let tilePosition;
     if (collectiblesAnalyticsContext != null) {
-      tilePosition = tmp3.tilePosition;
+      tilePosition = collectiblesAnalyticsContext.tilePosition;
     }
     obj.position_in_section = tilePosition;
-    let tmpResult = tmp(7553);
+    let tmpResult = CollectiblesProductUtils;
     obj.product_sku_ids = tmpResult.getProductSkuIds(closure_0);
     obj.location_stack = analyticsLocations;
-    tmpResult = tmp(7554);
+    tmpResult = CollectiblesUtils;
     obj.discount_source = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
     obj.properties = obj;
     obj.trackImpression(obj, false, true);

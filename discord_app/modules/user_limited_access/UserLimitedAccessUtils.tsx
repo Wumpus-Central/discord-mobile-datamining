@@ -7,10 +7,10 @@ import size from "module_2" /* 2 */;
 const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
 
-export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(arg0, arg1) {
-  let tmp = arg0 >= 400;
+export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(status, arg1) {
+  let tmp = status >= 400;
   if (tmp) {
-    tmp = arg0 < 500;
+    tmp = status < 500;
   }
   if (tmp) {
     tmp = null != arg1;

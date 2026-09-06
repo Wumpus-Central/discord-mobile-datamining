@@ -4,6 +4,7 @@
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
 import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5422 */;
@@ -15,7 +16,7 @@ import UserStore from "UserStore" /* 1371 */;
 import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
 require = fn;
-function buildStageChannelUserRoles(user, id2, flag) {
+function buildStageChannelUserRoles(user, id2) {
   if (flag === undefined) {
     flag = false;
   }
@@ -40,12 +41,11 @@ function buildStageChannelUserRoles(user, id2, flag) {
         obj[obj.SPEAKER] = audienceRequestToSpeakState === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
         let canResult = null;
         if (flag) {
-          obj = { permission: tmp8(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, user, context: guild, overwrites: channel.permissionOverwrites, roles: GuildRoleStore.getUnsafeMutableRoles(guild.id) };
+          obj = { permission: StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, user, context: guild, overwrites: channel.permissionOverwrites, roles: GuildRoleStore.getUnsafeMutableRoles(guild.id) };
           canResult = PermissionUtilsAll.can(obj);
         }
         obj[obj.MODERATOR] = canResult;
         let tmp4 = obj;
-        tmp8 = require;
       }
       dependencyMap[id2][user] = tmp4;
       return tmp4;
@@ -131,7 +131,7 @@ prototype["isAudienceMember"] = function isAudienceMember(userId, voiceChannelId
   }
   return tmp3;
 };
-prototype["getPermissionsForUser"] = function getPermissionsForUser(id, id2, flag) {
+prototype["getPermissionsForUser"] = function getPermissionsForUser(id, id2) {
   if (flag === undefined) {
     flag = false;
   }

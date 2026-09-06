@@ -58,13 +58,13 @@ export const getExperimentCodecs = function getExperimentCodecs(experimentFlags)
   }
   let hasItem2;
   if (experimentFlags != null) {
-    hasItem2 = experimentFlags.has(tmp.H265_HARDWARE_ONLY);
+    hasItem2 = experimentFlags.has(ExperimentFlags.H265_HARDWARE_ONLY);
   }
   let tmp8 = !hasItem2;
   if (hasItem2) {
     let hasItem3;
     if (experimentFlags != null) {
-      hasItem3 = experimentFlags.has(tmp.H265_HARDWARE_DECODE_AVAILABLE);
+      hasItem3 = experimentFlags.has(ExperimentFlags.H265_HARDWARE_DECODE_AVAILABLE);
     }
     tmp8 = hasItem3;
   }

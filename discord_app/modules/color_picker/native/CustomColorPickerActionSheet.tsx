@@ -106,10 +106,12 @@ export default function CustomColorPickerActionSheet(arg0) {
       if (null != obj.hex2rgb2hsv(tmp)) {
         onSelect(memo);
       }
+      obj = ColorUtils;
     }
     sharedValue.get();
     value = sharedValue1.get();
     onSelect(_modDef672.hsv(value, value, sharedValue2.get()).num());
+    const hsvResult = _modDef672.hsv(value, value, sharedValue2.get());
   }, items1);
   const items2 = [onDismiss];
   const callback1 = obj2.useCallback(() => {
@@ -118,17 +120,17 @@ export default function CustomColorPickerActionSheet(arg0) {
   }, items2);
   obj = { onDismiss, startExpanded: true, header: null, children: null };
   obj = { title: null, trailing: null };
-  const intl = tmp2(1114).intl;
+  const intl = onSelect(1114).intl;
   obj.title = intl.string(onSelect(1114).t.WTqQ5e);
   obj1 = { variant: actionButtonVariant, size: "sm", text: null, onPress: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = onSelect(1114).intl;
   obj1.text = intl2.string(onSelect(1114).t.XqMe3N);
   obj1.onPress = callback1;
   obj.trailing = sharedValue2(onSelect(4975).Button, obj1);
   obj.header = sharedValue2(onSelect(7149).BottomSheetTitleHeader, obj);
   obj2 = { style: tmp.container, children: null };
   obj3 = { accessibilityLabel: null, value: null, onChange: null, maxLength: 7 };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = onSelect(1114).intl;
   obj3.accessibilityLabel = intl3.string(onSelect(1114).t["ozfa/h"]);
   obj3.value = value;
   obj3.onChange = function onChange(first4) {
@@ -153,7 +155,6 @@ export default function CustomColorPickerActionSheet(arg0) {
   const obj8 = onSelect(4296);
   const tmp13 = updateInputHexValueFromHsv;
   const tmp14 = sharedValue1;
-  const tmp15 = SuggestedColors;
   const tmp16 = value;
   obj4.suggestedColors = value(12).uniq(combined);
   obj4.onSelect = function onSelect(color) {
@@ -167,11 +168,11 @@ export default function CustomColorPickerActionSheet(arg0) {
   if (null == value) {
     sharedValue.get();
     value = sharedValue1.get();
-    memo = tmp2(1091).hsv2int(value, value, sharedValue2.get());
-    const tmp2Result = tmp2(1091);
+    memo = onSelect(1091).hsv2int(value, value, sharedValue2.get());
+    const tmp2Result = onSelect(1091);
   }
   obj4.color = memo;
-  items3[1] = sharedValue2(tmp15, obj4);
+  items3[1] = sharedValue2(SuggestedColors, obj4);
   obj5 = {
     hue: sharedValue,
     saturation: sharedValue1,

@@ -31,7 +31,6 @@ export const getChannelDetailsSearchContext = function getChannelDetailsSearchCo
 };
 export const useChannelDetailsSearchContext = function useChannelDetailsSearchContext(channelId, guildId) {
   _require = channelId;
-  closure_1 = guildId;
   const items = [ChannelStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
@@ -47,12 +46,12 @@ export const useChannelDetailsSearchContext = function useChannelDetailsSearchCo
   const items1 = [channelId, guildId, stateFromStores];
   return noop.useMemo(() => {
     if (stateFromStores) {
-      _modDef38(null != tmp2, "[useChannelDetailsSearchContext] Thread must have a guild id");
-      let obj = { type: SearchTypes.THREAD, guildId: tmp2, channelId: tmp };
-    } else if (null == tmp2) {
-      obj = { type: SearchTypes.CHANNEL, channelId: tmp };
+      _modDef38(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
+      let obj = { type: SearchTypes.THREAD, guildId, channelId };
+    } else if (null == guildId) {
+      obj = { type: SearchTypes.CHANNEL, channelId };
     } else {
-      obj = { type: SearchTypes.GUILD_CHANNEL, guildId: tmp2, channelId: tmp };
+      obj = { type: SearchTypes.GUILD_CHANNEL, guildId, channelId };
     }
     return obj;
   }, items1);

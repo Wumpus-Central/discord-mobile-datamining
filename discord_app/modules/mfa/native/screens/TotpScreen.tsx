@@ -32,86 +32,90 @@ export default function TotpScreen(finish) {
   [tmp5, c4] = _slicedToArray(noop.useState(undefined), 2);
   const tmp4 = _slicedToArray(noop.useState(undefined), 2);
   [tmp7, c5] = _slicedToArray(noop.useState(false), 2);
-  _require = asyncGeneratorStep(async (arg0, value) => {
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c7 = 2;
-        let tmp7 = c6;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_2 = tmp7;
-            tmp3(closure_0);
-            tmp7 = isValidClipboardCode(closure_0);
-            if (tmp7) {
-              tmp28(undefined);
-              message(true);
-              let v0 = 1;
-              const obj1 = { mfaType: "totp", data: tmp36 };
-              c6 = 2;
-              c7 = 1;
-              const obj2 = { value: closure_0(obj1), done: false };
-              return obj2;
-            }
-            tmp36 = closure_0;
-          }
+  _require = asyncGeneratorStep(async (data) => {
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
+    return (async (arg0) => {
+      if (c7 === 2) {
+        c7 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          if (1 === tmp7) {
-            v0 = 0;
-            closure_130_0 = tmp28;
-            message = undefined;
-            if (closure_130_0 != null) {
-              const body = closure_130_0.body;
-              if (body != null) {
-                message = body.message;
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c7 = 2;
+          let tmp7 = c6;
+          if (0 === c6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              closure_2 = tmp7;
+              tmp3(data);
+              tmp7 = isValidClipboardCode(data);
+              if (tmp7) {
+                tmp28(undefined);
+                message(true);
+                v0 = 1;
+                const obj1 = { mfaType: "totp", data };
+                c6 = 2;
+                c7 = 1;
+                const obj2 = { value: data(obj1), done: false };
+                return obj2;
               }
             }
-            if (message == null) {
-              message = closure_130_0.message;
-            }
-            tmp28(message);
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            v0 = 0;
-            c7 = 3;
-            obj = { value, done: true };
-            return obj;
           } else {
-            v0(true);
-            v0 = 0;
+            if (1 === tmp7) {
+              v0 = 0;
+              closure_130_0 = tmp28;
+              message = undefined;
+              if (closure_130_0 != null) {
+                const body = closure_130_0.body;
+                if (body != null) {
+                  message = body.message;
+                }
+              }
+              if (message == null) {
+                message = closure_130_0.message;
+              }
+              tmp28(message);
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              v0 = 0;
+              c7 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              v0(true);
+              v0 = 0;
+            }
+            tmp7 = message(false);
           }
-          tmp7 = message(false);
-        }
-        c7 = 3;
-      } catch (tmp28) {
-        if (tmp4 === v0) {
-          c7 = tmp2;
-          throw tmp28;
-        } else {
-          c6 = tmp;
+          c7 = 3;
+        } catch (tmp28) {
+          if (tmp4 === v0) {
+            c7 = tmp2;
+            throw tmp28;
+          } else {
+            c6 = tmp;
+          }
         }
       }
-    }
+    })();
   });
   const items = [finish];
   const onChangeCode = noop.useCallback(function() {

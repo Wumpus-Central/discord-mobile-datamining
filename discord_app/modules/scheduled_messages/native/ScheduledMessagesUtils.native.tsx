@@ -21,7 +21,7 @@ function editScheduledMessage() {
   }
   return applyArgumentsResult;
 }
-let closure_5 = async function _editScheduledMessage(scheduledMessageId, arg1) {
+let closure_5 = async function _editScheduledMessage() {
   closure_1 = arg1;
   c6 = 0;
   c7 = 0;
@@ -96,7 +96,7 @@ let closure_5 = async function _editScheduledMessage(scheduledMessageId, arg1) {
     }
   })();
 };
-let closure_6 = async function _cancelScheduledMessage(arg0, arg1) {
+let closure_6 = async function _cancelScheduledMessage(arg0) {
   closure_2 = tmp3;
   await require("ScheduledMessageActionCreators").deleteScheduledMessage(closure_0);
   if (1 === tmp7) {
@@ -107,15 +107,15 @@ let closure_6 = async function _cancelScheduledMessage(arg0, arg1) {
     closure_130_0(closure_130_2[11]);
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     const result1 = closure_130_0(closure_130_2[11]).showScheduleMessageDeleteSuccessToast();
     c4 = 0;
     closure_130_0(closure_130_2[11]);
   }
-  return arg1;
+  return value;
 };
-let closure_7 = async function _sendScheduledMessageNow(arg0, arg1) {
+let closure_7 = async function _sendScheduledMessageNow(arg0) {
   closure_2 = tmp3;
   await require("ScheduledMessageActionCreators").sendScheduledMessageNow(closure_0);
   if (1 === tmp7) {
@@ -126,13 +126,13 @@ let closure_7 = async function _sendScheduledMessageNow(arg0, arg1) {
     closure_130_0(closure_130_2[11]);
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     const result1 = closure_130_0(closure_130_2[11]).showScheduleMessageSentNowSuccessToast();
     c4 = 0;
     closure_130_0(closure_130_2[11]);
   }
-  return arg1;
+  return value;
 };
 function openSendTimeActionSheet(title) {
   title = title.title;
@@ -213,6 +213,7 @@ function openSendTimeActionSheet(title) {
   HermesBuiltin.arraySpread(items3, tmp7 + 1);
   obj2.options = items1;
   const result4 = title(7195).showSimpleActionSheet(obj2);
+  const obj14 = title(7195);
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx");
@@ -236,8 +237,8 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
   if (null != currentTimestamp) {
     let defaultScheduledTime = _modDef4153(currentTimestamp);
   } else {
-    defaultScheduledTime = require("ScheduledMessageUtils").getDefaultScheduledTime();
-    const tmp2Result = require("ScheduledMessageUtils");
+    defaultScheduledTime = tmp2(7845).getDefaultScheduledTime();
+    const tmp2Result = tmp2(7845);
   }
   obj.startDate = defaultScheduledTime;
   obj.onSelect = function onSelect(toISOString) {
@@ -248,6 +249,7 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
   obj.isEditing = null != currentTimestamp;
   obj.channelId = channelId;
   openSendTimeActionSheet(obj);
+  tmp2 = _require;
 };
 export const pickScheduledMessageTime = function pickScheduledMessageTime(arg0) {
   ({ onSelect: require, currentTimestamp } = arg0);

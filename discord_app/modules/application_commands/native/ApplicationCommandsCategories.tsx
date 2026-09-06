@@ -36,10 +36,10 @@ let closure_10 = noop.memo((section) => {
     if (null != noop) {
       let botId;
       if (section != null) {
-        botId = tmp2.botId;
+        botId = section.botId;
       }
       if (null != botId) {
-        return GuildMemberStore.getMember(tmp, tmp2.botId);
+        return GuildMemberStore.getMember(tmp, section.botId);
       }
     }
   });
@@ -144,7 +144,7 @@ export default function ApplicationCommandsCategories(onPressSection) {
     },
     renderItem: noop.useCallback((section) => {
       const index = section.index;
-      return <closure_10 active={index === selectedIndex} section={arg0.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
+      return <closure_10 active={index === selectedIndex} section={section.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
     }, items2),
     showsHorizontalScrollIndicator: false,
     onScroll: callback1,
@@ -154,12 +154,12 @@ export default function ApplicationCommandsCategories(onPressSection) {
     return id.id;
   }} renderItem={noop.useCallback((section) => {
     const index = section.index;
-    return <closure_10 active={index === selectedIndex} section={arg0.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
+    return <closure_10 active={index === selectedIndex} section={section.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
   }, items2)} showsHorizontalScrollIndicator={false} onScroll={callback1} onLayout={callback2} />;
   return <ref2 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
     return id.id;
   }} renderItem={noop.useCallback((section) => {
     const index = section.index;
-    return <closure_10 active={index === selectedIndex} section={arg0.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
+    return <closure_10 active={index === selectedIndex} section={section.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
   }, items2)} showsHorizontalScrollIndicator={false} onScroll={callback1} onLayout={callback2} />;
 };

@@ -175,30 +175,31 @@ function ScreenRecordingPip(surveyConfig) {
 
             }
       };
-      let tmp16Result = tmp16(Button, obj1);
+      let tmp16Result = closure_7(Button, obj1);
     } else {
       obj2 = { style: null, children: null };
       if (isStepCompleted) {
         obj2.style = tmp.doneButton;
-        obj2.children = tmp16(Button(tmp14Result[20]).CheckmarkLargeIcon, { size: "md", color: "status-positive" });
+        obj2.children = closure_7(Button(tmp14Result[20]).CheckmarkLargeIcon, { size: "md", color: "status-positive" });
         let tmp21 = obj2;
       } else {
         obj2.style = tmp.stopButton;
-        obj2.children = tmp16(Button(tmp14Result[21]).StopIcon, { size: "md", color: "text-feedback-critical" });
+        obj2.children = closure_7(Button(tmp14Result[21]).StopIcon, { size: "md", color: "text-feedback-critical" });
         tmp21 = obj2;
       }
-      tmp16Result = tmp16(View, tmp21);
+      tmp16Result = closure_7(View, tmp21);
     }
     tmp14Result = { children: null };
     items3[1] = tmp16Result;
     tmp14Result.children = items3;
-    tmp14Result = tmp14(Button(tmp14Result[17]).PressableOpacity, tmp14Result);
+    tmp14Result = closure_8(Button(tmp14Result[17]).PressableOpacity, tmp14Result);
     point1.children = tmp14Result;
-    point1 = tmp16(DraggableContainer, point1);
+    point1 = closure_7(DraggableContainer, point1);
     items2[1] = point1;
     tmp14Result.children = items2;
-    tmp14Result = tmp14(closure_9, tmp14Result);
+    tmp14Result = closure_8(closure_9, tmp14Result);
   }
+  tmp5 = useScreenRecordingStore((isRecording) => isRecording.isRecording);
 }
 const View = fn(17).View;
 const useScreenRecordingStore = fn(15932).useScreenRecordingStore;

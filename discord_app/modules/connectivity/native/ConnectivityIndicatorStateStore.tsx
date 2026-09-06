@@ -137,9 +137,8 @@ function updateState() {
         let _HermesInternal = HermesInternal;
         closure_8.verbose("state changed immediately from " + tmp + " to " + immediate);
         if (connectivityIndicatorStateStore != null) {
-          obj21.emitChange();
+          connectivityIndicatorStateStore.emitChange();
         }
-        obj21 = connectivityIndicatorStateStore;
       }
       tmp28 = null !== c14 && c14 === immediate;
     }
@@ -161,9 +160,8 @@ function updateState() {
           const _HermesInternal = HermesInternal;
           closure_8.verbose("state changed after a delay from " + tmp + " to " + closure_13);
           if (connectivityIndicatorStateStore != null) {
-            obj.emitChange();
+            connectivityIndicatorStateStore.emitChange();
           }
-          obj = connectivityIndicatorStateStore;
         }
       }, delayed.delayMs);
     } else {
@@ -208,7 +206,7 @@ function handleAuthStoreChanged() {
 function handleAppStateUpdate() {
   state = AppStateStore.getState();
   if (AppStates.ACTIVE === state) {
-    if (state === tmp2.BACKGROUND) {
+    if (state === AppStates.BACKGROUND) {
       c19 = true;
       if (null != timeout) {
         const _clearTimeout2 = clearTimeout;
@@ -221,14 +219,14 @@ function handleAppStateUpdate() {
         updateState();
       }, 5000);
     }
-  } else if (tmp2.BACKGROUND === state) {
+  } else if (AppStates.BACKGROUND === state) {
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       timeout = null;
     }
   } else {
-    const INACTIVE = tmp2.INACTIVE;
+    const INACTIVE = AppStates.INACTIVE;
   }
   updateState();
   return false;

@@ -14,7 +14,7 @@ function discard() {
   closure_6.setState({ isOpen: false });
   c7 = false;
 }
-let closure_10 = async function _openAgeVerificationAuthSession(arg0, value) {
+let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -60,14 +60,13 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0, value) {
             c4 = 1;
             c5 = 2;
             c6 = 1;
-            const obj1 = { value: BrowserManager.openAuthSessionURL(tmp34), done: false };
+            const obj1 = { value: BrowserManager.openAuthSessionURL(closure_0), done: false };
             return obj1;
           } else {
             c6 = 3;
             return { value: false, done: true };
           }
           obj7 = PlatformUtils;
-          tmp34 = closure_0;
         }
       } else if (1 === tmp7) {
         c4 = 0;
@@ -128,15 +127,16 @@ export const openAgeVerificationAuthSession = function openAgeVerificationAuthSe
   return applyArgumentsResult;
 };
 export const closeAgeVerificationAuthSession = function closeAgeVerificationAuthSession() {
-  if (_null != null) {
-    _null.remove();
+  if (c8 != null) {
+    obj2.remove();
   }
-  _null = null;
+  c8 = null;
   closure_6.setState({ isOpen: false });
   c7 = false;
   if (closure_6.getState().isOpen) {
     BrowserManager.closeAuthSession();
   }
+  obj2 = c8;
 };
 export function getIsAgeVerificationAuthSessionAwaitingResult() {
   return c7;

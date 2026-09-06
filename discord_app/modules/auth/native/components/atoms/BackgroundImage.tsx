@@ -2,6 +2,7 @@
 
 // Module 6975 (BackgroundImage)
 import shared from "shared" /* 4411 */;
+import _modDef6977 from "module_6977" /* 6977 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,9 +34,9 @@ export default function BackgroundImage(backgroundImageSource) {
       let tmp2 = dependencyMap;
       if (obj2.isThemeDark(closure_2)) {
         tmp2 = 6976;
-        let tmp4Result = tmp4(tmp2);
+        let tmp4Result = importDefault(tmp2);
       } else {
-        tmp4Result = tmp4(6977);
+        tmp4Result = _modDef6977;
       }
       obj2 = shared;
     }

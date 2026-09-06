@@ -69,7 +69,7 @@ function UserExperimentDebugView(id) {
   if (null == experimentServerAssignment) {
     str4 = "Warning: Server did not send any experiment config. You may need to check the \"Send to Client\" box in the admin UI.";
   }
-  obj1 = { title: "Overview", hasIcons: false, children: tmp17(tmp8(5605).TableRow, obj) };
+  obj1 = { title: "Overview", hasIcons: false, children: closure_1_11(TableRow.TableRow, obj) };
   obj.subLabel = str4;
   const items = [closure_1_11(TableRowGroup.TableRowGroup, obj1), closure_1_11(native.Spacer, { size: 16 }), , , , , ];
   let str5 = "None";
@@ -78,7 +78,7 @@ function UserExperimentDebugView(id) {
     const _JSON = JSON;
     str6 = JSON.stringify(experimentServerAssignment, undefined, 2);
   }
-  obj2 = { title: "Server Descriptor", hasIcons: false, children: tmp17(tmp8(5605).TableRow, { label: str6 }) };
+  obj2 = { title: "Server Descriptor", hasIcons: false, children: closure_1_11(TableRow.TableRow, { label: str6 }) };
   items[2] = closure_1_11(TableRowGroup.TableRowGroup, obj2);
   items[3] = closure_1_11(native.Spacer, { size: 16 });
   let json = str5;
@@ -86,7 +86,7 @@ function UserExperimentDebugView(id) {
     const _JSON2 = JSON;
     json = JSON.stringify(override.originalDescriptor, undefined, 2);
   }
-  obj3 = { title: "Override Descriptor", hasIcons: false, children: tmp17(tmp8(5605).TableRow, { label: json }) };
+  obj3 = { title: "Override Descriptor", hasIcons: false, children: closure_1_11(TableRow.TableRow, { label: json }) };
   items[4] = closure_1_11(TableRowGroup.TableRowGroup, obj3);
   items[5] = closure_1_11(native.Spacer, { size: 16 });
   if (0 !== mapped.length) {
@@ -96,11 +96,9 @@ function UserExperimentDebugView(id) {
     [, tmp] = arg0;
     return -tmp;
   });
-  const tmp15 = closure_1_12;
-  const tmp16 = View;
   items[6] = closure_1_11(TableRowGroup.TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: closure_1_11(TableRow.TableRow, { label: str5 }) });
   obj.children = items;
-  return tmp15(tmp16, obj);
+  return closure_1_12(View, obj);
 }
 function GuildExperimentDebugView(arg0) {
   ({ id, override } = arg0);
@@ -155,8 +153,6 @@ function GuildExperimentDebugView(arg0) {
     str = "Warning: Server did not send any experiment config. You may need to check the 'Send to Client' box in the admin UI.";
   }
   const sortByResult1 = obj1.sortBy(GuildStore.getGuildsArray(), (name) => name.name.toLowerCase());
-  const tmp17 = closure_12;
-  const tmp18 = View;
   obj1.subLabel = str;
   const items1 = [closure_11(obj(5687).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj(5605).TableRow, obj1) }), closure_11(obj(1178).Spacer, { size: 16 }), , , , , , , ];
   obj3 = { title: "Guild Assignments", hasIcons: false, children: null };
@@ -181,7 +177,7 @@ function GuildExperimentDebugView(arg0) {
   items1[6] = closure_11(obj(5687).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj(5605).TableRow, { label: str2 }) });
   items1[7] = closure_11(obj(1178).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    mapped = tmp19(tmp20(5605).TableRow, { label: "none" });
+    mapped = closure_11(tmp20(5605).TableRow, { label: "none" });
   } else {
     mapped = mapped.map((label) => {
       obj = { label, labelLineClamp: 1 };
@@ -190,7 +186,7 @@ function GuildExperimentDebugView(arg0) {
   }
   items1[8] = closure_11(obj(5687).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped });
   obj.children = items1;
-  return tmp17(tmp18, obj);
+  return closure_12(View, obj);
 }
 class ExperimentDetails {
   constructor(arg0) {

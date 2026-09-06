@@ -7,7 +7,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0, value) {
+let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

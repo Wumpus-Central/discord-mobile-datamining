@@ -7,7 +7,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 const require = fn;
-let closure_7 = async function _joinOrStartActivityInChannel(arg0, value) {
+let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

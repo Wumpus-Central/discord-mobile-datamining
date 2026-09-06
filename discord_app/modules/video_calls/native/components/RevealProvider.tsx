@@ -3,6 +3,8 @@
 // Module 9474 (RevealProvider)
 import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9469 */;
 import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9475 */;
+import StatusBarDefault from "StatusBar" /* 9481 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 9483 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4251 */;
 import GameConsoleStore from "GameConsoleStore" /* 4577 */;
@@ -80,13 +82,13 @@ export default function RevealProvider(showStatus) {
   }
   const obj = { value: tmp2, children: null };
   let tmp10 = !reveal;
-  let tmp4Result = tmp4(9481);
+  let tmp4Result = StatusBarDefault;
   if (!reveal) {
     tmp10 = !flag;
   }
   const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children, ];
   let tmp12 = !reveal;
-  tmp4Result = tmp4(9483);
+  tmp4Result = HomeIndicatorDefault;
   if (!reveal) {
     tmp12 = !prefersDeferringSystemGestures;
   }

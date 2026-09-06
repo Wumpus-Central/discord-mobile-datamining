@@ -2,9 +2,13 @@
 
 // Module 14905 (FamilyCenterActivityGiftRow)
 import nativeDefault from "native" /* 576 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8173 */;
 import useSelectedTeenUser from "useSelectedTeenUser" /* 14893 */;
 import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14902 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 14903 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 14904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,16 +51,16 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj = { claimed, price, gifterName: null, offeredAt: null, claimedAt: null };
     let name = null;
     if (null != teenUserForId) {
-      let tmp2Result = tmp2(4404);
+      let tmp2Result = UserUtilsDefault;
       name = tmp2Result.getName(teenUserForId);
     }
     obj.gifterName = name;
     obj.offeredAt = offeredAt;
     obj.claimedAt = claimedAt;
     obj = { style: tmp.container, children: null };
-    const giftSubtext = tmp5(14904).getGiftSubtext(obj);
+    const giftSubtext = FamilyCenterActivityGiftRowUtils.getGiftSubtext(obj);
     obj1 = { displayName, product: null, isSubscription: null, subscriptionPlanId: null };
-    tmp2Result = tmp2(14903);
+    tmp2Result = FamilyCenterActivityItemPreviewDefault;
     if (product == null) {
       product = null;
     }
@@ -66,9 +70,9 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     const items = [React4(tmp2Result, obj1), ];
     const obj2 = { style: tmp.textContainer, children: null };
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: displayName };
-    const items1 = [React4(tmp5(4556).Text, obj3), ];
+    const items1 = [React4(Text_Text.Text, obj3), ];
     const obj4 = { variant: "text-xs/medium", color: "text-muted", children: giftSubtext };
-    items1[1] = React4(tmp5(4556).Text, obj4);
+    items1[1] = React4(Text_Text.Text, obj4);
     obj2.children = items1;
     items[1] = hasOwnProperty(View, obj2);
     obj.children = items;

@@ -41,11 +41,11 @@ function GuildOnboardingHomePage(guildId) {
   const effect = noop.useEffect(() => {
     if (stateFromStores === NO_SETTINGS) {
       const guildHomeSettings = GuildOnboardingHomeActionCreators.fetchGuildHomeSettings(guildId);
-    } else if (null != tmp) {
+    } else if (null != stateFromStores) {
       const obj = {};
       const obj3 = AnalyticsUtilsDefault;
       const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-      const newMemberActions = tmp.newMemberActions;
+      const newMemberActions = stateFromStores.newMemberActions;
       let num;
       if (newMemberActions != null) {
         num = newMemberActions.length;
@@ -59,7 +59,7 @@ function GuildOnboardingHomePage(guildId) {
         completedActions = {};
       }
       obj.num_member_actions_completed = Object.keys(completedActions).length;
-      const resourceChannels = tmp.resourceChannels;
+      const resourceChannels = stateFromStores.resourceChannels;
       let num2;
       if (resourceChannels != null) {
         num2 = resourceChannels.length;
@@ -90,18 +90,18 @@ function GuildOnboardingHomePage(guildId) {
     if (tmp5) {
       obj1 = { children: null };
       let obj2 = { guildId };
-      const items4 = [tmp12(tmp4(16557), obj2), , ];
+      const items4 = [closure_9(tmp4(16557), obj2), , ];
       let obj3 = { guildId };
-      items4[1] = tmp12(tmp4(16561), obj3);
+      items4[1] = closure_9(tmp4(16561), obj3);
       tmp4 = tmp4(16562);
       const obj4 = { guildId };
-      tmp = tmp12(tmp4, obj4);
+      tmp = closure_9(tmp4, obj4);
       items4[2] = tmp;
       obj1.children = items4;
-      let tmp12Result = tmp10(closure_10, obj1);
+      let tmp12Result = closure_11(closure_10, obj1);
     } else {
       let obj5 = { guildId };
-      tmp12Result = tmp12(tmp4(16565), obj5);
+      tmp12Result = closure_9(tmp4(16565), obj5);
     }
     items3[1] = tmp12Result;
     obj.children = items3;

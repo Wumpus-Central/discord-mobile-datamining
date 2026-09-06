@@ -29,25 +29,24 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
     pendingAvatarSrc = obj.getUserAvatarURL(obj);
   }
 };
-export const getAvatarSource = function getAvatarSource(getAvatarURL, arg1, arg2, arg3) {
+export const getAvatarSource = function getAvatarSource(getAvatarURL, guild_id, arg2, acked) {
   if (null == getAvatarURL) {
     return null;
   } else {
     let userAvatarURL = arg2;
     if (undefined === arg2) {
-      let memoizedImageSourceResult = VideoBackground.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
-      const tmp2 = !arg3;
+      let memoizedImageSourceResult = VideoBackground.memoizedImageSource(getAvatarURL.getAvatarURL(guild_id, 80, !acked));
+      const tmp2 = !acked;
     } else {
       let obj = VideoBackground;
       if (userAvatarURL == null) {
         obj = {};
         const merged = Object.assign(getAvatarURL);
         obj.avatar = null;
-        userAvatarURL = tmp3(1396).getUserAvatarURL(obj);
-        const tmp3Result = tmp3(1396);
+        userAvatarURL = AvatarUtils.getUserAvatarURL(obj);
+        const tmp3Result = AvatarUtils;
       }
       memoizedImageSourceResult = obj.memoizedImageSource(userAvatarURL);
-      tmp3 = require;
     }
   }
 };

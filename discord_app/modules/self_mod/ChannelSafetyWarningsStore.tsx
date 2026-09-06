@@ -27,9 +27,9 @@ function handleConnectionOpen() {
         }
         return tmp2;
       })) {
-        obj.add(safetyWarnings.id);
+        set.add(safetyWarnings.id);
       } else {
-        obj.delete(safetyWarnings.id);
+        set.delete(safetyWarnings.id);
       }
     }
     if (null == safetyWarnings) {
@@ -91,9 +91,9 @@ SafetyWarningTypes = {
         }
         return tmp2;
       })) {
-        obj.add(channel.id);
+        set.add(channel.id);
       } else {
-        obj.delete(channel.id);
+        set.delete(channel.id);
       }
     }
     if (null == safetyWarnings) {
@@ -132,9 +132,9 @@ SafetyWarningTypes = {
           }
           return tmp2;
         })) {
-          obj.add(safetyWarnings.id);
+          set.add(safetyWarnings.id);
         } else {
-          obj.delete(safetyWarnings.id);
+          set.delete(safetyWarnings.id);
         }
       }
       if (null == safetyWarnings) {

@@ -35,7 +35,7 @@ function AutomatedUnderageAppealStatus() {
   [][0] = SafetyHubStore;
   if (stateFromStores === AgeCheckStatus.NONE) {
     return null;
-  } else if (stateFromStores === tmp5.SUCCESS) {
+  } else if (stateFromStores === AgeCheckStatus.SUCCESS) {
     obj = { messageType: native.HelpMessageTypes.SUCCESS, children: null };
     const intl10 = util.intl;
     hyh4ls = util.t.hyh4ls;
@@ -54,7 +54,7 @@ function AutomatedUnderageAppealStatus() {
     formatResult = intl10.format(hyh4ls, obj);
     obj.children = formatResult;
     let tmp18Result = closure_1_12(native.HelpMessage, obj);
-  } else if (stateFromStores === tmp5.VERIFIED) {
+  } else if (stateFromStores === AgeCheckStatus.VERIFIED) {
     const obj1 = { messageType: native.HelpMessageTypes.SUCCESS, button: null, children: null };
     const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl8 = util.intl;
@@ -64,22 +64,22 @@ function AutomatedUnderageAppealStatus() {
     const intl9 = util.intl;
     obj1.children = intl9.string(util.t["2Qe65J"]);
     tmp18Result = closure_1_12(native.HelpMessage, obj1);
-  } else if (stateFromStores === tmp5.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
+  } else if (stateFromStores === AgeCheckStatus.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
     const obj3 = { messageType: native.HelpMessageTypes.SUCCESS, children: null };
     const intl7 = util.intl;
     obj3.children = intl7.string(util.t.Ie7p1Q);
     tmp18Result = closure_1_12(native.HelpMessage, obj3);
-  } else if (stateFromStores === tmp5.ERROR) {
+  } else if (stateFromStores === AgeCheckStatus.ERROR) {
     const obj4 = { messageType: native.HelpMessageTypes.ERROR, children: null };
     const intl6 = util.intl;
     obj4.children = intl6.string(util.t["4sILBU"]);
     tmp18Result = closure_1_12(native.HelpMessage, obj4);
-  } else if (stateFromStores === tmp5.FAILURE) {
+  } else if (stateFromStores === AgeCheckStatus.FAILURE) {
     const obj5 = { messageType: native.HelpMessageTypes.ERROR, children: null };
     const intl5 = util.intl;
     obj5.children = intl5.string(util.t["40R63o"]);
     tmp18Result = closure_1_12(native.HelpMessage, obj5);
-  } else if (stateFromStores === tmp5.UNDERAGE) {
+  } else if (stateFromStores === AgeCheckStatus.UNDERAGE) {
     const obj6 = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
     const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl3 = util.intl;
@@ -89,7 +89,7 @@ function AutomatedUnderageAppealStatus() {
     const intl4 = util.intl;
     obj6.children = intl4.string(util.t.dqbMbn);
     tmp18Result = closure_1_12(native.HelpMessage, obj6);
-  } else if (stateFromStores === tmp5.UNDERAGE_MANUAL_REVIEW) {
+  } else if (stateFromStores === AgeCheckStatus.UNDERAGE_MANUAL_REVIEW) {
     const obj8 = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
     const obj9 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl = util.intl;

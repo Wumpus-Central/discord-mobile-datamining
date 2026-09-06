@@ -2,6 +2,10 @@
 
 // Module 17836 (AVErrorStreamViewLowFPS)
 import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 9109 */;
+import AVError from "AVError" /* 9110 */;
+import AVErrorContext from "AVErrorContext" /* 17834 */;
+import AVErrorUtils from "AVErrorUtils" /* 17837 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -29,28 +33,28 @@ export const AVErrorStreamViewLowFPSDefinition = {
         } else {
           if (ownerId.ownerId !== id.getId()) {
             if (ownerId.state !== constants.PAUSED) {
-              let tmpResult = tmp(tmp2[5]);
+              let tmpResult = AVErrorUtils;
               const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
               if (null == accumulatedStatsWithMinDatapoints) {
                 return arr;
               } else {
-                tmpResult = tmp(tmp2[6]);
+                tmpResult = StreamKeyUtils;
                 participant = participant.getParticipant(ownerId.channelId, tmpResult.encodeStreamKey(ownerId));
                 if (null == participant) {
                   return arr;
                 } else {
-                  const maxQuality = tmp(tmp2[7]).getMaxQuality(participant);
+                  const maxQuality = StreamQualityUtils.getMaxQuality(participant);
                   if (null != maxQuality) {
                     if (accumulatedStatsWithMinDatapoints.short.frameRate < tmpResult2.getWarningFrameRate(maxQuality.maxFrameRate)) {
-                      obj = { type: tmp(tmp2[8]).AVError.STREAM_VIEW_LOW_FPS };
-                      const tmpResult3 = tmp(tmp2[9]);
-                      const merged = Object.assign(tmpResult3.getStreamErrorContext(tmp(tmp2[6]).encodeStreamKey(ownerId)));
-                      arr.push(obj);
-                      const tmpResult4 = tmp(tmp2[6]);
+                      obj = { type: AVError.AVError.STREAM_VIEW_LOW_FPS };
+                      const tmpResult3 = AVErrorContext;
+                      const merged = Object.assign(tmpResult3.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(ownerId)));
+                      arr = arr.push(obj);
+                      const tmpResult4 = StreamKeyUtils;
                     } else {
-                      const tmpResult5 = tmp(tmp2[5]);
+                      AVErrorUtils;
                     }
-                    tmpResult2 = tmp(tmp2[5]);
+                    tmpResult2 = AVErrorUtils;
                   }
                   return arr;
                 }

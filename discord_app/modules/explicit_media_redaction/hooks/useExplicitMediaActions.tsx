@@ -19,7 +19,7 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
   noop = tmp2;
   let obj = { reportFalsePositive: null, isReportFalsePositiveLoading: tmp2 };
   const items = [tmp2, onError, onSuccess, report];
-  obj.reportFalsePositive = noop.useCallback(report(function*(arg0, value) {
+  obj.reportFalsePositive = noop.useCallback(report(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

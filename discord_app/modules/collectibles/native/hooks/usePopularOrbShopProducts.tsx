@@ -51,7 +51,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
   }
   const items1 = [enabled, POPULARITY];
   const effect = obj.useEffect(() => {
-    closure_1 = async function _fetchSearchResults(arg0, value) {
+    closure_1 = async function _fetchSearchResults() {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

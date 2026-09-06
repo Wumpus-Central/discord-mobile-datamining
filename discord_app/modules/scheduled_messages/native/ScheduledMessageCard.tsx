@@ -3,6 +3,7 @@
 // Module 12214 (ScheduledMessageCard)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
+import util from "util" /* 1114 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7845 */;
 import CalendarPlusIcon from "CalendarPlusIcon" /* 12209 */;
@@ -19,12 +20,12 @@ function ScheduledMessageCardStatusHeader(isPendingRemoval) {
   ({ isError, stateMessage } = messageForState);
   obj = { IconComponent: CalendarPlusIcon.CalendarPlusIcon, label: null, isCritical: null, lineClamp: 2, actions: null };
   if (!isError) {
-    const intl = tmp(1114).intl;
+    const intl = util.intl;
     obj = { timestamp: null };
     const _Date = Date;
     const date = new Date(scheduledMessage.sendAtTimestamp);
     obj.timestamp = date.valueOf();
-    stateMessage = intl.formatToPlainString(tmp(1114).t.ZN3tIx, obj);
+    stateMessage = intl.formatToPlainString(util.t.ZN3tIx, obj);
   }
   obj.label = stateMessage;
   obj.isCritical = isError;
@@ -64,25 +65,25 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
     let obj2 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj2);
     if (isPendingRemoval) {
-      const obj3 = { style: tmp.pendingRemoval, children: tmp10(tmp2(5577).ActivityIndicator, { size: "small" }) };
-      let tmp10Result = tmp10(tmp12, obj3);
+      const obj3 = { style: tmp.pendingRemoval, children: closure_7(tmp2(5577).ActivityIndicator, { size: "small" }) };
+      let tmp10Result = closure_7(View, obj3);
     } else {
       const obj4 = { message: scheduledMessage.record, lineClamp: 10, maxHeight: 400, footer: null };
       let tmp9Result;
       if (length > 0) {
         const obj5 = { style: tmp.attachmentCount, children: null };
         const obj6 = { size: "xxs", color: stateFromStores(576).colors.TEXT_MUTED };
-        const items2 = [tmp10(tmp2(10112).AttachmentIcon, obj6), ];
+        const items2 = [closure_7(tmp2(10112).AttachmentIcon, obj6), ];
         const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1114).intl;
         const obj8 = { count: length };
         obj7.children = intl.format(tmp2(1114).t.ZJ1tPW, obj8);
-        items2[1] = tmp10(tmp2(4556).Text, obj7);
+        items2[1] = closure_7(tmp2(4556).Text, obj7);
         obj5.children = items2;
-        tmp9Result = tmp9(tmp12, obj5);
+        tmp9Result = closure_8(View, obj5);
       }
       obj4.footer = tmp9Result;
-      tmp10Result = tmp10(tmp2(12216).ForLaterMessageRow, obj4);
+      tmp10Result = closure_7(tmp2(12216).ForLaterMessageRow, obj4);
     }
     items1[3] = tmp10Result;
     obj.children = items1;

@@ -17,7 +17,7 @@ let closure_6 = createStyles.createStyles((arg0, arg1) => {
     num = arg1;
   }
   obj = { container: obj, divider: null, paddingStart: num, marginTop: -TABLE_DIVIDER_WIDTH };
-  obj = { height: tmp, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+  obj = { height: TABLE_DIVIDER_WIDTH, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
   obj.divider = obj;
   return obj;
 });

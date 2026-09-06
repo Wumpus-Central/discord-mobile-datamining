@@ -8,6 +8,8 @@ import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11368 */;
 import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11381 */;
 import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11387 */;
 import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11411 */;
+import ForumPostActionBarDefault from "ForumPostActionBar" /* 11413 */;
+import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11417 */;
 import ChatBannerDefault from "ChatBanner" /* 11420 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -41,12 +43,12 @@ const jsxProd = fn(21);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
 
-export default noop.memo(noop.forwardRef((handleScrollToNewMessages, ref) => {
+export default noop.memo(noop.forwardRef((handleScrollToNewMessages, arg1) => {
   const channel = handleScrollToNewMessages.channel;
   const tmp = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp[1];
   ({ showUnreadsNotice, clearUnreadsNotice } = useUnreadSettingNoticeDefault(channel));
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     onChatViewScrolled(isFirstMessageVisible) {
       if (forumPost.isForumPost()) {
         closure_1_1(!isFirstMessageVisible.isFirstMessageVisible);
@@ -58,7 +60,7 @@ export default noop.memo(noop.forwardRef((handleScrollToNewMessages, ref) => {
     tmp8 = null;
     if (tmp[0]) {
       let obj = { channel };
-      tmp8 = timestampProducer(tmp2(11413), obj);
+      tmp8 = timestampProducer(ForumPostActionBarDefault, obj);
     }
   }
   const items = [tmp8, , , ];
@@ -71,7 +73,7 @@ export default noop.memo(noop.forwardRef((handleScrollToNewMessages, ref) => {
   let tmp13 = null;
   if (showUnreadsNotice) {
     obj = { channel, clearUnreadsNotice };
-    tmp13 = timestampProducer(tmp2(11417), obj);
+    tmp13 = timestampProducer(UnreadSettingNoticeDefault, obj);
   }
   const obj1 = { children: null };
   items[2] = tmp13;

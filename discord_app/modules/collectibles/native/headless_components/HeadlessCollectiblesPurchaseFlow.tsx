@@ -2,6 +2,7 @@
 
 // Module 13164 (HeadlessCollectiblesPurchaseFlow)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4231 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8176 */;
 import useProductPurchaseState from "useProductPurchaseState" /* 8842 */;
@@ -27,11 +28,11 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
   const isPurchased = obj.useProductPurchaseState(product).isPurchased;
   let obj1 = PlatformUtils;
   if (obj1.isIOS()) {
-    let GOOGLE = tmp5.APPLE_ADVANCED_COMMERCE;
-    let tmp6 = tmp5;
+    let GOOGLE = PaymentGateways.APPLE_ADVANCED_COMMERCE;
+    let tmp6 = PaymentGateways;
   } else {
-    GOOGLE = tmp5.GOOGLE;
-    tmp6 = tmp5;
+    GOOGLE = PaymentGateways.GOOGLE;
+    tmp6 = PaymentGateways;
   }
   let tmp7 = !isPurchased;
   if (!isPurchased) {
@@ -39,8 +40,8 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     if (!tmp8) {
       let result = GOOGLE === tmp6.GOOGLE;
       if (result) {
-        result = tmp(4231).isGooglePlayBillingSupported();
-        const tmpResult = tmp(4231);
+        result = BillingPlatformUtils.isGooglePlayBillingSupported();
+        const tmpResult = BillingPlatformUtils;
       }
       tmp8 = result;
     }

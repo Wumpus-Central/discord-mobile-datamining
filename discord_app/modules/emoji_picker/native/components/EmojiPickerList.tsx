@@ -1,12 +1,22 @@
 // === Module 10289: EmojiPickerList ===
 
 // Module 10289 (EmojiPickerList)
+import util from "util" /* 1114 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
+import ChatInputUtils from "ChatInputUtils" /* 4425 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
 import TopEmojisActionCreators from "TopEmojisActionCreators" /* 10279 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10285 */;
+import RoleSubscriptionUpsellUtilsDefault from "RoleSubscriptionUpsellUtils" /* 10298 */;
 import useEmojiPickerData from "useEmojiPickerData" /* 10303 */;
 import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10306 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10307 */;
+import EmojiPickerListComponents from "EmojiPickerListComponents" /* 10309 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10310 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10313 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -102,19 +112,19 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
         onPressEmoji(emoji);
       }
     } else if (constants4.ROLE_SUBSCRIPTION_LOCKED === emojiUnavailableReason) {
-      let tmp2Result = tmp2(4425);
+      let tmp2Result = ChatInputUtils;
       tmp2Result.dismissKeyboard();
       if (null != emoji.guildId) {
-        let tmp4Result = tmp4(10298);
+        let tmp4Result = RoleSubscriptionUpsellUtilsDefault;
         obj = { guildId: emoji.guildId };
         const result1 = tmp4Result.handleShowEmojiUpsellAlert(obj);
       }
     } else if (tmp40.PREMIUM_LOCKED === emojiUnavailableReason) {
-      tmp4Result = tmp4(9313);
+      tmp4Result = PremiumUpsellUtilsDefault;
       obj1 = { initialUpsellKey: emoji.animated ? React6.ANIMATED_EMOJI : React6.GLOBAL_EMOJI, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null };
       let guild_id;
-      if (tmp6 != null) {
-        guild_id = tmp6.guild_id;
+      if (channel != null) {
+        guild_id = channel.guild_id;
       }
       if (null != guild_id) {
         let DM_CHANNEL = constants2.GUILD_CHANNEL;
@@ -124,7 +134,7 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
       const obj2 = { page: DM_CHANNEL, section: constants3.EMOJI_PICKER_POPOUT, object: constants.EMOJI };
       obj1.analyticsLocation = obj2;
       obj1.analyticsLocations = analyticsLocations;
-      if (tmp7 === constants5.REACTION) {
+      if (emojiPickerIntention === constants5.REACTION) {
         let EMOJI_PICKER_EMOJI_CLICKED = PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
       } else {
         EMOJI_PICKER_EMOJI_CLICKED = PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
@@ -133,8 +143,8 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
       let tmp20 = null != emoji.guildId;
       if (tmp20) {
         let guild_id1;
-        if (tmp6 != null) {
-          guild_id1 = tmp6.guild_id;
+        if (channel != null) {
+          guild_id1 = channel.guild_id;
         }
         tmp20 = emoji.guildId !== guild_id1;
       }
@@ -144,17 +154,17 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
       const result2 = tmp4Result.handleShowUpsellAlert(obj1);
     } else {
       const obj4 = { key: "EMOJI_PICKER_LIST_PRESS_DISABLED", content: null };
-      const intl = tmp2(1114).intl;
-      obj4.content = intl.string(tmp2(1114).t.VsE5yG);
-      tmp4(4259).open(obj4);
-      const tmp4Result1 = tmp4(4259);
+      const intl = util.intl;
+      obj4.content = intl.string(util.t.VsE5yG);
+      ToastActionCreatorsDefault.open(obj4);
+      const tmp4Result1 = ToastActionCreatorsDefault;
     }
-    tmp2Result = tmp2(10285);
+    tmp2Result = EmojiPickerUtils;
     if (str.length > 0) {
       let obj5 = { emoji, location: null, searchQuery: null, intention: null, messageId: null };
       let guild_id2;
-      if (tmp6 != null) {
-        guild_id2 = tmp6.guild_id;
+      if (channel != null) {
+        guild_id2 = channel.guild_id;
       }
       if (null != guild_id2) {
         let DM_CHANNEL3 = constants2.GUILD_CHANNEL;
@@ -164,14 +174,14 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
       const obj6 = { page: DM_CHANNEL3, section: constants3.EMOJI_PICKER_POPOUT, object: constants.EMOJI };
       obj5.location = obj6;
       obj5.searchQuery = str;
-      obj5.intention = tmp7;
+      obj5.intention = emojiPickerIntention;
       obj5.messageId = messageId;
       obj5 = tmp2Result.trackEmojiSearchSelect(obj5);
     } else {
-      const obj7 = { emoji, pickerIntention: tmp7, category, location: null, messageId: null };
+      const obj7 = { emoji, pickerIntention: emojiPickerIntention, category, location: null, messageId: null };
       let guild_id3;
-      if (tmp6 != null) {
-        guild_id3 = tmp6.guild_id;
+      if (channel != null) {
+        guild_id3 = channel.guild_id;
       }
       if (null != guild_id3) {
         let DM_CHANNEL2 = constants2.GUILD_CHANNEL;
@@ -199,9 +209,9 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
     const type = item.type;
     ({ target, index } = item);
     if (useEmojiPickerData.EmojiPickerItemType.NATIVE_SECTION !== type) {
-      if (tmp(10303).EmojiPickerItemType.PLACEHOLDER !== type) {
-        if (tmp(10303).EmojiPickerItemType.EMOJI_ROW_SLIM !== type) {
-          if (tmp(10303).EmojiPickerItemType.TITLE === type) {
+      if (useEmojiPickerData.EmojiPickerItemType.PLACEHOLDER !== type) {
+        if (useEmojiPickerData.EmojiPickerItemType.EMOJI_ROW_SLIM !== type) {
+          if (useEmojiPickerData.EmojiPickerItemType.TITLE === type) {
             if ("StickyHeader" === target) {
               const current = emojiPickerListRef.current;
               if (current != null) {
@@ -209,29 +219,29 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
               }
             }
             let obj = { label: item.title, isSectionNitroLocked: item.isSectionNitroLocked, useTier0UpsellContent };
-            return map1(tmp(10309).Section, obj);
-          } else if (tmp(10303).EmojiPickerItemType.PREMIUM_INLINE_ROADBLOCK === type) {
+            return map1(EmojiPickerListComponents.Section, obj);
+          } else if (useEmojiPickerData.EmojiPickerItemType.PREMIUM_INLINE_ROADBLOCK === type) {
             obj = { position: item.position, useTier0UpsellContent };
             return map1(PremiumUpsellSectionDividerDefault, obj);
           } else {
-            if (tmp(10303).EmojiPickerItemType.EMOJI_ROW === type) {
+            if (useEmojiPickerData.EmojiPickerItemType.EMOJI_ROW === type) {
               ({ emojis, emojisDisabled, footer, row, isSectionNitroLocked } = item);
               const obj1 = { emojis, emojisDisabled, category: footer, rowSize: rounded, containerWidth, onPressEmoji, onLongPressEmoji: callback1, animateEmoji: setting, row, isSectionNitroLocked };
-              let tmp27Result = map1(tmp(10310).EmojiPickerListRow, obj1);
-            } else if (tmp(10303).EmojiPickerItemType.EMOJI_ROW_NSFW === type) {
-              tmp27Result = map1(tmp(10309).NSFWRow, {});
-            } else if (tmp(10303).EmojiPickerItemType.FOOTER_UPSELL === type) {
+              let tmp27Result = map1(EmojiPickerListRow.EmojiPickerListRow, obj1);
+            } else if (useEmojiPickerData.EmojiPickerItemType.EMOJI_ROW_NSFW === type) {
+              tmp27Result = map1(EmojiPickerListComponents.NSFWRow, {});
+            } else if (useEmojiPickerData.EmojiPickerItemType.FOOTER_UPSELL === type) {
               let guild_id;
               if (channel != null) {
                 guild_id = channel.guild_id;
               }
               obj = { guildId: guild_id, analyticsLocations, useTier0UpsellContent };
-              tmp27Result = map1(tmp(10313).PremiumSearchUpsell, obj);
+              tmp27Result = map1(EmojiPickerPremiumSearchUpsell.PremiumSearchUpsell, obj);
             }
             let tmp16 = true === item.isSectionNitroLocked;
             if (tmp16) {
               const obj2 = { useTier0UpsellContent };
-              tmp16 = map1(tmp(10307).PremiumUpsellGradientBackground, obj2);
+              tmp16 = map1(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, obj2);
             }
             const obj3 = { children: null };
             const items = [tmp16, tmp27Result];

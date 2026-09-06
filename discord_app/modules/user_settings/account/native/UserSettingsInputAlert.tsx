@@ -2,6 +2,7 @@
 
 // Module 14797 (UserSettingsInputAlert)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import common_AlertDefault from "common/Alert" /* 4994 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5578 */;
@@ -76,7 +77,7 @@ prototype["renderContent"] = function renderContent() {
     let tmp7 = null != helpText;
     if (tmp7) {
       let obj = { variant: "text-md/normal", children: helpText };
-      tmp7 = React3(tmp5(4556).Text, obj);
+      tmp7 = React3(Text_Text.Text, obj);
     }
     const items = [tmp7, ];
     obj = { label: tmp3, placeholder: tmp, secureTextEntry: tmp2, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };

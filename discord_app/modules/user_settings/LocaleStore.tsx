@@ -8,7 +8,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
 const require = fn;
-let closure_6 = async function _getSystemLocale(arg0, value) {
+let closure_6 = async function _getSystemLocale() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -45,14 +45,13 @@ let closure_6 = async function _getSystemLocale(arg0, value) {
             }
           }
           if (null != prop) {
-            const app2 = tmp22(4182).app;
+            const app2 = DiscordNativeDefault.app;
             const preferredSystemLanguages = app2.getPreferredSystemLanguages();
             c2 = 1;
             c3 = 1;
             const obj1 = { value: preferredSystemLanguages.then((result) => result[0]), done: false };
             return obj1;
           }
-          tmp22 = importDefault;
         }
       } else if (arg0 === 1) {
         c3 = 3;

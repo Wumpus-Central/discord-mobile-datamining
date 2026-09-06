@@ -82,9 +82,9 @@ export default noop.memo(function VEVOOPropTintColor() {
     onValueChange(arg0) {
       require(arg0);
       if (arg0) {
-        tmp2(first, first1);
+        closure_5(first, first1);
       } else {
-        tmp2(undefined, undefined);
+        closure_5(undefined, undefined);
       }
     }
   };
@@ -106,8 +106,6 @@ export default noop.memo(function VEVOOPropTintColor() {
   const obj4 = { children: null };
   obj3.label = "Blur Tint Opacity " + str2;
   const ref = obj1.useRef(first1);
-  const tmp14 = closure_10;
-  const tmp15 = closure_9;
   obj3.subLabel = closure_8(backgroundColor(15928), {
     disabled: !tmp7,
     initialValue: obj1.useRef(first1),
@@ -117,7 +115,7 @@ export default noop.memo(function VEVOOPropTintColor() {
   });
   items2[1] = closure_8(Form.FormRow, obj3);
   obj4.children = items2;
-  obj.subLabel = tmp14(tmp15, obj4);
+  obj.subLabel = closure_10(closure_9, obj4);
   obj.disabled = !tmp7;
   obj.onPress = function onPress() {
     const obj = { color: null, onSelect: null };

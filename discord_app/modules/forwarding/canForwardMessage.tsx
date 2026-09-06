@@ -8,7 +8,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 
 require = fn;
-function canForwardMessage(state, PermissionStore, GatedChannelStore, ChannelStore, GuildStore) {
+function canForwardMessage(state) {
   let obj = PermissionStore;
   if (PermissionStore === undefined) {
     obj = PermissionStore;

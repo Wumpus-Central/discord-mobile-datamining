@@ -5,7 +5,7 @@ import formatResults from "formatResults" /* 10981 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0, value) {
+let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

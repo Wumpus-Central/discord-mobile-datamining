@@ -90,10 +90,10 @@ export const useRequestApplication = function useRequestApplication(arg0) {
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== closure_0;
     }
     if (tmp2) {
-      size.request(tmp);
+      size.request(closure_0);
     }
   }, items);
 };
@@ -104,10 +104,10 @@ export const useGetOrFetchApplicationBatched = function useGetOrFetchApplication
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== closure_0;
     }
     if (tmp2) {
-      size.request(tmp);
+      size.request(closure_0);
     }
   }, items);
   const items1 = [ApplicationStore];
@@ -116,8 +116,8 @@ export const useGetOrFetchApplicationBatched = function useGetOrFetchApplication
     let application = null;
     if (null != closure_0) {
       application = null;
-      if ("" !== tmp) {
-        application = ApplicationStore.getApplication(tmp);
+      if ("" !== closure_0) {
+        application = ApplicationStore.getApplication(closure_0);
       }
     }
     return application;

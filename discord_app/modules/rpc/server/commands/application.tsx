@@ -1,8 +1,11 @@
 // === Module 14467: application ===
 
 // Module 14467 (application)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import TestModeUtils from "TestModeUtils" /* 8854 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8856 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 9518 */;
 import RPCErrorDefault from "RPCError" /* 9554 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
 import RPCHelpers from "RPCHelpers" /* 9559 */;
@@ -35,9 +38,9 @@ let obj = {
       const guildId = obj3.getGuildId();
     }
     const application = ApplicationStore.getApplication(id);
-    let tmpResult = tmp(8856);
+    let tmpResult = ApplicationFlagUtils;
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-      tmpResult = tmp(9518);
+      tmpResult = EmbeddedActivitiesManager;
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
       obj = { activity_application_id: id, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
       let type;
@@ -54,10 +57,11 @@ let obj = {
       obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(event_properties);
-      tmp5(1242).track(args.event_name, obj);
+      AnalyticsUtilsDefault.track(args.event_name, obj);
+      const tmp5Result = AnalyticsUtilsDefault;
     } else {
       obj1 = { errorCode: constants2.INVALID_COMMAND };
-      const tmp12 = new tmp5(9554)(obj1, "This application cannot access this API");
+      const tmp12 = new RPCErrorDefault(obj1, "This application cannot access this API");
       throw tmp12;
     }
   }

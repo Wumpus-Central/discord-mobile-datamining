@@ -43,6 +43,7 @@ function syncAllExperimentFlags() {
       continue;
     }
     set.clear();
+    tmp2 = set[Symbol.iterator]();
   })();
   const items = [];
   const items1 = [];
@@ -95,13 +96,12 @@ function syncAllExperimentFlags() {
   const evaluatedExperiments = ApexExperimentStore.getState().evaluatedExperiments;
   const items4 = ["user", "installation"];
   for (const item10060 of items4) {
-    let tmp10 = item10060;
     let tmp11;
     if (evaluatedExperiments != null) {
-      tmp11 = evaluatedExperiments[tmp10];
+      tmp11 = evaluatedExperiments[item10060];
     }
     for (const key10068 in tmp11) {
-      let tmp43 = evaluatedExperiments[tmp10];
+      let tmp43 = evaluatedExperiments[item10060];
       let obj;
       if (tmp43 != null) {
         obj = tmp43[tmp41];

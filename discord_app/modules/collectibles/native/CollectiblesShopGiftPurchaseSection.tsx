@@ -3,6 +3,7 @@
 // Module 11013 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
@@ -11,7 +12,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
 
-let require = fn;
+require = fn;
 const View = fn(17).View;
 const useNativeCheckoutStore = fn(7424).useNativeCheckoutStore;
 const Constants = fn(1074);
@@ -77,7 +78,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   }, items1);
   obj = { product, analyticsLocations: giftOptions(giftingOrigin[15])().analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null, giftParams: null };
   let id;
-  let tmp = giftOptions;
+  const tmp = giftOptions;
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   if (tmp9 != null) {
     id = tmp9.id;
@@ -91,7 +92,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
       const tmp4 = giftingOrigin !== constants2.USER_PROFILE_WISHLIST && tmp3 !== constants2.DM_CHANNEL_WISHLIST;
     }
     if (!tmp2) {
-      let obj = { type: "WISHLIST_GIFT_SENT", skuId: product.skuId, recipientId: tmp.recipient_id };
+      let obj = { type: "WISHLIST_GIFT_SENT", skuId: product.skuId, recipientId: giftOptions.recipient_id };
       obj.dispatch(obj);
     }
     closure_5.current = false;
@@ -114,10 +115,10 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
       }
     };
     actions_AlertActionCreatorsDefault.openLazy(obj);
-    tmp = giftOptions;
     if (obj5.isIOS()) {
       AnalyticsUtilsDefault.track(constants.PAYMENT_FLOW_SUCCEEDED, closure_6);
     }
+    obj5 = PlatformUtils;
   };
   obj.onPurchaseError = onPurchaseError;
   obj.onPurchasePending = function onPurchasePending() {
@@ -153,7 +154,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   const obj4 = { disabled: disabled.isPurchaseDisabled, loading: tmp7, variant: "active", text: null, onPress: null };
   const intl3 = tmp4(tmp2[27]).intl;
   obj4.text = intl3.string(require("util").t.ouo4FK);
-  obj4.onPress = asyncGeneratorStep(async (arg0, value) => {
+  obj4.onPress = asyncGeneratorStep(async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

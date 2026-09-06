@@ -13,7 +13,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/coded_links/findCodedLinkUrlsUsingRegex.tsx");
 
 export default function findCodedLinkUrlsUsingRegex(str) {
-  const match = str.replaceAll(re1, " ").match(regExp);
+  str = str.replaceAll(re1, " ");
+  const match = str.match(regExp);
   let mapped;
   if (match != null) {
     mapped = match.map(trimTrailingPunctuation);

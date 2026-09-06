@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
+import ColorUtils from "ColorUtils" /* 4409 */;
 import utils_ColorDefault from "utils/Color" /* 4410 */;
 import shared from "shared" /* 4411 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4413 */;
@@ -15,7 +16,6 @@ import ThemeStore from "ThemeStore" /* 1183 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4379 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
 
-const ColorUtils = tmp(4409);
 require = fn;
 function getGradientColorByPercentage(type, MID) {
   if (type.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
@@ -42,7 +42,7 @@ function getGradientColorByPercentage(type, MID) {
     }
   }
 }
-function getBottomColorWithOpacity(type, hexToRgbResult, arg2) {
+function getBottomColorWithOpacity(type, hexToRgbResult, light) {
   if (type.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     let gradientAngle = type.angle;
   } else {
@@ -55,12 +55,12 @@ function getBottomColorWithOpacity(type, hexToRgbResult, arg2) {
   }
   const tmpResult = getGradientColorByPercentage(type, START);
   const tmp2Result = ColorUtils;
-  const tmp7 = new utils_ColorDefault(tmpResult.r, tmpResult.g, tmpResult.b, arg2);
-  const color = tmp2Result.mixColors(tmp7, new utils_ColorDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2));
-  const tmp8 = new utils_ColorDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2);
+  const tmp7 = new utils_ColorDefault(tmpResult.r, tmpResult.g, tmpResult.b, light);
+  const color = tmp2Result.mixColors(tmp7, new utils_ColorDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - light));
+  const tmp8 = new utils_ColorDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - light);
   return _modDef672.rgb(color.red, color.green, color.blue).hex("rgb");
 }
-function getTopColorWithOpacity(type, hexToRgbResult, arg2) {
+function getTopColorWithOpacity(type, hexToRgbResult, light) {
   if (type.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     let gradientAngle = type.angle;
   } else {
@@ -73,12 +73,12 @@ function getTopColorWithOpacity(type, hexToRgbResult, arg2) {
   }
   const tmpResult = getGradientColorByPercentage(type, END);
   const tmp2Result = ColorUtils;
-  const tmp7 = new utils_ColorDefault(tmpResult.r, tmpResult.g, tmpResult.b, arg2);
-  const color = tmp2Result.mixColors(tmp7, new utils_ColorDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2));
-  const tmp8 = new utils_ColorDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2);
+  const tmp7 = new utils_ColorDefault(tmpResult.r, tmpResult.g, tmpResult.b, light);
+  const color = tmp2Result.mixColors(tmp7, new utils_ColorDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - light));
+  const tmp8 = new utils_ColorDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - light);
   return _modDef672.rgb(color.red, color.green, color.blue).hex("rgb");
 }
-function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme, arg3) {
+function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme, light) {
   obj = shared;
   const isThemeDarkResult = obj.isThemeDark(theme);
   const hexToRgb = ColorUtils.hexToRgb;
@@ -101,10 +101,10 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme,
     tmp10 = MID;
   }
   if (customBackgroundGradient.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-    if (arg3 != null) {
-      let tmp11 = arg3;
+    if (light != null) {
+      let tmp11 = light;
     } else {
-      let tmpResult = tmp(4411);
+      let tmpResult = shared;
       const result = 0.2 * tmp14;
       if (tmpResult.isThemeDark(theme)) {
         let sum = 0.12 + result;
@@ -113,9 +113,9 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme,
       }
     }
   } else {
-    tmp11 = arg3;
-    if (arg3 == null) {
-      tmpResult = tmp(4411);
+    tmp11 = light;
+    if (light == null) {
+      tmpResult = shared;
       tmpResult.isThemeDark(theme) ? obj.LEVEL_2 : obj.LEVEL_4;
     }
   }
@@ -140,8 +140,8 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme,
     const tmp30 = getGradientColorByPercentage(customBackgroundGradient, tmp10);
     const tmp35 = new utils_ColorDefault(tmp30.r, tmp30.g, tmp30.b, tmp11);
     const tmp38 = new utils_ColorDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - tmp11);
-    const color = tmp(4409).mixColors(tmp35, tmp38);
-    const tmpResult1 = tmp(4409);
+    const color = ColorUtils.mixColors(tmp35, tmp38);
+    const tmpResult1 = ColorUtils;
     return _modDef672.rgb(color.red, color.green, color.blue).hex("rgb");
   }
 }
@@ -271,15 +271,15 @@ export const useGradientValue = function useGradientValue(END, arg1) {
     } else {
       let dark;
       if (closure_1 != null) {
-        dark = tmp20.dark;
+        dark = closure_1.dark;
       }
       if (null == dark) {
         let light;
-        if (tmp20 != null) {
-          light = tmp20.light;
+        if (closure_1 != null) {
+          light = closure_1.light;
         }
         if (null == light) {
-          return calculateGradientValueWithOpacity(tmp, closure_0, closure_3);
+          return calculateGradientValueWithOpacity(closure_2, closure_0, closure_3);
         }
       }
       obj = shared;
@@ -287,16 +287,16 @@ export const useGradientValue = function useGradientValue(END, arg1) {
       if (tmp7Result.isThemeDark(closure_3)) {
         let dark1;
         if (!tmp12) {
-          dark1 = tmp20.dark;
+          dark1 = closure_1.dark;
         }
         light = dark1;
       } else if (!tmp12) {
-        light = tmp20.light;
+        light = closure_1.light;
       }
       if (light == null) {
         light = tmp11;
       }
-      return calculateGradientValueWithOpacity(tmp, closure_0, closure_3, light);
+      return calculateGradientValueWithOpacity(closure_2, closure_0, closure_3, light);
     }
   }, items);
 };

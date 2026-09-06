@@ -26,14 +26,13 @@ function SoundButtonEmoji(arg0) {
     if (num == null) {
       num = 0;
     }
-    tmp4(4974);
-    const tmp4Result = tmp4(4296);
-    const playing2 = tmp.sharedValues.playing;
+    const tmp4Result = ReanimatedRexport2;
+    const playing2 = isPlayingSound.sharedValues.playing;
     const items = [1, isPlayingSound.scaleFactors.playing];
     const tmp3 = playing.get() > 0;
     const withDelayResult = obj.withDelay(num, tmp4Result.withSpring(tmp4Result.interpolate(playing2.get(), [0, 1], items), closure_8));
     const tmp4Result1 = spring;
-    const pressed2 = tmp.sharedValues.pressed;
+    const pressed2 = isPlayingSound.sharedValues.pressed;
     const items1 = [1, isPlayingSound.scaleFactors.pressed];
     const withSpringResult = tmp4Result1.withSpring(ReanimatedRexport2.interpolate(pressed2.get(), [0, 1], items1), closure_8);
     let tmp8 = withSpringResult;
@@ -45,8 +44,8 @@ function SoundButtonEmoji(arg0) {
     }
     const items2 = [{ scale: tmp8 }, ];
     const tmp4Result2 = ReanimatedRexport2;
-    const pressed3 = tmp.sharedValues.pressed;
-    let num2 = tmp.pressedRotationDegrees;
+    const pressed3 = isPlayingSound.sharedValues.pressed;
+    let num2 = isPlayingSound.pressedRotationDegrees;
     value = pressed3.get();
     if (num2 == null) {
       num2 = 0;
@@ -76,14 +75,13 @@ function SoundButtonEmoji(arg0) {
     if (num == null) {
       num = 0;
     }
-    tmp4(4974);
-    const tmp4Result = tmp4(4296);
-    const playing2 = tmp.sharedValues.playing;
+    const tmp4Result = ReanimatedRexport2;
+    const playing2 = isPlayingSound.sharedValues.playing;
     const items = [1, isPlayingSound.scaleFactors.playing];
     const tmp3 = playing.get() > 0;
     const withDelayResult = obj.withDelay(num, tmp4Result.withSpring(tmp4Result.interpolate(playing2.get(), [0, 1], items), closure_8));
     const tmp4Result1 = spring;
-    const pressed2 = tmp.sharedValues.pressed;
+    const pressed2 = isPlayingSound.sharedValues.pressed;
     const items1 = [1, isPlayingSound.scaleFactors.pressed];
     const withSpringResult = tmp4Result1.withSpring(ReanimatedRexport2.interpolate(pressed2.get(), [0, 1], items1), closure_8);
     let tmp8 = withSpringResult;
@@ -95,8 +93,8 @@ function SoundButtonEmoji(arg0) {
     }
     const items2 = [{ scale: tmp8 }, ];
     const tmp4Result2 = ReanimatedRexport2;
-    const pressed3 = tmp.sharedValues.pressed;
-    let num2 = tmp.pressedRotationDegrees;
+    const pressed3 = isPlayingSound.sharedValues.pressed;
+    let num2 = isPlayingSound.pressedRotationDegrees;
     value = pressed3.get();
     if (num2 == null) {
       num2 = 0;
@@ -237,14 +235,13 @@ export const SoundButton = noop.memo(function SoundButtonComponent(sound) {
     if (num == null) {
       num = 0;
     }
-    tmp4(4974);
-    const tmp4Result = tmp4(4296);
-    const playing2 = tmp.sharedValues.playing;
+    const tmp4Result = ReanimatedRexport2;
+    const playing2 = isPlayingSound.sharedValues.playing;
     const items = [1, isPlayingSound.scaleFactors.playing];
     const tmp3 = playing.get() > 0;
     const withDelayResult = obj.withDelay(num, tmp4Result.withSpring(tmp4Result.interpolate(playing2.get(), [0, 1], items), closure_8));
     const tmp4Result1 = spring;
-    const pressed2 = tmp.sharedValues.pressed;
+    const pressed2 = isPlayingSound.sharedValues.pressed;
     const items1 = [1, isPlayingSound.scaleFactors.pressed];
     const withSpringResult = tmp4Result1.withSpring(ReanimatedRexport2.interpolate(pressed2.get(), [0, 1], items1), closure_8);
     let tmp8 = withSpringResult;
@@ -256,8 +253,8 @@ export const SoundButton = noop.memo(function SoundButtonComponent(sound) {
     }
     const items2 = [{ scale: tmp8 }, ];
     const tmp4Result2 = ReanimatedRexport2;
-    const pressed3 = tmp.sharedValues.pressed;
-    let num2 = tmp.pressedRotationDegrees;
+    const pressed3 = isPlayingSound.sharedValues.pressed;
+    let num2 = isPlayingSound.pressedRotationDegrees;
     value = pressed3.get();
     if (num2 == null) {
       num2 = 0;

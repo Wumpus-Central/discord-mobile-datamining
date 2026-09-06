@@ -3,6 +3,8 @@
 // Module 16323 (MentionSubtitle)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
+import TextIcon from "TextIcon" /* 5080 */;
 import useSubtitleStyles from "useSubtitleStyles" /* 16324 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,17 +22,17 @@ export default function MentionSubtitle(channel) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(5028).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(5028);
+    channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = utils_ChannelUtils;
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(5080).TextIcon;
+    channelIconComponentWithGuild = TextIcon.TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
   const items = [React3(channelIconComponentWithGuild, obj), ];
   const obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.format(util.t.L9YdGH, {
     channelName,
     count: count - 1,

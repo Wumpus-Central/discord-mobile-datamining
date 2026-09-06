@@ -20,7 +20,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
 
-export default noop.memo(noop.forwardRef(function MessagesLegendList(listItemHeight, ref) {
+export default noop.memo(noop.forwardRef(function MessagesLegendList(listItemHeight, arg1) {
   ({ data, insetEnd } = listItemHeight);
   const estimatedItemSize = listItemHeight.listItemHeight;
   const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -34,13 +34,13 @@ export default noop.memo(noop.forwardRef(function MessagesLegendList(listItemHei
   const renderFooter = data.renderFooter;
   const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ({ accessibilityLabel, handleScrollAnimated, recycleItems } = listItemHeight);
-  ref = listLeft.useRef(null);
+  const ref = listLeft.useRef(null);
   data = estimatedItemSize(listItemSuggestedFriendHeight[2])(data, { listItemHeight: estimatedItemSize });
   const friendsHeaderIndex = data.friendsHeaderIndex;
   const friendsHeaderOffset = data.friendsHeaderOffset;
   const estimatedHeaderSize = data.listHeaderHeight;
   let items = [estimatedHeaderSize];
-  const imperativeHandle = listLeft.useImperativeHandle(ref, () => ({
+  const imperativeHandle = listLeft.useImperativeHandle(arg1, () => ({
     scrollToTop() {
       let flag = arg0;
       if (arg0 === undefined) {
@@ -128,12 +128,11 @@ export default noop.memo(noop.forwardRef(function MessagesLegendList(listItemHei
     if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
       const obj = { listRef: listRefHappeningNow };
       return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
-    } else if (useMessagesData.MessagesDataHeader.EmptyState === tmp) {
+    } else if (useMessagesData.MessagesDataHeader.EmptyState === renderHeader) {
       return jsx(MessagesItemEmptyStateDefault, {});
     } else {
       return null;
     }
-    tmp = renderHeader;
   }, items4);
   const items6 = [friendsHeaderIndex];
   const ListFooterComponent = listLeft.useMemo(() => {

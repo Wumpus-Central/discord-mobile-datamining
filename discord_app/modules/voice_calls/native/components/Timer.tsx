@@ -13,7 +13,7 @@ class Timer extends PureComponent {
     tmp6 = new Timer(global, tmp5, tmp4, tmp3, tmp2, tmp);
     closure_0 = tmp6;
     tmp6._incrementSecond = function _incrementSecond() {
-      state = state.state;
+      const state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds + 1;
       let tmp = hours;
@@ -29,24 +29,24 @@ class Timer extends PureComponent {
         tmp = sum;
         tmp2 = num2;
       }
-      state.setState({ seconds: num, minutes: tmp2, hours: tmp });
+      closure_0.setState({ seconds: num, minutes: tmp2, hours: tmp });
     };
     tmp6._decrementSecond = function _decrementSecond() {
-      state = state.state;
+      const state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds - 1;
       if (num >= 1) {
         if (num <= 0) {
           const _clearInterval = clearInterval;
-          clearInterval(obj._timerId);
-          obj._timerId = null;
-          const onComplete = obj.props.onComplete;
+          clearInterval(closure_0._timerId);
+          closure_0._timerId = null;
+          const onComplete = closure_0.props.onComplete;
           if (onComplete != null) {
             onComplete();
           }
         } else {
           const time = { seconds: num, minutes, hours };
-          obj.setState(time);
+          closure_0.setState(time);
         }
       } else if (minutes >= 1) {
         const num2 = minutes - 1;

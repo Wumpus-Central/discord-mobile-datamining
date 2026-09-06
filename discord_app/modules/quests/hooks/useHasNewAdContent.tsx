@@ -32,8 +32,8 @@ export default function useHasNewAdContent() {
     return mapped;
   }, items1);
   const obj2 = enabled(stateFromStoresArray[6]);
-  let tmp = enabled;
-  let tmp2 = stateFromStoresArray;
+  const tmp = enabled;
+  const tmp2 = stateFromStoresArray;
   const items2 = [AdContentSeenStore];
   const items3 = [stateFromStoresArray];
   const stateFromStores = enabled(stateFromStoresArray[6]).useStateFromStores(items2, () => {

@@ -13,10 +13,10 @@ let closure_6 = createStyles.createStyles((arg0) => {
   const tmp3 = nativeDefault;
   if (arg0) {
     let WHITE = tmp3.unsafe_rawColors.BLACK;
-    let tmp5 = tmp;
+    let tmp5 = importDefault;
   } else {
     WHITE = tmp3.colors.WHITE;
-    tmp5 = tmp;
+    tmp5 = importDefault;
   }
   let obj = { pillContainer: null, discountPillText: null };
   obj = { backgroundColor: WHITE, borderRadius: tmp5(576).radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingVertical: 1 };
@@ -63,11 +63,11 @@ export const PremiumPill = (discountOffer) => {
   const memo = premiumType.useMemo(() => {
     let expiresAt;
     if (trialOffer != null) {
-      expiresAt = tmp.expiresAt;
+      expiresAt = trialOffer.expiresAt;
     }
     let num = NaN;
     if (null != expiresAt) {
-      expiresAt = tmp.expiresAt;
+      expiresAt = trialOffer.expiresAt;
       num = expiresAt.getTime();
     }
     return num;
@@ -99,10 +99,9 @@ export const PremiumPill = (discountOffer) => {
               const intl = util.intl;
               obj = { days: null };
               const _Math = Math;
-              obj.days = Math.max(tmp9.days, 1);
+              obj.days = Math.max(days.days, 1);
               let formatToPlainStringResult = intl.formatToPlainString(util.t["+FgdjP"], obj);
             }
-            tmp9 = days;
           }
           const intl2 = util.intl;
           formatToPlainStringResult = intl2.string(util.t.qVcfa0);

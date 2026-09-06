@@ -6,6 +6,7 @@ import useChannelName from "useChannelName" /* 4713 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import NotificationCenterUtils from "NotificationCenterUtils" /* 7641 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9770 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
 import getLayoutStylesDefault from "getLayoutStyles" /* 16977 */;
 import renderChannelWrapperDefault from "renderChannelWrapper" /* 16979 */;
 import renderChannelContentDefault from "renderChannelContent" /* 16982 */;
@@ -89,16 +90,14 @@ export default function renderChannelItem(unread) {
   obj.style = size;
   if (channel.isGroupDM()) {
     obj = { channel, size: tmp7.icon.avatarSize };
-    let tmp11Result = tmp11(tmp5(10910), obj);
+    let tmp11Result = React6(GroupDMAvatarDefault, obj);
   } else {
     const obj1 = { channel };
-    tmp11Result = tmp11(LaunchpadChannelIcon, obj1);
+    tmp11Result = React6(LaunchpadChannelIcon, obj1);
   }
   obj.children = tmp11Result;
   children[1] = React6(View, obj);
-  const tmp10 = React7;
   const tmp8 = renderChannelWrapperDefault;
-  const tmp9 = closure_1_10;
   if (channelName == null) {
     channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   }
@@ -106,10 +105,10 @@ export default function renderChannelItem(unread) {
   tmp11Result = null;
   if (null != end) {
     const obj2 = { style: { paddingLeft: 8 }, children: end };
-    tmp11Result = tmp11(tmp12, obj2);
+    tmp11Result = React6(View, obj2);
   }
   children[3] = tmp11Result;
-  return tmp8(tmp9(tmp10, { children }), { fontScale });
+  return tmp8(closure_1_10(React7, { children }), { fontScale });
 };
 export const getChannelAccessibilityProps = function getChannelAccessibilityProps(arg0) {
   ({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount } = arg0);

@@ -2,6 +2,8 @@
 
 // Module 12557 (useGuildPowerupExpiringNotificationsConfig)
 import util from "util" /* 1114 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import _modDef2850 from "module_2850" /* 2850 */;
 import Powerups from "Powerups" /* 4453 */;
 import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 12558 */;
 import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 12559 */;
@@ -16,7 +18,7 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     let stringResult;
     if (arr2.length > 0) {
       const intl = util.intl;
-      stringResult = intl.string(tmp(2850)["B3OfL/"]);
+      stringResult = intl.string(_modDef2850["B3OfL/"]);
     }
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(arr.map((title) => title.title), 0);
@@ -30,11 +32,11 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = util.intl;
-      arr = items3.push(intl2.string(tmp(2428).Sfr0Jw));
+      arr = items3.push(intl2.string(_modDef2428.Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = util.intl;
-      arr = items3.push(intl3.string(tmp(2850).wiungr));
+      arr = items3.push(intl3.string(_modDef2850.wiungr));
     }
     let obj = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
     return obj;

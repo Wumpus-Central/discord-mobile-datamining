@@ -3,8 +3,12 @@
 // Module 15968 (RegisterAccountInformation)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5578 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6941 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
+import AuthFormViewDefault from "AuthFormView" /* 6972 */;
 import useInitialRegistrationStepDefault from "useInitialRegistrationStep" /* 15961 */;
+import useAuthFlowBackHandlerDefault from "useAuthFlowBackHandler" /* 15962 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -45,7 +49,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/RegisterAccountInformation.tsx");
 
 export default function RegisterAccountInformation() {
-  closure_9 = async function _handleSubmit(arg0, value) {
+  closure_9 = async function _handleSubmit() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -156,7 +160,7 @@ export default function RegisterAccountInformation() {
     }
     return invite;
   });
-  const ref = noop.useRef(null);
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
   let obj3 = context(15969);
   const passwordRegistrationStep = obj3.usePasswordRegistrationStep();
   ({ password, validatePassword: _slicedToArray, setPassword, passwordScore, preventSubmitPassword } = passwordRegistrationStep);
@@ -198,8 +202,8 @@ export default function RegisterAccountInformation() {
     }
     return applyArgumentsResult;
   }
-  let tmpResult = tmp(15962);
-  const tmp9 = _slicedToArray(noop.useState(false), 2);
+  let tmpResult = useAuthFlowBackHandlerDefault;
+  const ref = noop.useRef(null);
   tmpResult(context(15945).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
   useInitialRegistrationStepDefault(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
@@ -213,7 +217,7 @@ export default function RegisterAccountInformation() {
     }
   }, []);
   obj1 = { headerText: null, children: null };
-  tmpResult = tmp(6972);
+  tmpResult = AuthFormViewDefault;
   const intl2 = tmp5(1114).intl;
   obj1.headerText = intl2.string(context(1114).t.jec90v);
   obj2 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
@@ -245,7 +249,7 @@ export default function RegisterAccountInformation() {
     tmp27Result = null;
     if ("" !== tmp11.message) {
       const obj8 = { style: tmp4.errors, children: tmp11.message };
-      tmp27Result = tmp27(tmp(6941), obj8);
+      tmp27Result = closure_17(FreeFormErrorLabelDefault, obj8);
     }
   }
   items5[1] = tmp27Result;
@@ -253,11 +257,11 @@ export default function RegisterAccountInformation() {
   items4[2] = closure_18(ReanimatedRexportDefault.View, obj6);
   obj2.children = items4;
   obj1.children = closure_18(obj, obj2);
-  tmp27Result = tmp27(tmpResult, obj1);
+  tmp27Result = closure_17(tmpResult, obj1);
   let tmp27Result1 = tmp27Result;
   if (!tmp3) {
     const obj9 = { style: tmp4.page, children: tmp27Result };
-    tmp27Result1 = tmp27(tmp(5578), obj9);
+    tmp27Result1 = closure_17(KeyboardAwareViewDefault, obj9);
   }
   return tmp27Result1;
 };

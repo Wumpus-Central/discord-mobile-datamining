@@ -1,6 +1,8 @@
 // === Module 14717: TinyBroncoAccountStatusVisibility ===
 
 // Module 14717 (TinyBroncoAccountStatusVisibility)
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5423 */;
 import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10959 */;
 import TinyBroncoExperiment from "TinyBroncoExperiment" /* 14684 */;
 import noop from "module_19" /* 19 */;
@@ -28,15 +30,15 @@ export const shouldShowTinyBroncoAccountStatus = function shouldShowTinyBroncoAc
       hasAgeGatedFeaturesResult = !set.has(userCountryCode.alpha2);
     }
     if (hasAgeGatedFeaturesResult) {
-      let tmpResult = tmp(5423);
+      let tmpResult = RegionalFeatureConfigUtils;
       hasAgeGatedFeaturesResult = tmpResult.hasAgeGatedFeatures();
     }
     if (hasAgeGatedFeaturesResult) {
-      tmpResult = tmp(4773);
+      tmpResult = AgeVerificationUtils;
       let isAssignedByDiscordResult = tmpResult.isAssignedByDiscord();
       if (!isAssignedByDiscordResult) {
-        isAssignedByDiscordResult = !tmp(4773).isAgeVerified();
-        const tmpResult1 = tmp(4773);
+        isAssignedByDiscordResult = !AgeVerificationUtils.isAgeVerified();
+        const tmpResult1 = AgeVerificationUtils;
       }
       hasAgeGatedFeaturesResult = isAssignedByDiscordResult;
     }

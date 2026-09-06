@@ -18,7 +18,7 @@ export default function useInAppBrowserReturn(gameId) {
     if (null != c0) {
       if (obj.isIOS()) {
         c0 = false;
-        closure_1 = tmp(tmp2[3]).subscribeToIsInAppBrowserOpen((arg0, arg1) => {
+        closure_1 = gameId(dependencyMap[3]).subscribeToIsInAppBrowserOpen((arg0, arg1) => {
           if (!arg1) {
             if (arg0) {
               c0 = true;
@@ -45,8 +45,6 @@ export default function useInAppBrowserReturn(gameId) {
         };
       }
       obj = gameId(dependencyMap[2]);
-      tmp = gameId;
-      tmp2 = dependencyMap;
     }
   }, items);
 };

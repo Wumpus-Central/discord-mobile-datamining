@@ -22,14 +22,13 @@ function EllipsisCircle(offset) {
   const mountLayoutEffect = offset(sharedValue1[7]).useMountLayoutEffect(() => {
     if (typeof withEllipsisAnimation === "function") {
       obj = ReanimatedRexport;
-      const result = 166.66666666666666 * tmp4;
+      const result = 166.66666666666666 * offset;
       const obj2 = ReanimatedRexport;
       tmp2(obj.withDelay(result, obj2.withRepeat(timing.withTiming(1, obj, "animate-always"), -1, true)));
       if (typeof tmp3 === "function") {
-        tmp5(4296);
-        const result1 = 166.66666666666666 * tmp4;
-        const tmp5Result = tmp5(4296);
-        tmp11(tmp5Result.withDelay(result1, tmp5Result.withRepeat(tmp5(4561).withTiming(1, tmp8, "animate-always"), -1, true)));
+        const result1 = 166.66666666666666 * offset;
+        const tmp5Result = ReanimatedRexport;
+        tmp11(tmp5Result.withDelay(result1, tmp5Result.withRepeat(timing.withTiming(1, tmp8, "animate-always"), -1, true)));
         return () => {
           offset(sharedValue1[2]).cancelAnimation(sharedValue);
           obj = offset(sharedValue1[2]);

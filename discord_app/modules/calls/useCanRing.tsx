@@ -15,7 +15,7 @@ import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
 const GuildVoiceRingingExperimentDefault = tmp4(9175);
 const require = fn;
-function useCanRingToGuildVoiceChannel(user, useCanRing, stateFromStores) {
+function useCanRingToGuildVoiceChannel(user) {
   _require = user;
   let str = useCanRing;
   if (useCanRing === undefined) {
@@ -80,7 +80,7 @@ const Constants = fn(1074);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useCanRing.tsx");
 
-export const useCanRing = function useCanRing(user, DisconnectedUserRow, selectedVoiceChannelId) {
+export const useCanRing = function useCanRing(user) {
   _require = user;
   let str = DisconnectedUserRow;
   if (DisconnectedUserRow === undefined) {

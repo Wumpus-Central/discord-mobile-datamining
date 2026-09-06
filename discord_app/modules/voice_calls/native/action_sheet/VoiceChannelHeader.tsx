@@ -4,6 +4,7 @@
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
 import Pressables from "Pressables" /* 5123 */;
@@ -32,13 +33,13 @@ function PrivateChannelSubtitle(channel) {
   let tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
     obj = { style: tmp.subtitle, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
-    tmp6Result = tmp6(tmp7(4556).Text, obj);
+    tmp6Result = closure_1_10(Text_Text.Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === tmp7(13795).CallStates.CONNECTED;
+  tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
     const obj1 = { channelId: channel.id, style: tmp.subtitle };
-    tmp6Result = tmp6(OngoingCallTimerDefault, obj1);
+    tmp6Result = closure_1_10(OngoingCallTimerDefault, obj1);
   }
   items[2] = tmp6Result;
   obj.children = items;

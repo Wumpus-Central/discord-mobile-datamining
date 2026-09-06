@@ -24,7 +24,7 @@ function TransferFooter(arg0) {
   }
   obj.disabled = transferring;
   obj.onPress = onPress;
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.text = intl.string(util.t.FYi3ry);
   obj.children = closure_1_12(components_Button_Button.Button, obj);
   return closure_1_12(common_SafeAreaView.SafeAreaPaddingView, obj);
@@ -84,7 +84,7 @@ export default function GameConsoleListActionSheet(arg0) {
   value = undefined;
   noop = undefined;
   c6 = undefined;
-  closure_7 = async function _handleTransferVoice(arg0, value) {
+  closure_7 = async function _handleTransferVoice() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -189,10 +189,10 @@ export default function GameConsoleListActionSheet(arg0) {
           const result = GameConsoleActionCreators.persistSelectedDeviceId(closure_1_0, value);
         }
     };
-    const items5 = [closure_12(tmp2(tmp3[21]).RadioGroup, obj), ];
+    const items5 = [closure_12(require("native").RadioGroup, obj), ];
     obj1 = { style: tmp.infoBox, children: null };
-    const intl = tmp2(tmp3[11]).intl;
-    obj1.children = intl.string(tmp2(tmp3[11]).t.dI4HFq);
+    const intl = require("util").intl;
+    obj1.children = intl.string(require("util").t.dI4HFq);
     items5[1] = closure_12(require("InfoBox"), obj1);
     obj.children = items5;
     let tmp12Result = closure_13(closure_14, obj);
@@ -219,7 +219,7 @@ export default function GameConsoleListActionSheet(arg0) {
   const obj3 = { footer: tmp12(TransferFooter, obj2), header: null, scrollable: true, children: null };
   obj2.onPress = handleTransferVoice;
   const obj4 = { title: null, trailing: null };
-  const intl2 = tmp2(tmp3[11]).intl;
+  const intl2 = require("util").intl;
   obj4.title = intl2.string(require("util").t.aUuz7W);
   let tmp22 = stateFromStores1;
   if (!stateFromStores1) {
@@ -233,7 +233,7 @@ export default function GameConsoleListActionSheet(arg0) {
     children: null
   };
   const obj6 = { variant: "text-md/semibold", color: "text-brand", children: null };
-  const intl3 = tmp2(tmp3[11]).intl;
+  const intl3 = require("util").intl;
   obj6.children = intl3.string(require("util").t.hb12iG);
   obj5.children = tmp12(require("Text/Text").Text, obj6);
   obj4.trailing = tmp12(c6, obj5);

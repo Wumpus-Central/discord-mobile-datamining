@@ -4,9 +4,16 @@
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import DateUtils from "DateUtils" /* 4242 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7961 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
+import BoostGemIcon from "BoostGemIcon" /* 9375 */;
 import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12580 */;
+import BoostTier1Icon from "BoostTier1Icon" /* 12582 */;
+import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 12584 */;
 import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12586 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -33,16 +40,16 @@ function GuildPowerupsRecentActivityRow(row) {
     if (null != roleColor) {
       obj = { color: roleColor };
     }
-    let tmpResult = tmp(7961);
+    let tmpResult = enhanced_role_colors_EnhancedRoleColorUtils;
     const processColorStringsArray = tmpResult.useProcessColorStringsArray(roleColorStrings);
-    tmpResult = tmp(7961);
+    tmpResult = enhanced_role_colors_EnhancedRoleColorUtils;
     const isRoleStyleAndRoleColorsEligibleForERC = tmpResult.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
-      let BoostGemSlashIcon = tmp(9375).BoostGemIcon;
+      let BoostGemSlashIcon = BoostGemIcon.BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp(12582).BoostTier1Icon;
+      BoostGemSlashIcon = BoostTier1Icon.BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp(12584).BoostGemSlashIcon;
+      BoostGemSlashIcon = BoostGemSlashIcon2.BoostGemSlashIcon;
     }
     obj = { style: tmp4.boostRowContainer, children: null };
     if ("gave" === phase) {
@@ -59,7 +66,7 @@ function GuildPowerupsRecentActivityRow(row) {
     }
     if (tmp19Result) {
       const obj4 = { size: "small", color: roleColor, colors: roleColorStrings };
-      tmp19Result = tmp19(tmp(1178).RoleDot, obj4);
+      tmp19Result = hasOwnProperty(native.RoleDot, obj4);
     }
     const items2 = [tmp19Result, , , ];
     const obj5 = { variant: "text-md/medium", color: "interactive-text-active", lineClamp: 1, style: null, gradientColors: null, children: null };
@@ -71,10 +78,10 @@ function GuildPowerupsRecentActivityRow(row) {
     }
     obj5.gradientColors = tmp23;
     obj5.children = username;
-    items2[1] = hasOwnProperty(tmp(4556).Text, obj5);
-    items2[2] = hasOwnProperty(tmp(4556).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
+    items2[1] = hasOwnProperty(Text_Text.Text, obj5);
+    items2[2] = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
     const obj6 = { variant: "text-md/medium", lineClamp: 1, style: tmp4.messageText, children: getBoostRowMessageTextDefault(row) };
-    items2[3] = hasOwnProperty(tmp(4556).Text, obj6);
+    items2[3] = hasOwnProperty(Text_Text.Text, obj6);
     obj3.children = items2;
     items1[1] = timestampProducer(View, obj3);
     let str4 = "text-xs/semibold";
@@ -89,10 +96,11 @@ function GuildPowerupsRecentActivityRow(row) {
     obj7.color = str5;
     obj7.style = tmp4.timestamp;
     obj7.children = calendarFormatResult;
-    items1[2] = hasOwnProperty(tmp(4556).Text, obj7);
+    items1[2] = hasOwnProperty(Text_Text.Text, obj7);
     obj.children = items1;
     return timestampProducer(View, obj);
   }
+  calendarFormatResult = obj2.calendarFormat(new Date(sortKey));
 }
 const View = _mod17.View;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -121,13 +129,13 @@ export default function GuildPowerupsRecentActivitySection(guildId) {
       str = "text-strong";
     }
     obj = { variant: "heading-lg/semibold", color: str, children: null };
-    const intl = tmp(1114).intl;
-    obj.children = intl.string(tmp(1114).t.yM9Krm);
-    const items = [hasOwnProperty(tmp(4556).Text, obj), ];
+    const intl = util.intl;
+    obj.children = intl.string(util.t.yM9Krm);
+    const items = [hasOwnProperty(Text_Text.Text, obj), ];
     const obj1 = { style: tmp4.boostContainer, children: arr.map((row) => closure_1_5(GuildPowerupsRecentActivityRow, { row }, "boost-" + row.boost.id)) };
     items[1] = hasOwnProperty(View, obj1);
     obj.children = items;
-    tmp6Result = timestampProducer(tmp7, obj);
+    tmp6Result = timestampProducer(View, obj);
   }
   return tmp6Result;
 };

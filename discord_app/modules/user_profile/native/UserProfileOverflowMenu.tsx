@@ -2,6 +2,7 @@
 
 // Module 13097 (UserProfileOverflowMenu)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
@@ -27,7 +28,6 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-const discord_common_AnalyticsUtils = tmp3(1250);
 require = fn;
 const View = fn(17).View;
 const UserProfileThemeTypes = fn(7208).UserProfileThemeTypes;
@@ -81,12 +81,12 @@ export default function UserProfileOverflowMenu(user) {
   const userProfileAnalyticsContext = tmpResult.useUserProfileAnalyticsContext();
   context = userProfileAnalyticsContext.context;
   trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
-  let tmp7Result = tmp7(tmp2[17]);
+  let tmp7Result = displayProfile(tmp2[17]);
   const tmp7ResultResult = tmp7Result(displayProfile(tmp2[18]).USER_PROFILE_OVERFLOW_MENU);
   analyticsLocations = tmp7ResultResult.analyticsLocations;
   newestAnalyticsLocation = tmp7ResultResult.newestAnalyticsLocation;
   let guild_id;
-  tmp7Result = tmp7(tmp2[19]);
+  tmp7Result = displayProfile(tmp2[19]);
   if (channel != null) {
     guild_id = channel.guild_id;
   }
@@ -260,7 +260,7 @@ export default function UserProfileOverflowMenu(user) {
       };
       items7.push(obj4);
     }
-    if (relationshipType !== id.FRIEND) {
+    if (relationshipType !== tmp30.FRIEND) {
       if (tmp31) {
         const obj5 = { label: null, action: null };
         let intl5 = tmp(tmp2[31]).intl;
@@ -284,6 +284,7 @@ export default function UserProfileOverflowMenu(user) {
             }
             RelationshipActionCreatorsDefault.unignoreUser(id, newestAnalyticsLocation, id);
             showUserProfile();
+            const obj = { action: "UNIGNORE", analyticsLocations };
           };
           arr3 = items7.push(obj6);
         }
@@ -311,7 +312,7 @@ export default function UserProfileOverflowMenu(user) {
           const intl8 = tmp(tmp2[31]).intl;
           obj8.label = intl8.string(tmp(tmp2[31]).t.l4Emac);
           obj8.action = function action() {
-            const obj = { userId: id, channelId: null, onSuccess: null, impressionName: null };
+            let obj = { userId: id, channelId: null, onSuccess: null, impressionName: null };
             id = undefined;
             if (channel != null) {
               id = channel.id;
@@ -323,9 +324,11 @@ export default function UserProfileOverflowMenu(user) {
                 id = id.id;
               }
               const result = displayProfile(channel[39]).showBlockSuccessToast(closure_1_15, id);
+              const obj = displayProfile(channel[39]);
             };
             obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
             obj.openLazy(asyncRequireImpl(11383, dependencyMap.paths), closure_2_17, obj, "stack");
+            const tmp3 = asyncRequireImpl(11383, dependencyMap.paths);
           };
           push(obj8);
           if (result) {
@@ -336,8 +339,8 @@ export default function UserProfileOverflowMenu(user) {
               trackUserProfileAction({ action: "REPORT", analyticsLocations });
               let tmp3;
               if ("@me" !== guildId1) {
-                if (null !== tmp2) {
-                  tmp3 = tmp2;
+                if (null !== guildId1) {
+                  tmp3 = guildId1;
                 }
               }
               const result = ReportModals.showReportModalForUser(user, tmp3);
@@ -390,6 +393,7 @@ export default function UserProfileOverflowMenu(user) {
           obj.onSuccess = onSuccess;
           obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION;
           obj2.openLazy(asyncRequireImpl(11384, dependencyMap.paths), collapsedCategories, obj, "stack");
+          const tmp4 = asyncRequireImpl(11384, dependencyMap.paths);
         };
         items7.push(obj12);
       }
@@ -479,8 +483,8 @@ export default function UserProfileOverflowMenu(user) {
           }
           if (hasAvatarForGuildResult) {
             obj = { label: null, onPress: null };
-            const intl3 = tmp(tmp2[31]).intl;
-            obj.label = intl3.string(tmp(tmp2[31]).t.gERDvM);
+            const intl3 = user(channel[31]).intl;
+            obj.label = intl3.string(user(channel[31]).t.gERDvM);
             obj.onPress = function onPress() {
               trackUserProfileAction({ action: "COPY_AVATAR_IMAGE_LINK", analyticsLocations });
               guildId = undefined;
@@ -494,6 +498,7 @@ export default function UserProfileOverflowMenu(user) {
                 user(channel[50]).presentLinkCopied();
                 const obj3 = user(channel[50]);
               }
+              const obj = { action: "COPY_AVATAR_IMAGE_LINK", analyticsLocations };
             };
             items.push(obj);
           }
@@ -503,8 +508,8 @@ export default function UserProfileOverflowMenu(user) {
             bannerURL = obj4.getBannerURL(obj1);
             if (null != bannerURL) {
               obj2 = { label: null, onPress: null };
-              const intl4 = tmp(tmp2[31]).intl;
-              obj2.label = intl4.string(tmp(tmp2[31]).t.hsNv0R);
+              const intl4 = user(channel[31]).intl;
+              obj2.label = intl4.string(user(channel[31]).t.hsNv0R);
               obj2.onPress = function onPress() {
                 trackUserProfileAction({ action: "COPY_BANNER_IMAGE_LINK", analyticsLocations });
                 ClipboardUtils.copy(bannerURL);
@@ -516,10 +521,11 @@ export default function UserProfileOverflowMenu(user) {
           }
           let obj3 = { options: items, key: "copy-info", header: null, stackingBehavior: "stack", hasIcons: false };
           obj4 = { title: null };
-          const intl5 = tmp(tmp2[31]).intl;
+          const intl5 = user(channel[31]).intl;
           obj4.title = intl5.string(user(channel[31]).t.QvQeLv);
           obj3.header = obj4;
           let result = user(channel[51]).showSimpleActionSheet(obj3);
+          const tmpResult = user(channel[51]);
         };
         push2(obj15);
       } else {
@@ -572,10 +578,10 @@ export default function UserProfileOverflowMenu(user) {
         return closure_1_19(user(channel[56]).IconButton, obj);
       };
       obj19.children = closure_19(tmp(tmp2[54]).ContextMenu, obj20);
-      obj18.children = closure_19(tmp7(tmp2[53]).View, obj19);
+      obj18.children = closure_19(displayProfile(tmp2[53]).View, obj19);
       const items9 = [closure_19(selectedVoiceChannel, obj18), ];
       const obj21 = { targetRef: ref, visible: isVisible, onDismiss: markAsDismissed, onPress: callback };
-      items9[1] = closure_19(tmp7(tmp2[59]), obj21);
+      items9[1] = closure_19(displayProfile(tmp2[59]), obj21);
       obj17.children = items9;
       let tmp60 = closure_20(tmp(tmp2[17]).AnalyticsLocationProvider, obj17);
     } else {
@@ -615,8 +621,11 @@ export default function UserProfileOverflowMenu(user) {
               PrivateChannelCallUtils.openChannelCallModal(selectedVoiceChannel);
             }
           }
+          const obj = { action: str, analyticsLocations };
         }
     };
     t2 = items6.push(obj22);
   }
+  tmp30 = id;
+  const tmp7Result3 = displayProfile(tmp2[28]);
 };
