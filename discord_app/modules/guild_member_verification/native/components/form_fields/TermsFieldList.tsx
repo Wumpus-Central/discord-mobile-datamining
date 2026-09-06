@@ -86,9 +86,9 @@ export default function TermsFieldList(rules) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl = rules(1233).intl;
-  obj[4] = intl.string(rules(1233).t.prJqwT);
-  let items = [callback(rules(4474).Text, obj)];
+  const intl = rules(1114).intl;
+  obj[4] = intl.string(rules(1114).t.prJqwT);
+  let items = [callback(rules(4556).Text, obj)];
   obj = {
     accessibilityRole: "list",
     children: rules.map((rule) => {

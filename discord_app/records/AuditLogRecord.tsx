@@ -1,8 +1,8 @@
 // discord_app/records/AuditLogRecord.tsx
 import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
-import _modDef1205 from "../utils/SentryUtils.native.tsx";
+import _modDef1232 from "../utils/SentryUtils.native.tsx";
 import toJSDefault from "../lib/Record.tsx";
-import hooksDefault from "../../_runtime/04074_hooks.js";
+import hooksDefault from "../../_runtime/04153_hooks.js";
 import ME from "../Constants.tsx";
 
 function getTargetType(action) {
@@ -73,9 +73,9 @@ function getTargetType(action) {
                               CHANNEL = constants.GUILD;
                             } else {
                               const _HermesInternal = HermesInternal;
-                              _modDef1205.captureMessage("Unknown target type for: " + action);
+                              _modDef1232.captureMessage("Unknown target type for: " + action);
                               CHANNEL = constants.UNKNOWN;
-                              const obj = _modDef1205;
+                              const obj = _modDef1232;
                             }
                           }
                         }

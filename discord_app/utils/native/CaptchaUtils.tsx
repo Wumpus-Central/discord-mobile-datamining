@@ -1,7 +1,7 @@
 // discord_app/utils/native/CaptchaUtils.tsx
-import convertStringArrayToSkemaErrorItems from "../../../discord_common/js/packages/http-utils/V8APIError.tsx";
 import expandEventPropertiesDefault from "../AnalyticsUtils.tsx";
-import siteKeyDefault from "../../../_runtime/17124_siteKey.js";
+import convertStringArrayToSkemaErrorItems from "../../../discord_common/js/packages/http-utils/V8APIError.tsx";
+import siteKeyDefault from "../../../_runtime/17290_siteKey.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../modules/user_settings/LocaleStore.tsx";
@@ -197,10 +197,10 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
   ({ onVerify: importDefault, onError: dependencyMap } = siteKey);
   const merged = Object.assign(siteKey, Object.create(null));
   let React;
-  let obj = siteKey(586);
+  let obj = siteKey(504);
   let items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  const v4Result = siteKey(511).v4();
+  const v4Result = siteKey(1256).v4();
   React = v4Result;
   let items1 = [v4Result, siteKey];
   const effect = React.useEffect(() => {
@@ -269,7 +269,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
     },
     languageCode: stateFromStores,
   };
-  let obj2 = siteKey(511);
+  let obj2 = siteKey(1256);
   const merged1 = Object.assign(merged);
   return jsx(siteKeyDefault, {
     siteKey,

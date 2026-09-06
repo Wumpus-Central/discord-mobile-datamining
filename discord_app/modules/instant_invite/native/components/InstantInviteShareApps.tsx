@@ -19,12 +19,12 @@ const memoResult = importAllResult.memo(function InstantInviteShareApps(onItemPr
   onItemPressed = onItemPressed.onItemPressed;
   closure_1 = undefined;
   dependencyMap = undefined;
-  let obj = onItemPressed(4936);
+  let obj = onItemPressed(4982);
   closure_1 = obj.useFontScale();
   const tmp = callback2();
   [arr, c2] = callback(importAllResult.useState(closure_8), 2);
   const tmp2 = callback(importAllResult.useState(closure_8), 2);
-  const gesture = onItemPressed(5661).useNativeGesture({ disallowInterruption: true });
+  const gesture = onItemPressed(6655).useNativeGesture({ disallowInterruption: true });
   const effect = importAllResult.useEffect(() => {
     Promise.all(closure_1_7.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
       const items = [];
@@ -108,7 +108,7 @@ const memoResult = importAllResult.memo(function InstantInviteShareApps(onItemPr
       })}
     </closure_6>
   );
-  return jsx(onItemPressed(5661).GestureDetector, { gesture, children });
+  return jsx(onItemPressed(6655).GestureDetector, { gesture, children });
 });
 const result = require("set").fileFinishedImporting(
   "modules/instant_invite/native/components/InstantInviteShareApps.tsx",

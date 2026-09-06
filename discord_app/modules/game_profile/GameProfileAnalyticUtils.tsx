@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
-import v1 from "../../../_runtime/00511_v1.js";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import v1 from "../../../_runtime/01256_v1.js";
 import closure_3 from "../content_inventory/ContentInventoryStore.tsx";
 import ME from "../../Constants.tsx";
 import { ContentInventoryFeedKey } from "../content_inventory/ContentInventoryConstants.tsx";

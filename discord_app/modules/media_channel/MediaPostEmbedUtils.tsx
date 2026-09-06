@@ -26,9 +26,9 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (!canAccess) {
       has_media_attachment = mediaPostEmbedData.has_media_attachment;
     }
-    const intl = tmp17(1233).intl;
+    const intl = tmp17(1114).intl;
     const string = intl.string;
-    const t = tmp17(1233).t;
+    const t = tmp17(1114).t;
     if (canAccess) {
       let stringResult = string(t.UsZEBI);
     } else {
@@ -63,7 +63,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (flag) {
       flag = !has_media_attachment;
     }
-    let tmp17Result = tmp17(1398);
+    let tmp17Result = tmp17(1384);
     const thumbnail2 = mediaPostEmbedData.thumbnail;
     let num2;
     if (thumbnail2 != null) {
@@ -108,8 +108,8 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     obj[3] = thumbnailImage;
     let stringResult1;
     if (has_media_attachment) {
-      const intl2 = tmp17(1233).intl;
-      stringResult1 = intl2.string(tmp17(1233).t.Yonlia);
+      const intl2 = tmp17(1114).intl;
+      stringResult1 = intl2.string(tmp17(1114).t.Yonlia);
     }
     obj[4] = stringResult1;
     ({ parent_channel_id: obj5[5], channel_id: obj5[6] } = mediaPostEmbedData);
@@ -133,7 +133,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     obj[13] = name;
     let channelName;
     if (null != parentChannel) {
-      tmp17Result = tmp17(4674);
+      tmp17Result = tmp17(4713);
       channelName = tmp17Result.computeChannelName(parentChannel, closure_5, closure_4);
     }
     obj[14] = channelName;
@@ -150,10 +150,10 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
   if (null != url) {
     const parseURLSafelyResult = getPathsFromURL.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmp2Result = tmp2(4461);
+      let tmp2Result = tmp2(4543);
       const result = tmp2Result.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmp2Result = tmp2(4675);
+        tmp2Result = tmp2(4714);
         tryParseChannelPathResult = tmp2Result.tryParseChannelPath(result);
       }
     }
@@ -173,10 +173,10 @@ export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPat
   if (null != url) {
     const parseURLSafelyResult = getPathsFromURL.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmpResult = tmp(4461);
+      let tmpResult = tmp(4543);
       const result = tmpResult.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmpResult = tmp(4675);
+        tmpResult = tmp(4714);
         return tmpResult.tryParseChannelPath(result);
       }
     }

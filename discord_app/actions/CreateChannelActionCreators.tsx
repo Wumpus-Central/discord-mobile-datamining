@@ -1,7 +1,7 @@
 // discord_app/actions/CreateChannelActionCreators.tsx
 import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4714 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4753 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../stores/UserGuildSettingsStore.tsx";
 import ME from "../Constants.tsx";
 import { ChannelNotificationSettingsFlags as closure_7 } from "../modules/user_settings/UserSettingsConstants.tsx";
@@ -18,7 +18,7 @@ export default {
       permissionOverwrites = [];
     }
     ({ bitrate, userLimit, parentId, skuId, applicationId, flags, availableTags, gameId } = guildId);
-    let obj = permissionOverwrites(706);
+    let obj = permissionOverwrites(573);
     obj.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId, channelType: type });
     obj = { type, name: guildId.name, permission_overwrites: permissionOverwrites };
     let tmp4 = null != bitrate;
@@ -84,9 +84,9 @@ export default {
     };
     const tmp = permissionOverwrites;
     tmp8 = constants;
-    const tmpResult = permissionOverwrites(4714);
+    const tmpResult = permissionOverwrites(4753);
     obj[3] = {
-      event: guildId(500).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(1250).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = guildId(closure_1_2[6]);
         obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
@@ -110,7 +110,7 @@ export default {
       },
     };
     obj1 = {
-      event: guildId(500).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(1250).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = guildId(closure_1_2[6]);
         obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
@@ -133,8 +133,8 @@ export default {
         return obj.exact(obj);
       },
     };
-    obj[4] = guildId(527).rejectWithMigratedError();
-    const obj6 = guildId(527);
+    obj[4] = guildId(1272).rejectWithMigratedError();
+    const obj6 = guildId(1272);
     return tmpResult.post(obj).then(
       (body) => {
         if (closure_1_3.isOptInEnabled(guildId)) {
@@ -160,7 +160,7 @@ export default {
     );
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
-    let obj = _modDef4714;
+    let obj = _modDef4753;
     obj = {
       url: closure_6.GUILD_CHANNELS(closure_0),
       body: obj,

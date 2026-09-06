@@ -18,10 +18,10 @@ export default function UserProfileMutualGuilds(user) {
   user = user.user;
   let trackUserProfileAction;
   const tmp = callback3();
-  let obj = user(8575);
+  let obj = user(8190);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  const mutualGuilds = trackUserProfileAction(9246)(user).mutualGuilds;
-  if (trackUserProfileAction(9248)(user)) {
+  const mutualGuilds = trackUserProfileAction(12602)(user).mutualGuilds;
+  if (trackUserProfileAction(12994)(user)) {
     if (null != mutualGuilds) {
       if (0 !== mutualGuilds.length) {
         const substr = mutualGuilds.slice(0, 3);
@@ -50,19 +50,19 @@ export default function UserProfileMutualGuilds(user) {
           );
         };
         obj1 = { size: null, totalCount: null, names: null, children: null };
-        obj1[0] = tmp2(6013).GuildIconSizes.XXSMALL;
+        obj1[0] = tmp2(5584).GuildIconSizes.XXSMALL;
         obj1[1] = mapped.length;
         obj1[2] = mapped.map((name) => name.name);
         obj1[3] = mapped.map((guild) => {
-          const obj = { guild, size: user(6013).GuildIconSizes.XXSMALL };
-          return callback(trackUserProfileAction(6013), obj, guild.id);
+          const obj = { guild, size: user(5584).GuildIconSizes.XXSMALL };
+          return callback(trackUserProfileAction(5584), obj, guild.id);
         });
-        const items = [callback(tmp2(9287).GuildIconPile, obj1)];
+        const items = [callback(tmp2(12618).GuildIconPile, obj1)];
         const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
-        obj2[2] = trackUserProfileAction(9251)(mutualGuilds.length);
-        items[1] = callback(tmp2(4474).Text, obj2);
+        obj2[2] = trackUserProfileAction(12603)(mutualGuilds.length);
+        items[1] = callback(tmp2(4556).Text, obj2);
         obj[3] = items;
-        obj[1] = callback2(tmp2(5077).PressableOpacity, obj);
+        obj[1] = callback2(tmp2(5123).PressableOpacity, obj);
         return callback(View, obj);
       }
     }

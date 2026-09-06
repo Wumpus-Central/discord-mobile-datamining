@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/07824_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07089_registerAsset.js";
 import GuildEventCardControlsDefault from "GuildEventCard.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -20,14 +20,14 @@ function NavigationBar(onClose) {
   onClose = onClose.onClose;
   let obj = { children: null };
   obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-  const intl = onClose(1233).intl;
-  obj[1] = intl.string(onClose(1233).t.cpT0Cq);
+  const intl = onClose(1114).intl;
+  obj[1] = intl.string(onClose(1114).t.cpT0Cq);
   obj[2] = function onPress() {
     return onClose();
   };
   obj = { source: registerAssetDefault };
-  obj[3] = callback(onClose(1296).Icon, obj);
-  obj[0] = callback(onClose(5077).PressableOpacity, obj);
+  obj[3] = callback(onClose(1178).Icon, obj);
+  obj[0] = callback(onClose(5123).PressableOpacity, obj);
   return callback(View, obj);
 }
 function StartEventHeader(children) {

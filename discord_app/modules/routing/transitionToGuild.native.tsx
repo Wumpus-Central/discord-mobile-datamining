@@ -14,7 +14,7 @@ export const transitionToGuild = function transitionToGuild(guildId) {
   const result = LayoutAnimation.DeprecatedLayoutAnimation({
     duration: 0,
     create: "r",
-    update: "sa",
+    update: "WireType",
     delete: "isArray",
   });
   const obj2 = LayoutAnimation;

@@ -5,13 +5,13 @@ import CollectiblesItemType from "../../../../discord_common/js/shared/shared-co
 import map from "../../../design/tokens/native/useToken.tsx";
 import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
 import firstAvatarDecoration from "../../collectibles/hooks/useShopProductItems.tsx";
-import SlayerStorefrontItemCardDefault from "../../slayer_storefront/native/SlayerStorefrontItemCard.tsx";
+import SourceIcon from "../../wishlists/native/WishlistItemCardBase.tsx";
 import BundleStaticPreviewContentDefault from "../../collectibles/native/BundleSampleV2.tsx";
 import ProfileEffectSampleDefault from "../../collectibles/native/ProfileEffectSampleV2.tsx";
 import AvatarDecorationSampleV2Default from "../../collectibles/native/AvatarDecorationSampleV2.tsx";
 import filterLayerDefault from "../../collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import SourceIcon from "../../wishlists/native/WishlistItemCardBase.tsx";
 import NameplateCardPreviewDefault from "../../collectibles/nameplates/native/NameplateCardPreview.tsx";
+import SlayerStorefrontItemCardDefault from "../../slayer_storefront/native/SlayerStorefrontItemCard.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { transformSKUToCollectiblesItem as closure_5 } from "../../collectibles/records/CollectiblesItemRecord.tsx";
@@ -140,7 +140,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(11005).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(8773).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = React.useMemo(() => closure_1_5(sku), items);

@@ -20,7 +20,7 @@ export default function usePremiumGroupMembership() {
     flag2 = true;
   }
   const items = [closure_4];
-  const stateFromStoresObject = flag(586).useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => ({
     premiumGroupMembership: closure_4.getMembership(),
     isFetchingMembership: closure_4.isFetchingMembership(),
   }));

@@ -262,12 +262,12 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     trailing: null,
     content: null,
     labels: num,
-    trailingText: tmp(709).radii.md,
+    trailingText: tmp(576).radii.md,
     dragHandle: null,
   };
   obj = {
-    minWidth: tmp(709).modules.mobile.TABLE_ROW_ICON_SIZE,
-    marginEnd: tmp(709).modules.mobile.TABLE_ROW_PADDING,
+    minWidth: tmp(576).modules.mobile.TABLE_ROW_ICON_SIZE,
+    marginEnd: tmp(576).modules.mobile.TABLE_ROW_PADDING,
     alignItems: "center",
     justifyContent: "center",
   };

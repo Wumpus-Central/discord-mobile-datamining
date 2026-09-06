@@ -4,7 +4,7 @@ import ManaContext from "../../../../../discord_common/js/packages/design/native
 import setDefault from "../../../core/native/NativeView.tsx";
 import dismissPanelDefault from "../VoicePanelStateContext.tsx";
 import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import registerAssetDefault from "../../../../../_runtime/16944_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/17108_registerAsset.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../a11y/AccessibilityStore.tsx";
@@ -25,7 +25,7 @@ function StreamIcon(voicePlatform) {
   voicePlatform = voicePlatform.voicePlatform;
   let controlsSpecs;
   controlsSpecs = importAllResult.useContext(dismissPanelDefault).controlsSpecs;
-  let obj = controlsSpecs(4217);
+  let obj = controlsSpecs(4296);
   const fn = function o() {
     const tmp = controlsSpecs.get().mode === closure_1_11.HIDDEN;
     let num = 4;
@@ -47,11 +47,11 @@ function StreamIcon(voicePlatform) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   let source = registerAssetDefault;
   if (voicePlatform === constants2.XBOX) {
-    source = tmp2(16989);
+    source = tmp2(17153);
   } else if (voicePlatform === tmp6.MOBILE) {
-    source = tmp2(10173);
+    source = tmp2(10064);
   } else if (voicePlatform === tmp6.QUEST) {
-    source = tmp2(16990);
+    source = tmp2(17154);
   }
   const style = [callback2().iconWithoutBackground, animatedStyle];
   return callback(closure_19, { source, style });
@@ -64,41 +64,90 @@ function AnimatedLabelIcon(icon) {
     let obj = { voicePlatform: null };
     obj[0] = icon.voicePlatform;
     return callback(StreamIcon, obj);
-  } else if (tmp2(16942).VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
-    obj = { style: null, hitSlop: 12, onPress: null, children: null };
+  } else if (tmp2(17106).VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
+    obj = {
+      style: null,
+      hitSlop: 12,
+      onPress: null,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      children: null,
+    };
     obj[0] = tmp.speakerMuteIcon;
     obj[2] = icon.onPress;
+    const intl4 = tmp2(1114).intl;
+    obj[4] = intl4.string(tmp2(1114).t.Q8Uzof);
     obj1 = { style: null };
     obj1[0] = tmp.iconWithoutBackground;
-    obj[3] = callback(tmp2(10096).VoiceXIcon, obj1);
+    obj[5] = callback(tmp2(9987).VoiceXIcon, obj1);
     return callback(Pressable, obj);
-  } else if (tmp2(16942).VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
-    const obj2 = { style: null, onPress: null, children: null };
-    obj2[0] = tmp.iconContainer;
-    obj2[1] = icon.onPress;
-    const obj3 = { style: null, state: null };
-    obj3[0] = tmp.icon;
-    obj3[1] = icon.videoIconState;
-    obj2[2] = callback(tmp2(9834).VideoIcon, obj3);
-    return callback(Pressable, obj2);
-  } else if (tmp2(16942).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.iconContainer;
-    const obj5 = { onPress: null, hitSlop: 12, children: null };
-    obj5[0] = icon.onPress;
-    const obj6 = { style: null, state: null, alwaysWhite: true };
-    obj6[0] = tmp.icon;
-    obj6[1] = icon.muteDeafenIconState;
-    obj5[2] = callback(tmp2(9834).MuteDeafenIcon, obj6);
-    obj4[1] = callback(Pressable, obj5);
-    return callback(setDefault, obj4);
-  } else if (tmp2(16942).VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
-    obj = { style: null, onPress: null, children: null };
+  } else if (tmp2(17106).VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
+    if (icon.videoIconState === tmp2(9120).VideoIconState.VIDEO_DISABLED_LOCAL_AUTO) {
+      const intl3 = tmp2(1114).intl;
+      let stringResult = intl3.string(tmp2(1114).t.uv1tVh);
+    } else {
+      const intl2 = tmp2(1114).intl;
+      stringResult = intl2.string(tmp2(1114).t["PXMZ/+"]);
+    }
+    if (null != icon.onPress) {
+      const obj2 = {
+        style: null,
+        onPress: null,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        children: null,
+      };
+      obj2[0] = tmp.iconContainer;
+      obj2[1] = icon.onPress;
+      obj2[3] = stringResult;
+      const obj3 = { style: null, state: null };
+      obj3[0] = tmp.icon;
+      obj3[1] = icon.videoIconState;
+      obj2[4] = callback(tmp2(9119).VideoIcon, obj3);
+      let tmp16 = callback(Pressable, obj2);
+    } else {
+      const obj4 = {
+        style: null,
+        accessible: true,
+        accessibilityRole: "image",
+        accessibilityLabel: null,
+        children: null,
+      };
+      obj4[0] = tmp.iconContainer;
+      obj4[3] = stringResult;
+      const obj5 = { style: null, state: null };
+      obj5[0] = tmp.icon;
+      obj5[1] = icon.videoIconState;
+      obj4[4] = callback(tmp2(9119).VideoIcon, obj5);
+      tmp16 = callback(setDefault, obj4);
+      const tmp15 = setDefault;
+    }
+    return tmp16;
+  } else if (tmp2(17106).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
+    const obj6 = {
+      style: null,
+      accessibilityElementsHidden: true,
+      importantForAccessibility: "no-hide-descendants",
+      children: null,
+    };
+    obj6[0] = tmp.iconContainer;
+    const obj7 = { onPress: null, hitSlop: 12, children: null };
+    obj7[0] = icon.onPress;
+    const obj8 = { style: null, state: null, alwaysWhite: true };
+    obj8[0] = tmp.icon;
+    obj8[1] = icon.muteDeafenIconState;
+    obj7[2] = callback(tmp2(9119).MuteDeafenIcon, obj8);
+    obj6[3] = callback(Pressable, obj7);
+    return callback(setDefault, obj6);
+  } else if (tmp2(17106).VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
+    obj = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
     obj[0] = tmp.iconContainer;
     obj[1] = icon.onPress;
-    const obj7 = { size: "xs", color: null };
-    obj7[1] = ThemesDefault.colors.TEXT_FEEDBACK_WARNING;
-    obj[2] = callback(tmp2(7720).CircleErrorIcon, obj7);
+    const intl = tmp2(1114).intl;
+    obj[3] = intl.string(tmp2(1114).t.HFwRpk);
+    const obj9 = { size: "xs", color: null };
+    obj9[1] = ThemesDefault.colors.TEXT_FEEDBACK_WARNING;
+    obj[4] = callback(tmp2(6610).CircleErrorIcon, obj9);
     return callback(Pressable, obj);
   }
 }
@@ -200,8 +249,8 @@ let closure_27 = importAllResult.memo((participant) => {
   controlsHidden = participant.controlsHidden;
   let guildId;
   ({ isSelf, layout } = participant);
-  guildId = importAllResult.useContext(guildId(12068)).guildId;
-  let obj = controlsHidden(4217);
+  guildId = importAllResult.useContext(guildId(12272)).guildId;
+  let obj = controlsHidden(4296);
   const fn = function n() {
     const value = controlsHidden.get();
     if (value) {
@@ -221,7 +270,7 @@ let closure_27 = importAllResult.memo((participant) => {
     controlsHidden,
     FLOATING_BAR_HEIGHT: c21,
     VOICE_PANEL_CARD_INNER_PADDING: closure_12,
-    withSpring: controlsHidden(4928).withSpring,
+    withSpring: controlsHidden(4974).withSpring,
     MODE_CHANGE_PHYSICS: closure_9,
   };
   fn.__closure = obj;
@@ -252,13 +301,13 @@ let closure_27 = importAllResult.memo((participant) => {
       const obj3 = guildId(tmp2[32]);
     }
   }, items);
-  obj = { icon: guildId(16991), onPress: callback, style: animatedStyle, layout, accessibilityLabel: null };
+  obj = { icon: guildId(17155), onPress: callback, style: animatedStyle, layout, accessibilityLabel: null };
   const tmp3 = closure_16;
-  const tmp4 = guildId(16871);
-  const result = controlsHidden(16940).isStableActivityParticipant(participant);
-  const intl = controlsHidden(1233).intl;
+  const tmp4 = guildId(17035);
+  const result = controlsHidden(17104).isStableActivityParticipant(participant);
+  const intl = controlsHidden(1114).intl;
   const string = intl.string;
-  const t = controlsHidden(1233).t;
+  const t = controlsHidden(1114).t;
   if (result) {
     let stringResult = string(t["R/FK4A"]);
   } else if (isSelf) {
@@ -287,7 +336,7 @@ let closure_29 = importAllResult.memo((participantId) => {
     setFocused(participantId);
   }, items);
   let obj = participantId(setFocused[12]);
-  const fn = function _() {
+  const fn = function u() {
     let value = controlsHidden.get();
     if (!value) {
       value = mode.get() === closure_1_10.PIP;
@@ -319,16 +368,16 @@ let closure_29 = importAllResult.memo((participantId) => {
   fn.__initData = closure_28;
   const animatedStyle = obj.useAnimatedStyle(fn);
   if (isActivityParticipant) {
-    const intl3 = tmp5(tmp2[26]).intl;
-    let stringResult = intl3.string(tmp5(tmp2[26]).t["3ejJer"]);
+    const intl3 = tmp5(tmp2[22]).intl;
+    let stringResult = intl3.string(tmp5(tmp2[22]).t["3ejJer"]);
   } else if (null != targetName) {
-    const intl2 = tmp5(tmp2[26]).intl;
+    const intl2 = tmp5(tmp2[22]).intl;
     obj = { targetName: null };
     obj[0] = targetName;
-    stringResult = intl2.formatToPlainString(tmp5(tmp2[26]).t.OervdV, obj);
+    stringResult = intl2.formatToPlainString(tmp5(tmp2[22]).t.OervdV, obj);
   } else {
-    const intl = tmp5(tmp2[26]).intl;
-    stringResult = intl.string(tmp5(tmp2[26]).t["77cRN4"]);
+    const intl = tmp5(tmp2[22]).intl;
+    stringResult = intl.string(tmp5(tmp2[22]).t["77cRN4"]);
   }
   obj1 = {
     icon: controlsHidden(setFocused[35]),
@@ -474,9 +523,9 @@ let closure_39 = importAllResult.memo((arg0) => {
   let gameRecord;
   dependencyMap = undefined;
   importAllResult = undefined;
-  let obj = gameRecord(16994);
+  let obj = gameRecord(17158);
   showGameTag = obj.useConfig({ location: "VoicePanelCardFloatingControls" }).showGameTag;
-  const first = gameRecord(9894)(userId, arg0.guildId, showGameTag)[0];
+  const first = gameRecord(9179)(userId, arg0.guildId, showGameTag)[0];
   let tmp5;
   if (showGameTag) {
     let application_id;
@@ -485,8 +534,8 @@ let closure_39 = importAllResult.memo((arg0) => {
     }
     tmp5 = application_id;
   }
-  gameRecord = gameRecord(8823)({ applicationId: tmp5 }).gameRecord;
-  const tmp8 = gameRecord(5065)(gameRecord);
+  gameRecord = gameRecord(8678)({ applicationId: tmp5 }).gameRecord;
+  const tmp8 = gameRecord(5111)(gameRecord);
   dependencyMap = tmp8;
   importAllResult = importAllResult.useRef(false);
   let items = [showGameTag, gameRecord, tmp8];
@@ -502,9 +551,9 @@ let closure_39 = importAllResult.memo((arg0) => {
       tmp = dependencyMap;
     }
     if (tmp) {
-      const obj = showGameTag(8821);
-      const items = [showGameTag(8821).RejectionReason.Obscured];
-      obj.trackEntryPoint(false, gameRecord.id, items, showGameTag(8831).GameProfileSources.CallTile);
+      const obj = showGameTag(8676);
+      const items = [showGameTag(8676).RejectionReason.Obscured];
+      obj.trackEntryPoint(false, gameRecord.id, items, showGameTag(8686).GameProfileSources.CallTile);
       ref.current = true;
     }
   }, items);
@@ -515,12 +564,12 @@ let closure_39 = importAllResult.memo((arg0) => {
         obj[0] = gameRecord;
         obj[1] = userId;
         obj[2] = textColor;
-        let tmp12 = callback(tmp(16995), obj);
+        let tmp12 = callback(tmp(17159), obj);
       }
       return tmp12;
     }
   }
-  tmp12 = callback(tmp(9025), { userId, textColor });
+  tmp12 = callback(tmp(9184), { userId, textColor });
 });
 let closure_40 = {
   code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}",
@@ -629,13 +678,13 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
   }
   sharedValue = controlsHidden(controlsSpecs[12]).useSharedValue(num);
   const tmp4Result3 = controlsHidden(controlsSpecs[12]);
-  const fn2 = function u() {
+  const fn2 = function _() {
     return derivedValue.get();
   };
   fn2.__closure = { isPillHidden: derivedValue };
   fn2.__workletHash = 653298163833;
   fn2.__initData = closure_41;
-  const fn3 = function _(arg0) {
+  const fn3 = function u(arg0) {
     let num = 1;
     if (arg0) {
       num = 0;
@@ -648,65 +697,66 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
   fn3.__initData = closure_42;
   const animatedReaction = controlsHidden(controlsSpecs[12]).useAnimatedReaction(fn2, fn3);
   const tmp4Result4 = controlsHidden(controlsSpecs[12]);
-  class Q {
-    constructor() {
-      obj = { opacity: closure_12.get(), top: null, height: null, pointerEvents: null };
-      obj2 = closure_11;
-      num = 0;
-      if (closure_11.get()) {
-        tmp = closure_1_21;
-        tmp2 = closure_12;
-        num = closure_1_21 + closure_12;
-      }
-      obj[1] = num;
-      obj[2] = closure_1_21;
-      str = "auto";
-      if (obj2.get()) {
-        str = "none";
-      }
-      obj[3] = str;
-      return obj;
+  const fn4 = function q() {
+    const obj = { opacity: sharedValue.get(), top: null, height: null, pointerEvents: null };
+    let num = 0;
+    if (derivedValue.get()) {
+      num = closure_1_21 + sharedValue;
     }
-  }
+    obj[1] = num;
+    obj[2] = closure_1_21;
+    let str = "auto";
+    if (derivedValue.get()) {
+      str = "none";
+    }
+    obj[3] = str;
+    return obj;
+  };
   obj1 = {
     pillOpacity: sharedValue,
     isPillHidden: derivedValue,
     FLOATING_BAR_HEIGHT: c21,
     VOICE_PANEL_CARD_INNER_PADDING: sharedValue,
   };
-  Q.__closure = obj1;
-  Q.__workletHash = 12355778282621;
-  Q.__initData = closure_43;
-  const animatedStyle = controlsHidden(controlsSpecs[12]).useAnimatedStyle(Q);
+  fn4.__closure = obj1;
+  fn4.__workletHash = 12355778282621;
+  fn4.__initData = closure_43;
+  const animatedStyle = controlsHidden(controlsSpecs[12]).useAnimatedStyle(fn4);
   const tmp4Result5 = controlsHidden(controlsSpecs[12]);
-  const fn4 = function $() {
-    const value = connected.get();
-    let tmp2 = !value;
-    if (value) {
-      let tmp4 = !isScreenReaderEnabled;
-      if (!isScreenReaderEnabled) {
-        tmp4 = controlsSpecs.get().mode === derivedValue.HIDDEN;
+  class Z {
+    constructor() {
+      value = connected.get();
+      tmp2 = !value;
+      if (value) {
+        tmp3 = closure_6;
+        tmp4 = !closure_6;
+        if (!closure_6) {
+          tmp5 = controlsSpecs;
+          tmp6 = closure_11;
+          tmp4 = controlsSpecs.get().mode === closure_11.HIDDEN;
+        }
+        if (tmp4) {
+          tmp4 = closure_9;
+        }
+        tmp2 = tmp4;
       }
-      if (tmp4) {
-        tmp4 = closure_9;
-      }
-      tmp2 = tmp4;
-    }
-    let num = "auto";
-    if (tmp2) {
       num = "auto";
-      if (closure_9) {
-        num = 0;
+      if (tmp2) {
+        tmp7 = closure_9;
+        num = "auto";
+        if (closure_9) {
+          num = 0;
+        }
       }
+      obj = { width: num, marginRight: null };
+      num2 = 0;
+      if (tmp2) {
+        num2 = -4;
+      }
+      obj[1] = num2;
+      return obj;
     }
-    const obj = { width: num, marginRight: null };
-    let num2 = 0;
-    if (tmp2) {
-      num2 = -4;
-    }
-    obj[1] = num2;
-    return obj;
-  };
+  }
   obj2 = {
     connected,
     isScreenReaderEnabled,
@@ -715,11 +765,11 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
     hasIcon: tmp14,
     GAP: 4,
   };
-  fn4.__closure = obj2;
-  fn4.__workletHash = 10013340978870;
-  fn4.__initData = closure_44;
+  Z.__closure = obj2;
+  Z.__workletHash = 10013340978870;
+  Z.__initData = closure_44;
   const items1 = [tmp6.labelPositionContainer];
-  const animatedStyle1 = controlsHidden(controlsSpecs[12]).useAnimatedStyle(fn4);
+  const animatedStyle1 = controlsHidden(controlsSpecs[12]).useAnimatedStyle(Z);
   const obj3 = { style: items1, layout, pointerEvents: "box-none", children: null };
   let tmp24;
   tmpResult = tmp(tmp2[38]);
@@ -733,8 +783,8 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp6.initialIcons;
     obj5[1] = tmpResultResult.map((icon) => callback(closure_25, { icon }, icon.type));
-    tmp20Result = tmp20(tmp(tmp2[24]), obj5);
-    const tmpResult1 = tmp(tmp2[24]);
+    tmp20Result = tmp20(tmp(tmp2[26]), obj5);
+    const tmpResult1 = tmp(tmp2[26]);
   }
   const items3 = [tmp20Result];
   const obj6 = { style: items4, layout, children: null };
@@ -764,10 +814,10 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
       (type) => type.type === controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.STREAM_ICON,
     )
   ) {
-    const intl3 = tmp4(tmp2[26]).intl;
+    const intl3 = tmp4(tmp2[22]).intl;
     const obj9 = { username: null };
     obj9[0] = label;
-    let formatToPlainStringResult = intl3.formatToPlainString(tmp4(tmp2[26]).t.I0mOAs, obj9);
+    let formatToPlainStringResult = intl3.formatToPlainString(tmp4(tmp2[22]).t.I0mOAs, obj9);
   } else {
     const found = tmpResultResult.find(
       (type) => type.type === controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON,
@@ -775,18 +825,18 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
     formatToPlainStringResult = label;
     if (null != found) {
       const muteDeafenIconState = found.muteDeafenIconState;
-      if (tmp4(tmp2[27]).MuteDeafenIconState.DEAFENED !== muteDeafenIconState) {
-        if (tmp4(tmp2[27]).MuteDeafenIconState.DEAFENED_SERVER !== muteDeafenIconState) {
-          const intl = tmp4(tmp2[26]).intl;
+      if (tmp4(tmp2[24]).MuteDeafenIconState.DEAFENED !== muteDeafenIconState) {
+        if (tmp4(tmp2[24]).MuteDeafenIconState.DEAFENED_SERVER !== muteDeafenIconState) {
+          const intl = tmp4(tmp2[22]).intl;
           const obj10 = { username: null };
           obj10[0] = label;
-          formatToPlainStringResult = intl.formatToPlainString(tmp4(tmp2[26]).t.Hd1oVG, obj10);
+          formatToPlainStringResult = intl.formatToPlainString(tmp4(tmp2[22]).t.Hd1oVG, obj10);
         }
       }
-      const intl2 = tmp4(tmp2[26]).intl;
+      const intl2 = tmp4(tmp2[22]).intl;
       const obj11 = { username: null };
       obj11[0] = label;
-      formatToPlainStringResult = intl2.formatToPlainString(tmp4(tmp2[26]).t["9hDjai"], obj11);
+      formatToPlainStringResult = intl2.formatToPlainString(tmp4(tmp2[22]).t["9hDjai"], obj11);
     }
   }
   obj8[5] = formatToPlainStringResult;
@@ -803,8 +853,8 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
   if (isUserSecureFramesVerified) {
     const obj13 = { style: null, size: "xs", accessibilityLabel: null };
     obj13[0] = tmp6.secureFramesIcon;
-    const intl4 = tmp4(tmp2[26]).intl;
-    obj13[2] = intl4.string(tmp4(tmp2[26]).t.mR9cf3);
+    const intl4 = tmp4(tmp2[22]).intl;
+    obj13[2] = intl4.string(tmp4(tmp2[22]).t.mR9cf3);
     isUserSecureFramesVerified = tmp20(tmp4(tmp2[56]).ShieldLockIcon, obj13);
   }
   items6[2] = isUserSecureFramesVerified;

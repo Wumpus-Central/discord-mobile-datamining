@@ -43,19 +43,19 @@ export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
   );
   const items1 = [arg1, callback];
   return React.useCallback(() => {
-    let obj = callback2(4859);
+    let obj = callback2(4905);
     obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
-    const intl = callback(1233).intl;
-    obj[0] = intl.string(callback(1233).t.JmUENg);
-    const intl2 = callback(1233).intl;
+    const intl = callback(1114).intl;
+    obj[0] = intl.string(callback(1114).t.JmUENg);
+    const intl2 = callback(1114).intl;
     obj = { applicationName: callback2 };
-    obj[1] = intl2.format(callback(1233).t["6l2osp"], obj);
-    const intl3 = callback(1233).intl;
-    obj[2] = intl3.string(callback(1233).t["ETE/oC"]);
-    const intl4 = callback(1233).intl;
-    obj[3] = intl4.string(callback(1233).t["cY+Oob"]);
+    obj[1] = intl2.format(callback(1114).t["6l2osp"], obj);
+    const intl3 = callback(1114).intl;
+    obj[2] = intl3.string(callback(1114).t["ETE/oC"]);
+    const intl4 = callback(1114).intl;
+    obj[3] = intl4.string(callback(1114).t["cY+Oob"]);
     obj[4] = callback;
-    obj[5] = callback2(4948).Colors.RED;
+    obj[5] = callback2(4994).Colors.RED;
     obj.show(obj);
   }, items1);
 }

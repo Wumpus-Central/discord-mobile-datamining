@@ -82,13 +82,13 @@ const memoResult1 = importAllResult.memo((nameplate) => {
   }, items1);
   const tmp = callback3();
   const items2 = [tmp.nameplate, { borderRadius: 6 }];
-  return callback(nameplate(8102).EditCollectiblesListItemProduct, {
+  return callback(nameplate(13171).EditCollectiblesListItemProduct, {
     skuId: nameplate.skuId,
     isSelected,
     onPress: callback,
     size,
     accessibilityLabel: nameplate.label,
-    children: callback(setSelectedNameplate(8539), {
+    children: callback(setSelectedNameplate(8818), {
       nameplate: memo,
       fullOpacity: true,
       isSquarePreview: true,

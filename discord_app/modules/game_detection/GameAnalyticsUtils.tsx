@@ -18,13 +18,13 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
     return {
-      gameName: "Array",
-      gameId: "call",
-      exe: "getCurrentUser",
-      distributor: "window",
-      sku: "HermesInternal",
-      gameMetadata: "w",
-      rawExePath: "__closure",
+      gameName: "call",
+      gameId: "status",
+      exe: "padding",
+      distributor: "disabled",
+      sku: "radii",
+      gameMetadata: "Array",
+      rawExePath: "isArray",
     };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
@@ -111,7 +111,7 @@ export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, a
       if (formatted.endsWith("/")) {
         substr = formatted.slice(0, -1);
       }
-      dependencyMap = substr(1234).getPlatformName();
+      dependencyMap = substr(1115).getPlatformName();
       return arr.some((os) => {
         let tmp = os.os === closure_1;
         if (tmp) {

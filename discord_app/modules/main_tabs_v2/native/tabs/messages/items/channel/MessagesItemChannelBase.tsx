@@ -100,7 +100,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = store.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "Array", activities: "PX_16" };
+      obj = { status: "hash", activities: "call" };
     }
     return obj;
   });

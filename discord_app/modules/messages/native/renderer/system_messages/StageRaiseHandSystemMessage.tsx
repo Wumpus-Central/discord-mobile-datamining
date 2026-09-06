@@ -38,39 +38,39 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     if (participant != null) {
       rtsState = participant.rtsState;
     }
-    canResult = rtsState === tmp(4668).RequestToSpeakStates.REQUESTED_TO_SPEAK;
+    canResult = rtsState === tmp(4707).RequestToSpeakStates.REQUESTED_TO_SPEAK;
   }
   if (canResult) {
     canResult = toISOStringResult === toISOStringResult1;
   }
   obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj = {
     username: messageAuthorWithProcessedColor.nick,
-    usernameOnClick: tmp6(7883)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
+    usernameOnClick: tmp6(7962)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
   };
   obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj[2] = intl2.string(getSystemLocale.t.f0T7hI);
   let tmp10;
   if (message.hasFlag(constants2.EPHEMERAL)) {
     if (message.type === constants3.STAGE_RAISE_HAND) {
       obj1 = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
-      const intl3 = tmp(1233).intl;
+      const intl3 = tmp(1114).intl;
       const obj2 = { handleDelete: null };
       const obj3 = { action: "bindDismissMessage", message: null };
       obj3[1] = message;
       obj2[0] = obj3;
-      obj1[0] = intl3.formatToParts(tmp(1233).t["qDAX++"], obj2);
-      obj1[1] = tmp6(1994).getArticleURL(constants.EPHEMERAL_MESSAGES);
-      const intl4 = tmp(1233).intl;
-      obj1[2] = intl4.string(tmp(1233).t.htHOrp);
+      obj1[0] = intl3.formatToParts(tmp(1114).t["qDAX++"], obj2);
+      obj1[1] = tmp6(2024).getArticleURL(constants.EPHEMERAL_MESSAGES);
+      const intl4 = tmp(1114).intl;
+      obj1[2] = intl4.string(tmp(1114).t.htHOrp);
       tmp10 = obj1;
-      const tmp6Result = tmp6(1994);
+      const tmp6Result = tmp6(2024);
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(tmp6(7885)(roleStyle));
+  const merged = Object.assign(tmp6(7964)(roleStyle));
   return obj;
 };

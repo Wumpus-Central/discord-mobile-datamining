@@ -1,8 +1,8 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsStore.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import closure_3 from "../impersonate/ImpersonateStore.tsx";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import closure_5 from "GuildOnboardingStore.tsx";

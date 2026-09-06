@@ -48,30 +48,30 @@ export default function validateJumpWithAlert(author) {
         if (!closure_4.can(Permissions.MODERATE_MEMBERS, channel)) {
           let obj3 = setDefault;
           obj3 = { title: null, body: null, confirmText: null };
-          const intl = tmp(1233).intl;
-          obj3[0] = intl.string(tmp(1233).t["6vJKFk"]);
-          const intl2 = tmp(1233).intl;
+          const intl = tmp(1114).intl;
+          obj3[0] = intl.string(tmp(1114).t["6vJKFk"]);
+          const intl2 = tmp(1114).intl;
           const obj4 = { name: null };
           obj4[0] = author.author.username;
-          obj3[1] = intl2.formatToPlainString(tmp(1233).t.zKNgPF, obj4);
-          const intl3 = tmp(1233).intl;
-          obj3[2] = intl3.string(tmp(1233).t.BddRzS);
+          obj3[1] = intl2.formatToPlainString(tmp(1114).t.zKNgPF, obj4);
+          const intl3 = tmp(1114).intl;
+          obj3[2] = intl3.string(tmp(1114).t.BddRzS);
           obj3.show(obj3);
         }
         return false;
       }
       let obj6 = setDefault;
       const obj5 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-      const intl4 = tmp(1233).intl;
-      obj5[0] = intl4.string(tmp(1233).t["cZcG+P"]);
-      const intl5 = tmp(1233).intl;
+      const intl4 = tmp(1114).intl;
+      obj5[0] = intl4.string(tmp(1114).t["cZcG+P"]);
+      const intl5 = tmp(1114).intl;
       obj6 = { name: null };
       obj6[0] = author.author.username;
-      obj5[1] = intl5.formatToPlainString(tmp(1233).t["1YTWty"], obj6);
-      const intl6 = tmp(1233).intl;
-      obj5[2] = intl6.string(tmp(1233).t["+TSRGD"]);
-      const intl7 = tmp(1233).intl;
-      obj5[3] = intl7.string(tmp(1233).t["ETE/oC"]);
+      obj5[1] = intl5.formatToPlainString(tmp(1114).t["1YTWty"], obj6);
+      const intl6 = tmp(1114).intl;
+      obj5[2] = intl6.string(tmp(1114).t["+TSRGD"]);
+      const intl7 = tmp(1114).intl;
+      obj5[3] = intl7.string(tmp(1114).t["ETE/oC"]);
       obj5[4] = arg1;
       obj6.show(obj5);
     } else {

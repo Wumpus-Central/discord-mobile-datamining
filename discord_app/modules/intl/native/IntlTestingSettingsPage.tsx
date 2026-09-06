@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import hooksDefault from "../../../../_runtime/04074_hooks.js";
+import hooksDefault from "../../../../_runtime/04153_hooks.js";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import messagesProxyDefault from "../messages/Test.messages.js";
@@ -172,7 +172,7 @@ export default function IntlTestingSettingsPage() {
   const tmp = callback5();
   const syncExternalStore = React.useSyncExternalStore(
     require("../../../intl/index.native.tsx").intl.onLocaleChange,
-    () => callback(1233).intl.currentLocale,
+    () => callback(1114).intl.currentLocale,
   );
   _require = callback(React.useState({}), 2)[1];
   const effect = React.useEffect(() => {
@@ -213,7 +213,7 @@ export default function IntlTestingSettingsPage() {
     usernameHook(children) {
       obj = {
         style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 },
-        children: callback2(callback(4474).Text, obj),
+        children: callback2(callback(4556).Text, obj),
       };
       obj = { variant: "text-sm/normal", color: "text-overlay-light", children };
       return callback2(closure_6, obj);

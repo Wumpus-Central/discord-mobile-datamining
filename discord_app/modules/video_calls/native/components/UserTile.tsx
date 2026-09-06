@@ -1,9 +1,9 @@
 // discord_app/modules/video_calls/native/components/UserTile.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/08760_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/09612_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/09613_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/09614_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08614_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/09626_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/09627_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/09628_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -189,7 +189,7 @@ let closure_19 = importAllResult.memo((userId) => {
   const style = userId.style;
   ({ muted, deafened } = userId);
   const tmp = callback3();
-  let obj = userId(586);
+  let obj = userId(504);
   let items = [closure_10];
   const items1 = [userId];
   const tmp4 = callback(
@@ -226,8 +226,8 @@ let closure_19 = importAllResult.memo((userId) => {
       obj[0] = items2;
       obj = { source: null, size: null, disableColor: true };
       obj[0] = registerAssetDefault4;
-      obj[1] = tmp2(1296).Icon.Sizes.SMALL;
-      obj[1] = callback2(tmp2(1296).Icon, obj);
+      obj[1] = tmp2(1178).Icon.Sizes.SMALL;
+      obj[1] = callback2(tmp2(1178).Icon, obj);
       tmp14 = callback2(View, obj);
     }
     const items3 = [tmp14];
@@ -243,10 +243,10 @@ let closure_19 = importAllResult.memo((userId) => {
       obj2[0] = items4;
       const obj3 = { source: null, size: null, color: null, disableColor: null };
       obj3[0] = tmp6;
-      obj3[1] = tmp2(1296).Icon.Sizes.SMALL;
+      obj3[1] = tmp2(1178).Icon.Sizes.SMALL;
       obj3[2] = ThemesDefault.unsafe_rawColors.WHITE;
       obj3[3] = tmp6 === registerAssetDefault;
-      obj2[1] = callback2(tmp2(1296).Icon, obj3);
+      obj2[1] = callback2(tmp2(1178).Icon, obj3);
       tmp19Result = tmp19(View, obj2);
       const tmp20 = View;
     }

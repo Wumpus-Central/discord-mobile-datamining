@@ -1,8 +1,8 @@
 // discord_app/modules/emoji_picker/EmojiPickerUtils.tsx
-import v1 from "../../../_runtime/00511_v1.js";
 import setDefault from "../../utils/Durations.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import v1 from "../../../_runtime/01256_v1.js";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
 import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
 import withEqualityFn from "../expression_picker/ExpressionPickerGridStores.tsx";

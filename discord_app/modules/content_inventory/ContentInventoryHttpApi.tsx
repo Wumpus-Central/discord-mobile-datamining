@@ -62,14 +62,14 @@ function _getMyContentInventory() {
               return obj1;
             } else {
               constants = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = { url: null, query: null, rejectWithError: null };
               obj2[0] = date.MY_CONTENT_INVENTORY(callback);
               const obj3 = { for_game_profile: null, feature: null };
               obj3[0] = c1 === constants.GAME_PROFILE_FEED;
               obj3[1] = dependencyMap;
               obj2[1] = obj3;
-              obj2[2] = callback(527).rejectWithMigratedError();
+              obj2[2] = callback(1272).rejectWithMigratedError();
               date = 3;
               c6 = 1;
               const obj4 = { value: null, done: false };
@@ -79,7 +79,7 @@ function _getMyContentInventory() {
           } else if (2 === tmp7) {
             constants = 0;
             c6 = body;
-            const aPIError = new callback(4376).APIError(c6);
+            const aPIError = new callback(4461).APIError(c6);
             throw aPIError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -185,11 +185,11 @@ function _getContentInventoryOutbox() {
           } else if (1 === tmp7) {
             c5 = 0;
             dependencyMap = closure_4;
-            let obj4 = body(706);
+            let obj4 = body(573);
             obj4 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE", userId: null };
             obj4[1] = callback;
             obj4.dispatch(obj4);
-            const aPIError = new callback(4376).APIError(dependencyMap);
+            const aPIError = new callback(4461).APIError(dependencyMap);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -202,7 +202,7 @@ function _getContentInventoryOutbox() {
             return obj5;
           } else {
             body = body.body;
-            obj = body(706);
+            obj = body(573);
             const obj6 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS", outbox: null, userId: null };
             obj6[1] = body;
             obj6[2] = callback;
@@ -246,12 +246,12 @@ function _deleteContentInventoryEntryHistory() {
     return (function* (arg0, arg1, arg2) {
       closure_5 = tmp3;
       c7 = 1;
-      callback(706).dispatch({ type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START" });
-      const HTTP = lib(527).HTTP;
+      callback(573).dispatch({ type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START" });
+      const HTTP = lib(1272).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_5.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(lib.id);
-      const obj9 = callback(706);
-      obj1[1] = lib(527).rejectWithMigratedError();
+      const obj9 = callback(573);
+      obj1[1] = lib(1272).rejectWithMigratedError();
       yield HTTP.del(obj1);
       if (1 === tmp7) {
         c7 = 0;
@@ -264,10 +264,10 @@ function _deleteContentInventoryEntryHistory() {
         }
         closure_3 = message;
         if (message == null) {
-          const intl = lib(1233).intl;
-          closure_3 = intl.string(lib(1233).t.FMbL3s);
+          const intl = lib(1114).intl;
+          closure_3 = intl.string(lib(1114).t.FMbL3s);
         }
-        let obj3 = callback(706);
+        let obj3 = callback(573);
         obj3 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE", error: null };
         obj3[1] = closure_3;
         obj3.dispatch(obj3);
@@ -276,7 +276,7 @@ function _deleteContentInventoryEntryHistory() {
         c9 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const obj = callback(706);
+        const obj = callback(573);
         const obj4 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS", userId: null, entry: null };
         obj4[1] = callback;
         obj4[2] = lib;

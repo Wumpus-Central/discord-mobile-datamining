@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/CollectiblesCategoryStore.tsx
-import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import closure_3 from "../user_settings/LocaleStore.tsx";
 import closure_4 from "records/CollectiblesCategoryRecord.tsx";
 
@@ -15,7 +15,7 @@ function updateCategoriesAndProducts(map) {
       return items;
     }),
   );
-  const productsFromCategories = map1(7309).getProductsFromCategories(map, true);
+  const productsFromCategories = map1(7554).getProductsFromCategories(map, true);
   map1 = new Map(
     productsFromCategories.map((skuId) => {
       const items = [skuId.skuId, skuId];
@@ -27,8 +27,8 @@ function updateCategoriesAndProducts(map) {
       const result = map1.set(skuId.skuId, skuId);
     }
   });
-  const obj = map1(7309);
-  const productsFromCategories1 = map1(7309).getProductsFromCategories(map, false);
+  const obj = map1(7554);
+  const productsFromCategories1 = map1(7554).getProductsFromCategories(map, false);
   map2 = new Map(
     productsFromCategories1.map((storeListingId) => {
       const items = [storeListingId.storeListingId, storeListingId];

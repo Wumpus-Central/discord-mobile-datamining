@@ -357,7 +357,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   if (activity != null) {
     applicationId = activity.applicationId;
   }
-  let tmpResult = tmp(586);
+  let tmpResult = tmp(504);
   const items1 = [closure_8];
   stateFromStores = tmpResult.useStateFromStores(items1, () => {
     let pipOrientationLockStateForApp;
@@ -366,11 +366,11 @@ const memoResult = importAllResult.memo((transitionState) => {
     }
     return pipOrientationLockStateForApp;
   });
-  tmpResult = tmp(586);
+  tmpResult = tmp(504);
   const items2 = [memo];
   stateFromStores1 = tmpResult.useStateFromStores(items2, () => memo.getChannel(c2));
   _require = undefined;
-  const tmp8 = transitionCleanUp(1627)();
+  const tmp8 = transitionCleanUp(1611)();
   _require = tmp8;
   const items3 = [tmp8.right];
   memo = activity.useMemo(() => {

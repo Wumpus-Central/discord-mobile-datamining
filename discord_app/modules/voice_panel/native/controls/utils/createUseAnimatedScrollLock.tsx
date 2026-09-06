@@ -36,10 +36,10 @@ export function createUseAnimatedScrollLock(closure_12, closure_13, sharedValue5
     const onScrollHandler = obj.onScrollHandler;
     const onScrollHandlerWorkletized = obj.onScrollHandlerWorkletized;
     let animatedRef;
-    obj1 = callback(4217);
+    obj1 = callback(4296);
     animatedRef = obj1.useAnimatedRef();
     obj = { onScroll: null, animatedProps: null, scrollerRef: null, gestureRef: null };
-    let obj3 = callback(4217);
+    let obj3 = callback(4296);
     obj = { onBeginDrag: fn, onEndDrag: null, onMomentumEnd: null, onScroll: null };
     fn = function w(arg0, arg1) {
       arg1.momentumEndCount = 0;
@@ -158,12 +158,12 @@ export function createUseAnimatedScrollLock(closure_12, closure_13, sharedValue5
     fn2.__closure = {
       isDragScrolling: closure_3,
       IS_ANDROID: closure_2,
-      scrollTo: callback(4217).scrollTo,
+      scrollTo: callback(4296).scrollTo,
       scrollerRef: animatedRef,
       scrollOffsetValue: animatedRef,
       scrollLocked: onScrollHandlerWorkletized,
       onScrollHandler,
-      runOnJS: callback(4217).runOnJS,
+      runOnJS: callback(4296).runOnJS,
       onScrollHandlerWorkletized,
     };
     fn2.__workletHash = 13271628494164;
@@ -174,12 +174,12 @@ export function createUseAnimatedScrollLock(closure_12, closure_13, sharedValue5
     const obj4 = {
       isDragScrolling: closure_3,
       IS_ANDROID: closure_2,
-      scrollTo: callback(4217).scrollTo,
+      scrollTo: callback(4296).scrollTo,
       scrollerRef: animatedRef,
       scrollOffsetValue: animatedRef,
       scrollLocked: onScrollHandlerWorkletized,
       onScrollHandler,
-      runOnJS: callback(4217).runOnJS,
+      runOnJS: callback(4296).runOnJS,
       onScrollHandlerWorkletized,
     };
     class L {
@@ -191,7 +191,7 @@ export function createUseAnimatedScrollLock(closure_12, closure_13, sharedValue5
     L.__closure = { scrollLocked: onScrollHandlerWorkletized };
     L.__workletHash = 3670657775473;
     L.__initData = closure_1_7;
-    obj[1] = callback(4217).useAnimatedProps(L);
+    obj[1] = callback(4296).useAnimatedProps(L);
     obj[2] = animatedRef;
     obj[3] = onScrollHandler;
     return obj;

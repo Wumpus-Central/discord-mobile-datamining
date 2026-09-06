@@ -40,7 +40,7 @@ function buildStageChannelUserRoles(id, closure_0, flag) {
         let canResult = null;
         if (flag) {
           obj = { permission: null, user: null, context: null, overwrites: null, roles: null };
-          obj[0] = tmp8(1394).MODERATE_STAGE_CHANNEL_PERMISSIONS;
+          obj[0] = tmp8(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS;
           obj[1] = id;
           obj[2] = guild;
           obj[3] = channel.permissionOverwrites;

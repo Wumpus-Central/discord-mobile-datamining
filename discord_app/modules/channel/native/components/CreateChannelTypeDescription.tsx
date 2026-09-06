@@ -13,12 +13,12 @@ const result = require("set").fileFinishedImporting(
 export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
-  let obj = fetchGuildProfile(9029);
+  let obj = fetchGuildProfile(9187);
   guildProfile = obj.useGuildProfile(guildId);
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   let hasItem = null != guildProfile;
   if (hasItem) {
-    const VISIBLE = tmp(5572).GuildProfileVisibilitySets.VISIBLE;
+    const VISIBLE = tmp(5551).GuildProfileVisibilitySets.VISIBLE;
     hasItem = VISIBLE.has(guildProfile.visibility);
   }
   let tmp6 = !tmp5;
@@ -36,9 +36,9 @@ export default function CreateChannelTypeDescription(guildId) {
   if (tmp6) {
     obj = { children: null };
     obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
-    const intl = tmp(1233).intl;
-    obj[2] = intl.string(tmp(1233).t["2Ab4Id"]);
-    obj[0] = jsx(tmp(4474).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
+    const intl = tmp(1114).intl;
+    obj[2] = intl.string(tmp(1114).t["2Ab4Id"]);
+    obj[0] = jsx(tmp(4556).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
     tmp9 = (
       <View variant="text-sm/normal" color="text-subtle">
         {null}

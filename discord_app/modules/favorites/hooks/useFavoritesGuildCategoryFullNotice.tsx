@@ -28,16 +28,16 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             tmp6 = null;
             if (formatted === closure_4.toLowerCase()) {
               obj = { label: null, tooltip: null };
-              const intl = tmp(1233).intl;
+              const intl = tmp(1114).intl;
               obj[0] = intl.string(messagesProxyDefault.WsUrMD);
-              const intl2 = tmp(1233).intl;
+              const intl2 = tmp(1114).intl;
               obj[1] = intl2.string(messagesProxyDefault.dW9Kov);
               tmp6 = obj;
             }
             str = str.trim();
           }
         }
-        tmpResult = tmp(1911);
+        tmpResult = tmp(1982);
       }
     }
   }

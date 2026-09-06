@@ -85,7 +85,7 @@ function computeLayoutForState(value) {
         return closure_5;
       }
     });
-    let tmp6Result = tmp6(12136);
+    let tmp6Result = tmp6(12340);
     autocompleteVisible = tmp6Result.getSearchContextId(searchContext);
     const reduced = found.reduce((arg0, closure_1) => {
       if (reduced.MEMBERS === closure_1) {
@@ -126,7 +126,7 @@ function computeLayoutForState(value) {
         flag2 = tmp11;
       }
     }
-    tmp6Result = tmp6(640);
+    tmp6Result = tmp6(558);
     const result = tmp6Result.areArraysShallowEqual(value.candidateTabs, found);
     let tmp13 = !result;
     const obj2 = SearchTokenTypes;
@@ -140,7 +140,7 @@ function computeLayoutForState(value) {
     if (!tmp16) {
       let tmp17 = null != visibleTabCounts2 && null != visibleTabCounts;
       if (tmp17) {
-        tmp17 = searchContext(640)(visibleTabCounts2, visibleTabCounts);
+        tmp17 = searchContext(558)(visibleTabCounts2, visibleTabCounts);
       }
       tmp16 = tmp17;
     }

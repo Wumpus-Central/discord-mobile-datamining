@@ -52,7 +52,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                     const isSameDayResult = resetCache.isSameDay(content.timestamp, type.timestamp);
                     let tmp20 = !isSameDayResult;
                     if (isSameDayResult) {
-                      const isWithinIntervalResult = tmp18(4163).isWithinInterval(
+                      const isWithinIntervalResult = tmp18(4242).isWithinInterval(
                         content.timestamp,
                         type.timestamp,
                         closure_6,
@@ -109,7 +109,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                         tmp23 = tmp26;
                       }
                       tmp20 = tmp23;
-                      const tmp18Result = tmp18(4163);
+                      const tmp18Result = tmp18(4242);
                     }
                     tmp17 = tmp20;
                     const obj2 = resetCache;

@@ -21,7 +21,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     channel_id = messageReference.channel_id;
   }
   channel = channel.getChannel(channel_id);
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj = {
     actorName: messageAuthorWithProcessedColor.nick,
     actorHook: formatUsernameOnClickDefault({
@@ -33,8 +33,8 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     threadOnClick: null,
   };
   if (null != channel) {
-    let content = tmp(4674).computeChannelName(channel, closure_5, closure_4);
-    const tmpResult = tmp(4674);
+    let content = tmp(4713).computeChannelName(channel, closure_5, closure_4);
+    const tmpResult = tmp(4713);
   } else {
     content = message.content;
   }
@@ -44,7 +44,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   if (messageReference2 != null) {
     channel_id1 = messageReference2.channel_id;
   }
-  obj = { content: intl.formatToParts(tmp(1233).t.veX9jq, obj) };
+  obj = { content: intl.formatToParts(tmp(1114).t.veX9jq, obj) };
   obj[3] = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj;

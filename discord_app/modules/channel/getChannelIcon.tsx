@@ -1,6 +1,6 @@
 // discord_app/modules/channel/getChannelIcon.tsx
-import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../stores/UserStore.tsx";
 import { ChannelTypes } from "../../Constants.tsx";

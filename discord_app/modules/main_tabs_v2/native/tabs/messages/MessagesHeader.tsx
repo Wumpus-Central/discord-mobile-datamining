@@ -62,7 +62,7 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     const items = [headerPanel.headerPanel, { height }];
     return items;
   }, items);
-  let obj = height(4217);
+  let obj = height(4296);
   const fn = function c() {
     let obj = height(headerPanel[10]);
     let num = 0;
@@ -72,12 +72,12 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     obj = { opacity: obj.withSpring(num) };
     return obj;
   };
-  obj = { withSpring: height(4928).withSpring, scrollPosition };
+  obj = { withSpring: height(4974).withSpring, scrollPosition };
   fn.__closure = obj;
   fn.__workletHash = 17233409273245;
   fn.__initData = closure_11;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = height(15861);
+  let obj2 = height(16022);
   const isHomeDrawerEnabled = obj2.useIsHomeDrawerEnabled();
   const callback = importAllResult.useCallback(() => {
     const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
@@ -117,23 +117,23 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     }
   }, []);
   obj = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
-  const tmp12 = scrollPosition(5505)("bespoke");
-  obj[1] = callback(height(10913).PlusLargeIcon, { size: "sm", color: scrollPosition(709).colors.WHITE });
-  const intl = height(1233).intl;
-  obj[3] = intl.string(height(1233).t.jD1qzM);
+  const tmp12 = scrollPosition(5625)("bespoke");
+  obj[1] = callback(height(10951).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
+  const intl = height(1114).intl;
+  obj[3] = intl.string(height(1114).t.jD1qzM);
   obj[4] = callback3;
   obj2 = { style: memo, children: null };
   const obj3 = { style: tmp.headerPanelTitle, children: null };
-  obj1 = { size: "sm", color: scrollPosition(709).colors.WHITE };
-  const intl2 = height(1233).intl;
+  obj1 = { size: "sm", color: scrollPosition(576).colors.WHITE };
+  const intl2 = height(1114).intl;
   const string = intl2.string;
-  const t = height(1233).t;
+  const t = height(1114).t;
   if (isHomeDrawerEnabled) {
     let stringResult = string(t.YUU0RF);
   } else {
     stringResult = string(t.OIgYlQ);
   }
-  obj3[1] = callback(height(4474).Text, {
+  obj3[1] = callback(height(4556).Text, {
     color: "mobile-text-heading-primary",
     variant: "heading-lg/semibold",
     maxFontSizeMultiplier: 1.75,
@@ -146,14 +146,14 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     onPress: callback2,
     variant: "secondary",
     size: "sm",
-    icon: scrollPosition(6246),
+    icon: scrollPosition(7052),
     accessibilityLabel: null,
   };
-  const intl3 = tmp3(1233).intl;
-  obj5[4] = intl3.string(height(1233).t["5h0QOP"]);
+  const intl3 = tmp3(1114).intl;
+  obj5[4] = intl3.string(height(1114).t["5h0QOP"]);
   const items2 = [
-    callback(height(8018).IconButton, obj5),
-    callback(scrollPosition(15866), { noMargin: true, onPress: callback, alternateVariant: true }),
+    callback(height(8097).IconButton, obj5),
+    callback(scrollPosition(16028), { noMargin: true, onPress: callback, alternateVariant: true }),
     ,
   ];
   const obj6 = {
@@ -161,19 +161,19 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     grow: true,
     shrink: true,
     size: "sm",
-    icon: scrollPosition(4416),
+    icon: scrollPosition(4498),
     onPress: callback1,
     maxFontSizeMultiplier: 1,
     text: null,
   };
-  const intl4 = tmp3(1233).intl;
-  obj6[7] = intl4.string(height(1233).t.zIJnA6);
-  items2[2] = callback(height(4929).Button, obj6);
-  items2[3] = callback(height(8018).IconButton, obj);
+  const intl4 = tmp3(1114).intl;
+  obj6[7] = intl4.string(height(1114).t.zIJnA6);
+  items2[2] = callback(height(4975).Button, obj6);
+  items2[3] = callback(height(8097).IconButton, obj);
   obj4[1] = items2;
   items1[1] = closure_7(closure_4, obj4);
   const items3 = [tmp.headerBorder, animatedStyle];
-  items1[2] = callback(scrollPosition(4217).View, { style: items3 });
+  items1[2] = callback(scrollPosition(4296).View, { style: items3 });
   items1[3] = tmp12;
   obj2[1] = items1;
   return closure_7(closure_4, obj2);

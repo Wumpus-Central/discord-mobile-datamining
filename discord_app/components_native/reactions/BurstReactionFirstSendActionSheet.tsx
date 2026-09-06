@@ -96,22 +96,22 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj.hideActionSheet();
   if (obj2.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.SUPER_REACTIONS_FIRST_SENT)) {
-    let tmpResult = tmp(706);
+    let tmpResult = tmp(573);
     obj = { type: "BURST_REACTION_EFFECT_SEND", channelId: null, messageId: null, emoji: null };
     obj[1] = channelId;
     obj[2] = messageId;
     obj[3] = emoji;
     tmpResult.dispatch(obj);
   } else {
-    const result = tmp4(4298).UNSAFE_markDismissibleContentAsDismissed(
-      tmp4(1372).DismissibleContent.SUPER_REACTIONS_FIRST_SENT,
+    const result = tmp4(4380).UNSAFE_markDismissibleContentAsDismissed(
+      tmp4(1943).DismissibleContent.SUPER_REACTIONS_FIRST_SENT,
     );
-    tmpResult = tmp(4445);
+    tmpResult = tmp(4527);
     obj = { channelId: null, messageId: null, emoji: null };
     obj[0] = channelId;
     obj[1] = messageId;
     obj[2] = emoji;
-    tmpResult.openLazy(tmp4(2008)(7578, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
-    const tmp4Result = tmp4(4298);
+    tmpResult.openLazy(tmp4(1896)(7823, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
+    const tmp4Result = tmp4(4380);
   }
 };

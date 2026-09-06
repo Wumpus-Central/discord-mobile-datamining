@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import createStandardNavigationFactories from "../../../../../_runtime/01499_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../../../../_runtime/01484_createStandardNavigationFactories.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
@@ -42,13 +42,13 @@ export default function GiftCodeRedeemError(children) {
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = tmp9(11596);
+    let tmp9Result = tmp9(11454);
   } else {
-    tmp9Result = tmp9(11598);
+    tmp9Result = tmp9(11455);
   }
   const items = [closure_6(closure_3, { source: tmp9Result }), ,];
   obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj1[2] = intl.formatToMarkdownString(getSystemLocale.t.JUvC0s, {});
   items[1] = closure_6(Text.Text, obj1);
   items[2] = closure_6(Text.Text, { variant: "text-lg/medium", style: tmp.message, children: children.message });
@@ -56,7 +56,7 @@ export default function GiftCodeRedeemError(children) {
   const items1 = [closure_7(closure_5, obj)];
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { text: null, size: "md", onPress: null };
-  const intl2 = tmp2(1233).intl;
+  const intl2 = tmp2(1114).intl;
   obj4[0] = intl2.string(getSystemLocale.t.cpT0Cq);
   obj4[2] = function onPress() {
     return callback(table[12]).pop();

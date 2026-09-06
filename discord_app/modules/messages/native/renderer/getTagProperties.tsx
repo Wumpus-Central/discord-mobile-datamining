@@ -21,22 +21,22 @@ export default function getTagProperties(arg0) {
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
       if (isCrosspostDefault(message)) {
-        const intl2 = tmp2(1233).intl;
-        let stringResult = intl2.string(tmp2(1233).t.PuJGuM);
+        const intl2 = tmp2(1114).intl;
+        let stringResult = intl2.string(tmp2(1114).t.PuJGuM);
         let SYSTEM_DM_TAG_SYSTEM_TYPE = MessageTagTypes.BOT_TAG_SERVER_TYPE;
         let flag = isVerifiedBotResult;
       } else {
         flag = isVerifiedBotResult;
         stringResult = null;
         if (message.author.bot) {
-          const intl = tmp2(1233).intl;
+          const intl = tmp2(1114).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(7959)).uri;
+            uri = Image.resolveAssetSource(tmp4(8038)).uri;
           }
           flag = isVerifiedBotResult;
-          stringResult = intl.string(tmp2(1233).t["9RNkeF"]);
-          const stringResult1 = intl.string(tmp2(1233).t["9RNkeF"]);
+          stringResult = intl.string(tmp2(1114).t["9RNkeF"]);
+          const stringResult1 = intl.string(tmp2(1114).t["9RNkeF"]);
           const tmp5 = uri;
         }
       }
@@ -57,20 +57,20 @@ export default function getTagProperties(arg0) {
       }
       let stringResult2 = null;
       if (tmp18) {
-        const intl6 = tmp2(1233).intl;
-        stringResult2 = intl6.string(tmp2(1233).t.fyE8sH);
+        const intl6 = tmp2(1114).intl;
+        stringResult2 = intl6.string(tmp2(1114).t.fyE8sH);
       }
       obj = {
         tagText: null,
         tagAccessibilityLabel: null,
         tagVerified: null,
         tagTextColor: "Boolean",
-        tagBackgroundColor: "add",
-        tagType: true,
-        tagIconUrl: true,
-        opTagText: true,
-        opTagTextColor: true,
-        opTagBackgroundColor: true,
+        tagBackgroundColor: "accessible",
+        tagType: "rar",
+        tagIconUrl: "_a",
+        opTagText: "princess",
+        opTagTextColor: "isArray",
+        opTagBackgroundColor: "shouldObscureSpoiler",
       };
       obj[0] = stringResult;
       obj[1] = null;
@@ -83,9 +83,9 @@ export default function getTagProperties(arg0) {
     } else {
       if (!tmp2Result.isPublicSystemMessage(message)) {
         if (!isSystemDM) {
-          const intl4 = tmp2(1233).intl;
+          const intl4 = tmp2(1114).intl;
           const string = intl4.string;
-          const t = tmp2(1233).t;
+          const t = tmp2(1114).t;
           if (tmp14) {
             let stringResult3 = string(t["39trQT"]);
           } else if (flag) {
@@ -96,13 +96,13 @@ export default function getTagProperties(arg0) {
           tmp14 = isCrosspostDefault(message);
         }
       }
-      const intl5 = tmp2(1233).intl;
-      stringResult3 = intl5.string(tmp2(1233).t["7s687k"]);
-      tmp2Result = tmp2(7955);
+      const intl5 = tmp2(1114).intl;
+      stringResult3 = intl5.string(tmp2(1114).t["7s687k"]);
+      tmp2Result = tmp2(8034);
     }
   }
-  const intl3 = tmp2(1233).intl;
-  stringResult = intl3.string(tmp2(1233).t.lKQ7Wt);
+  const intl3 = tmp2(1114).intl;
+  stringResult = intl3.string(tmp2(1114).t.lKQ7Wt);
   SYSTEM_DM_TAG_SYSTEM_TYPE = MessageTagTypes.SYSTEM_DM_TAG_SYSTEM_TYPE;
   flag = true;
 }

@@ -11,22 +11,31 @@ function getUserMaxFileSize(currentUser) {
   } else {
     premiumTypeOverride = premiumTypeOverride.getPremiumTypeOverride();
     if (currentUser.isStaff()) {
-      if (premiumTypeOverride === closure_6) {
-        let fileSize = closure_4;
+      if (premiumTypeOverride === closure_7) {
+        let tmp2 = closure_4;
       }
-      return fileSize;
+      return tmp2;
     }
     if (null != currentUser.premiumType) {
-      if (obj.isPremium(currentUser)) {
-        fileSize = table[currentUser.premiumType].fileSize;
+      let getNitroFileUploadLimitBytes = require;
+      let obj = dependencyMap;
+      if (obj2.isPremium(currentUser)) {
+        if (currentUser.premiumType === TIER_2.TIER_2) {
+          const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(5130);
+          getNitroFileUploadLimitBytes = nitroFileUploadLimitBytes.getNitroFileUploadLimitBytes;
+          obj = { location: "getUserMaxFileSize" };
+          let fileSize = getNitroFileUploadLimitBytes(obj);
+        } else {
+          fileSize = table[currentUser.premiumType].fileSize;
+        }
       }
-      obj = isPremiumAtLeast;
+      obj2 = isPremiumAtLeast;
     }
-    fileSize = closure_3;
+    tmp2 = closure_3;
   }
 }
 ({ MAX_ATTACHMENT_SIZE: c3, MAX_STAFF_ATTACHMENT_SIZE: c4 } = ME);
-({ PremiumUserLimits: c5, UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_6 } = GuildFeatures);
+({ PremiumTypes: c5, PremiumUserLimits: closure_6, UNSELECTED_PREMIUM_TYPE_OVERRIDE: error } = GuildFeatures);
 const result = require("set").fileFinishedImporting("utils/PremiumFeatureUtils.tsx");
 
 export default { getUserMaxFileSize };

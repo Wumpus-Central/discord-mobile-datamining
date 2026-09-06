@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/SyncContactsNameSetting.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
-import _modDef4724 from "../../../../actions/ModalActionCreators.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import _modDef4763 from "../../../../actions/ModalActionCreators.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import _uploadContacts from "../../../contact_sync/native/ContactSyncUtils.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -22,7 +22,7 @@ const pressable = createToggle.createPressable({
       location: { page: "User Settings" },
     });
     const obj = expandEventPropertiesDefault;
-    _modDef4724.pushLazy(asyncRequireImpl(14689, dependencyMap.paths), "Contact Sync Name Update Modal");
+    _modDef4763.pushLazy(asyncRequireImpl(14845, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
@@ -41,7 +41,7 @@ let obj = {
       location: { page: "User Settings" },
     });
     const obj = expandEventPropertiesDefault;
-    _modDef4724.pushLazy(asyncRequireImpl(14689, dependencyMap.paths), "Contact Sync Name Update Modal");
+    _modDef4763.pushLazy(asyncRequireImpl(14845, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {

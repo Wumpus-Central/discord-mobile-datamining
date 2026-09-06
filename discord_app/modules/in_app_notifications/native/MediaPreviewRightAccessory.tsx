@@ -6,9 +6,9 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import isBlurDisabledDefault from "../../visual_effect_view/native/VisualEffectView.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import redactionSettingToRenderedString from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
 import PlayIcon from "../../../design/components/Icon/native/redesign/generated/PlayIcon.tsx";
 import VideoComponentDefault from "../../../components_native/common/Video.tsx";
+import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
 import VoiceMessageIcon from "hooks/usePreviewableMedia.tsx";
 import useEnabledHarmTypesBitmaskForChannelAndAuthorId from "../../explicit_media_redaction/hooks/useContentHarmTypes.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
@@ -64,11 +64,11 @@ function ObscuredMediaOverlay(isSpoiler) {
   items[2] = tmp11;
   obj1 = { style: tmp.spoilerIconContainer, children: null };
   if (isObscured) {
-    let tmp14Result = tmp14(tmp2(5035).ImageWarningIcon, { size: "sm", color: "white" });
+    let tmp14Result = tmp14(tmp2(5081).ImageWarningIcon, { size: "sm", color: "white" });
   } else {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.spoilerPill;
-    obj2[1] = tmp14(tmp2(7755).EyeIcon, { size: "sm", color: "white" });
+    obj2[1] = tmp14(tmp2(6970).EyeIcon, { size: "sm", color: "white" });
     tmp14Result = tmp14(tmp15, obj2);
   }
   const obj3 = { children: null };
@@ -97,11 +97,11 @@ function SinglePreviewableMedia(arg0) {
     obj[1] = icon;
     return callback(View, obj);
   } else {
-    if (tmp2(10238).PreviewableMediaTypes.AUDIO !== type) {
-      if (tmp2(10238).PreviewableMediaTypes.FILE !== type) {
-        if (tmp2(10238).PreviewableMediaTypes.IMAGE !== type) {
-          if (tmp2(10238).PreviewableMediaTypes.VIDEO !== type) {
-            if (tmp2(10238).PreviewableMediaTypes.GIF === type) {
+    if (tmp2(10131).PreviewableMediaTypes.AUDIO !== type) {
+      if (tmp2(10131).PreviewableMediaTypes.FILE !== type) {
+        if (tmp2(10131).PreviewableMediaTypes.IMAGE !== type) {
+          if (tmp2(10131).PreviewableMediaTypes.VIDEO !== type) {
+            if (tmp2(10131).PreviewableMediaTypes.GIF === type) {
               const video = media.video;
               if (video != null) {
                 const url = video.url;
@@ -110,7 +110,7 @@ function SinglePreviewableMedia(arg0) {
               if (null == thumbnail) {
                 return null;
               } else {
-                let tmp2Result = tmp2(6147);
+                let tmp2Result = tmp2(7292);
                 const author = message.author;
                 let id;
                 if (author != null) {
@@ -120,10 +120,10 @@ function SinglePreviewableMedia(arg0) {
                   message.channel_id,
                   id,
                 );
-                tmp2Result = tmp2(6147);
+                tmp2Result = tmp2(7292);
                 obj1 = { type: null, media: null };
                 const getMediaObscuredReasonFromBitmask = tmp2Result.getMediaObscuredReasonFromBitmask;
-                obj1[0] = tmp2(6152).ObscuredMediaTypes.Embed;
+                obj1[0] = tmp2(7297).ObscuredMediaTypes.Embed;
                 obj1[1] = media;
                 if (null != thumbnail.proxyURL) {
                   if ("" !== thumbnail.proxyURL) {
@@ -172,7 +172,7 @@ function SinglePreviewableMedia(arg0) {
                 }
                 url2 = thumbnail.url;
               }
-            } else if (tmp2(10238).PreviewableMediaTypes.STICKER === type) {
+            } else if (tmp2(10131).PreviewableMediaTypes.STICKER === type) {
               const obj9 = { style: null, children: null };
               const items2 = [tmp.mediaThumbnailContainer];
               const obj10 = { width: null, height: null };
@@ -205,10 +205,10 @@ function SinglePreviewableMedia(arg0) {
                 obj12[0] = media;
                 obj12[2] = enabledHarmTypesBitmaskForMessage;
                 obj12[3] = shouldAgeVerifyForExplicitMedia;
-                const attachmentObscurityProps = tmp2(8046).getAttachmentObscurityProps(obj12);
-                const tmp2Result1 = tmp2(8046);
-                const attachmentUrl = tmp2(8587).getAttachmentUrl(media);
-                const tmp2Result2 = tmp2(8587);
+                const attachmentObscurityProps = tmp2(8125).getAttachmentObscurityProps(obj12);
+                const tmp2Result1 = tmp2(8125);
+                const attachmentUrl = tmp2(8263).getAttachmentUrl(media);
+                const tmp2Result2 = tmp2(8263);
                 const obj13 = {
                   src: null,
                   sourceWidth: null,
@@ -224,7 +224,7 @@ function SinglePreviewableMedia(arg0) {
                 obj13[3] = 2 * size;
                 obj13[4] = 2 * size;
                 let str3;
-                if (type === tmp2(10238).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10131).PreviewableMediaTypes.VIDEO) {
                   str3 = "png";
                 }
                 obj13[6] = str3;
@@ -237,7 +237,7 @@ function SinglePreviewableMedia(arg0) {
                 obj14[0] = items3;
                 const obj16 = { isObscured: null, isSpoiler: null, children: null };
                 ({ obscure: obj17[0], isSpoiler: obj17[1] } = attachmentObscurityProps);
-                const srcWithWidthAndHeight = tmp2(1491).getSrcWithWidthAndHeight(obj13);
+                const srcWithWidthAndHeight = tmp2(1476).getSrcWithWidthAndHeight(obj13);
                 const obj17 = { source: null, style: null, resizeMode: "cover" };
                 const obj18 = { uri: null };
                 obj18[0] = srcWithWidthAndHeight;
@@ -245,7 +245,7 @@ function SinglePreviewableMedia(arg0) {
                 obj17[1] = tmp.mediaThumbnail;
                 const items4 = [callback(preloadDefault, obj17)];
                 let tmp24Result = null;
-                if (type === tmp2(10238).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10131).PreviewableMediaTypes.VIDEO) {
                   tmp24Result = tmp24(VideoBadge, {});
                 }
                 items4[1] = tmp24Result;
@@ -274,11 +274,11 @@ function MultiplePreviewableMedia(arg0) {
   ({ previewableMedia, totalMediaCount, message } = arg0);
   let obj = { style: callback6().container, children: null };
   const memo = React.useMemo(() => {
-    const BADGE_PADDING = callback(1296).BADGE_PADDING;
+    const BADGE_PADDING = callback(1178).BADGE_PADDING;
     const sum = BADGE_PADDING + 5;
     const roundToNearestPixelResult = closure_4.roundToNearestPixel(20 + 2 * BADGE_PADDING);
     const obj = {
-      shape: callback(8109).CutoutShape.RoundedRect,
+      shape: callback(8813).CutoutShape.RoundedRect,
       x: 56 - roundToNearestPixelResult + sum,
       y: -sum,
       width: roundToNearestPixelResult,

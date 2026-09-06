@@ -26,7 +26,7 @@ const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = str(4166).ViewImageDescriptions;
+  const ViewImageDescriptions = str(1935).ViewImageDescriptions;
   let tmp4 = null;
   if (ViewImageDescriptions.useSetting()) {
     tmp4 = null;
@@ -41,10 +41,10 @@ const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(
       };
       obj[2] = { top: 6, bottom: 6, left: 6, right: 6 };
       obj = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-      const intl = tmp3(1233).intl;
-      obj[2] = intl.string(tmp3(1233).t.Q5VqrN);
-      obj[3] = jsx(tmp3(4474).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5077).PressableOpacity, {
+      const intl = tmp3(1114).intl;
+      obj[2] = intl.string(tmp3(1114).t.Q5VqrN);
+      obj[3] = jsx(tmp3(4556).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(5123).PressableOpacity, {
         variant: "text-xs/semibold",
         color: "text-overlay-light",
         children: null,

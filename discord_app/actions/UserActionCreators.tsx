@@ -1,10 +1,10 @@
 // discord_app/actions/UserActionCreators.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
 import _modDef38 from "../../_runtime/metro/00038__.js";
+import dispatcherDefault from "../Dispatcher.tsx";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ImpressionNames from "../../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef4714 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4753 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../records/UserRecord.tsx";
 import closure_5 from "../stores/UserStore.tsx";
@@ -108,7 +108,7 @@ function _fetchProfile() {
                 obj3[2] = c5;
                 dispatchResult = c4;
                 obj3[3] = c4;
-                dispatchResult = callback2(706).dispatch(obj3);
+                dispatchResult = callback2(573).dispatch(obj3);
                 dispatchResult = c3;
                 c6 = 1;
                 dispatchResult = c5;
@@ -119,7 +119,7 @@ function _fetchProfile() {
                   }
                 }
                 closure_11 = tmp68;
-                const HTTP = callback(527).HTTP;
+                const HTTP = callback(1272).HTTP;
                 let obj4 = { url: null, query: null, signal: null, rejectWithError: true };
                 obj4[0] = c6.USER_PROFILE(callback);
                 const obj5 = {
@@ -169,7 +169,7 @@ function _fetchProfile() {
                 const _HermesInternal = HermesInternal;
                 logger.warn("fetchProfile error: " + closure_13.body.code + " - " + closure_13.body.message);
               }
-              let obj7 = callback2(706);
+              let obj7 = callback2(573);
               obj7 = {
                 type: "USER_PROFILE_FETCH_FAILURE",
                 apiError: null,
@@ -177,7 +177,7 @@ function _fetchProfile() {
                 userId: null,
                 guildId: null,
               };
-              const aPIError = new callback(4376).APIError(closure_13);
+              const aPIError = new callback(4461).APIError(closure_13);
               obj7[1] = aPIError;
               obj7[2] = closure_10;
               obj7[3] = callback;
@@ -199,11 +199,11 @@ function _fetchProfile() {
               if (closure_9 != null) {
                 dispatchResult(closure_12.body, c5);
               }
-              obj = callback2(706);
+              obj = callback2(573);
               const obj9 = { type: "USER_UPDATE", user: null };
               obj9[1] = closure_12.body.user;
               obj.dispatch(obj9);
-              obj2 = callback2(706);
+              obj2 = callback2(573);
               const obj10 = {
                 type: "USER_PROFILE_FETCH_SUCCESS",
                 userProfile: null,
@@ -219,7 +219,7 @@ function _fetchProfile() {
                 tmp25 = null != closure_12.body.guild_member;
               }
               if (tmp25) {
-                obj4 = callback2(706);
+                obj4 = callback2(573);
                 const obj11 = { type: "GUILD_MEMBER_PROFILE_UPDATE", guildId: null, guildMember: null };
                 obj11[1] = c5;
                 obj11[2] = closure_12.body.guild_member;
@@ -405,7 +405,7 @@ export const acceptAgreements = function acceptAgreements() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  let obj = _modDef4714;
+  let obj = _modDef4753;
   obj = {
     url: Endpoints.USER_AGREEMENTS,
     trackedActionData: null,

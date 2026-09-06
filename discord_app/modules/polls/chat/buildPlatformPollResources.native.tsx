@@ -1,7 +1,7 @@
 // discord_app/modules/polls/chat/buildPlatformPollResources.native.tsx
 import ensureAvatarSource from "../../../utils/native/AvatarUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/05625_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/06004_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/05618_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/07144_registerAsset.js";
 import importDefaultResult from "../../../../_runtime/00012_apply.js";
 import { frozen } from "../../messages/native/renderer/EmbedUtils.tsx";
 
@@ -48,9 +48,9 @@ export const buildPlatformPollResources = function buildPlatformPollResources(th
     checkmarkIcon: null,
   };
   const obj2 = importDefaultResult;
-  obj[1] = require("../../messages/native/renderer/EmbedUtils.tsx").getAssetUriForEmbed(registerAssetDefault);
+  obj[1] = require("../../messages/native/renderer/EmbedUtils.tsx").getAssetUriForEmbed(registerAssetDefault2);
   const obj3 = frozen;
-  obj[2] = require("../../messages/native/renderer/EmbedUtils.tsx").getAssetUriForEmbed(registerAssetDefault2);
+  obj[2] = require("../../messages/native/renderer/EmbedUtils.tsx").getAssetUriForEmbed(registerAssetDefault);
   return obj;
 };
 export const getAvatarUrl = function getAvatarUrl(currentUser, guildId) {

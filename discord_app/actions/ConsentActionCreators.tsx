@@ -1,9 +1,9 @@
 // discord_app/actions/ConsentActionCreators.tsx
 import set from "../../_runtime/00002_set.js";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import ME from "../Constants.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 function handleRequestSuccess(body) {
   if (tmp) {

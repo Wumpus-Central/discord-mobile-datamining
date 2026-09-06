@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationUtils.tsx
 import apply from "../../../../_runtime/00012_apply.js";
-import v1 from "../../../../_runtime/00511_v1.js";
 import setDefault from "../../../utils/Durations.tsx";
+import v1 from "../../../../_runtime/01256_v1.js";
 import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { REACTION_MILESTONE_COUNTS } from "InAppNotificationConstants.tsx";

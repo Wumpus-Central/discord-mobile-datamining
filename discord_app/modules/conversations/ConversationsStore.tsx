@@ -1,7 +1,7 @@
 // discord_app/modules/conversations/ConversationsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01400_priv.js";
+import privDefault from "../../../_runtime/01437_priv.js";
 import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../stores/ChannelStore.tsx";
@@ -193,7 +193,7 @@ function handleReaction(channelId) {
       } else {
         return false;
       }
-      obj2 = messageId(4132);
+      obj2 = messageId(4211);
     }
   }
 }
@@ -548,8 +548,8 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7354).mapConversation);
-      const found = mapped.filter(set(1470).isNotNullish);
+      const mapped = rawConversations.map(set(7599).mapConversation);
+      const found = mapped.filter(set(1369).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
         let prop;
@@ -1124,7 +1124,7 @@ obj = {
           }
           let flag = null != message;
           if (flag) {
-            const updateMessageRecordResult = id(4738).updateMessageRecord(value.message, message);
+            const updateMessageRecordResult = id(4783).updateMessageRecord(value.message, message);
             value.message = updateMessageRecordResult;
             value = null;
             if (null != value.conversationId) {
@@ -1148,7 +1148,7 @@ obj = {
                 flag = true;
               }
             }
-            const obj = id(4738);
+            const obj = id(4783);
           }
           return flag;
         }

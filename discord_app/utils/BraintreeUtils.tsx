@@ -1,5 +1,5 @@
 // discord_app/utils/BraintreeUtils.tsx
-import _mod4157 from "../modules/core/CodeSplittingUtils.tsx";
+import _mod4236 from "../modules/core/CodeSplittingUtils.tsx";
 import closure_2 from "../stores/billing/BraintreeStore.tsx";
 import { PaymentSettings } from "../Constants.tsx";
 
@@ -7,12 +7,12 @@ require = arg1;
 const result = require("set").fileFinishedImporting("utils/BraintreeUtils.tsx");
 
 export const getBraintreeSDK = function getBraintreeSDK() {
-  let obj = _mod4157;
+  let obj = _mod4236;
   obj = {
     createPromise() {
       return callback(paths[4])(paths[3], paths.paths);
     },
-    webpackId: 4160,
+    webpackId: 4239,
   };
   return obj.importWithRetry(obj).then((arg0) => arg0.default);
 };
@@ -23,10 +23,10 @@ export const collectDeviceData = function collectDeviceData() {
     obj[0] = function createPromise() {
       return callback(paths[4])(paths[3], paths.paths);
     };
-    obj[1] = 4160;
-    const obj3 = client(4157);
-    let importWithRetryResult = client(4157).importWithRetry(obj);
-    let nextPromise1 = client(4157)
+    obj[1] = 4239;
+    const obj3 = client(4236);
+    let importWithRetryResult = client(4236).importWithRetry(obj);
+    let nextPromise1 = client(4236)
       .importWithRetry(obj)
       .then((arg0) => arg0.default)
       .then((client) => {
@@ -36,12 +36,12 @@ export const collectDeviceData = function collectDeviceData() {
         return obj
           .then((arg0) => {
             const callback = arg0;
-            let obj = callback(4157);
+            let obj = callback(4236);
             obj = {
               createPromise() {
                 return callback(paths[4])(paths[3], paths.paths);
               },
-              webpackId: 4160,
+              webpackId: 4239,
             };
             const importWithRetryResult = obj.importWithRetry(obj);
             return obj
@@ -56,16 +56,16 @@ export const collectDeviceData = function collectDeviceData() {
           })
           .catch(() => null);
       });
-    const nextPromise = client(4157)
+    const nextPromise = client(4236)
       .importWithRetry(obj)
       .then((arg0) => arg0.default);
   } else {
-    obj = client(4157);
+    obj = client(4236);
     obj = { createPromise: null, webpackId: null };
     obj[0] = function createPromise() {
       return callback(paths[4])(paths[3], paths.paths);
     };
-    obj[1] = 4160;
+    obj[1] = 4239;
     const importWithRetryResult1 = obj.importWithRetry(obj);
     nextPromise1 = obj
       .importWithRetry(obj)

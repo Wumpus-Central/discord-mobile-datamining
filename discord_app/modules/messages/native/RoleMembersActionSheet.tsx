@@ -44,12 +44,12 @@ export default function RoleMembersActionSheet(guildId) {
       const obj2 = guildId(header[9]);
     }
   }, items);
-  let obj = guildId(586);
+  let obj = guildId(504);
   const items1 = [closure_7];
   const items2 = [guildId, roleId];
   stateFromStores = obj.useStateFromStores(items1, () => closure_1_7.getRole(guildId, roleId), items2);
   const items3 = [c5];
-  let tmp6 = "dot" === guildId(586).useStateFromStores(items3, () => _null.roleStyle);
+  let tmp6 = "dot" === guildId(504).useStateFromStores(items3, () => _null.roleStyle);
   if (tmp6) {
     let colorString;
     if (stateFromStores != null) {
@@ -58,11 +58,11 @@ export default function RoleMembersActionSheet(guildId) {
     tmp6 = null != colorString;
   }
   closure_4 = tmp6;
-  let obj2 = guildId(586);
+  let obj2 = guildId(504);
   const tmp3 = guildId;
   const tmp9 = roleId;
   const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(5591)(guildId);
+  const tmp11 = roleId(7127)(guildId);
   let tmp12 = null;
   if (roleId !== result) {
     let tmp13;
@@ -95,9 +95,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj[1] = channelId;
     obj[2] = roleId;
-    obj[2] = closure_8(tmp9(11413), obj);
-    tmp16Result = tmp16(tmp3(5631).BottomSheet, obj);
-    let tmp9Result = tmp9(11413);
+    obj[2] = closure_8(tmp9(11588), obj);
+    tmp16Result = tmp16(tmp3(7150).BottomSheet, obj);
+    let tmp9Result = tmp9(11588);
   }
   return tmp16Result;
 }

@@ -285,27 +285,27 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
         num = 0;
       }
       obj[1] = num;
-      let num2 = value.get(tmp2(7497).CodecTypes.H265);
+      let num2 = value.get(tmp2(7741).CodecTypes.H265);
       if (num2 == null) {
         num2 = 0;
       }
       obj[2] = num2;
-      let num3 = value.get(tmp2(7497).CodecTypes.VP8);
+      let num3 = value.get(tmp2(7741).CodecTypes.VP8);
       if (num3 == null) {
         num3 = 0;
       }
       obj[3] = num3;
-      let num4 = value.get(tmp2(7497).CodecTypes.VP9);
+      let num4 = value.get(tmp2(7741).CodecTypes.VP9);
       if (num4 == null) {
         num4 = 0;
       }
       obj[4] = num4;
-      let num5 = value.get(tmp2(7497).CodecTypes.AV1);
+      let num5 = value.get(tmp2(7741).CodecTypes.AV1);
       if (num5 == null) {
         num5 = 0;
       }
       obj[5] = num5;
-      let num6 = value.get(tmp2(7497).CodecTypes.UNKNOWN);
+      let num6 = value.get(tmp2(7741).CodecTypes.UNKNOWN);
       if (num6 == null) {
         num6 = 0;
       }
@@ -333,27 +333,27 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
     num8 = 0;
   }
   obj[1] = num8;
-  let num9 = map.get(tmp7(7497).CodecTypes.H265);
+  let num9 = map.get(tmp7(7741).CodecTypes.H265);
   if (num9 == null) {
     num9 = 0;
   }
   obj[2] = num9;
-  let num10 = map.get(tmp7(7497).CodecTypes.VP8);
+  let num10 = map.get(tmp7(7741).CodecTypes.VP8);
   if (num10 == null) {
     num10 = 0;
   }
   obj[3] = num10;
-  let num11 = map.get(tmp7(7497).CodecTypes.VP9);
+  let num11 = map.get(tmp7(7741).CodecTypes.VP9);
   if (num11 == null) {
     num11 = 0;
   }
   obj[4] = num11;
-  let num12 = map.get(tmp7(7497).CodecTypes.AV1);
+  let num12 = map.get(tmp7(7741).CodecTypes.AV1);
   if (num12 == null) {
     num12 = 0;
   }
   obj[5] = num12;
-  let num13 = map.get(tmp7(7497).CodecTypes.UNKNOWN);
+  let num13 = map.get(tmp7(7741).CodecTypes.UNKNOWN);
   if (num13 == null) {
     num13 = 0;
   }
@@ -1449,7 +1449,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
       if (!tmp45Result.isWeb()) {
         obj.frames_dropped_render = framesDropped;
       }
-      tmp45Result = tmp45(1234);
+      tmp45Result = tmp45(1115);
     }
     obj = {};
     const merged1 = Object.assign(obj);
@@ -1519,12 +1519,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   const set = new Set();
   const set1 = new Set();
   self.updateSendState({ receivers: num });
-  let tmp7 = self.connection.context === tmp(4579).MediaEngineContextTypes.DEFAULT;
+  let tmp7 = self.connection.context === tmp(4615).MediaEngineContextTypes.DEFAULT;
   if (tmp7) {
     tmp7 = null != transport.camera;
   }
   self.cameraDuration.value = tmp7;
-  let tmp9 = self.connection.context === tmp(4579).MediaEngineContextTypes.DEFAULT;
+  let tmp9 = self.connection.context === tmp(4615).MediaEngineContextTypes.DEFAULT;
   if (tmp9) {
     tmp9 = null != transport.camera;
   }
@@ -1532,7 +1532,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     tmp9 = self.callUserIdsCount > 1;
   }
   self.cameraOpportunityDuration.value = tmp9;
-  let tmp11 = self.connection.context === tmp(4579).MediaEngineContextTypes.DEFAULT;
+  let tmp11 = self.connection.context === tmp(4615).MediaEngineContextTypes.DEFAULT;
   if (tmp11) {
     tmp11 = null != transport.camera;
   }
@@ -1543,7 +1543,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   if (tmp13) {
     self.cameraToggles = self.cameraToggles + 1;
   }
-  obj = videoEntropy(1234);
+  obj = videoEntropy(1115);
   tmp13 = self.cameraDuration.value && !self.cameraDuration.value;
   const tmp14 = importDefault;
   closure_7 = applyDefault.max(streamParameters.map((quality) => quality.quality));
@@ -1859,7 +1859,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     } else {
       self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;
     }
-    tmpResult = tmp(1428);
+    tmpResult = tmp(1974);
   }
 };
 prototype["updateSystemResourceStats"] = function updateSystemResourceStats() {

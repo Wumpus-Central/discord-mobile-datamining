@@ -200,6 +200,7 @@ export const TrackUserProfileActions = {
   GIFT: "GIFT",
   SHOW_STYLES_PANEL: "SHOW_STYLES_PANEL",
   HIDE_STYLES_PANEL: "HIDE_STYLES_PANEL",
+  VIEW_NEW_CONTENT_TAB_BADGE: "VIEW_NEW_CONTENT_TAB_BADGE",
 };
 export const TrackUserProfileActivityActions = {
   VIEW_ACTIVITY_CARD: "VIEW_ACTIVITY_CARD",

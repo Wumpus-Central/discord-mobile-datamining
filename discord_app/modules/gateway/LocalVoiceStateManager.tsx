@@ -1,8 +1,8 @@
 // discord_app/modules/gateway/LocalVoiceStateManager.tsx
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import isClipsEnabled from "../clips/isClipsEnabled.tsx";
 import shouldCommitDefault from "../../lib/StateManager.tsx";
+import isClipsEnabled from "../clips/isClipsEnabled.tsx";
 import closure_2 from "../../stores/ChannelStore.tsx";
 import closure_3 from "../../stores/MediaEngineStore.tsx";
 import closure_4 from "../../stores/RTCRegionStore.tsx";

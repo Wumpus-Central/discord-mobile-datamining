@@ -1,8 +1,8 @@
 // discord_app/modules/summaries/SummaryStore.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import canSeeChannelSummaries from "../../experiments/ChannelSummariesExperiment.tsx";
 import closure_7 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_8 from "../experiments/ExperimentStore.tsx";
@@ -66,7 +66,7 @@ prototype["topSummaries"] = function topSummaries() {
       obj = callback(11);
       const date = new Date();
       const time = date.getTime();
-      tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(684).Millis.HOUR;
+      tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(1090).Millis.HOUR;
       const extractTimestampResult = callback(11).extractTimestamp(people.endId);
     }
     return tmp;
@@ -95,11 +95,11 @@ prototype["findSummary"] = function findSummary(channelId, summaryId) {
   }
   return found;
 };
-prototype["selectedSummary"] = function selectedSummary(channel_id) {
+prototype["selectedSummary"] = function selectedSummary(id) {
   let findSummaryResult = null;
   if (null != closure_6) {
     findSummaryResult = null;
-    if (closure_6.channelId === channel_id) {
+    if (closure_6.channelId === id) {
       findSummaryResult = null;
       if (null != closure_6.summaryId) {
         let summaryId;
@@ -107,7 +107,7 @@ prototype["selectedSummary"] = function selectedSummary(channel_id) {
         if (closure_6 != null) {
           summaryId = closure_6.summaryId;
         }
-        findSummaryResult = this.findSummary(channel_id, summaryId);
+        findSummaryResult = this.findSummary(id, summaryId);
       }
     }
   }
@@ -269,7 +269,7 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        obj = summaryFromServer(11209);
+        obj = summaryFromServer(11348);
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
         let items = dependencyMap2[channelId];
         if (items == null) {

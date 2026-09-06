@@ -164,7 +164,7 @@ export const useDefaultReactionEmoji = function useDefaultReactionEmoji(defaultR
   if (defaultReactionEmoji != null) {
     defaultReactionEmoji = defaultReactionEmoji.defaultReactionEmoji;
   }
-  let obj = defaultReactionEmoji(586);
+  let obj = defaultReactionEmoji(504);
   const items = [closure_5];
   let animated = obj.useStateFromStores(items, () => {
     let emojiId;
@@ -213,7 +213,7 @@ export const useSomeForumPostReactions = function useSomeForumPostReactions(mess
   if (parentChannel != null) {
     defaultReactionEmoji = parentChannel.defaultReactionEmoji;
   }
-  let obj = defaultReactionEmoji(586);
+  let obj = defaultReactionEmoji(504);
   let items = [closure_5];
   let animated = obj.useStateFromStores(items, () => {
     let emojiId;
@@ -291,7 +291,7 @@ export const useMaxPossibleForumPostReactions = function useMaxPossibleForumPost
   if (parentChannel != null) {
     defaultReactionEmoji = parentChannel.defaultReactionEmoji;
   }
-  let obj = defaultReactionEmoji(586);
+  let obj = defaultReactionEmoji(504);
   let items = [closure_5];
   let animated = obj.useStateFromStores(items, () => {
     let emojiId;
@@ -451,10 +451,10 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
     }
   }
   const guildId = thread.getGuildId();
-  let obj = id(586);
+  let obj = id(504);
   const items = [closure_14];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_14.getUser(id));
-  const nullableMessageAuthor = id(4747).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(4793).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = React.useEffect(() => {
     let tmp2 = null != id;
@@ -680,7 +680,7 @@ export const useCanViewArchivedPosts = function useCanViewArchivedPosts(channel)
 export const useForumSearchQuery = function useForumSearchQuery(channelId) {
   channelId = channelId.channelId;
   const items = [closure_18];
-  return channelId(586).useStateFromStores(items, () => {
+  return channelId(504).useStateFromStores(items, () => {
     let searchQuery = null;
     if (null != channelId) {
       searchQuery = closure_1_18.getSearchQuery(tmp);
@@ -691,7 +691,7 @@ export const useForumSearchQuery = function useForumSearchQuery(channelId) {
 export const useForumSearchState = function useForumSearchState(channelId) {
   channelId = channelId.channelId;
   const items = [closure_18];
-  return channelId(586).useStateFromStoresObject(items, () => ({
+  return channelId(504).useStateFromStoresObject(items, () => ({
     isSearchLoading: closure_1_18.getSearchLoading(closure_0),
     searchQuery: closure_1_18.getSearchQuery(closure_0),
     searchResults: closure_1_18.getSearchResults(closure_0),
@@ -865,12 +865,12 @@ export const useForumActiveThreadIds = function useForumActiveThreadIds(channel)
   let stateFromStores1;
   const items = [closure_15];
   ({ guild_id: channel, id: importDefault } = channel);
-  const stateFromStoresArray = channel(586).useStateFromStoresArray(items, () =>
+  const stateFromStoresArray = channel(504).useStateFromStoresArray(items, () =>
     closure_1_15.getThreadIds(channel.id, closure_1, closure_2, closure_3),
   );
-  let obj = channel(586);
+  let obj = channel(504);
   const items1 = [stateFromStores1, closure_13, closure_9];
-  stateFromStores = channel(586).useStateFromStores(items1, () => {
+  stateFromStores = channel(504).useStateFromStores(items1, () => {
     channel = closure_1_9.getChannel(closure_1);
     let isForumLikeChannelResult;
     if (channel != null) {
@@ -930,10 +930,10 @@ export const useForumActiveThreadIds = function useForumActiveThreadIds(channel)
       return 0;
     }
   });
-  const obj2 = channel(586);
+  const obj2 = channel(504);
   const items2 = [closure_15];
   const items3 = [shouldAutomaticallyAck, stateFromStores];
-  stateFromStores1 = channel(586).useStateFromStores(
+  stateFromStores1 = channel(504).useStateFromStores(
     items2,
     () => {
       let tmp = shouldAutomaticallyAck;

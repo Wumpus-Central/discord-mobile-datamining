@@ -109,7 +109,7 @@ function dismissOutboundPromotionNotice() {
   const lastDismissedOutboundPromotionStartDate = closure_7.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
     const PreloadedUserSettingsActionCreators =
-      lastDismissedOutboundPromotionStartDate(1369).PreloadedUserSettingsActionCreators;
+      lastDismissedOutboundPromotionStartDate(1940).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync(
       "userContent",
       (arg0) => {
@@ -118,7 +118,7 @@ function dismissOutboundPromotionNotice() {
           value: lastDismissedOutboundPromotionStartDate,
         });
       },
-      lastDismissedOutboundPromotionStartDate(1369).UserSettingsDelay.INFREQUENT_USER_ACTION,
+      lastDismissedOutboundPromotionStartDate(1940).UserSettingsDelay.INFREQUENT_USER_ACTION,
     );
   }
 }
@@ -184,14 +184,14 @@ function _fetchActiveBogoPromotion() {
         } else {
           if (1 === tmp7) {
             c3 = 0;
-            obj3 = callback(706);
+            obj3 = callback(573);
             obj3.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_FAIL" });
           } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
             body = arg1.body;
-            obj = callback(706);
+            obj = callback(573);
             obj4 = { type: "ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS", activePromotion: null };
             obj4[1] = c5.createFromServer(body);
             obj.dispatch(obj4);
@@ -239,17 +239,17 @@ function _fetchClaimedOutboundPromotionCodes() {
   const tmp = callback(function* () {
     const callback2 = tmp3;
     dependencyMap = 1;
-    const HTTP = closure_1_0(527).HTTP;
+    const HTTP = closure_1_0(1272).HTTP;
     obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
     obj1[0] = closure_1_9.CLAIMED_OUTBOUND_PROMOTION_CODES;
     const obj2 = { locale: null };
     obj2[0] = locale.locale;
     obj1[1] = obj2;
-    obj1[3] = closure_1_0(527).rejectWithMigratedError();
+    obj1[3] = closure_1_0(1272).rejectWithMigratedError();
     yield HTTP.get(obj1);
     if (1 === tmp7) {
       dependencyMap = 0;
-      const obj3 = callback2(706);
+      const obj3 = callback2(573);
       obj3.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL" });
       locale = 3;
     } else if (arg0 === 1) {
@@ -257,8 +257,8 @@ function _fetchClaimedOutboundPromotionCodes() {
       throw arg1;
     } else if (arg0 !== 2) {
       const body = arg1.body;
-      callback = body.map(callback(13250).claimedOutboundPromotionCodeFromServer);
-      const obj = callback2(706);
+      callback = body.map(callback(13355).claimedOutboundPromotionCodeFromServer);
+      const obj = callback2(573);
       const obj4 = { type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: null };
       obj4[1] = callback;
       obj.dispatch(obj4);

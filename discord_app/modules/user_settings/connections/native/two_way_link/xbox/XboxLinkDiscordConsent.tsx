@@ -13,7 +13,7 @@ const result = require("set").fileFinishedImporting(
 export default function XboxLinkDiscordConsent(arg0) {
   let navigation;
   ({ callbackCode, callbackState } = arg0);
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
@@ -27,16 +27,16 @@ export default function XboxLinkDiscordConsent(arg0) {
     platformType: PlatformTypes.XBOX,
     callbackCode,
     callbackState,
-    clientId: navigation(9332).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+    clientId: navigation(9261).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
     scopes: XBOX_CLIENT_SCOPES,
     onNext: callback,
     onError: callback1,
   };
-  return jsx(navigation(9331).TwoWayLinkDiscordConsent, {
+  return jsx(navigation(9234).TwoWayLinkDiscordConsent, {
     platformType: PlatformTypes.XBOX,
     callbackCode,
     callbackState,
-    clientId: navigation(9332).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+    clientId: navigation(9261).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
     scopes: XBOX_CLIENT_SCOPES,
     onNext: callback,
     onError: callback1,

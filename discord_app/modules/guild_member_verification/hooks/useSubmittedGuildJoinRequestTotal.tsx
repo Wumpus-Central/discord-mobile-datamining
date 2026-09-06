@@ -10,7 +10,7 @@ export const useSubmittedGuildJoinRequestTotal = function useSubmittedGuildJoinR
   guildId = guildId.guildId;
   const items = [closure_2];
   const items1 = [guildId];
-  return guildId(586).useStateFromStores(
+  return guildId(504).useStateFromStores(
     items,
     () => {
       let submittedGuildJoinRequestTotal;

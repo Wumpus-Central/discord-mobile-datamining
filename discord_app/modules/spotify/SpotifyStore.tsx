@@ -1,15 +1,15 @@
 // discord_app/modules/spotify/SpotifyStore.tsx
 import timestampDefault from "../debug/Logger.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
-import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 import setDefault from "../../utils/Durations.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
 import start2 from "../../../discord_common/js/packages/timers/Timers.tsx";
 import updateAssets from "../../utils/ApplicationAssetUtils.tsx";
-import apiRequest from "SpotifyActionCreators.tsx";
 import useIsSpeaking from "../../hooks/useIsSpeaking.tsx";
+import apiRequest from "SpotifyActionCreators.tsx";
 import closure_6 from "../game_detection/RunningGameStore.native.tsx";
 import closure_7 from "../../stores/AuthenticationStore.tsx";
 import closure_8 from "../../stores/ConnectedAccountsStore.tsx";
@@ -84,7 +84,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4362).Interval();
+    const interval = new obj(4447).Interval();
     obj.pingInterval = interval;
     const tmp15 = new failsDefault(undefined, MINUTE);
     obj.backoff = tmp15;
@@ -700,7 +700,7 @@ prototype["connect"] = function connect() {
     self._requestedDisconnect = false;
     self._requestedConnect = true;
     ({ accountId, accessToken } = self);
-    const SpotifyAPI = accountId(9409).SpotifyAPI;
+    const SpotifyAPI = accountId(11751).SpotifyAPI;
     let obj = { url: null, query: null, onlyRetryOnAuthorizationErrors: true };
     obj[0] = constants.PLAYER;
     obj = { additional_types: null };
@@ -903,9 +903,9 @@ prototype["handleOpen"] = function handleOpen() {
   backoff.succeed();
   const pingInterval = this.pingInterval;
   pingInterval.start(closure_23, () => self.ping());
-  const profile = self(9409).getProfile(this.accountId, this.accessToken);
-  const obj = self(9409);
-  const devices = self(9409).getDevices(this.accountId, this.accessToken);
+  const profile = self(11751).getProfile(this.accountId, this.accessToken);
+  const obj = self(11751);
+  const devices = self(11751).getDevices(this.accountId, this.accessToken);
 };
 prototype["handleMessage"] = function handleMessage(data) {
   data = data.data;
@@ -1348,7 +1348,7 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
           const arr3 = id[accountId];
         } else {
           flag2 = false;
-          if (!account(640)(found, device)) {
+          if (!account(558)(found, device)) {
             const _Object = Object;
             const merged = Object.assign(found, device);
             flag2 = true;
@@ -1432,7 +1432,7 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_35.stop(), false);
-        obj9 = device(9509);
+        obj9 = device(9478);
       }
       if (null != tmp10) {
         if (!tmp22) {
@@ -1486,12 +1486,12 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
               }
             }
             if (null != tmp10) {
-              let tmp25Result = tmp25(706);
+              let tmp25Result = tmp25(573);
               obj1 = { type: "SPOTIFY_NEW_TRACK", track: null, connectionId: null };
               obj1[1] = tmp10;
               obj1[2] = accountId;
               tmp25Result.dispatch(obj1);
-              tmp25Result = tmp25(695);
+              tmp25Result = tmp25(1242);
               obj2 = {
                 party_platform: null,
                 track_id: null,

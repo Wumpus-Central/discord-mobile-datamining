@@ -4,16 +4,17 @@ import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const obj = {
   1: null,
-  2: { placement: "outside", sortType: "popularity", buttonVariant: "default" },
-  3: { placement: "inside", sortType: "popularity", buttonVariant: "default" },
-  4: { placement: "inside", sortType: "recency", buttonVariant: "default" },
-  5: { placement: "replace_media", sortType: "popularity", buttonVariant: "default" },
+  2: { placement: "outside", sortType: "popularity", buttonVariant: "default", clickable: false },
+  3: { placement: "inside", sortType: "popularity", buttonVariant: "default", clickable: false },
+  4: { placement: "inside", sortType: "recency", buttonVariant: "default", clickable: false },
+  5: { placement: "replace_media", sortType: "popularity", buttonVariant: "default", clickable: false },
+  6: { placement: "none", sortType: "popularity", buttonVariant: "blurple", clickable: false },
 };
-obj[5] = { placement: "none", sortType: "popularity", buttonVariant: "blurple" };
+obj[6] = { placement: "outside", sortType: "popularity", buttonVariant: "default", clickable: true };
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-06-bounties-shop-carousel",
   kind: "user",
-  defaultConfig: { placement: "none", sortType: "popularity", buttonVariant: "default" },
+  defaultConfig: { placement: "none", sortType: "popularity", buttonVariant: "default", clickable: false },
   variations: obj,
 });
 const result = set.fileFinishedImporting("modules/quests/experiments/BountiesShopCarouselExperiment.tsx");

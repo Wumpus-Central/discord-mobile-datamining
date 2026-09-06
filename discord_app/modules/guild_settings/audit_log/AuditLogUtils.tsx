@@ -28,13 +28,13 @@ function getPermissionChanges(str, str2) {
     num = str;
   }
   obj = fromStringAll;
-  let tmpResult = tmp(503);
+  let tmpResult = tmp(1086);
   let num2 = 0;
   if (typeof str2 === "string") {
     num2 = str2;
   }
   const deserializeResult = fromStringAll.deserialize(num);
-  tmpResult = tmp(503);
+  tmpResult = tmp(1086);
   const deserializeResult1 = tmpResult.deserialize(num2);
   fromStringAll;
   const added = [];
@@ -49,7 +49,7 @@ function getPermissionChanges(str, str2) {
     if (obj5.has(removeResult, tmp12)) {
       let arr = added.push(tmp12);
     }
-    let tmp13Result = tmp13(503);
+    let tmp13Result = tmp13(1086);
     if (!tmp13Result.has(tmp7, tmp12)) {
       continue;
     } else {
@@ -677,19 +677,19 @@ class ACTION_FILTER_ITEMS {
   }
 }
 let obj = {
-  [arg1(4558).TimeUnits.SECONDS]: (seconds) => {
+  [arg1(4589).TimeUnits.SECONDS]: (seconds) => {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t.geSp4K, { seconds });
   },
-  [arg1(4558).TimeUnits.MINUTES]: (minutes) => {
+  [arg1(4589).TimeUnits.MINUTES]: (minutes) => {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes });
   },
-  [arg1(4558).TimeUnits.HOURS]: (hours) => {
+  [arg1(4589).TimeUnits.HOURS]: (hours) => {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t.xCjYxK, { hours });
   },
-  [arg1(4558).TimeUnits.DAYS]: (days) => {
+  [arg1(4589).TimeUnits.DAYS]: (days) => {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t["k2UNz+"], { days });
   },
@@ -703,71 +703,71 @@ export const getChangeStrings = function getChangeStrings(targetType) {
   if (AuditLogTargetTypes.GUILD === targetType) {
     obj = {};
     merged = AuditLogChangeKeys;
-    obj[AuditLogChangeKeys.NAME] = () => __3TkD(1233).t.CkDiNH;
+    obj[AuditLogChangeKeys.NAME] = () => __3TkD(1114).t.CkDiNH;
     merged = __3TkD;
     merged = dependencyMap;
-    __3TkD = __3TkD(1233).t.RP3Ey3;
+    __3TkD = __3TkD(1114).t.RP3Ey3;
     obj[AuditLogChangeKeys.DESCRIPTION] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
-    obj[AuditLogChangeKeys.ICON_HASH] = () => __3TkD(1233).t.iLZ8Q9;
-    obj[AuditLogChangeKeys.SPLASH_HASH] = () => __3TkD(1233).t["4VV6dn"];
-    obj[AuditLogChangeKeys.DISCOVERY_SPLASH_HASH] = () => __3TkD(1233).t["2pds6p"];
-    __3TkD = __3TkD(1233).t.Cxq4zO;
+    obj[AuditLogChangeKeys.ICON_HASH] = () => __3TkD(1114).t.iLZ8Q9;
+    obj[AuditLogChangeKeys.SPLASH_HASH] = () => __3TkD(1114).t["4VV6dn"];
+    obj[AuditLogChangeKeys.DISCOVERY_SPLASH_HASH] = () => __3TkD(1114).t["2pds6p"];
+    __3TkD = __3TkD(1114).t.Cxq4zO;
     obj[AuditLogChangeKeys.BANNER_HASH] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
-    obj[AuditLogChangeKeys.OWNER_ID] = () => __3TkD(1233).t["8ltsLT"];
-    obj[AuditLogChangeKeys.REGION] = () => __3TkD(1233).t.X9r5Kf;
-    obj[AuditLogChangeKeys.PREFERRED_LOCALE] = () => __3TkD(1233).t.UnXuDS;
-    __3TkD = __3TkD(1233).t.ClBuA4;
+    obj[AuditLogChangeKeys.OWNER_ID] = () => __3TkD(1114).t["8ltsLT"];
+    obj[AuditLogChangeKeys.REGION] = () => __3TkD(1114).t.X9r5Kf;
+    obj[AuditLogChangeKeys.PREFERRED_LOCALE] = () => __3TkD(1114).t.UnXuDS;
+    __3TkD = __3TkD(1114).t.ClBuA4;
     obj[AuditLogChangeKeys.AFK_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
-    obj[AuditLogChangeKeys.AFK_TIMEOUT] = () => __3TkD(1233).t.q21fHa;
-    __3TkD = __3TkD(1233).t.H1VXaa;
+    obj[AuditLogChangeKeys.AFK_TIMEOUT] = () => __3TkD(1114).t.q21fHa;
+    __3TkD = __3TkD(1114).t.H1VXaa;
     obj[AuditLogChangeKeys.SYSTEM_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t.OI6MG2;
+    __3TkD = __3TkD(1114).t.OI6MG2;
     obj[AuditLogChangeKeys.RULES_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t.YxBKrY;
+    __3TkD = __3TkD(1114).t.YxBKrY;
     obj[AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     obj = {};
     merged = constants2;
-    obj[constants2.NONE] = __3TkD(1233).t.voaCCQ;
-    obj[constants2.ELEVATED] = __3TkD(1233).t.pRNVwz;
+    obj[constants2.NONE] = __3TkD(1114).t.voaCCQ;
+    obj[constants2.ELEVATED] = __3TkD(1114).t.pRNVwz;
     __3TkD = obj;
     obj[AuditLogChangeKeys.MFA_LEVEL] = (arg0) => __3TkD[arg0.newValue];
-    __3TkD = __3TkD(1233).t.ADIty8;
+    __3TkD = __3TkD(1114).t.ADIty8;
     obj[AuditLogChangeKeys.WIDGET_ENABLED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t["6SBsDc"];
+    __3TkD = __3TkD(1114).t["6SBsDc"];
     obj[AuditLogChangeKeys.WIDGET_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     obj1 = {};
     merged = constants3;
-    obj1[constants3.NONE] = __3TkD(1233).t.W27rsc;
-    obj1[constants3.LOW] = __3TkD(1233).t["V8P+Pw"];
-    obj1[constants3.MEDIUM] = __3TkD(1233).t.ERQFau;
-    obj1[constants3.HIGH] = __3TkD(1233).t["83fN0j"];
-    obj1[constants3.VERY_HIGH] = __3TkD(1233).t.PnkQJE;
+    obj1[constants3.NONE] = __3TkD(1114).t.W27rsc;
+    obj1[constants3.LOW] = __3TkD(1114).t["V8P+Pw"];
+    obj1[constants3.MEDIUM] = __3TkD(1114).t.ERQFau;
+    obj1[constants3.HIGH] = __3TkD(1114).t["83fN0j"];
+    obj1[constants3.VERY_HIGH] = __3TkD(1114).t.PnkQJE;
     __3TkD = obj1;
     obj[AuditLogChangeKeys.VERIFICATION_LEVEL] = (arg0) => __3TkD[arg0.newValue];
     const obj2 = {};
     merged = constants4;
-    obj2[constants4.ALL_MESSAGES] = __3TkD(1233).t.LDi76A;
-    obj2[constants4.ONLY_MENTIONS] = __3TkD(1233).t["6K83ba"];
+    obj2[constants4.ALL_MESSAGES] = __3TkD(1114).t.LDi76A;
+    obj2[constants4.ONLY_MENTIONS] = __3TkD(1114).t["6K83ba"];
     __3TkD = obj2;
     obj[AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS] = (arg0) => __3TkD[arg0.newValue];
-    __3TkD = __3TkD(1233).t.Zplsov;
+    __3TkD = __3TkD(1114).t.Zplsov;
     obj[AuditLogChangeKeys.VANITY_URL_CODE] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     const obj3 = {};
     merged = constants5;
-    obj3[constants5.DISABLED] = __3TkD(1233).t.fmOeL3;
-    obj3[constants5.MEMBERS_WITHOUT_ROLES] = __3TkD(1233).t["4FghYw"];
-    obj3[constants5.ALL_MEMBERS] = __3TkD(1233).t.olyrSm;
+    obj3[constants5.DISABLED] = __3TkD(1114).t.fmOeL3;
+    obj3[constants5.MEMBERS_WITHOUT_ROLES] = __3TkD(1114).t["4FghYw"];
+    obj3[constants5.ALL_MEMBERS] = __3TkD(1114).t.olyrSm;
     __3TkD = obj3;
     obj[AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER] = (arg0) => __3TkD[arg0.newValue];
-    __3TkD = __3TkD(1233).t.rBT0sn;
+    __3TkD = __3TkD(1114).t.rBT0sn;
     obj[AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-    obj[AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME] = () => __3TkD(1233).t.YbouFH;
-    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS] = () => __3TkD(1233).t.g3DMjB;
-    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS] = () => __3TkD(1233).t["+fQAel"];
-    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS] = () => __3TkD(1233).t.E1fc4v;
-    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES] = () => __3TkD(1233).t.XbwtSA;
+    obj[AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME] = () => __3TkD(1114).t.YbouFH;
+    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS] = () => __3TkD(1114).t.g3DMjB;
+    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS] = () => __3TkD(1114).t["+fQAel"];
+    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS] = () => __3TkD(1114).t.E1fc4v;
+    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES] = () => __3TkD(1114).t.XbwtSA;
     const obj4 = {};
-    obj4[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+    obj4[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
     merged = obj;
     merged = obj4;
     merged = Object.assign(obj4);
@@ -780,8 +780,8 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           merged = AuditLogChangeKeys;
           merged = __3TkD;
           merged = dependencyMap;
-          __3TkD = __3TkD(1233).t.qXDsHv;
-          lj_A4u = __3TkD(1233).t.DvLvjF;
+          __3TkD = __3TkD(1114).t.qXDsHv;
+          lj_A4u = __3TkD(1114).t.DvLvjF;
           obj5[AuditLogChangeKeys.NICK] = (newValue) => {
             if (null != newValue.newValue) {
               if (null != newValue.oldValue) {
@@ -795,15 +795,15 @@ export const getChangeStrings = function getChangeStrings(targetType) {
               tmp = lj_A4u;
             }
           };
-          __3TkD = __3TkD(1233).t.mArLlW;
+          __3TkD = __3TkD(1114).t.mArLlW;
           obj5[AuditLogChangeKeys.DEAF] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t["bxs/lS"];
+          __3TkD = __3TkD(1114).t["bxs/lS"];
           obj5[AuditLogChangeKeys.MUTE] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          obj5[AuditLogChangeKeys.ROLES_REMOVE] = () => __3TkD(1233).t["+2SDWV"];
-          obj5[AuditLogChangeKeys.ROLES_ADD] = () => __3TkD(1233).t["B3/3IJ"];
-          obj5[AuditLogChangeKeys.PRUNE_DELETE_DAYS] = () => __3TkD(1233).t["+Cvc+D"];
-          __3TkD = __3TkD(1233).t.LXTQr5;
-          lj_A4u = __3TkD(1233).t.ULSdnE;
+          obj5[AuditLogChangeKeys.ROLES_REMOVE] = () => __3TkD(1114).t["+2SDWV"];
+          obj5[AuditLogChangeKeys.ROLES_ADD] = () => __3TkD(1114).t["B3/3IJ"];
+          obj5[AuditLogChangeKeys.PRUNE_DELETE_DAYS] = () => __3TkD(1114).t["+Cvc+D"];
+          __3TkD = __3TkD(1114).t.LXTQr5;
+          lj_A4u = __3TkD(1114).t.ULSdnE;
           obj5[AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL] = (newValue) => {
             if (null != newValue.newValue) {
               if (null != newValue.oldValue) {
@@ -817,11 +817,11 @@ export const getChangeStrings = function getChangeStrings(targetType) {
               tmp = lj_A4u;
             }
           };
-          __3TkD = __3TkD(1233).t.NBPBui;
+          __3TkD = __3TkD(1114).t.NBPBui;
           obj5[AuditLogChangeKeys.BYPASSES_VERIFICATION] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          obj5[AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME] = () => __3TkD(1233).t.YbouFH;
+          obj5[AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME] = () => __3TkD(1114).t.YbouFH;
           const obj6 = {};
-          obj6[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj6[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           merged = obj5;
           merged = obj6;
           merged = Object.assign(obj6);
@@ -831,14 +831,14 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           merged = AuditLogChangeKeys;
           merged = __3TkD;
           merged = dependencyMap;
-          __3TkD = __3TkD(1233).t.QBmlaD;
+          __3TkD = __3TkD(1114).t.QBmlaD;
           obj7[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.XeYKWJ;
+          __3TkD = __3TkD(1114).t.XeYKWJ;
           obj7[AuditLogChangeKeys.DESCRIPTION] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          obj7[AuditLogChangeKeys.PERMISSIONS_GRANTED] = () => __3TkD(1233).t["9i/DvE"];
-          obj7[AuditLogChangeKeys.PERMISSIONS_DENIED] = () => __3TkD(1233).t.pa1ZVh;
+          obj7[AuditLogChangeKeys.PERMISSIONS_GRANTED] = () => __3TkD(1114).t["9i/DvE"];
+          obj7[AuditLogChangeKeys.PERMISSIONS_DENIED] = () => __3TkD(1114).t.pa1ZVh;
           const obj8 = { "#000000": null };
-          obj8[0] = __3TkD(1233).t.TK6E1H;
+          obj8[0] = __3TkD(1114).t.TK6E1H;
           __3TkD = obj8;
           obj7[AuditLogChangeKeys.COLOR] = (arg0) => {
             let tmp = __3TkD[arg0.newValue];
@@ -849,20 +849,20 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           };
           obj7[AuditLogChangeKeys.COLORS] = (newValue) => {
             if (null == newValue.newValue.secondary_color) {
-              WnSwL_ = __3TkD(1233).t.U44ttm;
+              WnSwL_ = __3TkD(1114).t.U44ttm;
             } else {
-              WnSwL_ = __3TkD(1233).t["WnSwL/"];
+              WnSwL_ = __3TkD(1114).t["WnSwL/"];
             }
             return WnSwL_;
           };
-          __3TkD = __3TkD(1233).t.gWfe24;
+          __3TkD = __3TkD(1114).t.gWfe24;
           obj7[AuditLogChangeKeys.HOIST] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.LL8VFF;
+          __3TkD = __3TkD(1114).t.LL8VFF;
           obj7[AuditLogChangeKeys.MENTIONABLE] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          obj7[AuditLogChangeKeys.ICON_HASH] = () => __3TkD(1233).t["iEE79/"];
-          obj7[AuditLogChangeKeys.UNICODE_EMOJI] = () => __3TkD(1233).t.KiLMM0;
+          obj7[AuditLogChangeKeys.ICON_HASH] = () => __3TkD(1114).t["iEE79/"];
+          obj7[AuditLogChangeKeys.UNICODE_EMOJI] = () => __3TkD(1114).t.KiLMM0;
           const obj9 = {};
-          obj9[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj9[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           merged = obj7;
           merged = obj9;
           merged = Object.assign(obj9);
@@ -870,53 +870,53 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         } else if (merged.ONBOARDING_PROMPT === targetType) {
           const obj10 = {};
           const obj11 = {};
-          obj11[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj11[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           merged = Object.assign(obj11);
           merged = __3TkD;
           merged = dependencyMap;
-          __3TkD = __3TkD(1233).t["sNpuy/"];
+          __3TkD = __3TkD(1114).t["sNpuy/"];
           obj10[AuditLogChangeKeys.TITLE] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.PP1q0x;
+          __3TkD = __3TkD(1114).t.PP1q0x;
           obj10[AuditLogChangeKeys.DESCRIPTION] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          obj10[AuditLogChangeKeys.OPTIONS] = () => __3TkD(1233).t["3G5C9+"];
-          __3TkD = __3TkD(1233).t.v4WnR3;
+          obj10[AuditLogChangeKeys.OPTIONS] = () => __3TkD(1114).t["3G5C9+"];
+          __3TkD = __3TkD(1114).t.v4WnR3;
           obj10[AuditLogChangeKeys.SINGLE_SELECT] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t["0MPAM6"];
+          __3TkD = __3TkD(1114).t["0MPAM6"];
           obj10[AuditLogChangeKeys.REQUIRED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           return obj10;
         } else if (merged.GUILD_ONBOARDING === targetType) {
           const obj12 = {};
           const obj13 = {};
-          obj13[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj13[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged1 = Object.assign(obj13);
-          obj12[AuditLogChangeKeys.DEFAULT_CHANNEL_IDS] = () => __3TkD(1233).t["8M+D2s"];
-          __3TkD = __3TkD(1233).t["EYd/ls"];
+          obj12[AuditLogChangeKeys.DEFAULT_CHANNEL_IDS] = () => __3TkD(1114).t["8M+D2s"];
+          __3TkD = __3TkD(1114).t["EYd/ls"];
           obj12[AuditLogChangeKeys.ENABLE_DEFAULT_CHANNELS] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.V3u8PV;
+          __3TkD = __3TkD(1114).t.V3u8PV;
           obj12[AuditLogChangeKeys.ENABLE_ONBOARDING_PROMPTS] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.SODVIs;
+          __3TkD = __3TkD(1114).t.SODVIs;
           obj12[AuditLogChangeKeys.ENABLED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj14 = {};
-          obj14[GuildOnboardingMode.ONBOARDING_ADVANCED] = __3TkD(1233).t.JbzVsh;
-          obj14[GuildOnboardingMode.ONBOARDING_DEFAULT] = __3TkD(1233).t.aCgU0S;
+          obj14[GuildOnboardingMode.ONBOARDING_ADVANCED] = __3TkD(1114).t.JbzVsh;
+          obj14[GuildOnboardingMode.ONBOARDING_DEFAULT] = __3TkD(1114).t.aCgU0S;
           __3TkD = obj14;
           obj12[AuditLogChangeKeys.MODE] = (arg0) => __3TkD[arg0.newValue];
           return obj12;
         } else if (merged.HOME_SETTINGS === targetType) {
           const obj15 = {};
           const obj16 = {};
-          obj16[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj16[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged2 = Object.assign(obj16);
-          obj15[AuditLogChangeKeys.WELCOME_MESSAGE] = () => __3TkD(1233).t.dKQ1xd;
-          obj15[AuditLogChangeKeys.NEW_MEMBER_ACTIONS] = () => __3TkD(1233).t.jDUIno;
-          obj15[AuditLogChangeKeys.RESOURCE_CHANNELS] = () => __3TkD(1233).t.SIX0mr;
+          obj15[AuditLogChangeKeys.WELCOME_MESSAGE] = () => __3TkD(1114).t.dKQ1xd;
+          obj15[AuditLogChangeKeys.NEW_MEMBER_ACTIONS] = () => __3TkD(1114).t.jDUIno;
+          obj15[AuditLogChangeKeys.RESOURCE_CHANNELS] = () => __3TkD(1114).t.SIX0mr;
           return obj15;
         } else if (merged.INVITE === targetType) {
           const obj17 = {};
-          obj17[AuditLogChangeKeys.CODE] = () => __3TkD(1233).t.rrRHgb;
-          obj17[AuditLogChangeKeys.CHANNEL_ID] = () => __3TkD(1233).t.Q1vd5q;
+          obj17[AuditLogChangeKeys.CODE] = () => __3TkD(1114).t.rrRHgb;
+          obj17[AuditLogChangeKeys.CHANNEL_ID] = () => __3TkD(1114).t.Q1vd5q;
           const obj18 = { 0: null };
-          obj18[0] = __3TkD(1233).t.Yx8LNm;
+          obj18[0] = __3TkD(1114).t.Yx8LNm;
           __3TkD = obj18;
           obj17[AuditLogChangeKeys.MAX_USES] = (arg0) => {
             let tmp = __3TkD[arg0.newValue];
@@ -926,8 +926,8 @@ export const getChangeStrings = function getChangeStrings(targetType) {
             return tmp;
           };
           const obj19 = {};
-          const intl = __3TkD(1233).intl;
-          obj19[intl.string(__3TkD(1233).t.PqEzn8)] = __3TkD(1233).t.uWrLvw;
+          const intl = __3TkD(1114).intl;
+          obj19[intl.string(__3TkD(1114).t.PqEzn8)] = __3TkD(1114).t.uWrLvw;
           __3TkD = obj19;
           obj17[AuditLogChangeKeys.MAX_AGE] = (arg0) => {
             let tmp = __3TkD[arg0.newValue];
@@ -936,150 +936,150 @@ export const getChangeStrings = function getChangeStrings(targetType) {
             }
             return tmp;
           };
-          __3TkD = __3TkD(1233).t.MWp6H7;
+          __3TkD = __3TkD(1114).t.MWp6H7;
           obj17[AuditLogChangeKeys.TEMPORARY] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj20 = {};
-          obj20[__3TkD(8682).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1233).t.XYZMbL;
+          obj20[__3TkD(8392).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1114).t.XYZMbL;
           __3TkD = obj20;
           obj17[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
-          obj17[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1233).t.gb1Owj;
+          obj17[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1114).t.gb1Owj;
           const obj21 = {};
-          obj21[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj21[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged3 = Object.assign(obj21);
           return obj17;
         } else if (merged.WEBHOOK === targetType) {
           const obj22 = {};
-          __3TkD = __3TkD(1233).t.jhPprR;
+          __3TkD = __3TkD(1114).t.jhPprR;
           obj22[AuditLogChangeKeys.CHANNEL_ID] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.ZVGrzU;
+          __3TkD = __3TkD(1114).t.ZVGrzU;
           obj22[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          obj22[AuditLogChangeKeys.AVATAR_HASH] = () => __3TkD(1233).t.KB52Uj;
-          obj22[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj22[AuditLogChangeKeys.AVATAR_HASH] = () => __3TkD(1114).t.KB52Uj;
+          obj22[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           return obj22;
         } else if (merged.EMOJI === targetType) {
           const obj23 = {};
-          __3TkD = __3TkD(1233).t.ahU1o5;
+          __3TkD = __3TkD(1114).t.ahU1o5;
           obj23[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           const obj24 = {};
-          obj24[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj24[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged4 = Object.assign(obj24);
           return obj23;
         } else if (merged.STICKER === targetType) {
           const obj25 = {};
-          __3TkD = __3TkD(1233).t.cdl0Yo;
+          __3TkD = __3TkD(1114).t.cdl0Yo;
           obj25[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t["zwL+S2"];
+          __3TkD = __3TkD(1114).t["zwL+S2"];
           obj25[AuditLogChangeKeys.TAGS] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.XeYKWJ;
+          __3TkD = __3TkD(1114).t.XeYKWJ;
           obj25[AuditLogChangeKeys.DESCRIPTION] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           const obj26 = {};
-          obj26[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj26[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged5 = Object.assign(obj26);
           return obj25;
         } else if (merged.INTEGRATION === targetType) {
           const obj27 = {};
-          __3TkD = __3TkD(1233).t.FI0m5x;
+          __3TkD = __3TkD(1114).t.FI0m5x;
           obj27[AuditLogChangeKeys.ENABLE_EMOTICONS] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj28 = { 0: null, 1: null };
-          obj28[0] = __3TkD(1233).t["1Bb1+u"];
-          obj28[1] = __3TkD(1233).t.vjlW6m;
+          obj28[0] = __3TkD(1114).t["1Bb1+u"];
+          obj28[1] = __3TkD(1114).t.vjlW6m;
           __3TkD = obj28;
           obj27[AuditLogChangeKeys.EXPIRE_BEHAVIOR] = (arg0) => __3TkD[arg0.newValue];
-          obj27[AuditLogChangeKeys.EXPIRE_GRACE_PERIOD] = () => __3TkD(1233).t.iovXMa;
+          obj27[AuditLogChangeKeys.EXPIRE_GRACE_PERIOD] = () => __3TkD(1114).t.iovXMa;
           const obj29 = {};
-          obj29[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj29[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged6 = Object.assign(obj29);
           return obj27;
         } else if (merged.STAGE_INSTANCE === targetType) {
           const obj30 = {};
-          __3TkD = __3TkD(1233).t["m+veAn"];
+          __3TkD = __3TkD(1114).t["m+veAn"];
           obj30[AuditLogChangeKeys.TOPIC] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           const obj31 = {};
-          obj31[constants11.GUILD_ONLY] = __3TkD(1233).t["EC+CDt"];
-          obj31[constants11.PUBLIC] = __3TkD(1233).t["pK/WG0"];
+          obj31[constants11.GUILD_ONLY] = __3TkD(1114).t["EC+CDt"];
+          obj31[constants11.PUBLIC] = __3TkD(1114).t["pK/WG0"];
           __3TkD = obj31;
           obj30[AuditLogChangeKeys.PRIVACY_LEVEL] = (arg0) => __3TkD[arg0.newValue];
           const obj32 = {};
-          obj32[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj32[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged7 = Object.assign(obj32);
           return obj30;
         } else if (merged.GUILD_SCHEDULED_EVENT === targetType) {
           const obj33 = {};
-          obj33[AuditLogChangeKeys.NAME] = () => __3TkD(1233).t["21EXHW"];
-          obj33[AuditLogChangeKeys.DESCRIPTION] = () => __3TkD(1233).t.Vm1ofw;
+          obj33[AuditLogChangeKeys.NAME] = () => __3TkD(1114).t["21EXHW"];
+          obj33[AuditLogChangeKeys.DESCRIPTION] = () => __3TkD(1114).t.Vm1ofw;
           const obj34 = {};
-          obj34[constants11.GUILD_ONLY] = __3TkD(1233).t["EC+CDt"];
-          obj34[constants11.PUBLIC] = __3TkD(1233).t["pK/WG0"];
+          obj34[constants11.GUILD_ONLY] = __3TkD(1114).t["EC+CDt"];
+          obj34[constants11.PUBLIC] = __3TkD(1114).t["pK/WG0"];
           __3TkD = obj34;
           obj33[AuditLogChangeKeys.PRIVACY_LEVEL] = (arg0) => __3TkD[arg0.newValue];
           const obj35 = {};
-          obj35[constants10.SCHEDULED] = __3TkD(1233).t.hXKDgq;
-          obj35[constants10.ACTIVE] = __3TkD(1233).t.lRX1nz;
-          obj35[constants10.COMPLETED] = __3TkD(1233).t["/eFIhq"];
-          obj35[constants10.CANCELED] = __3TkD(1233).t.NWIYhj;
+          obj35[constants10.SCHEDULED] = __3TkD(1114).t.hXKDgq;
+          obj35[constants10.ACTIVE] = __3TkD(1114).t.lRX1nz;
+          obj35[constants10.COMPLETED] = __3TkD(1114).t["/eFIhq"];
+          obj35[constants10.CANCELED] = __3TkD(1114).t.NWIYhj;
           __3TkD = obj35;
           obj33[AuditLogChangeKeys.STATUS] = (arg0) => __3TkD[arg0.newValue];
           const obj36 = {};
-          obj36[constants9.NONE] = __3TkD(1233).t["6sO3Ss"];
-          obj36[constants9.STAGE_INSTANCE] = __3TkD(1233).t["Wo+s1y"];
-          obj36[constants9.VOICE] = __3TkD(1233).t.XCVaIL;
-          obj36[constants9.EXTERNAL] = __3TkD(1233).t.IvhAj2;
+          obj36[constants9.NONE] = __3TkD(1114).t["6sO3Ss"];
+          obj36[constants9.STAGE_INSTANCE] = __3TkD(1114).t["Wo+s1y"];
+          obj36[constants9.VOICE] = __3TkD(1114).t.XCVaIL;
+          obj36[constants9.EXTERNAL] = __3TkD(1114).t.IvhAj2;
           __3TkD = obj36;
           obj33[AuditLogChangeKeys.ENTITY_TYPE] = (arg0) => __3TkD[arg0.newValue];
-          __3TkD = __3TkD(1233).t.yJBIcX;
+          __3TkD = __3TkD(1114).t.yJBIcX;
           obj33[AuditLogChangeKeys.CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.GaMBHy;
+          __3TkD = __3TkD(1114).t.GaMBHy;
           obj33[AuditLogChangeKeys.LOCATION] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.S3vcRK;
+          __3TkD = __3TkD(1114).t.S3vcRK;
           obj33[AuditLogChangeKeys.IMAGE_HASH] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
           const obj37 = {};
-          obj37[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj37[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged8 = Object.assign(obj37);
           return obj33;
         } else if (merged.GUILD_SCHEDULED_EVENT_EXCEPTION === targetType) {
           const obj38 = {};
-          __3TkD = __3TkD(1233).t.zMIYVg;
+          __3TkD = __3TkD(1114).t.zMIYVg;
           obj38[AuditLogChangeKeys.SCHEDULED_START_TIME] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.vONSQA;
+          __3TkD = __3TkD(1114).t.vONSQA;
           obj38[AuditLogChangeKeys.SCHEDULED_END_TIME] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
           obj38[AuditLogChangeKeys.IS_CANCELED] = (oldValue) => {
             if (null != oldValue.oldValue) {
               if (!oldValue.oldValue) {
                 if (oldValue.newValue) {
-                  return __3TkD(1233).t["7RkicW"];
+                  return __3TkD(1114).t["7RkicW"];
                 }
               }
               if (oldValue.oldValue) {
                 if (!oldValue.newValue) {
-                  return __3TkD(1233).t.dRNTWW;
+                  return __3TkD(1114).t.dRNTWW;
                 }
               }
             }
           };
           const obj39 = {};
-          obj39[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj39[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged9 = Object.assign(obj39);
           return obj38;
         } else if (merged.THREAD === targetType) {
           const obj40 = {};
-          __3TkD = __3TkD(1233).t.tUKRzX;
+          __3TkD = __3TkD(1114).t.tUKRzX;
           obj40[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.jDi9FK;
+          __3TkD = __3TkD(1114).t.jDi9FK;
           obj40[AuditLogChangeKeys.ARCHIVED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.JSy1QW;
+          __3TkD = __3TkD(1114).t.JSy1QW;
           obj40[AuditLogChangeKeys.LOCKED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.dxNUs9;
+          __3TkD = __3TkD(1114).t.dxNUs9;
           obj40[AuditLogChangeKeys.INVITABLE] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.LuaG3y;
+          __3TkD = __3TkD(1114).t.LuaG3y;
           obj40[AuditLogChangeKeys.AUTO_ARCHIVE_DURATION] = (oldValue) =>
             null == oldValue.oldValue ? __3TkD : _5kDYS3;
-          __3TkD = __3TkD(1233).t["7lirhF"];
+          __3TkD = __3TkD(1114).t["7lirhF"];
           obj40[AuditLogChangeKeys.RATE_LIMIT_PER_USER] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          obj40[AuditLogChangeKeys.FLAGS] = () => __3TkD(1233).t.sSAQtj;
-          obj40[AuditLogChangeKeys.AVAILABLE_TAG_ADD] = () => __3TkD(1233).t.H86QQU;
-          obj40[AuditLogChangeKeys.AVAILABLE_TAG_DELETE] = () => __3TkD(1233).t["8QOseg"];
+          obj40[AuditLogChangeKeys.FLAGS] = () => __3TkD(1114).t.sSAQtj;
+          obj40[AuditLogChangeKeys.AVAILABLE_TAG_ADD] = () => __3TkD(1114).t.H86QQU;
+          obj40[AuditLogChangeKeys.AVAILABLE_TAG_DELETE] = () => __3TkD(1114).t["8QOseg"];
           const obj41 = {};
-          obj41[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj41[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged10 = Object.assign(obj41);
           return obj40;
         } else if (merged.APPLICATION_COMMAND === targetType) {
@@ -1087,62 +1087,62 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = undefined;
           const obj42 = {};
           const obj43 = {};
-          obj43[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj43[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged11 = Object.assign(obj43);
           __3TkD = obj42;
           if (changes != null) {
             const item = changes.forEach((newValue) => {
               if (newValue.newValue) {
                 if (newValue.newValue.permission) {
-                  tmp2[key] = () => callback(1233).t["JH+89C"];
+                  tmp2[key] = () => callback(1114).t["JH+89C"];
                 } else {
-                  tmp2[key] = () => callback(1233).t.HUrFDu;
+                  tmp2[key] = () => callback(1114).t.HUrFDu;
                 }
               } else {
-                __3TkD[newValue.key] = () => callback(1233).t.vynxnV;
+                __3TkD[newValue.key] = () => callback(1114).t.vynxnV;
               }
             });
           }
           return obj42;
         } else if (merged.AUTO_MODERATION_RULE === targetType) {
           const obj44 = {};
-          obj44[AuditLogChangeKeys.NAME] = () => __3TkD(1233).t.XwxAJT;
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE] = () => __3TkD(1233).t.fx0pyl;
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE] = () => __3TkD(1233).t["46Y+L5"];
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_ACTIONS] = () => __3TkD(1233).t["8efxfv"];
+          obj44[AuditLogChangeKeys.NAME] = () => __3TkD(1114).t.XwxAJT;
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE] = () => __3TkD(1114).t.fx0pyl;
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE] = () => __3TkD(1114).t["46Y+L5"];
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_ACTIONS] = () => __3TkD(1114).t["8efxfv"];
           obj44[AuditLogChangeKeys.AUTO_MODERATION_ENABLED] = (newValue) => {
             let oldValue = newValue.newValue;
             if (oldValue == null) {
               oldValue = newValue.oldValue;
             }
             if (true === oldValue) {
-              let Wrg9Jn = __3TkD(1233).t.fCmxC2;
+              let Wrg9Jn = __3TkD(1114).t.fCmxC2;
             } else {
-              Wrg9Jn = __3TkD(1233).t.Wrg9Jn;
+              Wrg9Jn = __3TkD(1114).t.Wrg9Jn;
             }
             return Wrg9Jn;
           };
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES] = () => __3TkD(1233).t.TRb7Nx;
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS] = () => __3TkD(1233).t.mzitLE;
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA] = () => __3TkD(1233).t["h/lM65"];
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS] = () => __3TkD(1233).t["9V2yaC"];
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS] = () => __3TkD(1233).t["4Qe9ny"];
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_ADD_REGEX_PATTERNS] = () => __3TkD(1233).t.GyZtxp;
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_REMOVE_REGEX_PATTERNS] = () => __3TkD(1233).t.OQDadc;
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST] = () => __3TkD(1233).t["FvvR+K"];
-          obj44[AuditLogChangeKeys.AUTO_MODERATION_REMOVE_ALLOW_LIST] = () => __3TkD(1233).t.p5nSvy;
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES] = () => __3TkD(1114).t.TRb7Nx;
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS] = () => __3TkD(1114).t.mzitLE;
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA] = () => __3TkD(1114).t["h/lM65"];
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS] = () => __3TkD(1114).t["9V2yaC"];
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS] = () => __3TkD(1114).t["4Qe9ny"];
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_ADD_REGEX_PATTERNS] = () => __3TkD(1114).t.GyZtxp;
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_REMOVE_REGEX_PATTERNS] = () => __3TkD(1114).t.OQDadc;
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST] = () => __3TkD(1114).t["FvvR+K"];
+          obj44[AuditLogChangeKeys.AUTO_MODERATION_REMOVE_ALLOW_LIST] = () => __3TkD(1114).t.p5nSvy;
           const obj45 = {};
-          obj45[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj45[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged12 = Object.assign(obj45);
           return obj44;
         } else if (merged.GUILD_SOUNDBOARD === targetType) {
           const obj46 = {};
-          __3TkD = __3TkD(1233).t.VOtRSO;
+          __3TkD = __3TkD(1114).t.VOtRSO;
           obj46[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.igrDB9;
+          __3TkD = __3TkD(1114).t.igrDB9;
           obj46[AuditLogChangeKeys.VOLUME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-          __3TkD = __3TkD(1233).t.IIanaY;
-          lj_A4u = __3TkD(1233).t.V8TfyU;
+          __3TkD = __3TkD(1114).t.IIanaY;
+          lj_A4u = __3TkD(1114).t.V8TfyU;
           obj46[AuditLogChangeKeys.EMOJI_NAME] = (newValue) => {
             if (null != newValue.newValue) {
               if (null != newValue.oldValue) {
@@ -1156,8 +1156,8 @@ export const getChangeStrings = function getChangeStrings(targetType) {
               tmp = lj_A4u;
             }
           };
-          __3TkD = __3TkD(1233).t.ainxMB;
-          lj_A4u = __3TkD(1233).t["8crtns"];
+          __3TkD = __3TkD(1114).t.ainxMB;
+          lj_A4u = __3TkD(1114).t["8crtns"];
           obj46[AuditLogChangeKeys.EMOJI_ID] = (newValue) => {
             if (null != newValue.newValue) {
               if (null != newValue.oldValue) {
@@ -1172,52 +1172,52 @@ export const getChangeStrings = function getChangeStrings(targetType) {
             }
           };
           const obj47 = {};
-          obj47[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj47[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged13 = Object.assign(obj47);
           return obj46;
         } else if (merged.VOICE_CHANNEL_STATUS === targetType) {
           const obj48 = {};
-          obj48[AuditLogChangeKeys.STATUS] = () => __3TkD(1233).t.HyCSnI;
+          obj48[AuditLogChangeKeys.STATUS] = () => __3TkD(1114).t.HyCSnI;
           const obj49 = {};
-          obj49[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj49[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged14 = Object.assign(obj49);
           return obj48;
         } else if (merged.GUILD_MEMBER_VERIFICATION === targetType) {
           const obj50 = {};
           obj50[AuditLogChangeKeys.VERIFICATION_ENABLED] = (newValue) => {
             if (true === newValue.newValue) {
-              let WYT6ka = __3TkD(1233).t.fnkzDY;
+              let WYT6ka = __3TkD(1114).t.fnkzDY;
             } else {
-              WYT6ka = __3TkD(1233).t.WYT6ka;
+              WYT6ka = __3TkD(1114).t.WYT6ka;
             }
             return WYT6ka;
           };
           obj50[AuditLogChangeKeys.MANUAL_APPROVAL_ENABLED] = (newValue) => {
             if (true === newValue.newValue) {
-              let WxyOtj = __3TkD(1233).t.jzSvVd;
+              let WxyOtj = __3TkD(1114).t.jzSvVd;
             } else {
-              WxyOtj = __3TkD(1233).t.WxyOtj;
+              WxyOtj = __3TkD(1114).t.WxyOtj;
             }
             return WxyOtj;
           };
           const obj51 = {};
-          obj51[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj51[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           const merged15 = Object.assign(obj51);
           return obj50;
         } else if (merged.GUILD_PROFILE === targetType) {
           const obj52 = {};
-          obj52[AuditLogChangeKeys.DESCRIPTION] = () => __3TkD(1233).t.nsUZKY;
-          obj52[AuditLogChangeKeys.BRAND_COLOR_PRIMARY] = () => __3TkD(1233).t.qe9mgN;
-          obj52[AuditLogChangeKeys.CUSTOM_BANNER_HASH] = () => __3TkD(1233).t["04b5KC"];
-          obj52[AuditLogChangeKeys.TRAITS] = () => __3TkD(1233).t.dEy9WO;
-          obj52[AuditLogChangeKeys.GAME_APPLICATION_IDS] = () => __3TkD(1233).t["8BOT3x"];
-          obj52[AuditLogChangeKeys.VISIBILITY] = () => __3TkD(1233).t.bCl1Ep;
-          __3TkD = __3TkD(1233).t.ix1dnX;
+          obj52[AuditLogChangeKeys.DESCRIPTION] = () => __3TkD(1114).t.nsUZKY;
+          obj52[AuditLogChangeKeys.BRAND_COLOR_PRIMARY] = () => __3TkD(1114).t.qe9mgN;
+          obj52[AuditLogChangeKeys.CUSTOM_BANNER_HASH] = () => __3TkD(1114).t["04b5KC"];
+          obj52[AuditLogChangeKeys.TRAITS] = () => __3TkD(1114).t.dEy9WO;
+          obj52[AuditLogChangeKeys.GAME_APPLICATION_IDS] = () => __3TkD(1114).t["8BOT3x"];
+          obj52[AuditLogChangeKeys.VISIBILITY] = () => __3TkD(1114).t.bCl1Ep;
+          __3TkD = __3TkD(1114).t.ix1dnX;
           obj52[AuditLogChangeKeys.SERVER_TAG] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
           return obj52;
         } else {
           obj = {};
-          obj[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
+          obj[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
           return obj;
         }
       }
@@ -1226,12 +1226,12 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     merged = AuditLogChangeKeys;
     merged = __3TkD;
     merged = dependencyMap;
-    __3TkD = __3TkD(1233).t.f8Rh0U;
+    __3TkD = __3TkD(1114).t.f8Rh0U;
     obj53[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t.isS8te;
+    __3TkD = __3TkD(1114).t.isS8te;
     obj53[AuditLogChangeKeys.POSITION] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t.esQcxn;
-    lj_A4u = __3TkD(1233).t["ws/1FA"];
+    __3TkD = __3TkD(1114).t.esQcxn;
+    lj_A4u = __3TkD(1114).t["ws/1FA"];
     obj53[AuditLogChangeKeys.TOPIC] = (newValue) => {
       if (null != newValue.newValue) {
         if (null != newValue.oldValue) {
@@ -1245,10 +1245,10 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         tmp = lj_A4u;
       }
     };
-    __3TkD = __3TkD(1233).t.fw81ak;
+    __3TkD = __3TkD(1114).t.fw81ak;
     obj53[AuditLogChangeKeys.BITRATE] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t["6kajxx"];
-    lj_A4u = __3TkD(1233).t["0JMZdz"];
+    __3TkD = __3TkD(1114).t["6kajxx"];
+    lj_A4u = __3TkD(1114).t["0JMZdz"];
     obj53[AuditLogChangeKeys.RTC_REGION_OVERRIDE] = (newValue) => {
       if (null != newValue.newValue) {
         if (null != newValue.oldValue) {
@@ -1262,27 +1262,27 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         tmp = lj_A4u;
       }
     };
-    __3TkD = __3TkD(1233).t.wk5t7p;
+    __3TkD = __3TkD(1114).t.wk5t7p;
     obj53[AuditLogChangeKeys.USER_LIMIT] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t["7lirhF"];
+    __3TkD = __3TkD(1114).t["7lirhF"];
     obj53[AuditLogChangeKeys.RATE_LIMIT_PER_USER] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t.fnhin8;
+    __3TkD = __3TkD(1114).t.fnhin8;
     obj53[AuditLogChangeKeys.APPLICATION_ID] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-    obj53[AuditLogChangeKeys.PERMISSIONS_RESET] = () => __3TkD(1233).t["+vSBFY"];
-    obj53[AuditLogChangeKeys.PERMISSIONS_GRANTED] = () => __3TkD(1233).t.EKLJv8;
-    obj53[AuditLogChangeKeys.PERMISSIONS_DENIED] = () => __3TkD(1233).t.U3rO5X;
-    obj53[AuditLogChangeKeys.REASON] = () => __3TkD(1233).t["2IW3C5"];
-    __3TkD = __3TkD(1233).t.H8Ri2Y;
+    obj53[AuditLogChangeKeys.PERMISSIONS_RESET] = () => __3TkD(1114).t["+vSBFY"];
+    obj53[AuditLogChangeKeys.PERMISSIONS_GRANTED] = () => __3TkD(1114).t.EKLJv8;
+    obj53[AuditLogChangeKeys.PERMISSIONS_DENIED] = () => __3TkD(1114).t.U3rO5X;
+    obj53[AuditLogChangeKeys.REASON] = () => __3TkD(1114).t["2IW3C5"];
+    __3TkD = __3TkD(1114).t.H8Ri2Y;
     obj53[AuditLogChangeKeys.NSFW] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t.Vn5zn2;
+    __3TkD = __3TkD(1114).t.Vn5zn2;
     obj53[AuditLogChangeKeys.TYPE] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t.e68fAU;
+    __3TkD = __3TkD(1114).t.e68fAU;
     obj53[AuditLogChangeKeys.VIDEO_QUALITY_MODE] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
-    __3TkD = __3TkD(1233).t.nYz2mg;
+    __3TkD = __3TkD(1114).t.nYz2mg;
     obj53[AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION] = (oldValue) =>
       null == oldValue.oldValue ? __3TkD : _5kDYS3;
-    __3TkD = __3TkD(1233).t.tOJ8h7;
-    lj_A4u = __3TkD(1233).t["lj+A4u"];
+    __3TkD = __3TkD(1114).t.tOJ8h7;
+    lj_A4u = __3TkD(1114).t["lj+A4u"];
     obj53[AuditLogChangeKeys.DEFAULT_THREAD_RATE_LIMIT_PER_USER] = (newValue) => {
       if (null != newValue.newValue) {
         if (null != newValue.oldValue) {
@@ -1296,11 +1296,11 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         tmp = lj_A4u;
       }
     };
-    obj53[AuditLogChangeKeys.FLAGS] = () => __3TkD(1233).t.ImCQko;
-    obj53[AuditLogChangeKeys.AVAILABLE_TAG_ADD] = () => __3TkD(1233).t.H86QQU;
-    obj53[AuditLogChangeKeys.AVAILABLE_TAG_EDIT] = () => __3TkD(1233).t.YtUzls;
-    obj53[AuditLogChangeKeys.AVAILABLE_TAG_DELETE] = () => __3TkD(1233).t["8QOseg"];
-    __3TkD = __3TkD(1233).t["+/3TkD"];
+    obj53[AuditLogChangeKeys.FLAGS] = () => __3TkD(1114).t.ImCQko;
+    obj53[AuditLogChangeKeys.AVAILABLE_TAG_ADD] = () => __3TkD(1114).t.H86QQU;
+    obj53[AuditLogChangeKeys.AVAILABLE_TAG_EDIT] = () => __3TkD(1114).t.YtUzls;
+    obj53[AuditLogChangeKeys.AVAILABLE_TAG_DELETE] = () => __3TkD(1114).t["8QOseg"];
+    __3TkD = __3TkD(1114).t["+/3TkD"];
     obj53[AuditLogChangeKeys.LINKED_LOBBY] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     return obj53;
   }
@@ -1415,12 +1415,12 @@ export const getSimpleAuditLogTitleContextFromChange = function getSimpleAuditLo
       const rounded = Math.round(diff / 1000 / 60);
       const obj2 = DISCORD_EPOCHDefault;
       const tmp25 = ROLES_REMOVE;
-      const timeAndUnit = ROLES_REMOVE(4558).getTimeAndUnit(rounded, items);
+      const timeAndUnit = ROLES_REMOVE(4589).getTimeAndUnit(rounded, items);
       if (null != timeAndUnit.unit) {
         if (null != timeAndUnit.time) {
           if (timeAndUnit.unit in obj) {
             ({ unit, unit: unit2 } = timeAndUnit);
-            if (unit2 === tmp25(4558).TimeUnits.SECONDS) {
+            if (unit2 === tmp25(4589).TimeUnits.SECONDS) {
               const _Math2 = Math;
               time = Math.round(diff / 1000);
             } else {
@@ -1438,27 +1438,27 @@ export const getSimpleAuditLogTitleContextFromChange = function getSimpleAuditLo
         oldValue = found.oldValue;
       }
       if (null != oldValue) {
-        const intl4 = ROLES_REMOVE(1233).intl;
-        return intl4.string(ROLES_REMOVE(1233).t.MA1ltr);
+        const intl4 = ROLES_REMOVE(1114).intl;
+        return intl4.string(ROLES_REMOVE(1114).t.MA1ltr);
       }
     }
     return null;
   } else {
     if (tmp3) {
       if (tmp4) {
-        const intl3 = ROLES_REMOVE(1233).intl;
-        let stringResult = intl3.string(ROLES_REMOVE(1233).t.RdMMew);
+        const intl3 = ROLES_REMOVE(1114).intl;
+        let stringResult = intl3.string(ROLES_REMOVE(1114).t.RdMMew);
       }
       return stringResult;
     }
     if (tmp3) {
-      const intl2 = ROLES_REMOVE(1233).intl;
-      stringResult = intl2.string(ROLES_REMOVE(1233).t["4GQqs8"]);
+      const intl2 = ROLES_REMOVE(1114).intl;
+      stringResult = intl2.string(ROLES_REMOVE(1114).t["4GQqs8"]);
     } else {
       stringResult = null;
       if (tmp4) {
-        const intl = ROLES_REMOVE(1233).intl;
-        stringResult = intl.string(ROLES_REMOVE(1233).t["8mQ6x0"]);
+        const intl = ROLES_REMOVE(1114).intl;
+        stringResult = intl.string(ROLES_REMOVE(1114).t["8mQ6x0"]);
       }
     }
   }
@@ -1504,26 +1504,26 @@ export const getSimpleAuditLogChangeDetails = function getSimpleAuditLogChangeDe
   }
   if (found.length > 0) {
     if (found1.length > 0) {
-      const intl3 = ROLES_REMOVE(1233).intl;
+      const intl3 = ROLES_REMOVE(1114).intl;
       obj = { roleNamesAdded: null, roleNamesRemoved: null };
       obj[0] = joined;
       obj[1] = joined1;
-      let formatToPlainStringResult = intl3.formatToPlainString(ROLES_REMOVE(1233).t.tZw1EW, obj);
+      let formatToPlainStringResult = intl3.formatToPlainString(ROLES_REMOVE(1114).t.tZw1EW, obj);
     }
     return formatToPlainStringResult;
   }
   if (found.length > 0) {
-    const intl2 = ROLES_REMOVE(1233).intl;
+    const intl2 = ROLES_REMOVE(1114).intl;
     obj = { roleNames: null };
     obj[0] = joined;
-    formatToPlainStringResult = intl2.formatToPlainString(ROLES_REMOVE(1233).t["/mTqt5"], obj);
+    formatToPlainStringResult = intl2.formatToPlainString(ROLES_REMOVE(1114).t["/mTqt5"], obj);
   } else {
     formatToPlainStringResult = null;
     if (found1.length > 0) {
-      const intl = ROLES_REMOVE(1233).intl;
+      const intl = ROLES_REMOVE(1114).intl;
       obj1 = { roleNames: null };
       obj1[0] = joined1;
-      formatToPlainStringResult = intl.formatToPlainString(ROLES_REMOVE(1233).t.Wk4pAJ, obj1);
+      formatToPlainStringResult = intl.formatToPlainString(ROLES_REMOVE(1114).t.Wk4pAJ, obj1);
     }
   }
 };
@@ -1828,11 +1828,11 @@ export const getChangeTitle = function getChangeTitle(log) {
             found = require;
             found = dependencyMap;
             if (set2.GuildFeedItemTypes.MESSAGE === newValue) {
-              return found(1233).t["PyEa+J"];
-            } else if (found(17379).GuildFeedItemTypes.FORUM_POST === newValue) {
-              return found(1233).t.hCuAb1;
+              return found(1114).t["PyEa+J"];
+            } else if (found(17539).GuildFeedItemTypes.FORUM_POST === newValue) {
+              return found(1114).t.hCuAb1;
             } else {
-              return found(1233).t["UZ+U3A"];
+              return found(1114).t["UZ+U3A"];
             }
           }
         } else if (found.GUILD_HOME_REMOVE_ITEM === action) {
@@ -2501,7 +2501,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                       let name = found.name_localized;
                                     }
                                     let combined = name;
-                                    if (found.type === found(1954).ApplicationCommandType.CHAT) {
+                                    if (found.type === found(1894).ApplicationCommandType.CHAT) {
                                       const _HermesInternal = HermesInternal;
                                       combined = "/\u2060" + name;
                                     }
@@ -2629,8 +2629,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             let tmp22 = null;
                             if (flag) {
                               tmp22 = ((arg0) => {
-                                const intl = found(1233).intl;
-                                return intl.string(found(1233).t.VbpLyU);
+                                const intl = found(1114).intl;
+                                return intl.string(found(1114).t.VbpLyU);
                               })(tmp20);
                             }
                             let tmp23 = tmp22;
@@ -2667,7 +2667,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             let tmp10 = null;
                             if (tmp9) {
                               tmp10 = ((channel) =>
-                                found(4674).computeChannelName(channel, closure_13, closure_12, true))(tmp7);
+                                found(4713).computeChannelName(channel, closure_13, closure_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2756,7 +2756,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
           found = null != found && true;
           found = null;
           if (found) {
-            found = ((found) => found(4674).computeChannelName(found, closure_13, closure_12, true))(found);
+            found = ((found) => found(4713).computeChannelName(found, closure_13, closure_12, true))(found);
           }
           if (null == found) {
             found = closure_1_14;

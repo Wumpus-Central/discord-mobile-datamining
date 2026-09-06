@@ -1,7 +1,7 @@
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategories.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Portal from "../../../../../_runtime/04347_Portal.js";
+import Portal from "../../../../../_runtime/04432_Portal.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";

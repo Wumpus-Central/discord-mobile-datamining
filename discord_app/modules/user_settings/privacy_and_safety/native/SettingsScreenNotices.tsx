@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsScreenNotices.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import isFeatureAgeGated from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
+import isFeatureAgeGated from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import FamilyCenterSettingsParentalControlsNoticeDefault from "../../family_center/native/FamilyCenterSettingsNotice.tsx";
 import AgeConfirmationNoticeDefault from "../../content_and_social/native/AgeConfirmationNotice.tsx";

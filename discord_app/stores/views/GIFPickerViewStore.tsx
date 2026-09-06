@@ -1,8 +1,8 @@
 // discord_app/stores/views/GIFPickerViewStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 

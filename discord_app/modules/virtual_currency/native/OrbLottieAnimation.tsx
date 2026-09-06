@@ -8,9 +8,9 @@ const require = arg1;
 const forwardRefResult = forwardRef((animationType, ref) => {
   animationType = animationType.animationType;
   dependencyMap = undefined;
-  let obj = animationType(4413);
+  let obj = animationType(4495);
   const theme = obj.useTheme();
-  const obj2 = animationType(1362);
+  const obj2 = animationType(4411);
   const tmp5 = callback(null);
   dependencyMap = tmp5;
   const items = [animationType];
@@ -33,9 +33,9 @@ const forwardRefResult = forwardRef((animationType, ref) => {
     },
   }));
   if (isThemeLightResult) {
-    let SpendEarnOrbsLottie = tmp(11067).SpendEarnOrbsLightThemeLottie;
+    let SpendEarnOrbsLottie = tmp(11094).SpendEarnOrbsLightThemeLottie;
   } else {
-    SpendEarnOrbsLottie = tmp(11069).SpendEarnOrbsLottie;
+    SpendEarnOrbsLottie = tmp(11096).SpendEarnOrbsLottie;
   }
   obj = {
     ref: tmp5,

@@ -29,10 +29,10 @@ export default function ExplicitMediaSettingsActionSheet(options) {
       const obj2 = closure_1_1(closure_1_2[5]);
     }
   }, items);
-  const items1 = [callback(options(5630).BottomSheetTitleHeader, { title, subtitle })];
+  const items1 = [callback(options(7149).BottomSheetTitleHeader, { title, subtitle })];
   let obj = { style: callback2().content, children: null };
   if (SHOW == null) {
-    SHOW = options(1305).ExplicitContentRedaction.SHOW;
+    SHOW = options(1187).ExplicitContentRedaction.SHOW;
   }
   obj = { startExpanded: true, children: null };
   obj = {
@@ -43,8 +43,8 @@ export default function ExplicitMediaSettingsActionSheet(options) {
       callback(options(table[10]).TableRadioRow, { label: label.label, value: label.value }, label.value),
     ),
   };
-  obj[1] = callback(options(7704).TableRadioGroup, obj);
+  obj[1] = callback(options(5685).TableRadioGroup, obj);
   items1[1] = callback(View, obj);
   obj[1] = items1;
-  return closure_6(options(5631).BottomSheet, obj);
+  return closure_6(options(7150).BottomSheet, obj);
 }

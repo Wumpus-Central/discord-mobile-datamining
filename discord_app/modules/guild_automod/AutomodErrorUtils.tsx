@@ -54,16 +54,16 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
 function getAutomodErrorMessageFromMessageData(message) {
   const channel = store.getChannel(message.message.channelId);
   if (obj2.isMessageDataEdit(message)) {
-    const intl4 = tmp(1233).intl;
-    let stringResult = intl4.string(tmp(1233).t.bU6o0z);
+    const intl4 = tmp(1114).intl;
+    let stringResult = intl4.string(tmp(1114).t.bU6o0z);
   } else {
     let isThreadResult;
     if (channel != null) {
       isThreadResult = channel.isThread();
     }
     if (isThreadResult) {
-      const intl3 = tmp(1233).intl;
-      stringResult = intl3.string(tmp(1233).t.DVdG9E);
+      const intl3 = tmp(1114).intl;
+      stringResult = intl3.string(tmp(1114).t.DVdG9E);
     } else {
       let isForumPostResult;
       if (channel != null) {
@@ -75,12 +75,12 @@ function getAutomodErrorMessageFromMessageData(message) {
           isForumLikeChannelResult = channel.isForumLikeChannel();
         }
         if (!isForumLikeChannelResult) {
-          const intl = tmp(1233).intl;
-          stringResult = intl.string(tmp(1233).t.zQ69pv);
+          const intl = tmp(1114).intl;
+          stringResult = intl.string(tmp(1114).t.zQ69pv);
         }
       }
-      const intl2 = tmp(1233).intl;
-      stringResult = intl2.string(tmp(1233).t.ipgKDg);
+      const intl2 = tmp(1114).intl;
+      stringResult = intl2.string(tmp(1114).t.ipgKDg);
     }
   }
   return stringResult;

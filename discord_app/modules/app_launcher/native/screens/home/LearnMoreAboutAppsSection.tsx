@@ -52,8 +52,8 @@ const result = require("set").fileFinishedImporting(
 export default function LearnMoreAboutAppsSection(visible) {
   const tmp = callback3();
   const callback = React.useCallback(() => {
-    const obj = callback(4190);
-    obj.openURL(callback(1994).getAppsSupportURL(constants.APPS_LEARN_MORE));
+    const obj = callback(4255);
+    obj.openURL(callback(2024).getAppsSupportURL(constants.APPS_LEARN_MORE));
   }, []);
   const intl = getSystemLocale.intl;
   const stringResult = intl.string(getSystemLocale.t["kw8/Ec"]);

@@ -2,8 +2,8 @@
 import coerceMainRoute from "../../helpers/NavigationRouteUtils.native.tsx";
 import getRootNavigationRef from "../../RootNavigationRef.native.tsx";
 import getDeprecatedModalDataDefault from "../../../../utils/getDeprecatedModalData.tsx";
-import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
 import UserRequiredActionsDefault from "../../../verification/VerificationUtils.tsx";
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
 import isEligibleForSafetyFlowsExperiment from "../../../safety_flows/SafetyFlowsExperiment.tsx";
 import closure_3 from "../../../guild_settings/GuildSettingsStore.tsx";
 import closure_4 from "../../../../stores/AuthenticationStore.tsx";
@@ -125,15 +125,15 @@ let prototype = function DeprecatedModalManager() {
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(closure_16)) {
-          let tmp5Result = tmp5(4332);
+          let tmp5Result = tmp5(4417);
           tmp5Result.popModal(tmp7);
         }
-        tmp5Result = tmp5(4332);
+        tmp5Result = tmp5(4417);
         if (tmp5Result.isModalOpen(closure_14)) {
-          tmp5(4332).popModal(tmp9);
-          const tmp5Result1 = tmp5(4332);
+          tmp5(4417).popModal(tmp9);
+          const tmp5Result1 = tmp5(4417);
         }
-        obj = callback(4332);
+        obj = callback(4417);
         tmp7 = closure_16;
         tmp9 = closure_14;
       } else {
@@ -157,7 +157,7 @@ let prototype = function DeprecatedModalManager() {
     store: closure_3,
     closable: false,
     getComponent() {
-      return callback(17357).default;
+      return callback(17517).default;
     },
   };
   obj = {
@@ -165,7 +165,7 @@ let prototype = function DeprecatedModalManager() {
     store: closure_6,
     closable: false,
     getComponent() {
-      return callback(17631).default;
+      return callback(17791).default;
     },
   };
   applyArgumentsResult.actions = obj;

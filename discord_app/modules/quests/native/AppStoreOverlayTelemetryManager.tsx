@@ -28,9 +28,9 @@ AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function han
   } else {
     let flag = null != _null;
     if (flag) {
-      if (state !== tmp(688).AppStates.ACTIVE) {
+      if (state !== tmp(1093).AppStates.ACTIVE) {
         flag = false;
-        if (state === tmp(688).AppStates.BACKGROUND) {
+        if (state === tmp(1093).AppStates.BACKGROUND) {
           _null.trackOverlayEvent(AnalyticEvents.QUEST_APP_STORE_OVERLAY_BACKGROUNDED);
           const _Date = Date;
           c4 = Date.now();

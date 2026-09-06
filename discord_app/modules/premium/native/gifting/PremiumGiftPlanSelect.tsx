@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftPlanSelect.tsx
-import nDefault from "../../../../../_runtime/00686_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nDefault from "../../../../../_runtime/00672_n.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -55,7 +55,7 @@ let closure_17 = createCacheKey.createStyles((width) => {
     marginTop: arg2 ? space.PX_16 : space.PX_12,
     marginHorizontal: ThemesDefault.space.PX_24,
   };
-  const space2 = tmp(709).space;
+  const space2 = tmp(576).space;
   const obj3 = {
     textAlign: "center",
     marginTop: arg2 ? space.PX_16 : space.PX_12,
@@ -66,9 +66,9 @@ let closure_17 = createCacheKey.createStyles((width) => {
     marginTop: arg2 ? space2.PX_16 : space2.PX_12,
     marginHorizontal: ThemesDefault.space.PX_24,
   };
-  const space3 = tmp(709).space;
+  const space3 = tmp(576).space;
   obj[9] = { marginTop: arg2 ? space3.PX_16 : space3.PX_32 };
-  obj5 = { paddingTop: tmp(709).space.PX_16, paddingBottom: tmp(709).space.PX_48 };
+  obj5 = { paddingTop: tmp(576).space.PX_16, paddingBottom: tmp(576).space.PX_48 };
   obj[10] = obj5;
   obj[11] = { flex: 1, alignItems: "center", justifyContent: "center" };
   obj[12] = { position: "absolute", top: 0, left: 0, zIndex: 1 };

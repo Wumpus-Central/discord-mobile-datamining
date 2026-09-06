@@ -21,8 +21,8 @@ export default function NotificationSettingsMessageUnreadGuildActionSheet(guildI
   ({ unread, notification } = guildPresetSettings);
   let stringResult;
   if (notification === UserNotificationSettings.ALL_MESSAGES) {
-    const intl = tmp(1233).intl;
-    stringResult = intl.string(tmp(1233).t.eP8yWU);
+    const intl = tmp(1114).intl;
+    stringResult = intl.string(tmp(1114).t.eP8yWU);
   }
   obj = {
     disabledMentionOnlyWithReason: stringResult,

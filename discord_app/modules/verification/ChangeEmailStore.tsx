@@ -1,7 +1,7 @@
 // discord_app/modules/verification/ChangeEmailStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import batchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 
 let closure_2 = { errors: null, emailToken: null };
 let obj = keys.create(() => closure_2);

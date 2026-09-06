@@ -20,12 +20,12 @@ createToggle = {
     return React.useMemo(
       () => ({
         value: saturation.saturation,
-        onSlidingComplete: callback(14331).setSaturation,
+        onSlidingComplete: callback(14437).setSaturation,
         minimumValue: 0,
         maximumValue: 1,
         step: 0.05,
-        startIcon: callback2(callback(15152).CircleMinusIcon, {}),
-        endIcon: callback2(callback(9242).CirclePlusIcon, {}),
+        startIcon: callback2(callback(15312).CircleMinusIcon, {}),
+        endIcon: callback2(callback(11204).CirclePlusIcon, {}),
       }),
       [],
     );

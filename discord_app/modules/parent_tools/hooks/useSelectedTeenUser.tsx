@@ -34,7 +34,7 @@ export const useTeenUserForId = function useTeenUserForId(gifterUserId) {
 export const useShouldLoadSettingsForSelectedTeenUser = function useShouldLoadSettingsForSelectedTeenUser() {
   selectedTeenId = selectedTeenId.getSelectedTeenId();
   const items = [closure_4];
-  const stateFromStoresObject = selectedTeenId(644).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = selectedTeenId(563).useStateFromStoresObject(items, () => {
     let hasSettingsForUserResult = null != selectedTeenId;
     if (hasSettingsForUserResult) {
       hasSettingsForUserResult = closure_1_4.hasSettingsForUser(tmp);

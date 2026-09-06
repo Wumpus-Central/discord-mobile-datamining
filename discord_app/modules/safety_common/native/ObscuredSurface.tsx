@@ -86,15 +86,15 @@ export default function ObscuredSurface(obscured) {
     obj3[1] = ThemesDefault.colors.TEXT_DEFAULT;
     const items1 = [callback(ImageWarningIcon.ImageWarningIcon, obj3), ,];
     if (heading == null) {
-      const intl = tmp4(1233).intl;
-      heading = intl.string(tmp4(1233).t.xC8Saf);
+      const intl = tmp4(1114).intl;
+      heading = intl.string(tmp4(1114).t.xC8Saf);
     }
     const obj4 = { variant: "heading-md/semibold", color: "text-strong", children: null };
     obj4[2] = heading;
     items1[1] = callback(Text.Text, obj4);
     if (description == null) {
-      const intl2 = tmp4(1233).intl;
-      description = intl2.string(tmp4(1233).t["0fc/DG"]);
+      const intl2 = tmp4(1114).intl;
+      description = intl2.string(tmp4(1114).t["0fc/DG"]);
     }
     const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
     obj5[2] = description;

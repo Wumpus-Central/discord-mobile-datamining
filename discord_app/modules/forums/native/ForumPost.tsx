@@ -175,7 +175,7 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   threadId = threadId.threadId;
   let stateFromStores;
   ({ style, localDeviceMedia } = threadId);
-  let obj = threadId(586);
+  let obj = threadId(504);
   const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(threadId));
   let tmp5 = null;
@@ -184,15 +184,15 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
     "[Forum Post] The thread should not be null here. A store must have missed an update.",
   );
   const items1 = [closure_3];
-  const stateFromStores1 = threadId(586).useStateFromStores(items1, () =>
+  const stateFromStores1 = threadId(504).useStateFromStores(items1, () =>
     closure_1_3.getChannel(stateFromStores.parent_id),
   );
-  const obj2 = threadId(586);
+  const obj2 = threadId(504);
   const tmp = threadId;
   const tmp4 = stateFromStores;
-  const firstForumPostMessage = threadId(6158).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(7304).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(7639);
+  threadId(7885);
   if (loaded) {
     obj = { style: null, children: null };
     obj[0] = style;
@@ -213,8 +213,8 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
     obj[3] = tmp10;
     obj[4] = localDeviceMedia;
     obj[7] = loaded;
-    obj[1] = callback(tmp4(11822), obj);
-    tmp5 = callback(tmp(11821).ForumPostDisabledContainer, obj);
+    obj[1] = callback(tmp4(12021), obj);
+    tmp5 = callback(tmp(12020).ForumPostDisabledContainer, obj);
   }
   return tmp5;
 };

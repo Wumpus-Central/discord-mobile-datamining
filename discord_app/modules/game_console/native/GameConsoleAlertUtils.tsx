@@ -1,6 +1,6 @@
 // discord_app/modules/game_console/native/GameConsoleAlertUtils.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _modDef4859 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4905 from "../../../actions/native/AlertActionCreators.tsx";
 import closure_3 from "../../../stores/MediaEngineStore.tsx";
 import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "../GameConsoleConstants.tsx";
 import ME from "../../../Constants.tsx";
@@ -22,12 +22,12 @@ export default {
         )
       ) {
         let obj = {};
-        let intl = tmp10(1233).intl;
-        obj[constants2.XBOX] = intl.string(tmp10(1233).t.bVZ7vy);
-        const intl2 = tmp10(1233).intl;
-        obj[constants2.PLAYSTATION] = intl2.string(tmp10(1233).t["6iqUsf"]);
-        const intl3 = tmp10(1233).intl;
-        obj[constants2.PLAYSTATION_STAGING] = intl3.string(tmp10(1233).t["6iqUsf"]);
+        let intl = tmp10(1114).intl;
+        obj[constants2.XBOX] = intl.string(tmp10(1114).t.bVZ7vy);
+        const intl2 = tmp10(1114).intl;
+        obj[constants2.PLAYSTATION] = intl2.string(tmp10(1114).t["6iqUsf"]);
+        const intl3 = tmp10(1114).intl;
+        obj[constants2.PLAYSTATION_STAGING] = intl3.string(tmp10(1114).t["6iqUsf"]);
         _require = tmp3;
         if (null == obj[XBOX]) {
           let resolved = Promise.resolve();
@@ -56,13 +56,13 @@ export default {
   showSelfDismissableAlert(reconnectPlatformType) {
     reconnectPlatformType = reconnectPlatformType.reconnectPlatformType;
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
-    let obj = _modDef4859;
+    let obj = _modDef4905;
     obj = { title, body: null, onConfirm: null };
-    obj = { body, errorCodeMessage, dismissCallback: _modDef4859.close };
-    obj[1] = jsx(reconnectPlatformType(9909).SelfDismissibleAlertBody, {
+    obj = { body, errorCodeMessage, dismissCallback: _modDef4905.close };
+    obj[1] = jsx(reconnectPlatformType(9453).SelfDismissibleAlertBody, {
       body,
       errorCodeMessage,
-      dismissCallback: _modDef4859.close,
+      dismissCallback: _modDef4905.close,
     });
     obj[2] = function onConfirm() {
       if (null != reconnectPlatformType) {

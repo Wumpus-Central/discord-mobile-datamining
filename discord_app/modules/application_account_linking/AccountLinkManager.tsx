@@ -63,7 +63,7 @@ function _claimIncentivizedAccountLinkingReward() {
               return obj1;
             } else {
               c4 = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: true };
               obj2[0] = obj.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT;
               const obj3 = { application_id: null };

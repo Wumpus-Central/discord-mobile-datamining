@@ -152,7 +152,7 @@ export default function AddFriendNicknameModal(arg0) {
   let tmp = callback4();
   let obj = React;
   [c2, c3] = callback(React.useState(false), 2);
-  callback = showUserProfile(10889)();
+  callback = showUserProfile(10927)();
   obj1 = initialize;
   const items = [_handleSubmit];
   const stateFromStores = obj1.useStateFromStores(items, () => _handleSubmit.getNickname(closure_0));
@@ -168,11 +168,11 @@ export default function AddFriendNicknameModal(arg0) {
   const items1 = [closure_8];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_1_8.getUser(closure_0));
   if (null == stateFromStores) {
-    let intl2 = tmp5(1233).intl;
-    let stringResult = intl2.string(tmp5(1233).t.BGYkaH);
+    let intl2 = tmp5(1114).intl;
+    let stringResult = intl2.string(tmp5(1114).t.BGYkaH);
   } else {
-    let intl = tmp5(1233).intl;
-    stringResult = intl.string(tmp5(1233).t["8pOYUE"]);
+    let intl = tmp5(1114).intl;
+    stringResult = intl.string(tmp5(1114).t["8pOYUE"]);
   }
   const items2 = [showUserProfile];
   callback1 = obj.useCallback(() => {
@@ -184,10 +184,10 @@ export default function AddFriendNicknameModal(arg0) {
   }, items2);
   obj = { style: tmp.container, children: null };
   obj = { children: null };
-  let tmp3Result = tmp3(6058);
+  let tmp3Result = tmp3(5578);
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  tmp3Result = tmp3(4948);
-  const intl3 = tmp5(1233).intl;
+  tmp3Result = tmp3(4994);
+  const intl3 = tmp5(1114).intl;
   obj1[0] = intl3.string(getSystemLocale.t["R3BPH+"]);
   obj1[1] = function handleSubmit() {
     const self = this;
@@ -199,7 +199,7 @@ export default function AddFriendNicknameModal(arg0) {
     }
     return applyArgumentsResult;
   };
-  const intl4 = tmp5(1233).intl;
+  const intl4 = tmp5(1114).intl;
   obj1[2] = intl4.string(getSystemLocale.t["ETE/oC"]);
   obj1[3] = callback1;
   const items3 = [
@@ -213,7 +213,7 @@ export default function AddFriendNicknameModal(arg0) {
     ,
   ];
   let obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl5 = tmp5(1233).intl;
+  const intl5 = tmp5(1114).intl;
   obj3[3] = intl5.string(getSystemLocale.t["NdQ+lP"]);
   items3[1] = callback2(Text.Text, obj3);
   const obj4 = {
@@ -225,7 +225,7 @@ export default function AddFriendNicknameModal(arg0) {
     maxLength: 32,
     isClearable: true,
   };
-  const intl6 = tmp5(1233).intl;
+  const intl6 = tmp5(1114).intl;
   obj4[2] = intl6.string(getSystemLocale.t.pqG6GS);
   let obj2 = {
     style: tmp.title,
@@ -235,7 +235,7 @@ export default function AddFriendNicknameModal(arg0) {
     children: stringResult,
   };
   const tmp5Result = initialize;
-  obj4[3] = showUserProfile(4322).getName(stateFromStores1);
+  obj4[3] = showUserProfile(4404).getName(stateFromStores1);
   obj4[4] = stateFromStores;
   items3[2] = callback2(TextField.TextField, obj4);
   obj1[4] = items3;

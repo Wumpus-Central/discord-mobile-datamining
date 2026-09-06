@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeProgressBanner.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
-import encodeProperties from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import encodeProperties from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import messagesProxyDefault from "../../GiftingBadge.messages.js";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import contextDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
@@ -68,12 +68,12 @@ export default function GiftingBadgeProgressBanner(arg0) {
   if (tmp10Result) {
     obj1 = { icon: null, size: 24 };
     obj1[0] = nextTierIcon;
-    tmp10Result = tmp10(tmp2(10747), obj1);
+    tmp10Result = tmp10(tmp2(10749), obj1);
   }
   obj[1] = tmp10Result;
   const items2 = [closure_4(View, obj)];
   const obj2 = { variant: "text-md/semibold", children: null };
-  const intl = tmp6(1233).intl;
+  const intl = tmp6(1114).intl;
   obj2[1] = intl.formatToPlainString(messagesProxyDefault["0+xfd9"], {
     giftsRemaining: giftsToNextTier,
     nextTier: nextTierName,

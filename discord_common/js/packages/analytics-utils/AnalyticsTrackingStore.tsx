@@ -415,7 +415,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
     }
     return false;
   };
-  const Store = getSessionId(586).Store;
+  const Store = getSessionId(504).Store;
   class AnalyticsTrackingStore extends Store {
     constructor() {
       applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

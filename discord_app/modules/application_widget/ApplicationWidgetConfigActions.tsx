@@ -78,14 +78,14 @@ function _fetchFeaturedWidgetConfigsFromApi() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = dependencyMap;
-          obj1 = callback(706);
+          obj1 = callback(573);
           obj1.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" });
           if (!closure_9.pending) {
             closure_9.fail(() => {
               closure_8.one(undefined, closure_10).catch(() => {});
             });
           }
-          obj2 = callback(1205);
+          obj2 = callback(1232);
           obj2.captureException(closure_1_1);
           throw closure_1_1;
         } else if (arg0 === 1) {
@@ -102,7 +102,7 @@ function _fetchFeaturedWidgetConfigsFromApi() {
           const obj3 = { type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS", applications: null, configs: null };
           obj3[1] = closure_0.body.applications;
           obj3[2] = closure_0.body.configs;
-          callback(706).dispatch(obj3);
+          callback(573).dispatch(obj3);
           closure_9.succeed();
           c3 = 0;
           c5 = 3;
@@ -184,9 +184,9 @@ function _fetchDeveloperWidgetConfigsFromApi() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = dependencyMap;
-          let obj3 = callback(706);
+          let obj3 = callback(573);
           obj3.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE" });
-          let obj4 = callback(1205);
+          let obj4 = callback(1232);
           obj4.captureException(callback);
           throw callback;
         } else if (arg0 === 1) {
@@ -200,7 +200,7 @@ function _fetchDeveloperWidgetConfigsFromApi() {
           return obj3;
         } else {
           closure_0 = arg1;
-          obj = callback(706);
+          obj = callback(573);
           obj4 = { type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS", applications: null, configs: null };
           obj4[1] = closure_0.body.applications;
           obj4[2] = closure_0.body.configs;
@@ -282,11 +282,11 @@ function _fetchWidgetConfigsFromApi() {
           } else if (1 === tmp7) {
             c4 = 0;
             dependencyMap = closure_3;
-            obj3 = body(706);
+            obj3 = body(573);
             const obj4 = { type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: null };
             obj4[1] = callback;
             obj3.dispatch(obj4);
-            let obj5 = body(1205);
+            let obj5 = body(1232);
             obj5.captureException(dependencyMap);
             throw dependencyMap;
           } else if (arg0 === 1) {
@@ -300,7 +300,7 @@ function _fetchWidgetConfigsFromApi() {
             return obj5;
           } else {
             body = body.body;
-            obj = body(706);
+            obj = body(573);
             const obj6 = {
               type: "APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS",
               applicationId: null,

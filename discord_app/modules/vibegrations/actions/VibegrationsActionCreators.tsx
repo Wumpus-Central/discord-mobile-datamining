@@ -127,7 +127,7 @@ function _listProjects() {
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              obj3 = body(706);
+              obj3 = body(573);
               obj3.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
             } else if (arg0 === 1) {
               constants = 3;
@@ -140,7 +140,7 @@ function _listProjects() {
               return obj4;
             } else {
               body = body.body;
-              obj = body(706);
+              obj = body(573);
               const obj5 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: null, guildId: null };
               obj5[1] = body;
               obj5[2] = callback;

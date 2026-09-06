@@ -40,9 +40,9 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   const callback = React.useCallback(() => {
     onSelectCategory(item.type, item.name);
   }, items);
-  const intl = onSelectCategory(1233).intl;
+  const intl = onSelectCategory(1114).intl;
   let obj = { categoryName: item.name };
-  const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1233).t["j+63pw"], obj);
+  const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1114).t["j+63pw"], obj);
   obj = {
     style: tmp.container,
     onPress: callback,
@@ -50,27 +50,27 @@ export default function GIFPickerCategoryView(onSelectCategory) {
     accessibilityRole: "button",
     accessibilityLabel: formatToPlainStringResult,
   };
-  const merged = Object.assign(item(9746)(callback, formatToPlainStringResult));
+  const merged = Object.assign(item(9759)(callback, formatToPlainStringResult));
   obj = { style: tmp.gifImage, source: obj1 };
-  const items1 = [callback(item(5502), obj), callback(closure_4, { style: tmp.gifOverlay })];
+  const items1 = [callback(item(5587), obj), callback(closure_4, { style: tmp.gifOverlay })];
   const obj3 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
     const obj4 = { size: "sm", style: null, color: null };
     obj4[1] = tmp.categoryNameIcon;
-    obj4[2] = tmp6(709).colors.WHITE;
-    let tmp10Result = tmp10(tmp3(10402).AnalyticsIcon, obj4);
+    obj4[2] = tmp6(576).colors.WHITE;
+    let tmp10Result = tmp10(tmp3(10384).AnalyticsIcon, obj4);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
       const obj5 = { size: "sm", style: null, color: null };
       obj5[1] = tmp.categoryNameIcon;
-      obj5[2] = tmp6(709).colors.WHITE;
-      tmp10Result = tmp10(tmp3(9199).StarIcon, obj5);
+      obj5[2] = tmp6(576).colors.WHITE;
+      tmp10Result = tmp10(tmp3(10235).StarIcon, obj5);
     }
   }
   const items2 = [
     tmp10Result,
-    callback(onSelectCategory(4474).Text, {
+    callback(onSelectCategory(4556).Text, {
       variant: "text-sm/semibold",
       color: "text-overlay-light",
       maxFontSizeMultiplier: 2,

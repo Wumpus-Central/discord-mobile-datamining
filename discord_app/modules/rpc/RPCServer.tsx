@@ -745,29 +745,22 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(
     const subscriptions = this.subscriptions;
     const item = subscriptions.forEach((evt) => {
       if (evt.evt === RELATIONSHIP_UPDATE) {
-        let tmp5 = typeof targetsFrame === "function";
-        if (typeof targetsFrame === "function") {
-          tmp5 = !tmp13(evt);
-        }
-        if (!tmp5) {
-          let tmp = typeof tmp13 === "object";
-          if (typeof tmp13 === "object") {
+        if (typeof targetsFrame !== "function") {
+          if (typeof tmp12 !== "object") {
+            let tmp4Result = closure_0;
+            if (typeof closure_0 === "function") {
+              tmp4Result = tmp4(evt);
+            }
+            self.dispatch(evt.socket, null, closure_1_7.DISPATCH, evt.evt, tmp4Result);
+          } else {
             let args = evt.args;
             if (args == null) {
               args = {};
             }
             const obj2 = RELATIONSHIP_UPDATE(targetsFrame[3]);
             const _Object = Object;
-            tmp = !obj2.isEqual(tmp13, RELATIONSHIP_UPDATE(targetsFrame[3]).pick(args, Object.keys(tmp13)));
             const obj3 = RELATIONSHIP_UPDATE(targetsFrame[3]);
           }
-          tmp5 = tmp;
-        }
-        if (!tmp5) {
-          if (typeof closure_0 === "function") {
-            closure_0 = tmp6(evt);
-          }
-          self.dispatch(evt.socket, null, closure_1_7.DISPATCH, evt.evt, closure_0);
         }
       }
     });

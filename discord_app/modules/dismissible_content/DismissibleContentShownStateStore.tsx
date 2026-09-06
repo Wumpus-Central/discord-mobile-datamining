@@ -1,11 +1,11 @@
 // discord_app/modules/dismissible_content/DismissibleContentShownStateStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import batchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import batchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import isActionRequiredDefault from "../core/isActionRequired.tsx";
 import closure_3 from "../auth/LoginRequiredActionStore.tsx";
 import closure_4 from "../../stores/UserRequiredActionStore.tsx";
-import identity from "../../../_runtime/00697_identity.js";
+import identity from "../../../_runtime/01244_identity.js";
 
 require = arg1;
 function withContent(currentlyShown, content) {

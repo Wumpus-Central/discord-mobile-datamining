@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/chat/native/UserSettingsText.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import saveGuildFoldersDefault from "../../../../actions/UserSettingsActionCreators.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";

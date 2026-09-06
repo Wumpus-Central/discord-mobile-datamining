@@ -5,7 +5,7 @@ import _isStreamingDefault from "../../activities/utils/isStreaming.tsx";
 import useChannelUnreadBadgeState from "shared/useChannelUnreadBadgeState.tsx";
 import getLayoutStyleDefault from "shared/getLayoutStyles.tsx";
 import renderChannelWrapperDefault from "shared/renderChannelWrapper.tsx";
-import _modDef16817 from "shared/UnreadBadge.tsx";
+import _modDef16981 from "shared/UnreadBadge.tsx";
 import ChannelContentDefault from "shared/renderChannelContent.tsx";
 import renderChannelBadgeDefault from "shared/renderChannelBadge.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
@@ -46,15 +46,15 @@ function UserResult(user) {
     const items = [user.id];
     closure_1_1(closure_1_2[13]).openPrivateChannel({ recipientIds: items });
   }, items);
-  let obj = user(4936);
+  let obj = user(4982);
   const fontScale = obj.useFontScale();
-  obj1 = user(586);
+  obj1 = user(504);
   const items1 = [closure_5];
   const stateFromStores = obj1.useStateFromStores(items1, () => locale.locale);
-  let obj2 = user(586);
+  let obj2 = user(504);
   const items2 = [closure_4];
   const stateFromStores1 = obj2.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
-  let obj3 = user(586);
+  let obj3 = user(504);
   const items3 = [closure_7];
   const stateFromStoresObject = obj3.useStateFromStoresObject(items3, () => ({
     isMobileOnline: closure_1_7.isMobileOnline(user.id),
@@ -71,8 +71,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(7396).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(7396);
+    relativeTimestamp = tmp6(7641).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(7641);
   }
   let str = "text-muted";
   if (unread) {
@@ -81,11 +81,11 @@ function UserResult(user) {
       str = "text-default";
     }
   }
-  tmp2Result = tmp2(16814);
+  tmp2Result = tmp2(16978);
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
   items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items5 = [callback(_modDef16817, obj), ,];
+  const items5 = [callback(_modDef16981, obj), ,];
   obj1 = {
     user,
     guildId: "e",
@@ -122,14 +122,14 @@ function UserResult(user) {
   }
   obj1[8] = tmp21;
   obj1[9] = flag2;
-  items5[1] = callback(user(1296).Avatar, obj1);
+  items5[1] = callback(user(1178).Avatar, obj1);
   const tmp16 = closure_14;
   const tmp17 = closure_13;
   const tmp18 = UnreadSetting;
   const tmp2Result1 = renderChannelWrapperDefault;
   if (comparator == null) {
-    comparator = tmp2(4322).getUserTag(user);
-    const tmp2Result3 = tmp2(4322);
+    comparator = tmp2(4404).getUserTag(user);
+    const tmp2Result3 = tmp2(4404);
   }
   obj2 = {
     name: comparator,
@@ -149,8 +149,8 @@ function UserResult(user) {
       obj3[1] = lastMessage;
       obj3[2] = str;
       obj3[3] = flag;
-      obj3[4] = tmp6(4171).ChannelListLayoutTypes.COMPACT;
-      tmp14Result = tmp14(tmp6(10218).ChannelRowPreview, obj3);
+      obj3[4] = tmp6(7879).ChannelListLayoutTypes.COMPACT;
+      tmp14Result = tmp14(tmp6(10109).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
@@ -164,7 +164,7 @@ function UserResult(user) {
   items5[2] = ChannelContentDefault(obj2);
   obj4[0] = items5;
   obj[3] = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
-  return tmp2Result(callback(user(5077).PressableHighlight, obj));
+  return tmp2Result(callback(user(5123).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
@@ -183,7 +183,7 @@ function UserResultWithChannel(arg0) {
   const obj3 = initialize;
   const merged = Object.assign(arg0);
   obj.channel = channel;
-  obj.lastMessage = channel(15157)(channel, { unread });
+  obj.lastMessage = channel(15317)(channel, { unread });
   obj.unread = unread;
   obj.mentionCount = mentionCount;
   obj.muted = stateFromStores;
@@ -198,11 +198,11 @@ obj[1] = obj;
 let closure_15 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((user) => {
   user = user.user;
-  let obj = user(586);
+  let obj = user(504);
   const items = [closure_6];
   closure_1 = obj.useStateFromStores(items, () => closure_1_6.getDMFromUserId(user.id));
   const items1 = [closure_6];
-  const stateFromStores = user(586).useStateFromStores(items1, () => closure_1_6.getChannel(closure_1));
+  const stateFromStores = user(504).useStateFromStores(items1, () => closure_1_6.getChannel(closure_1));
   if (null != stateFromStores) {
     obj = {};
     const merged = Object.assign(user);

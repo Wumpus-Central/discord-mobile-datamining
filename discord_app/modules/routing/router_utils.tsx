@@ -4,7 +4,7 @@ import timestampDefault from "../debug/Logger.tsx";
 import ComponentDispatcher from "../../utils/ComponentDispatchUtils.tsx";
 import set2 from "RoutingSources.tsx";
 import ME from "../../Constants.tsx";
-import _extends from "../../../_runtime/metro/01220__extends.js";
+import _extends from "../../../_runtime/metro/01101__extends.js";
 
 function transitionTo(ME, closure_1) {
   closure_0 = ME;

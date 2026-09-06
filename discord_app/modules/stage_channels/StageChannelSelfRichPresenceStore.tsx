@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/StageChannelSelfRichPresenceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import isUndefinedOrNullDefault from "../../../_runtime/00656_isUndefinedOrNull.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import isUndefinedOrNullDefault from "../../../_runtime/01332_isUndefinedOrNull.js";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import unpackStageChannelParty from "StageChannelRichPresenceUtils.tsx";
 import closure_4 from "../../stores/ChannelStore.tsx";
@@ -51,7 +51,7 @@ function handleUpdateActivity() {
               }
               const mutableParticipants = store.getMutableParticipants(
                 channel.id,
-                tmp12(5377).StageChannelParticipantNamedIndex.SPEAKER,
+                tmp12(5425).StageChannelParticipantNamedIndex.SPEAKER,
               );
               const length = mutableParticipants.filter(
                 (type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM,
@@ -76,11 +76,11 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = tmp12(4674);
+                let tmp12Result = tmp12(4713);
                 topic = tmp12Result.computeChannelName(channel, closure_9, closure_7);
               }
               obj[1] = topic;
-              tmp12Result = tmp12(5370);
+              tmp12Result = tmp12(5417);
               obj[2] = tmp12Result.getStageHasMedia(channel.id) ? closure_13.WATCHING : closure_13.LISTENING;
               let start;
               if (tmp15 != null) {

@@ -1,8 +1,8 @@
 // discord_app/modules/stickers/StickersPersistedStore.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
 import closure_2 from "../user_settings/UserSettingsProtoStore.tsx";
 import closure_3 from "StickersStore.tsx";

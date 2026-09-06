@@ -26,10 +26,10 @@ class VoiceNotificationManager {
       channelId: "flexDirection",
       connectionState: "content",
       selfMute: false,
-      deafened: null,
-      isPushToTalk: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED",
-      embeddedActivity: "Something went wrong when setting up the checkout workflow.",
-      isStreaming: "Djibouti",
+      deafened: "15.30",
+      isPushToTalk: "3.30",
+      embeddedActivity: "halv fire",
+      isStreaming: "klokkesl\u00E6t",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = closure_1_9.getChannelId();
@@ -246,10 +246,10 @@ set.state = {
   channelId: "flexDirection",
   connectionState: "content",
   selfMute: false,
-  deafened: null,
-  isPushToTalk: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED",
-  embeddedActivity: "Something went wrong when setting up the checkout workflow.",
-  isStreaming: "Djibouti",
+  deafened: "15.30",
+  isPushToTalk: "3.30",
+  embeddedActivity: "halv fire",
+  isStreaming: "klokkesl\u00E6t",
 };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();

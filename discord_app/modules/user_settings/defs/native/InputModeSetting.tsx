@@ -14,11 +14,11 @@ createToggle = {
   useTrailing: function useInputModeSettingTrailing() {
     const items = [closure_2];
     if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
-      const intl2 = tmp(1233).intl;
-      let stringResult = intl2.string(tmp(1233).t.Q8gkVL);
+      const intl2 = tmp(1114).intl;
+      let stringResult = intl2.string(tmp(1114).t.Q8gkVL);
     } else {
-      const intl = tmp(1233).intl;
-      stringResult = intl.string(tmp(1233).t.cHCEOJ);
+      const intl = tmp(1114).intl;
+      stringResult = intl.string(tmp(1114).t.cHCEOJ);
     }
     return stringResult;
   },

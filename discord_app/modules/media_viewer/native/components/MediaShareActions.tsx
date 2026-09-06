@@ -115,7 +115,12 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = tmp8.attachmentId;
         if (null != attachmentId) {
-          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: 75 };
+          obj = {
+            message: null,
+            source: "media-viewer",
+            initialSelectedDestinations: "Array",
+            forwardOptions: "QUESTS_USER_COMPLETION_UPDATE",
+          };
           obj[0] = tmp3;
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -126,7 +131,12 @@ function useMediaShareActions(source) {
         }
       } else {
         obj1 = source(tmp[18]);
-        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: 75 };
+        obj1 = {
+          message: null,
+          source: "media-viewer",
+          initialSelectedDestinations: "Array",
+          forwardOptions: "QUESTS_USER_COMPLETION_UPDATE",
+        };
         obj1[0] = tmp3;
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [tmp8.mediaIndex];
@@ -260,9 +270,9 @@ export default function MediaShareActionSheet(source) {
     children: useMediaShareActions(obj).map((IconComponent) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(6000).ActionSheetRow.Icon, obj);
+      obj[0] = callback2(callback(7200).ActionSheetRow.Icon, obj);
       ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(6000).ActionSheetRow, obj, arg1);
+      return callback2(callback(7200).ActionSheetRow, obj, arg1);
     }),
   };
   obj[0] = jsx(ActionSheetRowIcon.ActionSheetRow.Group, {
@@ -270,9 +280,9 @@ export default function MediaShareActionSheet(source) {
     children: useMediaShareActions(obj).map((IconComponent) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(6000).ActionSheetRow.Icon, obj);
+      obj[0] = callback2(callback(7200).ActionSheetRow.Icon, obj);
       ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(6000).ActionSheetRow, obj, arg1);
+      return callback2(callback(7200).ActionSheetRow, obj, arg1);
     }),
   });
   return jsx(ActionSheet.ActionSheet, {
@@ -280,9 +290,9 @@ export default function MediaShareActionSheet(source) {
     children: useMediaShareActions(obj).map((IconComponent) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(6000).ActionSheetRow.Icon, obj);
+      obj[0] = callback2(callback(7200).ActionSheetRow.Icon, obj);
       ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(6000).ActionSheetRow, obj, arg1);
+      return callback2(callback(7200).ActionSheetRow, obj, arg1);
     }),
   });
 }

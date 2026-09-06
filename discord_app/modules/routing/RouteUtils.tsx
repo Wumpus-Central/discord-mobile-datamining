@@ -10,8 +10,8 @@ const re2 = /^\d+$/;
 const result = set.fileFinishedImporting("modules/routing/RouteUtils.tsx");
 
 export const RouteParam = RouteParam.RouteParam;
-export const isPseudoGuildId = function isPseudoGuildId(stateFromStores) {
-  return PSEUDO_GUILD_IDS.includes(stateFromStores);
+export const isPseudoGuildId = function isPseudoGuildId(guildId) {
+  return PSEUDO_GUILD_IDS.includes(guildId);
 };
 export const isValidGuildId = function isValidGuildId(guildId) {
   let tmp = null != guildId;

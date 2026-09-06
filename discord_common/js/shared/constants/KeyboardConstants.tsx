@@ -1,22 +1,22 @@
 // discord_common/js/shared/constants/KeyboardConstants.tsx
-import _mod7260 from "../../../../_runtime/metro/07260__.js";
+import _mod7505 from "../../../../_runtime/metro/07505__.js";
 import set from "../../../../_runtime/00002_set.js";
 
-const items = [_mod7260.Key.F6, "f6"];
+const items = [_mod7505.Key.F6, "f6"];
 const items1 = [items, , , , , , ,];
-const items2 = [_mod7260.Key.Tab, "tab"];
+const items2 = [_mod7505.Key.Tab, "tab"];
 items1[1] = items2;
-const items3 = [_mod7260.Key.ArrowDown, "down"];
+const items3 = [_mod7505.Key.ArrowDown, "down"];
 items1[2] = items3;
-const items4 = [_mod7260.Key.ArrowUp, "up"];
+const items4 = [_mod7505.Key.ArrowUp, "up"];
 items1[3] = items4;
-const items5 = [_mod7260.Key.ArrowLeft, "left"];
+const items5 = [_mod7505.Key.ArrowLeft, "left"];
 items1[4] = items5;
-const items6 = [_mod7260.Key.ArrowRight, "right"];
+const items6 = [_mod7505.Key.ArrowRight, "right"];
 items1[5] = items6;
-const items7 = [_mod7260.Key.Home, "home"];
+const items7 = [_mod7505.Key.Home, "home"];
 items1[6] = items7;
-const items8 = [_mod7260.Key.End, "end"];
+const items8 = [_mod7505.Key.End, "end"];
 items1[7] = items8;
 let set = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
 const frozen = Object.freeze({
@@ -392,8 +392,8 @@ const frozen2 = Object.freeze({
 });
 const result = set.fileFinishedImporting("../discord_common/js/shared/constants/KeyboardConstants.tsx");
 
-export const KeyboardEventKey = _mod7260.Key;
-export const FOCUS_SECTION_JUMP_KEY = _mod7260.Key.F6;
+export const KeyboardEventKey = _mod7505.Key;
+export const FOCUS_SECTION_JUMP_KEY = _mod7505.Key.F6;
 export const NavigationKeyShortcutMap = new Map(items1);
 export const NavigationShortcuts = set;
 export const KeyboardDeviceTypes = {

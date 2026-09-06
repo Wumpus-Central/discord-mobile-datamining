@@ -7,8 +7,8 @@ import TableRowInner from "../../../../design/components/TableRow/native/TableRo
 import FormCheckbox from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
 import getRoleRowDataAll from "../../ChannelPermissionsUtils.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/09740_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/09741_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09753_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/09754_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../stores/UserStore.tsx";
 import { RowType } from "../../ChannelPermissionsConstants.tsx";
@@ -24,8 +24,8 @@ function RemoveIcon(item) {
   if (null != channelId) {
     let obj = { disabled: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     obj[0] = item.disabled;
-    let intl = item(1233).intl;
-    obj[2] = intl.string(item(1233).t.N86XcP);
+    let intl = item(1114).intl;
+    obj[2] = intl.string(item(1114).t.N86XcP);
     obj[3] = function onPress() {
       if (null != closure_2) {
         return tmp(id);
@@ -59,8 +59,8 @@ function RemoveIcon(item) {
     }
     obj = { style: null };
     obj[0] = prop;
-    obj[4] = closure_7(item(6235).CircleXIcon, obj);
-    tmp3Result = tmp3(item(5077).PressableOpacity, obj);
+    obj[4] = closure_7(item(6616).CircleXIcon, obj);
+    tmp3Result = tmp3(item(5123).PressableOpacity, obj);
   }
   return tmp3Result;
 }
@@ -145,10 +145,10 @@ function MemberItem(arg0) {
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
     obj = { size: null, source: null, disableColor: true, style: null };
-    obj[0] = tmp5(1296).Icon.Sizes.REFRESH_SMALL_16;
+    obj[0] = tmp5(1178).Icon.Sizes.REFRESH_SMALL_16;
     obj[1] = registerAssetDefault;
     obj[3] = tmp.ownerIcon;
-    tmp4Result = tmp4(tmp5(1296).Icon, obj);
+    tmp4Result = tmp4(tmp5(1178).Icon, obj);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;

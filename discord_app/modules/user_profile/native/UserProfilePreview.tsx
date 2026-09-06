@@ -36,10 +36,10 @@ let closure_12 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     tmp4 = tmp;
   }
   obj[3] = BACKGROUND_SURFACE_HIGH;
-  obj[4] = tmp4(709).radii.lg;
+  obj[4] = tmp4(576).radii.lg;
   obj[1] = obj;
   obj[2] = { flexGrow: 1 };
-  obj = { marginTop: tmp4(709).space.PX_12 };
+  obj = { marginTop: tmp4(576).space.PX_12 };
   obj[3] = obj;
   obj[4] = { zIndex: 1 };
   return obj;

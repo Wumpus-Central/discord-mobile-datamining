@@ -1,7 +1,7 @@
 // discord_app/modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
-import _mod10444 from "../../../_runtime/metro/10444__.js";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
+import _mod10426 from "../../../_runtime/metro/10426__.js";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../user_settings/LocaleStore.tsx";
 import set from "../../../_runtime/00002_set.js";
@@ -15,7 +15,7 @@ HermesBuiltin.arraySpread(set, 1);
 let result = set.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export const preloadTimestampParser = function preloadTimestampParser() {
-  _mod10444;
+  _mod10426;
 };
 export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0, cloneResult1) {
   let obj = cloneResult1;
@@ -75,7 +75,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
           if (!start2.isCertain("hour")) {
             const _Math = Math;
             const result = Math.round(cloneResult.valueOf() / 900000) * 900000;
-            obj4 = tmp20(4074)(result);
+            obj4 = tmp20(4153)(result);
           }
         }
         if (tmp14) {
@@ -148,7 +148,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
               const stringResult = intl4.string(obj1.currentName);
               let stringResult2 = stringResult;
               if (obj4.isSameOrBefore(obj)) {
-                const intl5 = tmp39(1233).intl;
+                const intl5 = tmp39(1114).intl;
                 let stringResult1 = intl5.string(obj1.nextName);
                 stringResult2 = stringResult;
               }
@@ -239,7 +239,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     }
     return items1;
   } else {
-    const tmp6 = _mod10444;
+    const tmp6 = _mod10426;
     locale = locale.locale;
     str = "en-US";
     if ("en-US" === locale) {

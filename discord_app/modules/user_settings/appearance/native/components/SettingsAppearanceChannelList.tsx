@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4217 from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../../../reanimated/ReanimatedRexport.tsx";
 import SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault from "SettingsAppearanceChannelListPreviewNitroUpsell.tsx";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -66,8 +66,8 @@ export default function ChannelListPreview(useGradientBackground) {
   }
   let obj = { style: items1, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
   items1[2] = bgSurfaceHigh;
-  const intl = animatedStyles(1233).intl;
-  obj[3] = intl.string(animatedStyles(1233).t.iGxm3x);
+  const intl = animatedStyles(1114).intl;
+  obj[3] = intl.string(animatedStyles(1114).t.iGxm3x);
   let tmp7 = null;
   if (useGradientBackground) {
     obj = { style: null, children: null };
@@ -75,10 +75,10 @@ export default function ChannelListPreview(useGradientBackground) {
     obj = { themes: null, themeIndex: null, isDimmed: false, backgroundToken: null };
     obj[0] = themes;
     obj[1] = themeIndex;
-    obj[3] = tmp4(709).colors.BACKGROUND_BASE_LOW;
-    obj[1] = callback(tmp4(15138), obj);
+    obj[3] = tmp4(576).colors.BACKGROUND_BASE_LOW;
+    obj[1] = callback(tmp4(15298), obj);
     tmp7 = callback(closure_4, obj);
-    const tmp4Result = tmp4(15138);
+    const tmp4Result = tmp4(15298);
   }
   const items2 = [tmp7, ,];
   obj1 = {
@@ -91,11 +91,11 @@ export default function ChannelListPreview(useGradientBackground) {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants",
   };
-  items2[1] = callback(animatedStyles(8116).FlashList, obj1);
+  items2[1] = callback(animatedStyles(8874).FlashList, obj1);
   items2[2] = callback(SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault, {
     visible: isNitroLocked,
     theme: themes[themeIndex],
   });
   obj[4] = items2;
-  return closure_6(_modDef4217.View, obj);
+  return closure_6(_modDef4296.View, obj);
 }

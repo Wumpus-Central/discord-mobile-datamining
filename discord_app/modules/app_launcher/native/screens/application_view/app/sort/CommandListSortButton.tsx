@@ -39,11 +39,11 @@ export default function CommandListSortButton(sortOrder) {
   const onSortOptionPress = sortOrder.onSortOptionPress;
   const tmp = callback3();
   if (CommandListSortOrder.POPULAR === sortOrder) {
-    const intl2 = sortOrder(1233).intl;
-    let stringResult = intl2.string(sortOrder(1233).t.SzxiqK);
+    const intl2 = sortOrder(1114).intl;
+    let stringResult = intl2.string(sortOrder(1114).t.SzxiqK);
   } else if (tmp2.ALPHABETICAL === sortOrder) {
-    const intl = sortOrder(1233).intl;
-    stringResult = intl.string(sortOrder(1233).t.m8xsti);
+    const intl = sortOrder(1114).intl;
+    stringResult = intl.string(sortOrder(1114).t.m8xsti);
   }
   let obj = {
     accessibilityRole: "button",
@@ -65,11 +65,11 @@ export default function CommandListSortButton(sortOrder) {
   };
   obj = { style: tmp.button, children: null };
   const items = [
-    callback(sortOrder(4474).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }),
+    callback(sortOrder(4556).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }),
   ];
-  obj = { size: "xs", color: onSortOptionPress(709).colors.TEXT_DEFAULT };
-  items[1] = callback(sortOrder(8953).ChevronSmallDownIcon, obj);
+  obj = { size: "xs", color: onSortOptionPress(576).colors.TEXT_DEFAULT };
+  items[1] = callback(sortOrder(11153).ChevronSmallDownIcon, obj);
   obj[1] = items;
   obj[5] = callback2(View, obj);
-  return callback(sortOrder(5077).PressableOpacity, obj);
+  return callback(sortOrder(5123).PressableOpacity, obj);
 }

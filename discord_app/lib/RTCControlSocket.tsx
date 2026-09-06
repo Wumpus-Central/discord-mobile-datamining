@@ -199,7 +199,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     logger2.error("Connect called with already existing websocket");
     self.cleanupWebSocket((close) => close.close(4000));
   }
-  obj = self(4558);
+  obj = self(4589);
   self.connectionStartTime = obj.now();
   self.helloTimeout = setTimeout(() => {
     self.handleClose(
@@ -212,7 +212,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     );
   }, closure_13);
   obj = { location: "RTCControlSocket", supportsSfuUpdate: closure_4.supports(constants.UDP_ENDPOINT_UPDATE) };
-  const webSocket = new WebSocket("" + self.url + "?v=" + self(13701).getVoiceGatewayProtocolVersion(obj));
+  const webSocket = new WebSocket("" + self.url + "?v=" + self(14079).getVoiceGatewayProtocolVersion(obj));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {
@@ -525,7 +525,7 @@ prototype["handleHello"] = function handleHello(d) {
     tmp = require;
     const tmp2 = dependencyMap;
   }
-  const diff = tmp4(4558).now() - self.connectionStartTime;
+  const diff = tmp4(4589).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
   if (heartbeatInterval == null) {
     heartbeatInterval = "??";

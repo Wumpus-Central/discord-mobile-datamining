@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/shared/FormComponents.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import setDefault from "../../../core/native/NativeView.tsx";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import VideoDisabledSvgIcon from "VoiceStateIcons.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../../stores/PresenceStore.tsx";
@@ -18,7 +18,7 @@ function VoiceBadges(arg0) {
   if (null != muteDeafenIconState) {
     obj = { style: null, children: null };
     obj[0] = tmp.iconWrapper;
-    let tmp3Result = tmp3(6015);
+    let tmp3Result = tmp3(5589);
     obj = { state: null, size: null, style: null };
     obj[0] = muteDeafenIconState;
     obj[1] = Button.IconSizes.SMALL;
@@ -31,7 +31,7 @@ function VoiceBadges(arg0) {
   if (null != videoIconState) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.iconWrapper;
-    tmp3Result = tmp3(6015);
+    tmp3Result = tmp3(5589);
     const obj2 = { state: null, size: null, style: null };
     obj2[0] = videoIconState;
     obj2[1] = Button.IconSizes.SMALL;

@@ -70,7 +70,7 @@ export default function InteractionIframeModal(children) {
       referrerPolicy: "origin",
       isPipOrGridMode: false,
       webViewKey: "PX_16",
-      ignoreSilentHardwareSwitch: "kj\u00F8nnsn\u00F8ytral",
+      ignoreSilentHardwareSwitch: "barn",
     };
     obj[0] = function onActivityCrash() {
       callback(true);

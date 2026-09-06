@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx
 import combinedDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/09360_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/09274_registerAsset.js";
 import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkConstants.tsx";
 import ME from "../../../../../../Constants.tsx";
@@ -15,14 +15,14 @@ const result = require("set").fileFinishedImporting(
 );
 
 export default function CrunchyrollLinkLanding() {
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   let items = [navigation];
   const memo = React.useMemo(() => {
     const obj = { label: null, icon: null };
-    const intl = navigation(1233).intl;
-    obj[0] = intl.string(navigation(1233).t["2TXHQd"]);
-    obj[1] = navigation(8597).PlayIcon;
+    const intl = navigation(1114).intl;
+    obj[0] = intl.string(navigation(1114).t["2TXHQd"]);
+    obj[1] = navigation(8274).PlayIcon;
     const items = [obj];
     return items;
   }, []);
@@ -39,15 +39,15 @@ export default function CrunchyrollLinkLanding() {
     onNext: null,
     valueProps: null,
   };
-  let intl = navigation(1233).intl;
-  obj[3] = intl.string(navigation(1233).t["Da+3NJ"]);
-  const intl2 = navigation(1233).intl;
-  obj[4] = intl2.string(navigation(1233).t.MaPpPL);
+  let intl = navigation(1114).intl;
+  obj[3] = intl.string(navigation(1114).t["Da+3NJ"]);
+  const intl2 = navigation(1114).intl;
+  obj[4] = intl2.string(navigation(1114).t.MaPpPL);
   const tmp = callback();
   obj[5] = combinedDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj[6] = callback;
   obj[7] = memo;
-  return jsx(navigation(9322).TwoWayLinkLanding, {
+  return jsx(navigation(9225).TwoWayLinkLanding, {
     platformType: constants2.CRUNCHYROLL,
     img: registerAssetDefault,
     imgStyle: callback().image,

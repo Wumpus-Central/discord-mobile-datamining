@@ -23,8 +23,8 @@ const tmp5 = new timestampDefault("Clips");
 const result5 = require("set").fileFinishedImporting("modules/clips/ClipsConstants.tsx");
 
 export const ClipsLengthSettings = obj;
-export const ClipsViewerConnectivitySettings = { ALL: 0, [0]: "ALL", FRIENDS: 1, [1]: "FRIENDS" };
-export const ClipSaveTypes = { DECOUPLED: "decoupled", VIEWER: "viewer", STREAMER: "streamer", VOICE: "voice" };
+export const ClipSaveTypes = { DECOUPLED: "decoupled", STREAMER: "streamer", VOICE: "voice" };
+export const CLIP_RUNTIME = "v3";
 export const ClipsUserEducationType = {
   Error: 0,
   [0]: "Error",

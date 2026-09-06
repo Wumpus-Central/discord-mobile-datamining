@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
-import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import getAvatarURL from "../../../utils/AvatarUtils.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import computeChannelNameDefault from "../../channel/useChannelName.tsx";
@@ -53,7 +53,7 @@ function ChannelName(channel) {
     obj = { source: null, style: null };
     obj[0] = channelIcon;
     obj[1] = tmp.channelNameIcon;
-    tmp8 = callback2(tmp2(1296).Icon, obj);
+    tmp8 = callback2(tmp2(1178).Icon, obj);
   }
   const items1 = [tmp8];
   const tmp5 = computeChannelNameDefault(channel);
@@ -291,7 +291,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj3[3] = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj4 = { style: null, user: null, size: null, guildId: "PX_16" };
+      const obj4 = { style: null, user: null, size: null, guildId: "Array" };
       obj4[0] = tmp.appIcon;
       obj4[1] = memo;
       obj4[2] = tmp2(tmp3[21]).AvatarSizes.XSMALL;
@@ -425,7 +425,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
   }, items3);
   let tmp3 = callback(React.useState(0), 2);
-  closure_16 = eligibilityStatesGroups(4197).useToken(ThemesDefault.unsafe_rawColors.GREEN_330);
+  closure_16 = eligibilityStatesGroups(4262).useToken(ThemesDefault.unsafe_rawColors.GREEN_330);
   obj = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
@@ -620,7 +620,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[1] = tmp24Result1;
     let tmp24Result2 = null;
     if (null != tmp11) {
-      const obj10 = { style: null, user: null, size: null, guildId: "PX_16" };
+      const obj10 = { style: null, user: null, size: null, guildId: "Array" };
       obj10[0] = tmp38.appIcon;
       obj10[1] = tmp11;
       obj10[2] = tmp15(tmp6[21]).AvatarSizes.XSMALL;
@@ -717,34 +717,34 @@ function ConnectedUserAccountOptions(account) {
   let tmp12;
   if (set.has(account.type)) {
     obj = { label: null, value: null, onValueChange: null };
-    const intl = account(1233).intl;
-    obj[0] = intl.string(account(1233).t["+KCMSi"]);
+    const intl = account(1114).intl;
+    obj[0] = intl.string(account(1114).t["+KCMSi"]);
     obj[1] = tmp3;
     obj[2] = function onValueChange(closure_0) {
       _undefined(closure_0);
       closure_1_1(closure_1_2[40]).setFriendSync(account.type, account.id, closure_0);
     };
-    tmp12 = callback2(account(8376).FormSwitchRow, obj);
+    tmp12 = callback2(account(8593).FormSwitchRow, obj);
   }
   let tmp15;
   if (set2.has(account.type)) {
     obj = { label: null, value: null, onValueChange: null };
-    const intl2 = account(1233).intl;
+    const intl2 = account(1114).intl;
     obj1 = { platform: null };
     obj1[0] = value.name;
-    obj[0] = intl2.formatToPlainString(account(1233).t["6u6J0q"], obj1);
+    obj[0] = intl2.formatToPlainString(account(1114).t["6u6J0q"], obj1);
     obj[1] = tmp4[0];
     obj[2] = function onValueChange(closure_0) {
       callback3(closure_0);
       closure_1_1(closure_1_2[40]).setShowActivity(account.type, account.id, closure_0);
     };
-    tmp15 = callback2(account(8376).FormSwitchRow, obj);
+    tmp15 = callback2(account(8593).FormSwitchRow, obj);
   }
   let tmp18;
   if (true === value.hasMetadata) {
     const obj2 = { label: null, value: null, disabled: null, onValueChange: null };
-    const intl3 = account(1233).intl;
-    obj2[0] = intl3.string(account(1233).t.FYKGsL);
+    const intl3 = account(1114).intl;
+    obj2[0] = intl3.string(account(1114).t.FYKGsL);
     obj2[1] = first;
     obj2[2] = !first1;
     obj2[3] = function onValueChange(arg0) {
@@ -757,12 +757,12 @@ function ConnectedUserAccountOptions(account) {
       }
       const result = closure_1_1(closure_1_2[40]).setMetadataVisibility(type, id, num);
     };
-    tmp18 = callback2(account(8376).FormSwitchRow, obj2);
+    tmp18 = callback2(account(8593).FormSwitchRow, obj2);
   }
   const obj3 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj4 = { label: null, value: null, onValueChange: null };
-  const intl4 = account(1233).intl;
-  obj4[0] = intl4.string(account(1233).t.f7yOAX);
+  const intl4 = account(1114).intl;
+  obj4[0] = intl4.string(account(1114).t.f7yOAX);
   obj4[1] = first1;
   obj4[2] = function onValueChange(arg0) {
     callback(!arg0);
@@ -774,7 +774,7 @@ function ConnectedUserAccountOptions(account) {
     }
     closure_1_1(closure_1_2[40]).setVisibility(type, id, num);
   };
-  const items = [callback2(account(8376).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
+  const items = [callback2(account(8593).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
   obj3[1] = items;
   return callback3(closure_8, obj3);
 }

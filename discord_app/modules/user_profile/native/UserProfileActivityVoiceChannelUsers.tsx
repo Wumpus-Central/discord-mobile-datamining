@@ -12,32 +12,32 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  let obj = user(8923);
+  let obj = user(8217);
   const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
   const items = [closure_3];
-  const stateFromStoresObject = user(586).useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({
     status: closure_1_3.getStatus(user.id),
     isMobileOnline: closure_1_3.isMobileOnline(user.id),
     isVROnline: closure_1_3.isVROnline(user.id),
   }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   obj = { onPress, label: null, icon: null, start: null, end: null };
-  const obj2 = user(586);
+  const obj2 = user(504);
   obj[1] = getNicknameDefault.getName(channel.guild_id, channel.id, user);
   obj = {
     user,
     avatarDecoration,
-    size: user(1296).AvatarSizes.REFRESH_MEDIUM_32,
+    size: user(1178).AvatarSizes.REFRESH_MEDIUM_32,
     guildId: channel.guild_id,
     status,
     isMobileOnline,
     isVROnline,
     autoStatusCutout: true,
   };
-  obj[2] = jsx(user(1296).Avatar, {
+  obj[2] = jsx(user(1178).Avatar, {
     user,
     avatarDecoration,
-    size: user(1296).AvatarSizes.REFRESH_MEDIUM_32,
+    size: user(1178).AvatarSizes.REFRESH_MEDIUM_32,
     guildId: channel.guild_id,
     status,
     isMobileOnline,
@@ -46,10 +46,10 @@ function UserRow(user) {
   });
   obj[3] = start;
   obj[4] = end;
-  return jsx(user(5608).TableRow, {
+  return jsx(user(5605).TableRow, {
     user,
     avatarDecoration,
-    size: user(1296).AvatarSizes.REFRESH_MEDIUM_32,
+    size: user(1178).AvatarSizes.REFRESH_MEDIUM_32,
     guildId: channel.guild_id,
     status,
     isMobileOnline,

@@ -85,31 +85,31 @@ export default {
         if (null != body) {
           if (body.code === constants.TOO_MANY_WEBHOOKS) {
             let obj = { title: null, body: null };
-            const intl3 = callback(1233).intl;
-            obj[0] = intl3.string(callback(1233).t.cCqsca);
-            const intl4 = callback(1233).intl;
-            obj[1] = intl4.string(callback(1233).t["w+QZoX"]);
-            callback2(4858).show(obj);
-            const obj3 = callback2(4858);
+            const intl3 = callback(1114).intl;
+            obj[0] = intl3.string(callback(1114).t.cCqsca);
+            const intl4 = callback(1114).intl;
+            obj[1] = intl4.string(callback(1114).t["w+QZoX"]);
+            callback2(4904).show(obj);
+            const obj3 = callback2(4904);
           }
           return null;
         }
         if (429 === body.status) {
-          obj = callback2(4858);
+          obj = callback2(4904);
           obj = { title: null, body: null };
-          const intl = callback(1233).intl;
-          obj[0] = intl.string(callback(1233).t.cCqsca);
-          const intl2 = callback(1233).intl;
-          obj[1] = intl2.string(callback(1233).t["YBM+UW"]);
+          const intl = callback(1114).intl;
+          obj[0] = intl.string(callback(1114).t.cCqsca);
+          const intl2 = callback(1114).intl;
+          obj[1] = intl2.string(callback(1114).t["YBM+UW"]);
           obj.show(obj);
         } else {
           obj1 = { title: null, body: null };
-          const intl5 = callback(1233).intl;
-          obj1[0] = intl5.string(callback(1233).t.cCqsca);
-          const intl6 = callback(1233).intl;
-          obj1[1] = intl6.string(callback(1233).t["/4TwKf"]);
-          callback2(4858).show(obj1);
-          const obj5 = callback2(4858);
+          const intl5 = callback(1114).intl;
+          obj1[0] = intl5.string(callback(1114).t.cCqsca);
+          const intl6 = callback(1114).intl;
+          obj1[1] = intl6.string(callback(1114).t["/4TwKf"]);
+          callback2(4904).show(obj1);
+          const obj5 = callback2(4904);
         }
       });
   },

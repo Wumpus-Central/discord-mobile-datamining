@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx
 import explicitContentFromProto from "../UserSettings.tsx";
-import isFeatureAgeGated from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useAgeVerificationRunner from "../../age_assurance/AgeVerificationUtils.tsx";
+import isFeatureAgeGated from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import useNSFWAllowed from "useNSFWAllowed.tsx";
 import closure_2 from "../../../stores/UserStore.tsx";

@@ -81,6 +81,21 @@ prototype["sendPublish"] = function sendPublish() {
   error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "draft_patch_notes", nonce: null };
+      obj[1] = combined;
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendModelSettings"] = function sendModelSettings(arg0) {
   const self = this;
   if (null != this.socket) {

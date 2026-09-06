@@ -30,13 +30,13 @@ let closure_5 = createCacheKey.createStyles((arg0, arg1) => {
   };
   if (tmpResult.isThemeLight(arg1)) {
     if (!arg0) {
-      let MOBILE_TOAST_BACKGROUND_DEFAULT = tmp3(709).colors.BACKGROUND_BRAND;
+      let MOBILE_TOAST_BACKGROUND_DEFAULT = tmp3(576).colors.BACKGROUND_BRAND;
     }
     obj[6] = MOBILE_TOAST_BACKGROUND_DEFAULT;
     obj[1] = obj;
     return obj;
   }
-  MOBILE_TOAST_BACKGROUND_DEFAULT = tmp3(709).colors.MOBILE_TOAST_BACKGROUND_DEFAULT;
+  MOBILE_TOAST_BACKGROUND_DEFAULT = tmp3(576).colors.MOBILE_TOAST_BACKGROUND_DEFAULT;
 });
 const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/NewBadge.tsx");
 
@@ -52,7 +52,7 @@ export default function NewBadge() {
     str = "text-brand";
   }
   obj[2] = str;
-  const intl = tmp7(1233).intl;
+  const intl = tmp7(1114).intl;
   obj[3] = intl.string(getSystemLocale.t.y2b7CA);
   obj[1] = jsx(Text.Text, { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null });
   return (

@@ -29,7 +29,7 @@ function getFirstInstallTimeMillis(arg0) {
     if (authenticated.isAuthenticated()) {
       const _Date2 = Date;
       const timestamp = Date.now();
-      const Storage3 = tmp4(592).Storage;
+      const Storage3 = tmp4(510).Storage;
       const result = Storage3.set(str, timestamp);
       num2 = timestamp;
     }
@@ -39,7 +39,7 @@ function getFirstInstallTimeMillis(arg0) {
       const _Date = Date;
       num2 = Date.now();
     }
-    const Storage2 = tmp4(592).Storage;
+    const Storage2 = tmp4(510).Storage;
     const result1 = Storage2.set(str, num2);
   }
 }

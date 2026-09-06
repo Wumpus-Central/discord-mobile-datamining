@@ -57,7 +57,7 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
 export const useMessageTabCountsErrorText = function useMessageTabCountsErrorText(searchContext) {
   searchContext = searchContext.searchContext;
   const items = [closure_5, closure_4];
-  return searchContext(586).useStateFromStores(items, () => {
+  return searchContext(504).useStateFromStores(items, () => {
     const searchResultsQuery = closure_1_5.getSearchResultsQuery(searchContext);
     const searchTabFetchId = searchContext(closure_1_2[5]).getSearchTabFetchId(
       searchContext,

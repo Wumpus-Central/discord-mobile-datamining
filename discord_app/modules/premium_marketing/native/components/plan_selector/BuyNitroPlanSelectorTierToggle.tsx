@@ -22,7 +22,6 @@ createCacheKey = {
   gradientLayer: null,
   gradientTrack: null,
   gradientFill: null,
-  tabText: null,
 };
 createCacheKey = {
   flexDirection: "row",
@@ -51,7 +50,6 @@ obj4.right = undefined;
 obj4.width = 240;
 createCacheKey[4] = obj4;
 createCacheKey[5] = { flex: 1 };
-createCacheKey[6] = { fontStyle: "italic" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let closure_14 = {
   code: "function BuyNitroPlanSelectorTierToggleTsx1(){const{nitroProgress}=this.__closure;return{opacity:nitroProgress.get()};}",
@@ -248,7 +246,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
           const result = current.set(closure_0, arg0);
         }
       },
-      style: closure_3.tab,
+      style: tab.tab,
       disabled: sharedValue1,
       onPress() {
         const result = callback(sharedValue1[15]).triggerHapticFeedback(sharedValue(sharedValue1[16]).SELECTION);
@@ -259,14 +257,14 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
       children: null,
     };
     obj = { selected: tmp, disabled: sharedValue1 };
-    obj = { variant: "heading-sm/extrabold", color: str, style: closure_3.tabText, children: null };
+    obj = { variant: "nitro-xs", color: str, children: null };
     const intl = callback(sharedValue1[18]).intl;
     if (arg0 === sharedValue2.TIER_0) {
       let tUbSDK = callback(sharedValue1[18]).t.tUbSDK;
     } else {
       tUbSDK = ref[arg0];
     }
-    obj[3] = intl.string(tUbSDK).toUpperCase();
+    obj[2] = intl.string(tUbSDK);
     obj[6] = sharedValue3(callback(sharedValue1[17]).Text, obj);
     return sharedValue3(closure_5, obj, arg0);
   });

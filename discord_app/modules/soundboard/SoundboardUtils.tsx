@@ -1,9 +1,9 @@
 // discord_app/modules/soundboard/SoundboardUtils.tsx
 import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
 import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
 import _fetchDefaultSoundsFromApi2 from "SoundboardActionCreators.tsx";
 import getMuteStates from "../video_calls/useMuteStates.tsx";
@@ -289,11 +289,11 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     const _Object = Object;
     const values = Object.values(guilds);
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
-      const result = tmp(4322).ageEligibleForPremiumUpsell(stateFromStores);
-      const tmpResult = tmp(4322);
+      const result = tmp(4404).ageEligibleForPremiumUpsell(stateFromStores);
+      const tmpResult = tmp(4404);
       const obj5 = getPremiumPlanItemDefault;
       if (tmp9) {
-        items1.push(tmp(1372).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
+        items1.push(tmp(1943).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
       }
       tmp9 = getPremiumPlanItemDefault.canUseCustomCallSounds(stateFromStores) || result;
     }

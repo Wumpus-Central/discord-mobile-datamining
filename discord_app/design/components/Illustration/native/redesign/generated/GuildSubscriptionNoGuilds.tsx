@@ -15,13 +15,13 @@ export const getGuildSubscriptionNoGuildsSource = function getGuildSubscriptionN
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(13428);
+      return callback(13534);
     },
     darker() {
-      return callback(13429);
+      return callback(13535);
     },
     light() {
-      return callback(13430);
+      return callback(13536);
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useGuildSubscriptionNoGuildsSource = function useGuildSubscriptionN
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13428);
+      return callback(13534);
     },
     darker() {
-      return callback(13429);
+      return callback(13535);
     },
     light() {
-      return callback(13430);
+      return callback(13536);
     },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const GuildSubscriptionNoGuilds = function GuildSubscriptionNoGuilds(arg0
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13428);
+      return callback(13534);
     },
     darker() {
-      return callback(13429);
+      return callback(13535);
     },
     light() {
-      return callback(13430);
+      return callback(13536);
     },
   };
   obj = {};

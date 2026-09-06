@@ -3,8 +3,8 @@ import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
-import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import AGE_GROUP_CONFIRM_ROW_PROPS from "AgeGroupScreenRowProps.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SettingsAgeGroupHeader } from "../../age_group/native/SettingsAgeGroupScreen.tsx";
 
@@ -19,7 +19,7 @@ obj = {
     const intl2 = getSystemLocale.intl;
     return "" + intl.string(getSystemLocale.t.XxRj7f) + " \u2022 " + intl2.string(messagesProxyDefault.FTawSP);
   },
-  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings,
+  usePredicate: AGE_GROUP_CONFIRM_ROW_PROPS.useShowAssignedAdultAgeGroupRow,
   screen: obj,
 };
 obj = {

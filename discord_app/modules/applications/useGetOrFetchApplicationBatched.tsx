@@ -110,7 +110,7 @@ export const useGetOrFetchApplicationBatched = function useGetOrFetchApplication
   }, items);
   const items1 = [closure_4];
   const items2 = [applicationId];
-  return applicationId(586).useStateFromStores(
+  return applicationId(504).useStateFromStores(
     items1,
     () => {
       let application = null;

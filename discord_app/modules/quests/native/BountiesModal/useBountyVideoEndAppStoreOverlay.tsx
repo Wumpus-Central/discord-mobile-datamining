@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/BountiesModal/useBountyVideoEndAppStoreOverlay.tsx
-import canOpenCustomAppStoreOverlayFromCta from "../../utils/QuestCustomAppStoreOverlayUtils.native.tsx";
+import fetchCustomAppStoreOverlayContent from "../../utils/QuestCustomAppStoreOverlayUtils.native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -22,13 +22,13 @@ export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEnd
 ) {
   if ("auto" !== scrollAffordanceVariant) {
     if (obj2.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
-      const CustomAppStoreSqueezeBackExperiment = tmp6(11313).CustomAppStoreSqueezeBackExperiment;
+      const CustomAppStoreSqueezeBackExperiment = tmp6(11489).CustomAppStoreSqueezeBackExperiment;
       const obj = { location: null };
       obj[0] = QuestsExperimentLocations.VIDEO_MODAL_MOBILE;
       const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj);
-      return config.enabled && tmp4 === tmp6(11313).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
+      return config.enabled && tmp4 === tmp6(11489).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
     }
-    obj2 = canOpenCustomAppStoreOverlayFromCta;
+    obj2 = fetchCustomAppStoreOverlayContent;
   }
   return false;
 };

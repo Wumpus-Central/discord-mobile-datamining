@@ -3,10 +3,10 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import Text from "../../Text/native/Text.tsx";
-import NAV_BAR_HEIGHT from "NavigatorConstants.native.tsx";
 import useHeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import Background from "../../../../../_runtime/05511_Background.js";
+import Background from "../../../../../_runtime/05631_Background.js";
+import NAV_BAR_HEIGHT from "NavigatorConstants.native.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -53,7 +53,7 @@ function CloseButton(onPress) {
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.create(null));
-  let obj = onPress(5510);
+  let obj = onPress(5630);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -67,7 +67,7 @@ function CustomHeaderBackButton(onPress) {
   obj.backImage = function backImage() {
     return callback(closure_9, {});
   };
-  return callback(onPress(5511).HeaderBackButton, obj);
+  return callback(onPress(5631).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;

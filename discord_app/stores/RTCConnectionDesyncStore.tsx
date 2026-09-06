@@ -60,12 +60,12 @@ function retryFailedUsers() {
           obj[1] = user;
           obj[2] = user.id;
           obj[4] = tmp23;
-          obj[10] = guildId(4673).getName(guildId, tmp, user);
-          const obj2 = guildId(4673);
+          obj[10] = guildId(4712).getName(guildId, tmp, user);
+          const obj2 = guildId(4712);
           const tmp24 = closure_1_8;
-          obj[11] = channelId(8923).getAvatarDecoration(user, guildId);
+          obj[11] = channelId(8217).getAvatarDecoration(user, guildId);
           const result1 = closure_1_13.set(user.id, obj);
-          const obj3 = channelId(8923);
+          const obj3 = channelId(8217);
         }
       } else {
         closure_1_14.delete(userId);

@@ -23,11 +23,11 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   const youBarTotalHeight = obj.useYouBarTotalHeight();
   const sum = youBarTotalHeight + closure_5;
   require = sum;
-  width = width(1492)().width;
-  if (width(4335)().isChatBesideChannelList) {
+  width = width(1477)().width;
+  if (width(4420)().isChatBesideChannelList) {
     width = tmp7 + GUILD_LIST_WIDTH;
   }
-  let tmp2Result = tmp2(4217);
+  let tmp2Result = tmp2(4296);
   const fn = function t() {
     return { height: closure_0, opacity: 1, width };
   };
@@ -35,16 +35,16 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   fn.__workletHash = 7609004216185;
   fn.__initData = closure_11;
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
-  tmp2Result = tmp2(4296);
-  const gradientValue = tmp2Result.useGradientValue(tmp2(4296).GradientPercentage.END);
-  const token = map.useToken(tmp6(709).colors.BACKGROUND_BASE_LOWER);
+  tmp2Result = tmp2(4378);
+  const gradientValue = tmp2Result.useGradientValue(tmp2(4378).GradientPercentage.END);
+  const token = map.useToken(tmp6(576).colors.BACKGROUND_BASE_LOWER);
   const tmp2Result1 = map;
   const items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
   const tmp2Result2 = initialize;
   let token1 = null;
   if (null != stateFromStores) {
-    token1 = tmp2Result3.useToken(tmp6(709).colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
+    token1 = tmp2Result3.useToken(tmp6(576).colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
   }
   if (null == token1) {
     token1 = token;
@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   obj = { bottom: sum / 2, height: sum / 2, width };
   items3[1] = obj;
   const items4 = [str2, str];
-  items2[1] = callback(width(4941), {
+  items2[1] = callback(width(4987), {
     style: items3,
     colors: items4,
     start: { x: 0, y: 0 },

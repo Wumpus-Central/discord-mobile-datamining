@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import isEqualDefault from "../../../_runtime/04643_isEqual.js";
+import isEqualDefault from "../../../_runtime/04679_isEqual.js";
 import guildHasTag from "../guild_tag/GuildTagUtils.tsx";
 import closure_3 from "../../stores/GuildMemberStore.tsx";
 import closure_4 from "../../stores/UserStore.tsx";
@@ -9,9 +9,9 @@ import closure_5 from "UserProfileStore.tsx";
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
 
-export const setPendingChanges = function setPendingChanges(guildId) {
-  guildId = guildId.guildId;
-  const merged = Object.assign(guildId, Object.create(null));
+export const setPendingChanges = function setPendingChanges(closure_1) {
+  let guildId = closure_1.guildId;
+  const merged = Object.assign(closure_1, Object.create(null));
   currentUser = currentUser.getCurrentUser();
   if (null != currentUser) {
     userProfile = userProfile.getUserProfile(currentUser.id);

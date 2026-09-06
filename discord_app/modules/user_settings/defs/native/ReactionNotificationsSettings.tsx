@@ -2,8 +2,8 @@
 import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import create from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import MAX_REACTIONS from "../../../reactions/ReactionUtils.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
+import MAX_REACTIONS from "../../../reactions/ReactionUtils.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 

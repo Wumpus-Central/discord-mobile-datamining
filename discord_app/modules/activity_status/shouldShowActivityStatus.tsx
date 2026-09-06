@@ -1,7 +1,7 @@
 // discord_app/modules/activity_status/shouldShowActivityStatus.tsx
 import set from "../../../_runtime/00002_set.js";
-import sum from "../../../discord_common/js/shared/Constants.tsx";
 import ME from "../../Constants.tsx";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
 
 const ActivityTypes = ME.ActivityTypes;
 const StatusTypes = sum.StatusTypes;

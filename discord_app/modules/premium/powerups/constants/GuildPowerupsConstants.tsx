@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/constants/GuildPowerupsConstants.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import DismissibleContent from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import GuildFeatures2 from "../../PremiumConstants.tsx";
+import DismissibleContent from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import str11 from "../../../game_server/GameServerConstants.tsx";
 import VANITY_URL_POWERUP_SKU_ID from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import getGuildTierFromGuild from "../../../../utils/GuildBoostingUtils.tsx";

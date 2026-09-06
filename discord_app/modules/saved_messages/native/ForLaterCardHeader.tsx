@@ -3,8 +3,8 @@ import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import computeChannelNameDefault from "../../channel/useChannelName.tsx";
-import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import FacepileGroupDMAvatarDefault from "../../group_dm/native/GroupDMAvatar.tsx";
 import closure_4 from "../../../stores/GuildStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -12,13 +12,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 function HeaderIcon(channel) {
   channel = channel.channel;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   if (null != stateFromStores) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores;
-    obj[1] = tmp2(6013).GuildIconSizes.XSMALL;
+    obj[1] = tmp2(5584).GuildIconSizes.XSMALL;
     let tmp6Result = callback(GuildIconSizesDefault, obj);
     const tmp13 = GuildIconSizesDefault;
   } else {
@@ -29,13 +29,13 @@ function HeaderIcon(channel) {
     if (isGroupDMResult) {
       obj = { channel: null, size: null };
       obj[0] = channel;
-      obj[1] = tmp2(1296).AvatarSizes.XSMALL;
+      obj[1] = tmp2(1178).AvatarSizes.XSMALL;
       tmp6Result = tmp6(FacepileGroupDMAvatarDefault, obj);
       const tmp10 = FacepileGroupDMAvatarDefault;
     } else {
       obj1 = { style: null, children: null };
       obj1[0] = tmp.dmIcon;
-      obj1[1] = tmp6(tmp2(5025).ChatIcon, { size: "xxs" });
+      obj1[1] = tmp6(tmp2(5071).ChatIcon, { size: "xxs" });
       tmp6Result = tmp6(View, obj1);
     }
   }
@@ -44,11 +44,11 @@ function HeaderIcon(channel) {
 function ChannelName(channel) {
   channel = channel.channel;
   const tmp = callback2();
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   const tmp5 = computeChannelNameDefault(channel, false);
-  obj1 = channel(4982);
+  obj1 = channel(5028);
   const channelIconComponentWithGuild = obj1.getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
@@ -56,10 +56,10 @@ function ChannelName(channel) {
   }
   let formatToPlainStringResult = tmp5;
   if (channel.isDM()) {
-    const intl = tmp2(1233).intl;
+    const intl = tmp2(1114).intl;
     obj = { username: null };
     obj[0] = tmp5;
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1233).t.smD7XV, obj);
+    formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.smD7XV, obj);
   }
   obj = { style: tmp.channelNameContainer, children: null };
   let tmp12 = null;
@@ -70,7 +70,7 @@ function ChannelName(channel) {
   }
   const items1 = [
     tmp12,
-    callback(channel(4474).Text, {
+    callback(channel(4556).Text, {
       style: tmp.channelName,
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",

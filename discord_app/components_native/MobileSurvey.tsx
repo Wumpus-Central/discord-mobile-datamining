@@ -108,8 +108,8 @@ export default function MobileSurvey() {
       renderConfirmRightIcon: null,
     };
     ({ prompt: obj2[0], cta: obj2[1] } = stateFromStores);
-    const intl = tmp(1233).intl;
-    obj[2] = intl.string(tmp(1233).t.f3Pet9);
+    const intl = tmp(1114).intl;
+    obj[2] = intl.string(tmp(1114).t.f3Pet9);
     obj[3] = function onConfirm() {
       stateFromStores(closure_1_2[11]).openURL(stateFromStores.url);
       const obj = stateFromStores(closure_1_2[11]);
@@ -126,7 +126,7 @@ export default function MobileSurvey() {
         source: stateFromStores(closure_1_2[14]),
       });
     };
-    tmp5 = jsx(stateFromStores(4948), {
+    tmp5 = jsx(stateFromStores(4994), {
       body: null,
       confirmText: null,
       cancelText: null,
@@ -134,7 +134,7 @@ export default function MobileSurvey() {
       onCancel: null,
       renderConfirmRightIcon: null,
     });
-    const tmp8 = stateFromStores(4948);
+    const tmp8 = stateFromStores(4994);
   }
   return tmp5;
 }

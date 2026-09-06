@@ -32,8 +32,8 @@ function isAnimatedBackgroundOption(closure_0) {
     if (hasItem) {
       let isAnimatedIconHashResult = getAvatarURL.isAnimatedIconHash(closure_0.asset);
       if (!isAnimatedIconHashResult) {
-        isAnimatedIconHashResult = tmp6(1430).isVideoAssetHash(closure_0.asset);
-        const tmp6Result = tmp6(1430);
+        isAnimatedIconHashResult = tmp6(1396).isVideoAssetHash(closure_0.asset);
+        const tmp6Result = tmp6(1396);
       }
       hasItem = isAnimatedIconHashResult;
       const obj = getAvatarURL;

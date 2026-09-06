@@ -3,9 +3,9 @@ import set from "../../../../_runtime/00002_set.js";
 import LINKING_WHITELIST from "../../links/native/LinkingWhitelist.tsx";
 import FacebookNeutralIcon from "../../../design/components/Icon/native/redesign/generated/FacebookNeutralIcon.tsx";
 import InstagramNeutralIcon from "../../../design/components/Icon/native/redesign/generated/InstagramNeutralIcon.tsx";
+import YoutubeNeutralIcon from "../../../design/components/Icon/native/redesign/generated/YoutubeNeutralIcon.tsx";
 import TiktokNeutralIcon from "../../../design/components/Icon/native/redesign/generated/TiktokNeutralIcon.tsx";
 import TwitterNeutralIcon from "../../../design/components/Icon/native/redesign/generated/TwitterNeutralIcon.tsx";
-import YoutubeNeutralIcon from "../../../design/components/Icon/native/redesign/generated/YoutubeNeutralIcon.tsx";
 
 let obj = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.tiktok.regex, Icon: TiktokNeutralIcon.TiktokNeutralIcon };
 const items = [obj, , , ,];

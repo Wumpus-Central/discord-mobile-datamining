@@ -1,6 +1,6 @@
 // discord_app/modules/quests/lib/analytics/QuestHomeSearchSession.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import v1 from "../../../../../_runtime/00511_v1.js";
+import v1 from "../../../../../_runtime/01256_v1.js";
 import result2 from "../../../analytics_sessions/SessionUtils.tsx";
 
 let c2 = null;

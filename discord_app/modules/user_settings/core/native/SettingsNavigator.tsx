@@ -9,15 +9,15 @@ import closure_6 from "../../LocaleStore.tsx";
 import closure_7 from "../../UserSettingSearchStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07834_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07913_createNativeStackNavigator.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function SettingHeaderBadge(badge) {
   if (badge.badge.badgeType === SettingsBadgeType.SettingsBadgeType.BETA) {
     const obj = { size: null };
-    obj[0] = tmp(1296).BetaSizes.SMALL;
-    return callback(tmp(1296).BetaTag, obj);
+    obj[0] = tmp(1178).BetaSizes.SMALL;
+    return callback(tmp(1178).BetaTag, obj);
   }
 }
 function LeftAlignedHeaderTitle(children) {

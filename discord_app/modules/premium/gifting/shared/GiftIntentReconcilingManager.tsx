@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx
 import failsDefault from "../../../../../discord_common/js/packages/backoff/Backoff.tsx";
-import setDefault from "../../../../utils/Durations.tsx";
 import dispatcherDefault from "../../../../Dispatcher.tsx";
+import setDefault from "../../../../utils/Durations.tsx";
 import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
 import trackInviteDefault from "../../../../actions/MessageActionCreators.tsx";
 import fetchAndReconcileGiftIntentDismissals from "../PremiumGiftingIntentActionCreators.tsx";

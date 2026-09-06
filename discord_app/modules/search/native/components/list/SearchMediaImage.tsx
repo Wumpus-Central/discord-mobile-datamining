@@ -83,7 +83,7 @@ let closure_16 = importAllResult.memo((containerWidth) => {
           items2[1] = Math.round(mediaHeight * (result / mediaWidth));
         }
         [tmp6, tmp7] = callback(items2, 2);
-        let obj = containerHeight(1491);
+        let obj = containerHeight(1476);
         obj = {
           src: null,
           sourceWidth: null,
@@ -98,7 +98,7 @@ let closure_16 = importAllResult.memo((containerWidth) => {
         obj[3] = tmp6;
         obj[4] = tmp7;
         const srcWithWidthAndHeight = obj.getSrcWithWidthAndHeight(obj);
-        let obj2 = containerHeight(11813);
+        let obj2 = containerHeight(12012);
         const obscuredAlt = obj2.getObscuredAlt(obscureReason);
         let tmp12 = null;
         if (null != obscureReason) {
@@ -108,7 +108,7 @@ let closure_16 = importAllResult.memo((containerWidth) => {
           obj[2] = containerWidth;
           tmp12 = callback2(SearchMediaObscurityIcon, obj);
         }
-        let tmp8Result = tmp8(1234);
+        let tmp8Result = tmp8(1115);
         if (tmp8Result.isAndroid()) {
           if (null != obscureReason) {
             obj1 = { style: null, children: null };
@@ -124,11 +124,11 @@ let closure_16 = importAllResult.memo((containerWidth) => {
             return callback3(closure_7, obj1);
           }
         }
-        tmp8Result = tmp8(1234);
+        tmp8Result = tmp8(1115);
         let stringResult = obscuredAlt;
         if (tmp8Result.isAndroid()) {
-          const intl = tmp8(1233).intl;
-          stringResult = intl.string(tmp8(1233).t.jes7FG);
+          const intl = tmp8(1114).intl;
+          stringResult = intl.string(tmp8(1114).t.jes7FG);
         }
         const obj4 = { style: null, children: null };
         obj4[0] = containerStyle;
@@ -138,7 +138,7 @@ let closure_16 = importAllResult.memo((containerWidth) => {
         obj5[2] = placeholder;
         obj5[3] = placeholderVersion;
         obj5[4] = stringResult;
-        const items4 = [callback2(containerHeight(8899).ImageWithPlaceholder, obj5), tmp12];
+        const items4 = [callback2(containerHeight(8755).ImageWithPlaceholder, obj5), tmp12];
         obj4[1] = items4;
         return callback3(closure_7, obj4);
       }
@@ -160,7 +160,7 @@ export const SearchAttachmentMediaImage = function SearchAttachmentMediaImage(at
   const merged = Object.assign(attachment, Object.create(null));
   let enabledHarmTypesBitmaskForChannelAndAuthorId;
   dependencyMap = undefined;
-  let obj = attachment(10286);
+  let obj = attachment(10175);
   enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(
     channelId,
     attachment.authorId,
@@ -169,9 +169,9 @@ export const SearchAttachmentMediaImage = function SearchAttachmentMediaImage(at
   if (num == null) {
     num = 0;
   }
-  let hasFlagResult = attachment(1398).hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
+  let hasFlagResult = attachment(1384).hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
   if (!hasFlagResult) {
-    let tmp2Result = tmp2(6183);
+    let tmp2Result = tmp2(7329);
     hasFlagResult = tmp2Result.isChannelSpoilerGated(store.getChannel(channelId));
   }
   dependencyMap = hasFlagResult;
@@ -185,7 +185,7 @@ export const SearchAttachmentMediaImage = function SearchAttachmentMediaImage(at
       ),
     items,
   );
-  tmp2Result = tmp2(8587);
+  tmp2Result = tmp2(8263);
   obj = {};
   const attachmentUrl = tmp2Result.getAttachmentUrl(attachment);
   const merged1 = Object.assign(merged);
@@ -200,14 +200,14 @@ export const SearchEmbedMediaImage = function SearchEmbedMediaImage(embed) {
   const merged = Object.assign(embed, Object.create(null));
   closure_3 = undefined;
   closure_4 = undefined;
-  let obj = embed(10286);
+  let obj = embed(10175);
   closure_3 = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
-  closure_4 = embed(6183).useIsChannelSpoilerGated(store.getChannel(channelId));
-  const obj2 = embed(6183);
+  closure_4 = embed(7329).useIsChannelSpoilerGated(store.getChannel(channelId));
+  const obj2 = embed(7329);
   const tmp2 = embed;
   const items = [closure_9];
   const thumbnail = embed.thumbnail;
-  const stateFromStores = embed(586).useStateFromStores(items, () => {
+  const stateFromStores = embed(504).useStateFromStores(items, () => {
     const message = closure_1_9.getMessage(closure_2);
     if (null == message) {
       return null;
@@ -227,12 +227,12 @@ export const SearchEmbedMediaImage = function SearchEmbedMediaImage(embed) {
       return tmp2Result.getObscureReasonForEmbed(embed, message, flag2, closure_3);
     }
   });
-  const obj3 = embed(586);
-  const size = embed(8587).getEmbedMedia(embed);
+  const obj3 = embed(504);
+  const size = embed(8263).getEmbedMedia(embed);
   let embedUrl = null;
   if (null != size) {
-    embedUrl = tmp2(8587).getEmbedUrl(size);
-    let tmp2Result = tmp2(8587);
+    embedUrl = tmp2(8263).getEmbedUrl(size);
+    let tmp2Result = tmp2(8263);
   }
   if (null != thumbnail) {
     embedUrl = thumbnail.url;
@@ -262,7 +262,7 @@ export const SearchSoundMediaImage = function SearchSoundMediaImage(height) {
   const obj = { style: null, children: null };
   const items1 = [callback4().sound, height.containerStyle, importAllResult.useMemo(() => ({ height, width }), items)];
   obj[0] = items1;
-  obj[1] = callback2(height(10239).CirclePlayIcon, { size: "lg", color: "interactive-text-default" });
+  obj[1] = callback2(height(10132).CirclePlayIcon, { size: "lg", color: "interactive-text-default" });
   return callback2(closure_7, obj);
 };
 export const SearchFileMediaImage = function SearchFileMediaImage(height) {
@@ -273,7 +273,7 @@ export const SearchFileMediaImage = function SearchFileMediaImage(height) {
   const obj = { style: null, children: null };
   const items1 = [callback4().sound, containerStyle, importAllResult.useMemo(() => ({ height, width }), items)];
   obj[0] = items1;
-  obj[1] = callback2(height(10305).AttachmentIcon, { fileName });
+  obj[1] = callback2(height(10196).AttachmentIcon, { fileName });
   return callback2(closure_7, obj);
 };
 export const SearchComponentMediaImage = function SearchComponentMediaImage(unfurledMediaItem) {

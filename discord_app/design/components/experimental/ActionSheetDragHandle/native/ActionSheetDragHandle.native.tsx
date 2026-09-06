@@ -1,7 +1,7 @@
 // discord_app/design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
-import _modDef4217 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import PX_4 from "ActionSheetDragHandleConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
@@ -53,7 +53,7 @@ const memoResult = importAllResult.memo((accessibilityLabel) => {
     obj = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
     obj[0] = items1;
-    let tmp4Result = tmp4(_modDef4217.View, obj);
+    let tmp4Result = tmp4(_modDef4296.View, obj);
   } else {
     obj1 = { style: null };
     obj1[0] = tmp3.bar;

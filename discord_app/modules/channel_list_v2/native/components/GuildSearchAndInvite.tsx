@@ -156,7 +156,7 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   };
   let num = 10;
   if (arg0) {
-    num = tmp(709).space.PX_12;
+    num = tmp(576).space.PX_12;
   }
   obj = { container: obj, search: { flex: 1 }, badge: null };
   obj[3] = num;
@@ -166,8 +166,8 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
     top: 0,
     width: 8,
     height: 8,
-    borderRadius: tmp(709).radii.round,
-    backgroundColor: tmp(709).colors.BACKGROUND_BRAND,
+    borderRadius: tmp(576).radii.round,
+    backgroundColor: tmp(576).colors.BACKGROUND_BRAND,
   };
   obj[2] = obj;
   return obj;
@@ -182,7 +182,7 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let obj = guild(586);
+  let obj = guild(504);
   const items = [closure_6];
   const items1 = [guild];
   const stateFromStores = obj.useStateFromStores(
@@ -203,8 +203,8 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
       closure_1_11.GUILD_HEADER,
     );
   });
-  const shouldShowInvitesDisabledNotif = guild(12169).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(12169);
+  const shouldShowInvitesDisabledNotif = guild(12371).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(12371);
   const tmp5 = useEventsButtonPropsDefault(guild);
   obj = {
     guildId: guild.id,

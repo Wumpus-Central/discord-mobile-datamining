@@ -88,45 +88,45 @@ function _upload2() {
               onResult = dependencyMap;
               onResult = new.target;
               onResult = new.target;
-              onResult = new callback2(7594)();
+              onResult = new callback2(7839)();
               onResult = onResult.on("start", () => {
                 dependencyMap(true);
               });
               onResult = onResult.on("progress", (currentSize) => {
-                let obj = _undefined(5132);
+                let obj = _undefined(5179);
                 const kestrelConfig = obj.getKestrelConfig({
                   location: "native.AddMediaToOriginalForumPostActionSheet",
                 });
-                const maxFileSizeResult = _undefined(5087).maxFileSize(message.id);
-                const obj2 = _undefined(5087);
+                const maxFileSizeResult = _undefined(5134).maxFileSize(message.id);
+                const obj2 = _undefined(5134);
                 const tmp3 = message;
-                const effectiveKestrelLimit = _undefined(5132).getEffectiveKestrelLimit(
+                const effectiveKestrelLimit = _undefined(5179).getEffectiveKestrelLimit(
                   kestrelConfig,
                   maxFileSizeResult,
                 );
                 if (currentSize.currentSize > effectiveKestrelLimit) {
                   _undefined2.cancel();
                   dependencyMap(false);
-                  callback(4445).hideActionSheet();
+                  callback(4527).hideActionSheet();
                   obj = { file: null, maxSize: null, baseMaxSize: null, guildId: null, analyticsLocations: null };
                   obj[0] = currentSize;
                   obj[1] = effectiveKestrelLimit;
                   obj[2] = maxFileSizeResult;
                   obj[3] = tmp3.id;
                   obj[4] = c4;
-                  callback(8178)(obj);
-                  const obj4 = callback(4445);
+                  callback(9310)(obj);
+                  const obj4 = callback(4527);
                 }
               });
               onResult = onResult.on("error", () => {
                 dependencyMap(false);
-                callback(4445).hideActionSheet();
+                callback(4527).hideActionSheet();
               });
               onResult = onResult.on("complete", () => {
                 dependencyMap(false);
-                callback(8175).clearAll(c0, ChannelMessage.ChannelMessage);
-                const obj = callback(8175);
-                callback(4445).hideActionSheet();
+                callback(9307).clearAll(c0, ChannelMessage.ChannelMessage);
+                const obj = callback(9307);
+                callback(4527).hideActionSheet();
               });
               onResult = store;
               onResult = callback;
@@ -193,14 +193,14 @@ function _upload2() {
               onResult = items;
               callback2 = HermesBuiltin.arraySpread(c8, 0);
               onResult = c9;
-              onResult = c9.map((closure_0, closure_1) => _undefined(5083).getAttachmentPayload(closure_0, closure_1));
+              onResult = c9.map((closure_0, closure_1) => _undefined(5129).getAttachmentPayload(closure_0, closure_1));
               dependencyMap = onResult;
               if (onResult == null) {
                 dependencyMap = [];
               }
               callback2 = HermesBuiltin.arraySpread(dependencyMap, callback2);
               c7 = 2;
-              obj5 = callback2(7520);
+              obj5 = callback2(7765);
               c8 = 6;
               c9 = 1;
               const obj6 = { value: null, done: false };
@@ -212,16 +212,16 @@ function _upload2() {
               c7 = 0;
               closure_12 = c6;
               dependencyMap(false);
-              obj3 = callback2(4445);
+              obj3 = callback2(4527);
               obj3.hideActionSheet();
-              const tmp24 = new callback2(11800)(closure_12);
+              const tmp24 = new callback2(11999)(closure_12);
               store = tmp24;
               if (store.code === closure_11.EXPLICIT_CONTENT) {
-                obj4 = callback2(7211);
+                obj4 = callback2(7456);
                 const result1 = obj4.sendExplicitMediaClydeError(
                   callback,
                   store.attachments,
-                  callback(7355).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
+                  callback(7600).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
                 );
               } else {
                 onResult = c5;
@@ -230,10 +230,10 @@ function _upload2() {
                 const obj7 = { title: null, body: null };
                 onResult = callback;
                 onResult = dependencyMap;
-                const intl = callback(1233).intl;
+                const intl = callback(1114).intl;
                 onResult = callback;
                 onResult = dependencyMap;
-                obj7[0] = intl.string(callback(1233).t.B3vFdU);
+                obj7[0] = intl.string(callback(1114).t.B3vFdU);
                 onResult = store;
                 onResult = store.getAnyErrorMessage();
                 message = onResult;
@@ -241,8 +241,8 @@ function _upload2() {
                   message = store.message;
                 }
                 obj7[1] = message;
-                callback2(4859).show(obj7);
-                const obj21 = callback2(4859);
+                callback2(4905).show(obj7);
+                const obj21 = callback2(4905);
               }
               c9 = 3;
             } else if (6 === tmp9) {
@@ -257,7 +257,7 @@ function _upload2() {
                 return obj8;
               } else {
                 c7 = 3;
-                const HTTP = callback(527).HTTP;
+                const HTTP = callback(1272).HTTP;
                 const obj9 = { url: null, body: null, rejectWithError: true };
                 obj9[0] = closure_12.MESSAGE(callback, callback2(11).castChannelIdAsMessageId(callback));
                 obj10 = { attachments: null };

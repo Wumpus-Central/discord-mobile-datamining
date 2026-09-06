@@ -1,6 +1,6 @@
 // discord_app/utils/StreamQualityUtils.tsx
-import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
+import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
 import closure_3 from "../../_runtime/00019_noop.js";
 import closure_4 from "../stores/ApplicationStreamingSettingsStore.tsx";
 import closure_5 from "../stores/AuthenticationStore.tsx";
@@ -121,10 +121,14 @@ export const useMaxQuality = function useMaxQuality(participant) {
   let obj = _require(stateFromStores[11]);
   const items1 = [closure_5];
   stateFromStores = _require(stateFromStores[11]).useStateFromStores(items1, () => id.getId());
-  const items2 = [stateFromStores, participant, stateFromStoresObject];
-  return React.useMemo(() => {
+  const obj2 = _require(stateFromStores[11]);
+  const items2 = [closure_7];
+  const stateFromStores1 = _require(stateFromStores[11]).useStateFromStores(items2, () => guildId.getGuildId());
+  const items3 = [stateFromStores, stateFromStores1, participant, stateFromStoresObject];
+  return stateFromStores1.useMemo(() => {
     if (stateFromStores === participant.user.id) {
       let obj = { maxFrameRate: null, maxResolution: null };
+      let tmp7Result = stateFromStoresObject;
       obj[0] = stateFromStoresObject.fps;
       obj = { height: null, width: 0, type: null };
       obj[0] = stateFromStoresObject.resolution;
@@ -134,7 +138,9 @@ export const useMaxQuality = function useMaxQuality(participant) {
         FIXED = closure_1_16.FIXED;
       }
       obj[2] = FIXED;
-      obj[1] = obj;
+      tmp7Result = stateFromStoresObject(stateFromStores[12])("useMaxQuality", tmp8, obj, tmp7Result.fps);
+      obj[1] = tmp7Result;
+      const tmp7 = stateFromStoresObject(stateFromStores[12]);
     } else {
       let tmp3 = null;
       if (null != tmp.maxResolution) {
@@ -147,7 +153,7 @@ export const useMaxQuality = function useMaxQuality(participant) {
       }
       return tmp3;
     }
-  }, items2);
+  }, items3);
 };
 export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) {
   closure_0 = preset;

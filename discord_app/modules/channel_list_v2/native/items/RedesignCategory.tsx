@@ -50,7 +50,7 @@ function renderCategoryItem(muted) {
     obj[2] = str;
     obj[4] = styles.categoryText;
     obj[5] = name;
-    tmp34Result = callback(trailingAction(4474).Text, obj);
+    tmp34Result = callback(trailingAction(4556).Text, obj);
     const tmp34 = callback;
   }
   let tmp3 = null;
@@ -65,7 +65,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(12527).PlusMediumIcon;
+    Icon = trailingAction(12753).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , ,];
@@ -128,7 +128,7 @@ function renderCategoryItem(muted) {
         obj4[5] = onLongPress;
         obj4[6] = items;
         obj4[7] = tmp18Result;
-        let tmp28Result = tmp28(trailingAction(5077).PressableHighlight, obj4);
+        let tmp28Result = tmp28(trailingAction(5123).PressableHighlight, obj4);
       } else {
         const obj5 = { accessibilityRole: "header", style: null, children: null };
         obj5[1] = items;
@@ -165,12 +165,12 @@ function renderCategoryItem(muted) {
     obj7[3] = trailingAction.perform;
     obj7[4] = closure_15;
     obj7[5] = closure_16;
-    let colors = longPressAction(709).colors;
+    let colors = longPressAction(576).colors;
     const obj8 = { size: "xxs", color: null };
     obj8[1] = flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
     colors = tmp9(Icon, obj8);
     obj7[6] = colors;
-    obj7 = tmp9(trailingAction(5077).PressableOpacity, obj7);
+    obj7 = tmp9(trailingAction(5123).PressableOpacity, obj7);
     obj6[1] = obj7;
     callback(View, obj6);
     const tmp10 = View;
@@ -233,7 +233,7 @@ export const useCategoryPressEvents = function useCategoryPressEvents(arg0, arg1
 export const CategoryChannel = function CategoryChannel(channel) {
   channel = channel.channel;
   let id = channel;
-  let obj = id(586);
+  let obj = id(504);
   const items = [closure_6, closure_7];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
     collapsed: closure_1_6.isCollapsed(id.id),
@@ -252,11 +252,11 @@ export const CategoryChannel = function CategoryChannel(channel) {
     }
   }, items1);
   const callback1 = React.useCallback(() => id(closure_1_2[15]).openChannelLongPressActionSheet(id), items2);
-  const tmp8 = collapsed(4674)(channel);
+  const tmp8 = collapsed(4713)(channel);
   const tmp = styles();
   const tmp7 = collapsed;
-  const tmp10 = collapsed(15943)(channel, tmp8);
-  const tmp11 = collapsed(15944)(channel);
+  const tmp10 = collapsed(16107)(channel, tmp8);
+  const tmp11 = collapsed(16108)(channel);
   obj = {
     name: tmp8,
     muted: stateFromStoresObject.muted,
@@ -283,17 +283,17 @@ export const CategoryChannel = function CategoryChannel(channel) {
   if (null != tmp10) {
     obj = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
     ({ tooltip: obj3[2], label: obj3[3] } = tmp10);
-    tmp13 = callback(tmp2(4474).Text, obj);
+    tmp13 = callback(tmp2(4556).Text, obj);
   }
   obj[7] = tmp13;
-  obj[8] = collapsed(10937)(channel);
+  obj[8] = collapsed(10975)(channel);
   obj[9] = tmp11;
   const collapsed2 = obj.collapsed;
   const merged = Object.assign(obj, Object.create(null));
-  const colors = tmp7(709).colors;
+  const colors = tmp7(576).colors;
   obj1 = {};
   const merged1 = Object.assign(merged);
-  obj1.icon = callback(id(8953).ChevronSmallDownIcon, {
+  obj1.icon = callback(id(11153).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed2 ? createCacheKey : obj1,
@@ -304,7 +304,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
 export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
-  let obj = guildId(586);
+  let obj = guildId(504);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_5.isCollapsed(guildId));
   const items1 = [guildId, stateFromStores];
@@ -313,18 +313,18 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
     () => guildId(closure_1_2[21]).setRecentlyActiveCollapsed(guildId, !stateFromStores),
     items1,
   );
-  const intl = guildId(1233).intl;
-  obj[0] = intl.string(guildId(1233).t.uZyspD);
+  const intl = guildId(1114).intl;
+  obj[0] = intl.string(guildId(1114).t.uZyspD);
   obj[1] = stateFromStores;
   obj[2] = callback;
   obj[3] = guildId.withMarginTop;
   obj[4] = styles();
   const collapsed = obj.collapsed;
   const merged = Object.assign(obj, Object.create(null));
-  const colors = stateFromStores(709).colors;
+  const colors = stateFromStores(576).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(guildId(8953).ChevronSmallDownIcon, {
+  obj.icon = callback(guildId(11153).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed ? createCacheKey : obj1,
@@ -351,8 +351,8 @@ export const SuggestedCategory = function SuggestedCategory(guildId) {
     obj[1] = items;
     const result = obj.showSimpleActionSheet(obj);
   }, items);
-  let intl = guildId(1233).intl;
-  obj[0] = intl.string(guildId(1233).t.HbJ7eD);
+  let intl = guildId(1114).intl;
+  obj[0] = intl.string(guildId(1114).t.HbJ7eD);
   obj[1] = callback;
   obj[2] = guildId.withMarginTop;
   obj[3] = styles();

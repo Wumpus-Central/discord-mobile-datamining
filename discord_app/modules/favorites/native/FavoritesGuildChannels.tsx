@@ -2,9 +2,9 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import getFontScale from "../../screen/native/useFontScale.tsx";
 import useScaledRowHeightDefault from "../../main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx";
+import ChannelListPanelBackdropDefault from "../../channel_list_v2/native/components/ChannelListPanelBackdrop.tsx";
 import ChannelListStickyHeaderDefault from "../../channel_list_v2/native/components/ChannelListStickyHeader.tsx";
 import PX_8Default from "FavoritesGuildSuggestedChannels.tsx";
-import ChannelListPanelBackdropDefault from "../../channel_list_v2/native/components/ChannelListPanelBackdrop.tsx";
 import getMissingFavoriteThreadIds from "../FavoritesGuildChannelList.tsx";
 import FavoritesGuildSuggestionsLoaderInnerDefault from "../FavoritesGuildSuggestionsLoader.tsx";
 import EmptyBodyDefault from "FavoritesGuildSidebarHeader.tsx";
@@ -55,9 +55,9 @@ export default function FavoritesGuildChannels(arg0) {
       const merged = Object.assign(tmp2Result);
       obj2.guildChannels = guildChannels;
       obj2.guildChannelsVersion = 0;
-      obj2.favoritesSuggestionsNoticeHeight = tmp4(16037).getFavoritesSuggestionsNoticeHeight(fontScale, tmp3, tmp);
-      tmp10Result = tmp10(tmp4(15939).ChannelList, obj2);
-      const tmp4Result = tmp4(16037);
+      obj2.favoritesSuggestionsNoticeHeight = tmp4(16201).getFavoritesSuggestionsNoticeHeight(fontScale, tmp3, tmp);
+      tmp10Result = tmp10(tmp4(16103).ChannelList, obj2);
+      const tmp4Result = tmp4(16201);
     }
     const obj3 = { children: null };
     items[1] = tmp10Result;

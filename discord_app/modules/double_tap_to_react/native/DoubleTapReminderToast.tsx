@@ -51,20 +51,20 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
         .DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
     )
   ) {
-    const DoubleTapReactionEmoji = tmp(4166).DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = tmp(1935).DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
     let flag = setting.disableDoubleTap;
     if (flag == null) {
       flag = false;
     }
-    let tmpResult = tmp(7889);
+    let tmpResult = tmp(7968);
     const result = tmpResult.disambiguatedEmojiFromSettingsValue(setting);
     let areEmojisEqualResult = !flag;
     if (!flag) {
       areEmojisEqualResult = null != result;
     }
     if (areEmojisEqualResult) {
-      tmpResult = tmp(7889);
+      tmpResult = tmp(7968);
       areEmojisEqualResult = tmpResult.areEmojisEqual(result, emoji);
     }
     if (areEmojisEqualResult) {
@@ -79,11 +79,11 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       const obj4 = dispatcherDefault;
       obj = { dismissAction: null, forceTrack: true };
       obj[0] = ContentDismissActionType.AUTO_DISMISS;
-      const result1 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(
-        tmp(1372).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
+      const result1 = tmp(4380).UNSAFE_markDismissibleContentAsDismissed(
+        tmp(1943).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
         obj,
       );
-      const tmpResult1 = tmp(4298);
+      const tmpResult1 = tmp(4380);
     }
   }
 };

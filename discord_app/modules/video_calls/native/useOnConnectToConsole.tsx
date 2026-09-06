@@ -1,8 +1,8 @@
 // discord_app/modules/video_calls/native/useOnConnectToConsole.tsx
 import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import _modDef9317 from "../../user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx";
-import _modDef9345 from "../../user_settings/connections/native/two_way_link/playstation/PlayStationLinkModalActionCreators.tsx";
+import _modDef9217 from "../../user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx";
+import _modDef9253 from "../../user_settings/connections/native/two_way_link/playstation/PlayStationLinkModalActionCreators.tsx";
 import _beginConsoleTransfer from "../../game_console/native/beginConsoleTransfer.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import ME from "../../../Constants.tsx";
@@ -23,10 +23,10 @@ export const onConnectToConsole = function onConnectToConsole(channel, closure_0
   const type = closure_0.type;
   if (constants2.XBOX === type) {
     const items = [constants.CHANNEL_CALL];
-    return _modDef9317.showModal(items);
+    return _modDef9217.showModal(items);
   } else {
     const items1 = [constants.CHANNEL_CALL];
-    return _modDef9345.showModal(items1, closure_0.type);
+    return _modDef9253.showModal(items1, closure_0.type);
   }
   const obj = UNSAFE_isDismissibleContentDismissed;
   const tmp = require;

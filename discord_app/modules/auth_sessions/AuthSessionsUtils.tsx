@@ -1,6 +1,6 @@
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/AuthenticationStore.tsx";
 import closure_5 from "AuthSessionsStore.tsx";
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthS
 
 export const useAuthSessions = function useAuthSessions() {
   const items = [closure_5];
-  stateFromStoresObject = stateFromStoresObject(586).useStateFromStoresObject(items, () => sessions.getSessions());
+  stateFromStoresObject = stateFromStoresObject(504).useStateFromStoresObject(items, () => sessions.getSessions());
   const items1 = [stateFromStoresObject];
   return React.useMemo(() => {
     const otherSessions = [...authSessionIdHash];

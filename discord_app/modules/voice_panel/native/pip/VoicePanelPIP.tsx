@@ -699,7 +699,7 @@ let closure_35 = importAllResult.memo((transitionState) => {
   let obj = panelCardStillInPIP;
   let tmp = transitionState.pipMode === VoicePanelPIPModes.IN_PANEL;
   if (!tmp) {
-    tmp = transitionState === transitionState(4204).TransitionStates.MOUNTED;
+    tmp = transitionState === transitionState(4271).TransitionStates.MOUNTED;
   }
   [tmp5, c2] = callback(panelCardStillInPIP.useState(tmp), 2);
   const effect = obj.useEffect(() => {
@@ -732,7 +732,7 @@ let closure_35 = importAllResult.memo((transitionState) => {
       };
     }
   }, items1);
-  panelCardStillInPIP = obj.useContext(transitionCleanUp(12068)).panelCardStillInPIP;
+  panelCardStillInPIP = obj.useContext(transitionCleanUp(12272)).panelCardStillInPIP;
   const tmp4 = callback(panelCardStillInPIP.useState(tmp), 2);
   class I {
     constructor() {
@@ -744,7 +744,7 @@ let closure_35 = importAllResult.memo((transitionState) => {
       return tmp;
     }
   }
-  obj = { transitionState, TransitionStates: transitionState(4204).TransitionStates, panelCardStillInPIP };
+  obj = { transitionState, TransitionStates: transitionState(4271).TransitionStates, panelCardStillInPIP };
   I.__closure = obj;
   I.__workletHash = 3025452431419;
   I.__initData = closure_33;
@@ -765,11 +765,11 @@ let closure_35 = importAllResult.memo((transitionState) => {
       return;
     }
   }
-  obj = { runOnJS: transitionState(4217).runOnJS, fireCleanup: callback };
+  obj = { runOnJS: transitionState(4296).runOnJS, fireCleanup: callback };
   S.__closure = obj;
   S.__workletHash = 5494714290933;
   S.__initData = closure_34;
-  const animatedReaction = transitionState(4217).useAnimatedReaction(I, S);
+  const animatedReaction = transitionState(4296).useAnimatedReaction(I, S);
   let tmp10 = null;
   if (tmp5) {
     tmp10 = callback2(VoicePanelPIP, {});

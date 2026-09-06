@@ -34,7 +34,7 @@ const result = require("set").fileFinishedImporting(
 export default function AppStoreParentalRevocationScreen() {
   const tmp = callback3();
   const callback = React.useCallback(() => {
-    callback(table[5]).openURL("https://support.discord.com/hc/articles/14155060633623");
+    callback(table[5]).openURL("https://support.discord.com/hc/en-us/articles/42855178312087");
   }, []);
   let obj = { children: null };
   obj = { children: null };

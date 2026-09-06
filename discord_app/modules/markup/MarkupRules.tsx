@@ -15,10 +15,10 @@ import TIMESTAMP_FORMATS from "TimestampUtils.tsx";
 import staticRouteToTranslation from "StaticRouteRendering.tsx";
 import matchDefault from "MarkupHeadingRule.tsx";
 import regExpDefault2 from "MarkupListRule.tsx";
-import _modDef4980 from "MarkupSubtextRule.tsx";
+import _modDef5026 from "MarkupSubtextRule.tsx";
 import matchDefault2 from "PlatformMarkupRules.native.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00850__toArray.js";
+import closure_4 from "../../../_runtime/00718__toArray.js";
 import closure_5 from "../../stores/ChannelStore.tsx";
 import closure_6 from "../../stores/GuildRoleStore.tsx";
 import closure_7 from "../../stores/GuildStore.tsx";
@@ -26,7 +26,7 @@ import closure_8 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 import { SUB_COMMAND_KEY_SEPARATOR } from "../application_commands/ApplicationCommandConstants.tsx";
 import { GAME_MENTION_RAW_RE } from "../channel_autocomplete/ChannelAutocompleteConstants.tsx";
-import importDefaultResult from "../../../_runtime/04192_t.js";
+import importDefaultResult from "../../../_runtime/04257_t.js";
 import importDefaultResult3 from "combineMarkupRules.tsx";
 import importDefaultResult4 from "../../../_runtime/00012_apply.js";
 
@@ -147,8 +147,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = getNicknameDefault.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4322).getName(str);
-        const tmp4Result = tmp4(4322);
+        nickname = tmp4(4404).getName(str);
+        const tmp4Result = tmp4(4404);
       }
       str = nickname;
       const obj2 = getNicknameDefault;
@@ -964,7 +964,7 @@ obj[33] = {
 };
 obj[34] = matchDefault;
 obj[35] = regExpDefault2;
-obj[36] = _modDef4980;
+obj[36] = _modDef5026;
 let items = [obj];
 const obj20 = {
   order: textRegexpDefault.order,

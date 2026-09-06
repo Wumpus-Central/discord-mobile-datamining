@@ -5,7 +5,7 @@ import setDefault from "../../../../utils/Durations.tsx";
 import get_defaultRulesDefault from "../../../markup/MarkupUtils.tsx";
 import getInitialParserState from "../../renderMessageMarkup.tsx";
 import LHeading from "../../../../components_native/ChangeLogStandardTemplate.tsx";
-import importDefaultResult from "../../../../../_runtime/01400_priv.js";
+import importDefaultResult from "../../../../../_runtime/01437_priv.js";
 
 const MessageTypes = ME.MessageTypes;
 let obj = { max: Infinity, maxAge: 15 * setDefault.Millis.MINUTE, updateAgeOnGet: true };

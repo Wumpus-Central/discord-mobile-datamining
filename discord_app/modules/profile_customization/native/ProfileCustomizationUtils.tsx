@@ -48,8 +48,8 @@ export const getAvatarSource = function getAvatarSource(getAvatarURL) {
         obj = {};
         const merged = Object.assign(getAvatarURL);
         obj.avatar = null;
-        userAvatarURL = tmp3(1430).getUserAvatarURL(obj);
-        const tmp3Result = tmp3(1430);
+        userAvatarURL = tmp3(1396).getUserAvatarURL(obj);
+        const tmp3Result = tmp3(1396);
       }
       memoizedImageSourceResult = obj.memoizedImageSource(userAvatarURL);
       tmp3 = require;

@@ -225,14 +225,14 @@ function _refreshAttachmentUrl() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_5.ATTACHMENTS_REFRESH_URLS;
       const obj2 = { attachment_urls: null };
       const items = [callback];
       obj2[0] = items;
       obj1[1] = obj2;
-      obj1[2] = callback(527).rejectWithMigratedError();
+      obj1[2] = callback(1272).rejectWithMigratedError();
       yield HTTP.post(obj1);
       return arg1.body.refreshed_urls[0].refreshed;
     })();

@@ -66,7 +66,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
             let tmp37 = nextResult;
             let assetURL;
             if (null != tmp4.thumbnailAssetId) {
-              let tmp26Result = tmp26(4756);
+              let tmp26Result = tmp26(4802);
               let tmp39 = nextResult;
               let tmp40 = tmp26Result;
               let tmp41 = applicationId;
@@ -78,7 +78,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
             let tmp42 = nextResult;
             let assetURL1;
             if (null != tmp4.backgroundAssetId) {
-              tmp26Result = tmp26(4756);
+              tmp26Result = tmp26(4802);
               let tmp44 = nextResult;
               let tmp45 = tmp26Result;
               let tmp46 = applicationId;
@@ -87,7 +87,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
                 applicationId,
                 tmp4.backgroundAssetId,
                 heroWidth,
-                tmp26(6082).LARGE_ASSET_FORMAT,
+                tmp26(7226).LARGE_ASSET_FORMAT,
               );
             }
             obj[4] = assetURL1;
@@ -106,7 +106,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
             let tmp14 = nextResult;
             let assetURL2;
             if (null != tmp4.thumbnailAssetId) {
-              let tmp8Result = tmp8(4756);
+              let tmp8Result = tmp8(4802);
               let tmp16 = nextResult;
               let tmp17 = tmp8Result;
               let tmp18 = applicationId;
@@ -118,7 +118,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
             let tmp19 = nextResult;
             let assetURL3;
             if (null != tmp4.backgroundAssetId) {
-              tmp8Result = tmp8(4756);
+              tmp8Result = tmp8(4802);
               let tmp21 = nextResult;
               let tmp22 = tmp8Result;
               let tmp23 = applicationId;
@@ -127,7 +127,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
                 applicationId,
                 tmp4.backgroundAssetId,
                 heroWidth,
-                tmp8(6082).LARGE_ASSET_FORMAT,
+                tmp8(7226).LARGE_ASSET_FORMAT,
               );
             }
             obj[3] = assetURL3;

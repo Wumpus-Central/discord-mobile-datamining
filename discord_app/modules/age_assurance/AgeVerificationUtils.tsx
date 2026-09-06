@@ -219,18 +219,18 @@ function useShouldCallReactiveCheck() {
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  let tmp5 = prop !== tmp(1954).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== tmp(1894).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (stateFromStores != null) {
       prop1 = stateFromStores.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp(1954).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp(1894).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   _require = tmp5;
-  let tmpResult = tmp(4172);
-  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5376).AgeGatedFeature.REACTIVE_CHECK);
-  tmpResult = tmp(586);
+  let tmpResult = tmp(5423);
+  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5424).AgeGatedFeature.REACTIVE_CHECK);
+  tmpResult = tmp(504);
   const items1 = [closure_11];
   const items2 = [tmp5, isFeatureAgeGated];
   return tmpResult.useStateFromStores(
@@ -261,11 +261,11 @@ function shouldCallReactiveCheck() {
     if (currentUser != null) {
       prop1 = currentUser.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp3(1954).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp3(1894).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   let tmp7 = !tmp5;
   if (!tmp5) {
-    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5376).AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5424).AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
       isFeatureAgeGatedResult = closure_11.shouldCallReactiveCheck();
     }
@@ -376,10 +376,10 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   }
   let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
-    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5376).AgeGatedFeature.REACTIVE_CHECK);
+    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5424).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
     if (isFeatureAgeGatedResult) {
-      tmp8 = prop !== tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+      tmp8 = prop !== tmp3(1894).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
     }
     tmp5 = tmp8;
   }
@@ -395,7 +395,7 @@ export const useShouldShowTiggerPawtect = function useShouldShowTiggerPawtect() 
     if (stateFromStores != null) {
       prop = stateFromStores.ageVerificationStatus;
     }
-    isFeatureAgeGated = prop === tmp(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    isFeatureAgeGated = prop === tmp(1894).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   let prop1;
   if (stateFromStores != null) {
@@ -438,11 +438,11 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   let tmp5 = prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
     tmp5 =
-      closure_7.isFeatureAgeGated(tmp3(5376).AgeGatedFeature.REACTIVE_CHECK) &&
-      prop === tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+      closure_7.isFeatureAgeGated(tmp3(5424).AgeGatedFeature.REACTIVE_CHECK) &&
+      prop === tmp3(1894).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
     const tmp7 =
-      closure_7.isFeatureAgeGated(tmp3(5376).AgeGatedFeature.REACTIVE_CHECK) &&
-      prop === tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+      closure_7.isFeatureAgeGated(tmp3(5424).AgeGatedFeature.REACTIVE_CHECK) &&
+      prop === tmp3(1894).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   return tmp5;
 };
@@ -456,7 +456,7 @@ export const useIsVerifiedAdult = function useIsVerifiedAdult() {
     if (stateFromStores != null) {
       prop = stateFromStores.ageVerificationStatus;
     }
-    isFeatureAgeGated = prop === tmp(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    isFeatureAgeGated = prop === tmp(1894).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   let prop1;
   if (stateFromStores != null) {
@@ -642,13 +642,13 @@ export const useIsAgeVerified = function useIsAgeVerified() {
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  let tmp5 = prop !== tmp(1954).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== tmp(1894).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (stateFromStores != null) {
       prop1 = stateFromStores.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp(1954).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp(1894).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   return tmp5;
 };
@@ -766,11 +766,11 @@ export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetS
   const intl = getSystemLocale.intl;
   const string = intl.string;
   if (hasItem) {
-    let stringResult = string(tmp2(1233).t.lSWVTM);
+    let stringResult = string(tmp2(1114).t.lSWVTM);
   } else if (flag) {
     stringResult = string(messagesProxyDefault["/kgWIg"]);
   } else {
-    stringResult = string(tmp2(1233).t.xYXsr6);
+    stringResult = string(tmp2(1114).t.xYXsr6);
   }
   return stringResult;
 };

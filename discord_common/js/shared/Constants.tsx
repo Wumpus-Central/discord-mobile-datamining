@@ -188,7 +188,7 @@ obj5[12] = "https://" + "discord.com";
 obj5[13] = "mailto:press@" + "discord.com";
 obj5[20] = "https://" + "support.discord.com" + "/hc/en-us/articles/360024871991";
 const applyResult = importAllResult.combine.apply(items24);
-const obj7 = { WELCOME: null, ME: null, SETTINGS: null, CONNECTION: null, CHANGELOGS: null, LOGIN: null, LOGIN_WITH_REDIRECT: null, REGISTER: null, REGISTER_WITH_REDIRECT: null, CREATE_GUILD: null, VANITY_INVITE: null, HYPESQUAD_ONLINE: null, BROWSE_NITRO_TITLES: null, SKU_DETAILS: null, MESSAGE: null, CHANNEL: null, REPORT: null, QUEST_PREVIEW_TOOL_2: null, QUEST_HOME_PREVIEW: null };
+const obj7 = { WELCOME: null, ME: null, SETTINGS: null, CONNECTION: null, CHANGELOGS: null, LOGIN: null, LOGIN_WITH_REDIRECT: null, REGISTER: null, REGISTER_WITH_REDIRECT: null, CREATE_GUILD: null, VANITY_INVITE: null, HYPESQUAD_ONLINE: null, BROWSE_NITRO_TITLES: null, SKU_DETAILS: null, MESSAGE: null, CHANNEL: null, REPORT: null, QUEST_PREVIEW_TOOL_2: null, QUEST_HOME_PREVIEW: null, QUEST_BAR_PREVIEW: null };
 const frozen6 = Object.freeze({ TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }) });
 obj7[0] = "" + sum + "/welcome/";
 obj7[1] = "" + sum + "/channels/@me";
@@ -239,6 +239,9 @@ obj7[17] = function QUEST_PREVIEW_TOOL_2(arg0) {
 obj7[18] = function QUEST_HOME_PREVIEW(arg0) {
   return "" + closure_0 + "/quest-home?ad_creative_ids=" + arg0;
 };
+obj7[19] = function QUEST_BAR_PREVIEW(arg0) {
+  return "" + closure_0 + "/quest-bar-preview?ad_creative_ids=" + arg0;
+};
 const frozen7 = Object.freeze(obj7);
 const obj6 = { TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }) };
 const wrapPathsResult = getAuthenticationPath.wrapPaths(frozen7);
@@ -257,7 +260,7 @@ export const BLOG_DOMAIN = "blog.discord.com";
 export const FEEDBACK_DOMAIN = "feedback.discord.com";
 export const DOCS_DOMAIN = "docs.discord.com";
 export const UNSAFE_Colors = frozen;
-export const Fonts = { PRIMARY_NORMAL: "ggsans-Normal, NotoSans-Normal", PRIMARY_MEDIUM: "ggsans-Medium, NotoSans-Medium", PRIMARY_SEMIBOLD: "ggsans-Semibold, NotoSans-Semibold", PRIMARY_BOLD: "ggsans-Bold, NotoSans-Bold", PRIMARY_EXTRABOLD: "ggsans-ExtraBold, NotoSans-ExtraBold", DISPLAY_NORMAL: "ggsans-Normal, NotoSans-Normal", DISPLAY_MEDIUM: "ggsans-Medium, NotoSans-Medium", DISPLAY_SEMIBOLD: "ggsans-Semibold, NotoSans-Semibold", DISPLAY_BOLD: "ggsans-Bold, NotoSans-Bold", DISPLAY_EXTRABOLD: "ggsans-ExtraBold, NotoSans-ExtraBold", CODE_NORMAL: "ggmono-Normal, SourceCodePro-Normal", CODE_BOLD: "ggmono-Bold, SourceCodePro-Bold", GINTO_NORD_EXTRA_BOLD: "ABCGintoNord-ExtraBold", GINTO_NORD_EXTRA_BOLD_ITALIC: "ABCGintoNord-ExtraBoldItalic", GINTO_DISCORD_NORD_BOLD: "ABCGintoDiscordNord-Bold", GINTO_DISCORD_NORD_BOLD_ITALIC: "ABCGintoDiscordNord-BoldItalic", GINTO_DISCORD_NORD_BLACK_ITALIC: "ABCGintoDiscordNord-BlackItalic" };
+export const Fonts = { PRIMARY_NORMAL: "ggsans-Normal, NotoSans-Normal", PRIMARY_NORMAL_ITALIC: "ggsans-NormalItalic, NotoSans-NormalItalic", PRIMARY_MEDIUM: "ggsans-Medium, NotoSans-Medium", PRIMARY_MEDIUM_ITALIC: "ggsans-MediumItalic, NotoSans-MediumItalic", PRIMARY_SEMIBOLD: "ggsans-Semibold, NotoSans-Semibold", PRIMARY_BOLD: "ggsans-Bold, NotoSans-Bold", PRIMARY_EXTRABOLD: "ggsans-ExtraBold, NotoSans-ExtraBold", DISPLAY_NORMAL: "ggsans-Normal, NotoSans-Normal", DISPLAY_MEDIUM: "ggsans-Medium, NotoSans-Medium", DISPLAY_SEMIBOLD: "ggsans-Semibold, NotoSans-Semibold", DISPLAY_BOLD: "ggsans-Bold, NotoSans-Bold", DISPLAY_EXTRABOLD: "ggsans-ExtraBold, NotoSans-ExtraBold", CODE_NORMAL: "ggmono-Normal, SourceCodePro-Normal", CODE_BOLD: "ggmono-Bold, SourceCodePro-Bold", GINTO_NORD_EXTRA_BOLD: "ABCGintoNord-ExtraBold", GINTO_NORD_EXTRA_BOLD_ITALIC: "ABCGintoNord-ExtraBoldItalic", GINTO_DISCORD_NORD_BOLD: "ABCGintoDiscordNord-Bold", GINTO_DISCORD_NORD_BOLD_ITALIC: "ABCGintoDiscordNord-BoldItalic", GINTO_DISCORD_NORD_BLACK_ITALIC: "ABCGintoDiscordNord-BlackItalic" };
 export const StatusTypes = { ONLINE: "online", OFFLINE: "offline", IDLE: "idle", DND: "dnd", INVISIBLE: "invisible", STREAMING: "streaming", UNKNOWN: "unknown" };
 export const ClientTypes = { DESKTOP: "desktop", WEB: "web", MOBILE: "mobile", VR: "vr", UNKNOWN: "unknown" };
 export const RECAPTCHA_SITE_KEY = "6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn";

@@ -4,9 +4,9 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import SCREEN_READER_ENABLED_GETTER from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
 import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
+import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import NUXGuildTemplatesAnalytics from "../CreateGuildConstants.tsx";
@@ -142,22 +142,22 @@ export default function CreationIntent(arg0) {
   const items3 = [callback2(ref, obj1), ,];
   const obj4 = { style: tmp.sections, children: null };
   const obj5 = { hasIcons: true, children: null };
-  const tmp13 = trigger(12120);
+  const tmp13 = trigger(12324);
   const obj6 = { Icon: null, message: null, onPress: null };
   const tmp14 = AccountAgeTier10LargeBadge;
   if (closure_14) {
     obj6[0] = tmp14.ChairIllocon;
-    const intl5 = tmp2(1233).intl;
-    obj6[1] = intl5.string(tmp2(1233).t.uE7zcu);
+    const intl5 = tmp2(1114).intl;
+    obj6[1] = intl5.string(tmp2(1114).t.uE7zcu);
     obj6[2] = function onPress() {
       onPress(false);
     };
     const items4 = [tmp8(tmp13, obj6)];
     const obj7 = { Icon: null, message: null, onPress: null };
-    let tmp12Result = tmp12(12120);
-    obj7[0] = tmp2(6266).WorldIllocon;
-    const intl6 = tmp2(1233).intl;
-    obj7[1] = intl6.string(tmp2(1233).t.h9Q1lG);
+    let tmp12Result = tmp12(12324);
+    obj7[0] = tmp2(5692).WorldIllocon;
+    const intl6 = tmp2(1114).intl;
+    obj7[1] = intl6.string(tmp2(1114).t.h9Q1lG);
     obj7[2] = function onPress() {
       onPress(true);
     };
@@ -166,17 +166,17 @@ export default function CreationIntent(arg0) {
     let tmp16 = obj5;
   } else {
     obj6[0] = tmp14.WorldIllocon;
-    const intl3 = tmp2(1233).intl;
-    obj6[1] = intl3.string(tmp2(1233).t.h9Q1lG);
+    const intl3 = tmp2(1114).intl;
+    obj6[1] = intl3.string(tmp2(1114).t.h9Q1lG);
     obj6[2] = function onPress() {
       onPress(true);
     };
     const items5 = [tmp8(tmp13, obj6)];
     const obj8 = { Icon: null, message: null, onPress: null };
-    tmp12Result = tmp12(12120);
-    obj8[0] = tmp2(6266).ChairIllocon;
-    const intl4 = tmp2(1233).intl;
-    obj8[1] = intl4.string(tmp2(1233).t.uE7zcu);
+    tmp12Result = tmp12(12324);
+    obj8[0] = tmp2(5692).ChairIllocon;
+    const intl4 = tmp2(1114).intl;
+    obj8[1] = intl4.string(tmp2(1114).t.uE7zcu);
     obj8[2] = function onPress() {
       onPress(false);
     };
@@ -187,7 +187,7 @@ export default function CreationIntent(arg0) {
   obj4[1] = callback2(TableRowGroupTitle.TableRowGroup, tmp16);
   items3[1] = callback(ref, obj4);
   const obj9 = { style: tmp.skipDescription, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl7 = tmp2(1233).intl;
+  const intl7 = tmp2(1114).intl;
   obj9[3] = intl7.format(getSystemLocale.t["SMc+Gz"], {
     onSkip(arg0) {
       onPress(null);

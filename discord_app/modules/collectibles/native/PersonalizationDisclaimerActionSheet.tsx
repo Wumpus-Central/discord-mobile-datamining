@@ -26,8 +26,8 @@ const result = require("set").fileFinishedImporting(
 export default function PersonalizationDisclaimerActionSheet() {
   const tmp = callback3();
   const callback = React.useCallback(() => {
-    const obj = callback(4190);
-    obj.openURL(callback(1994).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
+    const obj = callback(4255);
+    obj.openURL(callback(2024).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
   obj = {
@@ -51,7 +51,7 @@ export default function PersonalizationDisclaimerActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj3[2] = intl3.string(getSystemLocale.t.WAI6xu);
   obj3[3] = function onPress() {
-    return callback(4445).hideActionSheet();
+    return callback(4527).hideActionSheet();
   };
   items1[1] = callback(Button.Button, obj3);
   obj[0] = items1;

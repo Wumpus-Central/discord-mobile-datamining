@@ -1,9 +1,9 @@
 // discord_app/modules/autocompleter/native/Autocomplete.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../design/void/native.tsx";
+import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
 import isNullOrEmpty from "../../../utils/StringUtils.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
 import computeChannelName from "../../channel/useChannelName.tsx";
 import TIMESTAMP_FORMATS from "../../markup/TimestampUtils.tsx";
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
@@ -11,7 +11,7 @@ import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowTrailingText from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08045_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08124_registerAsset.js";
 import Form from "../../../design/void/Form/native/index.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import useStickerPackCategories from "../../stickers/StickersHooks.tsx";
@@ -110,7 +110,7 @@ const obj9 = {
     ({ nick, guildId } = user);
     ({ status, onPress } = user);
     const tmp = callback3();
-    let obj = user(586);
+    let obj = user(504);
     const items = [closure_6];
     const stateFromStores = obj.useStateFromStores(items, () => {
       let nickname = null;
@@ -131,16 +131,16 @@ const obj9 = {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(4322).getName(user);
-      const obj3 = guildId(4322);
+      nick = guildId(4404).getName(user);
+      const obj3 = guildId(4404);
     }
     obj[3] = closure_9(AutocompleteLabel, { text: nick });
-    obj = { status, user, size: tmp2(1296).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
-    obj[4] = closure_9(user(1296).Avatar, obj);
+    obj = { status, user, size: tmp2(1178).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
+    obj[4] = closure_9(user(1178).Avatar, obj);
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9797), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(8376).FormRow, obj);
+    obj[5] = closure_9(guildId(9803), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(8593).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -179,8 +179,8 @@ const obj9 = {
     obj[2] = closure_9(Form.FormRow.Label, obj);
     let str = "";
     if (showDescription) {
-      const intl = tmp3(1233).intl;
-      str = intl.string(tmp3(1233).t.HrUmDH);
+      const intl = tmp3(1114).intl;
+      str = intl.string(tmp3(1114).t.HrUmDH);
     }
     obj[3] = closure_9(TableRowTrailingText.TableRowTrailingText, { text: str });
     return closure_9(TableRowInner.TableRow, obj);
@@ -293,7 +293,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(8740).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(8565).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };
@@ -328,8 +328,8 @@ const obj9 = {
       }
       obj1 = { text: null };
       obj1[0] = str;
-      obj[3] = callback(tmp(5617).TableRowTrailingText, obj1);
-      tmp5Result = tmp5(tmp(5608).TableRow, obj);
+      obj[3] = callback(tmp(5614).TableRowTrailingText, obj1);
+      tmp5Result = tmp5(tmp(5605).TableRow, obj);
     }
     return tmp5Result;
   },

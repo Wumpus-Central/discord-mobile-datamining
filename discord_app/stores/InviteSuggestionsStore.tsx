@@ -43,7 +43,7 @@ function _computeRows(query) {
   if (!tmp) {
     id = id.id;
   }
-  const mostRecentDMedUser = set1(9937).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9822).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
     isBlockedOrIgnoredResult = closure_13.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -60,14 +60,14 @@ function _computeRows(query) {
   if (closure_8 === InviteTargetTypes.EMBEDDED_APPLICATION) {
     channelHistory = channelHistory.getChannelHistory();
     const mapped = channelHistory.map((arg0) => channel.getChannel(arg0));
-    const found = mapped.filter(set1(1470).isNotNullish);
+    const found = mapped.filter(set1(1369).isNotNullish);
     const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
     const found2 = found1.filter((arg0) => closure_12.can(constants2.SEND_MESSAGES, arg0));
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9937);
-  return set1(9937).generateRowsForQuery({
+  const obj2 = set1(9822);
+  return set1(9822).generateRowsForQuery({
     query,
     omitUserIds: set,
     suggestedUserIds: set,

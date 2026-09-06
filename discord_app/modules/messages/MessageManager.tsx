@@ -1,8 +1,8 @@
 // discord_app/modules/messages/MessageManager.tsx
 import timestampDefault from "../debug/Logger.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import transitionTo from "../routing/router_utils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import matchPath from "../routing/matchPathCompat.tsx";
@@ -48,9 +48,9 @@ function fetchMessages(arg0) {
           let orCreate1 = orCreate;
           if (orCreate.some(isRefreshableAttachmentUrlAll.messageHasExpiredAttachmentUrl)) {
             logger.log("Found expired attachment link, clearing messages");
-            let tmp9Result = tmp9(5225);
+            let tmp9Result = tmp9(5272);
             tmp9Result.clear(channelId);
-            tmp9Result = tmp9(5225);
+            tmp9Result = tmp9(5272);
             orCreate1 = tmp9Result.getOrCreate(channelId);
           }
           let obj7 = orCreate1;
@@ -58,22 +58,22 @@ function fetchMessages(arg0) {
             let obj = { jumpTargetId: null, jumped: false, jumpType: null };
             obj[2] = GuildThemeSourcePreference.JumpType.ANIMATED;
             const mutation = orCreate1.mutate(obj);
-            tmp9(5225).commit(mutation);
+            tmp9(5272).commit(mutation);
             obj7 = mutation;
-            const tmp9Result1 = tmp9(5225);
+            const tmp9Result1 = tmp9(5272);
           }
           let obj10 = obj7;
           if (tmp19) {
             const mutation1 = obj7.mutate({ focusTargetId: null });
-            tmp9(5225).commit(mutation1);
+            tmp9(5272).commit(mutation1);
             obj10 = mutation1;
-            const tmp9Result2 = tmp9(5225);
+            const tmp9Result2 = tmp9(5272);
           }
           if (isPreload) {
             if (!closure_6.isConnected()) {
               let flag = true;
             }
-            let hasUnreadResult = tmp9(8664)(channelId);
+            let hasUnreadResult = tmp9(8374)(channelId);
             if (hasUnreadResult) {
               hasUnreadResult = closure_11.hasUnread(channelId);
             }
@@ -81,7 +81,7 @@ function fetchMessages(arg0) {
               flag = true;
             }
             if (flag) {
-              tmp9(5225).commit(obj10.mutate({ loadingMore: true }));
+              tmp9(5272).commit(obj10.mutate({ loadingMore: true }));
               if (null == messageId) {
                 let isThreadResult;
                 if (channel != null) {
@@ -132,7 +132,7 @@ function fetchMessages(arg0) {
                       fetchKey: null,
                     };
                     obj1[0] = channelId;
-                    const tmp9Result4 = tmp9(7211);
+                    const tmp9Result4 = tmp9(7456);
                     obj1[1] = getMessageLimit.getMessageLimit("MessageManager.threadStart");
                     obj2 = { messageId: null, flash: false };
                     obj2[0] = channelId;
@@ -166,7 +166,7 @@ function fetchMessages(arg0) {
                         fetchKey: null,
                       };
                       obj3[0] = channelId;
-                      const tmp9Result5 = tmp9(7211);
+                      const tmp9Result5 = tmp9(7456);
                       obj3[1] = getMessageLimit.getMessageLimit("MessageManager.threadUnread");
                       const obj4 = { messageId: null, flash: false, offset: 1 };
                       obj4[0] = trackedAckMessageId;
@@ -190,7 +190,7 @@ function fetchMessages(arg0) {
                   fetchKey: null,
                 };
                 obj5[0] = channelId;
-                const tmp9Result6 = tmp9(7211);
+                const tmp9Result6 = tmp9(7456);
                 obj5[1] = getMessageLimit.getMessageLimit("MessageManager.initialFetch");
                 obj5[2] = isPreload;
                 obj5[3] = skipLocalFetch;
@@ -216,10 +216,10 @@ function fetchMessages(arg0) {
                 obj7[4] = skipLocalFetch;
                 obj7[5] = tmp3;
                 obj7[6] = avoidInitialScroll;
-                tmp9(7211).jumpToMessage(obj7);
-                const tmp9Result7 = tmp9(7211);
+                tmp9(7456).jumpToMessage(obj7);
+                const tmp9Result7 = tmp9(7456);
               }
-              const tmp9Result3 = tmp9(5225);
+              const tmp9Result3 = tmp9(5272);
             }
           }
           if (!obj10.loadingMore) {
@@ -380,7 +380,7 @@ function handleChannelSectionStoreChange() {
       if (sidebarState != null) {
         type = sidebarState.type;
       }
-      if (type !== SidebarType.SidebarType.VIEW_CHANNEL) {
+      if (!tmp6) {
         const currentSidebarChannelId = obj2.getCurrentSidebarChannelId(channelId);
         if (null != currentSidebarChannelId) {
           const obj = { guildId: null, channelId: null, messageId: null };
@@ -390,6 +390,7 @@ function handleChannelSectionStoreChange() {
           fetchMessages(obj);
         }
       }
+      tmp6 = type === SidebarType.SidebarType.VIEW_CHANNEL && sidebarState.channelId === channelId;
     }
   }
 }

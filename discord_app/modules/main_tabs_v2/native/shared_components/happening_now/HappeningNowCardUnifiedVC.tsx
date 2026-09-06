@@ -21,7 +21,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     panelVariant = false;
   }
   const channelId = voiceState.channelId;
-  let obj = channelId(644);
+  let obj = channelId(563);
   const items = [closure_3, closure_4, closure_5];
   const items1 = [channelId];
   const stateFromStoresObject = obj.useStateFromStoresObject(

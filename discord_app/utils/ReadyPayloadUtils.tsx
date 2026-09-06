@@ -511,14 +511,14 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   const obj = itemsDefault;
   const tmp4 = require;
   if (obj2.isCacheEnabled()) {
-    let tmpResult = tmp(7408);
+    let tmpResult = tmp(7653);
     let committedVersions = tmpResult.getCommittedVersions();
   } else {
     committedVersions = Promise.resolve({});
   }
   obj2 = isCacheEnabled;
   if (tmp4Result.isCacheEnabled()) {
-    tmpResult = tmp(1976);
+    tmpResult = tmp(2007);
     let guildIds = tmpResult.getGuildIds();
   } else {
     const _Set = Set;
@@ -526,8 +526,8 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
     guildIds = Promise.resolve(set);
   }
   if (null != databaseResult) {
-    let okAsyncResult = tmp(7409).okAsync(databaseResult);
-    const tmpResult1 = tmp(7409);
+    let okAsyncResult = tmp(7654).okAsync(databaseResult);
+    const tmpResult1 = tmp(7654);
   } else {
     okAsyncResult = Promise.resolve(false);
   }
@@ -551,7 +551,7 @@ export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPriori
     tmp4 = false === closure_1.databaseOk;
   }
   if (tmp4) {
-    let tmp2Result = tmp2(1972);
+    let tmp2Result = tmp2(2003);
     const result = tmp2Result.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok");
   }
   tmp2Result = tmp2(12);

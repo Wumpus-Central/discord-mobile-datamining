@@ -35,7 +35,7 @@ function _launchActivityInBotDM() {
               obj[0] = arg1;
               return obj;
             } else {
-              dependencyMap = 0;
+              dependencyMap = tmp5;
               let callback2 = tmp2;
               let callback;
               callback2 = undefined;
@@ -66,26 +66,27 @@ function _launchActivityInBotDM() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              const obj2 = { applicationId: null };
+              const obj2 = { applicationId: null, analyticsContext: null };
               obj2[0] = callback;
-              if (obj14.tryLaunchAsFrame(obj2)) {
-                let obj7 = callback(9489);
-                const result = obj7.stashPendingFrameLaunch(callback, { isStart: true });
+              const obj3 = { isStart: true, analyticsLocations: null };
+              obj3[1] = dependencyMap;
+              obj2[1] = obj3;
+              if (obj13.tryLaunchAsFrame(obj2)) {
                 c4 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = Promise.resolve(true);
-                return obj3;
+                let obj4 = { value: null, done: true };
+                obj4[0] = Promise.resolve(true);
+                return obj4;
               } else {
-                let obj4 = callback2(4491);
-                obj4 = { recipientIds: null };
-                obj4[0] = callback2;
+                obj4 = callback2(4573);
+                const obj5 = { recipientIds: null };
+                obj5[0] = callback2;
                 c3 = 2;
                 c4 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = obj4.openPrivateChannel(obj4);
-                return obj5;
+                const obj6 = { value: null, done: false };
+                obj6[0] = obj4.openPrivateChannel(obj5);
+                return obj6;
               }
-              obj14 = callback(9488);
+              obj13 = callback(9523);
             }
           } else if (2 === tmp5) {
             if (arg0 === 1) {
@@ -93,12 +94,12 @@ function _launchActivityInBotDM() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj6 = { value: null, done: true };
-              obj6[0] = arg1;
-              return obj6;
+              const obj7 = { value: null, done: true };
+              obj7[0] = arg1;
+              return obj7;
             } else {
               closure_6 = arg1;
-              obj7 = {
+              const obj8 = {
                 targetApplicationId: null,
                 channelId: null,
                 analyticsLocations: null,
@@ -106,35 +107,35 @@ function _launchActivityInBotDM() {
                 referrerId: null,
                 commandOrigin: null,
               };
-              obj7[0] = callback;
-              obj7[1] = closure_6;
-              obj7[2] = dependencyMap;
-              obj7[3] = c3;
-              obj7[4] = c4;
-              obj7[5] = c5;
+              obj8[0] = callback;
+              obj8[1] = closure_6;
+              obj8[2] = dependencyMap;
+              obj8[3] = c3;
+              obj8[4] = c4;
+              obj8[5] = c5;
               c3 = 3;
               c4 = 1;
-              const obj8 = { value: null, done: false };
-              obj8[0] = callback2(9532)(obj7);
-              return obj8;
+              const obj9 = { value: null, done: false };
+              obj9[0] = callback2(9548)(obj8);
+              return obj9;
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
+            const obj10 = { value: null, done: true };
+            obj10[0] = arg1;
+            return obj10;
           } else {
             c4 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           }
-        } catch (tmp14) {
+        } catch (tmp12) {
           c4 = tmp;
-          throw tmp14;
+          throw tmp12;
         }
       }
     })();
@@ -150,7 +151,7 @@ function _launchActivityInBotDM() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/app_launcher/utils/AppLauncherPlayUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/utils/AppLauncherPlayUtils.tsx");
 
 export const launchActivityInBotDM = function launchActivityInBotDM(arg0) {
   const self = this;

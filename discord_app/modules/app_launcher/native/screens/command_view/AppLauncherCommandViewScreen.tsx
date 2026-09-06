@@ -6,10 +6,10 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import CollapsingText from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import AppLauncherEntrypoint from "../../../AppLauncherTypes.tsx";
 import handleApplicationSelected from "../../AppLauncherNativeUtils.tsx";
-import registerAssetDefault from "../../../../../../_runtime/11915_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../_runtime/11916_registerAsset.js";
-import registerAssetDefault3 from "../../../../../../_runtime/11989_registerAsset.js";
-import registerAssetDefault4 from "../../../../../../_runtime/11990_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/12114_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/12115_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../_runtime/12193_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../_runtime/12194_registerAsset.js";
 import closure_4 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_6 from "../../../../../../_runtime/00019_noop.js";
@@ -49,9 +49,9 @@ function AppLauncherCommandViewFooter(arg0) {
       obj1 = { translateX: null };
       const obj9 = closure_1_0(stateFromStores[16]);
       const fn = function e() {
-        const obj = callback(4217);
-        return callback(4217).runOnJS(callback(4446).triggerHapticFeedback)(
-          callback(4446).HapticFeedbackTypes.IMPACT_LIGHT,
+        const obj = callback(4296);
+        return callback(4296).runOnJS(callback(4528).triggerHapticFeedback)(
+          callback(4528).HapticFeedbackTypes.IMPACT_LIGHT,
         );
       };
       const obj2 = { runOnJS: null, triggerHapticFeedback: null, HapticFeedbackTypes: null };

@@ -1,7 +1,7 @@
 // discord_app/modules/polls/PollsUtils.tsx
-import v1 from "../../../_runtime/00511_v1.js";
 import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
+import v1 from "../../../_runtime/01256_v1.js";
 import useNullableMessageAuthor from "../messages/useMessageAuthor.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
 import closure_4 from "../../stores/MessageReactionsStore.tsx";
@@ -19,7 +19,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(7518).ReactionTypes.VOTE,
+    channel(7763).ReactionTypes.VOTE,
   );
   channel = channel.getChannel(channelId);
   let guildId = null;
@@ -108,7 +108,8 @@ function formatVoterTooltipText(arr, arg1) {
 const result = require("set").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "PX_16", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "isArray", localCreationAnswerId: -11665405 };
+  obj[2] = v1.v4();
   return obj;
 };
 export const generateLocalCreationAnswerId = function generateLocalCreationAnswerId() {
@@ -290,10 +291,10 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   }
   let truncateTextResult = str;
   if (null != closure_8) {
-    truncateTextResult = tmp(1902).truncateText(str, tmp4);
-    const tmpResult = tmp(1902);
+    truncateTextResult = tmp(1926).truncateText(str, tmp4);
+    const tmpResult = tmp(1926);
   }
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj = { username: messageAuthor.nick, title: truncateTextResult };
   return intl.format(getSystemLocale.t.Vn97Ka, obj);
 };
@@ -317,10 +318,10 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     }
     let truncateTextResult = str;
     if (null != closure_8) {
-      truncateTextResult = tmp2(1902).truncateText(str, tmp5);
-      const tmp2Result = tmp2(1902);
+      truncateTextResult = tmp2(1926).truncateText(str, tmp5);
+      const tmp2Result = tmp2(1926);
     }
-    const intl = tmp2(1233).intl;
+    const intl = tmp2(1114).intl;
     obj = { username: null, title: null };
     obj[0] = messageAuthor.nick;
     obj[1] = truncateTextResult;

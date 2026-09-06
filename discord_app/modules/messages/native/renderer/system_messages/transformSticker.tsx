@@ -16,17 +16,17 @@ export const transformSticker = function transformSticker(tmp5Result1) {
     str = "";
   }
   obj.asset = str;
-  let tmpResult = tmp(4853);
+  let tmpResult = tmp(4899);
   obj = { isPreview: !tmp5 };
   let str2 = tmpResult.getStickerAssetUrl(tmp5Result1, obj);
   if (str2 == null) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(7920).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(7999).NativeLottieRenderMode;
   obj.renderMode =
     setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-  tmpResult = tmp(7872);
+  tmpResult = tmp(7951);
   obj = {
     expensive() {
       const intl = tmp5Result1(closure_1_1[4]).intl;
@@ -34,10 +34,10 @@ export const transformSticker = function transformSticker(tmp5Result1) {
     },
     cheap: null,
   };
-  let intl = tmp(1233).intl;
+  let intl = tmp(1114).intl;
   obj[1] = intl.string(require("../../../../../intl/index.native.tsx").t["fT+Yjp"]);
   obj.accessibilityLabel = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj.accessibilityHint = intl2.string(require("../../../../../intl/index.native.tsx").t.GCEruV);
   return obj;
 };

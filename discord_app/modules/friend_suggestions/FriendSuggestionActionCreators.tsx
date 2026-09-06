@@ -17,7 +17,7 @@ export default {
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c3 = 0;
-        let obj3 = callback(706);
+        let obj3 = callback(573);
         obj3.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_FAILURE" });
         c5 = 3;
       } else if (arg0 === 1) {
@@ -25,7 +25,7 @@ export default {
         throw arg1;
       } else if (arg0 !== 2) {
         const body = arg1;
-        const obj = callback(706);
+        const obj = callback(573);
         obj3 = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: null };
         obj3[1] = body.body;
         obj.dispatch(obj3);

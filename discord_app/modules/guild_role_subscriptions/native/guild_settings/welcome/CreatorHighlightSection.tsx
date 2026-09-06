@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Button from "../../../../../design/void/native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../../_runtime/09157_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/10302_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
@@ -49,14 +49,14 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(17548)(guild_id, 3, 60);
+  const tmp4 = guild_id(17708)(guild_id, 3, 60);
   dependencyMap = tmp4;
   hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
     let obj = { style: null, children: null };
     obj[0] = tmp.cardContainer;
-    obj[1] = callback(tmp2(17520), {});
+    obj[1] = callback(tmp2(17680), {});
     return callback(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;
@@ -71,7 +71,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj2 = { uri: null };
     obj2[0] = guildAvatarUrl;
     obj1[1] = obj2;
-    const items1 = [callback(tmp2(5502), obj1)];
+    const items1 = [callback(tmp2(5587), obj1)];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.cardHeaderContainer;
     const obj4 = {
@@ -108,12 +108,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       children: null,
     };
     obj7[0] = tmp.ownerUsername;
-    const intl = tmp10(1233).intl;
+    const intl = tmp10(1114).intl;
     const obj8 = { attributionName: null, attributionTitle: null };
     obj8[0] = quote_attribution;
     if (quote_attribution_title == null) {
-      const intl2 = tmp10(1233).intl;
-      quote_attribution_title = intl2.string(tmp10(1233).t.pclUFJ);
+      const intl2 = tmp10(1114).intl;
+      quote_attribution_title = intl2.string(tmp10(1114).t.pclUFJ);
     }
     obj8[1] = quote_attribution_title;
     obj7[5] = intl.format(require("../../../../../intl/index.native.tsx").t.m0b6Kj, obj8);
@@ -127,9 +127,9 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       obj9[0] = tmp.emojiSectionContainer;
       const obj10 = { style: null, variant: "text-xs/semibold", color: "text-default", children: null };
       obj10[0] = tmp.premiumEmojisTitle;
-      const intl3 = tmp10(1233).intl;
-      obj10[3] = intl3.string(tmp10(1233).t.wg53L8);
-      const items4 = [tmp9(tmp10(4474).Text, obj10)];
+      const intl3 = tmp10(1114).intl;
+      obj10[3] = intl3.string(tmp10(1114).t.wg53L8);
+      const items4 = [tmp9(tmp10(4556).Text, obj10)];
       const obj11 = { style: null, children: null };
       const items5 = [,];
       ({ horizontalContainer: arr6[0], emojiContainer: arr6[1] } = tmp);
@@ -147,7 +147,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
         obj12[0] = tmp.emojiListItem;
         const _HermesInternal = HermesInternal;
         obj12[3] = "+" + notShownEmojiCount;
-        tmp9Result = tmp9(tmp10(4474).Text, obj12);
+        tmp9Result = tmp9(tmp10(4556).Text, obj12);
       }
       items6[1] = tmp9Result;
       obj11[1] = items6;
@@ -160,7 +160,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     obj13[0] = tmp.viewServerButtonContainer;
     const obj14 = { pillStyle: null, text: null, onPress: null, shrink: true };
     obj14[0] = tmp.viewServerButton;
-    const intl4 = tmp10(1233).intl;
+    const intl4 = tmp10(1114).intl;
     obj14[1] = intl4.string(require("../../../../../intl/index.native.tsx").t.mQ2IGa);
     obj14[2] = tmp5;
     obj13[1] = callback(

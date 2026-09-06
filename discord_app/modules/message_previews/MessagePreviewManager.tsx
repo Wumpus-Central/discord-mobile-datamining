@@ -315,7 +315,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
                 const localFetching5 = closure_1_1.localFetching;
                 localFetching5.add(closure_1_0);
                 id = closure_1_7.getId();
-                let obj3 = closure_1_1(1955);
+                let obj3 = closure_1_1(1986);
                 const messagesResult = obj3.messages();
                 let mostRecents;
                 if (messagesResult != null) {
@@ -353,7 +353,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
               tmp14 = id === closure_1_7.getId();
             }
             if (tmp14) {
-              obj = closure_1_1(706);
+              obj = closure_1_1(573);
               obj3 = { type: "MESSAGE_PREVIEWS_LOCALLY_LOADED", guildId: null, messages: null };
               obj3[1] = id;
               obj3[2] = closure_1.map((arg0) => {
@@ -449,7 +449,7 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
                 body = undefined;
                 const _HermesInternal = HermesInternal;
                 closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + closure_1_0.join(", ") + ")");
-                const HTTP = closure_1_0(527).HTTP;
+                const HTTP = closure_1_0(1272).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: false };
                 obj1[0] = closure_1_10.MESSAGE_PREVIEWS;
                 const obj2 = { channel_ids: null };
@@ -471,7 +471,7 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
               return obj4;
             } else {
               body = arg1.body;
-              obj = closure_1_1(706);
+              obj = closure_1_1(573);
               const obj5 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: null };
               obj5[2] = body;
               obj.dispatch(obj5);

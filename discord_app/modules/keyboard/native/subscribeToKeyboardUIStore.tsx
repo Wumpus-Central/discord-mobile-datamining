@@ -9,5 +9,5 @@ export default function subscribeToKeyboardUIStore(arg0) {
   if (arg1 === undefined) {
     DEFAULT_APP_ENTRY_KEY = require("../../window/native/AppEntryKeyContext.tsx").DEFAULT_APP_ENTRY_KEY;
   }
-  return DEFAULT_APP_ENTRY_KEY(1496).subscribe((arg0) => callback(arg0.byAppEntry[DEFAULT_APP_ENTRY_KEY]));
+  return DEFAULT_APP_ENTRY_KEY(1481).subscribe((arg0) => callback(arg0.byAppEntry[DEFAULT_APP_ENTRY_KEY]));
 }

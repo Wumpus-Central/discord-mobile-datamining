@@ -15,11 +15,11 @@ export const updateClientPremiumTypeOverride = function updateClientPremiumTypeO
     currentUser = currentUser.getCurrentUser();
   }
   if (null != currentUser) {
-    let tmp2Result = tmp2(706);
+    let tmp2Result = tmp2(573);
     obj = { type: "UPDATE_CLIENT_PREMIUM_TYPE", user: null };
     obj[1] = currentUser;
     tmp2Result.dispatch(obj);
-    tmp2Result = tmp2(706);
+    tmp2Result = tmp2(573);
     obj1 = { type: "CURRENT_USER_UPDATE", user: null };
     obj1[1] = createMessage.userRecordToServer(currentUser);
     tmp2Result.dispatch(obj1);

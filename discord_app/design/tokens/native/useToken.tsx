@@ -50,7 +50,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
     const internal2 = ThemesDefault.internal;
     let semanticColorName = BACKGROUND_BASE_LOW;
     if (internal2.isSemanticColor(BACKGROUND_BASE_LOW)) {
-      const internal3 = tmp6(709).internal;
+      const internal3 = tmp6(576).internal;
       semanticColorName = internal3.getSemanticColorName(BACKGROUND_BASE_LOW);
     }
     const _HermesInternal = HermesInternal;
@@ -68,17 +68,17 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
       if ("#" !== BACKGROUND_BASE_LOW[0]) {
         semanticColor = value;
         if (BACKGROUND_BASE_LOW in closure_4) {
-          const internal5 = tmp6(709).internal;
+          const internal5 = tmp6(576).internal;
           obj = getSemanticColorContextFromThemeContext;
           result = obj.getSemanticColorContextFromThemeContext(themeContext);
-          semanticColor = internal5.resolveSemanticColor(theme, tmp6(709).colors[tmp15[BACKGROUND_BASE_LOW]], result);
+          semanticColor = internal5.resolveSemanticColor(theme, tmp6(576).colors[tmp15[BACKGROUND_BASE_LOW]], result);
         }
       }
     } else {
-      const internal6 = tmp6(709).internal;
+      const internal6 = tmp6(576).internal;
       semanticColor = value;
       if (internal6.isSemanticColor(BACKGROUND_BASE_LOW)) {
-        const internal4 = tmp6(709).internal;
+        const internal4 = tmp6(576).internal;
         semanticColor = internal4.resolveSemanticColor(
           theme,
           BACKGROUND_BASE_LOW,

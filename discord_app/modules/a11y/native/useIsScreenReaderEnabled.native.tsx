@@ -1,7 +1,7 @@
 // discord_app/modules/a11y/native/useIsScreenReaderEnabled.native.tsx
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import keys from "../../../../_runtime/00641_keys.js";
+import keys from "../../../../_runtime/00560_keys.js";
 
 const AccessibilityInfo = get_ActivityIndicator.AccessibilityInfo;
 function SCREEN_READER_ENABLED_GETTER(screenReaderEnabled) {

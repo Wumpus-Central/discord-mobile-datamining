@@ -33,12 +33,12 @@ export const IntlLink = function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = callback(React.useContext(target(1355).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1296).LegacyText, {
+  const tmp3 = callback(React.useContext(target(4279).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1178).LegacyText, {
     accessible: true,
     accessibilityRole: "link",
     onPress: fn,
-    style: callback(React.useContext(target(1355).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
+    style: callback(React.useContext(target(4279).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
     children: children.children,
   });
 };

@@ -1,6 +1,6 @@
 // discord_app/modules/nuf/native/NewUserManager.tsx
-import keys from "../../../ConstantsIOS.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import keys from "../../../ConstantsIOS.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import _startContactSyncForDiscoverability from "NUFActionCreators.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";

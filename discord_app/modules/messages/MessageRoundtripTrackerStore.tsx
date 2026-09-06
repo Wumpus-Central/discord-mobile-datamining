@@ -1,8 +1,8 @@
 // discord_app/modules/messages/MessageRoundtripTrackerStore.tsx
 import timestampDefault from "../debug/Logger.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import receiveNetworkInfoformation from "../network/NetStats.android.tsx";
 import getDeviceMetadataDefault from "../device/getDeviceMetadata.native.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";

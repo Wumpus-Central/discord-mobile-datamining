@@ -605,7 +605,6 @@ export default {
   SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL: "social layer claim purchased item modal",
   SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL: "social layer gift code claim modal",
   SOCIAL_LAYER_STOREFRONT: "social layer storefront",
-  WISHLIST_ACCOUNT_POPOUT_UPSSELL: "wishlist account popout upsell",
   GIFT_CODE_EMBED: "gift code embed",
   SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED: "slayer storefront product details embed",
   SLAYER_STOREFRONT_SHOP_TAB: "slayer storefront shop tab",

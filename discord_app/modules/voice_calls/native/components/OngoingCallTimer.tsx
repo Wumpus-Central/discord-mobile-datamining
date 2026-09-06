@@ -13,7 +13,7 @@ export default function OnGoingCallTimer(style) {
   const channelId = style.channelId;
   const items = [closure_3];
   const items1 = [channelId];
-  const stateFromStores = channelId(586).useStateFromStores(
+  const stateFromStores = channelId(504).useStateFromStores(
     items,
     () => {
       const call = closure_1_3.getCall(channelId);

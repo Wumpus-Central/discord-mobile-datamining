@@ -67,8 +67,8 @@ function _requestPushNotificationPermission() {
           } else {
             closure_3 = arg1;
             if (closure_3 === constants3.DENIED) {
-              callback2(9677)();
-              obj2 = callback2(695);
+              callback2(9690)();
+              obj2 = callback2(1242);
               const obj3 = { action_type: null, action_location: null };
               obj3[0] = constants.TO_SETTINGS;
               obj3[1] = callback2;
@@ -76,15 +76,15 @@ function _requestPushNotificationPermission() {
               dependencyMap();
               obj = 3;
             } else if (closure_3 !== constants3.AUTHORIZED) {
-              obj = callback2(12218);
+              obj = callback2(12418);
               const permission = obj.requestPermission((permission_granted) => {
-                let obj = callback(695);
+                let obj = callback(1242);
                 obj = { action_type: closure_0, action_location: callback, permission_granted };
                 obj.track(closure_1_9.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
                 dependencyMap();
               });
             }
-            obj1 = callback(12212);
+            obj1 = callback(12412);
             const result = obj1.updateNotificationAuthorizationStatus(closure_3);
             dependencyMap();
           }

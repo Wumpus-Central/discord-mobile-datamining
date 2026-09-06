@@ -85,7 +85,7 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   }
   dependencyMap = undefined;
   const tmp = callback3();
-  const tmp4 = setSelectedProfileEffect(8535)(item.skuId);
+  const tmp4 = setSelectedProfileEffect(8226)(item.skuId);
   dependencyMap = tmp4;
   const items = [setSelectedProfileEffect, item];
   let thumbnailPreviewSrc;
@@ -130,12 +130,12 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   obj = { style: items2, accessible: false, importantForAccessibility: "no", children: null };
   items2 = [tmp.profileEffect, { borderRadius: 6 }];
   obj = { source: null, style: null, resizeMode: "cover" };
-  obj1 = { uri: setSelectedProfileEffect(10974) };
+  obj1 = { uri: setSelectedProfileEffect(8823) };
   obj[0] = obj1;
   obj[1] = tmp.sampleProfile;
   const items3 = [
-    closure_6(setSelectedProfileEffect(5502), obj),
-    closure_6(setSelectedProfileEffect(8527), {
+    closure_6(setSelectedProfileEffect(5587), obj),
+    closure_6(setSelectedProfileEffect(8801), {
       skuId: item.skuId,
       bannerAdjustment: 0,
       useThumbnail: true,
@@ -144,7 +144,7 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   ];
   obj[3] = items3;
   obj[6] = callback2(View, obj);
-  return closure_6(item(8102).EditCollectiblesListItemProduct, obj);
+  return closure_6(item(13171).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditProfileEffectItem";
 const result = require("set").fileFinishedImporting(

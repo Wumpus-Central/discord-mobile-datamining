@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx
-import nDefault from "../../../../../_runtime/00686_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nDefault from "../../../../../_runtime/00672_n.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import useHasAllocateBoostPermissionDefault from "../hooks/useHasAllocateBoostPermission.tsx";
 import setDefault from "../hooks/useMarketablePowerupPerks.tsx";
@@ -52,19 +52,19 @@ export default function GuildPowerupsMarketingHeader(guild) {
       obj[0] = tmp.container;
       obj = { style: null, variant: "text-sm/semibold", children: null };
       obj[0] = tmp.text;
-      const intl = guild(1233).intl;
+      const intl = guild(1114).intl;
       let str2 = "";
       if (null != arr) {
         str2 = "";
         if (0 !== arr.length) {
-          let first = tmp2(13472)(arr);
+          let first = tmp2(13578)(arr);
           if (1 === first.length) {
             obj = { powerup: null };
             first = first[0];
             obj[0] = first;
             let formatResult = tmp6(PerkText, obj);
           } else {
-            const intl2 = guild(1233).intl;
+            const intl2 = guild(1114).intl;
             obj1 = { perk1: null, perk2: null };
             const obj2 = { powerup: null };
             obj2[0] = first[0];
@@ -72,14 +72,14 @@ export default function GuildPowerupsMarketingHeader(guild) {
             const obj3 = { powerup: null };
             obj3[0] = first[1];
             obj1[1] = tmp6(PerkText, obj3);
-            formatResult = intl2.format(tmp2(2400).MNO3sG, obj1);
+            formatResult = intl2.format(tmp2(2428).MNO3sG, obj1);
           }
         }
       }
       const obj4 = { perks: null };
       obj4[0] = str2;
-      obj[2] = intl.format(tmp2(2400)["7lwpzR"], obj4);
-      obj[1] = jsx(guild(4474).Text, { style: null, variant: "text-sm/semibold", children: null });
+      obj[2] = intl.format(tmp2(2428)["7lwpzR"], obj4);
+      obj[1] = jsx(guild(4556).Text, { style: null, variant: "text-sm/semibold", children: null });
       return (
         <View style={null} variant="text-sm/semibold">
           {null}

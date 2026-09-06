@@ -128,7 +128,7 @@ function showNotification(uri) {
                 obj1[0] = tmp36;
                 let tmp7 = obj1;
               } else {
-                obj1 = obj1(1234);
+                obj1 = obj1(1115);
                 if (!obj1.isIOS()) {
                   c2 = 1;
                   c3 = 1;
@@ -148,8 +148,8 @@ function showNotification(uri) {
               }
               obj1 = tmp7;
               BUG_REPORTER = closure_1_7.BUG_REPORTER;
-              dependencyMap = obj1(10203).getNotificationDuration(BUG_REPORTER);
-              const obj5 = obj1(10203);
+              dependencyMap = obj1(10094).getNotificationDuration(BUG_REPORTER);
+              const obj5 = obj1(10094);
               const obj3 = {
                 type: null,
                 duration: null,
@@ -161,8 +161,8 @@ function showNotification(uri) {
               };
               obj3[0] = BUG_REPORTER;
               obj3[1] = dependencyMap;
-              const obj6 = BUG_REPORTER(10205);
-              obj3[2] = obj1(511).v4();
+              const obj6 = BUG_REPORTER(10096);
+              obj3[2] = obj1(1256).v4();
               obj3[3] = obj1;
               uri = undefined;
               if (obj1 != null) {
@@ -172,8 +172,8 @@ function showNotification(uri) {
               obj3[5] = function onDismiss() {
                 _undefined(table[7]).clearNotification();
               };
-              const obj8 = obj1(511);
-              obj3[6] = obj1(511).v4();
+              const obj8 = obj1(1256);
+              obj3[6] = obj1(1256).v4();
               obj6.enqueueNotification(obj3);
               c3 = 3;
               return { value: "HermesInternal", done: null };

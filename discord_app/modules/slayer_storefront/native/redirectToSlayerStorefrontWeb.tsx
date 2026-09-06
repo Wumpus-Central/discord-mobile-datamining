@@ -60,15 +60,15 @@ function _redirectToSlayerStorefrontWeb() {
               return obj1;
             } else if (null == callback) {
               const obj2 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
-              const intl2 = callback(1233).intl;
-              obj2[1] = intl2.string(callback(1233).t["rTU7/z"]);
-              callback2(4194).open(obj2);
+              const intl2 = callback(1114).intl;
+              obj2[1] = intl2.string(callback(1114).t["rTU7/z"]);
+              callback2(4259).open(obj2);
               c6 = 3;
               return { value: false, done: true };
             } else {
               c4 = 1;
               closure_3 = c4.COLLECTIBLES_SHOP_GAME_SHOP(callback, undefined, callback2);
-              let obj6 = callback2(6170);
+              let obj6 = callback2(7316);
               logger = 3;
               c6 = 1;
               const obj3 = { value: null, done: false };
@@ -81,17 +81,17 @@ function _redirectToSlayerStorefrontWeb() {
             const _JSON = JSON;
             const _HermesInternal = HermesInternal;
             logger.error("Error performing web handoff: " + JSON.stringify(c4));
-            obj1 = callback(4154);
+            obj1 = callback(4233);
             let obj4 = { tags: null };
             const obj5 = { source: null, skuId: null };
             obj5[0] = dependencyMap;
             obj5[1] = callback2;
             obj4[0] = obj5;
             const result = obj1.captureBillingException(c4, obj4);
-            obj4 = callback2(4194);
+            obj4 = callback2(4259);
             obj6 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
-            const intl = callback(1233).intl;
-            obj6[1] = intl.string(callback(1233).t["rTU7/z"]);
+            const intl = callback(1114).intl;
+            obj6[1] = intl.string(callback(1114).t["rTU7/z"]);
             obj4.open(obj6);
             c6 = 3;
             return { value: false, done: true };

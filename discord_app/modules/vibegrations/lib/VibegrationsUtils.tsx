@@ -24,8 +24,8 @@ function vibegrationsAppIdFromTopic(topic) {
   }
   return null;
 }
-function vibegrationsTextChannelsIn(guild_id) {
-  return channels.getChannels(guild_id)[closure_3].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
+function vibegrationsTextChannelsIn(guildId) {
+  return channels.getChannels(guildId)[closure_3].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
 }
 ({ Permissions: error, ChannelTypes: closure_8, GuildFeatures: c9 } = ME);
 let c10 = "vibegrations_application_id=";
@@ -55,7 +55,7 @@ export const isVibegrationsProjectInGuild = function isVibegrationsProjectInGuil
   return tmp;
 };
 export { vibegrationsTextChannelsIn };
-export const findVibegrationChannelId = function findVibegrationChannelId(guild_id, application_id) {
+export const findVibegrationChannelId = function findVibegrationChannelId(guildId, applicationId) {
   for (const item10009 of tmp) {
     let channel = item10009.channel;
     let tmp2 = channel;

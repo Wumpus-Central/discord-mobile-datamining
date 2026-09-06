@@ -12,14 +12,14 @@ const result = require("set").fileFinishedImporting("modules/premium/hooks/usePr
 
 export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
   const items = [closure_3];
-  offerIds = offerIds(644).useStateFromStoresObject(items, () => ({
+  offerIds = offerIds(563).useStateFromStoresObject(items, () => ({
     isFetchingProducts: closure_3.isFetchingProducts(),
     offerIds: closure_3.getOfferIds(),
   })).offerIds;
-  const obj = offerIds(644);
+  const obj = offerIds(563);
   const tmp = offerIds;
   const tmp3 = importDefault;
-  let values = Object.values(offerIds(6096).DiscountIdToProductOfferId[closure_4]);
+  let values = Object.values(offerIds(7240).DiscountIdToProductOfferId[closure_4]);
   let tmp5 = null;
   if (0 !== values.length) {
     let tmp6 = null;
@@ -29,7 +29,7 @@ export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
     tmp5 = tmp6;
   }
   tmp4 = useDiscountOfferDefault(closure_4);
-  values = Object.values(tmp(6096).DiscountIdToProductOfferId[closure_5]);
+  values = Object.values(tmp(7240).DiscountIdToProductOfferId[closure_5]);
   let tmp8 = null;
   if (0 !== values.length) {
     let tmp9 = null;

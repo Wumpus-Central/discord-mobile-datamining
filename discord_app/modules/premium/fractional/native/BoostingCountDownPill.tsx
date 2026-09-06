@@ -2,7 +2,7 @@
 import set from "../../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -14,7 +14,7 @@ function handlePress() {
   obj = { aboutText: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(13412, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(13518, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -86,7 +86,7 @@ export default function BoostingCountDownPill(style) {
     prop = tmp.fpUnavailableTextNoCountdown;
   }
   const obj3 = { variant: "text-md/normal", color: "interactive-text-active", style: prop, children: null };
-  const intl = tmp10(1233).intl;
+  const intl = tmp10(1114).intl;
   obj3[3] = intl.string(getSystemLocale.t["5nrJDO"]);
   obj2[1] = closure_5(Text.Text, obj3);
   items1[1] = closure_5(closure_4, obj2);

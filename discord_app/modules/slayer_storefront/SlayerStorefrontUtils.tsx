@@ -2,7 +2,7 @@
 import applyDefault from "../../../_runtime/00012_apply.js";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 import _httpGetWithCountryCodeQuery from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/05407_keysSorter.js";
+import keysSorter from "../../../_runtime/05456_keysSorter.js";
 import RewardRequirementType from "SocialLayerStorefrontTypes.tsx";
 import useSKUPrice from "../storefront/StorefrontUtils.tsx";
 import closure_3 from "../applications/ApplicationStore.tsx";
@@ -62,10 +62,8 @@ function hasSocialLayerStorefront(guild) {
       }
       applicationIdFromGuildId = first;
     }
-    const storefrontApplicationIds = obj.getStorefrontApplicationIds();
-    const tmp5 = null == applicationIdFromGuildId || !storefrontApplicationIds.has(applicationIdFromGuildId);
-    let tmp6 = !tmp5;
-    if (tmp5) {
+    let result = obj.hasStorefrontForApplicationId(applicationIdFromGuildId);
+    if (!result) {
       const features = guild.features;
       let flag;
       if (features != null) {
@@ -74,9 +72,9 @@ function hasSocialLayerStorefront(guild) {
       if (flag == null) {
         flag = false;
       }
-      tmp6 = flag;
+      result = flag;
     }
-    return tmp6;
+    return result;
   }
 }
 function transformRewardRequirementServer(type) {
@@ -493,7 +491,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
+          obj = { primaryIconAsset: "hash", primaryIconLabel: "call" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(
@@ -508,7 +506,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
+  return { primaryIconAsset: "hash", primaryIconLabel: "call" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;

@@ -6,7 +6,7 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/quests/lib/analytics/AnalyticsHooks.tsx");
 
 export const useTrackQuestEventWithImpression = function useTrackQuestEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11310).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(11486).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return React.useCallback((properties) => {
     let obj = callback(closure_1_2[3]);
@@ -20,7 +20,7 @@ export const useTrackQuestEventWithImpression = function useTrackQuestEventWithI
   }, items);
 };
 export const useTrackQuestContentClickedWithImpression = function useTrackQuestContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11310).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(11486).useGetQuestImpressionId();
   callback = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = React.useCallback((properties) => {
@@ -117,7 +117,7 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
   }, items1);
 };
 export const useTrackAdContentEventWithImpression = function useTrackAdContentEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11310).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(11486).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return React.useCallback((properties) => {
     let obj = callback(closure_1_2[3]);
@@ -131,7 +131,7 @@ export const useTrackAdContentEventWithImpression = function useTrackAdContentEv
   }, items);
 };
 export const useTrackAdContentClickedWithImpression = function useTrackAdContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11310).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(11486).useGetQuestImpressionId();
   callback = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = React.useCallback((properties) => {
@@ -240,14 +240,14 @@ export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntryp
   let callback2;
   let callback3;
   let callback4;
-  const QuestContent = questHomeHero(5399).QuestContent;
+  const QuestContent = questHomeHero(5447).QuestContent;
   const tmp = shouldShowQuestHomeHeroContent
     ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED
     : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp;
   const items = [tmp];
   memo = memo.useMemo(() => {
-    const contentProperties = questHomeHero(7484).getContentProperties(dependencyMap);
+    const contentProperties = questHomeHero(7728).getContentProperties(dependencyMap);
     delete tmp[tmp2];
     return contentProperties;
   }, items);
@@ -257,15 +257,15 @@ export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntryp
       if (shouldShowQuestHomeHeroContent) {
         let obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
         obj[0] = tmp.id;
-        obj[1] = questHomeHero(7457).AdCreativeType.QUEST_HOME_HERO;
+        obj[1] = questHomeHero(5451).AdCreativeType.QUEST_HOME_HERO;
         obj[2] = arg0;
         obj[3] = memo;
         obj[4] = dependencyMap;
-        questHomeHero(7474).trackAdContentEvent(obj);
-        const obj2 = questHomeHero(7474);
+        questHomeHero(7718).trackAdContentEvent(obj);
+        const obj2 = questHomeHero(7718);
       }
     }
-    obj = shouldShowQuestHomeHeroContent(695);
+    obj = shouldShowQuestHomeHeroContent(1242);
     obj.track(arg0, memo);
   }, items1);
   const items2 = [callback];
@@ -277,11 +277,11 @@ export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntryp
     callback(callback.QUEST_HOVER_OFF);
   }, items3);
   callback3 = memo.useCallback(() => {
-    shouldShowQuestHomeHeroContent(695).track(callback.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+    shouldShowQuestHomeHeroContent(1242).track(callback.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
   }, []);
   const items4 = [memo, questHomeHero];
   callback4 = memo.useCallback(() => {
-    let obj = shouldShowQuestHomeHeroContent(695);
+    let obj = shouldShowQuestHomeHeroContent(1242);
     obj = { is_targeted: false };
     const merged = Object.assign(memo);
     if (null != questHomeHero) {

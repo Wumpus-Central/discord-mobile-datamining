@@ -89,19 +89,19 @@ function _updateDiscoverability() {
             obj3[0] = typeof name === "string";
             callback2 = phone;
             if (phone == null) {
-              obj = phone(1398);
+              obj = phone(1384);
               callback2 = obj.hasFlag(dependencyMap, constants2.FIND_BY_PHONE);
             }
             obj3[1] = callback2;
             dependencyMap = callback2;
             if (callback2 == null) {
-              obj1 = phone(1398);
+              obj1 = phone(1384);
               dependencyMap = obj1.hasFlag(dependencyMap, constants2.FIND_BY_EMAIL);
             }
             obj3[2] = dependencyMap;
-            obj2 = phone(12454);
+            obj2 = phone(12680);
             obj3[3] = obj2.isContactSyncEnabled(localAccount.getLocalAccount(constants3.CONTACTS));
-            callback2(695).track(constants.USER_DISCOVERY_UPDATED, obj3);
+            callback2(1242).track(constants.USER_DISCOVERY_UPDATED, obj3);
             constants2 = 3;
             return { value: "HermesInternal", done: null };
           }

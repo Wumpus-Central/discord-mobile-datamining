@@ -4,7 +4,7 @@ import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import loggerDefault from "Emitter.tsx";
 import addAll from "LastFewActions.tsx";
 import logger2 from "LoggingUtils.tsx";
-import DepGraph from "../../../../_runtime/00653_DepGraph.js";
+import DepGraph from "../../../../_runtime/00572_DepGraph.js";
 import set from "../../../../_runtime/00002_set.js";
 import { mark } from "../../shared/utils/profiling.tsx";
 
@@ -301,7 +301,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
         throw Error("Dispatch loop detected, aborting");
       }
       self._processingWaitQueue = false;
-      tmp4(590).isDispatching = false;
+      tmp4(508).isDispatching = false;
     } catch (tmp25) {
       tmp2._processingWaitQueue = false;
       loggerDefault.isDispatching = false;
@@ -350,7 +350,7 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   }
   try {
     const _HermesInternal3 = HermesInternal;
-    tmp8(652).measure("DISPATCH[" + type.type + "]", type.type);
+    tmp8(571).measure("DISPATCH[" + type.type + "]", type.type);
   } catch (err) {}
 };
 prototype2["_dispatch"] = function _dispatch(closure_0, arg1) {

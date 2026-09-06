@@ -73,10 +73,10 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         if (mapped2.length > 0) {
           let joined = mapped2.join(", ");
         } else {
-          const intl2 = tmp25(1233).intl;
+          const intl2 = tmp25(1114).intl;
           const obj = { name: null };
           obj[0] = nameFromUserDefault.getName(closure_9.getCurrentUser());
-          joined = intl2.formatToPlainString(tmp25(1233).t["9Uk8PF"], obj);
+          joined = intl2.formatToPlainString(tmp25(1114).t["9Uk8PF"], obj);
           const obj2 = nameFromUserDefault;
         }
       }
@@ -183,10 +183,10 @@ export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroup
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     const obj = { name: null };
     obj[0] = nameFromUserDefault.getName(getUser.getCurrentUser());
-    joined = intl.formatToPlainString(tmp(1233).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1114).t["9Uk8PF"], obj);
     const obj2 = nameFromUserDefault;
   }
   return joined;
@@ -207,10 +207,10 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     const obj = { name: null };
     obj[0] = nameFromUserDefault.getName(getUser.getCurrentUser());
-    joined = intl.formatToPlainString(tmp(1233).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1114).t["9Uk8PF"], obj);
     const obj2 = nameFromUserDefault;
   }
   return joined;

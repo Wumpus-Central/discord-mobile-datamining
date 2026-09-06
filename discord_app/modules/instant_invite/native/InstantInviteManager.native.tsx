@@ -12,10 +12,10 @@ let prototype = function InstantInviteManager() {
     },
   };
   applyArgumentsResult.shareInviteFailed = function shareInviteFailed() {
-    let obj = callback(4194);
+    let obj = callback(4259);
     obj = { key: "GROUP_DM_ADD_ERROR", content: null };
-    const intl = applyArgumentsResult(1233).intl;
-    obj[1] = intl.string(applyArgumentsResult(1233).t["N/9OFy"]);
+    const intl = applyArgumentsResult(1114).intl;
+    obj[1] = intl.string(applyArgumentsResult(1114).t["N/9OFy"]);
     obj.open(obj);
   };
   return applyArgumentsResult;

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/CreateBugReportSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import setDeveloperOptionSettings2 from "../../../../actions/DeveloperOptionsActionCreators.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import setDeveloperOptionSettings2 from "../../../../actions/DeveloperOptionsActionCreators.tsx";
 import showNotificationDefault from "../../../bug_reporter/native/BugReportManager.tsx";
 import closure_3 from "../../../../stores/DeveloperOptionsStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";

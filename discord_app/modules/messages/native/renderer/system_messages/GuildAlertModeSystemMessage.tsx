@@ -37,22 +37,22 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   if ("" !== message.content) {
     const _Date = Date;
     const date = new Date(message.content);
-    str = date.toLocaleString(tmp5(1233).intl.currentLocale, { hour: "numeric", minute: "2-digit" });
+    str = date.toLocaleString(tmp5(1114).intl.currentLocale, { hour: "numeric", minute: "2-digit" });
   }
   obj[2] = str;
   const tmp3 = resultDefault(theme);
   obj = {};
-  const merged = Object.assign(tmp(7885)(roleStyle));
-  const intl = tmp5(1233).intl;
+  const merged = Object.assign(tmp(7964)(roleStyle));
+  const intl = tmp5(1114).intl;
   obj.content = intl.formatToParts(getSystemLocale.t.ig55n6, obj);
-  const intl2 = tmp5(1233).intl;
+  const intl2 = tmp5(1114).intl;
   obj.username = intl2.string(getSystemLocale.t.hG1StD);
   if (automodUsernameColor == null) {
     automodUsernameColor = null;
   }
   obj.usernameColor = automodUsernameColor;
-  let tmp5Result = tmp5(1433);
-  tmp5Result = tmp5(1430);
+  let tmp5Result = tmp5(1399);
+  tmp5Result = tmp5(1396);
   const tmp12 = getTagPropertiesDefault({ message, channel, isSystemDM: true, colors: resultDefault(theme) });
   obj.avatarURL = tmp5Result.ensureAvatarSource(tmp5Result.makeSource(ensureAvatarSource.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp12);
@@ -71,7 +71,7 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
       roleStyle: roleStyle.roleStyle,
     }),
   };
-  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: "button" };
+  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: "header" };
   obj[3] = resultDefault(theme);
   const tmp2 = resultDefault(theme);
   obj1 = {};
@@ -84,8 +84,8 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
     automodUsernameColor = null;
   }
   obj1.usernameColor = automodUsernameColor;
-  let tmp4Result = tmp4(1433);
-  tmp4Result = tmp4(1430);
+  let tmp4Result = tmp4(1399);
+  tmp4Result = tmp4(1396);
   const tmp6 = getTagPropertiesDefault(obj);
   obj1.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result.makeSource(ensureAvatarSource.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp6);

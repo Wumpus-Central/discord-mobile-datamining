@@ -1,6 +1,6 @@
 // discord_app/modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import SafetyHubView from "SafetyHubConstants.tsx";
@@ -14,7 +14,7 @@ let obj = {
     obj = dispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { classificationId, onClose };
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11686, dependencyMap.paths), closure_4, obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11884, dependencyMap.paths), closure_4, obj);
   },
   openV2(arg0, onClose) {
     const _require = arg0;
@@ -22,11 +22,11 @@ let obj = {
     obj = dispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     if (obj2.isCurrentUserSuspended()) {
-      if (tmp4Result.isExpressiveModalV2Enabled(tmp4(8703).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS)) {
+      if (tmp4Result.isExpressiveModalV2Enabled(tmp4(8413).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS)) {
         const _Math = Math;
         const _Date = Date;
         dependencyMap = Math.floor(Date.now() / 1000);
-        let tmpResult = tmp(4724);
+        let tmpResult = tmp(4763);
         obj = { onClose: null };
         obj[0] = onClose;
         tmpResult.pushLazy(
@@ -65,7 +65,7 @@ let obj = {
         );
       }
     }
-    tmpResult = tmp(4724);
+    tmpResult = tmp(4763);
     obj = { onClose };
     tmpResult.pushLazy(
       callback(function* () {

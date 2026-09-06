@@ -7,7 +7,7 @@ import Button from "../../../../design/components/Button/native/Button.native.ts
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import saveProfileAndAccountRequestAll from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import handleOpenEmailVerificationDefault from "UserSettingsAccountUnverifiedHeader.tsx";
-import registerAssetDefault from "../../../../../_runtime/14622_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14778_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_7 from "../../../auth/LoginRequiredActionStore.tsx";
 import closure_8 from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -21,7 +21,7 @@ require = arg1;
 ({ Image: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, LoginRequiredActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = { newPassword: "call", password: 17078337 };
+let closure_14 = { newPassword: "call", password: 17080385 };
 createCacheKey = {
   onePass: { width: 20, height: 20 },
   unverifiedWrapper: null,
@@ -233,7 +233,7 @@ prototype["render"] = function render() {
   obj8[8] = handleSubmit;
   items3[1] = closure_12(TextInput.TextInput, obj8);
   const obj9 = { text: null, onPress: null, loading: null, disabled: null };
-  const intl5 = tmp16(1233).intl;
+  const intl5 = tmp16(1114).intl;
   obj9[0] = intl5.string(getSystemLocale.t["FRep5/"]);
   obj9[1] = self.handleSubmit;
   obj9[2] = submitting;
@@ -259,7 +259,7 @@ let result = require("set").fileFinishedImporting(
 );
 
 export default function EditPasswordWrapper() {
-  let obj = flag(7169);
+  let obj = flag(6994);
   const params = obj.useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {
@@ -268,7 +268,7 @@ export default function EditPasswordWrapper() {
   if (flag == null) {
     flag = false;
   }
-  let tmpResult = tmp(586);
+  let tmpResult = tmp(504);
   let items = [closure_9, closure_8, closure_7];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
     const currentUser = closure_1_9.getCurrentUser();
@@ -318,7 +318,7 @@ export default function EditPasswordWrapper() {
     obj[8] = null != obj.getBannerText(currentUser);
     return obj;
   });
-  tmpResult = tmp(1498);
+  tmpResult = tmp(1483);
   obj = { navigation: tmpResult.useNavigation() };
   const merged = Object.assign(stateFromStoresObject);
   return callback(EditPassword, obj);

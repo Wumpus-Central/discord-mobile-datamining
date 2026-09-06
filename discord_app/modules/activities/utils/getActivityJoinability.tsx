@@ -2,13 +2,13 @@
 import set from "../../../../_runtime/00002_set.js";
 import set2 from "../../../utils/PlatformUtils.tsx";
 import hasFlagDefault from "hasFlag.tsx";
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity.tsx";
-import getIsInParty from "getIsInParty.tsx";
+import useIsActivitiesEnabledForCurrentPlatform from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
 import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability.tsx";
 import getEmbeddedActivityJoinabilityDefault from "getEmbeddedActivityJoinability.tsx";
-import useIsActivitiesEnabledForCurrentPlatform from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform.tsx";
 import getPartySize from "getPartySize.tsx";
+import getIsInParty from "getIsInParty.tsx";
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity.tsx";
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform.tsx";
 import ME from "../../../Constants.tsx";
 
 ({ ActivityFlags: c3, ChannelTypes: c4, GuildFeatures: c5 } = ME);
@@ -101,7 +101,7 @@ export default function getActivityJoinability(arg0) {
               return obj.CAN_JOIN;
             }
           }
-          if (tmp30(6167)(activity, tmp31.PARTY_PRIVACY_VOICE_CHANNEL)) {
+          if (tmp30(7313)(activity, tmp31.PARTY_PRIVACY_VOICE_CHANNEL)) {
             const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
             if (null != channel) {
               if (VoiceStateStore.isInChannel(channel.id, user.id)) {
@@ -135,7 +135,7 @@ export default function getActivityJoinability(arg0) {
           tmp30 = importDefault;
           tmp31 = constants;
         }
-        tmp27Result = tmp27(9466);
+        tmp27Result = tmp27(11757);
       }
       return obj.CANNOT_JOIN;
     }

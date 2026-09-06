@@ -69,9 +69,9 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
                 tmp15 = dependencyMap;
                 if (dependencyMap > 0) {
                   if (!closure_1_5.hasFetched) {
-                    obj1 = arr(7174);
+                    obj1 = arr(7419);
                     const items = [obj1.init()];
-                    let obj2 = PERK(4373);
+                    let obj2 = PERK(4458);
                     items[1] = obj2.fetchGuildBoostSlots();
                     dependencyMap = 1;
                     c3 = 1;
@@ -98,10 +98,10 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
           if (arr.type === closure_1_7.PERK) {
             PERK = closure_1_6.PERK;
           }
-          let obj4 = PERK(4369);
+          let obj4 = PERK(4454);
           arr = obj4.getAvailableGuildBoostSlots(closure_1_5.boostSlots);
           if (arr.length >= dependencyMap) {
-            tmp15 = PERK(5386);
+            tmp15 = PERK(5434);
             obj2 = { guildBoostSlots: null, guildId: null, intent: null };
             obj2[0] = arr.slice(0, dependencyMap);
             obj2[1] = PERK;
@@ -128,8 +128,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
                 const tmpResult = PERK(table[10]);
               }
             };
-            const result = PERK(7156).launchGuildBoostFlowOrAlert(obj3);
-            const obj6 = PERK(7156);
+            const result = PERK(7403).launchGuildBoostFlowOrAlert(obj3);
+            const obj6 = PERK(7403);
           }
         } catch (tmp50) {
           c3 = tmp;

@@ -8,10 +8,10 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   let id;
   id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(4166).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(1935).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(4166).RestrictedGuildIds;
+  const RestrictedGuildIds = id(1935).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];
@@ -26,10 +26,10 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
     MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
   }, items);
   const obj = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
-  const intl = id(1233).intl;
-  obj[0] = intl.string(id(1233).t["7UgSGP"]);
-  const intl2 = id(1233).intl;
-  obj[1] = intl2.string(id(1233).t.INRaYb);
+  const intl = id(1114).intl;
+  obj[0] = intl.string(id(1114).t["7UgSGP"]);
+  const intl2 = id(1114).intl;
+  obj[1] = intl2.string(id(1114).t.INRaYb);
   let tmp5 = !hasItem1;
   if (!hasItem1) {
     tmp5 = !hasItem;
@@ -37,7 +37,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj[2] = tmp5;
   obj[3] = callback;
   obj[4] = hasItem1;
-  return jsx(id(6000).ActionSheetSwitchRow, {
+  return jsx(id(7200).ActionSheetSwitchRow, {
     label: null,
     subLabel: null,
     value: null,

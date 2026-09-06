@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,
     leading: tmp7(FormSwitch.FormSwitch, obj),
-    subLabel: tmp7(first(15766), obj1),
+    subLabel: tmp7(first(15928), obj1),
     disabled: !tmp3,
   };
   obj = {

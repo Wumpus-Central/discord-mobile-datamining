@@ -1,7 +1,7 @@
 // discord_app/modules/native_permissions/NativePermissionManager.tsx
 import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 import set2 from "../../utils/PlatformUtils.tsx";
 import initializeDefault from "../../lib/LifecycleManager.tsx";
 import NativePermissionStatus from "NativePermissionConstants.tsx";
@@ -15,11 +15,11 @@ const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
   let isDesktopResult = set2.isDesktop();
   if (isDesktopResult) {
-    isDesktopResult = tmp(1234).isMac();
-    const tmpResult = tmp(1234);
+    isDesktopResult = tmp(1115).isMac();
+    const tmpResult = tmp(1115);
   }
   if (isDesktopResult) {
-    const ProcessArgs = tmp(5094).ProcessArgs;
+    const ProcessArgs = tmp(5141).ProcessArgs;
     isDesktopResult = !ProcessArgs.isDiscordTestSet();
   }
   return isDesktopResult;

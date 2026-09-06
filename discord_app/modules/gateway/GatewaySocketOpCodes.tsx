@@ -2,7 +2,7 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import Opcode from "GatewaySocketOpcode.tsx";
 import closure_3 from "../../stores/RTCRegionStore.tsx";
-import { EventEmitter } from "../../../_runtime/00649_EventEmitter.js";
+import { EventEmitter } from "../../../_runtime/00568_EventEmitter.js";
 
 require = arg1;
 class GatewaySocketOpCodes extends EventEmitter {}

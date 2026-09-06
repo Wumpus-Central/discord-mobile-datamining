@@ -1,7 +1,7 @@
 // discord_app/design/components/Tooltip/native/AnimatedTooltip.native.tsx
-import _modDef4217 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import Tooltip from "Tooltip.native.tsx";
+import _modDef4296 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import AnimatedRenderItemDefault from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
+import Tooltip from "Tooltip.native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -18,7 +18,7 @@ function renderTooltipItem(arg0, arg1) {
     tmpResult = tmp(Tooltip.Tooltip, obj);
   }
   obj[2] = tmpResult;
-  return jsx(_modDef4217.View, { style: items, pointerEvents: "box-none", children: null });
+  return jsx(_modDef4296.View, { style: items, pointerEvents: "box-none", children: null });
 }
 let result = require("set").fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");
 
@@ -26,7 +26,7 @@ export const AnimatedTooltip = function AnimatedTooltip(visible) {
   visible = visible.visible;
   const merged = Object.assign(visible, Object.create(null));
   importDefault = undefined;
-  let obj = visible(8996);
+  let obj = visible(11132);
   const result = obj.tooltipEnterExitAnimation(merged.position);
   const tmp3 = callback(React.useState(false), 2);
   importDefault = tmp3[1];
@@ -35,7 +35,7 @@ export const AnimatedTooltip = function AnimatedTooltip(visible) {
     callback(visible);
   }, items);
   obj = {
-    useReducedMotion: React.useContext(visible(1355).AccessibilityPreferencesContext).reducedMotion.enabled,
+    useReducedMotion: React.useContext(visible(4279).AccessibilityPreferencesContext).reducedMotion.enabled,
     item: null,
     entering: null,
     exiting: null,
@@ -50,7 +50,7 @@ export const AnimatedTooltip = function AnimatedTooltip(visible) {
   obj[3] = result;
   obj[4] = renderTooltipItem;
   return jsx(AnimatedRenderItemDefault, {
-    useReducedMotion: React.useContext(visible(1355).AccessibilityPreferencesContext).reducedMotion.enabled,
+    useReducedMotion: React.useContext(visible(4279).AccessibilityPreferencesContext).reducedMotion.enabled,
     item: null,
     entering: null,
     exiting: null,

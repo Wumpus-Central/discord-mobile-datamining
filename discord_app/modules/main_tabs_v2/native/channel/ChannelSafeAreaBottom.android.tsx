@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import _modDef12417 from "ChannelSafeAreaBottomNoop.tsx";
-import _modDef12418 from "ChannelSafeAreaBottomAnimated.android.tsx";
+import _modDef12643 from "ChannelSafeAreaBottomNoop.tsx";
+import _modDef12644 from "ChannelSafeAreaBottomAnimated.android.tsx";
 import apexExperiment from "../../../keyboard/native/AnimatedKeyboardExperiment.tsx";
 
 if (apexExperiment.isAnimatedAndroidKeyboard()) {
-  let importDefaultResult = _modDef12417;
+  let importDefaultResult = _modDef12643;
 } else {
-  importDefaultResult = _modDef12418;
+  importDefaultResult = _modDef12644;
 }
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
 

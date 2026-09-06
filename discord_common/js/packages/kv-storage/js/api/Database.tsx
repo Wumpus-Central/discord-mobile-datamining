@@ -35,7 +35,7 @@ Database["open"] = function open(arg0, arg1) {
   })();
 };
 Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
-  const Host = obj(1964).Host;
+  const Host = obj(1995).Host;
   const openSyncUnsafeResult = Host.openSyncUnsafe(arg0, arg1);
   if (typeof Database !== "function") {
     HermesBuiltin.throwTypeError();
@@ -43,9 +43,9 @@ Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
   obj = Object.create(Database.prototype);
   obj.raw = openSyncUnsafeResult;
   obj.name = openSyncUnsafeResult.name;
-  obj.lastState = obj(1962).DatabaseState.Open;
+  obj.lastState = obj(1993).DatabaseState.Open;
   obj.handle = openSyncUnsafeResult.handle;
-  const Runtime = tmp2(1965).Runtime;
+  const Runtime = tmp2(1996).Runtime;
   obj.databaseStateCallback = Runtime.addDatabaseStateCallback((arg0, lastState) => {
     if (obj.handle === arg0) {
       tmp.lastState = lastState;

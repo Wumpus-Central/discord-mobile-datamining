@@ -3,7 +3,7 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import SUBTLE_SPRING from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/04987_LinearGradient.js";
 import AnimatedRenderItemDefault from "../../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -18,7 +18,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   theme = theme.theme;
   let analyticsLocations;
   const tmp = callback3();
-  let obj = theme(4217);
+  let obj = theme(4296);
   const fn = function l() {
     let num = 1;
     if (theme.theme === closure_1_9.LIGHT) {
@@ -33,14 +33,14 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
     theme,
     ThemeTypes: closure_9,
     StyleSheet,
-    withSpring: theme(4928).withSpring,
-    springStandard: theme(4932).springStandard,
+    withSpring: theme(4974).withSpring,
+    springStandard: theme(4978).springStandard,
   };
   fn.__closure = obj;
   fn.__workletHash = 16911565077998;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  analyticsLocations = analyticsLocations(5962)(analyticsLocations(5982).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(7162)(analyticsLocations(7182).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   obj = { style: tmp.nitroUpsell, children: null };
   const callback = importAllResult.useCallback(() => {
@@ -62,11 +62,11 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
     }),
   ];
   const obj2 = { text: null, icon: null, variant: "active", onPress: null, size: "md" };
-  const intl = theme(1233).intl;
-  obj2[0] = intl.string(theme(1233).t.pj0XBN);
-  obj2[1] = callback(theme(1296).NitroWheel, { style: tmp.nitroWheelIcon });
+  const intl = theme(1114).intl;
+  obj2[0] = intl.string(theme(1114).t.pj0XBN);
+  obj2[1] = callback(theme(1178).NitroWheel, { style: tmp.nitroWheelIcon });
   obj2[3] = callback;
-  items1[1] = callback(theme(4929).Button, obj2);
+  items1[1] = callback(theme(4975).Button, obj2);
   obj[1] = items1;
   return callback2(View, obj);
 }

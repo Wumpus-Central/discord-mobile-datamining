@@ -1,6 +1,6 @@
 // discord_app/modules/guild_profile/GuildProfileActionCreators.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../guild_member_verification/UserGuildJoinRequestStore.tsx";
 import closure_5 from "../../stores/GuildMemberStore.tsx";

@@ -12,7 +12,7 @@ let closure_3 = ["bannerOriginalMd5"];
 let result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
 
 export default function useUserProfileEditForm() {
-  let obj = pendingChanges(586);
+  let obj = pendingChanges(504);
   const items = [closure_7];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
     pendingChanges: store.getPendingChanges(),
@@ -22,14 +22,14 @@ export default function useUserProfileEditForm() {
   pendingChanges = stateFromStoresObject.pendingChanges;
   ({ tryItOutChanges, errors } = stateFromStoresObject);
   const items1 = [closure_8, closure_7];
-  const stateFromStores = pendingChanges(586).useStateFromStores(items1, () => {
+  const stateFromStores = pendingChanges(504).useStateFromStores(items1, () => {
     let isSubmitting = store.getFormState() === constants.SUBMITTING;
     if (!isSubmitting) {
       isSubmitting = isSubmitting.isSubmitting;
     }
     return isSubmitting;
   });
-  const effect = React.useEffect(() => () => callback2(706).wait(callback(7768).resetAllPending), []);
+  const effect = React.useEffect(() => () => callback2(573).wait(callback(6984).resetAllPending), []);
   const items2 = [stateFromStores, pendingChanges];
   callback = React.useCallback(
     callback(() => {
@@ -594,7 +594,7 @@ export default function useUserProfileEditForm() {
                 if (closure_1_1) {
                   c3 = 3;
                 } else {
-                  let obj2 = closure_1_0(7768);
+                  let obj2 = closure_1_0(6984);
                   obj1 = { avatarDecoration: null };
                   obj1[0] = closure_1_0.pendingAvatarDecoration;
                   dependencyMap = 1;
@@ -614,7 +614,7 @@ export default function useUserProfileEditForm() {
                 ok = ok.ok;
               }
               if (ok) {
-                obj = closure_1_0(7768);
+                obj = closure_1_0(6984);
                 const result = obj.resetPendingAccountChanges();
               }
             }
@@ -630,7 +630,7 @@ export default function useUserProfileEditForm() {
       }),
       items3,
     ),
-    resetPending: pendingChanges(7768).resetAllPending,
+    resetPending: pendingChanges(6984).resetAllPending,
   };
   const merged = Object.assign(pendingChanges);
   const merged1 = Object.assign(tryItOutChanges);

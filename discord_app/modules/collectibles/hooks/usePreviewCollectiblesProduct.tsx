@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx
 import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../user_profile/UserProfileSettingsStore.tsx";
 import {
   isAvatarDecorationRecord,
   isNameplateRecord,
@@ -23,8 +24,16 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const items = [product, arg1, firstProfileEffect, firstAvatarDecoration, firstNameplate, firstProfileFrame, arg2];
   const effect = firstProfileEffect.useEffect(() => {
     let obj = product;
-    let setPendingChangesResult = table;
-    if (product.type === product(table[7]).CollectiblesItemType.BUNDLE) {
+    obj1 = product(11088);
+    product = obj1.currentPreviewGeneration();
+    const pendingChanges = firstAvatarDecoration.getPendingChanges();
+    dependencyMap = {
+      avatarDecoration: pendingChanges.pendingAvatarDecoration,
+      profileEffect: pendingChanges.pendingProfileEffect,
+      nameplate: pendingChanges.pendingNameplate,
+      profileFrame: pendingChanges.pendingProfileFrame,
+    };
+    if (product.type === product(1889).CollectiblesItemType.BUNDLE) {
       obj = {};
       if (null != firstAvatarDecoration) {
         obj.avatarDecoration = firstAvatarDecoration;
@@ -39,53 +48,53 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
         obj.profileFrame = firstProfileFrame;
       }
       if (null != callback) {
-        if (firstAvatarDecoration(tmp11)) {
-          obj.avatarDecoration = tmp11;
+        if (firstNameplate(tmp12)) {
+          obj.avatarDecoration = tmp12;
         } else {
-          if (firstProfileFrame(tmp11)) {
-            obj.profileEffect = tmp11;
-          } else if (!firstNameplate(tmp11)) {
-            if (closure_1_7(tmp11)) {
-              obj.profileFrame = tmp11;
+          if (closure_1_7(tmp12)) {
+            obj.profileEffect = tmp12;
+          } else if (!firstProfileFrame(tmp12)) {
+            if (closure_1_8(tmp12)) {
+              obj.profileFrame = tmp12;
             }
           }
-          obj.nameplate = tmp11;
+          obj.nameplate = tmp12;
         }
       }
-      obj = obj(setPendingChangesResult[8]);
-      setPendingChangesResult = obj.setPendingChanges(obj);
+      obj = obj(8164);
+      obj.setPendingChanges(obj);
     } else {
       const first = callback(product.items, 1)[0];
-      if (firstAvatarDecoration(first)) {
-        let objResult = obj(setPendingChangesResult[8]);
+      if (firstNameplate(first)) {
+        let objResult = obj(8164);
         obj = { avatarDecoration: null };
         obj[0] = first;
         objResult.setPendingChanges(obj);
-      } else if (firstProfileFrame(first)) {
-        objResult = obj(setPendingChangesResult[8]);
+      } else if (closure_1_7(first)) {
+        objResult = obj(8164);
         obj1 = { profileEffect: null };
         obj1[0] = first;
         objResult.setPendingChanges(obj1);
-      } else if (firstNameplate(first)) {
-        const obj2 = { nameplate: null };
+      } else if (firstProfileFrame(first)) {
+        let obj2 = { nameplate: null };
         obj2[0] = first;
-        obj(setPendingChangesResult[8]).setPendingChanges(obj2);
-        const objResult1 = obj(setPendingChangesResult[8]);
-      } else if (closure_1_7(first)) {
+        obj(8164).setPendingChanges(obj2);
+        const objResult1 = obj(8164);
+      } else if (closure_1_8(first)) {
         const obj3 = { profileFrame: null };
         obj3[0] = first;
-        obj(setPendingChangesResult[8]).setPendingChanges(obj3);
-        const objResult2 = obj(setPendingChangesResult[8]);
+        obj(8164).setPendingChanges(obj3);
+        const objResult2 = obj(8164);
       }
       return () => {
-        if (closure_1) {
-          closure_1_0(closure_1_1[8]).setPendingChanges({
-            avatarDecoration: "Array",
-            profileEffect: "flexDirection",
-            nameplate: "y",
-            profileFrame: "HermesInternal",
-          });
-          const obj = closure_1_0(closure_1_1[8]);
+        let tmp = dependencyMap;
+        if (dependencyMap) {
+          tmp = callback === callback(11088).currentPreviewGeneration();
+          const obj = callback(11088);
+        }
+        if (tmp) {
+          callback(8164).setPendingChanges(dependencyMap);
+          const obj2 = callback(8164);
         }
       };
     }

@@ -1,10 +1,10 @@
 // discord_app/utils/AnalyticsUtils.tsx
 import reportAll from "../modules/debug/LogAggregator.tsx";
-import v1 from "../../_runtime/00511_v1.js";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef1205 from "SentryUtils.native.tsx";
-import getHermesInstrumentedStatsSummaryDefault from "ProcessUtils.native.tsx";
+import _modDef1232 from "SentryUtils.native.tsx";
+import v1 from "../../_runtime/01256_v1.js";
 import IGNORE_ANALYTICS_BREADCRUMB_EVENTS2 from "../modules/errors/CommonSentryInitUtils.tsx";
+import getHermesInstrumentedStatsSummaryDefault from "ProcessUtils.native.tsx";
 import MEAll from "AnalyticsSchema.tsx";
 import closure_6 from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import withEqualityFn from "../modules/app_analytics/ImpressionStore.tsx";
@@ -32,7 +32,7 @@ function expandEventProperties(arg0) {
       const obj7 = getHermesInstrumentedStatsSummaryDefault;
       tmp.cpu_core_count = getHermesInstrumentedStatsSummaryDefault.getCPUCoreCount();
       tmp.accessibility_features = getAccessibilityFeatures();
-      tmp.rendered_locale = obj2(1233).intl.currentLocale;
+      tmp.rendered_locale = obj2(1114).intl.currentLocale;
       const _Math = Math;
       const _performance = performance;
       tmp.uptime_app = Math.floor((performance.now() - closure_18) / c15);
@@ -127,7 +127,7 @@ if (isBlockedDomain.isLibdiscoreInitialized()) {
 function addBreadcrumb(arg0) {
   const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = IGNORE_ANALYTICS_BREADCRUMB_EVENTS2.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
-    let obj = _modDef1205;
+    let obj = _modDef1232;
     obj = { category: "analytics", message: null };
     obj[1] = arg0;
     obj.addBreadcrumb(obj);
@@ -205,8 +205,8 @@ obj = {
   [AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED]: obj24,
   [AnalyticEvents.ACTIVITY_HANDSHAKE]: obj25,
   [AnalyticEvents.CHANNEL_BANNER_VIEWED]: obj26,
-  [arg1(500).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj27,
-  [arg1(500).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj28,
+  [arg1(1250).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj27,
+  [arg1(1250).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj28,
   [AnalyticEvents.PREMIUM_UPSELL_VIEWED]: obj29,
   [AnalyticEvents.FORUM_CHANNEL_SEARCHED]: obj30,
   [AnalyticEvents.FORUM_CHANNEL_SCROLLED]: obj31,

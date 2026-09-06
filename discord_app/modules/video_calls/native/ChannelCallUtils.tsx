@@ -1,11 +1,11 @@
 // discord_app/modules/video_calls/native/ChannelCallUtils.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import _modDef4859 from "../../../actions/native/AlertActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/08773_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10110_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/17049_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/17050_registerAsset.js";
+import _modDef4905 from "../../../actions/native/AlertActionCreators.tsx";
+import registerAssetDefault from "../../../../_runtime/08627_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10001_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/17215_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/17216_registerAsset.js";
 import closure_3 from "../../../stores/StreamRTCConnectionStore.tsx";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
@@ -26,10 +26,10 @@ export const voiceSettings = function voiceSettings() {
   obj[0] = intl.string(getSystemLocale.t.NiTd0e);
   obj[1] = registerAssetDefault3;
   obj[2] = function onPress() {
-    let obj = callback(6255);
+    let obj = callback(7382);
     obj = { screen: constants.VOICE };
     obj.openUserSettings(obj);
-    callback2(4445).hideActionSheet();
+    callback2(4527).hideActionSheet();
   };
   return obj;
 };
@@ -48,7 +48,7 @@ export const videoParticipantsHidden = function videoParticipantsHidden(arg0, ar
 export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  let obj = _modDef4859;
+  let obj = _modDef4905;
   obj = {
     importer() {
       return callback(closure_1_2[11])(closure_1_2[10], closure_1_2.paths).then((arg0) => {
@@ -111,19 +111,19 @@ export const invite = function invite(isPrivate) {
   dependencyMap = arg2;
   if (null != arg1) {
     function onPress() {
-      let obj = isPrivate(9935);
+      let obj = isPrivate(9820);
       obj = { source: closure_1_6.STREAM, stream: closure_1 };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     }
   } else {
     onPress = function onPress() {
-      let obj = isPrivate(9935);
+      let obj = isPrivate(9820);
       obj = { source: closure_1_6.VOICE_CHANNEL };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     };
     if (null != arg2) {
       onPress = function onPress() {
-        let obj = isPrivate(9935);
+        let obj = isPrivate(9820);
         obj = { source: closure_1_6.ACTIVITY_INVITE, targetApplicationId: dependencyMap };
         return obj.showInstantInviteActionSheet(isPrivate, obj);
       };
@@ -131,7 +131,7 @@ export const invite = function invite(isPrivate) {
   }
   if (isPrivate.isPrivate()) {
     onPress = function onPress() {
-      return isPrivate(4332).navigateToNewGroupDM(isPrivate.id, closure_1_5.CHANNEL_CALL);
+      return callback(11590)(isPrivate.id, closure_1_5.CHANNEL_CALL);
     };
   }
   let obj = { label: null, icon: null, onPress: null };

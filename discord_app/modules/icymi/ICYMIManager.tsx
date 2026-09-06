@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/ICYMIManager.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
 import initializeDefault from "../../lib/LifecycleManager.tsx";
-import _modDef8641 from "ICYMIActionCreators.tsx";
+import _modDef8351 from "ICYMIActionCreators.tsx";
 import apexExperiment from "ICYMIExperiment.tsx";
 
 require = arg1;
@@ -21,7 +21,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   if (obj.getICYMIEnabled("ICYMIManager")) {
     obj = { isInitialLoad: null };
     obj[0] = true;
-    const dehydrated = _modDef8641.fetchDehydrated(obj);
+    const dehydrated = _modDef8351.fetchDehydrated(obj);
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
@@ -55,12 +55,12 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
           }, 15 * callback(table[1]).Millis.MINUTE);
         }, 15 * callback(table[1]).Millis.MINUTE);
       }, 15 * callback(table[1]).Millis.MINUTE);
-    }, 15 * tmp2(684).Millis.MINUTE);
-    let tmp2Result = tmp2(8641);
+    }, 15 * tmp2(1090).Millis.MINUTE);
+    let tmp2Result = tmp2(8351);
     const guildChannelScores = tmp2Result.getGuildChannelScores();
-    tmp2Result = tmp2(8641);
+    tmp2Result = tmp2(8351);
     const recommendedGuilds = tmp2Result.getRecommendedGuilds();
-    const obj2 = _modDef8641;
+    const obj2 = _modDef8351;
   }
 };
 const iCYMIManager = new ICYMIManager();

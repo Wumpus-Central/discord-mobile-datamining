@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting(
 );
 
 export const useAllowFriendsFromMutualGuildsOnly = function useAllowFriendsFromMutualGuildsOnly() {
-  const FriendSourceFlagsSetting = setting(4166).FriendSourceFlagsSetting;
+  const FriendSourceFlagsSetting = setting(1935).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
   const memo = React.useMemo(() => setting(closure_1_1[2]).computeFlags(setting), items);

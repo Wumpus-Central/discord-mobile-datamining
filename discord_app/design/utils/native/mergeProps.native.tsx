@@ -24,7 +24,7 @@ function chainCallbacks(arg0, arg1) {
 const result = set.fileFinishedImporting("design/utils/native/mergeProps.native.tsx");
 
 export { chainCallbacks };
-export const mergeRefs = function mergeRefs(ref, ref2) {
+export const mergeRefs = function mergeRefs(ref, closure_1) {
   const items = [...arguments];
   return 1 === items.length
     ? items[0]

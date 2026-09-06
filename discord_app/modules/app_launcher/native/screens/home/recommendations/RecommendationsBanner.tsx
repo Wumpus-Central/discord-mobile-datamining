@@ -22,8 +22,8 @@ let closure_9 = createCacheKey.createStyles({
 let closure_10 = importAllResult.memo((applicationId) => {
   let heroMediaDimensions;
   importDefault = undefined;
-  let obj = heroMediaDimensions(9067);
-  obj1 = heroMediaDimensions(11885);
+  let obj = heroMediaDimensions(11215);
+  obj1 = heroMediaDimensions(12084);
   heroMediaDimensions = obj1.useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   obj = { applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] };
   const tmp4 = useEmbeddedActivityBackgroundDefault(obj);

@@ -2,8 +2,8 @@
 import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import isUndefinedOrNullDefault from "../../_runtime/00656_isUndefinedOrNull.js";
 import dispatcherDefault from "../Dispatcher.tsx";
+import isUndefinedOrNullDefault from "../../_runtime/01332_isUndefinedOrNull.js";
 import hasRichActivityDefault from "../modules/activities/utils/hasRichActivity.tsx";
 import closure_2 from "AuthenticationStore.tsx";
 import closure_3 from "UserStore.tsx";
@@ -45,7 +45,7 @@ function sortActivity(type, type2) {
       num3 = 1;
     }
     let num4 = 0;
-    if (tmp3(4570)(type)) {
+    if (tmp3(4601)(type)) {
       num4 = 1;
     }
     diff = num3 - num4;

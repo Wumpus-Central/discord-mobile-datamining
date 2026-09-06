@@ -1,13 +1,14 @@
 // discord_app/records/ChannelRecord.tsx
 import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../_runtime/00012_apply.js";
-import Permissions from "../modules/stage_channels/StageChannelPermissions.tsx";
-import set28 from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
-import set29 from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
-import set30 from "../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
+import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
 import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import privDefault from "../../_runtime/01437_priv.js";
+import Permissions from "../modules/stage_channels/StageChannelPermissions.tsx";
+import set31 from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import set32 from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
+import set33 from "../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
 import exact from "../../discord_common/js/packages/type-utils/TypeUtils.tsx";
-import privDefault from "../../_runtime/01400_priv.js";
 import closure_4 from "../modules/stage_channels/StageInstanceStore.tsx";
 import ME from "../Constants.tsx";
 import { ChannelFlags } from "../modules/channel/ChannelConstants.tsx";
@@ -20,7 +21,7 @@ function createChannelRecord(type) {
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  let tmp5 = closure_30[GUILD_TEXT];
+  let tmp5 = closure_33[GUILD_TEXT];
   if (tmp5 == null) {
     tmp5 = UnknownChannelRecord;
   }
@@ -326,9 +327,15 @@ const items27 = [, , , ,];
   GUILD_APP: arr28[4],
 } = ChannelTypes);
 const set26 = new Set(items26);
+const items28 = [ChannelTypes.GUILD_APP];
+const set28 = new Set(items28);
+const items29 = [...set28];
+const set29 = new Set(items29);
+const items30 = [...set28, ChannelTypes.GUILD_FORUM, ChannelTypes.GUILD_MEDIA];
+const set30 = new Set(items30);
 const set27 = new Set(items27);
-let closure_23 = importAllResult.combine(Permissions.CONNECT, Permissions.VIEW_CHANNEL);
-let closure_24 = BasicPermissions.CONNECT | BasicPermissions.VIEW_CHANNEL;
+let closure_26 = importAllResult.combine(Permissions.CONNECT, Permissions.VIEW_CHANNEL);
+let closure_27 = BasicPermissions.CONNECT | BasicPermissions.VIEW_CHANNEL;
 class ChannelRecordProperties {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -351,14 +358,14 @@ class ChannelRecordProperties {
     return obj;
   }
 }
-let closure_25 = Object.freeze({});
+let closure_28 = Object.freeze({});
 class ChannelRecordBase extends ChannelRecordProperties {}
 const prototype = ChannelRecordBase.prototype;
 Object.defineProperty(prototype, "permissionOverwrites", {
   get: function permissionOverwrites() {
     let permissionOverwrites_ = this.permissionOverwrites_;
     if (permissionOverwrites_ == null) {
-      permissionOverwrites_ = closure_25;
+      permissionOverwrites_ = closure_28;
     }
     return permissionOverwrites_;
   },
@@ -725,11 +732,11 @@ prototype["getApplicationId"] = function getApplicationId() {
 };
 prototype["getDefaultSortOrder"] = function getDefaultSortOrder() {
   if (this.isGameInvitesChannel()) {
-    let LATEST_ACTIVITY = set28.ThreadSortOrder.CREATION_DATE;
+    let LATEST_ACTIVITY = set31.ThreadSortOrder.CREATION_DATE;
   } else {
     LATEST_ACTIVITY = this.defaultSortOrder;
     if (LATEST_ACTIVITY == null) {
-      LATEST_ACTIVITY = set28.ThreadSortOrder.LATEST_ACTIVITY;
+      LATEST_ACTIVITY = set31.ThreadSortOrder.LATEST_ACTIVITY;
     }
   }
   return LATEST_ACTIVITY;
@@ -739,20 +746,20 @@ prototype["getDefaultLayout"] = function getDefaultLayout() {
   if (!this.isMediaChannel()) {
     if (!self.isGameInvitesChannel()) {
       if (null != self.defaultForumLayout) {
-        if (self.defaultForumLayout !== set29.ForumLayout.DEFAULT) {
+        if (self.defaultForumLayout !== set32.ForumLayout.DEFAULT) {
           let GRID = self.defaultForumLayout;
         }
       }
-      GRID = set29.ForumLayout.LIST;
+      GRID = set32.ForumLayout.LIST;
     }
     return GRID;
   }
-  GRID = set29.ForumLayout.GRID;
+  GRID = set32.ForumLayout.GRID;
 };
 prototype["getDefaultTagSetting"] = function getDefaultTagSetting() {
   let MATCH_SOME = this.defaultTagSetting;
   if (MATCH_SOME == null) {
-    MATCH_SOME = set30.ThreadSearchTagSetting.MATCH_SOME;
+    MATCH_SOME = set33.ThreadSearchTagSetting.MATCH_SOME;
   }
   return MATCH_SOME;
 };
@@ -773,7 +780,7 @@ Object.defineProperty(prototype, "accessPermissions", {
       hasItem = set7.has(type);
     }
     if (hasItem) {
-      let VIEW_CHANNEL = closure_23;
+      let VIEW_CHANNEL = closure_26;
     } else {
       VIEW_CHANNEL = Permissions.VIEW_CHANNEL;
     }
@@ -901,22 +908,22 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "validate",
-    safetyWarnings: null,
-    blockedUserWarningDismissed: "\u{1F396}\uFE0F",
-    template: 7,
-    themeColor: 636,
-    threadMetadata: "parse",
+    rtcRegion: "D",
+    safetyWarnings: "DD",
+    blockedUserWarningDismissed: null,
+    template: null,
+    themeColor: null,
+    threadMetadata: null,
     topic_: null,
-    totalMessageSent: "\u{1F3F5}\uFE0F",
-    type: 7,
-    userLimit_: 637,
-    version: "run",
+    totalMessageSent: null,
+    type: null,
+    userLimit_: null,
+    version: null,
     videoQualityMode: null,
-    linkedLobby: "\u{1F397}\uFE0F",
-    hdStreamingUntil: 7,
-    hdStreamingBuyerId: 638,
-    voiceHangout: 31,
+    linkedLobby: null,
+    hdStreamingUntil: null,
+    hdStreamingBuyerId: null,
+    voiceHangout: null,
   };
   if (null == application_id.available_tags) {
     obj[2] = undefined;
@@ -1011,9 +1018,9 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
     const obj3 = {};
     if (permission_overwrites != null) {
       const item = permission_overwrites.forEach((id) => {
-        obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[3]).deserialize(id.allow), deny: null };
-        const obj2 = closure_1_2(closure_1_3[3]);
-        obj[3] = closure_1_2(closure_1_3[3]).deserialize(id.deny);
+        obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[4]).deserialize(id.allow), deny: null };
+        const obj2 = closure_1_2(closure_1_3[4]);
+        obj[3] = closure_1_2(closure_1_3[4]).deserialize(id.deny);
         obj1[id.id] = obj;
       });
     }
@@ -1074,7 +1081,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
       hd_streaming_buyer_id: obj[54],
       voice_hangout: obj[55],
     } = application_id);
-    return obj3(1399).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj3(1969).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -1189,9 +1196,9 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id) {
   obj = {};
   if (permission_overwrites != null) {
     const item = permission_overwrites.forEach((id) => {
-      obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[3]).deserialize(id.allow), deny: null };
-      const obj2 = closure_1_2(closure_1_3[3]);
-      obj[3] = closure_1_2(closure_1_3[3]).deserialize(id.deny);
+      obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[4]).deserialize(id.allow), deny: null };
+      const obj2 = closure_1_2(closure_1_3[4]);
+      obj[3] = closure_1_2(closure_1_3[4]).deserialize(id.deny);
       obj1[id.id] = obj;
     });
   }
@@ -1220,11 +1227,11 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id) {
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  let tmp7 = closure_30[GUILD_TEXT];
+  let tmp7 = closure_33[GUILD_TEXT];
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj(1399).dangerouslyCast(obj, tmp7);
+  return obj(1969).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1316,9 +1323,9 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id) {
   obj = {};
   if (permission_overwrites != null) {
     const item = permission_overwrites.forEach((id) => {
-      obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[3]).deserialize(id.allow), deny: null };
-      const obj2 = closure_1_2(closure_1_3[3]);
-      obj[3] = closure_1_2(closure_1_3[3]).deserialize(id.deny);
+      obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[4]).deserialize(id.allow), deny: null };
+      const obj2 = closure_1_2(closure_1_3[4]);
+      obj[3] = closure_1_2(closure_1_3[4]).deserialize(id.deny);
       obj1[id.id] = obj;
     });
   }
@@ -1345,11 +1352,11 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id) {
   if (GUILD_TEXT2 == null) {
     GUILD_TEXT2 = ChannelTypes.GUILD_TEXT;
   }
-  let tmp7 = closure_30[GUILD_TEXT2];
+  let tmp7 = closure_33[GUILD_TEXT2];
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj(1399).dangerouslyCast(obj, tmp7);
+  return obj(1969).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1505,9 +1512,9 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags) {
     obj1 = {};
     if (permission_overwrites != null) {
       const item = permission_overwrites.forEach((id) => {
-        obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[3]).deserialize(id.allow), deny: null };
-        const obj2 = closure_1_2(closure_1_3[3]);
-        obj[3] = closure_1_2(closure_1_3[3]).deserialize(id.deny);
+        obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[4]).deserialize(id.allow), deny: null };
+        const obj2 = closure_1_2(closure_1_3[4]);
+        obj[3] = closure_1_2(closure_1_3[4]).deserialize(id.deny);
         obj1[id.id] = obj;
       });
     }
@@ -1525,7 +1532,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags) {
     }
     obj[24] = GUILD_TEXT;
     obj[25] = available_tags.version;
-    return obj1(1399).dangerouslyCast(obj, ForumChannelRecord);
+    return obj1(1969).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {
@@ -1556,7 +1563,7 @@ IdAsNumberCache.prototype["getOrCompute"] = function getOrCompute(id) {
 let obj = Object.create(IdAsNumberCache.prototype);
 obj.cache = new privDefault(100);
 obj = Object.create(IdAsNumberCache.prototype);
-const tmp32 = new privDefault(100);
+const tmp35 = new privDefault(100);
 obj.cache = new privDefault(100);
 let PrivateChannelRecord;
 class PrivateChannelRecord extends ChannelRecordBase {
@@ -1600,8 +1607,8 @@ PrivateChannelRecord["sortRecipients"] = function sortRecipients(rawRecipients, 
   }
   const items1 = [...items];
   return items1.sort((id, id2) => {
-    const orCompute = closure_1_28.getOrCompute(id.id);
-    return (orCompute ^ closure_0) - (closure_1_28.getOrCompute(id2.id) ^ closure_0);
+    const orCompute = closure_1_31.getOrCompute(id.id);
+    return (orCompute ^ closure_0) - (closure_1_31.getOrCompute(id2.id) ^ closure_0);
   });
 };
 PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
@@ -1838,7 +1845,7 @@ prototype3["fromServer"] = function fromServer(applied_tags) {
   ({ user_limit: obj[21], video_quality_mode: obj[22], last_non_message_activity_timestamp: obj[23] } = applied_tags);
   return exact.dangerouslyCast(obj, prototype3);
 };
-let closure_29 = {
+let closure_32 = {
   [ChannelTypes.DM]: PrivateChannelRecord.fromServer,
   [ChannelTypes.GROUP_DM]: PrivateChannelRecord.fromServer,
   [ChannelTypes.GUILD_TEXT]: GuildTextualChannelRecord.fromServer,
@@ -1857,7 +1864,7 @@ let closure_29 = {
   [ChannelTypes.GUILD_SPACE]: GuildTextualChannelRecord.fromServer,
   [ChannelTypes.GUILD_APP]: GuildTextualChannelRecord.fromServer,
 };
-let closure_30 = {
+let closure_33 = {
   [ChannelTypes.DM]: DMChannelRecord,
   [ChannelTypes.GROUP_DM]: GroupDMChannelRecord,
   [ChannelTypes.GUILD_TEXT]: GuildTextChannelRecord,
@@ -1949,13 +1956,25 @@ export const EDITABLE_VOICE_SETTINGS_TYPES = set24;
 export const VOICE_THREAD_PARENT_CHANNEL_TYPES = set25;
 export const CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING = set26;
 export const GUILD_FAVORITES_CHANNEL_TYPES = set27;
+export const CHANNEL_CHAT_IN_SIDEBAR = set28;
+export const isChannelChatInSidebar = function isChannelChatInSidebar(type) {
+  return isDiscordFrontendDevelopment.isInSet(type, set28);
+};
+export const CHANNEL_THREADS_FORCE_OPENED_TO_FULL_VIEW = set29;
+export const isChannelThreadsForcedOpenedInFullView = function isChannelThreadsForcedOpenedInFullView(type) {
+  return isDiscordFrontendDevelopment.isInSet(type, set29);
+};
+export const CHANNEL_MAIN_AREA_NO_FILE_UPLOAD = set30;
+export const isChannelMainAreaUploadAllowed = function isChannelMainAreaUploadAllowed(arg0) {
+  return !set30.has(arg0);
+};
 export const getAccessPermissions = function getAccessPermissions(arg0) {
   let hasItem = "SELECTABLE" !== arg0;
   if (hasItem) {
     hasItem = set7.has(arg0);
   }
   if (hasItem) {
-    let VIEW_CHANNEL = closure_23;
+    let VIEW_CHANNEL = closure_26;
   } else {
     VIEW_CHANNEL = Permissions.VIEW_CHANNEL;
   }
@@ -1967,7 +1986,7 @@ export const getBasicAccessPermissions = function getBasicAccessPermissions(arg0
     hasItem = set7.has(arg0);
   }
   if (hasItem) {
-    let VIEW_CHANNEL = closure_24;
+    let VIEW_CHANNEL = closure_27;
   } else {
     VIEW_CHANNEL = BasicPermissions.VIEW_CHANNEL;
   }
@@ -1997,7 +2016,7 @@ export const createChannelRecordFromServer = function createChannelRecordFromSer
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  let fromServer = closure_29[GUILD_TEXT];
+  let fromServer = closure_32[GUILD_TEXT];
   if (fromServer == null) {
     fromServer = UnknownChannelRecord.fromServer;
   }
@@ -2011,7 +2030,7 @@ export const castChannelRecord = function castChannelRecord(type) {
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  let tmp3 = closure_30[GUILD_TEXT];
+  let tmp3 = closure_33[GUILD_TEXT];
   if (tmp3 == null) {
     tmp3 = UnknownChannelRecord;
   }

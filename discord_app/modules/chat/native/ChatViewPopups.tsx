@@ -28,11 +28,11 @@ class ChatViewPopups {
             closure_1.current = false;
             return false;
           };
-          ref(12435).open(obj);
+          ref(12661).open(obj);
           tmp.current = true;
-          const obj3 = ref(12435);
+          const obj3 = ref(12661);
         } else if (showWelcomeModal) {
-          obj = guildId(12427);
+          obj = guildId(12653);
           obj = { guildId: null, onHide: null };
           obj[0] = guildId;
           obj[1] = function onHide() {

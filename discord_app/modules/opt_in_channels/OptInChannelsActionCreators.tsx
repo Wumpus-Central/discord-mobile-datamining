@@ -1,13 +1,13 @@
 // discord_app/modules/opt_in_channels/OptInChannelsActionCreators.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import updateUserGuildSettings from "../user_settings/UserSettingsProtoActionCreators.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import updateUserGuildSettings from "../user_settings/UserSettingsProtoActionCreators.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import updateImpersonating from "../impersonate/ImpersonateActionCreators.tsx";
 import UserNotificationSettings from "../../utils/NotificationSettingsUtils.tsx";
 import handleConnectionOpenDefault from "../user_settings/UserGuildSettingsManager.tsx";
-import _modDef5496 from "../../actions/NotificationSettingsModalActionCreators.tsx";
+import _modDef7119 from "../../actions/NotificationSettingsModalActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../impersonate/ImpersonateStore.tsx";
 import closure_5 from "../../stores/ChannelStore.tsx";
@@ -174,31 +174,31 @@ export const setOptInChannel = function setOptInChannel(guildId1, id, arg2, loca
       const result3 = updateUserGuildSettings.updateUserGuildSettings(
         guildId1,
         (guildOnboardingProgress) => {
-          let hasFlagResult = callback(1398).hasFlag(
+          let hasFlagResult = callback(1384).hasFlag(
             guildOnboardingProgress.guildOnboardingProgress,
-            callback(1305).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+            callback(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
           );
           if (hasFlagResult) {
-            let tmpResult = tmp(1398);
+            let tmpResult = tmp(1384);
             hasFlagResult = !tmpResult.hasFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
             );
           }
           let flag = !hasFlagResult;
           if (!hasFlagResult) {
-            tmpResult = tmp(1398);
+            tmpResult = tmp(1384);
             guildOnboardingProgress.guildOnboardingProgress = tmpResult.addFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
             );
-            guildOnboardingProgress.guildOnboardingProgress = tmp(1398).setFlag(
+            guildOnboardingProgress.guildOnboardingProgress = tmp(1384).setFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
               false,
             );
             flag = true;
-            const tmpResult1 = tmp(1398);
+            const tmpResult1 = tmp(1384);
           }
           return flag;
         },
@@ -255,7 +255,7 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       let obj4 = hasFlag;
       obj[0] = obj4.setFlag(setFlagResult, constants.OPT_IN_ENABLED, arg2);
       if (!obj.isOptInEnabled(closure_0)) {
-        let tmp6Result = tmp6(1398);
+        let tmp6Result = tmp6(1384);
         const setFlagResult1 = tmp6Result.setFlag(obj.getGuildFlags(closure_0), constants2.OPT_IN_CHANNELS_ON, true);
         obj = {};
         obj1 = { channel_overrides: null, flags: null };
@@ -272,13 +272,13 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       obj3[2] = id;
       obj3[3] = obj;
       dispatcherDefault.dispatch(obj3);
-      tmp6Result = tmp6(5491);
+      tmp6Result = tmp6(7114);
       obj4 = { guildId: null, channelId: null, change: null, previous: null, label: null, location: null };
       obj4[0] = closure_0;
       obj4[1] = id;
       obj4[2] = obj;
       obj4[3] = currentChannelSettings;
-      const NotificationLabel = tmp6(5491).NotificationLabel;
+      const NotificationLabel = tmp6(7114).NotificationLabel;
       obj4[4] = NotificationLabel.optedIn(arg2);
       obj4[5] = location;
       const result3 = tmp6Result.trackChannelNotificationSettingsUpdate(obj4);
@@ -286,35 +286,35 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       const result4 = updateUserGuildSettings.updateUserGuildSettings(
         closure_0,
         (guildOnboardingProgress) => {
-          let hasFlagResult = callback(1398).hasFlag(
+          let hasFlagResult = callback(1384).hasFlag(
             guildOnboardingProgress.guildOnboardingProgress,
-            callback(1305).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+            callback(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
           );
           if (hasFlagResult) {
-            let tmpResult = tmp(1398);
+            let tmpResult = tmp(1384);
             hasFlagResult = !tmpResult.hasFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
             );
           }
           let flag = !hasFlagResult;
           if (!hasFlagResult) {
-            tmpResult = tmp(1398);
+            tmpResult = tmp(1384);
             guildOnboardingProgress.guildOnboardingProgress = tmpResult.addFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
             );
-            guildOnboardingProgress.guildOnboardingProgress = tmp(1398).setFlag(
+            guildOnboardingProgress.guildOnboardingProgress = tmp(1384).setFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
               false,
             );
             flag = true;
-            const tmpResult1 = tmp(1398);
+            const tmpResult1 = tmp(1384);
           }
           return flag;
         },
-        tmp6(1369).UserSettingsDelay.INFREQUENT_USER_ACTION,
+        tmp6(1940).UserSettingsDelay.INFREQUENT_USER_ACTION,
       );
       const tmp6Result1 = updateUserGuildSettings;
       const obj5 = {};
@@ -370,14 +370,14 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, locat
         obj = { flags: null, channel_overrides: null };
         obj[0] = setFlagResult;
         obj[1] = obj;
-        const result2 = obj(5496).updateGuildAndChannelNotificationSettings(
+        const result2 = obj(7119).updateGuildAndChannelNotificationSettings(
           id,
           obj,
           require("../../utils/NotificationSettingsUtils.tsx").NotificationLabels.OptedIn,
         );
-        const obj7 = obj(5496);
+        const obj7 = obj(7119);
         obj = {};
-        const obj9 = obj(695);
+        const obj9 = obj(1242);
         const merged = Object.assign(
           require("../app_analytics/AppAnalyticsUtils.tsx").collectGuildAnalyticsMetadata(id),
         );
@@ -386,14 +386,14 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, locat
         obj9.track(AnalyticEvents.CHANNEL_LIST_UPDATED, obj);
         const obj11 = collectGuildAnalyticsMetadata;
       } else {
-        obj1 = obj(5496);
+        obj1 = obj(7119);
         const result3 = obj1.updateChannelOverrideSettingsBulk(
           id,
           obj,
           require("../../utils/NotificationSettingsUtils.tsx").NotificationLabels.OptedIn,
         );
         obj1 = {};
-        const obj3 = obj(695);
+        const obj3 = obj(1242);
         const merged1 = Object.assign(
           require("../app_analytics/AppAnalyticsUtils.tsx").collectGuildAnalyticsMetadata(id),
         );
@@ -423,14 +423,14 @@ export const bulkOptOutChannels = function bulkOptOutChannels(closure_0, arr, lo
         obj[0] = callback(closure_1_2[7]).setFlag(channelIdFlags, closure_1_8.OPT_IN_ENABLED, false);
         obj[id] = obj;
       });
-      const result1 = obj(5496).updateChannelOverrideSettingsBulk(
+      const result1 = obj(7119).updateChannelOverrideSettingsBulk(
         closure_0,
         obj,
         require("../../utils/NotificationSettingsUtils.tsx").NotificationLabels.OptedOut,
       );
-      const obj2 = obj(5496);
+      const obj2 = obj(7119);
       obj = {};
-      const obj3 = obj(695);
+      const obj3 = obj(1242);
       const merged = Object.assign(
         require("../app_analytics/AppAnalyticsUtils.tsx").collectGuildAnalyticsMetadata(closure_0),
       );
@@ -449,7 +449,7 @@ export const setGuildOptIn = function setGuildOptIn(id, arg1) {
     const obj7 = updateImpersonating;
   } else {
     const guildFlags = store2.getGuildFlags(id);
-    obj = _modDef5496;
+    obj = _modDef7119;
     obj = { flags: null };
     obj[0] = hasFlag.setFlag(guildFlags, constants2.OPT_IN_CHANNELS_ON, arg1);
     const NotificationLabel = UserNotificationSettings.NotificationLabel;
@@ -480,14 +480,14 @@ export const setIsFavorite = function setIsFavorite(guildId1, id, arg2, location
       }
       let setFlagResult = channelIdFlags;
       if (tmp9) {
-        let tmp5Result = tmp5(1398);
+        let tmp5Result = tmp5(1384);
         setFlagResult = tmp5Result.setFlag(channelIdFlags, tmp7.OPT_IN_ENABLED, true);
       }
-      const obj3 = _modDef5496;
+      const obj3 = _modDef7119;
       obj = { flags: null };
-      tmp5Result = tmp5(1398);
+      tmp5Result = tmp5(1384);
       obj[0] = tmp5Result.setFlag(setFlagResult, constants.FAVORITED, arg2);
-      const NotificationLabel = tmp5(5491).NotificationLabel;
+      const NotificationLabel = tmp5(7114).NotificationLabel;
       const result = obj3.updateChannelOverrideSettings(guildId1, id, obj, NotificationLabel.favorited(arg2));
       obj = {};
       const obj6 = expandEventPropertiesDefault;
@@ -505,7 +505,7 @@ export const setIsFavorite = function setIsFavorite(guildId1, id, arg2, location
 };
 export const setMessagesFavorite = function setMessagesFavorite(id, arg1) {
   const channelIdFlags = store2.getChannelIdFlags(null, id);
-  let obj = _modDef5496;
+  let obj = _modDef7119;
   obj = { flags: hasFlag.setFlag(channelIdFlags, constants.FAVORITED, arg1) };
   const NotificationLabel = UserNotificationSettings.NotificationLabel;
   const result = obj.updateChannelOverrideSettings(null, id, obj, NotificationLabel.favorited(arg1));
@@ -514,18 +514,18 @@ export const enableGuildNotice = function enableGuildNotice(closure_0) {
   const result = updateUserGuildSettings.updateUserGuildSettings(
     closure_0,
     (guildOnboardingProgress) => {
-      const hasFlagResult = callback(1398).hasFlag(
+      const hasFlagResult = callback(1384).hasFlag(
         guildOnboardingProgress.guildOnboardingProgress,
-        callback(1305).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+        callback(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
       );
       let flag = !hasFlagResult;
       if (!hasFlagResult) {
-        guildOnboardingProgress.guildOnboardingProgress = tmp(1398).addFlag(
+        guildOnboardingProgress.guildOnboardingProgress = tmp(1384).addFlag(
           guildOnboardingProgress.guildOnboardingProgress,
-          tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+          tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
         );
         flag = true;
-        const tmpResult = tmp(1398);
+        const tmpResult = tmp(1384);
       }
       return flag;
     },
@@ -536,31 +536,31 @@ export const dismissGuildNotice = function dismissGuildNotice(closure_0) {
   const result = updateUserGuildSettings.updateUserGuildSettings(
     closure_0,
     (guildOnboardingProgress) => {
-      let hasFlagResult = callback(1398).hasFlag(
+      let hasFlagResult = callback(1384).hasFlag(
         guildOnboardingProgress.guildOnboardingProgress,
-        callback(1305).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+        callback(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
       );
       if (hasFlagResult) {
-        let tmpResult = tmp(1398);
+        let tmpResult = tmp(1384);
         hasFlagResult = !tmpResult.hasFlag(
           guildOnboardingProgress.guildOnboardingProgress,
-          tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+          tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
         );
       }
       let flag = !hasFlagResult;
       if (!hasFlagResult) {
-        tmpResult = tmp(1398);
+        tmpResult = tmp(1384);
         guildOnboardingProgress.guildOnboardingProgress = tmpResult.addFlag(
           guildOnboardingProgress.guildOnboardingProgress,
-          tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+          tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
         );
-        guildOnboardingProgress.guildOnboardingProgress = tmp(1398).setFlag(
+        guildOnboardingProgress.guildOnboardingProgress = tmp(1384).setFlag(
           guildOnboardingProgress.guildOnboardingProgress,
-          tmp(1305).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+          tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
           false,
         );
         flag = true;
-        const tmpResult1 = tmp(1398);
+        const tmpResult1 = tmp(1384);
       }
       return flag;
     },
@@ -587,14 +587,14 @@ export const clearGuildNotice = function clearGuildNotice(closure_0) {
         obj[0] = callback(closure_1_2[7]).setFlag(channelIdFlags, closure_1_8.OPT_IN_ENABLED, false);
         obj[id] = obj;
       });
-      const result1 = obj(5496).updateChannelOverrideSettingsBulk(
+      const result1 = obj(7119).updateChannelOverrideSettingsBulk(
         closure_0,
         obj,
         require("../../utils/NotificationSettingsUtils.tsx").NotificationLabels.OptedOut,
       );
-      const obj2 = obj(5496);
+      const obj2 = obj(7119);
       obj = {};
-      const obj3 = obj(695);
+      const obj3 = obj(1242);
       const merged = Object.assign(
         require("../app_analytics/AppAnalyticsUtils.tsx").collectGuildAnalyticsMetadata(closure_0),
       );
@@ -607,15 +607,15 @@ export const clearGuildNotice = function clearGuildNotice(closure_0) {
   const result2 = require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(
     closure_0,
     (guildOnboardingProgress) => {
-      guildOnboardingProgress.guildOnboardingProgress = callback(1398).setFlag(
+      guildOnboardingProgress.guildOnboardingProgress = callback(1384).setFlag(
         guildOnboardingProgress.guildOnboardingProgress,
-        callback(1305).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+        callback(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
         false,
       );
-      obj = callback(1398);
-      guildOnboardingProgress.guildOnboardingProgress = callback(1398).setFlag(
+      obj = callback(1384);
+      guildOnboardingProgress.guildOnboardingProgress = callback(1384).setFlag(
         guildOnboardingProgress.guildOnboardingProgress,
-        callback(1305).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+        callback(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
         false,
       );
       return true;

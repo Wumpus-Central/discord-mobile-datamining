@@ -514,18 +514,24 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     () => {
       if (null != closure_3) {
         if (null != application_id) {
-          const obj = {};
+          let obj = {};
           const item = arr.forEach((author) => {
-            author = author.author;
-            let id;
-            if (author != null) {
-              id = author.id;
-            }
-            if (null != id) {
-              const member = closure_2_42.getMember(closure_1_3, author.author.id);
+            obj = stateFromStores(memo1[74]);
+            const messageAuthorMemberUserIds = obj.getMessageAuthorMemberUserIds(author);
+            const iter = messageAuthorMemberUserIds[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              let tmp4 = closure_2_42;
+              let tmp5 = closure_1_3;
+              let tmp3 = nextResult;
+              let member = closure_2_42.getMember(closure_1_3, nextResult);
               if (null != member) {
-                obj[author.author.id] = member;
+                let tmp8 = obj;
+                let tmp9 = nextResult;
+                let tmp10 = member;
+                obj[tmp3] = tmp7;
               }
+              continue;
             }
           });
           return obj;
@@ -541,7 +547,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const stateFromStores25 = result45.useStateFromStores(items58, () =>
     closure_1_47.can(closure_1_62.MODERATE_MEMBERS, stateFromStores1),
   );
-  const result46 = shouldDisableInteractiveComponents(tmp2[74]);
+  const result46 = shouldDisableInteractiveComponents(tmp2[75]);
   id = undefined;
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
@@ -549,7 +555,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result47 = shouldDisableInteractiveComponents(tmp2[57]);
   const items59 = [closure_36];
   const stateFromStores26 = result47.useStateFromStores(items59, () => locale.locale);
-  const result48 = shouldDisableInteractiveComponents(tmp2[75]);
+  const result48 = shouldDisableInteractiveComponents(tmp2[76]);
   const isPaymentsBlocked = result48.useIsPaymentsBlocked();
   const result49 = shouldDisableInteractiveComponents(tmp2[57]);
   const items60 = [closure_34];
@@ -569,7 +575,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result52 = shouldDisableInteractiveComponents(tmp2[57]);
   const items63 = [closure_10];
   const stateFromStores30 = result52.useStateFromStores(items63, () => lazyCacheStatus.getLazyCacheStatus());
-  const result53 = shouldDisableInteractiveComponents(tmp2[76]);
+  const result53 = shouldDisableInteractiveComponents(tmp2[77]);
   const messageJumpAndroidKeyboardHeight = result53.useMessageJumpAndroidKeyboardHeight();
   const tmp66 = callback(
     result37.useStateFromStores(
@@ -585,7 +591,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   );
   const tmp74 = null != stateFromStores && stateFromStores.cached;
   const tmp75 = null != stateFromStores && stateFromStores.ready && !stateFromStores.loadingMore;
-  const result54 = shouldDisableInteractiveComponents(tmp2[78]);
+  const result54 = shouldDisableInteractiveComponents(tmp2[79]);
   channelSummariesExperiment = result54.useChannelSummariesExperiment(channel);
   const result55 = shouldDisableInteractiveComponents(tmp2[57]);
   const items64 = [closure_33];
@@ -616,46 +622,46 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       hasMoreAfter = arr.hasMoreAfter;
     }
     if (!hasMoreAfter) {
-      const obj = application_id(memo1[79]);
+      const obj = application_id(memo1[80]);
       const _Date = Date;
       const result = obj.updateChannelDimensions(stateFromStores.id, Date.now(), 1, 1, 0);
     }
   }, items66);
-  const result56 = shouldDisableInteractiveComponents(tmp2[80]);
+  const result56 = shouldDisableInteractiveComponents(tmp2[81]);
   const shouldTrackAnnouncementMessageViews = result56.useShouldTrackAnnouncementMessageViews({
     guild: stateFromStores1,
     channel,
     messages: stateFromStores,
     isMessagesReady: tmp72,
   });
-  const result57 = shouldDisableInteractiveComponents(tmp2[80]);
+  const result57 = shouldDisableInteractiveComponents(tmp2[81]);
   const shouldTrackRichPresenceInviteEmbedViews = result57.useShouldTrackRichPresenceInviteEmbedViews({
     messages: stateFromStores,
     isMessagesReady: tmp72,
   });
-  const result58 = shouldDisableInteractiveComponents(tmp2[80]);
+  const result58 = shouldDisableInteractiveComponents(tmp2[81]);
   const shouldTrackOfficialMessageViews = result58.useShouldTrackOfficialMessageViews({
     guild: stateFromStores1,
     messages: stateFromStores,
     isMessagesReady: tmp72,
   });
-  const result59 = shouldDisableInteractiveComponents(tmp2[80]);
+  const result59 = shouldDisableInteractiveComponents(tmp2[81]);
   const shouldTrackVoiceInviteEmbedViews = result59.useShouldTrackVoiceInviteEmbedViews({
     messages: stateFromStores,
     isMessagesReady: tmp72,
   });
-  const result60 = shouldDisableInteractiveComponents(tmp2[81]);
+  const result60 = shouldDisableInteractiveComponents(tmp2[82]);
   const shouldDisplaySpoilerObscurity = result60.useShouldDisplaySpoilerObscurity(channel);
-  const result61 = shouldDisableInteractiveComponents(tmp2[82]);
+  const result61 = shouldDisableInteractiveComponents(tmp2[83]);
   const items67 = [id, guildId];
   const isAgeVerified = result61.useIsAgeVerified();
   const effect2 = obj6.useEffect(() => {
-    application_id(memo1[83]).handleChannelSelect();
+    application_id(memo1[84]).handleChannelSelect();
     return () => {
-      callback(table[83]).handleChannelSelect();
+      callback(table[84]).handleChannelSelect();
     };
   }, items67);
-  const result62 = shouldDisableInteractiveComponents(tmp2[84]);
+  const result62 = shouldDisableInteractiveComponents(tmp2[85]);
   shouldDisableInteractiveComponents = result62.useShouldDisableInteractiveComponents(channel.id);
   items68 = [];
   shouldDisableInteractiveComponents = callback2(channel.id);
@@ -683,8 +689,8 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   shouldDisableInteractiveComponents = result64.useStateFromStores(items71, () =>
     pendingConnection.getPendingConnection(),
   );
-  shouldDisableInteractiveComponents = tmp24(tmp2[85])();
-  shouldDisableInteractiveComponents = tmp24(tmp2[86])(stateFromStores);
+  shouldDisableInteractiveComponents = tmp24(tmp2[86])();
+  shouldDisableInteractiveComponents = tmp24(tmp2[87])(stateFromStores);
   ({ unloadedContentEntryMessageIds, unloadableContentEntryMessageIds } = shouldDisableInteractiveComponents);
   const result65 = shouldDisableInteractiveComponents(tmp2[57]);
   const items72 = [closure_53];
@@ -702,7 +708,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result66 = shouldDisableInteractiveComponents(tmp2[57]);
   const items73 = [closure_17];
   shouldDisableInteractiveComponents = result66.useStateFromStores(items73, () => version.getVersion());
-  const result67 = shouldDisableInteractiveComponents(tmp2[87]);
+  const result67 = shouldDisableInteractiveComponents(tmp2[88]);
   shouldDisableInteractiveComponents = result67.useColorStore((palette) => Object.keys(palette.palette).length);
   const result68 = shouldDisableInteractiveComponents(tmp2[57]);
   const items74 = [closure_13];
@@ -719,7 +725,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
         return null;
       } else {
         const voiceStates = closure_1_54.getVoiceStates(tmp);
-        return stateFromStores(memo1[88]).getVoiceStateChannelSummaryFromVoiceStates(voiceStates);
+        return stateFromStores(memo1[74]).getVoiceStateChannelSummaryFromVoiceStates(voiceStates);
       }
     },
     items76,
@@ -954,7 +960,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   obj[78] = "initializing" !== stateFromStores30;
   obj[79] = messageJumpAndroidKeyboardHeight;
   obj[80] = stateFromStores31;
-  obj[81] = application_id(tmp2[77])();
+  obj[81] = application_id(tmp2[78])();
   obj[82] = shouldTrackAnnouncementMessageViews;
   obj[83] = shouldTrackRichPresenceInviteEmbedViews;
   obj[84] = shouldTrackOfficialMessageViews;

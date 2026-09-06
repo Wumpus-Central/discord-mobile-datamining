@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/GuildMediaStateShadowCompare.tsx
 import addAll from "../../../discord_common/js/packages/flux/LastFewActions.tsx";
-import _modDef1205 from "../../utils/SentryUtils.native.tsx";
+import _modDef1232 from "../../utils/SentryUtils.native.tsx";
 import closure_3 from "GuildMediaStateStore.tsx";
 import set from "../../../_runtime/00002_set.js";
 
@@ -113,9 +113,9 @@ export const compareGuildMediaState = function compareGuildMediaState(closure_0,
       obj[0] = obj1;
       ({ guildId: obj7[0], mismatchedFields: obj7[1], fromHook: obj7[2], fromStore: obj7[3] } = obj);
       obj[1] = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
-      _modDef1205.captureMessage(sum, obj);
+      _modDef1232.captureMessage(sum, obj);
       const obj2 = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
-      const obj4 = _modDef1205;
+      const obj4 = _modDef1232;
     }
     const obj8 = addAll;
   }

@@ -12,10 +12,10 @@ let result = require("set").fileFinishedImporting(
 );
 
 export default function AgeConfirmationNotice() {
-  let obj = sensitiveContentFilterHelpArticle(6155);
+  let obj = sensitiveContentFilterHelpArticle(7301);
   sensitiveContentFilterHelpArticle = obj.useSensitiveContentFilterHelpArticle();
   const effect = React.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(14577).trackSafetySettingsNoticeAnalytics(
+    const result = sensitiveContentFilterHelpArticle(14688).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.VIEWED,
     );
@@ -33,12 +33,12 @@ export default function AgeConfirmationNotice() {
   obj = { style: null, children: null };
   obj = { marginBottom: null };
   const callback = React.useCallback(() => {
-    let obj = callback(8701);
+    let obj = callback(8411);
     obj = {
-      entryPoint: sensitiveContentFilterHelpArticle(8703).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+      entryPoint: sensitiveContentFilterHelpArticle(8413).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
     };
     const result = obj.showAgeVerificationGetStartedModal(obj);
-    const result1 = sensitiveContentFilterHelpArticle(14577).trackSafetySettingsNoticeAnalytics(
+    const result1 = sensitiveContentFilterHelpArticle(14688).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.CONFIRM_AGE,
     );
@@ -46,23 +46,23 @@ export default function AgeConfirmationNotice() {
   obj[0] = ThemesDefault.space.PX_8;
   obj[0] = obj;
   obj1 = {
-    messageType: sensitiveContentFilterHelpArticle(1296).HelpMessageTypes.INFO,
+    messageType: sensitiveContentFilterHelpArticle(1178).HelpMessageTypes.INFO,
     borderRadius: ThemesDefault.radii.lg,
     button: null,
     children: null,
   };
   let obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
-  const intl = sensitiveContentFilterHelpArticle(1233).intl;
-  obj2[2] = intl.string(sensitiveContentFilterHelpArticle(1233).t.FDSSia);
+  const intl = sensitiveContentFilterHelpArticle(1114).intl;
+  obj2[2] = intl.string(sensitiveContentFilterHelpArticle(1114).t.FDSSia);
   obj2[3] = callback;
-  obj1[2] = jsx(sensitiveContentFilterHelpArticle(4929).Button, {
+  obj1[2] = jsx(sensitiveContentFilterHelpArticle(4975).Button, {
     variant: "secondary",
     size: "sm",
     text: null,
     onPress: null,
   });
-  const intl2 = sensitiveContentFilterHelpArticle(1233).intl;
-  obj1[3] = intl2.format(sensitiveContentFilterHelpArticle(1233).t.mFgsfg, {
+  const intl2 = sensitiveContentFilterHelpArticle(1114).intl;
+  obj1[3] = intl2.format(sensitiveContentFilterHelpArticle(1114).t.mFgsfg, {
     hook(children) {
       return closure_1_7(sensitiveContentFilterHelpArticle(closure_1_2[14]).Text, {
         role: "link",
@@ -73,8 +73,8 @@ export default function AgeConfirmationNotice() {
       });
     },
   });
-  obj[1] = jsx(sensitiveContentFilterHelpArticle(1296).HelpMessage, {
-    messageType: sensitiveContentFilterHelpArticle(1296).HelpMessageTypes.INFO,
+  obj[1] = jsx(sensitiveContentFilterHelpArticle(1178).HelpMessage, {
+    messageType: sensitiveContentFilterHelpArticle(1178).HelpMessageTypes.INFO,
     borderRadius: ThemesDefault.radii.lg,
     button: null,
     children: null,

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_sidebar/SidebarVisibilityMethodStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 
 let obj = keys.create(() => ({}));
 const result = set.fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");

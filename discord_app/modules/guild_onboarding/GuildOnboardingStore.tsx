@@ -1,8 +1,8 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import ME2 from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME2 from "../../Constants.tsx";
 import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
 
 const ME = ME2.ME;

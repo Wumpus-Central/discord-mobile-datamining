@@ -1,8 +1,8 @@
 // discord_app/modules/favorites/FavoritesHooks.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import getFavoritesAwareGuildName from "FavoritesUtils.tsx";
 import isPremiumAtLeastDefault from "../../utils/PremiumTypeUtils.tsx";
+import getFavoritesAwareGuildName from "FavoritesUtils.tsx";
 import FREE_FAVORITE_LIMIT from "../../../discord_common/js/shared/shared-constants/FavoritesLimits.tsx";
 import useFavoritesGuildConfig from "FavoritesGuildExperiment.tsx";
 import closure_3 from "../../stores/SelectedGuildStore.tsx";
@@ -154,7 +154,7 @@ export const getFavoritesCategories = function getFavoritesCategories(favoriteCh
     let tmp6 = favoriteChannels[key10010];
     let tmp7 = favoriteChannels;
     let tmp8 = dependencyMap;
-    if (tmp6.type !== favoriteChannels(1305).FavoriteChannelType.CATEGORY) {
+    if (tmp6.type !== favoriteChannels(1187).FavoriteChannelType.CATEGORY) {
       continue;
     } else {
       let obj = { id: null, name: null };

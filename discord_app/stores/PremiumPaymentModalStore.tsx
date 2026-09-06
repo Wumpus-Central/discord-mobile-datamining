@@ -13,6 +13,8 @@ function handleClearError() {
 let c2 = null;
 let c3 = null;
 let c4 = null;
+let c5 = null;
+let c6 = false;
 const Store = initializeDefault.Store;
 class PremiumPaymentModalStore extends Store {}
 const prototype = PremiumPaymentModalStore.prototype;
@@ -26,6 +28,16 @@ prototype["getGiftCode"] = function getGiftCode(arg0) {
   let tmp = null;
   if (arg0 === c4) {
     tmp = c3;
+  }
+  return tmp;
+};
+prototype["isGiftCodeDeliveryReady"] = function isGiftCodeDeliveryReady(arg0) {
+  let tmp = null != arg0;
+  if (tmp) {
+    tmp = arg0 === c5;
+  }
+  if (tmp) {
+    tmp = c6;
   }
   return tmp;
 };
@@ -44,8 +56,27 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(dispatcherDefault,
   BRAINTREE_TOKENIZE_VENMO_FAIL: function handleVenmoTokenizeFailure(message) {
     const billingError = new V6OrEarlierAPIError.BillingError(message.message);
   },
-  SKU_PURCHASE_SUCCESS: function handleSKUPurchaseSuccess(arg0) {
-    ({ giftCode: c3, skuId: c4 } = arg0);
+  SKU_PURCHASE_START: function handleSKUPurchaseStart(isGift) {
+    let tmp = null;
+    if (true === isGift.isGift) {
+      let loadId = isGift.loadId;
+      if (loadId == null) {
+        loadId = null;
+      }
+      tmp = loadId;
+    }
+    loadId = tmp;
+    c6 = false;
+  },
+  SKU_PURCHASE_SUCCESS: function handleSKUPurchaseSuccess(loadId) {
+    ({ giftCode: c3, skuId: c4 } = loadId);
+    let tmp = null != loadId.loadId;
+    if (tmp) {
+      tmp = loadId.loadId === c5;
+    }
+    if (tmp) {
+      c6 = true;
+    }
   },
   SKU_PURCHASE_FAIL: function handleSKUPurchaseFail(error) {
     error = error.error;
@@ -63,6 +94,13 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(dispatcherDefault,
       }
     }
     return false;
+  },
+  USER_PAYMENT_BROWSER_CHECKOUT_DONE: function handleBrowserCheckoutDone(loadId) {
+    if (loadId.loadId !== c5) {
+      return false;
+    } else {
+      c6 = true;
+    }
   },
 });
 const result = require("set").fileFinishedImporting("stores/PremiumPaymentModalStore.tsx");

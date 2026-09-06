@@ -37,12 +37,12 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     CTALabel: null,
     onCTAPress: null,
   };
-  const intl = markAsDismissed(1233).intl;
-  obj[1] = intl.string(markAsDismissed(1233).t.Ay9424);
-  const intl2 = markAsDismissed(1233).intl;
-  obj[2] = intl2.string(markAsDismissed(1233).t.mufH2P);
-  const intl3 = markAsDismissed(1233).intl;
-  obj[3] = intl3.string(markAsDismissed(1233).t.BddRzS);
+  const intl = markAsDismissed(1114).intl;
+  obj[1] = intl.string(markAsDismissed(1114).t.Ay9424);
+  const intl2 = markAsDismissed(1114).intl;
+  obj[2] = intl2.string(markAsDismissed(1114).t.mufH2P);
+  const intl3 = markAsDismissed(1114).intl;
+  obj[3] = intl3.string(markAsDismissed(1114).t.BddRzS);
   obj[4] = callback;
   obj[2] = jsx(NUFActionSheetTemplateDefault, {
     illustration: jsx(NUFChannelIllustrationDefault, {}),
@@ -51,7 +51,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     CTALabel: null,
     onCTAPress: null,
   });
-  return jsx(markAsDismissed(5631).BottomSheet, {
+  return jsx(markAsDismissed(7150).BottomSheet, {
     illustration: jsx(NUFChannelIllustrationDefault, {}),
     title: null,
     description: null,

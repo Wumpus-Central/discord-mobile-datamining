@@ -1,7 +1,7 @@
 // discord_app/modules/guild_progress/native/GuildProgressUtils.tsx
 import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import dispatcherDefault from "../GuildProgressActionCreators.tsx";
 import closure_3 from "../../../stores/GuildChannelStore.tsx";
@@ -36,7 +36,7 @@ function useIOSCompletionStates(guild) {
     items3 = [];
   }
   const channelsMessaged = require("../GuildProgressHooks.tsx").useChannelsMessaged(items3);
-  let tmpResult = tmp(586);
+  let tmpResult = tmp(504);
   const items4 = [closure_6];
   let stateFromStores2 = channelsMessaged;
   if (!channelsMessaged) {
@@ -52,7 +52,7 @@ function useIOSCompletionStates(guild) {
       return flag;
     });
   }
-  tmpResult = tmp(586);
+  tmpResult = tmp(504);
   const items5 = [closure_4];
   const stateFromStores3 = tmpResult.useStateFromStores(items5, () => {
     guild = closure_1_4.getGuild(guild.id);
@@ -73,7 +73,7 @@ function useIOSCompletionStates(guild) {
     () => closure_1_6.getProgress(guild.id),
   );
   if (stateFromStores) {
-    const ServerSetupBoostCtaExperiment = tmp(12388).ServerSetupBoostCtaExperiment;
+    const ServerSetupBoostCtaExperiment = tmp(12588).ServerSetupBoostCtaExperiment;
     const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
     const items7 = [guildPopulated, guildPersonalized, stateFromStores2];
     if (enabled) {
@@ -139,7 +139,7 @@ export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { guild };
-  obj.openLazy(asyncRequireImpl(12276, dependencyMap.paths), "guild-progress-" + guild.id, obj);
+  obj.openLazy(asyncRequireImpl(12476, dependencyMap.paths), "guild-progress-" + guild.id, obj);
 };
 export const hideActionSheet = function hideActionSheet(arg0) {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet("guild-progress-" + arg0);

@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/system_messages/createCommonMessage.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
 import resetCache from "../../../../../utils/DateUtils.tsx";
 import hexToRgba from "../../../../../utils/ColorUtils.tsx";
+import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
 import frozen from "../EmbedUtils.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07886_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../_runtime/07887_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/07965_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/07966_registerAsset.js";
 import MessageAccessibilityAction from "../../MessageAccessibilityActions.tsx";
 import closure_3 from "../../../../../stores/ChannelStore.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";

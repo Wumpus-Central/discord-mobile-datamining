@@ -2,14 +2,14 @@
 import timestampDefault from "../modules/debug/Logger.tsx";
 import applyDefault from "../../_runtime/00012_apply.js";
 import getSystemLocale from "../intl/index.native.tsx";
-import updateUserGuildSettings from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 import isDiscordFrontendDevelopment from "GlobalUtils.tsx";
 import isNullOrEmpty from "StringUtils.tsx";
+import updateUserGuildSettings from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 import nameFromUserDefault from "UserUtils.tsx";
 import setDefault from "RegexUtils.tsx";
 import computeChannelName from "../modules/channel/useChannelName.tsx";
 import StickerFormat from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/05463_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/05517_fuzzysearch.js";
 import sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import getGuildNameSuggestionDefault from "GuildUtils.tsx";
 import useCanSeeOnboardingHome from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -160,10 +160,10 @@ function queryMemberList(arg0) {
           if (null == str) {
             let items2 = [null, null];
           } else {
-            let tmp16Result = tmp16(1901);
+            let tmp16Result = tmp16(1925);
             let stripDiacriticsResult = tmp16Result.stripDiacritics(str);
             items2 = [stripDiacriticsResult];
-            tmp16Result = tmp16(1901);
+            tmp16Result = tmp16(1925);
             items2[1] = tmp16Result.normalize(stripDiacriticsResult);
           }
           let tmp18 = callback;
@@ -172,10 +172,10 @@ function queryMemberList(arg0) {
           if (null == str2) {
             let items3 = [null, null];
           } else {
-            let tmp16Result1 = tmp16(1901);
+            let tmp16Result1 = tmp16(1925);
             let stripDiacriticsResult1 = tmp16Result1.stripDiacritics(str2);
             items3 = [stripDiacriticsResult1];
-            let tmp16Result2 = tmp16(1901);
+            let tmp16Result2 = tmp16(1925);
             items3[1] = tmp16Result2.normalize(stripDiacriticsResult1);
           }
           let tmp18Result = tmp18(items3, 2);
@@ -217,21 +217,21 @@ function queryMemberList(arg0) {
                               let tmp33 = num < 50;
                               if (num < 50) {
                                 let tmp28 =
-                                  tmp12(5463)(toLocaleLowerCaseResult, str4) || tmp12(5463)(normalizeResult, str5);
+                                  tmp12(5517)(toLocaleLowerCaseResult, str4) || tmp12(5517)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5463)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5517)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5463)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5517)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5463)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5517)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5463)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5517)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -365,13 +365,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(5221).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(5268).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(5221).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(5268).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(5221).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(5221).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(5268).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(5268).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }
@@ -920,10 +920,10 @@ areArraysShallowlyEqual = {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + callback(4465).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + callback(4547).escape(toLocaleLowerCaseResult), "i");
         obj[1] = regExp;
-        const obj2 = callback(4465);
-        const regExp1 = new RegExp(callback(4465).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = callback(4547);
+        const regExp1 = new RegExp(callback(4547).escape(toLocaleLowerCaseResult), "i");
         obj[2] = regExp1;
         return obj;
       });
@@ -932,17 +932,17 @@ areArraysShallowlyEqual = {
         let obj = { queryLower: null, exactQuery: null, containQuery: null, isFullMatch: true };
         obj[0] = toLocaleLowerCaseResult;
         const _RegExp = RegExp;
-        let obj2 = callback(4465);
+        let obj2 = callback(4547);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + callback(4465).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + callback(4547).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[1] = regExp;
         const _RegExp2 = RegExp;
-        const str = callback(4465).escape(toLocaleLowerCaseResult);
-        const obj3 = callback(4465);
-        let regExp1 = new RegExp(callback(4465).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = callback(4547).escape(toLocaleLowerCaseResult);
+        const obj3 = callback(4547);
+        let regExp1 = new RegExp(callback(4547).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[2] = regExp1;
         mapped.unshift(obj);
-        const str6 = callback(4465).escape(toLocaleLowerCaseResult);
+        const str6 = callback(4547).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -1927,15 +1927,15 @@ areArraysShallowlyEqual = {
       result = features3.has(tmp8.COMMUNITY);
     }
     obj = { id: StaticChannelId.SERVER_GUIDE, name: null };
-    const intl = tmp5(1233).intl;
+    const intl = tmp5(1114).intl;
     obj[1] = intl.string(getSystemLocale.t.VbpLyU);
     items = [obj, ,];
     obj = { id: StaticChannelId.CHANNEL_BROWSER, name: null };
-    const intl2 = tmp5(1233).intl;
+    const intl2 = tmp5(1114).intl;
     obj[1] = intl2.string(getSystemLocale.t.et6wav);
     items[1] = obj;
     obj1 = { id: StaticChannelId.CUSTOMIZE_COMMUNITY, name: null };
-    const intl3 = tmp5(1233).intl;
+    const intl3 = tmp5(1114).intl;
     obj1[1] = intl3.string(getSystemLocale.t.h9mGOP);
     items[2] = obj1;
     const items1 = [];
@@ -1989,16 +1989,18 @@ areArraysShallowlyEqual = {
       guildId: channel.getGuildId(),
       limit: "r",
       fuzzy: "HermesInternal",
-      filter(type) {
-        let hasItem = null == channelTypes;
-        if (!hasItem) {
-          hasItem = channelTypes.includes(type.type);
-        }
-        return hasItem;
-      },
-      type,
+      filter: 188,
+      type: 335,
       allowEmptyQueries: null,
     };
+    obj[4] = function filter(type) {
+      let hasItem = null == channelTypes;
+      if (!hasItem) {
+        hasItem = channelTypes.includes(type.type);
+      }
+      return hasItem;
+    };
+    obj[5] = type;
     obj[0] = this.queryChannels(obj).map((record) => record.record);
     return obj;
   },
@@ -2104,22 +2106,22 @@ areArraysShallowlyEqual = {
     set = new Set();
     items1 = [];
     closure_5 = items1;
-    const FrecencyUserSettingsActionCreators = flag(1369).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = flag(1940).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     function _loop() {
       if ("" === closure_6) {
         return 1;
       } else {
         const toLocaleLowerCaseResult = obj.toLocaleLowerCase();
-        const stripDiacriticsResult = toLocaleLowerCaseResult(1901).stripDiacritics(toLocaleLowerCaseResult);
+        const stripDiacriticsResult = toLocaleLowerCaseResult(1925).stripDiacritics(toLocaleLowerCaseResult);
         const _RegExp = RegExp;
-        let obj2 = toLocaleLowerCaseResult(1901);
+        let obj2 = toLocaleLowerCaseResult(1925);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(4465).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(4547).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(4465);
+        const obj3 = nextResult(4547);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(4465).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(4547).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = closure_1_10.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((arg0, id) => {

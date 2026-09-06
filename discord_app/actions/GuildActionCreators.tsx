@@ -1,11 +1,11 @@
 // discord_app/actions/GuildActionCreators.tsx
-import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
-import _modDef4714 from "../utils/TrackedHTTPUtils.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import _modDef4753 from "../utils/TrackedHTTPUtils.tsx";
 import shouldShowAgeGateForVoiceChannel from "../modules/age_gate/AgeGateUtils.tsx";
 import setDefault from "AlertActionCreators.tsx";
 import stopLurkingAll from "../modules/lurker_mode/LurkerActionCreators.tsx";
@@ -292,9 +292,9 @@ function _joinGuild() {
               if (code1 === constants.TOO_MANY_USER_GUILDS) {
                 let obj16 = callback(loadId[21]);
                 if (obj16.hasIncreasedGuildCap(authStore.getCurrentUser())) {
-                  tmp82(closure_20);
+                  tmp81(closure_20);
                 } else {
-                  tmp82(closure_19);
+                  tmp81(closure_19);
                 }
               }
               const body3 = guildId.body;
@@ -313,17 +313,16 @@ function _joinGuild() {
                   obj.show(obj);
                 })();
               }
-              let tmp95 = c7;
+              let tmp94 = c7;
               if (c7) {
                 const body4 = guildId.body;
                 let code3;
                 if (body4 != null) {
                   code3 = body4.code;
                 }
-                tmp95 = code3 === constants.UNKNOWN_GUILD;
+                tmp94 = code3 === constants.UNKNOWN_GUILD;
               }
-              if (tmp95) {
-                throwTypeErrorResult = loadId;
+              if (tmp94) {
                 throwTypeErrorResult = c4;
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = callback;
@@ -358,7 +357,7 @@ function _joinGuild() {
                     if (store.body.show_verification_form) {
                       if (c6) {
                         let obj12 = callback(loadId[17]);
-                        obj12.transitionTo(closure_21.GUILD_MEMBER_VERIFICATION(callback));
+                        const result = obj12.transitionToMemberVerification(callback);
                         c6 = 0;
                         sessionId = 3;
                         const obj10 = { value: null, done: true };
@@ -654,7 +653,7 @@ export default {
       reason,
       location: _location,
     } = moderator_report_id);
-    let obj = _modDef4714;
+    let obj = _modDef4753;
     obj = {
       url: closure_16.GUILD_MEMBER(guildId, userId),
       reason,
@@ -1007,7 +1006,7 @@ export default {
           startsWithResult = icon.startsWith("data:");
         }
       }
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_ROLE(closure_1_0, closure_1_1);
       const obj2 = {};
@@ -1015,10 +1014,10 @@ export default {
       obj2.icon = tmp13;
       obj2.unicode_emoji = c2.unicodeEmoji;
       obj1[1] = obj2;
-      const obj5 = closure_1_0(527);
+      const obj5 = closure_1_0(1272);
       obj1[3] = obj5.rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6177);
+      const obj = closure_1_1(7323);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1044,13 +1043,13 @@ export default {
     return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_CHANNELS(closure_1_0);
       obj1[1] = closure_1_1;
-      obj1[3] = closure_1_0(527).rejectWithMigratedError();
+      obj1[3] = closure_1_0(1272).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6177);
+      const obj = closure_1_1(7323);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1061,13 +1060,13 @@ export default {
     return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_ROLES(closure_1_0);
       obj1[1] = closure_1_1;
-      obj1[3] = closure_1_0(527).rejectWithMigratedError();
+      obj1[3] = closure_1_0(1272).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6177);
+      const obj = closure_1_1(7323);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1199,9 +1198,9 @@ export default {
         const defaultChannel = store.getDefaultChannel(guildId);
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
-            let tmp11Result = tmp11(6183);
+            let tmp11Result = tmp11(7329);
             if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
-              tmp11Result = tmp11(1219);
+              tmp11Result = tmp11(1100);
               tmp11Result.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));
             }
           }
@@ -1273,13 +1272,13 @@ export default {
               body = undefined;
               obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_16.GUILD_APPLICATIONS(closure_1_0);
-              obj1[2] = closure_1_0(527).rejectWithMigratedError();
+              obj1[2] = closure_1_0(1272).rejectWithMigratedError();
               if (null != closure_1_1) {
                 const obj2 = { channel_id: null };
                 obj2[0] = tmp24;
                 obj1.query = obj2;
               }
-              const HTTP = closure_1_0(527).HTTP;
+              const HTTP = closure_1_0(1272).HTTP;
               c2 = 1;
               dependencyMap = 1;
               const obj3 = { value: null, done: false };
@@ -1296,7 +1295,7 @@ export default {
             return obj4;
           } else {
             body = arg1.body;
-            obj = closure_1_1(706);
+            obj = closure_1_1(573);
             const obj5 = { type: "GUILD_APPLICATIONS_FETCH_SUCCESS", guildId: null, applications: null };
             obj5[1] = body;
             obj5[2] = body;

@@ -5,11 +5,11 @@ import keys from "../../../../ConstantsIOS.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import getAlertModalItemKey from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import _modDef5364 from "../../../../actions/SelectedChannelActionCreators.tsx";
+import _modDef5411 from "../../../../actions/SelectedChannelActionCreators.tsx";
 import handleLogoutDefault from "../../../../actions/AuthenticationActionCreators.tsx";
 import dispatcherDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import NativeModulesDefault from "../../../../lib/pushnotification/PushNotification.tsx";
 import DoorExitIcon from "../../../../design/components/Icon/native/redesign/generated/DoorExitIcon.tsx";
+import NativeModulesDefault from "../../../../lib/pushnotification/PushNotification.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
@@ -17,8 +17,8 @@ function handleLogout() {
   const Storage = Storage2.Storage;
   const result = Storage.set(keys.StorageKeys.LOGOUT_TIMESTAMP_KEY, new Date().getTime());
   const date = new Date();
-  _modDef5364.disconnect();
-  const obj2 = _modDef5364;
+  _modDef5411.disconnect();
+  const obj2 = _modDef5411;
   const result1 = NativeModulesDefault.clearAllNotifications();
   const obj3 = NativeModulesDefault;
   dispatcherDefault.close();

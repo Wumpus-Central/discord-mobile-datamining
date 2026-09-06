@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncerLiveRegion.native.tsx
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import keys from "../../../../../../_runtime/01352_keys.js";
+import keys from "../../../../../../_runtime/04274_keys.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 ({ StyleSheet, Text: c0 } = get_ActivityIndicator);

@@ -65,7 +65,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
   obj[9] = truncation;
   obj[10] = tmp3;
   if (overrideBackgroundHighlight == null) {
-    let tmp4Result = tmp4(8029);
+    let tmp4Result = tmp4(8108);
     obj = { message: null, theme: null, isEditing: null, isAutomodBlockedMessage: null };
     obj[0] = message;
     obj[1] = theme;
@@ -74,17 +74,17 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     overrideBackgroundHighlight = tmp4Result.createBackgroundHighlight(obj);
   }
   obj[11] = overrideBackgroundHighlight;
-  tmp4Result = tmp4(8029);
+  tmp4Result = tmp4(8108);
   let canReply = options.enableSwipeActions;
   if (canReply) {
     canReply = canShowImages.canReply;
   }
   obj[12] = tmp4Result.createSwipeActions(canReply, options.enableSwipeActions && canShowImages.canEdit);
-  const intl3 = tmp6(1233).intl;
+  const intl3 = tmp6(1114).intl;
   obj[13] = intl3.string(getSystemLocale.t["5IEsGx"]);
-  const intl4 = tmp6(1233).intl;
+  const intl4 = tmp6(1114).intl;
   obj[14] = intl4.string(getSystemLocale.t.I3ltXO);
-  const intl5 = tmp6(1233).intl;
+  const intl5 = tmp6(1114).intl;
   obj[15] = intl5.string(getSystemLocale.t.rBIGBL);
   const forcedTheme = options.forcedTheme;
   obj[16] = forcedTheme;

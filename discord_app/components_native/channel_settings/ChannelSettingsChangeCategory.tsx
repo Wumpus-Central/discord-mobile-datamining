@@ -3,7 +3,7 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import TableRowGroupTitle from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../_runtime/00850__toArray.js";
+import closure_5 from "../../../_runtime/00718__toArray.js";
 import closure_6 from "../../stores/ChannelStore.tsx";
 import closure_7 from "../../stores/GuildCategoryStore.tsx";
 import closure_8 from "../../stores/GuildStore.tsx";
@@ -262,20 +262,20 @@ prototype["render"] = function render() {
   const first = callback(this.state.categories, 1)[0];
   const tmp2 = callback4(this.context);
   let obj = { style: tmp2.screenContainer, children: null };
-  obj = { style: tmp2.stackPadding, spacing: self(709).space.PX_24, children: null };
-  const intl = first(1233).intl;
+  obj = { style: tmp2.stackPadding, spacing: self(576).space.PX_24, children: null };
+  const intl = first(1114).intl;
   if (null != category) {
     let name = category.name;
   } else {
-    const intl2 = tmp4(1233).intl;
-    name = intl2.string(tmp4(1233).t.GSfOoo);
+    const intl2 = tmp4(1114).intl;
+    name = intl2.string(tmp4(1114).t.GSfOoo);
   }
   obj = {
     variant: "text-md/medium",
     color: "text-muted",
-    children: intl.formatToPlainString(first(1233).t.OqccVl, { categoryName: name }),
+    children: intl.formatToPlainString(first(1114).t.OqccVl, { categoryName: name }),
   };
-  const items = [closure_13(first(4474).Text, obj), ,];
+  const items = [closure_13(first(4556).Text, obj), ,];
   let tmp3Result = null;
   if (null != first) {
     tmp3Result = null;
@@ -288,16 +288,16 @@ prototype["render"] = function render() {
         obj2[1] = function onPress() {
           return self.handleSetCategory(first.id);
         };
-        obj1[1] = tmp3(tmp4(5608).TableRow, obj2, first.id);
-        tmp3Result = tmp3(tmp4(6001).TableRowGroup, obj1);
+        obj1[1] = tmp3(tmp4(5605).TableRow, obj2, first.id);
+        tmp3Result = tmp3(tmp4(5687).TableRowGroup, obj1);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
   obj[2] = items;
-  obj[1] = closure_14(first(4927).Stack, obj);
-  return closure_13(first(8376).Form, obj);
+  obj[1] = closure_14(first(4973).Stack, obj);
+  return closure_13(first(8593).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -308,11 +308,11 @@ let result = require("set").fileFinishedImporting(
 export default function ConnectedChannelSettingsChangeCategory(channelId) {
   channelId = channelId.channelId;
   const items = [closure_6];
-  const channel = channelId(586).useStateFromStores(items, () => closure_1_6.getChannel(channelId));
-  const obj = channelId(586);
-  const navigation = channelId(1498).useNavigation();
-  const obj2 = channelId(1498);
-  const appChannelBotUserId = channelId(11424).useAppChannelBotUserId(channel);
+  const channel = channelId(504).useStateFromStores(items, () => closure_1_6.getChannel(channelId));
+  const obj = channelId(504);
+  const navigation = channelId(1483).useNavigation();
+  const obj2 = channelId(1483);
+  const appChannelBotUserId = channelId(11610).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return callback3(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 }

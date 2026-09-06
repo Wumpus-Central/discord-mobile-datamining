@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import set from "../../../../utils/PlatformUtils.tsx";
-import isIterable from "../../../../../_runtime/04105_isIterable.js";
+import isIterable from "../../../../../_runtime/04184_isIterable.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
-import identity from "../../../../../_runtime/00697_identity.js";
+import identity from "../../../../../_runtime/01244_identity.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
@@ -30,7 +30,7 @@ identity = {
     result
       .then((arg0) => {
         const callback = arg0;
-        callback(702).batchUpdates(() => closure_1_4.setState({ isEnabled: closure_0 }));
+        callback(1249).batchUpdates(() => closure_1_4.setState({ isEnabled: closure_0 }));
       })
       .catch((arg0) => {
         new callback2(3)("ConversationSuggestions").error("Error suggesting conversations", arg0);

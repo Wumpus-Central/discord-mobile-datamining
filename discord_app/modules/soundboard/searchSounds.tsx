@@ -1,5 +1,5 @@
 // discord_app/modules/soundboard/searchSounds.tsx
-import debounceDefault from "../../../_runtime/00633_debounce.js";
+import debounceDefault from "../../../_runtime/00551_debounce.js";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import closure_3 from "../emojis/EmojiStore.tsx";
 import ME from "../../Constants.tsx";
@@ -43,13 +43,13 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result = null;
     if (null != name.emojiName) {
-      result = stateFromStores(4134).convertSurrogateToName(name.emojiName, false);
-      const obj2 = stateFromStores(4134);
+      result = stateFromStores(4213).convertSurrogateToName(name.emojiName, false);
+      const obj2 = stateFromStores(4213);
     }
     let byName = null;
     if (null != result) {
-      byName = stateFromStores(4134).getByName(result);
-      const obj3 = stateFromStores(4134);
+      byName = stateFromStores(4213).getByName(result);
+      const obj3 = stateFromStores(4213);
     }
     if (null != customEmojiById) {
       const items = [customEmojiById.name];
@@ -98,8 +98,8 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result1 = sum6 > 0;
     if (0 < sum6) {
-      result1 = lib(6198).canUseSoundboardSound(stateFromStores, name, tmp3);
-      const obj4 = lib(6198);
+      result1 = lib(7344).canUseSoundboardSound(stateFromStores, name, tmp3);
+      const obj4 = lib(7344);
     }
     let sum7 = sum6;
     if (result1) {

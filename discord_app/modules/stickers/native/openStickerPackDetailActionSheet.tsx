@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
@@ -15,7 +15,7 @@ export default function openStickerPackDetailActionSheet(stickerPack) {
   obj = { location: analyticsLocation, sticker_pack_id: stickerPack.id };
   obj.track(AnalyticEvents.STICKER_PACK_VIEW_ALL, obj);
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(10413, dependencyMap.paths),
+    asyncRequireImpl(10395, dependencyMap.paths),
     "StickerPackDetailActionSheet",
     { stickerPack, analyticsPopoutType },
   );

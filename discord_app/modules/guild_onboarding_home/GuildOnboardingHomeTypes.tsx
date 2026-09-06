@@ -120,11 +120,11 @@ export const settingsFromServer = function settingsFromServer(body) {
     ({ author_ids: obj2[0], message: obj2[1] } = welcome_message);
     obj[0] = obj;
     const found = new_member_actions.filter((channel_id) =>
-      callback(1470).isNotNullish(store.getChannel(channel_id.channel_id)),
+      callback(1369).isNotNullish(store.getChannel(channel_id.channel_id)),
     );
     obj[1] = found.map(newMemberActionFromServer);
     const found1 = resource_channels.filter((channel_id) =>
-      callback(1470).isNotNullish(store.getChannel(channel_id.channel_id)),
+      callback(1369).isNotNullish(store.getChannel(channel_id.channel_id)),
     );
     obj[2] = found1.map(resourceChannelFromServer);
     obj[3] = body.enabled;
@@ -166,7 +166,7 @@ export const settingsToServer = function settingsToServer(arg0, enabled) {
       newMemberActions = [];
     }
     const found = newMemberActions.filter((channelId) =>
-      callback(1470).isNotNullish(store.getChannel(channelId.channelId)),
+      callback(1369).isNotNullish(store.getChannel(channelId.channelId)),
     );
     obj[2] = found.map((channelId) => {
       let obj = {
@@ -204,7 +204,7 @@ export const settingsToServer = function settingsToServer(arg0, enabled) {
       resourceChannels = [];
     }
     const found1 = resourceChannels.filter((channelId) =>
-      callback(1470).isNotNullish(store.getChannel(channelId.channelId)),
+      callback(1369).isNotNullish(store.getChannel(channelId.channelId)),
     );
     obj[3] = found1.map((channelId) => {
       let obj = {

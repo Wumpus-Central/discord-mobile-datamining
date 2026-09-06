@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/account/native/UserSettingsInputAlert.tsx
 import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef6058 from "../../../keyboard/native/KeyboardAwareView.tsx";
+import _modDef5578 from "../../../keyboard/native/KeyboardAwareView.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
@@ -83,7 +83,7 @@ prototype["renderContent"] = function renderContent() {
     if (tmp7) {
       let obj = { variant: "text-md/normal", children: null };
       obj[1] = helpText;
-      tmp7 = callback(tmp5(4474).Text, obj);
+      tmp7 = callback(tmp5(4556).Text, obj);
     }
     const items = [tmp7];
     obj = {
@@ -111,9 +111,9 @@ prototype["renderContent"] = function renderContent() {
     obj[8] = function onChange(input) {
       return self.setState({ input });
     };
-    items[1] = callback(self(7717).TextInput, obj);
+    items[1] = callback(self(6606).TextInput, obj);
     obj[1] = items;
-    return closure_4(self(4927).Stack, obj);
+    return closure_4(self(4973).Stack, obj);
   }
   error = self.state.error;
 };
@@ -133,7 +133,7 @@ prototype["render"] = function render() {
   if (useKeyboardAwareWrapper) {
     obj = { children: null };
     obj[0] = tmp5;
-    tmpResult = callback(_modDef6058, obj);
+    tmpResult = callback(_modDef5578, obj);
   }
   return tmpResult;
 };

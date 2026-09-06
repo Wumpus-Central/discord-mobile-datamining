@@ -1,6 +1,6 @@
 // discord_app/modules/soundpacks/SoundpackActions.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import closure_2 from "SoundpackStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 

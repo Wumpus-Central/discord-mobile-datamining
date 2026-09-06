@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/SearchPlatformActionCreators.tsx
 import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import ME from "../../../Constants.tsx";
 import SearchTokenTypes from "../SearchUtils.tsx";
 import handleSearchQuery from "stores/SearchTabsLayoutStore.tsx";
 import prototype from "stores/SearchQueryStore.tsx";

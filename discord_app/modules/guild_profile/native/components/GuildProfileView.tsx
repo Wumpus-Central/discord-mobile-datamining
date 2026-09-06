@@ -1,11 +1,11 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileView.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import isThemeLight from "../../../../design/utils/shared/themes.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
+import isThemeLight from "../../../../design/utils/shared/themes.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import useProfilePrimaryColor from "../GuildProfileUtils.tsx";
 import stylesDefault from "GuildProfileHeader.tsx";
 import ClickableGameIconDefault from "GuildProfileGames.tsx";
@@ -20,7 +20,7 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 function GuildProfileBackground(guildProfile) {
   guildProfile = guildProfile.guildProfile;
-  let obj = guildProfile(586);
+  let obj = guildProfile(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let guild = closure_1_6.getGuild(guildProfile.id);
@@ -35,10 +35,10 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9033)() * useWindowDimensionsDefault().width;
+      obj[2] = tmp3(9191)() * useWindowDimensionsDefault().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
-      obj[1] = tmp3(1430).getGuildDiscoverySplashSource(obj);
+      obj[1] = tmp3(1396).getGuildDiscoverySplashSource(obj);
       return callback(closure_5, obj);
     }
   }
@@ -145,7 +145,7 @@ export default function GuildProfileView(guildProfile) {
   if (tmp5Result) {
     obj = { variant: "text-md/medium", color: "text-subtle", children: null };
     obj[2] = guildProfile.description;
-    tmp5Result = tmp5(guildProfile(4474).Text, obj);
+    tmp5Result = tmp5(guildProfile(4556).Text, obj);
   }
   const items2 = [
     tmp5Result,

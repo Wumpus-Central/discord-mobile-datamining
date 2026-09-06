@@ -106,17 +106,17 @@ function _fetchStickerPacks() {
               } else {
                 if (!closure_8.isFetchingStickerPacks) {
                   if (!closure_8.hasLoadedStickerPacks) {
-                    let obj3 = sticker_packs(706);
+                    let obj3 = sticker_packs(573);
                     obj3.wait(() => {
                       sticker_packs(tmp3[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
                     });
-                    const HTTP = locale(527).HTTP;
+                    const HTTP = locale(1272).HTTP;
                     obj3 = { url: null, query: null, rejectWithError: null };
                     obj3[0] = constants.STICKER_PACKS;
                     const obj4 = { locale: null };
                     obj4[0] = locale;
                     obj3[1] = obj4;
-                    let obj6 = locale(527);
+                    let obj6 = locale(1272);
                     obj3[2] = obj6.rejectWithMigratedError();
                     c3 = 2;
                     c4 = 1;
@@ -132,7 +132,7 @@ function _fetchStickerPacks() {
               throw body;
             } else if (arg0 !== 2) {
               sticker_packs = body.body.sticker_packs;
-              obj = sticker_packs(706);
+              obj = sticker_packs(573);
               obj6 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: null };
               obj6[1] = sticker_packs;
               obj.dispatch(obj6);
@@ -217,14 +217,14 @@ function _fetchSticker() {
           } else {
             body = body.body;
             if (obj10.isGuildSticker(body)) {
-              obj3 = callback2(706);
+              obj3 = callback2(573);
               const obj4 = { type: "GUILD_STICKER_FETCH_SUCCESS", sticker: null };
               obj4[1] = body;
               obj3.dispatch(obj4);
             } else {
-              obj = body(4853);
+              obj = body(4899);
               if (obj.isStandardSticker(body)) {
-                obj1 = callback2(706);
+                obj1 = callback2(573);
                 const obj5 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: null };
                 obj5[1] = body;
                 obj1.dispatch(obj5);
@@ -235,7 +235,7 @@ function _fetchSticker() {
               }
             }
             c4 = 3;
-            obj10 = body(4853);
+            obj10 = body(4899);
           }
         } catch (tmp24) {
           c4 = tmp;
@@ -378,10 +378,10 @@ function _deleteGuildSticker() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = lib(527).HTTP;
+              const HTTP = lib(1272).HTTP;
               obj1 = { url: null, rejectWithError: null };
               obj1[0] = closure_1_9.GUILD_STICKER(lib.guild_id, lib.id);
-              obj1[1] = lib(527).rejectWithMigratedError();
+              obj1[1] = lib(1272).rejectWithMigratedError();
               dependencyMap = 1;
               c1 = 1;
               const obj2 = { value: null, done: false };
@@ -491,11 +491,11 @@ function _updateGuildSticker() {
     c4 = 0;
     c3 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_9.GUILD_STICKER(callback, closure_1);
       obj1[1] = dependencyMap;
-      obj1[2] = callback(527).rejectWithMigratedError();
+      obj1[2] = callback(1272).rejectWithMigratedError();
       yield HTTP.patch(obj1);
       return body.body;
     })();

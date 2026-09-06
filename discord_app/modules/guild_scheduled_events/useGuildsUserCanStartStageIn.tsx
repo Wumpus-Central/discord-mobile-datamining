@@ -16,7 +16,7 @@ export const useChannelsUserCanStartStageIn = function useChannelsUserCanStartSt
   }
   const items = [closure_2, closure_4];
   const items1 = [id];
-  return id(586).useStateFromStoresArray(
+  return id(504).useStateFromStoresArray(
     items,
     () =>
       closure_1_2.getChannels(id)[closure_1_3].reduce((arr, channel) => {

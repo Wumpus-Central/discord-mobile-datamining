@@ -1,8 +1,8 @@
 // discord_app/modules/go_live/native/VoiceEngineStreamingManager.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import inject from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import inject from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Linking } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../stores/ApplicationStreamingStore.tsx";
@@ -177,13 +177,13 @@ prototype["_initialize"] = function _initialize() {
     currentAppIntent = currentAppIntent.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(4663).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(4702).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = currentAppIntent.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = callback2(4722);
+        const tmp2Result = callback2(4761);
         const participant = tmp2Result.selectParticipant(
           channel.id,
-          tmp9(4544).encodeStreamKey(currentUserActiveStream),
+          tmp9(4612).encodeStreamKey(currentUserActiveStream),
         );
         if ("android" === voiceEngine.platform) {
           closure_15.start(15000, () => {
@@ -204,9 +204,9 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(callback3(currentAppIntent));
         }
-        const tmp9Result = tmp9(4544);
+        const tmp9Result = tmp9(4612);
       }
-      const obj3 = currentUserActiveStream(4663);
+      const obj3 = currentUserActiveStream(4702);
       tmp9 = currentUserActiveStream;
     } else {
       let result = voiceEngine.stopBroadcastWithError(-1, "Not currently in a voice channel");
@@ -216,7 +216,7 @@ prototype["_initialize"] = function _initialize() {
     logger.log("Broadcast Finished");
     closure_14.stop();
     closure_15.stop();
-    const result = callback(10068).handleCloseScreenshare();
+    const result = callback(9951).handleCloseScreenshare();
   });
   const result2 = voiceEngine.setBroadcastAnnotatedCallback((arg0) => {
     logger.log("Broadcast Annotated:", arg0);
@@ -230,10 +230,10 @@ prototype["_initialize"] = function _initialize() {
   });
   const result3 = voiceEngine.setBroadcastBlockedCallback(() => {
     logger.log("Broadcast Blocked");
-    let obj = callback2(9674);
+    let obj = callback2(9687);
     obj = { alertBody: null };
-    const intl = callback(1233).intl;
-    obj[0] = intl.string(callback(1233).t.iYQlwv);
+    const intl = callback(1114).intl;
+    obj[0] = intl.string(callback(1114).t.iYQlwv);
     const result = obj.presentLocalNotification(obj);
   });
   let obj = inject;

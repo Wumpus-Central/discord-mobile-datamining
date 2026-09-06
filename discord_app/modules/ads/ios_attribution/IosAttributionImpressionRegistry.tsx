@@ -91,8 +91,8 @@ function _startNativeImpression() {
               if (null == logger) {
                 const _HermesInternal = HermesInternal;
                 logger.warn("No strategy for " + c2 + "; impression " + callback + " is unattributed");
-                const result = callback(11316).trackIosAttributionImpression(
-                  callback(11316).IosAttributionImpressionResult.NO_FRAMEWORK,
+                const result = callback(11492).trackIosAttributionImpression(
+                  callback(11492).IosAttributionImpressionResult.NO_FRAMEWORK,
                   c2,
                 );
                 callback3(callback, signAbort);
@@ -116,7 +116,7 @@ function _startNativeImpression() {
                 signAbort = 2;
                 logger = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = callback(11319).fetchIosAttributionSignedPayloads(obj2);
+                obj3[0] = callback(11495).fetchIosAttributionSignedPayloads(obj2);
                 return obj3;
               }
             }
@@ -150,9 +150,9 @@ function _startNativeImpression() {
                   }
                   callback2 = tmp38;
                   if (null == callback2) {
-                    let obj6 = callback(11316);
+                    let obj6 = callback(11492);
                     const result1 = obj6.trackIosAttributionImpression(
-                      callback(11316).IosAttributionImpressionResult.SIGN_FAILED,
+                      callback(11492).IosAttributionImpressionResult.SIGN_FAILED,
                       c2,
                       callback,
                     );
@@ -162,7 +162,7 @@ function _startNativeImpression() {
                     obj5[0] = undefined;
                     return obj5;
                   } else {
-                    obj4 = callback(11315);
+                    obj4 = callback(11491);
                     const _JSON = JSON;
                     signAbort = 3;
                     logger = 1;
@@ -189,9 +189,9 @@ function _startNativeImpression() {
               }
             }
             if (null == callback3) {
-              obj1 = callback(11316);
+              obj1 = callback(11492);
               const result2 = obj1.trackIosAttributionImpression(
-                callback(11316).IosAttributionImpressionResult.NO_TOKEN,
+                callback(11492).IosAttributionImpressionResult.NO_TOKEN,
                 c2,
                 callback,
               );
@@ -201,9 +201,9 @@ function _startNativeImpression() {
               obj8[0] = undefined;
               return obj8;
             } else {
-              obj = callback(11316);
+              obj = callback(11492);
               const result3 = obj.trackIosAttributionImpression(
-                callback(11316).IosAttributionImpressionResult.REGISTERED,
+                callback(11492).IosAttributionImpressionResult.REGISTERED,
                 c2,
                 callback,
               );

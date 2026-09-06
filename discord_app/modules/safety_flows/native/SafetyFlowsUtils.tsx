@@ -2,8 +2,8 @@
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../SafetyFlows.messages.js";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/09535_registerAsset.js";
+import _modDef4763 from "../../../actions/ModalActionCreators.tsx";
+import registerAssetDefault from "../../../../_runtime/09566_registerAsset.js";
 import TaskType from "../types.tsx";
 import SAFETY_FLOWS_MODAL_KEY from "../constants.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -48,7 +48,7 @@ function _fetchAndUpdateTask() {
 }
 function navigateToScreenForTask(closure_1, closure_0) {
   if (null == closure_0) {
-    let obj = _modDef4724;
+    let obj = _modDef4763;
     obj.popWithKey(SAFETY_FLOWS_MODAL_KEY.SAFETY_FLOWS_MODAL_KEY);
     obj = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: null, content: null };
     obj[1] = registerAssetDefault;
@@ -61,7 +61,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
     let tmp5 = null;
     if (null != tmp16) {
       let tmp = tmp16;
-      if (task_type === tmp14(17707).TaskType.EMAIL_VERIFICATION) {
+      if (task_type === tmp14(17867).TaskType.EMAIL_VERIFICATION) {
         const currentUser = authStore.getCurrentUser();
         let email;
         if (currentUser != null) {
@@ -69,7 +69,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
         }
         tmp = tmp16;
         if (null != email) {
-          const items = [tmp14(17707).SafetyFlowScreens.VERIFY_EMAIL];
+          const items = [tmp14(17867).SafetyFlowScreens.VERIFY_EMAIL];
           tmp = items;
         }
       }
@@ -78,7 +78,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
     if (null != tmp5) {
       closure_1.push(tmp5[0]);
     } else {
-      closure_1.push(tmp14(17707).SafetyFlowScreens.UPDATE_APP);
+      closure_1.push(tmp14(17867).SafetyFlowScreens.UPDATE_APP);
     }
   }
 }
@@ -89,7 +89,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
   let tmp4 = null;
   if (null != tmp3) {
     let tmp5 = tmp3;
-    if (task_type === tmp(17707).TaskType.EMAIL_VERIFICATION) {
+    if (task_type === tmp(17867).TaskType.EMAIL_VERIFICATION) {
       const currentUser = authStore.getCurrentUser();
       let email;
       if (currentUser != null) {
@@ -97,7 +97,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
       }
       tmp5 = tmp3;
       if (null != email) {
-        const items = [tmp(17707).SafetyFlowScreens.VERIFY_EMAIL];
+        const items = [tmp(17867).SafetyFlowScreens.VERIFY_EMAIL];
         tmp5 = items;
       }
     }

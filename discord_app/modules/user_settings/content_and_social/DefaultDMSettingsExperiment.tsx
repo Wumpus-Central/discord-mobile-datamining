@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx
 import set from "../../../../_runtime/00002_set.js";
-import isFeatureAgeGated from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useAgeVerificationRunner from "../../age_assurance/AgeVerificationUtils.tsx";
+import isFeatureAgeGated from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 
 const result = set.fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");

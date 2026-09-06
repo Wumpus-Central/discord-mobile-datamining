@@ -1,9 +1,9 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellManager.tsx
 import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import _crypto from "../../../utils/MFAUtils.tsx";
-import _modDef14556 from "PasskeyUpsellActionCreators.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import _modDef14663 from "PasskeyUpsellActionCreators.tsx";
 import closure_3 from "../../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../../stores/UserStore.tsx";
 import closure_5 from "../WebAuthnStore.tsx";
@@ -35,20 +35,20 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
     if (_crypto.hasWebAuthn) {
       if (loginStatus.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
-          let tmpResult = tmp(4298);
-          if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1372).DismissibleContent.PASSWORDLESS_UPSELL)) {
+          let tmpResult = tmp(4380);
+          if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1943).DismissibleContent.PASSWORDLESS_UPSELL)) {
             if (!closure_5.hasFetchedCredentials()) {
-              tmpResult = tmp(4332);
+              tmpResult = tmp(4417);
               if (!tmpResult.isModalOpen()) {
                 currentUser = currentUser.getCurrentUser();
                 if (tmp6) {
                   if (obj3.hasFetchedCredentials()) {
-                    _modDef14556.openPasskeyUpsell();
-                    const obj6 = _modDef14556;
+                    _modDef14663.openPasskeyUpsell();
+                    const obj6 = _modDef14663;
                   } else if (!c7) {
                     c7 = true;
-                    const webAuthnCredentials = tmp(6065).fetchWebAuthnCredentials();
-                    const tmpResult1 = tmp(6065);
+                    const webAuthnCredentials = tmp(6597).fetchWebAuthnCredentials();
+                    const tmpResult1 = tmp(6597);
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;

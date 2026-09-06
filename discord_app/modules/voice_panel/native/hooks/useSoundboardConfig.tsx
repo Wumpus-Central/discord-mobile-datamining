@@ -46,8 +46,8 @@ export default function useSoundboardConfig(arg0, arg1) {
   obj[2] = tmp8;
   let stringResult;
   if (stateFromStores) {
-    const intl = tmp3(1233).intl;
-    stringResult = intl.string(tmp3(1233).t.X1lQli);
+    const intl = tmp3(1114).intl;
+    stringResult = intl.string(tmp3(1114).t.X1lQli);
   }
   obj[3] = stringResult;
   obj[4] =

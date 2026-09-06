@@ -1,12 +1,12 @@
 // discord_app/modules/directory_channels/native/GuildDirectoryTemplatesIcons.tsx
 import set from "../../../../_runtime/00002_set.js";
-import registerAssetDefault from "../../../../_runtime/12122_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/12123_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/12124_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/12125_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/12126_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/12127_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/12128_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12326_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/12327_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/12328_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/12329_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/12330_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/12331_registerAsset.js";
+import registerAssetDefault7 from "../../../../_runtime/12332_registerAsset.js";
 
 const obj = {
   CREATE: registerAssetDefault,

@@ -85,13 +85,13 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
 };
 prototype["handleWrite"] = function handleWrite(database) {
   this.hasSuccessfullyConnected = true;
-  let obj = set(1955);
+  let obj = set(1986);
   obj.cacheTransaction(database).put(closure_3, "\u{1F44B}");
   const cacheTransactionResult = obj.cacheTransaction(database);
-  const obj3 = set(1955);
-  set(1955).cacheTransaction(database).put(closure_7, closure_6);
-  const cacheTransactionResult1 = set(1955).cacheTransaction(database);
-  const result = set(1955).forceResyncVersionTransaction(database);
+  const obj3 = set(1986);
+  set(1986).cacheTransaction(database).put(closure_7, closure_6);
+  const cacheTransactionResult1 = set(1986).cacheTransaction(database);
+  const result = set(1986).forceResyncVersionTransaction(database);
   obj = { version: closure_4 };
   result.put(closure_5, obj);
 };

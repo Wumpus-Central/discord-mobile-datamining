@@ -1,7 +1,7 @@
 // discord_app/modules/game_console/GameConsoleActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import snapVolumeToDefault from "../user_settings/voice/AudioSettingsUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/RTCConnectionStore.tsx";
@@ -71,12 +71,12 @@ function _disconnectRemote() {
     yield Promise.all(items);
     if (1 === tmp7) {
       c3 = 0;
-      obj1 = v0(4858);
+      obj1 = v0(4904);
       const obj2 = { title: null, body: null };
-      const intl = callback(1233).intl;
-      obj2[0] = intl.string(callback(1233).t.LNhXcL);
-      const intl2 = callback(1233).intl;
-      obj2[1] = intl2.string(callback(1233).t.QnKxtP);
+      const intl = callback(1114).intl;
+      obj2[0] = intl.string(callback(1114).t.LNhXcL);
+      const intl2 = callback(1114).intl;
+      obj2[1] = intl2.string(callback(1114).t.QnKxtP);
       obj1.show(obj2);
       c4 = 3;
     } else if (arg0 === 1) {
@@ -484,9 +484,9 @@ function _cancelCommand() {
               obj1[1] = callback;
               obj1[2] = callback2;
               obj1[3] = dependencyMap;
-              callback2(706).dispatch(obj1);
+              callback2(573).dispatch(obj1);
               c6 = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = { url: null, rejectWithError: false };
               obj2[0] = c8.CONSOLES_DEVICES_COMMAND(callback, callback2, dependencyMap);
               c7 = 2;
@@ -498,7 +498,7 @@ function _cancelCommand() {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_3 = closure_5;
-            obj3 = callback2(706);
+            obj3 = callback2(573);
             const obj4 = {
               type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_FAIL",
               platform: null,
@@ -523,7 +523,7 @@ function _cancelCommand() {
             return obj5;
           } else {
             c6 = 0;
-            obj = callback2(706);
+            obj = callback2(573);
             const obj6 = {
               type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS",
               platform: null,

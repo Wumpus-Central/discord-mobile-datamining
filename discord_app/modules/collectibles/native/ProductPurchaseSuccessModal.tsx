@@ -2,10 +2,10 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import Background from "../../../../_runtime/05511_Background.js";
-import tinycolorDefault from "../../../../_runtime/07307_tinycolor.js";
+import Background from "../../../../_runtime/05631_Background.js";
+import tinycolorDefault from "../../../../_runtime/07552_tinycolor.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00850__toArray.js";
+import closure_4 from "../../../../_runtime/00718__toArray.js";
 import closure_5 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_9 from "../../a11y/AccessibilityStore.tsx";
@@ -147,13 +147,13 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   obj2[4] = str;
   let PX_32;
   if (arg0 === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
-    PX_32 = tmp(709).space.PX_32;
+    PX_32 = tmp(576).space.PX_32;
   }
   obj2[5] = PX_32;
   if (flag) {
-    if (arg0 === tmp3(1949).CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === tmp3(1889).CollectiblesItemType.AVATAR_DECORATION) {
       const obj3 = { shadowColor: null, shadowOffset: null, shadowOpacity: 1, shadowRadius: 60, elevation: 24 };
-      obj3[0] = tmp(709).unsafe_rawColors.PRIMARY_630;
+      obj3[0] = tmp(576).unsafe_rawColors.PRIMARY_630;
       obj3[1] = { width: 0, height: 0 };
       let obj8 = obj3;
     }
@@ -168,25 +168,25 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
       justifyContent: "flex-start",
       gap: null,
     };
-    obj4[0] = tmp(709).space.PX_24;
+    obj4[0] = tmp(576).space.PX_24;
     let str2;
-    if (arg0 === tmp3(1949).CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === tmp3(1889).CollectiblesItemType.AVATAR_DECORATION) {
       str2 = "32%";
     }
     obj4[1] = str2;
-    obj4[5] = tmp(709).space.PX_16;
+    obj4[5] = tmp(576).space.PX_16;
     obj[10] = obj4;
     const obj5 = { textAlign: "center", marginHorizontal: null };
-    obj5[1] = tmp(709).space.PX_32;
+    obj5[1] = tmp(576).space.PX_32;
     obj[11] = obj5;
     const obj6 = { marginBottom: null };
-    obj6[0] = tmp(709).space.PX_16;
+    obj6[0] = tmp(576).space.PX_16;
     obj[12] = obj6;
     const obj7 = { flexDirection: "row", gap: null, paddingVertical: null, marginHorizontal: null, borderRadius: null };
-    obj7[1] = tmp(709).space.PX_12;
-    obj7[2] = tmp(709).space.PX_16;
-    obj7[3] = tmp(709).space.PX_24;
-    obj7[4] = tmp(709).radii.round;
+    obj7[1] = tmp(576).space.PX_12;
+    obj7[2] = tmp(576).space.PX_16;
+    obj7[3] = tmp(576).space.PX_24;
+    obj7[4] = tmp(576).radii.round;
     obj[13] = obj7;
     return obj;
   }
@@ -206,16 +206,16 @@ let closure_22 = tinycolorDefault("black").toHexString();
 let obj5 = tinycolorDefault("black");
 let result = require("set").fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessModal.tsx");
 
-export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
-  ({ product, useCategoryImage } = orbBalancePriorToPurchase);
+export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEditProfile) {
+  ({ product, useCategoryImage } = stageCollectibleChangeForEditProfile);
   if (useCategoryImage === undefined) {
     useCategoryImage = false;
   }
-  ({ renderMessages, showOrbBalancePill, onSuccess, onCancel } = orbBalancePriorToPurchase);
+  ({ renderMessages, showOrbBalancePill, onSuccess, onCancel } = stageCollectibleChangeForEditProfile);
   if (showOrbBalancePill === undefined) {
     showOrbBalancePill = false;
   }
-  let prop = orbBalancePriorToPurchase.orbBalancePriorToPurchase;
+  let prop = stageCollectibleChangeForEditProfile.orbBalancePriorToPurchase;
   if (prop === undefined) {
     prop = null;
   }
@@ -362,7 +362,11 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
     const mobileBgUrl = category.mobileBgUrl;
   }
   const tmp2Result7 = stateFromStores(sharedValue[25]);
-  handleUseNow = stateFromStores(sharedValue[26]).useHandleUseNow({ product, onSuccess });
+  handleUseNow = stateFromStores(sharedValue[26]).useHandleUseNow({
+    product,
+    onSuccess,
+    stageCollectibleChangeForEditProfile: stageCollectibleChangeForEditProfile.stageCollectibleChangeForEditProfile,
+  });
   const isApplying = handleUseNow.isApplying;
   ({ handleUseNow, canUseNow, handleEditProfile } = handleUseNow);
   const avatarSource = currentUser.getAvatarSource(undefined, false, avatarSize);

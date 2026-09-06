@@ -18,13 +18,13 @@ function SearchHistoryRemoveIcon(searchContext) {
   const callback = importAllResult.useCallback(() => {
     const result = searchHistoryItem(closure_1_2[10]).removeSearchHistoryItem(searchContext, searchHistoryItem);
   }, items);
-  return callback2(searchContext(5077).PressableHighlight, {
+  return callback2(searchContext(5123).PressableHighlight, {
     onPress: callback,
     accessibilityRole: "button",
     unstable_pressDelay: 130,
     style: { marginLeft: 16 },
     hitSlop: { bottom: 16, left: 16, right: 16, top: 16 },
-    children: callback2(searchContext(5560).XSmallIcon, { size: "sm", color: "interactive-text-default" }),
+    children: callback2(searchContext(5680).XSmallIcon, { size: "sm", color: "interactive-text-default" }),
   });
 }
 function SearchHistoryTextRow(searchContext) {
@@ -34,7 +34,7 @@ function SearchHistoryTextRow(searchContext) {
   let onPressSearchHistoryText;
   const tmp = callback3();
   dependencyMap = tmp;
-  let obj = searchContext(16479);
+  let obj = searchContext(16642);
   onPressSearchHistoryText = obj.useOnPressSearchHistoryText({ searchContext });
   const items = [onPressSearchHistoryText, searchContext, , ,];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
@@ -62,7 +62,7 @@ function SearchHistoryTextRow(searchContext) {
   obj = { label: null, onPress: null, trailing: null, iconContainerStyle: null, icon: null };
   const items1 = [
     mapped,
-    closure_10(searchContext(4474).Text, {
+    closure_10(searchContext(4556).Text, {
       lineClamp: 1,
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
@@ -77,9 +77,9 @@ function SearchHistoryTextRow(searchContext) {
   obj[3] = tmp.textIconContainer;
   obj[4] = closure_10(View, {
     style: tmp.iconContainer,
-    children: closure_10(searchContext(6245).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }),
+    children: closure_10(searchContext(7051).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }),
   });
-  return closure_10(searchContext(16489).SearchListRow, obj);
+  return closure_10(searchContext(16652).SearchListRow, obj);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;

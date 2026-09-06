@@ -1,10 +1,10 @@
 // discord_app/modules/frames/native/FramesNativeManager.tsx
-import v1 from "../../../../_runtime/00511_v1.js";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import ComponentDispatcher from "../../../utils/ComponentDispatchUtils.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import v1 from "../../../../_runtime/01256_v1.js";
 import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
-import _modDef4859 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4905 from "../../../actions/native/AlertActionCreators.tsx";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import leaveFrameDefault from "../FramesManager.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -13,7 +13,7 @@ import { isLaunched } from "../FramesConstants.tsx";
 import { ComponentActions } from "../../../Constants.tsx";
 import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "../../activities/Constants.tsx";
 import { TransportTypes } from "../../rpc/Constants.tsx";
-import WebView from "../../../../_runtime/08612_WebView.js";
+import WebView from "../../../../_runtime/08298_WebView.js";
 import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 require = arg1;
@@ -174,7 +174,7 @@ class FramesNativeManager extends tmp5 {
 const prototype = FramesNativeManager.prototype;
 prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason) {
   ({ code, message } = reason);
-  let obj = _modDef4859;
+  let obj = _modDef4905;
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });

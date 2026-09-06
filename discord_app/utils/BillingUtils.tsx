@@ -1,6 +1,6 @@
 // discord_app/utils/BillingUtils.tsx
+import _modDef1232 from "SentryUtils.native.tsx";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef1205 from "SentryUtils.native.tsx";
 import setDefault from "../errors/BillingError.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import { PaymentGateways } from "../../discord_common/js/shared/Constants.tsx";
@@ -102,7 +102,7 @@ export const createGatewayCheckoutContext = function createGatewayCheckoutContex
   return applyArgumentsResult;
 };
 export const captureBillingException = function captureBillingException(error, tags) {
-  let obj = _modDef1205;
+  let obj = _modDef1232;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;
@@ -139,7 +139,7 @@ export const isExpectedHttpClientError = function isExpectedHttpClientError(stat
   return tmp2;
 };
 export const captureBillingMessage = function captureBillingMessage(arg0, tags) {
-  let obj = _modDef1205;
+  let obj = _modDef1232;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

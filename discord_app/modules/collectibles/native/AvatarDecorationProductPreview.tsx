@@ -29,10 +29,10 @@ export default function AvatarDecorationProductPreview(product) {
       children: null,
     };
     obj[0] = tmp.fullSizePreview;
-    const intl = tmp2(1233).intl;
+    const intl = tmp2(1114).intl;
     obj = { a11y_text: null };
     obj[0] = firstAvatarDecoration.label;
-    obj[2] = intl.formatToPlainString(tmp2(1233).t.Do2lxE, obj);
+    obj[2] = intl.formatToPlainString(tmp2(1114).t.Do2lxE, obj);
     obj1 = {
       user: null,
       guildId: "r",
@@ -41,9 +41,9 @@ export default function AvatarDecorationProductPreview(product) {
       animate: null,
     };
     obj1[0] = currentUser;
-    obj1[2] = tmp2(1296).AvatarSizes.GIFT_START;
+    obj1[2] = tmp2(1178).AvatarSizes.GIFT_START;
     obj1[3] = firstAvatarDecoration;
-    obj[5] = jsx(tmp2(1296).Avatar, {
+    obj[5] = jsx(tmp2(1178).Avatar, {
       user: null,
       guildId: "r",
       size: true,

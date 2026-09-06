@@ -86,18 +86,18 @@ export default function AccountSwitcherListItem(arg0) {
   if (user.id === id) {
     if (showActiveAccountLabel) {
       obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
-      const intl = tmp2(1233).intl;
-      obj[2] = intl.string(tmp2(1233).t.seV8yt);
-      let tmp8 = callback(tmp2(4474).Text, obj);
+      const intl = tmp2(1114).intl;
+      obj[2] = intl.string(tmp2(1114).t.seV8yt);
+      let tmp8 = callback(tmp2(4556).Text, obj);
     }
     if (null == onPressUser) {
       let PressableOpacity = closure_3;
     } else {
-      PressableOpacity = tmp2(5077).PressableOpacity;
+      PressableOpacity = tmp2(5123).PressableOpacity;
     }
     obj = { selected: null };
     obj[0] = tmp7;
-    const radioA11yNative = tmp2(4205).useRadioA11yNative(obj);
+    const radioA11yNative = tmp2(4277).useRadioA11yNative(obj);
     obj1 = {
       accessibilityRole: null,
       accessibilityState: null,
@@ -109,8 +109,8 @@ export default function AccountSwitcherListItem(arg0) {
     ({ accessibilityRole: obj7[0], accessibilityState: obj7[1] } = radioA11yNative);
     let stringResult;
     if (!tmp7) {
-      const intl2 = tmp2(1233).intl;
-      stringResult = intl2.string(tmp2(1233).t.wY4y0R);
+      const intl2 = tmp2(1114).intl;
+      stringResult = intl2.string(tmp2(1114).t.wY4y0R);
     }
     obj1[2] = stringResult;
     obj1[3] = tmp.accountSwitcherListItem;
@@ -120,16 +120,16 @@ export default function AccountSwitcherListItem(arg0) {
     const items2 = [leading, ,];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.accountInfo;
-    const obj3 = { user: null, guildId: "Array" };
+    const obj3 = { user: null, guildId: "a" };
     obj3[0] = obj2;
-    const items3 = [callback(tmp2(1296).Avatar, obj3)];
+    const items3 = [callback(tmp2(1178).Avatar, obj3)];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.accountListTag;
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.tagContainer;
     const obj6 = { variant: "text-md/semibold", color: "text-default", style: null, lineClamp: 1, children: null };
     obj6[2] = tmp.username;
-    const tmp2Result = tmp2(4205);
+    const tmp2Result = tmp2(4277);
     let str = "always";
     if (stateFromStores) {
       str = "never";
@@ -137,7 +137,7 @@ export default function AccountSwitcherListItem(arg0) {
     const obj7 = { mode: "username", identifiable: null };
     obj7[1] = str;
     obj6[4] = nameFromUserDefault.getUserTag(obj2, obj7);
-    const items4 = [callback(tmp2(4474).Text, obj6)];
+    const items4 = [callback(tmp2(4556).Text, obj6)];
     let tmp18Result = !stateFromStores;
     if (!stateFromStores) {
       tmp18Result = !obj2.hasUniqueUsername();
@@ -146,7 +146,7 @@ export default function AccountSwitcherListItem(arg0) {
       const obj8 = { variant: "text-md/normal", color: "text-muted", children: null };
       const _HermesInternal = HermesInternal;
       obj8[2] = "#" + obj2.discriminator;
-      tmp18Result = tmp18(tmp2(4474).Text, obj8);
+      tmp18Result = tmp18(tmp2(4556).Text, obj8);
     }
     items4[1] = tmp18Result;
     obj5[1] = items4;
@@ -167,9 +167,9 @@ export default function AccountSwitcherListItem(arg0) {
   tmp8 = null;
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
     const obj10 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
-    const intl3 = tmp2(1233).intl;
-    obj10[2] = intl3.string(tmp2(1233).t.tYX2ps);
-    tmp8 = callback(tmp2(4474).Text, obj10);
+    const intl3 = tmp2(1114).intl;
+    obj10[2] = intl3.string(tmp2(1114).t.tYX2ps);
+    tmp8 = callback(tmp2(4556).Text, obj10);
   }
 }
 export { AccountStatusIcon };

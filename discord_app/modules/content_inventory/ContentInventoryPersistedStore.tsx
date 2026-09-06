@@ -1,7 +1,7 @@
 // discord_app/modules/content_inventory/ContentInventoryPersistedStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
 import set from "../../../_runtime/00002_set.js";
 

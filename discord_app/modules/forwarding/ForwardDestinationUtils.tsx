@@ -17,11 +17,11 @@ require = arg1;
 const result = require("set").fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(10943).getChannelIdFromDestinationId);
-  found = mapped.find(found(1470).isNotNullish);
+  const mapped = selectedDestinations.map(found(10981).getChannelIdFromDestinationId);
+  found = mapped.find(found(1369).isNotNullish);
   const items = [closure_8];
   const items1 = [found];
-  const stateFromStores = found(586).useStateFromStores(items, () => closure_1_8.getChannel(found), items1);
+  const stateFromStores = found(504).useStateFromStores(items, () => closure_1_8.getChannel(found), items1);
   const items2 = [stateFromStores];
   return React.useMemo(() => {
     let tmp = stateFromStores;
@@ -59,11 +59,11 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
       let obj = shouldShowAgeGateForVoiceChannel;
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp) {
-          let tmp11Result = tmp11(4732);
+          let tmp11Result = tmp11(4771);
         }
         obj = { label: null, lineClamp: 2 };
-        const intl = tmp11(1233).intl;
-        obj[0] = intl.string(tmp11(1233).t.KgPx1D);
+        const intl = tmp11(1114).intl;
+        obj[0] = intl.string(tmp11(1114).t.KgPx1D);
         return obj;
       }
       if (tmp) {
@@ -71,23 +71,23 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (components.attachments.length > 0) {
             if (!closure_9.can(constants2.ATTACH_FILES, type)) {
               obj = { label: null };
-              const intl2 = tmp11(1233).intl;
-              obj[0] = intl2.string(tmp11(1233).t.P7yvbm);
+              const intl2 = tmp11(1114).intl;
+              obj[0] = intl2.string(tmp11(1114).t.P7yvbm);
               return obj;
             }
           } else {
             const messageSnapshots = components.messageSnapshots;
           }
           if (components.embeds.length > 0) {
-            tmp11Result = tmp11(4851);
+            tmp11Result = tmp11(4897);
             if (!tmp11Result.canEmbedLinks(type, closure_9)) {
               if (!tmp11Result1.shouldStripEmbeds(components)) {
                 obj1 = { label: null };
-                const intl3 = tmp11(1233).intl;
-                obj1[0] = intl3.string(tmp11(1233).t.Wr4RIX);
+                const intl3 = tmp11(1114).intl;
+                obj1[0] = intl3.string(tmp11(1114).t.Wr4RIX);
                 return obj1;
               }
-              tmp11Result1 = tmp11(4851);
+              tmp11Result1 = tmp11(4897);
             }
           } else {
             const messageSnapshots2 = components.messageSnapshots;
@@ -95,15 +95,15 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (tmp5) {
             if (!tmp11Result2.canEmbedLinks(type, closure_9)) {
               const obj2 = { label: null };
-              const intl4 = tmp11(1233).intl;
-              obj2[0] = intl4.string(tmp11(1233).t.Wr4RIX);
+              const intl4 = tmp11(1114).intl;
+              obj2[0] = intl4.string(tmp11(1114).t.Wr4RIX);
               return obj2;
             }
-            tmp11Result2 = tmp11(4851);
+            tmp11Result2 = tmp11(4897);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          let arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4853).getMessageStickers(components), 0);
+          let arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4899).getMessageStickers(components), 0);
           arraySpreadResult = HermesBuiltin.arraySpread(
             messageSnapshots3.flatMap((message) => type(table[12]).getMessageStickers(message.message)),
             arraySpreadResult,
@@ -126,8 +126,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 })
               ) {
                 const obj3 = { label: null };
-                const intl5 = tmp11(1233).intl;
-                obj3[0] = intl5.string(tmp11(1233).t["0Yyrua"]);
+                const intl5 = tmp11(1114).intl;
+                obj3[0] = intl5.string(tmp11(1114).t["0Yyrua"]);
                 return obj3;
               }
             }
@@ -135,14 +135,14 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (components.hasFlag(constants.IS_VOICE_MESSAGE)) {
             if (!closure_9.can(constants2.SEND_VOICE_MESSAGES, type)) {
               const obj4 = { label: null };
-              const intl6 = tmp11(1233).intl;
-              obj4[0] = intl6.string(tmp11(1233).t.quj4DY);
+              const intl6 = tmp11(1114).intl;
+              obj4[0] = intl6.string(tmp11(1114).t.quj4DY);
               return obj4;
             }
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const tmp11Result3 = tmp11(4853);
+          const tmp11Result3 = tmp11(4899);
         }
       }
     }
@@ -174,8 +174,8 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
           if (null != user) {
             nickname = nickname.getNickname(user.id);
             if (nickname == null) {
-              nickname = callback2(4322).getName(user);
-              const obj2 = callback2(4322);
+              nickname = callback2(4404).getName(user);
+              const obj2 = callback2(4404);
             }
             tmp13 = nickname;
           }
@@ -184,7 +184,7 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
           channel = channel.getChannel(id);
           let channelName = null;
           if (null != channel) {
-            const obj = callback(4674);
+            const obj = callback(4713);
             channelName = obj.computeChannelName(channel, user, nickname, true);
           }
           return channelName;

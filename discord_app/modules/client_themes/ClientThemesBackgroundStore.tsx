@@ -2,9 +2,9 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import getThemeForColor from "ClientThemesUtils.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
-import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import closure_5 from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
 import closure_6 from "../user_settings/ThemeStore.tsx";
@@ -65,11 +65,11 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = tmp(1365);
+    let tmpResult = tmp(4407);
     result = tmpResult.isPerModeThemingActive();
   }
   if (!result) {
-    tmpResult = tmp(4325);
+    tmpResult = tmp(4408);
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
@@ -238,7 +238,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
               c15 = true;
             }
           }
-          tmp6Result = tmp6(4322);
+          tmp6Result = tmp6(4404);
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
         tmp6 = require;

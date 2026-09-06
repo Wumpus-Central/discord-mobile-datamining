@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import frozen from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import createPremiumGroupInviteEmbed from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07972_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/08051_registerAsset.js";
 import closure_3 from "../../../../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";

@@ -999,6 +999,7 @@ export const PremiumUpsellTypes = {
   PREMIUM_CLIENT_THEME_SETTINGS_UPSELL: "premium_client_theme_settings_upsell",
   VIDEO_STAGE_LIMIT: "video_stage_limit",
   SOUND_PICKER_SOUND_CLICKED: "sound_picker_sound_clicked",
+  SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED: "sound_quick_access_picker_sound_clicked",
   APP_ICON_UPSELL: "app_icon_upsell",
   COLLECTIBLES_SHOP: "collectibles_shop",
   COLLECTIBLES_PROFILE_SETTINGS_UPSELL: "collectibles_profile_settings_upsell",
@@ -1037,6 +1038,7 @@ export const SKU_ID_PURCHASED_FLAGS = frozen8;
 export const MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE = 52428800;
 export const MAX_PREMIUM_TIER_1_ATTACHMENT_SIZE = 52428800;
 export const MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE = 524288000;
+export const MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE_1GB = 1073741824;
 export const MAX_BOOSTED_GUILD_TIER_2_ATTACHMENT_SIZE = 52428800;
 export const MAX_BOOSTED_GUILD_TIER_3_ATTACHMENT_SIZE = 104857600;
 export const MAX_GUILD_FILE_SIZE_50_MB = 52428800;

@@ -12,14 +12,14 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   isReminder = isReminder.isReminder;
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5962)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
   const callback = React.useCallback(() => analyticsLocations(closure_1_2[5])(isReminder, analyticsLocations), items);
-  let obj = isReminder(4139);
+  let obj = isReminder(4218);
   const premiumTypeDisplayName = obj.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
-  const intl = isReminder(1233).intl;
+  const intl = isReminder(1114).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = isReminder(1233).t;
+  const t = isReminder(1114).t;
   if (isAtLimit) {
     obj = { nitroTierName: null, premiumMax: null };
     obj[0] = premiumTypeDisplayName;

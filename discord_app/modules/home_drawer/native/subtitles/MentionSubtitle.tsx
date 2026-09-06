@@ -18,11 +18,11 @@ export default function MentionSubtitle(channel) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(4982).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(4982);
+    channelIconComponentWithGuild = tmp(5028).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(5028);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(5034).TextIcon;
+    channelIconComponentWithGuild = tmp(5080).TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
@@ -34,7 +34,7 @@ export default function MentionSubtitle(channel) {
     style: subtitleStyles.subtitleText,
     children: null,
   };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj1[4] = intl.format(getSystemLocale.t.L9YdGH, {
     channelName,
     count: count - 1,

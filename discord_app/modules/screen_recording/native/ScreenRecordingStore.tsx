@@ -1,6 +1,6 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingStore.tsx
 import set from "../../../../_runtime/00002_set.js";
-import keys from "../../../../_runtime/00641_keys.js";
+import keys from "../../../../_runtime/00560_keys.js";
 
 let obj = keys.create((arg0, arg1) => {
   closure_0 = arg0;
@@ -72,7 +72,7 @@ let obj = keys.create((arg0, arg1) => {
       return callback({ currentStep: 0, stepStartedTime: Date.now(), isCompleted: false });
     },
     completeActionSheet() {
-      callback(15771).handleStopAndSend();
+      callback(15933).handleStopAndSend();
       callback({ currentStep: 0, stepStartedTime: null, isCompleted: false });
     },
   };

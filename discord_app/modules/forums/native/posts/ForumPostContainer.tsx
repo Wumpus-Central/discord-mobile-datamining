@@ -32,7 +32,7 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
   let sharedValue;
   ({ threadId, children, style } = arg0);
   const tmp = callback();
-  let obj = sharedValue(4217);
+  let obj = sharedValue(4296);
   sharedValue = obj.useSharedValue(false);
   const items = [sharedValue];
   const memo = importAllResult.useMemo(
@@ -49,7 +49,7 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
   ({ onPressIn, onPressOut } = memo);
   obj = {
     style: tmp.card,
-    children: jsx(sharedValue(5610).Card, {
+    children: jsx(sharedValue(5607).Card, {
       style: items1,
       variant: "surface-high",
       accessibilityRole: "button",
@@ -67,7 +67,7 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
     value: sharedValue,
     children: (
       <View style={tmp.card}>
-        {jsx(sharedValue(5610).Card, {
+        {jsx(sharedValue(5607).Card, {
           style: items1,
           variant: "surface-high",
           accessibilityRole: "button",
@@ -84,7 +84,7 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
   return (
     <redux.Provider value={sharedValue}>
       <View style={tmp.card}>
-        {jsx(sharedValue(5610).Card, {
+        {jsx(sharedValue(5607).Card, {
           style: items1,
           variant: "surface-high",
           accessibilityRole: "button",

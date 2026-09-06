@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventUtils.tsx
 import set from "../../../_runtime/00002_set.js";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 
 ({
@@ -22,7 +22,7 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
   const diff = time - closure_4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
-      const obj4 = tmp(4074)(arg1);
+      const obj4 = tmp(4153)(arg1);
       const isBetweenResult = obj4.isBetween(diff, time);
       let EVENT_STARTING_SOON;
       if (!isBetweenResult) {

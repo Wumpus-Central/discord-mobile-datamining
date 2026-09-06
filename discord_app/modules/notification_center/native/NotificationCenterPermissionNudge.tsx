@@ -17,44 +17,44 @@ function NotificationCenterBannerImpl(onDismiss) {
   onDismiss = onDismiss.onDismiss;
   const tmp = callback6();
   callback3(() => {
-    let obj = callback(695);
+    let obj = callback(1242);
     obj = { action: constants4.IMPRESSION, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
     obj.track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
   }, []);
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconContainer, children: null };
   obj = { size: "md", color: ThemesDefault.colors.ICON_STRONG };
-  obj[1] = callback4(onDismiss(10264).BellSlashIcon, obj);
+  obj[1] = callback4(onDismiss(9059).BellSlashIcon, obj);
   const items = [callback4(View, obj), ,];
   obj1 = { style: tmp.contentContainer, children: null };
   const obj2 = { variant: "text-md/semibold", color: "text-default", children: null };
-  const intl = onDismiss(1233).intl;
-  obj2[2] = intl.string(onDismiss(1233).t.G6YBna);
-  const items1 = [callback4(onDismiss(4474).Text, obj2), ,];
+  const intl = onDismiss(1114).intl;
+  obj2[2] = intl.string(onDismiss(1114).t.G6YBna);
+  const items1 = [callback4(onDismiss(4556).Text, obj2), ,];
   const obj3 = {
     variant: "text-md/medium",
     color: "text-muted",
     style: { marginTop: ThemesDefault.space.PX_4 },
     children: null,
   };
-  const intl2 = onDismiss(1233).intl;
-  obj3[3] = intl2.string(onDismiss(1233).t["9CoPDE"]);
-  items1[1] = callback4(onDismiss(4474).Text, obj3);
+  const intl2 = onDismiss(1114).intl;
+  obj3[3] = intl2.string(onDismiss(1114).t["9CoPDE"]);
+  items1[1] = callback4(onDismiss(4556).Text, obj3);
   const obj5 = { style: tmp.ctaButton, children: null };
   const obj6 = { variant: "primary", size: "md", text: null, onPress: null };
-  const intl3 = onDismiss(1233).intl;
-  obj6[2] = intl3.string(onDismiss(1233).t.a4bgO0);
+  const intl3 = onDismiss(1114).intl;
+  obj6[2] = intl3.string(onDismiss(1114).t.a4bgO0);
   obj6[3] = function onPress() {
-    let obj = onDismiss(12211);
+    let obj = onDismiss(12411);
     const pushNotificationPermission = obj.requestPushNotificationPermission(
       constants2.ALLOW_TO_REQUEST,
       constants3.NOTIFICATION_CENTER,
       closure_8,
     );
     obj = { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
-    callback(695).track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
+    callback(1242).track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
   };
-  obj5[1] = callback4(onDismiss(4929).Button, obj6);
+  obj5[1] = callback4(onDismiss(4975).Button, obj6);
   items1[2] = callback4(View, obj5);
   obj1[1] = items1;
   items[1] = callback5(View, obj1);
@@ -70,10 +70,10 @@ function NotificationCenterBannerImpl(onDismiss) {
     accessibilityLabel: null,
     children: null,
   };
-  const intl4 = onDismiss(1233).intl;
-  obj7[3] = intl4.string(onDismiss(1233).t.WAI6xu);
-  obj7[4] = callback4(onDismiss(5560).XSmallIcon, { size: "sm", color: "icon-strong" });
-  items[2] = callback4(onDismiss(5077).PressableHighlight, obj7);
+  const intl4 = onDismiss(1114).intl;
+  obj7[3] = intl4.string(onDismiss(1114).t.WAI6xu);
+  obj7[4] = callback4(onDismiss(5680).XSmallIcon, { size: "sm", color: "icon-strong" });
+  items[2] = callback4(onDismiss(5123).PressableHighlight, obj7);
   obj[1] = items;
   return callback5(View, obj);
 }
@@ -132,7 +132,7 @@ export default function NotificationCenterPermissionNudge() {
   if (!obj.useConfig({ location: "NotificationCenterPermissionNudge" }).inHoldout) {
     prop = null;
     if (canSeePushNotificationNudge) {
-      prop = tmp2(1372).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
+      prop = tmp2(1943).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
     }
   }
   const tmp5 = callback(

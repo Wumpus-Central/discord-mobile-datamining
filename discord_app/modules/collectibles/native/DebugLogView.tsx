@@ -46,7 +46,7 @@ export default function DebugLogView() {
   dependencyMap = callback((clearLogs) => clearLogs.clearLogs);
   const tmp = callback4();
   const React = tmp;
-  let obj = arr(586);
+  let obj = arr(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_6.get("shop_show_debug_overlay"));
   const items1 = [arr.length, stateFromStores];
@@ -70,7 +70,7 @@ export default function DebugLogView() {
       obj1[1] = obj2;
       const items2 = ["Debug Log (", arr.length, " entries)"];
       obj1[2] = items2;
-      const items3 = [callback2(tmp2(4474).Text, obj1)];
+      const items3 = [callback2(tmp2(4556).Text, obj1)];
       const obj3 = { onPress: null, style: null, children: null };
       obj3[0] = function onPress() {
         dependencyMap();
@@ -78,13 +78,13 @@ export default function DebugLogView() {
       obj3[1] = tmp.clearButton;
       const obj4 = { variant: "text-xs/bold", style: null, children: "Clear" };
       obj4[1] = tmp.clearButtonText;
-      obj3[2] = callback3(tmp2(4474).Text, obj4);
+      obj3[2] = callback3(tmp2(4556).Text, obj4);
       items3[1] = callback3(closure_5, obj3);
       obj[1] = items3;
       const items4 = [callback2(stateFromStores, obj)];
       const obj5 = { children: null };
       obj5[0] = substr.map((children) =>
-        closure_1_10(arr(4474).Text, { variant: "text-xs/normal", style: debugLogText.debugLogText, children }, arg1),
+        closure_1_10(arr(4556).Text, { variant: "text-xs/normal", style: debugLogText.debugLogText, children }, arg1),
       );
       items4[1] = callback3(closure_4, obj5);
       obj[1] = items4;

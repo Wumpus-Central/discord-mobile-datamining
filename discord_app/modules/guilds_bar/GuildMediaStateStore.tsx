@@ -2,8 +2,8 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import set from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
 import closure_4 from "../experiments/apex/ApexExperimentStore.tsx";
 import closure_5 from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
@@ -120,7 +120,7 @@ function computeGuildMediaState(closure_0) {
       continue;
     }
     obj = {
-      skipMutedVcs: callback(13599).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
+      skipMutedVcs: callback(13708).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
       currentUserId: id.getId(),
       selectedVoiceChannelId: voiceChannelId,
       selectedVoiceGuildId: null,
@@ -263,7 +263,7 @@ function computeGuildMediaState(closure_0) {
           const basicChannel = store.getBasicChannel(arg0);
           let tmp2 = null != basicChannel;
           if (tmp2) {
-            tmp2 = lib(5369)(basicChannel, closure_12);
+            tmp2 = lib(5416)(basicChannel, closure_12);
           }
           return tmp2;
         });
@@ -274,13 +274,13 @@ function computeGuildMediaState(closure_0) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp34Result = tmp34(8156);
+        let tmp34Result = tmp34(9546);
         let tmp38 = store;
         if (tmp34Result.isActivitiesInTextEnabled(store.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
         } else {
           someResult2 = found.some((location) => {
-            const channel = store.getChannel(callback(4110).getEmbeddedActivityLocationChannelId(location.location));
+            const channel = store.getChannel(callback(4189).getEmbeddedActivityLocationChannelId(location.location));
             let tmp2 = null != channel;
             if (tmp2) {
               tmp2 = callback2(channel.type);
@@ -301,7 +301,7 @@ function computeGuildMediaState(closure_0) {
         obj[1] = flag;
         obj[2] = someResult;
         obj[3] = someResult1;
-        tmp34Result = tmp34(9648);
+        tmp34Result = tmp34(9662);
         obj[4] = null != tmp34Result.getGuildActiveEvent(arg0);
         obj[5] = someResult2;
         return obj;

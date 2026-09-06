@@ -13,11 +13,11 @@ const result = set.fileFinishedImporting("modules/parent_tools/hooks/useHelpLine
 export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
   const tmp = useIsInAdultAgeGroupDefault();
   const items = [closure_5];
-  stateFromStores = stateFromStores(644).useStateFromStores(items, () => userCountry.getUserCountry());
-  const obj = stateFromStores(644);
+  stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
+  const obj = stateFromStores(563);
   const items1 = [closure_4];
   const items2 = [stateFromStores];
-  const stateFromStores1 = stateFromStores(644).useStateFromStores(items1, () => locale.locale);
+  const stateFromStores1 = stateFromStores(563).useStateFromStores(items1, () => locale.locale);
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {
       const userCountryCode = stateFromStores(closure_1_2[5]).fetchUserCountryCode();
@@ -41,11 +41,11 @@ export const useShouldShowThroughlineLink = function useShouldShowThroughlineLin
   let stateFromStores;
   const tmp2 = useIsInAdultAgeGroupDefault();
   const items = [closure_5];
-  stateFromStores = stateFromStores(644).useStateFromStores(items, () => userCountry.getUserCountry());
-  let obj = stateFromStores(644);
+  stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
+  let obj = stateFromStores(563);
   const items1 = [closure_4];
   const items2 = [stateFromStores];
-  const stateFromStores1 = stateFromStores(644).useStateFromStores(items1, () => locale.locale);
+  const stateFromStores1 = stateFromStores(563).useStateFromStores(items1, () => locale.locale);
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {
       const userCountryCode = stateFromStores(closure_1_2[5]).fetchUserCountryCode();

@@ -23,7 +23,7 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
     const tmp2 =
       type === require("../../flow/Server.tsx").ComponentType.USER_SELECT ||
       type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
-    let obj = channel(5394);
+    let obj = channel(5442);
     obj = {
       query: null,
       channel: null,
@@ -83,9 +83,9 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
       const obj = {
-        type: callback(4746).SelectOptionType.CHANNEL,
+        type: callback(4792).SelectOptionType.CHANNEL,
         value: id.id,
-        label: callback(4674).computeChannelName(id, closure_8, closure_7),
+        label: callback(4713).computeChannelName(id, closure_8, closure_7),
       };
       return obj;
     });
@@ -103,7 +103,7 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
   );
   const defaultValues = selectActionComponent.defaultValues;
   let channelTypes;
-  if (selectActionComponent.type === channelTypes(1954).ComponentType.CHANNEL_SELECT) {
+  if (selectActionComponent.type === channelTypes(1894).ComponentType.CHANNEL_SELECT) {
     channelTypes = selectActionComponent.channelTypes;
   }
   if (channelTypes === undefined) {
@@ -175,23 +175,23 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
         }
       }
     });
-    let found = mapped.filter(tmp2(1470).isNotNullish);
+    let found = mapped.filter(tmp2(1369).isNotNullish);
   }
   let type;
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type !== channelTypes(1954).ComponentType.USER_SELECT) {
+  if (type !== channelTypes(1894).ComponentType.USER_SELECT) {
     let type1;
     if (interactionComponentState != null) {
       type1 = interactionComponentState.type;
     }
-    if (type1 !== tmp2(1954).ComponentType.ROLE_SELECT) {
+    if (type1 !== tmp2(1894).ComponentType.ROLE_SELECT) {
       let type2;
       if (interactionComponentState != null) {
         type2 = interactionComponentState.type;
       }
-      if (type2 !== tmp2(1954).ComponentType.MENTIONABLE_SELECT) {
+      if (type2 !== tmp2(1894).ComponentType.MENTIONABLE_SELECT) {
         let type3;
         if (interactionComponentState != null) {
           type3 = interactionComponentState.type;
@@ -276,6 +276,6 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
         }
       }
     });
-    return mapped.filter(items(1470).isNotNullish);
+    return mapped.filter(items(1369).isNotNullish);
   }
 };

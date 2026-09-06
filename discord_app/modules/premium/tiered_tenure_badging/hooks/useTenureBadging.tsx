@@ -10,15 +10,15 @@ import GuildFeatures from "../../PremiumConstants.tsx";
 require = arg1;
 function usePremiumSince() {
   const items = [closure_3];
-  const stateFromStores = id(586).useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj = id(586);
+  const stateFromStores = id(504).useStateFromStores(items, () => currentUser.getCurrentUser());
+  obj = id(504);
   const tmp = id;
-  const isPremiumExactlyResult = id(1945).isPremiumExactly(stateFromStores, closure_5.TIER_2);
+  const isPremiumExactlyResult = id(1885).isPremiumExactly(stateFromStores, closure_5.TIER_2);
   id = isPremiumExactlyResult;
-  const obj2 = id(1945);
+  const obj2 = id(1885);
   const items1 = [closure_4];
   const items2 = [isPremiumExactlyResult];
-  let stateFromStores1 = id(586).useStateFromStores(
+  let stateFromStores1 = id(504).useStateFromStores(
     items1,
     () => {
       const premiumSubscription = closure_1_4.getPremiumSubscription();
@@ -37,7 +37,7 @@ function usePremiumSince() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const obj3 = id(586);
+  const obj3 = id(504);
   const items3 = [closure_2];
   if (stateFromStores1 == null) {
     stateFromStores1 = tmpResult.useStateFromStores(items3, () => {
@@ -124,7 +124,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
   if (tieredTenureBadgeForUser == null) {
     tieredTenureBadgeForUser = null;
   }
-  let tmpResult = tmp(586);
+  let tmpResult = tmp(504);
   const items1 = [closure_4];
   const stateFromStores1 = tmpResult.useStateFromStores(items1, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
@@ -135,7 +135,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(7389);
+        tmpResult = tmp(7634);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -150,13 +150,13 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(8985);
+  let tmpResult = tmp(11185);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp6 = null;
   if (null != tieredTenureBadgeForUser) {
     tmp6 = dependencyMap[tieredTenureBadgeForUser];
   }
-  tmpResult = tmp(586);
+  tmpResult = tmp(504);
   const items1 = [closure_3];
   const stateFromStores1 = tmpResult.useStateFromStores(items1, () => authStore.getCurrentUser());
   let id1;
@@ -179,8 +179,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(7389).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(7389);
+        earnedOnDate = tmp(7634).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(7634);
       }
     }
   }
@@ -199,18 +199,18 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
       result = stateFromStores.hasPaidTier2Subscription();
     }
     if (!result) {
-      const earnedTenureBadge = tmp(7389).getEarnedTenureBadge(tmp13);
+      const earnedTenureBadge = tmp(7634).getEarnedTenureBadge(tmp13);
       if (null != earnedTenureBadge) {
         if (tmpResult5.shouldShowWithheldTenureBadge("useTieredTenureBadgeData")) {
           obj = {};
           const merged1 = Object.assign(dependencyMap[earnedTenureBadge]);
-          obj.earnedOnDate = tmp(7389).getEarnedOnDate(earnedTenureBadge, tmp13);
+          obj.earnedOnDate = tmp(7634).getEarnedOnDate(earnedTenureBadge, tmp13);
           obj.status = obj.WITHHELD;
           return obj;
         }
-        tmpResult5 = tmp(8986);
+        tmpResult5 = tmp(11186);
       }
-      const tmpResult4 = tmp(7389);
+      const tmpResult4 = tmp(7634);
     }
     obj1 = {};
     const _Object = Object;

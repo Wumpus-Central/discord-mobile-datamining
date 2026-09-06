@@ -1,9 +1,10 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import isFeatureAgeGated from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
+import isFeatureAgeGated from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import useIsTinyBroncoSettingsEnabled from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 let obj = {
@@ -21,8 +22,19 @@ let obj = {
     const obj = useAgeVerificationRunner;
     const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
     const obj2 = useAgeVerificationRunner;
+    let hasAgeGatedFeatures = isFeatureAgeGated.useHasAgeGatedFeatures();
     const obj3 = isFeatureAgeGated;
-    return isFeatureAgeGated.useHasAgeGatedFeatures() && isAgeVerified && !isVerifiedTeen;
+    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = isAgeVerified;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isVerifiedTeen;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
+    }
+    return hasAgeGatedFeatures;
   },
 };
 const createStaticResult = createToggle.createStatic({
@@ -40,8 +52,19 @@ const createStaticResult = createToggle.createStatic({
     const obj = useAgeVerificationRunner;
     const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
     const obj2 = useAgeVerificationRunner;
+    let hasAgeGatedFeatures = isFeatureAgeGated.useHasAgeGatedFeatures();
     const obj3 = isFeatureAgeGated;
-    return isFeatureAgeGated.useHasAgeGatedFeatures() && isAgeVerified && !isVerifiedTeen;
+    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = isAgeVerified;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isVerifiedTeen;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
+    }
+    return hasAgeGatedFeatures;
   },
 });
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx");

@@ -25,7 +25,7 @@ const memoResult = importAllResult.memo((channel) => {
     hasIcons: false,
     children: null,
   };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj[3] = intl.string(require("../../../../intl/index.native.tsx").t.H4mGfI);
   obj[4] = onSelectDuration;
   obj[6] = autoArchiveOptions.map((value) =>

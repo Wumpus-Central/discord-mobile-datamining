@@ -9,9 +9,9 @@ import closure_10 from "../../../stores/GuildStore.tsx";
 import closure_11 from "../../../stores/PermissionStore.tsx";
 import closure_12 from "../stores/VibegrationsChatStore.tsx";
 import rejectPendingPublish from "../stores/VibegrationsConnectionStore.tsx";
-import closure_16 from "../stores/VibegrationsConnectionStore.tsx";
+import closure_17 from "../stores/VibegrationsConnectionStore.tsx";
 import isProjectOwner from "../stores/VibegrationsProjectStore.tsx";
-import closure_19 from "../stores/VibegrationsProjectStore.tsx";
+import closure_20 from "../stores/VibegrationsProjectStore.tsx";
 import { Permissions } from "../../../Constants.tsx";
 import { MAIN_SURFACE } from "../../frames/FramesConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -28,18 +28,18 @@ function ProjectList(guildId) {
   let first;
   closure_7 = undefined;
   c8 = undefined;
-  const tmp3 = callback3(navigation(stateFromStoresArray[15])().bottom);
+  const tmp3 = callback2(navigation(stateFromStoresArray[15])().bottom);
   let obj = guildId(stateFromStoresArray[16]);
   navigation = obj.useNavigation();
   obj1 = guildId(stateFromStoresArray[17]);
-  const items = [closure_19];
+  const items = [closure_20];
   stateFromStoresArray = obj1.useStateFromStoresArray(items, () => store.getOwnedProjects(), []);
   let obj2 = guildId(stateFromStoresArray[17]);
-  const items1 = [closure_19];
+  const items1 = [closure_20];
   const items2 = [guildId];
-  stateFromStoresArray1 = obj2.useStateFromStoresArray(items1, () => closure_1_19.getSharedProjects(guildId), items2);
+  stateFromStoresArray1 = obj2.useStateFromStoresArray(items1, () => closure_1_20.getSharedProjects(guildId), items2);
   let obj3 = guildId(stateFromStoresArray[17]);
-  const items3 = [closure_19];
+  const items3 = [closure_20];
   const stateFromStores = obj3.useStateFromStores(items3, () => store.getProjectsFetchState(), []);
   const items4 = [stateFromStoresArray, guildId];
   const memo = React.useMemo(() => {
@@ -158,12 +158,12 @@ function ProjectList(guildId) {
               return obj3;
             } else {
               arr = arg1;
-              closure_1_13(arr);
-              closure_1_15(arr, trimmed);
+              closure_1_14(arr);
+              closure_1_16(arr, trimmed);
               v0("");
               obj = { projectId: null };
               obj[0] = arr;
-              arr = arr.push(closure_1_25.CHAT, obj);
+              arr = arr.push(closure_1_26.CHAT, obj);
               c3 = 1;
               c3 = 0;
               closure_1_7(false);
@@ -200,14 +200,14 @@ function ProjectList(guildId) {
     obj2 = { variant: "heading-md/bold", color: "text-default", children: null };
     const intl2 = tmp4(tmp2[20]).intl;
     obj2[2] = intl2.string(tmp(tmp2[21])["2tYpRK"]);
-    const items7 = [callback2(tmp4(tmp2[22]).Text, obj2), , ,];
+    const items7 = [callback(tmp4(tmp2[22]).Text, obj2), , ,];
     obj3 = { placeholder: null, autoComplete: "off", value: null, onChange: null, isDisabled: null };
     const intl3 = tmp4(tmp2[20]).intl;
     obj3[0] = intl3.string(tmp(tmp2[21]).TU9IGR);
     obj3[2] = str;
     obj3[3] = tmp10;
     obj3[4] = first;
-    items7[1] = callback2(tmp4(tmp2[23]).TextArea, obj3);
+    items7[1] = callback(tmp4(tmp2[23]).TextArea, obj3);
     let tmp23Result = null;
     if (null != tmp14) {
       const obj4 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
@@ -221,9 +221,9 @@ function ProjectList(guildId) {
     obj5[2] = "" === str.trim();
     obj5[3] = first;
     obj5[4] = callback;
-    items7[3] = callback2(tmp4(tmp2[24]).Button, obj5);
+    items7[3] = callback(tmp4(tmp2[24]).Button, obj5);
     obj1[1] = items7;
-    const items8 = [closure_23(c8, obj1), , ,];
+    const items8 = [closure_24(c8, obj1), , ,];
     tmp23Result = null;
     if (memo.length > 0) {
       const obj6 = { hasIcons: false, children: null };
@@ -239,9 +239,9 @@ function ProjectList(guildId) {
         }
         obj[1] = relativeTimestamp;
         obj[3] = function onPress() {
-          return closure_1_1.push(closure_2_25.CHAT, { projectId: label.id });
+          return closure_1_1.push(closure_2_26.CHAT, { projectId: label.id });
         };
-        return closure_1_22(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
+        return closure_1_23(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
       });
       tmp23Result = tmp23(tmp4(tmp2[25]).TableRowGroup, obj6);
     }
@@ -275,9 +275,9 @@ function ProjectList(guildId) {
         }
         obj[1] = relativeTimestamp;
         obj[3] = function onPress() {
-          return closure_1_1.push(closure_2_25.CHAT, { projectId: label.id });
+          return closure_1_1.push(closure_2_26.CHAT, { projectId: label.id });
         };
-        return closure_1_22(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
+        return closure_1_23(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
       });
       items10[1] = tmp23(tmp4(tmp2[25]).TableRowGroup, obj11);
       obj7[1] = items10;
@@ -286,8 +286,8 @@ function ProjectList(guildId) {
     items8[2] = tmp25Result;
     items8[3] = null;
     obj[1] = items8;
-    obj[1] = closure_23(closure_7, obj);
-    return callback2(c8, obj);
+    obj[1] = closure_24(closure_7, obj);
+    return callback(c8, obj);
   } else {
     const obj12 = { style: null, children: null };
     obj12[0] = tmp3.centered;
@@ -312,28 +312,29 @@ function ChatScene(guildId) {
   guildId = guildId.guildId;
   const projectId = guildId.projectId;
   let navigation;
-  let callback;
+  closure_3 = undefined;
   let projectExists;
   let projectName;
   previewAppId = undefined;
   let isOwner;
   let canPublish;
   let stateFromStores2;
-  callback = undefined;
+  let callback;
   closure_11 = undefined;
   let callback1;
-  closure_13 = undefined;
+  let first;
+  closure_14 = undefined;
   let callback2;
   let callback3;
   projectGuildId = undefined;
   let callback4;
   let memo;
-  c19 = undefined;
+  c20 = undefined;
   let obj = guildId(navigation[16]);
   navigation = obj.useNavigation();
-  let tmp5 = callback3(projectId(navigation[28])({ includeKeyboardHeight: true }).insets.bottom);
-  callback = tmp5;
-  let items = [c19];
+  let tmp5 = callback2(projectId(navigation[28])({ includeKeyboardHeight: true }).insets.bottom);
+  closure_3 = tmp5;
+  let items = [c20];
   const items1 = [projectId];
   const stateFromStoresObject = guildId(navigation[17]).useStateFromStoresObject(
     items,
@@ -397,7 +398,7 @@ function ChatScene(guildId) {
     }
   }, items2);
   let obj2 = guildId(navigation[17]);
-  const items3 = [c19];
+  const items3 = [c20];
   const items4 = [projectId];
   const stateFromStores = guildId(navigation[17]).useStateFromStores(
     items3,
@@ -411,7 +412,7 @@ function ChatScene(guildId) {
     },
     items4,
   );
-  let obj4 = guildId(navigation[17]);
+  const obj4 = guildId(navigation[17]);
   const items5 = [callback1];
   const items6 = [projectId];
   const stateFromStores1 = guildId(navigation[17]).useStateFromStores(
@@ -438,7 +439,7 @@ function ChatScene(guildId) {
       let obj = projectId(navigation[29]);
       obj = { applicationId: null, surface: null };
       obj[0] = tmp;
-      obj[1] = closure_1_21;
+      obj[1] = closure_1_22;
       obj.launchFrame(obj).catch(() => {});
       const launchFrameResult = obj.launchFrame(obj);
     }
@@ -448,155 +449,85 @@ function ChatScene(guildId) {
   callback1 = obj3.useCallback(() => {
     projectId(navigation[30])(previewAppId);
   }, items11);
-  closure_13 = obj3.useRef(false);
-  const items12 = [projectId];
-  callback2 = obj3.useCallback(
-    callback(function* () {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp8 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+  let tmp15 = projectExists(projectName.useState(false), 2);
+  first = tmp15[0];
+  closure_14 = tmp15[1];
+  const items12 = [guildId, projectId, first];
+  callback2 = obj3.useCallback(() => {
+    if (!first) {
+      let obj = _undefined;
+      const project = _undefined.getProject(projectId);
+      if (null != project) {
+        const integrationStatus = obj.getIntegrationStatus(tmp);
+        let preview_ready;
+        if (integrationStatus != null) {
+          preview_ready = integrationStatus.preview_ready;
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === showResult1) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let lib = tmp4;
-              let project = tmp6;
-              project = undefined;
-              if (!closure_1_13.current) {
-                let obj3 = closure_1_19;
-                project = closure_1_19.getProject(lib);
-                if (null != project) {
-                  const integrationStatus = obj3.getIntegrationStatus(lib);
-                  let preview_ready;
-                  if (integrationStatus != null) {
-                    preview_ready = integrationStatus.preview_ready;
-                  }
-                  if (true === preview_ready) {
-                    if (integrationStatus.integration_installed) {
-                      if (!integrationStatus.bot_permissions_changed) {
-                        closure_1_13.current = true;
-                        c3 = 2;
-                        showResult1 = 3;
-                        c5 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = closure_1_14(lib);
-                        return obj1;
-                      }
-                    }
-                    let obj5 = lib(closure_1_2[31]);
-                    const obj2 = { title: null, body: null };
-                    const intl4 = closure_1_0(closure_1_2[20]).intl;
-                    obj2[0] = intl4.string(lib(closure_1_2[21]).DYwf2n);
-                    const intl5 = closure_1_0(closure_1_2[20]).intl;
-                    obj2[1] = intl5.string(lib(closure_1_2[21])["nDQB/b"]);
-                    obj5.show(obj2);
-                  } else {
-                    obj3 = { title: null, body: null };
-                    const intl8 = closure_1_0(closure_1_2[20]).intl;
-                    obj3[0] = intl8.string(lib(closure_1_2[21])["+UouPe"]);
-                    showResult1 = closure_1_2;
-                    const intl9 = closure_1_0(closure_1_2[20]).intl;
-                    showResult1 = lib;
-                    showResult1 = closure_1_2;
-                    obj3[1] = intl9.string(lib(closure_1_2[21])["E0QD++"]);
-                    showResult1 = lib(closure_1_2[31]).show(obj3);
-                    const obj14 = lib(closure_1_2[31]);
-                  }
+        if (true === preview_ready) {
+          if (integrationStatus.integration_installed) {
+            if (!integrationStatus.bot_permissions_changed) {
+              callback(true);
+              const promise = first(tmp);
+              promise.catch(() => {});
+              const nextPromise = callback2(tmp).then((ok) => {
+                if (true !== ok.ok) {
+                  const _Error = Error;
+                  const intl = closure_1_0(closure_1_2[20]).intl;
+                  error = new Error(intl.string(closure_1_1(closure_1_2[21]).fNP6Cd));
+                  throw error;
+                } else {
+                  const result = closure_1_0(closure_1_2[19]).refreshPublishedProject(closure_1, { isPreview: false });
+                  result.catch(() => {});
                 }
+              });
+              const promise2 = callback2(tmp);
+              nextPromise.catch(() => {}).finally(() => callback(false));
+              obj1 = guildId(navigation[32]);
+              let guild_id = project.guild_id;
+              const catchPromise1 = nextPromise.catch(() => {});
+              const tmp11 = guildId;
+              const tmp12 = navigation;
+              const tmp13 = closure_1_23;
+              if (guild_id == null) {
+                guild_id = guildId;
               }
-              c5 = 3;
-            }
-          } else if (1 !== tmp9) {
-            if (2 === tmp9) {
-              c3 = 1;
-              lib = closure_2;
-              obj1 = lib(closure_1_2[31]);
-              let obj4 = { title: null, body: null };
-              const intl2 = closure_1_0(closure_1_2[20]).intl;
-              obj4[0] = intl2.string(lib(closure_1_2[21]).fNP6Cd);
-              const _Error2 = Error;
-              if (lib instanceof Error) {
-                let message = lib.message;
-              } else {
-                const intl3 = closure_1_0(closure_1_2[20]).intl;
-                message = intl3.string(lib(closure_1_2[21]).fNP6Cd);
-              }
-              obj4[1] = message;
-              obj4 = obj1.show(obj4);
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              closure_1_13.current = false;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else if (true !== arg1.ok) {
-              const _Error = Error;
-              const intl = closure_1_0(closure_1_2[20]).intl;
-              error = new Error(intl.string(lib(closure_1_2[21]).fNP6Cd));
-              throw error;
-            } else {
-              const result = closure_1_0(closure_1_2[19]).refreshPublishedProject(lib, { isPreview: false });
-              result.catch(() => {});
-              const obj10 = closure_1_0(closure_1_2[19]);
-              obj5 = { title: null, body: null };
-              const intl6 = closure_1_0(closure_1_2[20]).intl;
-              obj5[0] = intl6.string(lib(closure_1_2[21]).yzxKsU);
-              const intl7 = closure_1_0(closure_1_2[20]).intl;
-              const obj6 = { projectName: null };
-              obj6[0] = project.name;
-              obj5[1] = intl7.formatToPlainString(lib(closure_1_2[21]).CC69wK, obj6);
-              lib(closure_1_2[31]).show(obj5);
-              c3 = 1;
-              c3 = 0;
-              closure_1_13.current = false;
-              const obj11 = lib(closure_1_2[31]);
+              obj = { content: null, key: null };
+              obj = { guildId: null, applicationId: null, projectName: null, publish: null, initialDraft: null };
+              obj[0] = guild_id;
+              ({ application_id: obj4[1], name: obj4[2] } = project);
+              obj[3] = nextPromise;
+              obj[4] = promise;
+              obj[0] = tmp13(projectId(navigation[33]), obj);
+              obj[1] = tmp11(tmp12[33]).VIBEGRATIONS_PUBLISH_NOTES_SHEET_KEY;
+              obj1.showActionSheet(obj);
+              const tmp15 = projectId(navigation[33]);
             }
           }
-          c3 = 0;
-          closure_13.current = false;
-          throw closure_2;
-        } catch (tmp62) {
-          closure_2 = tmp62;
-          if (tmp5 === c3) {
-            c5 = tmp3;
-            throw tmp62;
-          } else if (tmp2 === tmp64) {
-            showResult1 = tmp2;
-          }
+          obj1 = { title: null, body: null };
+          let intl = guildId(navigation[20]).intl;
+          obj1[0] = intl.string(projectId(navigation[21]).DYwf2n);
+          const intl2 = guildId(navigation[20]).intl;
+          obj1[1] = intl2.string(projectId(navigation[21])["nDQB/b"]);
+          projectId(navigation[31]).show(obj1);
+          const obj5 = projectId(navigation[31]);
+        } else {
+          const obj2 = { title: null, body: null };
+          const intl3 = guildId(navigation[20]).intl;
+          obj2[0] = intl3.string(projectId(navigation[21])["+UouPe"]);
+          const intl4 = guildId(navigation[20]).intl;
+          obj2[1] = intl4.string(projectId(navigation[21])["E0QD++"]);
+          projectId(navigation[31]).show(obj2);
+          const obj7 = projectId(navigation[31]);
         }
       }
-    }),
-    items12,
-  );
+    }
+  }, items12);
   const items13 = [projectId];
   callback3 = obj3.useCallback(() => {
     let obj = guildId(navigation[32]);
     obj = {
-      content: closure_1_22(projectId(navigation[33]), obj),
-      key: guildId(navigation[33]).VIBEGRATIONS_MODEL_SETTINGS_SHEET_KEY,
+      content: closure_1_23(projectId(navigation[34]), obj),
+      key: guildId(navigation[34]).VIBEGRATIONS_MODEL_SETTINGS_SHEET_KEY,
     };
     obj = { projectId };
     obj.showActionSheet(obj);
@@ -608,8 +539,8 @@ function ChatScene(guildId) {
   callback4 = obj3.useCallback(() => {
     let obj = guildId(navigation[32]);
     obj = {
-      content: closure_1_22(projectId(navigation[34]), obj),
-      key: guildId(navigation[34]).VIBEGRATIONS_PROJECT_SETTINGS_SHEET_KEY,
+      content: closure_1_23(projectId(navigation[35]), obj),
+      key: guildId(navigation[35]).VIBEGRATIONS_PROJECT_SETTINGS_SHEET_KEY,
     };
     obj = { projectId, guildId: projectGuildId };
     obj.showActionSheet(obj);
@@ -621,7 +552,7 @@ function ChatScene(guildId) {
       let obj = { label: null, IconComponent: null, action: null };
       const intl = guildId(navigation[20]).intl;
       obj[0] = intl.string(projectId(navigation[21])["5gU57O"]);
-      obj[1] = guildId(navigation[35]).UploadIcon;
+      obj[1] = guildId(navigation[36]).UploadIcon;
       obj[2] = callback2;
       items.push(obj);
     }
@@ -629,7 +560,7 @@ function ChatScene(guildId) {
       obj = { label: null, IconComponent: null, action: null };
       const intl2 = guildId(navigation[20]).intl;
       obj[0] = intl2.string(projectId(navigation[21])["xhcY+n"]);
-      obj[1] = guildId(navigation[36]).SettingsIcon;
+      obj[1] = guildId(navigation[37]).SettingsIcon;
       obj[2] = callback4;
       items.push(obj);
     }
@@ -637,14 +568,14 @@ function ChatScene(guildId) {
       obj = { label: null, IconComponent: null, action: null };
       const intl3 = guildId(navigation[20]).intl;
       obj[0] = intl3.string(projectId(navigation[21])["2NWMqY"]);
-      obj[1] = guildId(navigation[37]).FiltersHorizontalIcon;
+      obj[1] = guildId(navigation[38]).FiltersHorizontalIcon;
       obj[2] = callback3;
       items.push(obj);
     }
     obj1 = { label: null, IconComponent: null, action: null };
     const intl4 = guildId(navigation[20]).intl;
     obj1[0] = intl4.string(projectId(navigation[21]).xKexN1);
-    obj1[1] = guildId(navigation[38]).RetryIcon;
+    obj1[1] = guildId(navigation[39]).RetryIcon;
     obj1[2] = callback1;
     items.push(obj1);
     return items;
@@ -653,12 +584,12 @@ function ChatScene(guildId) {
   if (null != stateFromStores1) {
     let intl = tmp(tmp2[20]).intl;
     obj = { runes: null };
-    const tmpResult = tmp(tmp2[39]);
-    obj[0] = tmp(tmp2[39]).runesFromUsd(stateFromStores1.cost_usd).toLocaleString();
+    const tmpResult = tmp(tmp2[40]);
+    obj[0] = tmp(tmp2[40]).runesFromUsd(stateFromStores1.cost_usd).toLocaleString();
     formatToPlainStringResult = intl.formatToPlainString(tmp4(tmp2[21])["4PFO2p"], obj);
-    const runesFromUsdResult = tmp(tmp2[39]).runesFromUsd(stateFromStores1.cost_usd);
+    const runesFromUsdResult = tmp(tmp2[40]).runesFromUsd(stateFromStores1.cost_usd);
   }
-  c19 = formatToPlainStringResult;
+  c20 = formatToPlainStringResult;
   const items16 = [
     callback,
     navigation,
@@ -677,43 +608,43 @@ function ChatScene(guildId) {
     guildId = stringResult;
     navigation.setOptions({
       headerTitle() {
-        return closure_2_22(guildId(navigation[40]).NavigatorHeader, { title: closure_0, subtitle: closure_1_19 });
+        return closure_2_23(guildId(navigation[41]).NavigatorHeader, { title: closure_0, subtitle: closure_1_20 });
       },
       headerRight() {
         let obj = { style: headerActions.headerActions, children: null };
         let tmp3 = null;
         if (closure_11) {
           obj = { IconComponent: null, onPress: null, accessibilityLabel: null };
-          obj[0] = stringResult(closure_1_2[42]).PlayIcon;
+          obj[0] = stringResult(closure_1_2[43]).PlayIcon;
           obj[1] = closure_10;
           let intl = stringResult(closure_1_2[20]).intl;
           obj[2] = intl.string(closure_1_1(closure_1_2[21]).ecod4C);
-          tmp3 = closure_1_22(stringResult(closure_1_2[41]).HeaderActionButton, obj);
+          tmp3 = closure_1_23(stringResult(closure_1_2[42]).HeaderActionButton, obj);
         }
         const items = [tmp3];
         obj = {
-          items: closure_18,
+          items: closure_19,
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
             const obj = {
               ref,
-              IconComponent: callback(8817).MoreHorizontalIcon,
+              IconComponent: callback(8672).MoreHorizontalIcon,
               onPress,
               accessibilityLabel: null,
               accessibilityActions: null,
               onAccessibilityAction: null,
             };
-            const intl = callback(1233).intl;
-            obj[3] = intl.string(callback(1233).t["UKOtz+"]);
+            const intl = callback(1114).intl;
+            obj[3] = intl.string(callback(1114).t["UKOtz+"]);
             obj[4] = accessibilityActions;
             obj[5] = onAccessibilityAction;
-            return callback2(callback(6247).HeaderActionButton, obj);
+            return callback2(callback(7377).HeaderActionButton, obj);
           },
         };
-        items[1] = closure_1_22(stringResult(closure_1_2[43]).ContextMenu, obj);
+        items[1] = closure_1_23(stringResult(closure_1_2[44]).ContextMenu, obj);
         obj[1] = items;
-        return closure_1_23(closure_1_8, obj);
+        return closure_1_24(closure_1_8, obj);
       },
     });
   }, items16);
@@ -722,14 +653,19 @@ function ChatScene(guildId) {
     const result = guildId(navigation[19]).setSelectedProjectForGuild(guildId, projectId);
     return () => closure_1_0(closure_1_2[19]).setSelectedProjectForGuild(closure_0, null);
   }, items17);
-  obj = { style: tmp5.content, children: callback2(tmp4(tmp2[45]), { projectId }) };
-  return callback2(canPublish, obj);
+  obj = { style: tmp5.content, children: callback(tmp4(tmp2[46]), { projectId }) };
+  return callback(canPublish, obj);
 }
 ({ ActivityIndicator: closure_6, ScrollView: error, View: closure_8 } = get_ActivityIndicator);
-({ ensureConnection: map1, publishProject: closure_14, sendUserMessage: closure_15 } = rejectPendingPublish);
-({ canPublishProject: closure_17, isProjectOwner: closure_18 } = isProjectOwner);
-({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-let closure_24 = createCacheKey.createStyles((paddingBottom) => {
+({
+  draftPatchNotes: map1,
+  ensureConnection: closure_14,
+  publishProject: closure_15,
+  sendUserMessage: closure_16,
+} = rejectPendingPublish);
+({ canPublishProject: closure_18, isProjectOwner: closure_19 } = isProjectOwner);
+({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
+let closure_25 = createCacheKey.createStyles((paddingBottom) => {
   let obj = {
     content: null,
     centered: null,
@@ -762,7 +698,7 @@ let closure_24 = createCacheKey.createStyles((paddingBottom) => {
   obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
   return obj;
 });
-let closure_25 = { PROJECTS: "PROJECTS", CHAT: "CHAT" };
+let closure_26 = { PROJECTS: "PROJECTS", CHAT: "CHAT" };
 let result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsStandaloneScreen.tsx");
 
 export default function VibegrationsStandaloneScreen(guildId) {
@@ -776,11 +712,11 @@ export default function VibegrationsStandaloneScreen(guildId) {
   const items = [closure_10];
   const items1 = [guildId];
   stateFromStores = obj1.useStateFromStores(items, () => closure_1_10.getGuild(guildId), items1);
-  isVibegrationsGuildEnabled = guildId(stateFromStores[46]).useIsVibegrationsGuildEnabled({
+  isVibegrationsGuildEnabled = guildId(stateFromStores[47]).useIsVibegrationsGuildEnabled({
     guildId,
     location: "VibegrationsStandaloneScreen",
   });
-  const obj3 = guildId(stateFromStores[46]);
+  const obj3 = guildId(stateFromStores[47]);
   const items2 = [closure_9];
   const items3 = [guildId];
   const stateFromStoresArray = guildId(stateFromStores[17]).useStateFromStoresArray(
@@ -811,7 +747,7 @@ export default function VibegrationsStandaloneScreen(guildId) {
         const guild = closure_1_10.getGuild(guildId);
         let canResult = null != guild;
         if (canResult) {
-          canResult = closure_1_11.can(closure_1_20.MANAGE_GUILD, guild);
+          canResult = closure_1_11.can(closure_1_21.MANAGE_GUILD, guild);
         }
         return canResult;
       },
@@ -833,25 +769,25 @@ export default function VibegrationsStandaloneScreen(guildId) {
   obj = {};
   obj = { headerLeft: null, headerTitle: null, render: null };
   const obj5 = guildId(stateFromStores[17]);
-  obj[0] = guildId(stateFromStores[40]).getHeaderCloseButton(() => navigation.goBack());
+  obj[0] = guildId(stateFromStores[41]).getHeaderCloseButton(() => navigation.goBack());
   obj[1] = function headerTitle() {
     const obj = { title: null };
     const intl = guildId(stateFromStores[20]).intl;
     obj[0] = intl.string(navigation(stateFromStores[21]).Xmvb23);
-    return callback(guildId(stateFromStores[40]).NavigatorHeader, obj);
+    return callback(guildId(stateFromStores[41]).NavigatorHeader, obj);
   };
   obj[2] = function render() {
-    return closure_1_22(closure_1_26, { guildId });
+    return closure_1_23(closure_1_27, { guildId });
   };
   obj[constants.PROJECTS] = obj;
   obj[constants.CHAT] = {
     ignoreKeyboard: true,
     render(projectId) {
-      return closure_1_22(closure_1_27, { guildId, projectId: projectId.projectId });
+      return closure_1_23(closure_1_28, { guildId, projectId: projectId.projectId });
     },
   };
   obj1 = { screens: obj, initialRouteName: constants.PROJECTS, headerBackTitle: null };
   let intl = guildId(stateFromStores[20]).intl;
   obj1[2] = intl.string(navigation(stateFromStores[21]).Xmvb23);
-  return callback2(guildId(stateFromStores[47]).Navigator, obj1);
+  return callback(guildId(stateFromStores[48]).Navigator, obj1);
 }

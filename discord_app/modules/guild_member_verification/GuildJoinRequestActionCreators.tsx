@@ -89,10 +89,10 @@ function _fetchGuildJoinRequests() {
               c6 = tmp31;
               if (!c5.isFetching()) {
                 if (c6) {
-                  let obj5 = lib(706);
+                  let obj5 = lib(573);
                   obj5.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
                   c5 = 1;
-                  const HTTP = callback(527).HTTP;
+                  const HTTP = callback(1272).HTTP;
                   const obj2 = { url: null, query: null, rejectWithError: null };
                   obj2[0] = total.GUILD_JOIN_REQUESTS(callback);
                   const obj3 = { status: null, limit: null, before: null, after: null };
@@ -101,7 +101,7 @@ function _fetchGuildJoinRequests() {
                   obj3[2] = dependencyMap;
                   obj3[3] = c3;
                   obj2[1] = obj3;
-                  obj2[2] = callback(527).rejectWithMigratedError();
+                  obj2[2] = callback(1272).rejectWithMigratedError();
                   c6 = 3;
                   c7 = 1;
                   let obj4 = { value: null, done: false };
@@ -115,7 +115,7 @@ function _fetchGuildJoinRequests() {
           } else if (2 === tmp7) {
             c5 = 0;
             closure_10 = limit;
-            obj4 = lib(706);
+            obj4 = lib(573);
             obj4.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" });
             throw closure_10;
           } else if (arg0 === 1) {
@@ -136,7 +136,7 @@ function _fetchGuildJoinRequests() {
               lib = [];
             }
             closure_9 = lib.map(c6);
-            obj = lib(706);
+            obj = lib(573);
             const obj6 = {
               type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
               status: null,
@@ -362,7 +362,7 @@ function _ackUserGuildJoinRequest() {
             }
           } else if (1 === tmp8) {
             c5 = 0;
-            let obj8 = callback2(706);
+            let obj8 = callback2(573);
             let obj3 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
             obj3[1] = callback2;
             obj3[2] = callback;
@@ -370,7 +370,7 @@ function _ackUserGuildJoinRequest() {
             throw closure_4;
           } else if (2 === tmp8) {
             c5 = 0;
-            let obj6 = callback2(706);
+            let obj6 = callback2(573);
             const obj4 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
             obj4[1] = callback2;
             obj4[2] = callback;
@@ -382,7 +382,7 @@ function _ackUserGuildJoinRequest() {
             throw arg1;
           } else if (arg0 === 2) {
             c5 = 0;
-            obj3 = callback2(706);
+            obj3 = callback2(573);
             const obj5 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
             obj5[1] = callback2;
             obj5[2] = callback;
@@ -393,7 +393,7 @@ function _ackUserGuildJoinRequest() {
             return obj6;
           } else {
             c5 = 0;
-            obj = callback2(706);
+            obj = callback2(573);
             const obj7 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
             obj7[1] = callback2;
             obj7[2] = callback;
@@ -468,7 +468,7 @@ function _updateGuildJoinRequest() {
               let APPROVED;
               closure_4 = undefined;
               if (APPROVED === undefined) {
-                APPROVED = callback(4302).GuildJoinRequestApplicationStatuses.APPROVED;
+                APPROVED = callback(4384).GuildJoinRequestApplicationStatuses.APPROVED;
               }
               closure_5 = undefined;
               c7 = 1;
@@ -485,21 +485,21 @@ function _updateGuildJoinRequest() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback(7674);
+              let obj7 = callback(5543);
               const obj2 = { guildId: null, actionType: null, applicationUserId: null };
               obj2[0] = callback;
               obj2[1] = APPROVED;
               obj2[2] = callback2;
               const result = obj7.trackMemberApplicationAction(obj2);
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: null };
               obj3[0] = c8.GUILD_JOIN_REQUEST(callback, dependencyMap);
               const obj4 = { action: null, rejection_reason: null };
               obj4[0] = APPROVED;
               obj4[1] = closure_4;
               obj3[1] = obj4;
-              obj3[2] = callback(527).rejectWithMigratedError();
-              const obj12 = callback(527);
+              obj3[2] = callback(1272).rejectWithMigratedError();
+              const obj12 = callback(1272);
               c7 = 2;
               c8 = 1;
               const obj5 = { value: null, done: false };
@@ -511,12 +511,12 @@ function _updateGuildJoinRequest() {
                   body = body.body.code === constants.REQUEST_TO_JOIN_USER_INELIGIBLE;
                 }
                 if (body) {
-                  let obj = callback2(4858);
+                  let obj = callback2(4904);
                   obj = { title: null, body: null };
-                  const intl = callback(1233).intl;
-                  obj[0] = intl.string(callback(1233).t.DxJj4e);
-                  const intl2 = callback(1233).intl;
-                  obj[1] = intl2.string(callback(1233).t.rSAOk9);
+                  const intl = callback(1114).intl;
+                  obj[0] = intl.string(callback(1114).t.DxJj4e);
+                  const intl2 = callback(1114).intl;
+                  obj[1] = intl2.string(callback(1114).t.rSAOk9);
                   obj.show(obj);
                 }
                 return Promise.reject(body);
@@ -533,7 +533,7 @@ function _updateGuildJoinRequest() {
             return obj6;
           } else {
             closure_5 = arg1;
-            obj = callback2(706);
+            obj = callback2(573);
             obj7 = { type: "GUILD_JOIN_REQUEST_UPDATE", guildId: null, status: null, request: null };
             obj7[1] = callback;
             obj7[2] = closure_5.body.application_status;
@@ -686,10 +686,10 @@ function _fetchRequestToJoinGuilds() {
             const callback = tmp2;
             let body = tmp5;
             body = undefined;
-            const HTTP = closure_1_0(527).HTTP;
+            const HTTP = closure_1_0(1272).HTTP;
             obj1 = { url: null, rejectWithError: null };
             obj1[0] = closure_1_8.USER_JOIN_REQUEST_GUILDS;
-            obj1[1] = closure_1_0(527).rejectWithMigratedError();
+            obj1[1] = closure_1_0(1272).rejectWithMigratedError();
             dependencyMap = 1;
             c3 = 1;
             const obj2 = { value: null, done: false };
@@ -706,7 +706,7 @@ function _fetchRequestToJoinGuilds() {
           return obj3;
         } else {
           body = arg1;
-          obj = callback(706);
+          obj = callback(573);
           const obj4 = { type: "USER_JOIN_REQUEST_GUILDS_FETCH", guilds: null };
           obj4[1] = body.body;
           obj.dispatch(obj4);

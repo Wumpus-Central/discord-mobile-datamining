@@ -1,13 +1,12 @@
 // discord_app/actions/AuthenticationActionCreators.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import setSecondaryTokenAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
 import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import setSecondaryTokenAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import setDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
-import _modDef4714 from "../utils/TrackedHTTPUtils.tsx";
-import _modDef4724 from "ModalActionCreators.tsx";
+import _modDef4753 from "../utils/TrackedHTTPUtils.tsx";
 import closure_5 from "../../_runtime/00005_asyncGeneratorStep.js";
 import { setPromoEmailConsentState } from "../modules/auth/PromoEmailConsentStore.tsx";
 import closure_7 from "../stores/AuthenticationStore.tsx";
@@ -24,11 +23,11 @@ function handleLogout(arg0, ME) {
   }
   obj = setDefault;
   const result = obj.clearNavigationHistory();
-  obj = { type: "LOGOUT" };
+  const id = authStore.getId();
+  obj = { type: "LOGOUT", userId: id };
   const merged = Object.assign(undefined);
-  const obj3 = dispatcherDefault;
-  const tmp2 = importDefault;
-  dispatcherDefault.dispatch(obj).catch((error) => {
+  let tmp2Result = tmp2(573);
+  tmp2Result.dispatch(obj).catch((error) => {
     logger.error("Error while dispatching LOGOUT", error);
     if (DiscordErrors != null) {
       DiscordErrors.softCrash(error);
@@ -38,20 +37,20 @@ function handleLogout(arg0, ME) {
   if (null != DEFAULT_LOGGED_OUT) {
     const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
-      _modDef4724.popAll();
+      tmp2Result = tmp2(4763);
+      tmp2Result.popAll();
       obj = { index: 0, routes: null };
       const items = [{ name: "auth" }];
       obj[1] = items;
       rootNavigationRef.reset(obj);
-      const tmp2Result = _modDef4724;
     } else {
       obj1 = { source: null };
       obj1[0] = arg0;
-      tmp11(1219).transitionTo(DEFAULT_LOGGED_OUT, obj1);
-      const tmp11Result = tmp11(1219);
+      tmp12(1100).transitionTo(DEFAULT_LOGGED_OUT, obj1);
+      const tmp12Result = tmp12(1100);
     }
     const obj8 = getRootNavigationRef;
-    tmp11 = require;
+    tmp12 = require;
   }
 }
 ({ Endpoints: c9, DEVICE_TOKEN: c10, DEVICE_VOIP_TOKEN: unpackModuleId, AbortCodes: closure_12, Routes: map1 } = ME);
@@ -210,7 +209,7 @@ obj = {
     const self = this;
     ({ isMultiAccount: require, loginInstanceId } = arg0);
     ({ code, ticket, source, giftCodeSKUId, mfaType } = arg0);
-    obj = self(4714);
+    obj = self(4753);
     obj = {
       url: closure_9.LOGIN_MFA(mfaType),
       body: null,
@@ -308,20 +307,20 @@ obj = {
               if (challenge != null) {
                 obj17.abort("Starting non-conditional mediation");
               }
-              challenge(706).dispatch({ type: "PASSWORDLESS_START" });
+              challenge(573).dispatch({ type: "PASSWORDLESS_START" });
               dependencyMap = 1;
-              const obj12 = challenge(706);
+              const obj12 = challenge(573);
               obj17 = challenge;
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = lib(6065).fetchWebAuthnPasswordlessChallenge();
+              obj1[0] = lib(6597).fetchWebAuthnPasswordlessChallenge();
               return obj1;
             }
           } else if (1 === tmp8) {
             dependencyMap = 0;
             closure_5 = c2;
-            let obj9 = challenge(706);
+            let obj9 = challenge(573);
             let obj2 = { type: "PASSWORDLESS_FAILURE", error: null };
             obj2[1] = closure_5;
             obj9.dispatch(obj2);
@@ -375,7 +374,7 @@ obj = {
             if (4 === tmp8) {
               dependencyMap = 1;
               c4 = c2;
-              let tmp16 = c4 instanceof lib(4376).APIError;
+              let tmp16 = c4 instanceof lib(4461).APIError;
               if (tmp16) {
                 tmp16 = null != c4.status;
               }
@@ -386,7 +385,7 @@ obj = {
                 tmp16 = c4.status < 500;
               }
               if (tmp16) {
-                obj2 = challenge(6066);
+                obj2 = challenge(6598);
                 c4 = 6;
                 c5 = 1;
                 const obj8 = { value: null, done: false };
@@ -438,7 +437,7 @@ obj = {
     const self = this;
     isMultiAccount = isMultiAccount.isMultiAccount;
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
-    obj = self(4714);
+    obj = self(4753);
     obj = {
       url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN,
       body: { credential, ticket, source, giftCodeSKUId },
@@ -446,7 +445,7 @@ obj = {
       trackedActionData: null,
       rejectWithError: true,
     };
-    obj = { event: isMultiAccount(500).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
+    obj = { event: isMultiAccount(1250).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
     obj[3] = obj;
     const postResult = obj.post(obj);
     return obj
@@ -536,29 +535,29 @@ obj = {
               closure_1 = tmp3;
               let token = tmp7;
               token = undefined;
-              closure_1_1(706).dispatch({ type: "LOGIN" });
+              closure_1_1(573).dispatch({ type: "LOGIN" });
               dependencyMap = 1;
-              const obj10 = closure_1_1(706);
+              const obj10 = closure_1_1(573);
               obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
               obj1[0] = closure_1_9.ONE_TIME_LOGIN;
               const obj2 = { ticket: null };
               obj2[0] = closure_1_0;
               obj1[1] = obj2;
               const obj3 = { event: null };
-              obj3[0] = closure_1_0(500).NetworkActionNames.USER_ONE_TIME_LOGIN;
+              obj3[0] = closure_1_0(1250).NetworkActionNames.USER_ONE_TIME_LOGIN;
               obj1[3] = obj3;
               c4 = 2;
               c5 = 1;
               let obj4 = { value: null, done: false };
-              obj4[0] = closure_1_1(4714).post(obj1);
+              obj4[0] = closure_1_1(4753).post(obj1);
               return obj4;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
             closure_1 = closure_2;
-            obj4 = closure_1_1(706);
+            obj4 = closure_1_1(573);
             const obj5 = { type: "LOGIN_FAILURE", error: null };
-            const v6OrEarlierAPIError = new closure_1_0(4376).V6OrEarlierAPIError(closure_1);
+            const v6OrEarlierAPIError = new closure_1_0(4461).V6OrEarlierAPIError(closure_1);
             obj5[1] = v6OrEarlierAPIError;
             obj4.dispatch(obj5);
             throw closure_1;
@@ -625,9 +624,11 @@ obj = {
   logoutInternal(arg0) {
     obj = setDefault;
     const result = obj.clearNavigationHistory();
-    obj = { type: "LOGOUT" };
+    const id = authStore.getId();
+    obj = { type: "LOGOUT", userId: id };
     const merged = Object.assign(arg0);
-    const obj3 = dispatcherDefault;
+    const tmp = importDefault;
+    const tmpResult = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       logger.error("Error while dispatching LOGOUT", error);
       if (DiscordErrors != null) {
@@ -643,7 +644,7 @@ obj = {
       DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
     }
     importAll = arg2;
-    obj = DEFAULT_LOGGED_OUT(4714);
+    obj = DEFAULT_LOGGED_OUT(4753);
     obj = { url: closure_9.LOGOUT, body: null, oldFormErrors: true, trackedActionData: null };
     obj = { provider: callback2(), token: null, voip_provider: null, voip_token: null };
     const Storage = require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
@@ -701,10 +702,12 @@ obj = {
     logger.log("Switching accounts", obj);
     obj = { isSwitchingAccount: true, goHomeAfterSwitching: flag };
     const result = setDefault.clearNavigationHistory();
-    obj = { type: "LOGOUT" };
+    const id = authStore.getId();
+    obj = { type: "LOGOUT", userId: id };
     const merged = Object.assign(obj);
     const obj3 = setDefault;
-    const obj5 = dispatcherDefault;
+    const tmp3 = importDefault;
+    const tmp3Result = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       logger.error("Error while dispatching LOGOUT", error);
       if (DiscordErrors != null) {
@@ -736,18 +739,18 @@ obj = {
     return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const obj7 = closure_1_1(4714);
+      const obj7 = closure_1_1(4753);
       obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
       obj1[0] = closure_1_9.VERIFY;
       const obj2 = { token: null };
       obj2[0] = closure_1_0;
       obj1[1] = obj2;
       const obj3 = { event: null };
-      obj3[0] = closure_1_0(500).NetworkActionNames.USER_VERIFY;
+      obj3[0] = closure_1_0(1250).NetworkActionNames.USER_VERIFY;
       obj1[2] = obj3;
-      obj1[3] = closure_1_0(527).rejectWithMigratedError();
+      obj1[3] = closure_1_0(1272).rejectWithMigratedError();
       closure_0 = yield obj7.post(obj1);
-      obj = closure_1_1(706);
+      obj = closure_1_1(573);
       const obj6 = { type: "LOGIN_SUCCESS", token: null };
       obj6[1] = closure_0.body.token;
       obj.dispatch(obj6);
@@ -755,21 +758,21 @@ obj = {
     })();
   },
   authorizePayment(token) {
-    obj = _modDef4714;
+    obj = _modDef4753;
     obj = { url: closure_9.AUTHORIZE_PAYMENT, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token };
     obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_PAYMENT };
     return obj.post(obj);
   },
   authorizeIPAddress(closure_0) {
-    obj = _modDef4714;
+    obj = _modDef4753;
     obj = { url: closure_9.AUTHORIZE_IP, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token: closure_0 };
     obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_IP };
     return obj.post(obj);
   },
   verifyResend() {
-    obj = _modDef4714;
+    obj = _modDef4753;
     obj = { url: closure_9.VERIFY_RESEND, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.USER_VERIFY_RESEND };
     obj[2] = obj;
@@ -818,12 +821,12 @@ obj = {
               let backup;
               let totp;
               c8 = undefined;
-              closure_1_1(706).dispatch({ type: "LOGIN" });
+              closure_1_1(573).dispatch({ type: "LOGIN" });
               obj1 = { token: null, password: null, source: null };
               obj1[0] = closure_1_0;
               obj1[1] = closure_1_1;
               obj1[2] = closure_1_2;
-              const Storage2 = closure_1_0(592).Storage;
+              const Storage2 = closure_1_0(510).Storage;
               let value = Storage2.get(closure_1_10);
               const tmp75 = closure_1_15();
               let tmp31 = null != tmp75;
@@ -834,7 +837,7 @@ obj = {
                 obj1.push_provider = tmp75;
                 obj1.push_token = value;
               }
-              const Storage = closure_1_0(592).Storage;
+              const Storage = closure_1_0(510).Storage;
               value = Storage.get(closure_1_11);
               let tmp37 = null != closure_1_14;
               if (tmp37) {
@@ -845,16 +848,16 @@ obj = {
                 obj1.push_voip_token = value;
               }
               dependencyMap = 1;
-              let obj4 = closure_1_1(4714);
+              let obj4 = closure_1_1(4753);
               let obj2 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
               obj2[0] = constants.RESET_PASSWORD;
               obj2[1] = obj1;
               const obj3 = { event: null };
-              obj3[0] = closure_1_0(500).NetworkActionNames.USER_RESET_PASSWORD;
+              obj3[0] = closure_1_0(1250).NetworkActionNames.USER_RESET_PASSWORD;
               obj2[3] = obj3;
-              const obj12 = closure_1_1(706);
+              const obj12 = closure_1_1(573);
               tmp36 = closure_1_14;
-              obj2[4] = closure_1_0(527).rejectWithMigratedError();
+              obj2[4] = closure_1_0(1272).rejectWithMigratedError();
               ticket = 2;
               token = 1;
               obj4 = { value: null, done: false };
@@ -864,8 +867,8 @@ obj = {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             constants = sms;
-            const v6OrEarlierAPIError = new closure_1_0(4376).V6OrEarlierAPIError(constants);
-            obj2 = closure_1_1(706);
+            const v6OrEarlierAPIError = new closure_1_0(4461).V6OrEarlierAPIError(constants);
+            obj2 = closure_1_1(573);
             const obj5 = { type: "LOGIN_FAILURE", error: null };
             obj5[1] = v6OrEarlierAPIError;
             obj2.dispatch(obj5);
@@ -981,19 +984,19 @@ obj = {
               let body = tmp7;
               body = undefined;
               c1 = undefined;
-              v6OrEarlierAPIError(706).dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
+              v6OrEarlierAPIError(573).dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
               dependencyMap = 1;
-              const obj12 = v6OrEarlierAPIError(706);
+              const obj12 = v6OrEarlierAPIError(573);
               obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
               obj1[0] = closure_1_9.FORGOT_PASSWORD;
               const obj2 = { login: null };
               obj2[0] = closure_1_0;
               obj1[1] = obj2;
               let obj3 = { event: null };
-              obj3[0] = closure_1_0(500).NetworkActionNames.FORGOT_PASSWORD;
+              obj3[0] = closure_1_0(1250).NetworkActionNames.FORGOT_PASSWORD;
               obj1[3] = obj3;
-              const obj13 = v6OrEarlierAPIError(4714);
-              obj1[4] = closure_1_0(527).rejectWithMigratedError();
+              const obj13 = v6OrEarlierAPIError(4753);
+              obj1[4] = closure_1_0(1272).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
               const obj4 = { value: null, done: false };
@@ -1002,9 +1005,9 @@ obj = {
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            v6OrEarlierAPIError = new closure_1_0(4376).V6OrEarlierAPIError(closure_2);
+            v6OrEarlierAPIError = new closure_1_0(4461).V6OrEarlierAPIError(closure_2);
             if (v6OrEarlierAPIError.code === closure_1_12.PHONE_VERIFICATION_REQUIRED) {
-              let obj5 = v6OrEarlierAPIError(706);
+              let obj5 = v6OrEarlierAPIError(573);
               obj5 = { type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION", credentials: null };
               const obj6 = { login: null };
               obj6[0] = body;
@@ -1013,7 +1016,7 @@ obj = {
               c5 = 3;
               return { value: false, done: true };
             } else {
-              obj3 = v6OrEarlierAPIError(706);
+              obj3 = v6OrEarlierAPIError(573);
               const obj7 = { type: "LOGIN_FAILURE", error: null };
               obj7[1] = v6OrEarlierAPIError;
               obj3.dispatch(obj7);
@@ -1030,7 +1033,7 @@ obj = {
             return obj8;
           } else {
             body = arg1;
-            obj = v6OrEarlierAPIError(706);
+            obj = v6OrEarlierAPIError(573);
             obj.dispatch({ type: "FORGOT_PASSWORD_SENT" });
             dependencyMap = 0;
             c5 = 3;
@@ -1066,7 +1069,7 @@ obj = {
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        callback(706).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
+        callback(573).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
       }, 5000);
       const HTTP = sendRequest.HTTP;
       obj = { url: null, retries: 2, oldFormErrors: true, rejectWithError: true };
@@ -1086,7 +1089,7 @@ obj = {
             if (flag == null) {
               flag = true;
             }
-            obj = callback(706);
+            obj = callback(573);
             obj = { type: "SET_CONSENT_REQUIRED", consentRequired: null };
             obj[1] = flag;
             obj.dispatch(obj);
@@ -1098,7 +1101,7 @@ obj = {
               country_code = body2.country_code;
             }
           }
-          callback(706).dispatch({ type: "SET_LOCATION_METADATA", countryCode: country_code });
+          callback(573).dispatch({ type: "SET_LOCATION_METADATA", countryCode: country_code });
           c17 = null;
           let prop;
           if (body != null) {
@@ -1115,7 +1118,7 @@ obj = {
         },
         () => {
           clearTimeout(closure_4);
-          callback(706).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
+          callback(573).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
           c17 = null;
         },
       );

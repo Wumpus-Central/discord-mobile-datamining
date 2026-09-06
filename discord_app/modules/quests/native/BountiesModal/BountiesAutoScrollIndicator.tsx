@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesAutoScrollIndicator.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../../reanimated/ReanimatedRexport.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -10,7 +10,7 @@ import { map } from "../../../../design/tokens/native/useToken.tsx";
 const require = arg1;
 function BouncingArrow(children) {
   let sharedValue;
-  sharedValue = sharedValue(4217).useSharedValue(0);
+  sharedValue = sharedValue(4296).useSharedValue(0);
   let items = [sharedValue];
   const effect = React.useEffect(() => {
     let obj = sharedValue(closure_1_2[3]);
@@ -28,7 +28,7 @@ function BouncingArrow(children) {
     );
     return () => closure_1_0(closure_1_2[3]).cancelAnimation(closure_0);
   }, items);
-  let obj = sharedValue(4217);
+  let obj = sharedValue(4296);
   const fn = function l() {
     let obj = { transform: null };
     obj = { translateY: sharedValue.get() };
@@ -39,8 +39,8 @@ function BouncingArrow(children) {
   fn.__closure = { translateY: sharedValue };
   fn.__workletHash = 10126349088819;
   fn.__initData = closure_7;
-  const style = sharedValue(4217).useAnimatedStyle(fn);
-  return callback(_modDef4217.View, { style, children: children.children });
+  const style = sharedValue(4296).useAnimatedStyle(fn);
+  return callback(_modDef4296.View, { style, children: children.children });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = {
@@ -93,7 +93,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     obj3[8] = function children() {
       return closure_0;
     };
-    let tmp5Result = tmp5(require("../../../../../_runtime/14901_CircularProgress.js").AnimatedCircularProgress, obj3);
+    let tmp5Result = tmp5(require("../../../../../_runtime/15058_CircularProgress.js").AnimatedCircularProgress, obj3);
   } else {
     const obj4 = { children: null };
     obj4[0] = tmp6;

@@ -5,7 +5,7 @@ import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import NavScrim from "../../../../design/components/Navigator/native/NavScrim.android.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import useUserIsTeen from "../../../self_mod/hooks/useUserIsTeen.tsx";
-import _modDef9754 from "../../GuildSettingsActionCreators.tsx";
+import _modDef9063 from "../../GuildSettingsActionCreators.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../../stores/PermissionStore.tsx";
 import closure_5 from "../../GuildSettingsStore.tsx";
@@ -33,20 +33,20 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
   let tmp9 = null;
   if (!userIsTeen) {
     obj = { title: null, hasIcons: false, description: null, children: null };
-    const intl = tmp3(1233).intl;
-    obj[0] = intl.string(tmp3(1233).t.YJlvBM);
-    const intl2 = tmp3(1233).intl;
+    const intl = tmp3(1114).intl;
+    obj[0] = intl.string(tmp3(1114).t.YJlvBM);
+    const intl2 = tmp3(1114).intl;
     obj = { helpArticleLink: null };
     obj[0] = combinedDefault.getArticleURL(constants2.NSFW_SERVER_AGE_RESTRICTION);
-    obj[2] = intl2.format(tmp3(1233).t.iyQQ62, obj);
+    obj[2] = intl2.format(tmp3(1114).t.iyQQ62, obj);
     obj1 = { label: null, value: null, onValueChange: null, disabled: null };
-    const intl3 = tmp3(1233).intl;
-    obj1[0] = intl3.string(tmp3(1233).t.N9xEJF);
+    const intl3 = tmp3(1114).intl;
+    obj1[0] = intl3.string(tmp3(1114).t.N9xEJF);
     obj1[1] = DEFAULT2 === tmp6.AGE_RESTRICTED;
     obj1[2] = tmp8;
     obj1[3] = tmp7;
-    obj[3] = callback(tmp3(6002).TableSwitchRow, obj1);
-    tmp9 = callback(tmp3(6001).TableRowGroup, obj, "filter-section");
+    obj[3] = callback(tmp3(7201).TableSwitchRow, obj1);
+    tmp9 = callback(tmp3(5687).TableRowGroup, obj, "filter-section");
     const obj4 = combinedDefault;
   }
   return tmp9;
@@ -111,16 +111,16 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
   const self = this;
   const guild = this.props.guild;
   let obj = { hasIcons: false, title: null, description: null, value: null, onChange: null, children: null };
-  const intl = self(1233).intl;
-  obj[1] = intl.string(self(1233).t.DpRdYK);
-  const intl2 = self(1233).intl;
-  obj[2] = intl2.format(self(1233).t.iuRk2j, {});
+  const intl = self(1114).intl;
+  obj[1] = intl.string(self(1114).t.DpRdYK);
+  const intl2 = self(1114).intl;
+  obj[2] = intl2.format(self(1114).t.iuRk2j, {});
   obj[3] = guild.verificationLevel;
   obj[4] = function onChange(verificationLevel) {
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(14681).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(14837).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj[5] = verificationLevelOptions.map((arg0) => {
     ({ name, color, value } = arg0);
     ({ desc, disabled } = arg0);
@@ -144,24 +144,24 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj[3] = tmp5;
     return closure_1_10(self(closure_1_2[18]).TableRadioRow, obj, "level-" + value);
   });
-  return callback(self(7704).TableRadioGroup, obj, "level-section");
+  return callback(self(5685).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
   const guild = this.props.guild;
   let obj = { hasIcons: false, title: null, description: null, value: null, onChange: null, children: null };
-  const intl = self(1233).intl;
-  obj[1] = intl.string(self(1233).t.bPgfJz);
-  const intl2 = self(1233).intl;
+  const intl = self(1114).intl;
+  obj[1] = intl.string(self(1114).t.bPgfJz);
+  const intl2 = self(1114).intl;
   obj = { helpdeskArticle: combinedDefault.getArticleURL(constants2.SAFE_DIRECT_MESSAGING) };
-  obj[2] = intl2.format(self(1233).t.BI4ukC, obj);
+  obj[2] = intl2.format(self(1114).t.BI4ukC, obj);
   obj[3] = guild.explicitContentFilter;
   obj[4] = function onChange(explicitContentFilter) {
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const obj3 = combinedDefault;
   const features = guild.features;
-  const contentFilterOptions = self(14681).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(14837).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj[5] = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -174,7 +174,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj[3] = tmp2;
     return closure_1_10(self(closure_1_2[18]).TableRadioRow, obj, "filter-" + value);
   });
-  return callback(self(7704).TableRadioGroup, obj, "filter-section");
+  return callback(self(5685).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   const props = this.props;
@@ -200,17 +200,17 @@ prototype["render"] = function render() {
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   if (this.props.hasChanges) {
-    _modDef9754.cancelChanges(tmp.props.guild.id);
-    const obj = _modDef9754;
+    _modDef9063.cancelChanges(tmp.props.guild.id);
+    const obj = _modDef9063;
   }
 };
 prototype["handleVerificationLevelChange"] = function handleVerificationLevelChange(verificationLevel) {
-  let obj = _modDef9754;
+  let obj = _modDef9063;
   obj = { verificationLevel };
   obj.updateGuild(obj);
 };
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
-  let obj = _modDef9754;
+  let obj = _modDef9063;
   obj = { explicitContentFilter };
   obj.updateGuild(obj);
 };
@@ -221,16 +221,16 @@ const result = require("set").fileFinishedImporting(
 
 export default function ConnectedGuildSettingsModalModeration(contentContainerStyle) {
   let guild;
-  let obj = guild(1498);
+  let obj = guild(1483);
   const navigation = obj.useNavigation();
   const items = [closure_5];
-  const stateFromStoresObject = guild(586).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = guild(504).useStateFromStoresObject(items, () => {
     props = props.getProps();
     return { guild: props.guild, submitting: props.submitting, hasChanges: props.hasChanges };
   });
   guild = stateFromStoresObject.guild;
   ({ submitting, hasChanges } = stateFromStoresObject);
-  guild(586);
+  guild(504);
   [][0] = closure_4;
   let tmp5 = null;
   if (null != guild) {

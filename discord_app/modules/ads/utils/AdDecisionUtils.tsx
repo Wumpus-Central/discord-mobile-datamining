@@ -14,9 +14,9 @@ export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(type) 
     type = type.type;
     if (AdCreativeType.AdCreativeType.QUEST === type) {
       return type.questId;
-    } else if (tmp(7457).AdCreativeType.BOUNTY === type) {
+    } else if (tmp(5451).AdCreativeType.BOUNTY === type) {
       return type.bounty.id;
-    } else if (tmp(7457).AdCreativeType.QUEST_HOME_HERO === type) {
+    } else if (tmp(5451).AdCreativeType.QUEST_HOME_HERO === type) {
       return type.questHomeHero.id;
     }
   }

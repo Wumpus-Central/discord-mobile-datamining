@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/core/native/openUserSettings.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
 import dispatcherDefault from "../../../../Dispatcher.tsx";
+import ME from "../../../../Constants.tsx";
 import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import handleFormClose from "../../../../stores/UserSettingsAccountStore.tsx";
 

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingPrompts.tsx
-import keys from "../../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import keys from "../../../ConstantsIOS.tsx";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";

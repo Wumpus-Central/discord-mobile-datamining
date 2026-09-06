@@ -102,8 +102,8 @@ const memoResult1 = importAllResult.memo((avatarDecoration) => {
     children: null,
   };
   obj = { avatarDecoration, size: AVATAR_DECORATION_SIZE, animate: isSelected };
-  obj[6] = callback(setSelectedAvatarDecoration(8108), obj);
-  return callback(avatarDecoration(8102).EditCollectiblesListItemProduct, obj);
+  obj[6] = callback(setSelectedAvatarDecoration(8812), obj);
+  return callback(avatarDecoration(13171).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditAvatarDecorationItem";
 const result = require("set").fileFinishedImporting(

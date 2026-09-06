@@ -12,8 +12,8 @@ export const getApplicationDetailsText = function getApplicationDetailsText(appl
   const isSocialLayerParentApplication = obj.getIsSocialLayerParentApplication(application);
   if (null != application.privacy_policy_url) {
     if (null != application.terms_of_service_url) {
-      const t4 = tmp(1233).t;
-      const intl4 = tmp(1233).intl;
+      const t4 = tmp(1114).t;
+      const intl4 = tmp(1114).intl;
       obj = { application: null, privacyPolicyURL: null, termsOfServiceURL: null, discordPrivacyPolicyURL: null };
       ({ name: obj5[0], privacy_policy_url: obj5[1], terms_of_service_url: obj5[2] } = application);
       obj[3] = MarketingURLs.PRIVACY;
@@ -21,22 +21,22 @@ export const getApplicationDetailsText = function getApplicationDetailsText(appl
     }
   }
   if (null != application.privacy_policy_url) {
-    const t3 = tmp(1233).t;
-    const intl3 = tmp(1233).intl;
+    const t3 = tmp(1114).t;
+    const intl3 = tmp(1114).intl;
     obj = { application: null, privacyPolicyURL: null, discordPrivacyPolicyURL: null };
     ({ name: obj4[0], privacy_policy_url: obj4[1] } = application);
     obj[2] = MarketingURLs.PRIVACY;
     return intl3.format(isSocialLayerParentApplication ? t3.pYVSah : t3.TBvmM2, obj);
   } else if (null != application.terms_of_service_url) {
-    const t2 = tmp(1233).t;
-    const intl2 = tmp(1233).intl;
+    const t2 = tmp(1114).t;
+    const intl2 = tmp(1114).intl;
     obj1 = { application: null, termsOfServiceURL: null, discordPrivacyPolicyURL: null };
     ({ name: obj3[0], terms_of_service_url: obj3[1] } = application);
     obj1[2] = MarketingURLs.PRIVACY;
     return intl2.format(isSocialLayerParentApplication ? t2.nBLOp5 : t2["q0T/Q1"], obj1);
   } else {
-    const t = tmp(1233).t;
-    const intl = tmp(1233).intl;
+    const t = tmp(1114).t;
+    const intl = tmp(1114).intl;
     const obj2 = { application: null, discordPrivacyPolicyURL: null };
     obj2[0] = application.name;
     obj2[1] = MarketingURLs.PRIVACY;

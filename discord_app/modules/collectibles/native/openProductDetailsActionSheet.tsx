@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
 import set from "../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openCollectiblesShop from "../CollectiblesActionCreators.tsx";
 import getProductOrbPrice from "../utils/CollectiblesProductUtils.tsx";
@@ -33,13 +33,13 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   const tmp2 = dependencyMap;
   const tmpResult = openCollectiblesShop;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12764, tmp2.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8177, tmp2.paths), c3, obj, stack);
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
-  ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext } = skuId);
+  ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile } = skuId);
   let obj = openCollectiblesShop;
   obj.productDetailsOpened(skuId);
-  obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12764, dependencyMap.paths), c3, obj, stack);
+  obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile };
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8177, dependencyMap.paths), c3, obj, stack);
 };

@@ -1,6 +1,6 @@
 // discord_app/modules/games/GameRecord.tsx
-import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import toJSDefault from "../../lib/Record.tsx";
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import getGameMediaRefURLDefault from "getGameMediaRefURL.tsx";
 import closure_3 from "../../records/ApplicationRecord.tsx";
 import { createExecutable } from "../../records/ApplicationRecord.tsx";
@@ -183,7 +183,7 @@ prototype["getArtworkURLs"] = function getArtworkURLs() {
     artwork = [];
   }
   const mapped = artwork.map((arg0) => closure_1_1(closure_1_2[3])(self.id, arg0, { keepAspectRatio: true }));
-  return mapped.filter(self(1470).isNotNullish);
+  return mapped.filter(self(1369).isNotNullish);
 };
 prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
   closure_0 = DEVELOPER;

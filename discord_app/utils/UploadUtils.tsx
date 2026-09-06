@@ -1,6 +1,7 @@
 // discord_app/utils/UploadUtils.tsx
 import set from "../../_runtime/00002_set.js";
 import cancel from "../lib/uploader/Upload.tsx";
+import getNitroFileUploadLimitBytes from "../modules/premium/experiments/NitroFileUploadExperiments.tsx";
 import getClipCreatedAt from "../modules/clips/clipPayloadUtils.tsx";
 
 const items = [
@@ -103,10 +104,18 @@ const items = [
     type: "image/webm",
   },
 ];
+let c3 = 524288000;
+let c4 = 1073741824;
 const result = set.fileFinishedImporting("utils/UploadUtils.tsx");
 
 export const MAX_TOTAL_ATTACHMENT_SIZE = 524288000;
+export const MAX_TOTAL_ATTACHMENT_SIZE_1GB = 1073741824;
 export const MAX_TOTAL_ATTACHMENT_SIZE_MB = 500;
+export const getMaxTotalAttachmentSize = function getMaxTotalAttachmentSize(location) {
+  return getNitroFileUploadLimitBytes.getNitroFileUploadRolloutConfig({ location: location.location }).enabled
+    ? c4
+    : c3;
+};
 export const getAttachmentPayload = function getAttachmentPayload(closure_0, closure_1, name) {
   let tmp = closure_1;
   if (closure_1 === undefined) {

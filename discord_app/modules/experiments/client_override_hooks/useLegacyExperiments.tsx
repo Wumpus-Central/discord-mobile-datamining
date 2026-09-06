@@ -82,11 +82,11 @@ export const getLegacyExperiments = function getLegacyExperiments() {
   return obj;
 };
 export const useLegacyExperiments = function useLegacyExperiments() {
-  let obj = stateFromStoresObject(586);
+  let obj = stateFromStoresObject(504);
   const items = [closure_5];
   stateFromStoresObject = obj.useStateFromStoresObject(items, () => store.getRegisteredExperiments());
   const items1 = [closure_5];
-  const stateFromStoresObject1 = stateFromStoresObject(586).useStateFromStoresObject(items1, () =>
+  const stateFromStoresObject1 = stateFromStoresObject(504).useStateFromStoresObject(items1, () =>
     store.getAllExperimentOverrideDescriptors(),
   );
   obj = {

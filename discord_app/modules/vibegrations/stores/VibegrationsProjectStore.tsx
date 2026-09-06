@@ -105,8 +105,8 @@ prototype["getSharedProjects"] = function getSharedProjects(guildId) {
   }
   return items;
 };
-prototype["getIntegrationStatus"] = function getIntegrationStatus(closure_1) {
-  let value = map1.get(closure_1);
+prototype["getIntegrationStatus"] = function getIntegrationStatus(projectId) {
+  let value = map1.get(projectId);
   if (value == null) {
     value = null;
   }

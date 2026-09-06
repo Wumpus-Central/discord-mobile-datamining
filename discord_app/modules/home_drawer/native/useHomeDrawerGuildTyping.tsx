@@ -12,17 +12,18 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
     typingChannelId.typingChannelName === typingChannelId2.typingChannelName;
   if (result) {
     result = shallowEqual.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
-    const obj = shallowEqual;
+    obj = shallowEqual;
   }
   return result;
 }
-let closure_7 = { typingChannelId: "Array", typingChannelName: "PX_16", typingUserIds: [] };
+let obj = { typingChannelId: "Array", typingChannelName: "isArray", typingUserIds: -11665405 };
+obj[2] = [];
 let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
   const _require = id;
   const isHomeDrawerChannelMuted = _require(isHomeDrawerChannelInChannelList[5]).useIsHomeDrawerChannelMuted();
-  let obj = _require(isHomeDrawerChannelInChannelList[5]);
+  obj = _require(isHomeDrawerChannelInChannelList[5]);
   isHomeDrawerChannelInChannelList = _require(
     isHomeDrawerChannelInChannelList[6],
   ).useIsHomeDrawerChannelInChannelList();
@@ -33,7 +34,7 @@ export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
     items,
     () => {
       const typingUsersByGuild = closure_1_6.getTypingUsersByGuild(closure_0);
-      let obj = isHomeDrawerChannelMuted(isHomeDrawerChannelInChannelList[8]);
+      obj = isHomeDrawerChannelMuted(isHomeDrawerChannelInChannelList[8]);
       const keys = obj.keys(typingUsersByGuild);
       const found = keys.find((id) => {
         const basicChannel = closure_1_5.getBasicChannel(id);

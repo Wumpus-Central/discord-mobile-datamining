@@ -1,6 +1,6 @@
 // discord_app/modules/guild_member_verification/MemberVerificationActionCreators.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../impersonate/ImpersonateStore.tsx";
 import closure_5 from "../../stores/GuildMemberStore.tsx";
@@ -119,7 +119,7 @@ function _updateVerificationForm() {
               closure_5 = tmp2;
               closure_4 = tmp5;
               body = undefined;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_9.GUILD_MEMBER_VERIFICATION(callback);
               const obj2 = { form_fields: null, enabled: null, bulk_action: null };
@@ -127,7 +127,7 @@ function _updateVerificationForm() {
               obj2[1] = dependencyMap;
               obj2[2] = closure_3;
               obj1[1] = obj2;
-              obj1[3] = callback(527).rejectWithMigratedError();
+              obj1[3] = callback(1272).rejectWithMigratedError();
               c6 = 1;
               c7 = 1;
               const obj3 = { value: null, done: false };
@@ -144,7 +144,7 @@ function _updateVerificationForm() {
             return obj;
           } else {
             body = body.body;
-            let obj4 = body(706);
+            let obj4 = body(573);
             obj4 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: null, form: null };
             obj4[1] = callback;
             const obj5 = { version: null, description: null, formFields: null };
@@ -294,13 +294,13 @@ function _enableVerificationForm() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_9.GUILD_MEMBER_VERIFICATION(callback);
               const obj2 = { enabled: null };
               obj2[0] = closure_1;
               obj1[1] = obj2;
-              obj1[3] = callback(527).rejectWithMigratedError();
+              obj1[3] = callback(1272).rejectWithMigratedError();
               c3 = 1;
               dependencyMap = 1;
               const obj3 = { value: null, done: false };

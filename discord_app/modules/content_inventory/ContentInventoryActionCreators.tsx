@@ -1,6 +1,6 @@
 // discord_app/modules/content_inventory/ContentInventoryActionCreators.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import QUICK_SWITCHERDefault from "../app_analytics/AnalyticsLocation.tsx";
 import showUserProfileAll from "ContentInventoryPlatformActionCreators.native.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";

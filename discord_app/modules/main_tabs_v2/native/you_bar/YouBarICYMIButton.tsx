@@ -36,7 +36,7 @@ const memoResult = importAllResult.memo(function YouBarICYMIButton(hasNameplate)
       rootNavigationRef.navigate("icymi", obj);
     }
   };
-  const intl = tmp5(1233).intl;
+  const intl = tmp5(1114).intl;
   obj[5] = intl.string(getSystemLocale.t["jnXV/V"]);
   return jsx(YouBarButtonIconDefault, { size: "custom", style: tmp.icon, color: null });
 });

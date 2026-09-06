@@ -1,9 +1,9 @@
 // discord_app/actions/SurveyActionCreators.tsx
+import dispatcherDefault from "../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef4714 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4753 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../stores/SurveyStore.tsx";
 import { SURVEY_REFETCH_INTERVAL } from "../stores/SurveyStore.tsx";
 import ME from "../Constants.tsx";
@@ -57,11 +57,11 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
       if (survey != null) {
         key = survey.key;
       }
-      return callback(1399).exact({ key });
+      return callback(1969).exact({ key });
     },
   };
   obj[2] = obj;
-  const obj2 = _modDef4714;
+  const obj2 = _modDef4753;
   obj[3] = sendRequest.rejectWithMigratedError();
   const value = obj2.get(obj);
   return value.then(
@@ -73,7 +73,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
           survey = body.survey;
         }
       }
-      callback2(706).dispatch({ type: "SURVEY_FETCHED", survey });
+      callback2(573).dispatch({ type: "SURVEY_FETCHED", survey });
       let survey1;
       if (body != null) {
         const body2 = body.body;
@@ -84,7 +84,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
       return survey1;
     },
     () => {
-      callback2(706).dispatch({ type: "SURVEY_FETCHED", survey: null });
+      callback2(573).dispatch({ type: "SURVEY_FETCHED", survey: null });
     },
   );
 };
@@ -100,7 +100,7 @@ export const surveySeen = function surveySeen(key) {
   obj = { type: "SURVEY_SEEN", key };
   obj.dispatch(obj);
   obj = { url: closure_7.USER_SURVEY_SEEN(key), trackedActionData: null, rejectWithError: null };
-  const obj3 = _modDef4714;
+  const obj3 = _modDef4753;
   obj[1] = {
     event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames
       .USER_SURVEY_SEEN,

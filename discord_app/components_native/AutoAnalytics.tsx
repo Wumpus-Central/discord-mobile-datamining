@@ -3,10 +3,9 @@ import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
 import getFavoritesAwareGuildName from "../modules/favorites/FavoritesUtils.tsx";
 import collectGuildAnalyticsMetadata from "../modules/app_analytics/AppAnalyticsUtils.tsx";
-import isClickstreamEnabled from "../modules/app_analytics/clickstream/Clickstream.tsx";
 import trackChannelOpenedClickstreamDefault from "../modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx";
 import collectGuildThemeAnalyticsMetadata from "../modules/guild_themes/GuildThemeAnalyticsUtils.tsx";
-import trackFavoritesGuildViewedDefault from "../modules/favorites/analytics/trackFavoritesGuildViewed.tsx";
+import trackGuildViewedClickstreamDefault from "../modules/app_analytics/track/guild_viewed/trackGuildViewedClickstream.tsx";
 import getChannelOpenedRouteTrackingProps from "../modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx";
 import closure_3 from "../modules/calls/ChannelRTCStore.tsx";
 import closure_4 from "../modules/gateway/GatewayConnectionStore.tsx";
@@ -49,10 +48,10 @@ prototype["componentDidMount"] = function componentDidMount() {
     if (tmp) {
       obj1 = { channel_is_nsfw: null };
       obj1[0] = tmp2;
-      tmp18(4701).trackWithMetadata(tmp17.TEXT_IN_VOICE_OPENED, obj1);
-      const tmp18Result = tmp18(4701);
+      tmp18(4740).trackWithMetadata(tmp17.TEXT_IN_VOICE_OPENED, obj1);
+      const tmp18Result = tmp18(4740);
     }
-    const obj11 = collectGuildAnalyticsMetadata;
+    const obj10 = collectGuildAnalyticsMetadata;
     tmp17 = constants;
     tmp18 = require;
   }
@@ -72,14 +71,14 @@ prototype["componentDidMount"] = function componentDidMount() {
     let obj5 = collectGuildThemeAnalyticsMetadata;
     const merged2 = Object.assign(obj5.collectGuildThemeAnalyticsMetadata(selectedGuildId));
     self._trackWithMetadata(constants.GUILD_VIEWED, obj4);
-    obj5 = { guild_id: null };
+    obj5 = { guildId: null };
     obj5[0] = selectedGuildId;
-    isClickstreamEnabled.trackClickstream(constants.GUILD_VIEWED_CLICKSTREAM, obj5);
-    const obj7 = isClickstreamEnabled;
-    if (obj9.isFavoritesGuildId(selectedGuildId)) {
-      trackFavoritesGuildViewedDefault();
+    trackGuildViewedClickstreamDefault(obj5);
+    if (obj8.isFavoritesGuildId(selectedGuildId)) {
+      tmp14(16739)();
     }
-    obj9 = getFavoritesAwareGuildName;
+    obj8 = getFavoritesAwareGuildName;
+    tmp14 = importDefault;
   }
 };
 prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
@@ -213,7 +212,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       const merged3 = Object.assign(obj3.getVoiceStateMetadata(voiceChannelGuildId, voiceChannelId, videoEnabled));
       const merged4 = Object.assign(self.getGameMetadata());
       expandEventPropertiesDefault.track(constants.JOIN_VOICE_CHANNEL, obj);
-      const obj23 = expandEventPropertiesDefault;
+      const obj22 = expandEventPropertiesDefault;
     }
   }
   if (voiceChannelId.videoEnabled !== videoEnabled) {
@@ -271,8 +270,8 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
     if (isTextInVoice) {
       obj4 = { channel_is_nsfw: null };
       obj4[0] = isNSFWChannel;
-      tmp44(4701).trackWithMetadata(tmp43.TEXT_IN_VOICE_OPENED, obj4);
-      const tmp44Result = tmp44(4701);
+      tmp44(4740).trackWithMetadata(tmp43.TEXT_IN_VOICE_OPENED, obj4);
+      const tmp44Result = tmp44(4740);
     }
     tmp43 = constants;
     tmp44 = require;
@@ -304,15 +303,15 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
         collectGuildThemeAnalyticsMetadata.collectGuildThemeAnalyticsMetadata(selectedGuildId),
       );
       self._trackWithMetadata(constants.GUILD_VIEWED, obj8);
-      const obj19 = collectGuildThemeAnalyticsMetadata;
-      obj9 = { guild_id: null };
+      obj9 = { guildId: null };
       obj9[0] = selectedGuildId;
-      isClickstreamEnabled.trackClickstream(constants.GUILD_VIEWED_CLICKSTREAM, obj9);
-      const obj20 = isClickstreamEnabled;
-      if (obj22.isFavoritesGuildId(selectedGuildId)) {
-        trackFavoritesGuildViewedDefault();
+      trackGuildViewedClickstreamDefault(obj9);
+      const obj19 = collectGuildThemeAnalyticsMetadata;
+      const tmp68 = importDefault;
+      if (obj21.isFavoritesGuildId(selectedGuildId)) {
+        tmp68(16739)();
       }
-      obj22 = getFavoritesAwareGuildName;
+      obj21 = getFavoritesAwareGuildName;
     }
   }
 };
@@ -334,8 +333,8 @@ prototype["_trackWithMetadata"] = function _trackWithMetadata(CHANNEL_OPENED, fi
       obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(self.collectDefaultAnalyticsMetadata(tmp, tmp2));
-      tmp3(695).track(CHANNEL_OPENED, obj);
-      const tmp3Result = tmp3(695);
+      tmp3(1242).track(CHANNEL_OPENED, obj);
+      const tmp3Result = tmp3(1242);
     }
     obj2 = expandEventPropertiesDefault;
     tmp3 = importDefault;

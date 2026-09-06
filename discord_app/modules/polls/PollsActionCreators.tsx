@@ -53,10 +53,10 @@ function showLurkingAlert(guildId) {
   ({ title, body } = guildId);
   let obj = setDefault;
   obj = { title, body, confirmText: null, cancelText: null, onConfirm: null };
-  const intl = guildId(1233).intl;
-  obj[2] = intl.string(guildId(1233).t["9VLmlZ"]);
-  const intl2 = guildId(1233).intl;
-  obj[3] = intl2.string(guildId(1233).t["2m+Sqk"]);
+  const intl = guildId(1114).intl;
+  obj[2] = intl.string(guildId(1114).t["9VLmlZ"]);
+  const intl2 = guildId(1114).intl;
+  obj[3] = intl2.string(guildId(1114).t["2m+Sqk"]);
   obj[4] = function onConfirm() {
     let obj = closure_1_1(closure_1_3[14]);
     obj = { source: closure_1_16.POLL_ALERT };
@@ -69,18 +69,18 @@ function handleShowVotesForAnswer(messageId) {
   channel = channel.getChannel(channelId);
   if (null != channel) {
     if (lurking.isLurking(channel.guild_id)) {
-      const intl = guild_id(1233).intl;
-      const intl2 = guild_id(1233).intl;
+      const intl = guild_id(1114).intl;
+      const intl2 = guild_id(1114).intl;
       guild_id = channel.guild_id;
-      const stringResult = intl.string(guild_id(1233).t["7LpysO"]);
-      const stringResult1 = intl2.string(guild_id(1233).t["5sHHoy"]);
+      const stringResult = intl.string(guild_id(1114).t["7LpysO"]);
+      const stringResult1 = intl2.string(guild_id(1114).t["5sHHoy"]);
       let obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       obj[0] = stringResult;
       obj[1] = stringResult1;
-      const intl3 = guild_id(1233).intl;
-      obj[2] = intl3.string(guild_id(1233).t["9VLmlZ"]);
-      const intl4 = guild_id(1233).intl;
-      obj[3] = intl4.string(guild_id(1233).t["2m+Sqk"]);
+      const intl3 = guild_id(1114).intl;
+      obj[2] = intl3.string(guild_id(1114).t["9VLmlZ"]);
+      const intl4 = guild_id(1114).intl;
+      obj[3] = intl4.string(guild_id(1114).t["2m+Sqk"]);
       obj[4] = function onConfirm() {
         let obj = closure_1_1(closure_1_3[14]);
         obj = { source: closure_1_16.POLL_ALERT };
@@ -223,14 +223,14 @@ function _optimisticallySetAnswers() {
                 items = [];
                 callback = HermesBuiltin.arraySpread(c4.map((id) => ({ type: "MESSAGE_REACTION_REMOVE", id })), callback);
                 callback = HermesBuiltin.arraySpread(c5.map((id) => ({ type: "MESSAGE_REACTION_ADD", id })), callback);
-                const Emitter = callback(586).Emitter;
+                const Emitter = callback(504).Emitter;
                 closure_8 = Emitter.batched(() => {
                   let dispatchResult;
                   for (const item10006 of items) {
                     let id = item10006.id;
                     let tmp2 = callback;
                     let tmp3 = dependencyMap;
-                    let obj = callback(706);
+                    let obj = callback(573);
                     obj = { type: null, channelId: null, messageId: null, emoji: null, userId: null, optimistic: true, reactionType: null };
                     obj[0] = item10006.type;
                     let tmp4 = _undefined;
@@ -244,7 +244,7 @@ function _optimisticallySetAnswers() {
                     let tmp6 = closure_6;
                     obj[4] = closure_6;
                     let tmp7 = _undefined;
-                    obj[6] = _undefined(7518).ReactionTypes.VOTE;
+                    obj[6] = _undefined(7763).ReactionTypes.VOTE;
                     dispatchResult = obj.dispatch(obj);
                     continue;
                   }
@@ -622,10 +622,10 @@ function _handleClearPollVote() {
                 if (lurking.isLurking(channel2.guild_id)) {
                   const obj2 = { guildId: null, title: null, body: null };
                   obj2[0] = channel2.guild_id;
-                  const intl = callback(1233).intl;
-                  obj2[1] = intl.string(callback(1233).t.B9QnBp);
-                  const intl2 = callback(1233).intl;
-                  obj2[2] = intl2.string(callback(1233).t.BVZCTn);
+                  const intl = callback(1114).intl;
+                  obj2[1] = intl.string(callback(1114).t.B9QnBp);
+                  const intl2 = callback(1114).intl;
+                  obj2[2] = intl2.string(callback(1114).t.BVZCTn);
                   callback3(obj2);
                 } else {
                   callback2(callback, c1, (showResults) => {
@@ -979,17 +979,17 @@ function _createPoll() {
               c5 = 3;
               c6 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = lib2(7211).sendPollMessage(lib.id, obj2, obj4);
+              obj5[0] = lib2(7456).sendPollMessage(lib.id, obj2, obj4);
               return obj5;
             }
           } else {
             if (2 === tmp7) {
               c4 = 0;
               closure_11 = dependencyMap;
-              if (closure_11 instanceof lib(4376).APIError) {
+              if (closure_11 instanceof lib(4461).APIError) {
                 let aPIError = closure_11;
               } else {
-                aPIError = new lib(4376).APIError(closure_11);
+                aPIError = new lib(4461).APIError(closure_11);
               }
               if ("poll" === aPIError.getAnyErrorMessage()) {
                 if (null != closure_11.text) {
@@ -1096,14 +1096,14 @@ function _endPollEarly() {
               return obj1;
             } else {
               const obj2 = { title: null, body: null };
-              const intl = callback(1233).intl;
-              obj2[0] = intl.string(callback(1233).t["+rfkTK"]);
-              const intl2 = callback(1233).intl;
-              obj2[1] = intl2.string(callback(1233).t.H2I1gL);
+              const intl = callback(1114).intl;
+              obj2[0] = intl.string(callback(1114).t["+rfkTK"]);
+              const intl2 = callback(1114).intl;
+              obj2[1] = intl2.string(callback(1114).t.H2I1gL);
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback2(4858).confirm(obj2);
+              obj3[0] = callback2(4904).confirm(obj2);
               return obj3;
             }
           } else {
@@ -1117,7 +1117,7 @@ function _endPollEarly() {
                 obj4[0] = arg1;
                 return obj4;
               } else if (arg1) {
-                obj1 = callback3(11531);
+                obj1 = callback3(11726);
                 const obj5 = { channelId: null, messageId: null };
                 obj5[0] = callback;
                 obj5[1] = callback2;

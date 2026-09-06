@@ -1,8 +1,8 @@
 // discord_app/modules/notifications/settings_unread_notice/UnreadSettingNoticeStore2.tsx
 import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../../utils/Durations.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import useChannelPresetSettings from "../settings/utils/notficationSettingsChannelFlagUtils.tsx";
 import closure_3 from "../../../stores/AuthenticationStore.tsx";

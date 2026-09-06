@@ -1,9 +1,9 @@
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadUtils.tsx
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import _modDef8049 from "../../../_runtime/metro/08049__.js";
+import _modDef8128 from "../../../_runtime/metro/08128__.js";
 import set from "../../../_runtime/00002_set.js";
 
-let set = new Set(_modDef8049);
+let set = new Set(_modDef8128);
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj[0] = regExp;

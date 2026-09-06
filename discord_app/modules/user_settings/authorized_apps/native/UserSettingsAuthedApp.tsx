@@ -33,7 +33,7 @@ function WarningLabel(children) {
 }
 function AuthorizedAppTwoWay(application) {
   let navigation;
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   const items = [navigation];
   obj = { text: null };
@@ -41,9 +41,9 @@ function AuthorizedAppTwoWay(application) {
     const CommonActions = navigation(closure_1_2[17]).CommonActions;
     navigation.dispatch(CommonActions.navigate(closure_1_12.CONNECTIONS));
   }, items);
-  const intl = navigation(1233).intl;
+  const intl = navigation(1114).intl;
   obj = { applicationName: application.application.name, onConnectionPress: callback };
-  obj[0] = intl.format(navigation(1233).t.jUhnwb, obj);
+  obj[0] = intl.format(navigation(1114).t.jUhnwb, obj);
   return callback(WarningLabel, obj);
 }
 function ParentApp(application) {

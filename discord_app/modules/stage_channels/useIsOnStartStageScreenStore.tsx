@@ -2,7 +2,7 @@
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/PermissionStore.tsx";
 import closure_5 from "../../stores/SelectedChannelStore.tsx";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
@@ -28,12 +28,12 @@ export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartSt
   const items2 = [id];
   const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
     items1,
-    () => closure_1_4.can(id(1394).MODERATE_STAGE_CHANNEL_PERMISSIONS, id),
+    () => closure_1_4.can(id(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, id),
     items2,
   );
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
-    tmp3 = !stateFromStores(8686)(id.id);
+    tmp3 = !stateFromStores(8396)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];
@@ -41,13 +41,13 @@ export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartSt
     if (stateFromStores) {
       if (!tmp) {
         id = false;
-        id(702).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
-        const obj2 = id(702);
+        id(1249).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
+        const obj2 = id(1249);
       }
     } else {
       id = tmp;
-      id(702).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
-      const obj = id(702);
+      id(1249).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
+      const obj = id(1249);
     }
   }, items3);
 };

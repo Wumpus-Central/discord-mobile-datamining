@@ -121,11 +121,11 @@ let c4 = importAllResult;
 ({ AnalyticsPages: error, MOBILE_GUILD_UPSELL_LIST: closure_8, TooltipNames: c9, UpsellTypes: c10 } = ME);
 let closure_13 = createCacheKey.createStyles({ stretch: { alignSelf: "stretch" } });
 const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
-  let obj = enabled(16132);
+  let obj = enabled(16294);
   const tmp = callback2();
-  const GameCommunityAddServerEntryExperiment = enabled(13605).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = enabled(13714).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
-  obj1 = enabled(586);
+  obj1 = enabled(504);
   const items = [closure_6];
   let stateFromStores = enabled;
   if (enabled) {
@@ -161,20 +161,20 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
     unread: false,
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
-    config: "e",
-    label: 70.532,
-    expandedChildren: 80.882,
-    children: 60.302,
+    config: "CATEGORY_EXPAND_ALL",
+    label: null,
+    expandedChildren: "guilds-bar-drag-preview",
+    children: null,
   };
   obj[5] = memo;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp8 = View;
-  const intl = tmp2(1233).intl;
-  obj[6] = intl.string(enabled(1233).t.l5WIbf);
-  obj[7] = jsx(enabled(16191).HomeDrawerAddServerRowExpandedChildren, {});
+  const intl = tmp2(1114).intl;
+  obj[6] = intl.string(enabled(1114).t.l5WIbf);
+  obj[7] = jsx(enabled(16353).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = ThemesDefault.colors;
   obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[8] = jsx(enabled(9242).CirclePlusIcon, {
+  obj[8] = jsx(enabled(11204).CirclePlusIcon, {
     size: "md",
     color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
@@ -184,10 +184,10 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
     unread: false,
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
-    config: "e",
-    label: 70.532,
-    expandedChildren: 80.882,
-    children: 60.302,
+    config: "CATEGORY_EXPAND_ALL",
+    label: null,
+    expandedChildren: "guilds-bar-drag-preview",
+    children: null,
   });
   return (
     <tmp8
@@ -196,11 +196,11 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
       unread={false}
       styles={obj.useGuildsBarAnimatedWrapperStyles()}
       overState="y"
-      config="e"
-      label={70.532}
-      expandedChildren={80.882}
+      config="CATEGORY_EXPAND_ALL"
+      label={null}
+      expandedChildren="guilds-bar-drag-preview"
     >
-      {60.302}
+      {null}
     </tmp8>
   );
 });

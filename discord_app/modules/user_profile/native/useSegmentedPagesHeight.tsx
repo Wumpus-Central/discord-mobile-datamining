@@ -9,7 +9,7 @@ let closure_5 = {
 let result = require("set").fileFinishedImporting("modules/user_profile/native/useSegmentedPagesHeight.tsx");
 
 export const usePageHeights = function usePageHeights() {
-  let obj = sharedValue(4217);
+  let obj = sharedValue(4296);
   sharedValue = obj.useSharedValue([]);
   closure_1 = React.useRef([]);
   let items = [sharedValue];
@@ -31,8 +31,8 @@ export const usePageHeights = function usePageHeights() {
   return obj;
 };
 export const usePagerFillHeight = function usePagerFillHeight() {
-  const height = bottom(1492)().height;
-  bottom = bottom(1627)().bottom;
+  const height = bottom(1477)().height;
+  bottom = bottom(1611)().bottom;
   const tmp = ref(React.useState(0), 2);
   dependencyMap = tmp[1];
   ref = React.useRef(null);

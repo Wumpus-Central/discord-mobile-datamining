@@ -61,7 +61,7 @@ export default function Header(accountScopes) {
   let userAvatarSource;
   const applicationIconSource = obj.getApplicationIconSource(obj);
   if (null != user) {
-    let tmp2Result = tmp2(1430);
+    let tmp2Result = tmp2(1396);
     userAvatarSource = tmp2Result.getUserAvatarSource(user);
   }
   obj = { style: tmp.header, children: null };
@@ -91,10 +91,10 @@ export default function Header(accountScopes) {
     const obj10 = { style: null, verified: null };
     obj10[0] = tmp.botTag;
     let hasFlagResult = null != bot.public_flags;
-    tmp2Result = tmp2(8951);
+    tmp2Result = tmp2(9438);
     if (hasFlagResult) {
-      hasFlagResult = tmp9(1398).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
-      const tmp9Result = tmp9(1398);
+      hasFlagResult = tmp9(1384).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
+      const tmp9Result = tmp9(1384);
     }
     obj10[1] = hasFlagResult;
     tmp8Result = tmp8(tmp2Result, obj10);
@@ -103,11 +103,11 @@ export default function Header(accountScopes) {
   obj8[1] = items3;
   items2[1] = callback2(View, obj8);
   if (accountScopes.accountScopes.length > 0) {
-    const intl2 = tmp9(1233).intl;
-    let stringResult = intl2.string(tmp9(1233).t.jFbDnJ);
+    const intl2 = tmp9(1114).intl;
+    let stringResult = intl2.string(tmp9(1114).t.jFbDnJ);
   } else {
-    const intl = tmp9(1233).intl;
-    stringResult = intl.string(tmp9(1233).t["X+Fdpo"]);
+    const intl = tmp9(1114).intl;
+    stringResult = intl.string(tmp9(1114).t["X+Fdpo"]);
   }
   items2[2] = callback(Text.Text, { variant: "heading-md/normal", color: "text-default", children: stringResult });
   obj[1] = items2;

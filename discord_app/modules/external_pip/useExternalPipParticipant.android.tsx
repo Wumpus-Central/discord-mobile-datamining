@@ -62,8 +62,8 @@ export default function useExternalPipParticipant() {
     if (stateFromStores1.current !== id2) {
       let obj = {
         focusedParticipantStreamId: "Array",
-        focusedParticipantUserId: "PX_16",
-        focusedParticipantType: null,
+        focusedParticipantUserId: "isArray",
+        focusedParticipantType: -11665405,
       };
       obj[2] = _undefined.current;
     } else {

@@ -32,7 +32,7 @@ prototype["initialize"] = function initialize() {
       set() {},
     },
   });
-  closure_5 = self(1932).isStaffEnv(authStore.getCurrentUser());
+  closure_5 = self(1382).isStaffEnv(authStore.getCurrentUser());
   const timerId = setTimeout(() => Object.freeze(self));
 };
 prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {

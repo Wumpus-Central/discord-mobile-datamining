@@ -14,11 +14,11 @@ export default function useColorPresetsWithA11yLabels(arg0) {
     () =>
       closure_1_4(closure_0).map((arr) => {
         let obj = { colors: arr, a11yLabel: null };
-        const intl = callback(1233).intl;
+        const intl = callback(1114).intl;
         obj = { number: arg1 + 1, hexList: null };
-        const mapped = arr.map(callback(685).int2hex);
+        const mapped = arr.map(callback(1091).int2hex);
         obj[1] = mapped.join(", ");
-        obj[1] = intl.formatToPlainString(callback2(2758).FHfTsV, obj);
+        obj[1] = intl.formatToPlainString(callback2(2786).FHfTsV, obj);
         return obj;
       }),
     items,

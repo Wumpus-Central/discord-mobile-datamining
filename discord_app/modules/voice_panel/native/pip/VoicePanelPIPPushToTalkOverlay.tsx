@@ -50,13 +50,13 @@ const importDefaultResult1 = importDefaultResult;
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx");
 
 export default function VoicePanelPIPPushToTalkOverlay() {
-  let obj = sharedValue(16928);
+  let obj = sharedValue(17092);
   const pIPState = obj.usePIPState();
   sharedValue = pIPState;
   const tmp2 = callback3();
   sharedValue = undefined;
   let first;
-  obj1 = sharedValue(4217);
+  obj1 = sharedValue(4296);
   sharedValue = obj1.useSharedValue(false);
   first = BLACK.useRef(false);
   let items = [sharedValue];
@@ -65,18 +65,18 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     BLACK.useCallback((current) => {
       if (current !== first.current) {
         first.current = current;
-        sharedValue(9683).setPushToTalkState(current);
+        sharedValue(9696).setPushToTalkState(current);
         const result = sharedValue.set(current);
-        const obj = sharedValue(9683);
+        const obj = sharedValue(9696);
       }
     }, items),
   ];
   const tmp4 = WHITE(items1, 2);
   first = tmp4[0];
   dependencyMap = tmp6;
-  WHITE = first(709).unsafe_rawColors.WHITE;
-  BLACK = first(709).unsafe_rawColors.BLACK;
-  let obj2 = sharedValue(4217);
+  WHITE = first(576).unsafe_rawColors.WHITE;
+  BLACK = first(576).unsafe_rawColors.BLACK;
+  let obj2 = sharedValue(4296);
   let fn = function o() {
     let obj = first;
     let num = 8;
@@ -84,35 +84,35 @@ export default function VoicePanelPIPPushToTalkOverlay() {
       num = 20;
     }
     obj = {
-      right: sharedValue(4928).withSpring(num, closure_1_5),
+      right: sharedValue(4974).withSpring(num, closure_1_5),
       bottom: null,
       transform: null,
       backgroundColor: null,
     };
-    const obj3 = sharedValue(4928);
+    const obj3 = sharedValue(4974);
     const tmp = sharedValue;
-    obj[1] = sharedValue(4928).withSpring(num, closure_1_5);
-    const obj4 = sharedValue(4928);
+    obj[1] = sharedValue(4974).withSpring(num, closure_1_5);
+    const obj4 = sharedValue(4974);
     let num2 = 1;
     if (obj.get()) {
       num2 = 1.5;
     }
-    obj = { scale: sharedValue(4928).withSpring(num2, tmp3) };
+    obj = { scale: sharedValue(4974).withSpring(num2, tmp3) };
     const items = [obj];
     obj[2] = items;
-    const obj5 = sharedValue(4928);
+    const obj5 = sharedValue(4974);
     let str = "rgba(0, 0, 0, 0.54)";
     if (obj.get()) {
       str = WHITE;
     }
-    obj[3] = tmp(4928).withSpring(str, closure_1_5);
+    obj[3] = tmp(4974).withSpring(str, closure_1_5);
     return obj;
   };
   obj = {
     isPushingToTalk: first,
     EXPANDED_ICON_SIZE: 48,
     BASE_ICON_SIZE: 32,
-    withSpring: sharedValue(4928).withSpring,
+    withSpring: sharedValue(4974).withSpring,
     PUSH_TO_TALK_PIP_PHYSICS,
     white: WHITE,
   };
@@ -120,7 +120,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   fn.__workletHash = 3936373516983;
   fn.__initData = closure_13;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  let obj4 = sharedValue(4217);
+  let obj4 = sharedValue(4296);
   class P {
     constructor() {
       obj = closure_0(closure_2[12]);
@@ -129,7 +129,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     }
   }
   obj = {
-    withSpring: sharedValue(4928).withSpring,
+    withSpring: sharedValue(4974).withSpring,
     isPushingToTalk: first,
     black: BLACK,
     white: WHITE,
@@ -155,22 +155,22 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     }
   }
   obj1 = {
-    withSpring: sharedValue(4928).withSpring,
+    withSpring: sharedValue(4974).withSpring,
     isPushingToTalk: first,
     PUSH_TO_TALK_PIP_PHYSICS,
-    getVoicePanelPIPBorderRadius: sharedValue(16923).getVoicePanelPIPBorderRadius,
+    getVoicePanelPIPBorderRadius: sharedValue(17087).getVoicePanelPIPBorderRadius,
     pipState: pIPState,
   };
   H.__closure = obj1;
   H.__workletHash = 450590017248;
   H.__initData = closure_15;
   const items2 = [tmp4[1]];
-  const animatedStyle2 = sharedValue(4217).useAnimatedStyle(H);
+  const animatedStyle2 = sharedValue(4296).useAnimatedStyle(H);
   obj2 = { children: null };
   const items3 = [tmp2.overlay, animatedStyle2];
   const memo = BLACK.useMemo(() => {
-    const Gesture = sharedValue(5661).Gesture;
-    const Gesture2 = sharedValue(5661).Gesture;
+    const Gesture = sharedValue(6655).Gesture;
+    const Gesture2 = sharedValue(6655).Gesture;
     const TapResult = Gesture2.Tap();
     const fn = function o(arg0, arg1) {
       if (arg1) {
@@ -178,19 +178,19 @@ export default function VoicePanelPIPPushToTalkOverlay() {
         const obj = closure_1_0(closure_1_2[5]);
       }
     };
-    let obj = { runOnJS: sharedValue(4217).runOnJS, handlePushToTalk: dependencyMap };
+    let obj = { runOnJS: sharedValue(4296).runOnJS, handlePushToTalk: dependencyMap };
     fn.__closure = obj;
     fn.__workletHash = 13736796804739;
     fn.__initData = closure_1_16;
     const maxDistanceResult = Gesture2.Tap().maxDistance(30);
-    const Gesture3 = sharedValue(5661).Gesture;
+    const Gesture3 = sharedValue(6655).Gesture;
     const onEndResult = Gesture2.Tap().maxDistance(30).onEnd(fn);
     const PanResult = Gesture3.Pan();
     const result = Gesture3.Pan().maxPointers(1).shouldCancelWhenOutside(false);
     const fn2 = function t() {
       closure_1_0(closure_1_2[5]).runOnJS(closure_2)(true);
     };
-    obj = { runOnJS: sharedValue(4217).runOnJS, handlePushToTalk: dependencyMap };
+    obj = { runOnJS: sharedValue(4296).runOnJS, handlePushToTalk: dependencyMap };
     fn2.__closure = obj;
     fn2.__workletHash = 246779667986;
     fn2.__initData = closure_1_18;
@@ -199,7 +199,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
       closure_1_0(closure_1_2[5]).runOnJS(closure_2)(false);
     };
     const onBeginResult = result.onBegin(fn2);
-    fn3.__closure = { runOnJS: sharedValue(4217).runOnJS, handlePushToTalk: dependencyMap };
+    fn3.__closure = { runOnJS: sharedValue(4296).runOnJS, handlePushToTalk: dependencyMap };
     fn3.__workletHash = 12223608557562;
     fn3.__initData = closure_1_17;
     return Gesture.Exclusive(onEndResult, onBeginResult.onFinalize(fn3));
@@ -208,15 +208,15 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   let obj3 = { gesture: memo, children: null };
   obj4 = { style: items5, hitSlop: closure_11, children: null };
   items5 = [tmp2.iconContainer, animatedStyle];
-  const obj7 = sharedValue(4217);
+  const obj7 = sharedValue(4296);
   obj4[2] = callback(closure_10, {
     style: animatedStyle1,
-    size: sharedValue(1296).Icon.Sizes.SMALL_20,
-    source: first(17004),
+    size: sharedValue(1178).Icon.Sizes.SMALL_20,
+    source: first(17168),
     disableColor: true,
   });
   obj3[1] = callback(closure_9, obj4);
-  items4[1] = callback(sharedValue(5661).GestureDetector, obj3);
+  items4[1] = callback(sharedValue(6655).GestureDetector, obj3);
   obj2[0] = items4;
   return callback2(closure_7, obj2);
 }

@@ -12,7 +12,7 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 function ApplicationRejectedNotice(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(586);
+  let obj = guildId(504);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(guildId));
   if (stateFromStores != null) {
@@ -28,42 +28,42 @@ function ApplicationRejectedNotice(guildId) {
     useOnboardingMonetizationEnableFlowDefault(stateFromStores));
   if (null != resubmissionError) {
     obj = { children: null };
-    let tmp9Result = tmp9(12019);
+    let tmp9Result = tmp9(12223);
     obj[0] = resubmissionError.getAnyErrorMessage();
     let tmp14 = callback(tmp9Result, obj);
   } else if (null != requestRejectedNoticeText) {
     obj = { notice: null };
     obj[0] = requestRejectedNoticeText;
-    tmp14 = callback(tmp9(17523), obj);
+    tmp14 = callback(tmp9(17683), obj);
   } else if (tmp13) {
     obj1 = { notice: null };
-    tmp9Result = tmp9(17523);
-    const intl3 = tmp2(1233).intl;
-    obj1[0] = intl3.string(tmp2(1233).t.MyJpJT);
+    tmp9Result = tmp9(17683);
+    const intl3 = tmp2(1114).intl;
+    obj1[0] = intl3.string(tmp2(1114).t.MyJpJT);
     tmp14 = callback(tmp9Result, obj1);
   } else if (null != reapplyNoticeText) {
     const obj2 = { notice: null, ctaLabel: null, onClick: null, submitting: null };
     obj2[0] = reapplyNoticeText;
-    const intl2 = tmp2(1233).intl;
-    obj2[1] = intl2.string(tmp2(1233).t["YKw/NQ"]);
+    const intl2 = tmp2(1114).intl;
+    obj2[1] = intl2.string(tmp2(1114).t["YKw/NQ"]);
     obj2[2] = tmp12;
     obj2[3] = tmp11;
-    tmp14 = callback(tmp9(17523), obj2);
-    const tmp9Result1 = tmp9(17523);
+    tmp14 = callback(tmp9(17683), obj2);
+    const tmp9Result1 = tmp9(17683);
   } else if (true === hasItem1) {
     const obj3 = { notice: null };
-    const intl = tmp2(1233).intl;
-    obj3[0] = intl.string(tmp2(1233).t.e2g9sW);
-    tmp14 = callback(tmp9(17523), obj3);
-    const tmp9Result2 = tmp9(17523);
+    const intl = tmp2(1114).intl;
+    obj3[0] = intl.string(tmp2(1114).t.e2g9sW);
+    tmp14 = callback(tmp9(17683), obj3);
+    const tmp9Result2 = tmp9(17683);
   } else {
     tmp14 = null;
     if (true === hasItem) {
       const obj4 = { notice: null };
-      const intl4 = tmp2(1233).intl;
-      obj4[0] = intl4.string(tmp2(1233).t.rxI9sl);
-      tmp14 = callback(tmp9(17523), obj4);
-      const tmp9Result3 = tmp9(17523);
+      const intl4 = tmp2(1114).intl;
+      obj4[0] = intl4.string(tmp2(1114).t.rxI9sl);
+      tmp14 = callback(tmp9(17683), obj4);
+      const tmp9Result3 = tmp9(17683);
     }
   }
   let tmp24 = null;

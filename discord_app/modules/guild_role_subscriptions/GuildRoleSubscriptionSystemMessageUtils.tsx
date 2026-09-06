@@ -163,7 +163,7 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile =
       } else {
         tmp6 = tmp3;
       }
-      const intl = tmp6(1233).intl;
+      const intl = tmp6(1114).intl;
       let name;
       if (guild != null) {
         name = guild.name;
@@ -194,22 +194,19 @@ export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings =
     return useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
   };
 export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(
-  guildId,
-  channelId,
-  messageId,
-  roleSubscriptionListingId,
+  guild_id,
 ) {
   let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { guild_id: guildId, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
+  obj = { guild_id, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
   const currentUser = authStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
   obj[1] = id;
-  obj[2] = channelId;
-  obj[3] = messageId;
-  obj[4] = roleSubscriptionListingId;
+  obj[2] = arg1;
+  obj[3] = arg2;
+  obj[4] = arg3;
   obj.trackWithMetadata(constants.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, obj);
 };
 export const getRoleSubscriptionPurchaseSystemMessageEventProperties =

@@ -364,13 +364,13 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
             obj4[0] = tmp54;
             return obj4;
           } else {
-            obj = callback(4858);
+            obj = callback(4904);
             obj5 = { title: null, body: null };
-            const intl = guildId(1233).intl;
-            obj5[0] = intl.string(guildId(1233).t.ut7sq0);
-            const intl2 = guildId(1233).intl;
+            const intl = guildId(1114).intl;
+            obj5[0] = intl.string(guildId(1114).t.ut7sq0);
+            const intl2 = guildId(1114).intl;
             const format = intl2.format;
-            let t = guildId(1233).t;
+            let t = guildId(1114).t;
             if (guildId) {
               t = {};
               let formatResult = format(t.w9Oz5K, t);

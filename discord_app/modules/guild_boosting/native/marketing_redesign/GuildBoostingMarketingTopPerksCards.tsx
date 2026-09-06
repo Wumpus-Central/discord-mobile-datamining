@@ -3,9 +3,9 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
-import registerAssetDefault from "../../../../../_runtime/13495_registerAsset.js";
-import _mod13496 from "../../../../../_runtime/metro/13496__.js";
-import registerAssetDefault2 from "../../../../../_runtime/13497_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13601_registerAsset.js";
+import _mod13602 from "../../../../../_runtime/metro/13602__.js";
+import registerAssetDefault2 from "../../../../../_runtime/13603_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -80,7 +80,7 @@ let items = [
       return intl.string(getSystemLocale.t.wOYbTv);
     },
     getGraphic(arg0) {
-      const obj = { source: _mod13496, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
+      const obj = { source: _mod13602, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
       return callback(playDefault, obj);
     },
   },

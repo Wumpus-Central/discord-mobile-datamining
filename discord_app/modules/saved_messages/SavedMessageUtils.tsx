@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 import { UnknownChannelRecord } from "../../records/ChannelRecord.tsx";
@@ -153,15 +153,15 @@ export const useDueInString = function useDueInString(arg0) {
       H4gnX9 = getSystemLocale.t.H4gnX9;
     }
     if (type === tmp8.LONG) {
-      Uq7Y_7 = tmp(1233).t.haia16;
+      Uq7Y_7 = tmp(1114).t.haia16;
     } else {
-      Uq7Y_7 = tmp(1233).t["Uq7Y+7"];
+      Uq7Y_7 = tmp(1114).t["Uq7Y+7"];
     }
     if (now > dueAt) {
       H4gnX9 = Uq7Y_7;
     }
     obj = { dueInText: null, isOverdue: null };
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     obj = { duration: null };
     const time = dueAt.getTime();
     const obj3 = hooksDefault;

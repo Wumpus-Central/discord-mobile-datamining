@@ -2,8 +2,8 @@
 import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import BottomSheetModal from "../../../../../_runtime/06627_BottomSheetModal.js";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05633_BottomSheetModal.js";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
@@ -163,7 +163,7 @@ export const showVoiceSettingsActionSheet = function showVoiceSettingsActionShee
 export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = callback3();
-  let obj = channel(10054);
+  let obj = channel(9937);
   const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
   let fn = null;
   if (closure_7.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
@@ -180,14 +180,14 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   let tmp9Result = null;
   if (null != fn) {
     obj = { source: null, onPress: null, accessibilityLabel: null };
-    obj[0] = tmp2(10110);
+    obj[0] = tmp2(10001);
     obj[1] = fn;
-    const intl = tmp5(1233).intl;
+    const intl = tmp5(1114).intl;
     obj = { channelName: null };
     obj[0] = tmp4;
-    obj[2] = intl.formatToPlainString(tmp5(1233).t["dHHb/2"], obj);
-    tmp9Result = tmp9(tmp2(10109), obj);
-    const tmp2Result = tmp2(10109);
+    obj[2] = intl.formatToPlainString(tmp5(1114).t["dHHb/2"], obj);
+    tmp9Result = tmp9(tmp2(10000), obj);
+    const tmp2Result = tmp2(10000);
   }
   obj1 = { children: null };
   items[1] = tmp9Result;

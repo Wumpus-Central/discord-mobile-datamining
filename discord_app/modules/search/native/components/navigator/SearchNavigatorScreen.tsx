@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useBaseAppContainerDimensionsDefault from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
 import getMixedGradientColorDefault from "../../../../client_themes/native/ThemedGradient.tsx";
-import _modDef16464 from "../layout/SearchScreenSearchBar.tsx";
+import _modDef16627 from "../layout/SearchScreenSearchBar.tsx";
 import SearchFreezeContainerDefault from "../layout/SearchScreenLayout.tsx";
 import useSearchLayoutInsetTopDefault from "../../hooks/useSearchLayoutInsetTop.tsx";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
@@ -30,7 +30,7 @@ export default function SearchNavigatorScreen(navigation) {
   importDefault = undefined;
   const tmp = callback3();
   importDefault = tmp;
-  let obj = navigation(16462);
+  let obj = navigation(16625);
   const searchSuggestionsGesture = obj.useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
@@ -51,7 +51,7 @@ export default function SearchNavigatorScreen(navigation) {
   obj1 = { style: items2, children: null };
   items2 = [tmp.wrapper, { paddingTop: useSearchLayoutInsetTopDefault() }];
   const items3 = [
-    callback(_modDef16464, {
+    callback(_modDef16627, {
       searchContext,
       suggestionsDismissed: dismissed,
       setSuggestionsDismissed: setDismissed,
@@ -69,7 +69,7 @@ export default function SearchNavigatorScreen(navigation) {
   });
   obj1[1] = items3;
   obj[1] = callback2(View, obj1);
-  items1[1] = callback(navigation(16199).NonCollapsableGestureDetector, obj);
+  items1[1] = callback(navigation(16361).NonCollapsableGestureDetector, obj);
   obj[0] = items1;
   return callback2(closure_7, obj);
 }

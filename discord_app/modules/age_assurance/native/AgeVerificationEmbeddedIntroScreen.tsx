@@ -21,7 +21,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   ({ entryPoint, navigation } = arg0);
   ({ onClose, modalSessionId, classificationId } = arg0);
   const tmp = callback3();
-  let obj = navigation(8708);
+  let obj = navigation(8418);
   const items = [navigation];
   const isSuspendedUser = obj.useIsSuspendedUser();
   const callback = React.useCallback(() => {
@@ -31,7 +31,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj = { children: null };
   obj1 = { align: "center", justify: "center", spacing: 24, children: null };
   const obj2 = { align: "center", justify: "center", spacing: 16, children: null };
-  const items1 = [callback(navigation(6266).ShieldSpotIllustration, { height: 100, width: 177 })];
+  const items1 = [callback(navigation(5692).ShieldSpotIllustration, { height: 100, width: 177 })];
   const obj3 = { align: "center", justify: "center", spacing: 8, children: null };
   const obj4 = {
     accessibilityRole: "header",
@@ -39,22 +39,22 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  let obj7 = navigation(4734);
+  let obj7 = navigation(4773);
   obj4[3] = obj7.getAgeVerificationGetStartedTitle(entryPoint);
-  const items2 = [callback(navigation(4474).Text, obj4)];
+  const items2 = [callback(navigation(4556).Text, obj4)];
   const obj5 = {
     variant: "text-md/medium",
     color: "text-strong",
     style: tmp.header,
-    children: navigation(4734).getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser),
+    children: navigation(4773).getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser),
   };
-  items2[1] = callback(navigation(4474).Text, obj5);
+  items2[1] = callback(navigation(4556).Text, obj5);
   obj3[3] = items2;
-  items1[1] = callback2(navigation(4927).Stack, obj3);
+  items1[1] = callback2(navigation(4973).Stack, obj3);
   obj2[3] = items1;
   const items3 = [
-    callback2(navigation(4927).Stack, obj2),
-    callback(navigation(8753).AgeVerificationMethodsContainer, {
+    callback2(navigation(4973).Stack, obj2),
+    callback(navigation(8586).AgeVerificationMethodsContainer, {
       ageVerificationMethods: useAgeVerificationMethodsDefault({
         onClose,
         classificationId,
@@ -64,18 +64,18 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
     }),
   ];
   obj1[3] = items3;
-  const items4 = [callback2(navigation(4927).Stack, obj1)];
+  const items4 = [callback2(navigation(4973).Stack, obj1)];
   const obj6 = { variant: "text-xs/medium", color: "text-muted", style: tmp.helpLink, children: null };
-  const intl = navigation(1233).intl;
+  const intl = navigation(1114).intl;
   obj7 = {
     handleOnHelpUrlHook() {
-      const obj = callback(8701);
-      obj.openUrl(callback(1994).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+      const obj = callback(8411);
+      obj.openUrl(callback(2024).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
     },
   };
   obj6[3] = intl.format(messagesProxyDefault.lG69e1, obj7);
-  items4[1] = callback(navigation(4474).Text, obj6);
+  items4[1] = callback(navigation(4556).Text, obj6);
   obj[0] = items4;
-  obj[0] = callback2(navigation(8712).ModalContent, obj);
-  return callback(navigation(8711).ModalScreen, obj);
+  obj[0] = callback2(navigation(8422).ModalContent, obj);
+  return callback(navigation(8421).ModalScreen, obj);
 }

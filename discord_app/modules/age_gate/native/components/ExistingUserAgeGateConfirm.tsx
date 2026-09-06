@@ -58,25 +58,25 @@ export default function ExistingUserAgeGateConfirm(age) {
     return applyArgumentsResult;
   }
   let tmp = callback4();
-  let obj = onConfirm(1498);
+  let obj = onConfirm(1483);
   importDefault = obj.useNavigation();
   [tmp3, c2] = callback(React.useState(false), 2);
   obj = { top: true, style: tmp.container, children: null };
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = onConfirm(1233).intl;
-  obj[3] = intl.format(onConfirm(1233).t.wumolR, { age: age.age });
-  const items = [callback2(onConfirm(4474).Text, obj), ,];
+  const intl = onConfirm(1114).intl;
+  obj[3] = intl.format(onConfirm(1114).t.wumolR, { age: age.age });
+  const items = [callback2(onConfirm(4556).Text, obj), ,];
   obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
-  const intl2 = onConfirm(1233).intl;
+  const intl2 = onConfirm(1114).intl;
   const obj2 = { helpURL: null };
   const tmp2 = callback(React.useState(false), 2);
   obj2[0] = combinedDefault.getArticleURL(HelpdeskArticles.AGE_GATE);
-  obj1[3] = intl2.format(onConfirm(1233).t.n3QjDE, obj2);
-  items[1] = callback2(onConfirm(4474).Text, obj1);
+  obj1[3] = intl2.format(onConfirm(1114).t.n3QjDE, obj2);
+  items[1] = callback2(onConfirm(4556).Text, obj1);
   const obj3 = { style: tmp.buttonWrapper, children: null };
   const obj4 = { loading: tmp3, disabled: tmp3, text: null, onPress: null, grow: true };
-  const intl3 = onConfirm(1233).intl;
-  obj4[2] = intl3.string(onConfirm(1233).t["6tahin"]);
+  const intl3 = onConfirm(1114).intl;
+  obj4[2] = intl3.string(onConfirm(1114).t["6tahin"]);
   obj4[3] = function handleConfirm() {
     const self = this;
     const apply = _handleConfirm.apply;
@@ -87,8 +87,8 @@ export default function ExistingUserAgeGateConfirm(age) {
     }
     return applyArgumentsResult;
   };
-  obj3[1] = callback2(onConfirm(4929).Button, obj4);
+  obj3[1] = callback2(onConfirm(4975).Button, obj4);
   items[2] = callback2(View, obj3);
   obj[2] = items;
-  return callback3(onConfirm(5562).SafeAreaPaddingView, obj);
+  return callback3(onConfirm(7123).SafeAreaPaddingView, obj);
 }

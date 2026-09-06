@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/BundleProductDetailsActionSheetPreview.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05661_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06655_LegacyBaseButton.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -202,14 +202,14 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   if (name == null) {
     name = tmp8.skuId;
   }
-  let obj = onActiveItemChange(7309);
+  let obj = onActiveItemChange(7554);
   const collectibleTypeLabel = obj.getCollectibleTypeLabel(tmp8.type);
   const items1 = [items[num]];
   obj = { style: tmp.previewContainer, children: null };
   const tmp12 = onActiveItemChange;
   tmp4 = callback(callback5(product.skuId), 2);
   const items2 = [
-    callback6(onActiveItemChange(12780).IndividualProductPreview, {
+    callback6(onActiveItemChange(13138).IndividualProductPreview, {
       product: callback4(() => {
         const items = [closure_1];
         return { skuId: closure_1.skuId, type: closure_1.type, items };
@@ -221,11 +221,11 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   ];
   obj = { style: tmp.bundleContainer, children: null };
   obj1 = { style: tmp.bundleInfoContainer, children: null };
-  const items3 = [callback6(onActiveItemChange(4474).Text, { variant: "heading-xl/bold", children: product.name })];
+  const items3 = [callback6(onActiveItemChange(4556).Text, { variant: "heading-xl/bold", children: product.name })];
   const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = onActiveItemChange(1233).intl;
-  obj3[2] = intl.formatToPlainString(onActiveItemChange(1233).t["/0Yndu"], { num: items.length });
-  items3[1] = callback6(onActiveItemChange(4474).Text, obj3);
+  const intl = onActiveItemChange(1114).intl;
+  obj3[2] = intl.formatToPlainString(onActiveItemChange(1114).t["/0Yndu"], { num: items.length });
+  items3[1] = callback6(onActiveItemChange(4556).Text, obj3);
   obj1[1] = items3;
   const items4 = [callback7(closure_10, obj1)];
   const obj5 = { style: tmp.bundleInfoContainer, children: null };
@@ -236,10 +236,10 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
     obj6[2] = " - " + collectibleTypeLabel;
-    tmp18Result = callback6(tmp12(4474).Text, obj6);
+    tmp18Result = callback6(tmp12(4556).Text, obj6);
   }
   items6[1] = tmp18Result;
-  items5[1] = callback7(onActiveItemChange(4474).Text, {
+  items5[1] = callback7(onActiveItemChange(4556).Text, {
     variant: "text-sm/medium",
     color: "text-default",
     children: items6,

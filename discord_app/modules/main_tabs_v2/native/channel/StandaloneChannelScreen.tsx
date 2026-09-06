@@ -228,20 +228,20 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
   closure_6 = undefined;
   const tmp = callback3();
   dependencyMap = tmp;
-  let obj = channelId(1499);
+  let obj = channelId(1484);
   importAllResult = obj.useNavigation();
-  obj1 = channelId(11290);
+  obj1 = channelId(11466);
   const isSwipeToMemberListEnabled = obj1.useIsSwipeToMemberListEnabled();
-  const needSubscriptionToAccess = frame(4961)(channelId).needSubscriptionToAccess;
-  let obj2 = channelId(6078);
+  const needSubscriptionToAccess = frame(5007)(channelId).needSubscriptionToAccess;
+  let obj2 = channelId(7222);
   let tmp6 = guildId;
   if (guildId == null) {
     tmp6 = closure_7;
   }
   const canSeeOnboardingHome = obj2.useCanSeeOnboardingHome(tmp6);
-  const tmp9 = frame(4413)() === constants.MIDNIGHT;
+  const tmp9 = frame(4495)() === constants.MIDNIGHT;
   closure_4 = tmp9;
-  const tmp10 = frame(4335)();
+  const tmp10 = frame(4420)();
   isChatBesideChannelList = tmp10.isChatBesideChannelList;
   const isChatLockedOpen = tmp10.isChatLockedOpen;
   let items = [frame, tmp9, isChatBesideChannelList, ,];
@@ -270,7 +270,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
     items[1] = splitDivider;
     return items;
   }, items1);
-  let tmp2Result = tmp2(13171);
+  let tmp2Result = tmp2(13274);
   let tmp14 = !isChatLockedOpen;
   const isForumChannelSearchActive = tmp2Result.useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
@@ -280,7 +280,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
     tmp14 = !isForumChannelSearchActive;
   }
   closure_6 = tmp14;
-  tmp2Result = tmp2(586);
+  tmp2Result = tmp2(504);
   const items2 = [isChatBesideChannelList];
   const items3 = [channelId];
   const stateFromStores = tmp2Result.useStateFromStores(
@@ -294,7 +294,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
     },
     items3,
   );
-  channelId(6103);
+  channelId(7247);
   if (null != channelId) {
     if (null != guildId) {
       obj = {
@@ -326,7 +326,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
             if (canSeeOnboardingHome) {
               obj2 = { guildId: null };
               obj2[0] = guildId;
-              tmp33Result = tmp33(tmp5(16388), obj2);
+              tmp33Result = tmp33(tmp5(16550), obj2);
             }
             obj1[1] = tmp33Result;
             items4[1] = tmp33(closure_4, obj1);
@@ -335,11 +335,11 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
           } else if (channelId === tmp36.MEMBER_SAFETY) {
             const obj3 = { guildId: null };
             obj3[0] = guildId;
-            return tmp33(tmp5(16406), obj3);
+            return tmp33(tmp5(16568), obj3);
           } else if (channelId === tmp36.VIBEGRATIONS) {
             const obj4 = { guildId: null };
             obj4[0] = guildId;
-            return tmp33(tmp5(16423), obj4);
+            return tmp33(tmp5(16585), obj4);
           } else {
             if (tmp17) {
               if (null != stateFromStores) {
@@ -350,7 +350,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
                 obj6[0] = memo1;
                 const obj7 = { channel: null };
                 obj7[0] = stateFromStores;
-                obj6[1] = tmp33(tmp5(16450), obj7);
+                obj6[1] = tmp33(tmp5(16613), obj7);
                 items5[1] = tmp33(closure_4, obj6);
                 obj5[1] = items5;
                 return callback2(closure_4, obj5);
@@ -363,7 +363,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
               const obj9 = { channelId: null, screenIndex: null };
               obj9[0] = channelId;
               obj9[1] = screenIndex;
-              items6[1] = tmp33(tmp2(16456).CreateThreadView, obj9);
+              items6[1] = tmp33(tmp2(16619).CreateThreadView, obj9);
               obj8[1] = items6;
               return tmp18(closure_4, obj8);
             } else {
@@ -376,7 +376,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
               obj12[1] = channelId;
               obj12[2] = ref;
               obj12[3] = screenIndex;
-              obj11[1] = tmp33(tmp5(11201), obj12);
+              obj11[1] = tmp33(tmp5(11340), obj12);
               items7[1] = tmp33(closure_4, obj11);
               obj10[0] = items7;
               const tmp18Result = tmp18(closure_13, obj10);
@@ -387,7 +387,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
                 obj13[2] = screenIndex;
                 obj13[3] = tmp14;
                 obj13[4] = tmp18Result;
-                tmp33Result = tmp33(tmp5(16460), obj13);
+                tmp33Result = tmp33(tmp5(16623), obj13);
               } else {
                 const obj14 = { style: null, accessible: false, onAccessibilityEscape: null, children: null };
                 obj14[0] = memo;
@@ -409,7 +409,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
       const items8 = [tmp35];
       const obj16 = { style: null, children: null };
       obj16[0] = memo1;
-      const items9 = [callback(tmp5(5079), { absolute: true })];
+      const items9 = [callback(tmp5(5125), { absolute: true })];
       const obj17 = { guildId: null, gatedChannelId: null };
       obj17[0] = guildId;
       let tmp32;
@@ -417,7 +417,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
         tmp32 = channelId;
       }
       obj17[1] = tmp32;
-      items9[1] = callback(tmp5(16371), obj17);
+      items9[1] = callback(tmp5(16533), obj17);
       obj16[1] = items9;
       items8[1] = callback2(closure_4, obj16);
       obj15[1] = items8;
@@ -427,11 +427,11 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
   const obj18 = { style: items10, children: null };
   items10 = [memo, tmp.containerEmpty];
   const obj19 = { title: null, body: null };
-  const intl = tmp2(1233).intl;
-  obj19[0] = intl.string(channelId(1233).t.ai6Lbr);
-  const intl2 = tmp2(1233).intl;
-  obj19[1] = intl2.string(channelId(1233).t["LTr+x9"]);
-  obj18[1] = callback(channelId(1296).EmptyState, obj19);
+  const intl = tmp2(1114).intl;
+  obj19[0] = intl.string(channelId(1114).t.ai6Lbr);
+  const intl2 = tmp2(1114).intl;
+  obj19[1] = intl2.string(channelId(1114).t["LTr+x9"]);
+  obj18[1] = callback(channelId(1178).EmptyState, obj19);
   return callback(closure_4, obj18);
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/StandaloneChannelScreen.tsx");

@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import create from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import AccountNotificationFlags from "../../../notifications/NotificationConstants.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
+import AccountNotificationFlags from "../../../notifications/NotificationConstants.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 

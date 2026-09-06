@@ -167,13 +167,13 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
     }
     obj[7] = tmp34;
     if (flag3) {
-      obj(706).wait(() => {
+      obj(573).wait(() => {
         obj = id(closure_1_2[7]);
         return obj.fetchProfile(id, obj, obj(closure_1_2[8]));
       });
       return Promise.resolve();
     } else {
-      const profile = require("../../actions/UserActionCreators.tsx").fetchProfile(id, obj, obj(8128));
+      const profile = require("../../actions/UserActionCreators.tsx").fetchProfile(id, obj, obj(8188));
       let resolved = profile;
       if (tmp18) {
         resolved = profile;

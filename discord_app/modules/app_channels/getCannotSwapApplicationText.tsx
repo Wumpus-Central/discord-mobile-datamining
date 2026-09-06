@@ -12,10 +12,10 @@ export default function getCannotSwapApplicationText(arg0) {
   if (0 !== found.length) {
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(locale.locale);
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     const obj = { permissions: null, count: null };
-    obj[0] = listFormat.format(found.map(tmp(9314).getPermissionName));
+    obj[0] = listFormat.format(found.map(tmp(9248).getPermissionName));
     obj[1] = found.length;
-    return intl.formatToPlainString(tmp(1233).t.na1rJc, obj);
+    return intl.formatToPlainString(tmp(1114).t.na1rJc, obj);
   }
 }

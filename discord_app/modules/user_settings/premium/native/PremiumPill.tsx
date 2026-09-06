@@ -18,7 +18,7 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   let obj = { pillContainer: null, discountPillText: null };
   obj = {
     backgroundColor: WHITE,
-    borderRadius: tmp5(709).radii.round,
+    borderRadius: tmp5(576).radii.round,
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 8,

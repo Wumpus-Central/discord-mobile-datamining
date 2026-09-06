@@ -7,7 +7,7 @@ require = arg1;
 function serverGuildRoomObjectToClient(object_type) {
   if (object_type.object_type === GuildRoomObjectTypes.GuildRoomObjectTypes.PLANT) {
     let obj = { objectType: null };
-    obj[0] = tmp(4680).GuildRoomObjectTypes.PLANT;
+    obj[0] = tmp(4719).GuildRoomObjectTypes.PLANT;
     obj = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj2[0], created_by: obj2[1] } = object_type);
     let date;
@@ -20,7 +20,7 @@ function serverGuildRoomObjectToClient(object_type) {
     const merged = Object.assign(obj);
   } else {
     obj = { objectType: null };
-    obj[0] = tmp(4680).GuildRoomObjectTypes.NOTE;
+    obj[0] = tmp(4719).GuildRoomObjectTypes.NOTE;
     obj1 = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj4[0], created_by: obj4[1] } = object_type);
     let date1;

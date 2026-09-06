@@ -258,10 +258,10 @@ let obj3 = {
   marginRight: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL,
 };
 const memoResult = importAllResult.memo(function QuestDockEnrolledBody() {
-  let obj = minExpandedContentHeight(14944);
+  let obj = minExpandedContentHeight(15102);
   const questDockQuest = obj.useQuestDockQuest();
   minExpandedContentHeight = importAllResult.useContext(
-    minExpandedContentHeight(14938).QuestDockGestureContext,
+    minExpandedContentHeight(15096).QuestDockGestureContext,
   ).minExpandedContentHeight;
   const items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];

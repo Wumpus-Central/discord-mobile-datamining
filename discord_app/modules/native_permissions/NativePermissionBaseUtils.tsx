@@ -116,16 +116,16 @@ prototype["showAlert"] = function showAlert(closure_1_0, arg1, arg2) {
     intl10.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
   if (null != obj[closure_1_0]) {
     obj = { title: null, body: null, onConfirm: null, cancelText: null, confirmText: null };
-    const intl11 = tmp(1233).intl;
-    obj[0] = intl11.string(tmp(1233).t.u1Gxpu);
+    const intl11 = tmp(1114).intl;
+    obj[0] = intl11.string(tmp(1114).t.u1Gxpu);
     obj[1] = tmp9;
     obj[2] = function onConfirm() {
       return self.openSettings(closure_0);
     };
-    const intl12 = tmp(1233).intl;
-    obj[3] = intl12.string(tmp(1233).t["ETE/oC"]);
-    const intl13 = tmp(1233).intl;
-    obj[4] = intl13.string(tmp(1233).t["XgZk+u"]);
+    const intl12 = tmp(1114).intl;
+    obj[3] = intl12.string(tmp(1114).t["ETE/oC"]);
+    const intl13 = tmp(1114).intl;
+    obj[4] = intl13.string(tmp(1114).t["XgZk+u"]);
     self.openAlertModal(obj);
   }
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import useMobilePurchaseSKUDefault from "../../../billing/native/hooks/useMobilePurchaseSKU.android.tsx";
 import hasAtLeastOneGPlaySynced from "../CollectiblesUtils.tsx";
+import useMobilePurchaseSKUDefault from "../../../billing/native/hooks/useMobilePurchaseSKU.android.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";
 
 require = arg1;

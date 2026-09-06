@@ -38,16 +38,16 @@ prototype["updateSoundpack"] = function updateSoundpack() {
   let isEligibleResult = HolidayEmojiAnimationTypeDefault2.isEligible();
   if (isEligibleResult) {
     if (isEligibleResult) {
-      isEligibleResult = null != tmp3(17215).soundpack;
+      isEligibleResult = null != tmp3(17381).soundpack;
     }
     if (isEligibleResult) {
       isEligibleResult = name !== lastSoundpackExperimentId;
     }
     if (isEligibleResult) {
-      isEligibleResult = soundpack !== tmp3(17215).soundpack;
+      isEligibleResult = soundpack !== tmp3(17381).soundpack;
     }
     if (isEligibleResult) {
-      setSoundpack.setSoundpack(tmp3(17215).soundpack, name);
+      setSoundpack.setSoundpack(tmp3(17381).soundpack, name);
       const obj3 = setSoundpack;
     }
   } else {

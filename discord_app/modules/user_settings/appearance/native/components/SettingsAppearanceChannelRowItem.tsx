@@ -114,13 +114,13 @@ export default function ChannelRowItem(isUnread) {
   const obj3 = { style: tmp2.channelItemContent, children: null };
   obj4 = { style: tmp2.channelItemTop, children: null };
   const items3 = [
-    closure_4(tmp6(4474).Text, {
+    closure_4(tmp6(4556).Text, {
       animated: true,
       style: flag ? animatedStyles.textNormal : animatedStyles.textMuted,
       variant: "redesign/channel-title/semibold",
       children: title,
     }),
-    closure_4(tmp6(4474).Text, {
+    closure_4(tmp6(4556).Text, {
       animated: true,
       style: animatedStyles.textMuted,
       variant: "text-xs/medium",
@@ -145,7 +145,7 @@ export default function ChannelRowItem(isUnread) {
     };
     animatedStyles[1] = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles[4] = preview;
-    tmp5Result = tmp5(tmp6(4474).Text, animatedStyles);
+    tmp5Result = tmp5(tmp6(4556).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
 }

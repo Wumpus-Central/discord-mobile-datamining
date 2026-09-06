@@ -1,43 +1,34 @@
 // discord_app/modules/user_settings/UserSettingsUtils.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import _mod1306 from "../../../_runtime/metro/01306__.js";
 import create2 from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx";
 import create3 from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
+import BINARY_READ_OPTIONS from "../../utils/ProtoUtils.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { ZERO_STRING_GUILD_ID } from "../../Constants.tsx";
 
 require = arg1;
-function b64ToProto(ProtoClass, settings) {
-  if (null == settings) {
+function b64ToProto(arg0, arg1) {
+  if (null == arg1) {
     return null;
   } else {
-    _mod1306;
     try {
-      return ProtoClass.fromBinary(tmp4, obj);
-    } catch (tmp7) {
+      return BINARY_READ_OPTIONS.b64ToProto(arg0, arg1);
+    } catch (tmp4) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("Settings proto failed to deserialize (potentially corrupt): " + tmp7);
+      error = new Error("Settings proto failed to deserialize (potentially corrupt): " + tmp4);
       throw error;
     }
   }
 }
 let obj = {
-  readerFactory(buf) {
-    const textDecoder = new TextDecoder("utf-8");
-    const binaryReader = new _mod1306.BinaryReader(buf, textDecoder);
-    return binaryReader;
-  },
-};
-obj = {
   [PRELOADED_USER_SETTINGS]: require("create").PreloadedUserSettings,
   [FRECENCY_AND_FAVORITES_SETTINGS]: require("create").FrecencyUserSettings,
 };
 ({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = require("MAX_FAVORITES").UserSettingsTypes);
 const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");
 
-export const BINARY_READ_OPTIONS = obj;
 export const b64ToProtoWithType = function b64ToProtoWithType(type, proto) {
   let tmp = null;
   if (null != proto) {
@@ -53,11 +44,12 @@ export { b64ToProto };
 export const b64ToPreloadedUserSettingsProto = function b64ToPreloadedUserSettingsProto(settings) {
   return b64ToProto(create.PreloadedUserSettings, settings);
 };
-export const protoToB64WithType = function protoToB64WithType(arg0, favoriteGifs) {
-  return _mod1306.base64encode(obj[arg0].toBinary(favoriteGifs));
+export const protoToB64WithType = function protoToB64WithType(arg0, arg1) {
+  obj = BINARY_READ_OPTIONS;
+  return obj.protoToB64(obj[arg0], arg1);
 };
-export const protoToB64 = function protoToB64(ProtoClass, protoToSave) {
-  return _mod1306.base64encode(ProtoClass.toBinary(protoToSave));
+export const protoToB64 = function protoToB64(arg0, arg1) {
+  return BINARY_READ_OPTIONS.protoToB64(arg0, arg1);
 };
 export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, proto, proto2) {
   obj = {};
@@ -90,7 +82,7 @@ export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds) 
   }
   return arg2(guilds.guilds[tmp3]);
 };
-export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsInternal(guilds, closure_0, f72539) {
+export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsInternal(guilds, closure_0, f74604) {
   let tmp = closure_0;
   let tmp2 = null != closure_0;
   if (tmp2) {
@@ -103,7 +95,7 @@ export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsI
     const GuildSettings = create.GuildSettings;
     guilds.guilds[tmp] = GuildSettings.create();
   }
-  return f72539(guilds.guilds[tmp]);
+  return f74604(guilds.guilds[tmp]);
 };
 export const mutateUserChannelSettings = function mutateUserChannelSettings(guilds, arg1, id, arg3) {
   if (null == guilds.guilds) {
@@ -132,13 +124,13 @@ export const mutateUserChannelSettings = function mutateUserChannelSettings(guil
 export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(
   channels,
   closure_0,
-  f72539,
+  f74604,
 ) {
   if (!(closure_0 in channels.channels)) {
     const ChannelSettings = create.ChannelSettings;
     channels.channels[closure_0] = ChannelSettings.create();
   }
-  return f72539(channels.channels[closure_0]);
+  return f74604(channels.channels[closure_0]);
 };
 export const runMigrations = function runMigrations(closure_1, closure_2) {
   if (null == closure_1.versions) {

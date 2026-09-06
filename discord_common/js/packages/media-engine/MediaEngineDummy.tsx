@@ -101,12 +101,11 @@ prototype["getSingleWindowPreview"] = function getSingleWindowPreview() {
 };
 prototype["setClipsModulePath"] = function setClipsModulePath() {};
 prototype["setClipsDataPath"] = function setClipsDataPath() {};
-prototype["setClipsV3Enabled"] = function setClipsV3Enabled() {};
-prototype["setClipsV3MLEnabled"] = function setClipsV3MLEnabled() {};
-prototype["setClipsRecordingEnabled"] = function setClipsRecordingEnabled() {};
-prototype["hasSetClipsRecordingEnabled"] = function hasSetClipsRecordingEnabled() {
+prototype["hasClipsV3Support"] = function hasClipsV3Support() {
   return false;
 };
+prototype["setClipsV3MLEnabled"] = function setClipsV3MLEnabled() {};
+prototype["setClipsRecordingEnabled"] = function setClipsRecordingEnabled() {};
 prototype["setClipsUIActive"] = function setClipsUIActive() {};
 prototype["setClipBufferLength"] = function setClipBufferLength() {};
 prototype["getSystemSteadyClockNowMs"] = function getSystemSteadyClockNowMs() {
@@ -119,13 +118,6 @@ prototype["saveClipEx"] = function saveClipEx() {
 prototype["updateClipMetadata"] = function updateClipMetadata() {
   error = new Error("UNSUPPORTED");
   return Promise.reject(error);
-};
-prototype["exportClip"] = function exportClip() {
-  error = new Error("UNSUPPORTED");
-  return Promise.reject(error);
-};
-prototype["hasExportClipToFile"] = function hasExportClipToFile() {
-  return false;
 };
 prototype["exportClipToFile"] = function exportClipToFile() {
   error = new Error("UNSUPPORTED");

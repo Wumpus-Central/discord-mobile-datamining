@@ -94,13 +94,13 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           borderColor: obj4[10],
         } = callback(theme));
         const tmp6 = callback(theme);
-        obj1[11] = frozen.getAssetUriForEmbed(tmp8(4414));
+        obj1[11] = frozen.getAssetUriForEmbed(tmp8(4496));
         const intl3 = getSystemLocale.intl;
         obj1[12] = intl3.string(getSystemLocale.t.ilhtIa);
         const obj5 = frozen;
-        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8004));
+        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8083));
         const obj6 = frozen;
-        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8005));
+        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8084));
         const intl4 = getSystemLocale.intl;
         obj1[15] = intl4.string(getSystemLocale.t.I5gL2H);
         return obj1;

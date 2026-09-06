@@ -1,7 +1,7 @@
 // discord_app/modules/multi_account/MultiAccountActionCreators.tsx
 import timestampDefault from "../debug/Logger.tsx";
-import setSecondaryTokenAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setSecondaryTokenAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
 import handleLogoutDefault from "../../actions/AuthenticationActionCreators.tsx";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../stores/AuthenticationStore.tsx";
@@ -74,14 +74,14 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                const callback2 = closure_2_2(704).getToken(callback);
+                const callback2 = closure_2_2(1099).getToken(callback);
                 if (null != callback2) {
                   if ("" !== c1) {
                     let obj2 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: null };
                     obj2[1] = id;
-                    callback2(706).dispatch(obj2);
+                    callback2(573).dispatch(obj2);
                     obj12 = 1;
-                    const HTTP = callback(527).HTTP;
+                    const HTTP = callback(1272).HTTP;
                     const obj3 = { url: null, headers: null, retries: 3, rejectWithError: false };
                     obj3[0] = closure_2_8.ME;
                     const obj4 = { authorization: null };
@@ -94,12 +94,12 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
                     return obj5;
                   }
                 }
-                let obj13 = callback2(706);
+                let obj13 = callback2(573);
                 let obj6 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: null };
                 obj6[1] = id;
                 obj13.dispatch(obj6);
                 c7 = 3;
-                const obj24 = closure_2_2(704);
+                const obj24 = closure_2_2(1099);
               }
             } else if (2 === tmp7) {
               obj12 = 0;
@@ -117,7 +117,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
                 tmp48 = 403 === status1;
               }
               dependencyMap = tmp48;
-              let obj10 = callback2(706);
+              let obj10 = callback2(573);
               let str = "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS";
               if (dependencyMap) {
                 str = "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE";
@@ -154,12 +154,12 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
               closure_4 = c1;
               if (null == closure_4) {
                 if (callback !== id) {
-                  obj = callback2(706);
+                  obj = callback2(573);
                   obj10 = { type: "USER_UPDATE", user: null };
                   obj10[1] = closure_2.body;
                   obj.dispatch(obj10);
                 }
-                obj2 = callback2(706);
+                obj2 = callback2(573);
                 const obj11 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS", userId: null };
                 obj11[1] = id;
                 obj2.dispatch(obj11);
@@ -169,9 +169,9 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
             obj12[0] = id;
             obj12[1] = closure_4;
             closure_2_9.log("Found per-user token authentication mismatch", obj12);
-            obj5 = callback2(695);
+            obj5 = callback2(1242);
             obj5.track(closure_2_7.MULTI_ACCOUNT_VALIDATE_TOKEN_USER_MISMATCH, obj12);
-            obj6 = callback2(706);
+            obj6 = callback2(573);
             obj13 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: null };
             obj13[1] = id;
             obj6.dispatch(obj13);

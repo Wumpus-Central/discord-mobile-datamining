@@ -1,6 +1,6 @@
 // discord_app/modules/verification/ChangeEmailActionCreators.tsx
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef4714 from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef4753 from "../../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
@@ -12,14 +12,14 @@ function _confirmEmailChange() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0, body) {
-      const obj5 = v0(4714);
+      const obj5 = v0(4753);
       obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
       obj1[0] = closure_1_4.USER_EMAIL_VERIFY_CODE;
       const obj2 = { code: null };
       obj2[0] = callback;
       obj1[1] = obj2;
       const obj3 = { event: null };
-      obj3[0] = callback(500).NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE;
+      obj3[0] = callback(1250).NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE;
       obj1[2] = obj3;
       yield obj5.post(obj1);
       return body.body;
@@ -41,7 +41,7 @@ export const sendConfirmationCode = function sendConfirmationCode() {
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = _modDef4714;
+  let obj = _modDef4753;
   obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
   obj = {
     event: encodeProperties.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,

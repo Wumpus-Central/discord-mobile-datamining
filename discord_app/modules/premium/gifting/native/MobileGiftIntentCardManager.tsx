@@ -31,13 +31,13 @@ prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
           if (
             self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, closure_0, constants.SEND_MESSAGE)
           ) {
-            let tmpResult = tmp(10742);
+            let tmpResult = tmp(10744);
             const result = tmpResult.logMessageGiftIntentShown(closure_0);
             const userAffinity = self.getUserAffinity(closure_0);
-            tmpResult = tmp(8911);
+            tmpResult = tmp(8768);
             let obj = { name: null, type: null, properties: null };
-            obj[0] = tmp(500).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION;
-            obj[1] = tmp(500).ImpressionTypes.VIEW;
+            obj[0] = tmp(1250).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION;
+            obj[1] = tmp(1250).ImpressionTypes.VIEW;
             obj = { gift_intent_type: null, dm_affinity: null, channel_id: null };
             obj[0] = tmp6.FRIEND_ANNIVERSARY;
             let dmProbability;

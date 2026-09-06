@@ -253,7 +253,7 @@ export default function _default(categories) {
   );
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(9224)();
+  const tmp19 = categoryIndex(10358)();
   const tmp20 = closure_15;
   obj = {
     estimatedListSize: "windowSize",
@@ -271,25 +271,25 @@ export default function _default(categories) {
     showsHorizontalScrollIndicator: false,
     style: tmp.list,
   };
-  const items9 = [callback(categoryIndex(7790), obj)];
+  const items9 = [callback(categoryIndex(7055), obj)];
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
     obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
     obj[0] = callback3;
-    const intl = categories(1233).intl;
-    obj[2] = intl.string(categories(1233).t.rzCcjK);
+    const intl = categories(1114).intl;
+    obj[2] = intl.string(categories(1114).t.rzCcjK);
     obj1 = { style: null, children: null };
     const items10 = [,];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj1[0] = items10;
     const obj2 = { style: null, source: null };
     obj2[0] = tmp.guildIcon;
-    obj2[1] = tmp17(10438);
-    obj1[1] = tmp22(categories(1296).Icon, obj2);
+    obj2[1] = tmp17(10420);
+    obj1[1] = tmp22(categories(1178).Icon, obj2);
     obj[3] = tmp22(closure_5, obj1);
-    tmp22Result = tmp22(categories(5077).PressableOpacity, obj);
+    tmp22Result = tmp22(categories(5123).PressableOpacity, obj);
   }
   items9[1] = tmp22Result;
   obj[2] = items9;
-  return tmp20(categoryIndex(9225), obj);
+  return tmp20(categoryIndex(10359), obj);
 }

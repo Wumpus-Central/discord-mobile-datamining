@@ -1,7 +1,7 @@
 // discord_app/modules/experiments/apex/ApexExperimentStore.tsx
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import _toPropertyKeyDefault from "../../../../discord_common/js/packages/apex/BaseApexExperimentStore.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import Version from "../../build_overrides/BuildOverrideUtils.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../stores/AuthenticationStore.tsx";

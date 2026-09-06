@@ -1,8 +1,8 @@
 // discord_app/stores/SelfPresenceStore.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import isUndefinedOrNullDefault from "../../_runtime/00656_isUndefinedOrNull.js";
 import dispatcherDefault from "../Dispatcher.tsx";
+import isUndefinedOrNullDefault from "../../_runtime/01332_isUndefinedOrNull.js";
 import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
 import isListeningOnSpotifyDefault from "../modules/activities/utils/isListeningOnSpotify.tsx";
@@ -66,22 +66,22 @@ function shouldShowActivity(flags) {
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          let tmpResult = tmp(4526);
+          let tmpResult = tmp(7399);
           shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(flags.application_id, closure_7);
         }
       }
       return shouldShowActivityResult;
     } else if (tmp3.PLAYING === type) {
       if (null != flags.application_id) {
-        tmpResult = tmp(4526);
+        tmpResult = tmp(7399);
         let result = tmpResult.shouldShareApplicationActivity(flags.application_id, closure_7);
       } else {
         const searchGamesByNameResult = closure_5.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
-          result = tmp(4526).shouldShareApplicationActivity(searchGamesByNameResult[0], closure_7);
-          const tmpResult1 = tmp(4526);
+          result = tmp(7399).shouldShareApplicationActivity(searchGamesByNameResult[0], closure_7);
+          const tmpResult1 = tmp(7399);
         } else {
-          const ShowCurrentGame = tmp(4166).ShowCurrentGame;
+          const ShowCurrentGame = tmp(1935).ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
         }
       }
@@ -92,8 +92,8 @@ function shouldShowActivity(flags) {
       }
       let result1 = null == flags.application_id;
       if (!result1) {
-        result1 = tmp(4526).shouldShareApplicationActivity(flags.application_id, closure_7);
-        const tmpResult2 = tmp(4526);
+        result1 = tmp(7399).shouldShareApplicationActivity(flags.application_id, closure_7);
+        const tmpResult2 = tmp(7399);
       }
       return result1;
     }

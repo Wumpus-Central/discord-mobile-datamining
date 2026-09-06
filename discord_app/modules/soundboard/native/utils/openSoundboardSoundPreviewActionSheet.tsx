@@ -1,6 +1,6 @@
 // discord_app/modules/soundboard/native/utils/openSoundboardSoundPreviewActionSheet.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/soundboard/native/utils/openSoundboardSoundPreviewActionSheet.tsx");
@@ -8,5 +8,5 @@ const result = set.fileFinishedImporting("modules/soundboard/native/utils/openSo
 export default function openSoundboardSoundPreviewActionSheet(channel, sound, analyticsSource, soundGridLocation) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel, sound, soundGridLocation, analyticsSource };
-  obj.openLazy(asyncRequireImpl(16912, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(17076, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
 }

@@ -98,7 +98,7 @@ prototype["getState"] = function getState() {
     obj[0] = closure_3;
     obj[1] = closure_4;
   } else {
-    obj = { theme: "Array", customTheme: "PX_16" };
+    obj = { theme: "hash", customTheme: "call" };
   }
   return obj;
 };
@@ -187,8 +187,8 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       if (null == prop) {
         let theme = obj.theme;
       } else {
-        theme = tmp10(1346).getCustomThemeBaseTheme(obj.theme);
-        const tmp10Result = tmp10(1346);
+        theme = tmp10(1229).getCustomThemeBaseTheme(obj.theme);
+        const tmp10Result = tmp10(1229);
       }
       obj = { baseTheme: null, customTheme: null };
       obj[0] = theme;

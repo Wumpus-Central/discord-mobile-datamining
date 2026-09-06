@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/RolePermissionUtils.tsx
 import set from "../../../_runtime/00002_set.js";
-import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import ME from "../../Constants.tsx";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import GuildRoleRecordTypeTag from "../../records/GuildRoleRecord.tsx";
 
 const hasPermission = GuildRoleRecordTypeTag.hasPermission;
@@ -18,8 +18,8 @@ export const isChannelAccessDeniedBy = function isChannelAccessDeniedBy(isGuildV
     if (!hasItem) {
       let isGuildVocalResult = isGuildVocal.isGuildVocal();
       if (isGuildVocalResult) {
-        isGuildVocalResult = tmp2(503).has(deny.deny, tmp4.CONNECT);
-        const tmp2Result = tmp2(503);
+        isGuildVocalResult = tmp2(1086).has(deny.deny, tmp4.CONNECT);
+        const tmp2Result = tmp2(1086);
       }
       hasItem = isGuildVocalResult;
     }
@@ -39,8 +39,8 @@ export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuil
       if (!hasItem) {
         let isGuildVocalResult = isGuildVocal.isGuildVocal();
         if (isGuildVocalResult) {
-          isGuildVocalResult = tmp4(503).has(deny.deny, tmp6.CONNECT);
-          const tmp4Result = tmp4(503);
+          isGuildVocalResult = tmp4(1086).has(deny.deny, tmp6.CONNECT);
+          const tmp4Result = tmp4(1086);
         }
         hasItem = isGuildVocalResult;
       }
@@ -56,8 +56,8 @@ export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuil
         const isGuildVocalResult1 = isGuildVocal.isGuildVocal();
         hasItem = !isGuildVocalResult1;
         if (isGuildVocalResult1) {
-          hasItem = tmp10(503).has(deny.allow, tmp12.CONNECT);
-          const tmp10Result = tmp10(503);
+          hasItem = tmp10(1086).has(deny.allow, tmp12.CONNECT);
+          const tmp10Result = tmp10(1086);
         }
         hasItem1 = hasItem;
       }

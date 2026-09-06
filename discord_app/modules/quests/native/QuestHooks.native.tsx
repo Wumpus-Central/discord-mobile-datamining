@@ -89,12 +89,12 @@ function useDeliveredDockCreative() {
   }, items3);
 }
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
-  const deliveredQuest = deliveredAdCreativeId(14944).getDeliveredQuest(mobileQuestDock);
+  const deliveredQuest = deliveredAdCreativeId(15102).getDeliveredQuest(mobileQuestDock);
   const tmp4 = useIsWindowLargeDefault();
-  const obj = deliveredAdCreativeId(14944);
+  const obj = deliveredAdCreativeId(15102);
   const items = [closure_7];
   let userStatus;
-  const stateFromStores = deliveredAdCreativeId(586).useStateFromStores(
+  const stateFromStores = deliveredAdCreativeId(504).useStateFromStores(
     items,
     () =>
       null !=
@@ -106,8 +106,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7454);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5399).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7699);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5447).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -116,18 +116,18 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(11307);
+  tmpResult = tmp(11483);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
-  const obj2 = deliveredAdCreativeId(586);
+  const obj2 = deliveredAdCreativeId(504);
   const tmp5 = closure_7;
-  let isEligibleForQuests = deliveredAdCreativeId(11308).getIsEligibleForQuests();
-  const tmpResult1 = deliveredAdCreativeId(11308);
-  deliveredAdCreativeId = deliveredAdCreativeId(14944).getDeliveredAdCreativeId(mobileQuestDock);
-  const tmpResult2 = deliveredAdCreativeId(14944);
+  let isEligibleForQuests = deliveredAdCreativeId(11484).getIsEligibleForQuests();
+  const tmpResult1 = deliveredAdCreativeId(11484);
+  deliveredAdCreativeId = deliveredAdCreativeId(15102).getDeliveredAdCreativeId(mobileQuestDock);
+  const tmpResult2 = deliveredAdCreativeId(15102);
   const items1 = [tmp5];
   const items2 = [deliveredAdCreativeId];
   const type = mobileQuestDock.type;
-  const stateFromStores1 = deliveredAdCreativeId(586).useStateFromStores(
+  const stateFromStores1 = deliveredAdCreativeId(504).useStateFromStores(
     items1,
     () => {
       let isAdContentDismissedResult = null != deliveredAdCreativeId;
@@ -138,9 +138,9 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
     },
     items2,
   );
-  if (deliveredAdCreativeId(7457).AdCreativeType.NO_FILL === type) {
+  if (deliveredAdCreativeId(5451).AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(7457).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(5451).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -148,7 +148,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(7457).AdCreativeType.QUEST === type) {
+  } else if (tmp(5451).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp15 = null != deliveredQuest && !tmp4;
@@ -280,18 +280,20 @@ export const useHasWatchVideoOnMobileTasks = function useHasWatchVideoOnMobileTa
 };
 export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
   const _require = quest;
-  let obj = _require(stateFromStores[23]);
+  let obj = _require(analyticsLocations[23]);
   const activityApplicationId = obj.getActivityApplicationId(quest);
+  analyticsLocations = activityApplicationId(analyticsLocations[24])().analyticsLocations;
   let items = [closure_6];
-  stateFromStores = _require(stateFromStores[10]).useStateFromStores(items, () =>
+  const stateFromStores = _require(analyticsLocations[10]).useStateFromStores(items, () =>
     closure_1_6.getApplication(activityApplicationId),
   );
-  let obj2 = _require(stateFromStores[10]);
-  const tmp = stateFromStores;
-  const canLaunchFrameResult = _require(stateFromStores[24]).canLaunchFrame(stateFromStores);
-  const callback = canLaunchFrameResult;
-  let obj3 = _require(stateFromStores[24]);
-  let canLaunchActivityResult = _require(stateFromStores[25]).canLaunchActivity(quest);
+  let obj2 = _require(analyticsLocations[10]);
+  const tmp = analyticsLocations;
+  const tmp3 = activityApplicationId;
+  const canLaunchFrameResult = _require(analyticsLocations[25]).canLaunchFrame(stateFromStores);
+  const React = canLaunchFrameResult;
+  let obj3 = _require(analyticsLocations[25]);
+  let canLaunchActivityResult = _require(analyticsLocations[26]).canLaunchActivity(quest);
   if (canLaunchActivityResult) {
     let features = quest.config.features;
     canLaunchActivityResult = features.includes(constants.MOBILE_ACTIVITY_QUEST);
@@ -304,8 +306,8 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
         supported_platforms = embeddedActivityConfig.supported_platforms;
       }
     }
-    canLaunchActivityResult = activityApplicationId(tmp[26])(supported_platforms);
-    const tmp8 = activityApplicationId(tmp[26]);
+    canLaunchActivityResult = tmp3(tmp[27])(supported_platforms);
+    const tmp3Result = tmp3(tmp[27]);
   }
   if (canLaunchActivityResult) {
     let tmp11 = canLaunchFrameResult;
@@ -321,7 +323,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
     }
     canLaunchActivityResult = tmp11;
   }
-  const React = canLaunchActivityResult;
+  closure_5 = canLaunchActivityResult;
   const items1 = [stateFromStores, activityApplicationId, quest.config.features];
   const effect = React.useEffect(() => {
     let hasItem = null == stateFromStores;
@@ -334,16 +336,16 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
     }
     if (hasItem) {
       const items = [activityApplicationId];
-      const applications = activityApplicationId(stateFromStores[27]).fetchApplications(items, false);
-      const obj = activityApplicationId(stateFromStores[27]);
+      const applications = activityApplicationId(analyticsLocations[28]).fetchApplications(items, false);
+      const obj = activityApplicationId(analyticsLocations[28]);
     }
   }, items1);
-  const items2 = [canLaunchFrameResult, stateFromStores, canLaunchActivityResult];
+  const items2 = [canLaunchFrameResult, stateFromStores, canLaunchActivityResult, analyticsLocations];
   obj = {
     isMobileActivityQuest: canLaunchActivityResult,
     questApplication: stateFromStores,
     launchMobileActivity: React.useCallback(
-      callback(function* () {
+      stateFromStores(function* () {
         if (v0 === 2) {
           v0 = 3;
           HermesBuiltin.throwTypeError();
@@ -369,36 +371,39 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                 obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
-              } else if (closure_1_4) {
-                if (closure_1_3) {
-                  let obj5 = v02(closure_1_2[28]);
-                  obj1 = { applicationId: null, surface: null };
-                  obj1[0] = closure_1_2.id;
+              } else if (closure_1_5) {
+                if (closure_1_4) {
+                  let obj5 = v02(closure_1_2[29]);
+                  obj1 = { applicationId: null, surface: null, analyticsContext: null };
+                  obj1[0] = closure_1_3.id;
                   obj1[1] = closure_1_11;
+                  let obj2 = { isStart: true, analyticsLocations: null };
+                  obj2[1] = closure_1_2;
+                  obj1[2] = obj2;
                   v02 = 1;
                   v0 = 1;
-                  let obj2 = { value: null, done: false };
-                  obj2[0] = obj5.launchFrame(obj1);
-                  return obj2;
+                  const obj3 = { value: null, done: false };
+                  obj3[0] = obj5.launchFrame(obj1);
+                  return obj3;
                 } else {
                   let id;
-                  if (closure_1_2 != null) {
+                  if (closure_1_3 != null) {
                     const bot = tmp6.bot;
                     if (bot != null) {
                       id = bot.id;
                     }
                   }
                   if (null != id) {
-                    obj2 = v0(closure_1_2[29]);
-                    const obj3 = { appId: null, botId: null, analyticsLocations: null };
-                    obj3[0] = tmp6.id;
-                    obj3[1] = tmp6.bot.id;
-                    obj3[2] = [];
+                    obj2 = v0(closure_1_2[30]);
+                    const obj4 = { appId: null, botId: null, analyticsLocations: null };
+                    obj4[0] = tmp6.id;
+                    obj4[1] = tmp6.bot.id;
+                    obj4[2] = [];
                     v02 = 2;
                     v0 = 1;
-                    const obj4 = { value: null, done: false };
-                    obj4[0] = obj2.launchActivityInBotDM(obj3);
-                    return obj4;
+                    obj5 = { value: null, done: false };
+                    obj5[0] = obj2.launchActivityInBotDM(obj4);
+                    return obj5;
                   }
                 }
               }
@@ -408,9 +413,9 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                 throw arg1;
               } else if (arg0 === 2) {
                 v0 = 3;
-                obj5 = { value: null, done: true };
-                obj5[0] = arg1;
-                return obj5;
+                const obj6 = { value: null, done: true };
+                obj6[0] = arg1;
+                return obj6;
               }
             } else if (arg0 === 1) {
               v0 = 3;
@@ -423,9 +428,9 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
             }
             v0 = 3;
             return { value: "HermesInternal", done: null };
-          } catch (tmp15) {
+          } catch (tmp16) {
             v0 = tmp;
-            throw tmp15;
+            throw tmp16;
           }
         }
       }),

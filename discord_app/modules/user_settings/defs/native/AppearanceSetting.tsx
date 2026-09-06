@@ -20,7 +20,7 @@ function useAppearanceSettingTrailing() {
   const obj2 = getThemeForColor;
   const activeThemeType = useActiveThemeType.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
-    const intl2 = tmp4(1233).intl;
+    const intl2 = tmp4(1114).intl;
     return intl2.string(messagesProxyDefault.KSBBpC);
   } else if (tmp8.CLIENT === activeThemeType) {
     let name;
@@ -35,8 +35,8 @@ function useAppearanceSettingTrailing() {
     }
     return name;
   } else if (tmp8.SYSTEM === activeThemeType) {
-    const intl = tmp4(1233).intl;
-    return intl.string(tmp4(1233).t.wFpwSk);
+    const intl = tmp4(1114).intl;
+    return intl.string(tmp4(1114).t.wFpwSk);
   } else {
     return tmp8.DEFAULT === activeThemeType ? themeName : undefined;
   }

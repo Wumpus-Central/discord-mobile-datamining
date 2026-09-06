@@ -1,6 +1,6 @@
 // discord_app/modules/auth/PromoEmailConsentStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 
 const obj = keys.create(() => ({ required: false, checked: false, preChecked: false }));
 const result = set.fileFinishedImporting("modules/auth/PromoEmailConsentStore.tsx");

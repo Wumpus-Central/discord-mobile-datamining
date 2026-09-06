@@ -4,9 +4,9 @@ import Button from "../../../../design/void/native.tsx";
 import AccessibilityAnnouncer from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
-import registerAssetDefault from "../../../../../_runtime/13371_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/13372_registerAsset.js";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
+import registerAssetDefault from "../../../../../_runtime/13477_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13478_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -25,7 +25,7 @@ function CheckIcon() {
   obj = {
     source: registerAssetDefault,
     color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860,
-    size: tmp4(1296).IconSizes.SMALL,
+    size: tmp4(1178).IconSizes.SMALL,
   };
   return callback2(Button.Icon, obj);
 }

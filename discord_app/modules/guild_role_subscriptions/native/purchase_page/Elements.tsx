@@ -6,7 +6,7 @@ import PressableBase from "../../../../design/void/Pressables/native/Pressables.
 import notSupportedDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/16380_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/16542_registerAsset.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -94,15 +94,15 @@ export const TruncatedText = function TruncatedText(lineClamp) {
         callback(nativeEvent.nativeEvent.lines.length > num);
       }
     };
-    const items = [closure_9(num(4474).Text, obj), first];
+    const items = [closure_9(num(4556).Text, obj), first];
     obj[3] = items;
     return closure_10(closure_6, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp2.toggleTruncateButton;
-    const intl = num(1233).intl;
+    const intl = num(1114).intl;
     const string = intl.string;
-    let t = num(1233).t;
+    let t = num(1114).t;
     if (tmp4) {
       let stringResult = string(t["JQX/Pb"]);
     } else {
@@ -110,7 +110,7 @@ export const TruncatedText = function TruncatedText(lineClamp) {
     }
     obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
     obj1[2] = stringResult;
-    t = tmp7(num(4474).Text, obj1);
+    t = tmp7(num(4556).Text, obj1);
     obj[1] = t;
     closure_9(closure_7, obj);
     const tmp8 = closure_7;
@@ -141,8 +141,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp2(6090).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp2Result = tmp2(6090);
+    str = "" + tmp2(7234).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp2Result = tmp2(7234);
   }
   return str;
 };

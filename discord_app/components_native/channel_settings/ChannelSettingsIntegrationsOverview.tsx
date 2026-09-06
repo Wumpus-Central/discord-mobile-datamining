@@ -14,9 +14,9 @@ require = arg1;
 function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
   importDefault = undefined;
-  let obj = channel(1498);
+  let obj = channel(1483);
   importDefault = obj.useNavigation();
-  obj1 = channel(5968);
+  obj1 = channel(7168);
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
@@ -26,18 +26,18 @@ function LinkedLobbyFormSection(channel) {
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     obj = { title: null, hasIcons: true, children: null };
-    const intl = tmp(1233).intl;
-    obj[0] = intl.string(tmp(1233).t.oAvIAg);
+    const intl = tmp(1114).intl;
+    obj[0] = intl.string(tmp(1114).t.oAvIAg);
     obj = { label: null, icon: null, arrow: true, onPress: null };
     obj[0] = getOrFetchApplication.name;
     obj1 = { source: null, size: null };
     ({ id: obj7[0], icon: obj7[1] } = getOrFetchApplication);
     obj1[0] = getAvatarURLDefault.getApplicationIconSource({ id: null, icon: null });
-    obj1[1] = tmp(1296).AvatarSizes.REFRESH_MEDIUM_32;
-    obj[1] = callback(tmp(1296).Avatar, obj1);
+    obj1[1] = tmp(1178).AvatarSizes.REFRESH_MEDIUM_32;
+    obj[1] = callback(tmp(1178).Avatar, obj1);
     obj[3] = function onPress() {};
-    obj[2] = callback(tmp(5608).TableRow, obj);
-    tmp5 = callback(tmp(6001).TableRowGroup, obj);
+    obj[2] = callback(tmp(5605).TableRow, obj);
+    tmp5 = callback(tmp(5687).TableRowGroup, obj);
     const obj2 = { id: null, icon: null };
     const obj6 = getAvatarURLDefault;
   }
@@ -76,32 +76,32 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
     obj[1] = ThemesDefault.space.PX_24;
     if (canManageWebhooks) {
       const obj2 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
-      const intl = tmp(1233).intl;
-      obj2[0] = intl.string(tmp(1233).t.jp25Id);
-      const intl2 = tmp(1233).intl;
-      obj2[1] = intl2.string(tmp(1233).t.mKIOkI);
-      obj2[2] = tmp6(tmp(16560).WebhookIcon, {});
+      const intl = tmp(1114).intl;
+      obj2[0] = intl.string(tmp(1114).t.jp25Id);
+      const intl2 = tmp(1114).intl;
+      obj2[1] = intl2.string(tmp(1114).t.mKIOkI);
+      obj2[2] = tmp6(tmp(16726).WebhookIcon, {});
       obj2[4] = function onPress() {
         return arr.push(closure_1_5.WEBHOOKS);
       };
-      const items1 = [tmp6(tmp(5608).TableRow, obj2)];
+      const items1 = [tmp6(tmp(5605).TableRow, obj2)];
       let hasItem = set.has(stateFromStores.type);
       if (hasItem) {
         const obj3 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
-        const intl3 = tmp(1233).intl;
-        obj3[0] = intl3.string(tmp(1233).t.OrV60r);
-        const intl4 = tmp(1233).intl;
-        obj3[1] = intl4.string(tmp(1233).t.rQREJl);
-        obj3[2] = tmp6(tmp(16674).ChannelsFollowedIcon, {});
+        const intl3 = tmp(1114).intl;
+        obj3[0] = intl3.string(tmp(1114).t.OrV60r);
+        const intl4 = tmp(1114).intl;
+        obj3[1] = intl4.string(tmp(1114).t.rQREJl);
+        obj3[2] = tmp6(tmp(16839).ChannelsFollowedIcon, {});
         obj3[4] = function onPress() {
           return arr.push(closure_1_5.CHANNELS_FOLLOWED);
         };
-        hasItem = tmp6(tmp(5608).TableRow, obj3);
+        hasItem = tmp6(tmp(5605).TableRow, obj3);
       }
       const obj4 = { hasIcons: true, children: null };
       items1[1] = hasItem;
       obj4[1] = items1;
-      canManageWebhooks = tmp7(tmp(6001).TableRowGroup, obj4);
+      canManageWebhooks = tmp7(tmp(5687).TableRowGroup, obj4);
     }
     const items2 = [canManageWebhooks];
     if (canUnlinkLobby) {
@@ -114,8 +114,8 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
     }
     items2[1] = canUnlinkLobby;
     obj[2] = items2;
-    obj[1] = closure_7(tmp(4927).Stack, obj);
-    tmp6Result = tmp6(tmp(8376).Form, obj);
+    obj[1] = closure_7(tmp(4973).Stack, obj);
+    tmp6Result = tmp6(tmp(8593).Form, obj);
   }
   return tmp6Result;
 }

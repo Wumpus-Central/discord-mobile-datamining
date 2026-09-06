@@ -2,7 +2,7 @@
 import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import set from "../../utils/PlatformUtils.tsx";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;

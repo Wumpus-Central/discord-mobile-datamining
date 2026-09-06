@@ -226,12 +226,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = {
-    codec: name,
-    resolution: null,
-    bitrateEstimate: "Array",
-    fps: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-  };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: false };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -366,7 +361,7 @@ obj = {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(4579).BaseConnectionEvent.Video, (userId) => {
+          replayConnection.on(replayConnection(4615).BaseConnectionEvent.Video, (userId) => {
             let num = arg3;
             obj = closure_1_1(closure_1_3[7]);
             obj = {

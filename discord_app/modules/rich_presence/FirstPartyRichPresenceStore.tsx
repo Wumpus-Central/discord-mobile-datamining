@@ -1,7 +1,7 @@
 // discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import isUndefinedOrNullDefault from "../../../_runtime/00656_isUndefinedOrNull.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import isUndefinedOrNullDefault from "../../../_runtime/01332_isUndefinedOrNull.js";
 import handleUpdateActivityDefault from "../stage_channels/StageChannelSelfRichPresenceStore.tsx";
 
 function updateActivities() {

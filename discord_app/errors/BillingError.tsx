@@ -1,6 +1,6 @@
 // discord_app/errors/BillingError.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import prototypeDefault from "V6OrEarlierAPIError.tsx";
 import set from "../../_runtime/00002_set.js";
 

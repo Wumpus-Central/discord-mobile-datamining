@@ -1,10 +1,10 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesStore.tsx
 import applyDefault from "../../../../_runtime/00012_apply.js";
-import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import isValueEqual from "../../../lib/PlainRecord.tsx";
+import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import isValueEqual from "../../../lib/PlainRecord.tsx";
 import GuildRoleRecordTypeTag from "../../../records/GuildRoleRecord.tsx";
 import applyOverwritesAll from "../../../utils/PermissionUtils.tsx";
 import calculatePositionDeltasDefault from "../../../utils/DragAndDropUtils.tsx";
@@ -563,7 +563,7 @@ obj = {
     ({ id, color } = arg0);
     let int2hexResult = null;
     if (0 !== color) {
-      obj = id(685);
+      obj = id(1091);
       int2hexResult = obj.int2hex(color);
     }
     const found = items.find((id) => id.id === closure_0);
@@ -616,7 +616,7 @@ obj = {
     if (null == found) {
       return false;
     } else {
-      const result = id(1987).extractColorStringsFromServerColors(colors);
+      const result = id(2018).extractColorStringsFromServerColors(colors);
       const value = map2.get(id);
       let tmp21 = null != value;
       if (tmp21) {
@@ -991,7 +991,7 @@ obj = {
         obj[0] = currentStyle;
         obj[1] = value.styleColors;
         const result = obj3.set(id, obj);
-        const result1 = id(1987).extractColorStringsFromServerColors(tmp19);
+        const result1 = id(2018).extractColorStringsFromServerColors(tmp19);
         const primary_color = tmp19.primary_color;
         obj = { color: null, colors: null, colorString: null, colorStrings: null };
         obj[0] = primary_color;

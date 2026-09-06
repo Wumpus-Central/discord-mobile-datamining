@@ -1,6 +1,6 @@
 // discord_app/actions/ChannelSettingsActionCreators.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../stores/ChannelSettingsStore.tsx";
@@ -236,7 +236,7 @@ function _saveChannel() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            let HTTP = callback(527).HTTP;
+            let HTTP = callback(1272).HTTP;
             let then = HTTP.patch;
             let obj4 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
             obj4[0] = c6.CHANNEL(callback);
@@ -329,7 +329,7 @@ function _saveChannel() {
             obj5[24] = c25;
             obj5[25] = c26;
             obj4[1] = obj5;
-            obj5 = callback(527);
+            obj5 = callback(1272);
             obj4[3] = obj5.rejectWithMigratedError();
             HTTP = then(obj4);
             then = HTTP.then;

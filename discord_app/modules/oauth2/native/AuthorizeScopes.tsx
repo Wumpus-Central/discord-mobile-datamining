@@ -32,11 +32,11 @@ function Scope(arg0) {
     obj = { style: null, color: null, size: "refresh_sm" };
     obj[0] = tmp.fakeScopeIcon;
     obj[1] = ThemesDefault.colors.TEXT_MUTED;
-    let tmp10Result = tmp10(tmp6(6235).CircleXIcon, obj);
+    let tmp10Result = tmp10(tmp6(6616).CircleXIcon, obj);
   } else {
     obj1 = { color: null, size: "refresh_sm" };
     obj1[0] = ThemesDefault.colors.TEXT_MUTED;
-    tmp10Result = tmp10(tmp6(4438).CircleCheckIcon, obj1);
+    tmp10Result = tmp10(tmp6(4520).CircleCheckIcon, obj1);
   }
   obj[3] = tmp10Result;
   const items = [closure_4(View, obj)];
@@ -45,12 +45,12 @@ function Scope(arg0) {
   if (isFake) {
     str3 = "text-muted";
   }
-  const items1 = [closure_4(tmp6(4474).Text, { variant: "text-md/normal", color: str3, children: text })];
+  const items1 = [closure_4(tmp6(4556).Text, { variant: "text-md/normal", color: str3, children: text })];
   tmp10Result = null;
   if (null != error) {
     const obj3 = { variant: "text-xs/normal", children: null };
     obj3[1] = error;
-    tmp10Result = tmp10(tmp6(4474).Text, obj3);
+    tmp10Result = tmp10(tmp6(4556).Text, obj3);
   }
   items1[1] = tmp10Result;
   obj2[1] = items1;
@@ -81,24 +81,24 @@ export default function AuthorizeScopes(accountScopes) {
   if (0 === accountScopes.length) {
     return null;
   } else {
-    const t = accountScopes(1233).t;
+    const t = accountScopes(1114).t;
     if (isTrustedName) {
       let tmp4 = tmp14;
     } else {
       tmp4 = tmp14;
     }
-    let hasItem = integrationType === tmp4(8446).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp4(9245).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
-      hasItem = requestedScopes.includes(tmp4(8629).OAuth2Scopes.APPLICATIONS_COMMANDS);
+      hasItem = requestedScopes.includes(tmp4(8339).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     let obj = { style: null, children: null };
     obj[0] = tmp.scopesContainer;
     obj = { variant: "heading-sm/normal", color: "text-default", children: null };
-    const intl = tmp4(1233).intl;
+    const intl = tmp4(1114).intl;
     obj = { application: null };
     obj[0] = application.name;
     obj[2] = intl.format(_1Hz_Sl, obj);
-    const items = [callback(tmp4(4474).Text, obj)];
+    const items = [callback(tmp4(4556).Text, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.scopes;
     const mapped = accountScopes.map((nextResult) => {
@@ -123,8 +123,8 @@ export default function AuthorizeScopes(accountScopes) {
     const items1 = [mapped.flat(), ,];
     if (hasItem) {
       const obj2 = { text: null };
-      const intl2 = tmp4(1233).intl;
-      obj2[0] = intl2.string(tmp4(1233).t.Ls2XRq);
+      const intl2 = tmp4(1114).intl;
+      obj2[0] = intl2.string(tmp4(1114).t.Ls2XRq);
       hasItem = tmp9(Scope, obj2);
     }
     items1[1] = hasItem;

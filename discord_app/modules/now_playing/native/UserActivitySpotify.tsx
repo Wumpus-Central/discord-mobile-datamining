@@ -1,9 +1,9 @@
 // discord_app/modules/now_playing/native/UserActivitySpotify.tsx
-import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import Button from "../../../design/void/native.tsx";
+import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import getConstantsAll from "../../../utils/native/ClientInfoUtils.tsx";
-import _modDef4190 from "../../../lib/native/Linking.tsx";
-import registerAssetDefault from "../../../../_runtime/08063_registerAsset.js";
+import _modDef4255 from "../../../lib/native/Linking.tsx";
+import registerAssetDefault from "../../../../_runtime/08142_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import SPOTIFY_APP_PROTOCOL from "../../spotify/SpotifyConstants.tsx";
@@ -43,7 +43,7 @@ SpotifyTrack.prototype["render"] = function render() {
   const self = this;
   const props = this.props;
   const onPress = props.onPress;
-  return callback(onPress(1296).LegacyText, {
+  return callback(onPress(1178).LegacyText, {
     onPress() {
       if (onPress != null) {
         tmp();
@@ -95,7 +95,7 @@ prototype["renderLink"] = function renderLink(children, arg1, arg2) {
   closure_1 = arg1;
   const onPress = this.props.onPress;
   children = [
-    callback(onPress(1296).LegacyText, {
+    callback(onPress(1178).LegacyText, {
       onPress() {
         if (onPress != null) {
           tmp();
@@ -111,7 +111,7 @@ prototype["renderLink"] = function renderLink(children, arg1, arg2) {
     str = "";
   }
   children[1] = str;
-  return closure_10(onPress(1296).LegacyText, { children }, arg1);
+  return closure_10(onPress(1178).LegacyText, { children }, arg1);
 };
 prototype["render"] = function render() {
   const self = this;
@@ -179,8 +179,8 @@ export const openUrl = function openUrl(arg0, ALBUM, album_id) {
     let catchPromise = closure_4.openURL(closure_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile")).catch(() => {});
     const openURLResult = closure_4.openURL(closure_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile"));
   } else {
-    catchPromise = _modDef4190.openURL(closure_7.WEB_OPEN(ALBUM, album_id, "mobile"));
-    const obj = _modDef4190;
+    catchPromise = _modDef4255.openURL(closure_7.WEB_OPEN(ALBUM, album_id, "mobile"));
+    const obj = _modDef4255;
   }
   return catchPromise;
 };
@@ -261,9 +261,9 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   let obj = { style: activity.style, children: null };
   obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
   obj = { source: registerAssetDefault };
-  obj[0] = callback(activity(4929).Button.Icon, obj);
-  const intl = activity(1233).intl;
-  obj[1] = intl.formatToPlainString(activity(1233).t.LEgD7t, { platform: activity.name });
+  obj[0] = callback(activity(4975).Button.Icon, obj);
+  const intl = activity(1114).intl;
+  obj[1] = intl.formatToPlainString(activity(1114).t.LEgD7t, { platform: activity.name });
   obj[3] = function onPress() {
     sync_id = sync_id.sync_id;
     const canOpenURLResult = closure_1_4.canOpenURL("" + closure_1_6 + ":");
@@ -286,7 +286,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
       })
       .catch(() => {});
   };
-  obj[1] = callback(activity(4929).Button, obj);
+  obj[1] = callback(activity(4975).Button, obj);
   return callback(closure_5, obj);
 };
 export { SpotifyTrack };

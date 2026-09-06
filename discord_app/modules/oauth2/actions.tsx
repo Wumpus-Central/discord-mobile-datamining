@@ -281,7 +281,7 @@ function _fetchAuthorization() {
               obj1[0] = body;
               return obj1;
             } else {
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = {
                 url: null,
                 query: null,
@@ -315,7 +315,7 @@ function _fetchAuthorization() {
               obj3[9] = c9;
               obj2[1] = obj3;
               obj2[2] = c10;
-              obj2[5] = callback(527).rejectWithMigratedError();
+              obj2[5] = callback(1272).rejectWithMigratedError();
               c3 = 2;
               c4 = 1;
               const obj4 = { value: null, done: false };
@@ -391,7 +391,7 @@ function _startSamsungAuthorization() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               obj1 = { url: null, query: null, rejectWithError: null };
               obj1[0] = closure_1_7.OAUTH2_AUTHORIZE_SAMSUNG;
               const obj2 = {
@@ -408,7 +408,7 @@ function _startSamsungAuthorization() {
               obj2[3] = closure_3;
               obj2[5] = closure_1.join(" ");
               obj1[1] = obj2;
-              obj1[2] = callback(527).rejectWithMigratedError();
+              obj1[2] = callback(1272).rejectWithMigratedError();
               c6 = 1;
               c5 = 1;
               const obj3 = { value: null, done: false };
@@ -450,13 +450,13 @@ function _fetchChannels() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_7.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS;
       const obj2 = { guild_id: null };
       obj2[0] = callback;
       obj1[1] = obj2;
-      obj1[3] = callback(527).rejectWithMigratedError();
+      obj1[3] = callback(1272).rejectWithMigratedError();
       yield HTTP.get(obj1);
       return body.body;
     })();
@@ -477,13 +477,13 @@ function _verifyUserCode() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.OAUTH2_DEVICE_VERIFY;
       const obj2 = { user_code: null };
       obj2[0] = callback;
       obj1[1] = obj2;
-      obj1[2] = callback(527).rejectWithMigratedError();
+      obj1[2] = callback(1272).rejectWithMigratedError();
       yield HTTP.post(obj1);
       return arg1;
     })();
@@ -505,14 +505,14 @@ function _finishUserCode() {
     c3 = 0;
     c2 = 0;
     return (function* (arg0, arg1) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.OAUTH2_DEVICE_FINISH;
       const obj2 = { user_code: null, result: null };
       obj2[0] = callback;
       obj2[1] = closure_1;
       obj1[1] = obj2;
-      obj1[2] = callback(527).rejectWithMigratedError();
+      obj1[2] = callback(1272).rejectWithMigratedError();
       yield HTTP.post(obj1);
       return arg1;
     })();
@@ -535,7 +535,7 @@ function _finishUserCodeTwoWayLinkError() {
     c4 = 0;
     c3 = 0;
     return (function* (arg0, arg1, arg2) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.OAUTH2_DEVICE_FINISH;
       const obj2 = { user_code: null, result: "two_way_link_error", error_code: null, error_source: null };
@@ -543,7 +543,7 @@ function _finishUserCodeTwoWayLinkError() {
       obj2[2] = closure_1;
       obj2[3] = dependencyMap;
       obj1[1] = obj2;
-      obj1[2] = callback(527).rejectWithMigratedError();
+      obj1[2] = callback(1272).rejectWithMigratedError();
       yield HTTP.post(obj1);
       return arg1;
     })();

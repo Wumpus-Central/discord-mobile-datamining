@@ -2,8 +2,8 @@
 import set from "../../../_runtime/00002_set.js";
 import timestampDefault from "../debug/Logger.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import ensureValidMode2 from "stores/BridgedStore.tsx";
 import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import ensureValidMode2 from "stores/BridgedStore.tsx";
 
 const ensureValidMode = ensureValidMode2.ensureValidMode;
 let closure_4 = new timestampDefault("libdiscoreExperiments");
@@ -35,9 +35,9 @@ prototype["getCachedConfig"] = function getCachedConfig() {
   const self = this;
   if (this.cachedConfig === closure_6) {
     if (obj.isLibdiscoreInitialized()) {
-      const experimentCacher = tmp(1915).getExperimentCacher();
+      const experimentCacher = tmp(1351).getExperimentCacher();
       self.cachedConfig = experimentCacher.getConfig(self.id);
-      const tmpResult = tmp(1915);
+      const tmpResult = tmp(1351);
     } else {
       self.cachedConfig = undefined;
     }

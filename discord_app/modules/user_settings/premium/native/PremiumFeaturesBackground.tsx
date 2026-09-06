@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import { Gradients } from "../../../colors/native/ColorConstants.tsx";
 import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -45,8 +45,8 @@ export default function PremiumFeaturesBackground(opacity) {
   let obj = { style: items, colors: mapped, start: null, end: null };
   items = [callback().cardContainer, style];
   const tmp2 = callback();
-  obj[2] = num(688).HorizontalGradient.START;
-  obj[3] = num(688).HorizontalGradient.END;
+  obj[2] = num(1093).HorizontalGradient.START;
+  obj[3] = num(1093).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
   return jsx(LinearGradientDefault, { style: items, colors: mapped, start: null, end: null });

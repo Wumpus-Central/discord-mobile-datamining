@@ -174,9 +174,9 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
               } else if (callback2(callback, { bypassNewUserCheck: true })) {
                 c5 = 3;
               } else {
-                obj2 = callback(1374);
+                obj2 = callback(1945);
                 const result = obj2.markDismissibleContentAsDismissedPreProcessing(callback, obj1);
-                let obj3 = callback(1369);
+                let obj3 = callback(1940);
                 c4 = 2;
                 c5 = 1;
                 obj3 = { value: null, done: false };
@@ -187,7 +187,7 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
               c5 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              obj = callback(1374);
+              obj = callback(1945);
               const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
             }
             c5 = 3;
@@ -347,14 +347,14 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
               closure_4 = tmp5;
               closure_3 = tmp2;
               closure_1 = dependencyMap;
-              const guildNextNumTimesDismissed = callback(1374).getGuildNextNumTimesDismissed(callback, closure_1);
-              const obj6 = callback(1374);
-              const result = callback(1374).markDismissibleContentAsDismissedPreProcessing(callback, dependencyMap);
-              const obj7 = callback(1374);
+              const guildNextNumTimesDismissed = callback(1945).getGuildNextNumTimesDismissed(callback, closure_1);
+              const obj6 = callback(1945);
+              const result = callback(1945).markDismissibleContentAsDismissedPreProcessing(callback, dependencyMap);
+              const obj7 = callback(1945);
               c5 = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(1374).UNSAFE_addTimeRecurringGuildDismissedContent(
+              obj1[0] = callback(1945).UNSAFE_addTimeRecurringGuildDismissedContent(
                 callback,
                 closure_1,
                 guildNextNumTimesDismissed,
@@ -370,7 +370,7 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = callback(1374);
+            obj = callback(1945);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c6 = 3;
             return { value: "HermesInternal", done: null };
@@ -430,13 +430,13 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
               closure_5 = tmp5;
               closure_4 = tmp2;
               closure_1 = closure_3;
-              const guildNextNumTimesDismissed = callback(1374).getGuildNextNumTimesDismissed(callback, dependencyMap);
-              const obj6 = callback(1374);
+              const guildNextNumTimesDismissed = callback(1945).getGuildNextNumTimesDismissed(callback, dependencyMap);
+              const obj6 = callback(1945);
               obj1 = {};
               const merged = Object.assign(closure_3);
               obj1.snowflakeId = closure_1;
-              const result = callback(1374).markDismissibleContentAsDismissedPreProcessing(callback, obj1);
-              const obj9 = callback(1374);
+              const result = callback(1945).markDismissibleContentAsDismissedPreProcessing(callback, obj1);
+              const obj9 = callback(1945);
               c6 = 1;
               c7 = 1;
               const obj2 = { value: null, done: false };
@@ -457,7 +457,7 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            obj = callback(1374);
+            obj = callback(1945);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c7 = 3;
             return { value: "HermesInternal", done: null };
@@ -533,7 +533,7 @@ export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed =
     }
   };
 export const UNSAFE_markSingleUseGuildDismissibleContentAsDismissed =
-  function UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(MOBILE_ACCOUNT_LINKING_BANNER, found1, arg2) {
+  function UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(MOBILE_ACCOUNT_LINKING_BANNER, closure_0, arg2) {
     const self = this;
     const apply = _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed.apply;
     if (typeof apply === "unknown") {

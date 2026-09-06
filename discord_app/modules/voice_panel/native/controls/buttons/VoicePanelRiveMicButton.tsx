@@ -21,9 +21,9 @@ export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
   }
   obj[1] = str;
   if (muted) {
-    let MicrophoneIcon = tmp3(9842).MicrophoneSlashIcon;
+    let MicrophoneIcon = tmp3(9127).MicrophoneSlashIcon;
   } else {
-    MicrophoneIcon = tmp3(10114).MicrophoneIcon;
+    MicrophoneIcon = tmp3(10005).MicrophoneIcon;
   }
   obj[2] = <MicrophoneIcon color={color} />;
   obj[1] = jsx(ManaContext.MicrophoneRive, { fill: color, on: !muted });

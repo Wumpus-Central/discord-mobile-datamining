@@ -35,11 +35,11 @@ export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, cha
     obj[2] = tmp8;
     return obj;
   } else if (tmp6) {
-    const intl2 = tmp(1233).intl;
-    BARTXV = tmp(1233).t.BARTXV;
+    const intl2 = tmp(1114).intl;
+    BARTXV = tmp(1114).t.BARTXV;
     let stringResult = intl2.string(BARTXV);
   } else if (!sound.available) {
-    let intl = tmp(1233).intl;
-    stringResult = intl.string(tmp(1233).t.MDOXJR);
+    let intl = tmp(1114).intl;
+    stringResult = intl.string(tmp(1114).t.MDOXJR);
   }
 };

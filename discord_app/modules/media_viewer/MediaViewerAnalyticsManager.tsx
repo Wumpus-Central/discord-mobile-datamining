@@ -2,7 +2,7 @@
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import closure_2 from "../../stores/ChannelStore.tsx";
 import ME from "../../Constants.tsx";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 
 ({ AnalyticEvents: c3, AnalyticsSections: c4 } = ME);
 let obj = {
@@ -26,9 +26,9 @@ obj = {
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "call",
-  source: "HermesInternal",
-  incrementableActions: "Array",
+  hasMediaOptions: "PX_16",
+  source: null,
+  incrementableActions: null,
 };
 const values = Object.values(obj);
 obj[6] = Object.fromEntries(

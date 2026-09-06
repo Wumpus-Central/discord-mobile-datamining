@@ -13,29 +13,29 @@ export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroL
   }
   return tmp;
 };
-export const getUpsellType = function getUpsellType(featureName) {
-  if (EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS === featureName) {
-    return tmp(688).UpsellTypes.ANIMATED_EMOJI;
-  } else if (tmp(7608).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
-    return tmp(688).UpsellTypes.GLOBAL_EMOJI;
-  } else if (tmp(7608).EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
-    return tmp(688).UpsellTypes.GLOBAL_STICKER;
-  } else if (tmp(7608).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
-    return tmp(688).UpsellTypes.UPLOAD;
-  } else if (tmp(7608).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
-    return tmp(688).UpsellTypes.SOUNDBOARD;
-  } else if (tmp(7608).EntitlementFeatureNames.CLIENT_THEMES === featureName) {
-    return tmp(688).UpsellTypes.CLIENT_THEMES;
-  } else if (tmp(7608).EntitlementFeatureNames.APP_ICONS === featureName) {
-    return tmp(688).UpsellTypes.APP_ICONS;
-  } else if (tmp(7608).EntitlementFeatureNames.SAVED_MESSAGES === featureName) {
-    return tmp(688).UpsellTypes.FOR_LATER;
-  } else if (tmp(7608).EntitlementFeatureNames.SCHEDULED_MESSAGES === featureName) {
-    return tmp(688).UpsellTypes.SCHEDULED_MESSAGES;
-  } else if (tmp(7608).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
-    return tmp(688).UpsellTypes.STREAM_HIGH_QUALITY;
+export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
+  if (EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.ANIMATED_EMOJI;
+  } else if (tmp(7853).EntitlementFeatureNames.EMOJIS_EVERYWHERE === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.GLOBAL_EMOJI;
+  } else if (tmp(7853).EntitlementFeatureNames.STICKERS_EVERYWHERE === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.GLOBAL_STICKER;
+  } else if (tmp(7853).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.UPLOAD;
+  } else if (tmp(7853).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.SOUNDBOARD;
+  } else if (tmp(7853).EntitlementFeatureNames.CLIENT_THEMES === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.CLIENT_THEMES;
+  } else if (tmp(7853).EntitlementFeatureNames.APP_ICONS === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.APP_ICONS;
+  } else if (tmp(7853).EntitlementFeatureNames.SAVED_MESSAGES === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.FOR_LATER;
+  } else if (tmp(7853).EntitlementFeatureNames.SCHEDULED_MESSAGES === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.SCHEDULED_MESSAGES;
+  } else if (tmp(7853).EntitlementFeatureNames.STREAM_HIGH_QUALITY === EMOJIS_EVERYWHERE) {
+    return tmp(1093).UpsellTypes.STREAM_HIGH_QUALITY;
   } else {
     const _HermesInternal = HermesInternal;
-    _modDef38(false, "Missing featureName: " + featureName);
+    _modDef38(false, "Missing featureName: " + EMOJIS_EVERYWHERE);
   }
 };

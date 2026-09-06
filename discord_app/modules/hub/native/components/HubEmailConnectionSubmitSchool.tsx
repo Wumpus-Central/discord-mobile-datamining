@@ -5,8 +5,8 @@ import Button from "../../../../design/void/native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
+import _modDef6605 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import _modDef7716 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import HubEmailConnectionModal from "HubEmailConnectionModal.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -216,12 +216,12 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
       }
     }, 100);
   };
-  items1[2] = callback2(_modDef7716, obj4);
+  items1[2] = callback2(_modDef6605, obj4);
   obj1[1] = items1;
   const items2 = [closure_10(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing })];
   const obj7 = { style: tmp.redesignSubmit, children: null };
   const obj8 = { size: "lg", loading: tmp4[0], text: null, onPress: null };
-  const intl5 = tmp2(1233).intl;
+  const intl5 = tmp2(1114).intl;
   obj8[2] = intl5.string(getSystemLocale.t.PDsYAo);
   obj8[3] = function submitWaitlist() {
     const self = this;

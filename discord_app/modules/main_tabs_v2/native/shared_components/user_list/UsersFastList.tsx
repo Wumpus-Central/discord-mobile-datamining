@@ -111,7 +111,7 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
     return items;
   }, items1);
   obj1 = colorOverride(stickyAt[10]);
-  const fn = function x() {
+  const fn = function w() {
     let value;
     if (scrollPosValue != null) {
       value = scrollPosValue.get();
@@ -243,7 +243,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
   getItemProps = getItemProps.getItemProps;
   const getSectionProps = getItemProps.getSectionProps;
   ({ getItemSize, insetEnd } = getItemProps);
-  ({ sections, insetStart } = getItemProps);
+  ({ sections, keyExtractor, insetStart } = getItemProps);
   if (insetEnd === undefined) {
     insetEnd = 0;
   }
@@ -261,7 +261,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
   closure_6 = undefined;
   closure_7 = undefined;
   let clientThemesOverride;
-  ({ inActionSheet, listHeaderSize, onScroll, onLayout, renderListHeader } = getItemProps);
+  ({ inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader } = getItemProps);
   let tmp = callback3();
   closure_6 = tmp;
   let num = 0;
@@ -359,6 +359,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
     sectionHeaderIsSticky: !flag2,
     sectionHeaderSize: callback2,
     estimatedListSize: "windowSize",
+    keyExtractor,
     ref,
     style: memo,
     itemSize: null,
@@ -370,6 +371,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
     keyboardDismissMode: "on-drag",
     keyboardShouldPersistTaps: "always",
     inActionSheet: null,
+    onContentLengthChange: null,
     onScroll: null,
     onLayout: null,
     placeholderConfig: null,
@@ -384,17 +386,18 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
   if (getItemSize == null) {
     getItemSize = tmp5;
   }
-  obj[6] = getItemSize;
-  obj[7] = callback1;
-  obj[8] = renderListHeader;
-  obj[9] = callback;
-  obj[10] = insetStart;
-  obj[11] = sum;
-  obj[14] = inActionSheet;
-  obj[15] = onScroll;
-  obj[16] = onLayout;
-  obj[17] = tmp12;
-  obj[19] = listHeaderSize;
+  obj[7] = getItemSize;
+  obj[8] = callback1;
+  obj[9] = renderListHeader;
+  obj[10] = callback;
+  obj[11] = insetStart;
+  obj[12] = sum;
+  obj[15] = inActionSheet;
+  obj[16] = onContentLengthChange;
+  obj[17] = onScroll;
+  obj[18] = onLayout;
+  obj[19] = tmp12;
+  obj[21] = listHeaderSize;
   return tmp13(getSectionProps(flag2[21]), obj);
 });
 const result = require("set").fileFinishedImporting(

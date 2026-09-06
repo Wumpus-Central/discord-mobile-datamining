@@ -5,7 +5,7 @@ import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchU
 import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
 import APP_ENTRY_KEYS from "../../window/native/AppEntryKey.tsx";
 import readWindowSizeForAppEntry from "readAppEntryWindowMetrics.android.tsx";
-import keys from "../../../../_runtime/00641_keys.js";
+import keys from "../../../../_runtime/00560_keys.js";
 import importDefaultResult from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
 import importDefaultResult1 from "../../safe_area/SafeAreaStore.native.tsx";
 
@@ -32,7 +32,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   }
   let width = size.width;
   ({ width: width2, height } = size2);
-  let tmp2Result = tmp2(1627);
+  let tmp2Result = tmp2(1611);
   const rect = tmp2Result.getSafeAreaInsets(appEntryKey);
   let tmp8 = height;
   let tmp9 = width2;
@@ -42,7 +42,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   }
   const bound = Math.min(width + rect.left + rect.right, tmp9);
   const sum = size.height + rect.top + rect.bottom;
-  tmp2Result = tmp2(1893);
+  tmp2Result = tmp2(1877);
   obj = { appEntryKey };
   const bound1 = Math.min(sum - tmp2Result.getSystemKeyboardHeight(obj), tmp8);
   width = undefined;

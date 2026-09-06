@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1205 from "../../utils/SentryUtils.native.tsx";
+import _modDef1232 from "../../utils/SentryUtils.native.tsx";
 import createUserWidgetFromServer from "../user_profile/UserProfileStore.tsx";
 import fromServer from "records/WishlistRecord.tsx";
 import closure_5 from "records/WishlistRecord.tsx";
@@ -109,7 +109,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
     tmp2.lastFetchedAt = Date.now();
   },
   WISHLIST_ADD_SKU_FAILURE: function handleAddSkuFailure(error) {
-    _modDef1205.captureException(error.error);
+    _modDef1232.captureException(error.error);
   },
   WISHLIST_REMOVE_SKU_START: function handleRemoveSkuStart(arg0) {
     ({ wishlistId, skuId: require } = arg0);
@@ -152,7 +152,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
       tmp2 = obj;
     }
     tmp2.updatedAt = undefined;
-    _modDef1205.captureException(wishlistId.error);
+    _modDef1232.captureException(wishlistId.error);
   },
   WISHLIST_UPDATE_VISIBILITY_SUCCESS: function handleUpdateVisibilitySuccess(wishlistId) {
     wishlistId = wishlistId.wishlistId;
@@ -167,7 +167,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
     tmp2.lastFetchedAt = Date.now();
   },
   WISHLIST_UPDATE_VISIBILITY_FAILURE: function handleUpdateVisibilityFailure(error) {
-    _modDef1205.captureException(error.error);
+    _modDef1232.captureException(error.error);
   },
   WISHLIST_REORDER_START: function handleReorderStart(wishlistId) {
     wishlistId = wishlistId.wishlistId;
@@ -201,7 +201,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
       tmp2 = obj;
     }
     tmp2.updatedAt = undefined;
-    _modDef1205.captureException(wishlistId.error);
+    _modDef1232.captureException(wishlistId.error);
   },
   WISHLIST_ITEM_PURCHASED: function handleWishlistItemPurchased(arg0) {
     ({ recipientId, skuId } = arg0);

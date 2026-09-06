@@ -1,7 +1,7 @@
 // discord_app/stores/SlowmodeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import setDefault from "../utils/Durations.tsx";
 import closure_3 from "ChannelStore.tsx";
 import closure_4 from "PermissionStore.tsx";
 import { canBypassSlowmodeHelper } from "../modules/chat/SlowmodeUtils.tsx";

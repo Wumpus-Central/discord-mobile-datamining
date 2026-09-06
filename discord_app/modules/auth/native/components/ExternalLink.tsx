@@ -22,9 +22,9 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     str = "space-between";
   }
   container[3] = str;
-  const space = tmp(709).space;
+  const space = tmp(576).space;
   container[4] = arg0 ? space.PX_24 : space.PX_16;
-  const space2 = tmp(709).space;
+  const space2 = tmp(576).space;
   container[5] = arg0 ? space2.PX_24 : space2.PX_16;
   return { container, description: { textAlign: "center", marginTop: 8 } };
 });

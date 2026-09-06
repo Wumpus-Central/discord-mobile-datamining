@@ -49,7 +49,7 @@ function _fetchUnclaimedGames() {
             const callback = tmp2;
             let body = tmp5;
             body = undefined;
-            const HTTP = closure_1_0(527).HTTP;
+            const HTTP = closure_1_0(1272).HTTP;
             obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
             obj1[0] = closure_1_5.UNCLAIMED_GAMES;
             dependencyMap = 1;
@@ -68,7 +68,7 @@ function _fetchUnclaimedGames() {
           return obj3;
         } else {
           body = arg1.body;
-          obj = callback(706);
+          obj = callback(573);
           const obj4 = { type: "UNCLAIMED_GAMES_FETCH_SUCCESS", guildIdToGameIds: null };
           obj4[1] = body;
           obj.dispatch(obj4);

@@ -10,6 +10,7 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../stores/ChannelStore.tsx";
 import set from "InAppNotificationConstants.tsx";
+import { Fonts } from "../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
@@ -152,19 +153,29 @@ function EmbedCard(embed) {
 }
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let str = "ggsans-MediumItalic, NotoSans-MediumItalic";
-if (PlatformTypes.isIOS()) {
-  str = "ggsans-NormalItalic, NotoSans-NormalItalic";
-}
-let closure_10 = createCacheKey.createStyles({ italic: { fontStyle: "italic", fontFamily: str } });
+createCacheKey = { italic: null };
 createCacheKey = {
-  embedContainer: null,
+  fontStyle: "italic",
+  fontFamily: PlatformTypes.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC,
+};
+createCacheKey[0] = createCacheKey;
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+PlatformTypes = {
+  embedContainer: {
+    borderRadius: ThemesDefault.radii.sm,
+    paddingTop: ThemesDefault.space.PX_8,
+    paddingBottom: ThemesDefault.space.PX_8,
+    paddingRight: ThemesDefault.space.PX_8,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+    flexDirection: "row",
+    overflow: "hidden",
+  },
   embedAccentBar: null,
   embedTextContainer: null,
   embedMediaContainer: null,
   embedMedia: null,
 };
-createCacheKey = {
+let obj2 = {
   borderRadius: ThemesDefault.radii.sm,
   paddingTop: ThemesDefault.space.PX_8,
   paddingBottom: ThemesDefault.space.PX_8,
@@ -173,24 +184,28 @@ createCacheKey = {
   flexDirection: "row",
   overflow: "hidden",
 };
-createCacheKey[0] = createCacheKey;
-PlatformTypes = {
+PlatformTypes[1] = {
   width: 4,
   marginTop: -ThemesDefault.space.PX_8,
   marginBottom: -ThemesDefault.space.PX_8,
   alignSelf: "stretch",
 };
-createCacheKey[1] = PlatformTypes;
 createCacheKey = {
   flex: 1,
   gap: ThemesDefault.space.PX_4,
   paddingVertical: ThemesDefault.space.PX_4,
   paddingHorizontal: ThemesDefault.space.PX_8,
 };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "HermesInternal" };
-createCacheKey[4] = { width: "100%", height: "100%" };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
+PlatformTypes[2] = createCacheKey;
+let obj3 = {
+  width: 4,
+  marginTop: -ThemesDefault.space.PX_8,
+  marginBottom: -ThemesDefault.space.PX_8,
+  alignSelf: "stretch",
+};
+PlatformTypes[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "WireType" };
+PlatformTypes[4] = { width: "100%", height: "100%" };
+let closure_11 = createCacheKey.createStyles(PlatformTypes);
 let result = set.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
 
 export default function MessagePreviewText(message) {
@@ -199,18 +214,18 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(10238);
+  let obj = message(10131);
   const previewableMedia = obj.usePreviewableMedia(message);
-  obj1 = message(4747);
+  obj1 = message(4793);
   let tmp3 = null;
   if (showMessageAuthor) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(10246);
+  let tmpResult = tmp(10139);
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(10247);
+  tmpResult = tmp(10140);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = React.useMemo(() => {
@@ -219,7 +234,7 @@ export default function MessagePreviewText(message) {
   }, items);
   if (memo.length > 0) {
     const first = memo[0];
-    if (first.type === tmp(690).MessageEmbedTypes.GIFV) {
+    if (first.type === tmp(1095).MessageEmbedTypes.GIFV) {
       if (null != text) {
         obj = { text: null };
         obj[0] = text;
@@ -241,17 +256,17 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(10238).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(10131).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
-        const intl4 = tmp(1233).intl;
+        const intl4 = tmp(1114).intl;
         const obj3 = { username: null };
         obj3[0] = nullableMessageAuthor.nick;
-        let formatResult = intl4.format(tmp(1233).t.sLDHDi, obj3);
+        let formatResult = intl4.format(tmp(1114).t.sLDHDi, obj3);
       } else {
-        const intl3 = tmp(1233).intl;
-        formatResult = intl3.string(tmp(1233).t["9ddYKt"]);
+        const intl3 = tmp(1114).intl;
+        formatResult = intl3.string(tmp(1114).t["9ddYKt"]);
       }
       const obj4 = { text: null };
       obj4[0] = formatResult;
@@ -265,7 +280,7 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       channel = channel.getChannel(message.channel_id);
-      tmp(10203);
+      tmp(10094);
       if (null != channel) {
         const obj6 = {
           channel: null,
@@ -278,10 +293,10 @@ export default function MessagePreviewText(message) {
         };
         obj6[0] = channel;
         obj6[1] = message;
-        obj6[3] = tmp(4171).ChannelListLayoutTypes.COZY;
+        obj6[3] = tmp(7879).ChannelListLayoutTypes.COZY;
         obj6[4] = tmp24;
         obj6[6] = lineClamp;
-        return callback(tmp(10218).ChannelRowPreview, obj6);
+        return callback(tmp(10109).ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: null, lineClamp: null, maxHeight: null };
@@ -305,7 +320,7 @@ export default function MessagePreviewText(message) {
           };
           obj9[2] = closure_7;
           obj9[3] = secondaryText;
-          tmp17Result = callback(tmp(4474).Text, obj9);
+          tmp17Result = callback(tmp(4556).Text, obj9);
         }
         const obj10 = { children: null };
         items2[1] = tmp17Result;
@@ -315,13 +330,13 @@ export default function MessagePreviewText(message) {
     }
     if (null != message.poll) {
       if (null != nullableMessageAuthor) {
-        const intl2 = tmp(1233).intl;
+        const intl2 = tmp(1114).intl;
         const obj11 = { username: null };
         obj11[0] = nullableMessageAuthor.nick;
-        let formatResult1 = intl2.format(tmp(1233).t["1wtRlq"], obj11);
+        let formatResult1 = intl2.format(tmp(1114).t["1wtRlq"], obj11);
       } else {
-        const intl = tmp(1233).intl;
-        formatResult1 = intl.string(tmp(1233).t.n3shVJ);
+        const intl = tmp(1114).intl;
+        formatResult1 = intl.string(tmp(1114).t.n3shVJ);
       }
       const obj12 = { children: null };
       const obj13 = { text: null };
@@ -335,7 +350,7 @@ export default function MessagePreviewText(message) {
       };
       obj14[2] = closure_7;
       obj14[3] = message.poll.question.text;
-      items3[1] = callback(tmp(4474).Text, obj14);
+      items3[1] = callback(tmp(4556).Text, obj14);
       obj12[0] = items3;
       return callback2(View, obj12);
     } else {

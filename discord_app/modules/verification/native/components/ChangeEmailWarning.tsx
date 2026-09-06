@@ -27,9 +27,9 @@ export default function ChangeEmailWarning(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
   let navigation;
   const tmp = callback3();
-  let obj = changeEmailReason(1498);
+  let obj = changeEmailReason(1483);
   navigation = obj.useNavigation();
-  obj1 = changeEmailReason(586);
+  obj1 = changeEmailReason(504);
   const items = [closure_6];
   const items1 = [navigation, changeEmailReason];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -38,7 +38,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
     obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const items2 = [callback(tmp2(6266).TrafficConeSpotIllustration, {}), , ,];
+    const items2 = [callback(tmp2(5692).TrafficConeSpotIllustration, {}), , ,];
     obj1 = {
       style: null,
       accessibilityRole: "header",
@@ -47,9 +47,9 @@ export default function ChangeEmailWarning(changeEmailReason) {
       children: null,
     };
     obj1[0] = tmp.title;
-    const intl = tmp2(1233).intl;
-    obj1[4] = intl.string(tmp2(1233).t.hhR7gX);
-    items2[1] = callback(tmp2(4474).Text, obj1);
+    const intl = tmp2(1114).intl;
+    obj1[4] = intl.string(tmp2(1114).t.hhR7gX);
+    items2[1] = callback(tmp2(4556).Text, obj1);
     const obj2 = {
       style: null,
       accessibilityRole: "header",
@@ -58,28 +58,28 @@ export default function ChangeEmailWarning(changeEmailReason) {
       children: null,
     };
     obj2[0] = tmp.body;
-    const intl2 = tmp2(1233).intl;
+    const intl2 = tmp2(1114).intl;
     const obj3 = { hcArticle: null };
     obj3[0] = closure_7;
-    const items3 = [intl2.format(tmp2(1233).t.rqWXUf, obj3), "\n\n"];
-    const intl3 = tmp2(1233).intl;
-    items3[2] = intl3.string(tmp2(1233).t["3LW10C"]);
+    const items3 = [intl2.format(tmp2(1114).t.rqWXUf, obj3), "\n\n"];
+    const intl3 = tmp2(1114).intl;
+    items3[2] = intl3.string(tmp2(1114).t["3LW10C"]);
     obj2[4] = items3;
-    items2[2] = callback2(tmp2(4474).Text, obj2);
+    items2[2] = callback2(tmp2(4556).Text, obj2);
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.buttonContainer;
     const obj5 = { size: "md", variant: "tertiary", text: null, onPress: null, shrink: true };
-    const intl4 = tmp2(1233).intl;
-    obj5[2] = intl4.string(tmp2(1233).t.rwTBFs);
+    const intl4 = tmp2(1114).intl;
+    obj5[2] = intl4.string(tmp2(1114).t.rwTBFs);
     obj5[3] = tmp6;
-    const items4 = [callback(tmp2(4929).Button, obj5)];
+    const items4 = [callback(tmp2(4975).Button, obj5)];
     const obj6 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
-    const intl5 = tmp2(1233).intl;
-    obj6[2] = intl5.string(tmp2(1233).t["ETE/oC"]);
+    const intl5 = tmp2(1114).intl;
+    obj6[2] = intl5.string(tmp2(1114).t["ETE/oC"]);
     obj6[3] = function onPress() {
       return navigation(table[16]).close();
     };
-    items4[1] = callback(tmp2(4929).Button, obj6);
+    items4[1] = callback(tmp2(4975).Button, obj6);
     obj4[1] = items4;
     items2[3] = callback2(closure_4, obj4);
     obj[1] = items2;

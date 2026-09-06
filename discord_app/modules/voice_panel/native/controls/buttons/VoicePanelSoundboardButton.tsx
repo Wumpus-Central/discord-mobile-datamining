@@ -36,7 +36,7 @@ export default function SoundboardButton(arg0) {
     useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS,
   ));
   if (disabled) {
-    let color = tmp(709).colors.ICON_MUTED;
+    let color = tmp(576).colors.ICON_MUTED;
   } else {
     color = voicePanelButtonStyles.iconFill.color;
   }
@@ -53,9 +53,9 @@ export default function SoundboardButton(arg0) {
     obj[0] = handlePress;
     obj[1] = disabled;
     obj[2] = props;
-    let tmpResult = tmp(17021);
-    const intl = tmp4(1233).intl;
-    obj[3] = intl.string(tmp4(1233).t["6EJvHt"]);
+    let tmpResult = tmp(17185);
+    const intl = tmp4(1114).intl;
+    obj[3] = intl.string(tmp4(1114).t["6EJvHt"]);
     obj[4] = disabledAccessibilityHint;
     obj = { style: null };
     const items = [tmp3.circle];
@@ -63,13 +63,13 @@ export default function SoundboardButton(arg0) {
     obj1[0] = voicePanelButtonStyles.iconBg.backgroundColor;
     items[1] = obj1;
     obj[0] = items;
-    const items1 = [callback(tmp(6015), obj)];
+    const items1 = [callback(tmp(5589), obj)];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp3.iconContainer;
-    tmpResult = tmp(6015);
+    tmpResult = tmp(5589);
     const obj3 = { color: null };
     obj3[0] = color;
-    obj2[1] = callback(tmp4(12328).SoundboardIcon, obj3);
+    obj2[1] = callback(tmp4(12528).SoundboardIcon, obj3);
     items1[1] = callback(tmpResult, obj2);
     obj[5] = items1;
     tmp8 = callback2(tmpResult, obj);

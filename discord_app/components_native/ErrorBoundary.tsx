@@ -1,8 +1,8 @@
 // discord_app/components_native/ErrorBoundary.tsx
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef1205 from "../utils/SentryUtils.native.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
 import Button from "../design/void/native.tsx";
+import _modDef1232 from "../utils/SentryUtils.native.tsx";
 import Text from "../design/components/Text/native/Text.tsx";
 import Button2 from "../design/components/Button/native/Button.native.tsx";
 import getAppCrashSource from "../design/components/Illustration/native/redesign/generated/AppCrash.tsx";
@@ -69,8 +69,8 @@ function MaybeClearBuildOverride() {
   } else {
     obj = { variant: "secondary", loading: null, text: null, onPress: null };
     obj[1] = tmp[0];
-    const intl = tmp2(1233).intl;
-    obj[2] = intl.string(tmp2(1233).t["/Nz9rY"]);
+    const intl = tmp2(1114).intl;
+    obj[2] = intl.string(tmp2(1114).t["/Nz9rY"]);
     obj[3] = function clearOverride() {
       const self = this;
       const apply = _clearOverride.apply;
@@ -81,7 +81,7 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return callback2(tmp2(4929).Button, obj);
+    return callback2(tmp2(4975).Button, obj);
   }
 }
 let c5 = importAllResult;
@@ -118,8 +118,8 @@ prototype["triggerSoftCrash"] = function triggerSoftCrash(error, extra) {
   let obj = { error, info: extra };
   this.setState(obj);
   obj = { extra };
-  _modDef1205.captureCrash(error, obj);
-  const obj2 = _modDef1205;
+  _modDef1232.captureCrash(error, obj);
+  const obj2 = _modDef1232;
   dispatcherDefault.dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
 };
 prototype["handleReload"] = function handleReload() {
@@ -179,7 +179,7 @@ prototype["render"] = function render() {
     obj[0] = tmp.buttons;
     const items1 = [closure_9(MaybeClearBuildOverride, {})];
     obj1 = { text: null, onPress: null };
-    const intl3 = tmp3(1233).intl;
+    const intl3 = tmp3(1114).intl;
     obj1[0] = intl3.string(getSystemLocale.t["4n8OJn"]);
     obj1[1] = self.handleReload;
     items1[1] = closure_9(Button2.Button, obj1);

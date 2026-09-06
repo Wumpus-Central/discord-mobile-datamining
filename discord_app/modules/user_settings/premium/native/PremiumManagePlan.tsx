@@ -6,11 +6,11 @@ import Button from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
 import calculateFractionalPremiumInfoDefault from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
-import registerAssetDefault from "../../../../../_runtime/07972_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08051_registerAsset.js";
 import PremiumTypesDefault from "PremiumFeaturesCard.tsx";
 import roundFPCountdownUnitsDefault from "../../../billing/hooks/useFPDurationLeft.tsx";
 import CheckIconDefault from "PremiumFeaturesTable.tsx";
@@ -557,7 +557,7 @@ function FractionalPremiumCredits(durationText) {
     if (fractionalPremiumInfo.fractionalState === constants3.NONE) {
       const obj12 = { variant: "text-sm/medium", children: null };
       obj12[1] = unactivatedHoursString;
-      let tmp8Result = tmp8(tmp9(4474).Text, obj12);
+      let tmp8Result = tmp8(tmp9(4556).Text, obj12);
     }
     items4[1] = tmp8Result;
     obj10[1] = items4;
@@ -577,17 +577,17 @@ function FractionalPremiumCredits(durationText) {
     if (hasUnactivatedUnits) {
       if (fractionalPremiumInfo.fractionalState === constants3.NONE) {
         const obj17 = { variant: "text-md/semibold", children: null };
-        const intl6 = tmp9(1233).intl;
-        obj17[1] = intl6.string(tmp9(1233).t["hT6i/0"]);
-        const items6 = [tmp8(tmp9(4474).Text, obj17)];
+        const intl6 = tmp9(1114).intl;
+        obj17[1] = intl6.string(tmp9(1114).t["hT6i/0"]);
+        const items6 = [tmp8(tmp9(4556).Text, obj17)];
         tmp8Result = undefined !== activationDate;
         if (tmp8Result) {
           const obj18 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-          const intl7 = tmp9(1233).intl;
+          const intl7 = tmp9(1114).intl;
           const obj19 = { activateDate: null };
           obj19[0] = activationDate;
-          obj18[2] = intl7.format(tmp9(1233).t["0Vwb/l"], obj19);
-          tmp8Result = tmp8(tmp9(4474).Text, obj18);
+          obj18[2] = intl7.format(tmp9(1114).t["0Vwb/l"], obj19);
+          tmp8Result = tmp8(tmp9(4556).Text, obj18);
         }
         const obj20 = { children: null };
         items6[1] = tmp8Result;
@@ -602,7 +602,7 @@ function FractionalPremiumCredits(durationText) {
           const obj22 = { variant: "text-sm/medium", style: null, children: null };
           obj22[1] = tmp.fpTimeRemainingText;
           obj22[2] = unactivatedHoursString;
-          obj21[1] = tmp8(tmp9(4474).Text, obj22);
+          obj21[1] = tmp8(tmp9(4556).Text, obj22);
           let tmp8Result1 = tmp8(tmp3, obj21);
         }
         const obj23 = { children: null };
@@ -622,19 +622,19 @@ function FractionalPremiumCredits(durationText) {
       const obj25 = { variant: "text-sm/medium", style: null, children: null };
       obj25[1] = tmp.fpTimeRemainingText;
       obj25[2] = durationText.durationText;
-      obj24[1] = tmp8(tmp9(4474).Text, obj25);
+      obj24[1] = tmp8(tmp9(4556).Text, obj25);
       tmp8Result1 = tmp8(tmp3, obj24);
     }
     const obj26 = { variant: "text-md/semibold", style: null, children: null };
     obj26[1] = tmp.fpTimeRemaining;
-    const intl5 = tmp9(1233).intl;
-    obj26[2] = intl5.string(tmp9(1233).t["3G0CTC"]);
-    tmp8Result2 = tmp8(tmp9(4474).Text, obj26);
+    const intl5 = tmp9(1114).intl;
+    obj26[2] = intl5.string(tmp9(1114).t["3G0CTC"]);
+    tmp8Result2 = tmp8(tmp9(4556).Text, obj26);
   }
   const obj27 = { variant: "text-sm/medium", style: tmp.fpUnitsStatusText, children: null };
-  const intl4 = tmp9(1233).intl;
+  const intl4 = tmp9(1114).intl;
   obj27[2] = intl4.string(getSystemLocale.t["B66Z+f"]);
-  tmp8Result = tmp8(tmp9(4474).Text, obj27);
+  tmp8Result = tmp8(tmp9(4556).Text, obj27);
 }
 ({
   Image: closure_6,
@@ -848,19 +848,19 @@ export default function PremiumManagePlan() {
   const tmp = callback5();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  let obj = navigation(13245);
+  let obj = navigation(13350);
   const youBarSettingsOutsideSafeAreaTop = obj.useYouBarSettingsOutsideSafeAreaTop();
-  obj1 = navigation(1498);
+  obj1 = navigation(1483);
   navigation = obj1.useNavigation();
   let obj2 = React;
   let items = [navigation];
   const layoutEffect = React.useLayoutEffect(() => {
     navigation.setOptions({ headerShown: false });
   }, items);
-  let obj3 = navigation(586);
+  let obj3 = navigation(504);
   const items1 = [closure_14];
   const stateFromStores = obj3.useStateFromStores(items1, () => closure_14.isLoadedForPremiumSKUs());
-  let obj4 = navigation(586);
+  let obj4 = navigation(504);
   const items2 = [closure_15];
   [tmp10, tmp11] = callback2(
     obj4.useStateFromStoresArray(items2, () => {
@@ -869,7 +869,7 @@ export default function PremiumManagePlan() {
     }),
     2,
   );
-  let obj5 = navigation(586);
+  let obj5 = navigation(504);
   const items3 = [closure_12];
   const stateFromStores1 = obj5.useStateFromStores(items3, () => currentUser.getCurrentUser());
   const tmp12 = calculateFractionalPremiumInfoDefault({ forceFetch: true });
@@ -879,15 +879,15 @@ export default function PremiumManagePlan() {
       isSubscriptionFetching = obj.isSubscriptionFetching;
     }
     if (!isSubscriptionFetching) {
-      obj = navigation(4838);
+      obj = navigation(4884);
       const subscriptions = obj.fetchSubscriptions();
     }
     if (!tmp5) {
-      const premiumSubscriptionPlans = navigation(6113).fetchPremiumSubscriptionPlans();
-      const obj3 = navigation(6113);
+      const premiumSubscriptionPlans = navigation(7257).fetchPremiumSubscriptionPlans();
+      const obj3 = navigation(7257);
     }
   });
-  let obj7 = navigation(7986);
+  let obj7 = navigation(8065);
   let isInReverseTrial = obj7.useIsInReverseTrial();
   const tmp9 = callback2(
     obj4.useStateFromStoresArray(items2, () => {
@@ -897,7 +897,7 @@ export default function PremiumManagePlan() {
     2,
   );
   const tmp15 = roundFPCountdownUnitsDefault;
-  let obj8 = navigation(4139);
+  let obj8 = navigation(4218);
   const unactivatedFractionalPremiumDurationString = obj8.getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
@@ -915,7 +915,7 @@ export default function PremiumManagePlan() {
   if (!tmp29Result1) {
     tmp29Result1 = tmp17;
   }
-  let tmp4Result = tmp4(4204);
+  let tmp4Result = tmp4(4271);
   importDefault = obj2.useRef(false);
   const callback = obj2.useCallback((nativeEvent) => {
     let obj = navigation(closure_1_2[64]);
@@ -926,7 +926,7 @@ export default function PremiumManagePlan() {
     };
     return obj.trackIfScrolledToBottom(obj);
   }, []);
-  tmp4Result = tmp4(586);
+  tmp4Result = tmp4(504);
   const items4 = [closure_16];
   let tmp23 = null != tmp10;
   const stateFromStores2 = tmp4Result.useStateFromStores(
@@ -940,7 +940,7 @@ export default function PremiumManagePlan() {
       return forApplication;
     },
     [],
-    tmp4(1428).areSetsEqual,
+    tmp4(1974).areSetsEqual,
   );
   if (tmp23) {
     tmp23 = !tmp10.isBoostOnly;
@@ -963,7 +963,7 @@ export default function PremiumManagePlan() {
   obj = { style: tmp.background, children: null };
   const items5 = [tmp.topBlur];
   let num = 0;
-  let tmp2Result = tmp2(4918);
+  let tmp2Result = tmp2(4964);
   if (!youBarSettingsOutsideSafeAreaTop) {
     num = top;
   }
@@ -999,7 +999,7 @@ export default function PremiumManagePlan() {
   if (isInReverseTrial) {
     obj3 = { premiumType: null, forFractionalPremium: true, hideButton: true };
     obj3[0] = closure_27.TIER_2;
-    isInReverseTrial = tmp29(tmp2(8231), obj3);
+    isInReverseTrial = tmp29(tmp2(9363), obj3);
   }
   items9[1] = isInReverseTrial;
   tmp29Result = result;
@@ -1010,7 +1010,7 @@ export default function PremiumManagePlan() {
     obj4 = { premiumType: null, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole: null };
     obj4[0] = closure_27.TIER_2;
     obj4[4] = premiumGroupRole;
-    tmp29Result = tmp29(tmp2(8231), obj4);
+    tmp29Result = tmp29(tmp2(9363), obj4);
   }
   items9[2] = tmp29Result;
   if (tmp29Result1) {
@@ -1050,11 +1050,11 @@ export default function PremiumManagePlan() {
       }
     };
     obj7[2] = tmp10;
-    const items10 = [tmp29(tmp2(13204), obj7)];
+    const items10 = [tmp29(tmp2(13309), obj7)];
     obj8 = { style: null, subscription: null };
     obj8[0] = tmp.billingInfo;
     obj8[1] = tmp10;
-    items10[1] = tmp29(tmp2(13241), obj8);
+    items10[1] = tmp29(tmp2(13346), obj8);
     obj6[0] = items10;
     tmp27Result = tmp27(tmp28, obj6);
   }
@@ -1067,7 +1067,7 @@ export default function PremiumManagePlan() {
     hasPremiumGroup: null,
   };
   let flag = result;
-  tmp2Result = tmp2(13243);
+  tmp2Result = tmp2(13348);
   if (result == null) {
     flag = false;
   }
@@ -1081,10 +1081,10 @@ export default function PremiumManagePlan() {
     isPremiumGroup: null,
     premiumGroupRole: null,
   };
-  tmp15Result = roundFPCountdownUnitsDefault(tmp12.endsAt, navigation(13355).CountDownMessageTypes.SHORT_TIME);
+  tmp15Result = roundFPCountdownUnitsDefault(tmp12.endsAt, navigation(13461).CountDownMessageTypes.SHORT_TIME);
   const tmp31 = closure_9;
-  const intl = tmp4(1233).intl;
-  obj10[2] = intl.string(navigation(1233).t.QXx2gs);
+  const intl = tmp4(1114).intl;
+  obj10[2] = intl.string(navigation(1114).t.QXx2gs);
   obj10[3] = tmp12.fractionalState === constants3.FP_ONLY;
   obj10[4] = result;
   obj10[5] = premiumGroupRole;

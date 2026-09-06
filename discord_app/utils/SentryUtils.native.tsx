@@ -3,7 +3,7 @@ import set from "../../_runtime/00002_set.js";
 import timestampDefault from "../modules/debug/Logger.tsx";
 import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
 import addSentryBreadcrumbDefault from "../modules/sentry/addSentryBreadcrumb.native.tsx";
-import addBreadcrumbAll from "../../_runtime/00807_addBreadcrumb.js";
+import addBreadcrumbAll from "../../_runtime/00675_addBreadcrumb.js";
 import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "../modules/errors/native/SentryInitUtils.tsx";
 import { getUpdatedOptions } from "ErrorCommonUtils.tsx";
 
@@ -64,7 +64,7 @@ let obj = {
     }
     dependencyMap = Object.assign({ crash: "true" }, {});
     let obj = getUpdatedOptions;
-    updatedOptions(807).withScope((setExtras) => {
+    updatedOptions(675).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
       }
@@ -200,7 +200,7 @@ let obj = {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                let obj = { type: "y", event_id: "has", timestamp: null, level: "\u{1F60B}", tags: 6 };
+                let obj = { type: "y", event_id: 4, timestamp: 2, level: 0, tags: "BULK_ACK" };
                 obj[1] = timestamp.event_id;
                 obj[2] = result;
                 obj[3] = formatted;

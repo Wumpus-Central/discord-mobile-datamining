@@ -84,7 +84,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "Add Friend Modal",
+      animate: "Gift Message (Optional)",
     };
     obj4[6] = animate;
     if (null == users) {
@@ -120,7 +120,7 @@ let result = require("set").fileFinishedImporting("modules/group_dm/native/Group
 export default function GroupDMAvatar(pileSizeOverride) {
   ({ style, channel } = pileSizeOverride);
   ({ size, animate, status, accessible, accessibilityLabel } = pileSizeOverride);
-  obj = channel(586);
+  obj = channel(504);
   const items = [closure_4];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
@@ -138,8 +138,8 @@ export default function GroupDMAvatar(pileSizeOverride) {
             size: null,
             user: null,
             guildId: "a",
-            animate: "md",
-            accessible: "primary",
+            animate: "onprogress",
+            accessible: null,
             accessibilityLabel: null,
           };
           obj[1] = status;
@@ -149,7 +149,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
           obj[6] = animate;
           obj[7] = accessible;
           obj[8] = accessibilityLabel;
-          let tmp5 = callback(tmp(1296).Avatar, obj);
+          let tmp5 = callback(tmp(1178).Avatar, obj);
         } else {
           obj = {
             status: null,
@@ -175,7 +175,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
       return tmp5;
     }
   }
-  tmp5 = callback(tmp(1296).Avatar, {
+  tmp5 = callback(tmp(1178).Avatar, {
     autoStatusCutout: true,
     status,
     style,

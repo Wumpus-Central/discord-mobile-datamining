@@ -4,7 +4,7 @@ import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import BaseChannelSubtitle from "BaseChannelItem.tsx";
-import registerAssetDefault from "../../../../_runtime/15953_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/16117_registerAsset.js";
 import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../stores/PresenceStore.tsx";
@@ -66,7 +66,7 @@ function ChannelIcon(arg0) {
         obj1 = { style: null, source: null };
         obj1[0] = tmp.groupDmAvatar;
         obj1[1] = channelIconSource;
-        return callback2(tmp5(5502), obj1);
+        return callback2(tmp5(5587), obj1);
       }
       tmp5 = importDefault;
     }
@@ -103,20 +103,20 @@ function ChannelIcon(arg0) {
       obj6 = {};
     }
     const merged = Object.assign(obj6);
-    return callback2(tmp9(12177).BaseChannelIcon, obj4);
+    return callback2(tmp9(12379).BaseChannelIcon, obj4);
   }
 }
 function DMChannelIcon(userId) {
   userId = userId.userId;
   let avatarStatusSelected = userId.selected;
   const tmp = callback3();
-  let obj = userId(586);
+  let obj = userId(504);
   const items = [closure_8];
   const items1 = [userId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getUser(userId), items1);
   const items2 = [closure_6];
   const items3 = [userId];
-  const stateFromStoresObject = userId(586).useStateFromStoresObject(
+  const stateFromStoresObject = userId(504).useStateFromStoresObject(
     items2,
     () => ({
       status: closure_1_6.getStatus(userId),
@@ -129,14 +129,14 @@ function DMChannelIcon(userId) {
   obj = {
     user: stateFromStores,
     guildId: "o",
-    size: "URLSearchParams",
-    style: true,
-    status: false,
-    isMobileOnline: "on-drag",
-    isVROnline: "always",
-    statusStyle: false,
+    size: 0,
+    style: 7,
+    status: 4,
+    isMobileOnline: "shims - shim_star_lb",
+    isVROnline: 1,
+    statusStyle: null,
   };
-  obj[2] = userId(1296).AvatarSizes.XSMALL_20;
+  obj[2] = userId(1178).AvatarSizes.XSMALL_20;
   obj[3] = tmp.dmAvatar;
   obj[4] = status;
   obj[5] = isMobileOnline;
@@ -147,7 +147,7 @@ function DMChannelIcon(userId) {
   }
   items4[1] = avatarStatusSelected;
   obj[7] = items4;
-  return closure_13(userId(1296).Avatar, obj);
+  return closure_13(userId(1178).Avatar, obj);
 }
 let closure_3 = ["channel", "subtitle", "hideIcon", "children", "textStyle", "channelInfo", "onPress"];
 const ChannelTypes = ME.ChannelTypes;

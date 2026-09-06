@@ -78,7 +78,7 @@ function _validatePurchase() {
               return obj1;
             } else {
               c4 = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: false };
               obj2[0] = constants.GOOGLE_PLAY_VALIDATE_PURCHASE;
               const obj3 = {
@@ -109,7 +109,7 @@ function _validatePurchase() {
           } else if (2 === tmp8) {
             c4 = 0;
             c6 = c3;
-            const tmp18 = new lib(10706)(c6);
+            const tmp18 = new lib(10704)(c6);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;

@@ -1,10 +1,10 @@
 // discord_app/modules/threads/ThreadAutoArchive.tsx
 import set from "../../../_runtime/00002_set.js";
+import memoizeDefault from "../../../_runtime/00595_memoize.js";
 import setDefault from "../../utils/Durations.tsx";
-import memoizeDefault from "../../../_runtime/00728_memoize.js";
 import AbortCodes from "ThreadConstants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
 
 function getAutoArchiveOptions() {
   let obj = { id: "1hour", label: null, value: null };

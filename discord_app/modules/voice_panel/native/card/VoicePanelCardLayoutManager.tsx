@@ -866,7 +866,7 @@ prototype["emitLayoutChanges"] = function emitLayoutChanges() {
   self = this;
   if (tmp) {
     self.emitItemChanges = false;
-    self(702).batchUpdates(() => {
+    self(1249).batchUpdates(() => {
       for (const item10006 of tmp) {
         let item10006Result = item10006();
         continue;
@@ -876,7 +876,7 @@ prototype["emitLayoutChanges"] = function emitLayoutChanges() {
         continue;
       }
     });
-    const obj = self(702);
+    const obj = self(1249);
   }
 };
 prototype["deferredLayoutChange"] = function deferredLayoutChange() {

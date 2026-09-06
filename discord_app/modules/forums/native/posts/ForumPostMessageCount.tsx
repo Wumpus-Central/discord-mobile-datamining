@@ -45,7 +45,7 @@ export default function ForumPostMessageCount(hasUnreads) {
   }
   obj = { style: items, accessibilityLabel: null, children: null };
   items = [tmp.container, containerStyle];
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj[1] = intl.formatToPlainString(getSystemLocale.t["8M0DrB"], { count: messageCountText });
   obj = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
   let str2 = "icon-muted";
@@ -58,7 +58,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     obj1 = { variant: "text-sm/semibold", color: null, children: null };
     obj1[1] = str;
     obj1[2] = messageCountText;
-    let tmp7Result = tmp7(tmp2(4474).Text, obj1);
+    let tmp7Result = tmp7(tmp2(4556).Text, obj1);
   } else {
     const obj2 = { count: null, textVariant: "text-sm/semibold", textColor: null, animate: false };
     obj2[0] = messageCount;
@@ -70,12 +70,12 @@ export default function ForumPostMessageCount(hasUnreads) {
   if (tmp5Result) {
     const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: null, children: null };
     obj3[2] = tmp.messageUnreadCount;
-    const intl2 = tmp2(1233).intl;
+    const intl2 = tmp2(1114).intl;
     const obj4 = { count: null };
     obj4[0] = unreadCount;
-    const items2 = ["(", intl2.format(tmp2(1233).t.z3PEth, obj4), ")"];
+    const items2 = ["(", intl2.format(tmp2(1114).t.z3PEth, obj4), ")"];
     obj3[3] = items2;
-    tmp5Result = tmp5(tmp2(4474).Text, obj3);
+    tmp5Result = tmp5(tmp2(4556).Text, obj3);
   }
   items1[2] = tmp5Result;
   obj[2] = items1;

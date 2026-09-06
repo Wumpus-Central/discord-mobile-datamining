@@ -2,8 +2,8 @@
 import applyDefault from "../../_runtime/00012_apply.js";
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import isOwnerDefault from "../modules/go_live/StreamRTCConnection.tsx";
+import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
 import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
 import closure_4 from "../modules/game_detection/RunningGameStore.native.tsx";
@@ -267,7 +267,7 @@ if (importDefaultResult.isSupported()) {
     appContext = appContext.appContext;
     ({ pid, nativePickerStyleUsed: importDefault, goLiveModalDurationMs } = appContext);
     ({ streamType, guildId, channelId, sourceId, sourcePid, analyticsLocations } = appContext);
-    let obj = appContext(4544);
+    let obj = appContext(4612);
     obj = { streamType, guildId, channelId, ownerId: id.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     closure_11[encodeStreamKeyResult] = { appContext, analyticsLocations };
@@ -315,7 +315,7 @@ if (importDefaultResult.isSupported()) {
   obj[9] = function handleStreamStop(appContext) {
     appContext = appContext.appContext;
     const streamKey = appContext.streamKey;
-    closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
+    closure_11[streamKey] = { appContext, analyticsLocations: "a" };
     const item = applyDefault.forEach(closure_18, (analyticsContext) => {
       analyticsContext = analyticsContext.analyticsContext;
       analyticsContext.setActionContext(appContext);
@@ -345,8 +345,8 @@ if (importDefaultResult.isSupported()) {
         tmp11 = null == dependencyMap2[streamKey];
       }
       if (tmp11) {
-        tmp10[streamKey] = tmp4(7494).getStreamerApplication(decodeStreamKeyResult, closure_7);
-        const tmp4Result = tmp4(7494);
+        tmp10[streamKey] = tmp4(7738).getStreamerApplication(decodeStreamKeyResult, closure_7);
+        const tmp4Result = tmp4(7738);
       }
       obj = {
         streamRegion: null,
@@ -361,7 +361,7 @@ if (importDefaultResult.isSupported()) {
       obj[1] = dependencyMap[streamKey];
       let str2 = "unknown";
       if (null != dependencyMap2[streamKey]) {
-        if (!tmp4(1234).isPlatformEmbedded) {
+        if (!tmp4(1115).isPlatformEmbedded) {
           let name;
           if (globalThis.platform != null) {
             name = globalThis.platform.name;
@@ -417,7 +417,7 @@ if (importDefaultResult.isSupported()) {
         analyticsLocations = tmp23.analyticsLocations;
       }
       obj[6] = analyticsLocations;
-      const streamRTCAnalyticsContext = new tmp4(4571).StreamRTCAnalyticsContext(obj);
+      const streamRTCAnalyticsContext = new tmp4(4604).StreamRTCAnalyticsContext(obj);
       _modDef38(null != closure_3, "Creating RTCConnection without session.");
       obj = {
         sessionId: null,

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import getPremiumPlanItem from "../../../../utils/PremiumUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/07192_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/08367_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07437_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/09383_registerAsset.js";
 import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -27,7 +27,7 @@ export default function PremiumFeaturesLogo(premiumType) {
     resizeMode: "contain",
     source: null,
   };
-  const tmpResult = tmp(5502);
+  const tmpResult = tmp(5587);
   obj[1] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
   obj[3] = premiumType.style;
   obj[5] = tmp3;

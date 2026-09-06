@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/ICYMISessionStore.tsx
-import v1 from "../../../_runtime/00511_v1.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import v1 from "../../../_runtime/01256_v1.js";
 import DEFAULT_UX_VARIATION2 from "ICYMIAnalytics.tsx";
 import closure_2 from "../experiments/ExperimentStore.tsx";
 import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
@@ -261,7 +261,7 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
     let tmp19 = result;
     ({ interactionActionTypes: obj[13], interactionCount: obj[14], uxVariation } = tmp7);
     if (uxVariation == null) {
-      uxVariation = tmp11(8649).DEFAULT_UX_VARIATION;
+      uxVariation = tmp11(8359).DEFAULT_UX_VARIATION;
     }
     obj[15] = uxVariation;
     let tmp20 = result;
@@ -538,7 +538,7 @@ prototype["_endImpression"] = function _endImpression(itemId) {
     obj[13] = itemCardHeight;
     let DEFAULT_UX_VARIATION = tmp2.uxVariation;
     if (DEFAULT_UX_VARIATION == null) {
-      DEFAULT_UX_VARIATION = tmp5(8649).DEFAULT_UX_VARIATION;
+      DEFAULT_UX_VARIATION = tmp5(8359).DEFAULT_UX_VARIATION;
     }
     obj[14] = DEFAULT_UX_VARIATION;
     ({ interactionActionTypes: obj[15], interactionCount: obj[16], sessionImpressionIndex: obj[17] } = tmp2);

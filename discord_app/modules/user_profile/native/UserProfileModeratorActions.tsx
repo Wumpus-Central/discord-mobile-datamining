@@ -403,7 +403,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              let arr = callback(4724);
+              let arr = callback(4763);
               arr = arr.pop();
             },
           };

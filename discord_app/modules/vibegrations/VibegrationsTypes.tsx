@@ -6,7 +6,7 @@ let set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);
 let c2 = 5242880;
 let c3 = 52428800;
 const items = [
-  { id: "claude-fable-5", label: "Claude Fable 5", provider: "anthropic" },
+  { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
   { id: "claude-opus-5", label: "Claude Opus 5", provider: "anthropic" },
   { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" },
   { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" },

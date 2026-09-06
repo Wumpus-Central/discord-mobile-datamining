@@ -20,5 +20,5 @@ export const getWindowsAudioEffectsExperimentConfig = function getWindowsAudioEf
 export const useWindowsAudioEffectsExperimentConfig = function useWindowsAudioEffectsExperimentConfig(location) {
   location = location.location;
   const items = [closure_2];
-  return location(586).useStateFromStores(items, () => closure_1_3.getConfig({ location }));
+  return location(504).useStateFromStores(items, () => closure_1_3.getConfig({ location }));
 };

@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getFontScale from "../../../../modules/screen/native/useFontScale.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import useHasEnhancedRoleColorsDefault from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -87,7 +87,7 @@ export const RoleDot = function RoleDot(background) {
         const obj5 = { colors: null, start: null, end: null, style: null };
         const items5 = [, ,];
         ({ primaryColor: arr7[0], secondaryColor: arr7[1], tertiaryColor: arr7[2] } = colors);
-        obj5[0] = items5.filter(tmp2(1470).isNotNullish);
+        obj5[0] = items5.filter(tmp2(1369).isNotNullish);
         obj5[1] = { x: 0, y: 0 };
         obj5[2] = { x: 1, y: 0 };
         const items6 = [tmp.dot, obj1];

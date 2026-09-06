@@ -55,19 +55,19 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   dependencyMap = undefined;
   let obj = React;
   ref = React.useRef(null);
-  const enabled = React.useContext(markAsDismissed(1355).AccessibilityPreferencesContext).reducedMotion.enabled;
-  obj1 = markAsDismissed(1362);
-  const isThemeDarkResult = obj1.isThemeDark(ref(4413)());
+  const enabled = React.useContext(markAsDismissed(4279).AccessibilityPreferencesContext).reducedMotion.enabled;
+  obj1 = markAsDismissed(4411);
+  const isThemeDarkResult = obj1.isThemeDark(ref(4495)());
   const tmp6 = callback2();
-  let obj2 = markAsDismissed(586);
+  let obj2 = markAsDismissed(504);
   const items = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj3 = ref(4139);
+  let obj3 = ref(4218);
   let result = obj3.canUsePremiumProfileCustomization(stateFromStores);
   dependencyMap = result;
-  const intl = markAsDismissed(1233).intl;
+  const intl = markAsDismissed(1114).intl;
   const string = intl.string;
-  const tmp9 = ref(2758);
+  const tmp9 = ref(2786);
   if (result) {
     let stringResult = string(tmp9.TyUdka);
   } else {
@@ -113,11 +113,11 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
       markAsDismissed(closure_1_8.USER_DISMISS);
     },
   };
-  const items4 = [callback(markAsDismissed(5946).ActionSheetHeaderBar, obj1), , , ,];
+  const items4 = [callback(markAsDismissed(7154).ActionSheetHeaderBar, obj1), , , ,];
   obj2 = { style: tmp6.imageContainer, children: null };
   let tmp14Result = enabled;
   if (enabled) {
-    tmp14Result = tmp14(tmp2(6266).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp14Result = tmp14(tmp2(5692).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp14Result];
   if (enabled) {
@@ -132,9 +132,9 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
       str2 = "text-overlay-light";
     }
     obj3[2] = str2;
-    const intl2 = tmp2(1233).intl;
-    obj3[3] = intl2.string(tmp4(2758).Uzms61);
-    items4[2] = tmp14(tmp2(4474).Text, obj3);
+    const intl2 = tmp2(1114).intl;
+    obj3[3] = intl2.string(tmp4(2786).Uzms61);
+    items4[2] = tmp14(tmp2(4556).Text, obj3);
     const obj4 = { variant: "text-lg/medium", style: null, color: null, children: null };
     obj4[1] = tmp6.subtitle;
     if (isThemeDarkResult) {
@@ -143,41 +143,41 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     const obj5 = { bottom: true, children: null };
     obj4[2] = str;
     obj4[3] = stringResult;
-    items4[3] = tmp14(tmp2(4474).Text, obj4);
+    items4[3] = tmp14(tmp2(4556).Text, obj4);
     const obj6 = { style: null, children: null };
     obj6[0] = tmp6.actions;
     const obj7 = { text: null, variant: "primary", size: "lg", onPress: null };
-    const intl3 = tmp2(1233).intl;
-    obj7[0] = intl3.string(tmp2(1233).t["4P5I8V"]);
+    const intl3 = tmp2(1114).intl;
+    obj7[0] = intl3.string(tmp2(1114).t["4P5I8V"]);
     obj7[3] = callback;
-    const items6 = [tmp14(tmp2(4929).Button, obj7)];
+    const items6 = [tmp14(tmp2(4975).Button, obj7)];
     const obj8 = { text: null, variant: "secondary", size: "lg", onPress: null };
-    const intl4 = tmp2(1233).intl;
-    obj8[0] = intl4.string(tmp2(1233).t.TulDPl);
+    const intl4 = tmp2(1114).intl;
+    obj8[0] = intl4.string(tmp2(1114).t.TulDPl);
     obj8[3] = callback1;
-    items6[1] = tmp14(tmp2(4929).Button, obj8);
+    items6[1] = tmp14(tmp2(4975).Button, obj8);
     obj6[1] = items6;
     items4[4] = tmp15(tmp16, obj6);
     obj[1] = items4;
     obj5[1] = tmp15(tmp16, obj);
-    obj[4] = tmp14(tmp2(5562).SafeAreaPaddingView, obj5);
-    return tmp14(tmp2(5631).BottomSheet, obj);
+    obj[4] = tmp14(tmp2(7123).SafeAreaPaddingView, obj5);
+    return tmp14(tmp2(7150).BottomSheet, obj);
   } else {
     if (tmp2Result.isIOS()) {
       const obj9 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
       const obj10 = { uri: null };
-      obj10[0] = tmp4(16772);
+      obj10[0] = tmp4(16937);
       obj9[0] = obj10;
       obj9[1] = tmp6.image;
       obj9[3] = !enabled;
-      tmp14Result = tmp14(tmp4(5502), obj9);
-      const tmp4Result = tmp4(5502);
+      tmp14Result = tmp14(tmp4(5587), obj9);
+      const tmp4Result = tmp4(5587);
     } else {
       const obj11 = { url: null, style: null, autoplay: true };
-      obj11[0] = tmp4(16772);
+      obj11[0] = tmp4(16937);
       obj11[1] = tmp6.image;
-      tmp14Result = tmp14(tmp2(8534).APNGPlayer, obj11);
+      tmp14Result = tmp14(tmp2(8808).APNGPlayer, obj11);
     }
-    tmp2Result = tmp2(1234);
+    tmp2Result = tmp2(1115);
   }
 }

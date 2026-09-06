@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../native.tsx";
 import PressableBase from "../../Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../../_runtime/07725_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/06940_registerAsset.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -68,7 +68,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   }
   let WITH_CONTENT = editable.clearButtonVisibility;
   if (WITH_CONTENT === undefined) {
-    WITH_CONTENT = onChangeText(1296).ClearButtonVisibility.WITH_CONTENT;
+    WITH_CONTENT = onChangeText(1178).ClearButtonVisibility.WITH_CONTENT;
   }
   const merged = Object.assign(editable, Object.create(null));
   ref = undefined;
@@ -76,14 +76,14 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   ref = onPress.useRef(null);
   const imperativeHandle = onPress.useImperativeHandle(ref, () => ref.current);
   let flag2 = true;
-  if (onChangeText(1296).ClearButtonVisibility.ALWAYS !== WITH_CONTENT) {
-    if (tmp7(1296).ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
+  if (onChangeText(1178).ClearButtonVisibility.ALWAYS !== WITH_CONTENT) {
+    if (tmp7(1178).ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
       let tmp9 = null != value;
       if (tmp9) {
         tmp9 = "" !== value;
       }
       flag2 = tmp9;
-    } else if (tmp7(1296).ClearButtonVisibility.NEVER === WITH_CONTENT) {
+    } else if (tmp7(1178).ClearButtonVisibility.NEVER === WITH_CONTENT) {
       flag2 = false;
     }
   }
@@ -191,7 +191,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   }
   obj1.importantForAccessibility = str4;
   obj1.accessibilityElementsHidden = !flag;
-  items1[1] = closure_7(onChangeText(1296).TextInput, obj1);
+  items1[1] = closure_7(onChangeText(1178).TextInput, obj1);
   let result1;
   if (renderTrailingComponent != null) {
     result1 = renderTrailingComponent();

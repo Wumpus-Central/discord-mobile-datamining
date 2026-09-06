@@ -2,8 +2,8 @@
 import timestampDefault from "../../debug/Logger.tsx";
 import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import trackDeviceChangedDefault from "../../../actions/AudioActionCreators.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import createSoundForPack from "../../sound_playback/SoundUtils.tsx";
 import enforcingDefault2 from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -382,9 +382,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       obj[0] = guildId;
       tmp19 = obj;
     }
-    const obj4 = self(17333);
-    const reportIncomingCallResult = self(17333).reportIncomingCall(channelId, channelName, tmp19);
-    self(17333)
+    const obj4 = self(17493);
+    const reportIncomingCallResult = self(17493).reportIncomingCall(channelId, channelName, tmp19);
+    self(17493)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((arg0) => {
         if (!arg0) {
@@ -396,7 +396,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
         closure_1_25.warn("Failed to report incoming call:", arg0);
         self.clearCall(closure_0);
       });
-    const nextPromise = self(17333)
+    const nextPromise = self(17493)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((arg0) => {
         if (!arg0) {
@@ -412,7 +412,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(17333);
+  obj = self(17493);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj
     .cancelIncomingCall(channelId)
@@ -434,8 +434,8 @@ prototype["reconcileTelecomState"] = function reconcileTelecomState() {
   self = this;
   let isEnabledResult = this.isEnabled();
   if (isEnabledResult) {
-    isEnabledResult = self(1623).isMetaQuest();
-    obj = self(1623);
+    isEnabledResult = self(1608).isMetaQuest();
+    obj = self(1608);
   }
   if (isEnabledResult) {
     if (null == self.reconcilePromise) {
@@ -919,7 +919,7 @@ prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   closure_0 = currentCall;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(17333);
+  obj = self(17493);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj
     .endCall(currentCall.channelId)
@@ -1078,7 +1078,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(17333);
+            obj = self(17493);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

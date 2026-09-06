@@ -105,8 +105,8 @@ function StandardStickerDetail(chatInputRef) {
         if (null != stateFromStores) {
           if (stateFromStores1) {
             if (null != chatInputRef) {
-              const result1 = tmp(10407).openStickerPickerToPackId(tmp6, pack_id);
-              const tmpResult = tmp(10407);
+              const result1 = tmp(10389).openStickerPickerToPackId(tmp6, pack_id);
+              const tmpResult = tmp(10389);
             }
           }
         }
@@ -729,10 +729,10 @@ export default importAllResult.memo(function StickerDetailActionSheet(chatInputR
     obj1[0] = tmp.content;
     obj1[1] = tmp6Result;
     obj[1] = tmp6(closure_6, obj1);
-    return tmp6(tmp2(5631).BottomSheet, obj);
+    return tmp6(tmp2(7150).BottomSheet, obj);
   }
   if (null != first) {
-    let tmp2Result = tmp2(4853);
+    let tmp2Result = tmp2(4899);
     if (tmp2Result.isStandardSticker(first)) {
       const obj2 = { sticker: null, channel: null, chatInputRef: null };
       obj2[0] = first;
@@ -740,7 +740,7 @@ export default importAllResult.memo(function StickerDetailActionSheet(chatInputR
       obj2[2] = chatInputRef.chatInputRef;
       tmp6Result = tmp6(StandardStickerDetail, obj2);
     } else {
-      tmp2Result = tmp2(4853);
+      tmp2Result = tmp2(4899);
       if (tmp2Result.isGuildSticker(first)) {
         const obj3 = { sticker: null, channel: null };
         obj3[0] = first;

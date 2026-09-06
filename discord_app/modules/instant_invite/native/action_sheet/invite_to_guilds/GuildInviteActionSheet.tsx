@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Button from "../../../../../design/void/native.tsx";
 import isGuildMemberDefault from "../../../../../utils/InstantInviteUtils.tsx";
-import registerAssetDefault from "../../../../../../_runtime/12829_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../_runtime/12830_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/13101_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/13102_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -34,7 +34,7 @@ function GuildList(recipientId) {
   dependencyMap = undefined;
   let callback;
   dependencyMap = callback4();
-  let obj = recipientId(12826);
+  let obj = recipientId(13098);
   [arr, arr2] = callback(obj.useServerInviteRows(recipientId, recipientId.query), 2);
   if (0 === arr.length) {
     if (0 === arr2.length) {
@@ -64,7 +64,7 @@ function GuildList(recipientId) {
     }
     obj = { paddingTop: null, paddingBottom: null };
     obj[0] = num;
-    obj[1] = source(5603)().insets.bottom + source(709).space.PX_16;
+    obj[1] = source(6981)().insets.bottom + source(576).space.PX_16;
     obj[1] = obj;
     obj[2] = items;
     obj[3] = function renderSectionHeader(section) {
@@ -86,16 +86,16 @@ function GuildList(recipientId) {
       return guild.guild.id;
     };
     obj[6] = EmptyGuildList;
-    return closure_6(tmp(9236).UserProfileStackedActionSheetSectionList, obj);
+    return closure_6(tmp(11151).UserProfileStackedActionSheetSectionList, obj);
   }
   obj1 = { title: null, data: null };
-  const intl = tmp(1233).intl;
-  obj1[0] = intl.string(recipientId(1233).t["u+Ithu"]);
+  const intl = tmp(1114).intl;
+  obj1[0] = intl.string(recipientId(1114).t["u+Ithu"]);
   obj1[1] = arr;
   items = [obj1];
   const obj2 = { title: null, data: null };
-  const intl2 = tmp(1233).intl;
-  obj2[0] = intl2.string(recipientId(1233).t["c5T+X/"]);
+  const intl2 = tmp(1114).intl;
+  obj2[0] = intl2.string(recipientId(1114).t["c5T+X/"]);
   obj2[1] = arr2;
   items[1] = obj2;
 }

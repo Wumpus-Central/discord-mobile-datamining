@@ -1,16 +1,15 @@
 // discord_app/modules/clips/ClipsManager.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import set from "../../utils/PlatformUtils.tsx";
-import setDefault from "../../lib/DiscordNative.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import setDefault from "../../lib/DiscordNative.tsx";
+import isStreamKeyAll from "../go_live/utils/StreamKeyUtils.tsx";
+import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import isClipsEnabled from "isClipsEnabled.tsx";
 import apexExperiment from "ClipsExperiment.tsx";
 import isClientClipsCapableDefault from "isClientClipsCapable.tsx";
-import isStreamKeyAll from "../go_live/utils/StreamKeyUtils.tsx";
-import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
-import apexExperiment2 from "ClipsV3RuntimeExperiment.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { getSystemAnalyticsInfo } from "../system_analytics/SystemAnalyticsStore.native.tsx";
 import closure_6 from "../../stores/AuthenticationStore.tsx";
@@ -28,8 +27,9 @@ require = arg1;
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12,
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1,
   ClipsHardwareClassification: closure_14,
+  CLIP_RUNTIME: closure_15,
 } = result);
-({ AnalyticEvents: closure_15, RTCConnectionStates: closure_16 } = ME);
+({ AnalyticEvents: closure_16, RTCConnectionStates: closure_17 } = ME);
 initializeDefault;
 class ClipsManager extends tmp4 {
   constructor() {
@@ -89,10 +89,10 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
     if (state.state === constants3.RTC_CONNECTED) {
       const self = this;
       const id = store.getId();
-      if (tmp(4579).MediaEngineContextTypes.DEFAULT === context) {
+      if (tmp(4615).MediaEngineContextTypes.DEFAULT === context) {
         const result = self.applyUserVoiceRecording(id);
         const result1 = self.applyUserSoundboardRecording(id);
-      } else if (tmp(4579).MediaEngineContextTypes.STREAM === context) {
+      } else if (tmp(4615).MediaEngineContextTypes.STREAM === context) {
         if (null != streamKey) {
           if (tmpResult.decodeStreamKey(streamKey).ownerId === id) {
             const rTCConnection = store2.getRTCConnection(streamKey);
@@ -100,7 +100,7 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
               self.applyStreamRecording(id, rTCConnection);
             }
           }
-          tmpResult = tmp(4544);
+          tmpResult = tmp(4612);
         }
       }
     }
@@ -109,7 +109,7 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
 prototype["handleRTCUsersUpdate"] = function handleRTCUsersUpdate(userIds) {
   const self = this;
   userIds = userIds.userIds;
-  if (userIds.context === self(4579).MediaEngineContextTypes.DEFAULT) {
+  if (userIds.context === self(4615).MediaEngineContextTypes.DEFAULT) {
     const item = userIds.forEach((id) => {
       const result = self.applyUserVoiceRecording(id);
       const result1 = self.applyUserSoundboardRecording(id);
@@ -137,11 +137,7 @@ prototype["handleRTCConnectionFlags"] = function handleRTCConnectionFlags(arg0) 
 prototype["handleClipsInitFailure"] = function handleClipsInitFailure(arg0) {
   ({ applicationName, errMsg } = arg0);
   let obj = expandEventPropertiesDefault;
-  obj = {
-    application_name: applicationName,
-    error_message: errMsg,
-    clip_runtime: apexExperiment2.getClipsRuntime("handleClipsInitFailure"),
-  };
+  obj = { application_name: applicationName, error_message: errMsg, clip_runtime: closure_15 };
   obj.track(constants2.CLIPS_INIT_FAILURE, obj);
 };
 prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
@@ -186,7 +182,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
       if (!tmp7) {
         const result1 = self.classifyHardwareAndTrack();
         result1.then((classification) => {
-          let obj = callback(table[17]);
+          let obj = callback(table[16]);
           obj = { type: "CLIPS_CLASSIFY_HARDWARE", classification };
           obj.dispatch(obj);
         });
@@ -254,7 +250,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
             closure_0 = undefined;
             gpuModels = undefined;
             let classification;
-            dependencyMap = 1;
+            let table = 1;
             v0 = 2;
             c5 = 1;
             obj1 = { value: null, done: false };
@@ -279,7 +275,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
                 obj3[1] = closure_1_0.classifyHardware(closure_1);
                 return obj3;
               }
-              const processUtils = gpuModels(table[19]).processUtils;
+              const processUtils = gpuModels(table[18]).processUtils;
               yield processUtils.getSystemInfo();
               const gpus2 = arg1.gpus;
               const obj = { gpuModels: null, classification: null };
@@ -290,7 +286,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
             return obj1;
           }
         } else if (1 === tmp7) {
-          dependencyMap = 0;
+          table = 0;
           c5 = 3;
           const obj2 = { value: null, done: true };
           obj2[0] = closure_1_14.UNKNOWN;
@@ -299,7 +295,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
           c5 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          dependencyMap = 0;
+          table = 0;
           c5 = 3;
           let obj3 = { value: null, done: true };
           obj3[0] = arg1;
@@ -312,10 +308,9 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
           obj4[0] = classification;
           obj4[1] = closure_1_13;
           obj4[2] = gpuModels;
-          const obj7 = closure_1_1(695);
-          obj4[3] = closure_1_0(5086).getClipsRuntime("classifyHardwareAndTrack");
-          obj7.track(closure_1_15.CLIPS_HARDWARE_CLASSIFICATION, obj4);
-          dependencyMap = 0;
+          obj4[3] = closure_1_15;
+          closure_1_1(table[14]).track(closure_1_16.CLIPS_HARDWARE_CLASSIFICATION, obj4);
+          table = 0;
           c5 = 3;
           obj = { value: null, done: true };
           obj[0] = classification;
@@ -323,7 +318,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         }
       } catch (tmp12) {
         classification = tmp12;
-        if (tmp4 === dependencyMap) {
+        if (tmp4 === table) {
           c5 = tmp2;
           throw tmp12;
         } else {

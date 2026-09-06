@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/LoginRequiredActionManager.tsx
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import handleLogoutDefault from "../../../actions/AuthenticationActionCreators.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import closure_3 from "../../../stores/UserStore.tsx";
 import closure_4 from "../LoginRequiredActionStore.tsx";
 import ME from "../../../Constants.tsx";
@@ -33,8 +33,8 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
             const obj = closure_1_1(closure_1_2[5]);
           }
         };
-        currentUser(6255).openUserSettings(obj);
-        const obj2 = currentUser(6255);
+        currentUser(7382).openUserSettings(obj);
+        const obj2 = currentUser(7382);
       }
     }
     if (result1) {

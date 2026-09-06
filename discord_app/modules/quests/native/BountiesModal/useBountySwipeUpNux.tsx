@@ -15,16 +15,16 @@ export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
   const first = callback(obj.useForceBountiesSwipeUpNux(), 1)[0];
   if (isEligible) {
     if (tmp3) {
-      const items = [tmp(1372).DismissibleContent.BOUNTIES_SWIPE_UP_NUX];
+      const items = [tmp(1943).DismissibleContent.BOUNTIES_SWIPE_UP_NUX];
     }
     let prop = null;
     if (isEligible) {
       prop = null;
       if (!tmp3) {
-        prop = tmp(1372).DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
+        prop = tmp(1943).DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
       }
     }
-    let tmpResult = tmp(6261);
+    let tmpResult = tmp(7388);
     let tmp4Result = tmp4(tmpResult.useSelectedDismissibleContent([]), 2);
     if (first) {
       let tmp11 = isEligible;
@@ -33,9 +33,9 @@ export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
       }
       let tmp10 = tmp11;
     } else {
-      tmp10 = tmp9 === tmp(1372).DismissibleContent.BOUNTIES_SWIPE_UP_NUX;
+      tmp10 = tmp9 === tmp(1943).DismissibleContent.BOUNTIES_SWIPE_UP_NUX;
     }
-    tmpResult = tmp(6261);
+    tmpResult = tmp(7388);
     tmp4Result = tmp4(tmpResult.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 86400000 }), 2);
     obj = {
       hasSingleUseSwipeUpNux: null,
@@ -51,7 +51,7 @@ export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
       }
       let tmp14 = isEligible;
     } else {
-      tmp14 = tmp13 === tmp(1372).DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
+      tmp14 = tmp13 === tmp(1943).DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
     }
     obj[2] = tmp14;
     obj[3] = tmp4Result[1];

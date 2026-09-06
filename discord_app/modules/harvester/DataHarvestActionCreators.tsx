@@ -1,8 +1,8 @@
 // discord_app/modules/harvester/DataHarvestActionCreators.tsx
 import set from "../../../_runtime/00002_set.js";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import saveProfileAndAccountRequest from "../../actions/UserSettingsAccountActionCreators.tsx";
 
 const Endpoints = ME.Endpoints;
@@ -16,12 +16,12 @@ export const getDataHarvestStatus = function getDataHarvestStatus() {
   const value = HTTP.get(obj);
   return value
     .then((body) => {
-      let obj = callback(706);
+      let obj = callback(573);
       obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
       obj.dispatch(obj);
     })
     .catch((error) => {
-      let obj = callback(706);
+      let obj = callback(573);
       obj = { type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error };
       obj.dispatch(obj);
     });

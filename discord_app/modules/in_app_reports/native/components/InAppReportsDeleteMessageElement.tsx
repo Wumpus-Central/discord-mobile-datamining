@@ -17,7 +17,7 @@ export default function DeleteMessageElement(message) {
   let stateFromStores;
   const tmp = stateFromStores(React.useState(false), 2);
   dependencyMap = tmp[1];
-  let obj = message(586);
+  let obj = message(504);
   const items = [closure_5];
   const items1 = [message];
   stateFromStores = obj.useStateFromStores(
@@ -32,10 +32,10 @@ export default function DeleteMessageElement(message) {
   const items3 = [message, reportId];
   const callback = React.useCallback(() => {
     dependencyMap(true);
-    let obj = reportId(4701);
+    let obj = reportId(4740);
     obj = { report_id: reportId };
     obj.trackWithMetadata(closure_1_6.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
-    reportId(7211).deleteMessage(message.getChannelId(), message.id);
+    reportId(7456).deleteMessage(message.getChannelId(), message.id);
   }, items3);
   obj = {
     title: null,
@@ -46,16 +46,16 @@ export default function DeleteMessageElement(message) {
     onPress: null,
     icon: null,
   };
-  const intl = message(1233).intl;
-  obj[0] = intl.string(message(1233).t.c9BHL9);
-  const intl2 = message(1233).intl;
-  obj[1] = intl2.string(message(1233).t.AT2KSd);
-  const intl3 = message(1233).intl;
-  obj[2] = intl3.string(message(1233).t.dK8S0w);
+  const intl = message(1114).intl;
+  obj[0] = intl.string(message(1114).t.c9BHL9);
+  const intl2 = message(1114).intl;
+  obj[1] = intl2.string(message(1114).t.AT2KSd);
+  const intl3 = message(1114).intl;
+  obj[2] = intl3.string(message(1114).t.dK8S0w);
   obj[3] = tmp[0];
   obj[5] = callback;
-  obj[6] = jsx(message(4436).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(13010), {
+  obj[6] = jsx(message(4518).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(9051), {
     title: null,
     disabledTitle: null,
     description: null,

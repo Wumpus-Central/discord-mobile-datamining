@@ -1,10 +1,10 @@
 // discord_app/modules/premium/native/components/PillText.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import ME from "../../../../Constants.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ME from "../../../../Constants.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import usePremiumPrimaryGradientColorsDefault from "../usePremiumPrimaryGradientColors.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 

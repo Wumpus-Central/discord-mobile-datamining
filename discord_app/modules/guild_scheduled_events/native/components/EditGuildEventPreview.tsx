@@ -25,7 +25,7 @@ function PreviewBody(event) {
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channel_id), items1);
-  const tmp6 = channel_id(4674)(stateFromStores);
+  const tmp6 = channel_id(4713)(stateFromStores);
   dependencyMap = tmp6;
   obj1 = getChannelFromEvent;
   locationFromEvent = obj1.getLocationFromEvent(event);
@@ -37,7 +37,7 @@ function PreviewBody(event) {
   eventLocationIconSource = require("GuildEventUtils.tsx").getEventLocationIconSource(event, stateFromStores, true);
   obj = { style: tmp.header, children: null };
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj[3] = intl.string(require("../../../../intl/index.native.tsx").t.yBsFE3);
   const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj)];
   obj1 = {
@@ -49,16 +49,16 @@ function PreviewBody(event) {
   };
   let formatToPlainStringResult;
   if (null != stateFromStores) {
-    const intl2 = tmp2(1233).intl;
+    const intl2 = tmp2(1114).intl;
     const obj2 = { channelName: null };
     const obj3 = { channel: null };
     obj3[0] = stateFromStores;
-    obj2[0] = channel_id(9442)(obj3);
-    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1233).t.sxcQPE, obj2);
+    obj2[0] = channel_id(9770)(obj3);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.sxcQPE, obj2);
   }
   obj1[1] = formatToPlainStringResult;
   if (null != stateFromStores) {
-    const intl4 = tmp2(1233).intl;
+    const intl4 = tmp2(1114).intl;
     const obj4 = { channelName: null, channelHook: null };
     obj4[0] = tmp8;
     obj4[1] = function channelHook() {
@@ -67,9 +67,9 @@ function PreviewBody(event) {
       if (tmp2Result) {
         obj = { source: null, size: null, style: null };
         obj[0] = tmp5;
-        obj[1] = lib(1296).Icon.Sizes.EXTRA_SMALL;
+        obj[1] = lib(1178).Icon.Sizes.EXTRA_SMALL;
         obj[2] = tmp4.channelIcon;
-        tmp2Result = tmp2(lib(1296).Icon, obj);
+        tmp2Result = tmp2(lib(1178).Icon, obj);
       }
       obj[1] = tmp2Result;
       const items = [closure_1_6(locationFromEvent, obj)];
@@ -77,13 +77,13 @@ function PreviewBody(event) {
       if (dependencyMap == null) {
         let result = null;
         if (null != locationFromEvent) {
-          result = lib(9766).guildEventLocationParser(tmp12, true);
-          const tmp9Result = lib(9766);
+          result = lib(9771).guildEventLocationParser(tmp12, true);
+          const tmp9Result = lib(9771);
         }
         tmp11 = result;
       }
       obj = { children: null };
-      items[1] = closure_1_6(lib(4474).Text, {
+      items[1] = closure_1_6(lib(4556).Text, {
         accessibilityElementsHidden: true,
         importantForAccessibility: "no",
         variant: "text-sm/medium",
@@ -97,10 +97,10 @@ function PreviewBody(event) {
       }
       return closure_1_7(locationFromEvent.Fragment, obj, str);
     };
-    let formatResult = intl4.format(tmp2(1233).t.f55NX0, obj4);
+    let formatResult = intl4.format(tmp2(1114).t.f55NX0, obj4);
   } else {
-    const intl3 = tmp2(1233).intl;
-    formatResult = intl3.string(tmp2(1233).t.KDPFi9);
+    const intl3 = tmp2(1114).intl;
+    formatResult = intl3.string(tmp2(1114).t.KDPFi9);
   }
   obj1[4] = formatResult;
   items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj1);

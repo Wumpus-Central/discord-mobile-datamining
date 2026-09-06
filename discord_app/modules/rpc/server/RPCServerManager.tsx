@@ -76,48 +76,38 @@ class RPCServerManager {
       }
     };
     obj.handleSpeaking = function handleSpeaking(speakingFlags) {
-      let result1 = obj;
       if (0 !== obj.rpcServer.subscriptions.length) {
-        let userId = speakingFlags;
         if (0 !== speakingFlags.speakingFlags) {
           let SPEAKING_STOP = closure_1_20.SPEAKING_START;
         } else {
           SPEAKING_STOP = closure_1_20.SPEAKING_STOP;
         }
-        if (userId.context === closure_1_24.DEFAULT) {
+        if (speakingFlags.context === closure_1_24.DEFAULT) {
           const voiceChannelId = closure_1_13.getVoiceChannelId();
           if (null != voiceChannelId) {
             const channel = closure_1_6.getChannel(voiceChannelId);
             if (null != channel) {
-              const voiceState = closure_1_15.getVoiceState(channel.getGuildId(), userId.userId);
+              const voiceState = closure_1_15.getVoiceState(channel.getGuildId(), speakingFlags.userId);
               if (null != voiceState) {
-                const rpcServer2 = result1.rpcServer;
+                const rpcServer = tmp2.rpcServer;
                 obj = { channel_id: null };
                 obj[0] = voiceState.channelId;
                 obj = { channel_id: null, user_id: null };
                 obj[0] = voiceState.channelId;
-                obj[1] = userId.userId;
-                const result = rpcServer2.dispatchToSubscriptions(SPEAKING_STOP, obj, obj);
-                let activeSessionIdForChannel = null;
+                obj[1] = speakingFlags.userId;
+                const result = rpcServer.dispatchToSubscriptions(SPEAKING_STOP, obj, obj);
                 if (null != voiceState.channelId) {
                   obj = closure_1_1(closure_1_2[21]);
-                  activeSessionIdForChannel = obj.getActiveSessionIdForChannel(voiceState.channelId);
+                  let activeSessionIdsForChannel = obj.getActiveSessionIdsForChannel(voiceState.channelId);
+                } else {
+                  activeSessionIdsForChannel = [];
                 }
-                if (null != activeSessionIdForChannel) {
-                  if (0 !== userId.speakingFlags) {
-                    let VOICE_SESSION_SPEAKING_STOP = closure_1_20.VOICE_SESSION_SPEAKING_START;
-                  } else {
-                    VOICE_SESSION_SPEAKING_STOP = closure_1_20.VOICE_SESSION_SPEAKING_STOP;
-                  }
-                  const rpcServer = result1.rpcServer;
-                  obj1 = { session_id: null };
-                  obj1[0] = activeSessionIdForChannel;
-                  const obj2 = { session_id: null, user_id: null };
-                  obj2[0] = activeSessionIdForChannel;
-                  userId = userId.userId;
-                  obj2[1] = userId;
-                  result1 = rpcServer.dispatchToSubscriptions(VOICE_SESSION_SPEAKING_STOP, obj1, obj2);
+                if (0 !== speakingFlags.speakingFlags) {
+                  const VOICE_SESSION_SPEAKING_START = closure_1_20.VOICE_SESSION_SPEAKING_START;
+                } else {
+                  const VOICE_SESSION_SPEAKING_STOP = closure_1_20.VOICE_SESSION_SPEAKING_STOP;
                 }
+                activeSessionIdsForChannel[Symbol.iterator]();
               }
             }
           }
@@ -619,20 +609,20 @@ prototype["init"] = function init() {
   const self = this;
   this.rpcServer.getCurrentUser = () => currentUser.getCurrentUser();
   this.rpcServer.onConnect = (app_id) => {
-    let obj = callback(706);
+    let obj = callback(573);
     obj = { type: "RPC_APP_CONNECTED", socketId: app_id.id, application: app_id.application, source: app_id.source };
     obj.dispatch(obj);
     obj = { app_id: app_id.application.id, transport: app_id.transport };
-    callback(695).track(constants.AUTHORIZED_APP_CONNECTED, obj);
+    callback(1242).track(constants.AUTHORIZED_APP_CONNECTED, obj);
   };
   this.rpcServer.onDisconnect = (id, reason) => {
-    let obj = callback(14352);
+    let obj = callback(14459);
     obj.releaseSocket(id.id);
     obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
-    callback(706).dispatch(obj);
+    callback(573).dispatch(obj);
   };
   const items = [closure_6, closure_7, closure_10, closure_15, closure_9, closure_11];
-  const batchedStoreListener = new self(586).BatchedStoreListener(items.concat(this.stores), () => {
+  const batchedStoreListener = new self(504).BatchedStoreListener(items.concat(this.stores), () => {
     const result = closure_1_1(closure_1_2[21]).reconcileParticipants();
     const rpcServer = self.rpcServer;
     rpcServer.updateSubscriptions();

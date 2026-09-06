@@ -4,8 +4,8 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import PremiumFeaturesBackgroundDefault from "../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import PremiumFeaturesBackgroundDefault from "../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";

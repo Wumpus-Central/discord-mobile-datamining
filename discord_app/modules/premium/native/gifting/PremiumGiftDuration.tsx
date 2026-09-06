@@ -10,14 +10,14 @@ const require = arg1;
 function PremiumGiftDurationButton(arg0) {
   ({ selected, planInterval } = arg0);
   let setPlanInterval;
-  let obj = planInterval(10702);
+  let obj = planInterval(10699);
   const nativeGiftContext = obj.useNativeGiftContext();
   setPlanInterval = nativeGiftContext.setPlanInterval;
   const tmp4 = callback3();
   if (selected) {
-    let RowButton = tmp(5608).TableRow;
+    let RowButton = tmp(5605).TableRow;
   } else {
-    RowButton = tmp(8378).RowButton;
+    RowButton = tmp(8595).RowButton;
   }
   let combined = null;
   if (planInterval === SubscriptionIntervalTypes.YEAR) {
@@ -25,8 +25,8 @@ function PremiumGiftDurationButton(arg0) {
     combined = "" + closure_4 + "%";
   }
   const tmp5 = SubscriptionIntervalTypes;
-  const tmp9 = setPlanInterval(10750)(nativeGiftContext.premiumType, planInterval);
-  const radioA11yNative = planInterval(4205).useRadioA11yNative({ selected });
+  const tmp9 = setPlanInterval(10751)(nativeGiftContext.premiumType, planInterval);
+  const radioA11yNative = planInterval(4277).useRadioA11yNative({ selected });
   items = [tmp4.container];
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (selected) {
@@ -36,33 +36,33 @@ function PremiumGiftDurationButton(arg0) {
   items[1] = selected;
   obj = { style: tmp4.labelContainer, children: null };
   if (planInterval === tmp5.MONTH) {
-    const intl2 = tmp(1233).intl;
-    let stringResult = intl2.string(tmp(1233).t.Mh9bTt);
+    const intl2 = tmp(1114).intl;
+    let stringResult = intl2.string(tmp(1114).t.Mh9bTt);
   } else {
-    const intl = tmp(1233).intl;
-    stringResult = intl.string(tmp(1233).t.DRgqMo);
+    const intl = tmp(1114).intl;
+    stringResult = intl.string(tmp(1114).t.DRgqMo);
   }
-  const items1 = [closure_6(planInterval(4474).Text, { variant: "text-md/semibold", children: stringResult })];
+  const items1 = [closure_6(planInterval(4556).Text, { variant: "text-md/semibold", children: stringResult })];
   let tmp11Result = null != combined;
   if (tmp11Result) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp4.labelPromo;
     const obj2 = { variant: "text-md/bold", color: "text-overlay-light", children: null };
-    const intl3 = tmp(1233).intl;
+    const intl3 = tmp(1114).intl;
     const obj3 = { discount: null };
     obj3[0] = combined;
-    obj2[2] = intl3.formatToPlainString(tmp(1233).t.IAybsG, obj3).toUpperCase();
-    obj1[1] = tmp11(tmp(4474).Text, obj2);
+    obj2[2] = intl3.formatToPlainString(tmp(1114).t.IAybsG, obj3).toUpperCase();
+    obj1[1] = tmp11(tmp(4556).Text, obj2);
     tmp11Result = tmp11(tmp12, obj1);
-    const str3 = intl3.formatToPlainString(tmp(1233).t.IAybsG, obj3);
+    const str3 = intl3.formatToPlainString(tmp(1114).t.IAybsG, obj3);
   }
   const tmp13 = closure_7;
-  const tmpResult = planInterval(4205);
+  const tmpResult = planInterval(4277);
   items1[1] = tmp11Result;
   obj[1] = items1;
   obj[1] = closure_6(RowButton, {
     label: closure_7(View, obj),
-    trailing: closure_6(planInterval(4474).Text, { variant: "text-md/semibold", children: tmp9 }),
+    trailing: closure_6(planInterval(4556).Text, { variant: "text-md/semibold", children: tmp9 }),
     onPress() {
       setPlanInterval(planInterval);
     },
@@ -112,13 +112,13 @@ const result = require("set").fileFinishedImporting("modules/premium/native/gift
 
 export default function PremiumGiftDuration() {
   const tmp = callback4();
-  let obj = planInterval(10702);
+  let obj = planInterval(10699);
   planInterval = obj.useNativeGiftContext().planInterval;
   obj = { style: tmp.durationContainer, children: null };
   obj = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
-  const intl = planInterval(1233).intl;
-  obj[2] = intl.string(planInterval(1233).t["8XT6Nf"]);
-  items = [callback(planInterval(4474).Text, obj)];
+  const intl = planInterval(1114).intl;
+  obj[2] = intl.string(planInterval(1114).t["8XT6Nf"]);
+  items = [callback(planInterval(4556).Text, obj)];
   items[1] = items.map((planInterval) =>
     closure_1_6(closure_1_10, { selected: planInterval === planInterval, planInterval }, arg1),
   );

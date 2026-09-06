@@ -1,7 +1,7 @@
 // discord_app/modules/a11y/native/AccessibilityPreferencesSharedValue.tsx
 import set from "../../../../_runtime/00002_set.js";
-import AccessibilityAnnouncer from "../../../design/native.tsx";
 import AccessibilityFeatureFlags2 from "../AccessibilityConstants.tsx";
+import AccessibilityAnnouncer from "../../../design/native.tsx";
 
 const AccessibilityFeatureFlags = AccessibilityFeatureFlags2.AccessibilityFeatureFlags;
 const result = set.fileFinishedImporting("modules/a11y/native/AccessibilityPreferencesSharedValue.tsx");

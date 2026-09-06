@@ -152,9 +152,9 @@ function _submitReport() {
                 items.push(obj17);
               }
               let obj19 = dependencyMap;
-              let obj18 = lib(10297);
+              let obj18 = lib(10188);
               let uploadDebugLogFiles = obj18.uploadDebugLogFiles;
-              obj19 = lib(1234);
+              obj19 = lib(1115);
               let BUG_REPORTS = closure_1_5;
               if (obj19.isIOS()) {
                 let ANDROID_APP = BUG_REPORTS.IOS_APP;
@@ -163,14 +163,14 @@ function _submitReport() {
               }
               uploadDebugLogFiles(ANDROID_APP);
               let constants = 1;
-              obj18 = lib2(4714);
+              obj18 = lib2(4753);
               obj18 = { url: null, attachments: null, fields: null, trackedActionData: null, rejectWithError: false };
               BUG_REPORTS = constants.BUG_REPORTS;
               obj18[0] = BUG_REPORTS;
               obj18[1] = dependencyMap;
               obj18[2] = items;
               items = { event: null, properties: null };
-              items[0] = lib(500).NetworkActionNames.BUG_REPORT_SUBMIT;
+              items[0] = lib(1250).NetworkActionNames.BUG_REPORT_SUBMIT;
               obj19 = { priority: null, asana_inbox_id: null };
               priority = priority.priority;
               obj19[0] = priority;

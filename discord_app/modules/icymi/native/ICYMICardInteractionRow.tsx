@@ -264,7 +264,7 @@ function ForwardButton(disabled) {
   items[2] = disabled;
   obj[1] = items;
   obj[3] = disabled;
-  const intl = tmp3(1233).intl;
+  const intl = tmp3(1114).intl;
   obj[4] = intl.string(getSystemLocale.t.xIUfJS);
   obj[5] = closure_16(ForwardingIconDefault, { size: "sm" });
   return closure_16(PressableBase.PressableOpacity, obj);
@@ -289,7 +289,7 @@ function ReplyButton(disabled) {
   items[2] = disabled;
   obj[1] = items;
   obj[3] = disabled;
-  const intl = tmp3(1233).intl;
+  const intl = tmp3(1114).intl;
   obj[4] = intl.string(getSystemLocale.t["5NwaNY"]);
   obj[5] = closure_16(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
   return closure_16(PressableBase.PressableOpacity, obj);
@@ -434,7 +434,7 @@ let closure_20 = createCacheKey.createStyles(() => {
     gap: 8,
   };
   obj[18] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, justifySelf: "end" };
-  obj3 = { width: 20, height: 20, tintColor: tmp(709).colors.INTERACTIVE_TEXT_DEFAULT };
+  obj3 = { width: 20, height: 20, tintColor: tmp(576).colors.INTERACTIVE_TEXT_DEFAULT };
   obj[19] = obj3;
   return obj;
 });

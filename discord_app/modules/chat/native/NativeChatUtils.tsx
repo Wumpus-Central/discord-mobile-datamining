@@ -1,7 +1,7 @@
 // discord_app/modules/chat/native/NativeChatUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
-import _modDef1205 from "../../../utils/SentryUtils.native.tsx";
 import set2 from "../../../utils/PlatformUtils.tsx";
+import _modDef1232 from "../../../utils/SentryUtils.native.tsx";
 import __INTERNAL_VIEW_CONFIG from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -28,7 +28,7 @@ obj = {
           DCDChatManager.scrollTo(tmp15, arg1, tmp, tmp2, TOP);
         }
       } else {
-        const Commands = tmp5(11134).Commands;
+        const Commands = tmp5(11272).Commands;
         Commands.scrollTo(arg0, arg1, tmp, tmp2, TOP);
       }
       obj2 = set2;
@@ -44,7 +44,7 @@ obj = {
           DCDChatManager.scrollToBottom(tmp6, arg1);
         }
       } else {
-        const Commands = tmp2(11134).Commands;
+        const Commands = tmp2(11272).Commands;
         Commands.scrollToBottom(arg0, arg1);
       }
       obj = set2;
@@ -90,7 +90,7 @@ obj = {
           DCDChatManager.scrollIntoView(tmp13, arg1, tmp, tmp2);
         }
       } else {
-        const Commands = tmp4(11134).Commands;
+        const Commands = tmp4(11272).Commands;
         Commands.scrollIntoView(arg0, arg1, tmp, tmp2);
       }
       obj2 = set2;
@@ -100,7 +100,7 @@ obj = {
   updateRows(arg0, rows) {
     if (null != arg0) {
       if (obj6.isIOS()) {
-        let tmp31Result = tmp31(11135);
+        let tmp31Result = tmp31(11273);
         const andIncrementChangesetIdForChat = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
         ({ rows, forceReload } = rows);
         if (forceReload == null) {
@@ -115,8 +115,8 @@ obj = {
         obj[2] = rows;
         obj[3] = forceReload;
         obj[2] = obj;
-        _modDef1205.addBreadcrumb(obj);
-        const Commands = tmp31(11134).Commands;
+        _modDef1232.addBreadcrumb(obj);
+        const Commands = tmp31(11272).Commands;
         const _JSON2 = JSON;
         const json = JSON.stringify(rows.rows);
         const isLoadingAtTop = rows.isLoadingAtTop;
@@ -138,7 +138,7 @@ obj = {
           flag6 = true;
         }
         Commands.updateRows(arg0, json, isLoadingAtTop, str3, andIncrementChangesetIdForChat, flag4, flag5, flag6);
-        const obj3 = _modDef1205;
+        const obj3 = _modDef1232;
       } else {
         const tmp2 = callback(arg0);
         if (null != tmp2) {
@@ -151,7 +151,7 @@ obj = {
             const _JSON = JSON;
             json2 = JSON.stringify(rows.scrollData);
           }
-          tmp31Result = tmp31(11135);
+          tmp31Result = tmp31(11273);
           const andIncrementChangesetIdForChat1 = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
           let flag = rows.HACK_iOSForceAnimations;
           if (flag == null) {
@@ -174,13 +174,13 @@ obj = {
   clearRows(arg0) {
     if (null != arg0) {
       if (obj4.isIOS()) {
-        const Commands = tmp6(11134).Commands;
-        let tmp6Result = tmp6(11135);
+        const Commands = tmp6(11272).Commands;
+        let tmp6Result = tmp6(11273);
         Commands.clearRows(arg0, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
       } else {
         const tmp2 = callback(arg0);
         if (null != tmp2) {
-          tmp6Result = tmp6(11135);
+          tmp6Result = tmp6(11273);
           enforcingDefault.clearRows(tmp2, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
           obj = enforcingDefault;
         }

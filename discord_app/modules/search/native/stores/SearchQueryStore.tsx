@@ -173,8 +173,8 @@ const prototype = function SearchQueryStateManager(type) {
   } else {
     let channelName;
     if (null != channel) {
-      channelName = obj(4674).computeChannelName(channel, closure_5, closure_4);
-      const obj2 = obj(4674);
+      channelName = obj(4713).computeChannelName(channel, closure_5, closure_4);
+      const obj2 = obj(4713);
     }
     if (null == channelName) {
       let items1 = [];
@@ -182,14 +182,14 @@ const prototype = function SearchQueryStateManager(type) {
       obj = { type: null, searchTokenType: null, text: null, channelId: null, location: null };
       obj[0] = constants.COMPLETE;
       obj[1] = constants2.FILTER_IN;
-      const intl = obj(1233).intl;
-      const stringResult = intl.string(obj(1233).t.WNpFHa);
+      const intl = obj(1114).intl;
+      const stringResult = intl.string(obj(1114).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj[2] = "" + stringResult + ": " + obj(12136).quoteChannelName(channelName);
+      obj[2] = "" + stringResult + ": " + obj(12340).quoteChannelName(channelName);
       obj[3] = type.channelId;
       obj[4] = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj];
-      const obj4 = obj(12136);
+      const obj4 = obj(12340);
     }
     items = items1;
   }

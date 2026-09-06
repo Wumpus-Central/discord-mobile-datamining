@@ -12,7 +12,7 @@ export default function SafetyFlowsModal(initialRouteName) {
   const tmp = callback(React.useState(initialRouteName.task), 2);
   first = tmp[0];
   closure_1 = tmp[1];
-  let obj = first(6017);
+  let obj = first(7000);
   const items = [first];
   const navigatorScreens = obj.useNavigatorScreens(() => {
     obj = {
@@ -25,7 +25,7 @@ export default function SafetyFlowsModal(initialRouteName) {
       },
       headerShown: false,
       render() {
-        return callback3(callback2(17711), {});
+        return callback3(callback2(17871), {});
       },
     };
     obj = {
@@ -36,20 +36,20 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(17715), {});
+        return callback3(callback2(17875), {});
       },
     };
     obj1 = {
-      headerLeft: first(5504).getHeaderBackButton(),
+      headerLeft: first(5624).getHeaderBackButton(),
       headerTitle() {
         return null;
       },
       render() {
-        return callback3(callback2(17717), {});
+        return callback3(callback2(17877), {});
       },
     };
-    obj[first(17707).SafetyFlowScreens.VERIFY_EMAIL] = obj1;
-    obj[first(17707).SafetyFlowScreens.UPDATE_APP] = {
+    obj[first(17867).SafetyFlowScreens.VERIFY_EMAIL] = obj1;
+    obj[first(17867).SafetyFlowScreens.UPDATE_APP] = {
       headerLeft() {
         return null;
       },
@@ -57,10 +57,10 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(17719), {});
+        return callback3(callback2(17879), {});
       },
     };
-    obj[first(17707).SafetyFlowScreens.AGE_VERIFICATION] = {
+    obj[first(17867).SafetyFlowScreens.AGE_VERIFICATION] = {
       headerLeft() {
         return null;
       },
@@ -68,25 +68,25 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(17720), {});
+        return callback3(callback2(17880), {});
       },
     };
-    obj[first(17707).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
+    obj[first(17867).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
       headerShown: false,
       customNavbar() {
-        return callback3(callback(17721).ParentalConsentConnectionNavbar, {});
+        return callback3(callback(17881).ParentalConsentConnectionNavbar, {});
       },
       render() {
-        return callback3(callback2(17722), {});
+        return callback3(callback2(17882), {});
       },
     };
-    obj[first(17707).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
+    obj[first(17867).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
       headerShown: false,
       render() {
-        return callback3(callback2(17727), {});
+        return callback3(callback2(17887), {});
       },
     };
-    obj[first(17707).SafetyFlowScreens.ERROR] = {
+    obj[first(17867).SafetyFlowScreens.ERROR] = {
       headerLeft() {
         return null;
       },
@@ -94,7 +94,7 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(17728), {});
+        return callback3(callback2(17888), {});
       },
     };
     return obj;
@@ -125,15 +125,15 @@ export default function SafetyFlowsModal(initialRouteName) {
   const memo1 = React.useMemo(() => ({ task: first, setTask: closure_1 }), items1);
   obj = {
     value: memo1,
-    children: jsx(first(14056).StepModal, {
+    children: jsx(first(14174).StepModal, {
       initialRouteName: initialRouteName.initialScreen,
       screens: navigatorScreens,
       steps: memo,
     }),
   };
-  return jsx(first(17712).SafetyFlowTaskContext.Provider, {
+  return jsx(first(17872).SafetyFlowTaskContext.Provider, {
     value: memo1,
-    children: jsx(first(14056).StepModal, {
+    children: jsx(first(14174).StepModal, {
       initialRouteName: initialRouteName.initialScreen,
       screens: navigatorScreens,
       steps: memo,

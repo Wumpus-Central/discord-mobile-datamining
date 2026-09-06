@@ -23,22 +23,22 @@ function useGoreContentNonFriendsDmSettingValue() {
 function onGoreContentNonFriendsDmOnPress() {
   selectedTeenId = selectedTeenId.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14672);
+    let obj = selectedTeenId(14828);
     obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
-    const intl = selectedTeenId(1233).intl;
-    obj[0] = intl.string(selectedTeenId(1233).t["16/3Bi"]);
-    const intl2 = selectedTeenId(1233).intl;
-    obj[1] = intl2.string(selectedTeenId(1233).t["Yh+HX1"]);
+    const intl = selectedTeenId(1114).intl;
+    obj[0] = intl.string(selectedTeenId(1114).t["16/3Bi"]);
+    const intl2 = selectedTeenId(1114).intl;
+    obj[1] = intl2.string(selectedTeenId(1114).t["Yh+HX1"]);
     obj[2] = function handlePress(goreContentNonFriendDm) {
       let obj = selectedTeenId(closure_1_1[4]);
       obj = { goreContentNonFriendDm };
       return obj.updateGoreContentSetting(selectedTeenId, obj);
     };
     obj[3] = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
-    const items = [selectedTeenId(1305).ExplicitContentRedaction.SHOW];
+    const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
     obj[4] = items;
-    const result = selectedTeenId(14665).handleSensitiveMediaFilterPress(obj);
-    const obj2 = selectedTeenId(14665);
+    const result = selectedTeenId(14821).handleSensitiveMediaFilterPress(obj);
+    const obj2 = selectedTeenId(14821);
   }
 }
 createToggle = {

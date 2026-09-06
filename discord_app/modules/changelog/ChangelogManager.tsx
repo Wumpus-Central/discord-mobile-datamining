@@ -55,12 +55,12 @@ let prototype = function ChangelogManager() {
             dispatchResult2 = 2;
             c5 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = body(8013).fetchChangelogConfig();
+            obj1[0] = body(8092).fetchChangelogConfig();
             return obj1;
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          body(706).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+          body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
           throw c2;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
@@ -68,7 +68,7 @@ let prototype = function ChangelogManager() {
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 0;
-            body(706).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+            body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
             c5 = 3;
             let obj2 = { value: null, done: true };
             obj2[0] = arg1;
@@ -103,20 +103,20 @@ let prototype = function ChangelogManager() {
                 continue;
               }
               return first;
-            })(body, lib(17160).getClientVersionForChangelog());
+            })(body, lib(17326).getClientVersionForChangelog());
             dispatchResult2 = body;
             dispatchResult2 = dependencyMap;
-            const obj23 = lib(17160);
+            const obj23 = lib(17326);
             let obj3 = { type: "CHANGE_LOG_SET_CONFIG", config: null, latestChangelogId: null };
             dispatchResult2 = lib;
             obj3[1] = lib.body;
             dispatchResult2 = dependencyMap;
             obj3[2] = dependencyMap;
-            dispatchResult2 = body(706).dispatch(obj3);
+            dispatchResult2 = body(573).dispatch(obj3);
             dispatchResult2 = dependencyMap;
             if (null == dependencyMap) {
               c3 = 0;
-              body(706).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+              body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
               c5 = 3;
               return { value: "HermesInternal", done: null };
             } else {
@@ -125,7 +125,7 @@ let prototype = function ChangelogManager() {
               dispatchResult2 = dependencyMap;
               if (true !== body[dependencyMap].show_on_startup) {
                 c3 = 0;
-                body(706).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+                body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                 c5 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
@@ -139,7 +139,7 @@ let prototype = function ChangelogManager() {
                 if (null != closure_3) {
                   if (obj10.compare(dependencyMap, closure_3) <= 0) {
                     c3 = 0;
-                    body(706).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+                    body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                     c5 = 3;
                     return { value: "HermesInternal", done: null };
                   }
@@ -148,18 +148,18 @@ let prototype = function ChangelogManager() {
                 dispatchResult2 = 3;
                 c5 = 1;
                 let obj4 = { value: null, done: false };
-                obj4[0] = body(8013).fetchChangelog(dependencyMap, c5.locale);
+                obj4[0] = body(8092).fetchChangelog(dependencyMap, c5.locale);
                 return obj4;
               }
             }
-            const obj24 = body(706);
+            const obj24 = body(573);
           }
         } else if (arg0 === 1) {
           c5 = 3;
           throw arg1;
         } else if (arg0 === 2) {
           c3 = 0;
-          body(706).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+          body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
           c5 = 3;
           const obj5 = { value: null, done: true };
           obj5[0] = arg1;
@@ -168,7 +168,7 @@ let prototype = function ChangelogManager() {
           c5 = arg1;
           if (null == c5) {
             c3 = 0;
-            let obj6 = body(706);
+            let obj6 = body(573);
             obj6.dispatch({ type: "CHANGE_LOG_RESOLVED" });
             c5 = 3;
             return { value: "HermesInternal", done: null };
@@ -181,7 +181,7 @@ let prototype = function ChangelogManager() {
                 dispatchResult2 = closure_1_6;
                 if (closure_1_6.isLocked()) {
                   c3 = 0;
-                  obj2 = body(706);
+                  obj2 = body(573);
                   obj2.dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   c5 = 3;
                   return { value: "HermesInternal", done: null };
@@ -191,21 +191,21 @@ let prototype = function ChangelogManager() {
                   const _Date2 = Date;
                   const date1 = new Date(dispatchResult2);
                   if (date > date1) {
-                    obj = lib(17162);
+                    obj = lib(17328);
                     obj.openChangelog();
                   }
                   c3 = 0;
-                  obj1 = body(706);
+                  obj1 = body(573);
                   obj1.dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   c5 = 3;
                   return { value: "HermesInternal", done: null };
                 }
               }
             }
-            obj3 = body(8013);
+            obj3 = body(8092);
             obj3.markChangelogAsSeen(dependencyMap, c5.date);
             c3 = 0;
-            obj4 = body(706);
+            obj4 = body(573);
             obj4.dispatch({ type: "CHANGE_LOG_RESOLVED" });
             c5 = 3;
             obj6 = { value: null, done: true };

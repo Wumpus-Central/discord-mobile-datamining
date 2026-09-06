@@ -24,7 +24,7 @@ import FramePreviewOverrideSection from "../../../collectibles/native/tooling/Co
 import SlayerStorefrontDevTools from "../../../slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx";
 import ActionSheetSelector from "screens/DevToolsActionSheetsScreen.tsx";
 import DevToolsAccountLinkingScreen from "screens/DevToolsAccountLinkingScreen.tsx";
-import _mod15567 from "screens/DevToolsPerformanceTestingScreen.tsx";
+import _mod15725 from "screens/DevToolsPerformanceTestingScreen.tsx";
 import getSelectedGuildChannel from "screens/DevToolsInAppNotificationTestingScreen.tsx";
 import effectName from "screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -393,14 +393,14 @@ obj[24] = {
   headerTitle: "Performance Testing",
   Icon: require("SpeedometerIcon").SpeedometerIcon,
   render() {
-    return jsx(_mod15567.default, {});
+    return jsx(_mod15725.default, {});
   },
 };
 const obj23 = {
   headerTitle: "Performance Testing",
   Icon: require("SpeedometerIcon").SpeedometerIcon,
   render() {
-    return jsx(_mod15567.default, {});
+    return jsx(_mod15725.default, {});
   },
 };
 obj[25] = {

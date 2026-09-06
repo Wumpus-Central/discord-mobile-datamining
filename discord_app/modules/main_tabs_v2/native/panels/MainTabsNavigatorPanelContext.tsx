@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsNavigatorPanelContext.tsx
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { Gesture } from "../../../../../_runtime/05661_LegacyBaseButton.js";
+import { Gesture } from "../../../../../_runtime/06655_LegacyBaseButton.js";
 import createFakeSharedValue from "../../../reanimated/ReanimatedHelperTypes.tsx";
 
 const obj = { gesture: null, disallowGesture: null, translateX: null };

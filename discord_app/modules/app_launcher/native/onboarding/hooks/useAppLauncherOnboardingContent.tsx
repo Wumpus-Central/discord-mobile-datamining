@@ -13,42 +13,42 @@ let result = require("set").fileFinishedImporting(
 export default function useAppLauncherOnboardingContent(channelId) {
   channelId = channelId.channelId;
   let items = [];
-  let obj = { channel: channelId(586).useStateFromStores(items1, () => closure_1_5.getChannel(channelId)) };
+  let obj = { channel: channelId(504).useStateFromStores(items1, () => closure_1_5.getChannel(channelId)) };
   items1 = [closure_5];
   const tmp3 = resultDefault({ channelId });
   if (tmp3.canShowBotsBanner) {
-    items.push(tmp(1372).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
+    items.push(tmp(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
   }
   if (tmp3.canShowAppsOrActivitiesBanner) {
     const push = items.push;
-    const DismissibleContent = tmp(1372).DismissibleContent;
+    const DismissibleContent = tmp(1943).DismissibleContent;
     if (
       (function useHasUsedActivities(channel) {
         channel = channel.channel;
-        let obj = channelId(4298);
+        let obj = channelId(4380);
         let result = obj.useIsDismissibleContentDismissed_UNSAFE(
-          channelId(1372).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
+          channelId(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
         );
-        const result1 = channelId(4298).useIsDismissibleContentDismissed_UNSAFE(
-          channelId(1372).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
+        const result1 = channelId(4380).useIsDismissibleContentDismissed_UNSAFE(
+          channelId(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
         );
-        const obj2 = channelId(4298);
+        const obj2 = channelId(4380);
         const tmp = channelId;
         const items = [closure_4];
-        const stateFromStores = channelId(586).useStateFromStores(items, () =>
+        const stateFromStores = channelId(504).useStateFromStores(items, () =>
           applicationFrecencyWithoutLoadingLatest.getApplicationFrecencyWithoutLoadingLatest(),
         );
         let guild_id;
         if (channel != null) {
           guild_id = channel.guild_id;
         }
-        const obj3 = channelId(586);
+        const obj3 = channelId(504);
         obj = { guildId: guild_id, fetchesShelf: null };
         if (result) {
           result = result1;
         }
         obj[1] = !result;
-        const activityApplications = tmp(11839).useActivityApplications(obj);
+        const activityApplications = tmp(12038).useActivityApplications(obj);
         let flag = false;
         for (const item10042 of activityApplications) {
           if (null != stateFromStores.getEntry(item10042.id)) {
@@ -68,8 +68,8 @@ export default function useAppLauncherOnboardingContent(channelId) {
       push(DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
     }
   }
-  let obj2 = channelId(586);
-  let tmp7 = callback(channelId(6261).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING), 2);
+  let obj2 = channelId(504);
+  let tmp7 = callback(channelId(7388).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING), 2);
   obj = { visibleContent: tmp7[0], markAsDismissed: tmp7[1] };
   return obj;
 }

@@ -12,9 +12,18 @@ let closure_9 = createCacheKey.createStyles({ inputContainer: { flexDirection: "
 const result = require("set").fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");
 
 export default function ClipboardCopyInput(arg0) {
-  ({ label, onChangeCode, autoFocus } = arg0);
-  ({ placeholder, isValidClipboardCode, maxLength, error, textContentType, autoComplete, keyboardType, isDisabled } =
-    arg0);
+  ({ onChangeCode, autoFocus } = arg0);
+  ({
+    label,
+    placeholder,
+    isValidClipboardCode,
+    maxLength,
+    error,
+    textContentType,
+    autoComplete,
+    keyboardType,
+    isDisabled,
+  } = arg0);
   if (autoFocus === undefined) {
     autoFocus = true;
   }
@@ -166,7 +175,6 @@ export default function ClipboardCopyInput(arg0) {
       maxLength,
       onChange: onChangeCode,
       label,
-      accessibilityLabel: label,
       placeholder,
       isClearable: true,
       textContentType,
@@ -186,7 +194,6 @@ export default function ClipboardCopyInput(arg0) {
         maxLength,
         onChange: onChangeCode,
         label,
-        accessibilityLabel: label,
         placeholder,
         isClearable: true,
         textContentType,

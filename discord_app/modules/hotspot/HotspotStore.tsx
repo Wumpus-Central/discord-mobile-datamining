@@ -1,7 +1,7 @@
 // discord_app/modules/hotspot/HotspotStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import CONFERENCE_MODE_ENABLED2 from "../conference_mode/ConferenceModeConstants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import CONFERENCE_MODE_ENABLED2 from "../conference_mode/ConferenceModeConstants.tsx";
 import get from "../../utils/ProcessArgs.tsx";
 import set from "../../../_runtime/00002_set.js";
 

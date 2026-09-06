@@ -1,5 +1,5 @@
 // discord_app/modules/content_inventory/memberlist/useHeroColors.tsx
-import nDefault from "../../../../_runtime/00686_n.js";
+import nDefault from "../../../../_runtime/00672_n.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import closure_5 from "../../a11y/AccessibilityStore.tsx";
@@ -11,14 +11,14 @@ const result = require("set").fileFinishedImporting("modules/content_inventory/m
 
 export default function useHeroColors(pendingAvatarSrc) {
   const items = [closure_5];
-  const stateFromStores = first(586).useStateFromStores(items, () => saturation.saturation);
-  let obj = first(586);
+  const stateFromStores = first(504).useStateFromStores(items, () => saturation.saturation);
+  let obj = first(504);
   const items1 = [closure_6];
-  const stateFromStores1 = first(586).useStateFromStores(items1, () => theme.theme);
-  let obj2 = first(586);
-  const fallbackHeroColor = first(8055).getFallbackHeroColor(stateFromStores1, stateFromStores);
-  let obj3 = first(8055);
-  let tmp4 = callback(first(8053).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
+  const stateFromStores1 = first(504).useStateFromStores(items1, () => theme.theme);
+  let obj2 = first(504);
+  const fallbackHeroColor = first(8134).getFallbackHeroColor(stateFromStores1, stateFromStores);
+  let obj3 = first(8134);
+  let tmp4 = callback(first(8132).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
   first = tmp4[0];
   closure_1 = tmp6;
   const items2 = [first, tmp4[1]];
@@ -84,14 +84,14 @@ export default function useHeroColors(pendingAvatarSrc) {
   }, items2);
 }
 export const getHeroColors = function getHeroColors(game_name) {
-  let obj = num(8055);
+  let obj = num(8134);
   const fallbackHeroColor = obj.getFallbackHeroColor(theme.theme, closure_5.saturation);
   num = undefined;
   num = 1;
   if (closure_5.desaturateUserColors) {
     num = tmp.saturation;
   }
-  const useColorStore = tmp2(8053).useColorStore;
+  const useColorStore = tmp2(8132).useColorStore;
   const arr = useColorStore.getState().palette[game_name];
   let mapped;
   if (arr != null) {
@@ -109,9 +109,9 @@ export const getHeroColors = function getHeroColors(game_name) {
     mapped = items;
   }
   [tmp7, tmp8] = callback(mapped, 2);
-  let tmp2Result = tmp2(685);
+  let tmp2Result = tmp2(1091);
   const hex2intResult = tmp2Result.hex2int(tmp7);
-  tmp2Result = tmp2(685);
+  tmp2Result = tmp2(1091);
   const hex2intResult1 = tmp2Result.hex2int(tmp8);
   tmp = closure_5;
   const tmp6 = callback(mapped, 2);
@@ -126,7 +126,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     tmp12 = numResult;
     while (sum < 8) {
       let tmp17 = num;
-      let obj7 = num(685);
+      let obj7 = num(1091);
       let tmp18 = c7;
       num2 = sum;
       tmp11 = numResult;
@@ -138,7 +138,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     }
     const darkenResult = nDefault(tmp11).darken(0.5);
   }
-  tmp2Result1 = num(685);
+  tmp2Result1 = num(1091);
   let num3 = 1;
   let tmp19 = hex2intResult1;
   let tmp20 = hex2intResult1;
@@ -150,7 +150,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     tmp20 = numResult1;
     while (sum1 < 8) {
       let tmp25 = num;
-      let obj11 = num(685);
+      let obj11 = num(1091);
       let tmp26 = c7;
       num3 = sum1;
       tmp19 = numResult1;
@@ -163,9 +163,9 @@ export const getHeroColors = function getHeroColors(game_name) {
     const darkenResult1 = nDefault(tmp19).darken(0.5);
   }
   obj = { primaryColor: null, secondaryColor: null };
-  obj8 = num(685);
-  obj[0] = num(685).int2hex(tmp12);
-  const obj13 = num(685);
-  obj[1] = num(685).int2hex(tmp20);
+  obj8 = num(1091);
+  obj[0] = num(1091).int2hex(tmp12);
+  const obj13 = num(1091);
+  obj[1] = num(1091).int2hex(tmp20);
   return obj;
 };

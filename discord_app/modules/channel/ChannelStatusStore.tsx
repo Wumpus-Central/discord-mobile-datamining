@@ -1,7 +1,7 @@
 // discord_app/modules/channel/ChannelStatusStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import set2 from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import set2 from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import closure_2 from "../gateway/GatewayConnectionStore.tsx";
 import set from "../../../_runtime/00002_set.js";
 

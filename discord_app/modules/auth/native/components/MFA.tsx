@@ -18,11 +18,11 @@ export default function ConnectedMFA() {
   }
   ({ inContainer, isMultiAccount } = obj);
   let navigation;
-  navigation = isMultiAccount(1498).useNavigation();
+  navigation = isMultiAccount(1483).useNavigation();
   if (inContainer) {
-    inContainer = navigation(7729)();
+    inContainer = navigation(6944)();
   }
-  let tmpResult = tmp(586);
+  let tmpResult = tmp(504);
   const items = [closure_4];
   const items1 = [isMultiAccount];
   const stateFromStores = tmpResult.useStateFromStores(
@@ -66,19 +66,19 @@ export default function ConnectedMFA() {
     let tmp13;
     if (inContainer) {
       obj = { paddingRight: null, paddingTop: null, marginLeft: 0 };
-      obj[0] = tmp4(709).space.PX_16;
-      obj[1] = tmp4(709).space.PX_12;
+      obj[0] = tmp4(576).space.PX_16;
+      obj[1] = tmp4(576).space.PX_12;
       tmp13 = obj;
     }
     obj[7] = tmp13;
-    return jsx(tmp(15508).MFAModal, obj);
+    return jsx(tmp(15666).MFAModal, obj);
   } else {
-    tmpResult = tmp(1235);
-    let space = tmp4(709).space;
+    tmpResult = tmp(1116);
+    let space = tmp4(576).space;
     const isAndroidResult = tmpResult.isAndroid();
     space = { paddingLeft: null, paddingTop: null };
     space[0] = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
-    space[1] = tmp4(709).space.PX_12;
+    space[1] = tmp4(576).space.PX_12;
     const tmp11 = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
   }
 }

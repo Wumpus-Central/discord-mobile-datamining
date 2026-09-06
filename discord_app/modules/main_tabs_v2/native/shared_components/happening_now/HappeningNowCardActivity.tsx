@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import Button from "../../../../../design/void/native.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import registerAssetDefault from "../../../../../../_runtime/15910_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../_runtime/15911_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/16074_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/16075_registerAsset.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -120,38 +120,38 @@ function IconOrPreview(arg0) {
       obj[0] = memo;
       obj = { stream: null, children: null, style: null, ctaText: null, disabled: true };
       obj[0] = stream;
-      let tmp2Result = tmp2(10168);
+      let tmp2Result = tmp2(10059);
       obj1 = { style: null, textStyle: null, allowFontScaling: false };
       ({ cardImageStreamLive: obj13[0], stageStreamLiveText: obj13[1] } = tmp);
-      obj[1] = callback(tmp28(1296).LiveTag, obj1);
+      obj[1] = callback(tmp28(1178).LiveTag, obj1);
       obj[2] = tmp.cardImageStreamPreview;
-      const intl5 = tmp28(1233).intl;
-      obj[3] = intl5.string(tmp28(1233).t["7Xq/nV"]);
+      const intl5 = tmp28(1114).intl;
+      obj[3] = intl5.string(tmp28(1114).t["7Xq/nV"]);
       obj[1] = callback(tmp2Result, obj);
       return callback(closure_4, obj);
     } else {
-      if (tmp2(9273)(activity)) {
-        const intl4 = tmp28(1233).intl;
-        let stringResult = intl4.string(tmp28(1233).t.rmnkz4);
+      if (tmp2(10891)(activity)) {
+        const intl4 = tmp28(1114).intl;
+        let stringResult = intl4.string(tmp28(1114).t.rmnkz4);
       } else {
         let type;
         if (activity != null) {
           type = activity.type;
         }
         if (type === constants.LISTENING) {
-          const intl3 = tmp28(1233).intl;
-          stringResult = intl3.string(tmp28(1233).t.kUEnxN);
-        } else if (tmp2(9404)(activity)) {
-          const intl2 = tmp28(1233).intl;
-          stringResult = intl2.string(tmp28(1233).t.T0uYK9);
+          const intl3 = tmp28(1114).intl;
+          stringResult = intl3.string(tmp28(1114).t.kUEnxN);
+        } else if (tmp2(13002)(activity)) {
+          const intl2 = tmp28(1114).intl;
+          stringResult = intl2.string(tmp28(1114).t.T0uYK9);
         } else {
           let type1;
           if (activity != null) {
             type1 = activity.type;
           }
           if (type1 !== tmp37.CUSTOM_STATUS) {
-            const intl = tmp28(1233).intl;
-            stringResult = intl.string(tmp28(1233).t["2TbM/G"]);
+            const intl = tmp28(1114).intl;
+            stringResult = intl.string(tmp28(1114).t["2TbM/G"]);
           }
         }
       }
@@ -163,7 +163,7 @@ function IconOrPreview(arg0) {
       obj4 = { style: null, source: null };
       obj4[0] = tmp.cardImageAsset;
       obj4[1] = memoizedImageSourceResult;
-      obj3[1] = callback(tmp2(5502), obj4);
+      obj3[1] = callback(tmp2(5587), obj4);
       obj2[2] = callback(closure_4, obj3);
       return callback(closure_4, obj2);
     }
@@ -178,7 +178,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       tmp2Result = items[userId % items.length];
     } else {
-      tmp2Result = tmp2(15920);
+      tmp2Result = tmp2(16084);
     }
   }
 }

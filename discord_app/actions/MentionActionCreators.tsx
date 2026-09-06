@@ -1,7 +1,7 @@
 // discord_app/actions/MentionActionCreators.tsx
 import set from "../../_runtime/00002_set.js";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../Constants.tsx";
 
 ({ Endpoints: c3, MAX_MENTIONS_PER_FETCH: c4 } = ME);
@@ -40,7 +40,7 @@ export default {
     }
     let obj = dispatcherDefault;
     obj.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId });
-    const HTTP = before(527).HTTP;
+    const HTTP = before(1272).HTTP;
     obj = {
       url: closure_3.MENTIONS,
       query: { before, limit, guild_id: guildId, roles: flag, everyone: flag2, feature: feature.feature },

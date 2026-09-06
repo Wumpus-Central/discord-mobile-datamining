@@ -1,11 +1,11 @@
 // discord_app/modules/message_request/MessageRequestModalActionCreators.native.tsx
 import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef4859 from "../../actions/native/AlertActionCreators.tsx";
+import _modDef4905 from "../../actions/native/AlertActionCreators.tsx";
 import componentDidMountDefault from "../../components_native/common/Alert.tsx";
 import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MessageRequestConstants.tsx";
 
@@ -38,11 +38,11 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
   obj[4] = onConfirm;
   obj[5] = onCancel;
   obj[6] = componentDidMountDefault.Colors.BRAND;
-  _modDef4859.show(obj);
+  _modDef4905.show(obj);
 };
 export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12247, dependencyMap.paths), "SpamMessageHamActionSheet", {
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12447, dependencyMap.paths), "SpamMessageHamActionSheet", {
     channel,
     onConfirm,
     onCancel,

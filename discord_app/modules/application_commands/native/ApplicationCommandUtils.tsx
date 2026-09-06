@@ -1,13 +1,13 @@
 // discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/01900_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/01884_registerAsset.js";
 import handleChanged from "../../../stores/DraftStore.tsx";
 import TRUE_OPTION_NAME from "../ApplicationCommandConstants.tsx";
 import ApplicationCommandSectionType from "../ApplicationCommandTypes.tsx";
 import showUploadPreviewActionSheetDefault from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
-import registerAssetDefault2 from "../../../../_runtime/12028_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/12029_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/12232_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/12233_registerAsset.js";
 import closure_4 from "../../../stores/UploadAttachmentStore.tsx";
 
 const DraftType = handleChanged.DraftType;

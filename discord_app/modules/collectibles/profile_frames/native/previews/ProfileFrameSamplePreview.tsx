@@ -3,8 +3,8 @@ import noopAll from "../../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../../design/tokens/native/useToken.tsx";
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
-import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
 import ProfileFrameLayerDefault from "../ProfileFrame.tsx";
+import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
 import metadataDefault from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UserProfileThemeTypes } from "../../../../user_profile/native/Constants.tsx";
@@ -166,7 +166,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   items3[1] = tmp16;
   const obj10 = { source: null, style: null, resizeMode: "cover" };
   const obj11 = { uri: null };
-  let tmp3Result = tmp3(5502);
+  let tmp3Result = tmp3(5587);
   obj11[0] = metadataDefault;
   obj10[0] = obj11;
   obj10[1] = tmp.sampleProfile;
@@ -180,7 +180,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
     containerWidth: null,
     containerHeight: null,
   };
-  tmp3Result = tmp3(8565);
+  tmp3Result = tmp3(8221);
   obj12[3] = ProfileFrameLayerOrder.ProfileFrameLayerOrder.FRONT;
   obj12[4] = result;
   obj12[5] = previewHeight - overflowTop - overflowBottom;

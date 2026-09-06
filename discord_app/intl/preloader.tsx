@@ -90,6 +90,7 @@ function _preloadAllIntlMessageFiles() {
             v0(closure_1_1[2])(closure_1_1[58], closure_1_1.paths),
             v0(closure_1_1[2])(closure_1_1[59], closure_1_1.paths),
             v0(closure_1_1[2])(closure_1_1[60], closure_1_1.paths),
+            v0(closure_1_1[2])(closure_1_1[61], closure_1_1.paths),
           ];
           v0 = 3;
           obj = { value: null, done: true };

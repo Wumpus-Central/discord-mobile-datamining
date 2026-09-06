@@ -2,7 +2,7 @@
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import set from "../../../../../utils/PlatformUtils.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/04987_LinearGradient.js";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
 import useAPNGPlayerControls from "../../../../image/native/APNGPlayer.android.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -39,16 +39,16 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       obj = { style: null, children: null };
       obj[0] = tmp.compressionContainer;
       obj = { start: true, end: true, label: null, value: null, onValueChange: null, subLabel: null };
-      const intl = tmp2(1233).intl;
-      obj[2] = intl.string(tmp2(1233).t.ix8XIj);
+      const intl = tmp2(1114).intl;
+      obj[2] = intl.string(tmp2(1114).t.ix8XIj);
       obj[3] = stateFromStores;
       obj[4] = callback;
       obj1 = { style: null, variant: "text-xs/normal", children: null };
       obj1[0] = tmp.compressionHint;
-      const intl2 = tmp2(1233).intl;
-      obj1[2] = intl2.string(tmp2(1233).t["wC0+Ph"]);
-      obj[5] = callback2(tmp2(4474).Text, obj1);
-      obj[1] = callback2(tmp2(6002).TableSwitchRow, obj);
+      const intl2 = tmp2(1114).intl;
+      obj1[2] = intl2.string(tmp2(1114).t["wC0+Ph"]);
+      obj[5] = callback2(tmp2(4556).Text, obj1);
+      obj[1] = callback2(tmp2(7201).TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }

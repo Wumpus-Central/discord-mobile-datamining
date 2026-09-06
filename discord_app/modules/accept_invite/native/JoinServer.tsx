@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
+import _modDef6605 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import _modDef7716 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import NUXGuildTemplatesAnalytics from "../../create_guild/native/CreateGuildConstants.tsx";
@@ -71,7 +71,7 @@ export default function JoinServer(arg0) {
   let navigation;
   ({ error, inviteString, onInviteChange } = arg0);
   const tmp = callback3();
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   items = [navigation];
   obj = { keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
@@ -94,14 +94,14 @@ export default function JoinServer(arg0) {
       children: null,
     };
     obj2[0] = tmp.header;
-    const intl = tmp4(1233).intl;
-    obj2[4] = intl.string(tmp4(1233).t.jlfuFW);
-    const items2 = [callback(tmp4(4474).Text, obj2)];
+    const intl = tmp4(1114).intl;
+    obj2[4] = intl.string(tmp4(1114).t.jlfuFW);
+    const items2 = [callback(tmp4(4556).Text, obj2)];
     const obj3 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj3[0] = tmp.description;
-    const intl2 = tmp4(1233).intl;
-    obj3[3] = intl2.string(tmp4(1233).t.lVvN3A);
-    items2[1] = callback(tmp4(4474).Text, obj3);
+    const intl2 = tmp4(1114).intl;
+    obj3[3] = intl2.string(tmp4(1114).t.lVvN3A);
+    items2[1] = callback(tmp4(4556).Text, obj3);
     obj1[0] = items2;
     tmp7Result = tmp7(closure_10, obj1);
   }
@@ -121,20 +121,20 @@ export default function JoinServer(arg0) {
     textStyle: null,
     onSubmitEditing: null,
   };
-  const intl3 = tmp4(1233).intl;
-  obj5[0] = intl3.string(navigation(1233).t.qreV25);
+  const intl3 = tmp4(1114).intl;
+  obj5[0] = intl3.string(navigation(1114).t.qreV25);
   obj5[1] = error;
   obj5[2] = inviteString;
   obj5[3] = onInviteChange;
   obj5[4] = closure_13;
-  const intl4 = tmp4(1233).intl;
-  obj5[5] = intl4.string(navigation(1233).t.qreV25);
+  const intl4 = tmp4(1114).intl;
+  obj5[5] = intl4.string(navigation(1114).t.qreV25);
   obj5[10] = tmp.textInput;
   obj5[11] = onDone;
-  items3[1] = callback(_modDef7716, obj5);
+  items3[1] = callback(_modDef6605, obj5);
   const obj6 = { style: tmp.exampleText, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl5 = tmp4(1233).intl;
-  obj6[3] = intl5.format(navigation(1233).t.vwWaTe, {
+  const intl5 = tmp4(1114).intl;
+  obj6[3] = intl5.format(navigation(1114).t.vwWaTe, {
     example1: items[0],
     example2: items[1],
     example3: items[2],
@@ -142,28 +142,28 @@ export default function JoinServer(arg0) {
       return callback(navigation(table[6]).Text, { variant: "text-sm/medium", color: "text-default", children }, arg1);
     },
   });
-  items3[2] = callback(navigation(4474).Text, obj6);
+  items3[2] = callback(navigation(4556).Text, obj6);
   obj4[0] = items3;
   const items4 = [closure_9(closure_4, obj4)];
   const obj8 = { children: null };
   const items5 = [callback(closure_4, { style: tmp.growSpacing }), , ,];
   const obj10 = { size: "lg", text: null, accessibilityLabel: null, loading: null, disabled: null, onPress: null };
-  const intl6 = tmp4(1233).intl;
-  obj10[1] = intl6.string(navigation(1233).t["+H/coT"]);
-  const intl7 = tmp4(1233).intl;
-  obj10[2] = intl7.string(navigation(1233).t["+H/coT"]);
+  const intl6 = tmp4(1114).intl;
+  obj10[1] = intl6.string(navigation(1114).t["+H/coT"]);
+  const intl7 = tmp4(1114).intl;
+  obj10[2] = intl7.string(navigation(1114).t["+H/coT"]);
   obj10[3] = submitting;
   obj10[4] = submitting;
   obj10[5] = onDone;
-  items5[1] = callback(navigation(4929).Button, obj10);
+  items5[1] = callback(navigation(4975).Button, obj10);
   items5[2] = callback(OrSeparator, {});
   const obj11 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
-  const intl8 = tmp4(1233).intl;
-  obj11[2] = intl8.string(navigation(1233).t["MOqX/G"]);
-  const intl9 = tmp4(1233).intl;
-  obj11[3] = intl9.string(navigation(1233).t["MOqX/G"]);
+  const intl8 = tmp4(1114).intl;
+  obj11[2] = intl8.string(navigation(1114).t["MOqX/G"]);
+  const intl9 = tmp4(1114).intl;
+  obj11[3] = intl9.string(navigation(1114).t["MOqX/G"]);
   obj11[4] = callback;
-  items5[3] = callback(navigation(4929).Button, obj11);
+  items5[3] = callback(navigation(4975).Button, obj11);
   obj8[0] = items5;
   items4[1] = closure_9(closure_10, obj8);
   obj[2] = items4;

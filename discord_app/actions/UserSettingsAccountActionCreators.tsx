@@ -1,6 +1,6 @@
 // discord_app/actions/UserSettingsAccountActionCreators.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../Constants.tsx";
 import str2 from "../modules/push_notifications/PushNotificationConstants.tsx";
@@ -173,9 +173,9 @@ export const disableAccount = function disableAccount(password, arg1) {
   const obj3 = sendRequest;
   const tmp2 = arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT;
   return HTTP.post(obj).then(() => {
-    callback2(6061).logoutInternal();
-    const obj = callback2(6061);
-    callback(1219).transitionTo(constants.DEFAULT_LOGGED_OUT);
+    callback2(6593).logoutInternal();
+    const obj = callback2(6593);
+    callback(1100).transitionTo(constants.DEFAULT_LOGGED_OUT);
   });
 };
 export { saveProfileAndAccountRequest };
@@ -195,7 +195,7 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     legacyUsername,
     avatarOriginalMd5,
   } = c0);
-  let obj = avatarId(706);
+  let obj = avatarId(573);
   obj.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
   obj = {
     username,
@@ -247,19 +247,19 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
-      result = avatar(1941).serializeTypingIndicatorStyle(typingIndicatorStyle);
-      const obj3 = avatar(1941);
+      result = avatar(1392).serializeTypingIndicatorStyle(typingIndicatorStyle);
+      const obj3 = avatar(1392);
     }
     obj.typing_indicator_style = result;
   }
-  const Storage = avatar(592).Storage;
+  const Storage = avatar(510).Storage;
   let value = Storage.get(closure_6);
   const tmp12 = callback2();
   if (tmp13) {
     obj.push_provider = tmp12;
     obj.push_token = value;
   }
-  const Storage2 = tmp10(592).Storage;
+  const Storage2 = tmp10(510).Storage;
   value = Storage2.get(closure_7);
   let tmp16 = null != closure_8;
   if (tmp16) {
@@ -270,14 +270,14 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     obj.push_voip_token = value;
   }
   obj = {
-    headers: avatarId(5122).buildHeadersForMd5({
-      [avatar(7769).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+    headers: avatarId(5169).buildHeadersForMd5({
+      [avatar(6985).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
     }),
   };
   const tmp = avatarId;
   tmp13 = null != tmp12 && null != value;
   tmp15 = closure_8;
-  let tmpResult = avatarId(5122);
+  let tmpResult = avatarId(5169);
   return saveProfileAndAccountRequest(obj, obj).then(
     (arg0) => {
       avatarId(closure_1_2[3]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });

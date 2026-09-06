@@ -114,6 +114,7 @@ export const LinkingTypes = {
   BOOST_SETTINGS: "boost-settings",
   QUEST_PREVIEW_TOOL: "quest-preview-tool",
   QUEST_HOME_PREVIEW: "quest-home-preview",
+  QUEST_BAR_PREVIEW: "quest-bar-preview",
   SUBSCRIPTION_SETTINGS: "subscription-settings",
   ROLL_DICE: "roll-dice",
   GAME_PROFILE: "game-profile",

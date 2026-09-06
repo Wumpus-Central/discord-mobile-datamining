@@ -1,6 +1,6 @@
 // discord_app/actions/EmojiActionCreators.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import parseRawEmojiObjectDefault from "../modules/emojis/UnicodeEmojis.tsx";
 import fromBlobDefault from "../lib/uploader_inline/InlineUploader.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
@@ -67,7 +67,7 @@ function _updateEmoji() {
               return obj1;
             } else {
               c4 = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
               obj2[0] = closure_7.GUILD_EMOJI(callback, callback2);
               const obj3 = { name: null, roles: null };
@@ -83,7 +83,7 @@ function _updateEmoji() {
           } else if (2 === tmp8) {
             c4 = 0;
             c4 = c3;
-            const tmp18 = new callback2(4377)(c4);
+            const tmp18 = new callback2(4462)(c4);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -168,7 +168,7 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   ({ image, name, roles, originalMd5 } = guildId);
   let obj = dispatcherDefault;
   obj.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
-  const HTTP = guildId(527).HTTP;
+  const HTTP = guildId(1272).HTTP;
   obj = {
     url: Endpoints.GUILD_EMOJIS(guildId),
     body: { image, name, roles },
@@ -184,8 +184,8 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   obj[3] = { client_event_source: page };
   const obj3 = fromBlobDefault;
   const tmp3 = guildId;
-  obj[5] = guildId(527).rejectWithMigratedError();
-  const tmp3Result = guildId(527);
+  obj[5] = guildId(1272).rejectWithMigratedError();
+  const tmp3Result = guildId(1272);
   return HTTP.post(obj).then(
     (body) => {
       let obj = closure_1_1(closure_1_2[8]);
@@ -218,9 +218,9 @@ export const deleteEmoji = function deleteEmoji(c0, id) {
   const tmp3 = require;
   const tmp3Result = sendRequest;
   return HTTP.del(obj).then(() => {
-    const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
-    const intl = callback(1233).intl;
-    AccessibilityAnnouncer.announce(intl.string(callback(1233).t.L3UUha));
+    const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
+    const intl = callback(1114).intl;
+    AccessibilityAnnouncer.announce(intl.string(callback(1114).t.L3UUha));
   });
 };
 export const updateEmoji = function updateEmoji(arg0) {
@@ -252,7 +252,7 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(1369).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(1940).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       (emojis) => {
@@ -323,7 +323,7 @@ export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGui
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(1369).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(1940).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       (emojis) => {

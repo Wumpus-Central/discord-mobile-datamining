@@ -22,7 +22,7 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/native
 export default function FamilyCenterLinkRowWrapper(userId) {
   userId = userId.userId;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5962)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
   let tmp3 = null;
   if (undefined !== userId) {
     const obj = { style: null, onPress: null, children: null };
@@ -36,7 +36,7 @@ export default function FamilyCenterLinkRowWrapper(userId) {
       });
     };
     obj[2] = userId.children;
-    tmp3 = jsx(userId(5077).PressableOpacity, { style: null, onPress: null, children: null });
+    tmp3 = jsx(userId(5123).PressableOpacity, { style: null, onPress: null, children: null });
   }
   return tmp3;
 }

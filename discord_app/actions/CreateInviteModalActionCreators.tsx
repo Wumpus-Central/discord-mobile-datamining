@@ -1,6 +1,6 @@
 // discord_app/actions/CreateInviteModalActionCreators.tsx
-import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import generateAcceptInviteOptionsDefault from "InstantInviteActionCreators.tsx";
 import closure_3 from "../stores/CreateInviteModalStore.tsx";
 import { AnalyticEvents } from "../Constants.tsx";
@@ -90,8 +90,8 @@ export default {
           obj.dispatch(obj);
         },
         (message) => {
-          const intl = channelId(1233).intl;
-          message = intl.string(channelId(1233).t.WB1ip6);
+          const intl = channelId(1114).intl;
+          message = intl.string(channelId(1114).t.WB1ip6);
           message = undefined;
           if (message != null) {
             message = message.message;
@@ -99,7 +99,7 @@ export default {
           if (null != message) {
             message = message.message;
           }
-          callback(706).dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
+          callback(573).dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
         },
       );
       const tmp7Result = generateAcceptInviteOptionsDefault;

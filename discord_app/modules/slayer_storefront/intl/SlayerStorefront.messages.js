@@ -1,40 +1,40 @@
 // discord_app/modules/slayer_storefront/intl/SlayerStorefront.messages.js
 import set from "../../../../_runtime/00002_set.js";
 import loadJsonAsset from "../../asset_json/native/AssetJsonUtils.tsx";
-import registerAsset from "../../../../_runtime/03371_registerAsset.js";
-import registerAsset2 from "../../../../_runtime/03372_registerAsset.js";
-import registerAsset3 from "../../../../_runtime/03373_registerAsset.js";
-import registerAsset4 from "../../../../_runtime/03374_registerAsset.js";
-import registerAsset5 from "../../../../_runtime/03375_registerAsset.js";
-import registerAsset6 from "../../../../_runtime/03376_registerAsset.js";
-import registerAsset7 from "../../../../_runtime/03377_registerAsset.js";
-import registerAsset8 from "../../../../_runtime/03378_registerAsset.js";
-import registerAsset9 from "../../../../_runtime/03379_registerAsset.js";
-import registerAsset10 from "../../../../_runtime/03380_registerAsset.js";
-import registerAsset11 from "../../../../_runtime/03381_registerAsset.js";
-import registerAsset12 from "../../../../_runtime/03382_registerAsset.js";
-import registerAsset13 from "../../../../_runtime/03383_registerAsset.js";
-import registerAsset14 from "../../../../_runtime/03384_registerAsset.js";
-import registerAsset15 from "../../../../_runtime/03385_registerAsset.js";
-import registerAsset16 from "../../../../_runtime/03386_registerAsset.js";
-import registerAsset17 from "../../../../_runtime/03387_registerAsset.js";
-import registerAsset18 from "../../../../_runtime/03388_registerAsset.js";
-import registerAsset19 from "../../../../_runtime/03389_registerAsset.js";
-import registerAsset20 from "../../../../_runtime/03390_registerAsset.js";
-import registerAsset21 from "../../../../_runtime/03391_registerAsset.js";
-import registerAsset22 from "../../../../_runtime/03392_registerAsset.js";
-import registerAsset23 from "../../../../_runtime/03393_registerAsset.js";
-import registerAsset24 from "../../../../_runtime/03394_registerAsset.js";
-import registerAsset25 from "../../../../_runtime/03395_registerAsset.js";
-import registerAsset26 from "../../../../_runtime/03396_registerAsset.js";
-import registerAsset27 from "../../../../_runtime/03397_registerAsset.js";
-import registerAsset28 from "../../../../_runtime/03398_registerAsset.js";
-import registerAsset29 from "../../../../_runtime/03399_registerAsset.js";
-import registerAsset30 from "../../../../_runtime/03400_registerAsset.js";
-import registerAsset31 from "../../../../_runtime/03401_registerAsset.js";
-import 01273__ from "../../../../_runtime/metro/01273__.js";
+import registerAsset from "../../../../_runtime/03418_registerAsset.js";
+import registerAsset2 from "../../../../_runtime/03419_registerAsset.js";
+import registerAsset3 from "../../../../_runtime/03420_registerAsset.js";
+import registerAsset4 from "../../../../_runtime/03421_registerAsset.js";
+import registerAsset5 from "../../../../_runtime/03422_registerAsset.js";
+import registerAsset6 from "../../../../_runtime/03423_registerAsset.js";
+import registerAsset7 from "../../../../_runtime/03424_registerAsset.js";
+import registerAsset8 from "../../../../_runtime/03425_registerAsset.js";
+import registerAsset9 from "../../../../_runtime/03426_registerAsset.js";
+import registerAsset10 from "../../../../_runtime/03427_registerAsset.js";
+import registerAsset11 from "../../../../_runtime/03428_registerAsset.js";
+import registerAsset12 from "../../../../_runtime/03429_registerAsset.js";
+import registerAsset13 from "../../../../_runtime/03430_registerAsset.js";
+import registerAsset14 from "../../../../_runtime/03431_registerAsset.js";
+import registerAsset15 from "../../../../_runtime/03432_registerAsset.js";
+import registerAsset16 from "../../../../_runtime/03433_registerAsset.js";
+import registerAsset17 from "../../../../_runtime/03434_registerAsset.js";
+import registerAsset18 from "../../../../_runtime/03435_registerAsset.js";
+import registerAsset19 from "../../../../_runtime/03436_registerAsset.js";
+import registerAsset20 from "../../../../_runtime/03437_registerAsset.js";
+import registerAsset21 from "../../../../_runtime/03438_registerAsset.js";
+import registerAsset22 from "../../../../_runtime/03439_registerAsset.js";
+import registerAsset23 from "../../../../_runtime/03440_registerAsset.js";
+import registerAsset24 from "../../../../_runtime/03441_registerAsset.js";
+import registerAsset25 from "../../../../_runtime/03442_registerAsset.js";
+import registerAsset26 from "../../../../_runtime/03443_registerAsset.js";
+import registerAsset27 from "../../../../_runtime/03444_registerAsset.js";
+import registerAsset28 from "../../../../_runtime/03445_registerAsset.js";
+import registerAsset29 from "../../../../_runtime/03446_registerAsset.js";
+import registerAsset30 from "../../../../_runtime/03447_registerAsset.js";
+import registerAsset31 from "../../../../_runtime/03448_registerAsset.js";
+import 01155__ from "../../../../_runtime/metro/01155__.js";
 
-const loader = module_1273.createLoader({
+const loader = module_1155.createLoader({
   bg() {
     const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset);
     return jsonAsset.then((arg0) => ({ default: arg0 }));
@@ -160,7 +160,7 @@ const loader = module_1273.createLoader({
     return jsonAsset.then((arg0) => ({ default: arg0 }));
   }
 }, "en-US");
-const messagesProxy = module_1273.makeMessagesProxy(loader);
+const messagesProxy = module_1155.makeMessagesProxy(loader);
 const result = set.fileFinishedImporting("modules/slayer_storefront/intl/SlayerStorefront.messages.js");
 
 export default messagesProxy;

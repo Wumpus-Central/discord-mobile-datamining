@@ -4,8 +4,8 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/11602_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11603_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11801_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/11802_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../user_settings/ThemeStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -108,16 +108,16 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1[0] = items1;
     if (obj6.isThemeDark(theme.theme)) {
-      let tmp13Result = tmp13(11600);
+      let tmp13Result = tmp13(11799);
     } else {
-      tmp13Result = tmp13(11601);
+      tmp13Result = tmp13(11800);
     }
     obj = { source: null };
     obj[0] = tmp13Result;
     const items2 = [callback(closure_4, obj)];
     const obj2 = { style: null, variant: "text-xs/bold", color: "text-default", children: null };
     obj2[0] = tmp.emptyGuildIconText;
-    const intl = tmp10(1233).intl;
+    const intl = tmp10(1114).intl;
     obj6 = AccessibilityAnnouncer;
     const tmp6 = closure_7;
     const tmp7 = closure_3;
@@ -166,11 +166,11 @@ prototype["render"] = function render() {
   const tmp = callback3(this.context);
   ({ style, onPress, icon } = this.props);
   if (null != icon) {
-    const intl2 = tmp3(1233).intl;
-    let stringResult = intl2.string(tmp3(1233).t.VATxfe);
+    const intl2 = tmp3(1114).intl;
+    let stringResult = intl2.string(tmp3(1114).t.VATxfe);
   } else {
-    const intl = tmp3(1233).intl;
-    stringResult = intl.string(tmp3(1233).t["MsUY/S"]);
+    const intl = tmp3(1114).intl;
+    stringResult = intl.string(tmp3(1114).t["MsUY/S"]);
   }
   let obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress, children: null };
   obj = { style: items, children: null };

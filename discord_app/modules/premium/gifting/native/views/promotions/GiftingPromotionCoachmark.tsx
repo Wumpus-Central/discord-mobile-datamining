@@ -78,19 +78,19 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   closure_4 = undefined;
   let analyticsLocations;
   const tmp = callback();
-  let obj = markAsDismissed(586);
+  let obj = markAsDismissed(504);
   const items = [analyticsLocations];
   const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
-  obj1 = markAsDismissed(10749);
+  obj1 = markAsDismissed(10753);
   let asset;
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
   }
   const themeAndReducedMotionAwareAssetUrl = obj1.useThemeAndReducedMotionAwareAssetUrl(asset);
-  let tmp2Result = tmp2(586);
+  let tmp2Result = tmp2(504);
   const items1 = [closure_6];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
-  tmp2Result = tmp2(16763);
+  tmp2Result = tmp2(16928);
   let endDate;
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
@@ -106,8 +106,8 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   const effect = React.useEffect(() => {
     if (dependencyMap) {
       if (!callback) {
-        callback(4445).hideActionSheet();
-        const obj = callback(4445);
+        callback(4527).hideActionSheet();
+        const obj = callback(4527);
       }
     }
     let tmp5 = closure_4;
@@ -115,9 +115,9 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       tmp5 = !closure_3;
     }
     if (tmp5) {
-      callback(4445).hideActionSheet();
+      callback(4527).hideActionSheet();
       markAsDismissed(closure_1_10.AUTO_DISMISS);
-      const obj2 = callback(4445);
+      const obj2 = callback(4527);
     }
   }, items2);
   analyticsLocations = contextDefault(QUICK_SWITCHERDefault.GIFTING_PROMOTION_COACHMARK).analyticsLocations;
@@ -139,7 +139,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
         let obj2 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
         obj2[2] = tmp.countdownBadgeText;
         obj2[3] = str.toUpperCase();
-        obj1[1] = tmp18(tmp2(4474).Text, obj2);
+        obj1[1] = tmp18(tmp2(4556).Text, obj2);
         tmp18Result = tmp18(tmp21, obj1);
       }
       items4[1] = tmp18Result;
@@ -153,21 +153,21 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       };
       obj4[0] = tmp.text;
       obj4[3] = coachmarkComponent.header;
-      const items5 = [tmp18(tmp2(4474).Text, obj4)];
+      const items5 = [tmp18(tmp2(4556).Text, obj4)];
       const obj5 = { style: null, variant: "text-md/normal", color: "text-default", children: null };
       obj5[0] = tmp.text;
       obj5[3] = coachmarkComponent.body;
-      items5[1] = tmp18(tmp2(4474).Text, obj5);
+      items5[1] = tmp18(tmp2(4556).Text, obj5);
       obj3[1] = items5;
       items4[2] = tmp20(tmp21, obj3);
       const obj6 = { grow: true, icon: null, text: null, onPress: null };
       const obj7 = { size: "sm", color: null };
-      obj7[1] = tmp10(709).colors.WHITE;
-      obj6[1] = tmp18(tmp2(10998).GiftIcon, obj7);
-      const intl = tmp2(1233).intl;
-      obj6[2] = intl.string(tmp2(1233).t.Ve9Ge6);
+      obj7[1] = tmp10(576).colors.WHITE;
+      obj6[1] = tmp18(tmp2(11030).GiftIcon, obj7);
+      const intl = tmp2(1114).intl;
+      obj6[2] = intl.string(tmp2(1114).t.Ve9Ge6);
       obj6[3] = tmp16;
-      items4[3] = tmp18(tmp2(4929).Button, obj6);
+      items4[3] = tmp18(tmp2(4975).Button, obj6);
       obj[1] = items4;
       obj[2] = tmp20(tmp21, obj);
       tmp18Result = tmp18(tmp19, obj);
@@ -181,7 +181,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
           const obj9 = { url: null, style: null, autoplay: true };
           obj9[0] = themeAndReducedMotionAwareAssetUrl;
           obj9[1] = tmp.imageShared;
-          obj8[1] = tmp18(tmp2(8534).APNGPlayer, obj9);
+          obj8[1] = tmp18(tmp2(8808).APNGPlayer, obj9);
           let tmp18Result1 = tmp18(tmp21, obj8);
         }
       }
@@ -190,8 +190,8 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       obj11[0] = themeAndReducedMotionAwareAssetUrl;
       obj10[0] = obj11;
       obj10[1] = tmp.imageShared;
-      tmp18Result1 = tmp18(tmp10(5502), obj10);
-      tmp2Result1 = tmp2(1234);
+      tmp18Result1 = tmp18(tmp10(5587), obj10);
+      tmp2Result1 = tmp2(1115);
     }
   }
   return tmp18Result;

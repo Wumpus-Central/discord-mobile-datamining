@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AccessibilityAnnouncer from "../../../shared.tsx";
 import Button from "../../../components/Button/native/Button.native.tsx";
-import _modDef8404 from "../../LegacyText/native/LegacyText.tsx";
+import _modDef8612 from "../../LegacyText/native/LegacyText.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Fonts } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

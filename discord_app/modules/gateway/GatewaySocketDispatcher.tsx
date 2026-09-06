@@ -261,11 +261,11 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
     try {
       closure_5 = [];
       if (self.socket.connectionState === CLOSEDDefault.RESUMING) {
-        const Emitter = tmp2(586).Emitter;
+        const Emitter = tmp2(504).Emitter;
         Emitter.pause(150);
       }
       _require = 0;
-      const Emitter2 = tmp2(586).Emitter;
+      const Emitter2 = tmp2(504).Emitter;
       Emitter2.batched(() => {
         let arr;
         let obj;
@@ -332,20 +332,20 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
           closure_5 = arr.slice(sum);
           if (tmp18) {
             const telemetry = tmp6.scheduler.telemetry;
-            telemetry.timeTrack(v0(13536).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
+            telemetry.timeTrack(v0(13642).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
           }
           tmp18 = null != obj && obj.timeRemaining() <= 0;
         }
-        items(13540).flush();
+        items(13646).flush();
       });
       if (c4) {
-        const Emitter3 = tmp2(586).Emitter;
+        const Emitter3 = tmp2(504).Emitter;
         Emitter3.resume();
       }
       if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
         telemetry.measure(
-          tmp21(13536).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD,
+          tmp21(13642).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD,
           closure_5.length,
         );
         const queue = self.queue;
@@ -374,7 +374,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
   ({ data, type, compressionAnalytics, preloadedData, receivedAt } = arg0);
   const nowResult = performance.now();
   if (this.socket.connectionState !== CLOSEDDefault.RESUMING) {
-    tmp2(13540).flush(type, data);
+    tmp2(13646).flush(type, data);
     if ("READY" === type) {
       const readyPayloadByteSizeAnalytics = prettyPrintTrace_.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
@@ -408,7 +408,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
         dispatchHandler2.dispatch(data, type, preloadedData, receivedAt);
       }
     }
-    if (self.socket.connectionState === tmp2(13539).RESUMING) {
+    if (self.socket.connectionState === tmp2(13645).RESUMING) {
       const resumeAnalytics3 = self.resumeAnalytics;
       const _performance = performance;
       resumeAnalytics3.dispatchTime = resumeAnalytics3.dispatchTime + (performance.now() - nowResult);

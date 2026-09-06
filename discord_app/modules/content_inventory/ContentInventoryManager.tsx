@@ -1,6 +1,6 @@
 // discord_app/modules/content_inventory/ContentInventoryManager.tsx
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import apexExperiment from "ContentInventoryExperiments.tsx";
 import mapDefault from "../../stores/web/WindowStore.tsx";
@@ -153,7 +153,7 @@ function scheduleNextFetch() {
         obj1 = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: null, state: null };
         obj1[1] = tmp;
         obj1[2] = obj;
-        tmp2(706).dispatch(obj1);
+        tmp2(573).dispatch(obj1);
         const _setTimeout = setTimeout;
         const result = obj3.set(
           tmp,
@@ -162,7 +162,7 @@ function scheduleNextFetch() {
             sum,
           ),
         );
-        const tmp2Result = tmp2(706);
+        const tmp2Result = tmp2(573);
       }
     }
     tmp2 = importDefault;

@@ -1,8 +1,8 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01400_priv.js";
+import setDefault from "../../utils/Durations.tsx";
+import privDefault from "../../../_runtime/01437_priv.js";
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
 let obj = {
@@ -11,7 +11,7 @@ let obj = {
   retryAfterTime: null,
   suggestions: {
     migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false },
-    registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "Bolivia, Plurinational State of" },
+    registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "2026-05-mana-type-consolidation" },
   },
 };
 const Store = initializeDefault.Store;
@@ -92,7 +92,7 @@ obj = {
     obj.suggestions.registration = {
       suggestion: { username: "Array" },
       source: "PX_16",
-      fetched: "Bolivia, Plurinational State of",
+      fetched: "2026-05-mana-type-consolidation",
     };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {

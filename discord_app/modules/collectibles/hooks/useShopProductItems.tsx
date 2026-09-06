@@ -13,7 +13,7 @@ class ItemsSortingHat {
 }
 const prototype = ItemsSortingHat.prototype;
 Object.defineProperty(prototype, "firstAvatarDecoration", {
-  get: function firstAvatarDecoration(first) {
+  get: function firstAvatarDecoration() {
     return this.getFirstItemByType(
       CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION,
     );
@@ -62,6 +62,40 @@ prototype["sortByTypes"] = function sortByTypes(items) {
 let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
 
 export { ItemsSortingHat };
+export const getProductItems = function getProductItems(items) {
+  if (typeof ItemsSortingHat !== "function") {
+    HermesBuiltin.throwTypeError();
+  }
+  let obj = Object.create(ItemsSortingHat.prototype);
+  obj.itemsByTypes = obj.sortByTypes(items.items);
+  obj = {
+    firstProfileEffect: obj.firstProfileEffect,
+    firstAvatarDecoration: obj.firstAvatarDecoration,
+    firstNameplate: obj.firstNameplate,
+    firstProfileFrame: obj.firstProfileFrame,
+  };
+  return obj;
+};
+export const getPurchasedItem = function getPurchasedItem(items, firstAvatarDecoration) {
+  let tmp;
+  if (null != items) {
+    if (typeof ItemsSortingHat !== "function") {
+      HermesBuiltin.throwTypeError();
+    }
+    let obj = Object.create(ItemsSortingHat.prototype);
+    obj.itemsByTypes = obj.sortByTypes(items.items);
+    obj = { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null };
+    ({
+      firstProfileEffect: obj2[0],
+      firstAvatarDecoration: obj2[1],
+      firstNameplate: obj2[2],
+      firstProfileFrame: obj2[3],
+    } = obj);
+    tmp = obj[firstAvatarDecoration];
+    const tmp2 = ItemsSortingHat;
+  }
+  return tmp;
+};
 export const useShopProductItems = function useShopProductItems(product) {
   closure_0 = product;
   const items = [product];

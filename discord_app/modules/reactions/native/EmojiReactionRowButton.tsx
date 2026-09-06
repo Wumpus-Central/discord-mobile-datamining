@@ -1,8 +1,8 @@
 // discord_app/modules/reactions/native/EmojiReactionRowButton.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import EmojiTypes from "../../emojis/EmojiTypes.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
@@ -60,7 +60,7 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
     style: null,
     children: null,
   };
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj[2] = intl.string(getSystemLocale.t.lfIHs4);
   obj[4] = onPress;
   const items = [tmp.emojiContainer, styles];
@@ -128,7 +128,7 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
     }
     obj[2] = str;
     if (null != animated.id) {
-      const emojiURL = getEmojiURL(1430);
+      const emojiURL = getEmojiURL(1396);
       getEmojiURL = emojiURL.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj[0], animated } = animated);

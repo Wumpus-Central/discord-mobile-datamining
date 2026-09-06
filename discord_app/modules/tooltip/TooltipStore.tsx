@@ -1,8 +1,8 @@
 // discord_app/modules/tooltip/TooltipStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 import set from "../../../_runtime/00002_set.js";
 
 const StorageKeys = ME.StorageKeys;

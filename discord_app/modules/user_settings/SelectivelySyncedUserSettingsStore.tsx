@@ -3,8 +3,8 @@ import set from "../../../_runtime/00002_set.js";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage4 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 
 const UserSettingsSections = ME.UserSettingsSections;
 let closure_4 = {};
@@ -52,12 +52,12 @@ const items = [
     if (obj == null) {
       obj = {};
     }
-    const Storage2 = tmp(592).Storage;
+    const Storage2 = tmp(510).Storage;
     let value = Storage2.get("UserSettingsStore");
     if (value == null) {
       value = {};
     }
-    const Storage3 = tmp(592).Storage;
+    const Storage3 = tmp(510).Storage;
     Storage3.remove("UserSettingsSync");
     obj = {};
     if (false === obj[UserSettingsSections.TEXT]) {

@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting(
 );
 
 export const useChannelTopicGradientBackground = function useChannelTopicGradientBackground() {
-  token = token(4197).useToken(ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  token = token(4262).useToken(ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   return React.useMemo(() => {
     const obj = closure_1_1(closure_1_2[3])(token);

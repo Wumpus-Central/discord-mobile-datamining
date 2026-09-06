@@ -1247,6 +1247,7 @@ obj = {
     return "/entitlements/partner-promotions/" + arg0;
   },
   USER_GIFT_CODE_CREATE: "/users/@me/entitlements/gift-codes",
+  USER_GIFT_CODE_DELIVERIES: "/users/@me/gift-code-deliveries",
   USER_GIFT_CODE_REVOKE(closure_1_0) {
     return "/users/@me/entitlements/gift-codes/" + closure_1_0;
   },
@@ -3777,6 +3778,7 @@ export const ChannelSections = {
   PROFILE: "PROFILE",
   SUMMARIES: "SUMMARIES",
   CONVERSATIONS: "CONVERSATIONS",
+  FRIENDS: "FRIENDS",
 };
 export const FriendsSections = {
   ADD_FRIEND: "ADD_FRIEND",

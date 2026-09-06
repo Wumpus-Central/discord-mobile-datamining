@@ -30,8 +30,8 @@ export default function PollCreationInputError(message) {
   let obj = { style: tmp.container, children: null };
   obj = { width: 16, height: 16, style: tmp.icon };
   const items1 = [
-    callback(message(1296).WarningCircle, obj),
-    callback(message(4474).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message }),
+    callback(message(1178).WarningCircle, obj),
+    callback(message(4556).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message }),
   ];
   obj[1] = items1;
   return callback2(View, obj);

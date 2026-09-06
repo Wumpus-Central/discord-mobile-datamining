@@ -96,14 +96,14 @@ export const useFirstMessage = function useFirstMessage(stateFromStores, enabled
 export const useGameInvitesChannelOfficialApplication = function useGameInvitesChannelOfficialApplication(id) {
   let application = id;
   const items = [closure_6];
-  const stateFromStores = application(586).useStateFromStores(items, () => closure_1_6.getChannel(application));
+  const stateFromStores = application(504).useStateFromStores(items, () => closure_1_6.getChannel(application));
   let isGameInvitesChannelResult = null == stateFromStores;
-  const obj = application(586);
+  const obj = application(504);
   if (!isGameInvitesChannelResult) {
     isGameInvitesChannelResult = stateFromStores.isGameInvitesChannel();
   }
   _modDef38(isGameInvitesChannelResult, "requires a game invites channel");
-  let tmpResult = tmp(6163);
+  let tmpResult = tmp(7309);
   let gameId;
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
@@ -113,7 +113,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
   if (data != null) {
     officialApplicationId = data.getOfficialApplicationId();
   }
-  tmpResult = tmp(5963);
+  tmpResult = tmp(7163);
   application = tmpResult.useApplication(officialApplicationId);
   const items1 = [application];
   return useMemo(() => {

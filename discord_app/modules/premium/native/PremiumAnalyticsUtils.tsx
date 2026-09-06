@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
-import v1 from "../../../../_runtime/00511_v1.js";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import v1 from "../../../../_runtime/01256_v1.js";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
 import ME from "../../../Constants.tsx";
 

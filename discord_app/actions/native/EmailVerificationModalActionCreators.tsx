@@ -1,10 +1,10 @@
 // discord_app/actions/native/EmailVerificationModalActionCreators.tsx
 import set from "../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
-import _modDef4724 from "../ModalActionCreators.tsx";
+import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import _modDef4763 from "../ModalActionCreators.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const EMAIL_VERIFICATION_MODAL_KEY = "EMAIL_VERIFICATION_MODAL_KEY";
@@ -20,8 +20,8 @@ export default {
       expandEventPropertiesDefault.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
       const obj = expandEventPropertiesDefault;
     }
-    _modDef4724.pushLazy(
-      asyncRequireImpl(7700, dependencyMap.paths),
+    _modDef4763.pushLazy(
+      asyncRequireImpl(5622, dependencyMap.paths),
       { isChangeEmail: flag },
       EMAIL_VERIFICATION_MODAL_KEY,
     );

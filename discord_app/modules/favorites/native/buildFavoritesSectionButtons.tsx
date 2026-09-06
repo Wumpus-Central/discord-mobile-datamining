@@ -1,12 +1,12 @@
 // discord_app/modules/favorites/native/buildFavoritesSectionButtons.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import openFavoritesGuildLimitUpsell from "../utils/openFavoritesGuildLimitUpsell.native.tsx";
 import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import StarOutlineIcon from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
-import openFavoritesGuildLimitUpsell from "../utils/openFavoritesGuildLimitUpsell.native.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
@@ -154,7 +154,7 @@ function _removeChannelFromFavorites() {
 }
 function openNoAccessUpsell() {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(10337, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, {
+  obj.openLazy(asyncRequireImpl(10228, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, {
     source: "channel_context_menu",
   });
 }
@@ -201,8 +201,8 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
           let tmp15;
           if (tmp5) {
             obj1 = { size: null };
-            obj1[0] = tmp12(1296).BetaSizes.SMALL;
-            tmp15 = jsx(tmp12(1296).BetaTag, { size: null });
+            obj1[0] = tmp12(1178).BetaSizes.SMALL;
+            tmp15 = jsx(tmp12(1178).BetaTag, { size: null });
           }
           obj[2] = tmp15;
           obj[3] = function onPress() {

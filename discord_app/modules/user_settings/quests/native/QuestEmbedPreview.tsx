@@ -21,7 +21,7 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
     });
     return obj;
   }, []);
-  let obj = questId(586);
+  let obj = questId(504);
   let items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [questId, stateFromStores];
@@ -74,24 +74,24 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
   let tmp6 = null;
   if (null != memo1) {
     obj = { title: null, children: null };
-    const intl = tmp2(1233).intl;
-    obj[0] = intl.string(tmp2(1233).t["habP/M"]);
+    const intl = tmp2(1114).intl;
+    obj[0] = intl.string(tmp2(1114).t["habP/M"]);
     obj = { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" };
     obj[0] = memo;
     obj[1] = memo1;
-    obj[1] = jsx(stateFromStores(8798), {
+    obj[1] = jsx(stateFromStores(8652), {
       rowGenerator: null,
       message: null,
       horizontalOffset: 0,
       pointerEvents: "none",
     });
-    tmp6 = jsx(stateFromStores(15015), {
+    tmp6 = jsx(stateFromStores(15173), {
       rowGenerator: null,
       message: null,
       horizontalOffset: 0,
       pointerEvents: "none",
     });
-    const tmp9 = stateFromStores(15015);
+    const tmp9 = stateFromStores(15173);
   }
   return tmp6;
 };

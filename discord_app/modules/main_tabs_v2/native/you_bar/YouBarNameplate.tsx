@@ -14,14 +14,14 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
   let token;
   dependencyMap = undefined;
   ({ nameplate, barWidth } = isQuestRendered);
-  let obj = isQuestRendered(4197);
-  token = obj.useToken(token(709).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(15026)(token);
+  let obj = isQuestRendered(4262);
+  token = obj.useToken(token(576).modules.mobile.YOU_BAR_BORDER_RADIUS);
+  const tmp4 = token(15184)(token);
   dependencyMap = tmp4;
-  obj1 = isQuestRendered(586);
+  obj1 = isQuestRendered(504);
   const items = [closure_3];
   const stateFromStores = obj1.useStateFromStores(items, () => obj.animateYouBarNameplate);
-  let obj2 = isQuestRendered(4217);
+  let obj2 = isQuestRendered(4296);
   const fn = function p() {
     let obj = isQuestRendered(closure_2[9]);
     if (isQuestRendered) {
@@ -33,7 +33,7 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
     return obj;
   };
   obj = {
-    withSpring: isQuestRendered(4928).withSpring,
+    withSpring: isQuestRendered(4974).withSpring,
     isQuestRendered,
     questDockAnimatedBorderRadius: tmp4,
     borderRadius: token,
@@ -71,8 +71,8 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
     str = "always";
   }
   obj2[2] = str;
-  obj1[2] = jsx(token(8539), { nameplate, isFocused: true, animate: null });
-  return jsx(token(4217).View, { style: items1, pointerEvents: "none", children: null });
+  obj1[2] = jsx(token(8818), { nameplate, isFocused: true, animate: null });
+  return jsx(token(4296).View, { style: items1, pointerEvents: "none", children: null });
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx");
 

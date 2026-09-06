@@ -198,10 +198,10 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj[0] = intl.string(preferredLocale(navigation[16]).t.Yr6nGx);
     obj[1] = callback1();
     obj[2] = function onItemSelect(rulesChannelId) {
-      let obj = callback(9754);
+      let obj = callback(9063);
       obj = { rulesChannelId };
       obj.updateGuild(obj);
-      callback(4445).hideActionSheet();
+      callback(4527).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -218,10 +218,10 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj[0] = intl.string(preferredLocale(navigation[16]).t.VqhxxN);
     obj[1] = callback1();
     obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      let obj = callback(9754);
+      let obj = callback(9063);
       obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
-      callback(4445).hideActionSheet();
+      callback(4527).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {

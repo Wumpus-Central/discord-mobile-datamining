@@ -1,6 +1,6 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListRow.tsx
-import nDefault from "../../../../../_runtime/00686_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nDefault from "../../../../../_runtime/00672_n.js";
 import set2 from "../../../../utils/PlatformUtils.tsx";
 import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";

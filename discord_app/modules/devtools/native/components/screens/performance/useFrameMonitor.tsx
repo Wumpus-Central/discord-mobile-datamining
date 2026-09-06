@@ -7,13 +7,13 @@ const result = require("set").fileFinishedImporting(
   "modules/devtools/native/components/screens/performance/useFrameMonitor.tsx",
 );
 
-export default function useFrameMonitor(stateFromStores) {
-  closure_0 = stateFromStores;
+export default function useFrameMonitor(first) {
+  closure_0 = first;
   const monitoring = callback(React.useState(false), 2);
   closure_1 = monitoring[1];
   callback = React.useRef(null);
-  React = React.useRef(stateFromStores);
-  const items = [stateFromStores];
+  React = React.useRef(first);
+  const items = [first];
   const effect = React.useEffect(() => {
     closure_3.current = closure_0;
   }, items);
@@ -22,7 +22,7 @@ export default function useFrameMonitor(stateFromStores) {
     if (current != null) {
       current.stop();
     }
-    ref.current = stateFromStores(15572).startFrameMonitor();
+    ref.current = callback(15730).startFrameMonitor();
     dependencyMap(true);
   }, []);
   const stop = React.useCallback(() => {

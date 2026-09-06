@@ -57,7 +57,7 @@ function cleanFavoriteChannels(obj) {
         let channel = channel.getChannel(key10005);
         if (null != channel) {
           if (null == tmp12.channelType) {
-            let UInt32Value = tmp3(1336).UInt32Value;
+            let UInt32Value = tmp3(1218).UInt32Value;
             obj = { value: null };
             obj[0] = channel.type;
             tmp12.channelType = UInt32Value.create(obj);
@@ -153,7 +153,7 @@ function getReachedLimit(arg0, arg1) {
 function showLimitReachedAlert(limit) {
   limit = limit.limit;
   if (limit.canUpsell) {
-    tmp(10336)(limit);
+    tmp(10227)(limit);
   } else {
     let obj = { title: null, body: null };
     const intl = getSystemLocale.intl;
@@ -162,8 +162,8 @@ function showLimitReachedAlert(limit) {
     obj = { count: null };
     obj[0] = limit;
     obj[1] = intl2.formatToPlainString(getSystemLocale.t.JaIyFi, obj);
-    tmp(4858).show(obj);
-    const tmpResult = tmp(4858);
+    tmp(4904).show(obj);
+    const tmpResult = tmp(4904);
   }
 }
 function onSaveFailed(status) {
@@ -349,7 +349,7 @@ function _addFavoriteChannelsToParent() {
                       let tmp8 = closure_1_21;
                       let tmp11 = closure_1_21(
                         favoriteChannels.favoriteChannels,
-                        callback(1305).FavoriteChannelType.REFERENCE_ORIGINAL,
+                        callback(1187).FavoriteChannelType.REFERENCE_ORIGINAL,
                       );
                       let tmp12 = tmp11;
                       if (null != tmp11) {
@@ -387,7 +387,7 @@ function _addFavoriteChannelsToParent() {
                             let tmp20 = dependencyMap;
                             let tmp8Result = tmp8(
                               favoriteChannels.favoriteChannels,
-                              callback(1305).FavoriteChannelType.REFERENCE_ORIGINAL,
+                              callback(1187).FavoriteChannelType.REFERENCE_ORIGINAL,
                             );
                             if (null != tmp8Result) {
                               let tmp23 = flag;
@@ -408,16 +408,16 @@ function _addFavoriteChannelsToParent() {
                         let tmp31 = channel;
                         let tmp32 = callback;
                         let tmp33 = dependencyMap;
-                        let FavoriteChannel = callback(1305).FavoriteChannel;
+                        let FavoriteChannel = callback(1187).FavoriteChannel;
                         let obj = { nickname: "", type: null, channelType: null, position: null, parentId: null };
                         let tmp34 = callback;
                         let tmp35 = dependencyMap;
-                        obj[1] = callback(1305).FavoriteChannelType.REFERENCE_ORIGINAL;
+                        obj[1] = callback(1187).FavoriteChannelType.REFERENCE_ORIGINAL;
                         obj = undefined;
                         if (null != channel) {
                           let tmp37 = callback;
                           let tmp38 = dependencyMap;
-                          let UInt32Value = callback(1336).UInt32Value;
+                          let UInt32Value = callback(1218).UInt32Value;
                           obj = { value: null };
                           let tmp39 = channel;
                           obj[0] = tmp31.type;
@@ -437,7 +437,7 @@ function _addFavoriteChannelsToParent() {
                         flag = true;
                         let tmp47 = callback;
                         let tmp48 = dependencyMap;
-                        let obj3 = callback(10340);
+                        let obj3 = callback(10233);
                         let tmp50 = channel;
                         let type;
                         let tmp49 = dependencyMap;
@@ -465,11 +465,11 @@ function _addFavoriteChannelsToParent() {
                       if (flag) {
                         let tmp61 = callback;
                         let tmp62 = dependencyMap;
-                        let BoolValue = callback(1336).BoolValue;
+                        let BoolValue = callback(1218).BoolValue;
                         favoriteChannels.guildVisible = BoolValue.create({ value: true });
                         let tmp63 = callback;
                         let tmp64 = dependencyMap;
-                        let obj4 = callback(10340);
+                        let obj4 = callback(10233);
                         let str = "auto";
                         let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                       }
@@ -1418,11 +1418,11 @@ export const setFavoritesGuildVisibilityFromSettings = function setFavoritesGuil
   );
   let isFavoritesGuildIdResult = !arg0;
   if (!arg0) {
-    let tmpResult = tmp(1911);
+    let tmpResult = tmp(1982);
     isFavoritesGuildIdResult = tmpResult.isFavoritesGuildId(store.getGuildId());
   }
   if (isFavoritesGuildIdResult) {
-    tmpResult = tmp(1219);
+    tmpResult = tmp(1100);
     tmpResult.transitionTo(closure_15.ME);
   }
 };

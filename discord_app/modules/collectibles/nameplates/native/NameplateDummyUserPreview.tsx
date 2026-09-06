@@ -33,7 +33,7 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1) => {
   obj = { borderRadius: ThemesDefault.radii.round, marginRight: tmp.avatarMarginRight, backgroundColor: null };
   let str = "transparent";
   if (arg1) {
-    str = tmp2(709).colors.BORDER_STRONG;
+    str = tmp2(576).colors.BORDER_STRONG;
   }
   obj[2] = str;
   obj[1] = obj;
@@ -84,7 +84,7 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   obj1 = {
     style: tmp3.avatarContainer,
     children: callback(Button.Avatar, {
-      source: importDefault(stateFromStores ? 8541 : 8542),
+      source: importDefault(stateFromStores ? 8820 : 8821),
       size: NORMAL,
       "aria-hidden": true,
       style: tmp3.avatar,

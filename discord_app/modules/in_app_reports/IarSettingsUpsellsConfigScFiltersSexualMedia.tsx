@@ -37,13 +37,13 @@ obj[4] = function onApply() {
   obj = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
   if (explicitContentGuilds === create.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentGuilds = tmp(1305).ExplicitContentRedaction.BLUR;
+    obj.explicitContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
   }
   if (explicitContentFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentFriendDm = tmp(1305).ExplicitContentRedaction.BLUR;
+    obj.explicitContentFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
   if (explicitContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentNonFriendDm = tmp(1305).ExplicitContentRedaction.BLUR;
+    obj.explicitContentNonFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
   return obj.updateExplicitContentSetting(obj);
 };

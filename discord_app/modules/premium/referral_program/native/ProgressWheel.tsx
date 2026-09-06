@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import inlineStyles from "../../../../../_runtime/08254_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
 import MAX_REFERRALS_SENT from "../hooks/useReferralProgramBannerDetails.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -32,14 +32,14 @@ export default function ProgressWheel(arg0) {
   let tmp9 = nReferralsSent === MAX_REFERRALS_SENT.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
-    let tmp4Result = tmp4(5502);
-    obj[0] = tmp4(13351);
+    let tmp4Result = tmp4(5587);
+    obj[0] = tmp4(13456);
     obj[1] = tmp.glowImage;
     tmp9 = callback(tmp4Result, obj);
   }
   const items = [tmp9, ,];
   obj1 = { width: c6, height: c6, children: null };
-  tmp4Result = tmp4(8254);
+  tmp4Result = tmp4(8453);
   const items1 = [
     callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }),
     callback(inlineStyles.Circle, {
@@ -59,7 +59,7 @@ export default function ProgressWheel(arg0) {
   obj1[2] = items1;
   items[1] = closure_5(tmp4Result, obj1);
   if (altImage == null) {
-    altImage = tmp4(13352);
+    altImage = tmp4(13457);
   }
   items[2] = callback(preloadDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj[1] = items;

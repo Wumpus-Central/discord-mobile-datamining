@@ -1,6 +1,6 @@
 // discord_app/actions/GIFPickerActionCreators.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "../utils/URLUtils.tsx";
 import collectGuildAnalyticsMetadataDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
 import isRefreshableAttachmentUrlAll from "../modules/messages/AttachmentUrlUtils.tsx";
@@ -45,7 +45,7 @@ function doSearchRequest(q, arg1, limit) {
       const startTime = obj.startTime;
       const merged = Object.assign(obj, Object.create(null));
       obj = { offset: 0, limit: null, totalResults: body.length };
-      let obj2 = q(10386);
+      let obj2 = q(10368);
       obj = {};
       const analyticsID = closure_1_5.getAnalyticsID();
       const merged1 = Object.assign(obj);
@@ -62,14 +62,14 @@ function doSearchRequest(q, arg1, limit) {
       obj2 = {};
       const merged3 = Object.assign(result);
       const merged4 = Object.assign(obj1);
-      obj2.gif_provider = q(10385).GIF_PROVIDER;
-      callback(4701).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
-      const obj6 = callback(4701);
+      obj2.gif_provider = q(10367).GIF_PROVIDER;
+      callback(4740).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
+      const obj6 = callback(4740);
       const tmp2 = q;
-      callback(706).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: q, items: body });
+      callback(573).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: q, items: body });
     },
     () => {
-      let obj = callback(706);
+      let obj = callback(573);
       obj = { type: "GIF_PICKER_QUERY_FAILURE", query: closure_0 };
       return obj.dispatch(obj);
     },
@@ -195,7 +195,7 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   }
 };
 export const initializeSearch = function initializeSearch() {
-  let obj = replaced(511);
+  let obj = replaced(1256);
   replaced = obj.v4().replace(closure_12, "");
   const str = obj.v4();
   obj = { search_type: constants3.GIF, load_id: replaced };
@@ -285,9 +285,9 @@ export const gifUrlKey = function gifUrlKey(uri) {
   let tmp4 = uri;
   if (null != toURLSafeResult) {
     if (obj2.isAttachmentPathUrl(toURLSafeResult)) {
-      str = tmp5(10059).removeSignedUrlParameters(toURLSafeResult);
+      str = tmp5(9942).removeSignedUrlParameters(toURLSafeResult);
       str = str.toString();
-      const tmp5Result = tmp5(10059);
+      const tmp5Result = tmp5(9942);
     }
     tmp4 = str;
     obj2 = isRefreshableAttachmentUrlAll;

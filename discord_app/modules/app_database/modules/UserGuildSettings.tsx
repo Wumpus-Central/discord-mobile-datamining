@@ -43,9 +43,9 @@ prototype["getAll"] = function getAll(arg0) {
 prototype["resetInMemoryState"] = function resetInMemoryState() {};
 prototype["handleConnectionOpen"] = function handleConnectionOpen(userGuildSettings, database) {
   if (!userGuildSettings.userGuildSettings.partial) {
-    const result = set(1955).userGuildSettingsTransaction(database);
+    const result = set(1986).userGuildSettingsTransaction(database);
     result.delete();
-    const obj = set(1955);
+    const obj = set(1986);
   }
   this.write(userGuildSettings.userGuildSettings.entries, userGuildSettings.userGuildSettings.version, database);
 };
@@ -66,7 +66,7 @@ prototype["handleUserGuildSettingsUpdate"] = function handleUserGuildSettingsUpd
   }
 };
 prototype["write"] = function write(arg0, version, database) {
-  let obj = set(1955);
+  let obj = set(1986);
   const result = obj.userGuildSettingsTransaction(database);
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
@@ -89,7 +89,7 @@ prototype["write"] = function write(arg0, version, database) {
     let putResult = result.put(str, tmp9);
     continue;
   }
-  const result1 = set(1955).nonGuildVersionsTransaction(database);
+  const result1 = set(1986).nonGuildVersionsTransaction(database);
   obj = { id: "user_guild_settings_version", version };
   result1.put(obj);
 };

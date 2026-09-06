@@ -275,22 +275,22 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = callback2();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  let obj = goToMessageRequestPreview(16720);
+  let obj = goToMessageRequestPreview(16885);
   dependencyMap = obj.useSpamMessageRequestCount();
   arr = useSortedSpamMessageRequestsDefault();
-  obj1 = goToMessageRequestPreview(16718);
+  obj1 = goToMessageRequestPreview(16883);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
   useMountLayoutEffectDefault(() => {
-    let obj = lib(695);
+    let obj = lib(1242);
     obj = { num_spam_message_requests: dependencyMap };
     obj.track(closure_1_7.SPAM_MESSAGE_REQUESTS_VIEWED, obj);
-    obj = { name: goToMessageRequestPreview(7362).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
-    lib(7357).increment(obj);
+    obj = { name: goToMessageRequestPreview(7607).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
+    lib(7602).increment(obj);
   });
   if (0 === arr.length) {
     obj = { bodyText: null };
-    let intl = tmp4(1233).intl;
-    obj[0] = intl.string(tmp4(1233).t.hasFPQ);
+    let intl = tmp4(1114).intl;
+    obj[0] = intl.string(tmp4(1114).t.hasFPQ);
     return callback(MessageRequestEmptyDefault, obj);
   } else {
     const items = ["header-section"];
@@ -315,11 +315,11 @@ export default function SpamMessageList(goToMessageRequestPreview) {
         let obj = { style: null, children: null };
         obj[0] = lib.sectionContainer;
         obj = { variant: "eyebrow", color: "text-default", children: null };
-        const intl = goToMessageRequestPreview(1233).intl;
+        const intl = goToMessageRequestPreview(1114).intl;
         obj = { count: null };
         obj[0] = arr.length;
-        obj[2] = intl.format(goToMessageRequestPreview(1233).t.aNh5Kf, obj);
-        obj[1] = closure_1_8(goToMessageRequestPreview(4474).Text, obj);
+        obj[2] = intl.format(goToMessageRequestPreview(1114).t.aNh5Kf, obj);
+        obj[1] = closure_1_8(goToMessageRequestPreview(4556).Text, obj);
         let tmp11Result = closure_1_8(closure_1_5, obj);
       } else {
         obj1 = {

@@ -1,6 +1,6 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx
-import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import items3 from "../DisplayNameStylesConstants.tsx";

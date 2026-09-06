@@ -5,11 +5,11 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
-import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
-import _modDef7716 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
+import _modDef6605 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
@@ -96,7 +96,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
   obj3[4] = intl.format(getSystemLocale.t["d+6kzl"], { guildName: name });
   const items3 = [callback(Text.Text, obj3)];
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = tmp2(1233).intl;
+  const intl2 = tmp2(1114).intl;
   obj4[3] = intl2.string(getSystemLocale.t.b3L8yx);
   items3[1] = callback(Text.Text, obj4);
   obj2[1] = items3;
@@ -114,9 +114,9 @@ function GuildDirectoryNicknameUpsell(arg0) {
     onBlur: null,
   };
   const tmp13 = GuildIconSizesDefault;
-  const intl3 = tmp2(1233).intl;
+  const intl3 = tmp2(1114).intl;
   obj5[0] = intl3.string(getSystemLocale.t.ilDlmW);
-  const intl4 = tmp2(1233).intl;
+  const intl4 = tmp2(1114).intl;
   obj5[1] = intl4.string(getSystemLocale.t.RfWvWI);
   obj5[2] = first;
   obj5[3] = tmp7[1];
@@ -143,11 +143,11 @@ function GuildDirectoryNicknameUpsell(arg0) {
       }
     }, 100);
   };
-  items2[2] = callback(_modDef7716, obj5);
+  items2[2] = callback(_modDef6605, obj5);
   items2[3] = callback(closure_6, { style: tmp.redesignGrowSpacing });
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };
-  const intl5 = tmp2(1233).intl;
+  const intl5 = tmp2(1114).intl;
   obj8[1] = intl5.string(getSystemLocale.t.Np4yXU);
   obj8[2] = function handleSubmit() {
     const self = this;

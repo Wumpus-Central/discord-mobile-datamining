@@ -30,7 +30,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    let tmpResult = tmp(4322);
+    let tmpResult = tmp(4404);
     str3 = tmpResult.getUserTag(inviter.inviter);
   }
   let isFriendResult = null != inviter.inviter;
@@ -44,7 +44,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str4 = "";
   if (null != inviter.inviter) {
-    tmpResult = tmp(1430);
+    tmpResult = tmp(1396);
     str4 = Image.resolveAssetSource(tmpResult.getUserAvatarSource(inviter.inviter)).uri;
   }
   const inviter2 = inviter.inviter;
@@ -54,14 +54,14 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   if (id1 === arg2) {
     ({ acceptLabelDisabledColor, acceptLabelDisabledBackgroundColor } = colors);
-    const intl3 = tmp5(1233).intl;
-    let stringResult = intl3.string(tmp5(1233).t.ib7Ng1);
+    const intl3 = tmp5(1114).intl;
+    let stringResult = intl3.string(tmp5(1114).t.ib7Ng1);
     let flag = false;
   } else {
     ({ acceptLabelGreenColor, acceptLabelGreenBackgroundColor } = colors);
-    const intl2 = tmp5(1233).intl;
+    const intl2 = tmp5(1114).intl;
     const string2 = intl2.string;
-    const t2 = tmp5(1233).t;
+    const t2 = tmp5(1114).t;
     if (isFriendResult) {
       stringResult = string2(t2.xhxnPn);
       flag = true;

@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import set from "../../../../_runtime/00002_set.js";
 import insertUnsortedGuilds from "../../../stores/SortedGuildStore.tsx";
-import identity from "../../../../_runtime/00697_identity.js";
+import identity from "../../../../_runtime/01244_identity.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;
@@ -17,12 +17,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dragRegion: require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "animal",
-    scrollPosition: "rat",
-    windowSize: "center",
-    setStateShallow: "hidden",
-    dropStart: null,
-    dropComplete: "\u{1F478}\u{1F3FF}",
+    listInsets: "Success",
+    scrollPosition: "oO.O",
+    windowSize: "success",
+    setStateShallow: null,
+    dropStart: 0,
+    dropComplete: "No Video Devices",
   };
   const obj2 = ReanimatedRexport;
   obj[4] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable(obj);
@@ -214,7 +214,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj[3] = num;
     obj[4] = dragDropInProgress;
     return obj;
-  }, require("../../../../_runtime/04105_isIterable.js").shallow);
+  }, require("../../../../_runtime/04184_isIterable.js").shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

@@ -1,24 +1,20 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
-import useSegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
-import SegmentedControlPage from "../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
-import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import _modDef14578 from "../../../settings/native/renderer/SettingLayout.tsx";
-import handleLogInClick from "../../../safety_hub/native/SafetyHubPage.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import useIsTinyBroncoSettingsEnabled from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
+import _modDef14689 from "../../../settings/native/renderer/SettingLayout.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../webauthn/WebAuthnStore.tsx";
+import closure_7 from "../../../webauthn/WebAuthnStore.tsx";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
-import { AccountSettingsTabs } from "SettingsAccountConstants.tsx";
-import { AnalyticEvents } from "../../../../Constants.tsx";
 import { WebAuthnScreens } from "../../../webauthn/WebAuthnConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { registerAsset } from "../../../../../_runtime/14551_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14658_registerAsset.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 require = arg1;
@@ -48,9 +44,9 @@ function PasswordlessUpsell() {
   const intl3 = require("../../../../intl/index.native.tsx").intl;
   obj9[0] = intl3.string(require("../../../../intl/index.native.tsx").t.piGf5c);
   obj9[1] = function onPress() {
-    let obj = closure_1_1(closure_1_2[18]);
-    obj = { navigation: callback, initialRouteName: closure_1_10.REGISTER, showNav: true };
-    obj.pushLazy(callback(closure_1_2[20])(closure_1_2[19], closure_1_2.paths), obj);
+    let obj = closure_1_1(closure_1_3[16]);
+    obj = { navigation: callback, initialRouteName: closure_1_9.REGISTER, showNav: true };
+    obj.pushLazy(callback(closure_1_3[18])(closure_1_3[17], closure_1_3.paths), obj);
   };
   const items2 = [
     callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button, obj9),
@@ -67,21 +63,21 @@ function PasswordlessUpsell() {
   return callback2(View, obj);
 }
 function AccountTwoFALabel() {
-  let obj = first(isUserVerified[21]);
-  let items = [closure_6];
+  let obj = first(504);
+  let items = [closure_7];
   const tmp3 = callback(
     obj.useStateFromStoresObject(items, () => {
-      const items = [closure_6.hasCredentials, closure_6.hasFetchedCredentials()];
+      const items = [closure_7.hasCredentials, closure_7.hasFetchedCredentials()];
       return items;
     }),
     2,
   );
   first = tmp3[0];
   closure_1 = tmp5;
-  isUserVerified = first(isUserVerified[22]).useIsUserVerified();
+  const isUserVerified = first(14681).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = importAllResult.useMemo(() => {
-    let tmp = first(isUserVerified[23]).hasWebAuthn && isUserVerified && closure_1;
+    let tmp = first(closure_1_3[21]).hasWebAuthn && isUserVerified && closure_1;
     if (tmp) {
       tmp = !first;
     }
@@ -90,8 +86,8 @@ function AccountTwoFALabel() {
   const items2 = [tmp3[1]];
   const effect = importAllResult.useEffect(() => {
     if (!closure_1) {
-      const webAuthnCredentials = first(isUserVerified[24]).fetchWebAuthnCredentials();
-      const obj = first(isUserVerified[24]);
+      const webAuthnCredentials = first(closure_1_3[22]).fetchWebAuthnCredentials();
+      const obj = first(closure_1_3[22]);
     }
   }, items2);
   let tmp11 = memo;
@@ -101,19 +97,27 @@ function AccountTwoFALabel() {
   obj = { children: null };
   const items3 = [tmp11];
   obj = { title: null };
-  const intl = tmp(tmp2[16]).intl;
-  obj[0] = intl.string(first(isUserVerified[16]).t.fuTmEJ);
-  items3[1] = callback2(first(isUserVerified[25]).TableRowGroupTitle, obj);
+  const intl = tmp(1114).intl;
+  obj[0] = intl.string(first(1114).t.fuTmEJ);
+  items3[1] = callback2(first(5687).TableRowGroupTitle, obj);
   obj[0] = items3;
-  return closure_12(closure_13, obj);
+  return closure_11(closure_12, obj);
+}
+function AccountStatusLabel() {
+  let obj = useIsTinyBroncoSettingsEnabled;
+  const isTinyBroncoSettingsEnabled = obj.useIsTinyBroncoSettingsEnabled();
+  const intl = getSystemLocale.intl;
+  const t = getSystemLocale.t;
+  obj = { title: intl.string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]) };
+  return closure_10(TableRowGroupTitle.TableRowGroupTitle, obj);
 }
 function AccountSecurityPage() {
   const node = importAllResult.useMemo(() => {
-    let obj = callback(11292);
+    let obj = callback(11468);
     obj = { sections: null, ListHeaderComponent: null };
     obj = { label: null, settings: null };
-    const intl = callback(1233).intl;
-    obj[0] = intl.string(callback(1233).t.e262Nn);
+    const intl = callback(1114).intl;
+    obj[0] = intl.string(callback(1114).t.e262Nn);
     const items = [, , , , , ,];
     ({
       ACCOUNT_USERNAME: arr[0],
@@ -123,9 +127,9 @@ function AccountSecurityPage() {
       ACCOUNT_AGE_GROUP_ADULT: arr[4],
       ACCOUNT_AGE_GROUP_NON_ADULT: arr[5],
       ACCOUNT_AGE_GROUP_ASSIGNED_ADULT: arr[6],
-    } = closure_7);
+    } = closure_8);
     obj[1] = items;
-    const items1 = [obj, ,];
+    const items1 = [obj, , ,];
     const items2 = [, , , , ,];
     ({
       ACCOUNT_CHANGE_PASSWORD: arr3[0],
@@ -134,33 +138,28 @@ function AccountSecurityPage() {
       ACCOUNT_VIEW_BACKUP_CODES: arr3[3],
       ACCOUNT_REMOVE_2FA: arr3[4],
       ACCOUNT_SMS_BACKUP: arr3[5],
-    } = closure_7);
-    items1[1] = { label: callback3(closure_16, {}), settings: items2 };
-    const obj2 = { label: null, settings: null };
-    const intl2 = callback(1233).intl;
-    obj2[0] = intl2.string(callback(1233).t["5V0AkP"]);
+    } = closure_8);
+    items1[1] = { label: callback3(closure_15, {}), settings: items2 };
+    obj1 = { label: callback3(closure_15, {}), settings: items2 };
     const items3 = [,];
-    ({ ACCOUNT_DISABLE: arr4[0], ACCOUNT_DELETE: arr4[1] } = closure_7);
-    obj2[1] = items3;
-    items1[2] = obj2;
-    obj[0] = items1.filter(Boolean);
-    obj[1] = callback2(14575);
+    ({ ACCOUNT_AGE_GROUP: arr4[0], ACCOUNT_STANDING: arr4[1] } = closure_8);
+    items1[2] = { label: callback3(closure_16, {}), settings: items3 };
+    const obj3 = { label: null, settings: null };
+    const intl2 = callback(1114).intl;
+    obj3[0] = intl2.string(callback(1114).t["5V0AkP"]);
+    const items4 = [,];
+    ({ ACCOUNT_DISABLE: arr5[0], ACCOUNT_DELETE: arr5[1] } = closure_8);
+    obj3[1] = items4;
+    items1[3] = obj3;
+    obj[0] = items1;
+    obj[1] = callback2(14686);
     return obj.createList(obj);
   }, []);
-  return callback2(_modDef14578, { node });
+  return callback2(_modDef14689, { node });
 }
-function AccountStandingPage() {
-  return callback2(handleLogInClick.default, { visible: true });
-}
-let c4 = importAllResult;
-({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let obj = {
-  upsellPasswordless: null,
-  upsellImagePasswordless: null,
-  controlContainer: null,
-  pageContainer: null,
-  standingPage: null,
-};
+let c5 = importAllResult;
+({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
+let obj = { upsellPasswordless: null, upsellImagePasswordless: null };
 obj = {
   marginBottom: 16,
   borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED,
@@ -169,75 +168,12 @@ obj = {
 };
 obj[0] = obj;
 obj[1] = { height: "100%", width: "100%" };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
-obj[2] = createCacheKey;
-obj[3] = { flex: 1 };
-obj[4] = { paddingTop: ThemesDefault.space.PX_24 };
-let closure_14 = createCacheKey.createStyles(obj);
-let obj2 = { paddingTop: ThemesDefault.space.PX_24 };
+let closure_13 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  const tmp = callback4();
-  [tmp3, require] = callback(importAllResult.useState(0), 2);
-  callback = importAllResult.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.layout.width);
-  }, []);
-  let obj = useSettingNavigationRoute;
-  const params = obj.useSettingNavigationRoute().params;
-  let initialTab;
-  if (params != null) {
-    initialTab = params.initialTab;
-  }
-  const tmp2 = callback(importAllResult.useState(0), 2);
-  obj = { items: null, pageWidth: null, defaultIndex: null, onSetActiveIndex: null };
-  obj = { label: null, id: null, page: null };
-  const intl = tmp5(1233).intl;
-  obj[0] = intl.string(getSystemLocale.t.Am9YHi);
-  obj[1] = AccountSettingsTabs.SECURITY;
-  obj[2] = callback2(AccountSecurityPage, {});
-  const items = [obj];
-  obj1 = { label: null, id: null, page: null };
-  const intl2 = tmp5(1233).intl;
-  obj1[0] = intl2.string(getSystemLocale.t["00Sfl/"]);
-  obj1[1] = AccountSettingsTabs.STANDING;
-  const tmp5Result = useSegmentedControlState;
-  obj1[2] = callback2(View, { style: tmp.standingPage, children: callback2(AccountStandingPage, {}) });
-  items[1] = obj1;
-  obj[0] = items;
-  obj[1] = tmp3;
-  let num = 0;
-  if (initialTab === AccountSettingsTabs.STANDING) {
-    num = 1;
-  }
-  obj[2] = num;
-  obj[3] = function onSetActiveIndex(arg0) {
-    if (0 === arg0) {
-      let STANDING = constants.SECURITY;
-    } else {
-      STANDING = constants.STANDING;
-    }
-    callback2(table[32]).track(constants2.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: STANDING });
-  };
-  const segmentedControlState = tmp5Result.useSegmentedControlState(obj);
-  const obj3 = { children: null };
-  const obj2 = { style: tmp.standingPage, children: callback2(AccountStandingPage, {}) };
-  const items1 = [
-    callback2(View, {
-      style: tmp.controlContainer,
-      onLayout: callback,
-      children: callback2(SegmentedControl.SegmentedControl, { state: segmentedControlState }),
-    }),
-  ];
-  const obj4 = {
-    style: tmp.controlContainer,
-    onLayout: callback,
-    children: callback2(SegmentedControl.SegmentedControl, { state: segmentedControlState }),
-  };
-  items1[1] = callback2(View, {
-    style: tmp.pageContainer,
-    children: callback2(SegmentedControlPage.SegmentedControlPages, { state: segmentedControlState }),
+  useMountLayoutEffectDefault(() => {
+    const safetyHubData = callback(table[29]).getSafetyHubData();
   });
-  obj3[0] = items1;
-  return callback3(closure_13, obj3);
+  return callback2(AccountSecurityPage, {});
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountScreen.tsx");
 

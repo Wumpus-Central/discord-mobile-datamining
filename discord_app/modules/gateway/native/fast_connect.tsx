@@ -11,8 +11,8 @@ function createFastConnectSocket() {
   if (null != window.WebSocket) {
     obj = set;
     if (obj.isAndroid()) {
-      let supportsZstd = obj(13543).getConstants().supportsZstd;
-      const obj2 = obj(13543);
+      let supportsZstd = obj(13649).getConstants().supportsZstd;
+      const obj2 = obj(13649);
     } else {
       supportsZstd = closure_4.DCDCompressionManager.supportsZstd;
     }
@@ -22,7 +22,7 @@ function createFastConnectSocket() {
     }
     const _window = window;
     let GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ALT_ENDPOINT;
-    if (!obj(13530)()) {
+    if (!obj(13636)()) {
       const _window2 = window;
       GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
     }
@@ -32,24 +32,24 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp10}`);
     const _Date = Date;
     _require = Date.now();
-    const tmp12 = obj(13526)(combined);
+    const tmp12 = obj(13633)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp12._socketId);
     const _isNaN = isNaN;
     if (isNaN(parsed)) {
       obj3.log("[FAST CONNECT] Unable to create socketId from NaN value ", tmp12._socketId);
     } else {
-      const isAndroidResult = tmp3(1234).isAndroid();
+      const isAndroidResult = tmp3(1115).isAndroid();
       if (supportsZstd) {
         if (isAndroidResult) {
-          let tmp7Result = tmp7(13543);
+          let tmp7Result = tmp7(13649);
           const result = tmp7Result.enableZstdStreamSupport(parsed);
         } else {
           const DCDCompressionManager2 = closure_4.DCDCompressionManager;
           const result1 = DCDCompressionManager2.enableZstdStreamSupport(parsed, 0);
         }
       } else if (isAndroidResult) {
-        tmp7Result = tmp7(13543);
+        tmp7Result = tmp7(13649);
         const result2 = tmp7Result.enableZlibStreamSupport(parsed);
       } else {
         const DCDCompressionManager = closure_4.DCDCompressionManager;
@@ -59,20 +59,20 @@ function createFastConnectSocket() {
       obj[1] = combined;
       obj[3] = [];
       tmp12.onopen = () => {
-        obj = obj(closure_1_3[13]);
+        obj = obj(closure_1_3[14]);
         obj.mark("\u{1F310}", "Fastconnect socket opened");
         closure_1_7.log("connected and identified in " + Date.now() - closure_0 + "ms didIdentify:" + obj.identify);
         obj.open = true;
       };
       const fn = () => {
-        obj = obj(table[13]);
+        obj = obj(table[14]);
         obj.mark("\u{1F310}", "Fastconnect socket close");
         window._ws = null;
       };
       tmp12.onerror = fn;
       tmp12.onclose = fn;
       tmp12.onmessage = (arg0) => {
-        obj = obj(closure_1_3[13]);
+        obj = obj(closure_1_3[14]);
         obj.mark("\u{1F310}", "Fastconnect socket message");
         const messages = obj.messages;
         messages.push(arg0);
@@ -82,7 +82,7 @@ function createFastConnectSocket() {
       obj[0] = tmp12;
       obj[1] = obj;
       window._ws = obj;
-      const tmp3Result = tmp3(1234);
+      const tmp3Result = tmp3(1115);
       tmp7(10).mark("\u{1F310}", "Fastconnect socket created");
       const tmp7Result1 = tmp7(10);
     }
@@ -117,8 +117,8 @@ export const identifyWebSocket = function identifyWebSocket() {
   if (null != window._ws) {
     const beginFastConnect = serializeDefault.beginFastConnect;
     beginFastConnect.measure(() => {
-      const loadFastConnectNativeModule = callback2(table[14]).loadFastConnectNativeModule;
-      const measureResult = loadFastConnectNativeModule.measure(() => callback(table[7]).getConstants());
+      const loadFastConnectNativeModule = callback2(table[15]).loadFastConnectNativeModule;
+      const measureResult = loadFastConnectNativeModule.measure(() => callback(table[8]).getConstants());
       let token = measureResult.token;
       if (token == null) {
         token = null;
@@ -128,19 +128,20 @@ export const identifyWebSocket = function identifyWebSocket() {
         if ("" !== token) {
           const _window = window;
           const state = _ws.state;
-          let userId = measureResult.userId;
-          let tmp8 = userId;
-          if (userId == null) {
+          let tmp7 = str2;
+          if (measureResult.userId == null) {
+            tmp7 = null;
+          }
+          c8 = tmp7;
+          let tmp8 = str2;
+          if (measureResult.userId == null) {
             tmp8 = null;
           }
-          c8 = tmp8;
-          let tmp9 = userId;
-          if (userId == null) {
-            tmp9 = null;
-          }
-          state.userId = tmp9;
-          if (userId == null) {
-            userId = null;
+          state.userId = tmp8;
+          let derivedQosData = null;
+          if (null != measureResult.userId) {
+            let tmpResult = tmp(tmp2[8]);
+            derivedQosData = tmpResult.getDerivedQosData(str2);
           }
           let prop = measureResult.analyticsInstallation;
           if (prop == null) {
@@ -150,55 +151,62 @@ export const identifyWebSocket = function identifyWebSocket() {
           if (flag == null) {
             flag = false;
           }
-          logger.info("prepareIdentify: app state: ", closure_5.currentState);
-          obj = { token: null, properties: null, capabilities: null, client_state: null };
+          obj1 = callback(tmp2[4]);
+          const qosTokenFromDerivedData = obj1.buildQosTokenFromDerivedData(derivedQosData, true);
+          logger.info(
+            "prepareIdentify: app state: ",
+            closure_5.currentState,
+            "qosTokenPresent: ",
+            qosTokenFromDerivedData.length > 0,
+          );
+          obj = { token: null, properties: null, capabilities: null, client_state: null, qos_token: null };
           obj[0] = token;
           obj = {};
-          let obj2 = callback3(tmp2[4]);
-          const merged = Object.assign(obj2.getSuperProperties());
+          let obj4 = callback3(tmp2[5]);
+          const merged = Object.assign(obj4.getSuperProperties());
           obj.client_app_state = closure_5.currentState;
           obj.is_fast_connect = true;
-          let obj3 = callback3(tmp2[5]);
-          obj.gateway_connect_reasons = obj3.describeConnectionReasons();
+          let obj5 = callback3(tmp2[6]);
+          obj.gateway_connect_reasons = obj5.describeConnectionReasons();
           if (null != prop) {
-            obj = { installation_id: null };
-            obj[0] = prop;
-            obj1 = obj;
+            obj1 = { installation_id: null };
+            obj1[0] = prop;
+            let obj2 = obj1;
           } else {
-            obj1 = {};
+            obj2 = {};
           }
-          const merged1 = Object.assign(obj1);
+          const merged1 = Object.assign(obj2);
           obj[1] = obj;
-          obj2 = { useChannelObfuscation: null };
-          obj2[0] = flag;
-          obj[2] = callback(tmp2[6]).getClientCapabilities(obj2);
-          obj3 = { guild_versions: null };
-          obj3[0] = {};
-          obj[3] = obj3;
+          let tmp11Result = tmp11(tmp2[7]);
+          const obj3 = { useChannelObfuscation: null };
+          obj3[0] = flag;
+          obj[2] = tmp11Result.getClientCapabilities(obj3);
+          obj4 = { guild_versions: null };
+          obj4[0] = {};
+          obj[3] = obj4;
+          obj[4] = qosTokenFromDerivedData;
           const _JSON = JSON;
-          const obj4 = { op: 2, d: null };
-          obj4[1] = obj;
-          const json = JSON.stringify(obj4);
-          const tmpResult = callback2(tmp2[7]);
+          obj5 = { op: 2, d: null };
+          obj5[1] = obj;
+          const json = JSON.stringify(obj5);
+          tmpResult = tmp(tmp2[8]);
           str = undefined;
-          if (userId != null) {
-            str = userId.toString();
+          if (measureResult.userId != null) {
+            str = str2.toString();
           }
           if (str == null) {
             str = null;
           }
           const _parseFloat = parseFloat;
           const parsed = parseFloat(_ws.ws._socketId);
-          const obj7 = callback(tmp2[6]);
-          const tmp20 = callback;
-          let tmp24;
-          if (tmp20Result.isCacheEnabled()) {
-            tmp24 = closure_6;
+          tmp11Result = tmp11(tmp2[9]);
+          let tmp25;
+          if (tmp11Result.isCacheEnabled()) {
+            tmp25 = closure_6;
           }
-          tmpResult.prepareIdentify(str, json, parsed, tmp24);
+          tmpResult.prepareIdentify(str, json, parsed, tmp25);
           state.identify = true;
           state.clientState = obj.client_state;
-          tmp20Result = callback(tmp2[8]);
         }
       }
       logger.log("Skipping fast_connect because we could not find a token to connect with.");

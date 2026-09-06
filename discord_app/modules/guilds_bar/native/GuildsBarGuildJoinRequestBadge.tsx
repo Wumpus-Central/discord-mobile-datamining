@@ -3,10 +3,10 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import MAX_RESULTS_PER_PAGE from "../../guild_member_verification/MemberVerificationTypes.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../_runtime/12085_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/16137_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/16138_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/16139_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12289_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/16299_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/16300_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/16301_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -38,13 +38,13 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   const tmp = callback();
   if (MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
     let tmp4 = registerAssetDefault2;
-  } else if (tmp2(4302).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
+  } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
     tmp4 = registerAssetDefault3;
-  } else if (tmp2(4302).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
+  } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
     tmp4 = registerAssetDefault4;
   } else {
     tmp4 = null;
-    if (tmp2(4302).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
+    if (tmp2(4384).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
       tmp4 = registerAssetDefault;
     }
   }

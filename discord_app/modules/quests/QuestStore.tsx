@@ -1,7 +1,7 @@
 // discord_app/modules/quests/QuestStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1205 from "../../utils/SentryUtils.native.tsx";
+import _modDef1232 from "../../utils/SentryUtils.native.tsx";
 import getQuestDeliveryDataForPlacement from "utils/QuestDataUtils.tsx";
 import result6 from "../ads/utils/AdDecisionUtils.tsx";
 import QuestRewardTypes from "../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
@@ -348,7 +348,7 @@ const questStore = new QuestStore(dispatcherDefault, {
     mapped = quests.map((id) => id.id);
     const found = items.filter((arg0) => !mapped.includes(arg0));
     if (found.length > 0) {
-      let obj = _modDef1205;
+      let obj = _modDef1232;
       obj = { category: "quests.store", message: null, data: null };
       const _HermesInternal = HermesInternal;
       obj[1] = "handleFetchCurrentQuestsSuccess: " + found.length + " quest(s) removed during rebuild";
@@ -373,13 +373,13 @@ const questStore = new QuestStore(dispatcherDefault, {
       let tmp13 = mapped;
       let tmp14 = dependencyMap;
       let tmp15 = dependencyMap;
-      let obj5 = mapped(7454);
+      let obj5 = mapped(7699);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5399).QuestContent.QUEST_BAR)) {
+      if (targetedContent.includes(mapped(5447).QuestContent.QUEST_BAR)) {
         let tmp17 = tmp12;
         let tmp18 = tmp14;
-        let tmp13Result = tmp13(7465);
+        let tmp13Result = tmp13(7709);
         obj1 = { location: null };
         let tmp19 = QuestsExperimentLocations;
         obj1[0] = QuestsExperimentLocations.QUESTS_STORE;
@@ -413,7 +413,7 @@ const questStore = new QuestStore(dispatcherDefault, {
         let tmp32 = mapped;
         let tmp33 = dependencyMap;
         let tmp34 = dependencyMap;
-        let obj10 = mapped(7454);
+        let obj10 = mapped(7699);
         let result4 = map1.set(tmp26.id, obj10.isQuestExpired(tmp26));
       }
       continue;
@@ -545,7 +545,7 @@ const questStore = new QuestStore(dispatcherDefault, {
           let tmp24 = map3;
           let tmp25 = tmp36;
           let tmp26 = tmp38;
-          let tmp37Result = tmp37(7454);
+          let tmp37Result = tmp37(7699);
           let result4 = map3.set(tmp10, tmp37Result.isQuestExpired(result2));
         }
       }

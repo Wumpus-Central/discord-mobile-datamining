@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx
-import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import closure_3 from "../../user_affinities/UserAffinitiesV2Store.tsx";
 import closure_4 from "../../../stores/AuthenticationStore.tsx";
 import closure_5 from "../../../stores/MessageStore.tsx";
@@ -40,9 +40,9 @@ export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileG
       }
     },
     (arg0) => {
-      callback(1205).captureException(arg0, { tags: { feature: "gift_intent" } });
-      const obj = callback(1205);
-      callback(706).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
+      callback(1232).captureException(arg0, { tags: { feature: "gift_intent" } });
+      const obj = callback(1232);
+      callback(573).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
     },
   );
 };

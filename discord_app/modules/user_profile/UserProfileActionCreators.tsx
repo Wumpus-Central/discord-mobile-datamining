@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/UserProfileActionCreators.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import ComponentDispatcher from "../../utils/ComponentDispatchUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import AccessibilityAnnouncer2 from "../../design/shared.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/UserStore.tsx";
@@ -237,9 +237,9 @@ export const setTryItOutAvatarDecoration = function setTryItOutAvatarDecoration(
   obj = { feature_name: constants4.AVATAR_DECORATION, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
-export const setTryItOutProfileEffect = function setTryItOutProfileEffect(profileEffect) {
+export const setTryItOutProfileEffect = function setTryItOutProfileEffect(purchasedItem) {
   let obj = dispatcherDefault;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect };
+  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect: purchasedItem };
   obj.dispatch(obj);
   obj = { feature_name: constants4.PROFILE_EFFECT, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);

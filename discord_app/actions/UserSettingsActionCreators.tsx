@@ -88,7 +88,7 @@ export default {
               closure_0 = tmp3;
               if (closure_1_0) {
                 dependencyMap = 1;
-                const PreloadedUserSettingsActionCreators = closure_1_0(1369).PreloadedUserSettingsActionCreators;
+                const PreloadedUserSettingsActionCreators = closure_1_0(1940).PreloadedUserSettingsActionCreators;
                 v0 = 2;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -97,24 +97,24 @@ export default {
                   (arg0) => {
                     theme = theme.theme;
                     if (constants.DARK === theme) {
-                      let DARK = tmp3(1305).Theme.DARK;
+                      let DARK = tmp3(1187).Theme.DARK;
                       tmp3 = dependencyMap;
                       let tmp4 = tmp3;
                     } else if (tmp.LIGHT === theme) {
-                      DARK = tmp3(1305).Theme.LIGHT;
+                      DARK = tmp3(1187).Theme.LIGHT;
                       tmp3 = dependencyMap;
                       tmp4 = tmp3;
                     } else if (tmp.DARKER === theme) {
-                      DARK = tmp3(1305).Theme.DARKER;
+                      DARK = tmp3(1187).Theme.DARKER;
                       tmp3 = dependencyMap;
                       tmp4 = tmp3;
                     } else if (tmp.MIDNIGHT === theme) {
-                      DARK = tmp3(1305).Theme.MIDNIGHT;
+                      DARK = tmp3(1187).Theme.MIDNIGHT;
                       tmp3 = dependencyMap;
                       tmp4 = tmp3;
                     } else {
                       tmp3 = dependencyMap;
-                      DARK = tmp3(1305).Theme.DARK;
+                      DARK = tmp3(1187).Theme.DARK;
                       tmp4 = tmp3;
                     }
                     arg0.theme = DARK;
@@ -123,7 +123,7 @@ export default {
                     if (gradientPreset != null) {
                       id = gradientPreset.id;
                     }
-                    const ClientThemeSettings = tmp4(4166).ClientThemeSettings;
+                    const ClientThemeSettings = tmp4(1935).ClientThemeSettings;
                     const setting = ClientThemeSettings.getSetting();
                     let prop;
                     if (setting != null) {
@@ -131,7 +131,7 @@ export default {
                     }
                     let obj;
                     if (null != id) {
-                      const UInt32Value = tmp4(1336).UInt32Value;
+                      const UInt32Value = tmp4(1218).UInt32Value;
                       obj = { value: null };
                       obj[0] = id;
                       obj = UInt32Value.create(obj);
@@ -151,7 +151,7 @@ export default {
                     obj[1] = tmp17;
                     arg0.clientThemeSettings = obj;
                   },
-                  closure_1_0(1369).UserSettingsDelay.INFREQUENT_USER_ACTION,
+                  closure_1_0(1940).UserSettingsDelay.INFREQUENT_USER_ACTION,
                 );
                 return obj1;
               }
@@ -172,7 +172,7 @@ export default {
           } else {
             dependencyMap = 0;
           }
-          obj1 = v0(706);
+          obj1 = v0(573);
           const obj2 = { shouldSync: null, settings: null };
           obj2[0] = closure_0;
           if (closure_0) {
@@ -187,10 +187,10 @@ export default {
             }
             const obj4 = { backgroundGradientPresetId: null, customUserThemeSettings: null };
             obj4[0] = id;
-            let ClientThemeSettings = closure_1_0(4166).ClientThemeSettings;
+            let ClientThemeSettings = closure_1_0(1935).ClientThemeSettings;
             obj4[1] = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj3[1] = obj4;
-            const DeveloperMode = closure_1_0(4166).DeveloperMode;
+            const DeveloperMode = closure_1_0(1935).DeveloperMode;
             obj3[2] = DeveloperMode.getSetting();
           }
           const obj5 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };

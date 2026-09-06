@@ -3,9 +3,9 @@ import set from "../../../_runtime/00002_set.js";
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
 import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
-import PermissionOverwriteType from "../../flow/Server.tsx";
 import compareGuildRoles from "../../utils/GuildRoleUtils.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import nameFromUserDefault from "../../utils/UserUtils.tsx";
@@ -347,8 +347,8 @@ export const getExistingRolesRows = function getExistingRolesRows(guild, sortedG
     const intl2 = require("../../intl/index.native.tsx").intl;
     let stringResult = intl2.string(require("../../intl/index.native.tsx").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1233).intl;
-      stringResult = intl.string(tmp4(1233).t["gnsna/"]);
+      const intl = tmp4(1114).intl;
+      stringResult = intl.string(tmp4(1114).t["gnsna/"]);
     }
     let obj = { rowType: null, colorString: null, name: null, disabled: true, id: "EMPTY_STATE" };
     obj[0] = RowType.EMPTY_STATE;
@@ -419,8 +419,8 @@ export const getExistingRolesRowWithPermissionDisabled = function getExistingRol
     const intl2 = require("../../intl/index.native.tsx").intl;
     let stringResult = intl2.string(require("../../intl/index.native.tsx").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1233).intl;
-      stringResult = intl.string(tmp4(1233).t["gnsna/"]);
+      const intl = tmp4(1114).intl;
+      stringResult = intl.string(tmp4(1114).t["gnsna/"]);
     }
     let obj = { rowType: null, colorString: null, name: null, disabled: true, id: "EMPTY_STATE" };
     obj[0] = RowType.EMPTY_STATE;

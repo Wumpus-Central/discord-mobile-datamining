@@ -56,7 +56,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
     }
     let H97H4S = require("../../intl/index.native.tsx").t.H97H4S;
     if (tmp14) {
-      H97H4S = tmp11(1233).t["N95b+f"];
+      H97H4S = tmp11(1114).t["N95b+f"];
     }
     tmp11 = _require;
   } else if (tmp2.NOT_EQUAL === operator) {
@@ -103,16 +103,16 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl24 = require("../../intl/index.native.tsx").intl;
           obj1 = { platformQuantityHook: null };
           obj1[0] = function platformQuantityHook() {
-            const intl = callback(1233).intl;
-            return intl.string(callback(1233).t["+/5TCx"]);
+            const intl = callback(1114).intl;
+            return intl.string(callback(1114).t["+/5TCx"]);
           };
           formatResult = intl24.format(H97H4S, obj1);
         } else if (tmp67.REDDIT_MOD === connectionMetadataField) {
           const intl23 = require("../../intl/index.native.tsx").intl;
           const obj2 = { platformQuantityHook: null };
           obj2[0] = function platformQuantityHook() {
-            const intl = callback(1233).intl;
-            return intl.string(callback(1233).t["9rPbEs"]);
+            const intl = callback(1114).intl;
+            return intl.string(callback(1114).t["9rPbEs"]);
           };
           formatResult = intl23.format(H97H4S, obj2);
         } else {
@@ -195,8 +195,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl14 = require("../../intl/index.native.tsx").intl;
           const obj11 = { platformQuantityHook: null };
           obj11[0] = function platformQuantityHook() {
-            const intl = callback(1233).intl;
-            return intl.string(callback(1233).t.xRygZL);
+            const intl = callback(1114).intl;
+            return intl.string(callback(1114).t.xRygZL);
           };
           formatResult = intl14.format(H97H4S, obj11);
         } else if (tmp42.TWITTER_FOLLOWERS_COUNT === connectionMetadataField) {
@@ -231,8 +231,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl10 = require("../../intl/index.native.tsx").intl;
           const obj15 = { platformQuantityHook: null };
           obj15[0] = function platformQuantityHook() {
-            const intl = callback(1233).intl;
-            return intl.string(callback(1233).t.slSQuB);
+            const intl = callback(1114).intl;
+            return intl.string(callback(1114).t.slSQuB);
           };
           formatResult = intl10.format(H97H4S, obj15);
         } else {
@@ -251,8 +251,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl8 = require("../../intl/index.native.tsx").intl;
           const obj17 = { platformQuantityHook: null };
           obj17[0] = function platformQuantityHook() {
-            const intl = callback(1233).intl;
-            return intl.string(callback(1233).t.TEEYwa);
+            const intl = callback(1114).intl;
+            return intl.string(callback(1114).t.TEEYwa);
           };
           formatResult = intl8.format(H97H4S, obj17);
         } else if (tmp26.EBAY_POSITIVE_FEEDBACK_PERCENTAGE === connectionMetadataField) {
@@ -287,8 +287,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl4 = require("../../intl/index.native.tsx").intl;
           const obj21 = { platformQuantityHook: null };
           obj21[0] = function platformQuantityHook() {
-            const intl = callback(1233).intl;
-            return intl.string(callback(1233).t.uv7ety);
+            const intl = callback(1114).intl;
+            return intl.string(callback(1114).t.uv7ety);
           };
           formatResult = intl4.format(H97H4S, obj21);
         } else if (tmp17.TIKTOK_FOLLOWER_COUNT === connectionMetadataField) {

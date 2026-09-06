@@ -1,10 +1,10 @@
 // discord_app/design/void/BetaTag/native/BetaTag.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import keys from "../../../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import keys from "../../../../ConstantsIOS.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Gradients } from "../../../../modules/colors/native/ColorConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";

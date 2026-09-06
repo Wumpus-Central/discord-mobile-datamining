@@ -264,7 +264,7 @@ export default function ShareScreen(sharedContent) {
                                     c4 = 3;
                                     return { value: false, done: true };
                                   } else {
-                                    obj1 = callback(13880);
+                                    obj1 = callback(13902);
                                     obj1 = { attachments: null, channel: null, comment: null };
                                     obj1[0] = closure_1_1;
                                     obj1[1] = channel;
@@ -297,7 +297,7 @@ export default function ShareScreen(sharedContent) {
                                 obj3[2] = channel.type;
                                 obj3[3] = closure_1_1.length;
                                 obj3[4] = closure_1_2;
-                                callback2(695).track(closure_3_11.SHARE_MESSAGE_SENT, obj3);
+                                callback2(1242).track(closure_3_11.SHARE_MESSAGE_SENT, obj3);
                                 c4 = 3;
                                 return { value: "HermesInternal", done: null };
                               }

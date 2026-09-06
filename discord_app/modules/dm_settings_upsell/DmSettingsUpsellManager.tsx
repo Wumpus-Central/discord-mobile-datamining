@@ -1,9 +1,9 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellManager.tsx
 import set from "../../../_runtime/00002_set.js";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../Constants.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import _modDef17175 from "DmSettingsUpsellActionCreators.native.tsx";
+import _modDef17341 from "DmSettingsUpsellActionCreators.native.tsx";
 
 const Endpoints = ME.Endpoints;
 initializeDefault;
@@ -15,7 +15,7 @@ class DmSettingsUpsellManager extends tmp2 {
   }
 }
 DmSettingsUpsellManager.prototype["handleDmSettingsUpsellShow"] = function handleDmSettingsUpsellShow(guildId) {
-  const result = _modDef17175.openDmSettingsUpsellModal(guildId.guildId);
+  const result = _modDef17341.openDmSettingsUpsellModal(guildId.guildId);
 };
 const dmSettingsUpsellManager = new DmSettingsUpsellManager();
 let result = set.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");

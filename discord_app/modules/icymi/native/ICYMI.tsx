@@ -8,8 +8,8 @@ import CircleInformationIcon from "../../../design/components/Icon/native/redesi
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
 import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
+import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import generateHydrationId from "../ICYMIUtils.tsx";
 import FiltersHorizontalIcon from "../../../design/components/Icon/native/redesign/generated/FiltersHorizontalIcon.tsx";
@@ -61,9 +61,9 @@ function InfoButton() {
     size: "sm",
     icon: callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
     onPress() {
-      callback2(8641).itemInteracted("info_button", "info_button", "press_info_button");
-      const obj = callback2(8641);
-      callback2(8641).feedPageActioned({
+      callback2(8351).itemInteracted("info_button", "info_button", "press_info_button");
+      const obj = callback2(8351);
+      callback2(8351).feedPageActioned({
         actionParameters: {
           actionGestureType: "press",
           actionTargetElement: "info_button",
@@ -71,8 +71,8 @@ function InfoButton() {
           actionDestinationType: null,
         },
       });
-      const obj2 = callback2(8641);
-      callback(16303).pushICYMIInfoModal({ extendedOnboarding: true });
+      const obj2 = callback2(8351);
+      callback(16465).pushICYMIInfoModal({ extendedOnboarding: true });
     },
   });
 }
@@ -89,13 +89,13 @@ function ICYMIHeaderTextWrapper() {
         accessibilityRole: "header",
         children: null,
       };
-      const intl = callback(1233).intl;
-      obj[4] = intl.string(callback(1233).t.SY4sdZ);
-      const items = [callback2(callback(4474).Text, obj)];
+      const intl = callback(1114).intl;
+      obj[4] = intl.string(callback(1114).t.SY4sdZ);
+      const items = [callback2(callback(4556).Text, obj)];
       obj = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
-      const intl2 = callback(1233).intl;
-      obj[3] = intl2.string(callback(1233).t.Ac2OZA);
-      items[1] = callback2(callback(4474).Text, obj);
+      const intl2 = callback(1114).intl;
+      obj[3] = intl2.string(callback(1114).t.Ac2OZA);
+      items[1] = callback2(callback(4556).Text, obj);
       obj[0] = items;
       return callback3(closure_15, obj);
     }, []),
@@ -214,7 +214,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       obj = { scrollToTop: null };
       obj[0] = function scrollToTop() {
-        callback(7614).showForLaterModal(callback(7615).SavedMessageSortTypes.BOOKMARK);
+        callback(7859).showForLaterModal(callback(7860).SavedMessageSortTypes.BOOKMARK);
       };
       ref1.current = obj;
     }

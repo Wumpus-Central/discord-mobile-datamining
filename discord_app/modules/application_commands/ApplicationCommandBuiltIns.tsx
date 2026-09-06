@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandBuiltIns.tsx
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import useCanStartPrivateThread from "../threads/ThreadHooks.tsx";
-import _modDef8171 from "../../actions/ChangeNicknameActionCreators.tsx";
+import _modDef9303 from "../../actions/ChangeNicknameActionCreators.tsx";
 import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import closure_5 from "../../stores/PermissionStore.tsx";
@@ -489,7 +489,7 @@ obj13.execute = function execute(arr) {
       if (str == null) {
         str = "";
       }
-      const obj = _modDef8171;
+      const obj = _modDef9303;
       const id = guild.id;
       const id2 = channel.id;
       if (!str) {
@@ -645,15 +645,15 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             if (tmp11 == null) {
               closure_3 = "";
             }
-            obj1 = callback(8173);
-            let obj2 = callback(8174);
+            obj1 = callback(9305);
+            let obj2 = callback(9306);
             c6 = 2;
             c7 = 1;
             obj2 = { value: null, done: false };
             obj2[0] = obj1.createThread(
               channel,
               dependencyMap,
-              callback(689).ChannelTypes.PUBLIC_THREAD,
+              callback(1094).ChannelTypes.PUBLIC_THREAD,
               obj2.getAutoArchiveDuration(channel, null),
               "Slash Command",
             );
@@ -669,11 +669,11 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
           return obj;
         } else {
           id = arg1;
-          const obj8 = channel(7211);
+          const obj8 = channel(7456);
           id = id.id;
           const obj3 = { location: null };
           obj3[0] = constants.THREAD_CREATION;
-          obj8.sendMessage(id, channel(7437).parse(id, closure_3), true, obj3);
+          obj8.sendMessage(id, channel(7682).parse(id, closure_3), true, obj3);
           c7 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -1733,8 +1733,8 @@ obj32.execute = function execute(arr, channel) {
     }
     const NumberResult = Number(num);
     const NumberResult1 = Number(num2);
-    size(6101).startDiceRoll(channel.id, NumberResult, NumberResult1);
-    const obj = size(6101);
+    size(7245).startDiceRoll(channel.id, NumberResult, NumberResult1);
+    const obj = size(7245);
   }
 };
 items[sum10 + 1] = obj32;

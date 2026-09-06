@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/appearance/native/FontScaleStore.tsx
 import enforcingDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeFontModule.tsx";
 import set from "../../../../utils/PlatformUtils.tsx";
-import identity from "../../../../../_runtime/00697_identity.js";
+import identity from "../../../../../_runtime/01244_identity.js";
 
 if (set.isAndroid()) {
   let customFontScale = enforcingDefault.getCustomFontScale();

@@ -5,8 +5,8 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import useCheckboxA11yNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import renderDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import registerAssetDefault from "../../../../../_runtime/17602_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/17603_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/17762_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/17763_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { AllChannelAccessOptions } from "../../edit_state/GuildRoleSubscriptionEditStore.tsx";
 import { Fonts } from "../../../../Constants.tsx";
@@ -32,7 +32,7 @@ function Row(arg0) {
   }
   obj[3] = tmp7;
   obj[4] = onPress;
-  obj = { size: tmp2(1296).Icon.Sizes.MEDIUM, source: icon };
+  obj = { size: tmp2(1178).Icon.Sizes.MEDIUM, source: icon };
   const items = [callback(Button.Icon, obj), ,];
   const items1 = [tmp.rowLabel];
   let rowLabelSelected = selected;

@@ -137,11 +137,11 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
     accessibilityRole: "header",
     children: null,
   };
-  const intl = availableGuilds(1233).intl;
-  obj[3] = intl.string(availableGuilds(1233).t.Fo0g9x);
-  obj[1] = callback(availableGuilds(4474).Text, obj);
+  const intl = availableGuilds(1114).intl;
+  obj[3] = intl.string(availableGuilds(1114).t.Fo0g9x);
+  obj[1] = callback(availableGuilds(4556).Text, obj);
   obj[2] = callback(memo, obj);
-  obj[3] = callback(availableGuilds(8116).BottomSheetFlashList, {
+  obj[3] = callback(availableGuilds(8874).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return closure_1_6(availableGuilds(closure_1_2[18]).FormDivider, { iconPush: true, style: divider.divider });
     },
@@ -173,5 +173,5 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       return closure_1_6(closure_1_9, obj);
     },
   });
-  return callback(availableGuilds(5631).BottomSheet, obj);
+  return callback(availableGuilds(7150).BottomSheet, obj);
 }

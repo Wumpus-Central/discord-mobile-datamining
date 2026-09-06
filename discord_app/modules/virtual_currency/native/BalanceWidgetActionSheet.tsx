@@ -71,8 +71,8 @@ let closure_12 = createCacheKey.createStyles((color) => {
   obj4 = {
     width: 32,
     height: 32,
-    backgroundColor: tmp(709).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
-    borderRadius: tmp(709).radii.round,
+    backgroundColor: tmp(576).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
+    borderRadius: tmp(576).radii.round,
     justifyContent: "center",
     alignItems: "center",
   };

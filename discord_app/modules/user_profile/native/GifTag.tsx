@@ -6,7 +6,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../_runtime/00686_n.js";
+import importDefaultResult from "../../../../_runtime/00672_n.js";
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;

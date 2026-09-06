@@ -46,10 +46,10 @@ function PersonalWidgetShowMoreButton() {
     accessibilityState: { expanded: isExpanded },
     children: null,
   };
-  const intl = tmp(1233).intl;
-  let t = tmp(1233).t;
+  const intl = tmp(1114).intl;
+  let t = tmp(1114).t;
   obj = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) };
-  t = tmp5(tmp(4474).Text, obj);
+  t = tmp5(tmp(4556).Text, obj);
   obj[4] = t;
   closure_10(closure_5, obj);
 }
@@ -153,8 +153,8 @@ function CoverSection(section) {
       };
       obj3[0] = closure_6.absoluteFill;
       obj3[1] = toggleAnimation;
-      const intl = tmp25(1233).intl;
-      obj3[3] = intl.string(tmp25(1233).t.MxXgrL);
+      const intl = tmp25(1114).intl;
+      obj3[3] = intl.string(tmp25(1114).t.MxXgrL);
       const obj4 = { source: null, style: null, resizeMode: "cover" };
       obj4[0] = source;
       obj4[1] = closure_6.absoluteFill;
@@ -178,7 +178,7 @@ function CoverSection(section) {
         obj6[0] = closure_12;
         obj6[1] = closure_13;
         obj6[2] = tmp15.absoluteFill;
-        tmp24Result = tmp24(tmp14(4941), obj6);
+        tmp24Result = tmp24(tmp14(4987), obj6);
       } else {
         tmp24Result = null;
       }
@@ -189,7 +189,7 @@ function CoverSection(section) {
     if (showGifTag) {
       const obj7 = { style: null };
       obj7[0] = tmp.gifTag;
-      tmp24Result1 = tmp24(tmp14(8571), obj7);
+      tmp24Result1 = tmp24(tmp14(8255), obj7);
     }
     items2[3] = tmp24Result1;
     obj2[1] = items2;
@@ -275,13 +275,13 @@ function UserProfilePersonalWidgetCardContent(style) {
   if (disableInteraction === undefined) {
     disableInteraction = false;
   }
-  let obj = userId(586);
+  let obj = userId(504);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getId() === userId);
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = callback3();
   const tmp5 = disableInteraction;
-  obj[1] = callback2(userId(8107).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback2(userId(8662).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -291,7 +291,7 @@ function UserProfilePersonalWidgetCardContent(style) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(8808), obj);
+    tmp4Result = tmp4(tmp5(8663), obj);
   }
   obj[3] = tmp4Result;
   obj1 = { style: tmp.sectionsContainer, children: null };
@@ -323,7 +323,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp4Result;
   obj1[1] = items1;
   obj[4] = closure_11(closure_7, obj1);
-  return callback2(disableInteraction(6009), obj);
+  return callback2(disableInteraction(7207), obj);
 }
 ({ Pressable: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);

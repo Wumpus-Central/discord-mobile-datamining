@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/application_view/Header.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4217 from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../../../reanimated/ReanimatedRexport.tsx";
 import hasFetchedColorsDefault from "../../../../avatar/useAvatarColor.tsx";
 import AppLauncherBackButtonDefault from "../../base_components/AppLauncherBackButton.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -114,16 +114,16 @@ export default function Header(application) {
   dependencyMap = undefined;
   let currentUser2;
   ({ onPressBack, onAddAppMenuClick } = application);
-  let obj = scrollOffsetY(586);
+  let obj = scrollOffsetY(504);
   let items = [closure_5];
   importDefault = obj.useStateFromStores(items, () => closure_5.entrypoint());
   const tmp3 = callback3();
   let appLauncherIconSource = null;
   if (null != application) {
-    let tmpResult = tmp(11852);
+    let tmpResult = tmp(12051);
     appLauncherIconSource = tmpResult.getAppLauncherIconSource(application);
   }
-  tmpResult = tmp(4197);
+  tmpResult = tmp(4262);
   let str = tmpResult.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW);
   let tmp7 = appLauncherIconSource;
   if (typeof appLauncherIconSource !== "number") {
@@ -141,7 +141,7 @@ export default function Header(application) {
     obj = { iconSource: null, iconBorderRadius: null, iconSize: 72 };
     obj[0] = appLauncherIconSource;
     obj[1] = xl;
-    let tmp12 = callback(tmp5(11857), obj);
+    let tmp12 = callback(tmp5(12056), obj);
     let tmp13 = callback;
   } else {
     obj = { style: null };
@@ -158,12 +158,12 @@ export default function Header(application) {
     obj[0] = items1;
     return obj;
   };
-  const tmpResult1 = scrollOffsetY(4217);
-  fn.__closure = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
+  const tmpResult1 = scrollOffsetY(4296);
+  fn.__closure = { interpolate: scrollOffsetY(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   fn.__workletHash = 2572905048492;
   fn.__initData = closure_13;
   const animatedStyle = tmpResult1.useAnimatedStyle(fn);
-  obj1 = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
+  obj1 = { interpolate: scrollOffsetY(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   const fn2 = function n() {
     let obj = { transform: null };
     obj = { translateY: scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items, items1, "clamp") };
@@ -173,12 +173,12 @@ export default function Header(application) {
     obj[0] = items2;
     return obj;
   };
-  const tmpResult2 = scrollOffsetY(4217);
-  fn2.__closure = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
+  const tmpResult2 = scrollOffsetY(4296);
+  fn2.__closure = { interpolate: scrollOffsetY(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   fn2.__workletHash = 8190094903650;
   fn2.__initData = closure_14;
   const animatedStyle1 = tmpResult2.useAnimatedStyle(fn2);
-  const obj2 = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
+  const obj2 = { interpolate: scrollOffsetY(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   const fn3 = function o() {
     let obj = { transform: null, opacity: null };
     obj = { translateY: scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items, [16, 0], "clamp") };
@@ -190,40 +190,40 @@ export default function Header(application) {
     obj[1] = scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items2, [0, 1], "clamp");
     return obj;
   };
-  const tmpResult3 = scrollOffsetY(4217);
-  fn3.__closure = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
+  const tmpResult3 = scrollOffsetY(4296);
+  fn3.__closure = { interpolate: scrollOffsetY(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   fn3.__workletHash = 14190901941859;
   fn3.__initData = closure_15;
   const animatedStyle2 = tmpResult3.useAnimatedStyle(fn3);
-  let obj3 = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
+  let obj3 = { interpolate: scrollOffsetY(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   const fn4 = function n() {
     const obj = { opacity: scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items, [0, 0.5], "clamp") };
     items = [52.5, closure_1_11];
     return obj;
   };
-  const tmpResult4 = scrollOffsetY(4217);
-  fn4.__closure = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
+  const tmpResult4 = scrollOffsetY(4296);
+  fn4.__closure = { interpolate: scrollOffsetY(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   fn4.__workletHash = 9589752719246;
   fn4.__initData = closure_16;
   let str2 = "";
   const animatedStyle3 = tmpResult4.useAnimatedStyle(fn4);
   if (null != application) {
-    str2 = tmp(8157).getSectionName(application);
-    const tmpResult5 = tmp(8157);
+    str2 = tmp(9289).getSectionName(application);
+    const tmpResult5 = tmp(9289);
   }
   let hasApplicationFlagResult = null != application;
   if (hasApplicationFlagResult) {
     hasApplicationFlagResult = "flags" in application;
   }
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = tmp(8449).hasApplicationFlag(application, constants.EMBEDDED);
-    const tmpResult6 = tmp(8449);
+    hasApplicationFlagResult = tmp(8856).hasApplicationFlag(application, constants.EMBEDDED);
+    const tmpResult6 = tmp(8856);
   }
   dependencyMap = hasApplicationFlagResult;
   currentUser2 = currentUser.getCurrentUser();
   const obj5 = { style: items1, pointerEvents: "box-none", children: null };
   items1 = [tmp3.headerContainer, animatedStyle];
-  let obj4 = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
+  let obj4 = { interpolate: scrollOffsetY(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   let items2 = [tmp3.expandedHeaderBanner, { backgroundColor: tmp6Result }];
   const items3 = [
     tmp13(currentUser2, { style: items2, pointerEvents: "none", children: tmp13(currentUser2, obj7) }),
@@ -233,24 +233,24 @@ export default function Header(application) {
   items4 = [tmp3.collapsedHeaderBanner, { backgroundColor: tmp6Result }, animatedStyle1];
   const items5 = [tmp3.collapsedHeaderBannerOverlay, animatedStyle3];
   const items6 = [
-    tmp13(_modDef4217.View, { style: items5, pointerEvents: "none" }),
+    tmp13(_modDef4296.View, { style: items5, pointerEvents: "none" }),
     tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }),
     ,
   ];
   const obj6 = { style: items2, pointerEvents: "none", children: tmp13(currentUser2, obj7) };
   const tmp23 = currentUser2;
-  items6[2] = tmp13(_modDef4217.View, {
+  items6[2] = tmp13(_modDef4296.View, {
     style: animatedStyle2,
     pointerEvents: "none",
-    children: tmp13(scrollOffsetY(4474).Heading, {
+    children: tmp13(scrollOffsetY(4556).Heading, {
       variant: "heading-lg/bold",
       color: "text-overlay-light",
       children: str2,
     }),
   });
-  items6[3] = tmp13(scrollOffsetY(1296).Spacer, { size: 32, pointerEvents: "none" });
+  items6[3] = tmp13(scrollOffsetY(1178).Spacer, { size: 32, pointerEvents: "none" });
   obj8[2] = items6;
-  items3[1] = callback2(_modDef4217.View, obj8);
+  items3[1] = callback2(_modDef4296.View, obj8);
   let tmp22Result = null;
   if (null != application) {
     tmp22Result = null;
@@ -265,7 +265,7 @@ export default function Header(application) {
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1.5,
       };
-      obj11[2] = tmp5(4422);
+      obj11[2] = tmp5(4504);
       obj11[3] = function onPress() {
         let obj = callback(_undefined[22]);
         obj = { application_id: scrollOffsetY.id, source: callback };
@@ -291,21 +291,21 @@ export default function Header(application) {
         tmp4Result = tmp4(tmp[25]);
         tmp4Result.presentLinkCopied();
       };
-      const intl = tmp(1233).intl;
-      obj11[4] = intl.string(tmp(1233).t.XWDihq);
-      const items7 = [tmp13(tmp(8018).IconButton, obj11)];
+      const intl = tmp(1114).intl;
+      obj11[4] = intl.string(tmp(1114).t.XWDihq);
+      const items7 = [tmp13(tmp(8097).IconButton, obj11)];
       const obj12 = { application: null, onAddAppMenuClick: null };
       obj12[0] = application;
       obj12[1] = onAddAppMenuClick;
-      items7[1] = tmp13(tmp5(11933), obj12);
+      items7[1] = tmp13(tmp5(12133), obj12);
       obj10[1] = items7;
       tmp22Result = tmp22(tmp23, obj10);
     }
-    tmpResult7 = tmp(8157);
+    tmpResult7 = tmp(9289);
   }
   items3[2] = tmp22Result;
   obj5[2] = items3;
-  return callback2(_modDef4217.View, obj5);
+  return callback2(_modDef4296.View, obj5);
 }
 export const SHEET_HANDLE_CONTAINER_HEIGHT = 16;
 export const EXPANDED_HEADER_HEIGHT = 161;

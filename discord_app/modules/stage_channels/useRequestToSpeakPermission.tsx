@@ -18,8 +18,8 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
     items1,
   );
   let obj = initialize;
-  const canEveryoneRoleResult = stateFromStores(4125).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4125);
+  const canEveryoneRoleResult = stateFromStores(4204).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(4204);
   [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

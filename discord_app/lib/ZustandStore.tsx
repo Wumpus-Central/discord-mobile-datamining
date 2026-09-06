@@ -1,6 +1,6 @@
 // discord_app/lib/ZustandStore.tsx
 import set from "../../_runtime/00002_set.js";
-import { identity } from "../../_runtime/00697_identity.js";
+import { identity } from "../../_runtime/01244_identity.js";
 
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;
@@ -11,7 +11,7 @@ export const createZustandStore = function createZustandStore(arg0) {
   const _require = arg0;
   let obj = identity;
   dependencyMap = obj.createWithEqualityFn(
-    require("../../_runtime/04345_createJSONStorage.js").subscribeWithSelector((arg0, arg1, arg2) => {
+    require("../../_runtime/04430_createJSONStorage.js").subscribeWithSelector((arg0, arg1, arg2) => {
       let callback = arg0;
       return callback(
         (arg0) => {

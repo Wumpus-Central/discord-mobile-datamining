@@ -22,11 +22,11 @@ export const formatPlanInterval = function formatPlanInterval(first2) {
   const interval = first2.interval;
   const intl = getSystemLocale.intl;
   if (SubscriptionIntervalTypes.DAY === interval) {
-    let cuSp8Q = tmp(1233).t["3rUmPQ"];
+    let cuSp8Q = tmp(1114).t["3rUmPQ"];
   } else if (tmp3.MONTH === interval) {
-    cuSp8Q = tmp(1233).t.zuN545;
+    cuSp8Q = tmp(1114).t.zuN545;
   } else if (tmp3.YEAR === interval) {
-    cuSp8Q = tmp(1233).t.cuSp8Q;
+    cuSp8Q = tmp(1114).t.cuSp8Q;
   }
   return intl.format(cuSp8Q, { count: first2.interval_count });
 };

@@ -55,10 +55,10 @@ export const canSeeCreatorMonetizationOnboardingV2Upsell = function canSeeCreato
     if (null == currentUser) {
       return false;
     } else {
-      const guildRoleSubscriptionSettingsVisibility = guild(6116).getGuildRoleSubscriptionSettingsVisibility(guild);
+      const guildRoleSubscriptionSettingsVisibility = guild(7260).getGuildRoleSubscriptionSettingsVisibility(guild);
       let tmp5 =
-        guildRoleSubscriptionSettingsVisibility === guild(6116).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
-      const obj = guild(6116);
+        guildRoleSubscriptionSettingsVisibility === guild(7260).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
+      const obj = guild(7260);
       const tmp7 = isGuildOwner(guild, currentUser);
       if (tmp5) {
         tmp5 = tmp7;

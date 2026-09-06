@@ -1,6 +1,6 @@
 // discord_app/modules/sentry/addSentryBreadcrumb.native.tsx
 import set from "../../../_runtime/00002_set.js";
-import addBreadcrumbAll from "../../../_runtime/00807_addBreadcrumb.js";
+import addBreadcrumbAll from "../../../_runtime/00675_addBreadcrumb.js";
 
 const result = set.fileFinishedImporting("modules/sentry/addSentryBreadcrumb.native.tsx");
 

@@ -1,6 +1,6 @@
 // discord_app/modules/nuf/native/components/DiscoverabilityModal.tsx
-import keys from "../../../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import keys from "../../../../ConstantsIOS.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import ContactSyncNameInputDefault from "../../../contact_sync/native/components/ContactSyncNameInput.tsx";
@@ -61,9 +61,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   callback = React.useCallback((arg0) => {
-    const result = allowPhone(12478).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12478);
-    const result1 = allowPhone(12478).closeDiscoverabilityModal(false);
+    const result = allowPhone(12704).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12704);
+    const result1 = allowPhone(12704).closeDiscoverabilityModal(false);
   }, []);
   obj = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();
@@ -82,7 +82,7 @@ class DiscoverabilityModal {
         let obj = {};
         obj = {
           ignoreKeyboard: true,
-          impressionName: callback(500).ImpressionNames.DISCOVERABILITY,
+          impressionName: callback(1250).ImpressionNames.DISCOVERABILITY,
           fullscreen: true,
           headerLeft() {
             return null;
@@ -94,10 +94,10 @@ class DiscoverabilityModal {
             return callback(closure_9, {});
           },
         };
-        obj[callback(688).DiscoverabilityScenes.LANDING] = obj;
+        obj[callback(1093).DiscoverabilityScenes.LANDING] = obj;
         obj = {
           ignoreKeyboard: true,
-          impressionName: callback(500).ImpressionNames.DISCOVERABILITY,
+          impressionName: callback(1250).ImpressionNames.DISCOVERABILITY,
           fullscreen: true,
           headerTitle() {
             return null;
@@ -106,7 +106,7 @@ class DiscoverabilityModal {
             return callback(closure_10, {});
           },
         };
-        obj[callback(688).DiscoverabilityScenes.NAME] = obj;
+        obj[callback(1093).DiscoverabilityScenes.NAME] = obj;
         return obj;
       }, []),
       initialRouteName: require("keys").DiscoverabilityScenes.LANDING,

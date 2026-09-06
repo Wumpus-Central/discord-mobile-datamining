@@ -1,14 +1,14 @@
 // discord_common/js/packages/flux/PersistedStore.tsx
 import isTracingDefault from "../app-start-performance/AppStartPerformance.tsx";
 import Storage3 from "../storage/Storage.tsx";
-import throttleDefault from "../../../../_runtime/00632_throttle.js";
+import throttleDefault from "../../../../_runtime/00550_throttle.js";
 import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { Store } from "Store.tsx";
 import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 let closure_3 = ["_state", "_version"];
-let closure_6 = { _state: "Array", _version: "PX_16" };
+let closure_6 = { _state: "hash", _version: "call" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {

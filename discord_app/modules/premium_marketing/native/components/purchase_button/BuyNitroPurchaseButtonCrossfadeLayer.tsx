@@ -18,7 +18,7 @@ let result = require("set").fileFinishedImporting(
 export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
   ({ snapshot, onDone } = arg0);
   let sharedValue;
-  let obj = onDone(4217);
+  let obj = onDone(4296);
   sharedValue = obj.useSharedValue(1);
   let fn = function _() {
     return { opacity: sharedValue.get() };
@@ -27,7 +27,7 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
   fn.__workletHash = 10244393639035;
   fn.__initData = closure_7;
   const items = [sharedValue, onDone];
-  const animatedStyle = onDone(4217).useAnimatedStyle(fn);
+  const animatedStyle = onDone(4296).useAnimatedStyle(fn);
   const effect = React.useEffect(() => {
     let obj = onDone(closure_1_2[5]);
     const fn = function t(arg0) {
@@ -44,10 +44,10 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
       obj.withTiming(0, onDone(closure_1_2[6]).timingStandard, "respect-motion-settings", fn),
     );
   }, items);
-  obj = { style: items1, pointerEvents: "none", children: jsx(onDone(4929).Button, obj) };
+  obj = { style: items1, pointerEvents: "none", children: jsx(onDone(4975).Button, obj) };
   items1 = [StyleSheet.absoluteFill, animatedStyle];
   obj = { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "Boolean" };
-  return jsx(sharedValue(4217).View, {
+  return jsx(sharedValue(4296).View, {
     text: snapshot.ctaText,
     variant: snapshot.variant,
     size: "lg",

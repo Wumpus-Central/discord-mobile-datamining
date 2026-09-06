@@ -7,7 +7,7 @@ import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
-import registerAssetDefault from "../../../../../_runtime/10140_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10031_registerAsset.js";
 import id from "../CallStateHooks.tsx";
 import idDefault from "../CallStateHooks.tsx";
 import OngoingCallStatusLabelDefault from "../components/OngoingCallStatusLabel.tsx";
@@ -32,10 +32,10 @@ function PrivateChannelSubtitle(channel) {
   if (tmp6Result) {
     obj = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
     obj[0] = tmp.subtitle;
-    tmp6Result = tmp6(tmp7(4474).Text, obj);
+    tmp6Result = tmp6(tmp7(4556).Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === tmp7(13687).CallStates.CONNECTED;
+  tmp6Result = state === tmp7(13795).CallStates.CONNECTED;
   if (tmp6Result) {
     obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;
@@ -82,8 +82,8 @@ class VoiceChannelHeader {
           let obj = channel(closure_1_2[16]);
           obj = { source: closure_1_9.VOICE_CHANNEL, targetApplicationId: null };
           let applicationId;
-          if (applicationId != null) {
-            applicationId = applicationId.applicationId;
+          if (lib != null) {
+            applicationId = lib.applicationId;
           }
           obj[1] = applicationId;
           return obj.showInstantInviteActionSheet(channel, obj);
@@ -104,8 +104,7 @@ class VoiceChannelHeader {
       name = jsx(PrivateChannelSubtitle, obj1);
       class E {
         constructor() {
-          obj = require("coerceMainRoute");
-          return obj.navigateToNewGroupDM(channel.id, closure_1_8.CHANNEL_CALL);
+          return require("getGroupDMAddMembersAction")(channel.id, closure_1_8.CHANNEL_CALL);
         }
       }
     }

@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx
 import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import useDefaultAppLauncherWidth from "../../../hooks/useDefaultAppLauncherWidth.tsx";
 import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import useDefaultAppLauncherWidth from "../../../hooks/useDefaultAppLauncherWidth.tsx";
 import getPreviewVideoAssetUrlDefault from "../../../../../activities/utils/getPreviewVideoAssetUrl.tsx";
 import closure_3 from "../../../../../a11y/AccessibilityStore.tsx";
 import { DEFAULT_CONTENT_PADDING } from "../../../AppLauncherNativeConstants.tsx";
@@ -29,10 +29,10 @@ export default function HeroMedia(arg0) {
   }
   const rounded = Math.floor((9 * contentWidth2) / 16);
   const tmp7 = useEmbeddedActivityBackgroundDefault({ applicationId, size: contentWidth2, names: ["embedded_cover"] });
-  let tmp2Result = tmp2(586);
+  let tmp2Result = tmp2(504);
   const items = [closure_3];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
-  tmp2Result = tmp2(5968);
+  tmp2Result = tmp2(7168);
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
   let prop;
   if (getOrFetchApplication != null) {
@@ -74,7 +74,7 @@ export default function HeroMedia(arg0) {
         obj[3] = rounded;
         obj[4] = contentWidth2;
         obj[5] = tmp7.url;
-        const intl = tmp2(1233).intl;
+        const intl = tmp2(1114).intl;
         let str3;
         if (getOrFetchApplication != null) {
           str3 = getOrFetchApplication.name;
@@ -84,7 +84,7 @@ export default function HeroMedia(arg0) {
         }
         obj1 = { applicationName: null };
         obj1[0] = str3;
-        obj[7] = intl.formatToPlainString(tmp2(1233).t["Af+EQD"], obj1);
+        obj[7] = intl.formatToPlainString(tmp2(1114).t["Af+EQD"], obj1);
         const items1 = [tmp.mediaBackground, ,];
         const obj2 = { maxHeight: null };
         obj2[0] = rounded;

@@ -1,6 +1,6 @@
 // discord_app/modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx
-import setDefault from "../../../utils/Durations.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 import Button from "../../../design/void/native.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";

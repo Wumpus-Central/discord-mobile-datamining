@@ -1,8 +1,8 @@
 // discord_app/modules/multi_account/MultiAccountStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setSecondaryTokenAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setSecondaryTokenAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
 import MAX_ACCOUNTS2 from "Constants.tsx";
 import isStaffDefault from "../user/isStaffFromRawUser.tsx";
 import calculatePositionDeltas from "../../utils/DragAndDropUtils.tsx";

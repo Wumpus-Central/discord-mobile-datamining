@@ -1,7 +1,7 @@
 // discord_app/actions/RTCLatencyTestActionCreators.tsx
 import set from "../../_runtime/00002_set.js";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const result = set.fileFinishedImporting("actions/RTCLatencyTestActionCreators.tsx");
 

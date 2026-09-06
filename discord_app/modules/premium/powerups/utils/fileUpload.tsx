@@ -16,7 +16,7 @@ export const useShouldShowFileUploadRollback = function useShouldShowFileUploadR
   );
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4368).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4453).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   const obj = initialize;
   const tmp5 = usePowerupActiveStatusDefault(guildId, tmp4);

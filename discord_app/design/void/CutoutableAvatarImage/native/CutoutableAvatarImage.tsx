@@ -1,12 +1,12 @@
 // discord_app/design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx
 import timestampDefault from "../../../../modules/debug/Logger.tsx";
-import v1 from "../../../../../_runtime/00511_v1.js";
 import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import v1 from "../../../../../_runtime/01256_v1.js";
 import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/08453_inlineStyles.js";
 import SolidCutoutDefault from "../../../components/Icon/native/ClipView.tsx";
-import inlineStyles from "../../../../../_runtime/08254_inlineStyles.js";
-import inlineStylesDefault from "../../../../../_runtime/08254_inlineStyles.js";
 import getChannelIconURL from "../../../../modules/channel/getChannelIcon.tsx";
 import getReactNativeSVGImageSourceDefault from "../../../../modules/svg/native/getReactNativeSVGImageSource.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -32,7 +32,7 @@ function StaticNativeCutoutAvatarImage(cutout) {
 function AnimatedNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
   ({ source, style, imageStyle } = cutout);
-  obj = cutout(4217);
+  obj = cutout(4296);
   const fn = function h() {
     const size = cutout;
     if (cutout.shape === cutout(closure_1_2[8]).CutoutShape.RoundedRect) {
@@ -61,7 +61,7 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
     const cutouts = [obj];
     return { cutouts };
   };
-  obj = { cutout, CutoutShape: cutout(8109).CutoutShape, withSpring: cutout(4928).withSpring, CHANNEL_SPRING_CONFIG };
+  obj = { cutout, CutoutShape: cutout(8813).CutoutShape, withSpring: cutout(4974).withSpring, CHANNEL_SPRING_CONFIG };
   fn.__closure = obj;
   fn.__workletHash = 12529564164821;
   fn.__initData = closure_15;
@@ -76,7 +76,7 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
     }),
   };
   items = [obj.image, imageStyle];
-  return callback(cutout(8109).ClipViewAnimated, obj);
+  return callback(cutout(8813).ClipViewAnimated, obj);
 }
 function NativeCutoutAvatarImage(animate) {
   if (true === animate.animate) {

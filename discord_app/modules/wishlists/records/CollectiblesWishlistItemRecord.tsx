@@ -14,11 +14,11 @@ function createCollectiblesItemFromServerResponse(collectibles_item) {
   const type = collectibles_item.type;
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     return closure_2.fromServer(collectibles_item);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (tmp(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
     return closure_5.fromServer(collectibles_item);
-  } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === type) {
+  } else if (tmp(1889).CollectiblesItemType.NAMEPLATE === type) {
     return closure_4.fromServer(collectibles_item);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+  } else if (tmp(1889).CollectiblesItemType.PROFILE_FRAME === type) {
     return closure_6.fromServer(collectibles_item);
   } else {
     return null;
@@ -87,18 +87,18 @@ prototype["fromSKU"] = function fromSKU(id) {
     obj[1] = SKUProductLines.COLLECTIBLES;
     obj[2] = id.name;
     obj[3] = id;
-    const tmp6 = new prototype(obj);
+    const tmp8 = new prototype(obj);
     let item;
     if ("single" === tmp.type) {
       item = tmp.item;
     }
-    tmp6.collectiblesItem = item;
+    tmp8.collectiblesItem = item;
     let items;
     if ("bundle" === tmp.type) {
       items = tmp.items;
     }
-    tmp6.bundleItems = items;
-    return tmp6;
+    tmp8.bundleItems = items;
+    return tmp8;
   }
 };
 const result = require("set").fileFinishedImporting("modules/wishlists/records/CollectiblesWishlistItemRecord.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/frames/FramesStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import sum from "../../../discord_common/js/shared/Constants.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
 import ActivityPanelModes2 from "../activities/panel/ActivityPanelConstants.tsx";
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import FrameLayoutModes from "FramesConstants.tsx";

@@ -1,7 +1,7 @@
 // discord_app/modules/libdiscore/timerUtils.tsx
 import set from "../../../_runtime/00002_set.js";
 import timestampDefault from "../debug/Logger.tsx";
-import debounceDefault from "../../../_runtime/00633_debounce.js";
+import debounceDefault from "../../../_runtime/00551_debounce.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import setTimeoutAll from "../../../discord_common/js/packages/libdiscore/mobile/js/timers.tsx";

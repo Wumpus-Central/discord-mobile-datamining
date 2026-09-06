@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileEditBannerButton.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBannerHeight.tsx";
+import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";

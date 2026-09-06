@@ -28,7 +28,7 @@ const result = require("set").fileFinishedImporting("modules/safety_hub/native/C
 
 export default function ClassificationEvidence(arg0) {
   let attachments = callback2();
-  let obj = ref(586);
+  let obj = ref(504);
   const items = [memo];
   const stateFromStores = obj.useStateFromStores(items, () => memo.getCurrentUser());
   obj1 = React;
@@ -39,21 +39,21 @@ export default function ClassificationEvidence(arg0) {
   const tmp8 = first1(React.useState({}), 2);
   first1 = tmp8[0];
   React = tmp8[1];
-  let obj2 = ref(586);
+  let obj2 = ref(504);
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
-  if (obj2.useStateFromStores(items1, () => ref(1362).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(11694));
+  if (obj2.useStateFromStores(items1, () => ref(4411).isThemeLight(id.theme))) {
+    let assetSource = resolveAssetSource(tmp11(11892));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(11695));
+    assetSource = resolveAssetSource(tmp11(11893));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
   const tmp5Result = first1(obj1.useState(first2.attachments.length), 2);
   first3 = tmp5Result[0];
   closure_8 = tmp5Result[1];
-  let tmpResult = tmp(586);
+  let tmpResult = tmp(504);
   const items2 = [closure_11];
   id = first2.id;
   const items3 = [first2.attachments, first1, assetSource];
@@ -167,7 +167,7 @@ export default function ClassificationEvidence(arg0) {
       obj[9] = uri.id;
       return obj;
     });
-    ref(8585).openMediaModal({
+    ref(8261).openMediaModal({
       initialIndex: index,
       initialSources: mapped,
       disableDownload: true,
@@ -222,7 +222,7 @@ export default function ClassificationEvidence(arg0) {
     obj = { style: null, children: null };
     obj[0] = attachments.dummyVideoAttachments;
     attachments = first2.attachments;
-    first2 = attachments.filter((filename) => ref(4671).isVideoFile(filename.filename));
+    first2 = attachments.filter((filename) => ref(4710).isVideoFile(filename.filename));
     obj[1] = first2.map((uri) => {
       closure_0 = uri;
       obj = {
@@ -243,7 +243,7 @@ export default function ClassificationEvidence(arg0) {
         },
       };
       obj = { uri: uri.url };
-      return closure_1_18(first(8415), obj, arg1);
+      return closure_1_18(first(8308), obj, arg1);
     });
     items8[1] = callback(tmp24, obj);
     obj[0] = items8;
@@ -252,11 +252,11 @@ export default function ClassificationEvidence(arg0) {
     obj1 = { ref: null, onTapImage: null, inverted: false };
     obj1[0] = ref;
     obj1[1] = callback;
-    const items9 = [callback(tmp13(11696), obj1)];
+    const items9 = [callback(tmp13(11894), obj1)];
     obj2 = { rowGenerator: null, message: null, modifyRow: null, pointerEvents: "none" };
     obj2[0] = closure_20;
-    let tmp13Result = tmp13(8798);
-    tmpResult = tmp(4738);
+    let tmp13Result = tmp13(8652);
+    tmpResult = tmp(4783);
     const obj3 = {
       id: null,
       timestamp: null,

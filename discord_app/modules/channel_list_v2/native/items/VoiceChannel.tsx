@@ -324,13 +324,13 @@ let obj1 = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borde
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   ({ selected, subtitle } = channel);
-  obj = channel(586);
+  obj = channel(504);
   const items = [closure_10];
   const items1 = [channel.guild_id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getVoiceStates(channel.guild_id), items1);
   const arr3 = useEmbeddedAppsDefault(channel);
   const items2 = [closure_7, closure_6];
-  const stateFromStoresObject = channel(586).useStateFromStoresObject(items2, () => ({
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(items2, () => ({
     locked: !closure_1_7.can(closure_1_14.CONNECT, channel),
     bypassLimit: closure_1_7.can(closure_1_14.MOVE_MEMBERS, channel),
     collapsed: closure_1_6.isCollapsed(channel.id),

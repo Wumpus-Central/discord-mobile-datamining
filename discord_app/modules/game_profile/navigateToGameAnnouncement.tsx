@@ -89,7 +89,7 @@ function _navigateToGameAnnouncement() {
                     if (null != set) {
                       if (!set.has(constants.PREVIEW_ENABLED)) {
                         if (null != lib) {
-                          let obj5 = id(8668);
+                          let obj5 = id(8378);
                           const obj2 = { inviteKey: null, context: null, skipOnboarding: true };
                           obj2[0] = lib.code;
                           let obj3 = { location: null };
@@ -103,7 +103,7 @@ function _navigateToGameAnnouncement() {
                         }
                       }
                     }
-                    let obj9 = lib(6195);
+                    let obj9 = lib(7341);
                     obj5 = { shouldNavigate: true, channelId: null, messageId: null, joinSource: null };
                     obj5[1] = dependencyMap;
                     obj5[2] = c3;
@@ -142,7 +142,7 @@ function _navigateToGameAnnouncement() {
               obj[0] = arg1;
               return obj;
             }
-            obj3 = lib(1219);
+            obj3 = lib(1100);
             obj9 = { sourceLocationStack: null };
             obj9[0] = guild;
             obj3.transitionTo(guild3.CHANNEL(id, dependencyMap, c3), obj9);

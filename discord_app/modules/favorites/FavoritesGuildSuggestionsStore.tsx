@@ -4,7 +4,7 @@ import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../dismissible_content/DismissibleContentShownStateStore.tsx";
 import { NOOP } from "../../Constants.tsx";
 import { ContentDismissActionType } from "../dismissible_content/DismissibleContentConstants.tsx";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 import { useFavoritesAccess } from "FavoritesHooks.tsx";
 
 const require = arg1;
@@ -37,7 +37,7 @@ export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuild
   }
   tmp4 = callback2((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
   if (isFreemium) {
-    items = [tmp(1372).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+    items = [tmp(1943).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
     let items1 = items;
   } else {
     items1 = [];
@@ -57,7 +57,7 @@ export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuild
     });
   }, items2);
   const layoutEffect1 = React.useLayoutEffect(() => () => state.setState({ dismiss: closure_5 }), []);
-  obj = { isEligible: isFreemium, isSelected: tmp5[0] === tmp(1372).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS };
+  obj = { isEligible: isFreemium, isSelected: tmp5[0] === tmp(1943).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS };
   return obj;
 };
 export const useFavoritesGuildSuggestionsDismissal = function useFavoritesGuildSuggestionsDismissal() {

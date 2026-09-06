@@ -1,6 +1,6 @@
 // discord_app/actions/ChangeLogActionCreators.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../modules/changelog/ChangelogStore.tsx";
@@ -85,7 +85,7 @@ export default {
         str = "?" + closure_1_7();
       }
       dependencyMap = 1;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, rejectWithError: true };
       const _HermesInternal2 = HermesInternal;
       obj1[0] =
@@ -93,7 +93,7 @@ export default {
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         dependencyMap = 0;
-        let obj5 = closure_1_1(706);
+        let obj5 = closure_1_1(573);
         const obj3 = { type: "CHANGE_LOG_FETCH_FAILED", id: null, locale: null };
         obj3[1] = closure_0;
         obj3[2] = closure_1;
@@ -118,7 +118,7 @@ export default {
           return obj5;
         } else {
           closure_0 = arg1;
-          obj1 = closure_1_1(706);
+          obj1 = closure_1_1(573);
           const obj6 = { type: "CHANGE_LOG_FETCH_SUCCESS", id: null, changelog: null };
           obj6[1] = closure_0;
           obj6[2] = closure_0.body;

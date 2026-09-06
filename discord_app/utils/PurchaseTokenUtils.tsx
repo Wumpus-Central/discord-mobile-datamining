@@ -1,7 +1,7 @@
 // discord_app/utils/PurchaseTokenUtils.tsx
-import v1 from "../../_runtime/00511_v1.js";
 import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
 import setDefault from "Durations.tsx";
+import v1 from "../../_runtime/01256_v1.js";
 import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
@@ -15,7 +15,7 @@ function getPurchaseToken() {
     }
   }
   const v4Result = v1.v4();
-  const Storage2 = tmp(592).Storage;
+  const Storage2 = tmp(510).Storage;
   const tmp3 = purchase_token;
   const tmpResult = v1;
   const result = Storage2.set(tmp3, { purchaseToken: v4Result, expires: Date.now() + closure_4 });

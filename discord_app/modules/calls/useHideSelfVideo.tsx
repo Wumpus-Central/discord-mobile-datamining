@@ -15,15 +15,15 @@ export default function useHideSelfVideo(arg0) {
   }
   let stateFromStores;
   const items = [closure_3];
-  stateFromStores = DEFAULT(586).useStateFromStores(items, () => id.getId());
-  const obj = DEFAULT(586);
+  stateFromStores = DEFAULT(504).useStateFromStores(items, () => id.getId());
+  const obj = DEFAULT(504);
   const items1 = [closure_4];
-  const stateFromStores1 = DEFAULT(586).useStateFromStores(items1, () => closure_4.supports(constants.DISABLE_VIDEO));
-  const obj2 = DEFAULT(586);
+  const stateFromStores1 = DEFAULT(504).useStateFromStores(items1, () => closure_4.supports(constants.DISABLE_VIDEO));
+  const obj2 = DEFAULT(504);
   const items2 = [closure_4];
   const items3 = [stateFromStores, DEFAULT];
   let tmp5 = null == arg0;
-  const stateFromStores2 = DEFAULT(586).useStateFromStores(
+  const stateFromStores2 = DEFAULT(504).useStateFromStores(
     items2,
     () => closure_1_4.isLocalVideoDisabled(stateFromStores, DEFAULT),
     items3,

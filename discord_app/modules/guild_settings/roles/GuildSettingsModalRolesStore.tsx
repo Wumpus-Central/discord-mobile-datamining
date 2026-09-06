@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsModalRolesStore.tsx
-import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer3 from "../../../design/shared.tsx";
 import calculatePositionDeltasDefault from "../../../utils/DragAndDropUtils.tsx";

@@ -23,15 +23,15 @@ function HomeDrawerDMExpandedChildren(channel) {
   const tmp = callback2();
   importDefault = tmp;
   let items = [closure_8];
-  dependencyMap = channel(586).useStateFromStores(items, () => closure_1_8.getUser(channel.getRecipientId()));
-  let obj = channel(586);
+  dependencyMap = channel(504).useStateFromStores(items, () => closure_1_8.getUser(channel.getRecipientId()));
+  let obj = channel(504);
   const items1 = [closure_8, memo];
-  stateFromStores = channel(586).useStateFromStores(items1, () => {
+  stateFromStores = channel(504).useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != channel) {
       if (stateFromStores1(tmp.type)) {
-        let channelName = channel(4674).computeChannelName(tmp, closure_1_8, memo);
-        const obj = channel(4674);
+        let channelName = channel(4713).computeChannelName(tmp, closure_1_8, memo);
+        const obj = channel(4713);
       } else {
         channelName = null;
       }
@@ -39,14 +39,14 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   });
-  const obj2 = channel(586);
+  const obj2 = channel(504);
   const tmp3 = useMessagePreviewDefault(channel, {
-    unread: channel(16181).useBaseChannelUnreadBadgeState(channel, false).unread,
+    unread: channel(16343).useBaseChannelUnreadBadgeState(channel, false).unread,
   });
   closure_4 = tmp3;
-  const obj3 = channel(16181);
+  const obj3 = channel(16343);
   const items2 = [closure_7];
-  stateFromStores1 = channel(586).useStateFromStores(items2, () =>
+  stateFromStores1 = channel(504).useStateFromStores(items2, () =>
     closure_1_7.getChannelMuteConfig(channel.guild_id, channel.id),
   );
   const items3 = [stateFromStores1];
@@ -83,10 +83,10 @@ function HomeDrawerDMExpandedChildren(channel) {
       }
       let tmp5Result = dependencyMap;
       if (isTemporary) {
-        tmp5Result = tmp5(13182);
+        tmp5Result = tmp5(13287);
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp5(10264).BellSlashIcon;
+        BellSlashIcon = tmp5(9059).BellSlashIcon;
       }
     } else {
       let obj = { style: null, children: null };
@@ -94,7 +94,7 @@ function HomeDrawerDMExpandedChildren(channel) {
       obj = { variant: "text-md/medium", style: null, lineClamp: 1, color: "text-default", children: null };
       obj[1] = closure_1.titleText;
       obj[4] = stateFromStores;
-      const items = [closure_1_10(channel(4474).Text, obj), closure_1_10(closure_1_9, { size: "xs" })];
+      const items = [closure_1_10(channel(4556).Text, obj), closure_1_10(closure_1_9, { size: "xs" })];
       obj[1] = items;
       return closure_1_11(closure_4, obj);
     }
@@ -112,13 +112,13 @@ function HomeDrawerDMExpandedChildren(channel) {
       };
       obj[0] = channel;
       obj[1] = tmp;
-      obj[4] = channel(4171).ChannelListLayoutTypes.COZY;
+      obj[4] = channel(7879).ChannelListLayoutTypes.COZY;
       obj[5] = memo.isMuted;
-      tmp2 = closure_1_10(channel(10218).ChannelRowPreview, obj);
+      tmp2 = closure_1_10(channel(10109).ChannelRowPreview, obj);
     }
     return tmp2;
   }, items5);
-  return callback(channel(16143).HomeDrawerSharedItem, { title, subtitle });
+  return callback(channel(16305).HomeDrawerSharedItem, { title, subtitle });
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({

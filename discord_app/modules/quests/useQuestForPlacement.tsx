@@ -1,13 +1,13 @@
 // discord_app/modules/quests/useQuestForPlacement.tsx
 import set from "../../../_runtime/00002_set.js";
 import setDefault from "../../utils/Durations.tsx";
-import _modDef11161 from "../app_state/DiscordAppState.native.tsx";
+import _modDef11300 from "../app_state/DiscordAppState.native.tsx";
 import getIsEligibleForQuests from "lib/QuestsEligibility.tsx";
 import noop from "../../../_runtime/00019_noop.js";
 import closure_5 from "../ads/AdDeliveryStore.tsx";
 import closure_6 from "QuestStore.tsx";
 
-function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
+function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA) {
   let isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     let tmp5 = null != fetchedAt;
@@ -20,20 +20,20 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
   }
   if (isEligibleForQuests) {
     if ("active" === obj2.getState()) {
-      if (!fetchingAdToDeliverByPlacement.isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
-        if (obj4.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
-          let tmpResult = tmp(11137);
+      if (!fetchingAdToDeliverByPlacement.isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA)) {
+        if (obj4.canRefreshAd(MOBILE_HOME_DOCK_AREA)) {
+          let tmpResult = tmp(11276);
           const currentQuests = tmpResult.fetchCurrentQuests();
-          tmpResult = tmp(11137);
-          const questToDeliver = tmpResult.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
+          tmpResult = tmp(11276);
+          const questToDeliver = tmpResult.fetchQuestToDeliver(MOBILE_HOME_DOCK_AREA, arg2);
         }
       }
       obj4 = fetchingAdToDeliverByPlacement;
     } else if (null != fetchedAt) {
-      tmp(11137).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
-      const tmpResult1 = tmp(11137);
+      tmp(11276).clearQuestAdDecision(MOBILE_HOME_DOCK_AREA, fetchedAt.ttlMillis);
+      const tmpResult1 = tmp(11276);
     }
-    obj2 = _modDef11161;
+    obj2 = _modDef11300;
   }
 }
 ({ useEffect: c3, useRef: c4 } = noop);

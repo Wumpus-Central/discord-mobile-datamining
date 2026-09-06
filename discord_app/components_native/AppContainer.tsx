@@ -1,10 +1,10 @@
 // discord_app/components_native/AppContainer.tsx
 import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1205 from "../utils/SentryUtils.native.tsx";
-import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "../modules/errors/native/SentryInitUtils.tsx";
 import ComponentDispatcher from "../utils/ComponentDispatchUtils.tsx";
+import _modDef1232 from "../utils/SentryUtils.native.tsx";
+import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "../modules/errors/native/SentryInitUtils.tsx";
 import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
-import createStandardNavigationFactories from "../../_runtime/01499_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../_runtime/01484_createStandardNavigationFactories.js";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import useThemeDefault from "../hooks/useTheme.tsx";
 import enqueueDefault from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
@@ -29,7 +29,7 @@ function GestureWrapper(children) {
   let isScreenLandscape;
   const tmp = callback3();
   closure_0 = tmp;
-  isScreenLandscape = isScreenLandscape(5080).useIsScreenLandscape();
+  isScreenLandscape = isScreenLandscape(5126).useIsScreenLandscape();
   let items = [isScreenLandscape, tmp];
   const style = React.useMemo(() => {
     const items = [styles.flex];
@@ -93,7 +93,7 @@ function AppNavigationContainer(children) {
     closure_1_7();
   }, []);
   const memo = React.useMemo(() => {
-    const tmp = callback(4334)();
+    const tmp = callback(4419)();
     let name;
     if (tmp != null) {
       const first = tmp.routes[0];
@@ -101,7 +101,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(14452).log("Initial Screen: " + name);
+    callback(14559).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -142,7 +142,7 @@ function AppNavigationContainer(children) {
   obj[3] = callback;
   obj[4] = memo;
   obj[6] = children.children;
-  return callback2(require("../../_runtime/01499_createStandardNavigationFactories.js").NavigationContainer, obj);
+  return callback2(require("../../_runtime/01484_createStandardNavigationFactories.js").NavigationContainer, obj);
 }
 function ShareNavigationContainer(children) {
   const tmp = useThemeDefault();
@@ -174,7 +174,7 @@ createCacheKey = { flex: { flex: 1 }, rootBackgroundColor: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
 createCacheKey[1] = createCacheKey;
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let result = module_4217.configureReanimatedLogger({
+let result = module_4296.configureReanimatedLogger({
   level: require("../modules/reanimated/ReanimatedRexport.tsx").ReanimatedLogLevel.error,
   strict: false,
 });
@@ -189,17 +189,17 @@ try {
     code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}",
   };
   let obj7 = require("designConfig");
-  const result1 = _modDef1205.profiledRootComponent(function AppContainer(children) {
+  const result1 = _modDef1232.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     let riveAppStatePlaybackExperiment = children;
     const appEntryKey = children.appEntryKey;
     let memo = appEntryKey;
     let memo1;
-    const requestGatewaySocket = memo(14453).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = memo(14560).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
-        let obj = memo(4217);
+        let obj = memo(4296);
         const fn = function e() {
           RNScreensTurboModule.RNScreensTurboModule = RNScreensTurboModule;
         };
@@ -213,7 +213,7 @@ try {
       }
     }, []);
     const effect1 = React.useEffect(() => {
-      let SplashScreenManager = memo(1234).isIOS();
+      let SplashScreenManager = memo(1115).isIOS();
       if (SplashScreenManager) {
         SplashScreenManager = closure_6.SplashScreenManager;
       }
@@ -224,8 +224,8 @@ try {
     }, []);
     riveAppStatePlaybackExperiment = undefined;
     memo = undefined;
-    let obj = memo(14453);
-    riveAppStatePlaybackExperiment = memo(15777).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = memo(14560);
+    riveAppStatePlaybackExperiment = memo(15939).useRiveAppStatePlaybackExperiment("AppContainer");
     let items = [riveAppStatePlaybackExperiment];
     memo = React.useMemo(() => {
       const items = [];
@@ -295,7 +295,7 @@ try {
       return closure_1_14(tmp, obj);
     }, items2);
   });
-  const importDefaultResult = _modDef1205;
+  const importDefaultResult = _modDef1232;
   const result2 = require("set").fileFinishedImporting("components_native/AppContainer.tsx");
   exports.default = result1;
 } catch (err) {}

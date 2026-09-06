@@ -1,9 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import isIterable from "../../../../../_runtime/04105_isIterable.js";
-import identity from "../../../../../_runtime/00697_identity.js";
+import isIterable from "../../../../../_runtime/04184_isIterable.js";
+import identity from "../../../../../_runtime/01244_identity.js";
 
-let closure_2 = Object.freeze({ name: "", emojiId: "padding", emojiName: "round", description: "__d", refId: "Array" });
+let closure_2 = Object.freeze({
+  name: "",
+  emojiId: "paddingHorizontal",
+  emojiName: "radii",
+  description: "it",
+  refId: "Array",
+});
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};

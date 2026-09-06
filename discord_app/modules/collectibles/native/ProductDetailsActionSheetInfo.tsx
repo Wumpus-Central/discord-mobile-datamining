@@ -39,14 +39,14 @@ function ProductPurchaseStatus(product) {
   const productPurchaseState = obj1.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl2 = tmp(1233).intl;
-    obj[2] = intl2.string(tmp(1233).t["6cfuDj"]);
-    let children = tmp6(tmp(4474).Text, obj);
+    const intl2 = tmp(1114).intl;
+    obj[2] = intl2.string(tmp(1114).t["6cfuDj"]);
+    let children = tmp6(tmp(4556).Text, obj);
   } else if (tmp5) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl = tmp(1233).intl;
-    obj[2] = intl.string(tmp(1233).t.BEjTij);
-    children = tmp6(tmp(4474).Text, obj);
+    const intl = tmp(1114).intl;
+    obj[2] = intl.string(tmp(1114).t.BEjTij);
+    children = tmp6(tmp(4556).Text, obj);
   } else {
     children = !result;
     if (!result) {

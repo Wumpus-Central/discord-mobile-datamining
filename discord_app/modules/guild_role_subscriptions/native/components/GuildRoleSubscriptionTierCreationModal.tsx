@@ -127,10 +127,10 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     return items;
   }, []);
   obj = { guildId, editStateId: first, groupListingId, children: null };
-  obj = { guildId, children: jsx(groupListingId(17582), obj1) };
-  obj[3] = jsx(guildId(17564).RoleSubscriptionSettingsDisabledContextProvider, {
+  obj = { guildId, children: jsx(groupListingId(17742), obj1) };
+  obj[3] = jsx(guildId(17724).RoleSubscriptionSettingsDisabledContextProvider, {
     guildId,
-    children: jsx(groupListingId(17582), obj1),
+    children: jsx(groupListingId(17742), obj1),
   });
-  return jsx(guildId(17581).EditStateContextProvider, { guildId, children: jsx(groupListingId(17582), obj1) });
+  return jsx(guildId(17741).EditStateContextProvider, { guildId, children: jsx(groupListingId(17742), obj1) });
 }

@@ -1,8 +1,8 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../Constants.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ME from "../../../Constants.tsx";
 import messagesProxyDefault from "../FamilyCenter.messages.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -13,17 +13,17 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  let obj = rule(10192);
+  let obj = rule(10083);
   const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
-  const obj2 = rule(10192);
+  const obj2 = rule(10083);
   obj = {
     label: scheduleRuleDateRange,
-    subLabel: rule(10192).formatDays(rule.days),
+    subLabel: rule(10083).formatDays(rule.days),
     trailing: null,
     arrow: null,
     onPress: null,
   };
-  const intl = rule(1233).intl;
+  const intl = rule(1114).intl;
   const string = intl.string;
   const tmp4 = messagesProxyDefault;
   if (rule.enabled) {
@@ -31,7 +31,7 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj[2] = closure_5(rule(4474).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
+  obj[2] = closure_5(rule(4556).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
   obj[3] = !readOnly;
   let fn;
   if (!readOnly) {
@@ -44,7 +44,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj[4] = fn;
-  return closure_5(rule(5608).TableRow, obj);
+  return closure_5(rule(5605).TableRow, obj);
 }
 const View = get_ActivityIndicator.View;
 const UserSettingsSections = ME.UserSettingsSections;

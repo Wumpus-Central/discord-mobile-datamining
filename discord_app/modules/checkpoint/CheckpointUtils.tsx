@@ -22,18 +22,18 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
   ({ time, unit } = timeAndUnit);
   const abbreviatedFormatter = getDurationString.getAbbreviatedFormatter();
   if (null == time) {
-    const intl3 = tmp(1233).intl;
+    const intl3 = tmp(1114).intl;
     return intl3.formatToPlainString(abbreviatedFormatter.minutes, { minutes: 0 });
   } else {
     const _Math = Math;
     const rounded = Math.round(time);
-    if (unit === tmp(4558).TimeUnits.HOURS) {
-      const intl2 = tmp(1233).intl;
+    if (unit === tmp(4589).TimeUnits.HOURS) {
+      const intl2 = tmp(1114).intl;
       obj = { hours: null };
       obj[0] = rounded;
       let formatToPlainStringResult = intl2.formatToPlainString(abbreviatedFormatter.hours, obj);
     } else {
-      const intl = tmp(1233).intl;
+      const intl = tmp(1114).intl;
       obj = { minutes: null };
       obj[0] = rounded;
       formatToPlainStringResult = intl.formatToPlainString(abbreviatedFormatter.minutes, obj);

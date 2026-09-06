@@ -3,7 +3,7 @@ import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import keys from "../../../../../_runtime/00641_keys.js";
+import keys from "../../../../../_runtime/00560_keys.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const require = arg1;
@@ -45,11 +45,11 @@ function _serializeIntlData() {
             Identifier = undefined;
             Build = undefined;
             dependencyMap = 1;
-            let obj5 = closure_1_0(1238);
+            let obj5 = closure_1_0(1120);
             Identifier = 2;
             Build = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = obj5.loadJsonAsset(closure_1_0(1272));
+            obj1[0] = obj5.loadJsonAsset(closure_1_0(1154));
             return obj1;
           }
         } else if (1 === tmp7) {
@@ -78,19 +78,19 @@ function _serializeIntlData() {
             messagesFromFile: null,
             metadata: null,
           };
-          obj4[0] = callback(1233).intl.currentLocale;
-          obj4[1] = callback(1233).systemLocale;
-          obj4[2] = callback(1233).initialLocale;
+          obj4[0] = callback(1114).intl.currentLocale;
+          obj4[1] = callback(1114).systemLocale;
+          obj4[2] = callback(1114).initialLocale;
           obj5 = {};
           const _Object3 = Object;
           const _Object4 = Object;
-          const keys = Object.keys(callback(1233).t);
+          const keys = Object.keys(callback(1114).t);
           const merged = Object.assign(
             Object.fromEntries(
               keys.map((arg0) => {
                 const items = [arg0];
-                const intl = callback(1233).intl;
-                items[1] = intl.reserialize(callback(1233).t[arg0]);
+                const intl = callback(1114).intl;
+                items[1] = intl.reserialize(callback(1114).t[arg0]);
                 return items;
               }),
             ),
@@ -114,7 +114,7 @@ function _serializeIntlData() {
             str = "iOS";
           }
           obj7[1] = str;
-          obj = lib(1624);
+          obj = lib(1364);
           lib = obj.getConstants();
           let str3 = "N/A";
           if (str2.trim().length > 0) {
@@ -141,7 +141,7 @@ function _serializeIntlData() {
           const _Object = Object;
           obj7[3] = Object.keys(callback).length;
           const _Object2 = Object;
-          obj7[4] = Object.keys(callback(1233).t).length;
+          obj7[4] = Object.keys(callback(1114).t).length;
           obj4[5] = obj7;
           const _JSON = JSON;
           dependencyMap = 0;
@@ -205,7 +205,7 @@ function _handleUploadIntlDataSettingPress() {
             callback = undefined;
             closure_2 = undefined;
             (function onUploadIntlDataRequestStart() {
-              ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+              ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
             })();
             if (obj11.isIOS()) {
               ANDROID_APP = tmp52.IOS_APP;
@@ -225,12 +225,12 @@ function _handleUploadIntlDataSettingPress() {
             })();
             c4 = 3;
             c5 = 1;
-            obj11 = closure_1_0(1234);
+            obj11 = closure_1_0(1115);
           }
         } else if (1 === tmp9) {
           dependencyMap = 0;
           (function onUploadIntlDataRequestFinish() {
-            ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(
               () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
               5000,
@@ -240,17 +240,17 @@ function _handleUploadIntlDataSettingPress() {
         } else {
           if (2 === tmp9) {
             dependencyMap = 1;
-            let obj5 = callback(4194);
+            let obj5 = callback(4259);
             obj1 = {
               key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED",
               IconComponent: null,
               content: "Failed to upload internationalization data.",
             };
-            obj1[1] = ANDROID_APP(4433).CircleInformationIcon;
+            obj1[1] = ANDROID_APP(4515).CircleInformationIcon;
             obj5.open(obj1);
             dependencyMap = 0;
             (function onUploadIntlDataRequestFinish() {
-              ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+              ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
               const timerId = setTimeout(
                 () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
                 5000,
@@ -264,7 +264,7 @@ function _handleUploadIntlDataSettingPress() {
             } else if (arg0 === 2) {
               dependencyMap = 0;
               (function onUploadIntlDataRequestFinish() {
-                ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+                ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
                 const timerId = setTimeout(
                   () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
                   5000,
@@ -277,7 +277,7 @@ function _handleUploadIntlDataSettingPress() {
             } else {
               callback = arg1;
               closure_2 = closure_1_7.DEBUG_LOG(ANDROID_APP, "intl_data");
-              const HTTP = closure_1_0(527).HTTP;
+              const HTTP = closure_1_0(1272).HTTP;
               const obj3 = {
                 url: null,
                 body: null,
@@ -299,19 +299,19 @@ function _handleUploadIntlDataSettingPress() {
             c5 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = callback(4194);
+            obj = callback(4259);
             obj5 = {
               key: "USER_SETTINGS_INTL_DATA_UPLOADED",
               IconComponent: null,
               content: "Internationalization data uploaded successfully.",
             };
-            obj5[1] = ANDROID_APP(4433).CircleInformationIcon;
+            obj5[1] = ANDROID_APP(4515).CircleInformationIcon;
             obj.open(obj5);
             dependencyMap = 1;
           }
           dependencyMap = 0;
           (function onUploadIntlDataRequestFinish() {
-            ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(
               () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
               5000,

@@ -46,8 +46,8 @@ prototype["initialize"] = function initialize() {
   let value = Storage.get(LibraryApplicationStore);
   if (null != value) {
     if (null == value.activeLaunchOptionIds) {
-      const Storage2 = tmp2(592).Storage;
-      const Storage3 = tmp2(592).Storage;
+      const Storage2 = tmp2(510).Storage;
+      const Storage3 = tmp2(510).Storage;
       value = Storage3.get(tmp4);
       if (value == null) {
         value = {};
@@ -60,8 +60,8 @@ prototype["initialize"] = function initialize() {
       activeLaunchOptionIds = value.activeLaunchOptionIds;
     }
     if (null == value.activeLibraryApplicationBranchIds) {
-      const Storage4 = tmp2(592).Storage;
-      const Storage5 = tmp2(592).Storage;
+      const Storage4 = tmp2(510).Storage;
+      const Storage5 = tmp2(510).Storage;
       let value1 = Storage5.get(tmp4);
       if (value1 == null) {
         value1 = {};
@@ -165,7 +165,7 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
       if (tmp2Result.isUserEntitledToLibraryApplication(obj2)) {
         return obj2;
       }
-      tmp2Result = tmp2(4526);
+      tmp2Result = tmp2(7399);
     }
     tmp2 = require;
   }

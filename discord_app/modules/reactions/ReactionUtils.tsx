@@ -1,8 +1,8 @@
 // discord_app/modules/reactions/ReactionUtils.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
 import ReactionTypes from "../messages/MessageReactionsTypes.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
 import ME from "../../Constants.tsx";
@@ -45,7 +45,7 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
       PirBBE = t.PirBBE;
       tmp5 = tmp;
     }
-    const intl = tmp5(1233).intl;
+    const intl = tmp5(1114).intl;
     const obj = { reactions: null, emojiName: null };
     obj[0] = count;
     if (null == emoji.id) {

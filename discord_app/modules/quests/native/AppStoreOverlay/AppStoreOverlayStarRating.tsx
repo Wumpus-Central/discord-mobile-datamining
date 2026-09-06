@@ -19,11 +19,11 @@ function FractionalStar(fillAmount) {
     obj = { style: null, children: null };
     const items1 = [tmp.starFillMask];
     obj1 = { width: null };
-    obj1[0] = tmp7(709).space.PX_10 * fillAmount;
+    obj1[0] = tmp7(576).space.PX_10 * fillAmount;
     items1[1] = obj1;
     obj[0] = items1;
     const obj2 = { size: "custom", color: null, style: null };
-    obj2[1] = tmp7(709).colors.TEXT_MUTED;
+    obj2[1] = tmp7(576).colors.TEXT_MUTED;
     obj2[2] = tmp.starIcon;
     obj[1] = tmp4(StarIcon.StarIcon, obj2);
     tmp4Result = tmp4(tmp3, obj);

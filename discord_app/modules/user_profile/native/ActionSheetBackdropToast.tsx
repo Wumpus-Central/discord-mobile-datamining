@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../reanimated/ReanimatedRexport.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "../../action_sheet/native/ActionSheetConstants.tsx";
@@ -46,11 +46,11 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   const height = useWindowDimensionsDefault().height;
   let result = height * closure_5;
   importDefault = result;
-  const diff = height - isExpanded(5501).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+  const diff = height - isExpanded(5682).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   dependencyMap = diff;
-  let obj = isExpanded(4217);
+  let obj = isExpanded(4296);
   sharedValue = obj.useSharedValue(0);
-  obj1 = isExpanded(4217);
+  obj1 = isExpanded(4296);
   sharedValue1 = obj1.useSharedValue(0);
   const items = [sharedValue, sharedValue1];
   const effect = sharedValue.useEffect(() => {
@@ -110,19 +110,19 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   fn.__initData = closure_9;
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [tmp.container];
-  const animatedStyle = isExpanded(4217).useAnimatedStyle(fn);
+  const animatedStyle = isExpanded(4296).useAnimatedStyle(fn);
   obj1 = {
     style: items2,
-    children: jsx(isExpanded(4474).Text, {
+    children: jsx(isExpanded(4556).Text, {
       variant: "text-sm/medium",
       color: "mobile-text-heading-primary",
       children: children.text,
     }),
   };
   items2 = [tmp.toast, animatedStyle];
-  obj[2] = jsx(_modDef4217.View, {
+  obj[2] = jsx(_modDef4296.View, {
     style: items2,
-    children: jsx(isExpanded(4474).Text, {
+    children: jsx(isExpanded(4556).Text, {
       variant: "text-sm/medium",
       color: "mobile-text-heading-primary",
       children: children.text,

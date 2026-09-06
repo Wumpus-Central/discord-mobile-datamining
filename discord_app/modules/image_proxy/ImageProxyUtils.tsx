@@ -1,6 +1,6 @@
 // discord_app/modules/image_proxy/ImageProxyUtils.tsx
-import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
 import getHostWithoutPort from "../core/UrlHostUtils.tsx";
 import set from "../../../_runtime/00002_set.js";
 

@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/17372_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/17373_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/17532_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/17533_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UPLOAD_MEDIUM_SIZE } from "../../../Constants.tsx";
@@ -192,9 +192,9 @@ prototype["render"] = function render() {
       obj2[1] = this.handleRemoveAsset;
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.remove;
-      const intl2 = tmp6(1233).intl;
-      obj3[1] = intl2.string(tmp6(1233).t.N86XcP);
-      obj2[2] = tmp5(tmp6(1296).LegacyText, obj3);
+      const intl2 = tmp6(1114).intl;
+      obj3[1] = intl2.string(tmp6(1114).t.N86XcP);
+      obj2[2] = tmp5(tmp6(1178).LegacyText, obj3);
       tmp5Result = tmp5(closure_7, obj2);
     }
   }

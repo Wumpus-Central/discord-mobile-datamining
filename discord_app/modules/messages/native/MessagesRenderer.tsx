@@ -295,7 +295,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     ref(messages.channelId, messages.screenIndex, false);
   }
   let first = first1(
-    importAllResult.useState(() => new first(11363)()),
+    importAllResult.useState(() => new first(11538)()),
     1,
   )[0];
   [dependencyMap, closure_3] = first1(importAllResult.useState(false), 2);
@@ -363,7 +363,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     shouldJumpToOriginalPost: callback3,
   };
   let tmp2 = first1(importAllResult.useState(false), 2);
-  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11365)(obj));
+  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11540)(obj));
   obj = {
     chatRef: ref5,
     chatManager: first,
@@ -421,7 +421,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
   };
-  let tmp16 = first(11365)(obj);
+  let tmp16 = first(11540)(obj);
   ({
     hasHandledScrollRef: closure_18,
     isAtBottomRef: closure_19,
@@ -437,7 +437,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     scrollToTopMessage,
     updateNativeRows,
     handleScrollPosition,
-  } = first(11367)(obj));
+  } = first(11542)(obj));
   const ref6 = importAllResult.useRef(null);
   ref6.current = {
     getMessage: callback2,
@@ -459,11 +459,11 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     scrollToNewMessages,
     getChatRef,
   }));
-  let tmp17 = first(11367)(obj);
+  let tmp17 = first(11542)(obj);
   obj1 = {
     chatManager: first,
     rowGenerator: first1(
-      tmp3[1].useState(() => new first(7853)()),
+      tmp3[1].useState(() => new first(7932)()),
       1,
     )[0],
     animatingStickerMessageIdRef: ref3,
@@ -506,10 +506,10 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     scrollToTopMessage,
     useReducedMotion: messages.useReducedMotion,
   };
-  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11751)({
+  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11950)({
     chatManager: first,
     rowGenerator: first1(
-      tmp3[1].useState(() => new first(7853)()),
+      tmp3[1].useState(() => new first(7932)()),
       1,
     )[0],
     animatingStickerMessageIdRef: ref3,
@@ -915,7 +915,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                                                                                                                                         messages,
                                                                                                                                       } =
                                                                                                                                         tmp2);
-                                                                                                                                      const obj8 =
+                                                                                                                                      let obj8 =
                                                                                                                                         first(
                                                                                                                                           closure_1_2[11],
                                                                                                                                         );
@@ -1155,20 +1155,17 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
             if (!closure_10) {
               if (closure_8) {
                 if (null != props.guildId) {
-                  author = author.author;
-                  id = undefined;
-                  if (author != null) {
-                    id = author.id;
+                  const messageAuthorMemberUserIds = props(closure_2_2[13]).getMessageAuthorMemberUserIds(author);
+                  if (
+                    messageAuthorMemberUserIds.some(
+                      (arg0) =>
+                        closure_1_0.messageAuthorMembers[arg0] !== messageAuthorMembers.messageAuthorMembers[arg0],
+                    )
+                  ) {
+                    addResult = set;
+                    addResult = set.add(author.id);
                   }
-                  if (null != id) {
-                    addResult = props;
-                    addResult = props;
-                    addResult = props;
-                    if (props.messageAuthorMembers[author.author.id] !== props.messageAuthorMembers[author.author.id]) {
-                      addResult = set;
-                      addResult = set.add(author.id);
-                    }
-                  }
+                  const obj3 = props(closure_2_2[13]);
                 }
               }
               if (closure_9) {
@@ -1229,11 +1226,11 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
               const channel = props.channel;
               if (channel.isForumPost()) {
                 if (closure_11) {
-                  if (author.id === obj3.castChannelIdAsMessageId(props.channelId)) {
+                  if (author.id === obj5.castChannelIdAsMessageId(props.channelId)) {
                     addResult = set;
                     addResult = set.add(author.id);
                   }
-                  obj3 = first(closure_2_2[20]);
+                  obj5 = first(closure_2_2[20]);
                 }
               }
               if (closure_15) {
@@ -1242,16 +1239,16 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                   addResult = set.add(author.id);
                 }
               }
-              let tmp71 = closure_16;
+              let tmp72 = closure_16;
               if (closure_16) {
                 const activity2 = author.activity;
                 let party_id;
                 if (activity2 != null) {
                   party_id = activity2.party_id;
                 }
-                tmp71 = null != party_id;
+                tmp72 = null != party_id;
               }
-              if (tmp71) {
+              if (tmp72) {
                 set.add(author.id);
               }
               if (closure_23) {
@@ -1261,12 +1258,12 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                 }
               }
               if (closure_24) {
-                const author2 = author.author;
-                let id1;
-                if (author2 != null) {
-                  id1 = author2.id;
+                author = author.author;
+                id = undefined;
+                if (author != null) {
+                  id = author.id;
                 }
-                if (id1 === props.currentUserId) {
+                if (id === props.currentUserId) {
                   addResult = set;
                   addResult = set.add(author.id);
                 }
@@ -1279,29 +1276,29 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                   addResult = null;
                   while (iter2 !== undefined) {
                     ({ type, code: code2 } = nextResult1);
-                    let tmp88 = props;
-                    let tmp89 = closure_2_2;
-                    let tmp87 = type;
+                    let tmp89 = props;
+                    let tmp90 = closure_2_2;
+                    let tmp88 = type;
                     if (type === props(closure_2_2[34]).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
-                      let tmp93 = code2;
-                      let tmp94 = first1;
+                      let tmp94 = code2;
+                      let tmp95 = first1;
                       first = first1(code2.split("-"), 1)[0];
                       let fetchingSkuIds = props.fetchingSkuIds;
-                      let tmp96 = first;
-                      let tmp97 = props;
+                      let tmp97 = first;
                       let tmp98 = props;
+                      let tmp99 = props;
                       if (fetchingSkuIds.includes(first)) {
                         addResult = set;
                         addResult = set.add(author.id);
                         addResult = iter2;
                         iter2.return();
                       } else {
-                        let tmp99 = ref4;
+                        addResult = ref4;
                         addResult = first;
-                        addResult = ref4.get(tmp96);
+                        addResult = ref4.get(tmp97);
                         if (null != addResult) {
-                          addResult = tmp97;
-                          let invalidApplicationIds = tmp98.invalidApplicationIds;
+                          addResult = tmp98;
+                          let invalidApplicationIds = tmp99.invalidApplicationIds;
                           if (invalidApplicationIds.includes(addResult.applicationId)) {
                             addResult = set;
                             addResult = set.add(author.id);
@@ -1311,9 +1308,9 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                         }
                       }
                     } else {
-                      let tmp90 = type;
-                      let tmp91 = props;
-                      let tmp92 = closure_2_2;
+                      let tmp91 = type;
+                      let tmp92 = props;
+                      let tmp93 = closure_2_2;
                     }
                     continue;
                   }
@@ -1327,17 +1324,17 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                 addResult = props;
                 addResult = props;
                 addResult = props;
-                if (!obj7.messageAuthorActivitiesChanged(author, props, props)) {
+                if (!obj9.messageAuthorActivitiesChanged(author, props, props)) {
                   addResult = first;
                   addResult = closure_2_2;
                   addResult = props;
-                  if (!obj4.codedLinksChanged(author, addResult, props)) {
+                  if (!obj6.codedLinksChanged(author, addResult, props)) {
                     addResult = closure_1;
                     if (!closure_1) {
                       addResult = first;
                       addResult = closure_2_2;
                       addResult = props;
-                      if (!obj6.mediaPostPreviewEmbedsChanged(author, addResult, props)) {
+                      if (!obj8.mediaPostPreviewEmbedsChanged(author, addResult, props)) {
                         addResult = cacheStoreLoaded2;
                         if (cacheStoreLoaded2) {
                           addResult = author.embeds.length > 0;
@@ -1407,19 +1404,19 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                           addResult = set.add(author.id);
                         }
                       }
-                      obj6 = first(closure_2_2[36]);
+                      obj8 = first(closure_2_2[36]);
                     } else {
                       addResult = first;
                       addResult = closure_2_2;
                       addResult = props;
-                      const obj5 = first(closure_2_2[36]);
+                      const obj7 = first(closure_2_2[36]);
                     }
                   }
-                  obj4 = first(closure_2_2[36]);
+                  obj6 = first(closure_2_2[36]);
                 }
                 addResult = set;
                 addResult = set.add(author.id);
-                obj7 = first(closure_2_2[36]);
+                obj9 = first(closure_2_2[36]);
               }
             }
             addResult = set.add(author.id);
@@ -1495,7 +1492,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
   });
   let obj3 = { children: null };
   const items4 = [
-    findMessageIndex(first(11696), {
+    findMessageIndex(first(11894), {
       ref: ref5,
       style: messages.style,
       inverted: true,

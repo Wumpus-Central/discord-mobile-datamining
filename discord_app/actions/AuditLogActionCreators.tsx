@@ -1,6 +1,6 @@
 // discord_app/actions/AuditLogActionCreators.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import closure_3 from "../modules/guild_settings/audit_log/GuildSettingsAuditLogStore.tsx";
 import ME from "../Constants.tsx";
 
@@ -57,7 +57,7 @@ export const fetchLogs = function fetchLogs(guildId) {
             threads,
             application_commands,
           } = body.body);
-          callback(706).dispatch({
+          callback(573).dispatch({
             type: "AUDIT_LOG_FETCH_SUCCESS",
             logs: audit_log_entries,
             integrations,
@@ -69,7 +69,7 @@ export const fetchLogs = function fetchLogs(guildId) {
             applicationCommands: application_commands,
           });
         },
-        () => callback(706).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
+        () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
       );
     }
   }
@@ -106,7 +106,7 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
               threads,
               application_commands,
             } = body.body);
-            callback(706).dispatch({
+            callback(573).dispatch({
               type: "AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS",
               logs: audit_log_entries,
               integrations,
@@ -118,7 +118,7 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
               applicationCommands: application_commands,
             });
           },
-          () => callback(706).dispatch({ type: "AUDIT_LOG_FETCH_NEXT_PAGE_FAIL" }),
+          () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_NEXT_PAGE_FAIL" }),
         );
       }
     }
@@ -150,7 +150,7 @@ export const filterByAction = function filterByAction(arg0, guildId) {
                 threads,
                 application_commands,
               } = body.body);
-              callback(706).dispatch({
+              callback(573).dispatch({
                 type: "AUDIT_LOG_FETCH_SUCCESS",
                 logs: audit_log_entries,
                 integrations,
@@ -162,7 +162,7 @@ export const filterByAction = function filterByAction(arg0, guildId) {
                 applicationCommands: application_commands,
               });
             },
-            () => callback(706).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
+            () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
           );
           const promise = makeRequest(guildId, obj);
         }
@@ -196,7 +196,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
                 threads,
                 application_commands,
               } = body.body);
-              callback(706).dispatch({
+              callback(573).dispatch({
                 type: "AUDIT_LOG_FETCH_SUCCESS",
                 logs: audit_log_entries,
                 integrations,
@@ -208,7 +208,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
                 applicationCommands: application_commands,
               });
             },
-            () => callback(706).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
+            () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
           );
           const promise = makeRequest(guildId, obj);
         }
@@ -227,7 +227,7 @@ export const filterByTargetId = function filterByTargetId(arg0, arg1) {
       if (!tmp5) {
         if (null != arg1) {
           dispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: 102039555 };
+          obj = { userId: null, action: "Array", targetId: -1 };
           obj[2] = arg0;
           const tmp10Result = dispatcherDefault;
           nextPromise = makeRequest(arg1, obj).then(
@@ -242,7 +242,7 @@ export const filterByTargetId = function filterByTargetId(arg0, arg1) {
                 threads,
                 application_commands,
               } = body.body);
-              callback(706).dispatch({
+              callback(573).dispatch({
                 type: "AUDIT_LOG_FETCH_SUCCESS",
                 logs: audit_log_entries,
                 integrations,
@@ -254,7 +254,7 @@ export const filterByTargetId = function filterByTargetId(arg0, arg1) {
                 applicationCommands: application_commands,
               });
             },
-            () => callback(706).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
+            () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
           );
           const promise = makeRequest(arg1, obj);
         }

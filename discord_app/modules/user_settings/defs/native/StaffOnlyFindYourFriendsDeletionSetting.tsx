@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
-import isIterable from "../../../../../_runtime/04105_isIterable.js";
+import isIterable from "../../../../../_runtime/04184_isIterable.js";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import identity from "../../../../../_runtime/00697_identity.js";
+import identity from "../../../../../_runtime/01244_identity.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
@@ -65,10 +65,10 @@ function _onFindYourFriendsDeletionPress() {
           if (2 === tmp8) {
             c3 = 1;
             callback2 = dependencyMap;
-            const aPIError = new callback(582).APIError(callback2);
+            const aPIError = new callback(1326).APIError(callback2);
             callback = aPIError.getAnyErrorMessage();
             if (null != callback) {
-              let obj2 = callback2(4194);
+              let obj2 = callback2(4259);
               obj2 = { key: "FIND_YOUR_FRIENDS_DELETION", content: null };
               obj2[1] = callback;
               obj2.open(obj2);

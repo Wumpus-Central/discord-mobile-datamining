@@ -15,13 +15,13 @@ export const getFeedbackModalHappyDesaturatedSource = function getFeedbackModalH
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(11456);
+      return callback(11643);
     },
     darker() {
-      return callback(11457);
+      return callback(11644);
     },
     light() {
-      return callback(11458);
+      return callback(11645);
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useFeedbackModalHappyDesaturatedSource = function useFeedbackModalH
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(11456);
+      return callback(11643);
     },
     darker() {
-      return callback(11457);
+      return callback(11644);
     },
     light() {
-      return callback(11458);
+      return callback(11645);
     },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const FeedbackModalHappyDesaturated = function FeedbackModalHappyDesatura
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(11456);
+      return callback(11643);
     },
     darker() {
-      return callback(11457);
+      return callback(11644);
     },
     light() {
-      return callback(11458);
+      return callback(11645);
     },
   };
   obj = {};

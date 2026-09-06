@@ -59,13 +59,13 @@ export default function UserPreview(user) {
   obj1 = { style: items1, children: null };
   items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
   const str = intl.string(getSystemLocale.t.Rsth7z);
-  const items2 = [callback(Button.Avatar, { size: Button.AvatarSizes.LARGE_48, user, guildId: "accessible" })];
+  const items2 = [callback(Button.Avatar, { size: Button.AvatarSizes.LARGE_48, user, guildId: "Array" })];
   const obj3 = { style: tmp.userProfileInfo, children: null };
   let tmp7Result = null != user.globalName;
   if (tmp7Result) {
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[2] = user.globalName;
-    tmp7Result = tmp7(tmp2(4474).Text, obj4);
+    tmp7Result = tmp7(tmp2(4556).Text, obj4);
   }
   const items3 = [
     tmp7Result,

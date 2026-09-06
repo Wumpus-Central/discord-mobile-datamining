@@ -32,7 +32,7 @@ class UserSettingsProto {
       if (databaseResult != null) {
         databaseResult.transaction((database) => {
           const state = closure_3.computeState();
-          obj = callback(1955);
+          obj = callback(1986);
           const result = obj.userSettingsTransaction(database);
           for (const key10014 in state) {
             let tmp3 = key10014;
@@ -51,7 +51,7 @@ class UserSettingsProto {
           if (num == null) {
             num = -1;
           }
-          const result1 = callback(1955).nonGuildVersionsTransaction(database);
+          const result1 = callback(1986).nonGuildVersionsTransaction(database);
           result1.put({ id: "user_settings_version", version: num });
         }, "handleUserSettingsProtoChange");
       }
@@ -200,7 +200,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
   if (databaseResult != null) {
     databaseResult.transaction((database) => {
       const state = closure_3.computeState();
-      obj = callback(1955);
+      obj = callback(1986);
       const result = obj.userSettingsTransaction(database);
       for (const key10014 in state) {
         let tmp3 = key10014;
@@ -219,7 +219,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       if (num == null) {
         num = -1;
       }
-      const result1 = callback(1955).nonGuildVersionsTransaction(database);
+      const result1 = callback(1986).nonGuildVersionsTransaction(database);
       result1.put({ id: "user_settings_version", version: num });
     }, "handleUserSettingsProtoChange");
   }

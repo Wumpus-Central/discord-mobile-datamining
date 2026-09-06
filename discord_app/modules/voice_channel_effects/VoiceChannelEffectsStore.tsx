@@ -1,8 +1,8 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import AccessibilityAnnouncer2 from "../../design/shared.tsx";
 import ParticipantTypes from "../calls/CallConstants.tsx";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectsUtils.tsx";

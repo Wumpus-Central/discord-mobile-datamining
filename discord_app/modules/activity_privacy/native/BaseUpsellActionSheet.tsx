@@ -18,10 +18,10 @@ function renderSuccessIcon() {
 }
 function StoreGuildIcon(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(586);
+  let obj = guildId(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId));
-  obj = { guild: stateFromStores, size: guildId(6013).GuildIconSizes.XSMALL };
+  obj = { guild: stateFromStores, size: guildId(5584).GuildIconSizes.XSMALL };
   return callback(GuildIconSizesDefault, obj);
 }
 function GuildCard(guildIds) {
@@ -207,8 +207,8 @@ export default function BaseUpsellActionSheet(toastContent) {
     children: title,
   };
   const items1 = [
-    callback(toastContent(4474).Text, obj),
-    callback(toastContent(4474).Text, {
+    callback(toastContent(4556).Text, obj),
+    callback(toastContent(4556).Text, {
       style: tmp.description,
       variant: "text-md/medium",
       color: "text-default",
@@ -218,16 +218,16 @@ export default function BaseUpsellActionSheet(toastContent) {
   ];
   const obj2 = { style: tmp.buttonsContainer, children: null };
   const items2 = [
-    callback(toastContent(4929).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }),
+    callback(toastContent(4975).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }),
   ];
   const obj3 = { variant: "secondary", size: "md", text: null, onPress: null };
-  const intl = toastContent(1233).intl;
-  obj3[2] = intl.string(toastContent(1233).t.X1rGEm);
+  const intl = toastContent(1114).intl;
+  obj3[2] = intl.string(toastContent(1114).t.X1rGEm);
   obj3[3] = callback1;
-  items2[1] = callback(toastContent(4929).Button, obj3);
+  items2[1] = callback(toastContent(4975).Button, obj3);
   obj2[1] = items2;
   items1[3] = callback2(closure_5, obj2);
   obj[1] = items1;
   obj[1] = callback2(closure_5, obj);
-  return callback(toastContent(5631).BottomSheet, obj);
+  return callback(toastContent(7150).BottomSheet, obj);
 }

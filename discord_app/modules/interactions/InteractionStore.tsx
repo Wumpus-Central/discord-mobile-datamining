@@ -1,7 +1,7 @@
 // discord_app/modules/interactions/InteractionStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
 import InteractionState from "InteractionTypes.tsx";
 import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
@@ -154,7 +154,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     } else {
       if (null != dependencyMap[nonce]) {
         if (tmp3.state === InteractionState.InteractionState.QUEUED) {
-          tmp3.state = tmp4(4744).InteractionState.CREATED;
+          tmp3.state = tmp4(4790).InteractionState.CREATED;
           const onCreate = tmp3.onCreate;
           if (onCreate != null) {
             onCreate(tmp);

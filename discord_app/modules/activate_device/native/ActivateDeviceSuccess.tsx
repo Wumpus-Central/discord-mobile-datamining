@@ -54,14 +54,14 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
     obj1 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
     obj1[2] = innerContentDefault.centerText;
     obj1[3] = stringResult;
-    tmp18Result = tmp18(tmp19(4474).Text, obj1);
+    tmp18Result = tmp18(tmp19(4556).Text, obj1);
   }
   const obj2 = { children: null };
   items1[1] = tmp18Result;
   obj[1] = items1;
   items[1] = closure_5(View, obj);
   const obj3 = { size: "lg", text: null, onPress: null, grow: true };
-  const intl4 = tmp19(1233).intl;
+  const intl4 = tmp19(1114).intl;
   obj3[1] = intl4.string(getSystemLocale.t.cpT0Cq);
   obj3[2] = onComplete.onComplete;
   items[2] = callback(Button.Button, obj3);

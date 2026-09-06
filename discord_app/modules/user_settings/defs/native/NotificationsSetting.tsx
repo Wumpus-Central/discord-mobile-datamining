@@ -15,7 +15,7 @@ obj = {
   parent: null,
   IconComponent: BellIcon.BellIcon,
   usePredicate() {
-    return !getNamedExperiment.useIsDeclarativeSettingsUIAvailable();
+    return !getNamedExperiment.useIsDeclarativeSettingsUIAvailable("LegacyNotificationsSetting");
   },
   screen: obj,
 };

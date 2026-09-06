@@ -17,17 +17,17 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   let first;
   closure_4 = undefined;
   let isCoachmarkVisible;
-  let result = channel(4298).useIsDismissibleContentDismissed_UNSAFE(closure_7);
+  let result = channel(4380).useIsDismissibleContentDismissed_UNSAFE(closure_7);
   dependencyMap = result;
-  let obj = channel(4298);
+  let obj = channel(4380);
   const items = [isCoachmarkVisible];
-  const stateFromStores = channel(586).useStateFromStores(
+  const stateFromStores = channel(504).useStateFromStores(
     items,
     () => null != isCoachmarkVisible.getScheduledMessage(channel.id),
   );
-  let obj2 = channel(586);
+  let obj2 = channel(504);
   const items1 = [closure_4];
-  const stateFromStores1 = channel(586).useStateFromStores(items1, () => connected.isConnected());
+  const stateFromStores1 = channel(504).useStateFromStores(items1, () => connected.isConnected());
   if (isEligible) {
     isEligible = draftText.trim().length > 10;
   }
@@ -44,7 +44,7 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   if (first) {
     isCoachmarkVisible = isEligible;
   }
-  const obj3 = channel(586);
+  const obj3 = channel(504);
   const tmp4 = isEligible;
   if (tmp4Result[0] !== channel.id) {
     tmp10(channel.id);

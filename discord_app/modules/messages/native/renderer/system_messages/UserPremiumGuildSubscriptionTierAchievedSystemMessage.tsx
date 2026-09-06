@@ -32,24 +32,24 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage =
         obj[2] = message.roleStyle;
         const tmp16 = formatUsernameOnClickDefault(obj);
         if (tmp13 > 1) {
-          const intl2 = tmp14(1233).intl;
+          const intl2 = tmp14(1114).intl;
           obj = { username: null, usernameOnClick: null, guildName: null, newTierName: null, numSubscriptions: null };
           obj[0] = messageAuthorWithProcessedColor.nick;
           obj[1] = tmp16;
           obj[2] = guild.name;
-          let tmp14Result = tmp14(4369);
+          let tmp14Result = tmp14(4454);
           obj[3] = tmp14Result.getTierName(TIER_1);
           obj[4] = tmp13;
-          let formatToPartsResult = intl2.formatToParts(tmp14(1233).t.GjNvr7, obj);
+          let formatToPartsResult = intl2.formatToParts(tmp14(1114).t.GjNvr7, obj);
         } else {
-          const intl = tmp14(1233).intl;
+          const intl = tmp14(1114).intl;
           obj1 = { username: null, usernameOnClick: null, guildName: null, newTierName: null };
           obj1[0] = messageAuthorWithProcessedColor.nick;
           obj1[1] = tmp16;
           obj1[2] = guild.name;
-          tmp14Result = tmp14(4369);
+          tmp14Result = tmp14(4454);
           obj1[3] = tmp14Result.getTierName(TIER_1);
-          formatToPartsResult = intl.formatToParts(tmp14(1233).t.oAYAP7, obj1);
+          formatToPartsResult = intl.formatToParts(tmp14(1114).t.oAYAP7, obj1);
         }
         const obj2 = { content: null };
         obj2[0] = formatToPartsResult;

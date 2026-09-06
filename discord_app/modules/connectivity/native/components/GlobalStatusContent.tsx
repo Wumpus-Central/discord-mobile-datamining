@@ -1,9 +1,9 @@
 // discord_app/modules/connectivity/native/components/GlobalStatusContent.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import useCanCurrentUserSpeakInChannelDefault from "../../../stage_channels/useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
-import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../../stores/ChannelStore.tsx";
 import closure_5 from "../../../../stores/GuildStore.tsx";
@@ -91,7 +91,7 @@ export default function ConnectivityGlobalStatusContent() {
   }
   let tmp2ResultResult = useCanCurrentUserSpeakInChannelDefault(id);
   const tmp2Result = useCanCurrentUserSpeakInChannelDefault;
-  let tmp5Result = tmp5(1362);
+  let tmp5Result = tmp5(4411);
   let tmp14 = tmp12;
   const tmp11 = useIsInvitedToSpeakDefault();
   if (isGuildStageVoiceResult) {
@@ -100,26 +100,26 @@ export default function ConnectivityGlobalStatusContent() {
     }
     tmp14 = tmp2ResultResult;
   }
-  tmp5Result = tmp5(5080);
+  tmp5Result = tmp5(5126);
   let isScreenLandscape = tmp5Result.useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4332).isModalOpen(tmp2(9543));
-    const tmp5Result1 = tmp5(4332);
+    isScreenLandscape = tmp5(4417).isModalOpen(tmp2(9466));
+    const tmp5Result1 = tmp5(4417);
   }
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(1234).isAndroid();
-    const tmp5Result2 = tmp5(1234);
+    isScreenLandscape = tmp5(1115).isAndroid();
+    const tmp5Result2 = tmp5(1115);
   }
   let num = 0;
   if (!isScreenLandscape) {
-    num = tmp2(1627)().top;
+    num = tmp2(1611)().top;
   }
   obj = { style: items2, children: null };
   items2 = [tmp14 ? tmp.bg : tmp.bgNeutral, tmp.container];
   obj = { minHeight: RTC_PANEL_HEIGHT + num, paddingTop: num };
   items2[2] = obj;
   if (isScreenLandscape) {
-    isScreenLandscape = callback(tmp2(9547), { hidden: true });
+    isScreenLandscape = callback(tmp2(9481), { hidden: true });
   }
   const items3 = [isScreenLandscape];
   let tmp19 = null;
@@ -138,7 +138,7 @@ export default function ConnectivityGlobalStatusContent() {
     obj1[3] = isThemeDarkResult;
     obj1[4] = rtcConnectionState;
     obj1[5] = remotePlatform;
-    tmp19 = callback(tmp2(9673), obj1);
+    tmp19 = callback(tmp2(9686), obj1);
   }
   items3[1] = tmp19;
   obj[1] = items3;

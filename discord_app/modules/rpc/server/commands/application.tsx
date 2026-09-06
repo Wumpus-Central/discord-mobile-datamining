@@ -33,9 +33,9 @@ let obj = {
       const guildId = obj3.getGuildId();
     }
     application = application.getApplication(id);
-    let tmpResult = tmp(8449);
+    let tmpResult = tmp(8856);
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-      tmpResult = tmp(9473);
+      tmpResult = tmp(9518);
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
       obj = {
         activity_application_id: null,
@@ -58,11 +58,11 @@ let obj = {
       obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(event_properties);
-      tmp5(695).track(args.event_name, obj);
+      tmp5(1242).track(args.event_name, obj);
     } else {
       obj1 = { errorCode: null };
       obj1[0] = constants2.INVALID_COMMAND;
-      const tmp12 = new tmp5(9520)(obj1, "This application cannot access this API");
+      const tmp12 = new tmp5(9554)(obj1, "This application cannot access this API");
       throw tmp12;
     }
   },

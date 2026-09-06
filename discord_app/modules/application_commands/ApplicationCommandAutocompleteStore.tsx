@@ -67,7 +67,7 @@ prototype["getLastErrored"] = function getLastErrored(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "accessible",
+      lastResponseNonce: "call",
     };
     obj[0] = id;
     obj[1] = store.getActiveOptionName(id);
@@ -104,7 +104,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "accessible",
+      lastResponseNonce: "call",
     };
     obj[0] = id;
     obj[1] = store.getActiveOptionName(id);
@@ -147,7 +147,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "accessible",
+      lastResponseNonce: "call",
     };
     obj[0] = id;
     obj[1] = store.getActiveOptionName(id);
@@ -184,7 +184,7 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "accessible",
+      lastResponseNonce: "call",
     };
     obj[0] = id;
     obj[1] = store.getActiveOptionName(id);
@@ -227,7 +227,7 @@ set = {
         optionNameToNonce: null,
         optionNameToLastQuery: null,
         lastErrored: false,
-        lastResponseNonce: "accessible",
+        lastResponseNonce: "call",
       };
       obj[0] = id;
       obj[1] = store.getActiveOptionName(channelId);
@@ -312,7 +312,7 @@ set = {
           optionNameToNonce: null,
           optionNameToLastQuery: null,
           lastErrored: false,
-          lastResponseNonce: "accessible",
+          lastResponseNonce: "call",
         };
         obj[0] = id;
         obj[1] = store.getActiveOptionName(channelId);
@@ -440,7 +440,7 @@ set = {
             optionNameToNonce: null,
             optionNameToLastQuery: null,
             lastErrored: false,
-            lastResponseNonce: "accessible",
+            lastResponseNonce: "call",
           };
           obj[0] = id;
           obj[1] = store.getActiveOptionName(channelId);

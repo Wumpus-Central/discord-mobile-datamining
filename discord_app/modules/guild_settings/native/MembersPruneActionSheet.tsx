@@ -115,7 +115,7 @@ const result = require("set").fileFinishedImporting("modules/guild_settings/nati
 export default function MembersPruneActionSheet(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let obj = guild(586);
+  let obj = guild(504);
   const items = [closure_8, closure_9, closure_10];
   const items1 = [guild];
   stateFromStores = obj.useStateFromStores(

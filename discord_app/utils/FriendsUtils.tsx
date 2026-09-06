@@ -1,7 +1,7 @@
 // discord_app/utils/FriendsUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
+import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
 import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
 import ME from "../Constants.tsx";
 
@@ -28,9 +28,9 @@ function validateDiscordTag(arr) {
       }
       obj[2] = str2.length;
       obj[3] = tmp4[0].length;
-      let tmp5Result = tmp5(8666);
+      let tmp5Result = tmp5(8376);
       obj[4] = tmp5Result.isEmail(arr);
-      tmp5Result = tmp5(8666);
+      tmp5Result = tmp5(8376);
       obj[5] = tmp5Result.isInvite(arr);
       obj[6] = regex.test(arr);
       obj.track(constants2.FRIEND_REQUEST_FAILED, obj);

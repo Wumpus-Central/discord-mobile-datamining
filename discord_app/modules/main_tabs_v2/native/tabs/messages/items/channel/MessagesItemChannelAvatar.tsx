@@ -43,9 +43,9 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
     muted = !channelSelected;
   }
   const tmpResult = closure_10(muted);
-  const REFRESH_MEDIUM_32 = channel(1296).AvatarSizes.REFRESH_MEDIUM_32;
+  const REFRESH_MEDIUM_32 = channel(1178).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = id.getId();
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => {
     const typingUsers = closure_1_6.getTypingUsers(channel.id);
@@ -62,7 +62,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
     return false;
   });
   const items1 = [stateFromStores];
-  const stateFromStores1 = channel(586).useStateFromStores(items1, () => {
+  const stateFromStores1 = channel(504).useStateFromStores(items1, () => {
     const useReducedMotion = stateFromStores.useReducedMotion;
     let tmp = !useReducedMotion;
     if (!useReducedMotion) {
@@ -74,29 +74,29 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
     }
     return tmp;
   });
-  const obj2 = channel(586);
+  const obj2 = channel(504);
   let tmp = closure_10;
   let tmp3 = channel;
   const items2 = [closure_7];
-  const stateFromStores2 = channel(586).useStateFromStores(items2, () => {
+  const stateFromStores2 = channel(504).useStateFromStores(items2, () => {
     let recipientId;
     if (true === channel.isDM()) {
       recipientId = channel.getRecipientId();
     }
     return closure_1_7.getUser(recipientId);
   });
-  const obj3 = channel(586);
+  const obj3 = channel(504);
   const items3 = [closure_5];
-  const stateFromStores3 = channel(586).useStateFromStores(items3, () => {
+  const stateFromStores3 = channel(504).useStateFromStores(items3, () => {
     let isMobileOnlineResult = channel.isDM();
     if (isMobileOnlineResult) {
       isMobileOnlineResult = closure_1_5.isMobileOnline(channel.getRecipientId());
     }
     return isMobileOnlineResult;
   });
-  const obj5 = channel(586);
+  const obj5 = channel(504);
   const items4 = [closure_5];
-  const stateFromStores4 = channel(586).useStateFromStores(items4, () => {
+  const stateFromStores4 = channel(504).useStateFromStores(items4, () => {
     let isVROnlineResult = channel.isDM();
     if (isVROnlineResult) {
       isVROnlineResult = closure_1_5.isVROnline(channel.getRecipientId());
@@ -128,11 +128,11 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
         isVROnline: false,
         status: true,
         streaming: true,
-        style: null,
-        size: null,
-        animate: null,
-        typing: null,
-        autoStatusCutout: null,
+        style: "accessible",
+        size: "<string:307298308>",
+        animate: "<string:906248450>",
+        typing: "<string:1715535874>",
+        autoStatusCutout: "<string:1358955583>",
       };
       obj[0] = stateFromStores2;
       obj[1] = stateFromStores2.avatarDecoration;
@@ -148,7 +148,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[8] = REFRESH_MEDIUM_32;
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1296).Avatar, {
+      tmp11Result = jsx(tmp3(1178).Avatar, {
         user: null,
         avatarDecoration: null,
         guildId: "e",
@@ -156,11 +156,11 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
         isVROnline: false,
         status: true,
         streaming: true,
-        style: null,
-        size: null,
-        animate: null,
-        typing: null,
-        autoStatusCutout: null,
+        style: "accessible",
+        size: "<string:307298308>",
+        animate: "<string:906248450>",
+        typing: "<string:1715535874>",
+        autoStatusCutout: "<string:1358955583>",
       });
       const tmp11 = jsx;
     }

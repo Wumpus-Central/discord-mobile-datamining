@@ -32,10 +32,10 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
   const safetyHubClassification = obj1.useSafetyHubClassification(stateFromStores);
-  let tmp2Result = tmp2(586);
+  let tmp2Result = tmp2(504);
   const items1 = [closure_4];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => store.getAppealSignal());
-  tmp2Result = tmp2(586);
+  tmp2Result = tmp2(504);
   const items2 = [closure_4];
   const stateFromStores2 = tmp2Result.useStateFromStores(items2, () => store.getFreeTextAppealReason());
   const classification = safetyHubClassification.classification;
@@ -46,8 +46,8 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   if (flagged_content == null) {
     flagged_content = [];
   }
-  const intl = tmp2(1233).intl;
-  const intl2 = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
+  const intl2 = tmp2(1114).intl;
   const stringResult = intl.string(getSystemLocale.t["C5q+pW"]);
   const items3 = [
     callback(AppealIngestionModal.AppealIngestionModalHeader, {
@@ -69,17 +69,17 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     if (tmp11Result) {
       obj1 = { flaggedContent: null };
       obj1[0] = flagged_content;
-      tmp11Result = tmp11(tmp13(11691), obj1);
+      tmp11Result = tmp11(tmp13(11889), obj1);
     }
     const obj2 = { children: null };
     items5[2] = tmp11Result;
     const obj3 = { classification: null };
     obj3[0] = safetyHubClassification.classification;
-    items5[3] = tmp11(tmp13(11701), obj3);
+    items5[3] = tmp11(tmp13(11899), obj3);
     obj[1] = items5;
     items3[1] = tmp10(tmp12, obj);
     obj2[0] = items3;
-    return tmp10(tmp2(11688).AppealIngestionModalScreen, obj2);
+    return tmp10(tmp2(11886).AppealIngestionModalScreen, obj2);
   } else {
     const obj4 = { variant: "heading-md/normal", color: "text-link", style: null, onPress: null, children: null };
     obj4[2] = tmp.detailsAction;
@@ -87,13 +87,13 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
       let obj = callback2(paths[13]);
       obj = {
         onSave(userInput) {
-          let obj = callback(706);
+          let obj = callback(573);
           obj = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
           obj.dispatch(obj);
-          callback(4445).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+          callback(4527).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
         },
         onClose() {
-          return callback(4445).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+          return callback(4527).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
         },
       };
       return obj.openLazy(
@@ -103,13 +103,13 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
       );
     };
     if (stateFromStores2.length > 0) {
-      const intl4 = tmp2(1233).intl;
-      let stringResult2 = intl4.string(tmp2(1233).t.tnE3bZ);
+      const intl4 = tmp2(1114).intl;
+      let stringResult2 = intl4.string(tmp2(1114).t.tnE3bZ);
     } else {
-      const intl3 = tmp2(1233).intl;
-      stringResult2 = intl3.string(tmp2(1233).t.uoQFIp);
+      const intl3 = tmp2(1114).intl;
+      stringResult2 = intl3.string(tmp2(1114).t.uoQFIp);
     }
     obj4[4] = stringResult2;
-    tmp11Result = tmp11(tmp2(4474).Text, obj4);
+    tmp11Result = tmp11(tmp2(4556).Text, obj4);
   }
 }

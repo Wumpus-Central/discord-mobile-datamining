@@ -97,10 +97,10 @@ let obj = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: "flexDirection",
   userDiscountOffers: null,
-  userDiscounts: "\u{1F442}\u{1F3FC}",
+  userDiscounts: "\u{1F9D1}\u{1F3FC}\u200D\u{1F9B1}",
   isFetching: true,
   lastFetchSuccessful: null,
-  shouldTriggerOffer: 8,
+  shouldTriggerOffer: 12.1,
   cooldownExpirationTimestamps: "TRANSPARENT",
 };
 obj[1] = {};

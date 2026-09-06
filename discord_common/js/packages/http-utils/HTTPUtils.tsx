@@ -1,7 +1,7 @@
 // discord_common/js/packages/http-utils/HTTPUtils.tsx
 import log from "../logger/Logger.tsx";
-import _createForOfIteratorHelperDefault from "../../../../_runtime/00528__createForOfIteratorHelper.js";
 import failsDefault from "../backoff/Backoff.tsx";
+import _createForOfIteratorHelperDefault from "../../../../_runtime/01273__createForOfIteratorHelper.js";
 import convertStringArrayToSkemaErrorItems from "V8APIError.tsx";
 import convertSkemaError from "convertSkemaError.tsx";
 import stringifyErrors from "stringifyErrors.tsx";
@@ -135,7 +135,7 @@ function sendRequest(arg0, signal) {
               if (null != tmp.backoff) {
                 let backoff = tmp.backoff;
               } else {
-                backoff = new signal(581)();
+                backoff = new signal(559)();
               }
               tmp.backoff = backoff;
               let num5 = 0;
@@ -218,11 +218,11 @@ function sendRequest(arg0, signal) {
                   if (body2 != null) {
                     code = body2.code;
                   }
-                  if (code === callback(582).INVALID_FORM_BODY_ERROR_CODE) {
+                  if (code === callback(1326).INVALID_FORM_BODY_ERROR_CODE) {
                     const errors = obj.body.errors;
                     if (null != errors) {
-                      obj.body = tmp17(583).convertSkemaError(errors);
-                      const tmp17Result = tmp17(583);
+                      obj.body = tmp17(1327).convertSkemaError(errors);
+                      const tmp17Result = tmp17(1327);
                     }
                   }
                   tmp17 = callback;
@@ -282,7 +282,7 @@ function sendRequest(arg0, signal) {
               if (null != tmp.backoff) {
                 let backoff = tmp.backoff;
               } else {
-                backoff = new signal(581)();
+                backoff = new signal(559)();
               }
               tmp.backoff = backoff;
               let num2 = 0;

@@ -1,6 +1,6 @@
 // discord_app/modules/panels/morphable/native/SafeAreaDisabledStore.tsx
 import set2 from "../../../../../_runtime/00002_set.js";
-import keys from "../../../../../_runtime/00641_keys.js";
+import keys from "../../../../../_runtime/00560_keys.js";
 
 let obj = keys.create((arg0, arg1) => {
   closure_0 = arg0;
@@ -12,7 +12,7 @@ let obj = keys.create((arg0, arg1) => {
     },
     requestSafeAreaDisableLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      callback(702).batchUpdates(() => {
+      callback(1249).batchUpdates(() => {
         closure_1_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
           const hasItem = lockKeys.has(closure_0);

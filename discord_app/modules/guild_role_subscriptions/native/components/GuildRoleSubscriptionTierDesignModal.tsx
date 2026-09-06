@@ -49,7 +49,7 @@ function MemberPreviews(role) {
   return callback3(View, obj);
 }
 function Content() {
-  const tmp3 = role(13876)();
+  const tmp3 = role(13898)();
   let obj = useEditStateContext;
   const editStateContext = obj.useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
@@ -79,8 +79,8 @@ function Content() {
   obj = { children: null };
   const items1 = [callback2(MemberPreviews, { role }), , , ,];
   obj1 = { style: tmp3.header, children: null };
-  let tmpResult = tmp(9931);
-  const intl = tmp4(1233).intl;
+  let tmpResult = tmp(9816);
+  const intl = tmp4(1114).intl;
   obj1[1] = intl.string(require("../../../../intl/index.native.tsx").t.sEr1zr);
   items1[1] = callback2(tmpResult, obj1);
   obj2 = {
@@ -92,23 +92,23 @@ function Content() {
     setImage: null,
     disabled: null,
   };
-  tmpResult = tmp(17570);
-  const intl2 = tmp4(1233).intl;
+  tmpResult = tmp(17730);
+  const intl2 = tmp4(1114).intl;
   obj2[0] = intl2.string(require("../../../../intl/index.native.tsx").t.Glqj9m);
   obj2[1] = tmp10;
   obj2[2] = UPLOAD_SMALL_SIZE;
   obj2[3] = require("FormImagePicker.tsx").PreviewShape.SQUIRCLE;
   obj2[5] = function setImage(icon) {
-    return callback({ icon: icon.uri, unicodeEmoji: "Array" });
+    return callback({ icon: icon.uri, unicodeEmoji: "a" });
   };
   obj2[6] = roleSubscriptionSettingsDisabled;
   items1[2] = callback2(tmpResult, obj2);
   obj3 = { style: tmp3.header, children: null };
   const tmp4Result = useRoleSubscriptionSettingsDisabled;
-  const intl3 = tmp4(1233).intl;
+  const intl3 = tmp4(1114).intl;
   obj3[1] = intl3.string(require("../../../../intl/index.native.tsx").t["W7hH+z"]);
-  items1[3] = callback2(role(9931), obj3);
-  items1[4] = callback2(role(17608), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[3] = callback2(role(9816), obj3);
+  items1[4] = callback2(role(17768), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj[0] = items1;
   return callback3(closure_11, obj);
 }

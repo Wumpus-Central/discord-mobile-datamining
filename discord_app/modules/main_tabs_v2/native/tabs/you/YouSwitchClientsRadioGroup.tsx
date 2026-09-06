@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouSwitchClientsRadioGroup.tsx
-import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
@@ -9,19 +9,19 @@ const result = require("set").fileFinishedImporting(
 );
 
 export default function YouSwitchClientsRadioGroup() {
-  const memo = React.useMemo(() => memo(16219).getCurrentVariant(), []);
-  [arr, dependencyMap] = callback(React.useState(null), 2);
+  const memo = React.useMemo(() => memo(16381).getCurrentVariant(), []);
+  [arr, importDefault] = callback(React.useState(null), 2);
   const items = [memo];
   const effect = React.useEffect(() => {
     if (null != c0) {
       c0 = false;
-      let DISCORD_VARIANT_LIST = memo(closure_1_1[4]).DISCORD_VARIANT_LIST;
+      let DISCORD_VARIANT_LIST = memo(closure_1_2[4]).DISCORD_VARIANT_LIST;
       const allPromises = Promise.all(DISCORD_VARIANT_LIST.map((arg0) => callback(table[3]).isVariantInstalled(arg0)));
       Promise.all(DISCORD_VARIANT_LIST.map((arg0) => callback(table[3]).isVariantInstalled(arg0)))
         .then((arg0) => {
           closure_0 = arg0;
           if (!closure_0) {
-            const DISCORD_VARIANT_LIST = memo(closure_2_1[4]).DISCORD_VARIANT_LIST;
+            const DISCORD_VARIANT_LIST = memo(closure_2_2[4]).DISCORD_VARIANT_LIST;
             closure_1_1(DISCORD_VARIANT_LIST.filter((arg0, arg1) => table[arg1]));
           }
         })
@@ -46,12 +46,12 @@ export default function YouSwitchClientsRadioGroup() {
         obj[1] = memo;
         obj[2] = tmp4;
         obj[4] = arr.map((value) => {
-          let obj = { value, label: memo(16220).DISCORD_VARIANTS[value].label, icon: null };
-          obj = { color: memo(16220).DISCORD_VARIANTS[value].color };
-          obj[2] = callback(memo(9057).ClydeIcon, obj);
-          return callback(memo(7705).TableRadioRow, obj, value);
+          let obj = { value, label: memo(16382).DISCORD_VARIANTS[value].label, icon: null };
+          obj = { color: memo(16382).DISCORD_VARIANTS[value].color };
+          obj[2] = callback(memo(10818).ClydeIcon, obj);
+          return callback(memo(5688).TableRadioRow, obj, value);
         });
-        tmp5 = jsx(memo(7704).TableRadioGroup, {
+        tmp5 = jsx(memo(5685).TableRadioGroup, {
           title: "Switch Clients",
           value: null,
           onChange: null,

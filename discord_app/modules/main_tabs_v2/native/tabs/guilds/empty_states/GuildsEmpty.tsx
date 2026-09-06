@@ -4,8 +4,8 @@ import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef12482 from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/16108_registerAsset.js";
+import _modDef12708 from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/16270_registerAsset.js";
 import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -18,10 +18,10 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 
 require = arg1;
 function handleJoinGuild() {
-  const result = _modDef12482.openGuildJoinServerScreen();
+  const result = _modDef12708.openGuildJoinServerScreen();
 }
 function handleCreateGuild() {
-  _modDef12482.openCreateGuildModal();
+  _modDef12708.openCreateGuildModal();
 }
 class GuildsEmptyContent {
   constructor(arg0) {
@@ -139,9 +139,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   selectedGuildId = undefined;
   ({ selectedGuildId, style } = arg0);
   const tmp = callback3();
-  let obj = navigation(1499);
+  let obj = navigation(1484);
   navigation = obj.useNavigation();
-  obj1 = navigation(644);
+  obj1 = navigation(563);
   const items = [closure_8];
   const stateFromStores = obj1.useStateFromStores(items, () => null != sessionId.getSessionId());
   let tmp6 = null;
@@ -149,8 +149,8 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
     tmp6 = selectedGuildId;
   }
   selectedGuildId = tmp6;
-  obj = { type: navigation(500).ImpressionTypes.VIEW, name: navigation(500).ImpressionNames.GUILDS_EMPTY_NUX };
-  selectedGuildId(8911)(obj);
+  obj = { type: navigation(1250).ImpressionTypes.VIEW, name: navigation(1250).ImpressionNames.GUILDS_EMPTY_NUX };
+  selectedGuildId(8768)(obj);
   const items1 = [tmp6, navigation];
   const effect = importAllResult.useEffect(() => {
     if (null != selectedGuildId) {
@@ -187,9 +187,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
       obj2 = closure_0;
     }
   }, items1);
-  let tmp2Result = tmp2(5080);
+  let tmp2Result = tmp2(5126);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(14942);
+  tmp2Result = tmp2(15100);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };
@@ -206,9 +206,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
       accessibilityRole: "header",
       children: null,
     };
-    const intl = tmp2(1233).intl;
-    obj3[4] = intl.string(tmp2(1233).t["7hB4kg"]);
-    obj2[1] = callback(tmp2(4474).Text, obj3);
+    const intl = tmp2(1114).intl;
+    obj3[4] = intl.string(tmp2(1114).t["7hB4kg"]);
+    obj2[1] = callback(tmp2(4556).Text, obj3);
     obj1[1] = callback(closure_6, obj2);
     const items3 = [callback(closure_6, obj1)];
     let tmp18;

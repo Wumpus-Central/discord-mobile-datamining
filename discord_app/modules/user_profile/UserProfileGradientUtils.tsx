@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/UserProfileGradientUtils.tsx
 import apply2 from "../../../_runtime/00012_apply.js";
+import nDefault from "../../../_runtime/00672_n.js";
 import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import nDefault from "../../../_runtime/00686_n.js";
 import AccessibilityAnnouncer from "../../design/shared.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { ThemeTypes } from "../../Constants.tsx";
@@ -74,12 +74,12 @@ export const getValueInColorGradientByPercentage = function getValueInColorGradi
   return items;
 };
 export const calculateOverlayedColor = function calculateOverlayedColor(secondaryColor, overlay) {
-  const obj = items1(685);
+  const obj = items1(1091);
   const tmp = items1;
   if (null == overlay) {
     return 0;
   } else {
-    const parseStringResult = alpha(4327).parseString(overlay);
+    const parseStringResult = alpha(4410).parseString(overlay);
     if (null == parseStringResult) {
       return 0;
     } else {
@@ -97,11 +97,11 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
         3,
       );
       const _HermesInternal = HermesInternal;
-      return tmp(685).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
+      return tmp(1091).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
     }
-    const obj2 = alpha(4327);
+    const obj2 = alpha(4410);
   }
-  int2rgbArrayResult = items1(685).int2rgbArray(secondaryColor);
+  int2rgbArrayResult = items1(1091).int2rgbArray(secondaryColor);
 };
 export const calculateButtonColor = memoizeResult;
 export const calculateModalV2BackgroundColor = memoizeResult1;

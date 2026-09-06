@@ -25,7 +25,7 @@ function allowChannelAccess(id, channelType, MEMBER) {
   }
   let addResult = NONE;
   if (tmp3) {
-    let tmpResult = tmp(503);
+    let tmpResult = tmp(1086);
     addResult = tmpResult.add(NONE, constants.VIEW_CHANNEL);
   }
   let tmp7 = channelType === closure_21;
@@ -41,10 +41,10 @@ function allowChannelAccess(id, channelType, MEMBER) {
   }
   let addResult2 = addResult;
   if (tmp7) {
-    tmpResult = tmp(503);
+    tmpResult = tmp(1086);
     const addResult1 = tmpResult.add(addResult, constants.VIEW_CHANNEL);
-    addResult2 = tmp(503).add(addResult1, constants.CONNECT);
-    const tmpResult1 = tmp(503);
+    addResult2 = tmp(1086).add(addResult1, constants.CONNECT);
+    const tmpResult1 = tmp(1086);
   }
   return { id, type: MEMBER, deny: applyOverwritesAll.NONE, allow: addResult2 };
 }
@@ -95,7 +95,7 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult = NONE;
     if (tmp6) {
-      let tmp4Result = tmp4(503);
+      let tmp4Result = tmp4(1086);
       addResult = tmp4Result.add(NONE, constants.VIEW_CHANNEL);
     }
     let tmp11 = channelType === closure_21;
@@ -104,10 +104,10 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult2 = addResult;
     if (tmp11) {
-      tmp4Result = tmp4(503);
+      tmp4Result = tmp4(1086);
       const addResult1 = tmp4Result.add(addResult, constants.VIEW_CHANNEL);
-      addResult2 = tmp4(503).add(addResult1, constants.CONNECT);
-      const tmp4Result1 = tmp4(503);
+      addResult2 = tmp4(1086).add(addResult1, constants.CONNECT);
+      const tmp4Result1 = tmp4(1086);
     }
     const obj = { id: null, type: null, allow: null, deny: null };
     obj[0] = guildId;

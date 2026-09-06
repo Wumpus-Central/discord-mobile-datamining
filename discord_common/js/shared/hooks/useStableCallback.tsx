@@ -3,9 +3,9 @@ import closure_0 from "../../../../_runtime/00019_noop.js";
 
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
 
-export default function useStableCallback(stateFromStores) {
-  const React = stateFromStores;
-  closure_1 = React.useRef(stateFromStores);
+export default function useStableCallback(first) {
+  const React = first;
+  closure_1 = React.useRef(first);
   const insertionEffect = React.useInsertionEffect(() => {
     closure_1.current = closure_0;
   });

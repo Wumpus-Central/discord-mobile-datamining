@@ -44,75 +44,80 @@ export default function SearchableUserList(selectedUserIds) {
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = selectedUserIds.withGuildMembers;
+  let flag2 = selectedUserIds.focusOnAdd;
   if (flag2 === undefined) {
-    flag2 = false;
+    flag2 = true;
   }
-  let flag3 = selectedUserIds.withAffinitySuggestions;
+  let flag3 = selectedUserIds.withGuildMembers;
   if (flag3 === undefined) {
-    flag3 = true;
+    flag3 = false;
   }
-  let flag4 = selectedUserIds.withAlphabeticalSections;
+  let flag4 = selectedUserIds.withAffinitySuggestions;
   if (flag4 === undefined) {
     flag4 = true;
   }
-  let flag5 = selectedUserIds.withFriends;
+  let flag5 = selectedUserIds.withAlphabeticalSections;
   if (flag5 === undefined) {
     flag5 = true;
   }
-  let flag6 = selectedUserIds.withGameFriends;
+  let flag6 = selectedUserIds.withFriends;
   if (flag6 === undefined) {
-    flag6 = false;
+    flag6 = true;
   }
-  let flag7 = selectedUserIds.withFriendRequests;
+  let flag7 = selectedUserIds.withGameFriends;
   if (flag7 === undefined) {
     flag7 = false;
   }
-  let flag8 = selectedUserIds.withFriendRequestsIncoming;
+  let flag8 = selectedUserIds.withFriendRequests;
   if (flag8 === undefined) {
     flag8 = false;
   }
-  let flag9 = selectedUserIds.withFriendRequestsOutgoing;
+  let flag9 = selectedUserIds.withFriendRequestsIncoming;
   if (flag9 === undefined) {
     flag9 = false;
   }
-  let flag10 = selectedUserIds.withFriendRequestsSpam;
+  let flag10 = selectedUserIds.withFriendRequestsOutgoing;
   if (flag10 === undefined) {
     flag10 = false;
   }
-  let flag11 = selectedUserIds.withFriendSuggestions;
+  let flag11 = selectedUserIds.withFriendRequestsSpam;
   if (flag11 === undefined) {
     flag11 = false;
   }
-  let flag12 = selectedUserIds.hideSearchOnDefaultNoResults;
+  let flag12 = selectedUserIds.withFriendSuggestions;
   if (flag12 === undefined) {
     flag12 = false;
   }
-  ({ defaultNoResultsFound, disableGradient, focusOnAdd, disableStickySections, disableThemedGradient } =
+  let flag13 = selectedUserIds.hideSearchOnDefaultNoResults;
+  if (flag13 === undefined) {
+    flag13 = false;
+  }
+  ({ defaultNoResultsFound, disableGradient, insetEnd, disableStickySections, disableThemedGradient } =
     selectedUserIds);
-  if (focusOnAdd === undefined) {
-    focusOnAdd = true;
+  if (insetEnd === undefined) {
+    insetEnd = disabledUserIds(onSelectUser[7]).space.PX_12;
   }
   closure_5 = undefined;
   let memo;
   ref = undefined;
-  const tmp2 = callback();
+  ({ onContentLengthChange, onLayout, onScroll } = selectedUserIds);
+  const tmp4 = callback();
   let obj = ACTIONS;
-  let tmp3 = handleMessage(ACTIONS.useState(""), 2);
-  const tmp6 = disabledUserIds(onSelectUser[8])({
-    query: tmp3[0],
-    withGuildMembers: flag2,
-    withAffinitySuggestions: flag3,
-    withAlphabeticalSections: flag4,
-    withFriends: flag5,
-    withGameFriends: flag6,
-    withFriendSuggestions: flag11,
-    withFriendRequests: flag7,
-    withFriendRequestsIncoming: flag8,
-    withFriendRequestsOutgoing: flag9,
-    withFriendRequestsSpam: flag10,
+  const tmp5 = handleMessage(ACTIONS.useState(""), 2);
+  const tmp8 = disabledUserIds(onSelectUser[8])({
+    query: tmp5[0],
+    withGuildMembers: flag3,
+    withAffinitySuggestions: flag4,
+    withAlphabeticalSections: flag5,
+    withFriends: flag6,
+    withGameFriends: flag7,
+    withFriendSuggestions: flag12,
+    withFriendRequests: flag8,
+    withFriendRequestsIncoming: flag9,
+    withFriendRequestsOutgoing: flag10,
+    withFriendRequestsSpam: flag11,
   });
-  closure_5 = tmp6;
+  closure_5 = tmp8;
   let items = [selectedUserIds];
   memo = ACTIONS.useMemo(() => {
     let items = selectedUserIds;
@@ -124,7 +129,7 @@ export default function SearchableUserList(selectedUserIds) {
     return found.map(disabledUserIds(onSelectUser[10]));
   }, items);
   const items1 = [onSelectUser, memo];
-  const items2 = [tmp6];
+  const items2 = [tmp8];
   callback = ACTIONS.useCallback((arg0) => {
     const user = memo.getUser(tmp.id);
     if (null != user) {
@@ -137,13 +142,13 @@ export default function SearchableUserList(selectedUserIds) {
     }
   }, items1);
   const memo1 = ACTIONS.useMemo(() => closure_5.map((items) => items.items.length), items2);
-  const items3 = [tmp6];
+  const items3 = [tmp8];
   const callback1 = ACTIONS.useCallback((arg0) => {
     const props = { title: closure_5[arg0].title };
     return { type: "section", props };
   }, items3);
-  const tmp10 = tmp3[0].trim().length > 0;
-  const items4 = [tmp6, disabledUserIds, onSelectUser, handleMessage, ACTIONS, selectedUserIds];
+  const tmp12 = tmp5[0].trim().length > 0;
+  const items4 = [tmp8, disabledUserIds, onSelectUser, handleMessage, ACTIONS, selectedUserIds];
   const callback2 = ACTIONS.useCallback((arg0, arg1) => {
     ({ user, firstMatch } = closure_5[arg0].items[arg1]);
     const props = {
@@ -196,20 +201,20 @@ export default function SearchableUserList(selectedUserIds) {
   }, items4);
   ref = ACTIONS.useRef(null);
   let obj2 = selectedUserIds(onSelectUser[13]);
-  let tmp14;
-  if (!tmp10) {
-    tmp14 = actions;
+  let tmp16;
+  if (!tmp12) {
+    tmp16 = actions;
   }
-  obj = { actions: tmp14, style: null };
+  obj = { actions: tmp16, style: null };
   let prop;
-  if (!tmp10) {
-    if (flag5) {
-      prop = tmp2.searchBarRowContainer;
+  if (!tmp12) {
+    if (flag6) {
+      prop = tmp4.searchBarRowContainer;
     }
   }
   obj[1] = prop;
   const userListActionsProps = obj2.useUserListActionsProps(obj);
-  const items5 = [tmp3[0]];
+  const items5 = [tmp5[0]];
   ({ renderHeader, headerSize } = userListActionsProps);
   const layoutEffect = obj.useLayoutEffect(() => {
     const current = ref.current;
@@ -218,11 +223,11 @@ export default function SearchableUserList(selectedUserIds) {
     }
   }, items5);
   const someResult = memo1.some((arg0) => arg0 > 0);
-  if (flag12) {
-    flag12 = !someResult;
+  if (flag13) {
+    flag13 = !someResult;
   }
-  if (flag12) {
-    flag12 = !tmp10;
+  if (flag13) {
+    flag13 = !tmp12;
   }
   if (someResult) {
     obj = {
@@ -232,7 +237,10 @@ export default function SearchableUserList(selectedUserIds) {
       getSectionProps: null,
       renderListHeader: null,
       listHeaderSize: null,
-      insetEnd: 12,
+      insetEnd: null,
+      onContentLengthChange: null,
+      onLayout: null,
+      onScroll: null,
       disableStickySections: null,
       disableThemedGradient: null,
     };
@@ -242,73 +250,77 @@ export default function SearchableUserList(selectedUserIds) {
     obj[3] = callback1;
     obj[4] = renderHeader;
     obj[5] = headerSize;
-    obj[7] = disableStickySections;
-    obj[8] = disableThemedGradient;
-    let tmp20Result = tmp20(tmp13(tmp5[14]).UsersFastList, obj);
-    let tmp27 = tmp20;
+    obj[6] = insetEnd;
+    obj[7] = onContentLengthChange;
+    obj[8] = onLayout;
+    obj[9] = onScroll;
+    obj[10] = disableStickySections;
+    obj[11] = disableThemedGradient;
+    let tmp22Result = tmp22(tmp15(tmp7[14]).UsersFastList, obj);
+    let tmp29 = tmp22;
   } else {
     obj1 = { style: null, children: null };
-    if (tmp19) {
+    if (tmp21) {
       const items6 = [noResults];
       let prop1;
-      if (flag5) {
-        if (!flag12) {
-          prop1 = tmp2.searchBarRowContainer;
+      if (flag6) {
+        if (!flag13) {
+          prop1 = tmp4.searchBarRowContainer;
         }
       }
       items6[1] = prop1;
       obj1[0] = items6;
       obj1[1] = defaultNoResultsFound;
-      let tmp24 = obj1;
+      let tmp26 = obj1;
     } else {
       obj1[0] = noResults;
       obj2 = { title: null, children: null };
-      let tmp4Result = tmp4(tmp5[15]);
-      let intl = tmp13(tmp5[12]).intl;
-      obj2[0] = intl.string(tmp13(tmp5[12]).t.V6nAfF);
+      let tmp6Result = tmp6(tmp7[15]);
+      let intl = tmp15(tmp7[12]).intl;
+      obj2[0] = intl.string(tmp15(tmp7[12]).t.V6nAfF);
       const obj3 = { actions: null, style: null };
       obj3[0] = actions;
       let prop2;
-      if (flag5) {
-        prop2 = tmp2.searchBarRowContainer;
+      if (flag6) {
+        prop2 = tmp4.searchBarRowContainer;
       }
       obj3[1] = prop2;
-      obj2[1] = tmp20(tmp13(tmp5[13]).UserFlashListActions, obj3);
-      obj1[1] = tmp20(tmp4Result, obj2);
-      tmp24 = obj1;
+      obj2[1] = tmp22(tmp15(tmp7[13]).UserFlashListActions, obj3);
+      obj1[1] = tmp22(tmp6Result, obj2);
+      tmp26 = obj1;
     }
-    tmp20Result = tmp20(closure_5, tmp24);
-    tmp27 = tmp20;
-    const tmp21 = closure_5;
+    tmp22Result = tmp22(closure_5, tmp26);
+    tmp29 = tmp22;
+    const tmp23 = closure_5;
   }
-  let tmp27Result = !disableGradient;
+  let tmp29Result = !disableGradient;
   if (!disableGradient) {
-    tmp27Result = tmp27(tmp4(tmp5[16]), { absolute: true });
+    tmp29Result = tmp29(tmp6(tmp7[16]), { absolute: true });
   }
-  const children = [tmp27Result, ,];
-  tmp27Result = null;
-  if (flag5) {
-    tmp27Result = null;
-    if (!flag12) {
+  const children = [tmp29Result, ,];
+  tmp29Result = null;
+  if (flag6) {
+    tmp29Result = null;
+    if (!flag13) {
       const obj4 = { style: null, children: null };
-      obj4[0] = tmp2.searchBarContainer;
+      obj4[0] = tmp4.searchBarContainer;
       const obj5 = { onChangeText: null, onRemove: null, tags: null, style: null, autoFocus: null, focusOnAdd: null };
-      obj5[0] = tmp3[1];
+      obj5[0] = tmp5[1];
       obj5[1] = callback;
       obj5[2] = memo;
-      obj5[3] = tmp2.searchBar;
-      tmp4Result = tmp4(tmp5[17]);
+      obj5[3] = tmp4.searchBar;
+      tmp6Result = tmp6(tmp7[17]);
       if (flag) {
         flag = someResult;
       }
       obj5[4] = flag;
-      obj5[5] = focusOnAdd;
-      obj4[1] = tmp27(tmp4Result, obj5);
-      tmp27Result = tmp27(closure_5, obj4);
-      const tmp32 = closure_5;
+      obj5[5] = flag2;
+      obj4[1] = tmp29(tmp6Result, obj5);
+      tmp29Result = tmp29(closure_5, obj4);
+      const tmp34 = closure_5;
     }
   }
-  children[1] = tmp27Result;
-  children[2] = tmp20Result;
+  children[1] = tmp29Result;
+  children[2] = tmp22Result;
   return closure_10(closure_9, { children });
 }

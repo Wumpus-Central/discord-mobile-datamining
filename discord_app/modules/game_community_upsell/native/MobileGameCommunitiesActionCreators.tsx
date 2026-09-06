@@ -1,6 +1,6 @@
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx
 import setDefault from "../../../utils/Durations.tsx";
-import parseDefault from "../../../../_runtime/01482_parse.js";
+import parseDefault from "../../../../_runtime/01471_parse.js";
 import closure_3 from "MobileGameCommunitiesStore.tsx";
 import { Endpoints } from "../../../Constants.tsx";
 import importDefaultResult from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
@@ -63,7 +63,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
               let value = HTTP.get(obj);
               let obj2 = callback(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F123042 */ function() { ... });
+              value.then(() => { ... }, () => { ... }).catch(/* F123678 */ function() { ... });
             });
           }
         }).catch(() => {
@@ -86,7 +86,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
       if (items === undefined) {
         items = [];
       }
-      const HTTP = arr(527).HTTP;
+      const HTTP = arr(1272).HTTP;
       obj = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = Endpoints.MOBILE_GAME_COMMUNITIES;
       obj = { game_ids: null, limit: null, ignored_guild_ids: null };
@@ -131,7 +131,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
                   let value = HTTP.get(obj);
                   let obj2 = callback(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F123042 */ function() { ... });
+                  value.then(() => { ... }, () => { ... }).catch(/* F123678 */ function() { ... });
                 });
               }
             }).catch(() => {

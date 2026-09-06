@@ -42,10 +42,10 @@ export default function GuildPowerupsLevelsSection(arg0) {
   }, []);
   obj = { title: null, description: null };
   const intl = getSystemLocale.intl;
-  obj[0] = intl.string(listings(2400)["TXY/b0"]);
+  obj[0] = intl.string(listings(2428)["TXY/b0"]);
   const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(listings(2400).aJv4PB);
-  const items1 = [callback(listings(12352), obj)];
+  obj[1] = intl2.string(listings(2428).aJv4PB);
+  const items1 = [callback(listings(12552), obj)];
   obj = {
     cardMarginRight: PX_16,
     cardWidth: 250,

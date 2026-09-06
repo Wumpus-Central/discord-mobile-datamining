@@ -27,7 +27,7 @@ class QuestContentImpression {
       const questPlacementFromQuestContent = obj.getQuestPlacementFromQuestContent(obj.questContent);
       let result = null != questPlacementFromQuestContent;
       if (result) {
-        result = obj(closure_1_2[8]).isBillableQuestContent(obj.questContent);
+        result = obj(closure_1_2[8]).isBillableQuestContent(tmp3.questContent, tmp3.entity.adCreativeType);
         const tmpResult = obj(closure_1_2[8]);
       }
       if (result) {
@@ -44,7 +44,7 @@ class QuestContentImpression {
         result = !closure_1_11.has("" + adCreativeId + "_" + questPlacementFromQuestContent);
       }
       if (result) {
-        result = obj(closure_1_2[8]).isBillableQuestContent(obj.questContent);
+        result = obj(closure_1_2[8]).isBillableQuestContent(tmp3.questContent, tmp3.entity.adCreativeType);
         const tmpResult = obj(closure_1_2[8]);
       }
       return result;
@@ -129,11 +129,11 @@ class QuestContentImpression {
               closure_0 = undefined;
               obj3 = undefined;
               obj4 = undefined;
-              const obj10 = closure_1_0(7485);
+              const obj10 = closure_1_0(7729);
               obj4 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj10.getAdUser(closure_1_0(7484).getQuestContentName(closure_1_0.questContent));
+              obj1[0] = obj10.getAdUser(closure_1_0(7728).getQuestContentName(closure_1_0.questContent));
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -161,7 +161,7 @@ class QuestContentImpression {
             obj4[2] = closure_0.triggeredByStatusChange;
             let advertisingId = null;
             if (null != closure_0) {
-              obj = closure_1_0(1234);
+              obj = closure_1_0(1115);
               advertisingId = null;
               if (obj.isIOS()) {
                 advertisingId = closure_1_0.advertisingId;
@@ -170,15 +170,15 @@ class QuestContentImpression {
             obj4[3] = advertisingId;
             let advertisingId1 = null;
             if (null != closure_1_0) {
-              obj1 = closure_1_0(1234);
+              obj1 = closure_1_0(1115);
               advertisingId1 = null;
               if (obj1.isAndroid()) {
                 advertisingId1 = closure_1_0.advertisingId;
               }
             }
             obj4[4] = advertisingId1;
-            let merged = Object.assign(closure_1_1(7432)());
-            obj2 = closure_1_0(9018);
+            let merged = Object.assign(closure_1_1(7677)());
+            obj2 = closure_1_0(11194);
             let merged1 = Object.assign(obj2.getBrandSafetyContext(closure_1_0.questContent));
             const adContentIds = closure_1_0.entity.adContentIds;
             const item = adContentIds.forEach((adCreativeId) => {
@@ -203,7 +203,7 @@ class QuestContentImpression {
                     tmpResult.markAdContentSeen(tmp(tmp2[9]).AdCreativeType.QUEST, items);
                   }
                 }
-                const result = tmp(tmp2[8]).isBillableQuestContent(obj1.questContent);
+                const result = tmp(tmp2[8]).isBillableQuestContent(obj1.questContent, obj1.entity.adCreativeType);
                 const AdUserActionType = tmp(tmp2[20]).AdUserActionType;
                 obj = {
                   type: null,
@@ -696,7 +696,7 @@ class QuestContentImpression {
     );
     obj3 = require("apexExperiment");
     obj4 = require("getQuestDeliveryDataForPlacement");
-    result = obj4.isBillableQuestContent(questContent);
+    result = obj4.isBillableQuestContent(questContent, adCreativeType);
     AdAnalyticsInterfaceExperimentStep = require("apexExperiment").AdAnalyticsInterfaceExperimentStep;
     obj.migrateQuestContentViewedToCaptureAdUserAction = obj3.shouldMigrateToAdAnalyticsInterface(
       result

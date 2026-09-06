@@ -82,43 +82,43 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
         const value1 = obj.get("hsl.l");
         if (constants.ANALOGOUS === arg1) {
           return (function generateAnalogousColors(gradientSecondaryBackground, value, value1, value2) {
-            obj = callback(686);
+            obj = callback(672);
             items = [
-              callback(686)
+              callback(672)
                 .hsl(value2 - 30, value, value1)
                 .hex(),
               gradientSecondaryBackground,
             ];
-            const hslResult = callback(686).hsl(value2 - 30, value, value1);
-            const obj3 = callback(686);
-            items[2] = callback(686)
+            const hslResult = callback(672).hsl(value2 - 30, value, value1);
+            const obj3 = callback(672);
+            items[2] = callback(672)
               .hsl(value2 + 30, value, value1)
               .hex();
             return items;
           })(gradientSecondaryBackground, value, value1, value);
         } else if (tmp8.COMPLEMENTARY === arg1) {
           return (function generateComplementaryColors(gradientSecondaryBackground, value, value1, value2) {
-            obj = callback(686);
-            const hexResult = callback(686)
+            obj = callback(672);
+            const hexResult = callback(672)
               .hsl((value2 + 180) % 360, value, value1)
               .hex();
             items = [gradientSecondaryBackground, ,];
-            const hslResult = callback(686).hsl((value2 + 180) % 360, value, value1);
-            const obj3 = callback(686);
-            items[1] = callback(686).mix(gradientSecondaryBackground, hexResult, 0.5).hex();
+            const hslResult = callback(672).hsl((value2 + 180) % 360, value, value1);
+            const obj3 = callback(672);
+            items[1] = callback(672).mix(gradientSecondaryBackground, hexResult, 0.5).hex();
             items[2] = hexResult;
             return items;
           })(gradientSecondaryBackground, value, value1, value);
         } else if (tmp8.SPLIT_COMPLEMENTARY === arg1) {
           return (function generateSplitComplementaryColors(gradientSecondaryBackground, value, value1, value2) {
             items = [gradientSecondaryBackground, ,];
-            obj = callback(686);
-            items[1] = callback(686)
+            obj = callback(672);
+            items[1] = callback(672)
               .hsl((value2 + 150) % 360, value, value1)
               .hex();
-            const hslResult = callback(686).hsl((value2 + 150) % 360, value, value1);
-            const obj3 = callback(686);
-            items[2] = callback(686)
+            const hslResult = callback(672).hsl((value2 + 150) % 360, value, value1);
+            const obj3 = callback(672);
+            items[2] = callback(672)
               .hsl((value2 + 210) % 360, value, value1)
               .hex();
             return items;
@@ -126,13 +126,13 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
         } else if (tmp8.TRIADIC === arg1) {
           return (function generateTriadicColors(gradientSecondaryBackground, value, value1, value2) {
             items = [gradientSecondaryBackground, ,];
-            obj = callback(686);
-            items[1] = callback(686)
+            obj = callback(672);
+            items[1] = callback(672)
               .hsl((value2 + 120) % 360, value, value1)
               .hex();
-            const hslResult = callback(686).hsl((value2 + 120) % 360, value, value1);
-            const obj3 = callback(686);
-            items[2] = callback(686)
+            const hslResult = callback(672).hsl((value2 + 120) % 360, value, value1);
+            const obj3 = callback(672);
+            items[2] = callback(672)
               .hsl((value2 + 240) % 360, value, value1)
               .hex();
             return items;

@@ -2,9 +2,9 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
+import context from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import RedesignBottomSheetTitleHeaderBase from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import context from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -38,7 +38,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   obj[1] = intl2.string(getSystemLocale.t.E45wvP);
   obj[2] = initialValue;
   obj[4] = ClearAfterOptions.map((value) =>
-    callback3(callback(7705).TableRadioRow, { value, label: callback2(9240)(value) }, value),
+    callback3(callback(5688).TableRadioRow, { value, label: callback2(11202)(value) }, value),
   );
   const items = [callback2(context.TableRadioGroup, obj)];
   obj1 = { style: tmp.buttonWrapper, children: null };

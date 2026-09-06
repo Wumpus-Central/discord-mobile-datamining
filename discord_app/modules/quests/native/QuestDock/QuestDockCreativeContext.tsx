@@ -11,12 +11,12 @@ export const getCreativeAnalyticsParams = function getCreativeAnalyticsParams(cl
   const type = closure_0.type;
   if (AdCreativeType.AdCreativeType.QUEST === type) {
     let obj = { adCreativeType: null, adCreativeId: null };
-    obj[0] = tmp(7457).AdCreativeType.QUEST;
+    obj[0] = tmp(5451).AdCreativeType.QUEST;
     obj[1] = closure_0.quest.id;
     return obj;
-  } else if (tmp(7457).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(5451).AdCreativeType.BOUNTY === type) {
     obj = { adCreativeType: null, adCreativeId: null };
-    obj[0] = tmp(7457).AdCreativeType.BOUNTY;
+    obj[0] = tmp(5451).AdCreativeType.BOUNTY;
     obj[1] = closure_0.bounty.id;
     return obj;
   }
@@ -32,9 +32,9 @@ export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(type) 
   type = type.type;
   if (AdCreativeType.AdCreativeType.QUEST === type) {
     return type.quest.id;
-  } else if (tmp(7457).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(5451).AdCreativeType.BOUNTY === type) {
     return type.bounty.id;
-  } else if (tmp(7457).AdCreativeType.NO_FILL === type) {
+  } else if (tmp(5451).AdCreativeType.NO_FILL === type) {
     return null;
   }
 };

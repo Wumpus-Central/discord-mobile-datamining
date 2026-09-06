@@ -44,8 +44,8 @@ export default function useChatInputRefs(chatInputProps) {
   closure_9 = React.useRef(null);
   closure_10 = React.useRef(null);
   closure_11 = React.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5950)(() =>
-    chatInputProps(4340).createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex),
+  const tmp2 = chatInputTextFieldHeight(5598)(() =>
+    chatInputProps(4425).createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex),
   );
   closure_12 = tmp2;
   closure_13 = React.useRef(chatInputProps);
@@ -73,7 +73,7 @@ export default function useChatInputRefs(chatInputProps) {
     };
   }, items2);
   closure_15 = React.useRef(
-    chatInputTextFieldHeight(5950)(() => ({
+    chatInputTextFieldHeight(5598)(() => ({
       editId: null,
       focused: false,
       selectionStart: 0,
@@ -377,7 +377,7 @@ export default function useChatInputRefs(chatInputProps) {
               closure_1_9.current,
               closure_1_11.current,
               (text) => {
-                obj = chatInputProps(11798);
+                obj = chatInputProps(11997);
                 obj = { text, params: null };
                 obj = {};
                 const merged = Object.assign(closure_2_14.current);
@@ -388,7 +388,7 @@ export default function useChatInputRefs(chatInputProps) {
                   obj1 = { text: null, threadCreationCallback: null };
                   obj1[0] = result.content;
                   obj1[1] = threadCreationCallback;
-                  const result1 = chatInputProps(11798).chatInputCreateThread(obj1);
+                  const result1 = chatInputProps(11997).chatInputCreateThread(obj1);
                   const current = closure_2_17.current;
                   if (current != null) {
                     const applicationCommandManager = current.getApplicationCommandManager();
@@ -396,7 +396,7 @@ export default function useChatInputRefs(chatInputProps) {
                       const result2 = applicationCommandManager.clearTimestampMentions();
                     }
                   }
-                  const tmpResult = chatInputProps(11798);
+                  const tmpResult = chatInputProps(11997);
                 }
               },
             );
@@ -436,7 +436,7 @@ export default function useChatInputRefs(chatInputProps) {
                     }
                   } else {
                     closure_1.cancel();
-                    obj = threadCreationCallback(11798);
+                    obj = threadCreationCallback(11997);
                     obj = { text: null, params: null };
                     obj[0] = arg0;
                     obj = {};
@@ -446,8 +446,8 @@ export default function useChatInputRefs(chatInputProps) {
                     obj[1] = obj;
                     const result = obj.chatInputHandleSendText(obj);
                   }
-                  const keyboardType = threadCreationCallback(4342).getKeyboardType();
-                  if (keyboardType === threadCreationCallback(1625).KeyboardTypes.SYSTEM) {
+                  const keyboardType = threadCreationCallback(4427).getKeyboardType();
+                  if (keyboardType === threadCreationCallback(1609).KeyboardTypes.SYSTEM) {
                     const current2 = tmp8.current;
                     current2.focus();
                   }

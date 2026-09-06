@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/04442_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/04524_registerAsset.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
-import registerAssetDefault2 from "../../../../../_runtime/07682_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/07887_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/11115_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/11389_registerAsset.js";
-import registerAssetDefault6 from "../../../../../_runtime/12547_registerAsset.js";
-import registerAssetDefault7 from "../../../../../_runtime/15620_registerAsset.js";
-import registerAssetDefault8 from "../../../../../_runtime/15621_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/07094_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/07966_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/11253_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/11564_registerAsset.js";
+import registerAssetDefault6 from "../../../../../_runtime/12773_registerAsset.js";
+import registerAssetDefault7 from "../../../../../_runtime/15778_registerAsset.js";
+import registerAssetDefault8 from "../../../../../_runtime/15779_registerAsset.js";
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -52,9 +52,9 @@ function DemoContextMenu(align) {
           const obj = {
             label: length[arg1 % length.length],
             IconComponent: "a",
-            iconSource: "a",
-            variant: "isArray",
-            action: "icon",
+            iconSource: "<string:3444637699>",
+            variant: "<string:1365331342>",
+            action: "<string:659423233>",
           };
           obj[2] = length2[arg1 % length2.length];
           let str = "default";
@@ -79,9 +79,9 @@ function DemoContextMenu(align) {
         const obj = {
           label: length[arg1 % length.length],
           IconComponent: "a",
-          iconSource: "a",
-          variant: "isArray",
-          action: "icon",
+          iconSource: "<string:3444637699>",
+          variant: "<string:1365331342>",
+          action: "<string:659423233>",
         };
         obj[2] = length2[arg1 % length2.length];
         let str = "default";

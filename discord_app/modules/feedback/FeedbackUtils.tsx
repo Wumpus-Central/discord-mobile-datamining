@@ -2,8 +2,8 @@
 import set from "../../../_runtime/00002_set.js";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import messagesProxyDefault from "intl/Feedback.messages.js";
 import FeedbackRating from "Constants.tsx";
 
@@ -36,7 +36,7 @@ export const processOptOut = function processOptOut(feedbackType) {
   let obj = expandEventPropertiesDefault;
   obj = { feedback_type: table[feedbackType], opted_out_until: closure_10 };
   obj.track(AnalyticEvents.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, obj);
-  const InAppFeedbackStates = feedbackType(4166).InAppFeedbackStates;
+  const InAppFeedbackStates = feedbackType(1935).InAppFeedbackStates;
   InAppFeedbackStates.updateSetting((arg0) => {
     let obj = {};
     const merged = Object.assign(arg0);

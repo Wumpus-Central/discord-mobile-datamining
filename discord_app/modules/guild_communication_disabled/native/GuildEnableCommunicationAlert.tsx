@@ -63,7 +63,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
               return obj;
             } else {
               closure_0 = tmp4;
-              obj1 = v0(11643);
+              obj1 = v0(11842);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -80,10 +80,10 @@ export default function GuildEnableCommunicationAlert(guildId) {
             return obj;
           } else {
             const obj2 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
-            const intl = closure_1_0(1233).intl;
-            obj2[1] = intl.string(closure_1_0(1233).t["/Mmbfv"]);
-            obj2[2] = v0(9535);
-            v0(4194).open(obj2);
+            const intl = closure_1_0(1114).intl;
+            obj2[1] = intl.string(closure_1_0(1114).t["/Mmbfv"]);
+            obj2[2] = v0(9566);
+            v0(4259).open(obj2);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -104,27 +104,27 @@ export default function GuildEnableCommunicationAlert(guildId) {
   }
   const tmp2 = callback();
   dependencyMap = tmp2;
-  closure_3 = _handleConfirmRemoveTimeout(userId(7898)(userId, guildId), 1)[0];
-  userId(4946)(() => {
+  closure_3 = _handleConfirmRemoveTimeout(userId(7977)(userId, guildId), 1)[0];
+  userId(4992)(() => {
     let obj = userId(countdown[11]);
     obj = { type: closure_1_7, guild_id: guildId, other_user_id: userId };
     obj.track(closure_1_9.OPEN_MODAL, obj);
   });
   let obj = {};
   const merged1 = Object.assign(merged);
-  let intl = guildId(1233).intl;
-  obj.title = intl.string(guildId(1233).t["+ZD3ou"]);
+  let intl = guildId(1114).intl;
+  obj.title = intl.string(guildId(1114).t["+ZD3ou"]);
   obj.style = tmp2.wrapper;
-  const intl2 = guildId(1233).intl;
-  obj.cancelText = intl2.string(guildId(1233).t["ETE/oC"]);
+  const intl2 = guildId(1114).intl;
+  obj.cancelText = intl2.string(guildId(1114).t["ETE/oC"]);
   let onClose;
   if (merged != null) {
     onClose = merged.onClose;
   }
   obj.onClose = onClose;
   obj.onCancel = guildId.onCancel;
-  const intl3 = tmp9(1233).intl;
-  obj.confirmText = intl3.string(guildId(1233).t.qXtNtS);
+  const intl3 = tmp9(1114).intl;
+  obj.confirmText = intl3.string(guildId(1114).t.qXtNtS);
   obj.onConfirm = function handleConfirmRemoveTimeout() {
     const self = this;
     const apply = _handleConfirmRemoveTimeout.apply;
@@ -137,17 +137,17 @@ export default function GuildEnableCommunicationAlert(guildId) {
   };
   obj = { style: tmp2.body, children: null };
   obj = { style: tmp2.description, variant: "text-sm/medium", children: null };
-  const intl4 = tmp9(1233).intl;
+  const intl4 = tmp9(1114).intl;
   user = user.getUser(userId);
   const tmp11 = closure_11;
   const tmp12 = View;
   const tmp3 = userId;
-  const tmp7 = userId(4948);
-  let str = userId(4673).getName(guildId, null, user);
+  const tmp7 = userId(4994);
+  let str = userId(4712).getName(guildId, null, user);
   if (str == null) {
     str = "";
   }
-  obj[2] = intl4.format(guildId(1233).t["t+abNU"], {
+  obj[2] = intl4.format(guildId(1114).t["t+abNU"], {
     username: str,
     countdown(arg0) {
       let num = 0;
@@ -158,13 +158,13 @@ export default function GuildEnableCommunicationAlert(guildId) {
       return closure_1_10(userId(countdown[19]), { style: countdown.countdown, deadline: num, withUnits: true });
     },
   });
-  const items = [closure_10(guildId(4474).Text, obj)];
+  const items = [closure_10(guildId(4556).Text, obj)];
   let obj2 = { style: items1, variant: "text-sm/medium", children: null };
   items1 = [,];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
-  const intl5 = tmp9(1233).intl;
-  obj2[2] = intl5.format(guildId(1233).t.KtENkK, { link: closure_8 });
-  items[1] = closure_10(guildId(4474).Text, obj2);
+  const intl5 = tmp9(1114).intl;
+  obj2[2] = intl5.format(guildId(1114).t.KtENkK, { link: closure_8 });
+  items[1] = closure_10(guildId(4556).Text, obj2);
   obj[1] = items;
   obj.children = tmp11(tmp12, obj);
   return closure_10(tmp7, obj);

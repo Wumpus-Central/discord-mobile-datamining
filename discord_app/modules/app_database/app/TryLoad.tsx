@@ -140,7 +140,7 @@ function _tryLoadOrResetCacheGatewayAsync() {
             stack = closure_6;
             const _HermesInternal = HermesInternal;
             logger.log("" + callback + ": exception thrown, resetting socket.", stack, stack.stack);
-            let obj2 = callback(706);
+            let obj2 = callback(573);
             obj2 = { error: null, action: null, metricAction: null };
             obj2[0] = stack;
             const _HermesInternal2 = HermesInternal;

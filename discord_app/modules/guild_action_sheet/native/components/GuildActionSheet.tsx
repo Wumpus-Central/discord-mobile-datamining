@@ -1,8 +1,8 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import BottomSheetModal from "../../../../../_runtime/06627_BottomSheetModal.js";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05633_BottomSheetModal.js";
 import ActionSheetHeaderBar from "../../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
 import useBottomSheetRef from "../../../../design/components/Sheet/native/useBottomSheetRef.tsx";
 import HideMutedChannelsOption from "GuildActionSheetActions.tsx";

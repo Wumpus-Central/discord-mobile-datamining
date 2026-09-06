@@ -110,24 +110,14 @@ function FavoritesGuildCategorySettings(categoryId) {
     obj.show(obj);
   }, items7);
   obj = { spacing: onGoBack(tmp3[7]).space.PX_24, children: null };
-  obj1 = {
-    label: null,
-    accessibilityLabel: null,
-    placeholder: null,
-    value: null,
-    onChange: null,
-    maxLength: null,
-    isClearable: true,
-  };
+  obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, isClearable: true };
   let intl = tmp2(tmp3[13]).intl;
   obj1[0] = intl.string(categoryId(navigation[13]).t.OCAkGP);
   let intl2 = tmp2(tmp3[13]).intl;
-  obj1[1] = intl2.string(categoryId(navigation[13]).t.OCAkGP);
-  let intl3 = tmp2(tmp3[13]).intl;
-  obj1[2] = intl3.string(categoryId(navigation[13]).t.eTVbtx);
-  obj1[3] = str;
-  obj1[4] = tmp8;
-  obj1[5] = closure_7;
+  obj1[1] = intl2.string(categoryId(navigation[13]).t.eTVbtx);
+  obj1[2] = str;
+  obj1[3] = tmp8;
+  obj1[4] = closure_7;
   const items8 = [callback(categoryId(navigation[17]).TextInput, obj1)];
   obj2 = { hasIcons: true, children: null };
   obj3 = {
@@ -136,8 +126,8 @@ function FavoritesGuildCategorySettings(categoryId) {
     label: null,
     onPress: null,
   };
-  let intl4 = tmp2(tmp3[13]).intl;
-  obj3[2] = intl4.string(categoryId(navigation[13]).t.ifbXnL);
+  let intl3 = tmp2(tmp3[13]).intl;
+  obj3[2] = intl3.string(categoryId(navigation[13]).t.ifbXnL);
   obj3[3] = callback2;
   obj2[1] = callback(categoryId(navigation[19]).TableRow, obj3);
   items8[1] = callback(categoryId(navigation[18]).TableRowGroup, obj2);
@@ -159,12 +149,12 @@ let result = require("set").fileFinishedImporting(
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(10885)().onGoBack;
+  onGoBack = onGoBack(10922)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
-  const intl = categoryId(1233).intl;
-  obj[1] = intl.string(categoryId(1233).t["/uELTj"]);
+  const intl = categoryId(1114).intl;
+  obj[1] = intl.string(categoryId(1114).t["/uELTj"]);
   obj[2] = function render() {
     return closure_1_8(closure_1_11, { categoryId, onGoBack });
   };
-  return callback(onGoBack(10886), obj);
+  return callback(onGoBack(10924), obj);
 }

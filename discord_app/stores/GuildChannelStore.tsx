@@ -1,8 +1,8 @@
 // discord_app/stores/GuildChannelStore.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
-import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import applyOverwritesAll from "../utils/PermissionUtils.tsx";
 import closure_4 from "../modules/channel/GatedChannelStore.tsx";
 import closure_5 from "../modules/favorites/FavoriteStore.tsx";
@@ -43,7 +43,7 @@ function rebuildGuildChannels(guildId) {
   importDefault = undefined;
   const id = obj.id;
   importDefault = id;
-  obj1 = obj2(1911);
+  obj1 = obj2(1982);
   obj = {};
   if (obj1.isFavoritesGuildId(id)) {
     favoriteChannels = favoriteChannels.getFavoriteChannels();

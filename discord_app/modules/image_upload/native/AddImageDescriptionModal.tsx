@@ -1,7 +1,7 @@
 // discord_app/modules/image_upload/native/AddImageDescriptionModal.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import _modDef10886 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import _modDef10924 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -136,5 +136,5 @@ export default function AddImageDescriptionModal(arg0) {
   obj[2] = function render() {
     return closure_1_10(closure_1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
-  return callback(_modDef10886, obj);
+  return callback(_modDef10924, obj);
 }

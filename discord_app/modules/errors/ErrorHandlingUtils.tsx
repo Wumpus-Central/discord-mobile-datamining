@@ -1,6 +1,6 @@
 // discord_app/modules/errors/ErrorHandlingUtils.tsx
 import ME from "../../Constants.tsx";
-import _modDef1205 from "../../utils/SentryUtils.native.tsx";
+import _modDef1232 from "../../utils/SentryUtils.native.tsx";
 import set from "../../../_runtime/00002_set.js";
 
 const items = [, ,];
@@ -70,7 +70,7 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
     tmp = flag;
   }
   if (!tmp) {
-    _modDef1205.captureException(aPIError);
-    const obj = _modDef1205;
+    _modDef1232.captureException(aPIError);
+    const obj = _modDef1232;
   }
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/rows/BlockedGroup.tsx
 import set from "../../../../../../_runtime/00002_set.js";
-import sum from "../../../../../../discord_common/js/shared/Constants.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import sum from "../../../../../../discord_common/js/shared/Constants.tsx";
 import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
 import Changeset from "../RowGeneratorConstants.tsx";
 import processColorOrThrow from "../RowGeneratorStyleSheet.tsx";
@@ -15,15 +15,15 @@ let closure_5 = apply.memoize((arg0) => {
   if (obj.isThemeDark(arg0)) {
     str = ThemesDefault.unsafe_rawColors.PRIMARY_700;
   }
-  let tmpResult = tmp(1362);
+  let tmpResult = tmp(4411);
   let str2 = "#FAFAFA";
   if (tmpResult.isThemeDark(arg0)) {
     str2 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
   }
-  tmpResult = tmp(1362);
+  tmpResult = tmp(4411);
   if (tmpResult.isThemeDark(arg0)) {
-    let GREY1 = tmp(4326).hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_300, 0.6);
-    const tmpResult1 = tmp(4326);
+    let GREY1 = tmp(4409).hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_300, 0.6);
+    const tmpResult1 = tmp(4409);
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }

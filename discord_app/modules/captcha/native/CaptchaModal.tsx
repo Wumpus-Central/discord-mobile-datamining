@@ -1,11 +1,11 @@
 // discord_app/modules/captcha/native/CaptchaModal.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import createStandardNavigationFactories from "../../../../_runtime/01499_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../../../_runtime/01484_createStandardNavigationFactories.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
-import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
+import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { doesRegistrationHaveIdentityType as closure_6 } from "../../auth/native/RegistrationUIStore.tsx";
@@ -43,7 +43,7 @@ export default function CaptchaModal(arg0) {
   } = arg0);
   let navigation;
   let callback;
-  const tmp2 = callback2(onReject(7729)());
+  const tmp2 = callback2(onReject(6944)());
   let obj = createStandardNavigationFactories;
   navigation = obj.useNavigation();
   const items = [navigation];
@@ -65,23 +65,23 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(17122)({ onReject, analyticsType: memo });
+  callback = onReject(17288)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);
   obj = { style: tmp2.contentContainer, spacing: 12, children: null };
   const items1 = [callback(AccountAgeTier10LargeBadge.DisguiseSpotIllustration, { scale: 0.5 }), ,];
   if (headerText == null) {
-    const intl = tmp3(1233).intl;
-    headerText = intl.string(tmp3(1233).t.FpoiHe);
+    const intl = tmp3(1114).intl;
+    headerText = intl.string(tmp3(1114).t.FpoiHe);
   }
   const items2 = [
     callback(Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }),
   ];
   obj = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {
-    const intl2 = tmp3(1233).intl;
-    bodyText = intl2.string(tmp3(1233).t["/CidxO"]);
+    const intl2 = tmp3(1114).intl;
+    bodyText = intl2.string(tmp3(1114).t["/CidxO"]);
   }
   obj1 = { startHeight: 900, startExpanded: true, children: null };
   let obj2 = { children: null };
@@ -150,7 +150,7 @@ export default function CaptchaModal(arg0) {
     },
     text: null,
   };
-  const intl3 = tmp3(1233).intl;
+  const intl3 = tmp3(1114).intl;
   obj3[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
   items1[2] = callback(Button.Button, obj3);
   obj[2] = items1;

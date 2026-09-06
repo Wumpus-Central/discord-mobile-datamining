@@ -54,29 +54,29 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
       let str = "dark";
     } else {
       str = "light";
-      const tmpResult = tmp(1234);
+      const tmpResult = tmp(1115);
     }
     obj = { blurTheme: null, android_fallbackColor: null, style: null };
     obj[0] = str;
     obj[1] = token;
     obj[2] = absoluteFill.absoluteFill;
-    const items1 = [closure_6(tmp3(4919), obj)];
+    const items1 = [closure_6(tmp3(4965), obj)];
     obj1 = { style: null, children: null };
     obj1[0] = items2.spoilerOverlayContainer;
     const obj2 = { style: null, children: null };
     if (source.obscure) {
       obj2[0] = items2.obscureContentContainer;
-      items2 = [tmp9(tmp(5035).ImageWarningIcon, { size: "lg", color: "white" })];
+      items2 = [tmp9(tmp(5081).ImageWarningIcon, { size: "lg", color: "white" })];
       const obj3 = {
         accessibilityRole: "text",
         variant: "heading-md/medium",
         color: "text-overlay-light",
         children: null,
       };
-      const intl2 = tmp(1233).intl;
-      stringResult = intl2.string(tmp(1233).t.SpxcUR);
+      const intl2 = tmp(1114).intl;
+      stringResult = intl2.string(tmp(1114).t.SpxcUR);
       obj3[3] = stringResult;
-      items2[1] = tmp9(tmp(4474).Text, obj3);
+      items2[1] = tmp9(tmp(4556).Text, obj3);
       obj2[1] = items2;
       let tmp9Result = tmp7(tmp11, obj2);
     } else {
@@ -87,18 +87,18 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
         color: "text-overlay-light",
         children: null,
       };
-      const intl = tmp(1233).intl;
-      obj4[3] = intl.string(tmp(1233).t["F+x38C"]).toUpperCase();
-      obj2[1] = tmp9(tmp(4474).Text, obj4);
+      const intl = tmp(1114).intl;
+      obj4[3] = intl.string(tmp(1114).t["F+x38C"]).toUpperCase();
+      obj2[1] = tmp9(tmp(4556).Text, obj4);
       tmp9Result = tmp9(tmp11, obj2);
-      const str2 = intl.string(tmp(1233).t["F+x38C"]);
+      const str2 = intl.string(tmp(1114).t["F+x38C"]);
     }
     obj1[1] = tmp9Result;
     obj1 = tmp9(tmp11, obj1);
     items1[1] = obj1;
     obj[1] = items1;
-    closure_7(tmp3(4217).View, obj);
-    const tmp3Result = tmp3(4919);
+    closure_7(tmp3(4296).View, obj);
+    const tmp3Result = tmp3(4965);
     const tmp8 = absoluteFill;
   }
 });

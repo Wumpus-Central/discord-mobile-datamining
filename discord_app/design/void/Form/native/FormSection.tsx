@@ -50,7 +50,7 @@ export default function FormSection(arg0) {
     const found = toArrayResult.filter((type) => {
       let isValidElementResult = closure_3.isValidElement(type);
       if (isValidElementResult) {
-        isValidElementResult = type.type !== callback(8382);
+        isValidElementResult = type.type !== callback(8599);
       }
       return isValidElementResult;
     });
@@ -79,7 +79,7 @@ export default function FormSection(arg0) {
     }
     obj1[2] = flag;
     obj1[3] = found;
-    obj[1] = callback(tmp3(6001).TableRowGroup, obj1);
+    obj[1] = callback(tmp3(5687).TableRowGroup, obj1);
     const items = [callback(closure_4, obj)];
     let tmp20Result = null;
     if (null != hint) {
@@ -127,8 +127,8 @@ export default function FormSection(arg0) {
       if (TitleStyleType.DEFAULT === titleStyleType) {
         titledSectionNoBorderOrMargin = tmp2.titledSectionHeader;
       } else if (tmp12.ANDROID_NO_BORDER === titleStyleType) {
-        titledSectionNoBorderOrMargin = tmp3(1234).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
-        const tmp3Result = tmp3(1234);
+        titledSectionNoBorderOrMargin = tmp3(1115).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
+        const tmp3Result = tmp3(1115);
       } else {
         titledSectionNoBorderOrMargin = emptySectionHeader;
         if (tmp12.NO_BORDER_OR_MARGIN === titleStyleType) {

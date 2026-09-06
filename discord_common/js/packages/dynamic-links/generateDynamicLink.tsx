@@ -1,6 +1,6 @@
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
-import v1 from "../../../../_runtime/00511_v1.js";
-import formatDefault from "../../../../_runtime/00666_format.js";
+import v1 from "../../../../_runtime/01256_v1.js";
+import formatDefault from "../../../../_runtime/01341_format.js";
 import setDefault from "getDescription.tsx";
 import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -39,12 +39,12 @@ export default function generateDynamicLink(arg0, arg1) {
       match = str2.match(regExp);
     }
   }
-  let tmp5Result = tmp5(666);
+  let tmp5Result = tmp5(1341);
   let name;
   if (tmp5Result != null) {
     name = tmp5Result.name;
   }
-  tmp5Result = tmp5(666);
+  tmp5Result = tmp5(1341);
   let family;
   if (tmp5Result != null) {
     const os = tmp5Result.os;

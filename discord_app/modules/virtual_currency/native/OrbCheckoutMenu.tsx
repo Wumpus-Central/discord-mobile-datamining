@@ -29,7 +29,7 @@ export default function OrbCheckoutMenu() {
   }, items);
   let obj = { children: null };
   obj = { style: tmp.title, variant: "text-md/bold", children: "Redeem SKU for Orbs" };
-  const items1 = [callback2(first(4474).Text, obj), , ,];
+  const items1 = [callback2(first(4556).Text, obj), , ,];
   obj = {
     containerStyle: tmp.textInput,
     label: "SKU ID",
@@ -39,18 +39,18 @@ export default function OrbCheckoutMenu() {
     },
     isClearable: true,
   };
-  items1[1] = callback2(first(7717).TextInput, obj);
-  items1[2] = callback2(first(4474).Text, {
+  items1[1] = callback2(first(6606).TextInput, obj);
+  items1[2] = callback2(first(4556).Text, {
     style: tmp.title,
     variant: "text-md/bold",
     children: "Checkout will open with the orb price of the product, if it exists",
   });
-  items1[3] = callback2(first(4929).Button, {
+  items1[3] = callback2(first(4975).Button, {
     text: "Open Orbs Checkout",
     variant: "primary",
     onPress: callback,
     disabled: null == first,
   });
   obj[0] = items1;
-  return callback3(first(5610).Card, obj);
+  return callback3(first(5607).Card, obj);
 }

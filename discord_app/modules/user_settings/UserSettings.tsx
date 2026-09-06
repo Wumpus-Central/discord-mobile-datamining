@@ -4,9 +4,9 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import defineProperty from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
-import ChannelListLayoutTypes from "../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import isFeatureAgeGated from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import SettingsDefaultFeature from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import ChannelListLayoutTypes from "../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import closure_2 from "UserSettingsOverridesStore.tsx";
 import MAX_FAVORITES from "UserSettingsConstants.tsx";
 import items from "privacy_and_safety/DMSafetyConstants.tsx";
@@ -1947,9 +1947,9 @@ definePropertyResult = set.defineProtoSetting(
   (arg0) => {
     let DEFAULT = arg0;
     if (arg0 === create.UIDensity.UNSET_UI_DENSITY) {
-      DEFAULT = tmp(1305).UIDensity.DEFAULT;
+      DEFAULT = tmp(1187).UIDensity.DEFAULT;
     } else if (DEFAULT == null) {
-      DEFAULT = tmp(1305).UIDensity.DEFAULT;
+      DEFAULT = tmp(1187).UIDensity.DEFAULT;
     }
     return DEFAULT;
   },

@@ -11,7 +11,7 @@ function getUploadPayload(c0) {
     filename: c0.filename,
     file_size: c0.currentSize,
     id: applyDefault.uniqueId(),
-    original_content_type: "PX_16",
+    original_content_type: "Array",
   };
   return obj;
 }

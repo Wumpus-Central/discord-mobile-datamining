@@ -117,10 +117,10 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   const callback = obj2.useCallback(() => {
     if (null != rewardCode) {
       quest(hasError[15]).copy(tmp.code, () => {
-        let obj = callback2(4194);
+        let obj = callback2(4259);
         obj = { key: "TOAST_QUEST_REWARD_CODE_COPIED", content: null, icon: null };
-        const intl = callback(1233).intl;
-        obj[1] = intl.string(callback(1233).t.MSaeTe);
+        const intl = callback(1114).intl;
+        obj[1] = intl.string(callback(1114).t.MSaeTe);
         obj[2] = function icon() {
           return callback2(callback(table[16]).CopyIcon, {});
         };

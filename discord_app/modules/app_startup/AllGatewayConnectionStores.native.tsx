@@ -71,7 +71,7 @@ import guildHasCommunity from "../recent_channels/NewChannelsStore.tsx";
 import getRegionalFeatureConfig from "../regional_feature_config/RegionalFeatureConfigStore.tsx";
 import resetStates from "../relationships/GuildFriendshipStore.tsx";
 import getState from "../replies/PendingReplyStore.tsx";
-import processMessage from "../replies/ReferencedMessageStore.tsx";
+import getVoiceStatesForGuild from "../replies/ReferencedMessageStore.tsx";
 import getVoiceStatesForGuild from "../rewards/ProgramRewardsStore.tsx";
 import getVoiceStatesForGuild from "../rtc/SecureFramesVerifiedStore.tsx";
 import getVoiceStatesForGuild from "../rtc/TransientKeyStore.tsx";

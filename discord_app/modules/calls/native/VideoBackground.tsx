@@ -1,6 +1,6 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
 import Button from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
@@ -20,14 +20,14 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  let tmp5 = first(8122)();
+  let tmp5 = first(8249)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8123).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8250).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = require("../../../utils/ColorUtils.tsx").hexToRgb(tmp3(709).unsafe_rawColors.PRIMARY_800);
+    hexToRgbResult = require("../../../utils/ColorUtils.tsx").hexToRgb(tmp3(576).unsafe_rawColors.PRIMARY_800);
     const obj2 = hexToRgba;
   }
   const tmp8 = callback(importAllResult.useState(hexToRgbResult), 2);

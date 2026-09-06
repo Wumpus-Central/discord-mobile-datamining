@@ -1,7 +1,7 @@
 // discord_app/actions/CallActionCreators.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef5364 from "SelectedChannelActionCreators.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import _modDef5411 from "SelectedChannelActionCreators.tsx";
 import useCanRingToGuildVoiceChannel from "../modules/calls/useCanRing.tsx";
 import closure_3 from "../stores/ChannelStore.tsx";
 import closure_4 from "../stores/RelationshipStore.tsx";
@@ -34,7 +34,7 @@ export default {
             if (closure_3) {
               ringable = body.body.ringable;
             }
-            const voiceChannel = id(5364).selectVoiceChannel(id, dependencyMap);
+            const voiceChannel = id(5411).selectVoiceChannel(id, dependencyMap);
             if (ringable) {
               self.ring(tmp2);
             }
@@ -43,32 +43,32 @@ export default {
             }
           },
           () => {
-            let obj = id(695);
+            let obj = id(1242);
             obj.track(closure_1_7.OPEN_POPOUT, { type: "Not Friend", source: "Call" });
             obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-            const intl = lib(1233).intl;
-            obj[0] = intl.string(lib(1233).t.My50nf);
-            const intl2 = lib(1233).intl;
+            const intl = lib(1114).intl;
+            obj[0] = intl.string(lib(1114).t.My50nf);
+            const intl2 = lib(1114).intl;
             let str = "";
             if (null != lib) {
               str = lib.username;
             }
-            obj[1] = intl2.format(lib(1233).t.IdKo2z, { username: str });
-            const intl3 = tmp3(1233).intl;
-            obj[2] = intl3.string(lib(1233).t["PMsq/b"]);
-            const intl4 = tmp3(1233).intl;
-            obj[3] = intl4.string(lib(1233).t.BddRzS);
+            obj[1] = intl2.format(lib(1114).t.IdKo2z, { username: str });
+            const intl3 = tmp3(1114).intl;
+            obj[2] = intl3.string(lib(1114).t["PMsq/b"]);
+            const intl4 = tmp3(1114).intl;
+            obj[3] = intl4.string(lib(1114).t.BddRzS);
             obj[4] = function onConfirm() {
               let obj = closure_1_1(closure_1_2[9]);
               obj = { userId: closure_4, context: { location: "Call" } };
               obj.addRelationship(obj);
             };
-            id(4858).show(obj);
+            id(4904).show(obj);
           },
         );
       }
     } else {
-      obj = _modDef5364;
+      obj = _modDef5411;
       let voiceChannel = obj.selectVoiceChannel(id, c1);
       if (arg2) {
         self.ring(id);
@@ -85,7 +85,7 @@ export default {
       const CALLABLE = constants.CALLABLE;
       const result = obj.canRingUsersInChannel(channel);
       if (result) {
-        const HTTP = tmp3(527).HTTP;
+        const HTTP = tmp3(1272).HTTP;
         obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = closure_6.CALL_RING(channelId);
         obj = { recipients: null, analytics_location: null };

@@ -10,7 +10,7 @@ import { PersistedStore } from "../../../../../../discord_common/js/packages/flu
 import closure_7 from "../../../../../stores/AuthenticationStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { createStandardNavigationFactories } from "../../../../../../_runtime/01499_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "../../../../../../_runtime/01484_createStandardNavigationFactories.js";
 
 require = arg1;
 function DevToolsPersistedStoresActionSheet(store) {
@@ -18,10 +18,10 @@ function DevToolsPersistedStoresActionSheet(store) {
   const close = store.close;
   let obj = { header: null, children: null };
   obj = { title: store.getName() };
-  obj[0] = jsx(store(5630).BottomSheetTitleHeader, { title: store.getName() });
-  obj = { hasIcons: false, children: jsx(store(6000).ActionSheetRow, obj1) };
-  obj[1] = jsx(store(6000).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(6000).ActionSheetRow, obj1) });
-  return jsx(store(5998).ActionSheet, { hasIcons: false, children: jsx(store(6000).ActionSheetRow, obj1) });
+  obj[0] = jsx(store(7149).BottomSheetTitleHeader, { title: store.getName() });
+  obj = { hasIcons: false, children: jsx(store(7200).ActionSheetRow, obj1) };
+  obj[1] = jsx(store(7200).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(7200).ActionSheetRow, obj1) });
+  return jsx(store(7198).ActionSheet, { hasIcons: false, children: jsx(store(7200).ActionSheetRow, obj1) });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };
@@ -75,9 +75,9 @@ let closure_12 = importAllResult.memo(() =>
   jsx(TableRowInner.TableRow, {
     label: "Disable + Remove Database",
     onPress() {
-      const result = callback(1972).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-      const obj = callback(1972);
-      callback(4194).open({ key: "disable_database_and_remove", content: "Database has been removed." });
+      const result = callback(2003).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
+      const obj = callback(2003);
+      callback(4259).open({ key: "disable_database_and_remove", content: "Database has been removed." });
     },
   }),
 );

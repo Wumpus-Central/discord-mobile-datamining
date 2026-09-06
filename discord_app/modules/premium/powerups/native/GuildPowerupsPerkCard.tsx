@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AccessibilityAnnouncer from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import GuildPowerupCardFooterActive from "GuildPowerupsCardFooter.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -55,9 +55,9 @@ export default function GuildPowerupsPerkCard(arg0) {
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(12368);
+  let tmp3Result = tmp3(12568);
   if (riveComponent == null) {
-    tmp3Result = tmp3(12323);
+    tmp3Result = tmp3(12523);
     if (imageUrl == null) {
       imageUrl = "";
     }
@@ -105,20 +105,20 @@ export default function GuildPowerupsPerkCard(arg0) {
   let tmp15Result = "new" === badge;
   if (tmp15Result) {
     const obj7 = { text: null, style: null };
-    const intl = tmp6(1233).intl;
-    obj7[0] = intl.string(tmp6(1233).t.y2b7CA);
+    const intl = tmp6(1114).intl;
+    obj7[0] = intl.string(tmp6(1114).t.y2b7CA);
     obj7[1] = tmp2.badge;
-    tmp15Result = tmp15(tmp6(1296).TextBadge, obj7);
+    tmp15Result = tmp15(tmp6(1178).TextBadge, obj7);
   }
   items2[2] = tmp15Result;
   tmp15Result = "beta" === badge;
   if (tmp15Result) {
     const obj8 = { text: null, color: null, style: null };
-    const intl2 = tmp6(1233).intl;
-    obj8[0] = intl2.string(tmp6(1233).t.oW0eUd);
-    obj8[1] = tmp6(1296).BadgeColors.BRAND;
+    const intl2 = tmp6(1114).intl;
+    obj8[0] = intl2.string(tmp6(1114).t.oW0eUd);
+    obj8[1] = tmp6(1178).BadgeColors.BRAND;
     obj8[2] = tmp2.badge;
-    tmp15Result = tmp15(tmp6(1296).TextBadge, obj8);
+    tmp15Result = tmp15(tmp6(1178).TextBadge, obj8);
   }
   items2[3] = tmp15Result;
   obj[4] = items2;

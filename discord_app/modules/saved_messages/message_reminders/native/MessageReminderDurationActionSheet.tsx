@@ -23,7 +23,7 @@ export default function MessageReminderDurationActionSheet(createReminder) {
   c5 = undefined;
   let dueInText;
   let isOverdue;
-  let obj = createReminder(586);
+  let obj = createReminder(504);
   const items = [c5];
   const stateFromStores = obj.useStateFromStores(items, () => _undefined.getSavedMessage(closure_2, closure_3));
   obj1 = onBack;
@@ -41,8 +41,8 @@ export default function MessageReminderDurationActionSheet(createReminder) {
   if (stateFromStores != null) {
     dueAt = stateFromStores.saveData.dueAt;
   }
-  obj = { dueAt, now: tmp7, type: tmp2(11522).DueInStringTypes.SHORT };
-  const dueInString = createReminder(11522).useDueInString(obj);
+  obj = { dueAt, now: tmp7, type: tmp2(11711).DueInStringTypes.SHORT };
+  const dueInString = createReminder(11711).useDueInString(obj);
   dueInText = dueInString.dueInText;
   isOverdue = dueInString.isOverdue;
   const items1 = [onBack, dueInText, isOverdue];
@@ -100,20 +100,20 @@ export default function MessageReminderDurationActionSheet(createReminder) {
     return mapped;
   }, items2);
   obj = { header: memo, bodyStyles: tmp.body, startExpanded: true, children: null };
-  const items3 = [dueInText(createReminder(6001).TableRowGroup, { hasIcons: false, children: memo1 })];
+  const items3 = [dueInText(createReminder(5687).TableRowGroup, { hasIcons: false, children: memo1 })];
   let tmp14Result = null != removeReminder;
   if (tmp14Result) {
     obj1 = { icon: null, label: null, onPress: null, start: true, end: true };
-    obj1[0] = tmp14(tmp2(4429).CheckmarkLargeIcon, {});
-    let intl = tmp2(1233).intl;
-    obj1[1] = intl.string(tmp2(1233).t.yjGtdJ);
+    obj1[0] = tmp14(tmp2(4511).CheckmarkLargeIcon, {});
+    let intl = tmp2(1114).intl;
+    obj1[1] = intl.string(tmp2(1114).t.yjGtdJ);
     obj1[2] = function onPress() {
       removeReminder(closure_1_2[15]).hideActionSheet();
       removeReminder();
     };
-    tmp14Result = tmp14(tmp2(5608).TableRow, obj1, "remove-reminder");
+    tmp14Result = tmp14(tmp2(5605).TableRow, obj1, "remove-reminder");
   }
   items3[1] = tmp14Result;
   obj[3] = items3;
-  return isOverdue(createReminder(5631).BottomSheet, obj);
+  return isOverdue(createReminder(7150).BottomSheet, obj);
 }

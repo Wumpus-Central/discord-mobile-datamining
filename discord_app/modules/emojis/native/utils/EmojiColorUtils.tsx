@@ -1,5 +1,5 @@
 // discord_app/modules/emojis/native/utils/EmojiColorUtils.tsx
-import privDefault from "../../../../../_runtime/01400_priv.js";
+import privDefault from "../../../../../_runtime/01437_priv.js";
 import closure_0 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 

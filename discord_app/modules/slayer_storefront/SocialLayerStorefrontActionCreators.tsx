@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontActionCreators.tsx
 import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../storefront/StorefrontPromotionOverrideStore.tsx";
 import closure_5 from "SocialLayerStorefrontStore.tsx";
@@ -1106,7 +1106,7 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
     yield HTTP.get(obj1);
     if (1 === tmp7) {
       c11 = 0;
-      obj3 = obj3(706);
+      obj3 = obj3(573);
       obj3.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_FAILURE" });
       c13 = 3;
     } else if (arg0 === 1) {
@@ -1182,7 +1182,7 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
         }
         obj3[7] = c7;
       }
-      const obj = obj3(706);
+      const obj = obj3(573);
       const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS", config: null };
       obj4[1] = obj3;
       obj.dispatch(obj4);

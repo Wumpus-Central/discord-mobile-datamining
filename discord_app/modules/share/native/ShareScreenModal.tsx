@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/ShareScreenModal.tsx
 import timestampDefault from "../../debug/Logger.tsx";
-import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4763 from "../../../actions/ModalActionCreators.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../_runtime/00019_noop.js";
@@ -10,7 +10,7 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 let require = arg1;
 function onClose() {
-  _modDef4724.popWithKey(SHARE_SCREEN_MODAL_KEY);
+  _modDef4763.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
 let closure_9 = new timestampDefault("ShareScreenModal");
 const tmp2 = new timestampDefault("ShareScreenModal");

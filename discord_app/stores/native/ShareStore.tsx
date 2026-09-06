@@ -1,8 +1,8 @@
 // discord_app/stores/native/ShareStore.tsx
-import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
 import closure_6 from "../AuthenticationStore.tsx";

@@ -1,8 +1,8 @@
 // discord_app/modules/recent_channels/NewChannelsStore.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import SidebarType from "../sidebar/SidebarActionTypes.tsx";
 import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
 import closure_4 from "../../stores/AuthenticationStore.tsx";

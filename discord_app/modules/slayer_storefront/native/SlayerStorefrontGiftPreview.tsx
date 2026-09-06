@@ -24,7 +24,7 @@ function WarningBox(application) {
     obj[1] = tmp.warningBox;
     const intl = getSystemLocale.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3370).BMMo2K;
+      BMMo2K = name(3417).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {
@@ -43,10 +43,10 @@ function WarningBox(application) {
         name1 = application.name;
       }
       obj[1] = name1;
-      obj[2] = intl.formatToPlainString(tmp6(1233).t["EgCl+Q"], obj);
+      obj[2] = intl.formatToPlainString(tmp6(1114).t["EgCl+Q"], obj);
       tmp7 = obj;
     } else {
-      obj[2] = intl.format(tmp6(1233).t["3T0cpx"], {});
+      obj[2] = intl.format(tmp6(1114).t["3T0cpx"], {});
       tmp7 = obj;
     }
     closure_4(InfoBoxDefault, tmp7);

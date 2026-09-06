@@ -686,19 +686,19 @@ prototype5["appStateChanged"] = function appStateChanged(state) {
     self.didBackgroundApp = self.didBackgroundApp || "active" !== state;
   }
 };
-prototype5["recordRender"] = function recordRender(length, closure_1_6) {
+prototype5["recordRender"] = function recordRender(length, closure_1_5) {
   const self = this;
   const renderMessages = this.renderMessages;
   renderMessages.record();
-  let tmp2 = closure_1_6;
-  if (!closure_1_6) {
+  let tmp2 = closure_1_5;
+  if (!closure_1_5) {
     tmp2 = length > 0;
   }
   if (tmp2) {
     const renderMessagesWithCache = self.renderMessagesWithCache;
     renderMessagesWithCache.record();
   }
-  if (closure_1_6) {
+  if (closure_1_5) {
     const renderLatestMessages = self.renderLatestMessages;
     renderLatestMessages.record();
   }

@@ -1,7 +1,7 @@
 // discord_app/modules/auth/register.tsx
-import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef4714 from "../../utils/TrackedHTTPUtils.tsx";
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import _modDef4753 from "../../utils/TrackedHTTPUtils.tsx";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import initialize from "../parent_tools/ParentalConsentStore.tsx";
 import closure_5 from "../../stores/AuthenticationStore.tsx";
@@ -156,14 +156,14 @@ function _registerPhone() {
               return obj1;
             } else {
               c4 = 1;
-              let obj6 = callback(4714);
+              let obj6 = callback(4753);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj2[0] = constants.REGISTER_PHONE;
               const obj3 = { phone: null };
               obj3[0] = phone;
               obj2[1] = obj3;
               const obj4 = { event: null };
-              obj4[0] = phone(500).NetworkActionNames.USER_REGISTER_PHONE;
+              obj4[0] = phone(1250).NetworkActionNames.USER_REGISTER_PHONE;
               obj2[2] = obj4;
               c5 = 3;
               c6 = 1;
@@ -174,10 +174,10 @@ function _registerPhone() {
           } else if (2 === tmp8) {
             c4 = 0;
             callback = dependencyMap;
-            if (callback instanceof phone(11138).CaptchaCancelError) {
+            if (callback instanceof phone(11277).CaptchaCancelError) {
               throw callback;
             } else {
-              const tmp23 = new callback(4377)(callback);
+              const tmp23 = new callback(4462)(callback);
               throw tmp23;
             }
           } else if (arg0 === 1) {
@@ -240,13 +240,13 @@ function registerFull(giftCodeSKUId) {
   let obj = dispatcherDefault;
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
-    tmp4(15797)(birthday, constants2.REGISTER);
-    let tmp4Result = tmp4(695);
+    tmp4(15959)(birthday, constants2.REGISTER);
+    let tmp4Result = tmp4(1242);
     obj = { source: null, action: null };
     obj[0] = constants5.REGISTER;
     obj[1] = constants4.AGE_GATE_SUBMITTED;
     tmp4Result.track(constants.AGE_GATE_ACTION, obj);
-    const diffResult = tmp4(4074)().diff(birthday, "years");
+    const diffResult = tmp4(4153)().diff(birthday, "years");
     if (diffResult >= 13) {
       if (diffResult < 13) {
         let str3 = "23+";
@@ -260,12 +260,12 @@ function registerFull(giftCodeSKUId) {
       } else {
         str = "13-17";
       }
-      tmp4Result = tmp4(695);
+      tmp4Result = tmp4(1242);
       obj = { age_bucket: null };
       obj[0] = str;
       tmp4Result.track(tmp14.USER_AGE_SUBMITTED, obj);
     }
-    const obj11 = tmp4(4074)();
+    const obj11 = tmp4(4153)();
     tmp14 = constants;
   }
   obj1 = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
@@ -316,28 +316,28 @@ function registerFull(giftCodeSKUId) {
   obj4[3] = preChecked;
   obj3[1] = obj4;
   obj1[2] = obj3;
-  const tmp4Result1 = _modDef4714;
-  return _modDef4714.post(obj1).then(
+  const tmp4Result1 = _modDef4753;
+  return _modDef4753.post(obj1).then(
     (body) => {
-      let obj = callback2(706);
+      let obj = callback2(573);
       obj = { type: "REGISTER_SUCCESS", token: body.body.token };
       obj.dispatch(obj);
       obj = { type: "GUARDIAN_CONNECT_REQUIRED", shouldShowGuardianConnect: true === body.body.show_guardian_connect };
-      callback2(706).dispatch(obj);
-      const obj3 = callback2(706);
-      callback2(695).track(constants.AGE_GATE_ACTION, {
+      callback2(573).dispatch(obj);
+      const obj3 = callback2(573);
+      callback2(1242).track(constants.AGE_GATE_ACTION, {
         source: constants3.REGISTER,
         action: constants2.AGE_GATE_SUCCESS,
       });
     },
     (arg0) => {
-      if (arg0 instanceof callback(11138).CaptchaCancelError) {
+      if (arg0 instanceof callback(11277).CaptchaCancelError) {
         throw arg0;
       } else {
-        let obj = new callback2(4377)(arg0);
+        let obj = new callback2(4462)(arg0);
         if (null != obj.getFieldErrors("date_of_birth")) {
-          const result = callback3(15798).preventUnderageRegistration(constants3.REGISTER);
-          const obj2 = callback3(15798);
+          const result = callback3(15960).preventUnderageRegistration(constants3.REGISTER);
+          const obj2 = callback3(15960);
         }
         obj = {
           is_unique_username_registration: true,
@@ -368,7 +368,7 @@ function registerFull(giftCodeSKUId) {
         obj[11] = obj.getFirstFieldErrorMessage("guild_template_code");
         obj[12] = obj.getFirstFieldErrorMessage("consent");
         obj[13] = obj.getAnyErrorMessage();
-        callback2(695).track(constants.REGISTER_SUBMIT_ERRORED, obj);
+        callback2(1242).track(constants.REGISTER_SUBMIT_ERRORED, obj);
         throw obj;
       }
     },

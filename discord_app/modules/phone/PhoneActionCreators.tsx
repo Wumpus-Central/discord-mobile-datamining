@@ -1,6 +1,6 @@
 // discord_app/modules/phone/PhoneActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/AuthenticationStore.tsx";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PhoneConstants.tsx";
@@ -106,7 +106,7 @@ export default {
       if (c3) {
         obj1.authorization = "";
       }
-      const obj5 = closure_1_1(4714);
+      const obj5 = closure_1_1(4753);
       const obj2 = {
         url: null,
         headers: null,
@@ -122,12 +122,12 @@ export default {
       obj3[1] = closure_1_1;
       obj2[2] = obj3;
       const obj4 = { event: null };
-      obj4[0] = closure_1_0(500).NetworkActionNames.USER_VERIFY_PHONE;
+      obj4[0] = closure_1_0(1250).NetworkActionNames.USER_VERIFY_PHONE;
       obj2[4] = obj4;
-      obj2[5] = closure_1_0(527).rejectWithMigratedError();
+      obj2[5] = closure_1_0(1272).rejectWithMigratedError();
       body = yield obj5.post(obj2);
       if (dependencyMap) {
-        const obj = closure_1_1(706);
+        const obj = closure_1_1(573);
         const obj7 = { type: "MODAL_POP", key: null };
         obj7[1] = closure_1_5;
         obj.dispatch(obj7);

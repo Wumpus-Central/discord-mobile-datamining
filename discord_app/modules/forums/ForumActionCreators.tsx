@@ -1,6 +1,6 @@
 // discord_app/modules/forums/ForumActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import markAnalyticsFeedItemSeen from "../../utils/AnalyticsFeedItemSeenActionCreators.tsx";
 import prototype from "tracking/ForumChannelSeenManager.tsx";
 import maybeMarkSeen from "../../utils/AnalyticsFeedItemSeenManager.tsx";
@@ -179,9 +179,9 @@ export default {
     obj[1] = obj;
     obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     _require = HTTP.put(obj);
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     const tmpResult = sendRequest;
-    const intl2 = tmp(1233).intl;
+    const intl2 = tmp(1114).intl;
     withErrorHandling(
       () => closure_0,
       intl.string(require("../../intl/index.native.tsx").t.T8sBLJ),
@@ -210,15 +210,15 @@ export default {
     closure_1 = arg1;
     return callback(function* () {
       closure_0 = tmp4;
-      const obj2 = v0(7520);
+      const obj2 = v0(7765);
       yield obj2.unarchiveThreadIfNecessary(closure_1_0);
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       const obj3 = { url: null, body: null, rejectWithError: null };
       obj3[0] = closure_1_5.CHANNEL(closure_0);
       const obj4 = { applied_tags: null };
       obj4[0] = v0;
       obj3[1] = obj4;
-      obj3[2] = closure_1_0(527).rejectWithMigratedError();
+      obj3[2] = closure_1_0(1272).rejectWithMigratedError();
       return HTTP.patch(obj3);
     })();
   },
@@ -260,13 +260,13 @@ export default {
       closure_1 = tmp3;
       obj1 = { type: "FORUM_SEARCH_START", channelId: null };
       obj1[1] = closure_1_1;
-      closure_1_1(706).dispatch(obj1);
+      closure_1_1(573).dispatch(obj1);
       dependencyMap = 1;
-      const obj13 = closure_1_1(7520);
+      const obj13 = closure_1_1(7765);
       yield obj13.searchThreads(closure_1_0, closure_1_1, dependencyMap, c3, c4);
       if (1 === tmp7) {
         dependencyMap = 0;
-        obj1 = closure_1_1(706);
+        obj1 = closure_1_1(573);
         const obj3 = { type: "FORUM_SEARCH_FAILURE", channelId: null };
         obj3[1] = closure_1;
         obj1.dispatch(obj3);
@@ -280,14 +280,14 @@ export default {
         obj4[0] = length;
         obj4[1] = closure_1;
         obj4[2] = length.length;
-        closure_1_0(7522).trackForumSearched(obj4);
-        const obj7 = closure_1_0(7522);
+        closure_1_0(7767).trackForumSearched(obj4);
+        const obj7 = closure_1_0(7767);
         const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
         obj5[1] = closure_1;
         obj5[2] = length;
-        closure_1_1(706).dispatch(obj5);
+        closure_1_1(573).dispatch(obj5);
         dependencyMap = 0;
-        const obj9 = closure_1_1(706);
+        const obj9 = closure_1_1(573);
       }
       dependencyMap = 0;
       return arg1;

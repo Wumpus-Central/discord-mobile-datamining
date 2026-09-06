@@ -64,6 +64,11 @@ class PromotionRecord extends tmp2 {
       bogoRewardEnabled = false;
     }
     tmp3.bogoRewardEnabled = bogoRewardEnabled;
+    boostBogoMaxCredits = global.boostBogoMaxCredits;
+    if (boostBogoMaxCredits == null) {
+      boostBogoMaxCredits = null;
+    }
+    tmp3.boostBogoMaxCredits = boostBogoMaxCredits;
     tmp3.promotionKey = global.promotionKey;
     return tmp3;
   }
@@ -72,6 +77,17 @@ const prototype = PromotionRecord.prototype;
 PromotionRecord["createFromServer"] = function createFromServer(id) {
   const date = new Date(id.start_date);
   const date1 = new Date(id.end_date);
+  const metadata = id.metadata;
+  let boost_bogo;
+  if (metadata != null) {
+    const premium_promotion = metadata.premium_promotion;
+    if (premium_promotion != null) {
+      const reward_config = premium_promotion.reward_config;
+      if (reward_config != null) {
+        boost_bogo = reward_config.boost_bogo;
+      }
+    }
+  }
   const obj = {
     id: id.id,
     trialId: id.trial_id,
@@ -96,6 +112,7 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
     marketingComponents: null,
     rewardSkuIds: null,
     bogoRewardEnabled: null,
+    boostBogoMaxCredits: null,
     promotionKey: null,
   };
   let date2 = null;
@@ -169,19 +186,19 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
     marketing_components = [];
   }
   obj[20] = marketing_components.map((arg0) => closure_1_2.createFromServer(arg0, { startDate: date, endDate: date1 }));
-  const metadata = id.metadata;
+  const metadata2 = id.metadata;
   let reward_sku_ids;
-  if (metadata != null) {
-    const premium_promotion = metadata.premium_promotion;
-    if (premium_promotion != null) {
-      reward_sku_ids = premium_promotion.reward_sku_ids;
+  if (metadata2 != null) {
+    const premium_promotion2 = metadata2.premium_promotion;
+    if (premium_promotion2 != null) {
+      reward_sku_ids = premium_promotion2.reward_sku_ids;
     }
   }
   if (reward_sku_ids == null) {
-    const metadata2 = id.metadata;
+    const metadata3 = id.metadata;
     let reward_sku_ids1;
-    if (metadata2 != null) {
-      const gift_promotion = metadata2.gift_promotion;
+    if (metadata3 != null) {
+      const gift_promotion = metadata3.gift_promotion;
       if (gift_promotion != null) {
         reward_sku_ids1 = gift_promotion.reward_sku_ids;
       }
@@ -192,14 +209,14 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
     reward_sku_ids = [];
   }
   obj[21] = reward_sku_ids;
-  const metadata3 = id.metadata;
+  const metadata4 = id.metadata;
   let enabled;
-  if (metadata3 != null) {
-    const premium_promotion2 = metadata3.premium_promotion;
-    if (premium_promotion2 != null) {
-      const reward_config = premium_promotion2.reward_config;
-      if (reward_config != null) {
-        const bogo = reward_config.bogo;
+  if (metadata4 != null) {
+    const premium_promotion3 = metadata4.premium_promotion;
+    if (premium_promotion3 != null) {
+      const reward_config2 = premium_promotion3.reward_config;
+      if (reward_config2 != null) {
+        const bogo = reward_config2.bogo;
         if (bogo != null) {
           enabled = bogo.enabled;
         }
@@ -207,11 +224,24 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
     }
   }
   obj[22] = true === enabled;
+  let enabled1;
+  if (boost_bogo != null) {
+    enabled1 = boost_bogo.enabled;
+  }
+  let tmp13 = null;
+  if (true === enabled1) {
+    let max_credits_per_user = boost_bogo.max_credits_per_user;
+    if (max_credits_per_user == null) {
+      max_credits_per_user = null;
+    }
+    tmp13 = max_credits_per_user;
+  }
+  obj[23] = tmp13;
   let str9 = id.promotion_key;
   if (str9 == null) {
     str9 = "";
   }
-  obj[23] = str9;
+  obj[24] = str9;
   return new PromotionRecord(obj);
 };
 Object.defineProperty(prototype, "isBogo", {
@@ -242,10 +272,10 @@ prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
     return !allowedCountries.includes(arg0);
   } else {
     const promotionType = self.promotionType;
-    if (tmp(8493).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
-      if (tmp(8493).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
-        if (tmp(8493).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
-          if (tmp(8493).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
+    if (tmp(10697).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
+      if (tmp(10697).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
+        if (tmp(10697).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
+          if (tmp(10697).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
             return false;
           }
         }

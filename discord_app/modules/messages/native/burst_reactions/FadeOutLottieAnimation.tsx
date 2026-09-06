@@ -30,13 +30,13 @@ export default function FadeOutLottieAnimation(onComplete) {
   const tmp5 = first1(React.useState(true), 2);
   first1 = tmp5[0];
   React = tmp7;
-  let obj = onComplete(586);
+  let obj = onComplete(504);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = React.useEffect(() => {
     dependencyMap(false);
   }, []);
-  onComplete(4217);
+  onComplete(4296);
   class T {
     constructor() {
       if (closure_1) {
@@ -79,8 +79,8 @@ export default function FadeOutLottieAnimation(onComplete) {
   obj = {
     isAnimationComplete: first,
     isFadeOut: first1,
-    withTiming: onComplete(4479).withTiming,
-    runOnJS: onComplete(4217).runOnJS,
+    withTiming: onComplete(4561).withTiming,
+    runOnJS: onComplete(4296).runOnJS,
     setIsFadeOut: tmp7,
   };
   T.__closure = obj;
@@ -103,9 +103,9 @@ export default function FadeOutLottieAnimation(onComplete) {
       dependencyMap(true);
     };
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(first(5953), { style: null, speed: null, onAnimationFinish: null });
-    let tmp14Result = tmp14(first(4217).View, obj);
-    const tmp16 = first(5953);
+    obj[1] = jsx(first(5529), { style: null, speed: null, onAnimationFinish: null });
+    let tmp14Result = tmp14(first(4296).View, obj);
+    const tmp16 = first(5529);
   } else {
     tmp14Result = null;
   }

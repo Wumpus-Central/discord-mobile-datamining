@@ -23,14 +23,14 @@ function useObscuredContentNonFriendsDmSettingValue() {
 function onObscuredContentNonFriendsDmOnPress() {
   selectedTeenId = selectedTeenId.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14672);
-    const intl = selectedTeenId(1233).intl;
-    const stringResult = intl.string(selectedTeenId(1233).t.GYpoAq);
+    let obj = selectedTeenId(14828);
+    const intl = selectedTeenId(1114).intl;
+    const stringResult = intl.string(selectedTeenId(1114).t.GYpoAq);
     obj = { title: null, subtitle: null, excluded: null, handlePress: null, currentValue: null };
     obj[0] = stringResult;
-    const intl2 = selectedTeenId(1233).intl;
-    obj[1] = intl2.string(selectedTeenId(1233).t["Yh+HX1"]);
-    const items = [selectedTeenId(1305).ExplicitContentRedaction.SHOW];
+    const intl2 = selectedTeenId(1114).intl;
+    obj[1] = intl2.string(selectedTeenId(1114).t["Yh+HX1"]);
+    const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
     obj[2] = items;
     obj[3] = function handlePress(explicitContentNonFriendDm) {
       let obj = selectedTeenId(closure_1_1[4]);
@@ -38,8 +38,8 @@ function onObscuredContentNonFriendsDmOnPress() {
       const result = obj.updateExplicitContentSetting(selectedTeenId, obj);
     };
     obj[4] = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(14665).handleSensitiveMediaFilterPress(obj);
-    const obj2 = selectedTeenId(14665);
+    let result = selectedTeenId(14821).handleSensitiveMediaFilterPress(obj);
+    const obj2 = selectedTeenId(14821);
   }
 }
 createToggle = {

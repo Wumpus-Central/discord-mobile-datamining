@@ -54,7 +54,7 @@ let closure_14 = createCacheKey.createStyles((items) => {
     },
     ellipsisDot: null,
   };
-  obj = { width: dotSize, height: dotSize, backgroundColor: tmp5(709).colors.WHITE };
+  obj = { width: dotSize, height: dotSize, backgroundColor: tmp5(576).colors.WHITE };
   obj[1] = obj;
   return obj;
 });
@@ -84,23 +84,23 @@ export default function Status(isMobileOnline) {
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(13988);
+    let tmp4Result = tmp4(14106);
   } else if (flag2) {
-    tmp4Result = tmp4(13989);
+    tmp4Result = tmp4(14107);
   } else if (flag) {
-    tmp4Result = tmp4(13990);
+    tmp4Result = tmp4(14108);
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = tmp4(13991);
+    tmp4Result = tmp4(14109);
   } else if (tmp7.DND === status) {
-    tmp4Result = tmp4(13992);
+    tmp4Result = tmp4(14110);
   } else {
     if (tmp7.OFFLINE !== status) {
       if (tmp7.INVISIBLE !== status) {
         const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(13994);
+        tmp4Result = tmp4(14112);
       }
     }
-    tmp4Result = tmp4(13993);
+    tmp4Result = tmp4(14111);
   }
   obj[1] = tmp4Result;
   obj[1] = closure_11(closure_4, obj);

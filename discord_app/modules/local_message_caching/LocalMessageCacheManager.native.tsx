@@ -1,11 +1,11 @@
 // discord_app/modules/local_message_caching/LocalMessageCacheManager.native.tsx
 import timestampDefault from "../debug/Logger.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
-import resetCache from "../../utils/DateUtils.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import initializeDefault from "../../lib/LifecycleManager.tsx";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
+import resetCache from "../../utils/DateUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../records/MessageRecord.tsx";
@@ -54,14 +54,14 @@ function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
   let obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const tmp3 = file(7508)(obj);
+  const tmp3 = file(7752)(obj);
   closure_0 = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
   obj = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
-  file(7211).receiveMessage(channel_id, tmp3, true, obj);
+  file(7456).receiveMessage(channel_id, tmp3, true, obj);
   if (null != file) {
-    file(706).wait(() => file(closure_1_2[16]).restoreFailedUpload(id.id, file));
-    const tmpResult = file(706);
+    file(573).wait(() => file(closure_1_2[16]).restoreFailedUpload(id.id, file));
+    const tmpResult = file(573);
   }
 }
 function resumeSendingMessage() {

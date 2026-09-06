@@ -174,7 +174,7 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(
   obj.used_cache_at_startup = flag2;
   let tmp6Result = tmp6(9);
   const result = tmp6Result.attachReadyPayloadProperties(obj);
-  tmp6Result = tmp6(695);
+  tmp6Result = tmp6(1242);
   tmp6Result.track(constants.READY_PAYLOAD_RECEIVED, obj, { logEventProperties: true });
 };
 export const getConnectionPath = function getConnectionPath(_trace) {

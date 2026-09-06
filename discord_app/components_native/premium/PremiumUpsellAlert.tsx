@@ -8,10 +8,10 @@ import Text from "../../design/components/Text/native/Text.tsx";
 import createCacheKey2 from "../../design/components/Styles/native/createStyles.tsx";
 import usePremiumTrialOffer from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 import useMessageMaxLengthDefault from "../../modules/messages/useMessageMaxLength.tsx";
-import registerAssetDefault from "../../../_runtime/08182_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/08183_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/08220_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/08221_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/09314_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/09315_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/09352_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/09353_registerAsset.js";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -71,38 +71,38 @@ function GlobalEmojiUpsell(arg0) {
       skuId = subscriptionTrial.skuId;
     }
   }
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   const formatResult = intl.format(getSystemLocale.t["KEn+LY"], {});
   if (null != skuId) {
     if (TIER_0.TIER_0 === skuId) {
-      const intl3 = tmp(1233).intl;
+      const intl3 = tmp(1114).intl;
       obj = { planName: null };
-      let tmpResult = tmp(4139);
+      let tmpResult = tmp(4218);
       obj[0] = tmpResult.getPremiumTypeDisplayName(closure_13.TIER_0);
-      let formatResult1 = intl3.format(tmp(1233).t["1P7x8p"], obj);
+      let formatResult1 = intl3.format(tmp(1114).t["1P7x8p"], obj);
     } else {
       formatResult1 = formatResult;
       if (tmp8.TIER_2 === skuId) {
-        const intl5 = tmp(1233).intl;
+        const intl5 = tmp(1114).intl;
         obj = { planName: null };
-        tmpResult = tmp(4139);
+        tmpResult = tmp(4218);
         obj[0] = tmpResult.getPremiumTypeDisplayName(closure_13.TIER_2);
-        formatResult1 = intl5.format(tmp(1233).t["1P7x8p"], obj);
+        formatResult1 = intl5.format(tmp(1114).t["1P7x8p"], obj);
       }
     }
   } else {
     formatResult1 = formatResult;
     if (useTier0Description) {
-      const intl2 = tmp(1233).intl;
+      const intl2 = tmp(1114).intl;
       obj1 = { planName: null };
-      obj1[0] = tmp(4139).getPremiumTypeDisplayName(closure_13.TIER_0);
-      formatResult1 = intl2.format(tmp(1233).t.kWBwlJ, obj1);
-      const tmpResult1 = tmp(4139);
+      obj1[0] = tmp(4218).getPremiumTypeDisplayName(closure_13.TIER_0);
+      formatResult1 = intl2.format(tmp(1114).t.kWBwlJ, obj1);
+      const tmpResult1 = tmp(4218);
     }
   }
   const obj2 = { alertWidth, upsellItem: null };
   const obj3 = { image: registerAssetDefault, title: null, description: null };
-  const intl4 = tmp(1233).intl;
+  const intl4 = tmp(1114).intl;
   obj3[1] = intl4.string(getSystemLocale.t.UNtcBV);
   obj3[2] = formatResult1;
   obj2[1] = obj3;
@@ -140,14 +140,14 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8218);
+    let tmp4Result = tmp4(9350);
   } else {
-    tmp4Result = tmp4(8219);
+    tmp4Result = tmp4(9351);
   }
   obj = { image: tmp4Result, title: null, description: null };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj[1] = intl.string(getSystemLocale.t.OVN9la);
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj[2] = intl2.string(getSystemLocale.t.j0dyAG);
   obj[2] = obj;
   return tmp6(tmp7, obj);
@@ -185,9 +185,9 @@ function CustomAppIconsUpsell(alertWidth) {
     iconSource = arr.filter((isPremium) => isPremium.isPremium)[0].iconSource;
   }
   obj = { image: iconSource, title: null, description: null };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj[1] = intl.string(getSystemLocale.t["1B1Cyn"]);
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj[2] = intl2.string(getSystemLocale.t.VL5TYT);
   obj[2] = obj;
   return closure_14(PremiumUpsellItem, obj);
@@ -225,14 +225,14 @@ function LongerMessageUpsell(alertWidth) {
   const tmp7 = closure_14;
   const tmp8 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8222);
+    let tmp4Result = tmp4(9354);
   } else {
-    tmp4Result = tmp4(8223);
+    tmp4Result = tmp4(9355);
   }
   obj = { image: tmp4Result, title: null, description: null };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj[1] = intl.string(getSystemLocale.t["8cjmTj"]);
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj[2] = intl2.formatToPlainString(getSystemLocale.t.moN9wh, { maxLength: tmp6 });
   obj[2] = obj;
   return tmp7(tmp8, obj);
@@ -249,14 +249,14 @@ function GuildCapUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8224);
+    let tmp4Result = tmp4(9356);
   } else {
-    tmp4Result = tmp4(8225);
+    tmp4Result = tmp4(9357);
   }
   obj = { image: tmp4Result, title: null, description: null };
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj[1] = intl.string(getSystemLocale.t["CoNXB+"]);
-  const intl2 = tmp(1233).intl;
+  const intl2 = tmp(1114).intl;
   obj[2] = intl2.format(getSystemLocale.t.mkXb2F, {});
   obj[2] = obj;
   return tmp6(tmp7, obj);
@@ -270,17 +270,17 @@ function UploadUpsell(arg0) {
   let tmp6Result = null;
   if (callback(importAllResult.useState(!stateFromStores), 1)[0]) {
     obj = { start: true, end: true, label: null, subLabel: null, value: null, onValueChange: null };
-    const intl = tmp(1233).intl;
-    obj[2] = intl.string(tmp(1233).t.ix8XIj);
-    const intl2 = tmp(1233).intl;
-    obj[3] = intl2.string(tmp(1233).t["wC0+Ph"]);
+    const intl = tmp(1114).intl;
+    obj[2] = intl.string(tmp(1114).t.ix8XIj);
+    const intl2 = tmp(1114).intl;
+    obj[3] = intl2.string(tmp(1114).t["wC0+Ph"]);
     obj[4] = stateFromStores;
     obj[5] = function onValueChange(dataSavingMode) {
       let obj = callback(table[31]);
       obj = { dataSavingMode };
       const result = obj.updatedUnsyncedSettings(obj);
     };
-    tmp6Result = callback2(tmp(6002).TableSwitchRow, obj);
+    tmp6Result = callback2(tmp(7201).TableSwitchRow, obj);
   }
   children[1] = tmp6Result;
   return closure_15(closure_16, { children });

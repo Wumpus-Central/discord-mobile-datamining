@@ -3,7 +3,7 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import getGradientColorByPercentage from "../../client_themes/native/ClientThemesUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
@@ -32,12 +32,12 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
   if (scrimBase == null) {
     scrimBase = token;
   }
-  let tmpResult = tmp(685);
+  let tmpResult = tmp(1091);
   let hex2rgbResult = tmpResult.hex2rgb(scrimBase, 1);
   if (hex2rgbResult == null) {
     hex2rgbResult = scrimBase;
   }
-  tmpResult = tmp(685);
+  tmpResult = tmp(1091);
   let str = tmpResult.hex2rgb(scrimBase, 0);
   if (str == null) {
     str = "transparent";

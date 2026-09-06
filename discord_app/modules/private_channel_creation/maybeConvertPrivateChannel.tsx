@@ -1,5 +1,5 @@
 // discord_app/modules/private_channel_creation/maybeConvertPrivateChannel.tsx
-import _modDef4491 from "../../actions/ChannelActionCreators.tsx";
+import _modDef4573 from "../../actions/ChannelActionCreators.tsx";
 import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "../channel/FakePlaceholderPrivateChannel.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
 
@@ -13,8 +13,8 @@ export default function maybeConvertPrivateChannel(arg0) {
     channel = channel.getChannel(arg0);
     let ensurePrivateChannelResult = null;
     if (null != channel) {
-      ensurePrivateChannelResult = _modDef4491.ensurePrivateChannel(channel.recipients);
-      const obj = _modDef4491;
+      ensurePrivateChannelResult = _modDef4573.ensurePrivateChannel(channel.recipients);
+      const obj = _modDef4573;
     }
     return ensurePrivateChannelResult;
   }

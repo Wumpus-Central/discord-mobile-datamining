@@ -2,11 +2,11 @@
 import handleConnectionOpenDefault from "../../stores/SelectedChannelStore.tsx";
 import coerceMainRoute from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import getRootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
-import handlePermissionsChangeDefault from "../../stores/ChannelSectionStore.tsx";
+import toggleSectionDefault from "../../stores/ChannelSectionStore.tsx";
 import { isGuildHomeChannel } from "../channel/ChannelConstants.tsx";
 
 require = arg1;
-handlePermissionsChangeDefault;
+toggleSectionDefault;
 handleConnectionOpenDefault;
 const result = require("set").fileFinishedImporting(
   "modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx",
@@ -41,7 +41,7 @@ export default function isSelectedFromHomeChannel(id) {
                   let coerceChannelRouteResult = obj3.coerceChannelRoute(tmp4);
                   if (null != coerceChannelRouteResult) {
                     if (coerceChannelRouteResult.params.channelId === id.id) {
-                      let tmp6Result = tmp6(4332);
+                      let tmp6Result = tmp6(4417);
                       coerceChannelRouteResult1 = tmp6Result.coerceChannelRoute(state.routes[index - 1]);
                       if (null != coerceChannelRouteResult1) {
                         break;

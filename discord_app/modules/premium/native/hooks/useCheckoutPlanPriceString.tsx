@@ -43,7 +43,7 @@ export const useCheckoutPlanDiscountPrices = function useCheckoutPlanDiscountPri
   const tmp2 = regularPriceString((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   dependencyMap = tmp2;
   const tmp = regularPriceString((orderRequired) => orderRequired.orderRequired);
-  let tmp3 = memo(1234).isIOS() && tmp;
+  let tmp3 = memo(1115).isIOS() && tmp;
   discountedPriceString = tmp3;
   const items = [tmp2, productId, tmp3];
   memo = discountedPriceString.useMemo(() => {

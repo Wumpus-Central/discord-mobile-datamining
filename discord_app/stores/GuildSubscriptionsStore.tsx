@@ -62,8 +62,8 @@ function handleConnectionOpenOrResumed(type) {
     if (!obj1.isEmpty(obj)) {
       obj = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: null };
       obj[1] = obj;
-      tmp3(706).dispatch(obj);
-      const tmp3Result = tmp3(706);
+      tmp3(573).dispatch(obj);
+      const tmp3Result = tmp3(573);
     }
     tmp3 = set;
   }
@@ -86,7 +86,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     store4.subscribeToGuild(tmp11);
-    obj5 = obj(1911);
+    obj5 = obj(1982);
   }
   obj = {};
   set = new Set(closure_6.lurkingGuildIds());
@@ -107,8 +107,8 @@ function handleConnectionOpenOrResumed(type) {
   if (!obj8.isEmpty(obj)) {
     obj1 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: null };
     obj1[1] = obj;
-    set(706).dispatch(obj1);
-    const tmp18Result = set(706);
+    set(573).dispatch(obj1);
+    const tmp18Result = set(573);
   }
 }
 function handleChannelSelect(arg0) {

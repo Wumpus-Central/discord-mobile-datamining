@@ -52,21 +52,21 @@ obj = {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "HermesInternal", memberCount: "r" };
+      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "call", memberCount: "o" };
     }
     obj[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "HermesInternal", memberCount: "r" };
+      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "call", memberCount: "o" };
     }
     obj[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "HermesInternal", memberCount: "r" };
+      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "call", memberCount: "o" };
     }
     obj[guildId].activeChannelsCount = guildId.count;
   },

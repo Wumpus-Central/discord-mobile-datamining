@@ -34,7 +34,7 @@ function _requestGames() {
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c3 = 0;
-        const obj3 = body(706);
+        const obj3 = body(573);
         const obj4 = { type: "GAME_FETCH_FAILURE", gameIds: null };
         obj4[1] = callback;
         obj3.dispatch(obj4);
@@ -44,7 +44,7 @@ function _requestGames() {
         throw body;
       } else if (arg0 !== 2) {
         body = body.body;
-        const obj = body(706);
+        const obj = body(573);
         const obj5 = { type: "GAME_FETCH_SUCCESS", gameIds: null, games: null };
         obj5[1] = callback;
         obj5[2] = body;

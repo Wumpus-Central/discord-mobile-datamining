@@ -1,7 +1,7 @@
 // discord_app/modules/phone/native/CodeField.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef6058 from "../../keyboard/native/KeyboardAwareView.tsx";
+import _modDef5578 from "../../keyboard/native/KeyboardAwareView.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -124,7 +124,7 @@ function CodeFieldInner(loading) {
   });
   items1[3] = actions;
   obj[1] = items1;
-  const items2 = [callback3(closure_5, obj), callback2(_modDef6058, { children: footer })];
+  const items2 = [callback3(closure_5, obj), callback2(_modDef5578, { children: footer })];
   obj[4] = items2;
   return callback3(closure_6, obj);
 }
@@ -183,8 +183,8 @@ export default function CodeField(disableKeyboardAvoidingView) {
     obj = {};
     const merged1 = Object.assign(disableKeyboardAvoidingView);
     obj[1] = tmp2(CodeFieldInner, obj);
-    tmp2Result = tmp2(_modDef6058, obj);
-    const tmp5 = _modDef6058;
+    tmp2Result = tmp2(_modDef5578, obj);
+    const tmp5 = _modDef5578;
   }
   return tmp2Result;
 }

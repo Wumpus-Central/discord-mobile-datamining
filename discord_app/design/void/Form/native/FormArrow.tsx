@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../native.tsx";
 import Text from "../../../components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/05623_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07142_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";

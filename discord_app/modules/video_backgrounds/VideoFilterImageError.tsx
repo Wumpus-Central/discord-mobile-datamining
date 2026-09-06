@@ -1,7 +1,7 @@
 // discord_app/modules/video_backgrounds/VideoFilterImageError.tsx
 import set from "../../../_runtime/00002_set.js";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 let closure_2 = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };
 let closure_3 = { ASSET: "asset" };
@@ -32,8 +32,8 @@ const prototype = function VideoFilterImageError(arg0, arg1) {
     tmp7 = code === constants.ASSET_SIZE;
   }
   if (tmp7) {
-    const intl2 = tmp4(1233).intl;
-    tmp3.message = intl2.string(tmp4(1233).t.mrlScX);
+    const intl2 = tmp4(1114).intl;
+    tmp3.message = intl2.string(tmp4(1114).t.mrlScX);
   }
   return tmp3;
 }.prototype;

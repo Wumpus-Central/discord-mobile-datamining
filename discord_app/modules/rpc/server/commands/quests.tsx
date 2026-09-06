@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/server/commands/quests.tsx
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import getApplicationIdsByTaskTypes from "../../../quests/utils/QuestTaskUtils.tsx";
 import prototypeDefault from "../../RPCError.tsx";
 import recurseReplaceContentTree from "../../RPCHelpers.tsx";

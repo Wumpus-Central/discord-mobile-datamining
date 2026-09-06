@@ -81,7 +81,7 @@ function _fetchAuthorizedApps() {
               const obj3 = { value: null, done: false };
               obj3[0] = value.then(
                 (body) => {
-                  let obj = v3(706);
+                  let obj = v3(573);
                   obj = {
                     type: "USER_AUTHORIZED_APPS_UPDATE",
                     isFullFetch: null == closure_0,
@@ -90,7 +90,7 @@ function _fetchAuthorizedApps() {
                   return obj.dispatch(obj);
                 },
                 () => {
-                  let request = v3(706);
+                  let request = v3(573);
                   if (null == closure_0) {
                     request = { type: "full" };
                   } else {
@@ -168,7 +168,7 @@ obj = {
   },
   delete(arg0) {
     const self = this;
-    const HTTP = self(527).HTTP;
+    const HTTP = self(1272).HTTP;
     const obj = { url: Endpoints.OAUTH2_TOKEN(arg0), oldFormErrors: true, rejectWithError: true };
     HTTP.del({ url: Endpoints.OAUTH2_TOKEN(arg0), oldFormErrors: true, rejectWithError: true }).then(() => {
       const response = self.fetch();

@@ -3,10 +3,10 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import RedesignBottomSheetTitleHeaderBase from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRowIcon from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
-import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -60,9 +60,9 @@ function SurveyOverrideActionSheet() {
     2,
   );
   const first = tmp[0];
-  let obj = { header: callback2(first(5630).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
+  let obj = { header: callback2(first(7149).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
   const items = [
-    callback2(first(7717).TextInput, {
+    callback2(first(6606).TextInput, {
       label: "Survey Override",
       size: "md",
       placeholder: "Enter the ID of the Survey you want to test",
@@ -94,9 +94,9 @@ function SurveyOverrideActionSheet() {
     }
     closure_1_1(closure_1_3[16]).hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = callback2(first(4929).Button, obj);
+  items[1] = callback2(first(4975).Button, obj);
   obj[1] = items;
-  return closure_10(first(5998).ActionSheet, obj);
+  return closure_10(first(7198).ActionSheet, obj);
 }
 function SurveyInfo() {
   let obj = initialize;
@@ -158,9 +158,9 @@ function ChangelogOverrideActionSheet() {
     2,
   );
   const first = tmp[0];
-  let obj = { header: callback2(first(5630).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
+  let obj = { header: callback2(first(7149).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
   const items = [
-    callback2(first(7717).TextInput, {
+    callback2(first(6606).TextInput, {
       label: "Changelog Override",
       size: "md",
       placeholder: "Enter the ID of the changelog you want to test",
@@ -192,9 +192,9 @@ function ChangelogOverrideActionSheet() {
     }
     closure_1_1(closure_1_3[16]).hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = callback2(first(4929).Button, obj);
+  items[1] = callback2(first(4975).Button, obj);
   obj[1] = items;
-  return closure_10(first(5998).ActionSheet, obj);
+  return closure_10(first(7198).ActionSheet, obj);
 }
 function ChangelogInfo() {
   let obj = { title: "Changelog", hasIcons: false, children: null };
@@ -203,7 +203,7 @@ function ChangelogInfo() {
     subLabel: "Force a changelog to be shown.",
     arrow: true,
     onPress() {
-      let obj = callback(4445);
+      let obj = callback(4527);
       obj = { default: closure_16 };
       obj.openLazy(Promise.resolve(obj), "ChangelogOverrideActionSheet");
     },
@@ -213,7 +213,7 @@ function ChangelogInfo() {
     label: "Changelog debugging",
     arrow: true,
     onPress() {
-      let obj = callback(4445);
+      let obj = callback(4527);
       obj = { default: closure_15 };
       obj.openLazy(Promise.resolve(obj), "ChangelogOverrideDebuggingActionSheet");
     },

@@ -99,8 +99,8 @@ export default function EditGuildEventDetails(guildEvent) {
       (function assertGuildEventDetailsValid(guildEvent) {
         if (0 === guildEvent.name.length) {
           const _Error = Error;
-          const intl = callback(1233).intl;
-          error = new Error(intl.string(callback(1233).t.GoV0uR));
+          const intl = callback(1114).intl;
+          error = new Error(intl.string(callback(1114).t.GoV0uR));
           throw error;
         }
       })(guildEvent);

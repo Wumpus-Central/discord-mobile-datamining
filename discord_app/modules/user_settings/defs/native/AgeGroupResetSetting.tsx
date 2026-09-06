@@ -3,9 +3,9 @@ import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
-import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import AGE_GROUP_CONFIRM_ROW_PROPS from "AgeGroupScreenRowProps.tsx";
 import SettingsAgeGroupResetAlert from "../../age_group/native/SettingsAgeGroupResetAlert.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
@@ -27,7 +27,7 @@ const pressable = createToggle.createPressable({
     );
   },
   withArrow: true,
-  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings,
+  usePredicate: AGE_GROUP_CONFIRM_ROW_PROPS.useShowAssignedAdultAgeGroupRow,
 });
 const obj = {
   useTitle() {
@@ -46,7 +46,7 @@ const obj = {
     );
   },
   withArrow: true,
-  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings,
+  usePredicate: AGE_GROUP_CONFIRM_ROW_PROPS.useShowAssignedAdultAgeGroupRow,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupResetSetting.tsx");
 

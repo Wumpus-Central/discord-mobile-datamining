@@ -105,7 +105,7 @@ function _libDiscoreSmokeTest() {
 }
 function trackLibdiscoreSuccess() {
   const items = [];
-  const prop = items(1912).ALL_LIBDISCORE_EXPERIMENTS;
+  const prop = items(1983).ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((getEnabledFeatureName) => {
     const enabledFeatureName = getEnabledFeatureName.getEnabledFeatureName();
     if (null != enabledFeatureName) {

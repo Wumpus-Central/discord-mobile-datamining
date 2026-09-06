@@ -23,7 +23,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     const features2 = features.features;
     const hasItem1 = features2.has(constants.CREATOR_MONETIZABLE);
   }
-  let tmpResult = tmp(644);
+  let tmpResult = tmp(563);
   const items = [closure_5];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     let tmp3 = null != closure_0;
@@ -36,18 +36,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(17551);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17551)(id));
+  const tmp10 = refresh(17711);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17711)(id));
   let id1;
-  let tmp9Result = tmp9(17552);
+  let tmp9Result = tmp9(17712);
   if (features != null) {
     id1 = features.id;
   }
   const tmp9ResultResult = tmp9Result(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp10Result = refresh(17551)(id);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(17553)(eligibility));
+  const tmp10Result = refresh(17711)(id);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(17713)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -62,7 +62,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  tmpResult = tmp(6109);
+  tmpResult = tmp(7253);
   let id2;
   if (features != null) {
     id2 = features.id;
@@ -79,24 +79,24 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (eligibility != null) {
     canApply = eligibility.canApply;
   }
-  const intl = tmp(1233).intl;
+  const intl = tmp(1114).intl;
   obj = { faqUrl: null };
-  tmp9Result = tmp9(1994);
+  tmp9Result = tmp9(2024);
   obj[0] = tmp9Result.getArticleURL(constants2.CREATOR_FAQ);
-  const tmp16 = refresh(17553)(eligibility);
+  const tmp16 = refresh(17713)(eligibility);
   const tmp26 = constants2;
   if (isApplicationRejected) {
     if (tmpResult.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
       if (true === hasItem) {
-        const intl4 = tmp(1233).intl;
+        const intl4 = tmp(1114).intl;
         obj = { communityGuidelineUrl: null };
         obj[0] = constants3.GUIDELINES;
-        let formatResult1 = intl4.format(tmp(1233).t["0o1Q+t"], obj);
+        let formatResult1 = intl4.format(tmp(1114).t["0o1Q+t"], obj);
       } else {
-        const intl3 = tmp(1233).intl;
+        const intl3 = tmp(1114).intl;
         obj1 = { communityGuidelineUrl: null };
         obj1[0] = constants3.GUIDELINES;
-        formatResult1 = intl3.format(tmp(1233).t.b6h59n, obj1);
+        formatResult1 = intl3.format(tmp(1114).t.b6h59n, obj1);
       }
     }
   }
@@ -106,12 +106,12 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   }
   let formatResult2;
   if (tmp28) {
-    const intl2 = tmp(1233).intl;
+    const intl2 = tmp(1114).intl;
     const obj2 = { requestCooldownDuration: null, creatorRevenuePolicyUrl: null };
     obj2[0] = requestCooldownDuration;
-    obj2[1] = tmp9(1994).getArticleURL(tmp26.CREATOR_POLICY);
-    formatResult2 = intl2.format(tmp(1233).t.TvX207, obj2);
-    const tmp9Result1 = tmp9(1994);
+    obj2[1] = tmp9(2024).getArticleURL(tmp26.CREATOR_POLICY);
+    formatResult2 = intl2.format(tmp(1114).t.TvX207, obj2);
+    const tmp9Result1 = tmp9(2024);
   }
   let tmp34 = isExpeditedOnboardingGuild;
   if (isExpeditedOnboardingGuild) {
@@ -131,8 +131,8 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (isApplicationRejected) {
     if (tmp35) {
       if (stateFromStores) {
-        const intl5 = tmp(1233).intl;
-        formatResult3 = intl5.format(tmp(1233).t.wbVIUB, {});
+        const intl5 = tmp(1114).intl;
+        formatResult3 = intl5.format(tmp(1114).t.wbVIUB, {});
       }
     }
   }

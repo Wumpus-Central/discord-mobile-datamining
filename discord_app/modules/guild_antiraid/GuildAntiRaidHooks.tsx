@@ -37,7 +37,7 @@ function getFirstGuildIncidentId(guildId) {
         let tmp22 = tmp17;
         if (obj7.hasDetectedActivity(tmp18)) {
           let tmp8 = tmp20;
-          let tmp19Result = tmp19(7936);
+          let tmp19Result = tmp19(8015);
           let tmp9 = tmp17;
           if (!tmp19Result.isUnderLockdown(tmp18)) {
             let tmp11 = importAll;
@@ -59,7 +59,7 @@ function getFirstGuildIncidentId(guildId) {
           }
         } else {
           let tmp6 = tmp20;
-          tmp19Result = tmp19(7936);
+          tmp19Result = tmp19(8015);
           let tmp7 = tmp17;
         }
       }
@@ -72,14 +72,14 @@ function getFirstGuildIncidentId(guildId) {
 const result = require("set").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidHooks.tsx");
 
 export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
-  let obj = stateFromStores1(644);
+  let obj = stateFromStores1(563);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [closure_9];
-  stateFromStores1 = stateFromStores1(644).useStateFromStores(items1, () => incidentsByGuild.getIncidentsByGuild());
-  const obj2 = stateFromStores1(644);
+  stateFromStores1 = stateFromStores1(563).useStateFromStores(items1, () => incidentsByGuild.getIncidentsByGuild());
+  const obj2 = stateFromStores1(563);
   const items2 = [closure_5];
-  const stateFromStoresArray = stateFromStores1(644).useStateFromStoresArray(items2, () => {
+  const stateFromStoresArray = stateFromStores1(563).useStateFromStoresArray(items2, () => {
     const keys = closure_1_1(closure_1_3[9]).keys(stateFromStores1);
     return keys.map((arg0) => guild.getGuild(arg0));
   });
@@ -96,7 +96,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
         let tmp20 = dependencyMap;
         let tmp17 = stateFromStores1;
         let tmp18 = stateFromStores1;
-        let obj8 = stateFromStores1(7936);
+        let obj8 = stateFromStores1(8015);
         let tmp21 = tmp15;
         if (obj8.hasDetectedActivity(tmp16)) {
           let tmp9 = importAll;
@@ -116,7 +116,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
         } else {
           let tmp6 = tmp17;
           let tmp7 = tmp19;
-          let tmp18Result = tmp18(7936);
+          let tmp18Result = tmp18(8015);
           let tmp8 = tmp15;
         }
       }
@@ -247,7 +247,7 @@ export const useDisabledActions = function useDisabledActions(id) {
   if (id == null) {
     id = closure_11;
   }
-  let obj = id(644);
+  let obj = id(563);
   const items = [closure_9];
   const items1 = [id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getGuildIncident(id), items1);

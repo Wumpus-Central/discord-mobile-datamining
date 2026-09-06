@@ -133,8 +133,8 @@ function ReactActionSheetBase(content) {
               } else {
                 closure_0 = tmp4;
                 closure_1_5(true);
-                v0(8641).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
-                const obj5 = v0(8641);
+                v0(8351).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
+                const obj5 = v0(8351);
                 obj1 = { itemId: null, itemType: null, actionParameters: null };
                 obj1[0] = closure_1_0.id;
                 obj1[1] = closure_1_6;
@@ -144,7 +144,7 @@ function ReactActionSheetBase(content) {
                   actionIntentType: "reply",
                   actionDestinationType: null,
                 };
-                v0(8641).feedItemActioned(obj1);
+                v0(8351).feedItemActioned(obj1);
                 v0 = 1;
                 dependencyMap = 1;
                 const obj2 = { value: null, done: false };
@@ -523,11 +523,11 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
   }
   if (null != attachments) {
     if (attachments.length > 0) {
-      const intl2 = tmp5(1233).intl;
+      const intl2 = tmp5(1114).intl;
       obj = { attachmentsCount: null };
       obj[0] = attachments.length;
       const _HermesInternal2 = HermesInternal;
-      items.push("> -# *" + intl2.formatToPlainString(tmp5(1233).t["JiNPo+"], obj) + "*");
+      items.push("> -# *" + intl2.formatToPlainString(tmp5(1114).t["JiNPo+"], obj) + "*");
     }
   }
   items.push(reply.reply);

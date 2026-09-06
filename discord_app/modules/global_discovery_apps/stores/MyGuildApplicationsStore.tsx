@@ -1,7 +1,7 @@
 // discord_app/modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../../utils/Durations.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 
 function addToApplicationIdToGuildIds(applicationId) {
   applicationId = applicationId.applicationId;

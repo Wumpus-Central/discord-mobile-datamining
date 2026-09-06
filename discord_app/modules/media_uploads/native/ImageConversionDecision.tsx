@@ -86,13 +86,13 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, closure
             if (obj2.isExtensionAnimated(formatted)) {
               return false;
             } else {
-              const supportedExtensions = tmp14(5113).getSupportedExtensions();
+              const supportedExtensions = tmp14(5160).getSupportedExtensions();
               if (null !== supportedExtensions) {
                 if (supportedExtensions.has(formatted)) {
                   return true;
                 }
               }
-              const tmp14Result = tmp14(5113);
+              const tmp14Result = tmp14(5160);
             }
             obj2 = _initializeDefault;
             tmp14 = importDefault;

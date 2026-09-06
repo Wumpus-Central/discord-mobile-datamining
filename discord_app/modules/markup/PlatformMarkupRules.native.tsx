@@ -2,9 +2,9 @@
 import set from "../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
-import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
-import tDefault from "../../../_runtime/04192_t.js";
 import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import tDefault from "../../../_runtime/04257_t.js";
 import textRegexpDefault from "MarkupTextRule.tsx";
 import getChannelDefault from "MarkupChannelMentionRule.tsx";
 import regExpDefault from "MarkupAttachmentLinkRule.tsx";
@@ -202,8 +202,8 @@ obj[6] = {
       gameName = gameMentionData.gameName;
     }
     if (gameName == null) {
-      const intl = tmp2(1233).intl;
-      gameName = intl.string(tmp2(1233).t["11pdXZ"]);
+      const intl = tmp2(1114).intl;
+      gameName = intl.string(tmp2(1114).t["11pdXZ"]);
     }
     obj[4] = gameName;
     return obj;
@@ -451,8 +451,8 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
     gameName = gameMentionData.gameName;
   }
   if (gameName == null) {
-    const intl = tmp(1233).intl;
-    gameName = intl.string(tmp(1233).t["11pdXZ"]);
+    const intl = tmp(1114).intl;
+    gameName = intl.string(tmp(1114).t["11pdXZ"]);
   }
   obj[4] = gameName;
   return obj;

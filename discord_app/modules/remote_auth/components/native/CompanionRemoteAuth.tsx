@@ -18,10 +18,10 @@ const result = require("set").fileFinishedImporting("modules/remote_auth/compone
 
 export const CompanionRemoteAuth = function CompanionRemoteAuth() {
   let tmp = callback2();
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   obj1 = React;
-  const context = React.useContext(fingerprint(4751));
+  const context = React.useContext(fingerprint(4797));
   const callback = React.useCallback((arg0) => {
     let tmp = arg0;
     let obj = fingerprint(table[14]);
@@ -38,14 +38,14 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
     obj[4] = tmp;
     obj.track(constants.LOGIN_SUCCESSFUL, obj);
   }, []);
-  let obj2 = navigation(15827);
+  let obj2 = navigation(15989);
   const state = obj2.useAuthWebsocket(callback, true).state;
   const items = [navigation];
   const callback1 = React.useCallback(() => {
     navigation.goBack();
   }, items);
   fingerprint = null;
-  if (state.step === navigation(15826).RemoteAuthStep.PENDING_REMOTE_INIT) {
+  if (state.step === navigation(15988).RemoteAuthStep.PENDING_REMOTE_INIT) {
     fingerprint = state.fingerprint;
   }
   const items1 = [fingerprint];
@@ -63,46 +63,46 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
     }
   }, items1);
   obj = { headerText: null, children: null };
-  let tmp5Result = tmp5(7757);
-  const intl = tmp2(1233).intl;
-  obj[0] = intl.string(navigation(1233).t["7fNJgA"]);
+  let tmp5Result = tmp5(6972);
+  const intl = tmp2(1114).intl;
+  obj[0] = intl.string(navigation(1114).t["7fNJgA"]);
   obj = { style: tmp.statusContainer, children: null };
   const step = state.step;
-  if (navigation(15826).RemoteAuthStep.INITIALIZING !== step) {
-    if (tmp2(15826).RemoteAuthStep.PENDING_REMOTE_INIT !== step) {
-      if (tmp2(15826).RemoteAuthStep.PENDING_TICKET === step) {
+  if (navigation(15988).RemoteAuthStep.INITIALIZING !== step) {
+    if (tmp2(15988).RemoteAuthStep.PENDING_REMOTE_INIT !== step) {
+      if (tmp2(15988).RemoteAuthStep.PENDING_TICKET === step) {
         const user = state.user;
         obj1 = { children: null };
         obj2 = { style: null, user: null, size: null, guildId: null };
         obj2[0] = tmp.avatar;
         obj2[1] = user;
-        obj2[2] = tmp2(1296).AvatarSizes.LARGE;
+        obj2[2] = tmp2(1178).AvatarSizes.LARGE;
         obj2[3] = context;
-        const items2 = [tmp11(tmp2(1296).Avatar, obj2), , ,];
+        const items2 = [tmp11(tmp2(1178).Avatar, obj2), , ,];
         const obj3 = { variant: "heading-lg/bold", children: null };
-        const intl2 = tmp2(1233).intl;
-        obj3[1] = intl2.string(tmp2(1233).t.apGCUT);
-        items2[1] = tmp11(tmp2(4474).Text, obj3);
+        const intl2 = tmp2(1114).intl;
+        obj3[1] = intl2.string(tmp2(1114).t.apGCUT);
+        items2[1] = tmp11(tmp2(4556).Text, obj3);
         const obj4 = { style: null, variant: "text-md/medium", color: "text-muted", children: null };
         obj4[0] = tmp.statusText;
-        const intl3 = tmp2(1233).intl;
+        const intl3 = tmp2(1114).intl;
         const obj5 = { username: null };
-        tmp5Result = tmp5(4322);
+        tmp5Result = tmp5(4404);
         obj5[0] = tmp5Result.getUserTag(user);
-        obj4[3] = intl3.format(tmp2(1233).t.Cbl5JK, obj5);
-        items2[2] = tmp11(tmp2(4474).Text, obj4);
+        obj4[3] = intl3.format(tmp2(1114).t.Cbl5JK, obj5);
+        items2[2] = tmp11(tmp2(4556).Text, obj4);
         const obj6 = { style: null, children: null };
         obj6[0] = tmp.buttonContainer;
         const obj7 = { size: "lg", variant: "tertiary", text: null, onPress: null };
-        const intl4 = tmp2(1233).intl;
-        obj7[2] = intl4.string(tmp2(1233).t["ETE/oC"]);
+        const intl4 = tmp2(1114).intl;
+        obj7[2] = intl4.string(tmp2(1114).t["ETE/oC"]);
         obj7[3] = callback1;
-        obj6[1] = tmp11(tmp2(4929).Button, obj7);
+        obj6[1] = tmp11(tmp2(4975).Button, obj7);
         items2[3] = tmp11(tmp13, obj6);
         obj1[0] = items2;
         let tmp11Result = callback(closure_8, obj1);
-      } else if (tmp2(15826).RemoteAuthStep.PENDING_LOGIN === step) {
-        tmp11Result = tmp11(tmp2(6057).ActivityIndicator, {});
+      } else if (tmp2(15988).RemoteAuthStep.PENDING_LOGIN === step) {
+        tmp11Result = tmp11(tmp2(5577).ActivityIndicator, {});
       }
     }
     obj[1] = tmp11Result;
@@ -110,17 +110,17 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
     return tmp11(tmp5Result, obj);
   }
   const obj8 = { children: null };
-  const items3 = [closure_7(navigation(6057).ActivityIndicator, {}), ,];
+  const items3 = [closure_7(navigation(5577).ActivityIndicator, {}), ,];
   const obj9 = { style: tmp.statusText, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl5 = tmp2(1233).intl;
-  obj9[3] = intl5.string(navigation(1233).t["7LkwqE"]);
-  items3[1] = closure_7(navigation(4474).Text, obj9);
+  const intl5 = tmp2(1114).intl;
+  obj9[3] = intl5.string(navigation(1114).t["7LkwqE"]);
+  items3[1] = closure_7(navigation(4556).Text, obj9);
   const obj10 = { style: tmp.buttonContainer, children: null };
   const obj11 = { size: "lg", variant: "tertiary", text: null, onPress: null };
-  const intl6 = tmp2(1233).intl;
-  obj11[2] = intl6.string(navigation(1233).t["ETE/oC"]);
+  const intl6 = tmp2(1114).intl;
+  obj11[2] = intl6.string(navigation(1114).t["ETE/oC"]);
   obj11[3] = callback1;
-  obj10[1] = closure_7(navigation(4929).Button, obj11);
+  obj10[1] = closure_7(navigation(4975).Button, obj11);
   items3[2] = closure_7(View, obj10);
   obj8[0] = items3;
   tmp11Result = callback(closure_8, obj8);

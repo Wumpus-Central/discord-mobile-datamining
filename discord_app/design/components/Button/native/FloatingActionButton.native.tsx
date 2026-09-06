@@ -32,7 +32,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   ({ icon, positionBottom } = positionRight);
   positionRight = positionRight.positionRight;
   const merged = Object.assign(positionRight, Object.create(null));
-  let obj = positionBottom(4217);
+  let obj = positionBottom(4296);
   class F {
     constructor() {
       tmp = positionBottom;
@@ -54,7 +54,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
     }
   }
   obj = {
-    withSpring: positionBottom(4928).withSpring,
+    withSpring: positionBottom(4974).withSpring,
     positionBottom,
     DEFAULT_POSITION_OFFSET: 16,
     SPRING_CONFIG: closure_6,
@@ -73,11 +73,11 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   let cloneElementResult = icon;
   if (validElement.isValidElement(icon)) {
     const obj2 = { color: null };
-    obj2[0] = positionRight(709).colors.WHITE;
+    obj2[0] = positionRight(576).colors.WHITE;
     cloneElementResult = validElement.cloneElement(icon, obj2);
   }
   obj1.icon = cloneElementResult;
   ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = styles());
-  obj[1] = jsx(positionBottom(8019).BaseIconButton, {});
-  return jsx(positionRight(4217).View, { style: animatedStyle, children: null });
+  obj[1] = jsx(positionBottom(8098).BaseIconButton, {});
+  return jsx(positionRight(4296).View, { style: animatedStyle, children: null });
 };

@@ -469,7 +469,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
                 c4 = 1;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(7511).startBackgroundTask();
+                obj1[0] = closure_1_1(7755).startBackgroundTask();
                 return obj1;
               }
             }
@@ -487,7 +487,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
           } else {
             dependencyMap = arg1;
             if (obj10.isIOS()) {
-              if (dependencyMap === closure_1_1(7511).backgroundTaskIdentifierInvalid) {
+              if (dependencyMap === closure_1_1(7755).backgroundTaskIdentifierInvalid) {
                 c5 = 3;
                 return { value: "HermesInternal", done: null };
               }
@@ -509,7 +509,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             lastDeepClean3 = closure_1_0.lastDeepClean;
           }
           timestamp.lastDeepClean = lastDeepClean3;
-          obj2 = closure_1_1(7511);
+          obj2 = closure_1_1(7755);
           obj2.endBackgroundTask(dependencyMap);
           throw c2;
         } else if (arg0 === 1) {
@@ -524,7 +524,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             lastDeepClean = timestamp.lastDeepClean;
           }
           timestamp.lastDeepClean = lastDeepClean;
-          obj = closure_1_1(7511);
+          obj = closure_1_1(7755);
           obj.endBackgroundTask(c2);
           const tmp12 = timestamp;
         }
@@ -536,7 +536,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
           lastDeepClean2 = timestamp.lastDeepClean;
         }
         closure_1_0.lastDeepClean = lastDeepClean2;
-        obj1 = closure_1_1(7511);
+        obj1 = closure_1_1(7755);
         obj1.endBackgroundTask(c2);
         c5 = 3;
         const tmp26 = closure_1_0;

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/shop/native/CollectiblesShopScreen.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
+import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
 import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useGiftCardMobileConsumptionHalfsheet from "../../../checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx";
-import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
 import useShopOrientationLock from "../../../collectibles/native/useShopOrientationLock.tsx";
 import CollectiblesShopInternal from "../../../collectibles/native/CollectiblesShopV2.tsx";
 import { CollectiblesMobileShopScreen as closure_3 } from "../../../collectibles/CollectiblesShopConstants.tsx";

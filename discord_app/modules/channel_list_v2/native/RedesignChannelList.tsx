@@ -51,10 +51,10 @@ function ChannelsWrapper(selectedGuildId) {
   selectedGuildId = selectedGuildId.selectedGuildId;
   const selectedChannelId = selectedGuildId.selectedChannelId;
   const merged = Object.assign(selectedGuildId, Object.create(null));
-  let obj = selectedGuildId(586);
+  let obj = selectedGuildId(504);
   const items = [closure_9];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getGuild(selectedGuildId));
-  obj1 = selectedGuildId(586);
+  obj1 = selectedGuildId(504);
   const items1 = [closure_10];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => voiceChannelId.getVoiceChannelId());
   if (selectedGuildId === closure_13) {
@@ -64,16 +64,16 @@ function ChannelsWrapper(selectedGuildId) {
   } else {
     if (null != stateFromStores) {
       if (selectedGuildId !== closure_12) {
-        let tmp2Result = tmp2(1911);
+        let tmp2Result = tmp2(1982);
         if (tmp2Result.isFavoritesGuildId(selectedGuildId)) {
           obj = {};
           const merged1 = Object.assign(merged);
           obj.guild = stateFromStores;
           obj.selectedChannelId = selectedChannelId;
           obj.selectedVoiceChannelId = stateFromStores1;
-          return callback(tmp2(16109).default, obj);
+          return callback(tmp2(16271).default, obj);
         } else {
-          tmp2Result = tmp2(9148);
+          tmp2Result = tmp2(10294);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: null, guildId: null };
             obj1[0] = merged.style;

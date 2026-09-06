@@ -65,8 +65,8 @@ function applyOverwrites(id, member, closure_23, overwrites) {
     const addResult3 = importAllResult.add(removeResult1, tmp18);
     let addResult4 = addResult3;
     if (null != overwrites[member.userId]) {
-      let tmp19Result = tmp19(503);
-      tmp19Result = tmp19(503);
+      let tmp19Result = tmp19(1086);
+      tmp19Result = tmp19(1086);
       addResult4 = tmp19Result.add(tmp19Result.remove(addResult3, tmp23.deny), tmp23.allow);
       const removeResult2 = tmp19Result.remove(addResult3, tmp23.deny);
     }
@@ -81,17 +81,17 @@ function applyOverwrites(id, member, closure_23, overwrites) {
     }
     let found = addResult4;
     if (tmp31) {
-      found = tmp19(503).filter(addResult4, closure_29);
-      const tmp19Result2 = tmp19(503);
+      found = tmp19(1086).filter(addResult4, closure_29);
+      const tmp19Result2 = tmp19(1086);
     }
     const obj10 = GuildMemberFlags;
-    const tmp28Result = tmp28(4109);
+    const tmp28Result = tmp28(4188);
     found1 = found;
     if (tmp34) {
-      found1 = tmp19(503).filter(found, closure_28);
-      const tmp19Result3 = tmp19(503);
+      found1 = tmp19(1086).filter(found, closure_28);
+      const tmp19Result3 = tmp19(1086);
     }
-    tmp34 = tmp28(4109).isMemberCommunicationDisabled(member) && !hasItem;
+    tmp34 = tmp28(4188).isMemberCommunicationDisabled(member) && !hasItem;
   }
   return found1;
 }
@@ -159,12 +159,12 @@ function computePermissionsForMember(excludeGuildPermissions) {
     }
     let found = tmp29;
     if (isLurkingResult) {
-      let tmp21Result = tmp21(503);
+      let tmp21Result = tmp21(1086);
       found = tmp21Result.filter(tmp29, lurkerPermissionsMask);
     }
     let found1 = found;
     if (authStore.isCurrentUserGuest(guild.id)) {
-      tmp21Result = tmp21(503);
+      tmp21Result = tmp21(1086);
       found1 = tmp21Result.filter(found, closure_27);
     }
     if (checkElevated === undefined) {
@@ -185,8 +185,8 @@ function computePermissionsForMember(excludeGuildPermissions) {
       }
       let removeResult = found1;
       if (!mfaEnabled) {
-        removeResult = tmp21(503).remove(found1, closure_19);
-        const tmp21Result1 = tmp21(503);
+        removeResult = tmp21(1086).remove(found1, closure_19);
+        const tmp21Result1 = tmp21(1086);
       }
       tmp39 = removeResult;
     }
@@ -357,17 +357,17 @@ function applyThreadPermissions(context, permissionsForRoles, hasJoinedResult, c
     let combine = dependencyMap;
     let SEND_MESSAGES = Permissions;
     if (!obj2.has(permissionsForRoles, Permissions.SEND_MESSAGES_IN_THREADS)) {
-      let tmp8Result = tmp8(503);
+      let tmp8Result = tmp8(1086);
       tmp8Result.remove(permissionsForRoles, SEND_MESSAGES.SEND_MESSAGES);
     }
     if (context.isLockedThread()) {
-      tmp8Result = tmp8(503);
+      tmp8Result = tmp8(1086);
       if (!tmp8Result.has(permissionsForRoles, SEND_MESSAGES.MANAGE_THREADS)) {
-        let removeResult1 = tmp8(503).remove(permissionsForRoles, SEND_MESSAGES.SEND_MESSAGES);
-        const tmp8Result1 = tmp8(503);
+        let removeResult1 = tmp8(1086).remove(permissionsForRoles, SEND_MESSAGES.SEND_MESSAGES);
+        const tmp8Result1 = tmp8(1086);
       }
     }
-    tmp8 = tmp8(503);
+    tmp8 = tmp8(1086);
     combine = tmp8.combine;
     SEND_MESSAGES = SEND_MESSAGES.SEND_MESSAGES;
     removeResult1 = combine(permissionsForRoles, SEND_MESSAGES);
@@ -627,7 +627,7 @@ export const areChannelsLocked = function areChannelsLocked(channel, channel2, a
           if (null == obj[guild_id]) {
             obj = { id: null, type: null, allow: null, deny: null };
             obj[0] = guild_id;
-            obj[1] = obj(1954).PermissionOverwriteType.ROLE;
+            obj[1] = obj(1894).PermissionOverwriteType.ROLE;
             obj[2] = closure_23;
             obj[3] = closure_23;
             obj[guild_id] = obj;

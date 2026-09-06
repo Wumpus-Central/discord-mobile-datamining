@@ -8,7 +8,7 @@ const result = set.fileFinishedImporting("modules/collectibles/hooks/useGetProdu
 
 export default function useGetProductsFromSkus() {
   const items = [closure_4];
-  stateFromStores = stateFromStores(586).useStateFromStores(items, () => products.products);
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => products.products);
   const items1 = [stateFromStores];
   return useCallback((arr) => {
     const mapped = arr.map((arg0) => {

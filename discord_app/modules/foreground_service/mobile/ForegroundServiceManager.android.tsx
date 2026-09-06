@@ -1,8 +1,8 @@
 // discord_app/modules/foreground_service/mobile/ForegroundServiceManager.android.tsx
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import setRequestedByAll from "../../gateway/RequestGatewaySocket.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import setRequestedByAll from "../../gateway/RequestGatewaySocket.tsx";
 
 let obj = importDefault;
 const NativeModules = get_ActivityIndicator.NativeModules;
@@ -68,7 +68,7 @@ prototype["updateServiceHandler"] = function updateServiceHandler(arg0, usesGate
       const result = serviceNotifications.set(arg0, usesGateway);
       self.handleChange();
     }
-    tmp16 = obj(656);
+    tmp16 = obj(1332);
   }
 };
 prototype["removeServiceHandler"] = function removeServiceHandler(arg0) {

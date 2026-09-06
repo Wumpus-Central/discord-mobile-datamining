@@ -1,6 +1,6 @@
 // discord_app/modules/app_analytics/ImpressionStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import identity from "../../../_runtime/00697_identity.js";
+import identity from "../../../_runtime/01244_identity.js";
 
 let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });
 const withEqualityFn = identity.createWithEqualityFn(() => closure_2);

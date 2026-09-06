@@ -12,11 +12,11 @@ const result = require("set").fileFinishedImporting(
 
 export default function useIsCurrentUserEligibleForPowerupUpsells() {
   let items = [closure_4];
-  stateFromStores = stateFromStores(586).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = stateFromStores(586);
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = stateFromStores(504);
   const tmp = stateFromStores;
   const items1 = [closure_5];
-  const stateFromStoresArray = stateFromStores(586).useStateFromStoresArray(items1, () => {
+  const stateFromStoresArray = stateFromStores(504).useStateFromStoresArray(items1, () => {
     if (hasFetched.hasFetched) {
       const _Object = Object;
       let items = Object.values(tmp.boostSlots);
@@ -25,9 +25,9 @@ export default function useIsCurrentUserEligibleForPowerupUpsells() {
     }
     return items;
   });
-  const obj3 = stateFromStores(586);
+  const obj3 = stateFromStores(504);
   const items2 = [closure_3];
-  const stateFromStores1 = stateFromStores(586).useStateFromStores(items2, () =>
+  const stateFromStores1 = stateFromStores(504).useStateFromStores(items2, () =>
     flattenedGuildIds.getFlattenedGuildIds(),
   );
   let tmp3 = null != stateFromStores;
@@ -35,7 +35,7 @@ export default function useIsCurrentUserEligibleForPowerupUpsells() {
     const isPremiumGroupMemberResult = stateFromStores.isPremiumGroupMember();
     let tmp5 = !isPremiumGroupMemberResult;
     if (!isPremiumGroupMemberResult) {
-      let isPremiumResult = tmp(1945).isPremium(stateFromStores, PremiumTypes.TIER_2);
+      let isPremiumResult = tmp(1885).isPremium(stateFromStores, PremiumTypes.TIER_2);
       if (!isPremiumResult) {
         isPremiumResult =
           stateFromStoresArray.some(
@@ -63,7 +63,7 @@ export default function useIsCurrentUserEligibleForPowerupUpsells() {
           });
       }
       tmp5 = isPremiumResult;
-      const tmpResult = tmp(1945);
+      const tmpResult = tmp(1885);
     }
     tmp3 = tmp5;
   }
@@ -83,7 +83,7 @@ export const getIsCurrentUserEligibleForPowerupUpsells = function getIsCurrentUs
     const isPremiumGroupMemberResult = currentUser.isPremiumGroupMember();
     let tmp5 = !isPremiumGroupMemberResult;
     if (!isPremiumGroupMemberResult) {
-      let isPremiumResult = currentUser(1945).isPremium(currentUser, PremiumTypes.TIER_2);
+      let isPremiumResult = currentUser(1885).isPremium(currentUser, PremiumTypes.TIER_2);
       if (!isPremiumResult) {
         isPremiumResult =
           items.some((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription) ||
@@ -107,7 +107,7 @@ export const getIsCurrentUserEligibleForPowerupUpsells = function getIsCurrentUs
           });
       }
       tmp5 = isPremiumResult;
-      const obj3 = currentUser(1945);
+      const obj3 = currentUser(1885);
     }
     tmp3 = tmp5;
   }

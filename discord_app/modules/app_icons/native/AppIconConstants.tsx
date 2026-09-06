@@ -2,31 +2,31 @@
 import set from "../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import FreemiumAppIconIds from "../AppIconTypes.tsx";
-import registerAssetDefault from "../../../../_runtime/08193_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/08194_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/08195_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/08196_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/08197_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/08198_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/08199_registerAsset.js";
-import registerAssetDefault8 from "../../../../_runtime/08200_registerAsset.js";
-import registerAssetDefault9 from "../../../../_runtime/08201_registerAsset.js";
-import registerAssetDefault10 from "../../../../_runtime/08202_registerAsset.js";
-import registerAssetDefault11 from "../../../../_runtime/08203_registerAsset.js";
-import registerAssetDefault12 from "../../../../_runtime/08204_registerAsset.js";
-import registerAssetDefault13 from "../../../../_runtime/08205_registerAsset.js";
-import registerAssetDefault14 from "../../../../_runtime/08206_registerAsset.js";
-import registerAssetDefault15 from "../../../../_runtime/08207_registerAsset.js";
-import registerAssetDefault16 from "../../../../_runtime/08208_registerAsset.js";
-import registerAssetDefault17 from "../../../../_runtime/08209_registerAsset.js";
-import registerAssetDefault18 from "../../../../_runtime/08210_registerAsset.js";
-import registerAssetDefault19 from "../../../../_runtime/08211_registerAsset.js";
-import registerAssetDefault20 from "../../../../_runtime/08212_registerAsset.js";
-import registerAssetDefault21 from "../../../../_runtime/08213_registerAsset.js";
-import registerAssetDefault22 from "../../../../_runtime/08214_registerAsset.js";
-import registerAssetDefault23 from "../../../../_runtime/08215_registerAsset.js";
-import registerAssetDefault24 from "../../../../_runtime/08216_registerAsset.js";
-import registerAssetDefault25 from "../../../../_runtime/08217_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09325_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/09326_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/09327_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/09328_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/09329_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/09330_registerAsset.js";
+import registerAssetDefault7 from "../../../../_runtime/09331_registerAsset.js";
+import registerAssetDefault8 from "../../../../_runtime/09332_registerAsset.js";
+import registerAssetDefault9 from "../../../../_runtime/09333_registerAsset.js";
+import registerAssetDefault10 from "../../../../_runtime/09334_registerAsset.js";
+import registerAssetDefault11 from "../../../../_runtime/09335_registerAsset.js";
+import registerAssetDefault12 from "../../../../_runtime/09336_registerAsset.js";
+import registerAssetDefault13 from "../../../../_runtime/09337_registerAsset.js";
+import registerAssetDefault14 from "../../../../_runtime/09338_registerAsset.js";
+import registerAssetDefault15 from "../../../../_runtime/09339_registerAsset.js";
+import registerAssetDefault16 from "../../../../_runtime/09340_registerAsset.js";
+import registerAssetDefault17 from "../../../../_runtime/09341_registerAsset.js";
+import registerAssetDefault18 from "../../../../_runtime/09342_registerAsset.js";
+import registerAssetDefault19 from "../../../../_runtime/09343_registerAsset.js";
+import registerAssetDefault20 from "../../../../_runtime/09344_registerAsset.js";
+import registerAssetDefault21 from "../../../../_runtime/09345_registerAsset.js";
+import registerAssetDefault22 from "../../../../_runtime/09346_registerAsset.js";
+import registerAssetDefault23 from "../../../../_runtime/09347_registerAsset.js";
+import registerAssetDefault24 from "../../../../_runtime/09348_registerAsset.js";
+import registerAssetDefault25 from "../../../../_runtime/09349_registerAsset.js";
 
 let obj = {
   id: FreemiumAppIconIds.PremiumAppIconIds.IN_RAINBOWS,
@@ -348,10 +348,10 @@ export const getIconById = function getIconById(currentAppIcon) {
   let found = items.find((id) => id.id === closure_0);
   if (null == found) {
     obj = { id: null, iconSource: null, name: null, isPremium: false };
-    obj[0] = tmp(8192).FreemiumAppIconIds.DEFAULT;
+    obj[0] = tmp(9324).FreemiumAppIconIds.DEFAULT;
     obj[1] = registerAssetDefault;
-    const intl2 = tmp(1233).intl;
-    obj[2] = intl2.string(tmp(1233).t.ANxkLy);
+    const intl2 = tmp(1114).intl;
+    obj[2] = intl2.string(tmp(1114).t.ANxkLy);
     found = obj;
   }
   return found;

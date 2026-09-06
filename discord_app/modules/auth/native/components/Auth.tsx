@@ -1,12 +1,12 @@
 // discord_app/modules/auth/native/components/Auth.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import KeyboardChatScrollView from "../../../../../_runtime/01641_KeyboardChatScrollView.js";
-import createStackNavigator from "../../../../../_runtime/06019_createStackNavigator.js";
+import KeyboardChatScrollView from "../../../../../_runtime/01625_KeyboardChatScrollView.js";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
+import createStackNavigator from "../../../../../_runtime/07002_createStackNavigator.js";
 import setRegistrationHandoff from "../RegistrationHandoff.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import registerAsset from "../../../../../_runtime/15834_registerAsset.js";
+import registerAsset from "../../../../../_runtime/15996_registerAsset.js";
 import usePortraitOrientationOnlyDefault from "../useOrientationLock.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -134,18 +134,18 @@ function NavigatorWithCaptchaHook() {
     obj6[9] = tmp10[0] ? tmp6.wideHeader : tmp6.wideHeaderFlat;
     let num2 = 20;
     if (tmpResult.isAndroid()) {
-      num2 = tmp4(709).space.PX_12;
+      num2 = tmp4(576).space.PX_12;
     }
     const obj7 = { paddingLeft: null, paddingTop: null, paddingBottom: null };
     obj7[0] = num2;
-    obj7[1] = tmp4(709).space.PX_24;
-    obj7[2] = tmp4(709).space.PX_16;
+    obj7[1] = tmp4(576).space.PX_24;
+    obj7[2] = tmp4(576).space.PX_16;
     obj6[10] = obj7;
-    obj5[1] = tmp17(tmp(6017).Navigator, obj6);
+    obj5[1] = tmp17(tmp(7000).Navigator, obj6);
     obj2[1] = tmp17(closure_6, obj5);
     obj[1] = tmp17(closure_6, obj2);
-    let tmp17Result = tmp17(tmp(7758).WideAuthScrollContext.Provider, obj);
-    tmpResult = tmp(1235);
+    let tmp17Result = tmp17(tmp(6973).WideAuthScrollContext.Provider, obj);
+    tmpResult = tmp(1116);
   } else {
     const obj8 = {
       screens: null,
@@ -158,12 +158,12 @@ function NavigatorWithCaptchaHook() {
     };
     obj8[0] = headerTitle;
     ({ transparent: obj4[1], transparent: obj4[2] } = tmp6);
-    const intl = tmp(1233).intl;
-    obj8[3] = intl.string(tmp(1233).t["13/7kX"]);
+    const intl = tmp(1114).intl;
+    obj8[3] = intl.string(tmp(1114).t["13/7kX"]);
     obj8[4] = first;
     obj8[5] = closure_5.dismiss;
     obj8[6] = { borderBottomWidth: 0 };
-    tmp17Result = tmp17(tmp(6017).Navigator, obj8);
+    tmp17Result = tmp17(tmp(7000).Navigator, obj8);
   }
   children[1] = tmp17Result;
   return tmp15(tmp16, { children });
@@ -263,10 +263,10 @@ const context = importAllResult.createContext(() => {});
 let obj2 = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15835).initialize();
+    callback2(15997).initialize();
     return () => callback(table[23]).terminate();
   }, []);
-  const layoutEffect = importAllResult.useLayoutEffect(() => callback(7230).trackAppUIViewed(), []);
+  const layoutEffect = importAllResult.useLayoutEffect(() => callback(7475).trackAppUIViewed(), []);
   usePortraitOrientationOnlyDefault();
   closure_0 = importAllResult.useRef(undefined);
   return callback2(context.Provider, {

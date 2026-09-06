@@ -1,8 +1,8 @@
 // discord_app/modules/guild_member_verification/GuildJoinRequestStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
+import setDefault from "../../utils/Durations.tsx";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
 import isActionedApplicationStatus from "GuildJoinRequestUtils.tsx";
 import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
 import closure_3 from "../../stores/UserStore.tsx";
@@ -16,7 +16,7 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
         const result = map.set(guildId, hooksDefault());
       }
-      if (applicationStatus === tmp12(4302).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      if (applicationStatus === tmp12(4384).GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
         const result1 = map.set(guildId, hooksDefault());

@@ -1,7 +1,7 @@
 // discord_app/modules/activities/panel/native/LeaveActivityButton.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/10030_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09074_registerAsset.js";
 import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";

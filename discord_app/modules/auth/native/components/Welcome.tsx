@@ -7,8 +7,8 @@ import nameFromUserDefault from "../../../../utils/UserUtils.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import renderDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/13119_registerAsset.js";
-import registerAsset from "../../../../../_runtime/13840_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13219_registerAsset.js";
+import registerAsset from "../../../../../_runtime/13862_registerAsset.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_7 from "../../../age_gate/AgeGateStore.tsx";
@@ -43,7 +43,7 @@ function InviteCard(invite) {
       let tmp18 = callback;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "a" };
       const tmp12 = new closure_11(inviter);
       obj[0] = tmp12;
       tmp14 = callback(Button.Avatar, obj);
@@ -56,7 +56,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "a" };
       const tmp33 = new closure_11(inviter);
       obj[0] = tmp33;
       const intl3 = getSystemLocale.intl;
@@ -76,10 +76,10 @@ function InviteCard(invite) {
     obj2[0] = tmp.text;
     const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: null };
     obj3[2] = stringResult;
-    const items2 = [tmp18(tmp17(4474).Text, obj3)];
+    const items2 = [tmp18(tmp17(4556).Text, obj3)];
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[2] = name;
-    items2[1] = tmp18(tmp17(4474).Text, obj4);
+    items2[1] = tmp18(tmp17(4556).Text, obj4);
     obj2[1] = items2;
     items1[1] = callback2(closure_4, obj2);
     obj1[1] = items1;
@@ -136,7 +136,7 @@ function Centerpiece(inlineButtons) {
     num = 1;
   }
   obj1[1] = num;
-  const intl = tmp4(1233).intl;
+  const intl = tmp4(1114).intl;
   obj1[5] = intl.string(getSystemLocale.t["3S2xmm"]);
   const items2 = [callback(Text.Heading, obj1), , ,];
   const items3 = [tmp3.subHeader];
@@ -153,7 +153,7 @@ function Centerpiece(inlineButtons) {
     children: null,
   };
   items3[1] = subHeaderWithInvite;
-  const intl2 = tmp4(1233).intl;
+  const intl2 = tmp4(1114).intl;
   obj2[4] = intl2.string(getSystemLocale.t.Gtcthl);
   items2[1] = callback(Text.Text, obj2);
   let tmp9Result = null;

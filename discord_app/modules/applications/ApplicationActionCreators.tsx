@@ -77,17 +77,17 @@ function _fetchApplication() {
             } else {
               const obj2 = { type: "APPLICATION_FETCH", applicationId: null };
               obj2[1] = callback;
-              flag(706).dispatch(obj2);
+              flag(573).dispatch(obj2);
               c6 = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj3 = { url: null, query: null, oldFormErrors: true, signal: null, rejectWithError: null };
               obj3[0] = c7.APPLICATION_PUBLIC(callback);
               let obj4 = { with_guild: null };
               obj4[0] = flag;
               obj3[1] = obj4;
               obj3[3] = dependencyMap;
-              const obj11 = flag(706);
-              obj3[4] = callback(527).rejectWithMigratedError();
+              const obj11 = flag(573);
+              obj3[4] = callback(1272).rejectWithMigratedError();
               c7 = 3;
               c8 = 1;
               const obj5 = { value: null, done: false };
@@ -97,7 +97,7 @@ function _fetchApplication() {
           } else if (2 === tmp7) {
             c6 = 0;
             closure_4 = closure_5;
-            obj4 = flag(706);
+            obj4 = flag(573);
             const obj6 = { type: "APPLICATION_FETCH_FAIL", applicationId: null };
             obj6[1] = callback;
             obj4.dispatch(obj6);
@@ -113,7 +113,7 @@ function _fetchApplication() {
             return obj7;
           } else {
             closure_3 = arg1;
-            obj = flag(706);
+            obj = flag(573);
             const obj8 = { type: "APPLICATION_FETCH_SUCCESS", application: null, isHydrated: true };
             obj8[1] = closure_3.body;
             obj.dispatch(obj8);
@@ -153,7 +153,7 @@ let obj = {
     return callback(function* () {
       closure_1 = tmp2;
       let body = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.APPLICATIONS;
       const obj2 = { name: null, type: null, guild_id: null, team_id: null };
@@ -162,7 +162,7 @@ let obj = {
       obj2[2] = closure_1_1;
       obj2[3] = c3;
       obj1[1] = obj2;
-      obj1[2] = closure_1_0(527).rejectWithMigratedError();
+      obj1[2] = closure_1_0(1272).rejectWithMigratedError();
       yield HTTP.post(obj1);
       body = arg1.body;
       let tmp8 = null != closure_1;
@@ -170,7 +170,7 @@ let obj = {
         tmp8 = null != dependencyMap;
       }
       if (tmp8) {
-        const obj = closure_1_1(706);
+        const obj = closure_1_1(573);
         const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
         obj5[1] = body;
         obj.dispatch(obj5);
@@ -188,17 +188,17 @@ let obj = {
     return callback(function* () {
       closure_1 = tmp2;
       let body = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, query: null, rejectWithError: null };
       obj1[0] = closure_1_7.GUILD_APPLICATIONS(closure_1_0);
       const obj2 = {};
       const merged = Object.assign(dependencyMap);
       obj2.include_team = closure_1_1;
       obj1[1] = obj2;
-      obj1[2] = closure_1_0(527).rejectWithMigratedError();
+      obj1[2] = closure_1_0(1272).rejectWithMigratedError();
       yield HTTP.get(obj1);
       body = arg1.body;
-      const obj = closure_1_1(706);
+      const obj = closure_1_1(573);
       const obj5 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: null };
       obj5[1] = body;
       obj.dispatch(obj5);
@@ -212,17 +212,17 @@ let obj = {
     return callback(function* () {
       closure_1 = tmp2;
       let items = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, query: null, rejectWithError: null };
       obj1[0] = closure_1_7.GUILD_EMBEDDED_APPLICATIONS(closure_1_0);
       const obj2 = { channel_id: null, surface: null };
       obj2[0] = dependencyMap;
       obj2[1] = closure_1_1;
       obj1[1] = obj2;
-      obj1[2] = closure_1_0(527).rejectWithMigratedError();
+      obj1[2] = closure_1_0(1272).rejectWithMigratedError();
       yield HTTP.get(obj1);
       items = arg1.body.items;
-      const obj = closure_1_1(706);
+      const obj = closure_1_1(573);
       const obj5 = { type: "GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS", guildId: null, surface: null, items: null };
       obj5[1] = items;
       obj5[2] = closure_1;
@@ -236,16 +236,16 @@ let obj = {
     return callback(function* () {
       closure_1 = tmp2;
       let body = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.APPLICATION_OWNER_TRANSFER(closure_1_0);
       const obj2 = { team_id: null };
       obj2[0] = closure_1_1;
       obj1[1] = obj2;
-      obj1[2] = closure_1_0(527).rejectWithMigratedError();
+      obj1[2] = closure_1_0(1272).rejectWithMigratedError();
       yield HTTP.post(obj1);
       body = arg1.body;
-      const obj = closure_1_1(706);
+      const obj = closure_1_1(573);
       const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
       obj5[1] = body;
       obj.dispatch(obj5);

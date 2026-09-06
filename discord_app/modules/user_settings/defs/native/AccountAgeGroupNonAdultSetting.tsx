@@ -1,11 +1,12 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import isFeatureAgeGated from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
+import isFeatureAgeGated from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationModalEntryPoint from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
+import useIsTinyBroncoSettingsEnabled from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const pressable = createToggle.createPressable({
@@ -19,8 +20,8 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     let stringResult = intl.string(getSystemLocale.t.lKDPGA);
     if (isAgeVerified) {
-      const intl2 = tmp(1233).intl;
-      stringResult = intl2.string(tmp(1233).t.sK0dmH);
+      const intl2 = tmp(1114).intl;
+      stringResult = intl2.string(tmp(1114).t.sK0dmH);
     }
     return stringResult;
   },
@@ -36,12 +37,17 @@ const pressable = createToggle.createPressable({
     const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
     const obj2 = useAgeVerificationRunner;
     let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
+    const obj3 = isFeatureAgeGated;
+    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
     if (hasTeenDefaults) {
-      let tmp4 = !isAgeVerified;
+      let tmp5 = !isAgeVerified;
       if (isAgeVerified) {
-        tmp4 = isVerifiedTeen;
+        tmp5 = isVerifiedTeen;
       }
-      hasTeenDefaults = tmp4;
+      hasTeenDefaults = tmp5;
+    }
+    if (hasTeenDefaults) {
+      hasTeenDefaults = !isTinyBroncoSettingsEnabled;
     }
     return hasTeenDefaults;
   },
@@ -57,8 +63,8 @@ let obj = {
     const intl = getSystemLocale.intl;
     let stringResult = intl.string(getSystemLocale.t.lKDPGA);
     if (isAgeVerified) {
-      const intl2 = tmp(1233).intl;
-      stringResult = intl2.string(tmp(1233).t.sK0dmH);
+      const intl2 = tmp(1114).intl;
+      stringResult = intl2.string(tmp(1114).t.sK0dmH);
     }
     return stringResult;
   },
@@ -74,12 +80,17 @@ let obj = {
     const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
     const obj2 = useAgeVerificationRunner;
     let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
+    const obj3 = isFeatureAgeGated;
+    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
     if (hasTeenDefaults) {
-      let tmp4 = !isAgeVerified;
+      let tmp5 = !isAgeVerified;
       if (isAgeVerified) {
-        tmp4 = isVerifiedTeen;
+        tmp5 = isVerifiedTeen;
       }
-      hasTeenDefaults = tmp4;
+      hasTeenDefaults = tmp5;
+    }
+    if (hasTeenDefaults) {
+      hasTeenDefaults = !isTinyBroncoSettingsEnabled;
     }
     return hasTeenDefaults;
   },

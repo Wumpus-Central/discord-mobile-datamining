@@ -1,7 +1,7 @@
 // discord_app/modules/navbars/native/NavigationPathUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
-import _extends from "../../../../_runtime/metro/04310__extends.js";
+import _extends from "../../../../_runtime/metro/04392__extends.js";
 
 const Routes = ME.Routes;
 let obj = { FRIENDS: 0, [0]: "FRIENDS" };

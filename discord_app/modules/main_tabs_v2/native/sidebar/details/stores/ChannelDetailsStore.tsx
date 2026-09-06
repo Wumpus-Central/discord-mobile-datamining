@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx
 import set from "../../../../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import keys from "../../../../../../../_runtime/00641_keys.js";
+import keys from "../../../../../../../_runtime/00560_keys.js";
 
 let closure_2 = { isSearchActive: false, searchActiveSource: "initial" };
 let obj = keys.create(() => {
@@ -19,7 +19,7 @@ export const deleteChannelStates = function deleteChannelStates() {
 };
 export const useIsChannelDetailsSearchActive = function useIsChannelDetailsSearchActive(arg0) {
   closure_0 = arg0;
-  const f82218 = (isSearchActive) => isSearchActive.isSearchActive;
+  const f82970 = (isSearchActive) => isSearchActive.isSearchActive;
   return obj((states) => {
     states = states.states;
     let value = states.get(closure_0);
@@ -28,12 +28,12 @@ export const useIsChannelDetailsSearchActive = function useIsChannelDetailsSearc
       const merged = Object.assign(closure_1_2);
       value = obj;
     }
-    return f82219(value);
+    return f82971(value);
   });
 };
 export const useChannelDetailsSearchActiveSource = function useChannelDetailsSearchActiveSource(arg0) {
   closure_0 = arg0;
-  const f82219 = (searchActiveSource) => searchActiveSource.searchActiveSource;
+  const f82971 = (searchActiveSource) => searchActiveSource.searchActiveSource;
   return obj((states) => {
     states = states.states;
     let value = states.get(closure_0);
@@ -42,7 +42,7 @@ export const useChannelDetailsSearchActiveSource = function useChannelDetailsSea
       const merged = Object.assign(closure_1_2);
       value = obj;
     }
-    return f82219(value);
+    return f82971(value);
   });
 };
 export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearchActive(
@@ -63,7 +63,7 @@ export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearc
   const merged2 = Object.assign(obj);
   const map = new Map(states);
   const result = map.set(arg0, obj);
-  map(702).batchUpdates(() => closure_1_3.setState({ states: map }));
+  map(1249).batchUpdates(() => closure_1_3.setState({ states: map }));
 };
 export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;
@@ -79,6 +79,6 @@ export const deleteChannelDetailsSearchState = function deleteChannelDetailsSear
   const states = obj.getState().states;
   states.delete(arg0);
   const map = new Map(states);
-  obj = map(702);
+  obj = map(1249);
   obj.batchUpdates(() => closure_1_3.setState({ states: map }));
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/sentry/SentryExperimentFeatureFlagManager.tsx
-import _modDef1205 from "../../utils/SentryUtils.native.tsx";
+import _modDef1232 from "../../utils/SentryUtils.native.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import closure_2 from "../experiments/ExperimentStore.tsx";
 import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
@@ -28,7 +28,7 @@ function flushFlags(items, set) {
     let tmp4 = importDefault;
     let tmp5 = dependencyMap;
     let tmp3 = nextResult;
-    let obj = _modDef1205;
+    let obj = _modDef1232;
     let addFeatureFlagResult = obj.addFeatureFlag(nextResult, true);
     if (set != null) {
       let tmp7 = nextResult;

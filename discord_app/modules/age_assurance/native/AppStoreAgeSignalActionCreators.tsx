@@ -23,7 +23,7 @@ function _requestAgeSignalChallenge() {
     }
     return tmp12;
   });
-  closure_4 = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -38,39 +38,81 @@ function _submitAgeSignal() {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    c4 = 0;
-    c3 = 0;
-    return (function* (arg0, arg1, arg2) {
-      if (constants === 2) {
-        constants = 3;
+    closure_3 = arg3;
+    c7 = 0;
+    c8 = 0;
+    const iter = (function* (arg0, body) {
+      if (c8 === 2) {
+        c8 = 3;
         HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = body;
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          constants = 2;
-          if (0 === c4) {
+          c8 = 2;
+          if (0 === c7) {
             if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
+              c8 = 3;
+              throw body;
             } else if (arg0 === 2) {
-              constants = 3;
+              c8 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = body;
               return obj;
             } else {
-              const HTTP = callback(table[2]).HTTP;
-              obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-              obj1[0] = constants.AGE_SIGNAL;
-              const obj2 = {
+              closure_6 = tmp5;
+              closure_5 = tmp2;
+              let str;
+              if (str === undefined) {
+                str = "app_start";
+              }
+              c7 = 1;
+              c8 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = body;
+              return obj1;
+            } else {
+              function toSubmitOutcome(body) {
+                let result;
+                if (body != null) {
+                  result = body.result;
+                }
+                if ("accepted" !== result) {
+                  if ("skipped" !== result) {
+                    let obj = toSubmitOutcome;
+                  }
+                  return obj;
+                }
+                obj = { result, reason: null };
+                let reason;
+                if (body != null) {
+                  reason = body.reason;
+                }
+                if (reason == null) {
+                  reason = null;
+                }
+                obj[1] = reason;
+              }
+              const HTTP = lib(table[2]).HTTP;
+              const obj2 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+              obj2[0] = str.AGE_SIGNAL;
+              const obj3 = {
                 platform: null,
                 age_lower: null,
                 age_upper: null,
@@ -80,45 +122,49 @@ function _submitAgeSignal() {
                 apple_verified_method: null,
                 is_cold_launch: null,
                 integrity_token: null,
+                source: null,
               };
-              ({
-                platform: obj6[0],
-                ageLower: obj6[1],
-                ageUpper: obj6[2],
-                googleAgeSignalsStatus: obj6[3],
-                googleAgeRangeSource: obj6[4],
-                googleSignificantChangeStatus: obj6[5],
-                appleVerifiedMethod: obj6[6],
-              } = callback);
-              obj2[7] = closure_2;
-              obj2[8] = table;
-              obj1[1] = obj2;
-              c4 = 1;
-              constants = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
+              obj3[0] = lib.platform;
+              obj3[1] = lib.ageLower;
+              obj3[2] = lib.ageUpper;
+              obj3[3] = lib.googleAgeSignalsStatus;
+              obj3[4] = lib.googleAgeRangeSource;
+              obj3[5] = lib.googleSignificantChangeStatus;
+              obj3[6] = lib.appleVerifiedMethod;
+              obj3[7] = closure_2;
+              obj3[8] = table;
+              obj3[9] = str;
+              obj2[1] = obj3;
+              c7 = 2;
+              c8 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = HTTP.post(obj2);
+              return obj4;
             }
           } else if (arg0 === 1) {
-            constants = 3;
-            throw arg1;
+            c8 = 3;
+            throw body;
           } else if (arg0 === 2) {
-            constants = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c8 = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = body;
+            return obj5;
           } else {
-            constants = 3;
-            return { value: "HermesInternal", done: null };
+            c8 = 3;
+            obj = { value: null, done: true };
+            obj[0] = toSubmitOutcome(body.body);
+            return obj;
           }
-        } catch (tmp5) {
-          constants = tmp;
-          throw tmp5;
+        } catch (tmp10) {
+          c8 = tmp;
+          throw tmp10;
         }
       }
     })();
+    iter.next();
+    return iter;
   });
-  closure_5 = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -127,7 +173,8 @@ function _submitAgeSignal() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx");
+let closure_4 = { result: "skipped", reason: null };
+let result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx");
 
 export const requestAgeSignalChallenge = function requestAgeSignalChallenge() {
   const self = this;
@@ -139,7 +186,7 @@ export const requestAgeSignalChallenge = function requestAgeSignalChallenge() {
   }
   return applyArgumentsResult;
 };
-export const submitAgeSignal = function submitAgeSignal(closure_0, closure_1, closure_02) {
+export const submitAgeSignal = function submitAgeSignal(closure_2, c4, closure_0, user_initiated) {
   const self = this;
   const apply = _submitAgeSignal.apply;
   if (typeof apply === "unknown") {

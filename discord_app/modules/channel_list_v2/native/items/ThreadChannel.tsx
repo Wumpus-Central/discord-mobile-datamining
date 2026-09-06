@@ -1,7 +1,7 @@
 // discord_app/modules/channel_list_v2/native/items/ThreadChannel.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../../_runtime/08254_inlineStyles.js";
-import inlineStylesDefault from "../../../../../_runtime/08254_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/08453_inlineStyles.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../threads/JoinedThreadsStore.tsx";
@@ -285,7 +285,7 @@ const result = require("set").fileFinishedImporting("modules/channel_list_v2/nat
 export default function ConnectedThreadChannel(threadId) {
   threadId = threadId.threadId;
   ({ threadIndex, threadCount, selected } = threadId);
-  let obj = threadId(586);
+  let obj = threadId(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(threadId));
   let tmp2 = null;

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx
 import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
 import createTextStyleDefault from "../../rebrand/native/TextStyles.tsx";
-import registerAssetDefault from "../../../../_runtime/13447_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/13553_registerAsset.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -58,12 +58,12 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   const tmp2 = usePremiumPlanSelectStore((isPurchasing) => isPurchasing.isPurchasing);
   let obj = React;
   [tmp4, c3] = callback(React.useState(null), 2);
-  obj1 = productId(7162);
+  obj1 = productId(7409);
   const premiumBundledItemsFromProductId = obj1.getPremiumBundledItemsFromProductId(productId);
-  let obj2 = productId(586);
+  let obj2 = productId(504);
   let items = [closure_7];
   const stateFromStores = obj2.useStateFromStores(items, () => locale.locale);
-  let obj3 = productId(586);
+  let obj3 = productId(504);
   const items1 = [closure_8];
   const tmp9 = callback(
     obj3.useStateFromStoresArray(items1, () => {
@@ -94,7 +94,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   if (null == premiumTier || null == orderPriceString) {
     return null;
   } else {
-    let tmp5Result = tmp5(1896);
+    let tmp5Result = tmp5(1880);
     const formatPercentResult = tmp5Result.formatPercent(stateFromStores, closure_10 / 100);
     obj = { onClose: null, noDefaultButtons: true, children: null };
     obj[0] = onClose;
@@ -106,55 +106,55 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const items2 = [callback2(closure_5, obj1), , , , ,];
     obj2 = { style: null, accessibilityRole: "header", children: null };
     obj2[0] = tmp.header;
-    const intl = tmp5(1233).intl;
+    const intl = tmp5(1114).intl;
     obj3 = { discountPercentage: null, planName: null };
     obj3[0] = formatPercentResult;
-    tmp5Result = tmp5(4139);
+    tmp5Result = tmp5(4218);
     obj3[1] = tmp5Result.getPremiumTypeDisplayName(premiumTier);
-    obj2[2] = intl.format(tmp5(1233).t.LQCVfK, obj3);
-    items2[1] = callback2(tmp5(1296).LegacyText, obj2);
+    obj2[2] = intl.format(tmp5(1114).t.LQCVfK, obj3);
+    items2[1] = callback2(tmp5(1178).LegacyText, obj2);
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.description;
-    const intl2 = tmp5(1233).intl;
+    const intl2 = tmp5(1114).intl;
     const obj5 = { discountPercentage: null };
     obj5[0] = formatPercentResult;
-    obj4[1] = intl2.format(tmp5(1233).t["7chOVL"], obj5);
-    items2[2] = callback2(tmp5(1296).LegacyText, obj4);
+    obj4[1] = intl2.format(tmp5(1114).t["7chOVL"], obj5);
+    items2[2] = callback2(tmp5(1178).LegacyText, obj4);
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.upsellButton;
     const obj7 = { variant: "active", text: null, onPress: null, disabled: null, loading: null };
-    const intl3 = tmp5(1233).intl;
+    const intl3 = tmp5(1114).intl;
     const obj8 = { price: null };
     obj8[0] = orderPriceString;
-    obj7[1] = intl3.formatToPlainString(tmp5(1233).t.Qvq6GE, obj8);
+    obj7[1] = intl3.formatToPlainString(tmp5(1114).t.Qvq6GE, obj8);
     obj7[2] = function onPress() {
       _undefined("upsell");
       callback();
     };
     obj7[3] = tmp11;
     obj7[4] = "upsell" === tmp4 && tmp2;
-    obj6[1] = callback2(tmp5(4929).Button, obj7);
+    obj6[1] = callback2(tmp5(4975).Button, obj7);
     items2[3] = callback2(closure_6, obj6);
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.continueButton;
     const obj10 = { variant: "secondary", text: null, onPress: null, disabled: null, loading: null };
-    const intl4 = tmp5(1233).intl;
-    obj10[1] = intl4.string(tmp5(1233).t.YwEyQM);
+    const intl4 = tmp5(1114).intl;
+    obj10[1] = intl4.string(tmp5(1114).t.YwEyQM);
     obj10[2] = function onPress() {
       _undefined("default");
       callback2();
     };
     obj10[3] = tmp11;
     obj10[4] = "default" === tmp4 && tmp2;
-    obj9[1] = callback2(tmp5(4929).Button, obj10);
+    obj9[1] = callback2(tmp5(4975).Button, obj10);
     items2[4] = callback2(closure_6, obj9);
     const obj11 = { style: null, children: null };
     obj11[0] = tmp.cancelButton;
     const obj12 = { variant: "tertiary", text: null, onPress: null };
-    const intl5 = tmp5(1233).intl;
-    obj12[1] = intl5.string(tmp5(1233).t.cpT0Cq);
+    const intl5 = tmp5(1114).intl;
+    obj12[1] = intl5.string(tmp5(1114).t.cpT0Cq);
     obj12[2] = onClose;
-    obj11[1] = callback2(tmp5(4929).Button, obj12);
+    obj11[1] = callback2(tmp5(4975).Button, obj12);
     items2[5] = callback2(closure_6, obj11);
     obj[1] = items2;
     obj[2] = closure_12(closure_6, obj);

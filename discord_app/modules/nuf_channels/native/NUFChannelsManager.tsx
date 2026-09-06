@@ -89,23 +89,23 @@ class NUFChannelsManager extends tmp2 {
       }
     };
     applyArgumentsResult.requiresVoiceChannelsOnboard = function requiresVoiceChannelsOnboard() {
-      const Storage = applyArgumentsResult(592).Storage;
+      const Storage = applyArgumentsResult(510).Storage;
       const value = Storage.get(closure_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(4322).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(4322);
+        isNewUserResult = applyArgumentsResult(4404).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(4404);
       }
       return isNewUserResult;
     };
     applyArgumentsResult.handleVoiceChannelsOnboard = function handleVoiceChannelsOnboard() {
-      const Storage = applyArgumentsResult(592).Storage;
+      const Storage = applyArgumentsResult(510).Storage;
       const result = Storage.set(closure_10, true);
     };
     applyArgumentsResult.clear = function clear() {
-      const Storage = applyArgumentsResult(592).Storage;
+      const Storage = applyArgumentsResult(510).Storage;
       Storage.remove(closure_9);
-      const Storage2 = applyArgumentsResult(592).Storage;
+      const Storage2 = applyArgumentsResult(510).Storage;
       Storage2.remove(closure_10);
     };
     return applyArgumentsResult;
@@ -117,11 +117,11 @@ prototype["_initialize"] = function _initialize() {
   const value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
-    let tmpResult = tmp(4322);
+    let tmpResult = tmp(4404);
     isNewUserResult = tmpResult.isNewUser(currentUser.getCurrentUser());
   }
   if (isNewUserResult) {
-    tmpResult = tmp(4333);
+    tmpResult = tmp(4418);
     const rootNavigationRef = tmpResult.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const self = this;

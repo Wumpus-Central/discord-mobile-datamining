@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx
 import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07996_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/08075_registerAsset.js";
 import closure_3 from "../../../../../stores/ChannelStore.tsx";
 import closure_4 from "../../../../../stores/UserStore.tsx";
 
@@ -32,12 +32,12 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
-              let tmp15Result = tmp15(4478);
+              let tmp15Result = tmp15(4560);
               obj1 = { baseTextColor: null };
-              obj1[0] = tmp17(709).colors.TEXT_SUBTLE;
-              const intl2 = tmp15(1233).intl;
+              obj1[0] = tmp17(576).colors.TEXT_SUBTLE;
+              const intl2 = tmp15(1114).intl;
               const formatToParts2 = intl2.formatToParts;
-              let t = tmp15(1233).t;
+              let t = tmp15(1114).t;
               if (tmp18) {
                 t = {};
                 obj = Object.assign(obj);
@@ -59,9 +59,9 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
               const baseTextColor = tmp15Result.createNativeStyleProperties(obj1)(message.theme).baseTextColor;
             }
           }
-          const intl = tmp15(1233).intl;
+          const intl = tmp15(1114).intl;
           const formatToParts = intl.formatToParts;
-          t = tmp15(1233).t;
+          t = tmp15(1114).t;
           if (message.author.id === currentUser.id) {
             let formatToPartsResult = formatToParts(t.REfFZs, obj);
           } else {
@@ -69,10 +69,10 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           }
           const obj4 = { content: null, iconUrl: null, textColor: null };
           obj4[0] = formatToPartsResult;
-          tmp15Result = tmp15(7867);
+          tmp15Result = tmp15(7946);
           obj4[1] = tmp15Result.getAssetUriForEmbed(registerAssetDefault);
           obj4[2] = undefined;
-          const merged1 = Object.assign(tmp17(7885)(message));
+          const merged1 = Object.assign(tmp17(7964)(message));
           return obj4;
         }
       }

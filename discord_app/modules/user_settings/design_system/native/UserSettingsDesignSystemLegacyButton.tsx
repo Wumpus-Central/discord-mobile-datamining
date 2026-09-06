@@ -17,8 +17,8 @@ function ComparisonRow(entry) {
   const combined = "" + entry.color;
   let redesignVariant = null;
   if (entry.look !== Button.ButtonLooks.LINK) {
-    redesignVariant = tmp4(1296).getRedesignVariant(entry.color);
-    const tmp4Result = tmp4(1296);
+    redesignVariant = tmp4(1178).getRedesignVariant(entry.color);
+    const tmp4Result = tmp4(1178);
   }
   items = [tmp.comparisonRow];
   let darkBg = hasItem;
@@ -55,7 +55,7 @@ function ComparisonRow(entry) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (entry.look === tmp4(1296).ButtonLooks.FILLED) {
+    if (entry.look === tmp4(1178).ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -67,18 +67,18 @@ function ComparisonRow(entry) {
   if (null != redesignVariant) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.comparisonSide;
-    const items5 = [tmp9(tmp4(4474).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" })];
+    const items5 = [tmp9(tmp4(4556).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" })];
     const obj5 = { variant: null, size: "md", text: null, onPress: null };
     obj5[0] = redesignVariant;
     obj5[2] = redesignVariant;
     obj5[3] = function onPress() {};
-    items5[1] = tmp9(tmp4(4929).Button, obj5);
+    items5[1] = tmp9(tmp4(4975).Button, obj5);
     obj4[1] = items5;
     let tmp9Result = tmp7(tmp8, obj4);
   } else {
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.comparisonSide;
-    obj6[1] = tmp9(tmp4(4474).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" });
+    obj6[1] = tmp9(tmp4(4556).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" });
     tmp9Result = tmp9(tmp8, obj6);
   }
   items4[1] = tmp9Result;
@@ -122,7 +122,7 @@ function ComboRow(combo) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (combo.look === tmp6(1296).ButtonLooks.FILLED) {
+    if (combo.look === tmp6(1178).ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -811,7 +811,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   items1[1] = entries.map((arg0) => {
     [tmp, arr] = arg0;
     return callback2(
-      callback(8376).FormSection,
+      callback(8593).FormSection,
       { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) },
       "cmp-" + tmp,
     );
@@ -831,7 +831,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   items1[3] = entries1.map((arg0) => {
     [tmp, arr] = arg0;
     return callback2(
-      callback(8376).FormSection,
+      callback(8593).FormSection,
       {
         title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)",
         children: arr.map((combo) => callback(closure_9, { combo }, arg1)),

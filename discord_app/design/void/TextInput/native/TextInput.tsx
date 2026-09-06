@@ -25,14 +25,14 @@ const forwardRefResult = importAllResult.forwardRef((style, ref) => {
   const tmp6 = AccessibilityAnnouncer.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
   obj = { ref, style: items, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   items = [tmp2.input, style.style];
-  let tmp3Result = tmp3(1362);
+  let tmp3Result = tmp3(4411);
   obj[2] = tmp3Result.isThemeDark(theme) ? closure_4.DARK : closure_4.LIGHT;
   obj[3] = tmp2.placeholderTextColor.color;
-  tmp3Result = tmp3(1234);
+  tmp3Result = tmp3(1115);
   let hexWithOpacityResult = tmp6;
   if (tmp3Result.isAndroid()) {
-    hexWithOpacityResult = tmp3(4326).hexWithOpacity(tmp6, 0.5);
-    const tmp3Result1 = tmp3(4326);
+    hexWithOpacityResult = tmp3(4409).hexWithOpacity(tmp6, 0.5);
+    const tmp3Result1 = tmp3(4409);
   }
   obj[4] = hexWithOpacityResult;
   const merged1 = Object.assign(merged);

@@ -24,7 +24,7 @@ function NativeCheckoutStoreProvider(children) {
   let redux;
   let first;
   closure_11 = undefined;
-  closure_8 = order(5950)(() => {
+  closure_8 = order(5598)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -38,7 +38,7 @@ function NativeCheckoutStoreProvider(children) {
     obj = { loadId: id, startTime: Date.now() };
     return obj;
   });
-  redux = order(5950)(() => {
+  redux = order(5598)(() => {
     const obj = {};
     const merged = Object.assign(closure_6);
     obj.load_id = loadId.loadId;
@@ -60,7 +60,7 @@ function NativeCheckoutStoreProvider(children) {
     ),
     1,
   )[0];
-  order(4946)(() => {
+  order(4992)(() => {
     if (null != closure_6) {
       let obj = closure_1_0(closure_1_2[17]);
       const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);

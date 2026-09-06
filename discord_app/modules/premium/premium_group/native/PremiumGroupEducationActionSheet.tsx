@@ -6,8 +6,8 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../PremiumGroup.messages.js";
 import SubscriptionStatusTypes from "../PremiumGroupConstants.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 

@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/AdVideoPlayer.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _isNativeReflectConstructDefault from "../../../../_runtime/08415__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "../../../../_runtime/08308__isNativeReflectConstruct.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -8,7 +8,7 @@ import closure_8 from "../../../stores/native/AppStateStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../_runtime/00686_n.js";
+import importDefaultResult from "../../../../_runtime/00672_n.js";
 
 const require = arg1;
 let c4 = importAllResult;

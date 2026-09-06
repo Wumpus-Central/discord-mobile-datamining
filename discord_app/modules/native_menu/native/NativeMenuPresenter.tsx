@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/native_menu/native/
 
 export default function MenuContainer() {
   const items = [closure_4];
-  const stateFromStoresObject = key(586).useStateFromStoresObject(
+  const stateFromStoresObject = key(504).useStateFromStoresObject(
     items,
     () => ({ key: store.getKey(), menu: store.getMenu() }),
     [],

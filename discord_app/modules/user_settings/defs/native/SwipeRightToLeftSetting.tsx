@@ -18,13 +18,13 @@ obj = {
     const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;
     const setting = SwipeRightToLeftModeSetting.useSetting();
     if (setting === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
-      const intl2 = tmp(1233).intl;
-      let stringResult = intl2.string(tmp(1233).t["3tYNDS"]);
+      const intl2 = tmp(1114).intl;
+      let stringResult = intl2.string(tmp(1114).t["3tYNDS"]);
     } else {
       stringResult = null;
-      if (setting === tmp(1305).SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS) {
-        const intl = tmp(1233).intl;
-        stringResult = intl.string(tmp(1233).t["6eXLcJ"]);
+      if (setting === tmp(1187).SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS) {
+        const intl = tmp(1114).intl;
+        stringResult = intl.string(tmp(1114).t["6eXLcJ"]);
       }
     }
     return stringResult;

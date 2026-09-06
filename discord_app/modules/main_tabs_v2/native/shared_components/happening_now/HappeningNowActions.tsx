@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowActions.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../../_runtime/12547_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/12773_registerAsset.js";
 import HAPPENING_NOW_CARD_MARGIN_RIGHTDefault from "HappeningNowCard.tsx";
-import registerAssetDefault2 from "../../../../../../_runtime/15928_registerAsset.js";
-import registerAssetDefault3 from "../../../../../../_runtime/15929_registerAsset.js";
-import registerAssetDefault4 from "../../../../../../_runtime/15930_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/16092_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../_runtime/16093_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../_runtime/16094_registerAsset.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../../../stores/GuildChannelStore.tsx";
@@ -84,8 +84,8 @@ export const HappeningNowCardCreateChannel = function HappeningNowCardCreateChan
   }, items);
   obj[0] = registerAssetDefault2;
   obj[1] = callback;
-  const intl = guildId(1233).intl;
-  obj[2] = intl.string(guildId(1233).t["fUYU+j"]);
+  const intl = guildId(1114).intl;
+  obj[2] = intl.string(guildId(1114).t["fUYU+j"]);
   obj[3] = flag;
   return callback(closure_15, obj);
 };
@@ -132,8 +132,8 @@ export const HappeningNowCardInvite = function HappeningNowCardInvite(guildId) {
   }, items);
   obj[0] = registerAssetDefault4;
   obj[1] = callback;
-  const intl = guildId(1233).intl;
-  obj[2] = intl.string(guildId(1233).t.VINpSK);
+  const intl = guildId(1114).intl;
+  obj[2] = intl.string(guildId(1114).t.VINpSK);
   obj[3] = flag;
   return callback(closure_15, obj);
 };
@@ -163,8 +163,8 @@ export const HappeningNowStudentHubAddServer = function HappeningNowStudentHubAd
   }, items);
   obj[0] = registerAssetDefault;
   obj[1] = callback;
-  const intl = guildId(1233).intl;
-  obj[2] = intl.string(guildId(1233).t.emRpdS);
+  const intl = guildId(1114).intl;
+  obj[2] = intl.string(guildId(1114).t.emRpdS);
   obj[3] = flag;
   return callback(closure_15, obj);
 };

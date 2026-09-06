@@ -26,13 +26,13 @@ function ClearAllHistory(searchContext) {
     accessibilityLabel: null,
     children: null,
   };
-  const intl = searchContext(1233).intl;
-  obj[3] = intl.string(searchContext(1233).t.LFTAUp);
+  const intl = searchContext(1114).intl;
+  obj[3] = intl.string(searchContext(1114).t.LFTAUp);
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
-  const intl2 = searchContext(1233).intl;
-  obj[2] = intl2.string(searchContext(1233).t.LFTAUp);
-  obj[4] = jsx(searchContext(4474).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(5077).PressableHighlight, {
+  const intl2 = searchContext(1114).intl;
+  obj[2] = intl2.string(searchContext(1114).t.LFTAUp);
+  obj[4] = jsx(searchContext(4556).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(5123).PressableHighlight, {
     variant: "text-sm/semibold",
     color: "text-brand",
     children: null,

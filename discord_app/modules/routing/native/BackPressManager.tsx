@@ -2,8 +2,8 @@
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
-import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
 import updateContextMenuState from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 
 function handleBackPress() {
@@ -13,10 +13,10 @@ function handleBackPress() {
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
     obj = { type: null };
-    obj[0] = tmp(1625).KeyboardTypes.SYSTEM;
-    tmp(1496).setKeyboardType(obj);
+    obj[0] = tmp(1609).KeyboardTypes.SYSTEM;
+    tmp(1481).setKeyboardType(obj);
     flag = true;
-    const tmpResult = tmp(1496);
+    const tmpResult = tmp(1481);
   }
   return flag;
 }

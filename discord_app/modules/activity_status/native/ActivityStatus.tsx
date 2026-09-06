@@ -34,13 +34,13 @@ export default function ActivityStatus(guildId) {
   }
   let stateFromStores1;
   const tmp = callback2();
-  let obj = userId(586);
+  let obj = userId(504);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getUser(userId));
-  obj1 = userId(586);
+  obj1 = userId(504);
   const items1 = [closure_5];
   stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getActivities(userId));
-  const voiceChannel = stateFromStores1(9260)({ userId, guildId: guildId.guildId }).voiceChannel;
+  const voiceChannel = stateFromStores1(10879)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
   const memo = React.useMemo(() => {
     let found;
@@ -70,14 +70,14 @@ export default function ActivityStatus(guildId) {
     }
     arr = stateFromStores1;
   }, items2);
-  let obj2 = userId(9105);
+  let obj2 = userId(10880);
   let state;
   if (memo != null) {
     state = memo.state;
   }
   const gameMentionsAsPlainText = obj2.useGameMentionsAsPlainText(state);
   const tmp2 = userId;
-  const tmp6 = stateFromStores1(9259)(userId);
+  const tmp6 = stateFromStores1(10878)(userId);
   const items3 = [closure_6];
   if (tmp2Result.useStateFromStores(items3, () => closure_1_6.isBlockedOrIgnored(userId))) {
     return null;
@@ -93,7 +93,7 @@ export default function ActivityStatus(guildId) {
     if (null != tmp6) {
       let found;
       if (stateFromStores1 != null) {
-        found = stateFromStores1.find(tmp5(9266));
+        found = stateFromStores1.find(tmp5(10886));
       }
       obj = {
         game: null,
@@ -110,9 +110,9 @@ export default function ActivityStatus(guildId) {
       obj[3] = maxFontSizeMultiplier;
       obj[4] = tmp12;
       obj[5] = tmp13;
-      let tmp18Result = callback(tmp5(9261), obj);
+      let tmp18Result = callback(tmp5(10881), obj);
       const tmp18 = callback;
-      const tmp5Result = tmp5(9261);
+      const tmp5Result = tmp5(10881);
     } else {
       let found1;
       if (stateFromStores1 != null) {
@@ -137,7 +137,7 @@ export default function ActivityStatus(guildId) {
         obj[3] = maxFontSizeMultiplier;
         obj[4] = tmp12;
         obj[5] = tmp13;
-        tmp18Result = callback(tmp5(9267), obj);
+        tmp18Result = callback(tmp5(10887), obj);
       } else {
         tmp18Result = null;
         if (null != voiceChannel) {
@@ -156,7 +156,7 @@ export default function ActivityStatus(guildId) {
           obj1[3] = maxFontSizeMultiplier;
           obj1[4] = tmp12;
           obj1[5] = tmp13;
-          tmp18Result = callback(tmp5(9275), obj1);
+          tmp18Result = callback(tmp5(10893), obj1);
         }
       }
     }
@@ -174,7 +174,7 @@ export default function ActivityStatus(guildId) {
           obj2[1] = emojiSize;
           obj2[2] = animate;
           obj2[3] = tmp.emoji;
-          tmp25 = callback(tmp5(9238), obj2);
+          tmp25 = callback(tmp5(10895), obj2);
         }
         const items7 = [tmp25];
         let tmp27 = null != memo.state;
@@ -183,7 +183,7 @@ export default function ActivityStatus(guildId) {
           obj3[1] = textStyle;
           obj3[2] = maxFontSizeMultiplier;
           obj3[3] = gameMentionsAsPlainText;
-          tmp27 = callback(tmp5(9265), obj3);
+          tmp27 = callback(tmp5(10885), obj3);
         }
         const obj4 = { children: null };
         items7[1] = tmp27;
@@ -213,12 +213,12 @@ export default function ActivityStatus(guildId) {
       obj6[1] = textStyle;
       obj6[2] = maxFontSizeMultiplier;
       obj6[5] = DOT_UNICODE;
-      tmp31 = callback(tmp5(9265), obj6);
+      tmp31 = callback(tmp5(10885), obj6);
     }
     items8[1] = tmp31;
     items8[2] = tmp21;
     obj5[1] = items8;
     return closure_12(View, obj5);
   }
-  tmp2Result = userId(586);
+  tmp2Result = userId(504);
 }

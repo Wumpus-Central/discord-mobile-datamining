@@ -1,8 +1,8 @@
 // discord_app/actions/native/GuildActionCreators.tsx
 import set from "../../../_runtime/00002_set.js";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 function batchChannelUpdate(closure_1_0) {
   if (arg1.length > 0) {

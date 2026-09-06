@@ -37,7 +37,7 @@ export default function DevToolsLoggingFlagsScreen() {
       subLabel: "Logs all gateway events to console, including content. Enable verbose logs to see them.",
       value: isLoggingGatewayEvents,
       onValueChange(logGatewayEvents) {
-        let obj = callback(705);
+        let obj = callback(1348);
         obj = { logGatewayEvents };
         return obj.setDeveloperOptionSettings(obj);
       },
@@ -47,7 +47,7 @@ export default function DevToolsLoggingFlagsScreen() {
       subLabel: "Logs all analytics events to the developer console.",
       value: isLoggingAnalyticsEvents,
       onValueChange(logAnalyticsEvents) {
-        let obj = callback(705);
+        let obj = callback(1348);
         obj = { logAnalyticsEvents };
         return obj.setDeveloperOptionSettings(obj);
       },
@@ -57,7 +57,7 @@ export default function DevToolsLoggingFlagsScreen() {
       subLabel: "Force trace all client requests with APM.",
       value: isTracingRequests,
       onValueChange(trace) {
-        let obj = callback(705);
+        let obj = callback(1348);
         obj = { trace };
         return obj.setDeveloperOptionSettings(obj);
       },

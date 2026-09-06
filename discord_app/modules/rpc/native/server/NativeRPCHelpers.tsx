@@ -39,17 +39,17 @@ closure_0 = importDefaultResult((arg0, arg1, arg2) => {
           } else {
             c4 = 0;
             closure_3 = tmp2;
-            const result = callback(9525).validateOriginAndUpdateSocket(callback, callback2);
+            const result = callback(9559).validateOriginAndUpdateSocket(callback, callback2);
             if (null == dependencyMap) {
               obj1 = { closeCode: null };
               obj1[0] = closure_1_4.INVALID_CLIENTID;
-              const tmp23 = new callback2(9520)(obj1, "No Client ID Specified");
+              const tmp23 = new callback2(9554)(obj1, "No Client ID Specified");
               c6 = 3;
               const obj2 = { value: null, done: true };
               obj2[0] = Promise.reject(tmp23);
               return obj2;
             } else {
-              let obj3 = callback(9525);
+              let obj3 = callback(9559);
               c5 = 1;
               c6 = 1;
               obj3 = { value: null, done: false };
@@ -60,7 +60,7 @@ closure_0 = importDefaultResult((arg0, arg1, arg2) => {
               );
               return obj3;
             }
-            const obj10 = callback(9525);
+            const obj10 = callback(9559);
             tmp33 = dependencyMap;
           }
         } else if (arg0 === 1) {
@@ -72,7 +72,7 @@ closure_0 = importDefaultResult((arg0, arg1, arg2) => {
           obj4[0] = arg1;
           return obj4;
         } else {
-          obj = callback(9525);
+          obj = callback(9559);
           c6 = 3;
           const obj5 = { value: null, done: true };
           obj5[0] = obj.validateSocketApplication(callback, dependencyMap, callback2);
@@ -97,5 +97,5 @@ export const validateSocketClient = function () {
   }
   return applyArgumentsResult;
 };
-export const getDeprecatedVoiceSettings = () => callback(9525).getDeprecatedVoiceSettingsWithShortcut(() => []);
-export const getVoiceSettings = (arg0) => callback(9525).getVoiceSettingsWithShortcut(arg0, () => "");
+export const getDeprecatedVoiceSettings = () => callback(9559).getDeprecatedVoiceSettingsWithShortcut(() => []);
+export const getVoiceSettings = (arg0) => callback(9559).getVoiceSettingsWithShortcut(arg0, () => "");

@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
-import noop from "../../../../discord_common/js/packages/flash-list/index.js";
 import getNoResultsSource from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
+import noop from "../../../../discord_common/js/packages/flash-list/index.js";
 import INITIAL_SCROLL_DELAY_MS from "hooks/useScrollToInitialIndexOnce.tsx";
 import closure_2 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
@@ -31,7 +31,7 @@ export default function ShopFlashList(initialScrollIndex) {
   if (tmp5) {
     tmp5 = initialScrollIndex > 0;
   }
-  obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(15655).INITIAL_SCROLL_DELAY_MS };
+  obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(15813).INITIAL_SCROLL_DELAY_MS };
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
   obj = {
     ref,

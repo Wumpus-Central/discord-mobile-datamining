@@ -1,8 +1,8 @@
 // discord_app/modules/application_commands/ApplicationCommandActionCreators.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
 import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";

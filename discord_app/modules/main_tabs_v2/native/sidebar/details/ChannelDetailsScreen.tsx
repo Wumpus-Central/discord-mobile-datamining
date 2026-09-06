@@ -8,7 +8,7 @@ const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo((navigation) => {
   navigation = navigation.navigation;
-  let obj = navigation(1499);
+  let obj = navigation(1484);
   const route = obj.useRoute();
   const items = [navigation];
   const callback = importAllResult.useCallback(() => {

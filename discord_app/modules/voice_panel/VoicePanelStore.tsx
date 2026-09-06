@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/VoicePanelStore.tsx
 import closure_2 from "../../stores/ChannelStore.tsx";
-import identity from "../../../_runtime/00697_identity.js";
+import identity from "../../../_runtime/01244_identity.js";
 
 const require = arg1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
@@ -35,7 +35,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj[6] = new Set();
   obj[7] = function openChannel(arg0) {
     const callback = arg0;
-    let result = callback(4730).isStageVoicePanelEnabled("voice_panel_store");
+    let result = callback(4769).isStageVoicePanelEnabled("voice_panel_store");
     if (!result) {
       const channel = closure_1_2.getChannel(arg0);
       let isGuildStageVoiceResult;
@@ -47,7 +47,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     if (result) {
       const channels = dependencyMap().channels;
       if (!channels.has(arg0)) {
-        callback(702).batchUpdates(() => {
+        callback(1249).batchUpdates(() => {
           callback((channels) => {
             const obj = {};
             const merged = Object.assign(channels);
@@ -59,13 +59,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
             return obj;
           });
         });
-        const tmpResult = callback(702);
+        const tmpResult = callback(1249);
       }
     }
   };
   obj[8] = function closeChannel(channelId) {
     const callback = channelId;
-    callback(702).batchUpdates(() => {
+    callback(1249).batchUpdates(() => {
       channelId((arg0) => {
         ({ channels, voicePanelsFullscreen, voicePanelsOpened } = arg0);
         if (!channels.has(closure_0)) {
@@ -110,7 +110,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   obj[10] = function setIsActivityFocused(arg0) {
     const callback = arg0;
-    callback(702).batchUpdates(() => {
+    callback(1249).batchUpdates(() => {
       callback((isActivityFocused) => {
         let tmp2 = isActivityFocused;
         if (isActivityFocused.isActivityFocused !== closure_0) {
@@ -126,7 +126,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj[11] = function setChannelPanelFullscreen(closure_0, closure_02) {
     const callback = closure_0;
     dependencyMap = closure_02;
-    callback(702).batchUpdates(() => {
+    callback(1249).batchUpdates(() => {
       callback((voicePanelsFullscreen) => {
         const set = new Set(voicePanelsFullscreen.voicePanelsFullscreen);
         const hasItem = set.has(closure_0);
@@ -151,7 +151,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj[12] = function setChannelPanelOpen(scrollPosition, arg1) {
     const callback = scrollPosition;
     dependencyMap = arg1;
-    callback(702).batchUpdates(() => {
+    callback(1249).batchUpdates(() => {
       scrollPosition((channels) => {
         channels = channels.channels;
         if (channels.has(closure_0)) {
@@ -186,7 +186,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj[14] = function setChannelPanelPIP(scrollPosition, arg1) {
     const callback = scrollPosition;
     dependencyMap = arg1;
-    callback(702).batchUpdates(() => {
+    callback(1249).batchUpdates(() => {
       scrollPosition((voicePanelsPIP) => {
         const set = new Set(voicePanelsPIP.voicePanelsPIP);
         const hasItem = set.has(closure_0);

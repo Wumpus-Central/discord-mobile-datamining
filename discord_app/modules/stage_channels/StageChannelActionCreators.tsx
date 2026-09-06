@@ -4,7 +4,7 @@ import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
-import _modDef4491 from "../../actions/ChannelActionCreators.tsx";
+import _modDef4573 from "../../actions/ChannelActionCreators.tsx";
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import useIsStageSpeakingDisabledForCurrentUser from "useStageSpeakingForCurrentUser.tsx";
@@ -103,10 +103,10 @@ function _startStage() {
               closure_1 = undefined;
               if ("" !== closure_1) {
                 if (closure_1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(8683);
+                  let obj2 = callback(8393);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(8696);
+                const obj4 = callback(8406);
                 c6 = 1;
                 c7 = 1;
                 obj1 = { value: null, done: false };
@@ -425,14 +425,14 @@ export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissi
   const obj2 = fromStringAll;
   if (arg2) {
     obj.allow = obj2.add(obj.allow, REQUEST_TO_SPEAK);
-    let tmp5Result = tmp5(503);
+    let tmp5Result = tmp5(1086);
     obj.deny = tmp5Result.remove(obj.deny, REQUEST_TO_SPEAK);
   } else {
     obj.allow = obj2.remove(obj.allow, REQUEST_TO_SPEAK);
-    tmp5Result = tmp5(503);
+    tmp5Result = tmp5(1086);
     obj.deny = tmp5Result.add(obj.deny, REQUEST_TO_SPEAK);
   }
-  const result = _modDef4491.updatePermissionOverwrite(getGuildId.id, obj);
+  const result = _modDef4573.updatePermissionOverwrite(getGuildId.id, obj);
 };
 export const startStage = function startStage(closure_1_0, arg1, GUILD_ONLY, closure_1_11) {
   const self = this;

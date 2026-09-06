@@ -22,6 +22,7 @@ import AccountAgeTier9LargeBadge from "../components/mana-assets/native/generate
 import AccountAgeTier9SmallBadge from "../components/mana-assets/native/generated/AccountAgeTier9SmallBadge.native.tsx";
 import ActivatedGem3dIllustration from "../components/mana-assets/native/generated/ActivatedGem3dIllustration.native.tsx";
 import ActivitiesIllocon from "../components/mana-assets/native/generated/ActivitiesIllocon.native.tsx";
+import ActivitiesTogetherSpotIllustration from "../components/mana-assets/native/generated/ActivitiesTogetherSpotIllustration.native.tsx";
 import AgeVerificationSpotIllustration from "../components/mana-assets/native/generated/AgeVerificationSpotIllustration.native.tsx";
 import AnimatedAvatarsAbstractUI from "../components/mana-assets/native/generated/AnimatedAvatarsAbstractUI.native.tsx";
 import AnimatedBannersAbstractUI from "../components/mana-assets/native/generated/AnimatedBannersAbstractUI.native.tsx";
@@ -71,6 +72,8 @@ import CatIllocon from "../components/mana-assets/native/generated/CatIllocon.na
 import CaterpillarIllocon from "../components/mana-assets/native/generated/CaterpillarIllocon.native.tsx";
 import ChairIllocon from "../components/mana-assets/native/generated/ChairIllocon.native.tsx";
 import ChatControllersSpotIllustration from "../components/mana-assets/native/generated/ChatControllersSpotIllustration.native.tsx";
+import ChatEmojisSpotIllustration from "../components/mana-assets/native/generated/ChatEmojisSpotIllustration.native.tsx";
+import CheersSpotIllustration from "../components/mana-assets/native/generated/CheersSpotIllustration.native.tsx";
 import ChestAndGemSpotIllustration from "../components/mana-assets/native/generated/ChestAndGemSpotIllustration.native.tsx";
 import ChestLogoSpotIllustration from "../components/mana-assets/native/generated/ChestLogoSpotIllustration.native.tsx";
 import ChestOrbSpotIllustration from "../components/mana-assets/native/generated/ChestOrbSpotIllustration.native.tsx";
@@ -117,6 +120,7 @@ import DisplayNameStylesAbstractUI from "../components/mana-assets/native/genera
 import DisplayNameStylesV2AbstractUI from "../components/mana-assets/native/generated/DisplayNameStylesV2AbstractUI.native.tsx";
 import DogIllocon from "../components/mana-assets/native/generated/DogIllocon.native.tsx";
 import DollarSignIllocon from "../components/mana-assets/native/generated/DollarSignIllocon.native.tsx";
+import DoorwaySpotIllustration from "../components/mana-assets/native/generated/DoorwaySpotIllustration.native.tsx";
 import DoubleWidgetAbstractUI from "../components/mana-assets/native/generated/DoubleWidgetAbstractUI.native.tsx";
 import DownloadBarIllocon from "../components/mana-assets/native/generated/DownloadBarIllocon.native.tsx";
 import DownloadIllocon from "../components/mana-assets/native/generated/DownloadIllocon.native.tsx";
@@ -147,6 +151,7 @@ import FamilySpotIllustration from "../components/mana-assets/native/generated/F
 import FavoritesSpotIllustration from "../components/mana-assets/native/generated/FavoritesSpotIllustration.native.tsx";
 import FileFolderSpotIllustration from "../components/mana-assets/native/generated/FileFolderSpotIllustration.native.tsx";
 import FileUploadSpotIllustration from "../components/mana-assets/native/generated/FileUploadSpotIllustration.native.tsx";
+import FindFriendsSpotIllustration from "../components/mana-assets/native/generated/FindFriendsSpotIllustration.native.tsx";
 import FireIllocon from "../components/mana-assets/native/generated/FireIllocon.native.tsx";
 import FistBumpSpotIllustration from "../components/mana-assets/native/generated/FistBumpSpotIllustration.native.tsx";
 import FlowerIllocon from "../components/mana-assets/native/generated/FlowerIllocon.native.tsx";
@@ -357,6 +362,7 @@ import ServerBannerDefaultExample from "../components/mana-assets/native/generat
 import ServerBannerStaffServerExample from "../components/mana-assets/native/generated/ServerBannerStaffServerExample.native.tsx";
 import ServerBannerTheCrewExample from "../components/mana-assets/native/generated/ServerBannerTheCrewExample.native.tsx";
 import ServerBannerUnderboxExample from "../components/mana-assets/native/generated/ServerBannerUnderboxExample.native.tsx";
+import ServerChannelsAbstractUI from "../components/mana-assets/native/generated/ServerChannelsAbstractUI.native.tsx";
 import ServerIconBonkBonkExample from "../components/mana-assets/native/generated/ServerIconBonkBonkExample.native.tsx";
 import ServerIconBoomBGoneExample from "../components/mana-assets/native/generated/ServerIconBoomBGoneExample.native.tsx";
 import ServerIconCoincordExample from "../components/mana-assets/native/generated/ServerIconCoincordExample.native.tsx";
@@ -427,6 +433,7 @@ import TrophyIllocon from "../components/mana-assets/native/generated/TrophyIllo
 import VendingMachineSpotIllustration from "../components/mana-assets/native/generated/VendingMachineSpotIllustration.native.tsx";
 import VibingWumpusSpotIllustration from "../components/mana-assets/native/generated/VibingWumpusSpotIllustration.native.tsx";
 import VideoCameraSpotIllustration from "../components/mana-assets/native/generated/VideoCameraSpotIllustration.native.tsx";
+import VoiceChannelsAbstractUI from "../components/mana-assets/native/generated/VoiceChannelsAbstractUI.native.tsx";
 import VoiceFiltersSpotIllustration from "../components/mana-assets/native/generated/VoiceFiltersSpotIllustration.native.tsx";
 import WasdSpotIllustration from "../components/mana-assets/native/generated/WasdSpotIllustration.native.tsx";
 import WaterIllocon from "../components/mana-assets/native/generated/WaterIllocon.native.tsx";
@@ -467,6 +474,7 @@ export const AccountAgeTier9LargeBadge = AccountAgeTier9LargeBadge.AccountAgeTie
 export const AccountAgeTier9SmallBadge = AccountAgeTier9SmallBadge.AccountAgeTier9SmallBadge;
 export const ActivatedGem3dIllustration = ActivatedGem3dIllustration.ActivatedGem3dIllustration;
 export const ActivitiesIllocon = ActivitiesIllocon.ActivitiesIllocon;
+export const ActivitiesTogetherSpotIllustration = ActivitiesTogetherSpotIllustration.ActivitiesTogetherSpotIllustration;
 export const AgeVerificationSpotIllustration = AgeVerificationSpotIllustration.AgeVerificationSpotIllustration;
 export const AnimatedAvatarsAbstractUI = AnimatedAvatarsAbstractUI.AnimatedAvatarsAbstractUI;
 export const AnimatedBannersAbstractUI = AnimatedBannersAbstractUI.AnimatedBannersAbstractUI;
@@ -516,6 +524,8 @@ export const CatIllocon = CatIllocon.CatIllocon;
 export const CaterpillarIllocon = CaterpillarIllocon.CaterpillarIllocon;
 export const ChairIllocon = ChairIllocon.ChairIllocon;
 export const ChatControllersSpotIllustration = ChatControllersSpotIllustration.ChatControllersSpotIllustration;
+export const ChatEmojisSpotIllustration = ChatEmojisSpotIllustration.ChatEmojisSpotIllustration;
+export const CheersSpotIllustration = CheersSpotIllustration.CheersSpotIllustration;
 export const ChestAndGemSpotIllustration = ChestAndGemSpotIllustration.ChestAndGemSpotIllustration;
 export const ChestLogoSpotIllustration = ChestLogoSpotIllustration.ChestLogoSpotIllustration;
 export const ChestOrbSpotIllustration = ChestOrbSpotIllustration.ChestOrbSpotIllustration;
@@ -562,6 +572,7 @@ export const DisplayNameStylesAbstractUI = DisplayNameStylesAbstractUI.DisplayNa
 export const DisplayNameStylesV2AbstractUI = DisplayNameStylesV2AbstractUI.DisplayNameStylesV2AbstractUI;
 export const DogIllocon = DogIllocon.DogIllocon;
 export const DollarSignIllocon = DollarSignIllocon.DollarSignIllocon;
+export const DoorwaySpotIllustration = DoorwaySpotIllustration.DoorwaySpotIllustration;
 export const DoubleWidgetAbstractUI = DoubleWidgetAbstractUI.DoubleWidgetAbstractUI;
 export const DownloadBarIllocon = DownloadBarIllocon.DownloadBarIllocon;
 export const DownloadIllocon = DownloadIllocon.DownloadIllocon;
@@ -595,6 +606,7 @@ export const FamilySpotIllustration = FamilySpotIllustration.FamilySpotIllustrat
 export const FavoritesSpotIllustration = FavoritesSpotIllustration.FavoritesSpotIllustration;
 export const FileFolderSpotIllustration = FileFolderSpotIllustration.FileFolderSpotIllustration;
 export const FileUploadSpotIllustration = FileUploadSpotIllustration.FileUploadSpotIllustration;
+export const FindFriendsSpotIllustration = FindFriendsSpotIllustration.FindFriendsSpotIllustration;
 export const FireIllocon = FireIllocon.FireIllocon;
 export const FistBumpSpotIllustration = FistBumpSpotIllustration.FistBumpSpotIllustration;
 export const FlowerIllocon = FlowerIllocon.FlowerIllocon;
@@ -816,6 +828,7 @@ export const ServerBannerDefaultExample = ServerBannerDefaultExample.ServerBanne
 export const ServerBannerStaffServerExample = ServerBannerStaffServerExample.ServerBannerStaffServerExample;
 export const ServerBannerTheCrewExample = ServerBannerTheCrewExample.ServerBannerTheCrewExample;
 export const ServerBannerUnderboxExample = ServerBannerUnderboxExample.ServerBannerUnderboxExample;
+export const ServerChannelsAbstractUI = ServerChannelsAbstractUI.ServerChannelsAbstractUI;
 export const ServerIconBonkBonkExample = ServerIconBonkBonkExample.ServerIconBonkBonkExample;
 export const ServerIconBoomBGoneExample = ServerIconBoomBGoneExample.ServerIconBoomBGoneExample;
 export const ServerIconCoincordExample = ServerIconCoincordExample.ServerIconCoincordExample;
@@ -889,6 +902,7 @@ export const TrophyIllocon = TrophyIllocon.TrophyIllocon;
 export const VendingMachineSpotIllustration = VendingMachineSpotIllustration.VendingMachineSpotIllustration;
 export const VibingWumpusSpotIllustration = VibingWumpusSpotIllustration.VibingWumpusSpotIllustration;
 export const VideoCameraSpotIllustration = VideoCameraSpotIllustration.VideoCameraSpotIllustration;
+export const VoiceChannelsAbstractUI = VoiceChannelsAbstractUI.VoiceChannelsAbstractUI;
 export const VoiceFiltersSpotIllustration = VoiceFiltersSpotIllustration.VoiceFiltersSpotIllustration;
 export const WasdSpotIllustration = WasdSpotIllustration.WasdSpotIllustration;
 export const WaterIllocon = WaterIllocon.WaterIllocon;

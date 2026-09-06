@@ -54,17 +54,17 @@ export default function UserSettingsDesignSystemBackdrop() {
   let first = tmp2[0];
   dependencyMap = tmp4;
   [tmp6, tmp7] = callback(React.useState("none"), 2);
-  let obj = first(4217);
+  let obj = first(4296);
   const fn = function n() {
-    let obj = first(4928);
+    let obj = first(4974);
     let num = 0;
     if (first) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, first(4932).SUBTLE_SPRING, "animate-always") };
+    obj = { opacity: obj.withSpring(num, first(4978).SUBTLE_SPRING, "animate-always") };
     return obj;
   };
-  obj = { withSpring: first(4928).withSpring, showBackdrop: first, SUBTLE_SPRING: first(4932).SUBTLE_SPRING };
+  obj = { withSpring: first(4974).withSpring, showBackdrop: first, SUBTLE_SPRING: first(4978).SUBTLE_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 1929832617927;
   fn.__initData = closure_10;
@@ -101,7 +101,7 @@ export default function UserSettingsDesignSystemBackdrop() {
     }),
   ];
   obj1[1] = items;
-  const items1 = [callback3(first(4927).Stack, obj1)];
+  const items1 = [callback3(first(4973).Stack, obj1)];
   if (first) {
     function handleClose() {
       dependencyMap(false);
@@ -112,18 +112,18 @@ export default function UserSettingsDesignSystemBackdrop() {
     obj3[0] = animatedStyle;
     obj3[1] = tmp6;
     obj3[2] = handleClose;
-    const items2 = [tmp13(tmp8(4917).Backdrop, obj3)];
+    const items2 = [tmp13(tmp8(4963).Backdrop, obj3)];
     const obj4 = { style: null, pointerEvents: "box-none", children: null };
     obj4[0] = tmp.backdropContent;
     const obj5 = { children: null };
     const obj6 = { variant: "text-md/normal", children: null };
     const items3 = ["blur style: ", tmp6];
     obj6[1] = items3;
-    obj5[0] = tmp11(tmp8(4474).Text, obj6);
-    obj4[2] = tmp13(tmp8(5610).Card, obj5);
+    obj5[0] = tmp11(tmp8(4556).Text, obj6);
+    obj4[2] = tmp13(tmp8(5607).Card, obj5);
     items2[1] = tmp13(closure_5, obj4);
     obj2[1] = items2;
-    first = tmp11(tmp8(4912).Dialog, obj2);
+    first = tmp11(tmp8(4958).Dialog, obj2);
   }
   items1[1] = first;
   obj[1] = items1;

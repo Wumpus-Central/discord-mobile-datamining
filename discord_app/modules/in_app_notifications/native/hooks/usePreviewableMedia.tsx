@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import urlMatchesFileExtension from "../../../messages/MediaFormatTesters.tsx";
-import inlineStyles from "../../../../../_runtime/08254_inlineStyles.js";
-import inlineStylesDefault from "../../../../../_runtime/08254_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/08453_inlineStyles.js";
 import CirclePlayIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import WaveformIcon from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
@@ -81,7 +81,7 @@ function getBasePreviewableMedia(arg0) {
           obj[3] = str7;
           let arr = items.push(obj);
         } else {
-          let tmp8Result = tmp8(4671);
+          let tmp8Result = tmp8(4710);
           let tmp10 = filename;
           if (tmp8Result.isVideoFile(tmp7)) {
             obj1 = { id: null, type: null, media: null, parentType: null };
@@ -98,7 +98,7 @@ function getBasePreviewableMedia(arg0) {
             obj1[3] = str6;
             let arr1 = items.push(obj1);
           } else {
-            tmp8Result = tmp8(4671);
+            tmp8Result = tmp8(4710);
             let tmp11 = filename;
             let push = items.push;
             let obj2 = { id: null, type: null, media: null, icon: null, parentType: null };
@@ -111,7 +111,7 @@ function getBasePreviewableMedia(arg0) {
               obj2[1] = tmp13.AUDIO;
               obj2[2] = tmp6;
               let tmp17 = callback;
-              obj2[3] = callback(tmp8(10239).CirclePlayIcon, {
+              obj2[3] = callback(tmp8(10132).CirclePlayIcon, {
                 size: "lg",
                 color: "background-brand",
                 secondaryColor: "white",
@@ -131,7 +131,7 @@ function getBasePreviewableMedia(arg0) {
               let obj3 = { size: "lg", color: null };
               let tmp15 = importDefault;
               obj3[1] = ThemesDefault.colors.ICON_SUBTLE;
-              obj2[3] = callback(tmp8(10244).FileIcon, obj3);
+              obj2[3] = callback(tmp8(10137).FileIcon, obj3);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";

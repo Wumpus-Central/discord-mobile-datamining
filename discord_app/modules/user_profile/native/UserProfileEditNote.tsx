@@ -17,44 +17,59 @@ export default function UserProfileEditNote(userId) {
   userId = userId.userId;
   const onSave = userId.onSave;
   const onClose = userId.onClose;
+  let flag = userId.shouldFocusInput;
+  if (flag === undefined) {
+    flag = false;
+  }
   let navigation;
   let note;
   let first;
-  closure_6 = undefined;
+  let callback;
+  let ref;
   let obj = userId(onClose[6]);
   navigation = obj.useNavigation();
   const tmp5 = onSave(onClose[7])(userId);
   note = tmp5.note;
-  obj1 = note;
+  obj1 = navigation;
   let str = note;
   if (note == null) {
     str = "";
   }
-  const tmp6 = navigation(note.useState(str), 2);
+  const tmp6 = flag(navigation.useState(str), 2);
   first = tmp6[0];
-  closure_6 = tmp8;
-  const items = [navigation, userId, note, first, onSave, onClose];
+  callback = tmp8;
+  ref = obj1.useRef(null);
+  const items = [flag];
+  const effect = obj1.useEffect(() => {
+    if (flag) {
+      const current = ref.current;
+      if (current != null) {
+        current.focus();
+      }
+    }
+  }, items);
+  const items1 = [navigation, userId, note, first, onSave, onClose];
   const layoutEffect = obj1.useLayoutEffect(() => {
     let obj = {
       headerLeft: userId(onClose[8]).getHeaderConditionalBackButton(
         () =>
           new Promise((arg0) => {
             closure_0 = arg0;
-            let str = closure_4;
-            if (closure_4 == null) {
+            let str = closure_5;
+            if (closure_5 == null) {
               str = "";
             }
             const tmp = closure_1_2;
             const tmp2 = closure_1_1(closure_1_2[9]);
             tmp2({
-              hasEdits: str !== closure_5,
+              hasEdits: str !== closure_6,
               onHasEdits: closure_1_0(closure_1_2[10]).dismissKeyboard,
               resetPending() {
-                let str = closure_4;
-                if (closure_4 == null) {
+                let str = closure_5;
+                if (closure_5 == null) {
                   str = "";
                 }
-                return closure_6(str);
+                return closure_7(str);
               },
               onConfirm() {
                 callback(true);
@@ -70,13 +85,13 @@ export default function UserProfileEditNote(userId) {
         const merged = Object.assign(arg0);
         const intl = closure_1_0(closure_1_2[12]).intl;
         obj.label = intl.string(closure_1_0(closure_1_2[12]).t["R3BPH+"]);
-        let str = closure_4;
-        if (closure_4 == null) {
+        let str = closure_5;
+        if (closure_5 == null) {
           str = "";
         }
-        obj.disabled = str === closure_5;
+        obj.disabled = str === closure_6;
         obj.onPress = function onPress() {
-          closure_1_1(closure_1_2[13]).updateNote(closure_0, closure_5);
+          closure_1_1(closure_1_2[13]).updateNote(closure_0, closure_6);
           if (callback != null) {
             callback();
           }
@@ -88,17 +103,17 @@ export default function UserProfileEditNote(userId) {
       },
     };
     navigation.setOptions(obj);
-  }, items);
+  }, items1);
   obj = { contentContainerStyle: callback2().contentContainer, keyboardShouldPersistTaps: "always", children: null };
   obj = { variant: "text-sm/semibold", children: null };
   let intl = tmp2(tmp3[12]).intl;
   obj[1] = intl.string(userId(onClose[12]).t["mQKv+v"]);
-  const items1 = [callback(userId(onClose[14]).Text, obj)];
+  const items2 = [callback(userId(onClose[14]).Text, obj)];
   obj1 = {
+    ref,
     value: first,
     onChange: tmp8,
-    maxLength: closure_6,
-    autoFocus: true,
+    maxLength: first,
     autoCorrect: false,
     autoCapitalize: "none",
     placeholder: null,
@@ -115,7 +130,7 @@ export default function UserProfileEditNote(userId) {
   obj1[6] = stringResult;
   const intl3 = tmp2(tmp3[12]).intl;
   obj1[7] = intl3.string(userId(onClose[12]).t["mQKv+v"]);
-  items1[1] = callback(userId(onClose[15]).TextArea, obj1);
-  obj[2] = items1;
-  return closure_8(first, obj);
+  items2[1] = callback(userId(onClose[15]).TextArea, obj1);
+  obj[2] = items2;
+  return ref(note, obj);
 }

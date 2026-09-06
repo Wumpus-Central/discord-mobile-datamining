@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/ChatInputCommandOptionParser.tsx
-import getEmojiUnavailableReasonDefault from "../../../utils/EmojiUtils.tsx";
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
-import registerAssetDefault from "../../../../_runtime/08052_registerAsset.js";
+import getEmojiUnavailableReasonDefault from "../../../utils/EmojiUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/08131_registerAsset.js";
 import addRule from "ChatInputParser.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";

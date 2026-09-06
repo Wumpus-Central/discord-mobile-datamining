@@ -1,15 +1,15 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCheckoutDetails.tsx
-import set from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 import getNameplateData from "../nameplates/utils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import useCurrentUser from "../hooks/useCurrentUser.tsx";
+import useMaybeFetchProfileFrameDefault from "../profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
 import useProfileEffectDefault from "../profile_effects/useProfileEffect.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateInnerDefault from "../nameplates/native/Nameplate.tsx";
-import useMaybeFetchProfileFrameDefault from "../profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
-import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import metadataDefault from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -28,21 +28,21 @@ function ProfileEffectAssetPreview(item) {
     obj[0] = tmp.profileEffectContainer;
     obj = { source: null, alt: null, style: null, resizeMode: "cover" };
     obj = { uri: null };
-    obj[0] = tmp2(10972);
+    obj[0] = tmp2(11011);
     obj[0] = obj;
     obj[1] = tmp4.accessibilityLabel;
     obj[2] = tmp.profileEffect;
-    const items = [callback(tmp2(5502), obj)];
+    const items = [callback(tmp2(5587), obj)];
     obj1 = { style: null, source: null, alt: null, resizeMode: "cover" };
     obj1[0] = tmp.profileEffect;
     const obj2 = { uri: null };
     obj2[0] = tmp4.thumbnailPreviewSrc;
     obj1[1] = obj2;
     obj1[2] = tmp4.title;
-    items[1] = callback(tmp2(5502), obj1);
+    items[1] = callback(tmp2(5587), obj1);
     obj[1] = items;
     tmp5 = callback2(View, obj);
-    const tmp2Result = tmp2(5502);
+    const tmp2Result = tmp2(5587);
   }
   return tmp5;
 }
@@ -55,9 +55,9 @@ function ProfileFrameAssetPreview(arg0) {
     obj[0] = tmp3;
     obj[1] = width;
     obj[2] = height;
-    obj[3] = tmp(709).colors.BACKGROUND_BASE_LOW;
-    tmp4 = callback(tmp(10973), obj);
-    const tmpResult = tmp(10973);
+    obj[3] = tmp(576).colors.BACKGROUND_BASE_LOW;
+    tmp4 = callback(tmp(8822), obj);
+    const tmpResult = tmp(8822);
   }
   return tmp4;
 }
@@ -69,7 +69,7 @@ function BundleAssetPreview(height) {
   c4 = undefined;
   const tmp = callback3();
   dependencyMap = tmp;
-  let obj = width(8510);
+  let obj = width(8171);
   const shopProductItems = obj.useShopProductItems(product);
   bundleWidth = small.small.bundleWidth;
   const result = width / bundleWidth;
@@ -93,7 +93,7 @@ function BundleAssetPreview(height) {
   obj = { style: memo, children: null };
   obj = { style: memo1, children: null };
   const memo2 = bundleWidth.useMemo(() => ({ width, height }), items2);
-  obj[1] = callback(height(8523), {
+  obj[1] = callback(height(8797), {
     deco: firstAvatarDecoration,
     pfx: firstProfileEffect,
     nameplate: firstNameplate,
@@ -141,9 +141,9 @@ function CollectibleProductPreviewContent(userAvatarSource) {
   if (ALL.has(product.skuId)) {
     let obj = { skuId: null, width: null, height: null };
     obj[0] = product.skuId;
-    obj[1] = tmp2(10975).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
-    obj[2] = tmp2(10975).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
-    return callback(tmp2(10975).FractionalNitroCoinIllustration, obj);
+    obj[1] = tmp2(8846).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
+    obj[2] = tmp2(8846).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
+    return callback(tmp2(8846).FractionalNitroCoinIllustration, obj);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     obj = { source: null, style: null };
     obj1 = { uri: null };
@@ -153,27 +153,27 @@ function CollectibleProductPreviewContent(userAvatarSource) {
     return callback(preloadDefault, obj);
   } else {
     const type = product.type;
-    if (tmp2(1949).CollectiblesItemType.AVATAR_DECORATION === type) {
+    if (tmp2(1889).CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj2 = { item: null, size: null, avatarSource: null, animate: false };
       obj2[0] = product.items[0];
       obj2[1] = width;
       obj2[2] = userAvatarSource.userAvatarSource;
       return callback(AvatarDecorationSampleV2Default, obj2);
-    } else if (tmp2(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+    } else if (tmp2(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj3 = { item: null };
       obj3[0] = product.items[0];
       return callback(ProfileEffectAssetPreview, obj3);
-    } else if (tmp2(1949).CollectiblesItemType.NAMEPLATE === type) {
+    } else if (tmp2(1889).CollectiblesItemType.NAMEPLATE === type) {
       const obj4 = { item: null };
       obj4[0] = product.items[0];
       return callback(NameplateAssetPreview, obj4);
-    } else if (tmp2(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+    } else if (tmp2(1889).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj5 = { item: null, width: null, height: null };
       obj5[0] = product.items[0];
       obj5[1] = width;
       obj5[2] = height;
       return callback(ProfileFrameAssetPreview, obj5);
-    } else if (tmp2(1949).CollectiblesItemType.BUNDLE === type) {
+    } else if (tmp2(1889).CollectiblesItemType.BUNDLE === type) {
       obj = { product: null, width: null, height: null };
       obj[0] = product;
       obj[1] = width;
@@ -358,8 +358,8 @@ let closure_10 = createCacheKey.createStyles((arg0) => {
   obj = {
     borderWidth: 2,
     borderColor: BORDER_FEEDBACK_CRITICAL,
-    marginHorizontal: tmp4(709).space.PX_16,
-    backgroundColor: "padding",
+    marginHorizontal: tmp4(576).space.PX_16,
+    backgroundColor: "call",
   };
   obj[0] = obj;
   return obj;
@@ -414,7 +414,7 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   const tmp = callback3();
   let obj = useCurrentUser;
   const currentUser = obj.useCurrentUser();
-  obj1 = flag2(4139);
+  obj1 = flag2(4218);
   const canUseShopDiscountsResult = obj1.canUseShopDiscounts(currentUser);
   dependencyMap = canUseShopDiscountsResult;
   const items = [product, flag2, canUseShopDiscountsResult];
@@ -468,9 +468,9 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.errorContainer;
     const obj2 = { variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
-    let intl = tmp3(1233).intl;
-    obj2[2] = intl.string(tmp3(1233).t["3YfczA"]);
-    obj1[1] = tmp10(tmp3(4474).Text, obj2);
+    let intl = tmp3(1114).intl;
+    obj2[2] = intl.string(tmp3(1114).t["3YfczA"]);
+    obj1[1] = tmp10(tmp3(4556).Text, obj2);
     flag3 = tmp10(tmp9, obj1);
   }
   items3[1] = flag3;

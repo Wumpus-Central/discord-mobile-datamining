@@ -44,8 +44,8 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
                 icon1 = guild.icon;
               }
               obj[1] = icon1;
-              const guildIconURL = tmp4(1430).getGuildIconURL(obj);
-              const tmp4Result = tmp4(1430);
+              const guildIconURL = tmp4(1396).getGuildIconURL(obj);
+              const tmp4Result = tmp4(1396);
             } else if (null != guild) {
               const tmp8 = getGuildAcronym(guild);
             }
@@ -60,9 +60,9 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.headerText = str;
             obj.headerColor = colors.headerColor;
             obj5 = set;
-            const intl = tmp16(1233).intl;
+            const intl = tmp16(1114).intl;
             const string = intl.string;
-            const t = tmp16(1233).t;
+            const t = tmp16(1114).t;
             if (isGuildStageVoiceResult) {
               let stringResult = string(t["7vb2cc"]);
             } else {
@@ -71,14 +71,14 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.acceptLabelText = stringResult;
             obj.onlineText = undefined;
             obj.memberText = undefined;
-            let tmp16Result = tmp16(4982);
+            let tmp16Result = tmp16(5028);
             const assetSource = Image.resolveAssetSource(tmp16Result.getChannelIcon(channel));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.channelIcon = uri;
-            tmp16Result = tmp16(4674);
+            tmp16Result = tmp16(4713);
             obj.titleText = tmp16Result.computeChannelName(channel, closure_10, closure_9);
             obj.titleColor = colors.titleColor;
             let tmp24;
@@ -93,7 +93,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.acceptLabelColor = colors.acceptLabelGreenColor;
             obj.embedCanBeTapped = true;
             obj.canBeAccepted = true;
-            const intl2 = tmp16(1233).intl;
+            const intl2 = tmp16(1114).intl;
             obj1 = { guildName: null };
             obj1[0] = guild.name;
             obj.channelName = intl2.formatToPlainString(getSystemLocale.t["2wimj5"], obj1);

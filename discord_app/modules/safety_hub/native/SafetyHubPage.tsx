@@ -5,7 +5,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import Button2 from "../../../design/components/Button/native/Button.native.tsx";
 import handleLogoutDefault from "../../../actions/AuthenticationActionCreators.tsx";
-import _modDef11685 from "../AutomatedUnderageAppealModalActionCreators.native.tsx";
+import _modDef11883 from "../AutomatedUnderageAppealModalActionCreators.native.tsx";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_8 from "../SafetyHubStore.tsx";
@@ -19,7 +19,7 @@ function handleLogInClick() {
   handleLogoutDefault.closeSuspendedUser();
 }
 function handleRetryClick() {
-  _modDef11685.openV2("");
+  _modDef11883.openV2("");
 }
 function AutomatedUnderageAppealStatus() {
   let hyh4ls = require;
@@ -53,7 +53,7 @@ function AutomatedUnderageAppealStatus() {
   } else if (stateFromStores === tmp5.VERIFIED) {
     obj1 = { messageType: null, button: null, children: null };
     obj1[0] = Button.HelpMessageTypes.SUCCESS;
-    const obj2 = { variant: "secondary-overlay", size: "sm", text: null, onPress: null };
+    const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl8 = getSystemLocale.intl;
     obj2[2] = intl8.string(getSystemLocale.t["2jvQ6K"]);
     obj2[3] = handleLogInClick;
@@ -82,7 +82,7 @@ function AutomatedUnderageAppealStatus() {
   } else if (stateFromStores === tmp5.UNDERAGE) {
     const obj6 = { messageType: null, button: null, children: null };
     obj6[0] = Button.HelpMessageTypes.ERROR;
-    const obj7 = { variant: "secondary-overlay", size: "sm", text: null, onPress: null };
+    const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl3 = getSystemLocale.intl;
     obj7[2] = intl3.string(getSystemLocale.t.IcA9iD);
     obj7[3] = handleRetryClick;
@@ -93,7 +93,7 @@ function AutomatedUnderageAppealStatus() {
   } else if (stateFromStores === tmp5.UNDERAGE_MANUAL_REVIEW) {
     const obj8 = { messageType: null, button: null, children: null };
     obj8[0] = Button.HelpMessageTypes.ERROR;
-    const obj9 = { variant: "secondary-overlay", size: "sm", text: null, onPress: null };
+    const obj9 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl = getSystemLocale.intl;
     obj9[2] = intl.string(getSystemLocale.t.NkTGsC);
     obj9[3] = handleRetryClick;

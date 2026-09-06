@@ -16,15 +16,15 @@ require = arg1;
 function isInteractionComponent(type) {
   type = type.type;
   if (PermissionOverwriteType.ComponentType.BUTTON === type) {
-    return type.style !== tmp(1954).ButtonStyle.LINK;
+    return type.style !== tmp(1894).ButtonStyle.LINK;
   } else {
-    if (tmp(1954).ComponentType.STRING_SELECT !== type) {
-      if (tmp(1954).ComponentType.USER_SELECT !== type) {
-        if (tmp(1954).ComponentType.ROLE_SELECT !== type) {
-          if (tmp(1954).ComponentType.MENTIONABLE_SELECT !== type) {
-            if (tmp(1954).ComponentType.CHANNEL_SELECT !== type) {
-              if (tmp(1954).ComponentType.ACTION_ROW !== type) {
-                const TEXT_INPUT = tmp(1954).ComponentType.TEXT_INPUT;
+    if (tmp(1894).ComponentType.STRING_SELECT !== type) {
+      if (tmp(1894).ComponentType.USER_SELECT !== type) {
+        if (tmp(1894).ComponentType.ROLE_SELECT !== type) {
+          if (tmp(1894).ComponentType.MENTIONABLE_SELECT !== type) {
+            if (tmp(1894).ComponentType.CHANNEL_SELECT !== type) {
+              if (tmp(1894).ComponentType.ACTION_ROW !== type) {
+                const TEXT_INPUT = tmp(1894).ComponentType.TEXT_INPUT;
               }
               return false;
             }
@@ -43,7 +43,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
   let LOADING = ActionComponentState.ActionComponentState.NORMAL;
   let tmp3 = null != interaction;
   if (tmp3) {
-    tmp3 = interaction.state !== tmp(4744).InteractionState.FAILED;
+    tmp3 = interaction.state !== tmp(4790).InteractionState.FAILED;
   }
   let DISABLED = LOADING;
   if (!tmp3) {
@@ -51,23 +51,23 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
       flag = isInteractionComponent(id);
     }
     if (flag) {
-      DISABLED = tmp(4746).ActionComponentState.DISABLED;
+      DISABLED = tmp(4792).ActionComponentState.DISABLED;
     }
     return DISABLED;
   } else {
-    if (interaction.data.interactionType !== tmp(1954).InteractionTypes.MESSAGE_COMPONENT) {
+    if (interaction.data.interactionType !== tmp(1894).InteractionTypes.MESSAGE_COMPONENT) {
       if (isInteractionComponent(id)) {
-        LOADING = tmp(4746).ActionComponentState.DISABLED;
+        LOADING = tmp(4792).ActionComponentState.DISABLED;
       }
     }
-    LOADING = tmp(4746).ActionComponentState.LOADING;
+    LOADING = tmp(4792).ActionComponentState.LOADING;
   }
 }
 function useShouldDisableInteractiveComponents(channel_id) {
   channel = channel.getChannel(channel_id);
   const items = [closure_9];
   const items1 = [channel];
-  const stateFromStores = channel(586).useStateFromStores(
+  const stateFromStores = channel(504).useStateFromStores(
     items,
     () => {
       let guild_id;
@@ -82,10 +82,10 @@ function useShouldDisableInteractiveComponents(channel_id) {
     },
     items1,
   );
-  const obj2 = channel(586);
+  const obj2 = channel(504);
   const items2 = [closure_6];
   const items3 = [channel];
-  const stateFromStores1 = channel(586).useStateFromStores(
+  const stateFromStores1 = channel(504).useStateFromStores(
     items2,
     () => {
       let guild_id;
@@ -100,9 +100,9 @@ function useShouldDisableInteractiveComponents(channel_id) {
     },
     items3,
   );
-  const obj3 = channel(586);
+  const obj3 = channel(504);
   const items4 = [closure_8, closure_10];
-  const stateFromStores2 = channel(586).useStateFromStores(items4, () => {
+  const stateFromStores2 = channel(504).useStateFromStores(items4, () => {
     const currentUser = closure_1_10.getCurrentUser();
     let guild_id;
     if (channel != null) {
@@ -129,14 +129,14 @@ function useShouldDisableInteractiveComponents(channel_id) {
     }
     return flag;
   });
-  const obj4 = channel(586);
+  const obj4 = channel(504);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  let tmpResult = tmp(6125);
+  let tmpResult = tmp(7269);
   const isThreadModerator = tmpResult.useIsThreadModerator(channel);
-  tmpResult = tmp(6125);
+  tmpResult = tmp(7269);
   let tmp9 = !stateFromStores;
   const canUnarchiveThread = tmpResult.useCanUnarchiveThread(channel);
   if (stateFromStores) {

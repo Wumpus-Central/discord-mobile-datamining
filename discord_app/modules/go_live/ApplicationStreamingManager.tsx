@@ -46,7 +46,7 @@ const prototype = function BaseApplicationStreamingManager() {
   require = applyArgumentsResult;
   applyArgumentsResult.handleStreamWatch = function handleStreamWatch(streamKey) {
     streamKey = streamKey.streamKey;
-    const channel = store.getChannel(streamKey(4544).decodeStreamKey(streamKey).channelId);
+    const channel = store.getChannel(streamKey(4612).decodeStreamKey(streamKey).channelId);
     if (channel != null) {
       const isGuildStageVoiceResult = channel.isGuildStageVoice();
     }
@@ -73,7 +73,7 @@ const prototype = function BaseApplicationStreamingManager() {
     } else {
       let timeout = dependencyMap3[streamKey];
       if (timeout == null) {
-        timeout = new streamKey(4362).Timeout();
+        timeout = new streamKey(4447).Timeout();
       }
       dependencyMap3[streamKey] = timeout;
       timeout.start(isGuildStageVoiceResult ? closure_16 : closure_15, () => {
@@ -128,8 +128,8 @@ const prototype = function BaseApplicationStreamingManager() {
         set.delete(encodeStreamKeyResult);
       }
     });
-    const obj2 = applyArgumentsResult(4544);
-    memberCount = memberCount.getMemberCount(applyArgumentsResult(4544).decodeStreamKey(streamKey).guildId);
+    const obj2 = applyArgumentsResult(4612);
+    memberCount = memberCount.getMemberCount(applyArgumentsResult(4612).decodeStreamKey(streamKey).guildId);
   };
   applyArgumentsResult.handleStreamUpdate = function handleStreamUpdate(arg0) {
     if (dependencyMap3[arg0.streamKey] != null) {
@@ -201,16 +201,16 @@ const prototype = function BaseApplicationStreamingManager() {
               if (null == obj3.getActiveStreamForUser(ownerId, channel.getGuildId())) {
                 const streamForUser = obj3.getStreamForUser(ownerId, channel.getGuildId());
                 if (null != streamForUser) {
-                  const encodeStreamKeyResult = applyArgumentsResult(4544).encodeStreamKey(streamForUser);
+                  const encodeStreamKeyResult = applyArgumentsResult(4612).encodeStreamKey(streamForUser);
                   if (encodeStreamKeyResult !== c17) {
                     const isStreamMarkedFullResult = obj3.isStreamMarkedFull(encodeStreamKeyResult);
                     if (!isStreamMarkedFullResult) {
                       c17 = encodeStreamKeyResult;
-                      tmp2(4663).watchStream(streamForUser, { noFocus: true });
-                      const tmp2Result = tmp2(4663);
+                      tmp2(4702).watchStream(streamForUser, { noFocus: true });
+                      const tmp2Result = tmp2(4702);
                     }
                   }
-                  let obj = applyArgumentsResult(4544);
+                  let obj = applyArgumentsResult(4612);
                   tmp2 = applyArgumentsResult;
                 }
               }
@@ -329,7 +329,7 @@ const prototype = function BaseApplicationStreamingManager() {
       channelId = currentUserActiveStream.channelId;
     }
     if (channelId === region.channelId) {
-      const encodeStreamKeyResult = applyArgumentsResult(4544).encodeStreamKey(currentUserActiveStream);
+      const encodeStreamKeyResult = applyArgumentsResult(4612).encodeStreamKey(currentUserActiveStream);
       if (region == null) {
         region = store2.getPreferredRegion();
       }
@@ -338,10 +338,10 @@ const prototype = function BaseApplicationStreamingManager() {
         tmp7 = region !== store2.getRegion(store3.getHostname(encodeStreamKeyResult));
       }
       if (tmp7) {
-        tmp3(4663).changeStreamRegion(encodeStreamKeyResult, region);
-        const tmp3Result = tmp3(4663);
+        tmp3(4702).changeStreamRegion(encodeStreamKeyResult, region);
+        const tmp3Result = tmp3(4702);
       }
-      const obj = applyArgumentsResult(4544);
+      const obj = applyArgumentsResult(4612);
       tmp3 = applyArgumentsResult;
     }
   };
@@ -356,7 +356,7 @@ const prototype = function BaseApplicationStreamingManager() {
           let tmp7 = callback;
           let tmp8 = applyArgumentsResult;
           let tmp9 = dependencyMap;
-          let obj = applyArgumentsResult(4544);
+          let obj = applyArgumentsResult(4612);
           let tmp10 = nextResult;
           let tmp11 = callback(obj.encodeStreamKey(currentUserActiveStream), tmp6.rtcRegion);
         }

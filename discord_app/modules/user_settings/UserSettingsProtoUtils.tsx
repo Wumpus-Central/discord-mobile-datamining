@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/UserSettingsProtoUtils.tsx
 import set from "../../../_runtime/00002_set.js";
-import b64ToProto from "UserSettingsUtils.tsx";
+import BINARY_READ_OPTIONS from "../../utils/ProtoUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 
@@ -24,7 +24,7 @@ export const createModifiedProto = function createModifiedProto(
   closure_02,
 ) {
   if (null != closure_1) {
-    let fromBinaryResult = closure_0.fromBinary(closure_0.toBinary(closure_1), b64ToProto.BINARY_READ_OPTIONS);
+    let fromBinaryResult = closure_0.fromBinary(closure_0.toBinary(closure_1), BINARY_READ_OPTIONS.BINARY_READ_OPTIONS);
     const toBinaryResult = closure_0.toBinary(closure_1);
   } else {
     fromBinaryResult = closure_0.create();

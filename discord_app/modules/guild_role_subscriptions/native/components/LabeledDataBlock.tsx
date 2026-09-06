@@ -51,10 +51,10 @@ export default function LabeledDataBlock(arg0) {
     obj1 = { accessibilityRole: "button", onPress: null, children: null };
     obj1[1] = onPressIcon;
     const obj2 = { size: null, source: null };
-    obj2[0] = tmp5(1296).Icon.Sizes.SMALL;
+    obj2[0] = tmp5(1178).Icon.Sizes.SMALL;
     obj2[1] = icon;
-    obj1[2] = tmp4(tmp5(1296).Icon, obj2);
-    tmp4Result = tmp4(tmp5(5077).PressableOpacity, obj1);
+    obj1[2] = tmp4(tmp5(1178).Icon, obj2);
+    tmp4Result = tmp4(tmp5(5123).PressableOpacity, obj1);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;
@@ -64,7 +64,7 @@ export default function LabeledDataBlock(arg0) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.data;
     obj3[1] = children;
-    tmp4Result = tmp4(tmp5(1296).LegacyText, obj3);
+    tmp4Result = tmp4(tmp5(1178).LegacyText, obj3);
   }
   items2[1] = tmp4Result;
   obj[1] = items2;

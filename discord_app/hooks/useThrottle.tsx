@@ -29,9 +29,9 @@ function useThrottledFunction(callback4, arg1, items4, sharedValue) {
 }
 const result = require("set").fileFinishedImporting("hooks/useThrottle.tsx");
 
-export const useThrottledState = (stateFromStores) => {
-  let current = stateFromStores;
-  let _require = stateFromStores;
+export const useThrottledState = (first) => {
+  let current = first;
+  let _require = first;
   let items = arg2;
   if (arg2 === undefined) {
     items = [];

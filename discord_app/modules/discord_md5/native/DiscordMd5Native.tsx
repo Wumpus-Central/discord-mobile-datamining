@@ -21,8 +21,8 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
       error = new Error("RTNFileManager doesn't exist?");
       let rejectResult = Promise.reject(error);
     } else {
-      rejectResult = tmp3(1270).getFileHash(uri, "md5", num);
-      const tmp3Result = tmp3(1270);
+      rejectResult = tmp3(1152).getFileHash(uri, "md5", num);
+      const tmp3Result = tmp3(1152);
     }
     tmp3 = importDefault;
   } else {

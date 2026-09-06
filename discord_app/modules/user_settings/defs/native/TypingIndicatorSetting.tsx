@@ -7,15 +7,14 @@ import messagesProxyDefault from "../../../custom_typing_indicator/intl/CustomTy
 import apexExperiment from "../../../custom_typing_indicator/CustomTypingIndicatorExperiment.tsx";
 import ChatDotsIcon from "../../../../design/components/Icon/native/redesign/generated/ChatDotsIcon.tsx";
 import SettingsBadgeType from "../../../settings/native/renderer/SettingRendererTypes.tsx";
-import createDismissiblePremiumNewBadgeRouteProps from "DismissiblePremiumNewBadgeRouteProps.tsx";
+import useAlwaysShow from "DismissibleBadgeUtils.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { CustomTypingIndicatorEditScreen } from "../../../custom_typing_indicator/native/CustomTypingIndicatorEditScreen.tsx";
 
-const dismissiblePremiumNewBadgeRouteProps =
-  createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(
-    DismissibleContent.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
-  );
-({ useTrailing, usePreNavigationAction } = dismissiblePremiumNewBadgeRouteProps);
+const dismissibleBadgeRouteProps = useAlwaysShow.createDismissibleBadgeRouteProps(
+  DismissibleContent.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
+);
+({ useTrailing, usePreNavigationAction } = dismissibleBadgeRouteProps);
 obj = {
   useTitle() {
     const intl = getSystemLocale.intl;

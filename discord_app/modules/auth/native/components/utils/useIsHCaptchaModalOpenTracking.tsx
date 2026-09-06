@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting(
 );
 
 export const useIsHCaptchaModalOpenTracking = function useIsHCaptchaModalOpenTracking() {
-  context = React.useContext(context(15781).TrackRegistrationContext);
+  context = React.useContext(context(15943).TrackRegistrationContext);
   const items = [context];
   const layoutEffect = React.useLayoutEffect(() => {
     const rootNavigationRef = context(closure_1_1[4]).getRootNavigationRef();

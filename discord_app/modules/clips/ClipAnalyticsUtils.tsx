@@ -1,26 +1,25 @@
 // discord_app/modules/clips/ClipAnalyticsUtils.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
-import isEqualDefault from "../../../_runtime/04643_isEqual.js";
-import apexExperiment from "ClipsV3RuntimeExperiment.tsx";
+import isEqualDefault from "../../../_runtime/04679_isEqual.js";
 import parseEncoder from "../../lib/VideoQualityStats.tsx";
 import closure_3 from "../../stores/ApplicationStreamingSettingsStore.tsx";
 import closure_4 from "../../stores/ApplicationStreamingStore.tsx";
 import closure_5 from "../../stores/RTCConnectionStore.tsx";
 import closure_6 from "../../stores/StreamRTCConnectionStore.tsx";
 import closure_7 from "ClipsStore.tsx";
-import { ClipSignalTypes } from "ClipsConstants.tsx";
+import result from "ClipsConstants.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
-function getClipSignalTypes(remoteClipId) {
+function getClipSignalTypes(arg0) {
   const items = [];
-  const iter = remoteClipId.timeline[Symbol.iterator]();
+  const iter = arg0.timeline[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let type = nextResult.signal.type;
-    let tmp3 = ClipSignalTypes;
-    if (ClipSignalTypes.MANUAL === type) {
+    let tmp3 = constants;
+    if (constants.MANUAL === type) {
       let arr = items.push("manual");
     } else if (tmp3.DISTRIBUTED === type) {
       arr = items.push("distributed");
@@ -59,81 +58,81 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
     num2 = 0;
   }
   obj.frames_encoded_nvidia_cuda = num2;
-  let num3 = map.get(tmp3(7497).Encoders.NVIDIA_DIRECT_3D);
+  let num3 = map.get(tmp3(7741).Encoders.NVIDIA_DIRECT_3D);
   if (num3 == null) {
     num3 = 0;
   }
   obj.frames_encoded_nvidia_direct3d = num3;
-  let num4 = map.get(tmp3(7497).Encoders.OPENH264);
+  let num4 = map.get(tmp3(7741).Encoders.OPENH264);
   if (num4 == null) {
     num4 = 0;
   }
   obj.frames_encoded_openh264 = num4;
-  let num5 = map.get(tmp3(7497).Encoders.VIDEOTOOLBOX);
+  let num5 = map.get(tmp3(7741).Encoders.VIDEOTOOLBOX);
   if (num5 == null) {
     num5 = 0;
   }
   obj.frames_encoded_videotoolbox = num5;
-  let num6 = map.get(tmp3(7497).Encoders.AMD_DIRECT_3D);
+  let num6 = map.get(tmp3(7741).Encoders.AMD_DIRECT_3D);
   if (num6 == null) {
     num6 = 0;
   }
   obj.frames_encoded_amd_direct3d = num6;
-  let num7 = map.get(tmp3(7497).Encoders.AMD_VAAPI);
+  let num7 = map.get(tmp3(7741).Encoders.AMD_VAAPI);
   if (num7 == null) {
     num7 = 0;
   }
   obj.frames_encoded_amd_vaapi = num7;
-  let num8 = map.get(tmp3(7497).Encoders.INTEL);
+  let num8 = map.get(tmp3(7741).Encoders.INTEL);
   if (num8 == null) {
     num8 = 0;
   }
   obj.frames_encoded_intel = num8;
-  let num9 = map.get(tmp3(7497).Encoders.INTEL_DIRECT_3D);
+  let num9 = map.get(tmp3(7741).Encoders.INTEL_DIRECT_3D);
   if (num9 == null) {
     num9 = 0;
   }
   obj.frames_encoded_intel_direct3d = num9;
-  let num10 = map.get(tmp3(7497).Encoders.WMF_DIRECT_3D_INTEL);
+  let num10 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_INTEL);
   if (num10 == null) {
     num10 = 0;
   }
   obj.frames_encoded_wmf_direct3d_intel = num10;
-  let num11 = map.get(tmp3(7497).Encoders.WMF_DIRECT_3D_NVIDIA);
+  let num11 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_NVIDIA);
   if (num11 == null) {
     num11 = 0;
   }
   obj.frames_encoded_wmf_direct3d_nvidia = num11;
-  let num12 = map.get(tmp3(7497).Encoders.WMF_DIRECT_3D_AMD);
+  let num12 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_AMD);
   if (num12 == null) {
     num12 = 0;
   }
   obj.frames_encoded_wmf_direct3d_amd = num12;
-  let num13 = map.get(tmp3(7497).Encoders.WMF_DIRECT_3D);
+  let num13 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D);
   if (num13 == null) {
     num13 = 0;
   }
-  let num14 = map.get(tmp3(7497).Encoders.WMF_DIRECT_3D_INTEL);
+  let num14 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_INTEL);
   if (num14 == null) {
     num14 = 0;
   }
   const sum = num13 + num14;
-  let num15 = map.get(tmp3(7497).Encoders.WMF_DIRECT_3D_NVIDIA);
+  let num15 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_NVIDIA);
   if (num15 == null) {
     num15 = 0;
   }
   const sum1 = sum + num15;
-  let num16 = map.get(tmp3(7497).Encoders.WMF_DIRECT_3D_AMD);
+  let num16 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_AMD);
   if (num16 == null) {
     num16 = 0;
   }
   obj.frames_encoded_wmf_direct3d = sum1 + num16;
-  let num17 = map.get(tmp3(7497).Encoders.UNCATEGORIZED);
+  let num17 = map.get(tmp3(7741).Encoders.UNCATEGORIZED);
   if (num17 == null) {
     num17 = 0;
   }
   obj.frames_encoded_uncategorized = num17;
-  let num18 = map.get(tmp3(7497).Encoders.UNKNOWN);
+  let num18 = map.get(tmp3(7741).Encoders.UNKNOWN);
   if (num18 == null) {
     num18 = 0;
   }
@@ -159,7 +158,8 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-let result = require("set").fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
+({ ClipSignalTypes: closure_8, CLIP_RUNTIME: c9 } = result);
+result = require("set").fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
 
 export const getClipType = function getClipType(decision) {
   decision = decision.decision;
@@ -170,7 +170,7 @@ export const getClipType = function getClipType(decision) {
       type = signal.type;
     }
   }
-  if (ClipSignalTypes.MANUAL === type) {
+  if (constants.MANUAL === type) {
     return "manual";
   } else if (tmp2.DISTRIBUTED === type) {
     return "distributed";
@@ -195,7 +195,7 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
     }
   }
   let str = "manual";
-  if (ClipSignalTypes.MANUAL !== type) {
+  if (constants.MANUAL !== type) {
     str = "distributed";
     if (tmp2.DISTRIBUTED !== type) {
       if (tmp2.LAUGHTER !== type) {
@@ -213,8 +213,8 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
     is_candidate: clip.isCandidate,
   };
 };
-export const getClipContextProperties = function getClipContextProperties(trackClipsShared) {
-  const obj = { clip_runtime: apexExperiment.getClipsRuntime(trackClipsShared), current_clip_session_id: null };
+export const getClipContextProperties = function getClipContextProperties() {
+  const obj = { clip_runtime: closure_9, current_clip_session_id: null };
   const currentClipsSession = store.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
@@ -240,7 +240,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
     }
   }
   let str = "manual";
-  if (ClipSignalTypes.MANUAL !== type) {
+  if (constants.MANUAL !== type) {
     str = "distributed";
     if (tmp7.DISTRIBUTED !== type) {
       if (tmp7.LAUGHTER !== type) {
@@ -259,7 +259,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
     is_candidate: decision.isCandidate,
   };
   const merged = Object.assign(obj);
-  obj1 = { clip_runtime: apexExperiment.getClipsRuntime("getPreSaveClipAnalytics"), current_clip_session_id: null };
+  obj1 = { clip_runtime: closure_9, current_clip_session_id: null };
   const currentClipsSession = store.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
@@ -289,15 +289,10 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   return obj;
 };
 export { getPostSaveClipAnalytics };
-export const getClipSavedAnalytics = function getClipSavedAnalytics(arg0, viewerDecodeFps, remoteClipId) {
-  const tmp = getPostSaveClipAnalytics(arg0, viewerDecodeFps);
-  ({ clipSaveTimeMs: tmp.clip_save_time_ms, clipSizeBytes: tmp.clip_size_bytes } = viewerDecodeFps);
-  if (null != viewerDecodeFps.viewerDecodeFps) {
-    ({ viewerDecodeFps: tmp.decode_fps_during_clip, viewerEncodeFps: tmp.encode_fps_during_clip } = viewerDecodeFps);
-    tmp.target_fps = null;
-    tmp.remote_clip_id = remoteClipId.remoteClipId;
-  }
-  tmp.clip_signal_types = getClipSignalTypes(remoteClipId);
+export const getClipSavedAnalytics = function getClipSavedAnalytics(arg0, framesEncodedByEncoder) {
+  const tmp = getPostSaveClipAnalytics(arg0, framesEncodedByEncoder);
+  ({ clipSaveTimeMs: tmp.clip_save_time_ms, clipSizeBytes: tmp.clip_size_bytes } = framesEncodedByEncoder);
+  tmp.clip_signal_types = getClipSignalTypes(arg2);
   if (null != arg3) {
     const _Object = Object;
     const merged = Object.assign(tmp, arg3);
@@ -444,8 +439,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const values = Object.values(obj);
   if (!values.every((arg0) => null == arg0)) {
     obj = { clip_runtime: null, current_clip_session_id: null };
-    const obj3 = expandEventPropertiesDefault;
-    obj[0] = apexExperiment.getClipsRuntime("updateClipMetadata");
+    obj[0] = closure_9;
     const currentClipsSession = store.getCurrentClipsSession();
     let id;
     if (currentClipsSession != null) {
@@ -456,7 +450,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
     const merged = Object.assign(obj);
     obj.clip_uuid = editMetadata.id;
     const merged1 = Object.assign(obj);
-    obj3.track(AnalyticEvents.CLIP_EDITED, obj);
-    const obj5 = apexExperiment;
+    expandEventPropertiesDefault.track(AnalyticEvents.CLIP_EDITED, obj);
+    const obj3 = expandEventPropertiesDefault;
   }
 };

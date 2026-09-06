@@ -11,7 +11,7 @@ export default function useMessagePreview(guild_id) {
   ({ unread, disabled } = arg1);
   guild_id = guild_id.guild_id;
   const items = [closure_3];
-  const stateFromStores = guild_id(586).useStateFromStores(items, () => {
+  const stateFromStores = guild_id(504).useStateFromStores(items, () => {
     const guilds = closure_1_3.settings.guilds;
     let tmp2 = null;
     if (null != guild_id) {
@@ -36,9 +36,9 @@ export default function useMessagePreview(guild_id) {
     const MessagePreviewSetting = guild_id(closure_1_2[2]).MessagePreviewSetting;
     setting = MessagePreviewSetting.getSetting();
   });
-  const obj = guild_id(586);
+  const obj = guild_id(504);
   const items1 = [closure_4];
-  const stateFromStores1 = guild_id(586).useStateFromStores(items1, () => {
+  const stateFromStores1 = guild_id(504).useStateFromStores(items1, () => {
     let hasUnreadResult = null != guild_id;
     if (hasUnreadResult) {
       hasUnreadResult = closure_1_4.hasUnread(tmp.id);
@@ -49,10 +49,10 @@ export default function useMessagePreview(guild_id) {
     disabled = useIsNsfwGatedDefault(guild_id);
   }
   if (!disabled) {
-    disabled = stateFromStores === tmp(4171).MessagePreviewTypes.NONE;
+    disabled = stateFromStores === tmp(7879).MessagePreviewTypes.NONE;
   }
   if (!disabled) {
-    let tmp6 = stateFromStores === tmp(4171).MessagePreviewTypes.UNREADS;
+    let tmp6 = stateFromStores === tmp(7879).MessagePreviewTypes.UNREADS;
     if (tmp6) {
       if (unread == null) {
         unread = stateFromStores1;

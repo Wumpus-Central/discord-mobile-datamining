@@ -51,7 +51,7 @@ export const useActiveThreadIds = function useActiveThreadIds(arg0) {
 };
 export const useActiveThreads = function useActiveThreads(channel) {
   let memo = channel;
-  let obj = memo(586);
+  let obj = memo(504);
   const items = [closure_7, closure_9, closure_6];
   const items1 = [,];
   ({ guild_id: arr2[0], id: arr2[1] } = channel);
@@ -82,11 +82,11 @@ export const useActiveThreads = function useActiveThreads(channel) {
   const items3 = [closure_11];
   const items4 = [memo];
   const tmp3 = callback(
-    memo(586).useStateFromStores(
+    memo(504).useStateFromStores(
       items3,
       () => stateFromStoresArray(closure_1_2[12]).partition(memo, (id) => closure_11.hasJoined(id)),
       items4,
-      memo(586).statesWillNeverBeEqual,
+      memo(504).statesWillNeverBeEqual,
     ),
     2,
   );

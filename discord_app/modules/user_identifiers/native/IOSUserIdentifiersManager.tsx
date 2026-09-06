@@ -1,6 +1,6 @@
 // discord_app/modules/user_identifiers/native/IOSUserIdentifiersManager.tsx
+import _modDef1232 from "../../../utils/SentryUtils.native.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef1205 from "../../../utils/SentryUtils.native.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -237,7 +237,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
 };
 prototype["trackSync"] = function trackSync(empty_id, c4, verified) {
   if (null != c4) {
-    let obj = _modDef1205;
+    let obj = _modDef1232;
     obj = { tags: null };
     obj = { source: "ios_user_identifiers_manager", step: "sync_app_transaction_id", reason: null };
     obj[2] = empty_id;

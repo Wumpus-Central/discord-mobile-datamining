@@ -25,7 +25,7 @@ function handleChannelSelect(opensChannel) {
           fromChannelId = lastSelectedChannelId;
         }
         if (undefined === fromGuildId) {
-          channel = channel.getChannel(fromChannelId);
+          const channel = store.getChannel(fromChannelId);
           guildId = undefined;
           if (channel != null) {
             guildId = channel.getGuildId();
@@ -44,6 +44,7 @@ function handleChannelSelect(opensChannel) {
           to_guild_id: null,
           from_channel_id: null,
           to_channel_id: null,
+          channel_type: null,
           changed_guild: null,
           warm_message_cache: null,
         };
@@ -51,8 +52,17 @@ function handleChannelSelect(opensChannel) {
         obj[2] = guildId;
         obj[3] = fromChannelId;
         obj[4] = channelId;
-        obj[5] = fromGuildId !== guildId;
-        obj[6] = closure_4.hasPresent(channelId);
+        const channel1 = store.getChannel(channelId);
+        let type;
+        if (channel1 != null) {
+          type = channel1.type;
+        }
+        if (type == null) {
+          type = null;
+        }
+        obj[5] = type;
+        obj[6] = fromGuildId !== guildId;
+        obj[7] = closure_4.hasPresent(channelId);
         obj[2] = obj;
         getLastBundleDefault.beginNavigation(obj);
         const obj3 = getLastBundleDefault;

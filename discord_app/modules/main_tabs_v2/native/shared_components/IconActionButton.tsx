@@ -85,7 +85,7 @@ let closure_7 = importAllResult.memo((color) => {
   const items = [tmp, color, source];
   if (null != IconComponent) {
     let obj = { size: "sm", color: null };
-    obj[1] = color(709).colors.ICON_SUBTLE;
+    obj[1] = color(576).colors.ICON_SUBTLE;
     let tmp2Result = callback(IconComponent, obj);
   } else {
     tmp2Result = tmp2();
@@ -146,7 +146,7 @@ export default function IconActionButton(variant) {
     obj[1] = buttonTextColor;
     obj[2] = tmp.actionText;
     obj[3] = buttonText;
-    tmp10Result = tmp10(tmp2(4474).Text, obj);
+    tmp10Result = tmp10(tmp2(4556).Text, obj);
   }
   items1[1] = tmp10Result;
   tmp10Result = null;
@@ -154,7 +154,7 @@ export default function IconActionButton(variant) {
     obj = { style: null, value: null };
     obj[0] = tmp.countStyle;
     obj[1] = num;
-    tmp10Result = tmp10(tmp2(1296).Badge, obj);
+    tmp10Result = tmp10(tmp2(1178).Badge, obj);
   }
   items1[2] = tmp10Result;
   if (badge) {

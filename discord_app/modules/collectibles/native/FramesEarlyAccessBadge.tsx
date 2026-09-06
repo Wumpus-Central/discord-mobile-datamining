@@ -43,8 +43,8 @@ function BadgeWithTooltip(tooltipPosition) {
   const tmp5 = callback(callback.useState(false), 2);
   first = tmp5[0];
   dependencyMap = tmp5[1];
-  const intl = tooltipPosition(1233).intl;
-  const stringResult = intl.string(tooltipPosition(1233).t["L9B+ZZ"]);
+  const intl = tooltipPosition(1114).intl;
+  const stringResult = intl.string(tooltipPosition(1114).t["L9B+ZZ"]);
   callback = stringResult;
   callback = callback.useCallback(() => {
     callback(false);
@@ -54,7 +54,7 @@ function BadgeWithTooltip(tooltipPosition) {
     () => ({ position: tooltipPosition, label: c3, visible: first, onPress: callback }),
     items,
   );
-  let obj = tooltipPosition(8992);
+  let obj = tooltipPosition(11128);
   const tooltip = obj.useTooltip(ref, memo);
   const items1 = [first];
   const effect = callback.useEffect(() => {
@@ -69,14 +69,14 @@ function BadgeWithTooltip(tooltipPosition) {
   const callback1 = callback.useCallback(() => {
     callback((arg0) => !arg0);
   }, []);
-  const tmp2 = first(4413)();
-  const isThemeDarkResult = tooltipPosition(1362).isThemeDark(tmp2);
+  const tmp2 = first(4495)();
+  const isThemeDarkResult = tooltipPosition(4411).isThemeDark(tmp2);
   let str = "text-overlay-light";
   if (isThemeDarkResult) {
     str = "control-overlay-primary-text-default";
   }
-  const intl2 = tmp7(1233).intl;
-  const stringResult1 = intl2.string(tooltipPosition(1233).t["1m6qcO"]);
+  const intl2 = tmp7(1114).intl;
+  const stringResult1 = intl2.string(tooltipPosition(1114).t["1m6qcO"]);
   obj = {
     ref,
     onPress: callback1,
@@ -88,9 +88,9 @@ function BadgeWithTooltip(tooltipPosition) {
     children: null,
   };
   items2 = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
-  const items3 = [callback2(tooltipPosition(8107).NitroWheelIcon, { size: "xs", color: str })];
+  const items3 = [callback2(tooltipPosition(8662).NitroWheelIcon, { size: "xs", color: str })];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult1 };
-  items3[1] = callback2(tooltipPosition(4474).Text, obj);
+  items3[1] = callback2(tooltipPosition(4556).Text, obj);
   obj[7] = items3;
   return callback3(closure_5, obj);
 }
@@ -102,7 +102,7 @@ function StaticBadge() {
   if (isThemeDarkResult) {
     str = "control-overlay-primary-text-default";
   }
-  const intl = tmp4(1233).intl;
+  const intl = tmp4(1114).intl;
   const stringResult = intl.string(getSystemLocale.t["1m6qcO"]);
   obj = { accessibilityLabel: stringResult, style: items, children: null };
   items = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];

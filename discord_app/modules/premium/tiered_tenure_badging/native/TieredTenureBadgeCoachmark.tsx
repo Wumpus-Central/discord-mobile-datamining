@@ -49,19 +49,19 @@ export default function TieredTenureBadgeCoachmark(arg0) {
   let first;
   dependencyMap = undefined;
   ({ targetRef, badgeId } = arg0);
-  const tieredTenureBadge = tieredTenureBadgeData(7389).getTieredTenureBadge(badgeId);
+  const tieredTenureBadge = tieredTenureBadgeData(7634).getTieredTenureBadge(badgeId);
   tieredTenureBadgeData = null;
   if (null != tieredTenureBadge) {
-    let tmpResult = tmp(7389);
+    let tmpResult = tmp(7634);
     tieredTenureBadgeData = tmpResult.getTieredTenureBadgeData(tieredTenureBadge);
   }
   if (null != tieredTenureBadgeData) {
-    const items = [tmp(1372).DismissibleContent.TIERED_TENURE_BADGE_COACHMARK];
+    const items = [tmp(1943).DismissibleContent.TIERED_TENURE_BADGE_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];
   }
-  tmpResult = tmp(6261);
+  tmpResult = tmp(7388);
   const tmp5 = callback(tmpResult.useSelectedDismissibleContent(items1), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
@@ -79,11 +79,11 @@ export default function TieredTenureBadgeCoachmark(arg0) {
       buttonLabel: null,
       buttonVariant: "experimental_premium-primary",
     };
-    const intl = tieredTenureBadgeData(1233).intl;
-    obj[1] = intl.string(tieredTenureBadgeData(1233).t.Ajj8iG);
-    const intl2 = tieredTenureBadgeData(1233).intl;
-    obj[2] = intl2.string(tieredTenureBadgeData(1233).t["WUNqD/"]);
-    obj[4] = first === tieredTenureBadgeData(1372).DismissibleContent.TIERED_TENURE_BADGE_COACHMARK;
+    const intl = tieredTenureBadgeData(1114).intl;
+    obj[1] = intl.string(tieredTenureBadgeData(1114).t.Ajj8iG);
+    const intl2 = tieredTenureBadgeData(1114).intl;
+    obj[2] = intl2.string(tieredTenureBadgeData(1114).t["WUNqD/"]);
+    obj[4] = first === tieredTenureBadgeData(1943).DismissibleContent.TIERED_TENURE_BADGE_COACHMARK;
     obj[5] = function onDismiss() {
       callback(closure_1_7.USER_DISMISS);
     };
@@ -96,11 +96,11 @@ export default function TieredTenureBadgeCoachmark(arg0) {
       obj = { screen: closure_1_6.PREMIUM };
       obj.openUserSettings(obj);
     };
-    const intl3 = tieredTenureBadgeData(1233).intl;
-    obj[8] = intl3.string(tieredTenureBadgeData(1233).t.RzWDqY);
+    const intl3 = tieredTenureBadgeData(1114).intl;
+    obj[8] = intl3.string(tieredTenureBadgeData(1114).t.RzWDqY);
     return obj;
   }, items2);
-  let obj = tieredTenureBadgeData(7389);
-  const coachmark = tieredTenureBadgeData(8991).useCoachmark(targetRef, memo);
+  let obj = tieredTenureBadgeData(7634);
+  const coachmark = tieredTenureBadgeData(11127).useCoachmark(targetRef, memo);
   return null;
 }

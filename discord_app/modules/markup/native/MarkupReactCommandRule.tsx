@@ -117,9 +117,9 @@ function handleLongPressCommandMention(arg0, arg1) {
   const DeveloperMode = require("../../user_settings/UserSettings.tsx").DeveloperMode;
   if (DeveloperMode.getSetting()) {
     obj = { label: null, IconComponent: null, onPress: null };
-    const intl2 = tmp(1233).intl;
-    obj[0] = intl2.string(tmp(1233).t.oJ1Muw);
-    obj[1] = tmp(9065).IdIcon;
+    const intl2 = tmp(1114).intl;
+    obj[0] = intl2.string(tmp(1114).t.oJ1Muw);
+    obj[1] = tmp(10629).IdIcon;
     obj[2] = function onPress() {
       callback(closure_1_2[14]).presentIdCopied();
       const obj = callback(closure_1_2[14]);
@@ -141,7 +141,7 @@ export default function MarkupReactCommandRule(node) {
   closure_1 = undefined;
   dependencyMap = undefined;
   ({ output, state, style } = node);
-  closure_1 = null != React.useContext(node(9067).AppLauncherContext);
+  closure_1 = null != React.useContext(node(11215).AppLauncherContext);
   dependencyMap = callback();
   let obj = {
     style,
@@ -178,8 +178,8 @@ export default function MarkupReactCommandRule(node) {
         return openCustomKeyboardResult;
       };
       obj[6] = function onSetCommand() {
-        callback(9069)();
-        callback(4445).hideActionSheet();
+        callback(11217)();
+        callback(4527).hideActionSheet();
         if (bestActiveInput != null) {
           obj2.openSystemKeyboard();
         }
@@ -190,7 +190,7 @@ export default function MarkupReactCommandRule(node) {
             applicationCommandManager.setPartialCommand(
               commandId,
               commandName,
-              node(7278).ApplicationCommandTriggerLocations.MENTION,
+              node(7523).ApplicationCommandTriggerLocations.MENTION,
             );
           }
         }
@@ -202,9 +202,9 @@ export default function MarkupReactCommandRule(node) {
     },
     children: null,
   };
-  const items = ["/", node(8017).smartOutput(node, output, state)];
+  const items = ["/", node(8096).smartOutput(node, output, state)];
   obj[4] = items;
-  return jsxs(node(4474).Text, {
+  return jsxs(node(4556).Text, {
     style,
     variant: "text-md/bold",
     onPress() {
@@ -239,8 +239,8 @@ export default function MarkupReactCommandRule(node) {
         return openCustomKeyboardResult;
       };
       obj[6] = function onSetCommand() {
-        callback(9069)();
-        callback(4445).hideActionSheet();
+        callback(11217)();
+        callback(4527).hideActionSheet();
         if (bestActiveInput != null) {
           obj2.openSystemKeyboard();
         }
@@ -251,7 +251,7 @@ export default function MarkupReactCommandRule(node) {
             applicationCommandManager.setPartialCommand(
               commandId,
               commandName,
-              node(7278).ApplicationCommandTriggerLocations.MENTION,
+              node(7523).ApplicationCommandTriggerLocations.MENTION,
             );
           }
         }

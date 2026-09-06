@@ -48,7 +48,7 @@ class VoicePanelFloatingCTAContainer {
     channelId = context.channelId;
     safeArea = context.safeArea;
     tmp5 = require("useChannelFloatingCTAContent")(channelId);
-    obj = require("canShowTimeRecurringContent");
+    obj = require("useGetVisibleContent");
     first = gestureState(obj.useGetDismissibleContent(tmp5), 1)[0];
     closure_7 = first;
     obj2 = require("defaultAreStatesEqual");

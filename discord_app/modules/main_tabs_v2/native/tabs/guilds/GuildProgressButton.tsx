@@ -11,7 +11,7 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/t
 export default function GuildProgressButton(guild) {
   guild = guild.guild;
   let completed;
-  let obj = guild(12274);
+  let obj = guild(12474);
   const guildProgressStep = obj.useGuildProgressStep(guild);
   completed = guildProgressStep.completed;
   const items = [completed, guild.id];
@@ -31,14 +31,14 @@ export default function GuildProgressButton(guild) {
     guild(closure_1_2[5]).openActionSheet(guild);
   }, items1);
   obj = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
-  obj = { source: completed(16034) };
-  obj[0] = jsx(guild(8378).RowButton.Icon, { source: completed(16034) });
-  const intl = guild(1233).intl;
-  obj[1] = intl.string(guild(1233).t.o3HK3d);
+  obj = { source: completed(16198) };
+  obj[0] = jsx(guild(8595).RowButton.Icon, { source: completed(16198) });
+  const intl = guild(1114).intl;
+  obj[1] = intl.string(guild(1114).t.o3HK3d);
   obj[2] = subtitle;
   obj[3] = callback;
-  obj[4] = jsx(completed(12390), { percent: percentComplete });
-  return jsx(guild(8378).RowButton, { source: completed(16034) });
+  obj[4] = jsx(completed(12590), { percent: percentComplete });
+  return jsx(guild(8595).RowButton, { source: completed(16198) });
 }
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale) {
   const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(

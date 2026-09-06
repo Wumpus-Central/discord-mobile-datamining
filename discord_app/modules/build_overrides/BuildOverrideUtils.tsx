@@ -1,10 +1,10 @@
 // discord_app/modules/build_overrides/BuildOverrideUtils.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../Constants.tsx";
-import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import UrlAll from "../../../_runtime/01487_Url.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import BUILD_OVERRIDE_TARGET_NAMES from "BuildOverrideConstants.tsx";
-import parseDefault from "../../../_runtime/04395_parse.js";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import UrlAll from "../../../_runtime/01367_Url.js";
+import parseDefault from "../../../_runtime/01370_parse.js";
 import getConstants from "../../utils/native/ClientInfoUtils.tsx";
 import set from "../../utils/PlatformUtils.tsx";
 

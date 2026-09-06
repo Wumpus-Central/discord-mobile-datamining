@@ -4,7 +4,7 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { AbortCodes } from "../../Constants.tsx";
 import { FileUploadErrorTypes } from "../../modules/messages/MessageConstants.tsx";
-import { EventEmitter } from "../../../_runtime/00649_EventEmitter.js";
+import { EventEmitter } from "../../../_runtime/00568_EventEmitter.js";
 
 const require = arg1;
 let closure_6 = new timestampDefault("UploaderBase.tsx");

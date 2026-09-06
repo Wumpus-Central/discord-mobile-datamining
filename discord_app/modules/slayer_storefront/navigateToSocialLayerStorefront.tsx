@@ -100,7 +100,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
                     if (null != set) {
                       if (!set.has(guild3.PREVIEW_ENABLED)) {
                         if (null != lib) {
-                          let obj4 = lib(8668);
+                          let obj4 = lib(8378);
                           let obj2 = { inviteKey: null, context: null, skipOnboarding: true };
                           obj2[0] = lib.code;
                           obj2[1] = { location: "game_shop" };
@@ -115,7 +115,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
                     c3 = 2;
                     guild = 1;
                     obj4 = { value: null, done: false };
-                    obj4[0] = id(6195).startLurking(id, {}, { shouldNavigate: false });
+                    obj4[0] = id(7341).startLurking(id, {}, { shouldNavigate: false });
                     return obj4;
                   }
                 } else {
@@ -142,7 +142,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
               obj[0] = arg1;
               return obj;
             }
-            obj2 = id(1219);
+            obj2 = id(1100);
             guild = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = obj2.transitionTo(closure_7.CHANNELS_GAME_SHOP(id, dependencyMap, c3, guild));

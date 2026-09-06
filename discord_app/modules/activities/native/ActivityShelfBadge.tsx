@@ -72,9 +72,9 @@ export default function ActivityShelfBadge(arg0) {
     obj[0] = items;
     obj = { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null };
     obj[1] = tmp.badgeText;
-    const intl = tmp2(1233).intl;
-    obj[3] = intl.string(tmp2(1233).t.y2b7CA);
-    obj[1] = jsx(tmp2(4474).Text, {
+    const intl = tmp2(1114).intl;
+    obj[3] = intl.string(tmp2(1114).t.y2b7CA);
+    obj[1] = jsx(tmp2(4556).Text, {
       variant: "text-xs/semibold",
       style: null,
       color: "text-overlay-light",
@@ -87,16 +87,16 @@ export default function ActivityShelfBadge(arg0) {
     );
   } else {
     tmp6 = null;
-    if (labelType === tmp2(1954).EmbeddedActivityLabelTypes.UPDATED) {
+    if (labelType === tmp2(1894).EmbeddedActivityLabelTypes.UPDATED) {
       obj = { style: null, children: null };
       const items1 = [replacementStyles, ,];
       ({ updatedBadge: arr2[1], elevationShadow: arr2[2] } = tmp);
       obj[0] = items1;
       obj1 = { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null };
       obj1[1] = tmp.badgeText;
-      const intl2 = tmp2(1233).intl;
-      obj1[3] = intl2.string(tmp2(1233).t["/qdhkk"]);
-      obj[1] = jsx(tmp2(4474).Text, {
+      const intl2 = tmp2(1114).intl;
+      obj1[3] = intl2.string(tmp2(1114).t["/qdhkk"]);
+      obj[1] = jsx(tmp2(4556).Text, {
         variant: "text-xs/semibold",
         style: null,
         color: "text-overlay-light",

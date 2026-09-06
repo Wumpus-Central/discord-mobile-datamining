@@ -22,18 +22,18 @@ function PasswordStrength(passwordScore) {
       if (0 !== password.length) {
         if (null == passwordError) {
           if (passwordScore <= PasswordScore.PasswordScore.WEAK) {
-            const intl2 = tmp9(1233).intl;
-            let str = intl2.string(tmp9(1233).t["w/8TuV"]);
+            const intl2 = tmp9(1114).intl;
+            let str = intl2.string(tmp9(1114).t["w/8TuV"]);
             let strong = tmp.weak;
-          } else if (passwordScore === tmp9(15808).PasswordScore.MEDIUM) {
-            const intl = tmp9(1233).intl;
-            str = intl.string(tmp9(1233).t["2fmTpT"]);
+          } else if (passwordScore === tmp9(15970).PasswordScore.MEDIUM) {
+            const intl = tmp9(1114).intl;
+            str = intl.string(tmp9(1114).t["2fmTpT"]);
             strong = tmp.medium;
           } else {
             str = "";
-            if (passwordScore === tmp9(15808).PasswordScore.STRONG) {
-              const intl4 = tmp9(1233).intl;
-              str = intl4.string(tmp9(1233).t.Xraqqc);
+            if (passwordScore === tmp9(15970).PasswordScore.STRONG) {
+              const intl4 = tmp9(1114).intl;
+              str = intl4.string(tmp9(1114).t.Xraqqc);
               strong = tmp.strong;
             }
           }
@@ -44,7 +44,7 @@ function PasswordStrength(passwordScore) {
           const items = [tmp.passwordStrength, strong];
           obj.style = items;
           obj.animated = true;
-          const intl3 = tmp9(1233).intl;
+          const intl3 = tmp9(1114).intl;
           const items1 = [intl3.string(getSystemLocale.t["5gbdUX"]), ": ", str];
           obj.children = items1;
           return callback2(Text.Text, obj);

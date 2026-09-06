@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/DispatcherWorkScheduler.native.tsx
 import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 import _trackAppBackgrounded from "BasicWorkScheduler.tsx";
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DispatcherWorkConstants.tsx";
 

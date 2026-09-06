@@ -1,25 +1,25 @@
 // discord_app/modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx
 import set from "../../../../../../_runtime/00002_set.js";
-import ME from "../../../../../Constants.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ME from "../../../../../Constants.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
-import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
 import getAvatarURL from "../../../../../utils/AvatarUtils.tsx";
 import ensureAvatarSource from "../../../../../utils/native/AvatarUtils.tsx";
-import hooksDefault from "../../../../../../_runtime/04074_hooks.js";
+import hooksDefault from "../../../../../../_runtime/04153_hooks.js";
 import isCommunicationDisabled from "../../../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import resetCache from "../../../../../utils/DateUtils.tsx";
+import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
 import computeChannelName from "../../../../channel/useChannelName.tsx";
 import useNullableMessageAuthor from "../../../useMessageAuthor.tsx";
+import registerAssetDefault from "../../../../../../_runtime/06612_registerAsset.js";
 import useRoleIcon from "../../../../guild_boosting/native/RoleIconUtils.tsx";
 import getDecisionOutcomeFromMessage from "../../../../guild_automod/AutomodMessageUtils.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07722_registerAsset.js";
 import processColorOrThrow from "../RowGeneratorStyleSheet.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import AutomodNotificationEmbedTypeKeys from "../../../../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
 import AutomodRaidAlertTypes from "../../../../../../discord_common/js/shared/shared-constants/AutomodRaidAlertTypes.tsx";
 import DATE_CONFIG from "../../../../guild_antiraid/GuildAntiRaidUtils.tsx";
-import registerAssetDefault2 from "../../../../../../_runtime/07940_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/08019_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../stores/ChannelStore.tsx";
 import closure_6 from "../../../../../stores/GuildMemberStore.tsx";
@@ -293,9 +293,9 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       let getRaidAlertResolveCTAText = closure_4.resolveAssetSource;
       let internal6 = getAvatarURL;
       let intl9 = internal6.makeSource;
-      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7939 : 7722))).uri;
+      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 8018 : 6612))).uri;
       const tmpResult16 = processColorOrThrow;
-      internal6 = tmp45(709).internal;
+      internal6 = tmp45(576).internal;
       obj5[7] = processColorOrThrow.processColorOrThrow(
         internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL),
       );
@@ -447,7 +447,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj9[6] = formatToPlainStringResult1;
       const tmpResult25 = resetCache;
-      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 7941 : 7942))).uri;
+      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 8020 : 8021))).uri;
       const intl16 = getSystemLocale.intl;
       const string2 = intl16.string;
       const t3 = getSystemLocale.t;

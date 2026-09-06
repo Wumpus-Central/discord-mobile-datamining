@@ -45,7 +45,7 @@ export const BackgroundBlurFill = function BackgroundBlurFill(arg0) {
   if (tintColor == null) {
     tintColor = obj2.useMemo(() => ("light" === blurTheme ? closure_1_6 : closure_1_8), items1);
   }
-  obj = blurTheme(4204);
+  obj = blurTheme(4271);
   obj2 = React;
   const tmp = blurTheme;
   if (android_fallbackColor == null) {
@@ -66,7 +66,7 @@ export const BackgroundBlurFill = function BackgroundBlurFill(arg0) {
 export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(arg0) {
   ({ blurTheme, blurStyle, tintColor, android_fallbackColor, animatedProps } = arg0);
   ({ style, blurAmount, android_blurTargetViewNativeId } = arg0);
-  let obj = blurTheme(4204);
+  let obj = blurTheme(4271);
   if (blurTheme == null) {
     blurTheme = obj.useThemeContext().theme;
   }
@@ -102,7 +102,7 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
   const tmp = blurTheme;
   const tmp3 = importDefault;
   const tmp4 = jsx;
-  tmpResult = blurTheme(4197);
+  tmpResult = blurTheme(4262);
   if (tmp6) {
     obj = { animatedProps: null };
     obj[0] = animatedProps;
@@ -120,7 +120,7 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
   let token1;
   c5 = undefined;
   const merged = Object.assign(style, Object.create(null));
-  let obj = blurTheme(4204);
+  let obj = blurTheme(4271);
   if (blurTheme == null) {
     blurTheme = obj.useThemeContext().theme;
   }
@@ -136,13 +136,13 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
     }
     return str;
   }, items);
-  let tmp2Result = tmp2(4197);
+  let tmp2Result = tmp2(4262);
   token = tmp2Result.useToken(ThemesDefault.colors.BACKGROUND_SCRIM, blurTheme);
-  tmp2Result = tmp2(4197);
+  tmp2Result = tmp2(4262);
   token1 = tmp2Result.useToken(ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, blurTheme);
-  const isBlurDisabledResult = blurTheme(4919).isBlurDisabled(merged);
+  const isBlurDisabledResult = blurTheme(4965).isBlurDisabled(merged);
   c5 = isBlurDisabledResult;
-  const tmp2Result1 = blurTheme(4919);
+  const tmp2Result1 = blurTheme(4965);
   class B {
     constructor() {
       obj = { backgroundColor: null };
@@ -157,18 +157,18 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
     }
   }
   obj = {
-    withSpring: tmp2(4928).withSpring,
-    interpolateColor: tmp2(4217).interpolateColor,
+    withSpring: tmp2(4974).withSpring,
+    interpolateColor: tmp2(4296).interpolateColor,
     pressed,
     fallbackColor: token,
     fallbackColorPressed: token1,
-    ON_PRESS_SPRING: tmp2(4932).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: tmp2(4978).ON_PRESS_SPRING,
   };
   B.__closure = obj;
   B.__workletHash = 10497618157620;
   B.__initData = closure_10;
-  let animatedStyle = blurTheme(4217).useAnimatedStyle(B);
-  const tmp2Result2 = blurTheme(4217);
+  let animatedStyle = blurTheme(4296).useAnimatedStyle(B);
+  const tmp2Result2 = blurTheme(4296);
   class C {
     constructor() {
       withSpringResult = undefined;
@@ -196,21 +196,21 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
   }
   obj = {
     shouldUseFallback: isBlurDisabledResult,
-    withSpring: tmp2(4928).withSpring,
-    interpolateColor: tmp2(4217).interpolateColor,
+    withSpring: tmp2(4974).withSpring,
+    interpolateColor: tmp2(4296).interpolateColor,
     pressed,
     restingTint: tmp6,
     pressedTint: tmp7,
-    ON_PRESS_SPRING: tmp2(4932).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: tmp2(4978).ON_PRESS_SPRING,
   };
   C.__closure = obj;
   C.__workletHash = 11987567486157;
   C.__initData = closure_11;
-  const animatedProps = blurTheme(4217).useAnimatedProps(C);
+  const animatedProps = blurTheme(4296).useAnimatedProps(C);
   obj1 = { blurTheme, blurStyle: memo, style: null };
   const items1 = [token1.absoluteFill, style.style];
   const tmp12 = c5;
-  const tmp2Result3 = blurTheme(4217);
+  const tmp2Result3 = blurTheme(4296);
   if (!isBlurDisabledResult) {
     animatedStyle = {};
   }

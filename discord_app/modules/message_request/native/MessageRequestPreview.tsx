@@ -26,13 +26,13 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
   channel = channel.channel;
   let message;
   const tmp = callback();
-  let obj = channel(12394);
+  let obj = channel(12594);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
   const items = [closure_5];
   const items1 = [message];
-  const stateFromStoresObject = channel(586).useStateFromStoresObject(
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(
     items,
     () => {
       let isBlockedForMessageResult = null != message;
@@ -61,8 +61,8 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
     }
   }, items2);
   if (error) {
-    const intl9 = tmp2(1233).intl;
-    let stringResult = intl9.string(tmp2(1233).t.BZHld2);
+    const intl9 = tmp2(1114).intl;
+    let stringResult = intl9.string(tmp2(1114).t.BZHld2);
     let flag = false;
   } else {
     stringResult = null;
@@ -70,15 +70,15 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
     if (loaded) {
       if (null != message) {
         if (isBlocked) {
-          const intl8 = tmp2(1233).intl;
-          stringResult = intl8.string(tmp2(1233).t["WPe+xL"]);
+          const intl8 = tmp2(1114).intl;
+          stringResult = intl8.string(tmp2(1114).t["WPe+xL"]);
           flag = false;
         }
       }
       if (null != message) {
         if (isIgnored) {
-          const intl7 = tmp2(1233).intl;
-          stringResult = intl7.string(tmp2(1233).t.uxrh1O);
+          const intl7 = tmp2(1114).intl;
+          stringResult = intl7.string(tmp2(1114).t.uxrh1O);
           flag = false;
         }
       }
@@ -88,32 +88,32 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
       }
       if (null != content) {
         if ("" !== message.content) {
-          const content1 = message(7642)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
+          const content1 = message(7888)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
           const _Array = Array;
           if (!Array.isArray(content1)) {
             flag = true;
             stringResult = content1;
           }
-          const intl6 = tmp2(1233).intl;
-          stringResult = intl6.string(tmp2(1233).t["262oPB"]);
+          const intl6 = tmp2(1114).intl;
+          stringResult = intl6.string(tmp2(1114).t["262oPB"]);
           flag = false;
         }
       }
       if (null != message) {
         if (tmp2Result.getMessageStickers(message).length > 0) {
-          const intl5 = tmp2(1233).intl;
-          let stringResult1 = intl5.string(tmp2(1233).t["zuI+by"]);
+          const intl5 = tmp2(1114).intl;
+          let stringResult1 = intl5.string(tmp2(1114).t["zuI+by"]);
         } else if (null != message.interaction) {
-          const intl4 = tmp2(1233).intl;
-          stringResult1 = intl4.string(tmp2(1233).t["2v7kfl"]);
+          const intl4 = tmp2(1114).intl;
+          stringResult1 = intl4.string(tmp2(1114).t["2v7kfl"]);
         } else {
           if (message.hasFlag(constants.IS_VOICE_MESSAGE)) {
-            const intl3 = tmp2(1233).intl;
-            stringResult1 = intl3.string(tmp2(1233).t["6bhHrc"]);
+            const intl3 = tmp2(1114).intl;
+            stringResult1 = intl3.string(tmp2(1114).t["6bhHrc"]);
           } else {
-            const intl2 = tmp2(1233).intl;
+            const intl2 = tmp2(1114).intl;
             const string = intl2.string;
-            const t = tmp2(1233).t;
+            const t = tmp2(1114).t;
             if (hasFlagResult) {
               stringResult1 = string(t.Xxm5i3);
             } else {
@@ -125,17 +125,17 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(4853);
+        tmp2Result = tmp2(4899);
       } else {
-        const intl = tmp2(1233).intl;
-        stringResult = intl.string(tmp2(1233).t["0KfDxM"]);
+        const intl = tmp2(1114).intl;
+        stringResult = intl.string(tmp2(1114).t["0KfDxM"]);
         flag = false;
       }
     }
   }
   obj = {
     style: channel.style,
-    children: jsx(tmp2(1296).LegacyText, {
+    children: jsx(tmp2(1178).LegacyText, {
       style: tmp14,
       numberOfLines: 3,
       ellipsizeMode: "tail",
@@ -144,7 +144,7 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
   };
   return (
     <View style={arg0.style}>
-      {jsx(tmp2(1296).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}
+      {jsx(tmp2(1178).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}
     </View>
   );
 });

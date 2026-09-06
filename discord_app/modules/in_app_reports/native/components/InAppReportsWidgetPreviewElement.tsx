@@ -44,10 +44,10 @@ export default function WidgetPreview(arg0) {
         obj[1] = widget;
         const items1 = [tmp4.card, tmp.card];
         obj[3] = items1;
-        tmp6 = callback(tmp5(8819).WidgetSection, obj);
+        tmp6 = callback(tmp5(8674).WidgetSection, obj);
       }
     }
-    tmp5Result = tmp5(7378);
+    tmp5Result = tmp5(7623);
   }
   let tmp9 = null;
   if (null !== tmp6) {
@@ -55,12 +55,12 @@ export default function WidgetPreview(arg0) {
     obj1[0] = tmp.container;
     const obj2 = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     obj2[0] = tmp.title;
-    const intl = tmp5(1233).intl;
-    obj2[3] = intl.string(tmp5(1233).t.SpsnDY).toUpperCase();
-    const items2 = [callback(tmp5(4474).Text, obj2), tmp6];
+    const intl = tmp5(1114).intl;
+    obj2[3] = intl.string(tmp5(1114).t.SpsnDY).toUpperCase();
+    const items2 = [callback(tmp5(4556).Text, obj2), tmp6];
     obj1[1] = items2;
     tmp9 = callback2(View, obj1);
-    const str = intl.string(tmp5(1233).t.SpsnDY);
+    const str = intl.string(tmp5(1114).t.SpsnDY);
   }
   return tmp9;
 }

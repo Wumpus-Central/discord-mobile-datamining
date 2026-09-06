@@ -133,30 +133,30 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   tmp6 = throwTypeErrorResult;
                 }
                 if (tmp6) {
-                  obj1 = fromCreate(4125);
+                  obj1 = fromCreate(4204);
                   everyoneOverwrite = obj1.makeEveryoneOverwrite(throwTypeErrorResult);
                   tmp10 = everyoneOverwrite;
                 }
                 obj1 = {};
                 const merged = Object.assign(tmp10);
-                let obj3 = fromCreate(503);
+                let obj3 = fromCreate(1086);
                 obj1.deny = obj3.remove(obj1.deny, throwTypeErrorResult);
-                let obj4 = fromCreate(503);
+                let obj4 = fromCreate(1086);
                 obj1.allow = obj4.remove(obj1.allow, throwTypeErrorResult);
-                if (throwTypeErrorResult === callback(4125).ALLOW) {
-                  obj1.allow = fromCreate(503).add(obj1.allow, throwTypeErrorResult);
-                  const obj9 = fromCreate(503);
+                if (throwTypeErrorResult === callback(4204).ALLOW) {
+                  obj1.allow = fromCreate(1086).add(obj1.allow, throwTypeErrorResult);
+                  const obj9 = fromCreate(1086);
                 } else {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  if (throwTypeErrorResult === callback(4125).DENY) {
+                  if (throwTypeErrorResult === callback(4204).DENY) {
                     throwTypeErrorResult = c5;
                     if (null != c5.guild_id) {
                       if (throwTypeErrorResult) {
                         c4 = 1;
                         c5 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = callback(9727).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                        obj2[0] = callback(9740).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                           c5,
                           throwTypeErrorResult,
                         );
@@ -172,32 +172,32 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   throwTypeErrorResult = dependencyMap;
                   throwTypeErrorResult = c5;
                   throwTypeErrorResult = closure_1_3;
-                  throwTypeErrorResult = id(4491).updatePermissionOverwrite(c5.id, closure_1_3);
+                  throwTypeErrorResult = id(4573).updatePermissionOverwrite(c5.id, closure_1_3);
                   c5 = 3;
-                  const obj17 = id(4491);
+                  const obj17 = id(4573);
                 } else if (closure_2_13.can(callback, c5)) {
                   if (!closure_1) {
                     if (!obj11.has(closure_1_2.allow, callback)) {
                       if (!obj12.has(closure_1_2.deny, callback)) {
-                        closure_1_7(callback, callback(4125).ALLOW);
+                        closure_1_7(callback, callback(4204).ALLOW);
                       }
-                      obj12 = fromCreate(503);
+                      obj12 = fromCreate(1086);
                     }
-                    obj11 = fromCreate(503);
+                    obj11 = fromCreate(1086);
                   }
                 }
                 const type = fromCreate.type;
-                if (callback(1954).PermissionOverwriteType.MEMBER === type) {
+                if (callback(1894).PermissionOverwriteType.MEMBER === type) {
                   const user = closure_2_15.getUser(fromCreate.id);
                   if (null != user) {
-                    const name2 = id(4322).getName(user);
-                    const obj13 = id(4322);
+                    const name2 = id(4404).getName(user);
+                    const obj13 = id(4404);
                   }
                 } else {
                   throwTypeErrorResult = obj1;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  if (callback(1954).PermissionOverwriteType.ROLE === type) {
+                  if (callback(1894).PermissionOverwriteType.ROLE === type) {
                     id = closure_2_12.getGuild(c5.guild_id);
                     if (null != id) {
                       throwTypeErrorResult = everyoneOverwrite;
@@ -216,33 +216,33 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   }
                 }
                 obj4 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
-                const intl = callback(1233).intl;
-                obj4[0] = intl.string(callback(1233).t.vElC9b);
-                const intl2 = callback(1233).intl;
+                const intl = callback(1114).intl;
+                obj4[0] = intl.string(callback(1114).t.vElC9b);
+                const intl2 = callback(1114).intl;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
                 let obj5 = { name: null };
                 throwTypeErrorResult = c4;
                 obj5[0] = c4;
-                obj4[1] = intl2.format(callback(1233).t.yslqFM, obj5);
+                obj4[1] = intl2.format(callback(1114).t.yslqFM, obj5);
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const intl3 = callback(1233).intl;
+                const intl3 = callback(1114).intl;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                obj4[2] = intl3.string(callback(1233).t["ETE/oC"]);
+                obj4[2] = intl3.string(callback(1114).t["ETE/oC"]);
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const intl4 = callback(1233).intl;
+                const intl4 = callback(1114).intl;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                obj4[3] = intl4.string(callback(1233).t.psXQHP);
+                obj4[3] = intl4.string(callback(1114).t.psXQHP);
                 obj4[4] = function onConfirm() {
                   const obj = _undefined(obj1[28]);
                   obj.openURL(_undefined(obj1[29]).getArticleURL(constants.PERMISSIONS_LOCKOUT));
                 };
-                throwTypeErrorResult = id(4858).show(obj4);
-                const obj14 = id(4858);
+                throwTypeErrorResult = id(4904).show(obj4);
+                const obj14 = id(4904);
               }
             } else if (guildId1 === 1) {
               c5 = 3;
@@ -256,7 +256,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
               c5 = 3;
               return { value: "HermesInternal", done: null };
             }
-            obj5 = fromCreate(503);
+            obj5 = fromCreate(1086);
             obj1.deny = obj5.add(obj1.deny, callback);
           } catch (throwTypeErrorResult) {
             c5 = throwTypeErrorResult;
@@ -385,7 +385,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     obj[0] = id;
     obj[1] = stateFromStores.guild_id;
     obj[4] = tmp13;
-    let tmp12Result = tmp12(tmp5(10904), obj);
+    let tmp12Result = tmp12(tmp5(10942), obj);
   } else {
     role = role.getRole(stateFromStores.guild_id, id);
     let str;
@@ -398,10 +398,10 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     obj1 = { end: true, label: null, start: true, trailing: null };
     obj1[1] = str;
     obj1[3] = tmp13;
-    tmp12Result = tmp12(tmp2(5608).TableRow, obj1);
+    tmp12Result = tmp12(tmp2(5605).TableRow, obj1);
   }
   obj2 = { style: tmp.container, contentContainerStyle: items5, children: null };
-  items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1627)().bottom }];
+  items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1611)().bottom }];
   obj3 = { style: tmp.section, children: tmp12Result };
   const items6 = [callback3(closure_7, obj3), ,];
   tmp12Result = null;
@@ -409,12 +409,12 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     let obj4 = { style: null, children: null };
     obj4[0] = tmp.section;
     let obj5 = { messageType: null, children: null };
-    obj5[0] = tmp2(1296).HelpMessageTypes.INFO;
-    let intl = tmp2(1233).intl;
+    obj5[0] = tmp2(1178).HelpMessageTypes.INFO;
+    let intl = tmp2(1114).intl;
     const obj6 = { appName: null };
     obj6[0] = tmp9.name;
-    obj5[1] = intl.format(tmp2(1233).t["Xq++FA"], obj6);
-    obj4[1] = tmp12(tmp2(1296).HelpMessage, obj5);
+    obj5[1] = intl.format(tmp2(1114).t["Xq++FA"], obj6);
+    obj4[1] = tmp12(tmp2(1178).HelpMessage, obj5);
     tmp12Result = tmp12(closure_7, obj4);
   }
   items6[1] = tmp12Result;

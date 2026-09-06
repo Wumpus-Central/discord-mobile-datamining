@@ -32,10 +32,10 @@ function resolveGoreSettingWithDefaults(isFriend) {
     }
     if (isDm) {
       if (!flag) {
-        let BLUR2 = tmp4(1305).ExplicitContentRedaction.BLOCK;
+        let BLUR2 = tmp4(1187).ExplicitContentRedaction.BLOCK;
       }
     }
-    ExplicitContentRedaction = tmp4(1305).ExplicitContentRedaction;
+    ExplicitContentRedaction = tmp4(1187).ExplicitContentRedaction;
     BLUR2 = ExplicitContentRedaction.BLUR;
   } else {
     let nsfwAllowed;
@@ -52,10 +52,10 @@ function resolveGoreSettingWithDefaults(isFriend) {
         flag6 = false;
       }
       if (!flag5) {
-        const ExplicitContentRedaction3 = tmp4(1305).ExplicitContentRedaction;
+        const ExplicitContentRedaction3 = tmp4(1187).ExplicitContentRedaction;
         let BLUR = flag5 ? ExplicitContentRedaction3.BLOCK : ExplicitContentRedaction3.BLUR;
       }
-      BLUR = tmp4(1305).ExplicitContentRedaction.BLUR;
+      BLUR = tmp4(1187).ExplicitContentRedaction.BLUR;
     } else {
       let flag3 = isDm;
       if (isDm === undefined) {
@@ -67,11 +67,11 @@ function resolveGoreSettingWithDefaults(isFriend) {
       }
       if (flag3) {
         if (flag4) {
-          let SHOW = tmp4(1305).ExplicitContentRedaction.SHOW;
+          let SHOW = tmp4(1187).ExplicitContentRedaction.SHOW;
         }
         return SHOW;
       }
-      const ExplicitContentRedaction2 = tmp4(1305).ExplicitContentRedaction;
+      const ExplicitContentRedaction2 = tmp4(1187).ExplicitContentRedaction;
       SHOW = flag3 ? ExplicitContentRedaction2.BLOCK : ExplicitContentRedaction2.SHOW;
     }
   }

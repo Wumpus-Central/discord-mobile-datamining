@@ -13,10 +13,10 @@ function LinkButton(arg0) {
   const tmp = callback3();
   obj = {
     onPress() {
-      let obj = callback(4190);
+      let obj = callback(4255);
       obj.openURL(closure_6);
       obj = { cta_type: "profile_bio", target: closure_6 };
-      callback(695).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
+      callback(1242).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
     },
     style: tmp.link,
     children: callback(Text.Text, obj),

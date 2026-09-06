@@ -54,15 +54,15 @@ export default function FavoritesEmptyState() {
   items[1] = callback2(Stack.Stack, obj);
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
-    const intl4 = tmp2(1233).intl;
-    obj3[1] = intl4.string(tmp9(3178)["6kk0gM"]);
-    obj3[2] = tmp8(tmp2(12527).PlusMediumIcon, {});
+    const intl4 = tmp2(1114).intl;
+    obj3[1] = intl4.string(tmp9(3225)["6kk0gM"]);
+    obj3[2] = tmp8(tmp2(12753).PlusMediumIcon, {});
     obj3[3] = callback;
     let obj4 = obj3;
   } else {
     obj4 = { variant: "primary", text: null, onPress: null };
-    const intl3 = tmp2(1233).intl;
-    obj4[1] = intl3.string(tmp9(3178).yYVbdv);
+    const intl3 = tmp2(1114).intl;
+    obj4[1] = intl3.string(tmp9(3225).yYVbdv);
     obj4[2] = callback1;
   }
   items[2] = callback(Button.Button, obj4);

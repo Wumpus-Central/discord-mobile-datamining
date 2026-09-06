@@ -61,7 +61,7 @@ function _createGuildFromTemplate() {
               obj2[6] = constants;
               obj1[1] = obj2;
               const obj3 = { event: null, properties: null };
-              obj3[0] = callback(500).NetworkActionNames.GUILD_CREATE;
+              obj3[0] = callback(1250).NetworkActionNames.GUILD_CREATE;
               const obj4 = { template_name: null, is_community_intent: null };
               obj4[0] = dependencyMap.id;
               obj4[1] = closure_3;
@@ -70,13 +70,13 @@ function _createGuildFromTemplate() {
               c9 = 2;
               c10 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = callback2(4714).post(obj1);
+              obj5[0] = callback2(4753).post(obj1);
               return obj5;
             }
           } else if (1 === tmp7) {
             c8 = 0;
             callback = closure_7;
-            const aPIError = new callback(4376).APIError(callback);
+            const aPIError = new callback(4461).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c10 = 3;

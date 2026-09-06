@@ -216,7 +216,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   } else {
     tmp35 = null;
     if (null != theme) {
-      let tmp8Result = tmp8(1907);
+      let tmp8Result = tmp8(1978);
       let fromServerGuildThemeResult = tmp8Result.fromServerGuildTheme(theme);
       if (fromServerGuildThemeResult == null) {
         fromServerGuildThemeResult = { enabled: false, themeSettings: null };
@@ -264,7 +264,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
     prop4 = null;
   }
   obj[43] = prop4;
-  tmp8Result = tmp8(1906);
+  tmp8Result = tmp8(1977);
   obj[44] = tmp8Result.fromServerGuildIncidentsData(properties.incidents_data);
   return closure_6(closure_8, guildTheme, obj);
 }

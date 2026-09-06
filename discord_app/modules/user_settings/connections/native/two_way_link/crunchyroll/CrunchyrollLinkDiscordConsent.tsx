@@ -14,7 +14,7 @@ const result = require("set").fileFinishedImporting(
 export default function CrunchyrollLinkDiscordConsent(arg0) {
   let navigation;
   ({ callbackCode, callbackState } = arg0);
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
@@ -33,7 +33,7 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
     onNext: callback,
     onError: callback1,
   };
-  return jsx(navigation(9331).TwoWayLinkDiscordConsent, {
+  return jsx(navigation(9234).TwoWayLinkDiscordConsent, {
     platformType: PlatformTypes.CRUNCHYROLL,
     callbackCode,
     callbackState,

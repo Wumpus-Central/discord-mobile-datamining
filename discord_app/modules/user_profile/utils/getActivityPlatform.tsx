@@ -14,20 +14,20 @@ export default function getActivityPlatform(session_id) {
   const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
-  } else if (tmp(9273)(session_id)) {
-    let tmpResult = tmp(5236);
+  } else if (tmp(10891)(session_id)) {
+    let tmpResult = tmp(5283);
     return tmpResult.get(PlatformTypes.SPOTIFY);
-  } else if (tmp(8634)(session_id)) {
-    tmpResult = tmp(5236);
+  } else if (tmp(8344)(session_id)) {
+    tmpResult = tmp(5283);
     return tmpResult.get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(9404)(session_id)) {
-    return tmp(5236).get(PlatformTypes.XBOX);
-  } else if (tmp(9405)(session_id)) {
-    return tmp(5236).get(PlatformTypes.PLAYSTATION);
+  } else if (tmp(13002)(session_id)) {
+    return tmp(5283).get(PlatformTypes.XBOX);
+  } else if (tmp(13003)(session_id)) {
+    return tmp(5283).get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(9432)(session_id)) {
-      if (!tmp(9433)(session_id)) {
-        const found = tmp(5236).find((name) => name.name === session_id.name);
+    if (!tmp(13017)(session_id)) {
+      if (!tmp(13018)(session_id)) {
+        const found = tmp(5283).find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {
           tmp5 = null;
@@ -38,6 +38,6 @@ export default function getActivityPlatform(session_id) {
         return tmp5;
       }
     }
-    return tmp(5236).get(PlatformTypes.META_QUEST_OR_HORIZON);
+    return tmp(5283).get(PlatformTypes.META_QUEST_OR_HORIZON);
   }
 }

@@ -21,15 +21,15 @@ function EmojiConfetti(children) {
   let sharedValue1;
   let sharedValue2;
   let sharedValue3;
-  sharedValue = top(4217).useSharedValue(0);
-  let obj = top(4217);
-  sharedValue1 = top(4217).useSharedValue(0);
-  let obj2 = top(4217);
-  sharedValue2 = top(4217).useSharedValue(0.2);
-  let obj3 = top(4217);
-  sharedValue3 = top(4217).useSharedValue(0);
-  let obj4 = top(4217);
-  const mountLayoutEffect = top(4946).useMountLayoutEffect(() => {
+  sharedValue = top(4296).useSharedValue(0);
+  let obj = top(4296);
+  sharedValue1 = top(4296).useSharedValue(0);
+  let obj2 = top(4296);
+  sharedValue2 = top(4296).useSharedValue(0.2);
+  let obj3 = top(4296);
+  sharedValue3 = top(4296).useSharedValue(0);
+  let obj4 = top(4296);
+  const mountLayoutEffect = top(4992).useMountLayoutEffect(() => {
     let obj = sharedValue;
     let num = 0;
     if (!closure_2) {
@@ -74,7 +74,7 @@ function EmojiConfetti(children) {
       obj17.withSequence(withTimingResult4, withTimingResult5, top(closure_1_2[13]).withTiming(0, { duration: 240 })),
     );
   });
-  let obj5 = top(4946);
+  let obj5 = top(4992);
   const fn = function f() {
     let obj = { scale: sharedValue2.get() };
     const items = [obj];
@@ -114,8 +114,8 @@ function EmojiConfetti(children) {
   };
   fn.__workletHash = 1455873119263;
   fn.__initData = closure_14;
-  const style = top(4217).useAnimatedStyle(fn);
-  return callback3(left(4217).View, { style, children: children.emojiComponent });
+  const style = top(4296).useAnimatedStyle(fn);
+  return callback3(left(4296).View, { style, children: children.emojiComponent });
 }
 function EmojiBurstAnimation(emojiComponent) {
   emojiComponent = emojiComponent.emojiComponent;

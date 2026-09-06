@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/DisplayProfile.tsx
 import set from "../../../_runtime/00002_set.js";
-import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import GuildFeatures from "../premium/PremiumConstants.tsx";
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import useAvatarsWithGuilds from "../profile_customization/ProfileCustomizationUtils.tsx";
 import { items } from "UserProfileGameWidgetTypes.tsx";
 
@@ -152,7 +152,7 @@ Object.defineProperty(prototype, "canEditThemes", {
   set: undefined
 });
 Object.defineProperty(prototype, "application", {
-  get: function application(type, arg1) {
+  get: function application(channelId, arg1, action) {
     return this._userProfile.application;
   },
   set: undefined

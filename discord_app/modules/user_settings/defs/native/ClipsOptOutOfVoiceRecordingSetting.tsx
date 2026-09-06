@@ -38,7 +38,7 @@ function _updateClipsAllowVoiceRecording() {
               return obj;
             } else {
               const callback2 = tmp4;
-              const ClipsAllowVoiceRecording = callback(4166).ClipsAllowVoiceRecording;
+              const ClipsAllowVoiceRecording = callback(1935).ClipsAllowVoiceRecording;
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -54,7 +54,7 @@ function _updateClipsAllowVoiceRecording() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = callback2(706);
+            obj = callback2(573);
             obj.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
             c3 = 3;
             return { value: "HermesInternal", done: null };

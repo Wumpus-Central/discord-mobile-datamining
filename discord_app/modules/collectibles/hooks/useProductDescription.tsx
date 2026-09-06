@@ -36,33 +36,33 @@ function getBundleDescription(bundledProducts) {
       if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
         let tmp13 = tmp5;
         let tmp14 = tmp7;
-        let intl2 = tmp6(1233).intl;
+        let intl2 = tmp6(1114).intl;
         obj = { itemName: null };
         let tmp15 = item10012;
         obj[0] = tmp4.name;
-        let arr = items.push(intl2.formatToPlainString(tmp6(1233).t.Ntv9Jt, obj));
+        let arr = items.push(intl2.formatToPlainString(tmp6(1114).t.Ntv9Jt, obj));
       } else {
         let tmp33 = tmp5;
         let tmp34 = tmp7;
-        if (tmp6(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+        if (tmp6(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
           let tmp9 = tmp5;
           let tmp10 = tmp7;
-          let intl = tmp6(1233).intl;
+          let intl = tmp6(1114).intl;
           obj = { itemName: null };
           let tmp11 = item10012;
           obj[0] = tmp4.name;
-          arr = items.push(intl.formatToPlainString(tmp6(1233).t["3Y8q7a"], obj));
+          arr = items.push(intl.formatToPlainString(tmp6(1114).t["3Y8q7a"], obj));
         } else {
           let tmp35 = tmp5;
           let tmp36 = tmp7;
-          if (tmp6(1949).CollectiblesItemType.NAMEPLATE === type) {
+          if (tmp6(1889).CollectiblesItemType.NAMEPLATE === type) {
             let tmp37 = tmp5;
             let tmp38 = tmp7;
-            let intl6 = tmp6(1233).intl;
+            let intl6 = tmp6(1114).intl;
             obj1 = { itemName: null };
             let tmp39 = item10012;
             obj1[0] = tmp4.name;
-            let arr1 = items.push(intl6.formatToPlainString(tmp6(1233).t["2keXky"], obj1));
+            let arr1 = items.push(intl6.formatToPlainString(tmp6(1114).t["2keXky"], obj1));
             flag2 = true;
           }
         }

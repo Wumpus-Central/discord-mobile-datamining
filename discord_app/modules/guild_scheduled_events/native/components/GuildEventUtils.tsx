@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventUtils.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import getChannelIcon from "../../../../utils/native/ChannelUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/09701_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09714_registerAsset.js";
 
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");
 
@@ -23,11 +23,11 @@ export const getEventLocationIconSource = function getEventLocationIconSource(ev
 };
 export const getEventLocationIconComponent = function getEventLocationIconComponent(event, channel, stateFromStores1) {
   if (null != obj.getLocationFromEvent(event)) {
-    let LocationIcon = tmp(9702).LocationIcon;
+    let LocationIcon = tmp(9715).LocationIcon;
   } else {
     LocationIcon = null;
     if (null != channel) {
-      const tmpResult = tmp(4982);
+      const tmpResult = tmp(5028);
       if (stateFromStores1) {
         let channelIconComponent = tmpResult.getChannelIconComponent(channel);
       } else {

@@ -193,7 +193,7 @@ function _updateFriendSync() {
               closure_3 = tmp5;
               if (null != callback) {
                 c6 = 1;
-                let obj5 = callback2(12458);
+                let obj5 = callback2(12684);
                 obj1 = { enabled: null };
                 obj1[0] = tmp38;
                 c7 = 2;
@@ -206,11 +206,11 @@ function _updateFriendSync() {
           } else {
             if (1 === tmp8) {
               c6 = 0;
-              let obj3 = callback2(4194);
+              let obj3 = callback2(4259);
               obj3 = { key: "CONTACT_SYNC_FAILED_ALERT_TITLE", content: null, icon: null };
-              const intl = callback(1233).intl;
-              obj3[1] = intl.string(callback(1233).t.GCwBtE);
-              obj3[2] = callback2(7692);
+              const intl = callback(1114).intl;
+              obj3[1] = intl.string(callback(1114).t.GCwBtE);
+              obj3[2] = callback2(5597);
               obj3.open(obj3);
             } else if (2 === tmp8) {
               if (arg0 === 1) {
@@ -270,9 +270,9 @@ noopAll;
 let result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSettings.tsx");
 
 export default function ContactSyncSettings() {
-  let obj = contactSyncAccount(12454);
+  let obj = contactSyncAccount(12680);
   contactSyncAccount = obj.useContactSyncAccount();
-  obj1 = contactSyncAccount(586);
+  obj1 = contactSyncAccount(504);
   const items = [closure_4];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   let phone;
@@ -283,30 +283,30 @@ export default function ContactSyncSettings() {
   if (stateFromStores != null) {
     isStaffResult = stateFromStores.isStaff();
   }
-  let tmpResult = tmp(12454);
-  const FriendDiscoverySettings = tmp(4166).FriendDiscoverySettings;
+  let tmpResult = tmp(12680);
+  const FriendDiscoverySettings = tmp(1935).FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
-  tmpResult = tmp(1398);
+  tmpResult = tmp(1384);
   const hasFlagResult = tmpResult.hasFlag(setting, constants2.FIND_BY_PHONE);
   dependencyMap = hasFlagResult;
   const isContactSyncEnabledResult = tmpResult.isContactSyncEnabled(contactSyncAccount);
-  const hasFlagResult1 = contactSyncAccount(1398).hasFlag(setting, constants2.FIND_BY_EMAIL);
+  const hasFlagResult1 = contactSyncAccount(1384).hasFlag(setting, constants2.FIND_BY_EMAIL);
   obj = { title: null, children: null };
-  const intl = tmp(1233).intl;
-  obj[0] = intl.string(contactSyncAccount(1233).t.bGSsnc);
+  const intl = tmp(1114).intl;
+  obj[0] = intl.string(contactSyncAccount(1114).t.bGSsnc);
   let tmp10Result = null;
   if (isStaffResult) {
     obj = { children: null };
     obj1 = { label: "STAFF ONLY - Find your friends deletion", value: true, onValueChange: null };
-    obj1[2] = tmp(12454).adminDeleteContactSync;
-    const items1 = [callback2(tmp(8376).FormSwitchRow, obj1), callback2(tmp(8376).FormDivider, {})];
+    obj1[2] = tmp(12680).adminDeleteContactSync;
+    const items1 = [callback2(tmp(8593).FormSwitchRow, obj1), callback2(tmp(8593).FormDivider, {})];
     obj[0] = items1;
     tmp10Result = tmp10(tmp11, obj);
   }
   const items2 = [tmp10Result, ,];
   const obj2 = { label: null, value: null, onValueChange: null };
-  const intl2 = tmp(1233).intl;
-  obj2[0] = intl2.string(contactSyncAccount(1233).t.uSvEy7);
+  const intl2 = tmp(1114).intl;
+  obj2[0] = intl2.string(contactSyncAccount(1114).t.uSvEy7);
   obj2[1] = isContactSyncEnabledResult;
   obj2[2] = function onValueChange(arg0) {
     if (null == contactSyncAccount) {
@@ -321,17 +321,17 @@ export default function ContactSyncSettings() {
       closure_1_15(tmp, tmp2, arg0);
     }
   };
-  items2[1] = callback2(contactSyncAccount(8376).FormSwitchRow, obj2);
+  items2[1] = callback2(contactSyncAccount(8593).FormSwitchRow, obj2);
   tmp10Result = null;
   if (null != contactSyncAccount) {
     let obj3 = { children: null };
-    const items3 = [tmp14(tmp(8376).FormDivider, {})];
+    const items3 = [tmp14(tmp(8593).FormDivider, {})];
     const obj4 = { label: null, trailing: null, onPress: null };
-    const intl3 = tmp(1233).intl;
-    obj4[0] = intl3.string(tmp(1233).t.nAsWKy);
+    const intl3 = tmp(1114).intl;
+    obj4[0] = intl3.string(tmp(1114).t.nAsWKy);
     const obj5 = { label: null };
     obj5[0] = contactSyncAccount.name;
-    obj4[1] = tmp14(tmp(8376).FormRow.Arrow, obj5);
+    obj4[1] = tmp14(tmp(8593).FormRow.Arrow, obj5);
     obj4[2] = function onPress() {
       phone(hasFlagResult[11]).track(constants.OPEN_MODAL, {
         type: "Change Name",
@@ -343,33 +343,33 @@ export default function ContactSyncSettings() {
         "Contact Sync Name Update Modal",
       );
     };
-    items3[1] = tmp14(tmp(8376).FormRow, obj4);
+    items3[1] = tmp14(tmp(8593).FormRow, obj4);
     obj3[0] = items3;
     tmp10Result = tmp10(tmp11, obj3);
   }
   const obj6 = { children: null };
   items2[2] = tmp10Result;
   obj[1] = items2;
-  const items4 = [closure_12(contactSyncAccount(8376).FormSection, obj), , ,];
+  const items4 = [closure_12(contactSyncAccount(8593).FormSection, obj), , ,];
   const obj7 = { children: null };
-  const intl4 = tmp(1233).intl;
-  const tmpResult1 = contactSyncAccount(1398);
-  obj7[0] = intl4.format(contactSyncAccount(1233).t.BoR0dO, {
-    onClick: contactSyncAccount(12454).handleOpenLearnMoreLink,
+  const intl4 = tmp(1114).intl;
+  const tmpResult1 = contactSyncAccount(1384);
+  obj7[0] = intl4.format(contactSyncAccount(1114).t.BoR0dO, {
+    onClick: contactSyncAccount(12680).handleOpenLearnMoreLink,
   });
-  items4[1] = callback2(contactSyncAccount(8376).FormHint, obj7);
+  items4[1] = callback2(contactSyncAccount(8593).FormHint, obj7);
   const obj9 = { children: null };
-  const intl5 = tmp(1233).intl;
-  obj9[0] = intl5.string(contactSyncAccount(1233).t.cW1nr9);
-  items4[2] = callback2(contactSyncAccount(8376).FormHint, obj9);
+  const intl5 = tmp(1114).intl;
+  obj9[0] = intl5.string(contactSyncAccount(1114).t.cW1nr9);
+  items4[2] = callback2(contactSyncAccount(8593).FormHint, obj9);
   const obj10 = { title: null, children: null };
-  const intl6 = tmp(1233).intl;
-  obj10[0] = intl6.string(contactSyncAccount(1233).t["0t2wRW"]);
+  const intl6 = tmp(1114).intl;
+  obj10[0] = intl6.string(contactSyncAccount(1114).t["0t2wRW"]);
   const obj11 = { label: null, subLabel: null, value: null, onValueChange: null };
-  const intl7 = tmp(1233).intl;
-  obj11[0] = intl7.string(contactSyncAccount(1233).t["eJnn0+"]);
-  const intl8 = tmp(1233).intl;
-  obj11[1] = intl8.string(contactSyncAccount(1233).t.X7pIKN);
+  const intl7 = tmp(1114).intl;
+  obj11[0] = intl7.string(contactSyncAccount(1114).t["eJnn0+"]);
+  const intl8 = tmp(1114).intl;
+  obj11[1] = intl8.string(contactSyncAccount(1114).t.X7pIKN);
   obj11[2] = hasFlagResult;
   obj11[3] = function onValueChange(phone) {
     let obj = phone(hasFlagResult[10]);
@@ -377,23 +377,23 @@ export default function ContactSyncSettings() {
     const result = obj.updateDiscoverability(obj);
   };
   const items5 = [
-    callback2(contactSyncAccount(8376).FormSwitchRow, obj11),
-    callback2(contactSyncAccount(8376).FormDivider, {}),
+    callback2(contactSyncAccount(8593).FormSwitchRow, obj11),
+    callback2(contactSyncAccount(8593).FormDivider, {}),
   ];
   const obj12 = { label: null, subLabel: null, value: null, onValueChange: null };
-  const intl9 = tmp(1233).intl;
-  obj12[0] = intl9.string(contactSyncAccount(1233).t.dI4d4S);
-  const intl10 = tmp(1233).intl;
-  obj12[1] = intl10.string(contactSyncAccount(1233).t.ilGsHE);
+  const intl9 = tmp(1114).intl;
+  obj12[0] = intl9.string(contactSyncAccount(1114).t.dI4d4S);
+  const intl10 = tmp(1114).intl;
+  obj12[1] = intl10.string(contactSyncAccount(1114).t.ilGsHE);
   obj12[2] = hasFlagResult1;
   obj12[3] = function onValueChange(email) {
     let obj = phone(hasFlagResult[10]);
     obj = { phone: closure_2, email };
     const result = obj.updateDiscoverability(obj);
   };
-  items5[2] = callback2(contactSyncAccount(8376).FormSwitchRow, obj12);
+  items5[2] = callback2(contactSyncAccount(8593).FormSwitchRow, obj12);
   obj10[1] = items5;
-  items4[3] = closure_12(contactSyncAccount(8376).FormSection, obj10);
+  items4[3] = closure_12(contactSyncAccount(8593).FormSection, obj10);
   obj6[0] = items4;
   return closure_12(closure_11, obj6);
 }

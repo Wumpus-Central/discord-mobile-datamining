@@ -7,7 +7,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2025-08-voice-user-affinity",
   defaultConfig: { enabled: false },
   variations: {
-    0: { enabled: false, sortType: "r" },
+    0: { enabled: false, sortType: "PX_16" },
     1: { enabled: true, sortType: "vc_probability" },
     2: { enabled: true, sortType: "communication_probability" },
   },

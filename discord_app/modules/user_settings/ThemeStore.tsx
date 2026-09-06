@@ -3,8 +3,8 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import dispatcherDefault from "../../Dispatcher.tsx";
 import getSystemThemeDefault from "../themes/getSystemTheme.native.tsx";
 import resolveThemeDefault from "../themes/resolveTheme.native.tsx";
-import updateBackgroundColorDefault from "../themes/updateBackgroundColor.native.tsx";
 import updateUserGuildSettings from "UserSettingsProtoActionCreators.tsx";
+import updateBackgroundColorDefault from "../themes/updateBackgroundColor.native.tsx";
 import closure_3 from "SelectivelySyncedUserSettingsStore.tsx";
 import closure_4 from "UnsyncedUserSettingsStore.tsx";
 import closure_5 from "UserSettingsProtoStore.tsx";
@@ -159,7 +159,7 @@ obj = {
       let flag = tmp7 !== closure_13;
       if (flag) {
         closure_13 = tmp7;
-        tmp2(1368)(closure_13);
+        tmp2(14084)(closure_13);
         flag = true;
       }
       tmp = flag;

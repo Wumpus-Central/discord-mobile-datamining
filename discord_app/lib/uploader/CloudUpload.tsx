@@ -1696,15 +1696,15 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         throwTypeErrorResult = size;
                         closure_1_0.uploadAnalytics.targetVideoBitrate = size.file.encodingConfig.targetBitrate;
                         throwTypeErrorResult = closure_1_0;
+                        closure_1_0.uploadAnalytics.targetVideoCodec = "avc1";
+                        throwTypeErrorResult = closure_1_0;
                         throwTypeErrorResult = size;
-                        let str = "avc1";
-                        if (size.file.encodingConfig.useHEVC) {
-                          str = "hvc1";
-                        }
-                        closure_1_0.uploadAnalytics.targetVideoCodec = str;
                         closure_1_0.uploadAnalytics.targetVideoFramerate = size.file.encodingConfig.frameRate;
+                        throwTypeErrorResult = closure_1_0;
+                        throwTypeErrorResult = size;
                         closure_1_0.uploadAnalytics.targetVideoIsHdr = size.file.encodingConfig.createHDR;
-                        closure_1_0.uploadAnalytics.hevcIsSupported = size.file.encodingConfig.hevcIsSupported;
+                        throwTypeErrorResult = closure_1_0;
+                        throwTypeErrorResult = size;
                         closure_1_0.uploadAnalytics.progressUpdateGranularity = size.file.encodingConfig.progressUpdateGranularity;
                       }
                       closure_1_0.uploadAnalytics.psnr = size.file.psnr;
@@ -1730,14 +1730,14 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                             formatted = str17.toLowerCase();
                           }
                           c3 = formatted;
-                          let str4 = "image/jpeg";
+                          let str3 = "image/jpeg";
                           if ("jpg" !== c3) {
-                            str4 = "image/jpeg";
+                            str3 = "image/jpeg";
                             if ("jpeg" !== c3) {
-                              str4 = size.file.type;
+                              str3 = size.file.type;
                             }
                           }
-                          c4 = str4;
+                          c4 = str3;
                           closure_1_0.uploadAnalytics.convertedMimeType = c4;
                           const fileSize = size.fileSize;
                           size = fileSize;
@@ -1762,21 +1762,14 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                     const obj7 = { filename: null, uri: null, type: null };
                     obj7[0] = name;
                     obj7[1] = uri;
-                    throwTypeErrorResult = size;
                     obj7[2] = size.file.type;
                     const _HermesInternal3 = HermesInternal;
-                    throwTypeErrorResult = new.target;
-                    throwTypeErrorResult = new.target;
-                    throwTypeErrorResult = new Error("Insufficient file data: " + obj7);
-                    throw throwTypeErrorResult;
+                    error = new Error("Insufficient file data: " + obj7);
+                    throw error;
                   }
                 }
-                throwTypeErrorResult = name;
-                throwTypeErrorResult = closure_1_12;
-                throwTypeErrorResult = size;
-                throwTypeErrorResult = globalThis;
                 const _HermesInternal4 = HermesInternal;
-                throwTypeErrorResult = closure_1_12.error("Failed to get compressed file for " + size.id);
+                closure_1_12.error("Failed to get compressed file for " + size.id);
                 c4 = 3;
                 const obj8 = { value: null, done: true };
                 obj8[0] = size;
@@ -1800,8 +1793,8 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const _HermesInternal = HermesInternal;
               closure_1_12.error("Size missing from file data for " + size.id);
               const _Error = Error;
-              error = new Error("Size missing from file data");
-              throw error;
+              const error1 = new Error("Size missing from file data");
+              throw error1;
             } else {
               throwTypeErrorResult = uri;
               throwTypeErrorResult = name;
@@ -2248,11 +2241,11 @@ prototype["delete"] = function delete() {
             obj[0] = arg1;
             return obj;
           } else if (null != v0.uploadedFilename) {
-            obj1 = v0(5127);
+            obj1 = v0(5174);
             const uploadTarget = obj1.getUploadTarget(tmp18.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp18.uploadedFilename);
-            const HTTP = v0(527).HTTP;
+            const HTTP = v0(1272).HTTP;
             c1 = 2;
             v0 = 1;
             obj1 = { value: null, done: false };

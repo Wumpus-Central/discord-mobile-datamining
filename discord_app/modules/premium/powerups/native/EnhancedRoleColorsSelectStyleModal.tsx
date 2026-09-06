@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/EnhancedRoleColorsSelectStyleModal.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useHasEnhancedRoleColors from "../hooks/useHasEnhancedRoleColors.tsx";
@@ -70,9 +70,9 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     alignSelf: "flex-start",
   };
   if (arg0 === ThemeTypes.LIGHT) {
-    let BACKGROUND_SURFACE_HIGH = tmp(709).colors.BACKGROUND_BASE_LOW;
+    let BACKGROUND_SURFACE_HIGH = tmp(576).colors.BACKGROUND_BASE_LOW;
   } else {
-    BACKGROUND_SURFACE_HIGH = tmp(709).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH = tmp(576).colors.BACKGROUND_SURFACE_HIGH;
   }
   const obj2 = {
     width: 400,
@@ -89,9 +89,9 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     paddingVertical: ThemesDefault.space.PX_8,
   };
   if (arg0 === tmp3.LIGHT) {
-    let BACKGROUND_SURFACE_HIGH2 = tmp(709).colors.BACKGROUND_BASE_LOW;
+    let BACKGROUND_SURFACE_HIGH2 = tmp(576).colors.BACKGROUND_BASE_LOW;
   } else {
-    BACKGROUND_SURFACE_HIGH2 = tmp(709).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH2 = tmp(576).colors.BACKGROUND_SURFACE_HIGH;
   }
   const obj3 = {
     width: "100%",
@@ -164,7 +164,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           disabled: tmp,
           onPress() {
             closure_1_1(id.id);
-            closure_2_1(4445).hideActionSheet();
+            closure_2_1(4527).hideActionSheet();
           },
           children: null,
         };
@@ -176,11 +176,11 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           rowGenerator: constants,
           modifyRow(message) {
             message.message.roleColor = undefined;
-            const result = closure_2_0(1987).extractColorStringsFromServerColors(id.colors);
-            const obj = closure_2_0(1987);
-            message.message.roleColors = closure_2_0(7882).processColorStrings(result);
+            const result = closure_2_0(2018).extractColorStringsFromServerColors(id.colors);
+            const obj = closure_2_0(2018);
+            message.message.roleColors = closure_2_0(7961).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = closure_2_1(13188);
+            message.message.avatarURL = closure_2_1(13293);
           },
         };
         const items1 = [closure_1_9(closure_1_1(button[16]), obj)];
@@ -199,22 +199,22 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     obj3[0] = tmp3.upsellContainer;
     const obj4 = { style: null, variant: "text-sm/semibold", children: null };
     obj4[0] = tmp3.upsellText;
-    const intl3 = tmp4(1233).intl;
+    const intl3 = tmp4(1114).intl;
     const obj5 = { magical: null };
     const obj6 = { gradientColors: null, variant: "text-sm/semibold", children: null };
     let items1 = [, ,];
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj6[0] = items1;
-    const intl4 = tmp4(1233).intl;
-    obj6[2] = intl4.string(tmp(2400)["+/IHLl"]);
-    obj5[0] = tmp7(tmp4(4474).Text, obj6);
-    obj4[2] = intl3.format(tmp(2400).VpEDJc, obj5);
-    const items2 = [tmp7(tmp4(4474).Text, obj4)];
+    const intl4 = tmp4(1114).intl;
+    obj6[2] = intl4.string(tmp(2428)["+/IHLl"]);
+    obj5[0] = tmp7(tmp4(4556).Text, obj6);
+    obj4[2] = intl3.format(tmp(2428).VpEDJc, obj5);
+    const items2 = [tmp7(tmp4(4556).Text, obj4)];
     const obj7 = { style: null, variant: "text-sm/normal", children: null };
     obj7[0] = tmp3.upsellText;
-    const intl5 = tmp4(1233).intl;
-    obj7[2] = intl5.string(tmp(2400).FJZeZF);
-    items2[1] = tmp7(tmp4(4474).Text, obj7);
+    const intl5 = tmp4(1114).intl;
+    obj7[2] = intl5.string(tmp(2428).FJZeZF);
+    items2[1] = tmp7(tmp4(4556).Text, obj7);
     obj3[1] = items2;
     tmp8Result = tmp8(tmp9, obj3);
   }

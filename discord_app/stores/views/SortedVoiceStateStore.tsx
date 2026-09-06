@@ -429,7 +429,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
         let tmp4 = nextResult;
         let tmp5 = callback;
         let tmp6 = dependencyMap;
-        if (favoriteChannels[nextResult].type !== callback(1305).FavoriteChannelType.CATEGORY) {
+        if (favoriteChannels[nextResult].type !== callback(1187).FavoriteChannelType.CATEGORY) {
           let tmp19 = channel;
           let tmp20 = nextResult;
           channel = channel.getChannel(tmp4);

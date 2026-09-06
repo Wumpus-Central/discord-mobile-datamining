@@ -3,8 +3,8 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
 import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
 import apexExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
 import handleInputModePressDefault from "UserSettingsVoiceInputOptions.tsx";
 import SoundboardVolumeDefault from "UserSettingsSoundboardVolume.tsx";
@@ -31,11 +31,11 @@ export default function UserSettingsVoice() {
   obj = { style: tmp.container, children: null };
   const items = [callback(handleInputModePressDefault, {}), , , , , ,];
   if (nonContextualStreamOutputPresent) {
-    nonContextualStreamOutputPresent = tmp4(tmp2(10094), {});
+    nonContextualStreamOutputPresent = tmp4(tmp2(9985), {});
   }
   items[1] = nonContextualStreamOutputPresent;
   obj = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
-  const intl = tmp7(1233).intl;
+  const intl = tmp7(1114).intl;
   obj[2] = intl.format(getSystemLocale.t["V+B3FH"], { guideURL: closure_5 });
   items[2] = callback(Text.Text, obj);
   items[3] = callback(SoundboardVolumeDefault, {});

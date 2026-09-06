@@ -27,28 +27,28 @@ function VerifiedIcon(arg0) {
   obj1 = map;
   let PLATFORM_TWITTER = obj1.useToken(ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, theme);
   if (isTwitterVerifiedAccount) {
-    PLATFORM_TWITTER = tmp4(709).unsafe_rawColors.PLATFORM_TWITTER;
+    PLATFORM_TWITTER = tmp4(576).unsafe_rawColors.PLATFORM_TWITTER;
   }
   if (!tmp2Result.isThemeLight(theme)) {
     if (!isTwitterVerifiedAccount) {
-      let WHITE = tmp4(709).unsafe_rawColors.BLACK;
+      let WHITE = tmp4(576).unsafe_rawColors.BLACK;
     }
     obj = { style: null, children: null };
     obj[0] = tmp.verifiedIconContainer;
     obj = { source: null, color: null };
-    obj[0] = tmp4(11405);
+    obj[0] = tmp4(11580);
     obj[1] = PLATFORM_TWITTER;
     const merged = Object.assign(obj);
-    const items = [callback(tmp2(1296).Icon, obj)];
+    const items = [callback(tmp2(1178).Icon, obj)];
     obj1 = { source: null, color: null };
-    obj1[0] = tmp4(11406);
+    obj1[0] = tmp4(11581);
     obj1[1] = WHITE;
     const merged1 = Object.assign(obj);
-    items[1] = callback(tmp2(1296).Icon, obj1);
+    items[1] = callback(tmp2(1178).Icon, obj1);
     obj[1] = items;
     return callback2(View, obj);
   }
-  WHITE = tmp4(709).unsafe_rawColors.WHITE;
+  WHITE = tmp4(576).unsafe_rawColors.WHITE;
 }
 let c3 = importAllResult;
 ({ CARD_ROWS_ICON_SIZE: error, CARD_ROWS_ICON_SIZE_VARIANT: closure_8, CARD_PADDING } = ARBITRARY_LARGE_OFFSET);
@@ -386,7 +386,7 @@ let closure_19 = importAllResult.memo((application) => {
 const memoResult = importAllResult.memo((applicationRoleConnection) => {
   applicationRoleConnection = applicationRoleConnection.applicationRoleConnection;
   const tmp = callback3();
-  let obj = applicationRoleConnection(11400);
+  let obj = applicationRoleConnection(11575);
   const roleConnectionMetadataItems = obj.generateRoleConnectionMetadataItems(applicationRoleConnection);
   obj1 = getAvatarURLDefault;
   obj = { id: applicationRoleConnection.application.id, icon: applicationRoleConnection.application.icon };
@@ -397,7 +397,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     if (null != applicationRoleConnection.platform_username) {
       obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
       obj[2] = applicationRoleConnection.platform_username;
-      tmp7 = callback(tmp2(4474).Text, obj);
+      tmp7 = callback(tmp2(4556).Text, obj);
     }
   }
   const items = [tmp7, ,];
@@ -415,13 +415,13 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
   items[1] = tmp9;
   const obj3 = { style: tmp.poweredByContainer, children: null };
   const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = tmp2(1233).intl;
-  obj4[2] = intl.format(applicationRoleConnection(1233).t.zIT9YA, {
+  const intl = tmp2(1114).intl;
+  obj4[2] = intl.format(applicationRoleConnection(1114).t.zIT9YA, {
     applicationHook() {
       return applicationRoleConnection.application.name;
     },
   });
-  obj3[1] = callback(applicationRoleConnection(4474).Text, obj4);
+  obj3[1] = callback(applicationRoleConnection(4556).Text, obj4);
   items[2] = callback(View, obj3);
   obj2[0] = items;
   let name = applicationRoleConnection.platform_name;
@@ -440,12 +440,12 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
   const tmp5 = closure_13;
   const tmp5Result = closure_13(closure_14, obj2);
   const tmp6 = closure_14;
-  obj6[2] = callback(applicationRoleConnection(1296).Icon, {
-    size: applicationRoleConnection(1296).Icon.Sizes.MEDIUM,
+  obj6[2] = callback(applicationRoleConnection(1178).Icon, {
+    size: applicationRoleConnection(1178).Icon.Sizes.MEDIUM,
     source: applicationIconSource,
     disableColor: true,
   });
-  return callback(applicationRoleConnection(5608).TableRow, obj6);
+  return callback(applicationRoleConnection(5605).TableRow, obj6);
 });
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConnections.tsx");
 
@@ -455,16 +455,16 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   let theme;
   dependencyMap = undefined;
   const tmp = callback3();
-  let obj = userId(4204);
+  let obj = userId(4271);
   theme = obj.useThemeContext().theme;
   const items = [closure_5];
-  dependencyMap = userId(586).useStateFromStores(items, () => locale.locale);
-  const obj2 = userId(586);
+  dependencyMap = userId(504).useStateFromStores(items, () => locale.locale);
+  const obj2 = userId(504);
   const items1 = [closure_6];
-  const stateFromStores = userId(586).useStateFromStores(items1, () => obj.hidePersonalInformation);
-  const obj3 = userId(586);
+  const stateFromStores = userId(504).useStateFromStores(items1, () => obj.hidePersonalInformation);
+  const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(12750)(userId));
+  ({ connections, appIdentities } = theme(13080)(userId));
   if (!stateFromStores) {
     const items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(
@@ -487,13 +487,13 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
     obj = { style: null, title: null, titleStyle: null, children: null };
     const items3 = [tmp.cardContainer, userId.style];
     obj[0] = items3;
-    const intl = tmp2(1233).intl;
-    obj[1] = intl.string(tmp2(1233).t["3fe7U5"]);
+    const intl = tmp2(1114).intl;
+    obj[1] = intl.string(tmp2(1114).t["3fe7U5"]);
     obj[2] = tmp.refreshCardTitle;
     obj = { hasIcons: true, children: null };
     obj[1] = items2;
-    obj[3] = callback(tmp2(6001).TableRowGroup, obj);
-    return callback(tmp5(6009), obj);
+    obj[3] = callback(tmp2(5687).TableRowGroup, obj);
+    return callback(tmp5(7207), obj);
   }
   return null;
 };
@@ -511,12 +511,12 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
       obj = { style: null, title: null, titleStyle: null, children: null };
       const items1 = [tmp.cardContainer, style];
       obj[0] = items1;
-      const intl = tmp4(1233).intl;
-      obj[1] = intl.string(tmp4(1233).t.PHjkRE);
+      const intl = tmp4(1114).intl;
+      obj[1] = intl.string(tmp4(1114).t.PHjkRE);
       obj[2] = tmp.refreshCardTitle;
       obj = { hasIcons: true, children: null };
       obj[1] = mapped;
-      obj[3] = callback(tmp4(6001).TableRowGroup, obj);
+      obj[3] = callback(tmp4(5687).TableRowGroup, obj);
       return callback(UserProfileCardDefault, obj);
     }
   }

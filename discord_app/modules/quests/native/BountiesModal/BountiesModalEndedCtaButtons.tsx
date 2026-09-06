@@ -28,9 +28,9 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     flag = false;
   }
   let callback;
-  let obj = bounty(11310);
+  let obj = bounty(11486);
   callback = obj.useGetQuestImpressionId();
-  obj1 = bounty(4217);
+  obj1 = bounty(4296);
   const fn = function y() {
     let obj = bounty(closure_1_2[5]);
     let num = 0;
@@ -40,12 +40,12 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     obj = { opacity: obj.withTiming(num, bounty(closure_1_2[6]).timingStandard) };
     return obj;
   };
-  obj = { withTiming: bounty(4479).withTiming, visible, timingStandard: bounty(4482).timingStandard };
+  obj = { withTiming: bounty(4561).withTiming, visible, timingStandard: bounty(4564).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 11417131685254;
   fn.__initData = closure_6;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  bounty(14883);
+  bounty(15040);
   if (visible) {
     obj = { style: null, children: null };
     const items = [tmp.container, animatedStyle];
@@ -64,19 +64,19 @@ export default function BountiesModalEndedCtaButtons(bounty) {
       };
       const result = obj.openAdGameLinkDirectly(obj, obj);
     };
-    const items1 = [callback(tmp2(4929).Button, obj1)];
+    const items1 = [callback(tmp2(4975).Button, obj1)];
     let tmp9Result = null;
     if (showCloseButton) {
       const obj2 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
-      const intl = tmp2(1233).intl;
-      obj2[1] = intl.string(tmp2(1233).t.cpT0Cq);
+      const intl = tmp2(1114).intl;
+      obj2[1] = intl.string(tmp2(1114).t.cpT0Cq);
       obj2[3] = flag;
       obj2[4] = bounty.onClose;
-      tmp9Result = tmp9(tmp2(4929).Button, obj2);
+      tmp9Result = tmp9(tmp2(4975).Button, obj2);
     }
     items1[1] = tmp9Result;
     obj[1] = items1;
-    visible = closure_4(visible(4217).View, obj);
+    visible = closure_4(visible(4296).View, obj);
     const tmp7 = closure_4;
     tmp9 = callback;
   }

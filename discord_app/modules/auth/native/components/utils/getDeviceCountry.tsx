@@ -1,8 +1,8 @@
 // discord_app/modules/auth/native/components/utils/getDeviceCountry.tsx
 import set from "../../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import enforcing from "../../../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceLocaleModule.tsx";
 import set2 from "../../../../../utils/PlatformUtils.tsx";
+import enforcing from "../../../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceLocaleModule.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const result = set.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");

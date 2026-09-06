@@ -77,10 +77,10 @@ function _claimOutboundPromotion() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = { url: null, rejectWithError: null };
               obj2[0] = closure_9.CLAIM_OUTBOUND_PROMOTION_CODE(callback);
-              obj2[1] = callback(527).rejectWithMigratedError();
+              obj2[1] = callback(1272).rejectWithMigratedError();
               body = 2;
               c6 = 1;
               const obj3 = { value: null, done: false };
@@ -104,7 +104,7 @@ function _claimOutboundPromotion() {
               ANDROID = tmp39.ANDROID;
             }
             c6 = ANDROID;
-            obj = callback2(695);
+            obj = callback2(1242);
             const obj5 = {
               platform: null,
               status: null,

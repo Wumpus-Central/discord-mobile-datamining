@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingUtils.tsx
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import hasFlagAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import hasFlagAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import useCanChannelBeDefault from "DefaultChannelUtils.tsx";
 import closure_4 from "../../stores/ChannelStore.tsx";
@@ -236,8 +236,8 @@ export const getChannelCoverageForOnboarding = function getChannelCoverageForOnb
 export const useChannelCoverageForOnboarding = function useChannelCoverageForOnboarding(arg0, arr, arr2) {
   let set = arg0;
   const items = [closure_6];
-  const obj = set(586);
-  const mapped = set(586)
+  const obj = set(504);
+  const mapped = set(504)
     .useStateFromStores(items, () => closure_1_6.getChannels(set))
     [closure_7].map((channel) => channel.channel);
   set = undefined;

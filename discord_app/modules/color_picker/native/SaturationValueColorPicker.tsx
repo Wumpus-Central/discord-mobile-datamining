@@ -1,6 +1,6 @@
 // discord_app/modules/color_picker/native/SaturationValueColorPicker.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -15,7 +15,7 @@ function ColorBox(hue) {
   const tmp = callback3();
   const tmp2 = callback(React.useState("rgb(0,0,0)"), 2);
   importDefault = tmp3;
-  let obj = hue(4217);
+  let obj = hue(4296);
   class S {
     constructor() {
       obj = hue(closure_1_2[7]);
@@ -23,7 +23,7 @@ function ColorBox(hue) {
       return obj.hslToRgbWorklet(obj);
     }
   }
-  obj = { hslToRgbWorklet: hue(14491).hslToRgbWorklet, hue };
+  obj = { hslToRgbWorklet: hue(14598).hslToRgbWorklet, hue };
   S.__closure = obj;
   S.__workletHash = 8814597686728;
   S.__initData = closure_9;
@@ -35,7 +35,7 @@ function ColorBox(hue) {
       const runOnJSResult = hue(closure_1_2[6]).runOnJS(closure_1);
     }
   };
-  obj = { runOnJS: hue(4217).runOnJS, setColor: tmp3 };
+  obj = { runOnJS: hue(4296).runOnJS, setColor: tmp3 };
   fn.__closure = obj;
   fn.__workletHash = 14688428173537;
   fn.__initData = closure_10;

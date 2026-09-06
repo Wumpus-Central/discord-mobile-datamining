@@ -38,32 +38,22 @@ export default function FamilyCenterAvatarPair(otherUser) {
     if (undefined !== otherUser) {
       obj = { style: null, children: null };
       obj[0] = tmp.avatars;
-      obj = {
-        size: null,
-        user: null,
-        guildId: "Array",
-        avatarDecoration: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-      };
-      obj[0] = tmp2(1296).AvatarSizes.LARGE_48;
+      obj = { size: null, user: null, guildId: "Array", avatarDecoration: false };
+      obj[0] = tmp2(1178).AvatarSizes.LARGE_48;
       obj[1] = stateFromStores;
       obj[3] = stateFromStores.avatarDecoration;
-      const items1 = [callback(tmp2(1296).Avatar, obj), ,];
+      const items1 = [callback(tmp2(1178).Avatar, obj), ,];
       obj1 = { style: null, size: null, source: null };
       const items2 = [tmp.icon, iconStyles];
       obj1[0] = items2;
-      obj1[1] = tmp2(1296).Icon.Sizes.EXTRA_SMALL;
+      obj1[1] = tmp2(1178).Icon.Sizes.EXTRA_SMALL;
       obj1[2] = iconSrc;
-      items1[1] = callback(tmp2(1296).Icon, obj1);
-      const obj2 = {
-        size: null,
-        user: null,
-        guildId: "Array",
-        avatarDecoration: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-      };
-      obj2[0] = tmp2(1296).AvatarSizes.LARGE_48;
+      items1[1] = callback(tmp2(1178).Icon, obj1);
+      const obj2 = { size: null, user: null, guildId: "Array", avatarDecoration: false };
+      obj2[0] = tmp2(1178).AvatarSizes.LARGE_48;
       obj2[1] = otherUser;
       obj2[3] = otherUser.avatarDecoration;
-      items1[2] = callback(tmp2(1296).Avatar, obj2);
+      items1[2] = callback(tmp2(1178).Avatar, obj2);
       obj[1] = items1;
       tmp5 = callback2(View, obj);
     }

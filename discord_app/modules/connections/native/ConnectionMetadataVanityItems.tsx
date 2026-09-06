@@ -7,8 +7,8 @@ import Button from "../../../design/void/native.tsx";
 import shortenAndLocalizeNumber from "../../../utils/NumberUtils.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import officialApplicationIds from "../ConnectionsUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/11401_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11402_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11576_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/11577_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import OperatorTypes from "../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -35,13 +35,13 @@ function VanityMetric(label) {
   }
   const sum = result + str;
   if (typeof label === "string") {
-    const intl = tmp2(1233).intl;
+    const intl = tmp2(1114).intl;
     obj = { name: null, value: null };
     obj[0] = label;
     obj[1] = sum;
-    let children = intl.format(tmp2(1233).t.HLoinF, obj);
+    let children = intl.format(tmp2(1114).t.HLoinF, obj);
   } else {
-    const intl2 = tmp2(1233).intl;
+    const intl2 = tmp2(1114).intl;
     obj = { value: null };
     obj[0] = sum;
     children = intl2.format(label, obj);

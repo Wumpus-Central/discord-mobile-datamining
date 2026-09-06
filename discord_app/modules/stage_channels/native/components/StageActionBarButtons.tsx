@@ -3,14 +3,14 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../../reanimated/ReanimatedRexport.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import registerAssetDefault from "../../../../../_runtime/08408_registerAsset.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import registerAssetDefault from "../../../../../_runtime/08698_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/08761_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08615_registerAsset.js";
 import ActionButtonAll from "../../../video_calls/native/components/CallBarAction.tsx";
-import registerAssetDefault3 from "../../../../../_runtime/10017_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/10056_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/09900_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/09939_registerAsset.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -211,8 +211,8 @@ let result = require("set").fileFinishedImporting("modules/stage_channels/native
 export const MoveToAudienceButton = function MoveToAudienceButton(channel) {
   channel = channel.channel;
   const obj = { accessibilityLabel: null, source: null, onPress: null, isSmallSize: null };
-  const intl = channel(1233).intl;
-  obj[0] = intl.string(channel(1233).t.ezLpY6);
+  const intl = channel(1114).intl;
+  obj[0] = intl.string(channel(1114).t.ezLpY6);
   obj[1] = registerAssetDefault3;
   obj[2] = function onPress() {
     const result = channel(closure_1_3[14]).audienceAckRequestToSpeak(channel, true);
@@ -225,15 +225,15 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
   ({ channel, isSmallSize } = arg0);
   let imageStyle = callback4();
   let tmpResult = dependencyMap;
-  let obj = stateFromStores(586);
+  let obj = stateFromStores(504);
   const items = [closure_9];
   stateFromStores = obj.useStateFromStores(items, () => muted.isMuted());
   if (!obj2.useShowStageMusicMuteButton(channel.id)) {
     return null;
   } else {
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     const string = intl.string;
-    const t = tmp(1233).t;
+    const t = tmp(1114).t;
     if (stateFromStores) {
       let stringResult = string(t.ScHlfl);
     } else {
@@ -248,12 +248,12 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
       isSmallSize: null,
     };
     obj[0] = stringResult;
-    obj[1] = importDefault(stateFromStores ? 10024 : 10025);
+    obj[1] = importDefault(stateFromStores ? 9907 : 9908);
     if (stateFromStores) {
-      tmpResult = tmp(10026);
+      tmpResult = tmp(9909);
       let MusicIcon = tmpResult.MusicSlashIcon;
     } else {
-      MusicIcon = tmp(9268).MusicIcon;
+      MusicIcon = tmp(9911).MusicIcon;
     }
     obj[2] = MusicIcon;
     imageStyle = imageStyle.imageStyle;
@@ -269,10 +269,10 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
 export const DisconnectStageButton = function DisconnectStageButton(channel) {
   channel = channel.channel;
   const obj = { accessibilityLabel: null, source: null, IconComponent: null, onPress: null, isSmallSize: null };
-  const intl = channel(1233).intl;
-  obj[0] = intl.string(channel(1233).t.SMKyih);
+  const intl = channel(1114).intl;
+  obj[0] = intl.string(channel(1114).t.SMKyih);
   obj[1] = registerAssetDefault2;
-  obj[2] = channel(10029).DoorExitIcon;
+  obj[2] = channel(9073).DoorExitIcon;
   obj[3] = function onPress() {
     if (closure_1_1(closure_1_3[24])(channel)) {
       let tmp3Result = tmp3(tmp[25]);
@@ -294,11 +294,11 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
     obj = { channelId: channel.id, analyticsLocations };
     obj.openLazy(channel(closure_1_3[32])(closure_1_3[31], closure_1_3.paths), closure_1_10, obj);
   }
-  analyticsLocations = analyticsLocations(5962)().analyticsLocations;
-  let obj = channel(5383);
+  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
+  let obj = channel(5431);
   const stageParticipantsCount = obj.useStageParticipantsCount(
     channel.id,
-    channel(5377).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
+    channel(5425).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
   );
   if (stageParticipantsCount > 0) {
     obj = {
@@ -310,15 +310,15 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
       notifications: null,
       isSmallSize: null,
     };
-    const intl = tmp3(1233).intl;
+    const intl = tmp3(1114).intl;
     obj = { count: null };
     obj[0] = stageParticipantsCount;
-    obj[0] = intl.formatToPlainString(tmp3(1233).t.OhK58v, obj);
-    obj[1] = tmp(10044);
+    obj[0] = intl.formatToPlainString(tmp3(1114).t.OhK58v, obj);
+    obj[1] = tmp(9927);
     obj1 = { tintColor: null };
-    obj1[0] = tmp(709).unsafe_rawColors.WHITE;
+    obj1[0] = tmp(576).unsafe_rawColors.WHITE;
     obj[2] = obj1;
-    obj[3] = tmp3(10045).HandRequestSpeakListIcon;
+    obj[3] = tmp3(9928).HandRequestSpeakListIcon;
     obj[4] = handleOpenAudienceList;
     obj[5] = stageParticipantsCount;
     obj[6] = isSmallSize;
@@ -332,13 +332,13 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
       onPress: null,
       isSmallSize: null,
     };
-    const intl2 = tmp3(1233).intl;
-    obj2[0] = intl2.string(tmp3(1233).t.KJnyvh);
-    obj2[1] = tmp(10044);
+    const intl2 = tmp3(1114).intl;
+    obj2[0] = intl2.string(tmp3(1114).t.KJnyvh);
+    obj2[1] = tmp(9927);
     const obj3 = { tintColor: null };
-    obj3[0] = tmp(709).unsafe_rawColors.WHITE;
+    obj3[0] = tmp(576).unsafe_rawColors.WHITE;
     obj2[2] = obj3;
-    obj2[3] = tmp3(10045).HandRequestSpeakListIcon;
+    obj2[3] = tmp3(9928).HandRequestSpeakListIcon;
     obj2[4] = handleOpenAudienceList;
     obj2[5] = isSmallSize;
     tmp7 = callback2(ActionButtonAll.ActionButton, obj2);
@@ -439,7 +439,7 @@ export const ChatButton = function ChatButton(channel) {
   const isSmallSize = channel.isSmallSize;
   let isVoiceChannelLocked;
   let openChat;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_8];
   const items1 = [channel.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(
@@ -451,9 +451,9 @@ export const ChatButton = function ChatButton(channel) {
     items1,
   );
   ({ unreadCount, mentionCount } = stateFromStoresObject);
-  obj1 = channel(10054);
+  obj1 = channel(9937);
   isVoiceChannelLocked = obj1.useIsVoiceChannelLocked(channel);
-  let obj2 = channel(9574);
+  let obj2 = channel(9589);
   const voiceChatNavigationContext = obj2.useVoiceChatNavigationContext();
   openChat = undefined;
   if (voiceChatNavigationContext != null) {
@@ -478,16 +478,16 @@ export const ChatButton = function ChatButton(channel) {
         isSmallSize: null,
       };
       obj = { tintColor: null };
-      obj[0] = isVoiceChannelLocked(709).unsafe_rawColors.WHITE;
+      obj[0] = isVoiceChannelLocked(576).unsafe_rawColors.WHITE;
       obj[0] = obj;
-      const intl2 = tmp(1233).intl;
-      obj[1] = intl2.string(tmp(1233).t.ZXxLQg);
-      obj[2] = tmp(5025).ChatIcon;
-      obj[3] = isVoiceChannelLocked(10055);
+      const intl2 = tmp(1114).intl;
+      obj[1] = intl2.string(tmp(1114).t.ZXxLQg);
+      obj[2] = tmp(5071).ChatIcon;
+      obj[3] = isVoiceChannelLocked(9938);
       obj[4] = onPress;
       obj[5] = isVoiceChannelLocked;
       obj[6] = isSmallSize;
-      let tmp7Result = callback2(openChat(9562).ActionButton, obj);
+      let tmp7Result = callback2(openChat(9497).ActionButton, obj);
     }
     return tmp7Result;
   }
@@ -505,16 +505,16 @@ export const ChatButton = function ChatButton(channel) {
     appearsDisabled: null,
     isSmallSize: null,
   };
-  obj2 = { tintColor: isVoiceChannelLocked(709).unsafe_rawColors.WHITE };
+  obj2 = { tintColor: isVoiceChannelLocked(576).unsafe_rawColors.WHITE };
   obj1[2] = obj2;
-  const intl = tmp(1233).intl;
-  obj1[3] = intl.string(channel(1233).t.ZXxLQg);
-  obj1[4] = channel(5025).ChatIcon;
-  obj1[5] = isVoiceChannelLocked(10055);
+  const intl = tmp(1114).intl;
+  obj1[3] = intl.string(channel(1114).t.ZXxLQg);
+  obj1[4] = channel(5071).ChatIcon;
+  obj1[5] = isVoiceChannelLocked(9938);
   obj1[6] = onPress;
   obj1[7] = isVoiceChannelLocked;
   obj1[8] = isSmallSize;
-  tmp7Result = callback2(openChat(9562).NotifiedActionButton, obj1);
+  tmp7Result = callback2(openChat(9497).NotifiedActionButton, obj1);
 };
 export { AnimatedPrompt };
 export const AnimatedStartStagePrompt = function AnimatedStartStagePrompt(channel) {
@@ -606,11 +606,11 @@ export const JoinStagePrompt = function JoinStagePrompt(channel) {
     subtitle: null,
   };
   ({ iconStyle: obj[2], iconContainerStyle: obj[3] } = callback4());
-  const intl = channel(1233).intl;
-  obj[5] = intl.string(channel(1233).t["7vb2cc"]);
-  const intl2 = channel(1233).intl;
-  obj[6] = intl2.string(channel(1233).t.lyCW4E);
-  return callback2(channel(8376).FormCTA, obj);
+  const intl = channel(1114).intl;
+  obj[5] = intl.string(channel(1114).t["7vb2cc"]);
+  const intl2 = channel(1114).intl;
+  obj[6] = intl2.string(channel(1114).t.lyCW4E);
+  return callback2(channel(8593).FormCTA, obj);
 };
 export const ContinueToStagePrompt = function ContinueToStagePrompt(onContinue) {
   const tmp = callback4();

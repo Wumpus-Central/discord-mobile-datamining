@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingActionCreators.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import updateImpersonating from "../impersonate/ImpersonateActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -233,21 +233,21 @@ let obj = {
     }
     let obj = store2;
     const selectedOptions = store2.getSelectedOptions(guildId);
-    obj1 = items1(5483);
+    obj1 = items1(7106);
     const selectedRoleIds = obj1.getSelectedRoleIds(selectedOptions);
-    const selectedChannelIds = items1(5483).getSelectedChannelIds(selectedOptions);
+    const selectedChannelIds = items1(7106).getSelectedChannelIds(selectedOptions);
     if (store2.getEnabled(guildId)) {
       let defaultChannelIds = obj.getDefaultChannelIds(guildId);
     } else {
       defaultChannelIds = [];
     }
-    let tmp2Result = tmp2(5483);
-    const obj3 = items1(5483);
+    let tmp2Result = tmp2(7106);
+    const obj3 = items1(7106);
     [arr3, arr4] = callback2(tmp2Result.getChannelCoverageForOnboarding(guildId, prompts, defaultChannelIds), 2);
     const items = [...defaultChannelIds];
     const mapped = items.map((arg0) => channel.getChannel(arg0));
-    const found = mapped.filter(tmp2(1470).isNotNullish);
-    tmp2Result = tmp2(5486);
+    const found = mapped.filter(tmp2(1369).isNotNullish);
+    tmp2Result = tmp2(7109);
     const tmp6 = callback2(tmp2Result.getChannelCoverageForOnboarding(guildId, prompts, defaultChannelIds), 2);
     if (null == tmp) {
       items1 = [];
@@ -257,14 +257,14 @@ let obj = {
     }
     const connections = obj.getConnections(guildId);
     const set = new Set(items);
-    const providerConnectionState = items1(5483).getProviderConnectionState(connections);
-    const tmp2Result1 = items1(5483);
-    const applicationConnectionState = items1(5483).getApplicationConnectionState(connections);
+    const providerConnectionState = items1(7106).getProviderConnectionState(connections);
+    const tmp2Result1 = items1(7106);
+    const applicationConnectionState = items1(7106).getApplicationConnectionState(connections);
     const tmp12 = importDefault;
-    const tmp2Result2 = items1(5483);
+    const tmp2Result2 = items1(7106);
     obj = {};
     const obj8 = expandEventPropertiesDefault;
-    const merged = Object.assign(items1(4701).collectGuildAnalyticsMetadata(guildId));
+    const merged = Object.assign(items1(4740).collectGuildAnalyticsMetadata(guildId));
     obj.step = prompts.length - 1;
     let num2 = 0;
     if (null != tmp) {
@@ -284,8 +284,8 @@ let obj = {
     ({ connected: obj9.application_connections_connected, notConnected: obj9.application_connections_not_connected } =
       applicationConnectionState);
     obj8.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj);
-    const tmp2Result3 = items1(4701);
-    const tmp2Result4 = items1(5487);
+    const tmp2Result3 = items1(4740);
+    const tmp2Result4 = items1(7110);
     tmp2Result4.ackGuildFeature(
       guildId,
       ReadStateTypes.GUILD_ONBOARDING_QUESTION,
@@ -293,12 +293,12 @@ let obj = {
     );
     _updateOnboardingResponses(guildId, true);
     if (closure_5.isFullServerPreview(guildId)) {
-      const result = tmp2(5482).updateImpersonatedChannels(guildId, items, []);
-      const tmp2Result5 = tmp2(5482);
-      const result1 = tmp2(5482).updateImpersonatedData(guildId, { optInEnabled: true });
-      const tmp2Result6 = tmp2(5482);
+      const result = tmp2(5552).updateImpersonatedChannels(guildId, items, []);
+      const tmp2Result5 = tmp2(5552);
+      const result1 = tmp2(5552).updateImpersonatedData(guildId, { optInEnabled: true });
+      const tmp2Result6 = tmp2(5552);
       const _Array = Array;
-      const result2 = tmp2(5482).updateImpersonatedRoles(guildId, Array.from(selectedRoleIds));
+      const result2 = tmp2(5552).updateImpersonatedRoles(guildId, Array.from(selectedRoleIds));
       currentUser = currentUser.getCurrentUser();
       if (null != currentUser) {
         const member = store.getMember(guildId, currentUser.id);
@@ -311,13 +311,13 @@ let obj = {
         }
         obj = { memberOptions: null };
         obj1 = { flags: null };
-        const tmp2Result8 = tmp2(5482);
-        obj1[0] = tmp2(1398).setFlag(num3, GuildMemberFlags.COMPLETED_ONBOARDING, true);
+        const tmp2Result8 = tmp2(5552);
+        obj1[0] = tmp2(1384).setFlag(num3, GuildMemberFlags.COMPLETED_ONBOARDING, true);
         obj[0] = obj1;
         const result3 = tmp2Result8.updateImpersonatedData(guildId, obj);
-        const tmp2Result9 = tmp2(1398);
+        const tmp2Result9 = tmp2(1384);
       }
-      const tmp2Result7 = tmp2(5482);
+      const tmp2Result7 = tmp2(5552);
     }
   },
   onboardExistingMember(id, set) {
@@ -330,7 +330,7 @@ let obj = {
     }
     const item = defaultChannelIds.forEach((arg0) => set.add(arg0));
     if (set.size > 0) {
-      const obj2 = set(5490);
+      const obj2 = set(7113);
       const _Array = Array;
       obj = { page: null };
       obj[0] = constants2.GUILD_ONBOARDING;
@@ -387,9 +387,9 @@ let obj = {
                 if (flags == null) {
                   c0 = 0;
                 }
-                obj1 = closure_1_0(5497);
+                obj1 = closure_1_0(7120);
                 obj1 = { flags: null };
-                obj1[0] = closure_1_0(1398).setFlag(c0, closure_1_13.COMPLETED_ONBOARDING, false);
+                obj1[0] = closure_1_0(1384).setFlag(c0, closure_1_13.COMPLETED_ONBOARDING, false);
                 dependencyMap = 1;
                 c1 = 1;
                 const obj2 = { value: null, done: false };

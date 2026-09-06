@@ -14,6 +14,7 @@ prototype = function BaseWishlistItemRecord(arg0) {
     is_owned: tmp.isOwned,
     gifter_user_id: tmp.gifterUserId,
     sku: tmp.sku,
+    added_at: tmp.addedAt,
   } = arg0);
   return tmp;
 }.prototype;
@@ -49,6 +50,7 @@ prototype["fromServer"] = function fromServer(sku) {
     is_owned: tmp7.isOwned,
     gifter_user_id: tmp7.gifterUserId,
     sku: tmp7.sku,
+    added_at: tmp7.addedAt,
   } = obj);
   return tmp7;
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/quarantine/openQuarantineModeInfoModal.native.tsx
 import noopAll from "../../../_runtime/00019_noop.js";
 import getBestActiveInput from "../../utils/native/ChatInputUtils.tsx";
-import _modDef4859 from "../../actions/native/AlertActionCreators.tsx";
+import _modDef4905 from "../../actions/native/AlertActionCreators.tsx";
 import { Keyboard } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
@@ -27,5 +27,5 @@ export default function openQuarantineModeInfoModal() {
       });
     },
   };
-  _modDef4859.openLazy(obj);
+  _modDef4905.openLazy(obj);
 }

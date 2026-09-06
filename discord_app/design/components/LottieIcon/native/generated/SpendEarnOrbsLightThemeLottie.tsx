@@ -1,6 +1,6 @@
 // discord_app/design/components/LottieIcon/native/generated/SpendEarnOrbsLightThemeLottie.tsx
 import LottieIcon from "../LottieIcon.tsx";
-import registerAsset from "../../../../../../_runtime/11068_registerAsset.js";
+import registerAsset from "../../../../../../_runtime/11095_registerAsset.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 

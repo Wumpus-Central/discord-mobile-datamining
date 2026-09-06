@@ -2,8 +2,8 @@
 import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
 import StatusTypes from "Constants.tsx";
 import getClearAfterDurationDefault from "utils/getClearAfterDuration.tsx";
 

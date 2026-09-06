@@ -1,6 +1,6 @@
 // discord_app/modules/game_console/ConsoleVoiceUpsellStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 
 let closure_2 = Object.freeze({ voiceUpsellDismissed: false, showSparkles: false });
 const obj = keys.create(() => closure_2);

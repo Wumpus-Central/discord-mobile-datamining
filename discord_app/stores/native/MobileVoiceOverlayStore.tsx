@@ -1,10 +1,10 @@
 // discord_app/stores/native/MobileVoiceOverlayStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 import set2 from "../../utils/PlatformUtils.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import isMetaQuest from "../../modules/device/MetaQuestUtils.android.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;

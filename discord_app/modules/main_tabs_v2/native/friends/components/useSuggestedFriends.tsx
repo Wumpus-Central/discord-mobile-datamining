@@ -42,9 +42,9 @@ export default function useSuggestedFriends(arg0) {
       return first(flag[5])
         .unionBy(found, mapped, (user) => user.user.id)
         .sort((user, user2) => {
-          const name = callback(4322).getName(user.user);
-          const obj = callback(4322);
-          return name.localeCompare(callback(4322).getName(user2.user));
+          const name = callback(4404).getName(user.user);
+          const obj = callback(4404);
+          return name.localeCompare(callback(4404).getName(user2.user));
         });
     } else {
       return [];

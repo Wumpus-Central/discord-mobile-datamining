@@ -46,7 +46,7 @@ export default function JumpToPresentButton(channelId) {
   dependencyMap = undefined;
   let tmp = callback4();
   const tmp2 = callback5(screenIndex);
-  let obj = channelId(586);
+  let obj = channelId(504);
   const items = [closure_7];
   dependencyMap = obj.useStateFromStores(items, () => connected.isConnected(), []);
   let tmp5 = callback3((showingAutoComplete) => {
@@ -64,27 +64,27 @@ export default function JumpToPresentButton(channelId) {
     }
     return tmp;
   });
-  const isVoicePanelMounted = channelId(9668).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(9668);
-  const isVoicePanelOpen = channelId(9668).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(9668);
+  const isVoicePanelMounted = channelId(9681).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(9681);
+  const isVoicePanelOpen = channelId(9681).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(9681);
   const items1 = [closure_8];
-  const stateFromStores = channelId(586).useStateFromStores(
+  const stateFromStores = channelId(504).useStateFromStores(
     items1,
     () => null != closure_1_8.getMessages(channelId).jumpReturnTargetId,
   );
   if (!tmp5) {
     return null;
   }
-  const obj4 = channelId(586);
+  const obj4 = channelId(504);
   let tmp10 = tmp2;
   if (tmp3Result.isIOS()) {
     const items2 = [tmp.containerIOS, tmp2];
     tmp10 = items2;
   }
-  const intl = tmp3(1233).intl;
+  const intl = tmp3(1114).intl;
   const string = intl.string;
-  const t = tmp3(1233).t;
+  const t = tmp3(1114).t;
   if (stateFromStores) {
     let stringResult = string(t.dpjpOp);
   } else {
@@ -95,12 +95,12 @@ export default function JumpToPresentButton(channelId) {
   if (tmp5) {
     obj = { accessibilityLabel: null, icon: null, onPress: null };
     obj[0] = stringResult;
-    obj[1] = screenIndex(12065);
+    obj[1] = screenIndex(12269);
     obj[2] = channelId.onJumpToPresent;
-    let tmp12Result = tmp12(screenIndex(12064), obj);
-    const tmp16 = screenIndex(12064);
+    let tmp12Result = tmp12(screenIndex(12268), obj);
+    const tmp16 = screenIndex(12268);
   } else {
-    tmp12Result = tmp12(tmp3(12066).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = tmp12(tmp3(12270).MemoedVoicePanelDismissChatButton, {});
   }
   obj[1] = tmp12Result;
   return <View style={items3}>{null}</View>;

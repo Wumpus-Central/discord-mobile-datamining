@@ -1,10 +1,10 @@
 // discord_app/actions/ChannelActionCreators.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import transitionToChannel from "../modules/routing/transitionToChannel.tsx";
-import _modDef5364 from "SelectedChannelActionCreators.tsx";
+import _modDef5411 from "SelectedChannelActionCreators.tsx";
 import isChangelogChannelDefault from "../modules/changelog/utils/isChangelogChannel.tsx";
 import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
@@ -295,13 +295,13 @@ export default {
           c4();
         }
         if (null != obj2.getRootNavigationRef()) {
-          tmp6(4489).transitionToChannel(channel.id, { navigationReplace: true });
+          tmp6(4571).transitionToChannel(channel.id, { navigationReplace: true });
           tmp3 = channel;
-          const tmp6Result = tmp6(4489);
+          const tmp6Result = tmp6(4571);
         } else {
-          const privateChannel = _modDef5364.selectPrivateChannel(channel.id);
+          const privateChannel = _modDef5411.selectPrivateChannel(channel.id);
           tmp3 = channel;
-          const obj3 = _modDef5364;
+          const obj3 = _modDef5411;
         }
         obj2 = getRootNavigationRef;
         tmp6 = require;
@@ -315,17 +315,17 @@ export default {
     return callback(function* () {
       id = tmp5;
       let body = tmp2;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_11.USER_CHANNELS;
       const obj2 = { recipients: null };
       obj2[0] = closure_1_1._getRecipients(closure_1_0);
       obj1[1] = obj2;
       const _getRecipientsResult = closure_1_1._getRecipients(closure_1_0);
-      obj1[3] = closure_1_0(527).rejectWithMigratedError();
+      obj1[3] = closure_1_0(1272).rejectWithMigratedError();
       body = yield HTTP.post(obj1);
       id = closure_1_6(body.body);
-      const obj = closure_1_1(706);
+      const obj = closure_1_1(573);
       const obj5 = { type: "CHANNEL_CREATE", channel: null };
       obj5[1] = id;
       obj.dispatch(obj5);
@@ -398,12 +398,12 @@ export default {
     return callback(function* () {
       let id = tmp2;
       let body = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, rejectWithError: true };
       obj1[0] = closure_1_11.DM_CHANNEL(closure_1_0);
       body = yield HTTP.get(obj1);
       id = closure_1_6(body.body);
-      const obj = closure_1_1(706);
+      const obj = closure_1_1(573);
       const obj4 = { type: "CHANNEL_CREATE", channel: null };
       obj4[1] = id;
       obj.dispatch(obj4);
@@ -434,8 +434,8 @@ export default {
       transitionToChannel.transitionToChannel(tmp.id, { navigationReplace: true });
       const tmp5Result = transitionToChannel;
     } else {
-      const privateChannel = _modDef5364.selectPrivateChannel(tmp.id);
-      const tmp2Result = _modDef5364;
+      const privateChannel = _modDef5411.selectPrivateChannel(tmp.id);
+      const tmp2Result = _modDef5411;
     }
     return tmp;
   },
@@ -449,13 +449,13 @@ export default {
       flag2 = false;
     }
     if (isChangelogChannelDefault(id)) {
-      let tmpResult = tmp(695);
+      let tmpResult = tmp(1242);
       let obj = { last_changelog_id: null, unread_count: null };
       obj[0] = closure_5.latestChangelogId();
       obj[1] = unreadCount.getUnreadCount(id);
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
-    tmpResult = tmp(706);
+    tmpResult = tmp(573);
     obj = { id, guild_id: "Array", parent_id: "isArray" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
@@ -473,14 +473,14 @@ export default {
     const delResult = HTTP.del(obj1);
     return HTTP.del(obj1)
       .then(() => {
-        const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
-        const intl = callback(1233).intl;
-        AccessibilityAnnouncer.announce(intl.string(callback(1233).t.nRbucl));
+        const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
+        const intl = callback(1114).intl;
+        AccessibilityAnnouncer.announce(intl.string(callback(1114).t.nRbucl));
       })
       .catch(() => {
-        const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
-        const intl = callback(1233).intl;
-        AccessibilityAnnouncer.announce(intl.string(callback(1233).t.ndXVI5));
+        const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
+        const intl = callback(1114).intl;
+        AccessibilityAnnouncer.announce(intl.string(callback(1114).t.ndXVI5));
       });
   },
   bulkLeaveGroupDMs(channel_ids) {
@@ -495,13 +495,13 @@ export default {
     return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(closure_1_0, closure_1_1.id);
       obj1[1] = closure_1_1;
-      obj1[3] = closure_1_0(527).rejectWithMigratedError();
+      obj1[3] = closure_1_0(1272).rejectWithMigratedError();
       closure_0 = yield HTTP.put(obj1);
-      const obj = closure_1_1(706);
+      const obj = closure_1_1(573);
       const obj4 = { type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS", channelId: null, overwrite: null };
       obj4[1] = closure_0;
       obj4[2] = closure_1;
@@ -514,12 +514,12 @@ export default {
     return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(closure_1_0, closure_1_1);
-      obj1[2] = closure_1_0(527).rejectWithMigratedError();
+      obj1[2] = closure_1_0(1272).rejectWithMigratedError();
       closure_0 = yield HTTP.del(obj1);
-      const obj = closure_1_1(706);
+      const obj = closure_1_1(573);
       const obj4 = { type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS", channelId: null, overwriteId: null };
       obj4[1] = closure_0;
       obj4[2] = closure_1;
@@ -586,7 +586,7 @@ export default {
       closure_1 = tmp3;
       let channel = tmp2;
       channel = closure_1_7.getChannel(closure_1_0);
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
       obj1[0] = closure_1_11.CHANNEL(closure_1_0);
       const obj2 = { name: null };
@@ -606,7 +606,7 @@ export default {
         tmp10 = isThreadResult;
       }
       if (!tmp10) {
-        obj1 = closure_1_1(6177);
+        obj1 = closure_1_1(7323);
         const result = obj1.checkGuildTemplateDirty(guildId);
       }
       return closure_1;
@@ -964,14 +964,14 @@ export default {
       if (null != c3) {
         obj1.topic = c3;
       }
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj2[0] = closure_1_11.GUILD_CHANNELS(closure_1_0);
       obj2[1] = obj1;
-      const obj4 = closure_1_0(527);
+      const obj4 = closure_1_0(1272);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.post(obj2);
-      const obj = closure_1_1(6177);
+      const obj = closure_1_1(7323);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();

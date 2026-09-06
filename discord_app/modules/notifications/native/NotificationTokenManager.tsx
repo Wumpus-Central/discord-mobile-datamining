@@ -1,12 +1,12 @@
 // discord_app/modules/notifications/native/NotificationTokenManager.tsx
 import set2 from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../Constants.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef1205 from "../../../utils/SentryUtils.native.tsx";
+import ME from "../../../Constants.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "../NotificationSettings.messages.js";
+import _modDef1232 from "../../../utils/SentryUtils.native.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import messagesProxyDefault from "../NotificationSettings.messages.js";
 import NativeModulesDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import items2 from "../NotificationSettingsConstants.tsx";
 import apexExperiment from "NotifSettingsExperiments.tsx";
@@ -169,8 +169,8 @@ prototype["registerNotificationCategories"] = function registerNotificationCateg
     } else {
       try {
         if (config.clearDeclarative) {
-          _modDef1205.addBreadcrumb({ message: "Clearing declarative notification categories" });
-          const obj3 = _modDef1205;
+          _modDef1232.addBreadcrumb({ message: "Clearing declarative notification categories" });
+          const obj3 = _modDef1232;
           inferImportanceFromBehaviorDefault.clear();
           const obj4 = inferImportanceFromBehaviorDefault;
         }
@@ -292,7 +292,7 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
 prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNotifChannels() {
   if (!this.hasTrackedDisabledAndroidNotifChannels) {
     tmp.hasTrackedDisabledAndroidNotifChannels = true;
-    let obj = set(1234);
+    let obj = set(1115);
     if (obj.isAndroid()) {
       const tmp5 = NativeNotifSettingsModuleDefault;
       let prop;
@@ -312,8 +312,8 @@ prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNo
         const propResult = prop();
         obj = { disabled_channels: null };
         obj[0] = found.map((channelId) => channelId.channelId);
-        tmp4(695).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj);
-        const tmp4Result = tmp4(695);
+        tmp4(1242).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj);
+        const tmp4Result = tmp4(1242);
       }
       tmp4 = importDefault;
     }

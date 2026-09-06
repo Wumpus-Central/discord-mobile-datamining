@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx
 import set from "../../../_runtime/00002_set.js";
-import isUndefinedOrNullDefault from "../../../_runtime/00656_isUndefinedOrNull.js";
+import isUndefinedOrNullDefault from "../../../_runtime/01332_isUndefinedOrNull.js";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 
 function convertClip(gameId) {

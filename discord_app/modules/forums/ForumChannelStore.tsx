@@ -1,6 +1,6 @@
 // discord_app/modules/forums/ForumChannelStore.tsx
 import closure_3 from "../../stores/ChannelStore.tsx";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 import set from "../../../_runtime/00002_set.js";
 
 const require = arg1;

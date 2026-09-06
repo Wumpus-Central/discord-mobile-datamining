@@ -27,7 +27,7 @@ const memoResult = importAllResult.memo((color) => {
   const onSelect = color.onSelect;
   const tmp = styles();
   let unsafe_rawColors = dependencyMap;
-  let obj = color(685);
+  let obj = color(1091);
   const v = obj.int2hsv(color).v;
   if (null != onSelect) {
     obj = {
@@ -38,8 +38,8 @@ const memoResult = importAllResult.memo((color) => {
       style: null,
       children: null,
     };
-    let tmp2Result = tmp2(4326);
-    tmp2Result = tmp2(685);
+    let tmp2Result = tmp2(4409);
+    tmp2Result = tmp2(1091);
     obj[1] = tmp2Result.hexToColorName(tmp2Result.int2hex(color), true);
     obj = { selected: null };
     obj[0] = selected;
@@ -49,30 +49,30 @@ const memoResult = importAllResult.memo((color) => {
     };
     const items = [tmp.colorBlock, style];
     obj1 = { backgroundColor: null };
-    obj1[0] = tmp2(685).int2hex(color);
+    obj1[0] = tmp2(1091).int2hex(color);
     items[2] = obj1;
     obj[4] = items;
     if (!selected) {
       obj[5] = null;
-      let tmp10Result = tmp6(tmp2(5077).PressableOpacity, obj);
+      let tmp10Result = tmp6(tmp2(5123).PressableOpacity, obj);
     } else {
       const obj2 = { source: null, color: null };
-      obj2[0] = onSelect(11389);
+      obj2[0] = onSelect(11564);
       if (v < 0.5) {
-        unsafe_rawColors = tmp8(709).unsafe_rawColors;
+        unsafe_rawColors = tmp8(576).unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
       } else {
-        BLACK2 = tmp8(709).unsafe_rawColors.BLACK;
+        BLACK2 = tmp8(576).unsafe_rawColors.BLACK;
       }
       obj2[1] = BLACK2;
-      tmp6(tmp2(1296).Icon, obj2);
+      tmp6(tmp2(1178).Icon, obj2);
     }
-    const tmp2Result1 = tmp2(685);
+    const tmp2Result1 = tmp2(1091);
   } else {
     const obj3 = { style: null, children: null };
     const items1 = [tmp.colorBlock, style];
     const obj4 = { backgroundColor: null };
-    obj4[0] = tmp2(685).int2hex(color);
+    obj4[0] = tmp2(1091).int2hex(color);
     items1[2] = obj4;
     obj3[0] = items1;
     if (!selected) {
@@ -80,17 +80,17 @@ const memoResult = importAllResult.memo((color) => {
       tmp10Result = tmp10(tmp11, obj3);
     } else {
       const obj5 = { source: null, color: null };
-      obj5[0] = onSelect(11389);
+      obj5[0] = onSelect(11564);
       if (v < 0.5) {
-        let BLACK = tmp3(709).unsafe_rawColors.WHITE;
+        let BLACK = tmp3(576).unsafe_rawColors.WHITE;
       } else {
-        BLACK = tmp3(709).unsafe_rawColors.BLACK;
+        BLACK = tmp3(576).unsafe_rawColors.BLACK;
       }
       obj5[1] = BLACK;
-      tmp10Result = tmp10(tmp2(1296).Icon, obj5);
+      tmp10Result = tmp10(tmp2(1178).Icon, obj5);
     }
     tmp11 = View;
-    const tmp2Result2 = tmp2(685);
+    const tmp2Result2 = tmp2(1091);
   }
   return tmp10Result;
 });

@@ -47,7 +47,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(8710).MemberType.OWNER) {
+    if (member_type === tmp(8420).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;
@@ -89,7 +89,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
 };
 export const useActiveSafetyHubClassifications = function useActiveSafetyHubClassifications() {
   const items = [closure_5];
-  const stateFromStoresArray = date(586).useStateFromStoresArray(items, () => classifications.getClassifications());
+  const stateFromStoresArray = date(504).useStateFromStoresArray(items, () => classifications.getClassifications());
   const sorted = stateFromStoresArray.sort((id, id2) => {
     const obj = callback(11);
     const extractTimestampResult = callback(11).extractTimestamp(id2.id);
@@ -103,7 +103,7 @@ export const useActiveSafetyHubClassifications = function useActiveSafetyHubClas
 };
 export const useExpiredSafetyHubClassifications = function useExpiredSafetyHubClassifications() {
   const items = [closure_5];
-  const stateFromStoresArray = date(586).useStateFromStoresArray(items, () => classifications.getClassifications());
+  const stateFromStoresArray = date(504).useStateFromStoresArray(items, () => classifications.getClassifications());
   const sorted = stateFromStoresArray.sort((id, id2) => {
     const obj = callback(11);
     const extractTimestampResult = callback(11).extractTimestamp(id2.id);

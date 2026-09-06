@@ -1,11 +1,12 @@
 // discord_app/utils/native/PremiumUpsellUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import registerAssetDefault from "../../../_runtime/08182_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/08183_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/08184_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/08185_registerAsset.js";
-import registerAssetDefault5 from "../../../_runtime/08186_registerAsset.js";
-import registerAssetDefault6 from "../../../_runtime/08187_registerAsset.js";
+import getPremiumPlanItem from "../PremiumUtils.tsx";
+import registerAssetDefault from "../../../_runtime/09314_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/09315_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/09316_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/09317_registerAsset.js";
+import registerAssetDefault5 from "../../../_runtime/09318_registerAsset.js";
+import registerAssetDefault6 from "../../../_runtime/09319_registerAsset.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
@@ -14,9 +15,9 @@ import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import { usePremiumTrialOffer } from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 
 require = arg1;
-function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analyticsLocation) {
-  const _require = initialUpsellKey;
-  closure_1 = analyticsLocations2;
+function usePremiumUpsellConfig(upsellType, analyticsLocations, analyticsLocation) {
+  const _require = upsellType;
+  closure_1 = analyticsLocations;
   dependencyMap = analyticsLocation;
   let obj = usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
@@ -25,7 +26,7 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
   const set = new Set(items);
   let hasItem = null != premiumTrialOffer;
   if (hasItem) {
-    hasItem = set.has(initialUpsellKey);
+    hasItem = set.has(upsellType);
   }
   let tmp4 = hasItem;
   if (hasItem) {
@@ -39,12 +40,12 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
     tmp4 = skuId === TIER_0.TIER_0;
   }
   closure_5 = tmp4;
-  const items1 = [initialUpsellKey, tmp4];
+  const items1 = [upsellType, tmp4];
   const memo = premiumTrialOffer.useMemo(() => {
     if (closure_5) {
-      return initialUpsellKey(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_0_LEADING;
+      return upsellType(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_0_LEADING;
     } else {
-      if (closure_1_7.UPLOAD !== initialUpsellKey) {
+      if (closure_1_7.UPLOAD !== upsellType) {
         if (tmp2.ANIMATED_EMOJI !== tmp) {
           if (tmp2.GLOBAL_EMOJI !== tmp) {
             if (tmp2.GLOBAL_STICKER !== tmp) {
@@ -57,7 +58,7 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
                           const ANIMATED_AVATAR = tmp2.ANIMATED_AVATAR;
                         }
                       }
-                      return initialUpsellKey(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_0_LEADING;
+                      return upsellType(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_0_LEADING;
                     }
                   }
                 }
@@ -66,34 +67,34 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
           }
         }
       }
-      return initialUpsellKey(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_2_LEADING;
+      return upsellType(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_2_LEADING;
     }
   }, items1);
-  const items2 = [memo, analyticsLocations2, analyticsLocation];
+  const items2 = [memo, analyticsLocations, analyticsLocation];
   const items3 = [tmp4, premiumTrialOffer, hasItem];
   const callback = premiumTrialOffer.useCallback(() => {
-    let obj = initialUpsellKey(analyticsLocation[19]);
+    let obj = upsellType(analyticsLocation[19]);
     const bestActiveInput = obj.getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();
     }
     obj = { location: analyticsLocation };
-    analyticsLocations2(analyticsLocation[20]).track(constants.PREMIUM_PROMOTION_OPENED, obj);
-    const obj3 = analyticsLocations2(analyticsLocation[20]);
-    analyticsLocations2(analyticsLocation[21]).hideActionSheet();
+    analyticsLocations(analyticsLocation[20]).track(constants.PREMIUM_PROMOTION_OPENED, obj);
+    const obj3 = analyticsLocations(analyticsLocation[20]);
+    analyticsLocations(analyticsLocation[21]).hideActionSheet();
     obj = { analyticsLocation: null, analyticsLocations: null, premiumFeatureCardOrder: null };
     obj1 = {};
-    const obj5 = analyticsLocations2(analyticsLocation[21]);
+    const obj5 = analyticsLocations(analyticsLocation[21]);
     const merged = Object.assign(analyticsLocation);
     obj1.object = memo.BUTTON_CTA;
     obj[0] = obj1;
-    let items = analyticsLocations2;
-    if (analyticsLocations2 == null) {
+    let items = analyticsLocations;
+    if (analyticsLocations == null) {
       items = [];
     }
     obj[1] = items;
     obj[2] = memo;
-    analyticsLocations2(analyticsLocation[22])(obj);
+    analyticsLocations(analyticsLocation[22])(obj);
   }, items2);
   obj = {
     useTier0UpsellContent: tmp4,
@@ -108,18 +109,18 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
           }
         }
         if (closure_1_8.TIER_0 === skuId) {
-          const intl4 = initialUpsellKey(analyticsLocation[6]).intl;
-          return intl4.string(initialUpsellKey(analyticsLocation[6]).t.hz78hE);
+          const intl4 = upsellType(analyticsLocation[6]).intl;
+          return intl4.string(upsellType(analyticsLocation[6]).t.hz78hE);
         } else if (tmp8.TIER_2 === skuId) {
-          const intl3 = initialUpsellKey(analyticsLocation[6]).intl;
-          return intl3.string(initialUpsellKey(analyticsLocation[6]).t["Gd/XHF"]);
+          const intl3 = upsellType(analyticsLocation[6]).intl;
+          return intl3.string(upsellType(analyticsLocation[6]).t["Gd/XHF"]);
         }
       } else if (closure_5) {
-        const intl = initialUpsellKey(analyticsLocation[6]).intl;
-        return intl.string(initialUpsellKey(analyticsLocation[6]).t["9CM5v9"]);
+        const intl = upsellType(analyticsLocation[6]).intl;
+        return intl.string(upsellType(analyticsLocation[6]).t["9CM5v9"]);
       }
-      const intl2 = initialUpsellKey(analyticsLocation[6]).intl;
-      return intl2.string(initialUpsellKey(analyticsLocation[6]).t.pj0XBN);
+      const intl2 = upsellType(analyticsLocation[6]).intl;
+      return intl2.string(upsellType(analyticsLocation[6]).t.pj0XBN);
     }, items3),
   };
   return obj;
@@ -148,49 +149,49 @@ export default {
     let flag = false;
     if (null != currentUser) {
       if (constants.UPLOAD === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).isPremiumExactly(currentUser, TIER_2.TIER_2);
-        const obj15 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).isPremiumExactly(currentUser, closure_9.TIER_2);
+        const obj15 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.GLOBAL_EMOJI === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUseEmojisEverywhere(currentUser);
-        const obj14 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUseEmojisEverywhere(currentUser);
+        const obj14 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.ANIMATED_AVATAR === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUseAnimatedAvatar(currentUser);
-        const obj13 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUseAnimatedAvatar(currentUser);
+        const obj13 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.BADGE === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUseBadges(currentUser);
-        const obj12 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUseBadges(currentUser);
+        const obj12 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.ANIMATED_EMOJI === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUseAnimatedEmojis(currentUser);
-        const obj11 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUseAnimatedEmojis(currentUser);
+        const obj11 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.EMOJI_AUTOCOMPLETE === initialUpsellKey) {
-        const canUseAnimatedEmojisResult = analyticsLocation(analyticsLocations[16]).canUseAnimatedEmojis(currentUser);
+        const canUseAnimatedEmojisResult = analyticsLocation(analyticsLocations[10]).canUseAnimatedEmojis(currentUser);
         let tmp18 = !canUseAnimatedEmojisResult;
         if (canUseAnimatedEmojisResult) {
-          tmp18 = !tmp15(tmp16[16]).canUseEmojisEverywhere(currentUser);
-          const tmp15Result = tmp15(tmp16[16]);
+          tmp18 = !tmp15(tmp16[10]).canUseEmojisEverywhere(currentUser);
+          const tmp15Result = tmp15(tmp16[10]);
         }
         flag = tmp18;
-        const obj9 = analyticsLocation(analyticsLocations[16]);
+        const obj9 = analyticsLocation(analyticsLocations[10]);
         tmp15 = analyticsLocation;
         tmp16 = analyticsLocations;
       } else if (tmp2.CUSTOM_PROFILES === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUsePremiumProfileCustomization(currentUser);
-        const obj8 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUsePremiumProfileCustomization(currentUser);
+        const obj8 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.APP_ICONS === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUsePremiumAppIcons(currentUser);
-        const obj7 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUsePremiumAppIcons(currentUser);
+        const obj7 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.GLOBAL_STICKER === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUseCustomStickersEverywhere(currentUser);
-        const obj6 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUseCustomStickersEverywhere(currentUser);
+        const obj6 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.PREMIUM_GUILD_PROFILE === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUsePremiumGuildMemberProfile(currentUser);
-        const obj5 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUsePremiumGuildMemberProfile(currentUser);
+        const obj5 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.LONGER_MESSAGE === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUseIncreasedMessageLength(currentUser);
-        const obj4 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUseIncreasedMessageLength(currentUser);
+        const obj4 = analyticsLocation(analyticsLocations[10]);
       } else if (tmp2.GUILD_CAP === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[16]).canUseIncreasedGuildCap(currentUser);
-        const obj3 = analyticsLocation(analyticsLocations[16]);
+        flag = !analyticsLocation(analyticsLocations[10]).canUseIncreasedGuildCap(currentUser);
+        const obj3 = analyticsLocation(analyticsLocations[10]);
       } else {
         flag = false;
         if (tmp2.STREAM_HIGH_QUALITY === initialUpsellKey) {
@@ -199,10 +200,10 @@ export default {
       }
     }
     if (flag) {
-      if (!analyticsLocation(analyticsLocations[12])(initialUpsellKey)) {
+      if (!analyticsLocation(analyticsLocations[13])(initialUpsellKey)) {
         let obj = { importer: null };
         obj[0] = function importer() {
-          return initialUpsellKey(analyticsLocations[15])(analyticsLocations[14], analyticsLocations.paths).then(
+          return initialUpsellKey(analyticsLocations[16])(analyticsLocations[15], analyticsLocations.paths).then(
             (arg0) => {
               closure_0 = arg0.default;
               return (arg0) => {
@@ -219,8 +220,8 @@ export default {
             },
           );
         };
-        tmp30(tmp31[13]).openLazy(obj);
-        const tmp30Result = tmp30(tmp31[13]);
+        tmp30(tmp31[14]).openLazy(obj);
+        const tmp30Result = tmp30(tmp31[14]);
       }
       tmp30 = analyticsLocation;
       tmp31 = analyticsLocations;
@@ -286,8 +287,7 @@ export const getUpsellItems = function getUpsellItems() {
   const obj2 = { maxUploadStandard: null, maxUploadPremium: null };
   const intl13 = getSystemLocale.intl;
   obj2[0] = intl13.string(getSystemLocale.t.Ll40SK);
-  const intl14 = getSystemLocale.intl;
-  obj2[1] = intl14.string(getSystemLocale.t.EaBfeq);
+  obj2[1] = getPremiumPlanItem.getMaxFileSizeForPremiumType(closure_9.TIER_2);
   obj1[4] = intl12.format(getSystemLocale.t.DUT5IC, obj2);
   items[3] = obj1;
   const obj3 = {
@@ -297,12 +297,12 @@ export const getUpsellItems = function getUpsellItems() {
     passiveTitle: null,
     description: null,
   };
+  const intl14 = getSystemLocale.intl;
+  obj3[2] = intl14.string(getSystemLocale.t["602BK4"]);
   const intl15 = getSystemLocale.intl;
-  obj3[2] = intl15.string(getSystemLocale.t["602BK4"]);
+  obj3[3] = intl15.string(getSystemLocale.t.j0TXTX);
   const intl16 = getSystemLocale.intl;
-  obj3[3] = intl16.string(getSystemLocale.t.j0TXTX);
-  const intl17 = getSystemLocale.intl;
-  obj3[4] = intl17.format(getSystemLocale.t["p7i+li"], {});
+  obj3[4] = intl16.format(getSystemLocale.t["p7i+li"], {});
   items[4] = obj3;
   const obj4 = {
     key: constants.APP_ICONS,
@@ -311,12 +311,12 @@ export const getUpsellItems = function getUpsellItems() {
     passiveTitle: null,
     description: null,
   };
+  const intl17 = getSystemLocale.intl;
+  obj4[2] = intl17.string(getSystemLocale.t["1B1Cyn"]);
   const intl18 = getSystemLocale.intl;
-  obj4[2] = intl18.string(getSystemLocale.t["1B1Cyn"]);
+  obj4[3] = intl18.string(getSystemLocale.t["1B1Cyn"]);
   const intl19 = getSystemLocale.intl;
-  obj4[3] = intl19.string(getSystemLocale.t["1B1Cyn"]);
-  const intl20 = getSystemLocale.intl;
-  obj4[4] = intl20.string(getSystemLocale.t.VL5TYT);
+  obj4[4] = intl19.string(getSystemLocale.t.VL5TYT);
   items[5] = obj4;
   return items;
 };

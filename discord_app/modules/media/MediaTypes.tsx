@@ -1,8 +1,8 @@
 // discord_app/modules/media/MediaTypes.tsx
 import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import urlMatchesFileExtension from "../messages/MediaFormatTesters.tsx";
 
 function messageAttachmentToUnfurledMediaItem(flags) {
@@ -32,7 +32,7 @@ function messageAttachmentToUnfurledMediaItem(flags) {
     originalContentType: flags.original_content_type,
     placeholder: flags.placeholder,
     placeholderVersion: flags.placeholder_version,
-    loadingState: tmp(1954).UnfurledMediaLoadingState.LOADED_SUCCESS,
+    loadingState: tmp(1894).UnfurledMediaLoadingState.LOADED_SUCCESS,
     contentScanMetadata: null,
     flags: null,
   };

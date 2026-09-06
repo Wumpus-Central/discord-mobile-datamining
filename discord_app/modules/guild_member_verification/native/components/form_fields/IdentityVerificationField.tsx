@@ -30,18 +30,18 @@ function BaseIdentityVerificationField(icon) {
   if (passesVerification) {
     obj = { style: null, accessible: true, accessibilityLabel: null, children: null };
     obj[0] = tmp.verifiedContainer;
-    const intl2 = tmp7(1233).intl;
-    obj[2] = intl2.string(tmp7(1233).t.g62IJl);
-    obj[3] = tmp6(tmp7(4429).CheckmarkLargeIcon, { color: "status-positive" });
+    const intl2 = tmp7(1114).intl;
+    obj[2] = intl2.string(tmp7(1114).t.g62IJl);
+    obj[3] = tmp6(tmp7(4511).CheckmarkLargeIcon, { color: "status-positive" });
     obj1 = obj;
   } else {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.ctaButton;
     const obj2 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
-    const intl = tmp7(1233).intl;
-    obj2[3] = intl.string(tmp7(1233).t["13ofGu"]);
+    const intl = tmp7(1114).intl;
+    obj2[3] = intl.string(tmp7(1114).t["13ofGu"]);
     obj2[4] = onPress;
-    obj1[1] = tmp6(tmp7(4929).Button, obj2);
+    obj1[1] = tmp6(tmp7(4975).Button, obj2);
   }
   items[2] = callback(View, obj1);
   obj[1] = items;
@@ -73,9 +73,9 @@ const result = require("set").fileFinishedImporting(
 export default function IdentityVerificationField(arg0) {
   ({ platform, passesVerification } = arg0);
   if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL === platform) {
-    const intl3 = tmp(1233).intl;
+    const intl3 = tmp(1114).intl;
     const string2 = intl3.string;
-    let INsLgA = tmp(1233).t;
+    let INsLgA = tmp(1114).t;
     if (passesVerification) {
       INsLgA = INsLgA.INsLgA;
       let string2Result = string2(INsLgA);
@@ -83,10 +83,10 @@ export default function IdentityVerificationField(arg0) {
       string2Result = string2(INsLgA.c6EUJI);
     }
   } else {
-    if (tmp(4302).UserVerificationFieldPlatforms.PHONE === platform) {
-      const intl2 = tmp(1233).intl;
+    if (tmp(4384).UserVerificationFieldPlatforms.PHONE === platform) {
+      const intl2 = tmp(1114).intl;
       const string = intl2.string;
-      const t = tmp(1233).t;
+      const t = tmp(1114).t;
       if (passesVerification) {
         let stringResult = string(t["xO2XI/"]);
       } else {
@@ -94,23 +94,23 @@ export default function IdentityVerificationField(arg0) {
       }
       let stringResult1 = stringResult;
     } else {
-      const intl = tmp(1233).intl;
-      stringResult1 = intl.string(tmp(1233).t.mhv8BM);
+      const intl = tmp(1114).intl;
+      stringResult1 = intl.string(tmp(1114).t.mhv8BM);
     }
-    if (tmp(4302).UserVerificationFieldPlatforms.EMAIL === platform) {
-      let EnvelopeIcon = tmp(7816).EnvelopeIcon;
-    } else if (tmp(4302).UserVerificationFieldPlatforms.PHONE === platform) {
-      EnvelopeIcon = tmp(7745).MobilePhoneIcon;
+    if (tmp(4384).UserVerificationFieldPlatforms.EMAIL === platform) {
+      let EnvelopeIcon = tmp(7081).EnvelopeIcon;
+    } else if (tmp(4384).UserVerificationFieldPlatforms.PHONE === platform) {
+      EnvelopeIcon = tmp(6960).MobilePhoneIcon;
     } else {
-      EnvelopeIcon = tmp(7816).EnvelopeIcon;
+      EnvelopeIcon = tmp(7081).EnvelopeIcon;
     }
-    if (tmp(4302).UserVerificationFieldPlatforms.EMAIL === platform) {
+    if (tmp(4384).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {
         callback2(paths[10]).open();
       };
     } else {
       fn =
-        tmp(4302).UserVerificationFieldPlatforms.PHONE === platform
+        tmp(4384).UserVerificationFieldPlatforms.PHONE === platform
           ? () => {
               let obj = callback2(paths[11]);
               obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };

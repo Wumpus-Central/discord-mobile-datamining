@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx
-import _modDef14578 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14689 from "../../../settings/native/renderer/SettingLayout.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { MarketingURLs } from "../../../../Constants.tsx";
@@ -9,33 +9,33 @@ const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(() => {
   const node = importAllResult.useMemo(() => {
-    let obj = callback(11292);
+    let obj = callback(11468);
     obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
-    const intl = callback(1233).intl;
-    obj[0] = intl.string(callback(1233).t["+U02+i"]);
+    const intl = callback(1114).intl;
+    obj[0] = intl.string(callback(1114).t["+U02+i"]);
     const items = [constants.DEVELOPER_MODE];
     obj[1] = items;
-    const intl2 = callback(1233).intl;
-    obj[2] = intl2.format(callback(1233).t["CY6q/Q"], { apiDocsUrl: constants2.API_DOCS });
+    const intl2 = callback(1114).intl;
+    obj[2] = intl2.format(callback(1114).t["CY6q/Q"], { apiDocsUrl: constants2.API_DOCS });
     const items1 = [obj, , ,];
     const obj2 = { settings: items2, subLabel: null };
     items2 = [constants.LAUNCHPAD];
-    const intl3 = callback(1233).intl;
-    obj2[1] = intl3.string(callback(1233).t.gI2GEL);
+    const intl3 = callback(1114).intl;
+    obj2[1] = intl3.string(callback(1114).t.gI2GEL);
     items1[1] = obj2;
     const items3 = [constants.CHANNEL_LIST_LAYOUT];
     items1[2] = { settings: items3 };
     const obj3 = { label: null, settings: null };
-    const intl4 = callback(1233).intl;
-    obj3[0] = intl4.string(callback(1233).t["jnXV/V"]);
+    const intl4 = callback(1114).intl;
+    obj3[0] = intl4.string(callback(1114).t["jnXV/V"]);
     const items4 = [constants.ICYMI_TAB];
     obj3[1] = items4;
     items1[3] = obj3;
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(_modDef14578, { node });
+  return jsx(_modDef14689, { node });
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
 

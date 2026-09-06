@@ -30,17 +30,17 @@ function HomeDrawerDMsRow() {
     obj[0] = tmp.onlineDot;
     const items1 = [callback(View, obj)];
     obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
-    const intl = tmp2(1233).intl;
+    const intl = tmp2(1114).intl;
     const obj2 = { numFriends: null };
     obj2[0] = stateFromStores;
-    obj1[3] = intl.format(tmp2(1233).t.N5UIKr, obj2);
-    items1[1] = callback(tmp2(4474).Text, obj1);
+    obj1[3] = intl.format(tmp2(1114).t.N5UIKr, obj2);
+    items1[1] = callback(tmp2(4556).Text, obj1);
     obj[1] = items1;
     tmp5 = callback2(View, obj);
   }
   const obj3 = { title: null, subtitle: null };
   const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
-  const intl2 = tmp2(1233).intl;
+  const intl2 = tmp2(1114).intl;
   obj4[3] = intl2.string(getSystemLocale.t.YUU0RF);
   obj3[0] = callback(Text.Text, obj4);
   obj3[1] = tmp5;

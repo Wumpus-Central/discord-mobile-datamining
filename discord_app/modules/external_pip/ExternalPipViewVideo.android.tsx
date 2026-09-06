@@ -19,24 +19,24 @@ function ExternalPipViewVideoUnavailable(wasStream) {
   if (wasStream) {
     obj = { style: null };
     obj[0] = tmp.unavaiableImage;
-    let tmp4Result = tmp4(tmp5(9584).StreamEnded, obj);
+    let tmp4Result = tmp4(tmp5(9598).StreamEnded, obj);
     let tmp8 = tmp4;
     let tmp10 = tmp5;
   } else {
-    tmp4Result = tmp4(tmp5(4433).CircleInformationIcon, {});
+    tmp4Result = tmp4(tmp5(4515).CircleInformationIcon, {});
     tmp8 = tmp4;
     tmp10 = tmp5;
   }
   const items = [tmp4Result];
   obj = { variant: "text-md/semibold", style: tmp.unavailableText, lineClamp: 1, children: null };
-  const intl = tmp10(1233).intl;
+  const intl = tmp10(1114).intl;
   if (wasStream) {
-    let result = intl.formatToMarkdownString(tmp10(1233).t["1Ww0Hi"], {});
+    let result = intl.formatToMarkdownString(tmp10(1114).t["1Ww0Hi"], {});
   } else {
-    result = intl.string(tmp10(1233).t.Nzo5nz);
+    result = intl.string(tmp10(1114).t.Nzo5nz);
   }
   obj[3] = result;
-  items[1] = tmp8(tmp10(4474).Text, obj);
+  items[1] = tmp8(tmp10(4556).Text, obj);
   obj[1] = items;
   return closure_12(closure_6, obj);
 }
@@ -54,10 +54,10 @@ function ExternalPipViewVideoUser(arg0) {
     obj[0] = stateFromStores;
     obj[1] = stateFromStores.avatarDecoration;
     obj[2] = tmp6;
-    obj[3] = tmp2(1296).AvatarSizes.XXLARGE;
+    obj[3] = tmp2(1178).AvatarSizes.XXLARGE;
     obj[4] = speaking;
     obj[5] = speaking;
-    tmp7Result = tmp7(tmp2(1296).Avatar, obj);
+    tmp7Result = tmp7(tmp2(1178).Avatar, obj);
   }
   obj[1] = tmp7Result;
   return closure_11(closure_6, obj);
@@ -67,7 +67,7 @@ function ExternalPipViewVideoStream(streamId) {
   let first;
   dependencyMap = undefined;
   let callback;
-  let obj = streamId(9591);
+  let obj = streamId(9605);
   first = 300;
   dependencyMap = undefined;
   callback = undefined;
@@ -109,7 +109,7 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items2);
-  const token = streamId(4197).useToken(first(709).colors.TEXT_FEEDBACK_INFO);
+  const token = streamId(4262).useToken(first(576).colors.TEXT_FEEDBACK_INFO);
   const value = closure_7.get();
   callback = value;
   const items3 = [streamId, value];
@@ -124,7 +124,7 @@ function ExternalPipViewVideoStream(streamId) {
     }
   }, items3);
   const children = [
-    callback2(first(9602), {
+    callback2(first(9616), {
       useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
       style: memo,
       streamId,

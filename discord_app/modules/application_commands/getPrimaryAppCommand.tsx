@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/getPrimaryAppCommand.tsx
 import PermissionOverwriteType from "../../flow/Server.tsx";
-import ScoreMethod from "ApplicationCommandQueryTypes.tsx";
 import ApplicationIntegrationType from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import ScoreMethod from "ApplicationCommandQueryTypes.tsx";
 import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/ChannelStore.tsx";

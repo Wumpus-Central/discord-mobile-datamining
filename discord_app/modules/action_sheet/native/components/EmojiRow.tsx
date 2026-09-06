@@ -33,14 +33,14 @@ export default function EmojiRow(arg0) {
   closure_4 = undefined;
   let token;
   let obj = map;
-  dependencyMap = obj.useToken(channel(709).modules.mobile.EMOJI_ROW_EMOJI_SIZE);
+  dependencyMap = obj.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_SIZE);
   obj1 = map;
-  closure_3 = obj1.useToken(channel(709).modules.mobile.EMOJI_ROW_EMOJI_FONT_SIZE);
+  closure_3 = obj1.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_FONT_SIZE);
   let obj2 = map;
-  closure_4 = obj2.useToken(channel(709).modules.mobile.EMOJI_ROW_EMOJI_LINE_HEIGHT);
-  token = map.useToken(channel(709).modules.mobile.EMOJI_ROW_EMOJI_CONTAINER_SIZE);
+  closure_4 = obj2.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_LINE_HEIGHT);
+  token = map.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_CONTAINER_SIZE);
   let obj4 = map;
-  const token1 = map.useToken(channel(709).modules.mobile.EMOJI_ROW_EMOJI_MIN_SPACING);
+  const token1 = map.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_MIN_SPACING);
   const obj5 = map;
   const emojisForReactionRow = useEmojisForReactionRow.useEmojisForReactionRow(channel, closure_4, token + token1);
   const tmp3 = callback2();
@@ -50,7 +50,7 @@ export default function EmojiRow(arg0) {
     emojisForReactionRow.map((emoji) => {
       closure_0 = emoji;
       return token(
-        closure_1_0(11537).EmojiReactionRowButton,
+        closure_1_0(11732).EmojiReactionRowButton,
         {
           emoji,
           onPress() {
@@ -78,20 +78,20 @@ export default function EmojiRow(arg0) {
           emojiLineHeight: closure_4,
           emojiContainerSize: token,
         },
-        closure_1_0(11537).getEmojiKey(emoji, arg1),
+        closure_1_0(11732).getEmojiKey(emoji, arg1),
       );
     }),
   ];
   obj1 = {
     emojiContainerSize: token,
     onPress() {
-      return closure_1_0(11116).handleAddNewReactions(channel, id.id, closure_1_0(7519).ReactionLocations.MESSAGE);
+      return closure_1_0(11254).handleAddNewReactions(channel, id.id, closure_1_0(7764).ReactionLocations.MESSAGE);
     },
   };
   items[1] = token(EmojiPickerRowButton.EmojiPickerRowButton, obj1);
   obj[1] = items;
   const items1 = [callback(closure_3, obj)];
-  obj2 = { location: channel(5982).MESSAGE_LONG_PRESS_MENU };
+  obj2 = { location: channel(7182).MESSAGE_LONG_PRESS_MENU };
   items1[1] = token(DoubleTapEmojiEditNudgeInner.DoubleTapEmojiEditNudge, obj2);
   obj[1] = items1;
   return callback(closure_3, obj);

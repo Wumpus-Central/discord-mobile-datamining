@@ -3,9 +3,9 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import computeChannelNameDefault from "../../channel/useChannelName.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
 import useDesignToggleDefault from "../../devtools/design_toggles/useDesignToggle.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../stores/ChannelStore.tsx";
 import closure_5 from "../../../stores/GuildStore.tsx";
@@ -44,14 +44,14 @@ export default function ItemDetailsActionSheet(arg0) {
   if (null != stateFromStores1) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores1;
-    obj[1] = tmp(6013).GuildIconSizes.LARGE;
+    obj[1] = tmp(5584).GuildIconSizes.LARGE;
     let tmp9 = callback(GuildIconSizesDefault, obj);
     const tmp5Result = GuildIconSizesDefault;
   } else if (null != stateFromStores) {
     obj = { size: null, channel: null };
-    obj[0] = tmp(1296).AvatarSizes.LARGE;
+    obj[0] = tmp(1178).AvatarSizes.LARGE;
     obj[1] = stateFromStores;
-    tmp9 = callback(tmp(1296).Avatar, obj);
+    tmp9 = callback(tmp(1178).Avatar, obj);
   }
   let result = null != stateFromStores;
   const tmp8 = useDesignToggleDefault("show_icymi_debug_scores");
@@ -59,8 +59,8 @@ export default function ItemDetailsActionSheet(arg0) {
     result = null != stateFromStores1;
   }
   if (result) {
-    result = tmp(8640).isChannelCustomScoreEligible(stateFromStores);
-    const tmpResult = tmp(8640);
+    result = tmp(8350).isChannelCustomScoreEligible(stateFromStores);
+    const tmpResult = tmp(8350);
   }
   obj1 = { icon: tmp9, title: tmp6, subtitle: null };
   let str;
@@ -73,7 +73,7 @@ export default function ItemDetailsActionSheet(arg0) {
   obj2 = {
     showGradient: true,
     startExpanded: true,
-    header: tmp16(tmp(10960).ActionSheetIconHeader, obj1),
+    header: tmp16(tmp(10998).ActionSheetIconHeader, obj1),
     children: null,
   };
   obj1[2] = str;
@@ -82,7 +82,7 @@ export default function ItemDetailsActionSheet(arg0) {
     const obj3 = { channel: null, guild: null };
     obj3[0] = stateFromStores;
     obj3[1] = stateFromStores1;
-    tmp16Result = tmp16(tmp(16297).ChannelScoreSettings, obj3);
+    tmp16Result = tmp16(tmp(16459).ChannelScoreSettings, obj3);
   }
   const items3 = [tmp16Result, ,];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
@@ -96,7 +96,7 @@ export default function ItemDetailsActionSheet(arg0) {
     const items4 = [result];
     const obj6 = { guild: null };
     obj6[0] = stateFromStores1;
-    items4[1] = tmp16(tmp(16297).GuildScoreSettings, obj6);
+    items4[1] = tmp16(tmp(16459).GuildScoreSettings, obj6);
     obj5[0] = items4;
     tmp15Result = tmp15(closure_8, obj5);
     const tmp19 = closure_8;
@@ -111,8 +111,8 @@ export default function ItemDetailsActionSheet(arg0) {
       obj8[0] = `Total Score: ${tmp7.score}`;
       const _JSON = JSON;
       obj8[1] = JSON.stringify(stateFromStores2.score_components);
-      obj7[2] = tmp16(tmp(5608).TableRow, obj8);
-      tmp16Result = tmp16(tmp(6001).TableRowGroup, obj7);
+      obj7[2] = tmp16(tmp(5605).TableRow, obj8);
+      tmp16Result = tmp16(tmp(5687).TableRowGroup, obj7);
     }
   }
   items3[2] = tmp16Result;

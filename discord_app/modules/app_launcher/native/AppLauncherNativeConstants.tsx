@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import registerAssetDefault from "../../../../_runtime/01621_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/01606_registerAsset.js";
 
 const result = set.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 

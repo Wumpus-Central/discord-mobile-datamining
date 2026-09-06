@@ -7,7 +7,7 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
 import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import importDefaultResult from "../../../../../_runtime/00686_n.js";
+import importDefaultResult from "../../../../../_runtime/00672_n.js";
 import alphaResult1 from "../../../../index.native.tsx";
 import alphaResult2 from "../../../../index.native.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -783,7 +783,7 @@ const alphaResult3 = importDefaultResult(ThemesDefault.unsafe_rawColors.PLUM_23)
 const memoResult = importAllResult.memo(function VideoQuestModalContentInProgress(arg0) {
   ({ onClose, sourceQuestContent } = arg0);
   ({ contentWidth, isFullscreen, onNavigateToPostWatchVideo, onEnd, setIsFullscreen } = arg0);
-  let obj = sourceQuestContent(14968);
+  let obj = sourceQuestContent(15126);
   const quest = obj.useVideoQuestModalContext().quest;
   items = [quest];
   items1 = [quest];
@@ -821,11 +821,11 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentInProgres
   }, items2);
   let tmp = sourceQuestContent;
   const tmp5 = getQuestImpressionId(importAllResult.useState(false), 2);
-  getQuestImpressionId = sourceQuestContent(11310).useGetQuestImpressionId();
-  const obj2 = sourceQuestContent(11310);
+  getQuestImpressionId = sourceQuestContent(11486).useGetQuestImpressionId();
+  const obj2 = sourceQuestContent(11486);
   [tmp11, closure_4] = getQuestImpressionId(importAllResult.useState(false), 2);
   const tmp10 = getQuestImpressionId(importAllResult.useState(false), 2);
-  const isShareableQuestResult = sourceQuestContent(7478).isShareableQuest(quest.config);
+  const isShareableQuestResult = sourceQuestContent(7722).isShareableQuest(quest.config);
   closure_5 = isShareableQuestResult;
   const items3 = [isShareableQuestResult, quest.id, getQuestImpressionId, sourceQuestContent];
   const callback2 = importAllResult.useCallback(() => {
@@ -889,8 +889,8 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentInProgres
       questUrl2.showShareActionSheet(obj1, "Video Quest Modal - " + id);
     }
   }, items3);
-  const obj3 = sourceQuestContent(7478);
-  const videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(14997).useVideoQuestClickCtaAndMaybeCloseModal({
+  const obj3 = sourceQuestContent(7722);
+  const videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(15155).useVideoQuestClickCtaAndMaybeCloseModal({
     quest,
     onClose,
     sourceQuestContent,
@@ -912,14 +912,14 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentInProgres
     obj = { questId: quest.id };
     const result = obj.openRewardDetailsBottomSheet(obj);
   }, items6);
-  const obj4 = sourceQuestContent(14997);
-  const videoExternallyPaused = sourceQuestContent(14998).useVideoExternallyPaused(quest.id, tmp11);
+  const obj4 = sourceQuestContent(15155);
+  const videoExternallyPaused = sourceQuestContent(15156).useVideoExternallyPaused(quest.id, tmp11);
   const tmp19 =
-    quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5403).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+    quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5452).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
   let tmp20 = null == tmp19;
   if (!tmp20) {
-    tmp20 = "portrait" === tmp(11336).getVideoOrientation(tmp19);
-    const tmpResult = tmp(11336);
+    tmp20 = "portrait" === tmp(11512).getVideoOrientation(tmp19);
+    const tmpResult = tmp(11512);
   }
   obj = {
     quest,

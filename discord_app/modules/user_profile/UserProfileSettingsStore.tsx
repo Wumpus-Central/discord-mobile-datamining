@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/UserProfileSettingsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import INVITE from "../routing/RouteConstants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import INVITE from "../routing/RouteConstants.tsx";
 import date from "../favorites/FavoritesConstants.tsx";
 import ANALYTICS_NAME from "../notifications_inbox/NotificationsInboxConstants.tsx";
 import useBioMaxLength from "experiments/BioMaxLengthExperiment.tsx";

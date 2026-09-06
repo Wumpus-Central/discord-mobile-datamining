@@ -3,9 +3,9 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
-import Form from "../../../../../design/void/Form/native/index.tsx";
 import StageSparkleInnerDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
-import registerAssetDefault from "../../../../../../_runtime/09796_registerAsset.js";
+import Form from "../../../../../design/void/Form/native/index.tsx";
+import registerAssetDefault from "../../../../../../_runtime/09802_registerAsset.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../stores/PresenceStore.tsx";
@@ -262,11 +262,11 @@ const memoResult = importAllResult.memo((eventUser) => {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
   const tmp = callback3();
-  analyticsLocations = analyticsLocations(5962)().analyticsLocations;
-  let obj = eventUser(586);
+  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
+  let obj = eventUser(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(eventUser.user_id));
-  obj1 = eventUser(586);
+  obj1 = eventUser(504);
   const items1 = [closure_5];
   const items2 = [eventUser.user_id];
   const stateFromStoresObject = obj1.useStateFromStoresObject(
@@ -296,19 +296,19 @@ const memoResult = importAllResult.memo((eventUser) => {
     obj[2] = isMobileOnline;
     obj[3] = isVROnline;
     obj[4] = status;
-    obj[5] = tmp4(1296).AvatarSizes.REFRESH_MEDIUM_32;
-    tmp7Result = tmp7(tmp4(1296).Avatar, obj);
+    obj[5] = tmp4(1178).AvatarSizes.REFRESH_MEDIUM_32;
+    tmp7Result = tmp7(tmp4(1178).Avatar, obj);
   }
   obj[1] = tmp7Result;
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9797);
+  let tmp2Result = tmp2(9803);
   if (member != null) {
     nick = member.nick;
   }
   if (nick == null) {
-    tmp2Result = tmp2(4322);
+    tmp2Result = tmp2(4404);
     nick = tmp2Result.getName(eventUser.user);
   }
   obj1[1] = nick;
@@ -317,7 +317,7 @@ const memoResult = importAllResult.memo((eventUser) => {
   obj[3] = function onPress() {
     analyticsLocations(closure_1_2[20])({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8376).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(8593).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 let obj3 = {

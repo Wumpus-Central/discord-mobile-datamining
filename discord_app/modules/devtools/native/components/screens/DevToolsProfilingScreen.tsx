@@ -27,7 +27,7 @@ let result = require("set").fileFinishedImporting(
 export default function DevToolsProfilingScreen() {
   [r10008, require] = componentRenderStats(React.useState(false), 2);
   const callback = React.useCallback(() => {
-    const result = closure_1_0(10303).clearComponentRenderStats();
+    const result = closure_1_0(10194).clearComponentRenderStats();
     callback(true);
   }, []);
   const tmp3 = callback();
@@ -41,8 +41,8 @@ export default function DevToolsProfilingScreen() {
     obj1 = { title: "Component Profiler", hasIcons: false, children: null };
     const obj2 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: null };
     obj2[3] = callback;
-    obj1[2] = tmp8(tmp4(5608).TableRow, obj2);
-    let items = [tmp8(tmp4(6001).TableRowGroup, obj1)];
+    obj1[2] = tmp8(tmp4(5605).TableRow, obj2);
+    let items = [tmp8(tmp4(5687).TableRowGroup, obj1)];
     const _Object = Object;
     const keys = Object.keys(componentRenderStats);
     items[1] = keys.map((arg0) => {
@@ -53,7 +53,7 @@ export default function DevToolsProfilingScreen() {
         { stat: nestedUpdate, label: "Nested Update" },
       ];
       return closure_1_5(
-        closure_1_0(6001).TableRowGroup,
+        closure_1_0(5687).TableRowGroup,
         {
           title: "Component Profiler Target: '" + arg0 + "'",
           hasIcons: false,
@@ -93,11 +93,11 @@ export default function DevToolsProfilingScreen() {
     const obj5 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const obj6 = { variant: "text-xs/semibold", style: null, children: "<ComponentProfiler />" };
     obj6[1] = tmp3.monospace;
-    const items1 = ["Make sure you wrap your component in ", tmp8(tmp4(4474).Text, obj6), " to enable measurements."];
+    const items1 = ["Make sure you wrap your component in ", tmp8(tmp4(4556).Text, obj6), " to enable measurements."];
     obj5[2] = items1;
-    obj4[1] = tmp10(tmp4(4474).Text, obj5);
-    obj3[2] = tmp8(tmp4(5608).TableRow, obj4);
-    tmp8Result = tmp8(tmp4(6001).TableRowGroup, obj3);
+    obj4[1] = tmp10(tmp4(4556).Text, obj5);
+    obj3[2] = tmp8(tmp4(5605).TableRow, obj4);
+    tmp8Result = tmp8(tmp4(5687).TableRowGroup, obj3);
   }
   const obj7 = { spacing: 16, children: null };
   const items2 = [tmp8Result, closure_5(DevToolsProfilingUseStateFromStores.DevToolsProfilingUseStateFromStores, {})];

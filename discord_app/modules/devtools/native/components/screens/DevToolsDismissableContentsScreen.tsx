@@ -1,17 +1,17 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import updateUserGuildSettings from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
 import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import SearchField from "../../../../../design/components/TextField/native/SearchField.native.tsx";
-import getSearchEmptySource from "../../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
+import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import handleDCShownToUser from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
+import getSearchEmptySource from "../../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useToggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
 import DoubleCheckmarkIcon from "../../../../../design/components/Icon/native/redesign/generated/DoubleCheckmarkIcon.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -181,7 +181,7 @@ export default function DevToolsDismissableContentsScreen() {
   const tmp = callback4();
   const ref = first.useRef(null);
   importDefault = first.useRef(0);
-  let obj = ref(10048);
+  let obj = ref(9931);
   let tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   callback = tmp5;
@@ -232,7 +232,7 @@ export default function DevToolsDismissableContentsScreen() {
   );
   const first1 = tmp7[0];
   closure_6 = tmp7[1];
-  obj1 = ref(586);
+  obj1 = ref(504);
   let items = [closure_6];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
     dailyCapOverridden: closure_6.dailyCapOverridden,
@@ -241,7 +241,7 @@ export default function DevToolsDismissableContentsScreen() {
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
   let tmp4 = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  let tmp9 = callback(ref(14855).useForceBountiesSwipeUpNux(), 2);
+  let tmp9 = callback(ref(15011).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
   callback4 = tmp11;
   const items1 = [tmp9[1]];
@@ -346,6 +346,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj[9] = callback4;
   obj[10] = callback3;
-  obj[1] = dailyCapOverridden(ref(8116).FlashList, obj);
+  obj[1] = dailyCapOverridden(ref(8874).FlashList, obj);
   return dailyCapOverridden(first1, obj);
 }

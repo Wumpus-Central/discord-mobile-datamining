@@ -18,10 +18,10 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  let obj = { source: importDefault(tmp6 ? 7622 : 7626), onPress: goBack, accessibilityLabel: null };
-  const intl = tmp5(1233).intl;
+  let obj = { source: importDefault(tmp6 ? 7867 : 7871), onPress: goBack, accessibilityLabel: null };
+  const intl = tmp5(1114).intl;
   const string = intl.string;
-  const t = tmp5(1233).t;
+  const t = tmp5(1114).t;
   if ("back" === str) {
     let stringResult = string(t["13/7kX"]);
   } else {

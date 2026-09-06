@@ -14,10 +14,10 @@ export default function FormTrialIntervalPicker(disabled) {
   const interval = disabled.interval;
   ({ onChange: importDefault, trialIntervalOptions: dependencyMap } = disabled);
   if (null == interval) {
-    let intl = interval(1233).intl;
-    let stringResult = intl.string(interval(1233).t.WZG1BU);
+    let intl = interval(1114).intl;
+    let stringResult = intl.string(interval(1114).t.WZG1BU);
   } else {
-    let obj = interval(15071);
+    let obj = interval(15231);
     stringResult = obj.formatPlanIntervalDuration(interval);
   }
   obj = {

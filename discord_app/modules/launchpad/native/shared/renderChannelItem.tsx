@@ -20,7 +20,7 @@ require = arg1;
 function LaunchpadChannelIcon(channel) {
   channel = channel.channel;
   const tmp = callback3();
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_4];
   obj = { children: null };
   obj = { style: tmp.guildBadgeIcon, children: null };
@@ -30,7 +30,7 @@ function LaunchpadChannelIcon(channel) {
     guild: stateFromStores,
     size: getLayoutStyleDefault().icon.guildBadgeIconSize,
   });
-  const items1 = [callback(View, obj), callback(channel(11987).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
+  const items1 = [callback(View, obj), callback(channel(12191).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj[0] = items1;
   return callback2(closure_9, obj);
 }
@@ -109,7 +109,7 @@ export default function renderChannelItem(unread) {
     obj1 = { channel: null, size: null };
     obj1[0] = channel;
     obj1[1] = tmp7.icon.avatarSize;
-    let tmp11Result = tmp11(tmp5(10873), obj1);
+    let tmp11Result = tmp11(tmp5(10910), obj1);
   } else {
     const obj2 = { channel: null };
     obj2[0] = channel;

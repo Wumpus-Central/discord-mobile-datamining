@@ -1,7 +1,7 @@
 // discord_app/lib/WindowVisibilityVideoManager.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
-import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import setDefault from "../utils/Durations.tsx";
 import onDefault from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
 import NativeEventEmitterDefault from "../modules/external_pip/ExternalPip.android.tsx";
 

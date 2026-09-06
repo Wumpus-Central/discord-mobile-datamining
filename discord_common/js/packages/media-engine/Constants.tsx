@@ -96,7 +96,6 @@ export const VideoHealthManagerConfig = {
   fpsThreshold: 5,
   backoffTimeSec: 15,
 };
-export const VIEWERSIDE_CLIP_KFI_MS = 60000;
 export const DARWIN_H265_VERSION = ">=22.0.0";
 export const QUEUE_METRICS_INTERVAL_MS = 900000;
 export const Features = {
@@ -194,7 +193,6 @@ export const ExperimentFlags = {
   SIGNAL_AV1_ENCODE: "signal_av1_encode",
   SIGNAL_AV1_DECODE: "signal_av1_decode",
   SIGNAL_AV1_HARDWARE_DECODE: "signal_av1_hardware_decode",
-  VIEWER_CLIP: "viewer_clip",
   RESET_DECODER_ON_ERRORS: "reset_decoder_on_errors",
   SOFTWARE_FALLBACK_ON_ERRORS: "software_fallback_on_errors",
   SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS: "software_fallback_on_consecutive_errors",

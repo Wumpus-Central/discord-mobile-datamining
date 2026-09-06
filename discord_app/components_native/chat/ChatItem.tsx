@@ -1,6 +1,6 @@
 // discord_app/components_native/chat/ChatItem.tsx
-import set from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 import isSystemMessageDefault from "../../modules/messages/isSystemMessage.tsx";
 import __INTERNAL_VIEW_CONFIG from "../../../discord_common/js/packages/rtn-codegen/js/AutoModerationSystemMessageViewNativeComponent.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -25,15 +25,15 @@ function DCDChatItem(message) {
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       obj = {};
       const merged2 = Object.assign(merged);
-      tmp3Result = callback(tmp21(8800).default, obj);
+      tmp3Result = callback(tmp21(8654).default, obj);
     } else if (isSystemMessageDefault(message)) {
       obj1 = {};
       const merged3 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8801).default, obj1);
+      tmp3Result = tmp3(tmp21(8655).default, obj1);
     } else {
       obj = {};
       const merged4 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8800).default, obj);
+      tmp3Result = tmp3(tmp21(8654).default, obj);
     }
   }
   return tmp3Result;

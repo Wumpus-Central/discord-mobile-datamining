@@ -32,10 +32,10 @@ function _emailSupport() {
             obj[0] = arg1;
             return obj;
           } else {
-            const tmp10 = closure_1_1(4190);
+            const tmp10 = closure_1_1(4255);
             closure_1 = tmp10;
             const openURL = tmp10.openURL;
-            obj1 = closure_1_1(1994);
+            obj1 = closure_1_1(2024);
             c2 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };

@@ -1,8 +1,8 @@
 // discord_app/stores/PrivateChannelReadStateStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import createChannelRecord from "../records/ChannelRecord.tsx";
 import areArraysShallowlyEqual from "../utils/FunctionUtils.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
 import closure_3 from "ChannelStore.tsx";
 import closure_4 from "ReadStateStore.tsx";
 import closure_5 from "SelectedChannelStore.tsx";

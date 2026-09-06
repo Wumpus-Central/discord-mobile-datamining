@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import AccessibilityAnnouncer from "../../../../../../design/shared.tsx";
 import hexToRgba from "../../../../../../utils/ColorUtils.tsx";
+import AccessibilityAnnouncer from "../../../../../../design/shared.tsx";
 import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 

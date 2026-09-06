@@ -33,9 +33,9 @@ function BurstReactionAnimationContainerInner() {
         closure_1_1(closure_1_2[9]).IMPACT_HEAVY,
       );
     }
-    const subscription = first(706).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
+    const subscription = first(573).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
-      first(706).unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
+      first(573).unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     };
   }, []);
   let obj = ReanimatedRexport;
@@ -44,7 +44,7 @@ function BurstReactionAnimationContainerInner() {
       let obj = { opacity: 0 };
     } else {
       obj = { opacity: null };
-      const tmp11 = callback(4479);
+      const tmp11 = callback(4561);
       const withTiming = tmp11.withTiming;
       obj1 = { duration: 300 };
       if (first1) {
@@ -57,7 +57,7 @@ function BurstReactionAnimationContainerInner() {
           }
         };
         obj = { runOnJS: null, handleComponentFinish: null };
-        obj[0] = callback(4217).runOnJS;
+        obj[0] = callback(4296).runOnJS;
         obj[1] = handleComponentFinish;
         fn.__closure = obj;
         fn.__workletHash = 9326347209552;
@@ -92,7 +92,7 @@ function BurstReactionAnimationContainerInner() {
       obj = { style: items, children: null };
       items = [markAsDismissed.fill, closure_7];
       obj = {
-        activeOpacity: callback(7539).BACKDROP_OPACITY,
+        activeOpacity: callback(7784).BACKDROP_OPACITY,
         onPress() {
           closure_1_4(false);
           closure_1_5.current = false;
@@ -121,20 +121,20 @@ function BurstReactionAnimationContainerInner() {
             closure_5.current = false;
           }
         };
-        tmpResult = tmp(first(7581), obj3);
+        tmpResult = tmp(first(7826), obj3);
       }
       obj2[1] = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj2);
       let tmp6Result =
         markAsDismissed.visibleContent ===
-        tmp2(1372).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+        tmp2(1943).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
         const obj4 = { children: null };
         const obj5 = { style: null, variant: "text-sm/medium", children: null };
         obj5[0] = tmp4.dismissTextContainer;
-        const intl = tmp2(1233).intl;
-        obj5[2] = intl.string(tmp2(1233).t.QpPMih);
-        const items2 = [tmp(tmp2(4474).Text, obj5)];
+        const intl = tmp2(1114).intl;
+        obj5[2] = intl.string(tmp2(1114).t.QpPMih);
+        const items2 = [tmp(tmp2(4556).Text, obj5)];
         const obj6 = { style: null };
         obj6[0] = tmp4.dismissTextBackground;
         items2[1] = tmp(tmp8, obj6);
@@ -144,11 +144,11 @@ function BurstReactionAnimationContainerInner() {
       items1[2] = tmp6Result;
       obj[3] = items1;
       obj[1] = closure_1_10(closure_5, obj);
-      obj[1] = closure_1_8(first(4217).View, obj);
-      return closure_1_8(callback(1296).OverlayView, obj);
+      obj[1] = closure_1_8(first(4296).View, obj);
+      return closure_1_8(callback(1178).OverlayView, obj);
     };
-    tmp8 = callback(first(10643), obj);
-    let tmp11 = first(10643);
+    tmp8 = callback(first(10625), obj);
+    let tmp11 = first(10625);
   }
   return tmp8;
 }

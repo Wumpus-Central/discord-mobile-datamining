@@ -49,21 +49,21 @@ export default function useEventsButtonProps(id) {
     obj.openLazy(id(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), "UpcomingEventsLongPress-" + id.id, obj);
   }, items4);
   if (arr4.length > 0) {
-    const intl2 = tmp(1233).intl;
+    const intl2 = tmp(1114).intl;
     obj = { number: null };
     obj[0] = arr4.length;
-    let name = intl2.formatToPlainString(tmp(1233).t.IBdqSu, obj);
+    let name = intl2.formatToPlainString(tmp(1114).t.IBdqSu, obj);
   } else {
-    const intl = tmp(1233).intl;
-    name = intl.string(tmp(1233).t.tlopTM);
+    const intl = tmp(1114).intl;
+    name = intl.string(tmp(1114).t.tlopTM);
   }
-  let mode = tmp(12177).ChannelModes.DEFAULT;
+  let mode = tmp(12379).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12177).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12379).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 }

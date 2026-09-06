@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyShareMyActivitySetting.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../../activity_privacy/ActivityPrivacy.messages.js";
 import explicitContentFromProto from "../../UserSettings.tsx";
+import messagesProxyDefault from "../../../activity_privacy/ActivityPrivacy.messages.js";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 

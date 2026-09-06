@@ -7,17 +7,17 @@ const result = set.fileFinishedImporting("modules/forums/native/ForumTagContextM
 
 export default function ForumTagContextMenu(children) {
   const tagId = children.tagId;
-  const DeveloperMode = tagId(4166).DeveloperMode;
+  const DeveloperMode = tagId(1935).DeveloperMode;
   let obj = { label: null, IconComponent: null, action: null };
   const enabled = DeveloperMode.useSetting();
-  const intl = tagId(1233).intl;
-  obj[0] = intl.string(tagId(1233).t["8VG6IY"]);
-  obj[1] = tagId(9065).IdIcon;
+  const intl = tagId(1114).intl;
+  obj[0] = intl.string(tagId(1114).t["8VG6IY"]);
+  obj[1] = tagId(10629).IdIcon;
   obj[2] = function action() {
     tagId(closure_1_1[4]).copy(tagId);
     const obj = tagId(closure_1_1[4]);
     tagId(closure_1_1[5]).presentIdCopied();
   };
   const items = [obj];
-  return jsx(tagId(8811).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
+  return jsx(tagId(8666).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
 }

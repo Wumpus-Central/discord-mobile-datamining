@@ -33,14 +33,14 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   });
   importDefault = useOpenNitroSubscribeActionSheetDefault();
   if (text == null) {
-    const intl = tmp(1233).intl;
-    text = intl.string(tmp(1233).t.sEAnVH);
+    const intl = tmp(1114).intl;
+    text = intl.string(tmp(1114).t.sEAnVH);
   }
   let tmp4Result;
   if (flag) {
     obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: null };
     obj[3] = text;
-    tmp4Result = tmp4(tmp(4474).Text, obj);
+    tmp4Result = tmp4(tmp(4556).Text, obj);
   }
   obj = {
     textElement: tmp4Result,

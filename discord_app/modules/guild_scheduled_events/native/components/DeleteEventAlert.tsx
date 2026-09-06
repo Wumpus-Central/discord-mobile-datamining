@@ -46,7 +46,7 @@ export default function DeleteEventAlert(eventException) {
               return obj;
             } else {
               closure_0 = tmp4;
-              const obj8 = v0(9690);
+              const obj8 = v0(9703);
               if (closure_1_4) {
                 v0 = 2;
                 dependencyMap = 1;
@@ -81,7 +81,7 @@ export default function DeleteEventAlert(eventException) {
               obj[0] = arg1;
               return obj;
             }
-            obj1 = v0(4445);
+            obj1 = v0(4527);
             obj1.hideActionSheet();
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };

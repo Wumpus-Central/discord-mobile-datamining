@@ -63,7 +63,7 @@ function _authorizeLink() {
             return obj;
           } else {
             url = body.body.url;
-            const obj5 = callback2(4190);
+            const obj5 = callback2(4255);
             const tmp19 = url;
             let tmp6 = closure_8;
             if (obj6.isAndroid()) {
@@ -74,7 +74,7 @@ function _authorizeLink() {
             tmp6 = callback2;
             obj5.openURL(tmp19, IN_APP);
             c4 = 3;
-            obj6 = url(1234);
+            obj6 = url(1115);
           }
         } catch (tmp9) {
           c4 = tmp;

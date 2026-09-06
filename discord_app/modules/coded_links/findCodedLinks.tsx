@@ -1,5 +1,5 @@
 // discord_app/modules/coded_links/findCodedLinks.tsx
-import Url from "../../../_runtime/01487_Url.js";
+import Url from "../../../_runtime/01367_Url.js";
 import findCodedLinkUrlsDefault from "findCodedLinkUrls.native.tsx";
 import closure_3 from "../../stores/InviteStore.tsx";
 import { PRIMARY_DOMAIN } from "../../Constants.tsx";
@@ -1070,7 +1070,7 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
           let flag;
           if (url.pathname != null) {
             const formatted = str2.toUpperCase();
-            flag = formatted.includes(url(4466).CodedLinkType.INVITE);
+            flag = formatted.includes(url(4548).CodedLinkType.INVITE);
           }
           if (flag == null) {
             flag = false;

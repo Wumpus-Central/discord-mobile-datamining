@@ -1,7 +1,7 @@
 // discord_app/modules/connections/native/ConnectionPlatformUtils.native.tsx
 import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ME from "../../../Constants.tsx";
 
 const obj = {
   [CRUNCHYROLL]: ThemesDefault.unsafe_rawColors.PLATFORM_CRUNCHYROLL,

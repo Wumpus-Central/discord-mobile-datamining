@@ -238,7 +238,7 @@ const result = require("set").fileFinishedImporting("modules/home_drawer/native/
 
 export default function HomeDrawerFolderExpandedChildren(folderId) {
   folderId = folderId.folderId;
-  let obj = folderId(586);
+  let obj = folderId(504);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let guildFolderById = null;
@@ -247,7 +247,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(4338).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(4423).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

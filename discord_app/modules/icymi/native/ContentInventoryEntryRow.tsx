@@ -16,15 +16,15 @@ export default function ContentInventoryEntryRow(content) {
     flag = false;
   }
   let flag2 = content.visible;
-  let obj = content(586);
+  let obj = content(504);
   const items = [closure_3];
   if (obj.useStateFromStores(items, () => closure_1_3.isBlockedOrIgnored(content.author_id))) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8051).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8051).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8051).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8130).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8130).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8130).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           obj = { content: null, renderForScreenshot: null, visible: null };
           obj[0] = content;
           obj[1] = flag;

@@ -1,5 +1,5 @@
 // discord_app/design/components/Button/native/ButtonShine.native.tsx
-import _modDef4217 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -11,10 +11,10 @@ function useShineEffectStyles(width, variant) {
   const _require = width;
   let obj = styleProperties;
   const buttonTextColorStyles = obj.useButtonTextColorStyles(variant);
-  const obj2 = enabled(686)(buttonTextColorStyles.color);
-  const hexResult = enabled(686)(buttonTextColorStyles.color).alpha(0.1).hex();
+  const obj2 = enabled(672)(buttonTextColorStyles.color);
+  const hexResult = enabled(672)(buttonTextColorStyles.color).alpha(0.1).hex();
   enabled = React.useContext(require("../../../shared.tsx").AccessibilityPreferencesContext).reducedMotion.enabled;
-  const alphaResult = enabled(686)(buttonTextColorStyles.color).alpha(0.1);
+  const alphaResult = enabled(672)(buttonTextColorStyles.color).alpha(0.1);
   const fn = function o() {
     if (null == width) {
       let obj = { transform: null };
@@ -106,7 +106,7 @@ export const ButtonShine = function ButtonShine(variant) {
   items = [shineStyles.shineContainer, tmp2.shineAnimatedStyle];
   obj = {
     style: shineStyles.shine,
-    children: jsx(_modDef4217.View, {
+    children: jsx(_modDef4296.View, {
       onLayout(nativeEvent) {
         return callback(nativeEvent.nativeEvent.layout.width);
       },
@@ -115,6 +115,6 @@ export const ButtonShine = function ButtonShine(variant) {
     }),
   };
   obj = { style: shineStyles.shineInner };
-  obj[2] = jsx(_modDef4217.View, { style: shineStyles.shineInner });
-  return jsx(_modDef4217.View, { style: shineStyles.shineInner });
+  obj[2] = jsx(_modDef4296.View, { style: shineStyles.shineInner });
+  return jsx(_modDef4296.View, { style: shineStyles.shineInner });
 };

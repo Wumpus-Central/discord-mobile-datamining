@@ -5,9 +5,8 @@ import set from "../../../utils/PlatformUtils.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import TableRowArrow from "../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import FormSwitch from "../../../design/components/Forms/native/FormSwitch.native.tsx";
 import Input from "../../../design/components/Input/native/Input.native.tsx";
+import FormSwitch from "../../../design/components/Forms/native/FormSwitch.native.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
@@ -40,6 +39,7 @@ function FormControlSubtext(text) {
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = {
   button: null,
+  buttonDisabled: null,
   buttonTextContainer: null,
   formControlText: null,
   labelTrailing: null,
@@ -57,15 +57,16 @@ createCacheKey = {
   borderRadius: ThemesDefault.radii.md,
 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 1, flexShrink: 1, flexDirection: "column" };
-createCacheKey[2] = { marginRight: "auto", flexShrink: 1 };
-createCacheKey[3] = {
+createCacheKey[1] = { opacity: 0.5 };
+createCacheKey[2] = { flexGrow: 1, flexShrink: 1, flexDirection: "column" };
+createCacheKey[3] = { marginRight: "auto", flexShrink: 1 };
+createCacheKey[4] = {
   flexDirection: "row",
   alignItems: "center",
   marginLeft: ThemesDefault.space.PX_4,
   gap: ThemesDefault.space.PX_4,
 };
-createCacheKey[4] = { paddingTop: 0 };
+createCacheKey[5] = { paddingTop: 0 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj1 = {
   flexDirection: "row",
@@ -129,20 +130,33 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   let obj = { label, labelTrailing, children: null };
   obj = {
     onPress,
-    style: tmp.button,
+    style: null,
     accessibilityRole: "button",
-    accessibilityLabel: label,
-    accessibilityValue,
+    accessibilityLabel: null,
+    accessibilityValue: null,
     accessibilityHint: null,
     accessibilityState: null,
     disabled: null,
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[5] = intl.string(getSystemLocale.t["4lAcxv"]);
+  const items = [tmp.button];
+  let buttonDisabled = disabled;
+  if (disabled) {
+    buttonDisabled = tmp.buttonDisabled;
+  }
+  items[1] = buttonDisabled;
+  obj[1] = items;
+  obj[3] = label;
+  obj[4] = accessibilityValue;
+  let stringResult;
+  if (!disabled) {
+    const intl = tmp3(1114).intl;
+    stringResult = intl.string(tmp3(1114).t["4lAcxv"]);
+  }
+  obj[5] = stringResult;
   obj[6] = { disabled, busy: flag };
   obj[7] = disabled;
-  const items = [leading, , ,];
+  const items1 = [leading, , ,];
   if (content == null) {
     obj = { style: null, children: null };
     obj[0] = tmp.buttonTextContainer;
@@ -152,22 +166,22 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
       obj1[0] = buttonText;
       tmp2Result = tmp2(FormControlText, obj1);
     }
-    const items1 = [tmp2Result];
+    const items2 = [tmp2Result];
     const obj2 = { text: null };
     obj2[0] = buttonSubtext;
-    items1[1] = tmp2(FormControlSubtext, obj2);
-    obj[1] = items1;
+    items2[1] = tmp2(FormControlSubtext, obj2);
+    obj[1] = items2;
     content = tmp5(closure_5, obj);
-    const tmp6 = closure_5;
+    const tmp7 = closure_5;
   }
-  items[1] = content;
-  items[2] = trailing;
+  items1[1] = content;
+  items1[2] = trailing;
   tmp2Result = !flag2;
   if (!flag2) {
-    tmp2Result = tmp2(TableRowArrow.TableRowArrow, {});
+    tmp2Result = tmp2(tmp3(5612).TableRowArrow, {});
   }
-  items[3] = tmp2Result;
-  obj[8] = items;
+  items1[3] = tmp2Result;
+  obj[8] = items1;
   obj[2] = closure_7(PressableBase.PressableHighlight, obj);
   return closure_6(Input.Input, obj);
 };
@@ -189,7 +203,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     callback(closure_0);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(5077).PressableHighlight;
+    let PressableHighlight = tmp2(5123).PressableHighlight;
   } else {
     PressableHighlight = closure_4;
   }

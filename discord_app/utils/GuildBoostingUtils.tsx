@@ -1,10 +1,10 @@
 // discord_app/utils/GuildBoostingUtils.tsx
-import _modDef1205 from "SentryUtils.native.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
+import _modDef1232 from "SentryUtils.native.tsx";
 import isDiscordFrontendDevelopment from "GlobalUtils.tsx";
 import combinedDefault from "HelpdeskUtils.tsx";
 import messagesProxyDefault from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import hooksDefault from "../../_runtime/04074_hooks.js";
+import hooksDefault from "../../_runtime/04153_hooks.js";
 import getPremiumPlanItemAll from "PremiumUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import formatSize from "FileSizeUtils.tsx";
@@ -785,8 +785,8 @@ export const getGracePeriodEndingDate = function getGracePeriodEndingDate(arr) {
       obj[1] = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier1];
       obj[2] = found.length;
       obj[2] = obj;
-      _modDef1205.addBreadcrumb(obj);
-      const obj3 = _modDef1205;
+      _modDef1232.addBreadcrumb(obj);
+      const obj3 = _modDef1232;
       const tmp17 = AppliedGuildBoostsRequiredForBoostedGuildTier;
     }
     const _Math = Math;
@@ -903,7 +903,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4403).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4485).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= closure_1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

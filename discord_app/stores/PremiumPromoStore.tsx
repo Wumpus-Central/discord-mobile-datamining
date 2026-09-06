@@ -1,8 +1,8 @@
 // discord_app/stores/PremiumPromoStore.tsx
 import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import setDefault from "../utils/Durations.tsx";
 import closure_2 from "AuthenticationStore.tsx";
 import closure_3 from "RelationshipStore.tsx";
 

@@ -21,8 +21,8 @@ function QuestActivityButtonInner(quest) {
   let sharedValue1;
   let ref;
   closure_8 = undefined;
-  let obj = quest(11307);
-  obj1 = quest(586);
+  let obj = quest(11483);
+  obj1 = quest(504);
   let items = [sharedValue];
   stateFromStores = obj1.useStateFromStores(items, () => sharedValue.useReducedMotion);
   let obj2 = num;
@@ -87,9 +87,9 @@ function QuestActivityButtonInner(quest) {
     tmp9 = null != completedAt;
   }
   closure_4 = tmp9;
-  let tmpResult = tmp(4217);
+  let tmpResult = tmp(4296);
   sharedValue = tmpResult.useSharedValue(num);
-  tmpResult = tmp(4217);
+  tmpResult = tmp(4296);
   let num2 = 0;
   if (tmp9) {
     num2 = 1;
@@ -105,7 +105,7 @@ function QuestActivityButtonInner(quest) {
   fn.__workletHash = 4459043613798;
   fn.__initData = closure_14;
   const items2 = [tmp14.confetti];
-  const animatedStyle = quest(4217).useAnimatedStyle(fn);
+  const animatedStyle = quest(4296).useAnimatedStyle(fn);
   const memo = obj2.useMemo(() => {
     const obj = {};
     const merged = Object.assign(confetti.confetti);
@@ -115,7 +115,7 @@ function QuestActivityButtonInner(quest) {
     obj.transform = items;
     return obj;
   }, items2);
-  const tmpResult1 = quest(4217);
+  const tmpResult1 = quest(4296);
   const fn2 = function l() {
     return { strokeDashoffset: c2 - c2 * sharedValue.get() };
   };
@@ -123,7 +123,7 @@ function QuestActivityButtonInner(quest) {
   fn2.__workletHash = 3373122453897;
   fn2.__initData = closure_15;
   const items3 = [sharedValue, num, stateFromStores];
-  const animatedProps = quest(4217).useAnimatedProps(fn2);
+  const animatedProps = quest(4296).useAnimatedProps(fn2);
   const effect = obj2.useEffect(() => {
     num = 500;
     if (stateFromStores) {
@@ -158,32 +158,32 @@ function QuestActivityButtonInner(quest) {
   items5[2] = animatedStyle;
   obj = { style: memo, pointerEvents: "none", children: null };
   obj1 = { ref, source: null, autoPlay: false, loop: false };
-  const tmpResult2 = quest(4217);
-  obj1[1] = quest(14974);
-  obj[2] = callback(stateFromStores(5953), obj1);
+  const tmpResult2 = quest(4296);
+  obj1[1] = quest(15132);
+  obj[2] = callback(stateFromStores(5529), obj1);
   const items6 = [callback(closure_4, obj), , ,];
   obj2 = { style: tmp14.buttonWrapper, children: null };
   let obj3 = { icon: null, onPress: null, accessibilityLabel: null };
-  const tmp20 = stateFromStores(5953);
-  obj3[0] = stateFromStores(14839);
+  const tmp20 = stateFromStores(5529);
+  obj3[0] = stateFromStores(14995);
   obj3[1] = callback;
-  const intl = tmp(1233).intl;
-  obj3[2] = intl.string(quest(1233).t.JALI2K);
-  obj2[1] = callback(stateFromStores(16871), obj3);
+  const intl = tmp(1114).intl;
+  obj3[2] = intl.string(quest(1114).t.JALI2K);
+  obj2[1] = callback(stateFromStores(17035), obj3);
   items6[1] = callback(closure_4, obj2);
   const obj4 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const obj5 = { height: c11, width: c11, children: null };
-  const tmp21 = stateFromStores(16871);
-  obj5[2] = callback(quest(8254).Circle, {
+  const tmp21 = stateFromStores(17035);
+  obj5[2] = callback(quest(8453).Circle, {
     cx: 16,
     cy: 16,
     r: 14.3,
     fill: "none",
-    stroke: stateFromStores(709).unsafe_rawColors.OPACITY_32,
+    stroke: stateFromStores(576).unsafe_rawColors.OPACITY_32,
     strokeWidth: 3.4,
     strokeDasharray: result,
   });
-  obj4[2] = callback(quest(8254).Svg, obj5);
+  obj4[2] = callback(quest(8453).Svg, obj5);
   items6[2] = callback(closure_4, obj4);
   const obj7 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const obj6 = {
@@ -191,14 +191,14 @@ function QuestActivityButtonInner(quest) {
     cy: 16,
     r: 14.3,
     fill: "none",
-    stroke: stateFromStores(709).unsafe_rawColors.OPACITY_32,
+    stroke: stateFromStores(576).unsafe_rawColors.OPACITY_32,
     strokeWidth: 3.4,
     strokeDasharray: result,
   };
-  obj7[2] = callback(quest(8254).Svg, { height: c11, width: c11, children: callback(closure_12, obj9) });
+  obj7[2] = callback(quest(8453).Svg, { height: c11, width: c11, children: callback(closure_12, obj9) });
   items6[3] = callback(closure_4, obj7);
   obj[2] = items6;
-  return callback2(stateFromStores(4217).View, obj);
+  return callback2(stateFromStores(4296).View, obj);
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);

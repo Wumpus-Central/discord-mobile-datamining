@@ -1,11 +1,12 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockHooks.tsx
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import closure_5 from "QuestDockStore.tsx";
 import { QuestDockMode } from "../../QuestConstants.tsx";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";
 
-const require = arg1;
+require = arg1;
 ({
   QUEST_DOCK_CLOSED_HEIGHT: error,
   QUEST_DOCK_COLLAPSED_HEIGHT: closure_8,
@@ -22,25 +23,29 @@ let closure_14 = {
 };
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockHooks.tsx");
 
+export const useIsQuestDockExpanded = function useIsQuestDockExpanded() {
+  const items = [closure_5];
+  return initialize.useStateFromStores(items, () => obj.prevRestingQuestDockMode === constants.EXPANDED);
+};
 export const useQuestDockModeAnimatedReaction = function useQuestDockModeAnimatedReaction() {
   const context = restingQuestDockMode.useContext(
-    questDockWrapperSpecs(activeQuestDockMode[5]).QuestDockGestureContext,
+    questDockWrapperSpecs(activeQuestDockMode[6]).QuestDockGestureContext,
   );
   questDockWrapperSpecs = context.questDockWrapperSpecs;
   const windowDimensions = context.windowDimensions;
   activeQuestDockMode = context.activeQuestDockMode;
   const minExpandedContentHeight = context.minExpandedContentHeight;
   const context1 = restingQuestDockMode.useContext(
-    questDockWrapperSpecs(activeQuestDockMode[6]).QuestDockExternalCoordinationContext,
+    questDockWrapperSpecs(activeQuestDockMode[7]).QuestDockExternalCoordinationContext,
   );
   restingQuestDockMode = context1.restingQuestDockMode;
   const setRestingQuestDockMode = context1.setRestingQuestDockMode;
-  const tmp3 = windowDimensions(activeQuestDockMode[7])();
+  const tmp3 = windowDimensions(activeQuestDockMode[8])();
   closure_6 = tmp3;
-  let obj = questDockWrapperSpecs(activeQuestDockMode[8]);
+  let obj = questDockWrapperSpecs(activeQuestDockMode[9]);
   const youBarHorizontalMargin = obj.useYouBarHorizontalMargin();
-  const youBarTotalHeight = questDockWrapperSpecs(activeQuestDockMode[9]).useYouBarTotalHeight();
-  const obj2 = questDockWrapperSpecs(activeQuestDockMode[9]);
+  const youBarTotalHeight = questDockWrapperSpecs(activeQuestDockMode[10]).useYouBarTotalHeight();
+  const obj2 = questDockWrapperSpecs(activeQuestDockMode[10]);
   const fn = function o() {
     return {
       restingQuestDockMode: restingQuestDockMode.get(),
@@ -54,11 +59,11 @@ export const useQuestDockModeAnimatedReaction = function useQuestDockModeAnimate
   fn.__workletHash = 9502251090521;
   fn.__initData = closure_13;
   const fn2 = function t(safeAreaState, restingQuestDockMode) {
-    let obj = questDockWrapperSpecs(activeQuestDockMode[11]);
+    let obj = questDockWrapperSpecs(activeQuestDockMode[12]);
     if (!obj.cheapWorkletShallowEqual(safeAreaState, restingQuestDockMode)) {
       ({ restingQuestDockMode, minExpandedContentHeight, windowWidth, safeArea } = safeAreaState);
       if (closure_6.RESET_TO_PREVIOUS === restingQuestDockMode) {
-        let tmpResult = tmp(tmp2[10]);
+        let tmpResult = tmp(tmp2[11]);
         restingQuestDockMode = undefined;
         if (restingQuestDockMode != null) {
           restingQuestDockMode = restingQuestDockMode.restingQuestDockMode;
@@ -72,7 +77,7 @@ export const useQuestDockModeAnimatedReaction = function useQuestDockModeAnimate
         const merged = Object.assign(questDockWrapperSpecs.get());
         obj.x = 0;
         obj.y = 0;
-        tmpResult = tmp(tmp2[12]);
+        tmpResult = tmp(tmp2[13]);
         obj.width = tmpResult.getQuestDockCollapsedWidth(windowWidth, youBarHorizontalMargin, youBarHorizontalMargin);
         obj.height = youBarTotalHeight;
         const result = questDockWrapperSpecs.set(obj);
@@ -81,7 +86,7 @@ export const useQuestDockModeAnimatedReaction = function useQuestDockModeAnimate
         if (tmp5.CLOSED !== restingQuestDockMode) {
           if (tmp5.SOFT_DISMISSED !== restingQuestDockMode) {
             if (tmp5.EXPANDED === restingQuestDockMode) {
-              const questDockExpandedHeightLimits = tmp(tmp2[12]).getQuestDockExpandedHeightLimits(
+              const questDockExpandedHeightLimits = tmp(tmp2[13]).getQuestDockExpandedHeightLimits(
                 tmp4,
                 safeArea.top,
                 minExpandedContentHeight,
@@ -93,12 +98,12 @@ export const useQuestDockModeAnimatedReaction = function useQuestDockModeAnimate
                 if (tmp6) {
                   tmp6 =
                     obj11.get().height ===
-                    tmp(tmp2[12]).getQuestDockExpandedHeightLimits(
+                    tmp(tmp2[13]).getQuestDockExpandedHeightLimits(
                       restingQuestDockMode.windowHeight,
                       restingQuestDockMode.safeArea.top,
                       minExpandedContentHeight,
                     ).maxHeight;
-                  const tmpResult2 = tmp(tmp2[12]);
+                  const tmpResult2 = tmp(tmp2[13]);
                 }
                 tmp7 = tmp6;
               }
@@ -113,12 +118,12 @@ export const useQuestDockModeAnimatedReaction = function useQuestDockModeAnimate
                 tmp10 = closure_1_12;
               }
               obj.y = tmp10;
-              const tmpResult1 = tmp(tmp2[12]);
-              obj.width = tmp(tmp2[12]).getQuestDockExpandedWidth(windowWidth, safeArea.left, safeArea.right);
+              const tmpResult1 = tmp(tmp2[13]);
+              obj.width = tmp(tmp2[13]).getQuestDockExpandedWidth(windowWidth, safeArea.left, safeArea.right);
               obj.height = questDockExpandedHeightLimits.maxHeight;
               const result2 = obj11.set(obj);
               const result3 = activeQuestDockMode.set(tmp5.EXPANDED);
-              const tmpResult3 = tmp(tmp2[12]);
+              const tmpResult3 = tmp(tmp2[13]);
             }
           }
         }
@@ -126,40 +131,40 @@ export const useQuestDockModeAnimatedReaction = function useQuestDockModeAnimate
         const merged2 = Object.assign(questDockWrapperSpecs.get());
         obj1.x = 0;
         obj1.y = 0;
-        obj1.width = tmp(tmp2[12]).getQuestDockClosedWidth(windowWidth, youBarHorizontalMargin, youBarHorizontalMargin);
+        obj1.width = tmp(tmp2[13]).getQuestDockClosedWidth(windowWidth, youBarHorizontalMargin, youBarHorizontalMargin);
         obj1.height = youBarHorizontalMargin;
         const result4 = questDockWrapperSpecs.set(obj1);
         const result5 = activeQuestDockMode.set(restingQuestDockMode);
-        const tmpResult4 = tmp(tmp2[12]);
+        const tmpResult4 = tmp(tmp2[13]);
       }
     }
   };
   obj = {
-    cheapWorkletShallowEqual: questDockWrapperSpecs(activeQuestDockMode[11]).cheapWorkletShallowEqual,
+    cheapWorkletShallowEqual: questDockWrapperSpecs(activeQuestDockMode[12]).cheapWorkletShallowEqual,
     QuestDockMode: closure_6,
-    runOnJS: questDockWrapperSpecs(activeQuestDockMode[10]).runOnJS,
+    runOnJS: questDockWrapperSpecs(activeQuestDockMode[11]).runOnJS,
     setRestingQuestDockMode,
     questDockWrapperSpecs,
-    getQuestDockCollapsedWidth: questDockWrapperSpecs(activeQuestDockMode[12]).getQuestDockCollapsedWidth,
+    getQuestDockCollapsedWidth: questDockWrapperSpecs(activeQuestDockMode[13]).getQuestDockCollapsedWidth,
     youBarHorizontalMargin,
     QUEST_DOCK_COLLAPSED_HEIGHT: youBarTotalHeight,
     activeQuestDockMode,
-    getQuestDockClosedWidth: questDockWrapperSpecs(activeQuestDockMode[12]).getQuestDockClosedWidth,
+    getQuestDockClosedWidth: questDockWrapperSpecs(activeQuestDockMode[13]).getQuestDockClosedWidth,
     QUEST_DOCK_CLOSED_HEIGHT: youBarHorizontalMargin,
-    getQuestDockExpandedHeightLimits: questDockWrapperSpecs(activeQuestDockMode[12]).getQuestDockExpandedHeightLimits,
+    getQuestDockExpandedHeightLimits: questDockWrapperSpecs(activeQuestDockMode[13]).getQuestDockExpandedHeightLimits,
     youBarHeight: youBarTotalHeight,
     QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: closure_12,
-    getQuestDockExpandedWidth: questDockWrapperSpecs(activeQuestDockMode[12]).getQuestDockExpandedWidth,
+    getQuestDockExpandedWidth: questDockWrapperSpecs(activeQuestDockMode[13]).getQuestDockExpandedWidth,
   };
   fn2.__closure = obj;
   fn2.__workletHash = 2510234714195;
   fn2.__initData = closure_14;
-  const animatedReaction = questDockWrapperSpecs(activeQuestDockMode[10]).useAnimatedReaction(fn, fn2);
+  const animatedReaction = questDockWrapperSpecs(activeQuestDockMode[11]).useAnimatedReaction(fn, fn2);
 };
 export const useQuestDockExternalOffset = function useQuestDockExternalOffset() {
   let items = [closure_5];
   const tmp = callback(
-    first(586).useStateFromStoresArray(items, () => {
+    first(504).useStateFromStoresArray(items, () => {
       const items = [,];
       ({ prevRestingQuestDockMode: arr[0], isEligibleToBeVisible: arr[1] } = closure_5);
       return items;
@@ -190,19 +195,19 @@ export const useQuestDockExternalOffset = function useQuestDockExternalOffset() 
 };
 export const useQuestDockDismissalReset = function useQuestDockDismissalReset() {
   setRestingQuestDockMode = React.useContext(
-    setRestingQuestDockMode(14941).QuestDockExternalCoordinationContext,
+    setRestingQuestDockMode(15099).QuestDockExternalCoordinationContext,
   ).setRestingQuestDockMode;
   const activeQuestDockMode = React.useContext(
-    setRestingQuestDockMode(14938).QuestDockGestureContext,
+    setRestingQuestDockMode(15096).QuestDockGestureContext,
   ).activeQuestDockMode;
   const items = [setRestingQuestDockMode, activeQuestDockMode];
   const effect = React.useEffect(() => {
     let isSoftDismissedResult = activeQuestDockMode.get() !== closure_1_6.SOFT_DISMISSED;
     if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(closure_1_2[12]).isSoftDismissed(
+      isSoftDismissedResult = setRestingQuestDockMode(closure_1_2[13]).isSoftDismissed(
         closure_1_5.questDockSoftDismissedAt,
       );
-      let obj = setRestingQuestDockMode(closure_1_2[12]);
+      let obj = setRestingQuestDockMode(closure_1_2[13]);
     }
     if (!isSoftDismissedResult) {
       setRestingQuestDockMode(closure_1_6.COLLAPSED);
@@ -210,8 +215,8 @@ export const useQuestDockDismissalReset = function useQuestDockDismissalReset() 
     function maybeResetSoftDismissal() {
       let isSoftDismissedResult = closure_1.get() !== closure_1_6.SOFT_DISMISSED;
       if (!isSoftDismissedResult) {
-        isSoftDismissedResult = callback(closure_1_2[12]).isSoftDismissed(closure_1_5.questDockSoftDismissedAt);
-        const obj = callback(closure_1_2[12]);
+        isSoftDismissedResult = callback(closure_1_2[13]).isSoftDismissed(closure_1_5.questDockSoftDismissedAt);
+        const obj = callback(closure_1_2[13]);
       }
       if (!isSoftDismissedResult) {
         callback(closure_1_6.COLLAPSED);

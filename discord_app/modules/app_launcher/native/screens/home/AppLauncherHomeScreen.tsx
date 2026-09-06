@@ -160,7 +160,7 @@ function ActivityRow(section) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let obj = onPress(1430);
+  let obj = onPress(1396);
   obj = { id: section.application.id, icon: section.application.icon, bot: null, botIconFirst: true };
   const application = section.application;
   let bot;
@@ -173,7 +173,7 @@ function ActivityRow(section) {
   if (tmp5) {
     obj = { iconSource: null };
     obj[0] = applicationIconSource;
-    tmp5 = callback2(onPress(11857), obj);
+    tmp5 = callback2(onPress(12056), obj);
   }
   const items = [section];
   const items1 = [section, onPress];
@@ -195,7 +195,7 @@ function ActivityRow(section) {
   const callback = React.useCallback(() => {
     onPress(section);
   }, items1);
-  return callback2(section(5608).TableRow, {
+  return callback2(section(5605).TableRow, {
     icon: tmp5,
     label: section.application.name,
     subLabel: memo,
@@ -222,7 +222,7 @@ function ActivityItemTuple(arg0) {
   const items = [containerWidth];
   const size = React.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Array", height: "PX_16" };
+      return { width: "hash", height: "call" };
     } else {
       const tmp5 = closure_1_1(closure_1_3[25])(tmp / 2 - closure_1_14 - 6);
       const obj = { width: null, height: null };
@@ -419,7 +419,7 @@ function RecommendationItemTuple(isLastTuple) {
   items = [containerWidth, num];
   closure_7 = React.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Array", height: "PX_16" };
+      return { width: "hash", height: "call" };
     } else {
       const tmp6 = closure_1_1(closure_1_3[25])((tmp - 2 * closure_1_14 - 12 * (2 - 1)) / 2);
       const obj = { width: null, height: null };
@@ -793,19 +793,19 @@ export default function AppLauncherHomeScreen(route) {
   let callback6;
   let trackAppLauncherHomeItemImpression;
   let callback8;
-  let obj = context(11888);
+  let obj = context(12087);
   const viewableAppLauncherHomeItems = obj.useViewableAppLauncherHomeItems();
   const handleViewableItemsChanged = viewableAppLauncherHomeItems.handleViewableItemsChanged;
   dependencyMap = handleViewableItemsChanged;
   ({ hasViewedActivityItem, hasViewedLearnMoreItem } = viewableAppLauncherHomeItems);
-  const tmp5 = entrypoint(8588)(hasViewedActivityItem);
-  const tmp6 = entrypoint(8588)(hasViewedLearnMoreItem);
+  const tmp5 = entrypoint(8265)(hasViewedActivityItem);
+  const tmp6 = entrypoint(8265)(hasViewedLearnMoreItem);
   callback = tmp6;
   let tmp7 = callback4();
   frecentApps = tmp7;
-  let tmp8 = entrypoint(7787)();
+  let tmp8 = entrypoint(7049)();
   closure_6 = tmp8;
-  obj1 = context(9067);
+  obj1 = context(11215);
   const requiredAppLauncherContext = obj1.useRequiredAppLauncherContext();
   const chatInputRef = requiredAppLauncherContext.chatInputRef;
   appsInThisServer = chatInputRef;
@@ -817,7 +817,7 @@ export default function AppLauncherHomeScreen(route) {
   stateFromStores1 = entrypoint;
   const onActivityItemSelected = requiredAppLauncherContext.onActivityItemSelected;
   memo3 = onActivityItemSelected;
-  const size = entrypoint(1492)();
+  const size = entrypoint(1477)();
   memo4 = tmp10;
   let obj2 = frecentApps;
   let items = [entrypoint];
@@ -894,27 +894,27 @@ export default function AppLauncherHomeScreen(route) {
   memo8 = undefined;
   frecencyCommands = undefined;
   memo1 = undefined;
-  let obj3 = context(11919);
+  let obj3 = context(12118);
   const fetchDeveloperActivityShelfItems = obj3.useFetchDeveloperActivityShelfItems();
   num = 2;
-  if (entrypoint(7730)()) {
+  if (entrypoint(6945)()) {
     num = 4;
   }
   let guild_id;
-  let tmp4Result = tmp4(11840);
+  let tmp4Result = tmp4(12039);
   if ("channel" === context.type) {
     guild_id = context.channel.guild_id;
   }
   const tmp4ResultResult = tmp4Result({ guildId: guild_id });
   dependencyMap = tmp4ResultResult;
-  let tmp19 = entrypoint === context(8448).AppLauncherEntrypoint.VOICE;
+  let tmp19 = entrypoint === context(9409).AppLauncherEntrypoint.VOICE;
   callback = tmp19;
-  let tmp20 = entrypoint(11920)({ context, onlyActivityApps: tmp19 });
+  let tmp20 = entrypoint(12119)({ context, onlyActivityApps: tmp19 });
   ({ frecencyCommands, frecentApps } = tmp20);
   ({ sectionDescriptors, loading } = tmp20);
-  let tmp21 = entrypoint === context(8448).AppLauncherEntrypoint.TEXT;
+  let tmp21 = entrypoint === context(9409).AppLauncherEntrypoint.TEXT;
   closure_6 = tmp21;
-  appsInThisServer = tmp4(11923)({ context }).appsInThisServer;
+  appsInThisServer = tmp4(12122)({ context }).appsInThisServer;
   const items4 = [appsInThisServer, tmp21];
   memo = obj2.useMemo(() => {
     const intl = context(closure_3[17]).intl;
@@ -947,7 +947,7 @@ export default function AppLauncherHomeScreen(route) {
     }
     return tmp;
   }, items6);
-  let tmpResult = tmp(8156);
+  let tmpResult = tmp(9546);
   let id;
   if ("channel" === context.type) {
     id = context.channel.id;
@@ -970,13 +970,13 @@ export default function AppLauncherHomeScreen(route) {
       const shelf = obj.fetchShelf(obj);
     }
   }, items7);
-  tmpResult = tmp(586);
+  tmpResult = tmp(504);
   const items8 = [stateFromStores1];
   const stateFromStores = tmpResult.useStateFromStores(items8, () =>
     stateFromStores1.get("only_show_preview_app_collections"),
   );
-  tmp4Result = tmp4(11918);
-  const ApplicationCollectionActiveState = tmp(11879).ApplicationCollectionActiveState;
+  tmp4Result = tmp4(12117);
+  const ApplicationCollectionActiveState = tmp(12078).ApplicationCollectionActiveState;
   if (stateFromStores) {
     PREVIEW = ApplicationCollectionActiveState.PREVIEW;
   } else {
@@ -985,7 +985,7 @@ export default function AppLauncherHomeScreen(route) {
       : ApplicationCollectionActiveState.ACTIVE;
   }
   const items9 = [memo3];
-  stateFromStores1 = context(586).useStateFromStores(items9, () =>
+  stateFromStores1 = context(504).useStateFromStores(items9, () =>
     memo3.getCollections({ surface: memo9, activeState: PREVIEW }),
   );
   const items10 = [stateFromStores1, tmp19];
@@ -1123,10 +1123,10 @@ export default function AppLauncherHomeScreen(route) {
     }
     return someResult;
   }, items13);
-  const tmpResult1 = context(586);
+  const tmpResult1 = context(504);
   const items14 = [memo4];
   let channel = null;
-  const stateFromStores2 = context(586).useStateFromStores(items14, () => {
+  const stateFromStores2 = context(504).useStateFromStores(items14, () => {
     let tmp2 = "channel" === context.type;
     if (tmp2) {
       const channel = tmp.channel;
@@ -1214,34 +1214,34 @@ export default function AppLauncherHomeScreen(route) {
         let length2;
         let sum;
         ({ type, application_directory_collection_items } = title);
-        if (type === context(11924).ApplicationDirectoryCollectionType.BANNER_CARDS) {
+        if (type === context(12123).ApplicationDirectoryCollectionType.BANNER_CARDS) {
           const _Math = Math;
           let obj = { type: null, section: null, sectionName: null, numItems: null, numVisibleItems: null };
-          const bound = Math.min(length, tmp(11909).COLLAPSED_LIST_ITEM_MAX);
-          obj[0] = tmp(11889).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER;
+          const bound = Math.min(length, tmp(12108).COLLAPSED_LIST_ITEM_MAX);
+          obj[0] = tmp(12088).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER;
           ({ title: obj[1], title: obj[2] } = title);
           obj[3] = application_directory_collection_items.length;
           obj[4] = bound;
           found1.push(obj);
           const mapped = application_directory_collection_items.map((type) => {
-            if (type.type === found1(8457).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(9417).ApplicationDirectoryCollectionItemType.APPLICATION) {
               let collectionItemAssetUrl;
               if (tmp4) {
-                let tmpResult = tmp(11925);
+                let tmpResult = tmp(12124);
                 let obj = { itemId: null, hash: null };
                 ({ id: obj2[0], image_hash: obj2[1] } = type);
                 collectionItemAssetUrl = tmpResult.getCollectionItemAssetUrl(obj);
               }
               obj = { application: null, showsPromoted: null, overrideImageUrl: null, sectionPosition: null };
               obj[0] = type.application;
-              tmpResult = tmp(1398);
-              obj[1] = tmpResult.hasFlag(type.flags, tmp(11926).ApplicationCollectionItemFlags.PROMOTED);
+              tmpResult = tmp(1384);
+              obj[1] = tmpResult.hasFlag(type.flags, tmp(12125).ApplicationCollectionItemFlags.PROMOTED);
               obj[2] = collectionItemAssetUrl;
               obj[3] = arg1;
               return obj;
             }
           });
-          const found = mapped.filter(tmp(1470).isNotNullish);
+          const found = mapped.filter(tmp(1369).isNotNullish);
           let num3 = 0;
           if (0 < found.length) {
             do {
@@ -1249,7 +1249,7 @@ export default function AppLauncherHomeScreen(route) {
               obj = { type: null, sectionName: null, sectionOverallPosition: null, items: null, isLastTuple: null };
               let tmp20 = context;
               let tmp21 = dependencyMap;
-              obj[0] = context(11889).AppLauncherHomeListItemType.RECOMMENDATION_TUPLE;
+              obj[0] = context(12088).AppLauncherHomeListItemType.RECOMMENDATION_TUPLE;
               obj[1] = title.title;
               obj[2] = arg1;
               let tmp22 = closure_1_2;
@@ -1261,18 +1261,18 @@ export default function AppLauncherHomeScreen(route) {
               length2 = found.length;
             } while (sum < length2);
           }
-        } else if (type === tmp(11924).ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
+        } else if (type === tmp(12123).ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
           const prop = title.application_directory_collection_items;
           const mapped1 = prop.map((type) => {
-            if (type.type === found1(8457).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(9417).ApplicationDirectoryCollectionItemType.APPLICATION) {
               const obj = { application: null, showsPromoted: null };
               obj[0] = type.application;
-              obj[1] = tmp(1398).hasFlag(type.flags, tmp(11926).ApplicationCollectionItemFlags.PROMOTED);
+              obj[1] = tmp(1384).hasFlag(type.flags, tmp(12125).ApplicationCollectionItemFlags.PROMOTED);
               return obj;
             }
           });
-          found1 = mapped1.filter(tmp(1470).isNotNullish);
-          if (tmpResult.hasFlag(title.flags, tmp(11927).ApplicationCollectionFlags.APPENDS_REMAINING_ACTIVITIES)) {
+          found1 = mapped1.filter(tmp(1369).isNotNullish);
+          if (tmpResult.hasFlag(title.flags, tmp(12126).ApplicationCollectionFlags.APPENDS_REMAINING_ACTIVITIES)) {
             const item = closure_1_16.forEach((application) => {
               found1.push({ application: application.application, showsPromoted: false });
             });
@@ -1281,7 +1281,7 @@ export default function AppLauncherHomeScreen(route) {
           items = [];
           HermesBuiltin.arraySpread(callback8(found1, title.title, title.title, undefined, arg1), 0);
           HermesBuiltin.apply(items, found1);
-          tmpResult = tmp(1398);
+          tmpResult = tmp(1384);
         }
       });
     }
@@ -1325,8 +1325,8 @@ export default function AppLauncherHomeScreen(route) {
     };
     const result = context(closure_3[23]).handleApplicationSelected(obj);
   }, items18);
-  const tmpResult2 = context(586);
-  clickOnHomeActivityOpensAppDetails = context(11890).useClickOnHomeActivityOpensAppDetails();
+  const tmpResult2 = context(504);
+  clickOnHomeActivityOpensAppDetails = context(12089).useClickOnHomeActivityOpensAppDetails();
   const items19 = [
     clickOnHomeActivityOpensAppDetails,
     context,
@@ -1399,7 +1399,7 @@ export default function AppLauncherHomeScreen(route) {
         const obj = { shelfData, sectionName: item.sectionName, navigates: null };
         let tmp2 = closure_1_21;
         if (!tmp2) {
-          tmp2 = closure_1_10 !== context(8448).AppLauncherEntrypoint.VOICE;
+          tmp2 = closure_1_10 !== context(9409).AppLauncherEntrypoint.VOICE;
         }
         obj[2] = tmp2;
         closure_1_14(obj);
@@ -1437,7 +1437,7 @@ export default function AppLauncherHomeScreen(route) {
       const obj6 = { section: null, onPress: null, isFirstRow: null, isLastRow: null, style: null };
       obj6[0] = item.section;
       obj6[1] = function onPress() {
-        closure_1_13(item.section, context(8448).AppLauncherSectionName.INSTALLED);
+        closure_1_13(item.section, context(9409).AppLauncherSectionName.INSTALLED);
       };
       ({ isFirstRow: obj6[2], isLastRow: obj6[3] } = item);
       const obj7 = { height: null };
@@ -1481,15 +1481,15 @@ export default function AppLauncherHomeScreen(route) {
       obj11[1] = function onPress() {
         const applications = item.applications;
         const mapped = applications.map((arg0) => arg0);
-        let obj = context(11852);
+        let obj = context(12051);
         obj = {
-          location: context(7278).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME,
+          location: context(7523).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME,
           navigation: closure_1_2,
           context: item,
           sectionName: item.sectionName,
           sectionOverallPosition: item.sectionOverallPosition,
           applications: mapped,
-          sectionItemType: context(11853).SectionItemType.APPS,
+          sectionItemType: context(12052).SectionItemType.APPS,
           commands: [],
           sectionDescriptors: mapped.map((application) =>
             callback(table[51]).getApplicationCommandSection(application),
@@ -1512,7 +1512,7 @@ export default function AppLauncherHomeScreen(route) {
   }, items19);
   ref = obj2.useRef(null);
   const tmp49 = callback;
-  const tmpResult3 = context(11890);
+  const tmpResult3 = context(12089);
   [tmp51, c23] = callback(obj2.useState(false), 2);
   const items20 = [entrypoint];
   memo9 = obj2.useMemo(
@@ -1570,7 +1570,7 @@ export default function AppLauncherHomeScreen(route) {
   if (tmp51) {
     str = "search-scroller";
   }
-  pinnedSearchBarBottomBorder = context(11898).usePinnedSearchBarBottomBorder({ key: str, triggerScrollHeight: 5 });
+  pinnedSearchBarBottomBorder = context(12097).usePinnedSearchBarBottomBorder({ key: str, triggerScrollHeight: 5 });
   ref1 = obj2.useRef(null);
   const items24 = [initialSearchQuery];
   const layoutEffect = obj2.useLayoutEffect(() => {
@@ -1587,26 +1587,26 @@ export default function AppLauncherHomeScreen(route) {
       const tmp2 = ref1;
     }
   }, items24);
-  let sum = entrypoint(1627)().bottom + closure_14;
+  let sum = entrypoint(1611)().bottom + closure_14;
   c31 = sum;
-  const tmpResult4 = context(11898);
-  const bottomSheetFlashListBottomViewabilityInset = context(11899).useBottomSheetFlashListBottomViewabilityInset();
+  const tmpResult4 = context(12097);
+  const bottomSheetFlashListBottomViewabilityInset = context(12098).useBottomSheetFlashListBottomViewabilityInset();
   ({ flashListRef, bottomVisibilityInsetRef } = bottomSheetFlashListBottomViewabilityInset);
   obj = { type: null, name: null };
-  const tmpResult5 = context(11899);
-  obj[0] = context(500).ImpressionTypes.VIEW;
-  obj[1] = context(500).ImpressionNames.APP_LAUNCHER_HOME_ACTIVITY_ITEM;
+  const tmpResult5 = context(12098);
+  obj[0] = context(1250).ImpressionTypes.VIEW;
+  obj[1] = context(1250).ImpressionNames.APP_LAUNCHER_HOME_ACTIVITY_ITEM;
   obj = { disableTrack: !tmp5 };
   const items25 = [tmp5];
-  entrypoint(8911)(obj, obj, items25);
-  const tmp4Result1 = entrypoint(8911);
+  entrypoint(8768)(obj, obj, items25);
+  const tmp4Result1 = entrypoint(8768);
   [tmp64, c32] = tmp49(obj2.useState(false), 2);
   const effect5 = obj2.useEffect(() => {
     _undefined2(true);
   }, []);
   const tmp49Result = tmp49(obj2.useState(false), 2);
   const items26 = [closure_13];
-  stateFromStores3 = context(586).useStateFromStores(
+  stateFromStores3 = context(504).useStateFromStores(
     items26,
     () => store.getTriggeredOnboardingContentMetadata().willShowGlobalSearchOnboarding,
   );
@@ -1627,9 +1627,9 @@ export default function AppLauncherHomeScreen(route) {
       const obj3 = context(closure_3[62]);
     }
   }, items27);
-  const tmpResult6 = context(586);
+  const tmpResult6 = context(504);
   trackAppLauncherHomeItemImpression =
-    context(11901).useTrackAppLauncherHomeItemImpression().trackAppLauncherHomeItemImpression;
+    context(12100).useTrackAppLauncherHomeItemImpression().trackAppLauncherHomeItemImpression;
   const items28 = [sum, tmp7.list];
   const items29 = [sum];
   const memo10 = obj2.useMemo(() => {
@@ -1655,8 +1655,8 @@ export default function AppLauncherHomeScreen(route) {
       contentHeight: nativeEvent.contentSize.height,
     });
   }, items31);
-  const tmpResult7 = context(11901);
-  const appLauncherFlashListProps = context(11903).useAppLauncherFlashListProps({ onScrollHandler: callback8 });
+  const tmpResult7 = context(12100);
+  const appLauncherFlashListProps = context(12102).useAppLauncherFlashListProps({ onScrollHandler: callback8 });
   const items32 = [handleViewableItemsChanged, trackAppLauncherHomeItemImpression];
   obj1 = { style: tmp7.container, children: null };
   obj2 = { style: tmp7.topBackgroundFill };
@@ -1670,12 +1670,12 @@ export default function AppLauncherHomeScreen(route) {
   const items33 = [memo(closure_6, obj2), , ,];
   obj3 = { style: tmp7.searchBarContainer, children: null };
   let obj4 = { ref: ref1, placeholder: null, isRound: true, size: "md", onChange: null, onFocus: null };
-  if (entrypoint === context(8448).AppLauncherEntrypoint.VOICE) {
-    let intl2 = tmp(1233).intl;
-    let stringResult = intl2.string(tmp(1233).t["pw+r5b"]);
+  if (entrypoint === context(9409).AppLauncherEntrypoint.VOICE) {
+    let intl2 = tmp(1114).intl;
+    let stringResult = intl2.string(tmp(1114).t["pw+r5b"]);
   } else {
-    let intl = tmp(1233).intl;
-    stringResult = intl.string(tmp(1233).t.ziyFv2);
+    let intl = tmp(1114).intl;
+    stringResult = intl.string(tmp(1114).t.ziyFv2);
   }
   let obj5 = { children: null };
   obj4[1] = stringResult;
@@ -1684,7 +1684,7 @@ export default function AppLauncherHomeScreen(route) {
     callback();
     callback6({ actionType: sectionDescriptors.TAKE_ACTION });
   };
-  obj3[1] = memo(context(6231).SearchField, obj4);
+  obj3[1] = memo(context(7050).SearchField, obj4);
   const items34 = [memo(closure_6, obj3), pinnedSearchBarBottomBorder.bottomBorderComponent];
   obj5[0] = items34;
   items33[1] = callback3(clickOnHomeActivityOpensAppDetails, obj5);
@@ -1695,7 +1695,7 @@ export default function AppLauncherHomeScreen(route) {
     obj6[2] = callback9;
     obj6[3] = callback;
     obj6[4] = entrypoint;
-    let tmp77Result = tmp77(tmp(11905).SearchLocalAndGlobalContentView, obj6);
+    let tmp77Result = tmp77(tmp(12104).SearchLocalAndGlobalContentView, obj6);
   } else {
     let obj7 = {
       context: null,
@@ -1771,12 +1771,12 @@ export default function AppLauncherHomeScreen(route) {
       obj[8] = stringResult;
       const result = obj.handleViewAllSelected(obj);
     };
-    const items35 = [tmp77(tmp4(11853), obj7), , ,];
+    const items35 = [tmp77(tmp4(12052), obj7), , ,];
     let obj8 = { items: null, onAppSelected: null, onViewAllSelected: null };
     obj8[0] = memo;
     obj8[1] = callback3;
     obj8[2] = function onViewAllSelected() {
-      const found = memo.find((type) => type.type === callback(11889).AppLauncherHomeListItemType.VIEW_ALL);
+      const found = memo.find((type) => type.type === callback(12088).AppLauncherHomeListItemType.VIEW_ALL);
       let mapped;
       if (found != null) {
         const applications = found.applications;
@@ -1804,24 +1804,24 @@ export default function AppLauncherHomeScreen(route) {
         obj[4] = mapped;
         obj[5] = context(closure_3[50]).SectionItemType.APPS;
         obj[6] = [];
-        obj[7] = mapped.map((application) => callback(7276).getApplicationCommandSection(application));
+        obj[7] = mapped.map((application) => callback(7521).getApplicationCommandSection(application));
         const intl = context(closure_3[17]).intl;
         obj[8] = intl.string(context(closure_3[17]).t.oJyzCu);
         const result = obj.handleViewAllSelected(obj);
       }
     };
-    items35[1] = tmp77(tmp4(11911), obj8);
+    items35[1] = tmp77(tmp4(12110), obj8);
     tmp77Result = null;
     if (tmp40) {
       tmp77Result = null;
       if (tmp64) {
-        tmp77Result = tmp77(tmp4(11912), {});
+        tmp77Result = tmp77(tmp4(12111), {});
       }
     }
     items35[2] = tmp77Result;
     let tmp77Result1 = null;
     if (memo2) {
-      tmp77Result1 = tmp77(tmp4(11914), {});
+      tmp77Result1 = tmp77(tmp4(12113), {});
     }
     let obj9 = {
       ListHeaderComponent: null,
@@ -1854,23 +1854,23 @@ export default function AppLauncherHomeScreen(route) {
     obj9[5] = memo8;
     obj9[11] = memo12;
     obj9[12] = bottomVisibilityInsetRef;
-    if (entrypoint === tmp(8448).AppLauncherEntrypoint.VOICE) {
+    if (entrypoint === tmp(9409).AppLauncherEntrypoint.VOICE) {
       flashListRef = appLauncherFlashListProps.scrollerRef;
     }
     obj9[13] = flashListRef;
     obj9[14] = callback9;
     ({ onScroll: obj25[15], gestureRef: obj25[16], animatedProps: obj25[17] } = appLauncherFlashListProps);
-    tmp77Result = tmp77(tmp4(11903), obj9);
-    const tmp4Result2 = tmp4(11903);
+    tmp77Result = tmp77(tmp4(12102), obj9);
+    const tmp4Result2 = tmp4(12102);
   }
   items33[2] = tmp77Result;
-  let tmp77Result2 = entrypoint === tmp(8448).AppLauncherEntrypoint.TEXT;
+  let tmp77Result2 = entrypoint === tmp(9409).AppLauncherEntrypoint.TEXT;
   if (tmp77Result2) {
     let obj11 = { windowDimensions: null, visible: null, markAsDismissed: null };
     obj11[0] = size;
     obj11[1] = stateFromStores3;
     obj11[2] = callback6;
-    tmp77Result2 = tmp77(tmp4(11917), obj11);
+    tmp77Result2 = tmp77(tmp4(12116), obj11);
   }
   items33[3] = tmp77Result2;
   obj1[1] = items33;

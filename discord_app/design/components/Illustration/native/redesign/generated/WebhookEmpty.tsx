@@ -15,13 +15,13 @@ export const getWebhookEmptySource = function getWebhookEmptySource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(16682);
+      return callback(16847);
     },
     darker() {
-      return callback(16683);
+      return callback(16848);
     },
     light() {
-      return callback(16684);
+      return callback(16849);
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useWebhookEmptySource = function useWebhookEmptySource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16682);
+      return callback(16847);
     },
     darker() {
-      return callback(16683);
+      return callback(16848);
     },
     light() {
-      return callback(16684);
+      return callback(16849);
     },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const WebhookEmpty = function WebhookEmpty(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16682);
+      return callback(16847);
     },
     darker() {
-      return callback(16683);
+      return callback(16848);
     },
     light() {
-      return callback(16684);
+      return callback(16849);
     },
   };
   obj = {};

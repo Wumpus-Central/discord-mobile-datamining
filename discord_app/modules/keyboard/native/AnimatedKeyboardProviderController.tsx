@@ -1,6 +1,6 @@
 // discord_app/modules/keyboard/native/AnimatedKeyboardProviderController.tsx
-import KeyboardChatScrollView from "../../../../_runtime/01641_KeyboardChatScrollView.js";
-import _mod4217 from "../../reanimated/ReanimatedRexport.tsx";
+import KeyboardChatScrollView from "../../../../_runtime/01625_KeyboardChatScrollView.js";
+import _mod4296 from "../../reanimated/ReanimatedRexport.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import mutable from "../../../index.native.tsx";
@@ -8,7 +8,7 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const mutable1 = module_4217.makeMutable(require("../../reanimated/ReanimatedRexport.tsx").KeyboardState.UNKNOWN);
+const mutable1 = module_4296.makeMutable(require("../../reanimated/ReanimatedRexport.tsx").KeyboardState.UNKNOWN);
 let closure_6 = {
   code: "function AnimatedKeyboardProviderControllerTsx1(e){const{animatedKeyboardState,KeyboardState}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);}",
 };
@@ -23,13 +23,13 @@ let closure_9 = importAllResult.memo(() => {
   obj = { onStart: null, onMove: null, onEnd: null };
   const fn = function o(height) {
     if (0 === height.height) {
-      let OPEN = callback(4217).KeyboardState.CLOSED;
+      let OPEN = callback(4296).KeyboardState.CLOSED;
     } else {
-      OPEN = callback(4217).KeyboardState.OPEN;
+      OPEN = callback(4296).KeyboardState.OPEN;
     }
     const result = store2.set(OPEN);
   };
-  obj = { animatedKeyboardState: mutable1, KeyboardState: _mod4217.KeyboardState };
+  obj = { animatedKeyboardState: mutable1, KeyboardState: _mod4296.KeyboardState };
   fn.__closure = obj;
   fn.__workletHash = 12130162639136;
   fn.__initData = closure_6;
@@ -43,16 +43,16 @@ let closure_9 = importAllResult.memo(() => {
   obj[1] = fn2;
   const fn3 = function e(height) {
     if (0 === height.height) {
-      let OPEN = callback(4217).KeyboardState.CLOSED;
+      let OPEN = callback(4296).KeyboardState.CLOSED;
     } else {
-      OPEN = callback(4217).KeyboardState.OPEN;
+      OPEN = callback(4296).KeyboardState.OPEN;
     }
     const result = store2.set(OPEN);
     const result1 = store.set(height.height);
   };
   fn3.__closure = {
     animatedKeyboardState: mutable1,
-    KeyboardState: _mod4217.KeyboardState,
+    KeyboardState: _mod4296.KeyboardState,
     animatedKeyboardHeight: mutable,
   };
   fn3.__workletHash = 10688534401196;

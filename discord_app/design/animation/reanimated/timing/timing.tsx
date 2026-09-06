@@ -1,6 +1,6 @@
 // discord_app/design/animation/reanimated/timing/timing.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import _mod4217 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod4296 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE from "../ReanimatedConstants.tsx";
 import mutable from "../AccessibilityPreferencesSharedValue.native.tsx";
 
@@ -20,20 +20,20 @@ function withTiming(value, timingStandard, fn, fn2) {
       }
       obj = {};
       const merged = Object.assign(obj);
-      obj.reduceMotion = tmp(4217).ReduceMotion.Never;
+      obj.reduceMotion = tmp(4296).ReduceMotion.Never;
       tmp7 = obj;
     }
     let tmp5 = tmp7;
   } else {
     tmp5 = CONFIG_NEVER_ANIMATE_TIMING;
   }
-  return _mod4217.withTiming(value, tmp5, fn2);
+  return _mod4296.withTiming(value, tmp5, fn2);
 }
 withTiming.__closure = {
   accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue,
   CONFIG_NEVER_ANIMATE_TIMING,
-  ReduceMotion: _mod4217.ReduceMotion,
-  REAwithTiming: _mod4217.withTiming,
+  ReduceMotion: _mod4296.ReduceMotion,
+  REAwithTiming: _mod4296.withTiming,
 };
 withTiming.__workletHash = 6710776253444;
 withTiming.__initData = {
@@ -42,8 +42,8 @@ withTiming.__initData = {
 let obj = {
   accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue,
   CONFIG_NEVER_ANIMATE_TIMING,
-  ReduceMotion: _mod4217.ReduceMotion,
-  REAwithTiming: _mod4217.withTiming,
+  ReduceMotion: _mod4296.ReduceMotion,
+  REAwithTiming: _mod4296.withTiming,
 };
 const result = set.fileFinishedImporting("design/animation/reanimated/timing/timing.tsx");
 

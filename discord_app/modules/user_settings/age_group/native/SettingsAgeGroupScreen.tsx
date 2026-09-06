@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef14578 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14689 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
@@ -15,8 +15,8 @@ require = arg1;
 function SettingsAgeGroupHeader() {
   let obj = { style: callback3().headerContainer, children: null };
   const callback = React.useCallback(() => {
-    const obj = callback(8701);
-    obj.openUrl(callback(1994).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+    const obj = callback(8411);
+    obj.openUrl(callback(2024).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
   }, []);
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
@@ -43,19 +43,26 @@ const result = require("set").fileFinishedImporting(
 );
 
 export default function SettingsAgeGroupScreen() {
+  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14682).useIsTinyBroncoSettingsEnabled();
+  let items = [isTinyBroncoSettingsEnabled];
   const node = React.useMemo(() => {
-    let obj = callback(11292);
+    let obj = isTinyBroncoSettingsEnabled(closure_1_2[13]);
     obj = { sections: null, ListHeaderComponent: null };
     obj = { label: null, settings: null };
-    const intl = callback(1233).intl;
-    obj[0] = intl.string(callback2(2918)["5Mi5TE"]);
-    const items = [,];
-    ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1] } = closure_5);
+    const intl = isTinyBroncoSettingsEnabled(closure_1_2[10]).intl;
+    obj[0] = intl.string(closure_1_1(closure_1_2[11])["5Mi5TE"]);
+    const items = [, ,];
+    ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1], AGE_GROUP_CONFIRM_ACCOUNT_STATUS: arr[2] } = closure_1_5);
     obj[1] = items;
     const items1 = [obj];
     obj[0] = items1;
-    obj[1] = closure_10;
+    if (isTinyBroncoSettingsEnabled) {
+      let TinyBroncoAgeGroupHeader = isTinyBroncoSettingsEnabled(closure_1_2[14]).TinyBroncoAgeGroupHeader;
+    } else {
+      TinyBroncoAgeGroupHeader = closure_1_10;
+    }
+    obj[1] = TinyBroncoAgeGroupHeader;
     return obj.createList(obj);
-  }, []);
-  return callback(_modDef14578, { node });
+  }, items);
+  return callback(_modDef14689, { node });
 }

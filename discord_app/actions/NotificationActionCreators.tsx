@@ -1,7 +1,7 @@
 // discord_app/actions/NotificationActionCreators.tsx
 import set from "../../_runtime/00002_set.js";
-import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import ME from "../Constants.tsx";
 
 ({ DesktopNotificationTypes: obj1, NotificationPermissionTypes: c3, AnalyticEvents: c4 } = ME);

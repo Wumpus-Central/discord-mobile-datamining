@@ -34,7 +34,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === builderPreviewApplicationId.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "Array", guildId: "PX_16" };
+              obj1 = { channelId: "hash", guildId: "call" };
             } else {
               obj1 = null;
             }

@@ -24,8 +24,8 @@ const memoResult = importAllResult.memo((height) => {
   let obj = getNicknameDefault;
   let nickname = obj.getNickname(guildId, undefined, user);
   if (nickname == null) {
-    nickname = tmp2(4322).getGlobalName(user);
-    const tmp2Result = tmp2(4322);
+    nickname = tmp2(4404).getGlobalName(user);
+    const tmp2Result = tmp2(4404);
   }
   const hasAvatarForGuildResult = user.hasAvatarForGuild(guildId);
   obj = { style: { height: height.contentHeight }, children: null };
@@ -35,7 +35,7 @@ const memoResult = importAllResult.memo((height) => {
     obj[0] = tmp.mainIdentity;
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      obj1 = { size: null, style: null, user: null, guildId: "PX_16" };
+      obj1 = { size: null, style: null, user: null, guildId: "Array" };
       obj1[0] = Button.AvatarSizes.SIZE_16;
       obj1[1] = tmp.primaryAvatar;
       obj1[2] = user;
@@ -45,7 +45,7 @@ const memoResult = importAllResult.memo((height) => {
     const obj2 = { user: null, usernameStyle: null, hideBotTag: true };
     obj2[0] = user;
     obj2[1] = tmp.mainTag;
-    items1[1] = tmp8(tmp2(9797), obj2);
+    items1[1] = tmp8(tmp2(9803), obj2);
     obj[1] = items1;
     let tmp6Result = tmp6(tmp7, obj);
   } else {
@@ -95,9 +95,9 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
     if (leading == null) {
       disabled = { source: null, size: null };
       disabled[0] = stateFromStores.getAvatarSource(guildId);
-      SMALL = tmp(1296).AvatarSizes.SMALL;
+      SMALL = tmp(1178).AvatarSizes.SMALL;
       disabled[1] = SMALL;
-      leading = tmp2(tmp(1296).Avatar, disabled);
+      leading = tmp2(tmp(1178).Avatar, disabled);
     }
     obj[2] = leading;
     leading = closure_8;
@@ -111,7 +111,7 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
     obj[6] = trailing;
     obj[7] = accessibilityRole;
     obj[8] = accessibilityState;
-    let tmp2Result = tmp2(tmp(8376).FormRow, obj);
+    let tmp2Result = tmp2(tmp(8593).FormRow, obj);
   } else {
     obj1 = {
       accessibilityLabel: null,
@@ -135,8 +135,8 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
     if (leading == null) {
       const obj2 = { source: null, size: null };
       obj2[0] = stateFromStores.getAvatarSource(guildId);
-      obj2[1] = tmp(1296).AvatarSizes.SMALL;
-      tmp2Result = tmp2(tmp(1296).Avatar, obj2);
+      obj2[1] = tmp(1178).AvatarSizes.SMALL;
+      tmp2Result = tmp2(tmp(1178).Avatar, obj2);
     }
     obj1[4] = tmp2Result;
     const obj3 = { contentHeight: null, user: null, guildId: null };
@@ -150,7 +150,7 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
     obj1[9] = trailing;
     obj1[10] = accessibilityRole;
     obj1[11] = accessibilityState;
-    tmp2Result = tmp2(tmp(5608).TableRow, obj1);
+    tmp2Result = tmp2(tmp(5605).TableRow, obj1);
   }
 });
 const result = require("set").fileFinishedImporting("modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx");

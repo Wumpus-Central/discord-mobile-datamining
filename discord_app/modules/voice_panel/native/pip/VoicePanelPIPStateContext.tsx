@@ -6,9 +6,9 @@ const context = importAllResult.createContext({
   id: "sa",
   mode: "isArray",
   width: false,
-  height: "IMPERSONATE_STOP",
-  containerHeight: null,
-  showSecondaryPIP: "flex",
+  height: "comp_0",
+  containerHeight: "DIS_Nitro_Gifcard_004",
+  showSecondaryPIP: 24,
 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");
 

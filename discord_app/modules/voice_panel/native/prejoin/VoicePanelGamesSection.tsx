@@ -3,7 +3,7 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import VoiceBadges from "../shared/FormComponents.tsx";
 import useIsVoiceChannelGamesExperimentEnabledDefault from "../../experiments/VoiceChannelGamesExperiment.tsx";
-import _modDef9898 from "../../../games/native/GameActivityIcon.tsx";
+import _modDef9183 from "../../../games/native/GameActivityIcon.tsx";
 import useVoiceChannelGamesDefault from "../hooks/useVoiceChannelGames.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -27,12 +27,12 @@ function GameRow(gameId) {
     if ("" !== data.name) {
       let name = data.name;
     } else {
-      const intl = tmp(1233).intl;
-      name = intl.string(tmp(1233).t.GIWFlF);
+      const intl = tmp(1114).intl;
+      name = intl.string(tmp(1114).t.GIWFlF);
     }
     obj = { game: null, size: 32, fallback: "placeholder" };
     obj[0] = data;
-    const tmp7 = jsx(_modDef9898, { game: null, size: 32, fallback: "placeholder" });
+    const tmp7 = jsx(_modDef9183, { game: null, size: 32, fallback: "placeholder" });
     if (null == tmp4Result) {
       obj1 = { icon: null, label: null, disabled: true };
       obj1[0] = tmp7;
@@ -52,12 +52,12 @@ function GameRow(gameId) {
       obj2[3] = function onPress() {
         return callback();
       };
-      const intl2 = tmp(1233).intl;
+      const intl2 = tmp(1114).intl;
       const obj3 = { gameName: null };
       obj3[0] = name;
-      obj2[5] = intl2.formatToPlainString(tmp(1233).t["9sZWVp"], obj3);
+      obj2[5] = intl2.formatToPlainString(tmp(1114).t["9sZWVp"], obj3);
     }
-    return jsx(tmp(5608).TableRow, obj2);
+    return jsx(tmp(5605).TableRow, obj2);
   }
   const tmp3 = importDefault;
   const tmp4 = useOpenGameProfileModalDefault;

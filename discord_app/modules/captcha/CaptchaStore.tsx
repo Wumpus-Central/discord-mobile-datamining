@@ -3,7 +3,7 @@ import batchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpda
 import setDefault from "../monitoring/MonitoringAgent.tsx";
 import set from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import keys from "../../../_runtime/00641_keys.js";
+import keys from "../../../_runtime/00560_keys.js";
 
 require = arg1;
 keys = keys.create(() => ({ captchaServeVolume: {} }));

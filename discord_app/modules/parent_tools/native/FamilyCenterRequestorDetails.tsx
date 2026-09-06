@@ -48,7 +48,7 @@ export default function FamilyCenterRequestorDetails(otherUser) {
     user: otherUser,
     guildId: "HermesInternal",
     disablePlaceholder: null,
-    avatarDecoration: "celebraci\u00F3n",
+    avatarDecoration: "Warning",
   };
   obj[4] = otherUser.avatarDecoration;
   const items = [callback(Button.Avatar, obj)];

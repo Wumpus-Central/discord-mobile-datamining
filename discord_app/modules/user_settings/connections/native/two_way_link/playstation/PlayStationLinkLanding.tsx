@@ -14,32 +14,32 @@ const result = require("set").fileFinishedImporting(
 
 export const PlayStationLinkLanding = function PlayStationLinkLanding(platformType) {
   let navigation;
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   const tmp = callback();
   const articleURL = combinedDefault.getArticleURL(HelpdeskArticles.PS_CONNECTION);
-  let intl = navigation(1233).intl;
+  let intl = navigation(1114).intl;
   const obj2 = combinedDefault;
   let items = [navigation];
   const memo = React.useMemo(() => {
     let obj = { label: null, subLabel: null, icon: null };
-    const intl = navigation(1233).intl;
-    obj[0] = intl.string(navigation(1233).t["+eJP7o"]);
-    const intl2 = navigation(1233).intl;
-    obj[1] = intl2.string(navigation(1233).t["+0VIUh"]);
-    obj[2] = navigation(5055).VoiceNormalIcon;
+    const intl = navigation(1114).intl;
+    obj[0] = intl.string(navigation(1114).t["+eJP7o"]);
+    const intl2 = navigation(1114).intl;
+    obj[1] = intl2.string(navigation(1114).t["+0VIUh"]);
+    obj[2] = navigation(5101).VoiceNormalIcon;
     const items = [obj];
     obj = { label: null, icon: null };
-    const intl3 = navigation(1233).intl;
-    obj[0] = intl3.string(navigation(1233).t.ZH4QFa);
-    obj[1] = navigation(9217).GameControllerIcon;
+    const intl3 = navigation(1114).intl;
+    obj[0] = intl3.string(navigation(1114).t.ZH4QFa);
+    obj[1] = navigation(9223).GameControllerIcon;
     items[1] = obj;
     return items;
   }, []);
   callback = React.useCallback(() => {
     navigation.push(closure_1_4.PRE_CONNECT);
   }, items);
-  const memo1 = React.useMemo(() => ({ uri: callback(9349) }), []);
+  const memo1 = React.useMemo(() => ({ uri: callback(9257) }), []);
   obj = {
     platformType: platformType.platformType,
     img: memo1,
@@ -50,14 +50,14 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
     onNext: null,
     valueProps: null,
   };
-  let intl2 = navigation(1233).intl;
-  obj[3] = intl2.string(navigation(1233).t.xAWHOy);
-  let intl3 = navigation(1233).intl;
-  obj[4] = intl3.string(navigation(1233).t["ZJ/vBh"]);
-  obj[5] = intl.format(navigation(1233).t.kqZQNe, { helpdeskArticleUrl: articleURL });
+  let intl2 = navigation(1114).intl;
+  obj[3] = intl2.string(navigation(1114).t.xAWHOy);
+  let intl3 = navigation(1114).intl;
+  obj[4] = intl3.string(navigation(1114).t["ZJ/vBh"]);
+  obj[5] = intl.format(navigation(1114).t.kqZQNe, { helpdeskArticleUrl: articleURL });
   obj[6] = callback;
   obj[7] = memo;
-  return jsx(navigation(9322).TwoWayLinkLanding, {
+  return jsx(navigation(9225).TwoWayLinkLanding, {
     platformType: platformType.platformType,
     img: memo1,
     imgStyle: tmp.image,

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_themes/GuildThemePresets.tsx
+import nDefault from "../../../_runtime/00672_n.js";
 import sum from "../../../discord_common/js/shared/Constants.tsx";
-import nDefault from "../../../_runtime/00686_n.js";
 import items21 from "../client_themes/CustomThemesRandomUtils.tsx";
 import set from "../../../_runtime/00002_set.js";
 
@@ -187,7 +187,7 @@ export const getGuildThemePreset = function getGuildThemePreset(presetId) {
   return tmp;
 };
 export const getDefaultGuildThemePresetSettings = function getDefaultGuildThemePresetSettings() {
-  return { presetId: mapped[0].id, customUserThemeSettings: "Array" };
+  return { presetId: mapped[0].id, customUserThemeSettings: "a" };
 };
 export const getGuildThemePresetAppearance = function getGuildThemePresetAppearance(preset, arg1) {
   return arg1 === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;

@@ -1,8 +1,8 @@
 // discord_app/stores/CallStore.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import closure_3 from "ChannelStore.tsx";
 import closure_4 from "SelectedChannelStore.tsx";
 import closure_5 from "SelectedGuildStore.tsx";

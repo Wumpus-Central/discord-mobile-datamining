@@ -31,7 +31,7 @@ function EmbedAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    obj1 = message(8897);
+    obj1 = message(8752);
     posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
   }
   if (posterUrl == null) {
@@ -59,7 +59,7 @@ function EmbedAnnouncementCard(message) {
     if (tmp12Result) {
       const obj2 = { variant: "text-xs/medium", color: "text-link", lineClamp: 1, children: null };
       obj2[3] = embedSource.url;
-      tmp12Result = tmp12(message(4474).Text, obj2);
+      tmp12Result = tmp12(message(4556).Text, obj2);
     }
     const items = [tmp12Result];
     const obj3 = { style: null, children: null };
@@ -81,7 +81,7 @@ function EmbedAnnouncementCard(message) {
       const items2 = [tmp12Result];
       const obj7 = { variant: "text-xs/semibold", color: "text-strong", lineClamp: 1, children: null };
       obj7[3] = embedSource.authorName;
-      items2[1] = tmp12(message(4474).Text, obj7);
+      items2[1] = tmp12(message(4556).Text, obj7);
       obj4[1] = items2;
       tmp14Result = tmp14(tmp15, obj4);
     }
@@ -95,7 +95,7 @@ function EmbedAnnouncementCard(message) {
       obj9[1] = message.media.placeholder;
       obj9[2] = message.media.placeholderVersion;
       obj9[3] = tmp.mediaImage;
-      obj8[1] = tmp12(message(8899).ImageWithPlaceholder, obj9);
+      obj8[1] = tmp12(message(8755).ImageWithPlaceholder, obj9);
       tmp12Result1 = tmp12(tmp15, obj8);
     }
     items3[1] = tmp12Result1;
@@ -106,7 +106,7 @@ function EmbedAnnouncementCard(message) {
       obj11[0] = guildId;
       obj11[1] = channelId;
       obj10[3] = tmp4(message.title, true, obj11);
-      tmp12Result2 = tmp12(message(4474).Text, obj10);
+      tmp12Result2 = tmp12(message(4556).Text, obj10);
     }
     items3[2] = tmp12Result2;
     let tmp12Result3 = message.body.length > 0;
@@ -116,7 +116,7 @@ function EmbedAnnouncementCard(message) {
       obj13[0] = guildId;
       obj13[1] = channelId;
       obj12[3] = tmp4(message.body, true, obj13);
-      tmp12Result3 = tmp12(message(4474).Text, obj12);
+      tmp12Result3 = tmp12(message(4556).Text, obj12);
     }
     items3[3] = tmp12Result3;
     const obj14 = { style: null, children: null };
@@ -140,31 +140,31 @@ function EmbedAnnouncementCard(message) {
     const items5 = [str2];
     const _Date = Date;
     const date = new Date(message.timestamp);
-    items5[1] = message(4163).dateFormat(date, "LL");
+    items5[1] = message(4242).dateFormat(date, "LL");
     obj17[2] = items5;
-    items4[1] = closure_11(message(4474).Text, obj17);
+    items4[1] = closure_11(message(4556).Text, obj17);
     tmp14Result = message.reactionCount > 0;
     if (tmp14Result) {
       const obj18 = { style: null, children: null };
       obj18[0] = tmp.reactionInfo;
       const obj19 = { size: "xs", color: null };
       obj19[1] = ThemesDefault.colors.TEXT_MUTED;
-      const items6 = [tmp12(tmp35(8241).ReactionIcon, obj19)];
+      const items6 = [tmp12(tmp35(8757).ReactionIcon, obj19)];
       let tmp46 = null != obj20;
       if (tmp46) {
-        tmp46 = obj20.locale === tmp35(1233).intl.currentLocale;
+        tmp46 = obj20.locale === tmp35(1114).intl.currentLocale;
       }
       if (!tmp46) {
         obj20 = { locale: null, format: null };
-        obj20[0] = tmp35(1233).intl.currentLocale;
+        obj20[0] = tmp35(1114).intl.currentLocale;
         const _Intl = Intl;
-        const numberFormat = new Intl.NumberFormat(tmp35(1233).intl.currentLocale);
+        const numberFormat = new Intl.NumberFormat(tmp35(1114).intl.currentLocale);
         obj20[1] = numberFormat;
       }
       const obj21 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const format = obj20.format;
       obj21[2] = format.format(message.reactionCount);
-      items6[1] = tmp12(tmp35(4474).Text, obj21);
+      items6[1] = tmp12(tmp35(4556).Text, obj21);
       obj18[1] = items6;
       tmp14Result = tmp14(tmp15, obj18);
     }
@@ -201,7 +201,7 @@ function MessageAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    obj1 = message(8897);
+    obj1 = message(8752);
     posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
   }
   if (posterUrl == null) {
@@ -228,7 +228,7 @@ function MessageAnnouncementCard(message) {
     obj1[1] = message.media.placeholder;
     obj1[2] = message.media.placeholderVersion;
     obj1[3] = tmp.mediaImage;
-    obj[1] = callback(message(8899).ImageWithPlaceholder, obj1);
+    obj[1] = callback(message(8755).ImageWithPlaceholder, obj1);
     tmp13 = callback(closure_6, obj);
   }
   const items = [tmp13];
@@ -240,7 +240,7 @@ function MessageAnnouncementCard(message) {
     obj4[0] = guildId;
     obj4[1] = channelId;
     obj3[3] = tmp4(message.title, true, obj4);
-    tmp19 = callback(message(4474).Text, obj3);
+    tmp19 = callback(message(4556).Text, obj3);
   }
   const items1 = [tmp19, ,];
   let tmp23 = message.body.length > 0;
@@ -250,36 +250,36 @@ function MessageAnnouncementCard(message) {
     obj6[0] = guildId;
     obj6[1] = channelId;
     obj5[3] = tmp4(message.body, true, obj6);
-    tmp23 = callback(message(4474).Text, obj5);
+    tmp23 = callback(message(4556).Text, obj5);
   }
   items1[1] = tmp23;
   const obj7 = { style: tmp.metadataRow, children: null };
   const obj8 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  let obj12 = message(4163);
+  let obj12 = message(4242);
   obj8[2] = obj12.dateFormat(new Date(message.timestamp), "LL");
-  const items2 = [callback(message(4474).Text, obj8)];
+  const items2 = [callback(message(4556).Text, obj8)];
   let tmp11Result = message.reactionCount > 0;
   if (tmp11Result) {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.reactionInfo;
     const obj10 = { size: "xs", color: null };
     obj10[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items3 = [tmp27(tmp28(8241).ReactionIcon, obj10)];
+    const items3 = [tmp27(tmp28(8757).ReactionIcon, obj10)];
     let tmp34 = null != obj11;
     if (tmp34) {
-      tmp34 = obj11.locale === tmp28(1233).intl.currentLocale;
+      tmp34 = obj11.locale === tmp28(1114).intl.currentLocale;
     }
     if (!tmp34) {
       obj11 = { locale: null, format: null };
-      obj11[0] = tmp28(1233).intl.currentLocale;
+      obj11[0] = tmp28(1114).intl.currentLocale;
       const _Intl = Intl;
-      const numberFormat = new Intl.NumberFormat(tmp28(1233).intl.currentLocale);
+      const numberFormat = new Intl.NumberFormat(tmp28(1114).intl.currentLocale);
       obj11[1] = numberFormat;
     }
     obj12 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const format = obj11.format;
     obj12[2] = format.format(message.reactionCount);
-    items3[1] = tmp27(tmp28(4474).Text, obj12);
+    items3[1] = tmp27(tmp28(4556).Text, obj12);
     obj9[1] = items3;
     tmp11Result = tmp11(tmp18, obj9);
   }
@@ -314,7 +314,7 @@ function PollAnnouncementCard(message) {
     obj[0] = tmp.cardBody;
     obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[2] = poll.question.text;
-    const items = [callback(message(4474).Text, obj1), ,];
+    const items = [callback(message(4556).Text, obj1), ,];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.pollAnswers;
     const items1 = [
@@ -337,11 +337,11 @@ function PollAnnouncementCard(message) {
     if (tmp9Result) {
       obj = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
       obj[2] = tmp.pollMoreOptions;
-      const intl = tmp13(1233).intl;
+      const intl = tmp13(1114).intl;
       const obj3 = { count: null };
       obj3[0] = diff;
-      obj[3] = intl.format(tmp13(1233).t["mv/nIa"], obj3);
-      tmp9Result = tmp9(tmp13(4474).Text, obj);
+      obj[3] = intl.format(tmp13(1114).t["mv/nIa"], obj3);
+      tmp9Result = tmp9(tmp13(4556).Text, obj);
     }
     items1[1] = tmp9Result;
     obj2[1] = items1;
@@ -349,14 +349,14 @@ function PollAnnouncementCard(message) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.metadataRow;
     const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
-    const intl2 = tmp13(1233).intl;
+    const intl2 = tmp13(1114).intl;
     const obj6 = { createdAt: null, expiryLabel: null };
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj6[0] = date;
-    obj6[1] = message(8897).getPollExpiryLabel(poll);
-    obj5[2] = intl2.format(message(1233).t.t0FTsH, obj6);
-    obj4[1] = callback(message(4474).Text, obj5);
+    obj6[1] = message(8752).getPollExpiryLabel(poll);
+    obj5[2] = intl2.format(message(1114).t.t0FTsH, obj6);
+    obj4[1] = callback(message(4556).Text, obj5);
     items[2] = callback(closure_6, obj4);
     obj[1] = items;
     obj[4] = closure_11(closure_6, obj);

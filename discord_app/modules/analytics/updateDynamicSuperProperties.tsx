@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import trackHeartbeat from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
-import _modDef11161 from "../app_state/DiscordAppState.native.tsx";
+import _modDef11300 from "../app_state/DiscordAppState.native.tsx";
 
 let result = set.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
@@ -24,7 +24,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   }
   const obj2 = encodeProperties;
   const tmp = require;
-  const state = _modDef11161.getState();
+  const state = _modDef11300.getState();
   let client_app_state;
   if (superProperties != null) {
     client_app_state = superProperties.client_app_state;

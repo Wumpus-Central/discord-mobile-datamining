@@ -1,5 +1,5 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroTrialAndPriceOverrides.tsx
-import keys from "../../../../../_runtime/00641_keys.js";
+import keys from "../../../../../_runtime/00560_keys.js";
 import set from "../../../../../_runtime/00002_set.js";
 
 let obj = { trialUnavailableTiers: null, orderPriceOverrides: null };

@@ -1,12 +1,12 @@
 // discord_app/actions/AudioActionCreators.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
-import debounceDefault from "../../_runtime/00633_debounce.js";
-import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import debounceDefault from "../../_runtime/00551_debounce.js";
 import dispatcherDefault from "../Dispatcher.tsx";
-import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import snapVolumeToDefault from "../modules/user_settings/voice/AudioSettingsUtils.tsx";
 import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
 import _getFilterBlob from "../modules/video_backgrounds/applyBackgroundOption.tsx";
+import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../stores/CertifiedDeviceStore.tsx";
 import closure_5 from "../stores/ChannelStore.tsx";
@@ -338,7 +338,7 @@ obj = {
       if (null != tmp24) {
         str2 = tmp24.name;
       }
-      let tmp4Result = tmp4(695);
+      let tmp4Result = tmp4(1242);
       obj2 = {
         mode: null,
         location_stack: null,
@@ -375,7 +375,7 @@ obj = {
         if (null != tmp12) {
           str = tmp12.name;
         }
-        tmp4Result = tmp4(695);
+        tmp4Result = tmp4(1242);
         obj3 = {
           location_stack: null,
           voice_channel_type: null,
@@ -705,7 +705,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9811)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
+              obj1[0] = v0(9094)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -717,7 +717,7 @@ obj = {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = v0(706);
+            obj = v0(573);
             const obj3 = { type: "AUDIO_SET_DEBUG_LOGGING", enabled: null };
             obj3[1] = closure_0;
             obj.dispatch(obj3);
@@ -800,7 +800,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9811)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
+              obj1[0] = v0(9094)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -812,7 +812,7 @@ obj = {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = v0(706);
+            obj = v0(573);
             const obj3 = { type: "AUDIO_SET_SUBSYSTEM", subsystem: null };
             obj3[1] = closure_0;
             obj.dispatch(obj3);

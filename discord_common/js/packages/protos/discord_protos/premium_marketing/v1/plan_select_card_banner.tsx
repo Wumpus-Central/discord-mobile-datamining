@@ -1,10 +1,10 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/plan_select_card_banner.tsx
-import _mod1306 from "../../../../../../../_runtime/metro/01306__.js";
+import _mod1188 from "../../../../../../../_runtime/metro/01188__.js";
 import create from "../../common/v1/localized_string.tsx";
 import create2 from "help_article.tsx";
 import create3 from "theme_aware_asset.tsx";
 import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType } from "../../../../../../../_runtime/metro/01306__.js";
+import { MessageType } from "../../../../../../../_runtime/metro/01188__.js";
 
 require = arg1;
 class PlanSelectCardBanner$Type extends MessageType {
@@ -14,7 +14,7 @@ class PlanSelectCardBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-        return callback(8476).ThemeAwareAsset;
+        return callback(10680).ThemeAwareAsset;
       },
     };
     items = [, , ,];
@@ -33,7 +33,7 @@ class PlanSelectCardBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-        return callback(8467).HelpArticle;
+        return callback(10671).HelpArticle;
       },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PlanSelectCardBanner", items, T);
@@ -46,10 +46,10 @@ prototype["create"] = function create(arr) {
   let obj = { body: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1306.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1306;
+    const result = _mod1188.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1188;
   }
   return obj;
 };
@@ -113,7 +113,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = _mod1306.UnknownFieldHandler.onRead;
+              onRead = _mod1188.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -130,54 +130,54 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 prototype["internalBinaryWrite"] = function internalBinaryWrite(asset, tag, writeUnknownFields) {
   if (asset.asset) {
     const ThemeAwareAsset = create3.ThemeAwareAsset;
-    const tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
+    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     const joined = ThemeAwareAsset.internalBinaryWrite(
       asset.asset,
-      tag.tag(1, _mod1306.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1188.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(
       asset.asset,
-      tag.tag(1, _mod1306.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1188.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("" !== asset.body) {
-    tag.tag(2, _mod1306.WireType.LengthDelimited).string(asset.body);
-    const tagResult1 = tag.tag(2, _mod1306.WireType.LengthDelimited);
+    tag.tag(2, _mod1188.WireType.LengthDelimited).string(asset.body);
+    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
   }
   if (asset.bodyLocalized) {
     const LocalizedString = create.LocalizedString;
-    const tagResult2 = tag.tag(3, _mod1306.WireType.LengthDelimited);
+    const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
     const joined1 = LocalizedString.internalBinaryWrite(
       asset.bodyLocalized,
-      tag.tag(3, _mod1306.WireType.LengthDelimited).fork(),
+      tag.tag(3, _mod1188.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(
       asset.bodyLocalized,
-      tag.tag(3, _mod1306.WireType.LengthDelimited).fork(),
+      tag.tag(3, _mod1188.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (asset.helpArticle) {
     const HelpArticle = create2.HelpArticle;
-    const tagResult3 = tag.tag(4, _mod1306.WireType.LengthDelimited);
+    const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
     const joined2 = HelpArticle.internalBinaryWrite(
       asset.helpArticle,
-      tag.tag(4, _mod1306.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1188.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult2 = HelpArticle.internalBinaryWrite(
       asset.helpArticle,
-      tag.tag(4, _mod1306.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1188.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1306.UnknownFieldHandler.onWrite;
+      onWrite = _mod1188.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, asset, tag);
@@ -189,7 +189,7 @@ let obj = {
   name: "asset",
   kind: "message",
   T() {
-    return callback(8476).ThemeAwareAsset;
+    return callback(10680).ThemeAwareAsset;
   },
 };
 let items = [obj, { no: 2, name: "body", kind: "scalar", T: 9 }, ,];
@@ -206,7 +206,7 @@ items[3] = {
   name: "help_article",
   kind: "message",
   T() {
-    return callback(8467).HelpArticle;
+    return callback(10671).HelpArticle;
   },
 };
 prototype = new prototype(

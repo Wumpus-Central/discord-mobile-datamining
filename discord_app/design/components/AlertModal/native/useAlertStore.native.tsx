@@ -1,7 +1,7 @@
 // discord_app/design/components/AlertModal/native/useAlertStore.native.tsx
 import markAccessibilityFocusDefault from "../../../../modules/a11y/native/markAccessibilityFocus.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import keys from "../../../../../_runtime/00641_keys.js";
+import keys from "../../../../../_runtime/00560_keys.js";
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
@@ -26,7 +26,7 @@ export const dismissAlerts = function dismissAlerts() {
   );
   const first = tmp[0];
   const arr4 = tmp[1];
-  first(702).batchUpdates(() => {
+  first(1249).batchUpdates(() => {
     closure_1_4.setState({ alerts: arr4 });
     const item = first.forEach((onDismiss) => {
       onDismiss = onDismiss.onDismiss;
@@ -38,7 +38,7 @@ export const dismissAlerts = function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(4861)();
+    arr4(4907)();
   }
 };
 export const dismissAlert = function dismissAlert(c6) {
@@ -66,7 +66,7 @@ export const dismissAlert = function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(4861)();
+      found(4907)();
     }
     const obj = batchUpdates;
   }

@@ -82,7 +82,7 @@ Object.defineProperty(prototype, "originalEnabled", {
   set: undefined,
 });
 Object.defineProperty(prototype, "origin", {
-  get: function origin(arg0) {
+  get: function origin(keys, arg1) {
     return closure_5.origin;
   },
   set: undefined,
@@ -161,7 +161,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     if (null == obj.guildId) {
       return false;
     } else {
-      obj = { presetId: null, customUserThemeSettings: "Array" };
+      obj = { presetId: null, customUserThemeSettings: "a" };
       obj[0] = tmp;
       const isEqualResult = apply.isEqual(obj.draft, obj);
       let flag = !isEqualResult;

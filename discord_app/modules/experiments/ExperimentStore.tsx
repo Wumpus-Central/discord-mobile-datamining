@@ -2,10 +2,10 @@
 import timestampDefault from "../debug/Logger.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import Storage5 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcher from "../../Dispatcher.tsx";
-import MurmurHashV3Default from "../../../_runtime/01214_MurmurHashV3.js";
 import clearAllDefault from "../../stores/MobileCacheSnapshotStore.tsx";
+import MurmurHashV3Default from "../../../_runtime/01241_MurmurHashV3.js";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import Version from "../build_overrides/BuildOverrideUtils.tsx";
 import isInRange from "GuildFilters.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -730,11 +730,11 @@ function handleLogout(isSwitchingAccount) {
   const Storage = Storage5.Storage;
   Storage.remove(c11);
   if (!isSwitchingAccount.isSwitchingAccount) {
-    const Storage2 = tmp(592).Storage;
+    const Storage2 = tmp(510).Storage;
     Storage2.remove(exerimentOverrides);
-    const Storage3 = tmp(592).Storage;
+    const Storage3 = tmp(510).Storage;
     Storage3.remove(userExperimentOverrides);
-    const Storage4 = tmp(592).Storage;
+    const Storage4 = tmp(510).Storage;
     Storage4.remove(guildExperimentOverrides);
     closure_24 = {};
     closure_25 = {};
@@ -760,13 +760,13 @@ function loadLocalOverrides() {
     obj = {};
   }
   const items = [obj, ,];
-  const Storage2 = tmp3(592).Storage;
+  const Storage2 = tmp3(510).Storage;
   let value = Storage2.get(userExperimentOverrides);
   if (value == null) {
     value = {};
   }
   items[1] = value;
-  const Storage3 = tmp3(592).Storage;
+  const Storage3 = tmp3(510).Storage;
   let value1 = Storage3.get(guildExperimentOverrides);
   if (value1 == null) {
     value1 = {};

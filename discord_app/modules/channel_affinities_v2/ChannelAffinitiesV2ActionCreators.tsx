@@ -1,6 +1,6 @@
 // discord_app/modules/channel_affinities_v2/ChannelAffinitiesV2ActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import closure_3 from "../../stores/ConsentStore.tsx";
 import closure_4 from "ChannelAffinitiesV2Store.tsx";
 import ME from "../../Constants.tsx";
@@ -31,7 +31,7 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
       const value = HTTP.get(obj);
       let nextPromise = value.then(
         (body) => {
-          let obj = callback(706);
+          let obj = callback(573);
           obj = {
             type: "LOAD_CHANNEL_AFFINITIES_V2_SUCCESS",
             affineChannels: channel_affinities.map((channelId) => {
@@ -48,7 +48,7 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
           obj.dispatch(obj);
         },
         () => {
-          callback(706).dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2_FAILURE" });
+          callback(573).dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2_FAILURE" });
         },
       );
     }

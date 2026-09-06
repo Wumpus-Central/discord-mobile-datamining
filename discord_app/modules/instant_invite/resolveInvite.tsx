@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/resolveInvite.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef4714 from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef4753 from "../../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../stores/GuildStore.tsx";
 import InviteSendStates from "Constants.tsx";
@@ -45,6 +45,7 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       target_message_id: null,
       with_permissions: true,
       with_games: null,
+      with_guild_experiments: null,
     };
     obj[0] = inputValue;
     obj[3] = guildScheduledEventId;
@@ -55,11 +56,16 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       withGames = inviteInstanceId.withGames;
     }
     obj[7] = withGames || undefined;
+    let withGuildExperiments;
+    if (inviteInstanceId != null) {
+      withGuildExperiments = inviteInstanceId.withGuildExperiments;
+    }
+    obj[8] = withGuildExperiments || undefined;
     obj1 = { url: null, query: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
     obj1[0] = closure_7.INVITE(baseCode);
     obj1[1] = obj;
     let obj2 = { event: null, properties: null };
-    obj2[0] = tmp(500).NetworkActionNames.INVITE_RESOLVE;
+    obj2[0] = tmp(1250).NetworkActionNames.INVITE_RESOLVE;
     obj2[1] = function properties(ok) {
       let body = null;
       if (ok.ok) {
@@ -180,8 +186,8 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       return obj.exact(obj);
     };
     obj1[3] = obj2;
-    const value = _modDef4714.get(obj1);
-    const tmp4Result = _modDef4714;
+    const value = _modDef4753.get(obj1);
+    const tmp4Result = _modDef4753;
     const cleanupPromise = value
       .then(
         (body) => {

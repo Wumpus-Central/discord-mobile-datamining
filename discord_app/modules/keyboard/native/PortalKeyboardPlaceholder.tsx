@@ -8,8 +8,8 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight.native.tsx";
 import useKeyboardTypeDefault from "useKeyboardType.tsx";
 import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight.tsx";
-import useGradientBottom from "../../client_themes/native/ClientThemesOverrides.tsx";
 import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
+import useGradientBottom from "../../client_themes/native/ClientThemesOverrides.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -47,7 +47,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   container.borderTopColor = ThemesDefault.colors.BORDER_SUBTLE;
   let BORDER_SUBTLE;
   if (arg3) {
-    BORDER_SUBTLE = tmp7(709).colors.BORDER_SUBTLE;
+    BORDER_SUBTLE = tmp7(576).colors.BORDER_SUBTLE;
   }
   container.borderRightColor = BORDER_SUBTLE;
   let hairlineWidth;
@@ -57,7 +57,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   container.borderRightWidth = hairlineWidth;
   let BORDER_SUBTLE1;
   if (arg3) {
-    BORDER_SUBTLE1 = tmp7(709).colors.BORDER_SUBTLE;
+    BORDER_SUBTLE1 = tmp7(576).colors.BORDER_SUBTLE;
   }
   container.borderLeftColor = BORDER_SUBTLE1;
   let hairlineWidth1;
@@ -65,14 +65,14 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
     hairlineWidth1 = tmp6.hairlineWidth;
   }
   container.borderLeftWidth = hairlineWidth1;
-  const APP_LAUNCHER = tmp(1625).KeyboardTypes.APP_LAUNCHER;
+  const APP_LAUNCHER = tmp(1609).KeyboardTypes.APP_LAUNCHER;
   container.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
-  let tmpResult = tmp(1234);
+  let tmpResult = tmp(1115);
   if (tmpResult.isIOS()) {
     const tmp12 = arg1;
   }
   container.width = tmp12;
-  tmpResult = tmp(1234);
+  tmpResult = tmp(1115);
   if (tmpResult.isIOS()) {
     const tmp13 = arg2;
   }

@@ -32,18 +32,18 @@ export const AppStartInfo = {
         );
         throw error;
       }
-      const items = [callback(4339).getAppStartType(), ,];
-      const obj12 = callback(4339);
-      items[1] = callback(4339).getLaunchScenario();
-      const obj13 = callback(4339);
-      items[2] = callback(4339).getAppFirstVisibleTimestamp();
+      const items = [callback(4424).getAppStartType(), ,];
+      const obj12 = callback(4424);
+      items[1] = callback(4424).getLaunchScenario();
+      const obj13 = callback(4424);
+      items[2] = callback(4424).getAppFirstVisibleTimestamp();
       dependencyMap = yield Promise.all(items);
       closure_4 = 5;
-      closure_5 = 7427;
+      closure_5 = 7674;
       obj5 = { app_start_type: null, app_launch_scenario: null };
       obj5[0] = c3;
       obj5[1] = closure_4;
-      const mainActivityCreationTime = callback(7427).getMainActivityCreationTime();
+      const mainActivityCreationTime = callback(7674).getMainActivityCreationTime();
       if (null != mainActivityCreationTime) {
         obj5.android_time_creation_to_create_main_activity = mainActivityCreationTime - callback;
       }

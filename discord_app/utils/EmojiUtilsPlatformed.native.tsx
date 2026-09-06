@@ -140,9 +140,9 @@ let obj = {
     if (!obj.isAndroid()) {
       found = applyDefault.filter(emojis, (unicodeVersion) => {
         unicodeVersion = unicodeVersion.unicodeVersion;
-        const systemVersionMajor = callback(4457).getSystemVersionMajor();
-        const obj = callback(4457);
-        const systemVersionMinor = callback(4457).getSystemVersionMinor();
+        const systemVersionMajor = callback(4539).getSystemVersionMajor();
+        const obj = callback(4539);
+        const systemVersionMinor = callback(4539).getSystemVersionMinor();
         let flag = true;
         if (unicodeVersion > 8) {
           if (9 === unicodeVersion) {

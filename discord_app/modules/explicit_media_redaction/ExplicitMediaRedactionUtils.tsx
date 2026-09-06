@@ -1,8 +1,8 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import isFeatureAgeGated2 from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import useAgeVerificationRunner from "../age_assurance/AgeVerificationUtils.tsx";
+import isFeatureAgeGated2 from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import isCurrentUserTeen from "../self_mod/SelfModUtils.tsx";
 import ObscureReason from "ObscureMediaModels.tsx";
@@ -22,18 +22,18 @@ const result = require("set").fileFinishedImporting("modules/explicit_media_reda
 export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
   if (create.ExplicitContentRedaction.SHOW === prop) {
     return () => {
-      const intl = callback(1233).intl;
-      return intl.string(callback(1233).t["5k5OFp"]);
+      const intl = callback(1114).intl;
+      return intl.string(callback(1114).t["5k5OFp"]);
     };
-  } else if (tmp(1305).ExplicitContentRedaction.BLUR === prop) {
+  } else if (tmp(1187).ExplicitContentRedaction.BLUR === prop) {
     return () => {
-      const intl = callback(1233).intl;
-      return intl.string(callback(1233).t.S49Uad);
+      const intl = callback(1114).intl;
+      return intl.string(callback(1114).t.S49Uad);
     };
-  } else if (tmp(1305).ExplicitContentRedaction.BLOCK === prop) {
+  } else if (tmp(1187).ExplicitContentRedaction.BLOCK === prop) {
     return () => {
-      const intl = callback(1233).intl;
-      return intl.string(callback(1233).t["D/157Y"]);
+      const intl = callback(1114).intl;
+      return intl.string(callback(1114).t["D/157Y"]);
     };
   }
 };
@@ -149,12 +149,12 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj[5] = resetManager.MESSAGE_SCAN_TIMEOUT;
         obj[6] = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        let tmp3Result = tmp3(7357);
+        let tmp3Result = tmp3(7602);
         obj = { name: null, tags: null };
         obj[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
         obj[1] = ["metricVersion:1"];
         tmp3Result.increment(obj);
-        tmp3Result = tmp3(7357);
+        tmp3Result = tmp3(7602);
         obj1 = { name: null };
         obj1[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION;
         let num4;
@@ -212,8 +212,8 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     if (sum > 0) {
       obj = { name: null };
       obj[0] = set.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2;
-      tmp10(7357).distribution(obj, sum);
-      const tmp10Result = tmp10(7357);
+      tmp10(7602).distribution(obj, sum);
+      const tmp10Result = tmp10(7602);
     }
     const obj3 = expandEventPropertiesDefault;
     tmp10 = importDefault;

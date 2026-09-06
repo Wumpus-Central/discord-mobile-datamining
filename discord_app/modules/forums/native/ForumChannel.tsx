@@ -4,7 +4,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import useGradientBottom from "../../client_themes/native/ClientThemesOverrides.tsx";
-import registerAssetDefault from "../../../../_runtime/12543_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12769_registerAsset.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../lurker_mode/LurkingStore.tsx";
@@ -47,14 +47,14 @@ function SearchSection(numPosts) {
   let obj = { style: tmp.section, children: null };
   obj = { style: tmp.divider, variant: "text-xs/bold", color: "text-muted", children: null };
   if (0 === numPosts) {
-    const intl2 = tmp4(1233).intl;
-    let stringResult = intl2.string(tmp4(1233).t.DbgHxi);
+    const intl2 = tmp4(1114).intl;
+    let stringResult = intl2.string(tmp4(1114).t.DbgHxi);
   } else {
-    const intl = tmp4(1233).intl;
+    const intl = tmp4(1114).intl;
     obj = { numPosts: null, query: null };
     obj[0] = numPosts;
     obj[1] = numPosts.searchQuery;
-    stringResult = intl.formatToPlainString(tmp4(1233).t["tBz/8b"], obj);
+    stringResult = intl.formatToPlainString(tmp4(1114).t["tBz/8b"], obj);
   }
   obj[3] = stringResult;
   obj[1] = closure_14(Text.Text, obj);
@@ -141,9 +141,9 @@ function SortAndViewOptions(channel) {
     };
     obj.openLazy(id(closure_1_2[30])(closure_1_2[29], closure_1_2.paths), combined, obj);
   }, items);
-  const intl = id(1233).intl;
+  const intl = id(1114).intl;
   const string = intl.string;
-  const t = id(1233).t;
+  const t = id(1114).t;
   if (isMediaChannelResult) {
     let stringResult = string(t.JxU0wr);
   } else {
@@ -151,26 +151,26 @@ function SortAndViewOptions(channel) {
   }
   isMediaChannelResult = channel.isMediaChannel();
   const tmp4 = id;
-  return closure_14(id(4929).Button, {
+  return closure_14(id(4975).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_14(id(11950).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_14(id(12151).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
   channel = channel.channel;
   let obj = { variant: "secondary", text: null, onPress: null, size: "sm", icon: null };
-  const intl = channel(1233).intl;
-  obj[1] = intl.string(channel(1233).t["112vVE"]);
+  const intl = channel(1114).intl;
+  obj[1] = intl.string(channel(1114).t["112vVE"]);
   obj[2] = function onPress() {
     let obj = closure_1_1(closure_1_2[28]);
     obj = { channel };
     obj.openLazy(channel(closure_1_2[30])(closure_1_2[33], closure_1_2.paths), "ForumTagFilterActionSheet", obj);
   };
-  obj[4] = callback(channel(10645).TagIcon, { size: "xxs" });
-  return callback(channel(4929).Button, obj);
+  obj[4] = callback(channel(8862).TagIcon, { size: "xxs" });
+  return callback(channel(4975).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";

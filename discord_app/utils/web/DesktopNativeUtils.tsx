@@ -1,8 +1,8 @@
 // discord_app/utils/web/DesktopNativeUtils.tsx
 import log from "../../../discord_common/js/packages/logger/Logger.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import GuildThemeSourcePreference from "../../flow/Client.tsx";
 import GameTheme from "../../modules/game_detection/GameDetectionTypes.tsx";
+import GuildThemeSourcePreference from "../../flow/Client.tsx";
 import DomainMigrationEventType from "../../../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx";
 import IPCEvents from "../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx";
 import getExtensionFromContentType from "../../modules/media/FileExtensionUtils.tsx";
@@ -672,12 +672,12 @@ obj.setBadge = function setBadge(arg0) {
     const dock = DiscordNative.app.dock;
     dock.setBadge(str2);
   } else {
-    let tmpResult = tmp(1234);
+    let tmpResult = tmp(1115);
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(5587).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(tmp(5567).IPCEvents.APP_BADGE_SET, arg0);
     } else {
-      tmpResult = tmp(1234);
+      tmpResult = tmp(1115);
       if ("linux" === tmpResult.getPlatformName()) {
         const app = DiscordNative.app;
         let num = 0;
@@ -708,7 +708,7 @@ obj.setThumbarButtons = function setThumbarButtons(arg0, arg1) {
   }
 };
 obj.bounceDock = function bounceDock(arg0) {
-  if (app(1234).isPlatformEmbedded) {
+  if (app(1115).isPlatformEmbedded) {
     app = DiscordNative.app;
     if (null != app.dock) {
       let dock = app.dock;
@@ -1006,7 +1006,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 obj.canSaveImage = function canSaveImage(closure_1_0, closure_1_1) {
   if (null != closure_1_0) {
     if (set /* set */.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(5588).decideFileExtension(closure_1_0, closure_1_1);
+      const decideFileExtensionResult = tmp(5568).decideFileExtension(closure_1_0, closure_1_1);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
@@ -1809,10 +1809,10 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(5587).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(tmp(5567).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {}
     }
-    tmpResult = tmp(1234);
+    tmpResult = tmp(1115);
   }
 };
 obj.purgeMemory = function purgeMemory() {

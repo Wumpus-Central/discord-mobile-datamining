@@ -1,6 +1,6 @@
 // discord_app/modules/activities/native/ActivitiesPrivateChannelCallTooltip.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../reanimated/ReanimatedRexport.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../a11y/AccessibilityStore.tsx";
 import { EMBEDDED_ACTIVITIES_BLOG_POST_URL as closure_5 } from "../Constants.tsx";
@@ -37,7 +37,7 @@ const result = require("set").fileFinishedImporting(
 export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   let num;
   const tmp = callback();
-  let obj = num(586);
+  let obj = num(504);
   let items = [closure_4];
   num = 4;
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
@@ -65,9 +65,9 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
     }
   }
   obj = {
-    withRepeat: tmp2(4217).withRepeat,
-    withSequence: tmp2(4217).withSequence,
-    withTiming: tmp2(4479).withTiming,
+    withRepeat: tmp2(4296).withRepeat,
+    withSequence: tmp2(4296).withSequence,
+    withTiming: tmp2(4561).withTiming,
     OFFSET: 40,
     translateBounceOffset: num,
     TIMING_CONFIG: closure_7,
@@ -75,7 +75,7 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   T.__closure = obj;
   T.__workletHash = 4621705591670;
   T.__initData = closure_9;
-  const animatedStyle = num(4217).useAnimatedStyle(T);
+  const animatedStyle = num(4296).useAnimatedStyle(T);
   obj = { style: items1, children: null };
   items1 = [tmp.tooltipContainer, animatedStyle];
   obj1 = {
@@ -87,18 +87,18 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
     children: null,
   };
   items2 = [tmp.arrow];
-  const intl = tmp2(1233).intl;
-  obj1[3] = intl.format(num(1233).t.xAW71b, { helpdeskUrl: closure_5 });
-  const intl2 = tmp2(1233).intl;
-  obj1[4] = intl2.string(num(1233).t.HOPqzR);
+  const intl = tmp2(1114).intl;
+  obj1[3] = intl.format(num(1114).t.xAW71b, { helpdeskUrl: closure_5 });
+  const intl2 = tmp2(1114).intl;
+  obj1[4] = intl2.string(num(1114).t.HOPqzR);
   let obj3 = { style: tmp.closeButtonWrapper, children: null };
   let obj4 = { text: null, onPress: null, variant: "secondary", size: "sm", grow: true };
-  const intl3 = tmp2(1233).intl;
-  obj4[0] = intl3.string(num(1233).t["NX+WJN"]);
+  const intl3 = tmp2(1114).intl;
+  obj4[0] = intl3.string(num(1114).t["NX+WJN"]);
   obj4[1] = onClosePress.onClosePress;
-  obj3[1] = jsx(num(4929).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj3[1] = jsx(num(4975).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj1[5] = <View style={tmp.closeButtonWrapper}>{null}</View>;
-  obj[1] = jsx(num(1296).Tooltip, {
+  obj[1] = jsx(num(1178).Tooltip, {
     containerStyle: tmp.tooltip,
     labelStyle: tmp.tooltipText,
     arrowStyle: items2,
@@ -106,5 +106,5 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
     title: null,
     children: null,
   });
-  return jsx(_modDef4217.View, { style: items1, children: null });
+  return jsx(_modDef4296.View, { style: items1, children: null });
 }

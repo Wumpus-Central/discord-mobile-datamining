@@ -148,7 +148,7 @@ function _fetchGiftableEntitlements() {
     yield closure_1_0(closure_1_2[4]).httpGetWithCountryCodeQuery(obj1);
     if (1 === tmp7) {
       c3 = 0;
-      let obj3 = callback(706);
+      let obj3 = callback(573);
       obj3.dispatch({ type: "ENTITLEMENTS_GIFTABLE_FETCH_FAIL" });
       c5 = 3;
     } else if (arg0 === 1) {
@@ -156,7 +156,7 @@ function _fetchGiftableEntitlements() {
       throw arg1;
     } else if (arg0 !== 2) {
       const body = arg1;
-      const obj = callback(706);
+      const obj = callback(573);
       obj3 = { type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS", entitlements: null };
       obj3[1] = body.body;
       obj.dispatch(obj3);

@@ -214,7 +214,7 @@ function GuildChannelDetailsTopic(channel) {
 }
 function PrivateChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const user = closure_1_7.getUser(channel.getRecipientId());
@@ -236,13 +236,13 @@ function PrivateChannelDetailsTopic(channel) {
     obj[0] = channel.textAlign;
     obj[2] = obj;
     obj[3] = stateFromStores;
-    tmp4 = callback2(channel(4474).Text, obj);
+    tmp4 = callback2(channel(4556).Text, obj);
   }
   return tmp4;
 }
 function GroupDMChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () =>
     channel(closure_1_2[18]).getPrivateChannelUserTagsString(channel.recipients, closure_1_7),
@@ -254,7 +254,7 @@ function GroupDMChannelDetailsTopic(channel) {
     obj[0] = channel.textAlign;
     obj[2] = obj;
     obj[3] = stateFromStores;
-    tmp4 = callback2(channel(4474).Text, obj);
+    tmp4 = callback2(channel(4556).Text, obj);
   }
   return tmp4;
 }

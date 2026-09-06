@@ -24,4 +24,6 @@ export const AgeGatedFeature = {
   [128]: "STAGE_SPEAKING",
   JOIN_DISCOVERABLE_SERVER: 256,
   [256]: "JOIN_DISCOVERABLE_SERVER",
+  NOTICE: 512,
+  [512]: "NOTICE",
 };

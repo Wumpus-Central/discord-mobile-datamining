@@ -1,7 +1,7 @@
 // discord_app/modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx
 import getFontScale from "../../../screen/native/useFontScale.tsx";
-import computeSubtitle from "../../../guild_sidebar/ChannelListState.tsx";
 import renderDefaultEmpty from "../../../../lib/native/FastList.tsx";
+import computeSubtitle from "../../../guild_sidebar/ChannelListState.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -143,7 +143,7 @@ function findNearestUnreadItem(containerSize, id) {
             let tmp18 = item10031;
             let tmp19 = tmp70;
             let tmp20 = tmp72;
-            if (tmp12.type !== tmp71(7807).FastListItemTypes.ITEM) {
+            if (tmp12.type !== tmp71(7072).FastListItemTypes.ITEM) {
               tmp9 = item10031;
             } else {
               let tmp21 = shouldSkipSection;

@@ -68,6 +68,10 @@ items = [
   ["display-sm", "experimental/display-sm"],
   ["display-md", "experimental/display-md"],
   ["display-lg", "experimental/display-lg"],
+  ["nitro-sm", "experimental/nitro-sm"],
+  ["nitro-md", "experimental/nitro-md"],
+  ["nitro-lg", "experimental/nitro-lg"],
+  ["nitro-xs", "experimental/nitro-xs"],
   ["code", "experimental/mono-md/bold"],
 ];
 const map = new Map(items);

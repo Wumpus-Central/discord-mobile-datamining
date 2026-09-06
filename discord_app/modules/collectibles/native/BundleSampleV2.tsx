@@ -149,10 +149,10 @@ function BundleSampleV2Composed(arg0) {
       let obj3 = { width: null, avatarSize: null, nameplate: null };
       obj3[0] = tmp8.nameplatePreviewWidth;
       if ("large" === size) {
-        AvatarSizes = tmp23(1296).AvatarSizes;
+        AvatarSizes = tmp23(1178).AvatarSizes;
         let XSMALL_20 = AvatarSizes.NORMAL;
       } else {
-        XSMALL_20 = tmp23(1296).AvatarSizes.XSMALL_20;
+        XSMALL_20 = tmp23(1178).AvatarSizes.XSMALL_20;
       }
       obj3[1] = XSMALL_20;
       obj3[2] = nameplateData;

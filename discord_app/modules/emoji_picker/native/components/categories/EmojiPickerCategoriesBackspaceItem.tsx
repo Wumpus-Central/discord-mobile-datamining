@@ -14,9 +14,9 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   dependencyMap = undefined;
   let React;
   ({ style, iconStyle } = onBackspace);
-  const interval = new onBackspace(4362).Interval();
+  const interval = new onBackspace(4447).Interval();
   dependencyMap = React.useRef(interval);
-  const delayedCall = new onBackspace(4362).DelayedCall(500, () => {
+  const delayedCall = new onBackspace(4447).DelayedCall(500, () => {
     const current = closure_2.current;
     current.cancel();
     const current2 = ref.current;
@@ -56,11 +56,11 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
     children: null,
   };
   obj = { top: NODE_MARGIN, bottom: NODE_MARGIN, right: NODE_MARGIN, left: NODE_MARGIN };
-  const intl = onBackspace(1233).intl;
-  obj[3] = intl.string(onBackspace(1233).t["4SnBzF"]);
+  const intl = onBackspace(1114).intl;
+  obj[3] = intl.string(onBackspace(1114).t["4SnBzF"]);
   obj[5] = callback1;
   obj[6] = callback;
   const items2 = [iconStyle, { opacity: 0.5 }];
-  obj[7] = jsx(onBackspace(9229).BackspaceIcon, { style: items2 });
+  obj[7] = jsx(onBackspace(10362).BackspaceIcon, { style: items2 });
   return <Pressable top={NODE_MARGIN} bottom={NODE_MARGIN} right={NODE_MARGIN} left={NODE_MARGIN} />;
 }

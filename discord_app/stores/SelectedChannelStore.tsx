@@ -1,11 +1,11 @@
 // discord_app/stores/SelectedChannelStore.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
-import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import set2 from "../modules/channel/ChannelConstants.tsx";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
+import set2 from "../modules/channel/ChannelConstants.tsx";
 import createChannelRecord from "../records/ChannelRecord.tsx";
 import closure_13 from "AuthenticationStore.tsx";
 import closure_14 from "ChannelStore.tsx";
@@ -825,7 +825,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
           const _setInterval = setInterval;
           interval = setInterval(() => {
             closure_9 = Date.now();
-            const Storage = callback(592).Storage;
+            const Storage = callback(510).Storage;
             const obj = {
               selectedChannelId: closure_6,
               selectedVoiceChannelId: c8,
@@ -838,7 +838,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
             const values = callback2(12)(closure_25).values();
             const obj2 = callback2(12)(closure_25);
             const combined = values.concat(callback2(12).values(closure_27));
-            const found = combined.filter(callback(1470).isNotNullish);
+            const found = combined.filter(callback(1369).isNotNullish);
             const obj4 = callback2(12);
             const uniqResult = found.uniq();
             obj[6] = found
@@ -859,7 +859,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
             const result = Storage.set(closure_24, obj);
           }, 60000);
         }
-        const Storage2 = callback(592).Storage;
+        const Storage2 = callback(510).Storage;
         let obj = {
           selectedChannelId: null,
           selectedVoiceChannelId: null,
@@ -879,7 +879,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         const obj9 = callback2(12)(closure_25);
         tmp26 = sessionId.guildId !== guildId && null == sessionId.channelId;
         let combined = values.concat(callback2(12).values(closure_27));
-        let found = combined.filter(callback(1470).isNotNullish);
+        let found = combined.filter(callback(1369).isNotNullish);
         const obj11 = callback2(12);
         let uniqResult = found.uniq();
         obj[6] = found
@@ -934,7 +934,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         if (tmp3) {
           channelId = null;
         }
-        let Storage = callback(592).Storage;
+        let Storage = callback(510).Storage;
         obj = {
           selectedChannelId: null,
           selectedVoiceChannelId: null,
@@ -954,7 +954,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         const obj13 = store;
         const obj3 = callback2(12)(closure_25);
         const combined1 = values.concat(callback2(12).values(closure_27));
-        const found1 = combined1.filter(callback(1470).isNotNullish);
+        const found1 = combined1.filter(callback(1369).isNotNullish);
         const obj5 = callback2(12);
         const uniqResult1 = found1.uniq();
         obj[6] = found1

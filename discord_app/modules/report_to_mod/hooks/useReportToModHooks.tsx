@@ -56,7 +56,7 @@ export const useIsModeratorReportPostChannel = function useIsModeratorReportPost
 export const useLoadReportedMessage = function useLoadReportedMessage(messageReference) {
   messageReference = messageReference.messageReference;
   const items = [closure_5];
-  const stateFromStores = messageReference(586).useStateFromStores(items, () => {
+  const stateFromStores = messageReference(504).useStateFromStores(items, () => {
     let message = null;
     if (null != messageReference) {
       message = closure_1_5.getMessage(tmp.channel_id, tmp.message_id);

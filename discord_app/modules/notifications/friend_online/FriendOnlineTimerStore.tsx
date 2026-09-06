@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/friend_online/FriendOnlineTimerStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../../utils/Durations.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 
 const HOUR = setDefault.Millis.HOUR;
 let obj = { lastReportedAtMs: null };

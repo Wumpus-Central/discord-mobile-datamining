@@ -56,14 +56,14 @@ createToggle = {
         confirmColor: null,
         useKeyboardAwareWrapper: true,
       };
-      let intl = callback(1233).intl;
-      obj[2] = intl.string(callback(1233).t.PsQmzU);
-      let intl2 = callback(1233).intl;
-      obj[3] = intl2.string(callback(1233).t["CIGa+7"]);
-      let intl3 = callback(1233).intl;
-      obj[5] = intl3.string(callback(1233).t.PDTjLN);
-      obj[6] = callback(1296).ButtonColors.BRAND;
-      callback2(14640)(obj);
+      let intl = callback(1114).intl;
+      obj[2] = intl.string(callback(1114).t.PsQmzU);
+      let intl2 = callback(1114).intl;
+      obj[3] = intl2.string(callback(1114).t["CIGa+7"]);
+      let intl3 = callback(1114).intl;
+      obj[5] = intl3.string(callback(1114).t.PDTjLN);
+      obj[6] = callback(1178).ButtonColors.BRAND;
+      callback2(14796)(obj);
       return false;
     }, []);
   },

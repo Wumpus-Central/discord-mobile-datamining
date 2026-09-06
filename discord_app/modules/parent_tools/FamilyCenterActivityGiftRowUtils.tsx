@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import messagesProxyDefault from "FamilyCenter.messages.js";
-import _mod3717 from "../../../_runtime/metro/03717__.js";
+import _mod3796 from "../../../_runtime/metro/03796__.js";
 import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
@@ -23,7 +23,7 @@ export const formatGiftDate = function formatGiftDate(claimedAt) {
     month: "short",
     day: "numeric",
   });
-  return dateTimeFormat.format(_mod3717.parseISO(claimedAt));
+  return dateTimeFormat.format(_mod3796.parseISO(claimedAt));
 };
 export const getGiftSubtext = function getGiftSubtext(claimed) {
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
@@ -50,18 +50,18 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
       }
       obj = { date: null };
       const _Intl2 = Intl;
-      const dateTimeFormat = new Intl.DateTimeFormat(tmp8(1233).intl.currentLocale, { month: "short", day: "numeric" });
-      let tmp8Result = tmp8(3717);
+      const dateTimeFormat = new Intl.DateTimeFormat(tmp8(1114).intl.currentLocale, { month: "short", day: "numeric" });
+      let tmp8Result = tmp8(3796);
       obj[0] = dateTimeFormat.format(tmp8Result.parseISO(claimedAt));
       let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj);
     } else {
       obj1 = { date: null };
       const _Intl = Intl;
-      const dateTimeFormat1 = new Intl.DateTimeFormat(tmp8(1233).intl.currentLocale, {
+      const dateTimeFormat1 = new Intl.DateTimeFormat(tmp8(1114).intl.currentLocale, {
         month: "short",
         day: "numeric",
       });
-      tmp8Result = tmp8(3717);
+      tmp8Result = tmp8(3796);
       obj1[0] = dateTimeFormat1.format(tmp8Result.parseISO(offeredAt));
       formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj1);
     }

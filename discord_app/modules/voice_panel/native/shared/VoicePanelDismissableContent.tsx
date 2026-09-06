@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
-import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import closure_5 from "../../../calls/ChannelRTCStore.tsx";
@@ -9,7 +9,7 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(16935, dependencyMap.paths);
+  return asyncRequireImpl(17099, dependencyMap.paths);
 }
 let c4 = importAllResult;
 let closure_10 = {

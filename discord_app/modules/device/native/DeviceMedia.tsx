@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos.tsx";
-import keys from "../../../../_runtime/00641_keys.js";
+import keys from "../../../../_runtime/00560_keys.js";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = keys.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));
@@ -25,7 +25,7 @@ export default {
             const image = node.image;
           }
         }
-        let obj = assets(1234);
+        let obj = assets(1115);
         if (!obj.isIOS()) {
           dependencyMap = tmp2 + 1;
           obj = {
@@ -98,7 +98,7 @@ export default {
             obj = { page: table, has_reached_end: tmp12 };
             lastAssetIndex(table[2]).track(closure_1_3.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
           };
-          lastAssetIndex(10663)(obj);
+          lastAssetIndex(10645)(obj);
         }
       }
     }

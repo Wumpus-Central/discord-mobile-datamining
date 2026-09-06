@@ -59,7 +59,7 @@ function _fetchIosAttributionSignedPayloads() {
               return obj1;
             } else {
               c5 = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               let obj2 = {
                 url: null,
                 body: null,
@@ -83,7 +83,7 @@ function _fetchIosAttributionSignedPayloads() {
             }
           } else if (2 === tmp8) {
             c5 = 0;
-            obj2 = callback2(1205);
+            obj2 = callback2(1232);
             const obj5 = { tags: null };
             obj5[0] = { app_context: "ios_attribution" };
             obj2.captureException(constants, obj5);

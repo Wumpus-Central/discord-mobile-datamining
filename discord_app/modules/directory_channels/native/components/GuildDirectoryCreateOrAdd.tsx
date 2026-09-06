@@ -109,20 +109,20 @@ let closure_13 = importAllResult.memo((guild) => {
   guild = guild.guild;
   const directoryChannelId = guild.directoryChannelId;
   ({ start, end } = guild);
-  let obj = guild(586);
+  let obj = guild(504);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () =>
     closure_1_8.getDirectoryEntry(directoryChannelId, guild.id),
   );
   obj = {
     label: guild.name,
-    icon: callback(directoryChannelId(6013), obj),
-    trailing: callback(directoryChannelId(12109), { entry: stateFromStores }),
+    icon: callback(directoryChannelId(5584), obj),
+    trailing: callback(directoryChannelId(12313), { entry: stateFromStores }),
     start,
     end,
   };
   obj = { style: callback3().guildIcon, guild };
-  return callback(guild(5608).TableRow, obj);
+  return callback(guild(5605).TableRow, obj);
 });
 let closure_14 = importAllResult.memo((guild) => {
   guild = guild.guild;
@@ -139,23 +139,23 @@ let closure_14 = importAllResult.memo((guild) => {
     end: null,
   };
   obj = { style: callback3().guildIcon, guild };
-  obj[2] = callback(handleItemPress(6013), obj);
-  obj[3] = callback(guild(5608).TableRow.Arrow, {});
+  obj[2] = callback(handleItemPress(5584), obj);
+  obj[3] = callback(guild(5605).TableRow.Arrow, {});
   obj[4] = start;
   obj[5] = end;
-  return callback(guild(5608).TableRow, obj);
+  return callback(guild(5605).TableRow, obj);
 });
 let obj2 = { paddingHorizontal: ThemesDefault.space.PX_12, width: "100%", marginTop: 18 };
 const result = require("set").fileFinishedImporting(
   "modules/directory_channels/native/components/GuildDirectoryCreateOrAdd.tsx",
 );
 
-export default function GuildDirectoryCreateOrAdd(stateFromStores) {
-  const _require = stateFromStores;
+export default function GuildDirectoryCreateOrAdd(first) {
+  const _require = first;
   const tmp = callback3();
   let obj = _require(ref[18]);
   const navigation = obj.useNavigation();
-  ref = addedGuilds.useRef(stateFromStores);
+  ref = addedGuilds.useRef(first);
   let tmp6 = navigation(ref[19])(ref);
   const effect = addedGuilds.useEffect(() => {
     ref.current = closure_0;
@@ -165,7 +165,7 @@ export default function GuildDirectoryCreateOrAdd(stateFromStores) {
   addedGuilds = tmp8.addedGuilds;
   const bottom = navigation(ref[16])().bottom;
   const tmp9 = availableGuilds(addedGuilds.useState(0), 2);
-  const first = tmp9[0];
+  first = tmp9[0];
   closure_7 = tmp9[1];
   const items = [addedGuilds, availableGuilds, first];
   const memo = addedGuilds.useMemo(() => (0 === first ? availableGuilds : addedGuilds), items);

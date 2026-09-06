@@ -1,7 +1,7 @@
 // discord_app/modules/safety_hub/SafetyHubConstants.tsx
 import set from "../../../_runtime/00002_set.js";
-import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import ME from "../../Constants.tsx";
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 
 const AnalyticsSections = ME.AnalyticsSections;
 let obj = {

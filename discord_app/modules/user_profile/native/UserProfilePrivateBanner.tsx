@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfilePrivateBanner.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";

@@ -10,8 +10,8 @@ const result = require("set").fileFinishedImporting("modules/settings/native/sea
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
-    let tmp = callback(14588);
-    tmp = new tmp(memo(14582).getSettingSearchableTitles());
+    let tmp = callback(14699);
+    tmp = new tmp(memo(14693).getSettingSearchableTitles());
     return tmp;
   }, []);
   const settings = callback(memo1.useState(closure_7), 2);
@@ -23,7 +23,7 @@ export const useSettingSearchResults = function useSettingSearchResults() {
   const items = [memo];
   memo1 = memo1.useMemo(
     () =>
-      callback(633)((arg0) => {
+      callback(551)((arg0) => {
         let scoredSearchResults = closure_1_6.getField("blocklist");
         scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
         const found = scoredSearchResults.filter((setting) => {

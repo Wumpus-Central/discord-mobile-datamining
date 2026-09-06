@@ -12,7 +12,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   id = id.id;
   importDefault = undefined;
   ({ expanded, childNodes } = id);
-  let obj = id(16132);
+  let obj = id(16294);
   importDefault = usePendingFolderGuildIdsDefault();
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
@@ -20,7 +20,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   });
   const items = [closure_4];
   const items1 = [id];
-  const stateFromStores = id(586).useStateFromStores(items, () => {
+  const stateFromStores = id(504).useStateFromStores(items, () => {
     let guildId = closure_1_4.getGuildId();
     if (guildId == null) {
       guildId = closure_1_5;
@@ -46,9 +46,9 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
     return obj;
   }, items1);
   ({ accessibilityActions, onAccessibilityAction } = memo);
-  const obj2 = id(586);
+  const obj2 = id(504);
   const items2 = [id];
-  const sharedValue = id(4217).useSharedValue("" + id);
+  const sharedValue = id(4296).useSharedValue("" + id);
   const memo1 = importAllResult.useMemo(
     () => ({
       onPress() {
@@ -77,14 +77,14 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
     externalChildren: true,
     children: true,
   };
-  const obj3 = id(4217);
+  const obj3 = id(4296);
   obj[0] = "" + id;
   obj[1] = accessibilityActions;
   obj[2] = onAccessibilityAction;
   obj[3] = stateFromStores;
   obj[6] = guildsBarAnimatedWrapperStyles;
-  const intl = id(1233).intl;
-  obj[7] = intl.string(id(1233).t["scsU+l"]);
+  const intl = id(1114).intl;
+  obj[7] = intl.string(id(1114).t["scsU+l"]);
   obj[8] = sharedValue;
   obj[11] = memo1;
   let tmp8Result = null;
@@ -92,10 +92,10 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
     obj = { folderId: null, totalItems: null };
     obj[0] = id;
     obj[1] = childNodes.length;
-    tmp8Result = tmp8(tmp(16131).GuildsBarGuildFolderBG, obj);
+    tmp8Result = tmp8(tmp(16293).GuildsBarGuildFolderBG, obj);
   }
   obj[12] = tmp8Result;
-  obj[13] = jsx(id(9413).HourglassIcon, {});
+  obj[13] = jsx(id(9030).HourglassIcon, {});
   return jsx(UnreadIndicatorDefault, {
     id: null,
     accessibilityActions: null,

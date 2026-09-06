@@ -124,7 +124,7 @@ function _updateListingPeripheralsFromEditState() {
                   tmp8 = undefined === roleIcon;
                 }
                 if (!tmp8) {
-                  let obj3 = callback2(5466);
+                  let obj3 = callback2(5520);
                   let obj2 = { color: null, icon: null, unicodeEmoji: null };
                   obj2[0] = roleColor;
                   let icon;
@@ -186,7 +186,7 @@ function _updateListingPeripheralsFromEditState() {
                   closure_15 = closure_13.map((emojiId) => {
                     const customEmojiById = roleIcon.getCustomEmojiById(emojiId);
                     if (null != customEmojiById) {
-                      let obj = _undefined(9195);
+                      let obj = _undefined(10336);
                       obj = { guildId: null, emojiId: null, roles: null };
                       obj[0] = _undefined;
                       obj[1] = customEmojiById.id;
@@ -206,10 +206,10 @@ function _updateListingPeripheralsFromEditState() {
                         obj[0] = _undefined;
                         obj[1] = customEmojiById.id;
                         obj[2] = found;
-                        let updateEmojiResult = _undefined(9195).updateEmoji(obj);
-                        const obj2 = _undefined(9195);
+                        let updateEmojiResult = _undefined(10336).updateEmoji(obj);
+                        const obj2 = _undefined(10336);
                       } else {
-                        obj = _undefined(9195);
+                        obj = _undefined(10336);
                         updateEmojiResult = obj.deleteEmoji(_undefined, customEmojiById.id);
                       }
                       return updateEmojiResult;
@@ -251,7 +251,7 @@ function _updateListingPeripheralsFromEditState() {
               dependencyMap = 4;
               id = 1;
               const obj8 = { value: null, done: false };
-              obj8[0] = lib(6111).updateSubscriptionTrial(callback, id, obj7);
+              obj8[0] = lib(7255).updateSubscriptionTrial(callback, id, obj7);
               return obj8;
             }
           }
@@ -359,7 +359,7 @@ function _createListingFromEditState() {
                   description = 2;
                   length = 1;
                   let obj2 = { value: null, done: false };
-                  obj2[0] = callback3(6111).createSubscriptionGroupListing(callback, {});
+                  obj2[0] = callback3(7255).createSubscriptionGroupListing(callback, {});
                   return obj2;
                 } else {
                   let tmp9 = null != length;
@@ -367,7 +367,7 @@ function _createListingFromEditState() {
                     tmp9 = length.length > 0;
                   }
                   if (tmp9) {
-                    let obj7 = callback(15073);
+                    let obj7 = callback(15233);
                     description = 3;
                     length = 1;
                     let obj3 = { value: null, done: false };
@@ -409,9 +409,9 @@ function _createListingFromEditState() {
               dependencyMap = [];
             }
             callback2 = HermesBuiltin.arraySpread(dependencyMap, callback2);
-            obj2 = callback(15073);
+            obj2 = callback(15233);
             templateTierCreationAnalyticsContext = obj2.getTemplateTierCreationAnalyticsContext(callback2, callback);
-            obj3 = callback3(6111);
+            obj3 = callback3(7255);
             const obj5 = { guildId: null, groupListingId: null, data: null, analyticsContext: null, onBeforeDispatchNewListing: null };
             obj5[0] = callback;
             obj5[1] = id;
@@ -526,7 +526,7 @@ export const useName = function useName(arg0) {
   const items = [closure_8];
   const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
-  const tmp2 = name(5950)(() => first);
+  const tmp2 = name(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   memo = React.useMemo(() => callback(c2), items1);
@@ -583,7 +583,7 @@ export const usePriceTier = function usePriceTier(editStateId) {
   const items = [closure_8];
   const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
-  const tmp2 = priceTier(5950)(() => first);
+  const tmp2 = priceTier(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   memo = React.useMemo(() => callback(c2), items1);
@@ -640,7 +640,7 @@ export const useDescription = function useDescription(arg0) {
   const items = [closure_8];
   const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
-  const tmp2 = description(5950)(() => first);
+  const tmp2 = description(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   memo = React.useMemo(() => callback(c2), items1);
@@ -696,7 +696,7 @@ export const useImage = function useImage(editStateId, arg1) {
   const items = [closure_8];
   const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
-  const tmp2 = image(5950)(() => first);
+  const tmp2 = image(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   memo = React.useMemo(() => callback(c2), items1);
@@ -740,7 +740,7 @@ export const useImage = function useImage(editStateId, arg1) {
 };
 export const useApplicationId = function useApplicationId(listingId) {
   const _require = listingId;
-  const f98731 = (application_id) => {
+  const f99294 = (application_id) => {
     application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
@@ -749,13 +749,13 @@ export const useApplicationId = function useApplicationId(listingId) {
   };
   const items = [closure_8];
   const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
-  const tmp2 = f98731(5950)(() => first);
+  const tmp2 = f99294(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   return React.useMemo(() => callback(c2), items1);
 };
 export const useRoleIcon = function useRoleIcon(arg0, arg1) {
-  const tmp = roleIcon(15069)(arg1, arg0);
+  const tmp = roleIcon(15229)(arg1, arg0);
   closure_0 = tmp;
   const items = [tmp];
   let memo = React.useMemo(() => {
@@ -833,7 +833,7 @@ export const useRole = function useRole(listingId, guildId) {
   return React.useMemo(() => {
     let DEFAULT_PREVIEW_ROLE = closure_1;
     if (closure_1 == null) {
-      DEFAULT_PREVIEW_ROLE = listingId(15070).DEFAULT_PREVIEW_ROLE;
+      DEFAULT_PREVIEW_ROLE = listingId(15230).DEFAULT_PREVIEW_ROLE;
     }
     const obj = {};
     const merged = Object.assign(DEFAULT_PREVIEW_ROLE);
@@ -851,14 +851,14 @@ export const useRole = function useRole(listingId, guildId) {
     }
     if (undefined !== closure_2) {
       obj.color = tmp5;
-      obj.colorString = listingId(685).int2hex(tmp5);
-      const obj2 = listingId(685);
+      obj.colorString = listingId(1091).int2hex(tmp5);
+      const obj2 = listingId(1091);
     }
     return obj;
   }, items);
 };
 export const useRoleColor = function useRoleColor(editStateId, guildId) {
-  const tmp = roleColor(15069)(guildId, editStateId);
+  const tmp = roleColor(15229)(guildId, editStateId);
   closure_0 = tmp;
   const items = [tmp];
   let memo = React.useMemo(() => {
@@ -910,7 +910,7 @@ export const useRoleColor = function useRoleColor(editStateId, guildId) {
   return items2;
 };
 export const useChannelAccessFormat = function useChannelAccessFormat(editStateId, guildId) {
-  const tmp = channelAccessFormat(15069)(guildId, editStateId);
+  const tmp = channelAccessFormat(15229)(guildId, editStateId);
   closure_0 = tmp;
   const items = [tmp];
   let memo = React.useMemo(() => {
@@ -974,7 +974,7 @@ export const useChannelBenefits = function useChannelBenefits(listingId) {
   const items = [closure_8];
   const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
-  const tmp2 = channelBenefits(5950)(() => first);
+  const tmp2 = channelBenefits(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   memo = React.useMemo(() => callback(c2), items1);
@@ -1030,7 +1030,7 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
   const items = [closure_8];
   const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
   let memo = stateFromStores;
-  const tmp2 = intangibleBenefits(5950)(() => first);
+  const tmp2 = intangibleBenefits(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   memo = React.useMemo(() => callback(c2), items1);
@@ -1074,7 +1074,7 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
 };
 export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
   let _require = guildId;
-  const tmp = tierEmojiIds(15069)(guildId, listingId);
+  const tmp = tierEmojiIds(15229)(guildId, listingId);
   tierEmojiIds = tmp;
   const items = [closure_7];
   const items1 = [guildId];
@@ -1148,7 +1148,7 @@ export const useTrialInterval = function useTrialInterval(editStateId) {
   if (active_trial == null) {
     active_trial = null;
   }
-  let selectedOption = trialInterval(15072)(active_trial).selectedOption;
+  let selectedOption = trialInterval(15232)(active_trial).selectedOption;
   if (selectedOption == null) {
     selectedOption = null;
   }
@@ -1265,7 +1265,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
   const items = [closure_8];
   const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
   c2 = stateFromStores;
-  let tmp2 = first(5950)(() => first);
+  let tmp2 = first(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   const memo = React.useMemo(() => callback(c2), items1);
@@ -1663,7 +1663,7 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
       return items;
     }, items),
     addNewEditStateId: React.useCallback(() => {
-      guildId = guildId(511).v4();
+      guildId = guildId(1256).v4();
       dependencyMap(guildId, (arg0) => {
         let items = arg0;
         if (arg0 == null) {
@@ -1676,7 +1676,7 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
     }, items1),
     addNewEditStateFromTemplate: React.useCallback((listings) => {
       guildId = listings;
-      const v4Result = guildId(511).v4();
+      const v4Result = guildId(1256).v4();
       subscriptionListingsForGroup = v4Result;
       dependencyMap(guildId, (arg0) => {
         let items = arg0;

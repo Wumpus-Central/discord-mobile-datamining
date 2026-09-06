@@ -24,6 +24,7 @@ let obj = {
   TAX_EXCLUSIVE: null,
   TAX_ADDRESS_REQUIRE_POSTAL_CODE: null,
   QUESTS_1P_DATA_OPT_OUT_U18_REGIONS: null,
+  QUESTS_1P_DATA_OPT_OUT_COUNTRIES_U18: null,
   QUESTS_3P_DATA_OPT_OUT_U16_REGIONS: null,
   QUESTS_3P_DATA_OPT_OUT_U18_REGIONS: null,
   QUESTS_3P_DATA_OPT_OUT_COUNTRIES: null,
@@ -1823,13 +1824,15 @@ obj[20] = new Set(["CA", "US"]);
 const set20 = new Set(["CA", "US"]);
 obj[21] = new Set(["AR", "NY"]);
 const set21 = new Set(["AR", "NY"]);
-obj[22] = new Set(["CA", "MN", "NH", "OR"]);
-const set22 = new Set(["CA", "MN", "NH", "OR"]);
-obj[23] = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "NY", "TX"]);
-const set23 = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "NY", "TX"]);
-obj[24] = new Set(["BR", "KR"]);
-const set24 = new Set(["BR", "KR"]);
-obj[25] = new Set([
+obj[22] = new Set(["BR"]);
+const set22 = new Set(["BR"]);
+obj[23] = new Set(["CA", "MN", "NH", "OR"]);
+const set23 = new Set(["CA", "MN", "NH", "OR"]);
+obj[24] = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
+const set24 = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
+obj[25] = new Set(["BR", "KR"]);
+const set25 = new Set(["BR", "KR"]);
+obj[26] = new Set([
   "AT",
   "BE",
   "BG",

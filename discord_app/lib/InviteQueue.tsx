@@ -38,8 +38,8 @@ function drain(location, sum, arg2, prototype, arg4, InviteQueue, drain, depende
   if (self.GROUP_DM !== type) {
     if (tmp.CHANNEL !== type) {
       if (tmp.USER === type) {
-        obj = inviteAnalyticsMetadata(4491);
-        inviteAnalyticsMetadata(4491)
+        obj = inviteAnalyticsMetadata(4573);
+        inviteAnalyticsMetadata(4573)
           .ensurePrivateChannel(location.user.id)
           .then(
             (arg0) => {
@@ -52,7 +52,7 @@ function drain(location, sum, arg2, prototype, arg4, InviteQueue, drain, depende
             },
             () => sum(null, false),
           );
-        const ensurePrivateChannelResult = inviteAnalyticsMetadata(4491).ensurePrivateChannel(location.user.id);
+        const ensurePrivateChannelResult = inviteAnalyticsMetadata(4573).ensurePrivateChannel(location.user.id);
       }
     }
   }

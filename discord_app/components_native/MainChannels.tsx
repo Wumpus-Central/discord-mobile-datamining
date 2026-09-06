@@ -42,11 +42,11 @@ function LeftPanelContent(panelStyles) {
   isChatBesideChannelList = tmp10(tmp3[9])().isChatBesideChannelList;
   top = tmp10(tmp3[10])().top;
   const items1 = [tmp, top];
-  const items2 = [tmp, isChatBesideChannelList];
   const memo = obj1.useMemo(() => {
     const items = [first.sideContainer, { marginTop: top }];
     return items;
   }, items1);
+  const items2 = [tmp, isChatBesideChannelList];
   const memo1 = obj1.useMemo(() => {
     const items = [first.side];
     let sideTablet = isChatBesideChannelList;
@@ -83,7 +83,7 @@ function LeftPanelContent(panelStyles) {
     let tmp16Result = tmp16(tmp18, obj1);
   } else {
     const obj2 = { style: null, pointerEvents: "box-none", nativeID: "messages-parent-view", children: null };
-    const items6 = [panelStyles, tmp.sideContainer];
+    const items6 = [memo, panelStyles];
     obj2[0] = items6;
     obj2[3] = tmp15Result;
     tmp16Result = tmp16(tmp10(tmp3[16]).View, obj2);

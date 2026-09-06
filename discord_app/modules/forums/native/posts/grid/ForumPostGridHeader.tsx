@@ -43,7 +43,7 @@ export default function ForumPostGridHeader(arg0) {
     }),
   ];
   if (isNew) {
-    isNew = tmp8(tmp10(11816), {});
+    isNew = tmp8(tmp10(12015), {});
   }
   items[3] = isNew;
   obj[1] = items;

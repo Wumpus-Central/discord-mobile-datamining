@@ -2,8 +2,8 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
-import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import getGuildBadgeSourceDefault from "../../../guild/native/GuildBadge.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ExpressionSourceGuildRecord as closure_4 } from "../../../emojis/records/ExpressionSourceRecord.tsx";

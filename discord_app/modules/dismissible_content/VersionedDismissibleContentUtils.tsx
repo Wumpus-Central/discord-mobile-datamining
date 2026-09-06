@@ -11,7 +11,7 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
 ) {
   if (DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING === closure_0) {
     marketingBySurface = marketingBySurface.getMarketingBySurface(
-      tmp(13964).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON,
+      tmp(13986).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON,
     );
     let num5;
     if (marketingBySurface != null) {
@@ -21,27 +21,27 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
       num5 = 0;
     }
     return num5;
-  } else if (tmp(1372).DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE === closure_0) {
-    let tmpResult = tmp(13965);
+  } else if (tmp(1943).DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE === closure_0) {
+    let tmpResult = tmp(13987);
     const obj = { storeState: null, surface: null };
     obj[0] = state.getState();
-    obj[1] = tmp(1954).EmbeddedActivitySurfaces.VOICE_LAUNCHER;
+    obj[1] = tmp(1894).EmbeddedActivitySurfaces.VOICE_LAUNCHER;
     return tmpResult.getNewestBadgeableVersion(obj);
   } else {
-    if (tmp(1372).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK !== closure_0) {
-      if (tmp(1372).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE !== closure_0) {
-        if (tmp(1372).DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER === closure_0) {
-          tmpResult = tmp(13966);
+    if (tmp(1943).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK !== closure_0) {
+      if (tmp(1943).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE !== closure_0) {
+        if (tmp(1943).DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER === closure_0) {
+          tmpResult = tmp(13988);
           return tmpResult.getWideBannerDismissibleContentVersion();
         } else {
-          if (tmp(1372).DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== closure_0) {
-            if (tmp(1372).DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE !== closure_0) {
-              if (tmp(1372).DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA !== closure_0) {
-                if (tmp(1372).DismissibleContent.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER !== closure_0) {
-                  if (tmp(1372).DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER === closure_0) {
+          if (tmp(1943).DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== closure_0) {
+            if (tmp(1943).DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE !== closure_0) {
+              if (tmp(1943).DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA !== closure_0) {
+                if (tmp(1943).DismissibleContent.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER !== closure_0) {
+                  if (tmp(1943).DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER === closure_0) {
                     return 0;
                   } else {
-                    tmp(1399).assertUnreachable(closure_0, { andFail: false });
+                    tmp(1969).assertUnreachable(closure_0, { andFail: false });
                     return 0;
                   }
                 }

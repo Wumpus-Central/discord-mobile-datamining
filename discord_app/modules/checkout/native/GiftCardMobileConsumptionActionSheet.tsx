@@ -72,23 +72,23 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   const items3 = [
     callback(View, {
       style: tmp.illustration,
-      children: callback(markAsDismissed(6266).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
+      children: callback(markAsDismissed(5692).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
     }),
     ,
   ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
-  const intl = markAsDismissed(1233).intl;
+  const intl = markAsDismissed(1114).intl;
   obj2[3] = intl.string(messagesProxyDefault.V3DI1E);
-  items3[1] = callback(markAsDismissed(4474).Text, obj2);
+  items3[1] = callback(markAsDismissed(4556).Text, obj2);
   const obj3 = { size: "lg", variant: "secondary", grow: true, text: null, onPress: null };
-  const intl2 = markAsDismissed(1233).intl;
+  const intl2 = markAsDismissed(1114).intl;
   obj3[3] = intl2.string(messagesProxyDefault.YZePWx);
   obj3[4] = function onPress() {
     return callback(closure_1_5.USER_DISMISS);
   };
-  items3[2] = callback(markAsDismissed(4929).Button, obj3);
+  items3[2] = callback(markAsDismissed(4975).Button, obj3);
   obj[1] = items3;
-  obj[1] = callback2(markAsDismissed(4927).Stack, obj);
+  obj[1] = callback2(markAsDismissed(4973).Stack, obj);
   obj[3] = callback(View, obj);
-  return callback(markAsDismissed(5631).BottomSheet, obj);
+  return callback(markAsDismissed(7150).BottomSheet, obj);
 }

@@ -85,16 +85,16 @@ function SyncedLoadingAlertModal(onConfirm) {
     }),
     loading: tmp2,
   };
-  const items = [callback3(onConfirm(4864).AlertActionButton, obj)];
+  const items = [callback3(onConfirm(4910).AlertActionButton, obj)];
   obj1 = { variant: "secondary", text: null, onPress: null, loading: null };
-  const intl = onConfirm(1233).intl;
-  obj1[1] = intl.string(onConfirm(1233).t["ETE/oC"]);
+  const intl = onConfirm(1114).intl;
+  obj1[1] = intl.string(onConfirm(1114).t["ETE/oC"]);
   obj1[2] = onCancel;
   obj1[3] = tmp2;
-  items[1] = callback3(onConfirm(4864).AlertActionButton, obj1);
+  items[1] = callback3(onConfirm(4910).AlertActionButton, obj1);
   obj[0] = items;
   obj[2] = callback4(closure_6, obj);
-  return callback3(onConfirm(4864).AlertModal, obj);
+  return callback3(onConfirm(4910).AlertModal, obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 const result = require("set").fileFinishedImporting("modules/checkout/native/showCheckoutOrderErrorModal.tsx");
@@ -122,12 +122,12 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
       onCancel: null,
       dismissable: false,
     };
-    const intl = callback(1233).intl;
-    obj[1] = intl.string(callback(1233).t.zrhHH3);
-    const intl2 = callback(1233).intl;
-    obj[2] = intl2.string(callback(1233).t.PjfUXe);
-    const intl3 = callback(1233).intl;
-    obj[3] = intl3.string(callback(1233).t["7NqTJn"]);
+    const intl = callback(1114).intl;
+    obj[1] = intl.string(callback(1114).t.zrhHH3);
+    const intl2 = callback(1114).intl;
+    obj[2] = intl2.string(callback(1114).t.PjfUXe);
+    const intl3 = callback(1114).intl;
+    obj[3] = intl3.string(callback(1114).t["7NqTJn"]);
     dependencyMap = closure_1_2(function* () {
       if (c3 === 2) {
         c3 = 3;
@@ -205,6 +205,6 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     obj = {};
     const merged1 = Object.assign(merged);
     obj = { dismissable: obj.dismissable };
-    callback(4860).openAlert(key, closure_1_5(closure_1_8, obj), onCloseCallback, obj);
+    callback(4906).openAlert(key, closure_1_5(closure_1_8, obj), onCloseCallback, obj);
   });
 };

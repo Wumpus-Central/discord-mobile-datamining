@@ -216,15 +216,15 @@ function _updateLinkForUserId() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               obj1 = { url: null, body: null, rejectWithError: null };
               obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
               const obj2 = { linked_user_id: null, link_status: null };
               obj2[0] = callback;
               obj2[1] = closure_1;
               obj1[1] = obj2;
-              obj1[2] = callback(527).rejectWithMigratedError();
-              const obj7 = callback(527);
+              obj1[2] = callback(1272).rejectWithMigratedError();
+              const obj7 = callback(1272);
               c3 = 1;
               dependencyMap = 1;
               const obj3 = { value: null, done: false };
@@ -296,14 +296,14 @@ function _removeLinkForUserId() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               obj1 = { url: null, body: null, rejectWithError: null };
               obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
               const obj2 = { linked_user_id: null };
               obj2[0] = callback;
               obj1[1] = obj2;
-              obj1[2] = callback(527).rejectWithMigratedError();
-              const obj7 = callback(527);
+              obj1[2] = callback(1272).rejectWithMigratedError();
+              const obj7 = callback(1272);
               dependencyMap = 1;
               c1 = 1;
               const obj3 = { value: null, done: false };
@@ -727,7 +727,7 @@ export default {
                 obj[0] = arg1;
                 return obj;
               }
-              obj3 = lib(706);
+              obj3 = lib(573);
               const obj7 = {
                 type: "FAMILY_CENTER_INITIAL_LOAD",
                 familyCenterTeenActivity: null,
@@ -745,7 +745,7 @@ export default {
                 tmp66 = null != obj4.teenId;
               }
               if (tmp66) {
-                obj5 = lib(706);
+                obj5 = lib(573);
                 const obj8 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: null, restrictedSchedule: null };
                 obj8[1] = obj4.teenId;
                 obj8[2] = body.restricted_schedule;
@@ -779,10 +779,10 @@ export default {
     return callback(function* () {
       let obj4 = tmp2;
       let body = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
-      obj1[1] = closure_1_0(527).rejectWithMigratedError();
+      obj1[1] = closure_1_0(1272).rejectWithMigratedError();
       yield HTTP.get(obj1);
       body = arg1.body;
       obj4 = { linkedUsers: null, users: null };
@@ -790,7 +790,7 @@ export default {
       obj4[1] = body.users;
       const obj5 = { type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" };
       const merged = Object.assign(obj4);
-      obj4(706).dispatch(obj5);
+      obj4(573).dispatch(obj5);
       return obj4;
     })();
   },
@@ -821,20 +821,20 @@ export default {
     return callback(function* () {
       let obj5 = tmp2;
       let body = tmp5;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
       const obj2 = { recipient_id: null, code: null };
       obj2[0] = closure_1_0;
       obj2[1] = closure_1_1;
       obj1[1] = obj2;
-      obj1[2] = closure_1_0(527).rejectWithMigratedError();
+      obj1[2] = closure_1_0(1272).rejectWithMigratedError();
       yield HTTP.post(obj1);
       body = arg1.body;
       obj5 = { linkedUsers: null, users: null };
       obj5[0] = body.linked_users;
       obj5[1] = body.users;
-      let obj6 = closure_1_1(706);
+      let obj6 = closure_1_1(573);
       obj6 = { type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" };
       const merged = Object.assign(obj5);
       obj6.dispatch(obj6);
@@ -1206,8 +1206,8 @@ export default {
               closure_1 = tmp2;
               let settings = tmp5;
               settings = undefined;
-              const protoFieldClass = closure_1_0(1370).getProtoFieldClass(
-                closure_1_0(1305).PreloadedUserSettings,
+              const protoFieldClass = closure_1_0(1941).getProtoFieldClass(
+                closure_1_0(1187).PreloadedUserSettings,
                 closure_1_1,
               );
               settings = closure_1_4.getSettings(closure_1_0);
@@ -1215,23 +1215,23 @@ export default {
               if (settings != null) {
                 tmp13 = settings[tmp37];
               }
-              let tmp34Result = tmp34(1370);
+              let tmp34Result = tmp34(1941);
               const modifiedProto = tmp34Result.createModifiedProto(
                 tmp13,
                 dependencyMap,
                 protoFieldClass,
-                tmp34(1305).PreloadedUserSettings,
+                tmp34(1187).PreloadedUserSettings,
                 tmp37,
               );
               if (null != modifiedProto) {
-                const HTTP = tmp34(527).HTTP;
+                const HTTP = tmp34(1272).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
                 obj1[0] = closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(closure_1_0);
                 const obj2 = { settings: null };
-                tmp34Result = tmp34(1341);
-                obj2[0] = tmp34Result.protoToB64(tmp34(1305).PreloadedUserSettings, modifiedProto);
+                tmp34Result = tmp34(1223);
+                obj2[0] = tmp34Result.protoToB64(tmp34(1187).PreloadedUserSettings, modifiedProto);
                 obj1[1] = obj2;
-                obj1[2] = tmp34(527).rejectWithMigratedError();
+                obj1[2] = tmp34(1272).rejectWithMigratedError();
                 dependencyMap = 1;
                 c3 = 1;
                 const obj3 = { value: null, done: false };
@@ -1240,14 +1240,14 @@ export default {
               } else {
                 c3 = 3;
               }
-              const obj12 = closure_1_0(1370);
+              const obj12 = closure_1_0(1941);
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
             settings = arg1.body.settings;
-            obj = closure_1_1(706);
+            obj = closure_1_1(573);
             const obj4 = { type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: null, settings: null };
             obj4[1] = settings;
             obj4[2] = settings;

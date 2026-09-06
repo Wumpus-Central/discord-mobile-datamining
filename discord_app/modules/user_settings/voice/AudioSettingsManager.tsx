@@ -20,7 +20,7 @@ function handleConnectionOpen() {
     HermesBuiltin.throwTypeError();
   }
   if (!Storage.get("AudioContextSettingsMigrated:" + id)) {
-    const PreloadedUserSettingsActionCreators = tmp(1369).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = tmp(1940).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync(
       "audioContextSettings",
       (arg0) => {
@@ -34,7 +34,7 @@ function handleConnectionOpen() {
           let tmp8 = tmp5[1];
           let tmp9 = callback;
           let tmp10 = dependencyMap;
-          let obj = callback(9809);
+          let obj = callback(9092);
           let result = obj.coerceAudioContextForProto(first);
           if (null != result) {
             let tmp52 = result;
@@ -79,7 +79,7 @@ function handleConnectionOpen() {
               let merged = Object.assign(obj[first1]);
               let tmp31 = callback;
               let tmp32 = dependencyMap;
-              let obj4 = callback(9809);
+              let obj4 = callback(9092);
               let tmp33 = first;
               obj1.volume = obj4.snapVolumeToDefault(tmp25[1], tmp7);
               obj[first1] = obj1;
@@ -121,11 +121,11 @@ function handleConnectionOpen() {
           }
           continue;
         }
-        const Storage = callback(592).Storage;
+        const Storage = callback(510).Storage;
         const result1 = Storage.set(callback3(id.getId()), true);
         return flag;
       },
-      tmp(1369).UserSettingsDelay.AUTOMATED,
+      tmp(1940).UserSettingsDelay.AUTOMATED,
     );
   }
 }

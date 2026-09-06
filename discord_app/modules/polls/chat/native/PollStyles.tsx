@@ -1,7 +1,6 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import NativeShadowType from "../PollMessageChatDataTypes.tsx";
-import { t } from "../../../../../_runtime/04706_t.js";
 
 function normal(border) {
   const _require = border;
@@ -17,8 +16,8 @@ function normal(border) {
     radioBackground: null,
     radioForeground: null,
   };
-  const match = require("../../../../../_runtime/04706_t.js").match(arg1);
-  const str = t;
+  const match = _require(4745).match(arg1);
+  const str = _require(4745);
   obj[3] = match
     .with(
       require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes
@@ -51,8 +50,8 @@ function normalVote(border, arg1) {
     radioBackground: null,
     radioForeground: null,
   };
-  const match = require("../../../../../_runtime/04706_t.js").match(arg1);
-  const str = t;
+  const match = _require(4745).match(arg1);
+  const str = _require(4745);
   obj[3] = match
     .with(
       require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes

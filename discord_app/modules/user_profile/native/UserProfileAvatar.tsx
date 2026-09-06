@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileAvatar.tsx
-import _modDef8117 from "../../profile_customization/native/HeaderAvatar.tsx";
 import useSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import _modDef8257 from "../../profile_customization/native/HeaderAvatar.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { TrackUserProfileActions } from "../Constants.tsx";
@@ -26,7 +26,7 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
   items2 = [,];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
   const merged1 = Object.assign(merged);
-  items1[1] = callback(_modDef8117, obj);
+  items1[1] = callback(_modDef8257, obj);
   obj[0] = items1;
   return callback2(closure_8, obj);
 });

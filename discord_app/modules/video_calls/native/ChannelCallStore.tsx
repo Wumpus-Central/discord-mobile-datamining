@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/ChannelCallStore.tsx
-import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import areParticipantStatesEqualDefault from "useIsPrivateAudioOnlyCall.tsx";
 import useSelectedParticipantDefault from "../useSelectedParticipant.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
@@ -8,7 +8,7 @@ import closure_4 from "../../activities/EmbeddedActivitiesStore.tsx";
 import BOX_MODE_ACTIONSHEET_WIDTH from "ChannelCallConstants.tsx";
 import { OrientationLockState } from "../../activities/Constants.tsx";
 import { ParticipantTypes } from "../../calls/CallConstants.tsx";
-import keys from "../../../../_runtime/00641_keys.js";
+import keys from "../../../../_runtime/00560_keys.js";
 import importDefaultResult from "../../../../_runtime/00012_apply.js";
 import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
 
@@ -59,7 +59,7 @@ const obj1 = {
 };
 const throttleResult = importDefaultResult.throttle(() => {
   const pipFocus = obj2.getState().pipFocus;
-  pipFocus(702).batchUpdates(() => closure_1_10.setState({ pipFocus: !pipFocus }));
+  pipFocus(1249).batchUpdates(() => closure_1_10.setState({ pipFocus: !pipFocus }));
 }, 300);
 let result = require("set").fileFinishedImporting("modules/video_calls/native/ChannelCallStore.tsx");
 
@@ -72,7 +72,7 @@ export const setFocus = function setFocus(arg0) {
 };
 export const toggleFocus = function toggleFocus() {
   const focus = obj2.getState().focus;
-  focus(702).batchUpdates(() => closure_1_10.setState({ focus: !focus, pipFocus: false }));
+  focus(1249).batchUpdates(() => closure_1_10.setState({ focus: !focus, pipFocus: false }));
 };
 export const resetFocusTimer = function resetFocusTimer() {
   timeout.stop();

@@ -19,12 +19,12 @@ export const useSoundButtonStyleConfig = function useSoundButtonStyleConfig() {
 export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSounds(shouldFetch) {
   shouldFetch = shouldFetch.shouldFetch;
   const items = [closure_5];
-  const stateFromStores = shouldFetch(586).useStateFromStores(items, () => saturation.saturation);
-  let obj = shouldFetch(586);
+  const stateFromStores = shouldFetch(504).useStateFromStores(items, () => saturation.saturation);
+  let obj = shouldFetch(504);
   const items1 = [closure_6];
   const items2 = [
     stateFromStores,
-    shouldFetch(586).useStateFromStores(items1, () => shouldFetch(table[8]).isThemeDark(theme.theme)),
+    shouldFetch(504).useStateFromStores(items1, () => shouldFetch(table[8]).isThemeDark(theme.theme)),
     shouldFetch,
   ];
   const effect = React.useEffect(() => {

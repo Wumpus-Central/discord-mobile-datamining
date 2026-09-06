@@ -2,10 +2,10 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
 import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
 import perceptualToAmplitude from "../../utils/PerceptualVolumeUtils.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -15,7 +15,7 @@ import closure_6 from "top_sounds/TopSoundboardSoundStore.tsx";
 import MAX_LENGTH_SOUND_NAME from "SoundboardConstants.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
-import closure_20 from "../../../_runtime/02026_registerAsset.js";
+import closure_20 from "../../intl/IntlLoaderStore.tsx";
 import set from "../../../_runtime/00002_set.js";
 
 require = arg1;

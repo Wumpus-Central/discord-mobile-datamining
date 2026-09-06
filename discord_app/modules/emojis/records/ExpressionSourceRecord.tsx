@@ -1,8 +1,8 @@
 // discord_app/modules/emojis/records/ExpressionSourceRecord.tsx
+import toJSDefault from "../../../lib/Record.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import fromGuildPropertiesWithAdditionalFields from "../../../utils/GuildRecordUtils.tsx";
 import areSetsEqual from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
-import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
-import toJSDefault from "../../../lib/Record.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../../Constants.tsx";
 
@@ -114,7 +114,7 @@ prototype["getIconSource"] = function getIconSource(arg0, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  return self(1430).getAnimatableSourceWithFallback(flag, (canAnimate) => {
+  return self(1396).getAnimatableSourceWithFallback(flag, (canAnimate) => {
     obj = self(closure_1_2[4]);
     obj = { id: self.id, size: closure_0, icon: self.icon, canAnimate };
     return obj.getGuildIconSource(obj);

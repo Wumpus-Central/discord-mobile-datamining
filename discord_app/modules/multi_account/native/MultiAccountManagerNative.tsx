@@ -3,10 +3,10 @@ import set from "../../../../_runtime/00002_set.js";
 import timestampDefault from "../../debug/Logger.tsx";
 import setDefault from "../../../utils/Durations.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4763 from "../../../actions/ModalActionCreators.tsx";
 import MAX_ACCOUNTS from "../Constants.tsx";
 import _initializeDefault from "../MultiAccountManager.tsx";
-import registerAssetDefault from "../../../../_runtime/17263_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/17429_registerAsset.js";
 import ME from "../../../Constants.tsx";
 
 let obj = require;
@@ -90,7 +90,7 @@ _initializeDefault;
 class MultiAccountManagerNative extends tmp5 {}
 const prototype = MultiAccountManagerNative.prototype;
 prototype["onSwitchStart"] = function onSwitchStart() {
-  obj = _modDef4724;
+  obj = _modDef4763;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   logger.info("Closing fast-connect socket because of account switch logout");
   let result = obj(15).closeFastConnectSocket();
@@ -107,12 +107,12 @@ prototype["onSwitchStart"] = function onSwitchStart() {
 prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHome) {
   obj = currentUser;
   if (navigateHome) {
-    obj = obj(1219);
+    obj = obj(1100);
     obj.transitionTo(constants.ME, { navigationReplace: true });
-    const MobileHomeDrawerExperiment = obj(4338).MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = obj(4423).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp(4332).setHomeDrawerState(false);
-      const tmpResult = tmp(4332);
+      tmp(4417).setHomeDrawerState(false);
+      const tmpResult = tmp(4417);
     }
     tmp = obj;
   }
@@ -129,13 +129,13 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
 prototype["onSwitchError"] = function onSwitchError(currentUser) {
   obj = dispatcherDefault;
   obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
-  const intl = obj(1233).intl;
-  obj[1] = intl.string(obj(1233).t.pqvKWA);
+  const intl = obj(1114).intl;
+  obj[1] = intl.string(obj(1114).t.pqvKWA);
   obj[2] = registerAssetDefault;
   obj.open(obj);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {
-  obj = _modDef4724;
+  obj = _modDef4763;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   obj.pop();
   if (null !== c9) {

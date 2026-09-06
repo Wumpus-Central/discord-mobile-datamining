@@ -2,8 +2,8 @@
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import AccessibilityAnnouncer from "../../shared.tsx";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
+import AccessibilityAnnouncer from "../../shared.tsx";
 import createCacheKey from "../../components/Styles/native/createStyles.tsx";
 
 const Platform = get_ActivityIndicator.Platform;

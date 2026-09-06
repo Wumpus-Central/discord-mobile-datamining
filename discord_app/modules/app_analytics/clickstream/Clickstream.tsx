@@ -52,7 +52,7 @@ let c7 = -1;
 let c8 = false;
 let result = require("set").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
-export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTREAM, arg1) {
+export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, arg1) {
   let obj = DISCORD_EPOCHDefault;
   const extractTimestampResult = obj.extractTimestamp(store.getId());
   if (extractTimestampResult !== c7) {
@@ -62,10 +62,10 @@ export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTRE
   const result = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
   c8 = result;
   if (result) {
-    if (!map.has(GUILD_VIEWED_CLICKSTREAM)) {
-      const result1 = obj3.set(GUILD_VIEWED_CLICKSTREAM, []);
+    if (!map.has(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM)) {
+      const result1 = obj3.set(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, []);
     }
-    const value = obj3.get(GUILD_VIEWED_CLICKSTREAM);
+    const value = obj3.get(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM);
     if (value != null) {
       obj = { timestamp: null, rtc_state: null };
       const _Date = Date;

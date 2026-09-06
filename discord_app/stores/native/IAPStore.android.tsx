@@ -1,7 +1,7 @@
 // discord_app/stores/native/IAPStore.android.tsx
-import sum from "../../../discord_common/js/shared/Constants.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
 import _createGatewayCheckoutContext from "../../utils/BillingUtils.tsx";
 import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
 import GPlayConnectionState from "../../modules/gplay/native/Constants.tsx";

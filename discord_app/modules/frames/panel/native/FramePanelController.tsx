@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/frames/panel/native
 
 export default function FramePanelController(children) {
   let mainFrameId;
-  let obj = mainFrameId(586);
+  let obj = mainFrameId(504);
   const items = [closure_5, closure_4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const tmp = callback(mainFrame.getMainFrame());
@@ -60,7 +60,7 @@ export default function FramePanelController(children) {
     updateActivityPanelMode: callback,
     children: children.children,
   };
-  return jsx(mainFrameId(16843).BaseActivityPanelController, {
+  return jsx(mainFrameId(17007).BaseActivityPanelController, {
     context: contextDefault,
     orientationLockStateForApp,
     mode,

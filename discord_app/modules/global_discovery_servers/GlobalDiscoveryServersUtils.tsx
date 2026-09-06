@@ -1,6 +1,6 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
-import v1 from "../../../_runtime/00511_v1.js";
 import getSystemLocale from "../../intl/index.native.tsx";
+import v1 from "../../../_runtime/01256_v1.js";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import prototypeDefault from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -70,7 +70,7 @@ function _navigateToGuild() {
               obj2 = {};
               const merged = Object.assign(c5);
               obj2.loadId = c0;
-              let obj4 = callback2(6195);
+              let obj4 = callback2(7341);
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
@@ -86,7 +86,7 @@ function _navigateToGuild() {
             obj4[0] = arg1;
             return obj4;
           } else {
-            obj = callback(695);
+            obj = callback(1242);
             const obj5 = { guild_id: null, load_id: null, card_index: null, category_id: null, location: null };
             obj5[0] = callback;
             obj5[1] = c0;
@@ -298,9 +298,9 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "padding",
-    discoverySplash: -979697662,
-    emojis: 343212033,
+    preferredLocale: "accessible",
+    discoverySplash: "kMaxLength",
+    emojis: "isArrayBuffer",
   };
   ({ approximate_presence_count: obj[7], approximate_member_count: obj[8], discovery_splash: obj[11] } = id);
   obj[12] = [];

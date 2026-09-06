@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("components_native/common/Me
 export default function MessagePreview(channelId) {
   const onBeforeJumpToMessage = channelId.onBeforeJumpToMessage;
   let jumpTargetId;
-  let obj = onBeforeJumpToMessage(586);
+  let obj = onBeforeJumpToMessage(504);
   const items = [closure_4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
     messages: closure_4.messages,
@@ -40,7 +40,7 @@ export default function MessagePreview(channelId) {
     jumpToChatProps: memo,
     analyticsLocation: closure_6,
   };
-  return jsx(onBeforeJumpToMessage(13152).ChatPreview, {
+  return jsx(onBeforeJumpToMessage(13252).ChatPreview, {
     channelId: channelId.channelId,
     messages: stateFromStoresObject.messages,
     jumpToChatProps: memo,

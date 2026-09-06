@@ -1,8 +1,8 @@
 // discord_app/stores/ChangeVanityURLModalStore.tsx
 import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import ME from "../Constants.tsx";
 
 const FormStates = ME.FormStates;
 let closure_3 = {};

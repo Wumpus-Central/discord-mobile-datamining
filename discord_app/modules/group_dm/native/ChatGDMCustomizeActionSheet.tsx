@@ -1,7 +1,7 @@
 // discord_app/modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import useNavigatorConfirmChangesOnBackDefault from "../../main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx";
-import _modDef10886 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import _modDef10924 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
@@ -15,10 +15,10 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   ({ onGoBack: c1, ref: c2 } = useNavigatorConfirmChangesOnBackDefault());
   const obj = { screenKey: "kick", title: null, render: null };
   const tmp = useNavigatorConfirmChangesOnBackDefault();
-  const intl = channelId(1233).intl;
-  obj[1] = intl.string(channelId(1233).t["1r5E+m"]);
+  const intl = channelId(1114).intl;
+  obj[1] = intl.string(channelId(1114).t["1r5E+m"]);
   obj[2] = function render() {
     return closure_1_3(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
   };
-  return jsx(_modDef10886, { screenKey: "kick", title: null, render: null });
+  return jsx(_modDef10924, { screenKey: "kick", title: null, render: null });
 }

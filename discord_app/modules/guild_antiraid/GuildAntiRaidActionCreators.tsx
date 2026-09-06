@@ -112,7 +112,7 @@ function _setGuildIncidentActions() {
       }
       let toISOStringResult = null;
       if (tmp5) {
-        let obj2 = callback2(4074)();
+        let obj2 = callback2(4153)();
         toISOStringResult = obj2.add(tmp8, "hours").toISOString();
         const addResult = obj2.add(tmp8, "hours");
       }
@@ -132,11 +132,11 @@ function _setGuildIncidentActions() {
         tmp14 = tmp8;
       }
       obj1[2] = tmp14;
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj2 = { url: null, body: null, rejectWithError: null };
       obj2[0] = closure_1_7.GUILD_INCIDENT_ACTIONS(callback);
       obj2[1] = obj1;
-      obj2[2] = callback(527).rejectWithMigratedError();
+      obj2[2] = callback(1272).rejectWithMigratedError();
       yield HTTP.put(obj2);
       return arg1;
     })();
@@ -188,18 +188,18 @@ function _handleResolveRaid() {
               guild = guild.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = callback2(10211)(guild);
+                tmp8 = callback2(10102)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {
-                const HTTP = callback(527).HTTP;
+                const HTTP = callback(1272).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
                 obj1[0] = closure_1_7.GUILD_INCIDENT_REPORT_FALSE_ALARM(tmp18);
                 const obj2 = { alert_message_id: null, reason: null };
                 obj2[0] = tmp19;
                 obj2[1] = tmp20;
                 obj1[1] = obj2;
-                let obj3 = callback(527);
+                let obj3 = callback(1272);
                 obj1[2] = obj3.rejectWithMigratedError();
                 guild = 1;
                 c3 = 1;
@@ -279,14 +279,14 @@ function _handleReportRaid() {
               const guild = closure_1_4.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = v0(10211)(guild);
+                tmp8 = v0(10102)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {
-                const HTTP = callback(527).HTTP;
+                const HTTP = callback(1272).HTTP;
                 obj1 = { url: null, rejectWithError: null };
                 obj1[0] = closure_1_7.GUILD_INCIDENT_REPORT_RAID(tmp18);
-                let obj2 = callback(527);
+                let obj2 = callback(1272);
                 obj1[1] = obj2.rejectWithMigratedError();
                 dependencyMap = 1;
                 v0 = 1;

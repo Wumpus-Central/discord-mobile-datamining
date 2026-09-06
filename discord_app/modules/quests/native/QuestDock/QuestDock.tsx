@@ -2,7 +2,8 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
 import useQuests from "../../hooks/QuestHooks.tsx";
-import _modDef15043 from "QuestDockBountyHeader.tsx";
+import _modDef15202 from "QuestDockBountyHeader.tsx";
+import _modDef15203 from "QuestDockBountyBody.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_6 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -878,13 +879,13 @@ function QuestDockBountyContent(bounty) {
     iconUrl: bounty.productIcon,
     layoutVariant: "insetHeader",
     theme: ThemeTypes.DARK,
-    collapsedContent: callback3(_modDef15043, {}),
-    expandedContent: null,
+    collapsedContent: callback3(_modDef15202, {}),
+    expandedContent: callback3(_modDef15203, {}),
     backgroundContent: null,
     renderImpressionTracker(children) {
       return closure_1_21(bounty(closure_1_2[54]).BillableAdPlacementImpressionTrackerNative, {
         adContentId: bounty.id,
-        adCreativeType: bounty(closure_1_2[56]).AdCreativeType.BOUNTY,
+        adCreativeType: bounty(closure_1_2[57]).AdCreativeType.BOUNTY,
         overrideVisibility: false,
         questContent: bounty(closure_1_2[36]).QuestContent.QUEST_BAR_MOBILE,
         sourceQuestContent: bounty(closure_1_2[36]).QuestContent.QUEST_BAR_MOBILE,
@@ -893,14 +894,14 @@ function QuestDockBountyContent(bounty) {
     },
     renderModeChangeTracker(mode) {
       return closure_1_21(closure_1_34, {
-        adCreativeType: bounty(closure_1_2[56]).AdCreativeType.BOUNTY,
+        adCreativeType: bounty(closure_1_2[57]).AdCreativeType.BOUNTY,
         adContentId: bounty.id,
         mode: mode.mode,
       });
     },
   };
   obj[1] = callback3(QuestDockWithEntranceAnimation, obj);
-  return callback3(bounty(14944).QuestDockBountyProvider, obj);
+  return callback3(bounty(15102).QuestDockBountyProvider, obj);
 }
 let closure_3 = ["mode"];
 const error = importAllResult;
@@ -1010,20 +1011,20 @@ const memoResult = importAllResult.memo(function QuestDockWithVisibilityContext(
   );
   const memo1 = importAllResult.useMemo(() => {
     const type = mobileQuestDock.type;
-    if (mobileQuestDock(isMobileQuestDockVisibleToUser[56]).AdCreativeType.BOUNTY === type) {
+    if (mobileQuestDock(isMobileQuestDockVisibleToUser[57]).AdCreativeType.BOUNTY === type) {
       let obj = { bounty: null };
       obj[0] = tmp.bounty;
       return closure_1_21(closure_1_42, obj);
-    } else if (tmp2(tmp3[56]).AdCreativeType.QUEST === type) {
+    } else if (tmp2(tmp3[57]).AdCreativeType.QUEST === type) {
       obj = { quest: null };
       obj[0] = tmp.quest;
       return closure_1_21(closure_1_41, obj);
-    } else if (tmp2(tmp3[56]).AdCreativeType.NO_FILL === type) {
+    } else if (tmp2(tmp3[57]).AdCreativeType.NO_FILL === type) {
       return null;
     }
   }, items1);
   let tmp7 = null;
-  if (mobileQuestDock.type !== mobileQuestDock(isMobileQuestDockVisibleToUser[56]).AdCreativeType.NO_FILL) {
+  if (mobileQuestDock.type !== mobileQuestDock(isMobileQuestDockVisibleToUser[57]).AdCreativeType.NO_FILL) {
     obj = { value: null, children: null };
     obj[0] = memo;
     obj[1] = memo1;

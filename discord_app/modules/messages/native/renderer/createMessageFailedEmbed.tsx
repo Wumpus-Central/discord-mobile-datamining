@@ -4,8 +4,8 @@ import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Changeset from "RowGeneratorConstants.tsx";
 import frozen from "EmbedUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/08076_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/08077_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08155_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08156_registerAsset.js";
 
 const MessageFailureState = Changeset.MessageFailureState;
 const MessageEmbedTypes = ME.MessageEmbedTypes;
@@ -42,8 +42,8 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       let str = "";
       if (0 !== uploaderFile.currentSize) {
         const _HermesInternal = HermesInternal;
-        str = " (" + tmp6(5087).sizeString(uploaderFile.currentSize) + ")";
-        const tmp6Result = tmp6(5087);
+        str = " (" + tmp6(5134).sizeString(uploaderFile.currentSize) + ")";
+        const tmp6Result = tmp6(5134);
       }
       obj[3] = "" + str;
       obj[4] = colors.embedBodyTextColor;

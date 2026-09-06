@@ -1,8 +1,8 @@
 // discord_app/modules/age_gate/AgeGateActionCreators.tsx
 import set from "../../../_runtime/00002_set.js";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import result2 from "AgeGateConstants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import trackAgeGateSubmittedDefault from "../auth/experiment/trackAgeGateSubmitted.tsx";
 import ME from "../../Constants.tsx";
 

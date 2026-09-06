@@ -24,19 +24,19 @@ const memoResult = importAllResult.memo((active) => {
     showKeyboardIcon = flag;
   }
   const onPress = active.onPress;
-  let obj = onPress(4197);
+  let obj = onPress(4262);
   const token = obj.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const token1 = onPress(4197).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ICON_SIZE);
-  const obj2 = onPress(4197);
+  const token1 = onPress(4262).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ICON_SIZE);
+  const obj2 = onPress(4262);
   const tmp3 = importDefault;
-  const token2 = onPress(4197).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const token2 = onPress(4262).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = callback(token);
   const bound = Math.max(0, (token2 - token) / 2);
   const items = [onPress];
   callback = importAllResult.useCallback(() => {
     onPress(undefined);
   }, items);
-  const obj3 = onPress(4197);
+  const obj3 = onPress(4262);
   obj = {
     ref: importAllResult.useRef(null),
     style: items1,
@@ -53,20 +53,20 @@ const memoResult = importAllResult.memo((active) => {
     tmp12 = bound;
   }
   obj[2] = tmp12;
-  const intl = tmp(1233).intl;
-  obj[4] = intl.string(onPress(1233).t.iZ7Mz9);
+  const intl = tmp(1114).intl;
+  obj[4] = intl.string(onPress(1114).t.iZ7Mz9);
   obj[5] = { expanded: flag };
   obj[6] = callback;
-  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11109 : 8242) };
-  obj[7] = jsx(onPress(1296).Icon, {
+  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11247 : 8758) };
+  obj[7] = jsx(onPress(1178).Icon, {
     size: token1,
     style: tmp7.expressionButtonIconTint,
-    source: tmp3(showKeyboardIcon ? 11109 : 8242),
+    source: tmp3(showKeyboardIcon ? 11247 : 8758),
   });
-  return jsx(onPress(5077).PressableOpacity, {
+  return jsx(onPress(5123).PressableOpacity, {
     size: token1,
     style: tmp7.expressionButtonIconTint,
-    source: tmp3(showKeyboardIcon ? 11109 : 8242),
+    source: tmp3(showKeyboardIcon ? 11247 : 8758),
   });
 });
 const result = require("set").fileFinishedImporting(

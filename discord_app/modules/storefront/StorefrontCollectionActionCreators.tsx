@@ -359,14 +359,14 @@ function _maybeFetchCollectionsForApplicationPage() {
             if (1 === tmp8) {
               locale = 0;
               locale = closure_3;
-              obj1 = callback2(706);
+              obj1 = callback2(573);
               const obj5 = {
                 type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE",
                 pageKey: null,
                 apiError: null,
               };
               obj5[1] = callback2;
-              const tmp21 = new callback2(4377)(locale);
+              const tmp21 = new callback2(4462)(locale);
               obj5[2] = tmp21;
               obj1.dispatch(obj5);
             } else if (arg0 === 1) {
@@ -388,9 +388,9 @@ function _maybeFetchCollectionsForApplicationPage() {
               const collections = closure_3.body.collections;
               obj6[4] = collections.map(fromServer.fromServer);
               obj6[5] = closure_3.body.total;
-              callback2(706).dispatch(obj6);
+              callback2(573).dispatch(obj6);
               locale = 0;
-              const obj13 = callback2(706);
+              const obj13 = callback2(573);
             }
             locale = 0;
             fromServer = 3;
@@ -551,10 +551,10 @@ function _maybeFetchCollectionsAfter() {
             if (1 === tmp7) {
               locale = 0;
               dependencyMap = closure_3;
-              obj3 = lib2(706);
+              obj3 = lib2(573);
               obj5 = { type: "STOREFRONT_COLLECTIONS_AFTER_FETCH_FAILURE", requestKey: null, apiError: null };
               obj5[1] = lib;
-              const tmp28 = new lib2(4377)(dependencyMap);
+              const tmp28 = new lib2(4462)(dependencyMap);
               obj5[2] = tmp28;
               obj3.dispatch(obj5);
             } else if (arg0 === 1) {
@@ -562,7 +562,7 @@ function _maybeFetchCollectionsAfter() {
               throw arg1;
             } else if (arg0 !== 2) {
               lib2 = arg1;
-              obj = lib2(706);
+              obj = lib2(573);
               obj6 = { type: "STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS", requestKey: null, collections: null };
               obj6[1] = lib;
               const collections = lib2.body.collections;

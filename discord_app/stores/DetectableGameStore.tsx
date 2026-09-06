@@ -2,15 +2,15 @@
 import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 import ME from "../Constants.tsx";
 import setDefault from "../utils/Durations.tsx";
 import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
-import createExecutable2 from "../records/ApplicationRecord.tsx";
 import ApplicationTypes2 from "../modules/applications/ApplicationConstants.tsx";
+import createExecutable2 from "../records/ApplicationRecord.tsx";
 import keysDefault from "../lib/CachedEntriesMap.tsx";
 import GameTheme from "../modules/game_detection/GameDetectionTypes.tsx";
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
 import set from "../utils/PlatformUtils.tsx";
 
 function gameFromServer(id) {
@@ -270,7 +270,7 @@ prototype["findGame"] = function findGame(nextResult) {
         return gameByExecutable;
       } else {
         const parts1 = nextResult.exePath.split("/");
-        const found1 = parts1.filter(tmp15(1470).isNotNullish);
+        const found1 = parts1.filter(tmp15(1369).isNotNullish);
         const substr = found1.slice(-2);
         const gameByExecutable1 = self.getGameByExecutable(substr.join("/"));
         if (null != gameByExecutable1) {

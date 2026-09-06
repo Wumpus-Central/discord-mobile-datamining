@@ -72,9 +72,7 @@ obj = {
   targetBitrate: VideoQualityTarget.MEDIUM.targetBitrate,
   targetHeight: 480,
   targetWidth: 640,
-  useHEVC: false,
   videoQuality: VideoQualityTarget.MEDIUM,
-  hevcIsSupported: false,
   useTranscodedVideoForMovSources: true,
   transmuxLivePhotos: true,
   progressUpdateGranularity: 10,
@@ -204,11 +202,7 @@ export const logEncoderSettings = function logEncoderSettings(videoQuality) {
   if (videoQuality.skipVideoTranscode) {
     info("- Skip Video Transcode: Yes");
   } else {
-    let str2 = "avc1 (H.264)";
-    if (videoQuality.useHEVC) {
-      str2 = "hvc1 (HEVC)";
-    }
-    info(`- Codec: ${str2}`);
+    info("- Codec: avc1 (H.264)");
     const _HermesInternal = HermesInternal;
     obj.info("- Dimensions: " + videoQuality.targetWidth + "x" + videoQuality.targetHeight);
     const _HermesInternal2 = HermesInternal;
@@ -217,40 +211,17 @@ export const logEncoderSettings = function logEncoderSettings(videoQuality) {
     obj.info("- Frame Rate: " + videoQuality.frameRate + " fps");
     const _HermesInternal4 = HermesInternal;
     obj.info("- Key Frame Interval: " + videoQuality.keyFrameIntervalSeconds + " seconds");
-    let str11 = "No";
-    let str12 = "No";
+    let str10 = "No";
     if (videoQuality.createHDR) {
-      str12 = "Yes";
+      str10 = "Yes";
     }
-    obj.info(`- Create HDR: ${str12}`);
+    obj.info(`- Create HDR: ${str10}`);
     const _HermesInternal5 = HermesInternal;
     obj.info("- Rotation Degrees: " + videoQuality.rotationDegrees);
-    if (videoQuality.hevcIsSupported) {
-      str11 = "Yes";
-    }
-    obj.info(`- HEVC Supported: ${str11}`);
     const _HermesInternal6 = HermesInternal;
     obj.info("- Progress Update Granularity: " + videoQuality.progressUpdateGranularity);
   }
 };
 export const calculateOptimalBitrate = function calculateOptimalBitrate(videoMetadata, result, bitrateFloor) {
   return Math.min(Math.max(videoMetadata.bitRate, bitrateFloor), result.targetBitrate);
-};
-export const shouldUseHEVC = function shouldUseHEVC(rotationDegrees) {
-  let tmp = !arg1;
-  if (arg1) {
-    tmp = !arg2;
-  }
-  let tmp3 = !tmp;
-  if (!tmp) {
-    let tmp4 = arg3;
-    if (arg3) {
-      tmp4 = 0 !== rotationDegrees.rotationDegrees;
-    }
-    if (tmp4) {
-      tmp4 = !arg4;
-    }
-    tmp3 = !tmp4;
-  }
-  return tmp3;
 };

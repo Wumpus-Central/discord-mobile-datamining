@@ -1,8 +1,8 @@
 // discord_app/errors/APIError.tsx
 import set from "../../_runtime/00002_set.js";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../Constants.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const Links = ME.Links;
 const V8APIError = sendRequest.V8APIError;

@@ -1,7 +1,7 @@
 // discord_app/stores/ApplicationStreamingStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import setDefault from "../utils/Durations.tsx";
 import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import canStreamInChannel from "../modules/go_live/utils/StreamPermissionUtils.tsx";
 import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
@@ -721,7 +721,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    let obj = sourceId(4544);
+    let obj = sourceId(4612);
     obj = { streamType, guildId, channelId, ownerId: store2.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     let startsWithResult;
@@ -815,13 +815,13 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       } else if (reason === tmp3.UNAUTHORIZED) {
         FAILED = tmp22.FAILED;
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
-        let obj = guildId(4544);
+        let obj = guildId(4612);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(2008)(13808, dependencyMap.paths).then((arg0) => {
+        guildId(1896)(13830, dependencyMap.paths).then((arg0) => {
           arg0.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = guildId(2008)(13808, dependencyMap.paths);
+        const promise = guildId(1896)(13830, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

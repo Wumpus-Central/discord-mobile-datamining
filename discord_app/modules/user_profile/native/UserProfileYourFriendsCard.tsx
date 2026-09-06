@@ -54,7 +54,7 @@ export default function UserProfileYourFriendsCard(arg0) {
       RelationshipTypes.FRIEND,
     );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = lib(9965).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = lib(9848).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -68,7 +68,7 @@ export default function UserProfileYourFriendsCard(arg0) {
     const takeResult = found.take(5);
     const tmp3 = closure_1_8;
     const tmp4 = lib;
-    let valueResult = mapped.filter(lib(1470).isNotNullish).value();
+    let valueResult = mapped.filter(lib(1369).isNotNullish).value();
     if (valueResult.length >= 5) {
       dependencyMap(valueResult);
     } else {
@@ -83,11 +83,11 @@ export default function UserProfileYourFriendsCard(arg0) {
         .take(5 - valueResult.length)
         .map(tmp3.getUser);
       const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
-      valueResult = mapped2.filter(tmp4(1470).isNotNullish).value();
+      valueResult = mapped2.filter(tmp4(1369).isNotNullish).value();
       const items = [];
       HermesBuiltin.arraySpread(valueResult, HermesBuiltin.arraySpread(valueResult, 0));
       dependencyMap(items);
-      const iter2 = mapped2.filter(tmp4(1470).isNotNullish);
+      const iter2 = mapped2.filter(tmp4(1369).isNotNullish);
     }
   }, items2);
   const items3 = [first, ,];

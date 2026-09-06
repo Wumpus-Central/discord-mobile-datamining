@@ -2,7 +2,7 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../../reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE_TIMING from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingNone from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import AnimatedRenderItemDefault from "../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
@@ -32,7 +32,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
     }
     return tmp2;
   }, items);
-  let obj = zIndex(586);
+  let obj = zIndex(504);
   const items1 = [closure_5];
   const stateFromStores = obj.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const tmp6 = useSafeAreaInsetsDefault();
@@ -47,17 +47,17 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj[1] = closure_7(zIndex(4204).BountiesScrollGradientRive, {
+  obj[1] = closure_7(zIndex(4271).BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",
     withReducedMotion: str,
   });
-  const items5 = [closure_7(_modDef4217.View, obj)];
+  const items5 = [closure_7(_modDef4296.View, obj)];
   const items6 = [tmp.content, memo1, opacityStyle];
-  items5[1] = closure_7(_modDef4217.View, { style: items6, onLayout: onContentLayout, children });
+  items5[1] = closure_7(_modDef4296.View, { style: items6, onLayout: onContentLayout, children });
   obj[2] = items5;
-  return closure_8(_modDef4217.View, obj);
+  return closure_8(_modDef4296.View, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {

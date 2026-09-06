@@ -15,7 +15,7 @@ const result = require("set").fileFinishedImporting("modules/video_calls/native/
 
 export default function SingleScreenshare(channel) {
   channel = channel.channel;
-  channel(4946)(() => {
+  channel(4992)(() => {
     callback();
   });
   const obj = {
@@ -36,5 +36,5 @@ export default function SingleScreenshare(channel) {
     stageStreamContainer = tmp.stageStreamContainer;
   }
   obj[3] = stageStreamContainer;
-  return tmp3(channel(10133), obj);
+  return tmp3(channel(10024), obj);
 }

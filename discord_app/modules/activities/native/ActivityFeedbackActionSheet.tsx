@@ -37,13 +37,13 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
     trackReport: null,
   };
   const tmp2 = getActivityReportOptionsDefault(true, true === prop);
-  const intl = activityApplication(1233).intl;
+  const intl = activityApplication(1114).intl;
   obj = { applicationName: activityApplication.name };
-  obj[0] = intl.formatToPlainString(activityApplication(1233).t.QXYwoD, obj);
-  const intl2 = activityApplication(1233).intl;
-  obj[2] = intl2.string(activityApplication(1233).t["9hk2KF"]);
-  const intl3 = activityApplication(1233).intl;
-  obj[3] = intl3.string(activityApplication(1233).t.g1q5fr);
+  obj[0] = intl.formatToPlainString(activityApplication(1114).t.QXYwoD, obj);
+  const intl2 = activityApplication(1114).intl;
+  obj[2] = intl2.string(activityApplication(1114).t["9hk2KF"]);
+  const intl3 = activityApplication(1114).intl;
+  obj[3] = intl3.string(activityApplication(1114).t.g1q5fr);
   obj[4] = tmp2;
   obj[5] = items;
   obj[6] = ActivityFeedbackReasons.OTHER;

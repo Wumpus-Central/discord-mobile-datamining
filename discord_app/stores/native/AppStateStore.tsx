@@ -2,9 +2,9 @@
 import set from "../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
+import ME from "../../Constants.tsx";
+import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
 import promise from "../../utils/AnalyticsUtils.tsx";
 
 const AppStates = ME.AppStates;

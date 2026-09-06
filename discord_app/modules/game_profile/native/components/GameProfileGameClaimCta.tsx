@@ -77,10 +77,10 @@ export default function GameProfileGameClaimCta(trackAction) {
   }
   if (someResult == null) {
     let obj = { variant: "secondary", size: "md", text: null, onPress: null };
-    const intl = trackAction(1233).intl;
-    obj[2] = intl.string(trackAction(1233).t["mqg+to"]);
+    const intl = trackAction(1114).intl;
+    obj[2] = intl.string(trackAction(1114).t["mqg+to"]);
     obj[3] = callback;
-    let tmp3 = jsx(trackAction(4929).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+    let tmp3 = jsx(trackAction(4975).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }

@@ -1,7 +1,7 @@
 // discord_app/actions/FriendsActionCreators.tsx
 import set from "../../_runtime/00002_set.js";
-import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import ME from "../Constants.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
 import trackFriendsListClickedDefault from "../modules/app_analytics/track/friends_list_viewed/trackFriendListClicked.tsx";
 

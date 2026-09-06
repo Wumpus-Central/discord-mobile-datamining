@@ -25,7 +25,7 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   }
   const obj2 = useUserCommunicationDisabled;
   const items = [closure_3];
-  let stateFromStores = tmp(586).useStateFromStores(items, () => {
+  let stateFromStores = tmp(504).useStateFromStores(items, () => {
     let tmp = null != channel;
     if (tmp) {
       tmp = null != message;
@@ -79,7 +79,7 @@ export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
     const tmp4 = Permissions;
   }
   if (hasItem) {
-    const REPLYABLE = tmp(683).MessageTypesSets.REPLYABLE;
+    const REPLYABLE = tmp(1089).MessageTypesSets.REPLYABLE;
     hasItem = REPLYABLE.has(type.type);
   }
   currentUser = currentUser.getCurrentUser();

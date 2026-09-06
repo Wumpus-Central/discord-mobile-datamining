@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/ModeratorOverlayState.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import identity from "../../../../../_runtime/00697_identity.js";
+import identity from "../../../../../_runtime/01244_identity.js";
 
 let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
@@ -10,7 +10,7 @@ let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
     dismissOverlay(arg0) {
       const overlayDismissedChannelIds = dependencyMap().overlayDismissedChannelIds;
       overlayDismissedChannelIds.add(arg0);
-      callback(702).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
+      callback(1249).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
     },
   };
   return obj;
@@ -21,12 +21,12 @@ export const useModeratorOverlayChannelState = function useModeratorOverlayChann
   const _require = id;
   dependencyMap = callback(
     (dismissOverlay) => dismissOverlay.dismissOverlay,
-    require("../../../../../_runtime/04105_isIterable.js").shallow,
+    require("../../../../../_runtime/04184_isIterable.js").shallow,
   );
   const items = [
     !callback(
       (overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds,
-      require("../../../../../_runtime/04105_isIterable.js").shallow,
+      require("../../../../../_runtime/04184_isIterable.js").shallow,
     ).has(id),
     () => callback(closure_0),
   ];

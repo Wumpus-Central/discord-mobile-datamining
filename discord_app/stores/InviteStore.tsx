@@ -1,8 +1,8 @@
 // discord_app/stores/InviteStore.tsx
 import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import ME from "../Constants.tsx";
 import readSnowflake from "../modules/instant_invite/InviteCodeUtils.tsx";
 
 function updateInvite(code, arg1) {
@@ -113,6 +113,7 @@ const inviteStore = new InviteStore(dispatcherDefault, {
       arg0.target_channel_id = code.invite.target_channel_id;
       arg0.target_message_id = code.invite.target_message_id;
       arg0.liveliness = code.invite.liveliness;
+      arg0.guild_experiments = code.invite.guild_experiments;
     });
   },
   INVITE_RESOLVE_FAILURE: handleInviteResolveFailure,

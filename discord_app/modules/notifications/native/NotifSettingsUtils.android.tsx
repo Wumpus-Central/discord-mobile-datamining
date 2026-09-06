@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/native/NotifSettingsUtils.android.tsx
 import set from "../../../../_runtime/00002_set.js";
-import _modDef1205 from "../../../utils/SentryUtils.native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import _modDef1232 from "../../../utils/SentryUtils.native.tsx";
 import NativeNotifSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
 import items2 from "../NotificationSettingsConstants.tsx";
 
@@ -61,7 +61,7 @@ function formatSetting(item10022, arg1) {
   }
 }
 function buildChannelsAndMapping() {
-  let obj = map(14344);
+  let obj = map(14450);
   const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {
@@ -197,7 +197,7 @@ export default {
         obj = { channels: null, inheritedImportances: null };
         obj[0] = channels.map((id) => id.id);
         const _Array = Array;
-        const tmpResult = _modDef1205;
+        const tmpResult = _modDef1232;
         obj[1] = Array.from(inheritedImportances.entries()).map((arg0) => {
           [tmp, tmp2] = arg0;
           return "NotifSettings#" + tmp + " -> " + tmp2;

@@ -49,7 +49,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     obj1[3] = guildIconSource;
     return jsx(preloadDefault, { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null });
   } else {
-    const acronym = tmp2(1901).getAcronym(guild.name);
+    const acronym = tmp2(1925).getAcronym(guild.name);
     let num = table[acronym.length - 1];
     if (num == null) {
       num = 10;
@@ -75,7 +75,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     items2[1] = obj4;
     obj3[1] = items2;
     obj3[2] = acronym;
-    obj2[4] = jsx(tmp2(1296).LegacyText, { numberOfLines: 1, style: null, children: null });
+    obj2[4] = jsx(tmp2(1178).LegacyText, { numberOfLines: 1, style: null, children: null });
     return (
       <View accessible accessibilityRole="image" accessibilityLabel={null} style={null}>
         {null}

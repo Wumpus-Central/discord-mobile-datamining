@@ -4,7 +4,7 @@ import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 import { AutomodTriggerType } from "Constants.tsx";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
-import identity from "../../../_runtime/00697_identity.js";
+import identity from "../../../_runtime/01244_identity.js";
 
 const require = arg1;
 let closure_7 = {};
@@ -49,7 +49,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
       someResult = items.some((id) => id.id === closure_2);
-      callback(702).batchUpdates(() => {
+      callback(1249).batchUpdates(() => {
         obj = { rules: null, error: null };
         obj = {};
         const merged = Object.assign(rules);
@@ -76,7 +76,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         arg0[NumberResult] = items.filter((id) => id.id !== closure_0);
         return arg0;
       }, {});
-      callback(702).batchUpdates(() => {
+      callback(1249).batchUpdates(() => {
         let obj = { rules: null, error: null };
         obj = {};
         const merged = Object.assign(rules);
@@ -241,7 +241,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
       const items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, require("../../../_runtime/04105_isIterable.js").shallow),
+    }, require("../../../_runtime/04184_isIterable.js").shallow),
     2,
   );
   first = tmp2[0];
@@ -331,7 +331,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
       const items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, require("../../../_runtime/04105_isIterable.js").shallow),
+    }, require("../../../_runtime/04184_isIterable.js").shallow),
     2,
   );
   first = tmp2[0];
@@ -482,5 +482,5 @@ export const useAutomodRulesList = function useAutomodRulesList(arg0) {
     }
     obj = { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
     return obj;
-  }, require("../../../_runtime/04105_isIterable.js").shallow);
+  }, require("../../../_runtime/04184_isIterable.js").shallow);
 };

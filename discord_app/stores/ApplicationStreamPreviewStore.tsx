@@ -2,8 +2,8 @@
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import StreamIssueReportReasons from "../modules/go_live/Constants.tsx";
+import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import set from "../../_runtime/00002_set.js";
 
 function reset() {

@@ -14,12 +14,12 @@ function AndroidAuthRadioGroup(setAuthenticator) {
   setAuthenticator = setAuthenticator.setAuthenticator;
   ({ authenticatorSelection, inProgress } = setAuthenticator);
   let obj = { value: obj1.ANDROID_PASSKEY, name: null };
-  const intl = setAuthenticator(1233).intl;
-  obj[1] = intl.string(setAuthenticator(1233).t.PVVXRI);
+  const intl = setAuthenticator(1114).intl;
+  obj[1] = intl.string(setAuthenticator(1114).t.PVVXRI);
   const items = [obj];
   obj = { value: obj1.AUTHENTICATE, name: null };
-  const intl2 = setAuthenticator(1233).intl;
-  obj[1] = intl2.string(setAuthenticator(1233).t.TKop3X);
+  const intl2 = setAuthenticator(1114).intl;
+  obj[1] = intl2.string(setAuthenticator(1114).t.TKop3X);
   items[1] = obj;
   obj = {
     style: callback().radioItem,
@@ -31,7 +31,7 @@ function AndroidAuthRadioGroup(setAuthenticator) {
     disabled: inProgress,
     withSpacing: true,
   };
-  return jsx(setAuthenticator(1296).RadioGroup, {
+  return jsx(setAuthenticator(1178).RadioGroup, {
     style: callback().radioItem,
     options: items,
     onChange(value) {
@@ -68,7 +68,7 @@ export default function WebAuthnScreen(arg0) {
   [tmp3, c1] = first(React.useState(false), 2);
   const tmp4 = first(React.useState(undefined), 2);
   dependencyMap = tmp4[1];
-  obj1 = finish(1234);
+  obj1 = finish(1115);
   let tmpResult = tmp(React.useState(obj1.isAndroid() ? tmp7.ANDROID_PASSKEY : tmp7.AUTHENTICATE), 2);
   first = tmpResult[0];
   tmpResult = tmp(obj.useState(false), 2);
@@ -113,11 +113,11 @@ export default function WebAuthnScreen(arg0) {
   };
   const tmp15 = importDefault;
   const tmp2 = first(React.useState(false), 2);
-  let intl = tmp5(1233).intl;
-  obj[0] = intl.string(finish(1233).t.saHocI);
-  const intl2 = tmp5(1233).intl;
-  obj[1] = intl2.string(finish(1233).t.YpMrqM);
-  obj[2] = challenge(finish(14569).KeyImage, {});
+  let intl = tmp5(1114).intl;
+  obj[0] = intl.string(finish(1114).t.saHocI);
+  const intl2 = tmp5(1114).intl;
+  obj[1] = intl2.string(finish(1114).t.YpMrqM);
+  obj[2] = challenge(finish(14676).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = _promptForRegisterCredentialDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj = { authenticatorSelection: null, setAuthenticator: null, inProgress: null };
@@ -134,8 +134,8 @@ export default function WebAuthnScreen(arg0) {
   obj[3] = shouldDisplayAndroidFidoSelector;
   obj1 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
   const tmp16 = MFAOptionScreenDefault;
-  const intl3 = tmp5(1233).intl;
-  obj1[1] = intl3.string(finish(1233).t.Xr3Eks);
+  const intl3 = tmp5(1114).intl;
+  obj1[1] = intl3.string(finish(1114).t.Xr3Eks);
   let tmp20 = tmp3;
   if (!tmp3) {
     tmp20 = tmp11;

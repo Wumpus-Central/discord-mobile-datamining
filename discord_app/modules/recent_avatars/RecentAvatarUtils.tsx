@@ -3,7 +3,7 @@ import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
-import parseDefault from "../../../_runtime/01482_parse.js";
+import parseDefault from "../../../_runtime/01471_parse.js";
 import AssetOriginTypes from "../profile_customization/ProfilePendingImageTypes.tsx";
 
 function getArchivedAvatarURL(allowWebp) {
@@ -36,7 +36,7 @@ function getArchivedAvatarURL(allowWebp) {
       let str6 = "gif";
       if (flag) {
         str6 = "gif";
-        if (tmp2(1430).SUPPORTS_WEBP) {
+        if (tmp2(1396).SUPPORTS_WEBP) {
           str6 = "webp";
         }
       }
@@ -49,8 +49,8 @@ function getArchivedAvatarURL(allowWebp) {
     obj[0] = obj3.getBestMediaProxySize(allowWebp.size * handleImageLoad.getDevicePixelRatio());
     let isAnimatedIconHashResult = "webp" === str2 && canAnimate;
     if (isAnimatedIconHashResult) {
-      isAnimatedIconHashResult = tmp6(1430).isAnimatedIconHash(storageHash);
-      const tmp6Result = tmp6(1430);
+      isAnimatedIconHashResult = tmp6(1396).isAnimatedIconHash(storageHash);
+      const tmp6Result = tmp6(1396);
     }
     if (isAnimatedIconHashResult) {
       obj.animated = true;
@@ -121,20 +121,20 @@ export const generateAvatarDescription = function generateAvatarDescription(maxS
   }
   if (assetOrigin !== AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
     if (filename == null) {
-      const intl = tmp3(1233).intl;
-      filename = intl.string(tmp3(1233).t.lqaIxI);
+      const intl = tmp3(1114).intl;
+      filename = intl.string(tmp3(1114).t.lqaIxI);
     }
     const _Date = Date;
     const date = new Date();
-    const intl2 = tmp3(1233).intl;
-    if (assetOrigin === tmp3(7773).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
-      let DYil93 = tmp3(1233).t.eC2sZi;
+    const intl2 = tmp3(1114).intl;
+    if (assetOrigin === tmp3(6989).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
+      let DYil93 = tmp3(1114).t.eC2sZi;
     } else {
-      DYil93 = tmp3(1233).t.DYil93;
+      DYil93 = tmp3(1114).t.DYil93;
     }
     obj = { name: null, dateTime: null };
     obj[0] = filename;
-    obj[1] = date.toLocaleString(tmp3(1233).intl.currentLocale, {
+    obj[1] = date.toLocaleString(tmp3(1114).intl.currentLocale, {
       year: "numeric",
       day: "numeric",
       month: "long",
@@ -149,12 +149,12 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   if (flag === undefined) {
     flag = true;
   }
-  let tmpResult = tmp(1430);
+  let tmpResult = tmp(1396);
   if (tmpResult.isAnimatedIconHash(storageHash)) {
     let str5 = "gif";
     if (flag) {
       str5 = "gif";
-      if (tmp(1430).SUPPORTS_WEBP) {
+      if (tmp(1396).SUPPORTS_WEBP) {
         str5 = "webp";
       }
     }
@@ -166,7 +166,7 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
       let str3 = "png";
       if (flag) {
         str3 = "png";
-        if (tmp(1430).SUPPORTS_WEBP) {
+        if (tmp(1396).SUPPORTS_WEBP) {
           str3 = "webp";
         }
       }
@@ -174,8 +174,8 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
     }
   }
   if (null == arg1) {
-    const intl = tmp(1233).intl;
-    let stringResult = intl.string(tmp(1233).t.lqaIxI);
+    const intl = tmp(1114).intl;
+    let stringResult = intl.string(tmp(1114).t.lqaIxI);
   } else {
     stringResult = arg1.split(",")[0];
   }
@@ -189,7 +189,7 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   } else {
     str9 = "image/webp";
     if ("webp" !== str) {
-      tmpResult = tmp(1470);
+      tmpResult = tmp(1369);
       tmpResult.assertNever(str);
     }
   }

@@ -40,10 +40,10 @@ function isVoicePanelParticipantFocusable(sharedValue1, closure_1, id2, arg3, cl
       if (callback2(participant)) {
         let result = null != obj3.getActiveStreamForUser(participant.user.id, sharedValue1);
       } else if (callback3(participant)) {
-        let tmp4Result = tmp4(9608);
+        let tmp4Result = tmp4(9622);
         result = tmp4Result.canRenderParticipantVideo(participant, tmp);
       } else {
-        tmp4Result = tmp4(1470);
+        tmp4Result = tmp4(1369);
         tmp4Result.assertNever(participant);
       }
       return result;

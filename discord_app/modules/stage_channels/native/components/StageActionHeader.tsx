@@ -1,15 +1,15 @@
 // discord_app/modules/stage_channels/native/components/StageActionHeader.tsx
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
 import collectGuildAnalyticsMetadata from "../../../app_analytics/AppAnalyticsUtils.tsx";
-import _modDef4724 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4763 from "../../../../actions/ModalActionCreators.tsx";
 import openChannelCallModal from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import componentDidMountDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/10137_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/10139_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10028_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/10030_registerAsset.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import CameraButton from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -384,14 +384,14 @@ export const closeStageModal = function closeStageModal(id) {
   const obj3 = collectGuildAnalyticsMetadata;
   componentDidMountDefault.setHidden(false);
   const obj4 = componentDidMountDefault;
-  const obj5 = _modDef4724;
+  const obj5 = _modDef4763;
   obj5.popWithKey(openChannelCallModal.getVoiceChannelKey(id.id));
 };
 export { HideStageChannelCallIcon };
 export { StageChannelCallHeader };
 export const HideChannelCallButton = function HideChannelCallButton(channel) {
   channel = channel.channel;
-  let obj = channel(586);
+  let obj = channel(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   obj = {
@@ -404,8 +404,8 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
   };
   const tmp = callback2();
   obj[0] = registerAssetDefault;
-  const intl = channel(1233).intl;
-  obj[1] = intl.string(channel(1233).t.cpT0Cq);
+  const intl = channel(1114).intl;
+  obj[1] = intl.string(channel(1114).t.cpT0Cq);
   obj[2] = function onPress() {
     let obj = closure_1_1(closure_1_2[14]);
     obj = { video_layout: "pop out" };
@@ -420,7 +420,7 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
     const participant = closure_1_1(closure_1_2[23]).selectParticipant(channel.id, null);
   };
   obj[3] = tmp.iconContainer;
-  obj[5] = callback(channel(1296).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+  obj[5] = callback(channel(1178).MaskedBadge, { value: stateFromStores, maskStyle: {} });
   return callback(ChannelCallNavigatorIconDefault, obj);
 };
 export { StageSettingsButton };

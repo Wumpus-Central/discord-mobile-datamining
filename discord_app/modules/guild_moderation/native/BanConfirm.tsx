@@ -1,6 +1,6 @@
 // discord_app/modules/guild_moderation/native/BanConfirm.tsx
-import setDefault from "../../../utils/Durations.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";

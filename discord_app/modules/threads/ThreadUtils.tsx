@@ -1,8 +1,8 @@
 // discord_app/modules/threads/ThreadUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import getTimestampStringDefault from "getTimestampString.tsx";
 import collectThreadMetadata from "../app_analytics/ThreadAnalyticsUtils.tsx";
@@ -55,7 +55,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
   if (null != result) {
     const guildId = closure_1_0.getGuildId();
     const parent_id = closure_1_0.parent_id;
-    let tmpResult = tmp(5491);
+    let tmpResult = tmp(7114);
     const currentChannelSettings = tmpResult.getCurrentChannelSettings(guildId, parent_id);
     let num = closure_7.flags(closure_1_0.id);
     if (num == null) {
@@ -83,7 +83,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     }
     let notificationAnalyticsString = getNotificationAnalyticsString(num);
     const isMutedResult = closure_7.isMuted(closure_1_0.id);
-    tmpResult = tmp(5491);
+    tmpResult = tmp(7114);
     let result1 = tmpResult.muteConfigToTimestamp(obj7.getMuteConfig(closure_1_0.id));
     ({ can_send_message, parent_channel_type } = result);
     obj = {};
@@ -108,8 +108,8 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     obj.new_thread_is_muted = muted;
     obj.old_thread_muted_until = result1;
     if (null != c1.mute_config) {
-      result1 = tmp(5491).muteConfigToTimestamp(c1.mute_config);
-      const tmpResult1 = tmp(5491);
+      result1 = tmp(7114).muteConfigToTimestamp(c1.mute_config);
+      const tmpResult1 = tmp(7114);
     }
     obj.new_thread_muted_until = result1;
     expandEventPropertiesDefault.track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj);

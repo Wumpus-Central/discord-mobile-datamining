@@ -52,7 +52,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
   function submitSelection() {
     return lib(guildIdentity[9]).hideActionSheet();
   }
-  const intl = tmp4(1233).intl;
+  const intl = tmp4(1114).intl;
   obj[2] = intl.string(getSystemLocale.t["ZImm/x"]);
   callback = obj.useCallback((arg0) => {
     if (0 === arg0.length) {
@@ -63,7 +63,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
         guild = guild.getGuild(arg1);
         if (null != guild) {
           const obj = { type: null, value: null, label: null, guild: null };
-          obj[0] = callback(4746).SelectOptionType.GUILD;
+          obj[0] = callback(4792).SelectOptionType.GUILD;
           ({ id: obj[1], name: obj[2] } = guild);
           obj[3] = guild;
           arr.push(obj);
@@ -76,7 +76,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
       obj[0] = arg0;
       reduced = obj.queryGuilds(obj).map((record) => {
         record = record.record;
-        return { type: callback(4746).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+        return { type: callback(4792).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
       });
       const queryGuildsResult = obj.queryGuilds(obj);
     }

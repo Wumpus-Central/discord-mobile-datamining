@@ -79,7 +79,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   if (tmp18Result) {
     obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl = guild(1233).intl;
+    const intl = guild(1114).intl;
     obj1 = { onTemplateOpen: null };
     obj1[0] = function onTemplateOpen() {
       first.dismiss();
@@ -91,12 +91,12 @@ export default function GuildSettingsRoleEditPermission(guild) {
         obj,
       );
     };
-    obj[2] = intl.format(guild(1233).t.ZhSOBy, obj1);
-    tmp18Result = tmp18(guild(4474).Text, obj);
+    obj[2] = intl.format(guild(1114).t.ZhSOBy, obj1);
+    tmp18Result = tmp18(guild(4556).Text, obj);
   }
   tmp18Result = tmp18(tmp19, { children: tmp18Result });
   canResult = applyOverwritesAll.can(obj);
-  const guildPermissionSpec = role(16665).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(16830).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -109,12 +109,12 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17470), { role }), , ,];
-  const tmp14Result = role(16665);
+  const children = [closure_14(role(17630), { role }), , ,];
+  const tmp14Result = role(16830);
   const tmp24 = mapped1.length > 0;
   const tmp25 = closure_16;
   const tmp26 = closure_15;
-  children[1] = closure_14(closure_6, { children: closure_14(guild(6231).SearchField, obj3) });
+  children[1] = closure_14(closure_6, { children: closure_14(guild(7050).SearchField, obj3) });
   children[2] = tmp18Result;
   if (tmp24) {
     const obj4 = {
@@ -215,13 +215,13 @@ export default function GuildSettingsRoleEditPermission(guild) {
     let tmp18Result1 = tmp18(closure_8, obj4);
   } else {
     let obj5 = { Illustration: null, style: null, bodyStyle: null, body: null };
-    obj5[0] = tmp27(9747).NoResultsAlt;
+    obj5[0] = tmp27(9760).NoResultsAlt;
     ({ emptyState: obj10[1], emptyStateText: obj10[2] } = tmp);
-    const intl2 = tmp27(1233).intl;
+    const intl2 = tmp27(1114).intl;
     const obj6 = { query: null };
     obj6[0] = first;
-    obj5[3] = intl2.format(tmp27(1233).t.Psh5OO, obj6);
-    tmp18Result1 = tmp18(tmp27(1296).EmptyState, obj5);
+    obj5[3] = intl2.format(tmp27(1114).t.Psh5OO, obj6);
+    tmp18Result1 = tmp18(tmp27(1178).EmptyState, obj5);
   }
   children[3] = tmp18Result1;
   return tmp25(tmp26, { children });

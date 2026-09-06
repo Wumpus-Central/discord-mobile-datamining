@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import nameFromUserDefault from "../../../utils/UserUtils.tsx";
 import guildHasTag from "../../guild_tag/GuildTagUtils.tsx";
-import AVERAGE_FONT_WIDTH_RATIODefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
 import memoResult1Default from "../../guild_tag/native/GuildTag.tsx";
+import AVERAGE_FONT_WIDTH_RATIODefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { getBadgeName } from "../Constants.tsx";

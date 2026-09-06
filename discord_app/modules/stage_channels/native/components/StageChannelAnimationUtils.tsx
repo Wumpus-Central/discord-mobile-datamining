@@ -1,9 +1,9 @@
 // discord_app/modules/stage_channels/native/components/StageChannelAnimationUtils.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import _mod4217 from "../../../reanimated/ReanimatedRexport.tsx";
+import _mod4296 from "../../../reanimated/ReanimatedRexport.tsx";
 
 let obj = { duration: 250, easing: null };
-const Easing = _mod4217.Easing;
+const Easing = _mod4296.Easing;
 obj[1] = Easing.bezier(0.66, 0, 0.2, 1);
 let closure_4 = {
   code: "function StageChannelAnimationUtilsTsx1(){const{isInvited,actionBarHeight,ACTION_BAR_SAFE_AREA_PADDING,safeAreaTop,controlPadding}=this.__closure;return isInvited?actionBarHeight+ACTION_BAR_SAFE_AREA_PADDING+safeAreaTop:controlPadding;}",

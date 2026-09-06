@@ -112,8 +112,11 @@ const items = [
   DismissibleContent.DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION,
   DismissibleContent.DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE,
   DismissibleContent.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
+  DismissibleContent.DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE,
   DismissibleContent.DismissibleContent.SOUNDBOARD_DESKTOP_NUX,
   DismissibleContent.DismissibleContent.TINY_BRONCO,
+  DismissibleContent.DismissibleContent.TINY_BRONCO_SETTINGS,
+  DismissibleContent.DismissibleContent.TINY_BRONCO_NOTICE,
 ];
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");

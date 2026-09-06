@@ -158,7 +158,7 @@ Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
 });
 obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   let authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticate;
-  let isAndroidResult = authenticatePasskey(1234).isAndroid();
+  let isAndroidResult = authenticatePasskey(1115).isAndroid();
   if (isAndroidResult) {
     const DCDSecurityKeyManager = tmp.DCDSecurityKeyManager;
     authenticatePasskey = undefined;

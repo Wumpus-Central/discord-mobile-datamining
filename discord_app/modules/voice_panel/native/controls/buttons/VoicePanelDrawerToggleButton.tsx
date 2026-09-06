@@ -40,9 +40,9 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   obj = { style: tmp.iconContainer, children: null };
   const tmp7 = AnimatedButtonWrapperDefault;
   if (isDrawerOpen) {
-    let ChevronSmallUpIcon = tmp2(8953).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = tmp2(11153).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = tmp2(13467).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = tmp2(13573).ChevronSmallUpIcon;
   }
   obj[1] = callback(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
   items1[1] = callback(setDefault, obj);

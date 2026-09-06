@@ -45,7 +45,7 @@ let result = require("set").fileFinishedImporting("modules/display_name_styles/n
 export default function GummyStripesFromHue(hue) {
   hue = hue.hue;
   const obj = { children: null };
-  const GUMMY_STRIPES = hue(1937).GUMMY_STRIPES;
+  const GUMMY_STRIPES = hue(1388).GUMMY_STRIPES;
   obj[0] = GUMMY_STRIPES.map((hueShift) =>
     closure_1_4(
       closure_1_8,

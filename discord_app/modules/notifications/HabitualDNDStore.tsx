@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/HabitualDNDStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import closure_3 from "../../stores/SelfPresenceStore.tsx";
 import { StatusTypes } from "../../Constants.tsx";
@@ -46,7 +46,7 @@ const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
         arr = arr.push(Date.now());
         const found = arr.filter((arg0) => {
           const timestamp = Date.now();
-          return arg0 > timestamp - 5 * callback(684).Millis.DAY;
+          return arg0 > timestamp - 5 * callback(1090).Millis.DAY;
         });
         arr = found;
         let someResult = found.length >= 4;
@@ -59,7 +59,7 @@ const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
         if (someResult) {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            callback(706).dispatch({ type: "HABITUAL_DND_CLEAR" });
+            callback(573).dispatch({ type: "HABITUAL_DND_CLEAR" });
           }, 15 * setDefault.Millis.SECOND);
         }
       }

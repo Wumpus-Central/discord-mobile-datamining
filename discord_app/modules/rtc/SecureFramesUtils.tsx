@@ -3,13 +3,13 @@ import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
-import hooksDefault from "../../../_runtime/04074_hooks.js";
+import hooksDefault from "../../../_runtime/04153_hooks.js";
 import nameFromUserDefault from "../../utils/UserUtils.tsx";
 import getNicknameDefault from "../../utils/NicknameUtils.tsx";
 import setDefault2 from "../../actions/AlertActionCreators.tsx";
 import set from "../../../discord_common/js/packages/libdave/index.tsx";
 import savePersistentCodesEnabledDefault from "SecureFramesActionCreators.tsx";
-import _modDef9869 from "SecureFramesPlatformUtils.native.tsx";
+import _modDef9154 from "SecureFramesPlatformUtils.native.tsx";
 import trackRTCPanelViewed from "SecureFramesTracking.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -108,7 +108,7 @@ function _isPublicKeyMatch() {
               closure_4 = tmp3;
               closure_3 = tmp7;
               c6 = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               obj1 = { url: null, body: null, rejectWithError: false };
               obj1[0] = closure_1_15.VOICE_MATCH_PUBLIC_KEY(callback);
               let obj2 = { public_key: null, key_version: null };
@@ -124,7 +124,7 @@ function _isPublicKeyMatch() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            obj2 = callback2(1205);
+            obj2 = callback2(1232);
             obj2.captureException(callback);
             throw callback;
           } else if (arg0 === 1) {
@@ -582,7 +582,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
   importDefault = verifiedKey;
-  let obj = _modDef9869;
+  let obj = _modDef9154;
   obj = { title: null, subtitle: null, onConfirm: null };
   const intl = require("../../intl/index.native.tsx").intl;
   obj[0] = intl.string(require("../../intl/index.native.tsx").t.hdL152);
@@ -610,49 +610,49 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
     const obj = closure_1_1(closure_1_2[11]);
     const result1 = userId(closure_1_2[12]).trackE2EESettingsUserDelete();
   };
-  let result = _modDef9869.openSecureFramesUpdateConfirmation(obj);
+  let result = _modDef9154.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
   let obj = hooksDefault();
   const diffResult = obj.diff(hooksDefault(timestamp), "s");
   if (diffResult > 12 * setDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
-    const rounded = Math.round(diffResult / (12 * tmp(684).Seconds.DAYS_30));
+    const rounded = Math.round(diffResult / (12 * tmp(1090).Seconds.DAYS_30));
     const intl7 = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = rounded;
     return intl7.formatToPlainString(getSystemLocale.t.F1wqkD, obj);
-  } else if (diffResult > tmp(684).Seconds.DAYS_30) {
+  } else if (diffResult > tmp(1090).Seconds.DAYS_30) {
     const _Math5 = Math;
-    const rounded1 = Math.round(diffResult / tmp(684).Seconds.DAYS_30);
+    const rounded1 = Math.round(diffResult / tmp(1090).Seconds.DAYS_30);
     const intl6 = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = rounded1;
     return intl6.formatToPlainString(getSystemLocale.t["iT+b+2"], obj);
-  } else if (diffResult > 7 * tmp(684).Seconds.DAY) {
+  } else if (diffResult > 7 * tmp(1090).Seconds.DAY) {
     const _Math4 = Math;
-    const rounded2 = Math.round(diffResult / (7 * tmp(684).Seconds.DAY));
+    const rounded2 = Math.round(diffResult / (7 * tmp(1090).Seconds.DAY));
     const intl5 = getSystemLocale.intl;
     obj1 = { count: null };
     obj1[0] = rounded2;
     return intl5.formatToPlainString(getSystemLocale.t.dLurKZ, obj1);
-  } else if (diffResult > tmp(684).Seconds.DAY) {
+  } else if (diffResult > tmp(1090).Seconds.DAY) {
     const _Math3 = Math;
-    const rounded3 = Math.round(diffResult / tmp(684).Seconds.DAY);
+    const rounded3 = Math.round(diffResult / tmp(1090).Seconds.DAY);
     const intl4 = getSystemLocale.intl;
     const obj2 = { count: null };
     obj2[0] = rounded3;
     return intl4.formatToPlainString(getSystemLocale.t.LE8a2H, obj2);
-  } else if (diffResult > tmp(684).Seconds.HOUR) {
+  } else if (diffResult > tmp(1090).Seconds.HOUR) {
     const _Math2 = Math;
-    const rounded4 = Math.round(diffResult / tmp(684).Seconds.HOUR);
+    const rounded4 = Math.round(diffResult / tmp(1090).Seconds.HOUR);
     const intl3 = getSystemLocale.intl;
     const obj3 = { count: null };
     obj3[0] = rounded4;
     return intl3.formatToPlainString(getSystemLocale.t.KULxVS, obj3);
-  } else if (diffResult > tmp(684).Seconds.MINUTE) {
+  } else if (diffResult > tmp(1090).Seconds.MINUTE) {
     const _Math = Math;
-    const rounded5 = Math.round(diffResult / tmp(684).Seconds.MINUTE);
+    const rounded5 = Math.round(diffResult / tmp(1090).Seconds.MINUTE);
     const intl2 = getSystemLocale.intl;
     const obj4 = { count: null };
     obj4[0] = rounded5;

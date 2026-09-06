@@ -8,7 +8,7 @@ let result = require("set").fileFinishedImporting(
 );
 
 export default function handleAcceptEventInstantInvite(code) {
-  let obj = guildScheduledEvent(9148);
+  let obj = guildScheduledEvent(10294);
   if (!obj.handleNSFWGuildInvite(code)) {
     if (tmpResult.isGuildScheduledEventInviteEmbed(code)) {
       if (null != code.code) {
@@ -30,6 +30,6 @@ export default function handleAcceptEventInstantInvite(code) {
         }
       }
     }
-    tmpResult = guildScheduledEvent(7491);
+    tmpResult = guildScheduledEvent(7735);
   }
 }

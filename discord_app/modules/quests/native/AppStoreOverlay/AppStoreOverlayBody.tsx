@@ -124,7 +124,7 @@ export const AppStoreOverlayBody = function AppStoreOverlayBody(metadata) {
   if (tmp16Result) {
     const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: null };
     obj7[2] = metadata.subtitle;
-    tmp16Result = tmp16(tmp17(4474).Text, obj7);
+    tmp16Result = tmp16(tmp17(4556).Text, obj7);
   }
   items3[1] = tmp16Result;
   obj5[1] = items3;
@@ -148,9 +148,9 @@ export const AppStoreOverlayBody = function AppStoreOverlayBody(metadata) {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.mediaSection;
     const obj10 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp17(1233).intl;
-    obj10[2] = intl.string(tmp17(1233).t["EV1W/L"]);
-    const items4 = [tmp16(tmp17(4474).Text, obj10)];
+    const intl = tmp17(1114).intl;
+    obj10[2] = intl.string(tmp17(1114).t["EV1W/L"]);
+    const items4 = [tmp16(tmp17(4556).Text, obj10)];
     const obj11 = { media: null, onGetGamePress: null };
     obj11[0] = metadata.media;
     obj11[1] = onMediaGetGamePress;
@@ -180,9 +180,9 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   let token;
   ({ onInstallPress, onLayout } = arg0);
   const tmp = callback3();
-  bottom = token(1627)().bottom;
-  let obj = bottom(4197);
-  token = obj.useToken(token(709).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  bottom = token(1611)().bottom;
+  let obj = bottom(4262);
+  token = obj.useToken(token(576).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   const items1 = [bottom];
   const memo = React.useMemo(() => {
@@ -199,13 +199,13 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
     start: VerticalGradient.START,
     end: VerticalGradient.END,
   };
-  const items2 = [callback(token(4941), obj)];
+  const items2 = [callback(token(4987), obj)];
   obj1 = { style: memo1, children: null };
   const obj2 = { size: "lg", text: null, onPress: null };
-  const intl = bottom(1233).intl;
-  obj2[1] = intl.string(bottom(1233).t.lwQdjB);
+  const intl = bottom(1114).intl;
+  obj2[1] = intl.string(bottom(1114).t.lwQdjB);
   obj2[2] = onInstallPress;
-  obj1[1] = callback(bottom(4929).Button, obj2);
+  obj1[1] = callback(bottom(4975).Button, obj2);
   items2[1] = callback(View, obj1);
   obj[2] = items2;
   return callback2(View, obj);

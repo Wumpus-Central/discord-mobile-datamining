@@ -1,7 +1,7 @@
 // discord_app/modules/tti_analytics/native/TTIAnalyticsUtils.tsx
 import isTracingDefault from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import _modDef1232 from "../../../utils/SentryUtils.native.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef1205 from "../../../utils/SentryUtils.native.tsx";
 import getConstantsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import coerceMainRoute from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
@@ -19,7 +19,7 @@ import { AnalyticEvents } from "../../../Constants.tsx";
 import { ACCEPT_INVITE_MODAL_KEY } from "../../accept_invite/native/AcceptInviteConstants.tsx";
 import { StaticChannelRoutes } from "../../channel/ChannelConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import v1 from "../../../../_runtime/00511_v1.js";
+import v1 from "../../../../_runtime/01256_v1.js";
 import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
@@ -160,7 +160,7 @@ function _trackAppUIViewedAsync() {
               closure_5 = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback2(4339).getAppFirstVisibleTimestamp();
+              obj1[0] = callback2(4424).getAppFirstVisibleTimestamp();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -174,15 +174,15 @@ function _trackAppUIViewedAsync() {
           } else {
             closure_4 = arg1;
             closure_5 = closure_3 - closure_4;
-            callback2(4339).reportFullyDrawn();
-            const obj5 = callback2(4339);
+            callback2(4424).reportFullyDrawn();
+            const obj5 = callback2(4424);
             callback2(10).mark("\u2757", "Track app_ui_viewed");
             const obj6 = callback2(10);
             callback2(10).addDetail("TTI", closure_5);
             const obj7 = callback2(10);
             callback2(10).markAt("\u{1F3C3}", "app_opened", closure_4);
             const obj8 = callback2(10);
-            callback(7428).ttiRecorded(closure_5);
+            callback(7675).ttiRecorded(closure_5);
             let _setTimeout = setTimeout;
             let timerId = setTimeout(() => {
               let str = closure_0;
@@ -204,10 +204,10 @@ function _trackAppUIViewedAsync() {
               if (null == timeout) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
-                  callback(9).setTTICallback(/* F124975 */ function() { ... });
+                  callback(9).setTTICallback(/* F125607 */ function() { ... });
                   callback3();
                   c25 = null;
-                }, 15 * callback(684).Millis.SECOND);
+                }, 15 * callback(1090).Millis.SECOND);
                 callback(9).setTTICallback(() => {
                   const tmp = callback2();
                   let flag = false;
@@ -314,7 +314,7 @@ function _logLegacyAppUiViewed() {
               c7 = 1;
               c8 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(4339).getJSBundleTimestamps();
+              obj1[0] = callback(4424).getJSBundleTimestamps();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -345,7 +345,7 @@ function _logLegacyAppUiViewed() {
             obj2.duration_ms_since_required_js_bundle_parsed = callback - JSBundleParsedTimestamp;
             obj2.theme = theme.theme;
             const merged2 = Object.assign(closure_0);
-            callback(695).track(constants.APP_UI_VIEWED, obj2, { logEventProperties: true });
+            callback(1242).track(constants.APP_UI_VIEWED, obj2, { logEventProperties: true });
             c8 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -682,8 +682,8 @@ export const trackAppOpened = function trackAppOpened(launcher) {
   let obj = isTracingDefault;
   obj.mark("\u{1F3C3}", "Track app_opened");
   obj = { openFrom: launcher };
-  _modDef1205.addBreadcrumb({ category: "lifecycle", message: "App opened", data: obj });
-  const obj2 = _modDef1205;
+  _modDef1232.addBreadcrumb({ category: "lifecycle", message: "App opened", data: obj });
+  const obj2 = _modDef1232;
   obj = {};
   const merged = Object.assign(getDeviceMetadata());
   obj.opened_from = launcher;

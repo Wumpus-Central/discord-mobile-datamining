@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/InAppNotificationsSetting.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import useFocusModeEnabled from "../../../notifications/FocusModeUtils.tsx";
@@ -35,8 +35,8 @@ const toggle = createToggle.createToggle({
   useDescription: function useInAppNotificationsDescription() {
     let stringResult;
     if (obj.useFocusModeEnabled()) {
-      const intl = tmp(1233).intl;
-      stringResult = intl.string(tmp(1233).t.cIRG0s);
+      const intl = tmp(1114).intl;
+      stringResult = intl.string(tmp(1114).t.cIRG0s);
     }
     return stringResult;
   },
@@ -68,8 +68,8 @@ let obj = {
   useDescription: function useInAppNotificationsDescription() {
     let stringResult;
     if (obj.useFocusModeEnabled()) {
-      const intl = tmp(1233).intl;
-      stringResult = intl.string(tmp(1233).t.cIRG0s);
+      const intl = tmp(1114).intl;
+      stringResult = intl.string(tmp(1114).t.cIRG0s);
     }
     return stringResult;
   },

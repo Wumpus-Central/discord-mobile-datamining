@@ -37,8 +37,8 @@ export default function PromotionalEmailCheckBox(style) {
       children: null,
     };
     obj[0] = tmp7;
-    const intl = tmp4(1233).intl;
-    obj[1] = intl.string(tmp4(1233).t.ylFCLt);
+    const intl = tmp4(1114).intl;
+    obj[1] = intl.string(tmp4(1114).t.ylFCLt);
     obj[2] = tmp8;
     obj[3] = function onPress() {
       return closure_1_5(!closure_0);
@@ -46,12 +46,12 @@ export default function PromotionalEmailCheckBox(style) {
     obj[4] = tmp.checkboxRow;
     obj1 = { checked: null };
     obj1[0] = tmp3;
-    const items = [callback2(tmp4(7696).FormCheckbox, obj1)];
+    const items = [callback2(tmp4(5617).FormCheckbox, obj1)];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.checkboxLabel;
-    const intl2 = tmp4(1233).intl;
-    obj2[3] = intl2.string(tmp4(1233).t.ylFCLt);
-    items[1] = callback2(tmp4(4474).Text, obj2);
+    const intl2 = tmp4(1114).intl;
+    obj2[3] = intl2.string(tmp4(1114).t.ylFCLt);
+    items[1] = callback2(tmp4(4556).Text, obj2);
     obj[5] = items;
     obj[1] = callback3(closure_3, obj);
     tmp9 = callback2(closure_2, obj);

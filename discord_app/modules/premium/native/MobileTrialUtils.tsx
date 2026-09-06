@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/MobileTrialUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
-import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import GuildFeatures from "../PremiumConstants.tsx";
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
 
@@ -49,18 +49,18 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = tmp(13193);
+    let tmpResult = tmp(13298);
     obj = { location: null };
     obj[0] = user_profile_premium_upsell_card;
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {
-      tmpResult = tmp(4139);
+      tmpResult = tmp(4218);
       obj = { intervalType: null, intervalCount: null };
       ({ interval: obj3[0], intervalCount: obj3[1] } = subscriptionTrial);
       const result = tmpResult.formatIntervalDuration(obj);
-      const intl = tmp(1233).intl;
+      const intl = tmp(1114).intl;
       obj1 = { duration: null };
       obj1[0] = result;
-      return intl.formatToPlainString(tmp(1233).t["6xpY54"], obj1);
+      return intl.formatToPlainString(tmp(1114).t["6xpY54"], obj1);
     } else {
       return null;
     }

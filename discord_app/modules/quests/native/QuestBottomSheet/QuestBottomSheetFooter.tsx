@@ -390,12 +390,12 @@ export default function QuestBottomSheetFooter(quest) {
   let xboxAndPlaystationAccounts;
   ({ onConnectConsoleNext, onDefib, style, withSafeArea } = quest);
   const tmp = useQuestRewardClaimHandler({ quest, sourceQuestContent });
-  let obj = quest(11307);
+  let obj = quest(11483);
   const questTaskDetails = obj.useQuestTaskDetails(quest);
-  obj1 = quest(11307);
+  obj1 = quest(11483);
   const isQuestProgressing = obj1.useIsQuestProgressing(quest);
-  let obj2 = quest(11307);
-  let obj3 = quest(11307);
+  let obj2 = quest(11483);
+  let obj3 = quest(11483);
   xboxAndPlaystationAccounts = obj3.useConnectedAccounts().xboxAndPlaystationAccounts;
   const items = [quest, xboxAndPlaystationAccounts];
   const memo = React.useMemo(() => {
@@ -407,14 +407,14 @@ export default function QuestBottomSheetFooter(quest) {
         return null != closure_1.find((type) => type.type === closure_0);
       });
   }, items);
-  let obj4 = quest(14933);
+  let obj4 = quest(15091);
   const hasWatchVideoOnMobileTasks = obj4.useHasWatchVideoOnMobileTasks(quest.config);
-  let obj5 = quest(14933);
+  let obj5 = quest(15091);
   const mobileActivityQuest = obj5.useMobileActivityQuest(quest);
   ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-  let obj6 = quest(11570);
+  let obj6 = quest(11775);
   const primaryCtaCopy = obj6.usePrimaryCtaCopy({ quest, application: questApplication });
-  let obj7 = quest(14965);
+  let obj7 = quest(15123);
   obj = { questId: quest.id, sourceQuestContent, launchMobileActivity };
   const userStatus = quest.userStatus;
   let completedAt;
@@ -426,21 +426,21 @@ export default function QuestBottomSheetFooter(quest) {
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
   }
-  let tmp2Result = tmp2(11307);
+  let tmp2Result = tmp2(11483);
   const isQuestAccessSuspended = tmp2Result.useIsQuestAccessSuspended();
-  obj = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(14960) };
+  obj = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(15118) };
   let tmp40Result2 = null;
-  if (step !== quest(14962).QuestBottomSheetStep.TASK_SELECT) {
+  if (step !== quest(15120).QuestBottomSheetStep.TASK_SELECT) {
     obj1 = { onLayout: null, ctaButton: null, backButton: null, style: null, withSafeArea: null };
     obj1[0] = quest.onLayout;
-    if (tmp2(14962).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+    if (tmp2(15120).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
       obj2 = { onPress: null, disabled: null };
       obj2[0] = onConnectConsoleNext;
       obj2[1] = 0 === memo.length;
       let tmp40Result = tmp40(NextButton, obj2);
     } else {
       tmp40Result = null;
-      if (tmp2(14962).QuestBottomSheetStep.TASK_STATUS === step) {
+      if (tmp2(15120).QuestBottomSheetStep.TASK_STATUS === step) {
         if (tmp11) {
           obj3 = { questId: null, onPress: null, disabled: null, loading: null, sourceQuestContent: null };
           obj3[0] = quest.id;
@@ -478,18 +478,18 @@ export default function QuestBottomSheetFooter(quest) {
           obj5 = { grow: true, size: "lg", onPress: null, text: null, icon: null };
           obj5[2] = mobileActivityPressHandler;
           obj5[3] = primaryCtaCopy;
-          tmp2Result = tmp2(11562);
+          tmp2Result = tmp2(11767);
           obj5[4] = tmp2Result.getPrimaryCtaIcon(quest);
           let tmp23 = null;
           if (isQuestAccessSuspended) {
             tmp23 = obj;
           }
           const merged2 = Object.assign(tmp23);
-          tmp40Result = tmp40(tmp2(4929).Button, obj5);
+          tmp40Result = tmp40(tmp2(4975).Button, obj5);
         } else {
           if (
             callback(obj2.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] ===
-            tmp2(5399).TaskPlatformScreen.CONSOLE
+            tmp2(5447).TaskPlatformScreen.CONSOLE
           ) {
             if (!isQuestProgressing) {
               obj6 = { questId: null, loading: null, disabled: null, onPress: null, sourceQuestContent: null };
@@ -519,11 +519,11 @@ export default function QuestBottomSheetFooter(quest) {
     let tmp40Result1 = null != onBack;
     if (tmp40Result1) {
       const obj8 = { accessibilityLabel: null, variant: "secondary", icon: null, onPress: null, size: "lg" };
-      const intl = tmp2(1233).intl;
-      obj8[0] = intl.string(tmp2(1233).t["13/7kX"]);
-      obj8[2] = tmp40(tmp2(5508).ArrowLargeLeftIcon, {});
+      const intl = tmp2(1114).intl;
+      obj8[0] = intl.string(tmp2(1114).t["13/7kX"]);
+      obj8[2] = tmp40(tmp2(5628).ArrowLargeLeftIcon, {});
       obj8[3] = onBack;
-      tmp40Result1 = tmp40(tmp2(8018).IconButton, obj8);
+      tmp40Result1 = tmp40(tmp2(8097).IconButton, obj8);
     }
     obj1[2] = tmp40Result1;
     obj1[3] = style;

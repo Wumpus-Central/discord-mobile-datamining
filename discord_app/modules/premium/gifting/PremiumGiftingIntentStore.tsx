@@ -127,7 +127,7 @@ function generateFriendAnniversaries(c15) {
   if (
     obj2.getFriendAnniversaryGateConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" }).enabled
   ) {
-    const EnableFriendAnniversaryNotifications = highestAffinity(4166).EnableFriendAnniversaryNotifications;
+    const EnableFriendAnniversaryNotifications = highestAffinity(1935).EnableFriendAnniversaryNotifications;
     if (EnableFriendAnniversaryNotifications.getSetting()) {
       closure_15 = c15;
       const friendIDs = store.getFriendIDs();
@@ -149,7 +149,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = obj.sort((arg0, arg1) => closure_5.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8000).categorizeFriendAnniversariesByAffinity(
+          const result = highestAffinity(8079).categorizeFriendAnniversariesByAffinity(
             obj,
             (userId) => {
               const userAffinity = closure_5.getUserAffinity(userId);
@@ -162,7 +162,7 @@ function generateFriendAnniversaries(c15) {
             true,
           );
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8000);
+          const highestAffinityResult = highestAffinity(8079);
         }
         sampleSizeResult = _null;
       }

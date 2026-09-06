@@ -10,7 +10,7 @@ export const useIsSecureFramesUIEnabled = function useIsSecureFramesUIEnabled(ch
   channelId = channelId.channelId;
   let items = [closure_3, closure_2];
   const items1 = [channelId];
-  return channelId(586).useStateFromStores(
+  return channelId(504).useStateFromStores(
     items,
     () => {
       const items = [closure_1_3, closure_1_2];

@@ -31,9 +31,9 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   obj1.width = "100%";
   obj[0] = obj1;
   if (obj.RED === arg0) {
-    let TEXT_FEEDBACK_WARNING = tmp6(709).colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_FEEDBACK_WARNING = tmp6(576).colors.TEXT_FEEDBACK_CRITICAL;
   } else if (tmp.YELLOW === arg0) {
-    TEXT_FEEDBACK_WARNING = tmp6(709).colors.TEXT_FEEDBACK_WARNING;
+    TEXT_FEEDBACK_WARNING = tmp6(576).colors.TEXT_FEEDBACK_WARNING;
   }
   obj[1] = { textAlign: "center", color: TEXT_FEEDBACK_WARNING };
   return obj;

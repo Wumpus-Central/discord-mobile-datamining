@@ -32,8 +32,8 @@ function ChannelSubtitle(arg0) {
       str = "text-muted";
     }
     obj[5] = str;
-    obj.children = tmp(10225).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4474).Text, {
+    obj.children = tmp(10116).renderMessagePreviewMarkup(obj);
+    return jsx(tmp(4556).Text, {
       content: null,
       muted: null,
       channelId: null,

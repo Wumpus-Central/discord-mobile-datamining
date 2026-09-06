@@ -1,7 +1,7 @@
 // discord_app/modules/analytics_sessions/SessionAdManager.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import start from "../../../discord_common/js/packages/timers/Timers.tsx";
 import initializeDefault from "../../lib/LifecycleManager.tsx";
+import start from "../../../discord_common/js/packages/timers/Timers.tsx";
 import isForegrounded from "SessionForegroundUtils.native.tsx";
 import importDefaultResult from "../../stores/AuthenticationStore.tsx";
 import ME from "../../Constants.tsx";

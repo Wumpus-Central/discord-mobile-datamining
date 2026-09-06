@@ -1,7 +1,7 @@
 // discord_app/modules/libdiscore/LibdiscoreExperimentManager.tsx
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import items2 from "libdiscoreExperiments.tsx";
 import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import items2 from "libdiscoreExperiments.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
 
@@ -11,7 +11,7 @@ function experimentStoreUpdateHandler() {
   if (obj.isLibdiscoreInitialized()) {
     if (!tmpResult.isExperimentSyncDisabled()) {
       obj = {};
-      const ALL_LIBDISCORE_EXPERIMENTS = tmp(1912).ALL_LIBDISCORE_EXPERIMENTS;
+      const ALL_LIBDISCORE_EXPERIMENTS = tmp(1983).ALL_LIBDISCORE_EXPERIMENTS;
       for (const item10018 of ALL_LIBDISCORE_EXPERIMENTS) {
         obj[item10018.id] = item10018.getCurrentConfig();
         continue;
@@ -27,7 +27,7 @@ function experimentStoreUpdateHandler() {
         const obj4 = isBlockedDomain;
       }
     }
-    tmpResult = tmp(1912);
+    tmpResult = tmp(1983);
   }
 }
 let c4 = null;

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/chat/native/SettingsChatScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/10416_registerAsset.js";
-import _modDef14578 from "../../../settings/native/renderer/SettingLayout.tsx";
+import registerAssetDefault from "../../../../../_runtime/10398_registerAsset.js";
+import _modDef14689 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../stores/UserStore.tsx";
@@ -41,21 +41,21 @@ function VideoUploadQualityNitroUpsell() {
     const obj3 = { style: null, source: null, size: null, color: null };
     obj3[0] = tmp3.cardIcon;
     obj3[1] = registerAssetDefault;
-    obj3[2] = tmp(1296).Icon.Sizes.SMALL;
+    obj3[2] = tmp(1178).Icon.Sizes.SMALL;
     obj3[3] = ThemesDefault.unsafe_rawColors.PRIMARY_400;
-    const items2 = [tmp7(tmp(1296).Icon, obj3)];
+    const items2 = [tmp7(tmp(1178).Icon, obj3)];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl2 = tmp(1233).intl;
+    const intl2 = tmp(1114).intl;
     const obj5 = { onClick: null };
     obj5[0] = function onClick() {
       closure_1_1(closure_1_2[17]).setSection(closure_1_8.PREMIUM);
       const obj = closure_1_1(closure_1_2[17]);
     };
-    obj4[2] = intl2.format(tmp(1233).t.uW1zul, obj5);
-    items2[1] = tmp7(tmp(4474).Text, obj4);
+    obj4[2] = intl2.format(tmp(1114).t.uW1zul, obj5);
+    items2[1] = tmp7(tmp(4556).Text, obj4);
     obj2[1] = items2;
     obj1[2] = tmp5(tmp6, obj2);
-    obj[1] = tmp7(tmp(5610).Card, obj1);
+    obj[1] = tmp7(tmp(5607).Card, obj1);
     tmp7Result = tmp7(tmp6, obj);
   }
   children[1] = tmp7Result;
@@ -168,5 +168,5 @@ export default function SettingsChatScreen(route) {
     obj[1] = initialSetting;
     return obj.createList(obj);
   }, items);
-  return callback(_modDef14578, { node });
+  return callback(_modDef14689, { node });
 }

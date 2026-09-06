@@ -23,8 +23,8 @@ export const useProductDisableState = function useProductDisableState(skuId) {
     obj[0] = stateFromStores;
     let stringResult = null;
     if (stateFromStores) {
-      const intl = tmp(1233).intl;
-      stringResult = intl.string(tmp(1233).t.NbveHD);
+      const intl = tmp(1114).intl;
+      stringResult = intl.string(tmp(1114).t.NbveHD);
     }
     obj[1] = stringResult;
   } else {

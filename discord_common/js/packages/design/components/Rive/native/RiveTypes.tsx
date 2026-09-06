@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/components/Rive/native/RiveTypes.tsx
 import set from "../../../../../../../_runtime/00002_set.js";
-import DataBindByName from "../../../../../../../_runtime/04212_DataBindByName.js";
+import DataBindByName from "../../../../../../../_runtime/04291_DataBindByName.js";
 
 let obj = {
   fill: DataBindByName.Fit.Fill,

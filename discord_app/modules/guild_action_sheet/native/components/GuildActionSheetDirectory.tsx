@@ -2,8 +2,8 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import BottomSheetModal from "../../../../../_runtime/06627_BottomSheetModal.js";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05633_BottomSheetModal.js";
 import HideMutedChannelsOption from "GuildActionSheetActions.tsx";
 import CommunityPillDefault from "GuildActionSheetHeader.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";

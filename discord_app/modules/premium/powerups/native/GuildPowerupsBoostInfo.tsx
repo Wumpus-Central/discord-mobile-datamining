@@ -58,15 +58,17 @@ export default function GuildPowerupsBoostInfo(arg0) {
   obj1[3] = count;
   items[1] = closure_5(Text.Text, obj1);
   obj[3] = items;
-  const items1 = [
-    closure_6(View, obj),
-    closure_5(Text.Text, {
-      variant: "text-md/normal",
-      color: "text-subtle",
-      importantForAccessibility: "no-hide-descendants",
-      children: guildPowerupsBoostInfoText,
-    }),
-  ];
+  const items1 = [closure_6(View, obj)];
+  let str3 = "text-md/normal";
+  if (manaTypeConsolidationExperiment) {
+    str3 = "text-sm/normal";
+  }
+  items1[1] = closure_5(Text.Text, {
+    variant: str3,
+    color: "text-subtle",
+    importantForAccessibility: "no-hide-descendants",
+    children: guildPowerupsBoostInfoText,
+  });
   obj[3] = items1;
   return closure_6(View, obj);
 }

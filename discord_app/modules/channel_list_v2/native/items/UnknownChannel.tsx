@@ -48,8 +48,8 @@ const memoResult = importAllResult.memo((channel) => {
     resolvedUnreadSetting: null,
   };
   const tmp2 = computeChannelNameDefault(channel);
-  const intl = channel(1233).intl;
-  obj[4] = intl.formatToPlainString(channel(1233).t.yjQ9P8, { channelName: tmp2 });
+  const intl = channel(1114).intl;
+  obj[4] = intl.formatToPlainString(channel(1114).t.yjQ9P8, { channelName: tmp2 });
   obj[5] = { selected };
   obj[6] = channel;
   obj[7] = selected;

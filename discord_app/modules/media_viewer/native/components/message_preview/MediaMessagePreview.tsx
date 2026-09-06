@@ -372,11 +372,11 @@ export default function MediaMessagePreview(channelId) {
         obj = {
           allowWithinModal: true,
           chatInputRef: "Boolean",
-          handleTransitionToThread: "BuyNitroPurchaseFlow",
-          message: "absolute",
-          messageChannel: null,
-          selectedChannelId: "call",
-          tapLinkData: "diversity",
+          handleTransitionToThread: "sm",
+          message: "icon-muted",
+          messageChannel: true,
+          selectedChannelId: "image",
+          tapLinkData: null,
         };
         obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
           channel = channel.getChannel(arg1);

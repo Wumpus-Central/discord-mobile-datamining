@@ -36,15 +36,15 @@ export default function EmptyState() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 11915 : 11916);
+  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12114 : 12115);
   const logAppLauncherEmptyStateView = handleApplicationSelected.useLogAppLauncherEmptyStateView(
-    tmp2(8448).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
+    tmp2(9409).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
   );
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };
   const items = [callback(closure_4, obj)];
   obj1 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = tmp2(1233).intl;
+  const intl = tmp2(1114).intl;
   obj1[3] = intl.string(getSystemLocale.t.uDnXXj);
   items[1] = callback(Text.Text, obj1);
   obj[1] = items;

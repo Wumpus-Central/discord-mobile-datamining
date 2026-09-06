@@ -1,7 +1,7 @@
 // discord_app/modules/dismissible_content/DismissibleContentUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import updateUserGuildSettings from "../user_settings/UserSettingsProtoActionCreators.tsx";
 import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import isSingleUseDismissibleContent from "DismissibleContentTypes.tsx";
@@ -564,13 +564,13 @@ export const getDismissedRecurringDismissibleContentState = function getDismisse
   let obj = isSingleUseDismissibleContent;
   let num = 0;
   if (obj.isVersionedDismissibleContent(id)) {
-    let tmp2Result = tmp2(1384);
+    let tmp2Result = tmp2(1955);
     num = tmp2Result.getVersionedDismissibleContentCurrentVersion(id);
   }
   obj = { lastDismissedVersion: num, lastDismissedAtMs: null, lastDismissedObjectId: null, numTimesDismissed: null };
   const date = new Date();
   obj[1] = new Date().getTime().toString();
-  tmp2Result = tmp2(1373);
+  tmp2Result = tmp2(1944);
   let str2 = "0";
   if (tmp2Result.isSnowflakeBoundDismissibleContent(id)) {
     const _Date = Date;
@@ -732,7 +732,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "r" };
+      return { isDismissed: false, lastDismissedAtMs: "PX_16" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {
@@ -894,59 +894,84 @@ export const UNSAFE_isSnowflakeBoundGuildDismissibleContentDismissed =
     }
     obj = useNewUserDismissibleContent;
   };
+export const isDismissibleContentBlockedByOverlay = function isDismissibleContentBlockedByOverlay(
+  contentType,
+  first,
+  arg2,
+) {
+  let tmp = first;
+  if (first) {
+    let hasItem = null == arg2;
+    if (hasItem) {
+      hasItem = set.has(contentType);
+    }
+    tmp = !hasItem;
+  }
+  return tmp;
+};
 export const requestMarkDismissibleContentAsShown = function requestMarkDismissibleContentAsShown(
   PASSWORDLESS_UPSELL,
   guildId,
-  anyOverlayRenderingLocked,
-  stateFromStores1,
+  first,
+  closure_6,
 ) {
   closure_0 = PASSWORDLESS_UPSELL;
   importDefault = guildId;
-  if (!callback3(PASSWORDLESS_UPSELL)) {
+  let hasUserHitDCCapResult = callback3(PASSWORDLESS_UPSELL);
+  if (!hasUserHitDCCapResult) {
     guildId = undefined;
     if (guildId != null) {
       guildId = guildId.guildId;
     }
-    if (!closure_7.hasUserHitDCCap(PASSWORDLESS_UPSELL, guildId)) {
-      let hasItem = null == stateFromStores1;
+    hasUserHitDCCapResult = closure_7.hasUserHitDCCap(PASSWORDLESS_UPSELL, guildId);
+  }
+  if (!hasUserHitDCCapResult) {
+    let flag = first;
+    if (first == null) {
+      flag = false;
+    }
+    let tmp6 = closure_6;
+    if (closure_6 == null) {
+      tmp6 = null;
+    }
+    if (flag) {
+      let hasItem = null == tmp6;
       if (hasItem) {
         hasItem = set.has(PASSWORDLESS_UPSELL);
       }
-      let tmp7 = anyOverlayRenderingLocked;
-      if (anyOverlayRenderingLocked) {
-        tmp7 = !hasItem;
-      }
-      if (!tmp7) {
-        let obj = dispatcherDefault;
-        obj = { type: "DCF_EVENT_LOGGED", eventType: null, dismissibleContent: null };
-        obj[1] = DCFEventTypes.DC_SHOW_REQUEST;
-        obj[2] = PASSWORDLESS_UPSELL;
-        obj.dispatch(obj);
-        obj = { content: null, groupName: null, onAdded: null };
-        obj[0] = PASSWORDLESS_UPSELL;
-        let groupName;
-        if (guildId != null) {
-          groupName = guildId.groupName;
-        }
-        obj[1] = groupName;
-        obj[2] = function onAdded(arg0) {
-          guildId = undefined;
-          if (closure_1 != null) {
-            guildId = tmp2.guildId;
-          }
-          PASSWORDLESS_UPSELL(closure_1_2[16]).handleDCShownToUser(PASSWORDLESS_UPSELL, guildId);
-          closure_1_27(PASSWORDLESS_UPSELL, closure_1, arg0);
-          if (closure_1 != null) {
-            const onShown = tmp2.onShown;
-            if (onShown != null) {
-              onShown();
-            }
-          }
-        };
-        closure_8(obj);
-        const tmp12 = closure_8;
-      }
+      flag = !hasItem;
     }
+    hasUserHitDCCapResult = flag;
+  }
+  if (!hasUserHitDCCapResult) {
+    let obj = dispatcherDefault;
+    obj = { type: "DCF_EVENT_LOGGED", eventType: null, dismissibleContent: null };
+    obj[1] = DCFEventTypes.DC_SHOW_REQUEST;
+    obj[2] = PASSWORDLESS_UPSELL;
+    obj.dispatch(obj);
+    obj = { content: null, groupName: null, onAdded: null };
+    obj[0] = PASSWORDLESS_UPSELL;
+    let groupName;
+    if (guildId != null) {
+      groupName = guildId.groupName;
+    }
+    obj[1] = groupName;
+    obj[2] = function onAdded(arg0) {
+      guildId = undefined;
+      if (closure_1 != null) {
+        guildId = tmp2.guildId;
+      }
+      PASSWORDLESS_UPSELL(closure_1_2[16]).handleDCShownToUser(PASSWORDLESS_UPSELL, guildId);
+      closure_1_27(PASSWORDLESS_UPSELL, closure_1, arg0);
+      if (closure_1 != null) {
+        const onShown = tmp2.onShown;
+        if (onShown != null) {
+          onShown();
+        }
+      }
+    };
+    closure_8(obj);
+    const tmp13 = closure_8;
   }
 };
 export { markDismissibleContentAsDismissedPreProcessing };

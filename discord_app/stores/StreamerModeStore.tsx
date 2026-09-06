@@ -1,7 +1,7 @@
 // discord_app/stores/StreamerModeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import apexExperiment from "../modules/overlay/OverlayV3Experiment.tsx";
 import closure_3 from "AuthenticationStore.tsx";
 import { AnalyticEvents } from "../Constants.tsx";

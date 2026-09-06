@@ -1,6 +1,6 @@
 // discord_app/modules/client_themes/SavedCustomThemeActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import closure_3 from "SavedCustomThemeStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
@@ -25,10 +25,10 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
         if (custom_themes == null) {
           custom_themes = [];
         }
-        callback(706).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
+        callback(573).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
       })
       .catch((error) => {
-        let obj = callback(706);
+        let obj = callback(573);
         obj = { type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE", error };
         obj.dispatch(obj);
       });
@@ -41,7 +41,7 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
       if (custom_themes == null) {
         custom_themes = [];
       }
-      callback(706).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
+      callback(573).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
     });
   }
 };

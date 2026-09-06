@@ -31,9 +31,9 @@ export default function Emoji(arg0) {
         obj[1] = fastImageStyle;
         const tmp10 = preloadDefault;
         if (tmpResult.isThemeDark(theme.theme)) {
-          let tmp9Result = tmp9(5595);
+          let tmp9Result = tmp9(7131);
         } else {
-          tmp9Result = tmp9(5596);
+          tmp9Result = tmp9(7132);
         }
         obj[2] = tmp9Result;
         obj1 = { uri: null };
@@ -41,13 +41,13 @@ export default function Emoji(arg0) {
         obj[3] = obj1;
         obj[4] = onError;
         let tmp6Result = tmp6(tmp10, obj);
-        tmpResult = tmp(1362);
+        tmpResult = tmp(4411);
       }
       obj[1] = tmp6Result;
       return tmp6(tmp7, obj);
     }
   }
-  tmp6Result = tmp6(tmp(1296).LegacyText, {
+  tmp6Result = tmp6(tmp(1178).LegacyText, {
     style: textEmojiStyle,
     allowFontScaling: false,
     adjustsFontSizeToFit,

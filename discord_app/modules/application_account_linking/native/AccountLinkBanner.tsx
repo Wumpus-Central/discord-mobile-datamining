@@ -55,7 +55,7 @@ function AccountLinkLargeBanner(arg0) {
     items3[2] = callback(View, obj6);
     obj3[1] = items3;
     items2[1] = callback2(View, obj3);
-    const obj7 = { user: null, size: null, guildId: "accessible" };
+    const obj7 = { user: null, size: null, guildId: "Array" };
     obj7[0] = stateFromStores;
     obj7[1] = tmp2(tmp3[16]).AvatarSizes.LARGE_48;
     items2[2] = callback(tmp2(tmp3[16]).Avatar, obj7);

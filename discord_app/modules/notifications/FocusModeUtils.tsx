@@ -83,14 +83,14 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
   }
   if (tmp7) {
     obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
-    const intl = tmp(1233).intl;
-    obj[0] = intl.string(tmp(1233).t["B+cbLS"]);
-    const intl2 = tmp(1233).intl;
-    obj[1] = intl2.string(tmp(1233).t.CYVgLI);
-    const intl3 = tmp(1233).intl;
-    obj[2] = intl3.string(tmp(1233).t.f3Pet9);
-    const intl4 = tmp(1233).intl;
-    obj[3] = intl4.string(tmp(1233).t.BddRzS);
+    const intl = tmp(1114).intl;
+    obj[0] = intl.string(tmp(1114).t["B+cbLS"]);
+    const intl2 = tmp(1114).intl;
+    obj[1] = intl2.string(tmp(1114).t.CYVgLI);
+    const intl3 = tmp(1114).intl;
+    obj[2] = intl3.string(tmp(1114).t.f3Pet9);
+    const intl4 = tmp(1114).intl;
+    obj[3] = intl4.string(tmp(1114).t.BddRzS);
     obj[4] = function onConfirm() {
       callback(table[9])({ nextStatus: constants.ONLINE });
     };

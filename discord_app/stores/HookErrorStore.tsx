@@ -1,8 +1,8 @@
 // discord_app/stores/HookErrorStore.tsx
 import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import ME from "../Constants.tsx";
 
 const MediaEngineHookTypes = ME.MediaEngineHookTypes;
 let closure_1 = {};

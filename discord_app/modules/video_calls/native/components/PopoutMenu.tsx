@@ -24,11 +24,11 @@ function PopoutMenuRow(onClose) {
   if (null != icon) {
     let obj = { source: null };
     obj[0] = icon;
-    tmp3Result = tmp3(onClick(1296).Icon, obj);
+    tmp3Result = tmp3(onClick(1178).Icon, obj);
   }
-  obj = { leading: tmp3Result, label: tmp3(onClick(8376).FormLabel, obj), style: tmp.popoutMenuRow, onPress: callback };
+  obj = { leading: tmp3Result, label: tmp3(onClick(8593).FormLabel, obj), style: tmp.popoutMenuRow, onPress: callback };
   obj = { style: tmp.popoutMenuRowLabel, text: onClose.text };
-  return closure_6(onClose(5601), obj);
+  return closure_6(onClose(7137), obj);
 }
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);

@@ -1,12 +1,12 @@
 // discord_app/actions/StreamActionCreators.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef4491 from "ChannelActionCreators.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import _modDef4573 from "ChannelActionCreators.tsx";
 import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import allowChannelAccess from "../utils/ChannelUtils.tsx";
 import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
-import _modDef5364 from "SelectedChannelActionCreators.tsx";
+import _modDef5411 from "SelectedChannelActionCreators.tsx";
 import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../modules/game_console/GameConsoleStore.tsx";
@@ -45,8 +45,8 @@ function watchStream(stream, forceMultiple) {
       obj[2] = forceMultiple;
       dispatcherDefault.dispatch(obj);
       if (null != guildId) {
-        const result = tmp12(4677).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
-        const tmp12Result = tmp12(4677);
+        const result = tmp12(4716).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
+        const tmp12Result = tmp12(4716);
       }
       let forceFocus;
       if (forceMultiple != null) {
@@ -64,8 +64,8 @@ function watchStream(stream, forceMultiple) {
         tmp22 = forceMultiple;
       }
       if (!tmp22) {
-        const participant = tmp18(4722).selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = tmp18(4722);
+        const participant = tmp18(4761).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(4761);
       }
       const obj3 = dispatcherDefault;
     } else {
@@ -125,7 +125,7 @@ function _fetchStreamPreview() {
               dependencyMap = undefined;
               if (c6.shouldFetchPreview(c0, lib, dependencyMap)) {
                 let obj5 = callback;
-                let result = callback(4544);
+                let result = callback(4612);
                 let HTTP = result.encodeStreamKey;
                 if (null != tmp55) {
                   let CALL = closure_1_16.GUILD;
@@ -139,19 +139,19 @@ function _fetchStreamPreview() {
                 obj1[3] = timestamp;
                 const HTTPResult = HTTP(obj1);
                 c0 = HTTPResult;
-                let obj7 = lib(706);
+                let obj7 = lib(573);
                 const obj2 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: null };
                 obj2[1] = HTTPResult;
                 obj7.dispatch(obj2);
                 c6 = 1;
-                HTTP = obj5(527).HTTP;
+                HTTP = obj5(1272).HTTP;
                 let obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
                 obj3[0] = closure_1_13.STREAM_PREVIEW(HTTPResult);
                 const obj4 = { version: null };
                 timestamp = Date.now();
                 obj4[0] = timestamp;
                 obj3[1] = obj4;
-                obj5 = obj5(527);
+                obj5 = obj5(1272);
                 result = obj5.rejectWithMigratedError();
                 obj3[3] = result;
                 const value = HTTP.get(obj3);
@@ -164,9 +164,9 @@ function _fetchStreamPreview() {
               c6 = 0;
               closure_3 = closure_5;
               if (429 === closure_3.status) {
-                dependencyMap = closure_3.body.retry_after * lib(684).Millis.SECOND;
+                dependencyMap = closure_3.body.retry_after * lib(1090).Millis.SECOND;
               }
-              obj3 = lib(706);
+              obj3 = lib(573);
               obj5 = { type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: null, retryAfter: null };
               obj5[1] = c0;
               obj5[2] = dependencyMap;
@@ -176,7 +176,7 @@ function _fetchStreamPreview() {
               throw arg1;
             } else if (arg0 !== 2) {
               lib = arg1;
-              obj = lib(706);
+              obj = lib(573);
               const obj6 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: null, previewURL: null };
               obj6[1] = c0;
               obj6[2] = lib.body.url;
@@ -223,9 +223,9 @@ function _notifyStreamStart() {
       obj1 = { url: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
       obj1[0] = closure_1_13.STREAM_NOTIFY(callback);
       const obj2 = { event: null };
-      obj2[0] = callback(500).NetworkActionNames.STREAM_NOTIFY;
+      obj2[0] = callback(1250).NetworkActionNames.STREAM_NOTIFY;
       obj1[2] = obj2;
-      yield v0(4714).post(obj1);
+      yield v0(4753).post(obj1);
       if (1 === tmp6) {
         c4 = 0;
         v0 = 3;
@@ -406,12 +406,12 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
   importDefault = require("../modules/go_live/utils/StreamKeyUtils.tsx").decodeStreamKey(streamKey);
   const voiceChannelId = store2.getVoiceChannelId();
   if (tmp4) {
-    _modDef5364.disconnect();
-    const obj2 = _modDef5364;
+    _modDef5411.disconnect();
+    const obj2 = _modDef5411;
   }
   let obj = isStreamKey;
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;
-  _modDef4491.addRecipient(arg0, id, undefined, () => {
+  _modDef4573.addRecipient(arg0, id, undefined, () => {
     const tmp = callback(closure_1_2[26]);
     const call = tmp.call;
     const fn = () => {

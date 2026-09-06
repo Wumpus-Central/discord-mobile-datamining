@@ -1,9 +1,9 @@
 // discord_app/modules/routing/RouteParam.tsx
 import set from "../../../_runtime/00002_set.js";
-import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 import INVITE from "RouteConstants.tsx";
+import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 import set2 from "../channel/ChannelConstants.tsx";
-import escapeRegExpDefault from "../../../_runtime/04319_escapeRegExp.js";
+import escapeRegExpDefault from "../../../_runtime/04401_escapeRegExp.js";
 
 const PSEUDO_GUILD_IDS = INVITE.PSEUDO_GUILD_IDS;
 const StaticChannelRoutes = set2.StaticChannelRoutes;

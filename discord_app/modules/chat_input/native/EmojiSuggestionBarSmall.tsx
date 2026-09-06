@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/EmojiSuggestionBarSmall.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../reanimated/ReanimatedRexport.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -16,7 +16,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   } = displayEmojis);
   let suggestionBarHeight;
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
-  let obj = displayEmojis(12226);
+  let obj = displayEmojis(12426);
   suggestionBarHeight = obj.useSuggestionBarHeight(transitionState, cleanUp, closure_6, onOccupiedHeightChange);
   const tmp = callback(displayEmojis.anchorTop);
   class A {
@@ -30,14 +30,14 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
     }
   }
   obj = {
-    interpolate: displayEmojis(4217).interpolate,
+    interpolate: displayEmojis(4296).interpolate,
     heightSv: suggestionBarHeight,
     CONTAINER_SMALL_WRAPPER_HEIGHT: closure_6,
   };
   A.__closure = obj;
   A.__workletHash = 1856279964267;
   A.__initData = closure_8;
-  const animatedStyle = displayEmojis(4217).useAnimatedStyle(A);
+  const animatedStyle = displayEmojis(4296).useAnimatedStyle(A);
   obj = {
     style: items,
     children: displayEmojis.map((emoji, index) => {
@@ -67,7 +67,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
     }),
   };
   items = [tmp.containerSmall, animatedStyle];
-  return suggestionBarHeight(_modDef4217.View, obj);
+  return suggestionBarHeight(_modDef4296.View, obj);
 }
 let c3 = importAllResult;
 const sum = require("IMAGE_SIZE").IMAGE_SIZE + 2 * ThemesDefault.space.PX_8 + 2;

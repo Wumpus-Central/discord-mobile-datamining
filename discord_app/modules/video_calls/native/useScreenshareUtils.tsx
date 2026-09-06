@@ -23,8 +23,8 @@ function stopScreenshare() {
   voiceEngine.stopBroadcast();
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    let tmpResult = tmp(4663);
-    tmpResult = tmp(4544);
+    let tmpResult = tmp(4702);
+    tmpResult = tmp(4612);
     tmpResult.stopStream(tmpResult.encodeStreamKey(currentUserActiveStream));
   }
   const obj = inject;
@@ -95,8 +95,8 @@ export default function useScreenshareUtils(arg0) {
     let obj = { isFeatureEnabled: tmp3, isActive: tmp, text: null, onPress: null, imgSource: null };
     if (!showMobileGoLiveUpsell) {
       if (tmp) {
-        const intl = callback(1233).intl;
-        let stringResult = intl.string(callback(1233).t.CpkXwZ);
+        const intl = callback(1114).intl;
+        let stringResult = intl.string(callback(1114).t.CpkXwZ);
       }
       obj[2] = stringResult;
       let flag = tmp4;
@@ -117,7 +117,7 @@ export default function useScreenshareUtils(arg0) {
             }
           }
         } else {
-          fn = callback(9800).showScreenshareDisabledAlert;
+          fn = callback(9082).showScreenshareDisabledAlert;
         }
       } else {
         fn = function l() {
@@ -129,23 +129,23 @@ export default function useScreenshareUtils(arg0) {
       }
       obj[3] = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 10080 : 10081);
+        tmp19(tmp ? 9971 : 9972);
       } else {
         if (tmp4) {
-          let tmp20 = 10082;
+          let tmp20 = 9973;
         } else {
-          tmp20 = tmp ? 10083 : 10082;
+          tmp20 = tmp ? 9974 : 9973;
         }
         obj[4] = tmp19(tmp20);
         return obj;
       }
-      obj2 = callback(1623);
+      obj2 = callback(1608);
       tmp11 = closure_1;
       tmp12 = dependencyMap;
       const tmp13 = analyticsLocations;
     }
-    const intl2 = callback(1233).intl;
-    stringResult = intl2.string(callback(1233).t.fjBNo1);
+    const intl2 = callback(1114).intl;
+    stringResult = intl2.string(callback(1114).t.fjBNo1);
   }, items2);
 }
 export const handleCloseScreenshare = function handleCloseScreenshare() {

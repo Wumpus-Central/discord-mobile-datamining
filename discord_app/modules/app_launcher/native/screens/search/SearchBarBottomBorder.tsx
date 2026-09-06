@@ -22,7 +22,7 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
     triggerScrollHeight = 1;
   }
   let sharedValue;
-  let obj = triggerScrollHeight(4217);
+  let obj = triggerScrollHeight(4296);
   sharedValue = obj.useSharedValue(0);
   const items = [key, sharedValue];
   const effect = React.useEffect(() => {
@@ -43,17 +43,17 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
     return obj;
   };
   obj = {
-    withSpring: triggerScrollHeight(4928).withSpring,
+    withSpring: triggerScrollHeight(4974).withSpring,
     scrollPosition: sharedValue,
     triggerScrollHeight,
-    springStandard: triggerScrollHeight(4932).springStandard,
+    springStandard: triggerScrollHeight(4978).springStandard,
   };
   fn.__closure = obj;
   fn.__workletHash = 5466161440826;
   fn.__initData = closure_6;
   obj = { scrollHandler: callback, bottomBorderComponent: null };
-  const animatedStyle = triggerScrollHeight(4217).useAnimatedStyle(fn);
+  const animatedStyle = triggerScrollHeight(4296).useAnimatedStyle(fn);
   const items2 = [tmp.border, animatedStyle];
-  obj[1] = jsx(sharedValue(4217).View, { style: items2 }, key);
+  obj[1] = jsx(sharedValue(4296).View, { style: items2 }, key);
   return obj;
 };

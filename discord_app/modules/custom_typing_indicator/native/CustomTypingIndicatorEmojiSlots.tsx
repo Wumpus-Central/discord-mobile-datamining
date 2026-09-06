@@ -1,7 +1,7 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorEmojiSlots.tsx
-import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import CUSTOM_TYPING_INDICATOR_EMOJI_COUNT from "../CustomTypingIndicatorTypes.tsx";
-import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import _modDef4296 from "../../reanimated/ReanimatedRexport.tsx";
 import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -34,7 +34,7 @@ function EmojiGlyph(emoji) {
 }
 function PlaceholderEmojiGlyph(pressed) {
   pressed = pressed.pressed;
-  let obj = pressed(4217);
+  let obj = pressed(4296);
   const fn = function t() {
     const value = pressed.get();
     let obj = { opacity: null, transform: null };
@@ -58,10 +58,10 @@ function PlaceholderEmojiGlyph(pressed) {
   };
   obj = {
     pressed,
-    withSpring: pressed(4928).withSpring,
-    interpolate: pressed(4217).interpolate,
+    withSpring: pressed(4974).withSpring,
+    interpolate: pressed(4296).interpolate,
     PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4,
-    ON_PRESS_SPRING: pressed(4932).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: pressed(4978).ON_PRESS_SPRING,
     PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14,
   };
   fn.__closure = obj;
@@ -69,7 +69,7 @@ function PlaceholderEmojiGlyph(pressed) {
   fn.__initData = closure_11;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: animatedStyle, children: jsx(pressed.Icon, { size: "custom", style: obj1 }) };
-  return jsx(_modDef4217.View, { style: animatedStyle, children: jsx(pressed.Icon, { size: "custom", style: obj1 }) });
+  return jsx(_modDef4296.View, { style: animatedStyle, children: jsx(pressed.Icon, { size: "custom", style: obj1 }) });
 }
 function CustomTypingIndicatorEmojiSlot(index) {
   index = index.index;
@@ -192,7 +192,7 @@ export default function CustomTypingIndicatorEmojiSlots(arg0) {
   dependencyMap = undefined;
   dependencyMap = callback(
     React.useState(() =>
-      dependencyMap(12).sampleSize(closure_8, dependencyMap(1941).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT),
+      dependencyMap(12).sampleSize(closure_8, dependencyMap(1392).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT),
     ),
     1,
   )[0];

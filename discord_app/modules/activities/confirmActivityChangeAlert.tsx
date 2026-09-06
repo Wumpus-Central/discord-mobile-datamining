@@ -29,14 +29,14 @@ export default function confirmActivityChangeModal(name, channel) {
     name = name.name;
   }
   if (name == null) {
-    const intl5 = tmp6(1233).intl;
-    name = intl5.string(tmp6(1233).t.G99XFs);
+    const intl5 = tmp6(1114).intl;
+    name = intl5.string(tmp6(1114).t.G99XFs);
   }
   obj = { currentApplicationName: name, currentApplicationChannelName: null };
   const obj2 = setDefault;
   if (tmp6Result.isNullOrEmpty(str)) {
-    const intl6 = tmp6(1233).intl;
-    str = intl6.string(tmp6(1233).t.OGUjmt);
+    const intl6 = tmp6(1114).intl;
+    str = intl6.string(tmp6(1114).t.OGUjmt);
   }
   obj[1] = str;
   obj[5] = intl4.format(getSystemLocale.t["5/Xort"], obj);

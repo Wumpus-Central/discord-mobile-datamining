@@ -1,6 +1,6 @@
 // discord_app/modules/threads/ThreadActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import dispatcherDefault2 from "../../actions/DraftActionCreators.tsx";
 import setActiveCommand from "../application_commands/ApplicationCommandActionCreators.tsx";
@@ -792,21 +792,21 @@ export default {
       const obj2 = { flags: null };
       obj2[0] = v0;
       obj1[1] = closure_1_0.merge(obj2);
-      v0(706).dispatch(obj1);
+      v0(573).dispatch(obj1);
       const obj3 = { flags: null };
       obj3[0] = v0;
       if (dependencyMap) {
         obj3.archived = false;
       }
       dependencyMap = 1;
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       const obj4 = { url: null, body: null, rejectWithError: true };
       obj4[0] = closure_1_12.CHANNEL(closure_1_0.id);
       obj4[1] = obj3;
       yield HTTP.patch(obj4);
       if (1 === tmp7) {
         dependencyMap = 0;
-        obj1 = v0(706);
+        obj1 = v0(573);
         const obj6 = { type: "THREAD_UPDATE", channel: null };
         obj6[1] = closure_0;
         obj1.dispatch(obj6);
@@ -1182,7 +1182,7 @@ export default {
           const arr = Array.from(tmp37);
         }
       }
-      const HTTP = closure_1_0(527).HTTP;
+      const HTTP = closure_1_0(1272).HTTP;
       obj1 = { url: null, query: null, rejectWithError: null };
       obj1[0] = closure_1_12.THREAD_SEARCH(closure_1_1);
       const obj2 = { name: null, tag: null, tag_setting: null };
@@ -1190,7 +1190,7 @@ export default {
       obj2[1] = joined;
       obj2[2] = closure_1_4;
       obj1[1] = obj2;
-      let obj5 = closure_1_0(527);
+      let obj5 = closure_1_0(1272);
       obj1[2] = obj5.rejectWithMigratedError();
       yield HTTP.get(obj1);
       body = arg1.body;
@@ -1209,7 +1209,7 @@ export default {
       obj5[3] = body;
       obj5[4] = first_messages;
       obj5[5] = most_recent_messages;
-      closure_1_1(706).dispatch(obj5);
+      closure_1_1(573).dispatch(obj5);
       return threads.map((id) => id.id);
     })();
   },

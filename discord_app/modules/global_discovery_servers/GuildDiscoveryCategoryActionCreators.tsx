@@ -42,13 +42,13 @@ function _maybeFetchGuildDiscoveryCategories() {
             lib = undefined;
             locale = closure_1_4.locale;
             if (locale !== closure_1_5.getFetchedLocale()) {
-              const HTTP = closure_1_0(527).HTTP;
+              const HTTP = closure_1_0(1272).HTTP;
               obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_6.GUILD_DISCOVERY_CATEGORIES;
               const obj2 = { locale: null, primary_only: false };
               obj2[0] = locale;
               obj1[1] = obj2;
-              let obj5 = closure_1_0(527);
+              let obj5 = closure_1_0(1272);
               obj1[3] = obj5.rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
@@ -64,7 +64,7 @@ function _maybeFetchGuildDiscoveryCategories() {
           throw arg1;
         } else if (arg0 !== 2) {
           lib = arg1;
-          obj = lib(706);
+          obj = lib(573);
           const obj4 = { type: "GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS", categories: null, locale: null };
           obj4[1] = lib.body;
           obj4[2] = locale;
@@ -163,7 +163,7 @@ function _fetchSlugForGuild() {
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c3 = 0;
-        let obj3 = slug(706);
+        let obj3 = slug(573);
         obj3 = { type: "GUILD_DISCOVERY_SLUG_FETCH_FAIL", guildId: null };
         obj3[1] = callback;
         obj3.dispatch(obj3);
@@ -173,7 +173,7 @@ function _fetchSlugForGuild() {
         throw body;
       } else if (arg0 !== 2) {
         slug = body.body.slug;
-        const obj = slug(706);
+        const obj = slug(573);
         const obj4 = { type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS", slug: null };
         obj4[1] = slug;
         obj.dispatch(obj4);
@@ -276,7 +276,7 @@ function _saveGuildMetadata() {
               return obj1;
             } else {
               c4 = 1;
-              const HTTP = callback(527).HTTP;
+              const HTTP = callback(1272).HTTP;
               const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj2[0] = c6.GUILD_DISCOVERY_METADATA(callback);
               const obj3 = {
@@ -300,7 +300,7 @@ function _saveGuildMetadata() {
               obj3[7] = c8;
               obj3[8] = c9;
               obj2[1] = obj3;
-              obj2[3] = callback(527).rejectWithMigratedError();
+              obj2[3] = callback(1272).rejectWithMigratedError();
               c5 = 3;
               c6 = 1;
               const obj4 = { value: null, done: false };
@@ -310,7 +310,7 @@ function _saveGuildMetadata() {
           } else if (2 === tmp7) {
             c4 = 0;
             body = c3;
-            obj1 = callback2(706);
+            obj1 = callback2(573);
             const obj5 = { type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL", guildId: null, errors: null };
             obj5[1] = callback;
             obj5[2] = body.body;
@@ -337,7 +337,7 @@ function _saveGuildMetadata() {
             reasons_to_join = body.reasons_to_join;
             social_links = body.social_links;
             about = body.about;
-            let obj7 = callback2(706);
+            let obj7 = callback2(573);
             const obj6 = { type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: null, metadata: null };
             obj6[1] = callback;
             obj7 = {

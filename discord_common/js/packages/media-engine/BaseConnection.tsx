@@ -3,8 +3,8 @@ import onDefault from "../../shared/utils/TypedEventEmitter.tsx";
 import WantsVideoQuality from "VideoQualityManager.tsx";
 import logger2 from "ConnectionEventFramerateReducer.tsx";
 import BaseConnectionEvent from "BaseConnectionEvent.tsx";
-import cloneDeepDefault from "../../../../_runtime/04596_cloneDeep.js";
-import flatRestDefault from "../../../../_runtime/04625_flatRest.js";
+import cloneDeepDefault from "../../../../_runtime/04632_cloneDeep.js";
+import flatRestDefault from "../../../../_runtime/04661_flatRest.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import DesktopSources from "Constants.tsx";
 
@@ -127,9 +127,7 @@ prototype["setUseElectronVideo"] = function setUseElectronVideo(mediaEngine) {
   this.useElectronVideo = mediaEngine;
 };
 prototype["setClipRecordUser"] = function setClipRecordUser(arg0, arg1, arg2) {};
-prototype["setViewerSideClip"] = function setViewerSideClip(arg0) {};
 prototype["setRemoteAudioHistory"] = function setRemoteAudioHistory(arg0) {};
-prototype["setClipsKeyFrameInterval"] = function setClipsKeyFrameInterval(arg0) {};
 prototype["setQualityDecoupling"] = function setQualityDecoupling(arg0) {};
 prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(arg0) {};
 prototype["getStreamParameters"] = function getStreamParameters() {

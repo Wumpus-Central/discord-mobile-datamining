@@ -1,8 +1,8 @@
 // discord_app/modules/activities/DeveloperActivityShelfStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 
 const ApplicationFlags = ME.ApplicationFlags;

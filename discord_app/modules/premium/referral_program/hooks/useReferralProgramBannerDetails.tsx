@@ -10,12 +10,12 @@ const result = require("set").fileFinishedImporting(
 
 export const MAX_REFERRALS_SENT = 3;
 export const useReferralProgramBannerDetails = function useReferralProgramBannerDetails() {
-  let obj = stateFromStoresArray(586);
+  let obj = stateFromStoresArray(504);
   const items = [closure_4];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => authStore.getSentUserIds());
   const items1 = [closure_3];
   const items2 = [stateFromStoresArray];
-  const stateFromStoresArray1 = stateFromStoresArray(586).useStateFromStoresArray(items1, () => {
+  const stateFromStoresArray1 = stateFromStoresArray(504).useStateFromStoresArray(items1, () => {
     const mapped = stateFromStoresArray.map((arg0) => user.getUser(arg0));
     return mapped.filter((arg0) => null != arg0);
   });
@@ -29,8 +29,8 @@ export const useReferralProgramBannerDetails = function useReferralProgramBanner
     hasSentAllReferrals: 3 === stateFromStoresArray.length,
     refreshAt: null,
   };
-  const obj2 = stateFromStoresArray(586);
+  const obj2 = stateFromStoresArray(504);
   const items3 = [closure_4];
-  obj[2] = stateFromStoresArray(586).useStateFromStores(items3, () => authStore.getRefreshAt());
+  obj[2] = stateFromStoresArray(504).useStateFromStores(items3, () => authStore.getRefreshAt());
   return obj;
 };

@@ -85,12 +85,12 @@ export const trackAgeVerificationModalViewed = function trackAgeVerificationModa
 };
 export const trackAgeVerificationModalClicked = function trackAgeVerificationModalClicked(
   modalSessionId,
-  PRIMARY,
+  EXPRESSIVE_V2,
   METHOD_SELECT,
   GOOGLE_WALLET,
 ) {
   let obj = expandEventPropertiesDefault;
-  obj = { modal_session_id: modalSessionId, modal_version: PRIMARY, cta: METHOD_SELECT, method: GOOGLE_WALLET };
+  obj = { modal_session_id: modalSessionId, modal_version: EXPRESSIVE_V2, cta: METHOD_SELECT, method: GOOGLE_WALLET };
   obj.track(AnalyticEvents.AGE_VERIFICATION_MODAL_CLICKED, obj);
 };
 export const trackAgeVerificationDmClicked = function trackAgeVerificationDmClicked(CONNECT_TO_TEEN, channelId) {

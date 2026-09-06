@@ -2,8 +2,8 @@
 import set from "../../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import GameIcon from "../../../game_detection/native/GameIcon.tsx";
 import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
+import GameIcon from "../../../game_detection/native/GameIcon.tsx";
 
 let obj = {
   layout: { margin: { marginLeft: 8, marginRight: 8, marginVertical: 0 } },

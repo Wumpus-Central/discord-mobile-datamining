@@ -44,21 +44,21 @@ export default function useStableParticipant(arg0, arg1, arg2) {
               userAvatarDecoration: null,
               streamId: "flex",
               ringing: null,
-              hasVideo: 0.18,
-              isSelf: 0.701,
+              hasVideo: 0,
+              isSelf: 1,
             };
             obj[0] = closure_1_7.USER;
             obj[1] = tmp;
             obj[2] = user;
             const id = closure_1_4.getId();
-            obj[5] = callback(4673).getName(dependencyMap, tmp3, user);
-            const obj5 = callback(4673);
-            obj[6] = callback(8923).getAvatarDecoration(user, dependencyMap);
+            obj[5] = callback(4712).getName(dependencyMap, tmp3, user);
+            const obj5 = callback(4712);
+            obj[6] = callback(8217).getAvatarDecoration(user, dependencyMap);
             obj[10] = user.id === id;
             return obj;
           }
         } else {
-          const tmp15 = callback2(9608)(participant);
+          const tmp15 = callback2(9622)(participant);
           const type = participant.type;
           if (closure_1_7.ACTIVITY === type) {
             obj = { type: null, id: null, applicationId: null };

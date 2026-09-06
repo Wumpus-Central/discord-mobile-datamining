@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import isEqualDefault from "../../../_runtime/04643_isEqual.js";
+import isEqualDefault from "../../../_runtime/04679_isEqual.js";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import set from "../../../_runtime/00002_set.js";
 import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";

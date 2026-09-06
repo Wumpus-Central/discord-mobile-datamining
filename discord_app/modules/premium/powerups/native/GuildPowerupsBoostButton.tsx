@@ -12,21 +12,21 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/na
 export const GuildPowerupsBoostButton = function GuildPowerupsBoostButton(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
-  let obj = guildId(586);
+  let obj = guildId(504);
   let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(guildId));
   const items1 = [closure_6];
-  stateFromStores1 = guildId(586).useStateFromStores(items1, () => boostSlots.boostSlots);
-  const obj2 = guildId(586);
+  stateFromStores1 = guildId(504).useStateFromStores(items1, () => boostSlots.boostSlots);
+  const obj2 = guildId(504);
   const tmp = guildId;
   const tmp5 = stateFromStores1;
-  const tmp6 = stateFromStores1(7151)({ forceFetch: true });
+  const tmp6 = stateFromStores1(7393)({ forceFetch: true });
   const items2 = [closure_5];
-  const stateFromStores2 = guildId(586).useStateFromStores(items2, () => currentUser.getCurrentUser());
+  const stateFromStores2 = guildId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   if (null != stateFromStores2) {
     let UNSPECIFIED = stateFromStores2.premiumGroupRole;
   } else {
-    UNSPECIFIED = tmp(1929).PremiumSubscriptionGroupRole.UNSPECIFIED;
+    UNSPECIFIED = tmp(1379).PremiumSubscriptionGroupRole.UNSPECIFIED;
   }
   const items3 = [stateFromStores1];
   const memo = React.useMemo(() => {
@@ -49,7 +49,7 @@ export const GuildPowerupsBoostButton = function GuildPowerupsBoostButton(guildI
     obj[3] = tmp6.fractionalState;
     obj[4] = tmp9;
     obj[5] = UNSPECIFIED;
-    tmp10 = jsx(tmp5(7155), {
+    tmp10 = jsx(tmp5(7402), {
       guild: null,
       previousGuildSubscriptionSlot: null,
       analyticsSection: null,

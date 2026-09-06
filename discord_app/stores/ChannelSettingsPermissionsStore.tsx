@@ -92,7 +92,7 @@ function syncChannelUpdates(id) {
           }
           const obj5 = applyOverwritesAll;
           tmp = null != guildId1 && null == obj[guildId1];
-          closure_4 = obj5.areChannelsLocked(channel, category, obj(11424).getAppChannelBotUserId(channel));
+          closure_4 = obj5.areChannelsLocked(channel, category, obj(11610).getAppChannelBotUserId(channel));
           return true;
         }
       }

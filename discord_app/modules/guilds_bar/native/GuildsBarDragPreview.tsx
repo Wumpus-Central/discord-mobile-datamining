@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import isIterable from "../../../../_runtime/04105_isIterable.js";
+import isIterable from "../../../../_runtime/04184_isIterable.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { GuildsNodeType } from "../../../stores/SortedGuildStore.tsx";
 import closure_5 from "GuildsBarDnDStore.tsx";
@@ -149,9 +149,9 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "PX_16",
           name: "Array",
-          color: "call",
-          expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018511064740781746,
-          children: 16661473071873657000000000000000000000000000000000000000000000000000000000000000000,
+          color: "displayName",
+          expanded: false,
+          children: false,
         };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
@@ -419,11 +419,11 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "VOICE_STATE_UPDATE",
+            gestureState: "LongPressCommandMention",
             scrollPosition: null,
-            dragRegion: "text-sm/medium",
-            windowSize: "text-muted",
-            dropComplete: false,
+            dragRegion: true,
+            windowSize: "button",
+            dropComplete: null,
             listInsets: null,
           };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);

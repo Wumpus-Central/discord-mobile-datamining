@@ -11,32 +11,32 @@ const result = require("set").fileFinishedImporting(
 
 export default function NsfwGateGuildSettingsActionSheet(guild) {
   guild = guild.guild;
-  let obj = guild(13887);
+  let obj = guild(13909);
   const messageRequestPrivacyOption = obj.useMessageRequestPrivacyOption({ guild });
-  obj = { header: callback(guild(5630).BottomSheetTitleHeader, obj), children: null };
+  obj = { header: callback(guild(7149).BottomSheetTitleHeader, obj), children: null };
   obj = { title: guild.name };
   obj1 = { hasIcons: false, children: null };
   const obj2 = { label: null, onPress: null };
-  const intl = guild(1233).intl;
-  obj2[0] = intl.string(guild(1233).t.h850Ss);
+  const intl = guild(1114).intl;
+  obj2[0] = intl.string(guild(1114).t.h850Ss);
   obj2[1] = function onPress() {
     closure_1_1(closure_1_2[7]).hideActionSheet();
     const obj = closure_1_1(closure_1_2[7]);
     closure_1_1(closure_1_2[8]).open(guild.id);
   };
   const items = [
-    callback(guild(6000).ActionSheetRow, obj2),
-    callback(guild(13888).RestrictedGuildPrivacyOption, { guild }),
+    callback(guild(7200).ActionSheetRow, obj2),
+    callback(guild(13910).RestrictedGuildPrivacyOption, { guild }),
     messageRequestPrivacyOption,
   ];
   const obj3 = { variant: "danger", label: null, onPress: null };
-  const intl2 = guild(1233).intl;
-  obj3[1] = intl2.string(guild(1233).t.J2TBi3);
+  const intl2 = guild(1114).intl;
+  obj3[1] = intl2.string(guild(1114).t.J2TBi3);
   obj3[2] = function onPress() {
     return guild(closure_1_2[9]).handleLeaveServer(guild);
   };
-  items[3] = callback(guild(6000).ActionSheetRow, obj3);
+  items[3] = callback(guild(7200).ActionSheetRow, obj3);
   obj1[1] = items;
-  obj[1] = callback2(guild(6000).ActionSheetRow.Group, obj1);
-  return callback(guild(5998).ActionSheet, obj);
+  obj[1] = callback2(guild(7200).ActionSheetRow.Group, obj1);
+  return callback(guild(7198).ActionSheet, obj);
 }

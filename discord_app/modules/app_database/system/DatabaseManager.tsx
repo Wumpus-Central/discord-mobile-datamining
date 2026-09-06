@@ -254,7 +254,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== callback(1956).DatabaseState.Open;
+    tmp3 = stateResult !== callback(1987).DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);

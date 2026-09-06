@@ -37,9 +37,13 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
     const t = visible(onTryItOut[5]).t;
     obj[1] = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
     obj[2] = visible;
-    obj = { type: "image", src: null, aspectRatio: "16/9" };
-    obj = { uri: markAsDismissed(tmp2[6]) };
-    obj[1] = obj;
+    obj = {
+      type: "rive",
+      rive: tmp(tmp2[6]).BadgesCoachmarkRive,
+      aspectRatio: "16/9",
+      riveProps: { dataBinding: obj },
+    };
+    obj = { on: visible };
     obj[5] = obj;
     obj[6] = function onDismiss() {
       return callback(closure_1_5.USER_DISMISS);

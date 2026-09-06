@@ -12,7 +12,7 @@ import closure_11 from "../../../stores/UserStore.tsx";
 import importDefaultResult2 from "../../../stores/VoiceStateStore.tsx";
 import closure_13 from "../../../stores/native/MobileVoiceOverlayStore.tsx";
 import ME from "../../../Constants.tsx";
-import registerAsset from "../../../../_runtime/14422_registerAsset.js";
+import registerAsset from "../../../../_runtime/14529_registerAsset.js";
 import {
   intl,
   intl as intl2,

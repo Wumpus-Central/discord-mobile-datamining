@@ -134,7 +134,7 @@ let closure_26 = createCacheKey.createStyles(() => {
     paddingHorizontal: null,
     gap: null,
   };
-  const space2 = tmp(709).space;
+  const space2 = tmp(576).space;
   obj2[2] = flag ? space2.PX_12 : space2.PX_48;
   obj2[3] = ThemesDefault.space.PX_32;
   obj2[4] = ThemesDefault.space.PX_8;
@@ -417,7 +417,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                   throwTypeErrorResult = closure_2_18;
                                   obj2[2] = closure_2_18.FEATURED_PAGE;
                                   obj2[3] = function onNavigateAway(arg0) {
-                                    callback(8915)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
+                                    callback(8179)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
                                   };
                                   throwTypeErrorResult = lib(context[24]).openCollectiblesShopMobile(obj2);
                                   throwTypeErrorResult = lib;
@@ -594,7 +594,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                               throwTypeErrorResult = closure_2_19;
                               obj11[3] = closure_2_19.USER_PROFILE_WISHLIST;
                               obj11[4] = function onGiftModalDismiss(arg0) {
-                                callback(8915)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
+                                callback(8179)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
                               };
                               throwTypeErrorResult = lib(context[49]).openSocialLayerStorefrontGiftModal(obj11);
                               const obj55 = lib(context[49]);

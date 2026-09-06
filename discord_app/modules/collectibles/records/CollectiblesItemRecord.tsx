@@ -60,7 +60,7 @@ function transformSKUToCollectiblesItem(productLine) {
           const tmp28 = new closure_2(obj1);
           obj[1] = tmp28;
           return obj;
-        } else if (tmp4(1949).CollectiblesItemType.NAMEPLATE === type) {
+        } else if (tmp4(1889).CollectiblesItemType.NAMEPLATE === type) {
           const obj2 = { type: "single", item: null };
           const obj3 = { skuId: null, type: null, asset: null, label: null, palette: null };
           obj3[0] = productLine.id;
@@ -68,7 +68,7 @@ function transformSKUToCollectiblesItem(productLine) {
           const tmp22 = new closure_3(obj3);
           obj2[1] = tmp22;
           return obj2;
-        } else if (tmp4(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+        } else if (tmp4(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
           const obj4 = {
             skuId: null,
             type: null,
@@ -100,7 +100,7 @@ function transformSKUToCollectiblesItem(productLine) {
           tmp12 = new tmp12(obj4);
           obj5[1] = tmp12;
           return obj5;
-        } else if (tmp4(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+        } else if (tmp4(1889).CollectiblesItemType.PROFILE_FRAME === type) {
           obj = { type: "single", item: null };
           const obj6 = {
             skuId: null,

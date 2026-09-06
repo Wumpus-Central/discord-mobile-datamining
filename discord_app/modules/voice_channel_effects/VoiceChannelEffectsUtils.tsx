@@ -2,57 +2,57 @@
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
 import getEmojiUnavailableReasonDefault from "../../utils/EmojiUtils.tsx";
-import _modDef6204 from "../../../_runtime/metro/06204__.js";
-import _modDef6205 from "../../../_runtime/metro/06205__.js";
-import _modDef6206 from "../../../_runtime/metro/06206__.js";
-import _modDef6207 from "../../../_runtime/metro/06207__.js";
-import _modDef6208 from "../../../_runtime/metro/06208__.js";
-import _modDef6209 from "../../../_runtime/metro/06209__.js";
-import _modDef6210 from "../../../_runtime/metro/06210__.js";
-import _modDef6211 from "../../../_runtime/metro/06211__.js";
-import _modDef6212 from "../../../_runtime/metro/06212__.js";
-import _modDef6213 from "../../../_runtime/metro/06213__.js";
-import _modDef6214 from "../../../_runtime/metro/06214__.js";
-import _modDef6215 from "../../../_runtime/metro/06215__.js";
-import _modDef6216 from "../../../_runtime/metro/06216__.js";
-import _modDef6217 from "../../../_runtime/metro/06217__.js";
-import _modDef6218 from "../../../_runtime/metro/06218__.js";
-import _modDef6219 from "../../../_runtime/metro/06219__.js";
-import _modDef6220 from "../../../_runtime/metro/06220__.js";
-import _modDef6221 from "../../../_runtime/metro/06221__.js";
-import _modDef6222 from "../../../_runtime/metro/06222__.js";
-import _modDef6223 from "../../../_runtime/metro/06223__.js";
-import _modDef6224 from "../../../_runtime/metro/06224__.js";
-import _modDef6225 from "../../../_runtime/metro/06225__.js";
+import _modDef7350 from "../../../_runtime/metro/07350__.js";
+import _modDef7351 from "../../../_runtime/metro/07351__.js";
+import _modDef7352 from "../../../_runtime/metro/07352__.js";
+import _modDef7353 from "../../../_runtime/metro/07353__.js";
+import _modDef7354 from "../../../_runtime/metro/07354__.js";
+import _modDef7355 from "../../../_runtime/metro/07355__.js";
+import _modDef7356 from "../../../_runtime/metro/07356__.js";
+import _modDef7357 from "../../../_runtime/metro/07357__.js";
+import _modDef7358 from "../../../_runtime/metro/07358__.js";
+import _modDef7359 from "../../../_runtime/metro/07359__.js";
+import _modDef7360 from "../../../_runtime/metro/07360__.js";
+import _modDef7361 from "../../../_runtime/metro/07361__.js";
+import _modDef7362 from "../../../_runtime/metro/07362__.js";
+import _modDef7363 from "../../../_runtime/metro/07363__.js";
+import _modDef7364 from "../../../_runtime/metro/07364__.js";
+import _modDef7365 from "../../../_runtime/metro/07365__.js";
+import _modDef7366 from "../../../_runtime/metro/07366__.js";
+import _modDef7367 from "../../../_runtime/metro/07367__.js";
+import _modDef7368 from "../../../_runtime/metro/07368__.js";
+import _modDef7369 from "../../../_runtime/metro/07369__.js";
+import _modDef7370 from "../../../_runtime/metro/07370__.js";
+import _modDef7371 from "../../../_runtime/metro/07371__.js";
 import closure_3 from "../../stores/UserStore.tsx";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectsConstants.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [_modDef6204];
+const items = [_modDef7350];
 const items1 = [
-  _modDef6205,
-  _modDef6206,
-  _modDef6207,
-  _modDef6208,
-  _modDef6209,
-  _modDef6210,
-  _modDef6211,
-  _modDef6212,
-  _modDef6213,
-  _modDef6214,
-  _modDef6215,
-  _modDef6216,
-  _modDef6217,
-  _modDef6218,
-  _modDef6219,
-  _modDef6220,
-  _modDef6221,
-  _modDef6222,
-  _modDef6223,
-  _modDef6224,
-  _modDef6225,
+  _modDef7351,
+  _modDef7352,
+  _modDef7353,
+  _modDef7354,
+  _modDef7355,
+  _modDef7356,
+  _modDef7357,
+  _modDef7358,
+  _modDef7359,
+  _modDef7360,
+  _modDef7361,
+  _modDef7362,
+  _modDef7363,
+  _modDef7364,
+  _modDef7365,
+  _modDef7366,
+  _modDef7367,
+  _modDef7368,
+  _modDef7369,
+  _modDef7370,
+  _modDef7371,
 ];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = importDefaultResult.memoize((arg0) => {
@@ -165,8 +165,8 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
     if (obj.length < 1) {
       return "";
     } else if (1 === obj.length) {
-      const intl2 = emojiName(1233).intl;
-      yZYxzF = emojiName(1233).t.yZYxzF;
+      const intl2 = emojiName(1114).intl;
+      yZYxzF = emojiName(1114).t.yZYxzF;
       const user = authStore.getUser(obj[0]);
       let username;
       if (user != null) {
@@ -177,7 +177,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       obj[1] = joined;
       let formatToPlainStringResult = intl2.formatToPlainString(yZYxzF, obj);
     } else if (2 === obj.length) {
-      const intl = emojiName(1233).intl;
+      const intl = emojiName(1114).intl;
       const user1 = authStore.getUser(obj[0]);
       let username1;
       if (user1 != null) {
@@ -192,10 +192,10 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       }
       obj[1] = username2;
       obj[2] = joined;
-      formatToPlainStringResult = intl.formatToPlainString(emojiName(1233).t["8rmtbd"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(emojiName(1114).t["8rmtbd"], obj);
       const obj2 = authStore;
     } else {
-      const intl3 = emojiName(1233).intl;
+      const intl3 = emojiName(1114).intl;
       const user3 = authStore.getUser(obj[0]);
       let username3;
       if (user3 != null) {
@@ -211,7 +211,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       obj[1] = username4;
       obj[2] = obj.length - 2;
       obj[3] = joined;
-      formatToPlainStringResult = intl3.formatToPlainString(emojiName(1233).t["/okjv0"], obj);
+      formatToPlainStringResult = intl3.formatToPlainString(emojiName(1114).t["/okjv0"], obj);
       const obj7 = authStore;
     }
     const iter2 = found1.uniq();

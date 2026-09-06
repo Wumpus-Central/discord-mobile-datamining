@@ -83,7 +83,7 @@ export default function FamilyCenterActivityBanner() {
       articleLink: "https://support.discord.com/hc/articles/14155043715735",
     }),
   );
-  obj[0] = tmp(tmp3 ? 14727 : 14728);
+  obj[0] = tmp(tmp3 ? 14883 : 14884);
   obj[1] = tmp4.art;
   const items = [closure_5(closure_4, obj), , ,];
   obj1 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };

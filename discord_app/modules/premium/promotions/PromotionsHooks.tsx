@@ -163,7 +163,7 @@ export const useOutboundPromotions = function useOutboundPromotions() {
 };
 export const useUnseenOutboundPromotions = function useUnseenOutboundPromotions() {
   const items = [closure_5];
-  stateFromStores = stateFromStores(586).useStateFromStores(items, () => obj.lastSeenOutboundPromotionStartDate);
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => obj.lastSeenOutboundPromotionStartDate);
   const tmp2 = useEligibleActiveOutboundPromotions();
   closure_1 = tmp2;
   const items1 = [tmp2, stateFromStores];

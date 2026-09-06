@@ -1,9 +1,9 @@
 // discord_app/modules/guild_profile/GuildProfileStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import ME from "../../Constants.tsx";
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 import getEmoji from "GuildProfileBuilders.tsx";
 
 function handleUpdateStart(guildId) {

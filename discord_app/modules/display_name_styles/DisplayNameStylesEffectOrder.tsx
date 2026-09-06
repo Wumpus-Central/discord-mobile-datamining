@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/display_name_styles
 
 export const useVisibleEffectOrder = function useVisibleEffectOrder() {
   isDisplayNameStylesFlywheelSettersEnabled =
-    isDisplayNameStylesFlywheelSettersEnabled(8943).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
+    isDisplayNameStylesFlywheelSettersEnabled(9177).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return React.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? closure_1_4 : closure_1_3), items);
 };

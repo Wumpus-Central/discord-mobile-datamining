@@ -4,20 +4,20 @@ import set from "../../../utils/PlatformUtils.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../_runtime/10306_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10307_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/10308_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/10309_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/10310_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/10311_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/10312_registerAsset.js";
-import registerAssetDefault8 from "../../../../_runtime/10313_registerAsset.js";
-import registerAssetDefault9 from "../../../../_runtime/10314_registerAsset.js";
-import registerAssetDefault10 from "../../../../_runtime/10315_registerAsset.js";
-import registerAssetDefault11 from "../../../../_runtime/10316_registerAsset.js";
-import registerAssetDefault12 from "../../../../_runtime/10317_registerAsset.js";
-import registerAssetDefault13 from "../../../../_runtime/10318_registerAsset.js";
-import registerAssetDefault14 from "../../../../_runtime/10319_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10197_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10198_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/10199_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/10200_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/10201_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/10202_registerAsset.js";
+import registerAssetDefault7 from "../../../../_runtime/10203_registerAsset.js";
+import registerAssetDefault8 from "../../../../_runtime/10204_registerAsset.js";
+import registerAssetDefault9 from "../../../../_runtime/10205_registerAsset.js";
+import registerAssetDefault10 from "../../../../_runtime/10206_registerAsset.js";
+import registerAssetDefault11 from "../../../../_runtime/10207_registerAsset.js";
+import registerAssetDefault12 from "../../../../_runtime/10208_registerAsset.js";
+import registerAssetDefault13 from "../../../../_runtime/10209_registerAsset.js";
+import registerAssetDefault14 from "../../../../_runtime/10210_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -153,12 +153,12 @@ let closure_13 = importAllResult.memo((borderRadius) => {
       isIOSResult = uri.startsWith("ph://");
     }
     if (!isIOSResult) {
-      let isAndroidResult = tmp2(1234).isAndroid();
+      let isAndroidResult = tmp2(1115).isAndroid();
       if (isAndroidResult) {
         isAndroidResult = uri.startsWith("content://");
       }
       isIOSResult = isAndroidResult;
-      const tmp2Result = tmp2(1234);
+      const tmp2Result = tmp2(1115);
     }
     isMatch = isIOSResult;
     const obj4 = set;
@@ -250,10 +250,10 @@ export default function AttachmentPreview(height) {
           const obj3 = { uri: null };
           obj3[0] = uri;
           obj1[1] = obj3;
-          obj[1] = callback(tmp7(8621).VideoComponent, obj1);
+          obj[1] = callback(tmp7(8307).VideoComponent, obj1);
           tmp9 = callback(closure_5, obj);
         }
-        tmp7Result = tmp7(1234);
+        tmp7Result = tmp7(1115);
       }
       tmp8 = dependencyMap;
     } else {
@@ -275,7 +275,7 @@ export default function AttachmentPreview(height) {
       const obj6 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj6[0] = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(10239).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(10132).CirclePlayIcon;
       tmp6 = callback(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj6[1] = tmp6;
       items[1] = callback(closure_5, obj6);

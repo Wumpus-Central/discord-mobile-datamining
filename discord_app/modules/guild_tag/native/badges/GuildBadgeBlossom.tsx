@@ -1,6 +1,6 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeBlossom.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import inlineStyles from "../../../../../_runtime/08254_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
 import getTransformedBadgeColors from "GuildBadgeUtils.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 

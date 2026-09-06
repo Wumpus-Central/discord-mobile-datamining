@@ -1,6 +1,6 @@
 // discord_app/modules/libdiscore/DispatcherBridge.tsx
 import timestampDefault from "../debug/Logger.tsx";
-import _modDef1205 from "../../utils/SentryUtils.native.tsx";
+import _modDef1232 from "../../utils/SentryUtils.native.tsx";
 import items6 from "libdiscoreExperiments.tsx";
 import closure_3 from "../devtools/dev_settings/DevSettingsStore.tsx";
 import importDefaultResult from "../emojis/RawGuildEmojiStore.tsx";
@@ -295,7 +295,7 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
   let obj = logger;
   logger.error("Fatal dispatch error for action", type, "hasAuthoritativeStore:", result, error);
   obj = { actionType: type, hasAuthoritativeStore: result };
-  _modDef1205.captureException(error, { extra: obj, tags: { source: "libdiscore", errorKind: "fatal_dispatch" } });
+  _modDef1232.captureException(error, { extra: obj, tags: { source: "libdiscore", errorKind: "fatal_dispatch" } });
   if (result) {
     const result1 = items6.clearLibdiscoreExperimentCache();
     throw error;
@@ -309,7 +309,7 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
       continue;
     }
   }
-  const obj2 = _modDef1205;
+  const obj2 = _modDef1232;
 };
 prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   const tokenToStore = this.tokenToStore;
@@ -332,7 +332,7 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   }
   error = new Error(str3);
   logger.error("Store", name, "failed to handle action", type, "mode:", mode, error);
-  _modDef1205.captureException(error, {
+  _modDef1232.captureException(error, {
     extra: { actionType: type, storeName: name, storeMode: mode },
     tags: { source: "libdiscore", errorKind: "store_dispatch" },
   });
@@ -356,7 +356,7 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   }
   const obj = { actionType: type, storeName: name, storeMode: mode };
   obj2 = logger;
-  const obj3 = _modDef1205;
+  const obj3 = _modDef1232;
 };
 prototype["withStoreToken"] = function withStoreToken(storeToken, type, arg2) {
   const tokenToStore = this.tokenToStore;

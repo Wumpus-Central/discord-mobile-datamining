@@ -685,7 +685,7 @@ function FriendAnniversary() {
   return callback3(closure_19, obj9);
 }
 function TrialOfferSheetExample() {
-  let obj = premiumTrialOffer(7202);
+  let obj = premiumTrialOffer(7447);
   premiumTrialOffer = obj.usePremiumTrialOffer();
   obj = {
     label: "Trial Offer Nitro Basic",
@@ -706,9 +706,9 @@ function TrialOfferSheetExample() {
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(5608).TableRow, obj)];
+  items = [closure_17(premiumTrialOffer(5605).TableRow, obj)];
   obj = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(5608).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(5605).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -728,7 +728,7 @@ function TrialOfferSheetExample() {
     },
   });
   obj[2] = items;
-  return closure_18(premiumTrialOffer(6001).TableRowGroup, obj);
+  return closure_18(premiumTrialOffer(5687).TableRowGroup, obj);
 }
 function PremiumToggles() {
   let obj = defaultAreStatesEqual;
@@ -782,10 +782,10 @@ function ForceMockIAP() {
   obj[2] = tmp4;
   obj[3] = result;
   obj[4] = function onValueChange(arg0) {
-    callback(15532).toggle("force_mock_iap", arg0);
+    callback(15690).toggle("force_mock_iap", arg0);
     closure_13.persist();
-    const obj = callback(15532);
-    const result = callback2(11590).checkForUpdateAndReload();
+    const obj = callback(15690);
+    const result = callback2(11791).checkForUpdateAndReload();
   };
   return closure_17(TableRowGroupTitle.TableRowGroup, obj);
 }

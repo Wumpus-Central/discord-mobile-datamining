@@ -75,12 +75,12 @@ export default function SafetyHubAccountStandingSubwayMarker(arg0) {
     obj.height = size;
     let num = 0;
     if (tmp3) {
-      num = -isSelected(709).space.PX_4;
+      num = -isSelected(576).space.PX_4;
     }
     obj.marginLeft = num;
     let num2 = 0;
     if (index === numOptions - 1) {
-      num2 = -isSelected(709).space.PX_4;
+      num2 = -isSelected(576).space.PX_4;
     }
     obj1 = { style: null, children: null };
     obj.marginRight = num2;

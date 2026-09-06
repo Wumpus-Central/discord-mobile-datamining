@@ -6,8 +6,8 @@ import messagesProxyDefault from "../FamilyCenter.messages.js";
 import nameFromUserDefault from "../../../utils/UserUtils.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import getEmptyActivityFormatter from "../FamilyCenterUtils.tsx";
 import closure_3 from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -25,7 +25,7 @@ function UserRow(userActivity) {
     obj = { label: null, subLabel: null, icon: null };
     obj[0] = nameFromUserDefault.getName(user);
     obj[1] = topUserOrGuildDescription;
-    obj = { size: null, user: null, guildId: "accessible" };
+    obj = { size: null, user: null, guildId: "Array" };
     obj[0] = Button.AvatarSizes.SMALL;
     obj[1] = user;
     obj[2] = callback(Button.Avatar, obj);

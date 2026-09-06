@@ -1,6 +1,6 @@
 // discord_app/records/PaymentSourceRecord.tsx
-import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
+import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import toJSDefault from "../lib/Record.tsx";
 import ME from "../Constants.tsx";
 

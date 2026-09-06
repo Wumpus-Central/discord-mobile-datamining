@@ -35,13 +35,13 @@ export const useExplicitContentSettingOrDefault = function useExplicitContentSet
     explicitContentNonFriendDm: null,
     explicitContentFriendDm: null,
   };
-  let tmpResult = tmp(6153);
+  let tmpResult = tmp(7298);
   let prop1;
   if (stateFromStoresObject != null) {
     prop1 = stateFromStoresObject.explicitContentNonFriendDm;
   }
   obj[1] = tmpResult.resolveExplicitContentSettingWithDefaults({ setting: prop1, isDm: true });
-  tmpResult = tmp(6153);
+  tmpResult = tmp(7298);
   let prop2;
   if (stateFromStoresObject != null) {
     prop2 = stateFromStoresObject.explicitContentFriendDm;
@@ -73,13 +73,13 @@ export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDe
     goreContentNonFriendDm: null,
     goreContentFriendDm: null,
   };
-  let tmpResult = tmp(6155);
+  let tmpResult = tmp(7301);
   let prop;
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.goreContentNonFriendDm;
   }
   obj[1] = tmpResult.resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
-  tmpResult = tmp(6155);
+  tmpResult = tmp(7301);
   let goreContentFriendDm;
   if (stateFromStoresObject != null) {
     goreContentFriendDm = stateFromStoresObject.goreContentFriendDm;

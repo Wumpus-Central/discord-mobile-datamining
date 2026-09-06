@@ -30,15 +30,15 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
     num3 = 0;
   }
   obj[1] = num3;
-  let tmpResult = tmp(6147);
-  obj = { type: tmp(6152).ObscuredMediaTypes.Attachment, media: obj };
+  let tmpResult = tmp(7292);
+  obj = { type: tmp(7297).ObscuredMediaTypes.Attachment, media: obj };
   const mediaObscuredReasonFromBitmask = tmpResult.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
-  tmpResult = tmp(6147);
+  tmpResult = tmp(7292);
   let isVerifiedTeenResult = tmp5;
   obj1 = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj };
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    isVerifiedTeenResult = tmp(4734).isVerifiedTeen();
-    const tmpResult1 = tmp(4734);
+    isVerifiedTeenResult = tmp(4773).isVerifiedTeen();
+    const tmpResult1 = tmp(4773);
   }
   let tmp7 = shouldObscureSpoiler;
   if (shouldObscureSpoiler) {
@@ -59,16 +59,16 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   if (shouldObscureSpoiler) {
     str2 = str;
     if (hasFlagResult) {
-      const intl = tmp(1233).intl;
-      str2 = intl.string(tmp(1233).t["F+x38C"]).toUpperCase();
-      const str3 = intl.string(tmp(1233).t["F+x38C"]);
+      const intl = tmp(1114).intl;
+      str2 = intl.string(tmp(1114).t["F+x38C"]).toUpperCase();
+      const str3 = intl.string(tmp(1114).t["F+x38C"]);
     }
   }
   obj2[1] = str2;
   obj2[2] = mediaObscuredReasonFromBitmask.length > 0;
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    const intl2 = tmp(1233).intl;
-    str = intl2.string(tmp(1233).t.SpxcUR);
+    const intl2 = tmp(1114).intl;
+    str = intl2.string(tmp(1114).t.SpxcUR);
   }
   obj2[3] = str;
   obj2[4] = tmpResult.isMediaScanPending(
@@ -92,9 +92,9 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
   let isMediaScanPendingResult = !isAuthorBot;
   const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
   if (!isAuthorBot) {
-    let tmpResult = tmp(6147);
+    let tmpResult = tmp(7292);
     obj = { type: null, media: null };
-    obj[0] = tmp(6152).ObscuredMediaTypes.GenericMedia;
+    obj[0] = tmp(7297).ObscuredMediaTypes.GenericMedia;
     obj[1] = mediaItem;
     isMediaScanPendingResult = tmpResult.isMediaScanPending(obj, enabledContentHarmTypeFlags);
   }
@@ -103,7 +103,7 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
   }
   let isVerifiedTeenResult = tmp4;
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    tmpResult = tmp(4734);
+    tmpResult = tmp(4773);
     isVerifiedTeenResult = tmpResult.isVerifiedTeen();
   }
   obj1 = {
@@ -121,8 +121,8 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
     obj1[2] = tmp4;
     let stringResult = null;
     if (tmp4) {
-      const intl4 = tmp(1233).intl;
-      stringResult = intl4.string(tmp(1233).t.SpxcUR);
+      const intl4 = tmp(1114).intl;
+      stringResult = intl4.string(tmp(1114).t.SpxcUR);
     }
     obj1[3] = stringResult;
     obj1[4] = isMediaScanPendingResult;
@@ -135,20 +135,20 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
     obj1[7] = tmp4;
     return obj1;
   } else if ("image" === type) {
-    const intl3 = tmp(1233).intl;
-    let stringResult1 = intl3.string(tmp(1233).t.sb2W2J);
+    const intl3 = tmp(1114).intl;
+    let stringResult1 = intl3.string(tmp(1114).t.sb2W2J);
   } else {
     if ("video" === type) {
-      const intl2 = tmp(1233).intl;
-      stringResult1 = intl2.string(tmp(1233).t.ehBaMc);
+      const intl2 = tmp(1114).intl;
+      stringResult1 = intl2.string(tmp(1114).t.ehBaMc);
     } else if ("file" !== type) {
       if ("generic" === type) {
-        const intl5 = tmp(1233).intl;
-        stringResult1 = intl5.string(tmp(1233).t.G71b77);
+        const intl5 = tmp(1114).intl;
+        stringResult1 = intl5.string(tmp(1114).t.G71b77);
       }
     }
-    const intl = tmp(1233).intl;
-    stringResult1 = intl.string(tmp(1233).t["3Gc2XP"]);
+    const intl = tmp(1114).intl;
+    stringResult1 = intl.string(tmp(1114).t["3Gc2XP"]);
   }
 };
 export function getAttachmentObscurityDefaults() {

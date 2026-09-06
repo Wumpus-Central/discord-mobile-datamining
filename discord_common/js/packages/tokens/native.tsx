@@ -1,15 +1,15 @@
 // discord_common/js/packages/tokens/native.tsx
 import set from "../../../../_runtime/00002_set.js";
-import nDefault from "../../../../_runtime/00686_n.js";
 import items from "themes/generated/generated-definitions.tsx";
 import _private from "colors/generated/native/generated-definitions.tsx";
 import _private2 from "colors/generated/native/experiment-definitions.tsx";
 import _private3 from "colors/generated/raw-color-definitions.tsx";
 import _private4 from "modules/generated/generated-definitions.tsx";
 import _private5 from "shadows/generated/shared/generated-definitions.tsx";
-import mapValuesDefault from "../../../../_runtime/00716_mapValues.js";
+import mapValuesDefault from "../../../../_runtime/00583_mapValues.js";
 import Radius from "radii/generated/generated-definitions.tsx";
 import Layout from "layout/generated/generated-definitions.tsx";
+import nDefault from "../../../../_runtime/00672_n.js";
 import interpolate from "transforms.tsx";
 
 const Themes = items._private.Themes;
@@ -23,8 +23,8 @@ obj = {
   colors: mapValuesDefault(SemanticColors, (arg0, arg1) => ({ [closure_7]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: mapValuesDefault(Shadows, (arg0) => {
-    let f70490 = arg0;
-    f70490 = (shadowOffset) => {
+    let f70617 = arg0;
+    f70617 = (shadowOffset) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
@@ -33,34 +33,34 @@ obj = {
     };
     let shadowOffset = {
       resolve(isAndroid) {
-        return f70490(f70490[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        return f70617(f70617[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
       },
     };
-    f70490 = (shadowColorAndroid) => (arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor);
+    f70617 = (shadowColorAndroid) => (arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor);
     const shadowColor = {
       resolve(isAndroid) {
-        return f70490(f70490[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        return f70617(f70617[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
       },
     };
-    f70490 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    f70490 = (shadowRadius) => shadowRadius.shadowRadius;
-    f70490 = (elevation) => elevation.elevation;
+    f70617 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f70617 = (shadowRadius) => shadowRadius.shadowRadius;
+    f70617 = (elevation) => elevation.elevation;
     return {
       shadowOffset,
       shadowColor,
       shadowOpacity: {
         resolve(isAndroid) {
-          return f70490(f70490[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f70617(f70617[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowRadius: {
         resolve(isAndroid) {
-          return f70490(f70490[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f70617(f70617[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       elevation: {
         resolve(isAndroid) {
-          return f70490(f70490[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f70617(f70617[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
     };

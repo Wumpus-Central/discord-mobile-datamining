@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelChatView.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/04432_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/04514_registerAsset.js";
 import getMixedGradientColorDefault from "../../../client_themes/native/ThemedGradient.tsx";
 import setDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import ChatFloatingNavButtonDefault from "../../../chat_input/native/ChatFloatingNavButton.tsx";
@@ -26,7 +26,7 @@ let closure_9 = {
 };
 let closure_10 = importAllResult.memo(() => {
   const windowDimensions = importAllResult.useContext(dismissPanelDefault).windowDimensions;
-  let obj = windowDimensions(4217);
+  let obj = windowDimensions(4296);
   const fn = function n() {
     return { width: windowDimensions.get().width, height: windowDimensions.get().height };
   };

@@ -36,10 +36,10 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
 };
 export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgroundOption() {
   const items = [closure_4];
-  const stateFromStores = stateFromStores1(586).useStateFromStores(items, () => settings.settings);
-  let obj = stateFromStores1(586);
+  const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => settings.settings);
+  let obj = stateFromStores1(504);
   const items1 = [closure_5];
-  stateFromStores1 = stateFromStores1(586).useStateFromStores(items1, () => currentUser.getCurrentUser());
+  stateFromStores1 = stateFromStores1(504).useStateFromStores(items1, () => currentUser.getCurrentUser());
   const voiceAndVideo = stateFromStores.voiceAndVideo;
   let prop;
   if (voiceAndVideo != null) {

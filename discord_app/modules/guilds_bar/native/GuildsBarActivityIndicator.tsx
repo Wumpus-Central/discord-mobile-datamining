@@ -2,20 +2,20 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../design/void/native.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
-import registerAssetDefault from "../../../../_runtime/04987_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/05033_registerAsset.js";
 import StageIcon from "../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import VoiceNormalIcon from "../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import setDefault from "../../core/native/NativeView.tsx";
-import registerAssetDefault2 from "../../../../_runtime/08768_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/09779_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/08622_registerAsset.js";
+import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
+import registerAssetDefault3 from "../../../../_runtime/09783_registerAsset.js";
 import CalendarIcon from "../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
-import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
 import useGuildsBarGuildMediaStateDefault from "../useGuildsBarGuildMediaState.tsx";
-import registerAssetDefault4 from "../../../../_runtime/16172_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/16173_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/16174_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/16334_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/16335_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/16336_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -103,7 +103,7 @@ const memoResult = importAllResult.memo((arg0) => {
   obj = { style: items1, children: null };
   items1[1] = prop;
   if (null != IconComponent) {
-    let colors = tmp3(709).colors;
+    let colors = tmp3(576).colors;
     colors = { color: null, size: "xxs", style: null };
     colors[0] = isCurrentUserConnected ? colors.WHITE : colors.ICON_DEFAULT;
     activityIcon = activityIcon.activityIcon;
@@ -114,7 +114,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj1 = { source: null, color: null, style: null };
     obj1[0] = source;
     if (isCurrentUserConnected) {
-      WHITE = tmp3(709).unsafe_rawColors.WHITE;
+      WHITE = tmp3(576).unsafe_rawColors.WHITE;
     }
     obj1[1] = WHITE;
     obj1[2] = activityIcon.activityIcon;

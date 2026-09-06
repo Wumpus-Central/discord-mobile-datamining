@@ -1,6 +1,6 @@
 // discord_app/modules/messages/GuildOfficialMessageUtils.tsx
+import nDefault from "../../../_runtime/00672_n.js";
 import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import nDefault from "../../../_runtime/00686_n.js";
 import hexToRgba from "../../utils/ColorUtils.tsx";
 import experimentDefault from "GuildOfficialMessagesExperiment.tsx";
 import useCanStartPrivateThread from "../threads/ThreadHooks.tsx";
@@ -80,7 +80,7 @@ export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOf
     tmp5 = mixResult;
   }
   obj4 = nDefault;
-  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(1362).WCAGContrastRatios.Text, saturationFactor: num };
+  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(4411).WCAGContrastRatios.Text, saturationFactor: num };
   return hexToRgba.getAccessibleForegroundColor(obj);
 };
 export function showGuildOfficialMessageGradient(officialMessageStyle) {

@@ -663,8 +663,8 @@ function getAppDir() {
       error = new Error("RTNFileManager doesn't exist?");
       throw error;
     } else {
-      const tmp3Result = tmp3(1270);
-      return tmp3(1270).getConstants().CacheDirPath.replace(/cache$/, "");
+      const tmp3Result = tmp3(1152);
+      return tmp3(1152).getConstants().CacheDirPath.replace(/cache$/, "");
     }
     tmp3 = importDefault;
   } else {
@@ -983,7 +983,7 @@ function convertVideo(videoMetadata) {
   if (obj6.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() > 34) {
       let _Math = Math;
-      let frameRate = Math.min(videoMetadata.frameRate, tmp(5114).DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
+      let frameRate = Math.min(videoMetadata.frameRate, tmp(5161).DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
     }
     obj.frameRate = frameRate;
     obj.skipVideoTranscode = result1;
@@ -999,7 +999,7 @@ function convertVideo(videoMetadata) {
             c13 = 3;
             HermesBuiltin.throwTypeError();
           } else {
-            const tmp75 = /* builtin0  */;
+            const tmp74 = /* builtin0  */;
             if (tmp9 === 3) {
               if (arg0 === 1) {
                 throw arg1;
@@ -1029,9 +1029,9 @@ function convertVideo(videoMetadata) {
                     function* _loop() {
                       let maxWidth = tmp2;
                       c1 = tmp3;
-                      let throwTypeErrorResult = closure_3_43;
+                      let throwTypeErrorResult = closure_3_42;
                       throwTypeErrorResult = next;
-                      yield closure_3_43(next);
+                      yield closure_3_42(next);
                       throwTypeErrorResult = c1;
                       let min = arg1;
                       throwTypeErrorResult = min;
@@ -1053,20 +1053,15 @@ function convertVideo(videoMetadata) {
                               throwTypeErrorResult = min;
                               const failures = min.failures;
                               if (null != failures.find(() => { ... })) {
-                                if (next.useHEVC) {
-                                  throwTypeErrorResult = c1;
-                                  throwTypeErrorResult = maxWidth;
-                                  throwTypeErrorResult = next;
-                                  next.useHEVC = false;
-                                  c1 = true;
-                                } else {
-                                  closure_3_20.error("No supported video encoder found");
-                                  const _Error3 = Error;
-                                  throwTypeErrorResult = new.target;
-                                  throwTypeErrorResult = new Error("No supported video encoder found");
-                                  throwTypeErrorResult = closure_1_1(throwTypeErrorResult);
-                                }
+                                closure_3_20.error("No supported video encoder found");
+                                const _Error3 = Error;
+                                error = new Error("No supported video encoder found");
+                                throwTypeErrorResult = error;
+                                throwTypeErrorResult = closure_1_1(error);
                                 c4 = 3;
+                                const obj4 = { value: null, done: true };
+                                obj4[0] = { v: false };
+                                return obj4;
                               } else {
                                 throwTypeErrorResult = c1;
                                 throwTypeErrorResult = min;
@@ -1128,8 +1123,8 @@ function convertVideo(videoMetadata) {
                                       }
                                     }
                                     const _Error2 = Error;
-                                    error = new Error("Invalid video dimensions: width or height is 0");
-                                    closure_1_1(error);
+                                    const error1 = new Error("Invalid video dimensions: width or height is 0");
+                                    closure_1_1(error1);
                                     c4 = 3;
                                     const obj5 = { value: null, done: true };
                                     obj5[0] = { v: false };
@@ -1197,8 +1192,8 @@ function convertVideo(videoMetadata) {
                                   obj[3] = closure_7 + 1;
                                   closure_3_20.error("No adjustments possible for current failures", obj);
                                   const _Error = Error;
-                                  const error1 = new Error("No adjustments possible for current failures");
-                                  closure_1_1(error1);
+                                  const error2 = new Error("No adjustments possible for current failures");
+                                  closure_1_1(error2);
                                   c4 = 3;
                                   const obj6 = { value: null, done: true };
                                   obj6[0] = { v: false };
@@ -1221,7 +1216,7 @@ function convertVideo(videoMetadata) {
                     }
                     let lib = _loop;
                     if (closure_1_7 < 4) {
-                      const iter7 = _loop()[tmp75.iterator]();
+                      const iter7 = _loop()[tmp74.iterator]();
                       closure_7 = iter7;
                       HermesBuiltin.ensureObject("iterator is not an object");
                       let next = iter7.next;
@@ -1256,20 +1251,17 @@ function convertVideo(videoMetadata) {
                       let value = lib.value;
                       v = value;
                       if (0 !== value) {
-                        if (1 !== v) {
-                          if (v) {
-                            c13 = 3;
-                            obj1 = { value: null, done: true };
-                            obj1[0] = v.v;
-                            return obj1;
-                          }
-                        }
-                        if (closure_1_7 < 4) {
-                          const iter8 = lib()[tmp75.iterator]();
+                        if (v) {
+                          c13 = 3;
+                          obj1 = { value: null, done: true };
+                          obj1[0] = v.v;
+                          return obj1;
+                        } else if (closure_1_7 < 4) {
+                          const iter8 = lib()[tmp74.iterator]();
                           HermesBuiltin.ensureObject("iterator is not an object");
                           next = iter8.next;
                           closure_2 = undefined;
-                          const tmp81 = lib();
+                          const tmp80 = lib();
                         }
                       }
                       tmp31 = capabilities;
@@ -1361,7 +1353,7 @@ function convertVideo(videoMetadata) {
                         HermesBuiltin.ensureObject("iterator.return() did not return an object");
                         if (iter4.done) {
                           c13 = 3;
-                          const obj4 = { value: null, done: true };
+                          let obj4 = { value: null, done: true };
                           obj4[0] = iter4.value;
                           return obj4;
                         } else {
@@ -1384,12 +1376,12 @@ function convertVideo(videoMetadata) {
                   c13 = 1;
                   return iter5;
                 }
-              } catch (tmp67) {
-                capabilities = tmp67;
+              } catch (tmp66) {
+                capabilities = tmp66;
                 if (tmp5 === closure_10) {
                   c13 = tmp3;
-                  throw tmp67;
-                } else if (tmp2 === tmp69) {
+                  throw tmp66;
+                } else if (tmp2 === tmp68) {
                   closure_12 = tmp;
                 } else {
                   closure_12 = tmp6;
@@ -1520,7 +1512,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != str3.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      const obj4 = { uri: null, overrideType: "Array" };
+                      const obj4 = { uri: null, overrideType: "a" };
                       obj4[0] = str3;
                       isVideo2 = tmp12(tmp13[11]).getFile(obj4).isVideo;
                       const tmp12Result3 = tmp12(tmp13[11]);
@@ -1539,7 +1531,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != str3.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj5 = { uri: null, overrideType: "Array" };
+                  const obj5 = { uri: null, overrideType: "a" };
                   obj5[0] = str3;
                   isVideo = tmp12(tmp13[11]).getFile(obj5).isVideo;
                   const tmp12Result5 = tmp12(tmp13[11]);
@@ -1623,7 +1615,7 @@ function _buildResolvedUpload() {
                 table = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_45(tmp35.originalUri, tmp35.path, tmp35.filename, tmp35.attachmentQualityMetricsEnabled, tmp35.attachmentOriginDetectionEnabled);
+                obj2[0] = closure_1_44(tmp35.originalUri, tmp35.path, tmp35.filename, tmp35.attachmentQualityMetricsEnabled, tmp35.attachmentOriginDetectionEnabled);
                 return obj2;
               } else {
                 const obj3 = {};
@@ -2325,7 +2317,7 @@ function _tryConvertImage() {
                   throwTypeErrorResult = lib;
                   throwTypeErrorResult = c3;
                   if ((function shouldConvertBase64ToJPG(c0) {
-                    let isIOSResult = _undefined(1234).isIOS();
+                    let isIOSResult = _undefined(1115).isIOS();
                     if (isIOSResult) {
                       isIOSResult = null != c0.match(closure_21);
                     }
@@ -2344,7 +2336,7 @@ function _tryConvertImage() {
                     obj5[0] = closure_1_27("convertBase64ToJPEG", lib.replace(closure_1_21, ""), obj4);
                     return obj5;
                   } else if ((function shouldConvertBase64ToGIF(c0) {
-                    let isIOSResult = _undefined(1234).isIOS();
+                    let isIOSResult = _undefined(1115).isIOS();
                     if (isIOSResult) {
                       isIOSResult = null != c0.match(closure_22);
                     }
@@ -2387,7 +2379,7 @@ function _tryConvertImage() {
                   if (closure_11) {
                     const obj9 = { path: null, encoderUsed: null };
                     obj9[0] = closure_11;
-                    obj9[1] = lib(4745).ImageEncoder.NATIVE;
+                    obj9[1] = lib(4791).ImageEncoder.NATIVE;
                     tmp51 = obj9;
                   }
                   c8 = 3;
@@ -2453,7 +2445,7 @@ function _tryConvertImage() {
                   return obj16;
                 } else {
                   dependencyMap.path = path;
-                  dependencyMap.encoderUsed = lib(4745).ImageEncoder.PASSTHROUGH;
+                  dependencyMap.encoderUsed = lib(4791).ImageEncoder.PASSTHROUGH;
                   c5 = 0;
                   c8 = 3;
                   let obj17 = { value: null, done: true };
@@ -2528,13 +2520,13 @@ function _tryConvertImage() {
                 obj22[0] = tmp10;
                 return obj22;
               }
-              obj16 = lib(5112);
+              obj16 = lib(5159);
               closure_13 = obj16.shouldForceConvertToJPG(closure_0, closure_1_1, closure_1_10);
               if (!closure_13) {
-                obj17 = lib(5112);
+                obj17 = lib(5159);
                 if (!obj17.shouldConvertToJPG(closure_0, closure_1_1, closure_1_2, closure_1_4, c7)) {
                   if ((function shouldConvertToGifFilepath(closure_0, closure_1_1) {
-                    const isIOSResult = _undefined(1234).isIOS();
+                    const isIOSResult = _undefined(1115).isIOS();
                     if (!isIOSResult) {
                       return isIOSResult;
                     } else {
@@ -2547,7 +2539,7 @@ function _tryConvertImage() {
                       } else {
                         tmp7 = null != closure_0.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = _undefined(5112);
+                      tmpResult = _undefined(5159);
                     }
                   })(closure_0, closure_1_1)) {
                     c7 = 9;
@@ -2883,97 +2875,6 @@ function _getImageDimensionsIfMissing() {
   }
   return applyArgumentsResult;
 }
-function isHEVCEncodingSupported() {
-  const self = this;
-  const apply = _isHEVCEncodingSupported.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _isHEVCEncodingSupported() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_1 = tmp3;
-            closure_0 = tmp7;
-            c3 = 1;
-            const MediaManager = closure_1_6.MediaManager;
-            c4 = 2;
-            c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = MediaManager.isHEVCEncodingSupported();
-            return obj1;
-          }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          closure_0 = closure_2;
-          logger.warn("Error checking HEVC support:", closure_0);
-          c5 = 3;
-          return { value: false, done: true };
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          c5 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          c3 = 0;
-          c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp16) {
-        closure_2 = tmp16;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp16;
-        } else {
-          c4 = tmp;
-        }
-      }
-    }
-  });
-  closure_42 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
 function checkVideoEncodingSupport(arg0) {
   const self = this;
   const apply = _checkVideoEncodingSupport.apply;
@@ -3022,11 +2923,11 @@ function _checkVideoEncodingSupport() {
               closure_1 = tmp7;
               c4 = 1;
               MediaManager = MediaManager.MediaManager;
-              ({ targetWidth: obj7[0], targetHeight: obj7[1], frameRate: obj7[2], useHEVC: obj7[3] } = closure_0);
+              ({ targetWidth: obj4[0], targetHeight: obj4[1], frameRate: obj4[2] } = closure_0);
               c5 = 2;
               MediaManager = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = MediaManager.isVideoEncodingSupported({ width: null, height: null, frameRate: null, isHEVC: null });
+              obj2[0] = MediaManager.isVideoEncodingSupported({ width: null, height: null, frameRate: null });
               return obj2;
             }
           } else if (1 === tmp7) {
@@ -3053,11 +2954,11 @@ function _checkVideoEncodingSupport() {
             obj[0] = arg1;
             return obj;
           }
-        } catch (tmp15) {
-          closure_3 = tmp15;
+        } catch (tmp17) {
+          closure_3 = tmp17;
           if (tmp4 === c4) {
             MediaManager = tmp2;
-            throw tmp15;
+            throw tmp17;
           } else {
             c5 = tmp;
           }
@@ -3065,7 +2966,7 @@ function _checkVideoEncodingSupport() {
       }
     })();
   });
-  closure_44 = tmp;
+  closure_43 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -3223,7 +3124,7 @@ function _calculateImageQualityMetrics() {
       }
     })();
   });
-  closure_46 = tmp;
+  closure_45 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -3244,7 +3145,7 @@ const Canceled = "Canceled";
 let tmp5 = new timestampDefault("UploadUtils.tsx");
 let result = require("set").fileFinishedImporting("utils/native/UploadUtils.tsx");
 
-export default { getFileInfo, isVideo, getType, openImagePickerUnhandled, openImagePicker, getCaptionLabel, getImageDimensionsIfMissing, isHEVCEncodingSupported, getAppDir };
+export default { getFileInfo, isVideo, getType, openImagePickerUnhandled, openImagePicker, getCaptionLabel, getImageDimensionsIfMissing, getAppDir };
 export const base64JPEGRegex = regExp;
 export const base64GIFRegex = regExp1;
 export { openImagePicker };
@@ -3304,8 +3205,8 @@ export const getFileSize = function getFileSize(uri) {
     if (null == enforcingDefault) {
       let rejectResult = Promise.reject("RTNFileManager doesn't exist?");
     } else {
-      rejectResult = tmp5(1270).getSize(replaced);
-      const tmp5Result = tmp5(1270);
+      rejectResult = tmp5(1152).getSize(replaced);
+      const tmp5Result = tmp5(1152);
     }
     tmp5 = importDefault;
   } else {
@@ -3329,7 +3230,6 @@ export { isImage };
 export { getType };
 export { getCaptionLabel };
 export { getImageDimensionsIfMissing };
-export { isHEVCEncodingSupported };
 export { checkVideoEncodingSupport };
 export { calculateImageQualityMetrics };
 export const getFileFromUploadItem = function getFileFromUploadItem(result1) {

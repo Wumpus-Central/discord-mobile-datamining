@@ -14,10 +14,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 function AdvancedInstantInviteScreen() {
   let tmp = callback();
-  let obj = navigation(1498);
+  let obj = navigation(1483);
   navigation = obj.useNavigation();
   const items = [closure_5, closure_6, closure_7];
-  const stateFromStoresObject = navigation(586).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = navigation(504).useStateFromStoresObject(items, () => {
     const pendingSettings = store.getPendingSettings();
     channel(38)(null != pendingSettings, "Received null pending invite settings");
     const inviteSettings = store.getInviteSettings();
@@ -49,47 +49,47 @@ function AdvancedInstantInviteScreen() {
       const guildId = closure_1_6.getGuildId();
       let invitableChannelForGuild = null;
       if (null != guildId) {
-        let obj = navigation(17634);
+        let obj = navigation(17794);
         invitableChannelForGuild = obj.getInvitableChannelForGuild(guildId);
       }
       if (null != invitableChannelForGuild) {
         obj = { channelId: null };
         obj[0] = invitableChannelForGuild.channel.id;
-        channel(9941).updateSettings(obj);
-        const obj2 = channel(9941);
+        channel(9826).updateSettings(obj);
+        const obj2 = channel(9826);
       } else {
         obj = { title: null, body: null, onConfirm: null };
-        const intl = navigation(1233).intl;
-        obj[0] = intl.string(navigation(1233).t.VINpSK);
-        const intl2 = navigation(1233).intl;
-        obj[1] = intl2.string(navigation(1233).t.kQ6fit);
-        obj[2] = channel(9941).close;
-        channel(4858).show(obj);
-        const obj4 = channel(4858);
+        const intl = navigation(1114).intl;
+        obj[0] = intl.string(navigation(1114).t.VINpSK);
+        const intl2 = navigation(1114).intl;
+        obj[1] = intl2.string(navigation(1114).t.kQ6fit);
+        obj[2] = channel(9826).close;
+        channel(4904).show(obj);
+        const obj4 = channel(4904);
       }
     }
   }, items1);
-  tmp2Result = tmp2(4946);
+  tmp2Result = tmp2(4992);
   const unmountEffect = tmp2Result.useUnmountEffect(() => {
-    channel(706).wait(channel(9941).resetSettings);
+    channel(573).wait(channel(9826).resetSettings);
   });
   const items2 = [channel];
   callback = obj3.useCallback(() => {
     if (null != channel) {
       if (closure_1_8.can(closure_1_10.CREATE_INSTANT_INVITE, tmp)) {
-        const invite = channel(9941).createInvite("IOS Regenerate");
-        const obj3 = channel(9941);
-        channel(9941).close();
-        const obj4 = channel(9941);
+        const invite = channel(9826).createInvite("IOS Regenerate");
+        const obj3 = channel(9826);
+        channel(9826).close();
+        const obj4 = channel(9826);
       }
     }
-    let obj = channel(4858);
+    let obj = channel(4904);
     obj = { title: null, body: null, onConfirm: null };
-    const intl = navigation(1233).intl;
-    obj[0] = intl.string(navigation(1233).t.VINpSK);
-    const intl2 = navigation(1233).intl;
-    obj[1] = intl2.string(navigation(1233).t.RiiKV0);
-    obj[2] = channel(9941).close;
+    const intl = navigation(1114).intl;
+    obj[0] = intl.string(navigation(1114).t.VINpSK);
+    const intl2 = navigation(1114).intl;
+    obj[1] = intl2.string(navigation(1114).t.RiiKV0);
+    obj[2] = channel(9826).close;
     obj.show(obj);
   }, items2);
   const items3 = [navigation, tmp10, callback];
@@ -109,27 +109,27 @@ function AdvancedInstantInviteScreen() {
     });
   }, items3);
   const callback1 = obj3.useCallback((maxUses) => {
-    let obj = channel(9941);
+    let obj = channel(9826);
     obj = { maxUses };
     obj.updateSettings(obj);
   }, []);
   const callback2 = obj3.useCallback((maxAge) => {
-    let obj = channel(9941);
+    let obj = channel(9826);
     obj = { maxAge };
     obj.updateSettings(obj);
   }, []);
   const callback3 = obj3.useCallback((temporary) => {
-    let obj = channel(9941);
+    let obj = channel(9826);
     obj = { temporary };
     obj.updateSettings(obj);
   }, []);
   const callback4 = obj3.useCallback((flags) => {
-    let obj = channel(9941);
+    let obj = channel(9826);
     obj = { flags };
     obj.updateSettings(obj);
   }, []);
   const callback5 = obj3.useCallback((roleIds) => {
-    let obj = channel(9941);
+    let obj = channel(9826);
     obj = { roleIds };
     obj.updateSettings(obj);
   }, []);
@@ -150,15 +150,15 @@ function AdvancedInstantInviteScreen() {
     onChangeFlags: null,
     onChangeRoleIds: null,
   };
-  let obj2 = navigation(586);
-  obj[5] = channel(9937).getMaxUsesOptions;
+  let obj2 = navigation(504);
+  obj[5] = channel(9822).getMaxUsesOptions;
   ({ temporary: obj7[6], flags: obj7[7], roleIds: obj7[8] } = settings);
   obj[9] = callback2;
   obj[10] = callback1;
   obj[11] = callback3;
   obj[12] = callback4;
   obj[13] = callback5;
-  obj[1] = jsx(channel(17635), {
+  obj[1] = jsx(channel(17795), {
     style: tmp.formContent,
     channel: first,
     guild,
@@ -174,7 +174,7 @@ function AdvancedInstantInviteScreen() {
     onChangeFlags: null,
     onChangeRoleIds: null,
   });
-  return jsx(navigation(8376).Form, {
+  return jsx(navigation(8593).Form, {
     style: tmp.formContent,
     channel: first,
     guild,
@@ -204,14 +204,14 @@ export default function InviteSettingsModal() {
   const memo = React.useMemo(() => {
     let obj = {};
     obj = {
-      impressionName: callback(500).ImpressionNames.GUILD_INVITE_LINK_SETTINGS,
+      impressionName: callback(1250).ImpressionNames.GUILD_INVITE_LINK_SETTINGS,
       title: null,
       headerLeft: null,
       render: null,
     };
-    const intl = callback(1233).intl;
-    obj[1] = intl.string(callback(1233).t.Yx4IiC);
-    obj[2] = callback(5504).getHeaderCloseButton(callback2(9941).close);
+    const intl = callback(1114).intl;
+    obj[1] = intl.string(callback(1114).t.Yx4IiC);
+    obj[2] = callback(5624).getHeaderCloseButton(callback2(9826).close);
     obj[3] = function render() {
       return callback(closure_13, {});
     };

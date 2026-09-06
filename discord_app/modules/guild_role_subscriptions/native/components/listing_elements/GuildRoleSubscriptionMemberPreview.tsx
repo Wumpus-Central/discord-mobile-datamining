@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import int2hslRawAll from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import int2hslRawAll from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import getNicknameDefault from "../../../../../utils/NicknameUtils.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -47,38 +47,38 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
   if (null == role) {
     return null;
   } else {
-    let tmp6Result = tmp6(1430);
+    let tmp6Result = tmp6(1396);
     let avatarURL;
     if (stateFromStores != null) {
       avatarURL = stateFromStores.getAvatarURL(guildId, 40);
     }
     if (avatarURL == null) {
-      tmp6Result = tmp6(1430);
+      tmp6Result = tmp6(1396);
       avatarURL = tmp6Result.getDefaultAvatarURL(undefined, undefined);
     }
     const source = tmp6Result.makeSource(avatarURL);
-    const roleIconData = tmp4(5987).getRoleIconData(role, 16);
+    const roleIconData = tmp4(7187).getRoleIconData(role, 16);
     obj = { style: null, children: null };
     const items1 = [tmp3.container, style];
     obj[0] = items1;
     obj = { style: null, source: null };
     obj[0] = tmp3.avatar;
     obj[1] = source;
-    const items2 = [callback(tmp6(5502), obj)];
+    const items2 = [callback(tmp6(5587), obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp3.content;
     const obj2 = { style: null, children: null };
     obj2[0] = tmp3.contextRow;
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
     const obj4 = { color: null };
-    const tmp4Result = tmp4(5987);
+    const tmp4Result = tmp4(7187);
     obj4[0] = int2hslRawAll.int2hex(role.color);
     obj3[2] = obj4;
     obj3[3] = tmp8;
-    const items3 = [callback(tmp4(4474).Text, obj3), , ,];
+    const items3 = [callback(tmp4(4556).Text, obj3), , ,];
     let tmp12Result = null;
     if (null != roleIconData) {
-      const items4 = [tmp14(tmp4(1296).Spacer, { size: 4 })];
+      const items4 = [tmp14(tmp4(1178).Spacer, { size: 4 })];
       const obj5 = { name: null, source: null, unicodeEmoji: null, size: 16 };
       obj5[0] = role.name;
       let tmp19;
@@ -90,21 +90,21 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
       const obj7 = { children: null };
       obj5[1] = tmp19;
       obj5[2] = roleIconData.unicodeEmoji;
-      items4[1] = tmp14(tmp6(5988), obj5);
+      items4[1] = tmp14(tmp6(7188), obj5);
       obj7[0] = items4;
       tmp12Result = tmp12(closure_7, obj7);
       const tmp17 = closure_7;
-      const tmp6Result1 = tmp6(5988);
+      const tmp6Result1 = tmp6(7188);
     }
     items3[1] = tmp12Result;
-    items3[2] = callback(tmp4(1296).Spacer, { size: 8 });
-    items3[3] = callback(tmp4(4474).Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" });
+    items3[2] = callback(tmp4(1178).Spacer, { size: 8 });
+    items3[3] = callback(tmp4(4556).Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" });
     obj2[1] = items3;
     const items5 = [closure_8(View, obj2)];
     const obj8 = { variant: "text-md/normal", color: "text-default", style: null, children: null };
     obj8[2] = textStyle;
     obj8[3] = content;
-    items5[1] = callback(tmp4(4474).Text, obj8);
+    items5[1] = callback(tmp4(4556).Text, obj8);
     obj1[1] = items5;
     items2[1] = closure_8(View, obj1);
     obj[1] = items2;

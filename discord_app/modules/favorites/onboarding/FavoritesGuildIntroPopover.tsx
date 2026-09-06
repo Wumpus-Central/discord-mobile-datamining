@@ -7,7 +7,7 @@ import withContent from "../../dismissible_content/DismissibleContentShownStateS
 import closure_7 from "../../dismissible_content/DismissibleContentShownStateStore.tsx";
 import closure_8 from "../FavoriteStore.tsx";
 import { NOOP } from "../../../Constants.tsx";
-import keys from "../../../../_runtime/00641_keys.js";
+import keys from "../../../../_runtime/00560_keys.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import { useFavoritesAccess } from "../FavoritesHooks.tsx";
@@ -34,19 +34,19 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
       if (!stateFromStores) {
         if (tmp5) {
           if (tmp6) {
-            let items1 = [tmp(1372).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
+            let items1 = [tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
           }
           const tmp10 = callback(tmp8(items1), 2);
           _require = tmp11;
-          if (tmp10[0] === tmp(1372).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
-            const items2 = [tmp(1372).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+          if (tmp10[0] === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
+            const items2 = [tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
             let items3 = items2;
           } else {
             items3 = [];
           }
           const tmp12 =
-            callback(tmp(6261).useSelectedDismissibleContent(items3, undefined, true), 1)[0] ===
-            tmp(1372).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+            callback(tmp(7388).useSelectedDismissibleContent(items3, undefined, true), 1)[0] ===
+            tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = importAllResult.useEffect(() => {

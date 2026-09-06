@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding_home/native/MemberActionChatInputBanner.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../_runtime/11605_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11804_registerAsset.js";
 import newMemberActionFromServer from "../GuildOnboardingHomeTypes.tsx";
 import useMemberActionsForChannel from "../MemberActionUtils.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -18,33 +18,33 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 function ActionChannelInfo(action) {
   action = action.action;
-  let obj = action(644);
+  let obj = action(563);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getChannel(action.channelId));
   if (null == stateFromStores) {
     obj = { variant: "text-xxs/normal", color: "text-default", children: null };
-    const intl2 = tmp(1233).intl;
+    const intl2 = tmp(1114).intl;
     obj = { channelName: null };
-    const intl3 = tmp(1233).intl;
-    obj[0] = intl3.string(tmp(1233).t.J90oLW);
-    obj[2] = intl2.format(tmp(1233).t.MkzlDL, obj);
+    const intl3 = tmp(1114).intl;
+    obj[0] = intl3.string(tmp(1114).t.J90oLW);
+    obj[2] = intl2.format(tmp(1114).t.MkzlDL, obj);
     obj1 = obj;
   } else {
     obj1 = { variant: "text-xxs/normal", color: "text-default", children: null };
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     const obj2 = { channelName: null };
     obj2[0] = tmp4;
-    obj1[2] = intl.format(tmp(1233).t.MkzlDL, obj2);
+    obj1[2] = intl.format(tmp(1114).t.MkzlDL, obj2);
   }
-  return closure_12(action(4474).Text, obj1);
+  return closure_12(action(4556).Text, obj1);
 }
 function ChannelActionEmoji(emoji) {
   emoji = emoji.emoji;
   let id;
   const tmp = callback2();
   let obj = { style: tmp.emojiPlaceholder, children: null };
-  obj = { size: id(1296).Icon.Sizes.REFRESH_SMALL_16, source: registerAssetDefault };
-  obj[1] = callback(id(1296).Icon, obj);
+  obj = { size: id(1178).Icon.Sizes.REFRESH_SMALL_16, source: registerAssetDefault };
+  obj[1] = callback(id(1178).Icon, obj);
   const tmp6 = callback(View, obj);
   id = undefined;
   if (emoji != null) {
@@ -55,7 +55,7 @@ function ChannelActionEmoji(emoji) {
   }
   const items = [closure_7];
   const items1 = [id];
-  const stateFromStores = id(644).useStateFromStores(
+  const stateFromStores = id(563).useStateFromStores(
     items,
     () => {
       let customEmojiById = null;
@@ -70,8 +70,8 @@ function ChannelActionEmoji(emoji) {
     obj = { style: null, source: null, resizeMode: "contain" };
     obj[0] = tmp.emoji;
     obj1 = { uri: null };
-    let tmp5Result = tmp5(5502);
-    tmp5Result = tmp5(1430);
+    let tmp5Result = tmp5(5587);
+    tmp5Result = tmp5(1396);
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj10[0], animated: obj10[1] } = stateFromStores);
     obj2[2] = EMOJI_URL_BASE_SIZE;
@@ -81,15 +81,15 @@ function ChannelActionEmoji(emoji) {
   } else {
     tmp2Result = tmp6;
     if (null != name) {
-      const tmp5Result1 = tmp5(4134);
+      const tmp5Result1 = tmp5(4213);
       tmp2Result = tmp6;
       if (null != tmp5Result1.getByName(tmp5Result2.convertSurrogateToName(name, false))) {
         const obj3 = { style: null, variant: "heading-lg/normal", children: null };
         obj3[0] = tmp.textEmoji;
         obj3[2] = name;
-        tmp2Result = tmp2(tmp3(4474).Text, obj3);
+        tmp2Result = tmp2(tmp3(4556).Text, obj3);
       }
-      tmp5Result2 = tmp5(4134);
+      tmp5Result2 = tmp5(4213);
     }
   }
   return tmp2Result;
@@ -445,10 +445,10 @@ let closure_19 = {
 };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
-  let obj = channel(6078);
+  let obj = channel(7222);
   const canSeeOnboardingHome = obj.useCanSeeOnboardingHome(channel.guild_id);
   const items = [closure_9];
-  const stateFromStores = channel(644).useStateFromStores(items, () => {
+  const stateFromStores = channel(563).useStateFromStores(items, () => {
     const selfMember = closure_1_9.getSelfMember(channel.guild_id);
     let isPending;
     if (selfMember != null) {
@@ -456,7 +456,7 @@ const memoResult = importAllResult.memo((channel) => {
     }
     return true === isPending;
   });
-  const obj2 = channel(644);
+  const obj2 = channel(563);
   let tmp3 = null;
   if (!obj3.useAllActionsCompleted(channel.guild_id)) {
     tmp3 = null;

@@ -22,7 +22,7 @@ const items = [
     },
   },
   {
-    model: "claude-fable-5",
+    model: "claude-fable-5-1",
     thinking: "high",
     summary() {
       const intl = getSystemLocale.intl;
@@ -77,7 +77,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (label == null) {
     label = model;
   }
-  let tmp3 = model(16437).THINKING_LABELS[thinking];
+  let tmp3 = model(16600).THINKING_LABELS[thinking];
   if (tmp3 == null) {
     tmp3 = thinking;
   }

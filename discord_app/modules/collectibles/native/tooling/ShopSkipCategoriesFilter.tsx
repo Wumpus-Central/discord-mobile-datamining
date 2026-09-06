@@ -47,12 +47,12 @@ const result = require("set").fileFinishedImporting("modules/collectibles/native
 
 export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
   const tmp = callback2();
-  let obj = stateFromStores(586);
+  let obj = stateFromStores(504);
   const items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => skipNumCategories.skipNumCategories);
   obj = { style: tmp.container, children: null };
   obj = { variant: "text-md/normal", style: tmp.label, children: "Hide first # of categories" };
-  const items1 = [callback(stateFromStores(4474).Text, obj)];
+  const items1 = [callback(stateFromStores(4556).Text, obj)];
   obj1 = { style: tmp.stepperContainer, children: null };
   const items2 = [tmp.stepperButton];
   let stepperButtonDisabled = tmp5;
@@ -70,9 +70,9 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
         }
       },
       disabled: stateFromStores <= 0,
-      children: callback(stateFromStores(4474).Text, { variant: "text-lg/semibold", children: "\u2212" }),
+      children: callback(stateFromStores(4556).Text, { variant: "text-lg/semibold", children: "\u2212" }),
     }),
-    callback(stateFromStores(4474).Text, {
+    callback(stateFromStores(4556).Text, {
       variant: "text-md/semibold",
       style: tmp.valueText,
       children: stateFromStores,
@@ -93,7 +93,7 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
       }
     },
     disabled: stateFromStores <= 0,
-    children: callback(stateFromStores(4474).Text, { variant: "text-lg/semibold", children: "\u2212" }),
+    children: callback(stateFromStores(4556).Text, { variant: "text-lg/semibold", children: "\u2212" }),
   };
   const obj3 = { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores };
   items4[1] = stepperButtonDisabled2;
@@ -106,11 +106,11 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
       }
     },
     disabled: stateFromStores >= 100,
-    children: callback(stateFromStores(4474).Text, { variant: "text-lg/semibold", children: "+" }),
+    children: callback(stateFromStores(4556).Text, { variant: "text-lg/semibold", children: "+" }),
   });
   obj1[1] = items3;
   items1[1] = closure_6(closure_2, obj1);
   obj4[1] = items1;
-  obj[1] = closure_6(stateFromStores(4927).Stack, obj4);
+  obj[1] = closure_6(stateFromStores(4973).Stack, obj4);
   return callback(closure_2, obj);
 };

@@ -23,10 +23,10 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(4197).useToken(ThemesDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(4197);
+  const token = channel(4262).useToken(ThemesDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(4262);
   const items = [closure_9, closure_6];
-  const stateFromStoresObject = channel(586).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let flag = false;
     let flag2 = false;
     let num = 0;
@@ -76,23 +76,23 @@ function GuildChannelMemberCount(channel) {
     const count = closure_1_6.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(13167);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(6011).ICON_SIZE[token]);
+    const tmpResult = tmp(13269);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(6620).ICON_SIZE[token]);
   }
 }
 function computeVisibleChannelName(channel) {
   channel = channel.channel;
   ({ guildId, showCreateThread, isConnected } = channel);
   if (obj.shouldNSFWGateGuild(guildId)) {
-    const intl3 = tmp(1233).intl;
-    let stringResult = intl3.string(tmp(1233).t.HbPHt1);
+    const intl3 = tmp(1114).intl;
+    let stringResult = intl3.string(tmp(1114).t.HbPHt1);
   } else if (showCreateThread) {
-    const intl2 = tmp(1233).intl;
-    stringResult = intl2.string(tmp(1233).t["4WNcpu"]);
+    const intl2 = tmp(1114).intl;
+    stringResult = intl2.string(tmp(1114).t["4WNcpu"]);
   } else if (null == channel) {
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     const string = intl.string;
-    let ai6Lbr = tmp(1233).t;
+    let ai6Lbr = tmp(1114).t;
     if (isConnected) {
       ai6Lbr = ai6Lbr.ai6Lbr;
       let stringResult1 = string(ai6Lbr);
@@ -100,8 +100,8 @@ function computeVisibleChannelName(channel) {
       stringResult1 = string(ai6Lbr.ZTNur7);
     }
   } else {
-    stringResult = tmp(4674).computeChannelName(channel, closure_14, closure_13);
-    const tmpResult = tmp(4674);
+    stringResult = tmp(4713).computeChannelName(channel, closure_14, closure_13);
+    const tmpResult = tmp(4713);
   }
   return stringResult;
 }
@@ -110,10 +110,10 @@ function ChannelLinkedLobbyCoachmark(guild) {
   const channel = guild.channel;
   dependencyMap = undefined;
   let callback;
-  const items = [guild(1372).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = callback(guild(6261).useSelectedDismissibleContent(items, undefined, true), 2);
+  const items = [guild(1943).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
+  const tmp = callback(guild(7388).useSelectedDismissibleContent(items, undefined, true), 2);
   dependencyMap = tmp2;
-  const tmp3 = tmp[0] === guild(1372).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
+  const tmp3 = tmp[0] === guild(1943).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   callback = tmp3;
   const items1 = [channel, guild, tmp[1], tmp3];
   const memo = importAllResult.useMemo(() => {
@@ -126,11 +126,11 @@ function ChannelLinkedLobbyCoachmark(guild) {
       onDismiss: null,
       imgSource: null,
     };
-    const intl = guild(1233).intl;
-    obj[0] = intl.string(guild(1233).t.YIVr4B);
-    const intl2 = guild(1233).intl;
-    obj = { helpdeskArticle: channel(1994).getArticleURL(closure_1_16.LINKED_LOBBIES) };
-    obj[1] = intl2.format(guild(1233).t.w8VWRT, obj);
+    const intl = guild(1114).intl;
+    obj[0] = intl.string(guild(1114).t.YIVr4B);
+    const intl2 = guild(1114).intl;
+    obj = { helpdeskArticle: channel(2024).getArticleURL(closure_1_16.LINKED_LOBBIES) };
+    obj[1] = intl2.format(guild(1114).t.w8VWRT, obj);
     let linkedLobby;
     if (channel != null) {
       linkedLobby = tmp3.linkedLobby;
@@ -141,14 +141,14 @@ function ChannelLinkedLobbyCoachmark(guild) {
     };
     let channelIconWithGuild;
     if (null != channel) {
-      channelIconWithGuild = guild(4982).getChannelIconWithGuild(tmp3, guild);
-      const tmpResult = guild(4982);
+      channelIconWithGuild = guild(5028).getChannelIconWithGuild(tmp3, guild);
+      const tmpResult = guild(5028);
     }
     obj[6] = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(6261);
-  const coachmark = guild(8991).useCoachmark(guild.iconRef, memo);
+  let obj = guild(7388);
+  const coachmark = guild(11127).useCoachmark(guild.iconRef, memo);
   return null;
 }
 let c4 = importAllResult;

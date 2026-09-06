@@ -8,7 +8,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/hooks/useGeoForUser.native.tsx");
 
 export default function useGeoForUser() {
-  let obj = stateFromStores2(586);
+  let obj = stateFromStores2(504);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => {
     product = product.getProduct(stateFromStores2(table[5]).ProductIds.PREMIUM_TIER_2_MONTHLY);
@@ -19,10 +19,10 @@ export default function useGeoForUser() {
     return countryCode;
   });
   const items1 = [closure_5];
-  const stateFromStores1 = stateFromStores2(586).useStateFromStores(items1, () => ipLocation.ipLocation);
-  const obj2 = stateFromStores2(586);
+  const stateFromStores1 = stateFromStores2(504).useStateFromStores(items1, () => ipLocation.ipLocation);
+  const obj2 = stateFromStores2(504);
   const items2 = [closure_4];
-  stateFromStores2 = stateFromStores2(586).useStateFromStores(items2, () => authenticated.isAuthenticated());
+  stateFromStores2 = stateFromStores2(504).useStateFromStores(items2, () => authenticated.isAuthenticated());
   const items3 = [stateFromStores1, stateFromStores2];
   const effect = React.useEffect(() => {
     let tmp = stateFromStores2;

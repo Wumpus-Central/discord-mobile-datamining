@@ -1,7 +1,7 @@
 // discord_app/stores/LocalActivityStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import isUndefinedOrNullDefault from "../../_runtime/00656_isUndefinedOrNull.js";
 import dispatcherDefault from "../Dispatcher.tsx";
+import isUndefinedOrNullDefault from "../../_runtime/01332_isUndefinedOrNull.js";
 import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../modules/activities/EmbeddedActivitiesStore.tsx";
 import closure_5 from "../modules/applications/ApplicationStore.tsx";
@@ -356,9 +356,9 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         let tmp12 = num;
         let tmp13 = callback;
         let tmp14 = dependencyMap;
-        let obj2 = callback(9455);
+        let obj2 = callback(11462);
         let tmp15 = tmp9;
-        let obj3 = callback(1398);
+        let obj3 = callback(1384);
         let num2;
         if (tmp10 != null) {
           num2 = tmp10.flags;
@@ -370,7 +370,7 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         let tmp18 = tmp9;
         let tmp19 = constants2;
         let hasFlagResult = obj3.hasFlag(num2, constants.INSTANCE);
-        let tmp13Result = tmp13(9455);
+        let tmp13Result = tmp13(11462);
         let tmp20 = tmp11;
         let tmp21 = obj2;
         let tmp22 = tmp10;

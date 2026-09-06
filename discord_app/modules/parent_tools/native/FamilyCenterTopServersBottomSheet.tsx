@@ -3,9 +3,9 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../FamilyCenter.messages.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import closure_3 from "../FamilyCenterStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -13,13 +13,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 function GuildRow(guildActivity) {
   guildActivity = guildActivity.guildActivity;
-  let obj = guildActivity(586);
+  let obj = guildActivity(504);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(guildActivity.guild_id));
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7348).getTopUserOrGuildDescription(
+    const topUserOrGuildDescription = tmp2(7593).getTopUserOrGuildDescription(
       guildActivity.messages_sent,
       guildActivity.call_count,
     );
@@ -30,7 +30,7 @@ function GuildRow(guildActivity) {
     obj[0] = stateFromStores;
     obj[1] = tmp.guildIcon;
     obj[2] = callback(GuildIconSizesDefault, obj);
-    return callback(tmp2(5608).TableRow, obj);
+    return callback(tmp2(5605).TableRow, obj);
   }
   tmp = callback3();
 }

@@ -1,9 +1,9 @@
 // discord_app/records/UserRecord.tsx
 import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import toJSDefault from "../lib/Record.tsx";
 import getAvatarURL from "../utils/AvatarUtils.tsx";
 import getAvatarURLDefault from "../utils/AvatarUtils.tsx";
 import parseAvatarDecorationData from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
-import toJSDefault from "../lib/Record.tsx";
 import isPremiumAtLeast from "../utils/PremiumTypeUtils.tsx";
 import ME from "../Constants.tsx";
 import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
@@ -523,14 +523,14 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    let tmp6 = prop === tmp(1929).PremiumSubscriptionType.NONE_UNSPECIFIED;
+    let tmp6 = prop === tmp(1379).PremiumSubscriptionType.NONE_UNSPECIFIED;
     if (!tmp6) {
       const premiumState2 = self.premiumState;
       let prop1;
       if (premiumState2 != null) {
         prop1 = premiumState2.premiumSubscriptionType;
       }
-      tmp6 = prop1 === tmp(1929).PremiumSubscriptionType.BOOST_ONLY;
+      tmp6 = prop1 === tmp(1379).PremiumSubscriptionType.BOOST_ONLY;
     }
     isPremiumResult = tmp6;
   }
@@ -540,7 +540,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState3 != null) {
       premiumSource = premiumState3.premiumSource;
     }
-    isPremiumResult = premiumSource === tmp(1929).PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === tmp(1379).PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -553,10 +553,10 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === tmp(1929).PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === tmp(1379).PremiumSource.FRACTIONAL_NITRO;
   }
   if (isPremiumResult) {
-    isPremiumResult = self.premiumState.premiumSubscriptionType !== tmp(1929).PremiumSubscriptionType.TIER_2;
+    isPremiumResult = self.premiumState.premiumSubscriptionType !== tmp(1379).PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };

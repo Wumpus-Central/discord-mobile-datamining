@@ -11,7 +11,7 @@ export const useBannerBots = function useBannerBots(context) {
   let first1;
   let obj = (function useAppsMap(context) {
     let apps;
-    apps = apps(11868).useApplicationsInContext({
+    apps = apps(12067).useApplicationsInContext({
       context: context.context,
       onlyWithCommands: true,
       includeBuiltIn: false,
@@ -28,18 +28,18 @@ export const useBannerBots = function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = first1(11868).useApplicationsInContext({
+  let apps = first1(12067).useApplicationsInContext({
     context,
     onlyWithCommands: true,
     includeBuiltIn: false,
     includeEmbeddedApps: false,
     includeNonEmbeddedApps: true,
   }).apps;
-  const obj2 = first1(11868);
+  const obj2 = first1(12067);
   const tmp2 = first1;
   const obj3 = (function useCommandsMap(context) {
     let commands;
-    commands = commands(11868).useApplicationCommandsInContext({
+    commands = commands(12067).useApplicationCommandsInContext({
       context: context.context,
       includeBuiltIn: false,
     }).commands;
@@ -55,7 +55,7 @@ export const useBannerBots = function useBannerBots(context) {
   })({ context });
   const tmp4 = (function useFrecencyCommandIds(context) {
     context = context.context;
-    let obj = context(586);
+    let obj = context(504);
     const items = [closure_3];
     obj = {
       channel: context.channel,
@@ -68,17 +68,17 @@ export const useBannerBots = function useBannerBots(context) {
         return closure_1_3.getGuild(guild_id);
       }),
     };
-    return context(8167).useTopCommands(obj);
+    return context(9299).useTopCommands(obj);
   })({ context });
   let channel = context.channel;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = first1(11839).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = first1(11839);
+  const activityApplications = first1(12038).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = first1(12038);
   let items = [closure_4];
-  const stateFromStores = tmp2(586).useStateFromStores(items, () =>
+  const stateFromStores = tmp2(504).useStateFromStores(items, () =>
     recentApplicationCommandMetadata.getRecentApplicationCommandMetadata(),
   );
   let value = null;

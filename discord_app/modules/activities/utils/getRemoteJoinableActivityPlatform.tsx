@@ -22,11 +22,11 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         remoteApplicationActivity = remoteApplicationActivity.getRemoteApplicationActivity(application_id);
         let tmp4 = null;
         if (null != remoteApplicationActivity) {
-          let tmp11Result = tmp11(9455);
+          let tmp11Result = tmp11(11462);
           tmp4 = null;
           if (!tmp11Result.isContextlessEmbeddedActivity(remoteApplicationActivity)) {
             if (null == remoteApplicationActivity.application_id) {
-              tmp11Result = tmp11(1398);
+              tmp11Result = tmp11(1384);
               let num2 = remoteApplicationActivity.flags;
               if (num2 == null) {
                 num2 = 0;
@@ -47,14 +47,14 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
                 if (tmp11Result1.isAndroid()) {
                   let isIOSResult = platform === constants2.ANDROID;
                 } else {
-                  isIOSResult = tmp11(1235).isIOS();
+                  isIOSResult = tmp11(1116).isIOS();
                   if (isIOSResult) {
                     isIOSResult = platform === constants2.IOS;
                   }
-                  const tmp11Result2 = tmp11(1235);
+                  const tmp11Result2 = tmp11(1116);
                 }
                 tmp4 = null;
-                tmp11Result1 = tmp11(1235);
+                tmp11Result1 = tmp11(1116);
               }
             }
           }

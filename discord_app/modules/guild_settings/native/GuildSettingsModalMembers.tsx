@@ -32,7 +32,7 @@ let closure_20 = importAllResult.memo((guild) => {
   const sortedGuildRoles = guild.sortedGuildRoles;
   dependencyMap = undefined;
   ({ start, end } = guild);
-  let obj = guild(1498);
+  let obj = guild(1483);
   dependencyMap = obj.useNavigation();
   if (null == guild) {
     return null;
@@ -49,11 +49,11 @@ let closure_20 = importAllResult.memo((guild) => {
     let formatToPlainStringResult;
     if (found.length > 0) {
       user = user.getUser(guildMember.userId);
-      obj1 = guildMember(4673);
+      obj1 = guildMember(4712);
       let str = obj1.getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(4322).getGlobalName(user);
-        const tmp9Result = tmp9(4322);
+        str = tmp9(4404).getGlobalName(user);
+        const tmp9Result = tmp9(4404);
       }
       if (str == null) {
         let username;
@@ -67,11 +67,11 @@ let closure_20 = importAllResult.memo((guild) => {
       }
       const mapped1 = found.map((name) => name.name);
       const joined = mapped1.join(", ");
-      const intl = tmp2(1233).intl;
+      const intl = tmp2(1114).intl;
       obj = { memberName: null, roleNames: null };
       obj[0] = str;
       obj[1] = joined;
-      formatToPlainStringResult = intl.formatToPlainString(tmp2(1233).t["6eGpWx"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t["6eGpWx"], obj);
       tmp9 = guildMember;
     }
     obj = {
@@ -100,7 +100,7 @@ let closure_20 = importAllResult.memo((guild) => {
     obj[5] = function onPress() {};
     obj[7] = start;
     obj[8] = end;
-    return closure_15(guildMember(10904), obj);
+    return closure_15(guildMember(10942), obj);
   }
   tmp = callback();
 });
@@ -311,12 +311,12 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.create(null));
-            const obj = { source: callback2(9794), accessibilityLabel: null, ref: null };
-            const intl = callback(1233).intl;
-            obj[1] = intl.string(callback(1233).t.ogxXGq);
+            const obj = { source: callback2(9800), accessibilityLabel: null, ref: null };
+            const intl = callback(1114).intl;
+            obj[1] = intl.string(callback(1114).t.ogxXGq);
             obj[2] = ref.ref;
             const merged1 = Object.assign(merged);
-            return callback3(callback(6247).HeaderActionButton, obj);
+            return callback3(callback(7377).HeaderActionButton, obj);
           },
         };
         return closure_1_15(closure_1_0(closure_1_2[26]).ContextMenu, obj);

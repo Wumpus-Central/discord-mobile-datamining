@@ -13,10 +13,10 @@ function _getApplicationSubscriptionGroupListingsForApplication() {
     c3 = 0;
     c2 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_4.APPLICATION_SUBSCRIPTION_GROUP_LISTING(callback, closure_1);
-      obj1[1] = callback(527).rejectWithMigratedError();
+      obj1[1] = callback(1272).rejectWithMigratedError();
       yield HTTP.get(obj1);
       return body.body;
     })();
@@ -37,11 +37,11 @@ function _getEntitlementsForGuild() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, query: null, rejectWithError: null };
       obj1[0] = closure_1_4.GUILD_ENTITLEMENTS(callback);
       obj1[1] = { with_sku: true, with_application: true };
-      obj1[2] = callback(527).rejectWithMigratedError();
+      obj1[2] = callback(1272).rejectWithMigratedError();
       yield HTTP.get(obj1);
       return body.body;
     })();
@@ -62,10 +62,10 @@ function _getSubscriptionGroupForSubscriptionPlan() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_4.SUBSCRIPTION_PLAN_GROUP_LISTING(callback);
-      const obj3 = callback(527);
+      const obj3 = callback(1272);
       obj1[1] = obj3.rejectWithMigratedError();
       yield HTTP.get(obj1);
       return body.body;
@@ -88,14 +88,14 @@ function _fetchEligibleApplicationSubscriptionGuilds() {
     c3 = 0;
     c2 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(527).HTTP;
+      const HTTP = callback(1272).HTTP;
       obj1 = { url: null, query: null, rejectWithError: null };
       obj1[0] = closure_1_4.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS;
       const obj2 = { application_id: null, sku_id: null };
       obj2[0] = callback;
       obj2[1] = closure_1;
       obj1[1] = obj2;
-      obj1[2] = callback(527).rejectWithMigratedError();
+      obj1[2] = callback(1272).rejectWithMigratedError();
       yield HTTP.get(obj1);
       return body.body;
     })();

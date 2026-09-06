@@ -11,7 +11,7 @@ export const useIsConnectedToVoiceChannel = function useIsConnectedToVoiceChanne
     id = id.id;
   }
   const items = [closure_3, closure_2];
-  return id(586).useStateFromStores(items, () => closure_1_3.isInChannel(id, closure_1_2.getId()));
+  return id(504).useStateFromStores(items, () => closure_1_3.isInChannel(id, closure_1_2.getId()));
 };
 export const useIsConnectedToVoiceChannelForId = function useIsConnectedToVoiceChannelForId(arg0) {
   const _require = arg0;

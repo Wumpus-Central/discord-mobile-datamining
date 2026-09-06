@@ -30,7 +30,7 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
     attachments = [];
   }
   const items = [];
-  let obj = message(586);
+  let obj = message(504);
   const items1 = [onlyAttachmentIds];
   if (
     obj.useStateFromStores(items1, () => {

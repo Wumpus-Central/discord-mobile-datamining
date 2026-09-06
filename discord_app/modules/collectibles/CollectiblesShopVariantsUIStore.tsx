@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import isIterable from "../../../_runtime/04105_isIterable.js";
-import identity from "../../../_runtime/00697_identity.js";
+import isIterable from "../../../_runtime/04184_isIterable.js";
+import identity from "../../../_runtime/01244_identity.js";
 
 let closure_2 = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };

@@ -13,7 +13,7 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 const require = arg1;
 function ThreadsScreen(channel) {
   channel = channel.channel;
-  let obj = channel(6125);
+  let obj = channel(7269);
   const canStartThread = obj.useCanStartThread(channel);
   const items = [channel];
   const callback = importAllResult.useCallback(() => {
@@ -62,7 +62,7 @@ const memoResult = importAllResult.memo((searchContext) => {
   } else {
     channelId = null;
   }
-  let obj = channelId(644);
+  let obj = channelId(563);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(channelId));
   let tmp4 = null;
@@ -74,10 +74,10 @@ const memoResult = importAllResult.memo((searchContext) => {
   return tmp4;
 });
 const memoResult1 = importAllResult.memo(() => {
-  let obj = channelId(1499);
+  let obj = channelId(1484);
   channelId = obj.useRoute().params.channelId;
   const items = [closure_5];
-  const stateFromStores = channelId(644).useStateFromStores(items, () => closure_1_5.getChannel(channelId));
+  const stateFromStores = channelId(563).useStateFromStores(items, () => closure_1_5.getChannel(channelId));
   let tmp3 = null;
   if (null != stateFromStores) {
     obj = { style: null, channel: null };

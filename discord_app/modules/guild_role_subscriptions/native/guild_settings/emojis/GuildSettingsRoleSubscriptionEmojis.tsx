@@ -10,16 +10,16 @@ const require = arg1;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
-  let obj = guildId(17564);
+  let obj = guildId(17724);
   const roleSubscriptionSettingsDisabled = obj.useRoleSubscriptionSettingsDisabled();
   const items = [closure_3];
-  stateFromStores = guildId(586).useStateFromStores(items, () => closure_1_3.getGuild(guildId));
+  stateFromStores = guildId(504).useStateFromStores(items, () => closure_1_3.getGuild(guildId));
   if (null == stateFromStores) {
     return null;
   } else {
-    const intl = tmp(1233).intl;
+    const intl = tmp(1114).intl;
     obj = { maxSlots: null };
-    obj[0] = stateFromStores(17620)(stateFromStores);
+    obj[0] = stateFromStores(17780)(stateFromStores);
     obj = {
       guild: null,
       headerDescription: null,
@@ -28,7 +28,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
       disabled: null,
     };
     obj[0] = stateFromStores;
-    obj[1] = intl.formatToPlainString(tmp(1233).t.H9Jxp6, obj);
+    obj[1] = intl.formatToPlainString(tmp(1114).t.H9Jxp6, obj);
     obj[2] = closure_5;
     obj[3] = function onSelectRolesForEmoji(arg0) {
       closure_0 = arg0;
@@ -64,7 +64,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
       return rejectResult;
     };
     obj[4] = roleSubscriptionSettingsDisabled;
-    return jsx(tmp(17401).ManageEmojisModal, {
+    return jsx(tmp(17561).ManageEmojisModal, {
       guild: null,
       headerDescription: null,
       computeEmojiItems: null,
@@ -72,7 +72,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
       disabled: null,
     });
   }
-  const obj2 = guildId(586);
+  const obj2 = guildId(504);
 }
 noopAll;
 let closure_5 = importDefaultResult.memoize((arr) => {

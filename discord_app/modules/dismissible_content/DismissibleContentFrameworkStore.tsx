@@ -1,9 +1,9 @@
 // discord_app/modules/dismissible_content/DismissibleContentFrameworkStore.tsx
 import timestampDefault from "../debug/Logger.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
 import isSingleUseDismissibleContent from "DismissibleContentTypes.tsx";
 import set2 from "DismissibleContentFatigueConfig.tsx";
 import set from "../../../_runtime/00002_set.js";

@@ -1,8 +1,8 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaStore.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import { apexExperiment } from "SensitiveContentSelfHarmExperiment.tsx";
 
 const require = arg1;

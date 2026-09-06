@@ -1,6 +1,6 @@
 // discord_app/actions/MFAActionCreators.tsx
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import closure_3 from "../stores/MFAStore.tsx";
 import { Endpoints } from "../Constants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -49,11 +49,11 @@ export default {
     const obj3 = sendRequest;
     return HTTP.post(obj).then(
       (arg0) => {
-        callback(706).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+        callback(573).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
         return arg0;
       },
       (arg0) => {
-        callback(706).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+        callback(573).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
         throw arg0;
       },
     );
@@ -68,11 +68,11 @@ export default {
     const obj4 = sendRequest;
     return HTTP.post(obj).then(
       (arg0) => {
-        callback(706).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+        callback(573).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
         return arg0;
       },
       (arg0) => {
-        callback(706).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+        callback(573).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
         throw arg0;
       },
     );

@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx
 import useMountLayoutEffectDefault from "../../../../../hooks/useMountEffect.tsx";
-import _modDef14578 from "../../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14689 from "../../../../settings/native/renderer/SettingLayout.tsx";
 import apexExperimentDefault from "../../../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { initializeAndroidNotificationSettingsStore as closure_4 } from "../../../../user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx";
@@ -27,7 +27,7 @@ const memoResult = importAllResult.memo(() => {
   useMountLayoutEffectDefault(() => {
     callback2();
   });
-  return jsx(_modDef14578, { node });
+  return jsx(_modDef14689, { node });
 });
 const result = require("set").fileFinishedImporting(
   "modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx",

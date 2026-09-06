@@ -610,7 +610,7 @@ prototype["getNewForumThreadsCreated"] = function getNewForumThreadsCreated(chan
         if (tmp2Result.hasFlag(tmp.flags, tmp4.NEW_FORUM_THREADS_OFF)) {
           return false;
         }
-        tmp2Result = tmp2(1398);
+        tmp2Result = tmp2(1384);
       }
       obj = hasFlagAll;
       tmp2 = importAll;
@@ -795,7 +795,7 @@ prototype["resolveGuildUnreadSetting"] = function resolveGuildUnreadSetting(guil
       } else {
         ONLY_MENTIONS = UnreadSetting.ONLY_MENTIONS;
       }
-      tmp3Result = tmp3(1398);
+      tmp3Result = tmp3(1384);
     }
     obj = hasFlagAll;
     tmp3 = importAll;

@@ -2,7 +2,7 @@
 import noopAll from "../../../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import registerAsset from "../../../../../../../_runtime/11182_registerAsset.js";
+import registerAsset from "../../../../../../../_runtime/11321_registerAsset.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;

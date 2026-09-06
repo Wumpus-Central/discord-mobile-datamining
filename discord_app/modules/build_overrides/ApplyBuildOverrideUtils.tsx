@@ -314,7 +314,7 @@ closure_0 = importDefaultResult((arg0) => {
     }
   })();
 });
-const f90691 = function () {
+const f91799 = function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -357,9 +357,9 @@ export const clearBuildOverride = function clearBuildOverride() {
   return applyArgumentsResult;
 };
 export const getPublicBuildOverrideLink = function getPublicBuildOverrideLink(arg0) {
-  const HTTP = callback(527).HTTP;
+  const HTTP = callback(1272).HTTP;
   let obj = {
-    url: callback(4393).getAPIEndpoint("/__development/create_build_override_link"),
+    url: callback(1362).getAPIEndpoint("/__development/create_build_override_link"),
     body: arg0,
     headers: null,
     oldFormErrors: true,
@@ -370,7 +370,7 @@ export const getPublicBuildOverrideLink = function getPublicBuildOverrideLink(ar
     str = "";
   }
   obj[2] = { Authorization: str };
-  const obj2 = callback(4393);
+  const obj2 = callback(1362);
   return HTTP.post(obj).then(
     (body) => ({ url: body.body.url, error: false }),
     (status) => {

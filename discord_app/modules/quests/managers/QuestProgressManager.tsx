@@ -51,11 +51,11 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
-        let tmp6Result = tmp6(11137);
+        let tmp6Result = tmp6(11276);
         obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
-        obj[0] = tmp6(5399).QuestContent.RUNNING_ACTIVITY;
-        obj[1] = tmp6(7484).QuestContentCTA.START_QUEST;
-        obj[2] = tmp6(5399).QuestContent.RUNNING_ACTIVITY;
+        obj[0] = tmp6(5447).QuestContent.RUNNING_ACTIVITY;
+        obj[1] = tmp6(7728).QuestContentCTA.START_QUEST;
+        obj[2] = tmp6(5447).QuestContent.RUNNING_ACTIVITY;
         let tmp12 = obj2;
         let enrollInQuestResult = tmp6Result.enrollInQuest(item10020.id, obj);
         obj2.return();
@@ -102,13 +102,13 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = lib(7480).getQuestTaskDetails(
+            const questTaskDetails = lib(7724).getQuestTaskDetails(
               value,
-              lib(5403).FirstPartyQuestTaskTypesSets.DESKTOP,
+              lib(5452).FirstPartyQuestTaskTypesSets.DESKTOP,
             );
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
-            const bound = Math.max(0, diff * applyArgumentsResult(684).Millis.SECOND);
+            const bound = Math.max(0, diff * applyArgumentsResult(1090).Millis.SECOND);
             let sum = closure_14;
             if (bound <= closure_14) {
               sum = bound + closure_15;
@@ -511,12 +511,12 @@ prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuest
   const self = this;
   if (set2.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingPlayOnDesktopQuests();
-  } else if (tmp(5403).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
+  } else if (tmp(5452).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingStreamOnDesktopQuests();
-  } else if (tmp(5403).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
+  } else if (tmp(5452).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
     return self.getActivelyProgressingActivityQuests();
   } else {
-    tmp(1470).assertNever(closure_1);
+    tmp(1369).assertNever(closure_1);
   }
 };
 prototype["getActivelyProgressingPlayOnDesktopQuests"] = function getActivelyProgressingPlayOnDesktopQuests() {

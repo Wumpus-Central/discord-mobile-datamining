@@ -1,5 +1,6 @@
 // discord_app/modules/notifications/NotificationSettingsUtils.tsx
 import knownExperimentConfigs from "NotificationSettingsExperiments.tsx";
+import useIsDeclarativeNotificationSettingsRedesignEnabled from "DeclarativeNotificationSettingsRedesignExperiment.tsx";
 import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import items2 from "NotificationSettingsConstants.tsx";
@@ -67,12 +68,18 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
   }
   return { settings, mappings };
 };
-export function useIsDeclarativeSettingsUIAvailable() {
-  return false;
-}
-export function useNotifCategoryVisibility() {
-  return false;
-}
+export const useIsDeclarativeSettingsUIAvailable = function useIsDeclarativeSettingsUIAvailable(
+  LegacyNotificationsSetting,
+) {
+  return useIsDeclarativeNotificationSettingsRedesignEnabled.useIsDeclarativeNotificationSettingsRedesignEnabled(
+    "useIsDeclarativeSettingsUIAvailable:" + LegacyNotificationsSetting,
+  );
+};
+export const useNotifCategoryVisibility = function useNotifCategoryVisibility(CATEGORY_OTHER) {
+  return useIsDeclarativeNotificationSettingsRedesignEnabled.useIsDeclarativeNotificationSettingsRedesignEnabled(
+    "useIsDeclarativeSettingsUIAvailable:" + CATEGORY_OTHER,
+  );
+};
 export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMING_DEFAULT) {
   const _require = GAMING_DEFAULT;
   const items = [GAMING_DEFAULT];
@@ -102,9 +109,10 @@ export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMI
     items,
   );
   const experiment = memo.experiment;
-  const items1 = [_require(experiment[5]).ApexExperimentStore];
+  const variations = memo.variations;
+  const items1 = [_require(experiment[6]).ApexExperimentStore];
   const items2 = [experiment];
-  const stateFromStores = _require(experiment[4]).useStateFromStores(
+  const stateFromStores = _require(experiment[5]).useStateFromStores(
     items1,
     () => {
       let config;
@@ -115,5 +123,16 @@ export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMI
     },
     items2,
   );
-  return false;
+  let obj = _require(experiment[5]);
+  let isDeclarativeNotificationSettingsRedesignEnabled = _require(
+    experiment[4],
+  ).useIsDeclarativeNotificationSettingsRedesignEnabled(
+    "useIsDeclarativeSettingsUIAvailable:" + "useNotifSettingVisibility",
+  );
+  if (isDeclarativeNotificationSettingsRedesignEnabled) {
+    isDeclarativeNotificationSettingsRedesignEnabled =
+      null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
+    let tmp5 = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
+  }
+  return isDeclarativeNotificationSettingsRedesignEnabled;
 };

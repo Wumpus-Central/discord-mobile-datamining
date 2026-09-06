@@ -34,10 +34,10 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
     if (isDm) {
       if (!flag) {
-        let BLUR2 = tmp4(1305).ExplicitContentRedaction.BLOCK;
+        let BLUR2 = tmp4(1187).ExplicitContentRedaction.BLOCK;
       }
     }
-    ExplicitContentRedaction = tmp4(1305).ExplicitContentRedaction;
+    ExplicitContentRedaction = tmp4(1187).ExplicitContentRedaction;
     BLUR2 = ExplicitContentRedaction.BLUR;
   } else {
     let nsfwAllowed;
@@ -54,9 +54,9 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag6 = false;
       }
       if (!flag5) {
-        const BLUR = tmp4(1305).ExplicitContentRedaction.BLUR;
+        const BLUR = tmp4(1187).ExplicitContentRedaction.BLUR;
       }
-      const ExplicitContentFilter2 = tmp4(4166).ExplicitContentFilter;
+      const ExplicitContentFilter2 = tmp4(1935).ExplicitContentFilter;
       setting = ExplicitContentFilter2.getSetting();
       if (flag6) {
         let tmp11 = obj[setting];
@@ -73,7 +73,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag4 = false;
       }
       if (flag3) {
-        const ExplicitContentFilter = tmp4(4166).ExplicitContentFilter;
+        const ExplicitContentFilter = tmp4(1935).ExplicitContentFilter;
         const setting1 = ExplicitContentFilter.getSetting();
         if (flag4) {
           let SHOW = obj[setting1];
@@ -81,7 +81,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
           SHOW = obj[setting1];
         }
       } else {
-        SHOW = tmp4(1305).ExplicitContentRedaction.SHOW;
+        SHOW = tmp4(1187).ExplicitContentRedaction.SHOW;
       }
       return SHOW;
     }
@@ -144,7 +144,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     flag2 = false;
   }
   if (flag) {
-    const ExplicitContentFilter = tmp(4166).ExplicitContentFilter;
+    const ExplicitContentFilter = tmp(1935).ExplicitContentFilter;
     const setting = ExplicitContentFilter.getSetting();
     if (flag2) {
       let tmp5 = obj[setting];
@@ -153,7 +153,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     }
     return tmp5;
   } else {
-    return tmp(1305).ExplicitContentRedaction.BLUR;
+    return tmp(1187).ExplicitContentRedaction.BLUR;
   }
 };
 export const getExplicitContentSettingOrDefault = function getExplicitContentSettingOrDefault(arg0) {

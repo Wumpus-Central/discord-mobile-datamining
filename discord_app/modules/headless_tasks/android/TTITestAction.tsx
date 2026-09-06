@@ -1,8 +1,8 @@
 // discord_app/modules/headless_tasks/android/TTITestAction.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import getHermesInstrumentedStatsSummaryDefault from "../../../utils/ProcessUtils.native.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import enforcingDefault2 from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
 import importDefaultResult from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { applicationReady } from "../../app_startup/native/NativeAppStartup.tsx";
@@ -192,7 +192,7 @@ function _apiLogin() {
                 }
               }
               if (null != closure_1_8.getId()) {
-                let obj16 = callback(6061);
+                let obj16 = callback(6593);
                 c6 = 3;
                 c7 = 1;
                 const obj3 = { value: null, done: false };
@@ -239,7 +239,7 @@ function _apiLogin() {
               obj9[0] = ok;
               return obj9;
             } else if (ok.ok) {
-              obj7 = callback(6061);
+              obj7 = callback(6593);
               c6 = 4;
               c7 = 1;
               const obj10 = { value: null, done: false };
@@ -318,7 +318,7 @@ function _apiLogin() {
               obj = iter;
               obj = callback2(table[11]);
               callback2 = iter;
-              const f125209 = () => { ... };
+              const f125841 = () => { ... };
               function handler() { ... }
               const subscription = obj.subscribe(iter, handler);
             }
@@ -327,8 +327,8 @@ function _apiLogin() {
               let _loopResult = _loop(iter.next());
               continue;
             }
-            closure_1_20(callback(706), "LOGIN_SUCCESS", (token) => callback(token.token));
-            obj = callback(6061);
+            closure_1_20(callback(573), "LOGIN_SUCCESS", (token) => callback(token.token));
+            obj = callback(6593);
             obj = { login: closure_0, password: callback };
             obj.login(obj);
           });
@@ -359,7 +359,7 @@ function subscribeOnce(subscribe) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f125209(arg0);
+    return f125841(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
@@ -373,7 +373,7 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = callback(10303);
+    obj = callback(10194);
     const result = obj.resetComponentProfiler();
     obj = { type: "response", status: "success", message: "reset-component-profiler" };
     const merged = Object.assign(undefined);
@@ -381,7 +381,7 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = callback(10303);
+    obj = callback(10194);
     const result = obj.pauseComponentProfiler();
     obj = { type: "response", status: "success", message: "pause-component-profiler" };
     const merged = Object.assign(undefined);
@@ -389,7 +389,7 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = callback(10303);
+    obj = callback(10194);
     const result = obj.resumeComponentProfiler();
     obj = { type: "response", status: "success", message: "resume-component-profiler" };
     const merged = Object.assign(undefined);
@@ -397,11 +397,11 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = { stats: callback(10303).dumpStats() };
+    obj = { stats: callback(10194).dumpStats() };
     obj = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    const obj2 = callback(10303);
+    const obj2 = callback(10194);
     enforcingDefault.logToDevice(json);
   },
   () => {

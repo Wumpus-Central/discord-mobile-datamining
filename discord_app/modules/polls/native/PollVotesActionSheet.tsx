@@ -20,7 +20,7 @@ require = arg1;
 function PollEmoji(emoji) {
   emoji = emoji.emoji;
   const tmp = callback3();
-  let obj = emoji(586);
+  let obj = emoji(504);
   const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != emoji.id) {
@@ -386,18 +386,18 @@ function NoResults() {
   const tmp6 = closure_7;
   const tmp8 = closure_6;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(11529);
+    let tmp2Result = tmp2(11724);
   } else {
-    tmp2Result = tmp2(11530);
+    tmp2Result = tmp2(11725);
   }
   obj[1] = tmp2Result;
   const items = [closure_14(tmp8, obj), ,];
   obj = { style: tmp.noResultsTitle, variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp9(1233).intl;
+  const intl = tmp9(1114).intl;
   obj[3] = intl.string(getSystemLocale.t.vhQK3o);
   items[1] = closure_14(Text.Text, obj);
   obj1 = { style: tmp.noResultsSubtitle, variant: "text-sm/semibold", color: "text-default", children: null };
-  const intl2 = tmp9(1233).intl;
+  const intl2 = tmp9(1114).intl;
   obj1[3] = intl2.string(getSystemLocale.t.bwytdh);
   items[2] = closure_14(Text.Text, obj1);
   obj[1] = items;
@@ -459,7 +459,7 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
   if (selected) {
     str = "interactive-text-active";
   }
-  const intl = answer(1233).intl;
+  const intl = answer(1114).intl;
   let obj = { numVotes: num, option: answer.poll_media.text };
   obj = {
     ref,
@@ -478,7 +478,7 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
   items1[1] = answerSelected;
   obj[2] = items1;
   obj[4] = { selected };
-  obj[5] = intl.formatToPlainString(answer(1233).t.wqBc7A, obj);
+  obj[5] = intl.formatToPlainString(answer(1114).t.wqBc7A, obj);
   let tmp8 = null;
   if (null != answer.poll_media.emoji) {
     obj = { style: null, emoji: null };
@@ -493,15 +493,15 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
     obj1[0] = tmp.answerText;
     obj1[2] = str;
     obj1[4] = answer.poll_media.text;
-    tmp11 = callback(tmp3(4474).Text, obj1);
+    tmp11 = callback(tmp3(4556).Text, obj1);
   }
   items2[1] = tmp11;
   const obj2 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
   const items3 = [" ", "(", num.toLocaleString(), ")"];
   obj2[3] = items3;
-  items2[2] = closure_15(answer(4474).Text, obj2);
+  items2[2] = closure_15(answer(4556).Text, obj2);
   obj[6] = items2;
-  return closure_15(answer(5077).PressableHighlight, obj);
+  return closure_15(answer(5123).PressableHighlight, obj);
 });
 let closure_20 = {
   code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}",

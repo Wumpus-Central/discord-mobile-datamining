@@ -1,7 +1,7 @@
 // discord_app/modules/accept_invite/native/AcceptInvite.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import handleImageLoad from "../../image_upload/ImageLoaderUtils.tsx";
 import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import handleImageLoad from "../../image_upload/ImageLoaderUtils.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import PressableCard from "../../../design/components/Card/native/Card.native.tsx";
@@ -75,9 +75,9 @@ function AcceptInviteCardComponent(invite) {
   const effect = React.useEffect(() => {
     const tmp = closure_1_13(invite);
     if (tmp !== first) {
-      const result = invite(5605).DeprecatedLayoutAnimation();
+      const result = invite(5581).DeprecatedLayoutAnimation();
       dependencyMap(tmp);
-      const obj = invite(5605);
+      const obj = invite(5581);
     }
   }, items);
   if (null == invite) {
@@ -86,12 +86,12 @@ function AcceptInviteCardComponent(invite) {
     let obj = {};
     const merged = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(12492), obj);
+    return callback2(first(12718), obj);
   } else if (tmp22.ERROR === first) {
     obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(12495), obj);
+    return callback2(first(12721), obj);
   } else {
     return callback2(InviteResolving, {});
   }
@@ -151,14 +151,14 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = tmp3(12500);
+    let guildSplashSource = tmp3(12726);
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3[0], splash: obj3[1] } = guild);
     let obj3 = handleImageLoad;
     obj[2] = width * obj3.getDevicePixelRatio();
-    guildSplashSource = tmp3(1430).getGuildSplashSource(obj);
-    const tmp3Result = tmp3(1430);
+    guildSplashSource = tmp3(1396).getGuildSplashSource(obj);
+    const tmp3Result = tmp3(1396);
   }
   obj = { style: items, children: null };
   items = [tmp2.parentContainer, { height, width }];

@@ -18,15 +18,15 @@ const result = require("set").fileFinishedImporting(
 
 export default function SoundboardVolume() {
   const tmp = callback3();
-  let obj = analyticsLocations(6198);
+  let obj = analyticsLocations(7344);
   const amplitudinalSoundboardVolume = obj.getAmplitudinalSoundboardVolume();
   analyticsLocations = contextDefault().analyticsLocations;
   obj = { title: null, hasIcons: false, children: null };
-  const intl = analyticsLocations(1233).intl;
-  obj[0] = intl.string(analyticsLocations(1233).t.xbMc8r);
+  const intl = analyticsLocations(1114).intl;
+  obj[0] = intl.string(analyticsLocations(1114).t.xbMc8r);
   obj = { label: null, subLabel: null };
-  const intl2 = analyticsLocations(1233).intl;
-  obj[0] = intl2.string(analyticsLocations(1233).t.kbFsAD);
+  const intl2 = analyticsLocations(1114).intl;
+  obj[0] = intl2.string(analyticsLocations(1114).t.kbFsAD);
   obj1 = { children: null };
   const obj2 = { style: tmp.slider, children: null };
   const obj3 = {
@@ -37,19 +37,19 @@ export default function SoundboardVolume() {
     },
     accessibilityLabel: null,
   };
-  const intl3 = analyticsLocations(1233).intl;
-  obj3[3] = intl3.string(analyticsLocations(1233).t.kbFsAD);
+  const intl3 = analyticsLocations(1114).intl;
+  obj3[3] = intl3.string(analyticsLocations(1114).t.kbFsAD);
   obj2[1] = callback(VolumeSliderDefault, obj3);
   const items = [callback(View, obj2)];
   const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
-  const intl4 = analyticsLocations(1233).intl;
+  const intl4 = analyticsLocations(1114).intl;
   const obj5 = { helpCenterArticle: null };
   const tmp3 = VolumeSliderDefault;
   obj5[0] = combinedDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
-  obj4[2] = intl4.format(analyticsLocations(1233).t.BPbGq7, obj5);
-  items[1] = callback(analyticsLocations(4474).Text, obj4);
+  obj4[2] = intl4.format(analyticsLocations(1114).t.BPbGq7, obj5);
+  items[1] = callback(analyticsLocations(4556).Text, obj4);
   obj1[0] = items;
   obj[1] = callback2(closure_6, obj1);
-  obj[2] = callback(analyticsLocations(5608).TableRow, obj);
-  return callback(analyticsLocations(10088).UserSettingsTableRowGroup, obj);
+  obj[2] = callback(analyticsLocations(5605).TableRow, obj);
+  return callback(analyticsLocations(9979).UserSettingsTableRowGroup, obj);
 }

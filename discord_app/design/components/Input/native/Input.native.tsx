@@ -1,9 +1,8 @@
 // discord_app/design/components/Input/native/Input.native.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Text from "../../Text/native/Text.tsx";
-import ErrorText from "../../ErrorText/native/ErrorText.native.tsx";
+import getNodeText from "../../../utils/native.tsx";
+import getRequiredFieldA11yName from "getRequiredFieldA11yName.native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
@@ -34,49 +33,52 @@ export const Input = function Input(arg0) {
   const tmp = callback2();
   ({ label, labelTrailing, labelId, description, errorMessage, required } = arg0);
   ({ children, containerStyle } = arg0);
-  if (typeof label === "string") {
-    if (true === required) {
-      const intl = getSystemLocale.intl;
-      const _HermesInternal = HermesInternal;
-      const combined = "" + label + " (" + intl.string(getSystemLocale.t.EkokLy) + ")";
-    }
-  }
-  let obj = { style: containerStyle, children: null };
+  let obj = getRequiredFieldA11yName;
+  obj1 = getNodeText;
+  const requiredFieldA11yName = obj.getRequiredFieldA11yName(obj1.getNodeText(label), required);
+  obj = { style: containerStyle, children: null };
   if (null == label) {
     const items = [null, , ,];
     obj = { style: null, children: null };
     obj[0] = tmp.inputRow;
     obj[1] = children;
-    items[1] = callback(tmp8, obj);
-    let tmp15Result = null;
+    items[1] = callback(tmp6, obj);
+    let tmp11Result = null;
     if (null != description) {
-      obj = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
-      obj[2] = tmp.description;
-      obj[3] = description;
-      tmp15Result = tmp15(Text.Text, obj);
+      obj1 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
+      obj1[2] = tmp.description;
+      obj1[3] = description;
+      tmp11Result = tmp11(tmp2(4556).Text, obj1);
     }
-    items[2] = tmp15Result;
-    tmp15Result = null;
+    items[2] = tmp11Result;
+    tmp11Result = null;
     if (null != errorMessage) {
-      obj1 = { style: null, children: null };
-      obj1[0] = tmp.error;
-      obj1[1] = errorMessage;
-      tmp15Result = tmp15(ErrorText.ErrorText, obj1);
+      const obj2 = { style: null, children: null };
+      obj2[0] = tmp.error;
+      obj2[1] = errorMessage;
+      tmp11Result = tmp11(tmp2(6609).ErrorText, obj2);
     }
-    items[3] = tmp15Result;
+    items[3] = tmp11Result;
     obj[1] = items;
-    return tmp7(tmp8, obj);
+    return tmp5(tmp6, obj);
   } else if (null != labelTrailing) {
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.labelWrapper;
-    const obj3 = { variant: "text-sm/semibold", color: "text-subtle", nativeID: null, children: null };
-    obj3[2] = labelId;
-    obj3[3] = label;
-    const items1 = [callback(Text.Text, obj3), labelTrailing];
-    obj2[1] = items1;
-    let tmp7Result = tmp7(tmp8, obj2);
-  } else {
+    const obj3 = { style: null, children: null };
+    obj3[0] = tmp.labelWrapper;
     const obj4 = {
+      variant: "text-sm/semibold",
+      color: "text-subtle",
+      nativeID: null,
+      accessibilityLabel: null,
+      children: null,
+    };
+    obj4[2] = labelId;
+    obj4[3] = requiredFieldA11yName;
+    obj4[4] = label;
+    const items1 = [callback(tmp2(4556).Text, obj4), labelTrailing];
+    obj3[1] = items1;
+    let tmp5Result = tmp5(tmp6, obj3);
+  } else {
+    const obj5 = {
       variant: "text-sm/semibold",
       color: "text-subtle",
       style: null,
@@ -84,19 +86,18 @@ export const Input = function Input(arg0) {
       accessibilityLabel: null,
       children: null,
     };
-    obj4[2] = tmp.label;
-    obj4[3] = labelId;
-    obj4[4] = combined;
+    obj5[2] = tmp.label;
+    obj5[3] = labelId;
+    obj5[4] = requiredFieldA11yName;
     const items2 = [label];
-    tmp7Result = null;
+    tmp5Result = null;
     if (required) {
-      const obj5 = { variant: "text-sm/bold", color: "text-feedback-critical", "aria-hidden": true, children: null };
-      obj5[3] = [" ", "*"];
-      tmp7Result = tmp7(tmp22(4474).Text, obj5);
+      const obj6 = { variant: "text-sm/bold", color: "text-feedback-critical", "aria-hidden": true, children: null };
+      obj6[3] = [" ", "*"];
+      tmp5Result = tmp5(tmp2(4556).Text, obj6);
     }
-    items2[1] = tmp7Result;
-    obj4[5] = items2;
-    tmp7Result = tmp7(Text.Text, obj4);
-    tmp22 = require;
+    items2[1] = tmp5Result;
+    obj5[5] = items2;
+    tmp5Result = tmp5(tmp2(4556).Text, obj5);
   }
 };

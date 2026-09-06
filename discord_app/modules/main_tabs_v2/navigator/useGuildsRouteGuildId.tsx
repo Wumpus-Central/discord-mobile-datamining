@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx
 import set from "../../../../_runtime/00002_set.js";
-import createStandardNavigationFactories from "../../../../_runtime/01499_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../../../_runtime/01484_createStandardNavigationFactories.js";
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
 

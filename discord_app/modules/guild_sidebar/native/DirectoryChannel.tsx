@@ -21,7 +21,7 @@ const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
   let selected = guildId.selected;
   let id;
-  let obj = guildId(644);
+  let obj = guildId(563);
   const items = [closure_4, closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const directoryChannelIds = closure_1_5.getDirectoryChannelIds(guildId);
@@ -62,15 +62,15 @@ const memoResult = importAllResult.memo((guildId) => {
     obj[2] = tmp.container;
     obj = { channel: null };
     obj[0] = stateFromStores;
-    obj[5] = id(9442)(obj);
+    obj[5] = id(9770)(obj);
     obj1 = { selected: null };
     obj1[0] = selected;
     obj[6] = obj1;
     obj[7] = stateFromStores;
     obj[8] = selected;
     obj[9] = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(15952), { channel: null });
-    const tmp10 = id(15952);
+    tmp7 = jsx(id(16116), { channel: null });
+    const tmp10 = id(16116);
   }
   return tmp7;
 });

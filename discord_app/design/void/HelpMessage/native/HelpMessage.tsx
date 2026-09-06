@@ -4,8 +4,8 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import CircleInformationIcon from "../../../components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import CircleCheckIcon from "../../../components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import Text from "../../../components/Text/native/Text.tsx";
-import CircleXIcon from "../../../components/Icon/native/redesign/generated/CircleXIcon.tsx";
 import CircleErrorIcon from "../../../components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import CircleXIcon from "../../../components/Icon/native/redesign/generated/CircleXIcon.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";

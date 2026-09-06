@@ -1,12 +1,12 @@
 // discord_app/modules/media/native/MediaPlayerManager.tsx
 import set2 from "../../../../_runtime/00002_set.js";
 import timestampDefault from "../../debug/Logger.tsx";
-import sum from "../../../../discord_common/js/shared/Constants.tsx";
-import ME from "../../../Constants.tsx";
-import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import ME from "../../../Constants.tsx";
+import sum from "../../../../discord_common/js/shared/Constants.tsx";
+import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActivityPanelModes2 from "../../activities/panel/ActivityPanelConstants.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../activities/EmbeddedActivitiesStore.tsx";
@@ -16,7 +16,7 @@ import closure_8 from "../../../stores/MessageStore.tsx";
 import closure_9 from "../../../stores/PermissionStore.tsx";
 import closure_10 from "../../../stores/native/AppStateStore.tsx";
 import MediaPlaybackPanelModes from "../../media_panel/native/MediaPlaybackPanelConstants.tsx";
-import keys from "../../../../_runtime/00641_keys.js";
+import keys from "../../../../_runtime/00560_keys.js";
 
 ({ NativeEventEmitter: c3, NativeModules: c4 } = get_ActivityIndicator);
 const AppStates = ME.AppStates;
@@ -35,13 +35,12 @@ let obj = keys.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "PX_16",
-    showPip: "sticker_pack_199",
-    closePip: 1.99,
-    displayedMediaItemIdsPerChannel: "$",
-    currentlyDisplayedChannelId: "usd",
-  };
-  obj[8] = function closePip() {
-    callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
+    showPip: "setRequestSession",
+    closePip() {
+      callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
+    },
+    displayedMediaItemIdsPerChannel: "\u{1F937}\u{1F3FE}",
+    currentlyDisplayedChannelId: true,
   };
   obj[9] = {};
   return obj;
@@ -123,7 +122,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
-  self(702).batchUpdates(() => {
+  self(1249).batchUpdates(() => {
     const activeMediaPlayerSource = closure_1_17.getState().activeMediaPlayerSource;
     let channelId;
     if (activeMediaPlayerSource != null) {
@@ -180,7 +179,7 @@ prototype["userDidClosePip"] = function userDidClosePip() {
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
-  self(702).batchUpdates(() => {
+  self(1249).batchUpdates(() => {
     self.pauseCurrentPlayer();
     closure_1_17.setState({ wasPipClosedByUser: true, showPip: false });
   });
@@ -293,7 +292,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
   const self = this;
   source = source.source;
-  source(702).batchUpdates(() => {
+  source(1249).batchUpdates(() => {
     obj = closure_1_17;
     let id;
     const state = closure_1_17.getState();
@@ -354,13 +353,13 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         obj = { channelId: null, messageId: null };
         obj[0] = channelId;
         obj[1] = messageId;
-        const message1 = self(7211).fetchMessage(obj);
+        const message1 = self(7456).fetchMessage(obj);
         message1.then((arg0) => {
           if (null != arg0) {
             const result = self.handleMediaSourceMessageUpdated(arg0);
           }
         });
-        const obj2 = self(7211);
+        const obj2 = self(7456);
       }
       obj4 = message;
     }

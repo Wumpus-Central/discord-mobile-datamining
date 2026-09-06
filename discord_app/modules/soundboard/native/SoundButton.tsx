@@ -14,7 +14,7 @@ function SoundButtonEmoji(arg0) {
   ({ sound, sharedValues } = arg0);
   const tmp = callback();
   let obj = { sharedValues, scaleFactors: { pressed: 0.8, playing: 1.2 } };
-  obj1 = obj(4217);
+  obj1 = obj(4296);
   const fn = function o() {
     const pressed = obj.sharedValues.pressed;
     const playing = obj.sharedValues.playing;
@@ -64,9 +64,9 @@ function SoundButtonEmoji(arg0) {
   };
   obj = {
     animationConfig: obj,
-    withDelay: obj(4217).withDelay,
-    withSpring: obj(4928).withSpring,
-    interpolate: obj(4217).interpolate,
+    withDelay: obj(4296).withDelay,
+    withSpring: obj(4974).withSpring,
+    interpolate: obj(4296).interpolate,
     SPRING_CONFIG: closure_8,
   };
   fn.__closure = obj;
@@ -79,7 +79,7 @@ function SoundButtonEmoji(arg0) {
     pressedRotationDegrees: -15,
   };
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  let obj4 = obj(4217);
+  let obj4 = obj(4296);
   const fn2 = function o() {
     const pressed = obj.sharedValues.pressed;
     const playing = obj.sharedValues.playing;
@@ -129,9 +129,9 @@ function SoundButtonEmoji(arg0) {
   };
   obj1 = {
     animationConfig: obj,
-    withDelay: obj(4217).withDelay,
-    withSpring: obj(4928).withSpring,
-    interpolate: obj(4217).interpolate,
+    withDelay: obj(4296).withDelay,
+    withSpring: obj(4974).withSpring,
+    interpolate: obj(4296).interpolate,
     SPRING_CONFIG: closure_8,
   };
   fn2.__closure = obj1;

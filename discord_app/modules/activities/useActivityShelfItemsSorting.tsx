@@ -49,21 +49,21 @@ export default function useActivityShelfItemsSorting(arg0) {
       const embeddedActivityConfig = tmp.application.embeddedActivityConfig;
       let label_type;
       if (embeddedActivityConfig != null) {
-        const obj = items2(1234);
-        const tmp7 = embeddedActivityConfig.client_platform_config[v0(8450)(undefined, obj.getOS(obj))];
+        const obj = items2(1115);
+        const tmp7 = embeddedActivityConfig.client_platform_config[v0(9410)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = v0(8450);
+        const tmp5 = v0(9410);
       }
       let tmp8 = null != label_type;
       if (tmp8) {
         tmp8 =
-          label_type === items2(1954).EmbeddedActivityLabelTypes.NEW ||
-          label_type === items2(1954).EmbeddedActivityLabelTypes.UPDATED;
+          label_type === items2(1894).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items2(1894).EmbeddedActivityLabelTypes.UPDATED;
         const tmp11 =
-          label_type === items2(1954).EmbeddedActivityLabelTypes.NEW ||
-          label_type === items2(1954).EmbeddedActivityLabelTypes.UPDATED;
+          label_type === items2(1894).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items2(1894).EmbeddedActivityLabelTypes.UPDATED;
         const tmp9 = items2;
       }
       return tmp8;

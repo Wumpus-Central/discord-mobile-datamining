@@ -19,8 +19,8 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      let tmpResult = tmp(9651);
-      tmpResult = tmp(9651);
+      let tmpResult = tmp(9665);
+      tmpResult = tmp(9665);
       let _Date = Date;
       let rRule = tmpResult.getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
@@ -52,8 +52,8 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
       if (null != callback2) {
         const mapped = first.map((getTime) => {
           const time = getTime.getTime();
-          const rounded = Math.floor(time / callback(684).Millis.SECOND);
-          return callback(11).fromTimestamp(rounded * callback(684).Millis.SECOND);
+          const rounded = Math.floor(time / callback(1090).Millis.SECOND);
+          return callback(11).fromTimestamp(rounded * callback(1090).Millis.SECOND);
         });
         const guildEventUserCounts = callback2(byWeekday[9]).getGuildEventUserCounts(tmp, closure_0, mapped);
         const obj = callback2(byWeekday[9]);

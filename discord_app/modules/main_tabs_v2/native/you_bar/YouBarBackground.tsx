@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarBackground.tsx
-import nDefault from "../../../../../_runtime/00686_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nDefault from "../../../../../_runtime/00672_n.js";
 import map from "../../../../design/tokens/native/useToken.tsx";
-import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
-import _isNativeReflectConstructDefault from "../../../../../_runtime/05544__isNativeReflectConstruct.js";
+import _modDef4296 from "../../../reanimated/ReanimatedRexport.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
+import _isNativeReflectConstructDefault from "../../../../../_runtime/05664__isNativeReflectConstruct.js";
 import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import CONNECTION_BANNER_HEIGHT from "YouBarConstants.tsx";
@@ -101,7 +101,7 @@ function YouBarAnimatedBackground(arg0) {
     { borderTopRightRadius: 0, borderTopLeftRadius: 0 },
     animatedStyle,
   ];
-  return callback(_modDef4217.View, { style });
+  return callback(_modDef4296.View, { style });
 }
 const YOU_BAR_HEIGHT = CONNECTION_BANNER_HEIGHT.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = CONNECTION_BANNER_HEIGHT.YOU_BAR_SPRING_CONFIG;

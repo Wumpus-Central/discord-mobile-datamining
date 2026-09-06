@@ -38,6 +38,9 @@ obj = {
     obj.topSoundboardSoundsByGuildId[guildId] = topSoundsMetadata.map((soundId) => soundId.soundId);
     closure_2[guildId] = false;
   },
+  TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE: function handleTopSoundboardSoundsFetchFailure(guildId) {
+    closure_2[guildId.guildId] = false;
+  },
 };
 const topSoundboardSoundStore = new TopSoundboardSoundStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/soundboard/top_sounds/TopSoundboardSoundStore.tsx");

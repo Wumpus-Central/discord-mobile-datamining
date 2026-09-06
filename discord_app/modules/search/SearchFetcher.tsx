@@ -1,6 +1,6 @@
 // discord_app/modules/search/SearchFetcher.tsx
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import parseDefault from "../../../_runtime/01482_parse.js";
+import parseDefault from "../../../_runtime/01471_parse.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import ME from "../../Constants.tsx";
@@ -106,7 +106,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                   if (!isNaN(callback)) {
                     num2 = 5000;
                     if (0 !== callback) {
-                      num2 = callback * closure_1_1(684).Millis.SECOND;
+                      num2 = callback * closure_1_1(1090).Millis.SECOND;
                     }
                   }
                   closure_3.retryDelay = num2;

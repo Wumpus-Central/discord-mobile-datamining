@@ -1,6 +1,6 @@
 // discord_app/modules/guild_member/GuildMemberActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import updateImpersonating from "../impersonate/ImpersonateActionCreators.tsx";
 import closure_3 from "../impersonate/ImpersonateStore.tsx";
 import { Endpoints } from "../../Constants.tsx";

@@ -28,10 +28,10 @@ export default function UserProfileWidgetReportButton(arg0) {
       const merged = Object.assign(Object.assign(ref, Object.create(null)));
       obj.hitSlop = closure_5;
       obj.accessibilityRole = "button";
-      const intl = callback(1233).intl;
-      obj.accessibilityLabel = intl.string(callback(1233).t.xpSHSk);
-      obj = { size: "sm", color: callback2(709).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8817).MoreHorizontalIcon, obj);
+      const intl = callback(1114).intl;
+      obj.accessibilityLabel = intl.string(callback(1114).t.xpSHSk);
+      obj = { size: "sm", color: callback2(576).colors.TEXT_MUTED };
+      obj.children = callback3(callback(8672).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     },
   };
@@ -42,10 +42,10 @@ export default function UserProfileWidgetReportButton(arg0) {
       const merged = Object.assign(Object.assign(ref, Object.create(null)));
       obj.hitSlop = closure_5;
       obj.accessibilityRole = "button";
-      const intl = callback(1233).intl;
-      obj.accessibilityLabel = intl.string(callback(1233).t.xpSHSk);
-      obj = { size: "sm", color: callback2(709).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8817).MoreHorizontalIcon, obj);
+      const intl = callback(1114).intl;
+      obj.accessibilityLabel = intl.string(callback(1114).t.xpSHSk);
+      obj = { size: "sm", color: callback2(576).colors.TEXT_MUTED };
+      obj.children = callback3(callback(8672).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     },
   });

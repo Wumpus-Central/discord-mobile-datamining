@@ -17,20 +17,20 @@ function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
 function useOfficialMessageStyleSettingOptions() {
   return React.useMemo(() => {
     let obj = { label: null, value: "default" };
-    const intl = callback(1233).intl;
-    obj[0] = intl.string(callback(1233).t.ERaS6f);
+    const intl = callback(1114).intl;
+    obj[0] = intl.string(callback(1114).t.ERaS6f);
     const items = [obj, , ,];
     obj = { label: null, value: "no_text_color" };
-    const intl2 = callback(1233).intl;
-    obj[0] = intl2.string(callback(1233).t.JKfipk);
+    const intl2 = callback(1114).intl;
+    obj[0] = intl2.string(callback(1114).t.JKfipk);
     items[1] = obj;
     obj = { label: null, value: "no_gradient" };
-    const intl3 = callback(1233).intl;
-    obj[0] = intl3.string(callback(1233).t.O2vBoY);
+    const intl3 = callback(1114).intl;
+    obj[0] = intl3.string(callback(1114).t.O2vBoY);
     items[2] = obj;
     obj1 = { label: null, value: "hidden" };
-    const intl4 = callback(1233).intl;
-    obj1[0] = intl4.string(callback(1233).t["+loyQl"]);
+    const intl4 = callback(1114).intl;
+    obj1[0] = intl4.string(callback(1114).t["+loyQl"]);
     items[3] = obj1;
     return items;
   }, []);

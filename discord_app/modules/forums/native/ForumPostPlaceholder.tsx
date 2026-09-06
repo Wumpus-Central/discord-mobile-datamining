@@ -17,21 +17,21 @@ let closure_9 = {
   code: "function ForumPostPlaceholderTsx1(){const{reducedMotion,ROW_OPACITY_END,withDelay,INITIAL_DELAY_MS,withRepeat,withSequence,withTiming,timingConfig}=this.__closure;if(reducedMotion){return{opacity:ROW_OPACITY_END};}return{opacity:withDelay(INITIAL_DELAY_MS,withRepeat(withSequence(withTiming(ROW_OPACITY_END,timingConfig),withTiming(1,timingConfig)),-1,true))};}",
 };
 const memoResult = importAllResult.memo(() => {
-  let obj = stateFromStores(586);
+  let obj = stateFromStores(504);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const timingConfig = callback(
     importAllResult.useState(() => {
       let obj = { timingConfig: null };
       obj = { duration: 1000 + 500 * Math.random(), easing: null };
-      const Easing = stateFromStores(4217).Easing;
-      obj[1] = Easing.inOut(stateFromStores(4217).Easing.sin);
+      const Easing = stateFromStores(4296).Easing;
+      obj[1] = Easing.inOut(stateFromStores(4296).Easing.sin);
       obj[0] = obj;
       return obj;
     }),
     1,
   )[0].timingConfig;
-  obj1 = stateFromStores(4217);
+  obj1 = stateFromStores(4296);
   const fn = function _() {
     const obj = { opacity: null };
     if (stateFromStores) {
@@ -59,23 +59,23 @@ const memoResult = importAllResult.memo(() => {
   obj = {
     reducedMotion: stateFromStores,
     ROW_OPACITY_END: c8,
-    withDelay: stateFromStores(4217).withDelay,
+    withDelay: stateFromStores(4296).withDelay,
     INITIAL_DELAY_MS: 1000,
-    withRepeat: stateFromStores(4217).withRepeat,
-    withSequence: stateFromStores(4217).withSequence,
-    withTiming: stateFromStores(4479).withTiming,
+    withRepeat: stateFromStores(4296).withRepeat,
+    withSequence: stateFromStores(4296).withSequence,
+    withTiming: stateFromStores(4561).withTiming,
     timingConfig,
   };
   fn.__closure = obj;
   fn.__workletHash = 9488742940898;
   fn.__initData = closure_9;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5610).Card, obj1) };
+  obj = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5607).Card, obj1) };
   obj1 = { variant: "secondary", style: callback2().postPlaceholder };
-  return jsx(timingConfig(4217).View, {
+  return jsx(timingConfig(4296).View, {
     style: animatedStyle,
     pointerEvents: "none",
-    children: jsx(stateFromStores(5610).Card, { variant: "secondary", style: callback2().postPlaceholder }),
+    children: jsx(stateFromStores(5607).Card, { variant: "secondary", style: callback2().postPlaceholder }),
   });
 });
 const result = require("set").fileFinishedImporting("modules/forums/native/ForumPostPlaceholder.tsx");

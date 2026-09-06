@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/server/commands/networking.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import sendRequest from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import sendRequest from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import RPC_SCOPE_CONFIG from "../../Constants.tsx";
 import ME from "../../../../Constants.tsx";
 

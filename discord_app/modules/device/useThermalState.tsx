@@ -66,7 +66,7 @@ export default function useThermalState() {
       } else {
         UNHANDLED = obj.UNHANDLED;
       }
-      tmp11Result = tmp11(1234);
+      tmp11Result = tmp11(1115);
     }
     obj3 = set2;
     tmp11 = require;
@@ -108,7 +108,7 @@ export const getThermalState = function getThermalState() {
       } else {
         UNHANDLED = obj.UNHANDLED;
       }
-      tmp11Result = tmp11(1234);
+      tmp11Result = tmp11(1115);
     }
     obj3 = set2;
     tmp11 = require;

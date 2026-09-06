@@ -1,6 +1,6 @@
 // discord_app/modules/user_affinities/UserAffinitiesActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import closure_3 from "../../stores/ConsentStore.tsx";
 import closure_4 from "UserAffinitiesV2Store.tsx";
 import ME from "../../Constants.tsx";
@@ -29,7 +29,7 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
       const value = HTTP.get(obj);
       let nextPromise = value.then(
         (body) => {
-          let obj = callback(706);
+          let obj = callback(573);
           obj = {
             type: "LOAD_USER_AFFINITIES_V2_SUCCESS",
             affineUsers: user_affinities.map((otherUserId) => {
@@ -94,7 +94,7 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
           obj.dispatch(obj);
         },
         () => {
-          callback(706).dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
+          callback(573).dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
         },
       );
     }

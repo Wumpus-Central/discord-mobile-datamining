@@ -58,7 +58,7 @@ function _fetchNote() {
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              obj3 = body(706);
+              obj3 = body(573);
               const obj4 = { type: "USER_NOTE_UPDATE", id: null };
               obj4[1] = callback;
               obj3.dispatch(obj4);
@@ -75,7 +75,7 @@ function _fetchNote() {
             } else {
               body = body.body;
               if (body.note_user_id === callback) {
-                obj = body(706);
+                obj = body(573);
                 const obj6 = { type: "USER_NOTE_UPDATE", id: null, note: null };
                 obj6[1] = callback;
                 obj6[2] = body.note;

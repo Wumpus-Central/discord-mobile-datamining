@@ -511,18 +511,18 @@ let items = [
   () => {
     const Storage = Storage7.Storage;
     const fontScale = Storage.get("a11yFontScale") || 100;
-    const Storage2 = tmp(592).Storage;
+    const Storage2 = tmp(510).Storage;
     let zoom = Storage2.get("a11yZoom");
     if (!zoom) {
       zoom = Accessibility.ZOOM_DEFAULT;
     }
-    const Storage3 = tmp(592).Storage;
+    const Storage3 = tmp(510).Storage;
     const colorblindMode = Storage3.get("a11yColorblindMode") || false;
-    const Storage4 = tmp(592).Storage;
+    const Storage4 = tmp(510).Storage;
     Storage4.remove("a11yFontScale");
-    const Storage5 = tmp(592).Storage;
+    const Storage5 = tmp(510).Storage;
     Storage5.remove("a11yZoom");
-    const Storage6 = tmp(592).Storage;
+    const Storage6 = tmp(510).Storage;
     Storage6.remove("a11yColorblindMode");
     return { fontScale, zoom, colorblindMode, keyboardModeEnabled: false };
   },

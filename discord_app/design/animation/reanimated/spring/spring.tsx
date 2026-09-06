@@ -1,6 +1,6 @@
 // discord_app/design/animation/reanimated/spring/spring.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import _mod4217 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod4296 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE2 from "../ReanimatedConstants.tsx";
 import mutable from "../AccessibilityPreferencesSharedValue.native.tsx";
 
@@ -20,20 +20,20 @@ function withSpring(value, SUBTLE_SPRING, fn, fn2) {
       }
       obj = {};
       const merged = Object.assign(obj);
-      obj.reduceMotion = tmp(4217).ReduceMotion.Never;
+      obj.reduceMotion = tmp(4296).ReduceMotion.Never;
       tmp7 = obj;
     }
     let tmp5 = tmp7;
   } else {
     tmp5 = CONFIG_NEVER_ANIMATE;
   }
-  return _mod4217.withSpring(value, tmp5, fn2);
+  return _mod4296.withSpring(value, tmp5, fn2);
 }
 withSpring.__closure = {
   accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue,
   CONFIG_NEVER_ANIMATE,
-  ReduceMotion: _mod4217.ReduceMotion,
-  REAwithSpring: _mod4217.withSpring,
+  ReduceMotion: _mod4296.ReduceMotion,
+  REAwithSpring: _mod4296.withSpring,
 };
 withSpring.__workletHash = 14783154107972;
 withSpring.__initData = {
@@ -42,8 +42,8 @@ withSpring.__initData = {
 let obj = {
   accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue,
   CONFIG_NEVER_ANIMATE,
-  ReduceMotion: _mod4217.ReduceMotion,
-  REAwithSpring: _mod4217.withSpring,
+  ReduceMotion: _mod4296.ReduceMotion,
+  REAwithSpring: _mod4296.withSpring,
 };
 const result = set.fileFinishedImporting("design/animation/reanimated/spring/spring.tsx");
 

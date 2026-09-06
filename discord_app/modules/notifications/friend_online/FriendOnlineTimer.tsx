@@ -20,9 +20,9 @@ function _reportSessionMeaningfullyOnline() {
     if (1 === tmp7) {
       c3 = 0;
       const lib = dependencyMap;
-      if (lib instanceof lib(527).HTTPResponseError) {
+      if (lib instanceof lib(1272).HTTPResponseError) {
         if (429 === lib.status) {
-          obj1 = callback(706);
+          obj1 = callback(573);
           let obj3 = { type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: null };
           const _Date = Date;
           obj3[1] = Date.now();
@@ -30,7 +30,7 @@ function _reportSessionMeaningfullyOnline() {
           c5 = 3;
         }
       }
-      obj3 = callback(1205);
+      obj3 = callback(1232);
       const obj4 = { tags: null };
       obj4[0] = { app_context: "session_timer" };
       obj3.captureException(lib, obj4);

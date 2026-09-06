@@ -20,12 +20,12 @@ createToggle = {
     return React.useMemo(
       () => ({
         value: contrast.contrast,
-        onSlidingComplete: callback(14331).setContrast,
+        onSlidingComplete: callback(14437).setContrast,
         minimumValue: 0,
         maximumValue: 2,
         step: 0.1,
-        startIcon: callback2(callback(15152).CircleMinusIcon, {}),
-        endIcon: callback2(callback(9242).CirclePlusIcon, {}),
+        startIcon: callback2(callback(15312).CircleMinusIcon, {}),
+        endIcon: callback2(callback(11204).CirclePlusIcon, {}),
       }),
       [],
     );

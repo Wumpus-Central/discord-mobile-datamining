@@ -5,11 +5,11 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
+import metadataDefault from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
+import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import RedesignBottomSheetTitleHeaderBase from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRowIcon from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
-import metadataDefault from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
-import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
@@ -42,14 +42,14 @@ function DemoActionSheet() {
     obj = { onPress: null, label: null };
     obj[0] = NOOP;
     obj[1] = tmp12;
-    tmp14Result = tmp14(tmp15(9705).ActionSheetHeaderPressableText, obj);
+    tmp14Result = tmp14(tmp15(9718).ActionSheetHeaderPressableText, obj);
   }
   obj[2] = tmp14Result;
   tmp14Result = tmp2;
   if (tmp2) {
     obj = { onPress: null };
     obj[0] = NOOP;
-    tmp14Result = tmp14(tmp15(5999).ActionSheetCloseButton, obj);
+    tmp14Result = tmp14(tmp15(7199).ActionSheetCloseButton, obj);
   }
   obj1 = { header: closure_7(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), children: null };
   obj[3] = tmp14Result;

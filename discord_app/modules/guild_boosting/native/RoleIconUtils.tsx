@@ -83,7 +83,7 @@ export const getRoleIcon = function getRoleIcon(roleId) {
       if (null != role) {
         let obj = getRoleIconData;
         if (obj.canGuildUseRoleIcons(guild, role)) {
-          let roleIconData = tmp4(5987).getRoleIconData(role);
+          let roleIconData = tmp4(7187).getRoleIconData(role);
           if (roleIconData == null) {
             roleIconData = {};
           }
@@ -103,10 +103,10 @@ export const getRoleIcon = function getRoleIcon(roleId) {
             surrogates1 = unicodeEmoji.surrogates;
           }
           obj[3] = surrogates1;
-          const intl = tmp4(1233).intl;
+          const intl = tmp4(1114).intl;
           obj = { name: null };
           obj[0] = role.name;
-          obj[4] = intl.formatToPlainString(tmp4(1233).t["9+YWrE"], obj);
+          obj[4] = intl.formatToPlainString(tmp4(1114).t["9+YWrE"], obj);
           return obj;
         }
       }

@@ -12,14 +12,14 @@ function ContextMenuDivider() {
 }
 function ContextMenuBackdrop(onDismiss) {
   const visible = onDismiss.visible;
-  let obj = visible(4217);
+  let obj = visible(4296);
   const fn = function n() {
     const obj = { opacity: null };
     const value = visible.get();
     obj[0] = visible(closure_1_2[12]).withSpring(value, visible(closure_1_2[6]).CONTEXT_MENU_SPRING);
     return obj;
   };
-  obj = { withSpring: visible(4928).withSpring, visible, CONTEXT_MENU_SPRING: visible(8813).CONTEXT_MENU_SPRING };
+  obj = { withSpring: visible(4974).withSpring, visible, CONTEXT_MENU_SPRING: visible(8668).CONTEXT_MENU_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 6862317967896;
   fn.__initData = closure_16;
@@ -33,17 +33,17 @@ function ContextMenuBackdrop(onDismiss) {
   };
   const tmp = callback3();
   const tmp3 = closure_6;
-  const obj4 = visible(1234);
-  const intl = visible(1233).intl;
+  const obj4 = visible(1115);
+  const intl = visible(1114).intl;
   const string = intl.string;
-  const t = visible(1233).t;
+  const t = visible(1114).t;
   if (isAndroidResult) {
     let stringResult = string(t.hPBScv);
   } else {
     stringResult = string(t.xs0juG);
   }
   obj[4] = stringResult;
-  return tmp3(visible(4917).Backdrop, obj);
+  return tmp3(visible(4963).Backdrop, obj);
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);

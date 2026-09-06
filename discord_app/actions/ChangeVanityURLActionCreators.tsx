@@ -1,8 +1,8 @@
 // discord_app/actions/ChangeVanityURLActionCreators.tsx
 import set from "../../_runtime/00002_set.js";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import ME from "../Constants.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("actions/ChangeVanityURLActionCreators.tsx");
@@ -37,7 +37,7 @@ export default {
     const self = this;
     let obj = dispatcherDefault;
     obj.dispatch({ type: "CHANGE_VANITY_URL_MODAL_SUBMIT" });
-    const HTTP = self(527).HTTP;
+    const HTTP = self(1272).HTTP;
     obj = { url: Endpoints.GUILD_VANITY_URL(id), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { code: vanityURLCode };
     return HTTP.patch(obj).then(
@@ -63,10 +63,10 @@ export default {
     return HTTP.patch(obj).then(
       (body) => {
         ({ code, uses } = body.body);
-        callback(706).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
+        callback(573).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
       },
       (body) => {
-        let obj = callback(706);
+        let obj = callback(573);
         obj = { type: "CHANGE_VANITY_URL_MODAL_SUBMIT_FAILURE", error: body.body, hasError: true };
         obj.dispatch(obj);
         return body;

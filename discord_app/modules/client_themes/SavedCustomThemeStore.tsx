@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1205 from "../../utils/SentryUtils.native.tsx";
+import _modDef1232 from "../../utils/SentryUtils.native.tsx";
 import SystemThemeState from "../user_settings/ThemeConstants.tsx";
 
 function validateSavedTheme(colors) {
@@ -19,7 +19,7 @@ function validateSavedTheme(colors) {
     }
     return tmp5;
   } catch (tmp8) {
-    obj = _modDef1205;
+    obj = _modDef1232;
     obj = { tags: null };
     obj[0] = { app_context: "SavedCustomThemeStore" };
     obj.captureMessage("Invalid saved custom theme: " + tmp8, obj);
@@ -107,7 +107,7 @@ obj = {
   },
   SAVED_CUSTOM_THEMES_FETCH_FAILURE: function handleCustomThemesFetchFailure(error) {
     const ERROR = obj.ERROR;
-    obj = _modDef1205;
+    obj = _modDef1232;
     obj.captureException(error.error, { tags: { app_context: "SavedCustomThemeStore" } });
   },
 };

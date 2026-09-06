@@ -52,28 +52,28 @@ function File(upload) {
   };
   obj = { style: callback2().defaultAttachmentIconWrapper, children: null };
   const tmp = callback2();
-  obj[1] = callback(upload(10305).AttachmentIcon, { fileName: upload.filename });
+  obj[1] = callback(upload(10196).AttachmentIcon, { fileName: upload.filename });
   obj[5] = callback(View, obj);
-  obj[0] = callback(handleRemoveFile(10305), obj);
+  obj[0] = callback(handleRemoveFile(10196), obj);
   let filename = upload.filename;
   if (filename == null) {
-    const intl = tmp3(1233).intl;
-    filename = intl.string(tmp3(1233).t.ZMirp0);
+    const intl = tmp3(1114).intl;
+    filename = intl.string(tmp3(1114).t.ZMirp0);
   }
   obj[1] = filename;
   const obj2 = {
     variant: "tertiary",
     size: "sm",
-    icon: callback(upload(5560).XSmallIcon, { size: "sm" }),
+    icon: callback(upload(5680).XSmallIcon, { size: "sm" }),
     onPress() {
       return handleRemoveFile(upload.id);
     },
     accessibilityLabel: null,
   };
-  const intl2 = tmp3(1233).intl;
-  obj2[4] = intl2.string(upload(1233).t.N86XcP);
-  obj[2] = callback(upload(8018).IconButton, obj2);
-  return callback(upload(5608).TableRow, obj);
+  const intl2 = tmp3(1114).intl;
+  obj2[4] = intl2.string(upload(1114).t.N86XcP);
+  obj[2] = callback(upload(8097).IconButton, obj2);
+  return callback(upload(5605).TableRow, obj);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
@@ -270,7 +270,7 @@ export default function FileUploadActionComponent(maxValues) {
               let tmp29 = closure_4;
               let tmp30 = closure_1_5;
               let tmp31 = lib;
-              if (!closure_1_5(lib.map((result1) => callback(5091).getFileFromUploadItem(result1).filename))) {
+              if (!closure_1_5(lib.map((result1) => callback(5138).getFileFromUploadItem(result1).filename))) {
                 let tmp32 = closure_4;
                 let tmp33 = v0;
                 let num6 = 3;
@@ -284,7 +284,7 @@ export default function FileUploadActionComponent(maxValues) {
             let tmp35 = closure_4;
             let tmp36 = lib;
             closure_3 = lib.map((arg0) => {
-              let obj = callback(4740);
+              let obj = callback(4785);
               const componentUploadId = obj.makeComponentUploadId(dependencyMap);
               obj = {
                 channelId: callback2,
@@ -298,7 +298,7 @@ export default function FileUploadActionComponent(maxValues) {
               obj.id = componentUploadId;
               obj[2] = obj;
               obj[3] = InteractionModal.InteractionModal;
-              callback2(8175).setFile(obj);
+              callback2(9307).setFile(obj);
               return componentUploadId;
             });
             let tmp37 = closure_1_10;
@@ -368,7 +368,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10654).hideMediaKeyboardActionSheet();
+        return InteractionModal(10636).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveKestrelLimit,
       onSelectFiles(arg0) {
@@ -436,8 +436,8 @@ export default function FileUploadActionComponent(maxValues) {
         obj.handleViewAllDialog(obj);
       };
       obj[10] = function onManageLimited() {
-        obj = InteractionModal(10653);
-        obj = { onDismissKeyboard: InteractionModal(10654).hideMediaKeyboardActionSheet, onRestoreKeyboard: closure_8 };
+        obj = InteractionModal(10635);
+        obj = { onDismissKeyboard: InteractionModal(10636).hideMediaKeyboardActionSheet, onRestoreKeyboard: closure_8 };
         const result = obj.handleLimitedPickerDialog(obj);
       };
       obj[11] = tmp4(tmp5[29]).hideMediaKeyboardActionSheet;

@@ -1,9 +1,9 @@
 // discord_app/modules/badges/BadgeDirectoryStore.tsx
-import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01400_priv.js";
+import setDefault from "../../utils/Durations.tsx";
+import privDefault from "../../../_runtime/01437_priv.js";
 import urlUserId from "BadgeDirectoryActionCreators.tsx";
 import closure_3 from "../../stores/UserStore.tsx";
 

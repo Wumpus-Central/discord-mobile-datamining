@@ -23,7 +23,7 @@ prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
   if (null != channel.guild_id) {
     allThreadsForParent = store.getAllThreadsForParent(channel.id);
     if (allThreadsForParent.length > 0) {
-      const Emitter = allThreadsForParent(586).Emitter;
+      const Emitter = allThreadsForParent(504).Emitter;
       Emitter.batched(() => {
         for (const item10005 of allThreadsForParent) {
           let tmp = allThreadsForParent;
@@ -75,7 +75,7 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
   if (!guild.unavailable) {
     allThreadsForGuild = store.getAllThreadsForGuild(guild.id);
     if (0 !== allThreadsForGuild.length) {
-      const Emitter = allThreadsForGuild(586).Emitter;
+      const Emitter = allThreadsForGuild(504).Emitter;
       Emitter.batched(() => {
         for (const item10005 of allThreadsForGuild) {
           let tmp = allThreadsForGuild;

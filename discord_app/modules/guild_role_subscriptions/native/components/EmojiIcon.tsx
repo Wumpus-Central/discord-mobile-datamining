@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
-import registerAssetDefault from "../../../../../_runtime/09157_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10302_registerAsset.js";
 import useEmojiByIdOrName from "../../useEmojiByIdOrName.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -69,8 +69,8 @@ export default function EmojiIcon(size) {
       const obj4 = { id: null, animated: null, size: null };
       ({ id: obj4[0], animated: obj4[1] } = emojiByIdOrName);
       obj4[2] = num;
-      let url = tmp9(1430).getEmojiURL(obj4);
-      const tmp9Result = tmp9(1430);
+      let url = tmp9(1396).getEmojiURL(obj4);
+      const tmp9Result = tmp9(1396);
     } else {
       url = emojiByIdOrName.url;
     }

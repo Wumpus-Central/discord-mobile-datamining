@@ -2,10 +2,10 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../tokens/native/useToken.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
-import _modDef4217 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import MINIMUM_HIT_AREA2 from "ButtonConstants.native.tsx";
 import styleProperties from "ButtonHooks.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -42,7 +42,7 @@ function PillWrapper(expressivePressState) {
   if (shiny) {
     obj = { variant: null };
     obj[0] = variant;
-    tmp7 = callback2(tmp(4940).ButtonShine, obj);
+    tmp7 = callback2(tmp(4986).ButtonShine, obj);
   }
   if ("experimental_premium-primary" !== variant) {
     if ("experimental_premium-basic" !== variant) {
@@ -63,10 +63,10 @@ function PillWrapper(expressivePressState) {
         obj2[1] = tmp5.expressivePill.borderRadius;
         const merged = Object.assign(expressivePressState);
         obj1[4] = obj2;
-        obj[1] = callback2(tmp(4204).ExpressiveButtonRive, obj1);
+        obj[1] = callback2(tmp(4271).ExpressiveButtonRive, obj1);
         tmp11Result = tmp11(closure_5, obj);
         const tmp12 = closure_5;
-        tmpResult = tmp(1362);
+        tmpResult = tmp(4411);
       }
       obj3 = { children: null };
       const items3 = [tmp11Result];
@@ -75,7 +75,7 @@ function PillWrapper(expressivePressState) {
       obj4[0] = items4;
       const items5 = [children, tmp7];
       obj4[1] = items5;
-      items3[1] = tmp9(tmp6(4217).View, obj4);
+      items3[1] = tmp9(tmp6(4296).View, obj4);
       obj3[0] = items3;
     }
     return tmp9(tmp10, obj3);
@@ -90,7 +90,7 @@ function PillWrapper(expressivePressState) {
   const items7 = [callback2(LinearGradientDefault, obj5)];
   const items8 = [style, buttonPillStyles];
   const items9 = [children, tmp7];
-  items7[1] = closure_8(_modDef4217.View, { style: items8, children: items9 });
+  items7[1] = closure_8(_modDef4296.View, { style: items8, children: items9 });
   obj6[0] = items7;
   obj3 = obj6;
 }

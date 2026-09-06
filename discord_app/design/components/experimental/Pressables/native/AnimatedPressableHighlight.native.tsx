@@ -16,8 +16,8 @@ export const AnimatedPressableHighlight = set.isAndroid()
   ? function AnimatedPressableHighlightAndroid(children) {
       const merged = Object.assign(children, Object.create(null));
       let token;
-      let obj = merged(4197);
-      token = obj.useToken(token(709).colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
+      let obj = merged(4262);
+      token = obj.useToken(token(576).colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
       const items = [token];
       let androidRippleConfig = merged.androidRippleConfig;
       let cornerRadius;

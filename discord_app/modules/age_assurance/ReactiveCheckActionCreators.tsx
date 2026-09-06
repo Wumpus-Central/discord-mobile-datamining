@@ -120,7 +120,7 @@ function _resetAgeVerification() {
             return obj;
           } else {
             closure_0 = tmp2;
-            const HTTP = closure_1_0(527).HTTP;
+            const HTTP = closure_1_0(1272).HTTP;
             obj1 = { url: null, rejectWithError: true };
             obj1[0] = closure_1_4.AGE_VERIFICATION_RESET;
             v0 = 1;
@@ -138,7 +138,7 @@ function _resetAgeVerification() {
           obj3[0] = arg1;
           return obj3;
         } else {
-          obj = v0(706);
+          obj = v0(573);
           obj.dispatch({ type: "AGE_VERIFICATION_RESET" });
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };

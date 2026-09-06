@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_reports/ReportUtils.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
 import ReportNames from "MenuTypes.tsx";
 import set from "../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx";
@@ -361,16 +361,16 @@ function genSubmitData(version, name, arr, email_token) {
     str = "en";
   }
   obj = {
-    channel_id: "Array",
-    message_id: "w",
-    stage_instance_id: "jsx",
-    guild_id: "join",
-    guild_scheduled_event_id: "join",
-    user_id: "join",
-    email_token: "join",
-    application_id: "join",
-    entrypoint: "next",
-    widget_id: "accessibilityLabel",
+    channel_id: "create",
+    message_id: "call",
+    stage_instance_id: "call",
+    guild_id: "withTiming",
+    guild_scheduled_event_id: "getChannel",
+    user_id: "channelId",
+    email_token: "string",
+    application_id: "isArray",
+    entrypoint: "fill",
+    widget_id: "fill",
   };
   obj[2] = str;
   obj[3] = arr.map((nodeRef) => nodeRef.nodeRef);
@@ -402,10 +402,10 @@ function genSubmitData(version, name, arr, email_token) {
     return obj;
   }, {});
   if (name.name !== ReportNames.ReportNames.MESSAGE) {
-    if (name.name !== tmp(8776).ReportNames.FIRST_DM) {
-      if (name.name !== tmp(8776).ReportNames.GUILD) {
-        if (name.name !== tmp(8776).ReportNames.GUILD_DISCOVERY) {
-          if (name.name === tmp(8776).ReportNames.GUILD_DIRECTORY_ENTRY) {
+    if (name.name !== tmp(8630).ReportNames.FIRST_DM) {
+      if (name.name !== tmp(8630).ReportNames.GUILD) {
+        if (name.name !== tmp(8630).ReportNames.GUILD_DISCOVERY) {
+          if (name.name === tmp(8630).ReportNames.GUILD_DIRECTORY_ENTRY) {
             obj = {};
             ({ guildId, channelId } = name.record);
             let merged = Object.assign(obj);
@@ -414,7 +414,7 @@ function genSubmitData(version, name, arr, email_token) {
             obj.channel_id = channelId;
             obj.guild_id = guildId;
             return obj;
-          } else if (name.name === tmp(8776).ReportNames.STAGE_CHANNEL) {
+          } else if (name.name === tmp(8630).ReportNames.STAGE_CHANNEL) {
             obj1 = {};
             ({ id: id2, guild_id: guild_id2, channel_id } = name.record);
             let merged2 = Object.assign(obj);
@@ -424,7 +424,7 @@ function genSubmitData(version, name, arr, email_token) {
             obj1.guild_id = guild_id2;
             obj1.stage_instance_id = id2;
             return obj1;
-          } else if (name.name === tmp(8776).ReportNames.GUILD_SCHEDULED_EVENT) {
+          } else if (name.name === tmp(8630).ReportNames.GUILD_SCHEDULED_EVENT) {
             const obj2 = {};
             ({ id, guild_id } = name.record);
             const merged4 = Object.assign(obj);
@@ -434,7 +434,7 @@ function genSubmitData(version, name, arr, email_token) {
             obj2.guild_scheduled_event_id = id;
             return obj2;
           } else {
-            if (name.name === tmp(8776).ReportNames.USER) {
+            if (name.name === tmp(8630).ReportNames.USER) {
               const obj3 = {};
               const merged6 = Object.assign(obj);
               const merged7 = Object.assign(obj);
@@ -442,7 +442,7 @@ function genSubmitData(version, name, arr, email_token) {
               obj3.user_id = name.record.id;
               obj3.guild_id = name.contextualGuildId;
               let tmp3 = obj3;
-            } else if (name.name === tmp(8776).UnauthenticatedReportNames.USER) {
+            } else if (name.name === tmp(8630).UnauthenticatedReportNames.USER) {
               const obj4 = {};
               const merged8 = Object.assign(obj);
               const merged9 = Object.assign(obj);
@@ -451,7 +451,7 @@ function genSubmitData(version, name, arr, email_token) {
               obj4.guild_id = name.contextualGuildId;
               obj4.email_token = email_token;
               tmp3 = obj4;
-            } else if (name.name === tmp(8776).UnauthenticatedReportNames.MESSAGE) {
+            } else if (name.name === tmp(8630).UnauthenticatedReportNames.MESSAGE) {
               const obj5 = {};
               const merged10 = Object.assign(obj);
               const merged11 = Object.assign(obj);
@@ -459,7 +459,7 @@ function genSubmitData(version, name, arr, email_token) {
               obj5.message_id = name.record.id;
               obj5.email_token = email_token;
               tmp3 = obj5;
-            } else if (name.name === tmp(8776).UnauthenticatedReportNames.GUILD) {
+            } else if (name.name === tmp(8630).UnauthenticatedReportNames.GUILD) {
               const obj6 = {};
               const merged12 = Object.assign(obj);
               const merged13 = Object.assign(obj);
@@ -467,7 +467,7 @@ function genSubmitData(version, name, arr, email_token) {
               obj6.guild_id = name.record.id;
               obj6.email_token = email_token;
               tmp3 = obj6;
-            } else if (name.name === tmp(8776).ReportNames.APPLICATION) {
+            } else if (name.name === tmp(8630).ReportNames.APPLICATION) {
               const obj7 = {};
               const merged14 = Object.assign(obj);
               const merged15 = Object.assign(obj);
@@ -479,7 +479,7 @@ function genSubmitData(version, name, arr, email_token) {
                 entrypoint: obj5.entrypoint,
               } = name);
               tmp3 = obj7;
-            } else if (name.name === tmp(8776).ReportNames.WIDGET) {
+            } else if (name.name === tmp(8630).ReportNames.WIDGET) {
               const obj8 = {};
               const merged16 = Object.assign(obj);
               const merged17 = Object.assign(obj);
@@ -487,7 +487,7 @@ function genSubmitData(version, name, arr, email_token) {
               tmp3 = obj8;
             } else {
               tmp3 = null;
-              if (name.name === tmp(8776).UnauthenticatedReportNames.MEDIA_TAKEDOWN) {
+              if (name.name === tmp(8630).UnauthenticatedReportNames.MEDIA_TAKEDOWN) {
                 const obj9 = {};
                 const merged18 = Object.assign(obj);
                 const merged19 = Object.assign(obj);
@@ -555,7 +555,7 @@ export const submitReport = function submitReport(language, name, arr) {
   if (store.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = obj1(8778).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj1(8632).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       let obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -593,8 +593,8 @@ export const submitReport = function submitReport(language, name, arr) {
         return obj;
       }, {});
       let tmp15 = null;
-      if (name.name === tmp4(8776).ModeratorReportNames.MESSAGE) {
-        obj = { channel_id: "Array", message_id: "HermesInternal", guild_id: "r" };
+      if (name.name === tmp4(8630).ModeratorReportNames.MESSAGE) {
+        obj = { channel_id: "Array", message_id: "call", guild_id: "o" };
         obj1 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -605,12 +605,12 @@ export const submitReport = function submitReport(language, name, arr) {
         tmp15 = obj1;
       }
       obj1 = tmp15;
-      const HTTP2 = tmp4(527).HTTP;
-      const REPORT_TO_MOD2 = tmp4(8778).ReportMenuTypeSets.REPORT_TO_MOD;
+      const HTTP2 = tmp4(1272).HTTP;
+      const REPORT_TO_MOD2 = tmp4(8632).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
       _modDef38(hasItem, "Invalid report type " + name.name);
-      if (name.name === tmp4(8776).ModeratorReportNames.MESSAGE) {
+      if (name.name === tmp4(8630).ModeratorReportNames.MESSAGE) {
         const obj2 = { url: null, body: null, rejectWithError: false };
         obj2[0] = closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id);
         obj2[1] = tmp15;
@@ -646,11 +646,11 @@ export const submitReport = function submitReport(language, name, arr) {
       }
       const tmp23 = _modDef38;
     } else {
-      const HTTP = tmp4(527).HTTP;
+      const HTTP = tmp4(1272).HTTP;
       obj = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;
-      const values = Object.values(tmp4(8776).ReportNames);
+      const values = Object.values(tmp4(8630).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
       _modDef38(hasItem1, "Invalid report type " + name.name);
@@ -788,22 +788,22 @@ export const trackCloseReportModalAnalytics = function trackCloseReportModalAnal
   }
   obj[5] = id1;
   if (_onSubmit.name !== ReportNames.ReportNames.GUILD) {
-    if (_onSubmit.name !== tmp2(8776).ReportNames.GUILD_DISCOVERY) {
-      if (_onSubmit.name === tmp2(8776).ReportNames.GUILD_DIRECTORY_ENTRY) {
+    if (_onSubmit.name !== tmp2(8630).ReportNames.GUILD_DISCOVERY) {
+      if (_onSubmit.name === tmp2(8630).ReportNames.GUILD_DIRECTORY_ENTRY) {
         let id2 = _onSubmit.record.guildId;
-      } else if (_onSubmit.name === tmp2(8776).ReportNames.GUILD_SCHEDULED_EVENT) {
+      } else if (_onSubmit.name === tmp2(8630).ReportNames.GUILD_SCHEDULED_EVENT) {
         id2 = _onSubmit.record.guild_id;
       }
     }
     obj[6] = id2;
-    if (_onSubmit.name === tmp2(8776).ReportNames.GUILD_SCHEDULED_EVENT) {
+    if (_onSubmit.name === tmp2(8630).ReportNames.GUILD_SCHEDULED_EVENT) {
       let channelId = _onSubmit.record.channel_id;
-    } else if (_onSubmit.name === tmp2(8776).ReportNames.GUILD_DIRECTORY_ENTRY) {
+    } else if (_onSubmit.name === tmp2(8630).ReportNames.GUILD_DIRECTORY_ENTRY) {
       channelId = _onSubmit.record.channelId;
     }
     obj[7] = channelId;
     id2 = undefined;
-    if (_onSubmit.name === tmp2(8776).ReportNames.APPLICATION) {
+    if (_onSubmit.name === tmp2(8630).ReportNames.APPLICATION) {
       id2 = _onSubmit.record.id;
     }
     obj[8] = id2;

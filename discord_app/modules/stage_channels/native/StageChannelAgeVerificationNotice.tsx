@@ -17,11 +17,11 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
   closure_1 = undefined;
   closure_1 = callback2();
-  let obj = onConfirmPress(4734);
+  let obj = onConfirmPress(4773);
   const isVerifiedTeen = obj.useIsVerifiedTeen();
-  const intl = onConfirmPress(1233).intl;
+  const intl = onConfirmPress(1114).intl;
   const format = intl.format;
-  const t = onConfirmPress(1233).t;
+  const t = onConfirmPress(1114).t;
   if (isVerifiedTeen) {
     obj = { hook: null };
     obj[0] = function hook(children) {

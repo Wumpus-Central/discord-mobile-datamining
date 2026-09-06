@@ -11,6 +11,7 @@ const require = arg1;
   CLIPS_MAX_TIMELINE_EVENTS: c5,
   ClipSignalTypes: closure_6,
   GameEventType: error,
+  CLIP_RUNTIME: closure_8,
 } = result);
 let obj = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
 result = require("set").fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");

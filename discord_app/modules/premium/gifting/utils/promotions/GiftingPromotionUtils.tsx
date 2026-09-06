@@ -14,11 +14,11 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
   const first = tmp[0];
   dependencyMap = tmp[1];
   let items = [hasPreviouslyFetched];
-  stateFromStoresArray = first(586).useStateFromStoresArray(items, () =>
+  stateFromStoresArray = first(504).useStateFromStoresArray(items, () =>
     hasPreviouslyFetched.getGiftPromotionRewardSkuIds(),
   );
-  const obj = first(586);
-  const fetchPurchases = first(8095).useFetchPurchases();
+  const obj = first(504);
+  const fetchPurchases = first(10734).useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   const fetchPurchasesError = fetchPurchases.fetchPurchasesError;
@@ -41,11 +41,11 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
     }
   }, items1);
   const someResult = stateFromStoresArray.some(
-    (arg0) => arg0 === first(10736).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID,
+    (arg0) => arg0 === first(10738).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID,
   );
   closure_7 = someResult;
-  const obj3 = first(8095);
-  const fetchSummer2026GogoPromoEligibility = first(10737).useFetchSummer2026GogoPromoEligibility(someResult);
+  const obj3 = first(10734);
+  const fetchSummer2026GogoPromoEligibility = first(10739).useFetchSummer2026GogoPromoEligibility(someResult);
   const isEligible = fetchSummer2026GogoPromoEligibility.isEligible;
   const hasFetched = fetchSummer2026GogoPromoEligibility.hasFetched;
   const items2 = [first, isEligible, hasFetched, someResult];
@@ -203,7 +203,7 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
     if (
       null ==
-      marketingComponentByType.getMarketingComponentByType(tmp(10740).MarketingComponentType.GIFT_REMINDER_NAGBAR)
+      marketingComponentByType.getMarketingComponentByType(tmp(10742).MarketingComponentType.GIFT_REMINDER_NAGBAR)
     ) {
       return false;
     } else {
@@ -214,15 +214,15 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
       }
       let tmp5 = null != id;
       if (tmp5) {
-        let tmpResult = tmp(4298);
+        let tmpResult = tmp(4380);
         let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
-          tmp(1372).DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK,
+          tmp(1943).DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK,
           id,
         ).isDismissed;
         if (isDismissed) {
-          tmpResult = tmp(4298);
+          tmpResult = tmp(4380);
           isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
-            tmp(1372).DismissibleContent.GIFTING_PROMOTION_REMINDER,
+            tmp(1943).DismissibleContent.GIFTING_PROMOTION_REMINDER,
             id,
           ).isDismissed;
         }

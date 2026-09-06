@@ -16,11 +16,11 @@ export default function newIntlMessagesProvider() {
     closure_2.keysRequest((arr) => {
       closure_1_2.valuesResult(
         arr.map((code) => {
-          const result = callback(1273).runtimeHashMessageKey(code);
-          const tmp4 = callback(1233).t[result];
+          const result = callback(1155).runtimeHashMessageKey(code);
+          const tmp4 = callback(1114).t[result];
           let str = "";
           if (null != tmp4) {
-            const intl = callback(1233).intl;
+            const intl = callback(1114).intl;
             str = intl.reserialize(tmp4);
           }
           return str;

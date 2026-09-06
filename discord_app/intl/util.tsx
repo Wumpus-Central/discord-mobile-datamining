@@ -1,13 +1,13 @@
 // discord_app/intl/util.tsx
 import closure_2 from "../../_runtime/00019_noop.js";
-import { items } from "../../_runtime/01295_items.js";
+import { items } from "../../_runtime/01177_items.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
   _require = require("messages/en-US.messages.js").default;
-  const found = require("../../_runtime/01295_items.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/01177_items.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };
@@ -33,7 +33,7 @@ export const getLanguages = function getLanguages() {
   return items;
 };
 export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
-  const found = parts(1295).filter((enabled) => enabled.enabled);
+  const found = parts(1177).filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(str)) {
     return str;
@@ -61,7 +61,7 @@ export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
     }
     return found2;
   }
-  const arr = parts(1295);
+  const arr = parts(1177);
 };
 export const useSyncMessages = function useSyncMessages(arg0, arg1) {
   closure_0 = arg0;

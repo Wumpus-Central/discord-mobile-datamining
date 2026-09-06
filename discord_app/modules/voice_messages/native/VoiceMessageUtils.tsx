@@ -1,8 +1,8 @@
 // discord_app/modules/voice_messages/native/VoiceMessageUtils.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import byteLengthDefault from "../../../../_runtime/00206_byteLength.js";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import set from "../../../utils/PlatformUtils.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import HapticFeedbackTypes2 from "../../haptics/HapticUtils.native.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
 import downsampleWaveformDefault from "../downsampleWaveform.tsx";

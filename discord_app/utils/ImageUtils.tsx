@@ -1,6 +1,6 @@
 // discord_app/utils/ImageUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import PQueueDefault from "../../_runtime/01490_PQueue.js";
+import PQueueDefault from "../../_runtime/01475_PQueue.js";
 import getSrcWithWidthAndHeight from "native/ImageUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import importDefaultResult from "../../_runtime/00012_apply.js";

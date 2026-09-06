@@ -31,9 +31,9 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     id: "sa",
     mode: "isArray",
     width: false,
-    height: "IMPERSONATE_STOP",
-    containerHeight: null,
-    showSecondaryPIP: "flex",
+    height: "comp_0",
+    containerHeight: "DIS_Nitro_Gifcard_004",
+    showSecondaryPIP: 24,
   });
   const tmp2 = first(React.useState(undefined), 2);
   first = tmp2[0];
@@ -45,11 +45,11 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   obj = channelId;
   ref = mode;
   dependencyMap = undefined;
-  const tmp7 = ref(16873)(channelId);
+  const tmp7 = ref(17037)(channelId);
   dependencyMap = tmp7;
   let items = [closure_5, c7, closure_8];
   const items1 = [channelId, tmp7, mode];
-  const stateFromStores = obj(586).useStateFromStores(
+  const stateFromStores = obj(504).useStateFromStores(
     items,
     () => {
       const channel = closure_1_8.getChannel(obj);
@@ -99,14 +99,14 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     },
     items1,
   );
-  let tmp10 = ref(16921)(channelId);
+  let tmp10 = ref(17085)(channelId);
   first1 = first(
     React.useState(() => ref(closure_2[16])((arg0) => arg0(), 1000, { leading: true })),
     1,
   )[0];
   const items2 = [first1];
   const layoutEffect = React.useLayoutEffect(() => () => closure_6.cancel(), items2);
-  const obj2 = obj(586);
+  const obj2 = obj(504);
   let tmp5 = ref;
   [tmp14, c7] = first(
     React.useState(() => closure_2.getTargetDimensions(ref)),
@@ -124,7 +124,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     React.useState(() => closure_2.getTargetDimensions(ref)),
     2,
   );
-  ({ participant, dimensions } = ref(16922)(channelId, layoutManager, focusedId, first, obj));
+  ({ participant, dimensions } = ref(17086)(channelId, layoutManager, focusedId, first, obj));
   obj = {};
   const merged = Object.assign(ref.current);
   const merged1 = Object.assign(dimensions);
@@ -134,10 +134,10 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   obj.id = id;
   obj.showSecondaryPIP = stateFromStores;
-  let tmp8Result = tmp8(16923);
+  let tmp8Result = tmp8(17087);
   obj.mode = tmp8Result.getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
   dependencyMap = undefined;
-  tmp8Result = tmp8(9227);
+  tmp8Result = tmp8(9495);
   let result = tmp8Result.cheapWorkletShallowEqual(obj, ref.current);
   dependencyMap = !result;
   const effect = obj.useEffect(() => {
@@ -202,6 +202,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items4);
-  tmp5(16925)(channelId, layoutManager, focusedId);
+  tmp5(17089)(channelId, layoutManager, focusedId);
   return obj;
 };

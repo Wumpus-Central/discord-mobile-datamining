@@ -1,7 +1,7 @@
 // discord_app/modules/share/native/ShareFooterLayout.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../reanimated/ReanimatedRexport.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -99,5 +99,5 @@ export default function ShareFooterLayout(arg0) {
   obj3[1] = items4;
   items2[1] = closure_6(View, obj3);
   obj[1] = items2;
-  return closure_6(_modDef4217.View, obj);
+  return closure_6(_modDef4296.View, obj);
 }

@@ -25,7 +25,7 @@ export default function TermsField(field) {
     flag = false;
   }
   obj = { start: true, end: true, checked: flag, label: null, onPress: null };
-  const intl = tmp5(1233).intl;
+  const intl = tmp5(1114).intl;
   obj[3] = intl.string(getSystemLocale.t["2EXfGJ"]);
   obj[4] = onChange;
   items[1] = callback(TableCheckboxRow.TableCheckboxRow, obj);

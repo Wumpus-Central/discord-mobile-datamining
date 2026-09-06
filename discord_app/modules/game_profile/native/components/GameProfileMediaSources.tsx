@@ -32,7 +32,7 @@ export const buildMediaEntries = function buildMediaEntries(game) {
       trailers.map((application_id) => {
         const obj = {
           type: "trailer",
-          originalUrl: callback(4756).getAssetURL(
+          originalUrl: callback(4802).getAssetURL(
             application_id.application_id,
             application_id.id,
             styles.width,
@@ -40,8 +40,8 @@ export const buildMediaEntries = function buildMediaEntries(game) {
           ),
           previewUrl: null,
         };
-        const obj2 = callback(4756);
-        obj[2] = callback(4756).getAssetURL(application_id.application_id, application_id.id, closure_2, "webp");
+        const obj2 = callback(4802);
+        obj[2] = callback(4802).getAssetURL(application_id.application_id, application_id.id, closure_2, "webp");
         return obj;
       }),
       0,
@@ -54,7 +54,7 @@ export const buildMediaEntries = function buildMediaEntries(game) {
       screenshotUrls.map((originalUrl) => {
         let obj = { type: "image", originalUrl, previewUrl: null };
         obj = { size: closure_2, keepAspectRatio: true };
-        obj[2] = callback(4512).getSizedImageAssetURL(originalUrl, obj);
+        obj[2] = callback(1929).getSizedImageAssetURL(originalUrl, obj);
         return obj;
       }),
       arraySpreadResult,

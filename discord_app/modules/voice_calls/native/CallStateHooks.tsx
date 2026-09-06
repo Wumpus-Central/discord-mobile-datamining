@@ -10,7 +10,7 @@ import { initialize } from "../../../../discord_common/js/packages/flux/index.ts
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: error, RTCConnectionStates: closure_8 } = ME);
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "r" });
+const merged = Object.assign({ initialized: false, callId: "PX_16" });
 obj = {
   DISCONNECTED: "disconneted",
   DISCONNECTING: "disconnecting",
@@ -68,7 +68,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(9667)();
+  const tmp3 = id(9215)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
   stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(

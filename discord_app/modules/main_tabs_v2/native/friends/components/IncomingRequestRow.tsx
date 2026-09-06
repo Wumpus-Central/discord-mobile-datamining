@@ -139,9 +139,9 @@ function IncomingGameFriendRequestRow(arg0) {
     acceptRequestAccessibilityLabel: null,
     ignoreRequestAccessibilityLabel: null,
   };
-  const intl = application(1233).intl;
-  obj[2] = intl.formatToPlainString(application(1233).t.u6lp4x, { name: userTag });
-  const intl2 = application(1233).intl;
+  const intl = application(1114).intl;
+  obj[2] = intl.formatToPlainString(application(1114).t.u6lp4x, { name: userTag });
+  const intl2 = application(1114).intl;
   obj = {
     applicationNameHook() {
       return closure_1_8(
@@ -151,13 +151,13 @@ function IncomingGameFriendRequestRow(arg0) {
       );
     },
   };
-  obj[3] = intl2.format(application(1233).t.gRgJGR, obj);
-  const intl3 = application(1233).intl;
-  obj[4] = intl3.formatToPlainString(application(1233).t.Ke6fRJ, { name: userTag, applicationName: application.name });
-  const intl4 = application(1233).intl;
-  obj[5] = intl4.formatToPlainString(application(1233).t.kMUpdH, { name: userTag, applicationName: application.name });
-  const intl5 = application(1233).intl;
-  obj[6] = intl5.formatToPlainString(application(1233).t.d8Cw5e, { name: userTag, applicationName: application.name });
+  obj[3] = intl2.format(application(1114).t.gRgJGR, obj);
+  const intl3 = application(1114).intl;
+  obj[4] = intl3.formatToPlainString(application(1114).t.Ke6fRJ, { name: userTag, applicationName: application.name });
+  const intl4 = application(1114).intl;
+  obj[5] = intl4.formatToPlainString(application(1114).t.kMUpdH, { name: userTag, applicationName: application.name });
+  const intl5 = application(1114).intl;
+  obj[6] = intl5.formatToPlainString(application(1114).t.d8Cw5e, { name: userTag, applicationName: application.name });
   const merged1 = Object.assign(merged);
   return (
     <IncomingRequestRow
@@ -215,7 +215,7 @@ export const ConnectedIncomingGameFriendRequestRow = function ConnectedIncomingG
   applicationId = applicationId.applicationId;
   let tmp = null;
   const merged = Object.assign(applicationId, Object.create(null));
-  let obj = applicationId(644);
+  let obj = applicationId(563);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getApplication(applicationId));
   if (null != stateFromStores) {

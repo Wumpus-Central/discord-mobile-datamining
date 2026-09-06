@@ -58,17 +58,17 @@ function loadThread(channelId) {
         }
         return resolved;
       } else {
-        let tmp13Result = tmp13(4304);
+        let tmp13Result = tmp13(4386);
         const _location = location;
         obj = { path: null, exact: true };
-        const RouteParam = tmp13(4317).RouteParam;
-        const RouteParam2 = tmp13(4317).RouteParam;
+        const RouteParam = tmp13(4399).RouteParam;
+        const RouteParam2 = tmp13(4399).RouteParam;
         obj[0] = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj);
-        const HTTP = tmp13(527).HTTP;
+        const HTTP = tmp13(1272).HTTP;
         obj = { url: null, rejectWithError: null };
         obj[0] = closure_8.CHANNEL(channelId);
-        tmp13Result = tmp13(527);
+        tmp13Result = tmp13(1272);
         obj[1] = tmp13Result.rejectWithMigratedError();
         const value = HTTP.get(obj);
         const guildIdResult = RouteParam.guildId();
@@ -95,7 +95,7 @@ function loadThread(channelId) {
           .catch(() => {
             closure_1_11[closure_0] = { type: "NOT_FOUND" };
             let obj = lib(closure_1_2[6]);
-            obj = { id: closure_0, guild_id: null, parent_id: "accessible" };
+            obj = { id: closure_0, guild_id: null, parent_id: "Array" };
             let guildId;
             if (lib != null) {
               const params = lib.params;
@@ -142,7 +142,7 @@ export default {
         let tmp9 = nextResult;
         let tmp10 = items1;
         let tmp11 = dependencyMap;
-        if (nextResult !== items1(6077).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(7221).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp12 = isStaticChannelRoute;
           let tmp13 = nextResult;
           if (!isStaticChannelRoute(tmp9)) {
@@ -171,14 +171,14 @@ export default {
       if (0 === items1.length) {
         return Promise.all(items).then(() => {});
       } else {
-        const HTTP = items1(527).HTTP;
+        const HTTP = items1(1272).HTTP;
         let obj = { url: null, body: null, rejectWithError: null };
         obj[0] = closure_8.THREADS_BULK;
         obj = { thread_ids: null };
         obj[0] = items1;
         obj[1] = obj;
-        obj[2] = items1(527).rejectWithMigratedError();
-        const obj4 = items1(527);
+        obj[2] = items1(1272).rejectWithMigratedError();
+        const obj4 = items1(1272);
         const postResult = HTTP.post(obj);
         const catchPromise = HTTP.post(obj)
           .then((arg0) => {

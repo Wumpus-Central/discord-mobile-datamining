@@ -1,7 +1,7 @@
 // discord_app/modules/impersonate/ImpersonateActionCreators.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import transitionTo from "../routing/router_utils.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import ImpersonateType from "ImpersonateTypes.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
@@ -40,8 +40,8 @@ function updateImpersonating(closure_0, type) {
       if (!closure_7.can(constants.VIEW_CHANNEL, tmp21)) {
         const defaultChannel = store.getDefaultChannel(closure_0);
         if (null != defaultChannel) {
-          tmp7(1219).transitionTo(closure_12.CHANNEL(closure_0, defaultChannel.id));
-          const tmp7Result = tmp7(1219);
+          tmp7(1100).transitionTo(closure_12.CHANNEL(closure_0, defaultChannel.id));
+          const tmp7Result = tmp7(1100);
         }
       }
     }
@@ -82,7 +82,7 @@ export const updateImpersonatedChannels = function updateImpersonatedChannels(gu
   const set = new Set(optedInChannels.getOptedInChannels(guildId1));
   const item = items1.forEach((arg0) => set.add(arg0));
   const item1 = items2.forEach((arg0) => set.delete(arg0));
-  updateImpersonating(guildId1, { type: set(1989).ImpersonateType.NEW_MEMBER, optInChannels: set });
+  updateImpersonating(guildId1, { type: set(2020).ImpersonateType.NEW_MEMBER, optInChannels: set });
 };
 export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId, c2) {
   (function optIntoPrivateChannelsForGrantedRolesForPreview(guildId, c2) {

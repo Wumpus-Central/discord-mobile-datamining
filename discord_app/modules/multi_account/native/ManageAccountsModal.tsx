@@ -12,7 +12,7 @@ import MAX_ACCOUNTS from "../Constants.tsx";
 import { ManageAccountsScreens } from "ManageAccountsConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../_runtime/07834_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../_runtime/07913_createNativeStackNavigator.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 
@@ -106,17 +106,17 @@ function RemoveMultiAccountUserButton(user) {
     }
     return applyArgumentsResult;
   }
-  let obj = user(586);
+  let obj = user(504);
   const items = [closure_9];
   let stateFromStores = obj.useStateFromStores(items, () => obj.hidePersonalInformation);
   const items1 = [closure_10];
-  const stateFromStores1 = user(586).useStateFromStores(items1, () => currentUser.getCurrentUser());
+  const stateFromStores1 = user(504).useStateFromStores(items1, () => currentUser.getCurrentUser());
   let id;
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
   }
   if (id === user.id) {
-    return callback2(tmp(1296).Spacer, { size: 21 });
+    return callback2(tmp(1178).Spacer, { size: 21 });
   } else {
     const username = user.username;
     importDefault = username;
@@ -128,8 +128,8 @@ function RemoveMultiAccountUserButton(user) {
       importDefault = username + "#" + user.discriminator;
     }
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    let intl = tmp(1233).intl;
-    obj[1] = intl.string(tmp(1233).t.lSLMaU);
+    let intl = tmp(1114).intl;
+    obj[1] = intl.string(tmp(1114).t.lSLMaU);
     obj[2] = function handlePressRemove() {
       const self = this;
       const apply = _handlePressRemove.apply;
@@ -142,10 +142,10 @@ function RemoveMultiAccountUserButton(user) {
     };
     obj = { color: null };
     obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
-    obj[3] = callback2(tmp(15152).CircleMinusIcon, obj);
-    return callback2(tmp(5077).PressableOpacity, obj);
+    obj[3] = callback2(tmp(15312).CircleMinusIcon, obj);
+    return callback2(tmp(5123).PressableOpacity, obj);
   }
-  let obj2 = user(586);
+  let obj2 = user(504);
 }
 function ManageAccounts(isEditing) {
   isEditing = isEditing.isEditing;
@@ -416,19 +416,19 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
       name: ManageAccountsScreens.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED,
       options() {
         const obj = { title: null };
-        const intl = callback(1233).intl;
-        obj[0] = intl.string(callback(1233).t.WbFpq4);
+        const intl = callback(1114).intl;
+        obj[0] = intl.string(callback(1114).t.WbFpq4);
         return obj;
       },
       children() {
-        return callback2(_undefined(15815), {
+        return callback2(_undefined(15977), {
           handleLogin(login, password, undelete) {
-            let obj = callback(6061);
+            let obj = callback(6593);
             obj = { login, password, undelete };
             obj.login(obj);
           },
           onReset(arg0, arg1, arg2) {
-            callback(6061).loginReset(true);
+            callback(6593).loginReset(true);
           },
         });
       },
@@ -439,7 +439,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(7727), { isMultiAccount: true });
+        return callback2(_undefined(6942), { isMultiAccount: true });
       },
     }),
     callback2(closure_20.Screen, {
@@ -448,7 +448,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(15814), { isMultiAccount: true });
+        return callback2(_undefined(15976), { isMultiAccount: true });
       },
     }),
   ];

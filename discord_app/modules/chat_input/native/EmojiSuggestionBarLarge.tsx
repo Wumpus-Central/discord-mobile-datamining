@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/EmojiSuggestionBarLarge.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../reanimated/ReanimatedRexport.tsx";
 import MAX_SUGGESTIONS_LARGE from "EmojiSuggestionBarUtils.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
@@ -31,9 +31,9 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
   if (truncResult > 11) {
     length = sortEmojisForDisplayResult.length;
   }
-  let tmp9Result = tmp9(12226);
+  let tmp9Result = tmp9(12426);
   suggestionBarHeight = tmp9Result.useSuggestionBarHeight(transitionState, cleanUp, 52);
-  tmp9Result = tmp9(4217);
+  tmp9Result = tmp9(4296);
   const fn = function f() {
     return { height: suggestionBarHeight.get() };
   };
@@ -125,7 +125,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
       })}
     </c5>
   );
-  return jsx(_modDef4217.View, {
+  return jsx(_modDef4296.View, {
     style: tmp8.containerLarge,
     onLayout: callback,
     children: Array.from({ length }, (arg0, index) => {

@@ -2,8 +2,8 @@
 import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import items from "../collectibles/CollectiblesShopConstants.tsx";
-import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import GuildFeatures from "../premium/PremiumConstants.tsx";
+import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ContentDismissActionType from "../dismissible_content/DismissibleContentConstants.tsx";
 
@@ -23,29 +23,29 @@ export const dismissOrbsOnboardingExperience = function dismissOrbsOnboardingExp
       DismissibleContent.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL,
     )
   ) {
-    let tmpResult = tmp(4298);
+    let tmpResult = tmp(4380);
     obj = { dismissAction: null, groupName: null };
     obj[0] = constants2.INDIRECT_ACTION;
     obj[1] = constants.VIRTUAL_CURRENCY_ONBOARDING;
     const result = tmpResult.UNSAFE_markDismissibleContentAsDismissed(
-      tmp(1372).DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL,
+      tmp(1943).DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL,
       obj,
     );
-    tmpResult = tmp(4298);
+    tmpResult = tmp(4380);
     obj = { dismissAction: null, groupName: null };
     obj[0] = constants2.INDIRECT_ACTION;
     obj[1] = constants.VIRTUAL_CURRENCY_ONBOARDING;
     const result1 = tmpResult.UNSAFE_markDismissibleContentAsDismissed(
-      tmp(1372).DismissibleContent.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
+      tmp(1943).DismissibleContent.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
       obj,
     );
     obj1 = { dismissAction: null, groupName: null };
     obj1[0] = constants2.INDIRECT_ACTION;
     obj1[1] = constants.VIRTUAL_CURRENCY_ONBOARDING;
-    const result2 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(
-      tmp(1372).DismissibleContent.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK,
+    const result2 = tmp(4380).UNSAFE_markDismissibleContentAsDismissed(
+      tmp(1943).DismissibleContent.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK,
       obj1,
     );
-    const tmpResult1 = tmp(4298);
+    const tmpResult1 = tmp(4380);
   }
 };

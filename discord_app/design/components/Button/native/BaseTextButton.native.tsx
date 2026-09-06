@@ -189,21 +189,21 @@ const bound = Math.max(
   (require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT) / 2,
   0,
 );
-createCacheKey = { top: bound, left: "Array", right: "isArray", bottom: "B_is_defined" };
+createCacheKey = { top: bound, left: "Array", right: "isArray", bottom: -11665405 };
 createCacheKey[3] = bound;
 createCacheKey[0] = createCacheKey;
 const bound1 = Math.max(
   (require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT) / 2,
   0,
 );
-createCacheKey = { top: bound1, left: "Array", right: "isArray", bottom: "B_is_defined" };
+createCacheKey = { top: bound1, left: "Array", right: "isArray", bottom: -11665405 };
 createCacheKey[3] = bound1;
 createCacheKey[1] = createCacheKey;
 const bound2 = Math.max(
   (require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT) / 2,
   0,
 );
-let obj4 = { top: bound2, left: "Array", right: "isArray", bottom: "B_is_defined" };
+let obj4 = { top: bound2, left: "Array", right: "isArray", bottom: -11665405 };
 obj4[3] = bound2;
 createCacheKey[2] = obj4;
 function getTextPlatformLineHeight(arg0, arg1) {}

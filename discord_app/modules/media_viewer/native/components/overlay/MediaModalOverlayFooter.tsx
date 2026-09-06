@@ -9,7 +9,7 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "sa" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "WireType" },
   drawerHeaderTab: null,
   drawerHeader: null,
   messagePreviewContainer: null,

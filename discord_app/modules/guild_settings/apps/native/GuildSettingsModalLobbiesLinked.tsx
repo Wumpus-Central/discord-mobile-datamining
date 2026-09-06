@@ -12,9 +12,9 @@ function SyncingToGamesItem(channels) {
   channels = channels.channels;
   const isOnlySection = channels.isOnlySection;
   dependencyMap = undefined;
-  let obj = channels(1498);
+  let obj = channels(1483);
   dependencyMap = obj.useNavigation();
-  const getOrFetchApplication = channels(5968).useGetOrFetchApplication(channels.applicationId);
+  const getOrFetchApplication = channels(7168).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
     let name;
@@ -26,15 +26,15 @@ function SyncingToGamesItem(channels) {
     obj[2] = channels.map((id) => {
       closure_0 = id;
       let obj = {
-        label: channels(4674).computeChannelName(id, closure_1_4, closure_1_3),
+        label: channels(4713).computeChannelName(id, closure_1_4, closure_1_3),
         icon: null,
         arrow: true,
         onPress: null,
       };
       obj = { IconComponent: null };
-      const obj2 = channels(4674);
-      obj[0] = channels(4982).getChannelIconComponent(id);
-      obj[1] = closure_1_6(channels(5608).TableRow.Icon, obj);
+      const obj2 = channels(4713);
+      obj[0] = channels(5028).getChannelIconComponent(id);
+      obj[1] = closure_1_6(channels(5605).TableRow.Icon, obj);
       obj[3] = function onPress() {
         const obj = { channel: length, numScreensToPop: null };
         let num = 1;
@@ -47,9 +47,9 @@ function SyncingToGamesItem(channels) {
         obj[1] = num;
         closure_1_2.push(closure_2_5.EDIT_LINKED_LOBBY, obj);
       };
-      return closure_1_6(channels(5608).TableRow, obj, id.id);
+      return closure_1_6(channels(5605).TableRow, obj, id.id);
     });
-    tmp5Result = closure_6(channels(6001).TableRowGroup, obj);
+    tmp5Result = closure_6(channels(5687).TableRowGroup, obj);
     const tmp5 = closure_6;
   }
   return tmp5Result;
@@ -65,7 +65,7 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   let keys;
   ({ contentContainerStyle, guildId } = arg0);
   let obj = map;
-  const token = obj.useToken(keys(709).modules.mobile.TABLE_ROW_PADDING);
+  const token = obj.useToken(keys(576).modules.mobile.TABLE_ROW_PADDING);
   obj1 = getChannelsAllowedToUnlink;
   const channelsAllowedToUnlink = obj1.useChannelsAllowedToUnlink(guildId);
   let obj2 = keys(12);
@@ -81,12 +81,12 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   keys = Object.keys(groupByResult);
   obj = { children: null };
   obj = { contentContainerStyle: null, children: null };
-  obj1 = { paddingTop: keys(709).space.PX_16 };
+  obj1 = { paddingTop: keys(576).space.PX_16 };
   const items = [obj1, contentContainerStyle];
   obj[0] = items;
   obj2 = {
     style: { paddingHorizontal: token },
-    spacing: keys(709).space.PX_24,
+    spacing: keys(576).space.PX_24,
     children: keys.map((applicationId) =>
       closure_1_6(
         closure_1_9,

@@ -70,7 +70,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
   }
   let tmp7;
   if (!isNaNResult) {
-    const Storage = tmp(592).Storage;
+    const Storage = tmp(510).Storage;
     const value = Storage.get(storageKey.storageKey);
     dependencyMap = value;
     isNaNResult = null == value;
@@ -81,7 +81,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     isNaNResult = Number.isNaN(tmp7);
   }
   if (!isNaNResult) {
-    const InAppFeedbackStates2 = tmp(4166).InAppFeedbackStates;
+    const InAppFeedbackStates2 = tmp(1935).InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
       obj = {};
       const merged = Object.assign(arg0);

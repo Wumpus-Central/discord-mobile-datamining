@@ -1,6 +1,6 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncError.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4296 from "../../../reanimated/ReanimatedRexport.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
@@ -46,7 +46,7 @@ export default function ContactSyncError(error) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: items, children: jsx(require("../../../../design/components/Text/native/Text.tsx").Text, obj1) };
   items = [tmp.container, error.style, animatedStyle];
-  return jsx(_modDef4217.View, {
+  return jsx(_modDef4296.View, {
     style: items,
     children: jsx(require("../../../../design/components/Text/native/Text.tsx").Text, obj1),
   });

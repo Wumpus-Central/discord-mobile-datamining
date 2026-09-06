@@ -1,10 +1,10 @@
 // discord_app/modules/application_commands/ApplicationCommandIndexStore.tsx
 import timestampDefault from "../debug/Logger.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/05463_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/05517_fuzzysearch.js";
 import showTooManyUserGuildsAlertDefault from "../../actions/GuildActionCreators.tsx";
 import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
 import computePermissions from "CommandPermissionContext.tsx";
@@ -344,7 +344,7 @@ function handleFetchSuccess(arg0, flag) {
           let tmp19 = id;
           let tmp20 = dependencyMap;
           let tmp21 = dependencyMap;
-          obj1 = id(7276);
+          obj1 = id(7521);
           let tmp22 = toApplication;
           let tmp23 = nextResult;
           let tmp24 = obj;
@@ -353,7 +353,7 @@ function handleFetchSuccess(arg0, flag) {
           if (null != tmp6.permissions) {
             let tmp27 = tmp18;
             let tmp28 = tmp20;
-            let tmp19Result = tmp19(7277);
+            let tmp19Result = tmp19(7522);
             let tmp29 = toServerPermissions;
             let tmp30 = nextResult;
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
@@ -381,7 +381,7 @@ function handleFetchSuccess(arg0, flag) {
       const obj5 = showTooManyUserGuildsAlertDefault;
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(7276).buildApplicationCommands(
+    const applicationCommands = id(7521).buildApplicationCommands(
       application_commands.map((description_default) => {
         const obj = {};
         const merged = Object.assign(description_default);
@@ -509,7 +509,7 @@ function useQueryState(type, commandTypes, allowFetch) {
   if ("channel" === type.type) {
     channel = type.channel;
   }
-  const permissionContext = applicationId(8163).usePermissionContext(channel, commandTypes.commandTypes);
+  const permissionContext = applicationId(9295).usePermissionContext(channel, commandTypes.commandTypes);
   dependencyMap = permissionContext;
   let stateFromStores2 = tmp3;
   allowFetch = allowFetch.allowFetch;
@@ -523,9 +523,9 @@ function useQueryState(type, commandTypes, allowFetch) {
   const first = tmp4[0];
   dependencyMap = first;
   stateFromStores2 = tmp4[1];
-  let obj = applicationId(8163);
+  let obj = applicationId(9295);
   const items = [applicationCommandIndexStore];
-  stateFromStoresObject = applicationId(586).useStateFromStoresObject(items, () => {
+  stateFromStoresObject = applicationId(504).useStateFromStoresObject(items, () => {
     if ("channel" === applicationId.type) {
       let contextState = closure_1_37.getContextState(tmp);
     } else {
@@ -566,7 +566,7 @@ function useQueryState(type, commandTypes, allowFetch) {
             tmp13 = tmp16;
           }
           if (tmp13) {
-            obj1 = allowFetch3(695);
+            obj1 = allowFetch3(1242);
             let obj = { miss: null, size: null };
             obj[0] = null == stateFromStoresObject.result;
             const _Object = Object;
@@ -594,15 +594,15 @@ function useQueryState(type, commandTypes, allowFetch) {
               if (null == guild_id.channel.guild_id) {
                 obj = { type: "channel", channelId: null };
                 obj[1] = guild_id.channel.id;
-                const applicationCommandIndex = applicationId(8162).requestApplicationCommandIndex(obj);
-                const obj4 = applicationId(8162);
+                const applicationCommandIndex = applicationId(9294).requestApplicationCommandIndex(obj);
+                const obj4 = applicationId(9294);
               }
             }
             obj1 = { type: "guild", guildId: null };
             guild_id = guild_id.channel.guild_id;
             obj1[1] = guild_id;
-            const applicationCommandIndex1 = applicationId(8162).requestApplicationCommandIndex(obj1);
-            const obj6 = applicationId(8162);
+            const applicationCommandIndex1 = applicationId(9294).requestApplicationCommandIndex(obj1);
+            const obj6 = applicationId(9294);
           }
         }
         stateFromStores2(false);
@@ -630,7 +630,7 @@ function useQueryState(type, commandTypes, allowFetch) {
           tmp8 = tmp5;
         }
         if (tmp8) {
-          obj = applicationId(8162);
+          obj = applicationId(9294);
           const applicationCommandIndex2 = obj.requestApplicationCommandIndex({ type: "user" });
         }
       }
@@ -646,9 +646,9 @@ function useQueryState(type, commandTypes, allowFetch) {
   const first1 = tmp8[0];
   first2 = first1;
   dependencyMap = tmp8[1];
-  const obj2 = applicationId(586);
+  const obj2 = applicationId(504);
   const items2 = [applicationCommandIndexStore];
-  stateFromStoresObject1 = applicationId(586).useStateFromStoresObject(items2, () => authStore.getUserState());
+  stateFromStoresObject1 = applicationId(504).useStateFromStoresObject(items2, () => authStore.getUserState());
   stateFromStores2 = stateFromStoresObject1;
   const items3 = [stateFromStoresObject1, allowFetch2, false !== commandTypes.applicationCommands, first1];
   const effect1 = stateFromStoresObject1.useEffect(() => {
@@ -679,28 +679,28 @@ function useQueryState(type, commandTypes, allowFetch) {
         tmp = applicationId;
       }
       if (tmp) {
-        const applicationCommandIndex = applicationId(8162).requestApplicationCommandIndex({ type: "user" });
-        const obj = applicationId(8162);
+        const applicationCommandIndex = applicationId(9294).requestApplicationCommandIndex({ type: "user" });
+        const obj = applicationId(9294);
       }
       dependencyMap(false);
     }
   }, items3);
-  const obj3 = applicationId(586);
+  const obj3 = applicationId(504);
   const items4 = [applicationCommandIndexStore];
-  const stateFromStores = applicationId(586).useStateFromStores(items4, () => authStore.getApplicationStates());
-  let obj4 = applicationId(586);
+  const stateFromStores = applicationId(504).useStateFromStores(items4, () => authStore.getApplicationStates());
+  let obj4 = applicationId(504);
   const items5 = [applicationCommandIndexStore];
   ({ applicationId, allowFetch: allowFetch3 } = allowFetch);
   first2 = undefined;
   dependencyMap = undefined;
   stateFromStores2 = undefined;
-  const stateFromStores1 = applicationId(586).useStateFromStores(items5, () => authStore.applicationIndicesVersion);
+  const stateFromStores1 = applicationId(504).useStateFromStores(items5, () => authStore.applicationIndicesVersion);
   const tmp14 = stateFromStores2(stateFromStoresObject1.useState(true), 2);
   first2 = tmp14[0];
   dependencyMap = tmp14[1];
-  const obj5 = applicationId(586);
+  const obj5 = applicationId(504);
   const items6 = [applicationCommandIndexStore];
-  stateFromStores2 = applicationId(586).useStateFromStores(items6, () =>
+  stateFromStores2 = applicationId(504).useStateFromStores(items6, () =>
     closure_1_37.getApplicationState(applicationId),
   );
   const items7 = [allowFetch3, applicationId, stateFromStores2, first2];
@@ -732,7 +732,7 @@ function useQueryState(type, commandTypes, allowFetch) {
         tmp = null != applicationId;
       }
       if (tmp) {
-        let obj = applicationId(8162);
+        let obj = applicationId(9294);
         obj = { type: "application", applicationId: null };
         obj[1] = applicationId;
         const applicationCommandIndex = obj.requestApplicationCommandIndex(obj);
@@ -787,7 +787,7 @@ function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
     let arr = NONE;
-    builtIns = NONE(8166).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(9298).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -799,7 +799,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(8166).ScoreMethod.NONE;
+    NONE = NONE(9298).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -818,10 +818,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(8166).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(8166).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = NONE(8168).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = NONE(8168);
+  if (builtIns !== NONE(9298).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(9298).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = NONE(9300).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = NONE(9300);
   } else {
     builtInCommands = [];
   }
@@ -999,7 +999,7 @@ function queryIndex(allowApplicationCommands) {
     }
   }
   if (sortOptions.applications.useFrecency) {
-    const FrecencyUserSettingsActionCreators = NONE(1369).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = NONE(1940).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }
   const sorted = items.sort((section, section2) => {
@@ -1039,7 +1039,7 @@ function queryIndex(allowApplicationCommands) {
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
-    const tmp87 = queryIndexSection(NONE(8168).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
+    const tmp87 = queryIndexSection(NONE(9300).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -1054,7 +1054,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(8166).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(9298).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {
@@ -1065,7 +1065,7 @@ function queryIndex(allowApplicationCommands) {
     }
     guild = guild.getGuild(guild_id);
     if (tmp96) {
-      const FrecencyUserSettingsActionCreators2 = tmp89(1369).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators2 = tmp89(1940).FrecencyUserSettingsActionCreators;
       const ifNecessary1 = FrecencyUserSettingsActionCreators2.loadIfNecessary();
     }
     let tmp98;
@@ -1264,7 +1264,7 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
     obj[0] = descriptor;
     obj[1] = arr2;
     let tmp36 = obj;
-    tmp39 = scoreMethod !== ScoreMethod.ScoreMethod.NONE && scoreMethod !== tmp27(8166).ScoreMethod.APPLICATION_ONLY;
+    tmp39 = scoreMethod !== ScoreMethod.ScoreMethod.NONE && scoreMethod !== tmp27(9298).ScoreMethod.APPLICATION_ONLY;
   } else {
     tmp36 = null;
   }
@@ -1772,7 +1772,7 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
           tmp36 = tmp37;
         }
         if (tmp36) {
-          let tmp8Result = tmp8(8162);
+          let tmp8Result = tmp8(9294);
           const applicationCommandIndex = tmp8Result.requestApplicationCommandIndex({ type: "user" });
           flag5 = true;
         }
@@ -1798,7 +1798,7 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
           tmp42 = null != applicationId.applicationId;
         }
         if (tmp42) {
-          tmp8Result = tmp8(8162);
+          tmp8Result = tmp8(9294);
           obj = { type: "application", applicationId: null };
           obj[1] = applicationId.applicationId;
           const applicationCommandIndex1 = tmp8Result.requestApplicationCommandIndex(obj);
@@ -1838,17 +1838,17 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
           if (null == guild_id.guild_id) {
             obj1 = { type: "channel", channelId: null };
             obj1[1] = guild_id.id;
-            const applicationCommandIndex2 = tmp8(8162).requestApplicationCommandIndex(obj1);
+            const applicationCommandIndex2 = tmp8(9294).requestApplicationCommandIndex(obj1);
             flag6 = true;
-            const tmp8Result1 = tmp8(8162);
+            const tmp8Result1 = tmp8(9294);
           }
         }
         obj2 = { type: "guild", guildId: null };
         guild_id = guild_id.guild_id;
         obj2[1] = guild_id;
-        const applicationCommandIndex3 = tmp8(8162).requestApplicationCommandIndex(obj2);
+        const applicationCommandIndex3 = tmp8(9294).requestApplicationCommandIndex(obj2);
         flag6 = true;
-        const tmp8Result2 = tmp8(8162);
+        const tmp8Result2 = tmp8(9294);
       }
     }
     const obj3 = {
@@ -2379,7 +2379,7 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
             tmp13 = tmp16;
           }
           if (tmp13) {
-            obj1 = allowFetch3(695);
+            obj1 = allowFetch3(1242);
             let obj = { miss: null, size: null };
             obj[0] = null == stateFromStoresObject.result;
             const _Object = Object;
@@ -2407,15 +2407,15 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
               if (null == guild_id.channel.guild_id) {
                 obj = { type: "channel", channelId: null };
                 obj[1] = guild_id.channel.id;
-                const applicationCommandIndex = applicationId(8162).requestApplicationCommandIndex(obj);
-                const obj4 = applicationId(8162);
+                const applicationCommandIndex = applicationId(9294).requestApplicationCommandIndex(obj);
+                const obj4 = applicationId(9294);
               }
             }
             obj1 = { type: "guild", guildId: null };
             guild_id = guild_id.channel.guild_id;
             obj1[1] = guild_id;
-            const applicationCommandIndex1 = applicationId(8162).requestApplicationCommandIndex(obj1);
-            const obj6 = applicationId(8162);
+            const applicationCommandIndex1 = applicationId(9294).requestApplicationCommandIndex(obj1);
+            const obj6 = applicationId(9294);
           }
         }
         stateFromStores2(false);
@@ -2443,7 +2443,7 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
           tmp8 = tmp5;
         }
         if (tmp8) {
-          obj = applicationId(8162);
+          obj = applicationId(9294);
           const applicationCommandIndex2 = obj.requestApplicationCommandIndex({ type: "user" });
         }
       }
@@ -2476,7 +2476,7 @@ export const useGuildIndexState = function useGuildIndexState(arg0, arg1) {
     }
     if (tmp) {
       if (callback2) {
-        let obj = callback2(695);
+        let obj = callback2(1242);
         obj = { miss: null, size: null };
         obj[0] = null == stateFromStoresObject.result;
         const _Object = Object;
@@ -2503,8 +2503,8 @@ export const useGuildIndexState = function useGuildIndexState(arg0, arg1) {
         if (tmp15) {
           obj = { type: "guild", guildId: null };
           obj[1] = callback;
-          const applicationCommandIndex = callback(8162).requestApplicationCommandIndex(obj);
-          const obj3 = callback(8162);
+          const applicationCommandIndex = callback(9294).requestApplicationCommandIndex(obj);
+          const obj3 = callback(9294);
         }
       }
       dependencyMap(false);
@@ -2552,8 +2552,8 @@ export const useUserIndexState = function useUserIndexState(arg0, arg1) {
         tmp = applicationId;
       }
       if (tmp) {
-        const applicationCommandIndex = applicationId(8162).requestApplicationCommandIndex({ type: "user" });
-        const obj = applicationId(8162);
+        const applicationCommandIndex = applicationId(9294).requestApplicationCommandIndex({ type: "user" });
+        const obj = applicationId(9294);
       }
       dependencyMap(false);
     }

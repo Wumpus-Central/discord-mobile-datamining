@@ -235,15 +235,15 @@ prototype["renderButtons"] = function renderButtons() {
       let str = "active";
       if (Button.ButtonColors.GREEN !== confirmColor) {
         str = "destructive";
-        if (tmp21(1296).ButtonColors.RED !== confirmColor) {
+        if (tmp21(1178).ButtonColors.RED !== confirmColor) {
           str = "secondary";
-          if (tmp21(1296).ButtonColors.GREY !== confirmColor) {
+          if (tmp21(1178).ButtonColors.GREY !== confirmColor) {
             str = "secondary";
-            if (tmp21(1296).ButtonColors.LIGHTGREY !== confirmColor) {
+            if (tmp21(1178).ButtonColors.LIGHTGREY !== confirmColor) {
               str = "secondary";
-              if (tmp21(1296).ButtonColors.TRANSPARENT !== confirmColor) {
+              if (tmp21(1178).ButtonColors.TRANSPARENT !== confirmColor) {
                 str = "primary";
-                if (tmp21(1296).ButtonColors.WHITE === confirmColor) {
+                if (tmp21(1178).ButtonColors.WHITE === confirmColor) {
                   str = "primary-overlay";
                 }
               }
@@ -359,13 +359,13 @@ export default memoResult;
 export const getAlertButtonVariant = function getAlertButtonVariant(confirmColor) {
   if (Button.ButtonColors.GREEN === confirmColor) {
     return "active";
-  } else if (tmp(1296).ButtonColors.RED === confirmColor) {
+  } else if (tmp(1178).ButtonColors.RED === confirmColor) {
     return "destructive";
   } else {
-    if (tmp(1296).ButtonColors.GREY !== confirmColor) {
-      if (tmp(1296).ButtonColors.LIGHTGREY !== confirmColor) {
-        if (tmp(1296).ButtonColors.TRANSPARENT !== confirmColor) {
-          if (tmp(1296).ButtonColors.WHITE === confirmColor) {
+    if (tmp(1178).ButtonColors.GREY !== confirmColor) {
+      if (tmp(1178).ButtonColors.LIGHTGREY !== confirmColor) {
+        if (tmp(1178).ButtonColors.TRANSPARENT !== confirmColor) {
+          if (tmp(1178).ButtonColors.WHITE === confirmColor) {
             return "primary-overlay";
           } else {
             return "primary";

@@ -12,7 +12,7 @@ import closure_8 from "GatewayConnectionStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 import set from "../../../_runtime/00002_set.js";
-import { v1 } from "../../../_runtime/00511_v1.js";
+import { v1 } from "../../../_runtime/01256_v1.js";
 import { getCachedPrivateChannelObfuscation } from "PrivateChannelHidingExperiment.tsx";
 
 const require = arg1;
@@ -494,7 +494,7 @@ function scheduleIntegrityCheck(guild_id) {
     if (null != dependencyMap[guild_id]) {
       let requestId = tmp15.requestId;
     } else {
-      const v4Result = require("../../../_runtime/00511_v1.js").v4();
+      const v4Result = require("../../../_runtime/01256_v1.js").v4();
       obj = { guildId: null, requestId: null, source: "integrity_check", requestedUserId: null };
       obj[0] = guild_id;
       obj[1] = v4Result;

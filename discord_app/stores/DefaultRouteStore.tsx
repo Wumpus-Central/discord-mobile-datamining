@@ -2,8 +2,8 @@
 import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
-import ME2 from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import ME2 from "../Constants.tsx";
 
 const Routes = ME2.Routes;
 let obj = { lastViewedPath: null, lastViewedNonVoicePath: null };

@@ -115,7 +115,7 @@ export default function AddMembersBody(pendingAdditions) {
   const tmp3 = callback3();
   dependencyMap = tmp3;
   let obj = { isKeyboardAwareOnAndroid: !inActionSheet };
-  obj1 = guild(586);
+  obj1 = guild(504);
   let items = [closure_11];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_11.getSortedRoles(guild.id));
   let obj2 = str;
@@ -127,13 +127,13 @@ export default function AddMembersBody(pendingAdditions) {
   closure_7 = tmp9[1];
   let obj3 = applyOverwritesAll;
   let canEveryoneRoleResult = obj3.canEveryoneRole(Permissions.ADMINISTRATOR, guild);
-  let obj4 = guild(586);
+  let obj4 = guild(504);
   const items1 = [closure_10];
   const stateFromStoresArray = obj4.useStateFromStoresArray(items1, () => closure_1_10.getMemberIds(guild.id));
   if (first) {
     let items2 = [];
   } else {
-    let tmp10Result = tmp10(9725);
+    let tmp10Result = tmp10(9738);
     const rolesRowsWithPermissionDisabled = tmp10Result.getRolesRowsWithPermissionDisabled(
       guild,
       stateFromStores,
@@ -147,7 +147,7 @@ export default function AddMembersBody(pendingAdditions) {
     }
     items2 = rolesRowsWithPermissionDisabled;
     if (tmp19) {
-      tmp10Result = tmp10(9725);
+      tmp10Result = tmp10(9738);
       items2 = tmp10Result.getNoRolesRow();
     }
   }
@@ -155,13 +155,13 @@ export default function AddMembersBody(pendingAdditions) {
   const membersRows = getRoleRowDataAll.getMembersRows(stateFromStoresArray, channel, guild, permission, obj);
   const items3 = [];
   obj = { title: null, data: null };
-  let intl = tmp6(1233).intl;
-  obj[0] = intl.string(guild(1233).t["LPJmL/"]);
+  let intl = tmp6(1114).intl;
+  obj[0] = intl.string(guild(1114).t["LPJmL/"]);
   obj[1] = items2;
   items3.push(obj);
   obj1 = { title: null, data: null };
-  let intl2 = tmp6(1233).intl;
-  obj1[0] = intl2.string(guild(1233).t["9Oq93m"]);
+  let intl2 = tmp6(1114).intl;
+  obj1[0] = intl2.string(guild(1114).t["9Oq93m"]);
   obj1[1] = membersRows;
   items3.push(obj1);
   const values = Object.values(pendingAdditions);
@@ -184,12 +184,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp6(5633).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp6(6627).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = tmp6(5633).BottomSheetSectionList;
+    let BottomSheetSectionList = tmp6(6627).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -198,8 +198,8 @@ export default function AddMembersBody(pendingAdditions) {
   const tmp10Result1 = getRoleRowDataAll;
   const tmp25 = closure_18;
   const tmp26 = closure_17;
-  const intl3 = tmp6(1233).intl;
-  obj3[0] = intl3.string(guild(1233).t.TVZdKh);
+  const intl3 = tmp6(1114).intl;
+  obj3[0] = intl3.string(guild(1114).t.TVZdKh);
   obj3[1] = mapped;
   obj3[2] = function onChangeText(str) {
     str = str.trim();
@@ -219,7 +219,7 @@ export default function AddMembersBody(pendingAdditions) {
       return closure_1_4(arg0, items.map(closure_1_19));
     });
   };
-  obj2[1] = callback2(pendingAdditions(9742), obj3);
+  obj2[1] = callback2(pendingAdditions(9755), obj3);
   const items5 = [callback2(closure_7, obj2), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
@@ -228,7 +228,7 @@ export default function AddMembersBody(pendingAdditions) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
     obj5[0] = tmp3.inputDescText;
     obj5[3] = inputDesc;
-    obj4[1] = tmp27(tmp6(4474).Text, obj5);
+    obj4[1] = tmp27(tmp6(4556).Text, obj5);
     tmp27Result = tmp27(tmp28, obj4);
   }
   items5[1] = tmp27Result;
@@ -236,10 +236,10 @@ export default function AddMembersBody(pendingAdditions) {
     const obj6 = { style: null, children: null };
     obj6[0] = tmp3.adminWarning;
     const obj7 = { messageType: null, children: null };
-    obj7[0] = tmp6(1296).HelpMessageTypes.WARNING;
-    const intl4 = tmp6(1233).intl;
-    obj7[1] = intl4.string(tmp6(1233).t["5f3HIC"]);
-    obj6[1] = tmp27(tmp6(1296).HelpMessage, obj7);
+    obj7[0] = tmp6(1178).HelpMessageTypes.WARNING;
+    const intl4 = tmp6(1114).intl;
+    obj7[1] = intl4.string(tmp6(1114).t["5f3HIC"]);
+    obj6[1] = tmp27(tmp6(1178).HelpMessage, obj7);
     canEveryoneRoleResult = tmp27(tmp28, obj6);
   }
   items5[2] = canEveryoneRoleResult;
@@ -248,13 +248,13 @@ export default function AddMembersBody(pendingAdditions) {
       if (0 === membersRows.length) {
         const obj8 = { children: null };
         const obj9 = { Illustration: null, style: null, bodyStyle: null, body: null };
-        obj9[0] = tmp6(9747).NoResultsAlt;
+        obj9[0] = tmp6(9760).NoResultsAlt;
         ({ emptyState: obj21[1], emptyStateText: obj21[2] } = tmp3);
-        const intl5 = tmp6(1233).intl;
+        const intl5 = tmp6(1114).intl;
         const obj10 = { query: null };
         obj10[0] = str;
-        obj9[3] = intl5.format(tmp6(1233).t.ErpIY3, obj10);
-        obj8[0] = tmp27(tmp6(1296).EmptyState, obj9);
+        obj9[3] = intl5.format(tmp6(1114).t.ErpIY3, obj10);
+        obj8[0] = tmp27(tmp6(1178).EmptyState, obj9);
         tmp27Result = tmp27(BottomSheetScrollView, obj8);
       }
       const obj11 = { children: null };
@@ -270,10 +270,10 @@ export default function AddMembersBody(pendingAdditions) {
     sections: null,
     keyboardShouldPersistTaps: "always",
   };
-  const tmp4Result = pendingAdditions(9742);
+  const tmp4Result = pendingAdditions(9755);
   obj12[0] = {
-    paddingHorizontal: pendingAdditions(709).space.PX_16,
-    paddingBottom: pendingAdditions(709).space.PX_16 + pendingAdditions(5603)(obj).insets.bottom,
+    paddingHorizontal: pendingAdditions(576).space.PX_16,
+    paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(6981)(obj).insets.bottom,
   };
   obj12[1] = function renderItem(item) {
     item = item.item;

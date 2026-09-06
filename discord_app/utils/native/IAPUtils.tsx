@@ -1,8 +1,8 @@
 // discord_app/utils/native/IAPUtils.tsx
 import timestampDefault from "../../modules/debug/Logger.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import v1 from "../../../_runtime/00511_v1.js";
 import set2 from "../PlatformUtils.tsx";
+import v1 from "../../../_runtime/01256_v1.js";
 import getConstantsAll from "ClientInfoUtils.tsx";
 import DCDDeviceManager from "DeviceUtils.tsx";
 import productSK2ToIAPProductDefault from "../../modules/billing/native/StorekitIAPQueue.tsx";
@@ -330,7 +330,7 @@ function _fetchStoreFront() {
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(11019).getStorefront();
+              obj1[0] = closure_1_0(11048).getStorefront();
               return obj1;
             } else {
               c5 = 3;
@@ -340,7 +340,7 @@ function _fetchStoreFront() {
         } else if (1 === tmp7) {
           dependencyMap = 0;
           closure_1 = closure_2;
-          obj1 = callback(4154);
+          obj1 = callback(4233);
           const result = obj1.captureBillingException(closure_1);
           c5 = 3;
           return { value: null, done: true };
@@ -384,7 +384,7 @@ function _fetchStoreFront() {
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = ME);
 ({ InAppUtils: unpackModuleId, RNIapIosSk2: closure_12 } = require("get ActivityIndicator").NativeModules);
 let items = [
-  require("../../../_runtime/metro/11019__.js").ErrorCode.E_USER_CANCELLED,
+  require("../../../_runtime/metro/11048__.js").ErrorCode.E_USER_CANCELLED,
   ME.StoreKitErrors.PAYMENT_CANCELED,
 ];
 let set = new Set(items);
@@ -393,10 +393,10 @@ let _default = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6096).ProductIds))];
+      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(7240).ProductIds))];
       const obj2 = productSK2ToIAPProductDefault;
       const _Object2 = Object;
-      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(6096).ProductIds));
+      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(7240).ProductIds));
       const obj3 = productSK2ToIAPProductDefault;
       let nextPromise = _Promise.all(items).then((arg0) => {
         [r10007, tmp] = arg0;
